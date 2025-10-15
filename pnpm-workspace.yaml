@@ -36,7 +36,7 @@ catalog:
   eslint: ^9.35.0
   eslint-plugin-oxlint: ~1.15.0
   eslint-plugin-playwright: ^2.2.2
-  eslint-plugin-vue: ~10.4.0
+  eslint-plugin-vue: ~10.5.1
   highlight.js: 11.11.1
   jiti: ^2.4.2
   jsdom: ^26.1.0
