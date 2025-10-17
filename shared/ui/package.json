@@ -22,7 +22,7 @@
     "highlight.js": "catalog:",
     "is-cidr": "^6.0.0",
     "is-ip": "^5.0.1",
-    "marked": "^16.1.2",
+    "marked": "^16.4.1",
     "naive-ui": "catalog:",
     "uuid": "catalog:",
     "validator": "catalog:",
