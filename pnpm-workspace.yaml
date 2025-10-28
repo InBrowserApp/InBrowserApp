@@ -15,7 +15,7 @@ catalog:
   '@tsconfig/node22': ^22.0.2
   '@types/jsdom': ^21.1.7
   '@types/node': ^24.4.0
-  '@types/validator': ^13.15.2
+  '@types/validator': ^13.15.4
   '@unhead/vue': 2.0.14
   '@vicons/antd': ^0.13.0
   '@vicons/carbon': ^0.13.0
@@ -48,7 +48,7 @@ catalog:
   svgo: ^4.0.0
   typescript: ~5.9.2
   uuid: ^11.1.0
-  validator: ^13.15.15
+  validator: ^13.15.20
   vite: ^7.1.5
   vite-plugin-vue-devtools: ^8.0.0
   vitest: ^3.2.4
