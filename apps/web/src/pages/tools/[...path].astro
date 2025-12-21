@@ -1,12 +1,12 @@
 ---
-import { getToolRoutes } from '@/registry/tools'
-import { translateMeta } from '@/i18n/utils'
-import type { SupportedLanguage } from '@/i18n/utils'
+import { getToolRoutes } from '@inbrowserapp/tools/registry'
+import { translateMeta } from '@inbrowserapp/tools/i18n'
+import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
 import ToolLayout from '@/layouts/ToolLayout.astro'
-import type { ToolRoute } from '@/types/tool'
+import type { ToolRoute } from '@inbrowserapp/tools/types'
 
 // Import tool components directly
-import RomanConverterIndex from '@/tools/misc/roman-numeral-converter/index.astro'
+import RomanConverterIndex from '@tools/roman-numeral-converter'
 
 const componentMap: Record<string, any> = {
   'roman-numeral-converter': RomanConverterIndex,

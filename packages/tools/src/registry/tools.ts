@@ -1,7 +1,7 @@
-import type { ToolMetadata, ToolRoute } from '@/types/tool'
+import type { ToolMetadata, ToolRoute } from '../types/tool'
 
 // Import tool metadata
-import { metadata as romanConverterMeta } from '@/tools/misc/roman-numeral-converter/meta'
+import { metadata as romanConverterMeta } from '@tools/roman-numeral-converter/meta'
 
 export const toolRegistry: ToolMetadata[] = [
   romanConverterMeta,

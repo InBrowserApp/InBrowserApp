@@ -1,0 +1,15 @@
+{
+  "name": "@tools/roman-numeral-converter",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./index.astro": "./src/index.astro",
+    "./meta": "./src/meta.ts"
+  },
+  "dependencies": {
+    "@inbrowserapp/tools": "workspace:*",
+    "vue": "catalog:"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@inbrowserapp/web",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:check": "astro check && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/vue": "catalog:",
+    "@iconify-json/carbon": "catalog:",
+    "@iconify-json/fluent": "catalog:",
+    "@inbrowserapp/tools": "workspace:*",
+    "@unocss/astro": "catalog:",
+    "@unocss/reset": "catalog:",
+    "astro": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:",
+    "vue": "catalog:"
+  }
+}

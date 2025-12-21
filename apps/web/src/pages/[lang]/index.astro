@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { supportedLanguages } from '@/i18n/utils'
+import { supportedLanguages } from '@inbrowserapp/tools/i18n'
 
 export async function getStaticPaths() {
-  const languages = supportedLanguages.filter(lang => lang !== 'en')
-  
-  return languages.map(lang => ({
+  const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
+
+  return languages.map((lang: string) => ({
     params: { lang },
     props: { lang }
   }))

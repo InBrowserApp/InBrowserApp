@@ -1,4 +1,4 @@
-import type { ToolMetadata } from '@/types/tool'
+import type { ToolMetadata } from '@inbrowserapp/tools/types'
 
 export const metadata: ToolMetadata = {
   id: 'roman-numeral-converter',

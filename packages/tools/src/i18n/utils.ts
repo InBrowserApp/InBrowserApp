@@ -1,5 +1,5 @@
 import type { SupportedLanguage } from './languages'
-import type { ToolMetadata, ToolMeta } from '@/types/tool'
+import type { ToolMetadata, ToolMeta } from '../types/tool'
 
 export { supportedLanguages } from './languages'
 export type { SupportedLanguage } from './languages'
