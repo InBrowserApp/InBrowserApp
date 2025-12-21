@@ -1,0 +1,6 @@
+---
+const { ui } = Astro.props
+import RomanConverter from './RomanConverter.vue'
+---
+
+<RomanConverter client:load ui={ui} />

@@ -1,11 +1,10 @@
 import type { ToolMetadata, ToolRoute } from '@/types/tool'
 
-// TODO: Import tool metadata here
-// import { metadata as jsonFormatterMeta } from '@/tools/code/json-formatter/meta'
+// Import tool metadata
+import { metadata as romanConverterMeta } from '@/tools/misc/roman-numeral-converter/meta'
 
 export const toolRegistry: ToolMetadata[] = [
-  // TODO: Add tools here
-  // jsonFormatterMeta,
+  romanConverterMeta,
 ]
 
 export async function getToolRoutes(): Promise<ToolRoute[]> {
