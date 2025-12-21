@@ -11,9 +11,9 @@
         :placeholder="ui.arabicPlaceholder"
         class="input w-full"
       />
-      <div v-if="romanFromArabic" class="result-box">
-        <span class="result-text">{{ romanFromArabic }}</span>
-        <button @click="copyToClipboard(romanFromArabic)" class="btn-secondary ml-2">
+      <div v-if="romanValue" class="result-box">
+        <span class="result-text">{{ romanValue }}</span>
+        <button @click="copyToClipboard(romanValue)" class="btn-secondary ml-2">
           {{ ui.copy }}
         </button>
       </div>
@@ -28,9 +28,9 @@
         :placeholder="ui.romanPlaceholder"
         class="input w-full uppercase"
       />
-      <div v-if="arabicFromRoman !== null" class="result-box">
-        <span class="result-text">{{ arabicFromRoman }}</span>
-        <button @click="copyToClipboard(String(arabicFromRoman))" class="btn-secondary ml-2">
+      <div v-if="arabicValue" class="result-box">
+        <span class="result-text">{{ arabicValue }}</span>
+        <button @click="copyToClipboard(String(arabicValue))" class="btn-secondary ml-2">
           {{ ui.copy }}
         </button>
       </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { arabicToRoman, romanToArabic } from './utils/conversion'
 
 interface Props {
@@ -55,24 +55,29 @@ interface Props {
 const props = defineProps<Props>()
 
 const arabicValue = ref<number>(2024)
-const romanValue = ref<string>('MMXXIV')
+const romanValue = ref<string>(arabicToRoman(2024))
 
-const romanFromArabic = computed(() => {
-  if (!arabicValue.value || arabicValue.value < 1 || arabicValue.value > 3999) {
-    return ''
+// Watch Arabic input and convert to Roman
+watch(arabicValue, (newValue) => {
+  if (newValue && newValue >= 1 && newValue <= 3999) {
+    try {
+      romanValue.value = arabicToRoman(newValue)
+    } catch (e) {
+      // Invalid input, keep previous value
+    }
   }
-  return arabicToRoman(arabicValue.value)
 })
 
-const arabicFromRoman = computed(() => {
-  if (!romanValue.value) {
-    return null
+// Watch Roman input and convert to Arabic
+watch(romanValue, (newValue) => {
+  if (newValue) {
+    try {
+      arabicValue.value = romanToArabic(newValue.toUpperCase())
+    } catch (e) {
+      // Invalid input, keep previous value
+    }
   }
-  return romanToArabic(romanValue.value.toUpperCase())
 })
-
-// Sync: when user changes arabic, don't update roman input
-// when user changes roman, don't update arabic input
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text)
