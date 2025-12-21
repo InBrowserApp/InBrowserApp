@@ -1,0 +1,24 @@
+import type { SupportedLanguage } from '@/i18n/languages'
+
+export interface ToolMeta {
+  name: string
+  description: string
+  ui: Record<string, string>
+}
+
+export interface ToolMetadata {
+  id: string
+  domain: string
+  path: string
+  tags: string[]
+  features: string[]
+  subPaths?: string[]
+  meta: Record<SupportedLanguage, ToolMeta>
+  type: 'vue-island' | 'astro-static' | 'mixed'
+  component: string
+}
+
+export interface ToolRoute {
+  id: string
+  tool: ToolMetadata
+}

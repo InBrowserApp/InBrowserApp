@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { supportedLanguages } from '@/i18n/utils'
+
+export async function getStaticPaths() {
+  const languages = supportedLanguages.filter(lang => lang !== 'en')
+  
+  return languages.map(lang => ({
+    params: { lang },
+    props: { lang }
+  }))
+}
+
+const { lang } = Astro.props
+
+// Simple translation map for home page
+const translations: Record<string, { title: string; subtitle: string }> = {
+  zh: { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 即将推出' },
+  'zh-CN': { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 即将推出' },
+  'zh-TW': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 即將推出' },
+  'zh-HK': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 即將推出' },
+  es: { title: 'InBrowserApp', subtitle: 'Herramientas gratuitas en el navegador - Próximamente' },
+  fr: { title: 'InBrowserApp', subtitle: 'Outils gratuits dans le navigateur - Bientôt disponible' },
+  de: { title: 'InBrowserApp', subtitle: 'Kostenlose Browser-Tools - Demnächst' },
+  it: { title: 'InBrowserApp', subtitle: 'Strumenti gratuiti nel browser - Prossimamente' },
+  ja: { title: 'InBrowserApp', subtitle: '無料のブラウザツール - 近日公開' },
+  ko: { title: 'InBrowserApp', subtitle: '무료 브라우저 도구 - 곧 출시' },
+  ru: { title: 'InBrowserApp', subtitle: 'Бесплатные инструменты в браузере - Скоро' },
+  pt: { title: 'InBrowserApp', subtitle: 'Ferramentas gratuitas no navegador - Em breve' },
+}
+
+const t = translations[lang] || { title: 'InBrowserApp', subtitle: 'Free online browser tools - Coming soon' }
+---
+
+<BaseLayout title="Home" description="Free online browser tools" lang={lang}>
+  <div class="home-container">
+    <h1>{t.title}</h1>
+    <p>{t.subtitle}</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #666;
+  }
+</style>

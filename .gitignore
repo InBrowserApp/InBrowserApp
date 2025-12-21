@@ -1,37 +1,24 @@
-# Reference repository (not part of the new codebase)
-old-repo/
-
-# Dependencies
-node_modules/
-.pnpm-store/
-
-# Build outputs
+# build output
 dist/
+# generated types
 .astro/
 
-# Environment
-.env
-.env.local
-.env.*.local
+# dependencies
+node_modules/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
+# logs
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Temporary files
-*.tmp
-.cache/
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

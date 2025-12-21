@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["./shared/*"],
+      "@tools/*": ["./tools/*"],
+      "@utils/*": ["./utils/*"]
+    }
+  },
+  "exclude": ["old-repo", "node_modules", "dist"]
+}

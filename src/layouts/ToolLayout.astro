@@ -1,0 +1,27 @@
+---
+import BaseLayout from './BaseLayout.astro'
+
+interface Props {
+  title: string
+  description?: string
+  lang?: string
+}
+
+const { title, description, lang } = Astro.props
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+  <div class="tool-container">
+    <h1 class="tool-title">{title}</h1>
+    {description && <p class="tool-description">{description}</p>}
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+</style>
