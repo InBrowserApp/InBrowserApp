@@ -14,28 +14,29 @@ export async function getStaticPaths() {
 const { lang } = Astro.props
 
 // Simple translation map for home page
-const translations: Record<string, { title: string; subtitle: string }> = {
-  zh: { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 即将推出' },
-  'zh-CN': { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 即将推出' },
-  'zh-TW': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 即將推出' },
-  'zh-HK': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 即將推出' },
-  es: { title: 'InBrowserApp', subtitle: 'Herramientas gratuitas en el navegador - Próximamente' },
-  fr: { title: 'InBrowserApp', subtitle: 'Outils gratuits dans le navigateur - Bientôt disponible' },
-  de: { title: 'InBrowserApp', subtitle: 'Kostenlose Browser-Tools - Demnächst' },
-  it: { title: 'InBrowserApp', subtitle: 'Strumenti gratuiti nel browser - Prossimamente' },
-  ja: { title: 'InBrowserApp', subtitle: '無料のブラウザツール - 近日公開' },
-  ko: { title: 'InBrowserApp', subtitle: '무료 브라우저 도구 - 곧 출시' },
-  ru: { title: 'InBrowserApp', subtitle: 'Бесплатные инструменты в браузере - Скоро' },
-  pt: { title: 'InBrowserApp', subtitle: 'Ferramentas gratuitas no navegador - Em breve' },
+const translations: Record<string, { title: string; subtitle: string; browseTools: string }> = {
+  zh: { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集', browseTools: '浏览所有工具' },
+  'zh-CN': { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集', browseTools: '浏览所有工具' },
+  'zh-TW': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集', browseTools: '瀏覽所有工具' },
+  'zh-HK': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集', browseTools: '瀏覽所有工具' },
+  es: { title: 'InBrowserApp', subtitle: 'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos', browseTools: 'Ver todas las herramientas' },
+  fr: { title: 'InBrowserApp', subtitle: 'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données', browseTools: 'Parcourir tous les outils' },
+  de: { title: 'InBrowserApp', subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung', browseTools: 'Alle Werkzeuge durchsuchen' },
+  it: { title: 'InBrowserApp', subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati', browseTools: 'Sfoglia tutti gli strumenti' },
+  ja: { title: 'InBrowserApp', subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし', browseTools: 'すべてのツールを見る' },
+  ko: { title: 'InBrowserApp', subtitle: '무료 브라우저 도구 - 개인정보 보호 중심, 데이터 수집 없음', browseTools: '모든 도구 보기' },
+  ru: { title: 'InBrowserApp', subtitle: 'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных', browseTools: 'Просмотреть все инструменты' },
+  pt: { title: 'InBrowserApp', subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados', browseTools: 'Navegar por todas as ferramentas' },
 }
 
-const t = translations[lang] || { title: 'InBrowserApp', subtitle: 'Free online browser tools - Coming soon' }
+const t = translations[lang] || { title: 'InBrowserApp', subtitle: 'Free online browser tools - Privacy focused, no data collection', browseTools: 'Browse All Tools' }
 ---
 
 <BaseLayout title="Home" description="Free online browser tools" lang={lang}>
   <div class="home-container">
     <h1>{t.title}</h1>
     <p>{t.subtitle}</p>
+    <a href={`/${lang}/tools`} class="btn-primary">{t.browseTools}</a>
   </div>
 </BaseLayout>
 
@@ -55,5 +56,21 @@ const t = translations[lang] || { title: 'InBrowserApp', subtitle: 'Free online 
   p {
     font-size: 1.25rem;
     color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #2563eb;
   }
 </style>

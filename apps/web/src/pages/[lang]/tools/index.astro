@@ -1,0 +1,130 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { toolRegistry } from '@inbrowserapp/tools/registry'
+import { translateMeta, supportedLanguages } from '@inbrowserapp/tools/i18n'
+import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
+
+export async function getStaticPaths() {
+  const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
+
+  return languages.map((lang: string) => ({
+    params: { lang },
+    props: { lang }
+  }))
+}
+
+const { lang } = Astro.props as { lang: SupportedLanguage }
+
+// Translation map for page titles and descriptions
+const pageTranslations: Record<string, { title: string; subtitle: string }> = {
+  zh: { title: '所有工具', subtitle: '免费在线浏览器工具 - 注重隐私，无数据收集' },
+  'zh-CN': { title: '所有工具', subtitle: '免费在线浏览器工具 - 注重隐私，无数据收集' },
+  'zh-TW': { title: '所有工具', subtitle: '免費線上瀏覽器工具 - 注重隱私，無資料收集' },
+  'zh-HK': { title: '所有工具', subtitle: '免費線上瀏覽器工具 - 注重隱私，無資料收集' },
+  es: { title: 'Todas las herramientas', subtitle: 'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos' },
+  fr: { title: 'Tous les outils', subtitle: 'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données' },
+  de: { title: 'Alle Werkzeuge', subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung' },
+  it: { title: 'Tutti gli strumenti', subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati' },
+  ja: { title: 'すべてのツール', subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし' },
+  ko: { title: '모든 도구', subtitle: '무료 브라우저 도구 - 개인정보 보호 중심, 데이터 수집 없음' },
+  ru: { title: 'Все инструменты', subtitle: 'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных' },
+  pt: { title: 'Todas as ferramentas', subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados' },
+}
+
+const t = pageTranslations[lang] || { title: 'All Tools', subtitle: 'Free online browser tools - Privacy focused, no data collection' }
+---
+
+<BaseLayout title={t.title} description={t.subtitle} lang={lang}>
+  <div class="tools-container">
+    <h1>{t.title}</h1>
+    <p class="subtitle">{t.subtitle}</p>
+
+    <div class="tools-grid">
+      {toolRegistry.map(tool => {
+        const meta = translateMeta(tool, lang)
+        return (
+          <a href={`/${lang}/tools/${tool.id}`} class="tool-card">
+            <h3 class="tool-name">{meta.name}</h3>
+            <p class="tool-description">{meta.description}</p>
+            <div class="tool-tags">
+              {tool.tags.slice(0, 3).map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </a>
+        )
+      })}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tool-card {
+    display: block;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+  }
+
+  .tool-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .tool-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+
+  .tool-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f3f4f6;
+    color: #4b5563;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+  }
+</style>

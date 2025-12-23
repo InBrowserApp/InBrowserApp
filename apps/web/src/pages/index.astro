@@ -5,7 +5,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 <BaseLayout title="Home" description="Free online browser tools">
   <div class="home-container">
     <h1>InBrowserApp</h1>
-    <p>Free online browser tools - Coming soon</p>
+    <p>Free online browser tools - Privacy focused, no data collection</p>
+    <a href="/tools" class="btn-primary">Browse All Tools</a>
   </div>
 </BaseLayout>
 
@@ -25,5 +26,21 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
   p {
     font-size: 1.25rem;
     color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #2563eb;
   }
 </style>
