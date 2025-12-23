@@ -22,3 +22,13 @@ export interface ToolRoute {
   id: string
   tool: ToolMetadata
 }
+
+/** Props passed to tool components */
+export interface ToolComponentProps {
+  name: string
+  description: string
+  ui: Record<string, string>
+}
+
+/** Type for Astro component that accepts ToolComponentProps */
+export type ToolComponent = (_props: ToolComponentProps) => unknown

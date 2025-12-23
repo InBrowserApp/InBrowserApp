@@ -11,16 +11,14 @@ const { title, description, lang } = Astro.props
 ---
 
 <BaseLayout title={title} description={description} lang={lang}>
-  <div class="tool-container">
-    <h1 class="tool-title">{title}</h1>
-    {description && <p class="tool-description">{description}</p>}
+  <main class="tool-container">
     <slot />
-  </div>
+  </main>
 </BaseLayout>
 
 <style>
   .tool-container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
   }

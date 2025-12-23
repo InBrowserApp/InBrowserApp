@@ -2,15 +2,9 @@
 import { getToolRoutes } from '@inbrowserapp/tools/registry'
 import { translateMeta } from '@inbrowserapp/tools/i18n'
 import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
-import ToolLayout from '@/layouts/ToolLayout.astro'
 import type { ToolRoute } from '@inbrowserapp/tools/types'
-
-// Import tool components directly
-import RomanConverterIndex from '@tools/roman-numeral-converter'
-
-const componentMap: Record<string, any> = {
-  'roman-numeral-converter': RomanConverterIndex,
-}
+import ToolLayout from '@/layouts/ToolLayout.astro'
+import { getToolComponent } from '@/registry/components'
 
 export async function getStaticPaths() {
   const routes = await getToolRoutes()
@@ -36,16 +30,14 @@ export async function getStaticPaths() {
   })
 }
 
-const { route, lang, subPath } = Astro.props as { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined }
+const { route, lang, subPath: _subPath } = Astro.props as { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined }
 const metadata = translateMeta(route.tool, lang)
-
-// Get component from map
-const Component = componentMap[route.id]
+const Component = getToolComponent(route.id)
 ---
 
 <ToolLayout title={metadata.name} description={metadata.description} lang={lang}>
   {Component ? (
-    <Component ui={metadata.ui} />
+    <Component name={metadata.name} description={metadata.description} ui={metadata.ui} />
   ) : (
     <div class="tool-placeholder">
       <h2>Tool: {route.id}</h2>
