@@ -48,19 +48,10 @@ const Component = getToolComponent(route.id)
     Component ? (
       <Component name={metadata.name} description={metadata.description} ui={metadata.ui} />
     ) : (
-      <div class="tool-placeholder">
-        <h2>Tool: {route.id}</h2>
-        <p>This tool is not yet implemented.</p>
+      <div class="p-8 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
+        <h2 class="text-xl font-semibold mb-2">Tool: {route.id}</h2>
+        <p class="text-gray-600 dark:text-gray-400">This tool is not yet implemented.</p>
       </div>
     )
   }
 </ToolLayout>
-
-<style>
-  .tool-placeholder {
-    padding: 2rem;
-    background: #f5f5f5;
-    border-radius: 8px;
-    text-align: center;
-  }
-</style>
