@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import { Field, Label, Input, Button } from '@headlessui/react'
 import { ClipboardIcon, ArrowsUpDownIcon } from '@heroicons/react/24/outline'
 import { arabicToRoman, romanToArabic, isValidRomanNumeral } from './utils/conversion'
 
@@ -47,29 +48,29 @@ export default function RomanConverter({ ui }: Props) {
   return (
     <div className="flex flex-col gap-6">
       {/* Arabic Number Input */}
-      <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+      <Field className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+        <Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           {ui.arabicNumber}
-        </label>
+        </Label>
         <div className="flex gap-3">
-          <input
+          <Input
             type="number"
             value={arabicValue}
             onChange={onArabicChange}
             min={1}
             max={3999}
             placeholder={ui.arabicPlaceholder}
-            className="flex-1 px-4 py-3 text-xl font-mono bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none transition-colors"
+            className="flex-1 px-4 py-3 text-xl font-mono bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg data-[focus]:border-blue-500 outline-none transition-colors"
           />
-          <button
+          <Button
             onClick={() => copyToClipboard(String(arabicValue))}
-            className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-blue-500 hover:text-white border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 group"
+            className="px-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 data-[hover]:bg-blue-500 data-[hover]:text-white data-[hover]:border-blue-500 group"
             title={ui.copy}
           >
-            <ClipboardIcon className="w-5 h-5 text-gray-500 group-hover:text-white" />
-          </button>
+            <ClipboardIcon className="w-5 h-5 text-gray-500 group-data-[hover]:text-white" />
+          </Button>
         </div>
-      </div>
+      </Field>
 
       {/* Bidirectional Arrow */}
       <div className="flex justify-center">
@@ -79,27 +80,27 @@ export default function RomanConverter({ ui }: Props) {
       </div>
 
       {/* Roman Numeral Input */}
-      <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+      <Field className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+        <Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           {ui.romanNumeral}
-        </label>
+        </Label>
         <div className="flex gap-3">
-          <input
+          <Input
             type="text"
             value={romanValue}
             onChange={onRomanChange}
             placeholder={ui.romanPlaceholder}
-            className="flex-1 px-4 py-3 text-xl font-mono uppercase bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none transition-colors"
+            className="flex-1 px-4 py-3 text-xl font-mono uppercase bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg data-[focus]:border-blue-500 outline-none transition-colors"
           />
-          <button
+          <Button
             onClick={() => copyToClipboard(romanValue)}
-            className="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-blue-500 hover:text-white border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 group"
+            className="px-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 data-[hover]:bg-blue-500 data-[hover]:text-white data-[hover]:border-blue-500 group"
             title={ui.copy}
           >
-            <ClipboardIcon className="w-5 h-5 text-gray-500 group-hover:text-white" />
-          </button>
+            <ClipboardIcon className="w-5 h-5 text-gray-500 group-data-[hover]:text-white" />
+          </Button>
         </div>
-      </div>
+      </Field>
     </div>
   )
 }

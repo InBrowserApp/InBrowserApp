@@ -9,6 +9,7 @@
     "./meta": "./src/meta.ts"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0"
   },
   "devDependencies": {
