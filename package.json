@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "type-check": "pnpm -F @inbrowserapp/web exec astro check"
+    "type-check": "astro check"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
