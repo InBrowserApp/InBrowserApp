@@ -62,7 +62,7 @@ const t = pageTranslations[lang] || {
 ---
 
 <BaseLayout title={t.title} description={t.subtitle} lang={lang}>
-  <div class="max-w-6xl mx-auto p-8">
+  <main class="max-w-6xl mx-auto p-8">
     <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-gray-100">{t.title}</h1>
     <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">{t.subtitle}</p>
 
@@ -93,5 +93,5 @@ const t = pageTranslations[lang] || {
         })
       }
     </div>
-  </div>
+  </main>
 </BaseLayout>

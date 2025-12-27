@@ -88,7 +88,7 @@ const t = translations[lang] || {
 ---
 
 <BaseLayout title="Home" description="Free online browser tools" lang={lang}>
-  <div class="max-w-3xl mx-auto px-8 py-16 text-center">
+  <main class="max-w-3xl mx-auto px-8 py-16 text-center">
     <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">{t.title}</h1>
     <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{t.subtitle}</p>
     <a
@@ -97,5 +97,5 @@ const t = translations[lang] || {
     >
       {t.browseTools}
     </a>
-  </div>
+  </main>
 </BaseLayout>
