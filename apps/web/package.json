@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
+    "@iconify-json/heroicons": "^1.2.3",
     "@inbrowserapp/tools": "workspace:*",
     "astro": "catalog:",
+    "astro-icon": "^1.1.5",
     "typescript": "catalog:"
   },
   "devDependencies": {
