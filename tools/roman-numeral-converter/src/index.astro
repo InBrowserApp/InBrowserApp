@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { name, description, ui } = Astro.props
-import RomanConverter from './RomanConverter.vue'
+import RomanConverter from './RomanConverter.tsx'
 ---
 
 <div class="flex flex-col gap-8">
@@ -16,13 +16,15 @@ import RomanConverter from './RomanConverter.vue'
     <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">{description}</p>
   </header>
 
-  <!-- Interactive Vue Component -->
+  <!-- Interactive React Component -->
   <RomanConverter client:load ui={ui} />
 
   <!-- Static Educational Content (SSG) -->
   <section class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border-l-4 border-blue-500">
     <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
-      <span class="i-carbon-information w-5 h-5 inline-block text-blue-500"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-blue-500">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+      </svg>
       {ui.whatIsTitle}
     </h2>
     <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{ui.whatIsDescription}</p>

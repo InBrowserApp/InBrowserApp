@@ -9,6 +9,7 @@
     "preview": "pnpm -F @inbrowserapp/web preview"
   },
   "devDependencies": {
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2"
   }
 }
