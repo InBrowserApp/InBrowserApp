@@ -4,6 +4,7 @@ export type ToolI18n = Record<string, string> & { name: string; description: str
 
 export interface ToolMetadata {
   id: string
+  path: string
   tags: readonly string[]
   features: readonly string[]
   i18n: Record<SupportedLanguage, ToolI18n>

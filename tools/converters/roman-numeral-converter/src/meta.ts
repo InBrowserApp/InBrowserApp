@@ -26,6 +26,7 @@ import no from './i18n/no.json'
 
 export const metadata = {
   id: 'roman-numeral-converter',
+  path: '/roman-numeral-converter',
   tags: ['converters', 'roman', 'numeral', 'number'],
   features: ['offline'],
 
