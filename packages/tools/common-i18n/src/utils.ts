@@ -35,9 +35,9 @@ export function translateMeta(tool: ToolMetadata, lang: SupportedLanguage): Tool
   const global = getMessages(lang)
 
   return {
-    ui: {
+    i18n: {
       ...global,
-      ...meta.ui,
+      ...meta.i18n,
     },
   }
 }

@@ -1,12 +1,9 @@
 import React, { useState, useCallback } from 'react'
 import { arabicToRoman, romanToArabic, isValidRomanNumeral } from './utils/conversion'
 import { ConverterField, DirectionIndicator } from './components'
+import type { ToolComponentProps as Props } from '@inbrowserapp/tools-shared'
 
-interface Props {
-  ui: Record<string, string>
-}
-
-export default function RomanConverter({ ui }: Props) {
+export default function RomanConverter({ i18n }: Props) {
   const [arabicValue, setArabicValue] = useState<number | ''>(2024)
   const [romanValue, setRomanValue] = useState<string>(arabicToRoman(2024))
   const [arabicError, setArabicError] = useState<string | null>(null)
@@ -25,7 +22,7 @@ export default function RomanConverter({ ui }: Props) {
       setArabicValue(value)
 
       if (isNaN(value) || value < 1 || value > 3999) {
-        setArabicError(ui.errorArabicRange)
+        setArabicError(i18n.errorArabicRange)
         return
       }
 
@@ -37,7 +34,7 @@ export default function RomanConverter({ ui }: Props) {
         // Invalid input
       }
     },
-    [ui.errorArabicRange]
+    [i18n.errorArabicRange]
   )
 
   const onRomanChange = useCallback(
@@ -51,7 +48,7 @@ export default function RomanConverter({ ui }: Props) {
       }
 
       if (!isValidRomanNumeral(value)) {
-        setRomanError(ui.errorInvalidRoman)
+        setRomanError(i18n.errorInvalidRoman)
         return
       }
 
@@ -61,21 +58,21 @@ export default function RomanConverter({ ui }: Props) {
         setArabicValue(arabic)
         setArabicError(null)
       } catch {
-        setRomanError(ui.errorInvalidRoman)
+        setRomanError(i18n.errorInvalidRoman)
       }
     },
-    [ui.errorInvalidRoman]
+    [i18n.errorInvalidRoman]
   )
 
   return (
     <div className="flex flex-col gap-6">
       <ConverterField
-        label={ui.arabicNumber}
+        label={i18n.arabicNumber}
         value={arabicValue}
         onChange={onArabicChange}
         error={arabicError}
-        placeholder={ui.arabicPlaceholder}
-        copyTitle={ui.copy}
+        placeholder={i18n.arabicPlaceholder}
+        copyTitle={i18n.copy}
         type="number"
         min={1}
         max={3999}
@@ -84,12 +81,12 @@ export default function RomanConverter({ ui }: Props) {
       <DirectionIndicator />
 
       <ConverterField
-        label={ui.romanNumeral}
+        label={i18n.romanNumeral}
         value={romanValue}
         onChange={onRomanChange}
         error={romanError}
-        placeholder={ui.romanPlaceholder}
-        copyTitle={ui.copy}
+        placeholder={i18n.romanPlaceholder}
+        copyTitle={i18n.copy}
         uppercase
       />
     </div>

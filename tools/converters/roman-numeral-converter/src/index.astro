@@ -1,7 +1,7 @@
 ---
 import type { ToolComponentProps as Props } from '@inbrowserapp/tools-shared'
 
-const { ui } = Astro.props
+const { i18n, lang } = Astro.props
 import RomanConverter from './RomanConverter.tsx'
 import { Icon } from 'astro-icon/components'
 ---
@@ -9,14 +9,14 @@ import { Icon } from 'astro-icon/components'
 <div class="flex flex-col gap-8">
   <!-- Static Header (SSG) -->
   <header class="text-center">
-    <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3">{ui.name}</h1>
+    <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3">{i18n.name}</h1>
     <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-      {ui.description}
+      {i18n.description}
     </p>
   </header>
 
   <!-- Interactive React Component -->
-  <RomanConverter client:load ui={ui} />
+  <RomanConverter client:load i18n={i18n} lang={lang} />
 
   <!-- Static Educational Content (SSG) -->
   <section
@@ -24,9 +24,9 @@ import { Icon } from 'astro-icon/components'
   >
     <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
       <Icon name="heroicons:information-circle" class="w-5 h-5 text-blue-500" />
-      {ui.whatIsTitle}
+      {i18n.whatIsTitle}
     </h2>
-    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{ui.whatIsDescription}</p>
+    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{i18n.whatIsDescription}</p>
     <div
       class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
     >
