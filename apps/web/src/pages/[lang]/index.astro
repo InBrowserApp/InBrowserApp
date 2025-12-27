@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { supportedLanguages } from '@inbrowserapp/tools/i18n'
+import { supportedLanguages } from '@inbrowserapp/tools-i18n'
 
 export async function getStaticPaths() {
   const languages = supportedLanguages.filter((lang: string) => lang !== 'en')

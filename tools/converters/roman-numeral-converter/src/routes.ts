@@ -1,4 +1,4 @@
-import type { ToolStaticPath } from '@inbrowserapp/tool-shared'
+import type { ToolStaticPath } from '@inbrowserapp/tools-shared'
 import { metadata } from './meta'
 
 export function getStaticPaths(): ToolStaticPath[] {

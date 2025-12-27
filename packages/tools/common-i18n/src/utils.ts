@@ -1,4 +1,4 @@
-import type { SupportedLanguage, ToolMetadata, ToolMeta } from '@inbrowserapp/tool-shared'
+import type { SupportedLanguage, ToolMetadata, ToolMeta } from '@inbrowserapp/tools-shared'
 
 export { supportedLanguages } from './languages'
 export type { SupportedLanguage } from './languages'

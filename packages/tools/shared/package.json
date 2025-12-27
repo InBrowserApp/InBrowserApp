@@ -1,5 +1,5 @@
 {
-  "name": "@inbrowserapp/tool-shared",
+  "name": "@inbrowserapp/tools-shared",
   "version": "0.0.1",
   "private": true,
   "type": "module",

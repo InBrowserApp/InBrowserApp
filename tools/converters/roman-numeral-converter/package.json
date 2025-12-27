@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@inbrowserapp/tool-shared": "workspace:*",
+    "@inbrowserapp/tools-shared": "workspace:*",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {

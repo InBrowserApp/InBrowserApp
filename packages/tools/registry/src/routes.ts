@@ -1,4 +1,4 @@
-import type { ToolStaticPath } from '@inbrowserapp/tool-shared'
+import type { ToolStaticPath } from '@inbrowserapp/tools-shared'
 
 export async function getToolStaticPaths(): Promise<ToolStaticPath[]> {
   const tools = await Promise.all([import('@tools/roman-numeral-converter/routes')])

@@ -7,7 +7,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@inbrowserapp/tool-shared": "workspace:*",
+    "@inbrowserapp/tools-shared": "workspace:*",
     "@tools/roman-numeral-converter": "workspace:*"
   }
 }
