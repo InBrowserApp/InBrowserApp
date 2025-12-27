@@ -1,10 +1,7 @@
 export const metadata = {
   id: 'roman-numeral-converter',
-  domain: 'converters',
-  path: 'converters/roman-numeral-converter',
   tags: ['converters', 'roman', 'numeral', 'number'],
   features: ['offline'],
-  subPaths: [],
 
   meta: {
     en: {

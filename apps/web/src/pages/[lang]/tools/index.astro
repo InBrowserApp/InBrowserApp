@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro'
-import { toolRegistry } from '@inbrowserapp/tools/registry'
+import { toolRegistry } from '@inbrowserapp/tools-registry'
 import { translateMeta, supportedLanguages } from '@inbrowserapp/tools/i18n'
-import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
+import type { SupportedLanguage } from '@inbrowserapp/tool-shared'
 
 export async function getStaticPaths() {
   const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
@@ -82,7 +82,7 @@ const t = pageTranslations[lang] || {
                 {meta.description}
               </p>
               <div class="flex flex-wrap gap-2">
-                {tool.tags.slice(0, 3).map((tag) => (
+                {tool.tags.slice(0, 3).map((tag: string) => (
                   <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full">
                     {tag}
                   </span>

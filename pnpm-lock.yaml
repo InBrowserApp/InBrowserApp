@@ -71,9 +71,15 @@ importers:
       '@iconify-json/heroicons':
         specifier: ^1.2.3
         version: 1.2.3
+      '@inbrowserapp/tool-shared':
+        specifier: workspace:*
+        version: link:../../packages/tool-shared
       '@inbrowserapp/tools':
         specifier: workspace:*
         version: link:../../packages/tools
+      '@inbrowserapp/tools-registry':
+        specifier: workspace:*
+        version: link:../../packages/tools-registry
       astro:
         specifier: 'catalog:'
         version: 5.16.6(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -112,15 +118,26 @@ importers:
         specifier: ^4.1.18
         version: 4.1.18
 
+  packages/tool-shared: {}
+
   packages/tools:
     dependencies:
-      '@tools/roman-numeral-converter':
+      '@inbrowserapp/tool-shared':
         specifier: workspace:*
-        version: link:../../tools/converters/roman-numeral-converter
+        version: link:../tool-shared
     devDependencies:
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
+
+  packages/tools-registry:
+    dependencies:
+      '@inbrowserapp/tool-shared':
+        specifier: workspace:*
+        version: link:../tool-shared
+      '@tools/roman-numeral-converter':
+        specifier: workspace:*
+        version: link:../../tools/converters/roman-numeral-converter
 
   tools/converters/roman-numeral-converter:
     dependencies:
@@ -130,6 +147,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.3)
+      '@inbrowserapp/tool-shared':
+        specifier: workspace:*
+        version: link:../../../packages/tool-shared
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5

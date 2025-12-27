@@ -1,0 +1,11 @@
+{
+  "name": "@inbrowserapp/tool-shared",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./languages": "./src/languages.ts",
+    "./types": "./src/types.ts"
+  }
+}

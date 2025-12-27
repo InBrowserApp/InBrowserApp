@@ -1,0 +1,6 @@
+import type { ToolMetadata } from '@inbrowserapp/tool-shared'
+
+// Import tool metadata
+import { metadata as romanConverterMeta } from '@tools/roman-numeral-converter/meta'
+
+export const toolRegistry: ToolMetadata[] = [romanConverterMeta]

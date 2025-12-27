@@ -1,61 +1,28 @@
 ---
-import { getToolRoutes, getToolComponent } from '@inbrowserapp/tools/registry'
+import { getToolStaticPaths } from '@inbrowserapp/tools-registry'
 import { translateMeta, supportedLanguages } from '@inbrowserapp/tools/i18n'
-import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
-import type { ToolRoute } from '@inbrowserapp/tools/types'
+import type { SupportedLanguage, ToolRouteProps, ToolComponent } from '@inbrowserapp/tool-shared'
 import ToolLayout from '../../../layouts/ToolLayout.astro'
 
 export async function getStaticPaths() {
-  const routes = await getToolRoutes()
+  const paths = await getToolStaticPaths()
   // Exclude English (English uses default route)
   const languages = supportedLanguages.filter((lang) => lang !== 'en')
 
-  return routes.flatMap((route) =>
-    languages.flatMap((lang) => {
-      // Main route
-      const paths: Array<{
-        params: { lang: string; path: string }
-        props: { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined }
-      }> = [
-        {
-          params: { lang, path: route.id },
-          props: { route, lang, subPath: undefined },
-        },
-      ]
-
-      // Sub-routes
-      if (route.tool.subPaths) {
-        route.tool.subPaths.forEach((sub) => {
-          paths.push({
-            params: { lang, path: `${route.id}/${sub}` },
-            props: { route, lang, subPath: sub as string },
-          })
-        })
-      }
-
-      return paths
-    })
+  return paths.flatMap((p) =>
+    languages.map((lang) => ({
+      params: { lang, path: p.params.path },
+      props: { ...p.props, lang },
+    }))
   )
 }
 
-const { route, lang } = Astro.props as {
-  route: ToolRoute
-  lang: SupportedLanguage
-  subPath: string | undefined
-}
-const metadata = translateMeta(route.tool, lang)
-const Component = getToolComponent(route.id)
+type Props = ToolRouteProps & { lang: SupportedLanguage }
+const { metadata, component: loadComponent, lang } = Astro.props as Props
+const meta = translateMeta(metadata, lang)
+const Component = (await loadComponent()).default as ToolComponent
 ---
 
-<ToolLayout title={metadata.name} description={metadata.description} lang={lang}>
-  {
-    Component ? (
-      <Component name={metadata.name} description={metadata.description} ui={metadata.ui} />
-    ) : (
-      <div class="p-8 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
-        <h2 class="text-xl font-semibold mb-2">Tool: {route.id}</h2>
-        <p class="text-gray-600 dark:text-gray-400">This tool is not yet implemented.</p>
-      </div>
-    )
-  }
+<ToolLayout title={meta.name} description={meta.description} lang={lang}>
+  <Component name={meta.name} description={meta.description} ui={meta.ui} />
 </ToolLayout>

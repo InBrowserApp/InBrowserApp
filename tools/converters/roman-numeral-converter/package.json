@@ -5,12 +5,13 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./index.astro": "./src/index.astro",
-    "./meta": "./src/meta.ts"
+    "./meta": "./src/meta.ts",
+    "./routes": "./src/routes.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@inbrowserapp/tool-shared": "workspace:*",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {

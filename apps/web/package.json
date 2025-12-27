@@ -13,7 +13,9 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@iconify-json/heroicons": "^1.2.3",
+    "@inbrowserapp/tool-shared": "workspace:*",
     "@inbrowserapp/tools": "workspace:*",
+    "@inbrowserapp/tools-registry": "workspace:*",
     "astro": "catalog:",
     "astro-icon": "^1.1.5",
     "typescript": "catalog:"

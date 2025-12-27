@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from '../i18n/languages'
+import type { SupportedLanguage } from './languages'
 
 export interface ToolMeta {
   name: string
@@ -8,17 +8,21 @@ export interface ToolMeta {
 
 export interface ToolMetadata {
   id: string
-  domain: string
-  path: string
   tags: readonly string[]
   features: readonly string[]
-  subPaths?: readonly string[]
   meta: Record<SupportedLanguage, ToolMeta>
 }
 
-export interface ToolRoute {
-  id: string
-  tool: ToolMetadata
+/** Props returned by tool's getStaticPaths */
+export interface ToolRouteProps {
+  metadata: ToolMetadata
+  component: () => Promise<{ default: unknown }>
+}
+
+/** Static path entry returned by tool's getStaticPaths */
+export interface ToolStaticPath {
+  params: { path: string }
+  props: ToolRouteProps
 }
 
 /** Props passed to tool components */
