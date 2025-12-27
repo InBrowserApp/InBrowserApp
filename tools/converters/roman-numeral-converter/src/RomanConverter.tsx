@@ -3,15 +3,7 @@ import { arabicToRoman, romanToArabic, isValidRomanNumeral } from './utils/conve
 import { ConverterField, DirectionIndicator } from './components'
 
 interface Props {
-  ui: {
-    arabicNumber: string
-    romanNumeral: string
-    arabicPlaceholder: string
-    romanPlaceholder: string
-    copy: string
-    errorArabicRange: string
-    errorInvalidRoman: string
-  }
+  ui: Record<string, string>
 }
 
 export default function RomanConverter({ ui }: Props) {
