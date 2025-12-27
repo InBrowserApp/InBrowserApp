@@ -9,22 +9,27 @@ import { getToolComponent } from '@/registry/components'
 export async function getStaticPaths() {
   const routes = await getToolRoutes()
   // Exclude English (English uses default route)
-  const languages = supportedLanguages.filter(lang => lang !== 'en')
+  const languages = supportedLanguages.filter((lang) => lang !== 'en')
 
-  return routes.flatMap(route =>
-    languages.flatMap(lang => {
+  return routes.flatMap((route) =>
+    languages.flatMap((lang) => {
       // Main route
-      const paths: Array<{ params: { lang: string; path: string }; props: { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined } }> = [{
-        params: { lang, path: route.id },
-        props: { route, lang, subPath: undefined }
-      }]
+      const paths: Array<{
+        params: { lang: string; path: string }
+        props: { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined }
+      }> = [
+        {
+          params: { lang, path: route.id },
+          props: { route, lang, subPath: undefined },
+        },
+      ]
 
       // Sub-routes
       if (route.tool.subPaths) {
-        route.tool.subPaths.forEach(sub => {
+        route.tool.subPaths.forEach((sub) => {
           paths.push({
             params: { lang, path: `${route.id}/${sub}` },
-            props: { route, lang, subPath: sub as string }
+            props: { route, lang, subPath: sub as string },
           })
         })
       }
@@ -34,20 +39,26 @@ export async function getStaticPaths() {
   )
 }
 
-const { route, lang, subPath: _subPath } = Astro.props as { route: ToolRoute; lang: SupportedLanguage; subPath: string | undefined }
+const { route, lang } = Astro.props as {
+  route: ToolRoute
+  lang: SupportedLanguage
+  subPath: string | undefined
+}
 const metadata = translateMeta(route.tool, lang)
 const Component = getToolComponent(route.id)
 ---
 
 <ToolLayout title={metadata.name} description={metadata.description} lang={lang}>
-  {Component ? (
-    <Component name={metadata.name} description={metadata.description} ui={metadata.ui} />
-  ) : (
-    <div class="tool-placeholder">
-      <h2>Tool: {route.id}</h2>
-      <p>This tool is not yet implemented.</p>
-    </div>
-  )}
+  {
+    Component ? (
+      <Component name={metadata.name} description={metadata.description} ui={metadata.ui} />
+    ) : (
+      <div class="tool-placeholder">
+        <h2>Tool: {route.id}</h2>
+        <p>This tool is not yet implemented.</p>
+      </div>
+    )
+  }
 </ToolLayout>
 
 <style>

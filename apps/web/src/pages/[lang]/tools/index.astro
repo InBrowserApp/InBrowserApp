@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 
   return languages.map((lang: string) => ({
     params: { lang },
-    props: { lang }
+    props: { lang },
   }))
 }
 
@@ -21,17 +21,44 @@ const pageTranslations: Record<string, { title: string; subtitle: string }> = {
   'zh-CN': { title: '所有工具', subtitle: '免费在线浏览器工具 - 注重隐私，无数据收集' },
   'zh-TW': { title: '所有工具', subtitle: '免費線上瀏覽器工具 - 注重隱私，無資料收集' },
   'zh-HK': { title: '所有工具', subtitle: '免費線上瀏覽器工具 - 注重隱私，無資料收集' },
-  es: { title: 'Todas las herramientas', subtitle: 'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos' },
-  fr: { title: 'Tous les outils', subtitle: 'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données' },
-  de: { title: 'Alle Werkzeuge', subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung' },
-  it: { title: 'Tutti gli strumenti', subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati' },
-  ja: { title: 'すべてのツール', subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし' },
+  es: {
+    title: 'Todas las herramientas',
+    subtitle:
+      'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos',
+  },
+  fr: {
+    title: 'Tous les outils',
+    subtitle:
+      'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données',
+  },
+  de: {
+    title: 'Alle Werkzeuge',
+    subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung',
+  },
+  it: {
+    title: 'Tutti gli strumenti',
+    subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati',
+  },
+  ja: {
+    title: 'すべてのツール',
+    subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし',
+  },
   ko: { title: '모든 도구', subtitle: '무료 브라우저 도구 - 개인정보 보호 중심, 데이터 수집 없음' },
-  ru: { title: 'Все инструменты', subtitle: 'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных' },
-  pt: { title: 'Todas as ferramentas', subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados' },
+  ru: {
+    title: 'Все инструменты',
+    subtitle:
+      'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных',
+  },
+  pt: {
+    title: 'Todas as ferramentas',
+    subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados',
+  },
 }
 
-const t = pageTranslations[lang] || { title: 'All Tools', subtitle: 'Free online browser tools - Privacy focused, no data collection' }
+const t = pageTranslations[lang] || {
+  title: 'All Tools',
+  subtitle: 'Free online browser tools - Privacy focused, no data collection',
+}
 ---
 
 <BaseLayout title={t.title} description={t.subtitle} lang={lang}>
@@ -40,20 +67,22 @@ const t = pageTranslations[lang] || { title: 'All Tools', subtitle: 'Free online
     <p class="subtitle">{t.subtitle}</p>
 
     <div class="tools-grid">
-      {toolRegistry.map(tool => {
-        const meta = translateMeta(tool, lang)
-        return (
-          <a href={`/${lang}/tools/${tool.id}`} class="tool-card">
-            <h3 class="tool-name">{meta.name}</h3>
-            <p class="tool-description">{meta.description}</p>
-            <div class="tool-tags">
-              {tool.tags.slice(0, 3).map(tag => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
-          </a>
-        )
-      })}
+      {
+        toolRegistry.map((tool) => {
+          const meta = translateMeta(tool, lang)
+          return (
+            <a href={`/${lang}/tools/${tool.id}`} class="tool-card">
+              <h3 class="tool-name">{meta.name}</h3>
+              <p class="tool-description">{meta.description}</p>
+              <div class="tool-tags">
+                {tool.tags.slice(0, 3).map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </a>
+          )
+        })
+      }
     </div>
   </div>
 </BaseLayout>

@@ -12,20 +12,22 @@ const lang = 'en'
     <p class="subtitle">Free online browser tools - Privacy focused, no data collection</p>
 
     <div class="tools-grid">
-      {toolRegistry.map(tool => {
-        const meta = translateMeta(tool, lang)
-        return (
-          <a href={`/tools/${tool.id}`} class="tool-card">
-            <h3 class="tool-name">{meta.name}</h3>
-            <p class="tool-description">{meta.description}</p>
-            <div class="tool-tags">
-              {tool.tags.slice(0, 3).map(tag => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
-          </a>
-        )
-      })}
+      {
+        toolRegistry.map((tool) => {
+          const meta = translateMeta(tool, lang)
+          return (
+            <a href={`/tools/${tool.id}`} class="tool-card">
+              <h3 class="tool-name">{meta.name}</h3>
+              <p class="tool-description">{meta.description}</p>
+              <div class="tool-tags">
+                {tool.tags.slice(0, 3).map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </a>
+          )
+        })
+      }
     </div>
   </div>
 </BaseLayout>

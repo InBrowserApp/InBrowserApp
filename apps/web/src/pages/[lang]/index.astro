@@ -7,7 +7,7 @@ export async function getStaticPaths() {
 
   return languages.map((lang: string) => ({
     params: { lang },
-    props: { lang }
+    props: { lang },
   }))
 }
 
@@ -15,21 +15,76 @@ const { lang } = Astro.props
 
 // Simple translation map for home page
 const translations: Record<string, { title: string; subtitle: string; browseTools: string }> = {
-  zh: { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集', browseTools: '浏览所有工具' },
-  'zh-CN': { title: 'InBrowserApp', subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集', browseTools: '浏览所有工具' },
-  'zh-TW': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集', browseTools: '瀏覽所有工具' },
-  'zh-HK': { title: 'InBrowserApp', subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集', browseTools: '瀏覽所有工具' },
-  es: { title: 'InBrowserApp', subtitle: 'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos', browseTools: 'Ver todas las herramientas' },
-  fr: { title: 'InBrowserApp', subtitle: 'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données', browseTools: 'Parcourir tous les outils' },
-  de: { title: 'InBrowserApp', subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung', browseTools: 'Alle Werkzeuge durchsuchen' },
-  it: { title: 'InBrowserApp', subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati', browseTools: 'Sfoglia tutti gli strumenti' },
-  ja: { title: 'InBrowserApp', subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし', browseTools: 'すべてのツールを見る' },
-  ko: { title: 'InBrowserApp', subtitle: '무료 브라우저 도구 - 개인정보 보호 중심, 데이터 수집 없음', browseTools: '모든 도구 보기' },
-  ru: { title: 'InBrowserApp', subtitle: 'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных', browseTools: 'Просмотреть все инструменты' },
-  pt: { title: 'InBrowserApp', subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados', browseTools: 'Navegar por todas as ferramentas' },
+  zh: {
+    title: 'InBrowserApp',
+    subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集',
+    browseTools: '浏览所有工具',
+  },
+  'zh-CN': {
+    title: 'InBrowserApp',
+    subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集',
+    browseTools: '浏览所有工具',
+  },
+  'zh-TW': {
+    title: 'InBrowserApp',
+    subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集',
+    browseTools: '瀏覽所有工具',
+  },
+  'zh-HK': {
+    title: 'InBrowserApp',
+    subtitle: '免費的線上瀏覽器工具 - 注重隱私，無資料收集',
+    browseTools: '瀏覽所有工具',
+  },
+  es: {
+    title: 'InBrowserApp',
+    subtitle:
+      'Herramientas gratuitas en el navegador - Enfocadas en privacidad, sin recopilación de datos',
+    browseTools: 'Ver todas las herramientas',
+  },
+  fr: {
+    title: 'InBrowserApp',
+    subtitle:
+      'Outils gratuits dans le navigateur - Axés sur la confidentialité, aucune collecte de données',
+    browseTools: 'Parcourir tous les outils',
+  },
+  de: {
+    title: 'InBrowserApp',
+    subtitle: 'Kostenlose Browser-Tools - Datenschutzorientiert, keine Datensammlung',
+    browseTools: 'Alle Werkzeuge durchsuchen',
+  },
+  it: {
+    title: 'InBrowserApp',
+    subtitle: 'Strumenti gratuiti nel browser - Focalizzati sulla privacy, nessuna raccolta dati',
+    browseTools: 'Sfoglia tutti gli strumenti',
+  },
+  ja: {
+    title: 'InBrowserApp',
+    subtitle: '無料のブラウザツール - プライバシー重視、データ収集なし',
+    browseTools: 'すべてのツールを見る',
+  },
+  ko: {
+    title: 'InBrowserApp',
+    subtitle: '무료 브라우저 도구 - 개인정보 보호 중심, 데이터 수집 없음',
+    browseTools: '모든 도구 보기',
+  },
+  ru: {
+    title: 'InBrowserApp',
+    subtitle:
+      'Бесплатные инструменты в браузере - Ориентированы на конфиденциальность, без сбора данных',
+    browseTools: 'Просмотреть все инструменты',
+  },
+  pt: {
+    title: 'InBrowserApp',
+    subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados',
+    browseTools: 'Navegar por todas as ferramentas',
+  },
 }
 
-const t = translations[lang] || { title: 'InBrowserApp', subtitle: 'Free online browser tools - Privacy focused, no data collection', browseTools: 'Browse All Tools' }
+const t = translations[lang] || {
+  title: 'InBrowserApp',
+  subtitle: 'Free online browser tools - Privacy focused, no data collection',
+  browseTools: 'Browse All Tools',
+}
 ---
 
 <BaseLayout title="Home" description="Free online browser tools" lang={lang}>
