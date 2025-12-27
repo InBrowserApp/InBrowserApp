@@ -1,9 +1,7 @@
 import type { SupportedLanguage } from './languages'
 
 export interface ToolMeta {
-  name: string
-  description: string
-  ui: Record<string, string>
+  readonly ui: Record<string, string> & { name: string; description: string }
 }
 
 export interface ToolMetadata {
@@ -27,9 +25,8 @@ export interface ToolStaticPath {
 
 /** Props passed to tool components */
 export interface ToolComponentProps {
-  name: string
-  description: string
-  ui: Record<string, string>
+  ui: Record<string, string> & { name: string; description: string }
+  lang: SupportedLanguage
 }
 
 /** Type for Astro component that accepts ToolComponentProps */

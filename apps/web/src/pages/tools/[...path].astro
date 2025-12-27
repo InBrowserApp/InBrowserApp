@@ -18,6 +18,6 @@ const meta = translateMeta(metadata, lang)
 const Component = (await loadComponent()).default as ToolComponent
 ---
 
-<ToolLayout title={meta.name} description={meta.description} lang={lang}>
-  <Component name={meta.name} description={meta.description} ui={meta.ui} />
+<ToolLayout title={meta.ui.name} description={meta.ui.description} lang={lang}>
+  <Component ui={meta.ui} lang={lang} />
 </ToolLayout>

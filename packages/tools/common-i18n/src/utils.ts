@@ -30,16 +30,11 @@ export function getMessages(lang: SupportedLanguage): Record<string, string> {
   return globalMessages[lang] || globalMessages.en
 }
 
-export function translateMeta(
-  tool: ToolMetadata,
-  lang: SupportedLanguage
-): ToolMeta & { name: string; description: string } {
+export function translateMeta(tool: ToolMetadata, lang: SupportedLanguage): ToolMeta {
   const meta = tool.meta[lang] || tool.meta.en
   const global = getMessages(lang)
 
   return {
-    name: meta.name,
-    description: meta.description,
     ui: {
       ...global,
       ...meta.ui,
