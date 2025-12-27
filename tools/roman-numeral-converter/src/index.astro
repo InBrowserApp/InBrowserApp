@@ -9,82 +9,26 @@ const { name, description, ui } = Astro.props
 import RomanConverter from './RomanConverter.vue'
 ---
 
-<div class="tool-page">
+<div class="flex flex-col gap-8">
   <!-- Static Header (SSG) -->
-  <header class="tool-header">
-    <h1 class="tool-title">{name}</h1>
-    <p class="tool-description">{description}</p>
+  <header class="text-center">
+    <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3">{name}</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">{description}</p>
   </header>
 
   <!-- Interactive Vue Component -->
   <RomanConverter client:load ui={ui} />
 
   <!-- Static Educational Content (SSG) -->
-  <section class="info-section">
-    <h2 class="section-title">{ui.whatIsTitle}</h2>
-    <p class="info-text">{ui.whatIsDescription}</p>
-    <p class="info-example">
-      <code>MMXXIV = 2024</code>
-    </p>
+  <section class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border-l-4 border-blue-500">
+    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
+      <span class="i-carbon-information w-5 h-5 inline-block text-blue-500"></span>
+      {ui.whatIsTitle}
+    </h2>
+    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{ui.whatIsDescription}</p>
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+      <span class="text-gray-500 dark:text-gray-400">Example:</span>
+      <code class="font-mono text-lg font-semibold text-blue-600 dark:text-blue-400">MMXXIV = 2024</code>
+    </div>
   </section>
 </div>
-
-<style>
-  .tool-page {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .tool-header {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .tool-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--c-text-1, #333);
-    margin-bottom: 0.5rem;
-  }
-
-  .tool-description {
-    font-size: 1.125rem;
-    color: var(--c-text-2, #666);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .info-section {
-    padding: 1.5rem;
-    background: var(--c-bg-mute, #f0f0f0);
-    border-radius: 0.75rem;
-    border-left: 4px solid var(--c-brand, #646cff);
-  }
-
-  .section-title {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--c-text-1, #333);
-  }
-
-  .info-text {
-    color: var(--c-text-2, #666);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .info-example {
-    margin-top: 0.75rem;
-  }
-
-  .info-example code {
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace;
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-    background: var(--c-bg, #fff);
-    border-radius: 0.25rem;
-    color: var(--c-brand, #646cff);
-  }
-</style>

@@ -1,47 +1,59 @@
 <template>
-  <div class="roman-converter">
+  <div class="flex flex-col gap-6">
     <!-- Arabic Number Input -->
-    <div class="tool-section">
-      <h2 class="section-title">{{ ui.arabicNumber }}</h2>
-      <div class="input-group">
+    <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+        {{ ui.arabicNumber }}
+      </label>
+      <div class="flex gap-3">
         <input
           v-model.number="arabicValue"
           type="number"
           :min="1"
           :max="3999"
           :placeholder="ui.arabicPlaceholder"
-          class="input w-full"
+          class="flex-1 px-4 py-3 text-xl font-mono bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none transition-colors"
           @input="onArabicInput"
         />
-        <button @click="copyToClipboard(String(arabicValue))" class="btn-copy" :title="ui.copy">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
+        <button
+          @click="copyToClipboard(String(arabicValue))"
+          class="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-blue-500 hover:text-white border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 group"
+          :title="ui.copy"
+        >
+          <span class="i-fluent-copy-16-regular w-5 h-5 block text-gray-500 group-hover:text-white"></span>
         </button>
+      </div>
+    </div>
+
+    <!-- Bidirectional Arrow -->
+    <div class="flex justify-center">
+      <div class="flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900 rounded-full">
+        <span class="i-carbon-arrows-vertical w-6 h-6 block text-blue-500"></span>
       </div>
     </div>
 
     <!-- Roman Numeral Input -->
-    <div class="tool-section">
-      <h2 class="section-title">{{ ui.romanNumeral }}</h2>
-      <div class="input-group">
+    <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+        {{ ui.romanNumeral }}
+      </label>
+      <div class="flex gap-3">
         <input
           v-model="romanValue"
           type="text"
           :placeholder="ui.romanPlaceholder"
-          class="input w-full uppercase"
+          class="flex-1 px-4 py-3 text-xl font-mono uppercase bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none transition-colors"
           @input="onRomanInput"
         />
-        <button @click="copyToClipboard(romanValue)" class="btn-copy" :title="ui.copy">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
+        <button
+          @click="copyToClipboard(romanValue)"
+          class="px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-blue-500 hover:text-white border-2 border-gray-200 dark:border-gray-600 rounded-lg transition-all duration-200 group"
+          :title="ui.copy"
+        >
+          <span class="i-fluent-copy-16-regular w-5 h-5 block text-gray-500 group-hover:text-white"></span>
         </button>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -103,64 +115,3 @@ function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text)
 }
 </script>
-
-<style scoped>
-.roman-converter {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.tool-section {
-  padding: 1.5rem;
-  background: var(--c-bg-soft, #f5f5f5);
-  border-radius: 0.75rem;
-}
-
-.section-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--c-text-1, #333);
-}
-
-.input-group {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  font-size: 1.25rem;
-  border: 2px solid var(--c-border, #e0e0e0);
-  border-radius: 0.5rem;
-  background: var(--c-bg, #fff);
-  transition: border-color 0.2s;
-}
-
-.input:focus {
-  outline: none;
-  border-color: var(--c-brand, #646cff);
-}
-
-.btn-copy {
-  padding: 0.75rem;
-  background: var(--c-bg, #fff);
-  border: 2px solid var(--c-border, #e0e0e0);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  color: var(--c-text-2, #666);
-  transition: all 0.2s;
-}
-
-.btn-copy:hover {
-  background: var(--c-brand, #646cff);
-  border-color: var(--c-brand, #646cff);
-  color: #fff;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-</style>
