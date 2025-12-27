@@ -7,6 +7,7 @@
   "romanPlaceholder": "Wprowadź cyfrę rzymską...",
   "copy": "Kopiuj",
   "copied": "Skopiowano do schowka!",
+  "copyFailed": "Nie udało się skopiować do schowka",
   "errorArabicRange": "Wprowadź liczbę od 1 do 3999",
   "errorInvalidRoman": "Wprowadź prawidłową cyfrę rzymską",
   "whatIsTitle": "Czym są cyfry rzymskie?",

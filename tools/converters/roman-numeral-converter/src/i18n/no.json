@@ -7,6 +7,7 @@
   "romanPlaceholder": "Skriv inn romersk tall...",
   "copy": "Kopier",
   "copied": "Kopiert til utklippstavlen!",
+  "copyFailed": "Kunne ikke kopiere til utklippstavlen",
   "errorArabicRange": "Vennligst skriv inn et tall mellom 1 og 3999",
   "errorInvalidRoman": "Vennligst skriv inn et gyldig romersk tall",
   "whatIsTitle": "Hva er romerske tall?",

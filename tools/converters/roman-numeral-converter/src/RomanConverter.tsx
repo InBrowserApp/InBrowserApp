@@ -80,6 +80,7 @@ export default function RomanConverter({ i18n }: Props) {
         placeholder={i18n.arabicPlaceholder}
         copyTitle={i18n.copy}
         copiedMessage={i18n.copied}
+        copyFailedMessage={i18n.copyFailed}
         type="number"
         min={1}
         max={3999}
@@ -95,6 +96,7 @@ export default function RomanConverter({ i18n }: Props) {
         placeholder={i18n.romanPlaceholder}
         copyTitle={i18n.copy}
         copiedMessage={i18n.copied}
+        copyFailedMessage={i18n.copyFailed}
         uppercase
       />
     </div>

@@ -7,6 +7,7 @@
   "romanPlaceholder": "הזן ספרה רומית...",
   "copy": "העתק",
   "copied": "הועתק ללוח!",
+  "copyFailed": "העתקה ללוח נכשלה",
   "errorArabicRange": "אנא הזן מספר בין 1 ל-3999",
   "errorInvalidRoman": "אנא הזן ספרה רומית תקינה",
   "whatIsTitle": "מה הן ספרות רומיות?",

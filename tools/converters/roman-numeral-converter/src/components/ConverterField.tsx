@@ -10,6 +10,7 @@ interface ConverterFieldProps {
   placeholder: string
   copyTitle: string
   copiedMessage: string
+  copyFailedMessage: string
   type?: 'text' | 'number'
   min?: number
   max?: number
@@ -24,6 +25,7 @@ export function ConverterField({
   placeholder,
   copyTitle,
   copiedMessage,
+  copyFailedMessage,
   type = 'text',
   min,
   max,
@@ -45,7 +47,7 @@ export function ConverterField({
           placeholder={placeholder}
           className={`flex-1 px-4 py-3 text-xl font-mono bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-600 rounded-lg data-[focus]:border-blue-500 data-[invalid]:border-red-500 data-[invalid]:bg-red-50 dark:data-[invalid]:bg-red-900/20 outline-none transition-colors ${uppercase ? 'uppercase' : ''}`}
         />
-        <CopyButton text={String(value)} disabled={!!error || value === ''} title={copyTitle} copiedMessage={copiedMessage} />
+        <CopyButton text={String(value)} disabled={!!error || value === ''} title={copyTitle} copiedMessage={copiedMessage} copyFailedMessage={copyFailedMessage} />
       </div>
       {error && (
         <Description className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</Description>

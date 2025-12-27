@@ -7,6 +7,7 @@
   "romanPlaceholder": "로마 숫자 입력...",
   "copy": "복사",
   "copied": "클립보드에 복사되었습니다!",
+  "copyFailed": "클립보드 복사에 실패했습니다",
   "errorArabicRange": "1에서 3999 사이의 숫자를 입력하세요",
   "errorInvalidRoman": "유효한 로마 숫자를 입력하세요",
   "whatIsTitle": "로마 숫자란?",

@@ -7,6 +7,7 @@
   "romanPlaceholder": "Masukkan nombor Rom...",
   "copy": "Salin",
   "copied": "Disalin ke papan klip!",
+  "copyFailed": "Gagal menyalin ke papan keratan",
   "errorArabicRange": "Sila masukkan nombor antara 1 dan 3999",
   "errorInvalidRoman": "Sila masukkan nombor Rom yang sah",
   "whatIsTitle": "Apakah nombor Rom?",

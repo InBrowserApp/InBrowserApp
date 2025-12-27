@@ -7,6 +7,7 @@
   "romanPlaceholder": "Inserisci numero romano...",
   "copy": "Copia",
   "copied": "Copiato negli appunti!",
+  "copyFailed": "Impossibile copiare negli appunti",
   "errorArabicRange": "Inserisci un numero tra 1 e 3999",
   "errorInvalidRoman": "Inserisci un numero romano valido",
   "whatIsTitle": "Cosa sono i numeri romani?",

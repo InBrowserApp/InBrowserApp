@@ -7,6 +7,7 @@
   "romanPlaceholder": "Römische Zahl eingeben...",
   "copy": "Kopieren",
   "copied": "In die Zwischenablage kopiert!",
+  "copyFailed": "Kopieren in die Zwischenablage fehlgeschlagen",
   "errorArabicRange": "Bitte geben Sie eine Zahl zwischen 1 und 3999 ein",
   "errorInvalidRoman": "Bitte geben Sie eine gültige römische Zahl ein",
   "whatIsTitle": "Was sind römische Zahlen?",

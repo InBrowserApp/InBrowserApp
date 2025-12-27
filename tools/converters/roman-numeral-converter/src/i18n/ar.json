@@ -7,6 +7,7 @@
   "romanPlaceholder": "أدخل رقم روماني...",
   "copy": "نسخ",
   "copied": "تم النسخ إلى الحافظة!",
+  "copyFailed": "فشل النسخ إلى الحافظة",
   "errorArabicRange": "يرجى إدخال رقم بين 1 و 3999",
   "errorInvalidRoman": "يرجى إدخال رقم روماني صحيح",
   "whatIsTitle": "ما هي الأرقام الرومانية؟",
