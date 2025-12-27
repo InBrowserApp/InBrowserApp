@@ -14,10 +14,10 @@ export async function getStaticPaths() {
 
 type Props = ToolRouteProps & { lang: SupportedLanguage }
 const { metadata, component: loadComponent, lang } = Astro.props as Props
-const meta = translateMeta(metadata, lang)
+const i18n = translateMeta(metadata, lang)
 const Component = (await loadComponent()).default as ToolComponent
 ---
 
-<ToolLayout title={meta.i18n.name} description={meta.i18n.description} lang={lang}>
-  <Component i18n={meta.i18n} lang={lang} />
+<ToolLayout title={i18n.name} description={i18n.description} lang={lang}>
+  <Component i18n={i18n} lang={lang} />
 </ToolLayout>

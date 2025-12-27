@@ -1,14 +1,12 @@
 import type { SupportedLanguage } from './languages'
 
-export interface ToolMeta {
-  readonly i18n: Record<string, string> & { name: string; description: string }
-}
+export type ToolI18n = Record<string, string> & { name: string; description: string }
 
 export interface ToolMetadata {
   id: string
   tags: readonly string[]
   features: readonly string[]
-  meta: Record<SupportedLanguage, ToolMeta>
+  i18n: Record<SupportedLanguage, ToolI18n>
 }
 
 /** Props returned by tool's getStaticPaths */
@@ -25,7 +23,7 @@ export interface ToolStaticPath {
 
 /** Props passed to tool components */
 export interface ToolComponentProps {
-  i18n: Record<string, string> & { name: string; description: string }
+  i18n: ToolI18n
   lang: SupportedLanguage
 }
 

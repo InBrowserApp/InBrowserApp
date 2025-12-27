@@ -1,0 +1,13 @@
+{
+  "name": "Arabiska ↔ Romerska Konverterare",
+  "description": "Bidirektionell konverterare mellan romerska och arabiska siffror. Stöder standard romerska siffror från 1 till 3999 (I till MMMCMXCIX).",
+  "arabicNumber": "Arabisk siffra (1-3999)",
+  "romanNumeral": "Romersk siffra",
+  "arabicPlaceholder": "Ange arabisk siffra...",
+  "romanPlaceholder": "Ange romersk siffra...",
+  "copy": "Kopiera",
+  "errorArabicRange": "Ange ett nummer mellan 1 och 3999",
+  "errorInvalidRoman": "Ange en giltig romersk siffra",
+  "whatIsTitle": "Vad är romerska siffror?",
+  "whatIsDescription": "Romerska siffror är ett talsystem som har sitt ursprung i antika Rom, som använder bokstäver från det latinska alfabetet för att representera tal. Grundsymbolerna är I (1), V (5), X (10), L (50), C (100), D (500) och M (1000). Tal bildas genom att kombinera dessa symboler enligt specifika regler: symboler adderas vanligtvis (VI = 6), men när en mindre siffra förekommer före en större, subtraheras den (IV = 4). Detta system användes allmänt i Romerska riket och medeltida Europa, och fortsätter att användas idag för dekorativa ändamål, klockfaces, film copyright-datum och numrerade listor."
+}

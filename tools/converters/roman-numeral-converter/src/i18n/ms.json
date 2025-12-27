@@ -1,0 +1,13 @@
+{
+  "name": "Penukar Arab ↔ Rom",
+  "description": "Penukar dua hala antara nombor Rom dan Arab. Menyokong nombor Rom standard dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+  "arabicNumber": "Nombor Arab (1-3999)",
+  "romanNumeral": "Nombor Rom",
+  "arabicPlaceholder": "Masukkan nombor Arab...",
+  "romanPlaceholder": "Masukkan nombor Rom...",
+  "copy": "Salin",
+  "errorArabicRange": "Sila masukkan nombor antara 1 dan 3999",
+  "errorInvalidRoman": "Sila masukkan nombor Rom yang sah",
+  "whatIsTitle": "Apakah nombor Rom?",
+  "whatIsDescription": "Nombor Rom adalah sistem angka yang berasal dari Rom purba, menggunakan huruf-huruf dari abjad Latin untuk mewakili nombor. Simbol asas ialah I (1), V (5), X (10), L (50), C (100), D (500), dan M (1000). Nombor dibentuk dengan menggabungkan simbol-simbol ini mengikut peraturan tertentu: simbol biasanya ditambah bersama (VI = 6), tetapi apabila angka yang lebih kecil muncul sebelum yang lebih besar, ia dikurangkan (IV = 4). Sistem ini digunakan secara meluas di Empayar Rom dan Eropah zaman pertengahan, dan terus digunakan hari ini untuk tujuan hiasan, muka jam, tarikh hak cipta filem, dan senarai bernombor."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Arabisch ↔ Römisch Konverter",
+  "description": "Bidirektionaler Konverter zwischen römischen und arabischen Zahlen. Unterstützt Standard-Römerzahlen von 1 bis 3999 (I bis MMMCMXCIX).",
+  "arabicNumber": "Arabische Zahl (1-3999)",
+  "romanNumeral": "Römische Zahl",
+  "arabicPlaceholder": "Arabische Zahl eingeben...",
+  "romanPlaceholder": "Römische Zahl eingeben...",
+  "copy": "Kopieren",
+  "errorArabicRange": "Bitte geben Sie eine Zahl zwischen 1 und 3999 ein",
+  "errorInvalidRoman": "Bitte geben Sie eine gültige römische Zahl ein",
+  "whatIsTitle": "Was sind römische Zahlen?",
+  "whatIsDescription": "Römische Zahlen sind ein Zahlensystem, das im antiken Rom entstanden ist und Buchstaben des lateinischen Alphabets zur Darstellung von Zahlen verwendet. Die Grundsymbole sind I (1), V (5), X (10), L (50), C (100), D (500) und M (1000). Zahlen werden durch die Kombination dieser Symbole nach bestimmten Regeln gebildet: Symbole werden normalerweise addiert (VI = 6), aber wenn eine kleinere Zahl vor einer größeren steht, wird sie subtrahiert (IV = 4). Dieses System war im Römischen Reich und im mittelalterlichen Europa weit verbreitet und wird heute noch für dekorative Zwecke, Uhrengesichter, Film-Copyright-Daten und nummerierte Listen verwendet."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Convertitore Arabo ↔ Romano",
+  "description": "Convertitore bidirezionale tra numeri romani e arabi. Supporta numeri romani standard da 1 a 3999 (I a MMMCMXCIX).",
+  "arabicNumber": "Numero Arabo (1-3999)",
+  "romanNumeral": "Numero Romano",
+  "arabicPlaceholder": "Inserisci numero arabo...",
+  "romanPlaceholder": "Inserisci numero romano...",
+  "copy": "Copia",
+  "errorArabicRange": "Inserisci un numero tra 1 e 3999",
+  "errorInvalidRoman": "Inserisci un numero romano valido",
+  "whatIsTitle": "Cosa sono i numeri romani?",
+  "whatIsDescription": "I numeri romani sono un sistema di numerazione originario dell'antica Roma, che utilizza lettere dell'alfabeto latino per rappresentare i numeri. I simboli base sono I (1), V (5), X (10), L (50), C (100), D (500) e M (1000). I numeri si formano combinando questi simboli secondo regole specifiche: i simboli sono tipicamente sommati (VI = 6), ma quando un numero più piccolo appare prima di uno più grande, viene sottratto (IV = 4). Questo sistema era ampiamente utilizzato nell'Impero Romano e nell'Europa medievale, e continua ad essere usato oggi per scopi decorativi, quadranti di orologi, date di copyright di film e liste numerate."
+}

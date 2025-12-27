@@ -1,0 +1,13 @@
+{
+  "name": "Arabisch ↔ Romeins Converter",
+  "description": "Bidirectionele converter tussen Romeinse en Arabische cijfers. Ondersteunt standaard Romeinse cijfers van 1 tot 3999 (I tot MMMCMXCIX).",
+  "arabicNumber": "Arabisch Cijfer (1-3999)",
+  "romanNumeral": "Romeins Cijfer",
+  "arabicPlaceholder": "Voer Arabisch cijfer in...",
+  "romanPlaceholder": "Voer Romeins cijfer in...",
+  "copy": "Kopiëren",
+  "errorArabicRange": "Voer een nummer in tussen 1 en 3999",
+  "errorInvalidRoman": "Voer een geldig Romeins cijfer in",
+  "whatIsTitle": "Wat zijn Romeinse cijfers?",
+  "whatIsDescription": "Romeinse cijfers zijn een cijfersysteem dat zijn oorsprong vindt in het oude Rome, waarbij letters van het Latijnse alfabet worden gebruikt om getallen weer te geven. De basissymbolen zijn I (1), V (5), X (10), L (50), C (100), D (500) en M (1000). Getallen worden gevormd door deze symbolen te combineren volgens specifieke regels: symbolen worden gewoonlijk opgeteld (VI = 6), maar wanneer een kleiner cijfer voor een groter cijfer verschijnt, wordt het afgetrokken (IV = 4). Dit systeem werd veel gebruikt in het Romeinse Rijk en het middeleeuwse Europa, en wordt vandaag de dag nog steeds gebruikt voor decoratieve doeleinden, klokgezichten, film auteursrechtdata en genummerde lijsten."
+}

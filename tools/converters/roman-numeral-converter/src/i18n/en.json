@@ -1,0 +1,13 @@
+{
+  "name": "Roman Numeral ↔ Arabic Number Converter",
+  "description": "Bidirectional converter between Roman numerals and Arabic numbers. Supports standard Roman numerals from 1 to 3999 (I to MMMCMXCIX).",
+  "arabicNumber": "Arabic Number (1-3999)",
+  "romanNumeral": "Roman Numeral",
+  "arabicPlaceholder": "Enter Arabic number...",
+  "romanPlaceholder": "Enter Roman numeral...",
+  "copy": "Copy",
+  "errorArabicRange": "Please enter a number between 1 and 3999",
+  "errorInvalidRoman": "Please enter a valid Roman numeral",
+  "whatIsTitle": "What are Roman Numerals?",
+  "whatIsDescription": "Roman numerals are a numeral system originating in ancient Rome, using letters from the Latin alphabet to represent numbers. The basic symbols are I (1), V (5), X (10), L (50), C (100), D (500), and M (1000). Numbers are formed by combining these symbols according to specific rules: symbols are typically added together (VI = 6), but when a smaller numeral appears before a larger one, it is subtracted (IV = 4). This system was widely used throughout the Roman Empire and medieval Europe, and continues to be used today for decorative purposes, clock faces, movie copyright dates, and numbered lists."
+}

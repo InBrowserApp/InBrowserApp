@@ -1,0 +1,13 @@
+{
+  "name": "Trình Chuyển Đổi Ả Rập ↔ La Mã",
+  "description": "Trình chuyển đổi hai chiều giữa số La Mã và số Ả Rập. Hỗ trợ số La Mã tiêu chuẩn từ 1 đến 3999 (I đến MMMCMXCIX).",
+  "arabicNumber": "Số Ả Rập (1-3999)",
+  "romanNumeral": "Số La Mã",
+  "arabicPlaceholder": "Nhập số Ả Rập...",
+  "romanPlaceholder": "Nhập số La Mã...",
+  "copy": "Sao chép",
+  "errorArabicRange": "Vui lòng nhập một số từ 1 đến 3999",
+  "errorInvalidRoman": "Vui lòng nhập một số La Mã hợp lệ",
+  "whatIsTitle": "Số La Mã là gì?",
+  "whatIsDescription": "Số La Mã là một hệ thống số có nguồn gốc từ Roma cổ đại, sử dụng các chữ cái của bảng chữ cái Latin để biểu diễn số. Các ký hiệu cơ bản là I (1), V (5), X (10), L (50), C (100), D (500) và M (1000). Các số được tạo thành bằng cách kết hợp những ký hiệu này theo các quy tắc cụ thể: các ký hiệu thường được cộng lại với nhau (VI = 6), nhưng khi một số nhỏ hơn xuất hiện trước một số lớn hơn, nó được trừ đi (IV = 4). Hệ thống này đã được sử dụng rộng rãi trong Đế chế La Mã và châu Âu thời trung cổ, và tiếp tục được sử dụng ngày nay cho mục đích trang trí, mặt đồng hồ, ngày bản quyền phim và danh sách được đánh số."
+}

@@ -1,4 +1,4 @@
-import type { SupportedLanguage, ToolMetadata, ToolMeta } from '@inbrowserapp/tools-shared'
+import type { SupportedLanguage, ToolMetadata, ToolI18n } from '@inbrowserapp/tools-shared'
 
 export { supportedLanguages } from './languages'
 export type { SupportedLanguage } from './languages'
@@ -30,14 +30,12 @@ export function getMessages(lang: SupportedLanguage): Record<string, string> {
   return globalMessages[lang] || globalMessages.en
 }
 
-export function translateMeta(tool: ToolMetadata, lang: SupportedLanguage): ToolMeta {
-  const meta = tool.meta[lang] || tool.meta.en
+export function translateMeta(tool: ToolMetadata, lang: SupportedLanguage): ToolI18n {
+  const i18n = tool.i18n[lang] || tool.i18n.en
   const global = getMessages(lang)
 
   return {
-    i18n: {
-      ...global,
-      ...meta.i18n,
-    },
+    ...global,
+    ...i18n,
   }
 }
