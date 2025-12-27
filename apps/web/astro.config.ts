@@ -12,7 +12,7 @@ export default defineConfig({
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '@tools/roman-numeral-converter': fileURLToPath(
-          new URL('../../tools/converters/roman-numeral/src', import.meta.url)
+          new URL('../../tools/converters/roman-numeral-converter/src', import.meta.url)
         ),
         '@inbrowserapp/tools': fileURLToPath(new URL('../../packages/tools/src', import.meta.url)),
       },

@@ -113,13 +113,13 @@ importers:
     dependencies:
       '@tools/roman-numeral-converter':
         specifier: workspace:*
-        version: link:../../tools/converters/roman-numeral
+        version: link:../../tools/converters/roman-numeral-converter
     devDependencies:
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
 
-  tools/converters/roman-numeral:
+  tools/converters/roman-numeral-converter:
     dependencies:
       '@headlessui/react':
         specifier: ^2.2.9
@@ -127,13 +127,13 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.3)
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.3
     devDependencies:
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.7
-      react:
-        specifier: ^19.2.3
-        version: 19.2.3
 
 packages:
 
