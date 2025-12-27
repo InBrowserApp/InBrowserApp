@@ -1,6 +1,4 @@
 import type { ToolComponentProps } from '../types/tool'
-
-// @ts-expect-error - Astro components lack type declarations
 import RomanConverterIndex from '@tools/roman-numeral-converter'
 
 /** Astro component type that accepts ToolComponentProps */
