@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import { arabicToRoman, romanToArabic, isValidRomanNumeral } from './utils/conversion'
 import { ConverterField, DirectionIndicator } from './components'
-import { Toaster } from 'sonner'
 import type { metadata } from './meta'
 
 export type I18n = (typeof metadata.i18n)[keyof typeof metadata.i18n]
@@ -72,35 +71,32 @@ export default function RomanConverter({ i18n }: Props) {
   )
 
   return (
-    <>
-      <Toaster position="top-center" richColors />
-      <div className="flex flex-col gap-6">
-        <ConverterField
-          label={i18n.arabicNumber}
-          value={arabicValue}
-          onChange={onArabicChange}
-          error={arabicError}
-          placeholder={i18n.arabicPlaceholder}
-          copyTitle={i18n.copy}
-          copiedMessage={i18n.copied}
-          type="number"
-          min={1}
-          max={3999}
-        />
+    <div className="flex flex-col gap-6">
+      <ConverterField
+        label={i18n.arabicNumber}
+        value={arabicValue}
+        onChange={onArabicChange}
+        error={arabicError}
+        placeholder={i18n.arabicPlaceholder}
+        copyTitle={i18n.copy}
+        copiedMessage={i18n.copied}
+        type="number"
+        min={1}
+        max={3999}
+      />
 
-        <DirectionIndicator />
+      <DirectionIndicator />
 
-        <ConverterField
-          label={i18n.romanNumeral}
-          value={romanValue}
-          onChange={onRomanChange}
-          error={romanError}
-          placeholder={i18n.romanPlaceholder}
-          copyTitle={i18n.copy}
-          copiedMessage={i18n.copied}
-          uppercase
-        />
-      </div>
-    </>
+      <ConverterField
+        label={i18n.romanNumeral}
+        value={romanValue}
+        onChange={onRomanChange}
+        error={romanError}
+        placeholder={i18n.romanPlaceholder}
+        copyTitle={i18n.copy}
+        copiedMessage={i18n.copied}
+        uppercase
+      />
+    </div>
   )
 }
