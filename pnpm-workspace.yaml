@@ -1,7 +1,7 @@
 packages:
   - apps/*
   - packages/*
-  - tools/*
+  - tools/**
 
 catalog:
   '@astrojs/check': ^0.9.4
