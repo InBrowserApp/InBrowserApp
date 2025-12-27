@@ -5,7 +5,7 @@
   "type": "module",
   "exports": {
     "./types": "./src/types/tool.ts",
-    "./registry": "./src/registry/tools.ts",
+    "./registry": "./src/registry/index.ts",
     "./i18n": "./src/i18n/utils.ts",
     "./i18n/languages": "./src/i18n/languages.ts"
   },

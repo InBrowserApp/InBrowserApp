@@ -1,10 +1,9 @@
 ---
-import { getToolRoutes } from '@inbrowserapp/tools/registry'
+import { getToolRoutes, getToolComponent } from '@inbrowserapp/tools/registry'
 import { translateMeta } from '@inbrowserapp/tools/i18n'
 import type { SupportedLanguage } from '@inbrowserapp/tools/i18n/languages'
 import type { ToolRoute } from '@inbrowserapp/tools/types'
 import ToolLayout from '@/layouts/ToolLayout.astro'
-import { getToolComponent } from '@/registry/components'
 
 export async function getStaticPaths() {
   const routes = await getToolRoutes()
