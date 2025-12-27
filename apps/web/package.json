@@ -13,7 +13,6 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@inbrowserapp/tools": "workspace:*",
-    "@unocss/reset": "catalog:",
     "astro": "catalog:",
     "typescript": "catalog:"
   },
