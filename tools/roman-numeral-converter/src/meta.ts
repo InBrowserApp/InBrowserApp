@@ -1,13 +1,11 @@
-import type { ToolMetadata } from '@inbrowserapp/tools/types'
-
-export const metadata: ToolMetadata = {
+export const metadata = {
   id: 'roman-numeral-converter',
   domain: 'misc',
   path: 'tools/roman-numeral-converter',
   tags: ['misc', 'converter', 'roman', 'numeral', 'number'],
   features: ['offline'],
   subPaths: [],
-  
+
   meta: {
     en: {
       name: 'Roman Numeral ↔ Arabic Number Converter',
@@ -335,7 +333,4 @@ export const metadata: ToolMetadata = {
       }
     },
   },
-  
-  type: 'vue-island',
-  component: './RomanConverter.vue',
-}
+} as const

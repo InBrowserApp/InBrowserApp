@@ -9,6 +9,9 @@
     "./i18n": "./src/i18n/utils.ts",
     "./i18n/languages": "./src/i18n/languages.ts"
   },
+  "dependencies": {
+    "@tools/roman-numeral-converter": "workspace:*"
+  },
   "devDependencies": {
     "typescript": "catalog:"
   }

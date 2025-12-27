@@ -10,13 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "@tools/*": ["./tools/*/src"],
-      "@inbrowserapp/tools": ["./packages/tools/src"],
-      "@inbrowserapp/tools/*": ["./packages/tools/src/*"]
-    }
+    "isolatedModules": true
   },
   "exclude": ["node_modules", "dist", "old-repo", ".astro"]
 }

@@ -9,9 +9,7 @@
     "./meta": "./src/meta.ts"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "@inbrowserapp/tools": "workspace:*",
-    "vue": "catalog:"
+    "@heroicons/react": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
