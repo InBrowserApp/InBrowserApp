@@ -1,8 +1,6 @@
 ---
-import type { ToolComponentProps as Props } from '@inbrowserapp/tools-shared'
-
-const { i18n, lang } = Astro.props
-import RomanConverter from './RomanConverter.tsx'
+import RomanConverter, { type Props } from './RomanConverter.tsx'
+const { i18n } = Astro.props
 import { Icon } from 'astro-icon/components'
 ---
 
@@ -16,7 +14,7 @@ import { Icon } from 'astro-icon/components'
   </header>
 
   <!-- Interactive React Component -->
-  <RomanConverter client:load i18n={i18n} lang={lang} />
+  <RomanConverter client:load i18n={i18n} />
 
   <!-- Static Educational Content (SSG) -->
   <section
