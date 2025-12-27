@@ -9,8 +9,9 @@ export interface Props {
 }
 
 export default function RomanConverter({ i18n }: Props) {
-  const [arabicValue, setArabicValue] = useState<number | ''>(2024)
-  const [romanValue, setRomanValue] = useState<string>(arabicToRoman(2024))
+  const currentYear = new Date().getFullYear()
+  const [arabicValue, setArabicValue] = useState<number | ''>(currentYear)
+  const [romanValue, setRomanValue] = useState<string>(arabicToRoman(currentYear))
   const [arabicError, setArabicError] = useState<string | null>(null)
   const [romanError, setRomanError] = useState<string | null>(null)
 
