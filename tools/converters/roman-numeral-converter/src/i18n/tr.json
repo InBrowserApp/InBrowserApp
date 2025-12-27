@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Arap rakamı girin...",
   "romanPlaceholder": "Roma rakamı girin...",
   "copy": "Kopyala",
+  "copied": "Panoya kopyalandı!",
   "errorArabicRange": "Lütfen 1 ile 3999 arasında bir sayı girin",
   "errorInvalidRoman": "Lütfen geçerli bir Roma rakamı girin",
   "whatIsTitle": "Roma rakamları nedir?",

@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Nhập số Ả Rập...",
   "romanPlaceholder": "Nhập số La Mã...",
   "copy": "Sao chép",
+  "copied": "Đã sao chép vào bộ nhớ tạm!",
   "errorArabicRange": "Vui lòng nhập một số từ 1 đến 3999",
   "errorInvalidRoman": "Vui lòng nhập một số La Mã hợp lệ",
   "whatIsTitle": "Số La Mã là gì?",

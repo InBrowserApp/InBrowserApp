@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Voer Arabisch cijfer in...",
   "romanPlaceholder": "Voer Romeins cijfer in...",
   "copy": "Kopiëren",
+  "copied": "Gekopieerd naar klembord!",
   "errorArabicRange": "Voer een nummer in tussen 1 en 3999",
   "errorInvalidRoman": "Voer een geldig Romeins cijfer in",
   "whatIsTitle": "Wat zijn Romeinse cijfers?",

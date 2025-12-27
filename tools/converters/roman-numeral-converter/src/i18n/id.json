@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Masukkan angka Arab...",
   "romanPlaceholder": "Masukkan angka Romawi...",
   "copy": "Salin",
+  "copied": "Disalin ke papan klip!",
   "errorArabicRange": "Masukkan angka antara 1 dan 3999",
   "errorInvalidRoman": "Masukkan angka Romawi yang valid",
   "whatIsTitle": "Apa itu angka Romawi?",

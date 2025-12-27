@@ -6,6 +6,7 @@
   "arabicPlaceholder": "输入阿拉伯数字...",
   "romanPlaceholder": "输入罗马数字...",
   "copy": "复制",
+  "copied": "已复制到剪贴板！",
   "errorArabicRange": "请输入 1 到 3999 之间的数字",
   "errorInvalidRoman": "请输入有效的罗马数字",
   "whatIsTitle": "什么是罗马数字？",

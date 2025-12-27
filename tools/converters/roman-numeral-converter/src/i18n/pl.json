@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Wprowadź cyfrę arabską...",
   "romanPlaceholder": "Wprowadź cyfrę rzymską...",
   "copy": "Kopiuj",
+  "copied": "Skopiowano do schowka!",
   "errorArabicRange": "Wprowadź liczbę od 1 do 3999",
   "errorInvalidRoman": "Wprowadź prawidłową cyfrę rzymską",
   "whatIsTitle": "Czym są cyfry rzymskie?",

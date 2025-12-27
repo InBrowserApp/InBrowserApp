@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Enter Arabic number...",
   "romanPlaceholder": "Enter Roman numeral...",
   "copy": "Copy",
+  "copied": "Copied to clipboard!",
   "errorArabicRange": "Please enter a number between 1 and 3999",
   "errorInvalidRoman": "Please enter a valid Roman numeral",
   "whatIsTitle": "What are Roman Numerals?",

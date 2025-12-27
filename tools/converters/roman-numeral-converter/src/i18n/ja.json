@@ -6,6 +6,7 @@
   "arabicPlaceholder": "アラビア数字を入力...",
   "romanPlaceholder": "ローマ数字を入力...",
   "copy": "コピー",
+  "copied": "クリップボードにコピーしました！",
   "errorArabicRange": "1から3999の間の数字を入力してください",
   "errorInvalidRoman": "有効なローマ数字を入力してください",
   "whatIsTitle": "ローマ数字とは？",

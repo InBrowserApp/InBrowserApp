@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Ingresa número arábigo...",
   "romanPlaceholder": "Ingresa número romano...",
   "copy": "Copiar",
+  "copied": "¡Copiado al portapapeles!",
   "errorArabicRange": "Por favor ingresa un número entre 1 y 3999",
   "errorInvalidRoman": "Por favor ingresa un número romano válido",
   "whatIsTitle": "¿Qué son los números romanos?",

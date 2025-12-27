@@ -1,17 +1,20 @@
 import { useCallback } from 'react'
 import { Button } from '@headlessui/react'
 import { ClipboardIcon } from '@heroicons/react/24/outline'
+import { toast } from 'sonner'
 
 interface CopyButtonProps {
   text: string
   disabled?: boolean
   title: string
+  copiedMessage: string
 }
 
-export function CopyButton({ text, disabled, title }: CopyButtonProps) {
+export function CopyButton({ text, disabled, title, copiedMessage }: CopyButtonProps) {
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(text)
-  }, [text])
+    toast.success(copiedMessage)
+  }, [text, copiedMessage])
 
   return (
     <Button

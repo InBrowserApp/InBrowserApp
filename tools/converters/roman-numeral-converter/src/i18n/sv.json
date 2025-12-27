@@ -6,6 +6,7 @@
   "arabicPlaceholder": "Ange arabisk siffra...",
   "romanPlaceholder": "Ange romersk siffra...",
   "copy": "Kopiera",
+  "copied": "Kopierat till urklipp!",
   "errorArabicRange": "Ange ett nummer mellan 1 och 3999",
   "errorInvalidRoman": "Ange en giltig romersk siffra",
   "whatIsTitle": "Vad är romerska siffror?",
