@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "build:check": "astro check && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy:cloudflare-workers": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "wrangler": "^4.54.0"
   }
 }

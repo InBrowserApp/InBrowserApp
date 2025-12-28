@@ -1,0 +1,8 @@
+{
+  "name": "inbrowserapp-astro-test",
+  "compatibility_date": "2025-12-27",
+  "assets": {
+    "directory": "./dist/",
+    "not_found_handling": "single-page-application",
+  }
+}
