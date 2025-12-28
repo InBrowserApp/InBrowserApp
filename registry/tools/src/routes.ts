@@ -59,6 +59,7 @@ import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
+import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -121,4 +122,5 @@ export const routes: ToolRoute[] = [
   ...jsonFormatterRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
+  ...unixTimestampConverterRoutes,
 ]

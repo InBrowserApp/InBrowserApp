@@ -61,6 +61,7 @@ import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-conve
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
+import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -137,4 +138,7 @@ export const tools: ToolInfo[] = [
   ...redirectsTools,
   deviceInformationToolInfo,
   romanNumeralConverterToolInfo,
+
+  // Time Tools
+  unixTimestampConverterToolInfo,
 ]
