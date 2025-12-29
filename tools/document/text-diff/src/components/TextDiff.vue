@@ -56,11 +56,7 @@ import { ref, computed, shallowRef, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useOsTheme, NButton, NIcon, NFlex, NSelect, NSwitch } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
-import {
-  Document16Regular,
-  DocumentAdd16Regular,
-  ArrowSwap20Regular,
-} from '@shared/icons/fluent'
+import { Document16Regular, DocumentAdd16Regular, ArrowSwap20Regular } from '@shared/icons/fluent'
 import { fileOpen } from 'browser-fs-access'
 import { loader, VueMonacoDiffEditor } from '@guolao/vue-monaco-editor'
 import * as monaco from 'monaco-editor'
