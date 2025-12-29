@@ -49,6 +49,7 @@
     "@tools/md5-hash-text-or-file": "workspace:*",
     "@tools/my-ip-address": "workspace:*",
     "@tools/network-tools": "workspace:*",
+    "@tools/number-base-converter": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/png-optimizer": "workspace:*",
     "@tools/qr-code-generator": "workspace:*",

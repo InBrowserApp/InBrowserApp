@@ -420,6 +420,9 @@ importers:
       '@tools/network-tools':
         specifier: workspace:*
         version: link:../../tools/network/network-tools
+      '@tools/number-base-converter':
+        specifier: workspace:*
+        version: link:../../tools/web/number-base-converter
       '@tools/pdf-tools':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-tools
@@ -2777,6 +2780,30 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.5.1(vue@3.5.18(typescript@5.9.2))
+
+  tools/web/number-base-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 13.6.0(vue@3.5.18(typescript@5.9.2))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.42.0(vue@3.5.18(typescript@5.9.2))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.18(typescript@5.9.2)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.1.11(vue@3.5.18(typescript@5.9.2))
 
   tools/web/url-component-encoder-decoder:
     dependencies:

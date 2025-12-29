@@ -65,6 +65,7 @@ import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestam
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
+import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -153,4 +154,7 @@ export const tools: ToolInfo[] = [
 
   // Text Tools
   caseConverterToolInfo,
+
+  // Number Tools
+  numberBaseConverterToolInfo,
 ]
