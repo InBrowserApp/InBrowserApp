@@ -17,6 +17,6 @@
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:",
-        "hono": "^4.6.7"
+        "hono": "catalog:"
     }
 }

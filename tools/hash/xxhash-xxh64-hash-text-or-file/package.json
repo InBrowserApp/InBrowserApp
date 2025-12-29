@@ -17,6 +17,6 @@
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:",
-        "xxhash-wasm": "^1.1.0"
+        "xxhash-wasm": "catalog:"
     }
 }

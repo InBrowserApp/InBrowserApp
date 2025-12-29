@@ -7,6 +7,6 @@
   },
   "type": "module",
   "dependencies": {
-    "cidr-tools": "^11.0.3"
+    "cidr-tools": "catalog:"
   }
 }

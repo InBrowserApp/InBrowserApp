@@ -8,13 +8,13 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@guolao/vue-monaco-editor": "^1.5.0",
+    "@guolao/vue-monaco-editor": "catalog:",
     "@shared/icons": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",
-    "browser-fs-access": "^0.38.0",
-    "monaco-editor": "^0.52.0",
+    "browser-fs-access": "catalog:",
+    "monaco-editor": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:"

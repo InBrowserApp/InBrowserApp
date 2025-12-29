@@ -12,7 +12,7 @@
         "@shared/tools": "workspace:*",
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
-        "bcrypt-ts": "^7.1.0",
+        "bcrypt-ts": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",

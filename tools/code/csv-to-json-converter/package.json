@@ -12,8 +12,8 @@
         "@shared/tools": "workspace:*",
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
-        "browser-fs-access": "^0.38.0",
-        "papaparse": "^5.4.1",
+        "browser-fs-access": "catalog:",
+        "papaparse": "catalog:",
         "highlight.js": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
@@ -21,6 +21,6 @@
         "vue-router": "catalog:"
     },
     "devDependencies": {
-        "@types/papaparse": "^5.3.16"
+        "@types/papaparse": "catalog:"
     }
 }

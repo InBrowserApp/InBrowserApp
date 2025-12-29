@@ -6,61 +6,104 @@ packages:
   - shared/*
   - utils/*
   - registry/*
-
+onlyBuiltDependencies:
+  - esbuild
+  - vue-demi
 catalog:
-  '@intlify/unplugin-vue-i18n': ^6.0.8
-  '@jsquash/oxipng': ^2.3.0
-  '@playwright/test': ^1.54.1
-  '@prettier/plugin-oxc': 0.0.4
-  '@tsconfig/node22': ^22.0.2
-  '@types/color-convert': ^2.0.4
-  '@types/jsdom': ^21.1.7
-  '@types/node': ^24.4.0
-  '@types/validator': ^13.15.2
-  '@unhead/vue': 2.0.14
-  '@vicons/antd': ^0.13.0
-  '@vicons/carbon': ^0.13.0
-  '@vicons/fa': ^0.13.0
-  '@vicons/fluent': ^0.13.0
-  '@vicons/ionicons4': ^0.13.0
-  '@vicons/ionicons5': ^0.13.0
-  '@vicons/material': ^0.13.0
-  '@vicons/tabler': ^0.13.0
-  '@vitejs/plugin-vue': ^6.0.1
-  '@vitest/eslint-plugin': ^1.3.9
-  '@vue/eslint-config-prettier': ^10.2.0
-  '@vue/eslint-config-typescript': ^14.6.0
-  '@vue/test-utils': ^2.4.6
-  '@vue/tsconfig': ^0.8.1
-  '@vueuse/core': 13.6.0
-  '@zip.js/zip.js': ^2.7.72
+  "@guolao/vue-monaco-editor": ^1.5.0
+  "@intlify/unplugin-vue-i18n": ^6.0.8
+  "@jspawn/qpdf-wasm": ^0.0.2
+  "@jsquash/oxipng": ^2.3.0
+  "@playwright/test": ^1.54.1
+  "@prettier/plugin-oxc": 0.0.4
+  "@tsconfig/node22": ^22.0.2
+  "@types/color-convert": ^2.0.4
+  "@types/crypto-js": ^4.2.2
+  "@types/dompurify": ^3.2.0
+  "@types/emscripten": ^1.40.1
+  "@types/js-yaml": ^4.0.9
+  "@types/jsdom": ^21.1.7
+  "@types/node": ^24.4.0
+  "@types/papaparse": ^5.3.16
+  "@types/punycode": ^2.1.4
+  "@types/qrcode": ^1.5.5
+  "@types/turndown": ^5.0.5
+  "@types/validator": ^13.15.2
+  "@unhead/vue": 2.0.14
+  "@vicons/antd": ^0.13.0
+  "@vicons/carbon": ^0.13.0
+  "@vicons/fa": ^0.13.0
+  "@vicons/fluent": ^0.13.0
+  "@vicons/ionicons4": ^0.13.0
+  "@vicons/ionicons5": ^0.13.0
+  "@vicons/material": ^0.13.0
+  "@vicons/tabler": ^0.13.0
+  "@vitejs/plugin-vue": ^6.0.1
+  "@vitest/coverage-istanbul": ^4.0.16
+  "@vitest/eslint-plugin": ^1.3.9
+  "@vue/eslint-config-prettier": ^10.2.0
+  "@vue/eslint-config-typescript": ^14.6.0
+  "@vue/test-utils": ^2.4.6
+  "@vue/tsconfig": ^0.8.1
+  "@vueuse/core": 13.6.0
+  "@zip.js/zip.js": ^2.7.72
+  bcrypt-ts: ^7.1.0
+  bip39: ^3.1.0
+  blakejs: ^1.2.1
+  browser-fs-access: ^0.38.0
+  buffer: ^6.0.3
+  cidr-calc: ^1.0.4
+  cidr-tools: ^11.0.3
   color-convert: ^3.1.3
   color-name: ^2.1.0
+  comlink: ^4.4.2
+  crc: ^4.3.2
+  crypto-js: ^4.2.0
+  dompurify: ^3.2.6
   eslint: ^9.35.0
   eslint-plugin-oxlint: ~1.15.0
   eslint-plugin-playwright: ^2.2.2
   eslint-plugin-vue: ~10.4.0
+  filesize: ^11.0.2
+  github-markdown-css: ^5.8.1
+  happy-dom: ^20.0.11
   highlight.js: 11.11.1
+  hono: ^4.6.7
+  ip-bigint: ^8.2.1
+  is-cidr: ^6.0.0
+  is-ip: ^5.0.1
   jiti: ^2.4.2
+  js-yaml: ^4.1.0
+  jsbarcode: ^3.12.1
   jsdom: ^26.1.0
+  marked: ^16.1.2
+  monaco-editor: ^0.52.0
   naive-ui: ^2.42.0
   npm-run-all2: ^8.0.4
   oxlint: ~1.15.0
+  papaparse: ^5.4.1
   pinia: 3.0.3
   prettier: 3.6.2
+  punycode: ^2.3.1
+  qrcode: ^1.5.4
+  sitemap: ^8.0.0
+  smol-toml: ^1.4.2
   svgo: ^4.0.0
+  turndown: ^7.2.1
   typescript: ~5.9.2
+  ulid: ^3.0.1
   uuid: ^11.1.0
   validator: ^13.15.15
   vite: ^7.1.5
+  vite-node: ^3.2.4
+  vite-plugin-pwa: ^1.0.2
   vite-plugin-vue-devtools: ^8.0.0
   vitest: ^3.2.4
   vue: 3.5.18
   vue-i18n: ^11.1.11
   vue-router: ^4.5.1
   vue-tsc: ^3.0.7
+  webrtc-ips: ^0.2.0
   wrangler: 4.54.0
-
-onlyBuiltDependencies:
-  - esbuild
-  - vue-demi
+  xml-js: ^1.6.11
+  xxhash-wasm: ^1.1.0

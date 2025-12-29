@@ -8,7 +8,7 @@
         "./routes": "./src/routes.ts"
     },
     "dependencies": {
-        "qrcode": "^1.5.4",
+        "qrcode": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:",
@@ -19,6 +19,6 @@
         "@shared/tools": "workspace:*"
     },
     "devDependencies": {
-        "@types/qrcode": "^1.5.5"
+        "@types/qrcode": "catalog:"
     }
 }

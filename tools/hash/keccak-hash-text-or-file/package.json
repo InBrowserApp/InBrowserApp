@@ -13,13 +13,13 @@
         "@shared/ui": "workspace:*",
         "@tools/hash-text-or-file-template": "workspace:*",
         "@vueuse/core": "catalog:",
-        "crypto-js": "^4.2.0",
+        "crypto-js": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:"
     },
     "devDependencies": {
-        "@types/crypto-js": "^4.2.2"
+        "@types/crypto-js": "catalog:"
     }
 }

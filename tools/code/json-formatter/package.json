@@ -12,7 +12,7 @@
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",
-    "browser-fs-access": "^0.38.0",
+    "browser-fs-access": "catalog:",
     "highlight.js": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",

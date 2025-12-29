@@ -14,7 +14,7 @@
         "@shared/ui": "workspace:*",
         "@utils/image": "workspace:*",
         "@vueuse/core": "catalog:",
-        "filesize": "^11.0.2",
+        "filesize": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",

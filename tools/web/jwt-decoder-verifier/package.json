@@ -14,7 +14,7 @@
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
         "highlight.js": "catalog:",
-        "hono": "^4.6.7",
+        "hono": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",

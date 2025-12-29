@@ -8,6 +8,6 @@
   "type": "module",
   "dependencies": {
     "@utils/dns": "workspace:*",
-    "is-ip": "^5.0.1"
+    "is-ip": "catalog:"
   }
 }

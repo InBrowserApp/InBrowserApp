@@ -13,7 +13,7 @@
         "@shared/tools": "workspace:*",
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
-        "bip39": "^3.1.0",
+        "bip39": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",

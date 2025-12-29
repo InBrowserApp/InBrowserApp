@@ -12,15 +12,15 @@
         "@shared/tools": "workspace:*",
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
-        "browser-fs-access": "^0.38.0",
+        "browser-fs-access": "catalog:",
         "highlight.js": "catalog:",
         "naive-ui": "catalog:",
-        "turndown": "^7.2.1",
+        "turndown": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:"
     },
     "devDependencies": {
-        "@types/turndown": "^5.0.5"
+        "@types/turndown": "catalog:"
     }
 }

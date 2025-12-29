@@ -13,12 +13,12 @@
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
         "naive-ui": "catalog:",
-        "punycode": "^2.3.1",
+        "punycode": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:"
     },
     "devDependencies": {
-        "@types/punycode": "^2.1.4"
+        "@types/punycode": "catalog:"
     }
 }

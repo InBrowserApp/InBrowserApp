@@ -14,7 +14,7 @@
         "@utils/dns": "workspace:*",
         "@utils/ip": "workspace:*",
         "@vueuse/core": "catalog:",
-        "is-ip": "^5.0.1",
+        "is-ip": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",

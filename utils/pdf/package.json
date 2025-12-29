@@ -7,9 +7,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@jspawn/qpdf-wasm": "^0.0.2"
+    "@jspawn/qpdf-wasm": "catalog:"
   },
   "devDependencies": {
-    "@types/emscripten": "^1.40.1"
+    "@types/emscripten": "catalog:"
   }
 }

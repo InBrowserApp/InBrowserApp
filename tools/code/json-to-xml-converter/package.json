@@ -12,13 +12,13 @@
         "@shared/tools": "workspace:*",
         "@shared/ui": "workspace:*",
         "@vueuse/core": "catalog:",
-        "browser-fs-access": "^0.38.0",
-        "buffer": "^6.0.3",
+        "browser-fs-access": "catalog:",
+        "buffer": "catalog:",
         "highlight.js": "catalog:",
         "naive-ui": "catalog:",
         "vue": "catalog:",
         "vue-i18n": "catalog:",
         "vue-router": "catalog:",
-        "xml-js": "^1.6.11"
+        "xml-js": "catalog:"
     }
 }
