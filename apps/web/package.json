@@ -8,7 +8,6 @@
     "build:web": "vite build",
     "build:sitemap": "vite-node scripts/sitemap/build-sitemap.ts",
     "preview": "vite preview",
-    "test:unit": "vitest",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -31,13 +30,11 @@
     "@vitejs/plugin-vue": "catalog:",
     "@vue/test-utils": "catalog:",
     "jiti": "catalog:",
-    "jsdom": "catalog:",
-    "sitemap": "^8.0.0",
+    "sitemap": "catalog:",
     "vite": "catalog:",
-    "vite-node": "^3.2.4",
-    "vite-plugin-pwa": "^1.0.2",
+    "vite-node": "catalog:",
+    "vite-plugin-pwa": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",
-    "vitest": "catalog:",
     "wrangler": "catalog:"
   }
 }
