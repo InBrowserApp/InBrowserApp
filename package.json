@@ -28,7 +28,7 @@
     "@types/node": "catalog:",
     "@types/papaparse": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
-    "@vitest/coverage-istanbul": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "@vue/eslint-config-prettier": "catalog:",
     "@vue/eslint-config-typescript": "catalog:",

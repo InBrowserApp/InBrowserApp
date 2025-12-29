@@ -36,8 +36,9 @@ catalog:
   '@vicons/ionicons5': ^0.13.0
   '@vicons/material': ^0.13.0
   '@vicons/tabler': ^0.13.0
-  '@vitejs/plugin-vue': ^6.0.1
+  '@vitejs/plugin-vue': ^6.0.3
   '@vitest/coverage-istanbul': ^4.0.16
+  '@vitest/coverage-v8': ^4.0.16
   '@vitest/eslint-plugin': ^1.6.4
   '@vue/eslint-config-prettier': ^10.2.0
   '@vue/eslint-config-typescript': ^14.6.0
@@ -92,7 +93,7 @@ catalog:
   ulid: ^3.0.1
   uuid: ^11.1.0
   validator: ^13.15.15
-  vite: ^7.1.5
+  vite: ^7.3.0
   vite-node: ^3.2.4
   vite-plugin-pwa: ^1.0.2
   vite-plugin-vue-devtools: ^8.0.0
