@@ -52,6 +52,75 @@ const architecture = computedAsync(async () => {
   },
   "zh": {
     "architecture": "架构"
+  },
+  "zh-CN": {
+    "architecture": "架构"
+  },
+  "zh-TW": {
+    "architecture": "架構"
+  },
+  "zh-HK": {
+    "architecture": "架構"
+  },
+  "es": {
+    "architecture": "Arquitectura"
+  },
+  "fr": {
+    "architecture": "Architecture"
+  },
+  "de": {
+    "architecture": "Architektur"
+  },
+  "it": {
+    "architecture": "Architettura"
+  },
+  "ja": {
+    "architecture": "アーキテクチャ"
+  },
+  "ko": {
+    "architecture": "아키텍처"
+  },
+  "ru": {
+    "architecture": "Архитектура"
+  },
+  "pt": {
+    "architecture": "Arquitetura"
+  },
+  "ar": {
+    "architecture": "البنية"
+  },
+  "hi": {
+    "architecture": "आर्किटेक्चर"
+  },
+  "tr": {
+    "architecture": "Mimari"
+  },
+  "nl": {
+    "architecture": "Architectuur"
+  },
+  "sv": {
+    "architecture": "Arkitektur"
+  },
+  "pl": {
+    "architecture": "Architektura"
+  },
+  "vi": {
+    "architecture": "Kien Truc"
+  },
+  "th": {
+    "architecture": "สถาปัตยกรรม"
+  },
+  "id": {
+    "architecture": "Arsitektur"
+  },
+  "he": {
+    "architecture": "ארכיטקטורה"
+  },
+  "ms": {
+    "architecture": "Seni Bina"
+  },
+  "no": {
+    "architecture": "Arkitektur"
   }
 }
 </i18n>

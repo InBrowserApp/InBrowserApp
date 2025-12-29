@@ -48,6 +48,75 @@ const platform = computed(() => {
   },
   "zh": {
     "platform": "平台"
+  },
+  "zh-CN": {
+    "platform": "平台"
+  },
+  "zh-TW": {
+    "platform": "平台"
+  },
+  "zh-HK": {
+    "platform": "平台"
+  },
+  "es": {
+    "platform": "Plataforma"
+  },
+  "fr": {
+    "platform": "Plateforme"
+  },
+  "de": {
+    "platform": "Plattform"
+  },
+  "it": {
+    "platform": "Piattaforma"
+  },
+  "ja": {
+    "platform": "プラットフォーム"
+  },
+  "ko": {
+    "platform": "플랫폼"
+  },
+  "ru": {
+    "platform": "Платформа"
+  },
+  "pt": {
+    "platform": "Plataforma"
+  },
+  "ar": {
+    "platform": "المنصة"
+  },
+  "hi": {
+    "platform": "प्लेटफॉर्म"
+  },
+  "tr": {
+    "platform": "Platform"
+  },
+  "nl": {
+    "platform": "Platform"
+  },
+  "sv": {
+    "platform": "Plattform"
+  },
+  "pl": {
+    "platform": "Platforma"
+  },
+  "vi": {
+    "platform": "Nen Tang"
+  },
+  "th": {
+    "platform": "แพลตฟอร์ม"
+  },
+  "id": {
+    "platform": "Platform"
+  },
+  "he": {
+    "platform": "פלטפורמה"
+  },
+  "ms": {
+    "platform": "Platform"
+  },
+  "no": {
+    "platform": "Plattform"
   }
 }
 </i18n>

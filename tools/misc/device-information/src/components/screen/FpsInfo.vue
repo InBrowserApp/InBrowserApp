@@ -19,6 +19,75 @@ const fps = useFps()
   },
   "zh": {
     "fps": "帧率"
+  },
+  "zh-CN": {
+    "fps": "帧率"
+  },
+  "zh-TW": {
+    "fps": "幀率"
+  },
+  "zh-HK": {
+    "fps": "幀率"
+  },
+  "es": {
+    "fps": "FPS"
+  },
+  "fr": {
+    "fps": "IPS"
+  },
+  "de": {
+    "fps": "FPS"
+  },
+  "it": {
+    "fps": "FPS"
+  },
+  "ja": {
+    "fps": "フレームレート"
+  },
+  "ko": {
+    "fps": "프레임 속도"
+  },
+  "ru": {
+    "fps": "Частота кадров"
+  },
+  "pt": {
+    "fps": "FPS"
+  },
+  "ar": {
+    "fps": "معدل الإطارات"
+  },
+  "hi": {
+    "fps": "फ्रेम दर"
+  },
+  "tr": {
+    "fps": "FPS"
+  },
+  "nl": {
+    "fps": "FPS"
+  },
+  "sv": {
+    "fps": "FPS"
+  },
+  "pl": {
+    "fps": "Klatki na sekundę"
+  },
+  "vi": {
+    "fps": "FPS"
+  },
+  "th": {
+    "fps": "อัตราเฟรม"
+  },
+  "id": {
+    "fps": "FPS"
+  },
+  "he": {
+    "fps": "קצב פריימים"
+  },
+  "ms": {
+    "fps": "FPS"
+  },
+  "no": {
+    "fps": "FPS"
   }
 }
 </i18n>

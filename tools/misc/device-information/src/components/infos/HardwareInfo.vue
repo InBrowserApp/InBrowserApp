@@ -58,6 +58,75 @@ const { t } = useI18n()
   },
   "zh": {
     "hardware-info": "硬件信息"
+  },
+  "zh-CN": {
+    "hardware-info": "硬件信息"
+  },
+  "zh-TW": {
+    "hardware-info": "硬體資訊"
+  },
+  "zh-HK": {
+    "hardware-info": "硬體資訊"
+  },
+  "es": {
+    "hardware-info": "Información de Hardware"
+  },
+  "fr": {
+    "hardware-info": "Informations sur le Matériel"
+  },
+  "de": {
+    "hardware-info": "Hardware-Informationen"
+  },
+  "it": {
+    "hardware-info": "Informazioni sull'Hardware"
+  },
+  "ja": {
+    "hardware-info": "ハードウェア情報"
+  },
+  "ko": {
+    "hardware-info": "하드웨어 정보"
+  },
+  "ru": {
+    "hardware-info": "Информация об оборудовании"
+  },
+  "pt": {
+    "hardware-info": "Informações de Hardware"
+  },
+  "ar": {
+    "hardware-info": "معلومات الأجهزة"
+  },
+  "hi": {
+    "hardware-info": "हार्डवेयर जानकारी"
+  },
+  "tr": {
+    "hardware-info": "Donanım Bilgileri"
+  },
+  "nl": {
+    "hardware-info": "Hardware-informatie"
+  },
+  "sv": {
+    "hardware-info": "Hårdvaruinformation"
+  },
+  "pl": {
+    "hardware-info": "Informacje o sprzęcie"
+  },
+  "vi": {
+    "hardware-info": "Thông tin phần cứng"
+  },
+  "th": {
+    "hardware-info": "ข้อมูลฮาร์ดแวร์"
+  },
+  "id": {
+    "hardware-info": "Informasi Perangkat Keras"
+  },
+  "he": {
+    "hardware-info": "מידע על החומרה"
+  },
+  "ms": {
+    "hardware-info": "Maklumat Perkakasan"
+  },
+  "no": {
+    "hardware-info": "Maskinvareinformasjon"
   }
 }
 </i18n>

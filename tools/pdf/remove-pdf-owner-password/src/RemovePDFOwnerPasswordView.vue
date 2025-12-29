@@ -58,6 +58,9 @@ const handlePDFUpload = async (file: File) => {
   "de": {
     "success": "PDF-Besitzerkennwort entfernt"
   },
+  "it": {
+    "success": "Password proprietario PDF rimossa"
+  },
   "ja": {
     "success": "PDFのオーナーパスワードを削除しました"
   },

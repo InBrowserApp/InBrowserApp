@@ -43,6 +43,75 @@ const { t } = useI18n()
   },
   "zh": {
     "screen-info": "屏幕信息"
+  },
+  "zh-CN": {
+    "screen-info": "屏幕信息"
+  },
+  "zh-TW": {
+    "screen-info": "螢幕資訊"
+  },
+  "zh-HK": {
+    "screen-info": "螢幕資訊"
+  },
+  "es": {
+    "screen-info": "Información de Pantalla"
+  },
+  "fr": {
+    "screen-info": "Informations sur l'Écran"
+  },
+  "de": {
+    "screen-info": "Bildschirminformationen"
+  },
+  "it": {
+    "screen-info": "Informazioni sullo Schermo"
+  },
+  "ja": {
+    "screen-info": "画面情報"
+  },
+  "ko": {
+    "screen-info": "화면 정보"
+  },
+  "ru": {
+    "screen-info": "Информация об экране"
+  },
+  "pt": {
+    "screen-info": "Informações da Tela"
+  },
+  "ar": {
+    "screen-info": "معلومات الشاشة"
+  },
+  "hi": {
+    "screen-info": "स्क्रीन जानकारी"
+  },
+  "tr": {
+    "screen-info": "Ekran Bilgileri"
+  },
+  "nl": {
+    "screen-info": "Scherminformatie"
+  },
+  "sv": {
+    "screen-info": "Skärminformation"
+  },
+  "pl": {
+    "screen-info": "Informacje o ekranie"
+  },
+  "vi": {
+    "screen-info": "Thông tin màn hình"
+  },
+  "th": {
+    "screen-info": "ข้อมูลหน้าจอ"
+  },
+  "id": {
+    "screen-info": "Informasi Layar"
+  },
+  "he": {
+    "screen-info": "מידע על המסך"
+  },
+  "ms": {
+    "screen-info": "Maklumat Skrin"
+  },
+  "no": {
+    "screen-info": "Skjerminformasjon"
   }
 }
 </i18n>

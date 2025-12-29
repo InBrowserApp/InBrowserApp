@@ -95,6 +95,76 @@ async function beforeUpload(data: { file: UploadFileInfo; fileList: UploadFileIn
     "clickOrDragToSelectImage": "클릭하거나 드래그하여 이미지 선택",
     "onlyOneFileCanBeUploaded": "하나의 파일만 업로드할 수 있습니다",
     "onlyImageFilesAreAllowed": "이미지 파일만 허용됩니다"
+  },
+  "ru": {
+    "clickOrDragToSelectImage": "Нажмите или перетащите для выбора изображения",
+    "onlyOneFileCanBeUploaded": "Можно загрузить только один файл",
+    "onlyImageFilesAreAllowed": "Разрешены только файлы изображений"
+  },
+  "pt": {
+    "clickOrDragToSelectImage": "Clique ou arraste para selecionar uma imagem",
+    "onlyOneFileCanBeUploaded": "Apenas um arquivo pode ser enviado",
+    "onlyImageFilesAreAllowed": "Apenas arquivos de imagem são permitidos"
+  },
+  "ar": {
+    "clickOrDragToSelectImage": "انقر أو اسحب لتحديد صورة",
+    "onlyOneFileCanBeUploaded": "يمكن تحميل ملف واحد فقط",
+    "onlyImageFilesAreAllowed": "يُسمح فقط بملفات الصور"
+  },
+  "hi": {
+    "clickOrDragToSelectImage": "छवि चुनने के लिए क्लिक करें या खींचें",
+    "onlyOneFileCanBeUploaded": "केवल एक फ़ाइल अपलोड की जा सकती है",
+    "onlyImageFilesAreAllowed": "केवल छवि फ़ाइलें अनुमत हैं"
+  },
+  "tr": {
+    "clickOrDragToSelectImage": "Resim seçmek için tıklayın veya sürükleyin",
+    "onlyOneFileCanBeUploaded": "Yalnızca bir dosya yüklenebilir",
+    "onlyImageFilesAreAllowed": "Yalnızca resim dosyalarına izin verilir"
+  },
+  "nl": {
+    "clickOrDragToSelectImage": "Klik of sleep om een afbeelding te selecteren",
+    "onlyOneFileCanBeUploaded": "Er kan slechts één bestand worden geüpload",
+    "onlyImageFilesAreAllowed": "Alleen afbeeldingsbestanden zijn toegestaan"
+  },
+  "sv": {
+    "clickOrDragToSelectImage": "Klicka eller dra för att välja en bild",
+    "onlyOneFileCanBeUploaded": "Endast en fil kan laddas upp",
+    "onlyImageFilesAreAllowed": "Endast bildfiler är tillåtna"
+  },
+  "pl": {
+    "clickOrDragToSelectImage": "Kliknij lub przeciągnij, aby wybrać obraz",
+    "onlyOneFileCanBeUploaded": "Można przesłać tylko jeden plik",
+    "onlyImageFilesAreAllowed": "Dozwolone są tylko pliki obrazów"
+  },
+  "vi": {
+    "clickOrDragToSelectImage": "Nhấp hoặc kéo để chọn hình ảnh",
+    "onlyOneFileCanBeUploaded": "Chỉ có thể tải lên một tệp",
+    "onlyImageFilesAreAllowed": "Chỉ cho phép tệp hình ảnh"
+  },
+  "th": {
+    "clickOrDragToSelectImage": "คลิกหรือลากเพื่อเลือกรูปภาพ",
+    "onlyOneFileCanBeUploaded": "สามารถอัปโหลดได้เพียงหนึ่งไฟล์เท่านั้น",
+    "onlyImageFilesAreAllowed": "อนุญาตเฉพาะไฟล์รูปภาพเท่านั้น"
+  },
+  "id": {
+    "clickOrDragToSelectImage": "Klik atau seret untuk memilih gambar",
+    "onlyOneFileCanBeUploaded": "Hanya satu file yang dapat diunggah",
+    "onlyImageFilesAreAllowed": "Hanya file gambar yang diizinkan"
+  },
+  "he": {
+    "clickOrDragToSelectImage": "לחץ או גרור כדי לבחור תמונה",
+    "onlyOneFileCanBeUploaded": "ניתן להעלות קובץ אחד בלבד",
+    "onlyImageFilesAreAllowed": "מותרים רק קבצי תמונה"
+  },
+  "ms": {
+    "clickOrDragToSelectImage": "Klik atau seret untuk memilih imej",
+    "onlyOneFileCanBeUploaded": "Hanya satu fail boleh dimuat naik",
+    "onlyImageFilesAreAllowed": "Hanya fail imej dibenarkan"
+  },
+  "no": {
+    "clickOrDragToSelectImage": "Klikk eller dra for å velge et bilde",
+    "onlyOneFileCanBeUploaded": "Kun én fil kan lastes opp",
+    "onlyImageFilesAreAllowed": "Kun bildefiler er tillatt"
   }
 }
 </i18n>

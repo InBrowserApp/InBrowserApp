@@ -41,6 +41,75 @@ const { t } = useI18n()
   },
   "zh": {
     "browser-info": "浏览器信息"
+  },
+  "zh-CN": {
+    "browser-info": "浏览器信息"
+  },
+  "zh-TW": {
+    "browser-info": "瀏覽器資訊"
+  },
+  "zh-HK": {
+    "browser-info": "瀏覽器資訊"
+  },
+  "es": {
+    "browser-info": "Información del Navegador"
+  },
+  "fr": {
+    "browser-info": "Informations sur le Navigateur"
+  },
+  "de": {
+    "browser-info": "Browser-Informationen"
+  },
+  "it": {
+    "browser-info": "Informazioni sul Browser"
+  },
+  "ja": {
+    "browser-info": "ブラウザ情報"
+  },
+  "ko": {
+    "browser-info": "브라우저 정보"
+  },
+  "ru": {
+    "browser-info": "Информация о браузере"
+  },
+  "pt": {
+    "browser-info": "Informações do Navegador"
+  },
+  "ar": {
+    "browser-info": "معلومات المتصفح"
+  },
+  "hi": {
+    "browser-info": "ब्राउज़र जानकारी"
+  },
+  "tr": {
+    "browser-info": "Tarayıcı Bilgileri"
+  },
+  "nl": {
+    "browser-info": "Browserinformatie"
+  },
+  "sv": {
+    "browser-info": "Webbläsarinformation"
+  },
+  "pl": {
+    "browser-info": "Informacje o przeglądarce"
+  },
+  "vi": {
+    "browser-info": "Thông tin trình duyệt"
+  },
+  "th": {
+    "browser-info": "ข้อมูลเบราว์เซอร์"
+  },
+  "id": {
+    "browser-info": "Informasi Browser"
+  },
+  "he": {
+    "browser-info": "מידע על הדפדפן"
+  },
+  "ms": {
+    "browser-info": "Maklumat Pelayar"
+  },
+  "no": {
+    "browser-info": "Nettleserinformasjon"
   }
 }
 </i18n>

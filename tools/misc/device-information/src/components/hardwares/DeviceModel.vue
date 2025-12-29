@@ -63,6 +63,75 @@ const deviceModel = computed(() => uaHighEntropyData.value?.model)
   },
   "zh": {
     "device-model": "设备型号"
+  },
+  "zh-CN": {
+    "device-model": "设备型号"
+  },
+  "zh-TW": {
+    "device-model": "裝置型號"
+  },
+  "zh-HK": {
+    "device-model": "裝置型號"
+  },
+  "es": {
+    "device-model": "Modelo del dispositivo"
+  },
+  "fr": {
+    "device-model": "Modele de l'appareil"
+  },
+  "de": {
+    "device-model": "Geratemodell"
+  },
+  "it": {
+    "device-model": "Modello del dispositivo"
+  },
+  "ja": {
+    "device-model": "デバイスモデル"
+  },
+  "ko": {
+    "device-model": "장치 모델"
+  },
+  "ru": {
+    "device-model": "Модель устройства"
+  },
+  "pt": {
+    "device-model": "Modelo do dispositivo"
+  },
+  "ar": {
+    "device-model": "طراز الجهاز"
+  },
+  "hi": {
+    "device-model": "डिवाइस मॉडल"
+  },
+  "tr": {
+    "device-model": "Cihaz Modeli"
+  },
+  "nl": {
+    "device-model": "Apparaatmodel"
+  },
+  "sv": {
+    "device-model": "Enhetsmodell"
+  },
+  "pl": {
+    "device-model": "Model urzadzenia"
+  },
+  "vi": {
+    "device-model": "Mau thiet bi"
+  },
+  "th": {
+    "device-model": "รุ่นอุปกรณ์"
+  },
+  "id": {
+    "device-model": "Model Perangkat"
+  },
+  "he": {
+    "device-model": "דגם המכשיר"
+  },
+  "ms": {
+    "device-model": "Model Peranti"
+  },
+  "no": {
+    "device-model": "Enhetsmodell"
   }
 }
 </i18n>

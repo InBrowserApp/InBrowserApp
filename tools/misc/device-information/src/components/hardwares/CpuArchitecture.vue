@@ -76,6 +76,75 @@ const cpuArchitecture = computed(() => {
   },
   "zh": {
     "cpu-architecture": "CPU架构"
+  },
+  "zh-CN": {
+    "cpu-architecture": "CPU架构"
+  },
+  "zh-TW": {
+    "cpu-architecture": "CPU 架構"
+  },
+  "zh-HK": {
+    "cpu-architecture": "CPU 架構"
+  },
+  "es": {
+    "cpu-architecture": "Arquitectura de CPU"
+  },
+  "fr": {
+    "cpu-architecture": "Architecture CPU"
+  },
+  "de": {
+    "cpu-architecture": "CPU-Architektur"
+  },
+  "it": {
+    "cpu-architecture": "Architettura CPU"
+  },
+  "ja": {
+    "cpu-architecture": "CPUアーキテクチャ"
+  },
+  "ko": {
+    "cpu-architecture": "CPU 아키텍처"
+  },
+  "ru": {
+    "cpu-architecture": "Архитектура процессора"
+  },
+  "pt": {
+    "cpu-architecture": "Arquitetura da CPU"
+  },
+  "ar": {
+    "cpu-architecture": "بنية المعالج"
+  },
+  "hi": {
+    "cpu-architecture": "CPU आर्किटेक्चर"
+  },
+  "tr": {
+    "cpu-architecture": "CPU Mimarisi"
+  },
+  "nl": {
+    "cpu-architecture": "CPU-architectuur"
+  },
+  "sv": {
+    "cpu-architecture": "CPU-arkitektur"
+  },
+  "pl": {
+    "cpu-architecture": "Architektura CPU"
+  },
+  "vi": {
+    "cpu-architecture": "Kien truc CPU"
+  },
+  "th": {
+    "cpu-architecture": "สถาปัตยกรรม CPU"
+  },
+  "id": {
+    "cpu-architecture": "Arsitektur CPU"
+  },
+  "he": {
+    "cpu-architecture": "ארכיטקטורת מעבד"
+  },
+  "ms": {
+    "cpu-architecture": "Seni Bina CPU"
+  },
+  "no": {
+    "cpu-architecture": "CPU-arkitektur"
   }
 }
 </i18n>

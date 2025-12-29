@@ -40,6 +40,75 @@ const gpuRenderer = computed(() => gpuInfo.value.renderer)
   },
   "zh": {
     "gpu-renderer": "GPU渲染器"
+  },
+  "zh-CN": {
+    "gpu-renderer": "GPU渲染器"
+  },
+  "zh-TW": {
+    "gpu-renderer": "GPU 渲染器"
+  },
+  "zh-HK": {
+    "gpu-renderer": "GPU 渲染器"
+  },
+  "es": {
+    "gpu-renderer": "Renderizador GPU"
+  },
+  "fr": {
+    "gpu-renderer": "Moteur de rendu GPU"
+  },
+  "de": {
+    "gpu-renderer": "GPU-Renderer"
+  },
+  "it": {
+    "gpu-renderer": "Renderer GPU"
+  },
+  "ja": {
+    "gpu-renderer": "GPUレンダラー"
+  },
+  "ko": {
+    "gpu-renderer": "GPU 렌더러"
+  },
+  "ru": {
+    "gpu-renderer": "GPU рендерер"
+  },
+  "pt": {
+    "gpu-renderer": "Renderizador GPU"
+  },
+  "ar": {
+    "gpu-renderer": "عارض GPU"
+  },
+  "hi": {
+    "gpu-renderer": "GPU रेंडरर"
+  },
+  "tr": {
+    "gpu-renderer": "GPU Isleyici"
+  },
+  "nl": {
+    "gpu-renderer": "GPU-renderer"
+  },
+  "sv": {
+    "gpu-renderer": "GPU-renderare"
+  },
+  "pl": {
+    "gpu-renderer": "Renderer GPU"
+  },
+  "vi": {
+    "gpu-renderer": "Trinh ket xuat GPU"
+  },
+  "th": {
+    "gpu-renderer": "ตัวเรนเดอร์ GPU"
+  },
+  "id": {
+    "gpu-renderer": "Renderer GPU"
+  },
+  "he": {
+    "gpu-renderer": "מעבד גרפי GPU"
+  },
+  "ms": {
+    "gpu-renderer": "Pemapar GPU"
+  },
+  "no": {
+    "gpu-renderer": "GPU-renderer"
   }
 }
 </i18n>

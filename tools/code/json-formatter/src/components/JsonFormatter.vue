@@ -268,6 +268,114 @@ async function importFromFile(): Promise<void> {
     "json-placeholder": "Cole seu JSON aqui...",
     "invalid-json": "JSON inválido",
     "indent-size": "Indentação"
+  },
+  "ar": {
+    "import-from-file": "استيراد من ملف",
+    "download-json": "تحميل JSON",
+    "raw-json": "JSON الخام",
+    "formatted-json": "JSON المنسق",
+    "json-placeholder": "الصق JSON الخاص بك هنا...",
+    "invalid-json": "JSON غير صالح",
+    "indent-size": "المسافة البادئة"
+  },
+  "hi": {
+    "import-from-file": "फ़ाइल से आयात करें",
+    "download-json": "JSON डाउनलोड करें",
+    "raw-json": "कच्चा JSON",
+    "formatted-json": "स्वरूपित JSON",
+    "json-placeholder": "अपना JSON यहां पेस्ट करें...",
+    "invalid-json": "अमान्य JSON",
+    "indent-size": "इंडेंट"
+  },
+  "tr": {
+    "import-from-file": "Dosyadan içe aktar",
+    "download-json": "JSON indir",
+    "raw-json": "Ham JSON",
+    "formatted-json": "Biçimlendirilmiş JSON",
+    "json-placeholder": "JSON'unuzu buraya yapıştırın...",
+    "invalid-json": "Geçersiz JSON",
+    "indent-size": "Girinti"
+  },
+  "nl": {
+    "import-from-file": "Importeren uit bestand",
+    "download-json": "JSON downloaden",
+    "raw-json": "Ruwe JSON",
+    "formatted-json": "Geformatteerde JSON",
+    "json-placeholder": "Plak hier uw JSON...",
+    "invalid-json": "Ongeldige JSON",
+    "indent-size": "Inspringing"
+  },
+  "sv": {
+    "import-from-file": "Importera från fil",
+    "download-json": "Ladda ner JSON",
+    "raw-json": "Rå JSON",
+    "formatted-json": "Formaterad JSON",
+    "json-placeholder": "Klistra in din JSON här...",
+    "invalid-json": "Ogiltig JSON",
+    "indent-size": "Indrag"
+  },
+  "pl": {
+    "import-from-file": "Importuj z pliku",
+    "download-json": "Pobierz JSON",
+    "raw-json": "Surowy JSON",
+    "formatted-json": "Sformatowany JSON",
+    "json-placeholder": "Wklej tutaj swój JSON...",
+    "invalid-json": "Nieprawidłowy JSON",
+    "indent-size": "Wcięcie"
+  },
+  "vi": {
+    "import-from-file": "Nhập từ tệp",
+    "download-json": "Tải xuống JSON",
+    "raw-json": "JSON thô",
+    "formatted-json": "JSON đã định dạng",
+    "json-placeholder": "Dán JSON của bạn vào đây...",
+    "invalid-json": "JSON không hợp lệ",
+    "indent-size": "Thụt lề"
+  },
+  "th": {
+    "import-from-file": "นำเข้าจากไฟล์",
+    "download-json": "ดาวน์โหลด JSON",
+    "raw-json": "JSON ดิบ",
+    "formatted-json": "JSON ที่จัดรูปแบบแล้ว",
+    "json-placeholder": "วาง JSON ของคุณที่นี่...",
+    "invalid-json": "JSON ไม่ถูกต้อง",
+    "indent-size": "การเยื้อง"
+  },
+  "id": {
+    "import-from-file": "Impor dari file",
+    "download-json": "Unduh JSON",
+    "raw-json": "JSON mentah",
+    "formatted-json": "JSON terformat",
+    "json-placeholder": "Tempel JSON Anda di sini...",
+    "invalid-json": "JSON tidak valid",
+    "indent-size": "Indentasi"
+  },
+  "he": {
+    "import-from-file": "ייבוא מקובץ",
+    "download-json": "הורד JSON",
+    "raw-json": "JSON גולמי",
+    "formatted-json": "JSON מעוצב",
+    "json-placeholder": "הדבק את ה-JSON שלך כאן...",
+    "invalid-json": "JSON לא תקין",
+    "indent-size": "הזחה"
+  },
+  "ms": {
+    "import-from-file": "Import dari fail",
+    "download-json": "Muat turun JSON",
+    "raw-json": "JSON mentah",
+    "formatted-json": "JSON berformat",
+    "json-placeholder": "Tampal JSON anda di sini...",
+    "invalid-json": "JSON tidak sah",
+    "indent-size": "Inden"
+  },
+  "no": {
+    "import-from-file": "Importer fra fil",
+    "download-json": "Last ned JSON",
+    "raw-json": "Rå JSON",
+    "formatted-json": "Formatert JSON",
+    "json-placeholder": "Lim inn JSON-en din her...",
+    "invalid-json": "Ugyldig JSON",
+    "indent-size": "Innrykk"
   }
 }
 </i18n>

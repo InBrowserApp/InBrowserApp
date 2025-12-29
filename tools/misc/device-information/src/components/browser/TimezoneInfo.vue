@@ -27,6 +27,75 @@ const timezone = computed(() => {
   },
   "zh": {
     "timezone": "时区"
+  },
+  "zh-CN": {
+    "timezone": "时区"
+  },
+  "zh-TW": {
+    "timezone": "時區"
+  },
+  "zh-HK": {
+    "timezone": "時區"
+  },
+  "es": {
+    "timezone": "Zona Horaria"
+  },
+  "fr": {
+    "timezone": "Fuseau Horaire"
+  },
+  "de": {
+    "timezone": "Zeitzone"
+  },
+  "it": {
+    "timezone": "Fuso Orario"
+  },
+  "ja": {
+    "timezone": "タイムゾーン"
+  },
+  "ko": {
+    "timezone": "시간대"
+  },
+  "ru": {
+    "timezone": "Часовой Пояс"
+  },
+  "pt": {
+    "timezone": "Fuso Horario"
+  },
+  "ar": {
+    "timezone": "المنطقة الزمنية"
+  },
+  "hi": {
+    "timezone": "समय क्षेत्र"
+  },
+  "tr": {
+    "timezone": "Saat Dilimi"
+  },
+  "nl": {
+    "timezone": "Tijdzone"
+  },
+  "sv": {
+    "timezone": "Tidszon"
+  },
+  "pl": {
+    "timezone": "Strefa Czasowa"
+  },
+  "vi": {
+    "timezone": "Mui Gio"
+  },
+  "th": {
+    "timezone": "เขตเวลา"
+  },
+  "id": {
+    "timezone": "Zona Waktu"
+  },
+  "he": {
+    "timezone": "אזור זמן"
+  },
+  "ms": {
+    "timezone": "Zon Waktu"
+  },
+  "no": {
+    "timezone": "Tidssone"
   }
 }
 </i18n>

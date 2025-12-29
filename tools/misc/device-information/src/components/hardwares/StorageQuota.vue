@@ -48,6 +48,75 @@ function formatBytes(bytes: number): string {
   },
   "zh": {
     "storage-quota": "存储配额"
+  },
+  "zh-CN": {
+    "storage-quota": "存储配额"
+  },
+  "zh-TW": {
+    "storage-quota": "儲存配額"
+  },
+  "zh-HK": {
+    "storage-quota": "儲存配額"
+  },
+  "es": {
+    "storage-quota": "Cuota de almacenamiento"
+  },
+  "fr": {
+    "storage-quota": "Quota de stockage"
+  },
+  "de": {
+    "storage-quota": "Speicherkontingent"
+  },
+  "it": {
+    "storage-quota": "Quota di archiviazione"
+  },
+  "ja": {
+    "storage-quota": "ストレージ割当量"
+  },
+  "ko": {
+    "storage-quota": "저장 공간 할당량"
+  },
+  "ru": {
+    "storage-quota": "Квота хранилища"
+  },
+  "pt": {
+    "storage-quota": "Cota de armazenamento"
+  },
+  "ar": {
+    "storage-quota": "حصة التخزين"
+  },
+  "hi": {
+    "storage-quota": "स्टोरेज कोटा"
+  },
+  "tr": {
+    "storage-quota": "Depolama Kotasi"
+  },
+  "nl": {
+    "storage-quota": "Opslagquotum"
+  },
+  "sv": {
+    "storage-quota": "Lagringskvot"
+  },
+  "pl": {
+    "storage-quota": "Limit pamieci"
+  },
+  "vi": {
+    "storage-quota": "Han muc luu tru"
+  },
+  "th": {
+    "storage-quota": "โควต้าพื้นที่จัดเก็บ"
+  },
+  "id": {
+    "storage-quota": "Kuota Penyimpanan"
+  },
+  "he": {
+    "storage-quota": "מכסת אחסון"
+  },
+  "ms": {
+    "storage-quota": "Kuota Storan"
+  },
+  "no": {
+    "storage-quota": "Lagringskvote"
   }
 }
 </i18n>

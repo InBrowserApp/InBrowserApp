@@ -63,6 +63,75 @@ const cpuBitness = computed(() => uaHighEntropyData.value?.bitness || undefined)
   },
   "zh": {
     "cpu-bitness": "CPU位数"
+  },
+  "zh-CN": {
+    "cpu-bitness": "CPU位数"
+  },
+  "zh-TW": {
+    "cpu-bitness": "CPU 位元數"
+  },
+  "zh-HK": {
+    "cpu-bitness": "CPU 位元數"
+  },
+  "es": {
+    "cpu-bitness": "Bits de CPU"
+  },
+  "fr": {
+    "cpu-bitness": "Bits CPU"
+  },
+  "de": {
+    "cpu-bitness": "CPU-Bitbreite"
+  },
+  "it": {
+    "cpu-bitness": "Bit CPU"
+  },
+  "ja": {
+    "cpu-bitness": "CPUビット数"
+  },
+  "ko": {
+    "cpu-bitness": "CPU 비트"
+  },
+  "ru": {
+    "cpu-bitness": "Разрядность CPU"
+  },
+  "pt": {
+    "cpu-bitness": "Bits da CPU"
+  },
+  "ar": {
+    "cpu-bitness": "دقة المعالج"
+  },
+  "hi": {
+    "cpu-bitness": "CPU बिटनेस"
+  },
+  "tr": {
+    "cpu-bitness": "CPU Bit Sayisi"
+  },
+  "nl": {
+    "cpu-bitness": "CPU-bitbreedte"
+  },
+  "sv": {
+    "cpu-bitness": "CPU-bitantal"
+  },
+  "pl": {
+    "cpu-bitness": "Bitowość CPU"
+  },
+  "vi": {
+    "cpu-bitness": "So bit CPU"
+  },
+  "th": {
+    "cpu-bitness": "บิต CPU"
+  },
+  "id": {
+    "cpu-bitness": "Bitness CPU"
+  },
+  "he": {
+    "cpu-bitness": "ביטים של המעבד"
+  },
+  "ms": {
+    "cpu-bitness": "Bitness CPU"
+  },
+  "no": {
+    "cpu-bitness": "CPU-bitbredde"
   }
 }
 </i18n>
