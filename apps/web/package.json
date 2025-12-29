@@ -37,6 +37,7 @@
     "vite-node": "^3.2.4",
     "vite-plugin-pwa": "^1.0.2",
     "vite-plugin-vue-devtools": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "wrangler": "catalog:"
   }
 }
