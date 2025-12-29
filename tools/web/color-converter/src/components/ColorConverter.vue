@@ -6,16 +6,32 @@
 
   <n-grid cols="1 s:2 l:3" :x-gap="24" :y-gap="24" responsive="screen">
     <n-gi>
-      <HexColorPicker :rgba="storedColor" :show-alpha="showAlpha" @update:rgba="storedColor = $event" />
+      <HexColorPicker
+        :rgba="storedColor"
+        :show-alpha="showAlpha"
+        @update:rgba="storedColor = $event"
+      />
     </n-gi>
     <n-gi>
-      <RgbColorPicker :rgba="storedColor" :show-alpha="showAlpha" @update:rgba="storedColor = $event" />
+      <RgbColorPicker
+        :rgba="storedColor"
+        :show-alpha="showAlpha"
+        @update:rgba="storedColor = $event"
+      />
     </n-gi>
     <n-gi>
-      <HslColorPicker :rgba="storedColor" :show-alpha="showAlpha" @update:rgba="storedColor = $event" />
+      <HslColorPicker
+        :rgba="storedColor"
+        :show-alpha="showAlpha"
+        @update:rgba="storedColor = $event"
+      />
     </n-gi>
     <n-gi>
-      <HsvColorPicker :rgba="storedColor" :show-alpha="showAlpha" @update:rgba="storedColor = $event" />
+      <HsvColorPicker
+        :rgba="storedColor"
+        :show-alpha="showAlpha"
+        @update:rgba="storedColor = $event"
+      />
     </n-gi>
     <n-gi>
       <HwbColorInput :rgba="storedColor" @update:rgba="storedColor = $event" />

@@ -43,15 +43,27 @@ const emit = defineEmits<{
 const { t } = useI18n()
 
 const presetColors = [
-  '#FF0000FF', '#FF7F00FF', '#FFFF00FF', '#00FF00FF', '#00FFFFFF',
-  '#0000FFFF', '#8B00FFFF', '#FF00FFFF', '#000000FF', '#808080FF', '#FFFFFFFF',
+  '#FF0000FF',
+  '#FF7F00FF',
+  '#FFFF00FF',
+  '#00FF00FF',
+  '#00FFFFFF',
+  '#0000FFFF',
+  '#8B00FFFF',
+  '#FF00FFFF',
+  '#000000FF',
+  '#808080FF',
+  '#FFFFFFFF',
 ]
 
 const displayValue = computed(() => {
   const { r, g, b, a } = props.rgba
   const hex = convert.rgb.hex(r, g, b)
   if (props.showAlpha) {
-    const alpha = Math.round(a * 255).toString(16).padStart(2, '0').toUpperCase()
+    const alpha = Math.round(a * 255)
+      .toString(16)
+      .padStart(2, '0')
+      .toUpperCase()
     return `#${hex}${alpha}`
   }
   return `#${hex}`
@@ -61,11 +73,26 @@ function handleUpdate(val: string) {
   let hex = val.replace(/^#/, '')
   if (hex.length === 3) {
     const chars = hex.split('')
-    hex = (chars[0] ?? '') + (chars[0] ?? '') + (chars[1] ?? '') + (chars[1] ?? '') + (chars[2] ?? '') + (chars[2] ?? '') + 'ff'
+    hex =
+      (chars[0] ?? '') +
+      (chars[0] ?? '') +
+      (chars[1] ?? '') +
+      (chars[1] ?? '') +
+      (chars[2] ?? '') +
+      (chars[2] ?? '') +
+      'ff'
   }
   if (hex.length === 4) {
     const chars = hex.split('')
-    hex = (chars[0] ?? '') + (chars[0] ?? '') + (chars[1] ?? '') + (chars[1] ?? '') + (chars[2] ?? '') + (chars[2] ?? '') + (chars[3] ?? '') + (chars[3] ?? '')
+    hex =
+      (chars[0] ?? '') +
+      (chars[0] ?? '') +
+      (chars[1] ?? '') +
+      (chars[1] ?? '') +
+      (chars[2] ?? '') +
+      (chars[2] ?? '') +
+      (chars[3] ?? '') +
+      (chars[3] ?? '')
   }
   if (hex.length === 6) hex += 'ff'
 

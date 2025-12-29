@@ -2,7 +2,19 @@ export { PaintBrush24Regular as icon } from '@shared/icons/fluent'
 
 export const toolID = 'color-converter'
 export const path = '/tools/color-converter'
-export const tags = ['web', 'converter', 'color', 'hex', 'rgb', 'hsl', 'hsv', 'hwb', 'lab', 'lch', 'cmyk']
+export const tags = [
+  'web',
+  'converter',
+  'color',
+  'hex',
+  'rgb',
+  'hsl',
+  'hsv',
+  'hwb',
+  'lab',
+  'lch',
+  'cmyk',
+]
 export const features = ['offline']
 export const meta = {
   en: {

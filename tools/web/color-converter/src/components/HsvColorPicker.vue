@@ -70,25 +70,39 @@ function handleUpdate(val: string) {
 
 <i18n lang="json">
 {
-  "en": { "info": "Hue, Saturation, Value (Brightness) - also known as HSB, common in color pickers" },
+  "en": {
+    "info": "Hue, Saturation, Value (Brightness) - also known as HSB, common in color pickers"
+  },
   "zh": { "info": "色相、饱和度、明度 - 也称 HSB，常用于取色器" },
   "zh-CN": { "info": "色相、饱和度、明度 - 也称 HSB，常用于取色器" },
   "zh-TW": { "info": "色相、飽和度、明度 - 也稱 HSB，常用於取色器" },
   "zh-HK": { "info": "色相、飽和度、明度 - 也稱 HSB，常用於取色器" },
-  "es": { "info": "Tono, Saturación, Valor - también conocido como HSB, común en selectores de color" },
-  "fr": { "info": "Teinte, Saturation, Valeur - aussi appelé HSB, courant dans les sélecteurs de couleur" },
+  "es": {
+    "info": "Tono, Saturación, Valor - también conocido como HSB, común en selectores de color"
+  },
+  "fr": {
+    "info": "Teinte, Saturation, Valeur - aussi appelé HSB, courant dans les sélecteurs de couleur"
+  },
   "de": { "info": "Farbton, Sättigung, Hellwert - auch HSB genannt, üblich in Farbwählern" },
-  "it": { "info": "Tonalità, Saturazione, Valore - noto anche come HSB, comune nei selettori colore" },
+  "it": {
+    "info": "Tonalità, Saturazione, Valore - noto anche come HSB, comune nei selettori colore"
+  },
   "ja": { "info": "色相、彩度、明度 - HSBとも呼ばれ、カラーピッカーで一般的" },
   "ko": { "info": "색상, 채도, 명도 - HSB라고도 하며, 색상 선택기에서 일반적" },
-  "ru": { "info": "Оттенок, Насыщенность, Значение - также известен как HSB, распространён в палитрах" },
-  "pt": { "info": "Matiz, Saturação, Valor - também conhecido como HSB, comum em seletores de cor" },
+  "ru": {
+    "info": "Оттенок, Насыщенность, Значение - также известен как HSB, распространён в палитрах"
+  },
+  "pt": {
+    "info": "Matiz, Saturação, Valor - também conhecido como HSB, comum em seletores de cor"
+  },
   "ar": { "info": "درجة اللون، التشبع، القيمة - يُعرف أيضاً بـ HSB، شائع في منتقي الألوان" },
   "hi": { "info": "ह्यू, सैचुरेशन, वैल्यू - HSB भी कहा जाता है, कलर पिकर में आम" },
   "tr": { "info": "Ton, Doygunluk, Değer - HSB olarak da bilinir, renk seçicilerde yaygın" },
   "nl": { "info": "Tint, Verzadiging, Waarde - ook bekend als HSB, gebruikelijk in kleurkiezers" },
   "sv": { "info": "Nyans, Mättnad, Värde - även känd som HSB, vanlig i färgväljare" },
-  "pl": { "info": "Barwa, Nasycenie, Wartość - znany też jako HSB, popularny w próbnikach kolorów" },
+  "pl": {
+    "info": "Barwa, Nasycenie, Wartość - znany też jako HSB, popularny w próbnikach kolorów"
+  },
   "vi": { "info": "Sắc độ, Độ bão hòa, Giá trị - còn gọi là HSB, phổ biến trong bộ chọn màu" },
   "th": { "info": "เฉดสี ความอิ่มตัว ค่า - เรียกอีกอย่างว่า HSB ใช้ทั่วไปในตัวเลือกสี" },
   "id": { "info": "Hue, Saturasi, Value - juga dikenal sebagai HSB, umum di pemilih warna" },

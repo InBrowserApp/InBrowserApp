@@ -27,23 +27,19 @@ export const meta = {
   },
   zh: {
     name: '大小写转换器',
-    description:
-      '在不同命名规范之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。',
+    description: '在不同命名规范之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。',
   },
   'zh-CN': {
     name: '大小写转换器',
-    description:
-      '在不同命名规范之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。',
+    description: '在不同命名规范之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。',
   },
   'zh-TW': {
     name: '大小寫轉換器',
-    description:
-      '在不同命名規範之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。',
+    description: '在不同命名規範之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。',
   },
   'zh-HK': {
     name: '大小寫轉換器',
-    description:
-      '在不同命名規範之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。',
+    description: '在不同命名規範之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。',
   },
   es: {
     name: 'Convertidor de Mayúsculas',

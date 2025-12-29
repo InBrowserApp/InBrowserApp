@@ -99,24 +99,40 @@ function handleEnter(e: KeyboardEvent) {
   "zh-TW": { "info": "明度、色度、色相 - LAB 的圓柱坐標形式，更易調整色相，不支援透明度" },
   "zh-HK": { "info": "明度、色度、色相 - LAB 的圓柱坐標形式，更易調整色相，不支援透明度" },
   "es": { "info": "Luminosidad, Croma, Tono - LAB cilíndrico, ajuste de tono más fácil, sin alfa" },
-  "fr": { "info": "Luminosité, Chroma, Teinte - LAB cylindrique, ajustement de teinte plus facile, sans alpha" },
-  "de": { "info": "Helligkeit, Chroma, Farbton - zylindrisches LAB, einfachere Farbtöne, ohne Alpha" },
-  "it": { "info": "Luminosità, Croma, Tonalità - LAB cilindrico, regolazione tonalità più facile, senza alfa" },
+  "fr": {
+    "info": "Luminosité, Chroma, Teinte - LAB cylindrique, ajustement de teinte plus facile, sans alpha"
+  },
+  "de": {
+    "info": "Helligkeit, Chroma, Farbton - zylindrisches LAB, einfachere Farbtöne, ohne Alpha"
+  },
+  "it": {
+    "info": "Luminosità, Croma, Tonalità - LAB cilindrico, regolazione tonalità più facile, senza alfa"
+  },
   "ja": { "info": "明度、彩度、色相 - 円柱座標LAB、色相調整が容易、アルファ非対応" },
   "ko": { "info": "명도, 채도, 색상 - 원통형 LAB, 색상 조정 용이, 알파 미지원" },
-  "ru": { "info": "Светлота, Цветность, Оттенок - цилиндрический LAB, легче настраивать оттенок, без альфа" },
-  "pt": { "info": "Luminosidade, Croma, Matiz - LAB cilíndrico, ajuste de matiz mais fácil, sem alfa" },
+  "ru": {
+    "info": "Светлота, Цветность, Оттенок - цилиндрический LAB, легче настраивать оттенок, без альфа"
+  },
+  "pt": {
+    "info": "Luminosidade, Croma, Matiz - LAB cilíndrico, ajuste de matiz mais fácil, sem alfa"
+  },
   "ar": { "info": "الإضاءة، الكروما، درجة اللون - LAB أسطواني، تعديل درجة لون أسهل، بدون ألفا" },
   "hi": { "info": "लाइटनेस, क्रोमा, ह्यू - बेलनाकार LAB, ह्यू समायोजन आसान, अल्फा नहीं" },
   "tr": { "info": "Parlaklık, Kroma, Ton - silindirik LAB, kolay ton ayarı, alfa yok" },
-  "nl": { "info": "Lichtheid, Chroma, Tint - cilindrisch LAB, makkelijkere tintaanpassing, geen alfa" },
+  "nl": {
+    "info": "Lichtheid, Chroma, Tint - cilindrisch LAB, makkelijkere tintaanpassing, geen alfa"
+  },
   "sv": { "info": "Ljushet, Kroma, Nyans - cylindrisk LAB, enklare nyansjustering, ingen alfa" },
-  "pl": { "info": "Jasność, Chroma, Barwa - cylindryczny LAB, łatwiejsze dostosowanie barwy, bez alfa" },
+  "pl": {
+    "info": "Jasność, Chroma, Barwa - cylindryczny LAB, łatwiejsze dostosowanie barwy, bez alfa"
+  },
   "vi": { "info": "Độ sáng, Sắc độ, Sắc - LAB hình trụ, điều chỉnh sắc dễ hơn, không alpha" },
   "th": { "info": "ความสว่าง โครมา เฉดสี - LAB ทรงกระบอก ปรับเฉดสีง่ายขึ้น ไม่มีอัลฟา" },
   "id": { "info": "Kecerahan, Kroma, Hue - LAB silinder, penyesuaian hue lebih mudah, tanpa alfa" },
   "he": { "info": "בהירות, כרומה, גוון - LAB גלילי, התאמת גוון קלה יותר, ללא אלפא" },
   "ms": { "info": "Kecerahan, Kroma, Hue - LAB silinder, pelarasan hue lebih mudah, tiada alfa" },
-  "no": { "info": "Lyshet, Kroma, Fargetone - sylindrisk LAB, enklere fargetonejustering, ingen alfa" }
+  "no": {
+    "info": "Lyshet, Kroma, Fargetone - sylindrisk LAB, enklere fargetonejustering, ingen alfa"
+  }
 }
 </i18n>
