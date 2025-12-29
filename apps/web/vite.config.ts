@@ -13,6 +13,9 @@ export default defineConfig({
     VueI18nPlugin({}),
     vueDevTools(),
     VitePWA({
+      workbox: {
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB
+      },
       includeAssets: [
         'favicon.ico',
         'favicon-dark.ico',
