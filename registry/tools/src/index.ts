@@ -62,6 +62,7 @@ import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -141,4 +142,7 @@ export const tools: ToolInfo[] = [
 
   // Time Tools
   unixTimestampConverterToolInfo,
+
+  // Document Tools
+  textDiffToolInfo,
 ]

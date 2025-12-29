@@ -60,6 +60,7 @@ import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
+import { routes as textDiffRoutes } from '@tools/text-diff/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -123,4 +124,5 @@ export const routes: ToolRoute[] = [
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,
+  ...textDiffRoutes,
 ]
