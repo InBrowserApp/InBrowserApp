@@ -21,6 +21,9 @@ catalogs:
     '@tsconfig/node22':
       specifier: ^22.0.2
       version: 22.0.2
+    '@types/color-convert':
+      specifier: ^2.0.4
+      version: 2.0.4
     '@types/jsdom':
       specifier: ^21.1.7
       version: 21.1.7
@@ -81,6 +84,12 @@ catalogs:
     '@zip.js/zip.js':
       specifier: ^2.7.72
       version: 2.7.72
+    color-convert:
+      specifier: ^3.1.3
+      version: 3.1.3
+    color-name:
+      specifier: ^2.1.0
+      version: 2.1.0
     eslint:
       specifier: ^9.35.0
       version: 9.35.0
@@ -327,6 +336,9 @@ importers:
       '@tools/cidrs-merger-excluder':
         specifier: workspace:*
         version: link:../../tools/network/cidrs-merger-excluder
+      '@tools/color-converter':
+        specifier: workspace:*
+        version: link:../../tools/web/color-converter
       '@tools/crc-checksum-calculator':
         specifier: workspace:*
         version: link:../../tools/hash/crc-checksum-calculator
@@ -2642,6 +2654,40 @@ importers:
         specifier: 'catalog:'
         version: 4.5.1(vue@3.5.18(typescript@5.9.2))
 
+  tools/web/color-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 13.6.0(vue@3.5.18(typescript@5.9.2))
+      color-convert:
+        specifier: 'catalog:'
+        version: 3.1.3
+      color-name:
+        specifier: 'catalog:'
+        version: 2.1.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.42.0(vue@3.5.18(typescript@5.9.2))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.18(typescript@5.9.2)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.1.11(vue@3.5.18(typescript@5.9.2))
+    devDependencies:
+      '@types/color-convert':
+        specifier: 'catalog:'
+        version: 2.0.4
+
   tools/web/jwt-decoder-verifier:
     dependencies:
       '@shared/icons':
@@ -4389,6 +4435,12 @@ packages:
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
 
+  '@types/color-convert@2.0.4':
+    resolution: {integrity: sha512-Ub1MmDdyZ7mX//g25uBAoH/mWGd9swVbt8BseymnaE18SU4po/PjmCrHxqIIRjBo3hV/vh1KGr0eMxUhp+t+dQ==}
+
+  '@types/color-name@1.1.5':
+    resolution: {integrity: sha512-j2K5UJqGTxeesj6oQuGpMgifpT5k9HprgQd8D1Y0lOFqKHl3PJu5GMeS4Y5EgjS55AE6OQxf8mPED9uaGbf4Cg==}
+
   '@types/crypto-js@4.2.2':
     resolution: {integrity: sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==}
 
@@ -4994,8 +5046,16 @@ packages:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
 
+  color-convert@3.1.3:
+    resolution: {integrity: sha512-fasDH2ont2GqF5HpyO4w0+BcewlhHEZOFn9c1ckZdHpJ56Qb7MHhH/IcJZbBGgvdtwdwNbLvxiBEdg336iA9Sg==}
+    engines: {node: '>=14.6'}
+
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  color-name@2.1.0:
+    resolution: {integrity: sha512-1bPaDNFm0axzE4MEAzKPuqKWeRaT43U/hyxKPBdqTfmPF+d6n7FSoTFxLVULUJOmiLp01KjhIPPH+HrXZJN4Rg==}
+    engines: {node: '>=12.20'}
 
   comlink@4.4.2:
     resolution: {integrity: sha512-OxGdvBmJuNKSCMO4NTl1L47VRp6xn2wG4F/2hYzB6tiCb709otOxtEYCSvK80PtjODfXXZu8ds+Nw5kVCjqd2g==}
@@ -8859,6 +8919,12 @@ snapshots:
     dependencies:
       '@types/deep-eql': 4.0.2
 
+  '@types/color-convert@2.0.4':
+    dependencies:
+      '@types/color-name': 1.1.5
+
+  '@types/color-name@1.1.5': {}
+
   '@types/crypto-js@4.2.2': {}
 
   '@types/deep-eql@4.0.2': {}
@@ -9579,7 +9645,13 @@ snapshots:
     dependencies:
       color-name: 1.1.4
 
+  color-convert@3.1.3:
+    dependencies:
+      color-name: 2.1.0
+
   color-name@1.1.4: {}
+
+  color-name@2.1.0: {}
 
   comlink@4.4.2: {}
 

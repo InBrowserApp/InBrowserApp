@@ -63,6 +63,7 @@ import { toolInfo as deviceInformationToolInfo } from '@tools/device-information
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
+import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -145,4 +146,7 @@ export const tools: ToolInfo[] = [
 
   // Document Tools
   textDiffToolInfo,
+
+  // Web Tools (Color)
+  colorConverterToolInfo,
 ]

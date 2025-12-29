@@ -21,6 +21,7 @@
     "@tools/blake2s-hash-text-or-file": "workspace:*",
     "@tools/cidr-parser": "workspace:*",
     "@tools/cidrs-merger-excluder": "workspace:*",
+    "@tools/color-converter": "workspace:*",
     "@tools/crc-checksum-calculator": "workspace:*",
     "@tools/csv-to-json-converter": "workspace:*",
     "@tools/current-network-time": "workspace:*",
