@@ -106,8 +106,9 @@ jobs:
         run: pnpm run test:unit --run --coverage
 
       - name: Report Coverage
-        if: github.event_name == 'pull_request'
         uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          comment-on: 'pr,commit'
 
   test-e2e:
     name: Test E2E
