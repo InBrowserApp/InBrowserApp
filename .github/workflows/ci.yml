@@ -136,7 +136,7 @@ jobs:
         run: pnpm install
 
       - name: Install Playwright
-        run: pnpm exec playwright install --with-deps
+        run: pnpm -F @apps/web exec playwright install --with-deps
 
       - name: Download Artifact
         uses: actions/download-artifact@v4
