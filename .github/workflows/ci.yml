@@ -113,7 +113,6 @@ jobs:
   test-e2e:
     name: Test E2E
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
     needs:
       - build-web
     permissions:
@@ -161,7 +160,8 @@ jobs:
       - build-web
       - code-check
       - test-unit
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - test-e2e
+    if: github.event_name == 'release'
     permissions:
       contents: read
       pages: write
