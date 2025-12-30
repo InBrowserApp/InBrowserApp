@@ -38,7 +38,7 @@ const url = ref<URL>(new URL(urlString.value))
 syncRef(url, urlString, {
   transform: {
     ltr: (left) => left.toString(),
-    rtl: (right) => new URL(right),
+    rtl: (right) => new URL(right ?? ''),
   },
 })
 </script>
