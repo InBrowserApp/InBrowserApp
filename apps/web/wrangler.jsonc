@@ -2,7 +2,6 @@
   "$schema": "../node_modules/wrangler/config-schema.json",
   "name": "inbrowserapp-web",
   "compatibility_date": "2025-11-06",
-  "preview_urls": true,
   "assets": {
     "directory": "./dist/",
     "not_found_handling": "single-page-application",
