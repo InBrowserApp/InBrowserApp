@@ -41,6 +41,9 @@ jobs:
       - name: TypeScript Check
         run: pnpm run type-check
 
+      - name: Security Audit
+        run: pnpm audit --audit-level=high
+
   build-web:
     name: Build Web
     runs-on: ubuntu-latest
