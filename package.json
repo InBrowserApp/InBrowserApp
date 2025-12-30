@@ -17,11 +17,15 @@
     "test:unit": "vitest",
     "test:e2e": "pnpm -F @apps/web test:e2e",
     "type-check": "vue-tsc --build --noEmit",
-    "deps:catalog": "pnpx codemod pnpm/catalog"
+    "deps:catalog": "pnpx codemod pnpm/catalog",
+    "prepare": "husky"
   },
   "author": "InBrowser.App",
   "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
   "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/types": "catalog:",
     "@intlify/unplugin-vue-i18n": "catalog:",
     "@prettier/plugin-oxc": "catalog:",
     "@tsconfig/node22": "catalog:",
@@ -40,7 +44,9 @@
     "eslint-plugin-playwright": "catalog:",
     "eslint-plugin-vue": "catalog:",
     "happy-dom": "catalog:",
+    "husky": "catalog:",
     "jsdom": "catalog:",
+    "lint-staged": "catalog:",
     "npm-run-all2": "catalog:",
     "oxlint": "catalog:",
     "prettier": "catalog:",
@@ -51,5 +57,15 @@
     "vue-i18n": "catalog:",
     "vue-tsc": "catalog:",
     "wrangler": "catalog:"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier --write",
+      "vitest related --run --project dom"
+    ],
+    "*.{json,jsonc}": [
+      "prettier --write"
+    ]
   }
 }
