@@ -8,8 +8,7 @@ export const features = ['offline']
 export const meta = {
   en: {
     name: 'Morse Code Converter',
-    description:
-      'Convert text to Morse code and vice versa with audio playback support',
+    description: 'Convert text to Morse code and vice versa with audio playback support',
   },
   zh: {
     name: '摩尔斯电码转换器',
@@ -29,23 +28,19 @@ export const meta = {
   },
   es: {
     name: 'Convertidor de Código Morse',
-    description:
-      'Convierte texto a código Morse y viceversa con soporte de reproducción de audio',
+    description: 'Convierte texto a código Morse y viceversa con soporte de reproducción de audio',
   },
   fr: {
     name: 'Convertisseur de Code Morse',
-    description:
-      'Convertir du texte en code Morse et inversement avec support audio',
+    description: 'Convertir du texte en code Morse et inversement avec support audio',
   },
   de: {
     name: 'Morsecode-Konverter',
-    description:
-      'Text in Morsecode umwandeln und umgekehrt mit Audiowiedergabe',
+    description: 'Text in Morsecode umwandeln und umgekehrt mit Audiowiedergabe',
   },
   it: {
     name: 'Convertitore Codice Morse',
-    description:
-      'Converti testo in codice Morse e viceversa con supporto audio',
+    description: 'Converti testo in codice Morse e viceversa con supporto audio',
   },
   ja: {
     name: 'モールス信号変換',
@@ -57,13 +52,11 @@ export const meta = {
   },
   ru: {
     name: 'Конвертер кода Морзе',
-    description:
-      'Преобразование текста в код Морзе и обратно с поддержкой воспроизведения звука',
+    description: 'Преобразование текста в код Морзе и обратно с поддержкой воспроизведения звука',
   },
   pt: {
     name: 'Conversor de Código Morse',
-    description:
-      'Converta texto para código Morse e vice-versa com suporte a áudio',
+    description: 'Converta texto para código Morse e vice-versa com suporte a áudio',
   },
   ar: {
     name: 'محول شفرة مورس',
@@ -79,23 +72,19 @@ export const meta = {
   },
   nl: {
     name: 'Morsecode Converter',
-    description:
-      'Converteer tekst naar morsecode en vice versa met audio ondersteuning',
+    description: 'Converteer tekst naar morsecode en vice versa met audio ondersteuning',
   },
   sv: {
     name: 'Morsekod-konverterare',
-    description:
-      'Konvertera text till morsekod och vice versa med ljuduppspelning',
+    description: 'Konvertera text till morsekod och vice versa med ljuduppspelning',
   },
   pl: {
-    name: 'Konwerter Kodu Morse\'a',
-    description:
-      'Konwertuj tekst na kod Morse\'a i odwrotnie z obsługą odtwarzania dźwięku',
+    name: "Konwerter Kodu Morse'a",
+    description: "Konwertuj tekst na kod Morse'a i odwrotnie z obsługą odtwarzania dźwięku",
   },
   vi: {
     name: 'Bộ Chuyển Đổi Mã Morse',
-    description:
-      'Chuyển đổi văn bản sang mã Morse và ngược lại với hỗ trợ phát âm thanh',
+    description: 'Chuyển đổi văn bản sang mã Morse và ngược lại với hỗ trợ phát âm thanh',
   },
   th: {
     name: 'ตัวแปลงรหัสมอร์ส',
@@ -103,8 +92,7 @@ export const meta = {
   },
   id: {
     name: 'Konverter Kode Morse',
-    description:
-      'Konversi teks ke kode Morse dan sebaliknya dengan dukungan pemutaran audio',
+    description: 'Konversi teks ke kode Morse dan sebaliknya dengan dukungan pemutaran audio',
   },
   he: {
     name: 'ממיר קוד מורס',
@@ -112,12 +100,10 @@ export const meta = {
   },
   ms: {
     name: 'Penukar Kod Morse',
-    description:
-      'Tukar teks kepada kod Morse dan sebaliknya dengan sokongan main balik audio',
+    description: 'Tukar teks kepada kod Morse dan sebaliknya dengan sokongan main balik audio',
   },
   no: {
     name: 'Morsekode-konverterer',
-    description:
-      'Konverter tekst til morsekode og omvendt med lydavspilling',
+    description: 'Konverter tekst til morsekode og omvendt med lydavspilling',
   },
 }

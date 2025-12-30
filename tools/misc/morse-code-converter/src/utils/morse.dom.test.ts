@@ -61,7 +61,9 @@ describe('textToMorse', () => {
 
   it('handles mixed content', () => {
     expect(textToMorse('SOS!')).toBe('... --- ... -.-.--')
-    expect(textToMorse('HELLO, WORLD!')).toBe('.... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--')
+    expect(textToMorse('HELLO, WORLD!')).toBe(
+      '.... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--',
+    )
   })
 
   it('ignores unsupported characters', () => {
