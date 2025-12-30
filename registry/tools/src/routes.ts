@@ -66,6 +66,7 @@ import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
+import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -135,4 +136,5 @@ export const routes: ToolRoute[] = [
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
   ...unicodeEscapeUnescapeRoutes,
+  ...morseCodeConverterRoutes,
 ]

@@ -68,6 +68,7 @@ import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
+import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -163,4 +164,7 @@ export const tools: ToolInfo[] = [
 
   // Unicode Tools
   unicodeEscapeUnescapeToolInfo,
+
+  // Misc Tools
+  morseCodeConverterToolInfo,
 ]

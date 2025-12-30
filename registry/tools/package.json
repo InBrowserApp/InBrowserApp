@@ -48,6 +48,7 @@
     "@tools/mac-to-ipv6-link-local": "workspace:*",
     "@tools/markdown-to-html-converter": "workspace:*",
     "@tools/md5-hash-text-or-file": "workspace:*",
+    "@tools/morse-code-converter": "workspace:*",
     "@tools/my-ip-address": "workspace:*",
     "@tools/network-tools": "workspace:*",
     "@tools/number-base-converter": "workspace:*",
