@@ -62,6 +62,7 @@ import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
@@ -146,6 +147,7 @@ export const tools: ToolInfo[] = [
 
   // Time Tools
   unixTimestampConverterToolInfo,
+  cronExpressionParserToolInfo,
 
   // Document Tools
   textDiffToolInfo,
