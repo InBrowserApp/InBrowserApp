@@ -47,6 +47,7 @@
     "vite": "catalog:",
     "vitest": "catalog:",
     "vue": "catalog:",
+    "vue-i18n": "catalog:",
     "vue-tsc": "catalog:",
     "wrangler": "catalog:"
   }

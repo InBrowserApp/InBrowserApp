@@ -17,6 +17,7 @@ export default defineConfig({
           name: 'dom',
           include: ['{apps,tools,shared,utils}/**/*.dom.test.ts'],
           environment: 'happy-dom',
+          setupFiles: ['./vitest.setup.ts'],
           retry: 2,
           typecheck: {
             enabled: true,
