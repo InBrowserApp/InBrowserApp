@@ -103,7 +103,7 @@ jobs:
         run: pnpm install
 
       - name: Run unit tests
-        run: pnpm run test:unit --run --coverage
+        run: pnpm run test:unit --coverage --silent passed-only ${{ github.event_name == 'pull_request' && format('--changed origin/{0}', github.base_ref) || '' }}
 
       - name: Report Coverage
         uses: davelosert/vitest-coverage-report-action@v2
