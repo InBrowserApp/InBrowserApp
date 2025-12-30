@@ -64,6 +64,7 @@ import { routes as textDiffRoutes } from '@tools/text-diff/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
+import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -131,4 +132,5 @@ export const routes: ToolRoute[] = [
   ...colorConverterRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
+  ...unicodeEscapeUnescapeRoutes,
 ]

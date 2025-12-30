@@ -66,6 +66,7 @@ import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
+import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -157,4 +158,7 @@ export const tools: ToolInfo[] = [
 
   // Number Tools
   numberBaseConverterToolInfo,
+
+  // Unicode Tools
+  unicodeEscapeUnescapeToolInfo,
 ]
