@@ -654,6 +654,9 @@ importers:
       '@tools/roman-numeral-converter':
         specifier: workspace:*
         version: link:../../tools/misc/roman-numeral-converter
+      '@tools/rot-cipher':
+        specifier: workspace:*
+        version: link:../../tools/web/rot-cipher
       '@tools/sha1-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha1-hash-text-or-file
@@ -3042,6 +3045,30 @@ importers:
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
 
   tools/web/number-base-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+
+  tools/web/rot-cipher:
     dependencies:
       '@shared/icons':
         specifier: workspace:*
