@@ -69,6 +69,7 @@ import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
+import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -167,4 +168,5 @@ export const tools: ToolInfo[] = [
 
   // Misc Tools
   morseCodeConverterToolInfo,
+  rotCipherToolInfo,
 ]

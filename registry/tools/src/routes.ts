@@ -67,6 +67,7 @@ import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
 import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
+import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -137,4 +138,5 @@ export const routes: ToolRoute[] = [
   ...numberBaseConverterRoutes,
   ...unicodeEscapeUnescapeRoutes,
   ...morseCodeConverterRoutes,
+  ...rotCipherRoutes,
 ]
