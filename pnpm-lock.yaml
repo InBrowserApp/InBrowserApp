@@ -295,8 +295,8 @@ catalogs:
       specifier: 3.5.26
       version: 3.5.26
     vue-i18n:
-      specifier: 11.2.7
-      version: 11.2.7
+      specifier: 11.2.8
+      version: 11.2.8
     vue-router:
       specifier: ^4.6.4
       version: 4.6.4
@@ -331,7 +331,7 @@ importers:
         version: 20.2.0
       '@intlify/unplugin-vue-i18n':
         specifier: 'catalog:'
-        version: 11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@4.54.0)(typescript@5.9.3)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+        version: 11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@4.54.0)(typescript@5.9.3)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@prettier/plugin-oxc':
         specifier: 'catalog:'
         version: 0.1.3
@@ -415,7 +415,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-tsc:
         specifier: 'catalog:'
         version: 3.2.1(typescript@5.9.3)
@@ -457,14 +457,14 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
     devDependencies:
       '@intlify/unplugin-vue-i18n':
         specifier: 'catalog:'
-        version: 11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@2.79.2)(typescript@5.9.3)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+        version: 11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@2.79.2)(typescript@5.9.3)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@playwright/test':
         specifier: 'catalog:'
         version: 1.57.0
@@ -764,7 +764,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -839,7 +839,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -879,7 +879,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -916,7 +916,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -952,7 +952,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -988,7 +988,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1024,7 +1024,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1063,7 +1063,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1103,7 +1103,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1142,7 +1142,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1179,7 +1179,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1218,7 +1218,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1261,7 +1261,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1301,7 +1301,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1347,7 +1347,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1383,7 +1383,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/favicon/favicon-assets-generator:
     dependencies:
@@ -1419,7 +1419,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1449,7 +1449,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1479,7 +1479,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1512,7 +1512,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1545,7 +1545,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1581,7 +1581,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1608,7 +1608,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1635,7 +1635,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1668,7 +1668,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1705,7 +1705,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1742,7 +1742,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1776,7 +1776,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1806,7 +1806,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1836,7 +1836,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1866,7 +1866,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1893,7 +1893,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1923,7 +1923,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1956,7 +1956,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -1989,7 +1989,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2016,7 +2016,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2052,7 +2052,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2082,7 +2082,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2113,7 +2113,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/misc/device-information:
     dependencies:
@@ -2137,7 +2137,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2164,7 +2164,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/misc/roman-numeral-converter:
     dependencies:
@@ -2188,7 +2188,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2221,7 +2221,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2257,7 +2257,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2287,7 +2287,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2329,7 +2329,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2365,7 +2365,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2407,7 +2407,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2452,7 +2452,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2497,7 +2497,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2530,7 +2530,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2560,7 +2560,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2590,7 +2590,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2620,7 +2620,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2651,7 +2651,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2681,7 +2681,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2711,7 +2711,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2741,7 +2741,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2774,7 +2774,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2801,7 +2801,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2828,7 +2828,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/uuid:
     dependencies:
@@ -2867,7 +2867,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2894,7 +2894,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2921,7 +2921,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2948,7 +2948,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -2975,7 +2975,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/color-converter:
     dependencies:
@@ -3005,7 +3005,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
     devDependencies:
       '@types/color-convert':
         specifier: 'catalog:'
@@ -3033,7 +3033,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/jwt-decoder-verifier:
     dependencies:
@@ -3063,7 +3063,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -3093,7 +3093,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -3120,7 +3120,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/rot-cipher:
     dependencies:
@@ -3144,7 +3144,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/unicode-escape-unescape:
     dependencies:
@@ -3168,7 +3168,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/url-component-encoder-decoder:
     dependencies:
@@ -3192,7 +3192,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -3219,7 +3219,7 @@ importers:
         version: 3.5.26(typescript@5.9.3)
       vue-i18n:
         specifier: 'catalog:'
-        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
@@ -4657,16 +4657,24 @@ packages:
       vue-i18n:
         optional: true
 
-  '@intlify/core-base@11.2.7':
-    resolution: {integrity: sha512-+Ra9I/LAzXDnmv/IrTO03WMCiLya7pHRmGJvNl9fKwx/W4REJ0xaMk2PxCRqnxcBsX443amEMdebQ3R1geiuIw==}
+  '@intlify/core-base@11.2.8':
+    resolution: {integrity: sha512-nBq6Y1tVkjIUsLsdOjDSJj4AsjvD0UG3zsg9Fyc+OivwlA/oMHSKooUy9tpKj0HqZ+NWFifweHavdljlBLTwdA==}
     engines: {node: '>= 16'}
 
   '@intlify/message-compiler@11.2.7':
     resolution: {integrity: sha512-TFamC+GzJAotAFwUNvbtRVBgvuSn2nCwKNresmPUHv3IIVMmXJt7QQJj/DORI1h8hs46ZF6L0Fs2xBohSOE4iQ==}
     engines: {node: '>= 16'}
 
+  '@intlify/message-compiler@11.2.8':
+    resolution: {integrity: sha512-A5n33doOjmHsBtCN421386cG1tWp5rpOjOYPNsnpjIJbQ4POF0QY2ezhZR9kr0boKwaHjbOifvyQvHj2UTrDFQ==}
+    engines: {node: '>= 16'}
+
   '@intlify/shared@11.2.7':
     resolution: {integrity: sha512-uvlkvc/0uQ4FDlHQZccpUnmcOwNcaI3i+69ck2YJ+GqM35AoVbuS63b+YfirV4G0SZh64Ij2UMcFRMmB4nr95w==}
+    engines: {node: '>= 16'}
+
+  '@intlify/shared@11.2.8':
+    resolution: {integrity: sha512-l6e4NZyUgv8VyXXH4DbuucFOBmxLF56C/mqh2tvApbzl2Hrhi1aTDcuv5TKdxzfHYmpO3UB0Cz04fgDT9vszfw==}
     engines: {node: '>= 16'}
 
   '@intlify/unplugin-vue-i18n@11.0.3':
@@ -8033,8 +8041,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  vue-i18n@11.2.7:
-    resolution: {integrity: sha512-LPv8bAY5OA0UvFEXl4vBQOBqJzRrlExy92tWgRuwW7tbykHf7CH71G2Y4TM2OwGcIS4+hyqKHS2EVBqaYwPY9Q==}
+  vue-i18n@11.2.8:
+    resolution: {integrity: sha512-vJ123v/PXCZntd6Qj5Jumy7UBmIuE92VrtdX+AXr+1WzdBHojiBxnAxdfctUFL+/JIN+VQH4BhsfTtiGsvVObg==}
     engines: {node: '>= 16'}
     peerDependencies:
       vue: ^3.0.0
@@ -9604,7 +9612,7 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@intlify/bundle-utils@11.0.3(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))':
+  '@intlify/bundle-utils@11.0.3(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))':
     dependencies:
       '@intlify/message-compiler': 11.2.7
       '@intlify/shared': 11.2.7
@@ -9616,26 +9624,33 @@ snapshots:
       source-map-js: 1.2.1
       yaml-eslint-parser: 1.3.2
     optionalDependencies:
-      vue-i18n: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-i18n: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
-  '@intlify/core-base@11.2.7':
+  '@intlify/core-base@11.2.8':
     dependencies:
-      '@intlify/message-compiler': 11.2.7
-      '@intlify/shared': 11.2.7
+      '@intlify/message-compiler': 11.2.8
+      '@intlify/shared': 11.2.8
 
   '@intlify/message-compiler@11.2.7':
     dependencies:
       '@intlify/shared': 11.2.7
       source-map-js: 1.2.1
 
+  '@intlify/message-compiler@11.2.8':
+    dependencies:
+      '@intlify/shared': 11.2.8
+      source-map-js: 1.2.1
+
   '@intlify/shared@11.2.7': {}
 
-  '@intlify/unplugin-vue-i18n@11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@2.79.2)(typescript@5.9.3)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
+  '@intlify/shared@11.2.8': {}
+
+  '@intlify/unplugin-vue-i18n@11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@2.79.2)(typescript@5.9.3)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.2(jiti@2.6.1))
-      '@intlify/bundle-utils': 11.0.3(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))
+      '@intlify/bundle-utils': 11.0.3(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))
       '@intlify/shared': 11.2.7
-      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@rollup/pluginutils': 5.3.0(rollup@2.79.2)
       '@typescript-eslint/scope-manager': 8.51.0
       '@typescript-eslint/typescript-estree': 8.51.0(typescript@5.9.3)
@@ -9646,7 +9661,7 @@ snapshots:
       unplugin: 2.3.11
       vue: 3.5.26(typescript@5.9.3)
     optionalDependencies:
-      vue-i18n: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-i18n: 11.2.8(vue@3.5.26(typescript@5.9.3))
     transitivePeerDependencies:
       - '@vue/compiler-dom'
       - eslint
@@ -9654,12 +9669,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@intlify/unplugin-vue-i18n@11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@4.54.0)(typescript@5.9.3)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
+  '@intlify/unplugin-vue-i18n@11.0.3(@vue/compiler-dom@3.5.26)(eslint@9.39.2(jiti@2.6.1))(rollup@4.54.0)(typescript@5.9.3)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.2(jiti@2.6.1))
-      '@intlify/bundle-utils': 11.0.3(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))
+      '@intlify/bundle-utils': 11.0.3(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))
       '@intlify/shared': 11.2.7
-      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@rollup/pluginutils': 5.3.0(rollup@4.54.0)
       '@typescript-eslint/scope-manager': 8.51.0
       '@typescript-eslint/typescript-estree': 8.51.0(typescript@5.9.3)
@@ -9670,7 +9685,7 @@ snapshots:
       unplugin: 2.3.11
       vue: 3.5.26(typescript@5.9.3)
     optionalDependencies:
-      vue-i18n: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-i18n: 11.2.8(vue@3.5.26(typescript@5.9.3))
     transitivePeerDependencies:
       - '@vue/compiler-dom'
       - eslint
@@ -9678,14 +9693,14 @@ snapshots:
       - supports-color
       - typescript
 
-  '@intlify/vue-i18n-extensions@8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
+  '@intlify/vue-i18n-extensions@8.0.0(@intlify/shared@11.2.7)(@vue/compiler-dom@3.5.26)(vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@babel/parser': 7.28.5
     optionalDependencies:
       '@intlify/shared': 11.2.7
       '@vue/compiler-dom': 3.5.26
       vue: 3.5.26(typescript@5.9.3)
-      vue-i18n: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-i18n: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -13184,10 +13199,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-i18n@11.2.7(vue@3.5.26(typescript@5.9.3)):
+  vue-i18n@11.2.8(vue@3.5.26(typescript@5.9.3)):
     dependencies:
-      '@intlify/core-base': 11.2.7
-      '@intlify/shared': 11.2.7
+      '@intlify/core-base': 11.2.8
+      '@intlify/shared': 11.2.8
       '@vue/devtools-api': 6.6.4
       vue: 3.5.26(typescript@5.9.3)
 
