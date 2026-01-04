@@ -59,44 +59,21 @@ tools/<domain>/<tool-slug>/
 ```
 
 Common optional dependencies to add when needed:
-- `"@vueuse/core": "catalog:"` - For useStorage, useClipboard, etc.
+- `"@vueuse/core": "catalog:"` - For useStorage (persist user input), etc.
 - Other npm packages as needed
 
 ### info.ts Template
 ```typescript
-export { IconName } from '@shared/icons/fluent'  // or carbon, tabler
+export { IconName as icon } from '@shared/icons/fluent'  // or carbon, tabler
 
 export const toolID = '<tool-slug>'
 export const path = '/tools/<tool-slug>'
 export const tags = ['tag1', 'tag2']
 export const features = ['offline']  // Add 'offline' if tool works without network
 
+// Start with 'en' only, then use i18n-translator agent to complete all 25 languages
 export const meta = {
   en: { name: 'Tool Name', description: 'Tool description' },
-  zh: { name: '工具名称', description: '工具描述' },
-  'zh-CN': { name: '工具名称', description: '工具描述' },
-  'zh-TW': { name: '工具名稱', description: '工具描述' },
-  'zh-HK': { name: '工具名稱', description: '工具描述' },
-  es: { name: '', description: '' },
-  fr: { name: '', description: '' },
-  de: { name: '', description: '' },
-  it: { name: '', description: '' },
-  ja: { name: '', description: '' },
-  ko: { name: '', description: '' },
-  ru: { name: '', description: '' },
-  pt: { name: '', description: '' },
-  ar: { name: '', description: '' },
-  hi: { name: '', description: '' },
-  tr: { name: '', description: '' },
-  nl: { name: '', description: '' },
-  sv: { name: '', description: '' },
-  pl: { name: '', description: '' },
-  vi: { name: '', description: '' },
-  th: { name: '', description: '' },
-  id: { name: '', description: '' },
-  he: { name: '', description: '' },
-  ms: { name: '', description: '' },
-  no: { name: '', description: '' },
 }
 ```
 
@@ -136,7 +113,7 @@ import ToolName from './components/<ToolName>.vue'
 ### components/<ToolName>.vue
 Create main component with:
 - Naive UI components (NInput, NButton, NGrid, NGi, NFlex, etc.)
-- i18n block with ALL 25 languages (same list as info.ts)
+- i18n block: start with `en` only, then use `i18n-translator` agent to complete all 25 languages
 - Use ToolSection from @shared/ui/tool for layout sections
 - Use CopyToClipboardButton from @shared/ui/base for copy functionality
 - Use useStorage from @vueuse/core for persisting user input
@@ -174,11 +151,10 @@ const input = useStorage('tools:<tool-slug>:input', '')
 
 <i18n lang="json">
 {
-  "en": { "label": "Label" },
-  "zh": { "label": "标签" },
-  ... // ALL 25 languages
+  "en": { "label": "Label" }
 }
 </i18n>
+<!-- Use i18n-translator agent to complete all 25 languages -->
 ```
 
 ## Registration Steps
@@ -199,13 +175,26 @@ After creating files:
 
 ## Verification Steps (Required)
 
-Run all checks and fix any issues:
+Run `/test` to execute all checks, or run manually:
 1. `pnpm lint` - Fix lint errors
 2. `pnpm format` - Format code
 3. `pnpm type-check` - Verify TypeScript
 4. `pnpm build` - Verify production build
 
 All checks must pass before the tool is complete.
+
+## Git Workflow
+
+The `main` branch is **protected**. If on `main`, create a new branch:
+```bash
+git checkout -b feat/<tool-slug>
+```
+
+If already on a branch other than `main`, commit directly to that branch.
+
+**Before committing, always run `/test` to ensure all checks pass.**
+
+Commit message format (English only): `feat(tools): add <tool-name> tool`
 
 ## Code Style
 - No semicolons (semi: false)

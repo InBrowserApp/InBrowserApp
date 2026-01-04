@@ -2,6 +2,28 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Claude Code Configuration
+
+This project has Claude Code skills and agents configured in `.claude/`:
+
+```
+.claude/
+├── commands/              # Custom slash commands (invoked with /<name>)
+│   ├── new-tool.md       # /new-tool - Create a new tool package
+│   └── test.md           # /test - Run all checks before committing
+└── agents/               # Specialized agents for Task tool
+    ├── i18n-translator.md  # Translation expert for 25 languages
+    └── test-runner.md      # Run all checks (independent context)
+```
+
+### Custom Slash Commands
+- `/new-tool <name>` - Interactive wizard to create a new tool with all required files
+- `/test` - Run lint, format, type-check, and build verification
+
+### Agents
+- `i18n-translator` - Automatically invoked for translation tasks. Handles all 25 languages for info.ts meta and Vue i18n blocks.
+- `test-runner` - Same as `/test` but runs in independent context. Use this when Claude needs to run checks automatically after completing a task.
+
 ## Build & Development Commands
 
 ```bash
@@ -17,6 +39,8 @@ pnpm test:unit        # Unit tests (vitest)
 pnpm test:e2e         # E2E tests (requires: pnpm exec playwright install)
 ```
 
+**Test file naming:** `*.dom.test.ts` - Place test files alongside the code they test.
+
 **Workspace commands:**
 ```bash
 pnpm -F <package-name> <command>           # Run in specific package
@@ -31,12 +55,16 @@ Vue 3 + TypeScript monorepo using pnpm workspaces. All tools run entirely client
 apps/web/              # Main Vue 3 + Vite application
 tools/                 # Tool packages with UI (organized by domain)
   ├── code/           # JSON, YAML, XML converters
+  ├── document/       # Text diff, markdown tools
   ├── hash/           # Hash generators (SHA, MD5, bcrypt, etc.)
   ├── image/          # QR code, barcode, PNG optimizer
+  ├── misc/           # Miscellaneous tools (lorem ipsum, etc.)
   ├── network/        # IP, CIDR, DNS tools
   ├── pdf/            # PDF processors
+  ├── random/         # Random generators
+  ├── time/           # Unix timestamp, date converters
   ├── uuid/           # UUID/ULID generators (nested sub-tools)
-  └── web/            # URL, JWT, Basic Auth tools
+  └── web/            # URL, JWT, Base64, cipher tools
 shared/                # Shared packages
   ├── icons/          # Re-exports from @vicons/* packages
   ├── locale/         # i18n languages configuration
@@ -136,6 +164,9 @@ import ToolContent from './components/ToolContent.vue'
 }
 ```
 
+**Common optional dependencies:**
+- `"@vueuse/core": "catalog:"` - For `useStorage` (persist user input), etc.
+
 ### Registration Steps
 1. Create tool package with structure above
 2. Run `pnpm -F @registry/tools add --workspace @tools/<tool-slug>`
@@ -178,7 +209,7 @@ const { t } = useI18n()
 **Requirements:**
 - JSON must be strictly valid (double quotes, no trailing commas)
 - All 25 languages must be provided in `info.ts` meta
-- Component `<i18n>` blocks need at minimum en and zh (others fallback)
+- Component `<i18n>` blocks require all 25 languages, but you can start with just `en` and use the `i18n-translator` agent to complete the rest
 - Handle spacing between CJK and Latin characters
 
 ## Code Style
@@ -223,6 +254,41 @@ tools/uuid/
 - **Invalid i18n JSON:** Must be strict JSON (double quotes, no comments)
 - **Wrong icon import:** Use `@shared/icons/<library>` not `@vicons/*` directly
 
+## Git Workflow
+
+The `main` branch is **protected**. If you're on `main`, create a new branch before committing:
+
+```bash
+git checkout -b feat/tool-name    # For new features
+git checkout -b fix/bug-name      # For bug fixes
+git checkout -b chore/task-name   # For maintenance
+```
+
+If already on a branch other than `main`, commit directly to that branch.
+
+**Before committing, always run `/test` to ensure all checks pass.**
+
+Branch naming: `<type>/<short-description>` (e.g., `feat/morse-code-tool`, `fix/i18n-typo`)
+
+PR titles must also follow Conventional Commits format (e.g., `feat(tools): add Morse Code tool`).
+
+**All commit messages and PR titles must be in English.**
+
 ## Commit Convention
 
-Use Conventional Commits: `feat(tools): add xxx tool`
+Use Conventional Commits in English: `feat(tools): add xxx tool`
+
+This repo uses **husky** + **commitlint** to enforce commit message format:
+- `feat(scope):` - New feature
+- `fix(scope):` - Bug fix
+- `chore(scope):` - Maintenance tasks
+- `test(scope):` - Adding tests
+- `docs(scope):` - Documentation changes
+
+Common scopes: `tools`, `ui`, `i18n`, `ci`, `deps`
+
+## Related Documentation
+
+- `AGENTS.md` - Concise guidelines for AI agents (GitHub Copilot, Codex, etc.)
+- `.github/copilot-instructions.md` - Detailed instructions for GitHub Copilot
+- `.github/workflows/ci.yml` - CI pipeline (lint, format, type-check, build, deploy)
