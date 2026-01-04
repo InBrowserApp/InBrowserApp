@@ -6,12 +6,12 @@ const fontModules = import.meta.glob<{ default: string }>(
 )
 
 // Extract font names from module paths
-export const fontNames = Object.keys(fontModules)
-  .map((path) => {
+export const fontNames: string[] = Object.keys(fontModules)
+  .map((path): string | undefined => {
     const match = path.match(/\/([^/]+)\.js$/)
-    return match ? match[1] : ''
+    return match ? match[1] : undefined
   })
-  .filter(Boolean)
+  .filter((name): name is string => Boolean(name))
   .sort()
 
 // Track loaded fonts
