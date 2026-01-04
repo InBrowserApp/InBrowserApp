@@ -227,7 +227,14 @@ const { t } = useI18n()
 **Components:**
 - Use Naive UI (`naive-ui`) for UI components
 - Import icons from `@shared/icons/<library>` (fluent, carbon, tabler, etc.)
-- Keep components small and focused; split into `components/` directory
+- **Split components following best practices:** Do NOT put all logic in a single file. Extract reusable pieces into `components/` directory. The main view (e.g., `ToolNameView.vue`) should only handle layout and import child components for actual functionality.
+- **Add "What is X?" section when appropriate:** For tools involving concepts that may need explanation (e.g., CIDR, URL encoding, Roman numerals), create a `WhatIsXxx.vue` component in `components/` to introduce the concept. Use `ToolSectionHeader` + `ToolSection` for simple text, or `DescriptionMarkdown` from `@shared/ui/base` for Markdown-formatted explanations.
+- **Support bidirectional reactive updates when applicable:** For converter/encoder/decoder tools, allow users to edit either input or output field, with the other updating automatically. This provides a better UX than one-way conversion (e.g., Base64 encoder should also decode when user edits the encoded output).
+- **Persist user input with `useStorage`:** Use `useStorage('tools:tool-name:key', defaultValue)` from `@vueuse/core` to persist user preferences and input across sessions.
+- **Always provide copy-to-clipboard for outputs:** Use `CopyToClipboardButton` from `@shared/ui/base` for all output fields. Users expect to easily copy results.
+- **Use `TextOrFileInput` for flexible input:** When a tool accepts text that could also come from a file, use `TextOrFileInput` from `@shared/ui/base` instead of plain textarea.
+- **Show validation status on inputs:** Use `n-input`'s `status` prop ('success' | 'error') to indicate validation state. Display error messages using `n-form-item-gi` with `#feedback` slot.
+- **Debounce expensive operations:** Use `computedAsync()` with `useDebounce()` from `@vueuse/core` for operations that are CPU-intensive or involve parsing. Typical debounce: 150ms.
 
 ## Nested Tool Groups
 
