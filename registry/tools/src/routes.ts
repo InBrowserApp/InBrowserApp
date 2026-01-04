@@ -70,6 +70,7 @@ import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/
 import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
 import { routes as htmlEntityEncoderDecoderRoutes } from '@tools/html-entity-encoder-decoder/routes'
 import { routes as chmodCalculatorRoutes } from '@tools/chmod-calculator/routes'
+import { routes as asciiArtGeneratorRoutes } from '@tools/ascii-art-generator/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -143,4 +144,5 @@ export const routes: ToolRoute[] = [
   ...rotCipherRoutes,
   ...htmlEntityEncoderDecoderRoutes,
   ...chmodCalculatorRoutes,
+  ...asciiArtGeneratorRoutes,
 ]
