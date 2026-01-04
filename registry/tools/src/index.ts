@@ -71,6 +71,7 @@ import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
 import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
 import { toolInfo as htmlEntityEncoderDecoderToolInfo } from '@tools/html-entity-encoder-decoder'
+import { toolInfo as chmodCalculatorToolInfo } from '@tools/chmod-calculator'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -171,4 +172,5 @@ export const tools: ToolInfo[] = [
   morseCodeConverterToolInfo,
   rotCipherToolInfo,
   htmlEntityEncoderDecoderToolInfo,
+  chmodCalculatorToolInfo,
 ]
