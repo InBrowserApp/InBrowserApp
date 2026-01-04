@@ -70,6 +70,7 @@ import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-conv
 import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
 import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
+import { toolInfo as htmlEntityEncoderDecoderToolInfo } from '@tools/html-entity-encoder-decoder'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -169,4 +170,5 @@ export const tools: ToolInfo[] = [
   // Misc Tools
   morseCodeConverterToolInfo,
   rotCipherToolInfo,
+  htmlEntityEncoderDecoderToolInfo,
 ]

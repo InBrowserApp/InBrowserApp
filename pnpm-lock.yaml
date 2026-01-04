@@ -564,6 +564,9 @@ importers:
       '@tools/hash-tools':
         specifier: workspace:*
         version: link:../../tools/hash/hash-tools
+      '@tools/html-entity-encoder-decoder':
+        specifier: workspace:*
+        version: link:../../tools/web/html-entity-encoder-decoder
       '@tools/html-to-markdown-converter':
         specifier: workspace:*
         version: link:../../tools/document/html-to-markdown-converter
@@ -2980,6 +2983,30 @@ importers:
       '@types/color-convert':
         specifier: 'catalog:'
         version: 2.0.4
+
+  tools/web/html-entity-encoder-decoder:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
 
   tools/web/jwt-decoder-verifier:
     dependencies:
