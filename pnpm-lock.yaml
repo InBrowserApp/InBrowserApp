@@ -225,6 +225,9 @@ catalogs:
     marked:
       specifier: ^17.0.1
       version: 17.0.1
+    mime-types:
+      specifier: ^3.0.2
+      version: 3.0.2
     monaco-editor:
       specifier: ^0.55.1
       version: 0.55.1
@@ -552,6 +555,9 @@ importers:
       '@tools/current-network-time':
         specifier: workspace:*
         version: link:../../tools/time/current-network-time
+      '@tools/data-uri-to-file-converter':
+        specifier: workspace:*
+        version: link:../../tools/web/data-uri-to-file-converter
       '@tools/device-information':
         specifier: workspace:*
         version: link:../../tools/misc/device-information
@@ -561,6 +567,9 @@ importers:
       '@tools/favicon-assets-generator':
         specifier: workspace:*
         version: link:../../tools/favicon/favicon-assets-generator
+      '@tools/file-to-data-uri-converter':
+        specifier: workspace:*
+        version: link:../../tools/web/file-to-data-uri-converter
       '@tools/hash-tools':
         specifier: workspace:*
         version: link:../../tools/hash/hash-tools
@@ -2983,6 +2992,57 @@ importers:
       '@types/color-convert':
         specifier: 'catalog:'
         version: 2.0.4
+
+  tools/web/data-uri-to-file-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      mime-types:
+        specifier: 'catalog:'
+        version: 3.0.2
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/web/file-to-data-uri-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.7(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
 
   tools/web/html-entity-encoder-decoder:
     dependencies:
@@ -6988,6 +7048,14 @@ packages:
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
+
+  mime-db@1.54.0:
+    resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@3.0.2:
+    resolution: {integrity: sha512-Lbgzdk0h4juoQ9fCKXW4by0UJqj+nOOrI9MJ1sSj4nI8aI2eo1qmvQEie4VD1glsS250n15LsWsYtCugiStS5A==}
+    engines: {node: '>=18'}
 
   mime@3.0.0:
     resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
@@ -12039,6 +12107,12 @@ snapshots:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
+
+  mime-db@1.54.0: {}
+
+  mime-types@3.0.2:
+    dependencies:
+      mime-db: 1.54.0
 
   mime@3.0.0: {}
 
