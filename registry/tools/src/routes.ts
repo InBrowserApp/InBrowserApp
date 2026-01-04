@@ -68,6 +68,7 @@ import { routes as numberBaseConverterRoutes } from '@tools/number-base-converte
 import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
 import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
 import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
+import { routes as htmlEntityEncoderDecoderRoutes } from '@tools/html-entity-encoder-decoder/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -139,4 +140,5 @@ export const routes: ToolRoute[] = [
   ...unicodeEscapeUnescapeRoutes,
   ...morseCodeConverterRoutes,
   ...rotCipherRoutes,
+  ...htmlEntityEncoderDecoderRoutes,
 ]

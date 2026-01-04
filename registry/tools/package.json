@@ -31,6 +31,7 @@
     "@tools/dns-lookup": "workspace:*",
     "@tools/favicon-assets-generator": "workspace:*",
     "@tools/hash-tools": "workspace:*",
+    "@tools/html-entity-encoder-decoder": "workspace:*",
     "@tools/html-to-markdown-converter": "workspace:*",
     "@tools/image-tools": "workspace:*",
     "@tools/ip-cidr-normalizer": "workspace:*",
