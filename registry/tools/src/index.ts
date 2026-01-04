@@ -72,6 +72,7 @@ import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-conver
 import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
 import { toolInfo as htmlEntityEncoderDecoderToolInfo } from '@tools/html-entity-encoder-decoder'
 import { toolInfo as chmodCalculatorToolInfo } from '@tools/chmod-calculator'
+import { toolInfo as asciiArtGeneratorToolInfo } from '@tools/ascii-art-generator'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -173,4 +174,7 @@ export const tools: ToolInfo[] = [
   rotCipherToolInfo,
   htmlEntityEncoderDecoderToolInfo,
   chmodCalculatorToolInfo,
+
+  // Text Tools
+  asciiArtGeneratorToolInfo,
 ]
