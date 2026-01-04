@@ -40,7 +40,7 @@ describe('AsciiOutput', () => {
 
     const html = wrapper.html()
     // ASCII art contains special characters like underscores, pipes, slashes
-    expect(html).toMatch(/[_|\\\/]/)
+    expect(html).toMatch(/[_|/\\]/)
   })
 
   it('shows copy button when output exists', async () => {
@@ -57,9 +57,7 @@ describe('AsciiOutput', () => {
     const wrapper = mount(withMessageProvider({ text: '', font: 'Standard' }))
     await flushPromises()
 
-    // No output means no copy button
-    const buttons = wrapper.findAll('button')
-    // May have 0 buttons or buttons without copy functionality
+    // No output means no ASCII art characters
     expect(wrapper.text()).not.toContain('_')
   })
 })

@@ -12,11 +12,10 @@ describe('FontSelector', () => {
   })
 
   it('renders all available fonts as options', () => {
-    const wrapper = mount(FontSelector, {
+    mount(FontSelector, {
       props: { modelValue: 'Standard' },
     })
 
-    const options = wrapper.findAll('.n-base-select-option')
     // Font options should match fontNames count
     expect(fontNames.length).toBeGreaterThan(0)
   })

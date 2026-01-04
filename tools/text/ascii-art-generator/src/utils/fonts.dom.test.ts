@@ -83,6 +83,6 @@ describe('figlet library integration', () => {
   it('Standard font produces recognizable ASCII art', async () => {
     const result = await generateAsciiArt('HI', 'Standard')
     // Standard font has specific patterns
-    expect(result).toMatch(/[_|\\\/]/)
+    expect(result).toMatch(/[_|/\\]/)
   })
 })
