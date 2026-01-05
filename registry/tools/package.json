@@ -59,6 +59,7 @@
     "@tools/number-base-converter": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/png-optimizer": "workspace:*",
+    "@tools/port-number-lookup": "workspace:*",
     "@tools/qr-code-generator": "workspace:*",
     "@tools/random-password-generator": "workspace:*",
     "@tools/redirects": "workspace:*",
