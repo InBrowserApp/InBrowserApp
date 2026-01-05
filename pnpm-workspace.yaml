@@ -105,7 +105,7 @@ catalog:
   vite-plugin-vue-devtools: ^8.0.5
   vitest: ^4.0.16
   vue: 3.5.26
-  vue-i18n: 11.2.7
+  vue-i18n: 11.2.8
   vue-router: ^4.6.4
   vue-tsc: ^3.2.1
   webrtc-ips: ^0.2.0
