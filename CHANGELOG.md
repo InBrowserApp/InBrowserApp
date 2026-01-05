@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.0.0...v1.1.0) (2026-01-05)
+
+
+### Features
+
+* **tools:** add ASCII Art Generator tool ([#92](https://github.com/InBrowserApp/InBrowserApp/issues/92)) ([1529425](https://github.com/InBrowserApp/InBrowserApp/commit/1529425047e17acb33cce62d2e938e9a376a7e8c))
+* **tools:** add Chmod Calculator tool ([#90](https://github.com/InBrowserApp/InBrowserApp/issues/90)) ([6a22227](https://github.com/InBrowserApp/InBrowserApp/commit/6a22227dff639c84de6a751f471273380b941c5c))
+* **tools:** add cron expression parser tool ([#78](https://github.com/InBrowserApp/InBrowserApp/issues/78)) ([42e4de5](https://github.com/InBrowserApp/InBrowserApp/commit/42e4de5e492a6413027f8cad157066bbf88382f0))
+* **tools:** add HTML Entity Encoder & Decoder tool ([#88](https://github.com/InBrowserApp/InBrowserApp/issues/88)) ([feab94b](https://github.com/InBrowserApp/InBrowserApp/commit/feab94b4269f9db7aed9f7b04bbcdcb8a07ae916))
+* **tools:** add Morse Code Converter tool ([#80](https://github.com/InBrowserApp/InBrowserApp/issues/80)) ([c3d77b6](https://github.com/InBrowserApp/InBrowserApp/commit/c3d77b6d50f42c4dae79b40cac44082380489db6))
+* **tools:** add ROT Cipher Encrypt & Decrypt tool ([#84](https://github.com/InBrowserApp/InBrowserApp/issues/84)) ([1a9c834](https://github.com/InBrowserApp/InBrowserApp/commit/1a9c834398dda432b47ca8f346ee2aee76925e70))
+* **tools:** add Unicode escape/unescape tool ([#75](https://github.com/InBrowserApp/InBrowserApp/issues/75)) ([4cac4de](https://github.com/InBrowserApp/InBrowserApp/commit/4cac4de2ee96bf23fe665f4b2eaf42621f5335b4))
+
 ## 1.0.0 (2025-12-30)
 
 
