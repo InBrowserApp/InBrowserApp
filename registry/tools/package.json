@@ -11,6 +11,8 @@
   "dependencies": {
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
+    "@tools/aes-decryptor": "workspace:*",
+    "@tools/aes-encryptor": "workspace:*",
     "@tools/ascii-art-generator": "workspace:*",
     "@tools/barcode-generator": "workspace:*",
     "@tools/base64-encoder-decoder": "workspace:*",
