@@ -83,6 +83,7 @@ catalog:
   jsdom: ^27.4.0
   lint-staged: ^16.2.7
   marked: ^17.0.1
+  mime-types: ^3.0.2
   monaco-editor: ^0.55.1
   naive-ui: ^2.43.2
   npm-run-all2: ^8.0.4
