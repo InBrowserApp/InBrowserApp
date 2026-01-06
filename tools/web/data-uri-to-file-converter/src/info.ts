@@ -1,15 +1,7 @@
 export const toolID = 'data-uri-to-file-converter'
 export { DocumentArrowDown20Regular as icon } from '@shared/icons/fluent'
 export const path = '/tools/data-uri-to-file-converter'
-export const tags = [
-  'data-uri',
-  'data-url',
-  'file',
-  'converter',
-  'base64',
-  'decoding',
-  'web',
-]
+export const tags = ['data-uri', 'data-url', 'file', 'converter', 'base64', 'decoding', 'web']
 export const features = ['offline']
 
 export const meta = {
@@ -121,8 +113,7 @@ export const meta = {
   },
   he: {
     name: 'ממיר Data URI לקובץ',
-    description:
-      'מפענח מחרוזות Data URI לקבצים, בודק סוג MIME וקידוד, ומוריד את התוצאה ללא חיבור.',
+    description: 'מפענח מחרוזות Data URI לקבצים, בודק סוג MIME וקידוד, ומוריד את התוצאה ללא חיבור.',
   },
   ms: {
     name: 'Penukar Data URI ke fail',
@@ -133,5 +124,5 @@ export const meta = {
     name: 'Data URI til fil-konverterer',
     description:
       'Dekoder Data URI-strenger til filer, kontrollerer MIME-type og koding og laster ned resultatet offline.',
-  }
+  },
 }

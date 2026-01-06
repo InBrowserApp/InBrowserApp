@@ -1,15 +1,7 @@
 export const toolID = 'file-to-data-uri-converter'
 export { DocumentArrowUp20Regular as icon } from '@shared/icons/fluent'
 export const path = '/tools/file-to-data-uri-converter'
-export const tags = [
-  'data-uri',
-  'data-url',
-  'file',
-  'converter',
-  'base64',
-  'encoding',
-  'web',
-]
+export const tags = ['data-uri', 'data-url', 'file', 'converter', 'base64', 'encoding', 'web']
 export const features = ['offline']
 
 export const meta = {
@@ -42,7 +34,7 @@ export const meta = {
   fr: {
     name: 'Convertisseur de fichier en Data URI',
     description:
-      "Convertit des fichiers en chaînes Data URI pour l’intégration dans HTML, CSS ou JSON. Fonctionne entièrement hors ligne.",
+      'Convertit des fichiers en chaînes Data URI pour l’intégration dans HTML, CSS ou JSON. Fonctionne entièrement hors ligne.',
   },
   de: {
     name: 'Datei-zu-Data-URI-Konverter',
@@ -111,8 +103,7 @@ export const meta = {
   },
   th: {
     name: 'ตัวแปลงไฟล์เป็น Data URI',
-    description:
-      'แปลงไฟล์เป็นสตริง Data URI เพื่อฝังใน HTML, CSS หรือ JSON ทำงานแบบออฟไลน์ทั้งหมด',
+    description: 'แปลงไฟล์เป็นสตริง Data URI เพื่อฝังใน HTML, CSS หรือ JSON ทำงานแบบออฟไลน์ทั้งหมด',
   },
   id: {
     name: 'Konverter file ke Data URI',
@@ -121,8 +112,7 @@ export const meta = {
   },
   he: {
     name: 'ממיר קובץ ל-Data URI',
-    description:
-      'ממיר קבצים למחרוזות Data URI לשילוב ב-HTML, CSS או JSON. עובד לחלוטין ללא חיבור.',
+    description: 'ממיר קבצים למחרוזות Data URI לשילוב ב-HTML, CSS או JSON. עובד לחלוטין ללא חיבור.',
   },
   ms: {
     name: 'Penukar fail ke Data URI',

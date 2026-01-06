@@ -16,5 +16,8 @@
     "vue": "catalog:",
     "vue-i18n": "catalog:",
     "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/mime-types": "^3.0.1"
   }
 }

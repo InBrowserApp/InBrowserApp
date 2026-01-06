@@ -245,7 +245,7 @@ function decodeData(parsedValue: ParsedDataUri) {
     ? base64ToBytes(parsedValue.data)
     : new TextEncoder().encode(decodeURIComponent(parsedValue.data))
 
-  const blob = new Blob([bytes], { type: parsedValue.mimeType })
+  const blob = new Blob([bytes.buffer as ArrayBuffer], { type: parsedValue.mimeType })
 
   let text = ''
   if (previewKind.value === 'text') {
@@ -269,7 +269,7 @@ function base64ToBytes(base64: string): Uint8Array {
 }
 
 function buildFileName(mimeType: string): string {
-  const baseMime = mimeType.split(';')[0]?.trim().toLowerCase()
+  const baseMime = mimeType.split(';')[0]?.trim().toLowerCase() ?? ''
   const ext = extensionForMime(baseMime)
   return ext ? `data.${ext}` : 'data.bin'
 }

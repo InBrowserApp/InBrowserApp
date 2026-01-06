@@ -43,12 +43,12 @@
       </ToolSection>
       <ToolSection>
         <n-card size="small">
-        <n-scrollbar v-if="dataUri" class="data-uri-output" style="max-height: 120px">
-          <n-code :code="dataUri" word-wrap />
-        </n-scrollbar>
-        <n-text v-else depth="3">{{ t('data-uri-placeholder') }}</n-text>
-      </n-card>
-    </ToolSection>
+          <n-scrollbar v-if="dataUri" class="data-uri-output" style="max-height: 120px">
+            <n-code :code="dataUri" word-wrap />
+          </n-scrollbar>
+          <n-text v-else depth="3">{{ t('data-uri-placeholder') }}</n-text>
+        </n-card>
+      </ToolSection>
     </template>
   </div>
 </template>
