@@ -64,7 +64,7 @@ catalog:
   crypto-js: ^4.2.0
   dompurify: ^3.3.1
   eslint: ^9.39.2
-  eslint-plugin-oxlint: ~1.36.0
+  eslint-plugin-oxlint: ~1.38.0
   eslint-plugin-playwright: ^2.4.0
   eslint-plugin-vue: ~10.6.2
   filesize: ^11.0.13

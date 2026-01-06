@@ -172,8 +172,8 @@ catalogs:
       specifier: ^9.39.2
       version: 9.39.2
     eslint-plugin-oxlint:
-      specifier: ~1.36.0
-      version: 1.36.0
+      specifier: ~1.38.0
+      version: 1.38.0
     eslint-plugin-playwright:
       specifier: ^2.4.0
       version: 2.4.0
@@ -379,7 +379,7 @@ importers:
         version: 9.39.2(jiti@2.6.1)
       eslint-plugin-oxlint:
         specifier: 'catalog:'
-        version: 1.36.0
+        version: 1.38.0
       eslint-plugin-playwright:
         specifier: 'catalog:'
         version: 2.4.0(eslint@9.39.2(jiti@2.6.1))
@@ -6398,8 +6398,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-oxlint@1.36.0:
-    resolution: {integrity: sha512-NHVOARsaEheGHcpRxrCRVSZcUFMndbMzOn6O7rT/U/ueYBbXGOZUZv/yL6oVSURDuu5Bxgl1YDhFy/9C6pemig==}
+  eslint-plugin-oxlint@1.38.0:
+    resolution: {integrity: sha512-4XZrtcAxwaH+fih8dSPPChkWaNh2+bf6H8LZpueXSt8eGSxxTefBvCt8iDqCEeT8JW24Ods3UJGhW1qUKdbbVw==}
 
   eslint-plugin-playwright@2.4.0:
     resolution: {integrity: sha512-MWNXfXlLfwXAjj4Z80PvCCFCXgCYy5OCHan57Z/beGrjkJ3maG1GanuGX8Ck6T6fagplBx2ZdkifxSfByftaTQ==}
@@ -11519,7 +11519,7 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
 
-  eslint-plugin-oxlint@1.36.0:
+  eslint-plugin-oxlint@1.38.0:
     dependencies:
       jsonc-parser: 3.3.1
 
