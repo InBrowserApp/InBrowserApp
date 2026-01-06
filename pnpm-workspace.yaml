@@ -64,7 +64,7 @@ catalog:
   crypto-js: ^4.2.0
   dompurify: ^3.3.1
   eslint: ^9.39.2
-  eslint-plugin-oxlint: ~1.36.0
+  eslint-plugin-oxlint: ~1.38.0
   eslint-plugin-playwright: ^2.4.0
   eslint-plugin-vue: ~10.6.2
   filesize: ^11.0.13
@@ -87,7 +87,7 @@ catalog:
   monaco-editor: ^0.55.1
   naive-ui: ^2.43.2
   npm-run-all2: ^8.0.4
-  oxlint: ~1.36.0
+  oxlint: ~1.38.0
   papaparse: ^5.5.3
   pinia: 3.0.4
   prettier: 3.7.4
