@@ -633,6 +633,9 @@ importers:
       '@tools/keccak-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/keccak-hash-text-or-file
+      '@tools/lorem-ipsum-generator':
+        specifier: workspace:*
+        version: link:../../tools/misc/lorem-ipsum-generator
       '@tools/mac-to-ipv6-link-local':
         specifier: workspace:*
         version: link:../../tools/network/mac-to-ipv6-link-local
@@ -2168,6 +2171,33 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/misc/lorem-ipsum-generator:
+    dependencies:
+      '@faker-js/faker':
+        specifier: ^9.3.0
+        version: 9.9.0
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/misc/morse-code-converter:
     dependencies:
@@ -4734,6 +4764,10 @@ packages:
     peerDependenciesMeta:
       '@exodus/crypto':
         optional: true
+
+  '@faker-js/faker@9.9.0':
+    resolution: {integrity: sha512-OEl393iCOoo/z8bMezRlJu+GlRGlsKbUAN7jKB6LhnKoqKve5DXRpalbItIIcwnCjs1k/FOPjFzcA6Qn+H+YbA==}
+    engines: {node: '>=18.0.0', npm: '>=9.0.0'}
 
   '@guolao/vue-monaco-editor@1.6.0':
     resolution: {integrity: sha512-w2IiJ6eJGGeuIgCK6EKZOAfhHTTUB5aZwslzwGbZ5e89Hb4avx6++GkLTW8p84Sng/arFMjLPPxSBI56cFudyQ==}
@@ -9761,6 +9795,8 @@ snapshots:
       levn: 0.4.1
 
   '@exodus/bytes@1.7.0': {}
+
+  '@faker-js/faker@9.9.0': {}
 
   '@guolao/vue-monaco-editor@1.6.0(monaco-editor@0.55.1)(vue@3.5.26(typescript@5.9.3))':
     dependencies:

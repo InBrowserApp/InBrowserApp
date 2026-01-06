@@ -79,6 +79,7 @@ import { toolInfo as aesEncryptorToolInfo } from '@tools/aes-encryptor'
 import { toolInfo as aesDecryptorToolInfo } from '@tools/aes-decryptor'
 import { toolInfo as portNumberLookupToolInfo } from '@tools/port-number-lookup'
 import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
+import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -183,6 +184,7 @@ export const tools: ToolInfo[] = [
   rotCipherToolInfo,
   htmlEntityEncoderDecoderToolInfo,
   chmodCalculatorToolInfo,
+  loremIpsumGeneratorToolInfo,
 
   // Text Tools
   asciiArtGeneratorToolInfo,
