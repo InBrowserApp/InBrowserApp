@@ -78,6 +78,7 @@ import { toolInfo as asciiArtGeneratorToolInfo } from '@tools/ascii-art-generato
 import { toolInfo as aesEncryptorToolInfo } from '@tools/aes-encryptor'
 import { toolInfo as aesDecryptorToolInfo } from '@tools/aes-decryptor'
 import { toolInfo as portNumberLookupToolInfo } from '@tools/port-number-lookup'
+import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -185,6 +186,7 @@ export const tools: ToolInfo[] = [
 
   // Text Tools
   asciiArtGeneratorToolInfo,
+  textStatisticsToolInfo,
 
   // Encryption Tools
   aesEncryptorToolInfo,
