@@ -6,7 +6,7 @@ export async function generateFaviconSVG(
 ): Promise<Blob> {
   // TODO: svgo will break css media queries
   // https://github.com/svg/svgo/issues/1834
-  const svgo = import('svgo')
+  const svgo = import('svgo/browser')
 
   const image = options?.image ?? blob
   if (image === undefined) {
