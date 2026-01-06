@@ -17,7 +17,7 @@ Run all checks and tests before committing.
 
 3. **Type check**: Run `pnpm run type-check`
 
-4. **Unit tests**: Run `pnpm run test:unit --run --silent --passed --changed HEAD~1`
+4. **Unit tests**: Run `pnpm run test:unit --run --silent passed-only --changed HEAD~1`
 
 5. **Build**: Run `pnpm run build` to verify the build works
 
