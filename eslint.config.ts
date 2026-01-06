@@ -21,6 +21,16 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
+  {
+    rules: {
+      'vue/no-undef-components': [
+        'error',
+        {
+          ignorePatterns: ['router-link', 'router-view', 'i18n-t'],
+        },
+      ],
+    },
+  },
 
   {
     ...pluginVitest.configs.recommended,

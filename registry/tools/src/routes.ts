@@ -71,6 +71,11 @@ import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-une
 import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
 import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
 import { routes as htmlEntityEncoderDecoderRoutes } from '@tools/html-entity-encoder-decoder/routes'
+import { routes as chmodCalculatorRoutes } from '@tools/chmod-calculator/routes'
+import { routes as asciiArtGeneratorRoutes } from '@tools/ascii-art-generator/routes'
+import { routes as aesEncryptorRoutes } from '@tools/aes-encryptor/routes'
+import { routes as aesDecryptorRoutes } from '@tools/aes-decryptor/routes'
+import { routes as portNumberLookupRoutes } from '@tools/port-number-lookup/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -145,4 +150,9 @@ export const routes: ToolRoute[] = [
   ...morseCodeConverterRoutes,
   ...rotCipherRoutes,
   ...htmlEntityEncoderDecoderRoutes,
+  ...chmodCalculatorRoutes,
+  ...asciiArtGeneratorRoutes,
+  ...aesEncryptorRoutes,
+  ...aesDecryptorRoutes,
+  ...portNumberLookupRoutes,
 ]

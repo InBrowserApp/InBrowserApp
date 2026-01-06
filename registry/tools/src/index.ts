@@ -73,6 +73,11 @@ import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
 import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
 import { toolInfo as htmlEntityEncoderDecoderToolInfo } from '@tools/html-entity-encoder-decoder'
+import { toolInfo as chmodCalculatorToolInfo } from '@tools/chmod-calculator'
+import { toolInfo as asciiArtGeneratorToolInfo } from '@tools/ascii-art-generator'
+import { toolInfo as aesEncryptorToolInfo } from '@tools/aes-encryptor'
+import { toolInfo as aesDecryptorToolInfo } from '@tools/aes-decryptor'
+import { toolInfo as portNumberLookupToolInfo } from '@tools/port-number-lookup'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -86,6 +91,7 @@ export const tools: ToolInfo[] = [
   ipv6ToMacToolInfo,
   macToIPv6LinkLocalToolInfo,
   myIPAddressToolInfo,
+  portNumberLookupToolInfo,
   reverseIPLookupToolInfo,
   networkToolsToolInfo,
   unicodePunycodeConverterToolInfo,
@@ -175,4 +181,12 @@ export const tools: ToolInfo[] = [
   morseCodeConverterToolInfo,
   rotCipherToolInfo,
   htmlEntityEncoderDecoderToolInfo,
+  chmodCalculatorToolInfo,
+
+  // Text Tools
+  asciiArtGeneratorToolInfo,
+
+  // Encryption Tools
+  aesEncryptorToolInfo,
+  aesDecryptorToolInfo,
 ]
