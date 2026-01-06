@@ -51,6 +51,9 @@ catalogs:
     '@types/jsdom':
       specifier: ^27.0.0
       version: 27.0.0
+    '@types/mime-db':
+      specifier: ^1.43.6
+      version: 1.43.6
     '@types/node':
       specifier: ^25.0.3
       version: 25.0.3
@@ -228,6 +231,9 @@ catalogs:
     marked:
       specifier: ^17.0.1
       version: 17.0.1
+    mime-db:
+      specifier: ^1.54.0
+      version: 1.54.0
     mime-types:
       specifier: ^3.0.2
       version: 3.0.2
@@ -648,6 +654,9 @@ importers:
       '@tools/md5-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/md5-hash-text-or-file
+      '@tools/mime-type-lookup':
+        specifier: workspace:*
+        version: link:../../tools/network/mime-type-lookup
       '@tools/morse-code-converter':
         specifier: workspace:*
         version: link:../../tools/misc/morse-code-converter
@@ -2585,6 +2594,37 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/network/mime-type-lookup:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      mime-db:
+        specifier: 'catalog:'
+        version: 1.54.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+    devDependencies:
+      '@types/mime-db':
+        specifier: 'catalog:'
+        version: 1.43.6
 
   tools/network/my-ip-address:
     dependencies:
@@ -5442,6 +5482,9 @@ packages:
 
   '@types/lodash@4.17.21':
     resolution: {integrity: sha512-FOvQ0YPD5NOfPgMzJihoT+Za5pdkDJWcbpuj1DjaKZIr/gxodQjY/uWEFlTNqW2ugXHUiL8lRQgw63dzKHZdeQ==}
+
+  '@types/mime-db@1.43.6':
+    resolution: {integrity: sha512-r2cqxAt/Eo5yWBOQie1lyM1JZFCiORa5xtLlhSZI0w8RJggBPKw8c4g/fgQCzWydaDR5bL4imnmix2d1n52iBw==}
 
   '@types/mime-types@3.0.1':
     resolution: {integrity: sha512-xRMsfuQbnRq1Ef+C+RKaENOxXX87Ygl38W1vDfPHRku02TgQr+Qd8iivLtAMcR0KF5/29xlnFihkTlbqFrGOVQ==}
@@ -10371,6 +10414,8 @@ snapshots:
       '@types/lodash': 4.17.21
 
   '@types/lodash@4.17.21': {}
+
+  '@types/mime-db@1.43.6': {}
 
   '@types/mime-types@3.0.1': {}
 
