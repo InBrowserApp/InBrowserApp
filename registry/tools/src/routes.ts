@@ -76,6 +76,7 @@ import { routes as asciiArtGeneratorRoutes } from '@tools/ascii-art-generator/ro
 import { routes as aesEncryptorRoutes } from '@tools/aes-encryptor/routes'
 import { routes as aesDecryptorRoutes } from '@tools/aes-decryptor/routes'
 import { routes as portNumberLookupRoutes } from '@tools/port-number-lookup/routes'
+import { routes as httpStatusCodeLookupRoutes } from '@tools/http-status-code-lookup/routes'
 import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 
@@ -157,6 +158,7 @@ export const routes: ToolRoute[] = [
   ...aesEncryptorRoutes,
   ...aesDecryptorRoutes,
   ...portNumberLookupRoutes,
+  ...httpStatusCodeLookupRoutes,
   ...textStatisticsRoutes,
   ...loremIpsumGeneratorRoutes,
 ]
