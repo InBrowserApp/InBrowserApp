@@ -11,13 +11,10 @@
     "@shared/icons": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
-    "mime-types": "catalog:",
+    "mime": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:",
     "vue-router": "catalog:"
-  },
-  "devDependencies": {
-    "@types/mime-types": "^3.0.1"
   }
 }
