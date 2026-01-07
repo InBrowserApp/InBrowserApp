@@ -143,7 +143,7 @@ import {
   JetBrainsIcon,
   OpenJdkIcon,
 } from '@shared/icons/simple-icons'
-import { LogoWindows as WindowsIcon } from '@vicons/ionicons5'
+import { LogoWindows as WindowsIcon } from '@shared/icons/ionicons5'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { templates, getTemplatesByCategory, popularTemplates } from '../templates'
