@@ -1,8 +1,12 @@
 <template>
   <div>
-    <slot name="title" :t="t">
-      <ToolTitle>{{ t('name') }}</ToolTitle>
-    </slot>
+    <n-flex align="center" justify="space-between" :wrap="false">
+      <slot name="title" :t="t">
+        <ToolTitle style="margin: 0">{{ t('name') }}</ToolTitle>
+      </slot>
+
+      <ToolReportIssueButton />
+    </n-flex>
 
     <AirplaneModeEnabledAlert v-if="!info.features.includes('offline')" />
 
@@ -26,6 +30,8 @@ import ToolDescription from './ToolDescription.vue'
 import type { ToolInfo } from '@shared/tools'
 import { useHead } from '@unhead/vue'
 import AirplaneModeEnabledAlert from '../airplane/AirplaneModeEnabledAlert.vue'
+import { NFlex } from 'naive-ui'
+import ToolReportIssueButton from './ToolReportIssueButton.vue'
 
 const props = defineProps<{
   info: Pick<ToolInfo, 'meta' | 'toolID' | 'tags' | 'features'>
