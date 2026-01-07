@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.2.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.1.0...v1.2.0) (2026-01-07)
+
+
+### Features
+
+* **agents:** add pr-checks-watcher agent ([#103](https://github.com/InBrowserApp/InBrowserApp/issues/103)) ([59231b5](https://github.com/InBrowserApp/InBrowserApp/commit/59231b5b9511382a5986f6622670f574457c2a8f))
+* **agents:** add test-writer agent with project testing patterns ([#102](https://github.com/InBrowserApp/InBrowserApp/issues/102)) ([436bb80](https://github.com/InBrowserApp/InBrowserApp/commit/436bb80e86e7d29a032dabb736d5e5c4de0578ac))
+* **common:** add bug report button in tool default page layout ([#120](https://github.com/InBrowserApp/InBrowserApp/issues/120)) ([681064f](https://github.com/InBrowserApp/InBrowserApp/commit/681064f5de807e3c65bbacb10aedd17cddccbe0f))
+* **tools:** add .gitignore Generator tool ([#119](https://github.com/InBrowserApp/InBrowserApp/issues/119)) ([7a8486c](https://github.com/InBrowserApp/InBrowserApp/commit/7a8486c7d136acfe7e42e9a15ed030257ed2b7a3))
+* **tools:** add AES Encryptor and Decryptor tools ([#97](https://github.com/InBrowserApp/InBrowserApp/issues/97)) ([adef207](https://github.com/InBrowserApp/InBrowserApp/commit/adef207f0855263c22824ed57c2f012028184a51))
+* **tools:** add Credit Card Validator tool ([#113](https://github.com/InBrowserApp/InBrowserApp/issues/113)) ([99869e4](https://github.com/InBrowserApp/InBrowserApp/commit/99869e46259a5706c0d12740521023a4cdfb06a8))
+* **tools:** add Cron Expression Generator tool ([#112](https://github.com/InBrowserApp/InBrowserApp/issues/112)) ([ceda9f4](https://github.com/InBrowserApp/InBrowserApp/commit/ceda9f40aee32fdc21f7fccc883d06372bd82ed3))
+* **tools:** add Data URI converters ([#100](https://github.com/InBrowserApp/InBrowserApp/issues/100)) ([eb7bb05](https://github.com/InBrowserApp/InBrowserApp/commit/eb7bb058e37b31565269d42ac68cf3725fa31541))
+* **tools:** add EXIF Viewer tool ([#116](https://github.com/InBrowserApp/InBrowserApp/issues/116)) ([fe7d9d5](https://github.com/InBrowserApp/InBrowserApp/commit/fe7d9d5bc7f3f69c4414628b32674f4bd884d20a))
+* **tools:** add HTTP Status Code Lookup tool ([#105](https://github.com/InBrowserApp/InBrowserApp/issues/105)) ([c04fa23](https://github.com/InBrowserApp/InBrowserApp/commit/c04fa23b41b076f31857183aaa2bc3aa069532a7))
+* **tools:** add Lorem Ipsum Generator tool ([#104](https://github.com/InBrowserApp/InBrowserApp/issues/104)) ([a5719bd](https://github.com/InBrowserApp/InBrowserApp/commit/a5719bd3ba6661e0e90d8d93f1dfbe9649182e4b))
+* **tools:** add MIME Type Lookup tool ([#110](https://github.com/InBrowserApp/InBrowserApp/issues/110)) ([ba38faa](https://github.com/InBrowserApp/InBrowserApp/commit/ba38faab7dd2600602d1e0276697e0ec9cdcbbc6))
+* **tools:** add Placeholder Image Generator tool ([#115](https://github.com/InBrowserApp/InBrowserApp/issues/115)) ([833b217](https://github.com/InBrowserApp/InBrowserApp/commit/833b217cb6cb034f9b2763b61a1f411e8ee710b1))
+* **tools:** add port number lookup tool ([#99](https://github.com/InBrowserApp/InBrowserApp/issues/99)) ([313637d](https://github.com/InBrowserApp/InBrowserApp/commit/313637d9e6558218d16ac633e45b24c9642ce7e9))
+* **tools:** add slug generator tool ([#118](https://github.com/InBrowserApp/InBrowserApp/issues/118)) ([8c47ade](https://github.com/InBrowserApp/InBrowserApp/commit/8c47adef5290fbec30d833f6158db6f67bdc75cb))
+* **tools:** add Text Statistics tool ([#101](https://github.com/InBrowserApp/InBrowserApp/issues/101)) ([c9b9937](https://github.com/InBrowserApp/InBrowserApp/commit/c9b9937216fa56fa35152fd35e96cc18035ece12))
+
+
+### Bug Fixes
+
+* **agents:** handle blocking situations in pr-checks-watcher ([#117](https://github.com/InBrowserApp/InBrowserApp/issues/117)) ([c1d9122](https://github.com/InBrowserApp/InBrowserApp/commit/c1d9122c9b97b37296d122960b4aa35862b429e5))
+* **deps:** replace mime-types with mime for browser compatibility ([#114](https://github.com/InBrowserApp/InBrowserApp/issues/114)) ([7cf62fb](https://github.com/InBrowserApp/InBrowserApp/commit/7cf62fb904e470b5b0c9124b3806c26abebf7693))
+* **favicon:** use svgo/browser to fix Vite build warnings ([#111](https://github.com/InBrowserApp/InBrowserApp/issues/111)) ([261dae7](https://github.com/InBrowserApp/InBrowserApp/commit/261dae73dac1f41e6669e7cd9a2775cd47acd9b8))
+
 ## [1.1.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.0.0...v1.1.0) (2026-01-05)
 
 
