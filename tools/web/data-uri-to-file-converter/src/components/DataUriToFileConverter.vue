@@ -97,7 +97,7 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { ArrowDownload16Regular } from '@shared/icons/fluent'
-import { extension as mimeExtension } from 'mime-types'
+import mime from 'mime'
 
 const { t } = useI18n()
 
@@ -278,8 +278,8 @@ function extensionForMime(mimeType: string): string | null {
   const normalized = mimeType.split(';')[0]?.trim().toLowerCase() ?? ''
   if (!normalized) return null
 
-  const inferred = mimeExtension(normalized)
-  if (typeof inferred === 'string' && inferred.trim() !== '') {
+  const inferred = mime.getExtension(normalized)
+  if (inferred) {
     return inferred
   }
 

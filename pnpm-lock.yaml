@@ -231,12 +231,12 @@ catalogs:
     marked:
       specifier: ^17.0.1
       version: 17.0.1
+    mime:
+      specifier: ^4.0.6
+      version: 4.1.0
     mime-db:
       specifier: ^1.54.0
       version: 1.54.0
-    mime-types:
-      specifier: ^3.0.2
-      version: 3.0.2
     monaco-editor:
       specifier: ^0.55.1
       version: 0.55.1
@@ -3312,9 +3312,9 @@ importers:
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
-      mime-types:
+      mime:
         specifier: 'catalog:'
-        version: 3.0.2
+        version: 4.1.0
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -3327,10 +3327,6 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
-    devDependencies:
-      '@types/mime-types':
-        specifier: ^3.0.1
-        version: 3.0.1
 
   tools/web/file-to-data-uri-converter:
     dependencies:
@@ -5519,9 +5515,6 @@ packages:
   '@types/mime-db@1.43.6':
     resolution: {integrity: sha512-r2cqxAt/Eo5yWBOQie1lyM1JZFCiORa5xtLlhSZI0w8RJggBPKw8c4g/fgQCzWydaDR5bL4imnmix2d1n52iBw==}
 
-  '@types/mime-types@3.0.1':
-    resolution: {integrity: sha512-xRMsfuQbnRq1Ef+C+RKaENOxXX87Ygl38W1vDfPHRku02TgQr+Qd8iivLtAMcR0KF5/29xlnFihkTlbqFrGOVQ==}
-
   '@types/node@20.19.27':
     resolution: {integrity: sha512-N2clP5pJhB2YnZJ3PIHFk5RkygRX5WO/5f0WC08tp0wd+sv0rsJk3MqWn3CbNmT2J505a5336jaQj4ph1AdMug==}
 
@@ -7400,13 +7393,14 @@ packages:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
     engines: {node: '>= 0.6'}
 
-  mime-types@3.0.2:
-    resolution: {integrity: sha512-Lbgzdk0h4juoQ9fCKXW4by0UJqj+nOOrI9MJ1sSj4nI8aI2eo1qmvQEie4VD1glsS250n15LsWsYtCugiStS5A==}
-    engines: {node: '>=18'}
-
   mime@3.0.0:
     resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
     engines: {node: '>=10.0.0'}
+    hasBin: true
+
+  mime@4.1.0:
+    resolution: {integrity: sha512-X5ju04+cAzsojXKes0B/S4tcYtFAJ6tTMuSPBEn9CPGlrWr8Fiw7qYeLT0XyH80HSoAoqWCaz+MWKh22P7G1cw==}
+    engines: {node: '>=16'}
     hasBin: true
 
   mimic-function@5.0.1:
@@ -10450,8 +10444,6 @@ snapshots:
 
   '@types/mime-db@1.43.6': {}
 
-  '@types/mime-types@3.0.1': {}
-
   '@types/node@20.19.27':
     dependencies:
       undici-types: 6.21.0
@@ -12478,11 +12470,9 @@ snapshots:
 
   mime-db@1.54.0: {}
 
-  mime-types@3.0.2:
-    dependencies:
-      mime-db: 1.54.0
-
   mime@3.0.0: {}
+
+  mime@4.1.0: {}
 
   mimic-function@5.0.1: {}
 
