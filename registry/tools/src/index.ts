@@ -84,6 +84,7 @@ import { toolInfo as httpStatusCodeLookupToolInfo } from '@tools/http-status-cod
 import { toolInfo as mimeTypeLookupToolInfo } from '@tools/mime-type-lookup'
 import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
+import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 
@@ -196,6 +197,7 @@ export const tools: ToolInfo[] = [
   htmlEntityEncoderDecoderToolInfo,
   chmodCalculatorToolInfo,
   loremIpsumGeneratorToolInfo,
+  gitignoreGeneratorToolInfo,
 
   // Text Tools
   asciiArtGeneratorToolInfo,

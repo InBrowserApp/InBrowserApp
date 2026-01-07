@@ -603,6 +603,9 @@ importers:
       '@tools/file-to-data-uri-converter':
         specifier: workspace:*
         version: link:../../tools/web/file-to-data-uri-converter
+      '@tools/gitignore-generator':
+        specifier: workspace:*
+        version: link:../../tools/code/gitignore-generator
       '@tools/hash-tools':
         specifier: workspace:*
         version: link:../../tools/hash/hash-tools
@@ -947,6 +950,33 @@ importers:
       '@types/papaparse':
         specifier: 'catalog:'
         version: 5.5.2
+
+  tools/code/gitignore-generator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      gitignore:
+        specifier: github:github/gitignore
+        version: https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/code/json-formatter:
     dependencies:
@@ -6826,6 +6856,10 @@ packages:
     resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
     engines: {node: '>=10'}
 
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e:
+    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e}
+    version: 0.0.0
+
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -11965,6 +11999,8 @@ snapshots:
       split2: 4.2.0
 
   github-markdown-css@5.8.1: {}
+
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e: {}
 
   glob-parent@5.1.2:
     dependencies:

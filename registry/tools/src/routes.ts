@@ -82,6 +82,7 @@ import { routes as httpStatusCodeLookupRoutes } from '@tools/http-status-code-lo
 import { routes as mimeTypeLookupRoutes } from '@tools/mime-type-lookup/routes'
 import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
+import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 
@@ -169,6 +170,7 @@ export const routes: ToolRoute[] = [
   ...mimeTypeLookupRoutes,
   ...textStatisticsRoutes,
   ...loremIpsumGeneratorRoutes,
+  ...gitignoreGeneratorRoutes,
   ...creditCardValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
 ]
