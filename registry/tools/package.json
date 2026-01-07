@@ -35,6 +35,7 @@
     "@tools/data-uri-to-file-converter": "workspace:*",
     "@tools/device-information": "workspace:*",
     "@tools/dns-lookup": "workspace:*",
+    "@tools/exif-viewer": "workspace:*",
     "@tools/favicon-assets-generator": "workspace:*",
     "@tools/file-to-data-uri-converter": "workspace:*",
     "@tools/hash-tools": "workspace:*",
