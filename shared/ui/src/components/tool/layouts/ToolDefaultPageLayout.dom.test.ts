@@ -28,6 +28,16 @@ const createInfo = (
     ...overrides,
   }) as Pick<ToolInfo, 'meta' | 'toolID' | 'tags' | 'features'>
 
+const layoutStubs = {
+  NFlex: {
+    template: '<div class="n-flex"><slot /></div>',
+  },
+  ToolReportIssueButton: {
+    name: 'ToolReportIssueButton',
+    template: '<div class="report-issue-button" />',
+  },
+}
+
 describe('ToolDefaultPageLayout', () => {
   beforeEach(() => {
     useHeadSpy.mockClear()
@@ -40,6 +50,7 @@ describe('ToolDefaultPageLayout', () => {
       },
       global: {
         stubs: {
+          ...layoutStubs,
           ToolTitle: {
             template: '<h1 class="tool-title"><slot /></h1>',
           },
@@ -74,6 +85,7 @@ describe('ToolDefaultPageLayout', () => {
       },
       global: {
         stubs: {
+          ...layoutStubs,
           AirplaneModeEnabledAlert: {
             template: '<div class="airplane-alert" />',
           },
@@ -98,6 +110,7 @@ describe('ToolDefaultPageLayout', () => {
       },
       global: {
         stubs: {
+          ...layoutStubs,
           ToolTitle: {
             template: '<h1><slot /></h1>',
           },
