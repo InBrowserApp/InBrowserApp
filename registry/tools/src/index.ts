@@ -86,6 +86,7 @@ import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
+import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -116,7 +117,6 @@ export const tools: ToolInfo[] = [
   exifViewerToolInfo,
   qrCodeGeneratorToolInfo,
   barcodeGeneratorToolInfo,
-  placeholderImageGeneratorToolInfo,
   markdownToHtmlConverterToolInfo,
   htmlToMarkdownConverterToolInfo,
   jsonToYamlBuilderToolInfo,
@@ -207,4 +207,10 @@ export const tools: ToolInfo[] = [
 
   // Validator Tools
   creditCardValidatorToolInfo,
+
+  // Web Tools (Slug)
+  slugGeneratorToolInfo,
+
+  // Image Tools (Placeholder)
+  placeholderImageGeneratorToolInfo,
 ]

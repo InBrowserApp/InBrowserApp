@@ -84,6 +84,7 @@ import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
+import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -171,4 +172,5 @@ export const routes: ToolRoute[] = [
   ...loremIpsumGeneratorRoutes,
   ...creditCardValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
+  ...slugGeneratorRoutes,
 ]

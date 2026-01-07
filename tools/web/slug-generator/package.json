@@ -1,0 +1,20 @@
+{
+  "name": "@tools/slug-generator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/icons": "workspace:*",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "transliteration": "^2.6.0",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:"
+  }
+}
