@@ -12,9 +12,10 @@ This project has Claude Code skills and agents configured in `.claude/`:
 │   ├── new-tool.md       # /new-tool - Create a new tool package
 │   └── test.md           # /test - Run all checks before committing
 └── agents/               # Specialized agents for Task tool
-    ├── i18n-translator.md    # Translation expert for 25 languages
-    ├── pr-checks-watcher.md  # Wait for PR checks to complete
-    └── test-runner.md        # Run all checks (independent context)
+    ├── i18n-translator.md    # MUST BE USED - Translation expert for 25 languages
+    ├── pr-checks-watcher.md  # PROACTIVELY - Wait for PR checks to complete
+    ├── test-runner.md        # MUST BE USED - Run all checks before committing
+    └── test-writer.md        # PROACTIVELY - Create unit tests for new code
 ```
 
 ### Custom Slash Commands
@@ -22,9 +23,15 @@ This project has Claude Code skills and agents configured in `.claude/`:
 - `/test` - Run lint, format, type-check, and build verification
 
 ### Agents
-- `i18n-translator` - Automatically invoked for translation tasks. Handles all 25 languages for info.ts meta and Vue i18n blocks.
-- `pr-checks-watcher` - Wait for PR checks to complete after creating a PR. Reports final status with error summaries if checks fail.
-- `test-runner` - Same as `/test` but runs in independent context. Use this when Claude needs to run checks automatically after completing a task.
+
+**Automatic delegation:** Claude Code proactively delegates tasks based on the description field in agent configurations. Agents marked "MUST BE USED" are required for specific workflows; agents marked "use PROACTIVELY" should be automatically invoked when relevant.
+
+| Agent | Trigger | Description |
+|-------|---------|-------------|
+| `test-runner` | **MUST BE USED** after code changes | Run all checks (lint, format, type-check, build) before committing |
+| `i18n-translator` | **MUST BE USED** for new tools/i18n | Complete all 25 languages in info.ts meta and Vue `<i18n>` blocks |
+| `test-writer` | **Use PROACTIVELY** after new code | Create unit tests following project patterns (vitest, *.dom.test.ts) |
+| `pr-checks-watcher` | **Use PROACTIVELY** after PR creation | Wait for GitHub checks, report status with error summaries |
 
 ## Build & Development Commands
 

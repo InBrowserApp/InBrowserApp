@@ -1,6 +1,6 @@
 ---
 name: pr-checks-watcher
-description: Wait for PR checks to complete and report final status
+description: "Use PROACTIVELY after creating a PR. Wait for GitHub PR checks to complete, report final status with detailed error summaries if checks fail. Handles merge conflicts, timeouts, and provides actionable feedback."
 tools: Bash(gh:*, git:branch, git:rev-parse)
 model: haiku
 ---
