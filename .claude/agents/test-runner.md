@@ -1,6 +1,6 @@
 ---
 name: test-runner
-description: Run all checks and tests before committing (project)
+description: "MUST BE USED after completing any code changes. Run all checks (lint, format, type-check, build) before committing. This agent ensures code quality and catches issues early."
 tools: Bash(pnpm:*), Read
 model: haiku
 ---
