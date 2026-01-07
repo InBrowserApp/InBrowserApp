@@ -63,6 +63,7 @@ import { routes as deviceInformationRoutes } from '@tools/device-information/rou
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
+import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-generator/routes'
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
@@ -146,6 +147,7 @@ export const routes: ToolRoute[] = [
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,
   ...cronExpressionParserRoutes,
+  ...cronExpressionGeneratorRoutes,
   ...textDiffRoutes,
   ...colorConverterRoutes,
   ...caseConverterRoutes,

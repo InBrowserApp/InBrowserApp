@@ -28,6 +28,7 @@
     "@tools/cidrs-merger-excluder": "workspace:*",
     "@tools/color-converter": "workspace:*",
     "@tools/crc-checksum-calculator": "workspace:*",
+    "@tools/cron-expression-generator": "workspace:*",
     "@tools/cron-expression-parser": "workspace:*",
     "@tools/csv-to-json-converter": "workspace:*",
     "@tools/current-network-time": "workspace:*",
