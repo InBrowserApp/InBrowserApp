@@ -315,6 +315,9 @@ catalogs:
     vue-tsc:
       specifier: ^3.2.1
       version: 3.2.1
+    vue3-simple-icons:
+      specifier: ^15.6.0
+      version: 15.6.0
     webrtc-ips:
       specifier: ^0.2.0
       version: 0.2.0
@@ -567,6 +570,9 @@ importers:
       '@tools/crc-checksum-calculator':
         specifier: workspace:*
         version: link:../../tools/hash/crc-checksum-calculator
+      '@tools/credit-card-validator':
+        specifier: workspace:*
+        version: link:../../tools/validator/credit-card-validator
       '@tools/cron-expression-generator':
         specifier: workspace:*
         version: link:../../tools/time/cron-expression-generator
@@ -798,6 +804,9 @@ importers:
       '@vicons/tabler':
         specifier: 'catalog:'
         version: 0.13.0
+      vue3-simple-icons:
+        specifier: 'catalog:'
+        version: 15.6.0(typescript@5.9.3)
 
   shared/locale:
     dependencies:
@@ -3107,6 +3116,30 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/validator/credit-card-validator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/aes-decryptor:
     dependencies:
@@ -8438,6 +8471,9 @@ packages:
     peerDependencies:
       typescript: '>=5.0.0'
 
+  vue3-simple-icons@15.6.0:
+    resolution: {integrity: sha512-e7FkRt5yY6wDmeBzOL7PQw/n5PIiYh5Xbk9f0aAVJpl1E1ddMRLLRjiD9tG8P2UTtCc0Yh48XN3tn0TdZAuL0w==}
+
   vue@3.5.26:
     resolution: {integrity: sha512-SJ/NTccVyAoNUJmkM9KUqPcYlY+u8OVL1X5EW9RIs3ch5H2uERxyyIUI4MRxVCSOiEcupX9xNGde1tL9ZKpimA==}
     peerDependencies:
@@ -13616,6 +13652,12 @@ snapshots:
       '@volar/typescript': 2.4.27
       '@vue/language-core': 3.2.1
       typescript: 5.9.3
+
+  vue3-simple-icons@15.6.0(typescript@5.9.3):
+    dependencies:
+      vue: 3.5.26(typescript@5.9.3)
+    transitivePeerDependencies:
+      - typescript
 
   vue@3.5.26(typescript@5.9.3):
     dependencies:

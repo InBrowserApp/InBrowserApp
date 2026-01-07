@@ -83,6 +83,7 @@ import { toolInfo as httpStatusCodeLookupToolInfo } from '@tools/http-status-cod
 import { toolInfo as mimeTypeLookupToolInfo } from '@tools/mime-type-lookup'
 import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
+import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -199,4 +200,7 @@ export const tools: ToolInfo[] = [
   // Encryption Tools
   aesEncryptorToolInfo,
   aesDecryptorToolInfo,
+
+  // Validator Tools
+  creditCardValidatorToolInfo,
 ]

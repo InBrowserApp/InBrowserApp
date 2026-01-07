@@ -11,6 +11,7 @@
     "./ionicons4": "./src/ionicons4.ts",
     "./ionicons5": "./src/ionicons5.ts",
     "./material": "./src/material.ts",
+    "./simple-icons": "./src/simple-icons.ts",
     "./tabler": "./src/tabler.ts"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@vicons/ionicons4": "catalog:",
     "@vicons/ionicons5": "catalog:",
     "@vicons/material": "catalog:",
-    "@vicons/tabler": "catalog:"
+    "@vicons/tabler": "catalog:",
+    "vue3-simple-icons": "catalog:"
   }
 }

@@ -81,6 +81,7 @@ import { routes as httpStatusCodeLookupRoutes } from '@tools/http-status-code-lo
 import { routes as mimeTypeLookupRoutes } from '@tools/mime-type-lookup/routes'
 import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
+import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -165,4 +166,5 @@ export const routes: ToolRoute[] = [
   ...mimeTypeLookupRoutes,
   ...textStatisticsRoutes,
   ...loremIpsumGeneratorRoutes,
+  ...creditCardValidatorRoutes,
 ]
