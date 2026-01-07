@@ -1,0 +1,155 @@
+<template>
+  <ToolSection>
+    <n-upload
+      :show-file-list="false"
+      accept="image/jpeg,image/png,image/heic,image/heif,image/tiff,image/webp,image/gif"
+      :max="1"
+      @before-upload="handleBeforeUpload"
+    >
+      <n-upload-dragger>
+        <div style="margin-bottom: 12px">
+          <n-icon size="48" :depth="3">
+            <ImageIcon />
+          </n-icon>
+        </div>
+        <n-text style="font-size: 16px">
+          {{ t('dragDropOrClick') }}
+        </n-text>
+        <n-p depth="3" style="margin: 8px 0 0 0">
+          {{ t('supportedFormats') }}
+        </n-p>
+      </n-upload-dragger>
+    </n-upload>
+  </ToolSection>
+</template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import type { UploadFileInfo } from 'naive-ui'
+import { NUpload, NUploadDragger, NIcon, NText, NP } from 'naive-ui'
+import { Image24Regular as ImageIcon } from '@shared/icons/fluent'
+import { ToolSection } from '@shared/ui/tool'
+
+defineProps<{
+  file: File | null
+}>()
+
+const emit = defineEmits<{
+  'update:file': [file: File | null]
+}>()
+
+const { t } = useI18n()
+
+function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
+  const file = data.file.file
+  if (!file) return false
+
+  emit('update:file', file)
+  return false
+}
+</script>
+
+<i18n lang="json">
+{
+  "en": {
+    "dragDropOrClick": "Click or drag image to upload",
+    "supportedFormats": "Supports JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "zh": {
+    "dragDropOrClick": "点击或拖拽图片上传",
+    "supportedFormats": "支持 JPEG、PNG、HEIC、TIFF、WebP、GIF"
+  },
+  "zh-CN": {
+    "dragDropOrClick": "点击或拖拽图片上传",
+    "supportedFormats": "支持 JPEG、PNG、HEIC、TIFF、WebP、GIF"
+  },
+  "zh-TW": {
+    "dragDropOrClick": "點擊或拖曳圖片上傳",
+    "supportedFormats": "支援 JPEG、PNG、HEIC、TIFF、WebP、GIF"
+  },
+  "zh-HK": {
+    "dragDropOrClick": "點擊或拖曳圖片上傳",
+    "supportedFormats": "支援 JPEG、PNG、HEIC、TIFF、WebP、GIF"
+  },
+  "es": {
+    "dragDropOrClick": "Haga clic o arrastre la imagen para cargar",
+    "supportedFormats": "Soporta JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "fr": {
+    "dragDropOrClick": "Cliquez ou déposez l'image pour télécharger",
+    "supportedFormats": "Prend en charge JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "de": {
+    "dragDropOrClick": "Klicken oder Bild hierher ziehen",
+    "supportedFormats": "Unterstützt JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "it": {
+    "dragDropOrClick": "Clicca o trascina l'immagine per caricarla",
+    "supportedFormats": "Supporta JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "ja": {
+    "dragDropOrClick": "クリックまたは画像をドラッグしてアップロード",
+    "supportedFormats": "JPEG、PNG、HEIC、TIFF、WebP、GIF をサポート"
+  },
+  "ko": {
+    "dragDropOrClick": "클릭하거나 이미지를 드래그하여 업로드",
+    "supportedFormats": "JPEG, PNG, HEIC, TIFF, WebP, GIF 지원"
+  },
+  "ru": {
+    "dragDropOrClick": "Нажмите или перетащите изображение для загрузки",
+    "supportedFormats": "Поддерживает JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "pt": {
+    "dragDropOrClick": "Clique ou arraste a imagem para fazer upload",
+    "supportedFormats": "Suporta JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "ar": {
+    "dragDropOrClick": "انقر أو اسحب الصورة للتحميل",
+    "supportedFormats": "يدعم JPEG، PNG، HEIC، TIFF، WebP، GIF"
+  },
+  "hi": {
+    "dragDropOrClick": "अपलोड करने के लिए क्लिक करें या छवि खींचें",
+    "supportedFormats": "JPEG, PNG, HEIC, TIFF, WebP, GIF समर्थित"
+  },
+  "tr": {
+    "dragDropOrClick": "Yüklemek için tıklayın veya görüntüyü sürükleyin",
+    "supportedFormats": "JPEG, PNG, HEIC, TIFF, WebP, GIF desteklenir"
+  },
+  "nl": {
+    "dragDropOrClick": "Klik of sleep afbeelding om te uploaden",
+    "supportedFormats": "Ondersteunt JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "sv": {
+    "dragDropOrClick": "Klicka eller dra bild för att ladda upp",
+    "supportedFormats": "Stöder JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "pl": {
+    "dragDropOrClick": "Kliknij lub przeciągnij obraz, aby przesłać",
+    "supportedFormats": "Obsługuje JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "vi": {
+    "dragDropOrClick": "Nhấp hoặc kéo hình ảnh để tải lên",
+    "supportedFormats": "Hỗ trợ JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "th": {
+    "dragDropOrClick": "คลิกหรือลากภาพเพื่ออัปโหลด",
+    "supportedFormats": "รองรับ JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "id": {
+    "dragDropOrClick": "Klik atau seret gambar untuk mengunggah",
+    "supportedFormats": "Mendukung JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "he": {
+    "dragDropOrClick": "לחץ או גרור תמונה להעלאה",
+    "supportedFormats": "תומך ב-JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "ms": {
+    "dragDropOrClick": "Klik atau seret imej untuk muat naik",
+    "supportedFormats": "Menyokong JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  },
+  "no": {
+    "dragDropOrClick": "Klikk eller dra bilde for å laste opp",
+    "supportedFormats": "Støtter JPEG, PNG, HEIC, TIFF, WebP, GIF"
+  }
+}
+</i18n>
