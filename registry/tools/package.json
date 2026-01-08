@@ -84,6 +84,7 @@
     "@tools/sha512-hash-text-or-file": "workspace:*",
     "@tools/slug-generator": "workspace:*",
     "@tools/sri-hash-generator": "workspace:*",
+    "@tools/ssh-key-generator": "workspace:*",
     "@tools/text-diff": "workspace:*",
     "@tools/text-statistics": "workspace:*",
     "@tools/toml-to-json-converter": "workspace:*",
