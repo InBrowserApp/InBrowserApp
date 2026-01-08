@@ -85,6 +85,7 @@ import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generato
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
+import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -173,4 +174,5 @@ export const routes: ToolRoute[] = [
   ...creditCardValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
   ...slugGeneratorRoutes,
+  ...sshKeyGeneratorRoutes,
 ]

@@ -735,6 +735,9 @@ importers:
       '@tools/sri-hash-generator':
         specifier: workspace:*
         version: link:../../tools/hash/sri-hash-generator
+      '@tools/ssh-key-generator':
+        specifier: workspace:*
+        version: link:../../tools/network/ssh-key-generator
       '@tools/text-diff':
         specifier: workspace:*
         version: link:../../tools/document/text-diff
@@ -2817,6 +2820,33 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/network/ssh-key-generator:
+    dependencies:
+      '@noble/ed25519':
+        specifier: ^2.2.3
+        version: 2.3.0
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/network/unicode-punycode-converter:
     dependencies:
@@ -5225,6 +5255,9 @@ packages:
 
   '@napi-rs/wasm-runtime@1.1.0':
     resolution: {integrity: sha512-Fq6DJW+Bb5jaWE69/qOE0D1TUN9+6uWhCeZpdnSBk14pjLcCWR7Q8n49PTSPHazM37JqrsdpEthXy2xn6jWWiA==}
+
+  '@noble/ed25519@2.3.0':
+    resolution: {integrity: sha512-M7dvXL2B92/M7dw9+gzuydL8qn/jiqNHaoR3Q+cb1q1GHV7uwE17WCyFMG+Y+TZb5izcaXk5TdJRrDUxHXL78A==}
 
   '@noble/hashes@1.8.0':
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
@@ -10270,6 +10303,8 @@ snapshots:
       '@emnapi/runtime': 1.7.1
       '@tybys/wasm-util': 0.10.1
     optional: true
+
+  '@noble/ed25519@2.3.0': {}
 
   '@noble/hashes@1.8.0': {}
 
