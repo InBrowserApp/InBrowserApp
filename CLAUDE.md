@@ -15,7 +15,8 @@ This project has Claude Code skills and agents configured in `.claude/`:
     ├── i18n-translator.md    # MUST BE USED - Translation expert for 25 languages
     ├── pr-checks-watcher.md  # PROACTIVELY - Wait for PR checks to complete
     ├── test-runner.md        # MUST BE USED - Run all checks before committing
-    └── test-writer.md        # PROACTIVELY - Create unit tests for new code
+    ├── test-writer.md        # PROACTIVELY - Create unit tests for new code
+    └── tool-lister.md        # List all tools in the registry
 ```
 
 ### Custom Slash Commands
@@ -32,6 +33,7 @@ This project has Claude Code skills and agents configured in `.claude/`:
 | `i18n-translator` | **MUST BE USED** for new tools/i18n | Complete all 25 languages in info.ts meta and Vue `<i18n>` blocks |
 | `test-writer` | **Use PROACTIVELY** after new code | Create unit tests following project patterns (vitest, *.dom.test.ts) |
 | `pr-checks-watcher` | **Use PROACTIVELY** after PR creation | Wait for GitHub checks, report status with error summaries |
+| `tool-lister` | On request | List all available tools in the registry |
 
 ## Build & Development Commands
 
