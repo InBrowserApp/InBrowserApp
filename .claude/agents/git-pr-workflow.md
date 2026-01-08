@@ -17,7 +17,7 @@ The main agent must provide:
 ## Workflow Overview
 
 ```
-Check branch → Pre-checks → Sync main → Commit → Push → Create PR → Wait for checks → Wait for merge → Cleanup
+Check branch → Pre-checks → Sync main → Commit → Push → Create PR (auto-merge) → Wait for checks → Wait for auto-merge → Cleanup
 ```
 
 ## Steps
@@ -100,6 +100,14 @@ gh pr create --title "<commit_message>" --body "<commit_body>"
 
 Return the PR URL to user.
 
+**Enable auto-merge:**
+
+```bash
+gh pr merge --auto --squash
+```
+
+This enables auto-merge so the PR will automatically merge when all checks pass.
+
 ### 6. Wait for PR Checks
 
 Follow the flow in `.claude/agents/pr-checks-watcher.md`:
@@ -130,16 +138,16 @@ gh pr checks --watch --fail-fast
 2. Summarize errors with file paths and line numbers
 3. Suggest fixes
 
-### 7. Wait for Merge and Cleanup
+### 7. Wait for Auto-Merge and Cleanup
 
-After checks pass, wait for PR to be merged, then cleanup:
+With auto-merge enabled, the PR will automatically merge when all checks pass. Wait for merge to complete:
 
 ```bash
 # Poll until merged (check every 30 seconds, max 10 minutes)
 gh pr view --json state,mergedAt
 ```
 
-**Once merged, cleanup:**
+**Once auto-merged, cleanup:**
 
 ```bash
 # Switch to main and pull
@@ -165,13 +173,14 @@ git worktree list
 
 ## Error Handling
 
-| Error           | Action                             |
-| --------------- | ---------------------------------- |
-| Checks fail     | Stop, report errors, suggest fixes |
-| Merge conflicts | Help resolve or ask user           |
-| Push rejected   | Pull --rebase, then push           |
-| PR exists       | Report existing PR URL             |
-| Auth error      | Suggest `gh auth login`            |
+| Error             | Action                                          |
+| ----------------- | ----------------------------------------------- |
+| Checks fail       | Stop, report errors, suggest fixes              |
+| Merge conflicts   | Help resolve or ask user                        |
+| Push rejected     | Pull --rebase, then push                        |
+| PR exists         | Report existing PR URL                          |
+| Auth error        | Suggest `gh auth login`                         |
+| Auto-merge denied | Repo may not allow auto-merge, wait for manual  |
 
 ## Output Format
 
@@ -183,10 +192,11 @@ Report progress at each step:
 ✓ Created commit: feat(tools): add morse-code-tool
 ✓ Pushed to origin/feat/morse-code-tool
 ✓ Created PR #123: https://github.com/user/repo/pull/123
+✓ Auto-merge enabled (squash)
 ⏳ Waiting for PR checks...
 ✓ All checks passed!
-⏳ Waiting for PR to be merged...
-✓ PR #123 merged!
+⏳ Waiting for auto-merge...
+✓ PR #123 auto-merged!
 ✓ Switched to main and pulled latest
 ✓ Deleted local branch feat/morse-code-tool
 ✓ Workflow complete!
