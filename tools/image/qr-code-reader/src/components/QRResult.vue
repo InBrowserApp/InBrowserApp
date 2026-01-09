@@ -1,0 +1,362 @@
+<template>
+  <ToolSection v-if="result || error">
+    <ToolSectionHeader>{{ t('result') }}</ToolSectionHeader>
+
+    <NAlert v-if="error && !result" type="warning" :title="t('noResult')">
+      {{ error }}
+    </NAlert>
+
+    <template v-if="result">
+      <NFlex vertical :size="12">
+        <NCard>
+          <NFlex justify="space-between" align="start">
+            <NText class="result-text" style="word-break: break-all">
+              {{ result }}
+            </NText>
+            <CopyToClipboardButton :content="result" />
+          </NFlex>
+        </NCard>
+
+        <NFlex :size="8" align="center">
+          <NTag :type="contentType.type">{{ contentType.label }}</NTag>
+          <NButton
+            v-if="contentType.isUrl"
+            text
+            tag="a"
+            :href="result"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ t('openLink') }}
+          </NButton>
+        </NFlex>
+      </NFlex>
+    </template>
+  </ToolSection>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { NFlex, NAlert, NCard, NText, NTag, NButton } from 'naive-ui'
+import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { CopyToClipboardButton } from '@shared/ui/base'
+
+const { t } = useI18n()
+
+const props = defineProps<{
+  result: string | null
+  error: string | null
+}>()
+
+const contentType = computed(() => {
+  if (!props.result) return { label: '', type: 'default' as const, isUrl: false }
+
+  const text = props.result
+
+  // URL
+  if (/^https?:\/\//i.test(text)) {
+    return { label: 'URL', type: 'info' as const, isUrl: true }
+  }
+
+  // Email
+  if (/^mailto:/i.test(text)) {
+    return { label: 'Email', type: 'success' as const, isUrl: true }
+  }
+
+  // Phone
+  if (/^tel:/i.test(text)) {
+    return { label: t('phone'), type: 'success' as const, isUrl: true }
+  }
+
+  // SMS
+  if (/^sms:/i.test(text)) {
+    return { label: 'SMS', type: 'success' as const, isUrl: true }
+  }
+
+  // WiFi
+  if (/^WIFI:/i.test(text)) {
+    return { label: 'WiFi', type: 'warning' as const, isUrl: false }
+  }
+
+  // vCard
+  if (/^BEGIN:VCARD/i.test(text)) {
+    return { label: 'vCard', type: 'success' as const, isUrl: false }
+  }
+
+  // Calendar event
+  if (/^BEGIN:VCALENDAR/i.test(text)) {
+    return { label: t('calendar'), type: 'success' as const, isUrl: false }
+  }
+
+  // Geo location
+  if (/^geo:/i.test(text)) {
+    return { label: t('location'), type: 'info' as const, isUrl: true }
+  }
+
+  // Plain text
+  return { label: t('text'), type: 'default' as const, isUrl: false }
+})
+</script>
+
+<style scoped>
+.result-text {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+</style>
+
+<i18n lang="json">
+{
+  "en": {
+    "result": "Result",
+    "noResult": "No QR Code Found",
+    "openLink": "Open Link",
+    "scanAnother": "Scan Another",
+    "text": "Text",
+    "phone": "Phone",
+    "calendar": "Calendar",
+    "location": "Location"
+  },
+  "zh": {
+    "result": "结果",
+    "noResult": "未找到二维码",
+    "openLink": "打开链接",
+    "scanAnother": "扫描另一个",
+    "text": "文本",
+    "phone": "电话",
+    "calendar": "日历",
+    "location": "位置"
+  },
+  "zh-CN": {
+    "result": "结果",
+    "noResult": "未找到二维码",
+    "openLink": "打开链接",
+    "scanAnother": "扫描另一个",
+    "text": "文本",
+    "phone": "电话",
+    "calendar": "日历",
+    "location": "位置"
+  },
+  "zh-TW": {
+    "result": "結果",
+    "noResult": "未找到 QR Code",
+    "openLink": "開啟連結",
+    "scanAnother": "掃描另一個",
+    "text": "文字",
+    "phone": "電話",
+    "calendar": "日曆",
+    "location": "位置"
+  },
+  "zh-HK": {
+    "result": "結果",
+    "noResult": "未找到 QR Code",
+    "openLink": "開啟連結",
+    "scanAnother": "掃描另一個",
+    "text": "文字",
+    "phone": "電話",
+    "calendar": "日曆",
+    "location": "位置"
+  },
+  "es": {
+    "result": "Resultado",
+    "noResult": "No se encontro codigo QR",
+    "openLink": "Abrir enlace",
+    "scanAnother": "Escanear otro",
+    "text": "Texto",
+    "phone": "Telefono",
+    "calendar": "Calendario",
+    "location": "Ubicacion"
+  },
+  "fr": {
+    "result": "Resultat",
+    "noResult": "Aucun code QR trouve",
+    "openLink": "Ouvrir le lien",
+    "scanAnother": "Scanner un autre",
+    "text": "Texte",
+    "phone": "Telephone",
+    "calendar": "Calendrier",
+    "location": "Emplacement"
+  },
+  "de": {
+    "result": "Ergebnis",
+    "noResult": "Kein QR-Code gefunden",
+    "openLink": "Link offnen",
+    "scanAnother": "Weiteren scannen",
+    "text": "Text",
+    "phone": "Telefon",
+    "calendar": "Kalender",
+    "location": "Standort"
+  },
+  "it": {
+    "result": "Risultato",
+    "noResult": "Nessun codice QR trovato",
+    "openLink": "Apri link",
+    "scanAnother": "Scansiona un altro",
+    "text": "Testo",
+    "phone": "Telefono",
+    "calendar": "Calendario",
+    "location": "Posizione"
+  },
+  "ja": {
+    "result": "結果",
+    "noResult": "QRコードが見つかりません",
+    "openLink": "リンクを開く",
+    "scanAnother": "別のものをスキャン",
+    "text": "テキスト",
+    "phone": "電話",
+    "calendar": "カレンダー",
+    "location": "位置"
+  },
+  "ko": {
+    "result": "결과",
+    "noResult": "QR 코드를 찾을 수 없음",
+    "openLink": "링크 열기",
+    "scanAnother": "다른 것 스캔",
+    "text": "텍스트",
+    "phone": "전화",
+    "calendar": "캘린더",
+    "location": "위치"
+  },
+  "ru": {
+    "result": "Результат",
+    "noResult": "QR-код не найден",
+    "openLink": "Открыть ссылку",
+    "scanAnother": "Сканировать другой",
+    "text": "Текст",
+    "phone": "Телефон",
+    "calendar": "Календарь",
+    "location": "Местоположение"
+  },
+  "pt": {
+    "result": "Resultado",
+    "noResult": "Nenhum codigo QR encontrado",
+    "openLink": "Abrir link",
+    "scanAnother": "Escanear outro",
+    "text": "Texto",
+    "phone": "Telefone",
+    "calendar": "Calendario",
+    "location": "Localizacao"
+  },
+  "ar": {
+    "result": "النتيجة",
+    "noResult": "لم يتم العثور على رمز QR",
+    "openLink": "فتح الرابط",
+    "scanAnother": "مسح آخر",
+    "text": "نص",
+    "phone": "هاتف",
+    "calendar": "تقويم",
+    "location": "موقع"
+  },
+  "hi": {
+    "result": "परिणाम",
+    "noResult": "कोई QR कोड नहीं मिला",
+    "openLink": "लिंक खोलें",
+    "scanAnother": "एक और स्कैन करें",
+    "text": "पाठ",
+    "phone": "फ़ोन",
+    "calendar": "कैलेंडर",
+    "location": "स्थान"
+  },
+  "tr": {
+    "result": "Sonuc",
+    "noResult": "QR kodu bulunamadi",
+    "openLink": "Baglanti ac",
+    "scanAnother": "Baska tara",
+    "text": "Metin",
+    "phone": "Telefon",
+    "calendar": "Takvim",
+    "location": "Konum"
+  },
+  "nl": {
+    "result": "Resultaat",
+    "noResult": "Geen QR-code gevonden",
+    "openLink": "Link openen",
+    "scanAnother": "Scan nog een",
+    "text": "Tekst",
+    "phone": "Telefoon",
+    "calendar": "Kalender",
+    "location": "Locatie"
+  },
+  "sv": {
+    "result": "Resultat",
+    "noResult": "Ingen QR-kod hittades",
+    "openLink": "Oppna lank",
+    "scanAnother": "Skanna en annan",
+    "text": "Text",
+    "phone": "Telefon",
+    "calendar": "Kalender",
+    "location": "Plats"
+  },
+  "pl": {
+    "result": "Wynik",
+    "noResult": "Nie znaleziono kodu QR",
+    "openLink": "Otworz link",
+    "scanAnother": "Skanuj kolejny",
+    "text": "Tekst",
+    "phone": "Telefon",
+    "calendar": "Kalendarz",
+    "location": "Lokalizacja"
+  },
+  "vi": {
+    "result": "Ket qua",
+    "noResult": "Khong tim thay ma QR",
+    "openLink": "Mo lien ket",
+    "scanAnother": "Quet cai khac",
+    "text": "Van ban",
+    "phone": "Dien thoai",
+    "calendar": "Lich",
+    "location": "Vi tri"
+  },
+  "th": {
+    "result": "ผลลัพธ์",
+    "noResult": "ไม่พบ QR Code",
+    "openLink": "เปิดลิงก์",
+    "scanAnother": "สแกนอันอื่น",
+    "text": "ข้อความ",
+    "phone": "โทรศัพท์",
+    "calendar": "ปฏิทิน",
+    "location": "ตำแหน่ง"
+  },
+  "id": {
+    "result": "Hasil",
+    "noResult": "Kode QR tidak ditemukan",
+    "openLink": "Buka tautan",
+    "scanAnother": "Pindai lainnya",
+    "text": "Teks",
+    "phone": "Telepon",
+    "calendar": "Kalender",
+    "location": "Lokasi"
+  },
+  "he": {
+    "result": "תוצאה",
+    "noResult": "לא נמצא קוד QR",
+    "openLink": "פתח קישור",
+    "scanAnother": "סרוק אחר",
+    "text": "טקסט",
+    "phone": "טלפון",
+    "calendar": "לוח שנה",
+    "location": "מיקום"
+  },
+  "ms": {
+    "result": "Keputusan",
+    "noResult": "Kod QR tidak ditemui",
+    "openLink": "Buka pautan",
+    "scanAnother": "Imbas yang lain",
+    "text": "Teks",
+    "phone": "Telefon",
+    "calendar": "Kalendar",
+    "location": "Lokasi"
+  },
+  "no": {
+    "result": "Resultat",
+    "noResult": "Ingen QR-kode funnet",
+    "openLink": "Apne lenke",
+    "scanAnother": "Skann en annen",
+    "text": "Tekst",
+    "phone": "Telefon",
+    "calendar": "Kalender",
+    "location": "Plassering"
+  }
+}
+</i18n>
