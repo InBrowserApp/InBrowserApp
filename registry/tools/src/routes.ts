@@ -88,6 +88,7 @@ import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validato
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
+import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -179,4 +180,5 @@ export const routes: ToolRoute[] = [
   ...placeholderImageGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...sshKeyGeneratorRoutes,
+  ...htmlColorNamesRoutes,
 ]

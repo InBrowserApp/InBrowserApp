@@ -42,6 +42,7 @@
     "@tools/gitignore-generator": "workspace:*",
     "@tools/hash-tools": "workspace:*",
     "@tools/hmac-generator": "workspace:*",
+    "@tools/html-color-names": "workspace:*",
     "@tools/html-entity-encoder-decoder": "workspace:*",
     "@tools/html-to-markdown-converter": "workspace:*",
     "@tools/http-status-code-lookup": "workspace:*",

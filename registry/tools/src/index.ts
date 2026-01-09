@@ -90,6 +90,7 @@ import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-vali
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
+import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -184,6 +185,7 @@ export const tools: ToolInfo[] = [
 
   // Web Tools (Color)
   colorConverterToolInfo,
+  htmlColorNamesToolInfo,
 
   // Text Tools
   caseConverterToolInfo,

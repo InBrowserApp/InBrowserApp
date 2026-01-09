@@ -615,6 +615,9 @@ importers:
       '@tools/hmac-generator':
         specifier: workspace:*
         version: link:../../tools/hash/hmac-generator
+      '@tools/html-color-names':
+        specifier: workspace:*
+        version: link:../../tools/web/html-color-names
       '@tools/html-entity-encoder-decoder':
         specifier: workspace:*
         version: link:../../tools/web/html-entity-encoder-decoder
@@ -3544,6 +3547,33 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/web/html-color-names:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      color-name:
+        specifier: 'catalog:'
+        version: 2.1.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/web/html-entity-encoder-decoder:
     dependencies:
@@ -10722,7 +10752,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/tough-cookie@4.0.5': {}
 
