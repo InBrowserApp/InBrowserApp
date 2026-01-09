@@ -1,0 +1,6 @@
+export { default as SvgInput } from './SvgInput.vue'
+export { default as SvgFilePreview } from './SvgFilePreview.vue'
+export { default as OptimizationOptions } from './OptimizationOptions.vue'
+export { default as OptimizationResults } from './OptimizationResults.vue'
+export { default as WhatIsSvgOptimizer } from './WhatIsSvgOptimizer.vue'
+export type { OptimizationOptionsType } from './OptimizationOptions.vue'

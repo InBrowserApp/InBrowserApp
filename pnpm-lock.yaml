@@ -747,6 +747,9 @@ importers:
       '@tools/ssh-key-generator':
         specifier: workspace:*
         version: link:../../tools/network/ssh-key-generator
+      '@tools/svg-optimizer':
+        specifier: workspace:*
+        version: link:../../tools/image/svg-optimizer
       '@tools/text-diff':
         specifier: workspace:*
         version: link:../../tools/document/text-diff
@@ -2246,6 +2249,36 @@ importers:
       '@types/qrcode':
         specifier: 'catalog:'
         version: 1.5.6
+
+  tools/image/svg-optimizer:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      svgo:
+        specifier: 'catalog:'
+        version: 4.0.0
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/misc/chmod-calculator:
     dependencies:

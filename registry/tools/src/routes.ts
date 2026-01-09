@@ -88,6 +88,7 @@ import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-im
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
 import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
+import { routes as svgOptimizerRoutes } from '@tools/svg-optimizer/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -106,6 +107,7 @@ export const routes: ToolRoute[] = [
   ...ipv6ToMacRoutes,
   ...currentNetworkTimeRoutes,
   ...pngOptimizerRoutes,
+  ...svgOptimizerRoutes,
   ...exifViewerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
