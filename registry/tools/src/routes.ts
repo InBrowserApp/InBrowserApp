@@ -47,6 +47,7 @@ import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
 import { routes as jwtDecoderVerifierRoutes } from '@tools/jwt-decoder-verifier/routes'
 import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
+import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
 import { routes as markdownToHtmlConverterRoutes } from '@tools/markdown-to-html-converter/routes'
 import { routes as htmlToMarkdownConverterRoutes } from '@tools/html-to-markdown-converter/routes'
@@ -141,6 +142,7 @@ export const routes: ToolRoute[] = [
   ...jwtDecoderVerifierRoutes,
   ...randomPasswordGeneratorRoutes,
   ...qrCodeGeneratorRoutes,
+  ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,
   ...markdownToHtmlConverterRoutes,
   ...htmlToMarkdownConverterRoutes,

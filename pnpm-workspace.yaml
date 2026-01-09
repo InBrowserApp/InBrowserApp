@@ -83,6 +83,7 @@ catalog:
   js-yaml: ^4.1.1
   jsbarcode: ^3.12.1
   jsdom: ^27.4.0
+  jsqr: ^1.4.0
   lint-staged: ^16.2.7
   marked: ^17.0.1
   mime: ^4.1.0

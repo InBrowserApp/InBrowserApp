@@ -228,6 +228,9 @@ catalogs:
     jsdom:
       specifier: ^27.4.0
       version: 27.4.0
+    jsqr:
+      specifier: ^1.4.0
+      version: 1.4.0
     lint-staged:
       specifier: ^16.2.7
       version: 16.2.7
@@ -708,6 +711,9 @@ importers:
       '@tools/qr-code-generator':
         specifier: workspace:*
         version: link:../../tools/image/qr-code-generator
+      '@tools/qr-code-reader':
+        specifier: workspace:*
+        version: link:../../tools/image/qr-code-reader
       '@tools/random-password-generator':
         specifier: workspace:*
         version: link:../../tools/random/random-password-generator
@@ -2283,6 +2289,33 @@ importers:
       '@types/qrcode':
         specifier: 'catalog:'
         version: 1.5.6
+
+  tools/image/qr-code-reader:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      jsqr:
+        specifier: 'catalog:'
+        version: 1.4.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/image/svg-optimizer:
     dependencies:
@@ -7480,6 +7513,9 @@ packages:
     resolution: {integrity: sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==}
     engines: {node: '>=0.10.0'}
 
+  jsqr@1.4.0:
+    resolution: {integrity: sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -10785,7 +10821,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 24.10.4
 
   '@types/tough-cookie@4.0.5': {}
 
@@ -12619,6 +12655,8 @@ snapshots:
   jsonparse@1.3.1: {}
 
   jsonpointer@5.0.1: {}
+
+  jsqr@1.4.0: {}
 
   keyv@4.5.4:
     dependencies:

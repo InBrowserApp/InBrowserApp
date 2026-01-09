@@ -49,6 +49,7 @@ import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
+import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
 import { toolInfo as markdownToHtmlConverterToolInfo } from '@tools/markdown-to-html-converter'
 import { toolInfo as htmlToMarkdownConverterToolInfo } from '@tools/html-to-markdown-converter'
@@ -122,6 +123,7 @@ export const tools: ToolInfo[] = [
   svgOptimizerToolInfo,
   exifViewerToolInfo,
   qrCodeGeneratorToolInfo,
+  qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,
   markdownToHtmlConverterToolInfo,
   htmlToMarkdownConverterToolInfo,
