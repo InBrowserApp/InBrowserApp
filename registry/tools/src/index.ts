@@ -37,6 +37,7 @@ import { toolInfo as xxhashXxh32HashTextOrFileToolInfo } from '@tools/xxhash-xxh
 import { toolInfo as xxhashXxh64HashTextOrFileToolInfo } from '@tools/xxhash-xxh64-hash-text-or-file'
 import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-text-or-file'
 import { toolInfo as blake2sHashTextOrFileToolInfo } from '@tools/blake2s-hash-text-or-file'
+import { toolInfo as hmacGeneratorToolInfo } from '@tools/hmac-generator'
 import { toolInfo as urlComponentEncoderDecoderToolInfo } from '@tools/url-component-encoder-decoder'
 import { toolInfo as base64EncoderDecoderToolInfo } from '@tools/base64-encoder-decoder'
 import { toolInfo as fileToDataUriConverterToolInfo } from '@tools/file-to-data-uri-converter'
@@ -155,6 +156,7 @@ export const tools: ToolInfo[] = [
   xxhashXxh64HashTextOrFileToolInfo,
   blake2bHashTextOrFileToolInfo,
   blake2sHashTextOrFileToolInfo,
+  hmacGeneratorToolInfo,
 
   // Web Tools
   urlComponentEncoderDecoderToolInfo,
