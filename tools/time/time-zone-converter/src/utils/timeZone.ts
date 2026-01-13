@@ -40,6 +40,8 @@ const fallbackTimeZones = [
   'Pacific/Auckland',
 ]
 
+const preferredTimeZones = ['UTC', 'Etc/UTC', 'GMT', 'Etc/GMT']
+
 const dateTimeFormatterCache = new Map<string, Intl.DateTimeFormat>()
 
 function getDateTimeFormatter(timeZone: string): Intl.DateTimeFormat {
@@ -62,16 +64,30 @@ function getDateTimeFormatter(timeZone: string): Intl.DateTimeFormat {
 }
 
 export function getSupportedTimeZones(): string[] {
+  let values: string[]
   if (typeof Intl !== 'undefined' && 'supportedValuesOf' in Intl) {
     try {
-      const values = Intl.supportedValuesOf('timeZone')
-      return [...values].sort()
+      values = [...Intl.supportedValuesOf('timeZone')]
     } catch {
-      return [...fallbackTimeZones]
+      values = [...fallbackTimeZones]
     }
+  } else {
+    values = [...fallbackTimeZones]
   }
 
-  return [...fallbackTimeZones]
+  const timeZones = new Set(values)
+  const preferredAvailable = preferredTimeZones.filter((timeZone) => {
+    if (timeZones.has(timeZone)) return true
+    if (isTimeZoneSupported(timeZone)) {
+      timeZones.add(timeZone)
+      return true
+    }
+    return false
+  })
+  const preferredSet = new Set(preferredAvailable)
+  const rest = [...timeZones].filter((timeZone) => !preferredSet.has(timeZone)).sort()
+
+  return [...preferredAvailable, ...rest]
 }
 
 export function isTimeZoneSupported(timeZone: string): boolean {

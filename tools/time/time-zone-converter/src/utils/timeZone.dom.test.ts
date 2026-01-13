@@ -5,6 +5,7 @@ import {
   toUtcTimestamp,
   formatOffsetLabel,
   getTimeZoneOffsetMs,
+  getSupportedTimeZones,
 } from './timeZone'
 
 describe('parseDateTimeInput', () => {
@@ -25,6 +26,10 @@ describe('parseDateTimeInput', () => {
 })
 
 describe('time zone conversions', () => {
+  it('includes UTC in supported time zones', () => {
+    expect(getSupportedTimeZones()).toContain('UTC')
+  })
+
   it('formats UTC timestamps in UTC', () => {
     expect(formatInTimeZone(0, 'UTC')).toBe('1970-01-01 00:00:00')
   })
