@@ -105,6 +105,7 @@
     "@tools/unix-timestamp-converter": "workspace:*",
     "@tools/url-component-encoder-decoder": "workspace:*",
     "@tools/url-parser-builder": "workspace:*",
+    "@tools/user-agent-parser": "workspace:*",
     "@tools/uuid": "workspace:*",
     "@tools/xml-to-json-converter": "workspace:*",
     "@tools/xxhash-xxh32-hash-text-or-file": "workspace:*",
