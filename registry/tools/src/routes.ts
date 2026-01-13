@@ -46,6 +46,7 @@ import { routes as basicAuthDecoderRoutes } from '@tools/basic-auth-decoder/rout
 import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
 import { routes as jwtDecoderVerifierRoutes } from '@tools/jwt-decoder-verifier/routes'
 import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-generator/routes'
+import { routes as bip39MnemonicGeneratorRoutes } from '@tools/bip39-mnemonic-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
 import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
@@ -63,9 +64,11 @@ import { routes as csvToJsonConverterRoutes } from '@tools/csv-to-json-converter
 import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter/routes'
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
 import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validator/routes'
+import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
+import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
 import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-generator/routes'
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
@@ -143,6 +146,7 @@ export const routes: ToolRoute[] = [
   ...jwtSignerRoutes,
   ...jwtDecoderVerifierRoutes,
   ...randomPasswordGeneratorRoutes,
+  ...bip39MnemonicGeneratorRoutes,
   ...qrCodeGeneratorRoutes,
   ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,
@@ -159,10 +163,12 @@ export const routes: ToolRoute[] = [
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,
+  ...prettierCodeFormatterRoutes,
   ...jsonSchemaValidatorRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,
+  ...timeZoneConverterRoutes,
   ...cronExpressionParserRoutes,
   ...cronExpressionGeneratorRoutes,
   ...textDiffRoutes,

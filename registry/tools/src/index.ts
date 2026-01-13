@@ -48,6 +48,7 @@ import { toolInfo as basicAuthDecoderToolInfo } from '@tools/basic-auth-decoder'
 import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
+import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -64,10 +65,12 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-expression-generator'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
@@ -140,6 +143,7 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  prettierCodeFormatterToolInfo,
 
   // PDF Tools
   pdfToolsToolInfo,
@@ -175,6 +179,7 @@ export const tools: ToolInfo[] = [
   jwtSignerToolInfo,
   jwtDecoderVerifierToolInfo,
   randomPasswordGeneratorToolInfo,
+  bip39MnemonicGeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
@@ -183,6 +188,7 @@ export const tools: ToolInfo[] = [
 
   // Time Tools
   unixTimestampConverterToolInfo,
+  timeZoneConverterToolInfo,
   cronExpressionParserToolInfo,
   cronExpressionGeneratorToolInfo,
 
