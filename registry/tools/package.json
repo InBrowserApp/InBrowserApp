@@ -51,6 +51,7 @@
     "@tools/ip-info-lookup": "workspace:*",
     "@tools/ip-range-to-cidr": "workspace:*",
     "@tools/ipv6-to-mac": "workspace:*",
+    "@tools/isbn-validator": "workspace:*",
     "@tools/json-formatter": "workspace:*",
     "@tools/json-to-csv-converter": "workspace:*",
     "@tools/json-to-toml-converter": "workspace:*",
