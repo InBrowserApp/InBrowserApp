@@ -1,14 +1,12 @@
 <template>
   <ToolSection>
-    <n-flex align="center" justify="space-between">
-      <n-flex align="center">
-        <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
-          {{ t('use-current') }}
-        </n-button>
-        <n-button text :disabled="!hasInput" @click="clearInput">
-          {{ t('clear') }}
-        </n-button>
-      </n-flex>
+    <n-flex align="center">
+      <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
+        <template #icon>
+          <n-icon :component="GlobePerson20Regular" />
+        </template>
+        {{ t('use-current') }}
+      </n-button>
     </n-flex>
   </ToolSection>
 
@@ -27,10 +25,13 @@
         </template>
       </n-form-item-gi>
 
-      <n-form-item-gi :label="t('json-output')" :show-feedback="false">
-        <n-flex justify="flex-end" style="margin-bottom: 8px">
-          <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
-        </n-flex>
+      <n-form-item-gi :show-feedback="false">
+        <template #label>
+          <n-flex align="center" justify="space-between" style="width: 100%">
+            <span>{{ t('json-output') }}</span>
+            <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
+          </n-flex>
+        </template>
         <n-card v-if="hasOutput" size="small">
           <n-code :code="renderedJson" language="json" :hljs="hljs" word-wrap />
         </n-card>
@@ -57,12 +58,13 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import UAParser from 'ua-parser-js'
-import { NButton, NCard, NCode, NEmpty, NFlex, NFormItemGi, NGrid, NInput, NText } from 'naive-ui'
+import { NButton, NCard, NCode, NEmpty, NFlex, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 import ParsedSection from './ParsedSection.vue'
+import { GlobePerson20Regular } from '@shared/icons/fluent'
 
 hljs.registerLanguage('json', jsonLang)
 
@@ -138,9 +140,6 @@ function useCurrentUserAgent() {
   userAgent.value = navigator.userAgent
 }
 
-function clearInput() {
-  userAgent.value = ''
-}
 </script>
 
 <i18n lang="json">
