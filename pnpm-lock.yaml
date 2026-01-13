@@ -558,6 +558,9 @@ importers:
       '@tools/bcrypt-hash-password-verifier':
         specifier: workspace:*
         version: link:../../tools/hash/bcrypt-hash-password-verifier
+      '@tools/bic-swift-validator':
+        specifier: workspace:*
+        version: link:../../tools/validator/bic-swift-validator
       '@tools/bip39-mnemonic-generator':
         specifier: workspace:*
         version: link:../../tools/random/bip39-mnemonic-generator
@@ -3486,6 +3489,30 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/validator/bic-swift-validator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/validator/credit-card-validator:
     dependencies:
