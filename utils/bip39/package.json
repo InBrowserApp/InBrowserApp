@@ -1,0 +1,13 @@
+{
+  "name": "@utils/bip39",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "bip39": "catalog:",
+    "buffer": "catalog:"
+  }
+}
