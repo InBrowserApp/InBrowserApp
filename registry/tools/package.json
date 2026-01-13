@@ -97,6 +97,7 @@
     "@tools/svg-optimizer": "workspace:*",
     "@tools/text-diff": "workspace:*",
     "@tools/text-statistics": "workspace:*",
+    "@tools/time-diff-calculator": "workspace:*",
     "@tools/time-zone-converter": "workspace:*",
     "@tools/toml-to-json-converter": "workspace:*",
     "@tools/toml-to-yaml-converter": "workspace:*",
