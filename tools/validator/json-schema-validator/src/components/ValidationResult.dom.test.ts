@@ -2,13 +2,38 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { NConfigProvider, NMessageProvider } from 'naive-ui'
 import { h } from 'vue'
+import type { JsonSchemaValidationError } from '@utils/json-schema'
 import ValidationResult from './ValidationResult.vue'
 
-const baseProps = {
+type ValidationResultProps = {
+  title: string
+  statusLabel: string
+  statusValue: string
+  statusType: 'success' | 'error' | 'info' | 'warning'
+  draftLabel: string
+  draftValue: string
+  draftHint: string
+  errorsLabel: string
+  errorsCount: number
+  errorsTitle: string
+  errors: JsonSchemaValidationError[]
+  errorsJson: string
+  columnsLabels: {
+    path: string
+    message: string
+    keyword: string
+  }
+  noErrorsLabel: string
+  schemaError: string
+  emptyMessage: string
+  loading: boolean
+}
+
+const baseProps: ValidationResultProps = {
   title: 'Validation Result',
   statusLabel: 'Status',
   statusValue: 'Waiting',
-  statusType: 'info' as const,
+  statusType: 'info',
   draftLabel: 'Schema Draft',
   draftValue: '-',
   draftHint: '',
@@ -28,7 +53,7 @@ const baseProps = {
   loading: false,
 }
 
-const withProviders = (props: typeof baseProps) => ({
+const withProviders = (props: ValidationResultProps) => ({
   render() {
     return h(NConfigProvider, null, {
       default: () =>
