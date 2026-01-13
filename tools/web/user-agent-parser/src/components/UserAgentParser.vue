@@ -58,7 +58,18 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import UAParser from 'ua-parser-js'
-import { NButton, NCard, NCode, NEmpty, NFlex, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
+import {
+  NButton,
+  NCard,
+  NCode,
+  NEmpty,
+  NFlex,
+  NFormItemGi,
+  NGrid,
+  NIcon,
+  NInput,
+  NText,
+} from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import hljs from 'highlight.js/lib/core'
@@ -139,7 +150,6 @@ function useCurrentUserAgent() {
   if (typeof navigator === 'undefined') return
   userAgent.value = navigator.userAgent
 }
-
 </script>
 
 <i18n lang="json">
