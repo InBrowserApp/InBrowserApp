@@ -12,19 +12,19 @@ export const meta = {
       'Parse user agent strings to identify browser, OS, device, engine, and CPU details. Works entirely offline.',
   },
   zh: {
-    name: '用户代理解析器',
+    name: '用户代理（User-Agent）解析器',
     description: '解析 User-Agent 字符串，识别浏览器、操作系统、设备、引擎与 CPU 信息。全程离线。',
   },
   'zh-CN': {
-    name: '用户代理解析器',
+    name: '用户代理（User-Agent）解析器',
     description: '解析 User-Agent 字符串，识别浏览器、操作系统、设备、引擎与 CPU 信息。全程离线。',
   },
   'zh-TW': {
-    name: '使用者代理解析器',
+    name: '使用者代理（User-Agent）解析器',
     description: '解析 User-Agent 字串，識別瀏覽器、作業系統、裝置、引擎與 CPU 資訊。全程離線。',
   },
   'zh-HK': {
-    name: '使用者代理解析器',
+    name: '使用者代理（User-Agent）解析器',
     description: '解析 User-Agent 字串，識別瀏覽器、作業系統、裝置、引擎與 CPU 資訊。全程離線。',
   },
   es: {
@@ -48,7 +48,7 @@ export const meta = {
       'Analizza stringhe User-Agent per identificare browser, sistema operativo, dispositivo, engine e CPU. Funziona offline.',
   },
   ja: {
-    name: 'ユーザーエージェント解析',
+    name: 'ユーザーエージェント（User-Agent）解析',
     description:
       'User-Agent 文字列を解析してブラウザ、OS、デバイス、エンジン、CPU 情報を特定します。オフラインで動作します。',
   },

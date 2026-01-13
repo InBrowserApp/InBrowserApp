@@ -182,7 +182,7 @@ function useCurrentUserAgent() {
   "zh": {
     "use-current": "使用我的用户代理",
     "clear": "清空",
-    "input-label": "用户代理",
+    "input-label": "用户代理（User-Agent）",
     "input-placeholder": "在此粘贴 User-Agent 字符串...",
     "input-error": "请输入要解析的 User-Agent 字符串。",
     "json-output": "JSON 输出",
@@ -205,7 +205,7 @@ function useCurrentUserAgent() {
   "zh-CN": {
     "use-current": "使用我的用户代理",
     "clear": "清空",
-    "input-label": "用户代理",
+    "input-label": "用户代理（User-Agent）",
     "input-placeholder": "在此粘贴 User-Agent 字符串...",
     "input-error": "请输入要解析的 User-Agent 字符串。",
     "json-output": "JSON 输出",
@@ -228,7 +228,7 @@ function useCurrentUserAgent() {
   "zh-TW": {
     "use-current": "使用我的使用者代理",
     "clear": "清除",
-    "input-label": "使用者代理",
+    "input-label": "使用者代理（User-Agent）",
     "input-placeholder": "在此貼上 User-Agent 字串...",
     "input-error": "請輸入要解析的 User-Agent 字串。",
     "json-output": "JSON 輸出",
@@ -251,7 +251,7 @@ function useCurrentUserAgent() {
   "zh-HK": {
     "use-current": "使用我的使用者代理",
     "clear": "清除",
-    "input-label": "使用者代理",
+    "input-label": "使用者代理（User-Agent）",
     "input-placeholder": "在此貼上 User-Agent 字串...",
     "input-error": "請輸入要解析的 User-Agent 字串。",
     "json-output": "JSON 輸出",
@@ -366,7 +366,7 @@ function useCurrentUserAgent() {
   "ja": {
     "use-current": "現在のユーザーエージェントを使用",
     "clear": "クリア",
-    "input-label": "ユーザーエージェント",
+    "input-label": "ユーザーエージェント（User-Agent）",
     "input-placeholder": "User-Agent 文字列をここに貼り付け...",
     "input-error": "解析する User-Agent 文字列を入力してください。",
     "json-output": "JSON 出力",
