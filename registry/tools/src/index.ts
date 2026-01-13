@@ -68,6 +68,7 @@ import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-expression-generator'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
@@ -184,6 +185,7 @@ export const tools: ToolInfo[] = [
 
   // Time Tools
   unixTimestampConverterToolInfo,
+  timeZoneConverterToolInfo,
   cronExpressionParserToolInfo,
   cronExpressionGeneratorToolInfo,
 
