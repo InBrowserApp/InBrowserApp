@@ -113,7 +113,9 @@
               <n-tag :type="validationState === 'valid' ? 'success' : 'error'">
                 {{ validationState === 'valid' ? t('valid') : t('invalid') }}
               </n-tag>
-              <n-text depth="3">{{ t('word-count-result', { count: validationWordCount }) }}</n-text>
+              <n-text depth="3">{{
+                t('word-count-result', { count: validationWordCount })
+              }}</n-text>
             </n-flex>
             <n-alert v-if="validationState === 'invalid'" type="error" style="margin-top: 12px">
               {{ t('mnemonic-error') }}

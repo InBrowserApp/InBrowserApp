@@ -39,8 +39,7 @@ export const meta = {
   },
   es: {
     name: 'Generador de Mnemónicos BIP39',
-    description:
-      'Genera y valida frases mnemónicas BIP39 y convierte entre entropía y mnemónicos.',
+    description: 'Genera y valida frases mnemónicas BIP39 y convierte entre entropía y mnemónicos.',
   },
   fr: {
     name: 'Générateur de Mnémoniques BIP39',
@@ -54,8 +53,7 @@ export const meta = {
   },
   it: {
     name: 'Generatore di Mnemonici BIP39',
-    description:
-      'Genera e valida frasi mnemoniche BIP39 e converte tra entropia e mnemonici.',
+    description: 'Genera e valida frasi mnemoniche BIP39 e converte tra entropia e mnemonici.',
   },
   ja: {
     name: 'BIP39 ニーモニック生成器',
@@ -72,8 +70,7 @@ export const meta = {
   },
   pt: {
     name: 'Gerador de Mnemônicos BIP39',
-    description:
-      'Gere e valide frases mnemônicas BIP39 e converta entre entropia e mnemônicos.',
+    description: 'Gere e valide frases mnemônicas BIP39 e converta entre entropia e mnemônicos.',
   },
   ar: {
     name: 'مولد عبارات BIP39 التذكّرية',
@@ -91,8 +88,7 @@ export const meta = {
   },
   nl: {
     name: 'BIP39-mnemonicgenerator',
-    description:
-      'Genereer en valideer BIP39-mnemonics en converteer tussen entropie en mnemonics.',
+    description: 'Genereer en valideer BIP39-mnemonics en converteer tussen entropie en mnemonics.',
   },
   sv: {
     name: 'BIP39-mnemonicgenerator',
@@ -123,8 +119,7 @@ export const meta = {
   },
   ms: {
     name: 'Penjana Mnemonik BIP39',
-    description:
-      'Jana dan sahkan frasa mnemonik BIP39 serta tukar antara entropi dan mnemonik.',
+    description: 'Jana dan sahkan frasa mnemonik BIP39 serta tukar antara entropi dan mnemonik.',
   },
   no: {
     name: 'BIP39-mnemonikkgenerator',

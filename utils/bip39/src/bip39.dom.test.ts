@@ -19,8 +19,7 @@ describe('bip39 utils', () => {
   })
 
   it('converts mnemonic back to entropy', () => {
-    const mnemonic =
-      'legal winner thank year wave sausage worth useful legal winner thank yellow'
+    const mnemonic = 'legal winner thank year wave sausage worth useful legal winner thank yellow'
     const entropy = mnemonicToEntropy(mnemonic, ENGLISH)
     expect(entropy).toBe('7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f')
   })
