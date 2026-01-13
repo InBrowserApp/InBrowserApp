@@ -1,128 +1,154 @@
 <template>
-  <ToolSectionHeader>{{ t('pattern-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-grid cols="1 s:2" :x-gap="12" :y-gap="12">
-      <n-gi>
-        <n-form-item
-          :label="t('pattern-label')"
-          :validation-status="patternStatus"
-          :feedback="patternError"
-          :show-feedback="!!patternError"
-        >
-          <n-input v-model:value="pattern" :placeholder="t('pattern-placeholder')" />
-        </n-form-item>
-      </n-gi>
-      <n-gi>
-        <n-form-item :label="t('flags-label')">
-          <n-checkbox-group v-model:value="selectedFlags" class="flags-group">
-            <n-checkbox v-for="flag in flagOptions" :key="flag" :value="flag">
-              {{ flag }}
-            </n-checkbox>
-          </n-checkbox-group>
-        </n-form-item>
-      </n-gi>
-    </n-grid>
-    <n-text depth="3" class="flags-hint">{{ t('flags-hint') }}</n-text>
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('input-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <TextOrFileInput
-      v-model:value="textOrFile"
-      accept="text/*,.txt,.log,.md,.json,.csv,.yaml,.yml"
-      :placeholder="t('input-placeholder')"
-      :wrap-with-form-item="false"
-    />
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('replace-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-input v-model:value="replacement" :placeholder="t('replace-placeholder')" />
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('options-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex align="center" :size="12" wrap>
-      <n-switch v-model:value="autoRun">{{ t('auto-run') }}</n-switch>
-      <n-button @click="run" :disabled="autoRun">
-        {{ t('run') }}
-      </n-button>
-    </n-flex>
-    <n-text depth="3" class="hint">{{ t('auto-run-hint') }}</n-text>
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('summary-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-alert v-if="patternError" type="error" :show-icon="true">
-      {{ patternError }}
-    </n-alert>
-    <n-flex v-else align="center" :size="12" wrap>
-      <n-text v-if="showSummaryCounts">{{ t('matches-count', { count: matchesCount }) }}</n-text>
-      <n-text v-if="showSummaryCounts">{{ t('groups-count', { count: groupsCount }) }}</n-text>
-      <n-text v-if="!showSummaryCounts" depth="3">{{ t('summary-empty') }}</n-text>
-    </n-flex>
-    <n-text v-if="zeroLengthCount" depth="3" class="hint">
-      {{ t('zero-length-note', { count: zeroLengthCount }) }}
-    </n-text>
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('preview-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-card size="small" class="preview-card">
-      <div v-if="previewText" class="preview-text" v-html="previewHtml" />
-      <n-text v-else depth="3">{{ t('preview-empty') }}</n-text>
-    </n-card>
-    <n-text v-if="previewTruncated" depth="3" class="hint">
-      {{ t('preview-truncated', { count: previewLimit }) }}
-    </n-text>
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('matches-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-text v-if="!showSummaryCounts" depth="3">{{ t('summary-empty') }}</n-text>
-    <n-text v-else-if="!matchesCount" depth="3">{{ t('matches-empty') }}</n-text>
-    <n-text v-if="matchesTruncated" depth="3" class="hint">
-      {{ t('matches-truncated', { count: matchLimit }) }}
-    </n-text>
-
-    <div v-for="(match, index) in matches" :key="`${match.index}-${index}`" class="match-item">
-      <n-flex align="center" :size="8" wrap>
-        <n-tag size="small" type="info">#{{ index + 1 }}</n-tag>
-        <n-text depth="3">{{ t('match-range', { start: match.index, end: match.end }) }}</n-text>
-      </n-flex>
-      <n-text class="match-text" code>{{ match.match || t('match-empty') }}</n-text>
-      <div v-if="match.groups.length" class="group-row">
-        <n-text depth="3">{{ t('groups-label') }}</n-text>
-        <n-flex :size="6" wrap>
-          <n-tag v-for="(group, groupIndex) in match.groups" :key="groupIndex" size="small">
-            {{ group || t('match-empty') }}
-          </n-tag>
+  <n-grid cols="1 l:2" responsive="screen" :x-gap="24" :y-gap="24">
+    <n-gi>
+      <ToolSectionHeader>{{ t('pattern-title') }}</ToolSectionHeader>
+      <ToolSection>
+        <n-grid cols="1 s:2" :x-gap="12" :y-gap="12">
+          <n-gi>
+            <n-form-item
+              :label="t('pattern-label')"
+              :validation-status="patternStatus"
+              :feedback="patternError"
+              :show-feedback="!!patternError"
+            >
+              <n-input v-model:value="pattern" :placeholder="t('pattern-placeholder')" />
+            </n-form-item>
+          </n-gi>
+          <n-gi>
+            <n-form-item :label="t('flags-label')">
+              <n-checkbox-group v-model:value="selectedFlags" class="flags-group">
+                <n-checkbox v-for="flag in flagOptions" :key="flag" :value="flag">
+                  {{ flag }}
+                </n-checkbox>
+              </n-checkbox-group>
+            </n-form-item>
+          </n-gi>
+          <n-gi :span="2">
+            <n-form-item :label="t('replace-title')">
+              <n-input v-model:value="replacement" :placeholder="t('replace-placeholder')" />
+            </n-form-item>
+          </n-gi>
+          <n-gi :span="2">
+            <n-form-item :label="t('options-title')" :show-feedback="false">
+              <n-flex align="center" :size="12" wrap>
+                <n-switch v-model:value="autoRun">{{ t('auto-run') }}</n-switch>
+                <n-button @click="run" :disabled="autoRun">
+                  {{ t('run') }}
+                </n-button>
+              </n-flex>
+            </n-form-item>
+          </n-gi>
+        </n-grid>
+        <n-flex vertical :size="6">
+          <n-text depth="3" class="flags-hint">{{ t('flags-hint') }}</n-text>
+          <n-text depth="3" class="hint">{{ t('auto-run-hint') }}</n-text>
         </n-flex>
-      </div>
-      <div v-if="Object.keys(match.namedGroups).length" class="group-row">
-        <n-text depth="3">{{ t('named-groups-label') }}</n-text>
-        <n-flex :size="6" wrap>
-          <n-tag v-for="(value, name) in match.namedGroups" :key="name" size="small">
-            {{ name }}={{ value || t('match-empty') }}
-          </n-tag>
-        </n-flex>
-      </div>
-    </div>
-  </ToolSection>
+      </ToolSection>
 
-  <ToolSectionHeader>{{ t('replace-output-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-input
-      :value="replaceOutput"
-      type="textarea"
-      :placeholder="t('replace-output-placeholder')"
-      :autosize="{ minRows: 4, maxRows: 10 }"
-      readonly
-    />
-  </ToolSection>
-  <ToolSection>
-    <CopyToClipboardButton :content="replaceOutput" />
-  </ToolSection>
+      <ToolSectionHeader>{{ t('input-title') }}</ToolSectionHeader>
+      <ToolSection>
+        <TextOrFileInput
+          v-model:value="textOrFile"
+          accept="text/*,.txt,.log,.md,.json,.csv,.yaml,.yml"
+          :placeholder="t('input-placeholder')"
+          :wrap-with-form-item="false"
+        />
+      </ToolSection>
+    </n-gi>
+
+    <n-gi>
+      <ToolSectionHeader>{{ t('summary-title') }}</ToolSectionHeader>
+      <ToolSection>
+        <n-flex vertical :size="12">
+          <n-alert v-if="patternError" type="error" :show-icon="true">
+            {{ patternError }}
+          </n-alert>
+          <n-flex v-else align="center" :size="12" wrap>
+            <n-text v-if="showSummaryCounts">{{
+              t('matches-count', { count: matchesCount })
+            }}</n-text>
+            <n-text v-if="showSummaryCounts">{{
+              t('groups-count', { count: groupsCount })
+            }}</n-text>
+            <n-text v-if="!showSummaryCounts" depth="3">{{ t('summary-empty') }}</n-text>
+          </n-flex>
+          <n-text v-if="zeroLengthCount" depth="3" class="hint">
+            {{ t('zero-length-note', { count: zeroLengthCount }) }}
+          </n-text>
+          <n-divider />
+          <n-tabs v-model:value="activeResultTab" type="segment" animated>
+            <n-tab-pane name="preview" :tab="t('preview-title')">
+              <n-card size="small" class="preview-card">
+                <n-scrollbar class="preview-scroll">
+                  <div v-if="previewText" class="preview-text" v-html="previewHtml" />
+                  <n-text v-else depth="3">{{ t('preview-empty') }}</n-text>
+                </n-scrollbar>
+              </n-card>
+              <n-text v-if="previewTruncated" depth="3" class="hint">
+                {{ t('preview-truncated', { count: previewLimit }) }}
+              </n-text>
+            </n-tab-pane>
+            <n-tab-pane name="matches" :tab="t('matches-title')">
+              <n-text v-if="!showSummaryCounts" depth="3">{{ t('summary-empty') }}</n-text>
+              <template v-else>
+                <n-text v-if="!matchesCount" depth="3">{{ t('matches-empty') }}</n-text>
+                <n-text v-if="matchesTruncated && matchesCount" depth="3" class="hint">
+                  {{ t('matches-truncated', { count: matchLimit }) }}
+                </n-text>
+                <n-scrollbar v-if="matchesCount" class="matches-scroll">
+                  <div
+                    v-for="(match, index) in matches"
+                    :key="`${match.index}-${index}`"
+                    class="match-item"
+                  >
+                    <n-flex align="center" :size="8" wrap>
+                      <n-tag size="small" type="info">#{{ index + 1 }}</n-tag>
+                      <n-text depth="3">
+                        {{ t('match-range', { start: match.index, end: match.end }) }}
+                      </n-text>
+                    </n-flex>
+                    <n-text class="match-text" code>{{ match.match || t('match-empty') }}</n-text>
+                    <div v-if="match.groups.length" class="group-row">
+                      <n-text depth="3">{{ t('groups-label') }}</n-text>
+                      <n-flex :size="6" wrap>
+                        <n-tag
+                          v-for="(group, groupIndex) in match.groups"
+                          :key="groupIndex"
+                          size="small"
+                        >
+                          {{ group || t('match-empty') }}
+                        </n-tag>
+                      </n-flex>
+                    </div>
+                    <div v-if="Object.keys(match.namedGroups).length" class="group-row">
+                      <n-text depth="3">{{ t('named-groups-label') }}</n-text>
+                      <n-flex :size="6" wrap>
+                        <n-tag v-for="(value, name) in match.namedGroups" :key="name" size="small">
+                          {{ name }}={{ value || t('match-empty') }}
+                        </n-tag>
+                      </n-flex>
+                    </div>
+                  </div>
+                </n-scrollbar>
+              </template>
+            </n-tab-pane>
+            <n-tab-pane name="replace" :tab="t('replace-output-title')">
+              <n-input
+                :value="replaceOutput"
+                type="textarea"
+                :placeholder="t('replace-output-placeholder')"
+                :autosize="{ minRows: 4, maxRows: 10 }"
+                readonly
+              />
+              <n-flex align="center" :size="8" class="replace-actions">
+                <CopyToClipboardButton :content="replaceOutput" />
+              </n-flex>
+            </n-tab-pane>
+          </n-tabs>
+        </n-flex>
+      </ToolSection>
+    </n-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
@@ -135,12 +161,16 @@ import {
   NCard,
   NCheckbox,
   NCheckboxGroup,
+  NDivider,
   NFlex,
   NFormItem,
   NGi,
   NGrid,
   NInput,
+  NScrollbar,
   NSwitch,
+  NTabPane,
+  NTabs,
   NTag,
   NText,
 } from 'naive-ui'
@@ -170,6 +200,7 @@ const pattern = useStorage('tools:regex-tester-replacer:pattern', defaultPattern
 const replacement = useStorage('tools:regex-tester-replacer:replacement', defaultReplacement)
 const selectedFlags = useStorage<string[]>('tools:regex-tester-replacer:flags', ['g'])
 const autoRun = useStorage('tools:regex-tester-replacer:auto-run', true)
+const activeResultTab = useStorage('tools:regex-tester-replacer:result-tab', 'preview')
 
 const flagOptions = ['g', 'i', 'm', 's', 'u', 'y']
 const isReading = ref(false)
@@ -318,6 +349,10 @@ function escapeHtml(value: string): string {
   background-color: var(--n-color);
 }
 
+.preview-scroll {
+  max-height: 240px;
+}
+
 .preview-text {
   margin: 0;
   white-space: pre-wrap;
@@ -347,6 +382,14 @@ function escapeHtml(value: string): string {
 
 .group-row {
   margin-top: 6px;
+}
+
+.matches-scroll {
+  max-height: 360px;
+}
+
+.replace-actions {
+  margin-top: 8px;
 }
 </style>
 
