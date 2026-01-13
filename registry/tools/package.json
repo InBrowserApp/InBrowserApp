@@ -20,6 +20,7 @@
     "@tools/basic-auth-generator": "workspace:*",
     "@tools/bcrypt-hash-password": "workspace:*",
     "@tools/bcrypt-hash-password-verifier": "workspace:*",
+    "@tools/bip39-mnemonic-generator": "workspace:*",
     "@tools/blake2b-hash-text-or-file": "workspace:*",
     "@tools/blake2s-hash-text-or-file": "workspace:*",
     "@tools/case-converter": "workspace:*",
