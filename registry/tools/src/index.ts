@@ -64,6 +64,7 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
@@ -138,6 +139,7 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  prettierCodeFormatterToolInfo,
 
   // PDF Tools
   pdfToolsToolInfo,

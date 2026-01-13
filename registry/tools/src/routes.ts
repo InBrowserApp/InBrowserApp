@@ -62,6 +62,7 @@ import { routes as jsonToXmlConverterRoutes } from '@tools/json-to-xml-converter
 import { routes as csvToJsonConverterRoutes } from '@tools/csv-to-json-converter/routes'
 import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter/routes'
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
+import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
@@ -157,6 +158,7 @@ export const routes: ToolRoute[] = [
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,
+  ...prettierCodeFormatterRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,
