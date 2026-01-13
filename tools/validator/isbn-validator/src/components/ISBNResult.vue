@@ -10,7 +10,7 @@
           <NText code>{{ validationResult.normalized || '-' }}</NText>
           <CopyToClipboardButton
             v-if="validationResult.normalized"
-            :text="validationResult.normalized"
+            :content="validationResult.normalized"
             size="small"
           />
         </NFlex>
@@ -31,7 +31,7 @@
           <NText code>{{ isbn10Display }}</NText>
           <CopyToClipboardButton
             v-if="validationResult.isbn10"
-            :text="validationResult.isbn10"
+            :content="validationResult.isbn10"
             size="small"
           />
         </NFlex>
@@ -41,7 +41,7 @@
           <NText code>{{ isbn13Display }}</NText>
           <CopyToClipboardButton
             v-if="validationResult.isbn13"
-            :text="validationResult.isbn13"
+            :content="validationResult.isbn13"
             size="small"
           />
         </NFlex>
