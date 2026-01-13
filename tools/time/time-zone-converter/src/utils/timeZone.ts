@@ -5,6 +5,7 @@ export type DateTimeParts = {
   hour: number
   minute: number
   second: number
+  millisecond: number
 }
 
 const fallbackTimeZones = [
@@ -103,7 +104,9 @@ export function parseDateTimeInput(value: string): DateTimeParts | null {
   const trimmed = value.trim()
   if (!trimmed) return null
 
-  const match = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?)?$/)
+  const match = trimmed.match(
+    /^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2})(?:[.,](\d{1,3}))?)?)?$/,
+  )
 
   if (!match) return null
 
@@ -113,20 +116,22 @@ export function parseDateTimeInput(value: string): DateTimeParts | null {
   const hour = Number(match[4] ?? 0)
   const minute = Number(match[5] ?? 0)
   const second = Number(match[6] ?? 0)
+  const millisecond = match[7] ? Number(match[7].padEnd(3, '0')) : 0
 
-  const date = new Date(Date.UTC(year, month - 1, day, hour, minute, second))
+  const date = new Date(Date.UTC(year, month - 1, day, hour, minute, second, millisecond))
   if (
     date.getUTCFullYear() !== year ||
     date.getUTCMonth() !== month - 1 ||
     date.getUTCDate() !== day ||
     date.getUTCHours() !== hour ||
     date.getUTCMinutes() !== minute ||
-    date.getUTCSeconds() !== second
+    date.getUTCSeconds() !== second ||
+    date.getUTCMilliseconds() !== millisecond
   ) {
     return null
   }
 
-  return { year, month, day, hour, minute, second }
+  return { year, month, day, hour, minute, second, millisecond }
 }
 
 export function formatDateTimeParts(parts: DateTimeParts): string {
@@ -136,7 +141,8 @@ export function formatDateTimeParts(parts: DateTimeParts): string {
   const hour = String(parts.hour).padStart(2, '0')
   const minute = String(parts.minute).padStart(2, '0')
   const second = String(parts.second).padStart(2, '0')
-  return `${year}-${month}-${day} ${hour}:${minute}:${second}`
+  const millisecond = String(parts.millisecond).padStart(3, '0')
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}.${millisecond}`
 }
 
 function getZonedParts(timestamp: number, timeZone: string): DateTimeParts {
@@ -156,6 +162,7 @@ function getZonedParts(timestamp: number, timeZone: string): DateTimeParts {
     hour: Number(map.get('hour')),
     minute: Number(map.get('minute')),
     second: Number(map.get('second')),
+    millisecond: new Date(timestamp).getUTCMilliseconds(),
   }
 }
 
@@ -168,6 +175,7 @@ export function getTimeZoneOffsetMs(timestamp: number, timeZone: string): number
     parts.hour,
     parts.minute,
     parts.second,
+    parts.millisecond,
   )
   return asUTC - timestamp
 }
@@ -184,6 +192,7 @@ export function toUtcTimestamp(parts: DateTimeParts, timeZone: string): number {
     parts.hour,
     parts.minute,
     parts.second,
+    parts.millisecond,
   )
   const offset = getTimeZoneOffsetMs(guess, timeZone)
   let utc = guess - offset

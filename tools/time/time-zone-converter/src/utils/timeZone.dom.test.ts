@@ -17,6 +17,28 @@ describe('parseDateTimeInput', () => {
       hour: 3,
       minute: 4,
       second: 5,
+      millisecond: 0,
+    })
+  })
+
+  it('parses fractional seconds', () => {
+    expect(parseDateTimeInput('2024-01-02 03:04:05.6')).toEqual({
+      year: 2024,
+      month: 1,
+      day: 2,
+      hour: 3,
+      minute: 4,
+      second: 5,
+      millisecond: 600,
+    })
+    expect(parseDateTimeInput('2024-01-02 03:04:05.006')).toEqual({
+      year: 2024,
+      month: 1,
+      day: 2,
+      hour: 3,
+      minute: 4,
+      second: 5,
+      millisecond: 6,
     })
   })
 
@@ -31,12 +53,12 @@ describe('time zone conversions', () => {
   })
 
   it('formats UTC timestamps in UTC', () => {
-    expect(formatInTimeZone(0, 'UTC')).toBe('1970-01-01 00:00:00')
+    expect(formatInTimeZone(0, 'UTC')).toBe('1970-01-01 00:00:00.000')
   })
 
   it('converts a UTC time to timestamp', () => {
     const utc = toUtcTimestamp(
-      { year: 1970, month: 1, day: 1, hour: 0, minute: 0, second: 0 },
+      { year: 1970, month: 1, day: 1, hour: 0, minute: 0, second: 0, millisecond: 0 },
       'UTC',
     )
     expect(utc).toBe(0)
@@ -44,10 +66,10 @@ describe('time zone conversions', () => {
 
   it('converts Asia/Shanghai to the expected UTC time', () => {
     const utc = toUtcTimestamp(
-      { year: 2024, month: 1, day: 1, hour: 0, minute: 0, second: 0 },
+      { year: 2024, month: 1, day: 1, hour: 0, minute: 0, second: 0, millisecond: 0 },
       'Asia/Shanghai',
     )
-    expect(formatInTimeZone(utc, 'UTC')).toBe('2023-12-31 16:00:00')
+    expect(formatInTimeZone(utc, 'UTC')).toBe('2023-12-31 16:00:00.000')
   })
 
   it('formats offsets with sign and padding', () => {
