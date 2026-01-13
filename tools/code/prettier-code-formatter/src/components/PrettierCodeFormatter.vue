@@ -8,9 +8,6 @@
           </template>
           {{ t('import-from-file') }}
         </n-button>
-        <n-button @click="formatNow" text>
-          {{ t('format-now') }}
-        </n-button>
       </n-flex>
 
       <n-flex align="center" wrap>
@@ -51,10 +48,10 @@
       <n-form-item-gi :label="t('use-tabs')" :show-feedback="false">
         <n-switch v-model:value="useTabs" />
       </n-form-item-gi>
-      <n-form-item-gi :label="t('semi')" :show-feedback="false">
+      <n-form-item-gi v-if="supportsSemi" :label="t('semi')" :show-feedback="false">
         <n-switch v-model:value="semi" />
       </n-form-item-gi>
-      <n-form-item-gi :label="t('single-quote')" :show-feedback="false">
+      <n-form-item-gi v-if="supportsSingleQuote" :label="t('single-quote')" :show-feedback="false">
         <n-switch v-model:value="singleQuote" />
       </n-form-item-gi>
       <n-form-item-gi
@@ -71,6 +68,7 @@
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
       <n-form-item-gi :label="t('input-code')" :show-feedback="false">
         <n-input
+          class="code-input"
           v-model:value="sourceCode"
           type="textarea"
           :autosize="{ minRows: 10, maxRows: 24 }"
@@ -120,8 +118,12 @@ import { ArrowDownload16Regular, Document16Regular } from '@shared/icons/fluent'
 import { fileOpen } from 'browser-fs-access'
 import { format } from 'prettier/standalone'
 import type { Plugin } from 'prettier'
+import parserAngular from 'prettier/plugins/angular'
 import parserBabel from 'prettier/plugins/babel'
 import parserEstree from 'prettier/plugins/estree'
+import parserFlow from 'prettier/plugins/flow'
+import parserGlimmer from 'prettier/plugins/glimmer'
+import parserGraphql from 'prettier/plugins/graphql'
 import parserTypescript from 'prettier/plugins/typescript'
 import parserHtml from 'prettier/plugins/html'
 import parserPostcss from 'prettier/plugins/postcss'
@@ -134,6 +136,9 @@ import json from 'highlight.js/lib/languages/json'
 import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
 import scss from 'highlight.js/lib/languages/scss'
+import less from 'highlight.js/lib/languages/less'
+import graphql from 'highlight.js/lib/languages/graphql'
+import handlebars from 'highlight.js/lib/languages/handlebars'
 import markdown from 'highlight.js/lib/languages/markdown'
 import yaml from 'highlight.js/lib/languages/yaml'
 
@@ -143,6 +148,9 @@ hljs.registerLanguage('json', json)
 hljs.registerLanguage('xml', xml)
 hljs.registerLanguage('css', css)
 hljs.registerLanguage('scss', scss)
+hljs.registerLanguage('less', less)
+hljs.registerLanguage('graphql', graphql)
+hljs.registerLanguage('handlebars', handlebars)
 hljs.registerLanguage('markdown', markdown)
 hljs.registerLanguage('yaml', yaml)
 
@@ -151,12 +159,22 @@ const { t } = useI18n()
 const languageKeys = [
   'javascript',
   'typescript',
+  'flow',
   'json',
+  'json5',
+  'jsonc',
   'html',
+  'angular',
+  'vue',
+  'lwc',
+  'handlebars',
   'css',
   'scss',
+  'less',
   'markdown',
+  'mdx',
   'yaml',
+  'graphql',
 ] as const
 
 type LanguageKey = (typeof languageKeys)[number]
@@ -167,6 +185,9 @@ type LanguageConfig = {
   highlight: string
   extensions: string[]
   sample: string
+  supportsSemi?: boolean
+  supportsSingleQuote?: boolean
+  supportsTrailingComma?: boolean
 }
 
 const languageConfigs: Record<LanguageKey, LanguageConfig> = {
@@ -175,6 +196,9 @@ const languageConfigs: Record<LanguageKey, LanguageConfig> = {
     plugins: [parserBabel, parserEstree],
     highlight: 'javascript',
     extensions: ['.js', '.jsx', '.mjs', '.cjs'],
+    supportsSemi: true,
+    supportsSingleQuote: true,
+    supportsTrailingComma: true,
     sample: `const greeting = (name) => {\n  return { message: 'Hello ' + name, items: [1, 2, 3] }\n}\n`,
   },
   typescript: {
@@ -182,7 +206,20 @@ const languageConfigs: Record<LanguageKey, LanguageConfig> = {
     plugins: [parserTypescript, parserEstree],
     highlight: 'typescript',
     extensions: ['.ts', '.tsx'],
+    supportsSemi: true,
+    supportsSingleQuote: true,
+    supportsTrailingComma: true,
     sample: `type User = { id: number; name: string }\n\nconst users: User[] = [{ id: 1, name: 'Ada' }]\n`,
+  },
+  flow: {
+    parser: 'flow',
+    plugins: [parserFlow, parserEstree],
+    highlight: 'javascript',
+    extensions: ['.js', '.jsx'],
+    supportsSemi: true,
+    supportsSingleQuote: true,
+    supportsTrailingComma: true,
+    sample: `/* @flow */\ntype User = { id: number, name: string }\n\nconst user: User = { id: 1, name: 'Ada' }\n`,
   },
   json: {
     parser: 'json',
@@ -195,18 +232,74 @@ const languageConfigs: Record<LanguageKey, LanguageConfig> = {
   "active": true
 }\n`,
   },
+  json5: {
+    parser: 'json5',
+    plugins: [parserBabel, parserEstree],
+    highlight: 'json',
+    extensions: ['.json5'],
+    sample: `{
+  // JSON5 supports comments
+  unquoted: 'value',
+  trailing: true,
+}\n`,
+  },
+  jsonc: {
+    parser: 'jsonc',
+    plugins: [parserBabel, parserEstree],
+    highlight: 'json',
+    extensions: ['.jsonc'],
+    sample: `{
+  // JSON with comments
+  "name": "Example",
+  "enabled": true
+}\n`,
+  },
   html: {
     parser: 'html',
     plugins: [parserHtml],
     highlight: 'xml',
     extensions: ['.html', '.htm'],
+    supportsSingleQuote: true,
     sample: `<div class="card"><h1>Hello</h1><p>Prettier formatting</p></div>\n`,
+  },
+  angular: {
+    parser: 'angular',
+    plugins: [parserAngular],
+    highlight: 'xml',
+    extensions: ['.html', '.htm'],
+    supportsSingleQuote: true,
+    sample: `<div *ngIf="isReady">{{ title }}</div>\n`,
+  },
+  vue: {
+    parser: 'vue',
+    plugins: [parserHtml],
+    highlight: 'xml',
+    extensions: ['.vue'],
+    supportsSingleQuote: true,
+    sample: `<template>\n  <div class="card">{{ message }}</div>\n</template>\n\n<script setup lang="ts">\nconst message = 'Hello'\n<\\/script>\n`,
+  },
+  lwc: {
+    parser: 'lwc',
+    plugins: [parserHtml],
+    highlight: 'xml',
+    extensions: ['.html', '.htm'],
+    supportsSingleQuote: true,
+    sample: `<template>\n  <lightning-button label="Hello" onclick={handleClick}></lightning-button>\n</template>\n`,
+  },
+  handlebars: {
+    parser: 'glimmer',
+    plugins: [parserGlimmer],
+    highlight: 'handlebars',
+    extensions: ['.hbs', '.handlebars', '.mustache'],
+    supportsSingleQuote: true,
+    sample: `{{#if isReady}}\n  <span>{{title}}</span>\n{{/if}}\n`,
   },
   css: {
     parser: 'css',
     plugins: [parserPostcss],
     highlight: 'css',
     extensions: ['.css'],
+    supportsSingleQuote: true,
     sample: `.card {\n  display: flex;\n  gap: 12px;\n}\n`,
   },
   scss: {
@@ -214,7 +307,16 @@ const languageConfigs: Record<LanguageKey, LanguageConfig> = {
     plugins: [parserPostcss],
     highlight: 'scss',
     extensions: ['.scss'],
+    supportsSingleQuote: true,
     sample: `$primary: #2b4b6f;\n\n.card {\n  color: $primary;\n  &:hover {\n    opacity: 0.9;\n  }\n}\n`,
+  },
+  less: {
+    parser: 'less',
+    plugins: [parserPostcss],
+    highlight: 'less',
+    extensions: ['.less'],
+    supportsSingleQuote: true,
+    sample: `@primary: #2b4b6f;\n\n.card {\n  color: @primary;\n  &:hover {\n    opacity: 0.9;\n  }\n}\n`,
   },
   markdown: {
     parser: 'markdown',
@@ -223,12 +325,29 @@ const languageConfigs: Record<LanguageKey, LanguageConfig> = {
     extensions: ['.md', '.markdown'],
     sample: `# Prettier Formatter\n\n- Paste your code\n- Adjust options\n`,
   },
+  mdx: {
+    parser: 'mdx',
+    plugins: [parserMarkdown],
+    highlight: 'markdown',
+    extensions: ['.mdx'],
+    supportsSemi: true,
+    supportsSingleQuote: true,
+    supportsTrailingComma: true,
+    sample: `# MDX Example\n\n<Alert>Hi</Alert>\n\nexport const answer = 42\n`,
+  },
   yaml: {
     parser: 'yaml',
     plugins: [parserYaml],
     highlight: 'yaml',
     extensions: ['.yaml', '.yml'],
     sample: `name: Example\nitems:\n  - one\n  - two\n`,
+  },
+  graphql: {
+    parser: 'graphql',
+    plugins: [parserGraphql],
+    highlight: 'graphql',
+    extensions: ['.graphql', '.gql'],
+    sample: `query User($id: ID!) {\n  user(id: $id) {\n    id\n    name\n  }\n}\n`,
   },
 }
 
@@ -256,8 +375,11 @@ const languageOptions = computed(() =>
   })),
 )
 
-const trailingCommaLanguages = new Set<LanguageKey>(['javascript', 'typescript'])
-const supportsTrailingComma = computed(() => trailingCommaLanguages.has(language.value))
+const supportsTrailingComma = computed(
+  () => activeLanguageConfig.value.supportsTrailingComma === true,
+)
+const supportsSemi = computed(() => activeLanguageConfig.value.supportsSemi === true)
+const supportsSingleQuote = computed(() => activeLanguageConfig.value.supportsSingleQuote === true)
 
 const trailingCommaOptions = computed(() => [
   { label: t('trailing-none'), value: 'none' },
@@ -276,15 +398,25 @@ const extensionToLanguage: Record<string, LanguageKey> = {
   cjs: 'javascript',
   ts: 'typescript',
   tsx: 'typescript',
+  json5: 'json5',
   json: 'json',
+  jsonc: 'jsonc',
   html: 'html',
   htm: 'html',
+  vue: 'vue',
   css: 'css',
   scss: 'scss',
+  less: 'less',
   md: 'markdown',
   markdown: 'markdown',
+  mdx: 'mdx',
   yaml: 'yaml',
   yml: 'yaml',
+  graphql: 'graphql',
+  gql: 'graphql',
+  hbs: 'handlebars',
+  handlebars: 'handlebars',
+  mustache: 'handlebars',
 }
 
 let formatToken = 0
@@ -330,8 +462,8 @@ async function formatCode(value: string): Promise<void> {
       printWidth: printWidth.value,
       tabWidth: tabWidth.value,
       useTabs: useTabs.value,
-      semi: semi.value,
-      singleQuote: singleQuote.value,
+      semi: supportsSemi.value ? semi.value : true,
+      singleQuote: supportsSingleQuote.value ? singleQuote.value : false,
       trailingComma: supportsTrailingComma.value ? trailingComma.value : 'none',
     })
 
@@ -350,10 +482,6 @@ async function formatCode(value: string): Promise<void> {
     formattedCode.value = ''
     formatError.value = errorMessage
   }
-}
-
-function formatNow(): void {
-  void formatCode(sourceCode.value)
 }
 
 function detectLanguage(filename: string): LanguageKey | null {
@@ -423,7 +551,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "zh": {
     "import-from-file": "从文件导入",
@@ -450,7 +588,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "zh-CN": {
     "import-from-file": "从文件导入",
@@ -477,7 +625,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "zh-TW": {
     "import-from-file": "從檔案匯入",
@@ -504,7 +662,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "zh-HK": {
     "import-from-file": "從檔案匯入",
@@ -531,7 +699,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "es": {
     "import-from-file": "Importar desde archivo",
@@ -558,7 +736,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "fr": {
     "import-from-file": "Importer depuis un fichier",
@@ -585,7 +773,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "de": {
     "import-from-file": "Aus Datei importieren",
@@ -612,7 +810,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "it": {
     "import-from-file": "Importa da file",
@@ -639,7 +847,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "ja": {
     "import-from-file": "ファイルから読み込み",
@@ -666,7 +884,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "ko": {
     "import-from-file": "파일에서 가져오기",
@@ -693,7 +921,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "ru": {
     "import-from-file": "Импорт из файла",
@@ -720,7 +958,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "pt": {
     "import-from-file": "Importar de arquivo",
@@ -747,7 +995,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "ar": {
     "import-from-file": "استيراد من ملف",
@@ -774,7 +1032,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "hi": {
     "import-from-file": "फ़ाइल से आयात करें",
@@ -801,7 +1069,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "tr": {
     "import-from-file": "Dosyadan içe aktar",
@@ -828,7 +1106,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "nl": {
     "import-from-file": "Importeren uit bestand",
@@ -855,7 +1143,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "sv": {
     "import-from-file": "Importera från fil",
@@ -882,7 +1180,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "pl": {
     "import-from-file": "Importuj z pliku",
@@ -909,7 +1217,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "vi": {
     "import-from-file": "Nhập từ tệp",
@@ -936,7 +1254,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "th": {
     "import-from-file": "นำเข้าจากไฟล์",
@@ -963,7 +1291,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "id": {
     "import-from-file": "Impor dari file",
@@ -990,7 +1328,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "he": {
     "import-from-file": "ייבוא מקובץ",
@@ -1017,7 +1365,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "ms": {
     "import-from-file": "Import dari fail",
@@ -1044,7 +1402,17 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   },
   "no": {
     "import-from-file": "Importer fra fil",
@@ -1071,7 +1439,25 @@ function downloadFormatted(): void {
     "lang-css": "CSS",
     "lang-scss": "SCSS",
     "lang-markdown": "Markdown",
-    "lang-yaml": "YAML"
+    "lang-yaml": "YAML",
+    "lang-flow": "Flow",
+    "lang-json5": "JSON5",
+    "lang-jsonc": "JSONC",
+    "lang-angular": "Angular",
+    "lang-vue": "Vue",
+    "lang-lwc": "LWC",
+    "lang-handlebars": "Handlebars",
+    "lang-less": "Less",
+    "lang-mdx": "MDX",
+    "lang-graphql": "GraphQL"
   }
 }
 </i18n>
+
+<style scoped>
+.code-input :deep(textarea) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+</style>
