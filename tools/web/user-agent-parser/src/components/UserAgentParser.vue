@@ -1,18 +1,20 @@
 <template>
   <ToolSection>
-    <n-flex align="center">
-      <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
-        <template #icon>
-          <n-icon :component="GlobePerson20Regular" />
-        </template>
-        {{ t('use-current') }}
-      </n-button>
-    </n-flex>
-  </ToolSection>
-
-  <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item-gi :label="t('input-label')" :show-feedback="false">
+      <n-form-item-gi :show-feedback="false">
+        <template #label>
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; width: 100%"
+          >
+            <span>{{ t('input-label') }}</span>
+            <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
+              <template #icon>
+                <n-icon :component="GlobePerson20Regular" />
+              </template>
+              {{ t('use-current') }}
+            </n-button>
+          </div>
+        </template>
         <n-input
           v-model:value="userAgent"
           type="textarea"
