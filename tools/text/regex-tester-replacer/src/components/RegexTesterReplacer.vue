@@ -1,6 +1,16 @@
 <template>
   <n-grid cols="1 l:2" responsive="screen" :x-gap="24" :y-gap="24">
     <n-gi>
+      <ToolSectionHeader>{{ t('input-title') }}</ToolSectionHeader>
+      <ToolSection>
+        <TextOrFileInput
+          v-model:value="textOrFile"
+          accept="text/*,.txt,.log,.md,.json,.csv,.yaml,.yml"
+          :placeholder="t('input-placeholder')"
+          :wrap-with-form-item="false"
+        />
+      </ToolSection>
+
       <ToolSectionHeader>{{ t('pattern-title') }}</ToolSectionHeader>
       <ToolSection>
         <n-grid cols="1 s:2" :x-gap="12" :y-gap="12">
@@ -43,16 +53,6 @@
           <n-text depth="3" class="flags-hint">{{ t('flags-hint') }}</n-text>
           <n-text depth="3" class="hint">{{ t('auto-run-hint') }}</n-text>
         </n-flex>
-      </ToolSection>
-
-      <ToolSectionHeader>{{ t('input-title') }}</ToolSectionHeader>
-      <ToolSection>
-        <TextOrFileInput
-          v-model:value="textOrFile"
-          accept="text/*,.txt,.log,.md,.json,.csv,.yaml,.yml"
-          :placeholder="t('input-placeholder')"
-          :wrap-with-form-item="false"
-        />
       </ToolSection>
     </n-gi>
 
