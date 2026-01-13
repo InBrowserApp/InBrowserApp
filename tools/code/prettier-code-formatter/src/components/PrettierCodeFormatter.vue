@@ -36,7 +36,7 @@
           :min="40"
           :max="200"
           size="small"
-          style="width: 120px"
+          style="width: 100%"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="t('tab-width')" :show-feedback="false">
@@ -45,7 +45,7 @@
           :min="1"
           :max="8"
           size="small"
-          style="width: 120px"
+          style="width: 100%"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="t('use-tabs')" :show-feedback="false">
@@ -57,7 +57,7 @@
       <n-form-item-gi :label="t('single-quote')" :show-feedback="false">
         <n-switch v-model:value="singleQuote" />
       </n-form-item-gi>
-      <n-form-item-gi :label="t('trailing-comma')" :show-feedback="false">
+      <n-form-item-gi v-if="supportsTrailingComma" :label="t('trailing-comma')" :show-feedback="false">
         <n-select v-model:value="trailingComma" :options="trailingCommaOptions" size="small" />
       </n-form-item-gi>
     </n-grid>
@@ -252,6 +252,9 @@ const languageOptions = computed(() =>
   })),
 )
 
+const trailingCommaLanguages = new Set<LanguageKey>(['javascript', 'typescript'])
+const supportsTrailingComma = computed(() => trailingCommaLanguages.has(language.value))
+
 const trailingCommaOptions = computed(() => [
   { label: t('trailing-none'), value: 'none' },
   { label: t('trailing-es5'), value: 'es5' },
@@ -325,7 +328,7 @@ async function formatCode(value: string): Promise<void> {
       useTabs: useTabs.value,
       semi: semi.value,
       singleQuote: singleQuote.value,
-      trailingComma: trailingComma.value,
+      trailingComma: supportsTrailingComma.value ? trailingComma.value : 'none',
     })
 
     if (token !== formatToken) {
