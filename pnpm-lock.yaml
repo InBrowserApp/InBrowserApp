@@ -205,8 +205,8 @@ catalogs:
       specifier: 11.11.1
       version: 11.11.1
     hono:
-      specifier: ^4.11.3
-      version: 4.11.3
+      specifier: ^4.11.4
+      version: 4.11.4
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -1018,7 +1018,7 @@ importers:
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       gitignore:
         specifier: github:github/gitignore
-        version: https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e
+        version: https://codeload.github.com/github/gitignore/tar.gz/96a44720e8422b56fc195f442316a381bfc6db39
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -3900,7 +3900,7 @@ importers:
         version: 11.11.1
       hono:
         specifier: 'catalog:'
-        version: 4.11.3
+        version: 4.11.4
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -3930,7 +3930,7 @@ importers:
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       hono:
         specifier: 'catalog:'
-        version: 4.11.3
+        version: 4.11.4
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -7342,8 +7342,8 @@ packages:
     resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
     engines: {node: '>=10'}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e:
-    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/96a44720e8422b56fc195f442316a381bfc6db39:
+    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/96a44720e8422b56fc195f442316a381bfc6db39}
     version: 0.0.0
 
   glob-parent@5.1.2:
@@ -7423,8 +7423,8 @@ packages:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
 
-  hono@4.11.3:
-    resolution: {integrity: sha512-PmQi306+M/ct/m5s66Hrg+adPnkD5jiO6IjA7WhWw0gSBSo1EcRegwuI1deZ+wd5pzCGynCcn2DprnE4/yEV4w==}
+  hono@4.11.4:
+    resolution: {integrity: sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -12620,7 +12620,7 @@ snapshots:
 
   github-markdown-css@5.8.1: {}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/86922aee426c32ffb6098f9a38c42da75169501e: {}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/96a44720e8422b56fc195f442316a381bfc6db39: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -12702,7 +12702,7 @@ snapshots:
 
   highlight.js@11.11.1: {}
 
-  hono@4.11.3: {}
+  hono@4.11.4: {}
 
   hookable@5.5.3: {}
 
