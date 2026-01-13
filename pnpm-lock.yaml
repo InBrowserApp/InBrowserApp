@@ -129,6 +129,12 @@ catalogs:
     '@zip.js/zip.js':
       specifier: ^2.8.14
       version: 2.8.14
+    ajv:
+      specifier: ^8.17.1
+      version: 8.17.1
+    ajv-formats:
+      specifier: ^3.0.1
+      version: 3.0.1
     bcrypt-ts:
       specifier: ^8.0.0
       version: 8.0.0
@@ -654,6 +660,9 @@ importers:
       '@tools/json-formatter':
         specifier: workspace:*
         version: link:../../tools/code/json-formatter
+      '@tools/json-schema-validator':
+        specifier: workspace:*
+        version: link:../../tools/validator/json-schema-validator
       '@tools/json-to-csv-converter':
         specifier: workspace:*
         version: link:../../tools/code/json-to-csv-converter
@@ -3493,6 +3502,33 @@ importers:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
+  tools/validator/json-schema-validator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/json-schema':
+        specifier: workspace:*
+        version: link:../../../utils/json-schema
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+
   tools/web/aes-decryptor:
     dependencies:
       '@shared/icons':
@@ -4047,6 +4083,15 @@ importers:
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
+
+  utils/json-schema:
+    dependencies:
+      ajv:
+        specifier: 'catalog:'
+        version: 8.17.1
+      ajv-formats:
+        specifier: 'catalog:'
+        version: 3.0.1(ajv@8.17.1)
 
   utils/mac-address:
     dependencies:
@@ -6322,6 +6367,14 @@ packages:
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
+
+  ajv-formats@3.0.1:
+    resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -11373,6 +11426,10 @@ snapshots:
   acorn@8.15.0: {}
 
   agent-base@7.1.4: {}
+
+  ajv-formats@3.0.1(ajv@8.17.1):
+    optionalDependencies:
+      ajv: 8.17.1
 
   ajv@6.12.6:
     dependencies:

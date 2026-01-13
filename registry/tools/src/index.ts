@@ -66,6 +66,7 @@ import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-conve
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
+import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
@@ -224,6 +225,7 @@ export const tools: ToolInfo[] = [
   aesDecryptorToolInfo,
 
   // Validator Tools
+  jsonSchemaValidatorToolInfo,
   creditCardValidatorToolInfo,
   isbnValidatorToolInfo,
 
