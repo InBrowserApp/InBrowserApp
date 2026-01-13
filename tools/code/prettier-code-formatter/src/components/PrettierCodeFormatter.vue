@@ -351,10 +351,11 @@ function formatNow(): void {
 
 function detectLanguage(filename: string): LanguageKey | null {
   const match = filename.toLowerCase().match(/\.([a-z0-9]+)$/)
-  if (!match) {
+  const extension = match?.[1]
+  if (!extension) {
     return null
   }
-  return extensionToLanguage[match[1]] ?? null
+  return extensionToLanguage[extension] ?? null
 }
 
 async function importFromFile(): Promise<void> {
