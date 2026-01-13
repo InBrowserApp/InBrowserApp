@@ -170,10 +170,21 @@ import {
 const { t } = useI18n()
 
 const timeZones = getSupportedTimeZones()
-const timeZoneOptions = timeZones.map((timeZone) => ({
-  label: timeZone,
-  value: timeZone,
-}))
+const optionReferenceTimestamp = Date.now()
+const timeZoneOptions = timeZones.map((timeZone) => {
+  try {
+    const offsetLabel = formatOffsetLabel(getTimeZoneOffsetMs(optionReferenceTimestamp, timeZone))
+    return {
+      label: `${timeZone} (${offsetLabel})`,
+      value: timeZone,
+    }
+  } catch {
+    return {
+      label: timeZone,
+      value: timeZone,
+    }
+  }
+})
 
 const resolvedTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 const defaultFromTimeZone = isTimeZoneSupported(resolvedTimeZone) ? resolvedTimeZone : 'UTC'
