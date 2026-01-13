@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.2.0...v1.3.0) (2026-01-09)
+
+
+### Features
+
+* **tools:** add HMAC Generator tool ([#134](https://github.com/InBrowserApp/InBrowserApp/issues/134)) ([fa25fe8](https://github.com/InBrowserApp/InBrowserApp/commit/fa25fe8dd20cc8fffa878bddb6f8f660332555e4))
+* **tools:** add HTML Color Names tool ([#133](https://github.com/InBrowserApp/InBrowserApp/issues/133)) ([de4cbfd](https://github.com/InBrowserApp/InBrowserApp/commit/de4cbfd6939a3cbcfdba6a72019e597815ba7156))
+* **tools:** add QR Code Reader tool ([#136](https://github.com/InBrowserApp/InBrowserApp/issues/136)) ([d44cc2e](https://github.com/InBrowserApp/InBrowserApp/commit/d44cc2e5a7152b1b6f9081c78f18e95f474408f2))
+* **tools:** add SSH Key Generator tool ([#124](https://github.com/InBrowserApp/InBrowserApp/issues/124)) ([6ae5f01](https://github.com/InBrowserApp/InBrowserApp/commit/6ae5f018367ef7a5a495723e949a7525847b664a))
+* **tools:** add SVG Optimizer tool ([#135](https://github.com/InBrowserApp/InBrowserApp/issues/135)) ([e7feef9](https://github.com/InBrowserApp/InBrowserApp/commit/e7feef93431b48caa062b76ee4212592383691e1))
+
 ## [1.2.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.1.0...v1.2.0) (2026-01-07)
 
 
