@@ -29,10 +29,12 @@
 
       <n-form-item-gi :show-feedback="false">
         <template #label>
-          <n-flex align="center" justify="space-between" style="width: 100%">
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; width: 100%"
+          >
             <span>{{ t('json-output') }}</span>
             <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
-          </n-flex>
+          </div>
         </template>
         <n-card v-if="hasOutput" size="small">
           <n-code :code="renderedJson" language="json" :hljs="hljs" word-wrap />
@@ -42,8 +44,8 @@
     </n-grid>
   </ToolSection>
 
+  <ToolSectionHeader>{{ t('parsed-details') }}</ToolSectionHeader>
   <ToolSection>
-    <ToolSectionHeader>{{ t('parsed-details') }}</ToolSectionHeader>
     <n-empty v-if="!hasOutput" :description="t('empty-state')" />
     <n-grid v-else cols="1 s:2 l:3" responsive="screen" :x-gap="12" :y-gap="12">
       <ParsedSection :title="t('browser')" :items="browserItems" />
@@ -60,18 +62,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import UAParser from 'ua-parser-js'
-import {
-  NButton,
-  NCard,
-  NCode,
-  NEmpty,
-  NFlex,
-  NFormItemGi,
-  NGrid,
-  NIcon,
-  NInput,
-  NText,
-} from 'naive-ui'
+import { NButton, NCard, NCode, NEmpty, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import hljs from 'highlight.js/lib/core'
