@@ -38,6 +38,7 @@
     "@tools/data-uri-to-file-converter": "workspace:*",
     "@tools/device-information": "workspace:*",
     "@tools/dns-lookup": "workspace:*",
+    "@tools/duration-calculator": "workspace:*",
     "@tools/exif-viewer": "workspace:*",
     "@tools/favicon-assets-generator": "workspace:*",
     "@tools/file-to-data-uri-converter": "workspace:*",

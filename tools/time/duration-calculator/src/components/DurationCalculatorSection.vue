@@ -252,14 +252,14 @@ const defaultTimeZone = isTimeZoneSupported(resolvedTimeZone) ? resolvedTimeZone
 
 const nowTimestamp = Date.now()
 
-const baseTimeZone = useStorage('tools:time-diff-calculator:base-timezone', defaultTimeZone)
+const baseTimeZone = useStorage('tools:duration-calculator:base-timezone', defaultTimeZone)
 const baseInput = useStorage(
-  'tools:time-diff-calculator:base-input',
+  'tools:duration-calculator:base-input',
   formatInTimeZone(nowTimestamp, defaultTimeZone),
 )
 
-const durationIsoInput = useStorage('tools:time-diff-calculator:duration-iso', 'PT1H')
-const durationParts = useStorage<DurationParts>('tools:time-diff-calculator:duration-parts', {
+const durationIsoInput = useStorage('tools:duration-calculator:duration-iso', 'PT1H')
+const durationParts = useStorage<DurationParts>('tools:duration-calculator:duration-parts', {
   days: 0,
   hours: 1,
   minutes: 0,

@@ -70,6 +70,7 @@ import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-conv
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as timeDiffCalculatorRoutes } from '@tools/time-diff-calculator/routes'
+import { routes as durationCalculatorRoutes } from '@tools/duration-calculator/routes'
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
 import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-generator/routes'
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
@@ -173,6 +174,7 @@ export const routes: ToolRoute[] = [
   ...unixTimestampConverterRoutes,
   ...timeZoneConverterRoutes,
   ...timeDiffCalculatorRoutes,
+  ...durationCalculatorRoutes,
   ...cronExpressionParserRoutes,
   ...cronExpressionGeneratorRoutes,
   ...textDiffRoutes,
