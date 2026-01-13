@@ -57,7 +57,11 @@
       <n-form-item-gi :label="t('single-quote')" :show-feedback="false">
         <n-switch v-model:value="singleQuote" />
       </n-form-item-gi>
-      <n-form-item-gi v-if="supportsTrailingComma" :label="t('trailing-comma')" :show-feedback="false">
+      <n-form-item-gi
+        v-if="supportsTrailingComma"
+        :label="t('trailing-comma')"
+        :show-feedback="false"
+      >
         <n-select v-model:value="trailingComma" :options="trailingCommaOptions" size="small" />
       </n-form-item-gi>
     </n-grid>
