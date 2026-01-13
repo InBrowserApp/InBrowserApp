@@ -71,7 +71,7 @@ describe('ValidationResult', () => {
   })
 
   it('renders errors when provided', () => {
-    const props = {
+    const props: ValidationResultProps = {
       ...baseProps,
       statusValue: 'Invalid',
       statusType: 'error',
