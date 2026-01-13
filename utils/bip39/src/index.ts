@@ -4,6 +4,13 @@ import {
   validateMnemonic as bip39ValidateMnemonic,
   wordlists,
 } from 'bip39'
+import { Buffer } from 'buffer'
+
+// bip39 relies on Buffer in browser bundles, so provide a global shim.
+const globalBuffer = globalThis as typeof globalThis & { Buffer?: typeof Buffer }
+if (!globalBuffer.Buffer) {
+  globalBuffer.Buffer = Buffer
+}
 
 export const BIP39_WORDLISTS = {
   english: wordlists.english,

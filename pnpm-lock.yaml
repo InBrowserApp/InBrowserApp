@@ -3934,6 +3934,9 @@ importers:
       bip39:
         specifier: 'catalog:'
         version: 3.1.0
+      buffer:
+        specifier: 'catalog:'
+        version: 6.0.3
 
   utils/dns: {}
 

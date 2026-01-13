@@ -7,6 +7,7 @@
   },
   "type": "module",
   "dependencies": {
-    "bip39": "catalog:"
+    "bip39": "catalog:",
+    "buffer": "catalog:"
   }
 }
