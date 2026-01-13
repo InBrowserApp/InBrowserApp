@@ -8,6 +8,7 @@
         :validation-status="schemaStatus"
       >
         <TextOrFileInput
+          class="monospace-input"
           :value="schemaValue"
           :accept="accept"
           :placeholder="schemaPlaceholder"
@@ -26,6 +27,7 @@
         :validation-status="dataStatus"
       >
         <TextOrFileInput
+          class="monospace-input"
           :value="dataValue"
           :accept="accept"
           :placeholder="dataPlaceholder"
@@ -67,3 +69,11 @@ defineEmits<{
 
 const accept = '.json,.txt'
 </script>
+
+<style scoped>
+.monospace-input :deep(textarea) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+</style>
