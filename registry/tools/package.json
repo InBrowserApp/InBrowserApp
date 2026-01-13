@@ -52,6 +52,7 @@
     "@tools/ip-range-to-cidr": "workspace:*",
     "@tools/ipv6-to-mac": "workspace:*",
     "@tools/json-formatter": "workspace:*",
+    "@tools/json-schema-validator": "workspace:*",
     "@tools/json-to-csv-converter": "workspace:*",
     "@tools/json-to-toml-converter": "workspace:*",
     "@tools/json-to-xml-converter": "workspace:*",

@@ -8,6 +8,8 @@ packages:
   - registry/*
 
 catalog:
+  ajv: ^8.17.1
+  ajv-formats: ^3.0.1
   '@commitlint/cli': ^20.3.0
   '@faker-js/faker': ^10.2.0
   '@commitlint/config-conventional': ^20.3.0

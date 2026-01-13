@@ -1,14 +1,30 @@
 <template>
   <div class="text-or-file-input">
-    <n-form-item v-if="!selectedFile" :label="t('please-input-text')" :show-feedback="false">
+    <n-form-item
+      v-if="!selectedFile && wrapWithFormItem"
+      :label="label ?? t('please-input-text')"
+      :show-feedback="showFeedback"
+      :feedback="feedback"
+      :validation-status="validationStatus"
+    >
       <n-input
         v-model:value="textValue"
         type="textarea"
-        :placeholder="t('enter-text-placeholder')"
+        :placeholder="placeholder ?? t('enter-text-placeholder')"
         :autosize="{ minRows: 3, maxRows: 8 }"
+        :status="status"
         @input="onTextInput"
       />
     </n-form-item>
+    <n-input
+      v-else-if="!selectedFile"
+      v-model:value="textValue"
+      type="textarea"
+      :placeholder="placeholder ?? t('enter-text-placeholder')"
+      :autosize="{ minRows: 3, maxRows: 8 }"
+      :status="status"
+      @input="onTextInput"
+    />
 
     <n-divider v-if="!selectedFile && !textValue">{{ t('or') }}</n-divider>
     <n-upload
@@ -65,10 +81,19 @@ const { t } = useI18n()
 interface Props {
   value: string | File
   accept?: string
+  placeholder?: string
+  label?: string
+  status?: 'success' | 'error'
+  validationStatus?: 'success' | 'error'
+  feedback?: string
+  showFeedback?: boolean
+  wrapWithFormItem?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   accept: '*',
+  showFeedback: false,
+  wrapWithFormItem: true,
 })
 
 const emit = defineEmits<{

@@ -64,6 +64,7 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
@@ -217,6 +218,7 @@ export const tools: ToolInfo[] = [
   aesDecryptorToolInfo,
 
   // Validator Tools
+  jsonSchemaValidatorToolInfo,
   creditCardValidatorToolInfo,
 
   // Web Tools (Slug)
