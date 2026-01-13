@@ -96,6 +96,7 @@ import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
+import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
 import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 import { toolInfo as svgOptimizerToolInfo } from '@tools/svg-optimizer'
 
@@ -236,5 +237,6 @@ export const tools: ToolInfo[] = [
   placeholderImageGeneratorToolInfo,
 
   // Security Tools
+  certificatePublicKeyParserToolInfo,
   sshKeyGeneratorToolInfo,
 ]
