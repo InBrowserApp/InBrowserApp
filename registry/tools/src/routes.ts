@@ -89,6 +89,7 @@ import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generato
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
+import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
@@ -187,6 +188,7 @@ export const routes: ToolRoute[] = [
   ...gitignoreGeneratorRoutes,
   ...creditCardValidatorRoutes,
   ...isbnValidatorRoutes,
+  ...ibanValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...sshKeyGeneratorRoutes,

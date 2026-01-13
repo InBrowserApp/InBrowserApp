@@ -91,6 +91,7 @@ import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-gene
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
+import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
@@ -224,6 +225,7 @@ export const tools: ToolInfo[] = [
   // Validator Tools
   creditCardValidatorToolInfo,
   isbnValidatorToolInfo,
+  ibanValidatorToolInfo,
 
   // Web Tools (Slug)
   slugGeneratorToolInfo,
