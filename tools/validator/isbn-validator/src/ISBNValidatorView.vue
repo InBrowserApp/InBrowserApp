@@ -16,7 +16,7 @@ import ISBNResult from './components/ISBNResult.vue'
 import WhatIsISBNValidator from './components/WhatIsISBNValidator.vue'
 import { validateISBN } from './data/isbn'
 
-const isbn = useStorage('tools:isbn-validator:isbn', '')
+const isbn = useStorage('tools:isbn-validator:isbn', '978-0-306-40615-7')
 
 const validationResult = computed(() => validateISBN(isbn.value))
 </script>
