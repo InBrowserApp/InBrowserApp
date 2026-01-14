@@ -65,6 +65,7 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
@@ -144,6 +145,7 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
 
   // PDF Tools

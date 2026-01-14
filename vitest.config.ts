@@ -1,8 +1,16 @@
+import { fileURLToPath, URL } from 'node:url'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      'node:perf_hooks': fileURLToPath(
+        new URL('./apps/web/src/shims/perf-hooks.ts', import.meta.url),
+      ),
+    },
+  },
   test: {
     coverage: {
       provider: 'v8',

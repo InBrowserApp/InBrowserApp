@@ -47,6 +47,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'node:perf_hooks': fileURLToPath(new URL('./src/shims/perf-hooks.ts', import.meta.url)),
     },
   },
   worker: {

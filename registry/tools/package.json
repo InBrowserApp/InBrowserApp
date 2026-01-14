@@ -76,6 +76,7 @@
     "@tools/placeholder-image-generator": "workspace:*",
     "@tools/png-optimizer": "workspace:*",
     "@tools/port-number-lookup": "workspace:*",
+    "@tools/openapi-to-typescript": "workspace:*",
     "@tools/prettier-code-formatter": "workspace:*",
     "@tools/qr-code-generator": "workspace:*",
     "@tools/qr-code-reader": "workspace:*",
