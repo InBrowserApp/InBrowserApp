@@ -113,6 +113,7 @@ import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
 import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
 import { toolInfo as bicSwiftValidatorToolInfo } from '@tools/bic-swift-validator'
+import { toolInfo as vatValidatorToolInfo } from '@tools/vat-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
@@ -272,6 +273,7 @@ export const tools: ToolInfo[] = [
   isbnValidatorToolInfo,
   ibanValidatorToolInfo,
   bicSwiftValidatorToolInfo,
+  vatValidatorToolInfo,
 
   // Web Tools (Slug)
   slugGeneratorToolInfo,

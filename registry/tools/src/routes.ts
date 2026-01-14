@@ -111,6 +111,7 @@ import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
 import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/routes'
+import { routes as vatValidatorRoutes } from '@tools/vat-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
@@ -235,6 +236,7 @@ export const routes: ToolRoute[] = [
   ...isbnValidatorRoutes,
   ...ibanValidatorRoutes,
   ...bicSwiftValidatorRoutes,
+  ...vatValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...certificatePublicKeyParserRoutes,

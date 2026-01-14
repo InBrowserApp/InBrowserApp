@@ -771,9 +771,6 @@ importers:
       '@tools/openapi-to-typescript':
         specifier: workspace:*
         version: link:../../tools/code/openapi-to-typescript
-      '@tools/password-strength-checker':
-        specifier: workspace:*
-        version: link:../../tools/validator/password-strength-checker
       '@tools/pdf-tools':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-tools
@@ -894,6 +891,9 @@ importers:
       '@tools/uuid':
         specifier: workspace:*
         version: link:../../tools/uuid
+      '@tools/vat-validator':
+        specifier: workspace:*
+        version: link:../../tools/validator/vat-validator
       '@tools/xml-to-json-converter':
         specifier: workspace:*
         version: link:../../tools/code/xml-to-json-converter
@@ -4148,7 +4148,7 @@ importers:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
-  tools/validator/password-strength-checker:
+  tools/validator/vat-validator:
     dependencies:
       '@shared/icons':
         specifier: workspace:*
