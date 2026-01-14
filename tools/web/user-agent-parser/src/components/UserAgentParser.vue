@@ -1,70 +1,21 @@
 <template>
-  <ToolSection>
-    <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
-        <template #label>
-          <div class="field-label">
-            <span>{{ t('input-label') }}</span>
-            <span class="field-action">
-              <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
-                <template #icon>
-                  <n-icon :component="GlobePerson20Regular" />
-                </template>
-                {{ t('use-current') }}
-              </n-button>
-            </span>
-          </div>
-        </template>
-        <n-input
-          v-model:value="userAgent"
-          type="textarea"
-          :autosize="{ minRows: 6, maxRows: 14 }"
-          :placeholder="t('input-placeholder')"
-          :status="inputStatus"
-        />
-        <template v-if="inputError" #feedback>
-          <n-text type="error">{{ t('input-error') }}</n-text>
-        </template>
-      </n-form-item-gi>
+  <UserAgentInputPanel
+    v-model:userAgent="userAgent"
+    :input-status="inputStatus"
+    :input-error="inputError"
+    :can-use-current="canUseCurrent"
+    :has-output="hasOutput"
+    :rendered-json="renderedJson"
+    :labels="inputLabels"
+    @use-current="useCurrentUserAgent"
+  />
 
-      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
-        <template #label>
-          <div class="field-label">
-            <span>{{ t('json-output') }}</span>
-            <span class="field-action">
-              <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
-            </span>
-          </div>
-        </template>
-        <n-card v-if="hasOutput" size="small">
-          <n-code :code="renderedJson" language="json" :hljs="hljs" word-wrap />
-        </n-card>
-        <n-empty v-else :description="t('empty-state')" />
-      </n-form-item-gi>
-    </n-grid>
-  </ToolSection>
-
-  <ToolSectionHeader>{{ t('parsed-details') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-empty v-if="!hasOutput" :description="t('empty-state')" />
-    <n-grid v-else cols="1 s:2 l:3" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-gi>
-        <ParsedSection :title="t('browser')" :items="browserItems" />
-      </n-gi>
-      <n-gi>
-        <ParsedSection :title="t('os')" :items="osItems" />
-      </n-gi>
-      <n-gi>
-        <ParsedSection :title="t('engine')" :items="engineItems" />
-      </n-gi>
-      <n-gi>
-        <ParsedSection :title="t('device')" :items="deviceItems" />
-      </n-gi>
-      <n-gi>
-        <ParsedSection :title="t('cpu')" :items="cpuItems" />
-      </n-gi>
-    </n-grid>
-  </ToolSection>
+  <ParsedDetailsSection
+    :title="t('parsed-details')"
+    :empty-state="t('empty-state')"
+    :has-output="hasOutput"
+    :sections="parsedSections"
+  />
 </template>
 
 <script setup lang="ts">
@@ -72,26 +23,8 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import UAParser from 'ua-parser-js'
-import {
-  NButton,
-  NCard,
-  NCode,
-  NEmpty,
-  NFormItemGi,
-  NGi,
-  NGrid,
-  NIcon,
-  NInput,
-  NText,
-} from 'naive-ui'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { CopyToClipboardButton } from '@shared/ui/base'
-import hljs from 'highlight.js/lib/core'
-import jsonLang from 'highlight.js/lib/languages/json'
-import ParsedSection from './ParsedSection.vue'
-import { GlobePerson20Regular } from '@shared/icons/fluent'
-
-hljs.registerLanguage('json', jsonLang)
+import ParsedDetailsSection from './ParsedDetailsSection.vue'
+import UserAgentInputPanel from './UserAgentInputPanel.vue'
 
 const { t } = useI18n()
 
@@ -126,6 +59,14 @@ const hasOutput = computed(() => Boolean(normalizedResult.value))
 const renderedJson = computed(() =>
   normalizedResult.value ? JSON.stringify(normalizedResult.value, null, 2) : '',
 )
+const inputLabels = computed(() => ({
+  inputLabel: t('input-label'),
+  useCurrent: t('use-current'),
+  inputPlaceholder: t('input-placeholder'),
+  inputError: t('input-error'),
+  jsonOutput: t('json-output'),
+  emptyState: t('empty-state'),
+}))
 
 const formatValue = (value?: string | number | null) => {
   if (value === undefined || value === null || value === '') {
@@ -160,26 +101,19 @@ const cpuItems = computed(() => [
   { label: t('architecture'), value: formatValue(parsedResult.value?.cpu?.architecture) },
 ])
 
+const parsedSections = computed(() => [
+  { title: t('browser'), items: browserItems.value },
+  { title: t('os'), items: osItems.value },
+  { title: t('engine'), items: engineItems.value },
+  { title: t('device'), items: deviceItems.value },
+  { title: t('cpu'), items: cpuItems.value },
+])
+
 function useCurrentUserAgent() {
   if (typeof navigator === 'undefined') return
   userAgent.value = navigator.userAgent
 }
 </script>
-
-<style scoped>
-.field-label {
-  align-items: center;
-  display: flex;
-  gap: 12px;
-  min-width: 100%;
-}
-
-.field-action {
-  align-items: center;
-  display: inline-flex;
-  margin-left: auto;
-}
-</style>
 
 <i18n lang="json">
 {
