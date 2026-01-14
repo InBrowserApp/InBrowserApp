@@ -417,7 +417,7 @@ function setNow() {
 <i18n lang="json">
 {
   "en": {
-    "duration-calculator": "Duration Add/Subtract",
+    "duration-calculator": "Duration Add/Subtract Calculator",
     "base-time": "Base time",
     "time-zone": "Time zone",
     "timezone-placeholder": "Select a time zone",
@@ -445,7 +445,7 @@ function setNow() {
     "unix-s": "Unix timestamp (s)"
   },
   "zh": {
-    "duration-calculator": "时长加减",
+    "duration-calculator": "时长加减计算器",
     "base-time": "基准时间",
     "time-zone": "时区",
     "timezone-placeholder": "选择时区",
@@ -473,7 +473,7 @@ function setNow() {
     "unix-s": "Unix 时间戳（秒）"
   },
   "zh-CN": {
-    "duration-calculator": "时长加减",
+    "duration-calculator": "时长加减计算器",
     "base-time": "基准时间",
     "time-zone": "时区",
     "timezone-placeholder": "选择时区",
@@ -501,7 +501,7 @@ function setNow() {
     "unix-s": "Unix 时间戳（秒）"
   },
   "zh-TW": {
-    "duration-calculator": "時長加減",
+    "duration-calculator": "時長加減計算器",
     "base-time": "基準時間",
     "time-zone": "時區",
     "timezone-placeholder": "選擇時區",
@@ -529,7 +529,7 @@ function setNow() {
     "unix-s": "Unix 時間戳記（秒）"
   },
   "zh-HK": {
-    "duration-calculator": "時長加減",
+    "duration-calculator": "時長加減計算器",
     "base-time": "基準時間",
     "time-zone": "時區",
     "timezone-placeholder": "選擇時區",
@@ -557,7 +557,7 @@ function setNow() {
     "unix-s": "Unix 時間戳記（秒）"
   },
   "es": {
-    "duration-calculator": "Suma/resta de duración",
+    "duration-calculator": "Calculadora de suma/resta de duración",
     "base-time": "Hora base",
     "time-zone": "Zona horaria",
     "timezone-placeholder": "Selecciona una zona horaria",
@@ -585,7 +585,7 @@ function setNow() {
     "unix-s": "Marca de tiempo Unix (s)"
   },
   "fr": {
-    "duration-calculator": "Ajout/soustraction de durée",
+    "duration-calculator": "Calculateur d'ajout/soustraction de durée",
     "base-time": "Heure de base",
     "time-zone": "Fuseau horaire",
     "timezone-placeholder": "Sélectionner un fuseau horaire",
@@ -613,7 +613,7 @@ function setNow() {
     "unix-s": "Timestamp Unix (s)"
   },
   "de": {
-    "duration-calculator": "Dauer addieren/subtrahieren",
+    "duration-calculator": "Dauer-Addieren/Subtrahieren-Rechner",
     "base-time": "Basiszeit",
     "time-zone": "Zeitzone",
     "timezone-placeholder": "Zeitzone auswählen",
@@ -641,7 +641,7 @@ function setNow() {
     "unix-s": "Unix-Zeitstempel (s)"
   },
   "it": {
-    "duration-calculator": "Somma/sottrai durata",
+    "duration-calculator": "Calcolatore di somma/sottrazione della durata",
     "base-time": "Ora base",
     "time-zone": "Fuso orario",
     "timezone-placeholder": "Seleziona un fuso orario",
@@ -669,7 +669,7 @@ function setNow() {
     "unix-s": "Timestamp Unix (s)"
   },
   "ja": {
-    "duration-calculator": "期間の加算/減算",
+    "duration-calculator": "期間の加算/減算計算ツール",
     "base-time": "基準時刻",
     "time-zone": "タイムゾーン",
     "timezone-placeholder": "タイムゾーンを選択",
@@ -697,7 +697,7 @@ function setNow() {
     "unix-s": "Unix タイムスタンプ (s)"
   },
   "ko": {
-    "duration-calculator": "기간 더하기/빼기",
+    "duration-calculator": "기간 더하기/빼기 계산기",
     "base-time": "기준 시간",
     "time-zone": "시간대",
     "timezone-placeholder": "시간대 선택",
@@ -725,7 +725,7 @@ function setNow() {
     "unix-s": "Unix 타임스탬프 (s)"
   },
   "ru": {
-    "duration-calculator": "Сложение/вычитание длительности",
+    "duration-calculator": "Калькулятор сложения/вычитания длительности",
     "base-time": "Базовое время",
     "time-zone": "Часовой пояс",
     "timezone-placeholder": "Выберите часовой пояс",
@@ -753,7 +753,7 @@ function setNow() {
     "unix-s": "Unix-метка времени (с)"
   },
   "pt": {
-    "duration-calculator": "Adicionar/subtrair duração",
+    "duration-calculator": "Calculadora de adicionar/subtrair duração",
     "base-time": "Hora base",
     "time-zone": "Fuso horário",
     "timezone-placeholder": "Selecione um fuso horário",
@@ -781,7 +781,7 @@ function setNow() {
     "unix-s": "Timestamp Unix (s)"
   },
   "ar": {
-    "duration-calculator": "إضافة/طرح المدة",
+    "duration-calculator": "حاسبة إضافة/طرح المدة",
     "base-time": "الوقت الأساسي",
     "time-zone": "المنطقة الزمنية",
     "timezone-placeholder": "اختر منطقة زمنية",
@@ -809,7 +809,7 @@ function setNow() {
     "unix-s": "الطابع الزمني Unix (ثانية)"
   },
   "hi": {
-    "duration-calculator": "अवधि जोड़ें/घटाएं",
+    "duration-calculator": "अवधि जोड़ें/घटाएं कैलकुलेटर",
     "base-time": "आधार समय",
     "time-zone": "समय क्षेत्र",
     "timezone-placeholder": "समय क्षेत्र चुनें",
@@ -837,7 +837,7 @@ function setNow() {
     "unix-s": "Unix टाइमस्टैम्प (सेकंड)"
   },
   "tr": {
-    "duration-calculator": "Süre ekle/çıkar",
+    "duration-calculator": "Süre Ekle/Çıkar Hesaplayıcı",
     "base-time": "Temel zaman",
     "time-zone": "Saat dilimi",
     "timezone-placeholder": "Saat dilimi seçin",
@@ -865,7 +865,7 @@ function setNow() {
     "unix-s": "Unix zaman damgası (s)"
   },
   "nl": {
-    "duration-calculator": "Duur optellen/aftrekken",
+    "duration-calculator": "Duur optellen/aftrekken-calculator",
     "base-time": "Basistijd",
     "time-zone": "Tijdzone",
     "timezone-placeholder": "Selecteer een tijdzone",
@@ -893,7 +893,7 @@ function setNow() {
     "unix-s": "Unix-tijdstempel (s)"
   },
   "sv": {
-    "duration-calculator": "Lägg till/ta bort varaktighet",
+    "duration-calculator": "Lägg till/ta bort varaktighet-räknare",
     "base-time": "Basstid",
     "time-zone": "Tidszon",
     "timezone-placeholder": "Välj en tidszon",
@@ -921,7 +921,7 @@ function setNow() {
     "unix-s": "Unix-tidsstämpel (s)"
   },
   "pl": {
-    "duration-calculator": "Dodawanie/odejmowanie czasu trwania",
+    "duration-calculator": "Kalkulator dodawania/odejmowania czasu trwania",
     "base-time": "Czas bazowy",
     "time-zone": "Strefa czasowa",
     "timezone-placeholder": "Wybierz strefę czasową",
@@ -949,7 +949,7 @@ function setNow() {
     "unix-s": "Znacznik czasu Unix (s)"
   },
   "vi": {
-    "duration-calculator": "Cộng/trừ thời lượng",
+    "duration-calculator": "Máy tính cộng/trừ thời lượng",
     "base-time": "Thời gian gốc",
     "time-zone": "Múi giờ",
     "timezone-placeholder": "Chọn múi giờ",
@@ -977,7 +977,7 @@ function setNow() {
     "unix-s": "Dấu thời gian Unix (s)"
   },
   "th": {
-    "duration-calculator": "บวก/ลบระยะเวลา",
+    "duration-calculator": "เครื่องคำนวณบวก/ลบระยะเวลา",
     "base-time": "เวลาฐาน",
     "time-zone": "เขตเวลา",
     "timezone-placeholder": "เลือกเขตเวลา",
@@ -1005,7 +1005,7 @@ function setNow() {
     "unix-s": "Unix timestamp (วินาที)"
   },
   "id": {
-    "duration-calculator": "Tambah/kurangi durasi",
+    "duration-calculator": "Kalkulator tambah/kurangi durasi",
     "base-time": "Waktu dasar",
     "time-zone": "Zona waktu",
     "timezone-placeholder": "Pilih zona waktu",
@@ -1033,7 +1033,7 @@ function setNow() {
     "unix-s": "Timestamp Unix (s)"
   },
   "he": {
-    "duration-calculator": "הוספה/חיסור משך",
+    "duration-calculator": "מחשבון הוספה/חיסור משך",
     "base-time": "זמן בסיס",
     "time-zone": "אזור זמן",
     "timezone-placeholder": "בחר אזור זמן",
@@ -1061,7 +1061,7 @@ function setNow() {
     "unix-s": "חותמת זמן Unix (שניות)"
   },
   "ms": {
-    "duration-calculator": "Tambah/tolak durasi",
+    "duration-calculator": "Pengira tambah/tolak durasi",
     "base-time": "Masa asas",
     "time-zone": "Zon masa",
     "timezone-placeholder": "Pilih zon masa",
@@ -1089,7 +1089,7 @@ function setNow() {
     "unix-s": "Cap masa Unix (s)"
   },
   "no": {
-    "duration-calculator": "Legg til/trekk fra varighet",
+    "duration-calculator": "Kalkulator for legg til/trekk fra varighet",
     "base-time": "Basistid",
     "time-zone": "Tidssone",
     "timezone-placeholder": "Velg en tidssone",
