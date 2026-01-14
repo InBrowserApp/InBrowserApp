@@ -14,11 +14,20 @@ describe('user agent parser tool metadata', () => {
 
   it('exports routes that match the tool path', async () => {
     expect(routes).toHaveLength(1)
-    expect(routes[0].name).toBe(toolInfo.toolID)
-    expect(routes[0].path).toBe(toolInfo.path)
-    expect(typeof routes[0].component).toBe('function')
+    const route = routes[0]
+    if (!route) {
+      throw new Error('Missing route configuration')
+    }
 
-    const module = await routes[0].component()
+    expect(route.name).toBe(toolInfo.toolID)
+    expect(route.path).toBe(toolInfo.path)
+    expect(route.component).toBeTruthy()
+
+    if (typeof route.component !== 'function') {
+      throw new Error('Expected a lazy component loader')
+    }
+
+    const module = await (route.component as () => Promise<unknown>)()
     expect(module).toHaveProperty('default')
   })
 
