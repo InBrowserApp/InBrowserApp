@@ -80,4 +80,139 @@ describe('BICSwiftResult', () => {
       .map((button) => button.attributes('data-content'))
     expect(copyContents).toEqual(expect.arrayContaining(['DEUTDEFF500', 'DEUT', '500']))
   })
+
+  it('renders placeholders for an empty result', () => {
+    const wrapper = mount(BICSwiftResult, {
+      props: {
+        validationResult: validateBIC(''),
+      },
+      global: {
+        stubs,
+      },
+    })
+
+    expect(wrapper.text()).toContain('Invalid')
+    expect(wrapper.text()).toMatch(/Unknown|unknown/)
+    expect(wrapper.text()).toMatch(/Not available|notAvailable/)
+    expect(wrapper.findAll('.copy-button')).toHaveLength(0)
+  })
+
+  it('shows raw country code when unsupported', () => {
+    const wrapper = mount(BICSwiftResult, {
+      props: {
+        validationResult: validateBIC('DEUTXXFF'),
+      },
+      global: {
+        stubs,
+      },
+    })
+
+    expect(wrapper.text()).toContain('XX')
+    expect(wrapper.text()).toContain('Unknown')
+  })
+
+  it('falls back to country code when display names are unavailable', () => {
+    const originalDisplayNames = Intl.DisplayNames
+    ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames = undefined
+
+    try {
+      const wrapper = mount(BICSwiftResult, {
+        props: {
+          validationResult: validateBIC('DEUTDEFF'),
+        },
+        global: {
+          stubs,
+        },
+      })
+
+      expect(wrapper.text()).not.toContain('Germany')
+    } finally {
+      ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames =
+        originalDisplayNames
+    }
+  })
+
+  it('uses display names when fallback succeeds', () => {
+    const originalDisplayNames = Intl.DisplayNames
+    let shouldThrow = true
+
+    class DisplayNamesMock {
+      constructor() {
+        if (shouldThrow) {
+          shouldThrow = false
+          throw new Error('boom')
+        }
+      }
+
+      of(code: string) {
+        return code === 'DE' ? 'Germany' : code
+      }
+    }
+
+    ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames =
+      DisplayNamesMock as unknown as typeof Intl.DisplayNames
+
+    try {
+      const wrapper = mount(BICSwiftResult, {
+        props: {
+          validationResult: validateBIC('DEUTDEFF'),
+        },
+        global: {
+          stubs,
+        },
+      })
+
+      expect(wrapper.text()).toContain('Germany (DE)')
+    } finally {
+      ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames =
+        originalDisplayNames
+    }
+  })
+
+  it.each([
+    {
+      bic: 'DEUTDEA0',
+      label: 'Test',
+    },
+    {
+      bic: 'DEUTDEA1',
+      label: 'Passive',
+    },
+  ])('renders $label location type for $bic', ({ bic, label }) => {
+    const wrapper = mount(BICSwiftResult, {
+      props: {
+        validationResult: validateBIC(bic),
+      },
+      global: {
+        stubs,
+      },
+    })
+
+    expect(wrapper.text()).toContain(label)
+  })
+
+  it('shows missing branch info for BIC-11 without branch code', () => {
+    const baseResult = validateBIC('DEUTDEFF500')
+    const wrapper = mount(BICSwiftResult, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          branchCode: null,
+          isBranchCodeValid: false,
+          isValid: false,
+        },
+      },
+      global: {
+        stubs,
+      },
+    })
+
+    expect(wrapper.text()).toMatch(/Not available|notAvailable/)
+
+    const copyContents = wrapper
+      .findAll('.copy-button')
+      .map((button) => button.attributes('data-content'))
+    expect(copyContents).toEqual(expect.arrayContaining(['DEUTDEFF500', 'DEUT']))
+    expect(copyContents).not.toContain('500')
+  })
 })
