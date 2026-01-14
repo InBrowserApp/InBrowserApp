@@ -23,8 +23,8 @@
           :status="inputStatus"
           @update:value="emit('update:userAgent', $event)"
         />
-        <template v-if="inputError" #feedback>
-          <n-text type="error">{{ labels.inputError }}</n-text>
+        <template #feedback>
+          <n-text v-show="inputError" type="error">{{ labels.inputError }}</n-text>
         </template>
       </n-form-item-gi>
 
