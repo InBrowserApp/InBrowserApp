@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import type { FormValidationStatus } from 'naive-ui'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
@@ -34,7 +35,9 @@ const userAgent = useStorage('tools:user-agent-parser:input', defaultUserAgent)
 const canUseCurrent = computed(() => typeof navigator !== 'undefined')
 const hasInput = computed(() => userAgent.value.trim().length > 0)
 const inputError = computed(() => !hasInput.value)
-const inputStatus = computed(() => (inputError.value ? 'error' : undefined))
+const inputStatus = computed<FormValidationStatus | undefined>(() =>
+  inputError.value ? 'error' : undefined,
+)
 
 const parsedResult = computed(() => {
   if (!hasInput.value) return null

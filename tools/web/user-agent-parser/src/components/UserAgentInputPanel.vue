@@ -47,6 +47,7 @@
 </template>
 
 <script setup lang="ts">
+import type { FormValidationStatus } from 'naive-ui'
 import { NButton, NCard, NCode, NEmpty, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
@@ -58,7 +59,7 @@ hljs.registerLanguage('json', jsonLang)
 
 defineProps<{
   userAgent: string
-  inputStatus?: string
+  inputStatus?: FormValidationStatus
   inputError: boolean
   canUseCurrent: boolean
   hasOutput: boolean
