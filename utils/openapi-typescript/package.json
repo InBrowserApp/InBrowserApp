@@ -1,0 +1,17 @@
+{
+  "name": "@utils/openapi-typescript",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "js-yaml": "catalog:",
+    "openapi-typescript": "catalog:",
+    "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "catalog:"
+  }
+}
