@@ -8,6 +8,12 @@
           </template>
           {{ t('actionsImport') }}
         </n-button>
+        <n-button @click="openImportUrlModal" text>
+          <template #icon>
+            <n-icon :component="Link16Regular" />
+          </template>
+          {{ t('actionsImportUrl') }}
+        </n-button>
         <n-button @click="loadSample" text>
           <template #icon>
             <n-icon :component="Wand16Regular" />
@@ -113,6 +119,50 @@
       </n-form-item-gi>
     </n-grid>
   </ToolSection>
+
+  <n-modal
+    v-model:show="showImportUrlModal"
+    preset="card"
+    :title="t('importUrlTitle')"
+    :style="modalStyle"
+    :segmented="modalSegmented"
+    :bordered="false"
+    size="large"
+    :mask-closable="false"
+  >
+    <n-space vertical size="small">
+      <n-alert type="warning" :bordered="false">
+        {{ t('importUrlWarning') }}
+      </n-alert>
+      <n-form-item
+        :label="t('importUrlLabel')"
+        :show-feedback="Boolean(importUrlError)"
+        :validation-status="importUrlStatus"
+      >
+        <n-input
+          class="monospace-input"
+          :value="importUrl"
+          :placeholder="t('importUrlPlaceholder')"
+          :status="importUrlStatus"
+          :disabled="isImportingUrl"
+          @update:value="handleImportUrlInput"
+        />
+        <template v-if="importUrlError" #feedback>
+          <n-text type="error">{{ importUrlError }}</n-text>
+        </template>
+      </n-form-item>
+    </n-space>
+    <template #footer>
+      <n-flex justify="end" :wrap="false">
+        <n-button @click="closeImportUrlModal" :disabled="isImportingUrl">
+          {{ t('importUrlCancel') }}
+        </n-button>
+        <n-button type="primary" :loading="isImportingUrl" @click="importFromUrl">
+          {{ t('importUrlConfirm') }}
+        </n-button>
+      </n-flex>
+    </template>
+  </n-modal>
 </template>
 
 <script setup lang="ts">
@@ -126,16 +176,25 @@ import {
   NCard,
   NCode,
   NFlex,
+  NFormItem,
   NFormItemGi,
   NGrid,
   NIcon,
+  NInput,
+  NModal,
+  NSpace,
   NSpin,
   NSwitch,
   NText,
 } from 'naive-ui'
 import hljs from 'highlight.js/lib/core'
 import typescript from 'highlight.js/lib/languages/typescript'
-import { ArrowDownload16Regular, Document16Regular, Wand16Regular } from '@shared/icons/fluent'
+import {
+  ArrowDownload16Regular,
+  Document16Regular,
+  Link16Regular,
+  Wand16Regular,
+} from '@shared/icons/fluent'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, TextOrFileInput } from '@shared/ui/base'
 import {
@@ -202,6 +261,12 @@ const debouncedOpenApiText = useDebounce(
   200,
 )
 const isGenerating = ref(false)
+const showImportUrlModal = ref(false)
+const importUrl = ref('')
+const importUrlError = ref('')
+const isImportingUrl = ref(false)
+const modalStyle = { width: '520px' }
+const modalSegmented = { content: 'soft', footer: 'soft' } as const
 
 const parseResult = computed(() => parseOpenApiDocument(debouncedOpenApiText.value ?? ''))
 
@@ -269,6 +334,7 @@ const outputState = computedAsync(
 
 const outputText = computed(() => outputState.value.output)
 const outputError = computed(() => outputState.value.error)
+const importUrlStatus = computed(() => (importUrlError.value ? 'error' : undefined))
 
 function loadSample() {
   openApiText.value = sampleOpenApi
@@ -279,6 +345,63 @@ async function importFromFile() {
     extensions: ['.json', '.yaml', '.yml', '.txt'],
   })
   openApiText.value = await file.text()
+}
+
+function openImportUrlModal() {
+  showImportUrlModal.value = true
+  importUrlError.value = ''
+}
+
+function closeImportUrlModal() {
+  showImportUrlModal.value = false
+  importUrlError.value = ''
+}
+
+function handleImportUrlInput(value: string) {
+  importUrl.value = value
+  if (importUrlError.value) {
+    importUrlError.value = ''
+  }
+}
+
+async function importFromUrl() {
+  const value = importUrl.value.trim()
+  if (!value) {
+    importUrlError.value = t('importUrlEmptyError')
+    return
+  }
+
+  let parsedUrl: URL
+  try {
+    parsedUrl = new URL(value)
+  } catch {
+    importUrlError.value = t('importUrlInvalidError')
+    return
+  }
+
+  if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+    importUrlError.value = t('importUrlInvalidError')
+    return
+  }
+
+  isImportingUrl.value = true
+  importUrlError.value = ''
+
+  try {
+    const response = await fetch(value, { mode: 'cors' })
+    if (!response.ok) {
+      const status = response.status ? `${response.status}` : ''
+      const statusText = response.statusText ? ` ${response.statusText}` : ''
+      throw new Error(`${status}${statusText}`.trim() || 'Request failed')
+    }
+    openApiText.value = await response.text()
+    closeImportUrlModal()
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    importUrlError.value = t('importUrlFetchError', { message })
+  } finally {
+    isImportingUrl.value = false
+  }
 }
 
 async function handleInput(value: string | File) {
@@ -308,7 +431,8 @@ function downloadTypes() {
 </script>
 
 <style scoped>
-.monospace-input :deep(textarea) {
+.monospace-input :deep(textarea),
+.monospace-input :deep(input) {
   font-family:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
@@ -351,7 +475,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Invalid OpenAPI document: {message}",
     "invalidRoot": "OpenAPI document must be an object",
     "unsupportedVersion": "Only OpenAPI 3.0/3.1 is supported",
-    "externalRefError": "External $ref is not supported ({count}). Inline or bundle the schema."
+    "externalRefError": "External $ref is not supported ({count}). Inline or bundle the schema.",
+    "actionsImportUrl": "Import from URL",
+    "importUrlTitle": "Import from URL",
+    "importUrlWarning": "This runs in your browser. The URL must allow CORS, or the request will fail.",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Cancel",
+    "importUrlConfirm": "Import",
+    "importUrlEmptyError": "Enter a URL to import.",
+    "importUrlInvalidError": "URL must start with http:// or https://.",
+    "importUrlFetchError": "Failed to fetch the URL: {message}"
   },
   "zh": {
     "actionsImport": "从文件导入",
@@ -379,7 +513,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "无效的 OpenAPI 文档：{message}",
     "invalidRoot": "OpenAPI 文档必须是对象",
     "unsupportedVersion": "仅支持 OpenAPI 3.0/3.1",
-    "externalRefError": "不支持外部 $ref（{count}）。请内联或打包该 schema。"
+    "externalRefError": "不支持外部 $ref（{count}）。请内联或打包该 schema。",
+    "actionsImportUrl": "从 URL 导入",
+    "importUrlTitle": "从 URL 导入",
+    "importUrlWarning": "此操作在浏览器中执行。URL 需要允许 CORS，否则请求会失败。",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "取消",
+    "importUrlConfirm": "导入",
+    "importUrlEmptyError": "请输入要导入的 URL。",
+    "importUrlInvalidError": "URL 必须以 http:// 或 https:// 开头。",
+    "importUrlFetchError": "获取 URL 失败：{message}"
   },
   "zh-CN": {
     "actionsImport": "从文件导入",
@@ -407,7 +551,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "无效的 OpenAPI 文档：{message}",
     "invalidRoot": "OpenAPI 文档必须是对象",
     "unsupportedVersion": "仅支持 OpenAPI 3.0/3.1",
-    "externalRefError": "不支持外部 $ref（{count}）。请内联或打包该 schema。"
+    "externalRefError": "不支持外部 $ref（{count}）。请内联或打包该 schema。",
+    "actionsImportUrl": "从 URL 导入",
+    "importUrlTitle": "从 URL 导入",
+    "importUrlWarning": "此操作在浏览器中执行。URL 需要允许 CORS，否则请求会失败。",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "取消",
+    "importUrlConfirm": "导入",
+    "importUrlEmptyError": "请输入要导入的 URL。",
+    "importUrlInvalidError": "URL 必须以 http:// 或 https:// 开头。",
+    "importUrlFetchError": "获取 URL 失败：{message}"
   },
   "zh-TW": {
     "actionsImport": "從檔案匯入",
@@ -435,7 +589,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "無效的 OpenAPI 文件：{message}",
     "invalidRoot": "OpenAPI 文件必須是物件",
     "unsupportedVersion": "僅支援 OpenAPI 3.0/3.1",
-    "externalRefError": "不支援外部 $ref（{count}）。請內嵌或打包該 schema。"
+    "externalRefError": "不支援外部 $ref（{count}）。請內嵌或打包該 schema。",
+    "actionsImportUrl": "從 URL 匯入",
+    "importUrlTitle": "從 URL 匯入",
+    "importUrlWarning": "此操作在瀏覽器中執行。URL 必須允許 CORS，否則請求會失敗。",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "取消",
+    "importUrlConfirm": "匯入",
+    "importUrlEmptyError": "請輸入要匯入的 URL。",
+    "importUrlInvalidError": "URL 必須以 http:// 或 https:// 開頭。",
+    "importUrlFetchError": "取得 URL 失敗：{message}"
   },
   "zh-HK": {
     "actionsImport": "從檔案匯入",
@@ -463,7 +627,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "無效的 OpenAPI 文件：{message}",
     "invalidRoot": "OpenAPI 文件必須是物件",
     "unsupportedVersion": "僅支援 OpenAPI 3.0/3.1",
-    "externalRefError": "不支援外部 $ref（{count}）。請內嵌或打包該 schema。"
+    "externalRefError": "不支援外部 $ref（{count}）。請內嵌或打包該 schema。",
+    "actionsImportUrl": "從 URL 匯入",
+    "importUrlTitle": "從 URL 匯入",
+    "importUrlWarning": "此操作在瀏覽器中執行。URL 必須允許 CORS，否則請求會失敗。",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "取消",
+    "importUrlConfirm": "匯入",
+    "importUrlEmptyError": "請輸入要匯入的 URL。",
+    "importUrlInvalidError": "URL 必須以 http:// 或 https:// 開頭。",
+    "importUrlFetchError": "取得 URL 失敗：{message}"
   },
   "es": {
     "actionsImport": "Importar desde archivo",
@@ -491,7 +665,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Documento OpenAPI inválido: {message}",
     "invalidRoot": "El documento OpenAPI debe ser un objeto",
     "unsupportedVersion": "Solo se admite OpenAPI 3.0/3.1",
-    "externalRefError": "No se admite $ref externo ({count}). Incrusta o empaqueta el schema."
+    "externalRefError": "No se admite $ref externo ({count}). Incrusta o empaqueta el schema.",
+    "actionsImportUrl": "Importar desde URL",
+    "importUrlTitle": "Importar desde URL",
+    "importUrlWarning": "Esto se ejecuta en tu navegador. La URL debe permitir CORS o la solicitud fallará.",
+    "importUrlLabel": "URL de OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Cancelar",
+    "importUrlConfirm": "Importar",
+    "importUrlEmptyError": "Introduce una URL para importar.",
+    "importUrlInvalidError": "La URL debe empezar con http:// o https://.",
+    "importUrlFetchError": "No se pudo obtener la URL: {message}"
   },
   "fr": {
     "actionsImport": "Importer depuis un fichier",
@@ -519,7 +703,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Document OpenAPI invalide : {message}",
     "invalidRoot": "Le document OpenAPI doit être un objet",
     "unsupportedVersion": "Seul OpenAPI 3.0/3.1 est pris en charge",
-    "externalRefError": "$ref externe non pris en charge ({count}). Intégrez ou regroupez le schéma."
+    "externalRefError": "$ref externe non pris en charge ({count}). Intégrez ou regroupez le schéma.",
+    "actionsImportUrl": "Importer depuis une URL",
+    "importUrlTitle": "Importer depuis une URL",
+    "importUrlWarning": "Cela s'exécute dans votre navigateur. L'URL doit autoriser CORS, sinon la requête échouera.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Annuler",
+    "importUrlConfirm": "Importer",
+    "importUrlEmptyError": "Saisissez une URL à importer.",
+    "importUrlInvalidError": "L'URL doit commencer par http:// ou https://.",
+    "importUrlFetchError": "Échec de la récupération de l'URL : {message}"
   },
   "de": {
     "actionsImport": "Aus Datei importieren",
@@ -547,7 +741,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Ungültiges OpenAPI-Dokument: {message}",
     "invalidRoot": "OpenAPI-Dokument muss ein Objekt sein",
     "unsupportedVersion": "Nur OpenAPI 3.0/3.1 wird unterstützt",
-    "externalRefError": "Externe $ref wird nicht unterstützt ({count}). Schema inline/bündeln."
+    "externalRefError": "Externe $ref wird nicht unterstützt ({count}). Schema inline/bündeln.",
+    "actionsImportUrl": "Von URL importieren",
+    "importUrlTitle": "Von URL importieren",
+    "importUrlWarning": "Dies läuft im Browser. Die URL muss CORS erlauben, sonst schlägt die Anfrage fehl.",
+    "importUrlLabel": "OpenAPI-URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Abbrechen",
+    "importUrlConfirm": "Importieren",
+    "importUrlEmptyError": "Bitte eine URL zum Importieren eingeben.",
+    "importUrlInvalidError": "Die URL muss mit http:// oder https:// beginnen.",
+    "importUrlFetchError": "URL konnte nicht abgerufen werden: {message}"
   },
   "it": {
     "actionsImport": "Importa da file",
@@ -575,7 +779,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Documento OpenAPI non valido: {message}",
     "invalidRoot": "Il documento OpenAPI deve essere un oggetto",
     "unsupportedVersion": "È supportato solo OpenAPI 3.0/3.1",
-    "externalRefError": "$ref esterno non supportato ({count}). In linea o raggruppa lo schema."
+    "externalRefError": "$ref esterno non supportato ({count}). In linea o raggruppa lo schema.",
+    "actionsImportUrl": "Importa da URL",
+    "importUrlTitle": "Importa da URL",
+    "importUrlWarning": "Eseguito nel browser. La URL deve consentire CORS o la richiesta fallirà.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Annulla",
+    "importUrlConfirm": "Importa",
+    "importUrlEmptyError": "Inserisci un URL da importare.",
+    "importUrlInvalidError": "L'URL deve iniziare con http:// o https://.",
+    "importUrlFetchError": "Impossibile recuperare l'URL: {message}"
   },
   "ja": {
     "actionsImport": "ファイルからインポート",
@@ -603,7 +817,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "無効な OpenAPI ドキュメント: {message}",
     "invalidRoot": "OpenAPI ドキュメントはオブジェクトである必要があります",
     "unsupportedVersion": "OpenAPI 3.0/3.1 のみ対応",
-    "externalRefError": "外部 $ref は未対応（{count}）。スキーマをインライン化/バンドルしてください。"
+    "externalRefError": "外部 $ref は未対応（{count}）。スキーマをインライン化/バンドルしてください。",
+    "actionsImportUrl": "URL からインポート",
+    "importUrlTitle": "URL からインポート",
+    "importUrlWarning": "ブラウザ内で実行されます。URL が CORS を許可していない場合、リクエストは失敗します。",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "キャンセル",
+    "importUrlConfirm": "インポート",
+    "importUrlEmptyError": "インポートする URL を入力してください。",
+    "importUrlInvalidError": "URL は http:// または https:// で始まる必要があります。",
+    "importUrlFetchError": "URL の取得に失敗しました: {message}"
   },
   "ko": {
     "actionsImport": "파일에서 가져오기",
@@ -631,7 +855,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "잘못된 OpenAPI 문서: {message}",
     "invalidRoot": "OpenAPI 문서는 객체여야 합니다",
     "unsupportedVersion": "OpenAPI 3.0/3.1만 지원합니다",
-    "externalRefError": "외부 $ref 미지원({count}). 스키마를 인라인/번들하세요."
+    "externalRefError": "외부 $ref 미지원({count}). 스키마를 인라인/번들하세요.",
+    "actionsImportUrl": "URL에서 가져오기",
+    "importUrlTitle": "URL에서 가져오기",
+    "importUrlWarning": "브라우저에서 실행됩니다. URL이 CORS를 허용하지 않으면 요청이 실패합니다.",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "취소",
+    "importUrlConfirm": "가져오기",
+    "importUrlEmptyError": "가져올 URL을 입력하세요.",
+    "importUrlInvalidError": "URL은 http:// 또는 https://로 시작해야 합니다.",
+    "importUrlFetchError": "URL 가져오기에 실패했습니다: {message}"
   },
   "ru": {
     "actionsImport": "Импорт из файла",
@@ -659,7 +893,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Недопустимый документ OpenAPI: {message}",
     "invalidRoot": "Документ OpenAPI должен быть объектом",
     "unsupportedVersion": "Поддерживается только OpenAPI 3.0/3.1",
-    "externalRefError": "Внешний $ref не поддерживается ({count}). Встроите или объедините схему."
+    "externalRefError": "Внешний $ref не поддерживается ({count}). Встроите или объедините схему.",
+    "actionsImportUrl": "Импорт из URL",
+    "importUrlTitle": "Импорт из URL",
+    "importUrlWarning": "Выполняется в браузере. URL должен разрешать CORS, иначе запрос не пройдет.",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Отмена",
+    "importUrlConfirm": "Импортировать",
+    "importUrlEmptyError": "Введите URL для импорта.",
+    "importUrlInvalidError": "URL должен начинаться с http:// или https://.",
+    "importUrlFetchError": "Не удалось получить URL: {message}"
   },
   "pt": {
     "actionsImport": "Importar de arquivo",
@@ -687,7 +931,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Documento OpenAPI inválido: {message}",
     "invalidRoot": "O documento OpenAPI deve ser um objeto",
     "unsupportedVersion": "Somente OpenAPI 3.0/3.1 é suportado",
-    "externalRefError": "$ref externo não suportado ({count}). Incorpore ou agregue o schema."
+    "externalRefError": "$ref externo não suportado ({count}). Incorpore ou agregue o schema.",
+    "actionsImportUrl": "Importar de URL",
+    "importUrlTitle": "Importar de URL",
+    "importUrlWarning": "Isso roda no navegador. A URL precisa permitir CORS, ou a solicitação falhará.",
+    "importUrlLabel": "URL do OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Cancelar",
+    "importUrlConfirm": "Importar",
+    "importUrlEmptyError": "Insira uma URL para importar.",
+    "importUrlInvalidError": "A URL deve começar com http:// ou https://.",
+    "importUrlFetchError": "Falha ao obter a URL: {message}"
   },
   "ar": {
     "actionsImport": "استيراد من ملف",
@@ -715,7 +969,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "مستند OpenAPI غير صالح: {message}",
     "invalidRoot": "يجب أن يكون مستند OpenAPI كائنًا",
     "unsupportedVersion": "يدعم فقط OpenAPI 3.0/3.1",
-    "externalRefError": "‏$ref خارجي غير مدعوم ({count}). قم بدمج المخطط أو تضمينه."
+    "externalRefError": "‏$ref خارجي غير مدعوم ({count}). قم بدمج المخطط أو تضمينه.",
+    "actionsImportUrl": "استيراد من عنوان URL",
+    "importUrlTitle": "استيراد من عنوان URL",
+    "importUrlWarning": "يعمل هذا في المتصفح. يجب أن يسمح عنوان URL بـ CORS وإلا سيفشل الطلب.",
+    "importUrlLabel": "عنوان URL لـ OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "إلغاء",
+    "importUrlConfirm": "استيراد",
+    "importUrlEmptyError": "أدخل عنوان URL للاستيراد.",
+    "importUrlInvalidError": "يجب أن يبدأ عنوان URL بـ http:// أو https://.",
+    "importUrlFetchError": "فشل جلب عنوان URL: {message}"
   },
   "hi": {
     "actionsImport": "फ़ाइल से आयात करें",
@@ -743,7 +1007,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "अमान्य OpenAPI दस्तावेज़: {message}",
     "invalidRoot": "OpenAPI दस्तावेज़ एक ऑब्जेक्ट होना चाहिए",
     "unsupportedVersion": "केवल OpenAPI 3.0/3.1 समर्थित है",
-    "externalRefError": "बाहरी $ref समर्थित नहीं है ({count})। schema को inline या bundle करें।"
+    "externalRefError": "बाहरी $ref समर्थित नहीं है ({count})। schema को inline या bundle करें।",
+    "actionsImportUrl": "URL से आयात करें",
+    "importUrlTitle": "URL से आयात करें",
+    "importUrlWarning": "यह ब्राउज़र में चलता है। URL को CORS की अनुमति देनी होगी, नहीं तो अनुरोध विफल होगा।",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "रद्द करें",
+    "importUrlConfirm": "आयात करें",
+    "importUrlEmptyError": "आयात करने के लिए URL दर्ज करें।",
+    "importUrlInvalidError": "URL को http:// या https:// से शुरू होना चाहिए।",
+    "importUrlFetchError": "URL लाने में विफल: {message}"
   },
   "tr": {
     "actionsImport": "Dosyadan içe aktar",
@@ -771,7 +1045,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Geçersiz OpenAPI belgesi: {message}",
     "invalidRoot": "OpenAPI belgesi bir nesne olmalıdır",
     "unsupportedVersion": "Yalnızca OpenAPI 3.0/3.1 desteklenir",
-    "externalRefError": "Harici $ref desteklenmiyor ({count}). Şemayı içe gömün veya paketleyin."
+    "externalRefError": "Harici $ref desteklenmiyor ({count}). Şemayı içe gömün veya paketleyin.",
+    "actionsImportUrl": "URL'den içe aktar",
+    "importUrlTitle": "URL'den içe aktar",
+    "importUrlWarning": "Bu işlem tarayıcıda çalışır. URL CORS'a izin vermeli, aksi halde istek başarısız olur.",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "İptal",
+    "importUrlConfirm": "İçe aktar",
+    "importUrlEmptyError": "İçe aktarmak için bir URL girin.",
+    "importUrlInvalidError": "URL http:// veya https:// ile başlamalıdır.",
+    "importUrlFetchError": "URL alınamadı: {message}"
   },
   "nl": {
     "actionsImport": "Importeren uit bestand",
@@ -799,7 +1083,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Ongeldig OpenAPI-document: {message}",
     "invalidRoot": "OpenAPI-document moet een object zijn",
     "unsupportedVersion": "Alleen OpenAPI 3.0/3.1 wordt ondersteund",
-    "externalRefError": "Externe $ref wordt niet ondersteund ({count}). Inline of bundel het schema."
+    "externalRefError": "Externe $ref wordt niet ondersteund ({count}). Inline of bundel het schema.",
+    "actionsImportUrl": "Importeren via URL",
+    "importUrlTitle": "Importeren via URL",
+    "importUrlWarning": "Dit draait in je browser. De URL moet CORS toestaan, anders mislukt het verzoek.",
+    "importUrlLabel": "OpenAPI-URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Annuleren",
+    "importUrlConfirm": "Importeren",
+    "importUrlEmptyError": "Voer een URL in om te importeren.",
+    "importUrlInvalidError": "De URL moet beginnen met http:// of https://.",
+    "importUrlFetchError": "URL ophalen mislukt: {message}"
   },
   "sv": {
     "actionsImport": "Importera från fil",
@@ -827,7 +1121,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Ogiltigt OpenAPI-dokument: {message}",
     "invalidRoot": "OpenAPI-dokument måste vara ett objekt",
     "unsupportedVersion": "Endast OpenAPI 3.0/3.1 stöds",
-    "externalRefError": "Extern $ref stöds inte ({count}). Inkludera eller bunt ihop schemat."
+    "externalRefError": "Extern $ref stöds inte ({count}). Inkludera eller bunt ihop schemat.",
+    "actionsImportUrl": "Importera från URL",
+    "importUrlTitle": "Importera från URL",
+    "importUrlWarning": "Detta körs i webbläsaren. URL:en måste tillåta CORS, annars misslyckas begäran.",
+    "importUrlLabel": "OpenAPI-URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Avbryt",
+    "importUrlConfirm": "Importera",
+    "importUrlEmptyError": "Ange en URL att importera.",
+    "importUrlInvalidError": "URL:en måste börja med http:// eller https://.",
+    "importUrlFetchError": "Det gick inte att hämta URL:en: {message}"
   },
   "pl": {
     "actionsImport": "Importuj z pliku",
@@ -855,7 +1159,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Nieprawidłowy dokument OpenAPI: {message}",
     "invalidRoot": "Dokument OpenAPI musi być obiektem",
     "unsupportedVersion": "Obsługiwane jest tylko OpenAPI 3.0/3.1",
-    "externalRefError": "Zewnętrzny $ref nie jest obsługiwany ({count}). Wbuduj lub zbundluj schemat."
+    "externalRefError": "Zewnętrzny $ref nie jest obsługiwany ({count}). Wbuduj lub zbundluj schemat.",
+    "actionsImportUrl": "Importuj z URL",
+    "importUrlTitle": "Importuj z URL",
+    "importUrlWarning": "Działa w przeglądarce. URL musi zezwalać na CORS, inaczej żądanie się nie powiedzie.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Anuluj",
+    "importUrlConfirm": "Importuj",
+    "importUrlEmptyError": "Wpisz URL do importu.",
+    "importUrlInvalidError": "URL musi zaczynać się od http:// lub https://.",
+    "importUrlFetchError": "Nie udało się pobrać URL: {message}"
   },
   "vi": {
     "actionsImport": "Nhập từ tệp",
@@ -883,7 +1197,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Tài liệu OpenAPI không hợp lệ: {message}",
     "invalidRoot": "Tài liệu OpenAPI phải là một đối tượng",
     "unsupportedVersion": "Chỉ hỗ trợ OpenAPI 3.0/3.1",
-    "externalRefError": "$ref bên ngoài không được hỗ trợ ({count}). Hãy inline hoặc bundle schema."
+    "externalRefError": "$ref bên ngoài không được hỗ trợ ({count}). Hãy inline hoặc bundle schema.",
+    "actionsImportUrl": "Nhập từ URL",
+    "importUrlTitle": "Nhập từ URL",
+    "importUrlWarning": "Chạy trong trình duyệt. URL phải cho phép CORS, nếu không yêu cầu sẽ thất bại.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Hủy",
+    "importUrlConfirm": "Nhập",
+    "importUrlEmptyError": "Nhập URL để import.",
+    "importUrlInvalidError": "URL phải bắt đầu bằng http:// hoặc https://.",
+    "importUrlFetchError": "Không thể tải URL: {message}"
   },
   "th": {
     "actionsImport": "นำเข้าจากไฟล์",
@@ -911,7 +1235,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "เอกสาร OpenAPI ไม่ถูกต้อง: {message}",
     "invalidRoot": "เอกสาร OpenAPI ต้องเป็นอ็อบเจ็กต์",
     "unsupportedVersion": "รองรับเฉพาะ OpenAPI 3.0/3.1",
-    "externalRefError": "ไม่รองรับ $ref ภายนอก ({count}) โปรด inline หรือ bundle schema"
+    "externalRefError": "ไม่รองรับ $ref ภายนอก ({count}) โปรด inline หรือ bundle schema",
+    "actionsImportUrl": "นำเข้าจาก URL",
+    "importUrlTitle": "นำเข้าจาก URL",
+    "importUrlWarning": "ทำงานในเบราว์เซอร์ URL ต้องอนุญาต CORS ไม่เช่นนั้นคำขอจะล้มเหลว",
+    "importUrlLabel": "OpenAPI URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "ยกเลิก",
+    "importUrlConfirm": "นำเข้า",
+    "importUrlEmptyError": "กรุณาใส่ URL เพื่อ import",
+    "importUrlInvalidError": "URL ต้องขึ้นต้นด้วย http:// หรือ https://",
+    "importUrlFetchError": "ไม่สามารถดึง URL ได้: {message}"
   },
   "id": {
     "actionsImport": "Impor dari file",
@@ -939,7 +1273,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Dokumen OpenAPI tidak valid: {message}",
     "invalidRoot": "Dokumen OpenAPI harus berupa objek",
     "unsupportedVersion": "Hanya OpenAPI 3.0/3.1 yang didukung",
-    "externalRefError": "$ref eksternal tidak didukung ({count}). Inline atau bundle schema."
+    "externalRefError": "$ref eksternal tidak didukung ({count}). Inline atau bundle schema.",
+    "actionsImportUrl": "Impor dari URL",
+    "importUrlTitle": "Impor dari URL",
+    "importUrlWarning": "Berjalan di browser. URL harus mengizinkan CORS, jika tidak permintaan akan gagal.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Batal",
+    "importUrlConfirm": "Impor",
+    "importUrlEmptyError": "Masukkan URL untuk diimpor.",
+    "importUrlInvalidError": "URL harus diawali dengan http:// atau https://.",
+    "importUrlFetchError": "Gagal mengambil URL: {message}"
   },
   "he": {
     "actionsImport": "ייבוא מקובץ",
@@ -967,7 +1311,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "מסמך OpenAPI לא תקין: {message}",
     "invalidRoot": "מסמך OpenAPI חייב להיות אובייקט",
     "unsupportedVersion": "נתמך רק OpenAPI 3.0/3.1",
-    "externalRefError": "$ref חיצוני אינו נתמך ({count}). נא להטמיע או לאגד את הסכמה."
+    "externalRefError": "$ref חיצוני אינו נתמך ({count}). נא להטמיע או לאגד את הסכמה.",
+    "actionsImportUrl": "ייבוא מ-URL",
+    "importUrlTitle": "ייבוא מ-URL",
+    "importUrlWarning": "פועל בדפדפן. ה-URL חייב לאפשר CORS אחרת הבקשה תיכשל.",
+    "importUrlLabel": "כתובת URL של OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "ביטול",
+    "importUrlConfirm": "ייבוא",
+    "importUrlEmptyError": "הזן כתובת URL לייבוא.",
+    "importUrlInvalidError": "ה-URL חייב להתחיל ב‑http:// או https://.",
+    "importUrlFetchError": "נכשל בטעינת ה-URL: {message}"
   },
   "ms": {
     "actionsImport": "Import dari fail",
@@ -995,7 +1349,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Dokumen OpenAPI tidak sah: {message}",
     "invalidRoot": "Dokumen OpenAPI mestilah objek",
     "unsupportedVersion": "Hanya OpenAPI 3.0/3.1 disokong",
-    "externalRefError": "$ref luaran tidak disokong ({count}). Sila inline atau bundle skema."
+    "externalRefError": "$ref luaran tidak disokong ({count}). Sila inline atau bundle skema.",
+    "actionsImportUrl": "Import dari URL",
+    "importUrlTitle": "Import dari URL",
+    "importUrlWarning": "Berjalan dalam pelayar. URL mesti membenarkan CORS, jika tidak permintaan akan gagal.",
+    "importUrlLabel": "URL OpenAPI",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Batal",
+    "importUrlConfirm": "Import",
+    "importUrlEmptyError": "Masukkan URL untuk diimport.",
+    "importUrlInvalidError": "URL mesti bermula dengan http:// atau https://.",
+    "importUrlFetchError": "Gagal mendapatkan URL: {message}"
   },
   "no": {
     "actionsImport": "Importer fra fil",
@@ -1023,7 +1387,17 @@ function downloadTypes() {
     "invalidDocumentWithMessage": "Ugyldig OpenAPI-dokument: {message}",
     "invalidRoot": "OpenAPI-dokumentet må være et objekt",
     "unsupportedVersion": "Kun OpenAPI 3.0/3.1 støttes",
-    "externalRefError": "Ekstern $ref støttes ikke ({count}). Inline eller bunt schemaet."
+    "externalRefError": "Ekstern $ref støttes ikke ({count}). Inline eller bunt schemaet.",
+    "actionsImportUrl": "Importer fra URL",
+    "importUrlTitle": "Importer fra URL",
+    "importUrlWarning": "Dette kjører i nettleseren. URL-en må tillate CORS, ellers vil forespørselen mislykkes.",
+    "importUrlLabel": "OpenAPI-URL",
+    "importUrlPlaceholder": "https://example.com/openapi.yaml",
+    "importUrlCancel": "Avbryt",
+    "importUrlConfirm": "Importer",
+    "importUrlEmptyError": "Skriv inn en URL å importere.",
+    "importUrlInvalidError": "URL-en må starte med http:// eller https://.",
+    "importUrlFetchError": "Kunne ikke hente URL-en: {message}"
   }
 }
 </i18n>
