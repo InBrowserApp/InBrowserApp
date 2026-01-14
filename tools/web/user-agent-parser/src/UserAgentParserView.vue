@@ -1,9 +1,7 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
-    <div style="display: grid; gap: 24px">
-      <UserAgentParser />
-      <WhatIsUserAgent />
-    </div>
+    <UserAgentParser />
+    <WhatIsUserAgent />
   </ToolDefaultPageLayout>
 </template>
 

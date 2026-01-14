@@ -1,18 +1,18 @@
 <template>
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item-gi :show-feedback="false">
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
         <template #label>
-          <div
-            style="display: flex; align-items: center; justify-content: space-between; width: 100%"
-          >
+          <div class="field-label">
             <span>{{ t('input-label') }}</span>
-            <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
-              <template #icon>
-                <n-icon :component="GlobePerson20Regular" />
-              </template>
-              {{ t('use-current') }}
-            </n-button>
+            <span class="field-action">
+              <n-button text :disabled="!canUseCurrent" @click="useCurrentUserAgent">
+                <template #icon>
+                  <n-icon :component="GlobePerson20Regular" />
+                </template>
+                {{ t('use-current') }}
+              </n-button>
+            </span>
           </div>
         </template>
         <n-input
@@ -27,13 +27,13 @@
         </template>
       </n-form-item-gi>
 
-      <n-form-item-gi :show-feedback="false">
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
         <template #label>
-          <div
-            style="display: flex; align-items: center; justify-content: space-between; width: 100%"
-          >
+          <div class="field-label">
             <span>{{ t('json-output') }}</span>
-            <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
+            <span class="field-action">
+              <CopyToClipboardButton v-if="hasOutput" :content="renderedJson" />
+            </span>
           </div>
         </template>
         <n-card v-if="hasOutput" size="small">
@@ -48,11 +48,21 @@
   <ToolSection>
     <n-empty v-if="!hasOutput" :description="t('empty-state')" />
     <n-grid v-else cols="1 s:2 l:3" responsive="screen" :x-gap="12" :y-gap="12">
-      <ParsedSection :title="t('browser')" :items="browserItems" />
-      <ParsedSection :title="t('os')" :items="osItems" />
-      <ParsedSection :title="t('engine')" :items="engineItems" />
-      <ParsedSection :title="t('device')" :items="deviceItems" />
-      <ParsedSection :title="t('cpu')" :items="cpuItems" />
+      <n-gi>
+        <ParsedSection :title="t('browser')" :items="browserItems" />
+      </n-gi>
+      <n-gi>
+        <ParsedSection :title="t('os')" :items="osItems" />
+      </n-gi>
+      <n-gi>
+        <ParsedSection :title="t('engine')" :items="engineItems" />
+      </n-gi>
+      <n-gi>
+        <ParsedSection :title="t('device')" :items="deviceItems" />
+      </n-gi>
+      <n-gi>
+        <ParsedSection :title="t('cpu')" :items="cpuItems" />
+      </n-gi>
     </n-grid>
   </ToolSection>
 </template>
@@ -62,7 +72,18 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import UAParser from 'ua-parser-js'
-import { NButton, NCard, NCode, NEmpty, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
+import {
+  NButton,
+  NCard,
+  NCode,
+  NEmpty,
+  NFormItemGi,
+  NGi,
+  NGrid,
+  NIcon,
+  NInput,
+  NText,
+} from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import hljs from 'highlight.js/lib/core'
@@ -144,6 +165,21 @@ function useCurrentUserAgent() {
   userAgent.value = navigator.userAgent
 }
 </script>
+
+<style scoped>
+.field-label {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  min-width: 100%;
+}
+
+.field-action {
+  align-items: center;
+  display: inline-flex;
+  margin-left: auto;
+}
+</style>
 
 <i18n lang="json">
 {

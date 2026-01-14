@@ -26,5 +26,7 @@ describe('UserAgentParser', () => {
 
     expect(wrapper.text()).toContain('Chrome')
     expect(wrapper.text()).toContain('Windows')
+    expect(wrapper.text()).toContain('Browser')
+    expect(wrapper.text()).toContain('Operating System')
   })
 })
