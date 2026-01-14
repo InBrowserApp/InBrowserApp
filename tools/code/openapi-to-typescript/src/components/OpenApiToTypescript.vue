@@ -146,6 +146,7 @@
           :status="importUrlStatus"
           :disabled="isImportingUrl"
           @update:value="handleImportUrlInput"
+          @keydown.enter="handleImportUrlEnter"
         />
         <template v-if="importUrlError" #feedback>
           <n-text type="error">{{ importUrlError }}</n-text>
@@ -362,6 +363,11 @@ function handleImportUrlInput(value: string) {
   if (importUrlError.value) {
     importUrlError.value = ''
   }
+}
+
+function handleImportUrlEnter(event: KeyboardEvent) {
+  if (event.isComposing || isImportingUrl.value) return
+  importFromUrl()
 }
 
 async function importFromUrl() {
