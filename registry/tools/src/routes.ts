@@ -66,6 +66,7 @@ import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
 import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validator/routes'
 import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescript/routes'
+import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
 import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
@@ -172,9 +173,10 @@ export const routes: ToolRoute[] = [
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,
+  ...jsonSchemaValidatorRoutes,
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
-  ...jsonSchemaValidatorRoutes,
+  ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,

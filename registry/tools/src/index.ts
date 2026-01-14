@@ -69,6 +69,7 @@ import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
+import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
@@ -239,6 +240,7 @@ export const tools: ToolInfo[] = [
 
   // Validator Tools
   jsonSchemaValidatorToolInfo,
+  passwordStrengthCheckerToolInfo,
   creditCardValidatorToolInfo,
   isbnValidatorToolInfo,
   ibanValidatorToolInfo,

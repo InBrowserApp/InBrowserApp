@@ -75,6 +75,7 @@
     "@tools/my-ip-address": "workspace:*",
     "@tools/network-tools": "workspace:*",
     "@tools/number-base-converter": "workspace:*",
+    "@tools/password-strength-checker": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/placeholder-image-generator": "workspace:*",
     "@tools/png-optimizer": "workspace:*",
