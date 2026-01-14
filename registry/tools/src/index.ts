@@ -74,6 +74,7 @@ import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestam
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
 import { toolInfo as durationCalculatorToolInfo } from '@tools/duration-calculator'
+import { toolInfo as businessDaysCalculatorToolInfo } from '@tools/business-days-calculator'
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-expression-generator'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
@@ -199,6 +200,7 @@ export const tools: ToolInfo[] = [
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
   durationCalculatorToolInfo,
+  businessDaysCalculatorToolInfo,
   cronExpressionParserToolInfo,
   cronExpressionGeneratorToolInfo,
 
