@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   durationPartsToMilliseconds,
   formatDurationLabel,
+  formatFraction,
   formatIsoDuration,
   millisecondsToDurationParts,
   normalizeDurationParts,
@@ -48,6 +49,19 @@ describe('parseIsoDuration', () => {
     })
   })
 
+  it('parses comma fractional seconds', () => {
+    expect(parseIsoDuration('PT1,2S')).toEqual({
+      sign: 1,
+      parts: {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 1,
+        milliseconds: 200,
+      },
+    })
+  })
+
   it('rejects empty durations', () => {
     expect(parseIsoDuration('P')).toBeNull()
   })
@@ -64,6 +78,18 @@ describe('duration formatting', () => {
     expect(formatIsoDuration({ days: 0, hours: 0, minutes: 0, seconds: 0, milliseconds: 0 })).toBe(
       'PT0S',
     )
+  })
+
+  it('formats day-only durations', () => {
+    expect(formatIsoDuration({ days: 2, hours: 0, minutes: 0, seconds: 0, milliseconds: 0 })).toBe(
+      'P2D',
+    )
+  })
+
+  it('formats negative durations with a sign', () => {
+    expect(
+      formatIsoDuration({ days: 0, hours: 1, minutes: 0, seconds: 0, milliseconds: 0 }, -1),
+    ).toBe('-PT1H')
   })
 
   it('formats labels consistently', () => {
@@ -86,6 +112,28 @@ describe('duration math', () => {
     expect(durationPartsToMilliseconds(parts)).toBe(90_061_005)
   })
 
+  it('coerces non-finite parts to zero', () => {
+    expect(
+      durationPartsToMilliseconds({
+        days: Number.POSITIVE_INFINITY,
+        hours: Number.NaN,
+        minutes: 1,
+        seconds: 0,
+        milliseconds: 0,
+      }),
+    ).toBe(60_000)
+  })
+
+  it('returns zero parts for negative milliseconds', () => {
+    expect(millisecondsToDurationParts(-100)).toEqual({
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      milliseconds: 0,
+    })
+  })
+
   it('normalizes larger units', () => {
     expect(
       normalizeDurationParts({ days: 0, hours: 0, minutes: 61, seconds: 0, milliseconds: 0 }),
@@ -96,5 +144,16 @@ describe('duration math', () => {
       seconds: 0,
       milliseconds: 0,
     })
+  })
+})
+
+describe('formatFraction', () => {
+  it('trims trailing zeros', () => {
+    expect(formatFraction(1.5, 2)).toBe('1.5')
+    expect(formatFraction(1.25, 3)).toBe('1.25')
+  })
+
+  it('returns empty string for non-finite input', () => {
+    expect(formatFraction(Number.NaN, 2)).toBe('')
   })
 })
