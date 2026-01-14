@@ -1,0 +1,333 @@
+export interface BICValidationResult {
+  input: string
+  normalized: string
+  length: number
+  type: 'bic-8' | 'bic-11' | 'unknown'
+  bankCode: string | null
+  countryCode: string | null
+  locationCode: string | null
+  branchCode: string | null
+  isLengthValid: boolean
+  isBankCodeValid: boolean
+  isCountryCodeValid: boolean
+  isCountryValid: boolean
+  isLocationCodeValid: boolean
+  isBranchCodeValid: boolean
+  isFormatValid: boolean
+  isPrimaryOffice: boolean
+  isTestBIC: boolean
+  isPassiveParticipant: boolean
+  isValid: boolean
+}
+
+const ISO_COUNTRY_CODES = [
+  'AD',
+  'AE',
+  'AF',
+  'AG',
+  'AI',
+  'AL',
+  'AM',
+  'AO',
+  'AQ',
+  'AR',
+  'AS',
+  'AT',
+  'AU',
+  'AW',
+  'AX',
+  'AZ',
+  'BA',
+  'BB',
+  'BD',
+  'BE',
+  'BF',
+  'BG',
+  'BH',
+  'BI',
+  'BJ',
+  'BL',
+  'BM',
+  'BN',
+  'BO',
+  'BQ',
+  'BR',
+  'BS',
+  'BT',
+  'BV',
+  'BW',
+  'BY',
+  'BZ',
+  'CA',
+  'CC',
+  'CD',
+  'CF',
+  'CG',
+  'CH',
+  'CI',
+  'CK',
+  'CL',
+  'CM',
+  'CN',
+  'CO',
+  'CR',
+  'CU',
+  'CV',
+  'CW',
+  'CX',
+  'CY',
+  'CZ',
+  'DE',
+  'DJ',
+  'DK',
+  'DM',
+  'DO',
+  'DZ',
+  'EC',
+  'EE',
+  'EG',
+  'EH',
+  'ER',
+  'ES',
+  'ET',
+  'FI',
+  'FJ',
+  'FK',
+  'FM',
+  'FO',
+  'FR',
+  'GA',
+  'GB',
+  'GD',
+  'GE',
+  'GF',
+  'GG',
+  'GH',
+  'GI',
+  'GL',
+  'GM',
+  'GN',
+  'GP',
+  'GQ',
+  'GR',
+  'GS',
+  'GT',
+  'GU',
+  'GW',
+  'GY',
+  'HK',
+  'HM',
+  'HN',
+  'HR',
+  'HT',
+  'HU',
+  'ID',
+  'IE',
+  'IL',
+  'IM',
+  'IN',
+  'IO',
+  'IQ',
+  'IR',
+  'IS',
+  'IT',
+  'JE',
+  'JM',
+  'JO',
+  'JP',
+  'KE',
+  'KG',
+  'KH',
+  'KI',
+  'KM',
+  'KN',
+  'KP',
+  'KR',
+  'KW',
+  'KY',
+  'KZ',
+  'LA',
+  'LB',
+  'LC',
+  'LI',
+  'LK',
+  'LR',
+  'LS',
+  'LT',
+  'LU',
+  'LV',
+  'LY',
+  'MA',
+  'MC',
+  'MD',
+  'ME',
+  'MF',
+  'MG',
+  'MH',
+  'MK',
+  'ML',
+  'MM',
+  'MN',
+  'MO',
+  'MP',
+  'MQ',
+  'MR',
+  'MS',
+  'MT',
+  'MU',
+  'MV',
+  'MW',
+  'MX',
+  'MY',
+  'MZ',
+  'NA',
+  'NC',
+  'NE',
+  'NF',
+  'NG',
+  'NI',
+  'NL',
+  'NO',
+  'NP',
+  'NR',
+  'NU',
+  'NZ',
+  'OM',
+  'PA',
+  'PE',
+  'PF',
+  'PG',
+  'PH',
+  'PK',
+  'PL',
+  'PM',
+  'PN',
+  'PR',
+  'PS',
+  'PT',
+  'PW',
+  'PY',
+  'QA',
+  'RE',
+  'RO',
+  'RS',
+  'RU',
+  'RW',
+  'SA',
+  'SB',
+  'SC',
+  'SD',
+  'SE',
+  'SG',
+  'SH',
+  'SI',
+  'SJ',
+  'SK',
+  'SL',
+  'SM',
+  'SN',
+  'SO',
+  'SR',
+  'SS',
+  'ST',
+  'SV',
+  'SX',
+  'SY',
+  'SZ',
+  'TC',
+  'TD',
+  'TF',
+  'TG',
+  'TH',
+  'TJ',
+  'TK',
+  'TL',
+  'TM',
+  'TN',
+  'TO',
+  'TR',
+  'TT',
+  'TV',
+  'TW',
+  'TZ',
+  'UA',
+  'UG',
+  'UM',
+  'US',
+  'UY',
+  'UZ',
+  'VA',
+  'VC',
+  'VE',
+  'VG',
+  'VI',
+  'VN',
+  'VU',
+  'WF',
+  'WS',
+  'YE',
+  'YT',
+  'ZA',
+  'ZM',
+  'ZW',
+] as const
+
+const ISO_COUNTRY_CODE_SET = new Set<string>(ISO_COUNTRY_CODES)
+
+const BASIC_BIC_REGEX = /^[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}([A-Z0-9]{3})?$/
+
+export function normalizeBIC(input: string): string {
+  return input.replace(/[\s-]/g, '').toUpperCase()
+}
+
+export function validateBIC(input: string): BICValidationResult {
+  const normalized = normalizeBIC(input)
+  const length = normalized.length
+  const type = length === 8 ? 'bic-8' : length === 11 ? 'bic-11' : 'unknown'
+  const bankCode = length >= 4 ? normalized.slice(0, 4) : null
+  const countryCode = length >= 6 ? normalized.slice(4, 6) : null
+  const locationCode = length >= 8 ? normalized.slice(6, 8) : null
+  const branchCode = length === 11 ? normalized.slice(8, 11) : null
+  const isLengthValid = length === 8 || length === 11
+  const isBankCodeValid = bankCode ? /^[A-Z]{4}$/.test(bankCode) : false
+  const isCountryCodeValid = countryCode ? /^[A-Z]{2}$/.test(countryCode) : false
+  const isCountryValid = isCountryCodeValid
+    ? ISO_COUNTRY_CODE_SET.has(countryCode as string)
+    : false
+  const isLocationCodeValid = locationCode ? /^[A-Z0-9]{2}$/.test(locationCode) : false
+  const isBranchCodeValid = branchCode ? /^[A-Z0-9]{3}$/.test(branchCode) : length === 8
+  const isFormatValid = BASIC_BIC_REGEX.test(normalized)
+  const isPrimaryOffice = type === 'bic-8' || branchCode === 'XXX'
+  const isTestBIC = locationCode ? locationCode[1] === '0' : false
+  const isPassiveParticipant = locationCode ? locationCode[1] === '1' : false
+  const isValid =
+    isLengthValid &&
+    isBankCodeValid &&
+    isCountryCodeValid &&
+    isCountryValid &&
+    isLocationCodeValid &&
+    isBranchCodeValid &&
+    isFormatValid
+
+  return {
+    input,
+    normalized,
+    length,
+    type,
+    bankCode,
+    countryCode,
+    locationCode,
+    branchCode,
+    isLengthValid,
+    isBankCodeValid,
+    isCountryCodeValid,
+    isCountryValid,
+    isLocationCodeValid,
+    isBranchCodeValid,
+    isFormatValid,
+    isPrimaryOffice,
+    isTestBIC,
+    isPassiveParticipant,
+    isValid,
+  }
+}
