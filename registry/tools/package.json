@@ -83,6 +83,7 @@
     "@tools/qr-code-reader": "workspace:*",
     "@tools/random-password-generator": "workspace:*",
     "@tools/redirects": "workspace:*",
+    "@tools/regex-tester-replacer": "workspace:*",
     "@tools/remove-pdf-owner-password": "workspace:*",
     "@tools/reverse-ip-lookup": "workspace:*",
     "@tools/ripemd160-hash-text-or-file": "workspace:*",

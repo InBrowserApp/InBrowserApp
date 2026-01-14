@@ -89,6 +89,7 @@ import { toolInfo as portNumberLookupToolInfo } from '@tools/port-number-lookup'
 import { toolInfo as httpStatusCodeLookupToolInfo } from '@tools/http-status-code-lookup'
 import { toolInfo as mimeTypeLookupToolInfo } from '@tools/mime-type-lookup'
 import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
+import { toolInfo as regexTesterReplacerToolInfo } from '@tools/regex-tester-replacer'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
@@ -220,6 +221,7 @@ export const tools: ToolInfo[] = [
   gitignoreGeneratorToolInfo,
 
   // Text Tools
+  regexTesterReplacerToolInfo,
   asciiArtGeneratorToolInfo,
   textStatisticsToolInfo,
 
