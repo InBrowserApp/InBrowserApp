@@ -4,25 +4,25 @@
       <ToolSectionHeader>{{ t('event-details') }}</ToolSectionHeader>
       <ToolSection>
         <n-grid cols="1 900:2" x-gap="12" y-gap="12">
-          <n-form-item-gi :label="t('title')">
+          <n-form-item-gi :label="t('title')" :show-feedback="false">
             <n-input v-model:value="title" />
           </n-form-item-gi>
-          <n-form-item-gi :label="t('location')">
+          <n-form-item-gi :label="t('location')" :show-feedback="false">
             <n-input v-model:value="location" />
           </n-form-item-gi>
         </n-grid>
 
         <n-grid cols="1" y-gap="12" style="margin-top: 12px">
-          <n-form-item-gi :label="t('description')">
+          <n-form-item-gi :label="t('description')" :show-feedback="false">
             <n-input v-model:value="description" type="textarea" :autosize="{ minRows: 3 }" />
           </n-form-item-gi>
         </n-grid>
 
         <n-grid cols="1 900:2" x-gap="12" y-gap="12" style="margin-top: 12px">
-          <n-form-item-gi :label="t('url')">
+          <n-form-item-gi :label="t('url')" :show-feedback="false">
             <n-input v-model:value="url" />
           </n-form-item-gi>
-          <n-form-item-gi :label="t('uid')">
+          <n-form-item-gi :label="t('uid')" :show-feedback="false">
             <n-flex align="center" :size="8">
               <n-input v-model:value="uid" readonly style="flex: 1" />
               <n-button tertiary size="small" @click="regenerateUid">
@@ -39,13 +39,13 @@
       <ToolSectionHeader>{{ t('date-time') }}</ToolSectionHeader>
       <ToolSection>
         <n-grid cols="1" y-gap="12">
-          <n-form-item-gi :label="t('all-day')">
+          <n-form-item-gi :label="t('all-day')" :show-feedback="false">
             <n-switch v-model:value="isAllDay" />
           </n-form-item-gi>
         </n-grid>
 
         <n-grid v-if="!isAllDay" cols="1 900:2" x-gap="12" y-gap="12" style="margin-top: 12px">
-          <n-form-item-gi :label="t('time-zone')">
+          <n-form-item-gi :label="t('time-zone')" :show-feedback="false">
             <n-select
               v-model:value="timeZone"
               :options="timeZoneOptions"
@@ -56,7 +56,7 @@
               {{ t('offset') }}: {{ offsetLabel }}
             </n-text>
           </n-form-item-gi>
-          <n-form-item-gi :label="t('output-mode')">
+          <n-form-item-gi :label="t('output-mode')" :show-feedback="false">
             <n-radio-group v-model:value="outputMode">
               <n-flex :size="12">
                 <n-radio value="utc">{{ t('output-utc') }}</n-radio>
@@ -109,10 +109,14 @@
       <ToolSectionHeader>{{ t('recurrence') }}</ToolSectionHeader>
       <ToolSection>
         <n-grid cols="1 900:2" x-gap="12" y-gap="12">
-          <n-form-item-gi :label="t('repeat')">
+          <n-form-item-gi :label="t('repeat')" :show-feedback="false">
             <n-select v-model:value="recurrenceFrequency" :options="frequencyOptions" />
           </n-form-item-gi>
-          <n-form-item-gi v-if="recurrenceFrequency !== 'none'" :label="t('interval')">
+          <n-form-item-gi
+            v-if="recurrenceFrequency !== 'none'"
+            :label="t('interval')"
+            :show-feedback="false"
+          >
             <n-input-number
               v-model:value="recurrenceInterval"
               :min="1"
@@ -122,7 +126,11 @@
           </n-form-item-gi>
         </n-grid>
 
-        <n-form-item-gi v-if="recurrenceFrequency === 'weekly'" :label="t('weekdays')">
+        <n-form-item-gi
+          v-if="recurrenceFrequency === 'weekly'"
+          :label="t('weekdays')"
+          :show-feedback="false"
+        >
           <n-checkbox-group v-model:value="recurrenceWeekdays">
             <n-flex :size="8" wrap>
               <n-checkbox
@@ -137,7 +145,7 @@
         </n-form-item-gi>
 
         <n-grid v-if="recurrenceFrequency === 'monthly'" cols="1 900:2" x-gap="12" y-gap="12">
-          <n-form-item-gi :label="t('month-day')">
+          <n-form-item-gi :label="t('month-day')" :show-feedback="false">
             <n-input-number
               v-model:value="recurrenceMonthDay"
               :min="1"
@@ -149,7 +157,7 @@
         </n-grid>
 
         <n-grid v-if="recurrenceFrequency === 'yearly'" cols="1 900:2" x-gap="12" y-gap="12">
-          <n-form-item-gi :label="t('month')">
+          <n-form-item-gi :label="t('month')" :show-feedback="false">
             <n-input-number
               v-model:value="recurrenceMonth"
               :min="1"
@@ -158,7 +166,7 @@
               style="width: 100%"
             />
           </n-form-item-gi>
-          <n-form-item-gi :label="t('month-day')">
+          <n-form-item-gi :label="t('month-day')" :show-feedback="false">
             <n-input-number
               v-model:value="recurrenceMonthDay"
               :min="1"
@@ -170,10 +178,14 @@
         </n-grid>
 
         <n-grid v-if="recurrenceFrequency !== 'none'" cols="1 900:2" x-gap="12" y-gap="12">
-          <n-form-item-gi :label="t('ends')">
+          <n-form-item-gi :label="t('ends')" :show-feedback="false">
             <n-select v-model:value="recurrenceEndMode" :options="endModeOptions" />
           </n-form-item-gi>
-          <n-form-item-gi v-if="recurrenceEndMode === 'count'" :label="t('count')">
+          <n-form-item-gi
+            v-if="recurrenceEndMode === 'count'"
+            :label="t('count')"
+            :show-feedback="false"
+          >
             <n-input-number
               v-model:value="recurrenceCount"
               :min="1"
@@ -181,7 +193,11 @@
               style="width: 100%"
             />
           </n-form-item-gi>
-          <n-form-item-gi v-if="recurrenceEndMode === 'until'" :label="t('until')">
+          <n-form-item-gi
+            v-if="recurrenceEndMode === 'until'"
+            :label="t('until')"
+            :show-feedback="false"
+          >
             <n-input
               v-model:value="recurrenceUntilInput"
               :placeholder="isAllDay ? t('date-placeholder') : t('until-placeholder')"
