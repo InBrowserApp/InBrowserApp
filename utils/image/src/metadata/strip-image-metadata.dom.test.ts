@@ -57,7 +57,10 @@ describe('stripImageMetadata', () => {
 
   it('removes PNG text chunks', () => {
     const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
-    const ihdr = makePngChunk('IHDR', new Array(13).fill(0x00))
+    const ihdr = makePngChunk(
+      'IHDR',
+      Array.from({ length: 13 }, () => 0x00),
+    )
     const text = makePngChunk('tEXt', [0x01, 0x02, 0x03, 0x04])
     const iend = makePngChunk('IEND', [])
     const png = Uint8Array.from([...signature, ...ihdr, ...text, ...iend])
