@@ -49,10 +49,22 @@
           <n-select :value="format" :options="formatOptions" @update:value="handleFormatUpdate" />
         </n-form-item-gi>
         <n-form-item-gi :label="t('width')" :show-feedback="false">
-          <n-input-number :value="width" :min="1" :max="8192" @update:value="handleWidthUpdate" />
+          <n-input-number
+            :value="width"
+            :min="1"
+            :max="8192"
+            style="width: 100%"
+            @update:value="handleWidthUpdate"
+          />
         </n-form-item-gi>
         <n-form-item-gi :label="t('height')" :show-feedback="false">
-          <n-input-number :value="height" :min="1" :max="8192" @update:value="handleHeightUpdate" />
+          <n-input-number
+            :value="height"
+            :min="1"
+            :max="8192"
+            style="width: 100%"
+            @update:value="handleHeightUpdate"
+          />
         </n-form-item-gi>
         <n-form-item-gi :label="t('lockAspect')" :show-feedback="false">
           <n-checkbox :checked="keepAspect" @update:checked="handleKeepAspectToggle">
@@ -92,6 +104,9 @@
       </n-grid>
       <n-flex align="center" :size="12" style="margin-top: 12px">
         <n-button secondary @click="resetToOriginal">
+          <template #icon>
+            <n-icon><ResizeImage20Regular /></n-icon>
+          </template>
           {{ t('resetSize') }}
         </n-button>
         <n-button
@@ -100,6 +115,9 @@
           :disabled="isConverting"
           @click="convertSvg"
         >
+          <template #icon>
+            <n-icon><ImageEdit24Regular /></n-icon>
+          </template>
           {{ isConverting ? t('converting') : t('convert') }}
         </n-button>
       </n-flex>
@@ -126,7 +144,12 @@
       </n-grid>
       <n-flex vertical :size="12" style="margin-top: 16px">
         <n-image :src="outputPreviewUrl || ''" alt="Output preview" />
-        <n-button @click="downloadOutput">
+        <n-button
+          tag="a"
+          :href="downloadHref || undefined"
+          :download="outputFileName"
+          :disabled="!downloadHref"
+        >
           <template #icon>
             <n-icon><ArrowDownload24Regular /></n-icon>
           </template>
@@ -169,6 +192,8 @@ import {
   ArrowDownload24Regular,
   CloudArrowUp24Regular,
   Delete20Regular,
+  ImageEdit24Regular,
+  ResizeImage20Regular,
 } from '@shared/icons/fluent'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { filesize } from 'filesize'
@@ -198,6 +223,7 @@ const quality = ref(92)
 
 const originalPreviewUrl = useObjectUrl(originalFile)
 const outputPreviewUrl = useObjectUrl(outputBlob)
+const downloadHref = computed(() => outputPreviewUrl.value || '')
 
 const formatOptions = computed(() => [
   { label: t('formatPng'), value: 'png' },
@@ -407,22 +433,6 @@ async function convertSvg() {
     message.error(t('convertFailed'))
   } finally {
     isConverting.value = false
-  }
-}
-
-function downloadOutput() {
-  if (!outputBlob.value) return
-
-  const url = outputPreviewUrl.value || URL.createObjectURL(outputBlob.value)
-  const link = document.createElement('a')
-  link.href = url
-  link.download = outputFileName.value
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-
-  if (!outputPreviewUrl.value) {
-    URL.revokeObjectURL(url)
   }
 }
 

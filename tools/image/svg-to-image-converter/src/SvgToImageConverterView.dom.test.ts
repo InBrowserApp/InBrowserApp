@@ -45,17 +45,11 @@ const mountOptions = {
   },
 }
 
-const originalCreateObjectURL =
-  typeof URL.createObjectURL === 'function' ? URL.createObjectURL : undefined
-const originalRevokeObjectURL =
-  typeof URL.revokeObjectURL === 'function' ? URL.revokeObjectURL : undefined
 const originalToBlob =
   typeof HTMLCanvasElement.prototype.toBlob === 'function'
     ? HTMLCanvasElement.prototype.toBlob
     : undefined
 
-let createObjectURLSpy: ReturnType<typeof vi.fn> | null = null
-let revokeObjectURLSpy: ReturnType<typeof vi.fn> | null = null
 let getContextSpy: ReturnType<typeof vi.fn> | null = null
 let toBlobSpy: ReturnType<typeof vi.fn> | null = null
 let contextMock: {
@@ -104,7 +98,6 @@ type SvgToImageConverterVm = {
   handleBackgroundChange: (value: string) => void
   resolveOutputSize: () => SvgDimensions
   convertSvg: () => Promise<void>
-  downloadOutput: () => void
   loadSvgImage: (value: string) => Promise<HTMLImageElement>
   formatOptions: Array<{ label: string; value: OutputFormat }>
   aspectRatio: number
@@ -142,27 +135,6 @@ const createSvgFile = (
 ) => new File([content], name, { type })
 
 beforeEach(() => {
-  if (originalCreateObjectURL) {
-    createObjectURLSpy = vi
-      .spyOn(URL, 'createObjectURL')
-      .mockReturnValue('blob:mock') as unknown as ReturnType<typeof vi.fn>
-  } else {
-    createObjectURLSpy = vi.fn(() => 'blob:mock')
-    Object.defineProperty(URL, 'createObjectURL', {
-      value: createObjectURLSpy,
-      writable: true,
-    })
-  }
-
-  if (originalRevokeObjectURL) {
-    revokeObjectURLSpy = vi
-      .spyOn(URL, 'revokeObjectURL')
-      .mockImplementation(() => {}) as unknown as ReturnType<typeof vi.fn>
-  } else {
-    revokeObjectURLSpy = vi.fn()
-    Object.defineProperty(URL, 'revokeObjectURL', { value: revokeObjectURLSpy, writable: true })
-  }
-
   vi.stubGlobal('Image', MockImage)
 
   contextMock = {
@@ -202,14 +174,6 @@ afterEach(() => {
 
   if (!originalToBlob) {
     delete (HTMLCanvasElement.prototype as { toBlob?: unknown }).toBlob
-  }
-
-  if (!originalCreateObjectURL) {
-    delete (URL as { createObjectURL?: unknown }).createObjectURL
-  }
-
-  if (!originalRevokeObjectURL) {
-    delete (URL as { revokeObjectURL?: unknown }).revokeObjectURL
   }
 })
 
@@ -472,8 +436,6 @@ describe('SvgToImageConverterView', () => {
     const wrapper = mountWrapper()
     const vm = getVm(wrapper)
 
-    vm.downloadOutput()
-
     class ErrorImage {
       onload: (() => void) | null = null
       onerror: (() => void) | null = null
@@ -500,21 +462,11 @@ describe('SvgToImageConverterView', () => {
     expect(vm.outputFileName).toContain('sample.png')
 
     vm.outputPreviewUrl = 'blob:preview'
-    createObjectURLSpy?.mockClear()
-    revokeObjectURLSpy?.mockClear()
-    vm.downloadOutput()
-    expect(createObjectURLSpy).not.toHaveBeenCalled()
-    expect(revokeObjectURLSpy).not.toHaveBeenCalled()
-
-    vm.outputPreviewUrl = ''
-    createObjectURLSpy?.mockClear()
-    revokeObjectURLSpy?.mockClear()
-    vm.downloadOutput()
-    expect(createObjectURLSpy).toHaveBeenCalled()
-    expect(revokeObjectURLSpy).toHaveBeenCalled()
-
-    vm.outputBlob = null
-    vm.downloadOutput()
+    await flushPromises()
+    const downloadLink = wrapper.find('a')
+    expect(downloadLink.exists()).toBe(true)
+    expect(downloadLink.attributes('href')).toBe('blob:preview')
+    expect(downloadLink.attributes('download')).toBe('sample.png')
   })
 
   it('converts an SVG file to output through upload', async () => {
