@@ -46,15 +46,15 @@
 
         <n-grid v-if="!isAllDay" cols="1 900:2" x-gap="12" y-gap="12" style="margin-top: 12px">
           <n-form-item-gi :label="t('time-zone')" :show-feedback="false">
-            <n-select
-              v-model:value="timeZone"
-              :options="timeZoneOptions"
-              filterable
-              :placeholder="t('timezone-placeholder')"
-            />
-            <n-text v-if="offsetLabel" depth="3" style="margin-top: 4px">
-              {{ t('offset') }}: {{ offsetLabel }}
-            </n-text>
+            <n-flex vertical :size="4">
+              <n-select
+                v-model:value="timeZone"
+                :options="timeZoneOptions"
+                filterable
+                :placeholder="t('timezone-placeholder')"
+              />
+              <n-text v-if="offsetLabel" depth="3"> {{ t('offset') }}: {{ offsetLabel }} </n-text>
+            </n-flex>
           </n-form-item-gi>
           <n-form-item-gi :label="t('output-mode')" :show-feedback="false">
             <n-radio-group v-model:value="outputMode">
@@ -246,7 +246,7 @@
           <n-text depth="3">{{ t('output') }}</n-text>
           <n-flex align="center" :size="8">
             <CopyToClipboardButton v-if="icsContent" :content="icsContent" />
-            <n-button text :disabled="!icsContent" @click="downloadIcs">
+            <n-button text tag="a" :href="icsHref" download="event.ics" :disabled="!icsHref">
               <template #icon>
                 <n-icon :component="ArrowDownload16Regular" />
               </template>
@@ -300,7 +300,7 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStorage } from '@vueuse/core'
+import { useObjectUrl, useStorage } from '@vueuse/core'
 import {
   NButton,
   NIcon,
@@ -690,6 +690,12 @@ const icsContent = computed(() => {
   })
 })
 
+const icsBlob = computed(() =>
+  icsContent.value ? new Blob([icsContent.value], { type: 'text/calendar;charset=utf-8' }) : null,
+)
+const icsUrl = useObjectUrl(icsBlob)
+const icsHref = computed(() => icsUrl.value || undefined)
+
 const qrOptions = {
   errorCorrectionLevel: 'M' as const,
   width: 240,
@@ -720,19 +726,6 @@ function setNow() {
     return
   }
   startInput.value = formatInputDateTime(now, timeZone.value)
-}
-
-function downloadIcs() {
-  if (!icsContent.value) return
-  const blob = new Blob([icsContent.value], { type: 'text/calendar;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'event.ics'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
 }
 
 function formatDateInput(parts: DateTimeParts): string {
