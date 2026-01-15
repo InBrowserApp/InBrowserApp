@@ -16,6 +16,7 @@ import { routes as ipv6ToMacRoutes } from '@tools/ipv6-to-mac/routes'
 import { routes as currentNetworkTimeRoutes } from '@tools/current-network-time/routes'
 import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
+import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
@@ -48,6 +49,7 @@ import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
 import { routes as jwtDecoderVerifierRoutes } from '@tools/jwt-decoder-verifier/routes'
 import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-generator/routes'
 import { routes as bip39MnemonicGeneratorRoutes } from '@tools/bip39-mnemonic-generator/routes'
+import { routes as ksuidGeneratorRoutes } from '@tools/ksuid-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
 import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
@@ -127,6 +129,7 @@ export const routes: ToolRoute[] = [
   ...pngOptimizerRoutes,
   ...svgOptimizerRoutes,
   ...exifViewerRoutes,
+  ...imageMetadataCleanerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
   ...imageToolsRoutes,
@@ -159,6 +162,7 @@ export const routes: ToolRoute[] = [
   ...jwtDecoderVerifierRoutes,
   ...randomPasswordGeneratorRoutes,
   ...bip39MnemonicGeneratorRoutes,
+  ...ksuidGeneratorRoutes,
   ...qrCodeGeneratorRoutes,
   ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,

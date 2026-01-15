@@ -18,6 +18,7 @@ import { toolInfo as ipv6ToMacToolInfo } from '@tools/ipv6-to-mac'
 import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-time'
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
+import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
 import { toolInfo as networkToolsToolInfo } from '@tools/network-tools'
 import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
@@ -50,6 +51,7 @@ import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
+import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -138,6 +140,7 @@ export const tools: ToolInfo[] = [
   pngOptimizerToolInfo,
   svgOptimizerToolInfo,
   exifViewerToolInfo,
+  imageMetadataCleanerToolInfo,
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,
@@ -193,6 +196,7 @@ export const tools: ToolInfo[] = [
   jwtDecoderVerifierToolInfo,
   randomPasswordGeneratorToolInfo,
   bip39MnemonicGeneratorToolInfo,
+  ksuidGeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
