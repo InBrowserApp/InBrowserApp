@@ -1,0 +1,21 @@
+{
+  "name": "@tools/ksuid-generator",
+  "version": "1.0.0",
+  "description": "Generate KSUIDs in-browser",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/icons": "workspace:*",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
+}
