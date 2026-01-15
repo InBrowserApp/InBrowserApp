@@ -1,36 +1,18 @@
 <template>
   <n-flex :size="8" wrap>
-    <n-button
-      tertiary
-      tag="a"
-      :href="pngHref"
-      download="event-qr.png"
-      :disabled="!pngHref"
-    >
+    <n-button tertiary tag="a" :href="pngHref" download="event-qr.png" :disabled="!pngHref">
       <template #icon>
         <n-icon><ImageIcon /></n-icon>
       </template>
       PNG
     </n-button>
-    <n-button
-      tertiary
-      tag="a"
-      :href="jpgHref"
-      download="event-qr.jpg"
-      :disabled="!jpgHref"
-    >
+    <n-button tertiary tag="a" :href="jpgHref" download="event-qr.jpg" :disabled="!jpgHref">
       <template #icon>
         <n-icon><ImageIcon /></n-icon>
       </template>
       JPG
     </n-button>
-    <n-button
-      tertiary
-      tag="a"
-      :href="svgHref"
-      download="event-qr.svg"
-      :disabled="!svgHref"
-    >
+    <n-button tertiary tag="a" :href="svgHref" download="event-qr.svg" :disabled="!svgHref">
       <template #icon>
         <n-icon><CodeIcon /></n-icon>
       </template>
