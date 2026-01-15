@@ -40,7 +40,36 @@
       </n-flex>
     </ToolSection>
 
-    <ToolSectionHeader>{{ t('laps') }}</ToolSectionHeader>
+    <ToolSectionHeader>
+      <span class="laps-heading">
+        <span>{{ t('laps') }}</span>
+        <span class="laps-actions">
+          <n-button
+            text
+            size="small"
+            :disabled="!canSortLaps"
+            :type="sortMode === 'chronological' ? 'default' : 'primary'"
+            @click="toggleSort"
+            data-testid="sort-laps"
+          >
+            <template #icon>
+              <n-icon :component="ArrowSort16Regular" />
+            </template>
+            {{ t('sort') }}
+          </n-button>
+          <n-button
+            text
+            size="small"
+            type="error"
+            :disabled="!canClearLaps"
+            @click="clearLaps"
+            data-testid="clear-laps"
+          >
+            {{ t('clear') }}
+          </n-button>
+        </span>
+      </span>
+    </ToolSectionHeader>
     <ToolSection>
       <div v-if="lapRows.length" class="laps-table" data-testid="laps-list">
         <div class="laps-row laps-header">
@@ -69,6 +98,7 @@ import { useIntervalFn, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
   ArrowCounterclockwise16Regular,
+  ArrowSort16Regular,
   Flag16Regular,
   Pause16Regular,
   Play16Regular,
@@ -101,7 +131,7 @@ const hasElapsed = computed(() => elapsedMs.value > 0)
 const canLap = computed(() => running.value && elapsedMs.value > 0)
 const canReset = computed(() => !running.value && (elapsedMs.value > 0 || laps.value.length > 0))
 
-const lapRows = computed(() => {
+const lapRowsBase = computed(() => {
   let previousTotal = 0
   return laps.value.map((totalTime, index) => {
     const lapTime = totalTime - previousTotal
@@ -112,6 +142,17 @@ const lapRows = computed(() => {
       totalTime,
     }
   })
+})
+
+const sortMode = ref<'chronological' | 'lap-asc' | 'lap-desc'>('chronological')
+const canSortLaps = computed(() => lapRowsBase.value.length > 1)
+const canClearLaps = computed(() => laps.value.length > 0)
+
+const lapRows = computed(() => {
+  if (sortMode.value === 'chronological') return lapRowsBase.value
+  const sorted = [...lapRowsBase.value].sort((a, b) => a.lapTime - b.lapTime)
+  if (sortMode.value === 'lap-desc') sorted.reverse()
+  return sorted
 })
 
 const captureNow = () => {
@@ -153,6 +194,21 @@ const reset = () => {
   captureNow()
 }
 
+const toggleSort = () => {
+  if (!canSortLaps.value) return
+  sortMode.value =
+    sortMode.value === 'chronological'
+      ? 'lap-asc'
+      : sortMode.value === 'lap-asc'
+        ? 'lap-desc'
+        : 'chronological'
+}
+
+const clearLaps = () => {
+  if (!canClearLaps.value) return
+  laps.value = []
+}
+
 const recordLap = () => {
   if (!running.value) return
   captureNow()
@@ -179,6 +235,22 @@ const recordLap = () => {
 .laps-table {
   display: grid;
   gap: 8px;
+}
+
+.laps-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.laps-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .laps-row {
@@ -209,6 +281,8 @@ const recordLap = () => {
     "lap": "Lap",
     "reset": "Reset",
     "laps": "Laps",
+    "sort": "Sort",
+    "clear": "Clear",
     "no-laps": "No laps yet",
     "total": "Total",
     "status-running": "Running",
@@ -221,6 +295,8 @@ const recordLap = () => {
     "lap": "计次",
     "reset": "重置",
     "laps": "计次记录",
+    "sort": "排序",
+    "clear": "清空",
     "no-laps": "暂无计次记录",
     "total": "总计",
     "status-running": "计时中",
@@ -233,6 +309,8 @@ const recordLap = () => {
     "lap": "计次",
     "reset": "重置",
     "laps": "计次记录",
+    "sort": "排序",
+    "clear": "清空",
     "no-laps": "暂无计次记录",
     "total": "总计",
     "status-running": "计时中",
@@ -245,6 +323,8 @@ const recordLap = () => {
     "lap": "計次",
     "reset": "重置",
     "laps": "計次記錄",
+    "sort": "排序",
+    "clear": "清除",
     "no-laps": "尚無計次記錄",
     "total": "總計",
     "status-running": "計時中",
@@ -257,6 +337,8 @@ const recordLap = () => {
     "lap": "計次",
     "reset": "重置",
     "laps": "計次記錄",
+    "sort": "排序",
+    "clear": "清除",
     "no-laps": "尚無計次記錄",
     "total": "總計",
     "status-running": "計時中",
@@ -269,6 +351,8 @@ const recordLap = () => {
     "lap": "Vuelta",
     "reset": "Restablecer",
     "laps": "Vueltas",
+    "sort": "Ordenar",
+    "clear": "Limpiar",
     "no-laps": "Sin vueltas",
     "total": "Total",
     "status-running": "En marcha",
@@ -281,6 +365,8 @@ const recordLap = () => {
     "lap": "Tour",
     "reset": "Réinitialiser",
     "laps": "Tours",
+    "sort": "Trier",
+    "clear": "Effacer",
     "no-laps": "Aucun tour",
     "total": "Total",
     "status-running": "En cours",
@@ -293,6 +379,8 @@ const recordLap = () => {
     "lap": "Runde",
     "reset": "Zurücksetzen",
     "laps": "Runden",
+    "sort": "Sortieren",
+    "clear": "Leeren",
     "no-laps": "Keine Runden",
     "total": "Gesamt",
     "status-running": "Läuft",
@@ -305,6 +393,8 @@ const recordLap = () => {
     "lap": "Giro",
     "reset": "Reimposta",
     "laps": "Giri",
+    "sort": "Ordina",
+    "clear": "Cancella",
     "no-laps": "Nessun giro",
     "total": "Totale",
     "status-running": "In corso",
@@ -317,6 +407,8 @@ const recordLap = () => {
     "lap": "ラップ",
     "reset": "リセット",
     "laps": "ラップ",
+    "sort": "並べ替え",
+    "clear": "クリア",
     "no-laps": "ラップはありません",
     "total": "合計",
     "status-running": "計測中",
@@ -329,6 +421,8 @@ const recordLap = () => {
     "lap": "랩",
     "reset": "초기화",
     "laps": "랩",
+    "sort": "정렬",
+    "clear": "지우기",
     "no-laps": "랩 없음",
     "total": "총합",
     "status-running": "진행 중",
@@ -341,6 +435,8 @@ const recordLap = () => {
     "lap": "Круг",
     "reset": "Сброс",
     "laps": "Круги",
+    "sort": "Сортировать",
+    "clear": "Очистить",
     "no-laps": "Кругов нет",
     "total": "Итого",
     "status-running": "Идет",
@@ -353,6 +449,8 @@ const recordLap = () => {
     "lap": "Volta",
     "reset": "Redefinir",
     "laps": "Voltas",
+    "sort": "Ordenar",
+    "clear": "Limpar",
     "no-laps": "Sem voltas",
     "total": "Total",
     "status-running": "Em andamento",
@@ -365,6 +463,8 @@ const recordLap = () => {
     "lap": "لفة",
     "reset": "إعادة ضبط",
     "laps": "اللفات",
+    "sort": "فرز",
+    "clear": "مسح",
     "no-laps": "لا توجد لفات بعد",
     "total": "الإجمالي",
     "status-running": "قيد التشغيل",
@@ -377,6 +477,8 @@ const recordLap = () => {
     "lap": "लैप",
     "reset": "रीसेट",
     "laps": "लैप्स",
+    "sort": "क्रमबद्ध करें",
+    "clear": "साफ़ करें",
     "no-laps": "कोई लैप नहीं",
     "total": "कुल",
     "status-running": "चल रहा है",
@@ -389,6 +491,8 @@ const recordLap = () => {
     "lap": "Tur",
     "reset": "Sıfırla",
     "laps": "Turlar",
+    "sort": "Sırala",
+    "clear": "Temizle",
     "no-laps": "Tur yok",
     "total": "Toplam",
     "status-running": "Çalışıyor",
@@ -401,6 +505,8 @@ const recordLap = () => {
     "lap": "Ronde",
     "reset": "Reset",
     "laps": "Rondes",
+    "sort": "Sorteren",
+    "clear": "Wissen",
     "no-laps": "Geen rondes",
     "total": "Totaal",
     "status-running": "Bezig",
@@ -413,6 +519,8 @@ const recordLap = () => {
     "lap": "Varv",
     "reset": "Återställ",
     "laps": "Varv",
+    "sort": "Sortera",
+    "clear": "Rensa",
     "no-laps": "Inga varv",
     "total": "Totalt",
     "status-running": "Pågår",
@@ -425,6 +533,8 @@ const recordLap = () => {
     "lap": "Okrążenie",
     "reset": "Resetuj",
     "laps": "Okrążenia",
+    "sort": "Sortuj",
+    "clear": "Wyczyść",
     "no-laps": "Brak okrążeń",
     "total": "Razem",
     "status-running": "Trwa",
@@ -437,6 +547,8 @@ const recordLap = () => {
     "lap": "Vòng",
     "reset": "Đặt lại",
     "laps": "Vòng",
+    "sort": "Sắp xếp",
+    "clear": "Xóa",
     "no-laps": "Chưa có vòng",
     "total": "Tổng",
     "status-running": "Đang chạy",
@@ -449,6 +561,8 @@ const recordLap = () => {
     "lap": "รอบ",
     "reset": "รีเซ็ต",
     "laps": "รอบ",
+    "sort": "เรียงลำดับ",
+    "clear": "ล้าง",
     "no-laps": "ยังไม่มีรอบ",
     "total": "รวม",
     "status-running": "กำลังทำงาน",
@@ -461,6 +575,8 @@ const recordLap = () => {
     "lap": "Putaran",
     "reset": "Reset",
     "laps": "Putaran",
+    "sort": "Urutkan",
+    "clear": "Bersihkan",
     "no-laps": "Belum ada putaran",
     "total": "Total",
     "status-running": "Berjalan",
@@ -473,6 +589,8 @@ const recordLap = () => {
     "lap": "הקפה",
     "reset": "אפס",
     "laps": "הקפות",
+    "sort": "מיון",
+    "clear": "נקה",
     "no-laps": "אין הקפות",
     "total": "סך הכל",
     "status-running": "פועל",
@@ -485,6 +603,8 @@ const recordLap = () => {
     "lap": "Pusingan",
     "reset": "Set semula",
     "laps": "Pusingan",
+    "sort": "Isih",
+    "clear": "Kosongkan",
     "no-laps": "Tiada pusingan",
     "total": "Jumlah",
     "status-running": "Sedang berjalan",
@@ -497,6 +617,8 @@ const recordLap = () => {
     "lap": "Runde",
     "reset": "Nullstill",
     "laps": "Runder",
+    "sort": "Sorter",
+    "clear": "Tøm",
     "no-laps": "Ingen runder",
     "total": "Totalt",
     "status-running": "Kjører",

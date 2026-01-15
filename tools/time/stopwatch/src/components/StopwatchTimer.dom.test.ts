@@ -120,6 +120,59 @@ describe('StopwatchTimer', () => {
     expect(remount.findAll('[data-testid="lap-row"]').length).toBe(1)
   })
 
+  it('sorts and clears laps', async () => {
+    const wrapper = mountTimer()
+    const start = wrapper.get('[data-testid="start"]')
+    const lap = wrapper.get('[data-testid="lap"]')
+    const sort = wrapper.get('[data-testid="sort-laps"]')
+    const clear = wrapper.get('[data-testid="clear-laps"]')
+
+    await start.trigger('click')
+
+    vi.advanceTimersByTime(1200)
+    await nextTick()
+    await lap.trigger('click')
+    await nextTick()
+
+    vi.advanceTimersByTime(700)
+    await nextTick()
+    await lap.trigger('click')
+    await nextTick()
+
+    vi.advanceTimersByTime(2500)
+    await nextTick()
+    await lap.trigger('click')
+    await nextTick()
+
+    let rows = wrapper.findAll('[data-testid="lap-row"]')
+    expect(rows.length).toBe(3)
+    expect(rows[0].text()).toContain('#1')
+
+    await sort.trigger('click')
+    await nextTick()
+
+    rows = wrapper.findAll('[data-testid="lap-row"]')
+    expect(rows[0].text()).toContain('#2')
+
+    await sort.trigger('click')
+    await nextTick()
+
+    rows = wrapper.findAll('[data-testid="lap-row"]')
+    expect(rows[0].text()).toContain('#3')
+
+    await sort.trigger('click')
+    await nextTick()
+
+    rows = wrapper.findAll('[data-testid="lap-row"]')
+    expect(rows[0].text()).toContain('#1')
+
+    await clear.trigger('click')
+    await nextTick()
+
+    expect(wrapper.find('[data-testid="lap-row"]').exists()).toBe(false)
+    expect(wrapper.get('[data-testid="no-laps"]').text().length).toBeGreaterThan(0)
+  })
+
   it('ignores actions that are not allowed', async () => {
     const wrapper = mountTimer()
     const vm = getTimerVm(wrapper)
