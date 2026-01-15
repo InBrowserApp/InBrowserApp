@@ -64,7 +64,7 @@ describe('StopwatchTimer', () => {
     await nextTick()
 
     expect(getElapsed(wrapper)).toBe('00:00:01.23')
-    expect(wrapper.findAll('[data-testid="lap-row"]').length).toBe(1)
+    expect(wrapper.findAll('.lap-row').length).toBe(1)
     expect(wrapper.get('[data-testid="laps-list"]').text()).toContain('00:00:01.23')
 
     await pause.trigger('click')
@@ -77,7 +77,7 @@ describe('StopwatchTimer', () => {
     await nextTick()
 
     expect(getElapsed(wrapper)).toBe('00:00:00.00')
-    expect(wrapper.find('[data-testid="lap-row"]').exists()).toBe(false)
+    expect(wrapper.find('.lap-row').exists()).toBe(false)
   })
 
   it('resumes from a paused time', async () => {
@@ -113,7 +113,7 @@ describe('StopwatchTimer', () => {
     await nextTick()
 
     expect(getElapsed(wrapper)).toBe('00:00:01.23')
-    expect(wrapper.findAll('[data-testid="lap-row"]').length).toBe(1)
+    expect(wrapper.findAll('.lap-row').length).toBe(1)
 
     wrapper.unmount()
 
@@ -123,7 +123,7 @@ describe('StopwatchTimer', () => {
     await nextTick()
 
     expect(getElapsed(remount)).toBe('00:00:03.23')
-    expect(remount.findAll('[data-testid="lap-row"]').length).toBe(1)
+    expect(remount.findAll('.lap-row').length).toBe(1)
   })
 
   it('sorts and clears laps', async () => {
@@ -149,7 +149,7 @@ describe('StopwatchTimer', () => {
     await lap.trigger('click')
     await nextTick()
 
-    let rows = wrapper.findAll('[data-testid="lap-row"]')
+    let rows = wrapper.findAll('.lap-row')
     expect(rows.length).toBe(3)
     expect(rows[0]!.text()).toContain('#1')
 
@@ -158,25 +158,25 @@ describe('StopwatchTimer', () => {
     table?.sort('lapTime', 'ascend')
     await nextTick()
 
-    rows = wrapper.findAll('[data-testid="lap-row"]')
+    rows = wrapper.findAll('.lap-row')
     expect(rows[0]!.text()).toContain('#2')
 
     table?.sort('lapTime', 'descend')
     await nextTick()
 
-    rows = wrapper.findAll('[data-testid="lap-row"]')
+    rows = wrapper.findAll('.lap-row')
     expect(rows[0]!.text()).toContain('#3')
 
     table?.clearSorter()
     await nextTick()
 
-    rows = wrapper.findAll('[data-testid="lap-row"]')
+    rows = wrapper.findAll('.lap-row')
     expect(rows[0]!.text()).toContain('#1')
 
     await clear.trigger('click')
     await nextTick()
 
-    expect(wrapper.find('[data-testid="lap-row"]').exists()).toBe(false)
+    expect(wrapper.find('.lap-row').exists()).toBe(false)
     expect(wrapper.get('[data-testid="no-laps"]').text().length).toBeGreaterThan(0)
   })
 
@@ -193,7 +193,7 @@ describe('StopwatchTimer', () => {
     await lap.trigger('click')
     await nextTick()
 
-    expect(wrapper.find('[data-testid="lap-row"]').exists()).toBe(false)
+    expect(wrapper.find('.lap-row').exists()).toBe(false)
 
     await start.trigger('click')
     await start.trigger('click')

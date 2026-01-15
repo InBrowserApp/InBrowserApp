@@ -168,7 +168,7 @@ const columns = computed<DataTableColumns<LapRow>>(() => [
 ])
 
 const rowKey = (row: LapRow) => row.key
-const rowProps = () => ({ 'data-testid': 'lap-row' })
+const rowProps = () => ({ class: 'lap-row' })
 
 const captureNow = () => {
   now.value = Date.now()
