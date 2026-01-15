@@ -29,7 +29,7 @@ const createUploadInfo = (file?: File): UploadFileInfo => ({
 })
 
 function getVm(wrapper: ReturnType<typeof mount>) {
-  return wrapper.vm as ExposedMethods
+  return wrapper.vm as unknown as ExposedMethods
 }
 
 const CopyToClipboardButtonStub = {
@@ -56,7 +56,7 @@ afterAll(() => {
   if (originalResizeObserver) {
     globalThis.ResizeObserver = originalResizeObserver
   } else {
-    delete (globalThis as typeof globalThis & { ResizeObserver?: unknown }).ResizeObserver
+    delete (globalThis as { ResizeObserver?: unknown }).ResizeObserver
   }
 })
 
@@ -68,7 +68,7 @@ afterEach(() => {
   if (originalEyeDropper) {
     ;(globalThis as typeof globalThis & { EyeDropper?: unknown }).EyeDropper = originalEyeDropper
   } else {
-    delete (globalThis as typeof globalThis & { EyeDropper?: unknown }).EyeDropper
+    delete (globalThis as { EyeDropper?: unknown }).EyeDropper
   }
   globalThis.Image = originalImage
   vi.restoreAllMocks()

@@ -310,7 +310,11 @@ function handleCanvasClick(event: MouseEvent) {
   const x = Math.max(0, Math.min(Math.floor(rawX), canvas.width - 1))
   const y = Math.max(0, Math.min(Math.floor(rawY), canvas.height - 1))
 
-  const [r, g, b, a] = ctx.getImageData(x, y, 1, 1).data
+  const data = ctx.getImageData(x, y, 1, 1).data
+  const r = data[0] ?? 0
+  const g = data[1] ?? 0
+  const b = data[2] ?? 0
+  const a = data[3] ?? 255
   pickedColor.value = { r, g, b, a: a / 255 }
   pickedSource.value = 'image'
 }
