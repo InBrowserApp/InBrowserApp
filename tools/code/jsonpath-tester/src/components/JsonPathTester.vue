@@ -4,9 +4,9 @@
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
       <n-form-item-gi :show-feedback="false" label-style="width: 100%">
         <template #label>
-          <div class="field-label">
+          <n-flex align="center" justify="space-between" class="field-label">
             <span>{{ t('jsonLabel') }}</span>
-            <span class="field-action">
+            <n-flex align="center" :size="8" class="field-action">
               <n-button @click="importFromFile" text>
                 <template #icon>
                   <n-icon :component="Document16Regular" />
@@ -19,8 +19,8 @@
                 </template>
                 {{ t('format-json') }}
               </n-button>
-            </span>
-          </div>
+            </n-flex>
+          </n-flex>
         </template>
         <n-input
           v-model:value="jsonText"
@@ -36,12 +36,12 @@
 
       <n-form-item-gi :show-feedback="false" label-style="width: 100%">
         <template #label>
-          <div class="field-label">
+          <n-flex align="center" justify="space-between" class="field-label">
             <span>{{ t('queryLabel') }}</span>
-            <span class="field-action">
+            <n-flex align="center" :size="8" class="field-action">
               <CopyToClipboardButton :content="queryText" size="small" />
-            </span>
-          </div>
+            </n-flex>
+          </n-flex>
         </template>
         <n-flex vertical :size="8" style="width: 100%">
           <n-input
@@ -91,6 +91,9 @@
               :href="downloadUrl"
               :download="downloadFilename"
             >
+              <template #icon>
+                <n-icon :component="ArrowDownload20Regular" />
+              </template>
               {{ t('download-json') }}
             </n-button>
           </n-flex>
@@ -138,7 +141,11 @@ import {
   NTabs,
   NText,
 } from 'naive-ui'
-import { Document16Regular, TextNumberFormat20Regular } from '@shared/icons/fluent'
+import {
+  ArrowDownload20Regular,
+  Document16Regular,
+  TextNumberFormat20Regular,
+} from '@shared/icons/fluent'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 
