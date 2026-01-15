@@ -42,6 +42,14 @@
 - Test framework: Vitest + Vue Test Utils (`*.dom.test.ts`).
 - Prefer DOM-focused component tests; utilities can use standard unit tests.
 - Run tests with `pnpm test:unit`.
+- For new tool packages, coverage must be 100% for that tool package only (not the whole repo) before pushing and creating a PR.
+
+## Worktrees & PR Checks
+- For any new feature, fix, or chore, create a new worktree under `../InBrowser-worktrees/` named like `<type>_xxxxx` (example: `../InBrowser-worktrees/feat_add-tool-a`).
+- When creating a PR and when pushing to the PR branch, check PR status: confirm it is mergeable, then watch checks to completion.
+- If checks fail, fix the issues and rerun until green.
+- After checks complete, provide the full staging deployment URL without language prefix. If tool-specific, include the full path (example: `https://xxxx/tools/tool-A`); if the change is global, provide the base staging URL.
+- After merge, delete the worktree and its branch, then pull `main` to the latest.
 
 ## Commit & Pull Request Guidelines
 - Conventional Commits are required (e.g., `feat(tools): add xxx tool`, `test(ui): add dom tests`).

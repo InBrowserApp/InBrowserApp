@@ -185,6 +185,9 @@ import ToolContent from './components/ToolContent.vue'
 4. Add import and spread routes in `registry/tools/src/routes.ts`
 5. Run `pnpm install`
 
+### Tool Coverage Requirement
+- For any new tool, ensure the tool package coverage is 100% for that tool package only (not the whole repo) before pushing and creating a PR.
+
 ## Shared UI Components
 
 Import from `@shared/ui/*`:
@@ -291,6 +294,13 @@ Branch naming: `<type>/<short-description>` (e.g., `feat/morse-code-tool`, `fix/
 PR titles must also follow Conventional Commits format (e.g., `feat(tools): add Morse Code tool`).
 
 **All commit messages and PR titles must be in English.**
+
+### Worktrees & PR Checks
+- For any new feature, fix, or chore, create a new worktree under `../InBrowser-worktrees/` named like `<type>_xxxxx` (example: `../InBrowser-worktrees/feat_add-tool-a`).
+- When creating a PR and when pushing to the PR branch, check PR status: confirm it is mergeable, then watch checks to completion.
+- If checks fail, fix the issues and rerun until green.
+- After checks complete, provide the full staging deployment URL without language prefix. If tool-specific, include the full path (example: `https://xxxx/tools/tool-A`); if the change is global, provide the base staging URL.
+- After merge, delete the worktree and its branch, then pull `main` to the latest.
 
 ## Commit Convention
 
