@@ -212,7 +212,9 @@ describe('ImageMetadataCleanerView', () => {
     expect(mockedStrip).toHaveBeenCalledTimes(3)
     expect(wrapper.text()).toContain('Download cleaned image')
 
-    const downloadLink = wrapper.findAll('a').find((link) => link.text().includes('Download cleaned image'))
+    const downloadLink = wrapper
+      .findAll('a')
+      .find((link) => link.text().includes('Download cleaned image'))
     if (!downloadLink) {
       throw new Error('Missing download button')
     }

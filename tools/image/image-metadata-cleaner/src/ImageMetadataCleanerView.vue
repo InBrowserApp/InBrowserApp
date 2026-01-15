@@ -71,7 +71,10 @@ import { useMessage } from 'naive-ui'
 import { filesize } from 'filesize'
 import { useObjectUrl } from '@vueuse/core'
 import { NAlert, NButton, NFlex, NGrid, NGridItem, NIcon, NStatistic, NText } from 'naive-ui'
-import { ArrowDownload24Regular as DownloadIcon, Delete24Regular as DeleteIcon } from '@shared/icons/fluent'
+import {
+  ArrowDownload24Regular as DownloadIcon,
+  Delete24Regular as DeleteIcon,
+} from '@shared/icons/fluent'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { stripImageMetadata } from '@utils/image'
 import * as toolInfo from './info'
@@ -154,7 +157,6 @@ function toErrorMessage(err: unknown): string {
   }
   return err instanceof Error ? err.message : t('cleaningFailed')
 }
-
 </script>
 
 <i18n lang="json">
