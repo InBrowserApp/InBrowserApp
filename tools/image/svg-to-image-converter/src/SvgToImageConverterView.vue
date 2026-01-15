@@ -23,7 +23,14 @@
       <template v-else>
         <n-flex vertical :size="16">
           <n-flex align="center" :size="16">
-            <n-image :src="originalPreviewUrl || ''" alt="SVG preview" height="120" />
+            <div class="preview-box preview-box--small">
+              <img
+                v-if="originalPreviewUrl"
+                :src="originalPreviewUrl"
+                alt="SVG preview"
+                class="preview-image"
+              />
+            </div>
             <n-flex vertical :size="4">
               <n-text strong>{{ originalFile.name }}</n-text>
               <n-text depth="3">{{ originalSizeLabel }}</n-text>
@@ -76,8 +83,9 @@
             <n-color-picker
               :value="backgroundColor"
               :modes="['hex']"
-              :show-alpha="true"
+              :show-alpha="format !== 'jpeg'"
               size="small"
+              style="width: 100%"
               @update:value="handleBackgroundChange"
             />
             <n-checkbox
@@ -143,7 +151,16 @@
         </n-gi>
       </n-grid>
       <n-flex vertical :size="12" style="margin-top: 16px">
-        <n-image :src="outputPreviewUrl || ''" alt="Output preview" />
+        <n-flex justify="center">
+          <div class="preview-box">
+            <img
+              v-if="outputPreviewUrl"
+              :src="outputPreviewUrl"
+              alt="Output preview"
+              class="preview-image"
+            />
+          </div>
+        </n-flex>
         <n-button
           tag="a"
           :href="downloadHref || undefined"
@@ -179,7 +196,6 @@ import {
   NGi,
   NGrid,
   NIcon,
-  NImage,
   NInputNumber,
   NP,
   NSelect,
@@ -366,6 +382,7 @@ function resetToOriginal() {
 
 function handleFormatUpdate(value: OutputFormat) {
   format.value = value
+  backgroundColor.value = normalizeBackgroundColor(backgroundColor.value, value)
   resetOutput()
 }
 
@@ -380,8 +397,16 @@ function handleBackgroundToggle(value: boolean) {
 }
 
 function handleBackgroundChange(value: string) {
-  backgroundColor.value = value
+  backgroundColor.value = normalizeBackgroundColor(value, format.value)
   resetOutput()
+}
+
+function normalizeBackgroundColor(value: string, formatValue: OutputFormat) {
+  if (formatValue !== 'jpeg') return value
+  if (value.startsWith('#') && value.length === 9) {
+    return value.slice(0, 7)
+  }
+  return value
 }
 
 function resolveOutputSize() {
@@ -538,6 +563,32 @@ function canvasToBlob(canvas: HTMLCanvasElement, type: string, quality?: number)
   })
 }
 </script>
+
+<style scoped>
+.preview-box {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--n-border-color);
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.preview-box--small {
+  width: 120px;
+  height: 120px;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+</style>
 
 <i18n lang="json">
 {
