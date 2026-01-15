@@ -101,6 +101,7 @@
     "@tools/sri-hash-generator": "workspace:*",
     "@tools/ssh-key-generator": "workspace:*",
     "@tools/svg-optimizer": "workspace:*",
+    "@tools/svg-to-image-converter": "workspace:*",
     "@tools/text-diff": "workspace:*",
     "@tools/text-statistics": "workspace:*",
     "@tools/time-diff-calculator": "workspace:*",

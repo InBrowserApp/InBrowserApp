@@ -106,6 +106,7 @@ import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
 import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
 import { routes as svgOptimizerRoutes } from '@tools/svg-optimizer/routes'
+import { routes as svgToImageConverterRoutes } from '@tools/svg-to-image-converter/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -125,6 +126,7 @@ export const routes: ToolRoute[] = [
   ...currentNetworkTimeRoutes,
   ...pngOptimizerRoutes,
   ...svgOptimizerRoutes,
+  ...svgToImageConverterRoutes,
   ...exifViewerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,

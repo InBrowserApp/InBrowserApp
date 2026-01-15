@@ -108,6 +108,7 @@ import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
 import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 import { toolInfo as svgOptimizerToolInfo } from '@tools/svg-optimizer'
+import { toolInfo as svgToImageConverterToolInfo } from '@tools/svg-to-image-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -136,6 +137,7 @@ export const tools: ToolInfo[] = [
   faviconAssetsGeneratorToolInfo,
   pngOptimizerToolInfo,
   svgOptimizerToolInfo,
+  svgToImageConverterToolInfo,
   exifViewerToolInfo,
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
