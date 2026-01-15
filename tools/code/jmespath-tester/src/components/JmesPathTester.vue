@@ -38,6 +38,9 @@
         <template #label>
           <div class="field-label">
             <span>{{ t('queryLabel') }}</span>
+            <span class="field-action">
+              <CopyToClipboardButton :content="queryText" size="small" />
+            </span>
           </div>
         </template>
         <n-flex vertical :size="8">

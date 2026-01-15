@@ -38,6 +38,9 @@
         <template #label>
           <div class="field-label">
             <span>{{ t('queryLabel') }}</span>
+            <span class="field-action">
+              <CopyToClipboardButton :content="queryText" size="small" />
+            </span>
           </div>
         </template>
         <n-flex vertical :size="8">
@@ -47,6 +50,7 @@
             :autosize="{ minRows: 4, maxRows: 8 }"
             :placeholder="t('query-placeholder')"
             :status="queryStatus"
+            style="width: 100%"
           />
           <n-select
             v-model:value="selectedExample"
