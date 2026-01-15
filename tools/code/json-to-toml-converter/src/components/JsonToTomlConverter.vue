@@ -12,7 +12,7 @@
 
       <n-flex>
         <CopyToClipboardButton :content="renderedToml" />
-        <n-button @click="downloadToml" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="converted.toml">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -42,6 +42,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import { stringify as tomlStringify } from 'smol-toml'
@@ -78,17 +79,10 @@ const renderedToml = computed<string>(() => {
   }
 })
 
-function downloadToml(): void {
-  const blob = new Blob([renderedToml.value], { type: 'application/toml;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'converted.toml'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(
+  () => new Blob([renderedToml.value], { type: 'application/toml;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

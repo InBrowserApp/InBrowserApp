@@ -14,7 +14,7 @@
 
       <n-flex>
         <CopyToClipboardButton :content="renderedHtml" />
-        <n-button @click="downloadHtml" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="markdown.html">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -52,6 +52,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { marked } from 'marked'
 import DOMPurify from 'dompurify'
@@ -89,17 +90,10 @@ const renderedHtml = computed<string>(() => {
   return sanitize.value ? DOMPurify.sanitize(rawHtml) : rawHtml
 })
 
-function downloadHtml(): void {
-  const blob = new Blob([renderedHtml.value], { type: 'text/html;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'markdown.html'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(
+  () => new Blob([renderedHtml.value], { type: 'text/html;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

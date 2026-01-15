@@ -12,19 +12,29 @@
       />
       <n-space style="margin-top: 8px">
         <CopyToClipboardButton :content="result" />
-        <n-popselect
-          v-model:value="downloadType"
-          :options="downloadOptions"
-          trigger="click"
-          @update:value="handleDownload"
-        >
-          <n-button text>
-            <template #icon>
-              <n-icon :component="ArrowDownload16Regular" />
-            </template>
-            {{ t('download') }}
-          </n-button>
-        </n-popselect>
+        <n-popover trigger="click">
+          <template #trigger>
+            <n-button text>
+              <template #icon>
+                <n-icon :component="ArrowDownload16Regular" />
+              </template>
+              {{ t('download') }}
+            </n-button>
+          </template>
+          <n-flex vertical :size="8">
+            <n-button
+              v-for="link in downloadLinks"
+              :key="link.label"
+              tag="a"
+              text
+              :href="link.url ?? undefined"
+              :download="link.filename"
+              :disabled="!link.url"
+            >
+              {{ link.label }}
+            </n-button>
+          </n-flex>
+        </n-popover>
       </n-space>
 
       <n-collapse v-if="outputMode === 'raw'" style="margin-top: 12px">
@@ -50,14 +60,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import {
   NSpace,
   NAlert,
   NInput,
   NButton,
   NIcon,
-  NPopselect,
+  NPopover,
+  NFlex,
   NCollapse,
   NCollapseItem,
   NDescriptions,
@@ -80,55 +92,48 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-
-const downloadType = ref<string | null>(null)
-
-const downloadOptions = computed(() => {
-  if (props.outputMode === 'jwe') {
-    return [{ label: 'JWE (.jwe)', value: 'jwe' }]
-  }
-  return [
-    { label: 'Binary (.bin)', value: 'binary' },
-    { label: 'Base64 (.txt)', value: 'base64' },
-    { label: 'Hex (.txt)', value: 'hex' },
-  ]
+const base64Content = computed(() => {
+  if (props.outputMode === 'jwe') return ''
+  return props.outputFormat === 'base64' ? props.result : hexToBase64(props.result)
+})
+const hexContent = computed(() => {
+  if (props.outputMode === 'jwe') return ''
+  return props.outputFormat === 'hex' ? props.result : base64ToHex(props.result)
 })
 
-function handleDownload(value: string) {
-  if (value === 'jwe') {
-    downloadText(props.result, 'encrypted.jwe')
-  } else if (value === 'binary' && props.binary) {
-    downloadBinary(props.binary, 'encrypted.bin')
-  } else if (value === 'base64') {
-    const content = props.outputFormat === 'base64' ? props.result : hexToBase64(props.result)
-    downloadText(content, 'encrypted.txt')
-  } else if (value === 'hex') {
-    const content = props.outputFormat === 'hex' ? props.result : base64ToHex(props.result)
-    downloadText(content, 'encrypted.txt')
+const binaryBlob = computed(() => {
+  if (!props.binary || props.outputMode === 'jwe') return null
+  return new Blob([props.binary], { type: 'application/octet-stream' })
+})
+const base64Blob = computed(() => {
+  if (props.outputMode === 'jwe') return null
+  return new Blob([base64Content.value], { type: 'text/plain' })
+})
+const hexBlob = computed(() => {
+  if (props.outputMode === 'jwe') return null
+  return new Blob([hexContent.value], { type: 'text/plain' })
+})
+const jweBlob = computed(() => {
+  if (props.outputMode !== 'jwe') return null
+  return new Blob([props.result], { type: 'application/jose' })
+})
+
+const binaryUrl = useObjectUrl(binaryBlob)
+const base64Url = useObjectUrl(base64Blob)
+const hexUrl = useObjectUrl(hexBlob)
+const jweUrl = useObjectUrl(jweBlob)
+
+const downloadLinks = computed(() => {
+  if (props.outputMode === 'jwe') {
+    return [{ label: 'JWE (.jwe)', url: jweUrl.value, filename: 'encrypted.jwe' }]
   }
-  // Reset selection
-  downloadType.value = null
-}
-
-function downloadText(content: string, filename: string) {
-  const blob = new Blob([content], { type: 'text/plain' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  a.click()
-  URL.revokeObjectURL(url)
-}
-
-function downloadBinary(data: ArrayBuffer, filename: string) {
-  const blob = new Blob([data], { type: 'application/octet-stream' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  a.click()
-  URL.revokeObjectURL(url)
-}
+  const links = [
+    { label: 'Binary (.bin)', url: binaryUrl.value, filename: 'encrypted.bin' },
+    { label: 'Base64 (.txt)', url: base64Url.value, filename: 'encrypted.txt' },
+    { label: 'Hex (.txt)', url: hexUrl.value, filename: 'encrypted.txt' },
+  ]
+  return props.binary ? links : links.slice(1)
+})
 
 function hexToUint8Array(hex: string): Uint8Array {
   const cleanHex = hex.replace(/\s/g, '')

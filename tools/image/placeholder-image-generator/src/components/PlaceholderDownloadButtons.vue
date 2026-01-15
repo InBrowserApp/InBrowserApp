@@ -25,25 +25,43 @@
 
     <!-- Download Buttons -->
     <n-flex :size="8" wrap>
-      <n-button tertiary @click="downloadPNG">
+      <n-button
+        tag="a"
+        tertiary
+        :href="pngUrl ?? undefined"
+        :download="pngFilename"
+        :disabled="!pngUrl"
+      >
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
         </template>
         PNG
       </n-button>
-      <n-button tertiary @click="downloadJPG">
+      <n-button
+        tag="a"
+        tertiary
+        :href="jpgUrl ?? undefined"
+        :download="jpgFilename"
+        :disabled="!jpgUrl"
+      >
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
         </template>
         JPG
       </n-button>
-      <n-button tertiary @click="downloadWebP">
+      <n-button
+        tag="a"
+        tertiary
+        :href="webpUrl ?? undefined"
+        :download="webpFilename"
+        :disabled="!webpUrl"
+      >
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
         </template>
         WebP
       </n-button>
-      <n-button tertiary @click="downloadSVG">
+      <n-button tag="a" tertiary :href="svgUrl ?? undefined" :download="svgFilename">
         <template #icon>
           <n-icon><CodeIcon /></n-icon>
         </template>
@@ -62,7 +80,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NButton, NIcon, NRadioGroup, NRadioButton, NSlider, useMessage } from 'naive-ui'
 import {
@@ -81,6 +100,9 @@ const props = defineProps<{
 
 const scale = ref(1)
 const quality = ref(0.9)
+const pngBlob = ref<Blob | null>(null)
+const jpgBlob = ref<Blob | null>(null)
+const webpBlob = ref<Blob | null>(null)
 
 function escapeXml(str: string): string {
   return str
@@ -130,6 +152,20 @@ function generateSVG(options: PlaceholderOptions, svgScale = 1): string {
 </svg>`
 }
 
+const svgBlob = computed(
+  () => new Blob([generateSVG(props.options, scale.value)], { type: 'image/svg+xml' }),
+)
+
+const pngUrl = useObjectUrl(pngBlob)
+const jpgUrl = useObjectUrl(jpgBlob)
+const webpUrl = useObjectUrl(webpBlob)
+const svgUrl = useObjectUrl(svgBlob)
+
+const pngFilename = computed(() => getFilename('png'))
+const jpgFilename = computed(() => getFilename('jpg'))
+const webpFilename = computed(() => getFilename('webp'))
+const svgFilename = computed(() => getFilename('svg'))
+
 function drawToCanvas(canvas: HTMLCanvasElement, options: PlaceholderOptions, canvasScale = 1) {
   const ctx = canvas.getContext('2d')
   if (!ctx) return
@@ -171,72 +207,58 @@ function drawToCanvas(canvas: HTMLCanvasElement, options: PlaceholderOptions, ca
   ctx.fillText(text, w / 2, h / 2)
 }
 
-function downloadBlob(file: File) {
-  const url = URL.createObjectURL(file)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = file.name
-  a.click()
-  URL.revokeObjectURL(url)
-}
-
 function getFilename(ext: string): string {
   const { width, height } = props.options
   const scaleStr = scale.value > 1 ? `@${scale.value}x` : ''
   return `placeholder-${width}x${height}${scaleStr}.${ext}`
 }
 
-async function downloadPNG() {
+let pngToken = 0
+let jpgToken = 0
+let webpToken = 0
+
+async function updatePNG() {
+  const token = ++pngToken
   const canvas = document.createElement('canvas')
   drawToCanvas(canvas, props.options, scale.value)
-  await new Promise<void>((resolve) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        downloadBlob(new File([blob], getFilename('png'), { type: 'image/png' }))
-      }
-      resolve()
-    }, 'image/png')
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, 'image/png')
   })
+  if (token !== pngToken) return
+  pngBlob.value = blob
 }
 
-async function downloadJPG() {
+async function updateJPG() {
+  const token = ++jpgToken
   const canvas = document.createElement('canvas')
   drawToCanvas(canvas, props.options, scale.value)
-  await new Promise<void>((resolve) => {
-    canvas.toBlob(
-      (blob) => {
-        if (blob) {
-          downloadBlob(new File([blob], getFilename('jpg'), { type: 'image/jpeg' }))
-        }
-        resolve()
-      },
-      'image/jpeg',
-      quality.value,
-    )
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, 'image/jpeg', quality.value)
   })
+  if (token !== jpgToken) return
+  jpgBlob.value = blob
 }
 
-async function downloadWebP() {
+async function updateWebP() {
+  const token = ++webpToken
   const canvas = document.createElement('canvas')
   drawToCanvas(canvas, props.options, scale.value)
-  await new Promise<void>((resolve) => {
-    canvas.toBlob(
-      (blob) => {
-        if (blob) {
-          downloadBlob(new File([blob], getFilename('webp'), { type: 'image/webp' }))
-        }
-        resolve()
-      },
-      'image/webp',
-      quality.value,
-    )
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, 'image/webp', quality.value)
   })
+  if (token !== webpToken) return
+  webpBlob.value = blob
 }
 
-function downloadSVG() {
-  const svg = generateSVG(props.options, scale.value)
-  downloadBlob(new File([svg], getFilename('svg'), { type: 'image/svg+xml' }))
-}
+watch(
+  () => [props.options, scale.value, quality.value],
+  () => {
+    void updatePNG()
+    void updateJPG()
+    void updateWebP()
+  },
+  { immediate: true, deep: true },
+)
 
 async function copyToClipboard() {
   try {

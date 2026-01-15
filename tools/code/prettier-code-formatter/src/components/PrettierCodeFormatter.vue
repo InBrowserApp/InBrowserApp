@@ -12,7 +12,13 @@
 
       <n-flex align="center" wrap>
         <CopyToClipboardButton :content="formattedCode" />
-        <n-button @click="downloadFormatted" text>
+        <n-button
+          tag="a"
+          text
+          :href="downloadUrl ?? undefined"
+          :download="downloadFilename"
+          :disabled="!downloadUrl"
+        >
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -97,7 +103,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useDebounce } from '@vueuse/core'
+import { useDebounce, useObjectUrl } from '@vueuse/core'
 import { ToolSection } from '@shared/ui/tool'
 import {
   NButton,
@@ -367,6 +373,15 @@ const debouncedSource = useDebounce(sourceCode, 300)
 
 const activeLanguageConfig = computed(() => languageConfigs[language.value])
 const highlightLanguage = computed(() => activeLanguageConfig.value.highlight)
+const downloadFilename = computed(() => {
+  const extension = activeLanguageConfig.value.extensions[0] ?? '.txt'
+  return `formatted${extension}`
+})
+const downloadBlob = computed(() => {
+  if (!formattedCode.value.trim()) return null
+  return new Blob([formattedCode.value], { type: 'text/plain;charset=utf-8' })
+})
+const downloadUrl = useObjectUrl(downloadBlob)
 
 const languageOptions = computed(() =>
   languageKeys.map((key) => ({
@@ -504,23 +519,6 @@ async function importFromFile(): Promise<void> {
   } catch {
     // User cancelled file selection - this is normal
   }
-}
-
-function downloadFormatted(): void {
-  if (!formattedCode.value.trim()) {
-    return
-  }
-
-  const extension = activeLanguageConfig.value.extensions[0] ?? '.txt'
-  const blob = new Blob([formattedCode.value], { type: 'text/plain;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = `formatted${extension}`
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
 }
 </script>
 

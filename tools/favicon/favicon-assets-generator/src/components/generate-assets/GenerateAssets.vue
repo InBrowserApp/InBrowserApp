@@ -12,7 +12,14 @@
 
   <n-ol>
     <n-li>
-      <n-button text @click="download" style="vertical-align: -0.15em">
+      <n-button
+        text
+        tag="a"
+        :href="downloadUrl ?? undefined"
+        download="favicon-assets.zip"
+        :disabled="!downloadUrl"
+        style="vertical-align: -0.15em"
+      >
         <template #icon>
           <n-icon :component="ArrowDownload16Filled" />
         </template>
@@ -98,7 +105,8 @@ import {
 } from '@shared/icons/fluent'
 import HTMLCode from './HTMLCode.vue'
 import { normalizePath } from '../../utils/favicon-generator/general-info'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import SiteWebManifest from './SiteWebManifest.vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
@@ -118,27 +126,46 @@ const prefix = computed(() => {
   return normalizePath(props.generalInfoOptions.path)
 })
 
-const download = async () => {
-  try {
-    if (props.image === undefined) {
-      throw new Error(t('noImageSelected'))
-    }
+const downloadBlob = ref<Blob | null>(null)
+const downloadUrl = useObjectUrl(downloadBlob)
 
+let downloadToken = 0
+
+const updateDownload = async () => {
+  if (!props.image) {
+    downloadBlob.value = null
+    return
+  }
+  const token = ++downloadToken
+  try {
     const blob = await generateAssets(props.image, {
       generalInfo: props.generalInfoOptions,
       desktopBrowser: props.desktopBrowserOptions,
       pwa: props.pwaOptions,
       iosWebClip: props.iosWebClipOptions,
     })
-
-    const a = document.createElement('a')
-    a.href = URL.createObjectURL(blob)
-    a.download = 'favicon-assets.zip'
-    a.click()
+    if (token !== downloadToken) return
+    downloadBlob.value = blob
   } catch (e) {
+    if (token !== downloadToken) return
+    downloadBlob.value = null
     message.error((e as Error).message)
   }
 }
+
+watch(
+  () => [
+    props.image,
+    props.generalInfoOptions,
+    props.desktopBrowserOptions,
+    props.pwaOptions,
+    props.iosWebClipOptions,
+  ],
+  () => {
+    void updateDownload()
+  },
+  { immediate: true, deep: true },
+)
 </script>
 
 <i18n lang="json">

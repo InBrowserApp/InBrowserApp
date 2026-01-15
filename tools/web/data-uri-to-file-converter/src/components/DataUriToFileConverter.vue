@@ -38,7 +38,13 @@
 
       <ToolSection>
         <n-flex justify="flex-end">
-          <n-button type="primary" @click="downloadFile">
+          <n-button
+            tag="a"
+            type="primary"
+            :href="downloadUrl ?? undefined"
+            :download="downloadName"
+            :disabled="!downloadUrl"
+          >
             <template #icon>
               <n-icon :component="ArrowDownload16Regular" />
             </template>
@@ -82,6 +88,7 @@
 
 <script setup lang="ts">
 import { ref, watch, computed, onBeforeUnmount } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
   NInput,
@@ -114,6 +121,11 @@ const decodedBlob = ref<Blob | null>(null)
 const textPreview = ref<string>('')
 const error = ref<string>('')
 const previewUrl = ref<string>('')
+const downloadUrl = useObjectUrl(decodedBlob)
+const downloadName = computed(() => {
+  const name = fileName.value.trim()
+  return name || buildFileName(parsed.value?.mimeType || '')
+})
 
 const previewKind = computed(() => {
   if (!parsed.value) return null
@@ -306,20 +318,6 @@ function extractExtension(name: string): string {
   const dotIndex = trimmed.lastIndexOf('.')
   if (dotIndex <= 0 || dotIndex === trimmed.length - 1) return ''
   return trimmed.slice(dotIndex + 1)
-}
-
-function downloadFile() {
-  if (!decodedBlob.value) return
-
-  const name = fileName.value.trim() || buildFileName(parsed.value?.mimeType || '')
-  const url = URL.createObjectURL(decodedBlob.value)
-  const link = document.createElement('a')
-  link.href = url
-  link.download = name
-  document.body.appendChild(link)
-  link.click()
-  link.remove()
-  URL.revokeObjectURL(url)
 }
 
 function formatBytes(bytes: number): string {

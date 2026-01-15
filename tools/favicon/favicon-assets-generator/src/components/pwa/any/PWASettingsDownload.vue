@@ -2,9 +2,9 @@
   <n-p>
     <FileMinifiedUsingOxipng />
   </n-p>
-  <DownloadFileButton filename="pwa-192x192.png" @click="download192png" />
+  <DownloadFileButton filename="pwa-192x192.png" :href="png192Url" />
   <br />
-  <DownloadFileButton filename="pwa-512x512.png" @click="download512png" />
+  <DownloadFileButton filename="pwa-512x512.png" :href="png512Url" />
   <n-p>
     <n-code language="json" :code="code" :word-wrap="true" :hljs="hljs" />
   </n-p>
@@ -14,19 +14,15 @@
 import { NCode, NP } from 'naive-ui'
 import type { PWAOptions } from '../../../utils/favicon-generator/pwa'
 import { generatePWAPNG } from '../../../utils/favicon-generator/pwa'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
-import { useI18n } from 'vue-i18n'
 import FileMinifiedUsingOxipng from '../../common/FileMinifiedUsingOxipng.vue'
 import DownloadFileButton from '../../common/DownloadFileButton.vue'
-import { messages } from '../../locale/no-image-selected'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
 hljs.registerLanguage('json', json)
 
-const { t } = useI18n({
-  messages,
-})
 const message = useMessage()
 
 const props = defineProps<{
@@ -42,38 +38,44 @@ const image = computed<Blob | undefined>(() => {
   }
 })
 
-const download192png = async () => {
+const png192Blob = ref<Blob | null>(null)
+const png512Blob = ref<Blob | null>(null)
+const png192Url = useObjectUrl(png192Blob)
+const png512Url = useObjectUrl(png512Blob)
+
+let png192Token = 0
+let png512Token = 0
+
+const updatePng192 = async () => {
+  if (!image.value) {
+    png192Blob.value = null
+    return
+  }
+  const token = ++png192Token
   try {
-    if (image.value === undefined) {
-      throw new Error(t('noImageSelected'))
-    }
-
     const blob = await generatePWAPNG(image.value, props.options, 192)
-    const url = URL.createObjectURL(blob)
-
-    const a = document.createElement('a')
-    a.href = url
-    a.download = 'pwa-192x192.png'
-    a.click()
+    if (token !== png192Token) return
+    png192Blob.value = blob
   } catch (e) {
+    if (token !== png192Token) return
+    png192Blob.value = null
     message.error((e as Error).message)
   }
 }
 
-const download512png = async () => {
+const updatePng512 = async () => {
+  if (!image.value) {
+    png512Blob.value = null
+    return
+  }
+  const token = ++png512Token
   try {
-    if (image.value === undefined) {
-      throw new Error(t('noImageSelected'))
-    }
-
     const blob = await generatePWAPNG(image.value, props.options, 512)
-    const url = URL.createObjectURL(blob)
-
-    const a = document.createElement('a')
-    a.href = url
-    a.download = 'pwa-512x512.png'
-    a.click()
+    if (token !== png512Token) return
+    png512Blob.value = blob
   } catch (e) {
+    if (token !== png512Token) return
+    png512Blob.value = null
     message.error((e as Error).message)
   }
 }
@@ -98,4 +100,13 @@ const code = computed(() => {
     2,
   )
 })
+
+watch(
+  () => [image.value, props.options],
+  () => {
+    void updatePng192()
+    void updatePng512()
+  },
+  { immediate: true, deep: true },
+)
 </script>

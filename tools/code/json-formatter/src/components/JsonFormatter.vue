@@ -22,7 +22,7 @@
           />
         </n-flex>
         <CopyToClipboardButton :content="formattedJson" />
-        <n-button @click="downloadJson" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="formatted.json">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -58,6 +58,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import {
@@ -107,6 +108,11 @@ const formattedJson = computed<string>(() => {
   }
 })
 
+const downloadBlob = computed(
+  () => new Blob([formattedJson.value], { type: 'application/json;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
+
 // Watch for changes to update error state separately
 watch(
   [jsonText, indentSize],
@@ -125,18 +131,6 @@ watch(
   },
   { immediate: true },
 )
-
-function downloadJson(): void {
-  const blob = new Blob([formattedJson.value], { type: 'application/json;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'formatted.json'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
 
 async function importFromFile(): Promise<void> {
   try {

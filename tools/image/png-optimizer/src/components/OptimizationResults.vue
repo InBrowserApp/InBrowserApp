@@ -25,7 +25,14 @@
 
       <!-- Download Button -->
       <n-flex justify="center" style="width: 100%">
-        <n-button type="primary" @click="handleDownload" style="width: 100%">
+        <n-button
+          tag="a"
+          type="primary"
+          style="width: 100%"
+          :href="downloadUrl ?? undefined"
+          :download="props.originalFile.name"
+          :disabled="!downloadUrl"
+        >
           <template #icon>
             <n-icon :component="Download24Regular" />
           </template>
@@ -38,6 +45,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { NFlex, NGrid, NGridItem, NStatistic, NButton, NIcon } from 'naive-ui'
@@ -52,11 +60,6 @@ const props = defineProps<{
   optimizedFile: Blob
 }>()
 
-// Emits
-const emit = defineEmits<{
-  download: []
-}>()
-
 // Computed
 const compressionRatio = computed(() => {
   const reduction =
@@ -64,9 +67,7 @@ const compressionRatio = computed(() => {
   return Math.max(0, Math.round(reduction))
 })
 
-function handleDownload() {
-  emit('download')
-}
+const downloadUrl = useObjectUrl(computed(() => props.optimizedFile))
 </script>
 
 <i18n lang="json">

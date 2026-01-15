@@ -38,7 +38,7 @@
       </n-flex>
       <n-flex>
         <CopyToClipboardButton :content="renderedXml" />
-        <n-button @click="downloadXml" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="converted.xml">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -69,6 +69,7 @@
 
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import convert from 'xml-js'
@@ -120,17 +121,10 @@ const renderedXml = computed<string>(() => {
   }
 })
 
-function downloadXml(): void {
-  const blob = new Blob([renderedXml.value], { type: 'application/xml;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'converted.xml'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(
+  () => new Blob([renderedXml.value], { type: 'application/xml;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

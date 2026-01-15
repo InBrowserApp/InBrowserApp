@@ -23,7 +23,13 @@
       </n-flex>
       <n-flex align="center" wrap>
         <CopyToClipboardButton :content="outputText" />
-        <n-button @click="downloadTypes" text :disabled="!outputText">
+        <n-button
+          tag="a"
+          text
+          :href="downloadUrl ?? undefined"
+          download="openapi-types.d.ts"
+          :disabled="!downloadUrl"
+        >
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -168,7 +174,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { computedAsync, useDebounce, useStorage } from '@vueuse/core'
+import { computedAsync, useDebounce, useObjectUrl, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { fileOpen } from 'browser-fs-access'
 import {
@@ -334,6 +340,11 @@ const outputState = computedAsync(
 )
 
 const outputText = computed(() => outputState.value.output)
+const downloadBlob = computed(() => {
+  if (!outputText.value) return null
+  return new Blob([outputText.value], { type: 'text/plain;charset=utf-8' })
+})
+const downloadUrl = useObjectUrl(downloadBlob)
 const outputError = computed(() => outputState.value.error)
 const importUrlStatus = computed(() => (importUrlError.value ? 'error' : undefined))
 
@@ -420,19 +431,6 @@ async function handleInput(value: string | File) {
   } catch {
     openApiText.value = ''
   }
-}
-
-function downloadTypes() {
-  if (!outputText.value) return
-  const blob = new Blob([outputText.value], { type: 'text/plain;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const anchor = document.createElement('a')
-  anchor.href = url
-  anchor.download = 'openapi-types.d.ts'
-  document.body.appendChild(anchor)
-  anchor.click()
-  anchor.remove()
-  URL.revokeObjectURL(url)
 }
 </script>
 
