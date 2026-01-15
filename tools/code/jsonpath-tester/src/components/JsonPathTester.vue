@@ -103,7 +103,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
-import { JSONPath } from 'jsonpath-plus'
+import { JSONPath, type JSONPathOptions } from 'jsonpath-plus'
 import { fileOpen } from 'browser-fs-access'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
@@ -207,8 +207,9 @@ const queryState = computed<QueryState>(() => {
   }
 
   try {
-    const values = JSONPath({ path: query, json: parsed.value }) as unknown[]
-    const paths = JSONPath({ path: query, json: parsed.value, resultType: 'path' }) as string[]
+    const jsonValue = parsed.value as JSONPathOptions['json']
+    const values = JSONPath<unknown[]>({ path: query, json: jsonValue, resultType: 'value' })
+    const paths = JSONPath<string[]>({ path: query, json: jsonValue, resultType: 'path' })
     return { state: 'ready', values, paths }
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error)

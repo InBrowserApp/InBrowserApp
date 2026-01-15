@@ -16,6 +16,17 @@ const TestWrapper = {
   },
 }
 
+const getTextarea = (wrapper: ReturnType<typeof mount>, index: number) => {
+  const textareas = wrapper.findAll('textarea')
+  const textarea = textareas[index]
+
+  if (!textarea) {
+    throw new Error(`Textarea at index ${index} not found`)
+  }
+
+  return textarea
+}
+
 const getOutputCode = (wrapper: ReturnType<typeof mount>) =>
   wrapper.findComponent(NCode).props('code') as string
 
@@ -35,7 +46,7 @@ describe('JsonPathTester', () => {
 
   it('shows an error when JSON is invalid', async () => {
     const wrapper = mount(TestWrapper)
-    const jsonInput = wrapper.findAll('textarea')[0]
+    const jsonInput = getTextarea(wrapper, 0)
 
     await jsonInput.setValue('{')
     await flushPromises()
@@ -45,7 +56,7 @@ describe('JsonPathTester', () => {
 
   it('shows an error when JSONPath is invalid', async () => {
     const wrapper = mount(TestWrapper)
-    const queryInput = wrapper.findAll('textarea')[1]
+    const queryInput = getTextarea(wrapper, 1)
 
     await queryInput.setValue('$.store.book[?(@.price < )]')
     await flushPromises()
@@ -72,7 +83,7 @@ describe('JsonPathTester', () => {
     await select.vm.$emit('update:value', '$.store.bicycle.color')
     await flushPromises()
 
-    const queryInput = wrapper.findAll('textarea')[1]
+    const queryInput = getTextarea(wrapper, 1)
     expect((queryInput.element as HTMLTextAreaElement).value).toBe('$.store.bicycle.color')
   })
 
@@ -88,7 +99,7 @@ describe('JsonPathTester', () => {
 
   it('formats JSON when requested', async () => {
     const wrapper = mount(TestWrapper)
-    const jsonInput = wrapper.findAll('textarea')[0]
+    const jsonInput = getTextarea(wrapper, 0)
     const formatButton = wrapper
       .findAll('button')
       .find((candidate) => candidate.text().includes('Format JSON'))
@@ -105,7 +116,7 @@ describe('JsonPathTester', () => {
 
   it('does not format invalid JSON', async () => {
     const wrapper = mount(TestWrapper)
-    const jsonInput = wrapper.findAll('textarea')[0]
+    const jsonInput = getTextarea(wrapper, 0)
     const formatButton = wrapper
       .findAll('button')
       .find((candidate) => candidate.text().includes('Format JSON'))
@@ -137,7 +148,7 @@ describe('JsonPathTester', () => {
     await importButton.trigger('click')
     await flushPromises()
 
-    const jsonInput = wrapper.findAll('textarea')[0]
+    const jsonInput = getTextarea(wrapper, 0)
     expect((jsonInput.element as HTMLTextAreaElement).value).toBe('{"name":"demo"}')
   })
 
@@ -153,12 +164,12 @@ describe('JsonPathTester', () => {
       throw new Error('Import button not found')
     }
 
-    const initialValue = (wrapper.findAll('textarea')[0].element as HTMLTextAreaElement).value
+    const initialValue = (getTextarea(wrapper, 0).element as HTMLTextAreaElement).value
 
     await importButton.trigger('click')
     await flushPromises()
 
-    const jsonInput = wrapper.findAll('textarea')[0]
+    const jsonInput = getTextarea(wrapper, 0)
     expect((jsonInput.element as HTMLTextAreaElement).value).toBe(initialValue)
   })
 })
