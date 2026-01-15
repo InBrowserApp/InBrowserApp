@@ -21,7 +21,13 @@ function bytesToBigInt(bytes: Uint8Array): bigint {
 }
 
 function encodeBase62(value: bigint): string {
-  if (value === 0n) return KSUID_ALPHABET[0]
+  if (value === 0n) {
+    const char = KSUID_ALPHABET[0]
+    if (!char) {
+      throw new Error('Failed to encode KSUID base62 value')
+    }
+    return char
+  }
 
   let result = ''
   let current = value
