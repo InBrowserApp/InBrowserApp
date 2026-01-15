@@ -330,6 +330,8 @@ import {
   formatIcsDateTime,
   formatUtcDateTime,
   formatTrigger,
+  type IcsDateValue,
+  type IcsEvent,
   type ReminderUnit,
 } from '../utils/ics'
 
@@ -609,7 +611,7 @@ const alarmEntries = computed(() => {
     .filter(Boolean) as Array<{ trigger: string; description: string }>
 })
 
-const dtstartValue = computed(() => {
+const dtstartValue = computed<IcsDateValue | null>(() => {
   if (!startParts.value) return null
   if (isAllDay.value) {
     return { type: 'date', value: formatIcsDate(startParts.value) }
@@ -623,7 +625,7 @@ const dtstartValue = computed(() => {
   return { type: 'date-time', value: formatUtcDateTime(startTimestamp.value) }
 })
 
-const dtendValue = computed(() => {
+const dtendValue = computed<IcsDateValue | null>(() => {
   if (isAllDay.value) {
     if (!endDateParts.value) return null
     return { type: 'date', value: formatIcsDate(endDateParts.value) }
@@ -646,16 +648,17 @@ const outputError = computed(() => {
 })
 
 const icsContent = computed(() => {
-  if (!dtstartValue.value || outputError.value) return ''
+  const dtstart = dtstartValue.value
+  if (!dtstart || outputError.value) return ''
 
-  const event = {
+  const event: IcsEvent = {
     uid: uid.value,
     dtstamp: formatUtcDateTime(Date.now()),
     summary: title.value.trim() || undefined,
     description: description.value.trim() || undefined,
     location: location.value.trim() || undefined,
     url: url.value.trim() || undefined,
-    dtstart: dtstartValue.value,
+    dtstart,
     dtend: dtendValue.value ?? undefined,
     rrule: rruleValue.value || undefined,
     alarms: alarmEntries.value.length ? alarmEntries.value : undefined,

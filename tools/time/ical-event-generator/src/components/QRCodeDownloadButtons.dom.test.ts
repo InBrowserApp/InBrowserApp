@@ -51,7 +51,14 @@ describe('QRCodeDownloadButtons', () => {
     })
 
     const buttons = wrapper.findAll('button')
-    await buttons[0].trigger('click')
+    expect(buttons).toHaveLength(2)
+    const pngButton = buttons[0]
+    const svgButton = buttons[1]
+    if (!pngButton || !svgButton) {
+      throw new Error('Expected PNG and SVG download buttons')
+    }
+
+    await pngButton.trigger('click')
     await flushPromises()
 
     const mocked = QRCode as unknown as {
@@ -62,7 +69,7 @@ describe('QRCodeDownloadButtons', () => {
     expect(mocked.toDataURL).toHaveBeenCalled()
     expect(createObjectURL).toHaveBeenCalled()
 
-    await buttons[1].trigger('click')
+    await svgButton.trigger('click')
     await flushPromises()
 
     expect(mocked.toString).toHaveBeenCalled()
