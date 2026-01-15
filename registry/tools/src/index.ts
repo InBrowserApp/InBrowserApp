@@ -18,6 +18,7 @@ import { toolInfo as ipv6ToMacToolInfo } from '@tools/ipv6-to-mac'
 import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-time'
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
+import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
 import { toolInfo as networkToolsToolInfo } from '@tools/network-tools'
 import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
@@ -138,6 +139,7 @@ export const tools: ToolInfo[] = [
   pngOptimizerToolInfo,
   svgOptimizerToolInfo,
   exifViewerToolInfo,
+  imageMetadataCleanerToolInfo,
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,
