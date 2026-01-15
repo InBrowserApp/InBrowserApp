@@ -106,23 +106,22 @@ let revokeObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
 beforeEach(() => {
   mockedStrip.mockReset()
 
-  if (URL.createObjectURL) {
-    createObjectUrlSpy = vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock')
-  } else {
+  const url = URL as Partial<typeof URL>
+  if (!url.createObjectURL) {
     Object.defineProperty(URL, 'createObjectURL', {
       value: vi.fn(() => 'blob:mock'),
       writable: true,
     })
   }
+  createObjectUrlSpy = vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock')
 
-  if (URL.revokeObjectURL) {
-    revokeObjectUrlSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined)
-  } else {
+  if (!url.revokeObjectURL) {
     Object.defineProperty(URL, 'revokeObjectURL', {
       value: vi.fn(() => undefined),
       writable: true,
     })
   }
+  revokeObjectUrlSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined)
 })
 
 afterEach(() => {

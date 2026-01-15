@@ -86,10 +86,10 @@ describe('stripImageMetadata', () => {
     expect(result.cleaned.length).toBe(webp.length - exif.length)
 
     const riffSize =
-      result.cleaned[4] |
-      (result.cleaned[5] << 8) |
-      (result.cleaned[6] << 16) |
-      (result.cleaned[7] << 24)
+      (result.cleaned[4] ?? 0) |
+      ((result.cleaned[5] ?? 0) << 8) |
+      ((result.cleaned[6] ?? 0) << 16) |
+      ((result.cleaned[7] ?? 0) << 24)
     expect(riffSize).toBe(result.cleaned.length - 8)
   })
 

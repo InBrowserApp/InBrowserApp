@@ -115,8 +115,9 @@ async function cleanMetadata() {
   try {
     const buffer = await imageFile.value.arrayBuffer()
     const result = stripImageMetadata(new Uint8Array(buffer))
+    const cleanedBytes = new Uint8Array(result.cleaned)
     const mimeType = imageFile.value.type || formatToMime(result.format)
-    cleanedBlob.value = new Blob([result.cleaned], { type: mimeType })
+    cleanedBlob.value = new Blob([cleanedBytes.buffer], { type: mimeType })
     removedBytes.value = Math.max(0, imageFile.value.size - cleanedBlob.value.size)
     message.success(t('cleaningComplete'))
   } catch (err) {
