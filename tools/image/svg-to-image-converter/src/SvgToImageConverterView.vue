@@ -79,7 +79,7 @@
           </n-checkbox>
         </n-form-item-gi>
         <n-form-item-gi :label="t('backgroundColor')" :show-feedback="false">
-          <n-flex vertical :size="8">
+          <n-flex vertical :size="8" style="width: 100%">
             <n-color-picker
               :value="backgroundColor"
               :modes="['hex']"
