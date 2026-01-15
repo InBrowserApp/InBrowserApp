@@ -33,11 +33,17 @@ const BaseStub = defineComponent({
 
 const ButtonStub = defineComponent({
   name: 'NButton',
+  inheritAttrs: false,
   props: {
     disabled: Boolean,
+    tag: String,
+    href: String,
+    download: String,
+    loading: Boolean,
   },
   emits: ['click'],
-  template: '<button :disabled="disabled" @click="$emit(\'click\')"><slot /></button>',
+  template:
+    '<component :is="tag || \'button\'" :disabled="disabled" :href="href" :download="download" v-bind="$attrs" @click="$emit(\'click\')"><slot /></component>',
 })
 
 const StatisticStub = defineComponent({
@@ -206,15 +212,17 @@ describe('ImageMetadataCleanerView', () => {
     expect(mockedStrip).toHaveBeenCalledTimes(3)
     expect(wrapper.text()).toContain('Download cleaned image')
 
-    const downloadButton = wrapper
-      .findAll('button')
-      .find((button) => button.text().includes('Download cleaned image'))
-    if (!downloadButton) {
+    const downloadLink = wrapper.findAll('a').find((link) => link.text().includes('Download cleaned image'))
+    if (!downloadLink) {
       throw new Error('Missing download button')
     }
 
-    await downloadButton.trigger('click')
-    expect(URL.createObjectURL).toHaveBeenCalled()
+    expect(downloadLink.attributes('href')).toBe('blob:mock')
+    expect(downloadLink.attributes('download')).toBe('photo.jpg')
+    if (!createObjectUrlSpy) {
+      throw new Error('Missing URL.createObjectURL spy')
+    }
+    expect(createObjectUrlSpy).toHaveBeenCalled()
 
     wrapper.findComponent(ImagePreviewStub).vm.$emit('clear')
     await flushPromises()

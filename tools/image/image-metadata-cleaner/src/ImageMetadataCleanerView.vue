@@ -9,6 +9,9 @@
         <n-flex vertical :size="12">
           <n-text depth="3">{{ t('note') }}</n-text>
           <n-button type="primary" :loading="isCleaning" @click="cleanMetadata">
+            <template #icon>
+              <n-icon :component="DeleteIcon" />
+            </template>
             {{ isCleaning ? t('cleaningMetadata') : t('cleanMetadata') }}
           </n-button>
         </n-flex>
@@ -37,7 +40,13 @@
         </n-grid>
 
         <n-flex justify="center" style="width: 100%">
-          <n-button type="primary" @click="downloadCleaned" style="width: 100%">
+          <n-button
+            tag="a"
+            type="primary"
+            :href="blobUrl"
+            :download="downloadName"
+            style="width: 100%"
+          >
             <template #icon>
               <n-icon :component="DownloadIcon" />
             </template>
@@ -60,8 +69,9 @@ import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useMessage } from 'naive-ui'
 import { filesize } from 'filesize'
+import { useObjectUrl } from '@vueuse/core'
 import { NAlert, NButton, NFlex, NGrid, NGridItem, NIcon, NStatistic, NText } from 'naive-ui'
-import { ArrowDownload24Regular as DownloadIcon } from '@shared/icons/fluent'
+import { ArrowDownload24Regular as DownloadIcon, Delete24Regular as DeleteIcon } from '@shared/icons/fluent'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { stripImageMetadata } from '@utils/image'
 import * as toolInfo from './info'
@@ -90,6 +100,8 @@ const reductionPercent = computed(() => {
   const reduction = ((imageFile.value.size - cleanedBlob.value.size) / imageFile.value.size) * 100
   return Math.max(0, Math.round(reduction))
 })
+const downloadName = computed(() => imageFile.value?.name || 'cleaned-image')
+const blobUrl = useObjectUrl(cleanedBlob)
 
 function clearFile() {
   imageFile.value = null
@@ -143,18 +155,6 @@ function toErrorMessage(err: unknown): string {
   return err instanceof Error ? err.message : t('cleaningFailed')
 }
 
-function downloadCleaned() {
-  if (!cleanedBlob.value || !imageFile.value) return
-
-  const url = URL.createObjectURL(cleanedBlob.value)
-  const link = document.createElement('a')
-  link.href = url
-  link.download = imageFile.value.name
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-  URL.revokeObjectURL(url)
-}
 </script>
 
 <i18n lang="json">
