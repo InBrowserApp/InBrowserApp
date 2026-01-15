@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import ColorPickerTool from './ColorPickerTool.vue'
-import type { UploadFileInfo } from 'naive-ui'
 import { nextTick } from 'vue'
 
 const originalResizeObserver = globalThis.ResizeObserver
@@ -15,18 +14,10 @@ class MockResizeObserver {
 }
 
 type ExposedMethods = {
-  handleBeforeUpload: (data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) => boolean
+  handleFilePick: (file: File | null) => boolean
   handleCanvasClick: (event: MouseEvent) => void
   handleScreenPick: () => Promise<void>
 }
-
-const createUploadInfo = (file?: File): UploadFileInfo => ({
-  id: file?.name ?? 'file',
-  name: file?.name ?? 'file',
-  status: 'pending',
-  file,
-  type: file?.type ?? 'image/png',
-})
 
 function getVm(wrapper: ReturnType<typeof mount>) {
   return wrapper.vm as unknown as ExposedMethods
@@ -133,10 +124,7 @@ describe('ColorPickerTool', () => {
     const wrapper = mountTool()
     const vm = getVm(wrapper)
 
-    const result = vm.handleBeforeUpload({
-      file: createUploadInfo(undefined),
-      fileList: [],
-    })
+    const result = vm.handleFilePick(null)
 
     expect(result).toBe(false)
   })
@@ -161,10 +149,7 @@ describe('ColorPickerTool', () => {
     const vm = getVm(wrapper)
 
     const file = new File(['data'], 'instant.png', { type: 'image/png' })
-    vm.handleBeforeUpload({
-      file: createUploadInfo(file),
-      fileList: [createUploadInfo(file)],
-    })
+    vm.handleFilePick(file)
 
     await flushPromises()
 
@@ -192,10 +177,7 @@ describe('ColorPickerTool', () => {
     const vm = getVm(wrapper)
 
     const file = new File(['data'], 'ctx-null.png', { type: 'image/png' })
-    vm.handleBeforeUpload({
-      file: createUploadInfo(file),
-      fileList: [createUploadInfo(file)],
-    })
+    vm.handleFilePick(file)
 
     await flushPromises()
     await new Promise((resolve) => setTimeout(resolve, 0))
@@ -223,10 +205,7 @@ describe('ColorPickerTool', () => {
     const vm = getVm(wrapper)
 
     const file = new File(['data'], 'error.png', { type: 'image/png' })
-    vm.handleBeforeUpload({
-      file: createUploadInfo(file),
-      fileList: [createUploadInfo(file)],
-    })
+    vm.handleFilePick(file)
 
     await flushPromises()
     await new Promise((resolve) => setTimeout(resolve, 0))
@@ -264,10 +243,7 @@ describe('ColorPickerTool', () => {
     vm.handleCanvasClick(new MouseEvent('click'))
 
     const file = new File(['data'], 'success.png', { type: 'image/png' })
-    vm.handleBeforeUpload({
-      file: createUploadInfo(file),
-      fileList: [createUploadInfo(file)],
-    })
+    vm.handleFilePick(file)
 
     await flushPromises()
     await new Promise((resolve) => setTimeout(resolve, 0))

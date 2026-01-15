@@ -23,30 +23,30 @@
 
   <ToolSection>
     <n-flex vertical :size="12">
-      <div>
-        <div class="section-title">{{ t('imageTitle') }}</div>
-        <div class="section-subtitle">{{ t('imageDescription') }}</div>
-      </div>
-      <n-upload
-        :show-file-list="false"
-        accept="image/*,image/svg+xml"
-        :max="1"
-        @before-upload="handleBeforeUpload"
-      >
-        <n-upload-dragger>
-          <div style="margin-bottom: 12px">
-            <n-icon size="48" :depth="3">
-              <ImageIcon />
-            </n-icon>
-          </div>
-          <n-text style="font-size: 16px">
-            {{ t('uploadHint') }}
-          </n-text>
-          <n-p depth="3" style="margin: 8px 0 0 0">
-            {{ t('uploadFormats') }}
-          </n-p>
-        </n-upload-dragger>
-      </n-upload>
+      <n-flex align="center" justify="space-between" :wrap="true" class="section-row">
+        <div class="section-copy">
+          <div class="section-title">{{ t('imageTitle') }}</div>
+          <div class="section-subtitle">{{ t('imageDescription') }}</div>
+        </div>
+        <div class="image-actions">
+          <input
+            ref="fileInputRef"
+            class="file-input"
+            type="file"
+            accept="image/*,image/svg+xml"
+            @change="handleFileChange"
+          />
+          <n-button type="primary" @click="handleImagePick">
+            <template #icon>
+              <n-icon>
+                <ImagePickIcon />
+              </n-icon>
+            </template>
+            {{ t('imageButton') }}
+          </n-button>
+        </div>
+      </n-flex>
+      <n-text depth="3">{{ t('uploadFormats') }}</n-text>
       <n-alert v-if="imageError" type="error" :show-icon="false">
         {{ imageError }}
       </n-alert>
@@ -96,23 +96,10 @@
 import { computed, onBeforeUnmount, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useElementSize, useStorage } from '@vueuse/core'
-import type { UploadFileInfo } from 'naive-ui'
-import {
-  NAlert,
-  NButton,
-  NFlex,
-  NGrid,
-  NGi,
-  NIcon,
-  NP,
-  NText,
-  NUpload,
-  NUploadDragger,
-  NSwitch,
-} from 'naive-ui'
+import { NAlert, NButton, NFlex, NGrid, NGi, NIcon, NText, NSwitch } from 'naive-ui'
 import {
   Eyedropper24Filled as EyedropperIcon,
-  Image24Regular as ImageIcon,
+  TabDesktopImage16Regular as ImagePickIcon,
 } from '@shared/icons/fluent'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
@@ -153,6 +140,7 @@ const pickedColor = useStorage<RGBA>('tools:color-picker:rgba', {
 })
 const pickedSource = ref<'screen' | 'image' | null>(null)
 
+const fileInputRef = ref<HTMLInputElement | null>(null)
 const imageInfo = ref<{ width: number; height: number } | null>(null)
 const hasImage = ref(false)
 const imageError = ref<string | null>(null)
@@ -290,12 +278,23 @@ async function handleScreenPick() {
   }
 }
 
-function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
-  const file = data.file.file
-  if (!file) return false
+function handleImagePick() {
+  fileInputRef.value?.click()
+}
 
+function handleFilePick(file: File | null) {
+  if (!file) return false
   loadImage(file)
-  return false
+  return true
+}
+
+function handleFileChange(event: Event) {
+  const input = event.target as HTMLInputElement | null
+  const file = input?.files?.[0] ?? null
+  handleFilePick(file)
+  if (input) {
+    input.value = ''
+  }
 }
 
 function handleCanvasClick(event: MouseEvent) {
@@ -328,7 +327,7 @@ function handleCanvasClick(event: MouseEvent) {
 }
 
 defineExpose({
-  handleBeforeUpload,
+  handleFilePick,
   handleCanvasClick,
   handleScreenPick,
 })
@@ -359,6 +358,10 @@ onBeforeUnmount(() => {
 
 .canvas-wrapper {
   margin-top: 8px;
+}
+
+.file-input {
+  display: none;
 }
 
 .canvas-hint {
@@ -420,6 +423,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Screen color picking is not supported in this browser.",
     "imageTitle": "Image Color Picker",
     "imageDescription": "Upload an image and click to sample a pixel.",
+    "imageButton": "Select Image",
     "imageHint": "Click the image to pick a color.",
     "imageError": "Failed to load the image.",
     "uploadHint": "Click or drag image to upload",
@@ -447,6 +451,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "当前浏览器不支持屏幕取色。",
     "imageTitle": "图片取色",
     "imageDescription": "上传图片并点击以采样像素。",
+    "imageButton": "选择图片",
     "imageHint": "点击图片取色。",
     "imageError": "图片加载失败。",
     "uploadHint": "点击或拖拽图片上传",
@@ -474,6 +479,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "当前浏览器不支持屏幕取色。",
     "imageTitle": "图片取色",
     "imageDescription": "上传图片并点击以采样像素。",
+    "imageButton": "选择图片",
     "imageHint": "点击图片取色。",
     "imageError": "图片加载失败。",
     "uploadHint": "点击或拖拽图片上传",
@@ -501,6 +507,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "此瀏覽器不支援螢幕取色。",
     "imageTitle": "圖片取色",
     "imageDescription": "上傳圖片並點擊以取樣像素。",
+    "imageButton": "選擇圖片",
     "imageHint": "點擊圖片取色。",
     "imageError": "圖片載入失敗。",
     "uploadHint": "點擊或拖曳圖片上傳",
@@ -528,6 +535,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "此瀏覽器不支援螢幕取色。",
     "imageTitle": "圖片取色",
     "imageDescription": "上傳圖片並點擊以取樣像素。",
+    "imageButton": "選擇圖片",
     "imageHint": "點擊圖片取色。",
     "imageError": "圖片載入失敗。",
     "uploadHint": "點擊或拖曳圖片上傳",
@@ -555,6 +563,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "La selección de color de pantalla no es compatible con este navegador.",
     "imageTitle": "Selector de color de imagen",
     "imageDescription": "Sube una imagen y haz clic para muestrear un píxel.",
+    "imageButton": "Seleccionar imagen",
     "imageHint": "Haz clic en la imagen para tomar un color.",
     "imageError": "No se pudo cargar la imagen.",
     "uploadHint": "Haga clic o arrastre la imagen para cargar",
@@ -582,6 +591,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "La sélection de couleur à l’écran n’est pas prise en charge dans ce navigateur.",
     "imageTitle": "Pipette de couleur d’image",
     "imageDescription": "Téléchargez une image et cliquez pour échantillonner un pixel.",
+    "imageButton": "Sélectionner une image",
     "imageHint": "Cliquez sur l’image pour choisir une couleur.",
     "imageError": "Échec du chargement de l’image.",
     "uploadHint": "Cliquez ou déposez l'image pour télécharger",
@@ -609,6 +619,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Bildschirm-Farbaufnahme wird in diesem Browser nicht unterstützt.",
     "imageTitle": "Bild-Farbpipette",
     "imageDescription": "Laden Sie ein Bild hoch und klicken Sie, um ein Pixel zu sampeln.",
+    "imageButton": "Bild auswählen",
     "imageHint": "Klicken Sie auf das Bild, um eine Farbe zu wählen.",
     "imageError": "Bild konnte nicht geladen werden.",
     "uploadHint": "Klicken oder Bild hierher ziehen",
@@ -636,6 +647,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Il prelievo colore dallo schermo non è supportato in questo browser.",
     "imageTitle": "Contagocce immagine",
     "imageDescription": "Carica un'immagine e fai clic per campionare un pixel.",
+    "imageButton": "Seleziona immagine",
     "imageHint": "Fai clic sull'immagine per scegliere un colore.",
     "imageError": "Impossibile caricare l'immagine.",
     "uploadHint": "Clicca o trascina l'immagine per caricarla",
@@ -663,6 +675,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "このブラウザでは画面の色取得はサポートされていません。",
     "imageTitle": "画像カラーピッカー",
     "imageDescription": "画像をアップロードしてクリックし、ピクセルをサンプルします。",
+    "imageButton": "画像を選択",
     "imageHint": "画像をクリックして色を取得します。",
     "imageError": "画像の読み込みに失敗しました。",
     "uploadHint": "クリックまたは画像をドラッグしてアップロード",
@@ -690,6 +703,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "이 브라우저는 화면 색상 선택을 지원하지 않습니다.",
     "imageTitle": "이미지 색상 선택기",
     "imageDescription": "이미지를 업로드하고 클릭해 픽셀을 샘플링하세요.",
+    "imageButton": "이미지 선택",
     "imageHint": "이미지를 클릭해 색상을 선택하세요.",
     "imageError": "이미지를 불러오지 못했습니다.",
     "uploadHint": "클릭하거나 이미지를 드래그하여 업로드",
@@ -717,6 +731,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Выбор цвета с экрана не поддерживается в этом браузере.",
     "imageTitle": "Пипетка изображения",
     "imageDescription": "Загрузите изображение и щёлкните, чтобы выбрать пиксель.",
+    "imageButton": "Выбрать изображение",
     "imageHint": "Нажмите на изображение, чтобы выбрать цвет.",
     "imageError": "Не удалось загрузить изображение.",
     "uploadHint": "Нажмите или перетащите изображение для загрузки",
@@ -744,6 +759,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "A captura de cor da tela não é suportada neste navegador.",
     "imageTitle": "Seletor de cor da imagem",
     "imageDescription": "Envie uma imagem e clique para amostrar um pixel.",
+    "imageButton": "Selecionar imagem",
     "imageHint": "Clique na imagem para escolher uma cor.",
     "imageError": "Falha ao carregar a imagem.",
     "uploadHint": "Clique ou arraste a imagem para fazer upload",
@@ -771,6 +787,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "التقاط ألوان الشاشة غير مدعوم في هذا المتصفح.",
     "imageTitle": "منتقي ألوان الصورة",
     "imageDescription": "ارفع صورة وانقر لأخذ عيّنة بكسل.",
+    "imageButton": "اختر صورة",
     "imageHint": "انقر على الصورة لالتقاط لون.",
     "imageError": "تعذر تحميل الصورة.",
     "uploadHint": "انقر أو اسحب الصورة للتحميل",
@@ -798,6 +815,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "इस ब्राउज़र में स्क्रीन रंग चुनना समर्थित नहीं है।",
     "imageTitle": "इमेज कलर पिकर",
     "imageDescription": "छवि अपलोड करें और पिक्सेल सैंपल करने के लिए क्लिक करें।",
+    "imageButton": "चित्र चुनें",
     "imageHint": "रंग चुनने के लिए छवि पर क्लिक करें।",
     "imageError": "छवि लोड नहीं हो सकी।",
     "uploadHint": "अपलोड करने के लिए क्लिक करें या छवि खींचें",
@@ -825,6 +843,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Bu tarayıcıda ekran renk seçimi desteklenmiyor.",
     "imageTitle": "Görsel Renk Seçici",
     "imageDescription": "Bir görsel yükleyin ve bir pikseli örneklemek için tıklayın.",
+    "imageButton": "Görsel seç",
     "imageHint": "Renk seçmek için görsele tıklayın.",
     "imageError": "Görsel yüklenemedi.",
     "uploadHint": "Yüklemek için tıklayın veya görüntüyü sürükleyin",
@@ -852,6 +871,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Schermkleur kiezen wordt niet ondersteund in deze browser.",
     "imageTitle": "Afbeeldingskleurpipet",
     "imageDescription": "Upload een afbeelding en klik om een pixel te samplen.",
+    "imageButton": "Afbeelding kiezen",
     "imageHint": "Klik op de afbeelding om een kleur te kiezen.",
     "imageError": "Afbeelding laden mislukt.",
     "uploadHint": "Klik of sleep afbeelding om te uploaden",
@@ -879,6 +899,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Skärmfärgväljning stöds inte i den här webbläsaren.",
     "imageTitle": "Bildfärgväljare",
     "imageDescription": "Ladda upp en bild och klicka för att sampla en pixel.",
+    "imageButton": "Välj bild",
     "imageHint": "Klicka på bilden för att välja en färg.",
     "imageError": "Kunde inte läsa in bilden.",
     "uploadHint": "Klicka eller dra bild för att ladda upp",
@@ -906,6 +927,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Pobieranie koloru z ekranu nie jest obsługiwane w tej przeglądarce.",
     "imageTitle": "Pipeta obrazu",
     "imageDescription": "Prześlij obraz i kliknij, aby pobrać piksel.",
+    "imageButton": "Wybierz obraz",
     "imageHint": "Kliknij obraz, aby wybrać kolor.",
     "imageError": "Nie udało się wczytać obrazu.",
     "uploadHint": "Kliknij lub przeciągnij obraz, aby przesłać",
@@ -933,6 +955,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Trình duyệt này không hỗ trợ chọn màu màn hình.",
     "imageTitle": "Bộ chọn màu từ ảnh",
     "imageDescription": "Tải ảnh lên và nhấp để lấy mẫu pixel.",
+    "imageButton": "Chọn ảnh",
     "imageHint": "Nhấp vào ảnh để chọn màu.",
     "imageError": "Không thể tải ảnh.",
     "uploadHint": "Nhấp hoặc kéo hình ảnh để tải lên",
@@ -960,6 +983,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "เบราว์เซอร์นี้ไม่รองรับการเลือกสีจากหน้าจอ",
     "imageTitle": "ตัวเลือกสีจากภาพ",
     "imageDescription": "อัปโหลดภาพแล้วคลิกเพื่อสุ่มตัวอย่างพิกเซล",
+    "imageButton": "เลือกภาพ",
     "imageHint": "คลิกที่ภาพเพื่อเลือกสี",
     "imageError": "โหลดภาพไม่สำเร็จ",
     "uploadHint": "คลิกหรือลากภาพเพื่ออัปโหลด",
@@ -987,6 +1011,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Pemilihan warna layar tidak didukung di browser ini.",
     "imageTitle": "Pemilih warna gambar",
     "imageDescription": "Unggah gambar dan klik untuk mengambil sampel piksel.",
+    "imageButton": "Pilih gambar",
     "imageHint": "Klik gambar untuk memilih warna.",
     "imageError": "Gagal memuat gambar.",
     "uploadHint": "Klik atau seret gambar untuk mengunggah",
@@ -1014,6 +1039,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "בחירת צבע מהמסך אינה נתמכת בדפדפן זה.",
     "imageTitle": "בוחר צבע מתמונה",
     "imageDescription": "העלה תמונה ולחץ כדי לדגום פיקסל.",
+    "imageButton": "בחר תמונה",
     "imageHint": "לחץ על התמונה כדי לבחור צבע.",
     "imageError": "טעינת התמונה נכשלה.",
     "uploadHint": "לחץ או גרור תמונה להעלאה",
@@ -1041,6 +1067,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Pemilihan warna skrin tidak disokong dalam pelayar ini.",
     "imageTitle": "Pemilih warna imej",
     "imageDescription": "Muat naik imej dan klik untuk mengambil sampel piksel.",
+    "imageButton": "Pilih imej",
     "imageHint": "Klik imej untuk memilih warna.",
     "imageError": "Gagal memuatkan imej.",
     "uploadHint": "Klik atau seret imej untuk muat naik",
@@ -1068,6 +1095,7 @@ onBeforeUnmount(() => {
     "screenUnsupported": "Skjermfargevelging støttes ikke i denne nettleseren.",
     "imageTitle": "Bildefargevelger",
     "imageDescription": "Last opp et bilde og klikk for å prøve en piksel.",
+    "imageButton": "Velg bilde",
     "imageHint": "Klikk på bildet for å velge en farge.",
     "imageError": "Kunne ikke laste bildet.",
     "uploadHint": "Klikk eller dra bilde for å laste opp",
