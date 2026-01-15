@@ -45,9 +45,14 @@ const mountOptions = {
   },
 }
 
-const originalCreateObjectURL = URL.createObjectURL
-const originalRevokeObjectURL = URL.revokeObjectURL
-const originalToBlob = HTMLCanvasElement.prototype.toBlob
+const originalCreateObjectURL =
+  typeof URL.createObjectURL === 'function' ? URL.createObjectURL : undefined
+const originalRevokeObjectURL =
+  typeof URL.revokeObjectURL === 'function' ? URL.revokeObjectURL : undefined
+const originalToBlob =
+  typeof HTMLCanvasElement.prototype.toBlob === 'function'
+    ? HTMLCanvasElement.prototype.toBlob
+    : undefined
 
 let createObjectURLSpy: ReturnType<typeof vi.fn> | null = null
 let revokeObjectURLSpy: ReturnType<typeof vi.fn> | null = null
@@ -128,7 +133,7 @@ type SvgToImageConverterVm = {
 }
 
 const getVm = (wrapper: ReturnType<typeof mount>) =>
-  wrapper.findComponent(SvgToImageConverterView).vm as SvgToImageConverterVm
+  wrapper.findComponent(SvgToImageConverterView).vm as unknown as SvgToImageConverterVm
 
 const createSvgFile = (
   content = '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20"></svg>',
@@ -179,10 +184,11 @@ beforeEach(() => {
         callback(new Blob(['ok'], { type: type || 'image/png' }))
       }) as unknown as ReturnType<typeof vi.fn>
   } else {
-    toBlobSpy = vi.fn()
+    const toBlobSpyFn = vi.fn() as unknown as (...args: unknown[]) => void
+    toBlobSpy = toBlobSpyFn as unknown as ReturnType<typeof vi.fn>
     Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
       value: (callback: BlobCallback, type?: string, quality?: number) => {
-        toBlobSpy?.(callback, type, quality)
+        toBlobSpyFn(callback, type, quality)
         callback(new Blob(['ok'], { type: type || 'image/png' }))
       },
       writable: true,
