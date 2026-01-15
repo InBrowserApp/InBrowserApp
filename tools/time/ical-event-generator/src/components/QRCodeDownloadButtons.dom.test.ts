@@ -17,6 +17,7 @@ describe('QRCodeDownloadButtons', () => {
   const originalRevokeObjectURL = URL.revokeObjectURL
 
   beforeEach(() => {
+    vi.useFakeTimers()
     Object.defineProperty(URL, 'createObjectURL', { value: createObjectURL, writable: true })
     Object.defineProperty(URL, 'revokeObjectURL', { value: revokeObjectURL, writable: true })
 
@@ -36,9 +37,10 @@ describe('QRCodeDownloadButtons', () => {
       writable: true,
     })
     vi.unstubAllGlobals()
+    vi.useRealTimers()
   })
 
-  it('downloads PNG and SVG', async () => {
+  it('builds PNG, JPG, and SVG download links', async () => {
     const wrapper = mount(QRCodeDownloadButtons, {
       props: {
         text: 'hello',
@@ -50,15 +52,8 @@ describe('QRCodeDownloadButtons', () => {
       },
     })
 
-    const buttons = wrapper.findAll('button')
-    expect(buttons).toHaveLength(2)
-    const pngButton = buttons[0]
-    const svgButton = buttons[1]
-    if (!pngButton || !svgButton) {
-      throw new Error('Expected PNG and SVG download buttons')
-    }
-
-    await pngButton.trigger('click')
+    await vi.advanceTimersByTimeAsync(200)
+    await flushPromises()
     await flushPromises()
 
     const mocked = QRCode as unknown as {
@@ -66,12 +61,23 @@ describe('QRCodeDownloadButtons', () => {
       toString: ReturnType<typeof vi.fn>
     }
 
-    expect(mocked.toDataURL).toHaveBeenCalled()
-    expect(createObjectURL).toHaveBeenCalled()
+    expect(mocked.toDataURL).toHaveBeenCalledWith(
+      'hello',
+      expect.objectContaining({ type: 'image/png' }),
+    )
+    expect(mocked.toDataURL).toHaveBeenCalledWith(
+      'hello',
+      expect.objectContaining({ type: 'image/jpeg' }),
+    )
+    expect(mocked.toString).toHaveBeenCalledWith('hello', expect.objectContaining({ type: 'svg' }))
 
-    await svgButton.trigger('click')
-    await flushPromises()
-
-    expect(mocked.toString).toHaveBeenCalled()
+    const links = wrapper.findAll('a')
+    expect(links).toHaveLength(3)
+    expect(links[0].attributes('download')).toBe('event-qr.png')
+    expect(links[1].attributes('download')).toBe('event-qr.jpg')
+    expect(links[2].attributes('download')).toBe('event-qr.svg')
+    links.forEach((link) => {
+      expect(link.attributes('href')).toBe('blob:mock')
+    })
   })
 })

@@ -1,12 +1,36 @@
 <template>
   <n-flex :size="8" wrap>
-    <n-button tertiary @click="downloadPNG">
+    <n-button
+      tertiary
+      tag="a"
+      :href="pngHref"
+      download="event-qr.png"
+      :disabled="!pngHref"
+    >
       <template #icon>
         <n-icon><ImageIcon /></n-icon>
       </template>
       PNG
     </n-button>
-    <n-button tertiary @click="downloadSVG">
+    <n-button
+      tertiary
+      tag="a"
+      :href="jpgHref"
+      download="event-qr.jpg"
+      :disabled="!jpgHref"
+    >
+      <template #icon>
+        <n-icon><ImageIcon /></n-icon>
+      </template>
+      JPG
+    </n-button>
+    <n-button
+      tertiary
+      tag="a"
+      :href="svgHref"
+      download="event-qr.svg"
+      :disabled="!svgHref"
+    >
       <template #icon>
         <n-icon><CodeIcon /></n-icon>
       </template>
@@ -16,8 +40,10 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { NFlex, NButton, NIcon } from 'naive-ui'
 import QRCode from 'qrcode'
+import { computedAsync, useDebounce, useObjectUrl } from '@vueuse/core'
 import { Code16Regular as CodeIcon, Image16Regular as ImageIcon } from '@shared/icons/fluent'
 
 const props = defineProps<{
@@ -29,39 +55,59 @@ const props = defineProps<{
   light: string
 }>()
 
-function downloadBlob(file: File) {
-  const url = URL.createObjectURL(file)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = file.name
-  a.click()
-  URL.revokeObjectURL(url)
-}
+const input = computed(() => ({
+  text: props.text || ' ',
+  errorCorrectionLevel: props.errorCorrectionLevel,
+  width: props.width,
+  margin: props.margin,
+  dark: props.dark,
+  light: props.light,
+}))
+const debouncedInput = useDebounce(input, 150)
 
-async function downloadPNG() {
-  const opts = {
-    errorCorrectionLevel: props.errorCorrectionLevel,
-    margin: props.margin,
-    width: props.width,
-    color: { dark: props.dark, light: props.light },
-  }
-  const dataUrl = (await QRCode.toDataURL(props.text || ' ', {
-    ...opts,
-    type: 'image/png',
-  })) as string
-  const res = await fetch(dataUrl)
-  const blob = await res.blob()
-  downloadBlob(new File([blob], 'event-qr.png', { type: 'image/png' }))
-}
+type QrAssets = {
+  png: Blob
+  jpg: Blob
+  svg: Blob
+} | null
 
-async function downloadSVG() {
+const assets = computedAsync<QrAssets>(async () => {
+  const v = debouncedInput.value
   const opts = {
-    errorCorrectionLevel: props.errorCorrectionLevel,
-    margin: props.margin,
-    width: props.width,
-    color: { dark: props.dark, light: props.light },
+    errorCorrectionLevel: v.errorCorrectionLevel,
+    margin: v.margin,
+    width: v.width,
+    color: { dark: v.dark, light: v.light },
+  } as const
+
+  try {
+    const [pngDataUrl, jpgDataUrl, svgString] = await Promise.all([
+      QRCode.toDataURL(v.text, { ...opts, type: 'image/png' }),
+      QRCode.toDataURL(v.text, { ...opts, type: 'image/jpeg' }),
+      QRCode.toString(v.text, { ...opts, type: 'svg' }),
+    ])
+    const [pngBlob, jpgBlob] = await Promise.all([
+      dataUrlToBlob(String(pngDataUrl)),
+      dataUrlToBlob(String(jpgDataUrl)),
+    ])
+    const svgContent = typeof svgString === 'string' ? svgString : ''
+    const svgBlob = new Blob([svgContent], { type: 'image/svg+xml' })
+    return { png: pngBlob, jpg: jpgBlob, svg: svgBlob }
+  } catch {
+    return null
   }
-  const svg = (await QRCode.toString(props.text || ' ', { ...opts, type: 'svg' })) as string
-  downloadBlob(new File([svg], 'event-qr.svg', { type: 'image/svg+xml' }))
+}, null)
+
+const pngUrl = useObjectUrl(computed(() => assets.value?.png ?? null))
+const jpgUrl = useObjectUrl(computed(() => assets.value?.jpg ?? null))
+const svgUrl = useObjectUrl(computed(() => assets.value?.svg ?? null))
+
+const pngHref = computed(() => pngUrl.value || undefined)
+const jpgHref = computed(() => jpgUrl.value || undefined)
+const svgHref = computed(() => svgUrl.value || undefined)
+
+async function dataUrlToBlob(dataUrl: string) {
+  const response = await fetch(dataUrl)
+  return response.blob()
 }
 </script>

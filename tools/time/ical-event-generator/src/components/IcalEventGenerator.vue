@@ -23,8 +23,8 @@
             <n-input v-model:value="url" />
           </n-form-item-gi>
           <n-form-item-gi :label="t('uid')" :show-feedback="false">
-            <n-flex align="center" :size="8">
-              <n-input v-model:value="uid" readonly style="flex: 1" />
+            <n-flex align="center" :size="8" :wrap="false" style="width: 100%">
+              <n-input v-model:value="uid" readonly style="flex: 1; min-width: 0" />
               <n-button tertiary size="small" @click="regenerateUid">
                 <template #icon>
                   <n-icon :component="ArrowCounterclockwise16Regular" />
@@ -274,22 +274,24 @@
 
       <ToolSectionHeader>{{ t('qr-code') }}</ToolSectionHeader>
       <ToolSection>
-        <QRCodePreview
-          :text="icsContent || ' '"
-          :error-correction-level="qrOptions.errorCorrectionLevel"
-          :width="qrOptions.width"
-          :margin="qrOptions.margin"
-          :dark="qrOptions.dark"
-          :light="qrOptions.light"
-        />
-        <QRCodeDownloadButtons
-          :text="icsContent || ' '"
-          :error-correction-level="qrOptions.errorCorrectionLevel"
-          :width="qrOptions.width"
-          :margin="qrOptions.margin"
-          :dark="qrOptions.dark"
-          :light="qrOptions.light"
-        />
+        <n-flex vertical :size="12">
+          <QRCodePreview
+            :text="icsContent || ' '"
+            :error-correction-level="qrOptions.errorCorrectionLevel"
+            :width="qrOptions.width"
+            :margin="qrOptions.margin"
+            :dark="qrOptions.dark"
+            :light="qrOptions.light"
+          />
+          <QRCodeDownloadButtons
+            :text="icsContent || ' '"
+            :error-correction-level="qrOptions.errorCorrectionLevel"
+            :width="qrOptions.width"
+            :margin="qrOptions.margin"
+            :dark="qrOptions.dark"
+            :light="qrOptions.light"
+          />
+        </n-flex>
       </ToolSection>
     </n-gi>
   </n-grid>
