@@ -71,6 +71,7 @@ import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-form
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
+import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as timeDiffCalculatorRoutes } from '@tools/time-diff-calculator/routes'
 import { routes as durationCalculatorRoutes } from '@tools/duration-calculator/routes'
@@ -181,6 +182,7 @@ export const routes: ToolRoute[] = [
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...unixTimestampConverterRoutes,
+  ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
   ...timeDiffCalculatorRoutes,
   ...durationCalculatorRoutes,

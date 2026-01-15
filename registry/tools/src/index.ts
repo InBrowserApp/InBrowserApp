@@ -73,6 +73,7 @@ import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-str
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as icalEventGeneratorToolInfo } from '@tools/ical-event-generator'
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
 import { toolInfo as durationCalculatorToolInfo } from '@tools/duration-calculator'
@@ -200,6 +201,7 @@ export const tools: ToolInfo[] = [
 
   // Time Tools
   unixTimestampConverterToolInfo,
+  icalEventGeneratorToolInfo,
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
   durationCalculatorToolInfo,
