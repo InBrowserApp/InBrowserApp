@@ -801,6 +801,9 @@ importers:
       '@tools/ssh-key-generator':
         specifier: workspace:*
         version: link:../../tools/network/ssh-key-generator
+      '@tools/stopwatch':
+        specifier: workspace:*
+        version: link:../../tools/time/stopwatch
       '@tools/svg-optimizer':
         specifier: workspace:*
         version: link:../../tools/image/svg-optimizer
