@@ -4,6 +4,7 @@ import { h } from 'vue'
 import { NMessageProvider } from 'naive-ui'
 import KsuidGeneratorView from './KsuidGeneratorView.vue'
 import KsuidGenerator from './components/KsuidGenerator.vue'
+import WhatIsKsuid from './components/WhatIsKsuid.vue'
 
 const TestWrapper = {
   setup() {
@@ -38,5 +39,6 @@ describe('KsuidGeneratorView', () => {
     })
 
     expect(wrapper.findComponent(KsuidGenerator).exists()).toBe(true)
+    expect(wrapper.findComponent(WhatIsKsuid).exists()).toBe(true)
   })
 })

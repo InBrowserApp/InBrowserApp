@@ -54,6 +54,7 @@
     <n-flex vertical :size="12">
       <n-input
         :value="output"
+        class="monospace-output"
         type="textarea"
         readonly
         :autosize="{ minRows: 4, maxRows: 12 }"
@@ -174,6 +175,14 @@ const output = computed(() => generatedIds.value.join('\n'))
 
 watch([count, timestampMode, customUnixSeconds], regenerate, { immediate: true })
 </script>
+
+<style scoped>
+.monospace-output :deep(textarea) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+</style>
 
 <i18n lang="json">
 {
