@@ -50,6 +50,7 @@ import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
+import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -192,6 +193,7 @@ export const tools: ToolInfo[] = [
   jwtDecoderVerifierToolInfo,
   randomPasswordGeneratorToolInfo,
   bip39MnemonicGeneratorToolInfo,
+  ksuidGeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
