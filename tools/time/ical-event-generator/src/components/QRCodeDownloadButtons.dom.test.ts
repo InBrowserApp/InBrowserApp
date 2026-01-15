@@ -73,9 +73,13 @@ describe('QRCodeDownloadButtons', () => {
 
     const links = wrapper.findAll('a')
     expect(links).toHaveLength(3)
-    expect(links[0].attributes('download')).toBe('event-qr.png')
-    expect(links[1].attributes('download')).toBe('event-qr.jpg')
-    expect(links[2].attributes('download')).toBe('event-qr.svg')
+    const [pngLink, jpgLink, svgLink] = links
+    if (!pngLink || !jpgLink || !svgLink) {
+      throw new Error('Expected PNG, JPG, and SVG download links')
+    }
+    expect(pngLink.attributes('download')).toBe('event-qr.png')
+    expect(jpgLink.attributes('download')).toBe('event-qr.jpg')
+    expect(svgLink.attributes('download')).toBe('event-qr.svg')
     links.forEach((link) => {
       expect(link.attributes('href')).toBe('blob:mock')
     })
