@@ -82,7 +82,7 @@ describe('CertificatePublicKeyParser', () => {
   it('parses the default sample and renders results', async () => {
     const wrapper = mountWithI18n()
     await flushPromises()
-    vi.advanceTimersByTime(200)
+    vi.runAllTimers()
     await flushPromises()
 
     expect(wrapper.text()).toContain('Parsed Result')
@@ -92,12 +92,12 @@ describe('CertificatePublicKeyParser', () => {
   it('shows a parse error for invalid input', async () => {
     const wrapper = mountWithI18n()
     await flushPromises()
-    vi.advanceTimersByTime(200)
+    vi.runAllTimers()
     await flushPromises()
 
     const textarea = wrapper.find('textarea')
     await textarea.setValue('not-a-cert')
-    vi.advanceTimersByTime(200)
+    vi.runAllTimers()
     await flushPromises()
 
     expect(wrapper.text()).toContain('Parsing Error')
