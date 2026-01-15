@@ -43,13 +43,14 @@
             </span>
           </div>
         </template>
-        <n-flex vertical :size="8">
+        <n-flex vertical :size="8" style="width: 100%">
           <n-input
             v-model:value="queryText"
             type="textarea"
             :autosize="{ minRows: 4, maxRows: 8 }"
             :placeholder="t('query-placeholder')"
             :status="queryStatus"
+            style="width: 100%"
           />
           <n-select
             v-model:value="selectedExample"
@@ -79,7 +80,18 @@
       <template v-else>
         <n-flex align="center" justify="space-between">
           <n-text>{{ t('result-count', { count: resultCount }) }}</n-text>
-          <CopyToClipboardButton :content="formattedResult" />
+          <n-flex align="center" :size="8">
+            <CopyToClipboardButton :content="formattedResult" />
+            <n-button
+              v-if="downloadUrl"
+              tag="a"
+              text
+              :href="downloadUrl"
+              :download="downloadFilename"
+            >
+              {{ t('download-json') }}
+            </n-button>
+          </n-flex>
         </n-flex>
         <n-card size="small">
           <n-code :code="formattedResult" language="json" :hljs="hljs" word-wrap />
@@ -93,7 +105,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStorage } from '@vueuse/core'
+import { useObjectUrl, useStorage } from '@vueuse/core'
 import { search } from 'jmespath'
 import { fileOpen } from 'browser-fs-access'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
@@ -217,6 +229,17 @@ const formattedResult = computed(() =>
     : '',
 )
 
+const downloadFilename = 'jmespath-results.json'
+
+const downloadFile = computed<File | null>(() => {
+  if (queryState.value.state !== 'ready') return null
+  return new File([formattedResult.value], downloadFilename, {
+    type: 'application/json',
+  })
+})
+
+const downloadUrl = useObjectUrl(downloadFile)
+
 const exampleOptions = computed(() => [
   { label: t('example-last-names'), value: 'people[*].last' },
   { label: t('example-adults'), value: 'people[?age >= `30`].first' },
@@ -285,6 +308,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Load an example expression",
     "format-json": "Format JSON",
     "import-from-file": "Import from file",
+    "download-json": "Download JSON",
     "invalid-json": "Invalid JSON",
     "invalid-query": "Invalid JMESPath",
     "resultsTitle": "Results",
@@ -304,6 +328,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "加载示例表达式",
     "format-json": "格式化 JSON",
     "import-from-file": "从文件导入",
+    "download-json": "下载 JSON",
     "invalid-json": "无效的 JSON",
     "invalid-query": "无效的 JMESPath",
     "resultsTitle": "结果",
@@ -323,6 +348,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "加载示例表达式",
     "format-json": "格式化 JSON",
     "import-from-file": "从文件导入",
+    "download-json": "下载 JSON",
     "invalid-json": "无效的 JSON",
     "invalid-query": "无效的 JMESPath",
     "resultsTitle": "结果",
@@ -342,6 +368,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "載入範例表達式",
     "format-json": "格式化 JSON",
     "import-from-file": "從檔案匯入",
+    "download-json": "下載 JSON",
     "invalid-json": "無效的 JSON",
     "invalid-query": "無效的 JMESPath",
     "resultsTitle": "結果",
@@ -361,6 +388,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "載入範例表達式",
     "format-json": "格式化 JSON",
     "import-from-file": "從檔案匯入",
+    "download-json": "下載 JSON",
     "invalid-json": "無效的 JSON",
     "invalid-query": "無效的 JMESPath",
     "resultsTitle": "結果",
@@ -380,6 +408,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Cargar una expresión de ejemplo",
     "format-json": "Formatear JSON",
     "import-from-file": "Importar desde archivo",
+    "download-json": "Descargar JSON",
     "invalid-json": "JSON inválido",
     "invalid-query": "JMESPath inválido",
     "resultsTitle": "Resultados",
@@ -399,6 +428,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Charger une expression d'exemple",
     "format-json": "Formatter le JSON",
     "import-from-file": "Importer depuis un fichier",
+    "download-json": "Télécharger le JSON",
     "invalid-json": "JSON invalide",
     "invalid-query": "JMESPath invalide",
     "resultsTitle": "Résultats",
@@ -418,6 +448,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Beispielausdruck laden",
     "format-json": "JSON formatieren",
     "import-from-file": "Aus Datei importieren",
+    "download-json": "JSON herunterladen",
     "invalid-json": "Ungültiges JSON",
     "invalid-query": "Ungültiges JMESPath",
     "resultsTitle": "Ergebnisse",
@@ -437,6 +468,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Carica un'espressione di esempio",
     "format-json": "Formatta JSON",
     "import-from-file": "Importa da file",
+    "download-json": "Scarica JSON",
     "invalid-json": "JSON non valido",
     "invalid-query": "JMESPath non valido",
     "resultsTitle": "Risultati",
@@ -456,6 +488,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "例の式を読み込む",
     "format-json": "JSON を整形",
     "import-from-file": "ファイルからインポート",
+    "download-json": "JSON をダウンロード",
     "invalid-json": "無効な JSON",
     "invalid-query": "無効な JMESPath",
     "resultsTitle": "結果",
@@ -475,6 +508,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "예제 표현식 불러오기",
     "format-json": "JSON 서식 지정",
     "import-from-file": "파일에서 가져오기",
+    "download-json": "JSON 다운로드",
     "invalid-json": "유효하지 않은 JSON",
     "invalid-query": "유효하지 않은 JMESPath",
     "resultsTitle": "결과",
@@ -494,6 +528,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Загрузить пример выражения",
     "format-json": "Форматировать JSON",
     "import-from-file": "Импорт из файла",
+    "download-json": "Скачать JSON",
     "invalid-json": "Недопустимый JSON",
     "invalid-query": "Недопустимый JMESPath",
     "resultsTitle": "Результаты",
@@ -513,6 +548,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Carregar uma expressão de exemplo",
     "format-json": "Formatar JSON",
     "import-from-file": "Importar de arquivo",
+    "download-json": "Baixar JSON",
     "invalid-json": "JSON inválido",
     "invalid-query": "JMESPath inválido",
     "resultsTitle": "Resultados",
@@ -532,6 +568,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "تحميل تعبير مثال",
     "format-json": "تنسيق JSON",
     "import-from-file": "استيراد من ملف",
+    "download-json": "تنزيل JSON",
     "invalid-json": "JSON غير صالح",
     "invalid-query": "JMESPath غير صالح",
     "resultsTitle": "النتائج",
@@ -551,6 +588,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "उदाहरण अभिव्यक्ति लोड करें",
     "format-json": "JSON प्रारूपित करें",
     "import-from-file": "फ़ाइल से आयात करें",
+    "download-json": "JSON डाउनलोड करें",
     "invalid-json": "अमान्य JSON",
     "invalid-query": "अमान्य JMESPath",
     "resultsTitle": "परिणाम",
@@ -570,6 +608,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Örnek ifade yükle",
     "format-json": "JSON'u biçimlendir",
     "import-from-file": "Dosyadan içe aktar",
+    "download-json": "JSON indir",
     "invalid-json": "Geçersiz JSON",
     "invalid-query": "Geçersiz JMESPath",
     "resultsTitle": "Sonuçlar",
@@ -589,6 +628,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Voorbeeldexpressie laden",
     "format-json": "JSON opmaken",
     "import-from-file": "Importeren uit bestand",
+    "download-json": "JSON downloaden",
     "invalid-json": "Ongeldige JSON",
     "invalid-query": "Ongeldige JMESPath",
     "resultsTitle": "Resultaten",
@@ -608,6 +648,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Ladda ett exempeluttryck",
     "format-json": "Formatera JSON",
     "import-from-file": "Importera från fil",
+    "download-json": "Ladda ner JSON",
     "invalid-json": "Ogiltig JSON",
     "invalid-query": "Ogiltig JMESPath",
     "resultsTitle": "Resultat",
@@ -627,6 +668,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Wczytaj przykładowe wyrażenie",
     "format-json": "Formatuj JSON",
     "import-from-file": "Importuj z pliku",
+    "download-json": "Pobierz JSON",
     "invalid-json": "Nieprawidłowy JSON",
     "invalid-query": "Nieprawidłowy JMESPath",
     "resultsTitle": "Wyniki",
@@ -646,6 +688,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Tải biểu thức mẫu",
     "format-json": "Định dạng JSON",
     "import-from-file": "Nhập từ tệp",
+    "download-json": "Tải JSON",
     "invalid-json": "JSON không hợp lệ",
     "invalid-query": "JMESPath không hợp lệ",
     "resultsTitle": "Kết quả",
@@ -665,6 +708,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "โหลดนิพจน์ตัวอย่าง",
     "format-json": "จัดรูปแบบ JSON",
     "import-from-file": "นำเข้าจากไฟล์",
+    "download-json": "ดาวน์โหลด JSON",
     "invalid-json": "JSON ไม่ถูกต้อง",
     "invalid-query": "JMESPath ไม่ถูกต้อง",
     "resultsTitle": "ผลลัพธ์",
@@ -684,6 +728,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Muat ekspresi contoh",
     "format-json": "Format JSON",
     "import-from-file": "Impor dari file",
+    "download-json": "Unduh JSON",
     "invalid-json": "JSON tidak valid",
     "invalid-query": "JMESPath tidak valid",
     "resultsTitle": "Hasil",
@@ -703,6 +748,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "טען ביטוי לדוגמה",
     "format-json": "פרמט JSON",
     "import-from-file": "ייבוא מקובץ",
+    "download-json": "הורד JSON",
     "invalid-json": "JSON לא תקין",
     "invalid-query": "JMESPath לא תקין",
     "resultsTitle": "תוצאות",
@@ -722,6 +768,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Muat ungkapan contoh",
     "format-json": "Format JSON",
     "import-from-file": "Import dari fail",
+    "download-json": "Muat turun JSON",
     "invalid-json": "JSON tidak sah",
     "invalid-query": "JMESPath tidak sah",
     "resultsTitle": "Hasil",
@@ -741,6 +788,7 @@ function parseJson(input: string): { value?: unknown; error?: string } {
     "examples-placeholder": "Last inn eksempeluttrykk",
     "format-json": "Formater JSON",
     "import-from-file": "Importer fra fil",
+    "download-json": "Last ned JSON",
     "invalid-json": "Ugyldig JSON",
     "invalid-query": "Ugyldig JMESPath",
     "resultsTitle": "Resultater",
