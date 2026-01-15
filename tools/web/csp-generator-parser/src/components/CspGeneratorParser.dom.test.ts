@@ -171,4 +171,22 @@ describe('CspGeneratorParser', () => {
     const builder = wrapper.findComponent(BuilderStub)
     expect(builder.props('generatedPolicy')).toBe("script-src 'self'")
   })
+
+  it('recovers from invalid stored directives when adding', async () => {
+    localStorage.setItem('tools:csp-generator-parser:builder', '"invalid"')
+
+    const wrapper = mount(CspGeneratorParser, {
+      global: {
+        stubs: {
+          CspParserSection: ParserStub,
+          CspBuilderSection: BuilderStub,
+        },
+      },
+    })
+
+    await wrapper.get('[data-test="add"]').trigger('click')
+
+    const builder = wrapper.findComponent(BuilderStub)
+    expect(builder.props('directives')).toHaveLength(1)
+  })
 })

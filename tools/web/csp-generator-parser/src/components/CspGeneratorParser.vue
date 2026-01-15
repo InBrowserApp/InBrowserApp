@@ -11,7 +11,7 @@
   />
 
   <CspBuilderSection
-    :directives="builderDirectives"
+    :directives="safeBuilderDirectives"
     :generated-policy="generatedPolicy"
     :has-output="hasOutput"
     :labels="labels"
@@ -53,8 +53,12 @@ const parserStatus = computed<FormValidationStatus | undefined>(() =>
   parserError.value ? 'error' : undefined,
 )
 
+const safeBuilderDirectives = computed<BuilderDirective[]>(() =>
+  Array.isArray(builderDirectives.value) ? builderDirectives.value : [],
+)
+
 const normalizedBuilder = computed(() =>
-  builderDirectives.value
+  safeBuilderDirectives.value
     .map((directive) => ({
       name: directive.name.trim(),
       values: textToValues(directive.valuesText),
@@ -87,30 +91,30 @@ const labels = computed(() => ({
 }))
 
 const addDirective = () => {
-  builderDirectives.value = [...builderDirectives.value, createDirective()]
+  builderDirectives.value = [...safeBuilderDirectives.value, createDirective()]
 }
 
 const removeDirective = (id: string) => {
-  const next = builderDirectives.value.filter((directive) => directive.id !== id)
+  const next = safeBuilderDirectives.value.filter((directive) => directive.id !== id)
   builderDirectives.value = next.length === 0 ? [createDirective()] : next
 }
 
 const updateDirectiveName = (id: string, value: string) => {
-  const index = builderDirectives.value.findIndex((directive) => directive.id === id)
+  const index = safeBuilderDirectives.value.findIndex((directive) => directive.id === id)
   if (index === -1) return
 
-  const current = builderDirectives.value[index]!
-  const next = [...builderDirectives.value]
+  const current = safeBuilderDirectives.value[index]!
+  const next = [...safeBuilderDirectives.value]
   next[index] = { ...current, name: value }
   builderDirectives.value = next
 }
 
 const updateDirectiveValues = (id: string, value: string) => {
-  const index = builderDirectives.value.findIndex((directive) => directive.id === id)
+  const index = safeBuilderDirectives.value.findIndex((directive) => directive.id === id)
   if (index === -1) return
 
-  const current = builderDirectives.value[index]!
-  const next = [...builderDirectives.value]
+  const current = safeBuilderDirectives.value[index]!
+  const next = [...safeBuilderDirectives.value]
   next[index] = { ...current, valuesText: value }
   builderDirectives.value = next
 }
