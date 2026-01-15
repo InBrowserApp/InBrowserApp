@@ -372,9 +372,16 @@ function handleCanvasClick(event: MouseEvent) {
 function checkDropItems(items: DataTransferItemList) {
   for (const item of Array.from(items)) {
     if (item.kind !== 'file') continue
-    if (isImageFile(item.getAsFile())) return true
+    const file = item.getAsFile()
+    if (!file) return true
+    if (isImageFile(file)) return true
   }
   return false
+}
+
+function isFileDragEvent(event?: DragEvent | null) {
+  if (!event?.dataTransfer?.types) return false
+  return Array.from(event.dataTransfer.types).includes('Files')
 }
 
 const { isOverDropZone } = useDropZone(dropZoneRef, {
@@ -382,11 +389,13 @@ const { isOverDropZone } = useDropZone(dropZoneRef, {
     isDragging.value = false
     handleFilePick(pickImageFile(files))
   },
-  onEnter(files) {
-    isDragging.value = Boolean(pickImageFile(files))
+  onEnter(_, event) {
+    isDragging.value = isFileDragEvent(event)
   },
-  onOver(files) {
-    isDragging.value = Boolean(pickImageFile(files))
+  onOver(_, event) {
+    if (!isDragging.value) {
+      isDragging.value = isFileDragEvent(event)
+    }
   },
   onLeave() {
     isDragging.value = false
