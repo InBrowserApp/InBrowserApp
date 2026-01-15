@@ -90,12 +90,25 @@
       </n-grid>
     </n-flex>
   </ToolSection>
+
+  <Teleport to="body">
+    <div class="drop-overlay" :class="{ 'drop-overlay--active': dropOverlayActive }">
+      <div class="drop-panel">
+        <n-icon size="48" :depth="1">
+          <ImagePickIcon />
+        </n-icon>
+        <div class="drop-title">{{ t('imageTitle') }}</div>
+        <div class="drop-subtitle">{{ t('uploadHint') }}</div>
+        <div class="drop-meta">{{ t('uploadFormats') }}</div>
+      </div>
+    </div>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useElementSize, useStorage } from '@vueuse/core'
+import { useDropZone, useElementSize, useStorage } from '@vueuse/core'
 import { NAlert, NButton, NFlex, NGrid, NGi, NIcon, NText, NSwitch } from 'naive-ui'
 import {
   Eyedropper24Filled as EyedropperIcon,
@@ -140,6 +153,8 @@ const pickedColor = useStorage<RGBA>('tools:color-picker:rgba', {
 })
 const pickedSource = ref<'screen' | 'image' | null>(null)
 
+const dropZoneRef = ref<Document | null>(null)
+const isDragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
 const imageInfo = ref<{ width: number; height: number } | null>(null)
 const hasImage = ref(false)
@@ -262,6 +277,31 @@ function loadImage(file: File) {
   image.src = url
 }
 
+function isImageFile(file: File | null): boolean {
+  if (!file) return false
+  if (file.type.startsWith('image/')) return true
+  const name = file.name.toLowerCase()
+  return [
+    '.png',
+    '.jpg',
+    '.jpeg',
+    '.gif',
+    '.webp',
+    '.svg',
+    '.bmp',
+    '.tif',
+    '.tiff',
+    '.avif',
+    '.heic',
+    '.heif',
+  ].some((ext) => name.endsWith(ext))
+}
+
+function pickImageFile(files: File[] | null): File | null {
+  if (!files?.length) return null
+  return files.find((file) => isImageFile(file)) ?? null
+}
+
 async function handleScreenPick() {
   if (!eyeDropperConstructor) return
 
@@ -283,7 +323,10 @@ function handleImagePick() {
 }
 
 function handleFilePick(file: File | null) {
-  if (!file) return false
+  if (!file || !isImageFile(file)) {
+    imageError.value = t('imageError')
+    return false
+  }
   loadImage(file)
   return true
 }
@@ -326,10 +369,43 @@ function handleCanvasClick(event: MouseEvent) {
   pickedSource.value = 'image'
 }
 
+function checkDropItems(items: DataTransferItemList) {
+  for (const item of Array.from(items)) {
+    if (item.kind !== 'file') continue
+    if (isImageFile(item.getAsFile())) return true
+  }
+  return false
+}
+
+const { isOverDropZone } = useDropZone(dropZoneRef, {
+  onDrop(files) {
+    isDragging.value = false
+    handleFilePick(pickImageFile(files))
+  },
+  onEnter(files) {
+    isDragging.value = Boolean(pickImageFile(files))
+  },
+  onOver(files) {
+    isDragging.value = Boolean(pickImageFile(files))
+  },
+  onLeave() {
+    isDragging.value = false
+  },
+  checkValidity: checkDropItems,
+  multiple: false,
+  preventDefaultForUnhandled: true,
+})
+
+const dropOverlayActive = computed(() => isDragging.value || isOverDropZone.value)
+
 defineExpose({
   handleFilePick,
   handleCanvasClick,
   handleScreenPick,
+})
+
+onMounted(() => {
+  dropZoneRef.value = document
 })
 
 onBeforeUnmount(() => {
@@ -346,6 +422,12 @@ onBeforeUnmount(() => {
   max-width: 520px;
 }
 
+.image-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .section-title {
   font-weight: 600;
   font-size: 16px;
@@ -358,6 +440,61 @@ onBeforeUnmount(() => {
 
 .canvas-wrapper {
   margin-top: 8px;
+}
+
+.drop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top, rgba(248, 250, 252, 0.35), rgba(248, 250, 252, 0) 55%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.35), rgba(148, 163, 184, 0.25));
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.drop-overlay--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.drop-panel {
+  width: min(420px, 100%);
+  padding: 24px 28px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px dashed var(--n-border-color);
+  background: var(--n-color);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+}
+
+.drop-title {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.drop-subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--n-text-color-3);
+}
+
+.drop-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--n-text-color-3);
 }
 
 .file-input {
