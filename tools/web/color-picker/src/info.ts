@@ -1,4 +1,4 @@
-export { PaintBrush24Regular as icon } from '@shared/icons/fluent'
+export { Eyedropper24Filled as icon } from '@shared/icons/fluent'
 
 export const toolID = 'color-picker'
 export const path = '/tools/color-picker'

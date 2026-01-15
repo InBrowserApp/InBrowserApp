@@ -7,6 +7,11 @@
           <div class="section-subtitle">{{ t('screenDescription') }}</div>
         </div>
         <n-button type="primary" :disabled="!isEyeDropperSupported" @click="handleScreenPick">
+          <template #icon>
+            <n-icon>
+              <EyedropperIcon />
+            </n-icon>
+          </template>
           {{ t('screenButton') }}
         </n-button>
       </n-flex>
@@ -105,7 +110,10 @@ import {
   NUploadDragger,
   NSwitch,
 } from 'naive-ui'
-import { Image24Regular as ImageIcon } from '@shared/icons/fluent'
+import {
+  Eyedropper24Filled as EyedropperIcon,
+  Image24Regular as ImageIcon,
+} from '@shared/icons/fluent'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { RGBA } from '../types'
