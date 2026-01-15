@@ -455,8 +455,8 @@ function parseViewBox(value: string | null) {
 
   if (parts.length < 4 || parts.some((part) => Number.isNaN(part))) return null
 
-  const width = parts[2]
-  const height = parts[3]
+  const width = parts[2] as number
+  const height = parts[3] as number
 
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return null
 

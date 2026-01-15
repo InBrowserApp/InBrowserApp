@@ -70,7 +70,62 @@ class MockImage {
 
 const mountWrapper = () => mount(Wrapper, mountOptions)
 
-type SvgToImageConverterVm = InstanceType<typeof SvgToImageConverterView>
+type OutputFormat = 'png' | 'jpeg' | 'webp'
+
+type SvgDimensions = { width: number; height: number }
+
+type UploadFileLike = { name: string; type: string; text: () => Promise<unknown> }
+
+type UploadPayload = {
+  file: { file?: File | UploadFileLike }
+  fileList: Array<{ file?: File | UploadFileLike }>
+}
+
+type SvgToImageConverterVm = {
+  parseSvgLength: (value: string | null) => number | null
+  parseViewBox: (value: string | null) => SvgDimensions | null
+  getSvgDimensions: (value: string) => SvgDimensions
+  buildSvgDataUrl: (value: string) => string
+  handleBeforeUpload: (payload: UploadPayload) => Promise<boolean>
+  handleClearFile: () => void
+  setOriginalDimensions: (dimensions: SvgDimensions) => void
+  handleWidthUpdate: (value: number | null) => void
+  handleHeightUpdate: (value: number | null) => void
+  handleKeepAspectToggle: (value: boolean) => void
+  resetToOriginal: () => void
+  handleFormatUpdate: (value: OutputFormat) => void
+  handleQualityUpdate: (value: number) => void
+  handleBackgroundToggle: (value: boolean) => void
+  handleBackgroundChange: (value: string) => void
+  resolveOutputSize: () => SvgDimensions
+  convertSvg: () => Promise<void>
+  downloadOutput: () => void
+  loadSvgImage: (value: string) => Promise<HTMLImageElement>
+  formatOptions: Array<{ label: string; value: OutputFormat }>
+  aspectRatio: number
+  outputExtension: string
+  outputMimeType: string
+  outputFileName: string
+  originalSizeLabel: string
+  outputSizeLabel: string
+  originalDimensionsLabel: string
+  outputDimensionsLabel: string
+  showQuality: boolean
+  originalFile: File | null
+  svgText: string
+  svgDimensions: SvgDimensions | null
+  outputBlob: Blob | null
+  outputDimensions: SvgDimensions | null
+  error: string
+  format: OutputFormat
+  width: number
+  height: number
+  keepAspect: boolean
+  useBackground: boolean
+  backgroundColor: string
+  quality: number
+  outputPreviewUrl: string
+}
 
 const getVm = (wrapper: ReturnType<typeof mount>) =>
   wrapper.findComponent(SvgToImageConverterView).vm as SvgToImageConverterVm
@@ -401,7 +456,8 @@ describe('SvgToImageConverterView', () => {
     await vm.convertSvg()
     expect(contextMock?.fillRect).toHaveBeenCalled()
 
-    const lastToBlobCall = toBlobSpy?.mock.calls.at(-1)
+    const toBlobCalls = toBlobSpy?.mock.calls ?? []
+    const lastToBlobCall = toBlobCalls[toBlobCalls.length - 1]
     expect(lastToBlobCall?.[1]).toBe('image/jpeg')
     expect(lastToBlobCall?.[2]).toBeCloseTo(0.92, 2)
   })
