@@ -16,6 +16,7 @@ import { routes as ipv6ToMacRoutes } from '@tools/ipv6-to-mac/routes'
 import { routes as currentNetworkTimeRoutes } from '@tools/current-network-time/routes'
 import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
+import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
@@ -126,6 +127,7 @@ export const routes: ToolRoute[] = [
   ...pngOptimizerRoutes,
   ...svgOptimizerRoutes,
   ...exifViewerRoutes,
+  ...imageMetadataCleanerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
   ...imageToolsRoutes,
