@@ -66,6 +66,8 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as jmespathTesterToolInfo } from '@tools/jmespath-tester'
+import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
@@ -153,6 +155,8 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  jmespathTesterToolInfo,
+  jsonpathTesterToolInfo,
   openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
 
