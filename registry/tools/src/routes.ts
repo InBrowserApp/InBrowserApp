@@ -78,6 +78,7 @@ import { routes as businessDaysCalculatorRoutes } from '@tools/business-days-cal
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
 import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-generator/routes'
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
+import { routes as colorPickerRoutes } from '@tools/color-picker/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
@@ -188,6 +189,7 @@ export const routes: ToolRoute[] = [
   ...cronExpressionParserRoutes,
   ...cronExpressionGeneratorRoutes,
   ...textDiffRoutes,
+  ...colorPickerRoutes,
   ...colorConverterRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,

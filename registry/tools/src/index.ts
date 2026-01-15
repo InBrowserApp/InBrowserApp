@@ -80,6 +80,7 @@ import { toolInfo as businessDaysCalculatorToolInfo } from '@tools/business-days
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-expression-generator'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
+import { toolInfo as colorPickerToolInfo } from '@tools/color-picker'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
@@ -211,6 +212,7 @@ export const tools: ToolInfo[] = [
   textDiffToolInfo,
 
   // Web Tools (Color)
+  colorPickerToolInfo,
   colorConverterToolInfo,
   htmlColorNamesToolInfo,
 
