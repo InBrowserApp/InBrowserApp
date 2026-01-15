@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
+import type { DataTableInst } from 'naive-ui'
 import StopwatchTimer from './StopwatchTimer.vue'
 
 const mountTimer = () => mount(StopwatchTimer)
@@ -21,6 +22,11 @@ const getTimerVm = (wrapper: ReturnType<typeof mount>) =>
     pause: () => void
     reset: () => void
     recordLap: () => void
+  }
+
+const getTableInst = (wrapper: ReturnType<typeof mount>) =>
+  wrapper.vm as unknown as {
+    tableRef: DataTableInst | null
   }
 
 describe('StopwatchTimer', () => {
@@ -124,7 +130,6 @@ describe('StopwatchTimer', () => {
     const wrapper = mountTimer()
     const start = wrapper.get('[data-testid="start"]')
     const lap = wrapper.get('[data-testid="lap"]')
-    const sort = wrapper.get('[data-testid="sort-laps"]')
     const clear = wrapper.get('[data-testid="clear-laps"]')
 
     await start.trigger('click')
@@ -148,19 +153,21 @@ describe('StopwatchTimer', () => {
     expect(rows.length).toBe(3)
     expect(rows[0]!.text()).toContain('#1')
 
-    await sort.trigger('click')
+    const table = getTableInst(wrapper).tableRef
+    expect(table).not.toBeNull()
+    table?.sort('lapTime', 'ascend')
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')
     expect(rows[0]!.text()).toContain('#2')
 
-    await sort.trigger('click')
+    table?.sort('lapTime', 'descend')
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')
     expect(rows[0]!.text()).toContain('#3')
 
-    await sort.trigger('click')
+    table?.clearSorter()
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')

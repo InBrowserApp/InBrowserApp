@@ -47,42 +47,32 @@
           <n-button
             text
             size="small"
-            :disabled="!canSortLaps"
-            :type="sortMode === 'chronological' ? 'default' : 'primary'"
-            @click="toggleSort"
-            data-testid="sort-laps"
-          >
-            <template #icon>
-              <n-icon :component="ArrowSort16Regular" />
-            </template>
-            {{ t('sort') }}
-          </n-button>
-          <n-button
-            text
-            size="small"
             type="error"
             :disabled="!canClearLaps"
             @click="clearLaps"
             data-testid="clear-laps"
           >
+            <template #icon>
+              <n-icon :component="Delete16Regular" />
+            </template>
             {{ t('clear') }}
           </n-button>
         </span>
       </span>
     </ToolSectionHeader>
     <ToolSection>
-      <div v-if="lapRows.length" class="laps-table" data-testid="laps-list">
-        <div class="laps-row laps-header">
-          <n-text depth="3">#</n-text>
-          <n-text depth="3">{{ t('lap') }}</n-text>
-          <n-text depth="3">{{ t('total') }}</n-text>
-        </div>
-        <div v-for="row in lapRows" :key="row.index" class="laps-row" data-testid="lap-row">
-          <n-text>#{{ row.index }}</n-text>
-          <n-text>{{ formatStopwatch(row.lapTime) }}</n-text>
-          <n-text>{{ formatStopwatch(row.totalTime) }}</n-text>
-        </div>
-      </div>
+      <n-data-table
+        v-if="lapRows.length"
+        ref="tableRef"
+        :columns="columns"
+        :data="lapRows"
+        :bordered="false"
+        size="small"
+        :pagination="false"
+        :row-key="rowKey"
+        :row-props="rowProps"
+        data-testid="laps-list"
+      />
       <n-text v-else depth="3" data-testid="no-laps">
         {{ t('no-laps') }}
       </n-text>
@@ -92,13 +82,14 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { NButton, NFlex, NIcon, NText } from 'naive-ui'
+import type { DataTableColumns, DataTableInst } from 'naive-ui'
+import { NButton, NDataTable, NFlex, NIcon, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useIntervalFn, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
   ArrowCounterclockwise16Regular,
-  ArrowSort16Regular,
+  Delete16Regular,
   Flag16Regular,
   Pause16Regular,
   Play16Regular,
@@ -112,6 +103,7 @@ const startTime = useStorage('tools:stopwatch:start-time', 0)
 const accumulated = useStorage('tools:stopwatch:accumulated', 0)
 const now = ref(Date.now())
 const laps = useStorage<number[]>('tools:stopwatch:laps', [])
+const tableRef = ref<DataTableInst | null>(null)
 
 const { pause: pauseTicker, resume: resumeTicker } = useIntervalFn(
   () => {
@@ -130,13 +122,22 @@ const formattedElapsed = computed(() => formatStopwatch(elapsedMs.value))
 const hasElapsed = computed(() => elapsedMs.value > 0)
 const canLap = computed(() => running.value && elapsedMs.value > 0)
 const canReset = computed(() => !running.value && (elapsedMs.value > 0 || laps.value.length > 0))
+const canClearLaps = computed(() => laps.value.length > 0)
 
-const lapRowsBase = computed(() => {
+type LapRow = {
+  key: number
+  index: number
+  lapTime: number
+  totalTime: number
+}
+
+const lapRows = computed<LapRow[]>(() => {
   let previousTotal = 0
   return laps.value.map((totalTime, index) => {
     const lapTime = totalTime - previousTotal
     previousTotal = totalTime
     return {
+      key: index + 1,
       index: index + 1,
       lapTime,
       totalTime,
@@ -144,16 +145,30 @@ const lapRowsBase = computed(() => {
   })
 })
 
-const sortMode = ref<'chronological' | 'lap-asc' | 'lap-desc'>('chronological')
-const canSortLaps = computed(() => lapRowsBase.value.length > 1)
-const canClearLaps = computed(() => laps.value.length > 0)
+const columns = computed<DataTableColumns<LapRow>>(() => [
+  {
+    title: '#',
+    key: 'index',
+    width: 64,
+    sorter: (row1, row2) => row1.index - row2.index,
+    render: (row) => `#${row.index}`,
+  },
+  {
+    title: t('lap'),
+    key: 'lapTime',
+    sorter: (row1, row2) => row1.lapTime - row2.lapTime,
+    render: (row) => formatStopwatch(row.lapTime),
+  },
+  {
+    title: t('total'),
+    key: 'totalTime',
+    sorter: (row1, row2) => row1.totalTime - row2.totalTime,
+    render: (row) => formatStopwatch(row.totalTime),
+  },
+])
 
-const lapRows = computed(() => {
-  if (sortMode.value === 'chronological') return lapRowsBase.value
-  const sorted = [...lapRowsBase.value].sort((a, b) => a.lapTime - b.lapTime)
-  if (sortMode.value === 'lap-desc') sorted.reverse()
-  return sorted
-})
+const rowKey = (row: LapRow) => row.key
+const rowProps = () => ({ 'data-testid': 'lap-row' })
 
 const captureNow = () => {
   now.value = Date.now()
@@ -194,16 +209,6 @@ const reset = () => {
   captureNow()
 }
 
-const toggleSort = () => {
-  if (!canSortLaps.value) return
-  sortMode.value =
-    sortMode.value === 'chronological'
-      ? 'lap-asc'
-      : sortMode.value === 'lap-asc'
-        ? 'lap-desc'
-        : 'chronological'
-}
-
 const clearLaps = () => {
   if (!canClearLaps.value) return
   laps.value = []
@@ -232,11 +237,6 @@ const recordLap = () => {
   font-variant-numeric: tabular-nums;
 }
 
-.laps-table {
-  display: grid;
-  gap: 8px;
-}
-
 .laps-heading {
   display: inline-flex;
   align-items: center;
@@ -251,24 +251,6 @@ const recordLap = () => {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-}
-
-.laps-row {
-  display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr);
-  gap: 8px;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--n-border-color, rgba(0, 0, 0, 0.08));
-}
-
-.laps-row:last-child {
-  border-bottom: none;
-}
-
-.laps-header {
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--n-border-color, rgba(0, 0, 0, 0.12));
 }
 </style>
 
