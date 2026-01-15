@@ -234,13 +234,7 @@ function readUint32BE(bytes: Uint8Array, offset: number): number {
   const b1 = bytes[offset + 1] ?? 0
   const b2 = bytes[offset + 2] ?? 0
   const b3 = bytes[offset + 3] ?? 0
-  return (
-    ((b0 << 24) |
-      (b1 << 16) |
-      (b2 << 8) |
-      b3) >>>
-    0
-  )
+  return ((b0 << 24) | (b1 << 16) | (b2 << 8) | b3) >>> 0
 }
 
 function readUint32LE(bytes: Uint8Array, offset: number): number {
@@ -248,13 +242,7 @@ function readUint32LE(bytes: Uint8Array, offset: number): number {
   const b1 = bytes[offset + 1] ?? 0
   const b2 = bytes[offset + 2] ?? 0
   const b3 = bytes[offset + 3] ?? 0
-  return (
-    (b0 |
-      (b1 << 8) |
-      (b2 << 16) |
-      (b3 << 24)) >>>
-    0
-  )
+  return (b0 | (b1 << 8) | (b2 << 16) | (b3 << 24)) >>> 0
 }
 
 function writeUint32LE(bytes: Uint8Array, offset: number, value: number): void {
