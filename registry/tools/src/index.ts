@@ -72,6 +72,7 @@ import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-vali
 import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
+import { toolInfo as stopwatchToolInfo } from '@tools/stopwatch'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
@@ -199,6 +200,7 @@ export const tools: ToolInfo[] = [
   romanNumeralConverterToolInfo,
 
   // Time Tools
+  stopwatchToolInfo,
   unixTimestampConverterToolInfo,
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
