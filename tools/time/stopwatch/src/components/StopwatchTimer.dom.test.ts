@@ -146,25 +146,25 @@ describe('StopwatchTimer', () => {
 
     let rows = wrapper.findAll('[data-testid="lap-row"]')
     expect(rows.length).toBe(3)
-    expect(rows[0].text()).toContain('#1')
+    expect(rows[0]!.text()).toContain('#1')
 
     await sort.trigger('click')
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')
-    expect(rows[0].text()).toContain('#2')
+    expect(rows[0]!.text()).toContain('#2')
 
     await sort.trigger('click')
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')
-    expect(rows[0].text()).toContain('#3')
+    expect(rows[0]!.text()).toContain('#3')
 
     await sort.trigger('click')
     await nextTick()
 
     rows = wrapper.findAll('[data-testid="lap-row"]')
-    expect(rows[0].text()).toContain('#1')
+    expect(rows[0]!.text()).toContain('#1')
 
     await clear.trigger('click')
     await nextTick()
