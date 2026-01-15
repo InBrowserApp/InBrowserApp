@@ -12,17 +12,29 @@
     </ToolSection>
 
     <ToolSection>
-      <n-flex :size="12" wrap>
+      <n-flex :size="12" wrap justify="center">
         <n-button type="primary" :disabled="running" @click="start" data-testid="start">
+          <template #icon>
+            <n-icon :component="Play16Regular" />
+          </template>
           {{ hasElapsed ? t('resume') : t('start') }}
         </n-button>
         <n-button :disabled="!running" @click="pause" data-testid="pause">
+          <template #icon>
+            <n-icon :component="Pause16Regular" />
+          </template>
           {{ t('pause') }}
         </n-button>
         <n-button :disabled="!canLap" @click="recordLap" data-testid="lap">
+          <template #icon>
+            <n-icon :component="Flag16Regular" />
+          </template>
           {{ t('lap') }}
         </n-button>
         <n-button :disabled="!canReset" @click="reset" data-testid="reset">
+          <template #icon>
+            <n-icon :component="ArrowCounterclockwise16Regular" />
+          </template>
           {{ t('reset') }}
         </n-button>
       </n-flex>
@@ -51,10 +63,16 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { NButton, NFlex, NText } from 'naive-ui'
+import { NButton, NFlex, NIcon, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useIntervalFn } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
+import {
+  ArrowCounterclockwise16Regular,
+  Flag16Regular,
+  Pause16Regular,
+  Play16Regular,
+} from '@shared/icons/fluent'
 import { formatStopwatch } from '../utils/format'
 
 const { t } = useI18n()
