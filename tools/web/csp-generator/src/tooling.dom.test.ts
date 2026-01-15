@@ -3,10 +3,10 @@ import * as toolInfo from './info'
 import { routes } from './routes'
 import { toolInfo as indexToolInfo, toolID as indexToolID } from './index'
 
-describe('csp generator parser tool metadata', () => {
+describe('csp generator tool metadata', () => {
   it('exports tool info metadata', () => {
-    expect(toolInfo.toolID).toBe('csp-generator-parser')
-    expect(toolInfo.path).toBe('/tools/csp-generator-parser')
+    expect(toolInfo.toolID).toBe('csp-generator')
+    expect(toolInfo.path).toBe('/tools/csp-generator')
     expect(toolInfo.features).toContain('offline')
     expect(toolInfo.meta.en.name).toContain('CSP')
     expect(Object.keys(toolInfo.meta)).toHaveLength(25)

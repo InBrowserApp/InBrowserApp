@@ -1,35 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
-import CspGeneratorParser from './CspGeneratorParser.vue'
-
-const ParserStub = defineComponent({
-  name: 'CspParserSection',
-  props: ['input', 'directives', 'canApplyParsed'],
-  emits: ['update:input', 'apply-parsed'],
-  setup(props, { emit }) {
-    return () =>
-      h('div', [
-        h(
-          'button',
-          {
-            'data-test': 'set-input',
-            onClick: () => emit('update:input', "script-src 'self'"),
-          },
-          'set input',
-        ),
-        h(
-          'button',
-          {
-            'data-test': 'apply',
-            disabled: !props.canApplyParsed,
-            onClick: () => emit('apply-parsed'),
-          },
-          'apply',
-        ),
-      ])
-  },
-})
+import type { BuilderDirective } from './CspBuilderSection.vue'
+import CspGenerator from './CspGenerator.vue'
 
 const BuilderStub = defineComponent({
   name: 'CspBuilderSection',
@@ -51,7 +24,7 @@ const BuilderStub = defineComponent({
           'button',
           {
             'data-test': 'remove',
-            onClick: () => emit('remove', props.directives?.[0]?.id ?? 'missing'),
+            onClick: () => emit('remove', (props.directives as BuilderDirective[])?.[0]?.id),
           },
           'remove',
         ),
@@ -59,7 +32,8 @@ const BuilderStub = defineComponent({
           'button',
           {
             'data-test': 'update-name',
-            onClick: () => emit('update-name', props.directives?.[0]?.id ?? 'missing', 'img-src'),
+            onClick: () =>
+              emit('update-name', (props.directives as BuilderDirective[])?.[0]?.id, 'img-src'),
           },
           'update',
         ),
@@ -78,7 +52,7 @@ const BuilderStub = defineComponent({
             onClick: () =>
               emit(
                 'update-values',
-                props.directives?.[0]?.id ?? 'missing',
+                (props.directives as BuilderDirective[])?.[0]?.id,
                 "'self' https://images.example.com",
               ),
           },
@@ -96,16 +70,15 @@ const BuilderStub = defineComponent({
   },
 })
 
-describe('CspGeneratorParser', () => {
+describe('CspGenerator', () => {
   beforeEach(() => {
     localStorage.clear()
   })
 
   it('generates output from the default directive and supports updates', async () => {
-    const wrapper = mount(CspGeneratorParser, {
+    const wrapper = mount(CspGenerator, {
       global: {
         stubs: {
-          CspParserSection: ParserStub,
           CspBuilderSection: BuilderStub,
         },
       },
@@ -138,55 +111,40 @@ describe('CspGeneratorParser', () => {
     expect(builder.props('generatedPolicy')).toBe('')
   })
 
-  it('ignores apply actions when there is nothing to parse', async () => {
-    const wrapper = mount(CspGeneratorParser, {
+  it('normalizes invalid stored directives', () => {
+    localStorage.setItem('tools:csp-generator:builder', '"invalid"')
+
+    const wrapper = mount(CspGenerator, {
       global: {
         stubs: {
-          CspParserSection: ParserStub,
           CspBuilderSection: BuilderStub,
         },
       },
     })
-
-    wrapper.findComponent(ParserStub).vm.$emit('apply-parsed')
-    await wrapper.vm.$nextTick()
-
-    const builder = wrapper.findComponent(BuilderStub)
-    expect(builder.props('generatedPolicy')).toBe("default-src 'self'")
-  })
-
-  it('applies parsed directives when available', async () => {
-    const wrapper = mount(CspGeneratorParser, {
-      global: {
-        stubs: {
-          CspParserSection: ParserStub,
-          CspBuilderSection: BuilderStub,
-        },
-      },
-    })
-
-    await wrapper.get('[data-test="set-input"]').trigger('click')
-    await wrapper.get('[data-test="apply"]').trigger('click')
-
-    const builder = wrapper.findComponent(BuilderStub)
-    expect(builder.props('generatedPolicy')).toBe("script-src 'self'")
-  })
-
-  it('recovers from invalid stored directives when adding', async () => {
-    localStorage.setItem('tools:csp-generator-parser:builder', '"invalid"')
-
-    const wrapper = mount(CspGeneratorParser, {
-      global: {
-        stubs: {
-          CspParserSection: ParserStub,
-          CspBuilderSection: BuilderStub,
-        },
-      },
-    })
-
-    await wrapper.get('[data-test="add"]').trigger('click')
 
     const builder = wrapper.findComponent(BuilderStub)
     expect(builder.props('directives')).toHaveLength(1)
+  })
+
+  it('repairs missing ids to keep add working', async () => {
+    localStorage.setItem(
+      'tools:csp-generator:builder',
+      JSON.stringify([{ name: 'default-src', valuesText: "'self'" }]),
+    )
+
+    const wrapper = mount(CspGenerator, {
+      global: {
+        stubs: {
+          CspBuilderSection: BuilderStub,
+        },
+      },
+    })
+
+    const builder = wrapper.findComponent(BuilderStub)
+    const directives = builder.props('directives') as BuilderDirective[]
+    expect(directives[0]?.id).toBeTruthy()
+
+    await wrapper.get('[data-test="add"]').trigger('click')
+    expect(builder.props('directives')).toHaveLength(2)
   })
 })

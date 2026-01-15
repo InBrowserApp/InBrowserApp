@@ -1,6 +1,6 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
-    <CspGeneratorParser />
+    <CspGenerator />
     <WhatIsCsp />
   </ToolDefaultPageLayout>
 </template>
@@ -8,6 +8,6 @@
 <script setup lang="ts">
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import * as toolInfo from './info'
-import CspGeneratorParser from './components/CspGeneratorParser.vue'
+import CspGenerator from './components/CspGenerator.vue'
 import WhatIsCsp from './components/WhatIsCsp.vue'
 </script>

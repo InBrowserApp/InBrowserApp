@@ -1,5 +1,5 @@
 {
-  "name": "@tools/csp-generator-parser",
+  "name": "@tools/csp-parser",
   "version": "0.0.0",
   "private": true,
   "type": "module",

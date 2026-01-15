@@ -1,17 +1,17 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import CspGeneratorParserView from './CspGeneratorParserView.vue'
+import CspGeneratorView from './CspGeneratorView.vue'
 
-describe('CspGeneratorParserView', () => {
+describe('CspGeneratorView', () => {
   it('renders the generator and the CSP explanation', () => {
-    const wrapper = mount(CspGeneratorParserView, {
+    const wrapper = mount(CspGeneratorView, {
       global: {
         stubs: {
           ToolDefaultPageLayout: {
             props: ['info'],
             template: '<main><slot /></main>',
           },
-          CspGeneratorParser: { template: '<section data-test="generator" />' },
+          CspGenerator: { template: '<section data-test="generator" />' },
           WhatIsCsp: { template: '<section data-test="what-is" />' },
         },
       },
