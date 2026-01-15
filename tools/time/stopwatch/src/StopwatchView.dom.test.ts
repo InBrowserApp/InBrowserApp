@@ -28,8 +28,11 @@ describe('StopwatchView', () => {
   it('exposes tool metadata and routes', () => {
     expect(toolInfo.toolID).toBe('stopwatch')
     expect(toolInfo.path).toBe('/tools/stopwatch')
-    expect(routes[0].path).toBe(toolInfo.path)
-    expect(routes[0].name).toBe(toolInfo.toolID)
+    const route = routes[0]
+    expect(route).toBeDefined()
+    if (!route) return
+    expect(route.path).toBe(toolInfo.path)
+    expect(route.name).toBe(toolInfo.toolID)
     expect(toolIndex.toolInfo.toolID).toBe(toolInfo.toolID)
   })
 
