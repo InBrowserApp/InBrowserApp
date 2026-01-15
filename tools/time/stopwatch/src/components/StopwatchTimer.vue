@@ -62,10 +62,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { NButton, NFlex, NIcon, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { useIntervalFn } from '@vueuse/core'
+import { useIntervalFn, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
   ArrowCounterclockwise16Regular,
@@ -77,11 +77,11 @@ import { formatStopwatch } from '../utils/format'
 
 const { t } = useI18n()
 
-const running = ref(false)
-const startTime = ref(0)
-const accumulated = ref(0)
+const running = useStorage('tools:stopwatch:running', false)
+const startTime = useStorage('tools:stopwatch:start-time', 0)
+const accumulated = useStorage('tools:stopwatch:accumulated', 0)
 const now = ref(Date.now())
-const laps = ref<number[]>([])
+const laps = useStorage<number[]>('tools:stopwatch:laps', [])
 
 const { pause: pauseTicker, resume: resumeTicker } = useIntervalFn(
   () => {
@@ -117,6 +117,16 @@ const lapRows = computed(() => {
 const captureNow = () => {
   now.value = Date.now()
 }
+
+onMounted(() => {
+  if (!running.value) return
+  if (!startTime.value) {
+    running.value = false
+    return
+  }
+  captureNow()
+  resumeTicker()
+})
 
 const start = () => {
   if (running.value) return

@@ -5,6 +5,13 @@ import StopwatchTimer from './StopwatchTimer.vue'
 
 const mountTimer = () => mount(StopwatchTimer)
 
+const storageKeys = [
+  'tools:stopwatch:running',
+  'tools:stopwatch:start-time',
+  'tools:stopwatch:accumulated',
+  'tools:stopwatch:laps',
+]
+
 const getElapsed = (wrapper: ReturnType<typeof mount>) =>
   wrapper.get('[data-testid="elapsed"]').text()
 
@@ -18,11 +25,13 @@ const getTimerVm = (wrapper: ReturnType<typeof mount>) =>
 
 describe('StopwatchTimer', () => {
   beforeEach(() => {
+    storageKeys.forEach((key) => localStorage.removeItem(key))
     vi.useFakeTimers()
     vi.setSystemTime(new Date('2024-01-01T00:00:00Z'))
   })
 
   afterEach(() => {
+    storageKeys.forEach((key) => localStorage.removeItem(key))
     vi.useRealTimers()
   })
 
@@ -83,6 +92,32 @@ describe('StopwatchTimer', () => {
     await nextTick()
 
     expect(getElapsed(wrapper)).toBe('00:00:02.00')
+  })
+
+  it('restores running state and laps after remount', async () => {
+    const wrapper = mountTimer()
+    const start = wrapper.get('[data-testid="start"]')
+    const lap = wrapper.get('[data-testid="lap"]')
+
+    await start.trigger('click')
+    vi.advanceTimersByTime(1234)
+    await nextTick()
+
+    await lap.trigger('click')
+    await nextTick()
+
+    expect(getElapsed(wrapper)).toBe('00:00:01.23')
+    expect(wrapper.findAll('[data-testid="lap-row"]').length).toBe(1)
+
+    wrapper.unmount()
+
+    vi.advanceTimersByTime(2000)
+
+    const remount = mountTimer()
+    await nextTick()
+
+    expect(getElapsed(remount)).toBe('00:00:03.23')
+    expect(remount.findAll('[data-testid="lap-row"]').length).toBe(1)
   })
 
   it('ignores actions that are not allowed', async () => {
