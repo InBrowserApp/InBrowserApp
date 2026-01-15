@@ -88,6 +88,7 @@
               text
               :href="downloadUrl"
               :download="downloadFilename"
+              icon-placement="left"
             >
               <template #icon>
                 <n-icon :component="ArrowDownload20Regular" />
@@ -301,6 +302,11 @@ function parseJson(input: string): { value?: unknown; error?: string } {
   display: inline-flex;
   flex-shrink: 0;
   gap: 8px;
+}
+
+:deep(.n-form-item-label__text) {
+  display: block;
+  width: 100%;
 }
 </style>
 
