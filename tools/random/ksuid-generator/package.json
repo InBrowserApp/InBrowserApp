@@ -15,6 +15,7 @@
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
-    "vue-i18n": "catalog:"
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
   }
 }

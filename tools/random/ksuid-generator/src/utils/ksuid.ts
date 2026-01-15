@@ -29,7 +29,11 @@ function encodeBase62(value: bigint): string {
 
   while (current > 0n) {
     const index = Number(current % base)
-    result = KSUID_ALPHABET[index] + result
+    const char = KSUID_ALPHABET[index]
+    if (!char) {
+      throw new Error('Failed to encode KSUID base62 value')
+    }
+    result = char + result
     current /= base
   }
 
