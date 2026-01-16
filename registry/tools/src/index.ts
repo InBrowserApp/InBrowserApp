@@ -89,6 +89,7 @@ import { toolInfo as colorPickerToolInfo } from '@tools/color-picker'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
+import { toolInfo as unicodeInvisibleCharacterCheckerToolInfo } from '@tools/unicode-invisible-character-checker'
 import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
 import { toolInfo as rotCipherToolInfo } from '@tools/rot-cipher'
@@ -235,6 +236,7 @@ export const tools: ToolInfo[] = [
   numberBaseConverterToolInfo,
 
   // Unicode Tools
+  unicodeInvisibleCharacterCheckerToolInfo,
   unicodeEscapeUnescapeToolInfo,
 
   // Misc Tools

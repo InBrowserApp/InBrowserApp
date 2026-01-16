@@ -87,6 +87,7 @@ import { routes as colorPickerRoutes } from '@tools/color-picker/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
+import { routes as unicodeInvisibleCharacterCheckerRoutes } from '@tools/unicode-invisible-character-checker/routes'
 import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
 import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
 import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
@@ -205,6 +206,7 @@ export const routes: ToolRoute[] = [
   ...colorConverterRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
+  ...unicodeInvisibleCharacterCheckerRoutes,
   ...unicodeEscapeUnescapeRoutes,
   ...morseCodeConverterRoutes,
   ...rotCipherRoutes,
