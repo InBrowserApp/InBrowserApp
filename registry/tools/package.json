@@ -88,6 +88,7 @@
     "@tools/openapi-to-typescript": "workspace:*",
     "@tools/password-strength-checker": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
+    "@tools/pgp-key-generator": "workspace:*",
     "@tools/placeholder-image-generator": "workspace:*",
     "@tools/png-optimizer": "workspace:*",
     "@tools/port-number-lookup": "workspace:*",
