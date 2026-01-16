@@ -41,7 +41,8 @@ export function getResidentIdCheckDigit(core: string): string | null {
 
   let sum = 0
   for (let i = 0; i < core.length; i += 1) {
-    sum += Number(core[i]) * CHECKSUM_WEIGHTS[i]
+    const weight = CHECKSUM_WEIGHTS[i] ?? 0
+    sum += Number(core[i]) * weight
   }
 
   const remainder = sum % 11
