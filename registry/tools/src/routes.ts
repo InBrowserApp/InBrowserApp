@@ -107,6 +107,7 @@ import { routes as regexTesterReplacerRoutes } from '@tools/regex-tester-replace
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
+import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
 import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/routes'
@@ -229,6 +230,7 @@ export const routes: ToolRoute[] = [
   ...loremIpsumGeneratorRoutes,
   ...gitignoreGeneratorRoutes,
   ...creditCardValidatorRoutes,
+  ...prcIdValidatorRoutes,
   ...isbnValidatorRoutes,
   ...ibanValidatorRoutes,
   ...bicSwiftValidatorRoutes,
