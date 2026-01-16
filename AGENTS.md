@@ -27,6 +27,7 @@
 - Use path aliases: `@shared/*`, `@tools/*`, `@utils/*`, `@registry/*`.
 - Tool packages follow `tools/<domain>/<tool-slug>/src` with `info.ts`, `routes.ts`, and a `*View.vue`.
 - Split tool UI logic into `components/`; keep the main `*View.vue` focused on layout and composition.
+- Keep components small and single-purpose; split by responsibility before a file grows too long.
 - Download buttons must be real anchors: `n-button tag="a"` with `download` and `href` from `useObjectUrl`, and no `document.createElement('a')`.
 
 ## Tool Creation & Registration
