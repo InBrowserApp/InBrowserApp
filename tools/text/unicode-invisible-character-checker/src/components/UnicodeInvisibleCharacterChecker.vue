@@ -38,22 +38,27 @@
     </n-text>
 
     <n-grid cols="1 m:2" responsive="screen" :x-gap="12" :y-gap="12" class="output-grid">
-      <n-form-item-gi :label="t('cleaned-title')" :show-feedback="false">
-        <div class="output-actions">
-          <CopyToClipboardButton :content="cleanedText" />
-          <n-button
-            tag="a"
-            text
-            :href="downloadUrl"
-            download="cleaned.txt"
-            :disabled="!cleanedText"
-          >
-            <template #icon>
-              <n-icon :component="ArrowDownload16Regular" />
-            </template>
-            {{ t('download-cleaned') }}
-          </n-button>
-        </div>
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
+        <template #label>
+          <n-flex align="center" justify="space-between" class="output-label">
+            <span>{{ t('cleaned-title') }}</span>
+            <n-flex align="center" :size="8" class="output-actions">
+              <CopyToClipboardButton :content="cleanedText" />
+              <n-button
+                tag="a"
+                text
+                :href="downloadUrl"
+                download="cleaned.txt"
+                :disabled="!cleanedText"
+              >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
+                {{ t('download-cleaned') }}
+              </n-button>
+            </n-flex>
+          </n-flex>
+        </template>
         <n-input
           :value="cleanedText"
           type="textarea"
@@ -218,11 +223,24 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
   margin-top: 12px;
 }
 
-.output-actions {
-  display: flex;
+.output-label {
   align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.output-actions {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
   gap: 8px;
-  margin-bottom: 8px;
+}
+
+:deep(.n-form-item-label__text) {
+  display: block;
+  width: 100%;
 }
 
 .results-table {
