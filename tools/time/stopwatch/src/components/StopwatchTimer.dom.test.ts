@@ -29,16 +29,23 @@ const getTableInst = (wrapper: ReturnType<typeof mount>) =>
     tableRef: DataTableInst | null
   }
 
+const originalCreateObjectURL = URL.createObjectURL
+const originalRevokeObjectURL = URL.revokeObjectURL
+
 describe('StopwatchTimer', () => {
   beforeEach(() => {
     storageKeys.forEach((key) => localStorage.removeItem(key))
     vi.useFakeTimers()
     vi.setSystemTime(new Date('2024-01-01T00:00:00Z'))
+    URL.createObjectURL = vi.fn(() => 'blob:mock')
+    URL.revokeObjectURL = vi.fn()
   })
 
   afterEach(() => {
     storageKeys.forEach((key) => localStorage.removeItem(key))
     vi.useRealTimers()
+    URL.createObjectURL = originalCreateObjectURL
+    URL.revokeObjectURL = originalRevokeObjectURL
   })
 
   it('starts, laps, pauses, and resets', async () => {
@@ -178,6 +185,22 @@ describe('StopwatchTimer', () => {
 
     expect(wrapper.find('.lap-row').exists()).toBe(false)
     expect(wrapper.get('[data-testid="no-laps"]').text().length).toBeGreaterThan(0)
+  })
+
+  it('exposes a csv export link when laps exist', async () => {
+    const wrapper = mountTimer()
+    const start = wrapper.get('[data-testid="start"]')
+    const lap = wrapper.get('[data-testid="lap"]')
+
+    await start.trigger('click')
+    vi.advanceTimersByTime(1200)
+    await nextTick()
+    await lap.trigger('click')
+    await nextTick()
+
+    const exportCsv = wrapper.get('[data-testid="export-csv"]')
+    expect(exportCsv.attributes('download')).toBe('stopwatch-laps.csv')
+    expect(exportCsv.attributes('href')).toBe('blob:mock')
   })
 
   it('ignores actions that are not allowed', async () => {

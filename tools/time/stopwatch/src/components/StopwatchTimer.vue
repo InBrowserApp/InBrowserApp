@@ -47,6 +47,20 @@
           <n-button
             text
             size="small"
+            tag="a"
+            :disabled="!canClearLaps"
+            :download="csvFilename"
+            :href="csvUrl"
+            data-testid="export-csv"
+          >
+            <template #icon>
+              <n-icon :component="ArrowDownload16Regular" />
+            </template>
+            {{ t('export') }} CSV
+          </n-button>
+          <n-button
+            text
+            size="small"
             type="error"
             :disabled="!canClearLaps"
             @click="clearLaps"
@@ -81,14 +95,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import type { DataTableColumns, DataTableInst } from 'naive-ui'
 import { NButton, NDataTable, NFlex, NIcon, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { useIntervalFn, useStorage } from '@vueuse/core'
+import { useIntervalFn, useObjectUrl, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
   ArrowCounterclockwise16Regular,
+  ArrowDownload16Regular,
   Delete16Regular,
   Flag16Regular,
   Pause16Regular,
@@ -169,6 +184,55 @@ const columns = computed<DataTableColumns<LapRow>>(() => [
 
 const rowKey = (row: LapRow) => row.key
 const rowProps = () => ({ class: 'lap-row' })
+
+const escapeCsv = (value: string) => {
+  if (/[",\n]/.test(value)) {
+    return `"${value.replace(/"/g, '""')}"`
+  }
+  return value
+}
+
+const formatCsvRow = (row: LapRow) =>
+  [
+    escapeCsv(String(row.index)),
+    escapeCsv(formatStopwatch(row.lapTime)),
+    escapeCsv(formatStopwatch(row.totalTime)),
+  ].join(',')
+
+const csvHeader = computed(() =>
+  [escapeCsv('#'), escapeCsv(t('lap')), escapeCsv(t('total'))].join(','),
+)
+const csvLines = ref<string[]>([])
+
+watch(
+  lapRows,
+  (current, previous) => {
+    if (!current.length) {
+      csvLines.value = []
+      return
+    }
+    if (!previous || current.length <= previous.length) {
+      csvLines.value = current.map(formatCsvRow)
+      return
+    }
+    const newLines = current.slice(previous.length).map(formatCsvRow)
+    csvLines.value = [...csvLines.value, ...newLines]
+  },
+  { immediate: true },
+)
+
+const csvContent = computed(() => {
+  if (!csvLines.value.length) return ''
+  return `\ufeff${[csvHeader.value, ...csvLines.value].join('\n')}`
+})
+
+const csvBlob = computed(() => {
+  if (!csvContent.value) return null
+  return new Blob([csvContent.value], { type: 'text/csv;charset=utf-8' })
+})
+
+const csvUrl = useObjectUrl(csvBlob)
+const csvFilename = 'stopwatch-laps.csv'
 
 const captureNow = () => {
   now.value = Date.now()
@@ -265,6 +329,7 @@ const recordLap = () => {
     "laps": "Laps",
     "sort": "Sort",
     "clear": "Clear",
+    "export": "Export",
     "no-laps": "No laps yet",
     "total": "Total",
     "status-running": "Running",
@@ -279,6 +344,7 @@ const recordLap = () => {
     "laps": "计次记录",
     "sort": "排序",
     "clear": "清空",
+    "export": "导出",
     "no-laps": "暂无计次记录",
     "total": "总计",
     "status-running": "计时中",
@@ -293,6 +359,7 @@ const recordLap = () => {
     "laps": "计次记录",
     "sort": "排序",
     "clear": "清空",
+    "export": "导出",
     "no-laps": "暂无计次记录",
     "total": "总计",
     "status-running": "计时中",
@@ -307,6 +374,7 @@ const recordLap = () => {
     "laps": "計次記錄",
     "sort": "排序",
     "clear": "清除",
+    "export": "匯出",
     "no-laps": "尚無計次記錄",
     "total": "總計",
     "status-running": "計時中",
@@ -321,6 +389,7 @@ const recordLap = () => {
     "laps": "計次記錄",
     "sort": "排序",
     "clear": "清除",
+    "export": "匯出",
     "no-laps": "尚無計次記錄",
     "total": "總計",
     "status-running": "計時中",
@@ -335,6 +404,7 @@ const recordLap = () => {
     "laps": "Vueltas",
     "sort": "Ordenar",
     "clear": "Limpiar",
+    "export": "Exportar",
     "no-laps": "Sin vueltas",
     "total": "Total",
     "status-running": "En marcha",
@@ -349,6 +419,7 @@ const recordLap = () => {
     "laps": "Tours",
     "sort": "Trier",
     "clear": "Effacer",
+    "export": "Exporter",
     "no-laps": "Aucun tour",
     "total": "Total",
     "status-running": "En cours",
@@ -363,6 +434,7 @@ const recordLap = () => {
     "laps": "Runden",
     "sort": "Sortieren",
     "clear": "Leeren",
+    "export": "Exportieren",
     "no-laps": "Keine Runden",
     "total": "Gesamt",
     "status-running": "Läuft",
@@ -377,6 +449,7 @@ const recordLap = () => {
     "laps": "Giri",
     "sort": "Ordina",
     "clear": "Cancella",
+    "export": "Esporta",
     "no-laps": "Nessun giro",
     "total": "Totale",
     "status-running": "In corso",
@@ -391,6 +464,7 @@ const recordLap = () => {
     "laps": "ラップ",
     "sort": "並べ替え",
     "clear": "クリア",
+    "export": "エクスポート",
     "no-laps": "ラップはありません",
     "total": "合計",
     "status-running": "計測中",
@@ -405,6 +479,7 @@ const recordLap = () => {
     "laps": "랩",
     "sort": "정렬",
     "clear": "지우기",
+    "export": "내보내기",
     "no-laps": "랩 없음",
     "total": "총합",
     "status-running": "진행 중",
@@ -419,6 +494,7 @@ const recordLap = () => {
     "laps": "Круги",
     "sort": "Сортировать",
     "clear": "Очистить",
+    "export": "Экспорт",
     "no-laps": "Кругов нет",
     "total": "Итого",
     "status-running": "Идет",
@@ -433,6 +509,7 @@ const recordLap = () => {
     "laps": "Voltas",
     "sort": "Ordenar",
     "clear": "Limpar",
+    "export": "Exportar",
     "no-laps": "Sem voltas",
     "total": "Total",
     "status-running": "Em andamento",
@@ -447,6 +524,7 @@ const recordLap = () => {
     "laps": "اللفات",
     "sort": "فرز",
     "clear": "مسح",
+    "export": "تصدير",
     "no-laps": "لا توجد لفات بعد",
     "total": "الإجمالي",
     "status-running": "قيد التشغيل",
@@ -461,6 +539,7 @@ const recordLap = () => {
     "laps": "लैप्स",
     "sort": "क्रमबद्ध करें",
     "clear": "साफ़ करें",
+    "export": "निर्यात",
     "no-laps": "कोई लैप नहीं",
     "total": "कुल",
     "status-running": "चल रहा है",
@@ -475,6 +554,7 @@ const recordLap = () => {
     "laps": "Turlar",
     "sort": "Sırala",
     "clear": "Temizle",
+    "export": "Dışa Aktar",
     "no-laps": "Tur yok",
     "total": "Toplam",
     "status-running": "Çalışıyor",
@@ -489,6 +569,7 @@ const recordLap = () => {
     "laps": "Rondes",
     "sort": "Sorteren",
     "clear": "Wissen",
+    "export": "Exporteren",
     "no-laps": "Geen rondes",
     "total": "Totaal",
     "status-running": "Bezig",
@@ -503,6 +584,7 @@ const recordLap = () => {
     "laps": "Varv",
     "sort": "Sortera",
     "clear": "Rensa",
+    "export": "Exportera",
     "no-laps": "Inga varv",
     "total": "Totalt",
     "status-running": "Pågår",
@@ -517,6 +599,7 @@ const recordLap = () => {
     "laps": "Okrążenia",
     "sort": "Sortuj",
     "clear": "Wyczyść",
+    "export": "Eksportuj",
     "no-laps": "Brak okrążeń",
     "total": "Razem",
     "status-running": "Trwa",
@@ -531,6 +614,7 @@ const recordLap = () => {
     "laps": "Vòng",
     "sort": "Sắp xếp",
     "clear": "Xóa",
+    "export": "Xuất",
     "no-laps": "Chưa có vòng",
     "total": "Tổng",
     "status-running": "Đang chạy",
@@ -545,6 +629,7 @@ const recordLap = () => {
     "laps": "รอบ",
     "sort": "เรียงลำดับ",
     "clear": "ล้าง",
+    "export": "ส่งออก",
     "no-laps": "ยังไม่มีรอบ",
     "total": "รวม",
     "status-running": "กำลังทำงาน",
@@ -559,6 +644,7 @@ const recordLap = () => {
     "laps": "Putaran",
     "sort": "Urutkan",
     "clear": "Bersihkan",
+    "export": "Ekspor",
     "no-laps": "Belum ada putaran",
     "total": "Total",
     "status-running": "Berjalan",
@@ -573,6 +659,7 @@ const recordLap = () => {
     "laps": "הקפות",
     "sort": "מיון",
     "clear": "נקה",
+    "export": "ייצוא",
     "no-laps": "אין הקפות",
     "total": "סך הכל",
     "status-running": "פועל",
@@ -587,6 +674,7 @@ const recordLap = () => {
     "laps": "Pusingan",
     "sort": "Isih",
     "clear": "Kosongkan",
+    "export": "Eksport",
     "no-laps": "Tiada pusingan",
     "total": "Jumlah",
     "status-running": "Sedang berjalan",
@@ -601,6 +689,7 @@ const recordLap = () => {
     "laps": "Runder",
     "sort": "Sorter",
     "clear": "Tøm",
+    "export": "Eksporter",
     "no-laps": "Ingen runder",
     "total": "Totalt",
     "status-running": "Kjører",
