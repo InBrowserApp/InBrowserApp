@@ -80,6 +80,7 @@
     "@tools/mime-type-lookup": "workspace:*",
     "@tools/morse-code-converter": "workspace:*",
     "@tools/my-ip-address": "workspace:*",
+    "@tools/nanoid-generator": "workspace:*",
     "@tools/network-tools": "workspace:*",
     "@tools/number-base-converter": "workspace:*",
     "@tools/openapi-to-typescript": "workspace:*",

@@ -750,6 +750,9 @@ importers:
       '@tools/my-ip-address':
         specifier: workspace:*
         version: link:../../tools/network/my-ip-address
+      '@tools/nanoid-generator':
+        specifier: workspace:*
+        version: link:../../tools/random/nanoid-generator
       '@tools/network-tools':
         specifier: workspace:*
         version: link:../../tools/network/network-tools
@@ -3415,6 +3418,33 @@ importers:
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/random/ksuid-generator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
+  tools/random/nanoid-generator:
     dependencies:
       '@shared/icons':
         specifier: workspace:*

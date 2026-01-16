@@ -52,6 +52,7 @@ import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verif
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
 import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
+import { toolInfo as nanoidGeneratorToolInfo } from '@tools/nanoid-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -204,6 +205,7 @@ export const tools: ToolInfo[] = [
   randomPasswordGeneratorToolInfo,
   bip39MnemonicGeneratorToolInfo,
   ksuidGeneratorToolInfo,
+  nanoidGeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
