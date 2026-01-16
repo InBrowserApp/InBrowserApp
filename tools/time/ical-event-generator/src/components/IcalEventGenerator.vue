@@ -45,8 +45,12 @@
         </n-grid>
 
         <n-grid v-if="!isAllDay" cols="1 900:2" x-gap="12" y-gap="12" style="margin-top: 12px">
-          <n-form-item-gi :label="t('time-zone')" :show-feedback="false">
-            <n-flex vertical :size="4">
+          <n-form-item-gi
+            :label="t('time-zone')"
+            :show-feedback="false"
+            content-style="width: 100%"
+          >
+            <n-flex vertical :size="4" style="width: 100%">
               <n-select
                 v-model:value="timeZone"
                 :options="timeZoneOptions"
