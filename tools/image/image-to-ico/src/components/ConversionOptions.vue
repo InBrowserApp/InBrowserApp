@@ -2,70 +2,51 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
 
-    <n-form label-placement="top" class="options-form">
-      <n-form-item :label="t('sizes')" :show-feedback="false">
-        <n-checkbox-group v-model:value="sizes" :disabled="isConverting">
-          <n-space wrap>
-            <n-checkbox v-for="size in sizeOptions" :key="size" :value="size">
-              {{ size }}x{{ size }}
-            </n-checkbox>
-          </n-space>
-        </n-checkbox-group>
-        <n-text v-if="sizes.length === 0" depth="3">
-          {{ t('selectAtLeastOneSize') }}
-        </n-text>
-        <span v-else style="display: none"></span>
-      </n-form-item>
+    <n-form label-placement="top">
+      <n-grid cols="1 m:2" :x-gap="16" :y-gap="12" responsive="screen">
+        <n-form-item-gi :label="t('sizes')" :show-feedback="false" :span="2">
+          <n-checkbox-group v-model:value="sizes" :disabled="isConverting">
+            <n-space wrap>
+              <n-checkbox v-for="size in sizeOptions" :key="size" :value="size">
+                {{ size }}x{{ size }}
+              </n-checkbox>
+            </n-space>
+          </n-checkbox-group>
+          <n-text v-if="sizes.length === 0" depth="3">
+            {{ t('selectAtLeastOneSize') }}
+          </n-text>
+          <span v-else style="display: none"></span>
+        </n-form-item-gi>
 
-      <n-form-item :label="t('padding')" :show-feedback="false">
-        <n-flex align="center" :size="12" style="width: 100%">
-          <n-slider
-            v-model:value="padding"
-            :min="0"
-            :max="30"
-            :step="1"
-            :disabled="isConverting"
-            style="flex: 1"
-          />
-          <n-input-number
-            v-model:value="padding"
-            :min="0"
-            :max="30"
-            :step="1"
-            size="small"
-            :disabled="isConverting"
-            style="width: 100px"
-          />
-        </n-flex>
-      </n-form-item>
+        <n-form-item-gi :label="t('background')" :show-feedback="false">
+          <n-flex align="center" :size="12" wrap>
+            <n-switch v-model:value="backgroundEnabled" :disabled="isConverting" />
+            <n-text depth="3">{{ t('backgroundHint') }}</n-text>
+            <n-color-picker
+              v-if="backgroundEnabled"
+              v-model:value="backgroundColor"
+              :modes="['hex']"
+              :show-alpha="true"
+              size="small"
+              :disabled="isConverting"
+            />
+          </n-flex>
+        </n-form-item-gi>
 
-      <n-form-item :label="t('background')" :show-feedback="false">
-        <n-flex align="center" :size="12" wrap>
-          <n-switch v-model:value="backgroundEnabled" :disabled="isConverting" />
-          <n-text depth="3">{{ t('backgroundHint') }}</n-text>
-          <n-color-picker
-            v-if="backgroundEnabled"
-            v-model:value="backgroundColor"
-            :modes="['hex']"
-            :show-alpha="true"
-            size="small"
-            :disabled="isConverting"
-          />
-        </n-flex>
-      </n-form-item>
-
-      <n-form-item :label="t('optimize')" :show-feedback="false">
-        <n-flex align="center" :size="12">
-          <n-switch v-model:value="optimize" :disabled="isConverting" />
-          <n-text depth="3">{{ t('optimizeHint') }}</n-text>
-        </n-flex>
-      </n-form-item>
+        <n-form-item-gi :label="t('optimize')" :show-feedback="false">
+          <n-flex align="center" :size="12">
+            <n-switch v-model:value="optimize" :disabled="isConverting" />
+            <n-text depth="3">{{ t('optimizeHint') }}</n-text>
+          </n-flex>
+        </n-form-item-gi>
+      </n-grid>
 
       <n-button
         type="primary"
         :loading="isConverting"
         :disabled="!canConvert"
         @click="$emit('convert')"
+        style="margin-top: 12px"
       >
         <template #icon>
           <n-icon><Wand16Regular /></n-icon>
@@ -80,15 +61,14 @@
 import { useI18n } from 'vue-i18n'
 import {
   NForm,
-  NFormItem,
+  NFormItemGi,
   NCheckboxGroup,
   NCheckbox,
   NSpace,
-  NSlider,
-  NInputNumber,
   NSwitch,
   NColorPicker,
   NButton,
+  NGrid,
   NIcon,
   NText,
   NFlex,
@@ -108,7 +88,6 @@ defineEmits<{
 }>()
 
 const sizes = defineModel<number[]>('sizes', { required: true })
-const padding = defineModel<number>('padding', { required: true })
 const backgroundEnabled = defineModel<boolean>('backgroundEnabled', { required: true })
 const backgroundColor = defineModel<string>('backgroundColor', { required: true })
 const optimize = defineModel<boolean>('optimize', { required: true })
@@ -116,19 +95,12 @@ const optimize = defineModel<boolean>('optimize', { required: true })
 const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
 </script>
 
-<style scoped>
-.options-form :deep(.n-form-item) {
-  margin-bottom: 16px;
-}
-</style>
-
 <i18n lang="json">
 {
   "en": {
     "options": "Conversion Options",
     "sizes": "Sizes (px)",
     "selectAtLeastOneSize": "Select at least one size",
-    "padding": "Padding (%)",
     "background": "Background",
     "backgroundHint": "Fill transparent areas with a color",
     "optimize": "Optimize PNG",
@@ -139,7 +111,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "转换选项",
     "sizes": "尺寸 (px)",
     "selectAtLeastOneSize": "请至少选择一个尺寸",
-    "padding": "内边距 (%)",
     "background": "背景",
     "backgroundHint": "用颜色填充透明区域",
     "optimize": "PNG 优化",
@@ -150,7 +121,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "转换选项",
     "sizes": "尺寸 (px)",
     "selectAtLeastOneSize": "请至少选择一个尺寸",
-    "padding": "内边距 (%)",
     "background": "背景",
     "backgroundHint": "用颜色填充透明区域",
     "optimize": "PNG 优化",
@@ -161,7 +131,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "轉換選項",
     "sizes": "尺寸 (px)",
     "selectAtLeastOneSize": "請至少選擇一個尺寸",
-    "padding": "內距 (%)",
     "background": "背景",
     "backgroundHint": "以顏色填滿透明區域",
     "optimize": "PNG 最佳化",
@@ -172,7 +141,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "轉換選項",
     "sizes": "尺寸 (px)",
     "selectAtLeastOneSize": "請至少選擇一個尺寸",
-    "padding": "內距 (%)",
     "background": "背景",
     "backgroundHint": "以顏色填滿透明區域",
     "optimize": "PNG 最佳化",
@@ -183,7 +151,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Opciones de conversión",
     "sizes": "Tamaños (px)",
     "selectAtLeastOneSize": "Selecciona al menos un tamaño",
-    "padding": "Relleno (%)",
     "background": "Fondo",
     "backgroundHint": "Rellena las áreas transparentes con un color",
     "optimize": "Optimizar PNG",
@@ -194,7 +161,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Options de conversion",
     "sizes": "Tailles (px)",
     "selectAtLeastOneSize": "Sélectionnez au moins une taille",
-    "padding": "Marge intérieure (%)",
     "background": "Fond",
     "backgroundHint": "Remplir les zones transparentes avec une couleur",
     "optimize": "Optimiser PNG",
@@ -205,7 +171,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Konvertierungsoptionen",
     "sizes": "Größen (px)",
     "selectAtLeastOneSize": "Wählen Sie mindestens eine Größe",
-    "padding": "Innenabstand (%)",
     "background": "Hintergrund",
     "backgroundHint": "Transparente Bereiche mit einer Farbe füllen",
     "optimize": "PNG optimieren",
@@ -216,7 +181,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Opzioni di conversione",
     "sizes": "Dimensioni (px)",
     "selectAtLeastOneSize": "Seleziona almeno una dimensione",
-    "padding": "Spaziatura (%)",
     "background": "Sfondo",
     "backgroundHint": "Riempi le aree trasparenti con un colore",
     "optimize": "Ottimizza PNG",
@@ -227,7 +191,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "変換オプション",
     "sizes": "サイズ (px)",
     "selectAtLeastOneSize": "少なくとも1つのサイズを選択してください",
-    "padding": "余白 (%)",
     "background": "背景",
     "backgroundHint": "透明部分を色で塗りつぶす",
     "optimize": "PNG を最適化",
@@ -238,7 +201,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "변환 옵션",
     "sizes": "크기 (px)",
     "selectAtLeastOneSize": "최소 하나의 크기를 선택하세요",
-    "padding": "여백 (%)",
     "background": "배경",
     "backgroundHint": "투명 영역을 색으로 채우기",
     "optimize": "PNG 최적화",
@@ -249,7 +211,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Параметры конвертации",
     "sizes": "Размеры (px)",
     "selectAtLeastOneSize": "Выберите хотя бы один размер",
-    "padding": "Отступ (%)",
     "background": "Фон",
     "backgroundHint": "Заполнить прозрачные области цветом",
     "optimize": "Оптимизировать PNG",
@@ -260,7 +221,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Opções de conversão",
     "sizes": "Tamanhos (px)",
     "selectAtLeastOneSize": "Selecione pelo menos um tamanho",
-    "padding": "Preenchimento (%)",
     "background": "Fundo",
     "backgroundHint": "Preencher áreas transparentes com uma cor",
     "optimize": "Otimizar PNG",
@@ -271,7 +231,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "خيارات التحويل",
     "sizes": "الأحجام (px)",
     "selectAtLeastOneSize": "اختر حجمًا واحدًا على الأقل",
-    "padding": "الحشو (%)",
     "background": "الخلفية",
     "backgroundHint": "املأ المناطق الشفافة بلون",
     "optimize": "تحسين PNG",
@@ -282,7 +241,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "परिवर्तन विकल्प",
     "sizes": "आकार (px)",
     "selectAtLeastOneSize": "कम से कम एक आकार चुनें",
-    "padding": "पैडिंग (%)",
     "background": "पृष्ठभूमि",
     "backgroundHint": "पारदर्शी हिस्सों को रंग से भरें",
     "optimize": "PNG अनुकूलित करें",
@@ -293,7 +251,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Dönüştürme seçenekleri",
     "sizes": "Boyutlar (px)",
     "selectAtLeastOneSize": "En az bir boyut seçin",
-    "padding": "Dolgu (%)",
     "background": "Arka plan",
     "backgroundHint": "Şeffaf alanları bir renkle doldurun",
     "optimize": "PNG'yi optimize et",
@@ -304,7 +261,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Conversieopties",
     "sizes": "Groottes (px)",
     "selectAtLeastOneSize": "Selecteer minstens één grootte",
-    "padding": "Padding (%)",
     "background": "Achtergrond",
     "backgroundHint": "Vul transparante gebieden met een kleur",
     "optimize": "PNG optimaliseren",
@@ -315,7 +271,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Konverteringsalternativ",
     "sizes": "Storlekar (px)",
     "selectAtLeastOneSize": "Välj minst en storlek",
-    "padding": "Utfyllnad (%)",
     "background": "Bakgrund",
     "backgroundHint": "Fyll transparenta områden med en färg",
     "optimize": "Optimera PNG",
@@ -326,7 +281,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Opcje konwersji",
     "sizes": "Rozmiary (px)",
     "selectAtLeastOneSize": "Wybierz co najmniej jeden rozmiar",
-    "padding": "Wypełnienie (%)",
     "background": "Tło",
     "backgroundHint": "Wypełnij przezroczyste obszary kolorem",
     "optimize": "Optymalizuj PNG",
@@ -337,7 +291,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Tùy chọn chuyển đổi",
     "sizes": "Kích thước (px)",
     "selectAtLeastOneSize": "Chọn ít nhất một kích thước",
-    "padding": "Đệm (%)",
     "background": "Nền",
     "backgroundHint": "Tô màu các vùng trong suốt",
     "optimize": "Tối ưu PNG",
@@ -348,7 +301,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "ตัวเลือกการแปลง",
     "sizes": "ขนาด (px)",
     "selectAtLeastOneSize": "เลือกอย่างน้อยหนึ่งขนาด",
-    "padding": "ระยะขอบ (%)",
     "background": "พื้นหลัง",
     "backgroundHint": "เติมพื้นที่โปร่งใสด้วยสี",
     "optimize": "ปรับแต่ง PNG",
@@ -359,7 +311,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Opsi konversi",
     "sizes": "Ukuran (px)",
     "selectAtLeastOneSize": "Pilih setidaknya satu ukuran",
-    "padding": "Padding (%)",
     "background": "Latar belakang",
     "backgroundHint": "Isi area transparan dengan warna",
     "optimize": "Optimalkan PNG",
@@ -370,7 +321,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "אפשרויות המרה",
     "sizes": "גדלים (px)",
     "selectAtLeastOneSize": "בחר לפחות גודל אחד",
-    "padding": "ריפוד (%)",
     "background": "רקע",
     "backgroundHint": "מלא אזורים שקופים בצבע",
     "optimize": "אופטימיזציית PNG",
@@ -381,7 +331,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Pilihan penukaran",
     "sizes": "Saiz (px)",
     "selectAtLeastOneSize": "Pilih sekurang-kurangnya satu saiz",
-    "padding": "Padding (%)",
     "background": "Latar belakang",
     "backgroundHint": "Isi kawasan lutsinar dengan warna",
     "optimize": "Optimumkan PNG",
@@ -392,7 +341,6 @@ const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
     "options": "Konverteringsvalg",
     "sizes": "Størrelser (px)",
     "selectAtLeastOneSize": "Velg minst én størrelse",
-    "padding": "Utfylling (%)",
     "background": "Bakgrunn",
     "backgroundHint": "Fyll gjennomsiktige områder med en farge",
     "optimize": "Optimaliser PNG",

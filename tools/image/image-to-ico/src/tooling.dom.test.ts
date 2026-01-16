@@ -11,6 +11,7 @@ import ImageUpload from './components/ImageUpload.vue'
 import ConversionOptions from './components/ConversionOptions.vue'
 import OutputSection from './components/OutputSection.vue'
 import ErrorDisplay from './components/ErrorDisplay.vue'
+import WhatIsIco from './components/WhatIsIco.vue'
 import { convertImageToIco } from './utils/convert-image-to-ico'
 
 let objectUrlValue = 'blob:mock'
@@ -87,6 +88,9 @@ vi.mock('naive-ui', async () => {
     NFlex: BaseStub,
     NForm: BaseStub,
     NFormItem: BaseStub,
+    NFormItemGi: BaseStub,
+    NGi: BaseStub,
+    NGrid: BaseStub,
     NIcon: BaseStub,
     NImage: BaseStub,
     NInputNumber: makeModelStub('NInputNumber'),
@@ -156,7 +160,6 @@ const ConversionOptionsStub = defineComponent({
   name: 'ConversionOptions',
   props: {
     sizes: Array,
-    padding: Number,
     backgroundEnabled: Boolean,
     backgroundColor: String,
     optimize: Boolean,
@@ -166,7 +169,6 @@ const ConversionOptionsStub = defineComponent({
   emits: [
     'convert',
     'update:sizes',
-    'update:padding',
     'update:backgroundEnabled',
     'update:backgroundColor',
     'update:optimize',
@@ -211,11 +213,14 @@ const mountView = () =>
         NAlert: BaseStub,
         NButton: ButtonStub,
         NFlex: BaseStub,
+        NGi: BaseStub,
+        NGrid: BaseStub,
         NText: BaseStub,
         ImageUpload: ImageUploadStub,
         ConversionOptions: ConversionOptionsStub,
         OutputSection: OutputSectionStub,
         ErrorDisplay: ErrorDisplayStub,
+        WhatIsIco: BaseStub,
       },
     },
   })
@@ -240,6 +245,9 @@ const mountComponent = (
         NFlex: BaseStub,
         NForm: BaseStub,
         NFormItem: BaseStub,
+        NFormItemGi: BaseStub,
+        NGi: BaseStub,
+        NGrid: BaseStub,
         NIcon: BaseStub,
         NImage: BaseStub,
         NInputNumber: BaseStub,
@@ -347,7 +355,6 @@ describe('ImageToIcoConverterView', () => {
 
     const options = wrapper.findComponent(ConversionOptionsStub)
     options.vm.$emit('update:sizes', [24, 16])
-    options.vm.$emit('update:padding', 12)
     options.vm.$emit('update:backgroundEnabled', true)
     options.vm.$emit('update:backgroundColor', '#000000')
     options.vm.$emit('update:optimize', false)
@@ -359,7 +366,6 @@ describe('ImageToIcoConverterView', () => {
     const state = vm.$.setupState
 
     expect(unwrapValue(state.sizes as { value: number[] })).toEqual([24, 16])
-    expect(unwrapValue(state.padding as { value: number })).toBe(12)
     expect(unwrapValue(state.backgroundEnabled as { value: boolean })).toBe(true)
     expect(unwrapValue(state.backgroundColor as { value: string })).toBe('#000000')
     expect(unwrapValue(state.optimize as { value: boolean })).toBe(false)
@@ -414,6 +420,7 @@ describe('ImageToIcoConverterView', () => {
     expect(fileArg).toBeInstanceOf(File)
     expect(fileArg?.name).toBe(file.name)
     expect(call?.[1]?.sizes).toEqual([256, 48, 32, 16])
+    expect(call?.[1]?.padding).toBe(0)
 
     expect(wrapper.find('.output').exists()).toBe(true)
     expect(messageMock.success).toHaveBeenCalled()
@@ -591,14 +598,12 @@ describe('ConversionOptions', () => {
   it('emits convert when the button is clicked', async () => {
     const wrapper = mountComponent(ConversionOptions, {
       sizes: [16, 32],
-      padding: 0,
       backgroundEnabled: false,
       backgroundColor: '#ffffff',
       optimize: true,
       isConverting: false,
       canConvert: true,
       'onUpdate:sizes': () => undefined,
-      'onUpdate:padding': () => undefined,
       'onUpdate:backgroundEnabled': () => undefined,
       'onUpdate:backgroundColor': () => undefined,
       'onUpdate:optimize': () => undefined,
@@ -611,7 +616,6 @@ describe('ConversionOptions', () => {
 
   it('updates v-model values and renders conditional hints', async () => {
     const updateSizes = vi.fn()
-    const updatePadding = vi.fn()
     const updateBackgroundEnabled = vi.fn()
     const updateBackgroundColor = vi.fn()
     const updateOptimize = vi.fn()
@@ -620,22 +624,18 @@ describe('ConversionOptions', () => {
       ConversionOptions,
       {
         sizes: [],
-        padding: 0,
         backgroundEnabled: false,
         backgroundColor: '#ffffff',
         optimize: true,
         isConverting: false,
         canConvert: false,
         'onUpdate:sizes': updateSizes,
-        'onUpdate:padding': updatePadding,
         'onUpdate:backgroundEnabled': updateBackgroundEnabled,
         'onUpdate:backgroundColor': updateBackgroundColor,
         'onUpdate:optimize': updateOptimize,
       },
       {
         NCheckboxGroup: makeModelStub('NCheckboxGroup'),
-        NSlider: makeModelStub('NSlider'),
-        NInputNumber: makeModelStub('NInputNumber'),
         NSwitch: makeModelStub('NSwitch'),
         NColorPicker: makeModelStub('NColorPicker'),
       },
@@ -646,12 +646,6 @@ describe('ConversionOptions', () => {
 
     wrapper.findComponent({ name: 'NCheckboxGroup' }).vm.$emit('update:value', [16, 32])
     expect(updateSizes).toHaveBeenCalledWith([16, 32])
-
-    wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 12)
-    expect(updatePadding).toHaveBeenCalledWith(12)
-
-    wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 18)
-    expect(updatePadding).toHaveBeenCalledWith(18)
 
     const switches = wrapper.findAllComponents({ name: 'NSwitch' })
     switches[0]?.vm.$emit('update:value', true)
@@ -708,5 +702,21 @@ describe('ErrorDisplay', () => {
   it('renders nothing when there is no error', () => {
     const wrapper = mountComponent(ErrorDisplay, { error: '' })
     expect(wrapper.text()).toBe('')
+  })
+})
+
+describe('WhatIsIco', () => {
+  it('renders the title and description', () => {
+    const DescriptionMarkdownStub = defineComponent({
+      name: 'DescriptionMarkdown',
+      props: {
+        title: String,
+        description: String,
+      },
+      template: '<div>{{ title }} {{ description }}</div>',
+    })
+
+    const wrapper = mountComponent(WhatIsIco, {}, { DescriptionMarkdown: DescriptionMarkdownStub })
+    expect(wrapper.text()).toContain('What is ICO?')
   })
 })

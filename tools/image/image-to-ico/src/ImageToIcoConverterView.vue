@@ -1,37 +1,54 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
-    <ImageUpload v-model:file="originalFile" />
+    <n-grid cols="1 960:2" :x-gap="24" :y-gap="24" responsive="screen">
+      <n-gi>
+        <n-flex vertical :size="16">
+          <ImageUpload v-model:file="originalFile" />
 
-    <ConversionOptions
-      v-if="originalFile"
-      v-model:sizes="sizes"
-      v-model:padding="padding"
-      v-model:background-enabled="backgroundEnabled"
-      v-model:background-color="backgroundColor"
-      v-model:optimize="optimize"
-      :is-converting="isConverting"
-      :can-convert="canConvert"
-      @convert="convertToIco"
-    />
+          <ConversionOptions
+            v-if="originalFile"
+            v-model:sizes="sizes"
+            v-model:background-enabled="backgroundEnabled"
+            v-model:background-color="backgroundColor"
+            v-model:optimize="optimize"
+            :is-converting="isConverting"
+            :can-convert="canConvert"
+            @convert="convertToIco"
+          />
+        </n-flex>
+      </n-gi>
 
-    <OutputSection
-      v-if="outputBlob"
-      :blob="outputBlob"
-      :file-name="outputFileName"
-      :sizes="selectedSizes"
-    />
+      <n-gi>
+        <n-flex vertical :size="16">
+          <OutputSection
+            v-if="outputBlob"
+            :blob="outputBlob"
+            :file-name="outputFileName"
+            :sizes="selectedSizes"
+          />
 
-    <ErrorDisplay :error="error" />
+          <ErrorDisplay :error="error" />
+        </n-flex>
+      </n-gi>
+    </n-grid>
+
+    <WhatIsIco />
   </ToolDefaultPageLayout>
 </template>
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useMessage } from 'naive-ui'
+import { useMessage, NFlex, NGi, NGrid } from 'naive-ui'
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
-import { ImageUpload, ConversionOptions, OutputSection, ErrorDisplay } from './components'
+import {
+  ImageUpload,
+  ConversionOptions,
+  OutputSection,
+  ErrorDisplay,
+  WhatIsIco,
+} from './components'
 import { convertImageToIco } from './utils/convert-image-to-ico'
 
 const { t } = useI18n()
@@ -43,7 +60,6 @@ const error = ref('')
 const isConverting = ref(false)
 
 const sizes = ref<number[]>([16, 32, 48, 256])
-const padding = ref(0)
 const backgroundEnabled = ref(false)
 const backgroundColor = ref('#ffffff')
 const optimize = ref(true)
@@ -64,7 +80,7 @@ const outputFileName = computed(() => {
   return `${baseName || 'icon'}.ico`
 })
 
-watch([originalFile, sizes, padding, backgroundEnabled, backgroundColor, optimize], () => {
+watch([originalFile, sizes, backgroundEnabled, backgroundColor, optimize], () => {
   error.value = ''
   outputBlob.value = null
 })
@@ -82,7 +98,7 @@ async function convertToIco() {
   try {
     const icoBlob = await convertImageToIco(originalFile.value, {
       sizes: selectedSizes.value,
-      padding: padding.value,
+      padding: 0,
       backgroundEnabled: backgroundEnabled.value,
       backgroundColor: backgroundColor.value,
       optimize: optimize.value,
