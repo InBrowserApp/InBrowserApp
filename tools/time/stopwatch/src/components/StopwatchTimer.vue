@@ -197,10 +197,18 @@ const formatCsvRow = (row: LapRow) =>
     escapeCsv(String(row.index)),
     escapeCsv(formatStopwatch(row.lapTime)),
     escapeCsv(formatStopwatch(row.totalTime)),
+    escapeCsv(String(row.lapTime)),
+    escapeCsv(String(row.totalTime)),
   ].join(',')
 
 const csvHeader = computed(() =>
-  [escapeCsv('#'), escapeCsv(t('lap')), escapeCsv(t('total'))].join(','),
+  [
+    escapeCsv('#'),
+    escapeCsv(t('lap')),
+    escapeCsv(t('total')),
+    escapeCsv(t('lap-ms')),
+    escapeCsv(t('total-ms')),
+  ].join(','),
 )
 const csvLines = ref<string[]>([])
 
@@ -332,6 +340,8 @@ const recordLap = () => {
     "export": "Export",
     "no-laps": "No laps yet",
     "total": "Total",
+    "lap-ms": "Lap (ms)",
+    "total-ms": "Total (ms)",
     "status-running": "Running",
     "status-paused": "Paused"
   },
@@ -347,6 +357,8 @@ const recordLap = () => {
     "export": "导出",
     "no-laps": "暂无计次记录",
     "total": "总计",
+    "lap-ms": "计次(毫秒)",
+    "total-ms": "总计(毫秒)",
     "status-running": "计时中",
     "status-paused": "已暂停"
   },
@@ -362,6 +374,8 @@ const recordLap = () => {
     "export": "导出",
     "no-laps": "暂无计次记录",
     "total": "总计",
+    "lap-ms": "计次(毫秒)",
+    "total-ms": "总计(毫秒)",
     "status-running": "计时中",
     "status-paused": "已暂停"
   },
@@ -377,6 +391,8 @@ const recordLap = () => {
     "export": "匯出",
     "no-laps": "尚無計次記錄",
     "total": "總計",
+    "lap-ms": "計次(毫秒)",
+    "total-ms": "總計(毫秒)",
     "status-running": "計時中",
     "status-paused": "已暫停"
   },
@@ -392,6 +408,8 @@ const recordLap = () => {
     "export": "匯出",
     "no-laps": "尚無計次記錄",
     "total": "總計",
+    "lap-ms": "計次(毫秒)",
+    "total-ms": "總計(毫秒)",
     "status-running": "計時中",
     "status-paused": "已暫停"
   },
@@ -407,6 +425,8 @@ const recordLap = () => {
     "export": "Exportar",
     "no-laps": "Sin vueltas",
     "total": "Total",
+    "lap-ms": "Vuelta (ms)",
+    "total-ms": "Total (ms)",
     "status-running": "En marcha",
     "status-paused": "Pausado"
   },
@@ -422,6 +442,8 @@ const recordLap = () => {
     "export": "Exporter",
     "no-laps": "Aucun tour",
     "total": "Total",
+    "lap-ms": "Tour (ms)",
+    "total-ms": "Total (ms)",
     "status-running": "En cours",
     "status-paused": "En pause"
   },
@@ -437,6 +459,8 @@ const recordLap = () => {
     "export": "Exportieren",
     "no-laps": "Keine Runden",
     "total": "Gesamt",
+    "lap-ms": "Runde (ms)",
+    "total-ms": "Gesamt (ms)",
     "status-running": "Läuft",
     "status-paused": "Pausiert"
   },
@@ -452,6 +476,8 @@ const recordLap = () => {
     "export": "Esporta",
     "no-laps": "Nessun giro",
     "total": "Totale",
+    "lap-ms": "Giro (ms)",
+    "total-ms": "Totale (ms)",
     "status-running": "In corso",
     "status-paused": "In pausa"
   },
@@ -467,6 +493,8 @@ const recordLap = () => {
     "export": "エクスポート",
     "no-laps": "ラップはありません",
     "total": "合計",
+    "lap-ms": "ラップ(ms)",
+    "total-ms": "合計(ms)",
     "status-running": "計測中",
     "status-paused": "一時停止中"
   },
@@ -482,6 +510,8 @@ const recordLap = () => {
     "export": "내보내기",
     "no-laps": "랩 없음",
     "total": "총합",
+    "lap-ms": "랩(ms)",
+    "total-ms": "총합(ms)",
     "status-running": "진행 중",
     "status-paused": "일시정지됨"
   },
@@ -497,6 +527,8 @@ const recordLap = () => {
     "export": "Экспорт",
     "no-laps": "Кругов нет",
     "total": "Итого",
+    "lap-ms": "Круг (мс)",
+    "total-ms": "Итого (мс)",
     "status-running": "Идет",
     "status-paused": "Пауза"
   },
@@ -512,6 +544,8 @@ const recordLap = () => {
     "export": "Exportar",
     "no-laps": "Sem voltas",
     "total": "Total",
+    "lap-ms": "Volta (ms)",
+    "total-ms": "Total (ms)",
     "status-running": "Em andamento",
     "status-paused": "Pausado"
   },
@@ -527,6 +561,8 @@ const recordLap = () => {
     "export": "تصدير",
     "no-laps": "لا توجد لفات بعد",
     "total": "الإجمالي",
+    "lap-ms": "لفة (مللي ثانية)",
+    "total-ms": "الإجمالي (مللي ثانية)",
     "status-running": "قيد التشغيل",
     "status-paused": "متوقف مؤقتًا"
   },
@@ -542,6 +578,8 @@ const recordLap = () => {
     "export": "निर्यात",
     "no-laps": "कोई लैप नहीं",
     "total": "कुल",
+    "lap-ms": "लैप (मि.से.)",
+    "total-ms": "कुल (मि.से.)",
     "status-running": "चल रहा है",
     "status-paused": "रुका हुआ"
   },
@@ -557,6 +595,8 @@ const recordLap = () => {
     "export": "Dışa Aktar",
     "no-laps": "Tur yok",
     "total": "Toplam",
+    "lap-ms": "Tur (ms)",
+    "total-ms": "Toplam (ms)",
     "status-running": "Çalışıyor",
     "status-paused": "Duraklatıldı"
   },
@@ -572,6 +612,8 @@ const recordLap = () => {
     "export": "Exporteren",
     "no-laps": "Geen rondes",
     "total": "Totaal",
+    "lap-ms": "Ronde (ms)",
+    "total-ms": "Totaal (ms)",
     "status-running": "Bezig",
     "status-paused": "Gepauzeerd"
   },
@@ -587,6 +629,8 @@ const recordLap = () => {
     "export": "Exportera",
     "no-laps": "Inga varv",
     "total": "Totalt",
+    "lap-ms": "Varv (ms)",
+    "total-ms": "Totalt (ms)",
     "status-running": "Pågår",
     "status-paused": "Pausad"
   },
@@ -602,6 +646,8 @@ const recordLap = () => {
     "export": "Eksportuj",
     "no-laps": "Brak okrążeń",
     "total": "Razem",
+    "lap-ms": "Okrążenie (ms)",
+    "total-ms": "Razem (ms)",
     "status-running": "Trwa",
     "status-paused": "Wstrzymany"
   },
@@ -617,6 +663,8 @@ const recordLap = () => {
     "export": "Xuất",
     "no-laps": "Chưa có vòng",
     "total": "Tổng",
+    "lap-ms": "Vòng (ms)",
+    "total-ms": "Tổng (ms)",
     "status-running": "Đang chạy",
     "status-paused": "Đã tạm dừng"
   },
@@ -632,6 +680,8 @@ const recordLap = () => {
     "export": "ส่งออก",
     "no-laps": "ยังไม่มีรอบ",
     "total": "รวม",
+    "lap-ms": "รอบ (มิลลิวินาที)",
+    "total-ms": "รวม (มิลลิวินาที)",
     "status-running": "กำลังทำงาน",
     "status-paused": "หยุดชั่วคราว"
   },
@@ -647,6 +697,8 @@ const recordLap = () => {
     "export": "Ekspor",
     "no-laps": "Belum ada putaran",
     "total": "Total",
+    "lap-ms": "Putaran (ms)",
+    "total-ms": "Total (ms)",
     "status-running": "Berjalan",
     "status-paused": "Dijeda"
   },
@@ -662,6 +714,8 @@ const recordLap = () => {
     "export": "ייצוא",
     "no-laps": "אין הקפות",
     "total": "סך הכל",
+    "lap-ms": "הקפה (מילישניות)",
+    "total-ms": "סך הכל (מילישניות)",
     "status-running": "פועל",
     "status-paused": "מושהה"
   },
@@ -677,6 +731,8 @@ const recordLap = () => {
     "export": "Eksport",
     "no-laps": "Tiada pusingan",
     "total": "Jumlah",
+    "lap-ms": "Pusingan (ms)",
+    "total-ms": "Jumlah (ms)",
     "status-running": "Sedang berjalan",
     "status-paused": "Dijeda"
   },
@@ -692,6 +748,8 @@ const recordLap = () => {
     "export": "Eksporter",
     "no-laps": "Ingen runder",
     "total": "Totalt",
+    "lap-ms": "Runde (ms)",
+    "total-ms": "Totalt (ms)",
     "status-running": "Kjører",
     "status-paused": "Pauset"
   }
