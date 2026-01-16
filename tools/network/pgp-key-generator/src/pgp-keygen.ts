@@ -1,4 +1,4 @@
-import type { GenerateKeyOptions, UserID } from 'openpgp'
+import type { KeyOptions, UserID } from 'openpgp'
 
 export type KeyAlgorithm = 'ecc' | 'rsa'
 export type RsaKeySize = 2048 | 3072 | 4096
@@ -22,7 +22,7 @@ export interface PgpKeyPair {
   userID: string
 }
 
-const defaultCurve: GenerateKeyOptions['curve'] = 'curve25519Legacy'
+const defaultCurve: KeyOptions['curve'] = 'curve25519Legacy'
 
 function normalizeInput(value: string): string {
   return value.trim()
@@ -66,7 +66,7 @@ export async function generatePgpKeyPair(options: PgpKeyOptions): Promise<PgpKey
   const userID = buildUserID(options)
   const displayUserID = formatUserID(options)
 
-  const keyOptions: GenerateKeyOptions = {
+  const keyOptions: KeyOptions & { format: 'armored' } = {
     userIDs: [userID],
     format: 'armored',
   }

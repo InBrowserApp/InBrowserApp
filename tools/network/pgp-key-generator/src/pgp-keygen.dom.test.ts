@@ -46,7 +46,7 @@ describe('generatePgpKeyPair', () => {
       publicKey: 'PUBLIC',
       privateKey: 'PRIVATE',
       revocationCertificate: 'REVOCATION',
-    })
+    } as unknown as Awaited<ReturnType<typeof openpgp.generateKey>>)
     vi.mocked(openpgp.readKey).mockResolvedValue({
       getFingerprint: () => 'abcd1234',
       getKeyID: () => ({ toHex: () => 'deadbeef' }),
