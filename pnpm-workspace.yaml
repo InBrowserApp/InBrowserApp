@@ -12,7 +12,7 @@ catalog:
   ajv-formats: ^3.0.1
   '@commitlint/cli': ^20.3.0
   '@faker-js/faker': ^10.2.0
-  '@commitlint/config-conventional': ^20.3.0
+  '@commitlint/config-conventional': ^20.3.1
   '@commitlint/types': ^20.2.0
   '@guolao/vue-monaco-editor': ^1.6.0
   '@intlify/unplugin-vue-i18n': ^11.0.3
