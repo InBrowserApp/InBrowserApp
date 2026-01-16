@@ -106,6 +106,7 @@
     "@tools/slug-generator": "workspace:*",
     "@tools/sri-hash-generator": "workspace:*",
     "@tools/ssh-key-generator": "workspace:*",
+    "@tools/stopwatch": "workspace:*",
     "@tools/svg-optimizer": "workspace:*",
     "@tools/svg-to-image-converter": "workspace:*",
     "@tools/text-diff": "workspace:*",

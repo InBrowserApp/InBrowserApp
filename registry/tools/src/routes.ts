@@ -74,6 +74,7 @@ import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strengt
 import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
+import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
 import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
@@ -192,6 +193,7 @@ export const routes: ToolRoute[] = [
   ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
+  ...stopwatchRoutes,
   ...unixTimestampConverterRoutes,
   ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
