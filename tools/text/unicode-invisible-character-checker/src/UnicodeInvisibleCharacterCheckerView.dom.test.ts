@@ -6,7 +6,7 @@ vi.mock('@vueuse/core', async () => {
 
   return {
     ...actual,
-    useObjectUrl: (source) => {
+    useObjectUrl: (source: unknown) => {
       const url = ref('blob:mock')
       watchEffect(() => {
         if (isRef(source)) {
@@ -57,9 +57,13 @@ describe('UnicodeInvisibleCharacterChecker', () => {
 
   it('exposes tool metadata and routes', async () => {
     expect(toolInfo.toolID).toBe('unicode-invisible-character-checker')
-    expect(routes[0].path).toBe(toolInfo.path)
+    const route = routes[0]
+    if (!route || !route.component) {
+      throw new Error('Missing route definition')
+    }
+    expect(route.path).toBe(toolInfo.path)
     expect(indexModule.toolInfo.toolID).toBe(toolInfo.toolID)
-    const routeModule = await routes[0].component()
+    const routeModule = await (route.component as () => Promise<unknown>)()
     expect(routeModule).toBeTruthy()
   })
 
@@ -74,12 +78,16 @@ describe('UnicodeInvisibleCharacterChecker', () => {
     const result = scanInvisibleCharacters(text, enabled)
 
     expect(result.matches).toHaveLength(2)
-    expect(result.matches[0].code).toBe(formatCodePoint(0x200b))
-    expect(result.matches[0].line).toBe(1)
-    expect(result.matches[0].column).toBe(2)
-    expect(result.matches[1].code).toBe(formatCodePoint(0x202e))
-    expect(result.matches[1].line).toBe(2)
-    expect(result.matches[1].column).toBe(2)
+    const [firstMatch, secondMatch] = result.matches
+    if (!firstMatch || !secondMatch) {
+      throw new Error('Expected two matches')
+    }
+    expect(firstMatch.code).toBe(formatCodePoint(0x200b))
+    expect(firstMatch.line).toBe(1)
+    expect(firstMatch.column).toBe(2)
+    expect(secondMatch.code).toBe(formatCodePoint(0x202e))
+    expect(secondMatch.line).toBe(2)
+    expect(secondMatch.column).toBe(2)
     expect(result.cleanedText).toBe('A\r\nB')
     expect(result.annotatedText).toBe('A[[ZWSP]]\r\nB[[RLO]]')
   })

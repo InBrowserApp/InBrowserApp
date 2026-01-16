@@ -111,9 +111,11 @@ export function scanInvisibleCharacters(
   let previousWasCarriageReturn = false
 
   const chars = Array.from(text)
-  for (let i = 0; i < chars.length; i += 1) {
-    const char = chars[i]
-    const code = char.codePointAt(0) as number
+  for (const char of chars) {
+    const code = char.codePointAt(0)
+    if (code === undefined) {
+      continue
+    }
     const entry = INVISIBLE_CHAR_MAP.get(code)
     const isEnabled = entry ? enabledCategories.has(entry.category) : false
 
