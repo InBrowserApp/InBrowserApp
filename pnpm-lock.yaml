@@ -876,6 +876,9 @@ importers:
       '@tools/unicode-escape-unescape':
         specifier: workspace:*
         version: link:../../tools/web/unicode-escape-unescape
+      '@tools/unicode-invisible-character-checker':
+        specifier: workspace:*
+        version: link:../../tools/text/unicode-invisible-character-checker
       '@tools/unicode-punycode-converter':
         specifier: workspace:*
         version: link:../../tools/network/unicode-punycode-converter
@@ -3665,6 +3668,30 @@ importers:
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
   tools/text/text-statistics:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+
+  tools/text/unicode-invisible-character-checker:
     dependencies:
       '@shared/icons':
         specifier: workspace:*

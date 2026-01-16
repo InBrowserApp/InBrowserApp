@@ -121,6 +121,7 @@
     "@tools/toml-to-json-converter": "workspace:*",
     "@tools/toml-to-yaml-converter": "workspace:*",
     "@tools/unicode-escape-unescape": "workspace:*",
+    "@tools/unicode-invisible-character-checker": "workspace:*",
     "@tools/unicode-punycode-converter": "workspace:*",
     "@tools/unix-timestamp-converter": "workspace:*",
     "@tools/url-component-encoder-decoder": "workspace:*",
