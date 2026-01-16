@@ -52,6 +52,7 @@
     "@tools/html-entity-encoder-decoder": "workspace:*",
     "@tools/html-to-markdown-converter": "workspace:*",
     "@tools/http-status-code-lookup": "workspace:*",
+    "@tools/ical-event-generator": "workspace:*",
     "@tools/iban-validator": "workspace:*",
     "@tools/image-metadata-cleaner": "workspace:*",
     "@tools/image-tools": "workspace:*",
