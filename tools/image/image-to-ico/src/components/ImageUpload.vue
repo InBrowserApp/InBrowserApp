@@ -52,9 +52,7 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 const { t } = useI18n()
 const message = useMessage()
 
-const accept = 'image/png,image/jpeg,image/svg+xml,image/webp'
-const allowedTypes = new Set(['image/png', 'image/jpeg', 'image/svg+xml', 'image/webp'])
-const allowedExtensions = ['png', 'jpg', 'jpeg', 'svg', 'webp']
+const accept = 'image/*'
 
 const props = defineProps<{
   file: File | null
@@ -77,10 +75,10 @@ function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileIn
   }
 
   const ext = selectedFile.name.split('.').pop()?.toLowerCase()
-  const isValidType = allowedTypes.has(selectedFile.type)
-  const isValidExt = ext ? allowedExtensions.includes(ext) : false
+  const isImageType = selectedFile.type.startsWith('image/')
+  const canFallbackToExtension = !selectedFile.type && Boolean(ext)
 
-  if (!isValidType && !isValidExt) {
+  if (!isImageType && !canFallbackToExtension) {
     message.error(t('invalidFileType'))
     return false
   }
@@ -99,202 +97,202 @@ function handleClearFile() {
   "en": {
     "uploadImage": "Upload Image",
     "dragDropOrClick": "Click or drag to upload an image",
-    "supportedFormats": "Supports PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Supports various image formats",
     "removeFile": "Remove File",
     "onlyOneFile": "Only one file can be uploaded",
-    "invalidFileType": "Please select a valid PNG, JPEG, SVG, or WebP image"
+    "invalidFileType": "Please select a valid image file"
   },
   "zh": {
     "uploadImage": "上传图片",
     "dragDropOrClick": "点击或拖拽上传图片",
-    "supportedFormats": "支持 PNG、JPEG、SVG、WebP",
+    "supportedFormats": "支持多种图片格式",
     "removeFile": "移除文件",
     "onlyOneFile": "只能上传一个文件",
-    "invalidFileType": "请选择有效的 PNG、JPEG、SVG 或 WebP 图片"
+    "invalidFileType": "请选择有效的图片文件"
   },
   "zh-CN": {
     "uploadImage": "上传图片",
     "dragDropOrClick": "点击或拖拽上传图片",
-    "supportedFormats": "支持 PNG、JPEG、SVG、WebP",
+    "supportedFormats": "支持多种图片格式",
     "removeFile": "移除文件",
     "onlyOneFile": "只能上传一个文件",
-    "invalidFileType": "请选择有效的 PNG、JPEG、SVG 或 WebP 图片"
+    "invalidFileType": "请选择有效的图片文件"
   },
   "zh-TW": {
     "uploadImage": "上傳圖片",
     "dragDropOrClick": "點擊或拖曳上傳圖片",
-    "supportedFormats": "支援 PNG、JPEG、SVG、WebP",
+    "supportedFormats": "支援多種圖片格式",
     "removeFile": "移除檔案",
     "onlyOneFile": "只能上傳一個檔案",
-    "invalidFileType": "請選擇有效的 PNG、JPEG、SVG 或 WebP 圖片"
+    "invalidFileType": "請選擇有效的圖片檔案"
   },
   "zh-HK": {
     "uploadImage": "上傳圖片",
     "dragDropOrClick": "點擊或拖曳上傳圖片",
-    "supportedFormats": "支援 PNG、JPEG、SVG、WebP",
+    "supportedFormats": "支援多種圖片格式",
     "removeFile": "移除檔案",
     "onlyOneFile": "只能上傳一個檔案",
-    "invalidFileType": "請選擇有效的 PNG、JPEG、SVG 或 WebP 圖片"
+    "invalidFileType": "請選擇有效的圖片檔案"
   },
   "es": {
     "uploadImage": "Subir imagen",
     "dragDropOrClick": "Haz clic o arrastra para subir una imagen",
-    "supportedFormats": "Soporta PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Admite varios formatos de imagen",
     "removeFile": "Eliminar archivo",
     "onlyOneFile": "Solo se puede subir un archivo",
-    "invalidFileType": "Por favor selecciona una imagen PNG, JPEG, SVG o WebP válida"
+    "invalidFileType": "Por favor selecciona una imagen válida"
   },
   "fr": {
     "uploadImage": "Télécharger une image",
     "dragDropOrClick": "Cliquez ou glissez pour télécharger une image",
-    "supportedFormats": "Prend en charge PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Prend en charge divers formats d'image",
     "removeFile": "Supprimer le fichier",
     "onlyOneFile": "Un seul fichier peut être téléchargé",
-    "invalidFileType": "Veuillez sélectionner une image PNG, JPEG, SVG ou WebP valide"
+    "invalidFileType": "Veuillez sélectionner une image valide"
   },
   "de": {
     "uploadImage": "Bild hochladen",
     "dragDropOrClick": "Klicken oder ziehen Sie, um ein Bild hochzuladen",
-    "supportedFormats": "Unterstützt PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Unterstützt verschiedene Bildformate",
     "removeFile": "Datei entfernen",
     "onlyOneFile": "Es kann nur eine Datei hochgeladen werden",
-    "invalidFileType": "Bitte wählen Sie ein gültiges PNG-, JPEG-, SVG- oder WebP-Bild"
+    "invalidFileType": "Bitte wählen Sie eine gültige Bilddatei"
   },
   "it": {
     "uploadImage": "Carica immagine",
     "dragDropOrClick": "Clicca o trascina per caricare un'immagine",
-    "supportedFormats": "Supporta PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Supporta vari formati di immagine",
     "removeFile": "Rimuovi file",
     "onlyOneFile": "È possibile caricare solo un file",
-    "invalidFileType": "Seleziona un'immagine PNG, JPEG, SVG o WebP valida"
+    "invalidFileType": "Seleziona un'immagine valida"
   },
   "ja": {
     "uploadImage": "画像をアップロード",
     "dragDropOrClick": "クリックまたはドラッグして画像をアップロード",
-    "supportedFormats": "PNG、JPEG、SVG、WebP に対応",
+    "supportedFormats": "さまざまな画像形式に対応",
     "removeFile": "ファイルを削除",
     "onlyOneFile": "アップロードできるファイルは 1 つだけです",
-    "invalidFileType": "有効な PNG、JPEG、SVG、WebP 画像を選択してください"
+    "invalidFileType": "有効な画像ファイルを選択してください"
   },
   "ko": {
     "uploadImage": "이미지 업로드",
     "dragDropOrClick": "클릭하거나 드래그하여 이미지 업로드",
-    "supportedFormats": "PNG, JPEG, SVG, WebP 지원",
+    "supportedFormats": "다양한 이미지 형식 지원",
     "removeFile": "파일 제거",
     "onlyOneFile": "하나의 파일만 업로드할 수 있습니다",
-    "invalidFileType": "유효한 PNG, JPEG, SVG 또는 WebP 이미지를 선택하세요"
+    "invalidFileType": "유효한 이미지 파일을 선택하세요"
   },
   "ru": {
     "uploadImage": "Загрузить изображение",
     "dragDropOrClick": "Нажмите или перетащите, чтобы загрузить изображение",
-    "supportedFormats": "Поддерживает PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Поддерживает различные форматы изображений",
     "removeFile": "Удалить файл",
     "onlyOneFile": "Можно загрузить только один файл",
-    "invalidFileType": "Пожалуйста, выберите действительное изображение PNG, JPEG, SVG или WebP"
+    "invalidFileType": "Пожалуйста, выберите действительный файл изображения"
   },
   "pt": {
     "uploadImage": "Enviar imagem",
     "dragDropOrClick": "Clique ou arraste para enviar uma imagem",
-    "supportedFormats": "Suporta PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Suporta vários formatos de imagem",
     "removeFile": "Remover arquivo",
     "onlyOneFile": "Apenas um arquivo pode ser enviado",
-    "invalidFileType": "Selecione uma imagem PNG, JPEG, SVG ou WebP válida"
+    "invalidFileType": "Selecione um arquivo de imagem válido"
   },
   "ar": {
     "uploadImage": "تحميل صورة",
     "dragDropOrClick": "انقر أو اسحب لتحميل صورة",
-    "supportedFormats": "يدعم PNG وJPEG وSVG وWebP",
+    "supportedFormats": "يدعم صيغ صور متعددة",
     "removeFile": "إزالة الملف",
     "onlyOneFile": "يمكن تحميل ملف واحد فقط",
-    "invalidFileType": "يرجى اختيار صورة PNG أو JPEG أو SVG أو WebP صالحة"
+    "invalidFileType": "يرجى اختيار ملف صورة صالح"
   },
   "hi": {
     "uploadImage": "चित्र अपलोड करें",
     "dragDropOrClick": "अपलोड करने के लिए क्लिक करें या खींचें",
-    "supportedFormats": "PNG, JPEG, SVG, WebP समर्थित",
+    "supportedFormats": "विभिन्न छवि प्रारूप समर्थित",
     "removeFile": "फ़ाइल हटाएं",
     "onlyOneFile": "केवल एक फ़ाइल अपलोड की जा सकती है",
-    "invalidFileType": "कृपया मान्य PNG, JPEG, SVG या WebP छवि चुनें"
+    "invalidFileType": "कृपया एक मान्य छवि फ़ाइल चुनें"
   },
   "tr": {
     "uploadImage": "Görsel yükle",
     "dragDropOrClick": "Yüklemek için tıklayın veya sürükleyin",
-    "supportedFormats": "PNG, JPEG, SVG, WebP desteklenir",
+    "supportedFormats": "Çeşitli görüntü formatlarını destekler",
     "removeFile": "Dosyayı kaldır",
     "onlyOneFile": "Yalnızca bir dosya yüklenebilir",
-    "invalidFileType": "Lütfen geçerli bir PNG, JPEG, SVG veya WebP görseli seçin"
+    "invalidFileType": "Lütfen geçerli bir görüntü dosyası seçin"
   },
   "nl": {
     "uploadImage": "Afbeelding uploaden",
     "dragDropOrClick": "Klik of sleep om een afbeelding te uploaden",
-    "supportedFormats": "Ondersteunt PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Ondersteunt verschillende afbeeldingsformaten",
     "removeFile": "Bestand verwijderen",
     "onlyOneFile": "Er kan slechts één bestand worden geüpload",
-    "invalidFileType": "Selecteer een geldige PNG-, JPEG-, SVG- of WebP-afbeelding"
+    "invalidFileType": "Selecteer een geldig afbeeldingsbestand"
   },
   "sv": {
     "uploadImage": "Ladda upp bild",
     "dragDropOrClick": "Klicka eller dra för att ladda upp en bild",
-    "supportedFormats": "Stöder PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Stöder olika bildformat",
     "removeFile": "Ta bort fil",
     "onlyOneFile": "Endast en fil kan laddas upp",
-    "invalidFileType": "Välj en giltig PNG-, JPEG-, SVG- eller WebP-bild"
+    "invalidFileType": "Välj en giltig bildfil"
   },
   "pl": {
     "uploadImage": "Prześlij obraz",
     "dragDropOrClick": "Kliknij lub przeciągnij, aby przesłać obraz",
-    "supportedFormats": "Obsługuje PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Obsługuje różne formaty obrazów",
     "removeFile": "Usuń plik",
     "onlyOneFile": "Można przesłać tylko jeden plik",
-    "invalidFileType": "Wybierz prawidłowy obraz PNG, JPEG, SVG lub WebP"
+    "invalidFileType": "Wybierz prawidłowy plik obrazu"
   },
   "vi": {
     "uploadImage": "Tải ảnh lên",
     "dragDropOrClick": "Nhấp hoặc kéo để tải ảnh lên",
-    "supportedFormats": "Hỗ trợ PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Hỗ trợ nhiều định dạng hình ảnh",
     "removeFile": "Xóa tệp",
     "onlyOneFile": "Chỉ có thể tải lên một tệp",
-    "invalidFileType": "Vui lòng chọn ảnh PNG, JPEG, SVG hoặc WebP hợp lệ"
+    "invalidFileType": "Vui lòng chọn tệp hình ảnh hợp lệ"
   },
   "th": {
     "uploadImage": "อัปโหลดรูปภาพ",
     "dragDropOrClick": "คลิกหรือลากเพื่ออัปโหลดรูปภาพ",
-    "supportedFormats": "รองรับ PNG, JPEG, SVG, WebP",
+    "supportedFormats": "รองรับรูปแบบภาพหลากหลาย",
     "removeFile": "ลบไฟล์",
     "onlyOneFile": "อัปโหลดได้เพียงไฟล์เดียว",
-    "invalidFileType": "โปรดเลือกภาพ PNG, JPEG, SVG หรือ WebP ที่ถูกต้อง"
+    "invalidFileType": "โปรดเลือกไฟล์รูปภาพที่ถูกต้อง"
   },
   "id": {
     "uploadImage": "Unggah gambar",
     "dragDropOrClick": "Klik atau seret untuk mengunggah gambar",
-    "supportedFormats": "Mendukung PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Mendukung berbagai format gambar",
     "removeFile": "Hapus file",
     "onlyOneFile": "Hanya satu file yang dapat diunggah",
-    "invalidFileType": "Silakan pilih gambar PNG, JPEG, SVG, atau WebP yang valid"
+    "invalidFileType": "Silakan pilih file gambar yang valid"
   },
   "he": {
     "uploadImage": "העלאת תמונה",
     "dragDropOrClick": "לחץ או גרור כדי להעלות תמונה",
-    "supportedFormats": "תומך ב‑PNG, JPEG, SVG, WebP",
+    "supportedFormats": "תומך במגוון פורמטי תמונה",
     "removeFile": "הסר קובץ",
     "onlyOneFile": "ניתן להעלות קובץ אחד בלבד",
-    "invalidFileType": "בחר תמונת PNG, JPEG, SVG או WebP תקפה"
+    "invalidFileType": "בחר קובץ תמונה תקין"
   },
   "ms": {
     "uploadImage": "Muat naik imej",
     "dragDropOrClick": "Klik atau seret untuk memuat naik imej",
-    "supportedFormats": "Menyokong PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Menyokong pelbagai format imej",
     "removeFile": "Buang fail",
     "onlyOneFile": "Hanya satu fail boleh dimuat naik",
-    "invalidFileType": "Sila pilih imej PNG, JPEG, SVG atau WebP yang sah"
+    "invalidFileType": "Sila pilih fail imej yang sah"
   },
   "no": {
     "uploadImage": "Last opp bilde",
     "dragDropOrClick": "Klikk eller dra for å laste opp et bilde",
-    "supportedFormats": "Støtter PNG, JPEG, SVG, WebP",
+    "supportedFormats": "Støtter ulike bildeformater",
     "removeFile": "Fjern fil",
     "onlyOneFile": "Kun én fil kan lastes opp",
-    "invalidFileType": "Velg et gyldig PNG-, JPEG-, SVG- eller WebP-bilde"
+    "invalidFileType": "Velg en gyldig bildefil"
   }
 }
 </i18n>

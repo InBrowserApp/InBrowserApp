@@ -2,7 +2,7 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
 
-    <n-form label-placement="top">
+    <n-form label-placement="top" class="options-form">
       <n-form-item :label="t('sizes')" :show-feedback="false">
         <n-checkbox-group v-model:value="sizes" :disabled="isConverting">
           <n-space wrap>
@@ -67,6 +67,9 @@
         :disabled="!canConvert"
         @click="$emit('convert')"
       >
+        <template #icon>
+          <n-icon><Wand16Regular /></n-icon>
+        </template>
         {{ t('generate') }}
       </n-button>
     </n-form>
@@ -86,9 +89,11 @@ import {
   NSwitch,
   NColorPicker,
   NButton,
+  NIcon,
   NText,
   NFlex,
 } from 'naive-ui'
+import { Wand16Regular } from '@shared/icons/fluent'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 const { t } = useI18n()
@@ -110,6 +115,12 @@ const optimize = defineModel<boolean>('optimize', { required: true })
 
 const sizeOptions = [16, 24, 32, 48, 64, 128, 256]
 </script>
+
+<style scoped>
+.options-form :deep(.n-form-item) {
+  margin-bottom: 16px;
+}
+</style>
 
 <i18n lang="json">
 {
