@@ -10,8 +10,7 @@ vi.mock('@vueuse/core', async () => {
       const url = ref('blob:mock')
       watchEffect(() => {
         if (isRef(source)) {
-          source.value
-          return
+          return void source.value
         }
         if (typeof source === 'function') {
           source()
