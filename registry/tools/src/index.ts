@@ -106,6 +106,7 @@ import { toolInfo as regexTesterReplacerToolInfo } from '@tools/regex-tester-rep
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
+import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
 import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
 import { toolInfo as bicSwiftValidatorToolInfo } from '@tools/bic-swift-validator'
@@ -260,6 +261,7 @@ export const tools: ToolInfo[] = [
   jsonSchemaValidatorToolInfo,
   passwordStrengthCheckerToolInfo,
   creditCardValidatorToolInfo,
+  prcIdValidatorToolInfo,
   isbnValidatorToolInfo,
   ibanValidatorToolInfo,
   bicSwiftValidatorToolInfo,
