@@ -14,9 +14,12 @@ import * as toolInfo from './info'
 import ResidentIdInput from './components/ResidentIdInput.vue'
 import ResidentIdResult from './components/ResidentIdResult.vue'
 import WhatIsPRCResidentIdValidator from './components/WhatIsPRCResidentIdValidator.vue'
-import { validateResidentId } from './data/residentId'
+import { generateRandomResidentId, validateResidentId } from './data/residentId'
 
-const residentId = useStorage('tools:prc-id-validator:resident-id', '')
+const residentId = useStorage(
+  'tools:prc-id-validator:resident-id',
+  generateRandomResidentId(new Date()),
+)
 
 const validationResult = computed(() => validateResidentId(residentId.value))
 </script>

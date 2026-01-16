@@ -31,6 +31,10 @@ export interface ResidentIdValidationResult {
 const RESIDENT_ID_FORMAT = /^\d{17}[\dX]$/
 const CHECKSUM_WEIGHTS = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
 const CHECKSUM_DIGITS = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2']
+const REGION_CODES = Object.keys(ADMIN_REGION_CODES).filter(
+  (code) => code.length === 6 && !code.endsWith('00'),
+)
+const DEFAULT_REGION_CODE = REGION_CODES[0] ?? '110101'
 
 export function normalizeResidentId(input: string): string {
   return input.replace(/[\s-]/g, '').toUpperCase()
@@ -47,6 +51,30 @@ export function getResidentIdCheckDigit(core: string): string | null {
 
   const remainder = sum % 11
   return CHECKSUM_DIGITS[remainder] ?? null
+}
+
+function formatDateForId(date: Date): string {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  return `${String(year).padStart(4, '0')}${String(month).padStart(2, '0')}${String(day).padStart(
+    2,
+    '0',
+  )}`
+}
+
+export function generateRandomResidentId(date: Date = new Date()): string {
+  const regionCode =
+    REGION_CODES.length > 0
+      ? REGION_CODES[Math.floor(Math.random() * REGION_CODES.length)]
+      : DEFAULT_REGION_CODE
+  const birthDate = formatDateForId(date)
+  const sequenceCode = String(Math.floor(Math.random() * 999) + 1).padStart(3, '0')
+  const core = `${regionCode}${birthDate}${sequenceCode}`
+  const checkDigit = getResidentIdCheckDigit(core) ?? '0'
+
+  return `${core}${checkDigit}`
 }
 
 function getAge(birthDate: Date, now: Date): number {

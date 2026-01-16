@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { getResidentIdCheckDigit, normalizeResidentId, validateResidentId } from './residentId'
+import {
+  generateRandomResidentId,
+  getResidentIdCheckDigit,
+  normalizeResidentId,
+  validateResidentId,
+} from './residentId'
 
 describe('normalizeResidentId', () => {
   it('removes separators and normalizes X', () => {
@@ -61,5 +66,18 @@ describe('validateResidentId', () => {
     const result = validateResidentId('11010519491231002')
     expect(result.isLengthValid).toBe(false)
     expect(result.isValid).toBe(false)
+  })
+})
+
+describe('generateRandomResidentId', () => {
+  it('includes the provided date and produces a valid ID', () => {
+    const date = new Date(2001, 0, 2)
+    const generated = generateRandomResidentId(date)
+    expect(generated).toMatch(/^\d{17}[\dX]$/)
+    expect(generated.slice(6, 14)).toBe('20010102')
+
+    const result = validateResidentId(generated)
+    expect(result.isValid).toBe(true)
+    expect(result.birthDateText).toBe('2001-01-02')
   })
 })
