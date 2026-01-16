@@ -14,6 +14,8 @@ const mountComponent = () =>
   })
 
 const seedStorage = (overrides: Record<string, string> = {}) => {
+  const defaultStart = new Date(2024, 0, 2, 10, 0, 0).getTime()
+  const defaultEnd = new Date(2024, 0, 2, 11, 0, 0).getTime()
   const defaults: Record<string, string> = {
     'tools:ical-event-generator:title': 'Team Sync',
     'tools:ical-event-generator:location': 'Room 1',
@@ -23,8 +25,7 @@ const seedStorage = (overrides: Record<string, string> = {}) => {
     'tools:ical-event-generator:all-day': 'false',
     'tools:ical-event-generator:time-zone': 'UTC',
     'tools:ical-event-generator:output-mode': 'utc',
-    'tools:ical-event-generator:start-input': '2024-01-02 10:00:00',
-    'tools:ical-event-generator:end-input': '',
+    'tools:ical-event-generator:date-range': JSON.stringify([defaultStart, defaultEnd]),
     'tools:ical-event-generator:recurrence-frequency': 'weekly',
     'tools:ical-event-generator:recurrence-interval': '1',
     'tools:ical-event-generator:recurrence-weekdays': JSON.stringify(['MO', 'WE']),
@@ -76,8 +77,10 @@ describe('IcalEventGenerator', () => {
   it('generates all-day events with exclusive end dates', async () => {
     seedStorage({
       'tools:ical-event-generator:all-day': 'true',
-      'tools:ical-event-generator:start-input': '2024-05-01',
-      'tools:ical-event-generator:end-input': '',
+      'tools:ical-event-generator:date-range': JSON.stringify([
+        new Date(2024, 4, 1, 0, 0, 0).getTime(),
+        new Date(2024, 4, 2, 0, 0, 0).getTime(),
+      ]),
       'tools:ical-event-generator:recurrence-frequency': 'none',
       'tools:ical-event-generator:reminders-enabled': 'false',
     })
@@ -95,8 +98,10 @@ describe('IcalEventGenerator', () => {
     seedStorage({
       'tools:ical-event-generator:time-zone': 'Asia/Tokyo',
       'tools:ical-event-generator:output-mode': 'tzid',
-      'tools:ical-event-generator:start-input': '2024-01-02 10:00:00',
-      'tools:ical-event-generator:end-input': '2024-01-02 11:00:00',
+      'tools:ical-event-generator:date-range': JSON.stringify([
+        new Date(2024, 0, 2, 10, 0, 0).getTime(),
+        new Date(2024, 0, 2, 11, 0, 0).getTime(),
+      ]),
       'tools:ical-event-generator:recurrence-frequency': 'none',
       'tools:ical-event-generator:reminders-enabled': 'false',
     })

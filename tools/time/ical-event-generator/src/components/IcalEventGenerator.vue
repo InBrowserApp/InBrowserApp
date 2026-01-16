@@ -22,9 +22,9 @@
           <n-form-item-gi :label="t('url')" :show-feedback="false">
             <n-input v-model:value="url" />
           </n-form-item-gi>
-          <n-form-item-gi :label="t('uid')" :show-feedback="false">
+          <n-form-item-gi :label="t('uid')" :show-feedback="false" content-style="width: 100%">
             <n-flex align="center" :size="8" :wrap="false" style="width: 100%">
-              <n-input v-model:value="uid" readonly style="flex: 1; min-width: 0" />
+              <n-input v-model:value="uid" readonly style="flex: 1; min-width: 0; width: 100%" />
               <n-button tertiary size="small" @click="regenerateUid">
                 <template #icon>
                   <n-icon :component="ArrowCounterclockwise16Regular" />
@@ -52,6 +52,7 @@
                 :options="timeZoneOptions"
                 filterable
                 :placeholder="t('timezone-placeholder')"
+                style="width: 100%"
               />
               <n-text v-if="offsetLabel" depth="3"> {{ t('offset') }}: {{ offsetLabel }} </n-text>
             </n-flex>
@@ -66,41 +67,19 @@
           </n-form-item-gi>
         </n-grid>
 
-        <n-grid cols="1 900:2" x-gap="12" y-gap="12" style="margin-top: 12px">
-          <n-form-item-gi :label="t('start')" :show-feedback="false">
-            <n-flex align="center" :size="8">
-              <n-input
-                v-model:value="startInput"
-                :placeholder="isAllDay ? t('date-placeholder') : t('datetime-placeholder')"
-                :status="startStatus"
-                style="flex: 1"
-              />
-              <n-button v-if="!isAllDay" text size="small" @click="setNow">
-                <template #icon>
-                  <n-icon :component="Clock16Regular" />
-                </template>
-                {{ t('now') }}
-              </n-button>
-            </n-flex>
-            <template v-if="startError" #feedback>
-              <n-text type="error">{{ startError }}</n-text>
-            </template>
-          </n-form-item-gi>
-          <n-form-item-gi :label="t('end')" :show-feedback="false">
-            <n-input
-              v-model:value="endInput"
-              :placeholder="isAllDay ? t('date-placeholder') : t('datetime-placeholder')"
-              :status="endStatus"
+        <n-grid cols="1" y-gap="12" style="margin-top: 12px">
+          <n-form-item-gi :label="`${t('start')} / ${t('end')}`" :show-feedback="!!rangeError">
+            <n-date-picker
+              v-model:value="dateRange"
+              type="datetimerange"
+              clearable
+              style="width: 100%"
             />
-            <template v-if="endError" #feedback>
-              <n-text type="error">{{ endError }}</n-text>
+            <template v-if="rangeError" #feedback>
+              <n-text type="error">{{ rangeError }}</n-text>
             </template>
           </n-form-item-gi>
         </n-grid>
-
-        <n-text depth="3" style="margin-top: 8px">
-          {{ isAllDay ? t('format-hint-date') : t('format-hint-datetime') }}
-        </n-text>
         <n-text v-if="isAllDay" depth="3" style="margin-top: 4px">
           {{ t('all-day-end-hint') }}
         </n-text>
@@ -196,7 +175,7 @@
           <n-form-item-gi
             v-if="recurrenceEndMode === 'until'"
             :label="t('until')"
-            :show-feedback="false"
+            :show-feedback="!!recurrenceUntilError"
           >
             <n-input
               v-model:value="recurrenceUntilInput"
@@ -274,7 +253,7 @@
 
       <ToolSectionHeader>{{ t('qr-code') }}</ToolSectionHeader>
       <ToolSection>
-        <n-flex vertical :size="12">
+        <n-flex vertical :size="16">
           <QRCodePreview
             :text="icsContent || ' '"
             :error-correction-level="qrOptions.errorCorrectionLevel"
@@ -306,6 +285,7 @@ import {
   NIcon,
   NInput,
   NInputNumber,
+  NDatePicker,
   NSelect,
   NSwitch,
   NRadioGroup,
@@ -323,7 +303,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import {
   ArrowDownload16Regular,
-  Clock16Regular,
   Add16Regular,
   Delete16Regular,
   ArrowCounterclockwise16Regular,
@@ -379,11 +358,11 @@ const isAllDay = useStorage('tools:ical-event-generator:all-day', false)
 const timeZone = useStorage('tools:ical-event-generator:time-zone', defaultTimeZone)
 const outputMode = useStorage<OutputMode>('tools:ical-event-generator:output-mode', 'utc')
 
-const startInput = useStorage(
-  'tools:ical-event-generator:start-input',
-  formatInputDateTime(Date.now(), defaultTimeZone),
-)
-const endInput = useStorage('tools:ical-event-generator:end-input', '')
+const defaultRangeStart = Date.now()
+const dateRange = useStorage<[number, number] | null>('tools:ical-event-generator:date-range', [
+  defaultRangeStart,
+  defaultRangeStart + 60 * 60 * 1000,
+])
 
 const recurrenceFrequency = useStorage<Frequency>(
   'tools:ical-event-generator:recurrence-frequency',
@@ -417,18 +396,6 @@ if (!isTimeZoneSupported(timeZone.value)) {
   timeZone.value = defaultTimeZone
 }
 
-watch(isAllDay, (value) => {
-  if (!value) return
-  const startParts = parseDateTimeInput(startInput.value)
-  if (startParts) {
-    startInput.value = formatDateInput(startParts)
-  }
-  const endParts = parseDateTimeInput(endInput.value)
-  if (endParts) {
-    endInput.value = formatDateInput(endParts)
-  }
-})
-
 const frequencyOptions = computed(() => [
   { label: t('frequency-none'), value: 'none' },
   { label: t('frequency-daily'), value: 'daily' },
@@ -460,73 +427,55 @@ const reminderUnitOptions = computed(() => [
   { label: t('weeks'), value: 'weeks' },
 ])
 
-const startParts = computed(() =>
-  isAllDay.value ? parseDateInput(startInput.value) : parseDateTimeInput(startInput.value),
-)
+const rangeStart = computed(() => (dateRange.value ? dateRange.value[0] : null))
+const rangeEnd = computed(() => (dateRange.value ? dateRange.value[1] : null))
 
-const startStatus = computed(() => {
-  if (!startInput.value.trim()) return undefined
-  return startParts.value ? 'success' : 'error'
-})
-
-const startError = computed(() => {
-  if (!startInput.value.trim()) return ''
-  if (startParts.value) return ''
-  return isAllDay.value ? t('invalid-date') : t('invalid-date-time')
-})
-
-const startTimestamp = computed(() => {
-  if (!startParts.value) return null
-  return toUtcTimestamp(startParts.value, timeZone.value)
+const startParts = computed(() => {
+  if (rangeStart.value === null) return null
+  return toLocalParts(rangeStart.value)
 })
 
 const endParts = computed(() => {
-  if (!endInput.value.trim()) return null
-  return isAllDay.value ? parseDateInput(endInput.value) : parseDateTimeInput(endInput.value)
+  if (rangeEnd.value === null) return null
+  return toLocalParts(rangeEnd.value)
 })
 
-const endStatus = computed(() => {
-  if (!endInput.value.trim()) return undefined
-  return endParts.value ? 'success' : 'error'
+const startDateParts = computed(() => (startParts.value ? toDateParts(startParts.value) : null))
+const endDateParts = computed(() => (endParts.value ? toDateParts(endParts.value) : null))
+
+const startTimestamp = computed(() => {
+  if (!startParts.value) return null
+  const parts = isAllDay.value ? toDateParts(startParts.value) : startParts.value
+  return toUtcTimestamp(parts, timeZone.value)
 })
 
 const endTimestamp = computed(() => {
-  if (!startTimestamp.value) return null
-  if (endInput.value.trim()) {
-    if (!endParts.value) return null
-    return toUtcTimestamp(endParts.value, timeZone.value)
-  }
-  return startTimestamp.value + 60 * 60 * 1000
+  if (!endParts.value) return null
+  const parts = isAllDay.value ? toDateParts(endParts.value) : endParts.value
+  return toUtcTimestamp(parts, timeZone.value)
 })
 
-const endDateParts = computed(() => {
-  if (!startParts.value) return null
-  if (endInput.value.trim()) {
-    if (!endParts.value) return null
-    return endParts.value
-  }
-  return addDays(startParts.value, 1)
-})
-
-const endError = computed(() => {
-  if (!endInput.value.trim()) return ''
-  if (!endParts.value) {
-    return isAllDay.value ? t('invalid-date') : t('invalid-date-time')
-  }
-  if (!startParts.value) return ''
+const rangeError = computed(() => {
+  if (!dateRange.value) return ''
+  if (!startParts.value || !endParts.value) return t('invalid-date-time')
 
   if (isAllDay.value) {
+    if (!startDateParts.value || !endDateParts.value) return t('invalid-date')
     const startDate = Date.UTC(
-      startParts.value.year,
-      startParts.value.month - 1,
-      startParts.value.day,
+      startDateParts.value.year,
+      startDateParts.value.month - 1,
+      startDateParts.value.day,
     )
-    const endDate = Date.UTC(endParts.value.year, endParts.value.month - 1, endParts.value.day)
+    const endDate = Date.UTC(
+      endDateParts.value.year,
+      endDateParts.value.month - 1,
+      endDateParts.value.day,
+    )
     return endDate <= startDate ? t('end-before-start') : ''
   }
 
-  if (endTimestamp.value !== null && startTimestamp.value !== null) {
-    return endTimestamp.value <= startTimestamp.value ? t('end-before-start') : ''
+  if (rangeStart.value !== null && rangeEnd.value !== null) {
+    return rangeEnd.value <= rangeStart.value ? t('end-before-start') : ''
   }
 
   return ''
@@ -537,6 +486,31 @@ const offsetLabel = computed(() => {
   const reference = startTimestamp.value ?? Date.now()
   return formatOffsetLabel(getTimeZoneOffsetMs(reference, timeZone.value))
 })
+
+watch(
+  isAllDay,
+  (allDay) => {
+    const range = dateRange.value
+    if (!range || range.length < 2) return
+    const [start, end] = range
+    if (start === null || end === null) return
+
+    if (allDay) {
+      const normalizedStart = startOfLocalDay(start)
+      let normalizedEnd = startOfLocalDay(end)
+      if (normalizedEnd <= normalizedStart) {
+        normalizedEnd = addLocalDays(normalizedStart, 1)
+      }
+      dateRange.value = [normalizedStart, normalizedEnd]
+      return
+    }
+
+    if (end <= start) {
+      dateRange.value = [start, start + 60 * 60 * 1000]
+    }
+  },
+  { immediate: true },
+)
 
 const recurrenceUntilParts = computed(() => {
   if (recurrenceEndMode.value !== 'until') return null
@@ -658,9 +632,8 @@ const dtendValue = computed<IcsDateValue | null>(() => {
 })
 
 const outputError = computed(() => {
-  if (!startInput.value.trim()) return ''
-  if (!startParts.value) return startError.value
-  if (endError.value) return endError.value
+  if (!dateRange.value) return ''
+  if (rangeError.value) return rangeError.value
   if (recurrenceUntilError.value) return recurrenceUntilError.value
   return ''
 })
@@ -716,32 +689,24 @@ function regenerateUid() {
   uid.value = generateUid()
 }
 
-function setNow() {
-  const now = Date.now()
-  if (isAllDay.value) {
-    const parts = parseDateTimeInput(formatInTimeZone(now, timeZone.value))
-    if (parts) {
-      startInput.value = formatDateInput(parts)
-    }
-    return
-  }
-  startInput.value = formatInputDateTime(now, timeZone.value)
-}
-
-function formatDateInput(parts: DateTimeParts): string {
-  const year = String(parts.year).padStart(4, '0')
-  const month = String(parts.month).padStart(2, '0')
-  const day = String(parts.day).padStart(2, '0')
-  return `${year}-${month}-${day}`
-}
-
-function addDays(parts: DateTimeParts, days: number): DateTimeParts {
-  const date = new Date(Date.UTC(parts.year, parts.month - 1, parts.day))
-  date.setUTCDate(date.getUTCDate() + days)
+function toLocalParts(timestamp: number): DateTimeParts {
+  const date = new Date(timestamp)
   return {
-    year: date.getUTCFullYear(),
-    month: date.getUTCMonth() + 1,
-    day: date.getUTCDate(),
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    millisecond: date.getMilliseconds(),
+  }
+}
+
+function toDateParts(parts: DateTimeParts): DateTimeParts {
+  return {
+    year: parts.year,
+    month: parts.month,
+    day: parts.day,
     hour: 0,
     minute: 0,
     second: 0,
@@ -749,8 +714,16 @@ function addDays(parts: DateTimeParts, days: number): DateTimeParts {
   }
 }
 
-function formatInputDateTime(timestamp: number, zone: string): string {
-  return formatInTimeZone(timestamp, zone).replace(/\.\d{3}$/, '')
+function startOfLocalDay(timestamp: number): number {
+  const date = new Date(timestamp)
+  date.setHours(0, 0, 0, 0)
+  return date.getTime()
+}
+
+function addLocalDays(timestamp: number, days: number): number {
+  const date = new Date(timestamp)
+  date.setDate(date.getDate() + days)
+  return date.getTime()
 }
 
 function generateUid(): string {
@@ -797,11 +770,7 @@ function generateUid(): string {
     "output-tzid": "Local time (TZID)",
     "start": "Start",
     "end": "End",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Now",
     "invalid-date-time": "Invalid date/time",
     "invalid-date": "Invalid date",
     "end-before-start": "End must be after start",
@@ -865,11 +834,7 @@ function generateUid(): string {
     "output-tzid": "本地时间 (TZID)",
     "start": "开始",
     "end": "结束",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "格式：YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "格式：YYYY-MM-DD",
-    "now": "现在",
     "invalid-date-time": "无效的日期/时间",
     "invalid-date": "无效的日期",
     "end-before-start": "结束时间必须晚于开始时间",
@@ -933,11 +898,7 @@ function generateUid(): string {
     "output-tzid": "本地时间 (TZID)",
     "start": "开始",
     "end": "结束",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "格式：YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "格式：YYYY-MM-DD",
-    "now": "现在",
     "invalid-date-time": "无效的日期/时间",
     "invalid-date": "无效的日期",
     "end-before-start": "结束时间必须晚于开始时间",
@@ -1001,11 +962,7 @@ function generateUid(): string {
     "output-tzid": "本地時間 (TZID)",
     "start": "開始",
     "end": "結束",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "格式：YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "格式：YYYY-MM-DD",
-    "now": "現在",
     "invalid-date-time": "無效的日期/時間",
     "invalid-date": "無效的日期",
     "end-before-start": "結束時間必須晚於開始時間",
@@ -1069,11 +1026,7 @@ function generateUid(): string {
     "output-tzid": "本地時間 (TZID)",
     "start": "開始",
     "end": "結束",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "格式：YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "格式：YYYY-MM-DD",
-    "now": "現在",
     "invalid-date-time": "無效的日期/時間",
     "invalid-date": "無效的日期",
     "end-before-start": "結束時間必須晚於開始時間",
@@ -1137,11 +1090,7 @@ function generateUid(): string {
     "output-tzid": "Hora local (TZID)",
     "start": "Inicio",
     "end": "Fin",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Formato: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Formato: YYYY-MM-DD",
-    "now": "Ahora",
     "invalid-date-time": "Fecha/hora inválida",
     "invalid-date": "Fecha inválida",
     "end-before-start": "El fin debe ser posterior al inicio",
@@ -1205,11 +1154,7 @@ function generateUid(): string {
     "output-tzid": "Heure locale (TZID)",
     "start": "Début",
     "end": "Fin",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format : YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format : YYYY-MM-DD",
-    "now": "Maintenant",
     "invalid-date-time": "Date/heure invalide",
     "invalid-date": "Date invalide",
     "end-before-start": "La fin doit être après le début",
@@ -1273,11 +1218,7 @@ function generateUid(): string {
     "output-tzid": "Ortszeit (TZID)",
     "start": "Start",
     "end": "Ende",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Jetzt",
     "invalid-date-time": "Ungültiges Datum/Uhrzeit",
     "invalid-date": "Ungültiges Datum",
     "end-before-start": "Ende muss nach dem Start liegen",
@@ -1341,11 +1282,7 @@ function generateUid(): string {
     "output-tzid": "Ora locale (TZID)",
     "start": "Inizio",
     "end": "Fine",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Formato: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Formato: YYYY-MM-DD",
-    "now": "Adesso",
     "invalid-date-time": "Data/ora non valida",
     "invalid-date": "Data non valida",
     "end-before-start": "La fine deve essere successiva all'inizio",
@@ -1409,11 +1346,7 @@ function generateUid(): string {
     "output-tzid": "ローカル時刻 (TZID)",
     "start": "開始",
     "end": "終了",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "形式: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "形式: YYYY-MM-DD",
-    "now": "現在",
     "invalid-date-time": "無効な日付/時刻",
     "invalid-date": "無効な日付",
     "end-before-start": "終了は開始より後である必要があります",
@@ -1477,11 +1410,7 @@ function generateUid(): string {
     "output-tzid": "로컬 시간 (TZID)",
     "start": "시작",
     "end": "종료",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "형식: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "형식: YYYY-MM-DD",
-    "now": "현재",
     "invalid-date-time": "유효하지 않은 날짜/시간",
     "invalid-date": "유효하지 않은 날짜",
     "end-before-start": "종료는 시작 이후여야 합니다",
@@ -1545,11 +1474,7 @@ function generateUid(): string {
     "output-tzid": "Местное время (TZID)",
     "start": "Начало",
     "end": "Конец",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Формат: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Формат: YYYY-MM-DD",
-    "now": "Сейчас",
     "invalid-date-time": "Недопустимая дата/время",
     "invalid-date": "Недопустимая дата",
     "end-before-start": "Окончание должно быть после начала",
@@ -1613,11 +1538,7 @@ function generateUid(): string {
     "output-tzid": "Hora local (TZID)",
     "start": "Início",
     "end": "Fim",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Formato: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Formato: YYYY-MM-DD",
-    "now": "Agora",
     "invalid-date-time": "Data/hora inválida",
     "invalid-date": "Data inválida",
     "end-before-start": "O fim deve ser após o início",
@@ -1681,11 +1602,7 @@ function generateUid(): string {
     "output-tzid": "الوقت المحلي (TZID)",
     "start": "البداية",
     "end": "النهاية",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "التنسيق: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "التنسيق: YYYY-MM-DD",
-    "now": "الآن",
     "invalid-date-time": "تاريخ/وقت غير صالح",
     "invalid-date": "تاريخ غير صالح",
     "end-before-start": "يجب أن تكون النهاية بعد البداية",
@@ -1749,11 +1666,7 @@ function generateUid(): string {
     "output-tzid": "स्थानीय समय (TZID)",
     "start": "शुरू",
     "end": "समाप्त",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "फ़ॉर्मेट: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "फ़ॉर्मेट: YYYY-MM-DD",
-    "now": "अभी",
     "invalid-date-time": "अमान्य तिथि/समय",
     "invalid-date": "अमान्य तिथि",
     "end-before-start": "समाप्ति समय शुरू के बाद होना चाहिए",
@@ -1817,11 +1730,7 @@ function generateUid(): string {
     "output-tzid": "Yerel saat (TZID)",
     "start": "Başlangıç",
     "end": "Bitiş",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Biçim: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Biçim: YYYY-MM-DD",
-    "now": "Şimdi",
     "invalid-date-time": "Geçersiz tarih/saat",
     "invalid-date": "Geçersiz tarih",
     "end-before-start": "Bitiş başlangıçtan sonra olmalıdır",
@@ -1885,11 +1794,7 @@ function generateUid(): string {
     "output-tzid": "Lokale tijd (TZID)",
     "start": "Start",
     "end": "Einde",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Formaat: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Formaat: YYYY-MM-DD",
-    "now": "Nu",
     "invalid-date-time": "Ongeldige datum/tijd",
     "invalid-date": "Ongeldige datum",
     "end-before-start": "Einde moet na het begin liggen",
@@ -1953,11 +1858,7 @@ function generateUid(): string {
     "output-tzid": "Lokal tid (TZID)",
     "start": "Start",
     "end": "Slut",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Nu",
     "invalid-date-time": "Ogiltigt datum/tid",
     "invalid-date": "Ogiltigt datum",
     "end-before-start": "Slutet måste vara efter start",
@@ -2021,11 +1922,7 @@ function generateUid(): string {
     "output-tzid": "Czas lokalny (TZID)",
     "start": "Start",
     "end": "Koniec",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Teraz",
     "invalid-date-time": "Nieprawidłowa data/godzina",
     "invalid-date": "Nieprawidłowa data",
     "end-before-start": "Koniec musi być po początku",
@@ -2089,11 +1986,7 @@ function generateUid(): string {
     "output-tzid": "Giờ địa phương (TZID)",
     "start": "Bắt đầu",
     "end": "Kết thúc",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Định dạng: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Định dạng: YYYY-MM-DD",
-    "now": "Bây giờ",
     "invalid-date-time": "Ngày/giờ không hợp lệ",
     "invalid-date": "Ngày không hợp lệ",
     "end-before-start": "Kết thúc phải sau khi bắt đầu",
@@ -2157,11 +2050,7 @@ function generateUid(): string {
     "output-tzid": "เวลาท้องถิ่น (TZID)",
     "start": "เริ่มต้น",
     "end": "สิ้นสุด",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "รูปแบบ: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "รูปแบบ: YYYY-MM-DD",
-    "now": "ตอนนี้",
     "invalid-date-time": "วันที่/เวลาไม่ถูกต้อง",
     "invalid-date": "วันที่ไม่ถูกต้อง",
     "end-before-start": "เวลาสิ้นสุดต้องหลังเวลาเริ่มต้น",
@@ -2225,11 +2114,7 @@ function generateUid(): string {
     "output-tzid": "Waktu lokal (TZID)",
     "start": "Mulai",
     "end": "Selesai",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Sekarang",
     "invalid-date-time": "Tanggal/waktu tidak valid",
     "invalid-date": "Tanggal tidak valid",
     "end-before-start": "Selesai harus setelah mulai",
@@ -2293,11 +2178,7 @@ function generateUid(): string {
     "output-tzid": "שעה מקומית (TZID)",
     "start": "התחלה",
     "end": "סיום",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "פורמט: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "פורמט: YYYY-MM-DD",
-    "now": "עכשיו",
     "invalid-date-time": "תאריך/שעה לא תקינים",
     "invalid-date": "תאריך לא תקין",
     "end-before-start": "הסיום חייב להיות אחרי ההתחלה",
@@ -2361,11 +2242,7 @@ function generateUid(): string {
     "output-tzid": "Masa tempatan (TZID)",
     "start": "Mula",
     "end": "Tamat",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Sekarang",
     "invalid-date-time": "Tarikh/masa tidak sah",
     "invalid-date": "Tarikh tidak sah",
     "end-before-start": "Tamat mesti selepas mula",
@@ -2429,11 +2306,7 @@ function generateUid(): string {
     "output-tzid": "Lokal tid (TZID)",
     "start": "Start",
     "end": "Slutt",
-    "datetime-placeholder": "YYYY-MM-DD HH:mm:ss",
     "date-placeholder": "YYYY-MM-DD",
-    "format-hint-datetime": "Format: YYYY-MM-DD HH:mm:ss",
-    "format-hint-date": "Format: YYYY-MM-DD",
-    "now": "Nå",
     "invalid-date-time": "Ugyldig dato/tid",
     "invalid-date": "Ugyldig dato",
     "end-before-start": "Slutt må være etter start",
