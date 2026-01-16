@@ -93,7 +93,7 @@ function validateDE(value: string): boolean {
 
 function validateDK(value: string): boolean {
   const digits = toDigits(value)
-  const weights = [2, 7, 6, 5, 4, 3, 2]
+  const weights = [2, 7, 6, 5, 4, 3, 2, 1]
   const sum = weights.reduce((total, weight, index) => total + weight * digits[index]!, 0)
 
   return sum % 11 === 0
