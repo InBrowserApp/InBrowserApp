@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { sitemapPlugin } from './scripts/sitemap/vite-plugin-sitemap'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -43,6 +44,7 @@ export default defineConfig({
         ],
       },
     }),
+    sitemapPlugin(),
   ],
   resolve: {
     alias: {

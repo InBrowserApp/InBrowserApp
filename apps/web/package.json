@@ -4,9 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run build:sitemap && pnpm run build:web",
+    "build": "pnpm run build:web",
     "build:web": "vite build",
-    "build:sitemap": "vite-node scripts/sitemap/build-sitemap.ts",
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },
@@ -32,7 +31,6 @@
     "jiti": "catalog:",
     "sitemap": "catalog:",
     "vite": "catalog:",
-    "vite-node": "catalog:",
     "vite-plugin-pwa": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",
     "wrangler": "catalog:"
