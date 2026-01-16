@@ -53,6 +53,7 @@ import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-passw
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
 import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
 import { toolInfo as nanoidGeneratorToolInfo } from '@tools/nanoid-generator'
+import { toolInfo as cuid2GeneratorToolInfo } from '@tools/cuid2-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -208,6 +209,7 @@ export const tools: ToolInfo[] = [
   bip39MnemonicGeneratorToolInfo,
   ksuidGeneratorToolInfo,
   nanoidGeneratorToolInfo,
+  cuid2GeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
