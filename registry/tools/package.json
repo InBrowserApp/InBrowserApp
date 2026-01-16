@@ -31,6 +31,7 @@
     "@tools/cidr-parser": "workspace:*",
     "@tools/cidrs-merger-excluder": "workspace:*",
     "@tools/color-converter": "workspace:*",
+    "@tools/color-picker": "workspace:*",
     "@tools/crc-checksum-calculator": "workspace:*",
     "@tools/credit-card-validator": "workspace:*",
     "@tools/cron-expression-generator": "workspace:*",
