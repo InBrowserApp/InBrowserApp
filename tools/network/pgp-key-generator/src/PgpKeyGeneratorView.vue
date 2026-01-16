@@ -1,6 +1,7 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
     <KeyGenerator />
+    <WhatIsPgpKey />
   </ToolDefaultPageLayout>
 </template>
 
@@ -8,4 +9,5 @@
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import KeyGenerator from './components/KeyGenerator.vue'
+import WhatIsPgpKey from './components/WhatIsPgpKey.vue'
 </script>
