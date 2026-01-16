@@ -127,6 +127,7 @@
     "@tools/url-parser-builder": "workspace:*",
     "@tools/user-agent-parser": "workspace:*",
     "@tools/uuid": "workspace:*",
+    "@tools/vat-validator": "workspace:*",
     "@tools/xml-to-json-converter": "workspace:*",
     "@tools/xxhash-xxh32-hash-text-or-file": "workspace:*",
     "@tools/xxhash-xxh64-hash-text-or-file": "workspace:*",
