@@ -390,7 +390,6 @@ function stableStringify(value: unknown): string {
 
 const UUID_REGEX =
   /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const DATE_TIME_REGEX = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/
 
 function detectStringFormat(value: string): string | undefined {
@@ -401,7 +400,7 @@ function detectStringFormat(value: string): string | undefined {
   if (UUID_REGEX.test(trimmed)) {
     return 'uuid'
   }
-  if (EMAIL_REGEX.test(trimmed)) {
+  if (isEmailLike(trimmed)) {
     return 'email'
   }
   if (DATE_TIME_REGEX.test(trimmed)) {
@@ -420,4 +419,19 @@ function isUri(value: string): boolean {
   } catch {
     return false
   }
+}
+
+function isEmailLike(value: string): boolean {
+  if (value.includes(' ')) return false
+
+  const atIndex = value.indexOf('@')
+  if (atIndex <= 0 || atIndex !== value.lastIndexOf('@')) return false
+
+  const local = value.slice(0, atIndex)
+  const domain = value.slice(atIndex + 1)
+  if (!local || !domain) return false
+  if (!domain.includes('.')) return false
+  if (domain.startsWith('.') || domain.endsWith('.')) return false
+  if (domain.includes('..')) return false
+  return true
 }
