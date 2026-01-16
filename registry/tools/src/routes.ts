@@ -68,6 +68,7 @@ import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
 import { routes as jmespathTesterRoutes } from '@tools/jmespath-tester/routes'
 import { routes as jsonpathTesterRoutes } from '@tools/jsonpath-tester/routes'
+import { routes as jsonSchemaGeneratorRoutes } from '@tools/json-schema-generator/routes'
 import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validator/routes'
 import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescript/routes'
 import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
@@ -185,6 +186,7 @@ export const routes: ToolRoute[] = [
   ...jsonFormatterRoutes,
   ...jmespathTesterRoutes,
   ...jsonpathTesterRoutes,
+  ...jsonSchemaGeneratorRoutes,
   ...jsonSchemaValidatorRoutes,
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
