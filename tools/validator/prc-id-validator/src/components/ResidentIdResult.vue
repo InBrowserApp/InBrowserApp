@@ -122,11 +122,13 @@ const genderDisplay = computed(() => {
 
 const sequenceDisplay = computed(() => props.validationResult.sequenceCode ?? t('notAvailable'))
 
-const expectedCheckDigit = computed(() =>
-  props.validationResult.expectedCheckDigit ?? t('notAvailable'),
+const expectedCheckDigit = computed(
+  () => props.validationResult.expectedCheckDigit ?? t('notAvailable'),
 )
 
-const actualCheckDigit = computed(() => props.validationResult.actualCheckDigit ?? t('notAvailable'))
+const actualCheckDigit = computed(
+  () => props.validationResult.actualCheckDigit ?? t('notAvailable'),
+)
 
 const normalizedDisplay = computed(() => props.validationResult.normalized || t('notAvailable'))
 </script>

@@ -121,10 +121,9 @@ function parseBirthDate(value: string): {
 
   return {
     date,
-    text: `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(
-      2,
-      '0',
-    )}`,
+    text: `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(
+      day,
+    ).padStart(2, '0')}`,
     age: getAge(date, today),
     isValid: true,
   }
@@ -141,9 +140,9 @@ export function validateResidentId(input: string): ResidentIdValidationResult {
   const cityCode = regionCode ? `${regionCode.slice(0, 4)}00` : null
   const areaCode = regionCode
 
-  const provinceName = provinceCode ? ADMIN_REGION_CODES[provinceCode] ?? null : null
-  const cityName = cityCode ? ADMIN_REGION_CODES[cityCode] ?? null : null
-  const areaName = areaCode ? ADMIN_REGION_CODES[areaCode] ?? null : null
+  const provinceName = provinceCode ? (ADMIN_REGION_CODES[provinceCode] ?? null) : null
+  const cityName = cityCode ? (ADMIN_REGION_CODES[cityCode] ?? null) : null
+  const areaName = areaCode ? (ADMIN_REGION_CODES[areaCode] ?? null) : null
   const isRegionValid = isFormatValid && Boolean(areaName)
 
   const birthValue = isFormatValid ? normalized.slice(6, 14) : ''
@@ -157,18 +156,12 @@ export function validateResidentId(input: string): ResidentIdValidationResult {
     gender = lastDigit % 2 === 0 ? 'female' : 'male'
   }
 
-  const expectedCheckDigit = isFormatValid
-    ? getResidentIdCheckDigit(normalized.slice(0, 17))
-    : null
-  const actualCheckDigit = isFormatValid ? normalized[17] ?? null : null
+  const expectedCheckDigit = isFormatValid ? getResidentIdCheckDigit(normalized.slice(0, 17)) : null
+  const actualCheckDigit = isFormatValid ? (normalized[17] ?? null) : null
   const isChecksumValid = Boolean(expectedCheckDigit && actualCheckDigit === expectedCheckDigit)
 
   const isValid =
-    isLengthValid &&
-    isFormatValid &&
-    isRegionValid &&
-    isBirthdateValid &&
-    isChecksumValid
+    isLengthValid && isFormatValid && isRegionValid && isBirthdateValid && isChecksumValid
 
   return {
     input,

@@ -28,12 +28,13 @@ export const meta = {
   },
   es: {
     name: 'Validador de ID de residente de la RPC',
-    description: 'Valida IDs de residente de la RPC y analiza región, fecha de nacimiento y checksum',
+    description:
+      'Valida IDs de residente de la RPC y analiza región, fecha de nacimiento y checksum',
   },
   fr: {
     name: "Validateur d'ID de résident de la RPC",
     description:
-      "Valide les ID de résident de la RPC et décode la région, la date de naissance et la somme de contrôle",
+      'Valide les ID de résident de la RPC et décode la région, la date de naissance et la somme de contrôle',
   },
   de: {
     name: 'PRC-Resident-ID-Validator',
@@ -53,11 +54,13 @@ export const meta = {
   },
   ru: {
     name: 'Валидатор ID резидента КНР',
-    description: 'Проверяет ID резидента КНР и расшифровывает регион, дату рождения и контрольную сумму',
+    description:
+      'Проверяет ID резидента КНР и расшифровывает регион, дату рождения и контрольную сумму',
   },
   pt: {
     name: 'Validador de ID de residente da RPC',
-    description: 'Valida IDs de residente da RPC e decodifica região, data de nascimento e checksum',
+    description:
+      'Valida IDs de residente da RPC e decodifica região, data de nascimento e checksum',
   },
   ar: {
     name: 'مدقق هوية المقيم في جمهورية الصين الشعبية',
@@ -74,7 +77,7 @@ export const meta = {
   },
   nl: {
     name: 'PRC Resident-ID-validator',
-    description: 'Valideert PRC Resident-ID\'s en decodeert regio, geboortedatum en controlesom',
+    description: "Valideert PRC Resident-ID's en decodeert regio, geboortedatum en controlesom",
   },
   sv: {
     name: 'PRC Resident-ID-validator',
@@ -82,7 +85,8 @@ export const meta = {
   },
   pl: {
     name: 'Walidator ID mieszkańca ChRL',
-    description: 'Waliduje ID mieszkańca ChRL i dekoduje region, datę urodzenia oraz sumę kontrolną',
+    description:
+      'Waliduje ID mieszkańca ChRL i dekoduje region, datę urodzenia oraz sumę kontrolną',
   },
   vi: {
     name: 'Trình xác thực ID cư trú Trung Quốc',
@@ -94,7 +98,8 @@ export const meta = {
   },
   id: {
     name: 'Validator ID penduduk Tiongkok',
-    description: 'Memvalidasi ID penduduk Tiongkok dan menguraikan wilayah, tanggal lahir, serta checksum',
+    description:
+      'Memvalidasi ID penduduk Tiongkok dan menguraikan wilayah, tanggal lahir, serta checksum',
   },
   he: {
     name: 'מאמת מזהה תושב סין',
