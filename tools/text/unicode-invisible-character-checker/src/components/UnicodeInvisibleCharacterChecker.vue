@@ -110,7 +110,14 @@ import {
 
 const { t } = useI18n()
 
-const storedText = useStorage('tools:unicode-invisible-character-checker:text', '')
+const defaultText = [
+  'Hello\u200BWorld',
+  'Price:\u00A0123\u202FUSD',
+  'Order\u00ADID: 42',
+  'Direction\u200E/LTR\u200FRTL',
+].join('\n')
+
+const storedText = useStorage('tools:unicode-invisible-character-checker:text', defaultText)
 const textOrFile = ref<string | File>(storedText.value)
 const selectedCategories = useStorage<InvisibleCategory[]>(
   'tools:unicode-invisible-character-checker:categories',
