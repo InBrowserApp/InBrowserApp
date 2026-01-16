@@ -222,7 +222,7 @@ const mountView = () =>
 
 const mountComponent = (
   component: Parameters<typeof mount>[0],
-  props = {},
+  props: Record<string, unknown> = {},
   stubs: Record<string, unknown> = {},
 ) =>
   mount(component, {
@@ -304,7 +304,9 @@ describe('image-to-ico tool metadata', () => {
 describe('ImageToIcoConverterView', () => {
   it('skips conversion when no file is selected', async () => {
     const wrapper = mountView()
-    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as { convertToIco: () => void }
+    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as unknown as {
+      convertToIco: () => void
+    }
 
     await vm.convertToIco()
     expect(mockedConvert).not.toHaveBeenCalled()
@@ -312,7 +314,7 @@ describe('ImageToIcoConverterView', () => {
 
   it('uses the default output name when no file is selected', () => {
     const wrapper = mountView()
-    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as {
+    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as unknown as {
       $: { setupState: { outputFileName: { value: string } } }
     }
 
@@ -321,7 +323,7 @@ describe('ImageToIcoConverterView', () => {
 
   it('handles output names for files without extensions', async () => {
     const wrapper = mountView()
-    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as {
+    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as unknown as {
       $: { setupState: { outputFileName: { value: string } } }
     }
 
@@ -351,7 +353,7 @@ describe('ImageToIcoConverterView', () => {
     options.vm.$emit('update:optimize', false)
     await flushPromises()
 
-    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as {
+    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as unknown as {
       $: { setupState: Record<string, unknown> }
     }
     const state = vm.$.setupState
@@ -370,7 +372,7 @@ describe('ImageToIcoConverterView', () => {
     wrapper.findComponent(ImageUploadStub).vm.$emit('update:file', file)
     await flushPromises()
 
-    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as {
+    const vm = wrapper.findComponent(ImageToIcoConverterView).vm as unknown as {
       convertToIco: () => void
       $: { setupState: { sizes?: { value: number[] } } }
       sizes?: number[]
@@ -408,8 +410,9 @@ describe('ImageToIcoConverterView', () => {
 
     expect(mockedConvert).toHaveBeenCalledTimes(1)
     const call = mockedConvert.mock.calls[0]
-    expect(call?.[0]).toBeInstanceOf(File)
-    expect(call?.[0]?.name).toBe(file.name)
+    const fileArg = call?.[0] as File | undefined
+    expect(fileArg).toBeInstanceOf(File)
+    expect(fileArg?.name).toBe(file.name)
     expect(call?.[1]?.sizes).toEqual([256, 48, 32, 16])
 
     expect(wrapper.find('.output').exists()).toBe(true)
@@ -654,7 +657,7 @@ describe('ConversionOptions', () => {
     switches[0]?.vm.$emit('update:value', true)
     expect(updateBackgroundEnabled).toHaveBeenCalledWith(true)
 
-    await wrapper.setProps({ backgroundEnabled: true })
+    await wrapper.setProps({ backgroundEnabled: true } as Record<string, unknown>)
     expect(wrapper.findComponent({ name: 'NColorPicker' }).exists()).toBe(true)
 
     wrapper.findComponent({ name: 'NColorPicker' }).vm.$emit('update:value', '#000000')
