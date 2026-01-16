@@ -1,12 +1,24 @@
 <template>
   <n-flex :size="8" wrap>
-    <n-button tertiary @click="downloadPNG">
+    <n-button
+      tag="a"
+      tertiary
+      :href="pngUrl ?? undefined"
+      download="qrcode.png"
+      :disabled="!pngUrl"
+    >
       <template #icon>
         <n-icon><ImageIcon /></n-icon>
       </template>
       PNG
     </n-button>
-    <n-button tertiary @click="downloadSVG">
+    <n-button
+      tag="a"
+      tertiary
+      :href="svgUrl ?? undefined"
+      download="qrcode.svg"
+      :disabled="!svgUrl"
+    >
       <template #icon>
         <n-icon><CodeIcon /></n-icon>
       </template>
@@ -16,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { NFlex, NButton, NIcon } from 'naive-ui'
 import QRCode from 'qrcode'
 import { Code16Regular as CodeIcon, Image16Regular as ImageIcon } from '@shared/icons/fluent'
@@ -29,39 +43,56 @@ const props = defineProps<{
   light: string
 }>()
 
-function downloadBlob(file: File) {
-  const url = URL.createObjectURL(file)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = file.name
-  a.click()
-  URL.revokeObjectURL(url)
-}
+const pngBlob = ref<Blob | null>(null)
+const svgBlob = ref<Blob | null>(null)
+const pngUrl = useObjectUrl(pngBlob)
+const svgUrl = useObjectUrl(svgBlob)
 
-async function downloadPNG() {
-  const opts = {
-    errorCorrectionLevel: props.errorCorrectionLevel,
-    margin: props.margin,
-    width: props.width,
-    color: { dark: props.dark, light: props.light },
-  }
+let pngToken = 0
+let svgToken = 0
+
+const buildOptions = () => ({
+  errorCorrectionLevel: props.errorCorrectionLevel,
+  margin: props.margin,
+  width: props.width,
+  color: { dark: props.dark, light: props.light },
+})
+
+async function updatePNG() {
+  const token = ++pngToken
   const dataUrl = (await QRCode.toDataURL(props.text || ' ', {
-    ...opts,
+    ...buildOptions(),
     type: 'image/png',
   })) as string
   const res = await fetch(dataUrl)
   const blob = await res.blob()
-  downloadBlob(new File([blob], 'qrcode.png', { type: 'image/png' }))
+  if (token !== pngToken) return
+  pngBlob.value = blob
 }
 
-async function downloadSVG() {
-  const opts = {
-    errorCorrectionLevel: props.errorCorrectionLevel,
-    margin: props.margin,
-    width: props.width,
-    color: { dark: props.dark, light: props.light },
-  }
-  const svg = (await QRCode.toString(props.text || ' ', { ...opts, type: 'svg' })) as string
-  downloadBlob(new File([svg], 'qrcode.svg', { type: 'image/svg+xml' }))
+async function updateSVG() {
+  const token = ++svgToken
+  const svg = (await QRCode.toString(props.text || ' ', {
+    ...buildOptions(),
+    type: 'svg',
+  })) as string
+  if (token !== svgToken) return
+  svgBlob.value = new Blob([svg], { type: 'image/svg+xml' })
 }
+
+watch(
+  () => [
+    props.text,
+    props.errorCorrectionLevel,
+    props.width,
+    props.margin,
+    props.dark,
+    props.light,
+  ],
+  () => {
+    void updatePNG()
+    void updateSVG()
+  },
+  { immediate: true },
+)
 </script>

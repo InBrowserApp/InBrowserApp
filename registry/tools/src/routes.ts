@@ -16,6 +16,7 @@ import { routes as ipv6ToMacRoutes } from '@tools/ipv6-to-mac/routes'
 import { routes as currentNetworkTimeRoutes } from '@tools/current-network-time/routes'
 import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
+import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
@@ -48,6 +49,7 @@ import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
 import { routes as jwtDecoderVerifierRoutes } from '@tools/jwt-decoder-verifier/routes'
 import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-generator/routes'
 import { routes as bip39MnemonicGeneratorRoutes } from '@tools/bip39-mnemonic-generator/routes'
+import { routes as ksuidGeneratorRoutes } from '@tools/ksuid-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
 import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
@@ -64,6 +66,8 @@ import { routes as jsonToXmlConverterRoutes } from '@tools/json-to-xml-converter
 import { routes as csvToJsonConverterRoutes } from '@tools/csv-to-json-converter/routes'
 import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter/routes'
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
+import { routes as jmespathTesterRoutes } from '@tools/jmespath-tester/routes'
+import { routes as jsonpathTesterRoutes } from '@tools/jsonpath-tester/routes'
 import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validator/routes'
 import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescript/routes'
 import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
@@ -72,6 +76,7 @@ import { routes as deviceInformationRoutes } from '@tools/device-information/rou
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
+import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as timeDiffCalculatorRoutes } from '@tools/time-diff-calculator/routes'
 import { routes as durationCalculatorRoutes } from '@tools/duration-calculator/routes'
@@ -79,6 +84,7 @@ import { routes as businessDaysCalculatorRoutes } from '@tools/business-days-cal
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
 import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-generator/routes'
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
+import { routes as colorPickerRoutes } from '@tools/color-picker/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
@@ -107,6 +113,7 @@ import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
 import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
 import { routes as svgOptimizerRoutes } from '@tools/svg-optimizer/routes'
+import { routes as svgToImageConverterRoutes } from '@tools/svg-to-image-converter/routes'
 
 export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
@@ -126,7 +133,9 @@ export const routes: ToolRoute[] = [
   ...currentNetworkTimeRoutes,
   ...pngOptimizerRoutes,
   ...svgOptimizerRoutes,
+  ...svgToImageConverterRoutes,
   ...exifViewerRoutes,
+  ...imageMetadataCleanerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
   ...imageToolsRoutes,
@@ -159,6 +168,7 @@ export const routes: ToolRoute[] = [
   ...jwtDecoderVerifierRoutes,
   ...randomPasswordGeneratorRoutes,
   ...bip39MnemonicGeneratorRoutes,
+  ...ksuidGeneratorRoutes,
   ...qrCodeGeneratorRoutes,
   ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,
@@ -175,6 +185,8 @@ export const routes: ToolRoute[] = [
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,
+  ...jmespathTesterRoutes,
+  ...jsonpathTesterRoutes,
   ...jsonSchemaValidatorRoutes,
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
@@ -183,6 +195,7 @@ export const routes: ToolRoute[] = [
   ...romanNumeralConverterRoutes,
   ...stopwatchRoutes,
   ...unixTimestampConverterRoutes,
+  ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
   ...timeDiffCalculatorRoutes,
   ...durationCalculatorRoutes,
@@ -190,6 +203,7 @@ export const routes: ToolRoute[] = [
   ...cronExpressionParserRoutes,
   ...cronExpressionGeneratorRoutes,
   ...textDiffRoutes,
+  ...colorPickerRoutes,
   ...colorConverterRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,

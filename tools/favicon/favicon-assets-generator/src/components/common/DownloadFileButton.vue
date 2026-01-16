@@ -1,5 +1,12 @@
 <template>
-  <n-button size="small" text @click="emits('click')">
+  <n-button
+    size="small"
+    text
+    tag="a"
+    :href="href ?? undefined"
+    :download="filename"
+    :disabled="!href"
+  >
     <template #icon>
       <n-icon :component="ArrowDownload16Filled" />
     </template>
@@ -14,10 +21,10 @@ import { ArrowDownload16Filled } from '@shared/icons/fluent'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-const emits = defineEmits(['click'])
 
 defineProps<{
   filename: string
+  href?: string | null
 }>()
 </script>
 

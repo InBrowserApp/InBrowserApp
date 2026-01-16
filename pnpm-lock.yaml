@@ -48,6 +48,9 @@ catalogs:
     '@types/emscripten':
       specifier: ^1.41.5
       version: 1.41.5
+    '@types/jmespath':
+      specifier: ^0.15.2
+      version: 0.15.2
     '@types/js-yaml':
       specifier: ^4.0.9
       version: 4.0.9
@@ -222,6 +225,9 @@ catalogs:
     jiti:
       specifier: ^2.6.1
       version: 2.6.1
+    jmespath:
+      specifier: ^0.16.0
+      version: 0.16.0
     jose:
       specifier: ^6.1.3
       version: 6.1.3
@@ -234,6 +240,9 @@ catalogs:
     jsdom:
       specifier: ^27.4.0
       version: 27.4.0
+    jsonpath-plus:
+      specifier: ^10.3.0
+      version: 10.3.0
     jsqr:
       specifier: ^1.4.0
       version: 1.4.0
@@ -594,6 +603,9 @@ importers:
       '@tools/color-converter':
         specifier: workspace:*
         version: link:../../tools/web/color-converter
+      '@tools/color-picker':
+        specifier: workspace:*
+        version: link:../../tools/web/color-picker
       '@tools/crc-checksum-calculator':
         specifier: workspace:*
         version: link:../../tools/hash/crc-checksum-calculator
@@ -657,6 +669,12 @@ importers:
       '@tools/iban-validator':
         specifier: workspace:*
         version: link:../../tools/validator/iban-validator
+      '@tools/ical-event-generator':
+        specifier: workspace:*
+        version: link:../../tools/time/ical-event-generator
+      '@tools/image-metadata-cleaner':
+        specifier: workspace:*
+        version: link:../../tools/image/image-metadata-cleaner
       '@tools/image-tools':
         specifier: workspace:*
         version: link:../../tools/image/image-tools
@@ -675,6 +693,9 @@ importers:
       '@tools/isbn-validator':
         specifier: workspace:*
         version: link:../../tools/validator/isbn-validator
+      '@tools/jmespath-tester':
+        specifier: workspace:*
+        version: link:../../tools/code/jmespath-tester
       '@tools/json-formatter':
         specifier: workspace:*
         version: link:../../tools/code/json-formatter
@@ -693,6 +714,9 @@ importers:
       '@tools/json-to-yaml-converter':
         specifier: workspace:*
         version: link:../../tools/code/json-to-yaml-converter
+      '@tools/jsonpath-tester':
+        specifier: workspace:*
+        version: link:../../tools/code/jsonpath-tester
       '@tools/jwt-decoder-verifier':
         specifier: workspace:*
         version: link:../../tools/web/jwt-decoder-verifier
@@ -702,6 +726,9 @@ importers:
       '@tools/keccak-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/keccak-hash-text-or-file
+      '@tools/ksuid-generator':
+        specifier: workspace:*
+        version: link:../../tools/random/ksuid-generator
       '@tools/lorem-ipsum-generator':
         specifier: workspace:*
         version: link:../../tools/misc/lorem-ipsum-generator
@@ -807,6 +834,9 @@ importers:
       '@tools/svg-optimizer':
         specifier: workspace:*
         version: link:../../tools/image/svg-optimizer
+      '@tools/svg-to-image-converter':
+        specifier: workspace:*
+        version: link:../../tools/image/svg-to-image-converter
       '@tools/text-diff':
         specifier: workspace:*
         version: link:../../tools/document/text-diff
@@ -1059,6 +1089,45 @@ importers:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
+  tools/code/jmespath-tester:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@types/jmespath':
+        specifier: 'catalog:'
+        version: 0.15.2
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      browser-fs-access:
+        specifier: 'catalog:'
+        version: 0.38.0
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
+      jmespath:
+        specifier: 'catalog:'
+        version: 0.16.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
   tools/code/json-formatter:
     dependencies:
       '@shared/icons':
@@ -1242,6 +1311,42 @@ importers:
       '@types/js-yaml':
         specifier: 'catalog:'
         version: 4.0.9
+
+  tools/code/jsonpath-tester:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      browser-fs-access:
+        specifier: 'catalog:'
+        version: 0.38.0
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
+      jsonpath-plus:
+        specifier: 'catalog:'
+        version: 10.3.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
 
   tools/code/openapi-to-typescript:
     dependencies:
@@ -2295,6 +2400,36 @@ importers:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
+  tools/image/image-metadata-cleaner:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/image':
+        specifier: workspace:*
+        version: link:../../../utils/image
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+
   tools/image/image-tools:
     dependencies:
       '@shared/icons':
@@ -2466,6 +2601,33 @@ importers:
       svgo:
         specifier: 'catalog:'
         version: 4.0.0
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+
+  tools/image/svg-to-image-converter:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.26(typescript@5.9.3)
@@ -3255,6 +3417,33 @@ importers:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
 
+  tools/random/ksuid-generator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.26(typescript@5.9.3))
+
   tools/random/random-password-generator:
     dependencies:
       '@shared/icons':
@@ -3531,6 +3720,37 @@ importers:
       vue-i18n:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+
+  tools/time/ical-event-generator:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      qrcode:
+        specifier: 'catalog:'
+        version: 1.5.4
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+    devDependencies:
+      '@types/qrcode':
+        specifier: 'catalog:'
+        version: 1.5.6
 
   tools/time/stopwatch:
     dependencies:
@@ -4010,6 +4230,37 @@ importers:
         specifier: 'catalog:'
         version: 2.0.4
 
+  tools/web/color-picker:
+    dependencies:
+      '@shared/icons':
+        specifier: workspace:*
+        version: link:../../../shared/icons
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
+      color-convert:
+        specifier: 'catalog:'
+        version: 3.1.3
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.26(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.26(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+    devDependencies:
+      '@types/color-convert':
+        specifier: 'catalog:'
+        version: 2.0.4
+
   tools/web/data-uri-to-file-converter:
     dependencies:
       '@shared/icons':
@@ -4021,6 +4272,9 @@ importers:
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       mime:
         specifier: 'catalog:'
         version: 4.1.0
@@ -5908,6 +6162,18 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
+  '@jsep-plugin/assignment@1.3.0':
+    resolution: {integrity: sha512-VVgV+CXrhbMI3aSusQyclHkenWSAm95WaiKrMxRFam3JSUiIaQjoMIw2sEs/OX4XifnqeQUN4DYbJjlA8EfktQ==}
+    engines: {node: '>= 10.16.0'}
+    peerDependencies:
+      jsep: ^0.4.0||^1.0.0
+
+  '@jsep-plugin/regex@1.0.4':
+    resolution: {integrity: sha512-q7qL4Mgjs1vByCaTnDFcBnV9HS7GVPJX5vyVoCgZHNSC9rjwIlmbXG5sUuorR5ndfHAIlJ8pVStxvjXHbNvtUg==}
+    engines: {node: '>= 10.16.0'}
+    peerDependencies:
+      jsep: ^0.4.0||^1.0.0
+
   '@jspawn/qpdf-wasm@0.0.2':
     resolution: {integrity: sha512-yPFv/0o5fvVEkJjEoXf393hfpZYUZfrRY8DaLq4AVw+KWZK0GiTVAecpYdxxVACbVKMHvBa+uHxtWlilYRiLzA==}
 
@@ -6378,6 +6644,9 @@ packages:
 
   '@types/figlet@1.7.0':
     resolution: {integrity: sha512-KwrT7p/8Eo3Op/HBSIwGXOsTZKYiM9NpWRBJ5sVjWP/SmlS+oxxRvJht/FNAtliJvja44N3ul1yATgohnVBV0Q==}
+
+  '@types/jmespath@0.15.2':
+    resolution: {integrity: sha512-pegh49FtNsC389Flyo9y8AfkVIZn9MMPE9yJrO9svhq6Fks2MwymULWjZqySuxmctd3ZH4/n7Mr98D+1Qo5vGA==}
 
   '@types/js-yaml@4.0.9':
     resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
@@ -8017,6 +8286,10 @@ packages:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
 
+  jmespath@0.16.0:
+    resolution: {integrity: sha512-9FzQjJ7MATs1tSpnco1K6ayiYE3figslrXA72G2HQ/n76RzvYlofyi5QM+iX4YRs/pu3yzxlVQSST23+dMDknw==}
+    engines: {node: '>= 0.6.0'}
+
   jose@6.1.3:
     resolution: {integrity: sha512-0TpaTfihd4QMNwrz/ob2Bp7X04yuxJkjRGi4aKmOqwhov54i6u79oCv7T+C7lo70MKH6BesI3vscD1yb/yzKXQ==}
 
@@ -8054,6 +8327,10 @@ packages:
     peerDependenciesMeta:
       canvas:
         optional: true
+
+  jsep@1.4.0:
+    resolution: {integrity: sha512-B7qPcEVE3NVkmSJbaYxvv4cHkVW7DQsZz13pUMrfS8z8Q/BuShN+gcTXrUlPiGqM2/t/EEaI030bpxMqY8gMlw==}
+    engines: {node: '>= 10.16.0'}
 
   jsesc@3.1.0:
     resolution: {integrity: sha512-/sM3dO2FOzXjKQhJuo0Q173wf2KOo8t4I8vHy6lF9poUp7bKT0/NHE8fPX23PwfhnykfqnC2xRxOnVw5XuGIaA==}
@@ -8100,6 +8377,11 @@ packages:
   jsonparse@1.3.1:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
+
+  jsonpath-plus@10.3.0:
+    resolution: {integrity: sha512-8TNmfeTCk2Le33A3vRRwtuworG/L5RrgMvdjhKZxvyShO+mBu2fP50OWUjRLNtvw344DdDarFh9buFAZs5ujeA==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   jsonpointer@5.0.1:
     resolution: {integrity: sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==}
@@ -11090,6 +11372,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@jsep-plugin/assignment@1.3.0(jsep@1.4.0)':
+    dependencies:
+      jsep: 1.4.0
+
+  '@jsep-plugin/regex@1.0.4(jsep@1.4.0)':
+    dependencies:
+      jsep: 1.4.0
+
   '@jspawn/qpdf-wasm@0.0.2': {}
 
   '@jsquash/oxipng@2.3.0':
@@ -11522,6 +11812,8 @@ snapshots:
 
   '@types/figlet@1.7.0': {}
 
+  '@types/jmespath@0.15.2': {}
+
   '@types/js-yaml@4.0.9': {}
 
   '@types/jsdom@27.0.0':
@@ -11568,7 +11860,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
 
   '@types/tough-cookie@4.0.5': {}
 
@@ -13338,6 +13630,8 @@ snapshots:
 
   jiti@2.6.1: {}
 
+  jmespath@0.16.0: {}
+
   jose@6.1.3: {}
 
   js-beautify@1.15.4:
@@ -13390,6 +13684,8 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  jsep@1.4.0: {}
+
   jsesc@3.1.0: {}
 
   json-buffer@3.0.1: {}
@@ -13424,6 +13720,12 @@ snapshots:
       graceful-fs: 4.2.11
 
   jsonparse@1.3.1: {}
+
+  jsonpath-plus@10.3.0:
+    dependencies:
+      '@jsep-plugin/assignment': 1.3.0(jsep@1.4.0)
+      '@jsep-plugin/regex': 1.0.4(jsep@1.4.0)
+      jsep: 1.4.0
 
   jsonpointer@5.0.1: {}
 

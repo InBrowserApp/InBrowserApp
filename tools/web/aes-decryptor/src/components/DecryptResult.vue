@@ -24,27 +24,38 @@
       </n-tabs>
       <n-space style="margin-top: 8px">
         <CopyToClipboardButton :content="activeTab === 'text' ? result : resultHex" />
-        <n-popselect
-          v-model:value="downloadType"
-          :options="downloadOptions"
-          trigger="click"
-          @update:value="handleDownload"
-        >
-          <n-button text>
-            <template #icon>
-              <n-icon :component="ArrowDownload16Regular" />
-            </template>
-            {{ t('download') }}
-          </n-button>
-        </n-popselect>
+        <n-popover trigger="click">
+          <template #trigger>
+            <n-button text>
+              <template #icon>
+                <n-icon :component="ArrowDownload16Regular" />
+              </template>
+              {{ t('download') }}
+            </n-button>
+          </template>
+          <n-flex vertical :size="8">
+            <n-button
+              v-for="link in downloadLinks"
+              :key="link.label"
+              tag="a"
+              text
+              :href="link.url ?? undefined"
+              :download="link.filename"
+              :disabled="!link.url"
+            >
+              {{ link.label }}
+            </n-button>
+          </n-flex>
+        </n-popover>
       </n-space>
     </template>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { NSpace, NAlert, NInput, NButton, NIcon, NPopselect, NTabs, NTabPane } from 'naive-ui'
+import { computed, ref } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
+import { NSpace, NAlert, NInput, NButton, NIcon, NPopover, NFlex, NTabs, NTabPane } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
@@ -60,35 +71,20 @@ const props = defineProps<{
 const { t } = useI18n()
 
 const activeTab = ref<'text' | 'hex'>('text')
-const downloadType = ref<string | null>(null)
-
-const downloadOptions = [
-  { label: 'Text (.txt)', value: 'text' },
-  { label: 'Binary (.bin)', value: 'binary' },
-]
-
-function handleDownload(value: string) {
-  if (!props.resultBinary) return
-
-  if (value === 'text') {
-    const blob = new Blob([props.result], { type: 'text/plain' })
-    downloadBlob(blob, 'decrypted.txt')
-  } else if (value === 'binary') {
-    const blob = new Blob([props.resultBinary], { type: 'application/octet-stream' })
-    downloadBlob(blob, 'decrypted.bin')
+const textBlob = computed(() => new Blob([props.result], { type: 'text/plain' }))
+const binaryBlob = computed(() => {
+  if (!props.resultBinary) return null
+  return new Blob([props.resultBinary], { type: 'application/octet-stream' })
+})
+const textUrl = useObjectUrl(textBlob)
+const binaryUrl = useObjectUrl(binaryBlob)
+const downloadLinks = computed(() => {
+  const links = [{ label: 'Text (.txt)', url: textUrl.value, filename: 'decrypted.txt' }]
+  if (props.resultBinary) {
+    links.push({ label: 'Binary (.bin)', url: binaryUrl.value, filename: 'decrypted.bin' })
   }
-  // Reset selection
-  downloadType.value = null
-}
-
-function downloadBlob(blob: Blob, filename: string) {
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  a.click()
-  URL.revokeObjectURL(url)
-}
+  return links
+})
 </script>
 
 <i18n lang="json">

@@ -17,7 +17,7 @@
       </n-flex>
       <n-flex>
         <CopyToClipboardButton :content="csvText" />
-        <n-button @click="downloadCsv" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="converted.csv">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -66,7 +66,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import Papa from 'papaparse'
@@ -115,17 +116,8 @@ function convertNow(): void {
 
 watch([jsonText, delimiter, quote, header, escapeFormulae], () => convertNow(), { immediate: true })
 
-function downloadCsv(): void {
-  const blob = new Blob([csvText.value], { type: 'text/csv;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'converted.csv'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(() => new Blob([csvText.value], { type: 'text/csv;charset=utf-8' }))
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

@@ -1,16 +1,32 @@
 <template>
-  <n-dropdown trigger="hover" :options="options" @select="handleSelect">
-    <n-button text>
-      <template #icon>
-        <n-icon :component="Icon" />
-      </template>
-      {{ t('download') }}
-    </n-button>
-  </n-dropdown>
+  <n-popover trigger="hover">
+    <template #trigger>
+      <n-button text>
+        <template #icon>
+          <n-icon :component="Icon" />
+        </template>
+        {{ t('download') }}
+      </n-button>
+    </template>
+    <n-flex vertical :size="8">
+      <n-button
+        v-for="link in downloadLinks"
+        :key="link.label"
+        tag="a"
+        text
+        :href="link.url ?? undefined"
+        :download="link.filename"
+      >
+        {{ link.label }}
+      </n-button>
+    </n-flex>
+  </n-popover>
 </template>
 
 <script setup lang="ts">
-import { NIcon, NButton, NDropdown } from 'naive-ui'
+import { computed } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
+import { NIcon, NButton, NFlex, NPopover } from 'naive-ui'
 import { ArrowDownload16Regular as Icon } from '@shared/icons/fluent'
 import { useI18n } from 'vue-i18n'
 
@@ -20,73 +36,37 @@ const props = defineProps<{
   uuids: string[]
 }>()
 
-const options = [
-  {
-    label: 'TXT',
-    key: 'txt',
-  },
-  {
-    label: 'CSV',
-    key: 'csv',
-  },
-  {
-    label: 'TSV',
-    key: 'tsv',
-  },
-  {
-    label: 'JSON',
-    key: 'json',
-  },
-  // TODO: add excel
-]
+const txtBlob = computed(() => new Blob([props.uuids.join('\n')], { type: 'text/plain' }))
+const csvBlob = computed(
+  () =>
+    new Blob(['uuid,\n' + props.uuids.join(',\n')], {
+      type: 'text/csv',
+    }),
+)
+const tsvBlob = computed(
+  () =>
+    new Blob(['uuid\t\n' + props.uuids.join('\t\n')], {
+      type: 'text/tab-separated-values',
+    }),
+)
+const jsonBlob = computed(
+  () =>
+    new Blob([JSON.stringify(props.uuids)], {
+      type: 'application/json',
+    }),
+)
 
-const handleSelect = (key: string | number) => {
-  if (key === 'txt') {
-    downloadTxt()
-  } else if (key === 'csv') {
-    downloadCsv()
-  } else if (key === 'json') {
-    downloadJson()
-  } else if (key === 'tsv') {
-    downloadTsv()
-  }
-}
+const txtUrl = useObjectUrl(txtBlob)
+const csvUrl = useObjectUrl(csvBlob)
+const tsvUrl = useObjectUrl(tsvBlob)
+const jsonUrl = useObjectUrl(jsonBlob)
 
-function downloadFile(blob: Blob, filename: string) {
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  a.click()
-  URL.revokeObjectURL(url)
-  a.remove()
-}
-
-function downloadTxt() {
-  const blob = new Blob([props.uuids.join('\n')], { type: 'text/plain' })
-  downloadFile(blob, 'uuids.txt')
-}
-
-function downloadCsv() {
-  const blob = new Blob(['uuid,\n' + props.uuids.join(',\n')], {
-    type: 'text/csv',
-  })
-  downloadFile(blob, 'uuids.csv')
-}
-
-function downloadJson() {
-  const blob = new Blob([JSON.stringify(props.uuids)], {
-    type: 'application/json',
-  })
-  downloadFile(blob, 'uuids.json')
-}
-
-function downloadTsv() {
-  const blob = new Blob(['uuid\t\n' + props.uuids.join('\t\n')], {
-    type: 'text/tab-separated-values',
-  })
-  downloadFile(blob, 'uuids.tsv')
-}
+const downloadLinks = computed(() => [
+  { label: 'TXT', url: txtUrl.value, filename: 'uuids.txt' },
+  { label: 'CSV', url: csvUrl.value, filename: 'uuids.csv' },
+  { label: 'TSV', url: tsvUrl.value, filename: 'uuids.tsv' },
+  { label: 'JSON', url: jsonUrl.value, filename: 'uuids.json' },
+])
 </script>
 <i18n lang="json">
 {

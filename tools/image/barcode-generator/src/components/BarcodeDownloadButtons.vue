@@ -1,12 +1,24 @@
 <template>
   <n-flex :size="8" wrap>
-    <n-button tertiary @click="downloadPNG">
+    <n-button
+      tag="a"
+      tertiary
+      :href="pngUrl ?? undefined"
+      download="barcode.png"
+      :disabled="!pngUrl"
+    >
       <template #icon>
         <n-icon><ImageIcon /></n-icon>
       </template>
       PNG
     </n-button>
-    <n-button tertiary @click="downloadSVG">
+    <n-button
+      tag="a"
+      tertiary
+      :href="svgUrl ?? undefined"
+      download="barcode.svg"
+      :disabled="!svgUrl"
+    >
       <template #icon>
         <n-icon><CodeIcon /></n-icon>
       </template>
@@ -16,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { NFlex, NButton, NIcon } from 'naive-ui'
 import JsBarcode from 'jsbarcode'
 import type { Options } from 'jsbarcode'
@@ -35,14 +49,10 @@ const props = defineProps<{
   background: string
 }>()
 
-function downloadBlob(file: File) {
-  const url = URL.createObjectURL(file)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = file.name
-  a.click()
-  URL.revokeObjectURL(url)
-}
+const pngBlob = ref<Blob | null>(null)
+const svgBlob = ref<Blob | null>(null)
+const pngUrl = useObjectUrl(pngBlob)
+const svgUrl = useObjectUrl(svgBlob)
 
 function buildOptions(): Partial<Options> {
   return {
@@ -60,23 +70,48 @@ function buildOptions(): Partial<Options> {
   }
 }
 
-async function downloadPNG() {
+let pngToken = 0
+let svgToken = 0
+
+async function updatePNG() {
+  const token = ++pngToken
   const canvas = document.createElement('canvas')
   JsBarcode(canvas, props.text || ' ', buildOptions())
   await new Promise<void>((resolve) => setTimeout(resolve))
-  await new Promise<void>((resolve) => {
-    canvas.toBlob((blob) => {
-      if (!blob) return resolve()
-      downloadBlob(new File([blob], 'barcode.png', { type: 'image/png' }))
-      resolve()
-    }, 'image/png')
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, 'image/png')
   })
+  if (token !== pngToken) return
+  pngBlob.value = blob
 }
 
-async function downloadSVG() {
+async function updateSVG() {
+  const token = ++svgToken
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
   JsBarcode(svg, props.text || ' ', buildOptions())
   const svgText = svg.outerHTML
-  downloadBlob(new File([svgText], 'barcode.svg', { type: 'image/svg+xml' }))
+  if (token !== svgToken) return
+  svgBlob.value = new Blob([svgText], { type: 'image/svg+xml' })
 }
+
+watch(
+  () => [
+    props.text,
+    props.format,
+    props.width,
+    props.height,
+    props.margin,
+    props.displayValue,
+    props.textAlign,
+    props.textPosition,
+    props.fontSize,
+    props.lineColor,
+    props.background,
+  ],
+  () => {
+    void updatePNG()
+    void updateSVG()
+  },
+  { immediate: true },
+)
 </script>

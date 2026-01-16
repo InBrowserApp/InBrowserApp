@@ -18,6 +18,7 @@ import { toolInfo as ipv6ToMacToolInfo } from '@tools/ipv6-to-mac'
 import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-time'
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
+import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
 import { toolInfo as networkToolsToolInfo } from '@tools/network-tools'
 import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
@@ -50,6 +51,7 @@ import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
+import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
@@ -66,6 +68,8 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as jmespathTesterToolInfo } from '@tools/jmespath-tester'
+import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
@@ -74,6 +78,7 @@ import { toolInfo as deviceInformationToolInfo } from '@tools/device-information
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
 import { toolInfo as stopwatchToolInfo } from '@tools/stopwatch'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
+import { toolInfo as icalEventGeneratorToolInfo } from '@tools/ical-event-generator'
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
 import { toolInfo as durationCalculatorToolInfo } from '@tools/duration-calculator'
@@ -81,6 +86,7 @@ import { toolInfo as businessDaysCalculatorToolInfo } from '@tools/business-days
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
 import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-expression-generator'
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
+import { toolInfo as colorPickerToolInfo } from '@tools/color-picker'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
@@ -109,6 +115,7 @@ import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
 import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 import { toolInfo as svgOptimizerToolInfo } from '@tools/svg-optimizer'
+import { toolInfo as svgToImageConverterToolInfo } from '@tools/svg-to-image-converter'
 
 export const tools: ToolInfo[] = [
   // Network Tools
@@ -137,7 +144,9 @@ export const tools: ToolInfo[] = [
   faviconAssetsGeneratorToolInfo,
   pngOptimizerToolInfo,
   svgOptimizerToolInfo,
+  svgToImageConverterToolInfo,
   exifViewerToolInfo,
+  imageMetadataCleanerToolInfo,
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,
@@ -154,6 +163,8 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  jmespathTesterToolInfo,
+  jsonpathTesterToolInfo,
   openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
 
@@ -193,6 +204,7 @@ export const tools: ToolInfo[] = [
   jwtDecoderVerifierToolInfo,
   randomPasswordGeneratorToolInfo,
   bip39MnemonicGeneratorToolInfo,
+  ksuidGeneratorToolInfo,
 
   // Other Tools
   ...redirectsTools,
@@ -202,6 +214,7 @@ export const tools: ToolInfo[] = [
   // Time Tools
   stopwatchToolInfo,
   unixTimestampConverterToolInfo,
+  icalEventGeneratorToolInfo,
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
   durationCalculatorToolInfo,
@@ -213,6 +226,7 @@ export const tools: ToolInfo[] = [
   textDiffToolInfo,
 
   // Web Tools (Color)
+  colorPickerToolInfo,
   colorConverterToolInfo,
   htmlColorNamesToolInfo,
 

@@ -2,7 +2,7 @@
   <n-p>
     <FileMinifiedUsingOxipng />
   </n-p>
-  <DownloadFileButton filename="apple-touch-icon.png" @click="download" />
+  <DownloadFileButton filename="apple-touch-icon.png" :href="downloadUrl" />
 
   <n-p>
     <n-code language="html" :code="code" :word-wrap="true" :hljs="hljs" />
@@ -13,19 +13,15 @@
 import { NP, NCode } from 'naive-ui'
 import type { iOSWebClipOptions } from '../../utils/favicon-generator/ios-web-clip'
 import { generateOutput, getHTMLCode } from '../../utils/favicon-generator/ios-web-clip'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
-import { useI18n } from 'vue-i18n'
 import FileMinifiedUsingOxipng from '../common/FileMinifiedUsingOxipng.vue'
 import DownloadFileButton from '../common/DownloadFileButton.vue'
 import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml'
 hljs.registerLanguage('html', xml)
-import { messages } from '../locale/no-image-selected'
 
-const { t } = useI18n({
-  messages,
-})
 const message = useMessage()
 
 const props = defineProps<{
@@ -41,20 +37,24 @@ const image = computed<Blob | undefined>(() => {
   }
 })
 
-const download = async () => {
+const downloadBlob = ref<Blob | null>(null)
+const downloadUrl = useObjectUrl(downloadBlob)
+
+let downloadToken = 0
+
+const updateDownload = async () => {
+  if (!image.value) {
+    downloadBlob.value = null
+    return
+  }
+  const token = ++downloadToken
   try {
-    if (image.value === undefined) {
-      throw new Error(t('noImageSelected'))
-    }
-
     const blob = await generateOutput(image.value, props.options)
-    const url = URL.createObjectURL(blob)
-
-    const a = document.createElement('a')
-    a.href = url
-    a.download = 'apple-touch-icon.png'
-    a.click()
+    if (token !== downloadToken) return
+    downloadBlob.value = blob
   } catch (e) {
+    if (token !== downloadToken) return
+    downloadBlob.value = null
     message.error((e as Error).message)
   }
 }
@@ -62,4 +62,12 @@ const download = async () => {
 const code = computed(() => {
   return getHTMLCode()
 })
+
+watch(
+  () => [image.value, props.options],
+  () => {
+    void updateDownload()
+  },
+  { immediate: true, deep: true },
+)
 </script>

@@ -16,7 +16,6 @@
       v-if="optimizedFile && originalFile"
       :original-file="originalFile"
       :optimized-file="optimizedFile"
-      @download="downloadOptimized"
     />
 
     <!-- Error Display -->
@@ -81,19 +80,6 @@ async function optimizeImage() {
   } finally {
     isOptimizing.value = false
   }
-}
-
-function downloadOptimized() {
-  if (!optimizedFile.value || !originalFile.value) return
-
-  const url = URL.createObjectURL(optimizedFile.value)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = originalFile.value.name
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-  URL.revokeObjectURL(url)
 }
 </script>
 

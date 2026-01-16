@@ -11,6 +11,7 @@
     "@shared/icons": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
     "mime": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
