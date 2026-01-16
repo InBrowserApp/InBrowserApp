@@ -97,6 +97,7 @@ catalog:
   naive-ui: ^2.43.2
   npm-run-all2: ^8.0.4
   openapi-typescript: ^7.10.1
+  openpgp: ^6.3.0
   oxlint: ~1.38.0
   papaparse: ^5.5.3
   pinia: 3.0.4

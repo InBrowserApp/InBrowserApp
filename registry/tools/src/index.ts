@@ -111,8 +111,9 @@ import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
 import { toolInfo as bicSwiftValidatorToolInfo } from '@tools/bic-swift-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
-import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
+import { toolInfo as pgpKeyGeneratorToolInfo } from '@tools/pgp-key-generator'
+import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
 import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 import { toolInfo as svgOptimizerToolInfo } from '@tools/svg-optimizer'
 import { toolInfo as svgToImageConverterToolInfo } from '@tools/svg-to-image-converter'
@@ -272,5 +273,6 @@ export const tools: ToolInfo[] = [
 
   // Security Tools
   certificatePublicKeyParserToolInfo,
+  pgpKeyGeneratorToolInfo,
   sshKeyGeneratorToolInfo,
 ]

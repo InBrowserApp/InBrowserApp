@@ -109,8 +109,9 @@ import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
-import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
+import { routes as pgpKeyGeneratorRoutes } from '@tools/pgp-key-generator/routes'
+import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
 import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
 import { routes as svgOptimizerRoutes } from '@tools/svg-optimizer/routes'
 import { routes as svgToImageConverterRoutes } from '@tools/svg-to-image-converter/routes'
@@ -229,6 +230,7 @@ export const routes: ToolRoute[] = [
   ...placeholderImageGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...certificatePublicKeyParserRoutes,
+  ...pgpKeyGeneratorRoutes,
   ...sshKeyGeneratorRoutes,
   ...htmlColorNamesRoutes,
 ]
