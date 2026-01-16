@@ -12,7 +12,7 @@
 
       <n-flex>
         <CopyToClipboardButton :content="renderedMarkdown" />
-        <n-button @click="downloadMarkdown" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="converted.md">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -42,6 +42,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import TurndownService from 'turndown'
 import { ToolSection } from '@shared/ui/tool'
@@ -62,17 +63,10 @@ const turndownService = new TurndownService()
 
 const renderedMarkdown = computed<string>(() => turndownService.turndown(html.value))
 
-function downloadMarkdown(): void {
-  const blob = new Blob([renderedMarkdown.value], { type: 'text/markdown;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'converted.md'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(
+  () => new Blob([renderedMarkdown.value], { type: 'text/markdown;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

@@ -18,7 +18,7 @@
       </n-flex>
       <n-flex>
         <CopyToClipboardButton :content="renderedJson" />
-        <n-button @click="downloadJson" text>
+        <n-button tag="a" text :href="downloadUrl ?? undefined" download="converted.json">
           <template #icon>
             <n-icon :component="ArrowDownload16Regular" />
           </template>
@@ -157,7 +157,7 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import Papa from 'papaparse'
 import type { ParseResult } from 'papaparse'
-import { useStorage } from '@vueuse/core'
+import { useObjectUrl, useStorage } from '@vueuse/core'
 import {
   NButton,
   NIcon,
@@ -267,17 +267,10 @@ const renderedJson = computed(() => {
   }
 })
 
-function downloadJson(): void {
-  const blob = new Blob([renderedJson.value], { type: 'application/json;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'converted.json'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(
+  () => new Blob([renderedJson.value], { type: 'application/json;charset=utf-8' }),
+)
+const downloadUrl = useObjectUrl(downloadBlob)
 
 async function importFromFile(): Promise<void> {
   const file = await fileOpen({

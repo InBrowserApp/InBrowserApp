@@ -22,7 +22,13 @@
       <CopyToClipboardButton :value="optimizedSvg" :feedback="t('copied')" type="primary">
         {{ t('copy') }}
       </CopyToClipboardButton>
-      <n-button text @click="downloadSvg">
+      <n-button
+        tag="a"
+        text
+        :href="downloadUrl ?? undefined"
+        :download="downloadName"
+        :disabled="!downloadUrl"
+      >
         <template #icon>
           <n-icon><ArrowDownload24Regular /></n-icon>
         </template>
@@ -34,6 +40,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { NGrid, NGi, NStatistic, NSpace, NButton, NText, NIcon } from 'naive-ui'
 import { ArrowDownload24Regular } from '@shared/icons/fluent'
@@ -60,17 +67,9 @@ const savedPercent = computed(() => {
   return ((originalSize.value - optimizedSize.value) / originalSize.value) * 100
 })
 
-function downloadSvg() {
-  const blob = new Blob([props.optimizedSvg], { type: 'image/svg+xml' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = props.fileName.replace(/\.svg$/i, '') + '.optimized.svg'
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(() => new Blob([props.optimizedSvg], { type: 'image/svg+xml' }))
+const downloadUrl = useObjectUrl(downloadBlob)
+const downloadName = computed(() => props.fileName.replace(/\.svg$/i, '') + '.optimized.svg')
 </script>
 
 <i18n lang="json">

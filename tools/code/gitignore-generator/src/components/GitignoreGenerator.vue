@@ -91,7 +91,13 @@
         <n-space v-else />
         <n-space>
           <CopyToClipboardButton :content="generatedContent" />
-          <n-button text @click="downloadGitignore" :disabled="!generatedContent">
+          <n-button
+            tag="a"
+            text
+            :href="downloadUrl ?? undefined"
+            download=".gitignore"
+            :disabled="!downloadUrl"
+          >
             <template #icon>
               <n-icon><DownloadIcon /></n-icon>
             </template>
@@ -113,7 +119,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStorage } from '@vueuse/core'
+import { useObjectUrl, useStorage } from '@vueuse/core'
 import {
   NInput,
   NSpace,
@@ -223,18 +229,11 @@ const generatedContent = computed(() => {
   return selected.map((t) => `### ${t.name} ###\n${t.content}`).join('\n\n')
 })
 
-// Download gitignore file
-function downloadGitignore() {
-  if (!generatedContent.value) return
-
-  const blob = new Blob([generatedContent.value], { type: 'text/plain' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = '.gitignore'
-  a.click()
-  URL.revokeObjectURL(url)
-}
+const downloadBlob = computed(() => {
+  if (!generatedContent.value) return null
+  return new Blob([generatedContent.value], { type: 'text/plain;charset=utf-8' })
+})
+const downloadUrl = useObjectUrl(downloadBlob)
 </script>
 
 <i18n lang="json">

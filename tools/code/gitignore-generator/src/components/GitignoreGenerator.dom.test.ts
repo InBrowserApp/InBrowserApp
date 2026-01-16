@@ -23,12 +23,12 @@ describe('GitignoreGenerator', () => {
 
     expect((textarea.element as HTMLTextAreaElement).value).toBe('')
 
-    const downloadButton = wrapper
-      .findAll('button')
+    const downloadLink = wrapper
+      .findAll('a')
       .find((candidate) => candidate.text().includes('Download'))
 
-    expect(downloadButton).toBeTruthy()
-    expect(downloadButton!.attributes('disabled')).toBeDefined()
+    expect(downloadLink).toBeTruthy()
+    expect(downloadLink!.attributes('href')).toBeUndefined()
   })
 
   it('loads stored selections into the preview', () => {

@@ -4057,6 +4057,9 @@ importers:
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       mime:
         specifier: 'catalog:'
         version: 4.1.0

@@ -196,6 +196,11 @@ Import from `@shared/ui/*`:
 - `@shared/ui/layouts` → `NavLayout`, `NavBar`
 - `@shared/ui/domain/*` → Domain-specific components (IP, UUID, PDF, MAC, DNS)
 
+## Download Buttons
+
+- Use real anchor buttons for downloads: `n-button tag="a"` with `download` and `href` from `useObjectUrl`.
+- Avoid manual `document.createElement('a')` download clicks.
+
 ## Internationalization
 
 **25 supported languages** (defined in `shared/locale/src/languages.ts`):
