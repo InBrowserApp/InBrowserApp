@@ -67,7 +67,27 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="t('annotated-title')" :show-feedback="false">
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
+        <template #label>
+          <n-flex align="center" justify="space-between" class="output-label">
+            <span>{{ t('annotated-title') }}</span>
+            <n-flex align="center" :size="8" class="output-actions">
+              <CopyToClipboardButton :content="annotatedText" />
+              <n-button
+                tag="a"
+                text
+                :href="annotatedDownloadUrl"
+                download="annotated.txt"
+                :disabled="!annotatedText"
+              >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
+                {{ t('download-annotated') }}
+              </n-button>
+            </n-flex>
+          </n-flex>
+        </template>
         <n-input
           :value="annotatedText"
           type="textarea"
@@ -173,6 +193,10 @@ const downloadBlob = computed(
   () => new Blob([cleanedText.value], { type: 'text/plain;charset=utf-8' }),
 )
 const downloadUrl = useObjectUrl(downloadBlob)
+const annotatedBlob = computed(
+  () => new Blob([annotatedText.value], { type: 'text/plain;charset=utf-8' }),
+)
+const annotatedDownloadUrl = useObjectUrl(annotatedBlob)
 
 const categoryLabels = computed<Record<InvisibleCategory, string>>(() => ({
   'zero-width': t('category.zero-width'),
@@ -271,6 +295,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Cleaned length: {count}",
     "cleaned-title": "Cleaned text",
     "download-cleaned": "Download cleaned text",
+    "download-annotated": "Download annotated preview",
     "annotated-title": "Annotated preview",
     "table-title": "Findings",
     "column-index": "Index",
@@ -296,6 +321,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "清理后长度：{count}",
     "cleaned-title": "清理后的文本",
     "download-cleaned": "下载清理文本",
+    "download-annotated": "下载标注预览",
     "annotated-title": "标注预览",
     "table-title": "发现项",
     "column-index": "索引",
@@ -321,6 +347,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "清理后长度：{count}",
     "cleaned-title": "清理后的文本",
     "download-cleaned": "下载清理文本",
+    "download-annotated": "下载标注预览",
     "annotated-title": "标注预览",
     "table-title": "发现项",
     "column-index": "索引",
@@ -346,6 +373,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "清理後長度：{count}",
     "cleaned-title": "清理後的文字",
     "download-cleaned": "下載清理文字",
+    "download-annotated": "下載標註預覽",
     "annotated-title": "標註預覽",
     "table-title": "發現項目",
     "column-index": "索引",
@@ -371,6 +399,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "清理後長度：{count}",
     "cleaned-title": "清理後的文字",
     "download-cleaned": "下載清理文字",
+    "download-annotated": "下載標註預覽",
     "annotated-title": "標註預覽",
     "table-title": "發現項目",
     "column-index": "索引",
@@ -396,6 +425,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Longitud limpia: {count}",
     "cleaned-title": "Texto limpio",
     "download-cleaned": "Descargar texto limpio",
+    "download-annotated": "Descargar vista anotada",
     "annotated-title": "Vista anotada",
     "table-title": "Hallazgos",
     "column-index": "Índice",
@@ -421,6 +451,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Longueur nettoyée : {count}",
     "cleaned-title": "Texte nettoyé",
     "download-cleaned": "Télécharger le texte nettoyé",
+    "download-annotated": "Télécharger l'aperçu annoté",
     "annotated-title": "Aperçu annoté",
     "table-title": "Résultats",
     "column-index": "Index",
@@ -446,6 +477,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Bereinigte Länge: {count}",
     "cleaned-title": "Bereinigter Text",
     "download-cleaned": "Bereinigten Text herunterladen",
+    "download-annotated": "Annotierte Vorschau herunterladen",
     "annotated-title": "Annotierte Vorschau",
     "table-title": "Funde",
     "column-index": "Index",
@@ -471,6 +503,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Lunghezza pulita: {count}",
     "cleaned-title": "Testo pulito",
     "download-cleaned": "Scarica testo pulito",
+    "download-annotated": "Scarica anteprima annotata",
     "annotated-title": "Anteprima annotata",
     "table-title": "Risultati",
     "column-index": "Indice",
@@ -496,6 +529,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "クリーン長さ: {count}",
     "cleaned-title": "クリーンなテキスト",
     "download-cleaned": "クリーンテキストをダウンロード",
+    "download-annotated": "注釈付きプレビューをダウンロード",
     "annotated-title": "注釈付きプレビュー",
     "table-title": "検出結果",
     "column-index": "インデックス",
@@ -521,6 +555,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "정리된 길이: {count}",
     "cleaned-title": "정리된 텍스트",
     "download-cleaned": "정리된 텍스트 다운로드",
+    "download-annotated": "주석 미리보기 다운로드",
     "annotated-title": "주석 미리보기",
     "table-title": "감지 결과",
     "column-index": "인덱스",
@@ -546,6 +581,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Очищенная длина: {count}",
     "cleaned-title": "Очищенный текст",
     "download-cleaned": "Скачать очищенный текст",
+    "download-annotated": "Скачать аннотированный просмотр",
     "annotated-title": "Аннотированный просмотр",
     "table-title": "Найдено",
     "column-index": "Индекс",
@@ -571,6 +607,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Comprimento limpo: {count}",
     "cleaned-title": "Texto limpo",
     "download-cleaned": "Baixar texto limpo",
+    "download-annotated": "Baixar pré-visualização anotada",
     "annotated-title": "Pré-visualização anotada",
     "table-title": "Achados",
     "column-index": "Índice",
@@ -596,6 +633,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "الطول بعد التنظيف: {count}",
     "cleaned-title": "نص نظيف",
     "download-cleaned": "تنزيل النص النظيف",
+    "download-annotated": "تنزيل المعاينة مع تعليقات",
     "annotated-title": "معاينة مع تعليقات",
     "table-title": "الاكتشافات",
     "column-index": "الفهرس",
@@ -621,6 +659,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "साफ़ लंबाई: {count}",
     "cleaned-title": "साफ़ किया गया टेक्स्ट",
     "download-cleaned": "साफ़ टेक्स्ट डाउनलोड करें",
+    "download-annotated": "एनोटेटेड पूर्वावलोकन डाउनलोड करें",
     "annotated-title": "एनोटेटेड पूर्वावलोकन",
     "table-title": "मिले हुए",
     "column-index": "सूचकांक",
@@ -646,6 +685,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Temiz uzunluk: {count}",
     "cleaned-title": "Temizlenmiş metin",
     "download-cleaned": "Temizlenmiş metni indir",
+    "download-annotated": "Açıklamalı önizlemeyi indir",
     "annotated-title": "Açıklamalı önizleme",
     "table-title": "Bulunanlar",
     "column-index": "Dizin",
@@ -671,6 +711,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Schone lengte: {count}",
     "cleaned-title": "Schone tekst",
     "download-cleaned": "Schone tekst downloaden",
+    "download-annotated": "Geannoteerd voorbeeld downloaden",
     "annotated-title": "Geannoteerd voorbeeld",
     "table-title": "Vondsten",
     "column-index": "Index",
@@ -696,6 +737,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Rensad längd: {count}",
     "cleaned-title": "Rensad text",
     "download-cleaned": "Ladda ner rensad text",
+    "download-annotated": "Ladda ner annoterad förhandsvisning",
     "annotated-title": "Annoterad förhandsvisning",
     "table-title": "Fynd",
     "column-index": "Index",
@@ -721,6 +763,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Oczyszczona długość: {count}",
     "cleaned-title": "Oczyszczony tekst",
     "download-cleaned": "Pobierz oczyszczony tekst",
+    "download-annotated": "Pobierz podgląd z adnotacjami",
     "annotated-title": "Podgląd z adnotacjami",
     "table-title": "Znalezione",
     "column-index": "Indeks",
@@ -746,6 +789,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Độ dài đã làm sạch: {count}",
     "cleaned-title": "Văn bản đã làm sạch",
     "download-cleaned": "Tải văn bản đã làm sạch",
+    "download-annotated": "Tải bản xem trước có chú thích",
     "annotated-title": "Xem trước có chú thích",
     "table-title": "Phát hiện",
     "column-index": "Chỉ mục",
@@ -771,6 +815,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "ความยาวที่ทำความสะอาดแล้ว: {count}",
     "cleaned-title": "ข้อความที่ทำความสะอาดแล้ว",
     "download-cleaned": "ดาวน์โหลดข้อความที่ทำความสะอาดแล้ว",
+    "download-annotated": "ดาวน์โหลดตัวอย่างที่มีคำอธิบาย",
     "annotated-title": "ตัวอย่างที่มีคำอธิบาย",
     "table-title": "รายการที่พบ",
     "column-index": "ดัชนี",
@@ -796,6 +841,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Panjang bersih: {count}",
     "cleaned-title": "Teks bersih",
     "download-cleaned": "Unduh teks bersih",
+    "download-annotated": "Unduh pratinjau beranotasi",
     "annotated-title": "Pratinjau beranotasi",
     "table-title": "Temuan",
     "column-index": "Indeks",
@@ -821,6 +867,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "אורך נקי: {count}",
     "cleaned-title": "טקסט נקי",
     "download-cleaned": "הורד טקסט נקי",
+    "download-annotated": "הורד תצוגה מוערת",
     "annotated-title": "תצוגה מוערת",
     "table-title": "ממצאים",
     "column-index": "אינדקס",
@@ -846,6 +893,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Panjang bersih: {count}",
     "cleaned-title": "Teks bersih",
     "download-cleaned": "Muat turun teks bersih",
+    "download-annotated": "Muat turun pratonton beranotasi",
     "annotated-title": "Pratonton beranotasi",
     "table-title": "Dapatan",
     "column-index": "Indeks",
@@ -871,6 +919,7 @@ const columns = computed<DataTableColumns<InvisibleMatch>>(() => [
     "summary-clean-length": "Renset lengde: {count}",
     "cleaned-title": "Renset tekst",
     "download-cleaned": "Last ned renset tekst",
+    "download-annotated": "Last ned annotert forhåndsvisning",
     "annotated-title": "Annotert forhåndsvisning",
     "table-title": "Funn",
     "column-index": "Indeks",
