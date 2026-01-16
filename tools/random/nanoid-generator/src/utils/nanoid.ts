@@ -65,9 +65,13 @@ export function generateNanoid(alphabet: string, size: number): string {
   while (id.length < normalizedSize) {
     const bytes = crypto.getRandomValues(new Uint8Array(step))
     for (let i = 0; i < step && id.length < normalizedSize; i += 1) {
-      const index = bytes[i] & mask
-      if (index < alphabetChars.length) {
-        id.push(alphabetChars[index])
+      const byte = bytes[i]
+      if (byte === undefined) continue
+
+      const index = byte & mask
+      const char = alphabetChars[index]
+      if (char !== undefined) {
+        id.push(char)
       }
     }
   }
