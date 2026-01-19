@@ -27,14 +27,14 @@ export function sitemapPlugin(): Plugin {
         supportedLanguages: string[]
       }
 
-      const paths = ['/', '/tools', ...tools.map((tool) => tool.path)].filter((path) =>
-        path.startsWith('/'),
-      )
+      const routePaths = Array.from(
+        new Set(['/', '/tools', ...tools.map((tool) => tool.path)]),
+      ).filter((routePath) => routePath.startsWith('/'))
 
       console.log('Building sitemap...')
       console.log('Tools:', tools.length)
       console.log('Languages:', supportedLanguages.length)
-      console.log('Paths:', paths.length)
+      console.log('Paths:', routePaths.length)
 
       const smStream = new SitemapStream({
         hostname: SITE_URL,
@@ -47,23 +47,21 @@ export function sitemapPlugin(): Plugin {
         },
       })
 
-      const xmlBuffer = new Promise<Buffer>((resolve, reject) => {
-        streamToPromise(smStream).then(resolve).catch(reject)
-      })
+      const xmlPromise = streamToPromise(smStream)
 
-      for (const path of paths) {
+      for (const routePath of routePaths) {
         smStream.write({
-          url: `${SITE_URL}${path}`,
+          url: `${SITE_URL}${routePath}`,
           links: supportedLanguages.map((lang) => ({
             lang,
-            url: `${SITE_URL}/${lang}${path}`,
+            url: `${SITE_URL}/${lang}${routePath}`,
           })),
         })
       }
 
       smStream.end()
 
-      const buffer = await xmlBuffer
+      const buffer = await xmlPromise
       const outputPath = path.join(outputDir, 'sitemap.xml')
 
       await mkdir(outputDir, { recursive: true })
