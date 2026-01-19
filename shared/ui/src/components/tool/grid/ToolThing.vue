@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable @intlify/vue-i18n/no-missing-keys -->
   <CustomRouterLink :to="path" class="tool-link" v-if="!props.tool.external">
     <n-thing>
       <template v-if="showIcon" #avatar>
@@ -35,6 +36,7 @@
       </template>
     </n-thing>
   </a>
+  <!-- eslint-enable @intlify/vue-i18n/no-missing-keys -->
 </template>
 
 <script setup lang="ts">

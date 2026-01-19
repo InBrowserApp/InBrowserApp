@@ -83,13 +83,6 @@ export default defineConfigWithVueTs(
     },
   },
   {
-    name: 'app/vue-i18n-dynamic-meta',
-    files: ['shared/ui/src/components/tool/grid/ToolThing.vue'],
-    rules: {
-      '@intlify/vue-i18n/no-missing-keys': 'off',
-    },
-  },
-  {
     name: 'app/i18n-info',
     files: ['tools/**/src/info.ts'],
     plugins: {
