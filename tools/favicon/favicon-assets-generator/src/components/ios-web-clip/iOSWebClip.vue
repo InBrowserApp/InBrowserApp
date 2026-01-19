@@ -1,7 +1,8 @@
 <template>
   <ToolSectionHeader>
     <n-icon :component="Apple" style="vertical-align: -0.15em" />
-    iOS Web Clip
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+    <span>iOS Web Clip</span>
   </ToolSectionHeader>
   <n-grid x-gap="30" y-gap="20" :cols="5" item-responsive responsive="screen">
     <n-grid-item span="5 s:2">

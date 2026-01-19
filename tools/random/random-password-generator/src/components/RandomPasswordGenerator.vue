@@ -145,8 +145,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "zh": {
     "options": "选项",
@@ -154,8 +153,7 @@ const password = computed(() => {
     "tab-words": "单词",
     "tab-separator": "分隔",
     "tab-pin": "PIN",
-    "results": "结果",
-    "regenerate": "重新生成"
+    "results": "结果"
   },
   "zh-CN": {
     "options": "选项",
@@ -163,8 +161,7 @@ const password = computed(() => {
     "tab-words": "单词",
     "tab-separator": "分隔",
     "tab-pin": "PIN",
-    "results": "结果",
-    "regenerate": "重新生成"
+    "results": "结果"
   },
   "zh-TW": {
     "options": "選項",
@@ -172,8 +169,7 @@ const password = computed(() => {
     "tab-words": "單詞",
     "tab-separator": "分隔",
     "tab-pin": "PIN",
-    "results": "結果",
-    "regenerate": "重新生成"
+    "results": "結果"
   },
   "zh-HK": {
     "options": "選項",
@@ -181,8 +177,7 @@ const password = computed(() => {
     "tab-words": "單詞",
     "tab-separator": "分隔",
     "tab-pin": "PIN",
-    "results": "結果",
-    "regenerate": "重新生成"
+    "results": "結果"
   },
   "es": {
     "options": "Options",
@@ -190,8 +185,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "fr": {
     "options": "Options",
@@ -199,8 +193,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "de": {
     "options": "Options",
@@ -208,8 +201,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "it": {
     "options": "Options",
@@ -217,8 +209,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "ja": {
     "options": "Options",
@@ -226,8 +217,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "ko": {
     "options": "Options",
@@ -235,8 +225,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "ru": {
     "options": "Options",
@@ -244,8 +233,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "pt": {
     "options": "Options",
@@ -253,8 +241,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "ar": {
     "options": "Options",
@@ -262,8 +249,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "hi": {
     "options": "Options",
@@ -271,8 +257,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "tr": {
     "options": "Options",
@@ -280,8 +265,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "nl": {
     "options": "Options",
@@ -289,8 +273,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "sv": {
     "options": "Options",
@@ -298,8 +281,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "pl": {
     "options": "Options",
@@ -307,8 +289,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "vi": {
     "options": "Options",
@@ -316,8 +297,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "th": {
     "options": "Options",
@@ -325,8 +305,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "id": {
     "options": "Options",
@@ -334,8 +313,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "he": {
     "options": "Options",
@@ -343,8 +321,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "ms": {
     "options": "Options",
@@ -352,8 +329,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   },
   "no": {
     "options": "Options",
@@ -361,8 +337,7 @@ const password = computed(() => {
     "tab-words": "Words",
     "tab-separator": "Separator",
     "tab-pin": "PIN",
-    "results": "Results",
-    "regenerate": "Regenerate"
+    "results": "Results"
   }
 }
 </i18n>

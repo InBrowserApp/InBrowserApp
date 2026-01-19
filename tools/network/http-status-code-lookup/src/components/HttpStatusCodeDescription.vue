@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
   <span>{{ t(`description.${code}`) }}</span>
 </template>
 
@@ -12,6 +13,7 @@ defineProps<{
 const { t } = useI18n()
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->
 <i18n lang="json">
 {
   "en": {

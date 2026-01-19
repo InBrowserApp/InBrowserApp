@@ -7,9 +7,11 @@
     <n-p>
       <i18n-t keypath="example">
         <template #hello>
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <n-text code>Hello</n-text>
         </template>
         <template #uryyb>
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <n-text code>Uryyb</n-text>
         </template>
       </i18n-t>

@@ -5,6 +5,7 @@
   <ToolSection>
     <i18n-t keypath="description">
       <template #example>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
         <n-text code>chmod 755 script.sh</n-text>
       </template>
     </i18n-t>

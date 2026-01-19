@@ -10,7 +10,8 @@
         >
           <n-space>
             <n-radio value="ed25519">
-              Ed25519
+              <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+              <span>Ed25519</span>
               <n-tag size="tiny" type="success" :bordered="false" style="margin-left: 4px">
                 {{ t('recommended') }}
               </n-tag>

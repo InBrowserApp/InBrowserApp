@@ -122,7 +122,6 @@ function useCurrentUserAgent() {
 {
   "en": {
     "use-current": "Use my user agent",
-    "clear": "Clear",
     "input-label": "User Agent",
     "input-placeholder": "Paste a user agent string here...",
     "input-error": "Enter a user agent string to parse.",
@@ -145,7 +144,6 @@ function useCurrentUserAgent() {
   },
   "zh": {
     "use-current": "使用我的用户代理",
-    "clear": "清空",
     "input-label": "用户代理（User-Agent）",
     "input-placeholder": "在此粘贴 User-Agent 字符串...",
     "input-error": "请输入要解析的 User-Agent 字符串。",
@@ -168,7 +166,6 @@ function useCurrentUserAgent() {
   },
   "zh-CN": {
     "use-current": "使用我的用户代理",
-    "clear": "清空",
     "input-label": "用户代理（User-Agent）",
     "input-placeholder": "在此粘贴 User-Agent 字符串...",
     "input-error": "请输入要解析的 User-Agent 字符串。",
@@ -191,7 +188,6 @@ function useCurrentUserAgent() {
   },
   "zh-TW": {
     "use-current": "使用我的使用者代理",
-    "clear": "清除",
     "input-label": "使用者代理（User-Agent）",
     "input-placeholder": "在此貼上 User-Agent 字串...",
     "input-error": "請輸入要解析的 User-Agent 字串。",
@@ -214,7 +210,6 @@ function useCurrentUserAgent() {
   },
   "zh-HK": {
     "use-current": "使用我的使用者代理",
-    "clear": "清除",
     "input-label": "使用者代理（User-Agent）",
     "input-placeholder": "在此貼上 User-Agent 字串...",
     "input-error": "請輸入要解析的 User-Agent 字串。",
@@ -237,7 +232,6 @@ function useCurrentUserAgent() {
   },
   "es": {
     "use-current": "Usar mi user agent",
-    "clear": "Limpiar",
     "input-label": "User Agent",
     "input-placeholder": "Pega una cadena de user agent aquí...",
     "input-error": "Introduce una cadena de user agent para analizar.",
@@ -260,7 +254,6 @@ function useCurrentUserAgent() {
   },
   "fr": {
     "use-current": "Utiliser mon user agent",
-    "clear": "Effacer",
     "input-label": "User Agent",
     "input-placeholder": "Collez une chaîne User-Agent ici...",
     "input-error": "Saisissez une chaîne User-Agent à analyser.",
@@ -283,7 +276,6 @@ function useCurrentUserAgent() {
   },
   "de": {
     "use-current": "Meinen User Agent verwenden",
-    "clear": "Leeren",
     "input-label": "User Agent",
     "input-placeholder": "User-Agent-String hier einfügen...",
     "input-error": "Gib einen User-Agent-String zum Parsen ein.",
@@ -306,7 +298,6 @@ function useCurrentUserAgent() {
   },
   "it": {
     "use-current": "Usa il mio user agent",
-    "clear": "Cancella",
     "input-label": "User Agent",
     "input-placeholder": "Incolla qui una stringa User-Agent...",
     "input-error": "Inserisci una stringa User-Agent da analizzare.",
@@ -329,7 +320,6 @@ function useCurrentUserAgent() {
   },
   "ja": {
     "use-current": "現在のユーザーエージェントを使用",
-    "clear": "クリア",
     "input-label": "ユーザーエージェント（User-Agent）",
     "input-placeholder": "User-Agent 文字列をここに貼り付け...",
     "input-error": "解析する User-Agent 文字列を入力してください。",
@@ -352,7 +342,6 @@ function useCurrentUserAgent() {
   },
   "ko": {
     "use-current": "내 사용자 에이전트 사용",
-    "clear": "지우기",
     "input-label": "사용자 에이전트",
     "input-placeholder": "User-Agent 문자열을 여기에 붙여넣기...",
     "input-error": "파싱할 User-Agent 문자열을 입력하세요.",
@@ -375,7 +364,6 @@ function useCurrentUserAgent() {
   },
   "ru": {
     "use-current": "Использовать мой user agent",
-    "clear": "Очистить",
     "input-label": "User Agent",
     "input-placeholder": "Вставьте строку User-Agent здесь...",
     "input-error": "Введите строку User-Agent для разбора.",
@@ -398,7 +386,6 @@ function useCurrentUserAgent() {
   },
   "pt": {
     "use-current": "Usar meu user agent",
-    "clear": "Limpar",
     "input-label": "User Agent",
     "input-placeholder": "Cole uma string User-Agent aqui...",
     "input-error": "Insira uma string User-Agent para analisar.",
@@ -421,7 +408,6 @@ function useCurrentUserAgent() {
   },
   "ar": {
     "use-current": "استخدم وكيل المستخدم الخاص بي",
-    "clear": "مسح",
     "input-label": "وكيل المستخدم",
     "input-placeholder": "الصق سلسلة User-Agent هنا...",
     "input-error": "أدخل سلسلة User-Agent لتحليلها.",
@@ -444,7 +430,6 @@ function useCurrentUserAgent() {
   },
   "hi": {
     "use-current": "मेरा User-Agent उपयोग करें",
-    "clear": "साफ़ करें",
     "input-label": "User-Agent",
     "input-placeholder": "User-Agent स्ट्रिंग यहाँ पेस्ट करें...",
     "input-error": "विश्लेषण के लिए User-Agent स्ट्रिंग दर्ज करें।",
@@ -467,7 +452,6 @@ function useCurrentUserAgent() {
   },
   "tr": {
     "use-current": "Kendi user agent'ımı kullan",
-    "clear": "Temizle",
     "input-label": "User Agent",
     "input-placeholder": "User-Agent dizesini buraya yapıştırın...",
     "input-error": "Ayrıştırmak için bir User-Agent dizesi girin.",
@@ -490,7 +474,6 @@ function useCurrentUserAgent() {
   },
   "nl": {
     "use-current": "Gebruik mijn user agent",
-    "clear": "Wissen",
     "input-label": "User Agent",
     "input-placeholder": "Plak hier een User-Agent-string...",
     "input-error": "Voer een User-Agent-string in om te parseren.",
@@ -513,7 +496,6 @@ function useCurrentUserAgent() {
   },
   "sv": {
     "use-current": "Använd min user agent",
-    "clear": "Rensa",
     "input-label": "User Agent",
     "input-placeholder": "Klistra in en User-Agent-sträng här...",
     "input-error": "Ange en User-Agent-sträng att tolka.",
@@ -536,7 +518,6 @@ function useCurrentUserAgent() {
   },
   "pl": {
     "use-current": "Użyj mojego user agenta",
-    "clear": "Wyczyść",
     "input-label": "User Agent",
     "input-placeholder": "Wklej tutaj ciąg User-Agent...",
     "input-error": "Wprowadź ciąg User-Agent do analizy.",
@@ -559,7 +540,6 @@ function useCurrentUserAgent() {
   },
   "vi": {
     "use-current": "Dùng User-Agent của tôi",
-    "clear": "Xóa",
     "input-label": "User Agent",
     "input-placeholder": "Dán chuỗi User-Agent vào đây...",
     "input-error": "Nhập chuỗi User-Agent để phân tích.",
@@ -582,7 +562,6 @@ function useCurrentUserAgent() {
   },
   "th": {
     "use-current": "ใช้ User-Agent ของฉัน",
-    "clear": "ล้าง",
     "input-label": "User Agent",
     "input-placeholder": "วางสตริง User-Agent ที่นี่...",
     "input-error": "กรุณากรอกสตริง User-Agent เพื่อวิเคราะห์",
@@ -605,7 +584,6 @@ function useCurrentUserAgent() {
   },
   "id": {
     "use-current": "Gunakan user agent saya",
-    "clear": "Bersihkan",
     "input-label": "User Agent",
     "input-placeholder": "Tempel string User-Agent di sini...",
     "input-error": "Masukkan string User-Agent untuk dianalisis.",
@@ -628,7 +606,6 @@ function useCurrentUserAgent() {
   },
   "he": {
     "use-current": "השתמש ב‑User-Agent שלי",
-    "clear": "נקה",
     "input-label": "User-Agent",
     "input-placeholder": "הדביקו כאן מחרוזת User-Agent...",
     "input-error": "הזינו מחרוזת User-Agent לניתוח.",
@@ -651,7 +628,6 @@ function useCurrentUserAgent() {
   },
   "ms": {
     "use-current": "Gunakan user agent saya",
-    "clear": "Kosongkan",
     "input-label": "User Agent",
     "input-placeholder": "Tampal rentetan User-Agent di sini...",
     "input-error": "Masukkan rentetan User-Agent untuk dianalisis.",
@@ -674,7 +650,6 @@ function useCurrentUserAgent() {
   },
   "no": {
     "use-current": "Bruk min user agent",
-    "clear": "Tøm",
     "input-label": "User Agent",
     "input-placeholder": "Lim inn en User-Agent-streng her...",
     "input-error": "Skriv inn en User-Agent-streng for å analysere.",

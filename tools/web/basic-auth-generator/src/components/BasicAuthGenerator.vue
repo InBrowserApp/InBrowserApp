@@ -70,7 +70,6 @@ const curlCommand = computed(() =>
     "username": "Username",
     "password": "Password",
     "header": "Authorization Header",
-    "clear": "Clear",
     "curl": "cURL Example"
   },
   "zh": {
@@ -78,7 +77,6 @@ const curlCommand = computed(() =>
     "username": "用户名",
     "password": "密码",
     "header": "Authorization 头",
-    "clear": "清空",
     "curl": "cURL 示例"
   },
   "zh-CN": {
@@ -86,7 +84,6 @@ const curlCommand = computed(() =>
     "username": "用户名",
     "password": "密码",
     "header": "Authorization 头",
-    "clear": "清空",
     "curl": "cURL 示例"
   },
   "zh-TW": {
@@ -94,7 +91,6 @@ const curlCommand = computed(() =>
     "username": "使用者名稱",
     "password": "密碼",
     "header": "Authorization 標頭",
-    "clear": "清除",
     "curl": "cURL 範例"
   },
   "zh-HK": {
@@ -102,7 +98,6 @@ const curlCommand = computed(() =>
     "username": "使用者名稱",
     "password": "密碼",
     "header": "Authorization 標頭",
-    "clear": "清除",
     "curl": "cURL 範例"
   },
   "es": {
@@ -110,7 +105,6 @@ const curlCommand = computed(() =>
     "username": "Usuario",
     "password": "Contraseña",
     "header": "Encabezado Authorization",
-    "clear": "Limpiar",
     "curl": "Ejemplo cURL"
   },
   "fr": {
@@ -118,7 +112,6 @@ const curlCommand = computed(() =>
     "username": "Nom d'utilisateur",
     "password": "Mot de passe",
     "header": "En-tête Authorization",
-    "clear": "Effacer",
     "curl": "Exemple cURL"
   },
   "de": {
@@ -126,7 +119,6 @@ const curlCommand = computed(() =>
     "username": "Benutzername",
     "password": "Passwort",
     "header": "Authorization-Header",
-    "clear": "Löschen",
     "curl": "cURL Beispiel"
   },
   "it": {
@@ -134,7 +126,6 @@ const curlCommand = computed(() =>
     "username": "Nome utente",
     "password": "Password",
     "header": "Header Authorization",
-    "clear": "Cancella",
     "curl": "Esempio cURL"
   },
   "ja": {
@@ -142,7 +133,6 @@ const curlCommand = computed(() =>
     "username": "ユーザー名",
     "password": "パスワード",
     "header": "Authorization ヘッダー",
-    "clear": "クリア",
     "curl": "cURL 例"
   },
   "ko": {
@@ -150,7 +140,6 @@ const curlCommand = computed(() =>
     "username": "사용자 이름",
     "password": "비밀번호",
     "header": "Authorization 헤더",
-    "clear": "지우기",
     "curl": "cURL 예"
   },
   "ru": {
@@ -158,7 +147,6 @@ const curlCommand = computed(() =>
     "username": "Имя пользователя",
     "password": "Пароль",
     "header": "Заголовок Authorization",
-    "clear": "Очистить",
     "curl": "Пример cURL"
   },
   "pt": {
@@ -166,7 +154,6 @@ const curlCommand = computed(() =>
     "username": "Nome de usuário",
     "password": "Senha",
     "header": "Cabeçalho Authorization",
-    "clear": "Limpar",
     "curl": "Exemplo cURL"
   },
   "ar": {
@@ -174,7 +161,6 @@ const curlCommand = computed(() =>
     "username": "اسم المستخدم",
     "password": "كلمة المرور",
     "header": "ترويسة Authorization",
-    "clear": "مسح",
     "curl": "مثال cURL"
   },
   "hi": {
@@ -182,7 +168,6 @@ const curlCommand = computed(() =>
     "username": "उपयोगकर्ता नाम",
     "password": "पासवर्ड",
     "header": "Authorization हेडर",
-    "clear": "साफ करें",
     "curl": "cURL उदाहरण"
   },
   "tr": {
@@ -190,7 +175,6 @@ const curlCommand = computed(() =>
     "username": "Kullanıcı Adı",
     "password": "Parola",
     "header": "Authorization Başlığı",
-    "clear": "Temizle",
     "curl": "cURL Örneği"
   },
   "nl": {
@@ -198,7 +182,6 @@ const curlCommand = computed(() =>
     "username": "Gebruikersnaam",
     "password": "Wachtwoord",
     "header": "Authorization-header",
-    "clear": "Wissen",
     "curl": "cURL-voorbeeld"
   },
   "sv": {
@@ -206,7 +189,6 @@ const curlCommand = computed(() =>
     "username": "Användarnamn",
     "password": "Lösenord",
     "header": "Authorization-rubrik",
-    "clear": "Rensa",
     "curl": "cURL-exempel"
   },
   "pl": {
@@ -214,7 +196,6 @@ const curlCommand = computed(() =>
     "username": "Nazwa użytkownika",
     "password": "Hasło",
     "header": "Nagłówek Authorization",
-    "clear": "Wyczyść",
     "curl": "Przykład cURL"
   },
   "vi": {
@@ -222,7 +203,6 @@ const curlCommand = computed(() =>
     "username": "Tên người dùng",
     "password": "Mật khẩu",
     "header": "Tiêu đề Authorization",
-    "clear": "Xóa",
     "curl": "Ví dụ cURL"
   },
   "th": {
@@ -230,7 +210,6 @@ const curlCommand = computed(() =>
     "username": "ชื่อผู้ใช้",
     "password": "รหัสผ่าน",
     "header": "ส่วนหัว Authorization",
-    "clear": "ล้าง",
     "curl": "ตัวอย่าง cURL"
   },
   "id": {
@@ -238,7 +217,6 @@ const curlCommand = computed(() =>
     "username": "Nama pengguna",
     "password": "Kata sandi",
     "header": "Header Authorization",
-    "clear": "Bersihkan",
     "curl": "Contoh cURL"
   },
   "he": {
@@ -246,7 +224,6 @@ const curlCommand = computed(() =>
     "username": "שם משתמש",
     "password": "סיסמה",
     "header": "כותרת Authorization",
-    "clear": "נקה",
     "curl": "דוגמת cURL"
   },
   "ms": {
@@ -254,7 +231,6 @@ const curlCommand = computed(() =>
     "username": "Nama pengguna",
     "password": "Kata laluan",
     "header": "Pengepala Authorization",
-    "clear": "Kosongkan",
     "curl": "Contoh cURL"
   },
   "no": {
@@ -262,7 +238,6 @@ const curlCommand = computed(() =>
     "username": "Brukernavn",
     "password": "Passord",
     "header": "Authorization-header",
-    "clear": "Tøm",
     "curl": "cURL-eksempel"
   }
 }

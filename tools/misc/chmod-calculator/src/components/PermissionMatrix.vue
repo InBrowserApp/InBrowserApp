@@ -5,9 +5,21 @@
       <thead>
         <tr>
           <th></th>
-          <th style="text-align: center">{{ t('read') }} (r)</th>
-          <th style="text-align: center">{{ t('write') }} (w)</th>
-          <th style="text-align: center">{{ t('execute') }} (x)</th>
+          <th style="text-align: center">
+            {{ t('read') }}
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+            <span>(r)</span>
+          </th>
+          <th style="text-align: center">
+            {{ t('write') }}
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+            <span>(w)</span>
+          </th>
+          <th style="text-align: center">
+            {{ t('execute') }}
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+            <span>(x)</span>
+          </th>
         </tr>
       </thead>
       <tbody>

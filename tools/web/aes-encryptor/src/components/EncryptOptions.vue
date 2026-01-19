@@ -13,6 +13,7 @@
               JWE
               <n-text depth="3" style="font-size: 12px">({{ t('recommended') }})</n-text>
             </n-radio>
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
             <n-radio value="raw">Raw</n-radio>
           </n-space>
         </n-radio-group>

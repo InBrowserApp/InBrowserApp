@@ -18,9 +18,18 @@ const screenOrientation = useScreenOrientation()
 
 const orientationValue = computed(() => {
   if (!screenOrientation.orientation.value) return undefined
-  return (
-    t('orientation-' + screenOrientation.orientation.value) + ` (${screenOrientation.angle.value}°)`
-  )
+  switch (screenOrientation.orientation.value) {
+    case 'portrait-primary':
+      return t('orientation-portrait-primary')
+    case 'portrait-secondary':
+      return t('orientation-portrait-secondary')
+    case 'landscape-primary':
+      return t('orientation-landscape-primary')
+    case 'landscape-secondary':
+      return t('orientation-landscape-secondary')
+    default:
+      return undefined
+  }
 })
 </script>
 

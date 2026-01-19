@@ -1,5 +1,6 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <ToolSectionHeader>Max UUID</ToolSectionHeader>
     <ToolSection>
       <UUIDDisplay :uuid="uuid" />

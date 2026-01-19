@@ -1,6 +1,7 @@
 <template>
   <n-card size="small">
     <template #header>
+      <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
       <n-text strong>{{ t(fieldName) }}</n-text>
     </template>
 
@@ -17,9 +18,10 @@
 
       <!-- Mode-specific controls -->
       <template v-if="mode === 'every'">
-        <n-text depth="3">{{
-          t('everyDescription', { field: t(fieldName).toLowerCase() })
-        }}</n-text>
+        <n-text depth="3">
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
+          {{ t('everyDescription', { field: t(fieldName).toLowerCase() }) }}
+        </n-text>
       </template>
 
       <template v-else-if="mode === 'interval'">
@@ -32,6 +34,7 @@
             size="small"
             style="width: 80px"
           />
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
           <n-text>{{ t(fieldConfig.unit) }}</n-text>
         </n-flex>
       </template>
@@ -135,6 +138,7 @@ const valueOptions = computed(() => {
   const config = fieldConfig.value
   const options = []
   for (let i = config.min; i <= config.max; i++) {
+    // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
     const label = config.labels ? t(config.labels[i - config.min]!) : String(i)
     options.push({ value: i, label })
   }
@@ -207,6 +211,7 @@ watch(generatedValue, (newValue) => {
 })
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->
 <i18n lang="json">
 {
   "en": {

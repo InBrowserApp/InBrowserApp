@@ -239,7 +239,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
 <i18n lang="json">
 {
   "en": {
-    "selectTemplates": "Select Templates",
     "preview": "Preview",
     "searchPlaceholder": "Search templates...",
     "quickSelect": "Quick Select",
@@ -252,7 +251,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Download"
   },
   "zh": {
-    "selectTemplates": "选择模板",
     "preview": "预览",
     "searchPlaceholder": "搜索模板...",
     "quickSelect": "快速选择",
@@ -265,7 +263,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "下载"
   },
   "zh-CN": {
-    "selectTemplates": "选择模板",
     "preview": "预览",
     "searchPlaceholder": "搜索模板...",
     "quickSelect": "快速选择",
@@ -278,7 +275,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "下载"
   },
   "zh-TW": {
-    "selectTemplates": "選擇模板",
     "preview": "預覽",
     "searchPlaceholder": "搜尋模板...",
     "quickSelect": "快速選擇",
@@ -291,7 +287,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "下載"
   },
   "zh-HK": {
-    "selectTemplates": "選擇模板",
     "preview": "預覽",
     "searchPlaceholder": "搜尋模板...",
     "quickSelect": "快速選擇",
@@ -304,7 +299,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "下載"
   },
   "es": {
-    "selectTemplates": "Seleccionar plantillas",
     "preview": "Vista previa",
     "searchPlaceholder": "Buscar plantillas...",
     "quickSelect": "Selección rápida",
@@ -317,7 +311,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Descargar"
   },
   "fr": {
-    "selectTemplates": "Sélectionner les modèles",
     "preview": "Aperçu",
     "searchPlaceholder": "Rechercher des modèles...",
     "quickSelect": "Sélection rapide",
@@ -330,7 +323,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Télécharger"
   },
   "de": {
-    "selectTemplates": "Vorlagen auswählen",
     "preview": "Vorschau",
     "searchPlaceholder": "Vorlagen suchen...",
     "quickSelect": "Schnellauswahl",
@@ -343,7 +335,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Herunterladen"
   },
   "it": {
-    "selectTemplates": "Seleziona modelli",
     "preview": "Anteprima",
     "searchPlaceholder": "Cerca modelli...",
     "quickSelect": "Selezione rapida",
@@ -356,7 +347,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Scarica"
   },
   "ja": {
-    "selectTemplates": "テンプレートを選択",
     "preview": "プレビュー",
     "searchPlaceholder": "テンプレートを検索...",
     "quickSelect": "クイック選択",
@@ -369,7 +359,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "ダウンロード"
   },
   "ko": {
-    "selectTemplates": "템플릿 선택",
     "preview": "미리보기",
     "searchPlaceholder": "템플릿 검색...",
     "quickSelect": "빠른 선택",
@@ -382,7 +371,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "다운로드"
   },
   "ru": {
-    "selectTemplates": "Выбрать шаблоны",
     "preview": "Предпросмотр",
     "searchPlaceholder": "Поиск шаблонов...",
     "quickSelect": "Быстрый выбор",
@@ -395,7 +383,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Скачать"
   },
   "pt": {
-    "selectTemplates": "Selecionar modelos",
     "preview": "Pré-visualização",
     "searchPlaceholder": "Pesquisar modelos...",
     "quickSelect": "Seleção rápida",
@@ -408,7 +395,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Baixar"
   },
   "ar": {
-    "selectTemplates": "اختر القوالب",
     "preview": "معاينة",
     "searchPlaceholder": "البحث عن القوالب...",
     "quickSelect": "اختيار سريع",
@@ -421,7 +407,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "تنزيل"
   },
   "hi": {
-    "selectTemplates": "टेम्पलेट चुनें",
     "preview": "पूर्वावलोकन",
     "searchPlaceholder": "टेम्पलेट खोजें...",
     "quickSelect": "त्वरित चयन",
@@ -434,7 +419,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "डाउनलोड"
   },
   "tr": {
-    "selectTemplates": "Şablonları seç",
     "preview": "Önizleme",
     "searchPlaceholder": "Şablon ara...",
     "quickSelect": "Hızlı seçim",
@@ -447,7 +431,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "İndir"
   },
   "nl": {
-    "selectTemplates": "Sjablonen selecteren",
     "preview": "Voorbeeld",
     "searchPlaceholder": "Sjablonen zoeken...",
     "quickSelect": "Snelle selectie",
@@ -460,7 +443,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Downloaden"
   },
   "sv": {
-    "selectTemplates": "Välj mallar",
     "preview": "Förhandsvisning",
     "searchPlaceholder": "Sök mallar...",
     "quickSelect": "Snabbval",
@@ -473,7 +455,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Ladda ner"
   },
   "pl": {
-    "selectTemplates": "Wybierz szablony",
     "preview": "Podgląd",
     "searchPlaceholder": "Szukaj szablonów...",
     "quickSelect": "Szybki wybór",
@@ -486,7 +467,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Pobierz"
   },
   "vi": {
-    "selectTemplates": "Chọn mẫu",
     "preview": "Xem trước",
     "searchPlaceholder": "Tìm kiếm mẫu...",
     "quickSelect": "Chọn nhanh",
@@ -499,7 +479,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Tải xuống"
   },
   "th": {
-    "selectTemplates": "เลือกเทมเพลต",
     "preview": "ดูตัวอย่าง",
     "searchPlaceholder": "ค้นหาเทมเพลต...",
     "quickSelect": "เลือกด่วน",
@@ -512,7 +491,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "ดาวน์โหลด"
   },
   "id": {
-    "selectTemplates": "Pilih template",
     "preview": "Pratinjau",
     "searchPlaceholder": "Cari template...",
     "quickSelect": "Pilihan cepat",
@@ -525,7 +503,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Unduh"
   },
   "he": {
-    "selectTemplates": "בחר תבניות",
     "preview": "תצוגה מקדימה",
     "searchPlaceholder": "חפש תבניות...",
     "quickSelect": "בחירה מהירה",
@@ -538,7 +515,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "הורד"
   },
   "ms": {
-    "selectTemplates": "Pilih templat",
     "preview": "Pratonton",
     "searchPlaceholder": "Cari templat...",
     "quickSelect": "Pilihan pantas",
@@ -551,7 +527,6 @@ const downloadUrl = useObjectUrl(downloadBlob)
     "download": "Muat turun"
   },
   "no": {
-    "selectTemplates": "Velg maler",
     "preview": "Forhåndsvisning",
     "searchPlaceholder": "Søk maler...",
     "quickSelect": "Hurtigvalg",

@@ -1,15 +1,41 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   category: string
 }>()
 
 const { t } = useI18n()
+
+const categoryText = computed(() => {
+  switch (props.category) {
+    case 'application':
+      return t('application')
+    case 'audio':
+      return t('audio')
+    case 'font':
+      return t('font')
+    case 'image':
+      return t('image')
+    case 'message':
+      return t('message')
+    case 'model':
+      return t('model')
+    case 'multipart':
+      return t('multipart')
+    case 'text':
+      return t('text')
+    case 'video':
+      return t('video')
+    default:
+      return t('unknown')
+  }
+})
 </script>
 
 <template>
-  <span>{{ t(category) }}</span>
+  <span>{{ categoryText }}</span>
 </template>
 
 <i18n lang="json">
@@ -23,7 +49,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Multipart",
     "text": "Text",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Unknown"
   },
   "zh": {
     "application": "应用程序",
@@ -34,7 +61,8 @@ const { t } = useI18n()
     "model": "模型",
     "multipart": "多部分",
     "text": "文本",
-    "video": "视频"
+    "video": "视频",
+    "unknown": "未知"
   },
   "zh-CN": {
     "application": "应用程序",
@@ -45,7 +73,8 @@ const { t } = useI18n()
     "model": "模型",
     "multipart": "多部分",
     "text": "文本",
-    "video": "视频"
+    "video": "视频",
+    "unknown": "未知"
   },
   "zh-TW": {
     "application": "應用程式",
@@ -56,7 +85,8 @@ const { t } = useI18n()
     "model": "模型",
     "multipart": "多部分",
     "text": "文字",
-    "video": "視訊"
+    "video": "視訊",
+    "unknown": "未知"
   },
   "zh-HK": {
     "application": "應用程式",
@@ -67,7 +97,8 @@ const { t } = useI18n()
     "model": "模型",
     "multipart": "多部分",
     "text": "文字",
-    "video": "視訊"
+    "video": "視訊",
+    "unknown": "未知"
   },
   "es": {
     "application": "Aplicacion",
@@ -78,7 +109,8 @@ const { t } = useI18n()
     "model": "Modelo",
     "multipart": "Multiparte",
     "text": "Texto",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Desconocido"
   },
   "fr": {
     "application": "Application",
@@ -89,7 +121,8 @@ const { t } = useI18n()
     "model": "Modele",
     "multipart": "Multipartie",
     "text": "Texte",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Inconnu"
   },
   "de": {
     "application": "Anwendung",
@@ -100,7 +133,8 @@ const { t } = useI18n()
     "model": "Modell",
     "multipart": "Mehrteilig",
     "text": "Text",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Unbekannt"
   },
   "it": {
     "application": "Applicazione",
@@ -111,7 +145,8 @@ const { t } = useI18n()
     "model": "Modello",
     "multipart": "Multipart",
     "text": "Testo",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Sconosciuto"
   },
   "ja": {
     "application": "アプリケーション",
@@ -122,7 +157,8 @@ const { t } = useI18n()
     "model": "モデル",
     "multipart": "マルチパート",
     "text": "テキスト",
-    "video": "ビデオ"
+    "video": "ビデオ",
+    "unknown": "不明"
   },
   "ko": {
     "application": "애플리케이션",
@@ -133,7 +169,8 @@ const { t } = useI18n()
     "model": "모델",
     "multipart": "멀티파트",
     "text": "텍스트",
-    "video": "비디오"
+    "video": "비디오",
+    "unknown": "알 수 없음"
   },
   "ru": {
     "application": "Приложение",
@@ -144,7 +181,8 @@ const { t } = useI18n()
     "model": "Модель",
     "multipart": "Многочастный",
     "text": "Текст",
-    "video": "Видео"
+    "video": "Видео",
+    "unknown": "Неизвестно"
   },
   "pt": {
     "application": "Aplicacao",
@@ -155,7 +193,8 @@ const { t } = useI18n()
     "model": "Modelo",
     "multipart": "Multiparte",
     "text": "Texto",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Desconhecido"
   },
   "ar": {
     "application": "تطبيق",
@@ -166,7 +205,8 @@ const { t } = useI18n()
     "model": "نموذج",
     "multipart": "متعدد الأجزاء",
     "text": "نص",
-    "video": "فيديو"
+    "video": "فيديو",
+    "unknown": "غير معروف"
   },
   "hi": {
     "application": "एप्लिकेशन",
@@ -177,7 +217,8 @@ const { t } = useI18n()
     "model": "मॉडल",
     "multipart": "मल्टीपार्ट",
     "text": "टेक्स्ट",
-    "video": "वीडियो"
+    "video": "वीडियो",
+    "unknown": "अज्ञात"
   },
   "tr": {
     "application": "Uygulama",
@@ -188,7 +229,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Cok Parcali",
     "text": "Metin",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Bilinmiyor"
   },
   "nl": {
     "application": "Applicatie",
@@ -199,7 +241,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Multipart",
     "text": "Tekst",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Onbekend"
   },
   "sv": {
     "application": "Applikation",
@@ -210,7 +253,8 @@ const { t } = useI18n()
     "model": "Modell",
     "multipart": "Multipart",
     "text": "Text",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Okänd"
   },
   "pl": {
     "application": "Aplikacja",
@@ -221,7 +265,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Wieloczesciowy",
     "text": "Tekst",
-    "video": "Wideo"
+    "video": "Wideo",
+    "unknown": "Nieznany"
   },
   "vi": {
     "application": "Ung dung",
@@ -232,7 +277,8 @@ const { t } = useI18n()
     "model": "Mo hinh",
     "multipart": "Nhieu phan",
     "text": "Van ban",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Không rõ"
   },
   "th": {
     "application": "แอปพลิเคชัน",
@@ -243,7 +289,8 @@ const { t } = useI18n()
     "model": "โมเดล",
     "multipart": "หลายส่วน",
     "text": "ข้อความ",
-    "video": "วิดีโอ"
+    "video": "วิดีโอ",
+    "unknown": "ไม่ทราบ"
   },
   "id": {
     "application": "Aplikasi",
@@ -254,7 +301,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Multipart",
     "text": "Teks",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Tidak diketahui"
   },
   "he": {
     "application": "אפליקציה",
@@ -265,7 +313,8 @@ const { t } = useI18n()
     "model": "מודל",
     "multipart": "רב-חלקי",
     "text": "טקסט",
-    "video": "וידאו"
+    "video": "וידאו",
+    "unknown": "לא ידוע"
   },
   "ms": {
     "application": "Aplikasi",
@@ -276,7 +325,8 @@ const { t } = useI18n()
     "model": "Model",
     "multipart": "Multipart",
     "text": "Teks",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Tidak diketahui"
   },
   "no": {
     "application": "Applikasjon",
@@ -287,7 +337,8 @@ const { t } = useI18n()
     "model": "Modell",
     "multipart": "Multipart",
     "text": "Tekst",
-    "video": "Video"
+    "video": "Video",
+    "unknown": "Ukjent"
   }
 }
 </i18n>

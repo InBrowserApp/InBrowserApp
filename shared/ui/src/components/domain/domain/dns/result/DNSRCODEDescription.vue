@@ -13,6 +13,7 @@ const props = defineProps<{
 }>()
 
 const description = computed(() => {
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
   const i18nText = t(`dns.rcode.${props.rcode}.description`)
   if (i18nText === `dns.rcode.${props.rcode}.description`) {
     return t('common.unknown')
@@ -21,6 +22,7 @@ const description = computed(() => {
 })
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->
 <i18n lang="json">
 {
   "en": {

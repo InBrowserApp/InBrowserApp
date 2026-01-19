@@ -13,7 +13,7 @@
     <n-form-item :label="t('categories-label')" :show-feedback="false">
       <n-checkbox-group v-model:value="selectedCategories" class="category-group">
         <n-checkbox v-for="category in categories" :key="category.value" :value="category.value">
-          {{ t(category.labelKey) }}
+          {{ categoryLabels[category.value as InvisibleCategory] }}
         </n-checkbox>
       </n-checkbox-group>
     </n-form-item>
@@ -29,7 +29,7 @@
     </n-flex>
     <n-flex v-show="matchCount" align="center" :size="8" wrap class="category-tags">
       <n-tag v-for="category in tagCategories" :key="category.value" size="small">
-        {{ t(category.labelKey) }}: {{ counts[category.value] }}
+        {{ categoryLabels[category.value] }}: {{ counts[category.value] }}
       </n-tag>
     </n-flex>
 

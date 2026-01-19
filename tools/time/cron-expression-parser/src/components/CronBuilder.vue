@@ -9,6 +9,7 @@
         secondary
         @click="$emit('select', preset.value)"
       >
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
         {{ t(preset.label) }}
       </n-button>
     </n-flex>
@@ -28,6 +29,7 @@ defineEmits<{
 const { t } = useI18n()
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->
 <i18n lang="json">
 {
   "en": {

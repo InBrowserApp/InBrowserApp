@@ -2,7 +2,7 @@
   <n-grid :cols="4" :x-gap="12" :y-gap="12" responsive="screen" :item-responsive="true">
     <n-gi v-for="stat in displayStats" :key="stat.key" span="0:4 400:2 800:1">
       <n-card>
-        <n-statistic :label="t(stat.key)" :value="stat.value" />
+        <n-statistic :label="stat.label" :value="stat.value" />
       </n-card>
     </n-gi>
   </n-grid>
@@ -18,14 +18,26 @@ const props = defineProps<{ stats: TextStats }>()
 const { t } = useI18n()
 
 const displayStats = computed(() => [
-  { key: 'characters', value: props.stats.characters },
-  { key: 'charactersNoSpaces', value: props.stats.charactersNoSpaces },
-  { key: 'words', value: props.stats.words },
-  { key: 'lines', value: props.stats.lines },
-  { key: 'paragraphs', value: props.stats.paragraphs },
-  { key: 'sentences', value: props.stats.sentences },
-  { key: 'readingTime', value: formatTime(props.stats.readingTimeMinutes) },
-  { key: 'speakingTime', value: formatTime(props.stats.speakingTimeMinutes) },
+  { key: 'characters', value: props.stats.characters, label: t('characters') },
+  {
+    key: 'charactersNoSpaces',
+    value: props.stats.charactersNoSpaces,
+    label: t('charactersNoSpaces'),
+  },
+  { key: 'words', value: props.stats.words, label: t('words') },
+  { key: 'lines', value: props.stats.lines, label: t('lines') },
+  { key: 'paragraphs', value: props.stats.paragraphs, label: t('paragraphs') },
+  { key: 'sentences', value: props.stats.sentences, label: t('sentences') },
+  {
+    key: 'readingTime',
+    value: formatTime(props.stats.readingTimeMinutes),
+    label: t('readingTime'),
+  },
+  {
+    key: 'speakingTime',
+    value: formatTime(props.stats.speakingTimeMinutes),
+    label: t('speakingTime'),
+  },
 ])
 </script>
 

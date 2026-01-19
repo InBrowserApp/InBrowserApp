@@ -28,7 +28,7 @@
       <n-text code>{{ result.binary }}</n-text>
     </n-descriptions-item>
     <n-descriptions-item :label="t('algorithm')" v-if="result.algorithm">
-      {{ t('algorithm.' + result.algorithm) }}
+      {{ algorithmLabel }}
     </n-descriptions-item>
     <n-descriptions-item :label="t('macAddress')" v-if="result.macAddress">
       <n-text code>{{ result.macAddress }}</n-text>
@@ -46,10 +46,11 @@ import VersionDisplay from './VersionDisplay.vue'
 import VariantDisplay from './VariantDisplay.vue'
 import { useI18n } from 'vue-i18n'
 import type { UUID } from '@utils/uuid'
+import { computed } from 'vue'
 
 const { t } = useI18n()
 
-defineProps<{
+const props = defineProps<{
   result: {
     uuid: UUID
     version: number
@@ -63,6 +64,17 @@ defineProps<{
     timestamp?: number
   }
 }>()
+
+const algorithmLabel = computed(() => {
+  switch (props.result.algorithm) {
+    case 'sha1':
+      return t('algorithm.sha1')
+    case 'md5':
+      return t('algorithm.md5')
+    default:
+      return t('algorithm')
+  }
+})
 </script>
 
 <style scoped>
@@ -89,6 +101,8 @@ defineProps<{
     "version": "版本",
     "variant": "变体",
     "algorithm": "算法",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC 地址",
     "timestamp": "时间戳",
     "integer": "整数",
@@ -99,6 +113,8 @@ defineProps<{
     "version": "版本",
     "variant": "变体",
     "algorithm": "算法",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC 地址",
     "timestamp": "时间戳",
     "integer": "整数",
@@ -109,6 +125,8 @@ defineProps<{
     "version": "版本",
     "variant": "變體",
     "algorithm": "演算法",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC 位址",
     "timestamp": "時間戳",
     "integer": "整數",
@@ -119,6 +137,8 @@ defineProps<{
     "version": "版本",
     "variant": "變體",
     "algorithm": "演算法",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC 位址",
     "timestamp": "時間戳",
     "integer": "整數",
@@ -129,6 +149,8 @@ defineProps<{
     "version": "Versión",
     "variant": "Variante",
     "algorithm": "Algoritmo",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Dirección MAC",
     "timestamp": "Marca de tiempo",
     "integer": "Entero",
@@ -139,6 +161,8 @@ defineProps<{
     "version": "Version",
     "variant": "Variante",
     "algorithm": "Algorithme",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Adresse MAC",
     "timestamp": "Horodatage",
     "integer": "Entier",
@@ -149,6 +173,8 @@ defineProps<{
     "version": "Version",
     "variant": "Variante",
     "algorithm": "Algorithmus",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC-Adresse",
     "timestamp": "Zeitstempel",
     "integer": "Ganzzahl",
@@ -159,6 +185,8 @@ defineProps<{
     "version": "Versione",
     "variant": "Variante",
     "algorithm": "Algoritmo",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Indirizzo MAC",
     "timestamp": "Timestamp",
     "integer": "Intero",
@@ -169,6 +197,8 @@ defineProps<{
     "version": "バージョン",
     "variant": "バリアント",
     "algorithm": "アルゴリズム",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC アドレス",
     "timestamp": "タイムスタンプ",
     "integer": "整数",
@@ -179,6 +209,8 @@ defineProps<{
     "version": "버전",
     "variant": "변형",
     "algorithm": "알고리즘",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC 주소",
     "timestamp": "타임스탬프",
     "integer": "정수",
@@ -189,6 +221,8 @@ defineProps<{
     "version": "Версия",
     "variant": "Вариант",
     "algorithm": "Алгоритм",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC-адрес",
     "timestamp": "Временная метка",
     "integer": "Целое число",
@@ -199,6 +233,8 @@ defineProps<{
     "version": "Versão",
     "variant": "Variante",
     "algorithm": "Algoritmo",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Endereço MAC",
     "timestamp": "Timestamp",
     "integer": "Inteiro",
@@ -209,6 +245,8 @@ defineProps<{
     "version": "الإصدار",
     "variant": "المتغير",
     "algorithm": "الخوارزمية",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "عنوان MAC",
     "timestamp": "الطابع الزمني",
     "integer": "عدد صحيح",
@@ -219,6 +257,8 @@ defineProps<{
     "version": "संस्करण",
     "variant": "वेरिएंट",
     "algorithm": "एल्गोरिथम",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC पता",
     "timestamp": "टाइमस्टैम्प",
     "integer": "पूर्णांक",
@@ -229,6 +269,8 @@ defineProps<{
     "version": "Sürüm",
     "variant": "Varyant",
     "algorithm": "Algoritma",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC Adresi",
     "timestamp": "Zaman damgası",
     "integer": "Tamsayı",
@@ -239,6 +281,8 @@ defineProps<{
     "version": "Versie",
     "variant": "Variant",
     "algorithm": "Algoritme",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC-adres",
     "timestamp": "Tijdstempel",
     "integer": "Geheel getal",
@@ -249,6 +293,8 @@ defineProps<{
     "version": "Version",
     "variant": "Variant",
     "algorithm": "Algoritm",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC-adress",
     "timestamp": "Tidsstämpel",
     "integer": "Heltal",
@@ -259,6 +305,8 @@ defineProps<{
     "version": "Wersja",
     "variant": "Wariant",
     "algorithm": "Algorytm",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Adres MAC",
     "timestamp": "Znacznik czasu",
     "integer": "Liczba całkowita",
@@ -269,6 +317,8 @@ defineProps<{
     "version": "Phiên bản",
     "variant": "Biến thể",
     "algorithm": "Thuật toán",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Địa chỉ MAC",
     "timestamp": "Dấu thời gian",
     "integer": "Số nguyên",
@@ -279,6 +329,8 @@ defineProps<{
     "version": "เวอร์ชัน",
     "variant": "ตัวแปร",
     "algorithm": "อัลกอริทึม",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "ที่อยู่ MAC",
     "timestamp": "การประทับเวลา",
     "integer": "จำนวนเต็ม",
@@ -289,6 +341,8 @@ defineProps<{
     "version": "Versi",
     "variant": "Varian",
     "algorithm": "Algoritma",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Alamat MAC",
     "timestamp": "Timestamp",
     "integer": "Bilangan bulat",
@@ -299,6 +353,8 @@ defineProps<{
     "version": "גרסה",
     "variant": "וריאנט",
     "algorithm": "אלגוריתם",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "כתובת MAC",
     "timestamp": "חותמת זמן",
     "integer": "מספר שלם",
@@ -309,6 +365,8 @@ defineProps<{
     "version": "Versi",
     "variant": "Varian",
     "algorithm": "Algoritma",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "Alamat MAC",
     "timestamp": "Cop masa",
     "integer": "Integer",
@@ -319,6 +377,8 @@ defineProps<{
     "version": "Versjon",
     "variant": "Variant",
     "algorithm": "Algoritme",
+    "algorithm.sha1": "SHA1",
+    "algorithm.md5": "MD5",
     "macAddress": "MAC-adresse",
     "timestamp": "Tidsstempel",
     "integer": "Heltall",

@@ -27,6 +27,7 @@
         <n-text depth="3">
           <span>{{ t('offset') }}: </span>
           <span v-if="offset !== undefined">
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
             {{ Math.round(offset) }} ms (±{{ Math.round(roundTripTimeMs) }} ms)
           </span>
           <n-skeleton text style="width: 10em" v-else />
