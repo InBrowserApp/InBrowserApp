@@ -1,34 +1,30 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
-    <n-grid cols="1 960:2" :x-gap="24" :y-gap="24" responsive="screen">
+    <n-grid cols="1 s:2" :x-gap="24" :y-gap="24" responsive="screen">
       <n-gi>
-        <n-flex vertical :size="16">
-          <ImageUpload v-model:file="originalFile" />
+        <ImageUpload v-model:file="originalFile" />
 
-          <ConversionOptions
-            v-if="originalFile"
-            v-model:sizes="sizes"
-            v-model:background-enabled="backgroundEnabled"
-            v-model:background-color="backgroundColor"
-            v-model:optimize="optimize"
-            :is-converting="isConverting"
-            :can-convert="canConvert"
-            @convert="convertToIco"
-          />
-        </n-flex>
+        <ConversionOptions
+          v-if="originalFile"
+          v-model:sizes="sizes"
+          v-model:background-enabled="backgroundEnabled"
+          v-model:background-color="backgroundColor"
+          v-model:optimize="optimize"
+          :is-converting="isConverting"
+          :can-convert="canConvert"
+          @convert="convertToIco"
+        />
       </n-gi>
 
       <n-gi>
-        <n-flex vertical :size="16">
-          <OutputSection
-            v-if="outputBlob"
-            :blob="outputBlob"
-            :file-name="outputFileName"
-            :sizes="selectedSizes"
-          />
+        <OutputSection
+          v-if="outputBlob"
+          :blob="outputBlob"
+          :file-name="outputFileName"
+          :sizes="selectedSizes"
+        />
 
-          <ErrorDisplay :error="error" />
-        </n-flex>
+        <ErrorDisplay :error="error" />
       </n-gi>
     </n-grid>
 
@@ -39,7 +35,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useMessage, NFlex, NGi, NGrid } from 'naive-ui'
+import { useMessage, NGi, NGrid } from 'naive-ui'
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import {
