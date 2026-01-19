@@ -102,6 +102,167 @@ const downloadLinks = computed(() => {
     "hexTab": "十六进制",
     "error": "错误",
     "download": "下载"
+  },
+  "zh-CN": {
+    "result": "结果",
+    "textTab": "文本",
+    "hexTab": "十六进制",
+    "error": "错误",
+    "download": "下载"
+  },
+  "zh-TW": {
+    "result": "結果",
+    "textTab": "文本",
+    "hexTab": "十六進位",
+    "error": "錯誤",
+    "download": "下載"
+  },
+  "zh-HK": {
+    "result": "結果",
+    "textTab": "文本",
+    "hexTab": "十六進位",
+    "error": "錯誤",
+    "download": "下載"
+  },
+  "es": {
+    "result": "Resultado",
+    "textTab": "Texto",
+    "hexTab": "Hex",
+    "error": "Error",
+    "download": "Descargar"
+  },
+  "fr": {
+    "result": "Résultat",
+    "textTab": "Texte",
+    "hexTab": "Hex",
+    "error": "Erreur",
+    "download": "Télécharger"
+  },
+  "de": {
+    "result": "Ergebnis",
+    "textTab": "Text",
+    "hexTab": "Hex",
+    "error": "Fehler",
+    "download": "Herunterladen"
+  },
+  "it": {
+    "result": "Risultato",
+    "textTab": "Testo",
+    "hexTab": "Esadecimale",
+    "error": "Errore",
+    "download": "Scarica"
+  },
+  "ja": {
+    "result": "結果",
+    "textTab": "テキスト",
+    "hexTab": "16進数",
+    "error": "エラー",
+    "download": "ダウンロード"
+  },
+  "ko": {
+    "result": "결과",
+    "textTab": "텍스트",
+    "hexTab": "16진수",
+    "error": "오류",
+    "download": "다운로드"
+  },
+  "ru": {
+    "result": "Результат",
+    "textTab": "Текст",
+    "hexTab": "Hex",
+    "error": "Ошибка",
+    "download": "Скачать"
+  },
+  "pt": {
+    "result": "Resultado",
+    "textTab": "Texto",
+    "hexTab": "Hex",
+    "error": "Erro",
+    "download": "Baixar"
+  },
+  "ar": {
+    "result": "النتيجة",
+    "textTab": "نص",
+    "hexTab": "سداسي عشري",
+    "error": "خطأ",
+    "download": "تحميل"
+  },
+  "hi": {
+    "result": "परिणाम",
+    "textTab": "पाठ",
+    "hexTab": "हेक्स",
+    "error": "त्रुटि",
+    "download": "डाउनलोड करें"
+  },
+  "tr": {
+    "result": "Sonuç",
+    "textTab": "Metin",
+    "hexTab": "Onaltılık",
+    "error": "Hata",
+    "download": "İndir"
+  },
+  "nl": {
+    "result": "Resultaat",
+    "textTab": "Tekst",
+    "hexTab": "Hex",
+    "error": "Fout",
+    "download": "Downloaden"
+  },
+  "sv": {
+    "result": "Resultat",
+    "textTab": "Text",
+    "hexTab": "Hex",
+    "error": "Fel",
+    "download": "Ladda ner"
+  },
+  "pl": {
+    "result": "Wynik",
+    "textTab": "Tekst",
+    "hexTab": "Hex",
+    "error": "Błąd",
+    "download": "Pobierz"
+  },
+  "vi": {
+    "result": "Kết quả",
+    "textTab": "Văn bản",
+    "hexTab": "Thập lục phân",
+    "error": "Lỗi",
+    "download": "Tải xuống"
+  },
+  "th": {
+    "result": "ผลลัพธ์",
+    "textTab": "ข้อความ",
+    "hexTab": "ฐานสิบหก",
+    "error": "ข้อผิดพลาด",
+    "download": "ดาวน์โหลด"
+  },
+  "id": {
+    "result": "Hasil",
+    "textTab": "Teks",
+    "hexTab": "Heksadesimal",
+    "error": "Kesalahan",
+    "download": "Unduh"
+  },
+  "he": {
+    "result": "תוצאה",
+    "textTab": "טקסט",
+    "hexTab": "הקסדצימלי",
+    "error": "שגיאה",
+    "download": "הורד"
+  },
+  "ms": {
+    "result": "Hasil",
+    "textTab": "Teks",
+    "hexTab": "Heksadesimal",
+    "error": "Ralat",
+    "download": "Muat turun"
+  },
+  "no": {
+    "result": "Resultat",
+    "textTab": "Tekst",
+    "hexTab": "Hex",
+    "error": "Feil",
+    "download": "Last ned"
   }
 }
 </i18n>

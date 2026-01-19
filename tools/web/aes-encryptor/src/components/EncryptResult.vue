@@ -176,6 +176,144 @@ function base64ToHex(base64: string): string {
     "error": "错误",
     "download": "下载",
     "parameterDetails": "参数详情"
+  },
+  "zh-CN": {
+    "result": "结果",
+    "error": "错误",
+    "download": "下载",
+    "parameterDetails": "参数详情"
+  },
+  "zh-TW": {
+    "result": "結果",
+    "error": "錯誤",
+    "download": "下載",
+    "parameterDetails": "參數詳情"
+  },
+  "zh-HK": {
+    "result": "結果",
+    "error": "錯誤",
+    "download": "下載",
+    "parameterDetails": "參數詳情"
+  },
+  "es": {
+    "result": "Resultado",
+    "error": "Error",
+    "download": "Descargar",
+    "parameterDetails": "Detalles de parámetros"
+  },
+  "fr": {
+    "result": "Résultat",
+    "error": "Erreur",
+    "download": "Télécharger",
+    "parameterDetails": "Détails des paramètres"
+  },
+  "de": {
+    "result": "Ergebnis",
+    "error": "Fehler",
+    "download": "Herunterladen",
+    "parameterDetails": "Parameterdetails"
+  },
+  "it": {
+    "result": "Risultato",
+    "error": "Errore",
+    "download": "Scarica",
+    "parameterDetails": "Dettagli dei parametri"
+  },
+  "ja": {
+    "result": "結果",
+    "error": "エラー",
+    "download": "ダウンロード",
+    "parameterDetails": "パラメータの詳細"
+  },
+  "ko": {
+    "result": "결과",
+    "error": "오류",
+    "download": "다운로드",
+    "parameterDetails": "매개변수 세부 정보"
+  },
+  "ru": {
+    "result": "Результат",
+    "error": "Ошибка",
+    "download": "Скачать",
+    "parameterDetails": "Детали параметров"
+  },
+  "pt": {
+    "result": "Resultado",
+    "error": "Erro",
+    "download": "Baixar",
+    "parameterDetails": "Detalhes dos parâmetros"
+  },
+  "ar": {
+    "result": "النتيجة",
+    "error": "خطأ",
+    "download": "تحميل",
+    "parameterDetails": "تفاصيل المعلمات"
+  },
+  "hi": {
+    "result": "परिणाम",
+    "error": "त्रुटि",
+    "download": "डाउनलोड करें",
+    "parameterDetails": "पैरामीटर विवरण"
+  },
+  "tr": {
+    "result": "Sonuç",
+    "error": "Hata",
+    "download": "İndir",
+    "parameterDetails": "Parametre ayrıntıları"
+  },
+  "nl": {
+    "result": "Resultaat",
+    "error": "Fout",
+    "download": "Downloaden",
+    "parameterDetails": "Parameterdetails"
+  },
+  "sv": {
+    "result": "Resultat",
+    "error": "Fel",
+    "download": "Ladda ner",
+    "parameterDetails": "Parameterdetaljer"
+  },
+  "pl": {
+    "result": "Wynik",
+    "error": "Błąd",
+    "download": "Pobierz",
+    "parameterDetails": "Szczegóły parametrów"
+  },
+  "vi": {
+    "result": "Kết quả",
+    "error": "Lỗi",
+    "download": "Tải xuống",
+    "parameterDetails": "Chi tiết tham số"
+  },
+  "th": {
+    "result": "ผลลัพธ์",
+    "error": "ข้อผิดพลาด",
+    "download": "ดาวน์โหลด",
+    "parameterDetails": "รายละเอียดพารามิเตอร์"
+  },
+  "id": {
+    "result": "Hasil",
+    "error": "Kesalahan",
+    "download": "Unduh",
+    "parameterDetails": "Detail parameter"
+  },
+  "he": {
+    "result": "תוצאה",
+    "error": "שגיאה",
+    "download": "הורד",
+    "parameterDetails": "פרטי פרמטרים"
+  },
+  "ms": {
+    "result": "Hasil",
+    "error": "Ralat",
+    "download": "Muat turun",
+    "parameterDetails": "Butiran parameter"
+  },
+  "no": {
+    "result": "Resultat",
+    "error": "Feil",
+    "download": "Last ned",
+    "parameterDetails": "Parameterdetaljer"
   }
 }
 </i18n>

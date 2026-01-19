@@ -5,6 +5,7 @@ import pluginVitest from '@vitest/eslint-plugin'
 import pluginPlaywright from 'eslint-plugin-playwright'
 import pluginOxlint from 'eslint-plugin-oxlint'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import inbrowserI18n from './eslint/inbrowser-i18n'
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
@@ -29,6 +30,26 @@ export default defineConfigWithVueTs(
           ignorePatterns: ['router-link', 'router-view', 'i18n-t'],
         },
       ],
+    },
+  },
+  {
+    name: 'app/i18n-info',
+    files: ['tools/**/src/info.ts'],
+    plugins: {
+      inbrowser: inbrowserI18n,
+    },
+    rules: {
+      'inbrowser/i18n-info-meta-complete': 'error',
+    },
+  },
+  {
+    name: 'app/i18n-vue',
+    files: ['**/*.vue'],
+    plugins: {
+      inbrowser: inbrowserI18n,
+    },
+    rules: {
+      'inbrowser/i18n-vue-block-complete': 'error',
     },
   },
 

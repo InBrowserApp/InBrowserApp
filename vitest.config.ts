@@ -23,7 +23,7 @@ export default defineConfig({
         plugins: [vue(), VueI18nPlugin({})],
         test: {
           name: 'dom',
-          include: ['{apps,tools,shared,utils}/**/*.dom.test.ts'],
+          include: ['{apps,tools,shared,utils}/**/*.dom.test.ts', 'eslint/**/*.dom.test.ts'],
           environment: 'happy-dom',
           setupFiles: ['./vitest.setup.ts'],
           retry: 2,

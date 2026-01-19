@@ -272,11 +272,195 @@ async function handleDecrypt() {
   },
   "zh": {
     "input": "加密数据",
-    "supportedFormats": "支持格式: JWE (自动检测)、Base64、Hex",
+    "supportedFormats": "支持：JWE（自动检测）、Base64、Hex",
     "inputPlaceholder": "在此粘贴加密数据...",
-    "detected": "检测到: {format}",
+    "detected": "检测到：{format}",
     "decrypt": "解密",
     "decryptionFailed": "解密失败。请检查密码/密钥和设置。"
+  },
+  "zh-CN": {
+    "input": "加密数据",
+    "supportedFormats": "支持：JWE（自动检测）、Base64、Hex",
+    "inputPlaceholder": "在此粘贴加密数据...",
+    "detected": "检测到：{format}",
+    "decrypt": "解密",
+    "decryptionFailed": "解密失败。请检查密码/密钥和设置。"
+  },
+  "zh-TW": {
+    "input": "加密資料",
+    "supportedFormats": "支援：JWE（自動偵測）、Base64、Hex",
+    "inputPlaceholder": "在此貼上加密資料...",
+    "detected": "偵測到：{format}",
+    "decrypt": "解密",
+    "decryptionFailed": "解密失敗。請檢查密碼/密鑰與設定。"
+  },
+  "zh-HK": {
+    "input": "加密資料",
+    "supportedFormats": "支援：JWE（自動偵測）、Base64、Hex",
+    "inputPlaceholder": "在此貼上加密資料...",
+    "detected": "偵測到：{format}",
+    "decrypt": "解密",
+    "decryptionFailed": "解密失敗。請檢查密碼/密鑰與設定。"
+  },
+  "es": {
+    "input": "Datos cifrados",
+    "supportedFormats": "Admite: JWE (detección automática), Base64, Hex",
+    "inputPlaceholder": "Pega los datos cifrados aquí...",
+    "detected": "Detectado: {format}",
+    "decrypt": "Descifrar",
+    "decryptionFailed": "El descifrado falló. Revisa tu contraseña/clave y la configuración."
+  },
+  "fr": {
+    "input": "Données chiffrées",
+    "supportedFormats": "Pris en charge : JWE (détection automatique), Base64, Hex",
+    "inputPlaceholder": "Collez les données chiffrées ici...",
+    "detected": "Détecté : {format}",
+    "decrypt": "Déchiffrer",
+    "decryptionFailed": "Échec du déchiffrement. Vérifiez votre mot de passe/clé et vos paramètres."
+  },
+  "de": {
+    "input": "Verschlüsselte Daten",
+    "supportedFormats": "Unterstützt: JWE (automatisch erkannt), Base64, Hex",
+    "inputPlaceholder": "Verschlüsselte Daten hier einfügen...",
+    "detected": "Erkannt: {format}",
+    "decrypt": "Entschlüsseln",
+    "decryptionFailed": "Entschlüsselung fehlgeschlagen. Prüfen Sie Passwort/Schlüssel und Einstellungen."
+  },
+  "it": {
+    "input": "Dati cifrati",
+    "supportedFormats": "Supporta: JWE (rilevato automaticamente), Base64, Hex",
+    "inputPlaceholder": "Incolla qui i dati cifrati...",
+    "detected": "Rilevato: {format}",
+    "decrypt": "Decifra",
+    "decryptionFailed": "Decrittazione non riuscita. Controlla password/chiave e impostazioni."
+  },
+  "ja": {
+    "input": "暗号化データ",
+    "supportedFormats": "対応: JWE（自動検出）、Base64、Hex",
+    "inputPlaceholder": "暗号化データをここに貼り付け...",
+    "detected": "検出: {format}",
+    "decrypt": "復号",
+    "decryptionFailed": "復号に失敗しました。パスワード/キーと設定を確認してください。"
+  },
+  "ko": {
+    "input": "암호화 데이터",
+    "supportedFormats": "지원: JWE(자동 감지), Base64, Hex",
+    "inputPlaceholder": "여기에 암호화 데이터를 붙여넣으세요...",
+    "detected": "감지됨: {format}",
+    "decrypt": "복호화",
+    "decryptionFailed": "복호화에 실패했습니다. 비밀번호/키 및 설정을 확인하세요."
+  },
+  "ru": {
+    "input": "Зашифрованные данные",
+    "supportedFormats": "Поддерживает: JWE (автоопределение), Base64, Hex",
+    "inputPlaceholder": "Вставьте сюда зашифрованные данные...",
+    "detected": "Обнаружено: {format}",
+    "decrypt": "Расшифровать",
+    "decryptionFailed": "Расшифровка не удалась. Проверьте пароль/ключ и настройки."
+  },
+  "pt": {
+    "input": "Dados criptografados",
+    "supportedFormats": "Suporta: JWE (detecção automática), Base64, Hex",
+    "inputPlaceholder": "Cole os dados criptografados aqui...",
+    "detected": "Detectado: {format}",
+    "decrypt": "Descriptografar",
+    "decryptionFailed": "Falha na descriptografia. Verifique sua senha/chave e configurações."
+  },
+  "ar": {
+    "input": "البيانات المشفرة",
+    "supportedFormats": "يدعم: JWE (اكتشاف تلقائي)، Base64، Hex",
+    "inputPlaceholder": "الصق البيانات المشفرة هنا...",
+    "detected": "تم الاكتشاف: {format}",
+    "decrypt": "فك التشفير",
+    "decryptionFailed": "فشل فك التشفير. تحقق من كلمة المرور/المفتاح والإعدادات."
+  },
+  "hi": {
+    "input": "एन्क्रिप्टेड डेटा",
+    "supportedFormats": "समर्थित: JWE (स्वचालित पहचान), Base64, Hex",
+    "inputPlaceholder": "यहां एन्क्रिप्टेड डेटा पेस्ट करें...",
+    "detected": "पाया गया: {format}",
+    "decrypt": "डिक्रिप्ट करें",
+    "decryptionFailed": "डिक्रिप्शन विफल। अपना पासवर्ड/कुंजी और सेटिंग्स जांचें।"
+  },
+  "tr": {
+    "input": "Şifrelenmiş veri",
+    "supportedFormats": "Destekler: JWE (otomatik algılama), Base64, Hex",
+    "inputPlaceholder": "Şifrelenmiş veriyi buraya yapıştırın...",
+    "detected": "Algılandı: {format}",
+    "decrypt": "Şifreyi çöz",
+    "decryptionFailed": "Şifre çözme başarısız. Parola/anahtar ve ayarları kontrol edin."
+  },
+  "nl": {
+    "input": "Versleutelde gegevens",
+    "supportedFormats": "Ondersteunt: JWE (automatisch gedetecteerd), Base64, Hex",
+    "inputPlaceholder": "Plak hier versleutelde gegevens...",
+    "detected": "Gedetecteerd: {format}",
+    "decrypt": "Ontsleutelen",
+    "decryptionFailed": "Ontsleuteling mislukt. Controleer wachtwoord/sleutel en instellingen."
+  },
+  "sv": {
+    "input": "Krypterad data",
+    "supportedFormats": "Stöder: JWE (automatiskt upptäckt), Base64, Hex",
+    "inputPlaceholder": "Klistra in krypterad data här...",
+    "detected": "Upptäckt: {format}",
+    "decrypt": "Dekryptera",
+    "decryptionFailed": "Dekryptering misslyckades. Kontrollera lösenord/nyckel och inställningar."
+  },
+  "pl": {
+    "input": "Zaszyfrowane dane",
+    "supportedFormats": "Obsługuje: JWE (automatyczne wykrywanie), Base64, Hex",
+    "inputPlaceholder": "Wklej tutaj zaszyfrowane dane...",
+    "detected": "Wykryto: {format}",
+    "decrypt": "Odszyfruj",
+    "decryptionFailed": "Odszyfrowanie nie powiodło się. Sprawdź hasło/klucz i ustawienia."
+  },
+  "vi": {
+    "input": "Dữ liệu đã mã hóa",
+    "supportedFormats": "Hỗ trợ: JWE (tự động phát hiện), Base64, Hex",
+    "inputPlaceholder": "Dán dữ liệu đã mã hóa vào đây...",
+    "detected": "Đã phát hiện: {format}",
+    "decrypt": "Giải mã",
+    "decryptionFailed": "Giải mã thất bại. Hãy kiểm tra mật khẩu/khóa và cài đặt."
+  },
+  "th": {
+    "input": "ข้อมูลที่เข้ารหัส",
+    "supportedFormats": "รองรับ: JWE (ตรวจจับอัตโนมัติ), Base64, Hex",
+    "inputPlaceholder": "วางข้อมูลที่เข้ารหัสที่นี่...",
+    "detected": "ตรวจพบ: {format}",
+    "decrypt": "ถอดรหัส",
+    "decryptionFailed": "การถอดรหัสล้มเหลว ตรวจสอบรหัสผ่าน/คีย์และการตั้งค่า"
+  },
+  "id": {
+    "input": "Data terenkripsi",
+    "supportedFormats": "Mendukung: JWE (deteksi otomatis), Base64, Hex",
+    "inputPlaceholder": "Tempelkan data terenkripsi di sini...",
+    "detected": "Terdeteksi: {format}",
+    "decrypt": "Dekripsi",
+    "decryptionFailed": "Dekripsi gagal. Periksa kata sandi/kunci dan pengaturan."
+  },
+  "he": {
+    "input": "נתונים מוצפנים",
+    "supportedFormats": "תומך: JWE (זיהוי אוטומטי), Base64, Hex",
+    "inputPlaceholder": "הדבק כאן נתונים מוצפנים...",
+    "detected": "זוהה: {format}",
+    "decrypt": "פענח",
+    "decryptionFailed": "הפענוח נכשל. בדוק את הסיסמה/מפתח וההגדרות."
+  },
+  "ms": {
+    "input": "Data disulitkan",
+    "supportedFormats": "Menyokong: JWE (dikesan automatik), Base64, Hex",
+    "inputPlaceholder": "Tampalkan data yang disulitkan di sini...",
+    "detected": "Dikesan: {format}",
+    "decrypt": "Nyahsulit",
+    "decryptionFailed": "Penyahsulitan gagal. Semak kata laluan/kunci dan tetapan."
+  },
+  "no": {
+    "input": "Krypterte data",
+    "supportedFormats": "Støtter: JWE (automatisk oppdaget), Base64, Hex",
+    "inputPlaceholder": "Lim inn krypterte data her...",
+    "detected": "Oppdaget: {format}",
+    "decrypt": "Dekrypter",
+    "decryptionFailed": "Dekryptering mislyktes. Sjekk passord/nøkkel og innstillinger."
   }
 }
 </i18n>
