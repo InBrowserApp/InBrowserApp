@@ -3,9 +3,10 @@
     <n-grid cols="1 s:2" :x-gap="24" :y-gap="24" responsive="screen">
       <n-gi>
         <ImageUpload v-model:file="originalFile" />
+      </n-gi>
 
+      <n-gi>
         <ConversionOptions
-          v-if="originalFile"
           v-model:sizes="sizes"
           v-model:background-enabled="backgroundEnabled"
           v-model:background-color="backgroundColor"
@@ -14,9 +15,7 @@
           :can-convert="canConvert"
           @convert="convertToIco"
         />
-      </n-gi>
 
-      <n-gi>
         <OutputSection
           v-if="outputBlob"
           :blob="outputBlob"
