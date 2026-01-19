@@ -38,7 +38,8 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
-  ...vueI18n.configs.recommended,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...(vueI18n.configs.recommended as unknown as any),
   {
     name: 'app/vue-i18n-settings',
     settings: {
