@@ -1,18 +1,33 @@
 <template>
   <span>
-    <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-    {{ t(`variant-${variant}`) }}
+    {{ variantLabel }}
   </span>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
 const { t } = useI18n()
 
-defineProps<{
+const props = defineProps<{
   variant: number
 }>()
+
+const variantLabel = computed(() => {
+  switch (props.variant) {
+    case 0:
+      return t('variant-0')
+    case 1:
+      return t('variant-1')
+    case 2:
+      return t('variant-2')
+    case 3:
+      return t('variant-3')
+    default:
+      return ''
+  }
+})
 </script>
 
 <i18n lang="json">

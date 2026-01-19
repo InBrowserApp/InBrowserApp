@@ -44,8 +44,6 @@ const errorLevelOptions = computed(() => [
 <i18n lang="json">
 {
   "en": {
-    "text": "Text",
-    "text-ph": "Type text or URL...",
     "error-level": "Error correction level",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -57,8 +55,6 @@ const errorLevelOptions = computed(() => [
     "light": "Light color (RGBA hex)"
   },
   "zh": {
-    "text": "文本",
-    "text-ph": "输入文本或链接...",
     "error-level": "纠错级别",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -70,8 +66,6 @@ const errorLevelOptions = computed(() => [
     "light": "浅色（RGBA 十六进制）"
   },
   "zh-CN": {
-    "text": "文本",
-    "text-ph": "输入文本或链接...",
     "error-level": "纠错级别",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -83,8 +77,6 @@ const errorLevelOptions = computed(() => [
     "light": "浅色（RGBA 十六进制）"
   },
   "zh-TW": {
-    "text": "文字",
-    "text-ph": "輸入文字或連結...",
     "error-level": "糾錯等級",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -96,8 +88,6 @@ const errorLevelOptions = computed(() => [
     "light": "淺色（RGBA 十六進位）"
   },
   "zh-HK": {
-    "text": "文字",
-    "text-ph": "輸入文字或連結...",
     "error-level": "糾錯等級",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -109,8 +99,6 @@ const errorLevelOptions = computed(() => [
     "light": "淺色（RGBA 十六進位）"
   },
   "es": {
-    "text": "Texto",
-    "text-ph": "Escribe texto o URL...",
     "error-level": "Nivel de corrección",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -122,8 +110,6 @@ const errorLevelOptions = computed(() => [
     "light": "Color claro (hex RGBA)"
   },
   "fr": {
-    "text": "Texte",
-    "text-ph": "Saisir du texte ou une URL...",
     "error-level": "Niveau de correction",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -135,8 +121,6 @@ const errorLevelOptions = computed(() => [
     "light": "Couleur claire (hex RGBA)"
   },
   "de": {
-    "text": "Text",
-    "text-ph": "Text oder URL eingeben...",
     "error-level": "Fehlerkorrektur",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -148,8 +132,6 @@ const errorLevelOptions = computed(() => [
     "light": "Helle Farbe (RGBA‑Hex)"
   },
   "it": {
-    "text": "Testo",
-    "text-ph": "Scrivi testo o URL...",
     "error-level": "Livello di correzione",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -161,8 +143,6 @@ const errorLevelOptions = computed(() => [
     "light": "Colore chiaro (esadec. RGBA)"
   },
   "ja": {
-    "text": "テキスト",
-    "text-ph": "テキストまたはURLを入力...",
     "error-level": "誤り訂正レベル",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -174,8 +154,6 @@ const errorLevelOptions = computed(() => [
     "light": "淡色（RGBA 16進）"
   },
   "ko": {
-    "text": "텍스트",
-    "text-ph": "텍스트 또는 URL 입력...",
     "error-level": "오류 수정 레벨",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -187,8 +165,6 @@ const errorLevelOptions = computed(() => [
     "light": "밝은 색 (RGBA hex)"
   },
   "ru": {
-    "text": "Текст",
-    "text-ph": "Введите текст или URL...",
     "error-level": "Уровень коррекции",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -200,8 +176,6 @@ const errorLevelOptions = computed(() => [
     "light": "Светлый цвет (RGBA hex)"
   },
   "pt": {
-    "text": "Texto",
-    "text-ph": "Digite texto ou URL...",
     "error-level": "Nível de correção",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -213,8 +187,6 @@ const errorLevelOptions = computed(() => [
     "light": "Cor clara (hex RGBA)"
   },
   "ar": {
-    "text": "نص",
-    "text-ph": "اكتب نصًا أو رابطًا...",
     "error-level": "مستوى تصحيح الخطأ",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -226,8 +198,6 @@ const errorLevelOptions = computed(() => [
     "light": "لون فاتح (RGBA hex)"
   },
   "hi": {
-    "text": "टेक्स्ट",
-    "text-ph": "टेक्स्ट या URL लिखें...",
     "error-level": "त्रुटि सुधार स्तर",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -239,8 +209,6 @@ const errorLevelOptions = computed(() => [
     "light": "हल्का रंग (RGBA hex)"
   },
   "tr": {
-    "text": "Metin",
-    "text-ph": "Metin veya URL yazın...",
     "error-level": "Hata düzeltme seviyesi",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -252,8 +220,6 @@ const errorLevelOptions = computed(() => [
     "light": "Açık renk (RGBA hex)"
   },
   "nl": {
-    "text": "Tekst",
-    "text-ph": "Typ tekst of URL...",
     "error-level": "Foutcorrectieniveau",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -265,8 +231,6 @@ const errorLevelOptions = computed(() => [
     "light": "Lichte kleur (RGBA hex)"
   },
   "sv": {
-    "text": "Text",
-    "text-ph": "Skriv text eller URL...",
     "error-level": "Felkorrigeringsnivå",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -278,8 +242,6 @@ const errorLevelOptions = computed(() => [
     "light": "Ljus färg (RGBA hex)"
   },
   "pl": {
-    "text": "Tekst",
-    "text-ph": "Wpisz tekst lub URL...",
     "error-level": "Poziom korekcji",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -291,8 +253,6 @@ const errorLevelOptions = computed(() => [
     "light": "Jasny kolor (RGBA hex)"
   },
   "vi": {
-    "text": "Văn bản",
-    "text-ph": "Nhập văn bản hoặc URL...",
     "error-level": "Mức sửa lỗi",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -304,8 +264,6 @@ const errorLevelOptions = computed(() => [
     "light": "Màu nhạt (RGBA hex)"
   },
   "th": {
-    "text": "ข้อความ",
-    "text-ph": "พิมพ์ข้อความหรือ URL...",
     "error-level": "ระดับการแก้ไขข้อผิดพลาด",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -317,8 +275,6 @@ const errorLevelOptions = computed(() => [
     "light": "สีอ่อน (RGBA hex)"
   },
   "id": {
-    "text": "Teks",
-    "text-ph": "Ketik teks atau URL...",
     "error-level": "Tingkat koreksi",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -330,8 +286,6 @@ const errorLevelOptions = computed(() => [
     "light": "Warna terang (RGBA hex)"
   },
   "he": {
-    "text": "טקסט",
-    "text-ph": "הקלד טקסט או כתובת...",
     "error-level": "רמת תיקון",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -343,8 +297,6 @@ const errorLevelOptions = computed(() => [
     "light": "צבע בהיר (RGBA hex)"
   },
   "ms": {
-    "text": "Teks",
-    "text-ph": "Taip teks atau URL...",
     "error-level": "Tahap pembetulan",
     "L": "L (≈7%)",
     "M": "M (≈15%)",
@@ -356,8 +308,6 @@ const errorLevelOptions = computed(() => [
     "light": "Warna cerah (RGBA hex)"
   },
   "no": {
-    "text": "Tekst",
-    "text-ph": "Skriv tekst eller URL...",
     "error-level": "Feilrettingsnivå",
     "L": "L (≈7%)",
     "M": "M (≈15%)",

@@ -29,6 +29,7 @@ defineEmits<{
 const { t } = useI18n()
 </script>
 
+<!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->
 <i18n lang="json">
 {
   "en": {

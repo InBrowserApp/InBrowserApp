@@ -8,8 +8,7 @@
         secondary
         @click="$emit('select', preset.value)"
       >
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-        {{ preset.value }} - {{ t(preset.labelKey) }}
+        {{ preset.value }} - {{ preset.label }}
       </n-button>
     </n-flex>
   </ToolSection>
@@ -19,6 +18,7 @@
 import { NFlex, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
+import { computed } from 'vue'
 
 defineEmits<{
   select: [value: string]
@@ -26,14 +26,14 @@ defineEmits<{
 
 const { t } = useI18n()
 
-const presets = [
-  { value: '755', labelKey: 'executable' },
-  { value: '644', labelKey: 'readOnly' },
-  { value: '777', labelKey: 'fullAccess' },
-  { value: '700', labelKey: 'ownerOnly' },
-  { value: '600', labelKey: 'privateFile' },
-  { value: '775', labelKey: 'sharedDir' },
-]
+const presets = computed(() => [
+  { value: '755', label: t('executable') },
+  { value: '644', label: t('readOnly') },
+  { value: '777', label: t('fullAccess') },
+  { value: '700', label: t('ownerOnly') },
+  { value: '600', label: t('privateFile') },
+  { value: '775', label: t('sharedDir') },
+])
 </script>
 
 <i18n lang="json">

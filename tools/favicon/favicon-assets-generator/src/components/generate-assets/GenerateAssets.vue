@@ -178,8 +178,7 @@ watch(
     "addToHeadInstructions": "Add the following code to the {head} tag of your HTML file.",
     "optional": "Optional",
     "modifyManifestInstructions": "Modify {manifest} to your needs.",
-    "manifestReference": "Web app manifests reference",
-    "noImageSelected": "No image selected"
+    "manifestReference": "Web app manifests reference"
   },
   "zh": {
     "title": "生成网站图标资源",
@@ -189,8 +188,7 @@ watch(
     "addToHeadInstructions": "将以下代码添加到 HTML 文件的 {head} 标签中。",
     "optional": "可选",
     "modifyManifestInstructions": "根据需要修改 {manifest}。",
-    "manifestReference": "Web 应用清单参考",
-    "noImageSelected": "未选择图片"
+    "manifestReference": "Web 应用清单参考"
   },
   "zh-CN": {
     "title": "生成网站图标资源",
@@ -200,8 +198,7 @@ watch(
     "addToHeadInstructions": "将以下代码添加到 HTML 文件的 {head} 标签中。",
     "optional": "可选",
     "modifyManifestInstructions": "根据需要修改 {manifest}。",
-    "manifestReference": "Web 应用清单参考",
-    "noImageSelected": "未选择图片"
+    "manifestReference": "Web 应用清单参考"
   },
   "zh-TW": {
     "title": "生成網站圖標資源",
@@ -211,8 +208,7 @@ watch(
     "addToHeadInstructions": "將以下代碼添加到 HTML 文件的 {head} 標籤中。",
     "optional": "可選",
     "modifyManifestInstructions": "根據需要修改 {manifest}。",
-    "manifestReference": "Web 應用清單參考",
-    "noImageSelected": "未選擇圖片"
+    "manifestReference": "Web 應用清單參考"
   },
   "zh-HK": {
     "title": "生成網站圖標資源",
@@ -222,8 +218,7 @@ watch(
     "addToHeadInstructions": "將以下代碼添加到 HTML 文件的 {head} 標籤中。",
     "optional": "可選",
     "modifyManifestInstructions": "根據需要修改 {manifest}。",
-    "manifestReference": "Web 應用清單參考",
-    "noImageSelected": "未選擇圖片"
+    "manifestReference": "Web 應用清單參考"
   },
   "es": {
     "title": "Generar Recursos de Favicon",
@@ -233,8 +228,7 @@ watch(
     "addToHeadInstructions": "Agregue el siguiente código a la etiqueta {head} de su archivo HTML.",
     "optional": "Opcional",
     "modifyManifestInstructions": "Modifique {manifest} según sus necesidades.",
-    "manifestReference": "Referencia de manifiestos de aplicaciones web",
-    "noImageSelected": "No se ha seleccionado ninguna imagen"
+    "manifestReference": "Referencia de manifiestos de aplicaciones web"
   },
   "fr": {
     "title": "Générer les Ressources de Favicon",
@@ -244,8 +238,7 @@ watch(
     "addToHeadInstructions": "Ajoutez le code suivant à la balise {head} de votre fichier HTML.",
     "optional": "Optionnel",
     "modifyManifestInstructions": "Modifiez {manifest} selon vos besoins.",
-    "manifestReference": "Référence des manifestes d'applications web",
-    "noImageSelected": "Aucune image sélectionnée"
+    "manifestReference": "Référence des manifestes d'applications web"
   },
   "de": {
     "title": "Favicon-Ressourcen generieren",
@@ -255,8 +248,7 @@ watch(
     "addToHeadInstructions": "Fügen Sie den folgenden Code zum {head}-Tag Ihrer HTML-Datei hinzu.",
     "optional": "Optional",
     "modifyManifestInstructions": "Passen Sie {manifest} an Ihre Bedürfnisse an.",
-    "manifestReference": "Web-App-Manifest-Referenz",
-    "noImageSelected": "Kein Bild ausgewählt"
+    "manifestReference": "Web-App-Manifest-Referenz"
   },
   "it": {
     "title": "Genera Risorse Favicon",
@@ -266,8 +258,7 @@ watch(
     "addToHeadInstructions": "Aggiungi il seguente codice al tag {head} del tuo file HTML.",
     "optional": "Opzionale",
     "modifyManifestInstructions": "Modifica {manifest} in base alle tue esigenze.",
-    "manifestReference": "Riferimento manifesti applicazioni web",
-    "noImageSelected": "Nessuna immagine selezionata"
+    "manifestReference": "Riferimento manifesti applicazioni web"
   },
   "ja": {
     "title": "ファビコンリソースの生成",
@@ -277,8 +268,7 @@ watch(
     "addToHeadInstructions": "以下のコードを HTML ファイルの {head} タグに追加します。",
     "optional": "オプション",
     "modifyManifestInstructions": "必要に応じて {manifest} を変更します。",
-    "manifestReference": "Web アプリマニフェストリファレンス",
-    "noImageSelected": "画像が選択されていません"
+    "manifestReference": "Web アプリマニフェストリファレンス"
   },
   "ko": {
     "title": "파비콘 리소스 생성",
@@ -288,8 +278,7 @@ watch(
     "addToHeadInstructions": "다음 코드를 HTML 파일의 {head} 태그에 추가합니다.",
     "optional": "선택 사항",
     "modifyManifestInstructions": "필요에 따라 {manifest}를 수정합니다.",
-    "manifestReference": "웹 앱 매니페스트 참조",
-    "noImageSelected": "이미지가 선택되지 않음"
+    "manifestReference": "웹 앱 매니페스트 참조"
   },
   "ru": {
     "title": "Создание Ресурсов Favicon",
@@ -299,8 +288,7 @@ watch(
     "addToHeadInstructions": "Добавьте следующий код в тег {head} вашего HTML-файла.",
     "optional": "Необязательно",
     "modifyManifestInstructions": "Измените {manifest} в соответствии с вашими потребностями.",
-    "manifestReference": "Справочник манифестов веб-приложений",
-    "noImageSelected": "Изображение не выбрано"
+    "manifestReference": "Справочник манифестов веб-приложений"
   },
   "pt": {
     "title": "Gerar Recursos de Favicon",
@@ -310,8 +298,7 @@ watch(
     "addToHeadInstructions": "Adicione o seguinte código à tag {head} do seu arquivo HTML.",
     "optional": "Opcional",
     "modifyManifestInstructions": "Modifique {manifest} de acordo com suas necessidades.",
-    "manifestReference": "Referência de manifestos de aplicativos web",
-    "noImageSelected": "Nenhuma imagem selecionada"
+    "manifestReference": "Referência de manifestos de aplicativos web"
   },
   "ar": {
     "title": "إنشاء موارد أيقونة الموقع",
@@ -321,8 +308,7 @@ watch(
     "addToHeadInstructions": "أضف الكود التالي إلى وسم {head} في ملف HTML الخاص بك.",
     "optional": "اختياري",
     "modifyManifestInstructions": "قم بتعديل {manifest} حسب احتياجاتك.",
-    "manifestReference": "مرجع بيان تطبيقات الويب",
-    "noImageSelected": "لم يتم اختيار صورة"
+    "manifestReference": "مرجع بيان تطبيقات الويب"
   },
   "hi": {
     "title": "फेविकॉन संसाधन उत्पन्न करें",
@@ -332,8 +318,7 @@ watch(
     "addToHeadInstructions": "अपनी HTML फ़ाइल के {head} टैग में निम्न कोड जोड़ें।",
     "optional": "वैकल्पिक",
     "modifyManifestInstructions": "अपनी आवश्यकताओं के अनुसार {manifest} संशोधित करें।",
-    "manifestReference": "वेब ऐप मैनिफेस्ट संदर्भ",
-    "noImageSelected": "कोई छवि चयनित नहीं है"
+    "manifestReference": "वेब ऐप मैनिफेस्ट संदर्भ"
   },
   "tr": {
     "title": "Favicon Kaynakları Oluştur",
@@ -343,8 +328,7 @@ watch(
     "addToHeadInstructions": "Aşağıdaki kodu HTML dosyanızın {head} etiketine ekleyin.",
     "optional": "İsteğe bağlı",
     "modifyManifestInstructions": "İhtiyaçlarınıza göre {manifest} dosyasını düzenleyin.",
-    "manifestReference": "Web uygulaması manifest referansı",
-    "noImageSelected": "Resim seçilmedi"
+    "manifestReference": "Web uygulaması manifest referansı"
   },
   "nl": {
     "title": "Favicon-bronnen genereren",
@@ -354,8 +338,7 @@ watch(
     "addToHeadInstructions": "Voeg de volgende code toe aan de {head} tag van je HTML-bestand.",
     "optional": "Optioneel",
     "modifyManifestInstructions": "Pas {manifest} aan naar je behoeften.",
-    "manifestReference": "Web-app-manifest referentie",
-    "noImageSelected": "Geen afbeelding geselecteerd"
+    "manifestReference": "Web-app-manifest referentie"
   },
   "sv": {
     "title": "Generera Favicon-resurser",
@@ -365,8 +348,7 @@ watch(
     "addToHeadInstructions": "Lägg till följande kod i {head}-taggen i din HTML-fil.",
     "optional": "Valfritt",
     "modifyManifestInstructions": "Ändra {manifest} efter dina behov.",
-    "manifestReference": "Webbapp-manifest referens",
-    "noImageSelected": "Ingen bild vald"
+    "manifestReference": "Webbapp-manifest referens"
   },
   "pl": {
     "title": "Generuj zasoby Favicon",
@@ -376,8 +358,7 @@ watch(
     "addToHeadInstructions": "Dodaj poniższy kod do tagu {head} pliku HTML.",
     "optional": "Opcjonalnie",
     "modifyManifestInstructions": "Dostosuj {manifest} do swoich potrzeb.",
-    "manifestReference": "Referencja manifestu aplikacji webowej",
-    "noImageSelected": "Nie wybrano obrazu"
+    "manifestReference": "Referencja manifestu aplikacji webowej"
   },
   "vi": {
     "title": "Tạo Tài nguyên Favicon",
@@ -387,8 +368,7 @@ watch(
     "addToHeadInstructions": "Thêm mã sau vào thẻ {head} của tệp HTML của bạn.",
     "optional": "Tùy chọn",
     "modifyManifestInstructions": "Sửa đổi {manifest} theo nhu cầu của bạn.",
-    "manifestReference": "Tài liệu tham khảo manifest ứng dụng web",
-    "noImageSelected": "Chưa chọn hình ảnh"
+    "manifestReference": "Tài liệu tham khảo manifest ứng dụng web"
   },
   "th": {
     "title": "สร้างทรัพยากร Favicon",
@@ -398,8 +378,7 @@ watch(
     "addToHeadInstructions": "เพิ่มโค้ดต่อไปนี้ในแท็ก {head} ของไฟล์ HTML ของคุณ",
     "optional": "ตัวเลือก",
     "modifyManifestInstructions": "แก้ไข {manifest} ตามความต้องการของคุณ",
-    "manifestReference": "เอกสารอ้างอิง manifest แอปพลิเคชันเว็บ",
-    "noImageSelected": "ไม่ได้เลือกรูปภาพ"
+    "manifestReference": "เอกสารอ้างอิง manifest แอปพลิเคชันเว็บ"
   },
   "id": {
     "title": "Buat Aset Favicon",
@@ -409,8 +388,7 @@ watch(
     "addToHeadInstructions": "Tambahkan kode berikut ke tag {head} file HTML Anda.",
     "optional": "Opsional",
     "modifyManifestInstructions": "Ubah {manifest} sesuai kebutuhan Anda.",
-    "manifestReference": "Referensi manifest aplikasi web",
-    "noImageSelected": "Tidak ada gambar yang dipilih"
+    "manifestReference": "Referensi manifest aplikasi web"
   },
   "he": {
     "title": "צור משאבי Favicon",
@@ -420,8 +398,7 @@ watch(
     "addToHeadInstructions": "הוסף את הקוד הבא לתג {head} של קובץ ה-HTML שלך.",
     "optional": "אופציונלי",
     "modifyManifestInstructions": "ערוך את {manifest} בהתאם לצרכיך.",
-    "manifestReference": "הפניית מניפסט אפליקציית אינטרנט",
-    "noImageSelected": "לא נבחרה תמונה"
+    "manifestReference": "הפניית מניפסט אפליקציית אינטרנט"
   },
   "ms": {
     "title": "Jana Aset Favicon",
@@ -431,8 +408,7 @@ watch(
     "addToHeadInstructions": "Tambah kod berikut ke tag {head} fail HTML anda.",
     "optional": "Pilihan",
     "modifyManifestInstructions": "Ubah {manifest} mengikut keperluan anda.",
-    "manifestReference": "Rujukan manifest aplikasi web",
-    "noImageSelected": "Tiada imej dipilih"
+    "manifestReference": "Rujukan manifest aplikasi web"
   },
   "no": {
     "title": "Generer Favicon-ressurser",
@@ -442,8 +418,7 @@ watch(
     "addToHeadInstructions": "Legg til følgende kode i {head}-taggen i HTML-filen din.",
     "optional": "Valgfritt",
     "modifyManifestInstructions": "Endre {manifest} etter dine behov.",
-    "manifestReference": "Web-app-manifest referanse",
-    "noImageSelected": "Ingen bilde valgt"
+    "manifestReference": "Web-app-manifest referanse"
   }
 }
 </i18n>

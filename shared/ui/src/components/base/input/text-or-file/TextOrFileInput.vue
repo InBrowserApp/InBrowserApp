@@ -173,7 +173,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Please input text",
     "enter-text-placeholder": "Enter your text here...",
     "or": "OR",
-    "upload-file": "Upload file",
     "click-or-drag-to-upload": "Click or drag to upload file",
     "clear-file": "Clear file"
   },
@@ -181,7 +180,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "请输入文本",
     "enter-text-placeholder": "在此输入您的文本...",
     "or": "或",
-    "upload-file": "上传文件",
     "click-or-drag-to-upload": "点击或拖拽上传文件",
     "clear-file": "清除文件"
   },
@@ -189,7 +187,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "请输入文本",
     "enter-text-placeholder": "在此输入您的文本...",
     "or": "或",
-    "upload-file": "上传文件",
     "click-or-drag-to-upload": "点击或拖拽上传文件",
     "clear-file": "清除文件"
   },
@@ -197,7 +194,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "請輸入文字",
     "enter-text-placeholder": "在此輸入您的文字...",
     "or": "或",
-    "upload-file": "上傳檔案",
     "click-or-drag-to-upload": "點擊或拖拽上傳檔案",
     "clear-file": "清除檔案"
   },
@@ -205,7 +201,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "請輸入文字",
     "enter-text-placeholder": "在此輸入您的文字...",
     "or": "或",
-    "upload-file": "上傳檔案",
     "click-or-drag-to-upload": "點擊或拖拽上傳檔案",
     "clear-file": "清除檔案"
   },
@@ -213,7 +208,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Por favor ingrese texto",
     "enter-text-placeholder": "Ingrese su texto aquí...",
     "or": "O",
-    "upload-file": "Subir archivo",
     "click-or-drag-to-upload": "Haz clic o arrastra para subir archivo",
     "clear-file": "Limpiar archivo"
   },
@@ -221,7 +215,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Veuillez saisir le texte",
     "enter-text-placeholder": "Entrez votre texte ici...",
     "or": "OU",
-    "upload-file": "Télécharger le fichier",
     "click-or-drag-to-upload": "Cliquez ou glissez pour télécharger le fichier",
     "clear-file": "Effacer le fichier"
   },
@@ -229,7 +222,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Bitte Text eingeben",
     "enter-text-placeholder": "Geben Sie hier Ihren Text ein...",
     "or": "ODER",
-    "upload-file": "Datei hochladen",
     "click-or-drag-to-upload": "Klicken oder ziehen Sie, um eine Datei hochzuladen",
     "clear-file": "Datei löschen"
   },
@@ -237,7 +229,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Si prega di inserire il testo",
     "enter-text-placeholder": "Inserisci il tuo testo qui...",
     "or": "O",
-    "upload-file": "Carica file",
     "click-or-drag-to-upload": "Clicca o trascina per caricare il file",
     "clear-file": "Cancella file"
   },
@@ -245,7 +236,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "テキストを入力してください",
     "enter-text-placeholder": "ここにテキストを入力してください...",
     "or": "または",
-    "upload-file": "ファイルをアップロード",
     "click-or-drag-to-upload": "クリックまたはドラッグしてファイルをアップロード",
     "clear-file": "ファイルをクリア"
   },
@@ -253,7 +243,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "텍스트를 입력해주세요",
     "enter-text-placeholder": "여기에 텍스트를 입력하세요...",
     "or": "또는",
-    "upload-file": "파일 업로드",
     "click-or-drag-to-upload": "클릭하거나 드래그하여 파일 업로드",
     "clear-file": "파일 지우기"
   },
@@ -261,7 +250,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Пожалуйста, введите текст",
     "enter-text-placeholder": "Введите ваш текст здесь...",
     "or": "ИЛИ",
-    "upload-file": "Загрузить файл",
     "click-or-drag-to-upload": "Нажмите или перетащите для загрузки файла",
     "clear-file": "Очистить файл"
   },
@@ -269,7 +257,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Por favor, digite o texto",
     "enter-text-placeholder": "Digite seu texto aqui...",
     "or": "OU",
-    "upload-file": "Enviar arquivo",
     "click-or-drag-to-upload": "Clique ou arraste para enviar arquivo",
     "clear-file": "Limpar arquivo"
   },
@@ -277,7 +264,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "يرجى إدخال النص",
     "enter-text-placeholder": "أدخل النص هنا...",
     "or": "أو",
-    "upload-file": "رفع ملف",
     "click-or-drag-to-upload": "انقر أو اسحب لرفع الملف",
     "clear-file": "مسح الملف"
   },
@@ -285,7 +271,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "कृपया टेक्स्ट दर्ज करें",
     "enter-text-placeholder": "यहाँ अपना टेक्स्ट दर्ज करें...",
     "or": "या",
-    "upload-file": "फ़ाइल अपलोड करें",
     "click-or-drag-to-upload": "फ़ाइल अपलोड करने के लिए क्लिक करें या खींचें",
     "clear-file": "फ़ाइल साफ़ करें"
   },
@@ -293,7 +278,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Lütfen metin girin",
     "enter-text-placeholder": "Metninizi buraya girin...",
     "or": "VEYA",
-    "upload-file": "Dosya yükle",
     "click-or-drag-to-upload": "Dosya yüklemek için tıklayın veya sürükleyin",
     "clear-file": "Dosyayı temizle"
   },
@@ -301,7 +285,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Voer alstublieft tekst in",
     "enter-text-placeholder": "Voer hier uw tekst in...",
     "or": "OF",
-    "upload-file": "Bestand uploaden",
     "click-or-drag-to-upload": "Klik of sleep om bestand te uploaden",
     "clear-file": "Bestand wissen"
   },
@@ -309,7 +292,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Vänligen ange text",
     "enter-text-placeholder": "Ange din text här...",
     "or": "ELLER",
-    "upload-file": "Ladda upp fil",
     "click-or-drag-to-upload": "Klicka eller dra för att ladda upp fil",
     "clear-file": "Rensa fil"
   },
@@ -317,7 +299,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Proszę wprowadzić tekst",
     "enter-text-placeholder": "Wprowadź swój tekst tutaj...",
     "or": "LUB",
-    "upload-file": "Prześlij plik",
     "click-or-drag-to-upload": "Kliknij lub przeciągnij, aby przesłać plik",
     "clear-file": "Wyczyść plik"
   },
@@ -325,7 +306,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Vui lòng nhập văn bản",
     "enter-text-placeholder": "Nhập văn bản của bạn ở đây...",
     "or": "HOẶC",
-    "upload-file": "Tải lên tập tin",
     "click-or-drag-to-upload": "Nhấp hoặc kéo để tải lên tập tin",
     "clear-file": "Xóa tập tin"
   },
@@ -333,7 +313,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "โปรดป้อนข้อความ",
     "enter-text-placeholder": "ป้อนข้อความของคุณที่นี่...",
     "or": "หรือ",
-    "upload-file": "อัปโหลดไฟล์",
     "click-or-drag-to-upload": "คลิกหรือลากเพื่ออัปโหลดไฟล์",
     "clear-file": "ล้างไฟล์"
   },
@@ -341,7 +320,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Silakan masukkan teks",
     "enter-text-placeholder": "Masukkan teks Anda di sini...",
     "or": "ATAU",
-    "upload-file": "Unggah file",
     "click-or-drag-to-upload": "Klik atau seret untuk mengunggah file",
     "clear-file": "Hapus file"
   },
@@ -349,7 +327,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "אנא הזן טקסט",
     "enter-text-placeholder": "הזן את הטקסט שלך כאן...",
     "or": "או",
-    "upload-file": "העלה קובץ",
     "click-or-drag-to-upload": "לחץ או גרור כדי להעלות קובץ",
     "clear-file": "נקה קובץ"
   },
@@ -357,7 +334,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Sila masukkan teks",
     "enter-text-placeholder": "Masukkan teks anda di sini...",
     "or": "ATAU",
-    "upload-file": "Muat naik fail",
     "click-or-drag-to-upload": "Klik atau seret untuk muat naik fail",
     "clear-file": "Kosongkan fail"
   },
@@ -365,7 +341,6 @@ function formatFileSize(bytes: number): string {
     "please-input-text": "Vennligst skriv inn tekst",
     "enter-text-placeholder": "Skriv inn teksten din her...",
     "or": "ELLER",
-    "upload-file": "Last opp fil",
     "click-or-drag-to-upload": "Klikk eller dra for å laste opp fil",
     "clear-file": "Tøm fil"
   }

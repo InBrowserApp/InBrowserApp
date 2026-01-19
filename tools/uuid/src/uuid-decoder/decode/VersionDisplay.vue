@@ -1,18 +1,43 @@
 <template>
   <span>
-    <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-    {{ t(`version-${version}`) }}
+    {{ versionLabel }}
   </span>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
 const { t } = useI18n()
 
-defineProps<{
+const props = defineProps<{
   version: number
 }>()
+
+const versionLabel = computed(() => {
+  switch (props.version) {
+    case 0:
+      return t('version-0')
+    case 1:
+      return t('version-1')
+    case 2:
+      return t('version-2')
+    case 3:
+      return t('version-3')
+    case 4:
+      return t('version-4')
+    case 5:
+      return t('version-5')
+    case 6:
+      return t('version-6')
+    case 7:
+      return t('version-7')
+    case 15:
+      return t('version-15')
+    default:
+      return ''
+  }
+})
 </script>
 
 <i18n lang="json">

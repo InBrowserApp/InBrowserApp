@@ -28,8 +28,7 @@
       <n-text code>{{ result.binary }}</n-text>
     </n-descriptions-item>
     <n-descriptions-item :label="t('algorithm')" v-if="result.algorithm">
-      <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-      {{ t('algorithm.' + result.algorithm) }}
+      {{ algorithmLabel }}
     </n-descriptions-item>
     <n-descriptions-item :label="t('macAddress')" v-if="result.macAddress">
       <n-text code>{{ result.macAddress }}</n-text>
@@ -47,10 +46,11 @@ import VersionDisplay from './VersionDisplay.vue'
 import VariantDisplay from './VariantDisplay.vue'
 import { useI18n } from 'vue-i18n'
 import type { UUID } from '@utils/uuid'
+import { computed } from 'vue'
 
 const { t } = useI18n()
 
-defineProps<{
+const props = defineProps<{
   result: {
     uuid: UUID
     version: number
@@ -64,6 +64,17 @@ defineProps<{
     timestamp?: number
   }
 }>()
+
+const algorithmLabel = computed(() => {
+  switch (props.result.algorithm) {
+    case 'sha1':
+      return t('algorithm.sha1')
+    case 'md5':
+      return t('algorithm.md5')
+    default:
+      return t('algorithm')
+  }
+})
 </script>
 
 <style scoped>

@@ -9,8 +9,7 @@
         secondary
         @click="$emit('select', preset.value)"
       >
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-        {{ t(preset.label) }}
+        {{ preset.label }}
       </n-button>
     </n-flex>
   </ToolSection>
@@ -20,20 +19,24 @@
 import { NFlex, NButton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { computed } from 'vue'
 
-const CRON_PRESETS = [
-  { label: 'Every minute', value: '* * * * *' },
-  { label: 'Every 5 minutes', value: '*/5 * * * *' },
-  { label: 'Every 15 minutes', value: '*/15 * * * *' },
-  { label: 'Every 30 minutes', value: '*/30 * * * *' },
-  { label: 'Every hour', value: '0 * * * *' },
-  { label: 'Every day at midnight', value: '0 0 * * *' },
-  { label: 'Every day at noon', value: '0 12 * * *' },
-  { label: 'Every Sunday at midnight', value: '0 0 * * 0' },
-  { label: 'Every Monday at 9 AM', value: '0 9 * * 1' },
-  { label: 'First day of month', value: '0 0 1 * *' },
-  { label: 'Every weekday at 9 AM', value: '0 9 * * 1-5' },
-] as const
+const CRON_PRESETS = computed(
+  () =>
+    [
+      { label: t('Every minute'), value: '* * * * *' },
+      { label: t('Every 5 minutes'), value: '*/5 * * * *' },
+      { label: t('Every 15 minutes'), value: '*/15 * * * *' },
+      { label: t('Every 30 minutes'), value: '*/30 * * * *' },
+      { label: t('Every hour'), value: '0 * * * *' },
+      { label: t('Every day at midnight'), value: '0 0 * * *' },
+      { label: t('Every day at noon'), value: '0 12 * * *' },
+      { label: t('Every Sunday at midnight'), value: '0 0 * * 0' },
+      { label: t('Every Monday at 9 AM'), value: '0 9 * * 1' },
+      { label: t('First day of month'), value: '0 0 1 * *' },
+      { label: t('Every weekday at 9 AM'), value: '0 9 * * 1-5' },
+    ] as const,
+)
 
 defineEmits<{
   select: [value: string]

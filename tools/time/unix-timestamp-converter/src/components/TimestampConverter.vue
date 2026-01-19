@@ -39,8 +39,7 @@
     </ToolSection>
     <ToolSection v-if="unit === 'auto' && isValidTimestamp">
       <n-text depth="3">
-        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
-        {{ t('detected') }}: {{ t(detectedUnit) }} ({{ digitCount }} {{ t('digits') }})
+        {{ t('detected') }}: {{ detectedUnitLabel }} ({{ digitCount }} {{ t('digits') }})
       </n-text>
     </ToolSection>
 
@@ -158,6 +157,19 @@ const digitCount = computed(() => {
 const detectedUnit = computed(() => {
   if (!isValidTimestamp.value) return 'milliseconds'
   return detectUnit(timestampNumber.value)
+})
+
+const detectedUnitLabel = computed(() => {
+  switch (detectedUnit.value) {
+    case 'seconds':
+      return t('seconds')
+    case 'milliseconds':
+      return t('milliseconds')
+    case 'nanoseconds':
+      return t('nanoseconds')
+    default:
+      return t('milliseconds')
+  }
 })
 
 const effectiveUnit = computed(() => {
