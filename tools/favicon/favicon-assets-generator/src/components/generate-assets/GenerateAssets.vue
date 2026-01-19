@@ -219,6 +219,7 @@ watch(
     "minificationNote": "所有文件都使用 oxipng 和 svgo 進行無損壓縮。",
     "downloadZip": "下載 favicon-assets.zip",
     "extractInstructions": "解壓 zip 文件並將文件放入 {prefix} 資料夾。",
+    "addToHeadInstructions": "將以下代碼添加到 HTML 文件的 {head} 標籤中。",
     "optional": "可選",
     "modifyManifestInstructions": "根據需要修改 {manifest}。",
     "manifestReference": "Web 應用清單參考",

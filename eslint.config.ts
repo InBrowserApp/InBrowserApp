@@ -7,6 +7,7 @@ import pluginOxlint from 'eslint-plugin-oxlint'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import inbrowserI18n from './eslint/inbrowser-i18n'
+import { supportedLanguages } from './shared/locale/src/languages'
 
 const noRawTextIgnorePattern = [
   '[\\s#%/\\-:().,_=]+',
@@ -17,6 +18,7 @@ const noRawTextIgnorePattern = [
   '[0-9]+x',
   '[0-9]+-bit',
 ].join('|')
+const supportedLocales = [...supportedLanguages]
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
@@ -57,6 +59,15 @@ export default defineConfigWithVueTs(
         {
           ignorePattern: `^(?:${noRawTextIgnorePattern})$`,
           ignoreText: ['Base64', 'GitHub', 'Hex', 'InBrowser.App', 'x'],
+        },
+      ],
+      '@intlify/vue-i18n/no-duplicate-keys-in-locale': 'warn',
+      '@intlify/vue-i18n/no-missing-keys-in-other-locales': 'warn',
+      '@intlify/vue-i18n/no-unknown-locale': [
+        'warn',
+        {
+          locales: supportedLocales,
+          disableRFC5646: true,
         },
       ],
     },
