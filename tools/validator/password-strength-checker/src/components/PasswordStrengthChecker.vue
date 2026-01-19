@@ -101,6 +101,7 @@ const analysis = computed(() => analyzePassword(password.value))
 
 const strengthLabel = computed(() => {
   if (!analysis.value) return ''
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
   return t(`strength-${analysis.value.score}`)
 })
 
@@ -137,10 +138,12 @@ const characterTags = computed(() => {
 })
 
 const warningMessages = computed(() =>
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
   analysis.value ? analysis.value.warnings.map((key) => t(`warning.${key}`)) : [],
 )
 
 const suggestionMessages = computed(() =>
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
   analysis.value ? analysis.value.suggestions.map((key) => t(`suggestion.${key}`)) : [],
 )
 
@@ -158,6 +161,7 @@ function formatDurationLabel(duration: DurationDisplay): string {
   if (duration.isUnderSecond) return t('duration-under-second')
   return t('duration-format', {
     value: duration.value,
+    // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
     unit: t(`unit.${duration.unit}`),
   })
 }

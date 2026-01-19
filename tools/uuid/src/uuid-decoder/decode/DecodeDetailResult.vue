@@ -28,6 +28,7 @@
       <n-text code>{{ result.binary }}</n-text>
     </n-descriptions-item>
     <n-descriptions-item :label="t('algorithm')" v-if="result.algorithm">
+      <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
       {{ t('algorithm.' + result.algorithm) }}
     </n-descriptions-item>
     <n-descriptions-item :label="t('macAddress')" v-if="result.macAddress">

@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
   <span>{{ t(`description.${code}`) }}</span>
 </template>
 

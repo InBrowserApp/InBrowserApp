@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
   <n-text>{{ t(base) }}</n-text>
 </template>
 

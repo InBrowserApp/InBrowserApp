@@ -2,6 +2,7 @@
   <n-grid :cols="4" :x-gap="12" :y-gap="12" responsive="screen" :item-responsive="true">
     <n-gi v-for="stat in displayStats" :key="stat.key" span="0:4 400:2 800:1">
       <n-card>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
         <n-statistic :label="t(stat.key)" :value="stat.value" />
       </n-card>
     </n-gi>

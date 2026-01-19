@@ -39,6 +39,7 @@
     </ToolSection>
     <ToolSection v-if="unit === 'auto' && isValidTimestamp">
       <n-text depth="3">
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
         {{ t('detected') }}: {{ t(detectedUnit) }} ({{ digitCount }} {{ t('digits') }})
       </n-text>
     </ToolSection>

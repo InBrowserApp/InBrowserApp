@@ -82,6 +82,7 @@ export default defineConfigWithVueTs(
         },
       ],
       '@intlify/vue-i18n/prefer-sfc-lang-attr': 'error',
+      '@intlify/vue-i18n/no-dynamic-keys': 'error',
     },
   },
   {

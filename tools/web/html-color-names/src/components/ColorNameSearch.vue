@@ -26,6 +26,7 @@
               border: cat === 'white' ? '1px solid #ccc' : 'none',
             }"
           />
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
           {{ t(cat) }}
         </NRadioButton>
       </NRadioGroup>

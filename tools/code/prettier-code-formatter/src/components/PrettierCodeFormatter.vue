@@ -385,6 +385,7 @@ const downloadUrl = useObjectUrl(downloadBlob)
 
 const languageOptions = computed(() =>
   languageKeys.map((key) => ({
+    // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
     label: t(`lang-${key}`),
     value: key,
   })),

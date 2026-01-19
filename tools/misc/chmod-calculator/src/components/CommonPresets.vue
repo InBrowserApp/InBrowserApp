@@ -8,6 +8,7 @@
         secondary
         @click="$emit('select', preset.value)"
       >
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
         {{ preset.value }} - {{ t(preset.labelKey) }}
       </n-button>
     </n-flex>

@@ -9,6 +9,7 @@ const { t } = useI18n()
 </script>
 
 <template>
+  <!-- eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys -->
   <span>{{ t(category) }}</span>
 </template>
 

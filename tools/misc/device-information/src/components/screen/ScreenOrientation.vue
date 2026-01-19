@@ -19,6 +19,7 @@ const screenOrientation = useScreenOrientation()
 const orientationValue = computed(() => {
   if (!screenOrientation.orientation.value) return undefined
   return (
+    // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
     t('orientation-' + screenOrientation.orientation.value) + ` (${screenOrientation.angle.value}°)`
   )
 })
