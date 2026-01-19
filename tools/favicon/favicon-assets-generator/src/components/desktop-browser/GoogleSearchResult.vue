@@ -3,6 +3,7 @@
     <span
       ><a target="_blank" rel="noopener"
         ><br />
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
         <h3 class="LC20lb MBeuO DKV0Md">Google Search Result</h3>
         <div class="notranslate TbwUpd NJjxre iUh30 ojE3Fb">
           <span class="H9lube"

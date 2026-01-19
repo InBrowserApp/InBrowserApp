@@ -24,9 +24,11 @@
         >
           <template #extra>
             <n-flex v-if="gpsCoords" :wrap="false" style="margin-top: 12px">
+              <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
               <n-button tag="a" :href="googleMapsUrl" target="_blank" size="small" secondary>
                 Google Maps
               </n-button>
+              <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
               <n-button tag="a" :href="amapUrl" target="_blank" size="small" secondary>
                 {{ t('amap') }}
               </n-button>

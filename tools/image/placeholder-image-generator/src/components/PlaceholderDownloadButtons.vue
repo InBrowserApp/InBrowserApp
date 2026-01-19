@@ -59,7 +59,9 @@
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
         </template>
+        <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
         WebP
+        <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
       </n-button>
       <n-button tag="a" tertiary :href="svgUrl ?? undefined" :download="svgFilename">
         <template #icon>
