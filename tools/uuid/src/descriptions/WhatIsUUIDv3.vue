@@ -5,9 +5,11 @@
   <ToolSection>
     <i18n-t keypath="description">
       <template #uuid>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
         <n-text code>9073926b-929f-31c2-abc9-fad77ae3e8eb</n-text>
       </template>
       <template #dnsuuid>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
         <n-text code>6ba7b810-9dad-11d1-80b4-00c04fd430c8</n-text>
       </template>
       <template #name>

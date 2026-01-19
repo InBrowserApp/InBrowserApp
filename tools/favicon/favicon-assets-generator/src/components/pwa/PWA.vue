@@ -8,9 +8,11 @@
       <n-icon :component="BookInformation20Regular" style="vertical-align: -0.15em" size="1.2em" />
       <i18n-t keypath="purposeDifference" tag="span">
         <template #any>
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <n-text code>"purpose": "any"</n-text>
         </template>
         <template #maskable>
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           <n-text code>"purpose": "maskable"</n-text>
         </template>
       </i18n-t>
@@ -18,6 +20,7 @@
   </ToolSection>
   <n-h3 prefix="bar" align-text>
     {{ t('pwaAny') }}
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <n-text code>"purpose": "any"</n-text>
   </n-h3>
   <n-grid x-gap="30" y-gap="20" :cols="5" item-responsive responsive="screen">
@@ -30,6 +33,7 @@
   </n-grid>
   <n-h3 prefix="bar" align-text>
     {{ t('pwaMaskable') }}
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <n-text code>"purpose": "maskable"</n-text>
   </n-h3>
   <n-grid x-gap="30" y-gap="20" :cols="5" item-responsive responsive="screen">

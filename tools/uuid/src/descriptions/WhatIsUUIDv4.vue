@@ -5,6 +5,7 @@
   <ToolSection>
     <i18n-t keypath="description">
       <template #uuid>
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
         <n-text code>xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx</n-text>
       </template>
     </i18n-t>

@@ -11,16 +11,11 @@ import inbrowserI18n from './eslint/inbrowser-i18n'
 const noRawTextIgnorePattern = [
   '[\\s#%/\\-:().,_=]+',
   '[A-Z0-9][A-Z0-9 vV./_\\-=:]*',
-  '[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}',
-  'x{8}-x{4}-[0-9a-fx]{4}-[0-9a-fxy]{4}-x{12}',
   'https?://\\S+',
   '[a-z0-9.-]+\\.[a-z]{2,}',
   '<[^>]+>',
-  '"[^"]+": "[^"]+"',
   '[0-9]+x',
   '[0-9]+-bit',
-  '\\s*ms\\b.*',
-  '\\([rwx]\\)',
 ].join('|')
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
