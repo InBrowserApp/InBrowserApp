@@ -10,7 +10,7 @@ packages:
 catalog:
   '@commitlint/cli': ^20.3.0
   '@commitlint/config-conventional': ^20.3.0
-  '@commitlint/types': ^20.2.0
+  '@commitlint/types': ^20.3.1
   '@faker-js/faker': ^10.2.0
   '@guolao/vue-monaco-editor': ^1.6.0
   '@intlify/eslint-plugin-vue-i18n': ^4.1.1
