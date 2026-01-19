@@ -142,6 +142,144 @@ const columns = computed<DataTableColumns<HtmlColorInfo>>(() => [
     "name": "名称",
     "hex": "十六进制",
     "rgb": "RGB"
+  },
+  "zh-CN": {
+    "swatch": "颜色",
+    "name": "名称",
+    "hex": "十六进制",
+    "rgb": "RGB"
+  },
+  "zh-TW": {
+    "swatch": "顏色",
+    "name": "名稱",
+    "hex": "十六進位",
+    "rgb": "RGB"
+  },
+  "zh-HK": {
+    "swatch": "顏色",
+    "name": "名稱",
+    "hex": "十六進位",
+    "rgb": "RGB"
+  },
+  "es": {
+    "swatch": "Color",
+    "name": "Nombre",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "fr": {
+    "swatch": "Couleur",
+    "name": "Nom",
+    "hex": "HEX",
+    "rgb": "RVB"
+  },
+  "de": {
+    "swatch": "Farbe",
+    "name": "Name",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "it": {
+    "swatch": "Colore",
+    "name": "Nome",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "ja": {
+    "swatch": "色",
+    "name": "名前",
+    "hex": "16進数",
+    "rgb": "RGB"
+  },
+  "ko": {
+    "swatch": "색상",
+    "name": "이름",
+    "hex": "16진수",
+    "rgb": "RGB"
+  },
+  "ru": {
+    "swatch": "Цвет",
+    "name": "Название",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "pt": {
+    "swatch": "Cor",
+    "name": "Nome",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "ar": {
+    "swatch": "اللون",
+    "name": "الاسم",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "hi": {
+    "swatch": "रंग",
+    "name": "नाम",
+    "hex": "HEX",
+    "rgb": "आरजीबी"
+  },
+  "tr": {
+    "swatch": "Renk",
+    "name": "Ad",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "nl": {
+    "swatch": "Kleur",
+    "name": "Naam",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "sv": {
+    "swatch": "Färg",
+    "name": "Namn",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "pl": {
+    "swatch": "Kolor",
+    "name": "Nazwa",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "vi": {
+    "swatch": "Màu",
+    "name": "Tên",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "th": {
+    "swatch": "สี",
+    "name": "ชื่อ",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "id": {
+    "swatch": "Warna",
+    "name": "Nama",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "he": {
+    "swatch": "צבע",
+    "name": "שם",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "ms": {
+    "swatch": "Warna",
+    "name": "Nama",
+    "hex": "HEX",
+    "rgb": "RGB"
+  },
+  "no": {
+    "swatch": "Farge",
+    "name": "Navn",
+    "hex": "HEX",
+    "rgb": "RGB"
   }
 }
 </i18n>

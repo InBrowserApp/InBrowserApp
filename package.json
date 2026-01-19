@@ -32,6 +32,7 @@
     "@types/jsdom": "catalog:",
     "@types/node": "catalog:",
     "@types/papaparse": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
@@ -54,6 +55,7 @@
     "vite": "catalog:",
     "vitest": "catalog:",
     "vue": "catalog:",
+    "vue-eslint-parser": "catalog:",
     "vue-i18n": "catalog:",
     "vue-tsc": "catalog:",
     "wrangler": "catalog:"

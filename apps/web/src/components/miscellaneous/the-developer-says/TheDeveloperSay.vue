@@ -33,87 +33,91 @@ const { t } = useI18n()
   },
   "zh-TW": {
     "title": "開發者說",
-    "description": "我一直想要一些簡單、不需登入且立即可用的工具，例如編輯文件、轉換檔案或調整圖片。然而多數線上工具仰賴後端伺服器，導致載入緩慢且存在隱私風險。因此，我打造了 InBrowser.App：一套幾乎完全在瀏覽器運行的工具集，極少依賴伺服器。你的資料始終保留在你的裝置上，快速、安全、隨時可用——真正好的工具就是這樣。"
+    "description": "我一直想要一些簡單、免登入且開啟即用的工具，比如編輯文件、轉換檔案或處理圖片。然而多數線上工具依賴後端服務，載入較慢，也有隱私疑慮。因此，我打造了 InBrowser.App：一組幾乎完全在瀏覽器中運行的工具，將伺服器依賴降到最低。你的資料始終留在你的裝置上，快速、私密、隨時可用——好工具就該如此。"
   },
   "zh-HK": {
     "title": "開發者說",
-    "description": "我一直想要一些簡單、不需登入且立即可用的工具，例如編輯文件、轉換檔案或調整圖片。然而多數線上工具仰賴後端伺服器，導致載入緩慢且存在隱私風險。因此，我打造了 InBrowser.App：一套幾乎完全在瀏覽器運行的工具集，極少依賴伺服器。你的資料始終保留在你的裝置上，快速、安全、隨時可用——真正好的工具就是這樣。"
+    "description": "我一直想要一些簡單、免登入且開啟即用的工具，例如編輯文件、轉換檔案或處理圖片。但大多數線上工具依賴後端服務，載入慢，亦有私隱疑慮。因此，我打造了 InBrowser.App：一套幾乎完全在瀏覽器內運行的工具，盡量減少對伺服器的依賴。你的資料始終留在裝置上，快速、私密、隨時可用——好工具就應如此。"
   },
   "es": {
-    "title": "El Desarrollador Dice",
-    "description": "Siempre he querido herramientas simples y sin inicio de sesión que simplemente funcionen, ya sea editar documentos, convertir archivos o retocar imágenes. Pero la mayoría dependen demasiado de servidores, lo que implica lentitud y riesgos de privacidad. Por eso creé InBrowser.App: aplicaciones web que funcionan directamente en tu navegador, minimizando la dependencia del servidor. Tus datos nunca salen de tu dispositivo. Rápido, privado y siempre listo para usar."
+    "title": "El desarrollador dice",
+    "description": "Siempre quise herramientas simples, sin inicio de sesión y que funcionen al instante: editar documentos, convertir archivos o retocar imágenes. Pero la mayoría de las herramientas web dependen mucho de servidores, lo que suele implicar cargas más lentas y concesiones de privacidad. Por eso creé InBrowser.App: una colección de aplicaciones web que funcionan totalmente en tu navegador y minimizan la dependencia del servidor. Tus datos se quedan en tu dispositivo. Rápido, privado y siempre listo para usar, como deberían ser las herramientas."
   },
   "fr": {
-    "title": "Le Développeur Dit",
-    "description": "J'ai toujours voulu des outils simples, sans connexion, et immédiatement fonctionnels, comme l'édition de documents, la conversion de fichiers ou la retouche d'images. Malheureusement, la plupart dépendent fortement de serveurs, causant lenteur et risques de confidentialité. C'est pourquoi j'ai créé InBrowser.App : une suite d'outils fonctionnant directement dans le navigateur, minimisant les dépendances aux serveurs. Vos données restent locales, rapides, privées et toujours accessibles."
+    "title": "Le développeur dit",
+    "description": "J'ai toujours voulu des outils simples, sans connexion, qui fonctionnent immédiatement — éditer un document, convertir un fichier ou retoucher une image. Mais la plupart des outils web dépendent fortement de serveurs, ce qui signifie souvent des chargements plus lents et des compromis sur la confidentialité. J'ai donc créé InBrowser.App : une collection d'apps web qui tournent entièrement dans votre navigateur, avec un minimum de dépendances serveur. Vos données restent sur votre appareil. Rapide, privé et toujours prêt — comme devraient l'être les outils."
   },
   "de": {
-    "title": "Der Entwickler Sagt",
-    "description": "Ich wollte schon immer einfache Tools, die ohne Anmeldung sofort funktionieren – ob Dokumentbearbeitung, Dateikonvertierung oder Bildbearbeitung. Leider setzen viele Tools stark auf Server, was langsame Ladezeiten und Datenschutzprobleme bedeutet. Deshalb habe ich InBrowser.App entwickelt: Web-Apps, die direkt im Browser laufen, mit minimaler Server-Abhängigkeit. Deine Daten bleiben lokal. Schnell, privat und stets einsatzbereit."
+    "title": "Der Entwickler sagt",
+    "description": "Ich wollte schon immer einfache Tools ohne Login, die sofort funktionieren – ob Dokumente bearbeiten, Dateien konvertieren oder Bilder anpassen. Doch die meisten Web-Tools hängen stark von Servern ab, was oft längere Ladezeiten und Abstriche beim Datenschutz bedeutet. Deshalb habe ich InBrowser.App gebaut: eine Sammlung von Web-Apps, die komplett im Browser laufen und die Serverabhängigkeit minimieren. Deine Daten bleiben auf deinem Gerät. Schnell, privat und jederzeit einsatzbereit – so sollten Tools sein."
+  },
+  "it": {
+    "title": "Lo sviluppatore dice",
+    "description": "Ho sempre voluto strumenti semplici, senza login e subito funzionanti — per modificare documenti, convertire file o ritoccare immagini. Ma la maggior parte degli strumenti web dipende dai server, con tempi di caricamento più lenti e compromessi sulla privacy. Per questo ho creato InBrowser.App: una raccolta di app web che funzionano interamente nel tuo browser, con dipendenze minime dal server. I tuoi dati restano sul tuo dispositivo. Veloce, privato e sempre pronto — proprio come dovrebbero essere gli strumenti."
   },
   "ja": {
     "title": "開発者の言葉",
-    "description": "ログイン不要で、すぐ使えるシンプルなツールが欲しかった。文書編集、ファイル変換、画像調整など、多くのツールはサーバーに依存して遅く、プライバシーにも不安があった。そこで InBrowser.App を作りました：ブラウザ内で動作し、サーバー依存を最小限に抑えたツール集です。データは自分の端末に留まり、速く、安全、いつでも使える。"
+    "description": "ログイン不要で、すぐ使えるシンプルなツールが欲しかった。文書の編集、ファイルの変換、画像の調整など。けれど多くのWebツールはサーバーに大きく依存し、読み込みが遅く、プライバシー面でも妥協が必要になる。そこで InBrowser.App を作りました。ブラウザの中で完結して動くツール群で、サーバー依存を最小限にしています。データは端末に留まります。速く、プライベートで、いつでも使える——ツールはこうあるべきです。"
   },
   "ko": {
-    "title": "개발자가 말하다",
-    "description": "로그인 없이 바로 사용할 수 있는 간단한 도구를 원했습니다. 문서 편집, 파일 변환, 이미지 조정 등 대부분의 웹 도구는 서버에 의존하여 느리고 개인정보 보호에도 문제가 있었습니다. 그래서 InBrowser.App을 만들었습니다: 브라우저에서 직접 실행되며 서버 의존성을 최소화한 웹 앱 모음입니다. 데이터는 기기에 유지되며 빠르고, 안전하며, 언제든 사용할 수 있습니다."
+    "title": "개발자의 한마디",
+    "description": "로그인 없이 바로 쓸 수 있는 단순한 도구를 늘 원했습니다. 문서 편집, 파일 변환, 이미지 손질처럼요. 하지만 대부분의 웹 도구는 서버에 크게 의존해 로딩이 느리고 프라이버시에도 타협이 필요했습니다. 그래서 InBrowser.App을 만들었습니다. 브라우저 안에서 완전히 동작하고 서버 의존을 최소화한 웹 앱 모음입니다. 데이터는 기기 안에 머뭅니다. 빠르고, 사적이며, 언제든 쓸 수 있는—도구는 원래 그래야 하니까요."
   },
   "ru": {
-    "title": "Разработчик Говорит",
-    "description": "Я всегда хотел простые инструменты без входа в систему, которые просто работают — будь то редактирование документа, конвертация файла или обработка изображения. Но большинство веб-инструментов сильно зависят от серверов, что часто означает медленную загрузку и компромиссы в конфиденциальности. Поэтому я создал InBrowser.App: набор веб-приложений, которые работают полностью в вашем браузере, с минимальной зависимостью от сервера. Ваши данные остаются на вашем устройстве. Быстро, конфиденциально и всегда готово к использованию."
+    "title": "Слово разработчика",
+    "description": "Мне всегда хотелось простых инструментов без входа, которые сразу работают — редактирование документов, конвертация файлов, обработка изображений. Но большинство веб-инструментов сильно зависят от серверов, а это обычно означает более долгую загрузку и компромиссы в приватности. Поэтому я сделал InBrowser.App: набор веб-приложений, которые полностью работают в вашем браузере и минимально зависят от сервера. Ваши данные остаются на устройстве. Быстро, приватно и всегда готово — так и должны работать инструменты."
   },
   "pt": {
-    "title": "O Desenvolvedor Diz",
-    "description": "Sempre quis ferramentas simples, sem login, que simplesmente funcionem — seja editando documentos, convertendo arquivos ou ajustando imagens. Mas a maioria das ferramentas web depende muito de servidores, o que geralmente significa tempos de carregamento mais lentos e compromissos de privacidade. Por isso, criei o InBrowser.App: uma coleção de aplicativos web que rodam inteiramente no seu navegador, com dependências mínimas de servidor. Seus dados permanecem no seu dispositivo. Rápido, privado e sempre pronto para usar."
+    "title": "O desenvolvedor diz",
+    "description": "Sempre quis ferramentas simples, sem login e que funcionem de imediato — editar documentos, converter arquivos ou ajustar imagens. Mas a maioria das ferramentas web depende bastante de servidores, o que costuma significar carregamento mais lento e concessões de privacidade. Por isso criei o InBrowser.App: uma coleção de aplicativos web que rodam totalmente no seu navegador, com mínima dependência do servidor. Seus dados ficam no seu dispositivo. Rápido, privado e sempre pronto para usar — como as ferramentas deveriam ser."
   },
   "ar": {
     "title": "يقول المطور",
-    "description": "لطالما أردت أدوات بسيطة بدون تسجيل دخول تعمل ببساطة — سواء كان تحرير مستند أو تحويل ملف أو تعديل صورة. لكن معظم أدوات الويب تعتمد بشكل كبير على الخوادم، مما يعني أوقات تحميل أبطأ ومقايضات الخصوصية. لذلك بنيت InBrowser.App: مجموعة من تطبيقات الويب التي تعمل بالكامل في متصفحك، مع الحد الأدنى من الاعتماد على الخادم. تبقى بياناتك على جهازك. سريع، خاص، وجاهز دائماً للاستخدام."
+    "description": "لطالما أردت أدوات بسيطة تعمل بلا تسجيل دخول وبشكل فوري — سواء لتحرير مستند أو تحويل ملف أو تعديل صورة. لكن معظم أدوات الويب تعتمد كثيرًا على الخوادم، ما يعني غالبًا تحميلًا أبطأ وتنازلات في الخصوصية. لذلك أنشأت InBrowser.App: مجموعة من تطبيقات الويب التي تعمل بالكامل داخل المتصفح مع أقل قدر من الاعتماد على الخادم. تبقى بياناتك على جهازك. سريع، خاص، وجاهز دائمًا — هكذا يجب أن تكون الأدوات."
   },
   "hi": {
-    "title": "डेवलपर कहता है",
-    "description": "मैं हमेशा से सरल, बिना लॉगिन के टूल चाहता था जो बस काम करें — चाहे वह दस्तावेज़ संपादित करना हो, फ़ाइल कन्वर्ट करना हो, या छवि को ट्वीक करना हो। लेकिन अधिकांश वेब टूल बैकएंड सर्वर पर बहुत अधिक निर्भर करते हैं, जिसका अक्सर मतलब होता है धीमा लोड टाइम और प्राइवेसी ट्रेड-ऑफ़। इसलिए मैंने InBrowser.App बनाया: वेब ऐप्स का एक संग्रह जो पूरी तरह से आपके ब्राउज़र में चलता है, न्यूनतम सर्वर निर्भरता के साथ। आपका डेटा आपके डिवाइस पर रहता है। तेज़, निजी, और हमेशा उपयोग के लिए तैयार।"
+    "title": "डेवलपर का कहना",
+    "description": "मैं हमेशा ऐसे सरल टूल चाहता था जो बिना लॉगिन के तुरंत काम करें — दस्तावेज़ संपादित करना, फ़ाइलें कन्वर्ट करना या तस्वीरों को ठीक करना। लेकिन ज़्यादातर वेब टूल बैकएंड सर्वर पर बहुत निर्भर होते हैं, जिससे लोड समय धीमा होता है और प्राइवेसी पर समझौते करने पड़ते हैं। इसलिए मैंने InBrowser.App बनाया: वेब ऐप्स का एक संग्रह जो पूरी तरह आपके ब्राउज़र में चलता है और सर्वर निर्भरता को न्यूनतम रखता है। आपका डेटा आपके डिवाइस पर ही रहता है। तेज़, निजी और हमेशा तैयार — जैसे टूल होने चाहिए।"
   },
   "tr": {
-    "title": "Geliştirici Diyor ki",
-    "description": "Her zaman basit, giriş yapmadan çalışan araçlar istedim — belge düzenleme, dosya dönüştürme veya görüntü düzenleme olsun. Ancak çoğu web aracı sunuculara ağır şekilde bağımlıdır, bu da genellikle yavaş yükleme süreleri ve gizlilik ödünleri anlamına gelir. Bu yüzden InBrowser.App'i oluşturdum: tamamen tarayıcınızda çalışan, minimum sunucu bağımlılığı olan web uygulamaları koleksiyonu. Verileriniz cihazınızda kalır. Hızlı, gizli ve her zaman kullanıma hazır."
+    "title": "Geliştirici diyor",
+    "description": "Her zaman basit, giriş gerektirmeyen ve hemen çalışan araçlar istedim — belge düzenlemek, dosya dönüştürmek ya da görselleri düzeltmek gibi. Ancak çoğu web aracı sunuculara fazlasıyla bağımlı; bu da daha yavaş yükleme süreleri ve gizlilikten ödünler anlamına geliyor. Bu yüzden InBrowser.App'i yaptım: tamamen tarayıcınızda çalışan ve sunucu bağımlılığını en aza indiren web uygulamaları koleksiyonu. Verileriniz cihazınızda kalır. Hızlı, özel ve her zaman kullanıma hazır — araçlar böyle olmalı."
   },
   "nl": {
-    "title": "De Ontwikkelaar Zegt",
-    "description": "Ik heb altijd eenvoudige, login-vrije tools gewild die gewoon werken — of het nu gaat om het bewerken van documenten, het converteren van bestanden of het aanpassen van afbeeldingen. Maar de meeste webtools zijn sterk afhankelijk van servers, wat vaak betekent langzamere laadtijden en privacy-compromisser. Daarom heb ik InBrowser.App gebouwd: een verzameling webapps die volledig in je browser draaien, met minimale serverafhankelijkheid. Je gegevens blijven op je apparaat. Snel, privé en altijd klaar voor gebruik."
+    "title": "De ontwikkelaar zegt",
+    "description": "Ik wilde altijd eenvoudige, loginvrije tools die meteen werken — of het nu gaat om documenten bewerken, bestanden omzetten of afbeeldingen bijwerken. Maar de meeste webtools leunen zwaar op servers, wat vaak tragere laadtijden en privacy-compromissen betekent. Daarom bouwde ik InBrowser.App: een verzameling webapps die volledig in je browser draaien en de serverafhankelijkheid minimaliseren. Je gegevens blijven op je apparaat. Snel, privé en altijd klaar voor gebruik — zo zouden tools moeten zijn."
   },
   "sv": {
-    "title": "Utvecklaren Säger",
-    "description": "Jag har alltid velat ha enkla verktyg utan inloggning som bara fungerar — oavsett om det är att redigera dokument, konvertera filer eller justera bilder. Men de flesta webbverktyg är starkt beroende av servrar, vilket ofta innebär långsammare laddningstider och kompromisser med integriteten. Därför byggde jag InBrowser.App: en samling webbappar som körs helt i din webbläsare, med minimala serverberoenden. Dina data stannar på din enhet. Snabbt, privat och alltid redo att användas."
+    "title": "Utvecklaren säger",
+    "description": "Jag har alltid velat ha enkla verktyg utan inloggning som fungerar direkt — oavsett om det gäller att redigera dokument, konvertera filer eller justera bilder. Men de flesta webbverktyg är starkt beroende av servrar, vilket ofta innebär långsammare laddning och kompromisser med integriteten. Därför byggde jag InBrowser.App: en samling webbappar som körs helt i din webbläsare med minimal serverberoende. Dina data stannar på din enhet. Snabbt, privat och alltid redo — som verktyg borde vara."
   },
   "pl": {
-    "title": "Mówi Programista",
-    "description": "Zawsze chciałem prostych narzędzi bez logowania, które po prostu działają — czy to edycja dokumentów, konwersja plików czy obróbka obrazów. Ale większość narzędzi internetowych jest silnie uzależniona od serwerów, co często oznacza wolniejsze czasy ładowania i kompromisy w zakresie prywatności. Dlatego stworzyłem InBrowser.App: kolekcję aplikacji internetowych, które działają całkowicie w przeglądarce, z minimalną zależnością od serwera. Twoje dane pozostają na Twoim urządzeniu. Szybkie, prywatne i zawsze gotowe do użycia."
+    "title": "Słowo dewelopera",
+    "description": "Zawsze chciałem prostych narzędzi bez logowania, które działają od razu — do edycji dokumentów, konwersji plików czy poprawy obrazów. Jednak większość narzędzi webowych mocno polega na serwerach, co zwykle oznacza wolniejsze ładowanie i kompromisy w prywatności. Dlatego stworzyłem InBrowser.App: zestaw aplikacji webowych działających całkowicie w przeglądarce, z minimalną zależnością od serwera. Twoje dane pozostają na urządzeniu. Szybko, prywatnie i zawsze gotowe — tak powinny działać narzędzia."
   },
   "vi": {
-    "title": "Nhà Phát Triển Nói",
-    "description": "Tôi luôn muốn có những công cụ đơn giản, không cần đăng nhập và hoạt động ngay lập tức — cho dù là chỉnh sửa tài liệu, chuyển đổi tệp hay điều chỉnh hình ảnh. Nhưng hầu hết các công cụ web đều phụ thuộc nhiều vào máy chủ, thường dẫn đến thời gian tải chậm và rủi ro về quyền riêng tư. Vì vậy, tôi đã xây dựng InBrowser.App: một bộ sưu tập ứng dụng web chạy hoàn toàn trong trình duyệt của bạn, với sự phụ thuộc tối thiểu vào máy chủ. Dữ liệu của bạn luôn được lưu trữ trên thiết bị của bạn. Nhanh chóng, riêng tư và luôn sẵn sàng sử dụng."
+    "title": "Lời chia sẻ của nhà phát triển",
+    "description": "Tôi luôn muốn những công cụ đơn giản, không cần đăng nhập và hoạt động ngay lập tức — chỉnh sửa tài liệu, chuyển đổi tệp hay tinh chỉnh hình ảnh. Nhưng hầu hết công cụ web phụ thuộc nhiều vào máy chủ, thường khiến tải chậm và phải đánh đổi quyền riêng tư. Vì vậy tôi đã tạo InBrowser.App: một bộ sưu tập ứng dụng web chạy hoàn toàn trong trình duyệt, với mức phụ thuộc máy chủ tối thiểu. Dữ liệu của bạn ở lại trên thiết bị. Nhanh, riêng tư và luôn sẵn sàng — đúng như công cụ nên có."
   },
   "th": {
-    "title": "นักพัฒนากล่าวว่า",
-    "description": "ผมต้องการเครื่องมือที่เรียบง่าย ไม่ต้องล็อกอิน และใช้งานได้ทันที — ไม่ว่าจะเป็นการแก้ไขเอกสาร แปลงไฟล์ หรือปรับแต่งรูปภาพ แต่เครื่องมือเว็บส่วนใหญ่มักพึ่งพาเซิร์ฟเวอร์มากเกินไป ทำให้โหลดช้าและมีความเสี่ยงด้านความเป็นส่วนตัว ดังนั้นผมจึงสร้าง InBrowser.App: ชุดแอปพลิเคชันเว็บที่ทำงานทั้งหมดในเบราว์เซอร์ของคุณ โดยพึ่งพาเซิร์ฟเวอร์น้อยที่สุด ข้อมูลของคุณยังคงอยู่ในอุปกรณ์ของคุณ เร็ว ปลอดภัย และพร้อมใช้งานเสมอ"
+    "title": "คำบอกเล่าจากผู้พัฒนา",
+    "description": "ผมอยากได้เครื่องมือที่เรียบง่าย ไม่ต้องล็อกอิน และใช้งานได้ทันทีเสมอ — ไม่ว่าจะเป็นการแก้ไขเอกสาร แปลงไฟล์ หรือปรับแต่งรูปภาพ แต่เครื่องมือเว็บส่วนใหญ่พึ่งพาเซิร์ฟเวอร์มาก ทำให้โหลดช้าและต้องแลกกับความเป็นส่วนตัว ดังนั้นผมจึงสร้าง InBrowser.App: ชุดแอปเว็บที่ทำงานทั้งหมดในเบราว์เซอร์ โดยลดการพึ่งพาเซิร์ฟเวอร์ให้เหลือน้อยที่สุด ข้อมูลของคุณอยู่บนอุปกรณ์ของคุณเสมอ รวดเร็ว เป็นส่วนตัว และพร้อมใช้งานตลอดเวลา — เครื่องมือควรเป็นแบบนี้"
   },
   "id": {
     "title": "Kata Pengembang",
-    "description": "Saya selalu menginginkan alat yang sederhana, tanpa login, yang langsung berfungsi — baik itu mengedit dokumen, mengkonversi file, atau mengedit gambar. Tapi kebanyakan alat web sangat bergantung pada server, yang sering berarti waktu pemuatan lebih lambat dan kompromi privasi. Karena itu saya membuat InBrowser.App: kumpulan aplikasi web yang berjalan sepenuhnya di browser Anda, dengan ketergantungan server minimal. Data Anda tetap di perangkat Anda. Cepat, pribadi, dan selalu siap digunakan."
+    "description": "Saya selalu menginginkan alat yang sederhana, tanpa login, dan langsung berfungsi — untuk mengedit dokumen, mengonversi file, atau menyunting gambar. Namun sebagian besar alat web sangat bergantung pada server, yang sering berarti waktu muat lebih lambat dan kompromi privasi. Karena itu saya membuat InBrowser.App: kumpulan aplikasi web yang berjalan sepenuhnya di browser Anda dengan ketergantungan server minimal. Data Anda tetap di perangkat Anda. Cepat, privat, dan selalu siap digunakan — begitulah seharusnya alat bekerja."
   },
   "he": {
     "title": "המפתח אומר",
-    "description": "תמיד רציתי כלים פשוטים, ללא התחברות, שפשוט עובדים — בין אם זה עריכת מסמכים, המרת קבצים או עריכת תמונות. אבל רוב כלי האינטרנט מסתמכים מאוד על שרתים, מה שבדרך כלל אומר זמני טעינה איטיים יותר ופשרות פרטיות. לכן בניתי את InBrowser.App: אוסף של אפליקציות אינטרנט שרצות לחלוטין בדפדפן שלך, עם תלות מינימלית בשרת. הנתונים שלך נשארים במכשיר שלך. מהיר, פרטי ותמיד מוכן לשימוש."
+    "description": "תמיד רציתי כלים פשוטים, בלי התחברות ושעובדים מיד — לעריכת מסמכים, המרת קבצים או התאמת תמונות. אבל רוב כלי הווב נשענים מאוד על שרתים, מה שבדרך כלל פירושו טעינה איטית יותר ופשרות בפרטיות. לכן יצרתי את InBrowser.App: אוסף של אפליקציות ווב שפועלות כולן בדפדפן עם תלות מינימלית בשרת. הנתונים שלך נשארים במכשיר. מהיר, פרטי ותמיד זמין — כך כלים צריכים להיות."
   },
   "ms": {
     "title": "Kata Pembangun",
-    "description": "Saya sentiasa mahukan alat yang mudah, tanpa log masuk, yang terus berfungsi — sama ada mengedit dokumen, menukar fail, atau mengedit imej. Tetapi kebanyakan alat web sangat bergantung pada pelayan, yang sering bermaksud masa muat turun yang lebih perlahan dan kompromi privasi. Oleh itu saya membina InBrowser.App: koleksi aplikasi web yang berjalan sepenuhnya dalam pelayar anda, dengan pergantungan pelayan yang minimum. Data anda kekal di peranti anda. Pantas, peribadi, dan sentiasa bersedia untuk digunakan."
+    "description": "Saya sentiasa mahukan alat yang mudah, tanpa log masuk dan berfungsi serta-merta — untuk mengedit dokumen, menukar fail atau melaras imej. Tetapi kebanyakan alat web sangat bergantung pada pelayan, yang selalunya bermaksud masa muat yang lebih perlahan dan kompromi privasi. Oleh itu saya membina InBrowser.App: koleksi aplikasi web yang berjalan sepenuhnya dalam pelayar anda dengan kebergantungan pelayan yang minimum. Data anda kekal pada peranti anda. Pantas, peribadi dan sentiasa sedia — begitulah sepatutnya alat."
   },
   "no": {
-    "title": "Utvikleren Sier",
-    "description": "Jeg har alltid ønsket enkle, innloggingsfrie verktøy som bare fungerer — enten det er å redigere dokumenter, konvertere filer eller justere bilder. Men de fleste nettverktøy er sterkt avhengige av servere, som ofte betyr tregere lastingider og kompromisser med personvern. Derfor bygde jeg InBrowser.App: en samling nettapper som kjører helt i nettleseren din, med minimal serveravhengighet. Dataene dine forblir på enheten din. Raskt, privat og alltid klart til bruk."
+    "title": "Utvikleren sier",
+    "description": "Jeg har alltid ønsket enkle verktøy uten innlogging som fungerer med en gang — for å redigere dokumenter, konvertere filer eller justere bilder. Men de fleste nettverktøy er sterkt avhengige av servere, noe som ofte betyr tregere lasting og kompromisser på personvern. Derfor laget jeg InBrowser.App: en samling nettapper som kjører helt i nettleseren med minimal serveravhengighet. Dataene dine blir på enheten din. Raskt, privat og alltid klart — slik verktøy bør være."
   }
 }
 </i18n>
