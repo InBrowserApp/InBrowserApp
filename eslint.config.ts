@@ -70,6 +70,7 @@ export default defineConfigWithVueTs(
           disableRFC5646: true,
         },
       ],
+      '@intlify/vue-i18n/prefer-sfc-lang-attr': 'warn',
     },
   },
   {
