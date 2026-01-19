@@ -5,7 +5,23 @@ import pluginVitest from '@vitest/eslint-plugin'
 import pluginPlaywright from 'eslint-plugin-playwright'
 import pluginOxlint from 'eslint-plugin-oxlint'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import inbrowserI18n from './eslint/inbrowser-i18n'
+
+const noRawTextIgnorePattern = [
+  '[\\s#%/\\-:().,_=]+',
+  '[A-Z0-9][A-Z0-9 vV./_\\-=:]*',
+  '[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}',
+  'x{8}-x{4}-[0-9a-fx]{4}-[0-9a-fxy]{4}-x{12}',
+  'https?://\\S+',
+  '[a-z0-9.-]+\\.[a-z]{2,}',
+  '<[^>]+>',
+  '"[^"]+": "[^"]+"',
+  '[0-9]+x',
+  '[0-9]+-bit',
+  '\\s*ms\\b.*',
+  '\\([rwx]\\)',
+].join('|')
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
@@ -22,6 +38,16 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
+  ...vueI18n.configs.recommended,
+  {
+    name: 'app/vue-i18n-settings',
+    settings: {
+      'vue-i18n': {
+        localeDir: 'shared/locale/src/locales/*.{json,json5,yaml,yml}',
+        messageSyntaxVersion: '^11.0.0',
+      },
+    },
+  },
   {
     rules: {
       'vue/no-undef-components': [
@@ -30,6 +56,37 @@ export default defineConfigWithVueTs(
           ignorePatterns: ['router-link', 'router-view', 'i18n-t'],
         },
       ],
+      '@intlify/vue-i18n/no-raw-text': [
+        'warn',
+        {
+          ignorePattern: `^(?:${noRawTextIgnorePattern})$`,
+          ignoreText: [
+            'Base64',
+            'Ed25519',
+            'GitHub',
+            'Google Maps',
+            'Google Search Result',
+            'Hello',
+            'Hex',
+            'InBrowser.App',
+            'iOS Web Clip',
+            'Max UUID',
+            'Nil UUID',
+            'Raw',
+            'Uryyb',
+            'WebP',
+            'chmod 755 script.sh',
+            'x',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'app/vue-i18n-dynamic-meta',
+    files: ['shared/ui/src/components/tool/grid/ToolThing.vue'],
+    rules: {
+      '@intlify/vue-i18n/no-missing-keys': 'off',
     },
   },
   {

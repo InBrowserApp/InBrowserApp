@@ -26,6 +26,7 @@
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
     "@commitlint/types": "catalog:",
+    "@intlify/eslint-plugin-vue-i18n": "catalog:",
     "@intlify/unplugin-vue-i18n": "catalog:",
     "@prettier/plugin-oxc": "catalog:",
     "@tsconfig/node22": "catalog:",
