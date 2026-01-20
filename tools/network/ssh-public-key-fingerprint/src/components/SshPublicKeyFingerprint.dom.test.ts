@@ -203,13 +203,13 @@ describe('ssh-public-key-fingerprint tool metadata', () => {
             template: '<div><slot /></div>',
           },
           SshPublicKeyFingerprint: {
-            template: '<div data-test=\"fingerprint\" />',
+            template: '<div data-test="fingerprint" />',
           },
         },
       },
     })
 
-    expect(wrapper.find('[data-test=\"fingerprint\"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="fingerprint"]').exists()).toBe(true)
   })
 })
 
