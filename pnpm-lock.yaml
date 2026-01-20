@@ -705,6 +705,9 @@ importers:
       '@tools/dns-lookup':
         specifier: workspace:*
         version: link:../../tools/network/dns-lookup
+      '@tools/docker-run-to-compose':
+        specifier: workspace:*
+        version: link:../../tools/code/docker-run-to-compose
       '@tools/duration-calculator':
         specifier: workspace:*
         version: link:../../tools/time/duration-calculator
@@ -1184,6 +1187,46 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/code/docker-run-to-compose:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
+      js-yaml:
+        specifier: 'catalog:'
+        version: 4.1.1
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+    devDependencies:
+      '@types/js-yaml':
+        specifier: 'catalog:'
+        version: 4.0.9
 
   tools/code/gitignore-generator:
     dependencies:
