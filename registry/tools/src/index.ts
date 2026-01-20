@@ -75,7 +75,7 @@ import { toolInfo as jmespathTesterToolInfo } from '@tools/jmespath-tester'
 import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
-import { toolInfo as curlFetchConverterToolInfo } from '@tools/curl-fetch-converter'
+import { toolInfo as curlConverterToolInfo } from '@tools/curl-converter'
 import { toolInfo as jsonSchemaGeneratorToolInfo } from '@tools/json-schema-generator'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
@@ -177,7 +177,7 @@ export const tools: ToolInfo[] = [
   jsonpathTesterToolInfo,
   openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
-  curlFetchConverterToolInfo,
+  curlConverterToolInfo,
 
   // PDF Tools
   pdfToolsToolInfo,

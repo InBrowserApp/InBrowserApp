@@ -147,9 +147,6 @@ catalogs:
     '@zip.js/zip.js':
       specifier: ^2.8.15
       version: 2.8.15
-    acorn:
-      specifier: ^8.15.0
-      version: 8.15.0
     ajv:
       specifier: ^8.17.1
       version: 8.17.1
@@ -669,9 +666,9 @@ importers:
       '@tools/cuid2-generator':
         specifier: workspace:*
         version: link:../../tools/random/cuid2-generator
-      '@tools/curl-fetch-converter':
+      '@tools/curl-converter':
         specifier: workspace:*
-        version: link:../../tools/code/curl-fetch-converter
+        version: link:../../tools/code/curl-converter
       '@tools/current-network-time':
         specifier: workspace:*
         version: link:../../tools/time/current-network-time
@@ -1110,7 +1107,7 @@ importers:
         specifier: 'catalog:'
         version: 5.5.2
 
-  tools/code/curl-fetch-converter:
+  tools/code/curl-converter:
     dependencies:
       '@shared/tools':
         specifier: workspace:*
@@ -1124,9 +1121,6 @@ importers:
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
-      acorn:
-        specifier: 'catalog:'
-        version: 8.15.0
       curlconverter:
         specifier: 'catalog:'
         version: 4.12.0

@@ -1,5 +1,5 @@
 {
-  "name": "@tools/curl-fetch-converter",
+  "name": "@tools/curl-converter",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,6 @@
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",
-    "acorn": "catalog:",
     "curlconverter": "catalog:",
     "highlight.js": "catalog:",
     "naive-ui": "catalog:",
