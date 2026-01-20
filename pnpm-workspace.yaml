@@ -112,6 +112,7 @@ catalog:
   openpgp: ^6.3.0
   oxlint: ~1.41.0
   papaparse: ^5.5.3
+  pdf-lib: ^1.17.1
   pinia: 3.0.4
   prettier: 3.8.0
   punycode: ^2.3.1
