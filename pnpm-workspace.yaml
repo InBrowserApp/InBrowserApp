@@ -62,6 +62,7 @@ catalog:
   "@zip.js/zip.js": ^2.8.15
   ajv: ^8.17.1
   ajv-formats: ^3.0.1
+  acorn: ^8.15.0
   bcrypt-ts: ^8.0.0
   bip39: ^3.1.0
   blakejs: ^1.2.1
@@ -76,6 +77,7 @@ catalog:
   cron-parser: ^5.5.0
   cronstrue: ^3.9.0
   crypto-js: ^4.2.0
+  curlconverter: ^4.12.0
   dompurify: ^3.3.1
   eslint: ^9.39.2
   eslint-plugin-oxlint: ~1.41.0

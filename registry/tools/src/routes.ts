@@ -76,6 +76,7 @@ import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validato
 import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescript/routes'
 import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
 import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
+import { routes as curlFetchConverterRoutes } from '@tools/curl-fetch-converter/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
@@ -202,6 +203,7 @@ export const routes: ToolRoute[] = [
   ...jsonSchemaValidatorRoutes,
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
+  ...curlFetchConverterRoutes,
   ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
