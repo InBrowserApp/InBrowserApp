@@ -405,7 +405,10 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
     )
     const publicJwk = (await webcrypto.subtle.exportKey('jwk', keyPair.publicKey)) as JsonWebKey
     await expect(
-      testUtils.exportDerFromJwk(publicJwk, 'public', { name: 'AES-GCM' } as Algorithm),
+      testUtils.exportDerFromJwk(publicJwk, 'public', {
+        name: 'AES-GCM',
+        length: 256,
+      } as AesKeyAlgorithm),
     ).rejects.toMatchObject({
       key: 'errorWebCryptoFailed',
     })
@@ -499,7 +502,9 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 
     expect(testUtils.decodeOid(new Uint8Array())).toBe('')
     expect(() => testUtils.encodeOid('1')).toThrow(JwkPemError)
-    expect(testUtils.getKeyUsages({ name: 'AES-GCM' } as Algorithm, 'public')).toEqual([])
+    expect(
+      testUtils.getKeyUsages({ name: 'AES-GCM', length: 256 } as AesKeyAlgorithm, 'public'),
+    ).toEqual([])
 
     const sec1 = testUtils.encodeSequence(testUtils.encodeInteger(1))
     expect(testUtils.extractSec1CurveOid(sec1)).toBeUndefined()

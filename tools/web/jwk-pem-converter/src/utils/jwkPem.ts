@@ -4,6 +4,7 @@ export type KeyType = 'RSA' | 'EC' | 'OKP' | 'Unknown'
 export type OkpCurve = 'Ed25519' | 'Ed448' | 'X25519' | 'X448'
 export type EcCurve = 'P-256' | 'P-384' | 'P-521'
 export type PemOutputType = 'public' | 'private'
+type WebCryptoAlgorithm = RsaHashedImportParams | EcKeyImportParams | AesKeyAlgorithm
 
 export class JwkPemError extends Error {
   constructor(
@@ -37,9 +38,9 @@ const EC_CURVE_OIDS: Record<EcCurve, string> = {
   'P-521': '1.3.132.0.35',
 }
 
-const EC_OID_TO_CURVE: Record<string, EcCurve> = Object.fromEntries(
+const EC_OID_TO_CURVE = Object.fromEntries(
   Object.entries(EC_CURVE_OIDS).map(([curve, oid]) => [oid, curve]),
-)
+) as Record<string, EcCurve>
 
 export type PemBlock = {
   label: string
@@ -164,7 +165,7 @@ export async function jwkToPem(jwk: JsonWebKey, outputType: PemOutputType): Prom
     const der = await exportDerFromJwk(sanitized, outputType, {
       name: 'RSA-OAEP',
       hash: 'SHA-256',
-    })
+    } as RsaHashedImportParams)
     return wrapPem(outputType === 'public' ? 'PUBLIC KEY' : 'PRIVATE KEY', der)
   }
 
@@ -173,7 +174,7 @@ export async function jwkToPem(jwk: JsonWebKey, outputType: PemOutputType): Prom
     const der = await exportDerFromJwk(sanitized, outputType, {
       name: 'ECDSA',
       namedCurve: sanitized.crv as EcCurve,
-    })
+    } as EcKeyImportParams)
     return wrapPem(outputType === 'public' ? 'PUBLIC KEY' : 'PRIVATE KEY', der)
   }
 
@@ -256,13 +257,16 @@ async function convertSpki(der: Uint8Array): Promise<JsonWebKey> {
     return parseOkpSpki(der)
   }
   if (algorithm.type === 'RSA') {
-    return exportJwkFromDer(der, 'spki', { name: 'RSA-OAEP', hash: 'SHA-256' })
+    return exportJwkFromDer(der, 'spki', {
+      name: 'RSA-OAEP',
+      hash: 'SHA-256',
+    } as RsaHashedImportParams)
   }
   if (algorithm.type === 'EC') {
     return exportJwkFromDer(der, 'spki', {
       name: 'ECDSA',
       namedCurve: algorithm.curve,
-    })
+    } as EcKeyImportParams)
   }
   throw new JwkPemError('errorUnsupportedAlgorithm', { algorithm: algorithm.oid })
 }
@@ -273,18 +277,21 @@ async function convertPkcs8(der: Uint8Array): Promise<JsonWebKey> {
     return parseOkpPkcs8(der)
   }
   if (algorithm.type === 'RSA') {
-    return exportJwkFromDer(der, 'pkcs8', { name: 'RSA-OAEP', hash: 'SHA-256' })
+    return exportJwkFromDer(der, 'pkcs8', {
+      name: 'RSA-OAEP',
+      hash: 'SHA-256',
+    } as RsaHashedImportParams)
   }
   if (algorithm.type === 'EC') {
     return exportJwkFromDer(der, 'pkcs8', {
       name: 'ECDSA',
       namedCurve: algorithm.curve,
-    })
+    } as EcKeyImportParams)
   }
   throw new JwkPemError('errorUnsupportedAlgorithm', { algorithm: algorithm.oid })
 }
 
-function getKeyUsages(algorithm: Algorithm, outputType: PemOutputType): KeyUsage[] {
+function getKeyUsages(algorithm: WebCryptoAlgorithm, outputType: PemOutputType): KeyUsage[] {
   const name = (algorithm as { name?: string }).name
   if (name === 'RSA-OAEP') {
     return outputType === 'public' ? ['encrypt'] : ['decrypt']
@@ -298,7 +305,7 @@ function getKeyUsages(algorithm: Algorithm, outputType: PemOutputType): KeyUsage
 async function exportDerFromJwk(
   jwk: JsonWebKey,
   outputType: PemOutputType,
-  algorithm: Algorithm,
+  algorithm: WebCryptoAlgorithm,
 ): Promise<Uint8Array> {
   const subtle = getWebCrypto()
   try {
@@ -320,14 +327,18 @@ async function exportDerFromJwk(
 async function exportJwkFromDer(
   der: Uint8Array,
   format: 'spki' | 'pkcs8',
-  algorithm: Algorithm,
+  algorithm: WebCryptoAlgorithm,
 ): Promise<JsonWebKey> {
   const subtle = getWebCrypto()
   try {
     const outputType: PemOutputType = format === 'spki' ? 'public' : 'private'
+    const derBuffer = der.buffer.slice(
+      der.byteOffset,
+      der.byteOffset + der.byteLength,
+    ) as ArrayBuffer
     const key = await subtle.importKey(
       format,
-      der,
+      derBuffer,
       algorithm,
       true,
       getKeyUsages(algorithm, outputType),
@@ -429,7 +440,7 @@ function detectDerKeyType(der: Uint8Array): 'spki' | 'pkcs8' | 'unknown' {
   const top = readAsn1Element(der, 0)
   const children = readAsn1Children(der, top)
   if (!children.length) return 'unknown'
-  const first = children[0]
+  const first = children[0]!
   if (first.tag === 0x02) {
     return 'pkcs8'
   }
@@ -693,7 +704,7 @@ function readAsn1Element(bytes: Uint8Array, offset: number): Asn1Element {
     }
     length = 0
     for (let i = 0; i < numBytes; i += 1) {
-      length = (length << 8) | bytes[offset + 2 + i]
+      length = (length << 8) | bytes[offset + 2 + i]!
     }
     headerLength = 2 + numBytes
   }

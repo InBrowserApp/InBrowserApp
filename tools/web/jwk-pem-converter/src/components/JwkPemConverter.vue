@@ -149,6 +149,8 @@ import {
 
 const { t } = useI18n()
 
+type JwkWithKid = JsonWebKey & { kid?: string }
+
 const defaultJwkInput = `{
   "crv": "Ed25519",
   "d": "IPR8baukbPNU-nM57_prOTFvP9b9QTXY6JYLO1mbWR4",
@@ -311,7 +313,7 @@ const pemError = computed(() =>
 
 function formatWarning(warning: WarningEntry): string {
   // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
-  return t(warning.key, warning.params)
+  return t(warning.key, warning.params ?? {})
 }
 
 async function readInputText(value: string | File): Promise<string> {
@@ -321,7 +323,7 @@ async function readInputText(value: string | File): Promise<string> {
   return await value.text()
 }
 
-function formatKeyLabel(key: JsonWebKey, index: number): string {
+function formatKeyLabel(key: JwkWithKid, index: number): string {
   const type = key.kty ? key.kty : t('unknownKey')
   const detail = key.crv ? ` ${key.crv}` : ''
   const kid = key.kid ? ` (${key.kid})` : ` #${index + 1}`
@@ -331,7 +333,7 @@ function formatKeyLabel(key: JsonWebKey, index: number): string {
 function formatError(error: unknown): string {
   if (error instanceof JwkPemError) {
     // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
-    return t(error.key, error.params)
+    return t(error.key, error.params ?? {})
   }
   if (error instanceof Error) {
     return error.message
