@@ -141,13 +141,14 @@ const inputPlaceholder = computed(() =>
 )
 const showFetchHint = computed(() => mode.value === 'fetch-to-curl')
 
-const downloadBlob = computed(() =>
-  new Blob([outputText.value], {
-    type:
-      mode.value === 'curl-to-fetch'
-        ? 'text/javascript;charset=utf-8'
-        : 'text/plain;charset=utf-8',
-  }),
+const downloadBlob = computed(
+  () =>
+    new Blob([outputText.value], {
+      type:
+        mode.value === 'curl-to-fetch'
+          ? 'text/javascript;charset=utf-8'
+          : 'text/plain;charset=utf-8',
+    }),
 )
 const downloadUrl = useObjectUrl(downloadBlob)
 

@@ -146,8 +146,8 @@ function parseFetchSource(source: string): ParseResult {
   }
 
   const call = fetchCalls[0]
-    const args = (call.arguments as AcornNode[]) ?? []
-    const url = parseStaticString(args[0])
+  const args = (call.arguments as AcornNode[]) ?? []
+  const url = parseStaticString(args[0])
 
   if (!url) {
     return {
@@ -396,15 +396,8 @@ function buildCurlCommand(request: FetchRequest, warnings: string[]): string {
     headerNames.add('content-type')
   }
 
-  if (
-    request.body &&
-    request.bodyType === 'urlencoded' &&
-    !headerNames.has('content-type')
-  ) {
-    request.headers = [
-      ...request.headers,
-      ['Content-Type', 'application/x-www-form-urlencoded'],
-    ]
+  if (request.body && request.bodyType === 'urlencoded' && !headerNames.has('content-type')) {
+    request.headers = [...request.headers, ['Content-Type', 'application/x-www-form-urlencoded']]
     headerNames.add('content-type')
   }
 

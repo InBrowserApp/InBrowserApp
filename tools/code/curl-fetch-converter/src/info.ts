@@ -47,11 +47,13 @@ export const meta = {
   },
   ja: {
     name: 'cURL ↔ Fetch 変換',
-    description: 'cURL コマンドと fetch コードを相互変換。一般的なメソッド、ヘッダー、ボディに対応。',
+    description:
+      'cURL コマンドと fetch コードを相互変換。一般的なメソッド、ヘッダー、ボディに対応。',
   },
   ko: {
     name: 'cURL ↔ Fetch 변환기',
-    description: 'cURL 명령과 fetch 코드를 상호 변환합니다. 일반적인 메서드, 헤더, 본문을 지원합니다.',
+    description:
+      'cURL 명령과 fetch 코드를 상호 변환합니다. 일반적인 메서드, 헤더, 본문을 지원합니다.',
   },
   ru: {
     name: 'Конвертер cURL ↔ Fetch',
@@ -65,8 +67,7 @@ export const meta = {
   },
   ar: {
     name: 'محول cURL ↔ Fetch',
-    description:
-      'حوّل أوامر cURL إلى كود fetch والعكس. يدعم الطرق والعناوين والأجسام الشائعة.',
+    description: 'حوّل أوامر cURL إلى كود fetch والعكس. يدعم الطرق والعناوين والأجسام الشائعة.',
   },
   hi: {
     name: 'cURL ↔ Fetch परिवर्तक',
@@ -110,8 +111,7 @@ export const meta = {
   },
   he: {
     name: 'ממיר cURL ↔ Fetch',
-    description:
-      'ממיר פקודות cURL לקוד fetch ולהפך. תומך בשיטות, כותרות וגוף נפוצים.',
+    description: 'ממיר פקודות cURL לקוד fetch ולהפך. תומך בשיטות, כותרות וגוף נפוצים.',
   },
   ms: {
     name: 'Penukar cURL ↔ Fetch',
