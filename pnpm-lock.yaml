@@ -103,7 +103,7 @@ catalogs:
       specifier: 2.1.2
       version: 2.1.2
     '@vicons/carbon':
-      specifier: ^0.13.0
+      specifier: 0.13.0
       version: 0.13.0
     '@vicons/fa':
       specifier: ^0.13.0
@@ -217,7 +217,7 @@ catalogs:
       specifier: ^1.9.4
       version: 1.9.4
     filesize:
-      specifier: 11.0.13
+      specifier: ^11.0.13
       version: 11.0.13
     github-markdown-css:
       specifier: ^5.8.1
@@ -3461,7 +3461,7 @@ importers:
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
-      '@vicons/fluent':
+      '@vicons/carbon':
         specifier: 'catalog:'
         version: 0.13.0
       filesize:

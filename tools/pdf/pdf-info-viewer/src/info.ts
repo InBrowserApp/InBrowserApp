@@ -1,5 +1,5 @@
 export const toolID = 'pdf-info-viewer'
-export { default as icon } from '@vicons/fluent/DocumentPdf24Regular'
+export { default as icon } from '@vicons/carbon/DocumentPdf'
 export const path = '/tools/pdf-info-viewer'
 export const tags = ['pdf', 'metadata']
 export const features = ['offline']

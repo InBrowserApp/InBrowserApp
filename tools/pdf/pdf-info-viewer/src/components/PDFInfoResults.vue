@@ -708,3 +708,9 @@ const formatDate = (value?: Date) => {
   }
 }
 </i18n>
+
+<style scoped>
+:deep(.n-descriptions-table-header) {
+  white-space: nowrap;
+}
+</style>
