@@ -360,7 +360,7 @@ function parseDockerRunTokens(tokens: string[]): {
       if (image) {
         data.image = image
       } else {
-        warnings.push('Found \"--\" without an image after it.')
+        warnings.push('Found "--" without an image after it.')
         break
       }
       i += 1
