@@ -92,13 +92,16 @@ function splitSsh2Blocks(input: string): { blocks: RawKeyEntry[]; remainingLines
         continue
       }
 
-      const commentMatch = trimmed.match(/^comment:\s*(.+)$/i)
-      if (commentMatch) {
-        comment = stripQuotes(commentMatch[1]!.trim())
+      const lowerTrimmed = trimmed.toLowerCase()
+      if (lowerTrimmed.startsWith('comment:')) {
+        const commentText = trimmed.slice('comment:'.length).trim()
+        if (commentText) {
+          comment = stripQuotes(commentText)
+        }
         continue
       }
 
-      if (/^subject:/i.test(trimmed)) {
+      if (lowerTrimmed.startsWith('subject:')) {
         continue
       }
 

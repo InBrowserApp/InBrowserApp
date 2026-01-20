@@ -141,6 +141,11 @@ const rfcEmptyBlock = `---- BEGIN SSH2 PUBLIC KEY ----
 Comment: 'empty@example.com'
 ---- END SSH2 PUBLIC KEY ----`
 
+const rfcEmptyCommentBlock = `---- BEGIN SSH2 PUBLIC KEY ----
+Comment:
+${toBase64(buildKeyBlob('ssh-ed25519', [encodeString(ed25519PublicKey)]))}
+---- END SSH2 PUBLIC KEY ----`
+
 const rfcShortBlock = `---- BEGIN SSH2 PUBLIC KEY ----
 ${toBase64(new Uint8Array([1, 2, 3]))}
 ---- END SSH2 PUBLIC KEY ----`
@@ -274,6 +279,13 @@ describe('parseSshPublicKeys', () => {
 
     expect(entries).toHaveLength(1)
     expect(entries[0]?.comment).toBe('blank@example.com')
+  })
+
+  it('ignores empty RFC comment lines', async () => {
+    const entries = await parseSshPublicKeys(rfcEmptyCommentBlock)
+
+    expect(entries).toHaveLength(1)
+    expect(entries[0]?.comment).toBeUndefined()
   })
 
   it('ignores comment lines', async () => {
