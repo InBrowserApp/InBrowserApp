@@ -23,6 +23,7 @@ import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
 import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
 import { toolInfo as networkToolsToolInfo } from '@tools/network-tools'
 import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
+import { toolInfo as mergePdfToolInfo } from '@tools/merge-pdf'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
 import { toolInfo as sha256HashTextOrFileToolInfo } from '@tools/sha256-hash-text-or-file'
 import { toolInfo as sha384HashTextOrFileToolInfo } from '@tools/sha384-hash-text-or-file'
@@ -189,6 +190,7 @@ export const tools: ToolInfo[] = [
 
   // PDF Tools
   pdfToolsToolInfo,
+  mergePdfToolInfo,
   removePDFOwnerPasswordToolInfo,
   pdfInfoViewerToolInfo,
 

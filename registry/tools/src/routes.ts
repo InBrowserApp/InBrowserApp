@@ -21,6 +21,7 @@ import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
 import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
+import { routes as mergePdfRoutes } from '@tools/merge-pdf/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
 import { routes as sha256HashTextOrFileRoutes } from '@tools/sha256-hash-text-or-file/routes'
 import { routes as sha384HashTextOrFileRoutes } from '@tools/sha384-hash-text-or-file/routes'
@@ -156,6 +157,7 @@ export const routes: ToolRoute[] = [
   ...imageMetadataCleanerRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
+  ...mergePdfRoutes,
   ...imageToolsRoutes,
   ...sha256HashTextOrFileRoutes,
   ...sha384HashTextOrFileRoutes,
