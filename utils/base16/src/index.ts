@@ -60,8 +60,8 @@ export function decodeBase16(value: string): Uint8Array {
 
   const bytes = new Uint8Array(normalized.length / 2)
   for (let i = 0; i < normalized.length; i += 2) {
-    const high = BASE16_MAP.get(normalized[i])
-    const low = BASE16_MAP.get(normalized[i + 1])
+    const high = BASE16_MAP.get(normalized.charAt(i))
+    const low = BASE16_MAP.get(normalized.charAt(i + 1))
 
     if (high === undefined || low === undefined) {
       throw new Error('Invalid hex character')
