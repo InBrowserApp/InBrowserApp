@@ -77,6 +77,7 @@
     "@tools/json-to-xml-converter": "workspace:*",
     "@tools/json-to-yaml-converter": "workspace:*",
     "@tools/jsonpath-tester": "workspace:*",
+    "@tools/jwk-pem-converter": "workspace:*",
     "@tools/jwt-decoder-verifier": "workspace:*",
     "@tools/jwt-signer": "workspace:*",
     "@tools/keccak-hash-text-or-file": "workspace:*",
