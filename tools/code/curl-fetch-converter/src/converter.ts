@@ -118,11 +118,18 @@ function parseFetchSource(source: string): ParseResult {
   let ast: AcornNode
 
   try {
-    ast = parse(source, {
+    const parsed = parse(source, {
       ecmaVersion: 'latest',
       sourceType: 'module',
       allowAwaitOutsideFunction: true,
-    }) as AcornNode
+    }) as unknown
+    if (!isAcornNode(parsed)) {
+      return {
+        warnings,
+        error: 'Failed to parse fetch snippet.',
+      }
+    }
+    ast = parsed
   } catch (error) {
     return {
       warnings,
@@ -146,6 +153,9 @@ function parseFetchSource(source: string): ParseResult {
   }
 
   const call = fetchCalls[0]
+  if (!call) {
+    return { warnings, error: fetchCallError }
+  }
   const args = (call.arguments as AcornNode[]) ?? []
   const url = parseStaticString(args[0])
 
@@ -526,8 +536,13 @@ function isFetchCall(node: AcornNode): boolean {
   return false
 }
 
-function isIdentifier(node: AcornNode | undefined, name: string): boolean {
-  return node?.type === 'Identifier' && typeof node.name === 'string' && node.name === name
+function isIdentifier(node: unknown, name: string): boolean {
+  return (
+    isAcornNode(node) &&
+    node.type === 'Identifier' &&
+    typeof node.name === 'string' &&
+    node.name === name
+  )
 }
 
 function isJsonStringifyCall(node: AcornNode): boolean {
@@ -549,12 +564,18 @@ function walkNode(node: AcornNode, visit: (node: AcornNode) => void): void {
   for (const value of Object.values(node)) {
     if (Array.isArray(value)) {
       for (const item of value) {
-        if (item && typeof item === 'object' && 'type' in item) {
-          walkNode(item as AcornNode, visit)
+        if (isAcornNode(item)) {
+          walkNode(item, visit)
         }
       }
-    } else if (value && typeof value === 'object' && 'type' in value) {
-      walkNode(value as AcornNode, visit)
+    } else if (isAcornNode(value)) {
+      walkNode(value, visit)
     }
   }
+}
+
+function isAcornNode(value: unknown): value is AcornNode {
+  if (!value || typeof value !== 'object') return false
+  if (!('type' in value)) return false
+  return typeof (value as { type?: unknown }).type === 'string'
 }
