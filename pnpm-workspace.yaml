@@ -76,6 +76,7 @@ catalog:
   cron-parser: ^5.5.0
   cronstrue: ^3.9.0
   crypto-js: ^4.2.0
+  curlconverter: ^4.12.0
   dompurify: ^3.3.1
   eslint: ^9.39.2
   eslint-plugin-oxlint: ~1.41.0

@@ -41,6 +41,7 @@
     "@tools/cron-expression-parser": "workspace:*",
     "@tools/csv-to-json-converter": "workspace:*",
     "@tools/cuid2-generator": "workspace:*",
+    "@tools/curl-converter": "workspace:*",
     "@tools/current-network-time": "workspace:*",
     "@tools/data-uri-to-file-converter": "workspace:*",
     "@tools/device-information": "workspace:*",
