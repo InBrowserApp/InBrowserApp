@@ -403,7 +403,7 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
     await flushPromises()
 
     expect(vm.pemOutput).toContain('"kty"')
-    expect(vm.pemOutput).not.toContain('\n  \"kty\"')
+    expect(vm.pemOutput).not.toContain('\n  "kty"')
     expect(vm.pemDownloadName).toBe('key.jwk.json')
   })
 

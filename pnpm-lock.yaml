@@ -765,6 +765,9 @@ importers:
       '@tools/jsonpath-tester':
         specifier: workspace:*
         version: link:../../tools/code/jsonpath-tester
+      '@tools/jwk-pem-converter':
+        specifier: workspace:*
+        version: link:../../tools/web/jwk-pem-converter
       '@tools/jwt-decoder-verifier':
         specifier: workspace:*
         version: link:../../tools/web/jwt-decoder-verifier
