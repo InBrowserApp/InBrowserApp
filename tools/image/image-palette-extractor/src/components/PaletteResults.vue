@@ -199,16 +199,17 @@ function formatPercent(value: number): string {
   overflow: hidden;
   display: grid;
   place-items: center;
-  row-gap: 6px;
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  padding: 10px;
+  row-gap: 4px;
+  width: 100px;
+  height: 100px;
+  padding: 8px;
   background: transparent;
   cursor: pointer;
+  justify-self: center;
 }
 
 .swatch-hex {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
@@ -221,7 +222,7 @@ function formatPercent(value: number): string {
 
 .swatch-percent {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   opacity: 0.9;
 }
 
