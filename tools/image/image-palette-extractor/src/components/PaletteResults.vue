@@ -37,7 +37,7 @@
         </n-flex>
 
         <n-grid
-          cols="2 s:3 m:4 l:5 xl:6 2xl:7"
+          cols="2 s:4 m:5 l:6 xl:7 2xl:8"
           :x-gap="12"
           :y-gap="12"
           responsive="screen"
@@ -207,7 +207,6 @@ function formatPercent(value: number): string {
   justify-content: center;
   gap: 4px;
   width: 100%;
-  max-width: 100px;
   aspect-ratio: 1 / 1;
   padding: 6px;
   background: transparent;
