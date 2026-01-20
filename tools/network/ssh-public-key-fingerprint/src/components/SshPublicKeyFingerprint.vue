@@ -160,11 +160,13 @@ function formatKeySize(value?: number) {
   margin-top: 8px;
 }
 
-.monospace-input :deep(textarea) {
+.monospace-input :deep(.n-input__textarea-el),
+.monospace-input :deep(.n-input__textarea-mirror) {
   font-family:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-  word-break: break-all;
+  word-break: break-all !important;
+  overflow-wrap: anywhere;
 }
 
 .monospace-input :deep(input) {
