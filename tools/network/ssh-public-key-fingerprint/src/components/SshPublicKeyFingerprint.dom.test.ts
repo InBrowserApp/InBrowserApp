@@ -188,8 +188,13 @@ describe('ssh-public-key-fingerprint tool metadata', () => {
   it('exports tool info and routes', async () => {
     expect(toolInfo.toolID).toBe('ssh-public-key-fingerprint')
     expect(toolIndex.toolInfo.toolID).toBe('ssh-public-key-fingerprint')
-    expect(routes[0]?.path).toBe('/tools/ssh-public-key-fingerprint')
-    const routeModule = await routes[0]?.component()
+    const route = routes[0]
+    expect(route?.path).toBe('/tools/ssh-public-key-fingerprint')
+    const component = route?.component
+    if (!component) throw new Error('Missing route component')
+    if (typeof component !== 'function') throw new Error('Expected lazy route component')
+
+    const routeModule = await (component as () => Promise<unknown>)()
     expect(routeModule).toBeTruthy()
   })
 

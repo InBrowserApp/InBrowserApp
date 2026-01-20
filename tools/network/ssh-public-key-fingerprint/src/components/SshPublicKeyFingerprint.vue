@@ -12,7 +12,7 @@
   </ToolSection>
 
   <n-alert v-show="parseState.state === 'error'" type="error" :title="t('errorTitle')">
-    {{ parseState.message }}
+    {{ errorMessage }}
   </n-alert>
 
   <ToolSectionHeader>{{ t('resultsTitle') }}</ToolSectionHeader>
@@ -131,6 +131,9 @@ const parseState = computedAsync<ParseState>(
   parsing,
 )
 
+const errorMessage = computed(() =>
+  parseState.value.state === 'error' ? parseState.value.message : '',
+)
 const entries = computed(() =>
   parseState.value.state === 'parsed' ? parseState.value.entries : [],
 )

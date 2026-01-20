@@ -94,7 +94,7 @@ function splitSsh2Blocks(input: string): { blocks: RawKeyEntry[]; remainingLines
 
       const commentMatch = trimmed.match(/^comment:\s*(.+)$/i)
       if (commentMatch) {
-        comment = stripQuotes(commentMatch[1].trim())
+        comment = stripQuotes(commentMatch[1]!.trim())
         continue
       }
 
