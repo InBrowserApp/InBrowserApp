@@ -912,6 +912,9 @@ importers:
       '@tools/sha512-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha512-hash-text-or-file
+      '@tools/sitemap-xml-generator':
+        specifier: workspace:*
+        version: link:../../tools/web/sitemap-xml-generator
       '@tools/slug-generator':
         specifier: workspace:*
         version: link:../../tools/web/slug-generator
@@ -5012,6 +5015,30 @@ importers:
         version: 11.2.8(vue@3.5.27(typescript@5.9.3))
 
   tools/web/rot-cipher:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+
+  tools/web/sitemap-xml-generator:
     dependencies:
       '@shared/tools':
         specifier: workspace:*

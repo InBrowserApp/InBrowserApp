@@ -125,6 +125,7 @@ import { toolInfo as bicSwiftValidatorToolInfo } from '@tools/bic-swift-validato
 import { toolInfo as vatValidatorToolInfo } from '@tools/vat-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
 import { toolInfo as robotsTxtGeneratorToolInfo } from '@tools/robots-txt-generator'
+import { toolInfo as sitemapXmlGeneratorToolInfo } from '@tools/sitemap-xml-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
 import { toolInfo as pgpKeyGeneratorToolInfo } from '@tools/pgp-key-generator'
@@ -296,6 +297,7 @@ export const tools: ToolInfo[] = [
 
   // Web Tools (SEO)
   robotsTxtGeneratorToolInfo,
+  sitemapXmlGeneratorToolInfo,
   slugGeneratorToolInfo,
 
   // Image Tools (Placeholder)

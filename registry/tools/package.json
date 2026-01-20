@@ -117,6 +117,7 @@
     "@tools/sha256-hash-text-or-file": "workspace:*",
     "@tools/sha384-hash-text-or-file": "workspace:*",
     "@tools/sha512-hash-text-or-file": "workspace:*",
+    "@tools/sitemap-xml-generator": "workspace:*",
     "@tools/slug-generator": "workspace:*",
     "@tools/sri-hash-generator": "workspace:*",
     "@tools/ssh-key-generator": "workspace:*",
