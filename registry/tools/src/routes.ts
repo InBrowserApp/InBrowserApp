@@ -115,6 +115,7 @@ import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/routes'
 import { routes as vatValidatorRoutes } from '@tools/vat-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
+import { routes as robotsTxtGeneratorRoutes } from '@tools/robots-txt-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
 import { routes as pgpKeyGeneratorRoutes } from '@tools/pgp-key-generator/routes'
@@ -242,6 +243,7 @@ export const routes: ToolRoute[] = [
   ...bicSwiftValidatorRoutes,
   ...vatValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
+  ...robotsTxtGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...certificatePublicKeyParserRoutes,
   ...pgpKeyGeneratorRoutes,
