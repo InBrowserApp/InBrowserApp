@@ -235,8 +235,8 @@ catalogs:
       specifier: ^4.1.1
       version: 4.1.1
     jsbarcode:
-      specifier: ^3.12.1
-      version: 3.12.1
+      specifier: ^3.12.3
+      version: 3.12.3
     jsdom:
       specifier: ^27.4.0
       version: 27.4.0
@@ -2380,7 +2380,7 @@ importers:
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       jsbarcode:
         specifier: 'catalog:'
-        version: 3.12.1
+        version: 3.12.3
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -8636,8 +8636,8 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
-  jsbarcode@3.12.1:
-    resolution: {integrity: sha512-QZQSqIknC2Rr/YOUyOkCBqsoiBAOTYK+7yNN3JsqfoUtJtkazxNw1dmPpxuv7VVvqW13kA3/mKiLq+s/e3o9hQ==}
+  jsbarcode@3.12.3:
+    resolution: {integrity: sha512-CuHU9hC6dPsHF5oVFMo8NW76uQVjH4L22CsP4hW+dNnGywJHC/B0ThA1CTDVLnxKLrrpYdicBLnd2xsgTfRnvg==}
 
   jsdom@27.4.0:
     resolution: {integrity: sha512-mjzqwWRD9Y1J1KUi7W97Gja1bwOOM5Ug0EZ6UDK3xS7j7mndrkwozHtSblfomlzyB4NepioNt+B2sOSzczVgtQ==}
@@ -14069,7 +14069,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsbarcode@3.12.1: {}
+  jsbarcode@3.12.3: {}
 
   jsdom@27.4.0:
     dependencies:

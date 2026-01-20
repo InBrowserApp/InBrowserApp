@@ -87,7 +87,7 @@ catalog:
   jmespath: ^0.16.0
   jose: ^6.1.3
   js-yaml: ^4.1.1
-  jsbarcode: ^3.12.1
+  jsbarcode: ^3.12.3
   jsdom: ^27.4.0
   jsonpath-plus: ^10.3.0
   jsqr: ^1.4.0
