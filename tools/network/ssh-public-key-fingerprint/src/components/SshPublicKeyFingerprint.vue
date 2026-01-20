@@ -36,32 +36,30 @@
             </n-descriptions-item>
           </n-descriptions>
 
-          <n-space vertical :size="12" class="fingerprint-section">
-            <div>
-              <n-text strong>{{ t('fingerprintSha256') }}</n-text>
-              <n-input
-                :value="entry.fingerprints.sha256"
-                size="small"
-                readonly
-                class="monospace-input"
-              />
-              <n-flex :size="8" class="fingerprint-actions">
+          <n-form label-placement="top" :show-feedback="false" class="fingerprint-form">
+            <n-form-item :label="t('fingerprintSha256')">
+              <n-flex align="center" :wrap="false" class="fingerprint-row">
+                <n-input
+                  :value="entry.fingerprints.sha256"
+                  size="small"
+                  readonly
+                  class="monospace-input fingerprint-input"
+                />
                 <CopyToClipboardButton :content="entry.fingerprints.sha256" />
               </n-flex>
-            </div>
-            <div>
-              <n-text strong>{{ t('fingerprintMd5') }}</n-text>
-              <n-input
-                :value="entry.fingerprints.md5"
-                size="small"
-                readonly
-                class="monospace-input"
-              />
-              <n-flex :size="8" class="fingerprint-actions">
+            </n-form-item>
+            <n-form-item :label="t('fingerprintMd5')">
+              <n-flex align="center" :wrap="false" class="fingerprint-row">
+                <n-input
+                  :value="entry.fingerprints.md5"
+                  size="small"
+                  readonly
+                  class="monospace-input fingerprint-input"
+                />
                 <CopyToClipboardButton :content="entry.fingerprints.md5" />
               </n-flex>
-            </div>
-          </n-space>
+            </n-form-item>
+          </n-form>
         </n-card>
       </n-gi>
     </n-grid>
@@ -79,10 +77,11 @@ import {
   NDescriptionsItem,
   NEmpty,
   NFlex,
+  NForm,
+  NFormItem,
   NGi,
   NGrid,
   NInput,
-  NSpace,
   NText,
 } from 'naive-ui'
 import { TextOrFileInput, CopyToClipboardButton } from '@shared/ui/base'
@@ -159,12 +158,30 @@ function formatKeySize(value?: number) {
   margin-top: 8px;
 }
 
-.fingerprint-section {
+.monospace-input :deep(textarea) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  word-break: break-all;
+}
+
+.monospace-input :deep(input) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+
+.fingerprint-form {
   margin-top: 12px;
 }
 
-.fingerprint-actions {
-  margin-top: 6px;
+.fingerprint-row {
+  width: 100%;
+}
+
+.fingerprint-input {
+  flex: 1;
+  min-width: 0;
 }
 </style>
 

@@ -512,6 +512,7 @@ describe('SshPublicKeyFingerprint component', () => {
     const file = new File([ed25519Line], 'id_ed25519.pub', { type: 'text/plain' })
 
     await input.vm.$emit('update:value', file)
+    await flushPromises()
     vi.runAllTimers()
     await flushPromises()
 
