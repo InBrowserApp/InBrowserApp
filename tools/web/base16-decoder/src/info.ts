@@ -19,7 +19,8 @@ export const features = ['offline']
 export const meta = {
   en: {
     name: 'Base16 Decoder',
-    description: 'Decode Base16 (Hex) text or files into raw bytes for inspection, testing, and tooling.',
+    description:
+      'Decode Base16 (Hex) text or files into raw bytes for inspection, testing, and tooling.',
   },
   zh: {
     name: 'Base16 解码器',
@@ -111,7 +112,8 @@ export const meta = {
   },
   th: {
     name: 'ตัวถอดรหัส Base16',
-    description: 'ถอดรหัสข้อความหรือไฟล์ Base16 (Hex) เป็นไบต์ดิบสำหรับการตรวจสอบ การทดสอบ และเครื่องมือ',
+    description:
+      'ถอดรหัสข้อความหรือไฟล์ Base16 (Hex) เป็นไบต์ดิบสำหรับการตรวจสอบ การทดสอบ และเครื่องมือ',
   },
   id: {
     name: 'Decoder Base16',
@@ -129,6 +131,7 @@ export const meta = {
   },
   no: {
     name: 'Base16-dekoder',
-    description: 'Dekoder Base16 (Hex)-tekst eller filer til rå byte for inspeksjon, testing og verktøy.',
+    description:
+      'Dekoder Base16 (Hex)-tekst eller filer til rå byte for inspeksjon, testing og verktøy.',
   },
 }

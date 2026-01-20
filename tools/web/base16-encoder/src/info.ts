@@ -19,7 +19,8 @@ export const features = ['offline']
 export const meta = {
   en: {
     name: 'Base16 Encoder',
-    description: 'Encode text or files to Base16 (Hex) for data transport, debugging, and web development.',
+    description:
+      'Encode text or files to Base16 (Hex) for data transport, debugging, and web development.',
   },
   zh: {
     name: 'Base16 编码器',
@@ -59,7 +60,8 @@ export const meta = {
   },
   ja: {
     name: 'Base16 エンコーダー',
-    description: 'テキストやファイルをBase16（Hex）にエンコードし、データ転送、デバッグ、Web開発に利用。',
+    description:
+      'テキストやファイルをBase16（Hex）にエンコードし、データ転送、デバッグ、Web開発に利用。',
   },
   ko: {
     name: 'Base16 인코더',
@@ -77,7 +79,8 @@ export const meta = {
   },
   ar: {
     name: 'مُرمِّز Base16',
-    description: 'ترميز النص أو الملفات إلى Base16 (Hex) لنقل البيانات وتصحيح الأخطاء وتطوير الويب.',
+    description:
+      'ترميز النص أو الملفات إلى Base16 (Hex) لنقل البيانات وتصحيح الأخطاء وتطوير الويب.',
   },
   hi: {
     name: 'Base16 एनकोडर',
@@ -87,7 +90,7 @@ export const meta = {
   tr: {
     name: 'Base16 Kodlayıcı',
     description:
-      "Veri iletimi, hata ayıklama ve web geliştirme için metni veya dosyaları Base16 (Hex) olarak kodlar.",
+      'Veri iletimi, hata ayıklama ve web geliştirme için metni veya dosyaları Base16 (Hex) olarak kodlar.',
   },
   nl: {
     name: 'Base16-encoder',
@@ -111,7 +114,8 @@ export const meta = {
   },
   th: {
     name: 'ตัวเข้ารหัส Base16',
-    description: 'เข้ารหัสข้อความหรือไฟล์เป็น Base16 (Hex) สำหรับการส่งข้อมูล การดีบัก และการพัฒนาเว็บ',
+    description:
+      'เข้ารหัสข้อความหรือไฟล์เป็น Base16 (Hex) สำหรับการส่งข้อมูล การดีบัก และการพัฒนาเว็บ',
   },
   id: {
     name: 'Encoder Base16',
@@ -129,6 +133,7 @@ export const meta = {
   },
   no: {
     name: 'Base16-koder',
-    description: 'Kod tekst eller filer til Base16 (Hex) for dataoverføring, feilsøking og webutvikling.',
+    description:
+      'Kod tekst eller filer til Base16 (Hex) for dataoverføring, feilsøking og webutvikling.',
   },
 }
