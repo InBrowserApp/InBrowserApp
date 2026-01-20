@@ -20,6 +20,7 @@ import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as imageToIcoToolInfo } from '@tools/image-to-ico'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
 import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
+import { toolInfo as imagePaletteExtractorToolInfo } from '@tools/image-palette-extractor'
 import { toolInfo as networkToolsToolInfo } from '@tools/network-tools'
 import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
@@ -156,6 +157,7 @@ export const tools: ToolInfo[] = [
   svgToImageConverterToolInfo,
   exifViewerToolInfo,
   imageMetadataCleanerToolInfo,
+  imagePaletteExtractorToolInfo,
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,

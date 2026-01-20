@@ -56,6 +56,7 @@
     "@tools/iban-validator": "workspace:*",
     "@tools/ical-event-generator": "workspace:*",
     "@tools/image-metadata-cleaner": "workspace:*",
+    "@tools/image-palette-extractor": "workspace:*",
     "@tools/image-to-ico": "workspace:*",
     "@tools/image-tools": "workspace:*",
     "@tools/ip-cidr-normalizer": "workspace:*",
