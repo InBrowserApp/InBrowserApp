@@ -91,7 +91,6 @@ inbrowser.app/
 │   ├── network/       # Network utilities
 │   └── text/          # Text processing tools
 ├── shared/            # Shared packages
-│   ├── icons/         # Icon components (@shared/icons)
 │   ├── locale/        # i18n languages (@shared/locale)
 │   ├── tools/         # Tool interfaces (@shared/tools)
 │   └── ui/            # UI components (@shared/ui)

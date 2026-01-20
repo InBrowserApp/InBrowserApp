@@ -216,9 +216,13 @@ Look at these existing tools for patterns:
 
 ## Icon Selection
 Browse icons at:
-- Fluent UI Icons (preferred): `@shared/icons/fluent`
-- Carbon Icons: `@shared/icons/carbon`
-- Tabler Icons: `@shared/icons/tabler`
+- Fluent UI Icons (preferred): `@vicons/fluent`
+- Carbon Icons: `@vicons/carbon`
+- Tabler Icons: `@vicons/tabler`
+- Simple Icons (brands): `vue3-simple-icons` (named exports)
+
+Import directly from the icon package, for example:
+`import Add24Regular from '@vicons/fluent/Add24Regular'`
 
 Common icons:
 - `TextNumberFormat20Regular` - Number/text tools

@@ -10,7 +10,7 @@ High-level
 
 - Monorepo managed by pnpm. Main app is apps/web (Vue 3, TypeScript, Vite).
 - Tools live under tools/<domain>/<tool-name>/src with Vue SFCs and a small routes.ts.
-- Shared packages under shared/\* (icons, locale, tools, ui). Registry package aggregates tool routes and tool info.
+- Shared packages under shared/\* (locale, tools, ui). Registry package aggregates tool routes and tool info.
 
 Run & Quality
 
@@ -22,7 +22,7 @@ Run & Quality
 
 Path aliases & packages
 
-- @shared/_ → shared/_ (e.g. @shared/tools, @shared/ui, @shared/icons, @shared/locale)
+- @shared/_ → shared/_ (e.g. @shared/tools, @shared/ui, @shared/locale)
 - @tools/<package> → tools/<package>/src (each tool’s src exports toolInfo and routes)
 - Registry package: registry/tools/src aggregates all tool routes and toolInfo
 
@@ -66,7 +66,7 @@ Internationalization (Vue i18n in SFC)
 UI & Components
 
 - Prefer Composition API (script setup) with explicit typing for exported/public APIs.
-- Use shared UI building blocks from @shared/ui (e.g., ToolSectionHeader, ToolSection) and icons from @shared/icons/\*.
+- Use shared UI building blocks from @shared/ui (e.g., ToolSectionHeader, ToolSection) and icons from @vicons/* or vue3-simple-icons.
 - Match existing formatting and avoid reformatting unrelated code. Keep components small and focused.
 
 Coding style
