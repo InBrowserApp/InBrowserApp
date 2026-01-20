@@ -46,13 +46,10 @@
       <ToolSection v-if="jwkOutput">
         <n-flex justify="space-between" align="center">
           <CopyToClipboardButton :content="jwkOutput" />
-          <n-button
-            tag="a"
-            :href="jwkDownloadUrl"
-            :download="jwkDownloadName"
-            :disabled="!jwkDownloadUrl"
-            tertiary
-          >
+          <n-button tag="a" text :href="jwkDownloadUrl ?? undefined" :download="jwkDownloadName">
+            <template #icon>
+              <n-icon :component="ArrowDownload16Regular" />
+            </template>
             {{ t('downloadButton') }}
           </n-button>
         </n-flex>
@@ -102,13 +99,10 @@
       <ToolSection v-if="pemOutput">
         <n-flex justify="space-between" align="center">
           <CopyToClipboardButton :content="pemOutput" />
-          <n-button
-            tag="a"
-            :href="pemDownloadUrl"
-            :download="pemDownloadName"
-            :disabled="!pemDownloadUrl"
-            tertiary
-          >
+          <n-button tag="a" text :href="pemDownloadUrl ?? undefined" :download="pemDownloadName">
+            <template #icon>
+              <n-icon :component="ArrowDownload16Regular" />
+            </template>
             {{ t('downloadButton') }}
           </n-button>
         </n-flex>
@@ -125,6 +119,7 @@ import {
   NButton,
   NFlex,
   NFormItem,
+  NIcon,
   NInput,
   NRadioButton,
   NRadioGroup,
@@ -138,6 +133,7 @@ import {
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton, TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import {
   JwkPemError,
   type PemOutputType,
