@@ -74,7 +74,7 @@ describe('UserAgentParser', () => {
 
   it('falls back to the input when parser ua is missing', async () => {
     vi.doMock('ua-parser-js', () => ({
-      UAParser: class {
+      default: class {
         getResult() {
           return {
             ua: '',

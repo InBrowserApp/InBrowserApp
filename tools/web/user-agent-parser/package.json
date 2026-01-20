@@ -14,7 +14,7 @@
     "@vueuse/core": "catalog:",
     "highlight.js": "catalog:",
     "naive-ui": "catalog:",
-    "ua-parser-js": "^2.0.8",
+    "ua-parser-js": "^1.0.39",
     "vue": "catalog:",
     "vue-i18n": "catalog:"
   },

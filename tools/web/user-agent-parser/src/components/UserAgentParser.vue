@@ -23,7 +23,7 @@ import type { FormValidationStatus } from 'naive-ui'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
-import { UAParser } from 'ua-parser-js'
+import UAParser from 'ua-parser-js'
 import ParsedDetailsSection from './ParsedDetailsSection.vue'
 import UserAgentInputPanel from './UserAgentInputPanel.vue'
 
