@@ -16,6 +16,8 @@
     "@tools/ascii-art-generator": "workspace:*",
     "@tools/barcode-generator": "workspace:*",
     "@tools/barcode-reader": "workspace:*",
+    "@tools/base16-decoder": "workspace:*",
+    "@tools/base16-encoder": "workspace:*",
     "@tools/base32-decoder": "workspace:*",
     "@tools/base32-encoder": "workspace:*",
     "@tools/base64-encoder-decoder": "workspace:*",
