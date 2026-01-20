@@ -8,8 +8,10 @@ import {
   toBarcodeResult,
 } from './barcode-reader'
 
-const originalCreateObjectURL = URL.createObjectURL
-const originalRevokeObjectURL = URL.revokeObjectURL
+const originalCreateObjectURL = (URL as { createObjectURL?: typeof URL.createObjectURL })
+  .createObjectURL
+const originalRevokeObjectURL = (URL as { revokeObjectURL?: typeof URL.revokeObjectURL })
+  .revokeObjectURL
 
 const setupObjectUrlMocks = () => {
   if (originalCreateObjectURL) {
@@ -86,7 +88,7 @@ describe('barcode reader helpers', () => {
       .mockResolvedValue({
         getText: () => 'file-result',
         getBarcodeFormat: () => BarcodeFormat.CODE_128,
-      } as unknown as ReturnType<BrowserMultiFormatReader['decodeFromImageUrl']>)
+      } as unknown as Awaited<ReturnType<BrowserMultiFormatReader['decodeFromImageUrl']>>)
 
     const file = new File(['data'], 'sample.png', { type: 'image/png' })
     const result = await readBarcodeFromFile(file)

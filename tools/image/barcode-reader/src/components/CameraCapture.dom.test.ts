@@ -68,7 +68,10 @@ describe('CameraCapture', () => {
     })
 
     const wrapper = mount(CameraCapture)
-    const vm = wrapper.vm as unknown as { startCamera: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      permissionDenied: boolean
+    }
 
     await vm.startCamera()
     await wrapper.vm.$nextTick()
@@ -110,7 +113,10 @@ describe('CameraCapture', () => {
     })
 
     const wrapper = mount(CameraCapture)
-    const vm = wrapper.vm as unknown as { startCamera: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      permissionDenied: boolean
+    }
 
     await vm.startCamera()
 
@@ -128,7 +134,10 @@ describe('CameraCapture', () => {
     })
 
     const wrapper = mount(CameraCapture)
-    const vm = wrapper.vm as unknown as { startCamera: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      permissionDenied: boolean
+    }
 
     await vm.startCamera()
 
@@ -189,12 +198,15 @@ describe('CameraCapture', () => {
     barcodeReaderMocks.decodeFromVideoDevice.mockRejectedValue(error)
 
     const wrapper = mount(CameraCapture)
-    const vm = wrapper.vm as unknown as { startCamera: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      permissionDenied: boolean
+    }
 
     await vm.startCamera()
 
     expect(wrapper.emitted('error')?.[0]).toEqual(['cameraPermissionDenied'])
-    expect((wrapper.vm as { permissionDenied: boolean }).permissionDenied).toBe(true)
+    expect(vm.permissionDenied).toBe(true)
   })
 
   it('emits a generic error for unexpected failures', async () => {
