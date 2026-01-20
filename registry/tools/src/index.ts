@@ -110,6 +110,7 @@ import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 import { toolInfo as regexTesterReplacerToolInfo } from '@tools/regex-tester-replacer'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
+import { toolInfo as emailValidatorToolInfo } from '@tools/email-validator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
@@ -272,6 +273,7 @@ export const tools: ToolInfo[] = [
   jsonSchemaGeneratorToolInfo,
   jsonSchemaValidatorToolInfo,
   passwordStrengthCheckerToolInfo,
+  emailValidatorToolInfo,
   creditCardValidatorToolInfo,
   prcIdValidatorToolInfo,
   isbnValidatorToolInfo,
