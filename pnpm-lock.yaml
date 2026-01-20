@@ -103,7 +103,7 @@ catalogs:
       specifier: 2.1.2
       version: 2.1.2
     '@vicons/carbon':
-      specifier: 0.13.0
+      specifier: ^0.13.0
       version: 0.13.0
     '@vicons/fa':
       specifier: ^0.13.0
@@ -1020,6 +1020,9 @@ importers:
       '@utils/mac-address':
         specifier: workspace:*
         version: link:../../utils/mac-address
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vicons/fluent':
         specifier: 'catalog:'
         version: 0.13.0
