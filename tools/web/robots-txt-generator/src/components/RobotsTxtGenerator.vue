@@ -1,5 +1,5 @@
 <template>
-  <div class="robots-txt-generator">
+  <div>
     <n-alert type="warning" :show-icon="false" :title="t('securityNoticeTitle')">
       {{ t('securityNotice') }}
     </n-alert>
@@ -1325,11 +1325,3 @@ const downloadHref = computed(() =>
   }
 }
 </i18n>
-
-<style scoped>
-.robots-txt-generator {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-</style>
