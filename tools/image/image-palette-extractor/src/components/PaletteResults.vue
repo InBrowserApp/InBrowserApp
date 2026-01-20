@@ -36,21 +36,26 @@
           </n-grid>
         </n-flex>
 
-        <n-grid cols="1 s:2 l:3" :x-gap="16" :y-gap="16" class="swatch-grid">
+        <n-grid
+          cols="2 520:3 860:4 1120:5 1400:6"
+          :x-gap="12"
+          :y-gap="12"
+          responsive="screen"
+          class="swatch-grid"
+        >
           <n-grid-item v-for="color in colors" :key="color.hex">
-            <div
-              class="swatch-card"
-              :style="{ backgroundColor: color.hex, color: color.textColor }"
-            >
-              <div class="swatch-overlay">
-                <CopyToClipboardTooltip :content="color.hex" #="{ copy }">
-                  <button type="button" class="swatch-hex" :aria-label="t('copy')" @click="copy">
-                    {{ color.hex }}
-                  </button>
-                </CopyToClipboardTooltip>
+            <CopyToClipboardTooltip :content="color.hex" #="{ copy }">
+              <button
+                type="button"
+                class="swatch-card"
+                :style="{ backgroundColor: color.hex, color: color.textColor }"
+                :aria-label="t('copy')"
+                @click="copy"
+              >
+                <span class="swatch-hex">{{ color.hex }}</span>
                 <span class="swatch-percent">{{ formatPercent(color.ratio) }}</span>
-              </div>
-            </div>
+              </button>
+            </CopyToClipboardTooltip>
           </n-grid-item>
         </n-grid>
 
@@ -190,39 +195,28 @@ function formatPercent(value: number): string {
 
 .swatch-card {
   border: 1px solid var(--n-border-color);
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  row-gap: 6px;
   aspect-ratio: 1 / 1;
-}
-
-.swatch-overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px;
-  text-align: center;
-}
-
-.swatch-hex {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  border: 0;
-  padding: 0;
+  width: 100%;
+  padding: 10px;
   background: transparent;
-  color: inherit;
   cursor: pointer;
 }
 
-.swatch-hex:focus-visible {
+.swatch-hex {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.swatch-card:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
-  border-radius: 999px;
+  border-radius: 12px;
 }
 
 .swatch-percent {
