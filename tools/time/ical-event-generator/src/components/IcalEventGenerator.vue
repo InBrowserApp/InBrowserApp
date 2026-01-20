@@ -305,12 +305,10 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import {
-  ArrowDownload16Regular,
-  Add16Regular,
-  Delete16Regular,
-  ArrowCounterclockwise16Regular,
-} from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Add16Regular from '@vicons/fluent/Add16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
+import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
 import QRCodePreview from './QRCodePreview.vue'
 import QRCodeDownloadButtons from './QRCodeDownloadButtons.vue'
 import { buildTimeZoneOptions } from '../utils/timeZoneOptions'

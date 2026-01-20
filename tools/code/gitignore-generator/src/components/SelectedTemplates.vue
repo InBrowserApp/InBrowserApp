@@ -28,8 +28,7 @@ import type { AutoCompleteInst } from 'naive-ui'
 import { computed, nextTick, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NDynamicTags, NAutoComplete, NButton, NIcon } from 'naive-ui'
-import { Add12Regular as AddIcon } from '@shared/icons/fluent'
-
+import AddIcon from '@vicons/fluent/Add12Regular'
 const props = defineProps<{
   allTemplates: string[]
 }>()

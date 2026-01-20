@@ -48,7 +48,7 @@ tools/<domain>/<tool-slug>/
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "naive-ui": "catalog:",
@@ -64,7 +64,7 @@ Common optional dependencies to add when needed:
 
 ### info.ts Template
 ```typescript
-export { IconName as icon } from '@shared/icons/fluent'  // or carbon, tabler
+export { default as icon } from '@vicons/fluent/IconName' // or carbon, tabler
 
 export const toolID = '<tool-slug>'
 export const path = '/tools/<tool-slug>'

@@ -1,5 +1,4 @@
-export { ShieldCheckmark24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/ShieldCheckmark24Regular'
 export const toolID = 'password-strength-checker'
 export const path = '/tools/password-strength-checker'
 export const tags = ['password', 'security', 'strength', 'validator']

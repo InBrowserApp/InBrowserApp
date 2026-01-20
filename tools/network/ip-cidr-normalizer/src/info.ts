@@ -1,5 +1,5 @@
 export const toolID = 'ip-cidr-normalizer'
-export { TextGrammarCheckmark20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/TextGrammarCheckmark20Regular'
 export const path = '/tools/ip-cidr-normalizer'
 export const tags = ['ip', 'cidr', 'network', 'ipv4', 'ipv6', 'normalizer', 'standardize']
 export const features = ['offline']

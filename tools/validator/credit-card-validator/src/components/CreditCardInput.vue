@@ -23,7 +23,7 @@
 import { computed } from 'vue'
 import { NFormItem, NInput, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { Payment20Regular as CreditCardIcon } from '@shared/icons/fluent'
+import CreditCardIcon from '@vicons/fluent/Payment20Regular'
 import type { ValidationResult } from '../data/cardBrands'
 
 const { t } = useI18n()

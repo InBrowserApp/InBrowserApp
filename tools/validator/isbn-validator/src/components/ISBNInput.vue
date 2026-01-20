@@ -18,7 +18,7 @@
 import { computed } from 'vue'
 import { NFormItem, NInput, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { BookSearch20Regular as BookSearchIcon } from '@shared/icons/fluent'
+import BookSearchIcon from '@vicons/fluent/BookSearch20Regular'
 import type { ISBNValidationResult } from '../data/isbn'
 
 const { t } = useI18n()

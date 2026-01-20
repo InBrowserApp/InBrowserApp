@@ -1,5 +1,4 @@
-export { PlugConnected20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/PlugConnected20Regular'
 export const toolID = 'port-number-lookup'
 export const path = '/tools/port-number-lookup'
 export const tags = ['port', 'network', 'tcp', 'udp', 'reference']

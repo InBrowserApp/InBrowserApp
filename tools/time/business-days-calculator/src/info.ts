@@ -1,5 +1,5 @@
 export const toolID = 'business-days-calculator'
-export { Timer20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Timer20Regular'
 export const path = '/tools/business-days-calculator'
 export const tags = ['time', 'date', 'business-day', 'calculator', 'schedule']
 export const features = ['offline']

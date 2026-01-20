@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { NUpload, NUploadDragger, NIcon, NText } from 'naive-ui'
-import { ImageEdit24Regular } from '@shared/icons/fluent'
+import ImageEdit24Regular from '@vicons/fluent/ImageEdit24Regular'
 import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'

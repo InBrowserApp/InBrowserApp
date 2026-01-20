@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { NPopover, NIcon, NMenu, NFlex } from 'naive-ui'
-import { MenuOutline } from '@shared/icons/ionicons5'
+import MenuOutline from '@vicons/ionicons5/MenuOutline'
 import { ref } from 'vue'
 import LanguageMenuIcon from './sub-menus/LanguageMenuIcon.vue'
 import AirplaneModeToggle from './sub-menus/AirplaneModeToggle.vue'

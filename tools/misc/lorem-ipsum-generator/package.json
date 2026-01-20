@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "catalog:",
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",

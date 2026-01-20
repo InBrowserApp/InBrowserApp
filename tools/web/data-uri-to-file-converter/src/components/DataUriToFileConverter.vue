@@ -103,7 +103,7 @@ import {
   NCode,
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import mime from 'mime'
 
 const { t } = useI18n()

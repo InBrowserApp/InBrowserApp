@@ -51,7 +51,7 @@ import type { FormValidationStatus } from 'naive-ui'
 import { NButton, NCard, NCode, NEmpty, NFormItemGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { GlobePerson20Regular } from '@shared/icons/fluent'
+import GlobePerson20Regular from '@vicons/fluent/GlobePerson20Regular'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 

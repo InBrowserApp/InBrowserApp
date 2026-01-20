@@ -1,5 +1,4 @@
-export { AppGeneric20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/AppGeneric20Regular'
 export const toolID = 'mime-type-lookup'
 export const path = '/tools/mime-type-lookup'
 export const tags = ['mime', 'mime-type', 'content-type', 'network', 'reference']

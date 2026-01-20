@@ -34,8 +34,7 @@ import { useObjectUrl } from '@vueuse/core'
 import { NInput, NFlex, NButton, NIcon, NTag } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
-
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 const props = defineProps<{
   value: string
   filename: string

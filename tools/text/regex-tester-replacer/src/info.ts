@@ -1,5 +1,4 @@
-export { Code24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Code24Regular'
 export const toolID = 'regex-tester-replacer'
 export const path = '/tools/regex-tester-replacer'
 export const tags = ['regex', 'text', 'replace', 'match', 'pattern']

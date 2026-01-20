@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@registry/tools": "workspace:*",
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",

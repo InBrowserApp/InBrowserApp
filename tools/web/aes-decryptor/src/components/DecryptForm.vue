@@ -68,7 +68,7 @@ import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { TextOrFileInput } from '@shared/ui/base'
-import { LockOpen16Regular } from '@shared/icons/fluent'
+import LockOpen16Regular from '@vicons/fluent/LockOpen16Regular'
 import {
   type AesMode,
   type KeyLength,

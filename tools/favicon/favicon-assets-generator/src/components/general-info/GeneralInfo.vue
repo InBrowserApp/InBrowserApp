@@ -108,7 +108,8 @@ import {
 } from 'naive-ui'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import { useVModel } from '@vueuse/core'
-import { Info16Regular, BookInformation20Regular } from '@shared/icons/fluent'
+import Info16Regular from '@vicons/fluent/Info16Regular'
+import BookInformation20Regular from '@vicons/fluent/BookInformation20Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 

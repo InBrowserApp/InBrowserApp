@@ -69,7 +69,8 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { DocumentArrowUp20Regular, Delete16Regular } from '@shared/icons/fluent'
+import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import type { UploadFileInfo } from 'naive-ui'
 
 const { t } = useI18n()

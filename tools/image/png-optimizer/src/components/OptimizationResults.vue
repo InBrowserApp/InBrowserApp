@@ -49,7 +49,7 @@ import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { NFlex, NGrid, NGridItem, NStatistic, NButton, NIcon } from 'naive-ui'
-import { ArrowDownload24Regular as Download24Regular } from '@shared/icons/fluent'
+import Download24Regular from '@vicons/fluent/ArrowDownload24Regular'
 import { filesize } from 'filesize'
 
 const { t } = useI18n()

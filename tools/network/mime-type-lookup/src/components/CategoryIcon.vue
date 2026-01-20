@@ -2,18 +2,15 @@
 import { computed } from 'vue'
 import { NIcon } from 'naive-ui'
 import type { Component } from 'vue'
-import {
-  AppGeneric20Regular,
-  MusicNote120Regular,
-  TextFont20Regular,
-  Image20Regular,
-  Mail20Regular,
-  Cube20Regular,
-  Document20Regular as Text20Regular,
-  Video20Regular,
-  Apps16Regular,
-} from '@shared/icons/fluent'
-
+import AppGeneric20Regular from '@vicons/fluent/AppGeneric20Regular'
+import MusicNote120Regular from '@vicons/fluent/MusicNote120Regular'
+import TextFont20Regular from '@vicons/fluent/TextFont20Regular'
+import Image20Regular from '@vicons/fluent/Image20Regular'
+import Mail20Regular from '@vicons/fluent/Mail20Regular'
+import Cube20Regular from '@vicons/fluent/Cube20Regular'
+import Text20Regular from '@vicons/fluent/Document20Regular'
+import Video20Regular from '@vicons/fluent/Video20Regular'
+import Apps16Regular from '@vicons/fluent/Apps16Regular'
 const props = defineProps<{
   category: string
 }>()

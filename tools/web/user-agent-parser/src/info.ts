@@ -1,5 +1,4 @@
-export { AppGeneric20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/AppGeneric20Regular'
 export const toolID = 'user-agent-parser'
 export const path = '/tools/user-agent-parser'
 export const tags = ['web', 'user agent', 'ua', 'parser', 'browser', 'device', 'os', 'engine']

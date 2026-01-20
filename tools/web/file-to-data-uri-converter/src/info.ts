@@ -1,5 +1,5 @@
 export const toolID = 'file-to-data-uri-converter'
-export { DocumentArrowUp20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/DocumentArrowUp20Regular'
 export const path = '/tools/file-to-data-uri-converter'
 export const tags = ['data-uri', 'data-url', 'file', 'converter', 'base64', 'encoding', 'web']
 export const features = ['offline']

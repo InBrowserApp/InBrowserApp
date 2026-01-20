@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - `apps/web/`: Main Vue 3 + Vite application.
-- `shared/`: Shared UI components, icons, locale, and tool interfaces.
+- `shared/`: Shared UI components, locale, and tool interfaces.
 - `tools/`: Individual tool UIs (grouped by domain like `tools/web/`, `tools/uuid/`).
 - `utils/`: Pure TypeScript utilities (no UI dependencies).
 - `registry/`: Tool registry and route aggregation.
@@ -29,6 +29,13 @@
 - Split tool UI logic into `components/`; keep the main `*View.vue` focused on layout and composition.
 - Keep components small and single-purpose; split by responsibility before a file grows too long.
 - Download buttons must be real anchors: `n-button tag="a"` with `download` and `href` from `useObjectUrl`, and no `document.createElement('a')`.
+
+## Icon Usage
+- Import icons directly from `@vicons/<library>/<IconName>` (default export), e.g. `@vicons/fluent/Search16Filled`.
+- Supported libraries include `@vicons/fluent`, `@vicons/carbon`, `@vicons/tabler`, `@vicons/ionicons5`, `@vicons/material`, `@vicons/fa`.
+- For Simple Icons, use named exports from `vue3-simple-icons`, e.g. `import { GitIcon } from 'vue3-simple-icons'`.
+- In `info.ts`, export the tool icon directly, e.g. `export { default as icon } from '@vicons/fluent/SomeIcon'`.
+- Do not use `@shared/icons` (package removed).
 
 ## Tool Creation & Registration
 - Directory structure: `tools/<domain>/<tool-slug>/src` with `info.ts`, `routes.ts`, `<ToolName>View.vue`, `components/`, and `index.ts`.

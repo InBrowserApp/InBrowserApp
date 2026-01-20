@@ -8,7 +8,8 @@
     "./uuid-tools": "./src/uuid-tools/index.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vicons/carbon": "catalog:",
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",

@@ -1,5 +1,5 @@
 export const toolID = 'url-parser-builder'
-export { Link16Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Link16Regular'
 export const path = '/tools/url-parser-builder'
 export const tags = [
   'url',

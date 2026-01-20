@@ -1,12 +1,5 @@
 import type { Component } from 'vue'
-import {
-  VisaIcon,
-  MasterCardIcon,
-  AmericanExpressIcon,
-  DiscoverIcon,
-  JcbIcon,
-  DinersClubIcon,
-} from '@shared/icons/simple-icons'
+import { VisaIcon, MasterCardIcon, AmericanExpressIcon, DiscoverIcon, JcbIcon, DinersClubIcon } from 'vue3-simple-icons'
 import { UnionPayIcon } from '../icons/UnionPayIcon'
 
 export interface CardBrand {

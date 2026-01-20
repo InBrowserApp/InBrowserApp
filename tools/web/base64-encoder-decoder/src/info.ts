@@ -1,5 +1,5 @@
 export const toolID = 'base64-encoder-decoder'
-export { TextNumberFormat20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/TextNumberFormat20Regular'
 export const path = '/tools/base64-encoder-decoder'
 export const tags = [
   'base64',

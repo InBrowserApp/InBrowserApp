@@ -1,5 +1,5 @@
 export const toolID = 'cidr-parser'
-export { AutoFitWidth20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/AutoFitWidth20Regular'
 export const path = '/tools/cidr-parser'
 export const tags = ['cidr', 'ip', 'network', 'parser', 'ipv4', 'ipv6', 'subnet']
 export const features = ['offline']

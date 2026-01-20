@@ -33,8 +33,8 @@ import { useObjectUrl } from '@vueuse/core'
 import { NFlex, NButton, NIcon } from 'naive-ui'
 import JsBarcode from 'jsbarcode'
 import type { Options } from 'jsbarcode'
-import { Code16Regular as CodeIcon, Image16Regular as ImageIcon } from '@shared/icons/fluent'
-
+import CodeIcon from '@vicons/fluent/Code16Regular'
+import ImageIcon from '@vicons/fluent/Image16Regular'
 const props = defineProps<{
   text: string
   format: string

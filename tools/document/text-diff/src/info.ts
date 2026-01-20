@@ -1,5 +1,5 @@
 export const toolID = 'text-diff'
-export { DocumentCopy20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/DocumentCopy20Regular'
 export const path = '/tools/text-diff'
 export const tags = [
   'text',

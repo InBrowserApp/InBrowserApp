@@ -1,5 +1,4 @@
-export { ImageEdit24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/ImageEdit24Regular'
 export const toolID = 'svg-optimizer'
 export const path = '/tools/svg-optimizer'
 export const tags = ['image', 'svg', 'optimizer', 'compression']

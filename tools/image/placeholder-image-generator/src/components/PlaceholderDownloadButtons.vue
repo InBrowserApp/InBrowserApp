@@ -85,11 +85,9 @@ import { computed, ref, watch } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NButton, NIcon, NRadioGroup, NRadioButton, NSlider, useMessage } from 'naive-ui'
-import {
-  Image24Regular as ImageIcon,
-  Code24Regular as CodeIcon,
-  Copy24Regular as CopyIcon,
-} from '@shared/icons/fluent'
+import ImageIcon from '@vicons/fluent/Image24Regular'
+import CodeIcon from '@vicons/fluent/Code24Regular'
+import CopyIcon from '@vicons/fluent/Copy24Regular'
 import type { PlaceholderOptions } from './PlaceholderPreview.vue'
 
 const { t } = useI18n()

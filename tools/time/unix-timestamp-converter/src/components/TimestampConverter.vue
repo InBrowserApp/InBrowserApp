@@ -96,7 +96,7 @@ import {
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { Clock16Regular as ClockIcon } from '@shared/icons/fluent'
+import ClockIcon from '@vicons/fluent/Clock16Regular'
 import { useNow } from '@vueuse/core'
 
 const { t } = useI18n()

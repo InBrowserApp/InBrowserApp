@@ -2,8 +2,7 @@ export const toolID = 'ulid-generator'
 export const path = '/tools/ulid-generator'
 export const tags = ['ulid', 'uuid']
 export const features = ['offline']
-export { Id as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/Id'
 export const meta = {
   en: {
     name: 'ULID Generator',

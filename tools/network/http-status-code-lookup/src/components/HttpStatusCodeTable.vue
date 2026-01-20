@@ -14,13 +14,11 @@ import { useI18n } from 'vue-i18n'
 import { NDataTable, NTag, NIcon } from 'naive-ui'
 import type { DataTableColumns } from 'naive-ui'
 import { CopyToClipboardTooltip } from '@shared/ui/base'
-import {
-  Info12Regular,
-  CheckmarkCircle16Regular,
-  ArrowForward16Regular,
-  ErrorCircle16Regular,
-  DismissCircle16Regular,
-} from '@shared/icons/fluent'
+import Info12Regular from '@vicons/fluent/Info12Regular'
+import CheckmarkCircle16Regular from '@vicons/fluent/CheckmarkCircle16Regular'
+import ArrowForward16Regular from '@vicons/fluent/ArrowForward16Regular'
+import ErrorCircle16Regular from '@vicons/fluent/ErrorCircle16Regular'
+import DismissCircle16Regular from '@vicons/fluent/DismissCircle16Regular'
 import { statusCodes, type HttpStatusCodeInfo } from '../data/statusCodes'
 import HttpStatusCodeDescription from './HttpStatusCodeDescription.vue'
 

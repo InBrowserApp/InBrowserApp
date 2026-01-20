@@ -1,5 +1,4 @@
-export { ImageEdit24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/ImageEdit24Regular'
 export const toolID = 'svg-to-image-converter'
 export const path = '/tools/svg-to-image-converter'
 export const tags = ['image', 'svg', 'converter', 'png', 'jpeg', 'webp']

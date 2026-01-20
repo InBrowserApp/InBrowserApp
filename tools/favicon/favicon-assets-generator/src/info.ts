@@ -1,5 +1,5 @@
 export const toolID = 'favicon-assets-generator'
-export { Icons20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Icons20Regular'
 export const path = '/tools/favicon-assets-generator'
 export const tags = ['favicon', 'icon', 'web', 'image']
 export const features = ['offline']

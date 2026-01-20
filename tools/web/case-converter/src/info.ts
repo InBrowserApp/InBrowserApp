@@ -1,5 +1,4 @@
-export { TextChangeCase24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/TextChangeCase24Regular'
 export const toolID = 'case-converter'
 
 export const path = '/tools/case-converter'

@@ -1,5 +1,5 @@
 export const toolID = 'unix-timestamp-converter'
-export { Timer20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Timer20Regular'
 export const path = '/tools/unix-timestamp-converter'
 export const tags = [
   'unix',

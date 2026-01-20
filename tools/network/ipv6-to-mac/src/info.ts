@@ -1,5 +1,5 @@
 export const toolID = 'ipv6-to-mac'
-export { ArrowStepInLeft24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ArrowStepInLeft24Regular'
 export const path = '/tools/ipv6-to-mac'
 export const tags = ['mac', 'ipv6', 'link-local', 'network', 'converter', 'ethernet']
 export const features = ['offline']

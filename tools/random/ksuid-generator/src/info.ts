@@ -1,5 +1,5 @@
 export const toolID = 'ksuid-generator'
-export { Key24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const path = '/tools/random/ksuid-generator'
 export const tags = [
   'ksuid',

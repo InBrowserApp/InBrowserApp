@@ -1,5 +1,5 @@
 export const toolID = 'barcode-generator'
-export { BarcodeScanner24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/BarcodeScanner24Regular'
 export const path = '/tools/barcode-generator'
 export const tags = ['barcode', 'code128', 'ean', 'upc', 'generator', 'image']
 export const features = ['offline']

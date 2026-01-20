@@ -204,13 +204,11 @@ import {
   NUpload,
   NUploadDragger,
 } from 'naive-ui'
-import {
-  ArrowDownload24Regular,
-  CloudArrowUp24Regular,
-  Delete20Regular,
-  ImageEdit24Regular,
-  ResizeImage20Regular,
-} from '@shared/icons/fluent'
+import ArrowDownload24Regular from '@vicons/fluent/ArrowDownload24Regular'
+import CloudArrowUp24Regular from '@vicons/fluent/CloudArrowUp24Regular'
+import Delete20Regular from '@vicons/fluent/Delete20Regular'
+import ImageEdit24Regular from '@vicons/fluent/ImageEdit24Regular'
+import ResizeImage20Regular from '@vicons/fluent/ResizeImage20Regular'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { filesize } from 'filesize'
 import type { UploadFileInfo } from 'naive-ui'

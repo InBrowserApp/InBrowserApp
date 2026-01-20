@@ -142,11 +142,9 @@ import {
   NTabs,
   NText,
 } from 'naive-ui'
-import {
-  ArrowDownload20Regular,
-  Document16Regular,
-  TextNumberFormat20Regular,
-} from '@shared/icons/fluent'
+import ArrowDownload20Regular from '@vicons/fluent/ArrowDownload20Regular'
+import Document16Regular from '@vicons/fluent/Document16Regular'
+import TextNumberFormat20Regular from '@vicons/fluent/TextNumberFormat20Regular'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 

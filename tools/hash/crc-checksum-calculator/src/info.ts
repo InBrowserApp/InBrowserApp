@@ -1,5 +1,5 @@
 export const toolID = 'crc-checksum-calculator'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/crc-checksum-calculator'
 export const tags = ['hash', 'crc', 'checksum', 'security', 'file', 'text', 'crypto']
 export const features = ['offline']

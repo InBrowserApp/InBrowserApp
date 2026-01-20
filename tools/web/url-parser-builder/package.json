@@ -1,21 +1,21 @@
 {
-    "name": "@tools/url-parser-builder",
-    "version": "1.0.0",
-    "description": "URL Parser and Builder Tool",
-    "private": true,
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./routes": "./src/routes.ts"
-    },
-    "dependencies": {
-        "@shared/icons": "workspace:*",
-        "@shared/tools": "workspace:*",
-        "@shared/ui": "workspace:*",
-        "@vueuse/core": "catalog:",
-        "naive-ui": "catalog:",
-        "vue": "catalog:",
-        "vue-i18n": "catalog:",
-        "vue-router": "catalog:"
-    }
+  "name": "@tools/url-parser-builder",
+  "version": "1.0.0",
+  "description": "URL Parser and Builder Tool",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@vicons/fluent": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
 }

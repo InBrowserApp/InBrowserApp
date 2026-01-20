@@ -1,5 +1,5 @@
 export const toolID = 'nanoid-generator'
-export { Key24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const path = '/tools/random/nanoid-generator'
 export const tags = ['nanoid', 'id', 'identifier', 'unique', 'random', 'generator', 'token', 'url']
 export const features = ['offline']

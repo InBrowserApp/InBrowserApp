@@ -18,7 +18,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NText, NButton, NIcon } from 'naive-ui'
-import { Delete24Regular } from '@shared/icons/fluent'
+import Delete24Regular from '@vicons/fluent/Delete24Regular'
 import { filesize } from 'filesize'
 
 const { t } = useI18n()

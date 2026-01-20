@@ -1,5 +1,4 @@
-export { Code20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Code20Regular'
 export const toolID = 'html-entity-encoder-decoder'
 export const path = '/tools/html-entity-encoder-decoder'
 export const tags = ['html', 'entity', 'encoding', 'web', 'escape']

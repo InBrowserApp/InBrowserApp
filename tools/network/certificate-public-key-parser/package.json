@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@peculiar/x509": "^1.14.3",
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",

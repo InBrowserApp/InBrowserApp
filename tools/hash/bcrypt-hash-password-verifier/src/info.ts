@@ -1,5 +1,5 @@
 export const toolID = 'bcrypt-hash-password-verifier'
-export { Key20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key20Regular'
 export const path = '/tools/bcrypt-hash-password-verifier'
 export const tags = [
   'hash',

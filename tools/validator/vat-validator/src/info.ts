@@ -1,5 +1,4 @@
-export { TextNumberFormat20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/TextNumberFormat20Regular'
 export const toolID = 'vat-validator'
 export const path = '/tools/vat-validator'
 export const tags = ['vat', 'tax', 'validator', 'business', 'finance', 'eu']

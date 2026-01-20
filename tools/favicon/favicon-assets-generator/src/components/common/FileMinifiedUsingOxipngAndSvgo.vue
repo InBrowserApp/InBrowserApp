@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { NIcon, NText } from 'naive-ui'
-import { Sparkle16Filled } from '@shared/icons/fluent'
+import Sparkle16Filled from '@vicons/fluent/Sparkle16Filled'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

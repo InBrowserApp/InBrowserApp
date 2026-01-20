@@ -108,10 +108,8 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDropZone, useElementSize, useStorage } from '@vueuse/core'
 import { NAlert, NButton, NFlex, NGrid, NGi, NIcon, NSwitch } from 'naive-ui'
-import {
-  Eyedropper24Filled as EyedropperIcon,
-  TabDesktopImage16Regular as ImagePickIcon,
-} from '@shared/icons/fluent'
+import EyedropperIcon from '@vicons/fluent/Eyedropper24Filled'
+import ImagePickIcon from '@vicons/fluent/TabDesktopImage16Regular'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { RGBA } from '../types'

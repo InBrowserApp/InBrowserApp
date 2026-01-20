@@ -1,5 +1,5 @@
 export const toolID = 'ip-info-lookup'
-export { GlobeSearch24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/GlobeSearch24Regular'
 export const path = '/tools/ip-info-lookup'
 export const tags = ['ip', 'network', 'geolocation', 'lookup']
 export const features = []

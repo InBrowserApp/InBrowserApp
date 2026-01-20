@@ -30,7 +30,7 @@ import { useI18n } from 'vue-i18n'
 import { useObjectUrl } from '@vueuse/core'
 import { filesize } from 'filesize'
 import { NImage, NFlex, NText, NButton, NIcon } from 'naive-ui'
-import { Delete24Regular as DeleteIcon } from '@shared/icons/fluent'
+import DeleteIcon from '@vicons/fluent/Delete24Regular'
 import { ToolSection } from '@shared/ui/tool'
 
 const props = defineProps<{

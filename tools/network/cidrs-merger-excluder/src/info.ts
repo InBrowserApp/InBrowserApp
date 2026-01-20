@@ -1,5 +1,5 @@
 export const toolID = 'cidrs-merger-excluder'
-export { Merge24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Merge24Regular'
 export const path = '/tools/cidrs-merger-excluder'
 export const tags = ['cidr', 'ip', 'network', 'merge', 'exclude', 'ipv4', 'ipv6', 'subnet']
 export const features = ['offline']

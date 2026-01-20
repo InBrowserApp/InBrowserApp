@@ -24,7 +24,7 @@ import { useVModel } from '@vueuse/core'
 import DesktopBrowserPreview from './DesktopBrowserPreview.vue'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import DesktopBrowserSettings from './DesktopBrowserSettings.vue'
-import { Desktop16Regular } from '@shared/icons/fluent'
+import Desktop16Regular from '@vicons/fluent/Desktop16Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader } from '@shared/ui/tool'
 

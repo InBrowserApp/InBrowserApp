@@ -1,5 +1,5 @@
 export const toolID = 'lorem-ipsum-generator'
-export { TextDescription24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/TextDescription24Regular'
 export const path = '/tools/misc/lorem-ipsum-generator'
 export const tags = [
   'lorem',

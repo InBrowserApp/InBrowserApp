@@ -1,5 +1,4 @@
-export { PaintBrush24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/PaintBrush24Regular'
 export const toolID = 'color-converter'
 export const path = '/tools/color-converter'
 export const tags = [

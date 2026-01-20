@@ -1,5 +1,4 @@
-export { Key24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const toolID = 'certificate-public-key-parser'
 export const path = '/tools/certificate-public-key-parser'
 export const tags = ['x509', 'certificate', 'public-key', 'pem', 'der', 'parser', 'security', 'tls']

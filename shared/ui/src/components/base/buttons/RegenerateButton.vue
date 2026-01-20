@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { NIcon, NButton } from 'naive-ui'
-import { RefreshOutline as Icon } from '@shared/icons/ionicons5'
+import Icon from '@vicons/ionicons5/RefreshOutline'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

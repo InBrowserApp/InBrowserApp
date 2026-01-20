@@ -1,5 +1,4 @@
-export { TextAlignJustify as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/TextAlignJustify'
 export const toolID = 'text-statistics'
 export const path = '/tools/text-statistics'
 export const tags = ['text', 'statistics', 'word', 'count', 'character', 'line', 'paragraph']

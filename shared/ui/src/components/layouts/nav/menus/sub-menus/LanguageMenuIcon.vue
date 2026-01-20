@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import { NIcon, NButton, NPopselect } from 'naive-ui'
-import { LanguageOutline as icon } from '@shared/icons/ionicons5'
+import icon from '@vicons/ionicons5/LanguageOutline'
 import { useSiteLanguage, supportedLanguages } from '@shared/locale'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'

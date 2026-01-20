@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { NIcon, NButton } from 'naive-ui'
-import { Clipboard16Regular as Icon } from '@shared/icons/fluent'
+import Icon from '@vicons/fluent/Clipboard16Regular'
 import { useI18n } from 'vue-i18n'
 import { useCopyToClipboard } from '../../../composables/base/clipboard/useCopyToClipboard'
 import { toRef } from 'vue'

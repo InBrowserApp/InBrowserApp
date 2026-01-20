@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { toRef } from 'vue'
 import { NTooltip, NIcon } from 'naive-ui'
-import { Clipboard16Regular as Icon } from '@shared/icons/fluent'
+import Icon from '@vicons/fluent/Clipboard16Regular'
 import { useCopyToClipboard } from '../../../composables/base/clipboard/useCopyToClipboard'
 import { useI18n } from 'vue-i18n'
 

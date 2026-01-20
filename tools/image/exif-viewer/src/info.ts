@@ -1,5 +1,5 @@
 export const toolID = 'exif-viewer'
-export { Image24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Image24Regular'
 export const path = '/tools/exif-viewer'
 export const tags = ['image', 'exif', 'metadata', 'photo', 'gps']
 export const features = ['offline']

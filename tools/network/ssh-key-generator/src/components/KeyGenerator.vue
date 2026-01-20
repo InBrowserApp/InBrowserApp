@@ -35,7 +35,7 @@ import { ref, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import { NSpace, NFlex, NButton, NIcon, NAlert } from 'naive-ui'
-import { Key24Regular } from '@shared/icons/fluent'
+import Key24Regular from '@vicons/fluent/Key24Regular'
 import KeyOptions from './KeyOptions.vue'
 import KeyOutput from './KeyOutput.vue'
 import {

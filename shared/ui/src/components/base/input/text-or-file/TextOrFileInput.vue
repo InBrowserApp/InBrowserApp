@@ -72,7 +72,7 @@ import {
   NDivider,
   NButton,
 } from 'naive-ui'
-import { DocumentOutline } from '@shared/icons/ionicons5'
+import DocumentOutline from '@vicons/ionicons5/DocumentOutline'
 import type { UploadFileInfo } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 

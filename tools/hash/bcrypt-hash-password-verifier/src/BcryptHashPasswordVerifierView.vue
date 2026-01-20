@@ -49,7 +49,8 @@
 
 <script setup lang="ts">
 import * as toolInfo from './info'
-import { CheckmarkCircle12Filled, DismissCircle12Filled } from '@shared/icons/fluent'
+import CheckmarkCircle12Filled from '@vicons/fluent/CheckmarkCircle12Filled'
+import DismissCircle12Filled from '@vicons/fluent/DismissCircle12Filled'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import WhatIsBcrypt from './WhatIsBcrypt.vue'
 import { useI18n } from 'vue-i18n'

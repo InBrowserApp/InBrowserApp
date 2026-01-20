@@ -1,5 +1,4 @@
-export { Globe20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Globe20Regular'
 export const toolID = 'http-status-code-lookup'
 export const path = '/tools/http-status-code-lookup'
 export const tags = ['http', 'status', 'code', 'network', 'reference']

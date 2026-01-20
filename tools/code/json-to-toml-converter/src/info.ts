@@ -1,5 +1,4 @@
-export { BracesVariable20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/BracesVariable20Regular'
 export const toolID = 'json-to-toml-converter'
 export const path = '/tools/json-to-toml-converter'
 export const tags = ['code', 'json', 'toml', 'converter']

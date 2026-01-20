@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { NButton, NIcon } from 'naive-ui'
-import { ArrowDownload16Filled } from '@shared/icons/fluent'
+import ArrowDownload16Filled from '@vicons/fluent/ArrowDownload16Filled'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

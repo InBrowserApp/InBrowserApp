@@ -1,5 +1,5 @@
 export const toolID = 'pdf-tools'
-export { DocumentPdf24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/DocumentPdf24Regular'
 export const path = '/tools/pdf-tools'
 export const tags = ['pdf', 'document']
 export const features = ['offline']

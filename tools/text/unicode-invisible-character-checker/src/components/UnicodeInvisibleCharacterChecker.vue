@@ -123,7 +123,7 @@ import {
   NText,
 } from 'naive-ui'
 import type { DataTableColumns } from 'naive-ui'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import { CopyToClipboardButton, TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import {

@@ -1,5 +1,4 @@
-export { Timer20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Timer20Regular'
 export const toolID = 'cron-expression-generator'
 export const path = '/tools/cron-expression-generator'
 export const tags = ['time', 'cron', 'scheduler', 'generator', 'unix']

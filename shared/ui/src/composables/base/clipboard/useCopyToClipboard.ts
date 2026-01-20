@@ -2,7 +2,7 @@ import type { Ref } from 'vue'
 import { h } from 'vue'
 import { get } from '@vueuse/core'
 import { useMessage, NIcon } from 'naive-ui'
-import { ClipboardCheckmark20Regular as Icon } from '@shared/icons/fluent'
+import Icon from '@vicons/fluent/ClipboardCheckmark20Regular'
 import { useI18n } from 'vue-i18n'
 
 export function useCopyToClipboard(

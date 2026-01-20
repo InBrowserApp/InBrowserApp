@@ -1,5 +1,4 @@
-export { Color20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Color20Regular'
 export const toolID = 'html-color-names'
 export const path = '/tools/html-color-names'
 export const tags = ['html', 'css', 'color', 'web', 'reference']

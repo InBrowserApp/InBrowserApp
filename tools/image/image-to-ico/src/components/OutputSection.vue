@@ -25,7 +25,7 @@ import { useI18n } from 'vue-i18n'
 import { useObjectUrl } from '@vueuse/core'
 import { filesize } from 'filesize'
 import { NButton, NIcon, NText, NFlex } from 'naive-ui'
-import { ArrowDownload24Regular } from '@shared/icons/fluent'
+import ArrowDownload24Regular from '@vicons/fluent/ArrowDownload24Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 const props = defineProps<{

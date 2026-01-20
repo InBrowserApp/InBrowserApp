@@ -1,5 +1,4 @@
-export { TextNumberFormat20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/TextNumberFormat20Regular'
 export const toolID = 'number-base-converter'
 
 export const path = '/tools/number-base-converter'

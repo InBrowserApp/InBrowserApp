@@ -27,7 +27,7 @@
 import { computed } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
 import { NIcon, NButton, NFlex, NPopover } from 'naive-ui'
-import { ArrowDownload16Regular as Icon } from '@shared/icons/fluent'
+import Icon from '@vicons/fluent/ArrowDownload16Regular'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

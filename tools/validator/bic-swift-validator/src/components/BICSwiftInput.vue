@@ -18,7 +18,7 @@
 import { computed } from 'vue'
 import { NFormItem, NInput, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { TextNumberFormat20Regular as TextNumberFormatIcon } from '@shared/icons/fluent'
+import TextNumberFormatIcon from '@vicons/fluent/TextNumberFormat20Regular'
 import type { BICValidationResult } from '../data/bic'
 
 const { t } = useI18n()

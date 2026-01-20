@@ -1,5 +1,5 @@
 export const toolID = 'ip-range-to-cidr'
-export { ArrowAutofitWidth20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ArrowAutofitWidth20Regular'
 export const path = '/tools/ip-range-to-cidr'
 export const tags = ['ip', 'cidr', 'network', 'range', 'ipv4', 'ipv6', 'converter', 'subnet']
 export const features = ['offline']

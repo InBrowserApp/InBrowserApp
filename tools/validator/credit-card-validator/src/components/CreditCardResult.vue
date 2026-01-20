@@ -51,7 +51,7 @@
 <script setup lang="ts">
 import { NDescriptions, NDescriptionsItem, NFlex, NIcon, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { QuestionCircle16Regular as HelpCircleIcon } from '@shared/icons/fluent'
+import HelpCircleIcon from '@vicons/fluent/QuestionCircle16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { ValidationResult } from '../data/cardBrands'

@@ -1,5 +1,5 @@
 export const toolID = 'unicode-punycode-converter'
-export { LanguageOutline as icon } from '@shared/icons/ionicons5'
+export { default as icon } from '@vicons/ionicons5/LanguageOutline'
 export const path = '/tools/unicode-punycode-converter'
 export const tags = ['dns', 'domain', 'punycode', 'idn', 'network']
 export const features = ['offline']
