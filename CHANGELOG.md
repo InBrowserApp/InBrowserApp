@@ -1,5 +1,41 @@
 # Changelog
 
+## [1.4.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.3.0...v1.4.0) (2026-01-20)
+
+
+### Features
+
+* **time:** add stopwatch tool ([#158](https://github.com/InBrowserApp/InBrowserApp/issues/158)) ([7fdb874](https://github.com/InBrowserApp/InBrowserApp/commit/7fdb87438a5df50ca52a663e4185f3132f3cbf16))
+* **tools:** add BIC/SWIFT validator ([#148](https://github.com/InBrowserApp/InBrowserApp/issues/148)) ([581d400](https://github.com/InBrowserApp/InBrowserApp/commit/581d40037c2f455abe37a8ff0310af288aa55e19))
+* **tools:** add BIP39 mnemonic generator ([#139](https://github.com/InBrowserApp/InBrowserApp/issues/139)) ([67f4050](https://github.com/InBrowserApp/InBrowserApp/commit/67f40508eb64ae7dd7b55b96c60782006b640ef3))
+* **tools:** add business days calculator ([#155](https://github.com/InBrowserApp/InBrowserApp/issues/155)) ([9ce251c](https://github.com/InBrowserApp/InBrowserApp/commit/9ce251c3a2672d25a738873bcd6b1e179ef5b95b))
+* **tools:** add certificate public key parser ([#147](https://github.com/InBrowserApp/InBrowserApp/issues/147)) ([ca64b8f](https://github.com/InBrowserApp/InBrowserApp/commit/ca64b8fe6fe1ab6db631ede434cd8a7c7edcdfa3))
+* **tools:** add color picker tool ([#163](https://github.com/InBrowserApp/InBrowserApp/issues/163)) ([a1bbb5e](https://github.com/InBrowserApp/InBrowserApp/commit/a1bbb5e9a3f0878a4a1b6a80acf486dc95554152))
+* **tools:** add cuid2 generator ([d20d5a9](https://github.com/InBrowserApp/InBrowserApp/commit/d20d5a90cbdd0caf7625181982883374a4e47327))
+* **tools:** add EU VAT number validator ([#154](https://github.com/InBrowserApp/InBrowserApp/issues/154)) ([394e052](https://github.com/InBrowserApp/InBrowserApp/commit/394e05241d9c563149dcf89966abf40db4d25b75))
+* **tools:** add IBAN validator tool ([#144](https://github.com/InBrowserApp/InBrowserApp/issues/144)) ([f62e72d](https://github.com/InBrowserApp/InBrowserApp/commit/f62e72db7b78ed6acbcb959d499e0eeb15d3f46c))
+* **tools:** add iCal event generator ([#160](https://github.com/InBrowserApp/InBrowserApp/issues/160)) ([8295ec6](https://github.com/InBrowserApp/InBrowserApp/commit/8295ec62c73cad9a5b039f94842a0c8806011435))
+* **tools:** add image metadata cleaner ([#162](https://github.com/InBrowserApp/InBrowserApp/issues/162)) ([e3d68f8](https://github.com/InBrowserApp/InBrowserApp/commit/e3d68f8f881dc7e5453d80786e67e51eb1f560d2))
+* **tools:** add image-to-ico tool ([#174](https://github.com/InBrowserApp/InBrowserApp/issues/174)) ([ad289e5](https://github.com/InBrowserApp/InBrowserApp/commit/ad289e53fdeddaa43876d2e86f86b74051bc39f0))
+* **tools:** add ISBN validator tool ([#140](https://github.com/InBrowserApp/InBrowserApp/issues/140)) ([13f6c89](https://github.com/InBrowserApp/InBrowserApp/commit/13f6c89d7005bd57643962400e6a3b6b370c44a8))
+* **tools:** add json schema generator ([#168](https://github.com/InBrowserApp/InBrowserApp/issues/168)) ([a4c99ab](https://github.com/InBrowserApp/InBrowserApp/commit/a4c99ab02cdeaa8a5021c346796121ed6c0c532f))
+* **tools:** add json schema validator ([#141](https://github.com/InBrowserApp/InBrowserApp/issues/141)) ([6207590](https://github.com/InBrowserApp/InBrowserApp/commit/6207590d1efda8781b3c43adf2f0c93f0e492545))
+* **tools:** add JSONPath and JMESPath testers ([#161](https://github.com/InBrowserApp/InBrowserApp/issues/161)) ([e076824](https://github.com/InBrowserApp/InBrowserApp/commit/e076824bfca7027e54b67f567ca2aecaee8a6e15))
+* **tools:** add ksuid generator ([#159](https://github.com/InBrowserApp/InBrowserApp/issues/159)) ([37c18ae](https://github.com/InBrowserApp/InBrowserApp/commit/37c18ae8fbfcc4f4ce2e9ad7f52303ca7b06a67f))
+* **tools:** add nanoid generator ([#169](https://github.com/InBrowserApp/InBrowserApp/issues/169)) ([26acec8](https://github.com/InBrowserApp/InBrowserApp/commit/26acec836096b2789143e1821f5b0e90743b7be5))
+* **tools:** add OpenAPI to TypeScript converter ([#150](https://github.com/InBrowserApp/InBrowserApp/issues/150)) ([613b1d0](https://github.com/InBrowserApp/InBrowserApp/commit/613b1d06ca490d4156f6c2e5d510a72ac928b9bd))
+* **tools:** add password strength checker ([#153](https://github.com/InBrowserApp/InBrowserApp/issues/153)) ([38fc27f](https://github.com/InBrowserApp/InBrowserApp/commit/38fc27f02b620f9696bc447bef5cf999c2a4c955))
+* **tools:** add PGP key generator ([#173](https://github.com/InBrowserApp/InBrowserApp/issues/173)) ([779f072](https://github.com/InBrowserApp/InBrowserApp/commit/779f072343cfaa94ee6dbacc467a5e70a4cf1583))
+* **tools:** add Prettier code formatter ([#137](https://github.com/InBrowserApp/InBrowserApp/issues/137)) ([c159523](https://github.com/InBrowserApp/InBrowserApp/commit/c159523f4ec51c03bbbcc7c1b5fa42c2e315312c))
+* **tools:** add regex tester replacer ([#146](https://github.com/InBrowserApp/InBrowserApp/issues/146)) ([fe19203](https://github.com/InBrowserApp/InBrowserApp/commit/fe19203f03ddcc5396070c89521290623108f19f))
+* **tools:** add svg to image converter ([#164](https://github.com/InBrowserApp/InBrowserApp/issues/164)) ([6519730](https://github.com/InBrowserApp/InBrowserApp/commit/65197305506ffab35a2d5502aaa48a2e660f1844))
+* **tools:** add time difference calculator ([#145](https://github.com/InBrowserApp/InBrowserApp/issues/145)) ([ee06961](https://github.com/InBrowserApp/InBrowserApp/commit/ee06961d62d610cd8ccca5c80849ea372907ef64))
+* **tools:** add time zone converter ([#138](https://github.com/InBrowserApp/InBrowserApp/issues/138)) ([158c9ec](https://github.com/InBrowserApp/InBrowserApp/commit/158c9ecdb24880fdffef7287e0021177634195ff))
+* **tools:** add unicode invisible character checker ([#170](https://github.com/InBrowserApp/InBrowserApp/issues/170)) ([42bbbb2](https://github.com/InBrowserApp/InBrowserApp/commit/42bbbb2cd273177e2ed5bd8831b2e0190bd4651f))
+* **tools:** add user-agent parser ([#143](https://github.com/InBrowserApp/InBrowserApp/issues/143)) ([ffd4797](https://github.com/InBrowserApp/InBrowserApp/commit/ffd4797d61932092efa913688dc43b95af78c49c))
+* **tools:** use anchor download links ([#165](https://github.com/InBrowserApp/InBrowserApp/issues/165)) ([a506951](https://github.com/InBrowserApp/InBrowserApp/commit/a5069515c3718f14ce6b0bfd8fd948f403e53bc6))
+* **validator:** add PRC resident ID validator ([#171](https://github.com/InBrowserApp/InBrowserApp/issues/171)) ([a92cc5f](https://github.com/InBrowserApp/InBrowserApp/commit/a92cc5f8c311d846b30a4244e6f03707fad49a18))
+
 ## [1.3.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.2.0...v1.3.0) (2026-01-09)
 
 
