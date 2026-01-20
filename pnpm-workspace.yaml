@@ -6,60 +6,60 @@ packages:
   - shared/*
   - utils/*
   - registry/*
-onlyBuiltDependencies:
-  - esbuild
-  - vue-demi
+
 catalog:
-  "@commitlint/cli": ^20.3.1
-  "@commitlint/config-conventional": ^20.3.1
-  "@commitlint/types": ^20.3.1
-  "@faker-js/faker": ^10.2.0
-  "@guolao/vue-monaco-editor": ^1.6.0
-  "@intlify/eslint-plugin-vue-i18n": ^4.1.1
-  "@intlify/unplugin-vue-i18n": ^11.0.3
-  "@jspawn/qpdf-wasm": ^0.0.2
-  "@jsquash/oxipng": ^2.3.0
-  "@noble/ed25519": ^3.0.0
-  "@paralleldrive/cuid2": ^3.0.6
-  "@peculiar/x509": ^1.14.3
-  "@playwright/test": ^1.57.0
-  "@prettier/plugin-oxc": 0.1.3
-  "@tsconfig/node22": ^22.0.5
-  "@types/color-convert": ^2.0.4
-  "@types/crypto-js": ^4.2.2
-  "@types/emscripten": ^1.41.5
-  "@types/figlet": ^1.7.0
-  "@types/jmespath": ^0.15.2
-  "@types/js-yaml": ^4.0.9
-  "@types/jsdom": ^27.0.0
-  "@types/mime-db": ^1.43.6
-  "@types/node": ^25.0.9
-  "@types/papaparse": ^5.5.2
-  "@types/punycode": ^2.1.4
-  "@types/qrcode": ^1.5.6
-  "@types/turndown": ^5.0.6
-  "@types/ua-parser-js": ^0.7.39
-  "@types/validator": ^13.15.10
-  "@typescript-eslint/parser": ^8.53.1
-  "@unhead/vue": 2.1.2
-  "@vicons/antd": ^0.13.0
-  "@vicons/carbon": ^0.13.0
-  "@vicons/fa": ^0.13.0
-  "@vicons/fluent": ^0.13.0
-  "@vicons/ionicons4": ^0.13.0
-  "@vicons/ionicons5": ^0.13.0
-  "@vicons/material": ^0.13.0
-  "@vicons/tabler": ^0.13.0
-  "@vitejs/plugin-vue": ^6.0.3
-  "@vitest/coverage-istanbul": ^4.0.16
-  "@vitest/coverage-v8": ^4.0.17
-  "@vitest/eslint-plugin": ^1.6.6
-  "@vue/eslint-config-prettier": ^10.2.0
-  "@vue/eslint-config-typescript": ^14.6.0
-  "@vue/test-utils": ^2.4.6
-  "@vue/tsconfig": ^0.8.1
-  "@vueuse/core": 14.1.0
-  "@zip.js/zip.js": ^2.8.15
+  '@commitlint/cli': ^20.3.1
+  '@commitlint/config-conventional': ^20.3.1
+  '@commitlint/types': ^20.3.1
+  '@faker-js/faker': ^10.2.0
+  '@guolao/vue-monaco-editor': ^1.6.0
+  '@intlify/eslint-plugin-vue-i18n': ^4.1.1
+  '@intlify/unplugin-vue-i18n': ^11.0.3
+  '@jspawn/qpdf-wasm': ^0.0.2
+  '@jsquash/oxipng': ^2.3.0
+  '@noble/ed25519': ^3.0.0
+  '@paralleldrive/cuid2': ^3.0.6
+  '@peculiar/x509': ^1.14.3
+  '@playwright/test': ^1.57.0
+  '@prettier/plugin-oxc': 0.1.3
+  '@tsconfig/node22': ^22.0.5
+  '@types/color-convert': ^2.0.4
+  '@types/crypto-js': ^4.2.2
+  '@types/emscripten': ^1.41.5
+  '@types/figlet': ^1.7.0
+  '@types/jmespath': ^0.15.2
+  '@types/js-yaml': ^4.0.9
+  '@types/jsdom': ^27.0.0
+  '@types/mime-db': ^1.43.6
+  '@types/node': ^25.0.9
+  '@types/papaparse': ^5.5.2
+  '@types/punycode': ^2.1.4
+  '@types/qrcode': ^1.5.6
+  '@types/turndown': ^5.0.6
+  '@types/ua-parser-js': ^0.7.39
+  '@types/validator': ^13.15.10
+  '@typescript-eslint/parser': ^8.53.1
+  '@unhead/vue': 2.1.2
+  '@vicons/antd': ^0.13.0
+  '@vicons/carbon': ^0.13.0
+  '@vicons/fa': ^0.13.0
+  '@vicons/fluent': ^0.13.0
+  '@vicons/ionicons4': ^0.13.0
+  '@vicons/ionicons5': ^0.13.0
+  '@vicons/material': ^0.13.0
+  '@vicons/tabler': ^0.13.0
+  '@vitejs/plugin-vue': ^6.0.3
+  '@vitest/coverage-istanbul': ^4.0.16
+  '@vitest/coverage-v8': ^4.0.17
+  '@vitest/eslint-plugin': ^1.6.6
+  '@vue/eslint-config-prettier': ^10.2.0
+  '@vue/eslint-config-typescript': ^14.6.0
+  '@vue/test-utils': ^2.4.6
+  '@vue/tsconfig': ^0.8.1
+  '@vueuse/core': 14.1.0
+  '@zip.js/zip.js': ^2.8.15
+  '@zxing/browser': ^0.1.5
+  '@zxing/library': ^0.21.3
   ajv: ^8.17.1
   ajv-formats: ^3.0.1
   bcrypt-ts: ^8.0.0
@@ -85,7 +85,7 @@ catalog:
   figlet: ^1.9.4
   filesize: ^11.0.13
   github-markdown-css: ^5.8.1
-  gitignore: "github:github/gitignore"
+  gitignore: github:github/gitignore
   happy-dom: ^20.3.4
   highlight.js: 11.11.1
   hono: ^4.11.4
@@ -141,3 +141,7 @@ catalog:
   wrangler: 4.59.2
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
+
+onlyBuiltDependencies:
+  - esbuild
+  - vue-demi
