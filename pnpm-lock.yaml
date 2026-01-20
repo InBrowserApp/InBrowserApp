@@ -3572,6 +3572,9 @@ importers:
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
       vue:
         specifier: 'catalog:'
         version: 3.5.27(typescript@5.9.3)

@@ -15,8 +15,10 @@
               <DocumentPdf24Regular />
             </n-icon>
           </div>
-          <n-text style="font-size: 16px">{{ t('upload-hint') }}</n-text>
-          <n-text depth="3">{{ t('upload-subhint') }}</n-text>
+          <div style="display: inline-flex; align-items: baseline; gap: 8px">
+            <n-text style="font-size: 16px">{{ t('upload-hint') }}</n-text>
+            <n-text depth="3">{{ t('upload-subhint') }}</n-text>
+          </div>
         </n-upload-dragger>
       </n-upload>
     </ToolSection>
@@ -34,16 +36,22 @@
         </n-alert>
         <n-text v-if="files.length === 0" depth="3">{{ t('empty-list') }}</n-text>
         <template v-else>
+          <n-text depth="3" data-testid="total-pages">
+            {{ t('total-pages', { count: totalPagesLabel }) }}
+          </n-text>
           <n-card
-            v-for="(file, index) in files"
-            :key="fileKey(file, index)"
+            v-for="(item, index) in files"
+            :key="fileKey(item, index)"
             size="small"
             data-testid="pdf-file-item"
           >
             <n-flex justify="space-between" align="center" :size="12">
               <n-flex vertical :size="2">
-                <n-text strong>{{ file.name }}</n-text>
-                <n-text depth="3">{{ formatFileSize(file.size) }}</n-text>
+                <n-text strong>{{ item.file.name }}</n-text>
+                <n-text depth="3">{{ formatFileSize(item.file.size) }}</n-text>
+                <n-text depth="3">
+                  {{ t('page-count', { count: formatPageCount(item.pageCount) }) }}
+                </n-text>
               </n-flex>
               <n-flex align="center" :size="8" wrap>
                 <n-button
@@ -51,18 +59,26 @@
                   secondary
                   :disabled="index === 0 || isMerging"
                   data-testid="move-up"
+                  :aria-label="t('move-up')"
+                  :title="t('move-up')"
                   @click="moveFile(index, -1)"
                 >
-                  {{ t('move-up') }}
+                  <template #icon>
+                    <n-icon :component="ArrowSortUp16Regular" />
+                  </template>
                 </n-button>
                 <n-button
                   size="small"
                   secondary
                   :disabled="index === files.length - 1 || isMerging"
                   data-testid="move-down"
+                  :aria-label="t('move-down')"
+                  :title="t('move-down')"
                   @click="moveFile(index, 1)"
                 >
-                  {{ t('move-down') }}
+                  <template #icon>
+                    <n-icon :component="ArrowSortDown16Regular" />
+                  </template>
                 </n-button>
                 <n-button
                   size="small"
@@ -91,6 +107,9 @@
           data-testid="clear-files"
           @click="clearFiles"
         >
+          <template #icon>
+            <n-icon :component="Delete16Regular" />
+          </template>
           {{ t('clear') }}
         </n-button>
         <n-button
@@ -100,6 +119,9 @@
           data-testid="merge-files"
           @click="mergeFiles"
         >
+          <template #icon>
+            <n-icon :component="Merge24Regular" />
+          </template>
           {{ t('merge') }}
         </n-button>
       </n-flex>
@@ -139,23 +161,38 @@ import {
   NUploadDragger,
   useMessage,
 } from 'naive-ui'
+import { PDFDocument } from 'pdf-lib'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { mergePDFs } from '@utils/pdf'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import ArrowSortDown16Regular from '@vicons/fluent/ArrowSortDown16Regular'
+import ArrowSortUp16Regular from '@vicons/fluent/ArrowSortUp16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import DocumentPdf24Regular from '@vicons/fluent/DocumentPdf24Regular'
+import Merge24Regular from '@vicons/fluent/Merge24Regular'
 import type { UploadFileInfo } from 'naive-ui'
 
 const { t } = useI18n()
 const message = useMessage()
 
-const files = ref<File[]>([])
+type PdfItem = {
+  file: File
+  pageCount: number | null
+}
+
+const files = ref<PdfItem[]>([])
 const isMerging = ref(false)
 const downloadBlob = ref<Blob | null>(null)
 const downloadUrl = useObjectUrl(downloadBlob)
 const downloadName = ref('')
 const defaultDownloadName = 'merged.pdf'
 const downloadFilename = computed(() => downloadName.value || defaultDownloadName)
+const totalPages = computed(() => {
+  if (files.value.length === 0) return null
+  if (files.value.some((item) => typeof item.pageCount !== 'number')) return null
+  return files.value.reduce((sum, item) => sum + (item.pageCount ?? 0), 0)
+})
+const totalPagesLabel = computed(() => formatPageCount(totalPages.value))
 
 const resetOutput = () => {
   downloadBlob.value = null
@@ -164,6 +201,16 @@ const resetOutput = () => {
 
 const isPdfFile = (file: File) =>
   file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf')
+
+const getPageCount = async (file: File) => {
+  try {
+    const buffer = await file.arrayBuffer()
+    const pdfDoc = await PDFDocument.load(buffer)
+    return pdfDoc.getPageCount()
+  } catch {
+    return null
+  }
+}
 
 const handleBeforeUpload = async (data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) => {
   if (isMerging.value) return false
@@ -176,12 +223,13 @@ const handleBeforeUpload = async (data: { file: UploadFileInfo; fileList: Upload
     return false
   }
 
-  files.value = [...files.value, file]
+  const pageCount = await getPageCount(file)
+  files.value = [...files.value, { file, pageCount }]
   resetOutput()
   return false
 }
 
-const fileKey = (file: File, index: number) => `${index}-${file.name}-${file.size}`
+const fileKey = (item: PdfItem, index: number) => `${index}-${item.file.name}-${item.file.size}`
 
 const moveFile = (index: number, direction: number) => {
   const nextIndex = index + direction
@@ -189,7 +237,8 @@ const moveFile = (index: number, direction: number) => {
 
   const updated = [...files.value]
   const [current] = updated.splice(index, 1)
-  updated.splice(nextIndex, 0, current as File)
+  if (!current) return
+  updated.splice(nextIndex, 0, current)
   files.value = updated
   resetOutput()
 }
@@ -214,7 +263,7 @@ const mergeFiles = async () => {
   resetOutput()
 
   try {
-    const merged = await mergePDFs(files.value)
+    const merged = await mergePDFs(files.value.map((item) => item.file))
     downloadBlob.value = merged
     downloadName.value = defaultDownloadName
     message.success(t('merge-success'))
@@ -233,6 +282,9 @@ const formatFileSize = (bytes: number) => {
   const i = Math.floor(Math.log(bytes) / Math.log(k))
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
 }
+
+const formatPageCount = (count: number | null) =>
+  typeof count === 'number' && Number.isFinite(count) ? count.toLocaleString() : '--'
 </script>
 
 <i18n lang="json">
@@ -253,7 +305,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDFs merged successfully",
     "merge-failed": "Failed to merge PDFs",
     "only-pdf": "Only PDF files are allowed",
-    "download-file": "Download {filename}"
+    "download-file": "Download {filename}",
+    "page-count": "Pages: {count}",
+    "total-pages": "Total pages: {count}"
   },
   "zh": {
     "upload-title": "上传 PDF",
@@ -271,7 +325,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF 已成功合并",
     "merge-failed": "合并 PDF 失败",
     "only-pdf": "仅允许 PDF 文件",
-    "download-file": "下载 {filename}"
+    "download-file": "下载 {filename}",
+    "page-count": "页数：{count}",
+    "total-pages": "共 {count} 页"
   },
   "zh-CN": {
     "upload-title": "上传 PDF",
@@ -289,7 +345,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF 已成功合并",
     "merge-failed": "合并 PDF 失败",
     "only-pdf": "仅允许 PDF 文件",
-    "download-file": "下载 {filename}"
+    "download-file": "下载 {filename}",
+    "page-count": "页数：{count}",
+    "total-pages": "共 {count} 页"
   },
   "zh-TW": {
     "upload-title": "上傳 PDF",
@@ -307,7 +365,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF 已成功合併",
     "merge-failed": "合併 PDF 失敗",
     "only-pdf": "僅允許 PDF 檔案",
-    "download-file": "下載 {filename}"
+    "download-file": "下載 {filename}",
+    "page-count": "頁數：{count}",
+    "total-pages": "共 {count} 頁"
   },
   "zh-HK": {
     "upload-title": "上傳 PDF",
@@ -325,7 +385,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF 已成功合併",
     "merge-failed": "合併 PDF 失敗",
     "only-pdf": "僅允許 PDF 檔案",
-    "download-file": "下載 {filename}"
+    "download-file": "下載 {filename}",
+    "page-count": "頁數：{count}",
+    "total-pages": "共 {count} 頁"
   },
   "es": {
     "upload-title": "Subir PDFs",
@@ -343,7 +405,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDFs combinados correctamente",
     "merge-failed": "Error al combinar PDFs",
     "only-pdf": "Solo se permiten archivos PDF",
-    "download-file": "Descargar {filename}"
+    "download-file": "Descargar {filename}",
+    "page-count": "Páginas: {count}",
+    "total-pages": "Total de páginas: {count}"
   },
   "fr": {
     "upload-title": "Téléverser des PDF",
@@ -361,7 +425,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDFs fusionnés avec succès",
     "merge-failed": "Échec de la fusion des PDFs",
     "only-pdf": "Seuls les fichiers PDF sont autorisés",
-    "download-file": "Télécharger {filename}"
+    "download-file": "Télécharger {filename}",
+    "page-count": "Pages : {count}",
+    "total-pages": "Total des pages : {count}"
   },
   "de": {
     "upload-title": "PDFs hochladen",
@@ -379,7 +445,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDFs erfolgreich zusammengeführt",
     "merge-failed": "PDFs konnten nicht zusammengeführt werden",
     "only-pdf": "Nur PDF-Dateien sind erlaubt",
-    "download-file": "{filename} herunterladen"
+    "download-file": "{filename} herunterladen",
+    "page-count": "Seiten: {count}",
+    "total-pages": "Seiten gesamt: {count}"
   },
   "it": {
     "upload-title": "Carica PDF",
@@ -397,7 +465,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF uniti con successo",
     "merge-failed": "Impossibile unire i PDF",
     "only-pdf": "Sono consentiti solo file PDF",
-    "download-file": "Scarica {filename}"
+    "download-file": "Scarica {filename}",
+    "page-count": "Pagine: {count}",
+    "total-pages": "Pagine totali: {count}"
   },
   "ja": {
     "upload-title": "PDF をアップロード",
@@ -415,7 +485,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF を正常に結合しました",
     "merge-failed": "PDF の結合に失敗しました",
     "only-pdf": "PDF ファイルのみ許可されています",
-    "download-file": "{filename} をダウンロード"
+    "download-file": "{filename} をダウンロード",
+    "page-count": "ページ数: {count}",
+    "total-pages": "合計ページ数: {count}"
   },
   "ko": {
     "upload-title": "PDF 업로드",
@@ -433,7 +505,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF가 성공적으로 병합되었습니다",
     "merge-failed": "PDF 병합에 실패했습니다",
     "only-pdf": "PDF 파일만 허용됩니다",
-    "download-file": "{filename} 다운로드"
+    "download-file": "{filename} 다운로드",
+    "page-count": "페이지 수: {count}",
+    "total-pages": "총 페이지 수: {count}"
   },
   "ru": {
     "upload-title": "Загрузить PDF",
@@ -451,7 +525,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF успешно объединены",
     "merge-failed": "Не удалось объединить PDF",
     "only-pdf": "Разрешены только PDF-файлы",
-    "download-file": "Скачать {filename}"
+    "download-file": "Скачать {filename}",
+    "page-count": "Страниц: {count}",
+    "total-pages": "Всего страниц: {count}"
   },
   "pt": {
     "upload-title": "Enviar PDFs",
@@ -469,7 +545,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDFs mesclados com sucesso",
     "merge-failed": "Falha ao mesclar PDFs",
     "only-pdf": "Somente arquivos PDF são permitidos",
-    "download-file": "Baixar {filename}"
+    "download-file": "Baixar {filename}",
+    "page-count": "Páginas: {count}",
+    "total-pages": "Total de páginas: {count}"
   },
   "ar": {
     "upload-title": "تحميل ملفات PDF",
@@ -487,7 +565,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "تم دمج ملفات PDF بنجاح",
     "merge-failed": "فشل دمج ملفات PDF",
     "only-pdf": "يُسمح فقط بملفات PDF",
-    "download-file": "تنزيل {filename}"
+    "download-file": "تنزيل {filename}",
+    "page-count": "عدد الصفحات: {count}",
+    "total-pages": "إجمالي الصفحات: {count}"
   },
   "hi": {
     "upload-title": "PDF अपलोड करें",
@@ -505,7 +585,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF सफलतापूर्वक मर्ज हो गए",
     "merge-failed": "PDF मर्ज करने में विफल",
     "only-pdf": "केवल PDF फाइलें अनुमत हैं",
-    "download-file": "{filename} डाउनलोड करें"
+    "download-file": "{filename} डाउनलोड करें",
+    "page-count": "पृष्ठ संख्या: {count}",
+    "total-pages": "कुल पृष्ठ: {count}"
   },
   "tr": {
     "upload-title": "PDF yükle",
@@ -523,7 +605,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF'ler başarıyla birleştirildi",
     "merge-failed": "PDF'ler birleştirilemedi",
     "only-pdf": "Yalnızca PDF dosyalarına izin verilir",
-    "download-file": "{filename} indir"
+    "download-file": "{filename} indir",
+    "page-count": "Sayfa sayısı: {count}",
+    "total-pages": "Toplam sayfa: {count}"
   },
   "nl": {
     "upload-title": "PDF's uploaden",
@@ -541,7 +625,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF's succesvol samengevoegd",
     "merge-failed": "PDF's samenvoegen mislukt",
     "only-pdf": "Alleen PDF-bestanden zijn toegestaan",
-    "download-file": "{filename} downloaden"
+    "download-file": "{filename} downloaden",
+    "page-count": "Pagina's: {count}",
+    "total-pages": "Totaal pagina's: {count}"
   },
   "sv": {
     "upload-title": "Ladda upp PDF",
@@ -559,7 +645,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF:er har slagits samman",
     "merge-failed": "Misslyckades med att slå samman PDF",
     "only-pdf": "Endast PDF-filer är tillåtna",
-    "download-file": "Ladda ner {filename}"
+    "download-file": "Ladda ner {filename}",
+    "page-count": "Sidor: {count}",
+    "total-pages": "Totalt antal sidor: {count}"
   },
   "pl": {
     "upload-title": "Prześlij PDF",
@@ -577,7 +665,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF-y zostały scalone",
     "merge-failed": "Nie udało się scalić PDF",
     "only-pdf": "Dozwolone są tylko pliki PDF",
-    "download-file": "Pobierz {filename}"
+    "download-file": "Pobierz {filename}",
+    "page-count": "Liczba stron: {count}",
+    "total-pages": "Łączna liczba stron: {count}"
   },
   "vi": {
     "upload-title": "Tải lên PDF",
@@ -595,7 +685,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "Đã gộp PDF thành công",
     "merge-failed": "Gộp PDF thất bại",
     "only-pdf": "Chỉ cho phép tệp PDF",
-    "download-file": "Tải xuống {filename}"
+    "download-file": "Tải xuống {filename}",
+    "page-count": "Số trang: {count}",
+    "total-pages": "Tổng số trang: {count}"
   },
   "th": {
     "upload-title": "อัปโหลด PDF",
@@ -613,7 +705,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "รวม PDF สำเร็จ",
     "merge-failed": "ไม่สามารถรวม PDF",
     "only-pdf": "อนุญาตเฉพาะไฟล์ PDF เท่านั้น",
-    "download-file": "ดาวน์โหลด {filename}"
+    "download-file": "ดาวน์โหลด {filename}",
+    "page-count": "จำนวนหน้า: {count}",
+    "total-pages": "จำนวนหน้ารวม: {count}"
   },
   "id": {
     "upload-title": "Unggah PDF",
@@ -631,7 +725,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF berhasil digabungkan",
     "merge-failed": "Gagal menggabungkan PDF",
     "only-pdf": "Hanya file PDF yang diizinkan",
-    "download-file": "Unduh {filename}"
+    "download-file": "Unduh {filename}",
+    "page-count": "Jumlah halaman: {count}",
+    "total-pages": "Total halaman: {count}"
   },
   "he": {
     "upload-title": "העלאת PDF",
@@ -649,7 +745,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "קובצי PDF מוזגו בהצלחה",
     "merge-failed": "נכשל מיזוג PDF",
     "only-pdf": "מותר רק קובצי PDF",
-    "download-file": "הורד {filename}"
+    "download-file": "הורד {filename}",
+    "page-count": "מספר עמודים: {count}",
+    "total-pages": "סך הכל עמודים: {count}"
   },
   "ms": {
     "upload-title": "Muat naik PDF",
@@ -667,7 +765,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF berjaya digabungkan",
     "merge-failed": "Gagal menggabungkan PDF",
     "only-pdf": "Hanya fail PDF dibenarkan",
-    "download-file": "Muat turun {filename}"
+    "download-file": "Muat turun {filename}",
+    "page-count": "Bilangan halaman: {count}",
+    "total-pages": "Jumlah keseluruhan halaman: {count}"
   },
   "no": {
     "upload-title": "Last opp PDF",
@@ -685,7 +785,9 @@ const formatFileSize = (bytes: number) => {
     "merge-success": "PDF-er slått sammen",
     "merge-failed": "Kunne ikke slå sammen PDF",
     "only-pdf": "Kun PDF-filer er tillatt",
-    "download-file": "Last ned {filename}"
+    "download-file": "Last ned {filename}",
+    "page-count": "Antall sider: {count}",
+    "total-pages": "Totalt antall sider: {count}"
   }
 }
 </i18n>
