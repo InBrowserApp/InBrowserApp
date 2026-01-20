@@ -83,7 +83,7 @@ export function validateEmail(input: string): EmailValidationResult {
     domainLabels.every((label) => label.length <= DOMAIN_LABEL_MAX_LENGTH)
   const isDomainLabelCharsValid =
     domainLabels.length > 0 && domainLabels.every((label) => isValidDomainLabel(label))
-  const tld = domainLabels.at(-1) ?? ''
+  const tld = domainLabels.length > 0 ? (domainLabels[domainLabels.length - 1] ?? '') : ''
   const isTldValid = domainLabels.length > 1 && tld.length >= 2 && TLD_REGEX.test(tld)
 
   const isValid =
