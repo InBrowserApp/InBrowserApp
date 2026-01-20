@@ -164,10 +164,7 @@ function formatKeySize(value?: number) {
   font-family:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-  white-space: pre;
-  overflow-wrap: normal;
-  word-break: normal;
-  overflow-x: auto;
+  word-break: break-all;
 }
 
 .monospace-input :deep(input) {
