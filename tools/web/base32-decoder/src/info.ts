@@ -44,7 +44,7 @@ export const meta = {
   fr: {
     name: 'Décodeur Base32',
     description:
-      'Décode le texte ou les fichiers Base32 pour revenir aux données d\'origine, pour la transmission, le stockage et l\'intégration.',
+      "Décode le texte ou les fichiers Base32 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
   },
   de: {
     name: 'Base32-Decoder',
@@ -58,13 +58,11 @@ export const meta = {
   },
   ja: {
     name: 'Base32 デコーダー',
-    description:
-      'Base32のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。',
+    description: 'Base32のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。',
   },
   ko: {
     name: 'Base32 디코더',
-    description:
-      'Base32 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.',
+    description: 'Base32 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.',
   },
   ru: {
     name: 'Base32-декодер',
@@ -78,8 +76,7 @@ export const meta = {
   },
   ar: {
     name: 'مُفكِّك ترميز Base32',
-    description:
-      'فك ترميز نصوص أو ملفات Base32 إلى البيانات الأصلية للنقل والتخزين والتكامل.',
+    description: 'فك ترميز نصوص أو ملفات Base32 إلى البيانات الأصلية للنقل والتخزين والتكامل.',
   },
   hi: {
     name: 'Base32 डिकोडर',
@@ -123,8 +120,7 @@ export const meta = {
   },
   he: {
     name: 'מפענח Base32',
-    description:
-      'מפענח טקסט או קבצים ב-Base32 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.',
+    description: 'מפענח טקסט או קבצים ב-Base32 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.',
   },
   ms: {
     name: 'Penyahkod Base32',

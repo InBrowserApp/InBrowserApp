@@ -17,8 +17,7 @@ export const features = ['offline']
 export const meta = {
   en: {
     name: 'Base32 Encoder',
-    description:
-      'Encode text or files to Base32 for data transport, storage, and web development.',
+    description: 'Encode text or files to Base32 for data transport, storage, and web development.',
   },
   zh: {
     name: 'Base32 编码器',
@@ -58,13 +57,11 @@ export const meta = {
   },
   ja: {
     name: 'Base32 エンコーダー',
-    description:
-      'テキストやファイルをBase32にエンコードし、データ転送、保存、Web開発に利用。',
+    description: 'テキストやファイルをBase32にエンコードし、データ転送、保存、Web開発に利用。',
   },
   ko: {
     name: 'Base32 인코더',
-    description:
-      '텍스트나 파일을 Base32로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.',
+    description: '텍스트나 파일을 Base32로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.',
   },
   ru: {
     name: 'Base32-кодировщик',
@@ -88,7 +85,7 @@ export const meta = {
   tr: {
     name: 'Base32 Kodlayıcı',
     description:
-      'Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base32\'ye kodlar.',
+      "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base32'ye kodlar.",
   },
   nl: {
     name: 'Base32-encoder',
@@ -97,7 +94,8 @@ export const meta = {
   },
   sv: {
     name: 'Base32-kodare',
-    description: 'Koda text eller filer till Base32 för dataöverföring, lagring och webbutveckling.',
+    description:
+      'Koda text eller filer till Base32 för dataöverföring, lagring och webbutveckling.',
   },
   pl: {
     name: 'Koder Base32',
@@ -111,8 +109,7 @@ export const meta = {
   },
   th: {
     name: 'ตัวเข้ารหัส Base32',
-    description:
-      'เข้ารหัสข้อความหรือไฟล์เป็น Base32 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ',
+    description: 'เข้ารหัสข้อความหรือไฟล์เป็น Base32 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ',
   },
   id: {
     name: 'Encoder Base32',

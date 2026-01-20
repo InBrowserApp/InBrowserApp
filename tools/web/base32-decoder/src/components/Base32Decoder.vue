@@ -18,7 +18,9 @@
         :placeholder="t('output-placeholder')"
         readonly
       />
-      <n-text v-if="isTruncated" depth="3" class="preview-note">{{ t('preview-truncated') }}</n-text>
+      <n-text v-if="isTruncated" depth="3" class="preview-note">{{
+        t('preview-truncated')
+      }}</n-text>
     </ToolSection>
     <ToolSection>
       <n-flex align="center" justify="space-between">
