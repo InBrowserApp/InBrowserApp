@@ -46,6 +46,7 @@
     "@tools/data-uri-to-file-converter": "workspace:*",
     "@tools/device-information": "workspace:*",
     "@tools/dns-lookup": "workspace:*",
+    "@tools/docker-run-to-compose": "workspace:*",
     "@tools/duration-calculator": "workspace:*",
     "@tools/email-validator": "workspace:*",
     "@tools/exif-viewer": "workspace:*",

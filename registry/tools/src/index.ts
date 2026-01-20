@@ -81,6 +81,7 @@ import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
 import { toolInfo as curlConverterToolInfo } from '@tools/curl-converter'
+import { toolInfo as dockerRunToComposeToolInfo } from '@tools/docker-run-to-compose'
 import { toolInfo as jsonSchemaGeneratorToolInfo } from '@tools/json-schema-generator'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
@@ -186,6 +187,7 @@ export const tools: ToolInfo[] = [
   openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
   curlConverterToolInfo,
+  dockerRunToComposeToolInfo,
 
   // PDF Tools
   pdfToolsToolInfo,

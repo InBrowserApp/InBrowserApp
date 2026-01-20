@@ -82,6 +82,7 @@ import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescrip
 import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
 import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
 import { routes as curlConverterRoutes } from '@tools/curl-converter/routes'
+import { routes as dockerRunToComposeRoutes } from '@tools/docker-run-to-compose/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
@@ -216,6 +217,7 @@ export const routes: ToolRoute[] = [
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
   ...curlConverterRoutes,
+  ...dockerRunToComposeRoutes,
   ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
