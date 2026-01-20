@@ -43,7 +43,7 @@
           responsive="screen"
           class="swatch-grid"
         >
-          <n-grid-item v-for="color in colors" :key="color.hex">
+          <n-grid-item v-for="color in colors" :key="color.hex" class="swatch-grid-item">
             <CopyToClipboardTooltip :content="color.hex" #="{ copy }">
               <button
                 type="button"
@@ -193,23 +193,30 @@ function formatPercent(value: number): string {
   margin-top: 20px;
 }
 
+.swatch-grid-item {
+  display: flex;
+  justify-content: center;
+}
+
 .swatch-card {
   border: 1px solid var(--n-border-color);
   border-radius: 12px;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-  row-gap: 4px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
   width: 100%;
+  max-width: 100px;
   aspect-ratio: 1 / 1;
-  padding: 8px;
+  padding: 6px;
   background: transparent;
   cursor: pointer;
-  justify-self: center;
+  white-space: nowrap;
 }
 
 .swatch-hex {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
@@ -222,7 +229,7 @@ function formatPercent(value: number): string {
 
 .swatch-percent {
   font-weight: 600;
-  font-size: 11px;
+  font-size: 10px;
   opacity: 0.9;
 }
 
