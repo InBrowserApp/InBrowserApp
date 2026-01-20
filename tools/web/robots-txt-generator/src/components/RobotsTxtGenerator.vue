@@ -1,5 +1,5 @@
 <template>
-  <n-space vertical :size="16">
+  <div class="robots-txt-generator">
     <n-alert type="warning" :show-icon="false" :title="t('securityNoticeTitle')">
       {{ t('securityNotice') }}
     </n-alert>
@@ -27,11 +27,7 @@
     <ToolSection>
       <n-space vertical :size="12">
         <n-text depth="3">{{ t('sitemaps') }}</n-text>
-        <n-dynamic-input
-          v-model:value="state.sitemaps"
-          item-style="margin-bottom: 0;"
-          :on-create="createSitemap"
-        >
+        <n-dynamic-input v-model:value="state.sitemaps" :on-create="createSitemap">
           <template #create-button-default>{{ t('addSitemap') }}</template>
           <template #default="{ index }">
             <n-input
@@ -79,11 +75,7 @@
 
           <n-space vertical :size="12" style="margin-top: 12px">
             <n-text depth="3">{{ t('userAgents') }}</n-text>
-            <n-dynamic-input
-              v-model:value="group.userAgents"
-              item-style="margin-bottom: 0;"
-              :on-create="createUserAgent"
-            >
+            <n-dynamic-input v-model:value="group.userAgents" :on-create="createUserAgent">
               <template #create-button-default>{{ t('addUserAgent') }}</template>
               <template #default="{ index: agentIndex }">
                 <n-input
@@ -92,14 +84,27 @@
                 />
               </template>
             </n-dynamic-input>
+            <n-text depth="3">{{ t('userAgentPresets') }}</n-text>
+            <n-flex :wrap="true" :size="8">
+              <n-button
+                size="small"
+                @click="addUserAgents(group, searchEngineUserAgents)"
+                data-testid="preset-useragent-search"
+              >
+                {{ t('presetSearchEngines') }}
+              </n-button>
+              <n-button
+                size="small"
+                @click="addUserAgents(group, aiUserAgents)"
+                data-testid="preset-useragent-ai"
+              >
+                {{ t('presetAiCrawlers') }}
+              </n-button>
+            </n-flex>
             <n-text depth="3">{{ t('userAgentHint') }}</n-text>
 
             <n-text depth="3">{{ t('rules') }}</n-text>
-            <n-dynamic-input
-              v-model:value="group.rules"
-              item-style="margin-bottom: 0;"
-              :on-create="createRule"
-            >
+            <n-dynamic-input v-model:value="group.rules" :on-create="createRule">
               <template #create-button-default>{{ t('addRule') }}</template>
               <template #default="{ index: ruleIndex }">
                 <n-flex align="center" :size="8" :wrap="true">
@@ -175,7 +180,7 @@
         />
       </n-space>
     </ToolSection>
-  </n-space>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -252,6 +257,55 @@ const ruleOptions = computed(() => [
 const createRule = (): RobotsRule => ({ type: 'disallow', path: '' })
 const createUserAgent = () => ''
 const createSitemap = () => ''
+
+const searchEngineUserAgents = [
+  'Googlebot',
+  'Bingbot',
+  'DuckDuckBot',
+  'Baiduspider',
+  'YandexBot',
+  'Applebot',
+  'Naverbot',
+  'SeznamBot',
+  'Sogou web spider',
+  'Qwantify',
+  'Yahoo! Slurp',
+  'Exabot',
+]
+
+const aiUserAgents = [
+  'GPTBot',
+  'ChatGPT-User',
+  'OAI-SearchBot',
+  'ClaudeBot',
+  'Claude-Web',
+  'PerplexityBot',
+  'CCBot',
+  'Google-Extended',
+  'Applebot-Extended',
+]
+
+const addUserAgents = (group: RobotsGroup, agents: string[]) => {
+  const cleaned = agents.map((agent) => agent.trim()).filter(Boolean)
+  if (cleaned.length === 0) return
+
+  const existing = group.userAgents.map((agent) => agent.trim()).filter(Boolean)
+  const hasOnlyWildcard =
+    existing.length <= 1 && existing.every((agent) => agent === '*' || agent.length === 0)
+
+  if (hasOnlyWildcard) {
+    group.userAgents = [...cleaned]
+    return
+  }
+
+  const normalized = new Set(existing.map((agent) => agent.toLowerCase()))
+  cleaned.forEach((agent) => {
+    const key = agent.toLowerCase()
+    if (normalized.has(key)) return
+    group.userAgents.push(agent)
+    normalized.add(key)
+  })
+}
 
 const addGroup = () => {
   state.value.groups.push(createGroup())
@@ -361,6 +415,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Remove group",
     "userAgents": "User agents",
     "userAgentPlaceholder": "* or Googlebot",
+    "userAgentPresets": "User-agent presets",
+    "presetSearchEngines": "Add search engine bots",
+    "presetAiCrawlers": "Add AI crawlers",
     "userAgentHint": "Empty user-agent defaults to *.",
     "addUserAgent": "Add user-agent",
     "rules": "Rules",
@@ -395,6 +452,9 @@ const downloadHref = computed(() =>
     "removeGroup": "移除分组",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* 或 Googlebot",
+    "userAgentPresets": "User-agent 预设",
+    "presetSearchEngines": "添加搜索引擎爬虫",
+    "presetAiCrawlers": "添加 AI 爬虫",
     "userAgentHint": "留空将默认使用 *。",
     "addUserAgent": "添加 User-agent",
     "rules": "规则",
@@ -429,6 +489,9 @@ const downloadHref = computed(() =>
     "removeGroup": "移除分组",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* 或 Googlebot",
+    "userAgentPresets": "User-agent 预设",
+    "presetSearchEngines": "添加搜索引擎爬虫",
+    "presetAiCrawlers": "添加 AI 爬虫",
     "userAgentHint": "留空将默认使用 *。",
     "addUserAgent": "添加 User-agent",
     "rules": "规则",
@@ -463,6 +526,9 @@ const downloadHref = computed(() =>
     "removeGroup": "移除分組",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* 或 Googlebot",
+    "userAgentPresets": "User-agent 預設",
+    "presetSearchEngines": "新增搜尋引擎爬蟲",
+    "presetAiCrawlers": "新增 AI 爬蟲",
     "userAgentHint": "留空將預設為 *。",
     "addUserAgent": "新增 User-agent",
     "rules": "規則",
@@ -497,6 +563,9 @@ const downloadHref = computed(() =>
     "removeGroup": "移除分組",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* 或 Googlebot",
+    "userAgentPresets": "User-agent 預設",
+    "presetSearchEngines": "新增搜尋引擎爬蟲",
+    "presetAiCrawlers": "新增 AI 爬蟲",
     "userAgentHint": "留空將預設為 *。",
     "addUserAgent": "新增 User-agent",
     "rules": "規則",
@@ -531,6 +600,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Eliminar grupo",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* o Googlebot",
+    "userAgentPresets": "Preajustes de user-agent",
+    "presetSearchEngines": "Agregar bots de búsqueda",
+    "presetAiCrawlers": "Agregar rastreadores de IA",
     "userAgentHint": "Si está vacío, se usa *.",
     "addUserAgent": "Agregar user-agent",
     "rules": "Reglas",
@@ -565,6 +637,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Supprimer le groupe",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* ou Googlebot",
+    "userAgentPresets": "Préréglages de user-agent",
+    "presetSearchEngines": "Ajouter les bots de recherche",
+    "presetAiCrawlers": "Ajouter les crawlers IA",
     "userAgentHint": "Vide = * par défaut.",
     "addUserAgent": "Ajouter un user-agent",
     "rules": "Règles",
@@ -599,6 +674,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Gruppe entfernen",
     "userAgents": "User-Agents",
     "userAgentPlaceholder": "* oder Googlebot",
+    "userAgentPresets": "User-Agent-Voreinstellungen",
+    "presetSearchEngines": "Suchmaschinen-Bots hinzufügen",
+    "presetAiCrawlers": "KI-Crawler hinzufügen",
     "userAgentHint": "Leer bedeutet standardmäßig *.",
     "addUserAgent": "User-Agent hinzufügen",
     "rules": "Regeln",
@@ -633,6 +711,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Rimuovi gruppo",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* o Googlebot",
+    "userAgentPresets": "Preset user-agent",
+    "presetSearchEngines": "Aggiungi bot dei motori di ricerca",
+    "presetAiCrawlers": "Aggiungi crawler IA",
     "userAgentHint": "Vuoto = * di default.",
     "addUserAgent": "Aggiungi user-agent",
     "rules": "Regole",
@@ -667,6 +748,9 @@ const downloadHref = computed(() =>
     "removeGroup": "グループを削除",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* または Googlebot",
+    "userAgentPresets": "User-agent プリセット",
+    "presetSearchEngines": "検索エンジンボットを追加",
+    "presetAiCrawlers": "AI クローラーを追加",
     "userAgentHint": "空の場合は * が使われます。",
     "addUserAgent": "User-agent を追加",
     "rules": "ルール",
@@ -701,6 +785,9 @@ const downloadHref = computed(() =>
     "removeGroup": "그룹 삭제",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* 또는 Googlebot",
+    "userAgentPresets": "User-agent 프리셋",
+    "presetSearchEngines": "검색 엔진 봇 추가",
+    "presetAiCrawlers": "AI 크롤러 추가",
     "userAgentHint": "비어 있으면 기본값은 * 입니다.",
     "addUserAgent": "User-agent 추가",
     "rules": "규칙",
@@ -735,6 +822,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Удалить группу",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* или Googlebot",
+    "userAgentPresets": "Пресеты User-agent",
+    "presetSearchEngines": "Добавить поисковых ботов",
+    "presetAiCrawlers": "Добавить AI-краулеров",
     "userAgentHint": "Пусто = по умолчанию *.",
     "addUserAgent": "Добавить user-agent",
     "rules": "Правила",
@@ -769,6 +859,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Remover grupo",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* ou Googlebot",
+    "userAgentPresets": "Predefinições de user-agent",
+    "presetSearchEngines": "Adicionar bots de busca",
+    "presetAiCrawlers": "Adicionar crawlers de IA",
     "userAgentHint": "Vazio significa * por padrão.",
     "addUserAgent": "Adicionar user-agent",
     "rules": "Regras",
@@ -803,6 +896,9 @@ const downloadHref = computed(() =>
     "removeGroup": "إزالة المجموعة",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* أو Googlebot",
+    "userAgentPresets": "إعدادات مسبقة لوكيل المستخدم",
+    "presetSearchEngines": "إضافة روبوتات محركات البحث",
+    "presetAiCrawlers": "إضافة زواحف الذكاء الاصطناعي",
     "userAgentHint": "عند تركه فارغًا يكون الافتراضي *.",
     "addUserAgent": "إضافة User-agent",
     "rules": "القواعد",
@@ -837,6 +933,9 @@ const downloadHref = computed(() =>
     "removeGroup": "समूह हटाएं",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* या Googlebot",
+    "userAgentPresets": "User-agent प्रीसेट",
+    "presetSearchEngines": "सर्च इंजन बॉट जोड़ें",
+    "presetAiCrawlers": "AI क्रॉलर जोड़ें",
     "userAgentHint": "खाली होने पर डिफ़ॉल्ट * होगा।",
     "addUserAgent": "User-agent जोड़ें",
     "rules": "नियम",
@@ -871,6 +970,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Grubu kaldır",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* veya Googlebot",
+    "userAgentPresets": "User-agent ön ayarları",
+    "presetSearchEngines": "Arama motoru botlarını ekle",
+    "presetAiCrawlers": "AI tarayıcılarını ekle",
     "userAgentHint": "Boşsa varsayılan * olur.",
     "addUserAgent": "User-agent ekle",
     "rules": "Kurallar",
@@ -905,6 +1007,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Groep verwijderen",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* of Googlebot",
+    "userAgentPresets": "User-agent-voorinstellingen",
+    "presetSearchEngines": "Zoekmachinebots toevoegen",
+    "presetAiCrawlers": "AI-crawlers toevoegen",
     "userAgentHint": "Leeg betekent standaard *.",
     "addUserAgent": "User-agent toevoegen",
     "rules": "Regels",
@@ -939,6 +1044,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Ta bort grupp",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* eller Googlebot",
+    "userAgentPresets": "Förinställningar för user-agent",
+    "presetSearchEngines": "Lägg till sökmotorbotar",
+    "presetAiCrawlers": "Lägg till AI-crawlare",
     "userAgentHint": "Tomt betyder * som standard.",
     "addUserAgent": "Lägg till user-agent",
     "rules": "Regler",
@@ -973,6 +1081,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Usuń grupę",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* lub Googlebot",
+    "userAgentPresets": "Presety user-agent",
+    "presetSearchEngines": "Dodaj boty wyszukiwarek",
+    "presetAiCrawlers": "Dodaj crawlery AI",
     "userAgentHint": "Puste oznacza domyślnie *.",
     "addUserAgent": "Dodaj user-agent",
     "rules": "Reguły",
@@ -1007,6 +1118,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Xóa nhóm",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* hoặc Googlebot",
+    "userAgentPresets": "Mẫu user-agent",
+    "presetSearchEngines": "Thêm bot công cụ tìm kiếm",
+    "presetAiCrawlers": "Thêm trình thu thập AI",
     "userAgentHint": "Để trống sẽ mặc định là *.",
     "addUserAgent": "Thêm user-agent",
     "rules": "Quy tắc",
@@ -1041,6 +1155,9 @@ const downloadHref = computed(() =>
     "removeGroup": "ลบกลุ่ม",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* หรือ Googlebot",
+    "userAgentPresets": "พรีเซ็ต User-agent",
+    "presetSearchEngines": "เพิ่มบอตเครื่องมือค้นหา",
+    "presetAiCrawlers": "เพิ่มบอต AI",
     "userAgentHint": "เว้นว่างจะใช้ค่าเริ่มต้นเป็น *",
     "addUserAgent": "เพิ่ม User-agent",
     "rules": "กฎ",
@@ -1075,6 +1192,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Hapus grup",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* atau Googlebot",
+    "userAgentPresets": "Preset user-agent",
+    "presetSearchEngines": "Tambahkan bot mesin pencari",
+    "presetAiCrawlers": "Tambahkan perayap AI",
     "userAgentHint": "Kosong berarti * secara default.",
     "addUserAgent": "Tambahkan user-agent",
     "rules": "Aturan",
@@ -1109,6 +1229,9 @@ const downloadHref = computed(() =>
     "removeGroup": "הסר קבוצה",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* או Googlebot",
+    "userAgentPresets": "הגדרות מראש ל-User-agent",
+    "presetSearchEngines": "הוסף בוטים של מנועי חיפוש",
+    "presetAiCrawlers": "הוסף זחלני AI",
     "userAgentHint": "ריק הוא ברירת המחדל *.",
     "addUserAgent": "הוסף User-agent",
     "rules": "כללים",
@@ -1143,6 +1266,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Buang kumpulan",
     "userAgents": "User-agent",
     "userAgentPlaceholder": "* atau Googlebot",
+    "userAgentPresets": "Praset user-agent",
+    "presetSearchEngines": "Tambah bot enjin carian",
+    "presetAiCrawlers": "Tambah perayap AI",
     "userAgentHint": "Kosong akan guna * secara lalai.",
     "addUserAgent": "Tambah user-agent",
     "rules": "Peraturan",
@@ -1177,6 +1303,9 @@ const downloadHref = computed(() =>
     "removeGroup": "Fjern gruppe",
     "userAgents": "User-agents",
     "userAgentPlaceholder": "* eller Googlebot",
+    "userAgentPresets": "User-agent-forhåndsinnstillinger",
+    "presetSearchEngines": "Legg til søkemotorroboter",
+    "presetAiCrawlers": "Legg til AI-crawlere",
     "userAgentHint": "Tomt betyr * som standard.",
     "addUserAgent": "Legg til user-agent",
     "rules": "Regler",
@@ -1196,3 +1325,11 @@ const downloadHref = computed(() =>
   }
 }
 </i18n>
+
+<style scoped>
+.robots-txt-generator {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+</style>

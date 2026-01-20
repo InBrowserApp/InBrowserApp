@@ -96,6 +96,19 @@ describe('RobotsTxtGeneratorView', () => {
     expect(wrapper.get('[data-testid="download-robots"]').attributes('href')).toBe('blob:mock')
   })
 
+  it('adds user-agent presets', async () => {
+    const wrapper = mount(RobotsTxtGeneratorView, mountOptions)
+    await flushPromises()
+
+    await wrapper.get('[data-testid="preset-useragent-search"]').trigger('click')
+    await flushPromises()
+    expect(getOutput(wrapper)).toContain('User-agent: Googlebot')
+
+    await wrapper.get('[data-testid="preset-useragent-ai"]').trigger('click')
+    await flushPromises()
+    expect(getOutput(wrapper)).toContain('User-agent: GPTBot')
+  })
+
   it('applies presets and manages groups', async () => {
     const wrapper = mount(RobotsTxtGeneratorView, mountOptions)
     await flushPromises()
