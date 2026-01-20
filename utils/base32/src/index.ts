@@ -31,8 +31,11 @@ function validateBase32Input(value: string): ValidationResult {
     return { normalized, trimmed: '', padding: 0 }
   }
 
-  const paddingMatch = normalized.match(/=+$/)
-  const padding = paddingMatch ? paddingMatch[0].length : 0
+  let padding = 0
+  for (let i = normalized.length - 1; i >= 0; i -= 1) {
+    if (normalized[i] !== BASE32_PADDING) break
+    padding += 1
+  }
   const trimmed = padding ? normalized.slice(0, -padding) : normalized
 
   if (normalized.slice(0, normalized.length - padding).includes(BASE32_PADDING)) {
