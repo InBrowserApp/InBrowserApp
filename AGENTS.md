@@ -21,6 +21,11 @@
 - `pnpm test:e2e`: Run Playwright E2E tests (requires `pnpm exec playwright install`).
 - `pnpm -F <package-name> <command>`: Run commands in a specific workspace package.
 
+## Dependency Management
+- Use pnpm catalogs for third-party dependencies; prefer `catalog:` specifiers in package.json.
+- Install new deps via `pnpm add --save-catalog <pkg>` (use `-F <package>` for workspace packages).
+- Keep `ua-parser-js` on v1 due to license constraints.
+
 ## Coding Style & Naming Conventions
 - TypeScript + Vue Composition API with `<script setup lang="ts">`.
 - Prettier: no semicolons, single quotes, `printWidth: 100`.

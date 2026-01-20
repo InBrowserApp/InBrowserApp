@@ -8,7 +8,7 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@peculiar/x509": "^1.14.3",
+    "@peculiar/x509": "catalog:",
     "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
