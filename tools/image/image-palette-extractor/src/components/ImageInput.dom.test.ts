@@ -1,8 +1,10 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
-import { NMessageProvider } from 'naive-ui'
+import { NMessageProvider, type UploadFileInfo } from 'naive-ui'
 import ImageInput from './ImageInput.vue'
+
+type ImageInputProps = InstanceType<typeof ImageInput>['$props']
 
 const ToolSectionStub = {
   template: '<div><slot /></div>',
@@ -54,7 +56,7 @@ const ParagraphStub = defineComponent({
   template: '<p><slot /></p>',
 })
 
-const mountWithProvider = (props: Record<string, unknown>) =>
+const mountWithProvider = (props: ImageInputProps) =>
   mount(
     defineComponent({
       render() {
@@ -94,9 +96,15 @@ describe('ImageInput', () => {
   it('emits update when a file is uploaded', () => {
     const wrapper = mountWithProvider({ file: null })
     const file = new File(['data'], 'sample.png', { type: 'image/png' })
+    const uploadFile: UploadFileInfo = {
+      id: 'upload',
+      name: file.name,
+      status: 'finished',
+      file,
+    }
 
     const input = wrapper.findComponent(ImageInput)
-    input.vm.handleBeforeUpload({ file: { file }, fileList: [{ file }] })
+    input.vm.handleBeforeUpload({ file: uploadFile, fileList: [uploadFile] })
     const emitted = input.emitted('update:file')
     expect(emitted?.[0]).toEqual([file])
   })

@@ -159,7 +159,7 @@ export function extractPalette(
     const g = (data[i + 1] ?? 0) >> RSHIFT
     const b = (data[i + 2] ?? 0) >> RSHIFT
     const index = getColorIndex(r, g, b)
-    histo[index] += 1
+    histo[index] = (histo[index] ?? 0) + 1
     totalPixels += 1
   }
 

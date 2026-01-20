@@ -3,7 +3,7 @@ import { extractPalette } from './extract-palette'
 
 function createImageData(data: Uint8ClampedArray, width: number, height: number): ImageData {
   if (typeof ImageData !== 'undefined') {
-    return new ImageData(data, width, height)
+    return new ImageData(data as ImageDataArray, width, height)
   }
   return { data, width, height } as ImageData
 }
