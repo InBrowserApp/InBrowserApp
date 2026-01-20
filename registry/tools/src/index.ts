@@ -41,6 +41,8 @@ import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-t
 import { toolInfo as blake2sHashTextOrFileToolInfo } from '@tools/blake2s-hash-text-or-file'
 import { toolInfo as hmacGeneratorToolInfo } from '@tools/hmac-generator'
 import { toolInfo as urlComponentEncoderDecoderToolInfo } from '@tools/url-component-encoder-decoder'
+import { toolInfo as base32EncoderToolInfo } from '@tools/base32-encoder'
+import { toolInfo as base32DecoderToolInfo } from '@tools/base32-decoder'
 import { toolInfo as base64EncoderDecoderToolInfo } from '@tools/base64-encoder-decoder'
 import { toolInfo as fileToDataUriConverterToolInfo } from '@tools/file-to-data-uri-converter'
 import { toolInfo as dataUriToFileConverterToolInfo } from '@tools/data-uri-to-file-converter'
@@ -202,6 +204,8 @@ export const tools: ToolInfo[] = [
 
   // Web Tools
   urlComponentEncoderDecoderToolInfo,
+  base32EncoderToolInfo,
+  base32DecoderToolInfo,
   base64EncoderDecoderToolInfo,
   fileToDataUriConverterToolInfo,
   dataUriToFileConverterToolInfo,
