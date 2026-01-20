@@ -104,12 +104,12 @@
               <template #default="{ index: ruleIndex }">
                 <n-flex align="center" :size="8" :wrap="true">
                   <n-select
-                    v-model:value="group.rules[ruleIndex].type"
+                    v-model:value="group.rules[ruleIndex]!.type"
                     :options="ruleOptions"
                     style="width: 140px"
                   />
                   <n-input
-                    v-model:value="group.rules[ruleIndex].path"
+                    v-model:value="group.rules[ruleIndex]!.path"
                     :placeholder="t('pathPlaceholder')"
                     style="flex: 1; min-width: 200px"
                     :data-testid="`rule-path-${index}-${ruleIndex}`"
