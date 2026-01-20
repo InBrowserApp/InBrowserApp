@@ -5,7 +5,7 @@
       <TextOrFileInput
         v-model:value="textOrFile"
         :placeholder="t('input-placeholder')"
-        accept="text/*,.txt,.log,.md,.json,.csv,.yaml,.yml"
+        accept="*/*"
       />
     </ToolSection>
 
@@ -54,7 +54,7 @@ import { encodeBase32 } from '@utils/base32'
 
 const { t } = useI18n()
 
-const storedText = useStorage('tools:base32-encoder:text', 'Hello World!')
+const storedText = useStorage('tools:base32-encoder:text', '')
 const textOrFile = ref<string | File>(storedText.value)
 const encodedText = ref('')
 const error = ref('')
