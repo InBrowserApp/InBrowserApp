@@ -14,7 +14,7 @@
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",
-    "gitignore": "github:github/gitignore",
+    "gitignore": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:"

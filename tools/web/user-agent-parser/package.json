@@ -14,11 +14,11 @@
     "@vueuse/core": "catalog:",
     "highlight.js": "catalog:",
     "naive-ui": "catalog:",
-    "ua-parser-js": "^1.0.39",
+    "ua-parser-js": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:"
   },
   "devDependencies": {
-    "@types/ua-parser-js": "^0.7.39"
+    "@types/ua-parser-js": "catalog:"
   }
 }

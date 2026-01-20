@@ -13,7 +13,7 @@
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",
-    "transliteration": "^2.6.0",
+    "transliteration": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:"
   }

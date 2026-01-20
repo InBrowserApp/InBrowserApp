@@ -58,6 +58,11 @@ pnpm -F <package-name> <command>           # Run in specific package
 pnpm -F @registry/tools add --workspace @tools/<name>  # Add tool to registry
 ```
 
+## Dependency Management
+- Use pnpm catalogs for third-party dependencies and keep `catalog:` specifiers in package.json.
+- Install new deps with `pnpm add --save-catalog <pkg>` (add `-F <package>` for workspace packages).
+- Keep `ua-parser-js` on v1 due to license constraints.
+
 ## Architecture Overview
 
 Vue 3 + TypeScript monorepo using pnpm workspaces. All tools run entirely client-side in the browser.

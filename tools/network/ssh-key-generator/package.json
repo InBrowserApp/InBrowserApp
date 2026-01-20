@@ -8,7 +8,7 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@noble/ed25519": "^3.0.0",
+    "@noble/ed25519": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vicons/fluent": "catalog:",
