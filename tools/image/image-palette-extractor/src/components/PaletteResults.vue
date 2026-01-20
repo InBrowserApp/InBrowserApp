@@ -3,36 +3,38 @@
     <ToolSectionHeader>{{ t('results') }}</ToolSectionHeader>
     <n-spin :show="isLoading">
       <template v-if="colors.length">
-        <div class="palette-bar">
-          <div
-            v-for="color in colors"
-            :key="color.hex"
-            class="palette-slice"
-            :style="{ backgroundColor: color.hex, flex: color.count }"
-            :title="`${color.hex} · ${formatPercent(color.ratio)}`"
-          />
-        </div>
+        <n-flex vertical :size="16" class="overview-stack">
+          <div class="palette-bar">
+            <div
+              v-for="color in colors"
+              :key="color.hex"
+              class="palette-slice"
+              :style="{ backgroundColor: color.hex, flex: color.count }"
+              :title="`${color.hex} · ${formatPercent(color.ratio)}`"
+            />
+          </div>
 
-        <n-grid cols="1 700:3" :x-gap="16" :y-gap="16" class="stats-grid">
-          <n-grid-item>
-            <n-statistic :label="t('colorCount')">
-              {{ colors.length }}
-            </n-statistic>
-          </n-grid-item>
-          <n-grid-item>
-            <n-statistic :label="t('pixels')">
-              {{ formattedPixels }}
-            </n-statistic>
-          </n-grid-item>
-          <n-grid-item>
-            <n-statistic :label="t('dominant')">
-              <n-flex align="center" :size="8">
-                <span class="dominant-dot" :style="{ backgroundColor: dominantColor?.hex }" />
-                <span>{{ dominantColor?.hex }}</span>
-              </n-flex>
-            </n-statistic>
-          </n-grid-item>
-        </n-grid>
+          <n-grid cols="1 700:3" :x-gap="16" :y-gap="16" class="stats-grid">
+            <n-grid-item>
+              <n-statistic :label="t('colorCount')">
+                {{ colors.length }}
+              </n-statistic>
+            </n-grid-item>
+            <n-grid-item>
+              <n-statistic :label="t('pixels')">
+                {{ formattedPixels }}
+              </n-statistic>
+            </n-grid-item>
+            <n-grid-item>
+              <n-statistic :label="t('dominant')">
+                <n-flex align="center" :size="8">
+                  <span class="dominant-dot" :style="{ backgroundColor: dominantColor?.hex }" />
+                  <span>{{ dominantColor?.hex }}</span>
+                </n-flex>
+              </n-statistic>
+            </n-grid-item>
+          </n-grid>
+        </n-flex>
 
         <n-grid cols="1 s:2 l:3" :x-gap="16" :y-gap="16" class="swatch-grid">
           <n-grid-item v-for="color in colors" :key="color.hex">
@@ -41,16 +43,25 @@
                 class="swatch-chip"
                 :style="{ backgroundColor: color.hex, color: color.textColor }"
               >
-                <span>{{ color.hex }}</span>
-                <CopyToClipboardButton :content="color.hex" size="tiny" />
+                <div class="swatch-chip-header">
+                  <span class="swatch-hex">{{ color.hex }}</span>
+                  <CopyToClipboardButton
+                    :content="color.hex"
+                    size="tiny"
+                    :aria-label="t('copy')"
+                    class="swatch-copy"
+                  >
+                    <template #label />
+                  </CopyToClipboardButton>
+                </div>
+                <div class="swatch-chip-footer">
+                  <span class="swatch-percent">{{ formatPercent(color.ratio) }}</span>
+                  <span class="swatch-hint">{{ t('shareHint') }}</span>
+                </div>
               </div>
-              <div class="swatch-meta">
-                <span>{{ color.rgb }}</span>
-                <span>{{ color.hsl }}</span>
-              </div>
-              <div class="swatch-actions">
-                <span class="swatch-percent">{{ formatPercent(color.ratio) }}</span>
-                <span class="swatch-hint">{{ t('shareHint') }}</span>
+              <div class="swatch-body">
+                <span class="swatch-value">{{ color.rgb }}</span>
+                <span class="swatch-value">{{ color.hsl }}</span>
               </div>
             </div>
           </n-grid-item>
@@ -80,6 +91,7 @@
               {{ t('copy') }}
             </CopyToClipboardButton>
             <n-button
+              text
               tag="a"
               :href="downloadUrl ?? undefined"
               :download="downloadName"
@@ -185,17 +197,13 @@ function formatPercent(value: number): string {
   min-width: 6px;
 }
 
-.stats-grid {
-  margin-top: 16px;
-}
-
 .swatch-grid {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .swatch-card {
   border: 1px solid var(--n-border-color);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   background: var(--n-color);
   display: flex;
@@ -203,35 +211,51 @@ function formatPercent(value: number): string {
 }
 
 .swatch-chip {
-  padding: 14px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 84px;
+}
+
+.swatch-chip-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
-.swatch-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px 16px 8px;
-  font-size: 12px;
-  color: var(--n-text-color-3);
+.swatch-hex {
+  font-size: 15px;
 }
 
-.swatch-actions {
-  padding: 0 16px 14px;
+.swatch-chip-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 12px;
+}
+
+.swatch-body {
+  padding: 12px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-size: 12px;
   color: var(--n-text-color-3);
 }
 
 .swatch-percent {
   font-weight: 600;
+}
+
+.swatch-value {
   color: var(--n-text-color-2);
+}
+
+.swatch-hint {
+  opacity: 0.7;
 }
 
 .dominant-dot {
