@@ -19,6 +19,7 @@ import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
 import { routes as imageToIcoRoutes } from '@tools/image-to-ico/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
 import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
+import { routes as imagePaletteExtractorRoutes } from '@tools/image-palette-extractor/routes'
 import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
@@ -157,6 +158,7 @@ export const routes: ToolRoute[] = [
   ...svgToImageConverterRoutes,
   ...exifViewerRoutes,
   ...imageMetadataCleanerRoutes,
+  ...imagePaletteExtractorRoutes,
   ...networkToolsRoutes,
   ...pdfToolsRoutes,
   ...imageToolsRoutes,
