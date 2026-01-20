@@ -37,28 +37,30 @@
           </n-descriptions>
 
           <n-form label-placement="top" :show-feedback="false" class="fingerprint-form">
-            <n-form-item :label="t('fingerprintSha256')">
-              <n-flex align="center" :wrap="false" class="fingerprint-row">
-                <n-input
-                  :value="entry.fingerprints.sha256"
-                  size="small"
-                  readonly
-                  class="monospace-input fingerprint-input"
-                />
-                <CopyToClipboardButton :content="entry.fingerprints.sha256" />
-              </n-flex>
-            </n-form-item>
-            <n-form-item :label="t('fingerprintMd5')">
-              <n-flex align="center" :wrap="false" class="fingerprint-row">
-                <n-input
-                  :value="entry.fingerprints.md5"
-                  size="small"
-                  readonly
-                  class="monospace-input fingerprint-input"
-                />
-                <CopyToClipboardButton :content="entry.fingerprints.md5" />
-              </n-flex>
-            </n-form-item>
+            <n-flex vertical :size="12" class="fingerprint-list">
+              <n-form-item :label="t('fingerprintSha256')">
+                <n-flex align="center" :wrap="false" class="fingerprint-row">
+                  <n-input
+                    :value="entry.fingerprints.sha256"
+                    size="small"
+                    readonly
+                    class="monospace-input fingerprint-input"
+                  />
+                  <CopyToClipboardButton :content="entry.fingerprints.sha256" />
+                </n-flex>
+              </n-form-item>
+              <n-form-item :label="t('fingerprintMd5')">
+                <n-flex align="center" :wrap="false" class="fingerprint-row">
+                  <n-input
+                    :value="entry.fingerprints.md5"
+                    size="small"
+                    readonly
+                    class="monospace-input fingerprint-input"
+                  />
+                  <CopyToClipboardButton :content="entry.fingerprints.md5" />
+                </n-flex>
+              </n-form-item>
+            </n-flex>
           </n-form>
         </n-card>
       </n-gi>
@@ -162,7 +164,10 @@ function formatKeySize(value?: number) {
   font-family:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-  word-break: break-all;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+  overflow-x: auto;
 }
 
 .monospace-input :deep(input) {
@@ -173,6 +178,14 @@ function formatKeySize(value?: number) {
 
 .fingerprint-form {
   margin-top: 12px;
+}
+
+.fingerprint-form :deep(.n-form-item) {
+  margin-bottom: 0;
+}
+
+.fingerprint-list {
+  width: 100%;
 }
 
 .fingerprint-row {
