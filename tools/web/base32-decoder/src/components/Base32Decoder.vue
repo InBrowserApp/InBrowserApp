@@ -123,10 +123,10 @@ const isTruncated = computed(() => decodedText.value.length > 2000)
 const downloadBlob = computed(() => {
   if (!decodedBytes.value) return null
   const bytes = decodedBytes.value
-  const buffer =
-    bytes.byteOffset === 0 && bytes.byteLength === bytes.buffer.byteLength
-      ? bytes.buffer
-      : bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)
+  const buffer = bytes.buffer.slice(
+    bytes.byteOffset,
+    bytes.byteOffset + bytes.byteLength,
+  ) as ArrayBuffer
   return new Blob([buffer], { type: 'application/octet-stream' })
 })
 const downloadUrl = useObjectUrl(downloadBlob)
