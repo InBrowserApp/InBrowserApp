@@ -1,12 +1,10 @@
 <template>
-  <ToolSectionHeader>
-    <span class="tools-heading">
-      <span class="tools-heading-title">{{ t('title') }}</span>
-      <span v-if="toolsCount !== undefined" class="tools-heading-count">
-        {{ t('count', { count: toolsCount }) }}
-      </span>
+  <div class="tools-heading">
+    <ToolTitle class="tools-heading-title">{{ t('title') }}</ToolTitle>
+    <span v-if="toolsCount !== undefined" class="tools-heading-count">
+      {{ t('count', { count: toolsCount }) }}
     </span>
-  </ToolSectionHeader>
+  </div>
   <ToolSection>
     <ToolsGrid :tools="tools" />
   </ToolSection>
@@ -16,7 +14,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
-import { ToolsGrid, ToolSectionHeader, ToolSection } from '@shared/ui/tool'
+import { ToolsGrid, ToolTitle, ToolSection } from '@shared/ui/tool'
 import { computedAsync } from '@vueuse/core'
 
 const { t } = useI18n()
@@ -166,12 +164,16 @@ useHead({
 
 <style scoped>
 .tools-heading {
-  display: inline-flex;
+  display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   width: 100%;
   column-gap: 12px;
   row-gap: 6px;
+}
+
+.tools-heading-title {
+  margin: 0;
 }
 
 .tools-heading-count {
