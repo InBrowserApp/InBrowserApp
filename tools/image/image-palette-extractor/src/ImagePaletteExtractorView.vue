@@ -276,7 +276,7 @@ async function resolveSvgDimensions(file: File): Promise<{ width: number; height
 }
 
 function getSvgAttribute(tag: string, name: string): string | null {
-  const match = tag.match(new RegExp(`\\\\s${name}=[\"']([^\"']+)[\"']`, 'i'))
+  const match = tag.match(new RegExp(`\\\\s${name}=["']([^"']+)["']`, 'i'))
   return match?.[1] ?? null
 }
 
