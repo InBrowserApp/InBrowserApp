@@ -212,6 +212,7 @@ function formatPercent(value: number): string {
   background: transparent;
   cursor: pointer;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
 }
 
 .swatch-hex {
