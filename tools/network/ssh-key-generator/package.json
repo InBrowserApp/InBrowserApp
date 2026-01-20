@@ -8,10 +8,10 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@noble/ed25519": "^2.2.3",
-    "@vicons/fluent": "catalog:",
+    "@noble/ed25519": "^3.0.0",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",

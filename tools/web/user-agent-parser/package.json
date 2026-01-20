@@ -8,13 +8,13 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@vueuse/core": "catalog:",
     "highlight.js": "catalog:",
     "naive-ui": "catalog:",
-    "ua-parser-js": "^1.0.39",
+    "ua-parser-js": "^2.0.8",
     "vue": "catalog:",
     "vue-i18n": "catalog:"
   },

@@ -115,7 +115,7 @@ export async function calculateFingerprint(publicKey: string): Promise<string> {
 
 export async function generateEd25519KeyPair(comment: string = ''): Promise<SshKeyPair> {
   // Generate Ed25519 key pair using @noble/ed25519
-  const privateKeyBytes = ed25519.utils.randomPrivateKey()
+  const privateKeyBytes = ed25519.utils.randomSecretKey()
   const publicKeyBytes = await ed25519.getPublicKeyAsync(privateKeyBytes)
 
   // Build OpenSSH public key format
