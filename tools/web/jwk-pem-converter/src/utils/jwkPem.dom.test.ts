@@ -255,7 +255,7 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 
   it('converts PKCS1 RSA PEM blocks', async () => {
     const { privateKey, publicKey } = generateKeyPairSync('rsa', {
-      modulusLength: 1024,
+      modulusLength: 2048,
       publicExponent: 0x10001,
     })
     const pkcs1Private = privateKey.export({ format: 'pem', type: 'pkcs1' }).toString()
