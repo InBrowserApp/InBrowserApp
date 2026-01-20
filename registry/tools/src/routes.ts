@@ -108,6 +108,7 @@ import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as regexTesterReplacerRoutes } from '@tools/regex-tester-replacer/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
+import { routes as emailValidatorRoutes } from '@tools/email-validator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
@@ -235,6 +236,7 @@ export const routes: ToolRoute[] = [
   ...regexTesterReplacerRoutes,
   ...loremIpsumGeneratorRoutes,
   ...gitignoreGeneratorRoutes,
+  ...emailValidatorRoutes,
   ...creditCardValidatorRoutes,
   ...prcIdValidatorRoutes,
   ...isbnValidatorRoutes,
