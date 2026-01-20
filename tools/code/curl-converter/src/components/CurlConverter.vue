@@ -13,8 +13,18 @@
         />
       </n-flex>
       <n-flex :wrap="true" :size="12">
-        <n-button text @click="applySample">{{ t('sample') }}</n-button>
-        <n-button text @click="clearInput">{{ t('clear') }}</n-button>
+        <n-button text @click="applySample">
+          <template #icon>
+            <n-icon :component="ClipboardPaste16Regular" />
+          </template>
+          {{ t('sample') }}
+        </n-button>
+        <n-button text @click="clearInput">
+          <template #icon>
+            <n-icon :component="Delete16Regular" />
+          </template>
+          {{ t('clear') }}
+        </n-button>
         <CopyToClipboardButton :content="outputText" />
         <n-button tag="a" text :href="downloadUrl ?? undefined" :download="downloadFilename">
           <template #icon>
@@ -76,6 +86,8 @@ import type { SelectGroupOption, SelectOption } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import ClipboardPaste16Regular from '@vicons/fluent/ClipboardPaste16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import hljs from 'highlight.js/lib/core'
 import bash from 'highlight.js/lib/languages/bash'
 import c from 'highlight.js/lib/languages/c'
