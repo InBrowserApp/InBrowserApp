@@ -5,7 +5,7 @@
       <ToolSection>
         <TextOrFileInput
           v-model:value="jwkInput"
-          class="monospace-input"
+          class="monospace-field"
           :placeholder="t('jwkInputPlaceholder')"
           :accept="jwkAccept"
           :status="jwkInputStatus"
@@ -37,6 +37,7 @@
       <ToolSectionHeader v-if="jwkOutput">{{ t('outputTitle') }}</ToolSectionHeader>
       <ToolSection v-if="jwkOutput">
         <n-input
+          class="monospace-field"
           :value="jwkOutput"
           type="textarea"
           :autosize="{ minRows: 6, maxRows: 14 }"
@@ -61,7 +62,7 @@
       <ToolSection>
         <TextOrFileInput
           v-model:value="pemInput"
-          class="monospace-input"
+          class="monospace-field"
           :placeholder="t('pemInputPlaceholder')"
           :accept="pemAccept"
           :status="pemInputStatus"
@@ -90,6 +91,7 @@
       <ToolSectionHeader v-if="pemOutput">{{ t('outputTitle') }}</ToolSectionHeader>
       <ToolSection v-if="pemOutput">
         <n-input
+          class="monospace-field"
           :value="pemOutput"
           type="textarea"
           :autosize="{ minRows: 6, maxRows: 14 }"
@@ -339,7 +341,7 @@ function formatError(error: unknown): string {
 </script>
 
 <style scoped>
-.monospace-input :deep(textarea) {
+.monospace-field :deep(textarea) {
   font-family:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
