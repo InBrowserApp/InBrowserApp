@@ -85,7 +85,9 @@ import {
   NCollapseTransition,
 } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ArrowDownload16Regular, Document16Regular, Settings16Regular } from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Document16Regular from '@vicons/fluent/Document16Regular'
+import Settings16Regular from '@vicons/fluent/Settings16Regular'
 import { fileOpen } from 'browser-fs-access'
 
 const { t } = useI18n()

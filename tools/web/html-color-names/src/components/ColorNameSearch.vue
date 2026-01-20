@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { NFlex, NInput, NIcon, NRadioGroup, NRadioButton, NScrollbar } from 'naive-ui'
-import { Search20Regular as SearchIcon } from '@shared/icons/fluent'
+import SearchIcon from '@vicons/fluent/Search20Regular'
 import { colorCategories, categoryColors } from '../data/colorData'
 
 defineProps<{

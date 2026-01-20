@@ -1,5 +1,5 @@
 export const toolID = 'remove-pdf-owner-password'
-export { Key16Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key16Regular'
 export const path = '/tools/remove-pdf-owner-password'
 export const tags = ['pdf', 'password']
 export const features = ['offline']

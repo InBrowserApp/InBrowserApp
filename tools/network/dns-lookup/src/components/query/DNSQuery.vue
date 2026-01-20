@@ -24,7 +24,7 @@ import {
 } from '@shared/ui/domain/domain'
 import { NButton, NIcon } from 'naive-ui'
 import { makeDOHQuery } from '@utils/dns'
-import { DocumentSearch16Regular } from '@shared/icons/fluent'
+import DocumentSearch16Regular from '@vicons/fluent/DocumentSearch16Regular'
 import { useStorage } from '@vueuse/core'
 import { ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'

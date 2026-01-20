@@ -1,25 +1,26 @@
 {
-    "name": "@tools/markdown-to-html-converter",
-    "version": "0.0.0",
-    "private": true,
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./routes": "./src/routes.ts"
-    },
-    "dependencies": {
-        "@shared/icons": "workspace:*",
-        "@shared/tools": "workspace:*",
-        "@shared/ui": "workspace:*",
-        "@vueuse/core": "catalog:",
-        "highlight.js": "catalog:",
-        "browser-fs-access": "catalog:",
-        "dompurify": "catalog:",
-        "github-markdown-css": "catalog:",
-        "marked": "catalog:",
-        "naive-ui": "catalog:",
-        "vue": "catalog:",
-        "vue-i18n": "catalog:",
-        "vue-router": "catalog:"
-    }
+  "name": "@tools/markdown-to-html-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@vicons/fluent": "catalog:",
+    "@vicons/tabler": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "highlight.js": "catalog:",
+    "browser-fs-access": "catalog:",
+    "dompurify": "catalog:",
+    "github-markdown-css": "catalog:",
+    "marked": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
 }

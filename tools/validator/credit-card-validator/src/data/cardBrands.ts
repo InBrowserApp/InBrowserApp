@@ -6,7 +6,7 @@ import {
   DiscoverIcon,
   JcbIcon,
   DinersClubIcon,
-} from '@shared/icons/simple-icons'
+} from 'vue3-simple-icons'
 import { UnionPayIcon } from '../icons/UnionPayIcon'
 
 export interface CardBrand {

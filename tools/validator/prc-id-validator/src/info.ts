@@ -1,5 +1,4 @@
-export { TextNumberFormat20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/TextNumberFormat20Regular'
 export const toolID = 'prc-id-validator'
 export const path = '/tools/prc-id-validator'
 export const tags = ['resident-id', 'validator', 'china', 'prc', 'checksum', 'identity']

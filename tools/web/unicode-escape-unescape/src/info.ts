@@ -1,5 +1,4 @@
-export { LanguageOutline as icon } from '@shared/icons/ionicons5'
-
+export { default as icon } from '@vicons/ionicons5/LanguageOutline'
 export const toolID = 'unicode-escape-unescape'
 export const path = '/tools/unicode-escape-unescape'
 export const tags = ['web', 'text', 'encoding']

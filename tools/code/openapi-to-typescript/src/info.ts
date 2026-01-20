@@ -1,5 +1,4 @@
-export { BracesVariable20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/BracesVariable20Regular'
 export const toolID = 'openapi-to-typescript'
 export const path = '/tools/openapi-to-typescript'
 export const tags = ['openapi', 'typescript', 'codegen', 'api', 'schema']

@@ -19,7 +19,7 @@ import { ref, computed, watch } from 'vue'
 
 import { NInput, NIcon } from 'naive-ui'
 import validator from 'validator'
-import { RefreshOutline } from '@shared/icons/ionicons5'
+import RefreshOutline from '@vicons/ionicons5/RefreshOutline'
 import { randomMACAddress } from '@utils/mac-address'
 
 const props = defineProps<{

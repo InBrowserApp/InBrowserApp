@@ -1,5 +1,5 @@
 export const toolID = 'authenticator-inbrowser-app'
-export { ShieldKeyhole20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ShieldKeyhole20Regular'
 export const path = 'https://authenticator.inbrowser.app'
 export const tags = ['security', 'authentication', 'totp', 'hotp', '2fa']
 export const features = ['offline']

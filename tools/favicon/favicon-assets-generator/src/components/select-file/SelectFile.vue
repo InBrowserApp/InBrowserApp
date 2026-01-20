@@ -28,7 +28,7 @@
 import { useVModel, useObjectUrl } from '@vueuse/core'
 import ImageUpload from '../ImageUpload.vue'
 import { NButton, NP, NIcon } from 'naive-ui'
-import { Icons20Regular } from '@shared/icons/fluent'
+import Icons20Regular from '@vicons/fluent/Icons20Regular'
 import { getImageSize } from '@utils/image'
 import { computedAsync } from '@vueuse/core'
 import FaviconURL from './favicon.svg'

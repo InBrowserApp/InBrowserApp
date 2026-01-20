@@ -1,5 +1,4 @@
-export { Code20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Code20Regular'
 export const toolID = 'jsonpath-tester'
 
 export const path = '/tools/jsonpath-tester'

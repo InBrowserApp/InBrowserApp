@@ -1,5 +1,4 @@
-export { Code24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Code24Regular'
 export const toolID = 'jmespath-tester'
 
 export const path = '/tools/jmespath-tester'

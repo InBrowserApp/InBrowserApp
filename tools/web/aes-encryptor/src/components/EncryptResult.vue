@@ -78,7 +78,7 @@ import {
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import type { OutputMode, OutputFormat } from '@utils/aes'
 
 const props = defineProps<{

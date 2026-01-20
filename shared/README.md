@@ -5,7 +5,6 @@ This directory contains shared packages that can be used across different applic
 ## Structure
 
 - **`ui/`** - Shared Vue.js components and composables
-- **`icons/`** - Icon libraries and components
 - **`locale/`** - Internationalization (i18n) support
 - **`tools/`** - Tool interfaces, types, and metadata definitions
 
@@ -21,18 +20,6 @@ A comprehensive UI component library built with Vue 3 and Naive UI that includes
 - Domain-specific components (UUID, PDF, MAC address)
 - Layout components (navigation, tool layouts)
 - Tool-related components (grids, sections, headers)
-
-### @shared/icons
-
-Icon packages providing access to various icon libraries:
-
-- Ant Design icons
-- Carbon icons
-- Font Awesome icons
-- Fluent icons
-- Ionicons (v4 & v5)
-- Material icons
-- Tabler icons
 
 ### @shared/locale
 
@@ -56,9 +43,11 @@ All shared packages use the `@shared/*` namespace and can be imported by applica
 
 ```typescript
 import { UUIDInput, CopyToClipboardButton } from '@shared/ui'
-import { RefreshOutline } from '@shared/icons/ionicons5'
+import RefreshOutline from '@vicons/ionicons5/RefreshOutline'
 import { useI18n } from '@shared/locale'
 ```
+
+Icons are imported directly from `@vicons/<library>/<IconName>` (or `vue3-simple-icons`).
 
 ## Development
 

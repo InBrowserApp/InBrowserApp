@@ -1,5 +1,4 @@
-export { LanguageOutline as icon } from '@shared/icons/ionicons5'
-
+export { default as icon } from '@vicons/ionicons5/LanguageOutline'
 export const toolID = 'unicode-invisible-character-checker'
 export const path = '/tools/unicode-invisible-character-checker'
 export const tags = ['unicode', 'text', 'invisible', 'bidi', 'whitespace']

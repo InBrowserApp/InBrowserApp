@@ -1,5 +1,4 @@
-export { Payment20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Payment20Regular'
 export const toolID = 'credit-card-validator'
 export const path = '/tools/credit-card-validator'
 export const tags = ['credit-card', 'validator', 'luhn', 'payment', 'finance']

@@ -1,22 +1,22 @@
 {
-    "name": "@tools/cidr-parser",
-    "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./routes": "./src/routes.ts"
-    },
-    "dependencies": {
-        "@shared/icons": "workspace:*",
-        "@shared/tools": "workspace:*",
-        "@shared/ui": "workspace:*",
-        "@vueuse/core": "catalog:",
-        "cidr-tools": "catalog:",
-        "ip-bigint": "catalog:",
-        "naive-ui": "catalog:",
-        "vue": "catalog:",
-        "vue-i18n": "catalog:",
-        "vue-router": "catalog:"
-    }
+  "name": "@tools/cidr-parser",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@vicons/fluent": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "cidr-tools": "catalog:",
+    "ip-bigint": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
 }

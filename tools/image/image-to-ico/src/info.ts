@@ -1,5 +1,4 @@
-export { Image24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Image24Regular'
 export const toolID = 'image-to-ico'
 export const path = '/tools/image-to-ico'
 export const tags = ['image', 'ico', 'favicon', 'converter']

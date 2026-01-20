@@ -1,5 +1,5 @@
 export const toolID = 'xxhash-xxh64-hash-text-or-file'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/xxhash-xxh64-hash-text-or-file'
 export const tags = ['hash', 'xxhash', 'xxh64', 'checksum', 'performance', 'file', 'text', 'fast']
 export const features = ['offline']

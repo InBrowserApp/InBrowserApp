@@ -1,5 +1,4 @@
-export { Key24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const toolID = 'bip39-mnemonic-generator'
 export const path = '/tools/random/bip39-mnemonic-generator'
 export const tags = [

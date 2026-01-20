@@ -24,8 +24,7 @@ import { NInput, NButton, NInputGroup, NIcon } from 'naive-ui'
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { Search16Filled } from '@shared/icons/fluent'
-
+import Search16Filled from '@vicons/fluent/Search16Filled'
 const router = useRouter()
 const { t } = useI18n()
 

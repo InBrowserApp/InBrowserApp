@@ -27,7 +27,7 @@
 import { useI18n } from 'vue-i18n'
 import type { UploadFileInfo } from 'naive-ui'
 import { NUpload, NUploadDragger, NIcon, NText, NP } from 'naive-ui'
-import { Image24Regular as ImageIcon } from '@shared/icons/fluent'
+import ImageIcon from '@vicons/fluent/Image24Regular'
 import { ToolSection } from '@shared/ui/tool'
 
 defineProps<{

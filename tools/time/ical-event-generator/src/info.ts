@@ -1,5 +1,5 @@
 export const toolID = 'ical-event-generator'
-export { CalendarDay20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/CalendarDay20Regular'
 export const path = '/tools/ical-event-generator'
 export const tags = ['time', 'calendar', 'ical', 'ics', 'event', 'generator']
 export const features = ['offline']

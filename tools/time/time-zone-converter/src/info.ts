@@ -1,5 +1,5 @@
 export const toolID = 'time-zone-converter'
-export { GlobeClock24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/GlobeClock24Regular'
 export const path = '/tools/time-zone-converter'
 export const tags = ['time', 'timezone', 'converter', 'utc', 'offset', 'dst', 'clock']
 export const features = ['offline']

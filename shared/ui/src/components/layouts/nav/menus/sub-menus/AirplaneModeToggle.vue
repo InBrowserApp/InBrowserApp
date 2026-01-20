@@ -27,8 +27,8 @@
 <script lang="ts" setup>
 import { useAirplaneModeStore } from '@utils/airplane-mode'
 import { NIcon, NButton, NTooltip } from 'naive-ui'
-import { AirplanemodeActiveRound as enableIcon } from '@shared/icons/material'
-import { AirplanemodeInactiveRound as disableIcon } from '@shared/icons/material'
+import enableIcon from '@vicons/material/AirplanemodeActiveRound'
+import disableIcon from '@vicons/material/AirplanemodeInactiveRound'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 

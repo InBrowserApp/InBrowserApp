@@ -1,5 +1,4 @@
-export { Key24Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const toolID = 'pgp-key-generator'
 
 export const path = '/tools/pgp-key-generator'

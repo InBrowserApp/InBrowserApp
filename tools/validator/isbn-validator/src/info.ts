@@ -1,5 +1,4 @@
-export { BookSearch20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/BookSearch20Regular'
 export const toolID = 'isbn-validator'
 export const path = '/tools/isbn-validator'
 export const tags = ['isbn', 'validator', 'checksum', 'book', 'publishing']

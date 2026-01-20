@@ -1,5 +1,4 @@
-export { PersonLock20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/PersonLock20Regular'
 export const toolID = 'chmod-calculator'
 export const path = '/tools/chmod-calculator'
 export const tags = ['chmod', 'permission', 'unix', 'linux', 'file', 'calculator']

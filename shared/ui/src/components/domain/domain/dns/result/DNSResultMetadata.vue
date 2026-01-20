@@ -36,7 +36,8 @@
 <script lang="ts" setup>
 import type { DNSJSONResponse } from '@utils/dns'
 import { NSpace, NTag, NIcon, NTooltip } from 'naive-ui'
-import { CheckmarkCircle, CloseCircle } from '@shared/icons/ionicons5'
+import CheckmarkCircle from '@vicons/ionicons5/CheckmarkCircle'
+import CloseCircle from '@vicons/ionicons5/CloseCircle'
 import { computed } from 'vue'
 import { DNSRCODEs } from '@utils/dns'
 import { useI18n } from 'vue-i18n'

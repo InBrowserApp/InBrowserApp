@@ -1,5 +1,4 @@
-export { Radio as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/Radio'
 export const toolID = 'morse-code-converter'
 export const path = '/tools/morse-code-converter'
 export const tags = ['morse', 'code', 'converter', 'encoder', 'decoder', 'telegraph', 'audio']

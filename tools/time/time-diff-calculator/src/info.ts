@@ -1,5 +1,5 @@
 export const toolID = 'time-diff-calculator'
-export { Timer20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Timer20Regular'
 export const path = '/tools/time-diff-calculator'
 export const tags = ['time', 'duration', 'difference', 'calculator', 'timezone', 'utc']
 export const features = ['offline']

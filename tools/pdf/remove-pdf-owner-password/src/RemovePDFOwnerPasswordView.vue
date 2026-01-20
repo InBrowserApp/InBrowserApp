@@ -30,8 +30,7 @@ import { PDFUpload } from '@shared/ui/domain/pdf'
 import { ToolDefaultPageLayout, ToolSection } from '@shared/ui/tool'
 import WhatIsPDFOwnerPassword from './WhatIsPDFOwnerPassword.vue'
 import { removePDFOwnerPassword } from '@utils/pdf'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
-
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 const message = useMessage()
 
 const { t } = useI18n()

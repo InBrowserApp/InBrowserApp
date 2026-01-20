@@ -63,7 +63,8 @@ import { NInput, NFlex, NText, NButton, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { Play16Regular as PlayIcon, Stop16Regular as StopIcon } from '@shared/icons/fluent'
+import PlayIcon from '@vicons/fluent/Play16Regular'
+import StopIcon from '@vicons/fluent/Stop16Regular'
 import { textToMorse, morseToText, isValidMorse, playMorseAudio } from '../utils/morse'
 
 const { t } = useI18n()

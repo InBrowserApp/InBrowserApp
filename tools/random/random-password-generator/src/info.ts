@@ -1,5 +1,5 @@
 export const toolID = 'random-password-generator'
-export { Password24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Password24Regular'
 export const path = '/tools/random/password-generator'
 export const tags = [
   'password',

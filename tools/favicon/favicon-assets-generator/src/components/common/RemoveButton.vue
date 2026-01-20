@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { NButton, NIcon } from 'naive-ui'
-import { Delete16Regular as Icon } from '@shared/icons/fluent'
+import Icon from '@vicons/fluent/Delete16Regular'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

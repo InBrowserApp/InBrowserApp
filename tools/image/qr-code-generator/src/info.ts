@@ -1,5 +1,5 @@
 export const toolID = 'qr-code-generator'
-export { QrCode24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/QrCode24Regular'
 export const path = '/tools/qr-code-generator'
 export const tags = [
   'qr',

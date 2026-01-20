@@ -87,9 +87,6 @@ catalogs:
     '@unhead/vue':
       specifier: 2.1.1
       version: 2.1.1
-    '@vicons/antd':
-      specifier: ^0.13.0
-      version: 0.13.0
     '@vicons/carbon':
       specifier: ^0.13.0
       version: 0.13.0
@@ -97,9 +94,6 @@ catalogs:
       specifier: ^0.13.0
       version: 0.13.0
     '@vicons/fluent':
-      specifier: ^0.13.0
-      version: 0.13.0
-    '@vicons/ionicons4':
       specifier: ^0.13.0
       version: 0.13.0
     '@vicons/ionicons5':
@@ -485,9 +479,6 @@ importers:
       '@registry/tools':
         specifier: workspace:*
         version: link:../../registry/tools
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../shared/icons
       '@shared/locale':
         specifier: workspace:*
         version: link:../../shared/locale
@@ -500,6 +491,9 @@ importers:
       '@unhead/vue':
         specifier: 'catalog:'
         version: 2.1.1(vue@3.5.26(typescript@5.9.3))
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -937,36 +931,6 @@ importers:
         specifier: 'catalog:'
         version: 3.5.26(typescript@5.9.3)
 
-  shared/icons:
-    dependencies:
-      '@vicons/antd':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/carbon':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/fa':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/fluent':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/ionicons4':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/ionicons5':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/material':
-        specifier: 'catalog:'
-        version: 0.13.0
-      '@vicons/tabler':
-        specifier: 'catalog:'
-        version: 0.13.0
-      vue3-simple-icons:
-        specifier: 'catalog:'
-        version: 15.6.0(typescript@5.9.3)
-
   shared/locale:
     dependencies:
       '@vueuse/core':
@@ -999,9 +963,6 @@ importers:
       '@registry/tools':
         specifier: workspace:*
         version: link:../../registry/tools
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../icons
       '@shared/locale':
         specifier: workspace:*
         version: link:../locale
@@ -1023,6 +984,15 @@ importers:
       '@utils/mac-address':
         specifier: workspace:*
         version: link:../../utils/mac-address
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/material':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1063,15 +1033,15 @@ importers:
 
   tools/code/csv-to-json-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1103,15 +1073,18 @@ importers:
 
   tools/code/gitignore-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1127,12 +1100,12 @@ importers:
       vue-i18n:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue3-simple-icons:
+        specifier: 'catalog:'
+        version: 15.6.0(typescript@5.9.3)
 
   tools/code/jmespath-tester:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1142,6 +1115,9 @@ importers:
       '@types/jmespath':
         specifier: 'catalog:'
         version: 0.15.2
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1169,15 +1145,15 @@ importers:
 
   tools/code/json-formatter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1202,15 +1178,15 @@ importers:
 
   tools/code/json-to-csv-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1238,15 +1214,15 @@ importers:
 
   tools/code/json-to-toml-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1274,15 +1250,15 @@ importers:
 
   tools/code/json-to-xml-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1313,15 +1289,15 @@ importers:
 
   tools/code/json-to-yaml-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1353,15 +1329,15 @@ importers:
 
   tools/code/jsonpath-tester:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1389,9 +1365,6 @@ importers:
 
   tools/code/openapi-to-typescript:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1401,6 +1374,9 @@ importers:
       '@utils/openapi-typescript':
         specifier: workspace:*
         version: link:../../../utils/openapi-typescript
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1422,15 +1398,15 @@ importers:
 
   tools/code/prettier-code-formatter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1458,15 +1434,15 @@ importers:
 
   tools/code/toml-to-json-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1494,15 +1470,15 @@ importers:
 
   tools/code/toml-to-yaml-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1537,15 +1513,15 @@ importers:
 
   tools/code/xml-to-json-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1573,15 +1549,15 @@ importers:
 
   tools/code/yaml-to-json-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1613,15 +1589,15 @@ importers:
 
   tools/code/yaml-to-toml-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1656,15 +1632,18 @@ importers:
 
   tools/document/html-to-markdown-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1696,15 +1675,18 @@ importers:
 
   tools/document/markdown-to-html-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1741,15 +1723,15 @@ importers:
       '@guolao/vue-monaco-editor':
         specifier: 'catalog:'
         version: 1.6.0(monaco-editor@0.55.1)(vue@3.5.26(typescript@5.9.3))
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1771,9 +1753,6 @@ importers:
 
   tools/favicon/favicon-assets-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1783,6 +1762,15 @@ importers:
       '@utils/image':
         specifier: workspace:*
         version: link:../../../utils/image
+      '@vicons/fa':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1810,15 +1798,15 @@ importers:
 
   tools/hash/bcrypt-hash-password:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1840,15 +1828,15 @@ importers:
 
   tools/hash/bcrypt-hash-password-verifier:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1870,9 +1858,6 @@ importers:
 
   tools/hash/blake2b-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1882,6 +1867,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1903,9 +1891,6 @@ importers:
 
   tools/hash/blake2s-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1915,6 +1900,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1936,9 +1924,6 @@ importers:
 
   tools/hash/crc-checksum-calculator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1948,6 +1933,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -1972,9 +1960,6 @@ importers:
 
   tools/hash/hash-text-or-file-template:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -1999,15 +1984,15 @@ importers:
 
   tools/hash/hash-tools:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2026,15 +2011,15 @@ importers:
 
   tools/hash/hmac-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2057,9 +2042,6 @@ importers:
 
   tools/hash/keccak-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2069,6 +2051,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2094,9 +2079,6 @@ importers:
 
   tools/hash/md5-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2106,6 +2088,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2131,9 +2116,6 @@ importers:
 
   tools/hash/ripemd160-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2143,6 +2125,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2168,9 +2153,6 @@ importers:
 
   tools/hash/sha1-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2180,6 +2162,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2198,9 +2183,6 @@ importers:
 
   tools/hash/sha256-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2210,6 +2192,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2228,9 +2213,6 @@ importers:
 
   tools/hash/sha384-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2240,6 +2222,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2258,9 +2243,6 @@ importers:
 
   tools/hash/sha512-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2270,6 +2252,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2288,15 +2273,15 @@ importers:
 
   tools/hash/sri-hash-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2315,9 +2300,6 @@ importers:
 
   tools/hash/xxhash-xxh32-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2327,6 +2309,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2348,9 +2333,6 @@ importers:
 
   tools/hash/xxhash-xxh64-hash-text-or-file:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2360,6 +2342,9 @@ importers:
       '@tools/hash-text-or-file-template':
         specifier: workspace:*
         version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2381,15 +2366,15 @@ importers:
 
   tools/image/barcode-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2411,15 +2396,15 @@ importers:
 
   tools/image/exif-viewer:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2441,9 +2426,6 @@ importers:
 
   tools/image/image-metadata-cleaner:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2453,6 +2435,9 @@ importers:
       '@utils/image':
         specifier: workspace:*
         version: link:../../../utils/image
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2471,9 +2456,6 @@ importers:
 
   tools/image/image-to-ico:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2483,6 +2465,9 @@ importers:
       '@utils/image':
         specifier: workspace:*
         version: link:../../../utils/image
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2501,15 +2486,15 @@ importers:
 
   tools/image/image-tools:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2528,15 +2513,15 @@ importers:
 
   tools/image/placeholder-image-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2555,9 +2540,6 @@ importers:
       '@jsquash/oxipng':
         specifier: 'catalog:'
         version: 2.3.0
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2567,6 +2549,9 @@ importers:
       '@utils/image':
         specifier: workspace:*
         version: link:../../../utils/image
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2588,15 +2573,15 @@ importers:
 
   tools/image/qr-code-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2622,15 +2607,15 @@ importers:
 
   tools/image/qr-code-reader:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2649,15 +2634,15 @@ importers:
 
   tools/image/svg-optimizer:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2679,15 +2664,15 @@ importers:
 
   tools/image/svg-to-image-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2706,15 +2691,15 @@ importers:
 
   tools/misc/chmod-calculator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2730,15 +2715,15 @@ importers:
 
   tools/misc/device-information:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2760,15 +2745,15 @@ importers:
       '@faker-js/faker':
         specifier: 'catalog:'
         version: 10.2.0
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2784,15 +2769,18 @@ importers:
 
   tools/misc/morse-code-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2808,15 +2796,15 @@ importers:
 
   tools/misc/roman-numeral-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2838,15 +2826,15 @@ importers:
       '@peculiar/x509':
         specifier: ^1.14.3
         version: 1.14.3
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2862,15 +2850,15 @@ importers:
 
   tools/network/cidr-parser:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2895,15 +2883,15 @@ importers:
 
   tools/network/cidrs-merger-excluder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2931,9 +2919,6 @@ importers:
 
   tools/network/dns-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -2943,6 +2928,9 @@ importers:
       '@utils/dns':
         specifier: workspace:*
         version: link:../../../utils/dns
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2961,15 +2949,15 @@ importers:
 
   tools/network/http-status-code-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -2985,15 +2973,15 @@ importers:
 
   tools/network/ip-cidr-normalizer:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3027,9 +3015,6 @@ importers:
 
   tools/network/ip-info-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3042,6 +3027,9 @@ importers:
       '@utils/ip':
         specifier: workspace:*
         version: link:../../../utils/ip
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3063,15 +3051,15 @@ importers:
 
   tools/network/ip-range-to-cidr:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3105,9 +3093,6 @@ importers:
 
   tools/network/ipv6-to-mac:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3117,6 +3102,9 @@ importers:
       '@utils/mac-address':
         specifier: workspace:*
         version: link:../../../utils/mac-address
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3150,9 +3138,6 @@ importers:
 
   tools/network/mac-to-ipv6-link-local:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3162,6 +3147,9 @@ importers:
       '@utils/mac-address':
         specifier: workspace:*
         version: link:../../../utils/mac-address
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3195,15 +3183,15 @@ importers:
 
   tools/network/mime-type-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3226,9 +3214,6 @@ importers:
 
   tools/network/my-ip-address:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3241,6 +3226,9 @@ importers:
       '@utils/ip':
         specifier: workspace:*
         version: link:../../../utils/ip
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3262,15 +3250,15 @@ importers:
 
   tools/network/network-tools:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3289,15 +3277,15 @@ importers:
 
   tools/network/pgp-key-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3316,15 +3304,15 @@ importers:
 
   tools/network/port-number-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3340,9 +3328,6 @@ importers:
 
   tools/network/reverse-ip-lookup:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3352,6 +3337,9 @@ importers:
       '@utils/dns':
         specifier: workspace:*
         version: link:../../../utils/dns
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3373,15 +3361,15 @@ importers:
       '@noble/ed25519':
         specifier: ^2.2.3
         version: 2.3.0
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3397,15 +3385,15 @@ importers:
 
   tools/network/unicode-punycode-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3431,15 +3419,15 @@ importers:
 
   tools/pdf/pdf-tools:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3458,9 +3446,6 @@ importers:
 
   tools/pdf/remove-pdf-owner-password:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3470,6 +3455,9 @@ importers:
       '@utils/pdf':
         specifier: workspace:*
         version: link:../../../utils/pdf
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3488,9 +3476,6 @@ importers:
 
   tools/random/bip39-mnemonic-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -3500,6 +3485,9 @@ importers:
       '@utils/bip39':
         specifier: workspace:*
         version: link:../../../utils/bip39
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3518,15 +3506,15 @@ importers:
       '@paralleldrive/cuid2':
         specifier: ^3.0.6
         version: 3.0.6
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3545,15 +3533,15 @@ importers:
 
   tools/random/ksuid-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3572,15 +3560,15 @@ importers:
 
   tools/random/nanoid-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3599,15 +3587,15 @@ importers:
 
   tools/random/random-password-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3629,9 +3617,6 @@ importers:
 
   tools/redirects:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../shared/icons
       '@shared/locale':
         specifier: workspace:*
         version: link:../../shared/locale
@@ -3641,6 +3626,15 @@ importers:
       '@shared/ui':
         specifier: workspace:*
         version: link:../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/material':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3659,15 +3653,15 @@ importers:
 
   tools/text/ascii-art-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3690,15 +3684,15 @@ importers:
 
   tools/text/regex-tester-replacer:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3714,15 +3708,15 @@ importers:
 
   tools/text/text-statistics:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3738,15 +3732,18 @@ importers:
 
   tools/text/unicode-invisible-character-checker:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3762,15 +3759,15 @@ importers:
 
   tools/time/business-days-calculator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3786,15 +3783,15 @@ importers:
 
   tools/time/cron-expression-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3816,15 +3813,15 @@ importers:
 
   tools/time/cron-expression-parser:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3849,15 +3846,15 @@ importers:
 
   tools/time/current-network-time:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3876,15 +3873,15 @@ importers:
 
   tools/time/duration-calculator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3900,15 +3897,15 @@ importers:
 
   tools/time/ical-event-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3931,15 +3928,15 @@ importers:
 
   tools/time/stopwatch:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3955,15 +3952,15 @@ importers:
 
   tools/time/time-diff-calculator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -3979,15 +3976,15 @@ importers:
 
   tools/time/time-zone-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4003,15 +4000,15 @@ importers:
 
   tools/time/unix-timestamp-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4027,9 +4024,6 @@ importers:
 
   tools/uuid:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../shared/icons
       '@shared/locale':
         specifier: workspace:*
         version: link:../../shared/locale
@@ -4045,6 +4039,12 @@ importers:
       '@utils/uuid':
         specifier: workspace:*
         version: link:../../utils/uuid
+      '@vicons/carbon':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4069,15 +4069,15 @@ importers:
 
   tools/validator/bic-swift-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4093,15 +4093,15 @@ importers:
 
   tools/validator/credit-card-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4114,18 +4114,21 @@ importers:
       vue-i18n:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.26(typescript@5.9.3))
+      vue3-simple-icons:
+        specifier: 'catalog:'
+        version: 15.6.0(typescript@5.9.3)
 
   tools/validator/iban-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4141,15 +4144,15 @@ importers:
 
   tools/validator/isbn-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4165,9 +4168,6 @@ importers:
 
   tools/validator/json-schema-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -4177,6 +4177,9 @@ importers:
       '@utils/json-schema':
         specifier: workspace:*
         version: link:../../../utils/json-schema
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4198,9 +4201,6 @@ importers:
 
   tools/validator/json-schema-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -4210,6 +4210,9 @@ importers:
       '@utils/json-schema':
         specifier: workspace:*
         version: link:../../../utils/json-schema
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4225,15 +4228,15 @@ importers:
 
   tools/validator/password-strength-checker:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4249,15 +4252,15 @@ importers:
 
   tools/validator/prc-id-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4273,15 +4276,15 @@ importers:
 
   tools/validator/vat-validator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4297,9 +4300,6 @@ importers:
 
   tools/web/aes-decryptor:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -4309,6 +4309,9 @@ importers:
       '@utils/aes':
         specifier: workspace:*
         version: link:../../../utils/aes
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4324,9 +4327,6 @@ importers:
 
   tools/web/aes-encryptor:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
@@ -4336,6 +4336,9 @@ importers:
       '@utils/aes':
         specifier: workspace:*
         version: link:../../../utils/aes
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4351,15 +4354,15 @@ importers:
 
   tools/web/base64-encoder-decoder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4378,15 +4381,15 @@ importers:
 
   tools/web/basic-auth-decoder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4405,15 +4408,15 @@ importers:
 
   tools/web/basic-auth-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4432,15 +4435,15 @@ importers:
 
   tools/web/case-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4456,15 +4459,15 @@ importers:
 
   tools/web/color-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4490,15 +4493,15 @@ importers:
 
   tools/web/color-picker:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4521,15 +4524,15 @@ importers:
 
   tools/web/data-uri-to-file-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4551,15 +4554,15 @@ importers:
 
   tools/web/file-to-data-uri-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.26(typescript@5.9.3))
@@ -4575,15 +4578,15 @@ importers:
 
   tools/web/html-color-names:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4602,15 +4605,15 @@ importers:
 
   tools/web/html-entity-encoder-decoder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4626,15 +4629,15 @@ importers:
 
   tools/web/jwt-decoder-verifier:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4659,15 +4662,15 @@ importers:
 
   tools/web/jwt-signer:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4689,15 +4692,15 @@ importers:
 
   tools/web/number-base-converter:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4713,15 +4716,15 @@ importers:
 
   tools/web/rot-cipher:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4737,15 +4740,15 @@ importers:
 
   tools/web/slug-generator:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4764,15 +4767,15 @@ importers:
 
   tools/web/unicode-escape-unescape:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4788,15 +4791,15 @@ importers:
 
   tools/web/url-component-encoder-decoder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4815,15 +4818,15 @@ importers:
 
   tools/web/url-parser-builder:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -4842,15 +4845,15 @@ importers:
 
   tools/web/user-agent-parser:
     dependencies:
-      '@shared/icons':
-        specifier: workspace:*
-        version: link:../../../shared/icons
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
         version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
@@ -7093,9 +7096,6 @@ packages:
     peerDependencies:
       vue: '>=3.5.18'
 
-  '@vicons/antd@0.13.0':
-    resolution: {integrity: sha512-yrUGoUSz2BbGupk9ghQOahc04n5H3MwUDM9pVPsLh9U1uqB47oRWZvYRiZaT1JKPqgTgSE6BXcVw4i9MOF4M+g==}
-
   '@vicons/carbon@0.13.0':
     resolution: {integrity: sha512-Z/jExyyS4gsXJc66oTqV/j98nsaiX2JlQ0IUwu9Ms3rztf8VOHEQRuX8Jey1/zbxJpFY/tU+bWvKPRFYGIvCWQ==}
 
@@ -7104,9 +7104,6 @@ packages:
 
   '@vicons/fluent@0.13.0':
     resolution: {integrity: sha512-bYGZsOE3qzvm3Cm43e7tybgGlr5ZUpYqtRZq0g0Tfupe8jIzLolpvQLNUt1zS8Mgt6goTbUk5YH7Fkv16jkykg==}
-
-  '@vicons/ionicons4@0.13.0':
-    resolution: {integrity: sha512-5WHIl/4R5a4i9GONa+hIQWxg/WczrbsCdqxawHZvdd3drsEr+Q3yzlfS+NNRO4WS3uDW2uWLCwoW+yp5TgcKeQ==}
 
   '@vicons/ionicons5@0.13.0':
     resolution: {integrity: sha512-zvZKBPjEXKN7AXNo2Na2uy+nvuv6SP4KAMQxpKL2vfHMj0fSvuw7JZcOPCjQC3e7ayssKnaoFVAhbYcW6v41qQ==}
@@ -12388,15 +12385,11 @@ snapshots:
       unhead: 2.1.1
       vue: 3.5.26(typescript@5.9.3)
 
-  '@vicons/antd@0.13.0': {}
-
   '@vicons/carbon@0.13.0': {}
 
   '@vicons/fa@0.13.0': {}
 
   '@vicons/fluent@0.13.0': {}
-
-  '@vicons/ionicons4@0.13.0': {}
 
   '@vicons/ionicons5@0.13.0': {}
 

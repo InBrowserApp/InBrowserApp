@@ -195,7 +195,9 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
-import { ArrowSwap20Regular, CheckmarkCircle20Regular, Key20Regular } from '@shared/icons/fluent'
+import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
+import CheckmarkCircle20Regular from '@vicons/fluent/CheckmarkCircle20Regular'
+import Key20Regular from '@vicons/fluent/Key20Regular'
 import {
   WORD_COUNTS,
   countMnemonicWords,

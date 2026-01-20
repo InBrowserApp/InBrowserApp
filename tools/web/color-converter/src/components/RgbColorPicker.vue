@@ -26,7 +26,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NColorPicker, NTooltip, NIcon } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { Info16Regular } from '@shared/icons/fluent'
+import Info16Regular from '@vicons/fluent/Info16Regular'
 import type { RGBA } from '../types'
 import ColorSection from './ColorSection.vue'
 

@@ -1,5 +1,4 @@
-export { Link16Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Link16Regular'
 export const toolID = 'slug-generator'
 export const path = '/tools/slug-generator'
 

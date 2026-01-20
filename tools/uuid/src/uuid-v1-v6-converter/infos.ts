@@ -2,8 +2,7 @@ export const toolID = 'uuid-v1-v6-converter'
 export const path = '/tools/uuid-v1-v6-converter'
 export const tags = ['uuid']
 export const features = ['offline']
-export { Id as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/Id'
 export const meta = {
   en: {
     name: 'UUID v1 ↔ v6 Converter',

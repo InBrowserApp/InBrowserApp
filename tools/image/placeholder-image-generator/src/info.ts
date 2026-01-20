@@ -1,5 +1,5 @@
 export const toolID = 'placeholder-image-generator'
-export { ImageCopy24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ImageCopy24Regular'
 export const path = '/tools/placeholder-image-generator'
 export const tags = [
   'placeholder',

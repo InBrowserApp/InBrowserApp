@@ -8,7 +8,8 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "vue3-simple-icons": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",

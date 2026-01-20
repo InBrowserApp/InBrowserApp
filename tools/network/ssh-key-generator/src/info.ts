@@ -1,4 +1,4 @@
-export { Key24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const toolID = 'ssh-key-generator'
 export const path = '/tools/ssh-key-generator'
 export const tags = ['ssh', 'key', 'rsa', 'ed25519', 'generator', 'security', 'crypto', 'openssh']

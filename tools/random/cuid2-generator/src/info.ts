@@ -1,5 +1,5 @@
 export const toolID = 'cuid2-generator'
-export { Key24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Key24Regular'
 export const path = '/tools/random/cuid2-generator'
 export const tags = [
   'cuid2',

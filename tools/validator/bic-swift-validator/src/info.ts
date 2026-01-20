@@ -1,5 +1,4 @@
-export { TextNumberFormat20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/TextNumberFormat20Regular'
 export const toolID = 'bic-swift-validator'
 export const path = '/tools/bic-swift-validator'
 export const tags = ['bic', 'swift', 'validator', 'bank', 'finance']

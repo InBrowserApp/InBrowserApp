@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import { NIcon } from 'naive-ui'
-import { Search16Filled } from '@shared/icons/fluent'
+import Search16Filled from '@vicons/fluent/Search16Filled'
 import { CustomRouterLink } from '@shared/ui/base'
 
 const { t } = useI18n()

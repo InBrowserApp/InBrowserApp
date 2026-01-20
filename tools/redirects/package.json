@@ -8,7 +8,9 @@
     "./*": "./src/*.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vicons/carbon": "catalog:",
+    "@vicons/material": "catalog:",
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",

@@ -34,10 +34,8 @@ import type { UUID } from '@utils/uuid'
 import { useStorage } from '@vueuse/core'
 import { computed } from 'vue'
 import { validate } from 'uuid'
-import {
-  CheckmarkCircle16Filled as ValidIcon,
-  DismissCircle16Filled as InvalidIcon,
-} from '@shared/icons/fluent'
+import ValidIcon from '@vicons/fluent/CheckmarkCircle16Filled'
+import InvalidIcon from '@vicons/fluent/DismissCircle16Filled'
 import { useThemeVars } from 'naive-ui'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'

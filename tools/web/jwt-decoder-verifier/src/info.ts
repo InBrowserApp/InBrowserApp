@@ -1,5 +1,5 @@
 export const toolID = 'jwt-decoder-verifier'
-export { ShieldCheckmark24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ShieldCheckmark24Regular'
 export const path = '/tools/jwt-decoder-verifier'
 export const tags = [
   'jwt',

@@ -1,5 +1,5 @@
 export const toolID = 'blake2s-hash-text-or-file'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/blake2s-hash-text-or-file'
 export const tags = ['hash', 'blake2', 'blake2s', 'checksum', 'security', 'file', 'text', 'crypto']
 export const features = ['offline']

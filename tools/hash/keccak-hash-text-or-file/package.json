@@ -1,25 +1,25 @@
 {
-    "name": "@tools/keccak-hash-text-or-file",
-    "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./routes": "./src/routes.ts"
-    },
-    "dependencies": {
-        "@shared/icons": "workspace:*",
-        "@shared/tools": "workspace:*",
-        "@shared/ui": "workspace:*",
-        "@tools/hash-text-or-file-template": "workspace:*",
-        "@vueuse/core": "catalog:",
-        "crypto-js": "catalog:",
-        "naive-ui": "catalog:",
-        "vue": "catalog:",
-        "vue-i18n": "catalog:",
-        "vue-router": "catalog:"
-    },
-    "devDependencies": {
-        "@types/crypto-js": "catalog:"
-    }
+  "name": "@tools/keccak-hash-text-or-file",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@vicons/tabler": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@tools/hash-text-or-file-template": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "crypto-js": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "catalog:"
+  }
 }

@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { NButton, NIcon, NTooltip } from 'naive-ui'
-import { Bug16Regular } from '@shared/icons/fluent'
+import Bug16Regular from '@vicons/fluent/Bug16Regular'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

@@ -70,7 +70,9 @@ import {
   NFlex,
 } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ArrowDownload16Regular, Print20Regular, Document16Regular } from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Print20Regular from '@vicons/fluent/Print20Regular'
+import Document16Regular from '@vicons/fluent/Document16Regular'
 import GitHubLightCss from 'github-markdown-css/github-markdown-light.css?raw'
 import hljs from 'highlight.js/lib/core'
 import html from 'highlight.js/lib/languages/xml'

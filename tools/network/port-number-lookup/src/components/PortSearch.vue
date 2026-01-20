@@ -22,8 +22,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { NFlex, NInput, NIcon, NRadioGroup, NRadioButton } from 'naive-ui'
-import { Search20Regular as SearchIcon } from '@shared/icons/fluent'
-
+import SearchIcon from '@vicons/fluent/Search20Regular'
 defineProps<{
   search: string
   category: string

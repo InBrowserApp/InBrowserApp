@@ -1,5 +1,4 @@
-export { Eyedropper24Filled as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Eyedropper24Filled'
 export const toolID = 'color-picker'
 export const path = '/tools/color-picker'
 export const tags = ['web', 'color', 'picker', 'eyedropper', 'image']

@@ -98,17 +98,14 @@ import MailtoTab, { type MailtoModel } from './content/MailtoTab.vue'
 import GeoTab, { type GeoModel } from './content/GeoTab.vue'
 import CalendarTab, { type CalendarModel } from './content/CalendarTab.vue'
 import { useWindowSize } from '@vueuse/core'
-import {
-  TextDescription20Regular as TextIcon,
-  Wifi224Filled as WifiIcon,
-  ContactCard20Regular as VcardIcon,
-  Chat16Regular as SmsIcon,
-  Mail16Regular as MailtoIcon,
-  GlobeLocation20Regular as GeoIcon,
-  CalendarLtr20Regular as CalendarIcon,
-  Call16Regular as TelIcon,
-} from '@shared/icons/fluent'
-
+import TextIcon from '@vicons/fluent/TextDescription20Regular'
+import WifiIcon from '@vicons/fluent/Wifi224Filled'
+import VcardIcon from '@vicons/fluent/ContactCard20Regular'
+import SmsIcon from '@vicons/fluent/Chat16Regular'
+import MailtoIcon from '@vicons/fluent/Mail16Regular'
+import GeoIcon from '@vicons/fluent/GlobeLocation20Regular'
+import CalendarIcon from '@vicons/fluent/CalendarLtr20Regular'
+import TelIcon from '@vicons/fluent/Call16Regular'
 const model = defineModel<string>({ required: true })
 
 const { t } = useI18n()

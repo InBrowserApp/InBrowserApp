@@ -1,5 +1,4 @@
-export { BracesVariable20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/BracesVariable20Regular'
 export const toolID = 'xml-to-json-converter'
 export const path = '/tools/xml-to-json-converter'
 export const tags = ['code', 'xml', 'json', 'converter']

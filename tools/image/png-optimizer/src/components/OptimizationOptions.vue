@@ -37,8 +37,7 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { NFlex, NText, NSlider, NCheckbox, NButton, NIcon } from 'naive-ui'
 import type { OptimiseOptions } from '@jsquash/oxipng/meta'
-import { ResizeSmall20Regular } from '@shared/icons/fluent'
-
+import ResizeSmall20Regular from '@vicons/fluent/ResizeSmall20Regular'
 const { t } = useI18n()
 
 // Props

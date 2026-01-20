@@ -46,7 +46,8 @@ import { useObjectUrl } from '@vueuse/core'
 import { filesize } from 'filesize'
 import type { UploadFileInfo } from 'naive-ui'
 import { NUpload, NUploadDragger, NIcon, NText, NP, NFlex, NButton, NImage } from 'naive-ui'
-import { Image24Regular, Delete20Regular } from '@shared/icons/fluent'
+import Image24Regular from '@vicons/fluent/Image24Regular'
+import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 const { t } = useI18n()

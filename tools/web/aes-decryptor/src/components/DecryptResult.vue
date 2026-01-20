@@ -59,8 +59,7 @@ import { NSpace, NAlert, NInput, NButton, NIcon, NPopover, NFlex, NTabs, NTabPan
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ArrowDownload16Regular } from '@shared/icons/fluent'
-
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 const props = defineProps<{
   result: string
   resultHex: string

@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@registry/tools": "workspace:*",
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vicons/ionicons5": "catalog:",
+    "@vicons/material": "catalog:",
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
     "@unhead/vue": "catalog:",

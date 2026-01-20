@@ -1,5 +1,4 @@
-export { StringText as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/StringText'
 export const toolID = 'ascii-art-generator'
 export const path = '/tools/ascii-art-generator'
 export const tags = ['ascii', 'art', 'text', 'generator', 'figlet', 'banner', 'font']

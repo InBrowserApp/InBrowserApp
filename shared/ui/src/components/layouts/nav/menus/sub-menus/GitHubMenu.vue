@@ -11,5 +11,5 @@
 
 <script lang="ts" setup>
 import { NIcon, NFlex } from 'naive-ui'
-import { LogoGithub as icon } from '@shared/icons/ionicons5'
+import icon from '@vicons/ionicons5/LogoGithub'
 </script>

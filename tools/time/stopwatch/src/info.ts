@@ -1,5 +1,5 @@
 export const toolID = 'stopwatch'
-export { Timer20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/Timer20Regular'
 export const path = '/tools/stopwatch'
 export const tags = ['time', 'stopwatch', 'lap', 'timer']
 export const features = ['offline']

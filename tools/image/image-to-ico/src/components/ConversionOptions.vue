@@ -73,7 +73,7 @@ import {
   NText,
   NFlex,
 } from 'naive-ui'
-import { Wand16Regular } from '@shared/icons/fluent'
+import Wand16Regular from '@vicons/fluent/Wand16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 const { t } = useI18n()

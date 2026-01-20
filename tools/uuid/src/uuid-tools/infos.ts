@@ -2,7 +2,7 @@ export const toolID = 'uuid-tools'
 export const path = '/tools/uuid'
 export const tags = ['uuid']
 export const features = ['offline']
-export { Id as icon } from '@shared/icons/carbon'
+export { default as icon } from '@vicons/carbon/Id'
 export const collection = true
 
 export const meta = {

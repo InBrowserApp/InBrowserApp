@@ -1,5 +1,5 @@
 export const toolID = 'tldr-inbrowser-app'
-export { BookQuestionMark20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/BookQuestionMark20Regular'
 export const path = 'https://tldr.inbrowser.app'
 export const tags = ['command-line', 'documentation', 'reference', 'terminal']
 export const features = ['offline']

@@ -1,5 +1,5 @@
 export const toolID = 'sri-hash-generator'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/sri-hash-generator'
 export const tags = [
   'sri',

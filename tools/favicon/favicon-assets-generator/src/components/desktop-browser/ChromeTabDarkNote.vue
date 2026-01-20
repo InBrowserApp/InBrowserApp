@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { NButton, NTooltip, NIcon } from 'naive-ui'
-import { Warning16Regular } from '@shared/icons/fluent'
+import Warning16Regular from '@vicons/fluent/Warning16Regular'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

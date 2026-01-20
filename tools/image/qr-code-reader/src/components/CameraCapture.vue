@@ -39,7 +39,8 @@
 import { ref, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NButton, NIcon, NAlert, NText } from 'naive-ui'
-import { Camera24Regular, Stop24Regular } from '@shared/icons/fluent'
+import Camera24Regular from '@vicons/fluent/Camera24Regular'
+import Stop24Regular from '@vicons/fluent/Stop24Regular'
 import { readQRFromVideo } from '../qr-reader'
 
 const { t } = useI18n()

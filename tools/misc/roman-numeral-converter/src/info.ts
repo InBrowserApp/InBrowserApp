@@ -1,4 +1,4 @@
-export { Information as icon } from '../../../../shared/icons/src/carbon'
+export { default as icon } from '@vicons/carbon/Information'
 
 export const toolID = 'roman-numeral-converter'
 export const path = '/tools/roman-numeral-converter'

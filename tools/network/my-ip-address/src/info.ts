@@ -1,5 +1,5 @@
 export const toolID = 'my-ip-address'
-export { GlobePerson20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/GlobePerson20Regular'
 export const path = '/tools/my-ip-address'
 export const tags = ['ip', 'network', 'geolocation']
 export const features = []

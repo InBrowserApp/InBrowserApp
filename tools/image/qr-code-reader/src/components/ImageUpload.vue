@@ -42,7 +42,8 @@ import { useI18n } from 'vue-i18n'
 import { useObjectUrl } from '@vueuse/core'
 import { NFlex, NUpload, NUploadDragger, NIcon, NText, NButton } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
-import { ImageAdd24Regular, ArrowUpload24Regular } from '@shared/icons/fluent'
+import ImageAdd24Regular from '@vicons/fluent/ImageAdd24Regular'
+import ArrowUpload24Regular from '@vicons/fluent/ArrowUpload24Regular'
 import { readQRFromFile } from '../qr-reader'
 
 const { t } = useI18n()

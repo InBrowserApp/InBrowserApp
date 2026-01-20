@@ -2,8 +2,7 @@ export const toolID = 'device-information'
 export const path = '/tools/device-information'
 export const tags = ['device', 'system', 'browser', 'information']
 export const features = ['offline']
-export { Information as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/Information'
 export const meta = {
   en: {
     name: 'Device Information',

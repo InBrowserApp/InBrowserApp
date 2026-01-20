@@ -13,8 +13,7 @@
 import { useAirplaneModeStore } from '@utils/airplane-mode'
 import { NAlert, NCollapseTransition, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { AirplanemodeActiveRound as enableIcon } from '@shared/icons/material'
-
+import enableIcon from '@vicons/material/AirplanemodeActiveRound'
 const airplaneModeStore = useAirplaneModeStore()
 const { t } = useI18n()
 </script>

@@ -1,4 +1,4 @@
-export { GitIcon as icon } from '@shared/icons/simple-icons'
+export { GitIcon as icon } from 'vue3-simple-icons'
 export const toolID = 'gitignore-generator'
 export const path = '/tools/code/gitignore-generator'
 export const tags = ['gitignore', 'git', 'generator', 'ignore', 'template', 'github']

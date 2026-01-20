@@ -91,7 +91,7 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
-import { Clock16Regular as ClockIcon } from '@shared/icons/fluent'
+import ClockIcon from '@vicons/fluent/Clock16Regular'
 import {
   generateKsuid,
   isValidKsuidUnixSeconds,

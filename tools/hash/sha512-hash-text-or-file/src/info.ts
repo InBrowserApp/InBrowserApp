@@ -1,5 +1,5 @@
 export const toolID = 'sha512-hash-text-or-file'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/sha512-hash-text-or-file'
 export const tags = ['hash', 'sha512', 'checksum', 'security', 'file', 'text', 'crypto']
 export const features = ['offline']

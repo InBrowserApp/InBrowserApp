@@ -1,24 +1,24 @@
 {
-    "name": "@tools/qr-code-generator",
-    "version": "0.0.0",
-    "private": true,
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./routes": "./src/routes.ts"
-    },
-    "dependencies": {
-        "qrcode": "catalog:",
-        "vue": "catalog:",
-        "vue-i18n": "catalog:",
-        "vue-router": "catalog:",
-        "naive-ui": "catalog:",
-        "@vueuse/core": "catalog:",
-        "@shared/ui": "workspace:*",
-        "@shared/icons": "workspace:*",
-        "@shared/tools": "workspace:*"
-    },
-    "devDependencies": {
-        "@types/qrcode": "catalog:"
-    }
+  "name": "@tools/qr-code-generator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "qrcode": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:",
+    "naive-ui": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@shared/tools": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/qrcode": "catalog:"
+  }
 }

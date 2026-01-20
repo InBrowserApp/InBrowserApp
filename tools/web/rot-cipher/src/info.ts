@@ -1,5 +1,4 @@
-export { Key20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/Key20Regular'
 export const toolID = 'rot-cipher'
 export const path = '/tools/rot-cipher'
 export const tags = ['encryption', 'cipher', 'text', 'encoding', 'rot13', 'rot47']

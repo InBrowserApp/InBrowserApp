@@ -196,12 +196,10 @@ import {
 } from 'naive-ui'
 import hljs from 'highlight.js/lib/core'
 import typescript from 'highlight.js/lib/languages/typescript'
-import {
-  ArrowDownload16Regular,
-  Document16Regular,
-  Link16Regular,
-  Wand16Regular,
-} from '@shared/icons/fluent'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Document16Regular from '@vicons/fluent/Document16Regular'
+import Link16Regular from '@vicons/fluent/Link16Regular'
+import Wand16Regular from '@vicons/fluent/Wand16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, TextOrFileInput } from '@shared/ui/base'
 import {

@@ -1,5 +1,5 @@
 export const toolID = 'look-scanned'
-export { AdfScannerOutlined as icon } from '@shared/icons/material'
+export { default as icon } from '@vicons/material/AdfScannerOutlined'
 export const path = 'https://lookscanned.io'
 export const tags = ['pdf', 'scanner', 'document']
 export const features = ['offline']

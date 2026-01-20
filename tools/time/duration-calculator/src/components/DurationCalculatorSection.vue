@@ -223,7 +223,7 @@ import {
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { Clock16Regular } from '@shared/icons/fluent'
+import Clock16Regular from '@vicons/fluent/Clock16Regular'
 import { useI18n } from 'vue-i18n'
 import { useStorage } from '@vueuse/core'
 import { buildTimeZoneOptions } from '../utils/timeZoneOptions'

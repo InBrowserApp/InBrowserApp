@@ -1,5 +1,4 @@
-export { Markdown as icon } from '@shared/icons/tabler'
-
+export { default as icon } from '@vicons/tabler/Markdown'
 export const toolID = 'markdown-to-html-converter'
 export const path = '/tools/markdown-to-html-converter'
 export const tags = ['document', 'markdown', 'html', 'converter', 'dompurify']

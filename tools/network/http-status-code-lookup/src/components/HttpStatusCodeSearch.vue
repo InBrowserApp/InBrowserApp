@@ -55,15 +55,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { NFlex, NInput, NIcon, NRadioGroup, NRadioButton } from 'naive-ui'
-import {
-  Search20Regular as SearchIcon,
-  Info12Regular,
-  CheckmarkCircle16Regular,
-  ArrowForward16Regular,
-  ErrorCircle16Regular,
-  DismissCircle16Regular,
-} from '@shared/icons/fluent'
-
+import SearchIcon from '@vicons/fluent/Search20Regular'
+import Info12Regular from '@vicons/fluent/Info12Regular'
+import CheckmarkCircle16Regular from '@vicons/fluent/CheckmarkCircle16Regular'
+import ArrowForward16Regular from '@vicons/fluent/ArrowForward16Regular'
+import ErrorCircle16Regular from '@vicons/fluent/ErrorCircle16Regular'
+import DismissCircle16Regular from '@vicons/fluent/DismissCircle16Regular'
 defineProps<{
   search: string
   category: string

@@ -14,7 +14,7 @@
 import { ref, computed, watch, toRef } from 'vue'
 
 import { NInput, NIcon } from 'naive-ui'
-import { RefreshOutline } from '@shared/icons/ionicons5'
+import RefreshOutline from '@vicons/ionicons5/RefreshOutline'
 import { v4 as uuidv4, validate } from 'uuid'
 
 type UUID = `${string}-${string}-${string}-${string}-${string}`

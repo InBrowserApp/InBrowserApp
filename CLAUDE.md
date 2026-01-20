@@ -77,7 +77,6 @@ tools/                 # Tool packages with UI (organized by domain)
   ├── uuid/           # UUID/ULID generators (nested sub-tools)
   └── web/            # URL, JWT, Base64, cipher tools
 shared/                # Shared packages
-  ├── icons/          # Re-exports from @vicons/* packages
   ├── locale/         # i18n languages configuration
   ├── tools/          # ToolInfo interface definitions
   └── ui/             # Reusable Vue components
@@ -86,7 +85,7 @@ registry/              # Aggregates all tools and routes
 ```
 
 ### Path Aliases
-- `@shared/*` → `shared/*` (e.g., `@shared/tools`, `@shared/ui`, `@shared/icons/fluent`)
+- `@shared/*` → `shared/*` (e.g., `@shared/tools`, `@shared/ui`, `@shared/locale`)
 - `@tools/<package>` → `tools/<package>/src` (main export)
 - `@tools/<package>/routes` → `tools/<package>/src/routes.ts`
 - `@utils/<package>` → `utils/<package>/src`
@@ -114,7 +113,7 @@ tools/<domain>/<tool-slug>/
 
 ### info.ts Pattern
 ```typescript
-export { SomeIcon as icon } from '@shared/icons/fluent'  // or carbon, tabler, etc.
+export { default as icon } from '@vicons/fluent/SomeIcon' // or carbon, tabler, etc.
 export const toolID = 'tool-slug'
 export const path = '/tools/tool-slug'  // Must match routes.ts
 export const tags = ['category1', 'category2']
@@ -165,7 +164,7 @@ import ToolContent from './components/ToolContent.vue'
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "naive-ui": "catalog:",
@@ -245,7 +244,7 @@ const { t } = useI18n()
 
 **Components:**
 - Use Naive UI (`naive-ui`) for UI components
-- Import icons from `@shared/icons/<library>` (fluent, carbon, tabler, etc.)
+- Import icons directly from `@vicons/<library>/<IconName>` (fluent, carbon, tabler, etc.) or `vue3-simple-icons`
 - **Split components following best practices:** Do NOT put all logic in a single file. Extract reusable pieces into `components/` directory. The main view (e.g., `ToolNameView.vue`) should only handle layout and import child components for actual functionality.
 - **Add "What is X?" section when appropriate:** For tools involving concepts that may need explanation (e.g., CIDR, URL encoding, Roman numerals), create a `WhatIsXxx.vue` component in `components/` to introduce the concept. Use `ToolSectionHeader` + `ToolSection` for simple text, or `DescriptionMarkdown` from `@shared/ui/base` for Markdown-formatted explanations.
 - **Support bidirectional reactive updates when applicable:** For converter/encoder/decoder tools, allow users to edit either input or output field, with the other updating automatically. This provides a better UX than one-way conversion (e.g., Base64 encoder should also decode when user edits the encoded output).
@@ -278,7 +277,7 @@ tools/uuid/
 - **Path mismatch:** Ensure `path` in `info.ts` matches `path` in `routes.ts`
 - **Missing i18n:** All 25 languages required in `info.ts` meta
 - **Invalid i18n JSON:** Must be strict JSON (double quotes, no comments)
-- **Wrong icon import:** Use `@shared/icons/<library>` not `@vicons/*` directly
+- **Wrong icon import:** Use `@vicons/<library>/<IconName>` (or `vue3-simple-icons`) and avoid the removed shared icons package
 
 ## Git Workflow
 

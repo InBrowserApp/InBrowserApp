@@ -135,10 +135,8 @@ import {
   NIcon,
   NDivider,
 } from 'naive-ui'
-import {
-  Search24Regular as SearchIcon,
-  ArrowDownload24Regular as DownloadIcon,
-} from '@shared/icons/fluent'
+import SearchIcon from '@vicons/fluent/Search24Regular'
+import DownloadIcon from '@vicons/fluent/ArrowDownload24Regular'
 import {
   NodeDotjsIcon,
   PythonIcon,
@@ -148,8 +146,8 @@ import {
   LinuxIcon,
   JetBrainsIcon,
   OpenJdkIcon,
-} from '@shared/icons/simple-icons'
-import { LogoWindows as WindowsIcon } from '@shared/icons/ionicons5'
+} from 'vue3-simple-icons'
+import WindowsIcon from '@vicons/ionicons5/LogoWindows'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { templates, getTemplatesByCategory, popularTemplates } from '../templates'

@@ -1,5 +1,5 @@
 export const toolID = 'macaddress-inbrowser-app'
-export { Network4 as icon } from '@shared/icons/carbon'
+export { default as icon } from '@vicons/carbon/Network4'
 export const path = 'https://macaddress.inbrowser.app'
 export const tags = ['network', 'mac-address', 'hardware', 'lookup']
 export const features = ['offline']

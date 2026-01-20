@@ -1,4 +1,4 @@
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const toolID = 'hmac-generator'
 export const path = '/tools/hmac-generator'
 export const tags = ['hash', 'hmac', 'security', 'crypto', 'signature', 'mac', 'authentication']

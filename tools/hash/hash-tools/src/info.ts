@@ -1,5 +1,5 @@
 export const toolID = 'hash-tools'
-export { Hash as icon } from '@shared/icons/tabler'
+export { default as icon } from '@vicons/tabler/Hash'
 export const path = '/tools/hash-tools'
 export const tags = ['hash']
 export const features = ['offline']

@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { NUpload, NUploadDragger, NIcon, NText } from 'naive-ui'
-import { ArchiveOutline } from '@shared/icons/ionicons5'
+import ArchiveOutline from '@vicons/ionicons5/ArchiveOutline'
 import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'

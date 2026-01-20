@@ -8,7 +8,7 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@shared/icons": "workspace:*",
+    "@vicons/ionicons5": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vueuse/core": "catalog:",

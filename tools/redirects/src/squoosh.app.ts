@@ -1,5 +1,5 @@
 export const toolID = 'squoosh-app'
-export { ImageMultiple20Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/ImageMultiple20Regular'
 export const path = 'https://squoosh.app'
 export const tags = ['image', 'compression', 'optimization', 'webp', 'avif']
 export const features = ['offline']

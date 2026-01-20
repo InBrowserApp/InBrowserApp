@@ -1,5 +1,4 @@
-export { BracesVariable20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/BracesVariable20Regular'
 export const toolID = 'json-schema-generator'
 export const path = '/tools/json-schema-generator'
 export const tags = ['json', 'schema', 'generator', 'developer']

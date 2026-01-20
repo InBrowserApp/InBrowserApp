@@ -96,13 +96,10 @@ import RandomTab from './RandomTab.vue'
 import WordsTab from './WordsTab.vue'
 import SeparatorTab from './SeparatorTab.vue'
 import PinTab from './PinTab.vue'
-import {
-  NumberSymbol16Regular as PinIcon,
-  TextChangeCase16Regular as WordsIcon,
-  LineHorizontal120Filled as SeparatorIcon,
-  MathSymbols16Regular as RandomIcon,
-} from '@shared/icons/fluent'
-// import { Random16Regular as RandomIcon } from '@shared/icons/fluent'
+import PinIcon from '@vicons/fluent/NumberSymbol16Regular'
+import WordsIcon from '@vicons/fluent/TextChangeCase16Regular'
+import SeparatorIcon from '@vicons/fluent/LineHorizontal120Filled'
+import RandomIcon from '@vicons/fluent/MathSymbols16Regular'
 
 const { t } = useI18n()
 

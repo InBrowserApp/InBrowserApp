@@ -2,8 +2,7 @@ export const toolID = 'uuid-max-generator'
 export const path = '/tools/uuid-max-generator'
 export const tags = ['uuid']
 export const features = ['offline']
-export { Id as icon } from '@shared/icons/carbon'
-
+export { default as icon } from '@vicons/carbon/Id'
 export const meta = {
   en: {
     name: 'Max UUID Generator',

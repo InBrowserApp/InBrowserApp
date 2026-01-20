@@ -1,5 +1,4 @@
-export { LockClosed20Regular as icon } from '@shared/icons/fluent'
-
+export { default as icon } from '@vicons/fluent/LockClosed20Regular'
 export const toolID = 'aes-encryptor'
 export const path = '/tools/aes-encryptor'
 export const tags = ['encryption', 'aes', 'security', 'cipher', 'crypto']

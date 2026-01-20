@@ -22,7 +22,7 @@ import iOSWebClipSettings from './iOSWebClipSettings.vue'
 import type { iOSWebClipOptions } from '../../utils/favicon-generator/ios-web-clip'
 import { useVModel } from '@vueuse/core'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
-import { Apple } from '@shared/icons/fa'
+import Apple from '@vicons/fa/Apple'
 import { ToolSectionHeader } from '@shared/ui/tool'
 
 const props = defineProps<{

@@ -101,14 +101,12 @@ import { NButton, NDataTable, NFlex, NIcon, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useIntervalFn, useObjectUrl, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
-import {
-  ArrowCounterclockwise16Regular,
-  ArrowDownload16Regular,
-  Delete16Regular,
-  Flag16Regular,
-  Pause16Regular,
-  Play16Regular,
-} from '@shared/icons/fluent'
+import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
+import Flag16Regular from '@vicons/fluent/Flag16Regular'
+import Pause16Regular from '@vicons/fluent/Pause16Regular'
+import Play16Regular from '@vicons/fluent/Play16Regular'
 import { formatStopwatch } from '../utils/format'
 
 const { t } = useI18n()

@@ -1,5 +1,5 @@
 export const toolID = 'reverse-ip-lookup'
-export { GlobeSearch24Regular as icon } from '@shared/icons/fluent'
+export { default as icon } from '@vicons/fluent/GlobeSearch24Regular'
 export const path = '/tools/reverse-ip-lookup'
 export const tags = ['ip', 'reverse', 'lookup', 'domain', 'network', 'dns']
 export const features = ['offline']

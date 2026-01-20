@@ -97,12 +97,10 @@ import type { PWAOptions } from '../../utils/favicon-generator/pwa'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import type { DesktopBrowserOptions } from '../../utils/favicon-generator/desktop-browser'
 import { generateAssets } from '../../utils/favicon-generator/generate-assets'
-import {
-  ArrowDownload16Filled,
-  Sparkle16Filled,
-  BookInformation20Regular,
-  Archive20Regular,
-} from '@shared/icons/fluent'
+import ArrowDownload16Filled from '@vicons/fluent/ArrowDownload16Filled'
+import Sparkle16Filled from '@vicons/fluent/Sparkle16Filled'
+import BookInformation20Regular from '@vicons/fluent/BookInformation20Regular'
+import Archive20Regular from '@vicons/fluent/Archive20Regular'
 import HTMLCode from './HTMLCode.vue'
 import { normalizePath } from '../../utils/favicon-generator/general-info'
 import { computed, ref, watch } from 'vue'

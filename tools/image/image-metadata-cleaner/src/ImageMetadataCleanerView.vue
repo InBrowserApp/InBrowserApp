@@ -71,10 +71,8 @@ import { useMessage } from 'naive-ui'
 import { filesize } from 'filesize'
 import { useObjectUrl } from '@vueuse/core'
 import { NAlert, NButton, NFlex, NGrid, NGridItem, NIcon, NStatistic, NText } from 'naive-ui'
-import {
-  ArrowDownload24Regular as DownloadIcon,
-  Delete24Regular as DeleteIcon,
-} from '@shared/icons/fluent'
+import DownloadIcon from '@vicons/fluent/ArrowDownload24Regular'
+import DeleteIcon from '@vicons/fluent/Delete24Regular'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { stripImageMetadata } from '@utils/image'
 import * as toolInfo from './info'
