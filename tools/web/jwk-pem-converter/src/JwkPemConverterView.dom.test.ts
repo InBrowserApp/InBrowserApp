@@ -381,6 +381,8 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 
     vm.pemInput = file
     await flushPromises()
+    await new Promise((resolve) => setTimeout(resolve, 0))
+    await flushPromises()
 
     expect(vm.pemOutput).toContain('"kty"')
   })
