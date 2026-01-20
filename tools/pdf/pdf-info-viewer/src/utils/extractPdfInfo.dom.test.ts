@@ -2,6 +2,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { PDFDocument } from 'pdf-lib'
 import { extractPdfInfo } from './extractPdfInfo'
 
+const toBlobBytes = (bytes: Uint8Array) => bytes as Uint8Array<ArrayBuffer>
+
 describe('extractPdfInfo', () => {
   afterEach(() => {
     vi.restoreAllMocks()
@@ -21,7 +23,7 @@ describe('extractPdfInfo', () => {
     pdfDoc.addPage()
 
     const bytes = await pdfDoc.save()
-    const file = new File([bytes], 'sample.pdf', {
+    const file = new File([toBlobBytes(bytes)], 'sample.pdf', {
       type: 'application/pdf',
       lastModified: Date.parse('2024-02-01T00:00:00Z'),
     })
@@ -46,7 +48,7 @@ describe('extractPdfInfo', () => {
 
   it('marks encrypted PDFs', async () => {
     const file = new File(
-      [new Uint8Array([0x25, 0x50, 0x44, 0x46, 0x2d, 0x31, 0x2e, 0x37])],
+      [toBlobBytes(new Uint8Array([0x25, 0x50, 0x44, 0x46, 0x2d, 0x31, 0x2e, 0x37]))],
       'secret.pdf',
       {
         type: 'application/pdf',
@@ -63,7 +65,7 @@ describe('extractPdfInfo', () => {
   })
 
   it('throws for invalid PDFs', async () => {
-    const file = new File([new Uint8Array([0x00, 0x01, 0x02])], 'broken.pdf', {
+    const file = new File([toBlobBytes(new Uint8Array([0x00, 0x01, 0x02]))], 'broken.pdf', {
       type: 'application/pdf',
     })
 
