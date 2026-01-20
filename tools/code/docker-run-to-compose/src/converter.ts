@@ -217,7 +217,7 @@ function tokenize(input: string): { tokens: Token[]; error?: string } {
   }
 
   for (let i = 0; i < input.length; i += 1) {
-    const char = input[i]
+    const char = input.charAt(i)
 
     if (escape) {
       current += char
@@ -249,7 +249,7 @@ function tokenize(input: string): { tokens: Token[]; error?: string } {
       if (char === '&' || char === '|' || char === ';') {
         flush()
         let op = char
-        if ((char === '&' || char === '|') && input[i + 1] === char) {
+        if ((char === '&' || char === '|') && input.charAt(i + 1) === char) {
           op = char + char
           i += 1
         }
@@ -345,6 +345,10 @@ function parseDockerRunTokens(tokens: string[]): {
   let i = runIndex + 1
   while (i < tokens.length) {
     const token = tokens[i]
+    if (!token) {
+      i += 1
+      continue
+    }
 
     if (token === '--') {
       i += 1
@@ -352,7 +356,13 @@ function parseDockerRunTokens(tokens: string[]): {
         warnings.push('Found "--" without an image after it.')
         break
       }
-      data.image = tokens[i]
+      const image = tokens[i]
+      if (image) {
+        data.image = image
+      } else {
+        warnings.push('Found \"--\" without an image after it.')
+        break
+      }
       i += 1
       if (i < tokens.length) {
         data.command = tokens.slice(i)
@@ -387,6 +397,9 @@ function parseDockerRunTokens(tokens: string[]): {
 
 function parseOption(tokens: string[], index: number, data: ParsedRun, warnings: string[]): number {
   const token = tokens[index]
+  if (!token) {
+    return index + 1
+  }
   if (token.startsWith('--')) {
     const [flag, inlineValue] = splitFlag(token)
     switch (flag) {
@@ -838,6 +851,9 @@ function parseShortOptions(
   warnings: string[],
 ): number {
   const token = tokens[index]
+  if (!token) {
+    return index + 1
+  }
   const short = token.slice(1)
 
   if (short.length > 1 && short.split('').every((char) => isShortFlag(char))) {
@@ -1095,7 +1111,7 @@ function applyUlimit(
     return
   }
   if (rawValue.includes(':')) {
-    const [softValue, hardValue] = rawValue.split(':')
+    const [softValue = '', hardValue = ''] = rawValue.split(':')
     const soft = Number.parseInt(softValue, 10)
     const hard = Number.parseInt(hardValue, 10)
     ulimits[name] = {
@@ -1386,12 +1402,19 @@ function normalizeVolumeEntry(input: string, volumeNames: Set<string>): string {
     return input
   }
   if (parts.length === 2) {
-    const [target, mode] = parts
-    if (isContainerPath(target) && isVolumeMode(mode)) {
+    const target = parts[0] ?? ''
+    const mode = parts[1] ?? ''
+    if (target && mode && isContainerPath(target) && isVolumeMode(mode)) {
       return `${target}:${mode}`
     }
   }
-  const [source, target, mode] = parts
+  const source = parts[0] ?? ''
+  const target = parts[1] ?? ''
+  const mode = parts[2]
+
+  if (!source || !target) {
+    return input
+  }
 
   if (source && isNamedVolume(source)) {
     volumeNames.add(source)
@@ -1407,13 +1430,18 @@ function normalizeVolumeEntry(input: string, volumeNames: Set<string>): string {
 function splitVolume(value: string): string[] {
   const parts = value.split(':')
   if (parts.length <= 2) {
-    return parts
+    return parts.filter(Boolean)
   }
-  if (isWindowsPath(parts[0], parts[1])) {
-    const source = `${parts[0]}:${parts[1]}`
-    return [source, parts[2], parts.slice(3).join(':')].filter(Boolean)
+  const first = parts[0] ?? ''
+  const second = parts[1] ?? ''
+  if (first && second && isWindowsPath(first, second)) {
+    const source = `${first}:${second}`
+    const target = parts[2]
+    const mode = parts.slice(3).join(':') || undefined
+    return [source, target, mode].filter(Boolean) as string[]
   }
-  return [parts[0], parts[1], parts.slice(2).join(':')].filter(Boolean)
+  const mode = parts.slice(2).join(':') || undefined
+  return [first, second, mode].filter(Boolean) as string[]
 }
 
 function isWindowsPath(first: string, second: string): boolean {
