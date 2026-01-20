@@ -129,6 +129,7 @@ import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
 import { routes as pgpKeyGeneratorRoutes } from '@tools/pgp-key-generator/routes'
 import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
+import { routes as sshPublicKeyFingerprintRoutes } from '@tools/ssh-public-key-fingerprint/routes'
 import { routes as htmlColorNamesRoutes } from '@tools/html-color-names/routes'
 import { routes as svgOptimizerRoutes } from '@tools/svg-optimizer/routes'
 import { routes as svgToImageConverterRoutes } from '@tools/svg-to-image-converter/routes'
@@ -266,5 +267,6 @@ export const routes: ToolRoute[] = [
   ...certificatePublicKeyParserRoutes,
   ...pgpKeyGeneratorRoutes,
   ...sshKeyGeneratorRoutes,
+  ...sshPublicKeyFingerprintRoutes,
   ...htmlColorNamesRoutes,
 ]

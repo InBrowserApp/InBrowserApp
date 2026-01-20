@@ -122,6 +122,7 @@
     "@tools/slug-generator": "workspace:*",
     "@tools/sri-hash-generator": "workspace:*",
     "@tools/ssh-key-generator": "workspace:*",
+    "@tools/ssh-public-key-fingerprint": "workspace:*",
     "@tools/stopwatch": "workspace:*",
     "@tools/svg-optimizer": "workspace:*",
     "@tools/svg-to-image-converter": "workspace:*",

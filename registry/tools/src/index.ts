@@ -131,6 +131,7 @@ import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
 import { toolInfo as pgpKeyGeneratorToolInfo } from '@tools/pgp-key-generator'
 import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
+import { toolInfo as sshPublicKeyFingerprintToolInfo } from '@tools/ssh-public-key-fingerprint'
 import { toolInfo as htmlColorNamesToolInfo } from '@tools/html-color-names'
 import { toolInfo as svgOptimizerToolInfo } from '@tools/svg-optimizer'
 import { toolInfo as svgToImageConverterToolInfo } from '@tools/svg-to-image-converter'
@@ -309,4 +310,5 @@ export const tools: ToolInfo[] = [
   certificatePublicKeyParserToolInfo,
   pgpKeyGeneratorToolInfo,
   sshKeyGeneratorToolInfo,
+  sshPublicKeyFingerprintToolInfo,
 ]
