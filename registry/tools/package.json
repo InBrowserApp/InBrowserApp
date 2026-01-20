@@ -15,6 +15,7 @@
     "@tools/aes-encryptor": "workspace:*",
     "@tools/ascii-art-generator": "workspace:*",
     "@tools/barcode-generator": "workspace:*",
+    "@tools/barcode-reader": "workspace:*",
     "@tools/base64-encoder-decoder": "workspace:*",
     "@tools/basic-auth-decoder": "workspace:*",
     "@tools/basic-auth-generator": "workspace:*",

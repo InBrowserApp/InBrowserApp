@@ -56,6 +56,7 @@ import { routes as cuid2GeneratorRoutes } from '@tools/cuid2-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
 import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
+import { routes as barcodeReaderRoutes } from '@tools/barcode-reader/routes'
 import { routes as markdownToHtmlConverterRoutes } from '@tools/markdown-to-html-converter/routes'
 import { routes as htmlToMarkdownConverterRoutes } from '@tools/html-to-markdown-converter/routes'
 import { routes as jsonToYamlBuilderRoutes } from '@tools/json-to-yaml-converter/routes'
@@ -183,6 +184,7 @@ export const routes: ToolRoute[] = [
   ...qrCodeGeneratorRoutes,
   ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,
+  ...barcodeReaderRoutes,
   ...markdownToHtmlConverterRoutes,
   ...htmlToMarkdownConverterRoutes,
   ...jsonToYamlBuilderRoutes,
