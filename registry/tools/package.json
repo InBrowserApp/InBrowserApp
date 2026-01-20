@@ -92,6 +92,7 @@
     "@tools/number-base-converter": "workspace:*",
     "@tools/openapi-to-typescript": "workspace:*",
     "@tools/password-strength-checker": "workspace:*",
+    "@tools/pdf-info-viewer": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/pgp-key-generator": "workspace:*",
     "@tools/placeholder-image-generator": "workspace:*",

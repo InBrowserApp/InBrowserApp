@@ -3,7 +3,7 @@
     <n-upload-dragger>
       <div style="margin-bottom: 12px">
         <n-icon size="48" :depth="3">
-          <ArchiveOutline />
+          <DocumentPdf />
         </n-icon>
       </div>
       <n-text style="font-size: 16px">{{ t('upload_text') }}</n-text>
@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { NUpload, NUploadDragger, NIcon, NText } from 'naive-ui'
-import ArchiveOutline from '@vicons/ionicons5/ArchiveOutline'
+import DocumentPdf from '@vicons/carbon/DocumentPdf'
 import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'

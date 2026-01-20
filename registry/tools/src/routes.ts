@@ -2,6 +2,7 @@ import type { ToolRoute } from '@shared/tools'
 import { routes as faviconAssetsGeneratorRoutes } from '@tools/favicon-assets-generator/routes'
 import { routes as uuidRoutes } from '@tools/uuid/routes'
 import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-password/routes'
+import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as unicodePunycodeConverterRoutes } from '@tools/unicode-punycode-converter/routes'
 import { routes as dnsLookupRoutes } from '@tools/dns-lookup/routes'
 import { routes as reverseIPLookupRoutes } from '@tools/reverse-ip-lookup/routes'
@@ -132,6 +133,7 @@ export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
   ...uuidRoutes,
   ...removePDFOwnerPasswordRoutes,
+  ...pdfInfoViewerRoutes,
   ...unicodePunycodeConverterRoutes,
   ...dnsLookupRoutes,
   ...reverseIPLookupRoutes,
