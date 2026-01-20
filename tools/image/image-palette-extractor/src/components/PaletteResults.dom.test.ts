@@ -72,6 +72,12 @@ const CopyStub = defineComponent({
   template: '<button><slot /></button>',
 })
 
+const CopyTooltipStub = defineComponent({
+  name: 'CopyToClipboardTooltip',
+  props: ['content'],
+  template: '<div><slot :copy="() => {}" /></div>',
+})
+
 describe('PaletteResults', () => {
   beforeEach(() => {
     vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:palette')
@@ -127,6 +133,7 @@ describe('PaletteResults', () => {
           NIcon: IconStub,
           NEmpty: EmptyStub,
           CopyToClipboardButton: CopyStub,
+          CopyToClipboardTooltip: CopyTooltipStub,
         },
       },
     })

@@ -38,30 +38,17 @@
 
         <n-grid cols="1 s:2 l:3" :x-gap="16" :y-gap="16" class="swatch-grid">
           <n-grid-item v-for="color in colors" :key="color.hex">
-            <div class="swatch-card">
-              <div
-                class="swatch-chip"
-                :style="{ backgroundColor: color.hex, color: color.textColor }"
-              >
-                <div class="swatch-chip-header">
-                  <span class="swatch-hex">{{ color.hex }}</span>
-                  <CopyToClipboardButton
-                    :content="color.hex"
-                    size="tiny"
-                    :aria-label="t('copy')"
-                    class="swatch-copy"
-                  >
-                    <template #label />
-                  </CopyToClipboardButton>
-                </div>
-                <div class="swatch-chip-footer">
-                  <span class="swatch-percent">{{ formatPercent(color.ratio) }}</span>
-                  <span class="swatch-hint">{{ t('shareHint') }}</span>
-                </div>
-              </div>
-              <div class="swatch-body">
-                <span class="swatch-value">{{ color.rgb }}</span>
-                <span class="swatch-value">{{ color.hsl }}</span>
+            <div
+              class="swatch-card"
+              :style="{ backgroundColor: color.hex, color: color.textColor }"
+            >
+              <div class="swatch-overlay">
+                <CopyToClipboardTooltip :content="color.hex" #="{ copy }">
+                  <button type="button" class="swatch-hex" :aria-label="t('copy')" @click="copy">
+                    {{ color.hex }}
+                  </button>
+                </CopyToClipboardTooltip>
+                <span class="swatch-percent">{{ formatPercent(color.ratio) }}</span>
               </div>
             </div>
           </n-grid-item>
@@ -129,7 +116,7 @@ import {
 } from 'naive-ui'
 import DownloadIcon from '@vicons/fluent/ArrowDownload24Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { CopyToClipboardButton } from '@shared/ui/base'
+import { CopyToClipboardButton, CopyToClipboardTooltip } from '@shared/ui/base'
 import type { PaletteSwatch } from '../types'
 import {
   formatPaletteExport,
@@ -205,57 +192,43 @@ function formatPercent(value: number): string {
   border: 1px solid var(--n-border-color);
   border-radius: 14px;
   overflow: hidden;
-  background: var(--n-color);
-  display: flex;
-  flex-direction: column;
-}
-
-.swatch-chip {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-height: 84px;
-}
-
-.swatch-chip-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.swatch-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
 }
 
 .swatch-hex {
   font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
-.swatch-chip-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-}
-
-.swatch-body {
-  padding: 12px 16px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--n-text-color-3);
+.swatch-hex:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 999px;
 }
 
 .swatch-percent {
   font-weight: 600;
-}
-
-.swatch-value {
-  color: var(--n-text-color-2);
-}
-
-.swatch-hint {
-  opacity: 0.7;
+  font-size: 12px;
+  opacity: 0.9;
 }
 
 .dominant-dot {
@@ -306,7 +279,6 @@ function formatPercent(value: number): string {
     "copy": "Copy",
     "download": "Download",
     "empty": "No colors extracted yet.",
-    "shareHint": "Click to copy",
     "formatting": "Format"
   },
   "zh": {
@@ -322,7 +294,6 @@ function formatPercent(value: number): string {
     "copy": "复制",
     "download": "下载",
     "empty": "暂无可用颜色。",
-    "shareHint": "点击复制",
     "formatting": "格式"
   },
   "zh-CN": {
@@ -338,7 +309,6 @@ function formatPercent(value: number): string {
     "copy": "复制",
     "download": "下载",
     "empty": "暂无可用颜色。",
-    "shareHint": "点击复制",
     "formatting": "格式"
   },
   "zh-TW": {
@@ -354,7 +324,6 @@ function formatPercent(value: number): string {
     "copy": "複製",
     "download": "下載",
     "empty": "尚未擷取到顏色。",
-    "shareHint": "點擊複製",
     "formatting": "格式"
   },
   "zh-HK": {
@@ -370,7 +339,6 @@ function formatPercent(value: number): string {
     "copy": "複製",
     "download": "下載",
     "empty": "尚未擷取到顏色。",
-    "shareHint": "點擊複製",
     "formatting": "格式"
   },
   "es": {
@@ -386,7 +354,6 @@ function formatPercent(value: number): string {
     "copy": "Copiar",
     "download": "Descargar",
     "empty": "Aún no se han extraído colores.",
-    "shareHint": "Haz clic para copiar",
     "formatting": "Formato"
   },
   "fr": {
@@ -402,7 +369,6 @@ function formatPercent(value: number): string {
     "copy": "Copier",
     "download": "Télécharger",
     "empty": "Aucune couleur extraite pour l'instant.",
-    "shareHint": "Cliquez pour copier",
     "formatting": "Format"
   },
   "de": {
@@ -418,7 +384,6 @@ function formatPercent(value: number): string {
     "copy": "Kopieren",
     "download": "Herunterladen",
     "empty": "Noch keine Farben extrahiert.",
-    "shareHint": "Zum Kopieren klicken",
     "formatting": "Format"
   },
   "it": {
@@ -434,7 +399,6 @@ function formatPercent(value: number): string {
     "copy": "Copia",
     "download": "Scarica",
     "empty": "Nessun colore estratto.",
-    "shareHint": "Clicca per copiare",
     "formatting": "Formato"
   },
   "ja": {
@@ -450,7 +414,6 @@ function formatPercent(value: number): string {
     "copy": "コピー",
     "download": "ダウンロード",
     "empty": "まだ色が抽出されていません。",
-    "shareHint": "クリックでコピー",
     "formatting": "形式"
   },
   "ko": {
@@ -466,7 +429,6 @@ function formatPercent(value: number): string {
     "copy": "복사",
     "download": "다운로드",
     "empty": "아직 색상이 추출되지 않았습니다.",
-    "shareHint": "클릭하여 복사",
     "formatting": "형식"
   },
   "ru": {
@@ -482,7 +444,6 @@ function formatPercent(value: number): string {
     "copy": "Копировать",
     "download": "Скачать",
     "empty": "Цвета пока не извлечены.",
-    "shareHint": "Нажмите, чтобы копировать",
     "formatting": "Формат"
   },
   "pt": {
@@ -498,7 +459,6 @@ function formatPercent(value: number): string {
     "copy": "Copiar",
     "download": "Baixar",
     "empty": "Nenhuma cor extraída ainda.",
-    "shareHint": "Clique para copiar",
     "formatting": "Formato"
   },
   "ar": {
@@ -514,7 +474,6 @@ function formatPercent(value: number): string {
     "copy": "نسخ",
     "download": "تحميل",
     "empty": "لم يتم استخراج ألوان بعد.",
-    "shareHint": "انقر للنسخ",
     "formatting": "التنسيق"
   },
   "hi": {
@@ -530,7 +489,6 @@ function formatPercent(value: number): string {
     "copy": "कॉपी",
     "download": "डाउनलोड",
     "empty": "अब तक कोई रंग नहीं निकाला गया।",
-    "shareHint": "कॉपी करने के लिए क्लिक करें",
     "formatting": "प्रारूप"
   },
   "tr": {
@@ -546,7 +504,6 @@ function formatPercent(value: number): string {
     "copy": "Kopyala",
     "download": "Indir",
     "empty": "Henuz renk cikarilmadi.",
-    "shareHint": "Kopyalamak icin tiklayin",
     "formatting": "Bicim"
   },
   "nl": {
@@ -562,7 +519,6 @@ function formatPercent(value: number): string {
     "copy": "Kopiëren",
     "download": "Download",
     "empty": "Nog geen kleuren geëxtraheerd.",
-    "shareHint": "Klik om te kopiëren",
     "formatting": "Indeling"
   },
   "sv": {
@@ -578,7 +534,6 @@ function formatPercent(value: number): string {
     "copy": "Kopiera",
     "download": "Ladda ner",
     "empty": "Inga färger extraherade ännu.",
-    "shareHint": "Klicka för att kopiera",
     "formatting": "Format"
   },
   "pl": {
@@ -594,7 +549,6 @@ function formatPercent(value: number): string {
     "copy": "Kopiuj",
     "download": "Pobierz",
     "empty": "Brak wyodrębnionych kolorów.",
-    "shareHint": "Kliknij, aby skopiować",
     "formatting": "Format"
   },
   "vi": {
@@ -610,7 +564,6 @@ function formatPercent(value: number): string {
     "copy": "Sao chép",
     "download": "Tải xuống",
     "empty": "Chưa trích xuất màu nào.",
-    "shareHint": "Nhấp để sao chép",
     "formatting": "Định dạng"
   },
   "th": {
@@ -626,7 +579,6 @@ function formatPercent(value: number): string {
     "copy": "คัดลอก",
     "download": "ดาวน์โหลด",
     "empty": "ยังไม่มีสีที่ถูกดึงออกมา",
-    "shareHint": "คลิกเพื่อคัดลอก",
     "formatting": "รูปแบบ"
   },
   "id": {
@@ -642,7 +594,6 @@ function formatPercent(value: number): string {
     "copy": "Salin",
     "download": "Unduh",
     "empty": "Belum ada warna yang diekstrak.",
-    "shareHint": "Klik untuk menyalin",
     "formatting": "Format"
   },
   "he": {
@@ -658,7 +609,6 @@ function formatPercent(value: number): string {
     "copy": "העתק",
     "download": "הורדה",
     "empty": "עדיין לא חולצו צבעים.",
-    "shareHint": "לחץ כדי להעתיק",
     "formatting": "פורמט"
   },
   "ms": {
@@ -674,7 +624,6 @@ function formatPercent(value: number): string {
     "copy": "Salin",
     "download": "Muat turun",
     "empty": "Belum ada warna yang diekstrak.",
-    "shareHint": "Klik untuk salin",
     "formatting": "Format"
   },
   "no": {
@@ -690,7 +639,6 @@ function formatPercent(value: number): string {
     "copy": "Kopier",
     "download": "Last ned",
     "empty": "Ingen farger er hentet ut ennå.",
-    "shareHint": "Klikk for å kopiere",
     "formatting": "Format"
   }
 }
