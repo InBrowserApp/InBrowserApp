@@ -60,6 +60,7 @@ import { toolInfo as cuid2GeneratorToolInfo } from '@tools/cuid2-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
 import { toolInfo as qrCodeReaderToolInfo } from '@tools/qr-code-reader'
 import { toolInfo as barcodeGeneratorToolInfo } from '@tools/barcode-generator'
+import { toolInfo as barcodeReaderToolInfo } from '@tools/barcode-reader'
 import { toolInfo as markdownToHtmlConverterToolInfo } from '@tools/markdown-to-html-converter'
 import { toolInfo as htmlToMarkdownConverterToolInfo } from '@tools/html-to-markdown-converter'
 import { toolInfo as jsonToYamlBuilderToolInfo } from '@tools/json-to-yaml-converter'
@@ -112,6 +113,7 @@ import { toolInfo as textStatisticsToolInfo } from '@tools/text-statistics'
 import { toolInfo as regexTesterReplacerToolInfo } from '@tools/regex-tester-replacer'
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
+import { toolInfo as emailValidatorToolInfo } from '@tools/email-validator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
@@ -161,6 +163,7 @@ export const tools: ToolInfo[] = [
   qrCodeGeneratorToolInfo,
   qrCodeReaderToolInfo,
   barcodeGeneratorToolInfo,
+  barcodeReaderToolInfo,
   markdownToHtmlConverterToolInfo,
   htmlToMarkdownConverterToolInfo,
   jsonToYamlBuilderToolInfo,
@@ -276,6 +279,7 @@ export const tools: ToolInfo[] = [
   jsonSchemaGeneratorToolInfo,
   jsonSchemaValidatorToolInfo,
   passwordStrengthCheckerToolInfo,
+  emailValidatorToolInfo,
   creditCardValidatorToolInfo,
   prcIdValidatorToolInfo,
   isbnValidatorToolInfo,

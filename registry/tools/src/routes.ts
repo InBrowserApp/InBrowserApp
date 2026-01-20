@@ -58,6 +58,7 @@ import { routes as cuid2GeneratorRoutes } from '@tools/cuid2-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
 import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
+import { routes as barcodeReaderRoutes } from '@tools/barcode-reader/routes'
 import { routes as markdownToHtmlConverterRoutes } from '@tools/markdown-to-html-converter/routes'
 import { routes as htmlToMarkdownConverterRoutes } from '@tools/html-to-markdown-converter/routes'
 import { routes as jsonToYamlBuilderRoutes } from '@tools/json-to-yaml-converter/routes'
@@ -110,6 +111,7 @@ import { routes as textStatisticsRoutes } from '@tools/text-statistics/routes'
 import { routes as regexTesterReplacerRoutes } from '@tools/regex-tester-replacer/routes'
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
+import { routes as emailValidatorRoutes } from '@tools/email-validator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
@@ -187,6 +189,7 @@ export const routes: ToolRoute[] = [
   ...qrCodeGeneratorRoutes,
   ...qrCodeReaderRoutes,
   ...barcodeGeneratorRoutes,
+  ...barcodeReaderRoutes,
   ...markdownToHtmlConverterRoutes,
   ...htmlToMarkdownConverterRoutes,
   ...jsonToYamlBuilderRoutes,
@@ -239,6 +242,7 @@ export const routes: ToolRoute[] = [
   ...regexTesterReplacerRoutes,
   ...loremIpsumGeneratorRoutes,
   ...gitignoreGeneratorRoutes,
+  ...emailValidatorRoutes,
   ...creditCardValidatorRoutes,
   ...prcIdValidatorRoutes,
   ...isbnValidatorRoutes,
