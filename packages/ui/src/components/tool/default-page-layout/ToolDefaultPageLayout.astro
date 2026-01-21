@@ -1,0 +1,18 @@
+---
+import { ToolHeading } from '../heading'
+import { ToolDescription } from '../description'
+
+const { title, description } = Astro.props
+---
+
+<main>
+  <header>
+    <ToolHeading>
+       {title}
+    </ToolHeading>
+    <ToolDescription>
+      {description}
+    </ToolDescription>
+  </header>
+  <slot />
+</main>

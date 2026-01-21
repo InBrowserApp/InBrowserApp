@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@inbrowserapp/tools-shared": "workspace:*",
+    "@shared/ui": "workspace:*",
     "astro-icon": "^1.1.5",
     "sonner": "^2.0.7"
   },

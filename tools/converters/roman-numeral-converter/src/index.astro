@@ -2,17 +2,10 @@
 import RomanConverter, { type Props } from './RomanConverter.tsx'
 const { i18n } = Astro.props
 import { Icon } from 'astro-icon/components'
+import { ToolDefaultPageLayout } from '@shared/ui/components/tool/default-page-layout'
 ---
 
-<div class="flex flex-col gap-8">
-  <!-- Static Header (SSG) -->
-  <header class="text-center">
-    <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3">{i18n.name}</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-      {i18n.description}
-    </p>
-  </header>
-
+<ToolDefaultPageLayout title={i18n.name} description={i18n.description}>
   <!-- Interactive React Component -->
   <RomanConverter client:load i18n={i18n} />
 
@@ -34,4 +27,4 @@ import { Icon } from 'astro-icon/components'
       >
     </div>
   </section>
-</div>
+</ToolDefaultPageLayout>

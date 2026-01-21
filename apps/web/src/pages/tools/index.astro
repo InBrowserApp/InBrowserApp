@@ -1,28 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import { toolRegistry } from '@inbrowserapp/tools-registry'
-import { translateMeta } from '@inbrowserapp/tools-i18n'
-import { ToolItem } from '@shared/ui/components/tool/tool-item'
-
-const lang = 'en'
+import ToolsView from "../[lang]/tools/index.astro"
 ---
 
-<BaseLayout title="All Tools" description="Browse all available online browser tools" lang={lang}>
-  <main class="max-w-6xl mx-auto p-8">
-    <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-gray-100">All Tools</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
-      Free online browser tools - Privacy focused, no data collection
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        toolRegistry.map((tool) => {
-          const i18n = translateMeta(tool, lang)
-          return (
-            <ToolItem i18n={i18n} path={`/tools${tool.path}`} icon={tool.icon} />
-          )
-        })
-      }
-    </div>
-  </main>
-</BaseLayout>
+<ToolsView lang="en" />

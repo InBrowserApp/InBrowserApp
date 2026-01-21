@@ -4,6 +4,8 @@ import { toolRegistry } from '@inbrowserapp/tools-registry'
 import { translateMeta, supportedLanguages } from '@inbrowserapp/tools-i18n'
 import type { SupportedLanguage } from '@inbrowserapp/tools-shared'
 import { ToolItem } from '@shared/ui/components/tool/tool-item'
+import { HeadingOne } from '@shared/ui/components/common/typography'
+import { ToolDescription } from '@shared/ui/components/tool/description'
 
 export async function getStaticPaths() {
   const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
@@ -18,6 +20,7 @@ const { lang } = Astro.props as { lang: SupportedLanguage }
 
 // Translation map for page titles and descriptions
 const pageTranslations: Record<string, { title: string; subtitle: string }> = {
+  en: { title: 'All Tools', subtitle: 'Free online browser tools - Privacy focused, no data collection' },
   zh: { title: '所有工具', subtitle: '免费在线浏览器工具 - 注重隐私，无数据收集' },
   'zh-CN': { title: '所有工具', subtitle: '免费在线浏览器工具 - 注重隐私，无数据收集' },
   'zh-TW': { title: '所有工具', subtitle: '免費線上瀏覽器工具 - 注重隱私，無資料收集' },
@@ -56,23 +59,20 @@ const pageTranslations: Record<string, { title: string; subtitle: string }> = {
   },
 }
 
-const t = pageTranslations[lang] || {
-  title: 'All Tools',
-  subtitle: 'Free online browser tools - Privacy focused, no data collection',
-}
+const t = pageTranslations[lang]
 ---
 
 <BaseLayout title={t.title} description={t.subtitle} lang={lang}>
   <main class="max-w-6xl mx-auto p-8">
-    <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-gray-100">{t.title}</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">{t.subtitle}</p>
+    <HeadingOne>{t.title}</HeadingOne>
+    <ToolDescription>{t.subtitle}</ToolDescription>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
         toolRegistry.map((tool) => {
           const i18n = translateMeta(tool, lang)
           return (
-            <ToolItem i18n={i18n} path={`/${lang}/tools${tool.path}`} icon={tool.icon} />
+            <ToolItem i18n={i18n} path={`/${lang === 'en' ? '' : `/${lang}`}/tools${tool.path}`} icon={tool.icon} />
           )
         })
       }

@@ -167,6 +167,9 @@ importers:
       '@inbrowserapp/tools-shared':
         specifier: workspace:*
         version: link:../../../packages/tools/shared
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../packages/ui
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
