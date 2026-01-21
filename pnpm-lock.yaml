@@ -83,9 +83,9 @@ importers:
       '@inbrowserapp/tools-i18n':
         specifier: workspace:*
         version: link:../../packages/tools/common-i18n
-      '@inbrowserapp/tools-registry':
+      '@registry/tools':
         specifier: workspace:*
-        version: link:../../packages/tools/registry
+        version: link:../../registry
       '@shared/tools':
         specifier: workspace:*
         version: link:../../shared/tools
@@ -142,14 +142,14 @@ importers:
         specifier: workspace:*
         version: link:../../../shared/tools
 
-  packages/tools/registry:
+  registry:
     dependencies:
       '@shared/tools':
         specifier: workspace:*
-        version: link:../../../shared/tools
+        version: link:../shared/tools
       '@tools/roman-numeral-converter':
         specifier: workspace:*
-        version: link:../../../tools/converters/roman-numeral-converter
+        version: link:../tools/converters/roman-numeral-converter
 
   shared/tools: {}
 

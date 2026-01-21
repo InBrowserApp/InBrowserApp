@@ -16,7 +16,7 @@
     "@iconify-json/fluent": "^1.2.37",
     "@iconify-json/heroicons": "^1.2.3",
     "@inbrowserapp/tools-i18n": "workspace:*",
-    "@inbrowserapp/tools-registry": "workspace:*",
+    "@registry/tools": "workspace:*",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@shared/utils": "workspace:*",
