@@ -30,7 +30,7 @@
                 <div class="panel__title">{{ t('stopsTitle') }}</div>
                 <div class="panel__subtitle">{{ t('trackHint') }}</div>
               </div>
-              <n-button size="small" @click="handleAddStop" data-testid="add-stop">
+              <n-button size="small" @click="handleAddStopClick" data-testid="add-stop">
                 {{ t('addStop') }}
               </n-button>
             </div>
@@ -693,6 +693,10 @@ const moveLayer = (index: number, direction: number) => {
   if (!layer) return
   nextLayers.splice(target, 0, layer)
   layers.value = nextLayers
+}
+
+const handleAddStopClick = () => {
+  handleAddStop()
 }
 
 const handleAddStop = (position = 50) => {

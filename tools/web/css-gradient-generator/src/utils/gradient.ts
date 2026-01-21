@@ -39,6 +39,10 @@ const BLEND_MODES: BlendMode[] = [
   'luminosity',
 ]
 
+type GradientLayerOverrides = Omit<Partial<GradientLayer>, 'stops'> & {
+  stops?: GradientStopSeed[]
+}
+
 const DEFAULT_STOPS: GradientStopSeed[] = [
   { color: '#0EA5E9FF', position: 0 },
   { color: '#8B5CFFFF', position: 52 },
@@ -150,9 +154,7 @@ export const createStop = (color: string, position: number, id?: string): Gradie
 export const sortStops = (stops: GradientStop[]) =>
   [...stops].sort((a, b) => a.position - b.position)
 
-export const createLayer = (
-  overrides: Partial<GradientLayer> & { stops?: GradientStopSeed[] } = {},
-): GradientLayer => {
+export const createLayer = (overrides: GradientLayerOverrides = {}): GradientLayer => {
   const stops = (overrides.stops?.length ? overrides.stops : DEFAULT_STOPS).map((stop) =>
     createStop(stop.color, stop.position),
   )
@@ -175,8 +177,9 @@ export const cloneLayerWithNewIds = (layer: GradientLayer): GradientLayer => ({
 })
 
 export const getNearestStopColor = (stops: GradientStop[], position: number) => {
-  if (stops.length === 0) return '#FFFFFFFF'
-  let nearest = stops[0]
+  const first = stops[0]
+  if (!first) return '#FFFFFFFF'
+  let nearest = first
   let distance = Math.abs(position - nearest.position)
   for (const stop of stops) {
     const nextDistance = Math.abs(position - stop.position)
@@ -214,15 +217,17 @@ const normalizeStops = (stops: GradientStopSeed[] | undefined) => {
   }
   return sortStops(
     stops.map((stop, index) => {
-      const fallback = DEFAULT_STOPS[Math.min(index, DEFAULT_STOPS.length - 1)]
-      const color = stop?.color ?? fallback.color
-      const position = Number.isFinite(stop?.position) ? Number(stop.position) : fallback.position
+      const fallback = DEFAULT_STOPS[Math.min(index, DEFAULT_STOPS.length - 1)] ?? DEFAULT_STOPS[0]
+      const color = stop?.color ?? fallback?.color ?? '#000000FF'
+      const position = Number.isFinite(stop?.position)
+        ? Number(stop.position)
+        : (fallback?.position ?? 0)
       return createStop(color, position)
     }),
   )
 }
 
-export const normalizeLayer = (raw: Partial<GradientLayer> & { stops?: GradientStopSeed[] }) => {
+export const normalizeLayer = (raw: GradientLayerOverrides) => {
   return {
     ...DEFAULT_LAYER,
     type: toValidType(raw.type, DEFAULT_LAYER.type),
@@ -299,7 +304,7 @@ const randomStops = (count: number) => {
   return positions.map((position) => createStop(randomColor(), position))
 }
 
-export const randomizeLayer = (layer: GradientLayer) => {
+export const randomizeLayer = (layer: GradientLayer): GradientLayer => {
   const count = 3 + Math.floor(Math.random() * 3)
   const nextStops = randomStops(count)
   return {
