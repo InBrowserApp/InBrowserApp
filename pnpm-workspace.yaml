@@ -147,7 +147,7 @@ catalog:
   vue-tsc: ^3.2.2
   vue3-simple-icons: ^15.6.0
   webrtc-ips: ^0.2.0
-  wrangler: 4.59.2
+  wrangler: 4.59.3
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
 
