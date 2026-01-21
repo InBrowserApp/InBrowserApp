@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # old repository backup
 old-repo/
+
+# local main branch reference
+main-reference/
