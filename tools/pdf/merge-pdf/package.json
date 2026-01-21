@@ -10,7 +10,6 @@
   "dependencies": {
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
-    "@utils/pdf": "workspace:*",
     "@vicons/fluent": "catalog:",
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",

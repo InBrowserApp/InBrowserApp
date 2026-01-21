@@ -163,7 +163,7 @@ import {
 } from 'naive-ui'
 import { PDFDocument } from 'pdf-lib'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { mergePDFs } from '@utils/pdf'
+import { mergePDFs } from './merge-pdf'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import ArrowSortDown16Regular from '@vicons/fluent/ArrowSortDown16Regular'
 import ArrowSortUp16Regular from '@vicons/fluent/ArrowSortUp16Regular'

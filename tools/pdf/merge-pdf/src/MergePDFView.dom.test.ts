@@ -14,7 +14,7 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@utils/pdf', () => ({
+vi.mock('./merge-pdf', () => ({
   mergePDFs: vi.fn(),
 }))
 
@@ -46,7 +46,7 @@ import * as toolInfo from './info'
 import { routes } from './routes'
 import { toolInfo as indexToolInfo } from './index'
 import MergePDFView from './MergePDFView.vue'
-import { mergePDFs } from '@utils/pdf'
+import { mergePDFs } from './merge-pdf'
 
 const mockedMerge = vi.mocked(mergePDFs)
 
