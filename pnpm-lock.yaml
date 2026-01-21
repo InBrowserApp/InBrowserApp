@@ -5292,6 +5292,9 @@ importers:
       '@jspawn/qpdf-wasm':
         specifier: 'catalog:'
         version: 0.0.2
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
     devDependencies:
       '@types/emscripten':
         specifier: 'catalog:'
