@@ -24,6 +24,9 @@ describe('base16 encoder tool metadata', () => {
           Base16Encoder: {
             template: '<div data-test="encoder" />',
           },
+          WhatIsBase16: {
+            template: '<div data-test="what-is" />',
+          },
         },
       },
     })
