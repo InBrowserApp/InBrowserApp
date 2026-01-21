@@ -158,7 +158,12 @@ const markdownScopeClass = 'markdown-preview'
 const gridCols = computed(() => (viewMode.value === 'split' ? '1 s:2' : '1'))
 const isSplit = computed(() => viewMode.value === 'split')
 
-const stripHtml = (value: string) => value.replace(/<[^>]*>/g, '').trim()
+const stripHtml = (value: string) => {
+  if (!value) return ''
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(value, 'text/html')
+  return (doc.body.textContent ?? '').trim()
+}
 
 const slugify = (value: string) =>
   value
