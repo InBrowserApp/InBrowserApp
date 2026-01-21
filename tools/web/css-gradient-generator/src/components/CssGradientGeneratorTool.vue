@@ -398,6 +398,8 @@
       </n-gi>
     </n-grid>
   </ToolSection>
+
+  <WhatIsCssGradient />
 </template>
 
 <script setup lang="ts">
@@ -437,6 +439,7 @@ import type {
 } from '../types'
 import GradientPreview from './GradientPreview.vue'
 import GradientStopsTrack from './GradientStopsTrack.vue'
+import WhatIsCssGradient from './WhatIsCssGradient.vue'
 import {
   clamp,
   cloneLayerWithNewIds,
