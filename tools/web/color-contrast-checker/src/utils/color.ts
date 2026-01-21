@@ -70,13 +70,16 @@ export function parseRgbColor(input: string): RGBA | null {
   const match = input.match(/^rgba?\((.+)\)$/i)
   if (!match) return null
 
-  const { parts, alpha } = splitFunctionalArgs(match[1])
+  const body = match[1]
+  if (!body) return null
+
+  const { parts, alpha } = splitFunctionalArgs(body)
   if (parts.length !== 3) return null
 
   const channels = parts.map(parseRgbChannel)
   if (channels.some((value) => value === null)) return null
 
-  const [r, g, b] = channels as number[]
+  const [r, g, b] = channels as [number, number, number]
   const alphaValue = parseAlpha(alpha)
   if (alphaValue === null) return null
 
@@ -92,12 +95,18 @@ export function parseHslColor(input: string): RGBA | null {
   const match = input.match(/^hsla?\((.+)\)$/i)
   if (!match) return null
 
-  const { parts, alpha } = splitFunctionalArgs(match[1])
+  const body = match[1]
+  if (!body) return null
+
+  const { parts, alpha } = splitFunctionalArgs(body)
   if (parts.length !== 3) return null
 
-  const hue = parseHue(parts[0])
-  const saturation = parsePercentage(parts[1])
-  const lightness = parsePercentage(parts[2])
+  const [hueValue, saturationValue, lightnessValue] = parts
+  if (!hueValue || !saturationValue || !lightnessValue) return null
+
+  const hue = parseHue(hueValue)
+  const saturation = parsePercentage(saturationValue)
+  const lightness = parsePercentage(lightnessValue)
 
   if (hue === null || saturation === null || lightness === null) return null
 
