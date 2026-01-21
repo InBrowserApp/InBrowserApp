@@ -88,6 +88,7 @@
     "@tools/ksuid-generator": "workspace:*",
     "@tools/lorem-ipsum-generator": "workspace:*",
     "@tools/mac-to-ipv6-link-local": "workspace:*",
+    "@tools/markdown-previewer": "workspace:*",
     "@tools/markdown-to-html-converter": "workspace:*",
     "@tools/md5-hash-text-or-file": "workspace:*",
     "@tools/mime-type-lookup": "workspace:*",

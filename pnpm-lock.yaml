@@ -825,6 +825,9 @@ importers:
       '@tools/mac-to-ipv6-link-local':
         specifier: workspace:*
         version: link:../../tools/network/mac-to-ipv6-link-local
+      '@tools/markdown-previewer':
+        specifier: workspace:*
+        version: link:../../tools/document/markdown-previewer
       '@tools/markdown-to-html-converter':
         specifier: workspace:*
         version: link:../../tools/document/markdown-to-html-converter
@@ -1829,6 +1832,48 @@ importers:
       '@types/turndown':
         specifier: 'catalog:'
         version: 5.0.6
+
+  tools/document/markdown-previewer:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      browser-fs-access:
+        specifier: 'catalog:'
+        version: 0.38.0
+      dompurify:
+        specifier: 'catalog:'
+        version: 3.3.1
+      github-markdown-css:
+        specifier: 'catalog:'
+        version: 5.8.1
+      marked:
+        specifier: 'catalog:'
+        version: 17.0.1
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
 
   tools/document/markdown-to-html-converter:
     dependencies:

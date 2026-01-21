@@ -65,6 +65,7 @@ import { routes as qrCodeReaderRoutes } from '@tools/qr-code-reader/routes'
 import { routes as barcodeGeneratorRoutes } from '@tools/barcode-generator/routes'
 import { routes as barcodeReaderRoutes } from '@tools/barcode-reader/routes'
 import { routes as markdownToHtmlConverterRoutes } from '@tools/markdown-to-html-converter/routes'
+import { routes as markdownPreviewerRoutes } from '@tools/markdown-previewer/routes'
 import { routes as htmlToMarkdownConverterRoutes } from '@tools/html-to-markdown-converter/routes'
 import { routes as jsonToYamlBuilderRoutes } from '@tools/json-to-yaml-converter/routes'
 import { routes as yamlToJsonConverterRoutes } from '@tools/yaml-to-json-converter/routes'
@@ -205,6 +206,7 @@ export const routes: ToolRoute[] = [
   ...barcodeGeneratorRoutes,
   ...barcodeReaderRoutes,
   ...markdownToHtmlConverterRoutes,
+  ...markdownPreviewerRoutes,
   ...htmlToMarkdownConverterRoutes,
   ...jsonToYamlBuilderRoutes,
   ...yamlToJsonConverterRoutes,
