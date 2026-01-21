@@ -97,6 +97,7 @@ import { toolInfo as cronExpressionGeneratorToolInfo } from '@tools/cron-express
 import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 import { toolInfo as colorPickerToolInfo } from '@tools/color-picker'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
+import { toolInfo as colorContrastCheckerToolInfo } from '@tools/color-contrast-checker'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 import { toolInfo as unicodeInvisibleCharacterCheckerToolInfo } from '@tools/unicode-invisible-character-checker'
@@ -251,6 +252,7 @@ export const tools: ToolInfo[] = [
   // Web Tools (Color)
   colorPickerToolInfo,
   colorConverterToolInfo,
+  colorContrastCheckerToolInfo,
   htmlColorNamesToolInfo,
 
   // Text Tools

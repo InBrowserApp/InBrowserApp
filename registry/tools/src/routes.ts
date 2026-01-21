@@ -95,6 +95,7 @@ import { routes as cronExpressionGeneratorRoutes } from '@tools/cron-expression-
 import { routes as textDiffRoutes } from '@tools/text-diff/routes'
 import { routes as colorPickerRoutes } from '@tools/color-picker/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
+import { routes as colorContrastCheckerRoutes } from '@tools/color-contrast-checker/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeInvisibleCharacterCheckerRoutes } from '@tools/unicode-invisible-character-checker/routes'
@@ -229,6 +230,7 @@ export const routes: ToolRoute[] = [
   ...textDiffRoutes,
   ...colorPickerRoutes,
   ...colorConverterRoutes,
+  ...colorContrastCheckerRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
   ...unicodeInvisibleCharacterCheckerRoutes,
