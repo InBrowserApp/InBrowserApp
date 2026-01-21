@@ -40,6 +40,7 @@
       <n-form-item-gi :label="t('input-title')" :show-feedback="false">
         <n-input
           v-model:value="dockerRunInput"
+          class="monospace-input"
           type="textarea"
           autosize
           :placeholder="t('input-placeholder')"
@@ -110,6 +111,14 @@ function clearInput(): void {
   dockerRunInput.value = ''
 }
 </script>
+
+<style scoped>
+.monospace-input :deep(textarea) {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+</style>
 
 <i18n lang="json">
 {
