@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { toolRegistry } from '@inbrowserapp/tools-registry'
 import { translateMeta } from '@inbrowserapp/tools-i18n'
-import { ToolThing } from '@shared/ui/components/tool/tool-thing'
+import { ToolItem } from '@shared/ui/components/tool/tool-item'
 
 const lang = 'en'
 ---
@@ -19,7 +19,7 @@ const lang = 'en'
         toolRegistry.map((tool) => {
           const i18n = translateMeta(tool, lang)
           return (
-            <ToolThing i18n={i18n} path={`/tools${tool.path}`} icon={tool.icon} />
+            <ToolItem i18n={i18n} path={`/tools${tool.path}`} icon={tool.icon} />
           )
         })
       }
