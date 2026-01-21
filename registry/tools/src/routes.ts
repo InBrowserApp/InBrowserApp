@@ -130,6 +130,7 @@ import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-im
 import { routes as robotsTxtGeneratorRoutes } from '@tools/robots-txt-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
+import { routes as csrGeneratorRoutes } from '@tools/csr-generator/routes'
 import { routes as pgpKeyGeneratorRoutes } from '@tools/pgp-key-generator/routes'
 import { routes as sshKeyGeneratorRoutes } from '@tools/ssh-key-generator/routes'
 import { routes as sshPublicKeyFingerprintRoutes } from '@tools/ssh-public-key-fingerprint/routes'
@@ -271,6 +272,7 @@ export const routes: ToolRoute[] = [
   ...robotsTxtGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...certificatePublicKeyParserRoutes,
+  ...csrGeneratorRoutes,
   ...pgpKeyGeneratorRoutes,
   ...sshKeyGeneratorRoutes,
   ...sshPublicKeyFingerprintRoutes,

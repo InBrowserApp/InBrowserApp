@@ -19,6 +19,11 @@ catalog:
   '@jsquash/oxipng': ^2.3.0
   '@noble/ed25519': ^3.0.0
   '@paralleldrive/cuid2': ^3.0.6
+  '@peculiar/asn1-ecc': ^2.6.0
+  '@peculiar/asn1-pkcs8': ^2.6.0
+  '@peculiar/asn1-rsa': ^2.6.0
+  '@peculiar/asn1-schema': ^2.6.0
+  '@peculiar/asn1-x509': ^2.6.0
   '@peculiar/x509': ^1.14.3
   '@playwright/test': ^1.57.0
   '@prettier/plugin-oxc': 0.1.3
@@ -118,10 +123,12 @@ catalog:
   prettier: 3.8.0
   punycode: ^2.3.1
   qrcode: ^1.5.4
+  reflect-metadata: ^0.2.2
   sitemap: ^9.0.0
   smol-toml: ^1.6.0
   svgo: ^4.0.0
   transliteration: ^2.6.0
+  tsyringe: ^4.10.0
   turndown: ^7.2.2
   typescript: ~5.9.3
   ua-parser-js: ^1.0.39

@@ -132,6 +132,7 @@ import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholde
 import { toolInfo as robotsTxtGeneratorToolInfo } from '@tools/robots-txt-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
 import { toolInfo as certificatePublicKeyParserToolInfo } from '@tools/certificate-public-key-parser'
+import { toolInfo as csrGeneratorToolInfo } from '@tools/csr-generator'
 import { toolInfo as pgpKeyGeneratorToolInfo } from '@tools/pgp-key-generator'
 import { toolInfo as sshKeyGeneratorToolInfo } from '@tools/ssh-key-generator'
 import { toolInfo as sshPublicKeyFingerprintToolInfo } from '@tools/ssh-public-key-fingerprint'
@@ -314,6 +315,7 @@ export const tools: ToolInfo[] = [
 
   // Security Tools
   certificatePublicKeyParserToolInfo,
+  csrGeneratorToolInfo,
   pgpKeyGeneratorToolInfo,
   sshKeyGeneratorToolInfo,
   sshPublicKeyFingerprintToolInfo,
