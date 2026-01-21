@@ -7,7 +7,7 @@ export function getStaticPaths(): ToolStaticPath[] {
       params: { path: 'roman-numeral-converter' },
       props: {
         metadata,
-        component: () => import('./index.astro'),
+        component: () => import('./view/index.astro'),
       },
     },
   ]

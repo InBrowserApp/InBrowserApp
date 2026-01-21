@@ -5,12 +5,7 @@ import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    react(),
-    icon({
-      iconPacks: ['heroicons', 'fluent'],
-    }),
-  ],
+  integrations: [react(), icon()],
   vite: {
     plugins: [tailwindcss()],
   },

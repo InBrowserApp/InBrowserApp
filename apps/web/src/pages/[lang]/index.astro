@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { supportedLanguages } from '@shared/tools'
+import { supportedLanguages, type SupportedLanguage } from '@shared/tools'
 import { getLocalizedPath } from '@shared/utils/router'
 
 export async function getStaticPaths() {
-  const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
+  const languages = supportedLanguages.filter((lang: SupportedLanguage) => lang !== 'en')
 
-  return languages.map((lang: string) => ({
+  return languages.map((lang: SupportedLanguage) => ({
     params: { lang },
     props: { lang },
   }))

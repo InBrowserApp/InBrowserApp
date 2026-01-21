@@ -1,11 +1,10 @@
 import React, { useState, useCallback } from 'react'
-import { arabicToRoman, romanToArabic, isValidRomanNumeral } from './utils/conversion'
-import { ConverterField, DirectionIndicator } from './components'
-import type { metadata } from './meta'
+import { arabicToRoman, romanToArabic, isValidRomanNumeral } from '../utils/conversion'
+import { ConverterField, DirectionIndicator } from '../components'
+import type { i18n } from '../i18n'
 
-export type I18n = (typeof metadata.i18n)[keyof typeof metadata.i18n]
 export interface Props {
-  i18n: I18n
+  i18n: typeof i18n[keyof typeof i18n]
 }
 
 export default function RomanConverter({ i18n }: Props) {
