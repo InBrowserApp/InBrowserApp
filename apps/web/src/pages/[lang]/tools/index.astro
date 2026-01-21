@@ -16,7 +16,9 @@ export async function getStaticPaths() {
   }))
 }
 
-const { lang } = Astro.props as { lang: SupportedLanguage }
+type Props = { lang: SupportedLanguage }
+
+const { lang } = Astro.props
 
 // Translation map for page titles and descriptions
 const pageTranslations: Record<string, { title: string; subtitle: string }> = {
@@ -72,7 +74,7 @@ const t = pageTranslations[lang]
         toolRegistry.map((tool) => {
           const i18n = translateMeta(tool, lang)
           return (
-            <ToolItem i18n={i18n} path={`/${lang === 'en' ? '' : `/${lang}`}/tools${tool.path}`} icon={tool.icon} />
+            <ToolItem i18n={i18n} path={`${lang === 'en' ? '/tools' : `/${lang}/tools`}${tool.path}`} icon={tool.icon} />
           )
         })
       }

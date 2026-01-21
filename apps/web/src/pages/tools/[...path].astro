@@ -1,8 +1,7 @@
 ---
 import { getToolStaticPaths } from '@inbrowserapp/tools-registry'
-import { translateMeta } from '@inbrowserapp/tools-i18n'
-import type { SupportedLanguage, ToolRouteProps, ToolComponent } from '@inbrowserapp/tools-shared'
-import ToolLayout from '../../layouts/ToolLayout.astro'
+import type { SupportedLanguage, ToolRouteProps } from '@inbrowserapp/tools-shared'
+import ToolView from '../[lang]/tools/[...path].astro'
 
 export async function getStaticPaths() {
   const paths = await getToolStaticPaths()
@@ -13,11 +12,7 @@ export async function getStaticPaths() {
 }
 
 type Props = ToolRouteProps & { lang: SupportedLanguage }
-const { metadata, component: loadComponent, lang } = Astro.props as Props
-const i18n = translateMeta(metadata, lang)
-const Component = (await loadComponent()).default as ToolComponent
+const { metadata, component } = Astro.props as Props
 ---
 
-<ToolLayout title={i18n.name} description={i18n.description} lang={lang}>
-  <Component i18n={i18n} lang={lang} />
-</ToolLayout>
+<ToolView metadata={metadata} component={component} lang="en" />

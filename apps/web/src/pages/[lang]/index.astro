@@ -15,6 +15,11 @@ const { lang } = Astro.props
 
 // Simple translation map for home page
 const translations: Record<string, { title: string; subtitle: string; browseTools: string }> = {
+  en: {
+    title: 'InBrowserApp',
+    subtitle: 'Free online browser tools - Privacy focused, no data collection',
+    browseTools: 'Browse All Tools',
+  },  
   zh: {
     title: 'InBrowserApp',
     subtitle: '免费的在线浏览器工具 - 注重隐私，无数据收集',
@@ -80,11 +85,7 @@ const translations: Record<string, { title: string; subtitle: string; browseTool
   },
 }
 
-const t = translations[lang] || {
-  title: 'InBrowserApp',
-  subtitle: 'Free online browser tools - Privacy focused, no data collection',
-  browseTools: 'Browse All Tools',
-}
+const t = translations[lang]
 ---
 
 <BaseLayout title="Home" description="Free online browser tools" lang={lang}>
@@ -92,7 +93,7 @@ const t = translations[lang] || {
     <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">{t.title}</h1>
     <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{t.subtitle}</p>
     <a
-      href={`/${lang}/tools`}
+      href={`/${lang === 'en' ? '' : `/${lang}`}/tools`}
       class="inline-block px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
     >
       {t.browseTools}
