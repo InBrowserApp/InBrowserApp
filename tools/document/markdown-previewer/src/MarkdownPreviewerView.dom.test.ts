@@ -12,6 +12,9 @@ const mountOptions = {
       MarkdownPreviewer: {
         template: '<div data-test="markdown-previewer" />',
       },
+      WhatIsMarkdown: {
+        template: '<section data-test="what-is-markdown" />',
+      },
     },
   },
 }
@@ -21,5 +24,6 @@ describe('MarkdownPreviewerView', () => {
     const wrapper = mount(MarkdownPreviewerView, mountOptions)
 
     expect(wrapper.find('[data-test="markdown-previewer"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="what-is-markdown"]').exists()).toBe(true)
   })
 })
