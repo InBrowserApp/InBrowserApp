@@ -80,4 +80,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: apps/web
-          command: versions upload --tag "${{ github.ref }}" --message ${{ toJSON(github.event.head_commit.message || github.event.pull_request.title || github.event.release.name || github.sha) }}
+          command: versions upload --tag "${{ github.run_id }}" --message ${{ toJSON(github.event.head_commit.message || github.event.pull_request.title || github.event.release.name || github.sha) }}
