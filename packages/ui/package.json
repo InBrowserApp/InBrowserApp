@@ -1,0 +1,11 @@
+{
+  "name": "@shared/ui",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*/index.ts"
+  },
+  "dependencies": {
+    "astro-icon": "^1.1.5"
+  }
+}

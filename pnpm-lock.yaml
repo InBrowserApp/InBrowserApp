@@ -74,6 +74,9 @@ importers:
       '@astrojs/check':
         specifier: 'catalog:'
         version: 0.9.6(prettier-plugin-astro@0.14.1)(prettier@3.7.4)(typescript@5.9.3)
+      '@iconify-json/fluent':
+        specifier: ^1.2.37
+        version: 1.2.37
       '@iconify-json/heroicons':
         specifier: ^1.2.3
         version: 1.2.3
@@ -86,6 +89,9 @@ importers:
       '@inbrowserapp/tools-shared':
         specifier: workspace:*
         version: link:../../packages/tools/shared
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
         version: 5.16.6(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -143,6 +149,12 @@ importers:
         version: link:../../../tools/converters/roman-numeral-converter
 
   packages/tools/shared: {}
+
+  packages/ui:
+    dependencies:
+      astro-icon:
+        specifier: ^1.1.5
+        version: 1.1.5
 
   tools/converters/roman-numeral-converter:
     dependencies:
@@ -780,6 +792,9 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/fluent@1.2.37':
+    resolution: {integrity: sha512-wNm8JXU1eV+M3ONGIG0pwb4X8PoEfYDdLRt0xCUcOofoy0WxXRldB0dkmILnXhLZmCNVWRzt9z/3I6xS+8YNGQ==}
 
   '@iconify-json/heroicons@1.2.3':
     resolution: {integrity: sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg==}
@@ -4621,6 +4636,10 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-json/fluent@1.2.37':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/heroicons@1.2.3':
     dependencies:

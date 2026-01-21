@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro'
 import { toolRegistry } from '@inbrowserapp/tools-registry'
 import { translateMeta, supportedLanguages } from '@inbrowserapp/tools-i18n'
 import type { SupportedLanguage } from '@inbrowserapp/tools-shared'
+import { ToolThing } from '@shared/ui/components/tool/tool-thing'
 
 export async function getStaticPaths() {
   const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
@@ -71,24 +72,7 @@ const t = pageTranslations[lang] || {
         toolRegistry.map((tool) => {
           const i18n = translateMeta(tool, lang)
           return (
-            <a
-              href={`/${lang}/tools/${tool.id}`}
-              class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg no-underline text-inherit transition-all hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5"
-            >
-              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-                {i18n.name}
-              </h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
-                {i18n.description}
-              </p>
-              <div class="flex flex-wrap gap-2">
-                {tool.tags.slice(0, 3).map((tag: string) => (
-                  <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
+            <ToolThing i18n={i18n} path={`/${lang}/tools${tool.path}`} icon={tool.icon} />
           )
         })
       }

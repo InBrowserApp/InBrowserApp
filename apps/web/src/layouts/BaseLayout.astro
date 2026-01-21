@@ -17,6 +17,17 @@ const { title, description, lang = 'en' } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description || 'Online browser tools'} />
     <title>{title} | InBrowserApp</title>
+    <script>
+      // 在页面加载前设置 dark mode，避免闪烁
+      const getTheme = () => {
+        const stored = localStorage.getItem('theme')
+        if (stored) return stored
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+      if (getTheme() === 'dark') {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
   </head>
   <body>
     <slot />

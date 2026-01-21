@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components'
+const { i18n, path, icon } = Astro.props
+---
+
+<a
+  href={path}
+  class="block p-4 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg no-underline text-inherit transition-all flex items-start gap-3"
+  aria-label={`${i18n.name}: ${i18n.description}`}
+>
+  <div class="flex-shrink-0 bg-gray-200 dark:bg-gray-700 rounded-md p-1.5 mt-0.5">
+    <Icon name={icon} class="w-5 h-5 text-gray-600 dark:text-gray-300" />
+  </div>
+  <div class="min-w-0 flex-1">
+    <h2 class="font-semibold text-gray-800 dark:text-gray-100 mb-1">{i18n.name}</h2>
+    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+      {i18n.description}
+    </p>
+  </div>
+</a>
