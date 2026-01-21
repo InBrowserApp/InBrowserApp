@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from '@inbrowserapp/tools-shared'
+import type { SupportedLanguage } from '@shared/tools'
 
 export function getLocalizedPath(path: string, lang: SupportedLanguage) {
   return lang === 'en' ? path : `/${lang}${path}`

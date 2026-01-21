@@ -5,6 +5,7 @@ export default {
     './apps/web/src/**/*.{astro,html,js,jsx,ts,tsx}',
     './tools/**/src/**/*.{astro,html,js,jsx,ts,tsx}',
     './packages/**/src/**/*.{astro,html,js,jsx,ts,tsx}',
+    './shared/**/src/**/*.{astro,html,js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
   theme: {

@@ -1,5 +1,5 @@
 import { i18n } from './i18n'
-import type { ToolMetadata } from '@inbrowserapp/tools-shared'
+import type { ToolMetadata } from '@shared/tools'
 
 export const metadata = {
   id: 'roman-numeral-converter',

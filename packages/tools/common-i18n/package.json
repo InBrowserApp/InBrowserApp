@@ -8,6 +8,6 @@
     "./languages": "./src/languages.ts"
   },
   "dependencies": {
-    "@inbrowserapp/tools-shared": "workspace:*"
+    "@shared/tools": "workspace:*"
   }
 }

@@ -2,7 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro'
 import { toolRegistry } from '@inbrowserapp/tools-registry'
 import { translateMeta, supportedLanguages } from '@inbrowserapp/tools-i18n'
-import type { SupportedLanguage } from '@inbrowserapp/tools-shared'
+import type { SupportedLanguage } from '@shared/tools'
 import { ToolItem } from '@shared/ui/components/tool/tool-item'
 import { HeadingOne } from '@shared/ui/components/common/typography'
 import { ToolDescription } from '@shared/ui/components/tool/description'
@@ -59,6 +59,54 @@ const pageTranslations: Record<string, { title: string; subtitle: string }> = {
   pt: {
     title: 'Todas as ferramentas',
     subtitle: 'Ferramentas gratuitas no navegador - Focadas em privacidade, sem coleta de dados',
+  },
+  ar: {
+    title: 'جميع الأدوات',
+    subtitle: 'أدوات متصفح مجانية عبر الإنترنت - تركز على الخصوصية، لا جمع للبيانات',
+  },
+  hi: {
+    title: 'सभी उपकरण',
+    subtitle: 'मुफ्त ऑनलाइन ब्राउज़र उपकरण - गोपनीयता केंद्रित, कोई डेटा संग्रह नहीं',
+  },
+  tr: {
+    title: 'Tüm araçlar',
+    subtitle: 'Ücretsiz çevrimiçi tarayıcı araçları - Gizlilik odaklı, veri toplama yok',
+  },
+  nl: {
+    title: 'Alle tools',
+    subtitle: 'Gratis online browsertools - Gericht op privacy, geen gegevensverzameling',
+  },
+  sv: {
+    title: 'Alla verktyg',
+    subtitle: 'Gratis online webbläsarverktyg - Fokuserar på integritet, ingen datainsamling',
+  },
+  pl: {
+    title: 'Wszystkie narzędzia',
+    subtitle: 'Darmowe narzędzia przeglądarki online - Skupione na prywatności, brak zbierania danych',
+  },
+  vi: {
+    title: 'Tất cả công cụ',
+    subtitle: 'Công cụ trình duyệt trực tuyến miễn phí - Tập trung vào quyền riêng tư, không thu thập dữ liệu',
+  },
+  th: {
+    title: 'เครื่องมือทั้งหมด',
+    subtitle: 'เครื่องมือเบราว์เซอร์ออนไลน์ฟรี - มุ่งเน้นความเป็นส่วนตัว ไม่มีการเก็บรวบรวมข้อมูล',
+  },
+  id: {
+    title: 'Semua alat',
+    subtitle: 'Alat browser online gratis - Fokus pada privasi, tidak ada pengumpulan data',
+  },
+  he: {
+    title: 'כל הכלים',
+    subtitle: 'כלי דפדפן מקוונים בחינם - מתמקדים בפרטיות, ללא איסוף נתונים',
+  },
+  ms: {
+    title: 'Semua alat',
+    subtitle: 'Alat pelayar dalam talian percuma - Fokus pada privasi, tiada pengumpulan data',
+  },
+  no: {
+    title: 'Alle verktøy',
+    subtitle: 'Gratis nettleserverktøy - Fokus på personvern, ingen datainnsamling',
   },
 }
 

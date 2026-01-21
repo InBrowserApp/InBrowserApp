@@ -86,15 +86,15 @@ importers:
       '@inbrowserapp/tools-registry':
         specifier: workspace:*
         version: link:../../packages/tools/registry
-      '@inbrowserapp/tools-shared':
+      '@shared/tools':
         specifier: workspace:*
-        version: link:../../packages/tools/shared
+        version: link:../../shared/tools
       '@shared/ui':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../shared/ui
       '@shared/utils':
         specifier: workspace:*
-        version: link:../../packages/utils
+        version: link:../../shared/utils
       astro:
         specifier: 'catalog:'
         version: 5.16.6(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.54.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -138,32 +138,32 @@ importers:
 
   packages/tools/common-i18n:
     dependencies:
-      '@inbrowserapp/tools-shared':
+      '@shared/tools':
         specifier: workspace:*
-        version: link:../shared
+        version: link:../../../shared/tools
 
   packages/tools/registry:
     dependencies:
-      '@inbrowserapp/tools-shared':
+      '@shared/tools':
         specifier: workspace:*
-        version: link:../shared
+        version: link:../../../shared/tools
       '@tools/roman-numeral-converter':
         specifier: workspace:*
         version: link:../../../tools/converters/roman-numeral-converter
 
-  packages/tools/shared: {}
+  shared/tools: {}
 
-  packages/ui:
+  shared/ui:
     dependencies:
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
 
-  packages/utils:
+  shared/utils:
     dependencies:
-      '@inbrowserapp/tools-shared':
+      '@shared/tools':
         specifier: workspace:*
-        version: link:../tools/shared
+        version: link:../tools
 
   tools/converters/roman-numeral-converter:
     dependencies:
@@ -173,12 +173,12 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.3)
-      '@inbrowserapp/tools-shared':
+      '@shared/tools':
         specifier: workspace:*
-        version: link:../../../packages/tools/shared
+        version: link:../../../shared/tools
       '@shared/ui':
         specifier: workspace:*
-        version: link:../../../packages/ui
+        version: link:../../../shared/ui
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5

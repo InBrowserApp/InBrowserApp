@@ -3,3 +3,4 @@
 @source "../../src/**/*.{astro,html,js,jsx,ts,tsx}";
 @source "../../../../tools/**/src/**/*.{astro,html,js,jsx,ts,tsx}";
 @source "../../../../packages/**/src/**/*.{astro,html,js,jsx,ts,tsx}";
+@source "../../../../shared/**/src/**/*.{astro,html,js,jsx,ts,tsx}";

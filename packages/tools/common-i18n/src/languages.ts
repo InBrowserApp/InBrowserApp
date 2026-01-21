@@ -1,1 +1,1 @@
-export * from '@inbrowserapp/tools-shared/languages'
+export * from '@shared/tools/languages'
