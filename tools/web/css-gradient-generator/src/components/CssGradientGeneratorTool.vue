@@ -11,9 +11,15 @@
               </div>
               <n-flex :size="8" :wrap="true">
                 <n-button size="small" @click="handleRandomizeLayer" data-testid="randomize-layer">
+                  <template #icon>
+                    <n-icon :component="ShuffleOutline" />
+                  </template>
                   {{ t('randomizeLayer') }}
                 </n-button>
                 <n-button size="small" @click="handleRandomizeAll" data-testid="randomize-all">
+                  <template #icon>
+                    <n-icon :component="ShuffleOutline" />
+                  </template>
                   {{ t('randomizeAll') }}
                 </n-button>
               </n-flex>
@@ -115,6 +121,9 @@
                 <div class="panel__subtitle">{{ t('layersSubtitle') }}</div>
               </div>
               <n-button size="small" @click="addLayer" data-testid="add-layer">
+                <template #icon>
+                  <n-icon :component="Add16Regular" />
+                </template>
                 {{ t('addLayer') }}
               </n-button>
             </div>
@@ -296,7 +305,10 @@
               <n-input-number v-model:value="exportHeight" :min="200" :max="4096" />
             </div>
             <n-flex :size="8" :wrap="true">
-              <n-button type="primary" @click="generatePng" data-testid="generate-png">
+              <n-button text @click="generatePng" data-testid="generate-png">
+                <template #icon>
+                  <n-icon :component="Image16Regular" />
+                </template>
                 {{ t('generatePng') }}
               </n-button>
               <n-button
@@ -306,6 +318,9 @@
                 download="gradient.png"
                 data-testid="download-png"
               >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
                 {{ t('downloadPng') }}
               </n-button>
             </n-flex>
@@ -344,11 +359,15 @@
               </CopyToClipboardButton>
               <n-button
                 tag="a"
+                text
                 :href="jsonUrl ?? undefined"
                 download="gradient.json"
                 :disabled="!jsonUrl"
                 data-testid="download-json"
               >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
                 {{ t('downloadJson') }}
               </n-button>
             </n-flex>
@@ -360,6 +379,9 @@
               data-testid="json-input"
             />
             <n-button type="primary" @click="loadJson" data-testid="load-json">
+              <template #icon>
+                <n-icon :component="DocumentArrowUp20Regular" />
+              </template>
               {{ t('loadJson') }}
             </n-button>
             <n-alert
@@ -391,6 +413,7 @@ import {
   NFlex,
   NGi,
   NGrid,
+  NIcon,
   NInput,
   NInputNumber,
   NSelect,
@@ -399,6 +422,11 @@ import {
 } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
+import Add16Regular from '@vicons/fluent/Add16Regular'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
+import Image16Regular from '@vicons/fluent/Image16Regular'
+import ShuffleOutline from '@vicons/ionicons5/ShuffleOutline'
 import type {
   BlendMode,
   ColorFormat,

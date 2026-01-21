@@ -5118,6 +5118,9 @@ importers:
       '@vicons/fluent':
         specifier: 'catalog:'
         version: 0.13.0
+      '@vicons/ionicons5':
+        specifier: 'catalog:'
+        version: 0.13.0
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
