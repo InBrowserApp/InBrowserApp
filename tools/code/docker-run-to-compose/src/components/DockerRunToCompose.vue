@@ -1,31 +1,4 @@
 <template>
-  <ToolSection>
-    <n-flex align="center" justify="space-between" :wrap="true" :size="12">
-      <n-text depth="2">{{ t('output-title') }}</n-text>
-      <n-flex :wrap="true" :size="12">
-        <n-button text @click="applySample">
-          <template #icon>
-            <n-icon :component="ClipboardPaste16Regular" />
-          </template>
-          {{ t('sample') }}
-        </n-button>
-        <n-button text @click="clearInput">
-          <template #icon>
-            <n-icon :component="Delete16Regular" />
-          </template>
-          {{ t('clear') }}
-        </n-button>
-        <CopyToClipboardButton :content="outputText" />
-        <n-button tag="a" text :href="downloadUrl ?? undefined" download="docker-compose.yml">
-          <template #icon>
-            <n-icon :component="ArrowDownload16Regular" />
-          </template>
-          {{ t('download') }}
-        </n-button>
-      </n-flex>
-    </n-flex>
-  </ToolSection>
-
   <n-alert v-if="errorMessage" type="error" :title="t('errors-title')" :show-icon="true">
     {{ errorMessage }}
   </n-alert>
@@ -37,7 +10,26 @@
 
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item-gi :label="t('input-title')" :show-feedback="false">
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
+        <template #label>
+          <n-flex align="center" justify="space-between" :wrap="true" :size="12">
+            <span>{{ t('input-title') }}</span>
+            <n-flex :wrap="true" :size="12">
+              <n-button text @click="applySample">
+                <template #icon>
+                  <n-icon :component="ClipboardPaste16Regular" />
+                </template>
+                {{ t('sample') }}
+              </n-button>
+              <n-button text @click="clearInput">
+                <template #icon>
+                  <n-icon :component="Delete16Regular" />
+                </template>
+                {{ t('clear') }}
+              </n-button>
+            </n-flex>
+          </n-flex>
+        </template>
         <n-input
           v-model:value="dockerRunInput"
           class="monospace-input"
@@ -46,7 +38,21 @@
           :placeholder="t('input-placeholder')"
         />
       </n-form-item-gi>
-      <n-form-item-gi :label="t('output-title')" :show-feedback="false">
+      <n-form-item-gi :show-feedback="false" label-style="width: 100%">
+        <template #label>
+          <n-flex align="center" justify="space-between" :wrap="true" :size="12">
+            <span>{{ t('output-title') }}</span>
+            <n-flex :wrap="true" :size="12">
+              <CopyToClipboardButton :content="outputText" />
+              <n-button tag="a" text :href="downloadUrl ?? undefined" download="docker-compose.yml">
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
+                {{ t('download') }}
+              </n-button>
+            </n-flex>
+          </n-flex>
+        </template>
         <n-card size="small">
           <n-code :code="outputText" language="yaml" :hljs="hljs" word-wrap />
         </n-card>
@@ -70,7 +76,6 @@ import {
   NIcon,
   NInput,
   NSpace,
-  NText,
 } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
