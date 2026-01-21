@@ -80,9 +80,6 @@ importers:
       '@iconify-json/heroicons':
         specifier: ^1.2.3
         version: 1.2.3
-      '@inbrowserapp/tools-i18n':
-        specifier: workspace:*
-        version: link:../../packages/tools/common-i18n
       '@registry/tools':
         specifier: workspace:*
         version: link:../../registry
@@ -135,12 +132,6 @@ importers:
       wrangler:
         specifier: ^4.54.0
         version: 4.54.0
-
-  packages/tools/common-i18n:
-    dependencies:
-      '@shared/tools':
-        specifier: workspace:*
-        version: link:../../../shared/tools
 
   registry:
     dependencies:
