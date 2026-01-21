@@ -6,6 +6,7 @@ import type { SupportedLanguage } from '@inbrowserapp/tools-shared'
 import { ToolItem } from '@shared/ui/components/tool/tool-item'
 import { HeadingOne } from '@shared/ui/components/common/typography'
 import { ToolDescription } from '@shared/ui/components/tool/description'
+import { getLocalizedPath } from '@shared/utils/router'
 
 export async function getStaticPaths() {
   const languages = supportedLanguages.filter((lang: string) => lang !== 'en')
@@ -74,7 +75,7 @@ const t = pageTranslations[lang]
         toolRegistry.map((tool) => {
           const i18n = translateMeta(tool, lang)
           return (
-            <ToolItem i18n={i18n} path={`${lang === 'en' ? '/tools' : `/${lang}/tools`}${tool.path}`} icon={tool.icon} />
+            <ToolItem i18n={i18n} path={getLocalizedPath(`/tools${tool.path}`, lang)} icon={tool.icon} />
           )
         })
       }

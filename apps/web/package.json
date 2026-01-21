@@ -19,6 +19,7 @@
     "@inbrowserapp/tools-registry": "workspace:*",
     "@inbrowserapp/tools-shared": "workspace:*",
     "@shared/ui": "workspace:*",
+    "@shared/utils": "workspace:*",
     "astro": "catalog:",
     "astro-icon": "^1.1.5",
     "typescript": "catalog:"
