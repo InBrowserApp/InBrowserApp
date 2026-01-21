@@ -39,6 +39,21 @@ catalogs:
     '@paralleldrive/cuid2':
       specifier: ^3.0.6
       version: 3.0.6
+    '@peculiar/asn1-ecc':
+      specifier: ^2.6.0
+      version: 2.6.0
+    '@peculiar/asn1-pkcs8':
+      specifier: ^2.6.0
+      version: 2.6.0
+    '@peculiar/asn1-rsa':
+      specifier: ^2.6.0
+      version: 2.6.0
+    '@peculiar/asn1-schema':
+      specifier: ^2.6.0
+      version: 2.6.0
+    '@peculiar/asn1-x509':
+      specifier: ^2.6.0
+      version: 2.6.0
     '@peculiar/x509':
       specifier: ^1.14.3
       version: 1.14.3
@@ -327,6 +342,9 @@ catalogs:
     qrcode:
       specifier: ^1.5.4
       version: 1.5.4
+    reflect-metadata:
+      specifier: ^0.2.2
+      version: 0.2.2
     sitemap:
       specifier: ^9.0.0
       version: 9.0.0
@@ -339,6 +357,9 @@ catalogs:
     transliteration:
       specifier: ^2.6.0
       version: 2.6.0
+    tsyringe:
+      specifier: ^4.10.0
+      version: 4.10.0
     turndown:
       specifier: ^7.2.2
       version: 7.2.2
@@ -684,6 +705,9 @@ importers:
       '@tools/cron-expression-parser':
         specifier: workspace:*
         version: link:../../tools/time/cron-expression-parser
+      '@tools/csr-generator':
+        specifier: workspace:*
+        version: link:../../tools/network/csr-generator
       '@tools/csv-to-json-converter':
         specifier: workspace:*
         version: link:../../tools/code/csv-to-json-converter
@@ -3057,6 +3081,57 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/network/csr-generator:
+    dependencies:
+      '@peculiar/asn1-ecc':
+        specifier: 'catalog:'
+        version: 2.6.0
+      '@peculiar/asn1-pkcs8':
+        specifier: 'catalog:'
+        version: 2.6.0
+      '@peculiar/asn1-rsa':
+        specifier: 'catalog:'
+        version: 2.6.0
+      '@peculiar/asn1-schema':
+        specifier: 'catalog:'
+        version: 2.6.0
+      '@peculiar/asn1-x509':
+        specifier: 'catalog:'
+        version: 2.6.0
+      '@peculiar/x509':
+        specifier: 'catalog:'
+        version: 1.14.3
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      is-ip:
+        specifier: 'catalog:'
+        version: 5.0.1
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      reflect-metadata:
+        specifier: 'catalog:'
+        version: 0.2.2
+      tsyringe:
+        specifier: 'catalog:'
+        version: 4.10.0
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
 
   tools/network/dns-lookup:
     dependencies:

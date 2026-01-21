@@ -1,0 +1,28 @@
+{
+  "name": "@tools/csr-generator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@peculiar/asn1-ecc": "catalog:",
+    "@peculiar/asn1-pkcs8": "catalog:",
+    "@peculiar/asn1-rsa": "catalog:",
+    "@peculiar/asn1-schema": "catalog:",
+    "@peculiar/asn1-x509": "catalog:",
+    "@peculiar/x509": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vueuse/core": "catalog:",
+    "is-ip": "catalog:",
+    "naive-ui": "catalog:",
+    "reflect-metadata": "catalog:",
+    "tsyringe": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:"
+  }
+}
