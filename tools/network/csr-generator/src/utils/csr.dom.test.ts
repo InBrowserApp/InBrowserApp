@@ -66,7 +66,7 @@ let ed25519PrivatePem: string
 let ed448PrivatePem: string
 
 beforeAll(async () => {
-  const rsaKeys = await cryptoProvider.subtle.generateKey(
+  const rsaKeys = (await cryptoProvider.subtle.generateKey(
     {
       name: 'RSASSA-PKCS1-v1_5',
       modulusLength: 2048,
@@ -75,16 +75,16 @@ beforeAll(async () => {
     },
     true,
     ['sign', 'verify'],
-  )
+  )) as CryptoKeyPair
   rsaPkcs8 = await cryptoProvider.subtle.exportKey('pkcs8', rsaKeys.privateKey)
   rsaPrivatePem = toPem(rsaPkcs8, 'PRIVATE KEY')
   rsaPkcs1Pem = toPem(extractPrivateKeyBytes(rsaPkcs8), 'RSA PRIVATE KEY')
 
-  const ecdsaKeys = await cryptoProvider.subtle.generateKey(
+  const ecdsaKeys = (await cryptoProvider.subtle.generateKey(
     { name: 'ECDSA', namedCurve: 'P-256' },
     true,
     ['sign', 'verify'],
-  )
+  )) as CryptoKeyPair
   ecdsaPkcs8 = await cryptoProvider.subtle.exportKey('pkcs8', ecdsaKeys.privateKey)
   ecdsaPrivatePem = toPem(ecdsaPkcs8, 'PRIVATE KEY')
   const ecPrivateKey = AsnConvert.parse(extractPrivateKeyBytes(ecdsaPkcs8), ECPrivateKey)
@@ -93,17 +93,17 @@ beforeAll(async () => {
   }
   ecdsaPkcs1Pem = toPem(AsnConvert.serialize(ecPrivateKey), 'EC PRIVATE KEY')
 
-  const ed25519Keys = await cryptoProvider.subtle.generateKey({ name: 'Ed25519' }, true, [
+  const ed25519Keys = (await cryptoProvider.subtle.generateKey({ name: 'Ed25519' }, true, [
     'sign',
     'verify',
-  ])
+  ])) as CryptoKeyPair
   ed25519Pkcs8 = await cryptoProvider.subtle.exportKey('pkcs8', ed25519Keys.privateKey)
   ed25519PrivatePem = toPem(ed25519Pkcs8, 'PRIVATE KEY')
 
-  const ed448Keys = await cryptoProvider.subtle.generateKey({ name: 'Ed448' }, true, [
+  const ed448Keys = (await cryptoProvider.subtle.generateKey({ name: 'Ed448' }, true, [
     'sign',
     'verify',
-  ])
+  ])) as CryptoKeyPair
   ed448Pkcs8 = await cryptoProvider.subtle.exportKey('pkcs8', ed448Keys.privateKey)
   ed448PrivatePem = toPem(ed448Pkcs8, 'PRIVATE KEY')
 })
@@ -459,6 +459,30 @@ describe('createCsr', () => {
           san: baseSan,
         },
         cryptoProvider,
+      ),
+    ).rejects.toThrowError(CsrGeneratorError)
+  })
+
+  it('rejects non-keypair key generation results', async () => {
+    const cryptoStub = {
+      subtle: {
+        generateKey: async () => ({}) as CryptoKey,
+      },
+    } as unknown as Crypto
+
+    await expect(
+      createCsr(
+        {
+          keySource: 'generate',
+          algorithm: 'rsa',
+          rsaKeySize: 2048,
+          rsaHash: 'SHA-256',
+          ecCurve: 'P-256',
+          keyPem: '',
+          subject: baseSubject,
+          san: baseSan,
+        },
+        cryptoStub,
       ),
     ).rejects.toThrowError(CsrGeneratorError)
   })

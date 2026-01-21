@@ -71,6 +71,8 @@ type ParsedPemKey = {
   algorithm: ImportedKeyAlgorithm
 }
 
+type ImportAlgorithm = Algorithm | RsaHashedImportParams | EcKeyImportParams
+
 type GenerateKeyResult = {
   keys: CryptoKeyPair
   signingAlgorithm: Algorithm | EcdsaParams
@@ -143,6 +145,13 @@ function ensureEd448AlgorithmRegistered() {
   if (ed448AlgorithmRegistered) return
   container.registerSingleton(diAlgorithm, Ed448Algorithm)
   ed448AlgorithmRegistered = true
+}
+
+function ensureKeyPair(keys: CryptoKey | CryptoKeyPair): CryptoKeyPair {
+  if ('privateKey' in keys && 'publicKey' in keys) {
+    return keys
+  }
+  throw new CsrGeneratorError('errorUnsupportedKeyType')
 }
 
 export async function createCsr(
@@ -386,7 +395,7 @@ async function generateKeyPair(
         ['sign', 'verify'],
       )
       return {
-        keys,
+        keys: ensureKeyPair(keys),
         signingAlgorithm,
         keyAlgorithmLabel: formatKeyAlgorithmLabel({
           algorithm: 'rsa',
@@ -410,7 +419,7 @@ async function generateKeyPair(
         ['sign', 'verify'],
       )
       return {
-        keys,
+        keys: ensureKeyPair(keys),
         signingAlgorithm,
         keyAlgorithmLabel: formatKeyAlgorithmLabel({
           algorithm: 'ecdsa',
@@ -425,7 +434,7 @@ async function generateKeyPair(
         'verify',
       ])
       return {
-        keys,
+        keys: ensureKeyPair(keys),
         signingAlgorithm,
         keyAlgorithmLabel: formatKeyAlgorithmLabel({ algorithm: 'ed25519' }),
       }
@@ -437,7 +446,7 @@ async function generateKeyPair(
         'verify',
       ])
       return {
-        keys,
+        keys: ensureKeyPair(keys),
         signingAlgorithm,
         keyAlgorithmLabel: formatKeyAlgorithmLabel({ algorithm: 'ed448' }),
       }
@@ -476,7 +485,10 @@ async function importPrivateKey(
   return await cryptoProvider.subtle.importKey('pkcs8', parsed.pkcs8, algorithm, true, ['sign'])
 }
 
-function getImportAlgorithm(algorithm: ImportedKeyAlgorithm, input: CsrCreateInput): Algorithm {
+function getImportAlgorithm(
+  algorithm: ImportedKeyAlgorithm,
+  input: CsrCreateInput,
+): ImportAlgorithm {
   switch (algorithm.type) {
     case 'rsa':
       return { name: 'RSASSA-PKCS1-v1_5', hash: { name: input.rsaHash } }

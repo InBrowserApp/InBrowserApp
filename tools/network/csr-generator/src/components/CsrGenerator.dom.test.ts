@@ -275,7 +275,7 @@ describe('CsrGenerator', () => {
     await flushPromises()
 
     expect(createCsrMock).toHaveBeenCalledTimes(1)
-    const input = createCsrMock.mock.calls[0][0]
+    const input = createCsrMock.mock.calls[0]![0]
     expect(input.keyPem).toBe('KEYDATA')
     expect(input.san.dns).toEqual(['example.com', 'test.example.com', 'other.example.com'])
     expect(input.san.ip).toEqual(['192.0.2.1', '198.51.100.2'])
@@ -302,7 +302,7 @@ describe('CsrGenerator', () => {
     await flushPromises()
 
     expect(createCsrMock).toHaveBeenCalledTimes(1)
-    const input = createCsrMock.mock.calls[0][0]
+    const input = createCsrMock.mock.calls[0]![0]
     expect(input.keyPem).toBe('KEYDATA')
   })
 
@@ -425,9 +425,9 @@ describe('CsrGenerator', () => {
 
     const selects = wrapper.findAll('select-stub')
     expect(selects).toHaveLength(3)
-    emitUpdateValue(selects[0].element, 3072)
-    emitUpdateValue(selects[1].element, 'SHA-384')
-    emitUpdateValue(selects[2].element, 'P-384')
+    emitUpdateValue(selects[0]!.element, 3072)
+    emitUpdateValue(selects[1]!.element, 'SHA-384')
+    emitUpdateValue(selects[2]!.element, 'P-384')
     await wrapper.vm.$nextTick()
 
     expect(vm.rsaKeySize).toBe(3072)
@@ -436,13 +436,13 @@ describe('CsrGenerator', () => {
 
     const radioGroups = wrapper.findAll('radio-group-stub')
     expect(radioGroups.length).toBeGreaterThan(1)
-    emitUpdateValue(radioGroups[1].element, 'ecdsa')
+    emitUpdateValue(radioGroups[1]!.element, 'ecdsa')
     await wrapper.vm.$nextTick()
 
     expect(vm.algorithm).toBe('ecdsa')
 
     const updatedRadioGroups = wrapper.findAll('radio-group-stub')
-    emitUpdateValue(updatedRadioGroups[0].element, 'import')
+    emitUpdateValue(updatedRadioGroups[0]!.element, 'import')
     await wrapper.vm.$nextTick()
 
     expect(vm.keySource).toBe('import')
