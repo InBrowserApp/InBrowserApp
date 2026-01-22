@@ -95,6 +95,7 @@ import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-co
 import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as timeDiffCalculatorRoutes } from '@tools/time-diff-calculator/routes'
+import { routes as radioTimecodeRoutes } from '@tools/radio-timecode/routes'
 import { routes as durationCalculatorRoutes } from '@tools/duration-calculator/routes'
 import { routes as businessDaysCalculatorRoutes } from '@tools/business-days-calculator/routes'
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
@@ -241,6 +242,7 @@ export const routes: ToolRoute[] = [
   ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
   ...timeDiffCalculatorRoutes,
+  ...radioTimecodeRoutes,
   ...durationCalculatorRoutes,
   ...businessDaysCalculatorRoutes,
   ...cronExpressionParserRoutes,

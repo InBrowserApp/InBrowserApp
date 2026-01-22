@@ -114,6 +114,7 @@
     "@tools/qr-code-reader": "workspace:*",
     "@tools/random-number-generator": "workspace:*",
     "@tools/random-password-generator": "workspace:*",
+    "@tools/radio-timecode": "workspace:*",
     "@tools/redirects": "workspace:*",
     "@tools/regex-tester-replacer": "workspace:*",
     "@tools/remove-pdf-owner-password": "workspace:*",
