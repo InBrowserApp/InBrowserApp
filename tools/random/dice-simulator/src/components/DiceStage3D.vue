@@ -418,7 +418,7 @@ function drawPips(
   offsetX: number,
   offsetY: number,
 ) {
-  const layout = pipLayout[value] ?? pipLayout[1]
+  const layout = pipLayout[value] ?? pipLayout[1] ?? []
   const spacing = face.radius * 0.55
   const pipRadius = face.radius * 0.16
 
@@ -438,7 +438,7 @@ function drawPips(
 }
 
 function buildFaceData(face: Face, vertices: Vec3[]): FaceRenderData {
-  const faceVertices = face.indices.map((index) => vertices[index]).filter(Boolean)
+  const faceVertices = face.indices.map((index) => vertices[index]).filter(isVec3)
   const center = averageVec(faceVertices)
   const normal = normalize(
     cross(
@@ -680,7 +680,7 @@ function makeDodecahedron(): Polyhedron {
 
 function buildDual(source: Polyhedron): Polyhedron {
   const faceCenters = source.faces.map((face) =>
-    normalize(averageVec(face.indices.map((index) => source.vertices[index]).filter(Boolean))),
+    normalize(averageVec(face.indices.map((index) => source.vertices[index]).filter(isVec3))),
   )
   const facesByVertex = source.vertices.map(() => [] as number[])
   source.faces.forEach((face, faceIndex) => {
@@ -733,7 +733,7 @@ function withOutwardFaces(polyhedron: Polyhedron): Polyhedron {
 }
 
 function orientFace(indices: number[], vertices: Vec3[]) {
-  const faceVertices = indices.map((index) => vertices[index]).filter(Boolean)
+  const faceVertices = indices.map((index) => vertices[index]).filter(isVec3)
   const center = averageVec(faceVertices)
   const normal = normalize(
     cross(
@@ -807,6 +807,10 @@ function applyMatrix(matrix: Mat3, vector: Vec3): Vec3 {
     y: matrix[3] * vector.x + matrix[4] * vector.y + matrix[5] * vector.z,
     z: matrix[6] * vector.x + matrix[7] * vector.y + matrix[8] * vector.z,
   }
+}
+
+function isVec3(value: Vec3 | undefined): value is Vec3 {
+  return Boolean(value)
 }
 
 function addVec(a: Vec3, b: Vec3): Vec3 {
