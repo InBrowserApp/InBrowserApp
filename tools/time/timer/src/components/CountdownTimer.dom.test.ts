@@ -778,13 +778,13 @@ describe('CountdownTimer', () => {
     await nextTick()
 
     expect(requestFullscreen).toHaveBeenCalledTimes(1)
-    const controls = wrapper.get('[data-testid="fullscreen-controls"]')
-    expect(controls.element.style.display).toBe('')
+    const controls = wrapper.get('[data-testid="fullscreen-controls"]').element as HTMLElement
+    expect(controls.style.display).toBe('')
 
     await wrapper.get('[data-testid="fullscreen-exit"]').trigger('click')
     await nextTick()
 
     expect(exitFullscreen).toHaveBeenCalledTimes(1)
-    expect(controls.element.style.display).toBe('none')
+    expect(controls.style.display).toBe('none')
   })
 })

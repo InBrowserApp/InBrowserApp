@@ -59,6 +59,7 @@ const withMessageProvider = (component: Component, props?: Record<string, unknow
 
 describe('JwkPemConverter', () => {
   beforeEach(() => {
+    vi.useRealTimers()
     localStorage.clear()
   })
 
