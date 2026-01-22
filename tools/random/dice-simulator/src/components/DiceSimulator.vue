@@ -75,8 +75,8 @@ const { t } = useI18n()
 const historyLimit = 100
 const maxVisibleDice = 60
 
-const facesInput = useStorage<number | null>('tools:dice-simulator:faces', 6)
-const countInput = useStorage<number | null>('tools:dice-simulator:count', 2)
+const facesInput = useStorage<number>('tools:dice-simulator:faces', 6)
+const countInput = useStorage<number>('tools:dice-simulator:count', 2)
 const history = useStorage<HistoryEntry[]>('tools:dice-simulator:history', [])
 
 const results = ref<number[]>([])
@@ -86,7 +86,8 @@ const rollConfig = ref<{ faces: number; count: number } | null>(null)
 
 const stageRef = ref<{ exportImage: (scale?: number) => Promise<Blob | null> } | null>(null)
 const stageImageBlob = ref<Blob | null>(null)
-const stageImageUrl = useObjectUrl(stageImageBlob)
+const stageImageUrlRef = useObjectUrl(stageImageBlob)
+const stageImageUrl = computed(() => stageImageUrlRef.value ?? null)
 
 const safeFaces = computed(() => normalizeFaces(facesInput.value))
 const safeCount = computed(() => normalizeCount(countInput.value))
@@ -140,7 +141,7 @@ function randomInt(max: number) {
     let value = 0
     do {
       crypto.getRandomValues(randomBuffer)
-      value = randomBuffer[0]
+      value = randomBuffer[0] ?? 0
     } while (value >= limit)
     return (value % max) + 1
   }
@@ -195,7 +196,8 @@ function buildStats(entries: HistoryEntry[], faces: number): DiceStats {
   filtered.forEach((entry) => {
     entry.results.forEach((value) => {
       if (value >= 1 && value <= faces) {
-        counts[value - 1] += 1
+        const index = value - 1
+        counts[index] = (counts[index] ?? 0) + 1
       }
       samples += 1
       total += value

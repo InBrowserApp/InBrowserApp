@@ -110,10 +110,16 @@ describe('DiceSimulator', () => {
       value: { write: messageWriteSpy },
       configurable: true,
     })
-    ;(globalThis as typeof globalThis & { ClipboardItem?: typeof ClipboardItem }).ClipboardItem =
-      class ClipboardItem {
-        constructor(_data: Record<string, Blob>) {}
+    class ClipboardItemMock {
+      static supports() {
+        return true
       }
+
+      constructor(_data: Record<string, Blob>) {}
+    }
+
+    ;(globalThis as typeof globalThis & { ClipboardItem?: typeof ClipboardItem }).ClipboardItem =
+      ClipboardItemMock as unknown as typeof ClipboardItem
 
     vi.stubGlobal(
       'ResizeObserver',
@@ -154,8 +160,10 @@ describe('DiceSimulator', () => {
       ;(globalThis as typeof globalThis & { ClipboardItem?: typeof ClipboardItem }).ClipboardItem =
         originalClipboardItem
     } else {
-      delete (globalThis as typeof globalThis & { ClipboardItem?: typeof ClipboardItem })
-        .ClipboardItem
+      Object.defineProperty(globalThis, 'ClipboardItem', {
+        value: undefined,
+        configurable: true,
+      })
     }
 
     vi.unstubAllGlobals()

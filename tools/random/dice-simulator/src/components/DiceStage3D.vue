@@ -219,31 +219,20 @@ function drawDie(
       : shadeSeed > 0.33
         ? [mid, light, dark]
         : [light, dark, mid]
-  const topColor = shading[0]
-  const rightColor = shading[1]
-  const leftColor = shading[2]
+  const topColor = shading[0] ?? light
+  const rightColor = shading[1] ?? mid
+  const leftColor = shading[2] ?? dark
 
   const half = size / 2
   const depth = size * 0.55
 
-  const top = [
-    { x, y: y - half },
-    { x: x + half, y },
-    { x, y: y + half },
-    { x: x - half, y },
-  ]
-  const left = [
-    top[3],
-    top[2],
-    { x: top[2].x, y: top[2].y + depth },
-    { x: top[3].x, y: top[3].y + depth },
-  ]
-  const right = [
-    top[1],
-    top[2],
-    { x: top[2].x, y: top[2].y + depth },
-    { x: top[1].x, y: top[1].y + depth },
-  ]
+  const top0 = { x, y: y - half }
+  const top1 = { x: x + half, y }
+  const top2 = { x, y: y + half }
+  const top3 = { x: x - half, y }
+  const top = [top0, top1, top2, top3]
+  const left = [top3, top2, { x: top2.x, y: top2.y + depth }, { x: top3.x, y: top3.y + depth }]
+  const right = [top1, top2, { x: top2.x, y: top2.y + depth }, { x: top1.x, y: top1.y + depth }]
 
   ctx.fillStyle = leftColor
   drawPolygon(ctx, left)
