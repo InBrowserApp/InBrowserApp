@@ -50,6 +50,7 @@
     "@tools/current-network-time": "workspace:*",
     "@tools/data-uri-to-file-converter": "workspace:*",
     "@tools/device-information": "workspace:*",
+    "@tools/dice-simulator": "workspace:*",
     "@tools/dns-lookup": "workspace:*",
     "@tools/docker-run-to-compose": "workspace:*",
     "@tools/duration-calculator": "workspace:*",
