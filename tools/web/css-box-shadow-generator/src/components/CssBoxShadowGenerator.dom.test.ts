@@ -128,10 +128,12 @@ vi.mock('naive-ui', async () => {
     NGrid: BaseStub,
     NIcon: InlineStub,
     NInputNumber,
+    NLi: BaseStub,
     NSlider,
     NSwitch,
     NTag: InlineStub,
     NText: InlineStub,
+    NUl: BaseStub,
   }
 })
 
