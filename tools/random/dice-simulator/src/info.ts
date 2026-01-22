@@ -1,4 +1,4 @@
-export { default as icon } from '@vicons/fluent/MathSymbols16Regular'
+export { default as icon } from '@vicons/ionicons5/DiceOutline'
 
 export const toolID = 'dice-simulator'
 export const path = '/tools/random/dice-simulator'
