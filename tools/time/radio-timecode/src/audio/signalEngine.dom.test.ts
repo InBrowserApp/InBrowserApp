@@ -51,7 +51,7 @@ describe('SignalEngine', () => {
     const fakeContext = new FakeAudioContext()
     const engine = new SignalEngine(() => fakeContext as unknown as AudioContext)
     await engine.start({
-      station: stations[0],
+      station: stations[0]!,
       volume: 0.5,
       offsetMs: 0,
     })

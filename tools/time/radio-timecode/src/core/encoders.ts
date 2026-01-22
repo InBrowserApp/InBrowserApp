@@ -25,7 +25,7 @@ function countBits(value: number) {
 }
 
 function evenParity(bits: Array<0 | 1>) {
-  const ones = bits.reduce((sum, bit) => sum + (bit === 1 ? 1 : 0), 0)
+  const ones = bits.reduce<number>((sum, bit) => sum + (bit === 1 ? 1 : 0), 0)
   return (ones % 2) as 0 | 1
 }
 
@@ -370,6 +370,10 @@ function splitToPairs(value: number, totalBits: number) {
   return pairs
 }
 
+function getPair(pairs: number[], index: number) {
+  return pairs[index] ?? 0
+}
+
 function buildBpcFrame(date: Date) {
   const parts = getTimeParts(date, 'Asia/Shanghai')
   const hour12 = parts.hour % 12
@@ -385,6 +389,22 @@ function buildBpcFrame(date: Date) {
   const yearHigh = (yearValue >> 6) & 1
   const yearPairs = splitToPairs(yearValue & 0x3f, 6)
 
+  const hourPair0 = getPair(hourPairs, 0)
+  const hourPair1 = getPair(hourPairs, 1)
+  const minutePair0 = getPair(minutePairs, 0)
+  const minutePair1 = getPair(minutePairs, 1)
+  const minutePair2 = getPair(minutePairs, 2)
+  const weekdayPair0 = getPair(weekdayPairs, 0)
+  const weekdayPair1 = getPair(weekdayPairs, 1)
+  const dayPair0 = getPair(dayPairs, 0)
+  const dayPair1 = getPair(dayPairs, 1)
+  const dayPair2 = getPair(dayPairs, 2)
+  const monthPair0 = getPair(monthPairs, 0)
+  const monthPair1 = getPair(monthPairs, 1)
+  const yearPair0 = getPair(yearPairs, 0)
+  const yearPair1 = getPair(yearPairs, 1)
+  const yearPair2 = getPair(yearPairs, 2)
+
   const frame = {
     hourPairs,
     minutePairs,
@@ -399,29 +419,29 @@ function buildBpcFrame(date: Date) {
   const valuesForParity1 = [
     Math.floor(parts.second / 20),
     0,
-    hourPairs[0],
-    hourPairs[1],
-    minutePairs[0],
-    minutePairs[1],
-    minutePairs[2],
-    weekdayPairs[0],
-    weekdayPairs[1],
+    hourPair0,
+    hourPair1,
+    minutePair0,
+    minutePair1,
+    minutePair2,
+    weekdayPair0,
+    weekdayPair1,
   ]
-  const parity1Ones = valuesForParity1.reduce((sum, value) => sum + countBits(value), 0)
+  const parity1Ones = valuesForParity1.reduce<number>((sum, value) => sum + countBits(value), 0)
   const parity1 = (parity1Ones % 2) as 0 | 1
   const p3 = (pm << 1) + parity1
 
   const valuesForParity2 = [
-    dayPairs[0],
-    dayPairs[1],
-    dayPairs[2],
-    monthPairs[0],
-    monthPairs[1],
-    yearPairs[0],
-    yearPairs[1],
-    yearPairs[2],
+    dayPair0,
+    dayPair1,
+    dayPair2,
+    monthPair0,
+    monthPair1,
+    yearPair0,
+    yearPair1,
+    yearPair2,
   ]
-  const parity2Ones = valuesForParity2.reduce((sum, value) => sum + countBits(value), 0)
+  const parity2Ones = valuesForParity2.reduce<number>((sum, value) => sum + countBits(value), 0)
   const parity2 = (parity2Ones % 2) as 0 | 1
   const p4 = (yearHigh << 1) + parity2
 
@@ -436,22 +456,22 @@ function bpcSignalForSecond(date: Date): SecondSignal {
     null,
     frameIndex,
     0,
-    frame.hourPairs[0],
-    frame.hourPairs[1],
-    frame.minutePairs[0],
-    frame.minutePairs[1],
-    frame.minutePairs[2],
-    frame.weekdayPairs[0],
-    frame.weekdayPairs[1],
+    getPair(frame.hourPairs, 0),
+    getPair(frame.hourPairs, 1),
+    getPair(frame.minutePairs, 0),
+    getPair(frame.minutePairs, 1),
+    getPair(frame.minutePairs, 2),
+    getPair(frame.weekdayPairs, 0),
+    getPair(frame.weekdayPairs, 1),
     p3,
-    frame.dayPairs[0],
-    frame.dayPairs[1],
-    frame.dayPairs[2],
-    frame.monthPairs[0],
-    frame.monthPairs[1],
-    frame.yearPairs[0],
-    frame.yearPairs[1],
-    frame.yearPairs[2],
+    getPair(frame.dayPairs, 0),
+    getPair(frame.dayPairs, 1),
+    getPair(frame.dayPairs, 2),
+    getPair(frame.monthPairs, 0),
+    getPair(frame.monthPairs, 1),
+    getPair(frame.yearPairs, 0),
+    getPair(frame.yearPairs, 1),
+    getPair(frame.yearPairs, 2),
     p4,
   ]
 
@@ -520,10 +540,10 @@ function buildMSFBits(date: Date) {
   const parityWeekBits = bitsA.slice(36, 39)
   const parityTimeBits = bitsA.slice(39, 52)
 
-  bitsB[54] = parityYearBits.reduce((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
-  bitsB[55] = parityMonthDayBits.reduce((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
-  bitsB[56] = parityWeekBits.reduce((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
-  bitsB[57] = parityTimeBits.reduce((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
+  bitsB[54] = parityYearBits.reduce<number>((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
+  bitsB[55] = parityMonthDayBits.reduce<number>((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
+  bitsB[56] = parityWeekBits.reduce<number>((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
+  bitsB[57] = parityTimeBits.reduce<number>((sum, bit) => sum + bit, 0) % 2 === 0 ? 1 : 0
 
   return { bitsA, bitsB, parts }
 }

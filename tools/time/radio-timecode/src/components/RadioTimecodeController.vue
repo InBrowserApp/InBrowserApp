@@ -110,12 +110,13 @@ import PlayIcon from '@vicons/fluent/Play16Regular'
 import StopIcon from '@vicons/fluent/Stop16Regular'
 import { SignalEngine } from '../audio/signalEngine'
 import { getStationSignal } from '../core/encoders'
-import { getStationById, stations } from '../core/stations'
+import { type StationId } from '../core/encoders'
+import { type Station, getStationById, stations } from '../core/stations'
 import { getTimeParts } from '../core/time'
 
 const { t } = useI18n()
 
-const stationId = useStorage('tools:radio-timecode:station', 'jjy-60')
+const stationId = useStorage<StationId>('tools:radio-timecode:station', 'jjy-60')
 const volume = useStorage('tools:radio-timecode:volume', 0.6)
 const offsetMs = useStorage('tools:radio-timecode:offset', 0)
 
@@ -129,7 +130,7 @@ const audioAvailable = computed(
     typeof window !== 'undefined' && ('AudioContext' in window || 'webkitAudioContext' in window),
 )
 
-const station = computed(() => getStationById(stationId.value) ?? stations[0])
+const station = computed<Station>(() => getStationById(stationId.value) ?? stations[0]!)
 
 const stationOptions = computed(() =>
   stations.map((item) => ({ label: item.label, value: item.id })),
