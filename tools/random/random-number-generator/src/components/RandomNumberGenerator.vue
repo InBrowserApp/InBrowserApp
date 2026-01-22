@@ -102,7 +102,7 @@
           <div v-if="formattedNumbers.length === 1" class="hero-number" data-testid="hero-number">
             {{ formattedNumbers[0] }}
           </div>
-          <n-flex v-else-if="formattedNumbers.length" wrap :size="8" class="results-tags">
+          <n-flex v-else-if="formattedNumbers.length" wrap :size="12" class="results-tags">
             <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
               {{ value }}
             </n-tag>
@@ -145,24 +145,25 @@
     data-testid="fullscreen-overlay"
     @click.self="closeFullscreen"
   >
-    <n-button class="fullscreen-exit" text @click="closeFullscreen" data-testid="exit-fullscreen">
-      {{ t('exitFullscreen') }}
-    </n-button>
     <div class="fullscreen-content">
       <div v-if="formattedNumbers.length === 1" class="fullscreen-number">
         {{ formattedNumbers[0] }}
       </div>
-      <n-flex v-else-if="formattedNumbers.length" wrap :size="12" class="fullscreen-tags">
+      <n-flex v-else-if="formattedNumbers.length" wrap :size="16" class="fullscreen-tags">
         <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
           {{ value }}
         </n-tag>
       </n-flex>
-      <RegenerateButton
-        class="fullscreen-regenerate"
-        @click="regenerate"
-        data-testid="fullscreen-regenerate"
-      />
     </div>
+    <n-flex class="fullscreen-actions" align="center" :size="12">
+      <n-button text @click="closeFullscreen" data-testid="exit-fullscreen">
+        <template #icon>
+          <n-icon :component="ExitFullscreenIcon" />
+        </template>
+        {{ t('exitFullscreen') }}
+      </n-button>
+      <RegenerateButton @click="regenerate" data-testid="fullscreen-regenerate" />
+    </n-flex>
   </div>
 </template>
 
@@ -189,6 +190,7 @@ import {
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
 import DownloadIcon from '@vicons/fluent/ArrowDownload16Regular'
+import ExitFullscreenIcon from '@vicons/fluent/DismissCircle16Regular'
 
 const { t } = useI18n()
 
@@ -402,8 +404,13 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .results-tags :deep(.n-tag) {
-  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
-  padding: 6px 12px;
+  font-size: clamp(1.25rem, 3.2vw, 2rem);
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 14px;
+  min-width: 2.8ch;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-number {
@@ -447,22 +454,23 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .fullscreen-tags :deep(.n-tag) {
-  font-size: clamp(1.5rem, 6vw, 3rem);
-  padding: 10px 18px;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 600;
+  line-height: 1;
+  padding: 14px 22px;
+  min-width: 3.2ch;
+  justify-content: center;
+  text-align: center;
 }
 
-.fullscreen-exit {
-  position: fixed;
-  top: 24px;
-  right: 24px;
-  z-index: 1;
-}
-
-.fullscreen-regenerate {
+.fullscreen-actions {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 1;
+}
+
+.fullscreen-actions :deep(button) {
   font-size: 1.05rem;
 }
 </style>
