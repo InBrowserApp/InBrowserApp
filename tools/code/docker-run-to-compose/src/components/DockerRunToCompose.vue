@@ -12,13 +12,7 @@
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
       <n-form-item-gi :show-feedback="false" label-style="width: 100%">
         <template #label>
-          <n-flex
-            align="center"
-            justify="space-between"
-            :wrap="true"
-            :size="12"
-            class="field-label"
-          >
+          <n-flex align="center" justify="space-between" :wrap="true" :size="12">
             <span>{{ t('input-title') }}</span>
             <n-flex :wrap="true" :size="12">
               <n-button text @click="applySample">
@@ -130,9 +124,6 @@ function clearInput(): void {
     monospace;
 }
 
-.field-label {
-  width: 100%;
-}
 </style>
 
 <i18n lang="json">
