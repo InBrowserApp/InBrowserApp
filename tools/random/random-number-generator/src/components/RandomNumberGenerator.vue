@@ -102,7 +102,7 @@
           <div v-if="formattedNumbers.length === 1" class="hero-number" data-testid="hero-number">
             {{ formattedNumbers[0] }}
           </div>
-          <n-flex v-else-if="formattedNumbers.length" wrap :size="12" class="results-tags">
+          <n-flex v-else-if="formattedNumbers.length" wrap :size="16" class="results-tags">
             <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
               {{ value }}
             </n-tag>
@@ -132,6 +132,9 @@
           @click="openFullscreen"
           data-testid="enter-fullscreen"
         >
+          <template #icon>
+            <n-icon :component="EnterFullscreenIcon" />
+          </template>
           {{ t('enterFullscreen') }}
         </n-button>
         <RegenerateButton @click="regenerate" data-testid="regenerate" />
@@ -149,7 +152,7 @@
       <div v-if="formattedNumbers.length === 1" class="fullscreen-number">
         {{ formattedNumbers[0] }}
       </div>
-      <n-flex v-else-if="formattedNumbers.length" wrap :size="16" class="fullscreen-tags">
+      <n-flex v-else-if="formattedNumbers.length" wrap :size="20" class="fullscreen-tags">
         <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
           {{ value }}
         </n-tag>
@@ -190,7 +193,8 @@ import {
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
 import DownloadIcon from '@vicons/fluent/ArrowDownload16Regular'
-import ExitFullscreenIcon from '@vicons/fluent/DismissCircle16Regular'
+import EnterFullscreenIcon from '@vicons/fluent/FullScreenMaximize16Regular'
+import ExitFullscreenIcon from '@vicons/fluent/FullScreenMinimize24Regular'
 
 const { t } = useI18n()
 
@@ -392,7 +396,7 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
+  min-height: 180px;
   text-align: center;
   width: 100%;
 }
@@ -404,11 +408,12 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .results-tags :deep(.n-tag) {
-  font-size: clamp(1.25rem, 3.2vw, 2rem);
+  font-size: clamp(1.4rem, 3.8vw, 2.6rem);
   font-weight: 600;
   line-height: 1;
-  padding: 8px 14px;
-  min-width: 2.8ch;
+  padding: 12px 20px;
+  min-width: 3.4ch;
+  min-height: 2.8rem;
   justify-content: center;
   text-align: center;
 }
@@ -437,7 +442,7 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  width: min(960px, 100%);
+  width: min(1200px, 100%);
 }
 
 .fullscreen-number {
@@ -454,11 +459,12 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .fullscreen-tags :deep(.n-tag) {
-  font-size: clamp(2rem, 7vw, 4rem);
+  font-size: clamp(2.6rem, 8.5vw, 5rem);
   font-weight: 600;
   line-height: 1;
-  padding: 14px 22px;
-  min-width: 3.2ch;
+  padding: 18px 28px;
+  min-width: 4ch;
+  min-height: 3.4rem;
   justify-content: center;
   text-align: center;
 }
