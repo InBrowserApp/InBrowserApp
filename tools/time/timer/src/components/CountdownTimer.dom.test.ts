@@ -436,7 +436,6 @@ describe('CountdownTimer', () => {
     expect(notification.requestPermission).toHaveBeenCalledTimes(2)
 
     wrapper.unmount()
-
     ;(notification as { permission: NotificationPermission }).permission = 'granted'
     vi.resetModules()
     const grantedWrapper = await mountCountdownTimer()
