@@ -699,6 +699,9 @@ importers:
       '@tools/cityhash64-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/cityhash64-hash-text-or-file
+      '@tools/code-screenshot-generator':
+        specifier: workspace:*
+        version: link:../../tools/code/code-screenshot-generator
       '@tools/color-contrast-checker':
         specifier: workspace:*
         version: link:../../tools/web/color-contrast-checker
@@ -1168,6 +1171,33 @@ importers:
       '@types/validator':
         specifier: 'catalog:'
         version: 13.15.10
+
+  tools/code/code-screenshot-generator:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
 
   tools/code/csv-to-json-converter:
     dependencies:
