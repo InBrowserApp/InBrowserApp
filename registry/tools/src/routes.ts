@@ -56,6 +56,7 @@ import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
 import { routes as jwtDecoderVerifierRoutes } from '@tools/jwt-decoder-verifier/routes'
 import { routes as jwkPemConverterRoutes } from '@tools/jwk-pem-converter/routes'
 import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-generator/routes'
+import { routes as randomNumberGeneratorRoutes } from '@tools/random-number-generator/routes'
 import { routes as bip39MnemonicGeneratorRoutes } from '@tools/bip39-mnemonic-generator/routes'
 import { routes as ksuidGeneratorRoutes } from '@tools/ksuid-generator/routes'
 import { routes as nanoidGeneratorRoutes } from '@tools/nanoid-generator/routes'
@@ -200,6 +201,7 @@ export const routes: ToolRoute[] = [
   ...jwtDecoderVerifierRoutes,
   ...jwkPemConverterRoutes,
   ...randomPasswordGeneratorRoutes,
+  ...randomNumberGeneratorRoutes,
   ...bip39MnemonicGeneratorRoutes,
   ...ksuidGeneratorRoutes,
   ...nanoidGeneratorRoutes,

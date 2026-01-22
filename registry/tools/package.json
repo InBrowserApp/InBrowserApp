@@ -111,6 +111,7 @@
     "@tools/prettier-code-formatter": "workspace:*",
     "@tools/qr-code-generator": "workspace:*",
     "@tools/qr-code-reader": "workspace:*",
+    "@tools/random-number-generator": "workspace:*",
     "@tools/random-password-generator": "workspace:*",
     "@tools/redirects": "workspace:*",
     "@tools/regex-tester-replacer": "workspace:*",
