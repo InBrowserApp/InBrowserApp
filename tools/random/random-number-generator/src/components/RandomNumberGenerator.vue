@@ -408,13 +408,20 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .results-tags :deep(.n-tag) {
+  height: auto;
+  min-height: 2.8rem;
+  min-width: 3.4ch;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-tags :deep(.n-tag__content) {
   font-size: clamp(1.4rem, 3.8vw, 2.6rem);
   font-weight: 600;
   line-height: 1;
   padding: 12px 20px;
-  min-width: 3.4ch;
-  min-height: 2.8rem;
-  justify-content: center;
   text-align: center;
 }
 
@@ -459,13 +466,20 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 }
 
 .fullscreen-tags :deep(.n-tag) {
+  height: auto;
+  min-height: 3.4rem;
+  min-width: 4ch;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-tags :deep(.n-tag__content) {
   font-size: clamp(2.6rem, 8.5vw, 5rem);
   font-weight: 600;
   line-height: 1;
   padding: 18px 28px;
-  min-width: 4ch;
-  min-height: 3.4rem;
-  justify-content: center;
   text-align: center;
 }
 
