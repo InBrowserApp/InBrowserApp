@@ -1,0 +1,19 @@
+{
+  "name": "@tools/css-gradient-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vicons/ionicons5": "catalog:",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:"
+  }
+}

@@ -103,6 +103,7 @@ import { routes as textDiffRoutes } from '@tools/text-diff/routes'
 import { routes as colorPickerRoutes } from '@tools/color-picker/routes'
 import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as colorContrastCheckerRoutes } from '@tools/color-contrast-checker/routes'
+import { routes as cssGradientGeneratorRoutes } from '@tools/css-gradient-generator/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeInvisibleCharacterCheckerRoutes } from '@tools/unicode-invisible-character-checker/routes'
@@ -248,6 +249,7 @@ export const routes: ToolRoute[] = [
   ...colorPickerRoutes,
   ...colorConverterRoutes,
   ...colorContrastCheckerRoutes,
+  ...cssGradientGeneratorRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
   ...unicodeInvisibleCharacterCheckerRoutes,
