@@ -90,27 +90,26 @@
   <ToolSectionHeader>{{ t('results') }}</ToolSectionHeader>
   <ToolSection>
     <n-flex vertical :size="12">
-      <n-card embedded :content-style="{ padding: '12px 16px' }" data-testid="results-card">
-        <div v-if="formattedNumbers.length === 1" class="hero-number">
-          {{ formattedNumbers[0] }}
+      <n-card
+        embedded
+        :content-style="{ padding: '12px 16px' }"
+        data-testid="results-card"
+        class="results-card"
+        :class="{ 'is-clickable': hasResults }"
+        @click="openFullscreen"
+      >
+        <div class="results-display">
+          <div v-if="formattedNumbers.length === 1" class="hero-number" data-testid="hero-number">
+            {{ formattedNumbers[0] }}
+          </div>
+          <n-flex v-else-if="formattedNumbers.length" wrap :size="8" class="results-tags">
+            <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
+              {{ value }}
+            </n-tag>
+          </n-flex>
+          <n-text v-else depth="3">{{ t('placeholder') }}</n-text>
         </div>
-        <n-flex v-else-if="formattedNumbers.length" wrap :size="8">
-          <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
-            {{ value }}
-          </n-tag>
-        </n-flex>
-        <n-text v-else depth="3">{{ t('placeholder') }}</n-text>
       </n-card>
-
-      <n-input
-        :value="outputText"
-        class="monospace-output"
-        type="textarea"
-        readonly
-        :autosize="{ minRows: 3, maxRows: 8 }"
-        :placeholder="t('outputPlaceholder')"
-        data-testid="output-text"
-      />
 
       <n-flex :size="12">
         <CopyToClipboardButton :content="outputText" />
@@ -122,12 +121,34 @@
           :disabled="!outputText"
           data-testid="download-results"
         >
+          <template #icon>
+            <n-icon :component="DownloadIcon" />
+          </template>
           {{ t('download') }}
         </n-button>
         <RegenerateButton @click="regenerate" data-testid="regenerate" />
       </n-flex>
     </n-flex>
   </ToolSection>
+
+  <div
+    v-if="isFullscreen"
+    class="fullscreen-overlay"
+    data-testid="fullscreen-overlay"
+    @click.self="isFullscreen = false"
+  >
+    <div class="fullscreen-content">
+      <div v-if="formattedNumbers.length === 1" class="fullscreen-number">
+        {{ formattedNumbers[0] }}
+      </div>
+      <n-flex v-else-if="formattedNumbers.length" wrap :size="12" class="fullscreen-tags">
+        <n-tag v-for="(value, index) in formattedNumbers" :key="`${value}-${index}`" round>
+          {{ value }}
+        </n-tag>
+      </n-flex>
+      <RegenerateButton class="fullscreen-regenerate" @click.stop="regenerate" />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -141,16 +162,18 @@ import {
   NFlex,
   NFormItemGi,
   NGrid,
-  NInput,
+  NIcon,
   NInputNumber,
   NRadioButton,
   NRadioGroup,
   NSwitch,
   NTag,
   NText,
+  useThemeVars,
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
+import DownloadIcon from '@vicons/fluent/ArrowDownload16Regular'
 
 const { t } = useI18n()
 
@@ -225,11 +248,19 @@ const formattedNumbers = computed(() =>
   generatedNumbers.value.map((value) => formatNumber(value, normalizedDecimalPlaces.value)),
 )
 
+const hasResults = computed(() => formattedNumbers.value.length > 0)
 const outputText = computed(() => formattedNumbers.value.join('\n'))
 
 const downloadName = 'random-numbers.txt'
 const downloadBlob = computed(() => (outputText.value ? new Blob([outputText.value]) : null))
 const downloadUrl = useObjectUrl(downloadBlob)
+const themeVars = useThemeVars()
+const isFullscreen = ref(false)
+
+function openFullscreen() {
+  if (!hasResults.value) return
+  isFullscreen.value = true
+}
 
 function normalizeCount(value: number | null | undefined): number {
   if (typeof value !== 'number' || Number.isNaN(value)) return 1
@@ -328,16 +359,68 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
 </script>
 
 <style scoped>
+.results-card {
+  cursor: default;
+}
+
+.results-card.is-clickable {
+  cursor: pointer;
+}
+
+.results-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  text-align: center;
+  width: 100%;
+}
+
+.results-tags {
+  justify-content: center;
+  width: 100%;
+}
+
 .hero-number {
-  font-size: 2.5rem;
+  font-size: clamp(2.75rem, 8vw, 4.75rem);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-.monospace-output :deep(textarea) {
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: v-bind('themeVars.bodyColor');
+  color: v-bind('themeVars.textColorBase');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: auto;
+}
+
+.fullscreen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: min(960px, 100%);
+}
+
+.fullscreen-number {
+  font-size: clamp(3rem, 14vw, 7rem);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.fullscreen-tags {
+  justify-content: center;
+}
+
+.fullscreen-regenerate :deep(button) {
+  font-size: 1.05rem;
 }
 </style>
 
@@ -360,7 +443,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Decimal Places",
     "results": "Results",
     "placeholder": "Numbers will appear here...",
-    "outputPlaceholder": "Generated numbers will appear here...",
     "download": "Download",
     "rangeError": "Min must be less than or equal to Max.",
     "countError": "Count exceeds the number of unique values in the range ({range})."
@@ -382,7 +464,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "小数位数",
     "results": "结果",
     "placeholder": "数字会显示在这里...",
-    "outputPlaceholder": "生成的数字会显示在这里...",
     "download": "下载",
     "rangeError": "最小值必须小于或等于最大值。",
     "countError": "数量超过了范围内唯一值的数量（{range}）。"
@@ -404,7 +485,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "小数位数",
     "results": "结果",
     "placeholder": "数字会显示在这里...",
-    "outputPlaceholder": "生成的数字会显示在这里...",
     "download": "下载",
     "rangeError": "最小值必须小于或等于最大值。",
     "countError": "数量超过了范围内唯一值的数量（{range}）。"
@@ -426,7 +506,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "小數位數",
     "results": "結果",
     "placeholder": "數字會顯示在這裡...",
-    "outputPlaceholder": "產生的數字會顯示在這裡...",
     "download": "下載",
     "rangeError": "最小值必須小於或等於最大值。",
     "countError": "數量超過範圍內唯一值的數量（{range}）。"
@@ -448,7 +527,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "小數位數",
     "results": "結果",
     "placeholder": "數字會顯示在這裡...",
-    "outputPlaceholder": "產生的數字會顯示在這裡...",
     "download": "下載",
     "rangeError": "最小值必須小於或等於最大值。",
     "countError": "數量超過範圍內唯一值的數量（{range}）。"
@@ -470,7 +548,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Decimales",
     "results": "Resultados",
     "placeholder": "Los números aparecerán aquí...",
-    "outputPlaceholder": "Los números generados aparecerán aquí...",
     "download": "Descargar",
     "rangeError": "El mínimo debe ser menor o igual que el máximo.",
     "countError": "La cantidad supera los valores únicos del rango ({range})."
@@ -492,7 +569,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Décimales",
     "results": "Résultats",
     "placeholder": "Les nombres apparaîtront ici...",
-    "outputPlaceholder": "Les nombres générés apparaîtront ici...",
     "download": "Télécharger",
     "rangeError": "Le minimum doit être inférieur ou égal au maximum.",
     "countError": "La quantité dépasse les valeurs uniques de la plage ({range})."
@@ -514,7 +590,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Dezimalstellen",
     "results": "Ergebnisse",
     "placeholder": "Zahlen erscheinen hier...",
-    "outputPlaceholder": "Generierte Zahlen erscheinen hier...",
     "download": "Herunterladen",
     "rangeError": "Minimum muss kleiner oder gleich Maximum sein.",
     "countError": "Die Anzahl überschreitet die eindeutigen Werte im Bereich ({range})."
@@ -536,7 +611,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Cifre decimali",
     "results": "Risultati",
     "placeholder": "I numeri appariranno qui...",
-    "outputPlaceholder": "I numeri generati appariranno qui...",
     "download": "Scarica",
     "rangeError": "Il minimo deve essere minore o uguale al massimo.",
     "countError": "La quantità supera i valori unici nell'intervallo ({range})."
@@ -558,7 +632,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "小数点以下",
     "results": "結果",
     "placeholder": "数値はここに表示されます...",
-    "outputPlaceholder": "生成された数値がここに表示されます...",
     "download": "ダウンロード",
     "rangeError": "最小値は最大値以下である必要があります。",
     "countError": "個数が範囲内のユニーク値数（{range}）を超えています。"
@@ -580,7 +653,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "소수 자릿수",
     "results": "결과",
     "placeholder": "숫자가 여기에 표시됩니다...",
-    "outputPlaceholder": "생성된 숫자가 여기에 표시됩니다...",
     "download": "다운로드",
     "rangeError": "최소값은 최대값보다 작거나 같아야 합니다.",
     "countError": "개수가 범위 내 고유 값 수({range})를 초과합니다."
@@ -602,7 +674,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Знаков после запятой",
     "results": "Результаты",
     "placeholder": "Числа появятся здесь...",
-    "outputPlaceholder": "Сгенерированные числа появятся здесь...",
     "download": "Скачать",
     "rangeError": "Минимум должен быть меньше или равен максимуму.",
     "countError": "Количество превышает число уникальных значений в диапазоне ({range})."
@@ -624,7 +695,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Casas decimais",
     "results": "Resultados",
     "placeholder": "Os números aparecerão aqui...",
-    "outputPlaceholder": "Os números gerados aparecerão aqui...",
     "download": "Baixar",
     "rangeError": "O mínimo deve ser menor ou igual ao máximo.",
     "countError": "A quantidade excede os valores únicos do intervalo ({range})."
@@ -646,7 +716,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "خانات عشرية",
     "results": "النتائج",
     "placeholder": "ستظهر الأرقام هنا...",
-    "outputPlaceholder": "ستظهر الأرقام المُولّدة هنا...",
     "download": "تنزيل",
     "rangeError": "يجب أن يكون الحد الأدنى أقل من أو يساوي الحد الأقصى.",
     "countError": "العدد يتجاوز القيم الفريدة ضمن النطاق ({range})."
@@ -668,7 +737,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "दशमलव स्थान",
     "results": "परिणाम",
     "placeholder": "संख्याएँ यहाँ दिखाई देंगी...",
-    "outputPlaceholder": "जनरेट की गई संख्याएँ यहाँ दिखाई देंगी...",
     "download": "डाउनलोड",
     "rangeError": "न्यूनतम मान अधिकतम से कम या बराबर होना चाहिए।",
     "countError": "संख्या सीमा में अद्वितीय मानों ({range}) से अधिक है।"
@@ -690,7 +758,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Ondalık basamak",
     "results": "Sonuçlar",
     "placeholder": "Sayılar burada görünecek...",
-    "outputPlaceholder": "Üretilen sayılar burada görünecek...",
     "download": "İndir",
     "rangeError": "Minimum, maksimumdan küçük veya eşit olmalıdır.",
     "countError": "Adet, aralıktaki benzersiz değerleri aşıyor ({range})."
@@ -712,7 +779,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Decimalen",
     "results": "Resultaten",
     "placeholder": "Getallen verschijnen hier...",
-    "outputPlaceholder": "Gegenereerde getallen verschijnen hier...",
     "download": "Downloaden",
     "rangeError": "Minimum moet kleiner dan of gelijk zijn aan maximum.",
     "countError": "Aantal overschrijdt het aantal unieke waarden in het bereik ({range})."
@@ -734,7 +800,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Decimaler",
     "results": "Resultat",
     "placeholder": "Tal visas här...",
-    "outputPlaceholder": "Genererade tal visas här...",
     "download": "Ladda ner",
     "rangeError": "Min måste vara mindre än eller lika med max.",
     "countError": "Antalet överskrider unika värden i intervallet ({range})."
@@ -756,7 +821,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Miejsca dziesiętne",
     "results": "Wyniki",
     "placeholder": "Liczby pojawią się tutaj...",
-    "outputPlaceholder": "Wygenerowane liczby pojawią się tutaj...",
     "download": "Pobierz",
     "rangeError": "Minimum musi być mniejsze lub równe maksimum.",
     "countError": "Liczba przekracza unikalne wartości w zakresie ({range})."
@@ -778,7 +842,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Chữ số thập phân",
     "results": "Kết quả",
     "placeholder": "Các số sẽ hiển thị ở đây...",
-    "outputPlaceholder": "Các số đã tạo sẽ hiển thị ở đây...",
     "download": "Tải xuống",
     "rangeError": "Giá trị tối thiểu phải nhỏ hơn hoặc bằng giá trị tối đa.",
     "countError": "Số lượng vượt quá số giá trị duy nhất trong phạm vi ({range})."
@@ -800,7 +863,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "ตำแหน่งทศนิยม",
     "results": "ผลลัพธ์",
     "placeholder": "ตัวเลขจะแสดงที่นี่...",
-    "outputPlaceholder": "ตัวเลขที่สร้างจะแสดงที่นี่...",
     "download": "ดาวน์โหลด",
     "rangeError": "ค่าต่ำสุดต้องน้อยกว่าหรือเท่ากับค่าสูงสุด",
     "countError": "จำนวนเกินค่าที่ไม่ซ้ำในช่วง ({range})"
@@ -822,7 +884,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Jumlah desimal",
     "results": "Hasil",
     "placeholder": "Angka akan muncul di sini...",
-    "outputPlaceholder": "Angka yang dihasilkan akan muncul di sini...",
     "download": "Unduh",
     "rangeError": "Minimum harus kurang dari atau sama dengan maksimum.",
     "countError": "Jumlah melebihi nilai unik dalam rentang ({range})."
@@ -844,7 +905,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "ספרות עשרוניות",
     "results": "תוצאות",
     "placeholder": "מספרים יופיעו כאן...",
-    "outputPlaceholder": "המספרים שנוצרו יופיעו כאן...",
     "download": "הורדה",
     "rangeError": "המינימום חייב להיות קטן או שווה למקסימום.",
     "countError": "הכמות חורגת ממספר הערכים הייחודיים בטווח ({range})."
@@ -866,7 +926,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Tempat perpuluhan",
     "results": "Hasil",
     "placeholder": "Nombor akan muncul di sini...",
-    "outputPlaceholder": "Nombor yang dijana akan muncul di sini...",
     "download": "Muat turun",
     "rangeError": "Minimum mesti kurang atau sama dengan maksimum.",
     "countError": "Jumlah melebihi nilai unik dalam julat ({range})."
@@ -888,7 +947,6 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "decimalPlaces": "Desimaler",
     "results": "Resultater",
     "placeholder": "Tallene vises her...",
-    "outputPlaceholder": "De genererte tallene vises her...",
     "download": "Last ned",
     "rangeError": "Minimum må være mindre enn eller lik maksimum.",
     "countError": "Antallet overstiger unike verdier i området ({range})."

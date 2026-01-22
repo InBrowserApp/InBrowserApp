@@ -44,8 +44,8 @@ const mountOptions = {
   },
 }
 
-const getOutput = (wrapper: ReturnType<typeof mount>) =>
-  wrapper.get('[data-testid="output-text"]').find('textarea').element.value
+const getHeroNumber = (wrapper: ReturnType<typeof mount>) =>
+  wrapper.find('[data-testid="hero-number"]')
 
 describe('RandomNumberGeneratorView', () => {
   beforeEach(() => {
@@ -73,13 +73,13 @@ describe('RandomNumberGeneratorView', () => {
     const wrapper = mount(RandomNumberGeneratorView, mountOptions)
     await flushPromises()
 
-    expect(getOutput(wrapper)).toBe('51')
+    expect(getHeroNumber(wrapper).text()).toBe('51')
     expect(wrapper.get('[data-testid="download-results"]').attributes('href')).toBe('blob:mock')
 
     await wrapper.get('[data-testid="preset-dice"]').trigger('click')
     await flushPromises()
 
-    expect(getOutput(wrapper)).toBe('4')
+    expect(getHeroNumber(wrapper).text()).toBe('4')
   })
 
   it('supports decimal output', async () => {
@@ -92,7 +92,7 @@ describe('RandomNumberGeneratorView', () => {
     const wrapper = mount(RandomNumberGeneratorView, mountOptions)
     await flushPromises()
 
-    expect(getOutput(wrapper)).toBe('1.50')
+    expect(getHeroNumber(wrapper).text()).toBe('1.50')
   })
 
   it('shows a range error when min exceeds max', async () => {
@@ -103,7 +103,7 @@ describe('RandomNumberGeneratorView', () => {
     await flushPromises()
 
     expect(wrapper.text()).toContain('Min must be less than or equal to Max.')
-    expect(getOutput(wrapper)).toBe('')
+    expect(getHeroNumber(wrapper).exists()).toBe(false)
   })
 
   it('shows a count error when unique values are exhausted', async () => {
@@ -116,6 +116,6 @@ describe('RandomNumberGeneratorView', () => {
     await flushPromises()
 
     expect(wrapper.text()).toContain('Count exceeds the number of unique values in the range (3).')
-    expect(getOutput(wrapper)).toBe('')
+    expect(getHeroNumber(wrapper).exists()).toBe(false)
   })
 })
