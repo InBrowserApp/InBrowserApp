@@ -10,11 +10,19 @@
             size="small"
             :class="['layer-card', { 'layer-card-active': layer.id === activeLayerId }]"
             data-testid="layer-card"
+            @click="setActiveLayer(layer.id)"
           >
             <n-flex align="center" justify="space-between" :size="8" wrap>
-              <n-button text @click="setActiveLayer(layer.id)" :data-testid="`layer-${index}`">
-                {{ t('layer-title', { index: index + 1 }) }}
-              </n-button>
+              <n-flex align="center" :size="8">
+                <span
+                  class="layer-indicator"
+                  :class="{ 'layer-indicator-active': layer.id === activeLayerId }"
+                  aria-hidden="true"
+                />
+                <n-button text :data-testid="`layer-${index}`">
+                  {{ t('layer-title', { index: index + 1 }) }}
+                </n-button>
+              </n-flex>
               <n-flex align="center" :size="8" wrap>
                 <n-tag v-show="layer.inset" size="small" type="warning">{{ t('inset') }}</n-tag>
                 <n-button
@@ -304,13 +312,33 @@ function moveLayer(id: string, direction: number) {
 }
 
 .layer-card {
+  cursor: pointer;
+  position: relative;
   transition:
     box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
 
+.layer-card:hover {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
 .layer-card-active {
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), transparent 55%);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.6);
+}
+
+.layer-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.7);
+  box-shadow: inset 0 0 0 2px rgba(148, 163, 184, 0.6);
+}
+
+.layer-indicator-active {
+  background: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
 }
 
 .preview-surface {

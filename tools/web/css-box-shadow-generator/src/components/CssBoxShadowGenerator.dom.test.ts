@@ -242,7 +242,8 @@ describe('CssBoxShadowGenerator', () => {
     await nextTick()
 
     const secondId = vm.layers[1]!.id
-    await wrapper.get('[data-testid="layer-1"]').trigger('click')
+    const cards = wrapper.findAll('[data-testid="layer-card"]')
+    await cards[1]!.trigger('click')
     await nextTick()
 
     expect(vm.activeLayerId).toBe(secondId)
