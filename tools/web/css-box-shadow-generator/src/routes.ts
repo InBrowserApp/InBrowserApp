@@ -3,9 +3,8 @@ import { toolID, path } from './info'
 
 export const routes: ToolRoute[] = [
   {
-    toolID,
-    path,
     name: toolID,
+    path,
     component: () => import('./CssBoxShadowGeneratorView.vue'),
   },
-]
+] as const

@@ -21,7 +21,9 @@ describe('CssBoxShadowGeneratorView', () => {
     expect(toolInfo.toolID).toBe(info.toolID)
     expect(routes[0]?.path).toBe(info.path)
     expect(routes[0]?.component).toBeDefined()
-    const routeModule = await routes[0]?.component?.()
+    const routeLoader = routes[0]?.component as (() => Promise<unknown>) | undefined
+    if (!routeLoader) throw new Error('Missing route definition')
+    const routeModule = await routeLoader()
     expect(routeModule).toBeTruthy()
   })
 

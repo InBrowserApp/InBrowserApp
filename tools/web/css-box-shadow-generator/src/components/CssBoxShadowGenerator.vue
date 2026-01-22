@@ -286,8 +286,8 @@ function moveLayer(id: string, direction: number) {
   if (nextIndex < 0 || nextIndex >= layers.value.length) return
 
   const nextLayers = [...layers.value]
-  const temp = nextLayers[index]
-  nextLayers[index] = nextLayers[nextIndex]
+  const temp = nextLayers[index]!
+  nextLayers[index] = nextLayers[nextIndex]!
   nextLayers[nextIndex] = temp
   layers.value = nextLayers
 }

@@ -158,7 +158,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('renders the default output', () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[] }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[] }
     const output = wrapper.get('[data-testid="shadow-output"]').text()
 
     expect(output).toContain('box-shadow:')
@@ -167,7 +167,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('adds and removes layers', async () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[]; removeLayer: (id: string) => void }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[]; removeLayer: (id: string) => void }
 
     await wrapper.get('[data-testid="add-layer"]').trigger('click')
     await nextTick()
@@ -187,7 +187,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('moves layers within the list', async () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[] }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[] }
 
     await wrapper.get('[data-testid="add-layer"]').trigger('click')
     await nextTick()
@@ -213,7 +213,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('updates layer values from controls', async () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[] }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[] }
 
     await wrapper.get('[data-testid="offset-x-slider"]').setValue('12')
     await wrapper.get('[data-testid="offset-x-input"]').setValue('16')
@@ -236,7 +236,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('sets the active layer from the list', async () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[]; activeLayerId: string }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[]; activeLayerId: string }
 
     await wrapper.get('[data-testid="add-layer"]').trigger('click')
     await nextTick()
@@ -265,7 +265,7 @@ describe('CssBoxShadowGenerator', () => {
     )
 
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { activeLayerId: string; layers: ShadowLayer[] }
+    const vm = wrapper.vm as unknown as { activeLayerId: string; layers: ShadowLayer[] }
     await nextTick()
 
     expect(vm.layers.length).toBe(1)
@@ -274,7 +274,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('guards invalid move operations', () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as {
+    const vm = wrapper.vm as unknown as {
       layers: ShadowLayer[]
       moveLayer: (id: string, direction: number) => void
     }
@@ -286,7 +286,7 @@ describe('CssBoxShadowGenerator', () => {
 
   it('repairs missing active layers', async () => {
     const wrapper = mount(CssBoxShadowGenerator, { global: { stubs } })
-    const vm = wrapper.vm as { layers: ShadowLayer[]; activeLayerId: string }
+    const vm = wrapper.vm as unknown as { layers: ShadowLayer[]; activeLayerId: string }
 
     vm.activeLayerId = 'missing'
     vm.layers = []
