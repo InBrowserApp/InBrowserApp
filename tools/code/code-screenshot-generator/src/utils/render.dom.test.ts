@@ -53,7 +53,8 @@ describe('render helpers', () => {
   it('supports plain mode and tab expansion', () => {
     const tokens = highlightToTokens(hljs, 'a\tb', 'javascript', 'plain')
     const styled = applyTokenStyles(tokens, theme, 4)
-    expect(styled[0].text).toContain('    ')
+    const firstToken = styled[0]?.text ?? ''
+    expect(firstToken).toContain('    ')
   })
 
   it('builds line numbers and exports', () => {

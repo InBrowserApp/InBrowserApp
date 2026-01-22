@@ -4,7 +4,8 @@ import { DEFAULT_MONO_FONT, getBackgroundPreset, getThemeById, themes } from './
 describe('theme helpers', () => {
   it('resolves themes and presets with fallbacks', () => {
     expect(themes.length).toBeGreaterThan(0)
-    expect(getThemeById('unknown').id).toBe(themes[0].id)
+    const fallbackTheme = themes[0] ?? getThemeById('nebula')
+    expect(getThemeById('unknown').id).toBe(fallbackTheme.id)
     expect(getBackgroundPreset('unknown').id).toBe('aurora')
   })
 

@@ -142,7 +142,7 @@ export const tokensToLines = (tokens: StyledToken[]): StyledToken[][] => {
     const parts = token.text.split('\n')
     parts.forEach((part, index) => {
       if (part.length > 0) {
-        lines[lines.length - 1].push({ ...token, text: part })
+        lines[lines.length - 1]!.push({ ...token, text: part })
       }
       if (index < parts.length - 1) {
         lines.push([])

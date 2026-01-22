@@ -201,7 +201,7 @@ const fileName = useStorage<string>('tools:code-shot:fileName', 'code-shot')
 
 const debouncedCode = useDebounce(code, 180)
 
-const normalizedCode = computed(() => normalizeCode(debouncedCode.value))
+const normalizedCode = computed(() => normalizeCode(debouncedCode.value ?? ''))
 const activeTheme = computed(() => getThemeById(themeId.value))
 
 const backgroundConfig = computed<BackgroundConfig>(() => {

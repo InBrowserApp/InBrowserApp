@@ -175,7 +175,7 @@ export const themes: Theme[] = [
 ]
 
 export const getThemeById = (id: string): Theme =>
-  themes.find((theme) => theme.id === id) ?? themes[0]
+  themes.find((theme) => theme.id === id) ?? themes[0]!
 
 export type BackgroundPreset = {
   id: string
@@ -225,7 +225,7 @@ export const backgroundPresets: BackgroundPreset[] = [
 ]
 
 export const getBackgroundPreset = (id: string): BackgroundPreset =>
-  backgroundPresets.find((preset) => preset.id === id) ?? backgroundPresets[0]
+  backgroundPresets.find((preset) => preset.id === id) ?? backgroundPresets[0]!
 
 export const DEFAULT_MONO_FONT =
   "'JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace"

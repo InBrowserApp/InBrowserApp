@@ -41,6 +41,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { CSSProperties } from 'vue'
 import type { BackgroundConfig, CodeShotLayout, StyledToken } from '../utils/render'
 import type { Theme } from '../utils/themes'
 import { getBackgroundPreviewCss, getBackgroundPreviewSize } from '../utils/render'
@@ -56,14 +57,14 @@ const props = defineProps<{
 const backgroundCss = computed(() => getBackgroundPreviewCss(props.background))
 const backgroundSize = computed(() => getBackgroundPreviewSize(props.background))
 
-const canvasStyle = computed(() => ({
+const canvasStyle = computed<CSSProperties>(() => ({
   padding: `${props.layout.framePadding}px`,
   background: backgroundCss.value,
   backgroundSize: backgroundSize.value,
   borderRadius: `${props.layout.radius + 12}px`,
 }))
 
-const cardStyle = computed(() => ({
+const cardStyle = computed<CSSProperties>(() => ({
   background: props.theme.background,
   borderRadius: `${props.layout.radius}px`,
   border: `1px solid ${props.theme.border}`,
@@ -71,7 +72,7 @@ const cardStyle = computed(() => ({
   overflow: 'hidden',
 }))
 
-const headerStyle = computed(() => ({
+const headerStyle = computed<CSSProperties>(() => ({
   background: props.theme.header,
   height: `${Math.max(props.layout.fontSize * 1.8, 34)}px`,
   display: 'flex',
@@ -79,7 +80,7 @@ const headerStyle = computed(() => ({
   padding: `0 ${props.layout.padding}px`,
 }))
 
-const bodyStyle = computed(() => ({
+const bodyStyle = computed<CSSProperties>(() => ({
   display: 'flex',
   gap: '16px',
   padding: `${props.layout.padding}px`,
@@ -88,7 +89,7 @@ const bodyStyle = computed(() => ({
   lineHeight: `${props.layout.lineHeight}`,
 }))
 
-const lineNumberStyle = computed(() => ({
+const lineNumberStyle = computed<CSSProperties>(() => ({
   color: props.theme.lineNumber,
   textAlign: 'right',
   userSelect: 'none',
@@ -97,7 +98,7 @@ const lineNumberStyle = computed(() => ({
   lineHeight: `${props.layout.lineHeight}`,
 }))
 
-const codeStyle = computed(() => ({
+const codeStyle = computed<CSSProperties>(() => ({
   color: props.theme.foreground,
   fontFamily: props.layout.fontFamily,
   fontSize: `${props.layout.fontSize}px`,
