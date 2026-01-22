@@ -63,4 +63,20 @@ describe('SignalEngine', () => {
     expect(fakeContext.oscillator.stop).toHaveBeenCalled()
     expect(fakeContext.close).toHaveBeenCalled()
   })
+
+  it('updates gain when volume changes', async () => {
+    const fakeContext = new FakeAudioContext()
+    const engine = new SignalEngine(() => fakeContext as unknown as AudioContext)
+    await engine.start({
+      station: stations[0]!,
+      volume: 0.5,
+      offsetMs: 0,
+    })
+
+    fakeContext.currentTime = 3
+    engine.setVolume(2)
+
+    expect(fakeContext.gainNode.gain.setValueAtTime).toHaveBeenCalledWith(1, 3)
+    engine.stop()
+  })
 })

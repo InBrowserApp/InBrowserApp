@@ -22,6 +22,7 @@ vi.mock('../audio/signalEngine', () => ({
   SignalEngine: class {
     start = startMock
     stop = stopMock
+    setVolume = vi.fn()
   },
 }))
 

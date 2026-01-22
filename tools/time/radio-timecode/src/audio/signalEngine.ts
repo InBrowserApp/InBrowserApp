@@ -14,6 +14,7 @@ export class SignalEngine {
   private oscillator: OscillatorNode | null = null
   private gain: GainNode | null = null
   private timer: number | null = null
+  private startToken = 0
   private startTime = 0
   private baseTimeMs = 0
   private nextSecond = 0
@@ -24,14 +25,16 @@ export class SignalEngine {
 
   async start(options: SignalEngineOptions) {
     this.stop()
-    this.options = options
+    const token = this.startToken
     const context = this.createContext()
     const oscillator = context.createOscillator()
     const gain = context.createGain()
+    const volume = Math.max(0, Math.min(1, options.volume))
+    this.options = { ...options, volume }
 
     oscillator.type = 'square'
     oscillator.frequency.value = options.station.baseHz
-    gain.gain.value = Math.max(0, Math.min(1, options.volume))
+    gain.gain.value = volume
 
     oscillator.connect(gain)
     gain.connect(context.destination)
@@ -52,11 +55,14 @@ export class SignalEngine {
       await context.resume()
     }
 
+    if (token !== this.startToken || !this.context || !this.gain || !this.options) return
+
     this.schedule()
     this.timer = window.setInterval(() => this.schedule(), 120)
   }
 
   stop() {
+    this.startToken += 1
     if (this.timer !== null) {
       window.clearInterval(this.timer)
       this.timer = null
@@ -79,6 +85,15 @@ export class SignalEngine {
       this.context = null
     }
     this.options = null
+  }
+
+  setVolume(volume: number) {
+    const clamped = Math.max(0, Math.min(1, volume))
+    if (this.options) {
+      this.options.volume = clamped
+    }
+    if (!this.context || !this.gain) return
+    this.gain.gain.setValueAtTime(clamped, this.context.currentTime)
   }
 
   private schedule() {

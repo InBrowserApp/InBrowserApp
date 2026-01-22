@@ -9,7 +9,8 @@
             v-if="!isPlaying"
             type="primary"
             @click="handleStart"
-            :disabled="!audioAvailable"
+            :loading="isStarting"
+            :disabled="!audioAvailable || isStarting"
           >
             <template #icon>
               <n-icon :component="PlayIcon" />
@@ -26,6 +27,9 @@
       </n-flex>
       <n-alert v-if="!audioAvailable" type="error" :show-icon="false">
         {{ t('unsupported') }}
+      </n-alert>
+      <n-alert v-if="startError" type="error" :show-icon="false">
+        {{ t('startFailed') }}
       </n-alert>
     </n-flex>
   </ToolSection>
@@ -121,9 +125,13 @@ const volume = useStorage('tools:radio-timecode:volume', 0.6)
 const offsetMs = useStorage('tools:radio-timecode:offset', 0)
 
 const isPlaying = ref(false)
+const isStarting = ref(false)
+const startError = ref(false)
 const engine = ref<SignalEngine | null>(null)
 const now = ref(Date.now())
 let timer: number | null = null
+let pendingRestart = false
+let startSerial = 0
 
 const audioAvailable = computed(
   () =>
@@ -159,23 +167,57 @@ function createContext() {
 
 async function handleStart() {
   if (!station.value || !audioAvailable.value) return
+  if (isStarting.value) {
+    pendingRestart = true
+    return
+  }
   if (!engine.value) engine.value = new SignalEngine(createContext)
-  await engine.value.start({
-    station: station.value,
-    volume: volume.value,
-    offsetMs: offsetMs.value,
-  })
-  isPlaying.value = true
+  isStarting.value = true
+  startError.value = false
+  pendingRestart = false
+  const serial = (startSerial += 1)
+  try {
+    await engine.value.start({
+      station: station.value,
+      volume: volume.value,
+      offsetMs: offsetMs.value,
+    })
+    if (serial !== startSerial) return
+    isPlaying.value = true
+  } catch {
+    if (serial !== startSerial) return
+    engine.value?.stop()
+    isPlaying.value = false
+    startError.value = true
+  } finally {
+    if (serial === startSerial) {
+      isStarting.value = false
+    }
+    if (pendingRestart && serial === startSerial) {
+      pendingRestart = false
+      void handleStart()
+    }
+  }
 }
 
 function handleStop() {
+  startSerial += 1
+  pendingRestart = false
+  isStarting.value = false
+  startError.value = false
   engine.value?.stop()
   isPlaying.value = false
 }
 
-watch([stationId, volume, offsetMs], () => {
+watch([stationId, offsetMs], () => {
   if (isPlaying.value) {
-    handleStart()
+    void handleStart()
+  }
+})
+
+watch(volume, (value) => {
+  if (isPlaying.value) {
+    engine.value?.setVolume(value)
   }
 })
 
@@ -212,6 +254,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "zh": {
@@ -233,6 +276,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "输出为低频谐波近似，效果与设备和摆放位置有关。",
     "callSignNote": "JJY 在 15/45 分的呼号未模拟。",
     "unsupported": "当前浏览器不支持 AudioContext。",
+    "startFailed": "音频启动失败，请检查浏览器权限后重试。",
     "hz": "赫兹"
   },
   "zh-CN": {
@@ -254,6 +298,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "输出为低频谐波近似，效果与设备和摆放位置有关。",
     "callSignNote": "JJY 在 15/45 分的呼号未模拟。",
     "unsupported": "当前浏览器不支持 AudioContext。",
+    "startFailed": "音频启动失败，请检查浏览器权限后重试。",
     "hz": "赫兹"
   },
   "zh-TW": {
@@ -275,6 +320,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "輸出為低頻諧波近似，效果與裝置和擺放位置有關。",
     "callSignNote": "JJY 在 15/45 分的呼號未模擬。",
     "unsupported": "目前瀏覽器不支援 AudioContext。",
+    "startFailed": "音訊啟動失敗，請檢查瀏覽器權限後重試。",
     "hz": "赫茲"
   },
   "zh-HK": {
@@ -296,6 +342,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "輸出為低頻諧波近似，效果與裝置和擺放位置有關。",
     "callSignNote": "JJY 在 15/45 分的呼號未模擬。",
     "unsupported": "目前瀏覽器不支援 AudioContext。",
+    "startFailed": "音訊啟動失敗，請檢查瀏覽器權限後重試。",
     "hz": "赫茲"
   },
   "es": {
@@ -317,6 +364,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "fr": {
@@ -338,6 +386,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "de": {
@@ -359,6 +408,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "it": {
@@ -380,6 +430,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "ja": {
@@ -401,6 +452,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "ko": {
@@ -422,6 +474,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "ru": {
@@ -443,6 +496,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "pt": {
@@ -464,6 +518,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "ar": {
@@ -485,6 +540,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "hi": {
@@ -506,6 +562,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "tr": {
@@ -527,6 +584,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "nl": {
@@ -548,6 +606,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "sv": {
@@ -569,6 +628,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "pl": {
@@ -590,6 +650,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "vi": {
@@ -611,6 +672,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "th": {
@@ -632,6 +694,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "id": {
@@ -653,6 +716,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "he": {
@@ -674,6 +738,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "ms": {
@@ -695,6 +760,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   },
   "no": {
@@ -716,6 +782,7 @@ onBeforeUnmount(() => {
     "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
     "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
     "unsupported": "AudioContext is not supported in this browser.",
+    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
     "hz": "Hz"
   }
 }
