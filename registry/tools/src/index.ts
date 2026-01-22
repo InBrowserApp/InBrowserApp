@@ -58,6 +58,7 @@ import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
 import { toolInfo as jwkPemConverterToolInfo } from '@tools/jwk-pem-converter'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
+import { toolInfo as randomNumberGeneratorToolInfo } from '@tools/random-number-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
 import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
 import { toolInfo as nanoidGeneratorToolInfo } from '@tools/nanoid-generator'
@@ -240,6 +241,7 @@ export const tools: ToolInfo[] = [
   jwtDecoderVerifierToolInfo,
   jwkPemConverterToolInfo,
   randomPasswordGeneratorToolInfo,
+  randomNumberGeneratorToolInfo,
   bip39MnemonicGeneratorToolInfo,
   ksuidGeneratorToolInfo,
   nanoidGeneratorToolInfo,
