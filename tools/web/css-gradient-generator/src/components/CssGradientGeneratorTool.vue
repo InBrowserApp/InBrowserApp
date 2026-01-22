@@ -37,6 +37,9 @@
                 <div class="panel__subtitle">{{ t('trackHint') }}</div>
               </div>
               <n-button size="small" @click="handleAddStopClick" data-testid="add-stop">
+                <template #icon>
+                  <n-icon :component="Pin16Regular" />
+                </template>
                 {{ t('addStop') }}
               </n-button>
             </div>
@@ -72,6 +75,9 @@
               </div>
               <n-flex align="center" justify="space-between" :wrap="true">
                 <n-button size="small" type="error" @click="removeStop" data-testid="remove-stop">
+                  <template #icon>
+                    <n-icon :component="PinOff16Regular" />
+                  </template>
                   {{ t('deleteStop') }}
                 </n-button>
                 <n-text depth="3">{{ t('minStopsHint') }}</n-text>
@@ -104,7 +110,12 @@
                   :data-testid="`preset-${preset.id}`"
                   @click="applyPreset(preset.id)"
                 >
-                  {{ presetLabelMap[preset.id] ?? preset.id }}
+                  <span
+                    class="preset-swatch"
+                    :style="presetSwatchStyleMap[preset.id]"
+                    aria-hidden="true"
+                  />
+                  <span class="preset-label">{{ presetLabelMap[preset.id] ?? preset.id }}</span>
                 </n-button>
               </n-gi>
             </n-grid>
@@ -314,6 +325,7 @@
               <n-button
                 v-if="pngUrl"
                 tag="a"
+                text
                 :href="pngUrl"
                 download="gradient.png"
                 data-testid="download-png"
@@ -428,6 +440,8 @@ import Add16Regular from '@vicons/fluent/Add16Regular'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
 import Image16Regular from '@vicons/fluent/Image16Regular'
+import Pin16Regular from '@vicons/fluent/Pin16Regular'
+import PinOff16Regular from '@vicons/fluent/PinOff16Regular'
 import ShuffleOutline from '@vicons/ionicons5/ShuffleOutline'
 import type {
   BlendMode,
@@ -669,6 +683,21 @@ const presetLabelMap = computed<Record<string, string>>(() => ({
   dawn: t('preset.dawn'),
   citrus: t('preset.citrus'),
 }))
+
+const presetSwatchStyleMap = computed<Record<string, Record<string, string>>>(() => {
+  const styles: Record<string, Record<string, string>> = {}
+  for (const preset of presets) {
+    const layers = preset.layers.map((layer) => createLayerFromSeed(layer))
+    const backgroundImage = createBackgroundImage(layers, 'hex')
+    const blendMode = createBlendModeCss(layers)
+    const style: Record<string, string> = { backgroundImage }
+    if (blendMode) {
+      style.backgroundBlendMode = blendMode
+    }
+    styles[preset.id] = style
+  }
+  return styles
+})
 
 const layerPreviewStyle = (layer: GradientLayer) => ({
   backgroundImage: createGradientCss(layer, 'hex'),
@@ -3491,6 +3520,17 @@ const loadJson = () => {
 .preset-button {
   width: 100%;
   justify-content: center;
+  gap: 8px;
+}
+
+.preset-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 .layer-list {
