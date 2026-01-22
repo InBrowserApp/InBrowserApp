@@ -137,7 +137,15 @@
           </template>
           {{ t('enterFullscreen') }}
         </n-button>
-        <RegenerateButton @click="regenerate" data-testid="regenerate" />
+        <RegenerateButton
+          :disabled="!canRoll && !isRolling"
+          @click="toggleRolling"
+          data-testid="regenerate"
+        >
+          <template #label>
+            {{ rollingLabel }}
+          </template>
+        </RegenerateButton>
       </n-flex>
     </n-flex>
   </ToolSection>
@@ -165,13 +173,21 @@
         </template>
         {{ t('exitFullscreen') }}
       </n-button>
-      <RegenerateButton @click="regenerate" data-testid="fullscreen-regenerate" />
+      <RegenerateButton
+        :disabled="!canRoll && !isRolling"
+        @click="toggleRolling"
+        data-testid="fullscreen-regenerate"
+      >
+        <template #label>
+          {{ rollingLabel }}
+        </template>
+      </RegenerateButton>
     </n-flex>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useObjectUrl, useStorage } from '@vueuse/core'
 import {
@@ -277,6 +293,12 @@ const downloadBlob = computed(() => (outputText.value ? new Blob([outputText.val
 const downloadUrl = useObjectUrl(downloadBlob)
 const themeVars = useThemeVars()
 const isFullscreen = ref(false)
+const isRolling = ref(false)
+const rollingIntervalMs = 80
+let rollingTimer: number | null = null
+
+const canRoll = computed(() => !rangeError.value && !countError.value)
+const rollingLabel = computed(() => (isRolling.value ? t('stopRandom') : t('startRandom')))
 
 function openFullscreen() {
   if (!hasResults.value) return
@@ -309,7 +331,7 @@ function randomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function regenerate() {
+function generateOnce() {
   const normalized = normalizeCount(count.value)
   if (count.value !== normalized) {
     count.value = normalized
@@ -322,6 +344,9 @@ function regenerate() {
 
   if (rangeError.value || countError.value || !rangeInfo.value) {
     generatedNumbers.value = []
+    if (isRolling.value) {
+      stopRolling()
+    }
     return
   }
 
@@ -343,6 +368,30 @@ function regenerate() {
   }
 
   generatedNumbers.value = results
+}
+
+function startRolling() {
+  if (isRolling.value || !canRoll.value) return
+  isRolling.value = true
+  rollingTimer = window.setInterval(generateOnce, rollingIntervalMs)
+  generateOnce()
+}
+
+function stopRolling() {
+  if (!isRolling.value) return
+  if (rollingTimer !== null) {
+    window.clearInterval(rollingTimer)
+    rollingTimer = null
+  }
+  isRolling.value = false
+}
+
+function toggleRolling() {
+  if (isRolling.value) {
+    stopRolling()
+  } else {
+    startRolling()
+  }
 }
 
 function applyPreset(preset: 'dice' | 'ten' | 'hundred' | 'lotto') {
@@ -378,8 +427,12 @@ function applyPreset(preset: 'dice' | 'ten' | 'hundred' | 'lotto') {
   }
 }
 
-watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regenerate, {
+watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], generateOnce, {
   immediate: true,
+})
+
+onBeforeUnmount(() => {
+  stopRolling()
 })
 </script>
 
@@ -518,7 +571,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Min must be less than or equal to Max.",
     "countError": "Count exceeds the number of unique values in the range ({range}).",
     "enterFullscreen": "Full screen",
-    "exitFullscreen": "Exit full screen"
+    "exitFullscreen": "Exit full screen",
+    "startRandom": "Start random",
+    "stopRandom": "Stop random"
   },
   "zh": {
     "options": "选项",
@@ -541,7 +596,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "最小值必须小于或等于最大值。",
     "countError": "数量超过了范围内唯一值的数量（{range}）。",
     "enterFullscreen": "全屏",
-    "exitFullscreen": "退出全屏"
+    "exitFullscreen": "退出全屏",
+    "startRandom": "开始随机",
+    "stopRandom": "结束随机"
   },
   "zh-CN": {
     "options": "选项",
@@ -564,7 +621,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "最小值必须小于或等于最大值。",
     "countError": "数量超过了范围内唯一值的数量（{range}）。",
     "enterFullscreen": "全屏",
-    "exitFullscreen": "退出全屏"
+    "exitFullscreen": "退出全屏",
+    "startRandom": "开始随机",
+    "stopRandom": "结束随机"
   },
   "zh-TW": {
     "options": "選項",
@@ -587,7 +646,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "最小值必須小於或等於最大值。",
     "countError": "數量超過範圍內唯一值的數量（{range}）。",
     "enterFullscreen": "全螢幕",
-    "exitFullscreen": "退出全螢幕"
+    "exitFullscreen": "退出全螢幕",
+    "startRandom": "開始隨機",
+    "stopRandom": "結束隨機"
   },
   "zh-HK": {
     "options": "選項",
@@ -610,7 +671,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "最小值必須小於或等於最大值。",
     "countError": "數量超過範圍內唯一值的數量（{range}）。",
     "enterFullscreen": "全螢幕",
-    "exitFullscreen": "退出全螢幕"
+    "exitFullscreen": "退出全螢幕",
+    "startRandom": "開始隨機",
+    "stopRandom": "結束隨機"
   },
   "es": {
     "options": "Opciones",
@@ -633,7 +696,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "El mínimo debe ser menor o igual que el máximo.",
     "countError": "La cantidad supera los valores únicos del rango ({range}).",
     "enterFullscreen": "Pantalla completa",
-    "exitFullscreen": "Salir de pantalla completa"
+    "exitFullscreen": "Salir de pantalla completa",
+    "startRandom": "Iniciar aleatorio",
+    "stopRandom": "Detener aleatorio"
   },
   "fr": {
     "options": "Options",
@@ -656,7 +721,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Le minimum doit être inférieur ou égal au maximum.",
     "countError": "La quantité dépasse les valeurs uniques de la plage ({range}).",
     "enterFullscreen": "Plein écran",
-    "exitFullscreen": "Quitter le plein écran"
+    "exitFullscreen": "Quitter le plein écran",
+    "startRandom": "Démarrer aléatoire",
+    "stopRandom": "Arrêter aléatoire"
   },
   "de": {
     "options": "Optionen",
@@ -679,7 +746,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum muss kleiner oder gleich Maximum sein.",
     "countError": "Die Anzahl überschreitet die eindeutigen Werte im Bereich ({range}).",
     "enterFullscreen": "Vollbild",
-    "exitFullscreen": "Vollbild verlassen"
+    "exitFullscreen": "Vollbild verlassen",
+    "startRandom": "Zufall starten",
+    "stopRandom": "Zufall stoppen"
   },
   "it": {
     "options": "Opzioni",
@@ -702,7 +771,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Il minimo deve essere minore o uguale al massimo.",
     "countError": "La quantità supera i valori unici nell'intervallo ({range}).",
     "enterFullscreen": "Schermo intero",
-    "exitFullscreen": "Esci da schermo intero"
+    "exitFullscreen": "Esci da schermo intero",
+    "startRandom": "Avvia casuale",
+    "stopRandom": "Ferma casuale"
   },
   "ja": {
     "options": "オプション",
@@ -725,7 +796,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "最小値は最大値以下である必要があります。",
     "countError": "個数が範囲内のユニーク値数（{range}）を超えています。",
     "enterFullscreen": "全画面",
-    "exitFullscreen": "全画面を終了"
+    "exitFullscreen": "全画面を終了",
+    "startRandom": "ランダム開始",
+    "stopRandom": "ランダム停止"
   },
   "ko": {
     "options": "옵션",
@@ -748,7 +821,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "최소값은 최대값보다 작거나 같아야 합니다.",
     "countError": "개수가 범위 내 고유 값 수({range})를 초과합니다.",
     "enterFullscreen": "전체 화면",
-    "exitFullscreen": "전체 화면 종료"
+    "exitFullscreen": "전체 화면 종료",
+    "startRandom": "랜덤 시작",
+    "stopRandom": "랜덤 중지"
   },
   "ru": {
     "options": "Параметры",
@@ -771,7 +846,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Минимум должен быть меньше или равен максимуму.",
     "countError": "Количество превышает число уникальных значений в диапазоне ({range}).",
     "enterFullscreen": "Полный экран",
-    "exitFullscreen": "Выйти из полноэкранного режима"
+    "exitFullscreen": "Выйти из полноэкранного режима",
+    "startRandom": "Начать случайно",
+    "stopRandom": "Остановить случайно"
   },
   "pt": {
     "options": "Opções",
@@ -794,7 +871,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "O mínimo deve ser menor ou igual ao máximo.",
     "countError": "A quantidade excede os valores únicos do intervalo ({range}).",
     "enterFullscreen": "Tela cheia",
-    "exitFullscreen": "Sair do modo tela cheia"
+    "exitFullscreen": "Sair do modo tela cheia",
+    "startRandom": "Iniciar aleatório",
+    "stopRandom": "Parar aleatório"
   },
   "ar": {
     "options": "الخيارات",
@@ -817,7 +896,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "يجب أن يكون الحد الأدنى أقل من أو يساوي الحد الأقصى.",
     "countError": "العدد يتجاوز القيم الفريدة ضمن النطاق ({range}).",
     "enterFullscreen": "ملء الشاشة",
-    "exitFullscreen": "الخروج من ملء الشاشة"
+    "exitFullscreen": "الخروج من ملء الشاشة",
+    "startRandom": "بدء عشوائي",
+    "stopRandom": "إيقاف عشوائي"
   },
   "hi": {
     "options": "विकल्प",
@@ -840,7 +921,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "न्यूनतम मान अधिकतम से कम या बराबर होना चाहिए।",
     "countError": "संख्या सीमा में अद्वितीय मानों ({range}) से अधिक है।",
     "enterFullscreen": "पूर्ण स्क्रीन",
-    "exitFullscreen": "पूर्ण स्क्रीन से बाहर निकलें"
+    "exitFullscreen": "पूर्ण स्क्रीन से बाहर निकलें",
+    "startRandom": "रैंडम शुरू करें",
+    "stopRandom": "रैंडम रोकें"
   },
   "tr": {
     "options": "Seçenekler",
@@ -863,7 +946,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum, maksimumdan küçük veya eşit olmalıdır.",
     "countError": "Adet, aralıktaki benzersiz değerleri aşıyor ({range}).",
     "enterFullscreen": "Tam ekran",
-    "exitFullscreen": "Tam ekrandan çık"
+    "exitFullscreen": "Tam ekrandan çık",
+    "startRandom": "Rastgele başlat",
+    "stopRandom": "Rastgele durdur"
   },
   "nl": {
     "options": "Opties",
@@ -886,7 +971,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum moet kleiner dan of gelijk zijn aan maximum.",
     "countError": "Aantal overschrijdt het aantal unieke waarden in het bereik ({range}).",
     "enterFullscreen": "Volledig scherm",
-    "exitFullscreen": "Volledig scherm verlaten"
+    "exitFullscreen": "Volledig scherm verlaten",
+    "startRandom": "Willekeurig starten",
+    "stopRandom": "Willekeurig stoppen"
   },
   "sv": {
     "options": "Alternativ",
@@ -909,7 +996,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Min måste vara mindre än eller lika med max.",
     "countError": "Antalet överskrider unika värden i intervallet ({range}).",
     "enterFullscreen": "Fullskärm",
-    "exitFullscreen": "Avsluta fullskärm"
+    "exitFullscreen": "Avsluta fullskärm",
+    "startRandom": "Starta slump",
+    "stopRandom": "Stoppa slump"
   },
   "pl": {
     "options": "Opcje",
@@ -932,7 +1021,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum musi być mniejsze lub równe maksimum.",
     "countError": "Liczba przekracza unikalne wartości w zakresie ({range}).",
     "enterFullscreen": "Pełny ekran",
-    "exitFullscreen": "Wyjdź z pełnego ekranu"
+    "exitFullscreen": "Wyjdź z pełnego ekranu",
+    "startRandom": "Uruchom losowo",
+    "stopRandom": "Zatrzymaj losowo"
   },
   "vi": {
     "options": "Tùy chọn",
@@ -955,7 +1046,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Giá trị tối thiểu phải nhỏ hơn hoặc bằng giá trị tối đa.",
     "countError": "Số lượng vượt quá số giá trị duy nhất trong phạm vi ({range}).",
     "enterFullscreen": "Toàn màn hình",
-    "exitFullscreen": "Thoát toàn màn hình"
+    "exitFullscreen": "Thoát toàn màn hình",
+    "startRandom": "Bắt đầu ngẫu nhiên",
+    "stopRandom": "Dừng ngẫu nhiên"
   },
   "th": {
     "options": "ตัวเลือก",
@@ -978,7 +1071,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "ค่าต่ำสุดต้องน้อยกว่าหรือเท่ากับค่าสูงสุด",
     "countError": "จำนวนเกินค่าที่ไม่ซ้ำในช่วง ({range})",
     "enterFullscreen": "เต็มหน้าจอ",
-    "exitFullscreen": "ออกจากเต็มหน้าจอ"
+    "exitFullscreen": "ออกจากเต็มหน้าจอ",
+    "startRandom": "เริ่มสุ่ม",
+    "stopRandom": "หยุดสุ่ม"
   },
   "id": {
     "options": "Opsi",
@@ -1001,7 +1096,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum harus kurang dari atau sama dengan maksimum.",
     "countError": "Jumlah melebihi nilai unik dalam rentang ({range}).",
     "enterFullscreen": "Layar penuh",
-    "exitFullscreen": "Keluar layar penuh"
+    "exitFullscreen": "Keluar layar penuh",
+    "startRandom": "Mulai acak",
+    "stopRandom": "Hentikan acak"
   },
   "he": {
     "options": "אפשרויות",
@@ -1024,7 +1121,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "המינימום חייב להיות קטן או שווה למקסימום.",
     "countError": "הכמות חורגת ממספר הערכים הייחודיים בטווח ({range}).",
     "enterFullscreen": "מסך מלא",
-    "exitFullscreen": "צא ממסך מלא"
+    "exitFullscreen": "צא ממסך מלא",
+    "startRandom": "התחל אקראי",
+    "stopRandom": "עצור אקראי"
   },
   "ms": {
     "options": "Pilihan",
@@ -1047,7 +1146,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum mesti kurang atau sama dengan maksimum.",
     "countError": "Jumlah melebihi nilai unik dalam julat ({range}).",
     "enterFullscreen": "Skrin penuh",
-    "exitFullscreen": "Keluar skrin penuh"
+    "exitFullscreen": "Keluar skrin penuh",
+    "startRandom": "Mula rawak",
+    "stopRandom": "Henti rawak"
   },
   "no": {
     "options": "Alternativer",
@@ -1070,7 +1171,9 @@ watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], regen
     "rangeError": "Minimum må være mindre enn eller lik maksimum.",
     "countError": "Antallet overstiger unike verdier i området ({range}).",
     "enterFullscreen": "Fullskjerm",
-    "exitFullscreen": "Avslutt fullskjerm"
+    "exitFullscreen": "Avslutt fullskjerm",
+    "startRandom": "Start tilfeldig",
+    "stopRandom": "Stopp tilfeldig"
   }
 }
 </i18n>
