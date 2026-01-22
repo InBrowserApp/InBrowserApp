@@ -293,6 +293,19 @@
               <CopyToClipboardButton v-if="hasBlendModes" :content="backgroundBlendDeclaration">
                 <template #label>{{ t('copyBlendMode') }}</template>
               </CopyToClipboardButton>
+              <n-button
+                tag="a"
+                text
+                :href="cssUrl ?? undefined"
+                download="gradient.css"
+                :disabled="!cssUrl"
+                data-testid="download-css"
+              >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
+                {{ t('downloadCss') }}
+              </n-button>
             </n-flex>
           </n-flex>
         </n-card>
@@ -332,14 +345,11 @@
                 {{ t('downloadPng') }}
               </n-button>
               <n-button
-                ref="svgDownloadRef"
                 tag="a"
                 text
                 :href="svgUrl ?? undefined"
                 download="gradient.svg"
                 data-testid="download-svg"
-                :loading="isExportingSvg"
-                @click="handleSvgDownload"
               >
                 <template #icon>
                   <n-icon :component="ArrowDownload16Regular" />
@@ -492,16 +502,13 @@ const outputFormat = ref<ColorFormat>('hex')
 const exportWidth = ref(1200)
 const exportHeight = ref(800)
 const pngBlob = ref<Blob | null>(null)
-const svgBlob = ref<Blob | null>(null)
 const exportError = ref('')
 const jsonInput = ref('')
 const jsonError = ref('')
 const layerError = ref('')
 const stopError = ref('')
 const isExportingPng = ref(false)
-const isExportingSvg = ref(false)
 const pngDownloadRef = ref<ComponentPublicInstance | null>(null)
-const svgDownloadRef = ref<ComponentPublicInstance | null>(null)
 
 const presets = gradientPresets
 
@@ -543,15 +550,13 @@ const cssOutput = computed(() => {
   return output.join('\n')
 })
 
+const cssBlob = computed(() => new Blob([cssOutput.value], { type: 'text/css;charset=utf-8' }))
+
 const serializedConfig = computed(() => serializeGradientConfig(layers.value))
 
 const jsonBlob = computed(
   () => new Blob([serializedConfig.value], { type: 'application/json;charset=utf-8' }),
 )
-
-const jsonUrl = useObjectUrl(jsonBlob)
-const pngUrl = useObjectUrl(pngBlob)
-const svgUrl = useObjectUrl(svgBlob)
 
 const getExportSize = () => {
   const width = Number.isFinite(exportWidth.value) ? exportWidth.value : 1200
@@ -562,6 +567,42 @@ const getExportSize = () => {
   }
 }
 
+const escapeSvgAttribute = (value: string) => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+
+const createSvgMarkup = (width: number, height: number) => {
+  const backgroundImage = createBackgroundImage(layers.value, outputFormat.value)
+  const blendMode = createBlendModeCss(layers.value)
+  const style = [
+    `width:${width}px`,
+    `height:${height}px`,
+    'background-repeat:no-repeat',
+    'background-size:cover',
+    `background-image:${backgroundImage}`,
+    blendMode ? `background-blend-mode:${blendMode}` : '',
+  ]
+    .filter(Boolean)
+    .join(';')
+  const escapedStyle = escapeSvgAttribute(style)
+  return (
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">` +
+    `<foreignObject width="100%" height="100%">` +
+    `<div xmlns="http://www.w3.org/1999/xhtml" style="${escapedStyle}"></div>` +
+    `</foreignObject></svg>`
+  )
+}
+
+const svgMarkup = computed(() => {
+  const { width, height } = getExportSize()
+  return createSvgMarkup(width, height)
+})
+
+const svgBlob = computed(() => new Blob([svgMarkup.value], { type: 'image/svg+xml;charset=utf-8' }))
+
+const cssUrl = useObjectUrl(cssBlob)
+const jsonUrl = useObjectUrl(jsonBlob)
+const pngUrl = useObjectUrl(pngBlob)
+const svgUrl = useObjectUrl(svgBlob)
+
 const getDownloadAnchor = (target: ComponentPublicInstance | null) => {
   const element = target?.$el as HTMLElement | undefined
   if (!element) return null
@@ -569,8 +610,6 @@ const getDownloadAnchor = (target: ComponentPublicInstance | null) => {
     ? element
     : (element.querySelector('a') as HTMLAnchorElement | null)
 }
-
-const escapeSvgAttribute = (value: string) => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
 
 const activeStopColor = computed({
   get: () => activeStop.value?.color ?? '#FFFFFFFF',
@@ -876,28 +915,6 @@ const createPngBlob = async () => {
   return blob
 }
 
-const createSvgMarkup = (width: number, height: number) => {
-  const backgroundImage = createBackgroundImage(layers.value, outputFormat.value)
-  const blendMode = createBlendModeCss(layers.value)
-  const style = [
-    `width:${width}px`,
-    `height:${height}px`,
-    'background-repeat:no-repeat',
-    'background-size:cover',
-    `background-image:${backgroundImage}`,
-    blendMode ? `background-blend-mode:${blendMode}` : '',
-  ]
-    .filter(Boolean)
-    .join(';')
-  const escapedStyle = escapeSvgAttribute(style)
-  return (
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">` +
-    `<foreignObject width="100%" height="100%">` +
-    `<div xmlns="http://www.w3.org/1999/xhtml" style="${escapedStyle}"></div>` +
-    `</foreignObject></svg>`
-  )
-}
-
 const handlePngDownload = async (event: MouseEvent) => {
   if (isExportingPng.value) return
   event.preventDefault()
@@ -914,26 +931,6 @@ const handlePngDownload = async (event: MouseEvent) => {
     }
   } finally {
     isExportingPng.value = false
-  }
-}
-
-const handleSvgDownload = async (event: MouseEvent) => {
-  if (isExportingSvg.value) return
-  event.preventDefault()
-  isExportingSvg.value = true
-  try {
-    exportError.value = ''
-    const { width, height } = getExportSize()
-    const markup = createSvgMarkup(width, height)
-    svgBlob.value = new Blob([markup], { type: 'image/svg+xml;charset=utf-8' })
-    await nextTick()
-    const anchor = getDownloadAnchor(svgDownloadRef.value)
-    if (anchor && svgUrl.value) {
-      anchor.href = svgUrl.value
-      anchor.click()
-    }
-  } finally {
-    isExportingSvg.value = false
   }
 }
 
@@ -990,6 +987,7 @@ const loadJson = () => {
     "outputSubtitle": "Copy CSS that matches the preview.",
     "outputFormat": "Stop format",
     "copyCss": "Copy CSS",
+    "downloadCss": "Download CSS",
     "copyBackgroundImage": "Copy background-image",
     "copyBackground": "Copy background",
     "copyBlendMode": "Copy blend mode",
@@ -1094,6 +1092,7 @@ const loadJson = () => {
     "outputSubtitle": "复制与预览一致的 CSS。",
     "outputFormat": "颜色格式",
     "copyCss": "复制 CSS",
+    "downloadCss": "下载 CSS",
     "copyBackgroundImage": "复制 background-image",
     "copyBackground": "复制 background",
     "copyBlendMode": "复制混合模式",
@@ -1198,6 +1197,7 @@ const loadJson = () => {
     "outputSubtitle": "复制与预览一致的 CSS。",
     "outputFormat": "颜色格式",
     "copyCss": "复制 CSS",
+    "downloadCss": "下载 CSS",
     "copyBackgroundImage": "复制 background-image",
     "copyBackground": "复制 background",
     "copyBlendMode": "复制混合模式",
@@ -1302,6 +1302,7 @@ const loadJson = () => {
     "outputSubtitle": "複製與預覽一致的 CSS。",
     "outputFormat": "顏色格式",
     "copyCss": "複製 CSS",
+    "downloadCss": "下載 CSS",
     "copyBackgroundImage": "複製 background-image",
     "copyBackground": "複製 background",
     "copyBlendMode": "複製混合模式",
@@ -1406,6 +1407,7 @@ const loadJson = () => {
     "outputSubtitle": "複製與預覽一致的 CSS。",
     "outputFormat": "顏色格式",
     "copyCss": "複製 CSS",
+    "downloadCss": "下載 CSS",
     "copyBackgroundImage": "複製 background-image",
     "copyBackground": "複製 background",
     "copyBlendMode": "複製混合模式",
@@ -1510,6 +1512,7 @@ const loadJson = () => {
     "outputSubtitle": "Copia el CSS que coincide con la vista previa.",
     "outputFormat": "Formato de color",
     "copyCss": "Copiar CSS",
+    "downloadCss": "Descargar CSS",
     "copyBackgroundImage": "Copiar background-image",
     "copyBackground": "Copiar background",
     "copyBlendMode": "Copiar modo de mezcla",
@@ -1614,6 +1617,7 @@ const loadJson = () => {
     "outputSubtitle": "Copiez le CSS conforme à l’aperçu.",
     "outputFormat": "Format couleur",
     "copyCss": "Copier le CSS",
+    "downloadCss": "Télécharger CSS",
     "copyBackgroundImage": "Copier background-image",
     "copyBackground": "Copier background",
     "copyBlendMode": "Copier le mode de fusion",
@@ -1718,6 +1722,7 @@ const loadJson = () => {
     "outputSubtitle": "CSS passend zur Vorschau kopieren.",
     "outputFormat": "Farbformat",
     "copyCss": "CSS kopieren",
+    "downloadCss": "CSS herunterladen",
     "copyBackgroundImage": "background-image kopieren",
     "copyBackground": "background kopieren",
     "copyBlendMode": "Mischmodus kopieren",
@@ -1822,6 +1827,7 @@ const loadJson = () => {
     "outputSubtitle": "Copia il CSS che corrisponde all’anteprima.",
     "outputFormat": "Formato colore",
     "copyCss": "Copia CSS",
+    "downloadCss": "Scarica CSS",
     "copyBackgroundImage": "Copia background-image",
     "copyBackground": "Copia background",
     "copyBlendMode": "Copia modalità fusione",
@@ -1926,6 +1932,7 @@ const loadJson = () => {
     "outputSubtitle": "プレビューと一致する CSS をコピー。",
     "outputFormat": "色形式",
     "copyCss": "CSS をコピー",
+    "downloadCss": "CSS をダウンロード",
     "copyBackgroundImage": "background-image をコピー",
     "copyBackground": "background をコピー",
     "copyBlendMode": "ブレンドモードをコピー",
@@ -2030,6 +2037,7 @@ const loadJson = () => {
     "outputSubtitle": "미리보기와 동일한 CSS를 복사합니다.",
     "outputFormat": "색상 형식",
     "copyCss": "CSS 복사",
+    "downloadCss": "CSS 다운로드",
     "copyBackgroundImage": "background-image 복사",
     "copyBackground": "background 복사",
     "copyBlendMode": "블렌드 모드 복사",
@@ -2134,6 +2142,7 @@ const loadJson = () => {
     "outputSubtitle": "Скопируйте CSS как в превью.",
     "outputFormat": "Формат цвета",
     "copyCss": "Копировать CSS",
+    "downloadCss": "Скачать CSS",
     "copyBackgroundImage": "Копировать background-image",
     "copyBackground": "Копировать background",
     "copyBlendMode": "Копировать режим",
@@ -2238,6 +2247,7 @@ const loadJson = () => {
     "outputSubtitle": "Copie o CSS que corresponde à prévia.",
     "outputFormat": "Formato de cor",
     "copyCss": "Copiar CSS",
+    "downloadCss": "Baixar CSS",
     "copyBackgroundImage": "Copiar background-image",
     "copyBackground": "Copiar background",
     "copyBlendMode": "Copiar modo de mesclagem",
@@ -2342,6 +2352,7 @@ const loadJson = () => {
     "outputSubtitle": "انسخ CSS المطابق للمعاينة.",
     "outputFormat": "تنسيق اللون",
     "copyCss": "نسخ CSS",
+    "downloadCss": "تنزيل CSS",
     "copyBackgroundImage": "نسخ background-image",
     "copyBackground": "نسخ background",
     "copyBlendMode": "نسخ وضع المزج",
@@ -2446,6 +2457,7 @@ const loadJson = () => {
     "outputSubtitle": "पूर्वावलोकन के अनुरूप CSS कॉपी करें।",
     "outputFormat": "रंग प्रारूप",
     "copyCss": "CSS कॉपी करें",
+    "downloadCss": "CSS डाउनलोड करें",
     "copyBackgroundImage": "background-image कॉपी करें",
     "copyBackground": "background कॉपी करें",
     "copyBlendMode": "ब्लेंड मोड कॉपी करें",
@@ -2550,6 +2562,7 @@ const loadJson = () => {
     "outputSubtitle": "Önizlemeyle eşleşen CSS'i kopyalayın.",
     "outputFormat": "Renk biçimi",
     "copyCss": "CSS kopyala",
+    "downloadCss": "CSS indir",
     "copyBackgroundImage": "background-image kopyala",
     "copyBackground": "background kopyala",
     "copyBlendMode": "Karışım modunu kopyala",
@@ -2654,6 +2667,7 @@ const loadJson = () => {
     "outputSubtitle": "Kopieer CSS dat overeenkomt met de preview.",
     "outputFormat": "Kleurformaat",
     "copyCss": "CSS kopiëren",
+    "downloadCss": "CSS downloaden",
     "copyBackgroundImage": "background-image kopiëren",
     "copyBackground": "background kopiëren",
     "copyBlendMode": "Mengmodus kopiëren",
@@ -2758,6 +2772,7 @@ const loadJson = () => {
     "outputSubtitle": "Kopiera CSS som matchar förhandsvisningen.",
     "outputFormat": "Färgformat",
     "copyCss": "Kopiera CSS",
+    "downloadCss": "Ladda ner CSS",
     "copyBackgroundImage": "Kopiera background-image",
     "copyBackground": "Kopiera background",
     "copyBlendMode": "Kopiera blandningsläge",
@@ -2862,6 +2877,7 @@ const loadJson = () => {
     "outputSubtitle": "Skopiuj CSS zgodny z podglądem.",
     "outputFormat": "Format koloru",
     "copyCss": "Kopiuj CSS",
+    "downloadCss": "Pobierz CSS",
     "copyBackgroundImage": "Kopiuj background-image",
     "copyBackground": "Kopiuj background",
     "copyBlendMode": "Kopiuj tryb mieszania",
@@ -2966,6 +2982,7 @@ const loadJson = () => {
     "outputSubtitle": "Sao chép CSS khớp với xem trước.",
     "outputFormat": "Định dạng màu",
     "copyCss": "Sao chép CSS",
+    "downloadCss": "Tải CSS",
     "copyBackgroundImage": "Sao chép background-image",
     "copyBackground": "Sao chép background",
     "copyBlendMode": "Sao chép chế độ hòa trộn",
@@ -3070,6 +3087,7 @@ const loadJson = () => {
     "outputSubtitle": "คัดลอก CSS ที่ตรงกับตัวอย่าง",
     "outputFormat": "รูปแบบสี",
     "copyCss": "คัดลอก CSS",
+    "downloadCss": "ดาวน์โหลด CSS",
     "copyBackgroundImage": "คัดลอก background-image",
     "copyBackground": "คัดลอก background",
     "copyBlendMode": "คัดลอกโหมดผสมสี",
@@ -3174,6 +3192,7 @@ const loadJson = () => {
     "outputSubtitle": "Salin CSS yang sesuai dengan pratinjau.",
     "outputFormat": "Format warna",
     "copyCss": "Salin CSS",
+    "downloadCss": "Unduh CSS",
     "copyBackgroundImage": "Salin background-image",
     "copyBackground": "Salin background",
     "copyBlendMode": "Salin mode blend",
@@ -3278,6 +3297,7 @@ const loadJson = () => {
     "outputSubtitle": "העתיקו CSS שתואם לתצוגה המקדימה.",
     "outputFormat": "פורמט צבע",
     "copyCss": "העתק CSS",
+    "downloadCss": "הורד CSS",
     "copyBackgroundImage": "העתק background-image",
     "copyBackground": "העתק background",
     "copyBlendMode": "העתק מצב מיזוג",
@@ -3382,6 +3402,7 @@ const loadJson = () => {
     "outputSubtitle": "Salin CSS yang sepadan dengan pratonton.",
     "outputFormat": "Format warna",
     "copyCss": "Salin CSS",
+    "downloadCss": "Muat turun CSS",
     "copyBackgroundImage": "Salin background-image",
     "copyBackground": "Salin background",
     "copyBlendMode": "Salin mod campuran",
@@ -3486,6 +3507,7 @@ const loadJson = () => {
     "outputSubtitle": "Kopier CSS som matcher forhåndsvisningen.",
     "outputFormat": "Fargeformat",
     "copyCss": "Kopier CSS",
+    "downloadCss": "Last ned CSS",
     "copyBackgroundImage": "Kopier background-image",
     "copyBackground": "Kopier background",
     "copyBlendMode": "Kopier blandemodus",

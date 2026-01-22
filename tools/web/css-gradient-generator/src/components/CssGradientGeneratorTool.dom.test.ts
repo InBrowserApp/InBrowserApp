@@ -151,7 +151,7 @@ describe('CssGradientGeneratorTool', () => {
     expect(wrapper.get('[data-testid="download-png"]').attributes('href')).toBe('blob:mock')
   })
 
-  it('downloads SVG on demand', async () => {
+  it('exposes SVG download link', async () => {
     const wrapper = mount(CssGradientGeneratorTool, {
       global: {
         stubs: {
@@ -161,10 +161,24 @@ describe('CssGradientGeneratorTool', () => {
       },
     })
 
-    await wrapper.get('[data-testid="download-svg"]').trigger('click')
     await nextTick()
 
     expect(wrapper.get('[data-testid="download-svg"]').attributes('href')).toBe('blob:mock')
+  })
+
+  it('exposes CSS download link', async () => {
+    const wrapper = mount(CssGradientGeneratorTool, {
+      global: {
+        stubs: {
+          CopyToClipboardButton: CopyToClipboardButtonStub,
+          NColorPicker: NColorPickerStub,
+        },
+      },
+    })
+
+    await nextTick()
+
+    expect(wrapper.get('[data-testid="download-css"]').attributes('href')).toBe('blob:mock')
   })
 
   it('rejects invalid JSON input', async () => {
