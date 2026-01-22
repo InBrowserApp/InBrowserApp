@@ -107,11 +107,6 @@ const setVibrate = (value: Navigator['vibrate'] | undefined) => {
 }
 
 const createAudioContextMock = () => {
-  let lastInstance: {
-    state: string
-    resume: ReturnType<typeof vi.fn>
-  } | null = null
-
   const createOscillator = vi.fn(() => ({
     type: 'sine',
     frequency: { value: 0 },
@@ -129,6 +124,8 @@ const createAudioContextMock = () => {
   }))
 
   class MockAudioContext {
+    static lastInstance: MockAudioContext | null = null
+
     state = 'suspended'
     currentTime = 0
     destination = {}
@@ -137,7 +134,7 @@ const createAudioContextMock = () => {
     })
 
     constructor() {
-      lastInstance = this
+      MockAudioContext.lastInstance = this
     }
 
     createOscillator = createOscillator
@@ -148,7 +145,7 @@ const createAudioContextMock = () => {
     MockAudioContext,
     createOscillator,
     createGain,
-    getLastInstance: () => lastInstance,
+    getLastInstance: () => MockAudioContext.lastInstance,
   }
 }
 
