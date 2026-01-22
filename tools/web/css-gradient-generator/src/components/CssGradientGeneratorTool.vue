@@ -316,24 +316,35 @@
               <n-input-number v-model:value="exportHeight" :min="200" :max="4096" />
             </div>
             <n-flex :size="8" :wrap="true">
-              <n-button text @click="generatePng" data-testid="generate-png">
-                <template #icon>
-                  <n-icon :component="Image16Regular" />
-                </template>
-                {{ t('generatePng') }}
-              </n-button>
               <n-button
-                v-if="pngUrl"
+                ref="pngDownloadRef"
                 tag="a"
                 text
-                :href="pngUrl"
+                :href="pngUrl ?? undefined"
                 download="gradient.png"
                 data-testid="download-png"
+                :loading="isExportingPng"
+                @click="handlePngDownload"
               >
                 <template #icon>
                   <n-icon :component="ArrowDownload16Regular" />
                 </template>
                 {{ t('downloadPng') }}
+              </n-button>
+              <n-button
+                ref="svgDownloadRef"
+                tag="a"
+                text
+                :href="svgUrl ?? undefined"
+                download="gradient.svg"
+                data-testid="download-svg"
+                :loading="isExportingSvg"
+                @click="handleSvgDownload"
+              >
+                <template #icon>
+                  <n-icon :component="ArrowDownload16Regular" />
+                </template>
+                {{ t('downloadSvg') }}
               </n-button>
             </n-flex>
             <n-alert
@@ -415,7 +426,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref, type ComponentPublicInstance } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useObjectUrl } from '@vueuse/core'
 import {
@@ -439,7 +450,6 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import Add16Regular from '@vicons/fluent/Add16Regular'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
-import Image16Regular from '@vicons/fluent/Image16Regular'
 import Pin16Regular from '@vicons/fluent/Pin16Regular'
 import PinOff16Regular from '@vicons/fluent/PinOff16Regular'
 import ShuffleOutline from '@vicons/ionicons5/ShuffleOutline'
@@ -482,11 +492,16 @@ const outputFormat = ref<ColorFormat>('hex')
 const exportWidth = ref(1200)
 const exportHeight = ref(800)
 const pngBlob = ref<Blob | null>(null)
+const svgBlob = ref<Blob | null>(null)
 const exportError = ref('')
 const jsonInput = ref('')
 const jsonError = ref('')
 const layerError = ref('')
 const stopError = ref('')
+const isExportingPng = ref(false)
+const isExportingSvg = ref(false)
+const pngDownloadRef = ref<ComponentPublicInstance | null>(null)
+const svgDownloadRef = ref<ComponentPublicInstance | null>(null)
 
 const presets = gradientPresets
 
@@ -536,6 +551,26 @@ const jsonBlob = computed(
 
 const jsonUrl = useObjectUrl(jsonBlob)
 const pngUrl = useObjectUrl(pngBlob)
+const svgUrl = useObjectUrl(svgBlob)
+
+const getExportSize = () => {
+  const width = Number.isFinite(exportWidth.value) ? exportWidth.value : 1200
+  const height = Number.isFinite(exportHeight.value) ? exportHeight.value : 800
+  return {
+    width: Math.max(1, Math.round(width)),
+    height: Math.max(1, Math.round(height)),
+  }
+}
+
+const getDownloadAnchor = (target: ComponentPublicInstance | null) => {
+  const element = target?.$el as HTMLElement | undefined
+  if (!element) return null
+  return element instanceof HTMLAnchorElement
+    ? element
+    : (element.querySelector('a') as HTMLAnchorElement | null)
+}
+
+const escapeSvgAttribute = (value: string) => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
 
 const activeStopColor = computed({
   get: () => activeStop.value?.color ?? '#FFFFFFFF',
@@ -815,31 +850,91 @@ const applyPreset = (presetId: string) => {
   if (next) setActiveLayer(next.id)
 }
 
-const generatePng = async () => {
+const createPngBlob = async () => {
   exportError.value = ''
-  const width = typeof exportWidth.value === 'number' ? exportWidth.value : 1200
-  const height = typeof exportHeight.value === 'number' ? exportHeight.value : 800
+  const { width, height } = getExportSize()
   const canvas = document.createElement('canvas')
   canvas.width = width
   canvas.height = height
   const ctx = canvas.getContext('2d')
   if (!ctx) {
     exportError.value = t('pngUnsupported')
-    return
+    return null
   }
   const rendered = drawLayersToCanvas(ctx, layers.value, width, height)
   if (!rendered) {
     exportError.value = t('pngUnsupported')
-    return
+    return null
   }
   const blob = await new Promise<Blob | null>((resolve) => {
     canvas.toBlob(resolve, 'image/png')
   })
   if (!blob) {
     exportError.value = t('pngUnsupported')
-    return
+    return null
   }
-  pngBlob.value = blob
+  return blob
+}
+
+const createSvgMarkup = (width: number, height: number) => {
+  const backgroundImage = createBackgroundImage(layers.value, outputFormat.value)
+  const blendMode = createBlendModeCss(layers.value)
+  const style = [
+    `width:${width}px`,
+    `height:${height}px`,
+    'background-repeat:no-repeat',
+    'background-size:cover',
+    `background-image:${backgroundImage}`,
+    blendMode ? `background-blend-mode:${blendMode}` : '',
+  ]
+    .filter(Boolean)
+    .join(';')
+  const escapedStyle = escapeSvgAttribute(style)
+  return (
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">` +
+    `<foreignObject width="100%" height="100%">` +
+    `<div xmlns="http://www.w3.org/1999/xhtml" style="${escapedStyle}"></div>` +
+    `</foreignObject></svg>`
+  )
+}
+
+const handlePngDownload = async (event: MouseEvent) => {
+  if (isExportingPng.value) return
+  event.preventDefault()
+  isExportingPng.value = true
+  try {
+    const blob = await createPngBlob()
+    if (!blob) return
+    pngBlob.value = blob
+    await nextTick()
+    const anchor = getDownloadAnchor(pngDownloadRef.value)
+    if (anchor && pngUrl.value) {
+      anchor.href = pngUrl.value
+      anchor.click()
+    }
+  } finally {
+    isExportingPng.value = false
+  }
+}
+
+const handleSvgDownload = async (event: MouseEvent) => {
+  if (isExportingSvg.value) return
+  event.preventDefault()
+  isExportingSvg.value = true
+  try {
+    exportError.value = ''
+    const { width, height } = getExportSize()
+    const markup = createSvgMarkup(width, height)
+    svgBlob.value = new Blob([markup], { type: 'image/svg+xml;charset=utf-8' })
+    await nextTick()
+    const anchor = getDownloadAnchor(svgDownloadRef.value)
+    if (anchor && svgUrl.value) {
+      anchor.href = svgUrl.value
+      anchor.click()
+    }
+  } finally {
+    isExportingSvg.value = false
+  }
 }
 
 const loadJson = () => {
@@ -902,8 +997,8 @@ const loadJson = () => {
     "exportSubtitle": "Generate a PNG snapshot.",
     "exportWidth": "Width",
     "exportHeight": "Height",
-    "generatePng": "Generate PNG",
     "downloadPng": "Download PNG",
+    "downloadSvg": "Download SVG",
     "pngUnsupported": "PNG export is not supported in this browser.",
     "jsonTitle": "Config JSON",
     "jsonSubtitle": "Export or paste a gradient setup.",
@@ -1006,8 +1101,8 @@ const loadJson = () => {
     "exportSubtitle": "生成 PNG 快照。",
     "exportWidth": "宽度",
     "exportHeight": "高度",
-    "generatePng": "生成 PNG",
     "downloadPng": "下载 PNG",
+    "downloadSvg": "下载 SVG",
     "pngUnsupported": "当前浏览器不支持 PNG 导出。",
     "jsonTitle": "配置 JSON",
     "jsonSubtitle": "导出或粘贴渐变配置。",
@@ -1110,8 +1205,8 @@ const loadJson = () => {
     "exportSubtitle": "生成 PNG 快照。",
     "exportWidth": "宽度",
     "exportHeight": "高度",
-    "generatePng": "生成 PNG",
     "downloadPng": "下载 PNG",
+    "downloadSvg": "下载 SVG",
     "pngUnsupported": "当前浏览器不支持 PNG 导出。",
     "jsonTitle": "配置 JSON",
     "jsonSubtitle": "导出或粘贴渐变配置。",
@@ -1214,8 +1309,8 @@ const loadJson = () => {
     "exportSubtitle": "產生 PNG 快照。",
     "exportWidth": "寬度",
     "exportHeight": "高度",
-    "generatePng": "產生 PNG",
     "downloadPng": "下載 PNG",
+    "downloadSvg": "下載 SVG",
     "pngUnsupported": "此瀏覽器不支援 PNG 匯出。",
     "jsonTitle": "設定 JSON",
     "jsonSubtitle": "匯出或貼上漸層設定。",
@@ -1318,8 +1413,8 @@ const loadJson = () => {
     "exportSubtitle": "產生 PNG 快照。",
     "exportWidth": "寬度",
     "exportHeight": "高度",
-    "generatePng": "產生 PNG",
     "downloadPng": "下載 PNG",
+    "downloadSvg": "下載 SVG",
     "pngUnsupported": "此瀏覽器不支援 PNG 匯出。",
     "jsonTitle": "設定 JSON",
     "jsonSubtitle": "匯出或貼上漸層設定。",
@@ -1422,8 +1517,8 @@ const loadJson = () => {
     "exportSubtitle": "Genera una captura PNG.",
     "exportWidth": "Ancho",
     "exportHeight": "Alto",
-    "generatePng": "Generar PNG",
     "downloadPng": "Descargar PNG",
+    "downloadSvg": "Descargar SVG",
     "pngUnsupported": "La exportación PNG no es compatible en este navegador.",
     "jsonTitle": "JSON de configuración",
     "jsonSubtitle": "Exporta o pega una configuración de gradiente.",
@@ -1526,8 +1621,8 @@ const loadJson = () => {
     "exportSubtitle": "Générez un instantané PNG.",
     "exportWidth": "Largeur",
     "exportHeight": "Hauteur",
-    "generatePng": "Générer PNG",
     "downloadPng": "Télécharger PNG",
+    "downloadSvg": "Télécharger SVG",
     "pngUnsupported": "L’export PNG n’est pas pris en charge dans ce navigateur.",
     "jsonTitle": "JSON de configuration",
     "jsonSubtitle": "Exportez ou collez une configuration de dégradé.",
@@ -1630,8 +1725,8 @@ const loadJson = () => {
     "exportSubtitle": "PNG-Schnappschuss erzeugen.",
     "exportWidth": "Breite",
     "exportHeight": "Höhe",
-    "generatePng": "PNG erzeugen",
     "downloadPng": "PNG herunterladen",
+    "downloadSvg": "SVG herunterladen",
     "pngUnsupported": "PNG-Export wird in diesem Browser nicht unterstützt.",
     "jsonTitle": "Konfig-JSON",
     "jsonSubtitle": "Exportieren oder einfügen, um ein Setup zu laden.",
@@ -1734,8 +1829,8 @@ const loadJson = () => {
     "exportSubtitle": "Genera uno snapshot PNG.",
     "exportWidth": "Larghezza",
     "exportHeight": "Altezza",
-    "generatePng": "Genera PNG",
     "downloadPng": "Scarica PNG",
+    "downloadSvg": "Scarica SVG",
     "pngUnsupported": "L’esportazione PNG non è supportata in questo browser.",
     "jsonTitle": "JSON di configurazione",
     "jsonSubtitle": "Esporta o incolla una configurazione.",
@@ -1838,8 +1933,8 @@ const loadJson = () => {
     "exportSubtitle": "PNG スナップショットを生成。",
     "exportWidth": "幅",
     "exportHeight": "高さ",
-    "generatePng": "PNG を生成",
     "downloadPng": "PNG をダウンロード",
+    "downloadSvg": "SVG をダウンロード",
     "pngUnsupported": "このブラウザでは PNG 出力に対応していません。",
     "jsonTitle": "設定 JSON",
     "jsonSubtitle": "設定をエクスポートまたは貼り付け。",
@@ -1942,8 +2037,8 @@ const loadJson = () => {
     "exportSubtitle": "PNG 스냅샷을 생성합니다.",
     "exportWidth": "너비",
     "exportHeight": "높이",
-    "generatePng": "PNG 생성",
     "downloadPng": "PNG 다운로드",
+    "downloadSvg": "SVG 다운로드",
     "pngUnsupported": "이 브라우저는 PNG 내보내기를 지원하지 않습니다.",
     "jsonTitle": "설정 JSON",
     "jsonSubtitle": "설정을 내보내거나 붙여넣어 불러오세요.",
@@ -2046,8 +2141,8 @@ const loadJson = () => {
     "exportSubtitle": "Создайте PNG-снимок.",
     "exportWidth": "Ширина",
     "exportHeight": "Высота",
-    "generatePng": "Сгенерировать PNG",
     "downloadPng": "Скачать PNG",
+    "downloadSvg": "Скачать SVG",
     "pngUnsupported": "Экспорт PNG не поддерживается в этом браузере.",
     "jsonTitle": "JSON конфигурации",
     "jsonSubtitle": "Экспортируйте или вставьте конфигурацию.",
@@ -2150,8 +2245,8 @@ const loadJson = () => {
     "exportSubtitle": "Gere um snapshot PNG.",
     "exportWidth": "Largura",
     "exportHeight": "Altura",
-    "generatePng": "Gerar PNG",
     "downloadPng": "Baixar PNG",
+    "downloadSvg": "Baixar SVG",
     "pngUnsupported": "A exportação PNG não é suportada neste navegador.",
     "jsonTitle": "JSON de configuração",
     "jsonSubtitle": "Exporte ou cole uma configuração.",
@@ -2254,8 +2349,8 @@ const loadJson = () => {
     "exportSubtitle": "إنشاء لقطة PNG.",
     "exportWidth": "العرض",
     "exportHeight": "الارتفاع",
-    "generatePng": "إنشاء PNG",
     "downloadPng": "تنزيل PNG",
+    "downloadSvg": "تنزيل SVG",
     "pngUnsupported": "تصدير PNG غير مدعوم في هذا المتصفح.",
     "jsonTitle": "JSON للإعداد",
     "jsonSubtitle": "صدّر أو الصق إعداد التدرج.",
@@ -2358,8 +2453,8 @@ const loadJson = () => {
     "exportSubtitle": "PNG स्नैपशॉट बनाएं।",
     "exportWidth": "चौड़ाई",
     "exportHeight": "ऊंचाई",
-    "generatePng": "PNG बनाएं",
     "downloadPng": "PNG डाउनलोड करें",
+    "downloadSvg": "SVG डाउनलोड करें",
     "pngUnsupported": "इस ब्राउज़र में PNG निर्यात समर्थित नहीं है।",
     "jsonTitle": "कॉन्फ़िग JSON",
     "jsonSubtitle": "कॉन्फ़िग निर्यात या पेस्ट करें।",
@@ -2462,8 +2557,8 @@ const loadJson = () => {
     "exportSubtitle": "PNG anlık görüntü oluşturun.",
     "exportWidth": "Genişlik",
     "exportHeight": "Yükseklik",
-    "generatePng": "PNG oluştur",
     "downloadPng": "PNG indir",
+    "downloadSvg": "SVG indir",
     "pngUnsupported": "PNG dışa aktarma bu tarayıcıda desteklenmiyor.",
     "jsonTitle": "JSON yapılandırması",
     "jsonSubtitle": "Yapılandırmayı dışa aktarın veya yapıştırın.",
@@ -2566,8 +2661,8 @@ const loadJson = () => {
     "exportSubtitle": "Genereer een PNG-snapshot.",
     "exportWidth": "Breedte",
     "exportHeight": "Hoogte",
-    "generatePng": "PNG genereren",
     "downloadPng": "PNG downloaden",
+    "downloadSvg": "SVG downloaden",
     "pngUnsupported": "PNG-export wordt niet ondersteund in deze browser.",
     "jsonTitle": "Configuratie-JSON",
     "jsonSubtitle": "Exporteer of plak een configuratie.",
@@ -2670,8 +2765,8 @@ const loadJson = () => {
     "exportSubtitle": "Generera en PNG-snapshot.",
     "exportWidth": "Bredd",
     "exportHeight": "Höjd",
-    "generatePng": "Generera PNG",
     "downloadPng": "Ladda ner PNG",
+    "downloadSvg": "Ladda ner SVG",
     "pngUnsupported": "PNG-export stöds inte i den här webbläsaren.",
     "jsonTitle": "Konfigurations-JSON",
     "jsonSubtitle": "Exportera eller klistra in en konfiguration.",
@@ -2774,8 +2869,8 @@ const loadJson = () => {
     "exportSubtitle": "Wygeneruj zrzut PNG.",
     "exportWidth": "Szerokość",
     "exportHeight": "Wysokość",
-    "generatePng": "Generuj PNG",
     "downloadPng": "Pobierz PNG",
+    "downloadSvg": "Pobierz SVG",
     "pngUnsupported": "Eksport PNG nie jest wspierany w tej przeglądarce.",
     "jsonTitle": "JSON konfiguracji",
     "jsonSubtitle": "Eksportuj lub wklej konfigurację.",
@@ -2878,8 +2973,8 @@ const loadJson = () => {
     "exportSubtitle": "Tạo ảnh PNG.",
     "exportWidth": "Chiều rộng",
     "exportHeight": "Chiều cao",
-    "generatePng": "Tạo PNG",
     "downloadPng": "Tải PNG",
+    "downloadSvg": "Tải SVG",
     "pngUnsupported": "Trình duyệt này không hỗ trợ xuất PNG.",
     "jsonTitle": "JSON cấu hình",
     "jsonSubtitle": "Xuất hoặc dán cấu hình gradient.",
@@ -2982,8 +3077,8 @@ const loadJson = () => {
     "exportSubtitle": "สร้างภาพ PNG",
     "exportWidth": "ความกว้าง",
     "exportHeight": "ความสูง",
-    "generatePng": "สร้าง PNG",
     "downloadPng": "ดาวน์โหลด PNG",
+    "downloadSvg": "ดาวน์โหลด SVG",
     "pngUnsupported": "เบราว์เซอร์นี้ไม่รองรับการส่งออก PNG",
     "jsonTitle": "JSON การตั้งค่า",
     "jsonSubtitle": "ส่งออกหรือวางการตั้งค่าไล่สี",
@@ -3086,8 +3181,8 @@ const loadJson = () => {
     "exportSubtitle": "Buat snapshot PNG.",
     "exportWidth": "Lebar",
     "exportHeight": "Tinggi",
-    "generatePng": "Buat PNG",
     "downloadPng": "Unduh PNG",
+    "downloadSvg": "Unduh SVG",
     "pngUnsupported": "Ekspor PNG tidak didukung di browser ini.",
     "jsonTitle": "JSON konfigurasi",
     "jsonSubtitle": "Ekspor atau tempel konfigurasi.",
@@ -3190,8 +3285,8 @@ const loadJson = () => {
     "exportSubtitle": "צרו תמונת PNG.",
     "exportWidth": "רוחב",
     "exportHeight": "גובה",
-    "generatePng": "צור PNG",
     "downloadPng": "הורד PNG",
+    "downloadSvg": "הורד SVG",
     "pngUnsupported": "ייצוא PNG אינו נתמך בדפדפן זה.",
     "jsonTitle": "JSON תצורה",
     "jsonSubtitle": "ייצאו או הדביקו תצורה.",
@@ -3294,8 +3389,8 @@ const loadJson = () => {
     "exportSubtitle": "Hasilkan snapshot PNG.",
     "exportWidth": "Lebar",
     "exportHeight": "Tinggi",
-    "generatePng": "Hasilkan PNG",
     "downloadPng": "Muat turun PNG",
+    "downloadSvg": "Muat turun SVG",
     "pngUnsupported": "Eksport PNG tidak disokong dalam pelayar ini.",
     "jsonTitle": "JSON konfigurasi",
     "jsonSubtitle": "Eksport atau tampal konfigurasi.",
@@ -3398,8 +3493,8 @@ const loadJson = () => {
     "exportSubtitle": "Generer et PNG-øyeblikksbilde.",
     "exportWidth": "Bredde",
     "exportHeight": "Høyde",
-    "generatePng": "Generer PNG",
     "downloadPng": "Last ned PNG",
+    "downloadSvg": "Last ned SVG",
     "pngUnsupported": "PNG-eksport støttes ikke i denne nettleseren.",
     "jsonTitle": "JSON-konfigurasjon",
     "jsonSubtitle": "Eksporter eller lim inn konfigurasjon.",
@@ -3520,7 +3615,7 @@ const loadJson = () => {
 .preset-button {
   width: 100%;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .preset-swatch {

@@ -24,6 +24,7 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
+import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import CssGradientGeneratorTool from './CssGradientGeneratorTool.vue'
 import * as gradientUtils from '../utils/gradient'
@@ -131,7 +132,7 @@ describe('CssGradientGeneratorTool', () => {
     expect(wrapper.findAll('.layer-card').length).toBe(1)
   })
 
-  it('generates PNG and exposes download link', async () => {
+  it('downloads PNG on demand', async () => {
     const drawSpy = vi.spyOn(gradientUtils, 'drawLayersToCanvas').mockReturnValue(true)
 
     const wrapper = mount(CssGradientGeneratorTool, {
@@ -143,10 +144,27 @@ describe('CssGradientGeneratorTool', () => {
       },
     })
 
-    await wrapper.get('[data-testid="generate-png"]').trigger('click')
+    await wrapper.get('[data-testid="download-png"]').trigger('click')
+    await nextTick()
 
     expect(drawSpy).toHaveBeenCalled()
-    expect(wrapper.find('[data-testid="download-png"]').exists()).toBe(true)
+    expect(wrapper.get('[data-testid="download-png"]').attributes('href')).toBe('blob:mock')
+  })
+
+  it('downloads SVG on demand', async () => {
+    const wrapper = mount(CssGradientGeneratorTool, {
+      global: {
+        stubs: {
+          CopyToClipboardButton: CopyToClipboardButtonStub,
+          NColorPicker: NColorPickerStub,
+        },
+      },
+    })
+
+    await wrapper.get('[data-testid="download-svg"]').trigger('click')
+    await nextTick()
+
+    expect(wrapper.get('[data-testid="download-svg"]').attributes('href')).toBe('blob:mock')
   })
 
   it('rejects invalid JSON input', async () => {
