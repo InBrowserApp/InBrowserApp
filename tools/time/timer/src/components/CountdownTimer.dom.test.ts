@@ -201,10 +201,13 @@ const baseStubs = {
   ToolSectionHeader: {
     template: '<div><slot /></div>',
   },
-}
-
-baseStubs['tool-section'] = baseStubs.ToolSection
-baseStubs['tool-section-header'] = baseStubs.ToolSectionHeader
+  'tool-section': {
+    template: '<section><slot /></section>',
+  },
+  'tool-section-header': {
+    template: '<div><slot /></div>',
+  },
+} satisfies Record<string, { template: string }>
 
 const setSwitchValue = async (wrapper: ReturnType<typeof mount>, index: number, value: boolean) => {
   const switches = wrapper.findAllComponents({ name: 'NSwitch' })
@@ -434,7 +437,7 @@ describe('CountdownTimer', () => {
 
     wrapper.unmount()
 
-    notification.permission = 'granted'
+    ;(notification as { permission: NotificationPermission }).permission = 'granted'
     vi.resetModules()
     const grantedWrapper = await mountCountdownTimer()
     const grantedVm = grantedWrapper.vm as unknown as {

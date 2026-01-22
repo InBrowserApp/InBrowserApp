@@ -80,7 +80,7 @@
       </n-grid>
       <n-text depth="3" class="input-hint">{{ t('durationHint') }}</n-text>
       <n-text depth="3" class="input-hint">{{ t('presets') }}</n-text>
-      <n-space size="8" wrap>
+      <n-space :size="8" wrap>
         <n-button
           v-for="preset in presetMinutes"
           :key="preset"
