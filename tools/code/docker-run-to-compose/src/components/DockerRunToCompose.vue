@@ -123,7 +123,6 @@ function clearInput(): void {
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
 }
-
 </style>
 
 <i18n lang="json">
