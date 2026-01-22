@@ -21,15 +21,6 @@ const InlineStub = defineComponent({
   template: '<span v-bind="$attrs"><slot /></span>',
 })
 
-const NInputStub = defineComponent({
-  name: 'NInput',
-  inheritAttrs: false,
-  props: ['value'],
-  emits: ['update:value'],
-  template:
-    '<input v-bind="$attrs" :value="value" @input="$emit(\'update:value\', $event.target.value)" />',
-})
-
 const NButtonStub = defineComponent({
   name: 'NButton',
   inheritAttrs: false,
@@ -76,21 +67,12 @@ const stubs = {
   'n-grid': BaseStub,
   NIcon: InlineStub,
   'n-icon': InlineStub,
-  NInput: NInputStub,
-  'n-input': NInputStub,
   NStatistic: NStatisticStub,
   'n-statistic': NStatisticStub,
   NTag: InlineStub,
   'n-tag': InlineStub,
   NText: InlineStub,
   'n-text': InlineStub,
-}
-
-function resolveInput(wrapper: ReturnType<typeof mount>, testId: string) {
-  const target = wrapper.get(`[data-testid="${testId}"]`)
-  if ((target.element as HTMLElement).tagName === 'INPUT') return target
-  const inner = target.find('input')
-  return inner.exists() ? inner : target
 }
 
 describe('ColorContrastChecker', () => {
@@ -108,10 +90,15 @@ describe('ColorContrastChecker', () => {
   it('shows invalid message when inputs are invalid', async () => {
     const wrapper = mount(ColorContrastChecker, { global: { stubs } })
 
-    await resolveInput(wrapper, 'foreground-input').setValue('not-a-color')
-    await resolveInput(wrapper, 'background-input').setValue('not-a-color')
+    const vm = wrapper.vm as {
+      updateForegroundFromPicker?: (value: string) => void
+      updateBackgroundFromPicker?: (value: string) => void
+      checks?: unknown[]
+    }
+    vm.updateForegroundFromPicker?.('not-a-color')
+    vm.updateBackgroundFromPicker?.('not-a-color')
+    await nextTick()
 
-    const vm = wrapper.vm as { checks?: unknown[] }
     expect(vm.checks?.length).toBe(0)
 
     expect(wrapper.text()).toContain('invalid-input')
@@ -121,23 +108,33 @@ describe('ColorContrastChecker', () => {
   it('swaps foreground and background values', async () => {
     const wrapper = mount(ColorContrastChecker, { global: { stubs } })
 
-    const foreground = resolveInput(wrapper, 'foreground-input')
-    const background = resolveInput(wrapper, 'background-input')
-
-    await foreground.setValue('#000000')
-    await background.setValue('#ffffff')
+    const vm = wrapper.vm as {
+      updateForegroundFromPicker?: (value: string) => void
+      updateBackgroundFromPicker?: (value: string) => void
+      foregroundInput?: string
+      backgroundInput?: string
+    }
+    vm.updateForegroundFromPicker?.('#000000')
+    vm.updateBackgroundFromPicker?.('#ffffff')
+    await nextTick()
 
     await wrapper.get('[data-testid="swap-button"]').trigger('click')
+    await nextTick()
 
-    expect((foreground.element as HTMLInputElement).value).toBe('#ffffff')
-    expect((background.element as HTMLInputElement).value).toBe('#000000')
+    expect(vm.foregroundInput).toBe('#ffffff')
+    expect(vm.backgroundInput).toBe('#000000')
   })
 
   it('marks low-contrast colors as failing', async () => {
     const wrapper = mount(ColorContrastChecker, { global: { stubs } })
 
-    await resolveInput(wrapper, 'foreground-input').setValue('#ffffff')
-    await resolveInput(wrapper, 'background-input').setValue('#ffffff')
+    const vm = wrapper.vm as {
+      updateForegroundFromPicker?: (value: string) => void
+      updateBackgroundFromPicker?: (value: string) => void
+    }
+    vm.updateForegroundFromPicker?.('#ffffff')
+    vm.updateBackgroundFromPicker?.('#ffffff')
+    await nextTick()
 
     expect(wrapper.text()).toContain('fail')
   })
@@ -145,10 +142,16 @@ describe('ColorContrastChecker', () => {
   it('treats empty inputs as unset', async () => {
     const wrapper = mount(ColorContrastChecker, { global: { stubs } })
 
-    await resolveInput(wrapper, 'foreground-input').setValue('')
-    await resolveInput(wrapper, 'background-input').setValue('')
+    const vm = wrapper.vm as {
+      updateForegroundFromPicker?: (value: string) => void
+      updateBackgroundFromPicker?: (value: string) => void
+      foregroundStatus?: unknown
+      backgroundStatus?: unknown
+    }
+    vm.updateForegroundFromPicker?.('')
+    vm.updateBackgroundFromPicker?.('')
+    await nextTick()
 
-    const vm = wrapper.vm as { foregroundStatus?: unknown; backgroundStatus?: unknown }
     expect(vm.foregroundStatus).toBeUndefined()
     expect(vm.backgroundStatus).toBeUndefined()
   })
@@ -159,6 +162,8 @@ describe('ColorContrastChecker', () => {
     const vm = wrapper.vm as {
       updateForegroundFromPicker?: (value: string) => void
       updateBackgroundFromPicker?: (value: string) => void
+      foregroundHex?: string
+      backgroundHex?: string
     }
     expect(vm.updateForegroundFromPicker).toBeTypeOf('function')
     expect(vm.updateBackgroundFromPicker).toBeTypeOf('function')
@@ -166,11 +171,7 @@ describe('ColorContrastChecker', () => {
     vm.updateBackgroundFromPicker?.('#00ff00')
     await nextTick()
 
-    expect((resolveInput(wrapper, 'foreground-input').element as HTMLInputElement).value).toBe(
-      '#ff0000',
-    )
-    expect((resolveInput(wrapper, 'background-input').element as HTMLInputElement).value).toBe(
-      '#00ff00',
-    )
+    expect(vm.foregroundHex).toBe('#FF0000')
+    expect(vm.backgroundHex).toBe('#00FF00')
   })
 })

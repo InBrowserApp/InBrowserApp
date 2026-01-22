@@ -8,20 +8,15 @@
           :feedback="foregroundFeedback"
           :validation-status="foregroundStatus"
         >
-          <n-input
-            v-model:value="foregroundInput"
-            :placeholder="t('color-placeholder')"
-            data-testid="foreground-input"
+          <n-color-picker
+            :value="foregroundHex"
+            :modes="['hex']"
+            :show-alpha="true"
+            :swatches="swatches"
+            data-testid="foreground-picker"
+            @update:value="updateForegroundFromPicker"
           />
         </n-form-item>
-        <n-color-picker
-          :value="foregroundHex"
-          :modes="['hex']"
-          :show-alpha="true"
-          :swatches="swatches"
-          data-testid="foreground-picker"
-          @update:value="updateForegroundFromPicker"
-        />
       </n-gi>
       <n-gi>
         <n-form-item
@@ -29,24 +24,18 @@
           :feedback="backgroundFeedback"
           :validation-status="backgroundStatus"
         >
-          <n-input
-            v-model:value="backgroundInput"
-            :placeholder="t('color-placeholder')"
-            data-testid="background-input"
+          <n-color-picker
+            :value="backgroundHex"
+            :modes="['hex']"
+            :show-alpha="true"
+            :swatches="swatches"
+            data-testid="background-picker"
+            @update:value="updateBackgroundFromPicker"
           />
         </n-form-item>
-        <n-color-picker
-          :value="backgroundHex"
-          :modes="['hex']"
-          :show-alpha="true"
-          :swatches="swatches"
-          data-testid="background-picker"
-          @update:value="updateBackgroundFromPicker"
-        />
       </n-gi>
     </n-grid>
-    <n-flex class="controls" align="center" justify="space-between" :size="12" wrap>
-      <n-text depth="3">{{ t('format-hint') }}</n-text>
+    <n-flex class="controls" align="center" justify="end" :size="12" wrap>
       <n-button secondary @click="swapColors" data-testid="swap-button">
         <template #icon>
           <n-icon :component="ArrowSwap20Regular" />
@@ -75,6 +64,20 @@
     </n-flex>
   </ToolSection>
 
+  <ToolSectionHeader>{{ t('preview-title') }}</ToolSectionHeader>
+  <ToolSection>
+    <div class="preview" :style="previewStyle">
+      <div class="preview-row">
+        <div class="preview-label">{{ t('normal-text') }}</div>
+        <div class="preview-text">{{ t('sample-text') }}</div>
+      </div>
+      <div class="preview-row">
+        <div class="preview-label">{{ t('large-text') }}</div>
+        <div class="preview-text preview-text-large">{{ t('sample-text') }}</div>
+      </div>
+    </div>
+  </ToolSection>
+
   <ToolSectionHeader>{{ t('what-is-title') }}</ToolSectionHeader>
   <ToolSection>
     <n-flex vertical :size="12">
@@ -92,20 +95,6 @@
       <n-text depth="3">{{ t('what-is-tip') }}</n-text>
     </n-flex>
   </ToolSection>
-
-  <ToolSectionHeader>{{ t('preview-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <div class="preview" :style="previewStyle">
-      <div class="preview-row">
-        <div class="preview-label">{{ t('normal-text') }}</div>
-        <div class="preview-text">{{ t('sample-text') }}</div>
-      </div>
-      <div class="preview-row">
-        <div class="preview-label">{{ t('large-text') }}</div>
-        <div class="preview-text preview-text-large">{{ t('sample-text') }}</div>
-      </div>
-    </div>
-  </ToolSection>
 </template>
 
 <script setup lang="ts">
@@ -118,7 +107,6 @@ import {
   NGi,
   NGrid,
   NIcon,
-  NInput,
   NStatistic,
   NTag,
   NText,
@@ -289,8 +277,6 @@ function swapColors() {
     "colors-title": "Colors",
     "foreground-label": "Foreground",
     "background-label": "Background",
-    "color-placeholder": "#112233 or rgb(17, 34, 51)",
-    "format-hint": "Formats: HEX, RGB(A), HSL(A), CSS names",
     "swap": "Swap",
     "results-title": "Results",
     "ratio-label": "Contrast ratio",
@@ -321,8 +307,6 @@ function swapColors() {
     "colors-title": "颜色",
     "foreground-label": "前景色",
     "background-label": "背景色",
-    "color-placeholder": "#112233 或 rgb(17, 34, 51)",
-    "format-hint": "支持格式：HEX、RGB(A)、HSL(A)、CSS 颜色名",
     "swap": "交换",
     "results-title": "结果",
     "ratio-label": "对比度",
@@ -353,8 +337,6 @@ function swapColors() {
     "colors-title": "颜色",
     "foreground-label": "前景色",
     "background-label": "背景色",
-    "color-placeholder": "#112233 或 rgb(17, 34, 51)",
-    "format-hint": "支持格式：HEX、RGB(A)、HSL(A)、CSS 颜色名",
     "swap": "交换",
     "results-title": "结果",
     "ratio-label": "对比度",
@@ -385,8 +367,6 @@ function swapColors() {
     "colors-title": "顏色",
     "foreground-label": "前景色",
     "background-label": "背景色",
-    "color-placeholder": "#112233 或 rgb(17, 34, 51)",
-    "format-hint": "支援格式：HEX、RGB(A)、HSL(A)、CSS 顏色名",
     "swap": "交換",
     "results-title": "結果",
     "ratio-label": "對比度",
@@ -417,8 +397,6 @@ function swapColors() {
     "colors-title": "顏色",
     "foreground-label": "前景色",
     "background-label": "背景色",
-    "color-placeholder": "#112233 或 rgb(17, 34, 51)",
-    "format-hint": "支援格式：HEX、RGB(A)、HSL(A)、CSS 顏色名",
     "swap": "交換",
     "results-title": "結果",
     "ratio-label": "對比度",
@@ -449,8 +427,6 @@ function swapColors() {
     "colors-title": "Colores",
     "foreground-label": "Primer plano",
     "background-label": "Fondo",
-    "color-placeholder": "#112233 o rgb(17, 34, 51)",
-    "format-hint": "Formatos: HEX, RGB(A), HSL(A), nombres CSS",
     "swap": "Intercambiar",
     "results-title": "Resultados",
     "ratio-label": "Relación de contraste",
@@ -481,8 +457,6 @@ function swapColors() {
     "colors-title": "Couleurs",
     "foreground-label": "Premier plan",
     "background-label": "Arrière-plan",
-    "color-placeholder": "#112233 ou rgb(17, 34, 51)",
-    "format-hint": "Formats : HEX, RGB(A), HSL(A), noms CSS",
     "swap": "Inverser",
     "results-title": "Résultats",
     "ratio-label": "Rapport de contraste",
@@ -513,8 +487,6 @@ function swapColors() {
     "colors-title": "Farben",
     "foreground-label": "Vordergrund",
     "background-label": "Hintergrund",
-    "color-placeholder": "#112233 oder rgb(17, 34, 51)",
-    "format-hint": "Formate: HEX, RGB(A), HSL(A), CSS-Namen",
     "swap": "Tauschen",
     "results-title": "Ergebnisse",
     "ratio-label": "Kontrastverhältnis",
@@ -545,8 +517,6 @@ function swapColors() {
     "colors-title": "Colori",
     "foreground-label": "Primo piano",
     "background-label": "Sfondo",
-    "color-placeholder": "#112233 o rgb(17, 34, 51)",
-    "format-hint": "Formati: HEX, RGB(A), HSL(A), nomi CSS",
     "swap": "Scambia",
     "results-title": "Risultati",
     "ratio-label": "Rapporto di contrasto",
@@ -577,8 +547,6 @@ function swapColors() {
     "colors-title": "色",
     "foreground-label": "前景色",
     "background-label": "背景色",
-    "color-placeholder": "#112233 または rgb(17, 34, 51)",
-    "format-hint": "形式: HEX、RGB(A)、HSL(A)、CSS 名",
     "swap": "入れ替え",
     "results-title": "結果",
     "ratio-label": "コントラスト比",
@@ -609,8 +577,6 @@ function swapColors() {
     "colors-title": "색상",
     "foreground-label": "전경",
     "background-label": "배경",
-    "color-placeholder": "#112233 또는 rgb(17, 34, 51)",
-    "format-hint": "형식: HEX, RGB(A), HSL(A), CSS 이름",
     "swap": "교체",
     "results-title": "결과",
     "ratio-label": "대비 비율",
@@ -641,8 +607,6 @@ function swapColors() {
     "colors-title": "Цвета",
     "foreground-label": "Передний план",
     "background-label": "Фон",
-    "color-placeholder": "#112233 или rgb(17, 34, 51)",
-    "format-hint": "Форматы: HEX, RGB(A), HSL(A), имена CSS",
     "swap": "Поменять",
     "results-title": "Результаты",
     "ratio-label": "Контраст",
@@ -673,8 +637,6 @@ function swapColors() {
     "colors-title": "Cores",
     "foreground-label": "Primeiro plano",
     "background-label": "Fundo",
-    "color-placeholder": "#112233 ou rgb(17, 34, 51)",
-    "format-hint": "Formatos: HEX, RGB(A), HSL(A), nomes CSS",
     "swap": "Trocar",
     "results-title": "Resultados",
     "ratio-label": "Razão de contraste",
@@ -705,8 +667,6 @@ function swapColors() {
     "colors-title": "الألوان",
     "foreground-label": "المقدمة",
     "background-label": "الخلفية",
-    "color-placeholder": "#112233 أو rgb(17, 34, 51)",
-    "format-hint": "الصيغ: HEX و RGB(A) و HSL(A) وأسماء CSS",
     "swap": "تبديل",
     "results-title": "النتائج",
     "ratio-label": "نسبة التباين",
@@ -737,8 +697,6 @@ function swapColors() {
     "colors-title": "रंग",
     "foreground-label": "फोरग्राउंड",
     "background-label": "बैकग्राउंड",
-    "color-placeholder": "#112233 या rgb(17, 34, 51)",
-    "format-hint": "फॉर्मेट: HEX, RGB(A), HSL(A), CSS नाम",
     "swap": "बदलें",
     "results-title": "परिणाम",
     "ratio-label": "कंट्रास्ट अनुपात",
@@ -769,8 +727,6 @@ function swapColors() {
     "colors-title": "Renkler",
     "foreground-label": "Ön plan",
     "background-label": "Arka plan",
-    "color-placeholder": "#112233 veya rgb(17, 34, 51)",
-    "format-hint": "Biçimler: HEX, RGB(A), HSL(A), CSS adları",
     "swap": "Değiştir",
     "results-title": "Sonuçlar",
     "ratio-label": "Kontrast oranı",
@@ -801,8 +757,6 @@ function swapColors() {
     "colors-title": "Kleuren",
     "foreground-label": "Voorgrond",
     "background-label": "Achtergrond",
-    "color-placeholder": "#112233 of rgb(17, 34, 51)",
-    "format-hint": "Indelingen: HEX, RGB(A), HSL(A), CSS-namen",
     "swap": "Wisselen",
     "results-title": "Resultaten",
     "ratio-label": "Contrastverhouding",
@@ -833,8 +787,6 @@ function swapColors() {
     "colors-title": "Färger",
     "foreground-label": "Förgrund",
     "background-label": "Bakgrund",
-    "color-placeholder": "#112233 eller rgb(17, 34, 51)",
-    "format-hint": "Format: HEX, RGB(A), HSL(A), CSS-namn",
     "swap": "Byt",
     "results-title": "Resultat",
     "ratio-label": "Kontrastförhållande",
@@ -865,8 +817,6 @@ function swapColors() {
     "colors-title": "Kolory",
     "foreground-label": "Pierwszy plan",
     "background-label": "Tło",
-    "color-placeholder": "#112233 lub rgb(17, 34, 51)",
-    "format-hint": "Formaty: HEX, RGB(A), HSL(A), nazwy CSS",
     "swap": "Zamień",
     "results-title": "Wyniki",
     "ratio-label": "Współczynnik kontrastu",
@@ -897,8 +847,6 @@ function swapColors() {
     "colors-title": "Màu sắc",
     "foreground-label": "Tiền cảnh",
     "background-label": "Nền",
-    "color-placeholder": "#112233 hoặc rgb(17, 34, 51)",
-    "format-hint": "Định dạng: HEX, RGB(A), HSL(A), tên CSS",
     "swap": "Hoán đổi",
     "results-title": "Kết quả",
     "ratio-label": "Tỷ lệ tương phản",
@@ -929,8 +877,6 @@ function swapColors() {
     "colors-title": "สี",
     "foreground-label": "ด้านหน้า",
     "background-label": "พื้นหลัง",
-    "color-placeholder": "#112233 หรือ rgb(17, 34, 51)",
-    "format-hint": "รูปแบบ: HEX, RGB(A), HSL(A), ชื่อสี CSS",
     "swap": "สลับ",
     "results-title": "ผลลัพธ์",
     "ratio-label": "อัตราส่วนความต่างสี",
@@ -961,8 +907,6 @@ function swapColors() {
     "colors-title": "Warna",
     "foreground-label": "Latar depan",
     "background-label": "Latar belakang",
-    "color-placeholder": "#112233 atau rgb(17, 34, 51)",
-    "format-hint": "Format: HEX, RGB(A), HSL(A), nama CSS",
     "swap": "Tukar",
     "results-title": "Hasil",
     "ratio-label": "Rasio kontras",
@@ -993,8 +937,6 @@ function swapColors() {
     "colors-title": "צבעים",
     "foreground-label": "קדמי",
     "background-label": "רקע",
-    "color-placeholder": "#112233 או rgb(17, 34, 51)",
-    "format-hint": "פורמטים: HEX, RGB(A), HSL(A), שמות CSS",
     "swap": "החלפה",
     "results-title": "תוצאות",
     "ratio-label": "יחס ניגודיות",
@@ -1025,8 +967,6 @@ function swapColors() {
     "colors-title": "Warna",
     "foreground-label": "Hadapan",
     "background-label": "Latar",
-    "color-placeholder": "#112233 atau rgb(17, 34, 51)",
-    "format-hint": "Format: HEX, RGB(A), HSL(A), nama CSS",
     "swap": "Tukar",
     "results-title": "Keputusan",
     "ratio-label": "Nisbah kontras",
@@ -1057,8 +997,6 @@ function swapColors() {
     "colors-title": "Farger",
     "foreground-label": "Forgrunn",
     "background-label": "Bakgrunn",
-    "color-placeholder": "#112233 eller rgb(17, 34, 51)",
-    "format-hint": "Formater: HEX, RGB(A), HSL(A), CSS-navn",
     "swap": "Bytt",
     "results-title": "Resultater",
     "ratio-label": "Kontrastforhold",
