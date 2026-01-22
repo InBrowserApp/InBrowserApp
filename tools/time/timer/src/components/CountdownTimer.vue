@@ -1,7 +1,11 @@
 <template>
-  <div>
+  <div
+    ref="fullscreenTarget"
+    class="timer-root"
+    :class="{ 'timer-root--fullscreen': isFullscreen }"
+  >
     <ToolSection>
-      <div class="timer-display">
+      <div class="timer-display" :class="{ 'timer-display--fullscreen': isFullscreen }">
         <div class="timer-time" data-testid="timer-display">{{ formattedRemaining }}</div>
         <n-text depth="3" :type="statusType" data-testid="timer-status">
           {{ statusText }}
@@ -9,7 +13,7 @@
       </div>
     </ToolSection>
 
-    <ToolSection>
+    <ToolSection v-show="!isFullscreen">
       <n-flex :size="12" wrap justify="center">
         <n-button type="primary" :disabled="running" @click="start" data-testid="start">
           <template #icon>
@@ -29,8 +33,43 @@
           </template>
           {{ t('reset') }}
         </n-button>
+        <n-button :disabled="!fullscreenSupported" @click="enter" data-testid="fullscreen-enter">
+          <template #icon>
+            <n-icon :component="FullScreenMaximize16Regular" />
+          </template>
+          {{ t('fullscreenEnter') }}
+        </n-button>
       </n-flex>
     </ToolSection>
+
+    <div v-show="isFullscreen" class="fullscreen-controls" data-testid="fullscreen-controls">
+      <n-flex :size="8" align="center">
+        <n-button type="primary" :disabled="running" @click="start" data-testid="fullscreen-start">
+          <template #icon>
+            <n-icon :component="Play16Regular" />
+          </template>
+          {{ startLabel }}
+        </n-button>
+        <n-button :disabled="!running" @click="pause" data-testid="fullscreen-pause">
+          <template #icon>
+            <n-icon :component="Pause16Regular" />
+          </template>
+          {{ t('pause') }}
+        </n-button>
+        <n-button :disabled="!canReset" @click="reset" data-testid="fullscreen-reset">
+          <template #icon>
+            <n-icon :component="ArrowCounterclockwise16Regular" />
+          </template>
+          {{ t('reset') }}
+        </n-button>
+        <n-button @click="exit" data-testid="fullscreen-exit">
+          <template #icon>
+            <n-icon :component="FullScreenMinimize24Regular" />
+          </template>
+          {{ t('fullscreenExit') }}
+        </n-button>
+      </n-flex>
+    </div>
 
     <n-alert v-show="errorMessage" type="error" :title="t('errorTitle')">
       {{ errorMessage }}
@@ -105,7 +144,11 @@
         </n-form-item-gi>
         <n-form-item-gi :label="t('notificationLabel')" :show-feedback="false">
           <n-flex align="center" justify="space-between" style="width: 100%">
-            <n-switch v-model:value="notificationEnabled" :disabled="!notificationSupported" />
+            <n-switch
+              v-model:value="notificationEnabled"
+              :disabled="!notificationSupported"
+              @update:value="handleNotificationToggle"
+            />
             <n-button
               v-show="showNotificationButton"
               text
@@ -144,10 +187,12 @@ import {
   NSwitch,
   NText,
 } from 'naive-ui'
-import { useIntervalFn, useStorage } from '@vueuse/core'
+import { useFullscreen, useNow, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
+import FullScreenMaximize16Regular from '@vicons/fluent/FullScreenMaximize16Regular'
+import FullScreenMinimize24Regular from '@vicons/fluent/FullScreenMinimize24Regular'
 import Pause16Regular from '@vicons/fluent/Pause16Regular'
 import Play16Regular from '@vicons/fluent/Play16Regular'
 import { formatCountdown } from '../utils/format'
@@ -165,7 +210,24 @@ const soundEnabled = useStorage('tools:timer:sound', true)
 const vibrationEnabled = useStorage('tools:timer:vibration', true)
 const notificationEnabled = useStorage('tools:timer:notification', false)
 
-const now = ref(Date.now())
+const fullscreenTarget = ref<HTMLElement | null>(null)
+const {
+  isSupported: fullscreenSupported,
+  isFullscreen,
+  enter,
+  exit,
+} = useFullscreen(fullscreenTarget)
+
+const {
+  now,
+  pause: pauseTicker,
+  resume: resumeTicker,
+} = useNow({
+  interval: 'requestAnimationFrame',
+  controls: true,
+  immediate: false,
+})
+const nowMs = computed(() => now.value.getTime())
 const errorMessage = ref('')
 
 const presetMinutes = [1, 5, 10, 25, 30, 60]
@@ -181,7 +243,7 @@ const durationMs = computed(() =>
 
 const displayRemainingMs = computed(() => {
   if (!running.value) return remainingMs.value
-  return Math.max(0, endTime.value - now.value)
+  return Math.max(0, endTime.value - nowMs.value)
 })
 
 const formattedRemaining = computed(() => formatCountdown(displayRemainingMs.value))
@@ -191,9 +253,9 @@ const isComplete = computed(
 )
 
 const statusText = computed(() => {
-  if (running.value) return t('statusRunning')
   if (isComplete.value) return t('statusComplete')
-  return t('statusPaused')
+  if (!running.value && durationMs.value > 0) return t('statusPaused')
+  return ''
 })
 
 const statusType = computed(() => (isComplete.value ? 'success' : undefined))
@@ -209,10 +271,9 @@ const canReset = computed(
   () => !running.value && durationMs.value > 0 && displayRemainingMs.value !== durationMs.value,
 )
 
-const notificationPermission = computed(() => {
-  if (!notificationSupported) return 'unsupported'
-  return Notification.permission
-})
+const notificationPermission = ref<NotificationPermission | 'unsupported'>(
+  notificationSupported ? Notification.permission : 'unsupported',
+)
 
 const showNotificationButton = computed(
   () =>
@@ -228,14 +289,6 @@ const notificationHint = computed(() => {
   if (notificationPermission.value === 'default') return t('notificationDefault')
   return t('notificationGranted')
 })
-
-const { pause: pauseTicker, resume: resumeTicker } = useIntervalFn(
-  () => {
-    now.value = Date.now()
-  },
-  50,
-  { immediate: false },
-)
 
 let audioContext: AudioContext | null = null
 
@@ -330,14 +383,28 @@ const sendNotification = () => {
   }
 }
 
+const updateNotificationPermission = (value?: NotificationPermission) => {
+  notificationPermission.value = value ?? Notification.permission
+}
+
+if (notificationSupported) {
+  updateNotificationPermission()
+}
+
 const requestNotificationPermission = async () => {
   if (!notificationSupported) return
   if (notificationPermission.value !== 'default') return
   try {
-    await Notification.requestPermission()
+    const permission = await Notification.requestPermission()
+    updateNotificationPermission(permission)
   } catch {
     // Ignore permission errors.
   }
+}
+
+const handleNotificationToggle = async (value: boolean) => {
+  if (!value) return
+  await requestNotificationPermission()
 }
 
 const resetOutputError = () => {
@@ -371,8 +438,9 @@ const start = async () => {
   }
 
   const targetRemaining = remainingMs.value
-  now.value = Date.now()
-  endTime.value = now.value + targetRemaining
+  const startTime = Date.now()
+  now.value = new Date(startTime)
+  endTime.value = startTime + targetRemaining
   running.value = true
   resumeTicker()
   await unlockAudio()
@@ -380,7 +448,7 @@ const start = async () => {
 
 const pause = () => {
   if (!running.value) return
-  now.value = Date.now()
+  now.value = new Date()
   remainingMs.value = displayRemainingMs.value
   running.value = false
   endTime.value = 0
@@ -393,7 +461,7 @@ const reset = () => {
   remainingMs.value = durationMs.value
   resetOutputError()
   pauseTicker()
-  now.value = Date.now()
+  now.value = new Date()
 }
 
 watch(durationMs, (value) => {
@@ -423,8 +491,8 @@ onMounted(() => {
     return
   }
 
-  now.value = Date.now()
-  if (endTime.value <= now.value) {
+  now.value = new Date()
+  if (endTime.value <= nowMs.value) {
     completeTimer(false)
     return
   }
@@ -434,6 +502,19 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.timer-root {
+  position: relative;
+}
+
+.timer-root--fullscreen {
+  min-height: 100vh;
+  padding: 24px 16px 96px;
+}
+
+.timer-root--fullscreen .timer-time {
+  font-size: clamp(3rem, 10vw, 6rem);
+}
+
 .timer-display {
   display: flex;
   flex-direction: column;
@@ -458,6 +539,12 @@ onMounted(() => {
   display: block;
   margin-top: 8px;
 }
+.fullscreen-controls {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+}
 </style>
 
 <i18n lang="json">
@@ -467,6 +554,8 @@ onMounted(() => {
     "pause": "Pause",
     "resume": "Resume",
     "reset": "Reset",
+    "fullscreenEnter": "Fullscreen",
+    "fullscreenExit": "Exit fullscreen",
     "durationTitle": "Duration",
     "durationHint": "Set the countdown duration before starting.",
     "hours": "Hours",
@@ -485,7 +574,6 @@ onMounted(() => {
     "notificationRequest": "Enable",
     "notificationTitle": "Timer finished",
     "notificationBody": "Time's up.",
-    "statusRunning": "Running",
     "statusPaused": "Paused",
     "statusComplete": "Completed",
     "errorTitle": "Error",
@@ -496,6 +584,8 @@ onMounted(() => {
     "pause": "暂停",
     "resume": "继续",
     "reset": "重置",
+    "fullscreenEnter": "全屏",
+    "fullscreenExit": "退出全屏",
     "durationTitle": "时长",
     "durationHint": "开始前请设置倒计时时长。",
     "hours": "小时",
@@ -514,7 +604,6 @@ onMounted(() => {
     "notificationRequest": "启用",
     "notificationTitle": "倒计时结束",
     "notificationBody": "时间到了。",
-    "statusRunning": "计时中",
     "statusPaused": "已暂停",
     "statusComplete": "已完成",
     "errorTitle": "错误",
@@ -525,6 +614,8 @@ onMounted(() => {
     "pause": "暂停",
     "resume": "继续",
     "reset": "重置",
+    "fullscreenEnter": "全屏",
+    "fullscreenExit": "退出全屏",
     "durationTitle": "时长",
     "durationHint": "开始前请设置倒计时时长。",
     "hours": "小时",
@@ -543,7 +634,6 @@ onMounted(() => {
     "notificationRequest": "启用",
     "notificationTitle": "倒计时结束",
     "notificationBody": "时间到了。",
-    "statusRunning": "计时中",
     "statusPaused": "已暂停",
     "statusComplete": "已完成",
     "errorTitle": "错误",
@@ -554,6 +644,8 @@ onMounted(() => {
     "pause": "暫停",
     "resume": "繼續",
     "reset": "重置",
+    "fullscreenEnter": "全螢幕",
+    "fullscreenExit": "退出全螢幕",
     "durationTitle": "時長",
     "durationHint": "開始前請設定倒數計時時長。",
     "hours": "小時",
@@ -572,7 +664,6 @@ onMounted(() => {
     "notificationRequest": "啟用",
     "notificationTitle": "倒數計時結束",
     "notificationBody": "時間到了。",
-    "statusRunning": "計時中",
     "statusPaused": "已暫停",
     "statusComplete": "已完成",
     "errorTitle": "錯誤",
@@ -583,6 +674,8 @@ onMounted(() => {
     "pause": "暫停",
     "resume": "繼續",
     "reset": "重置",
+    "fullscreenEnter": "全螢幕",
+    "fullscreenExit": "退出全螢幕",
     "durationTitle": "時長",
     "durationHint": "開始前請設定倒數計時時長。",
     "hours": "小時",
@@ -601,7 +694,6 @@ onMounted(() => {
     "notificationRequest": "啟用",
     "notificationTitle": "倒數計時結束",
     "notificationBody": "時間到了。",
-    "statusRunning": "計時中",
     "statusPaused": "已暫停",
     "statusComplete": "已完成",
     "errorTitle": "錯誤",
@@ -612,6 +704,8 @@ onMounted(() => {
     "pause": "Pausar",
     "resume": "Reanudar",
     "reset": "Restablecer",
+    "fullscreenEnter": "Pantalla completa",
+    "fullscreenExit": "Salir de pantalla completa",
     "durationTitle": "Duración",
     "durationHint": "Configura la duración antes de iniciar.",
     "hours": "Horas",
@@ -630,7 +724,6 @@ onMounted(() => {
     "notificationRequest": "Habilitar",
     "notificationTitle": "Temporizador finalizado",
     "notificationBody": "Se acabó el tiempo.",
-    "statusRunning": "En marcha",
     "statusPaused": "Pausado",
     "statusComplete": "Completado",
     "errorTitle": "Error",
@@ -641,6 +734,8 @@ onMounted(() => {
     "pause": "Pause",
     "resume": "Reprendre",
     "reset": "Réinitialiser",
+    "fullscreenEnter": "Plein écran",
+    "fullscreenExit": "Quitter le plein écran",
     "durationTitle": "Durée",
     "durationHint": "Réglez la durée avant de démarrer.",
     "hours": "Heures",
@@ -659,7 +754,6 @@ onMounted(() => {
     "notificationRequest": "Activer",
     "notificationTitle": "Minuteur terminé",
     "notificationBody": "Le temps est écoulé.",
-    "statusRunning": "En cours",
     "statusPaused": "En pause",
     "statusComplete": "Terminé",
     "errorTitle": "Erreur",
@@ -670,6 +764,8 @@ onMounted(() => {
     "pause": "Pause",
     "resume": "Fortsetzen",
     "reset": "Zurücksetzen",
+    "fullscreenEnter": "Vollbild",
+    "fullscreenExit": "Vollbild verlassen",
     "durationTitle": "Dauer",
     "durationHint": "Legen Sie die Dauer vor dem Start fest.",
     "hours": "Stunden",
@@ -688,7 +784,6 @@ onMounted(() => {
     "notificationRequest": "Aktivieren",
     "notificationTitle": "Timer beendet",
     "notificationBody": "Die Zeit ist abgelaufen.",
-    "statusRunning": "Läuft",
     "statusPaused": "Pausiert",
     "statusComplete": "Abgeschlossen",
     "errorTitle": "Fehler",
@@ -699,6 +794,8 @@ onMounted(() => {
     "pause": "Pausa",
     "resume": "Riprendi",
     "reset": "Reimposta",
+    "fullscreenEnter": "Schermo intero",
+    "fullscreenExit": "Esci da schermo intero",
     "durationTitle": "Durata",
     "durationHint": "Imposta la durata prima di avviare.",
     "hours": "Ore",
@@ -717,7 +814,6 @@ onMounted(() => {
     "notificationRequest": "Attiva",
     "notificationTitle": "Timer terminato",
     "notificationBody": "Il tempo è scaduto.",
-    "statusRunning": "In corso",
     "statusPaused": "In pausa",
     "statusComplete": "Completato",
     "errorTitle": "Errore",
@@ -728,6 +824,8 @@ onMounted(() => {
     "pause": "一時停止",
     "resume": "再開",
     "reset": "リセット",
+    "fullscreenEnter": "全画面",
+    "fullscreenExit": "全画面を終了",
     "durationTitle": "時間",
     "durationHint": "開始前にカウントダウン時間を設定してください。",
     "hours": "時間",
@@ -746,7 +844,6 @@ onMounted(() => {
     "notificationRequest": "有効化",
     "notificationTitle": "タイマー終了",
     "notificationBody": "時間になりました。",
-    "statusRunning": "実行中",
     "statusPaused": "一時停止",
     "statusComplete": "完了",
     "errorTitle": "エラー",
@@ -757,6 +854,8 @@ onMounted(() => {
     "pause": "일시정지",
     "resume": "재개",
     "reset": "초기화",
+    "fullscreenEnter": "전체 화면",
+    "fullscreenExit": "전체 화면 종료",
     "durationTitle": "시간",
     "durationHint": "시작 전에 카운트다운 시간을 설정하세요.",
     "hours": "시간",
@@ -775,7 +874,6 @@ onMounted(() => {
     "notificationRequest": "활성화",
     "notificationTitle": "타이머 종료",
     "notificationBody": "시간이 다 됐습니다.",
-    "statusRunning": "실행 중",
     "statusPaused": "일시정지",
     "statusComplete": "완료",
     "errorTitle": "오류",
@@ -786,6 +884,8 @@ onMounted(() => {
     "pause": "Пауза",
     "resume": "Продолжить",
     "reset": "Сброс",
+    "fullscreenEnter": "Полноэкранный",
+    "fullscreenExit": "Выйти из полноэкранного режима",
     "durationTitle": "Длительность",
     "durationHint": "Задайте длительность перед запуском.",
     "hours": "Часы",
@@ -804,7 +904,6 @@ onMounted(() => {
     "notificationRequest": "Включить",
     "notificationTitle": "Таймер завершён",
     "notificationBody": "Время вышло.",
-    "statusRunning": "Запущен",
     "statusPaused": "Пауза",
     "statusComplete": "Завершено",
     "errorTitle": "Ошибка",
@@ -815,6 +914,8 @@ onMounted(() => {
     "pause": "Pausar",
     "resume": "Retomar",
     "reset": "Redefinir",
+    "fullscreenEnter": "Tela cheia",
+    "fullscreenExit": "Sair da tela cheia",
     "durationTitle": "Duração",
     "durationHint": "Defina a duração antes de iniciar.",
     "hours": "Horas",
@@ -833,7 +934,6 @@ onMounted(() => {
     "notificationRequest": "Ativar",
     "notificationTitle": "Temporizador concluído",
     "notificationBody": "O tempo acabou.",
-    "statusRunning": "Em andamento",
     "statusPaused": "Pausado",
     "statusComplete": "Concluído",
     "errorTitle": "Erro",
@@ -844,6 +944,8 @@ onMounted(() => {
     "pause": "إيقاف مؤقت",
     "resume": "استئناف",
     "reset": "إعادة ضبط",
+    "fullscreenEnter": "ملء الشاشة",
+    "fullscreenExit": "الخروج من ملء الشاشة",
     "durationTitle": "المدة",
     "durationHint": "اضبط مدة العد التنازلي قبل البدء.",
     "hours": "ساعات",
@@ -862,7 +964,6 @@ onMounted(() => {
     "notificationRequest": "تفعيل",
     "notificationTitle": "انتهى المؤقت",
     "notificationBody": "انتهى الوقت.",
-    "statusRunning": "يعمل",
     "statusPaused": "متوقف",
     "statusComplete": "مكتمل",
     "errorTitle": "خطأ",
@@ -873,6 +974,8 @@ onMounted(() => {
     "pause": "रोकें",
     "resume": "जारी रखें",
     "reset": "रीसेट",
+    "fullscreenEnter": "पूर्ण स्क्रीन",
+    "fullscreenExit": "पूर्ण स्क्रीन से बाहर",
     "durationTitle": "अवधि",
     "durationHint": "शुरू करने से पहले अवधि सेट करें।",
     "hours": "घंटे",
@@ -891,7 +994,6 @@ onMounted(() => {
     "notificationRequest": "सक्षम करें",
     "notificationTitle": "टाइमर समाप्त",
     "notificationBody": "समय समाप्त।",
-    "statusRunning": "चल रहा है",
     "statusPaused": "रुका हुआ",
     "statusComplete": "पूर्ण",
     "errorTitle": "त्रुटि",
@@ -902,6 +1004,8 @@ onMounted(() => {
     "pause": "Duraklat",
     "resume": "Devam et",
     "reset": "Sıfırla",
+    "fullscreenEnter": "Tam Ekran",
+    "fullscreenExit": "Tam ekrandan çık",
     "durationTitle": "Süre",
     "durationHint": "Başlatmadan önce süreyi ayarlayın.",
     "hours": "Saat",
@@ -920,7 +1024,6 @@ onMounted(() => {
     "notificationRequest": "Etkinleştir",
     "notificationTitle": "Zamanlayıcı bitti",
     "notificationBody": "Süre doldu.",
-    "statusRunning": "Çalışıyor",
     "statusPaused": "Duraklatıldı",
     "statusComplete": "Tamamlandı",
     "errorTitle": "Hata",
@@ -931,6 +1034,8 @@ onMounted(() => {
     "pause": "Pauze",
     "resume": "Hervatten",
     "reset": "Reset",
+    "fullscreenEnter": "Volledig scherm",
+    "fullscreenExit": "Volledig scherm verlaten",
     "durationTitle": "Duur",
     "durationHint": "Stel de duur in voordat je start.",
     "hours": "Uren",
@@ -949,7 +1054,6 @@ onMounted(() => {
     "notificationRequest": "Inschakelen",
     "notificationTitle": "Timer afgelopen",
     "notificationBody": "De tijd is om.",
-    "statusRunning": "Bezig",
     "statusPaused": "Gepauzeerd",
     "statusComplete": "Voltooid",
     "errorTitle": "Fout",
@@ -960,6 +1064,8 @@ onMounted(() => {
     "pause": "Paus",
     "resume": "Fortsätt",
     "reset": "Återställ",
+    "fullscreenEnter": "Fullskärm",
+    "fullscreenExit": "Avsluta helskärm",
     "durationTitle": "Varaktighet",
     "durationHint": "Ställ in varaktigheten innan du startar.",
     "hours": "Timmar",
@@ -978,7 +1084,6 @@ onMounted(() => {
     "notificationRequest": "Aktivera",
     "notificationTitle": "Timer klar",
     "notificationBody": "Tiden är ute.",
-    "statusRunning": "Körs",
     "statusPaused": "Pausad",
     "statusComplete": "Klar",
     "errorTitle": "Fel",
@@ -989,6 +1094,8 @@ onMounted(() => {
     "pause": "Pauza",
     "resume": "Wznów",
     "reset": "Reset",
+    "fullscreenEnter": "Pełny ekran",
+    "fullscreenExit": "Wyjdź z pełnego ekranu",
     "durationTitle": "Czas",
     "durationHint": "Ustaw czas przed rozpoczęciem.",
     "hours": "Godziny",
@@ -1007,7 +1114,6 @@ onMounted(() => {
     "notificationRequest": "Włącz",
     "notificationTitle": "Koniec timera",
     "notificationBody": "Czas minął.",
-    "statusRunning": "Działa",
     "statusPaused": "Wstrzymany",
     "statusComplete": "Zakończony",
     "errorTitle": "Błąd",
@@ -1018,6 +1124,8 @@ onMounted(() => {
     "pause": "Tạm dừng",
     "resume": "Tiếp tục",
     "reset": "Đặt lại",
+    "fullscreenEnter": "Toàn màn hình",
+    "fullscreenExit": "Thoát toàn màn hình",
     "durationTitle": "Thời lượng",
     "durationHint": "Hãy đặt thời lượng trước khi bắt đầu.",
     "hours": "Giờ",
@@ -1036,7 +1144,6 @@ onMounted(() => {
     "notificationRequest": "Bật",
     "notificationTitle": "Hết giờ",
     "notificationBody": "Đã hết thời gian.",
-    "statusRunning": "Đang chạy",
     "statusPaused": "Tạm dừng",
     "statusComplete": "Hoàn thành",
     "errorTitle": "Lỗi",
@@ -1047,6 +1154,8 @@ onMounted(() => {
     "pause": "หยุดชั่วคราว",
     "resume": "ทำต่อ",
     "reset": "รีเซ็ต",
+    "fullscreenEnter": "เต็มหน้าจอ",
+    "fullscreenExit": "ออกจากเต็มหน้าจอ",
     "durationTitle": "ระยะเวลา",
     "durationHint": "ตั้งระยะเวลาก่อนเริ่มนับถอยหลัง",
     "hours": "ชั่วโมง",
@@ -1065,7 +1174,6 @@ onMounted(() => {
     "notificationRequest": "เปิดใช้งาน",
     "notificationTitle": "ตัวตั้งเวลาเสร็จสิ้น",
     "notificationBody": "หมดเวลาแล้ว",
-    "statusRunning": "กำลังทำงาน",
     "statusPaused": "หยุดชั่วคราว",
     "statusComplete": "เสร็จสิ้น",
     "errorTitle": "ข้อผิดพลาด",
@@ -1076,6 +1184,8 @@ onMounted(() => {
     "pause": "Jeda",
     "resume": "Lanjutkan",
     "reset": "Reset",
+    "fullscreenEnter": "Layar penuh",
+    "fullscreenExit": "Keluar dari layar penuh",
     "durationTitle": "Durasi",
     "durationHint": "Atur durasi sebelum memulai.",
     "hours": "Jam",
@@ -1094,7 +1204,6 @@ onMounted(() => {
     "notificationRequest": "Aktifkan",
     "notificationTitle": "Timer selesai",
     "notificationBody": "Waktu habis.",
-    "statusRunning": "Berjalan",
     "statusPaused": "Dijeda",
     "statusComplete": "Selesai",
     "errorTitle": "Kesalahan",
@@ -1105,6 +1214,8 @@ onMounted(() => {
     "pause": "השהה",
     "resume": "המשך",
     "reset": "אפס",
+    "fullscreenEnter": "מסך מלא",
+    "fullscreenExit": "צא ממסך מלא",
     "durationTitle": "משך",
     "durationHint": "הגדר משך לפני ההתחלה.",
     "hours": "שעות",
@@ -1123,7 +1234,6 @@ onMounted(() => {
     "notificationRequest": "הפעל",
     "notificationTitle": "הטיימר הסתיים",
     "notificationBody": "הזמן נגמר.",
-    "statusRunning": "פועל",
     "statusPaused": "מושהה",
     "statusComplete": "הושלם",
     "errorTitle": "שגיאה",
@@ -1134,6 +1244,8 @@ onMounted(() => {
     "pause": "Jeda",
     "resume": "Sambung",
     "reset": "Tetapkan semula",
+    "fullscreenEnter": "Skrin penuh",
+    "fullscreenExit": "Keluar skrin penuh",
     "durationTitle": "Tempoh",
     "durationHint": "Tetapkan tempoh sebelum mula.",
     "hours": "Jam",
@@ -1152,7 +1264,6 @@ onMounted(() => {
     "notificationRequest": "Aktifkan",
     "notificationTitle": "Pemasa tamat",
     "notificationBody": "Masa tamat.",
-    "statusRunning": "Sedang berjalan",
     "statusPaused": "Dijeda",
     "statusComplete": "Selesai",
     "errorTitle": "Ralat",
@@ -1163,6 +1274,8 @@ onMounted(() => {
     "pause": "Pause",
     "resume": "Fortsett",
     "reset": "Tilbakestill",
+    "fullscreenEnter": "Fullskjerm",
+    "fullscreenExit": "Avslutt fullskjerm",
     "durationTitle": "Varighet",
     "durationHint": "Angi varighet før du starter.",
     "hours": "Timer",
@@ -1181,7 +1294,6 @@ onMounted(() => {
     "notificationRequest": "Aktiver",
     "notificationTitle": "Nedtelling ferdig",
     "notificationBody": "Tiden er ute.",
-    "statusRunning": "Kjører",
     "statusPaused": "Pauset",
     "statusComplete": "Fullført",
     "errorTitle": "Feil",

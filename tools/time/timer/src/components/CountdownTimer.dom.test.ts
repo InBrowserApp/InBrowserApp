@@ -69,6 +69,9 @@ const setStorageValue = (key: string, value: unknown) => {
 const originalAudioContext = globalThis.AudioContext
 const originalNotification = globalThis.Notification
 const originalVibrate = navigator.vibrate
+const originalRequestFullscreen = HTMLElement.prototype.requestFullscreen
+const originalExitFullscreen = document.exitFullscreen
+const originalDocumentFullScreen = Object.getOwnPropertyDescriptor(document, 'fullScreen')
 
 const restoreGlobals = () => {
   if (originalAudioContext) {
@@ -104,6 +107,54 @@ const setVibrate = (value: Navigator['vibrate'] | undefined) => {
     value,
     configurable: true,
   })
+}
+
+const restoreFullscreen = () => {
+  if (originalRequestFullscreen) {
+    Object.defineProperty(HTMLElement.prototype, 'requestFullscreen', {
+      value: originalRequestFullscreen,
+      configurable: true,
+    })
+  } else {
+    delete (HTMLElement.prototype as { requestFullscreen?: unknown }).requestFullscreen
+  }
+
+  if (originalExitFullscreen) {
+    Object.defineProperty(document, 'exitFullscreen', {
+      value: originalExitFullscreen,
+      configurable: true,
+    })
+  } else {
+    delete (document as { exitFullscreen?: unknown }).exitFullscreen
+  }
+
+  if (originalDocumentFullScreen) {
+    Object.defineProperty(document, 'fullScreen', originalDocumentFullScreen)
+  } else {
+    delete (document as { fullScreen?: unknown }).fullScreen
+  }
+}
+
+const setFullscreenSupport = () => {
+  const requestFullscreen = vi.fn(async () => {})
+  const exitFullscreen = vi.fn(async () => {})
+
+  Object.defineProperty(HTMLElement.prototype, 'requestFullscreen', {
+    value: requestFullscreen,
+    configurable: true,
+  })
+
+  Object.defineProperty(document, 'exitFullscreen', {
+    value: exitFullscreen,
+    configurable: true,
+  })
+
+  Object.defineProperty(document, 'fullScreen', {
+    value: false,
+    configurable: true,
+  })
+
+  return { requestFullscreen, exitFullscreen }
 }
 
 const createAudioContextMock = () => {
@@ -194,6 +245,16 @@ const loadCountdownTimer = async () => {
   return module.default
 }
 
+const mountedWrappers: ReturnType<typeof mount>[] = []
+
+const unmountWrapper = (wrapper: ReturnType<typeof mount>) => {
+  const index = mountedWrappers.indexOf(wrapper)
+  if (index >= 0) {
+    mountedWrappers.splice(index, 1)
+  }
+  wrapper.unmount()
+}
+
 const baseStubs = {
   ToolSection: {
     template: '<section><slot /></section>',
@@ -220,11 +281,13 @@ const setSwitchValue = async (wrapper: ReturnType<typeof mount>, index: number, 
 
 const mountCountdownTimer = async () => {
   const CountdownTimer = await loadCountdownTimer()
-  return mount(CountdownTimer, {
+  const wrapper = mount(CountdownTimer, {
     global: {
       stubs: baseStubs,
     },
   })
+  mountedWrappers.push(wrapper)
+  return wrapper
 }
 
 beforeEach(() => {
@@ -234,9 +297,13 @@ beforeEach(() => {
 })
 
 afterEach(() => {
+  mountedWrappers.splice(0).forEach((wrapper) => {
+    unmountWrapper(wrapper)
+  })
   clearStorage()
   vi.useRealTimers()
   restoreGlobals()
+  restoreFullscreen()
   vi.clearAllMocks()
 })
 
@@ -270,7 +337,7 @@ describe('CountdownTimer', () => {
     expect(wrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:01.00')
 
     await wrapper.get('[data-testid="start"]').trigger('click')
-    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('Running')
+    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('')
 
     const audioInstance = audio.getLastInstance()
     expect(audioInstance?.resume).toHaveBeenCalledTimes(1)
@@ -300,6 +367,52 @@ describe('CountdownTimer', () => {
 
     await wrapper.get('[data-testid="reset"]').trigger('click')
     expect(wrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:01.00')
+  })
+
+  it('skips sound and vibration when disabled', async () => {
+    const audio = createAudioContextMock()
+    Object.defineProperty(globalThis, 'AudioContext', {
+      value: audio.MockAudioContext,
+      configurable: true,
+    })
+
+    const notification = createNotificationMock({ permission: 'granted' })
+    Object.defineProperty(globalThis, 'Notification', {
+      value: notification,
+      configurable: true,
+    })
+
+    const vibrate = vi.fn()
+    setVibrate(vibrate)
+
+    setStorageValue('tools:timer:hours', 0)
+    setStorageValue('tools:timer:minutes', 0)
+    setStorageValue('tools:timer:seconds', 1)
+    setStorageValue('tools:timer:sound', false)
+    setStorageValue('tools:timer:vibration', false)
+    setStorageValue('tools:timer:notification', false)
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    await setSwitchValue(wrapper, 0, false)
+    await setSwitchValue(wrapper, 1, false)
+
+    const vm = wrapper.vm as unknown as {
+      soundEnabled: boolean
+      vibrationEnabled: boolean
+    }
+
+    expect(vm.soundEnabled).toBe(false)
+    expect(vm.vibrationEnabled).toBe(false)
+
+    await wrapper.get('[data-testid="start"]').trigger('click')
+    vi.advanceTimersByTime(1100)
+    await nextTick()
+    await vi.runAllTicks()
+
+    expect(audio.createOscillator).not.toHaveBeenCalled()
+    expect(vibrate).not.toHaveBeenCalled()
   })
 
   it('handles invalid duration, presets, and ignores actions', async () => {
@@ -399,6 +512,30 @@ describe('CountdownTimer', () => {
     await vi.runAllTicks()
   })
 
+  it('requests notification permission when enabling notifications', async () => {
+    const audio = createAudioContextMock()
+    Object.defineProperty(globalThis, 'AudioContext', {
+      value: audio.MockAudioContext,
+      configurable: true,
+    })
+
+    const notification = createNotificationMock({
+      permission: 'default',
+      requestPermissionImpl: () => 'granted',
+    })
+    Object.defineProperty(globalThis, 'Notification', {
+      value: notification,
+      configurable: true,
+    })
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    await setSwitchValue(wrapper, 2, true)
+
+    expect(notification.requestPermission).toHaveBeenCalledTimes(1)
+  })
+
   it('shows notification states and handles permission requests', async () => {
     const audio = createAudioContextMock()
     Object.defineProperty(globalThis, 'AudioContext', {
@@ -433,9 +570,9 @@ describe('CountdownTimer', () => {
     expect(notification.requestPermission).toHaveBeenCalledTimes(1)
 
     await vm.requestNotificationPermission()
-    expect(notification.requestPermission).toHaveBeenCalledTimes(2)
+    expect(notification.requestPermission).toHaveBeenCalledTimes(1)
 
-    wrapper.unmount()
+    unmountWrapper(wrapper)
     ;(notification as { permission: NotificationPermission }).permission = 'granted'
     vi.resetModules()
     const grantedWrapper = await mountCountdownTimer()
@@ -444,7 +581,7 @@ describe('CountdownTimer', () => {
     }
 
     await grantedVm.requestNotificationPermission()
-    expect(notification.requestPermission).toHaveBeenCalledTimes(2)
+    expect(notification.requestPermission).toHaveBeenCalledTimes(1)
     expect(grantedWrapper.get('[data-testid="notification-hint"]').text()).toContain(
       'Notifications are enabled.',
     )
@@ -517,7 +654,7 @@ describe('CountdownTimer', () => {
     await nextTick()
     await vi.runAllTicks()
 
-    wrapper.unmount()
+    unmountWrapper(wrapper)
 
     const notificationGranted = createNotificationMock({
       permission: 'granted',
@@ -599,7 +736,7 @@ describe('CountdownTimer', () => {
     await wrapper.get('[data-testid="start"]').trigger('click')
     await wrapper.get('[data-testid="pause"]').trigger('click')
 
-    wrapper.unmount()
+    unmountWrapper(wrapper)
 
     setStorageValue('tools:timer:hours', 0)
     setStorageValue('tools:timer:minutes', 0)
@@ -612,7 +749,7 @@ describe('CountdownTimer', () => {
 
     expect(expiredWrapper.get('[data-testid="timer-status"]').text()).toBe('Completed')
 
-    expiredWrapper.unmount()
+    unmountWrapper(expiredWrapper)
 
     setStorageValue('tools:timer:hours', 0)
     setStorageValue('tools:timer:minutes', 0)
@@ -630,5 +767,24 @@ describe('CountdownTimer', () => {
 
     const updatedDisplay = futureWrapper.get('[data-testid="timer-display"]').text()
     expect(updatedDisplay).not.toBe(initialDisplay)
+  })
+  it('shows fullscreen controls when entered', async () => {
+    const { requestFullscreen, exitFullscreen } = setFullscreenSupport()
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    await wrapper.get('[data-testid="fullscreen-enter"]').trigger('click')
+    await nextTick()
+
+    expect(requestFullscreen).toHaveBeenCalledTimes(1)
+    const controls = wrapper.get('[data-testid="fullscreen-controls"]')
+    expect(controls.element.style.display).toBe('')
+
+    await wrapper.get('[data-testid="fullscreen-exit"]').trigger('click')
+    await nextTick()
+
+    expect(exitFullscreen).toHaveBeenCalledTimes(1)
+    expect(controls.element.style.display).toBe('none')
   })
 })
