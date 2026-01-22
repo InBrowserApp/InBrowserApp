@@ -123,6 +123,10 @@ function clearInput(): void {
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
 }
+
+:deep(.n-form-item-label__text) {
+  width: 100%;
+}
 </style>
 
 <i18n lang="json">
