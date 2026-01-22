@@ -155,6 +155,8 @@ const globalStubs = {
   NButton: NButtonStub,
   NFlex: WrapperStub,
   NFormItem: WrapperStub,
+  NFormItemGi: WrapperStub,
+  'n-form-item-gi': WrapperStub,
   NGrid: WrapperStub,
   NIcon: WrapperStub,
   NInput: NInputStub,

@@ -50,27 +50,27 @@
   <ToolSectionHeader>{{ t('subjectTitle') }}</ToolSectionHeader>
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item :label="t('commonName')">
+      <n-form-item-gi :label="t('commonName')" :show-feedback="false">
         <n-input v-model:value="subject.commonName" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('organization')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('organization')" :show-feedback="false">
         <n-input v-model:value="subject.organization" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('organizationalUnit')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('organizationalUnit')" :show-feedback="false">
         <n-input v-model:value="subject.organizationalUnit" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('country')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('country')" :show-feedback="false">
         <n-input v-model:value="subject.country" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('state')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('state')" :show-feedback="false">
         <n-input v-model:value="subject.state" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('locality')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('locality')" :show-feedback="false">
         <n-input v-model:value="subject.locality" class="monospace-field" />
-      </n-form-item>
-      <n-form-item :label="t('emailAddress')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('emailAddress')" :show-feedback="false">
         <n-input v-model:value="subject.emailAddress" class="monospace-field" />
-      </n-form-item>
+      </n-form-item-gi>
     </n-grid>
     <n-text depth="3" class="input-hint">{{ t('subjectHint') }}</n-text>
   </ToolSection>
@@ -78,7 +78,7 @@
   <ToolSectionHeader>{{ t('sanTitle') }}</ToolSectionHeader>
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item :label="t('sanDnsLabel')">
+      <n-form-item-gi :label="t('sanDnsLabel')" :show-feedback="false">
         <n-input
           v-model:value="sanDns"
           class="monospace-field"
@@ -86,8 +86,8 @@
           :autosize="{ minRows: 2, maxRows: 6 }"
           :placeholder="t('sanDnsPlaceholder')"
         />
-      </n-form-item>
-      <n-form-item :label="t('sanIpLabel')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('sanIpLabel')" :show-feedback="false">
         <n-input
           v-model:value="sanIp"
           class="monospace-field"
@@ -95,8 +95,8 @@
           :autosize="{ minRows: 2, maxRows: 6 }"
           :placeholder="t('sanIpPlaceholder')"
         />
-      </n-form-item>
-      <n-form-item :label="t('sanEmailLabel')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('sanEmailLabel')" :show-feedback="false">
         <n-input
           v-model:value="sanEmail"
           class="monospace-field"
@@ -104,8 +104,8 @@
           :autosize="{ minRows: 2, maxRows: 6 }"
           :placeholder="t('sanEmailPlaceholder')"
         />
-      </n-form-item>
-      <n-form-item :label="t('sanUriLabel')">
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('sanUriLabel')" :show-feedback="false">
         <n-input
           v-model:value="sanUri"
           class="monospace-field"
@@ -113,7 +113,7 @@
           :autosize="{ minRows: 2, maxRows: 6 }"
           :placeholder="t('sanUriPlaceholder')"
         />
-      </n-form-item>
+      </n-form-item-gi>
     </n-grid>
     <n-text depth="3" class="input-hint">{{ t('sanHint') }}</n-text>
   </ToolSection>
@@ -189,6 +189,7 @@ import {
   NButton,
   NFlex,
   NFormItem,
+  NFormItemGi,
   NGrid,
   NIcon,
   NInput,
