@@ -704,7 +704,7 @@ describe('CountdownTimer', () => {
     expect(vm.notificationPermission).toBe('unsupported')
     expect(vm.notificationHint).toContain('Notifications are not supported')
     const formItems = wrapper.findAllComponents({ name: 'NFormItemGi' })
-    const notificationItem = formItems[formItems.length - 1].element as HTMLElement
+    const notificationItem = formItems[formItems.length - 1]!.element as HTMLElement
     expect(notificationItem.style.display).toBe('none')
     const hint = wrapper.get('[data-testid="notification-hint"]').element as HTMLElement
     expect(hint.style.display).toBe('none')
