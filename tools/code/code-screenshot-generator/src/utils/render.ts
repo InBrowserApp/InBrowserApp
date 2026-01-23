@@ -3,7 +3,7 @@ import type { Theme, TokenStyle, BackgroundPreset } from './themes'
 
 export type RenderMode = 'highlight' | 'plain'
 export type WindowStyle = 'mac' | 'windows' | 'none'
-export type BackgroundMode = 'preset' | 'solid' | 'transparent'
+export type BackgroundMode = 'preset' | 'solid' | 'transparent' | 'none'
 
 export type HighlightToken = {
   text: string
@@ -33,6 +33,7 @@ export type CodeShotLayout = {
 export type BackgroundConfig =
   | { type: 'preset'; preset: BackgroundPreset }
   | { type: 'solid'; color: string }
+  | { type: 'none' }
   | { type: 'transparent' }
 
 export type SvgOutput = {
@@ -174,6 +175,7 @@ const buildGradientStops = (colors: string[]) => {
 }
 
 const resolveBackgroundCss = (background: BackgroundConfig): string => {
+  if (background.type === 'none') return 'none'
   if (background.type === 'transparent') return 'transparent'
   if (background.type === 'solid') return background.color
 
@@ -187,6 +189,9 @@ const resolveBackgroundCss = (background: BackgroundConfig): string => {
 }
 
 const resolveBackgroundSvg = (background: BackgroundConfig) => {
+  if (background.type === 'none') {
+    return { defs: '', fill: 'none' }
+  }
   if (background.type === 'transparent') {
     return { defs: '', fill: 'none' }
   }
@@ -282,7 +287,7 @@ export const buildCodeShotSvg = (
     const radius = 6
     const cy = frameY + headerHeight / 2
     const cx = frameX + layout.padding
-    const gap = 14
+    const gap = 22
     const colors = ['#ff5f57', '#febc2e', '#28c840']
     windowControls = colors
       .map(
@@ -292,7 +297,7 @@ export const buildCodeShotSvg = (
       .join('')
   } else if (layout.windowStyle === 'windows') {
     const size = 10
-    const gap = 12
+    const gap = 20
     const top = frameY + headerHeight / 2 - size / 2
     const right = frameX + cardWidth - layout.padding - size * 3 - gap * 2
     const colors = ['#9ca3af', '#9ca3af', '#f87171']
@@ -490,9 +495,13 @@ ${snippet}
 }
 
 export const getBackgroundPreviewCss = (background: BackgroundConfig): string => {
+  if (background.type === 'none') return 'none'
   if (background.type !== 'transparent') return resolveBackgroundCss(background)
   return 'linear-gradient(45deg, #e2e8f0 25%, transparent 25%), linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e2e8f0 75%), linear-gradient(-45deg, transparent 75%, #e2e8f0 75%)'
 }
 
-export const getBackgroundPreviewSize = (background: BackgroundConfig): string =>
-  background.type === 'transparent' ? '20px 20px' : 'cover'
+export const getBackgroundPreviewSize = (background: BackgroundConfig): string => {
+  if (background.type === 'transparent') return '20px 20px'
+  if (background.type === 'none') return 'auto'
+  return 'cover'
+}

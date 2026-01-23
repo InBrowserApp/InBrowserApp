@@ -182,7 +182,7 @@ const code = useStorage<string>('tools:code-shot:code', defaultCode)
 const language = useStorage<string>('tools:code-shot:language', 'auto')
 const renderMode = useStorage<RenderMode>('tools:code-shot:renderMode', 'highlight')
 const themeId = useStorage<string>('tools:code-shot:theme', 'nebula')
-const backgroundType = useStorage<'preset' | 'solid' | 'transparent'>(
+const backgroundType = useStorage<'preset' | 'solid' | 'transparent' | 'none'>(
   'tools:code-shot:backgroundType',
   'preset',
 )
@@ -207,6 +207,9 @@ const activeTheme = computed(() => getThemeById(themeId.value))
 const backgroundConfig = computed<BackgroundConfig>(() => {
   if (backgroundType.value === 'transparent') {
     return { type: 'transparent' }
+  }
+  if (backgroundType.value === 'none') {
+    return { type: 'none' }
   }
   if (backgroundType.value === 'solid') {
     return { type: 'solid', color: backgroundColor.value }
@@ -285,6 +288,7 @@ const backgroundTypeOptions = computed(() => [
   { label: t('backgroundPreset'), value: 'preset' },
   { label: t('backgroundSolid'), value: 'solid' },
   { label: t('backgroundTransparent'), value: 'transparent' },
+  { label: t('backgroundNone'), value: 'none' },
 ])
 
 const backgroundPresetOptions = computed(() =>
@@ -310,6 +314,7 @@ const exportLabels = computed(() => ({
   jpg: t('exportJpg'),
   svg: t('exportSvg'),
   html: t('exportHtml'),
+  copySvg: t('exportCopySvg'),
   copyHtml: t('exportCopyHtml'),
   exportError: t('exportError'),
 }))
@@ -362,10 +367,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Scale",
     "exportQuality": "JPG quality",
     "exportRendering": "Rendering preview...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Copy HTML",
     "exportError": "Export failed",
     "theme.nebula": "Nebula",
@@ -376,7 +381,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Sunset",
     "background.ocean": "Ocean",
     "background.ember": "Ember",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "zh": {
     "inputTitle": "代码",
@@ -414,10 +421,10 @@ const exportLabels = computed(() => ({
     "exportScale": "倍率",
     "exportQuality": "JPG 质量",
     "exportRendering": "正在渲染预览...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "下载PNG",
+    "exportJpg": "下载JPG",
+    "exportSvg": "下载SVG",
+    "exportHtml": "下载HTML",
     "exportCopyHtml": "复制 HTML",
     "exportError": "导出失败",
     "theme.nebula": "星云",
@@ -428,7 +435,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "日落",
     "background.ocean": "海岸",
     "background.ember": "余烬",
-    "background.noir": "暗影"
+    "background.noir": "暗影",
+    "exportCopySvg": "复制SVG",
+    "backgroundNone": "无"
   },
   "zh-CN": {
     "inputTitle": "代码",
@@ -466,10 +475,10 @@ const exportLabels = computed(() => ({
     "exportScale": "倍率",
     "exportQuality": "JPG 质量",
     "exportRendering": "正在渲染预览...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "下载PNG",
+    "exportJpg": "下载JPG",
+    "exportSvg": "下载SVG",
+    "exportHtml": "下载HTML",
     "exportCopyHtml": "复制 HTML",
     "exportError": "导出失败",
     "theme.nebula": "星云",
@@ -480,7 +489,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "日落",
     "background.ocean": "海岸",
     "background.ember": "余烬",
-    "background.noir": "暗影"
+    "background.noir": "暗影",
+    "exportCopySvg": "复制SVG",
+    "backgroundNone": "无"
   },
   "zh-TW": {
     "inputTitle": "程式碼",
@@ -518,10 +529,10 @@ const exportLabels = computed(() => ({
     "exportScale": "倍率",
     "exportQuality": "JPG 品質",
     "exportRendering": "正在渲染預覽...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "下載PNG",
+    "exportJpg": "下載JPG",
+    "exportSvg": "下載SVG",
+    "exportHtml": "下載HTML",
     "exportCopyHtml": "複製 HTML",
     "exportError": "匯出失敗",
     "theme.nebula": "星雲",
@@ -532,7 +543,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "日落",
     "background.ocean": "海岸",
     "background.ember": "餘燼",
-    "background.noir": "暗影"
+    "background.noir": "暗影",
+    "exportCopySvg": "複製SVG",
+    "backgroundNone": "無"
   },
   "zh-HK": {
     "inputTitle": "程式碼",
@@ -570,10 +583,10 @@ const exportLabels = computed(() => ({
     "exportScale": "倍率",
     "exportQuality": "JPG 品質",
     "exportRendering": "正在渲染預覽...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "下載PNG",
+    "exportJpg": "下載JPG",
+    "exportSvg": "下載SVG",
+    "exportHtml": "下載HTML",
     "exportCopyHtml": "複製 HTML",
     "exportError": "匯出失敗",
     "theme.nebula": "星雲",
@@ -584,7 +597,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "日落",
     "background.ocean": "海岸",
     "background.ember": "餘燼",
-    "background.noir": "暗影"
+    "background.noir": "暗影",
+    "exportCopySvg": "複製SVG",
+    "backgroundNone": "無"
   },
   "es": {
     "inputTitle": "Código",
@@ -622,10 +637,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Escala",
     "exportQuality": "Calidad JPG",
     "exportRendering": "Renderizando vista previa...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Copiar HTML",
     "exportError": "Error al exportar",
     "theme.nebula": "Nébula",
@@ -636,7 +651,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Atardecer",
     "background.ocean": "Océano",
     "background.ember": "Ascua",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "fr": {
     "inputTitle": "Code",
@@ -674,10 +691,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Échelle",
     "exportQuality": "Qualité JPG",
     "exportRendering": "Rendu de l'aperçu...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Copier HTML",
     "exportError": "Échec de l'export",
     "theme.nebula": "Nébuleuse",
@@ -688,7 +705,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Coucher de soleil",
     "background.ocean": "Océan",
     "background.ember": "Braise",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "de": {
     "inputTitle": "Code",
@@ -726,10 +745,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skalierung",
     "exportQuality": "JPG-Qualität",
     "exportRendering": "Vorschau wird gerendert...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopieren",
     "exportError": "Export fehlgeschlagen",
     "theme.nebula": "Nebel",
@@ -740,7 +759,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Sonnenuntergang",
     "background.ocean": "Ozean",
     "background.ember": "Glut",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "it": {
     "inputTitle": "Codice",
@@ -778,10 +799,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Scala",
     "exportQuality": "Qualità JPG",
     "exportRendering": "Rendering anteprima...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Copia HTML",
     "exportError": "Esportazione non riuscita",
     "theme.nebula": "Nebulosa",
@@ -792,7 +813,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Tramonto",
     "background.ocean": "Oceano",
     "background.ember": "Brace",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "ja": {
     "inputTitle": "コード",
@@ -830,10 +853,10 @@ const exportLabels = computed(() => ({
     "exportScale": "倍率",
     "exportQuality": "JPG 品質",
     "exportRendering": "プレビューを生成中...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML をコピー",
     "exportError": "書き出しに失敗しました",
     "theme.nebula": "星雲",
@@ -844,7 +867,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "サンセット",
     "background.ocean": "オーシャン",
     "background.ember": "アンバー",
-    "background.noir": "ノワール"
+    "background.noir": "ノワール",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "ko": {
     "inputTitle": "코드",
@@ -882,10 +907,10 @@ const exportLabels = computed(() => ({
     "exportScale": "배율",
     "exportQuality": "JPG 품질",
     "exportRendering": "미리보기를 렌더링 중...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML 복사",
     "exportError": "내보내기 실패",
     "theme.nebula": "네뷸라",
@@ -896,7 +921,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "선셋",
     "background.ocean": "오션",
     "background.ember": "엠버",
-    "background.noir": "누아르"
+    "background.noir": "누아르",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "ru": {
     "inputTitle": "Код",
@@ -934,10 +961,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Масштаб",
     "exportQuality": "Качество JPG",
     "exportRendering": "Рендеринг предпросмотра...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Копировать HTML",
     "exportError": "Ошибка экспорта",
     "theme.nebula": "Туманность",
@@ -948,7 +975,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Закат",
     "background.ocean": "Океан",
     "background.ember": "Уголь",
-    "background.noir": "Нуар"
+    "background.noir": "Нуар",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "pt": {
     "inputTitle": "Código",
@@ -986,10 +1015,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Escala",
     "exportQuality": "Qualidade JPG",
     "exportRendering": "Renderizando prévia...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Copiar HTML",
     "exportError": "Falha ao exportar",
     "theme.nebula": "Nebulosa",
@@ -1000,7 +1029,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Pôr do sol",
     "background.ocean": "Oceano",
     "background.ember": "Brasa",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "ar": {
     "inputTitle": "الكود",
@@ -1038,10 +1069,10 @@ const exportLabels = computed(() => ({
     "exportScale": "المقياس",
     "exportQuality": "جودة JPG",
     "exportRendering": "جارٍ إنشاء المعاينة...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "نسخ HTML",
     "exportError": "فشل التصدير",
     "theme.nebula": "سديم",
@@ -1052,7 +1083,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "غروب",
     "background.ocean": "محيط",
     "background.ember": "جمر",
-    "background.noir": "نوار"
+    "background.noir": "نوار",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "hi": {
     "inputTitle": "कोड",
@@ -1090,10 +1123,10 @@ const exportLabels = computed(() => ({
     "exportScale": "स्केल",
     "exportQuality": "JPG गुणवत्ता",
     "exportRendering": "प्रीव्यू रेंडर हो रहा है...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML कॉपी करें",
     "exportError": "निर्यात विफल",
     "theme.nebula": "नेबुला",
@@ -1104,7 +1137,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "सनसेट",
     "background.ocean": "ओशन",
     "background.ember": "एंबर",
-    "background.noir": "नोयर"
+    "background.noir": "नोयर",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "tr": {
     "inputTitle": "Kod",
@@ -1142,10 +1177,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Ölçek",
     "exportQuality": "JPG kalitesi",
     "exportRendering": "Önizleme oluşturuluyor...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopyala",
     "exportError": "Dışa aktarma başarısız",
     "theme.nebula": "Nebula",
@@ -1156,7 +1191,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Gün batımı",
     "background.ocean": "Okyanus",
     "background.ember": "Kızıl",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "nl": {
     "inputTitle": "Code",
@@ -1194,10 +1231,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Schaal",
     "exportQuality": "JPG-kwaliteit",
     "exportRendering": "Voorbeeld wordt gerenderd...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopiëren",
     "exportError": "Export mislukt",
     "theme.nebula": "Nebula",
@@ -1208,7 +1245,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Zonsondergang",
     "background.ocean": "Oceaan",
     "background.ember": "Gloed",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "sv": {
     "inputTitle": "Kod",
@@ -1246,10 +1285,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skala",
     "exportQuality": "JPG-kvalitet",
     "exportRendering": "Renderar förhandsvisning...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopiera HTML",
     "exportError": "Export misslyckades",
     "theme.nebula": "Nebula",
@@ -1260,7 +1299,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Solnedgång",
     "background.ocean": "Hav",
     "background.ember": "Glöd",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "pl": {
     "inputTitle": "Kod",
@@ -1298,10 +1339,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skala",
     "exportQuality": "Jakość JPG",
     "exportRendering": "Renderowanie podglądu...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopiuj HTML",
     "exportError": "Eksport nie powiódł się",
     "theme.nebula": "Mgławica",
@@ -1312,7 +1353,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Zachód",
     "background.ocean": "Ocean",
     "background.ember": "Żar",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "vi": {
     "inputTitle": "Mã",
@@ -1350,10 +1393,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Tỉ lệ",
     "exportQuality": "Chất lượng JPG",
     "exportRendering": "Đang kết xuất xem trước...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Sao chép HTML",
     "exportError": "Xuất thất bại",
     "theme.nebula": "Tinh vân",
@@ -1364,7 +1407,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Hoàng hôn",
     "background.ocean": "Đại dương",
     "background.ember": "Tàn lửa",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "th": {
     "inputTitle": "โค้ด",
@@ -1402,10 +1447,10 @@ const exportLabels = computed(() => ({
     "exportScale": "สเกล",
     "exportQuality": "คุณภาพ JPG",
     "exportRendering": "กำลังเรนเดอร์ตัวอย่าง...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "คัดลอก HTML",
     "exportError": "ส่งออกล้มเหลว",
     "theme.nebula": "เนบิวลา",
@@ -1416,7 +1461,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "พระอาทิตย์ตก",
     "background.ocean": "มหาสมุทร",
     "background.ember": "ถ่านแดง",
-    "background.noir": "นัวร์"
+    "background.noir": "นัวร์",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "id": {
     "inputTitle": "Kode",
@@ -1454,10 +1501,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skala",
     "exportQuality": "Kualitas JPG",
     "exportRendering": "Merender pratinjau...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Salin HTML",
     "exportError": "Ekspor gagal",
     "theme.nebula": "Nebula",
@@ -1468,7 +1515,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Sunset",
     "background.ocean": "Laut",
     "background.ember": "Bara",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "he": {
     "inputTitle": "קוד",
@@ -1506,10 +1555,10 @@ const exportLabels = computed(() => ({
     "exportScale": "קנה מידה",
     "exportQuality": "איכות JPG",
     "exportRendering": "מעבד תצוגה מקדימה...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "העתק HTML",
     "exportError": "הייצוא נכשל",
     "theme.nebula": "ערפילית",
@@ -1520,7 +1569,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "שקיעה",
     "background.ocean": "אוקיינוס",
     "background.ember": "גחלת",
-    "background.noir": "נואר"
+    "background.noir": "נואר",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "ms": {
     "inputTitle": "Kod",
@@ -1558,10 +1609,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skala",
     "exportQuality": "Kualiti JPG",
     "exportRendering": "Merender pratonton...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Salin HTML",
     "exportError": "Eksport gagal",
     "theme.nebula": "Nebula",
@@ -1572,7 +1623,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Matahari terbenam",
     "background.ocean": "Lautan",
     "background.ember": "Bara",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   },
   "no": {
     "inputTitle": "Kode",
@@ -1610,10 +1663,10 @@ const exportLabels = computed(() => ({
     "exportScale": "Skala",
     "exportQuality": "JPG-kvalitet",
     "exportRendering": "Rendrer forhåndsvisning...",
-    "exportPng": "PNG",
-    "exportJpg": "JPG",
-    "exportSvg": "SVG",
-    "exportHtml": "HTML",
+    "exportPng": "Download PNG",
+    "exportJpg": "Download JPG",
+    "exportSvg": "Download SVG",
+    "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopier HTML",
     "exportError": "Eksport mislyktes",
     "theme.nebula": "Tåke",
@@ -1624,7 +1677,9 @@ const exportLabels = computed(() => ({
     "background.sunset": "Solnedgang",
     "background.ocean": "Hav",
     "background.ember": "Glør",
-    "background.noir": "Noir"
+    "background.noir": "Noir",
+    "exportCopySvg": "Copy SVG",
+    "backgroundNone": "None"
   }
 }
 </i18n>

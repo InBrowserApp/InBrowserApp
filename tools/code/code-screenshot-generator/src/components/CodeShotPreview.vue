@@ -15,12 +15,17 @@
       </div>
       <div class="code-shot-body" :style="bodyStyle">
         <div v-if="layout.showLineNumbers" class="line-numbers" :style="lineNumberStyle">
-          <div v-for="line in lineNumbers" :key="line" class="line-number">
+          <div v-for="line in lineNumbers" :key="line" class="line-number" :style="lineRowStyle">
             {{ line }}
           </div>
         </div>
         <div class="code-lines" :style="codeStyle">
-          <div v-for="(line, lineIndex) in lines" :key="lineIndex" class="code-line">
+          <div
+            v-for="(line, lineIndex) in lines"
+            :key="lineIndex"
+            class="code-line"
+            :style="lineRowStyle"
+          >
             <template v-if="line.length">
               <span
                 v-for="(token, tokenIndex) in line"
@@ -105,6 +110,11 @@ const codeStyle = computed<CSSProperties>(() => ({
   lineHeight: `${props.layout.lineHeight}`,
   whiteSpace: 'pre',
   tabSize: `${props.layout.tabSize}`,
+}))
+
+const lineRowStyle = computed<CSSProperties>(() => ({
+  lineHeight: `${props.layout.lineHeight}`,
+  minHeight: `${props.layout.lineHeight}em`,
 }))
 
 const tokenStyle = (token: StyledToken) => ({
@@ -196,6 +206,8 @@ const tokenStyle = (token: StyledToken) => ({
 
 .line-numbers {
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .line-number {
@@ -204,10 +216,11 @@ const tokenStyle = (token: StyledToken) => ({
 
 .code-lines {
   white-space: pre;
+  display: flex;
+  flex-direction: column;
 }
 
 .code-line {
-  min-height: 1em;
 }
 
 .code-token {

@@ -81,6 +81,12 @@
     </n-flex>
 
     <n-flex align="center" :size="8" wrap>
+      <CopyToClipboardButton :content="svgMarkup">
+        <template #icon>
+          <n-icon><CodeIcon /></n-icon>
+        </template>
+        <template #label>{{ labels.copySvg }}</template>
+      </CopyToClipboardButton>
       <CopyToClipboardButton :content="htmlSnippet">
         <template #icon>
           <n-icon><CopyIcon /></n-icon>
@@ -134,6 +140,7 @@ const props = defineProps<{
     jpg: string
     svg: string
     html: string
+    copySvg: string
     copyHtml: string
     exportError: string
   }
