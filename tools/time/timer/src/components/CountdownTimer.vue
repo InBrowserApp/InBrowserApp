@@ -2,10 +2,13 @@
   <div
     ref="fullscreenTarget"
     class="timer-root"
-    :class="{ 'timer-root--fullscreen': isFullscreen }"
+    :class="{
+      'timer-root--fullscreen': isFullscreenActive,
+      'timer-root--overlay': isFullscreenOverlay,
+    }"
   >
     <ToolSection>
-      <div class="timer-display" :class="{ 'timer-display--fullscreen': isFullscreen }">
+      <div class="timer-display" :class="{ 'timer-display--fullscreen': isFullscreenActive }">
         <div class="timer-time" data-testid="timer-display">{{ formattedRemaining }}</div>
         <n-text depth="3" :type="statusType" data-testid="timer-status">
           {{ statusText }}
@@ -13,7 +16,7 @@
       </div>
     </ToolSection>
 
-    <ToolSection v-show="!isFullscreen">
+    <ToolSection v-show="!isFullscreenActive">
       <n-flex :size="12" wrap justify="center">
         <n-button type="primary" :disabled="running" @click="start" data-testid="start">
           <template #icon>
@@ -33,7 +36,11 @@
           </template>
           {{ t('reset') }}
         </n-button>
-        <n-button v-show="fullscreenSupported" @click="enter" data-testid="fullscreen-enter">
+        <n-button
+          v-show="fullscreenAvailable"
+          @click="enterFullscreen"
+          data-testid="fullscreen-enter"
+        >
           <template #icon>
             <n-icon :component="FullScreenMaximize16Regular" />
           </template>
@@ -42,7 +49,7 @@
       </n-flex>
     </ToolSection>
 
-    <div v-show="isFullscreen" class="fullscreen-controls" data-testid="fullscreen-controls">
+    <div v-show="isFullscreenActive" class="fullscreen-controls" data-testid="fullscreen-controls">
       <n-flex :size="8" align="center">
         <n-button type="primary" :disabled="running" @click="start" data-testid="fullscreen-start">
           <template #icon>
@@ -62,7 +69,7 @@
           </template>
           {{ t('reset') }}
         </n-button>
-        <n-button @click="exit" data-testid="fullscreen-exit">
+        <n-button @click="exitFullscreen" data-testid="fullscreen-exit">
           <template #icon>
             <n-icon :component="FullScreenMinimize24Regular" />
           </template>
@@ -177,7 +184,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import {
   NAlert,
   NButton,
@@ -216,10 +223,36 @@ const notificationEnabled = useStorage('tools:timer:notification', false)
 const fullscreenTarget = ref<HTMLElement | null>(null)
 const {
   isSupported: fullscreenSupported,
-  isFullscreen,
-  enter,
-  exit,
+  isFullscreen: isNativeFullscreen,
+  enter: enterNativeFullscreen,
+  exit: exitNativeFullscreen,
 } = useFullscreen(fullscreenTarget)
+
+const isIOSDevice =
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 1)
+
+const fullscreenAvailable = computed(() => fullscreenSupported.value || isIOSDevice)
+const pseudoFullscreen = ref(false)
+const isFullscreenActive = computed(() =>
+  fullscreenSupported.value ? isNativeFullscreen.value : pseudoFullscreen.value,
+)
+const isFullscreenOverlay = computed(() => !fullscreenSupported.value && pseudoFullscreen.value)
+const bodyOverflow = ref<string | null>(null)
+
+const setBodyOverflow = (locked: boolean) => {
+  if (locked) {
+    if (bodyOverflow.value === null) {
+      bodyOverflow.value = document.body.style.overflow
+    }
+    document.body.style.overflow = 'hidden'
+    return
+  }
+  if (bodyOverflow.value !== null) {
+    document.body.style.overflow = bodyOverflow.value
+    bodyOverflow.value = null
+  }
+}
 
 const {
   now,
@@ -291,6 +324,14 @@ const notificationHint = computed(() => {
   if (notificationPermission.value === 'denied') return t('notificationDenied')
   if (notificationPermission.value === 'default') return t('notificationDefault')
   return t('notificationGranted')
+})
+
+watch(pseudoFullscreen, (value) => {
+  setBodyOverflow(value)
+})
+
+onBeforeUnmount(() => {
+  setBodyOverflow(false)
 })
 
 let audioContext: AudioContext | null = null
@@ -410,6 +451,22 @@ const handleNotificationToggle = async (value: boolean) => {
   await requestNotificationPermission()
 }
 
+const enterFullscreen = async () => {
+  if (fullscreenSupported.value) {
+    await enterNativeFullscreen()
+    return
+  }
+  pseudoFullscreen.value = true
+}
+
+const exitFullscreen = async () => {
+  if (fullscreenSupported.value) {
+    await exitNativeFullscreen()
+    return
+  }
+  pseudoFullscreen.value = false
+}
+
 const resetOutputError = () => {
   errorMessage.value = ''
 }
@@ -512,6 +569,15 @@ onMounted(() => {
 .timer-root--fullscreen {
   min-height: 100vh;
   padding: 24px 16px 96px;
+}
+
+.timer-root--overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: var(--n-color);
+  overflow: auto;
+  padding: calc(24px + env(safe-area-inset-top)) 16px calc(96px + env(safe-area-inset-bottom));
 }
 
 .timer-root--fullscreen .timer-time {

@@ -69,6 +69,8 @@ const setStorageValue = (key: string, value: unknown) => {
 const originalAudioContext = globalThis.AudioContext
 const originalNotification = globalThis.Notification
 const originalVibrate = navigator.vibrate
+const originalUserAgent = navigator.userAgent
+const originalMaxTouchPoints = navigator.maxTouchPoints
 const originalRequestFullscreen = HTMLElement.prototype.requestFullscreen
 const originalExitFullscreen = document.exitFullscreen
 const originalDocumentFullScreen = Object.getOwnPropertyDescriptor(document, 'fullScreen')
@@ -100,10 +102,34 @@ const restoreGlobals = () => {
   } else {
     delete (navigator as { vibrate?: unknown }).vibrate
   }
+
+  Object.defineProperty(navigator, 'userAgent', {
+    value: originalUserAgent,
+    configurable: true,
+  })
+
+  Object.defineProperty(navigator, 'maxTouchPoints', {
+    value: originalMaxTouchPoints,
+    configurable: true,
+  })
 }
 
 const setVibrate = (value: Navigator['vibrate'] | undefined) => {
   Object.defineProperty(navigator, 'vibrate', {
+    value,
+    configurable: true,
+  })
+}
+
+const setUserAgent = (value: string) => {
+  Object.defineProperty(navigator, 'userAgent', {
+    value,
+    configurable: true,
+  })
+}
+
+const setMaxTouchPoints = (value: number) => {
+  Object.defineProperty(navigator, 'maxTouchPoints', {
     value,
     configurable: true,
   })
@@ -133,6 +159,12 @@ const restoreFullscreen = () => {
   } else {
     delete (document as { fullScreen?: unknown }).fullScreen
   }
+}
+
+const setFullscreenUnsupported = () => {
+  delete (HTMLElement.prototype as { requestFullscreen?: unknown }).requestFullscreen
+  delete (document as { exitFullscreen?: unknown }).exitFullscreen
+  delete (document as { fullScreen?: unknown }).fullScreen
 }
 
 const setFullscreenSupport = () => {
@@ -791,5 +823,69 @@ describe('CountdownTimer', () => {
 
     expect(exitFullscreen).toHaveBeenCalledTimes(1)
     expect(controls.style.display).toBe('none')
+  })
+
+  it('shows simulated fullscreen controls on iOS when fullscreen is unsupported', async () => {
+    setFullscreenUnsupported()
+    setUserAgent(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 ' +
+        '(KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+    )
+    setMaxTouchPoints(5)
+    document.body.style.overflow = 'auto'
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    const enterButton = wrapper.get('[data-testid="fullscreen-enter"]').element as HTMLElement
+    expect(enterButton.style.display).toBe('')
+
+    await wrapper.get('[data-testid="fullscreen-enter"]').trigger('click')
+    await nextTick()
+
+    const controls = wrapper.get('[data-testid="fullscreen-controls"]').element as HTMLElement
+    expect(controls.style.display).toBe('')
+    expect(document.body.style.overflow).toBe('hidden')
+
+    const vm = wrapper.vm as unknown as { setBodyOverflow: (locked: boolean) => void }
+    vm.setBodyOverflow(true)
+    expect(document.body.style.overflow).toBe('hidden')
+
+    await wrapper.get('[data-testid="fullscreen-exit"]').trigger('click')
+    await nextTick()
+
+    expect(document.body.style.overflow).toBe('auto')
+    expect(controls.style.display).toBe('none')
+    document.body.style.overflow = ''
+  })
+
+  it('treats iPadOS user agents as fullscreen capable', async () => {
+    setFullscreenUnsupported()
+    setUserAgent(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 ' +
+        '(KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+    )
+    setMaxTouchPoints(5)
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    const enterButton = wrapper.get('[data-testid="fullscreen-enter"]').element as HTMLElement
+    expect(enterButton.style.display).toBe('')
+  })
+
+  it('hides fullscreen on desktop Safari without touch points', async () => {
+    setFullscreenUnsupported()
+    setUserAgent(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 ' +
+        '(KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+    )
+    setMaxTouchPoints(0)
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+
+    const enterButton = wrapper.get('[data-testid="fullscreen-enter"]').element as HTMLElement
+    expect(enterButton.style.display).toBe('none')
   })
 })
