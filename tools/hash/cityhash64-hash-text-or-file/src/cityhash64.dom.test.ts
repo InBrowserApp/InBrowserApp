@@ -49,7 +49,8 @@ describe('tool metadata', () => {
   })
 
   it('loads the route component', async () => {
-    const component = await routes[0]?.component?.()
+    const loader = routes[0]?.component as () => Promise<{ default: unknown }>
+    const component = await loader()
     expect(component?.default).toBeDefined()
   })
 
