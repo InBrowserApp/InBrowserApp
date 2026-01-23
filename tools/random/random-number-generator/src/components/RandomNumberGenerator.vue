@@ -153,6 +153,43 @@
     </n-flex>
   </ToolSection>
 
+  <ToolSectionHeader>{{ t('history') }}</ToolSectionHeader>
+  <ToolSection>
+    <n-flex vertical :size="12">
+      <n-flex align="center" justify="end">
+        <n-button
+          text
+          size="small"
+          :disabled="!hasHistory"
+          @click="clearHistory"
+          data-testid="clear-history"
+        >
+          {{ t('clearHistory') }}
+        </n-button>
+      </n-flex>
+
+      <n-card v-if="!hasHistory" embedded :content-style="{ padding: '12px 16px' }">
+        <n-text depth="3">{{ t('historyEmpty') }}</n-text>
+      </n-card>
+
+      <n-flex v-else vertical :size="12" class="history-list">
+        <n-card
+          v-for="entry in historyEntries"
+          :key="entry.id"
+          embedded
+          :content-style="{ padding: '10px 14px' }"
+          class="history-card"
+        >
+          <n-flex wrap :size="12" class="history-tags">
+            <n-tag v-for="(value, index) in entry.values" :key="`${entry.id}-${index}`" round>
+              {{ value }}
+            </n-tag>
+          </n-flex>
+        </n-card>
+      </n-flex>
+    </n-flex>
+  </ToolSection>
+
   <div
     v-if="isFullscreen"
     class="fullscreen-overlay"
@@ -224,6 +261,12 @@ const { t } = useI18n()
 
 const maxCount = 100
 const maxDecimalPlaces = 6
+const maxHistoryItems = 20
+
+type HistoryEntry = {
+  id: string
+  values: string[]
+}
 
 const minValue = useStorage<number | null>('tools:random-number-generator:min', 1)
 const maxValue = useStorage<number | null>('tools:random-number-generator:max', 100)
@@ -234,6 +277,7 @@ const numberType = useStorage<'integer' | 'decimal'>(
   'integer',
 )
 const decimalPlaces = useStorage<number | null>('tools:random-number-generator:decimal-places', 2)
+const historyEntries = useStorage<HistoryEntry[]>('tools:random-number-generator:history', [])
 
 const normalizedCount = computed(() => normalizeCount(count.value))
 const normalizedDecimalPlaces = computed(() => normalizeDecimalPlaces(decimalPlaces.value))
@@ -294,6 +338,7 @@ const formattedNumbers = computed(() =>
 )
 
 const hasResults = computed(() => formattedNumbers.value.length > 0)
+const hasHistory = computed(() => historyEntries.value.length > 0)
 const outputText = computed(() => formattedNumbers.value.join('\n'))
 
 const downloadName = 'random-numbers.txt'
@@ -304,6 +349,7 @@ const isFullscreen = ref(false)
 const isRolling = ref(false)
 const rollingIntervalMs = 80
 let rollingTimer: number | null = null
+let hasSkippedInitialHistory = false
 
 const canRoll = computed(() => !rangeError.value && !countError.value)
 const rollingLabel = computed(() => (isRolling.value ? t('stopRandom') : t('startRandom')))
@@ -334,6 +380,28 @@ function formatNumber(value: number, decimals: number) {
     return normalizedValue.toFixed(decimals)
   }
   return String(normalizedValue)
+}
+
+function buildHistorySnapshot() {
+  return generatedNumbers.value.map((value) =>
+    formatNumber(value, normalizedDecimalPlaces.value),
+  )
+}
+
+function addHistoryEntry(values: string[]) {
+  if (!values.length) return
+  const signature = values.join('|')
+  const latest = historyEntries.value[0]
+  if (latest && latest.values.join('|') === signature) return
+  const entry = {
+    id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    values: [...values],
+  }
+  historyEntries.value = [entry, ...historyEntries.value].slice(0, maxHistoryItems)
+}
+
+function clearHistory() {
+  historyEntries.value = []
 }
 
 function randomInt(min: number, max: number) {
@@ -393,6 +461,7 @@ function stopRolling() {
     rollingTimer = null
   }
   isRolling.value = false
+  addHistoryEntry(buildHistorySnapshot())
 }
 
 function toggleRolling() {
@@ -438,6 +507,15 @@ function applyPreset(preset: 'dice' | 'ten' | 'hundred' | 'lotto') {
 
 watch([minValue, maxValue, count, allowRepeat, numberType, decimalPlaces], generateOnce, {
   immediate: true,
+})
+
+watch(generatedNumbers, () => {
+  if (!hasSkippedInitialHistory) {
+    hasSkippedInitialHistory = true
+    return
+  }
+  if (isRolling.value) return
+  addHistoryEntry(buildHistorySnapshot())
 })
 
 onBeforeUnmount(() => {
@@ -491,6 +569,37 @@ onBeforeUnmount(() => {
   font-size: clamp(2.75rem, 8vw, 4.75rem);
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.history-list {
+  width: 100%;
+}
+
+.history-card {
+  width: 100%;
+}
+
+.history-tags {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.history-tags :deep(.n-tag) {
+  height: auto;
+  min-height: 2.2rem;
+  min-width: 2.8ch;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-tags :deep(.n-tag__content) {
+  font-size: clamp(1rem, 2.6vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 12px;
+  text-align: center;
 }
 
 .fullscreen-overlay {
@@ -582,7 +691,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Full screen",
     "exitFullscreen": "Exit full screen",
     "startRandom": "Start random",
-    "stopRandom": "Stop random"
+    "stopRandom": "Stop random",
+    "history": "History",
+    "historyEmpty": "No history yet.",
+    "clearHistory": "Clear history"
   },
   "zh": {
     "options": "选项",
@@ -607,7 +719,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "全屏",
     "exitFullscreen": "退出全屏",
     "startRandom": "开始随机",
-    "stopRandom": "结束随机"
+    "stopRandom": "结束随机",
+    "history": "历史记录",
+    "historyEmpty": "暂无历史记录。",
+    "clearHistory": "清空历史"
   },
   "zh-CN": {
     "options": "选项",
@@ -632,7 +747,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "全屏",
     "exitFullscreen": "退出全屏",
     "startRandom": "开始随机",
-    "stopRandom": "结束随机"
+    "stopRandom": "结束随机",
+    "history": "历史记录",
+    "historyEmpty": "暂无历史记录。",
+    "clearHistory": "清空历史"
   },
   "zh-TW": {
     "options": "選項",
@@ -657,7 +775,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "全螢幕",
     "exitFullscreen": "退出全螢幕",
     "startRandom": "開始隨機",
-    "stopRandom": "結束隨機"
+    "stopRandom": "結束隨機",
+    "history": "歷史記錄",
+    "historyEmpty": "尚無歷史記錄。",
+    "clearHistory": "清空歷史"
   },
   "zh-HK": {
     "options": "選項",
@@ -682,7 +803,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "全螢幕",
     "exitFullscreen": "退出全螢幕",
     "startRandom": "開始隨機",
-    "stopRandom": "結束隨機"
+    "stopRandom": "結束隨機",
+    "history": "歷史記錄",
+    "historyEmpty": "尚無歷史記錄。",
+    "clearHistory": "清空歷史"
   },
   "es": {
     "options": "Opciones",
@@ -707,7 +831,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Pantalla completa",
     "exitFullscreen": "Salir de pantalla completa",
     "startRandom": "Iniciar aleatorio",
-    "stopRandom": "Detener aleatorio"
+    "stopRandom": "Detener aleatorio",
+    "history": "Historial",
+    "historyEmpty": "Aún no hay historial.",
+    "clearHistory": "Borrar historial"
   },
   "fr": {
     "options": "Options",
@@ -732,7 +859,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Plein écran",
     "exitFullscreen": "Quitter le plein écran",
     "startRandom": "Démarrer aléatoire",
-    "stopRandom": "Arrêter aléatoire"
+    "stopRandom": "Arrêter aléatoire",
+    "history": "Historique",
+    "historyEmpty": "Aucun historique pour le moment.",
+    "clearHistory": "Effacer l'historique"
   },
   "de": {
     "options": "Optionen",
@@ -757,7 +887,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Vollbild",
     "exitFullscreen": "Vollbild verlassen",
     "startRandom": "Zufall starten",
-    "stopRandom": "Zufall stoppen"
+    "stopRandom": "Zufall stoppen",
+    "history": "Verlauf",
+    "historyEmpty": "Noch kein Verlauf.",
+    "clearHistory": "Verlauf löschen"
   },
   "it": {
     "options": "Opzioni",
@@ -782,7 +915,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Schermo intero",
     "exitFullscreen": "Esci da schermo intero",
     "startRandom": "Avvia casuale",
-    "stopRandom": "Ferma casuale"
+    "stopRandom": "Ferma casuale",
+    "history": "Cronologia",
+    "historyEmpty": "Nessuna cronologia.",
+    "clearHistory": "Cancella cronologia"
   },
   "ja": {
     "options": "オプション",
@@ -807,7 +943,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "全画面",
     "exitFullscreen": "全画面を終了",
     "startRandom": "ランダム開始",
-    "stopRandom": "ランダム停止"
+    "stopRandom": "ランダム停止",
+    "history": "履歴",
+    "historyEmpty": "履歴はまだありません。",
+    "clearHistory": "履歴をクリア"
   },
   "ko": {
     "options": "옵션",
@@ -832,7 +971,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "전체 화면",
     "exitFullscreen": "전체 화면 종료",
     "startRandom": "랜덤 시작",
-    "stopRandom": "랜덤 중지"
+    "stopRandom": "랜덤 중지",
+    "history": "기록",
+    "historyEmpty": "기록이 아직 없습니다.",
+    "clearHistory": "기록 지우기"
   },
   "ru": {
     "options": "Параметры",
@@ -857,7 +999,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Полный экран",
     "exitFullscreen": "Выйти из полноэкранного режима",
     "startRandom": "Начать случайно",
-    "stopRandom": "Остановить случайно"
+    "stopRandom": "Остановить случайно",
+    "history": "История",
+    "historyEmpty": "Истории пока нет.",
+    "clearHistory": "Очистить историю"
   },
   "pt": {
     "options": "Opções",
@@ -882,7 +1027,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Tela cheia",
     "exitFullscreen": "Sair do modo tela cheia",
     "startRandom": "Iniciar aleatório",
-    "stopRandom": "Parar aleatório"
+    "stopRandom": "Parar aleatório",
+    "history": "Histórico",
+    "historyEmpty": "Ainda não há histórico.",
+    "clearHistory": "Limpar histórico"
   },
   "ar": {
     "options": "الخيارات",
@@ -907,7 +1055,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "ملء الشاشة",
     "exitFullscreen": "الخروج من ملء الشاشة",
     "startRandom": "بدء عشوائي",
-    "stopRandom": "إيقاف عشوائي"
+    "stopRandom": "إيقاف عشوائي",
+    "history": "السجل",
+    "historyEmpty": "لا يوجد سجل بعد.",
+    "clearHistory": "مسح السجل"
   },
   "hi": {
     "options": "विकल्प",
@@ -932,7 +1083,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "पूर्ण स्क्रीन",
     "exitFullscreen": "पूर्ण स्क्रीन से बाहर निकलें",
     "startRandom": "रैंडम शुरू करें",
-    "stopRandom": "रैंडम रोकें"
+    "stopRandom": "रैंडम रोकें",
+    "history": "इतिहास",
+    "historyEmpty": "अभी कोई इतिहास नहीं है।",
+    "clearHistory": "इतिहास साफ करें"
   },
   "tr": {
     "options": "Seçenekler",
@@ -957,7 +1111,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Tam ekran",
     "exitFullscreen": "Tam ekrandan çık",
     "startRandom": "Rastgele başlat",
-    "stopRandom": "Rastgele durdur"
+    "stopRandom": "Rastgele durdur",
+    "history": "Geçmiş",
+    "historyEmpty": "Henüz geçmiş yok.",
+    "clearHistory": "Geçmişi temizle"
   },
   "nl": {
     "options": "Opties",
@@ -982,7 +1139,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Volledig scherm",
     "exitFullscreen": "Volledig scherm verlaten",
     "startRandom": "Willekeurig starten",
-    "stopRandom": "Willekeurig stoppen"
+    "stopRandom": "Willekeurig stoppen",
+    "history": "Geschiedenis",
+    "historyEmpty": "Nog geen geschiedenis.",
+    "clearHistory": "Geschiedenis wissen"
   },
   "sv": {
     "options": "Alternativ",
@@ -1007,7 +1167,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Fullskärm",
     "exitFullscreen": "Avsluta fullskärm",
     "startRandom": "Starta slump",
-    "stopRandom": "Stoppa slump"
+    "stopRandom": "Stoppa slump",
+    "history": "Historik",
+    "historyEmpty": "Ingen historik ännu.",
+    "clearHistory": "Rensa historik"
   },
   "pl": {
     "options": "Opcje",
@@ -1032,7 +1195,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Pełny ekran",
     "exitFullscreen": "Wyjdź z pełnego ekranu",
     "startRandom": "Uruchom losowo",
-    "stopRandom": "Zatrzymaj losowo"
+    "stopRandom": "Zatrzymaj losowo",
+    "history": "Historia",
+    "historyEmpty": "Brak historii.",
+    "clearHistory": "Wyczyść historię"
   },
   "vi": {
     "options": "Tùy chọn",
@@ -1057,7 +1223,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Toàn màn hình",
     "exitFullscreen": "Thoát toàn màn hình",
     "startRandom": "Bắt đầu ngẫu nhiên",
-    "stopRandom": "Dừng ngẫu nhiên"
+    "stopRandom": "Dừng ngẫu nhiên",
+    "history": "Lịch sử",
+    "historyEmpty": "Chưa có lịch sử.",
+    "clearHistory": "Xóa lịch sử"
   },
   "th": {
     "options": "ตัวเลือก",
@@ -1082,7 +1251,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "เต็มหน้าจอ",
     "exitFullscreen": "ออกจากเต็มหน้าจอ",
     "startRandom": "เริ่มสุ่ม",
-    "stopRandom": "หยุดสุ่ม"
+    "stopRandom": "หยุดสุ่ม",
+    "history": "ประวัติ",
+    "historyEmpty": "ยังไม่มีประวัติ",
+    "clearHistory": "ล้างประวัติ"
   },
   "id": {
     "options": "Opsi",
@@ -1107,7 +1279,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Layar penuh",
     "exitFullscreen": "Keluar layar penuh",
     "startRandom": "Mulai acak",
-    "stopRandom": "Hentikan acak"
+    "stopRandom": "Hentikan acak",
+    "history": "Riwayat",
+    "historyEmpty": "Belum ada riwayat.",
+    "clearHistory": "Hapus riwayat"
   },
   "he": {
     "options": "אפשרויות",
@@ -1132,7 +1307,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "מסך מלא",
     "exitFullscreen": "צא ממסך מלא",
     "startRandom": "התחל אקראי",
-    "stopRandom": "עצור אקראי"
+    "stopRandom": "עצור אקראי",
+    "history": "היסטוריה",
+    "historyEmpty": "אין היסטוריה עדיין.",
+    "clearHistory": "נקה היסטוריה"
   },
   "ms": {
     "options": "Pilihan",
@@ -1157,7 +1335,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Skrin penuh",
     "exitFullscreen": "Keluar skrin penuh",
     "startRandom": "Mula rawak",
-    "stopRandom": "Henti rawak"
+    "stopRandom": "Henti rawak",
+    "history": "Sejarah",
+    "historyEmpty": "Belum ada sejarah.",
+    "clearHistory": "Padam sejarah"
   },
   "no": {
     "options": "Alternativer",
@@ -1182,7 +1363,10 @@ onBeforeUnmount(() => {
     "enterFullscreen": "Fullskjerm",
     "exitFullscreen": "Avslutt fullskjerm",
     "startRandom": "Start tilfeldig",
-    "stopRandom": "Stopp tilfeldig"
+    "stopRandom": "Stopp tilfeldig",
+    "history": "Historikk",
+    "historyEmpty": "Ingen historikk ennå.",
+    "clearHistory": "Tøm historikk"
   }
 }
 </i18n>
