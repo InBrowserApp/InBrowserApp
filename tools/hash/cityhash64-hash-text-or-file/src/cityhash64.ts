@@ -28,17 +28,18 @@ export const parseCityHash64Seed = (input: string) => {
     return { value: 0n, isValid: true }
   }
 
+  let parsed: bigint
+  try {
+    parsed = BigInt(trimmed)
+  } catch {
+    return { value: 0n, isValid: false }
+  }
+
   const isHex = /^(0x|0X)[0-9a-fA-F]+$/.test(trimmed)
   const isDecimal = /^[0-9]+$/.test(trimmed)
 
   if (!isHex && !isDecimal) {
     return { value: 0n, isValid: false }
   }
-
-  try {
-    const value = BigInt(trimmed)
-    return { value: toUint64(value), isValid: true }
-  } catch {
-    return { value: 0n, isValid: false }
-  }
+  return { value: toUint64(parsed), isValid: true }
 }

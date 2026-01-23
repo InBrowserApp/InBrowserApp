@@ -1,8 +1,12 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { cityHash64WithSeed, parseCityHash64Seed } from './cityhash64'
 import { routes } from './routes'
 import * as toolInfo from './info'
 import * as indexExports from './index'
+
+vi.mock('./CityHash64HashTextOrFileView.vue', () => ({
+  default: { name: 'CityHash64HashTextOrFileView' },
+}))
 
 describe('parseCityHash64Seed', () => {
   it('parses decimal and hex seeds', () => {
@@ -42,6 +46,11 @@ describe('cityHash64WithSeed', () => {
 describe('tool metadata', () => {
   it('exposes routes matching the tool path', () => {
     expect(routes[0]?.path).toBe(toolInfo.path)
+  })
+
+  it('loads the route component', async () => {
+    const component = await routes[0]?.component?.()
+    expect(component?.default).toBeDefined()
   })
 
   it('re-exports tool info from index', () => {

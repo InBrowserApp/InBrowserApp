@@ -71,4 +71,13 @@ describe('CityHash64HashTextOrFileView', () => {
     const template = wrapper.findComponent({ name: 'HashTextOrFileTemplate' })
     expect(typeof template.props('hash')).toBe('function')
   })
+
+  it('hashes blob content with the default seed', async () => {
+    const wrapper = mount(CityHash64HashTextOrFileView)
+    const template = wrapper.findComponent({ name: 'HashTextOrFileTemplate' })
+    const hash = template.props('hash') as (blob: Blob) => Promise<ArrayBuffer>
+    const buffer = await hash(new Blob(['hello world']))
+    const value = new DataView(buffer).getBigUint64(0, false)
+    expect(value).toBe(16951770513262022737n)
+  })
 })
