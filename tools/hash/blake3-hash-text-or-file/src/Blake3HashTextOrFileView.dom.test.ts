@@ -2,25 +2,21 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 
-vi.mock(
-  'blake3-wasm/browser-async',
-  () => {
-    return {
-      default: () =>
-        Promise.resolve({
-          createHash: () => ({
-            update: () => undefined,
-            digest: () => new Uint8Array(),
-          }),
-          createKeyed: () => ({
-            update: () => undefined,
-            digest: () => new Uint8Array(),
-          }),
+vi.mock('blake3-wasm/browser-async', () => {
+  return {
+    default: () =>
+      Promise.resolve({
+        createHash: () => ({
+          update: () => undefined,
+          digest: () => new Uint8Array(),
         }),
-    }
-  },
-  { virtual: true },
-)
+        createKeyed: () => ({
+          update: () => undefined,
+          digest: () => new Uint8Array(),
+        }),
+      }),
+  }
+})
 
 const i18n = createI18n({
   legacy: false,

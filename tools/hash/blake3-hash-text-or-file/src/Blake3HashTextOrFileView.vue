@@ -39,7 +39,8 @@ const marks = {
   256: '256',
 }
 
-const blake3ModulePromise = loadBlake3()
+// Let blake3-wasm resolve its default wasm URL; typings require an explicit argument.
+const blake3ModulePromise = loadBlake3(undefined as unknown as string)
 
 const hashFunction = computed(() => {
   return async (blob: Blob): Promise<ArrayBuffer> => {
