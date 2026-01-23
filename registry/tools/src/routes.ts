@@ -35,6 +35,7 @@ import { routes as bcryptHashPasswordVerifierRoutes } from '@tools/bcrypt-hash-p
 import { routes as hashToolsRoutes } from '@tools/hash-tools/routes'
 import { routes as sriHashGeneratorRoutes } from '@tools/sri-hash-generator/routes'
 import { routes as crcChecksumCalculatorRoutes } from '@tools/crc-checksum-calculator/routes'
+import { routes as cityhash64HashTextOrFileRoutes } from '@tools/cityhash64-hash-text-or-file/routes'
 import { routes as xxhashXxh32HashTextOrFileRoutes } from '@tools/xxhash-xxh32-hash-text-or-file/routes'
 import { routes as xxhashXxh64HashTextOrFileRoutes } from '@tools/xxhash-xxh64-hash-text-or-file/routes'
 import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-or-file/routes'
@@ -181,6 +182,7 @@ export const routes: ToolRoute[] = [
   ...hashToolsRoutes,
   ...sriHashGeneratorRoutes,
   ...crcChecksumCalculatorRoutes,
+  ...cityhash64HashTextOrFileRoutes,
   ...xxhashXxh32HashTextOrFileRoutes,
   ...xxhashXxh64HashTextOrFileRoutes,
   ...blake2bHashTextOrFileRoutes,

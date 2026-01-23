@@ -37,6 +37,7 @@ import { toolInfo as bcryptHashPasswordVerifierToolInfo } from '@tools/bcrypt-ha
 import { toolInfo as hashToolsToolInfo } from '@tools/hash-tools'
 import { toolInfo as sriHashGeneratorToolInfo } from '@tools/sri-hash-generator'
 import { toolInfo as crcChecksumCalculatorToolInfo } from '@tools/crc-checksum-calculator'
+import { toolInfo as cityhash64HashTextOrFileToolInfo } from '@tools/cityhash64-hash-text-or-file'
 import { toolInfo as xxhashXxh32HashTextOrFileToolInfo } from '@tools/xxhash-xxh32-hash-text-or-file'
 import { toolInfo as xxhashXxh64HashTextOrFileToolInfo } from '@tools/xxhash-xxh64-hash-text-or-file'
 import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-text-or-file'
@@ -219,6 +220,7 @@ export const tools: ToolInfo[] = [
   hashToolsToolInfo,
   sriHashGeneratorToolInfo,
   crcChecksumCalculatorToolInfo,
+  cityhash64HashTextOrFileToolInfo,
   xxhashXxh32HashTextOrFileToolInfo,
   xxhashXxh64HashTextOrFileToolInfo,
   blake2bHashTextOrFileToolInfo,

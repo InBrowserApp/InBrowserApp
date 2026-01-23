@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@anglinb/city-hash':
+      specifier: ^1.1.0
+      version: 1.1.0
     '@commitlint/cli':
       specifier: ^20.3.1
       version: 20.3.1
@@ -687,6 +690,9 @@ importers:
       '@tools/cidrs-merger-excluder':
         specifier: workspace:*
         version: link:../../tools/network/cidrs-merger-excluder
+      '@tools/cityhash64-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/cityhash64-hash-text-or-file
       '@tools/color-contrast-checker':
         specifier: workspace:*
         version: link:../../tools/web/color-contrast-checker
@@ -2147,6 +2153,39 @@ importers:
       blakejs:
         specifier: 'catalog:'
         version: 1.2.1
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/cityhash64-hash-text-or-file:
+    dependencies:
+      '@anglinb/city-hash':
+        specifier: 'catalog:'
+        version: 1.1.0
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
@@ -5693,6 +5732,9 @@ packages:
 
   '@acemir/cssom@0.9.31':
     resolution: {integrity: sha512-ZnR3GSaH+/vJ0YlHau21FjfLYjMpYVIzTD8M8vIEQvIGxeOXyXdzCI140rrCY862p/C/BbzWsjc1dgnM9mkoTA==}
+
+  '@anglinb/city-hash@1.1.0':
+    resolution: {integrity: sha512-BQ45oNPwbvxWmLMbL0lWKPUxuz4uMKl/8zoWhQV0JDKo5sLP9WY3UL917bzNB4wdtEQZSYub2aUjyDPXroBd0w==}
 
   '@apideck/better-ajv-errors@0.3.6':
     resolution: {integrity: sha512-P+ZygBLZtkp0qqOAJJVX4oX/sFo5JR3eBWwwuqHHhK0GIgQOKWrAfiAaWX0aArHkRWHMuggFEgAZNxVPwPZYaA==}
@@ -11027,6 +11069,8 @@ packages:
 snapshots:
 
   '@acemir/cssom@0.9.31': {}
+
+  '@anglinb/city-hash@1.1.0': {}
 
   '@apideck/better-ajv-errors@0.3.6(ajv@8.17.1)':
     dependencies:
