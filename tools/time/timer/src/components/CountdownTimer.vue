@@ -33,7 +33,7 @@
           </template>
           {{ t('reset') }}
         </n-button>
-        <n-button :disabled="!fullscreenSupported" @click="enter" data-testid="fullscreen-enter">
+        <n-button v-show="fullscreenSupported" @click="enter" data-testid="fullscreen-enter">
           <template #icon>
             <n-icon :component="FullScreenMaximize16Regular" />
           </template>
@@ -142,11 +142,14 @@
         <n-form-item-gi :label="t('vibrationLabel')" :show-feedback="false">
           <n-switch v-model:value="vibrationEnabled" :disabled="!vibrationSupported" />
         </n-form-item-gi>
-        <n-form-item-gi :label="t('notificationLabel')" :show-feedback="false">
+        <n-form-item-gi
+          v-show="notificationSupported"
+          :label="t('notificationLabel')"
+          :show-feedback="false"
+        >
           <n-flex align="center" justify="space-between" style="width: 100%">
             <n-switch
               v-model:value="notificationEnabled"
-              :disabled="!notificationSupported"
               @update:value="handleNotificationToggle"
             />
             <n-button
@@ -162,7 +165,7 @@
         </n-form-item-gi>
       </n-grid>
       <n-text
-        v-show="notificationHint"
+        v-show="notificationSupported && notificationHint"
         depth="3"
         class="input-hint"
         data-testid="notification-hint"

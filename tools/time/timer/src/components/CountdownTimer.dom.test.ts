@@ -344,12 +344,13 @@ describe('CountdownTimer', () => {
 
     vi.advanceTimersByTime(500)
     await nextTick()
-
-    const pausedValue = wrapper.get('[data-testid="timer-display"]').text()
+    expect(wrapper.get('[data-testid="timer-display"]').text()).not.toBe('00:00:01.00')
 
     await wrapper.get('[data-testid="pause"]').trigger('click')
     expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('Paused')
     expect(wrapper.get('[data-testid="start"]').text()).toContain('Resume')
+
+    const pausedValue = wrapper.get('[data-testid="timer-display"]').text()
 
     vi.advanceTimersByTime(500)
     await nextTick()
@@ -695,14 +696,18 @@ describe('CountdownTimer', () => {
     const wrapper = await mountCountdownTimer()
     const vm = wrapper.vm as unknown as {
       notificationPermission: string
+      notificationHint: string
       requestNotificationPermission: () => Promise<void>
       start: () => Promise<void>
     }
 
     expect(vm.notificationPermission).toBe('unsupported')
-    expect(wrapper.get('[data-testid="notification-hint"]').text()).toContain(
-      'Notifications are not supported',
-    )
+    expect(vm.notificationHint).toContain('Notifications are not supported')
+    const formItems = wrapper.findAllComponents({ name: 'NFormItemGi' })
+    const notificationItem = formItems[formItems.length - 1].element as HTMLElement
+    expect(notificationItem.style.display).toBe('none')
+    const hint = wrapper.get('[data-testid="notification-hint"]').element as HTMLElement
+    expect(hint.style.display).toBe('none')
 
     await vm.requestNotificationPermission()
     await vm.start()
