@@ -284,20 +284,21 @@ export const buildCodeShotSvg = (
 
   let windowControls = ''
   if (layout.windowStyle === 'mac') {
-    const radius = 6
+    const size = 12
+    const radius = size / 2
     const cy = frameY + headerHeight / 2
-    const cx = frameX + layout.padding
-    const gap = 22
+    const cx = frameX + layout.padding + radius
+    const gap = 10
     const colors = ['#ff5f57', '#febc2e', '#28c840']
     windowControls = colors
       .map(
         (color, index) =>
-          `<circle cx="${cx + index * gap}" cy="${cy}" r="${radius}" fill="${color}" />`,
+          `<circle cx="${cx + index * (size + gap)}" cy="${cy}" r="${radius}" fill="${color}" />`,
       )
       .join('')
   } else if (layout.windowStyle === 'windows') {
     const size = 10
-    const gap = 20
+    const gap = 10
     const top = frameY + headerHeight / 2 - size / 2
     const right = frameX + cardWidth - layout.padding - size * 3 - gap * 2
     const colors = ['#9ca3af', '#9ca3af', '#f87171']
