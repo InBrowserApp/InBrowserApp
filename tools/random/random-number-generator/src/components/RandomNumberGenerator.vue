@@ -112,6 +112,18 @@
       </n-card>
 
       <n-flex :size="12">
+        <RegenerateButton
+          :disabled="!canRoll && !isRolling"
+          @click="toggleRolling"
+          data-testid="regenerate"
+        >
+          <template #icon>
+            <n-icon :component="rollingIcon" />
+          </template>
+          <template #label>
+            {{ rollingLabel }}
+          </template>
+        </RegenerateButton>
         <CopyToClipboardButton :content="outputText" />
         <n-button
           text
@@ -137,15 +149,6 @@
           </template>
           {{ t('enterFullscreen') }}
         </n-button>
-        <RegenerateButton
-          :disabled="!canRoll && !isRolling"
-          @click="toggleRolling"
-          data-testid="regenerate"
-        >
-          <template #label>
-            {{ rollingLabel }}
-          </template>
-        </RegenerateButton>
       </n-flex>
     </n-flex>
   </ToolSection>
@@ -167,21 +170,24 @@
       </n-flex>
     </div>
     <n-flex class="fullscreen-actions" align="center" :size="12">
+      <RegenerateButton
+        :disabled="!canRoll && !isRolling"
+        @click="toggleRolling"
+        data-testid="fullscreen-regenerate"
+      >
+        <template #icon>
+          <n-icon :component="rollingIcon" />
+        </template>
+        <template #label>
+          {{ rollingLabel }}
+        </template>
+      </RegenerateButton>
       <n-button text @click="closeFullscreen" data-testid="exit-fullscreen">
         <template #icon>
           <n-icon :component="ExitFullscreenIcon" />
         </template>
         {{ t('exitFullscreen') }}
       </n-button>
-      <RegenerateButton
-        :disabled="!canRoll && !isRolling"
-        @click="toggleRolling"
-        data-testid="fullscreen-regenerate"
-      >
-        <template #label>
-          {{ rollingLabel }}
-        </template>
-      </RegenerateButton>
     </n-flex>
   </div>
 </template>
@@ -211,6 +217,8 @@ import { CopyToClipboardButton, RegenerateButton } from '@shared/ui/base'
 import DownloadIcon from '@vicons/fluent/ArrowDownload16Regular'
 import EnterFullscreenIcon from '@vicons/fluent/FullScreenMaximize16Regular'
 import ExitFullscreenIcon from '@vicons/fluent/FullScreenMinimize24Regular'
+import PlayIcon from '@vicons/fluent/Play16Regular'
+import StopIcon from '@vicons/fluent/Stop16Regular'
 
 const { t } = useI18n()
 
@@ -299,6 +307,7 @@ let rollingTimer: number | null = null
 
 const canRoll = computed(() => !rangeError.value && !countError.value)
 const rollingLabel = computed(() => (isRolling.value ? t('stopRandom') : t('startRandom')))
+const rollingIcon = computed(() => (isRolling.value ? StopIcon : PlayIcon))
 
 function openFullscreen() {
   if (!hasResults.value) return
