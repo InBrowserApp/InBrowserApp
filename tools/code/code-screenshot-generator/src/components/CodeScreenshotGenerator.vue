@@ -261,7 +261,9 @@ const htmlSnippet = computed(() =>
 const htmlDocument = computed(() => buildHtmlDocument(htmlSnippet.value, backgroundConfig.value))
 
 const jpgBackground = computed(() =>
-  backgroundConfig.value.type === 'transparent' ? activeTheme.value.background : '',
+  backgroundConfig.value.type === 'transparent' || backgroundConfig.value.type === 'none'
+    ? activeTheme.value.background
+    : '',
 )
 
 const languageSelectOptions = computed(() =>
