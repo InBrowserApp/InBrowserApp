@@ -383,9 +383,7 @@ function formatNumber(value: number, decimals: number) {
 }
 
 function buildHistorySnapshot() {
-  return generatedNumbers.value.map((value) =>
-    formatNumber(value, normalizedDecimalPlaces.value),
-  )
+  return generatedNumbers.value.map((value) => formatNumber(value, normalizedDecimalPlaces.value))
 }
 
 function addHistoryEntry(values: string[]) {
