@@ -2,6 +2,10 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 
+vi.mock('blake3-wasm/dist/wasm/web/blake3_js_bg.wasm?url', () => ({
+  default: 'blake3-wasm-url',
+}))
+
 vi.mock('blake3-wasm/browser-async', () => {
   return {
     default: () =>

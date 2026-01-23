@@ -23,6 +23,7 @@ import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/u
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
 import WhatIsBlake3 from './WhatIsBlake3.vue'
 import loadBlake3 from 'blake3-wasm/browser-async'
+import blake3WasmUrl from 'blake3-wasm/dist/wasm/web/blake3_js_bg.wasm?url'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NSlider, NInput, NFormItem } from 'naive-ui'
@@ -39,8 +40,7 @@ const marks = {
   256: '256',
 }
 
-// Let blake3-wasm resolve its default wasm URL; typings require an explicit argument.
-const blake3ModulePromise = loadBlake3(undefined as unknown as string)
+const blake3ModulePromise = loadBlake3(blake3WasmUrl)
 
 const hashFunction = computed(() => {
   return async (blob: Blob): Promise<ArrayBuffer> => {
