@@ -97,6 +97,7 @@ import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestam
 import { toolInfo as icalEventGeneratorToolInfo } from '@tools/ical-event-generator'
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
+import { toolInfo as radioTimecodeToolInfo } from '@tools/radio-timecode'
 import { toolInfo as durationCalculatorToolInfo } from '@tools/duration-calculator'
 import { toolInfo as businessDaysCalculatorToolInfo } from '@tools/business-days-calculator'
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
@@ -259,6 +260,7 @@ export const tools: ToolInfo[] = [
   icalEventGeneratorToolInfo,
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
+  radioTimecodeToolInfo,
   durationCalculatorToolInfo,
   businessDaysCalculatorToolInfo,
   cronExpressionParserToolInfo,
