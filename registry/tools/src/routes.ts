@@ -50,6 +50,8 @@ import { routes as base16EncoderRoutes } from '@tools/base16-encoder/routes'
 import { routes as base16DecoderRoutes } from '@tools/base16-decoder/routes'
 import { routes as base32EncoderRoutes } from '@tools/base32-encoder/routes'
 import { routes as base32DecoderRoutes } from '@tools/base32-decoder/routes'
+import { routes as base58EncoderRoutes } from '@tools/base58-encoder/routes'
+import { routes as base58DecoderRoutes } from '@tools/base58-decoder/routes'
 import { routes as base64EncoderDecoderRoutes } from '@tools/base64-encoder-decoder/routes'
 import { routes as fileToDataUriConverterRoutes } from '@tools/file-to-data-uri-converter/routes'
 import { routes as dataUriToFileConverterRoutes } from '@tools/data-uri-to-file-converter/routes'
@@ -206,6 +208,8 @@ export const routes: ToolRoute[] = [
   ...base16DecoderRoutes,
   ...base32EncoderRoutes,
   ...base32DecoderRoutes,
+  ...base58EncoderRoutes,
+  ...base58DecoderRoutes,
   ...base64EncoderDecoderRoutes,
   ...fileToDataUriConverterRoutes,
   ...dataUriToFileConverterRoutes,
