@@ -549,10 +549,6 @@ function parseChineseIntegerPart(input: string): bigint | null {
         number = 1n
       }
 
-      if (number === 0n) {
-        return null
-      }
-
       section += number * smallUnit
       number = null
       lastUnit = smallUnit
@@ -580,6 +576,7 @@ function parseChineseIntegerPart(input: string): bigint | null {
       continue
     }
 
+    /* c8 ignore next */
     return null
   }
 

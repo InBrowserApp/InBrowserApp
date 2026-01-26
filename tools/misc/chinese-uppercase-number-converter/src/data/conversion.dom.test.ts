@@ -53,6 +53,11 @@ describe('parseNumberInput', () => {
     expect(result.isValid).toBe(false)
     expect(result.error).toBe('outOfRange')
   })
+  it('rejects sign-only input', () => {
+    const result = parseNumberInput('+')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
 })
 
 describe('convertNumberToUppercase', () => {
@@ -90,6 +95,27 @@ describe('convertNumberToUppercase', () => {
   it('supports traditional output', () => {
     const result = convertNumberToUppercase('12', 'traditional')
     expect(result.value).toBe('壹拾貳圓整')
+  })
+  it('returns empty results for blank input', () => {
+    const result = convertNumberToUppercase('  ', 'simplified')
+    expect(result.isEmpty).toBe(true)
+    expect(result.isValid).toBe(false)
+  })
+
+  it('returns invalid results for invalid input', () => {
+    const result = convertNumberToUppercase('12.3.4', 'simplified')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('inserts zero between group units', () => {
+    const result = convertNumberToUppercase('100000001', 'simplified')
+    expect(result.value).toBe('壹亿零壹元整')
+  })
+
+  it('inserts zeros within groups', () => {
+    const result = convertNumberToUppercase('1010', 'simplified')
+    expect(result.value).toBe('壹仟零壹拾元整')
   })
 })
 
@@ -153,6 +179,65 @@ describe('parseUppercaseInput', () => {
     expect(result.isValid).toBe(false)
     expect(result.error).toBe('outOfRange')
   })
+  it('accepts integer-only inputs', () => {
+    const result = parseUppercaseInput('壹拾')
+    expect(result.isValid).toBe(true)
+    expect(result.value).toBe('10')
+  })
+
+  it('accepts missing fractional part', () => {
+    const result = parseUppercaseInput('壹元')
+    expect(result.isValid).toBe(true)
+    expect(result.value).toBe('1')
+  })
+
+  it('rejects sign-only negatives', () => {
+    const result = parseUppercaseInput('负')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects repeated yuan units', () => {
+    const result = parseUppercaseInput('壹元元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects units before yuan', () => {
+    const result = parseUppercaseInput('壹角元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects consecutive digits', () => {
+    const result = parseUppercaseInput('壹贰元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects zero before small units', () => {
+    const result = parseUppercaseInput('零拾元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects invalid big unit order', () => {
+    const result = parseUppercaseInput('壹亿兆元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects missing integer before big units', () => {
+    const result = parseUppercaseInput('万元')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
+
+  it('rejects mixed complete markers', () => {
+    const result = parseUppercaseInput('壹元整伍分')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
+  })
 })
 
 describe('convertUppercaseToNumber', () => {
@@ -166,5 +251,10 @@ describe('convertUppercaseToNumber', () => {
     const result = convertUppercaseToNumber('')
     expect(result.isEmpty).toBe(true)
     expect(result.isValid).toBe(false)
+  })
+  it('returns invalid results for malformed uppercase', () => {
+    const result = convertUppercaseToNumber('壹元角')
+    expect(result.isValid).toBe(false)
+    expect(result.error).toBe('invalidFormat')
   })
 })

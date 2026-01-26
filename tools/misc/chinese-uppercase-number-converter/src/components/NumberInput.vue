@@ -59,8 +59,7 @@ const feedback = computed(() => {
   if (result.isValid) return t('valid')
   if (result.error === 'invalidFormat') return t('invalidFormat')
   if (result.error === 'tooManyDecimals') return t('tooManyDecimals')
-  if (result.error === 'outOfRange') return t('outOfRange')
-  return t('invalidFormat')
+  return t('outOfRange')
 })
 
 function handleUpdate(value: string) {

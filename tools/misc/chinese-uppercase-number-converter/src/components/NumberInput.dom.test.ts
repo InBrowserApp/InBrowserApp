@@ -31,6 +31,15 @@ describe('NumberInput', () => {
     expect(input.props().status).toBeUndefined()
   })
 
+  it('syncs when props change', async () => {
+    const wrapper = mountNumberInput('1')
+
+    await wrapper.setProps({ value: '2' })
+
+    const input = wrapper.findComponent(NInput)
+    expect(input.props().value).toBe('2')
+  })
+
   it('shows success when valid', () => {
     const wrapper = mountNumberInput('123')
 

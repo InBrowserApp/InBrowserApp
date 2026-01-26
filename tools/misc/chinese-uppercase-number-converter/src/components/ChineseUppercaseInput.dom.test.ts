@@ -31,6 +31,15 @@ describe('ChineseUppercaseInput', () => {
     expect(input.props().status).toBeUndefined()
   })
 
+  it('syncs when props change', async () => {
+    const wrapper = mountUppercaseInput('壹元整')
+
+    await wrapper.setProps({ value: '贰元整' })
+
+    const input = wrapper.findComponent(NInput)
+    expect(input.props().value).toBe('贰元整')
+  })
+
   it('shows success when valid', () => {
     const wrapper = mountUppercaseInput('壹拾贰元整')
 
