@@ -127,6 +127,7 @@ catalog:
   qrcode: ^1.5.4
   reflect-metadata: ^0.2.2
   sitemap: ^9.0.0
+  sm-crypto: ^0.4.0
   smol-toml: ^1.6.0
   svgo: ^4.0.0
   transliteration: ^2.6.0
