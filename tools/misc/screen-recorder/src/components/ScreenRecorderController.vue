@@ -76,15 +76,6 @@
           :disabled="settingsDisabled || !isMicSupported"
         />
       </n-flex>
-      <n-flex align="center" :size="8" class="setting-row">
-        <n-text depth="3">{{ t('cursor') }}</n-text>
-        <n-select
-          v-model:value="cursorMode"
-          :options="cursorOptions"
-          :disabled="settingsDisabled"
-          class="cursor-select"
-        />
-      </n-flex>
     </n-flex>
   </ToolSection>
 
@@ -146,19 +137,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import {
-  NAlert,
-  NButton,
-  NFlex,
-  NGi,
-  NGrid,
-  NIcon,
-  NInput,
-  NSelect,
-  NSwitch,
-  NTag,
-  NText,
-} from 'naive-ui'
+import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NInput, NSwitch, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
@@ -183,8 +162,6 @@ const isPreparing = ref(false)
 
 const includeSystemAudio = ref(true)
 const includeMicrophone = ref(false)
-const cursorMode = ref<'always' | 'motion' | 'never'>('always')
-
 const recorderState = ref<'inactive' | 'recording' | 'paused'>('inactive')
 const displayStream = ref<MediaStream | null>(null)
 const microphoneStream = ref<MediaStream | null>(null)
@@ -231,12 +208,6 @@ const statusType = computed(() => {
   if (isRecording.value) return 'success'
   return 'default'
 })
-
-const cursorOptions = computed(() => [
-  { label: t('cursorAlways'), value: 'always' },
-  { label: t('cursorMotion'), value: 'motion' },
-  { label: t('cursorNever'), value: 'never' },
-])
 
 const formattedDuration = computed(() => formatDuration(elapsedMs.value))
 const fileExtension = computed(() => getExtensionForMimeType(mimeType.value))
@@ -362,9 +333,8 @@ async function startRecording() {
   }
 
   try {
-    const videoConstraints = { cursor: cursorMode.value } as MediaTrackConstraints
     const display = await navigator.mediaDevices.getDisplayMedia({
-      video: videoConstraints,
+      video: true,
       audio: includeSystemAudio.value,
     })
     displayStream.value = display
@@ -467,10 +437,6 @@ onBeforeUnmount(() => {
 .setting-row {
   justify-content: space-between;
 }
-
-.cursor-select {
-  width: 200px;
-}
 </style>
 
 <i18n lang="json">
@@ -499,10 +465,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -536,10 +498,6 @@ onBeforeUnmount(() => {
     "systemAudio": "系统声音",
     "microphone": "麦克风",
     "microphoneNotSupported": "当前浏览器不支持麦克风录制。",
-    "cursor": "鼠标光标",
-    "cursorAlways": "始终显示",
-    "cursorMotion": "移动时显示",
-    "cursorNever": "隐藏",
     "notSupported": "当前浏览器不支持屏幕录制。",
     "permissionDenied": "屏幕权限被拒绝，请允许共享屏幕。",
     "microphoneDenied": "麦克风权限被拒绝，请允许访问。",
@@ -573,10 +531,6 @@ onBeforeUnmount(() => {
     "systemAudio": "系统声音",
     "microphone": "麦克风",
     "microphoneNotSupported": "当前浏览器不支持麦克风录制。",
-    "cursor": "鼠标光标",
-    "cursorAlways": "始终显示",
-    "cursorMotion": "移动时显示",
-    "cursorNever": "隐藏",
     "notSupported": "当前浏览器不支持屏幕录制。",
     "permissionDenied": "屏幕权限被拒绝，请允许共享屏幕。",
     "microphoneDenied": "麦克风权限被拒绝，请允许访问。",
@@ -610,10 +564,6 @@ onBeforeUnmount(() => {
     "systemAudio": "系統聲音",
     "microphone": "麥克風",
     "microphoneNotSupported": "目前瀏覽器不支援麥克風錄製。",
-    "cursor": "滑鼠游標",
-    "cursorAlways": "始終顯示",
-    "cursorMotion": "移動時顯示",
-    "cursorNever": "隱藏",
     "notSupported": "目前瀏覽器不支援螢幕錄製。",
     "permissionDenied": "螢幕權限被拒絕，請允許共享螢幕。",
     "microphoneDenied": "麥克風權限被拒絕，請允許存取。",
@@ -647,10 +597,6 @@ onBeforeUnmount(() => {
     "systemAudio": "系統聲音",
     "microphone": "麥克風",
     "microphoneNotSupported": "目前瀏覽器不支援麥克風錄製。",
-    "cursor": "滑鼠游標",
-    "cursorAlways": "始終顯示",
-    "cursorMotion": "移動時顯示",
-    "cursorNever": "隱藏",
     "notSupported": "目前瀏覽器不支援螢幕錄製。",
     "permissionDenied": "螢幕權限被拒絕，請允許共享螢幕。",
     "microphoneDenied": "麥克風權限被拒絕，請允許存取。",
@@ -684,10 +630,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -721,10 +663,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -758,10 +696,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -795,10 +729,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -832,10 +762,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -869,10 +795,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -906,10 +828,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -943,10 +861,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -980,10 +894,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1017,10 +927,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1054,10 +960,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1091,10 +993,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1128,10 +1026,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1165,10 +1059,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1202,10 +1092,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1239,10 +1125,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1276,10 +1158,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1313,10 +1191,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1350,10 +1224,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
@@ -1387,10 +1257,6 @@ onBeforeUnmount(() => {
     "systemAudio": "System audio",
     "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "cursor": "Cursor",
-    "cursorAlways": "Always show",
-    "cursorMotion": "Show on motion",
-    "cursorNever": "Hide",
     "notSupported": "Screen recording is not supported in this browser.",
     "permissionDenied": "Screen permission denied. Please allow screen sharing.",
     "microphoneDenied": "Microphone permission denied. Please allow microphone access.",

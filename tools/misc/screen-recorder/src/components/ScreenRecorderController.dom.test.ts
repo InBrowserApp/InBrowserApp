@@ -157,7 +157,6 @@ const globalStubs = {
   NGi: { template: '<div><slot /></div>' },
   NIcon: { template: '<span />' },
   NInput: { template: '<input />' },
-  NSelect: { template: '<select />' },
   NSwitch: { template: '<input type="checkbox" />' },
   NTag: { template: '<span><slot /></span>' },
   NText: { template: '<span><slot /></span>' },
@@ -238,7 +237,7 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
 
     expect(getDisplayMedia).toHaveBeenCalledWith({
-      video: { cursor: 'always' },
+      video: true,
       audio: true,
     })
     expect(wrapper.text()).toContain('statusRecording')
@@ -252,7 +251,7 @@ describe('ScreenRecorderController', () => {
     expect(wrapper.text()).toContain('statusIdle')
   })
 
-  it('uses cursor and audio settings', async () => {
+  it('uses audio settings', async () => {
     const display = createStream({ videoTracks: 1, audioTracks: 0 })
     const getDisplayMedia = vi.fn().mockResolvedValue(display)
     setMediaDevices({ getDisplayMedia, getUserMedia: vi.fn() } as unknown as MediaDevices)
@@ -262,18 +261,16 @@ describe('ScreenRecorderController', () => {
       startRecording: () => Promise<void>
       stopRecording: () => void
       includeSystemAudio: boolean
-      cursorMode: 'always' | 'motion' | 'never'
     }
 
     vm.includeSystemAudio = false
-    vm.cursorMode = 'never'
     await wrapper.vm.$nextTick()
 
     await vm.startRecording()
     vm.stopRecording()
 
     expect(getDisplayMedia).toHaveBeenCalledWith({
-      video: { cursor: 'never' },
+      video: true,
       audio: false,
     })
   })
