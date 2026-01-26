@@ -12,7 +12,8 @@ describe('sm3 hash text or file exports', () => {
     const route = routes[0]
     expect(route).toBeTruthy()
 
-    const loadedRoute = await route!.component()
+    const componentLoader = route!.component as () => Promise<{ default: unknown }>
+    const loadedRoute = await componentLoader()
     expect(loadedRoute).toHaveProperty('default')
   })
 })
