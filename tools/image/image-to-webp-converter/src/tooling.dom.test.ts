@@ -1,0 +1,523 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { mount, flushPromises } from '@vue/test-utils'
+import { defineComponent, h } from 'vue'
+import { createI18n } from 'vue-i18n'
+import * as toolInfo from './info'
+import { routes } from './routes'
+import { toolInfo as indexToolInfo } from './index'
+import ImageToWebpConverterView from './ImageToWebpConverterView.vue'
+import ImageUpload from './components/ImageUpload.vue'
+import ConversionOptions from './components/ConversionOptions.vue'
+import ConversionResults from './components/ConversionResults.vue'
+import type { WebpConversionResult } from './types'
+import { convertImageToWebp } from './utils/convert-image-to-webp'
+import { createWebpZip } from './utils/create-webp-zip'
+
+const messageMock = {
+  success: vi.fn(),
+  error: vi.fn(),
+}
+
+let objectUrlValue = 'blob:mock'
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { ref } = await import('vue')
+
+  return {
+    ...actual,
+    useObjectUrl: () => ref(objectUrlValue),
+  }
+})
+
+vi.mock('./utils/convert-image-to-webp', () => ({
+  convertImageToWebp: vi.fn(),
+}))
+
+vi.mock('./utils/create-webp-zip', () => ({
+  createWebpZip: vi.fn(),
+}))
+
+vi.mock('naive-ui', async () => {
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
+  const { defineComponent } = await import('vue')
+
+  const BaseStub = defineComponent({
+    name: 'BaseStub',
+    inheritAttrs: false,
+    template: '<div><slot /></div>',
+  })
+
+  const ButtonStub = defineComponent({
+    name: 'NButton',
+    inheritAttrs: false,
+    props: {
+      disabled: Boolean,
+      tag: String,
+      href: String,
+      download: String,
+      loading: Boolean,
+    },
+    emits: ['click'],
+    template: `<component :is="tag || 'button'" :disabled="disabled" :href="href" :download="download" v-bind="$attrs" @click="$emit('click')"><slot name="icon" /><slot /></component>`,
+  })
+
+  const makeModelStub = (name: string) =>
+    defineComponent({
+      name,
+      props: {
+        value: {
+          type: [Array, Number, Boolean, String],
+          default: undefined,
+        },
+      },
+      emits: ['update:value', 'update:checked'],
+      template: '<div />',
+    })
+
+  return {
+    ...actual,
+    useMessage: () => messageMock,
+    NAlert: BaseStub,
+    NButton: ButtonStub,
+    NCard: BaseStub,
+    NFlex: BaseStub,
+    NFormItemGi: BaseStub,
+    NGi: BaseStub,
+    NGrid: BaseStub,
+    NIcon: BaseStub,
+    NInputNumber: makeModelStub('NInputNumber'),
+    NP: BaseStub,
+    NText: BaseStub,
+    NUpload: BaseStub,
+    NUploadDragger: BaseStub,
+  }
+})
+
+const ToolDefaultPageLayoutStub = defineComponent({
+  name: 'ToolDefaultPageLayout',
+  props: ['info'],
+  template: '<div><slot /></div>',
+})
+
+const ToolSectionStub = defineComponent({
+  name: 'ToolSection',
+  template: '<section><slot /></section>',
+})
+
+const ToolSectionHeaderStub = defineComponent({
+  name: 'ToolSectionHeader',
+  template: '<header><slot /></header>',
+})
+
+const ImageUploadStub = defineComponent({
+  name: 'ImageUpload',
+  props: ['files'],
+  emits: ['update:files'],
+  template: '<div />',
+})
+
+const ConversionOptionsStub = defineComponent({
+  name: 'ConversionOptions',
+  props: ['scale', 'isConverting', 'canConvert'],
+  emits: ['update:scale', 'convert', 'reset'],
+  template: '<button @click="$emit(\'convert\')">convert</button>',
+})
+
+const ConversionResultsStub = defineComponent({
+  name: 'ConversionResults',
+  props: ['results', 'zipBlob'],
+  template: '<div class="results">{{ results?.length }}</div>',
+})
+
+const i18n = createI18n({
+  legacy: false,
+  locale: 'en',
+  messages: { en: {} },
+  missingWarn: false,
+  fallbackWarn: false,
+})
+
+const ViewWithProvider = defineComponent({
+  render() {
+    return h(ImageToWebpConverterView)
+  },
+})
+
+function mountView() {
+  return mount(ViewWithProvider, {
+    global: {
+      plugins: [i18n],
+      stubs: {
+        ToolDefaultPageLayout: ToolDefaultPageLayoutStub,
+        ToolSection: ToolSectionStub,
+        ToolSectionHeader: ToolSectionHeaderStub,
+        ImageUpload: ImageUploadStub,
+        ConversionOptions: ConversionOptionsStub,
+        ConversionResults: ConversionResultsStub,
+      },
+    },
+  })
+}
+
+function createFile(name: string, type = 'image/png') {
+  return new File(['data'], name, { type })
+}
+
+const mockedConvert = vi.mocked(convertImageToWebp)
+const mockedZip = vi.mocked(createWebpZip)
+
+beforeEach(() => {
+  messageMock.success.mockClear()
+  messageMock.error.mockClear()
+  mockedConvert.mockReset()
+  mockedZip.mockReset()
+})
+
+describe('tool metadata', () => {
+  it('exports tool info metadata', () => {
+    expect(toolInfo.toolID).toBe('image-to-webp-converter')
+    expect(toolInfo.path).toBe('/tools/image-to-webp-converter')
+    expect(toolInfo.features).toContain('offline')
+    expect(Object.keys(toolInfo.meta)).toHaveLength(25)
+  })
+
+  it('exports routes that match the tool path', async () => {
+    expect(routes).toHaveLength(1)
+    const route = routes[0]
+    if (!route) throw new Error('Missing route configuration')
+
+    expect(route.name).toBe(toolInfo.toolID)
+    expect(route.path).toBe(toolInfo.path)
+    expect(route.component).toBeTruthy()
+
+    if (typeof route.component !== 'function') {
+      throw new Error('Expected a lazy component loader')
+    }
+
+    const module = await (route.component as () => Promise<unknown>)()
+    expect(module).toHaveProperty('default')
+  })
+
+  it('re-exports tool info from index', () => {
+    expect(indexToolInfo.toolID).toBe(toolInfo.toolID)
+  })
+})
+
+describe('ImageToWebpConverterView', () => {
+  it('skips conversion when no files are selected', async () => {
+    const wrapper = mountView()
+    const vm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
+      convertImages: () => void
+    }
+
+    await vm.convertImages()
+    expect(mockedConvert).not.toHaveBeenCalled()
+  })
+
+  it('converts a single file without zipping', async () => {
+    const wrapper = mountView()
+    const file = createFile('photo.png')
+
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    const result: WebpConversionResult = {
+      file,
+      blob: new Blob(['webp'], { type: 'image/webp' }),
+      outputName: 'photo.webp',
+      originalWidth: 100,
+      originalHeight: 80,
+      outputWidth: 100,
+      outputHeight: 80,
+    }
+
+    mockedConvert.mockResolvedValueOnce(result)
+
+    await wrapper.find('button').trigger('click')
+    await flushPromises()
+
+    expect(mockedConvert).toHaveBeenCalledTimes(1)
+    expect(mockedZip).not.toHaveBeenCalled()
+
+    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
+      $: { setupState: { results: { value: WebpConversionResult[] } } }
+    }
+    expect(viewVm.$.setupState.results.value).toHaveLength(1)
+    expect(messageMock.success).toHaveBeenCalled()
+  })
+
+  it('creates a zip when multiple files are converted', async () => {
+    const wrapper = mountView()
+    const files = [createFile('a.png'), createFile('b.png')]
+
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce({
+      file: files[0]!,
+      blob: new Blob(['a'], { type: 'image/webp' }),
+      outputName: 'a.webp',
+      originalWidth: 10,
+      originalHeight: 10,
+      outputWidth: 10,
+      outputHeight: 10,
+    })
+    mockedConvert.mockResolvedValueOnce({
+      file: files[1]!,
+      blob: new Blob(['b'], { type: 'image/webp' }),
+      outputName: 'b.webp',
+      originalWidth: 20,
+      originalHeight: 20,
+      outputWidth: 20,
+      outputHeight: 20,
+    })
+    mockedZip.mockResolvedValueOnce(new Blob(['zip']))
+
+    await wrapper.find('button').trigger('click')
+    await flushPromises()
+
+    expect(mockedZip).toHaveBeenCalledTimes(1)
+    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
+      $: { setupState: { zipBlob: { value: Blob | null } } }
+    }
+    expect(viewVm.$.setupState.zipBlob.value).toBeInstanceOf(Blob)
+  })
+
+  it('shows an error when conversion fails', async () => {
+    const wrapper = mountView()
+    const file = createFile('bad.png')
+
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    mockedConvert.mockRejectedValueOnce(new Error('INVALID_IMAGE'))
+
+    await wrapper.find('button').trigger('click')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Failed to load the image')
+  })
+})
+
+describe('ImageUpload', () => {
+  it('accepts a valid image file', () => {
+    const wrapper = mount(ImageUpload, {
+      props: {
+        files: [],
+        title: 'Upload',
+        dragDropText: 'Drag',
+        supportText: 'Support',
+        selectedCountLabel: '1',
+        removeLabel: 'Remove',
+        clearAllLabel: 'Clear',
+        invalidTypeMessage: 'Invalid',
+        duplicateMessage: 'Duplicate',
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const file = createFile('icon.png')
+
+    const vm = wrapper.vm as unknown as {
+      handleBeforeUpload: (data: { file: { file?: File } }) => boolean
+    }
+
+    const result = vm.handleBeforeUpload({ file: { file } })
+    expect(result).toBe(false)
+    expect(wrapper.emitted('update:files')?.[0]?.[0]).toEqual([file])
+  })
+
+  it('rejects invalid file types', () => {
+    const wrapper = mount(ImageUpload, {
+      props: {
+        files: [],
+        title: 'Upload',
+        dragDropText: 'Drag',
+        supportText: 'Support',
+        selectedCountLabel: '1',
+        removeLabel: 'Remove',
+        clearAllLabel: 'Clear',
+        invalidTypeMessage: 'Invalid',
+        duplicateMessage: 'Duplicate',
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const file = createFile('doc.pdf', 'application/pdf')
+    const vm = wrapper.vm as unknown as {
+      handleBeforeUpload: (data: { file: { file?: File } }) => boolean
+    }
+
+    vm.handleBeforeUpload({ file: { file } })
+    expect(wrapper.emitted('update:files')).toBeFalsy()
+    expect(messageMock.error).toHaveBeenCalledWith('Invalid')
+  })
+
+  it('prevents duplicate files', () => {
+    const file = createFile('photo.png')
+    const wrapper = mount(ImageUpload, {
+      props: {
+        files: [file],
+        title: 'Upload',
+        dragDropText: 'Drag',
+        supportText: 'Support',
+        selectedCountLabel: '1',
+        removeLabel: 'Remove',
+        clearAllLabel: 'Clear',
+        invalidTypeMessage: 'Invalid',
+        duplicateMessage: 'Duplicate',
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const vm = wrapper.vm as unknown as {
+      handleBeforeUpload: (data: { file: { file?: File } }) => boolean
+    }
+
+    vm.handleBeforeUpload({ file: { file } })
+    expect(wrapper.emitted('update:files')).toBeFalsy()
+    expect(messageMock.error).toHaveBeenCalledWith('Duplicate')
+  })
+})
+
+describe('ConversionOptions', () => {
+  it('emits scale updates', () => {
+    const wrapper = mount(ConversionOptions, {
+      props: {
+        title: 'Options',
+        scaleLabel: 'Scale',
+        scaleHint: 'Hint',
+        resetLabel: 'Reset',
+        convertLabel: 'Convert',
+        convertingLabel: 'Converting',
+        scale: 100,
+        minScale: 10,
+        maxScale: 400,
+        isConverting: false,
+        canConvert: true,
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const vm = wrapper.vm as unknown as {
+      handleScaleUpdate: (value: number | null) => void
+    }
+
+    vm.handleScaleUpdate(80)
+    expect(wrapper.emitted('update:scale')?.[0]).toEqual([80])
+  })
+})
+
+describe('ConversionResults', () => {
+  it('shows download button for a single result', () => {
+    const file = createFile('image.png')
+    const results: WebpConversionResult[] = [
+      {
+        file,
+        blob: new Blob(['webp'], { type: 'image/webp' }),
+        outputName: 'image.webp',
+        originalWidth: 10,
+        originalHeight: 10,
+        outputWidth: 10,
+        outputHeight: 10,
+      },
+    ]
+
+    const wrapper = mount(ConversionResults, {
+      props: {
+        title: 'Results',
+        countLabel: '1',
+        results,
+        zipBlob: null,
+        isZipping: false,
+        downloadZipName: 'webp.zip',
+        downloadWebpLabel: 'Download WebP',
+        downloadZipLabel: 'Download ZIP',
+        originalLabel: 'Original',
+        outputLabel: 'Output',
+        dimensionsLabel: 'Dimensions',
+        fileSizeLabel: 'File size',
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const link = wrapper.find('a')
+    expect(link.attributes('download')).toBe('image.webp')
+  })
+
+  it('shows zip download for multiple results', () => {
+    const file = createFile('image.png')
+    const results: WebpConversionResult[] = [
+      {
+        file,
+        blob: new Blob(['webp'], { type: 'image/webp' }),
+        outputName: 'image.webp',
+        originalWidth: 10,
+        originalHeight: 10,
+        outputWidth: 10,
+        outputHeight: 10,
+      },
+      {
+        file,
+        blob: new Blob(['webp'], { type: 'image/webp' }),
+        outputName: 'image-2.webp',
+        originalWidth: 12,
+        originalHeight: 12,
+        outputWidth: 12,
+        outputHeight: 12,
+      },
+    ]
+
+    const wrapper = mount(ConversionResults, {
+      props: {
+        title: 'Results',
+        countLabel: '2',
+        results,
+        zipBlob: new Blob(['zip']),
+        isZipping: false,
+        downloadZipName: 'webp.zip',
+        downloadWebpLabel: 'Download WebP',
+        downloadZipLabel: 'Download ZIP',
+        originalLabel: 'Original',
+        outputLabel: 'Output',
+        dimensionsLabel: 'Dimensions',
+        fileSizeLabel: 'File size',
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    const link = wrapper.find('a')
+    expect(link.attributes('download')).toBe('webp.zip')
+  })
+})
