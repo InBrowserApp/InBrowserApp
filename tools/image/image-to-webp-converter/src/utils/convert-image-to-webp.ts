@@ -92,7 +92,7 @@ function addNumberOption(
   value: number | undefined,
   transform?: (value: number) => number,
 ) {
-  if (!Number.isFinite(value)) return
+  if (typeof value !== 'number' || !Number.isFinite(value)) return
   const nextValue = transform ? transform(value) : value
   options[key] = nextValue
 }
