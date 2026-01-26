@@ -67,7 +67,7 @@
             {{ fontCountLabel }}
           </n-text>
 
-          <n-scrollbar class="font-scroll" data-testid="font-list" style="height: 90vh">
+          <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
             <div class="font-list">
               <template v-if="displayGroups.length">
                 <div v-for="group in displayGroups" :key="group.id" class="font-group">
@@ -108,6 +108,17 @@
                 <div class="panel__title">{{ t('preview-title') }}</div>
                 <div class="panel__subtitle">{{ t('preview-hint') }}</div>
               </div>
+              <n-button
+                quaternary
+                circle
+                :aria-label="t('preview-background')"
+                data-testid="background-toggle"
+                @click="darkBackground = !darkBackground"
+              >
+                <template #icon>
+                  <n-icon :component="ArrowSwap20Regular" />
+                </template>
+              </n-button>
             </div>
 
             <n-form-item :label="t('preview-fallback')" class="preview-textarea">
@@ -140,14 +151,6 @@
                 </n-flex>
               </n-form-item>
             </div>
-
-            <n-form-item :label="t('preview-background')">
-              <n-switch
-                v-model:value="darkBackground"
-                size="small"
-                data-testid="background-toggle"
-              />
-            </n-form-item>
 
             <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
               <div
@@ -183,43 +186,69 @@
               <div class="panel__title">{{ t('details-title') }}</div>
             </div>
             <div class="details">
-              <n-ul class="details-list">
-                <n-li class="details-item">
-                  <span class="details-label">{{ t('details-family') }}:</span>
+              <n-descriptions
+                label-placement="left"
+                bordered
+                :column="1"
+                content-style="width: 100%"
+              >
+                <n-descriptions-item>
+                  <template #label>
+                    <span class="details-label">{{ t('details-family') }}</span>
+                  </template>
                   <CopyToClipboardTooltip :content="activeFont?.family || ''" #="{ copy }">
-                    <span class="details-value" @click="activeFont?.family ? copy() : undefined">
-                      {{ activeFont?.family || '--' }}
-                    </span>
-                  </CopyToClipboardTooltip>
-                </n-li>
-                <n-li class="details-item">
-                  <span class="details-label">{{ t('details-full-name') }}:</span>
-                  <CopyToClipboardTooltip :content="activeFont?.fullName || ''" #="{ copy }">
-                    <span class="details-value" @click="activeFont?.fullName ? copy() : undefined">
-                      {{ activeFont?.fullName || '--' }}
-                    </span>
-                  </CopyToClipboardTooltip>
-                </n-li>
-                <n-li class="details-item">
-                  <span class="details-label">{{ t('details-postscript') }}:</span>
-                  <CopyToClipboardTooltip :content="activeFont?.postscriptName || ''" #="{ copy }">
-                    <span
+                    <n-text
                       class="details-value"
+                      :class="{ 'details-value--empty': !activeFont?.family }"
+                      @click="activeFont?.family ? copy() : undefined"
+                    >
+                      {{ activeFont?.family || '--' }}
+                    </n-text>
+                  </CopyToClipboardTooltip>
+                </n-descriptions-item>
+                <n-descriptions-item>
+                  <template #label>
+                    <span class="details-label">{{ t('details-full-name') }}</span>
+                  </template>
+                  <CopyToClipboardTooltip :content="activeFont?.fullName || ''" #="{ copy }">
+                    <n-text
+                      class="details-value"
+                      :class="{ 'details-value--empty': !activeFont?.fullName }"
+                      @click="activeFont?.fullName ? copy() : undefined"
+                    >
+                      {{ activeFont?.fullName || '--' }}
+                    </n-text>
+                  </CopyToClipboardTooltip>
+                </n-descriptions-item>
+                <n-descriptions-item>
+                  <template #label>
+                    <span class="details-label">{{ t('details-postscript') }}</span>
+                  </template>
+                  <CopyToClipboardTooltip :content="activeFont?.postscriptName || ''" #="{ copy }">
+                    <n-text
+                      class="details-value"
+                      :class="{ 'details-value--empty': !activeFont?.postscriptName }"
                       @click="activeFont?.postscriptName ? copy() : undefined"
                     >
                       {{ activeFont?.postscriptName || '--' }}
-                    </span>
+                    </n-text>
                   </CopyToClipboardTooltip>
-                </n-li>
-                <n-li class="details-item">
-                  <span class="details-label">{{ t('details-style') }}:</span>
+                </n-descriptions-item>
+                <n-descriptions-item>
+                  <template #label>
+                    <span class="details-label">{{ t('details-style') }}</span>
+                  </template>
                   <CopyToClipboardTooltip :content="activeFont?.style || ''" #="{ copy }">
-                    <span class="details-value" @click="activeFont?.style ? copy() : undefined">
+                    <n-text
+                      class="details-value"
+                      :class="{ 'details-value--empty': !activeFont?.style }"
+                      @click="activeFont?.style ? copy() : undefined"
+                    >
                       {{ activeFont?.style || '--' }}
-                    </span>
+                    </n-text>
                   </CopyToClipboardTooltip>
-                </n-li>
-              </n-ul>
+                </n-descriptions-item>
+              </n-descriptions>
             </div>
           </n-card>
         </div>
@@ -247,6 +276,8 @@ import {
   NButton,
   NCard,
   NCode,
+  NDescriptions,
+  NDescriptionsItem,
   NFlex,
   NFormItem,
   NGi,
@@ -267,6 +298,7 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardTooltip } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
+import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
 
 type LocalFontData = {
   family: string
@@ -676,6 +708,7 @@ function wrapFontFamily(family: string) {
   border-radius: 16px;
   padding: 24px;
   background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: #0f172a;
   min-height: 220px;
   display: flex;
   align-items: center;
@@ -697,26 +730,21 @@ function wrapFontFamily(family: string) {
   gap: 8px;
 }
 
-.details-list {
-  margin-top: 6px;
-}
-
-.details-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-}
-
 .details-label {
   color: rgba(100, 116, 139, 0.9);
 }
 
 .details-value {
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 }
 
-.details-value:hover {
+.details-value--empty {
+  cursor: default;
+}
+
+.details-value:not(.details-value--empty):hover {
   text-decoration: underline;
 }
 

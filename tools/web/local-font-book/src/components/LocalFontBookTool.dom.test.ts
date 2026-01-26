@@ -120,6 +120,8 @@ vi.mock('naive-ui', async () => {
     NButton,
     NCard: BaseStub,
     NCode,
+    NDescriptions: BaseStub,
+    NDescriptionsItem: BaseStub,
     NFlex: BaseStub,
     NFormItem,
     NGi: BaseStub,
@@ -422,7 +424,7 @@ describe('LocalFontBookTool', () => {
     }
     await sizeNumber.setValue('48')
     await lineNumber.setValue('1.8')
-    await wrapper.get('[data-testid="background-toggle"]').setValue(true)
+    await wrapper.get('[data-testid="background-toggle"]').trigger('click')
 
     expect(wrapper.get('[data-testid="preview-text"]').text()).toContain('preview-fallback')
   })
