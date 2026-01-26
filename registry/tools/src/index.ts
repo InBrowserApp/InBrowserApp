@@ -130,6 +130,7 @@ import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-gene
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as emailValidatorToolInfo } from '@tools/email-validator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
+import { toolInfo as vinValidatorToolInfo } from '@tools/vin-validator'
 import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
 import { toolInfo as isbnValidatorToolInfo } from '@tools/isbn-validator'
 import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
@@ -315,6 +316,7 @@ export const tools: ToolInfo[] = [
   passwordStrengthCheckerToolInfo,
   emailValidatorToolInfo,
   creditCardValidatorToolInfo,
+  vinValidatorToolInfo,
   prcIdValidatorToolInfo,
   isbnValidatorToolInfo,
   ibanValidatorToolInfo,
