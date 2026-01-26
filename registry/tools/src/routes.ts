@@ -132,6 +132,7 @@ import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generato
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as emailValidatorRoutes } from '@tools/email-validator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
+import { routes as vinValidatorRoutes } from '@tools/vin-validator/routes'
 import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
 import { routes as isbnValidatorRoutes } from '@tools/isbn-validator/routes'
 import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
@@ -286,6 +287,7 @@ export const routes: ToolRoute[] = [
   ...gitignoreGeneratorRoutes,
   ...emailValidatorRoutes,
   ...creditCardValidatorRoutes,
+  ...vinValidatorRoutes,
   ...prcIdValidatorRoutes,
   ...isbnValidatorRoutes,
   ...ibanValidatorRoutes,
