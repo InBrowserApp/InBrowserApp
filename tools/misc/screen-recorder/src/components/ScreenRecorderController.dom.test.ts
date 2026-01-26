@@ -479,6 +479,7 @@ describe('ScreenRecorderController', () => {
 
     expect(FakeAudioContext.instances.length).toBe(1)
     const context = FakeAudioContext.instances[0]
+    if (!context) throw new Error('Missing audio context')
     expect(context.createMediaStreamSource).toHaveBeenCalledTimes(2)
     expect(context.close).toHaveBeenCalled()
   })

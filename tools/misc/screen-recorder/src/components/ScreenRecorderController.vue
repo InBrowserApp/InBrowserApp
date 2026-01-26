@@ -362,8 +362,9 @@ async function startRecording() {
   }
 
   try {
+    const videoConstraints = { cursor: cursorMode.value } as MediaTrackConstraints
     const display = await navigator.mediaDevices.getDisplayMedia({
-      video: { cursor: cursorMode.value },
+      video: videoConstraints,
       audio: includeSystemAudio.value,
     })
     displayStream.value = display
