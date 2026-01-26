@@ -1,5 +1,10 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
+    <div class="converter-grid">
+      <NumberInput :value="numberInput" @update:value="handleNumberUpdate" />
+      <ChineseUppercaseInput :value="uppercaseInput" @update:value="handleUppercaseUpdate" />
+    </div>
+
     <ToolSectionHeader>{{ t('styleTitle') }}</ToolSectionHeader>
     <ToolSection>
       <NRadioGroup v-model:value="variant" size="large">
@@ -8,8 +13,6 @@
       </NRadioGroup>
     </ToolSection>
 
-    <NumberInput :value="numberInput" @update:value="handleNumberUpdate" />
-    <ChineseUppercaseInput :value="uppercaseInput" @update:value="handleUppercaseUpdate" />
     <WhatIsChineseUppercaseNumber />
   </ToolDefaultPageLayout>
 </template>
@@ -190,3 +193,17 @@ watch(variant, (nextVariant) => {
   }
 }
 </i18n>
+
+<style scoped>
+.converter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .converter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+</style>
