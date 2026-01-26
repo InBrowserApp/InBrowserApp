@@ -24,7 +24,8 @@ export async function convertImageToWebp(
     const lossless = options.lossless ? 1 : 0
 
     const imageData = drawImageToData(image, outputWidth, outputHeight)
-    const encoded = await encode(imageData, { quality, method, lossless })
+    const encodeOptions = buildEncodeOptions(options, { quality, method, lossless })
+    const encoded = await encode(imageData, encodeOptions)
     const blob = new Blob([encoded], { type: 'image/webp' })
 
     return {
@@ -54,6 +55,55 @@ function normalizeQuality(value: number) {
 function normalizeMethod(value: number) {
   if (!Number.isFinite(value)) return 4
   return Math.min(6, Math.max(0, Math.round(value)))
+}
+
+function buildEncodeOptions(
+  options: WebpConversionOptions,
+  base: { quality: number; method: number; lossless: number },
+) {
+  const encodeOptions: Record<string, number> = {
+    quality: base.quality,
+    method: base.method,
+    lossless: base.lossless,
+  }
+
+  addNumberOption(encodeOptions, 'target_size', options.targetSize, (value) =>
+    Math.max(0, Math.round(value)),
+  )
+  addNumberOption(encodeOptions, 'target_PSNR', options.targetPsnr)
+  addNumberOption(encodeOptions, 'alpha_quality', options.alphaQuality)
+  addNumberOption(encodeOptions, 'near_lossless', options.nearLossless)
+  addNumberOption(encodeOptions, 'sns_strength', options.snsStrength)
+  addNumberOption(encodeOptions, 'filter_strength', options.filterStrength)
+  addNumberOption(encodeOptions, 'filter_sharpness', options.filterSharpness)
+  addNumberOption(encodeOptions, 'filter_type', options.filterType)
+  addNumberOption(encodeOptions, 'partitions', options.partitions)
+  addNumberOption(encodeOptions, 'segments', options.segments)
+  addNumberOption(encodeOptions, 'pass', options.pass)
+  addBooleanOption(encodeOptions, 'exact', options.exact)
+  addBooleanOption(encodeOptions, 'use_sharp_yuv', options.useSharpYuv)
+
+  return encodeOptions
+}
+
+function addNumberOption(
+  options: Record<string, number>,
+  key: string,
+  value: number | undefined,
+  transform?: (value: number) => number,
+) {
+  if (!Number.isFinite(value)) return
+  const nextValue = transform ? transform(value) : value
+  options[key] = nextValue
+}
+
+function addBooleanOption(
+  options: Record<string, number>,
+  key: string,
+  value: boolean | undefined,
+) {
+  if (value === undefined) return
+  options[key] = value ? 1 : 0
 }
 
 function drawImageToData(image: CanvasImageSource, width: number, height: number) {

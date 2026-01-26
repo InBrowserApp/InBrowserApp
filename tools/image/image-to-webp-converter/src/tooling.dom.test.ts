@@ -81,12 +81,14 @@ vi.mock('naive-ui', async () => {
     NAlert: BaseStub,
     NButton: ButtonStub,
     NCard: BaseStub,
+    NCollapseTransition: BaseStub,
     NFlex: BaseStub,
     NFormItemGi: BaseStub,
     NGi: BaseStub,
     NGrid: BaseStub,
     NIcon: BaseStub,
     NInputNumber: makeModelStub('NInputNumber'),
+    NSelect: makeModelStub('NSelect'),
     NSwitch: makeModelStub('NSwitch'),
     NP: BaseStub,
     NText: BaseStub,
@@ -120,8 +122,49 @@ const ImageUploadStub = defineComponent({
 
 const ConversionOptionsStub = defineComponent({
   name: 'ConversionOptions',
-  props: ['scale', 'quality', 'method', 'lossless', 'isConverting', 'canConvert'],
-  emits: ['update:scale', 'update:quality', 'update:method', 'update:lossless', 'convert'],
+  props: [
+    'scale',
+    'quality',
+    'method',
+    'lossless',
+    'advancedEnabled',
+    'targetSize',
+    'targetPsnr',
+    'nearLossless',
+    'alphaQuality',
+    'snsStrength',
+    'filterStrength',
+    'filterSharpness',
+    'filterType',
+    'partitions',
+    'segments',
+    'passCount',
+    'exactMode',
+    'sharpYuvMode',
+    'isConverting',
+    'canConvert',
+  ],
+  emits: [
+    'update:scale',
+    'update:quality',
+    'update:method',
+    'update:lossless',
+    'update:advancedEnabled',
+    'update:targetSize',
+    'update:targetPsnr',
+    'update:nearLossless',
+    'update:alphaQuality',
+    'update:snsStrength',
+    'update:filterStrength',
+    'update:filterSharpness',
+    'update:filterType',
+    'update:partitions',
+    'update:segments',
+    'update:passCount',
+    'update:exactMode',
+    'update:sharpYuvMode',
+    'convert',
+  ],
   template: '<button @click="$emit(\'convert\')">convert</button>',
 })
 
@@ -420,12 +463,43 @@ describe('ConversionOptions', () => {
         methodLabel: 'Method',
         methodHint: 'Method hint',
         losslessLabel: 'Lossless',
+        advancedLabel: 'Advanced',
+        targetSizeLabel: 'Target size',
+        targetPsnrLabel: 'Target PSNR',
+        nearLosslessLabel: 'Near lossless',
+        alphaQualityLabel: 'Alpha quality',
+        snsStrengthLabel: 'SNS strength',
+        filterStrengthLabel: 'Filter strength',
+        filterSharpnessLabel: 'Filter sharpness',
+        filterTypeLabel: 'Filter type',
+        partitionsLabel: 'Partitions',
+        segmentsLabel: 'Segments',
+        passLabel: 'Passes',
+        exactLabel: 'Exact',
+        useSharpYuvLabel: 'Sharp YUV',
+        optionDefaultLabel: 'Default',
+        optionOnLabel: 'On',
+        optionOffLabel: 'Off',
         convertLabel: 'Convert',
         convertingLabel: 'Converting',
         scale: 100,
         quality: 80,
         method: 4,
         lossless: false,
+        advancedEnabled: false,
+        targetSize: null,
+        targetPsnr: null,
+        nearLossless: null,
+        alphaQuality: null,
+        snsStrength: null,
+        filterStrength: null,
+        filterSharpness: null,
+        filterType: null,
+        partitions: null,
+        segments: null,
+        passCount: null,
+        exactMode: 'default',
+        sharpYuvMode: 'default',
         minScale: 10,
         maxScale: 400,
         isConverting: false,
@@ -444,6 +518,9 @@ describe('ConversionOptions', () => {
       handleQualityUpdate: (value: number | null) => void
       handleMethodUpdate: (value: number | null) => void
       handleLosslessUpdate: (value: boolean) => void
+      handleAdvancedEnabledUpdate: (value: boolean) => void
+      handleTargetSizeUpdate: (value: number | null) => void
+      handleExactModeUpdate: (value: 'default' | 'on' | 'off') => void
     }
 
     vm.handleScaleUpdate(80)
@@ -454,6 +531,13 @@ describe('ConversionOptions', () => {
     expect(wrapper.emitted('update:method')?.[0]).toEqual([5])
     vm.handleLosslessUpdate(true)
     expect(wrapper.emitted('update:lossless')?.[0]).toEqual([true])
+    vm.handleAdvancedEnabledUpdate(true)
+    expect(wrapper.emitted('update:advancedEnabled')?.[0]).toEqual([true])
+    vm.handleTargetSizeUpdate(128)
+    expect(wrapper.emitted('update:targetSize')?.[0]).toEqual([128])
+    expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([null])
+    vm.handleExactModeUpdate('on')
+    expect(wrapper.emitted('update:exactMode')?.[0]).toEqual(['on'])
   })
 })
 

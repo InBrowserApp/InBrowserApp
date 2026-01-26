@@ -18,6 +18,20 @@
       v-model:quality="quality"
       v-model:method="method"
       v-model:lossless="lossless"
+      v-model:advanced-enabled="advancedEnabled"
+      v-model:target-size="targetSize"
+      v-model:target-psnr="targetPsnr"
+      v-model:near-lossless="nearLossless"
+      v-model:alpha-quality="alphaQuality"
+      v-model:sns-strength="snsStrength"
+      v-model:filter-strength="filterStrength"
+      v-model:filter-sharpness="filterSharpness"
+      v-model:filter-type="filterType"
+      v-model:partitions="partitions"
+      v-model:segments="segments"
+      v-model:pass-count="passCount"
+      v-model:exact-mode="exactMode"
+      v-model:sharp-yuv-mode="sharpYuvMode"
       :title="t('optionsTitle')"
       :scale-label="t('scaleLabel')"
       :scale-hint="t('scaleHint')"
@@ -26,6 +40,23 @@
       :method-label="t('methodLabel')"
       :method-hint="t('methodHint')"
       :lossless-label="t('losslessLabel')"
+      :advanced-label="t('advancedLabel')"
+      :target-size-label="t('targetSizeLabel')"
+      :target-psnr-label="t('targetPsnrLabel')"
+      :near-lossless-label="t('nearLosslessLabel')"
+      :alpha-quality-label="t('alphaQualityLabel')"
+      :sns-strength-label="t('snsStrengthLabel')"
+      :filter-strength-label="t('filterStrengthLabel')"
+      :filter-sharpness-label="t('filterSharpnessLabel')"
+      :filter-type-label="t('filterTypeLabel')"
+      :partitions-label="t('partitionsLabel')"
+      :segments-label="t('segmentsLabel')"
+      :pass-label="t('passLabel')"
+      :exact-label="t('exactLabel')"
+      :use-sharp-yuv-label="t('useSharpYuvLabel')"
+      :option-default-label="t('optionDefault')"
+      :option-on-label="t('optionOn')"
+      :option-off-label="t('optionOff')"
       :convert-label="t('convert')"
       :converting-label="t('converting')"
       :min-scale="minScale"
@@ -74,16 +105,32 @@ import ConversionOptions from './components/ConversionOptions.vue'
 import ConversionResults from './components/ConversionResults.vue'
 import { convertImageToWebp } from './utils/convert-image-to-webp'
 import { createWebpZip } from './utils/create-webp-zip'
-import type { WebpConversionResult } from './types'
+import type { WebpConversionOptions, WebpConversionResult } from './types'
 
 const { t } = useI18n()
 const message = useMessage()
+
+type TriState = 'default' | 'on' | 'off'
 
 const files = ref<File[]>([])
 const scale = ref(100)
 const quality = ref(80)
 const method = ref(4)
 const lossless = ref(false)
+const advancedEnabled = ref(false)
+const targetSize = ref<number | null>(null)
+const targetPsnr = ref<number | null>(null)
+const nearLossless = ref<number | null>(null)
+const alphaQuality = ref<number | null>(null)
+const snsStrength = ref<number | null>(null)
+const filterStrength = ref<number | null>(null)
+const filterSharpness = ref<number | null>(null)
+const filterType = ref<number | null>(null)
+const partitions = ref<number | null>(null)
+const segments = ref<number | null>(null)
+const passCount = ref<number | null>(null)
+const exactMode = ref<TriState>('default')
+const sharpYuvMode = ref<TriState>('default')
 const results = ref<WebpConversionResult[]>([])
 const zipBlob = ref<Blob | null>(null)
 const error = ref('')
@@ -98,14 +145,37 @@ const canConvert = computed(() => files.value.length > 0 && !isConverting.value)
 
 let runId = 0
 
-watch([files, scale, quality, method, lossless], () => {
-  runId += 1
-  results.value = []
-  zipBlob.value = null
-  error.value = ''
-  isConverting.value = false
-  isZipping.value = false
-})
+watch(
+  [
+    files,
+    scale,
+    quality,
+    method,
+    lossless,
+    advancedEnabled,
+    targetSize,
+    targetPsnr,
+    nearLossless,
+    alphaQuality,
+    snsStrength,
+    filterStrength,
+    filterSharpness,
+    filterType,
+    partitions,
+    segments,
+    passCount,
+    exactMode,
+    sharpYuvMode,
+  ],
+  () => {
+    runId += 1
+    results.value = []
+    zipBlob.value = null
+    error.value = ''
+    isConverting.value = false
+    isZipping.value = false
+  },
+)
 
 async function convertImages() {
   if (!files.value.length || isConverting.value) return
@@ -125,16 +195,7 @@ async function convertImages() {
     for (const file of files.value) {
       const outputName = buildOutputName(file.name, nameCounts)
       try {
-        const result = await convertImageToWebp(
-          file,
-          {
-            scale: scale.value,
-            quality: quality.value,
-            method: method.value,
-            lossless: lossless.value,
-          },
-          outputName,
-        )
+        const result = await convertImageToWebp(file, buildConversionOptions(), outputName)
         if (currentRun !== runId) return
         nextResults.push(result)
       } catch (err) {
@@ -182,6 +243,67 @@ async function convertImages() {
   }
 }
 
+function buildConversionOptions(): WebpConversionOptions {
+  const options: WebpConversionOptions = {
+    scale: scale.value,
+    quality: quality.value,
+    method: method.value,
+    lossless: lossless.value,
+  }
+
+  if (!advancedEnabled.value) return options
+
+  if (targetSize.value !== null && Number.isFinite(targetSize.value)) {
+    options.targetSize = Math.max(0, Math.round(targetSize.value * 1024))
+  }
+  if (targetPsnr.value !== null && Number.isFinite(targetPsnr.value)) {
+    options.targetPsnr = targetPsnr.value
+  }
+  if (nearLossless.value !== null && Number.isFinite(nearLossless.value)) {
+    options.nearLossless = nearLossless.value
+  }
+  if (alphaQuality.value !== null && Number.isFinite(alphaQuality.value)) {
+    options.alphaQuality = alphaQuality.value
+  }
+  if (snsStrength.value !== null && Number.isFinite(snsStrength.value)) {
+    options.snsStrength = snsStrength.value
+  }
+  if (filterStrength.value !== null && Number.isFinite(filterStrength.value)) {
+    options.filterStrength = filterStrength.value
+  }
+  if (filterSharpness.value !== null && Number.isFinite(filterSharpness.value)) {
+    options.filterSharpness = filterSharpness.value
+  }
+  if (filterType.value !== null && Number.isFinite(filterType.value)) {
+    options.filterType = filterType.value
+  }
+  if (partitions.value !== null && Number.isFinite(partitions.value)) {
+    options.partitions = partitions.value
+  }
+  if (segments.value !== null && Number.isFinite(segments.value)) {
+    options.segments = segments.value
+  }
+  if (passCount.value !== null && Number.isFinite(passCount.value)) {
+    options.pass = passCount.value
+  }
+  const exactValue = resolveTriState(exactMode.value)
+  if (exactValue !== undefined) {
+    options.exact = exactValue
+  }
+  const sharpYuvValue = resolveTriState(sharpYuvMode.value)
+  if (sharpYuvValue !== undefined) {
+    options.useSharpYuv = sharpYuvValue
+  }
+
+  return options
+}
+
+function resolveTriState(value: TriState) {
+  if (value === 'on') return true
+  if (value === 'off') return false
+  return undefined
+}
+
 function resolveErrorMessage(err: unknown) {
   if (err instanceof Error) {
     switch (err.message) {
@@ -226,6 +348,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Compression effort",
     "methodHint": "0 = fastest, 6 = best compression.",
     "losslessLabel": "Lossless",
+    "advancedLabel": "Advanced options",
+    "targetSizeLabel": "Target size (KB)",
+    "targetPsnrLabel": "Target PSNR",
+    "nearLosslessLabel": "Near lossless",
+    "alphaQualityLabel": "Alpha quality",
+    "snsStrengthLabel": "SNS strength",
+    "filterStrengthLabel": "Filter strength",
+    "filterSharpnessLabel": "Filter sharpness",
+    "filterTypeLabel": "Filter type",
+    "partitionsLabel": "Partitions",
+    "segmentsLabel": "Segments",
+    "passLabel": "Passes",
+    "exactLabel": "Exact",
+    "useSharpYuvLabel": "Sharp YUV",
+    "optionDefault": "Default",
+    "optionOn": "On",
+    "optionOff": "Off",
     "saved": "Saved",
     "totalSaved": "Total saved",
     "convert": "Convert to WebP",
@@ -263,6 +402,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "压缩强度",
     "methodHint": "0 最快，6 压缩最佳。",
     "losslessLabel": "无损",
+    "advancedLabel": "高级选项",
+    "targetSizeLabel": "目标大小 (KB)",
+    "targetPsnrLabel": "目标 PSNR",
+    "nearLosslessLabel": "近无损",
+    "alphaQualityLabel": "透明度质量",
+    "snsStrengthLabel": "SNS 强度",
+    "filterStrengthLabel": "滤镜强度",
+    "filterSharpnessLabel": "滤镜锐度",
+    "filterTypeLabel": "滤镜类型",
+    "partitionsLabel": "分区数",
+    "segmentsLabel": "分段数",
+    "passLabel": "遍数",
+    "exactLabel": "精确透明",
+    "useSharpYuvLabel": "锐化 YUV",
+    "optionDefault": "默认",
+    "optionOn": "开启",
+    "optionOff": "关闭",
     "saved": "节省",
     "totalSaved": "总共节省",
     "convert": "转换为 WebP",
@@ -300,6 +456,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "压缩强度",
     "methodHint": "0 最快，6 压缩最佳。",
     "losslessLabel": "无损",
+    "advancedLabel": "高级选项",
+    "targetSizeLabel": "目标大小 (KB)",
+    "targetPsnrLabel": "目标 PSNR",
+    "nearLosslessLabel": "近无损",
+    "alphaQualityLabel": "透明度质量",
+    "snsStrengthLabel": "SNS 强度",
+    "filterStrengthLabel": "滤镜强度",
+    "filterSharpnessLabel": "滤镜锐度",
+    "filterTypeLabel": "滤镜类型",
+    "partitionsLabel": "分区数",
+    "segmentsLabel": "分段数",
+    "passLabel": "遍数",
+    "exactLabel": "精确透明",
+    "useSharpYuvLabel": "锐化 YUV",
+    "optionDefault": "默认",
+    "optionOn": "开启",
+    "optionOff": "关闭",
     "saved": "节省",
     "totalSaved": "总共节省",
     "convert": "转换为 WebP",
@@ -337,6 +510,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "壓縮強度",
     "methodHint": "0 最快，6 壓縮最佳。",
     "losslessLabel": "無損",
+    "advancedLabel": "進階選項",
+    "targetSizeLabel": "目標大小 (KB)",
+    "targetPsnrLabel": "目標 PSNR",
+    "nearLosslessLabel": "近無損",
+    "alphaQualityLabel": "透明度品質",
+    "snsStrengthLabel": "SNS 強度",
+    "filterStrengthLabel": "濾鏡強度",
+    "filterSharpnessLabel": "濾鏡銳度",
+    "filterTypeLabel": "濾鏡類型",
+    "partitionsLabel": "分區數",
+    "segmentsLabel": "分段數",
+    "passLabel": "次數",
+    "exactLabel": "精確透明",
+    "useSharpYuvLabel": "銳化 YUV",
+    "optionDefault": "預設",
+    "optionOn": "開啟",
+    "optionOff": "關閉",
     "saved": "節省",
     "totalSaved": "總共節省",
     "convert": "轉換為 WebP",
@@ -374,6 +564,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "壓縮強度",
     "methodHint": "0 最快，6 壓縮最佳。",
     "losslessLabel": "無損",
+    "advancedLabel": "進階選項",
+    "targetSizeLabel": "目標大小 (KB)",
+    "targetPsnrLabel": "目標 PSNR",
+    "nearLosslessLabel": "近無損",
+    "alphaQualityLabel": "透明度品質",
+    "snsStrengthLabel": "SNS 強度",
+    "filterStrengthLabel": "濾鏡強度",
+    "filterSharpnessLabel": "濾鏡銳度",
+    "filterTypeLabel": "濾鏡類型",
+    "partitionsLabel": "分區數",
+    "segmentsLabel": "分段數",
+    "passLabel": "次數",
+    "exactLabel": "精確透明",
+    "useSharpYuvLabel": "銳化 YUV",
+    "optionDefault": "預設",
+    "optionOn": "開啟",
+    "optionOff": "關閉",
     "saved": "節省",
     "totalSaved": "總共節省",
     "convert": "轉換為 WebP",
@@ -411,6 +618,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Esfuerzo de compresión",
     "methodHint": "0 = más rápido, 6 = mejor compresión.",
     "losslessLabel": "Sin pérdidas",
+    "advancedLabel": "Opciones avanzadas",
+    "targetSizeLabel": "Tamaño objetivo (KB)",
+    "targetPsnrLabel": "PSNR objetivo",
+    "nearLosslessLabel": "Casi sin pérdidas",
+    "alphaQualityLabel": "Calidad alfa",
+    "snsStrengthLabel": "Fuerza SNS",
+    "filterStrengthLabel": "Fuerza del filtro",
+    "filterSharpnessLabel": "Nitidez del filtro",
+    "filterTypeLabel": "Tipo de filtro",
+    "partitionsLabel": "Particiones",
+    "segmentsLabel": "Segmentos",
+    "passLabel": "Pasadas",
+    "exactLabel": "Exacto",
+    "useSharpYuvLabel": "YUV nítido",
+    "optionDefault": "Predeterminado",
+    "optionOn": "Activado",
+    "optionOff": "Desactivado",
     "saved": "Ahorro",
     "totalSaved": "Ahorro total",
     "convert": "Convertir a WebP",
@@ -448,6 +672,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Effort de compression",
     "methodHint": "0 = le plus rapide, 6 = la meilleure compression.",
     "losslessLabel": "Sans perte",
+    "advancedLabel": "Options avancées",
+    "targetSizeLabel": "Taille cible (KB)",
+    "targetPsnrLabel": "PSNR cible",
+    "nearLosslessLabel": "Presque sans perte",
+    "alphaQualityLabel": "Qualité alpha",
+    "snsStrengthLabel": "Force SNS",
+    "filterStrengthLabel": "Force du filtre",
+    "filterSharpnessLabel": "Netteté du filtre",
+    "filterTypeLabel": "Type de filtre",
+    "partitionsLabel": "Partitions",
+    "segmentsLabel": "Segments",
+    "passLabel": "Passes",
+    "exactLabel": "Exact",
+    "useSharpYuvLabel": "YUV net",
+    "optionDefault": "Par défaut",
+    "optionOn": "Activé",
+    "optionOff": "Désactivé",
     "saved": "Économie",
     "totalSaved": "Économie totale",
     "convert": "Convertir en WebP",
@@ -485,6 +726,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Kompressionsaufwand",
     "methodHint": "0 = am schnellsten, 6 = beste Kompression.",
     "losslessLabel": "Verlustfrei",
+    "advancedLabel": "Erweiterte Optionen",
+    "targetSizeLabel": "Zielgröße (KB)",
+    "targetPsnrLabel": "Ziel-PSNR",
+    "nearLosslessLabel": "Nahezu verlustfrei",
+    "alphaQualityLabel": "Alpha-Qualität",
+    "snsStrengthLabel": "SNS-Stärke",
+    "filterStrengthLabel": "Filterstärke",
+    "filterSharpnessLabel": "Filter-Schärfe",
+    "filterTypeLabel": "Filtertyp",
+    "partitionsLabel": "Partitionen",
+    "segmentsLabel": "Segmente",
+    "passLabel": "Durchläufe",
+    "exactLabel": "Exakt",
+    "useSharpYuvLabel": "Scharfes YUV",
+    "optionDefault": "Standard",
+    "optionOn": "An",
+    "optionOff": "Aus",
     "saved": "Ersparnis",
     "totalSaved": "Gesamtersparnis",
     "convert": "In WebP konvertieren",
@@ -522,6 +780,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Sforzo di compressione",
     "methodHint": "0 = più veloce, 6 = migliore compressione.",
     "losslessLabel": "Senza perdita",
+    "advancedLabel": "Opzioni avanzate",
+    "targetSizeLabel": "Dimensione obiettivo (KB)",
+    "targetPsnrLabel": "PSNR obiettivo",
+    "nearLosslessLabel": "Quasi lossless",
+    "alphaQualityLabel": "Qualità alpha",
+    "snsStrengthLabel": "Intensità SNS",
+    "filterStrengthLabel": "Intensità filtro",
+    "filterSharpnessLabel": "Nitidezza filtro",
+    "filterTypeLabel": "Tipo filtro",
+    "partitionsLabel": "Partizioni",
+    "segmentsLabel": "Segmenti",
+    "passLabel": "Passaggi",
+    "exactLabel": "Esatto",
+    "useSharpYuvLabel": "YUV nitido",
+    "optionDefault": "Predefinito",
+    "optionOn": "Attivo",
+    "optionOff": "Disattivo",
     "saved": "Risparmio",
     "totalSaved": "Risparmio totale",
     "convert": "Converti in WebP",
@@ -559,6 +834,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "圧縮強度",
     "methodHint": "0 = 最速、6 = 最高圧縮。",
     "losslessLabel": "可逆",
+    "advancedLabel": "詳細オプション",
+    "targetSizeLabel": "目標サイズ (KB)",
+    "targetPsnrLabel": "目標 PSNR",
+    "nearLosslessLabel": "準ロスレス",
+    "alphaQualityLabel": "アルファ品質",
+    "snsStrengthLabel": "SNS 強度",
+    "filterStrengthLabel": "フィルター強度",
+    "filterSharpnessLabel": "フィルターシャープネス",
+    "filterTypeLabel": "フィルター種類",
+    "partitionsLabel": "パーティション",
+    "segmentsLabel": "セグメント",
+    "passLabel": "パス",
+    "exactLabel": "厳密",
+    "useSharpYuvLabel": "シャープ YUV",
+    "optionDefault": "デフォルト",
+    "optionOn": "オン",
+    "optionOff": "オフ",
     "saved": "削減",
     "totalSaved": "合計削減",
     "convert": "WebP に変換",
@@ -596,6 +888,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "압축 강도",
     "methodHint": "0 = 가장 빠름, 6 = 최고의 압축.",
     "losslessLabel": "무손실",
+    "advancedLabel": "고급 옵션",
+    "targetSizeLabel": "목표 크기 (KB)",
+    "targetPsnrLabel": "목표 PSNR",
+    "nearLosslessLabel": "준 무손실",
+    "alphaQualityLabel": "알파 품질",
+    "snsStrengthLabel": "SNS 강도",
+    "filterStrengthLabel": "필터 강도",
+    "filterSharpnessLabel": "필터 선명도",
+    "filterTypeLabel": "필터 유형",
+    "partitionsLabel": "파티션",
+    "segmentsLabel": "세그먼트",
+    "passLabel": "패스",
+    "exactLabel": "정확",
+    "useSharpYuvLabel": "선명 YUV",
+    "optionDefault": "기본값",
+    "optionOn": "켜기",
+    "optionOff": "끄기",
     "saved": "절감",
     "totalSaved": "총 절감",
     "convert": "WebP로 변환",
@@ -633,6 +942,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Интенсивность сжатия",
     "methodHint": "0 = быстрее всего, 6 = лучшее сжатие.",
     "losslessLabel": "Без потерь",
+    "advancedLabel": "Расширенные параметры",
+    "targetSizeLabel": "Целевой размер (КБ)",
+    "targetPsnrLabel": "Целевой PSNR",
+    "nearLosslessLabel": "Почти без потерь",
+    "alphaQualityLabel": "Качество альфа",
+    "snsStrengthLabel": "Сила SNS",
+    "filterStrengthLabel": "Сила фильтра",
+    "filterSharpnessLabel": "Резкость фильтра",
+    "filterTypeLabel": "Тип фильтра",
+    "partitionsLabel": "Разделы",
+    "segmentsLabel": "Сегменты",
+    "passLabel": "Проходы",
+    "exactLabel": "Точно",
+    "useSharpYuvLabel": "Резкий YUV",
+    "optionDefault": "По умолчанию",
+    "optionOn": "Вкл",
+    "optionOff": "Выкл",
     "saved": "Экономия",
     "totalSaved": "Общая экономия",
     "convert": "Конвертировать в WebP",
@@ -670,6 +996,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Esforço de compressão",
     "methodHint": "0 = mais rápido, 6 = melhor compressão.",
     "losslessLabel": "Sem perdas",
+    "advancedLabel": "Opções avançadas",
+    "targetSizeLabel": "Tamanho alvo (KB)",
+    "targetPsnrLabel": "PSNR alvo",
+    "nearLosslessLabel": "Quase sem perdas",
+    "alphaQualityLabel": "Qualidade alfa",
+    "snsStrengthLabel": "Força SNS",
+    "filterStrengthLabel": "Força do filtro",
+    "filterSharpnessLabel": "Nitidez do filtro",
+    "filterTypeLabel": "Tipo de filtro",
+    "partitionsLabel": "Partições",
+    "segmentsLabel": "Segmentos",
+    "passLabel": "Passes",
+    "exactLabel": "Exato",
+    "useSharpYuvLabel": "YUV nítido",
+    "optionDefault": "Padrão",
+    "optionOn": "Ligado",
+    "optionOff": "Desligado",
     "saved": "Economia",
     "totalSaved": "Economia total",
     "convert": "Converter para WebP",
@@ -707,6 +1050,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "مستوى الضغط",
     "methodHint": "0 = الأسرع، 6 = أفضل ضغط.",
     "losslessLabel": "بدون فقدان",
+    "advancedLabel": "خيارات متقدمة",
+    "targetSizeLabel": "الحجم المستهدف (KB)",
+    "targetPsnrLabel": "PSNR مستهدف",
+    "nearLosslessLabel": "قريب من بدون فقدان",
+    "alphaQualityLabel": "جودة ألفا",
+    "snsStrengthLabel": "قوة SNS",
+    "filterStrengthLabel": "قوة المرشح",
+    "filterSharpnessLabel": "حدة المرشح",
+    "filterTypeLabel": "نوع المرشح",
+    "partitionsLabel": "الأقسام",
+    "segmentsLabel": "المقاطع",
+    "passLabel": "عدد التمريرات",
+    "exactLabel": "دقيق",
+    "useSharpYuvLabel": "YUV حاد",
+    "optionDefault": "افتراضي",
+    "optionOn": "تشغيل",
+    "optionOff": "إيقاف",
     "saved": "توفير",
     "totalSaved": "إجمالي التوفير",
     "convert": "تحويل إلى WebP",
@@ -744,6 +1104,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "कंप्रेशन स्तर",
     "methodHint": "0 = सबसे तेज़, 6 = सर्वोत्तम कंप्रेशन।",
     "losslessLabel": "लॉसलेस",
+    "advancedLabel": "उन्नत विकल्प",
+    "targetSizeLabel": "लक्ष्य आकार (KB)",
+    "targetPsnrLabel": "लक्ष्य PSNR",
+    "nearLosslessLabel": "लगभग लॉसलेस",
+    "alphaQualityLabel": "अल्फ़ा गुणवत्ता",
+    "snsStrengthLabel": "SNS शक्ति",
+    "filterStrengthLabel": "फ़िल्टर शक्ति",
+    "filterSharpnessLabel": "फ़िल्टर तीक्ष्णता",
+    "filterTypeLabel": "फ़िल्टर प्रकार",
+    "partitionsLabel": "पार्टिशन",
+    "segmentsLabel": "सेगमेंट",
+    "passLabel": "पास",
+    "exactLabel": "सटीक",
+    "useSharpYuvLabel": "शार्प YUV",
+    "optionDefault": "डिफ़ॉल्ट",
+    "optionOn": "चालू",
+    "optionOff": "बंद",
     "saved": "बचत",
     "totalSaved": "कुल बचत",
     "convert": "WebP में बदलें",
@@ -781,6 +1158,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Sıkıştırma düzeyi",
     "methodHint": "0 = en hızlı, 6 = en iyi sıkıştırma.",
     "losslessLabel": "Kayıpsız",
+    "advancedLabel": "Gelişmiş seçenekler",
+    "targetSizeLabel": "Hedef boyut (KB)",
+    "targetPsnrLabel": "Hedef PSNR",
+    "nearLosslessLabel": "Neredeyse kayıpsız",
+    "alphaQualityLabel": "Alfa kalitesi",
+    "snsStrengthLabel": "SNS gücü",
+    "filterStrengthLabel": "Filtre gücü",
+    "filterSharpnessLabel": "Filtre keskinliği",
+    "filterTypeLabel": "Filtre türü",
+    "partitionsLabel": "Bölümler",
+    "segmentsLabel": "Segmentler",
+    "passLabel": "Geçişler",
+    "exactLabel": "Kesin",
+    "useSharpYuvLabel": "Keskin YUV",
+    "optionDefault": "Varsayılan",
+    "optionOn": "Açık",
+    "optionOff": "Kapalı",
     "saved": "Tasarruf",
     "totalSaved": "Toplam tasarruf",
     "convert": "WebP'ye dönüştür",
@@ -818,6 +1212,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Compressie-inspanning",
     "methodHint": "0 = snelst, 6 = beste compressie.",
     "losslessLabel": "Verliesvrij",
+    "advancedLabel": "Geavanceerde opties",
+    "targetSizeLabel": "Doelgrootte (KB)",
+    "targetPsnrLabel": "Doel-PSNR",
+    "nearLosslessLabel": "Bijna verliesvrij",
+    "alphaQualityLabel": "Alfa-kwaliteit",
+    "snsStrengthLabel": "SNS-sterkte",
+    "filterStrengthLabel": "Filtersterkte",
+    "filterSharpnessLabel": "Filterscherpte",
+    "filterTypeLabel": "Filtertype",
+    "partitionsLabel": "Partities",
+    "segmentsLabel": "Segmenten",
+    "passLabel": "Passes",
+    "exactLabel": "Exact",
+    "useSharpYuvLabel": "Scherpe YUV",
+    "optionDefault": "Standaard",
+    "optionOn": "Aan",
+    "optionOff": "Uit",
     "saved": "Besparing",
     "totalSaved": "Totale besparing",
     "convert": "Converteren naar WebP",
@@ -855,6 +1266,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Komprimeringsinsats",
     "methodHint": "0 = snabbast, 6 = bästa komprimering.",
     "losslessLabel": "Förlustfri",
+    "advancedLabel": "Avancerade alternativ",
+    "targetSizeLabel": "Målstorlek (KB)",
+    "targetPsnrLabel": "Mål-PSNR",
+    "nearLosslessLabel": "Nästan förlustfri",
+    "alphaQualityLabel": "Alfa-kvalitet",
+    "snsStrengthLabel": "SNS-styrka",
+    "filterStrengthLabel": "Filterstyrka",
+    "filterSharpnessLabel": "Filterskärpa",
+    "filterTypeLabel": "Filtertyp",
+    "partitionsLabel": "Partitioner",
+    "segmentsLabel": "Segment",
+    "passLabel": "Pass",
+    "exactLabel": "Exakt",
+    "useSharpYuvLabel": "Skärpt YUV",
+    "optionDefault": "Standard",
+    "optionOn": "På",
+    "optionOff": "Av",
     "saved": "Sparat",
     "totalSaved": "Totalt sparat",
     "convert": "Konvertera till WebP",
@@ -892,6 +1320,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Wysiłek kompresji",
     "methodHint": "0 = najszybciej, 6 = najlepsza kompresja.",
     "losslessLabel": "Bezstratnie",
+    "advancedLabel": "Zaawansowane opcje",
+    "targetSizeLabel": "Rozmiar docelowy (KB)",
+    "targetPsnrLabel": "Docelowy PSNR",
+    "nearLosslessLabel": "Prawie bezstratny",
+    "alphaQualityLabel": "Jakość alfa",
+    "snsStrengthLabel": "Siła SNS",
+    "filterStrengthLabel": "Siła filtra",
+    "filterSharpnessLabel": "Ostrość filtra",
+    "filterTypeLabel": "Typ filtra",
+    "partitionsLabel": "Partycje",
+    "segmentsLabel": "Segmenty",
+    "passLabel": "Przebiegi",
+    "exactLabel": "Dokładny",
+    "useSharpYuvLabel": "Ostry YUV",
+    "optionDefault": "Domyślny",
+    "optionOn": "Włącz",
+    "optionOff": "Wyłącz",
     "saved": "Oszczędność",
     "totalSaved": "Łączna oszczędność",
     "convert": "Konwertuj do WebP",
@@ -929,6 +1374,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Mức nén",
     "methodHint": "0 = nhanh nhất, 6 = nén tốt nhất.",
     "losslessLabel": "Không mất dữ liệu",
+    "advancedLabel": "Tùy chọn nâng cao",
+    "targetSizeLabel": "Kích thước mục tiêu (KB)",
+    "targetPsnrLabel": "PSNR mục tiêu",
+    "nearLosslessLabel": "Gần như không mất dữ liệu",
+    "alphaQualityLabel": "Chất lượng alpha",
+    "snsStrengthLabel": "Cường độ SNS",
+    "filterStrengthLabel": "Cường độ bộ lọc",
+    "filterSharpnessLabel": "Độ sắc nét bộ lọc",
+    "filterTypeLabel": "Loại bộ lọc",
+    "partitionsLabel": "Phân vùng",
+    "segmentsLabel": "Đoạn",
+    "passLabel": "Lượt",
+    "exactLabel": "Chính xác",
+    "useSharpYuvLabel": "YUV sắc nét",
+    "optionDefault": "Mặc định",
+    "optionOn": "Bật",
+    "optionOff": "Tắt",
     "saved": "Tiết kiệm",
     "totalSaved": "Tổng tiết kiệm",
     "convert": "Chuyển sang WebP",
@@ -966,6 +1428,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "ระดับการบีบอัด",
     "methodHint": "0 = เร็วที่สุด, 6 = บีบอัดดีที่สุด",
     "losslessLabel": "ไม่สูญเสีย",
+    "advancedLabel": "ตัวเลือกขั้นสูง",
+    "targetSizeLabel": "ขนาดเป้าหมาย (KB)",
+    "targetPsnrLabel": "PSNR เป้าหมาย",
+    "nearLosslessLabel": "เกือบไม่สูญเสีย",
+    "alphaQualityLabel": "คุณภาพอัลฟา",
+    "snsStrengthLabel": "ความแรง SNS",
+    "filterStrengthLabel": "ความแรงฟิลเตอร์",
+    "filterSharpnessLabel": "ความคมฟิลเตอร์",
+    "filterTypeLabel": "ชนิดฟิลเตอร์",
+    "partitionsLabel": "พาร์ทิชัน",
+    "segmentsLabel": "เซ็กเมนต์",
+    "passLabel": "จำนวนรอบ",
+    "exactLabel": "แม่นยำ",
+    "useSharpYuvLabel": "YUV คมชัด",
+    "optionDefault": "ค่าเริ่มต้น",
+    "optionOn": "เปิด",
+    "optionOff": "ปิด",
     "saved": "ประหยัด",
     "totalSaved": "ประหยัดทั้งหมด",
     "convert": "แปลงเป็น WebP",
@@ -1003,6 +1482,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Tingkat kompresi",
     "methodHint": "0 = tercepat, 6 = kompresi terbaik.",
     "losslessLabel": "Tanpa kehilangan",
+    "advancedLabel": "Opsi lanjutan",
+    "targetSizeLabel": "Ukuran target (KB)",
+    "targetPsnrLabel": "PSNR target",
+    "nearLosslessLabel": "Hampir tanpa kehilangan",
+    "alphaQualityLabel": "Kualitas alfa",
+    "snsStrengthLabel": "Kekuatan SNS",
+    "filterStrengthLabel": "Kekuatan filter",
+    "filterSharpnessLabel": "Ketajaman filter",
+    "filterTypeLabel": "Jenis filter",
+    "partitionsLabel": "Partisi",
+    "segmentsLabel": "Segmen",
+    "passLabel": "Putaran",
+    "exactLabel": "Tepat",
+    "useSharpYuvLabel": "YUV tajam",
+    "optionDefault": "Default",
+    "optionOn": "Aktif",
+    "optionOff": "Nonaktif",
     "saved": "Hemat",
     "totalSaved": "Total hemat",
     "convert": "Konversi ke WebP",
@@ -1040,6 +1536,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "מאמץ דחיסה",
     "methodHint": "0 = המהיר ביותר, 6 = הדחיסה הטובה ביותר.",
     "losslessLabel": "ללא אובדן",
+    "advancedLabel": "אפשרויות מתקדמות",
+    "targetSizeLabel": "גודל יעד (KB)",
+    "targetPsnrLabel": "PSNR יעד",
+    "nearLosslessLabel": "כמעט ללא אובדן",
+    "alphaQualityLabel": "איכות אלפא",
+    "snsStrengthLabel": "עוצמת SNS",
+    "filterStrengthLabel": "עוצמת פילטר",
+    "filterSharpnessLabel": "חדות פילטר",
+    "filterTypeLabel": "סוג פילטר",
+    "partitionsLabel": "מחיצות",
+    "segmentsLabel": "מקטעים",
+    "passLabel": "מעברים",
+    "exactLabel": "מדויק",
+    "useSharpYuvLabel": "YUV חד",
+    "optionDefault": "ברירת מחדל",
+    "optionOn": "מופעל",
+    "optionOff": "כבוי",
     "saved": "חיסכון",
     "totalSaved": "חיסכון כולל",
     "convert": "המר ל-WebP",
@@ -1077,6 +1590,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Usaha pemampatan",
     "methodHint": "0 = terpantas, 6 = pemampatan terbaik.",
     "losslessLabel": "Tanpa kehilangan",
+    "advancedLabel": "Pilihan lanjutan",
+    "targetSizeLabel": "Saiz sasaran (KB)",
+    "targetPsnrLabel": "PSNR sasaran",
+    "nearLosslessLabel": "Hampir tanpa kehilangan",
+    "alphaQualityLabel": "Kualiti alfa",
+    "snsStrengthLabel": "Kekuatan SNS",
+    "filterStrengthLabel": "Kekuatan penapis",
+    "filterSharpnessLabel": "Ketajaman penapis",
+    "filterTypeLabel": "Jenis penapis",
+    "partitionsLabel": "Partisi",
+    "segmentsLabel": "Segmen",
+    "passLabel": "Laluan",
+    "exactLabel": "Tepat",
+    "useSharpYuvLabel": "YUV tajam",
+    "optionDefault": "Lalai",
+    "optionOn": "Hidup",
+    "optionOff": "Mati",
     "saved": "Penjimatan",
     "totalSaved": "Jumlah penjimatan",
     "convert": "Tukar ke WebP",
@@ -1114,6 +1644,23 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "methodLabel": "Kompresjonsnivå",
     "methodHint": "0 = raskest, 6 = best komprimering.",
     "losslessLabel": "Tapsfri",
+    "advancedLabel": "Avanserte alternativer",
+    "targetSizeLabel": "Målstørrelse (KB)",
+    "targetPsnrLabel": "Mål-PSNR",
+    "nearLosslessLabel": "Nesten tapsfri",
+    "alphaQualityLabel": "Alfakvalitet",
+    "snsStrengthLabel": "SNS-styrke",
+    "filterStrengthLabel": "Filterstyrke",
+    "filterSharpnessLabel": "Filterskarphet",
+    "filterTypeLabel": "Filtertype",
+    "partitionsLabel": "Partisjoner",
+    "segmentsLabel": "Segmenter",
+    "passLabel": "Passeringer",
+    "exactLabel": "Eksakt",
+    "useSharpYuvLabel": "Skarp YUV",
+    "optionDefault": "Standard",
+    "optionOn": "På",
+    "optionOff": "Av",
     "saved": "Spart",
     "totalSaved": "Totalt spart",
     "convert": "Konverter til WebP",

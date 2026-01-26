@@ -3,6 +3,19 @@ export interface WebpConversionOptions {
   quality: number
   method: number
   lossless: boolean
+  targetSize?: number
+  targetPsnr?: number
+  alphaQuality?: number
+  nearLossless?: number
+  snsStrength?: number
+  filterStrength?: number
+  filterSharpness?: number
+  filterType?: number
+  partitions?: number
+  segments?: number
+  pass?: number
+  exact?: boolean
+  useSharpYuv?: boolean
 }
 
 export interface WebpConversionResult {
