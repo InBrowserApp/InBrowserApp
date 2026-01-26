@@ -34,13 +34,15 @@
             {{ statusMessage }}
           </n-alert>
 
+          <n-input
+            v-model:value="searchQuery"
+            :placeholder="t('search-placeholder')"
+            clearable
+            class="search-input"
+            data-testid="search-input"
+          />
+
           <n-flex align="center" :size="12" :wrap="true" class="filter-row">
-            <n-input
-              v-model:value="searchQuery"
-              :placeholder="t('search-placeholder')"
-              clearable
-              data-testid="search-input"
-            />
             <n-select
               v-model:value="filterStyle"
               :options="styleOptions"
@@ -65,7 +67,7 @@
             {{ fontCountLabel }}
           </n-text>
 
-          <n-scrollbar class="font-scroll" data-testid="font-list">
+          <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 520px">
             <div class="font-list">
               <template v-if="displayGroups.length">
                 <div v-for="group in displayGroups" :key="group.id" class="font-group">
@@ -77,6 +79,7 @@
                       type="button"
                       class="font-card"
                       :class="{ 'font-card--active': font.id === activeFontId }"
+                      :style="fontCardStyle(font)"
                       :data-testid="`font-${font.id}`"
                       @click="setActiveFont(font.id)"
                     >
@@ -98,78 +101,86 @@
       </n-gi>
 
       <n-gi>
-        <n-card class="panel">
-          <div class="panel__header">
-            <div>
-              <div class="panel__title">{{ t('preview-title') }}</div>
-              <div class="panel__subtitle">{{ t('preview-hint') }}</div>
+        <div class="panel-stack">
+          <n-card class="panel">
+            <div class="panel__header">
+              <div>
+                <div class="panel__title">{{ t('preview-title') }}</div>
+                <div class="panel__subtitle">{{ t('preview-hint') }}</div>
+              </div>
+              <CopyToClipboardButton :content="cssSnippet" />
             </div>
-            <CopyToClipboardButton :content="cssSnippet" />
-          </div>
 
-          <n-input
-            v-model:value="sampleText"
-            type="textarea"
-            :placeholder="t('preview-placeholder')"
-            :autosize="{ minRows: 3, maxRows: 5 }"
-            data-testid="sample-text"
-          />
+            <n-input
+              v-model:value="sampleText"
+              type="textarea"
+              :placeholder="t('preview-placeholder')"
+              :autosize="{ minRows: 3, maxRows: 5 }"
+              data-testid="sample-text"
+            />
 
-          <div class="control-grid">
-            <n-form-item :label="t('preview-size')">
-              <n-flex align="center" :size="12" class="control-row">
-                <n-slider v-model:value="fontSize" :min="12" :max="96" />
-                <n-input-number v-model:value="fontSize" :min="12" :max="96" size="small" />
-              </n-flex>
-            </n-form-item>
-            <n-form-item :label="t('preview-line-height')">
-              <n-flex align="center" :size="12" class="control-row">
-                <n-slider v-model:value="lineHeight" :min="1" :max="2.4" :step="0.05" />
-                <n-input-number
-                  v-model:value="lineHeight"
-                  :min="1"
-                  :max="2.4"
-                  :step="0.05"
-                  size="small"
-                />
-              </n-flex>
-            </n-form-item>
-          </div>
-
-          <n-flex align="center" :size="8">
-            <n-text depth="3">{{ t('preview-background') }}</n-text>
-            <n-switch v-model:value="darkBackground" size="small" data-testid="background-toggle" />
-          </n-flex>
-
-          <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
-            <div
-              v-if="activeFont"
-              class="preview-text"
-              :style="previewStyle"
-              data-testid="preview-text"
-            >
-              {{ sampleText || t('preview-fallback') }}
+            <div class="control-grid">
+              <n-form-item :label="t('preview-size')">
+                <n-flex align="center" :size="12" class="control-row">
+                  <n-slider v-model:value="fontSize" :min="12" :max="96" />
+                  <n-input-number v-model:value="fontSize" :min="12" :max="96" size="small" />
+                </n-flex>
+              </n-form-item>
+              <n-form-item :label="t('preview-line-height')">
+                <n-flex align="center" :size="12" class="control-row">
+                  <n-slider v-model:value="lineHeight" :min="1" :max="2.4" :step="0.05" />
+                  <n-input-number
+                    v-model:value="lineHeight"
+                    :min="1"
+                    :max="2.4"
+                    :step="0.05"
+                    size="small"
+                  />
+                </n-flex>
+              </n-form-item>
             </div>
-            <n-text v-else depth="3" data-testid="preview-empty">
-              {{ t('preview-empty') }}
-            </n-text>
-          </div>
 
-          <div class="details">
-            <n-text strong>{{ t('details-title') }}</n-text>
-            <n-ul class="details-list">
-              <n-li>{{ t('details-family') }}: {{ activeFont?.family || '--' }}</n-li>
-              <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName || '--' }}</n-li>
-              <n-li>{{ t('details-postscript') }}: {{ activeFont?.postscriptName || '--' }}</n-li>
-              <n-li>{{ t('details-style') }}: {{ activeFont?.style || '--' }}</n-li>
-            </n-ul>
-          </div>
+            <n-flex align="center" :size="8">
+              <n-text depth="3">{{ t('preview-background') }}</n-text>
+              <n-switch
+                v-model:value="darkBackground"
+                size="small"
+                data-testid="background-toggle"
+              />
+            </n-flex>
 
-          <div class="css-output">
-            <n-text strong>{{ t('css-title') }}</n-text>
-            <n-code :code="cssSnippet" word-wrap data-testid="css-snippet" />
-          </div>
-        </n-card>
+            <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
+              <div
+                v-if="activeFont"
+                class="preview-text"
+                :style="previewStyle"
+                data-testid="preview-text"
+              >
+                {{ sampleText || t('preview-fallback') }}
+              </div>
+              <n-text v-else depth="3" data-testid="preview-empty">
+                {{ t('preview-empty') }}
+              </n-text>
+            </div>
+
+            <div class="css-output">
+              <n-text strong>{{ t('css-title') }}</n-text>
+              <n-code :code="cssSnippet" word-wrap data-testid="css-snippet" />
+            </div>
+          </n-card>
+
+          <n-card class="panel">
+            <div class="details">
+              <n-text strong>{{ t('details-title') }}</n-text>
+              <n-ul class="details-list">
+                <n-li>{{ t('details-family') }}: {{ activeFont?.family || '--' }}</n-li>
+                <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName || '--' }}</n-li>
+                <n-li>{{ t('details-postscript') }}: {{ activeFont?.postscriptName || '--' }}</n-li>
+                <n-li>{{ t('details-style') }}: {{ activeFont?.style || '--' }}</n-li>
+              </n-ul>
+            </div>
+          </n-card>
+        </div>
       </n-gi>
     </n-grid>
   </ToolSection>
@@ -467,6 +478,12 @@ function getFontFamily(font: DisplayFont) {
   return font.family || font.fullName || font.postscriptName
 }
 
+function fontCardStyle(font: DisplayFont) {
+  const family = getFontFamily(font)
+  if (!family) return {}
+  return { fontFamily: wrapFontFamily(family) }
+}
+
 function toText(value: unknown) {
   return typeof value === 'string' ? value.trim() : ''
 }
@@ -514,7 +531,15 @@ function wrapFontFamily(family: string) {
   margin-top: 4px;
 }
 
-.filter-row :deep(.n-input),
+.panel-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.search-input {
+  width: 100%;
+}
+
 .filter-row :deep(.n-select) {
   min-width: 160px;
   flex: 1;
@@ -526,10 +551,6 @@ function wrapFontFamily(family: string) {
 
 .count-label {
   margin-top: 4px;
-}
-
-.font-scroll {
-  max-height: 520px;
 }
 
 .font-list {
