@@ -135,6 +135,7 @@
     "@tools/sha512-hash-text-or-file": "workspace:*",
     "@tools/sitemap-xml-generator": "workspace:*",
     "@tools/slug-generator": "workspace:*",
+    "@tools/sm3-hash-text-or-file": "workspace:*",
     "@tools/sri-hash-generator": "workspace:*",
     "@tools/ssh-key-generator": "workspace:*",
     "@tools/ssh-public-key-fingerprint": "workspace:*",
