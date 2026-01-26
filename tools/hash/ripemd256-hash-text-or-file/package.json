@@ -1,0 +1,21 @@
+{
+  "name": "@tools/ripemd256-hash-text-or-file",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@tools/hash-text-or-file-template": "workspace:*",
+    "@vicons/tabler": "catalog:",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

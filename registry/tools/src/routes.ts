@@ -32,7 +32,10 @@ import { routes as sha512HashTextOrFileRoutes } from '@tools/sha512-hash-text-or
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
 import { routes as md5HashTextOrFileRoutes } from '@tools/md5-hash-text-or-file/routes'
 import { routes as sm3HashTextOrFileRoutes } from '@tools/sm3-hash-text-or-file/routes'
+import { routes as ripemd128HashTextOrFileRoutes } from '@tools/ripemd128-hash-text-or-file/routes'
 import { routes as ripemd160HashTextOrFileRoutes } from '@tools/ripemd160-hash-text-or-file/routes'
+import { routes as ripemd256HashTextOrFileRoutes } from '@tools/ripemd256-hash-text-or-file/routes'
+import { routes as ripemd320HashTextOrFileRoutes } from '@tools/ripemd320-hash-text-or-file/routes'
 import { routes as keccakHashTextOrFileRoutes } from '@tools/keccak-hash-text-or-file/routes'
 import { routes as bcryptHashPasswordRoutes } from '@tools/bcrypt-hash-password/routes'
 import { routes as bcryptHashPasswordVerifierRoutes } from '@tools/bcrypt-hash-password-verifier/routes'
@@ -197,7 +200,10 @@ export const routes: ToolRoute[] = [
   ...sha1HashTextOrFileRoutes,
   ...md5HashTextOrFileRoutes,
   ...sm3HashTextOrFileRoutes,
+  ...ripemd128HashTextOrFileRoutes,
   ...ripemd160HashTextOrFileRoutes,
+  ...ripemd256HashTextOrFileRoutes,
+  ...ripemd320HashTextOrFileRoutes,
   ...keccakHashTextOrFileRoutes,
   ...bcryptHashPasswordRoutes,
   ...bcryptHashPasswordVerifierRoutes,

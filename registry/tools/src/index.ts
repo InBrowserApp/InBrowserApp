@@ -34,7 +34,10 @@ import { toolInfo as sha512HashTextOrFileToolInfo } from '@tools/sha512-hash-tex
 import { toolInfo as sha1HashTextOrFileToolInfo } from '@tools/sha1-hash-text-or-file'
 import { toolInfo as md5HashTextOrFileToolInfo } from '@tools/md5-hash-text-or-file'
 import { toolInfo as sm3HashTextOrFileToolInfo } from '@tools/sm3-hash-text-or-file'
+import { toolInfo as ripemd128HashTextOrFileToolInfo } from '@tools/ripemd128-hash-text-or-file'
 import { toolInfo as ripemd160HashTextOrFileToolInfo } from '@tools/ripemd160-hash-text-or-file'
+import { toolInfo as ripemd256HashTextOrFileToolInfo } from '@tools/ripemd256-hash-text-or-file'
+import { toolInfo as ripemd320HashTextOrFileToolInfo } from '@tools/ripemd320-hash-text-or-file'
 import { toolInfo as keccakHashTextOrFileToolInfo } from '@tools/keccak-hash-text-or-file'
 import { toolInfo as bcryptHashPasswordToolInfo } from '@tools/bcrypt-hash-password'
 import { toolInfo as bcryptHashPasswordVerifierToolInfo } from '@tools/bcrypt-hash-password-verifier'
@@ -236,7 +239,10 @@ export const tools: ToolInfo[] = [
   sha1HashTextOrFileToolInfo,
   md5HashTextOrFileToolInfo,
   sm3HashTextOrFileToolInfo,
+  ripemd128HashTextOrFileToolInfo,
   ripemd160HashTextOrFileToolInfo,
+  ripemd256HashTextOrFileToolInfo,
+  ripemd320HashTextOrFileToolInfo,
   keccakHashTextOrFileToolInfo,
   bcryptHashPasswordToolInfo,
   bcryptHashPasswordVerifierToolInfo,
