@@ -229,10 +229,27 @@ function computeLayout(count: number, canvasWidth: number, canvasHeight: number)
 
 function drawBackground(ctx: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) {
   const base = themeVars.value.bodyColor || '#f5f7ff'
+  const deep = mixColor(base, '#0f1620', 0.55)
+  const mid = mixColor(base, '#253140', 0.55)
+  const highlight = mixColor(base, '#3a4858', 0.35)
   const gradient = ctx.createLinearGradient(0, 0, canvasWidth, canvasHeight)
-  gradient.addColorStop(0, mixColor(base, '#ffffff', 0.2))
-  gradient.addColorStop(1, mixColor(base, '#d6d9f7', 0.2))
+  gradient.addColorStop(0, highlight)
+  gradient.addColorStop(0.45, mid)
+  gradient.addColorStop(1, deep)
   ctx.fillStyle = gradient
+  ctx.fillRect(0, 0, canvasWidth, canvasHeight)
+
+  const vignette = ctx.createRadialGradient(
+    canvasWidth * 0.4,
+    canvasHeight * 0.35,
+    Math.min(canvasWidth, canvasHeight) * 0.1,
+    canvasWidth * 0.5,
+    canvasHeight * 0.55,
+    Math.max(canvasWidth, canvasHeight) * 0.65,
+  )
+  vignette.addColorStop(0, 'rgba(255,255,255,0.08)')
+  vignette.addColorStop(1, 'rgba(0,0,0,0.35)')
+  ctx.fillStyle = vignette
   ctx.fillRect(0, 0, canvasWidth, canvasHeight)
 }
 
@@ -330,12 +347,13 @@ function drawFace(
   const intensity = clamp(0.2 + 0.8 * Math.max(0, dot(face.normal, lightDirection)), 0, 1)
   const fillColor = shadeColor(material.base, intensity)
   const points = face.vertices.map((vertex) => projectPoint(vertex, size, offsetX, offsetY))
+  const center = projectPoint(face.center, size, offsetX, offsetY)
 
-  ctx.fillStyle = fillColor
-  ctx.strokeStyle = material.edge
-  ctx.lineWidth = Math.max(0.8, size * 0.035)
-  ctx.lineJoin = 'round'
+  const edgeColor = mixColor(material.edge, '#000000', 0.15)
+  const bevelInset = Math.max(1, face.radius * size * center.scale * 0.14)
+  const innerPoints = points.map((point) => insetPoint(point, center, bevelInset))
 
+  ctx.fillStyle = edgeColor
   ctx.beginPath()
   points.forEach((point, index) => {
     if (index === 0) {
@@ -346,6 +364,71 @@ function drawFace(
   })
   ctx.closePath()
   ctx.fill()
+
+  const lightPoint = projectPoint(
+    addVec(face.center, scaleVec(lightDirection, 0.9)),
+    size,
+    offsetX,
+    offsetY,
+  )
+  const gradient = ctx.createLinearGradient(lightPoint.x, lightPoint.y, center.x, center.y)
+  gradient.addColorStop(0, shadeColor(fillColor, 1))
+  gradient.addColorStop(0.5, shadeColor(fillColor, 0.75))
+  gradient.addColorStop(1, shadeColor(fillColor, 0.35))
+
+  ctx.save()
+  ctx.beginPath()
+  innerPoints.forEach((point, index) => {
+    if (index === 0) {
+      ctx.moveTo(point.x, point.y)
+    } else {
+      ctx.lineTo(point.x, point.y)
+    }
+  })
+  ctx.closePath()
+  ctx.clip()
+  ctx.fillStyle = gradient
+  ctx.fillRect(
+    Math.min(...innerPoints.map((point) => point.x)),
+    Math.min(...innerPoints.map((point) => point.y)),
+    Math.max(...innerPoints.map((point) => point.x)) -
+      Math.min(...innerPoints.map((point) => point.x)),
+    Math.max(...innerPoints.map((point) => point.y)) -
+      Math.min(...innerPoints.map((point) => point.y)),
+  )
+  const specular = ctx.createRadialGradient(
+    lightPoint.x,
+    lightPoint.y,
+    0,
+    lightPoint.x,
+    lightPoint.y,
+    bevelInset * 2,
+  )
+  specular.addColorStop(0, 'rgba(255,255,255,0.35)')
+  specular.addColorStop(1, 'rgba(255,255,255,0)')
+  ctx.fillStyle = specular
+  ctx.fillRect(
+    Math.min(...innerPoints.map((point) => point.x)),
+    Math.min(...innerPoints.map((point) => point.y)),
+    Math.max(...innerPoints.map((point) => point.x)) -
+      Math.min(...innerPoints.map((point) => point.x)),
+    Math.max(...innerPoints.map((point) => point.y)) -
+      Math.min(...innerPoints.map((point) => point.y)),
+  )
+  ctx.restore()
+
+  ctx.strokeStyle = mixColor(edgeColor, '#ffffff', 0.1)
+  ctx.lineWidth = Math.max(0.6, size * 0.02)
+  ctx.lineJoin = 'round'
+  ctx.beginPath()
+  innerPoints.forEach((point, index) => {
+    if (index === 0) {
+      ctx.moveTo(point.x, point.y)
+    } else {
+      ctx.lineTo(point.x, point.y)
+    }
+  })
+  ctx.closePath()
   ctx.stroke()
 }
 
@@ -422,6 +505,7 @@ function drawPips(
   const spacing = face.radius * 0.55
   const pipRadius = face.radius * 0.16
 
+  const shadowColor = mixColor(material.ink, '#000000', 0.4)
   ctx.fillStyle = material.ink
 
   layout.forEach((pip) => {
@@ -431,6 +515,11 @@ function drawPips(
     )
     const projected = projectPoint(pipCenter, size, offsetX, offsetY)
     const radius = pipRadius * size * projected.scale
+    ctx.fillStyle = shadowColor
+    ctx.beginPath()
+    ctx.arc(projected.x + radius * 0.25, projected.y + radius * 0.25, radius * 1.05, 0, Math.PI * 2)
+    ctx.fill()
+    ctx.fillStyle = material.ink
     ctx.beginPath()
     ctx.arc(projected.x, projected.y, radius, 0, Math.PI * 2)
     ctx.fill()
@@ -467,12 +556,12 @@ function buildFaceData(face: Face, vertices: Vec3[]): FaceRenderData {
 
 function getMaterial(faces: number, shadeSeed: number): DieMaterial {
   const palette: Record<number, { base: string; ink: string }> = {
-    4: { base: '#d8655f', ink: '#fff3df' },
-    6: { base: '#f3f0e7', ink: '#1b1a17' },
-    8: { base: '#4f79d6', ink: '#f3f7ff' },
-    10: { base: '#47a372', ink: '#effdf5' },
-    12: { base: '#8f6ad1', ink: '#f7f0ff' },
-    20: { base: '#d4a04b', ink: '#fff5e2' },
+    4: { base: '#b5433b', ink: '#fbe9d5' },
+    6: { base: '#f7f4ea', ink: '#1d1a16' },
+    8: { base: '#2f5fa8', ink: '#edf4ff' },
+    10: { base: '#2c7a59', ink: '#eaf8f0' },
+    12: { base: '#6a48a5', ink: '#f2e9ff' },
+    20: { base: '#d2a24f', ink: '#2b1b0a' },
   }
 
   const themeBase = themeVars.value.primaryColor || '#6b7cff'
@@ -486,7 +575,7 @@ function getMaterial(faces: number, shadeSeed: number): DieMaterial {
   return {
     base: adjustedBase,
     ink,
-    edge: mixColor(adjustedBase, '#000000', 0.35),
+    edge: mixColor(adjustedBase, '#000000', 0.45),
   }
 }
 
@@ -811,6 +900,21 @@ function applyMatrix(matrix: Mat3, vector: Vec3): Vec3 {
 
 function isVec3(value: Vec3 | undefined): value is Vec3 {
   return Boolean(value)
+}
+
+function insetPoint(
+  point: { x: number; y: number },
+  center: { x: number; y: number },
+  inset: number,
+) {
+  const dx = point.x - center.x
+  const dy = point.y - center.y
+  const distance = Math.sqrt(dx * dx + dy * dy) || 1
+  const ratio = Math.min(1, inset / distance)
+  return {
+    x: point.x - dx * ratio,
+    y: point.y - dy * ratio,
+  }
 }
 
 function addVec(a: Vec3, b: Vec3): Vec3 {

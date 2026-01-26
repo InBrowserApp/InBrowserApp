@@ -78,12 +78,14 @@ const createCanvasContext = () => ({
   stroke: vi.fn(),
   arc: vi.fn(),
   ellipse: vi.fn(),
+  clip: vi.fn(),
   save: vi.fn(),
   restore: vi.fn(),
   translate: vi.fn(),
   scale: vi.fn(),
   fillText: vi.fn(),
   createLinearGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
+  createRadialGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
   measureText: vi.fn((text: string) => ({ width: text.length * 7 })),
 })
 
