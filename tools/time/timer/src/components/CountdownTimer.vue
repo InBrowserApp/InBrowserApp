@@ -7,7 +7,7 @@
       'timer-root--overlay': isFullscreenOverlay,
     }"
   >
-    <ToolSection>
+    <ToolSection class="timer-display-section">
       <div class="timer-display" :class="{ 'timer-display--fullscreen': isFullscreenActive }">
         <div class="timer-time" data-testid="timer-display">{{ formattedRemaining }}</div>
         <n-text depth="3" :type="statusType" data-testid="timer-status">
@@ -566,20 +566,30 @@ onMounted(() => {
 
 .timer-root--fullscreen {
   min-height: 100vh;
-  padding: 24px 16px 96px;
+  padding: calc(24px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: v-bind('themeVars.bodyColor');
 }
 
 .timer-root--overlay {
   position: fixed;
   inset: 0;
   z-index: 10;
-  background-color: v-bind('themeVars.bodyColor');
   overflow: auto;
-  padding: calc(24px + env(safe-area-inset-top)) 16px calc(96px + env(safe-area-inset-bottom));
 }
 
 .timer-root--fullscreen .timer-time {
   font-size: clamp(3rem, 10vw, 6rem);
+}
+
+.timer-root--fullscreen .timer-display-section {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .timer-display {
