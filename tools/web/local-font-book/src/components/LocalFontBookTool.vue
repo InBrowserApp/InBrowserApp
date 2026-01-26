@@ -111,6 +111,8 @@
               <n-button
                 quaternary
                 circle
+                class="preview-toggle"
+                :class="{ 'preview-toggle--active': darkBackground }"
                 :aria-label="t('preview-background')"
                 data-testid="background-toggle"
                 @click="darkBackground = !darkBackground"
@@ -161,7 +163,7 @@
               >
                 {{ sampleText || t('preview-fallback') }}
               </div>
-              <n-text v-else depth="3" data-testid="preview-empty">
+              <n-text v-else depth="3" class="preview-empty" data-testid="preview-empty">
                 {{ t('preview-empty') }}
               </n-text>
             </div>
@@ -725,6 +727,24 @@ function wrapFontFamily(family: string) {
   width: 100%;
 }
 
+.preview-empty {
+  color: #0f172a;
+}
+
+.preview-surface.is-dark .preview-empty {
+  color: #f8fafc;
+}
+
+.preview-toggle {
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.preview-toggle--active {
+  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(59, 130, 246, 0.12);
+}
+
 .details {
   display: grid;
   gap: 8px;
@@ -732,6 +752,7 @@ function wrapFontFamily(family: string) {
 
 .details-label {
   color: rgba(100, 116, 139, 0.9);
+  white-space: nowrap;
 }
 
 .details-value {
