@@ -40,6 +40,7 @@ import { routes as xxhashXxh32HashTextOrFileRoutes } from '@tools/xxhash-xxh32-h
 import { routes as xxhashXxh64HashTextOrFileRoutes } from '@tools/xxhash-xxh64-hash-text-or-file/routes'
 import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-or-file/routes'
 import { routes as blake2sHashTextOrFileRoutes } from '@tools/blake2s-hash-text-or-file/routes'
+import { routes as blake3HashTextOrFileRoutes } from '@tools/blake3-hash-text-or-file/routes'
 import { routes as hmacGeneratorRoutes } from '@tools/hmac-generator/routes'
 import { routes as urlComponentEncoderDecoderRoutes } from '@tools/url-component-encoder-decoder/routes'
 import { routes as base16EncoderRoutes } from '@tools/base16-encoder/routes'
@@ -96,6 +97,7 @@ import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-co
 import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
 import { routes as timeDiffCalculatorRoutes } from '@tools/time-diff-calculator/routes'
+import { routes as radioTimecodeRoutes } from '@tools/radio-timecode/routes'
 import { routes as durationCalculatorRoutes } from '@tools/duration-calculator/routes'
 import { routes as businessDaysCalculatorRoutes } from '@tools/business-days-calculator/routes'
 import { routes as cronExpressionParserRoutes } from '@tools/cron-expression-parser/routes'
@@ -187,6 +189,7 @@ export const routes: ToolRoute[] = [
   ...xxhashXxh64HashTextOrFileRoutes,
   ...blake2bHashTextOrFileRoutes,
   ...blake2sHashTextOrFileRoutes,
+  ...blake3HashTextOrFileRoutes,
   ...hmacGeneratorRoutes,
   ...urlComponentEncoderDecoderRoutes,
   ...base16EncoderRoutes,
@@ -243,6 +246,7 @@ export const routes: ToolRoute[] = [
   ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
   ...timeDiffCalculatorRoutes,
+  ...radioTimecodeRoutes,
   ...durationCalculatorRoutes,
   ...businessDaysCalculatorRoutes,
   ...cronExpressionParserRoutes,

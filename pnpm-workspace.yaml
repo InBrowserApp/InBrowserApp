@@ -70,6 +70,7 @@ catalog:
   ajv-formats: ^3.0.1
   bcrypt-ts: ^8.0.0
   bip39: ^3.1.0
+  blake3-wasm: 2.1.5
   blakejs: ^1.2.1
   browser-fs-access: ^0.38.0
   buffer: ^6.0.3

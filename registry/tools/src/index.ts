@@ -42,6 +42,7 @@ import { toolInfo as xxhashXxh32HashTextOrFileToolInfo } from '@tools/xxhash-xxh
 import { toolInfo as xxhashXxh64HashTextOrFileToolInfo } from '@tools/xxhash-xxh64-hash-text-or-file'
 import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-text-or-file'
 import { toolInfo as blake2sHashTextOrFileToolInfo } from '@tools/blake2s-hash-text-or-file'
+import { toolInfo as blake3HashTextOrFileToolInfo } from '@tools/blake3-hash-text-or-file'
 import { toolInfo as hmacGeneratorToolInfo } from '@tools/hmac-generator'
 import { toolInfo as urlComponentEncoderDecoderToolInfo } from '@tools/url-component-encoder-decoder'
 import { toolInfo as base16EncoderToolInfo } from '@tools/base16-encoder'
@@ -98,6 +99,7 @@ import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestam
 import { toolInfo as icalEventGeneratorToolInfo } from '@tools/ical-event-generator'
 import { toolInfo as timeZoneConverterToolInfo } from '@tools/time-zone-converter'
 import { toolInfo as timeDiffCalculatorToolInfo } from '@tools/time-diff-calculator'
+import { toolInfo as radioTimecodeToolInfo } from '@tools/radio-timecode'
 import { toolInfo as durationCalculatorToolInfo } from '@tools/duration-calculator'
 import { toolInfo as businessDaysCalculatorToolInfo } from '@tools/business-days-calculator'
 import { toolInfo as cronExpressionParserToolInfo } from '@tools/cron-expression-parser'
@@ -225,6 +227,7 @@ export const tools: ToolInfo[] = [
   xxhashXxh64HashTextOrFileToolInfo,
   blake2bHashTextOrFileToolInfo,
   blake2sHashTextOrFileToolInfo,
+  blake3HashTextOrFileToolInfo,
   hmacGeneratorToolInfo,
 
   // Web Tools
@@ -261,6 +264,7 @@ export const tools: ToolInfo[] = [
   icalEventGeneratorToolInfo,
   timeZoneConverterToolInfo,
   timeDiffCalculatorToolInfo,
+  radioTimecodeToolInfo,
   durationCalculatorToolInfo,
   businessDaysCalculatorToolInfo,
   cronExpressionParserToolInfo,
