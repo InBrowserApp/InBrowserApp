@@ -123,7 +123,7 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
 import PauseIcon from '@vicons/fluent/Pause16Filled'
 import PlayIcon from '@vicons/fluent/Play16Regular'
-import StopIcon from '@vicons/fluent/DismissCircle16Filled'
+import StopIcon from '@vicons/fluent/Stop16Filled'
 import DownloadIcon from '@vicons/fluent/ArrowDownload16Filled'
 import ClearIcon from '@vicons/fluent/Delete16Regular'
 import {
