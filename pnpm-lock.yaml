@@ -261,6 +261,9 @@ catalogs:
     happy-dom:
       specifier: ^20.3.4
       version: 20.3.4
+    hash-wasm:
+      specifier: ^4.12.0
+      version: 4.12.0
     highlight.js:
       specifier: 11.11.1
       version: 11.11.1
@@ -1110,6 +1113,9 @@ importers:
       '@tools/vin-validator':
         specifier: workspace:*
         version: link:../../tools/validator/vin-validator
+      '@tools/whirlpool-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/whirlpool-hash-text-or-file
       '@tools/xml-to-json-converter':
         specifier: workspace:*
         version: link:../../tools/code/xml-to-json-converter
@@ -3019,6 +3025,39 @@ importers:
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/whirlpool-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      hash-wasm:
+        specifier: 'catalog:'
+        version: 4.12.0
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
@@ -9752,6 +9791,9 @@ packages:
     resolution: {integrity: sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==}
     engines: {node: '>= 0.4'}
 
+  hash-wasm@4.12.0:
+    resolution: {integrity: sha512-+/2B2rYLb48I/evdOIhP+K/DD2ca2fgBjp6O+GBEnCDk2e4rpeXIK8GvIyRPjTezgmWn9gmKwkQjjx6BtqDHVQ==}
+
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
@@ -15232,6 +15274,8 @@ snapshots:
   has-tostringtag@1.0.2:
     dependencies:
       has-symbols: 1.1.0
+
+  hash-wasm@4.12.0: {}
 
   hasown@2.0.2:
     dependencies:

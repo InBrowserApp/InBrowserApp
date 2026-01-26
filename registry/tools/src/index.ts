@@ -27,6 +27,7 @@ import { toolInfo as pdfToolsToolInfo } from '@tools/pdf-tools'
 import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
 import { toolInfo as sha256HashTextOrFileToolInfo } from '@tools/sha256-hash-text-or-file'
 import { toolInfo as sha224HashTextOrFileToolInfo } from '@tools/sha224-hash-text-or-file'
+import { toolInfo as whirlpoolHashTextOrFileToolInfo } from '@tools/whirlpool-hash-text-or-file'
 import { toolInfo as sha3_256HashTextOrFileToolInfo } from '@tools/sha3-256-hash-text-or-file'
 import { toolInfo as sha3_512HashTextOrFileToolInfo } from '@tools/sha3-512-hash-text-or-file'
 import { toolInfo as sha384HashTextOrFileToolInfo } from '@tools/sha384-hash-text-or-file'
@@ -232,6 +233,7 @@ export const tools: ToolInfo[] = [
   // Hash Tools
   sha256HashTextOrFileToolInfo,
   sha224HashTextOrFileToolInfo,
+  whirlpoolHashTextOrFileToolInfo,
   sha3_256HashTextOrFileToolInfo,
   sha3_512HashTextOrFileToolInfo,
   sha384HashTextOrFileToolInfo,
