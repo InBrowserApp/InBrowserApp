@@ -45,6 +45,7 @@
     "@tools/cron-expression-generator": "workspace:*",
     "@tools/cron-expression-parser": "workspace:*",
     "@tools/csr-generator": "workspace:*",
+    "@tools/css-box-shadow-generator": "workspace:*",
     "@tools/css-gradient-generator": "workspace:*",
     "@tools/csv-to-json-converter": "workspace:*",
     "@tools/cuid2-generator": "workspace:*",

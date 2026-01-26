@@ -108,6 +108,7 @@ import { toolInfo as textDiffToolInfo } from '@tools/text-diff'
 import { toolInfo as colorPickerToolInfo } from '@tools/color-picker'
 import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as colorContrastCheckerToolInfo } from '@tools/color-contrast-checker'
+import { toolInfo as cssBoxShadowGeneratorToolInfo } from '@tools/css-box-shadow-generator'
 import { toolInfo as cssGradientGeneratorToolInfo } from '@tools/css-gradient-generator'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
@@ -277,6 +278,7 @@ export const tools: ToolInfo[] = [
   colorPickerToolInfo,
   colorConverterToolInfo,
   colorContrastCheckerToolInfo,
+  cssBoxShadowGeneratorToolInfo,
   cssGradientGeneratorToolInfo,
   htmlColorNamesToolInfo,
 
