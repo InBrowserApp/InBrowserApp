@@ -108,10 +108,9 @@
                 <div class="panel__title">{{ t('preview-title') }}</div>
                 <div class="panel__subtitle">{{ t('preview-hint') }}</div>
               </div>
-              <CopyToClipboardButton :content="cssSnippet" />
             </div>
 
-            <n-form-item :label="t('preview-fallback')">
+            <n-form-item :label="t('preview-fallback')" class="preview-textarea">
               <n-input
                 v-model:value="sampleText"
                 type="textarea"
@@ -166,7 +165,15 @@
 
             <div class="css-output">
               <n-text strong>{{ t('css-title') }}</n-text>
-              <n-code :code="cssSnippet" word-wrap data-testid="css-snippet" />
+              <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
+                <n-code
+                  :code="cssSnippet"
+                  word-wrap
+                  class="css-snippet"
+                  data-testid="css-snippet"
+                  @click="cssSnippet ? copy() : undefined"
+                />
+              </CopyToClipboardTooltip>
             </div>
           </n-card>
 
@@ -223,7 +230,7 @@ import {
 } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
-import { CopyToClipboardButton } from '@shared/ui/base'
+import { CopyToClipboardTooltip } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
 
@@ -660,9 +667,18 @@ function wrapFontFamily(family: string) {
   margin-top: 6px;
 }
 
+.preview-textarea {
+  margin-top: 8px;
+}
+
 .css-output {
   display: grid;
   gap: 8px;
+  margin-top: 12px;
+}
+
+.css-snippet {
+  cursor: pointer;
 }
 </style>
 

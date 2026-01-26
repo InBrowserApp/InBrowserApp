@@ -142,15 +142,18 @@ const SectionStub = defineComponent({
   template: '<section v-bind="$attrs"><slot /></section>',
 })
 
-const CopyToClipboardButtonStub = defineComponent({
-  props: ['content'],
-  template: '<button type="button">copy</button>',
+const CopyToClipboardTooltipStub = defineComponent({
+  setup() {
+    const copy = () => undefined
+    return { copy }
+  },
+  template: '<div><slot :copy="copy" /></div>',
 })
 
 const stubs = {
   ToolSection: SectionStub,
   ToolSectionHeader: SectionStub,
-  CopyToClipboardButton: CopyToClipboardButtonStub,
+  CopyToClipboardTooltip: CopyToClipboardTooltipStub,
 }
 
 const fontFixtures: LocalFontData[] = [
