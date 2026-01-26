@@ -8,6 +8,12 @@ import {
 
 describe('recorder utils', () => {
   it('picks the first supported mime type', () => {
+    const isSupported = (type: string) =>
+      type === 'audio/mp4;codecs="mp4a.40.2"' || type === 'audio/ogg'
+    expect(getSupportedMimeType(isSupported)).toBe('audio/mp4;codecs="mp4a.40.2"')
+  })
+
+  it('falls back when only ogg is supported', () => {
     const isSupported = (type: string) => type === 'audio/ogg'
     expect(getSupportedMimeType(isSupported)).toBe('audio/ogg')
   })
