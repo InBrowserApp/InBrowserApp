@@ -29,6 +29,8 @@ import { toolInfo as sha256HashTextOrFileToolInfo } from '@tools/sha256-hash-tex
 import { toolInfo as sha224HashTextOrFileToolInfo } from '@tools/sha224-hash-text-or-file'
 import { toolInfo as sha3_256HashTextOrFileToolInfo } from '@tools/sha3-256-hash-text-or-file'
 import { toolInfo as sha3_512HashTextOrFileToolInfo } from '@tools/sha3-512-hash-text-or-file'
+import { toolInfo as shake128HashTextOrFileToolInfo } from '@tools/shake128-hash-text-or-file'
+import { toolInfo as shake256HashTextOrFileToolInfo } from '@tools/shake256-hash-text-or-file'
 import { toolInfo as sha384HashTextOrFileToolInfo } from '@tools/sha384-hash-text-or-file'
 import { toolInfo as sha512HashTextOrFileToolInfo } from '@tools/sha512-hash-text-or-file'
 import { toolInfo as sha1HashTextOrFileToolInfo } from '@tools/sha1-hash-text-or-file'

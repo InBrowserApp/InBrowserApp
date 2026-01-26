@@ -27,6 +27,8 @@ import { routes as sha256HashTextOrFileRoutes } from '@tools/sha256-hash-text-or
 import { routes as sha224HashTextOrFileRoutes } from '@tools/sha224-hash-text-or-file/routes'
 import { routes as sha3_256HashTextOrFileRoutes } from '@tools/sha3-256-hash-text-or-file/routes'
 import { routes as sha3_512HashTextOrFileRoutes } from '@tools/sha3-512-hash-text-or-file/routes'
+import { routes as shake128HashTextOrFileRoutes } from '@tools/shake128-hash-text-or-file/routes'
+import { routes as shake256HashTextOrFileRoutes } from '@tools/shake256-hash-text-or-file/routes'
 import { routes as sha384HashTextOrFileRoutes } from '@tools/sha384-hash-text-or-file/routes'
 import { routes as sha512HashTextOrFileRoutes } from '@tools/sha512-hash-text-or-file/routes'
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
