@@ -110,6 +110,7 @@ import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeInvisibleCharacterCheckerRoutes } from '@tools/unicode-invisible-character-checker/routes'
 import { routes as unicodeEscapeUnescapeRoutes } from '@tools/unicode-escape-unescape/routes'
+import { routes as audioRecorderRoutes } from '@tools/audio-recorder/routes'
 import { routes as morseCodeConverterRoutes } from '@tools/morse-code-converter/routes'
 import { routes as rotCipherRoutes } from '@tools/rot-cipher/routes'
 import { routes as htmlEntityEncoderDecoderRoutes } from '@tools/html-entity-encoder-decoder/routes'
@@ -258,6 +259,7 @@ export const routes: ToolRoute[] = [
   ...numberBaseConverterRoutes,
   ...unicodeInvisibleCharacterCheckerRoutes,
   ...unicodeEscapeUnescapeRoutes,
+  ...audioRecorderRoutes,
   ...morseCodeConverterRoutes,
   ...rotCipherRoutes,
   ...htmlEntityEncoderDecoderRoutes,
