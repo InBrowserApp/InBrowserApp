@@ -143,6 +143,8 @@
     "@tools/sha256-hash-text-or-file": "workspace:*",
     "@tools/sha3-256-hash-text-or-file": "workspace:*",
     "@tools/sha3-512-hash-text-or-file": "workspace:*",
+    "@tools/shake128-hash-text-or-file": "workspace:*",
+    "@tools/shake256-hash-text-or-file": "workspace:*",
     "@tools/sha384-hash-text-or-file": "workspace:*",
     "@tools/sha512-hash-text-or-file": "workspace:*",
     "@tools/sitemap-xml-generator": "workspace:*",
