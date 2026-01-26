@@ -80,48 +80,44 @@
   </ToolSection>
 
   <template v-if="recordingBlob">
-    <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
-    <ToolSection>
-      <n-flex vertical :size="12">
-        <video class="video-player" :src="recordingUrl" controls />
+    <div ref="outputSection">
+      <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
+      <ToolSection>
+        <n-flex vertical :size="12">
+          <video class="video-player" :src="recordingUrl" controls />
 
-        <n-grid :cols="2" :x-gap="16" :y-gap="8">
-          <n-gi>
-            <n-flex vertical :size="4">
-              <n-text depth="3">{{ t('format') }}</n-text>
-              <n-text>{{ displayMimeType }}</n-text>
-            </n-flex>
-          </n-gi>
-          <n-gi>
-            <n-flex vertical :size="4">
-              <n-text depth="3">{{ t('fileSize') }}</n-text>
-              <n-text>{{ fileSizeLabel }}</n-text>
-            </n-flex>
-          </n-gi>
-        </n-grid>
+          <n-grid :cols="2" :x-gap="16" :y-gap="8">
+            <n-gi>
+              <n-flex vertical :size="4">
+                <n-text depth="3">{{ t('format') }}</n-text>
+                <n-text>{{ displayMimeType }}</n-text>
+              </n-flex>
+            </n-gi>
+            <n-gi>
+              <n-flex vertical :size="4">
+                <n-text depth="3">{{ t('fileSize') }}</n-text>
+                <n-text>{{ fileSizeLabel }}</n-text>
+              </n-flex>
+            </n-gi>
+          </n-grid>
 
-        <n-flex align="center" :size="8" class="filename-row">
-          <n-text depth="3">{{ t('fileName') }}</n-text>
-          <n-input v-model:value="fileName" :placeholder="t('fileNamePlaceholder')" />
-          <n-text>.{{ fileExtension }}</n-text>
+          <n-flex :size="8">
+            <n-button tag="a" type="primary" :href="recordingUrl" :download="downloadName">
+              <template #icon>
+                <n-icon :component="DownloadIcon" />
+              </template>
+              {{ t('download') }}
+            </n-button>
+            <n-button tertiary @click="clearRecording">
+              <template #icon>
+                <n-icon :component="ClearIcon" />
+              </template>
+              {{ t('clear') }}
+            </n-button>
+          </n-flex>
         </n-flex>
-
-        <n-flex :size="8">
-          <n-button tag="a" type="primary" :href="recordingUrl" :download="downloadName">
-            <template #icon>
-              <n-icon :component="DownloadIcon" />
-            </template>
-            {{ t('download') }}
-          </n-button>
-          <n-button tertiary @click="clearRecording">
-            <template #icon>
-              <n-icon :component="ClearIcon" />
-            </template>
-            {{ t('clear') }}
-          </n-button>
-        </n-flex>
-      </n-flex>
-    </ToolSection>
+      </ToolSection>
+    </div>
   </template>
 
   <ToolSectionHeader>{{ t('notes') }}</ToolSectionHeader>
@@ -135,9 +131,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NInput, NSwitch, NTag, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NSwitch, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
@@ -170,6 +166,7 @@ const recordingBlob = ref<Blob | null>(null)
 const mimeType = ref('')
 const fileName = ref('')
 const elapsedMs = ref(0)
+const outputSection = ref<HTMLElement | null>(null)
 
 const recordingUrl = useObjectUrl(recordingBlob)
 
@@ -218,6 +215,12 @@ const fileSizeLabel = computed(() =>
 const downloadName = computed(() => {
   const base = fileName.value.trim() || t('fileNamePlaceholder')
   return `${base}.${fileExtension.value}`
+})
+
+watch(recordingBlob, async (value, previous) => {
+  if (!value || value === previous) return
+  await nextTick()
+  outputSection.value?.scrollIntoView?.({ behavior: 'smooth', block: 'start' })
 })
 
 function defaultFileName() {
@@ -430,10 +433,6 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 
-.filename-row :deep(.n-input) {
-  flex: 1;
-}
-
 .setting-row {
   justify-content: space-between;
 }
@@ -457,7 +456,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -490,7 +488,6 @@ onBeforeUnmount(() => {
     "duration": "时长",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "文件名",
     "fileNamePlaceholder": "屏幕录制",
     "fileSize": "文件大小",
     "download": "下载",
@@ -523,7 +520,6 @@ onBeforeUnmount(() => {
     "duration": "时长",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "文件名",
     "fileNamePlaceholder": "屏幕录制",
     "fileSize": "文件大小",
     "download": "下载",
@@ -556,7 +552,6 @@ onBeforeUnmount(() => {
     "duration": "時長",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "檔案名稱",
     "fileNamePlaceholder": "螢幕錄製",
     "fileSize": "檔案大小",
     "download": "下載",
@@ -589,7 +584,6 @@ onBeforeUnmount(() => {
     "duration": "時長",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "檔案名稱",
     "fileNamePlaceholder": "螢幕錄製",
     "fileSize": "檔案大小",
     "download": "下載",
@@ -622,7 +616,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -655,7 +648,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -688,7 +680,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -721,7 +712,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -754,7 +744,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -787,7 +776,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -820,7 +808,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -853,7 +840,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -886,7 +872,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -919,7 +904,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -952,7 +936,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -985,7 +968,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1018,7 +1000,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1051,7 +1032,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1084,7 +1064,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1117,7 +1096,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1150,7 +1128,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1183,7 +1160,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1216,7 +1192,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1249,7 +1224,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "screen-recording",
     "fileSize": "File size",
     "download": "Download",
