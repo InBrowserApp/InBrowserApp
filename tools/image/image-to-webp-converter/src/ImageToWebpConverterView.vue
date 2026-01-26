@@ -15,10 +15,17 @@
     <ConversionOptions
       v-if="files.length"
       v-model:scale="scale"
+      v-model:quality="quality"
+      v-model:method="method"
+      v-model:lossless="lossless"
       :title="t('optionsTitle')"
       :scale-label="t('scaleLabel')"
       :scale-hint="t('scaleHint')"
-      :reset-label="t('resetScale')"
+      :quality-label="t('qualityLabel')"
+      :quality-hint="t('qualityHint')"
+      :method-label="t('methodLabel')"
+      :method-hint="t('methodHint')"
+      :lossless-label="t('losslessLabel')"
       :convert-label="t('convert')"
       :converting-label="t('converting')"
       :min-scale="minScale"
@@ -26,7 +33,6 @@
       :is-converting="isConverting"
       :can-convert="canConvert"
       @convert="convertImages"
-      @reset="resetScale"
     />
 
     <ConversionResults
@@ -41,8 +47,10 @@
       :download-zip-label="t('downloadZip')"
       :original-label="t('original')"
       :output-label="t('output')"
+      :saved-label="t('saved')"
       :dimensions-label="t('dimensions')"
       :file-size-label="t('fileSize')"
+      :total-saved-label="t('totalSaved')"
     />
 
     <ToolSection v-if="error">
@@ -73,6 +81,9 @@ const message = useMessage()
 
 const files = ref<File[]>([])
 const scale = ref(100)
+const quality = ref(80)
+const method = ref(4)
+const lossless = ref(false)
 const results = ref<WebpConversionResult[]>([])
 const zipBlob = ref<Blob | null>(null)
 const error = ref('')
@@ -87,7 +98,7 @@ const canConvert = computed(() => files.value.length > 0 && !isConverting.value)
 
 let runId = 0
 
-watch([files, scale], () => {
+watch([files, scale, quality, method, lossless], () => {
   runId += 1
   results.value = []
   zipBlob.value = null
@@ -95,10 +106,6 @@ watch([files, scale], () => {
   isConverting.value = false
   isZipping.value = false
 })
-
-function resetScale() {
-  scale.value = 100
-}
 
 async function convertImages() {
   if (!files.value.length || isConverting.value) return
@@ -118,7 +125,16 @@ async function convertImages() {
     for (const file of files.value) {
       const outputName = buildOutputName(file.name, nameCounts)
       try {
-        const result = await convertImageToWebp(file, { scale: scale.value }, outputName)
+        const result = await convertImageToWebp(
+          file,
+          {
+            scale: scale.value,
+            quality: quality.value,
+            method: method.value,
+            lossless: lossless.value,
+          },
+          outputName,
+        )
         if (currentRun !== runId) return
         nextResults.push(result)
       } catch (err) {
@@ -205,7 +221,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Conversion Options",
     "scaleLabel": "Scale (%)",
     "scaleHint": "Resize all images by percentage.",
-    "resetScale": "Reset to 100%",
+    "qualityLabel": "Quality",
+    "qualityHint": "Higher values keep more detail but increase file size.",
+    "methodLabel": "Compression effort",
+    "methodHint": "0 = fastest, 6 = best compression.",
+    "losslessLabel": "Lossless",
+    "saved": "Saved",
+    "totalSaved": "Total saved",
     "convert": "Convert to WebP",
     "converting": "Converting...",
     "resultsTitle": "Results",
@@ -236,7 +258,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "转换选项",
     "scaleLabel": "缩放比例 (%)",
     "scaleHint": "按比例调整所有图片大小。",
-    "resetScale": "重置为 100%",
+    "qualityLabel": "质量",
+    "qualityHint": "数值越高细节越多，文件越大。",
+    "methodLabel": "压缩强度",
+    "methodHint": "0 最快，6 压缩最佳。",
+    "losslessLabel": "无损",
+    "saved": "节省",
+    "totalSaved": "总共节省",
     "convert": "转换为 WebP",
     "converting": "转换中...",
     "resultsTitle": "结果",
@@ -267,7 +295,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "转换选项",
     "scaleLabel": "缩放比例 (%)",
     "scaleHint": "按比例调整所有图片大小。",
-    "resetScale": "重置为 100%",
+    "qualityLabel": "质量",
+    "qualityHint": "数值越高细节越多，文件越大。",
+    "methodLabel": "压缩强度",
+    "methodHint": "0 最快，6 压缩最佳。",
+    "losslessLabel": "无损",
+    "saved": "节省",
+    "totalSaved": "总共节省",
     "convert": "转换为 WebP",
     "converting": "转换中...",
     "resultsTitle": "结果",
@@ -298,7 +332,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "轉換選項",
     "scaleLabel": "縮放比例 (%)",
     "scaleHint": "依比例調整所有圖片大小。",
-    "resetScale": "重設為 100%",
+    "qualityLabel": "品質",
+    "qualityHint": "數值越高細節越多，檔案越大。",
+    "methodLabel": "壓縮強度",
+    "methodHint": "0 最快，6 壓縮最佳。",
+    "losslessLabel": "無損",
+    "saved": "節省",
+    "totalSaved": "總共節省",
     "convert": "轉換為 WebP",
     "converting": "轉換中...",
     "resultsTitle": "結果",
@@ -329,7 +369,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "轉換選項",
     "scaleLabel": "縮放比例 (%)",
     "scaleHint": "依比例調整所有圖片大小。",
-    "resetScale": "重設為 100%",
+    "qualityLabel": "品質",
+    "qualityHint": "數值越高細節越多，檔案越大。",
+    "methodLabel": "壓縮強度",
+    "methodHint": "0 最快，6 壓縮最佳。",
+    "losslessLabel": "無損",
+    "saved": "節省",
+    "totalSaved": "總共節省",
     "convert": "轉換為 WebP",
     "converting": "轉換中...",
     "resultsTitle": "結果",
@@ -360,7 +406,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Opciones de conversión",
     "scaleLabel": "Escala (%)",
     "scaleHint": "Redimensiona todas las imágenes por porcentaje.",
-    "resetScale": "Restablecer a 100%",
+    "qualityLabel": "Calidad",
+    "qualityHint": "Valores más altos conservan más detalle pero aumentan el tamaño.",
+    "methodLabel": "Esfuerzo de compresión",
+    "methodHint": "0 = más rápido, 6 = mejor compresión.",
+    "losslessLabel": "Sin pérdidas",
+    "saved": "Ahorro",
+    "totalSaved": "Ahorro total",
     "convert": "Convertir a WebP",
     "converting": "Convirtiendo...",
     "resultsTitle": "Resultados",
@@ -391,7 +443,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Options de conversion",
     "scaleLabel": "Échelle (%)",
     "scaleHint": "Redimensionne toutes les images par pourcentage.",
-    "resetScale": "Réinitialiser à 100%",
+    "qualityLabel": "Qualité",
+    "qualityHint": "Des valeurs plus élevées conservent plus de détails mais augmentent la taille.",
+    "methodLabel": "Effort de compression",
+    "methodHint": "0 = le plus rapide, 6 = la meilleure compression.",
+    "losslessLabel": "Sans perte",
+    "saved": "Économie",
+    "totalSaved": "Économie totale",
     "convert": "Convertir en WebP",
     "converting": "Conversion...",
     "resultsTitle": "Résultats",
@@ -422,7 +480,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Konvertierungsoptionen",
     "scaleLabel": "Skalierung (%)",
     "scaleHint": "Alle Bilder prozentual skalieren.",
-    "resetScale": "Auf 100% zurücksetzen",
+    "qualityLabel": "Qualität",
+    "qualityHint": "Höhere Werte behalten mehr Details, erhöhen aber die Dateigröße.",
+    "methodLabel": "Kompressionsaufwand",
+    "methodHint": "0 = am schnellsten, 6 = beste Kompression.",
+    "losslessLabel": "Verlustfrei",
+    "saved": "Ersparnis",
+    "totalSaved": "Gesamtersparnis",
     "convert": "In WebP konvertieren",
     "converting": "Konvertieren...",
     "resultsTitle": "Ergebnisse",
@@ -453,7 +517,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Opzioni di conversione",
     "scaleLabel": "Scala (%)",
     "scaleHint": "Ridimensiona tutte le immagini in percentuale.",
-    "resetScale": "Reimposta a 100%",
+    "qualityLabel": "Qualità",
+    "qualityHint": "Valori più alti mantengono più dettagli ma aumentano la dimensione.",
+    "methodLabel": "Sforzo di compressione",
+    "methodHint": "0 = più veloce, 6 = migliore compressione.",
+    "losslessLabel": "Senza perdita",
+    "saved": "Risparmio",
+    "totalSaved": "Risparmio totale",
     "convert": "Converti in WebP",
     "converting": "Conversione...",
     "resultsTitle": "Risultati",
@@ -484,7 +554,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "変換オプション",
     "scaleLabel": "倍率 (%)",
     "scaleHint": "すべての画像を割合でリサイズします。",
-    "resetScale": "100% にリセット",
+    "qualityLabel": "品質",
+    "qualityHint": "数値が高いほど詳細を保持しますがサイズが大きくなります。",
+    "methodLabel": "圧縮強度",
+    "methodHint": "0 = 最速、6 = 最高圧縮。",
+    "losslessLabel": "可逆",
+    "saved": "削減",
+    "totalSaved": "合計削減",
     "convert": "WebP に変換",
     "converting": "変換中...",
     "resultsTitle": "結果",
@@ -515,7 +591,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "변환 옵션",
     "scaleLabel": "배율 (%)",
     "scaleHint": "모든 이미지를 백분율로 크기 조정합니다.",
-    "resetScale": "100%로 재설정",
+    "qualityLabel": "품질",
+    "qualityHint": "값이 높을수록 디테일을 유지하지만 파일이 커집니다.",
+    "methodLabel": "압축 강도",
+    "methodHint": "0 = 가장 빠름, 6 = 최고의 압축.",
+    "losslessLabel": "무손실",
+    "saved": "절감",
+    "totalSaved": "총 절감",
     "convert": "WebP로 변환",
     "converting": "변환 중...",
     "resultsTitle": "결과",
@@ -546,7 +628,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Параметры конвертации",
     "scaleLabel": "Масштаб (%)",
     "scaleHint": "Масштабируйте все изображения в процентах.",
-    "resetScale": "Сбросить до 100%",
+    "qualityLabel": "Качество",
+    "qualityHint": "Чем выше значение, тем больше деталей, но больше размер файла.",
+    "methodLabel": "Интенсивность сжатия",
+    "methodHint": "0 = быстрее всего, 6 = лучшее сжатие.",
+    "losslessLabel": "Без потерь",
+    "saved": "Экономия",
+    "totalSaved": "Общая экономия",
     "convert": "Конвертировать в WebP",
     "converting": "Конвертация...",
     "resultsTitle": "Результаты",
@@ -577,7 +665,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Opções de conversão",
     "scaleLabel": "Escala (%)",
     "scaleHint": "Redimensione todas as imagens por porcentagem.",
-    "resetScale": "Redefinir para 100%",
+    "qualityLabel": "Qualidade",
+    "qualityHint": "Valores mais altos preservam mais detalhes, mas aumentam o tamanho.",
+    "methodLabel": "Esforço de compressão",
+    "methodHint": "0 = mais rápido, 6 = melhor compressão.",
+    "losslessLabel": "Sem perdas",
+    "saved": "Economia",
+    "totalSaved": "Economia total",
     "convert": "Converter para WebP",
     "converting": "Convertendo...",
     "resultsTitle": "Resultados",
@@ -608,7 +702,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "خيارات التحويل",
     "scaleLabel": "المقياس (%)",
     "scaleHint": "تغيير حجم جميع الصور بالنسبة المئوية.",
-    "resetScale": "إعادة الضبط إلى 100%",
+    "qualityLabel": "الجودة",
+    "qualityHint": "القيم الأعلى تحتفظ بتفاصيل أكثر لكنها تزيد الحجم.",
+    "methodLabel": "مستوى الضغط",
+    "methodHint": "0 = الأسرع، 6 = أفضل ضغط.",
+    "losslessLabel": "بدون فقدان",
+    "saved": "توفير",
+    "totalSaved": "إجمالي التوفير",
     "convert": "تحويل إلى WebP",
     "converting": "جارٍ التحويل...",
     "resultsTitle": "النتائج",
@@ -639,7 +739,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "परिवर्तन विकल्प",
     "scaleLabel": "स्केल (%)",
     "scaleHint": "सभी इमेज को प्रतिशत के अनुसार रीसाइज़ करें।",
-    "resetScale": "100% पर रीसेट करें",
+    "qualityLabel": "गुणवत्ता",
+    "qualityHint": "ऊँचे मान अधिक विवरण रखते हैं लेकिन आकार बढ़ाते हैं।",
+    "methodLabel": "कंप्रेशन स्तर",
+    "methodHint": "0 = सबसे तेज़, 6 = सर्वोत्तम कंप्रेशन।",
+    "losslessLabel": "लॉसलेस",
+    "saved": "बचत",
+    "totalSaved": "कुल बचत",
     "convert": "WebP में बदलें",
     "converting": "बदल रहा है...",
     "resultsTitle": "परिणाम",
@@ -670,7 +776,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Dönüştürme seçenekleri",
     "scaleLabel": "Ölçek (%)",
     "scaleHint": "Tüm görselleri yüzdeye göre yeniden boyutlandırın.",
-    "resetScale": "100% olarak sıfırla",
+    "qualityLabel": "Kalite",
+    "qualityHint": "Daha yüksek değerler daha fazla ayrıntı korur, ancak boyutu artırır.",
+    "methodLabel": "Sıkıştırma düzeyi",
+    "methodHint": "0 = en hızlı, 6 = en iyi sıkıştırma.",
+    "losslessLabel": "Kayıpsız",
+    "saved": "Tasarruf",
+    "totalSaved": "Toplam tasarruf",
     "convert": "WebP'ye dönüştür",
     "converting": "Dönüştürülüyor...",
     "resultsTitle": "Sonuçlar",
@@ -701,7 +813,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Conversie-opties",
     "scaleLabel": "Schaal (%)",
     "scaleHint": "Schaal alle afbeeldingen op basis van percentage.",
-    "resetScale": "Reset naar 100%",
+    "qualityLabel": "Kwaliteit",
+    "qualityHint": "Hogere waarden behouden meer detail maar vergroten de bestandsgrootte.",
+    "methodLabel": "Compressie-inspanning",
+    "methodHint": "0 = snelst, 6 = beste compressie.",
+    "losslessLabel": "Verliesvrij",
+    "saved": "Besparing",
+    "totalSaved": "Totale besparing",
     "convert": "Converteren naar WebP",
     "converting": "Converteren...",
     "resultsTitle": "Resultaten",
@@ -732,7 +850,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Konverteringsalternativ",
     "scaleLabel": "Skala (%)",
     "scaleHint": "Ändra storlek på alla bilder i procent.",
-    "resetScale": "Återställ till 100%",
+    "qualityLabel": "Kvalitet",
+    "qualityHint": "Högre värden behåller mer detalj men ökar filstorleken.",
+    "methodLabel": "Komprimeringsinsats",
+    "methodHint": "0 = snabbast, 6 = bästa komprimering.",
+    "losslessLabel": "Förlustfri",
+    "saved": "Sparat",
+    "totalSaved": "Totalt sparat",
     "convert": "Konvertera till WebP",
     "converting": "Konverterar...",
     "resultsTitle": "Resultat",
@@ -763,7 +887,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Opcje konwersji",
     "scaleLabel": "Skala (%)",
     "scaleHint": "Zmień rozmiar wszystkich obrazów procentowo.",
-    "resetScale": "Resetuj do 100%",
+    "qualityLabel": "Jakość",
+    "qualityHint": "Wyższe wartości zachowują więcej szczegółów, ale zwiększają rozmiar.",
+    "methodLabel": "Wysiłek kompresji",
+    "methodHint": "0 = najszybciej, 6 = najlepsza kompresja.",
+    "losslessLabel": "Bezstratnie",
+    "saved": "Oszczędność",
+    "totalSaved": "Łączna oszczędność",
     "convert": "Konwertuj do WebP",
     "converting": "Konwertowanie...",
     "resultsTitle": "Wyniki",
@@ -794,7 +924,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Tùy chọn chuyển đổi",
     "scaleLabel": "Tỷ lệ (%)",
     "scaleHint": "Đổi kích thước tất cả ảnh theo phần trăm.",
-    "resetScale": "Đặt lại 100%",
+    "qualityLabel": "Chất lượng",
+    "qualityHint": "Giá trị cao hơn giữ nhiều chi tiết hơn nhưng tăng dung lượng.",
+    "methodLabel": "Mức nén",
+    "methodHint": "0 = nhanh nhất, 6 = nén tốt nhất.",
+    "losslessLabel": "Không mất dữ liệu",
+    "saved": "Tiết kiệm",
+    "totalSaved": "Tổng tiết kiệm",
     "convert": "Chuyển sang WebP",
     "converting": "Đang chuyển đổi...",
     "resultsTitle": "Kết quả",
@@ -825,7 +961,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "ตัวเลือกการแปลง",
     "scaleLabel": "สเกล (%)",
     "scaleHint": "ปรับขนาดรูปทั้งหมดตามเปอร์เซ็นต์",
-    "resetScale": "รีเซ็ตเป็น 100%",
+    "qualityLabel": "คุณภาพ",
+    "qualityHint": "ค่าสูงขึ้นเก็บรายละเอียดมากขึ้นแต่ไฟล์ใหญ่ขึ้น",
+    "methodLabel": "ระดับการบีบอัด",
+    "methodHint": "0 = เร็วที่สุด, 6 = บีบอัดดีที่สุด",
+    "losslessLabel": "ไม่สูญเสีย",
+    "saved": "ประหยัด",
+    "totalSaved": "ประหยัดทั้งหมด",
     "convert": "แปลงเป็น WebP",
     "converting": "กำลังแปลง...",
     "resultsTitle": "ผลลัพธ์",
@@ -856,7 +998,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Opsi konversi",
     "scaleLabel": "Skala (%)",
     "scaleHint": "Ubah ukuran semua gambar berdasarkan persentase.",
-    "resetScale": "Setel ulang ke 100%",
+    "qualityLabel": "Kualitas",
+    "qualityHint": "Nilai lebih tinggi mempertahankan detail lebih banyak tetapi ukuran bertambah.",
+    "methodLabel": "Tingkat kompresi",
+    "methodHint": "0 = tercepat, 6 = kompresi terbaik.",
+    "losslessLabel": "Tanpa kehilangan",
+    "saved": "Hemat",
+    "totalSaved": "Total hemat",
     "convert": "Konversi ke WebP",
     "converting": "Mengonversi...",
     "resultsTitle": "Hasil",
@@ -887,7 +1035,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "אפשרויות המרה",
     "scaleLabel": "קנה מידה (%)",
     "scaleHint": "שנה את גודל כל התמונות לפי אחוז.",
-    "resetScale": "איפוס ל-100%",
+    "qualityLabel": "איכות",
+    "qualityHint": "ערכים גבוהים שומרים על יותר פרטים אך מגדילים את הקובץ.",
+    "methodLabel": "מאמץ דחיסה",
+    "methodHint": "0 = המהיר ביותר, 6 = הדחיסה הטובה ביותר.",
+    "losslessLabel": "ללא אובדן",
+    "saved": "חיסכון",
+    "totalSaved": "חיסכון כולל",
     "convert": "המר ל-WebP",
     "converting": "ממיר...",
     "resultsTitle": "תוצאות",
@@ -918,7 +1072,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Pilihan penukaran",
     "scaleLabel": "Skala (%)",
     "scaleHint": "Ubah saiz semua imej mengikut peratusan.",
-    "resetScale": "Tetapkan semula ke 100%",
+    "qualityLabel": "Kualiti",
+    "qualityHint": "Nilai lebih tinggi mengekalkan lebih banyak butiran tetapi saiz bertambah.",
+    "methodLabel": "Usaha pemampatan",
+    "methodHint": "0 = terpantas, 6 = pemampatan terbaik.",
+    "losslessLabel": "Tanpa kehilangan",
+    "saved": "Penjimatan",
+    "totalSaved": "Jumlah penjimatan",
     "convert": "Tukar ke WebP",
     "converting": "Menukar...",
     "resultsTitle": "Keputusan",
@@ -949,7 +1109,13 @@ function buildOutputName(name: string, nameCounts: Map<string, number>) {
     "optionsTitle": "Konverteringsvalg",
     "scaleLabel": "Skala (%)",
     "scaleHint": "Endre størrelse på alle bilder i prosent.",
-    "resetScale": "Tilbakestill til 100%",
+    "qualityLabel": "Kvalitet",
+    "qualityHint": "Høyere verdier beholder mer detaljer, men øker filstørrelsen.",
+    "methodLabel": "Kompresjonsnivå",
+    "methodHint": "0 = raskest, 6 = best komprimering.",
+    "losslessLabel": "Tapsfri",
+    "saved": "Spart",
+    "totalSaved": "Totalt spart",
     "convert": "Konverter til WebP",
     "converting": "Konverterer...",
     "resultsTitle": "Resultater",

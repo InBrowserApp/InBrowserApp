@@ -84,9 +84,17 @@ describe('convertImageToWebp', () => {
     encodeMock.mockResolvedValueOnce(new Uint8Array([1, 2, 3]).buffer)
 
     const file = new File(['data'], 'photo.png', { type: 'image/png' })
-    const result = await convertImageToWebp(file, { scale: 50 }, 'photo.webp')
+    const result = await convertImageToWebp(
+      file,
+      { scale: 50, quality: 80, method: 4, lossless: false },
+      'photo.webp',
+    )
 
     expect(encodeMock).toHaveBeenCalledTimes(1)
+    expect(encodeMock).toHaveBeenCalledWith(
+      expect.any(Object),
+      expect.objectContaining({ quality: 80, method: 4, lossless: 0 }),
+    )
     expect(result.outputWidth).toBe(50)
     expect(result.outputHeight).toBe(25)
     expect(result.outputName).toBe('photo.webp')
@@ -114,7 +122,11 @@ describe('convertImageToWebp', () => {
     encodeMock.mockResolvedValueOnce(new Uint8Array([1, 2, 3]).buffer)
 
     const file = new File(['data'], 'fallback.png', { type: 'image/png' })
-    const result = await convertImageToWebp(file, { scale: 100 }, 'fallback.webp')
+    const result = await convertImageToWebp(
+      file,
+      { scale: 100, quality: 92, method: 6, lossless: true },
+      'fallback.webp',
+    )
 
     expect(result.outputWidth).toBe(40)
     expect(result.outputHeight).toBe(20)
@@ -133,9 +145,13 @@ describe('convertImageToWebp', () => {
 
     const file = new File(['data'], 'broken.png', { type: 'image/png' })
 
-    await expect(convertImageToWebp(file, { scale: 100 }, 'broken.webp')).rejects.toThrow(
-      'CANVAS_CONTEXT_UNAVAILABLE',
-    )
+    await expect(
+      convertImageToWebp(
+        file,
+        { scale: 100, quality: 80, method: 4, lossless: false },
+        'broken.webp',
+      ),
+    ).rejects.toThrow('CANVAS_CONTEXT_UNAVAILABLE')
   })
 })
 

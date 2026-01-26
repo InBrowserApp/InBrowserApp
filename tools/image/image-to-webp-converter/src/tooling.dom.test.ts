@@ -87,6 +87,7 @@ vi.mock('naive-ui', async () => {
     NGrid: BaseStub,
     NIcon: BaseStub,
     NInputNumber: makeModelStub('NInputNumber'),
+    NSwitch: makeModelStub('NSwitch'),
     NP: BaseStub,
     NText: BaseStub,
     NUpload: BaseStub,
@@ -119,8 +120,8 @@ const ImageUploadStub = defineComponent({
 
 const ConversionOptionsStub = defineComponent({
   name: 'ConversionOptions',
-  props: ['scale', 'isConverting', 'canConvert'],
-  emits: ['update:scale', 'convert', 'reset'],
+  props: ['scale', 'quality', 'method', 'lossless', 'isConverting', 'canConvert'],
+  emits: ['update:scale', 'update:quality', 'update:method', 'update:lossless', 'convert'],
   template: '<button @click="$emit(\'convert\')">convert</button>',
 })
 
@@ -242,6 +243,11 @@ describe('ImageToWebpConverterView', () => {
     await flushPromises()
 
     expect(mockedConvert).toHaveBeenCalledTimes(1)
+    expect(mockedConvert).toHaveBeenCalledWith(
+      file,
+      { scale: 100, quality: 80, method: 4, lossless: false },
+      'photo.webp',
+    )
     expect(mockedZip).not.toHaveBeenCalled()
 
     const resultsProps = wrapper.findComponent(ConversionResultsStub).props('results') as
@@ -409,10 +415,17 @@ describe('ConversionOptions', () => {
         title: 'Options',
         scaleLabel: 'Scale',
         scaleHint: 'Hint',
-        resetLabel: 'Reset',
+        qualityLabel: 'Quality',
+        qualityHint: 'Quality hint',
+        methodLabel: 'Method',
+        methodHint: 'Method hint',
+        losslessLabel: 'Lossless',
         convertLabel: 'Convert',
         convertingLabel: 'Converting',
         scale: 100,
+        quality: 80,
+        method: 4,
+        lossless: false,
         minScale: 10,
         maxScale: 400,
         isConverting: false,
@@ -428,10 +441,19 @@ describe('ConversionOptions', () => {
 
     const vm = wrapper.vm as unknown as {
       handleScaleUpdate: (value: number | null) => void
+      handleQualityUpdate: (value: number | null) => void
+      handleMethodUpdate: (value: number | null) => void
+      handleLosslessUpdate: (value: boolean) => void
     }
 
     vm.handleScaleUpdate(80)
     expect(wrapper.emitted('update:scale')?.[0]).toEqual([80])
+    vm.handleQualityUpdate(72)
+    expect(wrapper.emitted('update:quality')?.[0]).toEqual([72])
+    vm.handleMethodUpdate(5)
+    expect(wrapper.emitted('update:method')?.[0]).toEqual([5])
+    vm.handleLosslessUpdate(true)
+    expect(wrapper.emitted('update:lossless')?.[0]).toEqual([true])
   })
 })
 
@@ -462,8 +484,10 @@ describe('ConversionResults', () => {
         downloadZipLabel: 'Download ZIP',
         originalLabel: 'Original',
         outputLabel: 'Output',
+        savedLabel: 'Saved',
         dimensionsLabel: 'Dimensions',
         fileSizeLabel: 'File size',
+        totalSavedLabel: 'Total saved',
       },
       global: {
         stubs: {
@@ -512,8 +536,10 @@ describe('ConversionResults', () => {
         downloadZipLabel: 'Download ZIP',
         originalLabel: 'Original',
         outputLabel: 'Output',
+        savedLabel: 'Saved',
         dimensionsLabel: 'Dimensions',
         fileSizeLabel: 'File size',
+        totalSavedLabel: 'Total saved',
       },
       global: {
         stubs: {

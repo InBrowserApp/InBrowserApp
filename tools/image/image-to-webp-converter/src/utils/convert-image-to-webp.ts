@@ -19,9 +19,12 @@ export async function convertImageToWebp(
     const scale = normalizeScale(options.scale)
     const outputWidth = Math.max(1, Math.round(width * scale))
     const outputHeight = Math.max(1, Math.round(height * scale))
+    const quality = normalizeQuality(options.quality)
+    const method = normalizeMethod(options.method)
+    const lossless = options.lossless ? 1 : 0
 
     const imageData = drawImageToData(image, outputWidth, outputHeight)
-    const encoded = await encode(imageData)
+    const encoded = await encode(imageData, { quality, method, lossless })
     const blob = new Blob([encoded], { type: 'image/webp' })
 
     return {
@@ -41,6 +44,16 @@ export async function convertImageToWebp(
 function normalizeScale(value: number) {
   if (!Number.isFinite(value) || value <= 0) return 1
   return value / 100
+}
+
+function normalizeQuality(value: number) {
+  if (!Number.isFinite(value)) return 80
+  return Math.min(100, Math.max(0, Math.round(value)))
+}
+
+function normalizeMethod(value: number) {
+  if (!Number.isFinite(value)) return 4
+  return Math.min(6, Math.max(0, Math.round(value)))
 }
 
 function drawImageToData(image: CanvasImageSource, width: number, height: number) {

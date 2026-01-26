@@ -7,6 +7,7 @@
       <n-text strong>{{ result.outputName }}</n-text>
       <n-text depth="3">{{ originalLabel }}: {{ originalLabelText }}</n-text>
       <n-text depth="3">{{ outputLabel }}: {{ outputLabelText }}</n-text>
+      <n-text depth="3">{{ savedLabel }}: {{ savedText }}</n-text>
     </n-flex>
   </n-card>
 </template>
@@ -22,6 +23,7 @@ const props = defineProps<{
   result: WebpConversionResult
   originalLabel: string
   outputLabel: string
+  savedLabel: string
   dimensionsLabel: string
   fileSizeLabel: string
 }>()
@@ -40,6 +42,26 @@ const outputLabelText = computed(() => {
     props.fileSizeLabel
   }: ${filesize(props.result.blob.size) as string}`
 })
+
+const savedText = computed(() => {
+  return formatSavedText(props.result.file.size, props.result.blob.size)
+})
+
+function formatSavedText(originalBytes: number, outputBytes: number) {
+  const delta = originalBytes - outputBytes
+  const sign = delta < 0 ? '-' : ''
+  const absDelta = Math.abs(delta)
+  const percent = originalBytes > 0 ? (absDelta / originalBytes) * 100 : 0
+  const sizeText = `${sign}${filesize(absDelta) as string}`
+  const percentText = `${sign}${formatPercent(percent)}%`
+  return `${sizeText} (${percentText})`
+}
+
+function formatPercent(value: number) {
+  if (!Number.isFinite(value) || value <= 0) return '0'
+  if (value >= 10) return `${Math.round(value)}`
+  return value.toFixed(1)
+}
 </script>
 
 <style scoped>
@@ -53,6 +75,7 @@ const outputLabelText = computed(() => {
   align-items: center;
   justify-content: center;
   min-height: 120px;
+  overflow: hidden;
 }
 
 .preview-image {

@@ -1,5 +1,8 @@
 export interface WebpConversionOptions {
   scale: number
+  quality: number
+  method: number
+  lossless: boolean
 }
 
 export interface WebpConversionResult {
