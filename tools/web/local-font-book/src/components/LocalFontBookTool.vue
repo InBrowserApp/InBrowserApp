@@ -65,33 +65,35 @@
             {{ fontCountLabel }}
           </n-text>
 
-          <div class="font-list" data-testid="font-list">
-            <template v-if="displayGroups.length">
-              <div v-for="group in displayGroups" :key="group.id" class="font-group">
-                <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
-                <div class="font-group__list">
-                  <button
-                    v-for="font in group.items"
-                    :key="font.id"
-                    type="button"
-                    class="font-card"
-                    :class="{ 'font-card--active': font.id === activeFontId }"
-                    :data-testid="`font-${font.id}`"
-                    @click="setActiveFont(font.id)"
-                  >
-                    <div class="font-card__name">{{ font.displayName }}</div>
-                    <div class="font-card__meta">
-                      <span class="font-card__family">{{ font.displayFamily }}</span>
-                      <span class="font-card__style">{{ font.displayStyle }}</span>
-                    </div>
-                  </button>
+          <n-scrollbar class="font-scroll" data-testid="font-list">
+            <div class="font-list">
+              <template v-if="displayGroups.length">
+                <div v-for="group in displayGroups" :key="group.id" class="font-group">
+                  <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
+                  <div class="font-group__list">
+                    <button
+                      v-for="font in group.items"
+                      :key="font.id"
+                      type="button"
+                      class="font-card"
+                      :class="{ 'font-card--active': font.id === activeFontId }"
+                      :data-testid="`font-${font.id}`"
+                      @click="setActiveFont(font.id)"
+                    >
+                      <div class="font-card__name">{{ font.displayName }}</div>
+                      <div class="font-card__meta">
+                        <span class="font-card__family">{{ font.displayFamily }}</span>
+                        <span class="font-card__style">{{ font.displayStyle }}</span>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </template>
-            <n-text v-else depth="3" class="empty-text" data-testid="no-results">
-              {{ t('no-results') }}
-            </n-text>
-          </div>
+              </template>
+              <n-text v-else depth="3" class="empty-text" data-testid="no-results">
+                {{ t('no-results') }}
+              </n-text>
+            </div>
+          </n-scrollbar>
         </n-card>
       </n-gi>
 
@@ -200,6 +202,7 @@ import {
   NInput,
   NInputNumber,
   NLi,
+  NScrollbar,
   NSelect,
   NSlider,
   NSwitch,
@@ -525,12 +528,14 @@ function wrapFontFamily(family: string) {
   margin-top: 4px;
 }
 
+.font-scroll {
+  max-height: 520px;
+}
+
 .font-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: 520px;
-  overflow: auto;
   padding-right: 4px;
 }
 
