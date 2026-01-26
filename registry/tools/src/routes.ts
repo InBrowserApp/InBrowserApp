@@ -95,6 +95,7 @@ import { routes as curlConverterRoutes } from '@tools/curl-converter/routes'
 import { routes as dockerRunToComposeRoutes } from '@tools/docker-run-to-compose/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
+import { routes as chineseUppercaseNumberConverterRoutes } from '@tools/chinese-uppercase-number-converter/routes'
 import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
 import { routes as timerRoutes } from '@tools/timer/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
@@ -251,6 +252,7 @@ export const routes: ToolRoute[] = [
   ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
+  ...chineseUppercaseNumberConverterRoutes,
   ...stopwatchRoutes,
   ...timerRoutes,
   ...unixTimestampConverterRoutes,
