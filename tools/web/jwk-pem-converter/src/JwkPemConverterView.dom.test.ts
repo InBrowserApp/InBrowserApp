@@ -31,7 +31,7 @@ vi.mock('./utils/jwkPem', async () => {
 
 import { flushPromises, mount } from '@vue/test-utils'
 import { NMessageProvider, NRadioGroup, NSelect, NSwitch, NTabs } from 'naive-ui'
-import { h, type Component } from 'vue'
+import { h, nextTick, type Component } from 'vue'
 import JwkPemConverterView from './JwkPemConverterView.vue'
 import JwkPemConverter from './components/JwkPemConverter.vue'
 import * as toolInfo from './info'
@@ -59,6 +59,7 @@ const withMessageProvider = (component: Component, props?: Record<string, unknow
 
 describe('JwkPemConverter', () => {
   beforeEach(() => {
+    vi.useRealTimers()
     localStorage.clear()
   })
 
@@ -422,7 +423,10 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 -----END PRIVATE KEY-----`
 
-    await flushPromises()
+    for (let attempt = 0; attempt < 3 && vm.pemInputStatus !== 'success'; attempt += 1) {
+      await flushPromises()
+      await nextTick()
+    }
 
     expect(vm.pemInputStatus).toBe('success')
     expect(vm.pemError).toBe('')

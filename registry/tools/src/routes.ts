@@ -93,6 +93,7 @@ import { routes as dockerRunToComposeRoutes } from '@tools/docker-run-to-compose
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as stopwatchRoutes } from '@tools/stopwatch/routes'
+import { routes as timerRoutes } from '@tools/timer/routes'
 import { routes as unixTimestampConverterRoutes } from '@tools/unix-timestamp-converter/routes'
 import { routes as icalEventGeneratorRoutes } from '@tools/ical-event-generator/routes'
 import { routes as timeZoneConverterRoutes } from '@tools/time-zone-converter/routes'
@@ -243,6 +244,7 @@ export const routes: ToolRoute[] = [
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,
   ...stopwatchRoutes,
+  ...timerRoutes,
   ...unixTimestampConverterRoutes,
   ...icalEventGeneratorRoutes,
   ...timeZoneConverterRoutes,
