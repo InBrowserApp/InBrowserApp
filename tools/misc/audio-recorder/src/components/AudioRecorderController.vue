@@ -59,10 +59,10 @@
     </n-flex>
   </ToolSection>
 
-  <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex vertical :size="12">
-      <template v-if="recordingBlob">
+  <template v-if="recordingBlob">
+    <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
+    <ToolSection>
+      <n-flex vertical :size="12">
         <audio class="audio-player" :src="recordingUrl" controls />
 
         <n-grid :cols="2" :x-gap="16" :y-gap="8">
@@ -88,14 +88,21 @@
 
         <n-flex :size="8">
           <n-button tag="a" type="primary" :href="recordingUrl" :download="downloadName">
+            <template #icon>
+              <n-icon :component="DownloadIcon" />
+            </template>
             {{ t('download') }}
           </n-button>
-          <n-button tertiary @click="clearRecording">{{ t('clear') }}</n-button>
+          <n-button tertiary @click="clearRecording">
+            <template #icon>
+              <n-icon :component="ClearIcon" />
+            </template>
+            {{ t('clear') }}
+          </n-button>
         </n-flex>
-      </template>
-      <n-text v-else depth="3">{{ t('noRecording') }}</n-text>
-    </n-flex>
-  </ToolSection>
+      </n-flex>
+    </ToolSection>
+  </template>
 
   <ToolSectionHeader>{{ t('notes') }}</ToolSectionHeader>
   <ToolSection>
@@ -114,9 +121,11 @@ import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NInput, NTag, NText } from '
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
-import PauseIcon from '@vicons/fluent/Pause16Regular'
+import PauseIcon from '@vicons/fluent/Pause16Filled'
 import PlayIcon from '@vicons/fluent/Play16Regular'
-import StopIcon from '@vicons/fluent/Stop16Regular'
+import StopIcon from '@vicons/fluent/DismissCircle16Filled'
+import DownloadIcon from '@vicons/fluent/ArrowDownload16Filled'
+import ClearIcon from '@vicons/fluent/Delete16Regular'
 import {
   formatDuration,
   formatFileSize,
@@ -341,7 +350,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -370,7 +378,6 @@ onBeforeUnmount(() => {
     "fileSize": "文件大小",
     "download": "下载",
     "clear": "清除",
-    "noRecording": "暂无录音。",
     "notSupported": "当前浏览器不支持录音。",
     "permissionDenied": "麦克风权限被拒绝，请允许访问。",
     "retryPermission": "重试",
@@ -399,7 +406,6 @@ onBeforeUnmount(() => {
     "fileSize": "文件大小",
     "download": "下载",
     "clear": "清除",
-    "noRecording": "暂无录音。",
     "notSupported": "当前浏览器不支持录音。",
     "permissionDenied": "麦克风权限被拒绝，请允许访问。",
     "retryPermission": "重试",
@@ -428,7 +434,6 @@ onBeforeUnmount(() => {
     "fileSize": "檔案大小",
     "download": "下載",
     "clear": "清除",
-    "noRecording": "尚無錄音。",
     "notSupported": "目前瀏覽器不支援錄音。",
     "permissionDenied": "麥克風權限被拒絕，請允許存取。",
     "retryPermission": "重試",
@@ -457,7 +462,6 @@ onBeforeUnmount(() => {
     "fileSize": "檔案大小",
     "download": "下載",
     "clear": "清除",
-    "noRecording": "尚無錄音。",
     "notSupported": "目前瀏覽器不支援錄音。",
     "permissionDenied": "麥克風權限被拒絕，請允許存取。",
     "retryPermission": "重試",
@@ -486,7 +490,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -515,7 +518,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -544,7 +546,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -573,7 +574,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -602,7 +602,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -631,7 +630,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -660,7 +658,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -689,7 +686,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -718,7 +714,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -747,7 +742,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -776,7 +770,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -805,7 +798,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -834,7 +826,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -863,7 +854,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -892,7 +882,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -921,7 +910,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -950,7 +938,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -979,7 +966,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -1008,7 +994,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
@@ -1037,7 +1022,6 @@ onBeforeUnmount(() => {
     "fileSize": "File size",
     "download": "Download",
     "clear": "Clear",
-    "noRecording": "No recording yet.",
     "notSupported": "Audio recording is not supported in this browser.",
     "permissionDenied": "Microphone permission denied. Please allow microphone access.",
     "retryPermission": "Retry",
