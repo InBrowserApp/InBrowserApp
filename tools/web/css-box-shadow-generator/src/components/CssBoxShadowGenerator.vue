@@ -26,34 +26,43 @@
               <n-flex align="center" :size="8" wrap>
                 <n-tag v-show="layer.inset" size="small" type="warning">{{ t('inset') }}</n-tag>
                 <n-button
-                  text
+                  quaternary
+                  circle
                   size="small"
                   :disabled="index === 0"
+                  :aria-label="t('move-up')"
                   @click="moveLayer(layer.id, -1)"
                   :data-testid="`layer-up-${index}`"
                 >
-                  {{ t('move-up') }}
+                  <template #icon>
+                    <n-icon :component="ArrowUp16Regular" />
+                  </template>
                 </n-button>
                 <n-button
-                  text
+                  quaternary
+                  circle
                   size="small"
                   :disabled="index === layers.length - 1"
+                  :aria-label="t('move-down')"
                   @click="moveLayer(layer.id, 1)"
                   :data-testid="`layer-down-${index}`"
                 >
-                  {{ t('move-down') }}
+                  <template #icon>
+                    <n-icon :component="ArrowDown16Regular" />
+                  </template>
                 </n-button>
                 <n-button
-                  text
+                  quaternary
+                  circle
                   size="small"
                   :disabled="layers.length === 1"
+                  :aria-label="t('remove-layer')"
                   @click="removeLayer(layer.id)"
                   :data-testid="`layer-remove-${index}`"
                 >
                   <template #icon>
                     <n-icon :component="Delete16Regular" />
                   </template>
-                  {{ t('remove-layer') }}
                 </n-button>
               </n-flex>
             </n-flex>
@@ -226,6 +235,8 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import Add16Regular from '@vicons/fluent/Add16Regular'
+import ArrowDown16Regular from '@vicons/fluent/ArrowDown16Regular'
+import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import { buildBoxShadow, createShadowLayer, type ShadowLayer } from '../utils/shadow'
 
