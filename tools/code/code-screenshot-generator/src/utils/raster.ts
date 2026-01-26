@@ -1,4 +1,4 @@
-export type RasterFormat = 'png' | 'jpeg'
+export type RasterFormat = 'png' | 'jpeg' | 'webp'
 
 export type RasterOptions = {
   svg: string
@@ -57,7 +57,7 @@ export const rasterizeSvg = async ({
           }
           resolve(result)
         },
-        format === 'png' ? 'image/png' : 'image/jpeg',
+        format === 'png' ? 'image/png' : format === 'webp' ? 'image/webp' : 'image/jpeg',
         quality,
       )
     })

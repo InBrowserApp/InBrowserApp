@@ -13,29 +13,14 @@
       </n-radio-group>
     </n-flex>
 
-    <n-flex align="center" :size="12" wrap>
-      <n-text>{{ labels.quality }}</n-text>
-      <n-slider
-        v-model:value="quality"
-        :min="0.6"
-        :max="1"
-        :step="0.02"
-        :format-tooltip="(value) => `${Math.round(value * 100)}%`"
-        style="width: 180px"
-      />
-    </n-flex>
-
-    <n-flex v-if="isGenerating" align="center" :size="8">
-      <n-text depth="3">{{ labels.rendering }}</n-text>
-    </n-flex>
-
     <n-flex :size="8" wrap>
       <n-button
         tag="a"
         tertiary
         :href="pngUrl ?? undefined"
         :download="pngFilename"
-        :disabled="!pngUrl || isGenerating"
+        :disabled="!pngUrl"
+        :loading="isGenerating"
       >
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
@@ -47,12 +32,26 @@
         tertiary
         :href="jpgUrl ?? undefined"
         :download="jpgFilename"
-        :disabled="!jpgUrl || isGenerating"
+        :disabled="!jpgUrl"
+        :loading="isGenerating"
       >
         <template #icon>
           <n-icon><ImageIcon /></n-icon>
         </template>
         {{ labels.jpg }}
+      </n-button>
+      <n-button
+        tag="a"
+        tertiary
+        :href="webpUrl ?? undefined"
+        :download="webpFilename"
+        :disabled="!webpUrl"
+        :loading="isGenerating"
+      >
+        <template #icon>
+          <n-icon><ImageIcon /></n-icon>
+        </template>
+        {{ labels.webp }}
       </n-button>
       <n-button
         tag="a"
@@ -81,13 +80,13 @@
     </n-flex>
 
     <n-flex align="center" :size="8" wrap>
-      <CopyToClipboardButton :content="svgMarkup">
+      <CopyToClipboardButton :content="svgMarkup" variant="tertiary" :disabled="!svgMarkup">
         <template #icon>
           <n-icon><CodeIcon /></n-icon>
         </template>
         <template #label>{{ labels.copySvg }}</template>
       </CopyToClipboardButton>
-      <CopyToClipboardButton :content="htmlSnippet">
+      <CopyToClipboardButton :content="htmlSnippet" variant="tertiary" :disabled="!htmlSnippet">
         <template #icon>
           <n-icon><CopyIcon /></n-icon>
         </template>
@@ -113,7 +112,6 @@ import {
   NInput,
   NRadioButton,
   NRadioGroup,
-  NSlider,
   NText,
 } from 'naive-ui'
 import ImageIcon from '@vicons/fluent/Image24Regular'
@@ -134,10 +132,10 @@ const props = defineProps<{
   labels: {
     fileName: string
     scale: string
-    quality: string
     rendering: string
     png: string
     jpg: string
+    webp: string
     svg: string
     html: string
     copySvg: string
@@ -151,9 +149,10 @@ const emit = defineEmits<{
 }>()
 
 const scale = ref(2)
-const quality = ref(0.92)
+const quality = 0.92
 const pngBlob = ref<Blob | null>(null)
 const jpgBlob = ref<Blob | null>(null)
+const webpBlob = ref<Blob | null>(null)
 const isGenerating = ref(false)
 const error = ref('')
 let generationId = 0
@@ -177,11 +176,13 @@ const htmlBlob = computed(() =>
 
 const pngUrl = useObjectUrl(pngBlob)
 const jpgUrl = useObjectUrl(jpgBlob)
+const webpUrl = useObjectUrl(webpBlob)
 const svgUrl = useObjectUrl(svgBlob)
 const htmlUrl = useObjectUrl(htmlBlob)
 
 const pngFilename = computed(() => `${normalizedFileName.value}.png`)
 const jpgFilename = computed(() => `${normalizedFileName.value}.jpg`)
+const webpFilename = computed(() => `${normalizedFileName.value}.webp`)
 const svgFilename = computed(() => `${normalizedFileName.value}.svg`)
 const htmlFilename = computed(() => `${normalizedFileName.value}.html`)
 
@@ -189,6 +190,7 @@ const generateRasterOutputs = useDebounceFn(async () => {
   if (!props.svgMarkup || props.svgWidth <= 0 || props.svgHeight <= 0) {
     pngBlob.value = null
     jpgBlob.value = null
+    webpBlob.value = null
     return
   }
 
@@ -197,7 +199,7 @@ const generateRasterOutputs = useDebounceFn(async () => {
   error.value = ''
 
   try {
-    const [pngResult, jpgResult] = await Promise.all([
+    const [pngResult, jpgResult, webpResult] = await Promise.all([
       rasterizeSvg({
         svg: props.svgMarkup,
         width: props.svgWidth,
@@ -211,14 +213,23 @@ const generateRasterOutputs = useDebounceFn(async () => {
         height: props.svgHeight,
         scale: scale.value,
         format: 'jpeg',
-        quality: quality.value,
+        quality,
         backgroundColor: props.jpgBackground,
+      }),
+      rasterizeSvg({
+        svg: props.svgMarkup,
+        width: props.svgWidth,
+        height: props.svgHeight,
+        scale: scale.value,
+        format: 'webp',
+        quality,
       }),
     ])
 
     if (currentId !== generationId) return
     pngBlob.value = pngResult
     jpgBlob.value = jpgResult
+    webpBlob.value = webpResult
   } catch (err) {
     if (currentId !== generationId) return
     const message =
@@ -226,6 +237,7 @@ const generateRasterOutputs = useDebounceFn(async () => {
     error.value = message
     pngBlob.value = null
     jpgBlob.value = null
+    webpBlob.value = null
   } finally {
     if (currentId === generationId) {
       isGenerating.value = false
@@ -234,14 +246,7 @@ const generateRasterOutputs = useDebounceFn(async () => {
 }, 240)
 
 watch(
-  () => [
-    props.svgMarkup,
-    props.svgWidth,
-    props.svgHeight,
-    props.jpgBackground,
-    scale.value,
-    quality.value,
-  ],
+  () => [props.svgMarkup, props.svgWidth, props.svgHeight, props.jpgBackground, scale.value],
   () => {
     generateRasterOutputs()
   },

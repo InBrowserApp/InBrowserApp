@@ -64,7 +64,13 @@
       <ToolSection>
         <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
           <n-form-item-gi :label="t('fontSize')" :show-feedback="false">
-            <n-input-number v-model:value="fontSize" :min="12" :max="28" size="small" />
+            <n-input-number
+              v-model:value="fontSize"
+              :min="12"
+              :max="28"
+              size="small"
+              style="width: 100%"
+            />
           </n-form-item-gi>
           <n-form-item-gi :label="t('lineHeight')" :show-feedback="false">
             <n-input-number
@@ -73,22 +79,47 @@
               :max="2"
               :step="0.05"
               size="small"
+              style="width: 100%"
             />
           </n-form-item-gi>
           <n-form-item-gi :label="t('cardPadding')" :show-feedback="false">
-            <n-input-number v-model:value="cardPadding" :min="12" :max="60" size="small" />
+            <n-input-number
+              v-model:value="cardPadding"
+              :min="12"
+              :max="60"
+              size="small"
+              style="width: 100%"
+            />
           </n-form-item-gi>
           <n-form-item-gi :label="t('framePadding')" :show-feedback="false">
-            <n-input-number v-model:value="framePadding" :min="16" :max="120" size="small" />
+            <n-input-number
+              v-model:value="framePadding"
+              :min="16"
+              :max="120"
+              size="small"
+              style="width: 100%"
+            />
           </n-form-item-gi>
           <n-form-item-gi :label="t('radius')" :show-feedback="false">
-            <n-input-number v-model:value="radius" :min="6" :max="40" size="small" />
+            <n-input-number
+              v-model:value="radius"
+              :min="6"
+              :max="40"
+              size="small"
+              style="width: 100%"
+            />
           </n-form-item-gi>
           <n-form-item-gi :label="t('shadow')" :show-feedback="false">
             <n-switch v-model:value="shadow" />
           </n-form-item-gi>
           <n-form-item-gi :label="t('tabSize')" :show-feedback="false">
-            <n-input-number v-model:value="tabSize" :min="2" :max="8" size="small" />
+            <n-input-number
+              v-model:value="tabSize"
+              :min="2"
+              :max="8"
+              size="small"
+              style="width: 100%"
+            />
           </n-form-item-gi>
         </n-grid>
       </ToolSection>
@@ -314,10 +345,10 @@ const windowStyleOptions = computed(() => [
 const exportLabels = computed(() => ({
   fileName: t('exportFileName'),
   scale: t('exportScale'),
-  quality: t('exportQuality'),
   rendering: t('exportRendering'),
   png: t('exportPng'),
   jpg: t('exportJpg'),
+  webp: t('exportWebp'),
   svg: t('exportSvg'),
   html: t('exportHtml'),
   copySvg: t('exportCopySvg'),
@@ -375,6 +406,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Rendering preview...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Copy HTML",
@@ -429,6 +461,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "正在渲染预览...",
     "exportPng": "下载PNG",
     "exportJpg": "下载JPG",
+    "exportWebp": "下载WebP",
     "exportSvg": "下载SVG",
     "exportHtml": "下载HTML",
     "exportCopyHtml": "复制 HTML",
@@ -483,6 +516,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "正在渲染预览...",
     "exportPng": "下载PNG",
     "exportJpg": "下载JPG",
+    "exportWebp": "下载WebP",
     "exportSvg": "下载SVG",
     "exportHtml": "下载HTML",
     "exportCopyHtml": "复制 HTML",
@@ -537,6 +571,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "正在渲染預覽...",
     "exportPng": "下載PNG",
     "exportJpg": "下載JPG",
+    "exportWebp": "下載WebP",
     "exportSvg": "下載SVG",
     "exportHtml": "下載HTML",
     "exportCopyHtml": "複製 HTML",
@@ -591,6 +626,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "正在渲染預覽...",
     "exportPng": "下載PNG",
     "exportJpg": "下載JPG",
+    "exportWebp": "下載WebP",
     "exportSvg": "下載SVG",
     "exportHtml": "下載HTML",
     "exportCopyHtml": "複製 HTML",
@@ -645,6 +681,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Renderizando vista previa...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Copiar HTML",
@@ -699,6 +736,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Rendu de l'aperçu...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Copier HTML",
@@ -753,6 +791,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Vorschau wird gerendert...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopieren",
@@ -807,6 +846,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Rendering anteprima...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Copia HTML",
@@ -861,6 +901,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "プレビューを生成中...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML をコピー",
@@ -915,6 +956,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "미리보기를 렌더링 중...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML 복사",
@@ -969,6 +1011,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Рендеринг предпросмотра...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Копировать HTML",
@@ -1023,6 +1066,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Renderizando prévia...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Copiar HTML",
@@ -1077,6 +1121,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "جارٍ إنشاء المعاينة...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "نسخ HTML",
@@ -1131,6 +1176,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "प्रीव्यू रेंडर हो रहा है...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML कॉपी करें",
@@ -1185,6 +1231,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Önizleme oluşturuluyor...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopyala",
@@ -1239,6 +1286,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Voorbeeld wordt gerenderd...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "HTML kopiëren",
@@ -1293,6 +1341,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Renderar förhandsvisning...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopiera HTML",
@@ -1347,6 +1396,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Renderowanie podglądu...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopiuj HTML",
@@ -1401,6 +1451,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Đang kết xuất xem trước...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Sao chép HTML",
@@ -1455,6 +1506,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "กำลังเรนเดอร์ตัวอย่าง...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "คัดลอก HTML",
@@ -1509,6 +1561,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Merender pratinjau...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Salin HTML",
@@ -1563,6 +1616,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "מעבד תצוגה מקדימה...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "העתק HTML",
@@ -1617,6 +1671,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Merender pratonton...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Salin HTML",
@@ -1671,6 +1726,7 @@ const exportLabels = computed(() => ({
     "exportRendering": "Rendrer forhåndsvisning...",
     "exportPng": "Download PNG",
     "exportJpg": "Download JPG",
+    "exportWebp": "Download WebP",
     "exportSvg": "Download SVG",
     "exportHtml": "Download HTML",
     "exportCopyHtml": "Kopier HTML",
