@@ -56,6 +56,8 @@ import { toolInfo as base16EncoderToolInfo } from '@tools/base16-encoder'
 import { toolInfo as base16DecoderToolInfo } from '@tools/base16-decoder'
 import { toolInfo as base32EncoderToolInfo } from '@tools/base32-encoder'
 import { toolInfo as base32DecoderToolInfo } from '@tools/base32-decoder'
+import { toolInfo as base58EncoderToolInfo } from '@tools/base58-encoder'
+import { toolInfo as base58DecoderToolInfo } from '@tools/base58-decoder'
 import { toolInfo as base64EncoderDecoderToolInfo } from '@tools/base64-encoder-decoder'
 import { toolInfo as fileToDataUriConverterToolInfo } from '@tools/file-to-data-uri-converter'
 import { toolInfo as dataUriToFileConverterToolInfo } from '@tools/data-uri-to-file-converter'
@@ -258,6 +260,8 @@ export const tools: ToolInfo[] = [
   base16DecoderToolInfo,
   base32EncoderToolInfo,
   base32DecoderToolInfo,
+  base58EncoderToolInfo,
+  base58DecoderToolInfo,
   base64EncoderDecoderToolInfo,
   fileToDataUriConverterToolInfo,
   dataUriToFileConverterToolInfo,
