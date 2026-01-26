@@ -72,17 +72,17 @@
                 <div class="font-group__list">
                   <button
                     v-for="font in group.items"
-                    :key="font.postscriptName"
+                    :key="font.id"
                     type="button"
                     class="font-card"
-                    :class="{ 'font-card--active': font.postscriptName === activePostscriptName }"
-                    :data-testid="`font-${font.postscriptName}`"
-                    @click="setActiveFont(font.postscriptName)"
+                    :class="{ 'font-card--active': font.id === activeFontId }"
+                    :data-testid="`font-${font.id}`"
+                    @click="setActiveFont(font.id)"
                   >
-                    <div class="font-card__name">{{ font.fullName }}</div>
+                    <div class="font-card__name">{{ font.displayName }}</div>
                     <div class="font-card__meta">
-                      <span class="font-card__family">{{ font.family }}</span>
-                      <span class="font-card__style">{{ font.style }}</span>
+                      <span class="font-card__family">{{ font.displayFamily }}</span>
+                      <span class="font-card__style">{{ font.displayStyle }}</span>
                     </div>
                   </button>
                 </div>
@@ -156,10 +156,10 @@
           <div class="details">
             <n-text strong>{{ t('details-title') }}</n-text>
             <n-ul class="details-list">
-              <n-li>{{ t('details-family') }}: {{ activeFont?.family ?? '--' }}</n-li>
-              <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName ?? '--' }}</n-li>
-              <n-li>{{ t('details-postscript') }}: {{ activeFont?.postscriptName ?? '--' }}</n-li>
-              <n-li>{{ t('details-style') }}: {{ activeFont?.style ?? '--' }}</n-li>
+              <n-li>{{ t('details-family') }}: {{ activeFont?.family || '--' }}</n-li>
+              <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName || '--' }}</n-li>
+              <n-li>{{ t('details-postscript') }}: {{ activeFont?.postscriptName || '--' }}</n-li>
+              <n-li>{{ t('details-style') }}: {{ activeFont?.style || '--' }}</n-li>
             </n-ul>
           </div>
 
@@ -219,6 +219,14 @@ type LocalFontData = {
   style: string
 }
 
+type DisplayFont = LocalFontData & {
+  id: string
+  displayName: string
+  displayFamily: string
+  displayStyle: string
+  searchKey: string
+}
+
 type QueryLocalFonts = (options?: { postscriptNames?: string[] }) => Promise<LocalFontData[]>
 
 type LoadErrorType = 'not-allowed' | 'security' | 'unknown' | null
@@ -226,7 +234,7 @@ type LoadErrorType = 'not-allowed' | 'security' | 'unknown' | null
 type FontGroup = {
   id: string
   label: string
-  items: LocalFontData[]
+  items: DisplayFont[]
 }
 
 const { t } = useI18n()
@@ -248,7 +256,7 @@ const sampleText = useStorage(
 const fontSize = useStorage('tools:local-font-book:font-size', 36)
 const lineHeight = useStorage('tools:local-font-book:line-height', 1.4)
 const darkBackground = useStorage('tools:local-font-book:dark-preview', false)
-const activePostscriptName = useStorage('tools:local-font-book:active-font', '')
+const activeFontId = useStorage('tools:local-font-book:active-font', '')
 
 const isSupported = computed(() => typeof window !== 'undefined' && 'queryLocalFonts' in window)
 
@@ -264,11 +272,8 @@ const sortOptions = computed(() => [
   { label: t('sort-style'), value: 'style' },
 ])
 
-const normalizedFonts = computed(() =>
-  fonts.value.map((font) => ({
-    ...font,
-    searchKey: `${font.family} ${font.fullName} ${font.postscriptName}`.toLowerCase(),
-  })),
+const normalizedFonts = computed<DisplayFont[]>(() =>
+  fonts.value.map((font, index) => normalizeFont(font, index)),
 )
 
 const filteredFonts = computed(() => {
@@ -287,12 +292,12 @@ const filteredFonts = computed(() => {
   sorted.sort((a, b) => {
     switch (sortBy.value) {
       case 'name':
-        return toSortableText(a.fullName).localeCompare(toSortableText(b.fullName))
+        return toSortableText(a.displayName).localeCompare(toSortableText(b.displayName))
       case 'style':
-        return toSortableText(a.style).localeCompare(toSortableText(b.style))
+        return toSortableText(a.displayStyle).localeCompare(toSortableText(b.displayStyle))
       case 'family':
       default:
-        return toSortableText(a.family).localeCompare(toSortableText(b.family))
+        return toSortableText(a.displayFamily).localeCompare(toSortableText(b.displayFamily))
     }
   })
 
@@ -310,9 +315,9 @@ const displayGroups = computed<FontGroup[]>(() => {
     ]
   }
 
-  const groups = new Map<string, LocalFontData[]>()
+  const groups = new Map<string, DisplayFont[]>()
   for (const font of filteredFonts.value) {
-    const family = font.family
+    const family = font.displayFamily
     const list = groups.get(family) ?? []
     list.push(font)
     groups.set(family, list)
@@ -326,7 +331,7 @@ const displayGroups = computed<FontGroup[]>(() => {
 })
 
 const activeFont = computed(() =>
-  normalizedFonts.value.find((font) => font.postscriptName === activePostscriptName.value),
+  normalizedFonts.value.find((font) => font.id === activeFontId.value),
 )
 
 const fontCountLabel = computed(() => {
@@ -356,8 +361,10 @@ const statusType = computed(() => {
 
 const previewStyle = computed(() => {
   if (!activeFont.value) return {}
+  const family = getFontFamily(activeFont.value)
+  if (!family) return {}
   return {
-    fontFamily: activeFont.value.family,
+    fontFamily: family,
     fontStyle: isItalicStyle(activeFont.value.style) ? 'italic' : 'normal',
     fontSize: `${fontSize.value}px`,
     lineHeight: String(lineHeight.value),
@@ -366,8 +373,10 @@ const previewStyle = computed(() => {
 
 const cssSnippet = computed(() => {
   if (!activeFont.value) return ''
+  const family = getFontFamily(activeFont.value)
+  if (!family) return ''
   const style = isItalicStyle(activeFont.value.style) ? 'italic' : 'normal'
-  const lines = [`font-family: ${wrapFontFamily(activeFont.value.family)};`]
+  const lines = [`font-family: ${wrapFontFamily(family)};`]
   if (style !== 'normal') lines.push(`font-style: ${style};`)
   return lines.join('\n')
 })
@@ -401,8 +410,9 @@ async function loadFonts() {
   try {
     const availableFonts = await queryLocalFonts()
     fonts.value = availableFonts
-    if (!availableFonts.find((font) => font.postscriptName === activePostscriptName.value)) {
-      activePostscriptName.value = availableFonts[0]?.postscriptName ?? ''
+    const normalized = normalizedFonts.value
+    if (!normalized.find((font) => font.id === activeFontId.value)) {
+      activeFontId.value = normalized[0]?.id ?? ''
     }
   } catch (error) {
     const name = (error as { name?: string })?.name
@@ -418,12 +428,48 @@ async function loadFonts() {
   }
 }
 
-function setActiveFont(postscriptName: string) {
-  activePostscriptName.value = postscriptName
+function setActiveFont(fontId: string) {
+  activeFontId.value = fontId
+}
+
+function normalizeFont(font: LocalFontData, index: number): DisplayFont {
+  const family = toText(font.family)
+  const fullName = toText(font.fullName)
+  const postscriptName = toText(font.postscriptName)
+  const style = toText(font.style)
+  const displayName = fullName || family || postscriptName || '--'
+  const displayFamily = family || fullName || postscriptName || '--'
+  const displayStyle = style || '--'
+  const id = postscriptName || buildFallbackId([fullName, family, style], index)
+  const searchKey = `${displayFamily} ${displayName} ${postscriptName}`.toLowerCase()
+  return {
+    family,
+    fullName,
+    postscriptName,
+    style,
+    id,
+    displayName,
+    displayFamily,
+    displayStyle,
+    searchKey,
+  }
+}
+
+function buildFallbackId(parts: string[], index: number) {
+  const base = parts.filter(Boolean).join('|')
+  return base ? `${base}-${index}` : `font-${index}`
+}
+
+function getFontFamily(font: DisplayFont) {
+  return font.family || font.fullName || font.postscriptName
+}
+
+function toText(value: unknown) {
+  return typeof value === 'string' ? value.trim() : ''
 }
 
 function toSortableText(value: unknown) {
-  return typeof value === 'string' ? value : ''
+  return toText(value)
 }
 
 function isItalicStyle(style: string) {

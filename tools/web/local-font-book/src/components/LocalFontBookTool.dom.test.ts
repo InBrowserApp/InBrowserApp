@@ -302,6 +302,89 @@ describe('LocalFontBookTool', () => {
     expect(wrapper.text()).toContain('Alpha Regular')
   })
 
+  it('falls back to generated ids when postscriptName is missing', async () => {
+    const fontsWithMissingIds: LocalFontData[] = [
+      {
+        family: 'Nimbus',
+        fullName: 'Nimbus Sans',
+        postscriptName: '',
+        style: 'Regular',
+      },
+      {
+        family: '',
+        fullName: '',
+        postscriptName: '',
+        style: '',
+      },
+    ]
+
+    setQueryLocalFonts(vi.fn().mockResolvedValue(fontsWithMissingIds))
+
+    const wrapper = mount(LocalFontBookTool, { global: { stubs } })
+    await wrapper.get('[data-testid="load-fonts"]').trigger('click')
+    await flushPromises()
+    await nextTick()
+
+    expect(wrapper.findAll('.font-card').length).toBe(2)
+    expect(wrapper.text()).toContain('Nimbus Sans')
+  })
+
+  it('uses preview fallbacks when font data is incomplete', async () => {
+    const fontsWithFallbacks: LocalFontData[] = [
+      {
+        family: 'Alpha',
+        fullName: 'Alpha Regular',
+        postscriptName: 'Alpha-Regular',
+        style: 'Regular',
+      },
+      {
+        family: '',
+        fullName: 'Fallback Name',
+        postscriptName: '',
+        style: 'Regular',
+      },
+      {
+        family: '',
+        fullName: '',
+        postscriptName: 'PS-Fallback',
+        style: 'Regular',
+      },
+      {
+        family: '',
+        fullName: '',
+        postscriptName: '',
+        style: '',
+      },
+    ]
+
+    setQueryLocalFonts(vi.fn().mockResolvedValue(fontsWithFallbacks))
+
+    const wrapper = mount(LocalFontBookTool, { global: { stubs } })
+    await wrapper.get('[data-testid="load-fonts"]').trigger('click')
+    await flushPromises()
+    await nextTick()
+
+    const vm = wrapper.vm as unknown as {
+      normalizedFonts: Array<{ id: string }>
+      activeFontId: string
+      previewStyle: Record<string, string>
+      cssSnippet: string
+    }
+
+    vm.activeFontId = vm.normalizedFonts[1].id
+    await nextTick()
+    expect(vm.previewStyle.fontFamily).toBe('Fallback Name')
+
+    vm.activeFontId = vm.normalizedFonts[2].id
+    await nextTick()
+    expect(vm.previewStyle.fontFamily).toBe('PS-Fallback')
+
+    vm.activeFontId = vm.normalizedFonts[3].id
+    await nextTick()
+    expect(Object.keys(vm.previewStyle).length).toBe(0)
+    expect(vm.cssSnippet).toBe('')
+  })
+
   it('updates preview controls via v-model bindings', async () => {
     setQueryLocalFonts(vi.fn().mockResolvedValue(fontFixtures))
 
@@ -344,8 +427,8 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    const vm = wrapper.vm as unknown as { activePostscriptName: string }
-    expect(vm.activePostscriptName).toBe('Inter-Italic')
+    const vm = wrapper.vm as unknown as { activeFontId: string }
+    expect(vm.activeFontId).toBe('Inter-Italic')
   })
 
   it('clears the active font when no fonts are returned', async () => {
@@ -356,8 +439,8 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    const vm = wrapper.vm as unknown as { activePostscriptName: string }
-    expect(vm.activePostscriptName).toBe('')
+    const vm = wrapper.vm as unknown as { activeFontId: string }
+    expect(vm.activeFontId).toBe('')
   })
 
   it('returns early when the permissions API is unavailable', () => {
