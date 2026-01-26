@@ -80,12 +80,6 @@
           </n-gi>
         </n-grid>
 
-        <n-flex align="center" :size="8" class="filename-row">
-          <n-text depth="3">{{ t('fileName') }}</n-text>
-          <n-input v-model:value="fileName" :placeholder="t('fileNamePlaceholder')" />
-          <n-text>.{{ fileExtension }}</n-text>
-        </n-flex>
-
         <n-flex :size="8">
           <n-button tag="a" type="primary" :href="recordingUrl" :download="downloadName">
             <template #icon>
@@ -117,7 +111,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NInput, NTag, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
@@ -322,10 +316,6 @@ onBeforeUnmount(() => {
 .audio-player {
   width: 100%;
 }
-
-.filename-row :deep(.n-input) {
-  flex: 1;
-}
 </style>
 
 <i18n lang="json">
@@ -345,7 +335,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -373,7 +362,6 @@ onBeforeUnmount(() => {
     "duration": "时长",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "文件名",
     "fileNamePlaceholder": "录音",
     "fileSize": "文件大小",
     "download": "下载",
@@ -401,7 +389,6 @@ onBeforeUnmount(() => {
     "duration": "时长",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "文件名",
     "fileNamePlaceholder": "录音",
     "fileSize": "文件大小",
     "download": "下载",
@@ -429,7 +416,6 @@ onBeforeUnmount(() => {
     "duration": "時長",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "檔案名稱",
     "fileNamePlaceholder": "錄音",
     "fileSize": "檔案大小",
     "download": "下載",
@@ -457,7 +443,6 @@ onBeforeUnmount(() => {
     "duration": "時長",
     "format": "格式",
     "formatUnknown": "未知",
-    "fileName": "檔案名稱",
     "fileNamePlaceholder": "錄音",
     "fileSize": "檔案大小",
     "download": "下載",
@@ -485,7 +470,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -513,7 +497,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -541,7 +524,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -569,7 +551,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -597,7 +578,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -625,7 +605,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -653,7 +632,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -681,7 +659,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -709,7 +686,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -737,7 +713,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -765,7 +740,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -793,7 +767,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -821,7 +794,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -849,7 +821,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -877,7 +848,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -905,7 +875,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -933,7 +902,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -961,7 +929,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -989,7 +956,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
@@ -1017,7 +983,6 @@ onBeforeUnmount(() => {
     "duration": "Duration",
     "format": "Format",
     "formatUnknown": "Unknown",
-    "fileName": "File name",
     "fileNamePlaceholder": "recording",
     "fileSize": "File size",
     "download": "Download",
