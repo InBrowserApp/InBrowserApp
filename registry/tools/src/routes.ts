@@ -91,6 +91,7 @@ import { routes as jsonSchemaValidatorRoutes } from '@tools/json-schema-validato
 import { routes as openApiToTypescriptRoutes } from '@tools/openapi-to-typescript/routes'
 import { routes as passwordStrengthCheckerRoutes } from '@tools/password-strength-checker/routes'
 import { routes as prettierCodeFormatterRoutes } from '@tools/prettier-code-formatter/routes'
+import { routes as codeScreenshotGeneratorRoutes } from '@tools/code-screenshot-generator/routes'
 import { routes as curlConverterRoutes } from '@tools/curl-converter/routes'
 import { routes as dockerRunToComposeRoutes } from '@tools/docker-run-to-compose/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
@@ -246,6 +247,7 @@ export const routes: ToolRoute[] = [
   ...jsonSchemaValidatorRoutes,
   ...openApiToTypescriptRoutes,
   ...prettierCodeFormatterRoutes,
+  ...codeScreenshotGeneratorRoutes,
   ...curlConverterRoutes,
   ...dockerRunToComposeRoutes,
   ...passwordStrengthCheckerRoutes,

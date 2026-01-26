@@ -38,6 +38,7 @@
     "@tools/cidr-parser": "workspace:*",
     "@tools/cidrs-merger-excluder": "workspace:*",
     "@tools/cityhash64-hash-text-or-file": "workspace:*",
+    "@tools/code-screenshot-generator": "workspace:*",
     "@tools/color-contrast-checker": "workspace:*",
     "@tools/color-converter": "workspace:*",
     "@tools/color-picker": "workspace:*",

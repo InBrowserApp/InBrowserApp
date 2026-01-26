@@ -1,5 +1,12 @@
 <template>
-  <n-button @click="onClick" text>
+  <n-button
+    @click="onClick"
+    :text="variant === 'text'"
+    :tertiary="variant === 'tertiary'"
+    :secondary="variant === 'secondary'"
+    :quaternary="variant === 'quaternary'"
+    :disabled="disabled"
+  >
     <template #icon>
       <slot name="icon">
         <n-icon :component="Icon" />
@@ -16,12 +23,16 @@ import { NIcon, NButton } from 'naive-ui'
 import Icon from '@vicons/fluent/Clipboard16Regular'
 import { useI18n } from 'vue-i18n'
 import { useCopyToClipboard } from '../../../composables/base/clipboard/useCopyToClipboard'
-import { toRef } from 'vue'
+import { computed, toRef } from 'vue'
 
 const props = defineProps<{
   content?: string | number
+  variant?: 'text' | 'tertiary' | 'secondary' | 'quaternary'
+  disabled?: boolean
 }>()
 const content = toRef(props, 'content')
+const variant = computed(() => props.variant ?? 'text')
+const disabled = computed(() => props.disabled ?? false)
 
 const { copy } = useCopyToClipboard(content)
 const { t } = useI18n()
