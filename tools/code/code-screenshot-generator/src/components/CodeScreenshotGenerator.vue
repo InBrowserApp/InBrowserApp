@@ -94,10 +94,11 @@
           <n-form-item-gi :label="t('framePadding')" :show-feedback="false">
             <n-input-number
               v-model:value="framePadding"
-              :min="16"
+              :min="isBackgroundNone ? 0 : 16"
               :max="120"
               size="small"
               style="width: 100%"
+              :disabled="isBackgroundNone"
             />
           </n-form-item-gi>
           <n-form-item-gi :label="t('radius')" :show-feedback="false">
@@ -110,7 +111,7 @@
             />
           </n-form-item-gi>
           <n-form-item-gi :label="t('shadow')" :show-feedback="false">
-            <n-switch v-model:value="shadow" />
+            <n-switch v-model:value="shadow" :disabled="isBackgroundNone" />
           </n-form-item-gi>
           <n-form-item-gi :label="t('tabSize')" :show-feedback="false">
             <n-input-number
@@ -155,7 +156,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useDebounce, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
@@ -229,6 +230,8 @@ const radius = useStorage<number>('tools:code-shot:radius', 18)
 const shadow = useStorage<boolean>('tools:code-shot:shadow', true)
 const tabSize = useStorage<number>('tools:code-shot:tabSize', 2)
 const fileName = useStorage<string>('tools:code-shot:fileName', 'code-shot')
+const storedFramePadding = useStorage<number>('tools:code-shot:framePadding:stored', 48)
+const storedShadow = useStorage<boolean>('tools:code-shot:shadow:stored', true)
 
 const debouncedCode = useDebounce(code, 180)
 
@@ -251,8 +254,38 @@ const backgroundConfig = computed<BackgroundConfig>(() => {
   }
 })
 
+const isBackgroundNone = computed(() => backgroundType.value === 'none')
+
 const effectiveFramePadding = computed(() =>
   backgroundType.value === 'none' ? 0 : framePadding.value,
+)
+const effectiveShadow = computed(() => (backgroundType.value === 'none' ? false : shadow.value))
+
+watch(
+  [framePadding, shadow],
+  ([nextPadding, nextShadow]) => {
+    if (backgroundType.value !== 'none') {
+      storedFramePadding.value = nextPadding
+      storedShadow.value = nextShadow
+    }
+  },
+  { immediate: true },
+)
+
+watch(
+  backgroundType,
+  (next, prev) => {
+    if (next === 'none') {
+      framePadding.value = 0
+      shadow.value = false
+      return
+    }
+    if (prev === 'none') {
+      framePadding.value = storedFramePadding.value
+      shadow.value = storedShadow.value
+    }
+  },
+  { immediate: true },
 )
 
 const layoutConfig = computed(() => ({
@@ -261,7 +294,7 @@ const layoutConfig = computed(() => ({
   padding: cardPadding.value,
   framePadding: effectiveFramePadding.value,
   radius: radius.value,
-  shadow: shadow.value,
+  shadow: effectiveShadow.value,
   windowStyle: windowStyle.value,
   showLineNumbers: showLineNumbers.value,
   tabSize: tabSize.value,

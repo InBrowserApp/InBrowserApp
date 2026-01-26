@@ -5,6 +5,7 @@
     :tertiary="variant === 'tertiary'"
     :secondary="variant === 'secondary'"
     :quaternary="variant === 'quaternary'"
+    :disabled="disabled"
   >
     <template #icon>
       <slot name="icon">
@@ -27,9 +28,11 @@ import { computed, toRef } from 'vue'
 const props = defineProps<{
   content?: string | number
   variant?: 'text' | 'tertiary' | 'secondary' | 'quaternary'
+  disabled?: boolean
 }>()
 const content = toRef(props, 'content')
 const variant = computed(() => props.variant ?? 'text')
+const disabled = computed(() => props.disabled ?? false)
 
 const { copy } = useCopyToClipboard(content)
 const { t } = useI18n()
