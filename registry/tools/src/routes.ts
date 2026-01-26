@@ -30,6 +30,7 @@ import { routes as sha384HashTextOrFileRoutes } from '@tools/sha384-hash-text-or
 import { routes as sha512HashTextOrFileRoutes } from '@tools/sha512-hash-text-or-file/routes'
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
 import { routes as md5HashTextOrFileRoutes } from '@tools/md5-hash-text-or-file/routes'
+import { routes as sm3HashTextOrFileRoutes } from '@tools/sm3-hash-text-or-file/routes'
 import { routes as ripemd160HashTextOrFileRoutes } from '@tools/ripemd160-hash-text-or-file/routes'
 import { routes as keccakHashTextOrFileRoutes } from '@tools/keccak-hash-text-or-file/routes'
 import { routes as bcryptHashPasswordRoutes } from '@tools/bcrypt-hash-password/routes'
@@ -185,6 +186,7 @@ export const routes: ToolRoute[] = [
   ...sha512HashTextOrFileRoutes,
   ...sha1HashTextOrFileRoutes,
   ...md5HashTextOrFileRoutes,
+  ...sm3HashTextOrFileRoutes,
   ...ripemd160HashTextOrFileRoutes,
   ...keccakHashTextOrFileRoutes,
   ...bcryptHashPasswordRoutes,

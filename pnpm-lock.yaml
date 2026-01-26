@@ -357,6 +357,9 @@ catalogs:
     sitemap:
       specifier: ^9.0.0
       version: 9.0.0
+    sm-crypto:
+      specifier: ^0.4.0
+      version: 0.4.0
     smol-toml:
       specifier: ^1.6.0
       version: 1.6.0
@@ -996,6 +999,9 @@ importers:
       '@tools/slug-generator':
         specifier: workspace:*
         version: link:../../tools/web/slug-generator
+      '@tools/sm3-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/sm3-hash-text-or-file
       '@tools/sri-hash-generator':
         specifier: workspace:*
         version: link:../../tools/hash/sri-hash-generator
@@ -2667,6 +2673,36 @@ importers:
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/sm3-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      sm-crypto:
+        specifier: 'catalog:'
+        version: 0.4.0
       vue:
         specifier: 'catalog:'
         version: 3.5.27(typescript@5.9.3)
@@ -9644,6 +9680,9 @@ packages:
   jsbarcode@3.12.3:
     resolution: {integrity: sha512-CuHU9hC6dPsHF5oVFMo8NW76uQVjH4L22CsP4hW+dNnGywJHC/B0ThA1CTDVLnxKLrrpYdicBLnd2xsgTfRnvg==}
 
+  jsbn@1.1.0:
+    resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
+
   jsdom@27.4.0:
     resolution: {integrity: sha512-mjzqwWRD9Y1J1KUi7W97Gja1bwOOM5Ug0EZ6UDK3xS7j7mndrkwozHtSblfomlzyB4NepioNt+B2sOSzczVgtQ==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
@@ -10490,6 +10529,9 @@ packages:
   slice-ansi@7.1.2:
     resolution: {integrity: sha512-iOBWFgUX7caIZiuutICxVgX1SdxwAVFFKwt1EvMYYec/NWO5meOJ6K5uQxhrYBdQJne4KxiqZc+KptFOWFSI9w==}
     engines: {node: '>=18'}
+
+  sm-crypto@0.4.0:
+    resolution: {integrity: sha512-OexH2V1EqmhXuOIPGoCl55OjMF0wwPUM/zhUjT0Q6vHBeopSRvTNRy76/1eRoFs3VBKt39hdFnxwpFmooHYa2A==}
 
   smob@1.5.0:
     resolution: {integrity: sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==}
@@ -15079,6 +15121,8 @@ snapshots:
 
   jsbarcode@3.12.3: {}
 
+  jsbn@1.1.0: {}
+
   jsdom@27.4.0(@noble/hashes@2.0.1):
     dependencies:
       '@acemir/cssom': 0.9.31
@@ -15964,6 +16008,10 @@ snapshots:
     dependencies:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
+
+  sm-crypto@0.4.0:
+    dependencies:
+      jsbn: 1.1.0
 
   smob@1.5.0: {}
 

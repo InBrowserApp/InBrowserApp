@@ -1,0 +1,18 @@
+import { describe, it, expect } from 'vitest'
+import * as toolInfo from './info'
+import { routes } from './routes'
+import * as index from './index'
+
+describe('sm3 hash text or file exports', () => {
+  it('exposes tool info and routes', async () => {
+    expect(toolInfo.toolID).toBe('sm3-hash-text-or-file')
+    expect(toolInfo.path).toBe(routes[0]?.path)
+    expect(index).toHaveProperty('toolInfo')
+
+    const route = routes[0]
+    expect(route).toBeTruthy()
+
+    const loadedRoute = await route!.component()
+    expect(loadedRoute).toHaveProperty('default')
+  })
+})
