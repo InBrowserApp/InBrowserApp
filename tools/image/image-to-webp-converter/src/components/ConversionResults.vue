@@ -94,7 +94,6 @@ const totalOriginalBytes = computed(() =>
 const totalOutputBytes = computed(() =>
   props.results.reduce((total, result) => total + result.blob.size, 0),
 )
-const totalSavedBytes = computed(() => totalOriginalBytes.value - totalOutputBytes.value)
 const totalSavedText = computed(() =>
   formatSavedText(totalOriginalBytes.value, totalOutputBytes.value),
 )
