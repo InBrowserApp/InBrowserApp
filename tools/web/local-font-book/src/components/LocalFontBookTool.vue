@@ -166,13 +166,14 @@
             <div class="css-output">
               <n-text strong>{{ t('css-title') }}</n-text>
               <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
-                <n-code
-                  :code="cssSnippet"
-                  word-wrap
-                  class="css-snippet"
-                  data-testid="css-snippet"
-                  @click="cssSnippet ? copy() : undefined"
-                />
+                <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
+                  <n-code
+                    :code="cssSnippet"
+                    word-wrap
+                    class="css-snippet"
+                    data-testid="css-snippet"
+                  />
+                </span>
               </CopyToClipboardTooltip>
             </div>
           </n-card>
@@ -183,10 +184,41 @@
             </div>
             <div class="details">
               <n-ul class="details-list">
-                <n-li>{{ t('details-family') }}: {{ activeFont?.family || '--' }}</n-li>
-                <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName || '--' }}</n-li>
-                <n-li>{{ t('details-postscript') }}: {{ activeFont?.postscriptName || '--' }}</n-li>
-                <n-li>{{ t('details-style') }}: {{ activeFont?.style || '--' }}</n-li>
+                <n-li class="details-item">
+                  <span class="details-label">{{ t('details-family') }}:</span>
+                  <CopyToClipboardTooltip :content="activeFont?.family || ''" #="{ copy }">
+                    <span class="details-value" @click="activeFont?.family ? copy() : undefined">
+                      {{ activeFont?.family || '--' }}
+                    </span>
+                  </CopyToClipboardTooltip>
+                </n-li>
+                <n-li class="details-item">
+                  <span class="details-label">{{ t('details-full-name') }}:</span>
+                  <CopyToClipboardTooltip :content="activeFont?.fullName || ''" #="{ copy }">
+                    <span class="details-value" @click="activeFont?.fullName ? copy() : undefined">
+                      {{ activeFont?.fullName || '--' }}
+                    </span>
+                  </CopyToClipboardTooltip>
+                </n-li>
+                <n-li class="details-item">
+                  <span class="details-label">{{ t('details-postscript') }}:</span>
+                  <CopyToClipboardTooltip :content="activeFont?.postscriptName || ''" #="{ copy }">
+                    <span
+                      class="details-value"
+                      @click="activeFont?.postscriptName ? copy() : undefined"
+                    >
+                      {{ activeFont?.postscriptName || '--' }}
+                    </span>
+                  </CopyToClipboardTooltip>
+                </n-li>
+                <n-li class="details-item">
+                  <span class="details-label">{{ t('details-style') }}:</span>
+                  <CopyToClipboardTooltip :content="activeFont?.style || ''" #="{ copy }">
+                    <span class="details-value" @click="activeFont?.style ? copy() : undefined">
+                      {{ activeFont?.style || '--' }}
+                    </span>
+                  </CopyToClipboardTooltip>
+                </n-li>
               </n-ul>
             </div>
           </n-card>
@@ -669,6 +701,25 @@ function wrapFontFamily(family: string) {
   margin-top: 6px;
 }
 
+.details-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.details-label {
+  color: rgba(100, 116, 139, 0.9);
+}
+
+.details-value {
+  cursor: pointer;
+}
+
+.details-value:hover {
+  text-decoration: underline;
+}
+
 .preview-textarea {
   margin-top: 8px;
 }
@@ -679,8 +730,16 @@ function wrapFontFamily(family: string) {
   margin-top: 12px;
 }
 
-.css-snippet {
+.css-snippet-trigger {
+  display: inline-flex;
+  max-width: 100%;
   cursor: pointer;
+}
+
+.css-snippet :deep(pre) {
+  display: inline-block;
+  max-width: 100%;
+  white-space: pre-wrap;
 }
 </style>
 
