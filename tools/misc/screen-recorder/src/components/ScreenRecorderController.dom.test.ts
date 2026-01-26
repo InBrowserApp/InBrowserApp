@@ -343,7 +343,10 @@ describe('ScreenRecorderController', () => {
     setMediaDevices({ getDisplayMedia } as unknown as MediaDevices)
 
     const wrapper = mountController()
-    const vm = wrapper.vm as unknown as { includeMicrophone: boolean; startRecording: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      includeMicrophone: boolean
+      startRecording: () => Promise<void>
+    }
 
     vm.includeMicrophone = true
     await wrapper.vm.$nextTick()
@@ -362,7 +365,10 @@ describe('ScreenRecorderController', () => {
     setMediaDevices({ getDisplayMedia, getUserMedia } as unknown as MediaDevices)
 
     const wrapper = mountController()
-    const vm = wrapper.vm as unknown as { includeMicrophone: boolean; startRecording: () => Promise<void> }
+    const vm = wrapper.vm as unknown as {
+      includeMicrophone: boolean
+      startRecording: () => Promise<void>
+    }
 
     vm.includeMicrophone = true
     await wrapper.vm.$nextTick()
@@ -437,7 +443,10 @@ describe('ScreenRecorderController', () => {
     setMediaDevices({ getDisplayMedia, getUserMedia: vi.fn() } as unknown as MediaDevices)
 
     const wrapper = mountController()
-    const vm = wrapper.vm as unknown as { startRecording: () => Promise<void>; recordingBlob: Blob | null }
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      recordingBlob: Blob | null
+    }
 
     await vm.startRecording()
 

@@ -393,10 +393,7 @@ async function startRecording() {
 
     const recordingStream = new MediaStream()
     display.getVideoTracks().forEach((track) => recordingStream.addTrack(track))
-    const audioTracks = [
-      ...display.getAudioTracks(),
-      ...(mic ? mic.getAudioTracks() : []),
-    ]
+    const audioTracks = [...display.getAudioTracks(), ...(mic ? mic.getAudioTracks() : [])]
     const mixedTrack = pickAudioTrack(audioTracks)
     if (mixedTrack) recordingStream.addTrack(mixedTrack)
 
