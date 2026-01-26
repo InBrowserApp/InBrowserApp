@@ -1,5 +1,12 @@
 <template>
   <div>
+    <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
+    <ToolSection>
+      <n-form-item :label="t('alphabet')" label-placement="left">
+        <n-select v-model:value="alphabetKey" :options="alphabetOptions" style="width: 220px" />
+      </n-form-item>
+    </ToolSection>
+
     <ToolSectionHeader>{{ t('input-title') }}</ToolSectionHeader>
     <ToolSection>
       <TextOrFileInput
@@ -49,15 +56,22 @@
 import { computed, ref, watch } from 'vue'
 import { useObjectUrl, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
-import { NButton, NFlex, NIcon, NInput, NText } from 'naive-ui'
+import { NButton, NFlex, NFormItem, NIcon, NInput, NSelect, NText } from 'naive-ui'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import { CopyToClipboardButton, TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { decodeBase58 } from '@utils/base58'
+import { BASE58_ALPHABETS, type Base58AlphabetKey, decodeBase58 } from '@utils/base58'
 
 const { t } = useI18n()
 
 const storedText = useStorage('tools:base58-decoder:text', 'StV1DL6CwTryKyV')
+const alphabetKey = useStorage<Base58AlphabetKey>('tools:base58-decoder:alphabet', 'bitcoin')
+const alphabetOptions = computed(() => [
+  { label: t('alphabet-bitcoin'), value: 'bitcoin' as Base58AlphabetKey },
+  { label: t('alphabet-flickr'), value: 'flickr' as Base58AlphabetKey },
+  { label: t('alphabet-ripple'), value: 'ripple' as Base58AlphabetKey },
+])
+const alphabet = computed(() => BASE58_ALPHABETS[alphabetKey.value])
 const textOrFile = ref<string | File>(storedText.value)
 const decodedBytes = ref<Uint8Array | null>(null)
 const decodedText = ref('')
@@ -77,8 +91,8 @@ watch(storedText, (value) => {
 
 let requestId = 0
 watch(
-  textOrFile,
-  async (value) => {
+  [textOrFile, alphabetKey],
+  async ([value]) => {
     const currentId = (requestId += 1)
     error.value = ''
     decodedBytes.value = null
@@ -100,7 +114,7 @@ watch(
     if (currentId !== requestId) return
 
     try {
-      const bytes = decodeBase58(content)
+      const bytes = decodeBase58(content, { alphabet: alphabet.value })
       decodedBytes.value = bytes
       decodedText.value = new TextDecoder().decode(bytes)
     } catch {
@@ -157,7 +171,12 @@ const downloadName = computed(() => {
     "download": "Download file",
     "invalid-base58": "Invalid Base58 text",
     "read-failed": "Failed to read file",
-    "preview-truncated": "Preview truncated"
+    "preview-truncated": "Preview truncated",
+    "options": "Options",
+    "alphabet": "Alphabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "zh": {
     "input-title": "Base58 输入",
@@ -167,7 +186,12 @@ const downloadName = computed(() => {
     "download": "下载文件",
     "invalid-base58": "无效的 Base58 文本",
     "read-failed": "读取文件失败",
-    "preview-truncated": "预览已截断"
+    "preview-truncated": "预览已截断",
+    "options": "选项",
+    "alphabet": "字母表",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "zh-CN": {
     "input-title": "Base58 输入",
@@ -177,7 +201,12 @@ const downloadName = computed(() => {
     "download": "下载文件",
     "invalid-base58": "无效的 Base58 文本",
     "read-failed": "读取文件失败",
-    "preview-truncated": "预览已截断"
+    "preview-truncated": "预览已截断",
+    "options": "选项",
+    "alphabet": "字母表",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "zh-TW": {
     "input-title": "Base58 輸入",
@@ -187,7 +216,12 @@ const downloadName = computed(() => {
     "download": "下載檔案",
     "invalid-base58": "無效的 Base58 文字",
     "read-failed": "讀取檔案失敗",
-    "preview-truncated": "預覽已截斷"
+    "preview-truncated": "預覽已截斷",
+    "options": "選項",
+    "alphabet": "字母表",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "zh-HK": {
     "input-title": "Base58 輸入",
@@ -197,7 +231,12 @@ const downloadName = computed(() => {
     "download": "下載檔案",
     "invalid-base58": "無效的 Base58 文字",
     "read-failed": "讀取檔案失敗",
-    "preview-truncated": "預覽已截斷"
+    "preview-truncated": "預覽已截斷",
+    "options": "選項",
+    "alphabet": "字母表",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "es": {
     "input-title": "Entrada Base58",
@@ -207,7 +246,12 @@ const downloadName = computed(() => {
     "download": "Descargar archivo",
     "invalid-base58": "Texto Base58 inválido",
     "read-failed": "No se pudo leer el archivo",
-    "preview-truncated": "Vista previa truncada"
+    "preview-truncated": "Vista previa truncada",
+    "options": "Opciones",
+    "alphabet": "Alfabeto",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "fr": {
     "input-title": "Entrée Base58",
@@ -217,7 +261,12 @@ const downloadName = computed(() => {
     "download": "Télécharger le fichier",
     "invalid-base58": "Texte Base58 invalide",
     "read-failed": "Échec de la lecture du fichier",
-    "preview-truncated": "Aperçu tronqué"
+    "preview-truncated": "Aperçu tronqué",
+    "options": "Options",
+    "alphabet": "Alphabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "de": {
     "input-title": "Base58-Eingabe",
@@ -227,7 +276,12 @@ const downloadName = computed(() => {
     "download": "Datei herunterladen",
     "invalid-base58": "Ungültiger Base58-Text",
     "read-failed": "Datei konnte nicht gelesen werden",
-    "preview-truncated": "Vorschau gekürzt"
+    "preview-truncated": "Vorschau gekürzt",
+    "options": "Optionen",
+    "alphabet": "Alphabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "it": {
     "input-title": "Input Base58",
@@ -237,7 +291,12 @@ const downloadName = computed(() => {
     "download": "Scarica file",
     "invalid-base58": "Testo Base58 non valido",
     "read-failed": "Impossibile leggere il file",
-    "preview-truncated": "Anteprima troncata"
+    "preview-truncated": "Anteprima troncata",
+    "options": "Opzioni",
+    "alphabet": "Alfabeto",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "ja": {
     "input-title": "Base58 入力",
@@ -247,7 +306,12 @@ const downloadName = computed(() => {
     "download": "ファイルをダウンロード",
     "invalid-base58": "無効なBase58テキスト",
     "read-failed": "ファイルの読み取りに失敗しました",
-    "preview-truncated": "プレビューは切り詰められました"
+    "preview-truncated": "プレビューは切り詰められました",
+    "options": "オプション",
+    "alphabet": "アルファベット",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "ko": {
     "input-title": "Base58 입력",
@@ -257,7 +321,12 @@ const downloadName = computed(() => {
     "download": "파일 다운로드",
     "invalid-base58": "유효하지 않은 Base58 텍스트",
     "read-failed": "파일 읽기에 실패했습니다",
-    "preview-truncated": "미리보기 잘림"
+    "preview-truncated": "미리보기 잘림",
+    "options": "옵션",
+    "alphabet": "알파벳",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "ru": {
     "input-title": "Ввод Base58",
@@ -267,7 +336,12 @@ const downloadName = computed(() => {
     "download": "Скачать файл",
     "invalid-base58": "Неверный текст Base58",
     "read-failed": "Не удалось прочитать файл",
-    "preview-truncated": "Предпросмотр обрезан"
+    "preview-truncated": "Предпросмотр обрезан",
+    "options": "Параметры",
+    "alphabet": "Алфавит",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "pt": {
     "input-title": "Entrada Base58",
@@ -277,7 +351,12 @@ const downloadName = computed(() => {
     "download": "Baixar arquivo",
     "invalid-base58": "Texto Base58 inválido",
     "read-failed": "Falha ao ler o arquivo",
-    "preview-truncated": "Pré-visualização truncada"
+    "preview-truncated": "Pré-visualização truncada",
+    "options": "Opções",
+    "alphabet": "Alfabeto",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "ar": {
     "input-title": "إدخال Base58",
@@ -287,7 +366,12 @@ const downloadName = computed(() => {
     "download": "تنزيل الملف",
     "invalid-base58": "نص Base58 غير صالح",
     "read-failed": "فشل في قراءة الملف",
-    "preview-truncated": "تم اقتطاع المعاينة"
+    "preview-truncated": "تم اقتطاع المعاينة",
+    "options": "الخيارات",
+    "alphabet": "الأبجدية",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "hi": {
     "input-title": "Base58 इनपुट",
@@ -297,7 +381,12 @@ const downloadName = computed(() => {
     "download": "फ़ाइल डाउनलोड करें",
     "invalid-base58": "अमान्य Base58 पाठ",
     "read-failed": "फ़ाइल पढ़ने में विफल",
-    "preview-truncated": "प्रीव्यू संक्षिप्त किया गया"
+    "preview-truncated": "प्रीव्यू संक्षिप्त किया गया",
+    "options": "विकल्प",
+    "alphabet": "वर्णमाला",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "tr": {
     "input-title": "Base58 Girişi",
@@ -307,7 +396,12 @@ const downloadName = computed(() => {
     "download": "Dosyayı indir",
     "invalid-base58": "Geçersiz Base58 metni",
     "read-failed": "Dosya okunamadı",
-    "preview-truncated": "Önizleme kısaltıldı"
+    "preview-truncated": "Önizleme kısaltıldı",
+    "options": "Seçenekler",
+    "alphabet": "Alfabe",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "nl": {
     "input-title": "Base58-invoer",
@@ -317,7 +411,12 @@ const downloadName = computed(() => {
     "download": "Bestand downloaden",
     "invalid-base58": "Ongeldige Base58-tekst",
     "read-failed": "Bestand kon niet worden gelezen",
-    "preview-truncated": "Voorbeeld ingekort"
+    "preview-truncated": "Voorbeeld ingekort",
+    "options": "Opties",
+    "alphabet": "Alfabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "sv": {
     "input-title": "Base58-inmatning",
@@ -327,7 +426,12 @@ const downloadName = computed(() => {
     "download": "Ladda ner fil",
     "invalid-base58": "Ogiltig Base58-text",
     "read-failed": "Kunde inte läsa filen",
-    "preview-truncated": "Förhandsvisning avkortad"
+    "preview-truncated": "Förhandsvisning avkortad",
+    "options": "Alternativ",
+    "alphabet": "Alfabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "pl": {
     "input-title": "Wejście Base58",
@@ -337,7 +441,12 @@ const downloadName = computed(() => {
     "download": "Pobierz plik",
     "invalid-base58": "Nieprawidłowy tekst Base58",
     "read-failed": "Nie udało się odczytać pliku",
-    "preview-truncated": "Podgląd skrócony"
+    "preview-truncated": "Podgląd skrócony",
+    "options": "Opcje",
+    "alphabet": "Alfabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "vi": {
     "input-title": "Đầu vào Base58",
@@ -347,7 +456,12 @@ const downloadName = computed(() => {
     "download": "Tải tệp",
     "invalid-base58": "Văn bản Base58 không hợp lệ",
     "read-failed": "Không thể đọc tệp",
-    "preview-truncated": "Bản xem trước bị cắt"
+    "preview-truncated": "Bản xem trước bị cắt",
+    "options": "Tùy chọn",
+    "alphabet": "Bảng chữ cái",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "th": {
     "input-title": "อินพุต Base58",
@@ -357,7 +471,12 @@ const downloadName = computed(() => {
     "download": "ดาวน์โหลดไฟล์",
     "invalid-base58": "ข้อความ Base58 ไม่ถูกต้อง",
     "read-failed": "อ่านไฟล์ไม่สำเร็จ",
-    "preview-truncated": "ตัวอย่างถูกตัดทอน"
+    "preview-truncated": "ตัวอย่างถูกตัดทอน",
+    "options": "ตัวเลือก",
+    "alphabet": "อักษร",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "id": {
     "input-title": "Input Base58",
@@ -367,7 +486,12 @@ const downloadName = computed(() => {
     "download": "Unduh file",
     "invalid-base58": "Teks Base58 tidak valid",
     "read-failed": "Gagal membaca file",
-    "preview-truncated": "Pratinjau dipotong"
+    "preview-truncated": "Pratinjau dipotong",
+    "options": "Opsi",
+    "alphabet": "Alfabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "he": {
     "input-title": "קלט Base58",
@@ -377,7 +501,12 @@ const downloadName = computed(() => {
     "download": "הורד קובץ",
     "invalid-base58": "טקסט Base58 לא תקין",
     "read-failed": "קריאת הקובץ נכשלה",
-    "preview-truncated": "התצוגה המקדימה קוצרה"
+    "preview-truncated": "התצוגה המקדימה קוצרה",
+    "options": "אפשרויות",
+    "alphabet": "אלפבית",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "ms": {
     "input-title": "Input Base58",
@@ -387,7 +516,12 @@ const downloadName = computed(() => {
     "download": "Muat turun fail",
     "invalid-base58": "Teks Base58 tidak sah",
     "read-failed": "Gagal membaca fail",
-    "preview-truncated": "Pratonton dipendekkan"
+    "preview-truncated": "Pratonton dipendekkan",
+    "options": "Pilihan",
+    "alphabet": "Abjad",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   },
   "no": {
     "input-title": "Base58-inndata",
@@ -397,7 +531,12 @@ const downloadName = computed(() => {
     "download": "Last ned fil",
     "invalid-base58": "Ugyldig Base58-tekst",
     "read-failed": "Kunne ikke lese filen",
-    "preview-truncated": "Forhåndsvisning avkortet"
+    "preview-truncated": "Forhåndsvisning avkortet",
+    "options": "Alternativer",
+    "alphabet": "Alfabet",
+    "alphabet-bitcoin": "Bitcoin",
+    "alphabet-flickr": "Flickr",
+    "alphabet-ripple": "Ripple (XRP)"
   }
 }
 </i18n>

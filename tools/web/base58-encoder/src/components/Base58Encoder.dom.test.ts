@@ -18,8 +18,17 @@ vi.mock('@vueuse/core', async () => {
 })
 
 import { mount, flushPromises } from '@vue/test-utils'
+import { NSelect } from 'naive-ui'
 import Base58Encoder from './Base58Encoder.vue'
 import { TextOrFileInput } from '@shared/ui/base'
+import { BASE58_ALPHABETS } from '@utils/base58'
+
+const BITCOIN_ALPHABET = BASE58_ALPHABETS.bitcoin
+const FLICKR_ALPHABET = BASE58_ALPHABETS.flickr
+const HELLO_WORLD_BITCOIN = 'StV1DL6CwTryKyV'
+const HELLO_WORLD_FLICKR = [...HELLO_WORLD_BITCOIN]
+  .map((char) => FLICKR_ALPHABET.charAt(BITCOIN_ALPHABET.indexOf(char)))
+  .join('')
 
 const mountOptions = {
   global: {
@@ -35,6 +44,18 @@ describe('Base58Encoder', () => {
   beforeEach(() => {
     localStorage.clear()
     useNullUrl.value = false
+  })
+
+  it('encodes text using the selected alphabet', async () => {
+    const wrapper = mount(Base58Encoder, mountOptions)
+    const select = wrapper.findComponent(NSelect)
+    const textareas = wrapper.findAll('textarea')
+
+    await select.vm.$emit('update:value', 'flickr')
+    await textareas[0]?.setValue('hello world')
+    await flushPromises()
+
+    expect(textareas[1]?.element.value).toBe(HELLO_WORLD_FLICKR)
   })
 
   it('encodes text to Base58', async () => {
