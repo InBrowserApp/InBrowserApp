@@ -10,7 +10,7 @@ import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
 import WhatIsRIPEMD320 from './WhatIsRIPEMD320.vue'
-import { hashRipemd } from '@utils/ripemd'
+import { hashRipemd } from './ripemd'
 
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {
   const arrayBuffer = await blob.arrayBuffer()
