@@ -111,22 +111,24 @@
               <CopyToClipboardButton :content="cssSnippet" />
             </div>
 
-            <n-input
-              v-model:value="sampleText"
-              type="textarea"
-              :placeholder="t('preview-placeholder')"
-              :autosize="{ minRows: 3, maxRows: 5 }"
-              data-testid="sample-text"
-            />
+            <n-form-item :label="t('preview-fallback')">
+              <n-input
+                v-model:value="sampleText"
+                type="textarea"
+                :placeholder="t('preview-placeholder')"
+                :autosize="{ minRows: 3, maxRows: 5 }"
+                data-testid="sample-text"
+              />
+            </n-form-item>
 
             <div class="control-grid">
-              <n-form-item :label="t('preview-size')" class="control-item">
+              <n-form-item :label="t('preview-size')">
                 <n-flex align="center" :size="12" class="control-row">
                   <n-slider v-model:value="fontSize" :min="12" :max="96" />
                   <n-input-number v-model:value="fontSize" :min="12" :max="96" size="small" />
                 </n-flex>
               </n-form-item>
-              <n-form-item :label="t('preview-line-height')" class="control-item">
+              <n-form-item :label="t('preview-line-height')">
                 <n-flex align="center" :size="12" class="control-row">
                   <n-slider v-model:value="lineHeight" :min="1" :max="2.4" :step="0.05" />
                   <n-input-number
@@ -140,14 +142,13 @@
               </n-form-item>
             </div>
 
-            <n-flex align="center" :size="8">
-              <n-text depth="3">{{ t('preview-background') }}</n-text>
+            <n-form-item :label="t('preview-background')">
               <n-switch
                 v-model:value="darkBackground"
                 size="small"
                 data-testid="background-toggle"
               />
-            </n-flex>
+            </n-form-item>
 
             <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
               <div
@@ -618,26 +619,7 @@ function wrapFontFamily(family: string) {
 
 .control-grid {
   display: grid;
-  gap: 14px;
-}
-
-.control-item {
-  border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  background: rgba(248, 250, 252, 0.9);
-  padding: 10px 12px;
-}
-
-.control-item :deep(.n-form-item-label) {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(100, 116, 139, 0.9);
-  margin-bottom: 6px;
-}
-
-.control-item :deep(.n-form-item-blank) {
-  width: 100%;
+  gap: 12px;
 }
 
 .control-row {
