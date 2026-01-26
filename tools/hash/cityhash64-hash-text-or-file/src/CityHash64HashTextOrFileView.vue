@@ -1,5 +1,6 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
+    <HashTextOrFileTemplate :hash="hashFunction" />
     <ToolSectionHeader>
       {{ t('seed-config') }}
     </ToolSectionHeader>
@@ -13,8 +14,6 @@
         <n-input v-model:value="seedInput" :placeholder="t('seed-placeholder')" />
       </n-form-item>
     </ToolSection>
-
-    <HashTextOrFileTemplate :hash="hashFunction" />
     <WhatIsCityHash />
   </ToolDefaultPageLayout>
 </template>
