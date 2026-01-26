@@ -220,11 +220,15 @@ const backgroundConfig = computed<BackgroundConfig>(() => {
   }
 })
 
+const effectiveFramePadding = computed(() =>
+  backgroundType.value === 'none' ? 0 : framePadding.value,
+)
+
 const layoutConfig = computed(() => ({
   fontSize: fontSize.value,
   lineHeight: lineHeight.value,
   padding: cardPadding.value,
-  framePadding: framePadding.value,
+  framePadding: effectiveFramePadding.value,
   radius: radius.value,
   shadow: shadow.value,
   windowStyle: windowStyle.value,
