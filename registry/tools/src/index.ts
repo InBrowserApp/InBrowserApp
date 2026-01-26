@@ -231,6 +231,8 @@ export const tools: ToolInfo[] = [
   sha224HashTextOrFileToolInfo,
   sha3_256HashTextOrFileToolInfo,
   sha3_512HashTextOrFileToolInfo,
+  shake128HashTextOrFileToolInfo,
+  shake256HashTextOrFileToolInfo,
   sha384HashTextOrFileToolInfo,
   sha512HashTextOrFileToolInfo,
   sha1HashTextOrFileToolInfo,

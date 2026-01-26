@@ -192,6 +192,8 @@ export const routes: ToolRoute[] = [
   ...sha224HashTextOrFileRoutes,
   ...sha3_256HashTextOrFileRoutes,
   ...sha3_512HashTextOrFileRoutes,
+  ...shake128HashTextOrFileRoutes,
+  ...shake256HashTextOrFileRoutes,
   ...sha384HashTextOrFileRoutes,
   ...sha512HashTextOrFileRoutes,
   ...sha1HashTextOrFileRoutes,
