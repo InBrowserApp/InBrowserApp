@@ -24,6 +24,7 @@ function hexToBytes(hex: string): Uint8Array {
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {
   const arrayBuffer = await blob.arrayBuffer()
   const hashHex = sm3(new Uint8Array(arrayBuffer))
-  return hexToBytes(hashHex).buffer
+  const hashBytes = hexToBytes(hashHex)
+  return hashBytes.buffer as ArrayBuffer
 }
 </script>
