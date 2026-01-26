@@ -82,8 +82,8 @@
       {{ errorMessage }}
     </n-alert>
 
-    <ToolSectionHeader>{{ t('durationTitle') }}</ToolSectionHeader>
-    <ToolSection>
+    <ToolSectionHeader v-show="!isFullscreenActive">{{ t('durationTitle') }}</ToolSectionHeader>
+    <ToolSection v-show="!isFullscreenActive">
       <n-grid cols="1 s:3" responsive="screen" :x-gap="12" :y-gap="12">
         <n-form-item-gi :label="t('hours')" :show-feedback="false">
           <n-input-number
@@ -140,8 +140,8 @@
       </n-space>
     </ToolSection>
 
-    <ToolSectionHeader>{{ t('alertsTitle') }}</ToolSectionHeader>
-    <ToolSection>
+    <ToolSectionHeader v-show="!isFullscreenActive">{{ t('alertsTitle') }}</ToolSectionHeader>
+    <ToolSection v-show="!isFullscreenActive">
       <n-grid cols="1 s:3" responsive="screen" :x-gap="12" :y-gap="12">
         <n-form-item-gi :label="t('soundLabel')" :show-feedback="false">
           <n-switch v-model:value="soundEnabled" :disabled="!soundSupported" />
@@ -196,6 +196,7 @@ import {
   NSpace,
   NSwitch,
   NText,
+  useThemeVars,
 } from 'naive-ui'
 import { useFullscreen, useNow, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
@@ -208,6 +209,7 @@ import Play16Regular from '@vicons/fluent/Play16Regular'
 import { formatCountdown } from '../utils/format'
 
 const { t } = useI18n()
+const themeVars = useThemeVars()
 
 const hours = useStorage('tools:timer:hours', 0)
 const minutes = useStorage('tools:timer:minutes', 5)
@@ -571,7 +573,7 @@ onMounted(() => {
   position: fixed;
   inset: 0;
   z-index: 10;
-  background: var(--n-color);
+  background-color: v-bind('themeVars.bodyColor');
   overflow: auto;
   padding: calc(24px + env(safe-area-inset-top)) 16px calc(96px + env(safe-area-inset-bottom));
 }

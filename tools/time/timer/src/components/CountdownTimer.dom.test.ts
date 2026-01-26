@@ -43,6 +43,7 @@ vi.mock('naive-ui', () => {
       inheritAttrs: false,
       template: `<span v-bind="$attrs"><slot /></span>`,
     },
+    useThemeVars: () => ({ bodyColor: '#fff' }),
   }
 })
 
