@@ -1,5 +1,7 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
+    <HashTextOrFileTemplate :hash="hashFunction" />
+
     <ToolSectionHeader>
       {{ t('blake3-config') }}
     </ToolSectionHeader>
@@ -12,7 +14,6 @@
       </n-form-item>
     </ToolSection>
 
-    <HashTextOrFileTemplate :hash="hashFunction" />
     <WhatIsBlake3 />
   </ToolDefaultPageLayout>
 </template>
