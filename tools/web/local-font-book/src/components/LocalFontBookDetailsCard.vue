@@ -82,7 +82,6 @@ const { t } = useI18n()
 }
 
 .details-label {
-  color: rgba(100, 116, 139, 0.9);
   white-space: nowrap;
 }
 

@@ -31,8 +31,6 @@
             :preview-style="previewStyle"
             :css-snippet="cssSnippet"
             v-model:sample-text="sampleText"
-            v-model:font-size="fontSize"
-            v-model:line-height="lineHeight"
             v-model:dark-background="darkBackground"
           />
           <LocalFontBookDetailsCard :active-font="activeFont" />
@@ -76,8 +74,8 @@ const sampleText = useStorage(
   'tools:local-font-book:sample-text',
   'The quick brown fox jumps over the lazy dog.',
 )
-const fontSize = useStorage('tools:local-font-book:font-size', 36)
-const lineHeight = useStorage('tools:local-font-book:line-height', 1.4)
+const previewFontSize = 36
+const previewLineHeight = 1.4
 const darkBackground = useStorage('tools:local-font-book:dark-preview', false)
 const activeFontId = useStorage('tools:local-font-book:active-font', '')
 
@@ -189,8 +187,8 @@ const previewStyle = computed(() => {
   return {
     fontFamily: family,
     fontStyle: isItalicStyle(activeFont.value.style) ? 'italic' : 'normal',
-    fontSize: `${fontSize.value}px`,
-    lineHeight: String(lineHeight.value),
+    fontSize: `${previewFontSize}px`,
+    lineHeight: String(previewLineHeight),
   }
 })
 

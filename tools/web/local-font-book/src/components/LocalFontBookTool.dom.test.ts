@@ -420,20 +420,6 @@ describe('LocalFontBookTool', () => {
     await wrapper.get('[data-testid="group-toggle"]').setValue(false)
 
     await wrapper.get('[data-testid="sample-text"]').setValue('')
-    const rangeInputs = wrapper.findAll('input[type="range"]')
-    const [sizeRange, lineRange] = rangeInputs
-    if (!sizeRange || !lineRange) {
-      throw new Error('Missing range inputs')
-    }
-    await sizeRange.setValue('48')
-    await lineRange.setValue('1.8')
-    const numberInputs = wrapper.findAll('input[type="number"]')
-    const [sizeNumber, lineNumber] = numberInputs
-    if (!sizeNumber || !lineNumber) {
-      throw new Error('Missing number inputs')
-    }
-    await sizeNumber.setValue('48')
-    await lineNumber.setValue('1.8')
     await wrapper.get('[data-testid="background-toggle"]').trigger('click')
 
     expect(wrapper.get('[data-testid="preview-text"]').text()).toContain('preview-fallback')
