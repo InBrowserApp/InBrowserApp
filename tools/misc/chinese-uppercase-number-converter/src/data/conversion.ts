@@ -152,7 +152,7 @@ export function parseNumberInput(input: string): NumberParseResult {
     }
   }
 
-  const [rawInteger, rawFraction = ''] = cleaned.split('.')
+  const [rawInteger = '', rawFraction = ''] = cleaned.split('.')
 
   if (rawFraction.length > 2) {
     return {
@@ -457,7 +457,7 @@ function convertIntegerPart(integer: string, digits: string[], groupUnits: strin
     zeroBetweenGroups = false
   })
 
-  return result || digits[0]
+  return result || (digits[0] ?? '')
 }
 
 function convertGroup(group: string, digits: string[]): string {

@@ -85,10 +85,12 @@ describe('ChineseUppercaseNumberConverterView', () => {
       },
     })
 
-    expect((wrapper.vm as { uppercaseInput: string }).uppercaseInput).toBe('壹拾贰元整')
-    ;(wrapper.vm as { variant: string }).variant = 'traditional'
+    const vm = wrapper.vm as unknown as { uppercaseInput: string; variant: string }
+
+    expect(vm.uppercaseInput).toBe('壹拾贰元整')
+    vm.variant = 'traditional'
     await wrapper.vm.$nextTick()
 
-    expect((wrapper.vm as { uppercaseInput: string }).uppercaseInput).toBe('壹拾貳圓整')
+    expect(vm.uppercaseInput).toBe('壹拾貳圓整')
   })
 })
