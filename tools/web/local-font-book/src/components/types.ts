@@ -18,3 +18,5 @@ export type FontGroup = {
   label: string
   items: DisplayFont[]
 }
+
+export type AlertStatusType = 'info' | 'success' | 'warning' | 'error'

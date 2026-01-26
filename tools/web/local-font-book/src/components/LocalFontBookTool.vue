@@ -45,7 +45,6 @@
 </template>
 
 <script setup lang="ts">
-import type { AlertType } from 'naive-ui'
 import { computed, onMounted, ref } from 'vue'
 import { NGi, NGrid } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
@@ -55,7 +54,7 @@ import LocalFontBookDetailsCard from './LocalFontBookDetailsCard.vue'
 import LocalFontBookLibraryCard from './LocalFontBookLibraryCard.vue'
 import LocalFontBookPreviewCard from './LocalFontBookPreviewCard.vue'
 import LocalFontBookWhatIs from './LocalFontBookWhatIs.vue'
-import type { DisplayFont, FontGroup, LocalFontData } from './types'
+import type { AlertStatusType, DisplayFont, FontGroup, LocalFontData } from './types'
 
 type QueryLocalFonts = (options?: { postscriptNames?: string[] }) => Promise<LocalFontData[]>
 
@@ -173,7 +172,7 @@ const statusMessage = computed(() => {
   return ''
 })
 
-const statusType = computed<AlertType>(() => {
+const statusType = computed<AlertStatusType>(() => {
   if (!isSupported.value) return 'error'
   if (loadError.value === 'security') return 'warning'
   if (loadError.value === 'not-allowed' || permissionState.value === 'denied') {

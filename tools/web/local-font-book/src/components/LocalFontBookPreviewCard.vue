@@ -117,12 +117,12 @@ const props = defineProps<{
   cssSnippet: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:sampleText', value: string): void
-  (event: 'update:fontSize', value: number): void
-  (event: 'update:lineHeight', value: number): void
-  (event: 'update:darkBackground', value: boolean): void
-}>()
+const emit = defineEmits([
+  'update:sampleText',
+  'update:fontSize',
+  'update:lineHeight',
+  'update:darkBackground',
+])
 
 const { t } = useI18n()
 

@@ -103,7 +103,6 @@
 </template>
 
 <script setup lang="ts">
-import type { AlertType } from 'naive-ui'
 import type { CSSProperties } from 'vue'
 import {
   NAlert,
@@ -119,7 +118,7 @@ import {
 } from 'naive-ui'
 import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
 import { useI18n } from 'vue-i18n'
-import type { DisplayFont, FontGroup } from './types'
+import type { AlertStatusType, DisplayFont, FontGroup } from './types'
 
 type SelectOption = {
   label: string
@@ -131,7 +130,7 @@ defineProps<{
   isSupported: boolean
   isLoading: boolean
   statusMessage: string
-  statusType: AlertType
+  statusType: AlertStatusType
   searchQuery: string
   filterStyle: string
   sortBy: string
