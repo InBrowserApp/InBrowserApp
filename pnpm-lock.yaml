@@ -318,6 +318,9 @@ catalogs:
     monaco-editor:
       specifier: ^0.55.1
       version: 0.55.1
+    murmurhash3js-revisited:
+      specifier: ^3.0.0
+      version: 3.0.0
     naive-ui:
       specifier: ^2.43.2
       version: 2.43.2
@@ -897,6 +900,15 @@ importers:
       '@tools/morse-code-converter':
         specifier: workspace:*
         version: link:../../tools/misc/morse-code-converter
+      '@tools/murmurhash3-x64-128-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/murmurhash3-x64-128-hash-text-or-file
+      '@tools/murmurhash3-x86-128-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/murmurhash3-x86-128-hash-text-or-file
+      '@tools/murmurhash3-x86-32-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/murmurhash3-x86-32-hash-text-or-file
       '@tools/my-ip-address':
         specifier: workspace:*
         version: link:../../tools/network/my-ip-address
@@ -2492,6 +2504,105 @@ importers:
       '@types/crypto-js':
         specifier: 'catalog:'
         version: 4.2.2
+
+  tools/hash/murmurhash3-x64-128-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      murmurhash3js-revisited:
+        specifier: 'catalog:'
+        version: 3.0.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/murmurhash3-x86-128-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      murmurhash3js-revisited:
+        specifier: 'catalog:'
+        version: 3.0.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/murmurhash3-x86-32-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      murmurhash3js-revisited:
+        specifier: 'catalog:'
+        version: 3.0.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
 
   tools/hash/ripemd160-hash-text-or-file:
     dependencies:
@@ -10095,6 +10206,10 @@ packages:
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
 
+  murmurhash3js-revisited@3.0.0:
+    resolution: {integrity: sha512-/sF3ee6zvScXMb1XFJ8gDsSnY+X8PbOyjIuBhtgis10W2Jx4ZjIhikUCIF9c4gpJxVnQIsPAFrSwTCuAjicP6g==}
+    engines: {node: '>=8.0.0'}
+
   naive-ui@2.43.2:
     resolution: {integrity: sha512-YlLMnGrwGTOc+zMj90sG3ubaH5/7czsgLgGcjTLA981IUaz8r6t4WIujNt8r9PNr+dqv6XNEr0vxkARgPPjfBQ==}
     peerDependencies:
@@ -15498,6 +15613,8 @@ snapshots:
   ms@2.1.3: {}
 
   muggle-string@0.4.1: {}
+
+  murmurhash3js-revisited@3.0.0: {}
 
   naive-ui@2.43.2(vue@3.5.27(typescript@5.9.3)):
     dependencies:

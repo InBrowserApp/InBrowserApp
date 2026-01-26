@@ -42,6 +42,9 @@ import { toolInfo as hashToolsToolInfo } from '@tools/hash-tools'
 import { toolInfo as sriHashGeneratorToolInfo } from '@tools/sri-hash-generator'
 import { toolInfo as crcChecksumCalculatorToolInfo } from '@tools/crc-checksum-calculator'
 import { toolInfo as cityhash64HashTextOrFileToolInfo } from '@tools/cityhash64-hash-text-or-file'
+import { toolInfo as murmurhash3X64_128HashTextOrFileToolInfo } from '@tools/murmurhash3-x64-128-hash-text-or-file'
+import { toolInfo as murmurhash3X86_128HashTextOrFileToolInfo } from '@tools/murmurhash3-x86-128-hash-text-or-file'
+import { toolInfo as murmurhash3X86_32HashTextOrFileToolInfo } from '@tools/murmurhash3-x86-32-hash-text-or-file'
 import { toolInfo as xxhashXxh32HashTextOrFileToolInfo } from '@tools/xxhash-xxh32-hash-text-or-file'
 import { toolInfo as xxhashXxh64HashTextOrFileToolInfo } from '@tools/xxhash-xxh64-hash-text-or-file'
 import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-text-or-file'
@@ -237,6 +240,9 @@ export const tools: ToolInfo[] = [
   sriHashGeneratorToolInfo,
   crcChecksumCalculatorToolInfo,
   cityhash64HashTextOrFileToolInfo,
+  murmurhash3X86_32HashTextOrFileToolInfo,
+  murmurhash3X86_128HashTextOrFileToolInfo,
+  murmurhash3X64_128HashTextOrFileToolInfo,
   xxhashXxh32HashTextOrFileToolInfo,
   xxhashXxh64HashTextOrFileToolInfo,
   blake2bHashTextOrFileToolInfo,
