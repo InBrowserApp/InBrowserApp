@@ -228,11 +228,7 @@ const {
   exit: exitNativeFullscreen,
 } = useFullscreen(fullscreenTarget)
 
-const isIOSDevice =
-  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-  (navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 1)
-
-const fullscreenAvailable = computed(() => fullscreenSupported.value || isIOSDevice)
+const fullscreenAvailable = computed(() => true)
 const pseudoFullscreen = ref(false)
 const isFullscreenActive = computed(() =>
   fullscreenSupported.value ? isNativeFullscreen.value : pseudoFullscreen.value,
