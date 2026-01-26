@@ -427,7 +427,8 @@ function isItalicStyle(style: string) {
 }
 
 function wrapFontFamily(family: string) {
-  return `"${family.replace(/"/g, '\\"')}"`
+  const escaped = family.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+  return `"${escaped}"`
 }
 </script>
 
