@@ -102,6 +102,7 @@ import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-vali
 import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
 import { toolInfo as deviceInformationToolInfo } from '@tools/device-information'
 import { toolInfo as romanNumeralConverterToolInfo } from '@tools/roman-numeral-converter'
+import { toolInfo as chineseUppercaseNumberConverterToolInfo } from '@tools/chinese-uppercase-number-converter'
 import { toolInfo as stopwatchToolInfo } from '@tools/stopwatch'
 import { toolInfo as timerToolInfo } from '@tools/timer'
 import { toolInfo as unixTimestampConverterToolInfo } from '@tools/unix-timestamp-converter'
@@ -278,6 +279,7 @@ export const tools: ToolInfo[] = [
   ...redirectsTools,
   deviceInformationToolInfo,
   romanNumeralConverterToolInfo,
+  chineseUppercaseNumberConverterToolInfo,
 
   // Time Tools
   stopwatchToolInfo,

@@ -34,6 +34,7 @@
     "@tools/business-days-calculator": "workspace:*",
     "@tools/case-converter": "workspace:*",
     "@tools/certificate-public-key-parser": "workspace:*",
+    "@tools/chinese-uppercase-number-converter": "workspace:*",
     "@tools/chmod-calculator": "workspace:*",
     "@tools/cidr-parser": "workspace:*",
     "@tools/cidrs-merger-excluder": "workspace:*",
