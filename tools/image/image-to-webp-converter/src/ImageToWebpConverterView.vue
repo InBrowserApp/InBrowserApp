@@ -150,7 +150,7 @@ async function convertImages() {
     if (errors.length) {
       const errorMessage = nextResults.length
         ? t('partialFailed', { count: errors.length })
-        : errors[0] ?? t('convertFailed')
+        : (errors[0] ?? t('convertFailed'))
       error.value = errorMessage
       message.error(errorMessage)
     } else if (nextResults.length) {

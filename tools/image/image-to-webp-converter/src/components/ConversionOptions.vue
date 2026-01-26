@@ -25,7 +25,12 @@
         </template>
         {{ resetLabel }}
       </n-button>
-      <n-button type="primary" :loading="isConverting" :disabled="!canConvert" @click="emit('convert')">
+      <n-button
+        type="primary"
+        :loading="isConverting"
+        :disabled="!canConvert"
+        @click="emit('convert')"
+      >
         <template #icon>
           <n-icon><ImageEdit24Regular /></n-icon>
         </template>

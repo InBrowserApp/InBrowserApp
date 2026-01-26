@@ -9,7 +9,10 @@ vi.mock('@jsquash/webp', () => ({
   encode: encodeMock,
 }))
 
-const zipWriterInstances: Array<{ add: ReturnType<typeof vi.fn>; close: ReturnType<typeof vi.fn> }> = []
+const zipWriterInstances: Array<{
+  add: ReturnType<typeof vi.fn>
+  close: ReturnType<typeof vi.fn>
+}> = []
 
 class BlobWriterMock {
   getData = vi.fn().mockResolvedValue(new Blob(['zip']))
@@ -73,10 +76,10 @@ describe('convertImageToWebp', () => {
     ;(globalThis as { createImageBitmap?: typeof createImageBitmap }).createImageBitmap = vi
       .fn()
       .mockResolvedValue({
-      width: 100,
-      height: 50,
-      close: vi.fn(),
-    })
+        width: 100,
+        height: 50,
+        close: vi.fn(),
+      })
 
     encodeMock.mockResolvedValueOnce(new Uint8Array([1, 2, 3]).buffer)
 
@@ -121,10 +124,10 @@ describe('convertImageToWebp', () => {
     ;(globalThis as { createImageBitmap?: typeof createImageBitmap }).createImageBitmap = vi
       .fn()
       .mockResolvedValue({
-      width: 10,
-      height: 10,
-      close: vi.fn(),
-    })
+        width: 10,
+        height: 10,
+        close: vi.fn(),
+      })
 
     HTMLCanvasElement.prototype.getContext = vi.fn().mockReturnValue(null)
 

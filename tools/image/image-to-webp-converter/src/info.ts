@@ -40,7 +40,8 @@ export const meta = {
   },
   it: {
     name: 'Convertitore da immagine a WebP',
-    description: 'Converti immagini in WebP con ridimensionamento opzionale ed esportazione in batch.',
+    description:
+      'Converti immagini in WebP con ridimensionamento opzionale ed esportazione in batch.',
   },
   ja: {
     name: '画像からWebPへのコンバーター',
@@ -70,12 +71,11 @@ export const meta = {
   tr: {
     name: "Görüntüden WebP'ye Dönüştürücü",
     description:
-      'Görüntüleri WebP\'ye dönüştürün, isteğe bağlı yeniden boyutlandırma ve toplu dışa aktarma.',
+      "Görüntüleri WebP'ye dönüştürün, isteğe bağlı yeniden boyutlandırma ve toplu dışa aktarma.",
   },
   nl: {
     name: 'Afbeelding naar WebP-converter',
-    description:
-      'Zet afbeeldingen om naar WebP met optionele formaatwijziging en batch-export.',
+    description: 'Zet afbeeldingen om naar WebP met optionele formaatwijziging en batch-export.',
   },
   sv: {
     name: 'Bild till WebP-konverterare',
