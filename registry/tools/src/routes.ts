@@ -39,6 +39,7 @@ import { routes as xxhashXxh32HashTextOrFileRoutes } from '@tools/xxhash-xxh32-h
 import { routes as xxhashXxh64HashTextOrFileRoutes } from '@tools/xxhash-xxh64-hash-text-or-file/routes'
 import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-or-file/routes'
 import { routes as blake2sHashTextOrFileRoutes } from '@tools/blake2s-hash-text-or-file/routes'
+import { routes as blake3HashTextOrFileRoutes } from '@tools/blake3-hash-text-or-file/routes'
 import { routes as hmacGeneratorRoutes } from '@tools/hmac-generator/routes'
 import { routes as urlComponentEncoderDecoderRoutes } from '@tools/url-component-encoder-decoder/routes'
 import { routes as base16EncoderRoutes } from '@tools/base16-encoder/routes'
@@ -186,6 +187,7 @@ export const routes: ToolRoute[] = [
   ...xxhashXxh64HashTextOrFileRoutes,
   ...blake2bHashTextOrFileRoutes,
   ...blake2sHashTextOrFileRoutes,
+  ...blake3HashTextOrFileRoutes,
   ...hmacGeneratorRoutes,
   ...urlComponentEncoderDecoderRoutes,
   ...base16EncoderRoutes,
