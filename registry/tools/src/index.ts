@@ -137,6 +137,7 @@ import { toolInfo as colorConverterToolInfo } from '@tools/color-converter'
 import { toolInfo as colorContrastCheckerToolInfo } from '@tools/color-contrast-checker'
 import { toolInfo as cssBoxShadowGeneratorToolInfo } from '@tools/css-box-shadow-generator'
 import { toolInfo as cssGradientGeneratorToolInfo } from '@tools/css-gradient-generator'
+import { toolInfo as localFontBookToolInfo } from '@tools/local-font-book'
 import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 import { toolInfo as unicodeInvisibleCharacterCheckerToolInfo } from '@tools/unicode-invisible-character-checker'
@@ -337,6 +338,7 @@ export const tools: ToolInfo[] = [
   colorContrastCheckerToolInfo,
   cssBoxShadowGeneratorToolInfo,
   cssGradientGeneratorToolInfo,
+  localFontBookToolInfo,
   htmlColorNamesToolInfo,
 
   // Text Tools

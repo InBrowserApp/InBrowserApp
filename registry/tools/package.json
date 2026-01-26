@@ -100,6 +100,7 @@
     "@tools/jwt-signer": "workspace:*",
     "@tools/keccak-hash-text-or-file": "workspace:*",
     "@tools/ksuid-generator": "workspace:*",
+    "@tools/local-font-book": "workspace:*",
     "@tools/lorem-ipsum-generator": "workspace:*",
     "@tools/mac-to-ipv6-link-local": "workspace:*",
     "@tools/markdown-previewer": "workspace:*",
