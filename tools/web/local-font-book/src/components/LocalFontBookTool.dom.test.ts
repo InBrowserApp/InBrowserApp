@@ -270,6 +270,38 @@ describe('LocalFontBookTool', () => {
     expect(wrapper.get('[data-testid="css-snippet"]').text()).toContain('font-style: italic')
   })
 
+  it('sorts when metadata is missing', async () => {
+    const fontsWithMissing = [
+      {
+        family: 'Alpha',
+        fullName: 'Alpha Regular',
+        postscriptName: 'Alpha-Regular',
+        style: 'Regular',
+      },
+      {
+        family: 'Beta',
+        fullName: undefined,
+        postscriptName: 'Beta-Regular',
+        style: undefined,
+      },
+    ] as unknown as LocalFontData[]
+
+    setQueryLocalFonts(vi.fn().mockResolvedValue(fontsWithMissing))
+
+    const wrapper = mount(LocalFontBookTool, { global: { stubs } })
+    await wrapper.get('[data-testid="load-fonts"]').trigger('click')
+    await flushPromises()
+    await nextTick()
+
+    const vm = wrapper.vm as unknown as { sortBy: string }
+    vm.sortBy = 'name'
+    await nextTick()
+    vm.sortBy = 'style'
+    await nextTick()
+
+    expect(wrapper.text()).toContain('Alpha Regular')
+  })
+
   it('updates preview controls via v-model bindings', async () => {
     setQueryLocalFonts(vi.fn().mockResolvedValue(fontFixtures))
 

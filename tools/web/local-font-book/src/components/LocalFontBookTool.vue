@@ -287,12 +287,12 @@ const filteredFonts = computed(() => {
   sorted.sort((a, b) => {
     switch (sortBy.value) {
       case 'name':
-        return a.fullName.localeCompare(b.fullName)
+        return toSortableText(a.fullName).localeCompare(toSortableText(b.fullName))
       case 'style':
-        return a.style.localeCompare(b.style)
+        return toSortableText(a.style).localeCompare(toSortableText(b.style))
       case 'family':
       default:
-        return a.family.localeCompare(b.family)
+        return toSortableText(a.family).localeCompare(toSortableText(b.family))
     }
   })
 
@@ -420,6 +420,10 @@ async function loadFonts() {
 
 function setActiveFont(postscriptName: string) {
   activePostscriptName.value = postscriptName
+}
+
+function toSortableText(value: unknown) {
+  return typeof value === 'string' ? value : ''
 }
 
 function isItalicStyle(style: string) {
