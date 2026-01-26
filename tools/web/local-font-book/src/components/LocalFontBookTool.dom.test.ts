@@ -36,6 +36,15 @@ vi.mock('naive-ui', async () => {
     template: '<span v-bind="$attrs"><slot /></span>',
   })
 
+  const NCard = defineComponent({
+    inheritAttrs: false,
+    props: {
+      title: { type: String, default: '' },
+    },
+    template:
+      '<div v-bind="$attrs"><div><span>{{ title }}</span><slot name="header-extra" /></div><slot /></div>',
+  })
+
   const NButton = defineComponent({
     name: 'NButton',
     inheritAttrs: false,
@@ -118,7 +127,7 @@ vi.mock('naive-ui', async () => {
   return {
     NAlert: BaseStub,
     NButton,
-    NCard: BaseStub,
+    NCard,
     NCode,
     NDescriptions: BaseStub,
     NDescriptionsItem: BaseStub,
@@ -156,6 +165,7 @@ const stubs = {
   ToolSection: SectionStub,
   ToolSectionHeader: SectionStub,
   CopyToClipboardTooltip: CopyToClipboardTooltipStub,
+  DescriptionMarkdown: SectionStub,
 }
 
 const fontFixtures: LocalFontData[] = [
