@@ -348,7 +348,8 @@ const themeVars = useThemeVars()
 const isFullscreen = ref(false)
 const isRolling = ref(false)
 const rollingIntervalMs = 80
-let rollingTimer: number | null = null
+let rollingRafId: number | null = null
+let rollingLastTick = 0
 let hasSkippedInitialHistory = false
 
 const canRoll = computed(() => !rangeError.value && !countError.value)
@@ -448,17 +449,31 @@ function generateOnce() {
 function startRolling() {
   if (isRolling.value || !canRoll.value) return
   isRolling.value = true
-  rollingTimer = window.setInterval(generateOnce, rollingIntervalMs)
+  rollingLastTick = 0
   generateOnce()
+
+  const tick = (timestamp: number) => {
+    if (!isRolling.value) return
+    if (!rollingLastTick) {
+      rollingLastTick = timestamp
+    } else if (timestamp - rollingLastTick >= rollingIntervalMs) {
+      generateOnce()
+      rollingLastTick = timestamp
+    }
+    rollingRafId = window.requestAnimationFrame(tick)
+  }
+
+  rollingRafId = window.requestAnimationFrame(tick)
 }
 
 function stopRolling() {
   if (!isRolling.value) return
-  if (rollingTimer !== null) {
-    window.clearInterval(rollingTimer)
-    rollingTimer = null
+  if (rollingRafId !== null) {
+    window.cancelAnimationFrame(rollingRafId)
+    rollingRafId = null
   }
   isRolling.value = false
+  rollingLastTick = 0
   addHistoryEntry(buildHistorySnapshot())
 }
 
