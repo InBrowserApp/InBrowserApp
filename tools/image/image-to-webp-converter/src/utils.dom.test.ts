@@ -3,7 +3,7 @@ import { convertImageToWebp } from './utils/convert-image-to-webp'
 import { createWebpZip } from './utils/create-webp-zip'
 import type { WebpConversionResult } from './types'
 
-const encodeMock = vi.fn()
+const encodeMock = vi.hoisted(() => vi.fn())
 
 vi.mock('@jsquash/webp', () => ({
   encode: encodeMock,

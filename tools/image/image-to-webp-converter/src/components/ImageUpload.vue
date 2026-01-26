@@ -86,6 +86,22 @@ const emit = defineEmits<{
 }>()
 
 const accept = 'image/*'
+const imageExtensions = new Set([
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'webp',
+  'bmp',
+  'svg',
+  'svgz',
+  'tif',
+  'tiff',
+  'avif',
+  'heic',
+  'heif',
+  'jfif',
+])
 
 const files = computed(() => props.files)
 
@@ -130,6 +146,7 @@ function isValidImageFile(file: File) {
   if (file.type.startsWith('image/')) return true
 
   const ext = file.name.split('.').pop()?.toLowerCase()
-  return Boolean(ext)
+  if (!ext) return false
+  return imageExtensions.has(ext)
 }
 </script>

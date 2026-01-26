@@ -18,7 +18,7 @@ const messageMock = {
   error: vi.fn(),
 }
 
-let objectUrlValue = 'blob:mock'
+const objectUrlValue = 'blob:mock'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
@@ -234,16 +234,20 @@ describe('ImageToWebpConverterView', () => {
 
     mockedConvert.mockResolvedValueOnce(result)
 
-    await wrapper.find('button').trigger('click')
+    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
+      convertImages: () => Promise<void>
+    }
+
+    await viewVm.convertImages()
     await flushPromises()
 
     expect(mockedConvert).toHaveBeenCalledTimes(1)
     expect(mockedZip).not.toHaveBeenCalled()
 
-    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
-      $: { setupState: { results: { value: WebpConversionResult[] } } }
-    }
-    expect(viewVm.$.setupState.results.value).toHaveLength(1)
+    const resultsProps = wrapper.findComponent(ConversionResultsStub).props('results') as
+      | WebpConversionResult[]
+      | undefined
+    expect(resultsProps).toHaveLength(1)
     expect(messageMock.success).toHaveBeenCalled()
   })
 
@@ -274,14 +278,16 @@ describe('ImageToWebpConverterView', () => {
     })
     mockedZip.mockResolvedValueOnce(new Blob(['zip']))
 
-    await wrapper.find('button').trigger('click')
+    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
+      convertImages: () => Promise<void>
+    }
+
+    await viewVm.convertImages()
     await flushPromises()
 
     expect(mockedZip).toHaveBeenCalledTimes(1)
-    const viewVm = wrapper.findComponent(ImageToWebpConverterView).vm as unknown as {
-      $: { setupState: { zipBlob: { value: Blob | null } } }
-    }
-    expect(viewVm.$.setupState.zipBlob.value).toBeInstanceOf(Blob)
+    const zipBlob = wrapper.findComponent(ConversionResultsStub).props('zipBlob') as Blob | null
+    expect(zipBlob).toBeInstanceOf(Blob)
   })
 
   it('shows an error when conversion fails', async () => {
