@@ -207,18 +207,18 @@ describe('LocalFontBookTool', () => {
     if (originalQueryLocalFonts) {
       Object.defineProperty(window, 'queryLocalFonts', originalQueryLocalFonts)
     } else {
-      delete (window as Window & { queryLocalFonts?: unknown }).queryLocalFonts
+      delete (window as { queryLocalFonts?: unknown }).queryLocalFonts
     }
 
     if (originalPermissions) {
       Object.defineProperty(navigator, 'permissions', originalPermissions)
     } else {
-      delete (navigator as Navigator & { permissions?: unknown }).permissions
+      delete (navigator as { permissions?: unknown }).permissions
     }
   })
 
   it('shows unsupported message when Local Font Access is missing', () => {
-    delete (window as Window & { queryLocalFonts?: unknown }).queryLocalFonts
+    delete (window as { queryLocalFonts?: unknown }).queryLocalFonts
 
     const wrapper = mount(LocalFontBookTool, { global: { stubs } })
 
@@ -233,15 +233,15 @@ describe('LocalFontBookTool', () => {
     setPermissionsQuery(async () => ({ state: 'prompt' }))
 
     const wrapper = mount(LocalFontBookTool, { global: { stubs } })
-    expect((wrapper.vm as { previewStyle: unknown }).previewStyle).toBeDefined()
+    expect((wrapper.vm as unknown as { previewStyle: unknown }).previewStyle).toBeDefined()
 
     await wrapper.get('[data-testid="load-fonts"]').trigger('click')
     await flushPromises()
     await nextTick()
 
-    expect((window as Window & { queryLocalFonts?: unknown }).queryLocalFonts).toBeDefined()
+    expect((window as { queryLocalFonts?: unknown }).queryLocalFonts).toBeDefined()
     expect(wrapper.text()).toContain('Inter Regular')
-    expect((wrapper.vm as { statusType: string }).statusType).toBe('info')
+    expect((wrapper.vm as unknown as { statusType: string }).statusType).toBe('info')
 
     const vm = wrapper.vm as unknown as {
       searchQuery: string
@@ -285,11 +285,19 @@ describe('LocalFontBookTool', () => {
 
     await wrapper.get('[data-testid="sample-text"]').setValue('')
     const rangeInputs = wrapper.findAll('input[type="range"]')
-    await rangeInputs[0].setValue('48')
-    await rangeInputs[1].setValue('1.8')
+    const [sizeRange, lineRange] = rangeInputs
+    if (!sizeRange || !lineRange) {
+      throw new Error('Missing range inputs')
+    }
+    await sizeRange.setValue('48')
+    await lineRange.setValue('1.8')
     const numberInputs = wrapper.findAll('input[type="number"]')
-    await numberInputs[0].setValue('48')
-    await numberInputs[1].setValue('1.8')
+    const [sizeNumber, lineNumber] = numberInputs
+    if (!sizeNumber || !lineNumber) {
+      throw new Error('Missing number inputs')
+    }
+    await sizeNumber.setValue('48')
+    await lineNumber.setValue('1.8')
     await wrapper.get('[data-testid="background-toggle"]').setValue(true)
 
     expect(wrapper.get('[data-testid="preview-text"]').text()).toContain('preview-fallback')
@@ -321,7 +329,7 @@ describe('LocalFontBookTool', () => {
   })
 
   it('returns early when the permissions API is unavailable', () => {
-    delete (navigator as Navigator & { permissions?: unknown }).permissions
+    delete (navigator as { permissions?: unknown }).permissions
 
     const wrapper = mount(LocalFontBookTool, { global: { stubs } })
     const vm = wrapper.vm as unknown as { permissionState: string }
