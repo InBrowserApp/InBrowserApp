@@ -1,11 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import {
-  BASE85_ALPHABETS,
-  decodeBase85,
-  encodeBase85,
-  isValidBase85,
-  type Base85Variant,
-} from './index'
+import { decodeBase85, encodeBase85, isValidBase85, type Base85Variant } from './index'
 
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()

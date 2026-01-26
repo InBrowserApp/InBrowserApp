@@ -97,7 +97,7 @@ export function encodeBase85(input: Uint8Array | ArrayBuffer, options: Base85Opt
       value = (value << 8) | (chunk[index] ?? 0)
     }
 
-    const digits = new Array<number>(5)
+    const digits = Array.from({ length: 5 }, () => 0)
     let remainder = value
     for (let index = 4; index >= 0; index -= 1) {
       digits[index] = remainder % 85
@@ -116,7 +116,7 @@ export function encodeBase85(input: Uint8Array | ArrayBuffer, options: Base85Opt
 }
 
 export function decodeBase85(value: string, options: Base85Options = {}): Uint8Array {
-  const { variant, alphabet, map } = resolveBase85Options(options)
+  const { variant, map } = resolveBase85Options(options)
   const normalized = normalizeBase85Input(value, variant)
   if (!normalized) return new Uint8Array()
 
