@@ -77,6 +77,7 @@
     "@tools/image-metadata-cleaner": "workspace:*",
     "@tools/image-palette-extractor": "workspace:*",
     "@tools/image-to-ico": "workspace:*",
+    "@tools/image-to-webp-converter": "workspace:*",
     "@tools/image-tools": "workspace:*",
     "@tools/ip-cidr-normalizer": "workspace:*",
     "@tools/ip-info-lookup": "workspace:*",

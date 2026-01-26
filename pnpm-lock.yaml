@@ -36,6 +36,9 @@ catalogs:
     '@jsquash/oxipng':
       specifier: ^2.3.0
       version: 2.3.0
+    '@jsquash/webp':
+      specifier: ^1.5.0
+      version: 1.5.0
     '@noble/ed25519':
       specifier: ^3.0.0
       version: 3.0.0
@@ -831,6 +834,9 @@ importers:
       '@tools/image-to-ico':
         specifier: workspace:*
         version: link:../../tools/image/image-to-ico
+      '@tools/image-to-webp-converter':
+        specifier: workspace:*
+        version: link:../../tools/image/image-to-webp-converter
       '@tools/image-tools':
         specifier: workspace:*
         version: link:../../tools/image/image-tools
@@ -3376,6 +3382,39 @@ importers:
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+
+  tools/image/image-to-webp-converter:
+    dependencies:
+      '@jsquash/webp':
+        specifier: 'catalog:'
+        version: 1.5.0
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      '@zip.js/zip.js':
+        specifier: 'catalog:'
+        version: 2.8.15
       filesize:
         specifier: 'catalog:'
         version: 11.0.13
@@ -8045,6 +8084,9 @@ packages:
 
   '@jsquash/oxipng@2.3.0':
     resolution: {integrity: sha512-aQ8wiEp6ztlTMXc+RMt/CG8crU3mEHDU+h+JYkIi6ctMhlh8+Ltj5XwQFfBuyzKYrp8NxaFW80Dp824bqjr+zA==}
+
+  '@jsquash/webp@1.5.0':
+    resolution: {integrity: sha512-KggLoj2MnRSfIqTeKe1EmbljTX2vuV7mh79k89PCL1pyqiDULcPM1L47twxXt0hkb68F70bXiL31MxsuoZtKFw==}
 
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
@@ -13349,6 +13391,10 @@ snapshots:
   '@jspawn/qpdf-wasm@0.0.2': {}
 
   '@jsquash/oxipng@2.3.0':
+    dependencies:
+      wasm-feature-detect: 1.8.0
+
+  '@jsquash/webp@1.5.0':
     dependencies:
       wasm-feature-detect: 1.8.0
 

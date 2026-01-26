@@ -19,6 +19,7 @@ import { toolInfo as ipv6ToMacToolInfo } from '@tools/ipv6-to-mac'
 import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-time'
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as imageToIcoToolInfo } from '@tools/image-to-ico'
+import { toolInfo as imageToWebpConverterToolInfo } from '@tools/image-to-webp-converter'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
 import { toolInfo as imageMetadataCleanerToolInfo } from '@tools/image-metadata-cleaner'
 import { toolInfo as imagePaletteExtractorToolInfo } from '@tools/image-palette-extractor'
@@ -195,6 +196,7 @@ export const tools: ToolInfo[] = [
   imageToolsToolInfo,
   faviconAssetsGeneratorToolInfo,
   imageToIcoToolInfo,
+  imageToWebpConverterToolInfo,
   pngOptimizerToolInfo,
   svgOptimizerToolInfo,
   svgToImageConverterToolInfo,
