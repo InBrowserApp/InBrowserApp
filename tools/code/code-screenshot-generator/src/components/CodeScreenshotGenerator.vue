@@ -200,15 +200,30 @@ registerHighlightLanguages(hljs)
 
 const { t } = useI18n()
 
-const defaultCode = `const palette = [
-  { name: 'Aurora', hex: '#0ea5e9' },
-  { name: 'Meadow', hex: '#22c55e' },
-  { name: 'Sun', hex: '#f59e0b' },
+const defaultCode = `type ExportFormat = 'png' | 'jpg' | 'webp' | 'svg' | 'html'
+
+const presets = [
+  { name: 'Aurora', background: 'aurora', theme: 'nebula' },
+  { name: 'Paper', background: 'none', theme: 'paper' },
 ]
 
-export const createShot = (code, theme) => {
-  return { code, theme, format: ['svg', 'png', 'jpg', 'html'] }
-}`
+export const createShot = ({
+  code,
+  language = 'auto',
+  mode = 'highlight',
+  showLineNumbers = true,
+}: {
+  code: string
+  language?: string
+  mode?: 'highlight' | 'plain'
+  showLineNumbers?: boolean
+}) => ({
+  code,
+  language,
+  mode,
+  showLineNumbers,
+  formats: ['png', 'jpg', 'webp', 'svg', 'html'] satisfies ExportFormat[],
+})`
 
 const code = useStorage<string>('tools:code-shot:code', defaultCode)
 const language = useStorage<string>('tools:code-shot:language', 'auto')
