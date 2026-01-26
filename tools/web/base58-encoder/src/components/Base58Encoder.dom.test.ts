@@ -8,7 +8,7 @@ vi.mock('@vueuse/core', async () => {
 
   return {
     ...actual,
-    useObjectUrl: (source) => {
+    useObjectUrl: (source: { value?: unknown } | null | undefined) => {
       if (source && typeof source === 'object' && 'value' in source) {
         void source.value
       }
@@ -95,8 +95,8 @@ describe('Base58Encoder', () => {
     const input = wrapper.findComponent(TextOrFileInput)
     const textareas = wrapper.findAll('textarea')
 
-    let resolveBuffer
-    const pending = new Promise((resolve) => {
+    let resolveBuffer: ((value: ArrayBuffer) => void) | undefined
+    const pending = new Promise<ArrayBuffer>((resolve) => {
       resolveBuffer = resolve
     })
 
@@ -120,8 +120,8 @@ describe('Base58Encoder', () => {
     const input = wrapper.findComponent(TextOrFileInput)
     const textareas = wrapper.findAll('textarea')
 
-    let rejectBuffer
-    const pending = new Promise((_, reject) => {
+    let rejectBuffer: ((reason?: unknown) => void) | undefined
+    const pending = new Promise<ArrayBuffer>((_, reject) => {
       rejectBuffer = reject
     })
 

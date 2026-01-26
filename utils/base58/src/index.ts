@@ -2,7 +2,7 @@ const BASE58_ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvw
 
 const BASE58_MAP = new Map<string, number>()
 for (let i = 0; i < BASE58_ALPHABET.length; i += 1) {
-  const char = BASE58_ALPHABET[i]
+  const char = BASE58_ALPHABET.charAt(i)
   BASE58_MAP.set(char, i)
 }
 
@@ -31,7 +31,8 @@ export function encodeBase58(input: Uint8Array | ArrayBuffer): string {
   for (const byte of bytes) {
     let carry = byte
     for (let index = 0; index < digits.length; index += 1) {
-      carry += digits[index] << 8
+      const digit = digits[index] ?? 0
+      carry += digit << 8
       digits[index] = carry % 58
       carry = Math.floor(carry / 58)
     }
@@ -47,11 +48,12 @@ export function encodeBase58(input: Uint8Array | ArrayBuffer): string {
     index < bytes.length && bytes[index] === 0 && index < bytes.length - 1;
     index += 1
   ) {
-    output += BASE58_ALPHABET[0]
+    output += BASE58_ALPHABET.charAt(0)
   }
 
   for (let index = digits.length - 1; index >= 0; index -= 1) {
-    output += BASE58_ALPHABET[digits[index]]
+    const digit = digits[index] ?? 0
+    output += BASE58_ALPHABET.charAt(digit)
   }
 
   return output
@@ -63,11 +65,15 @@ export function decodeBase58(value: string): Uint8Array {
 
   const bytes = [0]
   for (const char of normalized) {
-    const charValue = BASE58_MAP.get(char) as number
+    const charValue = BASE58_MAP.get(char)
+    if (charValue === undefined) {
+      throw new Error('Invalid Base58 character')
+    }
 
     let carry = charValue
     for (let index = 0; index < bytes.length; index += 1) {
-      carry += bytes[index] * 58
+      const byte = bytes[index] ?? 0
+      carry += byte * 58
       bytes[index] = carry & 0xff
       carry >>= 8
     }
@@ -80,7 +86,7 @@ export function decodeBase58(value: string): Uint8Array {
   for (
     let index = 0;
     index < normalized.length &&
-    normalized[index] === BASE58_ALPHABET[0] &&
+    normalized.charAt(index) === BASE58_ALPHABET.charAt(0) &&
     index < normalized.length - 1;
     index += 1
   ) {

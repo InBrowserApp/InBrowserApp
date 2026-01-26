@@ -8,7 +8,7 @@ vi.mock('@vueuse/core', async () => {
 
   return {
     ...actual,
-    useObjectUrl: (source) => {
+    useObjectUrl: (source: { value?: unknown } | null | undefined) => {
       if (source && typeof source === 'object' && 'value' in source) {
         void source.value
       }
@@ -118,8 +118,8 @@ describe('Base58Decoder', () => {
     const input = wrapper.findComponent(TextOrFileInput)
     const textareas = wrapper.findAll('textarea')
 
-    let resolveText
-    const pending = new Promise((resolve) => {
+    let resolveText: ((value: string) => void) | undefined
+    const pending = new Promise<string>((resolve) => {
       resolveText = resolve
     })
 
@@ -143,8 +143,8 @@ describe('Base58Decoder', () => {
     const input = wrapper.findComponent(TextOrFileInput)
     const textareas = wrapper.findAll('textarea')
 
-    let rejectText
-    const pending = new Promise((_, reject) => {
+    let rejectText: ((reason?: unknown) => void) | undefined
+    const pending = new Promise<string>((_, reject) => {
       rejectText = reject
     })
 
@@ -191,7 +191,8 @@ describe('Base58Decoder', () => {
     await input.vm.$emit('update:value', file)
     await flushPromises()
 
-    const state = wrapper.vm.$.setupState
+    const state = (wrapper.vm.$ as { setupState: { storedText: string; textOrFile: unknown } })
+      .setupState
     state.storedText = 'JxF12TrwUP45BMd'
     await flushPromises()
 
