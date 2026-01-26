@@ -343,7 +343,7 @@ describe('CountdownTimer', () => {
     expect(wrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:01.00')
 
     await wrapper.get('[data-testid="start"]').trigger('click')
-    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('')
+    expect(wrapper.get('[data-testid="start"]').text()).toContain('Pause')
 
     const audioInstance = audio.getLastInstance()
     expect(audioInstance?.resume).toHaveBeenCalledTimes(1)
@@ -352,8 +352,7 @@ describe('CountdownTimer', () => {
     await nextTick()
     expect(wrapper.get('[data-testid="timer-display"]').text()).not.toBe('00:00:01.00')
 
-    await wrapper.get('[data-testid="pause"]').trigger('click')
-    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('Paused')
+    await wrapper.get('[data-testid="start"]').trigger('click')
     expect(wrapper.get('[data-testid="start"]').text()).toContain('Resume')
 
     const pausedValue = wrapper.get('[data-testid="timer-display"]').text()
@@ -367,7 +366,8 @@ describe('CountdownTimer', () => {
     await nextTick()
     await vi.runAllTicks()
 
-    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('Completed')
+    expect(wrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:00.00')
+    expect(wrapper.get('[data-testid="start"]').text()).toContain('Start')
     expect(notification).toHaveBeenCalledTimes(1)
     expect(vibrate).toHaveBeenCalledTimes(1)
     expect(audio.createOscillator).toHaveBeenCalledTimes(3)
@@ -722,7 +722,8 @@ describe('CountdownTimer', () => {
     await nextTick()
     await vi.runAllTicks()
 
-    expect(wrapper.get('[data-testid="timer-status"]').text()).toBe('Completed')
+    expect(wrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:00.00')
+    expect(wrapper.get('[data-testid="start"]').text()).toContain('Start')
   })
 
   it('restores persisted state safely', async () => {
@@ -745,7 +746,7 @@ describe('CountdownTimer', () => {
     expect(vm.running).toBe(false)
 
     await wrapper.get('[data-testid="start"]').trigger('click')
-    await wrapper.get('[data-testid="pause"]').trigger('click')
+    await wrapper.get('[data-testid="start"]').trigger('click')
 
     unmountWrapper(wrapper)
 
@@ -758,7 +759,8 @@ describe('CountdownTimer', () => {
     vi.resetModules()
     const expiredWrapper = await mountCountdownTimer()
 
-    expect(expiredWrapper.get('[data-testid="timer-status"]').text()).toBe('Completed')
+    expect(expiredWrapper.get('[data-testid="timer-display"]').text()).toBe('00:00:00.00')
+    expect(expiredWrapper.get('[data-testid="start"]').text()).toContain('Start')
 
     unmountWrapper(expiredWrapper)
 

@@ -10,25 +10,16 @@
     <ToolSection class="timer-display-section">
       <div class="timer-display" :class="{ 'timer-display--fullscreen': isFullscreenActive }">
         <div class="timer-time" data-testid="timer-display">{{ formattedRemaining }}</div>
-        <n-text depth="3" :type="statusType" data-testid="timer-status">
-          {{ statusText }}
-        </n-text>
       </div>
     </ToolSection>
 
     <ToolSection v-show="!isFullscreenActive">
       <n-flex :size="12" wrap justify="center">
-        <n-button type="primary" :disabled="running" @click="start" data-testid="start">
+        <n-button type="primary" @click="toggleRun" data-testid="start">
           <template #icon>
-            <n-icon :component="Play16Regular" />
+            <n-icon :component="toggleIcon" />
           </template>
-          {{ startLabel }}
-        </n-button>
-        <n-button :disabled="!running" @click="pause" data-testid="pause">
-          <template #icon>
-            <n-icon :component="Pause16Regular" />
-          </template>
-          {{ t('pause') }}
+          {{ toggleLabel }}
         </n-button>
         <n-button :disabled="!canReset" @click="reset" data-testid="reset">
           <template #icon>
@@ -51,17 +42,11 @@
 
     <div v-show="isFullscreenActive" class="fullscreen-controls" data-testid="fullscreen-controls">
       <n-flex :size="8" align="center">
-        <n-button type="primary" :disabled="running" @click="start" data-testid="fullscreen-start">
+        <n-button type="primary" @click="toggleRun" data-testid="fullscreen-start">
           <template #icon>
-            <n-icon :component="Play16Regular" />
+            <n-icon :component="toggleIcon" />
           </template>
-          {{ startLabel }}
-        </n-button>
-        <n-button :disabled="!running" @click="pause" data-testid="fullscreen-pause">
-          <template #icon>
-            <n-icon :component="Pause16Regular" />
-          </template>
-          {{ t('pause') }}
+          {{ toggleLabel }}
         </n-button>
         <n-button :disabled="!canReset" @click="reset" data-testid="fullscreen-reset">
           <template #icon>
@@ -282,24 +267,15 @@ const displayRemainingMs = computed(() => {
 
 const formattedRemaining = computed(() => formatCountdown(displayRemainingMs.value))
 
-const isComplete = computed(
-  () => !running.value && durationMs.value > 0 && displayRemainingMs.value === 0,
-)
-
-const statusText = computed(() => {
-  if (isComplete.value) return t('statusComplete')
-  if (!running.value && durationMs.value > 0) return t('statusPaused')
-  return ''
-})
-
-const statusType = computed(() => (isComplete.value ? 'success' : undefined))
-
 const startLabel = computed(() => {
   if (displayRemainingMs.value === 0 || displayRemainingMs.value === durationMs.value) {
     return t('start')
   }
   return t('resume')
 })
+
+const toggleLabel = computed(() => (running.value ? t('pause') : startLabel.value))
+const toggleIcon = computed(() => (running.value ? Pause16Regular : Play16Regular))
 
 const canReset = computed(
   () => !running.value && durationMs.value > 0 && displayRemainingMs.value !== durationMs.value,
@@ -513,6 +489,14 @@ const pause = () => {
   pauseTicker()
 }
 
+const toggleRun = async () => {
+  if (running.value) {
+    pause()
+    return
+  }
+  await start()
+}
+
 const reset = () => {
   running.value = false
   endTime.value = 0
@@ -651,8 +635,6 @@ onMounted(() => {
     "notificationRequest": "Enable",
     "notificationTitle": "Timer finished",
     "notificationBody": "Time's up.",
-    "statusPaused": "Paused",
-    "statusComplete": "Completed",
     "errorTitle": "Error",
     "errorNoDuration": "Set a duration greater than zero."
   },
@@ -681,8 +663,6 @@ onMounted(() => {
     "notificationRequest": "启用",
     "notificationTitle": "倒计时结束",
     "notificationBody": "时间到了。",
-    "statusPaused": "已暂停",
-    "statusComplete": "已完成",
     "errorTitle": "错误",
     "errorNoDuration": "请设置大于 0 的时长。"
   },
@@ -711,8 +691,6 @@ onMounted(() => {
     "notificationRequest": "启用",
     "notificationTitle": "倒计时结束",
     "notificationBody": "时间到了。",
-    "statusPaused": "已暂停",
-    "statusComplete": "已完成",
     "errorTitle": "错误",
     "errorNoDuration": "请设置大于 0 的时长。"
   },
@@ -741,8 +719,6 @@ onMounted(() => {
     "notificationRequest": "啟用",
     "notificationTitle": "倒數計時結束",
     "notificationBody": "時間到了。",
-    "statusPaused": "已暫停",
-    "statusComplete": "已完成",
     "errorTitle": "錯誤",
     "errorNoDuration": "請設定大於 0 的時長。"
   },
@@ -771,8 +747,6 @@ onMounted(() => {
     "notificationRequest": "啟用",
     "notificationTitle": "倒數計時結束",
     "notificationBody": "時間到了。",
-    "statusPaused": "已暫停",
-    "statusComplete": "已完成",
     "errorTitle": "錯誤",
     "errorNoDuration": "請設定大於 0 的時長。"
   },
@@ -801,8 +775,6 @@ onMounted(() => {
     "notificationRequest": "Habilitar",
     "notificationTitle": "Temporizador finalizado",
     "notificationBody": "Se acabó el tiempo.",
-    "statusPaused": "Pausado",
-    "statusComplete": "Completado",
     "errorTitle": "Error",
     "errorNoDuration": "Configura una duración mayor que cero."
   },
@@ -831,8 +803,6 @@ onMounted(() => {
     "notificationRequest": "Activer",
     "notificationTitle": "Minuteur terminé",
     "notificationBody": "Le temps est écoulé.",
-    "statusPaused": "En pause",
-    "statusComplete": "Terminé",
     "errorTitle": "Erreur",
     "errorNoDuration": "Définissez une durée supérieure à zéro."
   },
@@ -861,8 +831,6 @@ onMounted(() => {
     "notificationRequest": "Aktivieren",
     "notificationTitle": "Timer beendet",
     "notificationBody": "Die Zeit ist abgelaufen.",
-    "statusPaused": "Pausiert",
-    "statusComplete": "Abgeschlossen",
     "errorTitle": "Fehler",
     "errorNoDuration": "Legen Sie eine Dauer größer als null fest."
   },
@@ -891,8 +859,6 @@ onMounted(() => {
     "notificationRequest": "Attiva",
     "notificationTitle": "Timer terminato",
     "notificationBody": "Il tempo è scaduto.",
-    "statusPaused": "In pausa",
-    "statusComplete": "Completato",
     "errorTitle": "Errore",
     "errorNoDuration": "Imposta una durata maggiore di zero."
   },
@@ -921,8 +887,6 @@ onMounted(() => {
     "notificationRequest": "有効化",
     "notificationTitle": "タイマー終了",
     "notificationBody": "時間になりました。",
-    "statusPaused": "一時停止",
-    "statusComplete": "完了",
     "errorTitle": "エラー",
     "errorNoDuration": "0 より大きい時間を設定してください。"
   },
@@ -951,8 +915,6 @@ onMounted(() => {
     "notificationRequest": "활성화",
     "notificationTitle": "타이머 종료",
     "notificationBody": "시간이 다 됐습니다.",
-    "statusPaused": "일시정지",
-    "statusComplete": "완료",
     "errorTitle": "오류",
     "errorNoDuration": "0보다 큰 시간을 설정하세요."
   },
@@ -981,8 +943,6 @@ onMounted(() => {
     "notificationRequest": "Включить",
     "notificationTitle": "Таймер завершён",
     "notificationBody": "Время вышло.",
-    "statusPaused": "Пауза",
-    "statusComplete": "Завершено",
     "errorTitle": "Ошибка",
     "errorNoDuration": "Установите длительность больше нуля."
   },
@@ -1011,8 +971,6 @@ onMounted(() => {
     "notificationRequest": "Ativar",
     "notificationTitle": "Temporizador concluído",
     "notificationBody": "O tempo acabou.",
-    "statusPaused": "Pausado",
-    "statusComplete": "Concluído",
     "errorTitle": "Erro",
     "errorNoDuration": "Defina uma duração maior que zero."
   },
@@ -1041,8 +999,6 @@ onMounted(() => {
     "notificationRequest": "تفعيل",
     "notificationTitle": "انتهى المؤقت",
     "notificationBody": "انتهى الوقت.",
-    "statusPaused": "متوقف",
-    "statusComplete": "مكتمل",
     "errorTitle": "خطأ",
     "errorNoDuration": "عيّن مدة أكبر من صفر."
   },
@@ -1071,8 +1027,6 @@ onMounted(() => {
     "notificationRequest": "सक्षम करें",
     "notificationTitle": "टाइमर समाप्त",
     "notificationBody": "समय समाप्त।",
-    "statusPaused": "रुका हुआ",
-    "statusComplete": "पूर्ण",
     "errorTitle": "त्रुटि",
     "errorNoDuration": "0 से अधिक अवधि सेट करें।"
   },
@@ -1101,8 +1055,6 @@ onMounted(() => {
     "notificationRequest": "Etkinleştir",
     "notificationTitle": "Zamanlayıcı bitti",
     "notificationBody": "Süre doldu.",
-    "statusPaused": "Duraklatıldı",
-    "statusComplete": "Tamamlandı",
     "errorTitle": "Hata",
     "errorNoDuration": "Sıfırdan büyük bir süre ayarlayın."
   },
@@ -1131,8 +1083,6 @@ onMounted(() => {
     "notificationRequest": "Inschakelen",
     "notificationTitle": "Timer afgelopen",
     "notificationBody": "De tijd is om.",
-    "statusPaused": "Gepauzeerd",
-    "statusComplete": "Voltooid",
     "errorTitle": "Fout",
     "errorNoDuration": "Stel een duur groter dan nul in."
   },
@@ -1161,8 +1111,6 @@ onMounted(() => {
     "notificationRequest": "Aktivera",
     "notificationTitle": "Timer klar",
     "notificationBody": "Tiden är ute.",
-    "statusPaused": "Pausad",
-    "statusComplete": "Klar",
     "errorTitle": "Fel",
     "errorNoDuration": "Ange en varaktighet större än noll."
   },
@@ -1191,8 +1139,6 @@ onMounted(() => {
     "notificationRequest": "Włącz",
     "notificationTitle": "Koniec timera",
     "notificationBody": "Czas minął.",
-    "statusPaused": "Wstrzymany",
-    "statusComplete": "Zakończony",
     "errorTitle": "Błąd",
     "errorNoDuration": "Ustaw czas większy niż zero."
   },
@@ -1221,8 +1167,6 @@ onMounted(() => {
     "notificationRequest": "Bật",
     "notificationTitle": "Hết giờ",
     "notificationBody": "Đã hết thời gian.",
-    "statusPaused": "Tạm dừng",
-    "statusComplete": "Hoàn thành",
     "errorTitle": "Lỗi",
     "errorNoDuration": "Hãy đặt thời lượng lớn hơn 0."
   },
@@ -1251,8 +1195,6 @@ onMounted(() => {
     "notificationRequest": "เปิดใช้งาน",
     "notificationTitle": "ตัวตั้งเวลาเสร็จสิ้น",
     "notificationBody": "หมดเวลาแล้ว",
-    "statusPaused": "หยุดชั่วคราว",
-    "statusComplete": "เสร็จสิ้น",
     "errorTitle": "ข้อผิดพลาด",
     "errorNoDuration": "ตั้งระยะเวลามากกว่า 0"
   },
@@ -1281,8 +1223,6 @@ onMounted(() => {
     "notificationRequest": "Aktifkan",
     "notificationTitle": "Timer selesai",
     "notificationBody": "Waktu habis.",
-    "statusPaused": "Dijeda",
-    "statusComplete": "Selesai",
     "errorTitle": "Kesalahan",
     "errorNoDuration": "Atur durasi lebih dari 0."
   },
@@ -1311,8 +1251,6 @@ onMounted(() => {
     "notificationRequest": "הפעל",
     "notificationTitle": "הטיימר הסתיים",
     "notificationBody": "הזמן נגמר.",
-    "statusPaused": "מושהה",
-    "statusComplete": "הושלם",
     "errorTitle": "שגיאה",
     "errorNoDuration": "הגדר משך גדול מאפס."
   },
@@ -1341,8 +1279,6 @@ onMounted(() => {
     "notificationRequest": "Aktifkan",
     "notificationTitle": "Pemasa tamat",
     "notificationBody": "Masa tamat.",
-    "statusPaused": "Dijeda",
-    "statusComplete": "Selesai",
     "errorTitle": "Ralat",
     "errorNoDuration": "Tetapkan tempoh lebih besar daripada sifar."
   },
@@ -1371,8 +1307,6 @@ onMounted(() => {
     "notificationRequest": "Aktiver",
     "notificationTitle": "Nedtelling ferdig",
     "notificationBody": "Tiden er ute.",
-    "statusPaused": "Pauset",
-    "statusComplete": "Fullført",
     "errorTitle": "Feil",
     "errorNoDuration": "Angi en varighet større enn null."
   }
