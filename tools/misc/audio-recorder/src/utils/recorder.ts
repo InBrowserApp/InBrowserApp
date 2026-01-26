@@ -1,9 +1,11 @@
 export const preferredMimeTypes = [
+  'audio/mp4;codecs="mp4a.40.2"',
+  'audio/mp4;codecs=mp4a.40.2',
+  'audio/mp4',
   'audio/webm;codecs=opus',
   'audio/webm',
   'audio/ogg;codecs=opus',
   'audio/ogg',
-  'audio/mp4',
 ] as const
 
 export function getSupportedMimeType(isTypeSupported?: (type: string) => boolean) {
