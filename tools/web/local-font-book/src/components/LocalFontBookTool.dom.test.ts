@@ -371,15 +371,20 @@ describe('LocalFontBookTool', () => {
       cssSnippet: string
     }
 
-    vm.activeFontId = vm.normalizedFonts[1].id
+    const [, second, third, fourth] = vm.normalizedFonts
+    if (!second || !third || !fourth) {
+      throw new Error('Missing normalized fonts')
+    }
+
+    vm.activeFontId = second.id
     await nextTick()
     expect(vm.previewStyle.fontFamily).toBe('Fallback Name')
 
-    vm.activeFontId = vm.normalizedFonts[2].id
+    vm.activeFontId = third.id
     await nextTick()
     expect(vm.previewStyle.fontFamily).toBe('PS-Fallback')
 
-    vm.activeFontId = vm.normalizedFonts[3].id
+    vm.activeFontId = fourth.id
     await nextTick()
     expect(Object.keys(vm.previewStyle).length).toBe(0)
     expect(vm.cssSnippet).toBe('')
