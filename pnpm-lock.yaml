@@ -39,6 +39,9 @@ catalogs:
     '@noble/ed25519':
       specifier: ^3.0.0
       version: 3.0.0
+    '@noble/hashes':
+      specifier: ^1.8.0
+      version: 1.8.0
     '@paralleldrive/cuid2':
       specifier: ^3.0.6
       version: 3.0.6
@@ -972,6 +975,12 @@ importers:
       '@tools/sha256-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha256-hash-text-or-file
+      '@tools/sha3-256-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/sha3-256-hash-text-or-file
+      '@tools/sha3-512-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/sha3-512-hash-text-or-file
       '@tools/sha384-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha384-hash-text-or-file
@@ -2505,6 +2514,72 @@ importers:
 
   tools/hash/sha256-hash-text-or-file:
     dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/sha3-256-hash-text-or-file:
+    dependencies:
+      '@noble/hashes':
+        specifier: 'catalog:'
+        version: 1.8.0
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/sha3-512-hash-text-or-file:
+    dependencies:
+      '@noble/hashes':
+        specifier: 'catalog:'
+        version: 1.8.0
       '@shared/tools':
         specifier: workspace:*
         version: link:../../../shared/tools

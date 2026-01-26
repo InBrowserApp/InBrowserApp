@@ -24,6 +24,8 @@ import { routes as networkToolsRoutes } from '@tools/network-tools/routes'
 import { routes as pdfToolsRoutes } from '@tools/pdf-tools/routes'
 import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
 import { routes as sha256HashTextOrFileRoutes } from '@tools/sha256-hash-text-or-file/routes'
+import { routes as sha3_256HashTextOrFileRoutes } from '@tools/sha3-256-hash-text-or-file/routes'
+import { routes as sha3_512HashTextOrFileRoutes } from '@tools/sha3-512-hash-text-or-file/routes'
 import { routes as sha384HashTextOrFileRoutes } from '@tools/sha384-hash-text-or-file/routes'
 import { routes as sha512HashTextOrFileRoutes } from '@tools/sha512-hash-text-or-file/routes'
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
@@ -174,6 +176,8 @@ export const routes: ToolRoute[] = [
   ...pdfToolsRoutes,
   ...imageToolsRoutes,
   ...sha256HashTextOrFileRoutes,
+  ...sha3_256HashTextOrFileRoutes,
+  ...sha3_512HashTextOrFileRoutes,
   ...sha384HashTextOrFileRoutes,
   ...sha512HashTextOrFileRoutes,
   ...sha1HashTextOrFileRoutes,

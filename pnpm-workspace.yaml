@@ -19,6 +19,7 @@ catalog:
   '@jspawn/qpdf-wasm': ^0.0.2
   '@jsquash/oxipng': ^2.3.0
   '@noble/ed25519': ^3.0.0
+  '@noble/hashes': ^1.8.0
   '@paralleldrive/cuid2': ^3.0.6
   '@peculiar/asn1-ecc': ^2.6.0
   '@peculiar/asn1-pkcs8': ^2.6.0
