@@ -20,7 +20,7 @@ describe('encodeBase85', () => {
     expect(encodeBase85(new Uint8Array([0, 0, 0, 0]))).toBe('z')
     expect(encodeBase85(new Uint8Array([0, 0, 0, 0, 0]))).toBe('z!!')
     expect(encodeBase85(toBytes('foo'))).toBe('AoDS')
-    expect(encodeBase85(toBytes('foo').buffer)).toBe('AoDS')
+    expect(encodeBase85(toBytes('foo').buffer as ArrayBuffer)).toBe('AoDS')
   })
 
   it('encodes Z85 values', () => {
