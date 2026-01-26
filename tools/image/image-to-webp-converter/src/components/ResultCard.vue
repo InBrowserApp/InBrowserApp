@@ -70,6 +70,7 @@ function formatPercent(value: number) {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid var(--n-border-color);
+  box-sizing: border-box;
   background: #f5f5f5;
   display: flex;
   align-items: center;
