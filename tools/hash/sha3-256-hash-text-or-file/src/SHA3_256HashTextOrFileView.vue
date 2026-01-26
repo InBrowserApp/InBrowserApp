@@ -15,6 +15,8 @@ import WhatIsSHA3_256 from './WhatIsSHA3_256.vue'
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {
   const arrayBuffer = await blob.arrayBuffer()
   const hashBytes = sha3_256(new Uint8Array(arrayBuffer))
-  return hashBytes.buffer.slice(hashBytes.byteOffset, hashBytes.byteOffset + hashBytes.byteLength)
+  const buffer = new ArrayBuffer(hashBytes.byteLength)
+  new Uint8Array(buffer).set(hashBytes)
+  return buffer
 }
 </script>
