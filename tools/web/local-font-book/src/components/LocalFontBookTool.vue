@@ -178,8 +178,10 @@
           </n-card>
 
           <n-card class="panel">
+            <div class="panel__header">
+              <div class="panel__title">{{ t('details-title') }}</div>
+            </div>
             <div class="details">
-              <n-text strong>{{ t('details-title') }}</n-text>
               <n-ul class="details-list">
                 <n-li>{{ t('details-family') }}: {{ activeFont?.family || '--' }}</n-li>
                 <n-li>{{ t('details-full-name') }}: {{ activeFont?.fullName || '--' }}</n-li>
