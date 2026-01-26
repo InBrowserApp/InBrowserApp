@@ -10,7 +10,7 @@
               <div class="panel__subtitle">{{ t('library-hint') }}</div>
             </div>
             <n-button
-              type="primary"
+              text
               size="small"
               :disabled="!isSupported || isLoading"
               :loading="isLoading"
@@ -18,7 +18,7 @@
               data-testid="load-fonts"
             >
               <template #icon>
-                <n-icon :component="ArrowDownload16Regular" />
+                <n-icon :component="FolderOpen16Regular" />
               </template>
               {{ t('load-button') }}
             </n-button>
@@ -67,7 +67,7 @@
             {{ fontCountLabel }}
           </n-text>
 
-          <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 520px">
+          <n-scrollbar class="font-scroll" data-testid="font-list" style="height: 90vh">
             <div class="font-list">
               <template v-if="displayGroups.length">
                 <div v-for="group in displayGroups" :key="group.id" class="font-group">
@@ -120,13 +120,13 @@
             />
 
             <div class="control-grid">
-              <n-form-item :label="t('preview-size')">
+              <n-form-item :label="t('preview-size')" class="control-item">
                 <n-flex align="center" :size="12" class="control-row">
                   <n-slider v-model:value="fontSize" :min="12" :max="96" />
                   <n-input-number v-model:value="fontSize" :min="12" :max="96" size="small" />
                 </n-flex>
               </n-form-item>
-              <n-form-item :label="t('preview-line-height')">
+              <n-form-item :label="t('preview-line-height')" class="control-item">
                 <n-flex align="center" :size="12" class="control-row">
                   <n-slider v-model:value="lineHeight" :min="1" :max="2.4" :step="0.05" />
                   <n-input-number
@@ -224,7 +224,7 @@ import { useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
 
 type LocalFontData = {
   family: string
@@ -538,6 +538,7 @@ function wrapFontFamily(family: string) {
 
 .search-input {
   width: 100%;
+  margin-bottom: 12px;
 }
 
 .filter-row :deep(.n-select) {
@@ -617,7 +618,26 @@ function wrapFontFamily(family: string) {
 
 .control-grid {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+}
+
+.control-item {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.9);
+  padding: 10px 12px;
+}
+
+.control-item :deep(.n-form-item-label) {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(100, 116, 139, 0.9);
+  margin-bottom: 6px;
+}
+
+.control-item :deep(.n-form-item-blank) {
+  width: 100%;
 }
 
 .control-row {
