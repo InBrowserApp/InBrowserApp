@@ -117,7 +117,7 @@ class Hasher {
    * @param {number} [size=this.state.hash.length] - Limit hash size (in chunks)
    * @returns {string}
    */
-  getStateHash(size) {
+  getStateHash(_size) {
     return ''
   }
 
@@ -129,7 +129,7 @@ class Hasher {
    * @param {number} length
    */
   addPaddingPKCS7(length) {
-    this.state.message += new Array(length + 1).join(String.fromCharCode(length))
+    this.state.message += String.fromCharCode(length).repeat(length)
   }
 
   /**
@@ -140,7 +140,7 @@ class Hasher {
    * @param {number} length
    */
   addPaddingISO7816(length) {
-    this.state.message += '\x80' + new Array(length).join('\x00')
+    this.state.message += '\x80' + '\x00'.repeat(Math.max(0, length - 1))
   }
 
   /**
@@ -151,7 +151,7 @@ class Hasher {
    * @param {number} length
    */
   addPaddingZero(length) {
-    this.state.message += new Array(length + 1).join('\x00')
+    this.state.message += '\x00'.repeat(length)
   }
 }
 
@@ -201,7 +201,7 @@ class Hasher32le extends Hasher {
    * @protected
    * @param {number[]} M
    */
-  processBlock(M) {}
+  processBlock(_block) {}
 
   /**
    * Get hash from state
@@ -210,8 +210,8 @@ class Hasher32le extends Hasher {
    * @param {number} [size=this.state.hash.length] - Limit hash size (in chunks)
    * @returns {string}
    */
-  getStateHash(size) {
-    size = size || this.state.hash.length
+  getStateHash(_size) {
+    const size = _size || this.state.hash.length
     let hash = ''
     for (let i = 0; i < size; i++) {
       hash +=
