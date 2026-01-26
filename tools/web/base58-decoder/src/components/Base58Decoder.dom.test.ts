@@ -191,8 +191,9 @@ describe('Base58Decoder', () => {
     await input.vm.$emit('update:value', file)
     await flushPromises()
 
-    const state = (wrapper.vm.$ as { setupState: { storedText: string; textOrFile: unknown } })
-      .setupState
+    const state = (
+      wrapper.vm.$ as unknown as { setupState: { storedText: string; textOrFile: unknown } }
+    ).setupState
     state.storedText = 'JxF12TrwUP45BMd'
     await flushPromises()
 
