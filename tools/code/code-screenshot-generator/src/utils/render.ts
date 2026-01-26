@@ -379,7 +379,7 @@ export const buildHtmlSnippet = (
   lines: StyledToken[][],
   layout: CodeShotLayout,
   theme: Theme,
-  _background: BackgroundConfig,
+  background: BackgroundConfig,
 ): string => {
   const lineCount = Math.max(lines.length, 1)
   const lineNumbers = buildLineNumbers(lineCount).join('\n')
@@ -391,8 +391,16 @@ export const buildHtmlSnippet = (
     )
     .join('\n')
 
+  const backgroundCss = resolveBackgroundCss(background)
   const headerHeight = layout.windowStyle === 'none' ? 0 : Math.max(layout.fontSize * 1.8, 34)
   const shadow = layout.shadow ? '0 18px 45px rgba(15, 23, 42, 0.35)' : 'none'
+
+  const containerStyle = [
+    `display: inline-block`,
+    `padding: ${layout.framePadding}px`,
+    `background: ${backgroundCss}`,
+    `border-radius: ${layout.radius + 8}px`,
+  ].join('; ')
 
   const cardStyle = [
     `background: ${theme.background}`,
@@ -401,7 +409,6 @@ export const buildHtmlSnippet = (
     `border: 1px solid ${theme.border}`,
     `overflow: hidden`,
     `display: inline-block`,
-    `margin: ${layout.framePadding}px`,
   ].join('; ')
 
   const headerStyle = [
@@ -456,11 +463,13 @@ export const buildHtmlSnippet = (
     ? `<pre style="${lineNumberStyle}">${lineNumbers}</pre>`
     : ''
 
-  return `<div style="${cardStyle}">
-  ${headerMarkup}
-  <div style="${bodyStyle}">
-    ${lineNumberMarkup}
-    <pre style="${codeStyle}">${codeHtml}</pre>
+  return `<div style="${containerStyle}">
+  <div style="${cardStyle}">
+    ${headerMarkup}
+    <div style="${bodyStyle}">
+      ${lineNumberMarkup}
+      <pre style="${codeStyle}">${codeHtml}</pre>
+    </div>
   </div>
 </div>`
 }
