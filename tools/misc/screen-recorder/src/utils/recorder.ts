@@ -1,10 +1,10 @@
 export const preferredMimeTypes = [
+  'video/mp4',
   'video/webm;codecs=vp9,opus',
   'video/webm;codecs=vp8,opus',
   'video/webm;codecs=vp9',
   'video/webm;codecs=vp8',
   'video/webm',
-  'video/mp4',
 ] as const
 
 export function getSupportedMimeType(isTypeSupported?: (type: string) => boolean) {

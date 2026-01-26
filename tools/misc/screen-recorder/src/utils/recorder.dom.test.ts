@@ -8,8 +8,8 @@ import {
 
 describe('screen recorder utils', () => {
   it('picks the first supported mime type', () => {
-    const isSupported = (type: string) => type === 'video/webm'
-    expect(getSupportedMimeType(isSupported)).toBe('video/webm')
+    const isSupported = (type: string) => type === 'video/mp4'
+    expect(getSupportedMimeType(isSupported)).toBe('video/mp4')
   })
 
   it('returns empty string when no types match', () => {
