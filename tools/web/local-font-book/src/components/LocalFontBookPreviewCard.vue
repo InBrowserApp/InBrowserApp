@@ -9,7 +9,7 @@
         @click="toggleBackground"
       >
         <template #icon>
-          <n-icon :component="ArrowSwap20Regular" />
+          <n-icon :component="backgroundIcon" />
         </template>
       </n-button>
     </template>
@@ -46,9 +46,10 @@
 </template>
 
 <script setup lang="ts">
-import type { CSSProperties } from 'vue'
+import { computed, type CSSProperties } from 'vue'
 import { NButton, NCard, NCode, NFormItem, NIcon, NInput, NText } from 'naive-ui'
-import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
+import WeatherMoon16Regular from '@vicons/fluent/WeatherMoon16Regular'
+import WeatherSunny16Regular from '@vicons/fluent/WeatherSunny16Regular'
 import { CopyToClipboardTooltip } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 import type { DisplayFont } from './types'
@@ -64,6 +65,10 @@ const props = defineProps<{
 const emit = defineEmits(['update:sampleText', 'update:darkBackground'])
 
 const { t } = useI18n()
+
+const backgroundIcon = computed(() =>
+  props.darkBackground ? WeatherMoon16Regular : WeatherSunny16Regular,
+)
 
 const toggleBackground = () => {
   emit('update:darkBackground', !props.darkBackground)
