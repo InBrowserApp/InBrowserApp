@@ -38,6 +38,9 @@ import { routes as hashToolsRoutes } from '@tools/hash-tools/routes'
 import { routes as sriHashGeneratorRoutes } from '@tools/sri-hash-generator/routes'
 import { routes as crcChecksumCalculatorRoutes } from '@tools/crc-checksum-calculator/routes'
 import { routes as cityhash64HashTextOrFileRoutes } from '@tools/cityhash64-hash-text-or-file/routes'
+import { routes as murmurhash3X64_128HashTextOrFileRoutes } from '@tools/murmurhash3-x64-128-hash-text-or-file/routes'
+import { routes as murmurhash3X86_128HashTextOrFileRoutes } from '@tools/murmurhash3-x86-128-hash-text-or-file/routes'
+import { routes as murmurhash3X86_32HashTextOrFileRoutes } from '@tools/murmurhash3-x86-32-hash-text-or-file/routes'
 import { routes as xxhashXxh32HashTextOrFileRoutes } from '@tools/xxhash-xxh32-hash-text-or-file/routes'
 import { routes as xxhashXxh64HashTextOrFileRoutes } from '@tools/xxhash-xxh64-hash-text-or-file/routes'
 import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-or-file/routes'
@@ -193,6 +196,9 @@ export const routes: ToolRoute[] = [
   ...sriHashGeneratorRoutes,
   ...crcChecksumCalculatorRoutes,
   ...cityhash64HashTextOrFileRoutes,
+  ...murmurhash3X86_32HashTextOrFileRoutes,
+  ...murmurhash3X86_128HashTextOrFileRoutes,
+  ...murmurhash3X64_128HashTextOrFileRoutes,
   ...xxhashXxh32HashTextOrFileRoutes,
   ...xxhashXxh64HashTextOrFileRoutes,
   ...blake2bHashTextOrFileRoutes,
