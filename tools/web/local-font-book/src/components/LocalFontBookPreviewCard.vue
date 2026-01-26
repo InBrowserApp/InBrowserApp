@@ -48,8 +48,8 @@
 <script setup lang="ts">
 import { computed, type CSSProperties } from 'vue'
 import { NButton, NCard, NCode, NFormItem, NIcon, NInput, NText } from 'naive-ui'
-import WeatherMoon16Regular from '@vicons/fluent/WeatherMoon16Regular'
-import WeatherSunny16Regular from '@vicons/fluent/WeatherSunny16Regular'
+import MoonOutline from '@vicons/ionicons5/MoonOutline'
+import SunnyOutline from '@vicons/ionicons5/SunnyOutline'
 import { CopyToClipboardTooltip } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 import type { DisplayFont } from './types'
@@ -66,9 +66,7 @@ const emit = defineEmits(['update:sampleText', 'update:darkBackground'])
 
 const { t } = useI18n()
 
-const backgroundIcon = computed(() =>
-  props.darkBackground ? WeatherMoon16Regular : WeatherSunny16Regular,
-)
+const backgroundIcon = computed(() => (props.darkBackground ? MoonOutline : SunnyOutline))
 
 const toggleBackground = () => {
   emit('update:darkBackground', !props.darkBackground)

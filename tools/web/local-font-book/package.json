@@ -7,9 +7,10 @@
     "./routes": "./src/routes.ts"
   },
   "dependencies": {
-    "@vicons/fluent": "catalog:",
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vicons/ionicons5": "catalog:",
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
