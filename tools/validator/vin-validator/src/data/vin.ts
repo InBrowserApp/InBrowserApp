@@ -47,7 +47,7 @@ function computeCheckDigit(vin: string): string {
   let sum = 0
 
   for (let index = 0; index < vin.length; index += 1) {
-    const char = vin[index]
+    const char = vin.charAt(index)
     const weight = weights[index] as number
 
     const numericValue = Number(char)
@@ -67,7 +67,7 @@ export function validateVIN(input: string): VINValidationResult {
 
   const expectedCheckDigit =
     isLengthValid && isCharacterValid ? computeCheckDigit(normalized) : null
-  const actualCheckDigit = isLengthValid ? normalized[8] : null
+  const actualCheckDigit = isLengthValid ? normalized.charAt(8) : null
   const isCheckDigitValid = expectedCheckDigit !== null && actualCheckDigit === expectedCheckDigit
   const isValid = isLengthValid && isCharacterValid && isCheckDigitValid
 
