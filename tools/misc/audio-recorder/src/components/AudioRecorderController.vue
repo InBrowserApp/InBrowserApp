@@ -217,9 +217,12 @@ function cleanupStream() {
   }
 }
 
-function attachRecorderEvents(recorder: MediaRecorder) {
+function attachRecorderEvents(recorder: MediaRecorder, nextMimeType: string) {
   recorder.onstart = () => {
     recorderState.value = 'recording'
+    recordingBlob.value = null
+    fileName.value = defaultFileName()
+    mimeType.value = nextMimeType
     elapsedMs.value = 0
     startTimer()
   }
@@ -237,10 +240,12 @@ function attachRecorderEvents(recorder: MediaRecorder) {
   recorder.onstop = () => {
     recorderState.value = 'inactive'
     stopTimer()
-    const blob = new Blob(recordedChunks, { type: recorder.mimeType || mimeType.value })
+    const blobType = recorder.mimeType || nextMimeType || mimeType.value
+    const blob = new Blob(recordedChunks, { type: blobType })
     recordingBlob.value = blob
-    mimeType.value = blob.type || recorder.mimeType || mimeType.value
+    mimeType.value = blob.type || blobType
     mediaRecorder.value = null
+    recordedChunks.length = 0
     cleanupStream()
   }
 }
@@ -252,10 +257,6 @@ async function startRecording() {
   errorMessage.value = ''
   isPreparing.value = true
   recordedChunks.length = 0
-  recordingBlob.value = null
-  mimeType.value = ''
-  elapsedMs.value = 0
-
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
     mediaStream.value = stream
@@ -268,9 +269,8 @@ async function startRecording() {
       recorder = new MediaRecorder(stream)
     }
     mediaRecorder.value = recorder
-    mimeType.value = recorder.mimeType || supportedMimeType
-    fileName.value = defaultFileName()
-    attachRecorderEvents(recorder)
+    const nextMimeType = recorder.mimeType || supportedMimeType
+    attachRecorderEvents(recorder, nextMimeType)
     recorder.start(1000)
   } catch (err) {
     cleanupStream()

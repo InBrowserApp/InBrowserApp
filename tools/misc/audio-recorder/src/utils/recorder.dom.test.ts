@@ -17,6 +17,10 @@ describe('recorder utils', () => {
     expect(getSupportedMimeType(isSupported)).toBe('')
   })
 
+  it('returns empty string when support check is missing', () => {
+    expect(getSupportedMimeType()).toBe('')
+  })
+
   it('maps extensions from mime types', () => {
     expect(getExtensionForMimeType('audio/webm;codecs=opus')).toBe('webm')
     expect(getExtensionForMimeType('audio/ogg')).toBe('ogg')
@@ -36,5 +40,6 @@ describe('recorder utils', () => {
     expect(formatFileSize(12)).toBe('12 B')
     expect(formatFileSize(2048)).toBe('2.0 KB')
     expect(formatFileSize(5 * 1024 * 1024)).toBe('5.0 MB')
+    expect(formatFileSize(5 * 1024 * 1024 * 1024)).toBe('5.0 GB')
   })
 })

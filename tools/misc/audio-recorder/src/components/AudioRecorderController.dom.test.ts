@@ -66,6 +66,27 @@ class FakeMediaRecorder {
   })
 }
 
+const globalStubs = {
+  ToolSection: { template: '<section><slot /></section>' },
+  ToolSectionHeader: { template: '<h3><slot /></h3>' },
+  NAlert: { template: '<div><slot /></div>' },
+  NButton: { template: '<button><slot /></button>' },
+  NFlex: { template: '<div><slot /></div>' },
+  NGrid: { template: '<div><slot /></div>' },
+  NGi: { template: '<div><slot /></div>' },
+  NIcon: { template: '<span />' },
+  NInput: { template: '<input />' },
+  NTag: { template: '<span><slot /></span>' },
+  NText: { template: '<span><slot /></span>' },
+}
+
+const mountController = () =>
+  mount(AudioRecorderController, {
+    global: {
+      stubs: globalStubs,
+    },
+  })
+
 describe('AudioRecorderController', () => {
   beforeEach(() => {
     FakeMediaRecorder.instances = []
@@ -80,6 +101,7 @@ describe('AudioRecorderController', () => {
     } else {
       vi.stubGlobal('MediaRecorder', undefined)
     }
+    vi.useRealTimers()
     vi.restoreAllMocks()
   })
 
@@ -87,23 +109,7 @@ describe('AudioRecorderController', () => {
     setMediaDevices(undefined)
     vi.stubGlobal('MediaRecorder', undefined)
 
-    const wrapper = mount(AudioRecorderController, {
-      global: {
-        stubs: {
-          ToolSection: { template: '<section><slot /></section>' },
-          ToolSectionHeader: { template: '<h3><slot /></h3>' },
-          NAlert: { template: '<div><slot /></div>' },
-          NButton: { template: '<button><slot /></button>' },
-          NFlex: { template: '<div><slot /></div>' },
-          NGrid: { template: '<div><slot /></div>' },
-          NGi: { template: '<div><slot /></div>' },
-          NIcon: { template: '<span />' },
-          NInput: { template: '<input />' },
-          NTag: { template: '<span><slot /></span>' },
-          NText: { template: '<span><slot /></span>' },
-        },
-      },
-    })
+    const wrapper = mountController()
 
     expect(wrapper.text()).toContain('notSupported')
   })
@@ -114,23 +120,7 @@ describe('AudioRecorderController', () => {
     const getUserMedia = vi.fn().mockResolvedValue(stream)
     setMediaDevices({ getUserMedia } as unknown as MediaDevices)
 
-    const wrapper = mount(AudioRecorderController, {
-      global: {
-        stubs: {
-          ToolSection: { template: '<section><slot /></section>' },
-          ToolSectionHeader: { template: '<h3><slot /></h3>' },
-          NAlert: { template: '<div><slot /></div>' },
-          NButton: { template: '<button><slot /></button>' },
-          NFlex: { template: '<div><slot /></div>' },
-          NGrid: { template: '<div><slot /></div>' },
-          NGi: { template: '<div><slot /></div>' },
-          NIcon: { template: '<span />' },
-          NInput: { template: '<input />' },
-          NTag: { template: '<span><slot /></span>' },
-          NText: { template: '<span><slot /></span>' },
-        },
-      },
-    })
+    const wrapper = mountController()
 
     const vm = wrapper.vm as unknown as {
       startRecording: () => Promise<void>
@@ -154,23 +144,7 @@ describe('AudioRecorderController', () => {
     const getUserMedia = vi.fn().mockRejectedValue(error)
     setMediaDevices({ getUserMedia } as unknown as MediaDevices)
 
-    const wrapper = mount(AudioRecorderController, {
-      global: {
-        stubs: {
-          ToolSection: { template: '<section><slot /></section>' },
-          ToolSectionHeader: { template: '<h3><slot /></h3>' },
-          NAlert: { template: '<div><slot /></div>' },
-          NButton: { template: '<button><slot /></button>' },
-          NFlex: { template: '<div><slot /></div>' },
-          NGrid: { template: '<div><slot /></div>' },
-          NGi: { template: '<div><slot /></div>' },
-          NIcon: { template: '<span />' },
-          NInput: { template: '<input />' },
-          NTag: { template: '<span><slot /></span>' },
-          NText: { template: '<span><slot /></span>' },
-        },
-      },
-    })
+    const wrapper = mountController()
 
     const vm = wrapper.vm as unknown as {
       startRecording: () => Promise<void>
@@ -178,8 +152,31 @@ describe('AudioRecorderController', () => {
     }
 
     await vm.startRecording()
+    await wrapper.vm.$nextTick()
 
     expect(vm.permissionDenied).toBe(true)
+    expect(wrapper.text()).toContain('permissionDenied')
+    expect(wrapper.text()).toContain('retryPermission')
+  })
+
+  it('shows resume control when paused', async () => {
+    const stream = { getTracks: () => [] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      pauseRecording: () => void
+    }
+
+    await vm.startRecording()
+
+    vm.pauseRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.text()).toContain('resume')
   })
 
   it('pauses and resumes recording', async () => {
@@ -187,23 +184,7 @@ describe('AudioRecorderController', () => {
     const getUserMedia = vi.fn().mockResolvedValue(stream)
     setMediaDevices({ getUserMedia } as unknown as MediaDevices)
 
-    const wrapper = mount(AudioRecorderController, {
-      global: {
-        stubs: {
-          ToolSection: { template: '<section><slot /></section>' },
-          ToolSectionHeader: { template: '<h3><slot /></h3>' },
-          NAlert: { template: '<div><slot /></div>' },
-          NButton: { template: '<button><slot /></button>' },
-          NFlex: { template: '<div><slot /></div>' },
-          NGrid: { template: '<div><slot /></div>' },
-          NGi: { template: '<div><slot /></div>' },
-          NIcon: { template: '<span />' },
-          NInput: { template: '<input />' },
-          NTag: { template: '<span><slot /></span>' },
-          NText: { template: '<span><slot /></span>' },
-        },
-      },
-    })
+    const wrapper = mountController()
 
     const vm = wrapper.vm as unknown as {
       startRecording: () => Promise<void>
@@ -219,5 +200,82 @@ describe('AudioRecorderController', () => {
     const recorder = FakeMediaRecorder.instances[0]
     expect(recorder?.pause).toHaveBeenCalled()
     expect(recorder?.resume).toHaveBeenCalled()
+  })
+
+  it('keeps existing recording when start fails', async () => {
+    const getUserMedia = vi.fn().mockRejectedValue(new Error('boom'))
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      recordingBlob: Blob | null
+      mimeType: string
+      fileName: string
+      elapsedMs: number
+    }
+
+    const existingBlob = new Blob(['old'], { type: 'audio/webm' })
+    vm.recordingBlob = existingBlob
+    vm.mimeType = 'audio/webm'
+    vm.fileName = 'existing'
+    vm.elapsedMs = 1200
+
+    await wrapper.vm.$nextTick()
+    await vm.startRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(vm.recordingBlob).not.toBeNull()
+    expect(vm.recordingBlob?.size).toBe(existingBlob.size)
+    expect(vm.recordingBlob?.type).toBe(existingBlob.type)
+    expect(vm.mimeType).toBe('audio/webm')
+    expect(vm.fileName).toBe('existing')
+    expect(vm.elapsedMs).toBe(1200)
+    expect(wrapper.text()).toContain('recordingFailed')
+  })
+
+  it('renders output details and clears recording', async () => {
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      recordingBlob: Blob | null
+      mimeType: string
+      fileName: string
+      clearRecording: () => void
+    }
+
+    vm.recordingBlob = new Blob(['data'], { type: 'audio/webm' })
+    vm.mimeType = 'audio/webm'
+    vm.fileName = 'demo'
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.find('audio').exists()).toBe(true)
+    expect(wrapper.text()).toContain('download')
+    expect(wrapper.text()).toContain('clear')
+
+    vm.clearRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.find('audio').exists()).toBe(false)
+  })
+
+  it('updates elapsed time while recording', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2020-01-01T00:00:00Z'))
+
+    const stream = { getTracks: () => [] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      elapsedMs: number
+    }
+
+    await vm.startRecording()
+    vi.advanceTimersByTime(400)
+    await wrapper.vm.$nextTick()
+
+    expect(vm.elapsedMs).toBeGreaterThan(0)
   })
 })
