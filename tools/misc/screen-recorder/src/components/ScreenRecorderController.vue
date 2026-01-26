@@ -103,7 +103,7 @@
 
           <n-flex align="center" :size="8" class="filename-row">
             <n-text depth="3">{{ t('fileName') }}</n-text>
-            <n-input v-model:value="fileName" :placeholder="t('fileNamePlaceholder')" />
+            <n-text>{{ fileName || t('fileNamePlaceholder') }}</n-text>
             <n-text>.{{ fileExtension }}</n-text>
           </n-flex>
 
@@ -139,7 +139,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NInput, NSwitch, NTag, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NSwitch, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import RecordIcon from '@vicons/fluent/Record16Filled'
@@ -437,10 +437,6 @@ onBeforeUnmount(() => {
 <style scoped>
 .video-player {
   width: 100%;
-}
-
-.filename-row :deep(.n-input) {
-  flex: 1;
 }
 
 .setting-row {
