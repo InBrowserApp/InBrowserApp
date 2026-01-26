@@ -1017,6 +1017,12 @@ importers:
       '@tools/sha512-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha512-hash-text-or-file
+      '@tools/shake128-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/shake128-hash-text-or-file
+      '@tools/shake256-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/shake256-hash-text-or-file
       '@tools/sitemap-xml-generator':
         specifier: workspace:*
         version: link:../../tools/web/sitemap-xml-generator
