@@ -54,6 +54,8 @@ import { routes as murmurhash3X86_128HashTextOrFileRoutes } from '@tools/murmurh
 import { routes as murmurhash3X86_32HashTextOrFileRoutes } from '@tools/murmurhash3-x86-32-hash-text-or-file/routes'
 import { routes as xxhashXxh32HashTextOrFileRoutes } from '@tools/xxhash-xxh32-hash-text-or-file/routes'
 import { routes as xxhashXxh64HashTextOrFileRoutes } from '@tools/xxhash-xxh64-hash-text-or-file/routes'
+import { routes as xxhashXxh3_64HashTextOrFileRoutes } from '@tools/xxhash-xxh3-64-hash-text-or-file/routes'
+import { routes as xxhashXxh3_128HashTextOrFileRoutes } from '@tools/xxhash-xxh3-128-hash-text-or-file/routes'
 import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-or-file/routes'
 import { routes as blake2sHashTextOrFileRoutes } from '@tools/blake2s-hash-text-or-file/routes'
 import { routes as blake3HashTextOrFileRoutes } from '@tools/blake3-hash-text-or-file/routes'
@@ -230,6 +232,8 @@ export const routes: ToolRoute[] = [
   ...murmurhash3X64_128HashTextOrFileRoutes,
   ...xxhashXxh32HashTextOrFileRoutes,
   ...xxhashXxh64HashTextOrFileRoutes,
+  ...xxhashXxh3_64HashTextOrFileRoutes,
+  ...xxhashXxh3_128HashTextOrFileRoutes,
   ...blake2bHashTextOrFileRoutes,
   ...blake2sHashTextOrFileRoutes,
   ...blake3HashTextOrFileRoutes,

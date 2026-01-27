@@ -182,6 +182,8 @@
     "@tools/xml-to-json-converter": "workspace:*",
     "@tools/xxhash-xxh32-hash-text-or-file": "workspace:*",
     "@tools/xxhash-xxh64-hash-text-or-file": "workspace:*",
+    "@tools/xxhash-xxh3-64-hash-text-or-file": "workspace:*",
+    "@tools/xxhash-xxh3-128-hash-text-or-file": "workspace:*",
     "@tools/yaml-to-json-converter": "workspace:*",
     "@tools/yaml-to-toml-converter": "workspace:*",
     "@vueuse/core": "catalog:",
