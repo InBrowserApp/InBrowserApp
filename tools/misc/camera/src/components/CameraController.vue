@@ -811,6 +811,9 @@ onBeforeUnmount(() => {
   padding: 4px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.4);
+  width: fit-content;
+  max-width: 100%;
+  justify-self: start;
 }
 
 .mode-tab {
