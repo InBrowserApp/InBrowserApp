@@ -76,6 +76,7 @@ import { routes as fileToDataUriConverterRoutes } from '@tools/file-to-data-uri-
 import { routes as dataUriToFileConverterRoutes } from '@tools/data-uri-to-file-converter/routes'
 import { routes as urlParserBuilderRoutes } from '@tools/url-parser-builder/routes'
 import { routes as userAgentParserRoutes } from '@tools/user-agent-parser/routes'
+import { routes as cookieParserRoutes } from '@tools/cookie-parser/routes'
 import { routes as basicAuthGeneratorRoutes } from '@tools/basic-auth-generator/routes'
 import { routes as basicAuthDecoderRoutes } from '@tools/basic-auth-decoder/routes'
 import { routes as jwtSignerRoutes } from '@tools/jwt-signer/routes'
@@ -256,6 +257,7 @@ export const routes: ToolRoute[] = [
   ...dataUriToFileConverterRoutes,
   ...urlParserBuilderRoutes,
   ...userAgentParserRoutes,
+  ...cookieParserRoutes,
   ...basicAuthGeneratorRoutes,
   ...basicAuthDecoderRoutes,
   ...jwtSignerRoutes,

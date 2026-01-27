@@ -78,6 +78,7 @@ import { toolInfo as fileToDataUriConverterToolInfo } from '@tools/file-to-data-
 import { toolInfo as dataUriToFileConverterToolInfo } from '@tools/data-uri-to-file-converter'
 import { toolInfo as urlParserBuilderToolInfo } from '@tools/url-parser-builder'
 import { toolInfo as userAgentParserToolInfo } from '@tools/user-agent-parser'
+import { toolInfo as cookieParserToolInfo } from '@tools/cookie-parser'
 import { toolInfo as basicAuthGeneratorToolInfo } from '@tools/basic-auth-generator'
 import { toolInfo as basicAuthDecoderToolInfo } from '@tools/basic-auth-decoder'
 import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
@@ -297,6 +298,7 @@ export const tools: ToolInfo[] = [
   dataUriToFileConverterToolInfo,
   urlParserBuilderToolInfo,
   userAgentParserToolInfo,
+  cookieParserToolInfo,
   basicAuthGeneratorToolInfo,
   basicAuthDecoderToolInfo,
   jwtSignerToolInfo,
