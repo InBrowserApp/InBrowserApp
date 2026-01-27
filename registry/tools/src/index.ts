@@ -58,6 +58,8 @@ import { toolInfo as murmurhash3X86_128HashTextOrFileToolInfo } from '@tools/mur
 import { toolInfo as murmurhash3X86_32HashTextOrFileToolInfo } from '@tools/murmurhash3-x86-32-hash-text-or-file'
 import { toolInfo as xxhashXxh32HashTextOrFileToolInfo } from '@tools/xxhash-xxh32-hash-text-or-file'
 import { toolInfo as xxhashXxh64HashTextOrFileToolInfo } from '@tools/xxhash-xxh64-hash-text-or-file'
+import { toolInfo as xxhashXxh3_64HashTextOrFileToolInfo } from '@tools/xxhash-xxh3-64-hash-text-or-file'
+import { toolInfo as xxhashXxh3_128HashTextOrFileToolInfo } from '@tools/xxhash-xxh3-128-hash-text-or-file'
 import { toolInfo as blake2bHashTextOrFileToolInfo } from '@tools/blake2b-hash-text-or-file'
 import { toolInfo as blake2sHashTextOrFileToolInfo } from '@tools/blake2s-hash-text-or-file'
 import { toolInfo as blake3HashTextOrFileToolInfo } from '@tools/blake3-hash-text-or-file'
@@ -273,6 +275,8 @@ export const tools: ToolInfo[] = [
   murmurhash3X64_128HashTextOrFileToolInfo,
   xxhashXxh32HashTextOrFileToolInfo,
   xxhashXxh64HashTextOrFileToolInfo,
+  xxhashXxh3_64HashTextOrFileToolInfo,
+  xxhashXxh3_128HashTextOrFileToolInfo,
   blake2bHashTextOrFileToolInfo,
   blake2sHashTextOrFileToolInfo,
   blake3HashTextOrFileToolInfo,
