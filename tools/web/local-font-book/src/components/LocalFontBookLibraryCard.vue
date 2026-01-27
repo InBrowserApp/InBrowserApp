@@ -1,24 +1,27 @@
 <template>
   <ToolSection>
-    <ToolSectionHeader>{{ title }}</ToolSectionHeader>
-
-    <div class="library-actions">
-      <span v-if="fontCountLabel" data-testid="font-count">{{ fontCountLabel }}</span>
-      <n-button
-        v-else
-        text
-        size="small"
-        :disabled="!isSupported || isLoading"
-        :loading="isLoading"
-        @click="emit('load-fonts')"
-        data-testid="load-fonts"
-      >
-        <template #icon>
-          <n-icon :component="FolderOpen16Regular" />
-        </template>
-        {{ t('load-button') }}
-      </n-button>
-    </div>
+    <n-flex align="center" justify="space-between" class="library-header">
+      <n-h2 prefix="bar" align-text class="library-title">
+        <span>{{ title }}</span>
+      </n-h2>
+      <div class="library-actions">
+        <span v-if="fontCountLabel" data-testid="font-count">{{ fontCountLabel }}</span>
+        <n-button
+          v-else
+          text
+          size="small"
+          :disabled="!isSupported || isLoading"
+          :loading="isLoading"
+          @click="emit('load-fonts')"
+          data-testid="load-fonts"
+        >
+          <template #icon>
+            <n-icon :component="FolderOpen16Regular" />
+          </template>
+          {{ t('load-button') }}
+        </n-button>
+      </div>
+    </n-flex>
 
     <n-alert
       v-show="statusMessage"
@@ -106,6 +109,7 @@ import {
   NAlert,
   NButton,
   NFlex,
+  NH2,
   NIcon,
   NInput,
   NScrollbar,
@@ -114,7 +118,7 @@ import {
   NText,
 } from 'naive-ui'
 import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { ToolSection } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import type { AlertStatusType, DisplayFont, FontGroup } from './types'
 
@@ -154,12 +158,22 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-.library-actions {
+.library-header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.library-title {
+  margin: 0;
+}
+
+.library-actions {
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
-  margin: 4px 0 12px;
 }
 
 .status-alert {

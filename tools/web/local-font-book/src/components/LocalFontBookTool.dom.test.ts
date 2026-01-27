@@ -124,6 +124,12 @@ vi.mock('naive-ui', async () => {
     template: '<label v-bind="$attrs"><span>{{ label }}</span><slot /></label>',
   })
 
+  const NH2 = defineComponent({
+    inheritAttrs: false,
+    props: ['prefix', 'alignText'],
+    template: '<h2 v-bind="$attrs"><slot /></h2>',
+  })
+
   return {
     NAlert: BaseStub,
     NButton,
@@ -135,6 +141,7 @@ vi.mock('naive-ui', async () => {
     NFormItem,
     NGi: BaseStub,
     NGrid: BaseStub,
+    NH2,
     NIcon: InlineStub,
     NInput,
     NInputNumber,
