@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
-import { mount, flushPromises } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import { NMessageProvider } from 'naive-ui'
 import { h } from 'vue'
 import { createI18n } from 'vue-i18n'
@@ -63,6 +63,22 @@ const CertificatePublicKeyParserWithProvider = {
   },
 }
 
+const samplePem = `-----BEGIN CERTIFICATE-----
+MIIBgTCCASegAwIBAgIUftI0mqWgxqcX9lWIS/FSiGXdbekwCgYIKoZIzj0EAwIw
+FjEUMBIGA1UEAwwLZXhhbXBsZS5jb20wHhcNMjYwMTEzMDkxMTQ5WhcNMjcwMTEz
+MDkxMTQ5WjAWMRQwEgYDVQQDDAtleGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqG
+SM49AwEHA0IABLCYkUdrGAE8Kx15ZvhkqEvUPKLZyolQe9ySpKR/SdxsIk2GiLeb
+V1YvmZpQ0ti51b7a8LE1sVbUA35GYnxdlZijUzBRMB0GA1UdDgQWBBQ36VA4D6ZE
+UkQrQYbeEIF6deRE4TAfBgNVHSMEGDAWgBQ36VA4D6ZEUkQrQYbeEIF6deRE4TAP
+BgNVHRMBAf8EBTADAQH/MAoGCCqGSM49BAMCA0gAMEUCIBYqVd8kI1xAIbgGDS8j
+DGp+7YYIS154UJiV5nYAsNNeAiEAvKuZ5GUl+PwvetdfKjmrhGSuxUsNR/lxk8Fl
+KyUxsKk=
+-----END CERTIFICATE-----
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsJiRR2sYATwrHXlm+GSoS9Q8otnK
+iVB73JKkpH9J3GwiTYaIt5tXVi+ZmlDS2LnVvtrwsTWxVtQDfkZifF2VmA==
+-----END PUBLIC KEY-----`
+
 const mountWithI18n = () =>
   mount(CertificatePublicKeyParserWithProvider, {
     global: {
@@ -70,20 +86,38 @@ const mountWithI18n = () =>
     },
   })
 
+let digestSpy: ReturnType<typeof vi.spyOn> | null = null
+
+const waitForText = async (wrapper: ReturnType<typeof mountWithI18n>, text: string) => {
+  await expect.poll(() => wrapper.text(), { timeout: 5000, interval: 50 }).toContain(text)
+}
+
 describe('CertificatePublicKeyParser', () => {
   beforeEach(() => {
-    vi.useFakeTimers()
+    if (globalThis.crypto?.subtle?.digest) {
+      digestSpy = vi
+        .spyOn(globalThis.crypto.subtle, 'digest')
+        .mockResolvedValue(new ArrayBuffer(0))
+    } else {
+      vi.stubGlobal('crypto', {
+        subtle: {
+          digest: vi.fn().mockResolvedValue(new ArrayBuffer(0)),
+        },
+      })
+    }
   })
 
   afterEach(() => {
-    vi.useRealTimers()
+    digestSpy?.mockRestore()
+    digestSpy = null
+    vi.unstubAllGlobals()
   })
 
   it('parses the default sample and renders results', async () => {
     const wrapper = mountWithI18n()
-    await flushPromises()
-    vi.runAllTimers()
-    await flushPromises()
+    const textarea = wrapper.find('textarea')
+    await textarea.setValue(samplePem)
+    await waitForText(wrapper, 'Parsed Result')
 
     expect(wrapper.text()).toContain('Parsed Result')
     expect(wrapper.text()).toContain('Certificate 1')
@@ -91,14 +125,9 @@ describe('CertificatePublicKeyParser', () => {
 
   it('shows a parse error for invalid input', async () => {
     const wrapper = mountWithI18n()
-    await flushPromises()
-    vi.runAllTimers()
-    await flushPromises()
-
     const textarea = wrapper.find('textarea')
     await textarea.setValue('not-a-cert')
-    vi.runAllTimers()
-    await flushPromises()
+    await waitForText(wrapper, 'Parsing Error')
 
     expect(wrapper.text()).toContain('Parsing Error')
     expect(wrapper.text()).toContain('Unrecognized input format')
