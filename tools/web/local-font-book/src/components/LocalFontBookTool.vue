@@ -23,15 +23,13 @@
     </n-gi>
 
     <n-gi>
-      <div class="section-stack">
-        <LocalFontBookPreviewCard
-          :active-font="activeFont"
-          :preview-style="previewStyle"
-          v-model:sample-text="sampleText"
-          v-model:dark-background="darkBackground"
-        />
-        <LocalFontBookDetailsCard :active-font="activeFont" :css-snippet="cssSnippet" />
-      </div>
+      <LocalFontBookPreviewCard
+        :active-font="activeFont"
+        :preview-style="previewStyle"
+        v-model:sample-text="sampleText"
+        v-model:dark-background="darkBackground"
+      />
+      <LocalFontBookDetailsCard :active-font="activeFont" :css-snippet="cssSnippet" />
     </n-gi>
   </n-grid>
 
@@ -303,13 +301,6 @@ function wrapFontFamily(family: string) {
   return `"${escaped}"`
 }
 </script>
-
-<style scoped>
-.section-stack {
-  display: grid;
-  gap: 16px;
-}
-</style>
 
 <i18n lang="json">
 {
