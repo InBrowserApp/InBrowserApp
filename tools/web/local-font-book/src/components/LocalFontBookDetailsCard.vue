@@ -59,15 +59,17 @@
             </n-text>
           </CopyToClipboardTooltip>
         </n-descriptions-item>
+        <n-descriptions-item>
+          <template #label>
+            <span class="details-label">{{ t('css-title') }}</span>
+          </template>
+          <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
+            <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
+              <n-code :code="cssSnippet" word-wrap class="css-snippet" data-testid="css-snippet" />
+            </span>
+          </CopyToClipboardTooltip>
+        </n-descriptions-item>
       </n-descriptions>
-      <div class="css-output">
-        <n-text strong>{{ t('css-title') }}</n-text>
-        <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
-          <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
-            <n-code :code="cssSnippet" word-wrap class="css-snippet" data-testid="css-snippet" />
-          </span>
-        </CopyToClipboardTooltip>
-      </div>
     </div>
   </ToolSection>
 </template>
@@ -110,12 +112,6 @@ const { t } = useI18n()
 
 .details-value:not(.details-value--empty):hover {
   text-decoration: underline;
-}
-
-.css-output {
-  display: grid;
-  gap: 8px;
-  margin-top: 12px;
 }
 
 .css-snippet {

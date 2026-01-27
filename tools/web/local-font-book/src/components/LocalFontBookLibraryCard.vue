@@ -5,9 +5,7 @@
         <span class="library-header">
           <span>{{ title }}</span>
           <span class="library-header__action">
-            <n-text v-if="fontCountLabel" depth="3" class="count-label" data-testid="font-count">
-              {{ fontCountLabel }}
-            </n-text>
+            <span v-if="fontCountLabel" data-testid="font-count">{{ fontCountLabel }}</span>
             <n-button
               v-else
               text
@@ -197,10 +195,6 @@ const { t } = useI18n()
 
 .filter-control {
   min-width: 140px;
-}
-
-.count-label {
-  margin: 0;
 }
 
 .font-scroll {
