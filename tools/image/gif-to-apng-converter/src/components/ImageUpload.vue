@@ -34,24 +34,13 @@
       </n-flex>
 
       <n-flex vertical :size="8">
-        <n-flex
+        <UploadFileItem
           v-for="file in files"
           :key="fileKey(file)"
-          align="center"
-          justify="space-between"
-          :size="12"
-        >
-          <n-flex vertical :size="2">
-            <n-text strong>{{ file.name }}</n-text>
-            <n-text depth="3">{{ formatSize(file.size) }}</n-text>
-          </n-flex>
-          <n-button size="small" @click="handleRemove(file)">
-            <template #icon>
-              <n-icon><Delete20Regular /></n-icon>
-            </template>
-            {{ removeLabel }}
-          </n-button>
-        </n-flex>
+          :file="file"
+          :remove-label="removeLabel"
+          @remove="handleRemove(file)"
+        />
       </n-flex>
     </n-flex>
   </ToolSection>
@@ -60,12 +49,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useMessage } from 'naive-ui'
-import { filesize } from 'filesize'
 import type { UploadFileInfo } from 'naive-ui'
 import { NUpload, NUploadDragger, NIcon, NText, NP, NFlex, NButton } from 'naive-ui'
 import Image24Regular from '@vicons/fluent/Image24Regular'
 import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import UploadFileItem from './UploadFileItem.vue'
 
 const message = useMessage()
 
@@ -88,10 +77,6 @@ const emit = defineEmits<{
 const accept = 'image/gif'
 
 const files = computed(() => props.files)
-
-function formatSize(size: number) {
-  return filesize(size) as string
-}
 
 function fileKey(file: File) {
   return `${file.name}-${file.size}-${file.lastModified}`
