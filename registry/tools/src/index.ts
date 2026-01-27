@@ -29,7 +29,9 @@ import { toolInfo as imageToolsToolInfo } from '@tools/image-tools'
 import { toolInfo as sha256HashTextOrFileToolInfo } from '@tools/sha256-hash-text-or-file'
 import { toolInfo as sha224HashTextOrFileToolInfo } from '@tools/sha224-hash-text-or-file'
 import { toolInfo as whirlpoolHashTextOrFileToolInfo } from '@tools/whirlpool-hash-text-or-file'
+import { toolInfo as sha3_224HashTextOrFileToolInfo } from '@tools/sha3-224-hash-text-or-file'
 import { toolInfo as sha3_256HashTextOrFileToolInfo } from '@tools/sha3-256-hash-text-or-file'
+import { toolInfo as sha3_384HashTextOrFileToolInfo } from '@tools/sha3-384-hash-text-or-file'
 import { toolInfo as sha3_512HashTextOrFileToolInfo } from '@tools/sha3-512-hash-text-or-file'
 import { toolInfo as shake128HashTextOrFileToolInfo } from '@tools/shake128-hash-text-or-file'
 import { toolInfo as shake256HashTextOrFileToolInfo } from '@tools/shake256-hash-text-or-file'
@@ -242,7 +244,9 @@ export const tools: ToolInfo[] = [
   sha256HashTextOrFileToolInfo,
   sha224HashTextOrFileToolInfo,
   whirlpoolHashTextOrFileToolInfo,
+  sha3_224HashTextOrFileToolInfo,
   sha3_256HashTextOrFileToolInfo,
+  sha3_384HashTextOrFileToolInfo,
   sha3_512HashTextOrFileToolInfo,
   shake128HashTextOrFileToolInfo,
   shake256HashTextOrFileToolInfo,
