@@ -51,8 +51,10 @@ export function parseCookieHeader(value: string): ParsedCookieHeader {
   const cookies: CookiePair[] = []
   const invalid: string[] = []
   const lines = splitHeaderLines(value)
+  const cookieLines = lines.filter((line) => COOKIE_HEADER_PREFIX.test(line))
+  const targetLines = cookieLines.length > 0 ? cookieLines : lines
 
-  for (const line of lines) {
+  for (const line of targetLines) {
     const content = stripPrefix(line, COOKIE_HEADER_PREFIX)
     if (!content) continue
 

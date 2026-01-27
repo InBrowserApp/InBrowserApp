@@ -15,14 +15,24 @@ describe('parseCookieHeader', () => {
     expect(result.invalid).toEqual([])
   })
 
-  it('parses cookies across lines and collects invalid segments', () => {
-    const result = parseCookieHeader('token; a=1\nCookie: b=2; =bad')
+  it('parses cookies across lines without header prefixes and collects invalid segments', () => {
+    const result = parseCookieHeader('token; a=1\nb=2; =bad')
 
     expect(result.cookies).toEqual([
       { name: 'a', value: '1' },
       { name: 'b', value: '2' },
     ])
     expect(result.invalid).toEqual(['token', '=bad'])
+  })
+
+  it('ignores non-cookie header lines when Cookie prefixes exist', () => {
+    const result = parseCookieHeader('Accept-Language: en;q=0.5\nCookie: a=1; b=2')
+
+    expect(result.cookies).toEqual([
+      { name: 'a', value: '1' },
+      { name: 'b', value: '2' },
+    ])
+    expect(result.invalid).toEqual([])
   })
 
   it('skips empty cookie headers and segments', () => {
