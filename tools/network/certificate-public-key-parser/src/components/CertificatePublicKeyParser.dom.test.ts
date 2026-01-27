@@ -94,9 +94,9 @@ const waitForText = async (wrapper: ReturnType<typeof mountWithI18n>, text: stri
 
 describe('CertificatePublicKeyParser', () => {
   beforeEach(() => {
-    if (globalThis.crypto?.subtle?.digest) {
+    try {
       digestSpy = vi.spyOn(globalThis.crypto.subtle, 'digest').mockResolvedValue(new ArrayBuffer(0))
-    } else {
+    } catch {
       vi.stubGlobal('crypto', {
         subtle: {
           digest: vi.fn().mockResolvedValue(new ArrayBuffer(0)),
