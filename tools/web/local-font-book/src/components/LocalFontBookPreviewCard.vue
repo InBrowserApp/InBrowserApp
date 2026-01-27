@@ -1,44 +1,63 @@
 <template>
-  <n-card :title="t('preview-title')" class="preview-card">
-    <template #header-extra>
-      <n-button
-        quaternary
-        circle
-        :aria-label="t('preview-background')"
-        data-testid="background-toggle"
-        @click="toggleBackground"
-      >
-        <template #icon>
-          <n-icon :component="backgroundIcon" />
-        </template>
-      </n-button>
-    </template>
+  <ToolSection>
+    <div class="preview-section">
+      <ToolSectionHeader>
+        <span class="preview-header">
+          <span>{{ t('preview-title') }}</span>
+          <span class="preview-header__action">
+            <n-button
+              quaternary
+              circle
+              :aria-label="t('preview-background')"
+              data-testid="background-toggle"
+              @click="toggleBackground"
+            >
+              <template #icon>
+                <n-icon :component="backgroundIcon" />
+              </template>
+            </n-button>
+          </span>
+        </span>
+      </ToolSectionHeader>
 
-    <n-form-item :label="t('preview-fallback')" class="preview-textarea">
-      <n-input
-        :value="sampleText"
-        type="textarea"
-        :placeholder="t('preview-placeholder')"
-        :autosize="{ minRows: 3, maxRows: 5 }"
-        data-testid="sample-text"
-        @update:value="emit('update:sampleText', $event)"
-      />
-    </n-form-item>
+      <n-form-item :label="t('preview-fallback')" class="preview-textarea">
+        <n-input
+          :value="sampleText"
+          type="textarea"
+          :placeholder="t('preview-placeholder')"
+          :autosize="{ minRows: 3, maxRows: 5 }"
+          data-testid="sample-text"
+          @update:value="emit('update:sampleText', $event)"
+        />
+      </n-form-item>
 
-    <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
-      <div v-if="activeFont" class="preview-text" :style="previewStyle" data-testid="preview-text">
-        {{ sampleText || t('preview-fallback') }}
+      <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
+        <div
+          v-if="activeFont"
+          class="preview-text"
+          :style="previewStyle"
+          data-testid="preview-text"
+        >
+          {{ sampleText || t('preview-fallback') }}
+        </div>
+        <n-text
+          v-else
+          depth="3"
+          class="preview-empty"
+          :style="emptyTextStyle"
+          data-testid="preview-empty"
+        >
+          {{ t('preview-empty') }}
+        </n-text>
       </div>
-      <n-text v-else depth="3" class="preview-empty" data-testid="preview-empty">
-        {{ t('preview-empty') }}
-      </n-text>
     </div>
-  </n-card>
+  </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { computed, type CSSProperties } from 'vue'
-import { NButton, NCard, NFormItem, NIcon, NInput, NText } from 'naive-ui'
+import { NButton, NFormItem, NIcon, NInput, NText } from 'naive-ui'
+import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import MoonOutline from '@vicons/ionicons5/MoonOutline'
 import SunnyOutline from '@vicons/ionicons5/SunnyOutline'
 import { useI18n } from 'vue-i18n'
@@ -57,16 +76,34 @@ const { t } = useI18n()
 
 const backgroundIcon = computed(() => (props.darkBackground ? MoonOutline : SunnyOutline))
 
+const emptyTextStyle = computed(() => ({
+  color: props.darkBackground ? '#f8fafc' : '#0f172a',
+}))
+
 const toggleBackground = () => {
   emit('update:darkBackground', !props.darkBackground)
 }
 </script>
 
 <style scoped>
-.preview-card {
+.preview-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.preview-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.preview-header__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .preview-surface {
@@ -88,14 +125,6 @@ const toggleBackground = () => {
 
 .preview-text {
   width: 100%;
-}
-
-.preview-empty {
-  color: #0f172a;
-}
-
-.preview-surface.is-dark .preview-empty {
-  color: #f8fafc;
 }
 
 .preview-textarea {

@@ -1,103 +1,110 @@
 <template>
-  <n-card :title="title" class="library-card">
-    <template #header-extra>
-      <n-text v-if="fontCountLabel" depth="3" class="count-label" data-testid="font-count">
-        {{ fontCountLabel }}
-      </n-text>
-      <n-button
-        v-else
-        text
-        size="small"
-        :disabled="!isSupported || isLoading"
-        :loading="isLoading"
-        @click="emit('load-fonts')"
-        data-testid="load-fonts"
+  <ToolSection>
+    <div class="library-section">
+      <ToolSectionHeader>
+        <span class="library-header">
+          <span>{{ title }}</span>
+          <span class="library-header__action">
+            <n-text v-if="fontCountLabel" depth="3" class="count-label" data-testid="font-count">
+              {{ fontCountLabel }}
+            </n-text>
+            <n-button
+              v-else
+              text
+              size="small"
+              :disabled="!isSupported || isLoading"
+              :loading="isLoading"
+              @click="emit('load-fonts')"
+              data-testid="load-fonts"
+            >
+              <template #icon>
+                <n-icon :component="FolderOpen16Regular" />
+              </template>
+              {{ t('load-button') }}
+            </n-button>
+          </span>
+        </span>
+      </ToolSectionHeader>
+
+      <n-alert
+        v-show="statusMessage"
+        :type="statusType"
+        :show-icon="false"
+        class="status-alert"
+        data-testid="status-message"
       >
-        <template #icon>
-          <n-icon :component="FolderOpen16Regular" />
-        </template>
-        {{ t('load-button') }}
-      </n-button>
-    </template>
+        {{ statusMessage }}
+      </n-alert>
 
-    <n-alert
-      v-show="statusMessage"
-      :type="statusType"
-      :show-icon="false"
-      class="status-alert"
-      data-testid="status-message"
-    >
-      {{ statusMessage }}
-    </n-alert>
-
-    <n-input
-      :value="searchQuery"
-      :placeholder="t('search-placeholder')"
-      clearable
-      class="search-input"
-      data-testid="search-input"
-      @update:value="emit('update:searchQuery', $event)"
-    />
-
-    <n-flex align="center" :size="12" :wrap="true" class="filter-row">
-      <n-select
-        :value="filterStyle"
-        :options="styleOptions"
-        size="small"
-        class="filter-control"
-        data-testid="style-filter"
-        @update:value="emit('update:filterStyle', $event)"
+      <n-input
+        :value="searchQuery"
+        :placeholder="t('search-placeholder')"
+        clearable
+        class="search-input"
+        data-testid="search-input"
+        @update:value="emit('update:searchQuery', $event)"
       />
-      <n-select
-        :value="sortBy"
-        :options="sortOptions"
-        size="small"
-        class="filter-control"
-        data-testid="sort-by"
-        @update:value="emit('update:sortBy', $event)"
-      />
-      <n-flex align="center" :size="8">
-        <n-text depth="3">{{ t('group-label') }}</n-text>
-        <n-switch
-          :value="groupByFamily"
+
+      <n-flex align="center" :size="12" :wrap="true" class="filter-row">
+        <n-select
+          :value="filterStyle"
+          :options="styleOptions"
           size="small"
-          data-testid="group-toggle"
-          @update:value="emit('update:groupByFamily', $event)"
+          class="filter-control"
+          data-testid="style-filter"
+          @update:value="emit('update:filterStyle', $event)"
         />
+        <n-select
+          :value="sortBy"
+          :options="sortOptions"
+          size="small"
+          class="filter-control"
+          data-testid="sort-by"
+          @update:value="emit('update:sortBy', $event)"
+        />
+        <n-flex align="center" :size="8">
+          <n-text depth="3">{{ t('group-label') }}</n-text>
+          <n-switch
+            :value="groupByFamily"
+            size="small"
+            data-testid="group-toggle"
+            @update:value="emit('update:groupByFamily', $event)"
+          />
+        </n-flex>
       </n-flex>
-    </n-flex>
 
-    <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
-      <div class="font-list">
-        <template v-if="displayGroups.length">
-          <div v-for="group in displayGroups" :key="group.id" class="font-group">
-            <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
-            <div class="font-group__list">
-              <button
-                v-for="font in group.items"
-                :key="font.id"
-                type="button"
-                class="font-card"
-                :class="{ 'font-card--active': font.id === activeFontId }"
-                :style="fontCardStyle(font)"
-                :data-testid="`font-${font.id}`"
-                @click="emit('select-font', font.id)"
-              >
-                <div class="font-card__name">{{ font.displayName }}</div>
-                <div class="font-card__meta">
-                  <span class="font-card__family">{{ font.displayFamily }}</span>
-                  <span class="font-card__style">{{ font.displayStyle }}</span>
-                </div>
-              </button>
+      <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
+        <div class="font-list">
+          <template v-if="displayGroups.length">
+            <div v-for="group in displayGroups" :key="group.id" class="font-group">
+              <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
+              <div class="font-group__list">
+                <button
+                  v-for="font in group.items"
+                  :key="font.id"
+                  type="button"
+                  class="font-card"
+                  :class="{ 'font-card--active': font.id === activeFontId }"
+                  :style="fontCardStyle(font)"
+                  :data-testid="`font-${font.id}`"
+                  @click="emit('select-font', font.id)"
+                >
+                  <div class="font-card__name">{{ font.displayName }}</div>
+                  <div class="font-card__meta">
+                    <span class="font-card__family">{{ font.displayFamily }}</span>
+                    <span class="font-card__style">{{ font.displayStyle }}</span>
+                  </div>
+                </button>
+              </div>
             </div>
-          </div>
-        </template>
-        <n-text v-else depth="3" class="empty-text" data-testid="no-results">
-          {{ t('no-results') }}
-        </n-text>
-      </div>
-    </n-scrollbar>
-  </n-card>
+          </template>
+          <n-text v-else depth="3" class="empty-text" data-testid="no-results">
+            {{ t('no-results') }}
+          </n-text>
+        </div>
+      </n-scrollbar>
+    </div>
+  </ToolSection>
 </template>
 
 <script setup lang="ts">
@@ -105,7 +112,6 @@ import type { CSSProperties } from 'vue'
 import {
   NAlert,
   NButton,
-  NCard,
   NFlex,
   NIcon,
   NInput,
@@ -115,6 +121,7 @@ import {
   NText,
 } from 'naive-ui'
 import FolderOpen16Regular from '@vicons/fluent/FolderOpen16Regular'
+import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import type { AlertStatusType, DisplayFont, FontGroup } from './types'
 
@@ -154,10 +161,24 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-.library-card {
+.library-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.library-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.library-header__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .status-alert {

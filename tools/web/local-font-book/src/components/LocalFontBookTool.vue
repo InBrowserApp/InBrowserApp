@@ -1,42 +1,39 @@
 <template>
-  <ToolSectionHeader>{{ t('library-title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-grid cols="1 l:2" :x-gap="24" :y-gap="24" responsive="screen">
-      <n-gi>
-        <LocalFontBookLibraryCard
-          :title="t('library-title')"
-          :is-supported="isSupported"
-          :is-loading="isLoading"
-          :status-message="statusMessage"
-          :status-type="statusType"
-          :style-options="styleOptions"
-          :sort-options="sortOptions"
-          :font-count-label="fontCountLabel"
-          :display-groups="displayGroups"
-          :active-font-id="activeFontId"
-          :font-card-style="fontCardStyle"
-          v-model:search-query="searchQuery"
-          v-model:filter-style="filterStyle"
-          v-model:sort-by="sortBy"
-          v-model:group-by-family="groupByFamily"
-          @load-fonts="loadFonts"
-          @select-font="setActiveFont"
-        />
-      </n-gi>
+  <n-grid cols="1 l:2" :x-gap="24" :y-gap="24" responsive="screen">
+    <n-gi>
+      <LocalFontBookLibraryCard
+        :title="t('library-title')"
+        :is-supported="isSupported"
+        :is-loading="isLoading"
+        :status-message="statusMessage"
+        :status-type="statusType"
+        :style-options="styleOptions"
+        :sort-options="sortOptions"
+        :font-count-label="fontCountLabel"
+        :display-groups="displayGroups"
+        :active-font-id="activeFontId"
+        :font-card-style="fontCardStyle"
+        v-model:search-query="searchQuery"
+        v-model:filter-style="filterStyle"
+        v-model:sort-by="sortBy"
+        v-model:group-by-family="groupByFamily"
+        @load-fonts="loadFonts"
+        @select-font="setActiveFont"
+      />
+    </n-gi>
 
-      <n-gi>
-        <div class="card-stack">
-          <LocalFontBookPreviewCard
-            :active-font="activeFont"
-            :preview-style="previewStyle"
-            v-model:sample-text="sampleText"
-            v-model:dark-background="darkBackground"
-          />
-          <LocalFontBookDetailsCard :active-font="activeFont" :css-snippet="cssSnippet" />
-        </div>
-      </n-gi>
-    </n-grid>
-  </ToolSection>
+    <n-gi>
+      <div class="section-stack">
+        <LocalFontBookPreviewCard
+          :active-font="activeFont"
+          :preview-style="previewStyle"
+          v-model:sample-text="sampleText"
+          v-model:dark-background="darkBackground"
+        />
+        <LocalFontBookDetailsCard :active-font="activeFont" :css-snippet="cssSnippet" />
+      </div>
+    </n-gi>
+  </n-grid>
 
   <LocalFontBookWhatIs />
 </template>
@@ -46,7 +43,6 @@ import { computed, onMounted, ref } from 'vue'
 import { NGi, NGrid } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import LocalFontBookDetailsCard from './LocalFontBookDetailsCard.vue'
 import LocalFontBookLibraryCard from './LocalFontBookLibraryCard.vue'
 import LocalFontBookPreviewCard from './LocalFontBookPreviewCard.vue'
@@ -309,7 +305,7 @@ function wrapFontFamily(family: string) {
 </script>
 
 <style scoped>
-.card-stack {
+.section-stack {
   display: grid;
   gap: 16px;
 }
