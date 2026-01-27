@@ -3,6 +3,13 @@ import * as UPNG from 'upng-js'
 import { optimizePNG } from '@utils/image'
 import type { GifToApngOptions, GifToApngResult } from '../types'
 
+type RgbaColor = {
+  r: number
+  g: number
+  b: number
+  a: number
+}
+
 interface GifFrame {
   patch: Uint8ClampedArray
   dims: {
@@ -44,8 +51,15 @@ export async function convertGifToApng(
   const outputWidth = Math.max(1, Math.round(originalWidth * scale))
   const outputHeight = Math.max(1, Math.round(originalHeight * scale))
   const speed = normalizeSpeed(options.speed)
+  const backgroundColor = resolveGifBackgroundColor(gifBytes)
 
-  const { frameData, delays } = composeGifFrames(frames, originalWidth, originalHeight, speed)
+  const { frameData, delays } = composeGifFrames(
+    frames,
+    originalWidth,
+    originalHeight,
+    speed,
+    backgroundColor,
+  )
   const apngFrames = scaleFramesIfNeeded(
     frameData,
     originalWidth,
@@ -96,6 +110,12 @@ function normalizeOptimizeLevel(value: number) {
   return Math.min(6, Math.max(0, Math.round(value)))
 }
 
+function resolveGifBackgroundColor(bytes: Uint8Array): RgbaColor {
+  const color = readGifBackgroundColor(bytes)
+  if (color) return color
+  return { r: 0, g: 0, b: 0, a: 0 }
+}
+
 function isGifFile(bytes: Uint8Array) {
   if (bytes.length < 3) return false
   return (
@@ -105,8 +125,36 @@ function isGifFile(bytes: Uint8Array) {
   )
 }
 
-function composeGifFrames(frames: GifFrame[], width: number, height: number, speed: number) {
+function readGifBackgroundColor(bytes: Uint8Array): RgbaColor | null {
+  if (bytes.length < 13) return null
+  const packed = bytes[10] ?? 0
+  const hasGlobalColorTable = (packed & 0x80) !== 0
+  if (!hasGlobalColorTable) return null
+
+  const globalColorTableSize = 1 << ((packed & 0x07) + 1)
+  const backgroundIndex = bytes[11] ?? 0
+  if (backgroundIndex >= globalColorTableSize) return null
+
+  const tableStart = 13
+  const tableSize = globalColorTableSize * 3
+  if (tableStart + tableSize > bytes.length) return null
+
+  const colorOffset = tableStart + backgroundIndex * 3
+  const r = bytes[colorOffset] ?? 0
+  const g = bytes[colorOffset + 1] ?? 0
+  const b = bytes[colorOffset + 2] ?? 0
+  return { r, g, b, a: 255 }
+}
+
+function composeGifFrames(
+  frames: GifFrame[],
+  width: number,
+  height: number,
+  speed: number,
+  backgroundColor: RgbaColor,
+) {
   const canvas = new Uint8ClampedArray(width * height * 4)
+  fillCanvas(canvas, backgroundColor)
   const frameData: Uint8ClampedArray[] = []
   const delays: number[] = []
 
@@ -120,7 +168,7 @@ function composeGifFrames(frames: GifFrame[], width: number, height: number, spe
     }
 
     if (previousDisposal === 2 && previousDims) {
-      clearRect(canvas, width, previousDims)
+      clearRect(canvas, width, previousDims, backgroundColor)
     } else if (previousDisposal === 3 && previousRestore) {
       canvas.set(previousRestore)
     }
@@ -140,15 +188,38 @@ function composeGifFrames(frames: GifFrame[], width: number, height: number, spe
   return { frameData, delays }
 }
 
-function clearRect(canvas: Uint8ClampedArray, canvasWidth: number, dims: GifFrame['dims']) {
+function fillCanvas(canvas: Uint8ClampedArray, backgroundColor: RgbaColor) {
+  if (
+    backgroundColor.a === 0 &&
+    backgroundColor.r === 0 &&
+    backgroundColor.g === 0 &&
+    backgroundColor.b === 0
+  ) {
+    return
+  }
+
+  for (let i = 0; i < canvas.length; i += 4) {
+    canvas[i] = backgroundColor.r
+    canvas[i + 1] = backgroundColor.g
+    canvas[i + 2] = backgroundColor.b
+    canvas[i + 3] = backgroundColor.a
+  }
+}
+
+function clearRect(
+  canvas: Uint8ClampedArray,
+  canvasWidth: number,
+  dims: GifFrame['dims'],
+  backgroundColor: RgbaColor,
+) {
   const { top, left, width, height } = dims
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
       const index = ((y + top) * canvasWidth + (x + left)) * 4
-      canvas[index] = 0
-      canvas[index + 1] = 0
-      canvas[index + 2] = 0
-      canvas[index + 3] = 0
+      canvas[index] = backgroundColor.r
+      canvas[index + 1] = backgroundColor.g
+      canvas[index + 2] = backgroundColor.b
+      canvas[index + 3] = backgroundColor.a
     }
   }
 }
@@ -273,6 +344,11 @@ function setApngLoop(buffer: ArrayBuffer, loopCount: number) {
 
     if (type === 'acTL' && length >= 8 && dataOffset + length <= view.byteLength) {
       view.setUint32(dataOffset + 4, loopCount)
+      const crcOffset = dataOffset + length
+      if (crcOffset + 4 <= view.byteLength) {
+        const crc = crc32(new Uint8Array(buffer, offset + 4, length + 4))
+        view.setUint32(crcOffset, crc)
+      }
       return buffer
     }
 
@@ -290,4 +366,26 @@ function readChunkType(view: DataView, offset: number) {
     view.getUint8(offset + 2),
     view.getUint8(offset + 3),
   )
+}
+
+const CRC_TABLE = buildCrcTable()
+
+function buildCrcTable() {
+  const table = new Uint32Array(256)
+  for (let i = 0; i < 256; i += 1) {
+    let crc = i
+    for (let j = 0; j < 8; j += 1) {
+      crc = (crc & 1) !== 0 ? (crc >>> 1) ^ 0xedb88320 : crc >>> 1
+    }
+    table[i] = crc >>> 0
+  }
+  return table
+}
+
+function crc32(bytes: Uint8Array) {
+  let crc = 0xffffffff
+  for (const value of bytes) {
+    crc = CRC_TABLE[(crc ^ value) & 0xff] ^ (crc >>> 8)
+  }
+  return (crc ^ 0xffffffff) >>> 0
 }

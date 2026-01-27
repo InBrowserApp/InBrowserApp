@@ -83,8 +83,19 @@ function createGifBytes(loopCount?: number) {
   return new Uint8Array(bytes)
 }
 
+function createGifBytesWithBackground() {
+  return new Uint8Array([
+    0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x02, 0x00, 0x01, 0x00, 0x80, 0x00, 0x00, 0xff, 0x00, 0x00,
+    0x00, 0xff, 0x00,
+  ])
+}
+
 function createGifFile(loopCount?: number) {
   const bytes = createGifBytes(loopCount)
+  return new File([bytes], 'demo.gif', { type: 'image/gif' })
+}
+
+function createGifFileFromBytes(bytes: Uint8Array) {
   return new File([bytes], 'demo.gif', { type: 'image/gif' })
 }
 
@@ -103,6 +114,26 @@ function createApngBuffer(numFrames = 1, numPlays = 0) {
   view.setUint32(20, numPlays)
   return buffer
 }
+
+function crc32(bytes: Uint8Array) {
+  let crc = 0xffffffff
+  for (const value of bytes) {
+    crc = CRC_TABLE[(crc ^ value) & 0xff] ^ (crc >>> 8)
+  }
+  return (crc ^ 0xffffffff) >>> 0
+}
+
+const CRC_TABLE = (() => {
+  const table = new Uint32Array(256)
+  for (let i = 0; i < 256; i += 1) {
+    let crc = i
+    for (let j = 0; j < 8; j += 1) {
+      crc = (crc & 1) !== 0 ? (crc >>> 1) ^ 0xedb88320 : crc >>> 1
+    }
+    table[i] = crc >>> 0
+  }
+  return table
+})()
 
 function createFrames() {
   const patch = new Uint8ClampedArray([
@@ -152,6 +183,10 @@ describe('convertGifToApng', () => {
     const buffer = await result.blob.arrayBuffer()
     const view = new DataView(buffer)
     expect(view.getUint32(20)).toBe(3)
+    const chunkLength = view.getUint32(8)
+    const crcOffset = 8 + 8 + chunkLength
+    const expectedCrc = crc32(new Uint8Array(buffer, 12, chunkLength + 4))
+    expect(view.getUint32(crcOffset)).toBe(expectedCrc)
   })
 
   it('defaults to loop count 1 when GIF has no loop info', async () => {
@@ -231,6 +266,45 @@ describe('convertGifToApng', () => {
       optimiseAlpha: true,
     })
     expect(result.blob.size).toBeGreaterThan(0)
+  })
+
+  it('clears to gif background color for disposal type 2', async () => {
+    const file = createGifFileFromBytes(createGifBytesWithBackground())
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 1 } })
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([0, 255, 0, 255]),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 2,
+      },
+      {
+        patch: new Uint8ClampedArray([0, 0, 255, 255]),
+        dims: { top: 0, left: 1, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 1,
+      },
+    ])
+    encodeMock.mockReturnValue(createApngBuffer(2))
+
+    await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    const encodedFrames = encodeMock.mock.calls[0]?.[0] as ArrayBuffer[]
+    const secondFrame = new Uint8ClampedArray(encodedFrames[1])
+    expect(Array.from(secondFrame.slice(0, 4))).toEqual([255, 0, 0, 255])
+    expect(Array.from(secondFrame.slice(4, 8))).toEqual([0, 0, 255, 255])
   })
 
   it('scales frames when scale is applied', async () => {
