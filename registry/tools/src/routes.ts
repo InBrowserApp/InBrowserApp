@@ -16,6 +16,7 @@ import { routes as macToIPv6LinkLocalRoutes } from '@tools/mac-to-ipv6-link-loca
 import { routes as ipv6ToMacRoutes } from '@tools/ipv6-to-mac/routes'
 import { routes as currentNetworkTimeRoutes } from '@tools/current-network-time/routes'
 import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
+import { routes as gifToApngConverterRoutes } from '@tools/gif-to-apng-converter/routes'
 import { routes as imageToIcoRoutes } from '@tools/image-to-ico/routes'
 import { routes as imageToWebpConverterRoutes } from '@tools/image-to-webp-converter/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
@@ -188,6 +189,7 @@ export const routes: ToolRoute[] = [
   ...ipv6ToMacRoutes,
   ...currentNetworkTimeRoutes,
   ...pngOptimizerRoutes,
+  ...gifToApngConverterRoutes,
   ...imageToIcoRoutes,
   ...imageToWebpConverterRoutes,
   ...svgOptimizerRoutes,

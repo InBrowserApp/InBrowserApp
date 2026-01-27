@@ -94,6 +94,7 @@ catalog:
   exifr: ^7.1.3
   figlet: ^1.9.4
   filesize: ^11.0.13
+  gifuct-js: ^2.1.2
   github-markdown-css: ^5.8.1
   gitignore: github:github/gitignore
   happy-dom: ^20.3.4
@@ -139,6 +140,7 @@ catalog:
   turndown: ^7.2.2
   typescript: ~5.9.3
   ua-parser-js: ^1.0.39
+  upng-js: ^2.1.0
   ulid: ^3.0.2
   uuid: ^13.0.0
   validator: ^13.15.26
