@@ -27,7 +27,9 @@ import { routes as imageToolsRoutes } from '@tools/image-tools/routes'
 import { routes as sha256HashTextOrFileRoutes } from '@tools/sha256-hash-text-or-file/routes'
 import { routes as sha224HashTextOrFileRoutes } from '@tools/sha224-hash-text-or-file/routes'
 import { routes as whirlpoolHashTextOrFileRoutes } from '@tools/whirlpool-hash-text-or-file/routes'
+import { routes as sha3_224HashTextOrFileRoutes } from '@tools/sha3-224-hash-text-or-file/routes'
 import { routes as sha3_256HashTextOrFileRoutes } from '@tools/sha3-256-hash-text-or-file/routes'
+import { routes as sha3_384HashTextOrFileRoutes } from '@tools/sha3-384-hash-text-or-file/routes'
 import { routes as sha3_512HashTextOrFileRoutes } from '@tools/sha3-512-hash-text-or-file/routes'
 import { routes as shake128HashTextOrFileRoutes } from '@tools/shake128-hash-text-or-file/routes'
 import { routes as shake256HashTextOrFileRoutes } from '@tools/shake256-hash-text-or-file/routes'
@@ -201,7 +203,9 @@ export const routes: ToolRoute[] = [
   ...sha256HashTextOrFileRoutes,
   ...sha224HashTextOrFileRoutes,
   ...whirlpoolHashTextOrFileRoutes,
+  ...sha3_224HashTextOrFileRoutes,
   ...sha3_256HashTextOrFileRoutes,
+  ...sha3_384HashTextOrFileRoutes,
   ...sha3_512HashTextOrFileRoutes,
   ...shake128HashTextOrFileRoutes,
   ...shake256HashTextOrFileRoutes,
