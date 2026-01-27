@@ -2,7 +2,7 @@
   <ToolSectionHeader>{{ t('camera') }}</ToolSectionHeader>
   <ToolSection>
     <div class="camera-shell">
-      <div class="viewfinder">
+      <div class="viewfinder" :style="{ aspectRatio: viewfinderAspectRatio }">
         <video
           ref="previewRef"
           class="preview-video"
@@ -253,6 +253,7 @@ const zoomMin = ref(1)
 const zoomMax = ref(1)
 const zoomStep = ref(0.1)
 const zoomValue = ref(1)
+const viewfinderAspectRatio = ref(9 / 16)
 
 const isSupported = computed(
   () => typeof navigator !== 'undefined' && !!navigator.mediaDevices?.getUserMedia,
@@ -342,6 +343,34 @@ function updateCapabilities(track: MediaStreamTrack | null) {
   }
 }
 
+function updateAspectRatio(value?: number) {
+  if (!value || !Number.isFinite(value) || value <= 0) return
+  viewfinderAspectRatio.value = value
+}
+
+function updateAspectRatioFromTrack(track: MediaStreamTrack | null) {
+  const settings = track?.getSettings?.()
+  if (!settings) return
+  if (typeof settings.aspectRatio === 'number' && settings.aspectRatio > 0) {
+    updateAspectRatio(settings.aspectRatio)
+    return
+  }
+  if (
+    typeof settings.width === 'number' &&
+    typeof settings.height === 'number' &&
+    settings.width > 0 &&
+    settings.height > 0
+  ) {
+    updateAspectRatio(settings.width / settings.height)
+  }
+}
+
+function updateAspectRatioFromVideo() {
+  const video = previewRef.value
+  if (!video || !video.videoWidth || !video.videoHeight) return
+  updateAspectRatio(video.videoWidth / video.videoHeight)
+}
+
 function cleanupStream() {
   if (stream.value) {
     stream.value.getTracks().forEach((track) => track.stop())
@@ -365,13 +394,16 @@ async function attachStream(nextStream: MediaStream) {
     audioTrack.value.enabled = micEnabled.value
   }
   updateCapabilities(videoTrack.value)
+  updateAspectRatioFromTrack(videoTrack.value)
 
   if (!previewRef.value) return
   previewRef.value.srcObject = nextStream
   previewRef.value.onloadedmetadata = () => {
+    updateAspectRatioFromVideo()
     previewRef.value?.play().catch(() => undefined)
   }
   await previewRef.value.play().catch(() => undefined)
+  updateAspectRatioFromVideo()
 }
 
 function buildConstraints(): MediaStreamConstraints {
@@ -619,8 +651,9 @@ onBeforeUnmount(() => {
 .viewfinder {
   position: relative;
   width: 100%;
+  max-width: 720px;
   aspect-ratio: 9 / 16;
-  max-height: 75vh;
+  max-height: 80vh;
   border-radius: 28px;
   overflow: hidden;
   background: radial-gradient(circle at top, #2b2b2b, #0f0f0f 70%);
