@@ -2,7 +2,7 @@
   <div>
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
     <ToolSection>
-      <n-form-item :label="t('header-type')" label-placement="left">
+      <n-form-item :label="t('header-type')" label-placement="left" :show-feedback="false">
         <n-select v-model:value="headerType" :options="headerOptions" style="width: 220px" />
       </n-form-item>
     </ToolSection>
