@@ -810,6 +810,9 @@ importers:
       '@tools/file-to-data-uri-converter':
         specifier: workspace:*
         version: link:../../tools/web/file-to-data-uri-converter
+      '@tools/gif-to-apng-converter':
+        specifier: workspace:*
+        version: link:../../tools/image/gif-to-apng-converter
       '@tools/gitignore-generator':
         specifier: workspace:*
         version: link:../../tools/code/gitignore-generator
