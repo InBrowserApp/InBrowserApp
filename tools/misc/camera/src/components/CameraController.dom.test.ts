@@ -108,7 +108,9 @@ const waitForIdle = async (predicate: () => boolean) => {
 describe('CameraController', () => {
   beforeEach(() => {
     FakeMediaRecorder.instances = []
-    setMediaDevices({ getUserMedia: vi.fn().mockResolvedValue(createStream()) } as MediaDevices)
+    setMediaDevices({
+      getUserMedia: vi.fn().mockResolvedValue(createStream()),
+    } as unknown as MediaDevices)
     vi.stubGlobal('MediaRecorder', FakeMediaRecorder)
     vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
     Object.defineProperty(HTMLMediaElement.prototype, 'srcObject', {
@@ -187,8 +189,9 @@ describe('CameraController', () => {
 
     await flushPromises()
     await waitForIdle(() => !vm.isPreparing)
-    if (typeof (vm as { setMode?: (mode: 'photo' | 'video') => void }).setMode === 'function') {
-      ;(vm as { setMode: (mode: 'photo' | 'video') => void }).setMode('video')
+    const setMode = (vm as unknown as { setMode?: (mode: 'photo' | 'video') => void }).setMode
+    if (typeof setMode === 'function') {
+      setMode('video')
     }
     if (vm.mode !== 'video') {
       vm.mode = 'video'
@@ -219,7 +222,7 @@ describe('CameraController', () => {
     const error = Object.assign(new Error('denied'), { name: 'NotAllowedError' })
     setMediaDevices({
       getUserMedia: vi.fn().mockRejectedValue(error),
-    } as MediaDevices)
+    } as unknown as MediaDevices)
 
     const wrapper = mountController()
     const vm = wrapper.vm as unknown as { permissionDenied: boolean }
