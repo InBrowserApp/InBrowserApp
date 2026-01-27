@@ -613,12 +613,12 @@ onBeforeUnmount(() => {
 .camera-shell {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .viewfinder {
   position: relative;
   width: 100%;
-  max-width: 520px;
   aspect-ratio: 9 / 16;
   max-height: 75vh;
   border-radius: 28px;
@@ -849,7 +849,6 @@ onBeforeUnmount(() => {
 
 @media (max-width: 640px) {
   .viewfinder {
-    max-width: 100%;
     border-radius: 22px;
   }
 
