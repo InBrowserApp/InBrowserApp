@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
@@ -42,14 +42,43 @@ const mountOptions = {
   },
 }
 
+const stateKey = 'tools:robots-txt-generator:state'
+
+const createDefaultState = () => ({
+  groups: [
+    {
+      id: 'group-0',
+      userAgents: ['*'],
+      rules: [{ type: 'disallow', path: '/admin/' }],
+      crawlDelay: null,
+    },
+  ],
+  sitemaps: ['https://example.com/sitemap.xml'],
+  host: '',
+  advanced: false,
+})
+
 const getOutput = (wrapper: ReturnType<typeof mount>) =>
   (wrapper.get('[data-testid="robots-output"]').find('textarea').element as HTMLTextAreaElement)
     .value
 
 describe('RobotsTxtGeneratorView', () => {
+  let wrapper: ReturnType<typeof mount> | null = null
+
   beforeEach(() => {
     localStorage.clear()
+    localStorage.setItem(stateKey, JSON.stringify(createDefaultState()))
   })
+
+  afterEach(() => {
+    wrapper?.unmount()
+    wrapper = null
+  })
+
+  const mountView = () => {
+    wrapper = mount(RobotsTxtGeneratorView, mountOptions)
+    return wrapper
+  }
 
   it('exposes tool metadata and routes', async () => {
     expect(toolInfo.toolID).toBe('robots-txt-generator')
@@ -64,7 +93,7 @@ describe('RobotsTxtGeneratorView', () => {
   })
 
   it('generates output and updates advanced fields', async () => {
-    const wrapper = mount(RobotsTxtGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     const initialOutput = getOutput(wrapper)
@@ -97,7 +126,7 @@ describe('RobotsTxtGeneratorView', () => {
   })
 
   it('adds user-agent presets', async () => {
-    const wrapper = mount(RobotsTxtGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     await wrapper.get('[data-testid="preset-useragent-search"]').trigger('click')
@@ -110,7 +139,7 @@ describe('RobotsTxtGeneratorView', () => {
   })
 
   it('applies presets and manages groups', async () => {
-    const wrapper = mount(RobotsTxtGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     await wrapper.get('[data-testid="preset-disallow-all"]').trigger('click')
