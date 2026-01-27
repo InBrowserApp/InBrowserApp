@@ -33,6 +33,8 @@ import { routes as shake128HashTextOrFileRoutes } from '@tools/shake128-hash-tex
 import { routes as shake256HashTextOrFileRoutes } from '@tools/shake256-hash-text-or-file/routes'
 import { routes as sha384HashTextOrFileRoutes } from '@tools/sha384-hash-text-or-file/routes'
 import { routes as sha512HashTextOrFileRoutes } from '@tools/sha512-hash-text-or-file/routes'
+import { routes as sha512_224HashTextOrFileRoutes } from '@tools/sha512-224-hash-text-or-file/routes'
+import { routes as sha512_256HashTextOrFileRoutes } from '@tools/sha512-256-hash-text-or-file/routes'
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
 import { routes as md5HashTextOrFileRoutes } from '@tools/md5-hash-text-or-file/routes'
 import { routes as sm3HashTextOrFileRoutes } from '@tools/sm3-hash-text-or-file/routes'
@@ -207,6 +209,8 @@ export const routes: ToolRoute[] = [
   ...shake256HashTextOrFileRoutes,
   ...sha384HashTextOrFileRoutes,
   ...sha512HashTextOrFileRoutes,
+  ...sha512_224HashTextOrFileRoutes,
+  ...sha512_256HashTextOrFileRoutes,
   ...sha1HashTextOrFileRoutes,
   ...md5HashTextOrFileRoutes,
   ...sm3HashTextOrFileRoutes,

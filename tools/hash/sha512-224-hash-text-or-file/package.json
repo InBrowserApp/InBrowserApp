@@ -1,0 +1,22 @@
+{
+  "name": "@tools/sha512-224-hash-text-or-file",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "catalog:",
+    "@vicons/tabler": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@tools/hash-text-or-file-template": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
+}
