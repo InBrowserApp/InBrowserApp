@@ -1,7 +1,11 @@
 <template>
   <n-card :title="title" class="library-card">
     <template #header-extra>
+      <n-text v-if="fontCountLabel" depth="3" class="count-label" data-testid="font-count">
+        {{ fontCountLabel }}
+      </n-text>
       <n-button
+        v-else
         text
         size="small"
         :disabled="!isSupported || isLoading"
@@ -63,11 +67,7 @@
       </n-flex>
     </n-flex>
 
-    <n-text v-show="fontCountLabel" depth="3" class="count-label">
-      {{ fontCountLabel }}
-    </n-text>
-
-    <n-scrollbar class="font-scroll" data-testid="font-list">
+    <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
       <div class="font-list">
         <template v-if="displayGroups.length">
           <div v-for="group in displayGroups" :key="group.id" class="font-group">
@@ -161,7 +161,7 @@ const { t } = useI18n()
 }
 
 .status-alert {
-  margin-top: 4px;
+  margin: 0;
 }
 
 .search-input {
@@ -179,7 +179,7 @@ const { t } = useI18n()
 }
 
 .count-label {
-  margin-top: 4px;
+  margin: 0;
 }
 
 .font-scroll {

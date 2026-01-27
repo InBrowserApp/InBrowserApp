@@ -33,24 +33,14 @@
         {{ t('preview-empty') }}
       </n-text>
     </div>
-
-    <div class="css-output">
-      <n-text strong>{{ t('css-title') }}</n-text>
-      <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
-        <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
-          <n-code :code="cssSnippet" word-wrap class="css-snippet" data-testid="css-snippet" />
-        </span>
-      </CopyToClipboardTooltip>
-    </div>
   </n-card>
 </template>
 
 <script setup lang="ts">
 import { computed, type CSSProperties } from 'vue'
-import { NButton, NCard, NCode, NFormItem, NIcon, NInput, NText } from 'naive-ui'
+import { NButton, NCard, NFormItem, NIcon, NInput, NText } from 'naive-ui'
 import MoonOutline from '@vicons/ionicons5/MoonOutline'
 import SunnyOutline from '@vicons/ionicons5/SunnyOutline'
-import { CopyToClipboardTooltip } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 import type { DisplayFont } from './types'
 
@@ -59,7 +49,6 @@ const props = defineProps<{
   darkBackground: boolean
   activeFont?: DisplayFont
   previewStyle: CSSProperties
-  cssSnippet: string
 }>()
 
 const emit = defineEmits(['update:sampleText', 'update:darkBackground'])
@@ -112,24 +101,6 @@ const toggleBackground = () => {
 .preview-textarea {
   margin-top: 4px;
 }
-
-.css-output {
-  display: grid;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.css-snippet-trigger {
-  display: inline-flex;
-  max-width: 100%;
-  cursor: pointer;
-}
-
-.css-snippet :deep(pre) {
-  display: inline-block;
-  max-width: 100%;
-  white-space: pre-wrap;
-}
 </style>
 
 <i18n lang="json">
@@ -139,200 +110,175 @@ const toggleBackground = () => {
     "preview-placeholder": "Type your sample text…",
     "preview-fallback": "Sample text",
     "preview-background": "Dark background",
-    "preview-empty": "Select a font to preview.",
-    "css-title": "CSS snippet"
+    "preview-empty": "Select a font to preview."
   },
   "zh": {
     "preview-title": "预览",
     "preview-placeholder": "输入示例文字…",
     "preview-fallback": "示例文字",
     "preview-background": "深色背景",
-    "preview-empty": "请选择一个字体进行预览。",
-    "css-title": "CSS 代码"
+    "preview-empty": "请选择一个字体进行预览。"
   },
   "zh-CN": {
     "preview-title": "预览",
     "preview-placeholder": "输入示例文字…",
     "preview-fallback": "示例文字",
     "preview-background": "深色背景",
-    "preview-empty": "请选择一个字体进行预览。",
-    "css-title": "CSS 代码"
+    "preview-empty": "请选择一个字体进行预览。"
   },
   "zh-TW": {
     "preview-title": "預覽",
     "preview-placeholder": "輸入示例文字…",
     "preview-fallback": "示例文字",
     "preview-background": "深色背景",
-    "preview-empty": "請選擇字型以預覽。",
-    "css-title": "CSS 片段"
+    "preview-empty": "請選擇字型以預覽。"
   },
   "zh-HK": {
     "preview-title": "預覽",
     "preview-placeholder": "輸入示例文字…",
     "preview-fallback": "示例文字",
     "preview-background": "深色背景",
-    "preview-empty": "請選擇字體以預覽。",
-    "css-title": "CSS 片段"
+    "preview-empty": "請選擇字體以預覽。"
   },
   "es": {
     "preview-title": "Vista previa",
     "preview-placeholder": "Escribe tu texto de muestra…",
     "preview-fallback": "Texto de muestra",
     "preview-background": "Fondo oscuro",
-    "preview-empty": "Selecciona una fuente para previsualizar.",
-    "css-title": "Fragmento CSS"
+    "preview-empty": "Selecciona una fuente para previsualizar."
   },
   "fr": {
     "preview-title": "Aperçu",
     "preview-placeholder": "Saisissez votre texte d'exemple…",
     "preview-fallback": "Texte d'exemple",
     "preview-background": "Fond sombre",
-    "preview-empty": "Sélectionnez une police pour l'aperçu.",
-    "css-title": "Extrait CSS"
+    "preview-empty": "Sélectionnez une police pour l'aperçu."
   },
   "de": {
     "preview-title": "Vorschau",
     "preview-placeholder": "Beispieltext eingeben…",
     "preview-fallback": "Beispieltext",
     "preview-background": "Dunkler Hintergrund",
-    "preview-empty": "Wähle eine Schrift für die Vorschau.",
-    "css-title": "CSS-Auszug"
+    "preview-empty": "Wähle eine Schrift für die Vorschau."
   },
   "it": {
     "preview-title": "Anteprima",
     "preview-placeholder": "Scrivi il testo di esempio…",
     "preview-fallback": "Testo di esempio",
     "preview-background": "Sfondo scuro",
-    "preview-empty": "Seleziona un font per l'anteprima.",
-    "css-title": "Snippet CSS"
+    "preview-empty": "Seleziona un font per l'anteprima."
   },
   "ja": {
     "preview-title": "プレビュー",
     "preview-placeholder": "サンプル文字を入力…",
     "preview-fallback": "サンプル文字",
     "preview-background": "ダーク背景",
-    "preview-empty": "プレビューするフォントを選択してください。",
-    "css-title": "CSS スニペット"
+    "preview-empty": "プレビューするフォントを選択してください。"
   },
   "ko": {
     "preview-title": "미리보기",
     "preview-placeholder": "샘플 텍스트 입력…",
     "preview-fallback": "샘플 텍스트",
     "preview-background": "어두운 배경",
-    "preview-empty": "미리볼 폰트를 선택하세요.",
-    "css-title": "CSS 스니펫"
+    "preview-empty": "미리볼 폰트를 선택하세요."
   },
   "ru": {
     "preview-title": "Предпросмотр",
     "preview-placeholder": "Введите образец текста…",
     "preview-fallback": "Образец текста",
     "preview-background": "Тёмный фон",
-    "preview-empty": "Выберите шрифт для предпросмотра.",
-    "css-title": "CSS-фрагмент"
+    "preview-empty": "Выберите шрифт для предпросмотра."
   },
   "pt": {
     "preview-title": "Prévia",
     "preview-placeholder": "Digite o texto de amostra…",
     "preview-fallback": "Texto de amostra",
     "preview-background": "Fundo escuro",
-    "preview-empty": "Selecione uma fonte para pré-visualizar.",
-    "css-title": "Trecho CSS"
+    "preview-empty": "Selecione uma fonte para pré-visualizar."
   },
   "ar": {
     "preview-title": "معاينة",
     "preview-placeholder": "اكتب نص العينة…",
     "preview-fallback": "نص العينة",
     "preview-background": "خلفية داكنة",
-    "preview-empty": "اختر خطًا للمعاينة.",
-    "css-title": "مقتطف CSS"
+    "preview-empty": "اختر خطًا للمعاينة."
   },
   "hi": {
     "preview-title": "पूर्वावलोकन",
     "preview-placeholder": "सैंपल टेक्स्ट लिखें…",
     "preview-fallback": "सैंपल टेक्स्ट",
     "preview-background": "डार्क बैकग्राउंड",
-    "preview-empty": "पूर्वावलोकन के लिए कोई फ़ॉन्ट चुनें।",
-    "css-title": "CSS स्निपेट"
+    "preview-empty": "पूर्वावलोकन के लिए कोई फ़ॉन्ट चुनें।"
   },
   "tr": {
     "preview-title": "Önizleme",
     "preview-placeholder": "Örnek metin yazın…",
     "preview-fallback": "Örnek metin",
     "preview-background": "Koyu arka plan",
-    "preview-empty": "Önizleme için bir yazı tipi seçin.",
-    "css-title": "CSS parçası"
+    "preview-empty": "Önizleme için bir yazı tipi seçin."
   },
   "nl": {
     "preview-title": "Voorbeeld",
     "preview-placeholder": "Typ je voorbeeldtekst…",
     "preview-fallback": "Voorbeeldtekst",
     "preview-background": "Donkere achtergrond",
-    "preview-empty": "Selecteer een lettertype om te bekijken.",
-    "css-title": "CSS-fragment"
+    "preview-empty": "Selecteer een lettertype om te bekijken."
   },
   "sv": {
     "preview-title": "Förhandsvisning",
     "preview-placeholder": "Skriv exempeltext…",
     "preview-fallback": "Exempeltext",
     "preview-background": "Mörk bakgrund",
-    "preview-empty": "Välj ett typsnitt för förhandsvisning.",
-    "css-title": "CSS-snutt"
+    "preview-empty": "Välj ett typsnitt för förhandsvisning."
   },
   "pl": {
     "preview-title": "Podgląd",
     "preview-placeholder": "Wpisz tekst próbki…",
     "preview-fallback": "Tekst próbki",
     "preview-background": "Ciemne tło",
-    "preview-empty": "Wybierz font do podglądu.",
-    "css-title": "Fragment CSS"
+    "preview-empty": "Wybierz font do podglądu."
   },
   "vi": {
     "preview-title": "Xem trước",
     "preview-placeholder": "Nhập văn bản mẫu…",
     "preview-fallback": "Văn bản mẫu",
     "preview-background": "Nền tối",
-    "preview-empty": "Chọn phông chữ để xem trước.",
-    "css-title": "Đoạn CSS"
+    "preview-empty": "Chọn phông chữ để xem trước."
   },
   "th": {
     "preview-title": "พรีวิว",
     "preview-placeholder": "พิมพ์ข้อความตัวอย่าง…",
     "preview-fallback": "ข้อความตัวอย่าง",
     "preview-background": "พื้นหลังเข้ม",
-    "preview-empty": "เลือกฟอนต์เพื่อพรีวิว",
-    "css-title": "ตัวอย่าง CSS"
+    "preview-empty": "เลือกฟอนต์เพื่อพรีวิว"
   },
   "id": {
     "preview-title": "Pratinjau",
     "preview-placeholder": "Ketik teks contoh…",
     "preview-fallback": "Teks contoh",
     "preview-background": "Latar gelap",
-    "preview-empty": "Pilih font untuk pratinjau.",
-    "css-title": "Cuplikan CSS"
+    "preview-empty": "Pilih font untuk pratinjau."
   },
   "he": {
     "preview-title": "תצוגה מקדימה",
     "preview-placeholder": "הקלד טקסט לדוגמה…",
     "preview-fallback": "טקסט לדוגמה",
     "preview-background": "רקע כהה",
-    "preview-empty": "בחר גופן לתצוגה מקדימה.",
-    "css-title": "קטע CSS"
+    "preview-empty": "בחר גופן לתצוגה מקדימה."
   },
   "ms": {
     "preview-title": "Pratonton",
     "preview-placeholder": "Taip teks sampel…",
     "preview-fallback": "Teks sampel",
     "preview-background": "Latar gelap",
-    "preview-empty": "Pilih fon untuk pratonton.",
-    "css-title": "Petikan CSS"
+    "preview-empty": "Pilih fon untuk pratonton."
   },
   "no": {
     "preview-title": "Forhåndsvisning",
     "preview-placeholder": "Skriv eksempeltekst…",
     "preview-fallback": "Eksempeltekst",
     "preview-background": "Mørk bakgrunn",
-    "preview-empty": "Velg en font for forhåndsvisning.",
-    "css-title": "CSS-utdrag"
+    "preview-empty": "Velg en font for forhåndsvisning."
   }
 }
 </i18n>
