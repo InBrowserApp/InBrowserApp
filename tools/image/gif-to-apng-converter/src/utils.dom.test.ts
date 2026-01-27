@@ -92,11 +92,11 @@ function createGifBytesWithBackground() {
 
 function createGifFile(loopCount?: number) {
   const bytes = createGifBytes(loopCount)
-  return new File([bytes], 'demo.gif', { type: 'image/gif' })
+  return new File([bytes.buffer as ArrayBuffer], 'demo.gif', { type: 'image/gif' })
 }
 
 function createGifFileFromBytes(bytes: Uint8Array) {
-  return new File([bytes], 'demo.gif', { type: 'image/gif' })
+  return new File([bytes.buffer as ArrayBuffer], 'demo.gif', { type: 'image/gif' })
 }
 
 function createApngBuffer(numFrames = 1, numPlays = 0) {
@@ -118,7 +118,8 @@ function createApngBuffer(numFrames = 1, numPlays = 0) {
 function crc32(bytes: Uint8Array) {
   let crc = 0xffffffff
   for (const value of bytes) {
-    crc = CRC_TABLE[(crc ^ value) & 0xff] ^ (crc >>> 8)
+    const tableValue = CRC_TABLE[(crc ^ value) & 0xff] ?? 0
+    crc = tableValue ^ (crc >>> 8)
   }
   return (crc ^ 0xffffffff) >>> 0
 }
@@ -301,8 +302,9 @@ describe('convertGifToApng', () => {
       'demo.png',
     )
 
-    const encodedFrames = encodeMock.mock.calls[0]?.[0] as ArrayBuffer[]
-    const secondFrame = new Uint8ClampedArray(encodedFrames[1])
+    const encodedFrames = encodeMock.mock.calls[0]?.[0] as ArrayBuffer[] | undefined
+    expect(encodedFrames).toBeDefined()
+    const secondFrame = new Uint8ClampedArray(encodedFrames?.[1] ?? new ArrayBuffer(0))
     expect(Array.from(secondFrame.slice(0, 4))).toEqual([255, 0, 0, 255])
     expect(Array.from(secondFrame.slice(4, 8))).toEqual([0, 0, 255, 255])
   })

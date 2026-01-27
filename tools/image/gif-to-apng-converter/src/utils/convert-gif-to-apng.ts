@@ -385,7 +385,8 @@ function buildCrcTable() {
 function crc32(bytes: Uint8Array) {
   let crc = 0xffffffff
   for (const value of bytes) {
-    crc = CRC_TABLE[(crc ^ value) & 0xff] ^ (crc >>> 8)
+    const tableValue = CRC_TABLE[(crc ^ value) & 0xff] ?? 0
+    crc = tableValue ^ (crc >>> 8)
   }
   return (crc ^ 0xffffffff) >>> 0
 }
