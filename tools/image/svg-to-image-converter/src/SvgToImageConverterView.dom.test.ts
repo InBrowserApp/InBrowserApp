@@ -26,6 +26,14 @@ import { flushPromises, mount } from '@vue/test-utils'
 import { h } from 'vue'
 import { NCheckbox, NMessageProvider, NUpload } from 'naive-ui'
 import SvgToImageConverterView from './SvgToImageConverterView.vue'
+import {
+  buildSvgDataUrl,
+  getSvgDimensions,
+  loadSvgImage,
+  parseSvgLength,
+  parseViewBox,
+  resolveOutputSize,
+} from './utils/svgConversion'
 
 const Wrapper = {
   render() {
@@ -81,10 +89,6 @@ type UploadPayload = {
 }
 
 type SvgToImageConverterVm = {
-  parseSvgLength: (value: string | null) => number | null
-  parseViewBox: (value: string | null) => SvgDimensions | null
-  getSvgDimensions: (value: string) => SvgDimensions
-  buildSvgDataUrl: (value: string) => string
   handleBeforeUpload: (payload: UploadPayload) => Promise<boolean>
   handleClearFile: () => void
   setOriginalDimensions: (dimensions: SvgDimensions) => void
@@ -96,13 +100,7 @@ type SvgToImageConverterVm = {
   handleQualityUpdate: (value: number) => void
   handleBackgroundToggle: (value: boolean) => void
   handleBackgroundChange: (value: string) => void
-  resolveOutputSize: () => SvgDimensions
   convertSvg: () => Promise<void>
-  loadSvgImage: (value: string) => Promise<HTMLImageElement>
-  formatOptions: Array<{ label: string; value: OutputFormat }>
-  aspectRatio: number
-  outputExtension: string
-  outputMimeType: string
   outputFileName: string
   originalSizeLabel: string
   outputSizeLabel: string
@@ -111,9 +109,7 @@ type SvgToImageConverterVm = {
   showQuality: boolean
   originalFile: File | null
   svgText: string
-  svgDimensions: SvgDimensions | null
   outputBlob: Blob | null
-  outputDimensions: SvgDimensions | null
   error: string
   format: OutputFormat
   width: number
@@ -184,44 +180,45 @@ describe('SvgToImageConverterView', () => {
   })
 
   it('parses svg helpers and dimensions', () => {
-    const wrapper = mountWrapper()
-    const vm = getVm(wrapper)
+    expect(parseSvgLength(null)).toBeNull()
+    expect(parseSvgLength('')).toBeNull()
+    expect(parseSvgLength('25%')).toBeNull()
+    expect(parseSvgLength('abc')).toBeNull()
+    expect(parseSvgLength('0')).toBeNull()
+    expect(parseSvgLength('12px')).toBe(12)
 
-    expect(vm.parseSvgLength(null)).toBeNull()
-    expect(vm.parseSvgLength('')).toBeNull()
-    expect(vm.parseSvgLength('25%')).toBeNull()
-    expect(vm.parseSvgLength('abc')).toBeNull()
-    expect(vm.parseSvgLength('0')).toBeNull()
-    expect(vm.parseSvgLength('12px')).toBe(12)
+    expect(parseViewBox(null)).toBeNull()
+    expect(parseViewBox('0 0 1')).toBeNull()
+    expect(parseViewBox('0 0 a b')).toBeNull()
+    expect(parseViewBox('0 0 -10 20')).toBeNull()
+    expect(parseViewBox('0 0 10 20')).toEqual({ width: 10, height: 20 })
 
-    expect(vm.parseViewBox(null)).toBeNull()
-    expect(vm.parseViewBox('0 0 1')).toBeNull()
-    expect(vm.parseViewBox('0 0 a b')).toBeNull()
-    expect(vm.parseViewBox('0 0 -10 20')).toBeNull()
-    expect(vm.parseViewBox('0 0 10 20')).toEqual({ width: 10, height: 20 })
+    expect(() => getSvgDimensions('<svg', 'Invalid SVG')).toThrow()
+    expect(() => getSvgDimensions('<div></div>', 'Invalid SVG')).toThrow()
 
-    expect(() => vm.getSvgDimensions('<svg')).toThrow()
-    expect(() => vm.getSvgDimensions('<div></div>')).toThrow()
-
-    expect(vm.getSvgDimensions('<svg viewBox="0 0 100 200"></svg>')).toEqual({
+    expect(getSvgDimensions('<svg viewBox="0 0 100 200"></svg>', 'Invalid SVG')).toEqual({
       width: 100,
       height: 200,
     })
-    expect(vm.getSvgDimensions('<svg width="150" viewBox="0 0 300 600"></svg>')).toEqual({
+    expect(
+      getSvgDimensions('<svg width="150" viewBox="0 0 300 600"></svg>', 'Invalid SVG'),
+    ).toEqual({
       width: 150,
       height: 300,
     })
-    expect(vm.getSvgDimensions('<svg height="200" viewBox="0 0 400 100"></svg>')).toEqual({
+    expect(
+      getSvgDimensions('<svg height="200" viewBox="0 0 400 100"></svg>', 'Invalid SVG'),
+    ).toEqual({
       width: 800,
       height: 200,
     })
-    expect(vm.getSvgDimensions('<svg width="20" height="30"></svg>')).toEqual({
+    expect(getSvgDimensions('<svg width="20" height="30"></svg>', 'Invalid SVG')).toEqual({
       width: 20,
       height: 30,
     })
-    expect(vm.getSvgDimensions('<svg></svg>')).toEqual({ width: 512, height: 512 })
+    expect(getSvgDimensions('<svg></svg>', 'Invalid SVG')).toEqual({ width: 512, height: 512 })
 
-    expect(vm.buildSvgDataUrl('<svg></svg>')).toContain('data:image/svg+xml')
+    expect(buildSvgDataUrl('<svg></svg>')).toContain('data:image/svg+xml')
   })
 
   it('handles upload validation and reset', async () => {
@@ -280,13 +277,12 @@ describe('SvgToImageConverterView', () => {
     const wrapper = mountWrapper()
     const vm = getVm(wrapper)
 
-    expect(vm.formatOptions).toHaveLength(3)
-    expect(vm.aspectRatio).toBe(1)
-
-    vm.setOriginalDimensions({ width: 100, height: 50 })
+    const initialFile = createSvgFile(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"></svg>',
+    )
+    await vm.handleBeforeUpload({ file: { file: initialFile }, fileList: [{ file: initialFile }] })
     expect(vm.width).toBe(100)
     expect(vm.height).toBe(50)
-    expect(vm.aspectRatio).toBe(2)
     expect(vm.originalDimensionsLabel).not.toBe('')
 
     vm.handleWidthUpdate(null)
@@ -316,18 +312,16 @@ describe('SvgToImageConverterView', () => {
     expect(vm.width).toBe(100)
     expect(vm.height).toBe(50)
 
-    vm.svgDimensions = null
+    vm.handleClearFile()
     expect(vm.originalDimensionsLabel).toBe('')
     vm.resetToOriginal()
     vm.handleKeepAspectToggle(true)
 
     vm.handleFormatUpdate('jpeg')
-    expect(vm.outputExtension).toBe('jpg')
-    expect(vm.outputMimeType).toBe('image/jpeg')
     expect(vm.showQuality).toBe(true)
 
     vm.handleFormatUpdate('webp')
-    expect(vm.outputMimeType).toBe('image/webp')
+    expect(vm.showQuality).toBe(true)
 
     vm.handleFormatUpdate('png')
     expect(vm.showQuality).toBe(false)
@@ -346,13 +340,6 @@ describe('SvgToImageConverterView', () => {
     expect(vm.outputFileName).toContain('icon.jpg')
     expect(vm.originalSizeLabel).not.toBe('')
 
-    vm.outputDimensions = { width: 10, height: 20 }
-    expect(vm.outputDimensionsLabel).toContain('10')
-    expect(vm.outputDimensionsLabel).toContain('20')
-
-    vm.outputDimensions = null
-    expect(vm.outputDimensionsLabel).toBe('')
-
     vm.outputBlob = new Blob(['ok'])
     expect(vm.outputSizeLabel).not.toBe('')
 
@@ -363,10 +350,7 @@ describe('SvgToImageConverterView', () => {
     expect(vm.outputFileName).toContain('converted')
     expect(vm.originalSizeLabel).toBe('')
 
-    vm.svgDimensions = null
-    vm.width = 0
-    vm.height = 0
-    expect(vm.resolveOutputSize()).toEqual({ width: 512, height: 512 })
+    expect(resolveOutputSize(null, 0, 0)).toEqual({ width: 512, height: 512 })
 
     vm.svgText = '<svg width="40" height="20"></svg>'
     vm.handleFormatUpdate('png')
@@ -387,9 +371,8 @@ describe('SvgToImageConverterView', () => {
     await vm.convertSvg()
     expect(vm.outputBlob).toBeNull()
 
-    vm.svgText = '<svg width="40" height="20"></svg>'
-    vm.setOriginalDimensions({ width: 40, height: 20 })
-    vm.originalFile = createSvgFile()
+    const sampleFile = createSvgFile('<svg width="40" height="20"></svg>')
+    await vm.handleBeforeUpload({ file: { file: sampleFile }, fileList: [{ file: sampleFile }] })
 
     getContextSpy?.mockReturnValueOnce(null)
     await vm.convertSvg()
@@ -446,12 +429,15 @@ describe('SvgToImageConverterView', () => {
     }
 
     vi.stubGlobal('Image', ErrorImage)
-    await expect(vm.loadSvgImage('<svg></svg>')).rejects.toThrow('Failed to load SVG image')
+    await expect(loadSvgImage('<svg></svg>', 'Failed to load SVG image')).rejects.toThrow(
+      'Failed to load SVG image',
+    )
 
-    vm.outputBlob = new Blob(['ok'])
-    vm.outputDimensions = { width: 40, height: 20 }
-    vm.originalFile = createSvgFile()
-    vm.setOriginalDimensions({ width: 40, height: 20 })
+    vi.stubGlobal('Image', MockImage)
+
+    const previewFile = createSvgFile()
+    await vm.handleBeforeUpload({ file: { file: previewFile }, fileList: [{ file: previewFile }] })
+    await vm.convertSvg()
     await flushPromises()
     const outputText = wrapper.text()
     expect(outputText).toContain('Original')
