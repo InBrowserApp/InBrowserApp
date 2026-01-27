@@ -35,6 +35,8 @@ import { toolInfo as shake128HashTextOrFileToolInfo } from '@tools/shake128-hash
 import { toolInfo as shake256HashTextOrFileToolInfo } from '@tools/shake256-hash-text-or-file'
 import { toolInfo as sha384HashTextOrFileToolInfo } from '@tools/sha384-hash-text-or-file'
 import { toolInfo as sha512HashTextOrFileToolInfo } from '@tools/sha512-hash-text-or-file'
+import { toolInfo as sha512_224HashTextOrFileToolInfo } from '@tools/sha512-224-hash-text-or-file'
+import { toolInfo as sha512_256HashTextOrFileToolInfo } from '@tools/sha512-256-hash-text-or-file'
 import { toolInfo as sha1HashTextOrFileToolInfo } from '@tools/sha1-hash-text-or-file'
 import { toolInfo as md5HashTextOrFileToolInfo } from '@tools/md5-hash-text-or-file'
 import { toolInfo as sm3HashTextOrFileToolInfo } from '@tools/sm3-hash-text-or-file'
@@ -246,6 +248,8 @@ export const tools: ToolInfo[] = [
   shake256HashTextOrFileToolInfo,
   sha384HashTextOrFileToolInfo,
   sha512HashTextOrFileToolInfo,
+  sha512_224HashTextOrFileToolInfo,
+  sha512_256HashTextOrFileToolInfo,
   sha1HashTextOrFileToolInfo,
   md5HashTextOrFileToolInfo,
   sm3HashTextOrFileToolInfo,
