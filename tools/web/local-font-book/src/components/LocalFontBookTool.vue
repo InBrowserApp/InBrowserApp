@@ -120,6 +120,9 @@ const filteredFonts = computed(() => {
 
 const displayGroups = computed<FontGroup[]>(() => {
   if (!groupByFamily.value) {
+    if (!filteredFonts.value.length) {
+      return []
+    }
     return [
       {
         id: 'all-fonts',
@@ -177,9 +180,11 @@ const previewStyle = computed(() => {
   if (!activeFont.value) return {}
   const family = getFontFamily(activeFont.value)
   if (!family) return {}
+  const weight = getFontWeight(activeFont.value.style)
   return {
     fontFamily: family,
     fontStyle: isItalicStyle(activeFont.value.style) ? 'italic' : 'normal',
+    ...(weight && weight !== 400 ? { fontWeight: weight } : {}),
     fontSize: `${previewFontSize}px`,
     lineHeight: String(previewLineHeight),
   }
@@ -190,8 +195,10 @@ const cssSnippet = computed(() => {
   const family = getFontFamily(activeFont.value)
   if (!family) return ''
   const style = isItalicStyle(activeFont.value.style) ? 'italic' : 'normal'
+  const weight = getFontWeight(activeFont.value.style)
   const lines = [`font-family: ${wrapFontFamily(family)};`]
   if (style !== 'normal') lines.push(`font-style: ${style};`)
+  if (weight && weight !== 400) lines.push(`font-weight: ${weight};`)
   return lines.join('\n')
 })
 
@@ -294,6 +301,24 @@ function toSortableText(value: unknown) {
 
 function isItalicStyle(style: string) {
   return /italic|oblique/i.test(style)
+}
+
+function getFontWeight(style: string) {
+  const normalized = style.toLowerCase()
+  const numericMatch = normalized.match(/(^|\D)([1-9]00)(\D|$)/)
+  if (numericMatch) return Number(numericMatch[2])
+  if (/(^|\b)(thin|hairline)\b/.test(normalized)) return 100
+  if (/(extra[-\s]?light|ultra[-\s]?light)/.test(normalized)) return 200
+  if (/\blight\b/.test(normalized)) return 300
+  if (/\bbook\b/.test(normalized)) return 350
+  if (/(^|\b)(regular|normal|roman)\b/.test(normalized)) return 400
+  if (/\bmedium\b/.test(normalized)) return 500
+  if (/(semi[-\s]?bold|demi[-\s]?bold)/.test(normalized)) return 600
+  if (/(extra[-\s]?bold|ultra[-\s]?bold)/.test(normalized)) return 800
+  if (/\bbold\b/.test(normalized)) return 700
+  if (/(extra[-\s]?black|ultra[-\s]?black)/.test(normalized)) return 950
+  if (/(^|\b)(black|heavy)\b/.test(normalized)) return 900
+  return null
 }
 
 function wrapFontFamily(family: string) {
