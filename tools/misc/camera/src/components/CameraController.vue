@@ -400,10 +400,16 @@ async function attachStream(nextStream: MediaStream) {
   previewRef.value.srcObject = nextStream
   previewRef.value.onloadedmetadata = () => {
     updateAspectRatioFromVideo()
+    if (errorMessage.value === t('cameraNotReady')) {
+      errorMessage.value = ''
+    }
     previewRef.value?.play().catch(() => undefined)
   }
   await previewRef.value.play().catch(() => undefined)
   updateAspectRatioFromVideo()
+  if (errorMessage.value === t('cameraNotReady')) {
+    errorMessage.value = ''
+  }
 }
 
 function buildConstraints(): MediaStreamConstraints {
