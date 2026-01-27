@@ -31,7 +31,7 @@ export async function convertGifToApng(
     throw new Error('INVALID_GIF')
   }
 
-  const gif = parseGIF(gifBytes)
+  const gif = parseGIF(buffer)
   const frames = decompressFrames(gif, true) as GifFrame[]
 
   if (!frames.length) {
@@ -163,12 +163,12 @@ function drawPatch(
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
       const patchIndex = (y * width + x) * 4
-      const alpha = patch[patchIndex + 3]
+      const alpha = patch[patchIndex + 3] ?? 0
       if (alpha === 0) continue
       const canvasIndex = ((y + top) * canvasWidth + (x + left)) * 4
-      canvas[canvasIndex] = patch[patchIndex]
-      canvas[canvasIndex + 1] = patch[patchIndex + 1]
-      canvas[canvasIndex + 2] = patch[patchIndex + 2]
+      canvas[canvasIndex] = patch[patchIndex] ?? 0
+      canvas[canvasIndex + 1] = patch[patchIndex + 1] ?? 0
+      canvas[canvasIndex + 2] = patch[patchIndex + 2] ?? 0
       canvas[canvasIndex + 3] = alpha
     }
   }
@@ -188,7 +188,7 @@ function scaleFramesIfNeeded(
   outputHeight: number,
 ) {
   if (width === outputWidth && height === outputHeight) {
-    return frames.map((frame) => frame.buffer)
+    return frames.map((frame) => new Uint8ClampedArray(frame).buffer)
   }
 
   const sourceCanvas = document.createElement('canvas')
@@ -211,7 +211,7 @@ function scaleFramesIfNeeded(
   targetCtx.imageSmoothingQuality = 'high'
 
   return frames.map((frame) => {
-    const imageData = new ImageData(frame, width, height)
+    const imageData = new ImageData(new Uint8ClampedArray(frame), width, height)
     sourceCtx.putImageData(imageData, 0, 0)
     targetCtx.clearRect(0, 0, outputWidth, outputHeight)
     targetCtx.drawImage(sourceCanvas, 0, 0, outputWidth, outputHeight)
@@ -233,27 +233,29 @@ function resolveLoopCount(bytes: Uint8Array, options: GifToApngOptions) {
 }
 
 function readGifLoopCount(bytes: Uint8Array): number | null {
+  const readByte = (index: number) => bytes[index] ?? 0
+
   for (let i = 0; i + 19 <= bytes.length; i += 1) {
-    if (bytes[i] !== 0x21 || bytes[i + 1] !== 0xff || bytes[i + 2] !== 0x0b) continue
+    if (readByte(i) !== 0x21 || readByte(i + 1) !== 0xff || readByte(i + 2) !== 0x0b) continue
     const identifier = String.fromCharCode(
-      bytes[i + 3],
-      bytes[i + 4],
-      bytes[i + 5],
-      bytes[i + 6],
-      bytes[i + 7],
-      bytes[i + 8],
-      bytes[i + 9],
-      bytes[i + 10],
-      bytes[i + 11],
-      bytes[i + 12],
-      bytes[i + 13],
+      readByte(i + 3),
+      readByte(i + 4),
+      readByte(i + 5),
+      readByte(i + 6),
+      readByte(i + 7),
+      readByte(i + 8),
+      readByte(i + 9),
+      readByte(i + 10),
+      readByte(i + 11),
+      readByte(i + 12),
+      readByte(i + 13),
     )
 
     if (identifier !== 'NETSCAPE2.0' && identifier !== 'ANIMEXTS1.0') continue
-    const subBlockSize = bytes[i + 14]
+    const subBlockSize = readByte(i + 14)
     if (subBlockSize < 3) continue
-    if (bytes[i + 15] !== 0x01) continue
-    const loopCount = bytes[i + 16] | (bytes[i + 17] << 8)
+    if (readByte(i + 15) !== 0x01) continue
+    const loopCount = readByte(i + 16) | (readByte(i + 17) << 8)
     return loopCount
   }
 
