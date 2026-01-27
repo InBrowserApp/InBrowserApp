@@ -1,55 +1,50 @@
 <template>
+  <ToolSectionHeader>
+    <span class="preview-header">
+      <span>{{ t('preview-title') }}</span>
+      <span class="preview-header__action">
+        <n-button
+          quaternary
+          circle
+          :aria-label="t('preview-background')"
+          data-testid="background-toggle"
+          @click="toggleBackground"
+        >
+          <template #icon>
+            <n-icon :component="backgroundIcon" />
+          </template>
+        </n-button>
+      </span>
+    </span>
+  </ToolSectionHeader>
+
   <ToolSection>
-    <div class="preview-section">
-      <ToolSectionHeader>
-        <span class="preview-header">
-          <span>{{ t('preview-title') }}</span>
-          <span class="preview-header__action">
-            <n-button
-              quaternary
-              circle
-              :aria-label="t('preview-background')"
-              data-testid="background-toggle"
-              @click="toggleBackground"
-            >
-              <template #icon>
-                <n-icon :component="backgroundIcon" />
-              </template>
-            </n-button>
-          </span>
-        </span>
-      </ToolSectionHeader>
+    <n-form-item :label="t('preview-fallback')" class="preview-textarea">
+      <n-input
+        :value="sampleText"
+        type="textarea"
+        :placeholder="t('preview-placeholder')"
+        :autosize="{ minRows: 3, maxRows: 5 }"
+        data-testid="sample-text"
+        @update:value="emit('update:sampleText', $event)"
+      />
+    </n-form-item>
+  </ToolSection>
 
-      <n-form-item :label="t('preview-fallback')" class="preview-textarea">
-        <n-input
-          :value="sampleText"
-          type="textarea"
-          :placeholder="t('preview-placeholder')"
-          :autosize="{ minRows: 3, maxRows: 5 }"
-          data-testid="sample-text"
-          @update:value="emit('update:sampleText', $event)"
-        />
-      </n-form-item>
-
-      <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
-        <div
-          v-if="activeFont"
-          class="preview-text"
-          :style="previewStyle"
-          data-testid="preview-text"
-        >
-          {{ sampleText || t('preview-fallback') }}
-        </div>
-        <n-text
-          v-else
-          depth="3"
-          class="preview-empty"
-          :style="emptyTextStyle"
-          data-testid="preview-empty"
-        >
-          {{ t('preview-empty') }}
-        </n-text>
+  <ToolSection>
+    <div class="preview-surface" :class="{ 'is-dark': darkBackground }">
+      <div v-if="activeFont" class="preview-text" :style="previewStyle" data-testid="preview-text">
+        {{ sampleText || t('preview-fallback') }}
       </div>
+      <n-text
+        v-else
+        depth="3"
+        class="preview-empty"
+        :style="emptyTextStyle"
+        data-testid="preview-empty"
+      >
+        {{ t('preview-empty') }}
+      </n-text>
     </div>
   </ToolSection>
 </template>
@@ -86,12 +81,6 @@ const toggleBackground = () => {
 </script>
 
 <style scoped>
-.preview-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
 .preview-header {
   display: inline-flex;
   align-items: center;

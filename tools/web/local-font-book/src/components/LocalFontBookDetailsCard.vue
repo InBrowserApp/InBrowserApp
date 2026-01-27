@@ -1,76 +1,74 @@
 <template>
+  <ToolSectionHeader>{{ t('details-title') }}</ToolSectionHeader>
   <ToolSection>
-    <div class="details-section">
-      <ToolSectionHeader>{{ t('details-title') }}</ToolSectionHeader>
-      <n-descriptions label-placement="left" bordered :column="1" content-style="width: 100%">
-        <n-descriptions-item>
-          <template #label>
-            <span class="details-label">{{ t('details-family') }}</span>
-          </template>
-          <CopyToClipboardTooltip :content="activeFont?.family || ''" #="{ copy }">
-            <n-text
-              class="details-value"
-              :class="{ 'details-value--empty': !activeFont?.family }"
-              @click="activeFont?.family ? copy() : undefined"
-            >
-              {{ activeFont?.family || '--' }}
-            </n-text>
-          </CopyToClipboardTooltip>
-        </n-descriptions-item>
-        <n-descriptions-item>
-          <template #label>
-            <span class="details-label">{{ t('details-full-name') }}</span>
-          </template>
-          <CopyToClipboardTooltip :content="activeFont?.fullName || ''" #="{ copy }">
-            <n-text
-              class="details-value"
-              :class="{ 'details-value--empty': !activeFont?.fullName }"
-              @click="activeFont?.fullName ? copy() : undefined"
-            >
-              {{ activeFont?.fullName || '--' }}
-            </n-text>
-          </CopyToClipboardTooltip>
-        </n-descriptions-item>
-        <n-descriptions-item>
-          <template #label>
-            <span class="details-label">{{ t('details-postscript') }}</span>
-          </template>
-          <CopyToClipboardTooltip :content="activeFont?.postscriptName || ''" #="{ copy }">
-            <n-text
-              class="details-value"
-              :class="{ 'details-value--empty': !activeFont?.postscriptName }"
-              @click="activeFont?.postscriptName ? copy() : undefined"
-            >
-              {{ activeFont?.postscriptName || '--' }}
-            </n-text>
-          </CopyToClipboardTooltip>
-        </n-descriptions-item>
-        <n-descriptions-item>
-          <template #label>
-            <span class="details-label">{{ t('details-style') }}</span>
-          </template>
-          <CopyToClipboardTooltip :content="activeFont?.style || ''" #="{ copy }">
-            <n-text
-              class="details-value"
-              :class="{ 'details-value--empty': !activeFont?.style }"
-              @click="activeFont?.style ? copy() : undefined"
-            >
-              {{ activeFont?.style || '--' }}
-            </n-text>
-          </CopyToClipboardTooltip>
-        </n-descriptions-item>
-        <n-descriptions-item>
-          <template #label>
-            <span class="details-label">{{ t('css-title') }}</span>
-          </template>
-          <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
-            <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
-              <n-code :code="cssSnippet" word-wrap class="css-snippet" data-testid="css-snippet" />
-            </span>
-          </CopyToClipboardTooltip>
-        </n-descriptions-item>
-      </n-descriptions>
-    </div>
+    <n-descriptions label-placement="left" bordered :column="1" content-style="width: 100%">
+      <n-descriptions-item>
+        <template #label>
+          <span class="details-label">{{ t('details-family') }}</span>
+        </template>
+        <CopyToClipboardTooltip :content="activeFont?.family || ''" #="{ copy }">
+          <n-text
+            class="details-value"
+            :class="{ 'details-value--empty': !activeFont?.family }"
+            @click="activeFont?.family ? copy() : undefined"
+          >
+            {{ activeFont?.family || '--' }}
+          </n-text>
+        </CopyToClipboardTooltip>
+      </n-descriptions-item>
+      <n-descriptions-item>
+        <template #label>
+          <span class="details-label">{{ t('details-full-name') }}</span>
+        </template>
+        <CopyToClipboardTooltip :content="activeFont?.fullName || ''" #="{ copy }">
+          <n-text
+            class="details-value"
+            :class="{ 'details-value--empty': !activeFont?.fullName }"
+            @click="activeFont?.fullName ? copy() : undefined"
+          >
+            {{ activeFont?.fullName || '--' }}
+          </n-text>
+        </CopyToClipboardTooltip>
+      </n-descriptions-item>
+      <n-descriptions-item>
+        <template #label>
+          <span class="details-label">{{ t('details-postscript') }}</span>
+        </template>
+        <CopyToClipboardTooltip :content="activeFont?.postscriptName || ''" #="{ copy }">
+          <n-text
+            class="details-value"
+            :class="{ 'details-value--empty': !activeFont?.postscriptName }"
+            @click="activeFont?.postscriptName ? copy() : undefined"
+          >
+            {{ activeFont?.postscriptName || '--' }}
+          </n-text>
+        </CopyToClipboardTooltip>
+      </n-descriptions-item>
+      <n-descriptions-item>
+        <template #label>
+          <span class="details-label">{{ t('details-style') }}</span>
+        </template>
+        <CopyToClipboardTooltip :content="activeFont?.style || ''" #="{ copy }">
+          <n-text
+            class="details-value"
+            :class="{ 'details-value--empty': !activeFont?.style }"
+            @click="activeFont?.style ? copy() : undefined"
+          >
+            {{ activeFont?.style || '--' }}
+          </n-text>
+        </CopyToClipboardTooltip>
+      </n-descriptions-item>
+      <n-descriptions-item>
+        <template #label>
+          <span class="details-label">{{ t('css-title') }}</span>
+        </template>
+        <CopyToClipboardTooltip :content="cssSnippet" #="{ copy }">
+          <span class="css-snippet-trigger" @click="cssSnippet ? copy() : undefined">
+            <n-code :code="cssSnippet" word-wrap class="css-snippet" data-testid="css-snippet" />
+          </span>
+        </CopyToClipboardTooltip>
+      </n-descriptions-item>
+    </n-descriptions>
   </ToolSection>
 </template>
 
@@ -90,12 +88,6 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-.details-section {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .details-label {
   white-space: nowrap;
 }
