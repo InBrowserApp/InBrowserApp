@@ -1,107 +1,102 @@
 <template>
   <ToolSection>
-    <div class="library-section">
-      <ToolSectionHeader>
-        <span class="library-header">
-          <span>{{ title }}</span>
-          <span class="library-header__action">
-            <span v-if="fontCountLabel" data-testid="font-count">{{ fontCountLabel }}</span>
-            <n-button
-              v-else
-              text
-              size="small"
-              :disabled="!isSupported || isLoading"
-              :loading="isLoading"
-              @click="emit('load-fonts')"
-              data-testid="load-fonts"
-            >
-              <template #icon>
-                <n-icon :component="FolderOpen16Regular" />
-              </template>
-              {{ t('load-button') }}
-            </n-button>
-          </span>
-        </span>
-      </ToolSectionHeader>
+    <ToolSectionHeader>{{ title }}</ToolSectionHeader>
 
-      <n-alert
-        v-show="statusMessage"
-        :type="statusType"
-        :show-icon="false"
-        class="status-alert"
-        data-testid="status-message"
+    <div class="library-actions">
+      <span v-if="fontCountLabel" data-testid="font-count">{{ fontCountLabel }}</span>
+      <n-button
+        v-else
+        text
+        size="small"
+        :disabled="!isSupported || isLoading"
+        :loading="isLoading"
+        @click="emit('load-fonts')"
+        data-testid="load-fonts"
       >
-        {{ statusMessage }}
-      </n-alert>
-
-      <n-input
-        :value="searchQuery"
-        :placeholder="t('search-placeholder')"
-        clearable
-        class="search-input"
-        data-testid="search-input"
-        @update:value="emit('update:searchQuery', $event)"
-      />
-
-      <n-flex align="center" :size="12" :wrap="true" class="filter-row">
-        <n-select
-          :value="filterStyle"
-          :options="styleOptions"
-          size="small"
-          class="filter-control"
-          data-testid="style-filter"
-          @update:value="emit('update:filterStyle', $event)"
-        />
-        <n-select
-          :value="sortBy"
-          :options="sortOptions"
-          size="small"
-          class="filter-control"
-          data-testid="sort-by"
-          @update:value="emit('update:sortBy', $event)"
-        />
-        <n-flex align="center" :size="8">
-          <n-text depth="3">{{ t('group-label') }}</n-text>
-          <n-switch
-            :value="groupByFamily"
-            size="small"
-            data-testid="group-toggle"
-            @update:value="emit('update:groupByFamily', $event)"
-          />
-        </n-flex>
-      </n-flex>
-
-      <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
-        <div class="font-list">
-          <template v-if="displayGroups.length">
-            <div v-for="group in displayGroups" :key="group.id" class="font-group">
-              <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
-              <div class="font-group__list">
-                <button
-                  v-for="font in group.items"
-                  :key="font.id"
-                  type="button"
-                  class="font-card"
-                  :class="{ 'font-card--active': font.id === activeFontId }"
-                  :style="fontCardStyle(font)"
-                  :data-testid="`font-${font.id}`"
-                  @click="emit('select-font', font.id)"
-                >
-                  <div class="font-card__name">{{ font.displayName }}</div>
-                  <div class="font-card__meta">
-                    <span class="font-card__family">{{ font.displayFamily }}</span>
-                    <span class="font-card__style">{{ font.displayStyle }}</span>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </template>
-          <n-text v-else depth="3" class="empty-text" data-testid="no-results">
-            {{ t('no-results') }}
-          </n-text>
-        </div>
-      </n-scrollbar>
+        <template #icon>
+          <n-icon :component="FolderOpen16Regular" />
+        </template>
+        {{ t('load-button') }}
+      </n-button>
     </div>
+
+    <n-alert
+      v-show="statusMessage"
+      :type="statusType"
+      :show-icon="false"
+      class="status-alert"
+      data-testid="status-message"
+    >
+      {{ statusMessage }}
+    </n-alert>
+
+    <n-input
+      :value="searchQuery"
+      :placeholder="t('search-placeholder')"
+      clearable
+      class="search-input"
+      data-testid="search-input"
+      @update:value="emit('update:searchQuery', $event)"
+    />
+
+    <n-flex align="center" :size="12" :wrap="true" class="filter-row">
+      <n-select
+        :value="filterStyle"
+        :options="styleOptions"
+        size="small"
+        class="filter-control"
+        data-testid="style-filter"
+        @update:value="emit('update:filterStyle', $event)"
+      />
+      <n-select
+        :value="sortBy"
+        :options="sortOptions"
+        size="small"
+        class="filter-control"
+        data-testid="sort-by"
+        @update:value="emit('update:sortBy', $event)"
+      />
+      <n-flex align="center" :size="8">
+        <n-text depth="3">{{ t('group-label') }}</n-text>
+        <n-switch
+          :value="groupByFamily"
+          size="small"
+          data-testid="group-toggle"
+          @update:value="emit('update:groupByFamily', $event)"
+        />
+      </n-flex>
+    </n-flex>
+
+    <n-scrollbar class="font-scroll" data-testid="font-list" style="max-height: 90vh">
+      <div class="font-list">
+        <template v-if="displayGroups.length">
+          <div v-for="group in displayGroups" :key="group.id" class="font-group">
+            <div v-if="groupByFamily" class="font-group__title">{{ group.label }}</div>
+            <div class="font-group__list">
+              <button
+                v-for="font in group.items"
+                :key="font.id"
+                type="button"
+                class="font-card"
+                :class="{ 'font-card--active': font.id === activeFontId }"
+                :style="fontCardStyle(font)"
+                :data-testid="`font-${font.id}`"
+                @click="emit('select-font', font.id)"
+              >
+                <div class="font-card__name">{{ font.displayName }}</div>
+                <div class="font-card__meta">
+                  <span class="font-card__family">{{ font.displayFamily }}</span>
+                  <span class="font-card__style">{{ font.displayStyle }}</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </template>
+        <n-text v-else depth="3" class="empty-text" data-testid="no-results">
+          {{ t('no-results') }}
+        </n-text>
+      </div>
+    </n-scrollbar>
   </ToolSection>
 </template>
 
@@ -159,32 +154,24 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-.library-section {
+.library-actions {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.library-header {
-  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-}
-
-.library-header__action {
-  display: inline-flex;
-  align-items: center;
+  justify-content: flex-end;
   gap: 8px;
+  margin: 4px 0 12px;
 }
 
 .status-alert {
-  margin: 0;
+  margin: 0 0 12px;
 }
 
 .search-input {
   width: 100%;
+  margin-bottom: 12px;
+}
+
+.filter-row {
   margin-bottom: 12px;
 }
 
