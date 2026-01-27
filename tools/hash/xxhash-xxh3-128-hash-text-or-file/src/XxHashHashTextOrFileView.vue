@@ -80,7 +80,9 @@ const hashFunction = computed(() => {
     }
 
     const hashBytes = hasher.digest('binary') as Uint8Array
-    return hashBytes.buffer.slice(hashBytes.byteOffset, hashBytes.byteOffset + hashBytes.byteLength)
+    const output = new Uint8Array(hashBytes.length)
+    output.set(hashBytes)
+    return output.buffer
   }
 })
 </script>
