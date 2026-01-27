@@ -651,7 +651,7 @@ onBeforeUnmount(() => {
 .viewfinder {
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 92vw;
   aspect-ratio: 9 / 16;
   max-height: 80vh;
   border-radius: 28px;
@@ -710,8 +710,15 @@ onBeforeUnmount(() => {
 }
 
 .icon-button {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.icon-button:hover {
+  background: #fff;
 }
 
 .status-pill {
@@ -837,6 +844,8 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
   transition: transform 0.15s ease;
 }
 
