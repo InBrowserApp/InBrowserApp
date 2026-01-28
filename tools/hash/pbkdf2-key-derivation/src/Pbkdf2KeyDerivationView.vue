@@ -55,29 +55,15 @@ const defaultLength = 32
 const password = ref('')
 const salt = ref<string | File>('')
 
-const algorithm = useStorage<Pbkdf2Algorithm>(
-  'tools:pbkdf2-key-derivation:algorithm',
-  'SHA-256',
-)
-const saltFormat = useStorage<SaltFormat>(
-  'tools:pbkdf2-key-derivation:salt-format',
-  'utf-8',
-)
+const algorithm = useStorage<Pbkdf2Algorithm>('tools:pbkdf2-key-derivation:algorithm', 'SHA-256')
+const saltFormat = useStorage<SaltFormat>('tools:pbkdf2-key-derivation:salt-format', 'utf-8')
 const iterationsInput = useStorage<number | null>(
   'tools:pbkdf2-key-derivation:iterations',
   defaultIterations,
 )
-const lengthInput = useStorage<number | null>(
-  'tools:pbkdf2-key-derivation:length',
-  defaultLength,
-)
+const lengthInput = useStorage<number | null>('tools:pbkdf2-key-derivation:length', defaultLength)
 
-const parseIntegerRange = (
-  value: number | null,
-  min: number,
-  max: number,
-  fallback: number,
-) => {
+const parseIntegerRange = (value: number | null, min: number, max: number, fallback: number) => {
   if (value === null) {
     return { value: fallback, isValid: true }
   }

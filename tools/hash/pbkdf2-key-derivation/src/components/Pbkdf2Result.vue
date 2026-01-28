@@ -106,9 +106,7 @@ const derivedBytes = computedAsync<Uint8Array | undefined>(
 )
 
 const derivedHex = computed(() => (derivedBytes.value ? bytesToHex(derivedBytes.value) : ''))
-const derivedBase64 = computed(() =>
-  derivedBytes.value ? bytesToBase64(derivedBytes.value) : '',
-)
+const derivedBase64 = computed(() => (derivedBytes.value ? bytesToBase64(derivedBytes.value) : ''))
 </script>
 
 <style scoped>

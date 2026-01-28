@@ -1,5 +1,8 @@
 <template>
-  <DescriptionMarkdown :title="t('what-is-pbkdf2')" :description="t('what-is-pbkdf2-description')" />
+  <DescriptionMarkdown
+    :title="t('what-is-pbkdf2')"
+    :description="t('what-is-pbkdf2-description')"
+  />
 </template>
 
 <script setup lang="ts">

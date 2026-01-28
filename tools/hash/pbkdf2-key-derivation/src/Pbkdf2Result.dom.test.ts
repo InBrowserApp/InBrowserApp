@@ -64,10 +64,15 @@ describe('Pbkdf2Result', () => {
       },
     })
 
-    await flushPromises()
+    const expected = '120fb6cffcf8b32c43e7225256c4f837a86548c92ccc35480805987cb70be17b'
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+      await flushPromises()
+      if (wrapper.text().includes(expected)) {
+        break
+      }
+      await new Promise((resolve) => setTimeout(resolve, 10))
+    }
 
-    expect(wrapper.text()).toContain(
-      '120fb6cffcf8b32c43e7225256c4f837a86548c92ccc35480805987cb70be17b',
-    )
+    expect(wrapper.text()).toContain(expected)
   })
 })
