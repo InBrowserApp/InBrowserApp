@@ -918,6 +918,9 @@ importers:
       '@tools/markdown-to-html-converter':
         specifier: workspace:*
         version: link:../../tools/document/markdown-to-html-converter
+      '@tools/md4-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/md4-hash-text-or-file
       '@tools/md5-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/md5-hash-text-or-file
