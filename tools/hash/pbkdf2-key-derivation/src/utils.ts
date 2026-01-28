@@ -42,18 +42,25 @@ export function isValidBase64(value: string): boolean {
 }
 
 export async function saltToBytes(salt: string | File, format: SaltFormat): Promise<Uint8Array> {
+  let bytes: Uint8Array
+
   if (salt instanceof File) {
-    return new Uint8Array(await salt.arrayBuffer())
+    bytes = new Uint8Array(await salt.arrayBuffer())
+  } else {
+    switch (format) {
+      case 'hex':
+        bytes = decodeBase16(salt)
+        break
+      case 'base64':
+        bytes = decodeBase64(salt)
+        break
+      default:
+        bytes = textEncoder.encode(salt)
+        break
+    }
   }
 
-  switch (format) {
-    case 'hex':
-      return decodeBase16(salt)
-    case 'base64':
-      return decodeBase64(salt)
-    default:
-      return textEncoder.encode(salt)
-  }
+  return Uint8Array.from(bytes)
 }
 
 export function bytesToHex(bytes: Uint8Array): string {

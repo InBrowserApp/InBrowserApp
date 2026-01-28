@@ -87,9 +87,10 @@ const lengthState = computed(() =>
 )
 
 const saltErrorType = computed((): '' | 'hex' | 'base64' => {
-  if (salt.value instanceof File) return ''
+  const saltValue = salt.value
+  if (saltValue instanceof File) return ''
 
-  const value = salt.value.trim()
+  const value = saltValue.trim()
   if (!value) return ''
 
   if (saltFormat.value === 'hex' && !isValidBase16(value)) {
