@@ -79,6 +79,7 @@
 </template>
 
 <script lang="ts" setup>
+/* eslint-disable max-lines */
 import { ref, computed, watch } from 'vue'
 import {
   NInput,
