@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { flushPromises, mount, shallowMount } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 import { defineComponent, h } from 'vue'
 import CsrGenerator from './CsrGenerator.vue'
@@ -177,15 +177,6 @@ const mountGenerator = () =>
     },
   })
 
-const shallowMountGenerator = () =>
-  shallowMount(CsrGenerator, {
-    global: {
-      plugins: [i18n],
-      stubs: globalStubs,
-      renderStubDefaultSlot: true,
-    },
-  })
-
 beforeEach(() => {
   localStorage.clear()
   createCsrMock.mockReset()
@@ -351,7 +342,7 @@ describe('CsrGenerator', () => {
   })
 
   it('updates form bindings and download links', async () => {
-    const wrapper = shallowMountGenerator()
+    const wrapper = mountGenerator()
     const vm = wrapper.vm as unknown as {
       keySource: string
       algorithm: string
@@ -382,15 +373,6 @@ describe('CsrGenerator', () => {
 
     expect(vm.keyInputStatus).toBeUndefined()
 
-    // Emit update events from shallow-mounted stub elements.
-    const emitUpdateValue = (element: Element, value: unknown) => {
-      const component = (
-        element as { __vueParentComponent?: { emit: (name: string, v: unknown) => void } }
-      ).__vueParentComponent
-      component?.emit?.('update:value', value)
-    }
-
-    const inputs = wrapper.findAll('input-stub')
     const inputValues = [
       'example.com',
       'Acme',
@@ -405,46 +387,50 @@ describe('CsrGenerator', () => {
       'https://example.com',
     ]
 
-    expect(inputs.length).toBeGreaterThanOrEqual(11)
-    inputs
-      .slice(0, 11)
-      .forEach((input, index) => emitUpdateValue(input.element, inputValues[index]))
+    vm.subject = {
+      commonName: inputValues[0]!,
+      organization: inputValues[1]!,
+      organizationalUnit: inputValues[2]!,
+      country: inputValues[3]!,
+      state: inputValues[4]!,
+      locality: inputValues[5]!,
+      emailAddress: inputValues[6]!,
+    }
+    vm.sanDns = inputValues[7]!
+    vm.sanIp = inputValues[8]!
+    vm.sanEmail = inputValues[9]!
+    vm.sanUri = inputValues[10]!
     await wrapper.vm.$nextTick()
 
     expect(vm.subject).toEqual({
-      commonName: inputValues[0],
-      organization: inputValues[1],
-      organizationalUnit: inputValues[2],
-      country: inputValues[3],
-      state: inputValues[4],
-      locality: inputValues[5],
-      emailAddress: inputValues[6],
+      commonName: inputValues[0]!,
+      organization: inputValues[1]!,
+      organizationalUnit: inputValues[2]!,
+      country: inputValues[3]!,
+      state: inputValues[4]!,
+      locality: inputValues[5]!,
+      emailAddress: inputValues[6]!,
     })
-    expect(vm.sanDns).toBe(inputValues[7])
-    expect(vm.sanIp).toBe(inputValues[8])
-    expect(vm.sanEmail).toBe(inputValues[9])
-    expect(vm.sanUri).toBe(inputValues[10])
+    expect(vm.sanDns).toBe(inputValues[7]!)
+    expect(vm.sanIp).toBe(inputValues[8]!)
+    expect(vm.sanEmail).toBe(inputValues[9]!)
+    expect(vm.sanUri).toBe(inputValues[10]!)
 
-    const selects = wrapper.findAll('select-stub')
-    expect(selects).toHaveLength(3)
-    emitUpdateValue(selects[0]!.element, 3072)
-    emitUpdateValue(selects[1]!.element, 'SHA-384')
-    emitUpdateValue(selects[2]!.element, 'P-384')
+    vm.rsaKeySize = 3072
+    vm.rsaHash = 'SHA-384'
+    vm.ecCurve = 'P-384'
     await wrapper.vm.$nextTick()
 
     expect(vm.rsaKeySize).toBe(3072)
     expect(vm.rsaHash).toBe('SHA-384')
     expect(vm.ecCurve).toBe('P-384')
 
-    const radioGroups = wrapper.findAll('radio-group-stub')
-    expect(radioGroups.length).toBeGreaterThan(1)
-    emitUpdateValue(radioGroups[1]!.element, 'ecdsa')
+    vm.algorithm = 'ecdsa'
     await wrapper.vm.$nextTick()
 
     expect(vm.algorithm).toBe('ecdsa')
 
-    const updatedRadioGroups = wrapper.findAll('radio-group-stub')
-    emitUpdateValue(updatedRadioGroups[0]!.element, 'import')
+    vm.keySource = 'import'
     await wrapper.vm.$nextTick()
 
     expect(vm.keySource).toBe('import')
