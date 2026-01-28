@@ -63,6 +63,7 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable max-lines */
 import { computed } from 'vue'
 import { NDescriptions, NDescriptionsItem, NFlex, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
