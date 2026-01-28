@@ -1,122 +1,57 @@
 <template>
   <ToolSectionHeader>{{ t('controls') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="12">
-      <n-flex align="center" justify="space-between" :size="12">
-        <n-select v-model:value="stationId" :options="stationOptions" style="min-width: 260px" />
-        <n-flex :size="8">
-          <n-button
-            v-if="!isPlaying"
-            type="primary"
-            @click="handleStart"
-            :loading="isStarting"
-            :disabled="!audioAvailable || isStarting"
-          >
-            <template #icon>
-              <n-icon :component="PlayIcon" />
-            </template>
-            {{ t('start') }}
-          </n-button>
-          <n-button v-else type="error" @click="handleStop">
-            <template #icon>
-              <n-icon :component="StopIcon" />
-            </template>
-            {{ t('stop') }}
-          </n-button>
-        </n-flex>
-      </n-flex>
-      <n-alert v-if="!audioAvailable" type="error" :show-icon="false">
-        {{ t('unsupported') }}
-      </n-alert>
-      <n-alert v-if="startError" type="error" :show-icon="false">
-        {{ t('startFailed') }}
-      </n-alert>
-    </n-flex>
+    <RadioTimecodeControlsSection
+      v-model:stationId="stationId"
+      :station-options="stationOptions"
+      :is-playing="isPlaying"
+      :is-starting="isStarting"
+      :audio-available="audioAvailable"
+      :start-error="startError"
+      @start="handleStart"
+      @stop="handleStop"
+    />
   </ToolSection>
 
   <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
   <ToolSection>
-    <n-grid :cols="2" :x-gap="16" :y-gap="12">
-      <n-gi>
-        <n-flex vertical :size="6">
-          <n-text depth="3">{{ t('volume') }}</n-text>
-          <n-slider v-model:value="volume" :min="0" :max="1" :step="0.01" />
-        </n-flex>
-      </n-gi>
-      <n-gi>
-        <n-flex vertical :size="6">
-          <n-text depth="3">{{ t('offset') }}</n-text>
-          <n-input-number v-model:value="offsetMs" :step="1" />
-        </n-flex>
-      </n-gi>
-      <n-gi>
-        <n-flex vertical :size="6">
-          <n-text depth="3">{{ t('carrier') }}</n-text>
-          <n-text>{{ station?.carrierHz.toLocaleString() }} {{ t('hz') }}</n-text>
-        </n-flex>
-      </n-gi>
-      <n-gi>
-        <n-flex vertical :size="6">
-          <n-text depth="3">{{ t('baseTone') }}</n-text>
-          <n-text>{{ station?.baseHz.toLocaleString() }} {{ t('hz') }}</n-text>
-        </n-flex>
-      </n-gi>
-    </n-grid>
+    <RadioTimecodeOutputSection
+      v-model:volume="volume"
+      v-model:offsetMs="offsetMs"
+      :carrier-hz="station?.carrierHz"
+      :base-hz="station?.baseHz"
+    />
   </ToolSection>
 
   <ToolSectionHeader>{{ t('preview') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="6">
-      <n-flex align="center" :size="12">
-        <n-text depth="3">{{ t('timeNow') }}</n-text>
-        <n-text>{{ stationTime }}</n-text>
-      </n-flex>
-      <n-flex align="center" :size="12">
-        <n-text depth="3">{{ t('timezone') }}</n-text>
-        <n-text>{{ station?.timeZone }}</n-text>
-      </n-flex>
-      <n-flex align="center" :size="12">
-        <n-text depth="3">{{ t('symbolNow') }}</n-text>
-        <n-text>{{ currentSymbol }}</n-text>
-      </n-flex>
-    </n-flex>
+    <RadioTimecodePreviewSection
+      :station-time="stationTime"
+      :time-zone="station?.timeZone"
+      :current-symbol="currentSymbol"
+    />
   </ToolSection>
 
   <ToolSectionHeader>{{ t('notes') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="6">
-      <n-text>{{ t('audioWarning') }}</n-text>
-      <n-text>{{ t('localTimeNote') }}</n-text>
-      <n-text>{{ t('harmonicNote') }}</n-text>
-      <n-text>{{ t('callSignNote') }}</n-text>
-    </n-flex>
+    <RadioTimecodeNotesSection />
   </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useStorage } from '@vueuse/core'
-import {
-  NAlert,
-  NButton,
-  NFlex,
-  NGrid,
-  NGi,
-  NIcon,
-  NInputNumber,
-  NSelect,
-  NSlider,
-  NText,
-} from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import PlayIcon from '@vicons/fluent/Play16Regular'
-import StopIcon from '@vicons/fluent/Stop16Regular'
 import { SignalEngine } from '../audio/signalEngine'
 import { getStationSignal } from '../core/encoders'
 import { type StationId } from '../core/encoders'
 import { type Station, getStationById, stations } from '../core/stations'
 import { getTimeParts } from '../core/time'
+import RadioTimecodeControlsSection from './RadioTimecodeControlsSection.vue'
+import RadioTimecodeNotesSection from './RadioTimecodeNotesSection.vue'
+import RadioTimecodeOutputSection from './RadioTimecodeOutputSection.vue'
+import RadioTimecodePreviewSection from './RadioTimecodePreviewSection.vue'
 
 const { t } = useI18n()
 
@@ -239,551 +174,151 @@ onBeforeUnmount(() => {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "zh": {
     "controls": "控制",
     "output": "输出",
     "preview": "实时预览",
-    "notes": "说明",
-    "start": "开始",
-    "stop": "停止",
-    "volume": "音量",
-    "offset": "时间偏移（毫秒）",
-    "carrier": "载波",
-    "baseTone": "输出音调",
-    "timeNow": "台站时间",
-    "timezone": "时区",
-    "symbolNow": "当前符号",
-    "audioWarning": "请保持低音量，高频音可能不适。",
-    "localTimeNote": "仅使用本机时间（离线）。",
-    "harmonicNote": "输出为低频谐波近似，效果与设备和摆放位置有关。",
-    "callSignNote": "JJY 在 15/45 分的呼号未模拟。",
-    "unsupported": "当前浏览器不支持 AudioContext。",
-    "startFailed": "音频启动失败，请检查浏览器权限后重试。",
-    "hz": "赫兹"
+    "notes": "说明"
   },
   "zh-CN": {
     "controls": "控制",
     "output": "输出",
     "preview": "实时预览",
-    "notes": "说明",
-    "start": "开始",
-    "stop": "停止",
-    "volume": "音量",
-    "offset": "时间偏移（毫秒）",
-    "carrier": "载波",
-    "baseTone": "输出音调",
-    "timeNow": "台站时间",
-    "timezone": "时区",
-    "symbolNow": "当前符号",
-    "audioWarning": "请保持低音量，高频音可能不适。",
-    "localTimeNote": "仅使用本机时间（离线）。",
-    "harmonicNote": "输出为低频谐波近似，效果与设备和摆放位置有关。",
-    "callSignNote": "JJY 在 15/45 分的呼号未模拟。",
-    "unsupported": "当前浏览器不支持 AudioContext。",
-    "startFailed": "音频启动失败，请检查浏览器权限后重试。",
-    "hz": "赫兹"
+    "notes": "说明"
   },
   "zh-TW": {
     "controls": "控制",
     "output": "輸出",
     "preview": "即時預覽",
-    "notes": "說明",
-    "start": "開始",
-    "stop": "停止",
-    "volume": "音量",
-    "offset": "時間偏移（毫秒）",
-    "carrier": "載波",
-    "baseTone": "輸出音調",
-    "timeNow": "台站時間",
-    "timezone": "時區",
-    "symbolNow": "目前符號",
-    "audioWarning": "請保持低音量，高頻音可能不適。",
-    "localTimeNote": "僅使用本機時間（離線）。",
-    "harmonicNote": "輸出為低頻諧波近似，效果與裝置和擺放位置有關。",
-    "callSignNote": "JJY 在 15/45 分的呼號未模擬。",
-    "unsupported": "目前瀏覽器不支援 AudioContext。",
-    "startFailed": "音訊啟動失敗，請檢查瀏覽器權限後重試。",
-    "hz": "赫茲"
+    "notes": "說明"
   },
   "zh-HK": {
     "controls": "控制",
     "output": "輸出",
     "preview": "即時預覽",
-    "notes": "說明",
-    "start": "開始",
-    "stop": "停止",
-    "volume": "音量",
-    "offset": "時間偏移（毫秒）",
-    "carrier": "載波",
-    "baseTone": "輸出音調",
-    "timeNow": "台站時間",
-    "timezone": "時區",
-    "symbolNow": "目前符號",
-    "audioWarning": "請保持低音量，高頻音可能不適。",
-    "localTimeNote": "僅使用本機時間（離線）。",
-    "harmonicNote": "輸出為低頻諧波近似，效果與裝置和擺放位置有關。",
-    "callSignNote": "JJY 在 15/45 分的呼號未模擬。",
-    "unsupported": "目前瀏覽器不支援 AudioContext。",
-    "startFailed": "音訊啟動失敗，請檢查瀏覽器權限後重試。",
-    "hz": "赫茲"
+    "notes": "說明"
   },
   "es": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "fr": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "de": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "it": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "ja": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "ko": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "ru": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "pt": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "ar": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "hi": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "tr": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "nl": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "sv": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "pl": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "vi": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "th": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "id": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "he": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "ms": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   },
   "no": {
     "controls": "Controls",
     "output": "Output",
     "preview": "Live Preview",
-    "notes": "Notes",
-    "start": "Start",
-    "stop": "Stop",
-    "volume": "Volume",
-    "offset": "Time Offset (ms)",
-    "carrier": "Carrier",
-    "baseTone": "Output tone",
-    "timeNow": "Station time",
-    "timezone": "Time zone",
-    "symbolNow": "Current symbol",
-    "audioWarning": "Keep volume low; high-frequency audio can be uncomfortable.",
-    "localTimeNote": "Uses local system time only (offline).",
-    "harmonicNote": "Output uses a lower-frequency harmonic approximation; results depend on device and placement.",
-    "callSignNote": "JJY call sign minutes (15/45) are not simulated.",
-    "unsupported": "AudioContext is not supported in this browser.",
-    "startFailed": "Audio output failed to start. Check browser permissions and try again.",
-    "hz": "Hz"
+    "notes": "Notes"
   }
 }
 </i18n>
