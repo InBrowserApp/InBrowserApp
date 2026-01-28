@@ -135,7 +135,7 @@ catalog:
   sm-crypto: ^0.4.0
   smol-toml: ^1.6.0
   svgo: ^4.0.0
-  transliteration: ^2.6.0
+  transliteration: ^2.6.1
   tsyringe: ^4.10.0
   turndown: ^7.2.2
   typescript: ~5.9.3
