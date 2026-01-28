@@ -53,6 +53,7 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable max-lines */
 import { computed, ref } from 'vue'
 import { computedAsync, useDebounce, useStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
