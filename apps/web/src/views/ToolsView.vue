@@ -1,12 +1,20 @@
 <template>
   <div class="tools-heading">
     <ToolTitle class="tools-heading-title">{{ t('title') }}</ToolTitle>
-    <span v-if="toolsCount !== undefined" class="tools-heading-count">
-      {{ t('count', { count: toolsCount }) }}
-    </span>
+    <i18n-t keypath="count" tag="span" class="tools-heading-count">
+      <template #count>
+        <span v-if="toolsCount !== undefined">{{ toolsCount }}</span>
+        <template v-else>
+          <span class="tools-heading-count-skeleton">
+            <n-skeleton text :repeat="2" />
+            <n-skeleton text style="width: 60%" />
+          </span>
+        </template>
+      </template>
+    </i18n-t>
   </div>
   <ToolSection>
-    <ToolsGrid :tools="tools" />
+    <ToolsGrid :tools="tools" :loading-size="50" />
   </ToolSection>
 </template>
 
@@ -16,6 +24,7 @@ import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
 import { ToolsGrid, ToolTitle, ToolSection } from '@shared/ui/tool'
 import { computedAsync } from '@vueuse/core'
+import { NSkeleton } from 'naive-ui'
 
 const { t } = useI18n()
 
@@ -181,5 +190,11 @@ useHead({
   color: var(--n-text-color-3);
   font-size: 0.875rem;
   white-space: nowrap;
+}
+
+.tools-heading-count-skeleton {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
 }
 </style>
