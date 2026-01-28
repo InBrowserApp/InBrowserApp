@@ -140,8 +140,8 @@ catalog:
   turndown: ^7.2.2
   typescript: ~5.9.3
   ua-parser-js: ^1.0.39
-  upng-js: ^2.1.0
   ulid: ^3.0.2
+  upng-js: ^2.1.0
   uuid: ^13.0.0
   validator: ^13.15.26
   vite: ^7.3.1
@@ -155,6 +155,7 @@ catalog:
   vue-router: ^4.6.4
   vue-tsc: ^3.2.2
   vue3-simple-icons: ^15.6.0
+  webpxmux: ^0.0.2
   webrtc-ips: ^0.2.0
   wrangler: 4.59.2
   xml-js: ^1.6.11
