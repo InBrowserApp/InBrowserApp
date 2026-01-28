@@ -435,6 +435,9 @@ catalogs:
     vue3-simple-icons:
       specifier: ^15.6.0
       version: 15.6.0
+    webpxmux:
+      specifier: ^0.0.2
+      version: 0.0.2
     webrtc-ips:
       specifier: ^0.2.0
       version: 0.2.0
@@ -816,6 +819,9 @@ importers:
       '@tools/file-to-data-uri-converter':
         specifier: workspace:*
         version: link:../../tools/web/file-to-data-uri-converter
+      '@tools/gif-to-animated-webp-converter':
+        specifier: workspace:*
+        version: link:../../tools/image/gif-to-animated-webp-converter
       '@tools/gif-to-apng-converter':
         specifier: workspace:*
         version: link:../../tools/image/gif-to-apng-converter
@@ -3682,6 +3688,42 @@ importers:
       vue-i18n:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+
+  tools/image/gif-to-animated-webp-converter:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      '@zip.js/zip.js':
+        specifier: 'catalog:'
+        version: 2.8.15
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      gifuct-js:
+        specifier: 'catalog:'
+        version: 2.1.2
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      webpxmux:
+        specifier: 'catalog:'
+        version: 0.0.2
 
   tools/image/gif-to-apng-converter:
     dependencies:
@@ -12249,6 +12291,9 @@ packages:
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
+  webpxmux@0.0.2:
+    resolution: {integrity: sha512-nuoFsCM5hitqCiBsRj6gMUmhc2oM00VAxaLMrhJdQb7s329RrfI9CEa9C6LoL10zJf5uZFlm0yuJz/NY9p2npw==}
+
   webrtc-ips@0.2.0:
     resolution: {integrity: sha512-5TaJMFMIUMycsDBcg5QzRe1RlD2akDGfYs5+9+0+1DgTZ858KfyXjA8oIfR5xq3Y3X/ILGzRZ/mkN3/yuC+kcA==}
 
@@ -17757,6 +17802,10 @@ snapshots:
   webidl-conversions@8.0.1: {}
 
   webpack-virtual-modules@0.6.2: {}
+
+  webpxmux@0.0.2:
+    dependencies:
+      '@types/emscripten': 1.41.5
 
   webrtc-ips@0.2.0:
     dependencies:
