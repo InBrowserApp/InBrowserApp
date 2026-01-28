@@ -137,6 +137,7 @@ import { routes as colorConverterRoutes } from '@tools/color-converter/routes'
 import { routes as colorContrastCheckerRoutes } from '@tools/color-contrast-checker/routes'
 import { routes as cssBoxShadowGeneratorRoutes } from '@tools/css-box-shadow-generator/routes'
 import { routes as cssGradientGeneratorRoutes } from '@tools/css-gradient-generator/routes'
+import { routes as localFontBookRoutes } from '@tools/local-font-book/routes'
 import { routes as caseConverterRoutes } from '@tools/case-converter/routes'
 import { routes as numberBaseConverterRoutes } from '@tools/number-base-converter/routes'
 import { routes as unicodeInvisibleCharacterCheckerRoutes } from '@tools/unicode-invisible-character-checker/routes'
@@ -319,6 +320,7 @@ export const routes: ToolRoute[] = [
   ...colorContrastCheckerRoutes,
   ...cssBoxShadowGeneratorRoutes,
   ...cssGradientGeneratorRoutes,
+  ...localFontBookRoutes,
   ...caseConverterRoutes,
   ...numberBaseConverterRoutes,
   ...unicodeInvisibleCharacterCheckerRoutes,
