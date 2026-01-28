@@ -106,7 +106,11 @@ export async function convertGifToAnimatedWebp(
 
   const mux = await getWebpMux()
   const encoded = await mux.encodeFrames(webpFrames)
-  const blob = new Blob([encoded], { type: 'image/webp' })
+  const encodedBuffer = encoded.buffer.slice(
+    encoded.byteOffset,
+    encoded.byteOffset + encoded.byteLength,
+  )
+  const blob = new Blob([encodedBuffer], { type: 'image/webp' })
 
   return {
     file,
