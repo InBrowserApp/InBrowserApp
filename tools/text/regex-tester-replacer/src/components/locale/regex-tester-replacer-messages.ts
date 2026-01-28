@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 export const messages = {
   en: {
     'pattern-title': 'Pattern',
