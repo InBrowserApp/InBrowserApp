@@ -182,7 +182,7 @@ const previewStyle = computed(() => {
   if (!family) return {}
   const weight = getFontWeight(activeFont.value.style)
   return {
-    fontFamily: family,
+    fontFamily: wrapFontFamily(family),
     fontStyle: isItalicStyle(activeFont.value.style) ? 'italic' : 'normal',
     ...(weight && weight !== 400 ? { fontWeight: weight } : {}),
     fontSize: `${previewFontSize}px`,

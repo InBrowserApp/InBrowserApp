@@ -401,11 +401,11 @@ describe('LocalFontBookTool', () => {
 
     vm.activeFontId = second.id
     await nextTick()
-    expect(vm.previewStyle.fontFamily).toBe('Fallback Name')
+    expect(vm.previewStyle.fontFamily).toBe('"Fallback Name"')
 
     vm.activeFontId = third.id
     await nextTick()
-    expect(vm.previewStyle.fontFamily).toBe('PS-Fallback')
+    expect(vm.previewStyle.fontFamily).toBe('"PS-Fallback"')
 
     vm.activeFontId = fourth.id
     await nextTick()
