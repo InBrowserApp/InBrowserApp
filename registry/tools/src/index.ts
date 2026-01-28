@@ -146,6 +146,7 @@ import { toolInfo as caseConverterToolInfo } from '@tools/case-converter'
 import { toolInfo as numberBaseConverterToolInfo } from '@tools/number-base-converter'
 import { toolInfo as unicodeInvisibleCharacterCheckerToolInfo } from '@tools/unicode-invisible-character-checker'
 import { toolInfo as unicodeEscapeUnescapeToolInfo } from '@tools/unicode-escape-unescape'
+import { toolInfo as cameraToolInfo } from '@tools/camera'
 import { toolInfo as audioRecorderToolInfo } from '@tools/audio-recorder'
 import { toolInfo as screenRecorderToolInfo } from '@tools/screen-recorder'
 import { toolInfo as morseCodeConverterToolInfo } from '@tools/morse-code-converter'
@@ -360,6 +361,7 @@ export const tools: ToolInfo[] = [
   unicodeEscapeUnescapeToolInfo,
 
   // Misc Tools
+  cameraToolInfo,
   audioRecorderToolInfo,
   screenRecorderToolInfo,
   morseCodeConverterToolInfo,
