@@ -97,7 +97,7 @@ export async function derivePbkdf2(params: {
     throw new Error('Invalid PBKDF2 parameters')
   }
 
-  const saltBytes = await saltToBytes(salt, saltFormat)
+  const saltBuffer = Uint8Array.from(await saltToBytes(salt, saltFormat)).buffer as ArrayBuffer
   const keyMaterial = await crypto.subtle.importKey(
     'raw',
     textEncoder.encode(password),
@@ -109,7 +109,7 @@ export async function derivePbkdf2(params: {
   const derivedBits = await crypto.subtle.deriveBits(
     {
       name: 'PBKDF2',
-      salt: saltBytes,
+      salt: saltBuffer,
       iterations,
       hash,
     },
