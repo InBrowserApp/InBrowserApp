@@ -18,6 +18,7 @@ import { toolInfo as macToIPv6LinkLocalToolInfo } from '@tools/mac-to-ipv6-link-
 import { toolInfo as ipv6ToMacToolInfo } from '@tools/ipv6-to-mac'
 import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-time'
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
+import { toolInfo as gifToApngConverterToolInfo } from '@tools/gif-to-apng-converter'
 import { toolInfo as imageToIcoToolInfo } from '@tools/image-to-ico'
 import { toolInfo as imageToWebpConverterToolInfo } from '@tools/image-to-webp-converter'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
@@ -204,6 +205,7 @@ export const tools: ToolInfo[] = [
   // Image Tools
   imageToolsToolInfo,
   faviconAssetsGeneratorToolInfo,
+  gifToApngConverterToolInfo,
   imageToIcoToolInfo,
   imageToWebpConverterToolInfo,
   pngOptimizerToolInfo,

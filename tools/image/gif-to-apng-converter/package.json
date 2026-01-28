@@ -1,0 +1,24 @@
+{
+  "name": "@tools/gif-to-apng-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@utils/image": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@zip.js/zip.js": "catalog:",
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "filesize": "catalog:",
+    "gifuct-js": "catalog:",
+    "naive-ui": "catalog:",
+    "upng-js": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:"
+  }
+}
