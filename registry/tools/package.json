@@ -108,6 +108,7 @@
     "@tools/mac-to-ipv6-link-local": "workspace:*",
     "@tools/markdown-previewer": "workspace:*",
     "@tools/markdown-to-html-converter": "workspace:*",
+    "@tools/md4-hash-text-or-file": "workspace:*",
     "@tools/md5-hash-text-or-file": "workspace:*",
     "@tools/mime-type-lookup": "workspace:*",
     "@tools/morse-code-converter": "workspace:*",
