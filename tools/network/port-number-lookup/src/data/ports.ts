@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 export interface PortInfo {
   port: number
   service: string
