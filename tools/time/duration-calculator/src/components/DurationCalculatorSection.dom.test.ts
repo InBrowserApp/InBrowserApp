@@ -146,14 +146,15 @@ describe('DurationCalculatorSection', () => {
     const sectionVm = wrapper.findComponent(DurationCalculatorSection).vm as unknown as {
       baseInput: string
       durationIsoInput: string
-      durationIsoError: string
+      durationIsoInvalid: boolean
     }
     sectionVm.baseInput = 'invalid'
     sectionVm.durationIsoInput = 'P'
     await flushPromises()
 
     expect(wrapper.text()).toContain('Invalid date/time')
-    expect(sectionVm.durationIsoError).toBe('Invalid duration')
+    expect(sectionVm.durationIsoInvalid).toBe(true)
+    expect(wrapper.text()).toContain('Invalid duration')
   })
 
   it('updates the base time when clicking now', async () => {
