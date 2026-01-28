@@ -47,6 +47,7 @@ import { routes as ripemd320HashTextOrFileRoutes } from '@tools/ripemd320-hash-t
 import { routes as keccakHashTextOrFileRoutes } from '@tools/keccak-hash-text-or-file/routes'
 import { routes as bcryptHashPasswordRoutes } from '@tools/bcrypt-hash-password/routes'
 import { routes as bcryptHashPasswordVerifierRoutes } from '@tools/bcrypt-hash-password-verifier/routes'
+import { routes as pbkdf2KeyDerivationRoutes } from '@tools/pbkdf2-key-derivation/routes'
 import { routes as hashToolsRoutes } from '@tools/hash-tools/routes'
 import { routes as sriHashGeneratorRoutes } from '@tools/sri-hash-generator/routes'
 import { routes as crcChecksumCalculatorRoutes } from '@tools/crc-checksum-calculator/routes'
@@ -227,6 +228,7 @@ export const routes: ToolRoute[] = [
   ...keccakHashTextOrFileRoutes,
   ...bcryptHashPasswordRoutes,
   ...bcryptHashPasswordVerifierRoutes,
+  ...pbkdf2KeyDerivationRoutes,
   ...hashToolsRoutes,
   ...sriHashGeneratorRoutes,
   ...crcChecksumCalculatorRoutes,
