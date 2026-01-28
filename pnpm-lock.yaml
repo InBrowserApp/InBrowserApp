@@ -972,6 +972,9 @@ importers:
       '@tools/password-strength-checker':
         specifier: workspace:*
         version: link:../../tools/validator/password-strength-checker
+      '@tools/pbkdf2-key-derivation':
+        specifier: workspace:*
+        version: link:../../tools/hash/pbkdf2-key-derivation
       '@tools/pdf-info-viewer':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-info-viewer
@@ -2726,6 +2729,33 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/pbkdf2-key-derivation:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/base16':
+        specifier: workspace:*
+        version: link:../../../utils/base16
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
 
   tools/hash/ripemd128-hash-text-or-file:
     dependencies:
