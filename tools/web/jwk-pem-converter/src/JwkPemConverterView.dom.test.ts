@@ -403,7 +403,10 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 -----END PRIVATE KEY-----`
 
-    await flushPromises()
+    for (let attempt = 0; attempt < 3 && !vm.pemOutput; attempt += 1) {
+      await flushPromises()
+      await nextTick()
+    }
 
     expect(vm.pemOutput).toContain('"kty"')
     expect(vm.pemOutput).not.toContain('\n  "kty"')
