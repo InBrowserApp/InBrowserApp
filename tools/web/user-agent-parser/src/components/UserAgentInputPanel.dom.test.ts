@@ -134,14 +134,6 @@ const baseProps = {
   canUseCurrent: true,
   hasOutput: false,
   renderedJson: '',
-  labels: {
-    inputLabel: 'User Agent',
-    useCurrent: 'Use my user agent',
-    inputPlaceholder: 'Paste a user agent string here...',
-    inputError: 'Enter a user agent string to parse.',
-    jsonOutput: 'JSON Output',
-    emptyState: 'Paste a user agent string to see parsed details.',
-  },
 }
 
 const mountPanel = (props = {}) =>
