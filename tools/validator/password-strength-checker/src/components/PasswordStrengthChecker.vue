@@ -73,6 +73,7 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable max-lines */
 import { computed, ref } from 'vue'
 import {
   NAlert,
