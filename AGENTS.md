@@ -35,6 +35,12 @@
 - Keep components small and single-purpose; split by responsibility before a file grows too long.
 - Download buttons must be real anchors: `n-button tag="a"` with `download` and `href` from `useObjectUrl`, and no `document.createElement('a')`.
 
+## ESLint max-lines
+- Enabled for `.vue` and `.ts` only, limit 500, `skipBlankLines` + `skipComments` true, ignores `*.test.ts`.
+- When adding or expanding files, split components/logic to stay under the limit.
+- Only pure data files may use `/* eslint-disable max-lines */`.
+- Vue SFCs must keep `<i18n>` blocks (do not externalize translations).
+
 ## Icon Usage
 - Import icons directly from `@vicons/<library>/<IconName>` (default export), e.g. `@vicons/fluent/Search16Filled`.
 - Supported libraries include `@vicons/fluent`, `@vicons/carbon`, `@vicons/tabler`, `@vicons/ionicons5`, `@vicons/material`, `@vicons/fa`.

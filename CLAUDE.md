@@ -247,6 +247,12 @@ const { t } = useI18n()
 - Explicit types for public APIs
 - Use `catalog:` for shared dependencies in package.json
 
+### ESLint max-lines
+- Enabled for `.vue` and `.ts` only, limit 500, `skipBlankLines` + `skipComments` true, ignores `*.test.ts`.
+- When adding or expanding files, split components/logic to stay under the limit.
+- Only pure data files may use `/* eslint-disable max-lines */`.
+- Vue SFCs must keep `<i18n>` blocks (do not externalize translations).
+
 **Components:**
 - Use Naive UI (`naive-ui`) for UI components
 - Import icons directly from `@vicons/<library>/<IconName>` (fluent, carbon, tabler, etc.) or `vue3-simple-icons`
