@@ -34,9 +34,13 @@ import { NMessageProvider, NRadioGroup, NSelect, NSwitch, NTabs } from 'naive-ui
 import { h, nextTick, type Component } from 'vue'
 import JwkPemConverterView from './JwkPemConverterView.vue'
 import JwkPemConverter from './components/JwkPemConverter.vue'
+import JwkPemJwkPanel from './components/JwkPemJwkPanel.vue'
+import JwkPemKeySelectSection from './components/JwkPemKeySelectSection.vue'
+import JwkPemPemPanel from './components/JwkPemPemPanel.vue'
 import * as toolInfo from './info'
 import { routes } from './routes'
 import * as indexModule from './index'
+import { JwkPemError } from './utils/jwkPem'
 import * as jwkPemUtils from './utils/jwkPem'
 import { TextOrFileInput } from '@shared/ui/base'
 
@@ -79,11 +83,11 @@ describe('JwkPemConverter', () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
     await flushPromises()
 
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkOutput: string
-      jwkError: string
+      jwkError: unknown
     }
-    expect(vm.jwkError).toBe('')
+    expect(vm.jwkError).toBeNull()
     expect(vm.jwkOutput).toContain('BEGIN PRIVATE KEY')
   })
 
@@ -91,7 +95,7 @@ describe('JwkPemConverter', () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
     await flushPromises()
 
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkOutputType: string
       jwkDownloadName: string
       jwkOutput: string
@@ -106,53 +110,57 @@ describe('JwkPemConverter', () => {
 
   it('handles empty input states', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const jwkVm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
       jwkOutput: string
       jwkInputStatus?: string
+    }
+    const pemVm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
       pemInputStatus?: string
     }
 
-    vm.jwkInput = ''
-    vm.pemInput = ''
+    jwkVm.jwkInput = ''
+    pemVm.pemInput = ''
     await flushPromises()
 
-    expect(vm.jwkOutput).toBe('')
-    expect(vm.jwkInputStatus).toBeUndefined()
-    expect(vm.pemInputStatus).toBeUndefined()
+    expect(jwkVm.jwkOutput).toBe('')
+    expect(jwkVm.jwkInputStatus).toBeUndefined()
+    expect(pemVm.pemInputStatus).toBeUndefined()
   })
 
   it('handles invalid JWK input errors', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
-      jwkError: string
+      jwkError: unknown
     }
     vm.jwkInput = '{'
     await flushPromises()
 
-    expect(vm.jwkError).toContain('Invalid JSON')
+    expect(vm.jwkError).toBeInstanceOf(JwkPemError)
+    expect((vm.jwkError as JwkPemError).key).toBe('errorInvalidJson')
   })
 
   it('handles conversion errors for unsupported key types', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
-      jwkError: string
+      jwkError: unknown
     }
     vm.jwkInput = '{"kty":"oct","k":"abc"}'
     await flushPromises()
 
-    expect(vm.jwkError).toContain('Unsupported')
+    expect(vm.jwkError).toBeInstanceOf(JwkPemError)
+    expect((vm.jwkError as JwkPemError).key).toBe('errorUnsupportedKty')
   })
 
   it('shows warnings when unsupported PEM blocks are present', async () => {
     localStorage.setItem('tools:jwk-pem-converter:tab', 'pem')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
-      pemWarnings: string[]
+      pemWarnings: Array<{ key: string }>
       pemOutput: string
     }
 
@@ -171,9 +179,8 @@ AAECAw==
 
   it('parses JWK Sets and lists multiple keys', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
-      jwkKeyOptions: Array<{ label: string; value: number }>
     }
 
     vm.jwkInput = JSON.stringify({
@@ -197,15 +204,21 @@ AAECAw==
 
     await flushPromises()
 
-    expect(vm.jwkKeyOptions).toHaveLength(2)
-    expect(vm.jwkKeyOptions[0]?.label).toContain('key-1')
+    const keySelect = wrapper.findComponent(JwkPemKeySelectSection)
+    if (!keySelect.exists()) {
+      throw new Error('Missing key selector')
+    }
+    const keySelectVm = keySelect.vm as unknown as {
+      options: Array<{ label: string; value: number }>
+    }
+    expect(keySelectVm.options).toHaveLength(2)
+    expect(keySelectVm.options[0]?.label).toContain('key-1')
   })
 
   it('uses fallback labels for keys without metadata', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
-      jwkKeyOptions: Array<{ label: string; value: number }>
     }
 
     vm.jwkInput = JSON.stringify({
@@ -220,15 +233,21 @@ AAECAw==
 
     await flushPromises()
 
-    expect(vm.jwkKeyOptions[0]?.label).toContain('Key')
-    expect(vm.jwkKeyOptions[0]?.label).toContain('#1')
+    const keySelect = wrapper.findComponent(JwkPemKeySelectSection)
+    if (!keySelect.exists()) {
+      throw new Error('Missing key selector')
+    }
+    const keySelectVm = keySelect.vm as unknown as {
+      options: Array<{ label: string; value: number }>
+    }
+    expect(keySelectVm.options[0]?.label).toContain('Key')
+    expect(keySelectVm.options[0]?.label).toContain('#1')
   })
 
   it('omits curve detail when missing', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
-      jwkKeyOptions: Array<{ label: string; value: number }>
     }
 
     vm.jwkInput = JSON.stringify({
@@ -244,23 +263,30 @@ AAECAw==
 
     await flushPromises()
 
-    expect(vm.jwkKeyOptions[0]?.label).toBe('RSA (key-1)')
+    const keySelect = wrapper.findComponent(JwkPemKeySelectSection)
+    if (!keySelect.exists()) {
+      throw new Error('Missing key selector')
+    }
+    const keySelectVm = keySelect.vm as unknown as {
+      options: Array<{ label: string; value: number }>
+    }
+    expect(keySelectVm.options[0]?.label).toBe('RSA (key-1)')
   })
 
   it('handles empty key selections', async () => {
     const parseSpy = vi.spyOn(jwkPemUtils, 'parseJwkJson').mockReturnValue([])
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string
       jwkOutput: string
-      jwkError: string
+      jwkError: unknown
     }
 
     vm.jwkInput = '{"keys":[{}]}'
     await flushPromises()
 
     expect(vm.jwkOutput).toBe('')
-    expect(vm.jwkError).toBe('')
+    expect(vm.jwkError).toBeNull()
 
     parseSpy.mockRestore()
   })
@@ -268,7 +294,7 @@ AAECAw==
   it('does not persist JWK file inputs', async () => {
     localStorage.setItem('tools:jwk-pem-converter:jwk-input', 'persisted')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkInput: string | File
     }
     const file = new File(['{"kty":"OKP"}'], 'key.jwk', { type: 'application/json' })
@@ -351,22 +377,26 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
     switchComponent.vm.$emit('update:value', false)
     await flushPromises()
 
-    const updatedVm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const converterVm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
       activeTab: string
+    }
+    const jwkVm = wrapper.findComponent(JwkPemJwkPanel).vm as unknown as {
       jwkOutputType: string
-      prettyJson: boolean
       selectedJwkIndex: number
     }
-    expect(updatedVm.activeTab).toBe('pem')
-    expect(updatedVm.jwkOutputType).toBe('public')
-    expect(updatedVm.prettyJson).toBe(false)
-    expect(updatedVm.selectedJwkIndex).toBe(1)
+    const pemVm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
+      prettyJson: boolean
+    }
+    expect(converterVm.activeTab).toBe('pem')
+    expect(jwkVm.jwkOutputType).toBe('public')
+    expect(pemVm.prettyJson).toBe(false)
+    expect(jwkVm.selectedJwkIndex).toBe(1)
   })
 
   it('reads PEM input from files', async () => {
     localStorage.setItem('tools:jwk-pem-converter:tab', 'pem')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string | File
       pemOutput: string
     }
@@ -391,7 +421,7 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
   it('renders PEM output with compact JSON', async () => {
     localStorage.setItem('tools:jwk-pem-converter:tab', 'pem')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
       pemOutput: string
       pemDownloadName: string
@@ -416,10 +446,10 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
   it('sets PEM status to success for valid input', async () => {
     localStorage.setItem('tools:jwk-pem-converter:tab', 'pem')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
       pemInputStatus?: string
-      pemError: string
+      pemError: unknown
     }
 
     vm.pemInput = `-----BEGIN PRIVATE KEY-----
@@ -432,30 +462,31 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
     }
 
     expect(vm.pemInputStatus).toBe('success')
-    expect(vm.pemError).toBe('')
+    expect(vm.pemError).toBeNull()
   })
 
   it('reports invalid PEM input errors', async () => {
     localStorage.setItem('tools:jwk-pem-converter:tab', 'pem')
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
       pemInputStatus?: string
-      pemError: string
+      pemError: unknown
     }
 
     vm.pemInput = 'not a pem block'
     await flushPromises()
 
     expect(vm.pemInputStatus).toBe('error')
-    expect(vm.pemError).toContain('No valid PEM blocks')
+    expect(vm.pemError).toBeInstanceOf(JwkPemError)
+    expect((vm.pemError as JwkPemError).key).toBe('errorInvalidPem')
   })
 
   it('surfaces non-JWK errors from PEM conversion', async () => {
     const wrapper = mount(withMessageProvider(JwkPemConverter), mountOptions)
-    const vm = wrapper.findComponent(JwkPemConverter).vm as unknown as {
+    const vm = wrapper.findComponent(JwkPemPemPanel).vm as unknown as {
       pemInput: string
-      pemError: string
+      pemError: unknown
     }
 
     const pemToJwkMock = vi.mocked(jwkPemUtils.pemToJwk)
@@ -467,7 +498,8 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
     vm.pemInput = '-----BEGIN PRIVATE KEY-----\ninvalid\n-----END PRIVATE KEY-----'
 
     await flushPromises()
-    expect(vm.pemError).toBe('Boom')
+    expect(vm.pemError).toBeInstanceOf(Error)
+    expect((vm.pemError as Error).message).toBe('Boom')
 
     pemToJwkMock.mockRejectedValueOnce('Oops')
     vm.pemInput = '-----BEGIN PRIVATE KEY-----\ninvalid-2\n-----END PRIVATE KEY-----'
