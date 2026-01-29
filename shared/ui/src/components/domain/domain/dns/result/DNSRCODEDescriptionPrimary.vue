@@ -1,18 +1,18 @@
 <template>
-  <DNSRCODEDescriptionExtended v-if="isExtended" :rcode="rcode" />
-  <DNSRCODEDescriptionPrimary v-else :rcode="rcode" />
+  <DNSRCODEDescriptionMid v-if="isMid" :rcode="rcode" />
+  <DNSRCODEDescriptionLow v-else :rcode="rcode" />
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import DNSRCODEDescriptionExtended from './DNSRCODEDescriptionExtended.vue'
-import DNSRCODEDescriptionPrimary from './DNSRCODEDescriptionPrimary.vue'
+import DNSRCODEDescriptionLow from './DNSRCODEDescriptionLow.vue'
+import DNSRCODEDescriptionMid from './DNSRCODEDescriptionMid.vue'
 
 const props = defineProps<{
   rcode: number
 }>()
 
-const isExtended = computed(() => props.rcode >= 16)
+const isMid = computed(() => props.rcode >= 6)
 </script>
 
 <i18n lang="json">
