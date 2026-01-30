@@ -16,6 +16,7 @@
           tag="a"
           href="https://css-tricks.com/meta-theme-color-and-trickery/"
           target="_blank"
+          rel="noopener noreferrer"
           text
           style="vertical-align: -0.2em"
         >

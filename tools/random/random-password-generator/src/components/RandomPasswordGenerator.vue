@@ -3,7 +3,7 @@
     <n-gi span="2 l:3">
       <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
       <ToolSection>
-        <n-tabs v-model:value="activeTab" :default-value="'random'" type="segment" animated>
+        <n-tabs v-model:value="activeTab" default-value="random" type="segment" animated>
           <n-tab-pane name="random" :tab="t('tab-random')">
             <template #tab>
               <n-flex align="center" size="small">

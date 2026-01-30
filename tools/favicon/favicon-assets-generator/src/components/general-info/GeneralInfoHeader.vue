@@ -4,7 +4,12 @@
     {{ t('title') }}
   </ToolSectionHeader>
   <ToolSection>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank" class="link">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link"
+    >
       <n-icon :component="BookInformation20Regular" style="vertical-align: -0.15em" size="1.2em" />
       {{ t('manifestReference') }}
     </a>

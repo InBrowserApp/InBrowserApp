@@ -24,11 +24,25 @@
         >
           <template #extra>
             <n-flex v-if="gpsCoords" :wrap="false" style="margin-top: 12px">
-              <n-button tag="a" :href="googleMapsUrl" target="_blank" size="small" secondary>
+              <n-button
+                tag="a"
+                :href="googleMapsUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                size="small"
+                secondary
+              >
                 <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
                 <span>Google Maps</span>
               </n-button>
-              <n-button tag="a" :href="amapUrl" target="_blank" size="small" secondary>
+              <n-button
+                tag="a"
+                :href="amapUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                size="small"
+                secondary
+              >
                 {{ t('amap') }}
               </n-button>
             </n-flex>
