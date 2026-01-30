@@ -87,6 +87,15 @@ export default defineConfigWithVueTs(
       'vue/no-use-v-else-with-v-for': 'error',
       'vue/no-useless-v-bind': 'error',
       'vue/no-useless-mustaches': 'error',
+      'vue/max-lines-per-block': [
+        'error',
+        {
+          template: 150,
+          script: 200,
+          style: 150,
+          skipBlankLines: true,
+        },
+      ],
       '@intlify/vue-i18n/no-deprecated-i18n-component': 'error',
       '@intlify/vue-i18n/no-deprecated-i18n-place-attr': 'error',
       '@intlify/vue-i18n/no-deprecated-i18n-places-prop': 'error',
