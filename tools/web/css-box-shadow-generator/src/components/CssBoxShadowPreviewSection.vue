@@ -33,8 +33,6 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   cssOutput: string
   previewStyle: CSSProperties
@@ -44,6 +42,8 @@ defineProps<{
 const emit = defineEmits<{
   (event: 'update:darkBackground', value: boolean): void
 }>()
+
+const { t } = useI18n()
 
 function handleBackgroundChange(value: boolean) {
   emit('update:darkBackground', value)

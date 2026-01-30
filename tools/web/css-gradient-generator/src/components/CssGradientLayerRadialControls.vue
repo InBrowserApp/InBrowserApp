@@ -17,8 +17,6 @@ import { NFlex, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { GradientType, RadialShape, RadialSize } from '../types'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   layerType: GradientType
   layerShape: RadialShape
@@ -29,6 +27,8 @@ const emit = defineEmits<{
   (event: 'update:layerShape', value: RadialShape): void
   (event: 'update:layerSize', value: RadialSize): void
 }>()
+
+const { t } = useI18n()
 
 const layerShapeModel = computed({
   get: () => props.layerShape,

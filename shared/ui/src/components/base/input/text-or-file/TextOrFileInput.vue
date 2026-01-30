@@ -76,20 +76,6 @@ import DocumentOutline from '@vicons/ionicons5/DocumentOutline'
 import type { UploadFileInfo } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
-interface Props {
-  value: string | File
-  accept?: string
-  placeholder?: string
-  label?: string
-  status?: 'success' | 'error'
-  validationStatus?: 'success' | 'error'
-  feedback?: string
-  showFeedback?: boolean
-  wrapWithFormItem?: boolean
-}
-
 const props = withDefaults(defineProps<Props>(), {
   accept: '*',
   placeholder: undefined,
@@ -104,6 +90,20 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits<{
   'update:value': [value: string | File]
 }>()
+
+const { t } = useI18n()
+
+interface Props {
+  value: string | File
+  accept?: string
+  placeholder?: string
+  label?: string
+  status?: 'success' | 'error'
+  validationStatus?: 'success' | 'error'
+  feedback?: string
+  showFeedback?: boolean
+  wrapWithFormItem?: boolean
+}
 
 const textValue = ref<string>('')
 const selectedFile = ref<File | null>(null)

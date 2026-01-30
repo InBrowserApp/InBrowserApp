@@ -20,13 +20,13 @@ import { NDescriptions, NDescriptionsItem, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   mimeType: string
   isBase64: boolean
   size: number
 }>()
+
+const { t } = useI18n()
 
 function formatBytes(bytes: number): string {
   if (bytes === 0) return '0 Bytes'

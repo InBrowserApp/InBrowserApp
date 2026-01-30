@@ -51,19 +51,18 @@ import { toRef } from 'vue'
 import { filesize } from 'filesize'
 import { NImage } from 'naive-ui'
 
-const { t } = useI18n()
-const message = useMessage()
-
 // Props
 const props = defineProps<{
   file: File | null
 }>()
-const file = toRef(props, 'file')
-
 // Emits
 const emit = defineEmits<{
   'update:file': [file: File | null]
 }>()
+const { t } = useI18n()
+const message = useMessage()
+
+const file = toRef(props, 'file')
 
 // Use object URL for efficient image preview
 const imagePreview = useObjectUrl(file)

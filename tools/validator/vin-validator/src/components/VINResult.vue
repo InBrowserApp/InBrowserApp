@@ -13,11 +13,11 @@ import type { VINValidationResult } from '../data/vin'
 import VINResultStructureItems from './VINResultStructureItems.vue'
 import VINResultValidationItems from './VINResultValidationItems.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: VINValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

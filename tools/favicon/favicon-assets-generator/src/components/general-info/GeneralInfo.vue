@@ -20,7 +20,9 @@ import GeneralInfoDisplay from './GeneralInfoDisplay.vue'
 
 const props = defineProps<{ options: GeneralInfoOptions }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [GeneralInfoOptions]
+}>()
 
 const options = useVModel(props, 'options', emit)
 </script>

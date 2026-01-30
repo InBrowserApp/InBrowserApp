@@ -35,13 +35,13 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 import ClockIcon from '@vicons/fluent/Clock16Regular'
 
-const { t } = useI18n()
-
-const timestamp = defineModel<string>('timestamp', { required: true })
-
 defineProps<{ isValid: boolean }>()
 
 const emit = defineEmits<{ (event: 'set-now'): void }>()
+
+const { t } = useI18n()
+
+const timestamp = defineModel<string>('timestamp', { required: true })
 </script>
 
 <i18n lang="json">

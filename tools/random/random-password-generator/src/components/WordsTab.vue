@@ -24,9 +24,10 @@ import { NGrid, NFormItemGi, NSlider, NInput, NSwitch } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 import englishWordlist from 'bip39/src/wordlists/english.json'
 
+const props = defineProps<{ nonce: number }>()
+
 const { t } = useI18n()
 
-const props = defineProps<{ nonce: number }>()
 const modelValue = defineModel<string>('value', { default: '' })
 
 const wordCount = useStorage<number>('tools:random-password-generator:words:count', 4)

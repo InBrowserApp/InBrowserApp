@@ -56,8 +56,6 @@ import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import UploadFileItem from './UploadFileItem.vue'
 
-const message = useMessage()
-
 const props = defineProps<{
   files: File[]
   title: string
@@ -73,6 +71,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   'update:files': [files: File[]]
 }>()
+
+const message = useMessage()
 
 const accept = 'image/gif'
 

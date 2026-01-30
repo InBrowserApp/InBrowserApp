@@ -42,9 +42,10 @@ import {
 } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 
+const props = defineProps<{ nonce: number }>()
+
 const { t } = useI18n()
 
-const props = defineProps<{ nonce: number }>()
 const modelValue = defineModel<string>('value', { default: '' })
 
 const charsets = useStorage<Array<'upper' | 'lower' | 'digits' | 'symbols'>>(

@@ -26,12 +26,11 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NCheckbox, NCheckboxGroup, NFlex, NRadio, NRadioGroup, NText } from 'naive-ui'
 
-const weekdayMode = defineModel<'weekend' | 'working'>('weekdayMode', { required: true })
-const weekdaySelection = defineModel<number[]>('weekdaySelection', { required: true })
-
 defineProps<{
   hasWorkingDays: boolean
 }>()
+const weekdayMode = defineModel<'weekend' | 'working'>('weekdayMode', { required: true })
+const weekdaySelection = defineModel<number[]>('weekdaySelection', { required: true })
 
 const { t } = useI18n()
 

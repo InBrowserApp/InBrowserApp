@@ -73,8 +73,6 @@ import { toRefs } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { messages } from './locale/regex-tester-replacer-messages'
 
-const { t } = useI18n({ messages })
-
 const props = withDefaults(
   defineProps<{
     patternStatus?: 'success' | 'error'
@@ -86,9 +84,11 @@ const props = withDefaults(
   },
 )
 
-const { patternStatus, patternError, flagOptions } = toRefs(props)
-
 const emit = defineEmits<{ (event: 'run'): void }>()
+
+const { t } = useI18n({ messages })
+
+const { patternStatus, patternError, flagOptions } = toRefs(props)
 
 const textOrFile = defineModel<string | File>('textOrFile', { required: true })
 const pattern = defineModel<string>('pattern', { required: true })

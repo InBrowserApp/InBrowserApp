@@ -80,8 +80,6 @@ import { TextOrFileInput } from '@shared/ui/base'
 import { ALGORITHM_OPTIONS, SALT_FORMAT_OPTIONS } from '../types'
 import type { Pbkdf2Algorithm, SaltFormat } from '../types'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   iterationsMin: number
   iterationsMax: number
@@ -91,6 +89,8 @@ const props = defineProps<{
   lengthValid: boolean
   saltErrorType: '' | 'hex' | 'base64'
 }>()
+
+const { t } = useI18n()
 
 const password = defineModel<string>('password', { required: true })
 const salt = defineModel<string | File>('salt', { required: true })

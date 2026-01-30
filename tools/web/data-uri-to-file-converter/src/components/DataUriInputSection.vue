@@ -20,8 +20,6 @@ import { NInput, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   dataUri: string
   showError: boolean
@@ -30,6 +28,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:dataUri', value: string): void
 }>()
+
+const { t } = useI18n()
 
 const dataUriModel = computed({
   get: () => props.dataUri,

@@ -77,10 +77,6 @@ import { NText, NDescriptions, NDescriptionsItem } from 'naive-ui'
 import { computed, shallowRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
-const evaluating = shallowRef(false)
-
 const props = defineProps<{
   hash: (blob: Blob) => Promise<ArrayBuffer>
   content: string | File
@@ -89,6 +85,10 @@ const props = defineProps<{
   hideBinary?: boolean
   hideDecimal?: boolean
 }>()
+
+const { t } = useI18n()
+
+const evaluating = shallowRef(false)
 
 const hashBuffer = computedAsync<ArrayBuffer>(
   async () => {

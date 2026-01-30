@@ -67,8 +67,6 @@ import Image24Regular from '@vicons/fluent/Image24Regular'
 import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const message = useMessage()
-
 const props = defineProps<{
   files: File[]
   title: string
@@ -84,6 +82,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   'update:files': [files: File[]]
 }>()
+
+const message = useMessage()
 
 const accept = 'image/*'
 const imageExtensions = new Set([

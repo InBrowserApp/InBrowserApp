@@ -26,7 +26,9 @@ const props = defineProps<{
   options: iOSWebClipOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [iOSWebClipOptions]
+}>()
 
 const options = useVModel(props, 'options', emit)
 

@@ -20,8 +20,6 @@ import { useI18n } from 'vue-i18n'
 import { TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   modelValue: string | File
   accept: string
@@ -31,6 +29,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:modelValue', value: string | File): void
 }>()
+
+const { t } = useI18n()
 
 const inputModel = computed({
   get: () => props.modelValue,

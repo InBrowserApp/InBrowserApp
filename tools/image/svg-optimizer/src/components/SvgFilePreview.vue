@@ -21,8 +21,6 @@ import { NText, NButton, NIcon } from 'naive-ui'
 import Delete24Regular from '@vicons/fluent/Delete24Regular'
 import { filesize } from 'filesize'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   previewUrl: string | undefined
   fileName: string
@@ -32,6 +30,8 @@ const props = defineProps<{
 defineEmits<{
   delete: []
 }>()
+
+const { t } = useI18n()
 
 const formattedSize = computed(() => filesize(props.size) as string)
 </script>

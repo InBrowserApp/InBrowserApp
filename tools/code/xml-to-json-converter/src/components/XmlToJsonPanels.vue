@@ -17,11 +17,11 @@ import { NCard, NCode, NFormItemGi, NGrid, NInput } from 'naive-ui'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', jsonLang)
-
 defineProps<{
   renderedJson: string
 }>()
+
+hljs.registerLanguage('json', jsonLang)
 
 const xml = defineModel<string>('xml', { required: true })
 

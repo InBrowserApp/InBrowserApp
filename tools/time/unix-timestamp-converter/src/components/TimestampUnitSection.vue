@@ -27,13 +27,13 @@ import { useI18n } from 'vue-i18n'
 
 type TimestampUnit = 'auto' | 'seconds' | 'milliseconds' | 'nanoseconds'
 
-const unit = defineModel<TimestampUnit>('unit', { required: true })
-
 const props = defineProps<{
   showDetected: boolean
   detectedUnit: TimestampUnit
   digitCount: number
 }>()
+
+const unit = defineModel<TimestampUnit>('unit', { required: true })
 
 const { t } = useI18n()
 

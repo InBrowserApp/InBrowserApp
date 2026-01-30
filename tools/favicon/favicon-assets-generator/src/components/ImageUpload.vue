@@ -18,12 +18,11 @@ import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-const message = useMessage()
-
 const emit = defineEmits<{
   (event: 'update:file', file: File): void
 }>()
+const { t } = useI18n()
+const message = useMessage()
 
 async function beforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
   if (data.fileList.length > 1) {

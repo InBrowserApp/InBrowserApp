@@ -38,8 +38,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { NFlex, NText, NSlider, NCheckbox, NButton, NIcon } from 'naive-ui'
 import type { OptimiseOptions } from '@jsquash/oxipng/meta'
 import ResizeSmall20Regular from '@vicons/fluent/ResizeSmall20Regular'
-const { t } = useI18n()
-
 // Props
 const props = defineProps<{
   options: OptimiseOptions
@@ -51,6 +49,8 @@ const emit = defineEmits<{
   'update:options': [options: OptimiseOptions]
   optimize: []
 }>()
+
+const { t } = useI18n()
 
 // Slider marks
 const sliderMarks = {

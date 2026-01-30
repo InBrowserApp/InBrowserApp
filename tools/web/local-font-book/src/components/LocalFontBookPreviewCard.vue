@@ -65,7 +65,10 @@ const props = defineProps<{
   previewStyle: CSSProperties
 }>()
 
-const emit = defineEmits(['update:sampleText', 'update:darkBackground'])
+const emit = defineEmits<{
+  'update:sampleText': [string]
+  'update:darkBackground': [boolean]
+}>()
 
 const { t } = useI18n()
 

@@ -16,11 +16,11 @@ import type { ResidentIdValidationResult } from '../data/residentId'
 import ResidentIdIdentityItems from './ResidentIdIdentityItems.vue'
 import ResidentIdRegionItems from './ResidentIdRegionItems.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: ResidentIdValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

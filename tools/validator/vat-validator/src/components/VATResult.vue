@@ -48,11 +48,11 @@ import VATResultFormatDisplay from './VATResultFormatDisplay.vue'
 import VATResultFormatStatusTag from './VATResultFormatStatusTag.vue'
 import VATResultStatusTag from './VATResultStatusTag.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: VATValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

@@ -10,12 +10,9 @@ import { NEl } from 'naive-ui'
 import { parse } from 'marked'
 import { computed } from 'vue'
 
-const props = defineProps({
-  markdown: {
-    type: String,
-    required: true,
-  },
-})
+const props = defineProps<{
+  markdown: string
+}>()
 
 const markdownHtml = computed(() => parse(props.markdown))
 </script>

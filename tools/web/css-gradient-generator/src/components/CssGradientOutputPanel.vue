@@ -57,8 +57,6 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import type { ColorFormat } from '../types'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   outputFormat: ColorFormat
   cssOutput: string
@@ -72,6 +70,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:outputFormat', value: ColorFormat): void
 }>()
+
+const { t } = useI18n()
 
 const outputFormatModel = computed({
   get: () => props.outputFormat,

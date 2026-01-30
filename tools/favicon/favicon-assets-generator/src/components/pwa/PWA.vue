@@ -69,15 +69,17 @@ import BookInformation20Regular from '@vicons/fluent/BookInformation20Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   image: Blob | undefined
   options: PWAOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [PWAOptions]
+}>()
+
+const { t } = useI18n()
 
 const options = useVModel(props, 'options', emit)
 </script>

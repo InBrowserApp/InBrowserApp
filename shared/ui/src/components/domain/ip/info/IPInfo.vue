@@ -93,11 +93,11 @@ import { useI18n } from 'vue-i18n'
 import IPInfoDataLoadingUnknown from './IPInfoDataLoadingUnknown.vue'
 import CopyToClipboardTooltip from '../../../base/tooltip/CopyToClipboardTooltip.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   ip?: string
 }>()
+
+const { t } = useI18n()
 
 const info = ref<IPInfo>({})
 

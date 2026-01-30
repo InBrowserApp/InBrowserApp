@@ -16,10 +16,10 @@ import { NIcon, NButton } from 'naive-ui'
 import Icon from '@vicons/ionicons5/RefreshOutline'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
 const emit = defineEmits<{
   (e: 'click'): void
 }>()
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

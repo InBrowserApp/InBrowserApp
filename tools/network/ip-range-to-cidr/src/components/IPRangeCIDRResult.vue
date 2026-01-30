@@ -13,11 +13,11 @@ import { computed } from 'vue'
 import { NUl, NLi, NP } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   ipRange: [string, string]
 }>()
+
+const { t } = useI18n()
 
 const cidrs = computed(() => {
   const ipRange = props.ipRange

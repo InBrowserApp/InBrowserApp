@@ -21,8 +21,6 @@ import PaletteExportPanel from './PaletteExportPanel.vue'
 import PaletteOverview from './PaletteOverview.vue'
 import PaletteSwatchGrid from './PaletteSwatchGrid.vue'
 
-const { t } = useI18n({ useScope: 'local' })
-
 defineProps<{
   colors: PaletteSwatch[]
   dominant: PaletteSwatch | null
@@ -30,6 +28,8 @@ defineProps<{
   fileName: string
   isLoading: boolean
 }>()
+
+const { t } = useI18n({ useScope: 'local' })
 </script>
 
 <i18n lang="json">

@@ -21,8 +21,6 @@ import { useI18n } from 'vue-i18n'
 import MailIcon from '@vicons/fluent/Mail24Regular'
 import type { EmailValidationResult } from '../data/email'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   modelValue: string
   validationResult: EmailValidationResult
@@ -31,6 +29,8 @@ const props = defineProps<{
 defineEmits<{
   'update:modelValue': [value: string]
 }>()
+
+const { t } = useI18n()
 
 const inputStatus = computed(() => {
   if (props.modelValue.length === 0) return undefined

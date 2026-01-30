@@ -16,12 +16,11 @@ import { useI18n } from 'vue-i18n'
 const props = defineProps<{
   url: string
 }>()
-const urlRef = toRef(props, 'url')
-const url = ref(props.url)
 const emit = defineEmits<{
   (e: 'update:url', value: string): void
 }>()
-
+const urlRef = toRef(props, 'url')
+const url = ref(props.url)
 const { t } = useI18n()
 
 const urlStatus = computed(() => {

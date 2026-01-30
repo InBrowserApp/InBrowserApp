@@ -2,7 +2,7 @@
   <n-collapse-transition :show="airplaneModeStore.isAirplaneMode">
     <n-alert :title="t('airplane-mode-enabled')" type="warning">
       <template #icon>
-        <n-icon><enableIcon /></n-icon>
+        <n-icon><EnableIcon /></n-icon>
       </template>
       {{ t('what-is-airplane-mode-description') }}
     </n-alert>
@@ -13,7 +13,7 @@
 import { useAirplaneModeStore } from '@utils/airplane-mode'
 import { NAlert, NCollapseTransition, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import enableIcon from '@vicons/material/AirplanemodeActiveRound'
+import EnableIcon from '@vicons/material/AirplanemodeActiveRound'
 const airplaneModeStore = useAirplaneModeStore()
 const { t } = useI18n()
 </script>

@@ -22,6 +22,13 @@ import { NAlert, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { verify } from 'hono/jwt'
 
+const props = defineProps<{
+  token: string
+  secret: string
+  alg: AlgorithmType
+  decodedHeader: object | null
+}>()
+
 const allowedAlgs = [
   'HS256',
   'HS384',
@@ -40,13 +47,6 @@ const allowedAlgs = [
 
 type AllowedAlg = (typeof allowedAlgs)[number]
 type AlgorithmType = 'auto' | AllowedAlg
-
-const props = defineProps<{
-  token: string
-  secret: string
-  alg: AlgorithmType
-  decodedHeader: object | null
-}>()
 
 const { t } = useI18n()
 

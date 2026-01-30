@@ -22,14 +22,16 @@ import PWAMaskableSettingsDownload from './PWAMaskableSettingsDownload.vue'
 import { useI18n } from 'vue-i18n'
 import { messages } from '../../locale/settings-messages'
 
-const { t } = useI18n({ messages })
-
 const props = defineProps<{
   image: Blob | undefined
   options: PWAOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [PWAOptions]
+}>()
+
+const { t } = useI18n({ messages })
 
 const options = useVModel(props, 'options', emit)
 </script>

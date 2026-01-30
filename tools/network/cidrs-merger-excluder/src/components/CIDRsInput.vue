@@ -29,9 +29,11 @@ import isCidr from 'is-cidr'
 import { watchDeep } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const emit = defineEmits<{
+  'update:cidrs': [string[] | undefined]
+}>()
 
-const emit = defineEmits(['update:cidrs'])
+const { t } = useI18n()
 
 const model = ref({
   cidrs: [],

@@ -56,10 +56,6 @@ import GlobePerson20Regular from '@vicons/fluent/GlobePerson20Regular'
 import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', jsonLang)
-
-const { t } = useI18n()
-
 defineProps<{
   userAgent: string
   inputStatus?: FormValidationStatus
@@ -73,6 +69,10 @@ const emit = defineEmits<{
   'update:userAgent': [string]
   'use-current': []
 }>()
+
+hljs.registerLanguage('json', jsonLang)
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

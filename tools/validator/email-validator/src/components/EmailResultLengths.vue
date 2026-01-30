@@ -16,13 +16,13 @@
 import { NDescriptions, NDescriptionsItem, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   length: string
   localLength: string
   domainLength: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

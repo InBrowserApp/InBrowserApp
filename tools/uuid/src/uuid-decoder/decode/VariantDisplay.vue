@@ -8,11 +8,11 @@
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   variant: number
 }>()
+
+const { t } = useI18n()
 
 const variantLabel = computed(() => {
   switch (props.variant) {

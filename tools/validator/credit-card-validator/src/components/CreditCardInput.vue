@@ -26,8 +26,6 @@ import { useI18n } from 'vue-i18n'
 import CreditCardIcon from '@vicons/fluent/Payment20Regular'
 import type { ValidationResult } from '../data/cardBrands'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   modelValue: string
   validationResult: ValidationResult
@@ -36,6 +34,8 @@ const props = defineProps<{
 defineEmits<{
   'update:modelValue': [value: string]
 }>()
+
+const { t } = useI18n()
 
 const inputStatus = computed(() => {
   if (props.modelValue.length === 0) return undefined

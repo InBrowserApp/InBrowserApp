@@ -35,11 +35,11 @@ import ResidentIdCopyableValue from './ResidentIdCopyableValue.vue'
 import ResidentIdGenderDisplay from './ResidentIdGenderDisplay.vue'
 import ResidentIdTextValue from './ResidentIdTextValue.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: ResidentIdValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

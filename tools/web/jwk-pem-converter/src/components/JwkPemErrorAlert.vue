@@ -10,11 +10,11 @@ import { NAlert } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { JwkPemError } from '../utils/jwkPem'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   error?: unknown
 }>()
+
+const { t } = useI18n()
 
 const message = computed(() => {
   if (!props.error) return ''

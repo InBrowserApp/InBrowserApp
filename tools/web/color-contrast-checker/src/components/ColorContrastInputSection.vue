@@ -52,8 +52,6 @@ import { useI18n } from 'vue-i18n'
 import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   foregroundHex: string
   backgroundHex: string
@@ -69,6 +67,8 @@ const emit = defineEmits<{
   (event: 'update:background', value: string): void
   (event: 'swap'): void
 }>()
+
+const { t } = useI18n()
 
 function onUpdateForeground(value: string) {
   emit('update:foreground', value)

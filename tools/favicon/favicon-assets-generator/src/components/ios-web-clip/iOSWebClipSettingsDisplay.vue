@@ -17,13 +17,15 @@ import type { iOSWebClipOptions } from '../../utils/favicon-generator/ios-web-cl
 import { useVModel } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   options: iOSWebClipOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [iOSWebClipOptions]
+}>()
+
+const { t } = useI18n()
 
 const options = useVModel(props, 'options', emit)
 </script>

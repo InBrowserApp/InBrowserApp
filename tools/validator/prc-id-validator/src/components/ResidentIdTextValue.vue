@@ -7,11 +7,11 @@ import { computed } from 'vue'
 import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   value?: string | number | null
 }>()
+
+const { t } = useI18n()
 
 const displayValue = computed(() => {
   if (props.value === null || props.value === undefined || props.value === '') {

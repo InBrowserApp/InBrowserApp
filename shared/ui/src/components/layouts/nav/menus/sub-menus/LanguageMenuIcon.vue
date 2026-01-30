@@ -9,7 +9,7 @@
     <n-button quaternary circle :aria-label="t('language-selector')">
       <template #icon>
         <n-icon>
-          <icon />
+          <Icon />
         </n-icon>
       </template>
     </n-button>
@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import { NIcon, NButton, NPopselect } from 'naive-ui'
-import icon from '@vicons/ionicons5/LanguageOutline'
+import Icon from '@vicons/ionicons5/LanguageOutline'
 import { useSiteLanguage, supportedLanguages } from '@shared/locale'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'

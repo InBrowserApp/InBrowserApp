@@ -15,11 +15,11 @@ import PasswordStrengthAlerts from './PasswordStrengthAlerts.vue'
 import PasswordStrengthDetails from './PasswordStrengthDetails.vue'
 import PasswordStrengthSummary from './PasswordStrengthSummary.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   analysis: StrengthReport | null
 }>()
+
+const { t } = useI18n()
 </script>
 
 <style scoped>

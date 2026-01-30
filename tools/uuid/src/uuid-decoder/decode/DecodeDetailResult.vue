@@ -48,8 +48,6 @@ import { useI18n } from 'vue-i18n'
 import type { UUID } from '@utils/uuid'
 import { computed } from 'vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   result: {
     uuid: UUID
@@ -64,6 +62,8 @@ const props = defineProps<{
     timestamp?: number
   }
 }>()
+
+const { t } = useI18n()
 
 const algorithmLabel = computed(() => {
   switch (props.result.algorithm) {

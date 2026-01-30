@@ -21,11 +21,11 @@ import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 
+defineProps<{ isValid: boolean; localDateString: string }>()
+
 const { t } = useI18n()
 
 const dateValue = defineModel<number | null>('date', { required: true })
-
-defineProps<{ isValid: boolean; localDateString: string }>()
 </script>
 
 <i18n lang="json">

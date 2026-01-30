@@ -21,6 +21,10 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { computed } from 'vue'
 
+defineEmits<{
+  select: [value: string]
+}>()
+
 const CRON_PRESETS = computed(
   () =>
     [
@@ -37,10 +41,6 @@ const CRON_PRESETS = computed(
       { label: t('Every weekday at 9 AM'), value: '0 9 * * 1-5' },
     ] as const,
 )
-
-defineEmits<{
-  select: [value: string]
-}>()
 
 const { t } = useI18n()
 </script>

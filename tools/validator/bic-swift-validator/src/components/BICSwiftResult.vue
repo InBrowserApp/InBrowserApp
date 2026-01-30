@@ -62,11 +62,11 @@ import BICResultOfficeTypeTag from './BICResultOfficeTypeTag.vue'
 import BICResultStatusTag from './BICResultStatusTag.vue'
 import BICResultTypeLabel from './BICResultTypeLabel.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: BICValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

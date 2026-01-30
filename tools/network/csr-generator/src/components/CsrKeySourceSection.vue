@@ -55,13 +55,6 @@ import { TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { EcCurve, HashAlgorithm, KeyAlgorithm, KeySource, RsaKeySize } from '../utils/csr'
 
-const keySource = defineModel<KeySource>('keySource', { required: true })
-const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })
-const rsaKeySize = defineModel<RsaKeySize>('rsaKeySize', { required: true })
-const rsaHash = defineModel<HashAlgorithm>('rsaHash', { required: true })
-const ecCurve = defineModel<EcCurve>('ecCurve', { required: true })
-const keyInput = defineModel<string | File>('keyInput', { required: true })
-
 defineProps<{
   keyAccept: string
   keyInputStatus?: 'error' | 'success'
@@ -69,6 +62,12 @@ defineProps<{
   rsaHashOptions: Array<{ label: string; value: HashAlgorithm }>
   ecCurveOptions: Array<{ label: string; value: EcCurve }>
 }>()
+const keySource = defineModel<KeySource>('keySource', { required: true })
+const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })
+const rsaKeySize = defineModel<RsaKeySize>('rsaKeySize', { required: true })
+const rsaHash = defineModel<HashAlgorithm>('rsaHash', { required: true })
+const ecCurve = defineModel<EcCurve>('ecCurve', { required: true })
+const keyInput = defineModel<string | File>('keyInput', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 </script>

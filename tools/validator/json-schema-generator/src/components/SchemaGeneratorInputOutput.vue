@@ -48,10 +48,6 @@ import { useI18n } from 'vue-i18n'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', json)
-
-const { t } = useI18n()
-
 defineProps<{
   inputValue: string | File
   inputStatus?: 'success' | 'error'
@@ -63,6 +59,10 @@ defineProps<{
 defineEmits<{
   'update:inputValue': [value: string | File]
 }>()
+
+hljs.registerLanguage('json', json)
+
+const { t } = useI18n()
 
 const accept = '.json,.txt'
 </script>

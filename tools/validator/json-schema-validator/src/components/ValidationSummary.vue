@@ -30,8 +30,6 @@ type StatusType = 'success' | 'error' | 'info'
 
 type ValidationState = 'empty' | 'schema-error' | 'validated'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   state: ValidationState
   valid: boolean
@@ -41,6 +39,8 @@ const props = defineProps<{
   errorsCount: number
   errorsJson: string
 }>()
+
+const { t } = useI18n()
 
 const statusTagType = computed<TagType>(() => {
   if (props.statusType === 'info') return 'info'

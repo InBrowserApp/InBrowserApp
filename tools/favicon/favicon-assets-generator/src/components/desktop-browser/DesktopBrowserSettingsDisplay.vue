@@ -34,13 +34,15 @@ import type { DesktopBrowserOptions } from '../../utils/favicon-generator/deskto
 import { useVModel } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   options: DesktopBrowserOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [DesktopBrowserOptions]
+}>()
+
+const { t } = useI18n()
 
 const options = useVModel(props, 'options', emit)
 </script>

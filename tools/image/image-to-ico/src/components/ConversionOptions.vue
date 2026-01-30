@@ -76,8 +76,6 @@ import {
 import Wand16Regular from '@vicons/fluent/Wand16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   isConverting: boolean
   canConvert: boolean
@@ -86,6 +84,8 @@ defineProps<{
 defineEmits<{
   convert: []
 }>()
+
+const { t } = useI18n()
 
 const sizes = defineModel<number[]>('sizes', { required: true })
 const backgroundEnabled = defineModel<boolean>('backgroundEnabled', { required: true })

@@ -31,8 +31,6 @@ import { NFlex, NInputNumber, NSelect, NSlider } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { GradientType } from '../types'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   layerType: GradientType
   layerAngle: number
@@ -46,6 +44,8 @@ const emit = defineEmits<{
   (event: 'update:layerCenterX', value: number): void
   (event: 'update:layerCenterY', value: number): void
 }>()
+
+const { t } = useI18n()
 
 const layerTypeModel = computed({
   get: () => props.layerType,

@@ -19,8 +19,8 @@ const i18n = createI18n({
 
 const stubs = {
   PDFUpload: {
-    emits: ['upload:file'],
-    template: '<button class="upload" @click="$emit(\'upload:file\', file)">Upload</button>',
+    emits: ['upload-file'],
+    template: '<button class="upload" @click="$emit(\'upload-file\', file)">Upload</button>',
     data() {
       return {
         file: new File(['%PDF-1.7'], 'sample.pdf', { type: 'application/pdf' }),

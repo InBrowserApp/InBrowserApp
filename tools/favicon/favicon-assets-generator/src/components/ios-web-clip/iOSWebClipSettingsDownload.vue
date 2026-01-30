@@ -20,14 +20,14 @@ import FileMinifiedUsingOxipng from '../common/FileMinifiedUsingOxipng.vue'
 import DownloadFileButton from '../common/DownloadFileButton.vue'
 import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml'
-hljs.registerLanguage('html', xml)
-
-const message = useMessage()
-
 const props = defineProps<{
   image: Blob | undefined
   options: iOSWebClipOptions
 }>()
+
+hljs.registerLanguage('html', xml)
+
+const message = useMessage()
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

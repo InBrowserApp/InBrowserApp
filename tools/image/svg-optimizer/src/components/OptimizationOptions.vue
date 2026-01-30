@@ -57,6 +57,10 @@ export interface OptimizationOptionsType {
   inlineStyles: boolean
 }
 
+defineProps<{
+  isOptimizing: boolean
+}>()
+
 const { t } = useI18n()
 
 const options = defineModel<OptimizationOptionsType>('options', {
@@ -70,10 +74,6 @@ const options = defineModel<OptimizationOptionsType>('options', {
     inlineStyles: false,
   }),
 })
-
-defineProps<{
-  isOptimizing: boolean
-}>()
 </script>
 
 <i18n lang="json">

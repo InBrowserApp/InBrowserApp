@@ -30,8 +30,6 @@ import { useI18n } from 'vue-i18n'
 import ShuffleOutline from '@vicons/ionicons5/ShuffleOutline'
 import GradientPreview from './GradientPreview.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   backgroundImage: string
   blendMode?: string
@@ -41,6 +39,8 @@ const emit = defineEmits<{
   (event: 'randomize-layer'): void
   (event: 'randomize-all'): void
 }>()
+
+const { t } = useI18n()
 
 function handleRandomizeLayer() {
   emit('randomize-layer')

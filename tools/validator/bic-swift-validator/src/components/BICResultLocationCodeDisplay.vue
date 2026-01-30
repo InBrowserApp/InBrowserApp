@@ -7,11 +7,11 @@ import { computed } from 'vue'
 import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   locationCode?: string | null
 }>()
+
+const { t } = useI18n()
 
 const locationCodeDisplay = computed(() => props.locationCode || t('notAvailable'))
 </script>

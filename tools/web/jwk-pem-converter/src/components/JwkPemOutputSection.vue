@@ -29,13 +29,13 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 
-const { t } = useI18n()
-
 defineProps<{
   output: string
   downloadUrl?: string | null
   downloadName: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <style scoped>

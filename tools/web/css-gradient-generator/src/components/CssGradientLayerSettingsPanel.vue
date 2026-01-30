@@ -35,8 +35,6 @@ import CssGradientLayerColorSpaceSelect from './CssGradientLayerColorSpaceSelect
 import CssGradientLayerRadialControls from './CssGradientLayerRadialControls.vue'
 import CssGradientLayerTypeControls from './CssGradientLayerTypeControls.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   layerType: GradientType
   layerAngle: number
@@ -58,6 +56,8 @@ const emit = defineEmits<{
   (event: 'update:layerColorSpace', value: ColorSpace): void
   (event: 'update:layerBlendMode', value: BlendMode): void
 }>()
+
+const { t } = useI18n()
 
 const layerTypeModel = computed({
   get: () => props.layerType,

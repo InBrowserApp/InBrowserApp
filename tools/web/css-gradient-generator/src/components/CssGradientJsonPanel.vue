@@ -66,8 +66,6 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   serializedConfig: string
   jsonInput: string
@@ -79,6 +77,8 @@ const emit = defineEmits<{
   (event: 'update:jsonInput', value: string): void
   (event: 'load-json'): void
 }>()
+
+const { t } = useI18n()
 
 const jsonInputModel = computed({
   get: () => props.jsonInput,

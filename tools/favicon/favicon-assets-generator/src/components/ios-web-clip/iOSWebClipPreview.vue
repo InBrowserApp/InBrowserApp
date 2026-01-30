@@ -30,14 +30,13 @@ import { computed, ref } from 'vue'
 import { useElementSize } from '@vueuse/core'
 import { NSkeleton } from 'naive-ui'
 
-const iosHomescreenBackground = ref<HTMLImageElement>()
-const { width, height } = useElementSize(iosHomescreenBackground)
-
 const props = defineProps<{
   image: Blob | undefined
   name?: string
   options: iOSWebClipOptions
 }>()
+const iosHomescreenBackground = ref<HTMLImageElement>()
+const { width, height } = useElementSize(iosHomescreenBackground)
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

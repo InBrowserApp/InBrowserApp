@@ -24,18 +24,25 @@ import {
 } from '@shared/ui/domain/domain'
 import { NButton, NIcon } from 'naive-ui'
 import { makeDOHQuery } from '@utils/dns'
+import type { DNSJSONResponse } from '@utils/dns'
 import DocumentSearch16Regular from '@vicons/fluent/DocumentSearch16Regular'
 import { useStorage } from '@vueuse/core'
 import { ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 
+const emit = defineEmits<{
+  'update:results': [
+    {
+      question: { name: string; type: string }
+      result: DNSJSONResponse
+    }[],
+  ]
+}>()
 const { t } = useI18n()
 const recordTypes = useStorage('dns-lookup-record-types', ['A', 'AAAA'])
 const domain = useStorage('dns-lookup-domain', 'example.com')
 const dohServer = useStorage('doh-server', 'https://cloudflare-dns.com/dns-query')
 const loading = ref(false)
-
-const emit = defineEmits(['update:results'])
 
 async function lookup() {
   loading.value = true

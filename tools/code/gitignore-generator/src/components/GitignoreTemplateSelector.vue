@@ -106,10 +106,6 @@ type TemplateItem = {
   path: string
 }
 
-const searchQuery = defineModel<string>('searchQuery', { required: true })
-const selectedTemplates = defineModel<string[]>('selectedTemplates', { required: true })
-const expandedNames = defineModel<string[]>('expandedNames', { required: true })
-
 defineProps<{
   popularTemplateNames: string[]
   allTemplateNames: string[]
@@ -118,6 +114,9 @@ defineProps<{
   filteredCommunityTemplates: TemplateItem[]
   templateIcons: Record<string, unknown>
 }>()
+const searchQuery = defineModel<string>('searchQuery', { required: true })
+const selectedTemplates = defineModel<string[]>('selectedTemplates', { required: true })
+const expandedNames = defineModel<string[]>('expandedNames', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 

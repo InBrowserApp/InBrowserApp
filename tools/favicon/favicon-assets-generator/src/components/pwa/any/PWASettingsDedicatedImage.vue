@@ -26,7 +26,9 @@ const props = defineProps<{
   options: PWAOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [PWAOptions]
+}>()
 
 const options = useVModel(props, 'options', emit)
 

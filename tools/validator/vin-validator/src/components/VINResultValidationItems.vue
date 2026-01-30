@@ -29,6 +29,10 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { VINValidationResult } from '../data/vin'
 
+const props = defineProps<{
+  validationResult: VINValidationResult
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -37,10 +41,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-const props = defineProps<{
-  validationResult: VINValidationResult
-}>()
 
 const checkDigitStatus = computed<TagStatus>(() => {
   if (!props.validationResult.expectedCheckDigit) {

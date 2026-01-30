@@ -26,7 +26,9 @@ const props = defineProps<{
   options: DesktopBrowserOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [DesktopBrowserOptions]
+}>()
 
 const options = useVModel(props, 'options', emit)
 

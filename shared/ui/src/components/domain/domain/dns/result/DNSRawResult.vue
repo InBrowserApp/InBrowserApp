@@ -9,11 +9,11 @@ import { computed } from 'vue'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', json)
-
 const props = defineProps<{
   result: DNSJSONResponse
 }>()
+
+hljs.registerLanguage('json', json)
 
 const resultString = computed(() => JSON.stringify(props.result, null, 2))
 </script>

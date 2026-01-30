@@ -31,8 +31,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import type { JsonSchemaDraft } from '@utils/json-schema'
 
-const { t } = useI18n()
-
 const { draft, draftOptions, inferRequired, allowAdditionalProperties, detectFormat } =
   defineProps<{
     draft: JsonSchemaDraft
@@ -48,6 +46,8 @@ const emit = defineEmits<{
   'update:allowAdditionalProperties': [value: boolean]
   'update:detectFormat': [value: boolean]
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

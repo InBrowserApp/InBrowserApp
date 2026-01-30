@@ -38,13 +38,12 @@ import { useI18n } from 'vue-i18n'
 import { NDynamicInput, NFlex, NInput, NInputNumber, NSelect, NText } from 'naive-ui'
 import type { RobotsRule } from '../robotsState'
 
-const rules = defineModel<RobotsRule[]>('rules', { required: true })
-const crawlDelay = defineModel<number | null>('crawlDelay', { required: true })
-
 defineProps<{
   advanced: boolean
   groupIndex: number
 }>()
+const rules = defineModel<RobotsRule[]>('rules', { required: true })
+const crawlDelay = defineModel<number | null>('crawlDelay', { required: true })
 
 const { t } = useI18n()
 

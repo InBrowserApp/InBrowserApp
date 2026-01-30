@@ -32,8 +32,6 @@ import { TextOrFileInput } from '@shared/ui/base'
 import { NInput, NFormItem, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   secretKey: string
   algorithm: HmacAlgorithm
@@ -45,6 +43,8 @@ defineEmits<{
   'update:algorithm': [value: HmacAlgorithm]
   'update:message': [value: string | File]
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

@@ -22,14 +22,14 @@ import { useI18n } from 'vue-i18n'
 import ConversionResults from './ConversionResults.vue'
 import type { GifToAnimatedWebpResult } from '../types'
 
-const { t } = useI18n({ useScope: 'local' })
-
 defineProps<{
   results: GifToAnimatedWebpResult[]
   zipBlob: Blob | null
   isZipping: boolean
   downloadZipName: string
 }>()
+
+const { t } = useI18n({ useScope: 'local' })
 </script>
 
 <i18n lang="json">

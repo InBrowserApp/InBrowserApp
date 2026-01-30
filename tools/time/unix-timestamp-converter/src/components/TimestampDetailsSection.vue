@@ -26,14 +26,14 @@ import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   isoString: string
   utcString: string
   dateValue: number | null
   now: Date
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

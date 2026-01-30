@@ -52,13 +52,13 @@ import { NFlex, NGrid, NGridItem, NStatistic, NButton, NIcon } from 'naive-ui'
 import Download24Regular from '@vicons/fluent/ArrowDownload24Regular'
 import { filesize } from 'filesize'
 
-const { t } = useI18n()
-
 // Props
 const props = defineProps<{
   originalFile: File
   optimizedFile: Blob
 }>()
+
+const { t } = useI18n()
 
 // Computed
 const compressionRatio = computed(() => {

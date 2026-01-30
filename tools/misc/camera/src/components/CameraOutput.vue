@@ -45,8 +45,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import DownloadIcon from '@vicons/fluent/ArrowDownload16Filled'
 import ClearIcon from '@vicons/fluent/Delete16Regular'
 
-const { t } = useI18n({ useScope: 'local' })
-
 defineProps<{
   outputKind: 'photo' | 'video' | ''
   outputUrl: string
@@ -56,6 +54,8 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{ (event: 'clear'): void }>()
+
+const { t } = useI18n({ useScope: 'local' })
 </script>
 
 <style scoped>

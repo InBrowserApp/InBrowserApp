@@ -71,8 +71,6 @@ import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 import type { QueryState } from './types'
 
-hljs.registerLanguage('json', jsonLang)
-
 const props = defineProps<{
   queryState: QueryState
   matchesCount: number
@@ -81,6 +79,8 @@ const props = defineProps<{
   downloadUrl?: string
   downloadFilename: string
 }>()
+
+hljs.registerLanguage('json', jsonLang)
 
 const activeTab = defineModel<'values' | 'paths'>('activeTab', { required: true })
 

@@ -21,8 +21,6 @@ import { useI18n } from 'vue-i18n'
 import BookSearchIcon from '@vicons/fluent/BookSearch20Regular'
 import type { ISBNValidationResult } from '../data/isbn'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   modelValue: string
   validationResult: ISBNValidationResult
@@ -31,6 +29,8 @@ const props = defineProps<{
 defineEmits<{
   'update:modelValue': [value: string]
 }>()
+
+const { t } = useI18n()
 
 const inputStatus = computed(() => {
   if (props.modelValue.length === 0) return undefined

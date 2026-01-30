@@ -7,15 +7,15 @@ import { computed } from 'vue'
 import { NTag } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
-type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
-
 const props = defineProps<{
   locationCode?: string | null
   isTestBic: boolean
   isPassiveParticipant: boolean
 }>()
+
+const { t } = useI18n()
+
+type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
 
 const locationTypeLabel = computed(() => {
   if (!props.locationCode) return t('unknown')

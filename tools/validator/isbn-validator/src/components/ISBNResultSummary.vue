@@ -32,11 +32,11 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { ISBNValidationResult } from '../data/isbn'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   validationResult: ISBNValidationResult
 }>()
+
+const { t } = useI18n()
 
 const typeLabel = computed(() => {
   if (props.validationResult.type === 'isbn-10') return t('isbn10')

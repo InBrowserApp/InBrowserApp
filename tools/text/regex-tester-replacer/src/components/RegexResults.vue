@@ -107,8 +107,6 @@ import { useI18n } from 'vue-i18n'
 import { messages } from './locale/regex-tester-replacer-messages'
 import type { RegexMatch } from '../utils'
 
-const { t } = useI18n({ messages })
-
 const {
   patternError,
   showSummaryCounts,
@@ -138,6 +136,8 @@ const {
   matches: RegexMatch[]
   replaceOutput: string
 }>()
+
+const { t } = useI18n({ messages })
 
 const activeTab = defineModel<'preview' | 'matches' | 'replace'>('activeTab', { required: true })
 </script>

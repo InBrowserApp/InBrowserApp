@@ -12,8 +12,6 @@ import { NFormItem, NInput } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   fileName: string
 }>()
@@ -21,6 +19,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:fileName', value: string): void
 }>()
+
+const { t } = useI18n()
 
 const fileNameModel = computed({
   get: () => props.fileName,

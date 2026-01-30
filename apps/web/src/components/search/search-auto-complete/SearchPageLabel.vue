@@ -1,5 +1,5 @@
 <template>
-  <custom-router-link
+  <CustomRouterLink
     :to="{
       name: 'search-tools',
       query: {
@@ -14,7 +14,7 @@
       </n-icon>
       <span>{{ t('searchQuery', { query }) }}</span>
     </div>
-  </custom-router-link>
+  </CustomRouterLink>
 </template>
 
 <script lang="ts" setup>
@@ -23,11 +23,11 @@ import { NIcon } from 'naive-ui'
 import Search16Filled from '@vicons/fluent/Search16Filled'
 import { CustomRouterLink } from '@shared/ui/base'
 
-const { t } = useI18n()
-
 defineProps<{
   query: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

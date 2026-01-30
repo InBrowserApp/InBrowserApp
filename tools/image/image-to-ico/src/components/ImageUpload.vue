@@ -50,18 +50,16 @@ import Image24Regular from '@vicons/fluent/Image24Regular'
 import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
+const props = defineProps<{
+  file: File | null
+}>()
+const emit = defineEmits<{
+  'update:file': [file: File | null]
+}>()
 const { t } = useI18n()
 const message = useMessage()
 
 const accept = 'image/*'
-
-const props = defineProps<{
-  file: File | null
-}>()
-
-const emit = defineEmits<{
-  'update:file': [file: File | null]
-}>()
 
 const file = toRef(props, 'file')
 const imagePreview = useObjectUrl(file)

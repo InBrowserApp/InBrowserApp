@@ -42,12 +42,12 @@ import { NFlex, NAlert, NCard, NText, NTag, NButton } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   result: string | null
   error: string | null
 }>()
+
+const { t } = useI18n()
 
 const contentType = computed(() => {
   if (!props.result) return { label: '', type: 'default' as const, isUrl: false }

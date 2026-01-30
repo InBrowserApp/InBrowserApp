@@ -55,13 +55,13 @@ import {
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PaletteOptions } from '../types'
 
-const { t } = useI18n()
-
-const options = defineModel<PaletteOptions>('options', { required: true })
-
 defineProps<{
   isLoading: boolean
 }>()
+
+const { t } = useI18n()
+
+const options = defineModel<PaletteOptions>('options', { required: true })
 
 const sortOptions = computed(() => [
   { label: t('sortDominance'), value: 'dominance' },

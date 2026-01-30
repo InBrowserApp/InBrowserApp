@@ -20,11 +20,11 @@ const props = defineProps<{
   value: string
 }>()
 
-const internalValue = ref(props.value)
-
 const emit = defineEmits<{
   'update:value': [value: string]
 }>()
+
+const internalValue = ref(props.value)
 
 const { t } = useI18n()
 

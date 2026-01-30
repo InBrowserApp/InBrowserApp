@@ -35,8 +35,6 @@ import FaviconURL from './favicon.svg'
 import { useI18n } from 'vue-i18n'
 import RemoveButton from '../common/RemoveButton.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   image: Blob | undefined
 }>()
@@ -44,6 +42,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:image', image: Blob | undefined): void
 }>()
+
+const { t } = useI18n()
 
 const image = useVModel(props, 'image', emit)
 

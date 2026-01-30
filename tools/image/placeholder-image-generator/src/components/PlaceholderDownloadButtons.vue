@@ -90,12 +90,11 @@ import CodeIcon from '@vicons/fluent/Code24Regular'
 import CopyIcon from '@vicons/fluent/Copy24Regular'
 import type { PlaceholderOptions } from './PlaceholderPreview.vue'
 
-const { t } = useI18n()
-const message = useMessage()
-
 const props = defineProps<{
   options: PlaceholderOptions
 }>()
+const { t } = useI18n()
+const message = useMessage()
 
 const scale = ref(1)
 const quality = ref(0.9)

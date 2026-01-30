@@ -62,8 +62,6 @@ import { NAlert, NButton, NCard, NFlex, NIcon, NInputNumber } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   exportWidth: number
   exportHeight: number
@@ -78,6 +76,8 @@ const emit = defineEmits<{
   (event: 'update:exportHeight', value: number): void
   (event: 'download-png', value: MouseEvent): void
 }>()
+
+const { t } = useI18n()
 
 const exportWidthModel = computed({
   get: () => props.exportWidth,

@@ -28,15 +28,17 @@ import Desktop16Regular from '@vicons/fluent/Desktop16Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   image: Blob | undefined
   options: DesktopBrowserOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [DesktopBrowserOptions]
+}>()
+
+const { t } = useI18n()
 
 const options = useVModel(props, 'options', emit)
 </script>

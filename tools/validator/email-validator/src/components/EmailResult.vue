@@ -33,6 +33,10 @@ import EmailResultChecks from './EmailResultChecks.vue'
 import EmailResultLengths from './EmailResultLengths.vue'
 import EmailResultOverview from './EmailResultOverview.vue'
 
+const props = defineProps<{
+  validationResult: EmailValidationResult
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -41,10 +45,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-const props = defineProps<{
-  validationResult: EmailValidationResult
-}>()
 
 const normalizedDisplay = computed(() => props.validationResult.normalized || t('notAvailable'))
 

@@ -31,13 +31,13 @@ import { NGi, NFlex, NInput, NInputNumber } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const customBaseValue = defineModel<number>('customBaseValue', { required: true })
-
 defineProps<{
   custom: string
   customStatus?: 'success' | 'warning' | 'error'
   onInput: (source: 'custom', value: string) => void
 }>()
+
+const customBaseValue = defineModel<number>('customBaseValue', { required: true })
 
 const { t } = useI18n()
 </script>

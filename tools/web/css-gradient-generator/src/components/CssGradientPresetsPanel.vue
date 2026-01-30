@@ -35,8 +35,6 @@ import { NButton, NCard, NFlex, NGi, NGrid } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { GradientPreset } from '../utils/presets'
 
-const { t } = useI18n()
-
 defineProps<{
   presets: GradientPreset[]
   presetSwatchStyleMap: Record<string, Record<string, string>>
@@ -45,6 +43,8 @@ defineProps<{
 const emit = defineEmits<{
   (event: 'apply-preset', id: string): void
 }>()
+
+const { t } = useI18n()
 
 const presetLabelMap = computed<Record<string, string>>(() => ({
   aurora: t('preset.aurora'),

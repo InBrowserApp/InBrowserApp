@@ -19,12 +19,12 @@ import DNSResultTable from './DNSResultTable.vue'
 import type { DNSJSONResponse } from '@utils/dns'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   result: DNSJSONResponse
   title?: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

@@ -22,14 +22,16 @@ import DesktopBrowserSettingsDownload from './DesktopBrowserSettingsDownload.vue
 import DesktopBrowserSettingsDedicatedImage from './DesktopBrowserSettingsDedicatedImage.vue'
 import { messages } from '../locale/settings-messages'
 
-const { t } = useI18n({ messages })
-
 const props = defineProps<{
   image: Blob | undefined
   options: DesktopBrowserOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const emit = defineEmits<{
+  'update:options': [DesktopBrowserOptions]
+}>()
+
+const { t } = useI18n({ messages })
 
 const options = useVModel(props, 'options', emit)
 </script>

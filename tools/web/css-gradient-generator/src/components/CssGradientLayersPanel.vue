@@ -39,8 +39,6 @@ import Add16Regular from '@vicons/fluent/Add16Regular'
 import CssGradientLayerList from './CssGradientLayerList.vue'
 import type { GradientLayer } from '../types'
 
-const { t } = useI18n()
-
 defineProps<{
   layers: GradientLayer[]
   activeLayerId: string
@@ -54,6 +52,8 @@ const emit = defineEmits<{
   (event: 'move-layer', index: number, direction: number): void
   (event: 'remove-layer', id: string): void
 }>()
+
+const { t } = useI18n()
 
 function handleSetActive(id: string) {
   emit('set-active', id)

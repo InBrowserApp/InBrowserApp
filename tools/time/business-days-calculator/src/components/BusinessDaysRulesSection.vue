@@ -23,15 +23,14 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import BusinessDaysHolidayRules from './BusinessDaysHolidayRules.vue'
 import BusinessDaysWeekdayRules from './BusinessDaysWeekdayRules.vue'
 
-const weekdayMode = defineModel<'weekend' | 'working'>('weekdayMode', { required: true })
-const weekdaySelection = defineModel<number[]>('weekdaySelection', { required: true })
-const holidayList = defineModel<string>('holidayList', { required: true })
-
 defineProps<{
   hasWorkingDays: boolean
   holidayInvalidCount: number
   holidayStatus?: 'error' | 'success'
 }>()
+const weekdayMode = defineModel<'weekend' | 'working'>('weekdayMode', { required: true })
+const weekdaySelection = defineModel<number[]>('weekdaySelection', { required: true })
+const holidayList = defineModel<string>('holidayList', { required: true })
 
 const { t } = useI18n()
 </script>

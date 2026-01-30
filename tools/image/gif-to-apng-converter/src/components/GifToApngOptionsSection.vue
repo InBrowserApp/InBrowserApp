@@ -42,13 +42,6 @@ import GifToApngOptionsLabelsCore from './GifToApngOptionsLabelsCore.vue'
 import GifToApngOptionsLabelsOptimize from './GifToApngOptionsLabelsOptimize.vue'
 import type { GifLoopMode } from '../types'
 
-const scale = defineModel<number>('scale', { required: true })
-const speed = defineModel<number>('speed', { required: true })
-const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
-const loopCount = defineModel<number | null>('loopCount', { required: true })
-const optimize = defineModel<boolean>('optimize', { required: true })
-const optimizeLevel = defineModel<number>('optimizeLevel', { required: true })
-
 defineProps<{
   minScale: number
   maxScale: number
@@ -57,8 +50,13 @@ defineProps<{
   isConverting: boolean
   canConvert: boolean
 }>()
-
 const emit = defineEmits<{ (event: 'convert'): void }>()
+const scale = defineModel<number>('scale', { required: true })
+const speed = defineModel<number>('speed', { required: true })
+const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
+const loopCount = defineModel<number | null>('loopCount', { required: true })
+const optimize = defineModel<boolean>('optimize', { required: true })
+const optimizeLevel = defineModel<number>('optimizeLevel', { required: true })
 </script>
 
 <i18n lang="json">

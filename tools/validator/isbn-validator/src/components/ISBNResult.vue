@@ -16,11 +16,11 @@ import type { ISBNValidationResult } from '../data/isbn'
 import ISBNResultIdentifiers from './ISBNResultIdentifiers.vue'
 import ISBNResultSummary from './ISBNResultSummary.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: ISBNValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

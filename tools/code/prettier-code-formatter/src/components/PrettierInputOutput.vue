@@ -38,6 +38,11 @@ import handlebars from 'highlight.js/lib/languages/handlebars'
 import markdown from 'highlight.js/lib/languages/markdown'
 import yaml from 'highlight.js/lib/languages/yaml'
 
+defineProps<{
+  formattedCode: string
+  formatError: string
+  highlightLanguage: string
+}>()
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('json', json)
@@ -49,12 +54,6 @@ hljs.registerLanguage('graphql', graphql)
 hljs.registerLanguage('handlebars', handlebars)
 hljs.registerLanguage('markdown', markdown)
 hljs.registerLanguage('yaml', yaml)
-
-defineProps<{
-  formattedCode: string
-  formatError: string
-  highlightLanguage: string
-}>()
 
 const sourceCode = defineModel<string>('sourceCode', { required: true })
 

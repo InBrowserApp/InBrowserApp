@@ -15,11 +15,11 @@ import { ToolSection } from '@shared/ui/tool'
 import hljs from 'highlight.js/lib/core'
 import jsonHighlight from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', jsonHighlight)
-
 const props = defineProps<{
   json: object | null
 }>()
+
+hljs.registerLanguage('json', jsonHighlight)
 
 const formatted = computed<string>(() => {
   try {

@@ -7,13 +7,13 @@ import { computed } from 'vue'
 import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   provinceName?: string | null
   cityName?: string | null
   areaName?: string | null
 }>()
+
+const { t } = useI18n()
 
 const regionDisplay = computed(() => {
   const parts = [props.provinceName, props.cityName, props.areaName].filter(Boolean) as string[]

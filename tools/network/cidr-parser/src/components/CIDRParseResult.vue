@@ -64,11 +64,11 @@ import { CopyToClipboardTooltip } from '@shared/ui/base'
 // @ts-ignore
 import { stringifyIp } from 'ip-bigint'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   cidr: string | undefined
 }>()
+
+const { t } = useI18n()
 
 const parsed = computed(() => {
   if (props.cidr === undefined) {

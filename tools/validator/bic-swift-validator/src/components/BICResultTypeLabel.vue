@@ -8,11 +8,11 @@ import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { BICValidationResult } from '../data/bic'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   type: BICValidationResult['type']
 }>()
+
+const { t } = useI18n()
 
 const typeLabel = computed(() => {
   if (props.type === 'bic-8') return t('bic8')

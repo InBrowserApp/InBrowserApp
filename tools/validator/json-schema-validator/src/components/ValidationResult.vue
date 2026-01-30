@@ -33,8 +33,6 @@ import type { JsonSchemaValidationError } from '@utils/json-schema'
 import ValidationErrorsTable from './ValidationErrorsTable.vue'
 import ValidationSummary from './ValidationSummary.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   state: 'empty' | 'schema-error' | 'validated'
   valid: boolean
@@ -45,6 +43,8 @@ const props = defineProps<{
   schemaError: string
   loading: boolean
 }>()
+
+const { t } = useI18n()
 
 const statusType = computed<'success' | 'error' | 'info'>(() => {
   if (props.state === 'validated') {

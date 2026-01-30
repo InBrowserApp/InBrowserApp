@@ -13,10 +13,6 @@ import { NFormItem, NSelect, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
-type JwkWithKid = JsonWebKey & { kid?: string }
-
 const props = defineProps<{
   keys: JsonWebKey[]
   modelValue: number
@@ -25,6 +21,10 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update:modelValue', value: number): void
 }>()
+
+const { t } = useI18n()
+
+type JwkWithKid = JsonWebKey & { kid?: string }
 
 const selectedIndex = computed({
   get: () => props.modelValue,

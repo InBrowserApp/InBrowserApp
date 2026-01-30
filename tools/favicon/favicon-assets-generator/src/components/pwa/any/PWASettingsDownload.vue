@@ -21,14 +21,14 @@ import FileMinifiedUsingOxipng from '../../common/FileMinifiedUsingOxipng.vue'
 import DownloadFileButton from '../../common/DownloadFileButton.vue'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
-hljs.registerLanguage('json', json)
-
-const message = useMessage()
-
 const props = defineProps<{
   image: Blob | undefined
   options: PWAOptions
 }>()
+
+hljs.registerLanguage('json', json)
+
+const message = useMessage()
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

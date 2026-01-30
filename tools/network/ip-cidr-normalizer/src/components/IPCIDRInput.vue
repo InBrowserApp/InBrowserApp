@@ -11,10 +11,11 @@ import { isIP } from 'is-ip'
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+const emit = defineEmits<{
+  'update:ipcidr': [string]
+}>()
 const { t } = useI18n()
 const ipcidr = ref('')
-const emit = defineEmits(['update:ipcidr'])
-
 const rule: FormItemRule = {
   trigger: ['input', 'change', 'blur'],
   validator() {

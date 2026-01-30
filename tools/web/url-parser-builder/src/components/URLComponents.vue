@@ -21,6 +21,9 @@ import URLPathInputs from './URLPathInputs.vue'
 const props = defineProps<{
   url: string
 }>()
+const emit = defineEmits<{
+  (e: 'update:url', value: string): void
+}>()
 const url = toRef(props, 'url')
 const urlObject = computed<URL>(() => {
   try {
@@ -29,10 +32,6 @@ const urlObject = computed<URL>(() => {
     return new URL('')
   }
 })
-
-const emit = defineEmits<{
-  (e: 'update:url', value: string): void
-}>()
 
 const protocol = ref(urlObject.value.protocol.replace(':', ''))
 const username = ref(urlObject.value.username)

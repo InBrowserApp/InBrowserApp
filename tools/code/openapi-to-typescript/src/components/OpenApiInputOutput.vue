@@ -53,8 +53,6 @@ import { NAlert, NCard, NCode, NFormItemGi, NGrid, NSpin, NText } from 'naive-ui
 import hljs from 'highlight.js/lib/core'
 import typescript from 'highlight.js/lib/languages/typescript'
 
-hljs.registerLanguage('typescript', typescript)
-
 defineProps<{
   openApiText: string
   accept: string
@@ -66,6 +64,8 @@ defineProps<{
   isGenerating: boolean
   handleInput: (value: string | File) => void
 }>()
+
+hljs.registerLanguage('typescript', typescript)
 
 const { t } = useI18n({ useScope: 'local' })
 </script>

@@ -49,8 +49,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { TextOrFileInput } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   schemaStatus?: 'success' | 'error'
   dataStatus?: 'success' | 'error'
@@ -64,6 +62,8 @@ defineEmits<{
   'update:schemaValue': [value: string | File]
   'update:dataValue': [value: string | File]
 }>()
+
+const { t } = useI18n()
 
 const accept = '.json,.txt'
 </script>

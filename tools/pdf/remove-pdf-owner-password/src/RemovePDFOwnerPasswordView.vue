@@ -1,6 +1,6 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
-    <PDFUpload @upload:file="handlePDFUpload" />
+    <PDFUpload @upload-file="handlePDFUpload" />
     <ToolSection v-if="downloadUrl">
       <n-flex justify="flex-end">
         <n-button

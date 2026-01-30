@@ -25,8 +25,6 @@ import { useI18n } from 'vue-i18n'
 import TextNumberFormatIcon from '@vicons/fluent/TextNumberFormat20Regular'
 import type { ResidentIdValidationResult } from '../data/residentId'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   modelValue: string
   validationResult: ResidentIdValidationResult
@@ -35,6 +33,8 @@ const props = defineProps<{
 defineEmits<{
   'update:modelValue': [value: string]
 }>()
+
+const { t } = useI18n()
 
 const inputStatus = computed(() => {
   if (props.modelValue.length === 0) return undefined

@@ -25,13 +25,13 @@ import { NCard, NCode } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   previewKind: 'image' | 'audio' | 'video' | 'text' | null
   previewUrl: string
   textPreview: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

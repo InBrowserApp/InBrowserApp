@@ -27,9 +27,10 @@ import { useI18n } from 'vue-i18n'
 import { NGrid, NFormItemGi, NSlider, NCheckboxGroup, NCheckbox, NSwitch, NFlex } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 
+const props = defineProps<{ nonce: number }>()
+
 const { t } = useI18n()
 
-const props = defineProps<{ nonce: number }>()
 const modelValue = defineModel<string>('value', { default: '' })
 
 const length = useStorage<number>('tools:random-password-generator:random:length', 16)

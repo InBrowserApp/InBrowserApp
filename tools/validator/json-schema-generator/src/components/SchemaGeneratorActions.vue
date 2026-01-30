@@ -2,7 +2,7 @@
   <ToolSection>
     <n-flex align="center" justify="space-between" wrap>
       <n-flex align="center" wrap>
-        <n-button text @click="emit('loadSample')">
+        <n-button text @click="emit('load-sample')">
           <template #icon>
             <n-icon :component="Wand16Regular" />
           </template>
@@ -36,14 +36,14 @@ import { useI18n } from 'vue-i18n'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import Wand16Regular from '@vicons/fluent/Wand16Regular'
 
-const { t } = useI18n()
-
 defineProps<{
   schemaText: string
   downloadUrl?: string | null
 }>()
 
-const emit = defineEmits<{ (event: 'loadSample'): void }>()
+const emit = defineEmits<{ (event: 'load-sample'): void }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

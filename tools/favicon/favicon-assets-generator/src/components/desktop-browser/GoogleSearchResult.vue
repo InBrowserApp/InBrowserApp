@@ -80,5 +80,5 @@ const imageURL = useObjectUrl(image)
 }
 </style>
 
-<style lang="css" scoped src="./GoogleSearchResult.css"></style>
-<style lang="css" scoped src="./GoogleSearchResult-dark.css"></style>
+<style scoped src="./GoogleSearchResult.css"></style>
+<style scoped src="./GoogleSearchResult-dark.css"></style>

@@ -27,8 +27,6 @@ import { NFlex, NSwitch } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   validateFormats: boolean
   allErrors: boolean
@@ -38,6 +36,8 @@ defineEmits<{
   'update:validateFormats': [value: boolean]
   'update:allErrors': [value: boolean]
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

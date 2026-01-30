@@ -22,11 +22,11 @@ import { NFlex, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { StrengthReport } from '../utils'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   analysis: StrengthReport
 }>()
+
+const { t } = useI18n()
 
 const strengthLabel = computed(() => {
   // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
