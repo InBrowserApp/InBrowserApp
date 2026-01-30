@@ -1,5 +1,5 @@
 <template>
-  <a href="https://github.com/InBrowserApp/inbrowser.app" target="_blank">
+  <a href="https://github.com/InBrowserApp/inbrowser.app" target="_blank" rel="noopener noreferrer">
     <n-flex align="center" size="small">
       <n-icon>
         <icon />

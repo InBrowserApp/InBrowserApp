@@ -68,6 +68,7 @@
         tag="a"
         href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
         target="_blank"
+        rel="noopener noreferrer"
         style="vertical-align: -0.15em"
       >
         <template #icon>

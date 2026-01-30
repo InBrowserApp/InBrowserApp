@@ -11,7 +11,7 @@
     <n-form-item-gi :label="t('preview')" :show-feedback="false">
       <n-flex :wrap="true" :size="12" align="start" class="preview-row">
         <n-card size="small" class="preview-card">
-          <component :is="'style'" :text-content="scopedMarkdownCss" />
+          <component :is="styleTag" :text-content="scopedMarkdownCss" />
           <div :class="markdownScopeClass">
             <!-- eslint-disable-next-line vue/no-v-html -->
             <article class="markdown-body" v-html="renderedHtml"></article>
@@ -59,6 +59,8 @@ const props = defineProps<{
 const markdown = defineModel<string>('markdown', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
+
+const styleTag = 'style'
 
 const gridCols = computed(() => (props.viewMode === 'split' ? '1 s:2' : '1'))
 const isSplit = computed(() => props.viewMode === 'split')
