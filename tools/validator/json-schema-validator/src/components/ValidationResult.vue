@@ -1,117 +1,165 @@
 <template>
   <ToolSection>
-    <ToolSectionHeader>{{ title }}</ToolSectionHeader>
+    <ToolSectionHeader>{{ t('resultTitle') }}</ToolSectionHeader>
     <n-spin :show="loading">
       <n-alert v-if="schemaError" type="error" :bordered="false">
         {{ schemaError }}
       </n-alert>
       <n-alert v-else-if="statusType === 'info'" type="info" :bordered="false">
-        {{ emptyMessage }}
+        {{ t('emptyMessage') }}
       </n-alert>
 
-      <n-descriptions :column="1" bordered label-placement="left">
-        <n-descriptions-item :label="statusLabel">
-          <n-tag :type="statusTagType" size="small">{{ statusValue }}</n-tag>
-        </n-descriptions-item>
-        <n-descriptions-item :label="draftLabel">
-          <n-flex align="center" :size="8">
-            <n-text code>{{ draftValue }}</n-text>
-            <n-tag v-if="draftHint" type="info" size="small">{{ draftHint }}</n-tag>
-          </n-flex>
-        </n-descriptions-item>
-        <n-descriptions-item :label="errorsLabel">
-          <n-flex align="center" :size="8">
-            <n-text>{{ errorsCount }}</n-text>
-            <CopyToClipboardButton v-if="errorsCount > 0" :content="errorsJson" />
-          </n-flex>
-        </n-descriptions-item>
-      </n-descriptions>
+      <ValidationSummary
+        :state="state"
+        :valid="valid"
+        :status-type="statusType"
+        :draft-value="draftValue"
+        :draft-detected="draftDetected"
+        :errors-count="errorsCount"
+        :errors-json="errorsJson"
+      />
 
-      <div v-if="errors.length" class="errors-table">
-        <n-text depth="3">{{ errorsTitle }}</n-text>
-        <n-data-table :columns="columns" :data="errors" :bordered="false" size="small" />
-      </div>
-
-      <n-text v-else-if="statusType === 'success'" depth="3">{{ noErrorsLabel }}</n-text>
+      <ValidationErrorsTable :errors="errors" :status-type="statusType" />
     </n-spin>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { computed, h } from 'vue'
-import {
-  NAlert,
-  NDescriptions,
-  NDescriptionsItem,
-  NDataTable,
-  NFlex,
-  NTag,
-  NText,
-  NSpin,
-} from 'naive-ui'
-import type { DataTableColumns } from 'naive-ui'
+import { computed } from 'vue'
+import { NAlert, NSpin } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { CopyToClipboardButton } from '@shared/ui/base'
+import { useI18n } from 'vue-i18n'
 import type { JsonSchemaValidationError } from '@utils/json-schema'
+import ValidationErrorsTable from './ValidationErrorsTable.vue'
+import ValidationSummary from './ValidationSummary.vue'
 
-type TagType = 'default' | 'success' | 'warning' | 'error' | 'info'
-
-type ColumnLabels = {
-  path: string
-  message: string
-  keyword: string
-}
+const { t } = useI18n()
 
 const props = defineProps<{
-  title: string
-  statusLabel: string
-  statusValue: string
-  statusType: 'success' | 'error' | 'info' | 'warning'
-  draftLabel: string
+  state: 'empty' | 'schema-error' | 'validated'
+  valid: boolean
   draftValue: string
-  draftHint: string
-  errorsLabel: string
-  errorsCount: number
-  errorsTitle: string
+  draftDetected: boolean
   errors: JsonSchemaValidationError[]
   errorsJson: string
-  columnsLabels: ColumnLabels
-  noErrorsLabel: string
   schemaError: string
-  emptyMessage: string
   loading: boolean
 }>()
 
-const statusTagType = computed<TagType>(() => {
-  if (props.statusType === 'info') return 'info'
-  if (props.statusType === 'warning') return 'warning'
-  if (props.statusType === 'error') return 'error'
-  return 'success'
+const statusType = computed<'success' | 'error' | 'info'>(() => {
+  if (props.state === 'validated') {
+    return props.valid ? 'success' : 'error'
+  }
+  if (props.state === 'schema-error') {
+    return 'error'
+  }
+  return 'info'
 })
 
-const columns = computed<DataTableColumns<JsonSchemaValidationError>>(() => [
-  {
-    title: props.columnsLabels.path,
-    key: 'instancePath',
-    render(row) {
-      return h(NText, { code: true }, () => row.instancePath || '/')
-    },
-  },
-  {
-    title: props.columnsLabels.message,
-    key: 'message',
-  },
-  {
-    title: props.columnsLabels.keyword,
-    key: 'keyword',
-  },
-])
+const errorsCount = computed(() => props.errors.length)
 </script>
 
-<style scoped>
-.errors-table {
-  margin-top: 12px;
-  display: grid;
-  gap: 8px;
+<i18n lang="json">
+{
+  "en": {
+    "resultTitle": "Validation Result",
+    "emptyMessage": "Provide a valid JSON Schema and JSON data to see results"
+  },
+  "zh": {
+    "resultTitle": "校验结果",
+    "emptyMessage": "请输入有效的 JSON Schema 和 JSON 数据以查看结果"
+  },
+  "zh-CN": {
+    "resultTitle": "校验结果",
+    "emptyMessage": "请输入有效的 JSON Schema 和 JSON 数据以查看结果"
+  },
+  "zh-TW": {
+    "resultTitle": "驗證結果",
+    "emptyMessage": "請輸入有效的 JSON Schema 與 JSON 資料以查看結果"
+  },
+  "zh-HK": {
+    "resultTitle": "驗證結果",
+    "emptyMessage": "請輸入有效的 JSON Schema 與 JSON 資料以查看結果"
+  },
+  "es": {
+    "resultTitle": "Resultado de validación",
+    "emptyMessage": "Proporcione un JSON Schema y datos JSON válidos para ver resultados"
+  },
+  "fr": {
+    "resultTitle": "Résultat de validation",
+    "emptyMessage": "Fournissez un schéma JSON et des données JSON valides pour voir les résultats"
+  },
+  "de": {
+    "resultTitle": "Validierungsergebnis",
+    "emptyMessage": "Geben Sie ein gültiges JSON-Schema und JSON-Daten ein, um Ergebnisse zu sehen"
+  },
+  "it": {
+    "resultTitle": "Risultato di validazione",
+    "emptyMessage": "Fornisci un JSON Schema e dati JSON validi per vedere i risultati"
+  },
+  "ja": {
+    "resultTitle": "検証結果",
+    "emptyMessage": "有効な JSON Schema と JSON データを入力して結果を確認してください"
+  },
+  "ko": {
+    "resultTitle": "검증 결과",
+    "emptyMessage": "유효한 JSON 스키마와 JSON 데이터를 입력하면 결과가 표시됩니다"
+  },
+  "ru": {
+    "resultTitle": "Результат проверки",
+    "emptyMessage": "Введите корректный JSON Schema и JSON данные для просмотра результатов"
+  },
+  "pt": {
+    "resultTitle": "Resultado da validação",
+    "emptyMessage": "Forneça um JSON Schema e dados JSON válidos para ver os resultados"
+  },
+  "ar": {
+    "resultTitle": "نتيجة التحقق",
+    "emptyMessage": "قدّم JSON Schema وبيانات JSON صالحة لرؤية النتائج"
+  },
+  "hi": {
+    "resultTitle": "सत्यापन परिणाम",
+    "emptyMessage": "परिणाम देखने के लिए मान्य JSON Schema और JSON डेटा दें"
+  },
+  "tr": {
+    "resultTitle": "Doğrulama sonucu",
+    "emptyMessage": "Sonuçları görmek için geçerli JSON Schema ve JSON verisi sağlayın"
+  },
+  "nl": {
+    "resultTitle": "Validatieresultaat",
+    "emptyMessage": "Geef een geldig JSON Schema en JSON-gegevens om resultaten te zien"
+  },
+  "sv": {
+    "resultTitle": "Valideringsresultat",
+    "emptyMessage": "Ange giltigt JSON Schema och JSON-data för att se resultat"
+  },
+  "pl": {
+    "resultTitle": "Wynik walidacji",
+    "emptyMessage": "Podaj poprawny JSON Schema i dane JSON, aby zobaczyć wyniki"
+  },
+  "vi": {
+    "resultTitle": "Kết quả xác thực",
+    "emptyMessage": "Hãy cung cấp JSON Schema và dữ liệu JSON hợp lệ để xem kết quả"
+  },
+  "th": {
+    "resultTitle": "ผลการตรวจสอบ",
+    "emptyMessage": "โปรดระบุ JSON Schema และข้อมูล JSON ที่ถูกต้องเพื่อดูผลลัพธ์"
+  },
+  "id": {
+    "resultTitle": "Hasil validasi",
+    "emptyMessage": "Berikan JSON Schema dan data JSON yang valid untuk melihat hasil"
+  },
+  "he": {
+    "resultTitle": "תוצאת אימות",
+    "emptyMessage": "ספקו JSON Schema ונתוני JSON תקינים כדי לראות תוצאות"
+  },
+  "ms": {
+    "resultTitle": "Keputusan pengesahan",
+    "emptyMessage": "Sediakan JSON Schema dan data JSON yang sah untuk melihat hasil"
+  },
+  "no": {
+    "resultTitle": "Valideringsresultat",
+    "emptyMessage": "Oppgi et gyldig JSON Schema og JSON-data for å se resultater"
+  }
 }
-</style>
+</i18n>

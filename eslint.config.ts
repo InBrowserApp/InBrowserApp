@@ -87,6 +87,27 @@ export default defineConfigWithVueTs(
     },
   },
   {
+    name: 'app/max-lines',
+    files: ['**/*.{ts,mts,tsx,vue}'],
+    rules: {
+      'max-lines': [
+        'error',
+        {
+          max: 500,
+          skipBlankLines: true,
+          skipComments: true,
+        },
+      ],
+    },
+  },
+  {
+    name: 'app/max-lines-tests',
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+    rules: {
+      'max-lines': 'off',
+    },
+  },
+  {
     name: 'app/i18n-info',
     files: ['tools/**/src/info.ts'],
     plugins: {

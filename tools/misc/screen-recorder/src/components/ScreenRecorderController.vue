@@ -1,147 +1,47 @@
 <template>
-  <ToolSectionHeader>{{ t('controls') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex vertical :size="12">
-      <n-alert v-if="!isSupported" type="warning" :show-icon="false">
-        {{ t('notSupported') }}
-      </n-alert>
-      <template v-else>
-        <n-alert v-if="permissionDenied" type="error" :show-icon="false">
-          {{ t('permissionDenied') }}
-        </n-alert>
-        <n-alert v-else-if="microphoneDenied" type="error" :show-icon="false">
-          {{ t('microphoneDenied') }}
-        </n-alert>
-        <n-alert v-else-if="errorMessage" type="error" :show-icon="false">
-          {{ errorMessage }}
-        </n-alert>
+  <ScreenRecorderControls
+    :is-supported="isSupported"
+    :permission-denied="permissionDenied"
+    :microphone-denied="microphoneDenied"
+    :error-message="errorMessage"
+    :is-preparing="isPreparing"
+    :is-recording="isRecording"
+    :is-paused="isPaused"
+    :formatted-duration="formattedDuration"
+    :retry-permission-label="t('retryPermission')"
+    :on-start="startRecording"
+    :on-pause="pauseRecording"
+    :on-resume="resumeRecording"
+    :on-stop="stopRecording"
+  />
 
-        <n-flex align="center" :size="8">
-          <n-button
-            v-if="!isRecording"
-            type="error"
-            :loading="isPreparing"
-            :disabled="isPreparing"
-            @click="startRecording"
-          >
-            <template #icon>
-              <n-icon :component="RecordIcon" />
-            </template>
-            {{ t('record') }}
-          </n-button>
-          <n-button v-else-if="isPaused" type="primary" @click="resumeRecording">
-            <template #icon>
-              <n-icon :component="PlayIcon" />
-            </template>
-            {{ t('resume') }}
-          </n-button>
-          <n-button v-else type="warning" @click="pauseRecording">
-            <template #icon>
-              <n-icon :component="PauseIcon" />
-            </template>
-            {{ t('pause') }}
-          </n-button>
-          <n-button v-if="isRecording" type="error" @click="stopRecording">
-            <template #icon>
-              <n-icon :component="StopIcon" />
-            </template>
-            {{ t('stop') }}
-          </n-button>
-          <n-button v-if="permissionDenied || microphoneDenied" tertiary @click="startRecording">
-            {{ t('retryPermission') }}
-          </n-button>
-        </n-flex>
+  <ScreenRecorderSettings
+    v-model:include-system-audio="includeSystemAudio"
+    v-model:include-microphone="includeMicrophone"
+    :settings-disabled="settingsDisabled"
+    :is-mic-supported="isMicSupported"
+  />
 
-        <n-flex align="center" :size="12">
-          <n-text depth="3">{{ t('status') }}</n-text>
-          <n-tag :type="statusType">{{ statusLabel }}</n-tag>
-          <n-text depth="3">{{ t('duration') }}</n-text>
-          <n-text>{{ formattedDuration }}</n-text>
-        </n-flex>
-      </template>
-    </n-flex>
-  </ToolSection>
+  <ScreenRecorderOutput
+    v-if="recordingBlob"
+    v-model:file-name="fileName"
+    :recording-blob="recordingBlob"
+    :recording-url="recordingUrl"
+    :mime-type="mimeType"
+    :on-clear="clearRecording"
+  />
 
-  <ToolSectionHeader>{{ t('settings') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex vertical :size="10">
-      <n-flex align="center" :size="8" class="setting-row">
-        <n-text depth="3">{{ t('systemAudio') }}</n-text>
-        <n-switch v-model:value="includeSystemAudio" :disabled="settingsDisabled" />
-      </n-flex>
-      <n-flex align="center" :size="8" class="setting-row">
-        <n-text depth="3">{{ t('microphone') }}</n-text>
-        <n-switch
-          v-model:value="includeMicrophone"
-          :disabled="settingsDisabled || !isMicSupported"
-        />
-      </n-flex>
-    </n-flex>
-  </ToolSection>
-
-  <template v-if="recordingBlob">
-    <div ref="outputSection">
-      <ToolSectionHeader>{{ t('output') }}</ToolSectionHeader>
-      <ToolSection>
-        <n-flex vertical :size="12">
-          <video class="video-player" :src="recordingUrl" controls />
-
-          <n-grid :cols="2" :x-gap="16" :y-gap="8">
-            <n-gi>
-              <n-flex vertical :size="4">
-                <n-text depth="3">{{ t('format') }}</n-text>
-                <n-text>{{ displayMimeType }}</n-text>
-              </n-flex>
-            </n-gi>
-            <n-gi>
-              <n-flex vertical :size="4">
-                <n-text depth="3">{{ t('fileSize') }}</n-text>
-                <n-text>{{ fileSizeLabel }}</n-text>
-              </n-flex>
-            </n-gi>
-          </n-grid>
-
-          <n-flex :size="8">
-            <n-button tag="a" type="primary" :href="recordingUrl" :download="downloadName">
-              <template #icon>
-                <n-icon :component="DownloadIcon" />
-              </template>
-              {{ t('download') }}
-            </n-button>
-            <n-button tertiary @click="clearRecording">
-              <template #icon>
-                <n-icon :component="ClearIcon" />
-              </template>
-              {{ t('clear') }}
-            </n-button>
-          </n-flex>
-        </n-flex>
-      </ToolSection>
-    </div>
-  </template>
-
-  <ToolSectionHeader>{{ t('notes') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex vertical :size="6">
-      <n-text>{{ t('sourceNote') }}</n-text>
-      <n-text>{{ t('audioNote') }}</n-text>
-      <n-text>{{ t('permissionNote') }}</n-text>
-    </n-flex>
-  </ToolSection>
+  <ScreenRecorderNotes />
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NButton, NFlex, NGi, NGrid, NIcon, NSwitch, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import RecordIcon from '@vicons/fluent/Record16Filled'
-import PauseIcon from '@vicons/fluent/Pause16Filled'
-import PlayIcon from '@vicons/fluent/Play16Regular'
-import StopIcon from '@vicons/fluent/Stop16Filled'
-import DownloadIcon from '@vicons/fluent/ArrowDownload16Filled'
-import ClearIcon from '@vicons/fluent/Delete16Regular'
+import ScreenRecorderControls from './ScreenRecorderControls.vue'
+import ScreenRecorderNotes from './ScreenRecorderNotes.vue'
+import ScreenRecorderOutput from './ScreenRecorderOutput.vue'
+import ScreenRecorderSettings from './ScreenRecorderSettings.vue'
 import {
   formatDuration,
   formatFileSize,
@@ -149,7 +49,7 @@ import {
   getSupportedMimeType,
 } from '../utils/recorder'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'local' })
 
 const permissionDenied = ref(false)
 const microphoneDenied = ref(false)
@@ -166,7 +66,6 @@ const recordingBlob = ref<Blob | null>(null)
 const mimeType = ref('')
 const fileName = ref('')
 const elapsedMs = ref(0)
-const outputSection = ref<HTMLElement | null>(null)
 
 const recordingUrl = useObjectUrl(recordingBlob)
 
@@ -192,20 +91,6 @@ const isMicSupported = computed(
 const isRecording = computed(() => recorderState.value !== 'inactive')
 const isPaused = computed(() => recorderState.value === 'paused')
 const settingsDisabled = computed(() => isRecording.value || isPreparing.value)
-
-const statusLabel = computed(() => {
-  if (isRecording.value) {
-    return isPaused.value ? t('statusPaused') : t('statusRecording')
-  }
-  return t('statusIdle')
-})
-
-const statusType = computed(() => {
-  if (isPaused.value) return 'warning'
-  if (isRecording.value) return 'success'
-  return 'default'
-})
-
 const formattedDuration = computed(() => formatDuration(elapsedMs.value))
 const fileExtension = computed(() => getExtensionForMimeType(mimeType.value))
 const displayMimeType = computed(() => mimeType.value || t('formatUnknown'))
@@ -214,14 +99,10 @@ const fileSizeLabel = computed(() =>
 )
 const downloadName = computed(() => {
   const base = fileName.value.trim() || t('fileNamePlaceholder')
-  return `${base}.${fileExtension.value}`
+  return base + '.' + fileExtension.value
 })
 
-watch(recordingBlob, async (value, previous) => {
-  if (!value || value === previous) return
-  await nextTick()
-  outputSection.value?.scrollIntoView?.({ behavior: 'smooth', block: 'start' })
-})
+defineExpose({ displayMimeType, fileSizeLabel, downloadName })
 
 function defaultFileName() {
   const now = new Date()
@@ -428,817 +309,182 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<style scoped>
-.video-player {
-  width: 100%;
-}
-
-.setting-row {
-  justify-content: space-between;
-}
-</style>
-
 <i18n lang="json">
 {
   "en": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "zh": {
-    "controls": "控制",
-    "settings": "设置",
-    "output": "输出",
-    "notes": "说明",
-    "record": "录制",
-    "pause": "暂停",
-    "resume": "继续",
-    "stop": "停止",
-    "status": "状态",
-    "statusIdle": "空闲",
-    "statusRecording": "录制中",
-    "statusPaused": "已暂停",
-    "duration": "时长",
-    "format": "格式",
-    "formatUnknown": "未知",
-    "fileNamePlaceholder": "屏幕录制",
-    "fileSize": "文件大小",
-    "download": "下载",
-    "clear": "清除",
-    "systemAudio": "系统声音",
-    "microphone": "麦克风",
     "microphoneNotSupported": "当前浏览器不支持麦克风录制。",
-    "notSupported": "当前浏览器不支持屏幕录制。",
-    "permissionDenied": "屏幕权限被拒绝，请允许共享屏幕。",
-    "microphoneDenied": "麦克风权限被拒绝，请允许访问。",
-    "retryPermission": "重试",
     "recordingFailed": "无法开始录制。",
-    "sourceNote": "使用浏览器屏幕共享录制屏幕、窗口或标签页（离线）。",
-    "audioNote": "系统声音取决于浏览器支持情况；可单独加入麦克风。",
-    "permissionNote": "弹出提示时请允许屏幕共享与麦克风访问。"
+    "retryPermission": "重试",
+    "formatUnknown": "未知",
+    "fileNamePlaceholder": "屏幕录制"
   },
   "zh-CN": {
-    "controls": "控制",
-    "settings": "设置",
-    "output": "输出",
-    "notes": "说明",
-    "record": "录制",
-    "pause": "暂停",
-    "resume": "继续",
-    "stop": "停止",
-    "status": "状态",
-    "statusIdle": "空闲",
-    "statusRecording": "录制中",
-    "statusPaused": "已暂停",
-    "duration": "时长",
-    "format": "格式",
-    "formatUnknown": "未知",
-    "fileNamePlaceholder": "屏幕录制",
-    "fileSize": "文件大小",
-    "download": "下载",
-    "clear": "清除",
-    "systemAudio": "系统声音",
-    "microphone": "麦克风",
     "microphoneNotSupported": "当前浏览器不支持麦克风录制。",
-    "notSupported": "当前浏览器不支持屏幕录制。",
-    "permissionDenied": "屏幕权限被拒绝，请允许共享屏幕。",
-    "microphoneDenied": "麦克风权限被拒绝，请允许访问。",
-    "retryPermission": "重试",
     "recordingFailed": "无法开始录制。",
-    "sourceNote": "使用浏览器屏幕共享录制屏幕、窗口或标签页（离线）。",
-    "audioNote": "系统声音取决于浏览器支持情况；可单独加入麦克风。",
-    "permissionNote": "弹出提示时请允许屏幕共享与麦克风访问。"
+    "retryPermission": "重试",
+    "formatUnknown": "未知",
+    "fileNamePlaceholder": "屏幕录制"
   },
   "zh-TW": {
-    "controls": "控制",
-    "settings": "設定",
-    "output": "輸出",
-    "notes": "說明",
-    "record": "錄製",
-    "pause": "暫停",
-    "resume": "繼續",
-    "stop": "停止",
-    "status": "狀態",
-    "statusIdle": "空閒",
-    "statusRecording": "錄製中",
-    "statusPaused": "已暫停",
-    "duration": "時長",
-    "format": "格式",
-    "formatUnknown": "未知",
-    "fileNamePlaceholder": "螢幕錄製",
-    "fileSize": "檔案大小",
-    "download": "下載",
-    "clear": "清除",
-    "systemAudio": "系統聲音",
-    "microphone": "麥克風",
     "microphoneNotSupported": "目前瀏覽器不支援麥克風錄製。",
-    "notSupported": "目前瀏覽器不支援螢幕錄製。",
-    "permissionDenied": "螢幕權限被拒絕，請允許共享螢幕。",
-    "microphoneDenied": "麥克風權限被拒絕，請允許存取。",
-    "retryPermission": "重試",
     "recordingFailed": "無法開始錄製。",
-    "sourceNote": "使用瀏覽器螢幕共享錄製螢幕、視窗或分頁（離線）。",
-    "audioNote": "系統聲音取決於瀏覽器支援；可單獨加入麥克風。",
-    "permissionNote": "出現提示時請允許螢幕共享與麥克風存取。"
+    "retryPermission": "重試",
+    "formatUnknown": "未知",
+    "fileNamePlaceholder": "螢幕錄製"
   },
   "zh-HK": {
-    "controls": "控制",
-    "settings": "設定",
-    "output": "輸出",
-    "notes": "說明",
-    "record": "錄製",
-    "pause": "暫停",
-    "resume": "繼續",
-    "stop": "停止",
-    "status": "狀態",
-    "statusIdle": "空閒",
-    "statusRecording": "錄製中",
-    "statusPaused": "已暫停",
-    "duration": "時長",
-    "format": "格式",
-    "formatUnknown": "未知",
-    "fileNamePlaceholder": "螢幕錄製",
-    "fileSize": "檔案大小",
-    "download": "下載",
-    "clear": "清除",
-    "systemAudio": "系統聲音",
-    "microphone": "麥克風",
     "microphoneNotSupported": "目前瀏覽器不支援麥克風錄製。",
-    "notSupported": "目前瀏覽器不支援螢幕錄製。",
-    "permissionDenied": "螢幕權限被拒絕，請允許共享螢幕。",
-    "microphoneDenied": "麥克風權限被拒絕，請允許存取。",
-    "retryPermission": "重試",
     "recordingFailed": "無法開始錄製。",
-    "sourceNote": "使用瀏覽器螢幕共享錄製螢幕、視窗或分頁（離線）。",
-    "audioNote": "系統聲音取決於瀏覽器支援；可單獨加入麥克風。",
-    "permissionNote": "出現提示時請允許螢幕共享與麥克風存取。"
+    "retryPermission": "重試",
+    "formatUnknown": "未知",
+    "fileNamePlaceholder": "螢幕錄製"
   },
   "es": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "fr": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "de": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "it": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "ja": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "ko": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "ru": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "pt": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "ar": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "hi": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "tr": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "nl": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "sv": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "pl": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "vi": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "th": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "id": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "he": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "ms": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   },
   "no": {
-    "controls": "Controls",
-    "settings": "Settings",
-    "output": "Output",
-    "notes": "Notes",
-    "record": "Record",
-    "pause": "Pause",
-    "resume": "Resume",
-    "stop": "Stop",
-    "status": "Status",
-    "statusIdle": "Idle",
-    "statusRecording": "Recording",
-    "statusPaused": "Paused",
-    "duration": "Duration",
-    "format": "Format",
-    "formatUnknown": "Unknown",
-    "fileNamePlaceholder": "screen-recording",
-    "fileSize": "File size",
-    "download": "Download",
-    "clear": "Clear",
-    "systemAudio": "System audio",
-    "microphone": "Microphone",
     "microphoneNotSupported": "Microphone capture is not supported in this browser.",
-    "notSupported": "Screen recording is not supported in this browser.",
-    "permissionDenied": "Screen permission denied. Please allow screen sharing.",
-    "microphoneDenied": "Microphone permission denied. Please allow microphone access.",
-    "retryPermission": "Retry",
     "recordingFailed": "Failed to start recording.",
-    "sourceNote": "Uses browser screen sharing to record your screen, window, or tab (offline).",
-    "audioNote": "System audio depends on browser support; microphone can be included separately.",
-    "permissionNote": "Allow screen sharing and microphone access when prompted."
+    "retryPermission": "Retry",
+    "formatUnknown": "Unknown",
+    "fileNamePlaceholder": "screen-recording"
   }
 }
 </i18n>

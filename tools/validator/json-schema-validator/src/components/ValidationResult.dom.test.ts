@@ -6,50 +6,24 @@ import type { JsonSchemaValidationError } from '@utils/json-schema'
 import ValidationResult from './ValidationResult.vue'
 
 type ValidationResultProps = {
-  title: string
-  statusLabel: string
-  statusValue: string
-  statusType: 'success' | 'error' | 'info' | 'warning'
-  draftLabel: string
+  state: 'empty' | 'schema-error' | 'validated'
+  valid: boolean
   draftValue: string
-  draftHint: string
-  errorsLabel: string
-  errorsCount: number
-  errorsTitle: string
+  draftDetected: boolean
   errors: JsonSchemaValidationError[]
   errorsJson: string
-  columnsLabels: {
-    path: string
-    message: string
-    keyword: string
-  }
-  noErrorsLabel: string
   schemaError: string
-  emptyMessage: string
   loading: boolean
 }
 
 const baseProps: ValidationResultProps = {
-  title: 'Validation Result',
-  statusLabel: 'Status',
-  statusValue: 'Waiting',
-  statusType: 'info',
-  draftLabel: 'Schema Draft',
+  state: 'empty',
+  valid: false,
   draftValue: '-',
-  draftHint: '',
-  errorsLabel: 'Errors',
-  errorsCount: 0,
-  errorsTitle: 'Errors',
+  draftDetected: false,
   errors: [],
   errorsJson: '',
-  columnsLabels: {
-    path: 'Path',
-    message: 'Message',
-    keyword: 'Keyword',
-  },
-  noErrorsLabel: 'No errors',
   schemaError: '',
-  emptyMessage: 'Provide a valid JSON Schema and JSON data to see results',
   loading: false,
 }
 
@@ -67,16 +41,14 @@ const withProviders = (props: ValidationResultProps) => ({
 describe('ValidationResult', () => {
   it('shows empty message when waiting for inputs', () => {
     const wrapper = mount(withProviders(baseProps))
-    expect(wrapper.text()).toContain(baseProps.emptyMessage)
+    expect(wrapper.text()).toContain('Provide a valid JSON Schema and JSON data to see results')
   })
 
   it('renders errors when provided', () => {
     const props: ValidationResultProps = {
       ...baseProps,
-      statusValue: 'Invalid',
-      statusType: 'error',
-      errorsCount: 1,
-      errorsTitle: 'Errors (1)',
+      state: 'validated',
+      valid: false,
       errors: [
         {
           instancePath: '/name',

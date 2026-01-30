@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
@@ -41,14 +41,54 @@ const mountOptions = {
   },
 }
 
+const stateKey = 'tools:sitemap-xml-generator:state'
+
+const createDefaultState = () => ({
+  mode: 'urlset',
+  baseUrl: 'https://example.com',
+  autoJoin: true,
+  urls: [
+    {
+      id: 'url-0',
+      loc: '/',
+      lastmod: '2024-01-15',
+      changefreq: 'weekly',
+      priority: 1,
+      images: [],
+      videos: [],
+      news: [],
+    },
+  ],
+  sitemaps: [
+    {
+      id: 'sitemap-0',
+      loc: '/sitemap.xml',
+      lastmod: '',
+    },
+  ],
+})
+
 const getOutput = (wrapper: ReturnType<typeof mount>) =>
   (wrapper.get('[data-testid="sitemap-output"]').find('textarea').element as HTMLTextAreaElement)
     .value
 
 describe('SitemapXmlGeneratorView', () => {
+  let wrapper: ReturnType<typeof mount> | null = null
+
   beforeEach(() => {
     localStorage.clear()
+    localStorage.setItem(stateKey, JSON.stringify(createDefaultState()))
   })
+
+  afterEach(() => {
+    wrapper?.unmount()
+    wrapper = null
+  })
+
+  const mountView = () => {
+    wrapper = mount(SitemapXmlGeneratorView, mountOptions)
+    return wrapper
+  }
 
   it('exposes tool metadata and routes', async () => {
     expect(toolInfo.toolID).toBe('sitemap-xml-generator')
@@ -63,7 +103,7 @@ describe('SitemapXmlGeneratorView', () => {
   })
 
   it('generates urlset output and applies base url', async () => {
-    const wrapper = mount(SitemapXmlGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     const initialOutput = getOutput(wrapper)
@@ -81,7 +121,7 @@ describe('SitemapXmlGeneratorView', () => {
   })
 
   it('applies extension presets', async () => {
-    const wrapper = mount(SitemapXmlGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     await wrapper.get('[data-testid="preset-image"]').trigger('click')
@@ -101,7 +141,7 @@ describe('SitemapXmlGeneratorView', () => {
   })
 
   it('switches to sitemap index preset', async () => {
-    const wrapper = mount(SitemapXmlGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     await wrapper.get('[data-testid="preset-index"]').trigger('click')
@@ -113,7 +153,7 @@ describe('SitemapXmlGeneratorView', () => {
   })
 
   it('adds and removes entries', async () => {
-    const wrapper = mount(SitemapXmlGeneratorView, mountOptions)
+    const wrapper = mountView()
     await flushPromises()
 
     await wrapper.get('[data-testid="add-url"]').trigger('click')

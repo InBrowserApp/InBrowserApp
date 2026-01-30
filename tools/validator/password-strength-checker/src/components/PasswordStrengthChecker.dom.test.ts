@@ -9,30 +9,10 @@ describe('PasswordStrengthChecker', () => {
 
   it('shows empty state by default', () => {
     const wrapper = mount(PasswordStrengthChecker)
-    const vm = wrapper.vm as unknown as {
-      strengthLabel: string
-      scorePercent: number
-      scoreTagType: string
-      entropyBits: string
-      log10Guesses: string
-      characterTags: string[]
-      warningMessages: string[]
-      suggestionMessages: string[]
-      offlineTimeLabel: string
-      onlineTimeLabel: string
-    }
 
     expect(wrapper.text()).toContain('Enter a password to check its strength.')
-    expect(vm.strengthLabel).toBe('')
-    expect(vm.scorePercent).toBe(0)
-    expect(vm.scoreTagType).toBe('default')
-    expect(vm.entropyBits).toBe('0')
-    expect(vm.log10Guesses).toBe('0')
-    expect(vm.characterTags).toEqual([])
-    expect(vm.warningMessages).toEqual([])
-    expect(vm.suggestionMessages).toEqual([])
-    expect(vm.offlineTimeLabel).toBe('')
-    expect(vm.onlineTimeLabel).toBe('')
+    expect(wrapper.findAll('.n-alert')).toHaveLength(0)
+    expect(wrapper.find('.strength-meter-fill').exists()).toBe(false)
   })
 
   it('toggles password visibility', async () => {

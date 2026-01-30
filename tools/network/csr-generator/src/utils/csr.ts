@@ -19,6 +19,7 @@ import {
   diAlgorithm,
   type JsonName,
 } from '@peculiar/x509'
+import { EC_CURVE_HASH, base64UrlToBytes, formatKeyAlgorithmLabel } from './csr-key-utils'
 
 export type KeySource = 'generate' | 'import'
 export type KeyAlgorithm = 'rsa' | 'ecdsa' | 'ed25519' | 'ed448'
@@ -59,6 +60,8 @@ export type CsrOutput = {
   privateKeyPem?: string
   keyAlgorithmLabel: string
 }
+
+export { base64UrlToBytes, formatKeyAlgorithmLabel }
 
 type ImportedKeyAlgorithm =
   | { type: 'rsa' }
@@ -113,12 +116,6 @@ const EC_CURVE_OIDS: Record<EcCurve, string> = {
 const EC_OID_TO_CURVE = Object.fromEntries(
   Object.entries(EC_CURVE_OIDS).map(([curve, oid]) => [oid, curve]),
 ) as Record<string, EcCurve>
-
-const EC_CURVE_HASH: Record<EcCurve, HashAlgorithm> = {
-  'P-256': 'SHA-256',
-  'P-384': 'SHA-384',
-  'P-521': 'SHA-512',
-}
 
 const SUPPORTED_PRIVATE_KEY_TYPES = new Set(['PRIVATE KEY', 'RSA PRIVATE KEY', 'EC PRIVATE KEY'])
 
@@ -244,32 +241,6 @@ export function buildSanNames(san: SanInput): GeneralName[] {
   return names
 }
 
-export function formatKeyAlgorithmLabel(params: {
-  algorithm: KeyAlgorithm
-  rsaKeySize?: number
-  rsaHash?: HashAlgorithm
-  ecCurve?: EcCurve
-}): string {
-  switch (params.algorithm) {
-    case 'rsa': {
-      const size = params.rsaKeySize ? ` ${params.rsaKeySize}` : ''
-      const hash = params.rsaHash ? ` (${params.rsaHash})` : ''
-      return `RSA${size}${hash}`
-    }
-    case 'ecdsa': {
-      const curve = params.ecCurve ? ` ${params.ecCurve}` : ''
-      const hash = params.ecCurve ? ` (${EC_CURVE_HASH[params.ecCurve]})` : ''
-      return `ECDSA${curve}${hash}`
-    }
-    case 'ed25519':
-      return 'Ed25519'
-    case 'ed448':
-      return 'Ed448'
-    default:
-      return params.algorithm
-  }
-}
-
 export function parsePrivateKeyPem(pem: string): ParsedPemKey {
   if (!PemConverter.isPem(pem)) {
     throw new CsrGeneratorError('errorInvalidPem')
@@ -295,17 +266,6 @@ export function parsePrivateKeyPem(pem: string): ParsedPemKey {
   }
 
   return convertEcPrivateKey(block.rawData)
-}
-
-export function base64UrlToBytes(input: string): Uint8Array {
-  const base64 = input.replace(/-/g, '+').replace(/_/g, '/')
-  const padding = base64.length % 4 === 0 ? '' : '='.repeat(4 - (base64.length % 4))
-  const binary = atob(`${base64}${padding}`)
-  const bytes = new Uint8Array(binary.length)
-  for (let i = 0; i < binary.length; i += 1) {
-    bytes[i] = binary.charCodeAt(i)
-  }
-  return bytes
 }
 
 function parsePkcs8(raw: ArrayBuffer): ParsedPemKey {

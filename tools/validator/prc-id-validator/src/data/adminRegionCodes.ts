@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 // Data source: https://github.com/modood/Administrative-divisions-of-China (2023)
 export const ADMIN_REGION_CODE_YEAR = 2023
 
