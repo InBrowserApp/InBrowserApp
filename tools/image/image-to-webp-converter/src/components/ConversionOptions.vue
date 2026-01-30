@@ -1,222 +1,91 @@
 <template>
   <ToolSection>
     <ToolSectionHeader>{{ title }}</ToolSectionHeader>
-
-    <n-grid cols="1 s:2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
-      <n-form-item-gi :label="scaleLabel" :show-feedback="false">
-        <n-flex vertical :size="8" style="width: 100%">
-          <n-input-number
-            :value="scale"
-            :min="minScale"
-            :max="maxScale"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleScaleUpdate"
-          />
-          <n-text depth="3">{{ scaleHint }}</n-text>
-        </n-flex>
-      </n-form-item-gi>
-      <n-form-item-gi :label="qualityLabel" :show-feedback="false">
-        <n-flex vertical :size="8" style="width: 100%">
-          <n-input-number
-            :value="quality"
-            :min="0"
-            :max="100"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleQualityUpdate"
-          />
-          <n-text depth="3">{{ qualityHint }}</n-text>
-        </n-flex>
-      </n-form-item-gi>
-      <n-form-item-gi :label="methodLabel" :show-feedback="false">
-        <n-flex vertical :size="8" style="width: 100%">
-          <n-input-number
-            :value="method"
-            :min="0"
-            :max="6"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleMethodUpdate"
-          />
-          <n-text depth="3">{{ methodHint }}</n-text>
-        </n-flex>
-      </n-form-item-gi>
-      <n-form-item-gi :label="losslessLabel" :show-feedback="false">
-        <n-switch :value="lossless" @update:value="handleLosslessUpdate" />
-      </n-form-item-gi>
-    </n-grid>
-
-    <n-flex align="center" :size="8" style="margin-top: 12px">
-      <n-switch :value="advancedEnabled" @update:value="handleAdvancedEnabledUpdate" />
-      <n-text>{{ advancedLabel }}</n-text>
-    </n-flex>
-
-    <n-collapse-transition :show="advancedEnabled">
-      <n-grid cols="1 s:2 l:3" :x-gap="12" :y-gap="12" responsive="screen" style="margin-top: 12px">
-        <n-form-item-gi :label="targetSizeLabel" :show-feedback="false">
-          <n-input-number
-            :value="targetSize"
-            :min="0"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleTargetSizeUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="targetPsnrLabel" :show-feedback="false">
-          <n-input-number
-            :value="targetPsnr"
-            :min="0"
-            :step="0.1"
-            style="width: 100%"
-            @update:value="handleTargetPsnrUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="nearLosslessLabel" :show-feedback="false">
-          <n-input-number
-            :value="nearLossless"
-            :min="0"
-            :max="100"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleNearLosslessUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="alphaQualityLabel" :show-feedback="false">
-          <n-input-number
-            :value="alphaQuality"
-            :min="0"
-            :max="100"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleAlphaQualityUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="snsStrengthLabel" :show-feedback="false">
-          <n-input-number
-            :value="snsStrength"
-            :min="0"
-            :max="100"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleSnsStrengthUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="filterStrengthLabel" :show-feedback="false">
-          <n-input-number
-            :value="filterStrength"
-            :min="0"
-            :max="100"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleFilterStrengthUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="filterSharpnessLabel" :show-feedback="false">
-          <n-input-number
-            :value="filterSharpness"
-            :min="0"
-            :max="7"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleFilterSharpnessUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="filterTypeLabel" :show-feedback="false">
-          <n-input-number
-            :value="filterType"
-            :min="0"
-            :max="1"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleFilterTypeUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="partitionsLabel" :show-feedback="false">
-          <n-input-number
-            :value="partitions"
-            :min="0"
-            :max="3"
-            :step="1"
-            style="width: 100%"
-            @update:value="handlePartitionsUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="segmentsLabel" :show-feedback="false">
-          <n-input-number
-            :value="segments"
-            :min="1"
-            :max="4"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleSegmentsUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="passLabel" :show-feedback="false">
-          <n-input-number
-            :value="passCount"
-            :min="1"
-            :max="10"
-            :step="1"
-            style="width: 100%"
-            @update:value="handlePassCountUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="exactLabel" :show-feedback="false">
-          <n-select
-            :value="exactMode"
-            :options="toggleOptions"
-            style="width: 100%"
-            @update:value="handleExactModeUpdate"
-          />
-        </n-form-item-gi>
-        <n-form-item-gi :label="useSharpYuvLabel" :show-feedback="false">
-          <n-select
-            :value="sharpYuvMode"
-            :options="toggleOptions"
-            style="width: 100%"
-            @update:value="handleSharpYuvModeUpdate"
-          />
-        </n-form-item-gi>
-      </n-grid>
-    </n-collapse-transition>
-
-    <n-flex align="center" :size="12" style="margin-top: 12px">
-      <n-button
-        type="primary"
-        :loading="isConverting"
-        :disabled="!canConvert"
-        @click="emit('convert')"
-      >
-        <template #icon>
-          <n-icon><ImageEdit24Regular /></n-icon>
-        </template>
-        {{ isConverting ? convertingLabel : convertLabel }}
-      </n-button>
-    </n-flex>
+    <ConversionOptionsBaseGrid
+      :scale-label="scaleLabel"
+      :scale-hint="scaleHint"
+      :quality-label="qualityLabel"
+      :quality-hint="qualityHint"
+      :method-label="methodLabel"
+      :method-hint="methodHint"
+      :lossless-label="losslessLabel"
+      :scale="scale"
+      :quality="quality"
+      :method="method"
+      :lossless="lossless"
+      :min-scale="minScale"
+      :max-scale="maxScale"
+      @update:scale="handleScaleUpdate"
+      @update:quality="handleQualityUpdate"
+      @update:method="handleMethodUpdate"
+      @update:lossless="handleLosslessUpdate"
+    />
+    <ConversionOptionsAdvancedSection
+      :advanced-label="advancedLabel"
+      :target-size-label="targetSizeLabel"
+      :target-psnr-label="targetPsnrLabel"
+      :near-lossless-label="nearLosslessLabel"
+      :alpha-quality-label="alphaQualityLabel"
+      :sns-strength-label="snsStrengthLabel"
+      :filter-strength-label="filterStrengthLabel"
+      :filter-sharpness-label="filterSharpnessLabel"
+      :filter-type-label="filterTypeLabel"
+      :partitions-label="partitionsLabel"
+      :segments-label="segmentsLabel"
+      :pass-label="passLabel"
+      :exact-label="exactLabel"
+      :use-sharp-yuv-label="useSharpYuvLabel"
+      :option-default-label="optionDefaultLabel"
+      :option-on-label="optionOnLabel"
+      :option-off-label="optionOffLabel"
+      :advanced-enabled="advancedEnabled"
+      :target-size="targetSize"
+      :target-psnr="targetPsnr"
+      :near-lossless="nearLossless"
+      :alpha-quality="alphaQuality"
+      :sns-strength="snsStrength"
+      :filter-strength="filterStrength"
+      :filter-sharpness="filterSharpness"
+      :filter-type="filterType"
+      :partitions="partitions"
+      :segments="segments"
+      :pass-count="passCount"
+      :exact-mode="exactMode"
+      :sharp-yuv-mode="sharpYuvMode"
+      @update:advanced-enabled="handleAdvancedEnabledUpdate"
+      @update:target-size="handleTargetSizeUpdate"
+      @update:target-psnr="handleTargetPsnrUpdate"
+      @update:near-lossless="handleNearLosslessUpdate"
+      @update:alpha-quality="handleAlphaQualityUpdate"
+      @update:sns-strength="handleSnsStrengthUpdate"
+      @update:filter-strength="handleFilterStrengthUpdate"
+      @update:filter-sharpness="handleFilterSharpnessUpdate"
+      @update:filter-type="handleFilterTypeUpdate"
+      @update:partitions="handlePartitionsUpdate"
+      @update:segments="handleSegmentsUpdate"
+      @update:pass-count="handlePassCountUpdate"
+      @update:exact-mode="handleExactModeUpdate"
+      @update:sharp-yuv-mode="handleSharpYuvModeUpdate"
+    />
+    <ConversionOptionsActions
+      :convert-label="convertLabel"
+      :converting-label="convertingLabel"
+      :is-converting="isConverting"
+      :can-convert="canConvert"
+      @convert="emit('convert')"
+    />
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import {
-  NButton,
-  NCollapseTransition,
-  NFlex,
-  NFormItemGi,
-  NGrid,
-  NIcon,
-  NInputNumber,
-  NSelect,
-  NSwitch,
-  NText,
-} from 'naive-ui'
-import ImageEdit24Regular from '@vicons/fluent/ImageEdit24Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import ConversionOptionsActions from './ConversionOptionsActions.vue'
+import ConversionOptionsAdvancedSection from './ConversionOptionsAdvancedSection.vue'
+import ConversionOptionsBaseGrid from './ConversionOptionsBaseGrid.vue'
 
 type TriState = 'default' | 'on' | 'off'
 
-const props = defineProps<{
+defineProps<{
   title: string
   scaleLabel: string
   scaleHint: string
@@ -290,12 +159,6 @@ const emit = defineEmits<{
   convert: []
 }>()
 
-const toggleOptions = computed(() => [
-  { label: props.optionDefaultLabel, value: 'default' as const },
-  { label: props.optionOnLabel, value: 'on' as const },
-  { label: props.optionOffLabel, value: 'off' as const },
-])
-
 function handleScaleUpdate(value: number | null) {
   if (value === null) return
   emit('update:scale', value)
@@ -321,12 +184,16 @@ function handleAdvancedEnabledUpdate(value: boolean) {
 
 function handleTargetSizeUpdate(value: number | null) {
   emit('update:targetSize', value)
-  if (value !== null) emit('update:targetPsnr', null)
+  if (value !== null) {
+    emit('update:targetPsnr', null)
+  }
 }
 
 function handleTargetPsnrUpdate(value: number | null) {
   emit('update:targetPsnr', value)
-  if (value !== null) emit('update:targetSize', null)
+  if (value !== null) {
+    emit('update:targetSize', null)
+  }
 }
 
 function handleNearLosslessUpdate(value: number | null) {
