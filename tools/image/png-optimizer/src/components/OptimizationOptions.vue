@@ -32,23 +32,22 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { NFlex, NText, NSlider, NCheckbox, NButton, NIcon } from 'naive-ui'
 import type { OptimiseOptions } from '@jsquash/oxipng/meta'
 import ResizeSmall20Regular from '@vicons/fluent/ResizeSmall20Regular'
 // Props
-const props = defineProps<{
-  options: OptimiseOptions
+defineProps<{
   isOptimizing: boolean
 }>()
 
 // Emits
 const emit = defineEmits<{
-  'update:options': [options: OptimiseOptions]
   optimize: []
 }>()
+
+const options = defineModel<OptimiseOptions>('options', { required: true })
 
 const { t } = useI18n()
 
@@ -62,12 +61,6 @@ const sliderMarks = {
   5: '5',
   6: '6',
 }
-
-// Computed getter/setter for options
-const options = computed({
-  get: () => props.options,
-  set: (value: OptimiseOptions) => emit('update:options', value),
-})
 
 function handleOptimize() {
   emit('optimize')

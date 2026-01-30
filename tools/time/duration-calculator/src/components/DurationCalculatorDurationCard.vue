@@ -76,55 +76,46 @@ import { useI18n } from 'vue-i18n'
 import type { FormValidationStatus } from 'naive-ui'
 import type { DurationParts } from '../utils/duration'
 
-const props = defineProps<{
-  durationIsoInput: string
+defineProps<{
   durationIsoStatus?: FormValidationStatus
   durationIsoInvalid: boolean
   normalizedDurationIso: string
-  durationParts: DurationParts
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:durationIsoInput', value: string): void
-  (event: 'update:durationParts', value: DurationParts): void
-}>()
+const durationIsoInputModel = defineModel<string>('durationIsoInput', { required: true })
+const durationPartsModel = defineModel<DurationParts>('durationParts', { required: true })
 
 const { t } = useI18n()
 
-const durationIsoInputModel = computed({
-  get: () => props.durationIsoInput,
-  set: (value) => emit('update:durationIsoInput', value),
-})
-
 const updateDurationParts = (patch: Partial<DurationParts>) => {
-  emit('update:durationParts', {
-    ...props.durationParts,
+  durationPartsModel.value = {
+    ...durationPartsModel.value,
     ...patch,
-  })
+  }
 }
 
 const durationDaysModel = computed({
-  get: () => props.durationParts.days,
+  get: () => durationPartsModel.value.days,
   set: (value) => updateDurationParts({ days: value ?? 0 }),
 })
 
 const durationHoursModel = computed({
-  get: () => props.durationParts.hours,
+  get: () => durationPartsModel.value.hours,
   set: (value) => updateDurationParts({ hours: value ?? 0 }),
 })
 
 const durationMinutesModel = computed({
-  get: () => props.durationParts.minutes,
+  get: () => durationPartsModel.value.minutes,
   set: (value) => updateDurationParts({ minutes: value ?? 0 }),
 })
 
 const durationSecondsModel = computed({
-  get: () => props.durationParts.seconds,
+  get: () => durationPartsModel.value.seconds,
   set: (value) => updateDurationParts({ seconds: value ?? 0 }),
 })
 
 const durationMillisecondsModel = computed({
-  get: () => props.durationParts.milliseconds,
+  get: () => durationPartsModel.value.milliseconds,
   set: (value) => updateDurationParts({ milliseconds: value ?? 0 }),
 })
 </script>

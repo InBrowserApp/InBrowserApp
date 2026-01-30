@@ -3,25 +3,24 @@
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
       <CodeShotSyntaxOptions
-        v-model:language="languageProxy"
-        v-model:render-mode="renderModeProxy"
-        v-model:theme-id="themeIdProxy"
+        v-model:language="language"
+        v-model:render-mode="renderMode"
+        v-model:theme-id="themeId"
       />
       <CodeShotBackgroundOptions
-        v-model:background-type="backgroundTypeProxy"
-        v-model:background-preset-id="backgroundPresetIdProxy"
-        v-model:background-color="backgroundColorProxy"
+        v-model:background-type="backgroundType"
+        v-model:background-preset-id="backgroundPresetId"
+        v-model:background-color="backgroundColor"
       />
       <CodeShotWindowOptions
-        v-model:window-style="windowStyleProxy"
-        v-model:show-line-numbers="showLineNumbersProxy"
+        v-model:window-style="windowStyle"
+        v-model:show-line-numbers="showLineNumbers"
       />
     </n-grid>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NGrid } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
@@ -32,69 +31,16 @@ import CodeShotWindowOptions from './CodeShotWindowOptions.vue'
 
 type BackgroundType = 'preset' | 'solid' | 'transparent' | 'none'
 
-const props = defineProps<{
-  language: string
-  renderMode: RenderMode
-  themeId: string
-  backgroundType: BackgroundType
-  backgroundPresetId: string
-  backgroundColor: string
-  windowStyle: WindowStyle
-  showLineNumbers: boolean
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:language', value: string): void
-  (e: 'update:renderMode', value: RenderMode): void
-  (e: 'update:themeId', value: string): void
-  (e: 'update:backgroundType', value: BackgroundType): void
-  (e: 'update:backgroundPresetId', value: string): void
-  (e: 'update:backgroundColor', value: string): void
-  (e: 'update:windowStyle', value: WindowStyle): void
-  (e: 'update:showLineNumbers', value: boolean): void
-}>()
+const language = defineModel<string>('language', { required: true })
+const renderMode = defineModel<RenderMode>('renderMode', { required: true })
+const themeId = defineModel<string>('themeId', { required: true })
+const backgroundType = defineModel<BackgroundType>('backgroundType', { required: true })
+const backgroundPresetId = defineModel<string>('backgroundPresetId', { required: true })
+const backgroundColor = defineModel<string>('backgroundColor', { required: true })
+const windowStyle = defineModel<WindowStyle>('windowStyle', { required: true })
+const showLineNumbers = defineModel<boolean>('showLineNumbers', { required: true })
 
 const { t } = useI18n()
-
-const languageProxy = computed({
-  get: () => props.language,
-  set: (value: string) => emit('update:language', value),
-})
-
-const renderModeProxy = computed({
-  get: () => props.renderMode,
-  set: (value: RenderMode) => emit('update:renderMode', value),
-})
-
-const themeIdProxy = computed({
-  get: () => props.themeId,
-  set: (value: string) => emit('update:themeId', value),
-})
-
-const backgroundTypeProxy = computed({
-  get: () => props.backgroundType,
-  set: (value: BackgroundType) => emit('update:backgroundType', value),
-})
-
-const backgroundPresetIdProxy = computed({
-  get: () => props.backgroundPresetId,
-  set: (value: string) => emit('update:backgroundPresetId', value),
-})
-
-const backgroundColorProxy = computed({
-  get: () => props.backgroundColor,
-  set: (value: string) => emit('update:backgroundColor', value),
-})
-
-const windowStyleProxy = computed({
-  get: () => props.windowStyle,
-  set: (value: WindowStyle) => emit('update:windowStyle', value),
-})
-
-const showLineNumbersProxy = computed({
-  get: () => props.showLineNumbers,
-  set: (value: boolean) => emit('update:showLineNumbers', value),
-})
 </script>
 
 <i18n lang="json">

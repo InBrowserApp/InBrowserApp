@@ -167,38 +167,22 @@ const props = defineProps<{
   optionDefaultLabel: string
   optionOnLabel: string
   optionOffLabel: string
-  advancedEnabled: boolean
-  targetSize: number | null
-  targetPsnr: number | null
-  nearLossless: number | null
-  alphaQuality: number | null
-  snsStrength: number | null
-  filterStrength: number | null
-  filterSharpness: number | null
-  filterType: number | null
-  partitions: number | null
-  segments: number | null
-  passCount: number | null
-  exactMode: TriState
-  sharpYuvMode: TriState
 }>()
 
-const emit = defineEmits<{
-  'update:advancedEnabled': [value: boolean]
-  'update:targetSize': [value: number | null]
-  'update:targetPsnr': [value: number | null]
-  'update:nearLossless': [value: number | null]
-  'update:alphaQuality': [value: number | null]
-  'update:snsStrength': [value: number | null]
-  'update:filterStrength': [value: number | null]
-  'update:filterSharpness': [value: number | null]
-  'update:filterType': [value: number | null]
-  'update:partitions': [value: number | null]
-  'update:segments': [value: number | null]
-  'update:passCount': [value: number | null]
-  'update:exactMode': [value: TriState]
-  'update:sharpYuvMode': [value: TriState]
-}>()
+const advancedEnabled = defineModel<boolean>('advancedEnabled', { required: true })
+const targetSize = defineModel<number | null>('targetSize', { required: true })
+const targetPsnr = defineModel<number | null>('targetPsnr', { required: true })
+const nearLossless = defineModel<number | null>('nearLossless', { required: true })
+const alphaQuality = defineModel<number | null>('alphaQuality', { required: true })
+const snsStrength = defineModel<number | null>('snsStrength', { required: true })
+const filterStrength = defineModel<number | null>('filterStrength', { required: true })
+const filterSharpness = defineModel<number | null>('filterSharpness', { required: true })
+const filterType = defineModel<number | null>('filterType', { required: true })
+const partitions = defineModel<number | null>('partitions', { required: true })
+const segments = defineModel<number | null>('segments', { required: true })
+const passCount = defineModel<number | null>('passCount', { required: true })
+const exactMode = defineModel<TriState>('exactMode', { required: true })
+const sharpYuvMode = defineModel<TriState>('sharpYuvMode', { required: true })
 
 const toggleOptions = computed(() => [
   { label: props.optionDefaultLabel, value: 'default' as const },
@@ -207,61 +191,61 @@ const toggleOptions = computed(() => [
 ])
 
 function handleAdvancedEnabledUpdate(value: boolean) {
-  emit('update:advancedEnabled', value)
+  advancedEnabled.value = value
 }
 
 function handleTargetSizeUpdate(value: number | null) {
-  emit('update:targetSize', value)
-  if (value !== null) emit('update:targetPsnr', null)
+  targetSize.value = value
+  if (value !== null) targetPsnr.value = null
 }
 
 function handleTargetPsnrUpdate(value: number | null) {
-  emit('update:targetPsnr', value)
-  if (value !== null) emit('update:targetSize', null)
+  targetPsnr.value = value
+  if (value !== null) targetSize.value = null
 }
 
 function handleNearLosslessUpdate(value: number | null) {
-  emit('update:nearLossless', value)
+  nearLossless.value = value
 }
 
 function handleAlphaQualityUpdate(value: number | null) {
-  emit('update:alphaQuality', value)
+  alphaQuality.value = value
 }
 
 function handleSnsStrengthUpdate(value: number | null) {
-  emit('update:snsStrength', value)
+  snsStrength.value = value
 }
 
 function handleFilterStrengthUpdate(value: number | null) {
-  emit('update:filterStrength', value)
+  filterStrength.value = value
 }
 
 function handleFilterSharpnessUpdate(value: number | null) {
-  emit('update:filterSharpness', value)
+  filterSharpness.value = value
 }
 
 function handleFilterTypeUpdate(value: number | null) {
-  emit('update:filterType', value)
+  filterType.value = value
 }
 
 function handlePartitionsUpdate(value: number | null) {
-  emit('update:partitions', value)
+  partitions.value = value
 }
 
 function handleSegmentsUpdate(value: number | null) {
-  emit('update:segments', value)
+  segments.value = value
 }
 
 function handlePassCountUpdate(value: number | null) {
-  emit('update:passCount', value)
+  passCount.value = value
 }
 
 function handleExactModeUpdate(value: TriState) {
-  emit('update:exactMode', value)
+  exactMode.value = value
 }
 
 function handleSharpYuvModeUpdate(value: TriState) {
-  emit('update:sharpYuvMode', value)
+  sharpYuvMode.value = value
 }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
   <n-form-item-gi :label="t('language')" :show-feedback="false">
-    <n-select v-model:value="languageProxy" :options="languageSelectOptions" size="small" />
+    <n-select v-model:value="language" :options="languageSelectOptions" size="small" />
   </n-form-item-gi>
   <n-form-item-gi :label="t('renderMode')" :show-feedback="false">
-    <n-select v-model:value="renderModeProxy" :options="renderModeOptions" size="small" />
+    <n-select v-model:value="renderMode" :options="renderModeOptions" size="small" />
   </n-form-item-gi>
   <n-form-item-gi :label="t('theme')" :show-feedback="false">
-    <n-select v-model:value="themeIdProxy" :options="themeOptions" size="small" />
+    <n-select v-model:value="themeId" :options="themeOptions" size="small" />
   </n-form-item-gi>
 </template>
 
@@ -18,34 +18,11 @@ import type { RenderMode } from '../utils/render'
 import { languageOptions } from '../utils/languages'
 import { themes } from '../utils/themes'
 
-const props = defineProps<{
-  language: string
-  renderMode: RenderMode
-  themeId: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:language', value: string): void
-  (e: 'update:renderMode', value: RenderMode): void
-  (e: 'update:themeId', value: string): void
-}>()
+const language = defineModel<string>('language', { required: true })
+const renderMode = defineModel<RenderMode>('renderMode', { required: true })
+const themeId = defineModel<string>('themeId', { required: true })
 
 const { t } = useI18n()
-
-const languageProxy = computed({
-  get: () => props.language,
-  set: (value: string) => emit('update:language', value),
-})
-
-const renderModeProxy = computed({
-  get: () => props.renderMode,
-  set: (value: RenderMode) => emit('update:renderMode', value),
-})
-
-const themeIdProxy = computed({
-  get: () => props.themeId,
-  set: (value: string) => emit('update:themeId', value),
-})
 
 const languageSelectOptions = computed(() =>
   languageOptions.map((option) => ({

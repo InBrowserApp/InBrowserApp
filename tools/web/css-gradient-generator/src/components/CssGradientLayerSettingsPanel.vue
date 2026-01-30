@@ -26,7 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NCard, NDivider, NFlex } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { BlendMode, ColorSpace, GradientType, RadialShape, RadialSize } from '../types'
@@ -35,78 +34,16 @@ import CssGradientLayerColorSpaceSelect from './CssGradientLayerColorSpaceSelect
 import CssGradientLayerRadialControls from './CssGradientLayerRadialControls.vue'
 import CssGradientLayerTypeControls from './CssGradientLayerTypeControls.vue'
 
-const props = defineProps<{
-  layerType: GradientType
-  layerAngle: number
-  layerCenterX: number
-  layerCenterY: number
-  layerShape: RadialShape
-  layerSize: RadialSize
-  layerColorSpace: ColorSpace
-  layerBlendMode: BlendMode
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:layerType', value: GradientType): void
-  (event: 'update:layerAngle', value: number): void
-  (event: 'update:layerCenterX', value: number): void
-  (event: 'update:layerCenterY', value: number): void
-  (event: 'update:layerShape', value: RadialShape): void
-  (event: 'update:layerSize', value: RadialSize): void
-  (event: 'update:layerColorSpace', value: ColorSpace): void
-  (event: 'update:layerBlendMode', value: BlendMode): void
-}>()
-
 const { t } = useI18n()
 
-const layerTypeModel = computed({
-  get: () => props.layerType,
-  set: (value: GradientType) => emit('update:layerType', value),
-})
-
-const layerAngleModel = computed({
-  get: () => props.layerAngle,
-  set: (value: number | null) => {
-    if (typeof value !== 'number') return
-    emit('update:layerAngle', value)
-  },
-})
-
-const layerCenterXModel = computed({
-  get: () => props.layerCenterX,
-  set: (value: number | null) => {
-    if (typeof value !== 'number') return
-    emit('update:layerCenterX', value)
-  },
-})
-
-const layerCenterYModel = computed({
-  get: () => props.layerCenterY,
-  set: (value: number | null) => {
-    if (typeof value !== 'number') return
-    emit('update:layerCenterY', value)
-  },
-})
-
-const layerShapeModel = computed({
-  get: () => props.layerShape,
-  set: (value: RadialShape) => emit('update:layerShape', value),
-})
-
-const layerSizeModel = computed({
-  get: () => props.layerSize,
-  set: (value: RadialSize) => emit('update:layerSize', value),
-})
-
-const layerColorSpaceModel = computed({
-  get: () => props.layerColorSpace,
-  set: (value: ColorSpace) => emit('update:layerColorSpace', value),
-})
-
-const layerBlendModeModel = computed({
-  get: () => props.layerBlendMode,
-  set: (value: BlendMode) => emit('update:layerBlendMode', value),
-})
+const layerTypeModel = defineModel<GradientType>('layerType', { required: true })
+const layerAngleModel = defineModel<number>('layerAngle', { required: true })
+const layerCenterXModel = defineModel<number>('layerCenterX', { required: true })
+const layerCenterYModel = defineModel<number>('layerCenterY', { required: true })
+const layerShapeModel = defineModel<RadialShape>('layerShape', { required: true })
+const layerSizeModel = defineModel<RadialSize>('layerSize', { required: true })
+const layerColorSpaceModel = defineModel<ColorSpace>('layerColorSpace', { required: true })
+const layerBlendModeModel = defineModel<BlendMode>('layerBlendMode', { required: true })
 </script>
 
 <i18n lang="json">

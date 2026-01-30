@@ -30,44 +30,26 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NFormItemGi, NGrid, NRadio, NRadioGroup, NSelect, NSwitch, NText } from 'naive-ui'
 
 type OutputMode = 'utc' | 'tzid'
 
-const props = defineProps<{
-  isAllDay: boolean
-  timeZone: string
-  timeZoneOptions: Array<{ label: string; value: string }>
-  outputMode: OutputMode
-  offsetLabel?: string
-}>()
+const { timeZoneOptions, offsetLabel } = withDefaults(
+  defineProps<{
+    timeZoneOptions: Array<{ label: string; value: string }>
+    offsetLabel?: string
+  }>(),
+  {
+    offsetLabel: '',
+  },
+)
 
-const emit = defineEmits<{
-  (event: 'update:isAllDay', value: boolean): void
-  (event: 'update:timeZone', value: string): void
-  (event: 'update:outputMode', value: OutputMode): void
-}>()
+const isAllDayModel = defineModel<boolean>('isAllDay', { required: true })
+const timeZoneModel = defineModel<string>('timeZone', { required: true })
+const outputModeModel = defineModel<OutputMode>('outputMode', { required: true })
 
 const { t } = useI18n()
-
-const isAllDayModel = computed({
-  get: () => props.isAllDay,
-  set: (value) => emit('update:isAllDay', value),
-})
-
-const timeZoneModel = computed({
-  get: () => props.timeZone,
-  set: (value) => emit('update:timeZone', value),
-})
-
-const outputModeModel = computed({
-  get: () => props.outputMode,
-  set: (value) => emit('update:outputMode', value),
-})
-
-const { timeZoneOptions, offsetLabel } = props
 </script>
 
 <i18n lang="json">

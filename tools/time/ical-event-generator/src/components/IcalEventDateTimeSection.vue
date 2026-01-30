@@ -17,7 +17,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import IcalEventDateTimeRangeSection from './IcalEventDateTimeRangeSection.vue'
@@ -25,46 +24,24 @@ import IcalEventDateTimeSettingsSection from './IcalEventDateTimeSettingsSection
 
 type RangeErrorKey = 'invalid-date-time' | 'invalid-date' | 'end-before-start'
 
-const props = defineProps<{
-  isAllDay: boolean
-  timeZone: string
-  timeZoneOptions: Array<{ label: string; value: string }>
-  outputMode: 'utc' | 'tzid'
-  dateRange: [number, number] | null
-  offsetLabel?: string
-  rangeErrorKey?: RangeErrorKey
-}>()
+const { timeZoneOptions, offsetLabel, rangeErrorKey } = withDefaults(
+  defineProps<{
+    timeZoneOptions: Array<{ label: string; value: string }>
+    offsetLabel?: string
+    rangeErrorKey?: RangeErrorKey
+  }>(),
+  {
+    offsetLabel: '',
+    rangeErrorKey: undefined,
+  },
+)
 
-const emit = defineEmits<{
-  (event: 'update:isAllDay', value: boolean): void
-  (event: 'update:timeZone', value: string): void
-  (event: 'update:outputMode', value: 'utc' | 'tzid'): void
-  (event: 'update:dateRange', value: [number, number] | null): void
-}>()
+const isAllDayModel = defineModel<boolean>('isAllDay', { required: true })
+const timeZoneModel = defineModel<string>('timeZone', { required: true })
+const outputModeModel = defineModel<'utc' | 'tzid'>('outputMode', { required: true })
+const dateRangeModel = defineModel<[number, number] | null>('dateRange', { required: true })
 
 const { t } = useI18n()
-
-const isAllDayModel = computed({
-  get: () => props.isAllDay,
-  set: (value) => emit('update:isAllDay', value),
-})
-
-const timeZoneModel = computed({
-  get: () => props.timeZone,
-  set: (value) => emit('update:timeZone', value),
-})
-
-const outputModeModel = computed({
-  get: () => props.outputMode,
-  set: (value) => emit('update:outputMode', value),
-})
-
-const dateRangeModel = computed({
-  get: () => props.dateRange,
-  set: (value) => emit('update:dateRange', value),
-})
-
-const { timeZoneOptions, offsetLabel, rangeErrorKey } = props
 </script>
 
 <i18n lang="json">

@@ -5,13 +5,12 @@
         <n-grid :cols="2" :x-gap="12" :y-gap="12">
           <n-form-item-gi v-if="keyType === 'password'" :label="t('pbkdf2Iterations')">
             <n-input-number
-              :value="pbkdf2Iterations"
+              v-model:value="pbkdf2IterationsModel"
               :min="1000"
               :max="10000000"
               :step="10000"
               :status="pbkdf2Iterations < 10000 ? 'warning' : undefined"
               style="width: 100%"
-              @update:value="$event !== null && $emit('update:pbkdf2Iterations', $event)"
             />
             <template v-if="pbkdf2Iterations < 10000" #feedback>
               <n-text type="warning" style="font-size: 12px">{{
@@ -21,10 +20,9 @@
           </n-form-item-gi>
           <n-form-item-gi v-if="keyType === 'password'" :label="t('pbkdf2Hash')">
             <n-select
-              :value="pbkdf2Hash"
+              v-model:value="pbkdf2Hash"
               :options="pbkdf2HashOptions"
               :disabled="outputMode === 'jwe'"
-              @update:value="$emit('update:pbkdf2Hash', $event)"
             />
             <template v-if="outputMode === 'jwe'" #feedback>
               {{ t('jweHashNote') }}
@@ -32,39 +30,29 @@
           </n-form-item-gi>
           <n-form-item-gi v-if="outputMode === 'raw'" label="Salt">
             <n-space vertical :size="8">
-              <n-radio-group
-                :value="saltMode"
-                name="salt-mode"
-                @update:value="$emit('update:saltMode', $event)"
-              >
+              <n-radio-group v-model:value="saltMode" name="salt-mode">
                 <n-radio value="auto">{{ t('autoGenerate') }}</n-radio>
                 <n-radio value="manual">{{ t('manual') }}</n-radio>
               </n-radio-group>
               <n-input
                 v-if="saltMode === 'manual'"
-                :value="manualSalt"
+                v-model:value="manualSalt"
                 :placeholder="t('saltPlaceholder')"
                 style="font-family: monospace"
-                @update:value="$emit('update:manualSalt', $event)"
               />
             </n-space>
           </n-form-item-gi>
           <n-form-item-gi v-if="outputMode === 'raw'" label="IV">
             <n-space vertical :size="8">
-              <n-radio-group
-                :value="ivMode"
-                name="iv-mode"
-                @update:value="$emit('update:ivMode', $event)"
-              >
+              <n-radio-group v-model:value="ivMode" name="iv-mode">
                 <n-radio value="auto">{{ t('autoGenerate') }}</n-radio>
                 <n-radio value="manual">{{ t('manual') }}</n-radio>
               </n-radio-group>
               <n-input
                 v-if="ivMode === 'manual'"
-                :value="manualIv"
+                v-model:value="manualIv"
                 :placeholder="t('ivPlaceholder', { length: ivLength * 2 })"
                 style="font-family: monospace"
-                @update:value="$emit('update:manualIv', $event)"
               />
             </n-space>
           </n-form-item-gi>
@@ -75,6 +63,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import {
   NGrid,
   NFormItemGi,
@@ -96,24 +85,25 @@ defineProps<{
   keyType: KeyType
   outputMode: OutputMode
   ivLength: number
-  pbkdf2Iterations: number
-  pbkdf2Hash: Pbkdf2Hash
-  saltMode: 'auto' | 'manual'
-  manualSalt: string
-  ivMode: 'auto' | 'manual'
-  manualIv: string
 }>()
 
-defineEmits<{
-  'update:pbkdf2Iterations': [value: number]
-  'update:pbkdf2Hash': [value: Pbkdf2Hash]
-  'update:saltMode': [value: 'auto' | 'manual']
-  'update:manualSalt': [value: string]
-  'update:ivMode': [value: 'auto' | 'manual']
-  'update:manualIv': [value: string]
-}>()
+const pbkdf2Iterations = defineModel<number>('pbkdf2Iterations', { required: true })
+const pbkdf2Hash = defineModel<Pbkdf2Hash>('pbkdf2Hash', { required: true })
+const saltMode = defineModel<'auto' | 'manual'>('saltMode', { required: true })
+const manualSalt = defineModel<string>('manualSalt', { required: true })
+const ivMode = defineModel<'auto' | 'manual'>('ivMode', { required: true })
+const manualIv = defineModel<string>('manualIv', { required: true })
 
 const { t } = useI18n()
+
+const pbkdf2IterationsModel = computed({
+  get: () => pbkdf2Iterations.value,
+  set: (value) => {
+    if (value !== null) {
+      pbkdf2Iterations.value = value
+    }
+  },
+})
 
 const pbkdf2HashOptions = [
   { label: 'SHA-1', value: 'SHA-1' },

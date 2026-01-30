@@ -5,20 +5,15 @@
         <n-grid :cols="2" :x-gap="12" :y-gap="12">
           <n-form-item-gi v-if="keyType === 'password'" :label="t('pbkdf2Iterations')">
             <n-input-number
-              :value="pbkdf2Iterations"
+              v-model:value="pbkdf2IterationsModel"
               :min="1000"
               :max="10000000"
               :step="10000"
               style="width: 100%"
-              @update:value="$event !== null && $emit('update:pbkdf2Iterations', $event)"
             />
           </n-form-item-gi>
           <n-form-item-gi v-if="keyType === 'password'" :label="t('pbkdf2Hash')">
-            <n-select
-              :value="pbkdf2Hash"
-              :options="pbkdf2HashOptions"
-              @update:value="$emit('update:pbkdf2Hash', $event)"
-            />
+            <n-select v-model:value="pbkdf2Hash" :options="pbkdf2HashOptions" />
           </n-form-item-gi>
         </n-grid>
       </n-collapse-item>
@@ -27,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { NGrid, NFormItemGi, NCollapse, NCollapseItem, NInputNumber, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
@@ -35,16 +31,21 @@ import type { KeyType, Pbkdf2Hash } from '@utils/aes'
 defineProps<{
   isJweMode: boolean
   keyType: KeyType
-  pbkdf2Iterations: number
-  pbkdf2Hash: Pbkdf2Hash
 }>()
 
-defineEmits<{
-  'update:pbkdf2Iterations': [value: number]
-  'update:pbkdf2Hash': [value: Pbkdf2Hash]
-}>()
+const pbkdf2Iterations = defineModel<number>('pbkdf2Iterations', { required: true })
+const pbkdf2Hash = defineModel<Pbkdf2Hash>('pbkdf2Hash', { required: true })
 
 const { t } = useI18n()
+
+const pbkdf2IterationsModel = computed({
+  get: () => pbkdf2Iterations.value,
+  set: (value) => {
+    if (value !== null) {
+      pbkdf2Iterations.value = value
+    }
+  },
+})
 
 const pbkdf2HashOptions = [
   { label: 'SHA-1', value: 'SHA-1' },

@@ -1,19 +1,14 @@
 <template>
   <n-form-item-gi :label="t('expires')" :show-feedback="false">
-    <n-select
-      :value="expirationDays"
-      :options="expirationOptions"
-      @update:value="$emit('update:expirationDays', $event)"
-    />
+    <n-select v-model:value="expirationDays" :options="expirationOptions" />
   </n-form-item-gi>
 
   <n-form-item-gi :label="t('passphrase')" :show-feedback="false" :span="2">
     <n-input
-      :value="passphrase"
+      v-model:value="passphrase"
       type="password"
       show-password-on="click"
       :placeholder="t('passphrasePlaceholder')"
-      @update:value="$emit('update:passphrase', $event)"
     />
   </n-form-item-gi>
 </template>
@@ -23,15 +18,8 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFormItemGi, NSelect, NInput } from 'naive-ui'
 
-defineProps<{
-  expirationDays: number
-  passphrase: string
-}>()
-
-defineEmits<{
-  'update:expirationDays': [value: number]
-  'update:passphrase': [value: string]
-}>()
+const expirationDays = defineModel<number>('expirationDays', { required: true })
+const passphrase = defineModel<string>('passphrase', { required: true })
 
 const { t } = useI18n()
 

@@ -3,23 +3,16 @@
     <ToolSectionHeader>{{ t('optionsTitle') }}</ToolSectionHeader>
     <n-grid cols="1 s:2 m:3" responsive="screen" :x-gap="12" :y-gap="8">
       <n-form-item-gi :label="t('optionDraft')" :show-feedback="false">
-        <n-select
-          :value="draft"
-          :options="draftOptions"
-          @update:value="emit('update:draft', $event)"
-        />
+        <n-select v-model:value="draft" :options="draftOptions" />
       </n-form-item-gi>
       <n-form-item-gi :label="t('optionInferRequired')" :show-feedback="false">
-        <n-switch :value="inferRequired" @update:value="emit('update:inferRequired', $event)" />
+        <n-switch v-model:value="inferRequired" />
       </n-form-item-gi>
       <n-form-item-gi :label="t('optionAllowAdditionalProperties')" :show-feedback="false">
-        <n-switch
-          :value="allowAdditionalProperties"
-          @update:value="emit('update:allowAdditionalProperties', $event)"
-        />
+        <n-switch v-model:value="allowAdditionalProperties" />
       </n-form-item-gi>
       <n-form-item-gi :label="t('optionDetectFormat')" :show-feedback="false">
-        <n-switch :value="detectFormat" @update:value="emit('update:detectFormat', $event)" />
+        <n-switch v-model:value="detectFormat" />
       </n-form-item-gi>
     </n-grid>
   </ToolSection>
@@ -31,21 +24,16 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import type { JsonSchemaDraft } from '@utils/json-schema'
 
-const { draft, draftOptions, inferRequired, allowAdditionalProperties, detectFormat } =
-  defineProps<{
-    draft: JsonSchemaDraft
-    draftOptions: { label: string; value: JsonSchemaDraft }[]
-    inferRequired: boolean
-    allowAdditionalProperties: boolean
-    detectFormat: boolean
-  }>()
-
-const emit = defineEmits<{
-  'update:draft': [value: JsonSchemaDraft]
-  'update:inferRequired': [value: boolean]
-  'update:allowAdditionalProperties': [value: boolean]
-  'update:detectFormat': [value: boolean]
+const { draftOptions } = defineProps<{
+  draftOptions: { label: string; value: JsonSchemaDraft }[]
 }>()
+
+const draft = defineModel<JsonSchemaDraft>('draft', { required: true })
+const inferRequired = defineModel<boolean>('inferRequired', { required: true })
+const allowAdditionalProperties = defineModel<boolean>('allowAdditionalProperties', {
+  required: true,
+})
+const detectFormat = defineModel<boolean>('detectFormat', { required: true })
 
 const { t } = useI18n()
 </script>

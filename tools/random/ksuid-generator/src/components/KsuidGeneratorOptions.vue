@@ -4,19 +4,10 @@
     <n-flex vertical :size="16">
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('count')" :show-feedback="false">
-          <n-input-number
-            :value="count"
-            :min="1"
-            :max="maxCount"
-            style="width: 100%"
-            @update:value="(value) => emit('update:count', value)"
-          />
+          <n-input-number v-model:value="count" :min="1" :max="maxCount" style="width: 100%" />
         </n-form-item-gi>
         <n-form-item-gi :label="t('timestampMode')" :show-feedback="false">
-          <n-radio-group
-            :value="timestampMode"
-            @update:value="(value) => emit('update:timestampMode', value as 'now' | 'custom')"
-          >
+          <n-radio-group v-model:value="timestampMode">
             <n-flex :size="12">
               <n-radio value="now">{{ t('timestampNow') }}</n-radio>
               <n-radio value="custom">{{ t('timestampCustom') }}</n-radio>
@@ -28,21 +19,15 @@
       <template v-if="timestampMode === 'custom'">
         <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
           <n-form-item-gi :label="t('customDateTime')" :show-feedback="false">
-            <n-date-picker
-              :value="customDateMs"
-              type="datetime"
-              style="width: 100%"
-              @update:value="(value) => emit('update:customDateMs', value)"
-            />
+            <n-date-picker v-model:value="customDateMs" type="datetime" style="width: 100%" />
           </n-form-item-gi>
           <n-form-item-gi :label="t('customUnixSeconds')" :show-feedback="false">
             <n-input-number
-              :value="customUnixSeconds"
+              v-model:value="customUnixSeconds"
               :min="minUnixSeconds"
               :max="maxUnixSeconds"
               :step="1"
               style="width: 100%"
-              @update:value="(value) => emit('update:customUnixSeconds', value)"
             />
           </n-form-item-gi>
         </n-grid>
@@ -86,23 +71,17 @@ import ClockIcon from '@vicons/fluent/Clock16Regular'
 type TimestampMode = 'now' | 'custom'
 
 defineProps<{
-  count: number | null
   maxCount: number
-  timestampMode: TimestampMode
-  customDateMs: number | null
-  customUnixSeconds: number | null
   minUnixSeconds: number
   maxUnixSeconds: number
   timestampError: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:count', value: number | null): void
-  (event: 'update:timestampMode', value: TimestampMode): void
-  (event: 'update:customDateMs', value: number | null): void
-  (event: 'update:customUnixSeconds', value: number | null): void
-  (event: 'set-now'): void
-}>()
+const emit = defineEmits<{ (event: 'set-now'): void }>()
+const count = defineModel<number | null>('count', { required: true })
+const timestampMode = defineModel<TimestampMode>('timestampMode', { required: true })
+const customDateMs = defineModel<number | null>('customDateMs', { required: true })
+const customUnixSeconds = defineModel<number | null>('customUnixSeconds', { required: true })
 
 const { t } = useI18n()
 </script>

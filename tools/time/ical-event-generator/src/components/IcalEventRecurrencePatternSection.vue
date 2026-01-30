@@ -54,34 +54,35 @@ import { NCheckbox, NCheckboxGroup, NFlex, NFormItemGi, NGrid, NInputNumber } fr
 
 type RecurrenceFrequency = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly'
 
-const props = defineProps<{
+defineProps<{
   recurrenceFrequency: RecurrenceFrequency
-  recurrenceWeekdays: string[]
-  recurrenceMonthDay: number
-  recurrenceMonth: number
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:recurrenceWeekdays', value: string[]): void
-  (event: 'update:recurrenceMonthDay', value: number): void
-  (event: 'update:recurrenceMonth', value: number): void
 }>()
 
 const { t } = useI18n()
 
+const recurrenceWeekdays = defineModel<string[]>('recurrenceWeekdays', { required: true })
+const recurrenceMonthDay = defineModel<number>('recurrenceMonthDay', { required: true })
+const recurrenceMonth = defineModel<number>('recurrenceMonth', { required: true })
+
 const recurrenceWeekdaysModel = computed({
-  get: () => props.recurrenceWeekdays,
-  set: (value) => emit('update:recurrenceWeekdays', value),
+  get: () => recurrenceWeekdays.value,
+  set: (value) => {
+    recurrenceWeekdays.value = value
+  },
 })
 
 const recurrenceMonthDayModel = computed({
-  get: () => props.recurrenceMonthDay,
-  set: (value) => emit('update:recurrenceMonthDay', value ?? 1),
+  get: () => recurrenceMonthDay.value,
+  set: (value) => {
+    recurrenceMonthDay.value = value ?? 1
+  },
 })
 
 const recurrenceMonthModel = computed({
-  get: () => props.recurrenceMonth,
-  set: (value) => emit('update:recurrenceMonth', value ?? 1),
+  get: () => recurrenceMonth.value,
+  set: (value) => {
+    recurrenceMonth.value = value ?? 1
+  },
 })
 
 const weekdayOptions = computed(() => [

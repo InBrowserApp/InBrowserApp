@@ -24,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import IcalEventRecurrenceEndsSection from './IcalEventRecurrenceEndsSection.vue'
@@ -35,72 +34,26 @@ type RecurrenceFrequency = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly'
 type RecurrenceEndMode = 'never' | 'count' | 'until'
 type RecurrenceErrorKey = 'invalid-date-time' | 'invalid-date'
 
-const props = defineProps<{
-  recurrenceFrequency: RecurrenceFrequency
-  recurrenceInterval: number
-  recurrenceWeekdays: string[]
-  recurrenceMonthDay: number
-  recurrenceMonth: number
-  recurrenceEndMode: RecurrenceEndMode
-  recurrenceCount: number
-  recurrenceUntilInput: string
+defineProps<{
   recurrenceUntilStatus?: 'error' | 'success'
   recurrenceUntilErrorKey?: RecurrenceErrorKey
   isAllDay: boolean
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:recurrenceFrequency', value: RecurrenceFrequency): void
-  (event: 'update:recurrenceInterval', value: number): void
-  (event: 'update:recurrenceWeekdays', value: string[]): void
-  (event: 'update:recurrenceMonthDay', value: number): void
-  (event: 'update:recurrenceMonth', value: number): void
-  (event: 'update:recurrenceEndMode', value: RecurrenceEndMode): void
-  (event: 'update:recurrenceCount', value: number): void
-  (event: 'update:recurrenceUntilInput', value: string): void
-}>()
+const recurrenceFrequencyModel = defineModel<RecurrenceFrequency>('recurrenceFrequency', {
+  required: true,
+})
+const recurrenceIntervalModel = defineModel<number>('recurrenceInterval', { required: true })
+const recurrenceWeekdaysModel = defineModel<string[]>('recurrenceWeekdays', { required: true })
+const recurrenceMonthDayModel = defineModel<number>('recurrenceMonthDay', { required: true })
+const recurrenceMonthModel = defineModel<number>('recurrenceMonth', { required: true })
+const recurrenceEndModeModel = defineModel<RecurrenceEndMode>('recurrenceEndMode', {
+  required: true,
+})
+const recurrenceCountModel = defineModel<number>('recurrenceCount', { required: true })
+const recurrenceUntilInputModel = defineModel<string>('recurrenceUntilInput', { required: true })
 
 const { t } = useI18n()
-
-const recurrenceFrequencyModel = computed({
-  get: () => props.recurrenceFrequency,
-  set: (value) => emit('update:recurrenceFrequency', value),
-})
-
-const recurrenceIntervalModel = computed({
-  get: () => props.recurrenceInterval,
-  set: (value) => emit('update:recurrenceInterval', value ?? 1),
-})
-
-const recurrenceWeekdaysModel = computed({
-  get: () => props.recurrenceWeekdays,
-  set: (value) => emit('update:recurrenceWeekdays', value),
-})
-
-const recurrenceMonthDayModel = computed({
-  get: () => props.recurrenceMonthDay,
-  set: (value) => emit('update:recurrenceMonthDay', value ?? 1),
-})
-
-const recurrenceMonthModel = computed({
-  get: () => props.recurrenceMonth,
-  set: (value) => emit('update:recurrenceMonth', value ?? 1),
-})
-
-const recurrenceEndModeModel = computed({
-  get: () => props.recurrenceEndMode,
-  set: (value) => emit('update:recurrenceEndMode', value),
-})
-
-const recurrenceCountModel = computed({
-  get: () => props.recurrenceCount,
-  set: (value) => emit('update:recurrenceCount', value ?? 1),
-})
-
-const recurrenceUntilInputModel = computed({
-  get: () => props.recurrenceUntilInput,
-  set: (value) => emit('update:recurrenceUntilInput', value),
-})
 </script>
 
 <i18n lang="json">

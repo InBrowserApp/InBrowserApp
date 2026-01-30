@@ -2,32 +2,26 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('keySettings') }}</ToolSectionHeader>
     <n-space vertical :size="12">
-      <n-radio-group
-        :value="keyType"
-        name="key-type"
-        @update:value="$emit('update:keyType', $event)"
-      >
+      <n-radio-group v-model:value="keyType" name="key-type">
         <n-radio-button value="password">{{ t('password') }}</n-radio-button>
         <n-radio-button value="raw">{{ t('rawKey') }}</n-radio-button>
       </n-radio-group>
 
       <template v-if="keyType === 'password'">
         <n-input
-          :value="password"
+          v-model:value="password"
           type="password"
           show-password-on="click"
           :placeholder="t('passwordPlaceholder')"
-          @update:value="$emit('update:password', $event)"
         />
       </template>
 
       <template v-else>
         <n-input
-          :value="rawKey"
+          v-model:value="rawKey"
           :placeholder="t('rawKeyPlaceholder')"
           :status="rawKeyStatus"
           style="font-family: monospace"
-          @update:value="$emit('update:rawKey', $event)"
         />
         <n-text v-if="rawKeyError" type="error" depth="3">{{ rawKeyError }}</n-text>
         <n-text depth="3">{{ t('keyLengthHint', { length: expectedKeyLength }) }}</n-text>
@@ -44,34 +38,29 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { type KeyType, type KeyLength, isValidHex } from '@utils/aes'
 
 const props = defineProps<{
-  keyType: KeyType
-  password: string
-  rawKey: string
   keyLength: KeyLength
 }>()
 
-defineEmits<{
-  'update:keyType': [value: KeyType]
-  'update:password': [value: string]
-  'update:rawKey': [value: string]
-}>()
+const keyType = defineModel<KeyType>('keyType', { required: true })
+const password = defineModel<string>('password', { required: true })
+const rawKey = defineModel<string>('rawKey', { required: true })
 
 const { t } = useI18n()
 
 const expectedKeyLength = computed(() => props.keyLength / 4)
 
 const rawKeyStatus = computed(() => {
-  if (!props.rawKey) return undefined
-  if (!isValidHex(props.rawKey)) return 'error'
-  const cleanHex = props.rawKey.replace(/\s/g, '')
+  if (!rawKey.value) return undefined
+  if (!isValidHex(rawKey.value)) return 'error'
+  const cleanHex = rawKey.value.replace(/\s/g, '')
   if (cleanHex.length !== expectedKeyLength.value) return 'error'
   return 'success'
 })
 
 const rawKeyError = computed(() => {
-  if (!props.rawKey) return ''
-  if (!isValidHex(props.rawKey)) return t('invalidHex')
-  const cleanHex = props.rawKey.replace(/\s/g, '')
+  if (!rawKey.value) return ''
+  if (!isValidHex(rawKey.value)) return t('invalidHex')
+  const cleanHex = rawKey.value.replace(/\s/g, '')
   if (cleanHex.length !== expectedKeyLength.value) {
     return t('wrongKeyLength', {
       expected: expectedKeyLength.value,

@@ -13,18 +13,14 @@
                 </template>
                 {{ t('now') }}
               </n-button>
-              <CopyToClipboardButton
-                v-if="startInputModel"
-                :content="startInputModel"
-                size="small"
-              />
+              <CopyToClipboardButton v-if="startInput" :content="startInput" size="small" />
             </n-flex>
           </n-flex>
 
           <div>
             <n-text depth="3">{{ t('time-zone') }}</n-text>
             <n-select
-              v-model:value="startTimeZoneModel"
+              v-model:value="startTimeZone"
               :options="timeZoneOptions"
               filterable
               :placeholder="t('timezone-placeholder')"
@@ -37,7 +33,7 @@
           <div>
             <n-text depth="3">{{ t('date-time') }}</n-text>
             <n-input
-              v-model:value="startInputModel"
+              v-model:value="startInput"
               :placeholder="t('datetime-placeholder')"
               :status="startStatus"
             />
@@ -62,14 +58,14 @@
                 </template>
                 {{ t('now') }}
               </n-button>
-              <CopyToClipboardButton v-if="endInputModel" :content="endInputModel" size="small" />
+              <CopyToClipboardButton v-if="endInput" :content="endInput" size="small" />
             </n-flex>
           </n-flex>
 
           <div>
             <n-text depth="3">{{ t('time-zone') }}</n-text>
             <n-select
-              v-model:value="endTimeZoneModel"
+              v-model:value="endTimeZone"
               :options="timeZoneOptions"
               filterable
               :placeholder="t('timezone-placeholder')"
@@ -82,7 +78,7 @@
           <div>
             <n-text depth="3">{{ t('date-time') }}</n-text>
             <n-input
-              v-model:value="endInputModel"
+              v-model:value="endInput"
               :placeholder="t('datetime-placeholder')"
               :status="endStatus"
             />
@@ -100,7 +96,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import type { FormValidationStatus, SelectOption } from 'naive-ui'
 import { NButton, NFlex, NGi, NGrid, NIcon, NInput, NSelect, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
@@ -108,49 +103,23 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import Clock16Regular from '@vicons/fluent/Clock16Regular'
 
-const props = defineProps<{
-  startInput: string
-  endInput: string
+defineProps<{
   startStatus?: FormValidationStatus
   endStatus?: FormValidationStatus
   startError: boolean
   endError: boolean
-  startTimeZone: string
-  endTimeZone: string
   timeZoneOptions: SelectOption[]
   startOffsetLabel: string
   endOffsetLabel: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:startInput', value: string): void
-  (event: 'update:endInput', value: string): void
-  (event: 'update:startTimeZone', value: string): void
-  (event: 'update:endTimeZone', value: string): void
-  (event: 'set-now', target: 'start' | 'end'): void
-}>()
+const emit = defineEmits<{ (event: 'set-now', target: 'start' | 'end'): void }>()
+const startInput = defineModel<string>('startInput', { required: true })
+const endInput = defineModel<string>('endInput', { required: true })
+const startTimeZone = defineModel<string>('startTimeZone', { required: true })
+const endTimeZone = defineModel<string>('endTimeZone', { required: true })
 
 const { t } = useI18n()
-
-const startInputModel = computed({
-  get: () => props.startInput,
-  set: (value: string) => emit('update:startInput', value),
-})
-
-const endInputModel = computed({
-  get: () => props.endInput,
-  set: (value: string) => emit('update:endInput', value),
-})
-
-const startTimeZoneModel = computed({
-  get: () => props.startTimeZone,
-  set: (value: string) => emit('update:startTimeZone', value),
-})
-
-const endTimeZoneModel = computed({
-  get: () => props.endTimeZone,
-  set: (value: string) => emit('update:endTimeZone', value),
-})
 
 const emitSetNow = (target: 'start' | 'end') => emit('set-now', target)
 </script>

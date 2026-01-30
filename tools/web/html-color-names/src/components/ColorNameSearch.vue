@@ -1,17 +1,12 @@
 <template>
   <NFlex vertical :size="16">
-    <NInput
-      :value="search"
-      :placeholder="t('searchPlaceholder')"
-      clearable
-      @update:value="$emit('update:search', $event)"
-    >
+    <NInput v-model:value="search" :placeholder="t('searchPlaceholder')" clearable>
       <template #prefix>
         <NIcon :component="SearchIcon" />
       </template>
     </NInput>
     <NScrollbar x-scrollable>
-      <NRadioGroup :value="category" @update:value="$emit('update:category', $event)">
+      <NRadioGroup v-model:value="category">
         <NRadioButton value="all">{{ t('all') }}</NRadioButton>
         <NRadioButton v-for="cat in colorCategories" :key="cat" :value="cat">
           <span
@@ -40,15 +35,8 @@ import { NFlex, NInput, NIcon, NRadioGroup, NRadioButton, NScrollbar } from 'nai
 import SearchIcon from '@vicons/fluent/Search20Regular'
 import { colorCategories, categoryColors } from '../data/colorData'
 
-defineProps<{
-  search: string
-  category: string
-}>()
-
-defineEmits<{
-  'update:search': [value: string]
-  'update:category': [value: string]
-}>()
+const search = defineModel<string>('search', { required: true })
+const category = defineModel<string>('category', { required: true })
 
 const { t } = useI18n()
 </script>

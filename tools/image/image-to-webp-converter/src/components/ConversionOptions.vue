@@ -113,24 +113,6 @@ defineProps<{
   optionOffLabel: string
   convertLabel: string
   convertingLabel: string
-  scale: number
-  quality: number
-  method: number
-  lossless: boolean
-  advancedEnabled: boolean
-  targetSize: number | null
-  targetPsnr: number | null
-  nearLossless: number | null
-  alphaQuality: number | null
-  snsStrength: number | null
-  filterStrength: number | null
-  filterSharpness: number | null
-  filterType: number | null
-  partitions: number | null
-  segments: number | null
-  passCount: number | null
-  exactMode: TriState
-  sharpYuvMode: TriState
   minScale: number
   maxScale: number
   isConverting: boolean
@@ -138,105 +120,116 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  'update:scale': [value: number]
-  'update:quality': [value: number]
-  'update:method': [value: number]
-  'update:lossless': [value: boolean]
-  'update:advancedEnabled': [value: boolean]
-  'update:targetSize': [value: number | null]
-  'update:targetPsnr': [value: number | null]
-  'update:nearLossless': [value: number | null]
-  'update:alphaQuality': [value: number | null]
-  'update:snsStrength': [value: number | null]
-  'update:filterStrength': [value: number | null]
-  'update:filterSharpness': [value: number | null]
-  'update:filterType': [value: number | null]
-  'update:partitions': [value: number | null]
-  'update:segments': [value: number | null]
-  'update:passCount': [value: number | null]
-  'update:exactMode': [value: TriState]
-  'update:sharpYuvMode': [value: TriState]
   convert: []
+  'update:targetPsnr': [value: number | null]
+  'update:targetSize': [value: number | null]
 }>()
+
+const scale = defineModel<number>('scale', { required: true })
+const quality = defineModel<number>('quality', { required: true })
+const method = defineModel<number>('method', { required: true })
+const lossless = defineModel<boolean>('lossless', { required: true })
+const advancedEnabled = defineModel<boolean>('advancedEnabled', { required: true })
+const targetSize = defineModel<number | null>('targetSize', { required: true })
+const targetPsnr = defineModel<number | null>('targetPsnr', { required: true })
+const nearLossless = defineModel<number | null>('nearLossless', { required: true })
+const alphaQuality = defineModel<number | null>('alphaQuality', { required: true })
+const snsStrength = defineModel<number | null>('snsStrength', { required: true })
+const filterStrength = defineModel<number | null>('filterStrength', { required: true })
+const filterSharpness = defineModel<number | null>('filterSharpness', { required: true })
+const filterType = defineModel<number | null>('filterType', { required: true })
+const partitions = defineModel<number | null>('partitions', { required: true })
+const segments = defineModel<number | null>('segments', { required: true })
+const passCount = defineModel<number | null>('passCount', { required: true })
+const exactMode = defineModel<TriState>('exactMode', { required: true })
+const sharpYuvMode = defineModel<TriState>('sharpYuvMode', { required: true })
 
 function handleScaleUpdate(value: number | null) {
   if (value === null) return
-  emit('update:scale', value)
+  scale.value = value
 }
 
 function handleQualityUpdate(value: number | null) {
   if (value === null) return
-  emit('update:quality', value)
+  quality.value = value
 }
 
 function handleMethodUpdate(value: number | null) {
   if (value === null) return
-  emit('update:method', value)
+  method.value = value
 }
 
 function handleLosslessUpdate(value: boolean) {
-  emit('update:lossless', value)
+  lossless.value = value
 }
 
 function handleAdvancedEnabledUpdate(value: boolean) {
-  emit('update:advancedEnabled', value)
+  advancedEnabled.value = value
 }
 
 function handleTargetSizeUpdate(value: number | null) {
-  emit('update:targetSize', value)
+  targetSize.value = value
   if (value !== null) {
-    emit('update:targetPsnr', null)
+    if (targetPsnr.value === null) {
+      emit('update:targetPsnr', null)
+    } else {
+      targetPsnr.value = null
+    }
   }
 }
 
 function handleTargetPsnrUpdate(value: number | null) {
-  emit('update:targetPsnr', value)
+  targetPsnr.value = value
   if (value !== null) {
-    emit('update:targetSize', null)
+    if (targetSize.value === null) {
+      emit('update:targetSize', null)
+    } else {
+      targetSize.value = null
+    }
   }
 }
 
 function handleNearLosslessUpdate(value: number | null) {
-  emit('update:nearLossless', value)
+  nearLossless.value = value
 }
 
 function handleAlphaQualityUpdate(value: number | null) {
-  emit('update:alphaQuality', value)
+  alphaQuality.value = value
 }
 
 function handleSnsStrengthUpdate(value: number | null) {
-  emit('update:snsStrength', value)
+  snsStrength.value = value
 }
 
 function handleFilterStrengthUpdate(value: number | null) {
-  emit('update:filterStrength', value)
+  filterStrength.value = value
 }
 
 function handleFilterSharpnessUpdate(value: number | null) {
-  emit('update:filterSharpness', value)
+  filterSharpness.value = value
 }
 
 function handleFilterTypeUpdate(value: number | null) {
-  emit('update:filterType', value)
+  filterType.value = value
 }
 
 function handlePartitionsUpdate(value: number | null) {
-  emit('update:partitions', value)
+  partitions.value = value
 }
 
 function handleSegmentsUpdate(value: number | null) {
-  emit('update:segments', value)
+  segments.value = value
 }
 
 function handlePassCountUpdate(value: number | null) {
-  emit('update:passCount', value)
+  passCount.value = value
 }
 
 function handleExactModeUpdate(value: TriState) {
-  emit('update:exactMode', value)
+  exactMode.value = value
 }
 
 function handleSharpYuvModeUpdate(value: TriState) {
-  emit('update:sharpYuvMode', value)
+  sharpYuvMode.value = value
 }
 </script>

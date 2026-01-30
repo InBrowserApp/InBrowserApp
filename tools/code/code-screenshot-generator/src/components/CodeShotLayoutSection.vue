@@ -4,7 +4,7 @@
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
       <n-form-item-gi :label="t('fontSize')" :show-feedback="false">
         <n-input-number
-          v-model:value="fontSizeProxy"
+          v-model:value="fontSize"
           :min="12"
           :max="28"
           size="small"
@@ -13,7 +13,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="t('lineHeight')" :show-feedback="false">
         <n-input-number
-          v-model:value="lineHeightProxy"
+          v-model:value="lineHeight"
           :min="1.2"
           :max="2"
           :step="0.05"
@@ -23,7 +23,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="t('cardPadding')" :show-feedback="false">
         <n-input-number
-          v-model:value="cardPaddingProxy"
+          v-model:value="cardPadding"
           :min="12"
           :max="60"
           size="small"
@@ -32,7 +32,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="t('framePadding')" :show-feedback="false">
         <n-input-number
-          v-model:value="framePaddingProxy"
+          v-model:value="framePadding"
           :min="isBackgroundNone ? 0 : 16"
           :max="120"
           size="small"
@@ -42,7 +42,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="t('radius')" :show-feedback="false">
         <n-input-number
-          v-model:value="radiusProxy"
+          v-model:value="radius"
           :min="6"
           :max="40"
           size="small"
@@ -50,11 +50,11 @@
         />
       </n-form-item-gi>
       <n-form-item-gi :label="t('shadow')" :show-feedback="false">
-        <n-switch v-model:value="shadowProxy" :disabled="isBackgroundNone" />
+        <n-switch v-model:value="shadow" :disabled="isBackgroundNone" />
       </n-form-item-gi>
       <n-form-item-gi :label="t('tabSize')" :show-feedback="false">
         <n-input-number
-          v-model:value="tabSizeProxy"
+          v-model:value="tabSize"
           :min="2"
           :max="8"
           size="small"
@@ -66,68 +66,23 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFormItemGi, NGrid, NInputNumber, NSwitch } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const props = defineProps<{
-  fontSize: number
-  lineHeight: number
-  cardPadding: number
-  framePadding: number
-  radius: number
-  shadow: boolean
-  tabSize: number
+defineProps<{
   isBackgroundNone: boolean
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:fontSize', value: number): void
-  (e: 'update:lineHeight', value: number): void
-  (e: 'update:cardPadding', value: number): void
-  (e: 'update:framePadding', value: number): void
-  (e: 'update:radius', value: number): void
-  (e: 'update:shadow', value: boolean): void
-  (e: 'update:tabSize', value: number): void
-}>()
+const fontSize = defineModel<number>('fontSize', { required: true })
+const lineHeight = defineModel<number>('lineHeight', { required: true })
+const cardPadding = defineModel<number>('cardPadding', { required: true })
+const framePadding = defineModel<number>('framePadding', { required: true })
+const radius = defineModel<number>('radius', { required: true })
+const shadow = defineModel<boolean>('shadow', { required: true })
+const tabSize = defineModel<number>('tabSize', { required: true })
 
 const { t } = useI18n()
-
-const fontSizeProxy = computed({
-  get: () => props.fontSize,
-  set: (value: number) => emit('update:fontSize', value),
-})
-
-const lineHeightProxy = computed({
-  get: () => props.lineHeight,
-  set: (value: number) => emit('update:lineHeight', value),
-})
-
-const cardPaddingProxy = computed({
-  get: () => props.cardPadding,
-  set: (value: number) => emit('update:cardPadding', value),
-})
-
-const framePaddingProxy = computed({
-  get: () => props.framePadding,
-  set: (value: number) => emit('update:framePadding', value),
-})
-
-const radiusProxy = computed({
-  get: () => props.radius,
-  set: (value: number) => emit('update:radius', value),
-})
-
-const shadowProxy = computed({
-  get: () => props.shadow,
-  set: (value: boolean) => emit('update:shadow', value),
-})
-
-const tabSizeProxy = computed({
-  get: () => props.tabSize,
-  set: (value: number) => emit('update:tabSize', value),
-})
 </script>
 
 <i18n lang="json">

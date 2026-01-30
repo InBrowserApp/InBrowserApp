@@ -1,7 +1,7 @@
 <template>
   <n-flex vertical :size="12">
     <n-flex align="center" justify="space-between" :size="12">
-      <n-select v-model:value="stationIdModel" :options="stationOptions" style="min-width: 260px" />
+      <n-select v-model:value="stationId" :options="stationOptions" style="min-width: 260px" />
       <n-flex :size="8">
         <n-button
           v-if="!isPlaying"
@@ -33,15 +33,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NAlert, NButton, NFlex, NIcon, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import PlayIcon from '@vicons/fluent/Play16Regular'
 import StopIcon from '@vicons/fluent/Stop16Regular'
 import type { StationId } from '../core/encoders'
 
-const props = defineProps<{
-  stationId: StationId
+defineProps<{
   stationOptions: Array<{ label: string; value: StationId }>
   isPlaying: boolean
   isStarting: boolean
@@ -49,18 +47,11 @@ const props = defineProps<{
   startError: boolean
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:stationId', value: StationId): void
-  (event: 'start'): void
-  (event: 'stop'): void
-}>()
+const emit = defineEmits<{ (event: 'start'): void; (event: 'stop'): void }>()
+
+const stationId = defineModel<StationId>('stationId', { required: true })
 
 const { t } = useI18n()
-
-const stationIdModel = computed({
-  get: () => props.stationId,
-  set: (value) => emit('update:stationId', value),
-})
 </script>
 
 <i18n lang="json">

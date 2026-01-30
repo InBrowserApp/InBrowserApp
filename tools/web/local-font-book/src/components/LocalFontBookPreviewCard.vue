@@ -21,12 +21,11 @@
   <ToolSection>
     <n-form-item :label="t('preview-fallback')" class="preview-textarea">
       <n-input
-        :value="sampleText"
+        v-model:value="sampleText"
         type="textarea"
         :placeholder="t('preview-placeholder')"
         :autosize="{ minRows: 3, maxRows: 5 }"
         data-testid="sample-text"
-        @update:value="emit('update:sampleText', $event)"
       />
     </n-form-item>
   </ToolSection>
@@ -58,28 +57,24 @@ import SunnyOutline from '@vicons/ionicons5/SunnyOutline'
 import { useI18n } from 'vue-i18n'
 import type { DisplayFont } from './types'
 
-const props = defineProps<{
-  sampleText: string
-  darkBackground: boolean
+defineProps<{
   activeFont?: DisplayFont
   previewStyle: CSSProperties
 }>()
 
-const emit = defineEmits<{
-  'update:sampleText': [string]
-  'update:darkBackground': [boolean]
-}>()
+const sampleText = defineModel<string>('sampleText', { required: true })
+const darkBackground = defineModel<boolean>('darkBackground', { required: true })
 
 const { t } = useI18n()
 
-const backgroundIcon = computed(() => (props.darkBackground ? MoonOutline : SunnyOutline))
+const backgroundIcon = computed(() => (darkBackground.value ? MoonOutline : SunnyOutline))
 
 const emptyTextStyle = computed(() => ({
-  color: props.darkBackground ? '#f8fafc' : '#0f172a',
+  color: darkBackground.value ? '#f8fafc' : '#0f172a',
 }))
 
 const toggleBackground = () => {
-  emit('update:darkBackground', !props.darkBackground)
+  darkBackground.value = !darkBackground.value
 }
 </script>
 

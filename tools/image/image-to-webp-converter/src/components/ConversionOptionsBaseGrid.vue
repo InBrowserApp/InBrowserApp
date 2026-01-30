@@ -56,38 +56,32 @@ defineProps<{
   methodLabel: string
   methodHint: string
   losslessLabel: string
-  scale: number
-  quality: number
-  method: number
-  lossless: boolean
   minScale: number
   maxScale: number
 }>()
 
-const emit = defineEmits<{
-  'update:scale': [value: number]
-  'update:quality': [value: number]
-  'update:method': [value: number]
-  'update:lossless': [value: boolean]
-}>()
+const scale = defineModel<number>('scale', { required: true })
+const quality = defineModel<number>('quality', { required: true })
+const method = defineModel<number>('method', { required: true })
+const lossless = defineModel<boolean>('lossless', { required: true })
 
 function handleScaleUpdate(value: number | null) {
   if (value === null) return
-  emit('update:scale', value)
+  scale.value = value
 }
 
 function handleQualityUpdate(value: number | null) {
   if (value === null) return
-  emit('update:quality', value)
+  quality.value = value
 }
 
 function handleMethodUpdate(value: number | null) {
   if (value === null) return
-  emit('update:method', value)
+  method.value = value
 }
 
 function handleLosslessUpdate(value: boolean) {
-  emit('update:lossless', value)
+  lossless.value = value
 }
 </script>
 

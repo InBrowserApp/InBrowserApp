@@ -127,12 +127,6 @@ const props = defineProps<{
   optimizeHint: string
   convertLabel: string
   convertingLabel: string
-  scale: number
-  speed: number
-  loopMode: GifLoopMode
-  loopCount: number | null
-  optimize: boolean
-  optimizeLevel: number
   minScale: number
   maxScale: number
   minSpeed: number
@@ -142,14 +136,15 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  'update:scale': [value: number]
-  'update:speed': [value: number]
-  'update:loopMode': [value: GifLoopMode]
-  'update:loopCount': [value: number | null]
-  'update:optimize': [value: boolean]
-  'update:optimizeLevel': [value: number]
   convert: []
 }>()
+
+const scale = defineModel<number>('scale', { required: true })
+const speed = defineModel<number>('speed', { required: true })
+const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
+const loopCount = defineModel<number | null>('loopCount', { required: true })
+const optimize = defineModel<boolean>('optimize', { required: true })
+const optimizeLevel = defineModel<number>('optimizeLevel', { required: true })
 
 const loopOptions = computed(() => [
   { label: props.loopInheritLabel, value: 'inherit' },
@@ -158,26 +153,34 @@ const loopOptions = computed(() => [
 ])
 
 function handleScaleUpdate(value: number | null) {
-  emit('update:scale', value ?? props.scale)
+  if (value !== null) {
+    scale.value = value
+  }
 }
 
 function handleSpeedUpdate(value: number | null) {
-  emit('update:speed', value ?? props.speed)
+  if (value !== null) {
+    speed.value = value
+  }
 }
 
 function handleLoopModeUpdate(value: GifLoopMode | null) {
-  emit('update:loopMode', value ?? props.loopMode)
+  if (value !== null) {
+    loopMode.value = value
+  }
 }
 
 function handleLoopCountUpdate(value: number | null) {
-  emit('update:loopCount', value)
+  loopCount.value = value
 }
 
 function handleOptimizeUpdate(value: boolean) {
-  emit('update:optimize', value)
+  optimize.value = value
 }
 
 function handleOptimizeLevelUpdate(value: number | null) {
-  emit('update:optimizeLevel', value ?? props.optimizeLevel)
+  if (value !== null) {
+    optimizeLevel.value = value
+  }
 }
 </script>

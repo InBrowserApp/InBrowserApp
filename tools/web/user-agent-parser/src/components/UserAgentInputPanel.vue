@@ -16,12 +16,11 @@
           </div>
         </template>
         <n-input
-          :value="userAgent"
+          v-model:value="userAgent"
           type="textarea"
           :autosize="{ minRows: 6, maxRows: 14 }"
           :placeholder="t('input-placeholder')"
           :status="inputStatus"
-          @update:value="emit('update:userAgent', $event)"
         />
         <template #feedback>
           <n-text v-show="inputError" type="error">{{ t('input-error') }}</n-text>
@@ -57,7 +56,6 @@ import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 
 defineProps<{
-  userAgent: string
   inputStatus?: FormValidationStatus
   inputError: boolean
   canUseCurrent: boolean
@@ -66,9 +64,10 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  'update:userAgent': [string]
   'use-current': []
 }>()
+
+const userAgent = defineModel<string>('userAgent', { required: true })
 
 hljs.registerLanguage('json', jsonLang)
 

@@ -1,24 +1,20 @@
 <template>
   <n-form-item-gi :label="t('backgroundType')" :show-feedback="false">
-    <n-select v-model:value="backgroundTypeProxy" :options="backgroundTypeOptions" size="small" />
+    <n-select v-model:value="backgroundType" :options="backgroundTypeOptions" size="small" />
   </n-form-item-gi>
   <n-form-item-gi
-    v-if="backgroundTypeProxy === 'preset'"
+    v-if="backgroundType === 'preset'"
     :label="t('backgroundPreset')"
     :show-feedback="false"
   >
-    <n-select
-      v-model:value="backgroundPresetIdProxy"
-      :options="backgroundPresetOptions"
-      size="small"
-    />
+    <n-select v-model:value="backgroundPresetId" :options="backgroundPresetOptions" size="small" />
   </n-form-item-gi>
   <n-form-item-gi
-    v-if="backgroundTypeProxy === 'solid'"
+    v-if="backgroundType === 'solid'"
     :label="t('backgroundColor')"
     :show-feedback="false"
   >
-    <n-color-picker v-model:value="backgroundColorProxy" :modes="['hex']" size="small" />
+    <n-color-picker v-model:value="backgroundColor" :modes="['hex']" size="small" />
   </n-form-item-gi>
 </template>
 
@@ -30,34 +26,11 @@ import { backgroundPresets } from '../utils/themes'
 
 type BackgroundType = 'preset' | 'solid' | 'transparent' | 'none'
 
-const props = defineProps<{
-  backgroundType: BackgroundType
-  backgroundPresetId: string
-  backgroundColor: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:backgroundType', value: BackgroundType): void
-  (e: 'update:backgroundPresetId', value: string): void
-  (e: 'update:backgroundColor', value: string): void
-}>()
+const backgroundType = defineModel<BackgroundType>('backgroundType', { required: true })
+const backgroundPresetId = defineModel<string>('backgroundPresetId', { required: true })
+const backgroundColor = defineModel<string>('backgroundColor', { required: true })
 
 const { t } = useI18n()
-
-const backgroundTypeProxy = computed({
-  get: () => props.backgroundType,
-  set: (value: BackgroundType) => emit('update:backgroundType', value),
-})
-
-const backgroundPresetIdProxy = computed({
-  get: () => props.backgroundPresetId,
-  set: (value: string) => emit('update:backgroundPresetId', value),
-})
-
-const backgroundColorProxy = computed({
-  get: () => props.backgroundColor,
-  set: (value: string) => emit('update:backgroundColor', value),
-})
 
 const backgroundTypeOptions = computed(() => [
   { label: t('backgroundPreset'), value: 'preset' },

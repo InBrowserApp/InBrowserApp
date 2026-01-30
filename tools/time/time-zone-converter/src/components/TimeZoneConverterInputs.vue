@@ -104,55 +104,56 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import Clock16Regular from '@vicons/fluent/Clock16Regular'
 
-const props = defineProps<{
-  fromInput: string
-  toInput: string
+defineProps<{
   fromStatus?: FormValidationStatus
   toStatus?: FormValidationStatus
   fromError: boolean
   toError: boolean
-  fromTimeZone: string
-  toTimeZone: string
   timeZoneOptions: SelectOption[]
   fromOffsetLabel: string
   toOffsetLabel: string
 }>()
 
 const emit = defineEmits<{
-  (event: 'update:fromInput', value: string): void
-  (event: 'update:toInput', value: string): void
-  (event: 'update:fromTimeZone', value: string): void
-  (event: 'update:toTimeZone', value: string): void
   (event: 'set-now', target: 'from' | 'to'): void
   (event: 'mark-edited', target: 'from' | 'to'): void
 }>()
 
+const fromInput = defineModel<string>('fromInput', { required: true })
+const toInput = defineModel<string>('toInput', { required: true })
+const fromTimeZone = defineModel<string>('fromTimeZone', { required: true })
+const toTimeZone = defineModel<string>('toTimeZone', { required: true })
+
 const { t } = useI18n()
 
 const fromInputModel = computed({
-  get: () => props.fromInput,
+  get: () => fromInput.value,
   set: (value: string) => {
-    emit('update:fromInput', value)
+    fromInput.value = value
     emit('mark-edited', 'from')
   },
 })
 
 const toInputModel = computed({
-  get: () => props.toInput,
+  get: () => toInput.value,
   set: (value: string) => {
-    emit('update:toInput', value)
+    toInput.value = value
     emit('mark-edited', 'to')
   },
 })
 
 const fromTimeZoneModel = computed({
-  get: () => props.fromTimeZone,
-  set: (value: string) => emit('update:fromTimeZone', value),
+  get: () => fromTimeZone.value,
+  set: (value: string) => {
+    fromTimeZone.value = value
+  },
 })
 
 const toTimeZoneModel = computed({
-  get: () => props.toTimeZone,
-  set: (value: string) => emit('update:toTimeZone', value),
+  get: () => toTimeZone.value,
+  set: (value: string) => {
+    toTimeZone.value = value
+  },
 })
 
 const emitSetNow = (target: 'from' | 'to') => emit('set-now', target)
