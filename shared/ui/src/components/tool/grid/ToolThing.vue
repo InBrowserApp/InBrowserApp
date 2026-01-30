@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable @intlify/vue-i18n/no-missing-keys -->
-  <CustomRouterLink :to="path" class="tool-link" v-if="!props.tool.external">
+  <CustomRouterLink v-if="!props.tool.external" :to="path" class="tool-link">
     <n-thing>
       <template v-if="showIcon" #avatar>
         <n-avatar>
@@ -15,7 +15,7 @@
       </template>
     </n-thing>
   </CustomRouterLink>
-  <a :href="path" class="tool-link" v-else>
+  <a v-else :href="path" class="tool-link">
     <n-thing>
       <template v-if="showIcon" #avatar>
         <n-avatar>

@@ -7,9 +7,16 @@
     </NInput>
     <NRadioGroup v-model:value="category">
       <NRadioButton value="all">{{ t('all') }}</NRadioButton>
-      <NRadioButton v-for="category in categories" :key="category" :value="category">
-        <CategoryIcon :category="category" style="margin-right: 4px; vertical-align: -0.15em" />
-        <CategoryI18n :category="category" />
+      <NRadioButton
+        v-for="categoryOption in categories"
+        :key="categoryOption"
+        :value="categoryOption"
+      >
+        <CategoryIcon
+          :category="categoryOption"
+          style="margin-right: 4px; vertical-align: -0.15em"
+        />
+        <CategoryI18n :category="categoryOption" />
       </NRadioButton>
     </NRadioGroup>
   </NFlex>

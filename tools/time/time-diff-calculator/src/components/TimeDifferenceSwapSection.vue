@@ -1,7 +1,7 @@
 <template>
   <ToolSection>
     <n-flex justify="space-between" align="center" :wrap="true">
-      <n-button @click="emit('swap')" secondary>
+      <n-button secondary @click="emit('swap')">
         <template #icon>
           <n-icon :component="ArrowSwap20Regular" />
         </template>

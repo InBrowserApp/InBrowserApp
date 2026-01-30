@@ -2,9 +2,9 @@
   <n-grid-item :span="2">
     <n-form-item :label="t('themeColor')">
       <n-color-picker
+        v-model:value="options.theme_color"
         :show-alpha="false"
         :show-preview="true"
-        v-model:value="options.theme_color"
       />
     </n-form-item>
   </n-grid-item>
@@ -28,20 +28,20 @@
       <n-checkbox v-model:checked="options.theme_color_dark_enabled" style="margin-right: 0.7em" />
       <span v-show="!options.theme_color_dark_enabled">{{ t('disabled') }}</span>
       <n-color-picker
+        v-show="options.theme_color_dark_enabled"
+        v-model:value="options.theme_color_dark"
         :show-alpha="false"
         :show-preview="true"
-        v-model:value="options.theme_color_dark"
         :disabled="!options.theme_color_dark_enabled"
-        v-show="options.theme_color_dark_enabled"
       />
     </n-form-item>
   </n-grid-item>
   <n-grid-item :span="2">
     <n-form-item :label="t('backgroundColor')">
       <n-color-picker
+        v-model:value="options.background_color"
         :show-alpha="false"
         :show-preview="true"
-        v-model:value="options.background_color"
       />
     </n-form-item>
   </n-grid-item>

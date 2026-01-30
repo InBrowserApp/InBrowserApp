@@ -1,9 +1,9 @@
 <template>
   <KsuidGeneratorOptions
     v-model:count="count"
-    v-model:timestampMode="timestampMode"
-    v-model:customDateMs="customDateMs"
-    v-model:customUnixSeconds="customUnixSeconds"
+    v-model:timestamp-mode="timestampMode"
+    v-model:custom-date-ms="customDateMs"
+    v-model:custom-unix-seconds="customUnixSeconds"
     :max-count="maxCount"
     :min-unix-seconds="minUnixSeconds"
     :max-unix-seconds="maxUnixSeconds"

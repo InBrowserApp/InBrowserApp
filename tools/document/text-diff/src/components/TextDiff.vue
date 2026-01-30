@@ -2,19 +2,19 @@
   <ToolSection>
     <n-flex justify="space-between" align="center" :wrap="false">
       <n-flex align="center" :size="8">
-        <n-button @click="importOriginal" text>
+        <n-button text @click="importOriginal">
           <template #icon>
             <n-icon :component="Document16Regular" />
           </template>
           {{ t('import-original') }}
         </n-button>
-        <n-button @click="importModified" text>
+        <n-button text @click="importModified">
           <template #icon>
             <n-icon :component="DocumentAdd16Regular" />
           </template>
           {{ t('import-modified') }}
         </n-button>
-        <n-button @click="swapTexts" text>
+        <n-button text @click="swapTexts">
           <template #icon>
             <n-icon :component="ArrowSwap20Regular" />
           </template>

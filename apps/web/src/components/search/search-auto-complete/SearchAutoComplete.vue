@@ -9,9 +9,9 @@
     :placeholder="t('searchPlaceholder')"
     clear-after-select
     :render-label="renderLabel"
-    @select="handleSearch"
     :menu-props="{ class: 'page-search-auto-complete-menu' }"
     role="search"
+    @select="handleSearch"
   />
 </template>
 

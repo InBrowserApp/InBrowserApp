@@ -2,16 +2,16 @@
   <SelectFile v-model:image="image" />
   <GeneralInfo v-model:options="generalInfoOptions" />
   <DesktopBrowser
-    :image="image"
     v-model:options="desktopOptions"
+    :image="image"
     :general-info-options="generalInfoOptions"
   />
   <iOSWebClip
-    :image="image"
     v-model:options="iosOptions"
+    :image="image"
     :general-info-options="generalInfoOptions"
   />
-  <PWA :image="image" v-model:options="pwaOptions" :general-info-options="generalInfoOptions" />
+  <PWA v-model:options="pwaOptions" :image="image" :general-info-options="generalInfoOptions" />
   <GenerateAssets
     :image="image"
     :ios-web-clip-options="iosOptions"

@@ -16,7 +16,7 @@
       </template>
 
       <template v-else>
-        <n-collapse display-directive="show" v-model:expanded-names="expandedNames">
+        <n-collapse v-model:expanded-names="expandedNames" display-directive="show">
           <n-collapse-item v-for="ip in ips" :key="ip" :title="ip" :name="ip">
             <template #header-extra>
               <IPVersionTag :ip="ip" />

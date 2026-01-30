@@ -40,7 +40,7 @@
         <n-form-item :label="t('options-title')" :show-feedback="false">
           <n-flex align="center" :size="12" wrap>
             <n-switch v-model:value="autoRun">{{ t('auto-run') }}</n-switch>
-            <n-button @click="handleRun" :disabled="autoRun">
+            <n-button :disabled="autoRun" @click="handleRun">
               {{ t('run') }}
             </n-button>
           </n-flex>
@@ -69,16 +69,24 @@ import {
 } from 'naive-ui'
 import { TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { toRefs } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { messages } from './locale/regex-tester-replacer-messages'
 
 const { t } = useI18n({ messages })
 
-const { patternStatus, patternError, flagOptions } = defineProps<{
-  patternStatus?: 'success' | 'error'
-  patternError: string
-  flagOptions: string[]
-}>()
+const props = withDefaults(
+  defineProps<{
+    patternStatus?: 'success' | 'error'
+    patternError: string
+    flagOptions: string[]
+  }>(),
+  {
+    patternStatus: undefined,
+  },
+)
+
+const { patternStatus, patternError, flagOptions } = toRefs(props)
 
 const emit = defineEmits<{ (event: 'run'): void }>()
 

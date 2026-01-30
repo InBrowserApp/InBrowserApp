@@ -3,7 +3,7 @@
     <ToolSectionHeader>{{ t('file') }}</ToolSectionHeader>
     <ToolSection>
       <template v-if="!selectedFile">
-        <n-upload @before-upload="handleBeforeUpload" :show-file-list="false">
+        <n-upload :show-file-list="false" @before-upload="handleBeforeUpload">
           <n-upload-dragger>
             <div style="margin-bottom: 12px">
               <n-icon size="48" :depth="3">

@@ -1,24 +1,24 @@
 <template>
   <n-descriptions label-placement="left" bordered :column="1" content-style="width: 100%">
     <n-descriptions-item :label="t('ip-address')">
-      <CopyToClipboardTooltip :content="ip" #="{ copy }" v-if="ip">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="ip" :content="ip" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ ip }}
         </span>
       </CopyToClipboardTooltip>
       <IPInfoDataLoadingUnknown :data="ip" />
     </n-descriptions-item>
     <n-descriptions-item :label="t('hostname')">
-      <CopyToClipboardTooltip :content="info.hostname" #="{ copy }" v-if="info.hostname">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.hostname" :content="info.hostname" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.hostname }}
         </span>
       </CopyToClipboardTooltip>
       <IPInfoDataLoadingUnknown :data="info.hostname" />
     </n-descriptions-item>
     <n-descriptions-item label-style="white-space: nowrap" :label="t('isp')">
-      <CopyToClipboardTooltip :content="info.isp" #="{ copy }" v-if="info.isp">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.isp" :content="info.isp" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.isp }}
         </span>
       </CopyToClipboardTooltip>
@@ -26,8 +26,8 @@
     </n-descriptions-item>
 
     <n-descriptions-item label-style="white-space: nowrap" :label="t('ip-organization')">
-      <CopyToClipboardTooltip :content="info.organization" #="{ copy }" v-if="info.organization">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.organization" :content="info.organization" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.organization }}
         </span>
       </CopyToClipboardTooltip>
@@ -35,8 +35,8 @@
     </n-descriptions-item>
 
     <n-descriptions-item :label="t('asn')">
-      <CopyToClipboardTooltip :content="info.asn" #="{ copy }" v-if="info.asn">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.asn" :content="info.asn" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.asn }}
         </span>
       </CopyToClipboardTooltip>
@@ -45,11 +45,11 @@
 
     <n-descriptions-item label-style="white-space: nowrap" :label="t('asn-organization')">
       <CopyToClipboardTooltip
+        v-if="info.asn_organization"
         :content="info.asn_organization"
         #="{ copy }"
-        v-if="info.asn_organization"
       >
-        <span @click="copy" class="cursor-pointer">
+        <span class="cursor-pointer" @click="copy">
           {{ info.asn_organization }}
         </span>
       </CopyToClipboardTooltip>
@@ -66,8 +66,8 @@
     </n-descriptions-item>
 
     <n-descriptions-item :label="t('country')">
-      <CopyToClipboardTooltip :content="info.country" #="{ copy }" v-if="info.country">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.country" :content="info.country" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.country }}
         </span>
       </CopyToClipboardTooltip>
@@ -75,8 +75,8 @@
     </n-descriptions-item>
 
     <n-descriptions-item :label="t('timezone')">
-      <CopyToClipboardTooltip :content="info.timezone" #="{ copy }" v-if="info.timezone">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="info.timezone" :content="info.timezone" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ info.timezone }}
         </span>
       </CopyToClipboardTooltip>

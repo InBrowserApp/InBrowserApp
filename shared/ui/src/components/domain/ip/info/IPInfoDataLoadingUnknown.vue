@@ -1,6 +1,6 @@
 <template>
-  <n-skeleton text style="width: 10em" v-if="data === undefined" />
-  <n-tag :bordered="false" size="small" type="error" v-if="data === null">{{ t('unknown') }}</n-tag>
+  <n-skeleton v-if="data === undefined" text style="width: 10em" />
+  <n-tag v-if="data === null" :bordered="false" size="small" type="error">{{ t('unknown') }}</n-tag>
 </template>
 
 <script setup lang="ts">

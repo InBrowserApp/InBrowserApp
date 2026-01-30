@@ -4,18 +4,18 @@
     <n-form-item :label="t('secret-key')">
       <n-input
         :value="secretKey"
-        @update:value="$emit('update:secretKey', $event)"
         :placeholder="t('secret-key-placeholder')"
         type="password"
         show-password-on="click"
         :input-props="{ autocomplete: 'off' }"
+        @update:value="$emit('update:secretKey', $event)"
       />
     </n-form-item>
     <n-form-item :label="t('algorithm')" :show-feedback="false">
       <n-select
         :value="algorithm"
-        @update:value="$emit('update:algorithm', $event)"
         :options="ALGORITHM_OPTIONS"
+        @update:value="$emit('update:algorithm', $event)"
       />
     </n-form-item>
   </ToolSection>

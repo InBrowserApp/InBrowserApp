@@ -1,6 +1,6 @@
 <template>
   <CsvToJsonToolbar
-    v-model:showSettings="showSettings"
+    v-model:show-settings="showSettings"
     :rendered-json="renderedJson"
     :download-url="downloadUrl ?? undefined"
     @import="importFromFile"
@@ -10,29 +10,29 @@
     <n-form label-placement="left" :show-feedback="false">
       <CsvToJsonSettingsBasics
         v-model:noheader="noheader"
-        v-model:headersText="headersText"
+        v-model:headers-text="headersText"
         v-model:delimiter="delimiter"
         v-model:quote="quote"
         v-model:trim="trim"
-        v-model:checkType="checkType"
-        v-model:skipEmpty="skipEmpty"
-        v-model:escapeChar="escapeChar"
+        v-model:check-type="checkType"
+        v-model:skip-empty="skipEmpty"
+        v-model:escape-char="escapeChar"
         v-model:newline="newline"
       />
       <CsvToJsonSettingsAdvanced
         v-model:preview="preview"
         v-model:comments="comments"
-        v-model:fastMode="fastMode"
-        v-model:skipFirstNLines="skipFirstNLines"
-        v-model:delimitersToGuessText="delimitersToGuessText"
-        v-model:includeColumns="includeColumns"
-        v-model:ignoreColumns="ignoreColumns"
+        v-model:fast-mode="fastMode"
+        v-model:skip-first-n-lines="skipFirstNLines"
+        v-model:delimiters-to-guess-text="delimitersToGuessText"
+        v-model:include-columns="includeColumns"
+        v-model:ignore-columns="ignoreColumns"
         v-model:spaces="spaces"
       />
     </n-form>
   </n-collapse-transition>
 
-  <CsvToJsonEditor v-model:csvText="csvText" :rendered-json="renderedJson" />
+  <CsvToJsonEditor v-model:csv-text="csvText" :rendered-json="renderedJson" />
 </template>
 
 <script setup lang="ts">

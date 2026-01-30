@@ -45,8 +45,8 @@
         type="primary"
         :loading="isConverting"
         :disabled="!canConvert"
-        @click="$emit('convert')"
         style="margin-top: 12px"
+        @click="$emit('convert')"
       >
         <template #icon>
           <n-icon><Wand16Regular /></n-icon>

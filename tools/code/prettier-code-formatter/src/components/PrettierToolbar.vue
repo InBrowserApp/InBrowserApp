@@ -1,7 +1,7 @@
 <template>
   <n-flex align="center" justify="space-between" wrap>
     <n-flex align="center" wrap>
-      <n-button @click="emitImport" text>
+      <n-button text @click="emitImport">
         <template #icon>
           <n-icon :component="Document16Regular" />
         </template>

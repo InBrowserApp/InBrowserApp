@@ -3,10 +3,10 @@
   <ToolSection>
     <n-form-item :show-label="false">
       <n-input-number
+        v-model:value="value"
         :min="1"
         :max="3999"
         style="width: 100%"
-        v-model:value="value"
         :placeholder="t('arabicPlaceholder')"
         size="large"
       />

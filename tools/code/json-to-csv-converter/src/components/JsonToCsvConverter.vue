@@ -2,13 +2,13 @@
   <ToolSection>
     <n-flex align="center" justify="space-between">
       <n-flex align="center">
-        <n-button @click="importFromFile" text>
+        <n-button text @click="importFromFile">
           <template #icon>
             <n-icon :component="Document16Regular" />
           </template>
           {{ t('import-from-file') }}
         </n-button>
-        <n-button @click="showSettings = !showSettings" text>
+        <n-button text @click="showSettings = !showSettings">
           <template #icon>
             <n-icon :component="Settings16Regular" />
           </template>

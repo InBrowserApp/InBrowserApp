@@ -8,8 +8,8 @@
           <n-button
             text
             :disabled="urls.length === 1"
-            @click="removeUrl(index)"
             :data-testid="`remove-url-${index}`"
+            @click="removeUrl(index)"
           >
             <template #icon>
               <n-icon :component="Delete16Regular" />
@@ -48,7 +48,7 @@
         </n-space>
       </n-card>
 
-      <n-button type="primary" dashed @click="addUrl" data-testid="add-url">
+      <n-button type="primary" dashed data-testid="add-url" @click="addUrl">
         <template #icon>
           <n-icon :component="Add16Regular" />
         </template>

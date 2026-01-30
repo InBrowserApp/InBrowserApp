@@ -1,5 +1,5 @@
 <template>
-  <n-button @click="emit('click')" text>
+  <n-button text @click="emit('click')">
     <template #icon>
       <slot name="icon">
         <n-icon :component="Icon" />

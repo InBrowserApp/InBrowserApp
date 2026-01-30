@@ -6,9 +6,9 @@
         <n-button
           v-if="!isPlaying"
           type="primary"
-          @click="emit('start')"
           :loading="isStarting"
           :disabled="!audioAvailable || isStarting"
+          @click="emit('start')"
         >
           <template #icon>
             <n-icon :component="PlayIcon" />

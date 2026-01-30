@@ -2,13 +2,13 @@
   <ToolSectionHeader>{{ t('macAddress') }}</ToolSectionHeader>
   <MACInput
     :mac="mac"
-    :networkInterface="networkInterface"
+    :network-interface="networkInterface"
     @update:mac="mac = $event"
-    @update:networkInterface="networkInterface = $event"
+    @update:network-interface="networkInterface = $event"
   />
   <template v-if="mac !== ''">
     <ToolSectionHeader>{{ t('ipv6LinkLocalAddress') }}</ToolSectionHeader>
-    <IPv6LinkLocalResult :mac="mac" :networkInterface="networkInterface" />
+    <IPv6LinkLocalResult :mac="mac" :network-interface="networkInterface" />
   </template>
 </template>
 

@@ -3,19 +3,19 @@
     <GoogleSearchResult
       :image="image"
       :options="options"
-      :generalInfoOptions="generalInfoOptions"
+      :general-info-options="generalInfoOptions"
     />
     <n-divider />
     <ChromeTabPreview
       :image="image"
       :options="options"
-      :generalInfoOptions="generalInfoOptions"
+      :general-info-options="generalInfoOptions"
       :dark="false"
     />
     <ChromeTabPreview
       :image="image"
       :options="options"
-      :generalInfoOptions="generalInfoOptions"
+      :general-info-options="generalInfoOptions"
       :dark="true"
     />
     <ChromeTabDarkNote v-if="image?.type === 'image/svg+xml'" />

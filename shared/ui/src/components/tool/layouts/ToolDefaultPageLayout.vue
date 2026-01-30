@@ -17,7 +17,7 @@
     <slot />
 
     <slot name="related-tools">
-      <RelatedTools :tool="info" v-if="!hideRelatedTools" />
+      <RelatedTools v-if="!hideRelatedTools" :tool="info" />
     </slot>
   </div>
 </template>

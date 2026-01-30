@@ -8,9 +8,9 @@
   >
     <ToolSectionHeader>{{ t('mergeAndExcludeResult') }}</ToolSectionHeader>
     <CIDRsMergeExcludeResult
-      :cidrsToMerge="cidrsToMerge"
-      :cidrsToExclude="cidrsToExclude"
       v-if="cidrsToMerge && cidrsToExclude"
+      :cidrs-to-merge="cidrsToMerge"
+      :cidrs-to-exclude="cidrsToExclude"
     />
   </template>
 </template>

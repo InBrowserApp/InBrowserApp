@@ -1,16 +1,16 @@
 <template>
   <n-flex align="center" :size="12" wrap>
     <n-text depth="3">{{ t('presets') }}</n-text>
-    <n-button size="small" @click="emit('apply-preset', 'dice')" data-testid="preset-dice">
+    <n-button size="small" data-testid="preset-dice" @click="emit('apply-preset', 'dice')">
       {{ t('presetDice') }}
     </n-button>
-    <n-button size="small" @click="emit('apply-preset', 'ten')" data-testid="preset-ten">
+    <n-button size="small" data-testid="preset-ten" @click="emit('apply-preset', 'ten')">
       {{ t('presetTen') }}
     </n-button>
-    <n-button size="small" @click="emit('apply-preset', 'hundred')" data-testid="preset-hundred">
+    <n-button size="small" data-testid="preset-hundred" @click="emit('apply-preset', 'hundred')">
       {{ t('presetHundred') }}
     </n-button>
-    <n-button size="small" @click="emit('apply-preset', 'lotto')" data-testid="preset-lotto">
+    <n-button size="small" data-testid="preset-lotto" @click="emit('apply-preset', 'lotto')">
       {{ t('presetLotto') }}
     </n-button>
   </n-flex>

@@ -6,17 +6,17 @@
   <ToolSectionHeader>{{ t('presets') }}</ToolSectionHeader>
   <ToolSection>
     <n-flex :wrap="true" :size="8">
-      <n-button size="small" @click="onApplyPreset('allowAll')" data-testid="preset-allow-all">
+      <n-button size="small" data-testid="preset-allow-all" @click="onApplyPreset('allowAll')">
         {{ t('presetAllowAll') }}
       </n-button>
       <n-button
         size="small"
-        @click="onApplyPreset('disallowAll')"
         data-testid="preset-disallow-all"
+        @click="onApplyPreset('disallowAll')"
       >
         {{ t('presetDisallowAll') }}
       </n-button>
-      <n-button size="small" @click="onApplyPreset('blockAdmin')" data-testid="preset-block-admin">
+      <n-button size="small" data-testid="preset-block-admin" @click="onApplyPreset('blockAdmin')">
         {{ t('presetBlockAdmin') }}
       </n-button>
     </n-flex>

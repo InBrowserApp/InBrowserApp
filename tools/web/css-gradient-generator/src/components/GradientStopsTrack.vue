@@ -1,5 +1,5 @@
 <template>
-  <div class="track" ref="trackRef" data-testid="stops-track" @click="handleTrackClick">
+  <div ref="trackRef" class="track" data-testid="stops-track" @click="handleTrackClick">
     <div class="track__fill" :style="{ backgroundImage: gradientCss }" />
     <button
       v-for="stop in sortedStops"

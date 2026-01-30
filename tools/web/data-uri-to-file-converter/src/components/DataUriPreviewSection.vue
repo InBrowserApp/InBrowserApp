@@ -2,7 +2,7 @@
   <template v-if="previewKind && previewKind !== 'text'">
     <ToolSectionHeader>{{ t('preview') }}</ToolSectionHeader>
     <ToolSection>
-      <n-card size="small" v-if="previewKind === 'image'">
+      <n-card v-if="previewKind === 'image'" size="small">
         <img :src="previewUrl" alt="Preview" style="max-width: 100%" />
       </n-card>
       <audio v-else-if="previewKind === 'audio'" :src="previewUrl" controls style="width: 100%" />

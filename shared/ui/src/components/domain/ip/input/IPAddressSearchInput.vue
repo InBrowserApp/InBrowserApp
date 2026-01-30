@@ -1,14 +1,14 @@
 <template>
   <n-input-group>
-    <n-input :placeholder="t('placeholder')" v-model:value="value" @keydown.enter="goToIPInfo" />
+    <n-input v-model:value="value" :placeholder="t('placeholder')" @keydown.enter="goToIPInfo" />
     <n-button
       ghost
-      @click="goToIPInfo"
       tag="a"
       v-bind="{
         ...(href && { href: href }),
       }"
       :disabled="ipDomain === ''"
+      @click="goToIPInfo"
     >
       <template #icon>
         <n-icon>

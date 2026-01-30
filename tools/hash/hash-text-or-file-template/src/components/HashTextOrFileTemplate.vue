@@ -8,9 +8,9 @@
   </ToolSectionHeader>
   <ToolSection>
     <HashResult
+      v-show="textOrFile"
       :hash="props.hash"
       :content="textOrFile"
-      v-show="textOrFile"
       :hide-hex="props.hideHex"
       :hide-base64="props.hideBase64"
       :hide-binary="props.hideBinary"

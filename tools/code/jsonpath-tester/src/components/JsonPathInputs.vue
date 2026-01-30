@@ -7,13 +7,13 @@
           <n-flex align="center" justify="space-between" class="field-label">
             <span>{{ t('jsonLabel') }}</span>
             <n-flex align="center" :size="8" class="field-action">
-              <n-button @click="importFromFile" text>
+              <n-button text @click="importFromFile">
                 <template #icon>
                   <n-icon :component="Document16Regular" />
                 </template>
                 {{ t('import-from-file') }}
               </n-button>
-              <n-button @click="formatJson" text>
+              <n-button text @click="formatJson">
                 <template #icon>
                   <n-icon :component="TextNumberFormat20Regular" />
                 </template>

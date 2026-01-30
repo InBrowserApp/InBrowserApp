@@ -2,6 +2,10 @@
   <n-grid cols="1 l:2" :x-gap="24" :y-gap="24" responsive="screen">
     <n-gi>
       <LocalFontBookLibraryCard
+        v-model:search-query="searchQuery"
+        v-model:filter-style="filterStyle"
+        v-model:sort-by="sortBy"
+        v-model:group-by-family="groupByFamily"
         :title="labels.libraryTitle"
         :is-supported="isSupported"
         :is-loading="isLoading"
@@ -13,10 +17,6 @@
         :display-groups="displayGroups"
         :active-font-id="activeFontId"
         :font-card-style="fontCardStyle"
-        v-model:search-query="searchQuery"
-        v-model:filter-style="filterStyle"
-        v-model:sort-by="sortBy"
-        v-model:group-by-family="groupByFamily"
         @load-fonts="loadFonts"
         @select-font="setActiveFont"
       />
@@ -24,10 +24,10 @@
 
     <n-gi>
       <LocalFontBookPreviewCard
-        :active-font="activeFont"
-        :preview-style="previewStyle"
         v-model:sample-text="sampleText"
         v-model:dark-background="darkBackground"
+        :active-font="activeFont"
+        :preview-style="previewStyle"
       />
       <LocalFontBookDetailsCard :active-font="activeFont" :css-snippet="cssSnippet" />
     </n-gi>

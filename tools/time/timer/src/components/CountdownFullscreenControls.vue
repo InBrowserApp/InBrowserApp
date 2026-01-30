@@ -1,19 +1,19 @@
 <template>
   <div class="fullscreen-controls" data-testid="fullscreen-controls">
     <n-flex :size="8" align="center">
-      <n-button type="primary" @click="toggleRun" data-testid="fullscreen-start">
+      <n-button type="primary" data-testid="fullscreen-start" @click="toggleRun">
         <template #icon>
           <n-icon :component="toggleIcon" />
         </template>
         {{ toggleLabel }}
       </n-button>
-      <n-button :disabled="!canReset" @click="reset" data-testid="fullscreen-reset">
+      <n-button :disabled="!canReset" data-testid="fullscreen-reset" @click="reset">
         <template #icon>
           <n-icon :component="ArrowCounterclockwise16Regular" />
         </template>
         {{ t('reset') }}
       </n-button>
-      <n-button @click="exitFullscreen" data-testid="fullscreen-exit">
+      <n-button data-testid="fullscreen-exit" @click="exitFullscreen">
         <template #icon>
           <n-icon :component="FullScreenMinimize24Regular" />
         </template>

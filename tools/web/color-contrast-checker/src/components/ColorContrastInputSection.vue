@@ -36,7 +36,7 @@
       </n-gi>
     </n-grid>
     <n-flex class="controls" align="center" justify="end" :size="12" wrap>
-      <n-button secondary @click="onSwap" data-testid="swap-button">
+      <n-button secondary data-testid="swap-button" @click="onSwap">
         <template #icon>
           <n-icon :component="ArrowSwap20Regular" />
         </template>

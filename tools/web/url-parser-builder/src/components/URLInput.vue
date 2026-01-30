@@ -1,7 +1,7 @@
 <template>
   <n-input
-    style="width: 100%"
     v-model:value="url"
+    style="width: 100%"
     :placeholder="t('url-placeholder')"
     :autosize="{ minRows: 3, maxRows: 6 }"
     :status="urlStatus"

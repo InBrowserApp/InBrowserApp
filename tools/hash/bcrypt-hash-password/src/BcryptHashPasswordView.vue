@@ -25,9 +25,9 @@
       <CopyToClipboardTooltip :content="result" #="{ copy }">
         <n-text
           code
-          @click="copy"
           class="bcrypt-result"
           :class="{ 'bcrypt-result-processing': processing }"
+          @click="copy"
         >
           {{ result }}
         </n-text>

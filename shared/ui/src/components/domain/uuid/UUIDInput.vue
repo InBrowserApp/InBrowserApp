@@ -4,7 +4,7 @@
     :placeholder="placeholder ?? uuidv4()"
     :status="validated ? undefined : 'error'"
   >
-    <template #suffix v-if="showRandom ?? true">
+    <template v-if="showRandom ?? true" #suffix>
       <n-icon style="cursor: pointer" :component="RefreshOutline" @click="uuidRef = uuidv4()" />
     </template>
   </n-input>

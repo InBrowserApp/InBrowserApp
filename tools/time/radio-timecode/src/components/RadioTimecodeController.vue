@@ -2,7 +2,7 @@
   <ToolSectionHeader>{{ t('controls') }}</ToolSectionHeader>
   <ToolSection>
     <RadioTimecodeControlsSection
-      v-model:stationId="stationId"
+      v-model:station-id="stationId"
       :station-options="stationOptions"
       :is-playing="isPlaying"
       :is-starting="isStarting"
@@ -17,7 +17,7 @@
   <ToolSection>
     <RadioTimecodeOutputSection
       v-model:volume="volume"
-      v-model:offsetMs="offsetMs"
+      v-model:offset-ms="offsetMs"
       :carrier-hz="station?.carrierHz"
       :base-hz="station?.baseHz"
     />

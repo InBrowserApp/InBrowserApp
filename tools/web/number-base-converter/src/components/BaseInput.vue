@@ -6,10 +6,10 @@
     </n-flex>
     <n-input
       :value="modelValue"
-      @update:value="$emit('update:modelValue', $event)"
       :status="status"
       :placeholder="placeholder"
       class="monospace-input"
+      @update:value="$emit('update:modelValue', $event)"
     />
   </ToolSection>
 </template>

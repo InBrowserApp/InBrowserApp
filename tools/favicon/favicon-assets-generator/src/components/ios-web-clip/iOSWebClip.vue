@@ -9,7 +9,7 @@
       <iOSWebClipPreview :image="image" :options="options" :name="generalInfoOptions.short_name" />
     </n-grid-item>
     <n-grid-item span="5 s:3">
-      <iOSWebClipSettings :image="image" v-model:options="options" />
+      <iOSWebClipSettings v-model:options="options" :image="image" />
     </n-grid-item>
   </n-grid>
 </template>

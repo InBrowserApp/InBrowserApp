@@ -2,8 +2,8 @@
   <NanoidGeneratorOptions
     v-model:count="count"
     v-model:length="length"
-    v-model:alphabetPreset="alphabetPreset"
-    v-model:customAlphabet="customAlphabet"
+    v-model:alphabet-preset="alphabetPreset"
+    v-model:custom-alphabet="customAlphabet"
     :max-count="maxCount"
     :max-length="maxLength"
     :alphabet-error="alphabetError"

@@ -33,13 +33,13 @@ vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
     inheritAttrs: false,
-    emits: ['click'],
     props: {
       disabled: {
         type: Boolean,
         default: false,
       },
     },
+    emits: ['click'],
     template:
       '<button v-bind="$attrs" :disabled="disabled" @click="!disabled && $emit(\'click\')"><slot name="icon" /><slot /></button>',
   })

@@ -26,8 +26,8 @@
       <n-flex :size="12">
         <RegenerateButton
           :disabled="!canRoll && !isRolling"
-          @click="emit('toggle-rolling')"
           data-testid="regenerate"
+          @click="emit('toggle-rolling')"
         >
           <template #icon>
             <n-icon :component="rollingIcon" />
@@ -53,8 +53,8 @@
         <n-button
           text
           :disabled="!hasResults"
-          @click="openFullscreen"
           data-testid="enter-fullscreen"
+          @click="openFullscreen"
         >
           <template #icon>
             <n-icon :component="EnterFullscreenIcon" />

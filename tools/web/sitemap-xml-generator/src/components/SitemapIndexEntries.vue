@@ -13,8 +13,8 @@
           <n-button
             text
             :disabled="sitemaps.length === 1"
-            @click="removeSitemap(index)"
             :data-testid="`remove-sitemap-${index}`"
+            @click="removeSitemap(index)"
           >
             <template #icon>
               <n-icon :component="Delete16Regular" />
@@ -36,7 +36,7 @@
         </n-space>
       </n-card>
 
-      <n-button type="primary" dashed @click="addSitemap" data-testid="add-sitemap">
+      <n-button type="primary" dashed data-testid="add-sitemap" @click="addSitemap">
         <template #icon>
           <n-icon :component="Add16Regular" />
         </template>

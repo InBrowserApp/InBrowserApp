@@ -49,8 +49,8 @@
         :key="preset"
         size="small"
         :disabled="running"
-        @click="applyPreset(preset)"
         :data-testid="`preset-${preset}`"
+        @click="applyPreset(preset)"
       >
         {{ t('presetMinutes', { minutes: preset }) }}
       </n-button>

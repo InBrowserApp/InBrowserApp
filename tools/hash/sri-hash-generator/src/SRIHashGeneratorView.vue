@@ -9,11 +9,11 @@
     </ToolSectionHeader>
     <ToolSection v-show="textOrFile">
       <n-descriptions
+        v-if="sri"
         label-placement="left"
         bordered
         :column="1"
         content-style="width: 100%"
-        v-if="sri"
       >
         <n-descriptions-item>
           <template #label>
@@ -23,8 +23,8 @@
             <n-text
               code
               class="hash-result"
-              @click="copy"
               :class="{ 'hash-result-evaluating': processing }"
+              @click="copy"
               >{{ sri.sha256 }}</n-text
             >
           </CopyToClipboardTooltip>
@@ -38,8 +38,8 @@
             <n-text
               code
               class="hash-result"
-              @click="copy"
               :class="{ 'hash-result-evaluating': processing }"
+              @click="copy"
               >{{ sri.sha384 }}</n-text
             >
           </CopyToClipboardTooltip>
@@ -53,8 +53,8 @@
             <n-text
               code
               class="hash-result"
-              @click="copy"
               :class="{ 'hash-result-evaluating': processing }"
+              @click="copy"
               >{{ sri.sha512 }}</n-text
             >
           </CopyToClipboardTooltip>

@@ -27,13 +27,13 @@
     <n-descriptions-item :label="t('binary')">
       <n-text code>{{ result.binary }}</n-text>
     </n-descriptions-item>
-    <n-descriptions-item :label="t('algorithm')" v-if="result.algorithm">
+    <n-descriptions-item v-if="result.algorithm" :label="t('algorithm')">
       {{ algorithmLabel }}
     </n-descriptions-item>
-    <n-descriptions-item :label="t('macAddress')" v-if="result.macAddress">
+    <n-descriptions-item v-if="result.macAddress" :label="t('macAddress')">
       <n-text code>{{ result.macAddress }}</n-text>
     </n-descriptions-item>
-    <n-descriptions-item :label="t('timestamp')" v-if="result.timestamp">
+    <n-descriptions-item v-if="result.timestamp" :label="t('timestamp')">
       <n-text code>{{ result.timestamp }}</n-text>
       (<n-time :time="result.timestamp" />, <n-time :time="result.timestamp" type="relative" />)
     </n-descriptions-item>

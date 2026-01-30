@@ -3,7 +3,7 @@
     <ToolSectionHeader>{{ t('uploadImage') }}</ToolSectionHeader>
 
     <template v-if="!file">
-      <n-upload @before-upload="handleBeforeUpload" accept=".png,image/png">
+      <n-upload accept=".png,image/png" @before-upload="handleBeforeUpload">
         <n-upload-dragger>
           <div style="margin-bottom: 12px">
             <n-icon size="48" :depth="3">
