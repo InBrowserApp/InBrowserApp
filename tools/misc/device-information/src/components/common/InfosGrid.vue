@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped>
 .info-grid {
   display: grid;

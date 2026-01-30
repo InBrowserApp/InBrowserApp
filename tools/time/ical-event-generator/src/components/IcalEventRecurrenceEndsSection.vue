@@ -55,7 +55,6 @@ const emit = defineEmits<{
   (event: 'update:recurrenceEndMode', value: RecurrenceEndMode): void
   (event: 'update:recurrenceCount', value: number): void
   (event: 'update:recurrenceUntilInput', value: string): void
-  (event: 'update:recurrenceFrequency', value: RecurrenceFrequency): void
 }>()
 
 const { t } = useI18n()
