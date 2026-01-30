@@ -18,9 +18,7 @@ import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const emit = defineEmits<{
-  (event: 'update:file', file: File): void
-}>()
+const fileModel = defineModel<Blob | undefined>('file')
 const { t } = useI18n()
 const message = useMessage()
 
@@ -32,7 +30,7 @@ async function beforeUpload(data: { file: UploadFileInfo; fileList: UploadFileIn
     message.error(t('onlyImageFilesAreAllowed'))
     return false
   } else {
-    emit('update:file', data.file.file)
+    fileModel.value = data.file.file ?? undefined
     return false
   }
 }

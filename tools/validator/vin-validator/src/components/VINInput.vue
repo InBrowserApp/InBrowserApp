@@ -5,7 +5,7 @@
       :placeholder="t('placeholder')"
       :status="inputStatus"
       size="large"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     >
       <template #prefix>
         <NIcon :component="TextNumberFormatIcon" :size="24" />
@@ -22,28 +22,25 @@ import TextNumberFormatIcon from '@vicons/fluent/TextNumberFormat20Regular'
 import type { VINValidationResult } from '../data/vin'
 
 const props = defineProps<{
-  modelValue: string
   validationResult: VINValidationResult
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 
 const inputStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const validationStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const feedbackMessage = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   if (props.validationResult.isValid) return t('valid')
   if (!props.validationResult.isLengthValid) return t('invalidLength')
   if (!props.validationResult.isCharacterValid) return t('invalidCharacters')

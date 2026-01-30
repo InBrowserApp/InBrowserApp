@@ -13,14 +13,14 @@ import { useI18n } from 'vue-i18n'
 // @ts-ignore
 import { parseIp } from 'ip-bigint'
 
-const emit = defineEmits<{
-  'update:ipRange': [[string, string]]
-}>()
+const ipRangeModel = defineModel<[string, string]>('ipRange', {
+  default: () => ['', ''],
+})
 
 const { t } = useI18n()
 
 const placeholderText = computed(() => [t('startIP'), t('endIP')] as [string, string])
-const ipRange = ref<[string, string]>(['', ''])
+const ipRange = ref<[string, string]>(ipRangeModel.value ?? ['', ''])
 const rule: FormItemRule = {
   trigger: ['input', 'change', 'blur'],
   validator() {
@@ -51,11 +51,11 @@ watch(ipRange, (value: [string, string]) => {
     const ip1Obj = parseIp(value[0])
     const ip2Obj = parseIp(value[1])
     if (ip1Obj.version === ip2Obj.version && ip1Obj.number <= ip2Obj.number) {
-      emit('update:ipRange', value)
+      ipRangeModel.value = value
       return
     }
   }
-  emit('update:ipRange', ['', ''])
+  ipRangeModel.value = ['', '']
 })
 </script>
 

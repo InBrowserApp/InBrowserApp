@@ -29,9 +29,7 @@ import isCidr from 'is-cidr'
 import { watchDeep } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
-const emit = defineEmits<{
-  'update:cidrs': [string[] | undefined]
-}>()
+const cidrsModel = defineModel<string[] | undefined>('cidrs')
 
 const { t } = useI18n()
 
@@ -56,10 +54,10 @@ watchDeep(model, () => {
   const cidrs = model.value.cidrs
   // all cidrs are valid
   if (cidrs.every((cidr) => isCidr(cidr) !== 0)) {
-    emit('update:cidrs', cidrs)
+    cidrsModel.value = cidrs
     return
   } else {
-    emit('update:cidrs', undefined)
+    cidrsModel.value = undefined
     return
   }
 })

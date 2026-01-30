@@ -30,14 +30,13 @@ import { useStorage } from '@vueuse/core'
 import { ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 
-const emit = defineEmits<{
-  'update:results': [
-    {
-      question: { name: string; type: string }
-      result: DNSJSONResponse
-    }[],
-  ]
-}>()
+type DNSLookupResult = {
+  question: { name: string; type: string }
+  result: DNSJSONResponse
+}
+const resultsModel = defineModel<DNSLookupResult[]>('results', {
+  default: () => [],
+})
 const { t } = useI18n()
 const recordTypes = useStorage('dns-lookup-record-types', ['A', 'AAAA'])
 const domain = useStorage('dns-lookup-domain', 'example.com')
@@ -62,7 +61,7 @@ async function lookup() {
       }),
     )
 
-    emit('update:results', responses)
+    resultsModel.value = responses
   } catch (e) {
     console.error(e)
   } finally {

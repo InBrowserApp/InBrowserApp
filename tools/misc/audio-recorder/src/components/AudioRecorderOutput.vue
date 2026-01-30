@@ -24,7 +24,7 @@
         <n-input
           :value="fileName"
           :placeholder="t('fileNamePlaceholder')"
-          @update:value="emit('update:fileName', $event)"
+          @update:value="fileName = $event"
         />
         <n-text>.{{ fileExtension }}</n-text>
       </n-flex>
@@ -60,11 +60,10 @@ const props = defineProps<{
   recordingBlob: Blob | null
   recordingUrl?: string
   mimeType: string
-  fileName: string
   onClear: () => void
 }>()
 
-const emit = defineEmits<{ 'update:fileName': [string] }>()
+const fileName = defineModel<string>('fileName', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 
@@ -74,7 +73,7 @@ const fileSizeLabel = computed(() =>
   props.recordingBlob ? formatFileSize(props.recordingBlob.size) : '0 B',
 )
 const downloadName = computed(() => {
-  const base = props.fileName.trim() || t('fileNamePlaceholder')
+  const base = fileName.value.trim() || t('fileNamePlaceholder')
   return base + '.' + fileExtension.value
 })
 </script>

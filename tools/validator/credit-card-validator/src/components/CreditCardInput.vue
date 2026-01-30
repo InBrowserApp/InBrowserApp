@@ -9,7 +9,7 @@
       :placeholder="t('placeholder')"
       :status="inputStatus"
       size="large"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     >
       <template #prefix>
         <NIcon v-if="validationResult.brand" :component="validationResult.brand.icon" :size="24" />
@@ -27,28 +27,25 @@ import CreditCardIcon from '@vicons/fluent/Payment20Regular'
 import type { ValidationResult } from '../data/cardBrands'
 
 const props = defineProps<{
-  modelValue: string
   validationResult: ValidationResult
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 
 const inputStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const validationStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const feedbackMessage = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   if (props.validationResult.isValid) return t('valid')
   if (!props.validationResult.isLuhnValid) return t('invalidLuhn')
   if (!props.validationResult.isLengthValid) return t('invalidLength')

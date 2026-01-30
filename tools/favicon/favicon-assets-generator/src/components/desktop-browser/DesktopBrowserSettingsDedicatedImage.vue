@@ -15,25 +15,16 @@
 <script setup lang="ts">
 import { NImage } from 'naive-ui'
 import type { DesktopBrowserOptions } from '../../utils/favicon-generator/desktop-browser'
-import { useVModel, useObjectUrl } from '@vueuse/core'
+import { useObjectUrl } from '@vueuse/core'
 import ImageUpload from '../ImageUpload.vue'
 import RemoveButton from '../common/RemoveButton.vue'
 import NotUsingDedicatedImageNote from '../common/NotUsingDedicatedImageNote.vue'
 import UsingDedicatedImageNote from '../common/UsingDedicatedImageNote.vue'
-import { toRef, computed } from 'vue'
+import { computed } from 'vue'
 
-const props = defineProps<{
-  options: DesktopBrowserOptions
-}>()
+const options = defineModel<DesktopBrowserOptions>('options', { required: true })
 
-const emit = defineEmits<{
-  'update:options': [DesktopBrowserOptions]
-}>()
-
-const options = useVModel(props, 'options', emit)
-
-const optionsRef = toRef(props, 'options')
-const image = computed<Blob | undefined>(() => optionsRef.value.image)
+const image = computed<Blob | undefined>(() => options.value.image)
 
 const imageURL = useObjectUrl(image)
 </script>

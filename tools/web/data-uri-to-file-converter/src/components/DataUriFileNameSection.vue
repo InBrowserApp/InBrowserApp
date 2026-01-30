@@ -1,31 +1,19 @@
 <template>
   <ToolSection>
     <n-form-item :label="t('file-name')" :show-feedback="false">
-      <n-input v-model:value="fileNameModel" :placeholder="t('file-name-placeholder')" />
+      <n-input v-model:value="fileName" :placeholder="t('file-name-placeholder')" />
     </n-form-item>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NFormItem, NInput } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 
-const props = defineProps<{
-  fileName: string
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:fileName', value: string): void
-}>()
+const fileName = defineModel<string>('fileName', { required: true })
 
 const { t } = useI18n()
-
-const fileNameModel = computed({
-  get: () => props.fileName,
-  set: (value: string) => emit('update:fileName', value),
-})
 </script>
 
 <i18n lang="json">

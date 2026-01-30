@@ -1,7 +1,7 @@
 <template>
   <n-input
     v-model:value="addressRef"
-    :placeholder="props.address"
+    :placeholder="addressModel"
     :status="validated ? undefined : 'error'"
   >
     <template #suffix>
@@ -22,15 +22,8 @@ import validator from 'validator'
 import RefreshOutline from '@vicons/ionicons5/RefreshOutline'
 import { randomMACAddress } from '@utils/mac-address'
 
-const props = defineProps<{
-  address: string
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:address', address: string): void
-}>()
-
-const addressRef = ref(props.address)
+const addressModel = defineModel<string>('address', { required: true })
+const addressRef = ref(addressModel.value)
 
 const validated = computed(() => {
   return validator.isMACAddress(addressRef.value)
@@ -40,7 +33,7 @@ watch(
   () => addressRef.value,
   (address: string) => {
     if (validated.value) {
-      emit('update:address', address)
+      addressModel.value = address
     }
   },
 )

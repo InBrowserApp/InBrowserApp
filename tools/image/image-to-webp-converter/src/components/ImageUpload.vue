@@ -58,7 +58,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useMessage } from 'naive-ui'
 import { filesize } from 'filesize'
 import type { UploadFileInfo } from 'naive-ui'
@@ -68,7 +67,6 @@ import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 const props = defineProps<{
-  files: File[]
   title: string
   dragDropText: string
   supportText: string
@@ -77,10 +75,6 @@ const props = defineProps<{
   clearAllLabel: string
   invalidTypeMessage: string
   duplicateMessage: string
-}>()
-
-const emit = defineEmits<{
-  'update:files': [files: File[]]
 }>()
 
 const message = useMessage()
@@ -103,7 +97,7 @@ const imageExtensions = new Set([
   'jfif',
 ])
 
-const files = computed(() => props.files)
+const files = defineModel<File[]>('files', { required: true })
 
 function formatSize(size: number) {
   return filesize(size) as string
@@ -127,19 +121,16 @@ function handleBeforeUpload(data: { file: UploadFileInfo }) {
     return false
   }
 
-  emit('update:files', [...files.value, selectedFile])
+  files.value = [...files.value, selectedFile]
   return false
 }
 
 function handleRemove(file: File) {
-  emit(
-    'update:files',
-    files.value.filter((item) => fileKey(item) !== fileKey(file)),
-  )
+  files.value = files.value.filter((item) => fileKey(item) !== fileKey(file))
 }
 
 function handleClearAll() {
-  emit('update:files', [])
+  files.value = []
 }
 
 function isValidImageFile(file: File) {

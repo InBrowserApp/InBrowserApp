@@ -15,23 +15,17 @@
 <script setup lang="ts">
 import { NTabs, NTabPane } from 'naive-ui'
 import type { iOSWebClipOptions } from '../../utils/favicon-generator/ios-web-clip'
-import { useVModel } from '@vueuse/core'
 import IOSWebClipSettingsDisplay from './iOSWebClipSettingsDisplay.vue'
 import IOSWebClipSettingsDedicatedImage from './iOSWebClipSettingsDedicatedImage.vue'
 import IOSWebClipSettingsDownload from './iOSWebClipSettingsDownload.vue'
 import { useI18n } from 'vue-i18n'
 import { messages } from '../locale/settings-messages'
 
-const props = defineProps<{
+defineProps<{
   image: Blob | undefined
-  options: iOSWebClipOptions
-}>()
-
-const emit = defineEmits<{
-  'update:options': [iOSWebClipOptions]
 }>()
 
 const { t } = useI18n({ messages })
 
-const options = useVModel(props, 'options', emit)
+const options = defineModel<iOSWebClipOptions>('options', { required: true })
 </script>

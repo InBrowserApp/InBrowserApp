@@ -10,14 +10,9 @@ import isCidr from 'is-cidr'
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const props = defineProps<{
-  cidr?: string
-}>()
-const emit = defineEmits<{
-  'update:cidr': [string]
-}>()
+const cidrModel = defineModel<string>('cidr', { default: '' })
 const { t } = useI18n()
-const cidr = ref(props.cidr ?? '')
+const cidr = ref(cidrModel.value ?? '')
 const rule: FormItemRule = {
   trigger: ['input', 'change', 'blur'],
   validator() {
@@ -29,9 +24,9 @@ const rule: FormItemRule = {
 
 watch(cidr, (value: string) => {
   if (isCidr(value) !== 0) {
-    emit('update:cidr', value)
+    cidrModel.value = value
   } else {
-    emit('update:cidr', '')
+    cidrModel.value = ''
   }
 })
 </script>

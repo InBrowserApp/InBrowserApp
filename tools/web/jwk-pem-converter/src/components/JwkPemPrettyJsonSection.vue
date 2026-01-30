@@ -8,25 +8,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NFlex, NSwitch, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 
-const props = defineProps<{
-  modelValue: boolean
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:modelValue', value: boolean): void
-}>()
-
 const { t } = useI18n()
 
-const prettyJsonModel = computed({
-  get: () => props.modelValue,
-  set: (value: boolean) => emit('update:modelValue', value),
-})
+const prettyJsonModel = defineModel<boolean>()
 </script>
 
 <style scoped>

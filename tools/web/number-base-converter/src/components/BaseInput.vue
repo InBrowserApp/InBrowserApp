@@ -9,7 +9,7 @@
       :status="status"
       :placeholder="placeholder"
       class="monospace-input"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     />
   </ToolSection>
 </template>
@@ -21,14 +21,11 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 
 defineProps<{
   label: string
-  modelValue: string
   status?: 'success' | 'warning' | 'error'
   placeholder?: string
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 </script>
 
 <style scoped>

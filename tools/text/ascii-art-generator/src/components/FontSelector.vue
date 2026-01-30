@@ -5,7 +5,7 @@
       :value="modelValue"
       :options="fontOptions"
       size="large"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     />
   </ToolSection>
 </template>
@@ -17,13 +17,7 @@ import { NSelect } from 'naive-ui'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { fontNames } from '../utils/fonts'
 
-defineProps<{
-  modelValue: string
-}>()
-
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 

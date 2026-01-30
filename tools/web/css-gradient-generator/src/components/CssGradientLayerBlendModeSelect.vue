@@ -15,14 +15,6 @@ import type { BlendMode } from '../types'
 import CssGradientBlendModeOptionsPrimary from './CssGradientBlendModeOptionsPrimary.vue'
 import CssGradientBlendModeOptionsSecondary from './CssGradientBlendModeOptionsSecondary.vue'
 
-const props = defineProps<{
-  layerBlendMode: BlendMode
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:layerBlendMode', value: BlendMode): void
-}>()
-
 const { t } = useI18n()
 
 type OptionsExpose = {
@@ -32,10 +24,7 @@ type OptionsExpose = {
 const primaryOptions = ref<OptionsExpose | null>(null)
 const secondaryOptions = ref<OptionsExpose | null>(null)
 
-const layerBlendModeModel = computed({
-  get: () => props.layerBlendMode,
-  set: (value: BlendMode) => emit('update:layerBlendMode', value),
-})
+const layerBlendModeModel = defineModel<BlendMode>('layerBlendMode', { required: true })
 
 const blendOptions = computed(() => [
   ...(primaryOptions.value?.options ?? []),

@@ -63,14 +63,6 @@ import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import { formatStopwatch } from '../utils/format'
 
-const props = defineProps<{
-  laps: number[]
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:laps', value: number[]): void
-}>()
-
 const { t } = useI18n()
 
 const tableRef = ref<DataTableInst | null>(null)
@@ -79,10 +71,7 @@ defineExpose({
   tableRef,
 })
 
-const lapsModel = computed({
-  get: () => props.laps,
-  set: (value) => emit('update:laps', value),
-})
+const lapsModel = defineModel<number[]>('laps', { required: true })
 
 const canClearLaps = computed(() => lapsModel.value.length > 0)
 

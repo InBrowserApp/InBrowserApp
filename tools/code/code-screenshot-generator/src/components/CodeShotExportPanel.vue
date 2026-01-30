@@ -127,7 +127,6 @@ const props = defineProps<{
   svgHeight: number
   htmlSnippet: string
   htmlDocument: string
-  filename: string
   jpgBackground: string
   labels: {
     fileName: string
@@ -144,10 +143,6 @@ const props = defineProps<{
   }
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:filename', value: string): void
-}>()
-
 const scale = ref(2)
 const quality = 0.92
 const pngBlob = ref<Blob | null>(null)
@@ -157,13 +152,10 @@ const isGenerating = ref(false)
 const error = ref('')
 let generationId = 0
 
-const fileNameProxy = computed({
-  get: () => props.filename,
-  set: (value: string) => emit('update:filename', value),
-})
+const fileNameProxy = defineModel<string>('filename', { required: true })
 
 const normalizedFileName = computed(() => {
-  const baseName = props.filename.trim() || 'code-shot'
+  const baseName = fileNameProxy.value.trim() || 'code-shot'
   return baseName.replace(/[\\/<>:"|?*]+/g, '-').replace(/\s+/g, '-')
 })
 

@@ -10,14 +10,9 @@ import { isIPv6 } from 'is-ip'
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const props = defineProps<{
-  ipv6: string
-}>()
-const emit = defineEmits<{
-  'update:ipv6': [string]
-}>()
+const ipv6Model = defineModel<string>('ipv6', { required: true })
 const { t } = useI18n()
-const ipv6 = ref(props.ipv6)
+const ipv6 = ref(ipv6Model.value)
 const rule: FormItemRule = {
   trigger: ['input', 'change', 'blur'],
   validator() {
@@ -29,9 +24,9 @@ const rule: FormItemRule = {
 
 watch(ipv6, (value: string) => {
   if (isIPv6(value)) {
-    emit('update:ipv6', value)
+    ipv6Model.value = value
   } else {
-    emit('update:ipv6', '')
+    ipv6Model.value = ''
   }
 })
 </script>

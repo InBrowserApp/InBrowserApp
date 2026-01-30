@@ -7,7 +7,7 @@
       :placeholder="t('inputPlaceholder')"
       size="large"
       clearable
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     />
   </ToolSection>
 </template>
@@ -17,13 +17,7 @@ import { useI18n } from 'vue-i18n'
 import { NInput } from 'naive-ui'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 
-defineProps<{
-  modelValue: string
-}>()
-
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 </script>

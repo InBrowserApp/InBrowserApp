@@ -47,7 +47,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useMessage } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
 import { NUpload, NUploadDragger, NIcon, NText, NP, NFlex, NButton } from 'naive-ui'
@@ -57,7 +56,6 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import UploadFileItem from './UploadFileItem.vue'
 
 const props = defineProps<{
-  files: File[]
   title: string
   dragDropText: string
   supportText: string
@@ -68,15 +66,11 @@ const props = defineProps<{
   duplicateMessage: string
 }>()
 
-const emit = defineEmits<{
-  'update:files': [files: File[]]
-}>()
-
 const message = useMessage()
 
 const accept = 'image/gif'
 
-const files = computed(() => props.files)
+const files = defineModel<File[]>('files', { required: true })
 
 function fileKey(file: File) {
   return `${file.name}-${file.size}-${file.lastModified}`
@@ -96,19 +90,16 @@ function handleBeforeUpload(data: { file: UploadFileInfo }) {
     return false
   }
 
-  emit('update:files', [...files.value, selectedFile])
+  files.value = [...files.value, selectedFile]
   return false
 }
 
 function handleRemove(file: File) {
-  emit(
-    'update:files',
-    files.value.filter((item) => fileKey(item) !== fileKey(file)),
-  )
+  files.value = files.value.filter((item) => fileKey(item) !== fileKey(file))
 }
 
 function handleClearAll() {
-  emit('update:files', [])
+  files.value = []
 }
 
 function isValidGifFile(file: File) {

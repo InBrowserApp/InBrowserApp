@@ -5,7 +5,7 @@
       :placeholder="t('placeholder')"
       :status="inputStatus"
       size="large"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     >
       <template #prefix>
         <NIcon :component="MailIcon" :size="24" />
@@ -22,28 +22,25 @@ import MailIcon from '@vicons/fluent/Mail24Regular'
 import type { EmailValidationResult } from '../data/email'
 
 const props = defineProps<{
-  modelValue: string
   validationResult: EmailValidationResult
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 
 const inputStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const validationStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const feedbackMessage = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   if (props.validationResult.isValid) return t('valid')
   if (!props.validationResult.hasSingleAt) return t('invalidAt')
   if (!props.validationResult.isLocalLengthValid) return t('invalidLocalLength')

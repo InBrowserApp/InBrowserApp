@@ -20,7 +20,6 @@
 <script setup lang="ts">
 import { NGrid, NGridItem, NIcon } from 'naive-ui'
 import type { DesktopBrowserOptions } from '../../utils/favicon-generator/desktop-browser'
-import { useVModel } from '@vueuse/core'
 import DesktopBrowserPreview from './DesktopBrowserPreview.vue'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import DesktopBrowserSettings from './DesktopBrowserSettings.vue'
@@ -28,19 +27,14 @@ import Desktop16Regular from '@vicons/fluent/Desktop16Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader } from '@shared/ui/tool'
 
-const props = defineProps<{
+defineProps<{
   image: Blob | undefined
-  options: DesktopBrowserOptions
   generalInfoOptions: GeneralInfoOptions
-}>()
-
-const emit = defineEmits<{
-  'update:options': [DesktopBrowserOptions]
 }>()
 
 const { t } = useI18n()
 
-const options = useVModel(props, 'options', emit)
+const options = defineModel<DesktopBrowserOptions>('options', { required: true })
 </script>
 
 <i18n lang="json">

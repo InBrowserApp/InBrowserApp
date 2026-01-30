@@ -27,9 +27,7 @@ import { IPInputFormItem } from '@shared/ui/domain/ip'
 import { ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 
-const emit = defineEmits<{
-  'update:result': [DNSJSONResponse]
-}>()
+const resultModel = defineModel<DNSJSONResponse | null>('result', { default: null })
 const ip = useStorage('reverse-ip-lookup-ip', '1.1.1.1')
 const dohServer = useStorage('doh-server', 'https://cloudflare-dns.com/dns-query')
 const loading = ref(false)
@@ -44,7 +42,7 @@ async function lookup() {
       name: reverseIPDomain,
       type: 'PTR',
     })
-    emit('update:result', response)
+    resultModel.value = response
   } catch (e) {
     console.error(e)
   } finally {

@@ -11,18 +11,11 @@
 <script setup lang="ts">
 import { NGrid } from 'naive-ui'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
-import { useVModel } from '@vueuse/core'
 import GeneralInfoHeader from './GeneralInfoHeader.vue'
 import GeneralInfoBasics from './GeneralInfoBasics.vue'
 import GeneralInfoThemeColors from './GeneralInfoThemeColors.vue'
 import GeneralInfoPaths from './GeneralInfoPaths.vue'
 import GeneralInfoDisplay from './GeneralInfoDisplay.vue'
 
-const props = defineProps<{ options: GeneralInfoOptions }>()
-
-const emit = defineEmits<{
-  'update:options': [GeneralInfoOptions]
-}>()
-
-const options = useVModel(props, 'options', emit)
+const options = defineModel<GeneralInfoOptions>('options', { required: true })
 </script>

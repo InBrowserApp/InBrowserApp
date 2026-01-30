@@ -101,12 +101,9 @@ interface FieldConfig {
 
 const props = defineProps<{
   fieldName: FieldName
-  modelValue: string
 }>()
 
-const emit = defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const FIELD_CONFIGS: Record<FieldName, FieldConfig> = {
   minute: { min: 0, max: 59, unit: 'minutes', gridCols: 10 },
@@ -169,13 +166,13 @@ const generatedValue = computed(() => {
 })
 
 // Initialize from prop
-parseValue(props.modelValue)
+parseValue(modelValue.value)
 
 // Watch for external changes
 watch(
-  () => props.modelValue,
+  () => modelValue.value,
   (newValue) => {
-    if (newValue !== generatedValue.value) {
+    if (newValue !== undefined && newValue !== generatedValue.value) {
       parseValue(newValue)
     }
   },
@@ -183,6 +180,6 @@ watch(
 
 // Emit changes
 watch(generatedValue, (newValue) => {
-  emit('update:modelValue', newValue)
+  modelValue.value = newValue
 })
 </script>

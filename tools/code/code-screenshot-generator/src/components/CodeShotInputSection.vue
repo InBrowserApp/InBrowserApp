@@ -14,25 +14,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFormItem, NInput } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const props = defineProps<{
-  code: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:code', value: string): void
-}>()
-
 const { t } = useI18n()
 
-const codeProxy = computed({
-  get: () => props.code,
-  set: (value: string) => emit('update:code', value),
-})
+const codeProxy = defineModel<string>('code', { required: true })
 </script>
 
 <style scoped>

@@ -23,20 +23,14 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { parseNumberInput } from '../data/conversion'
 
-const props = defineProps<{
-  value: string
-}>()
-
-const emit = defineEmits<{
-  'update:value': [value: string]
-}>()
+const modelValue = defineModel<string>('value', { required: true })
 
 const { t } = useI18n()
 
-const internalValue = ref(props.value)
+const internalValue = ref(modelValue.value)
 
 watch(
-  () => props.value,
+  () => modelValue.value,
   (newValue) => {
     if (newValue !== internalValue.value) {
       internalValue.value = newValue
@@ -68,12 +62,12 @@ function handleUpdate(value: string) {
 
 watch(parseResult, (result) => {
   if (result.isEmpty) {
-    emit('update:value', '')
+    modelValue.value = ''
     return
   }
 
   if (result.isValid) {
-    emit('update:value', result.normalized)
+    modelValue.value = result.normalized
   }
 })
 </script>

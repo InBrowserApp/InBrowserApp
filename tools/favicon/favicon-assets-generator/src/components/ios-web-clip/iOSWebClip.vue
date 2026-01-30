@@ -20,22 +20,16 @@ import { toRef } from 'vue'
 import IOSWebClipPreview from './iOSWebClipPreview.vue'
 import IOSWebClipSettings from './iOSWebClipSettings.vue'
 import type { iOSWebClipOptions } from '../../utils/favicon-generator/ios-web-clip'
-import { useVModel } from '@vueuse/core'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import Apple from '@vicons/fa/Apple'
 import { ToolSectionHeader } from '@shared/ui/tool'
 
 const props = defineProps<{
   image: Blob | undefined
-  options: iOSWebClipOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
 
-const emit = defineEmits<{
-  'update:options': [iOSWebClipOptions]
-}>()
-
-const options = useVModel(props, 'options', emit)
+const options = defineModel<iOSWebClipOptions>('options', { required: true })
 
 const image = toRef(props, 'image')
 </script>

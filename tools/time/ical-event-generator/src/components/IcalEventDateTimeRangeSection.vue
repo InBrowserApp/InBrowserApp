@@ -25,21 +25,13 @@ import { NDatePicker, NFormItemGi, NGrid, NText } from 'naive-ui'
 type RangeErrorKey = 'invalid-date-time' | 'invalid-date' | 'end-before-start'
 
 const props = defineProps<{
-  dateRange: [number, number] | null
   rangeErrorKey?: RangeErrorKey
   isAllDay: boolean
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:dateRange', value: [number, number] | null): void
-}>()
-
 const { t } = useI18n()
 
-const dateRangeModel = computed({
-  get: () => props.dateRange,
-  set: (value) => emit('update:dateRange', value),
-})
+const dateRangeModel = defineModel<[number, number] | null>('dateRange', { required: true })
 
 const rangeErrorMessages = computed<Record<RangeErrorKey, string>>(() => ({
   'invalid-date-time': t('invalid-date-time'),

@@ -37,7 +37,6 @@ import ColorPickerOutputFields from './ColorPickerOutputFields.vue'
 const props = defineProps<{
   cssColor: string
   pickedSource: 'screen' | 'image' | null
-  showAlpha: boolean
   hexValue: string
   rgbValue: string
   hslValue: string
@@ -46,9 +45,7 @@ const props = defineProps<{
   alphaValue: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:showAlpha', value: boolean): void
-}>()
+const showAlpha = defineModel<boolean>('showAlpha', { required: true })
 
 const { t } = useI18n()
 
@@ -59,7 +56,7 @@ const sourceLabel = computed(() => {
 })
 
 function onShowAlphaChange(value: boolean) {
-  emit('update:showAlpha', value)
+  showAlpha.value = value
 }
 </script>
 

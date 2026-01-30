@@ -11,20 +11,9 @@ import { NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { ColorSpace } from '../types'
 
-const props = defineProps<{
-  layerColorSpace: ColorSpace
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:layerColorSpace', value: ColorSpace): void
-}>()
-
 const { t } = useI18n()
 
-const layerColorSpaceModel = computed({
-  get: () => props.layerColorSpace,
-  set: (value: ColorSpace) => emit('update:layerColorSpace', value),
-})
+const layerColorSpaceModel = defineModel<ColorSpace>('layerColorSpace', { required: true })
 
 const colorSpaceOptions = computed(() => [
   { label: t('colorSpace.srgb'), value: 'srgb' },

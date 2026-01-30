@@ -47,48 +47,39 @@ import { NUpload, NUploadDragger, NIcon, NText, NP, NFlex, NButton } from 'naive
 import Image24Regular from '@vicons/fluent/Image24Regular'
 import Delete20Regular from '@vicons/fluent/Delete20Regular'
 import type { UploadFileInfo } from 'naive-ui'
-import { toRef } from 'vue'
 import { filesize } from 'filesize'
 import { NImage } from 'naive-ui'
 
 // Props
-const props = defineProps<{
-  file: File | null
-}>()
-// Emits
-const emit = defineEmits<{
-  'update:file': [file: File | null]
-}>()
+const file = defineModel<File | null>('file', { required: true })
 const { t } = useI18n()
 const message = useMessage()
-
-const file = toRef(props, 'file')
 
 // Use object URL for efficient image preview
 const imagePreview = useObjectUrl(file)
 
 // File handling
 async function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
-  const file = data.file.file
-  if (!file) return false
+  const selectedFile = data.file.file
+  if (!selectedFile) return false
 
   if (data.fileList.length > 1) {
     message.error(t('onlyOneFile'))
     return false
   }
 
-  if (!file.type.includes('png')) {
+  if (!selectedFile.type.includes('png')) {
     message.error(t('invalidFileType'))
     return false
   }
 
-  emit('update:file', file)
+  file.value = selectedFile
 
   return false // Prevent default upload
 }
 
 function handleClearFile() {
-  emit('update:file', null)
+  file.value = null
 }
 </script>
 

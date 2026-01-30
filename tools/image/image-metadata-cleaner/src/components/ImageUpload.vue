@@ -30,21 +30,15 @@ import { NUpload, NUploadDragger, NIcon, NText, NP } from 'naive-ui'
 import ImageIcon from '@vicons/fluent/Image24Regular'
 import { ToolSection } from '@shared/ui/tool'
 
-defineProps<{
-  file: File | null
-}>()
-
-const emit = defineEmits<{
-  'update:file': [file: File | null]
-}>()
+const fileModel = defineModel<File | null>('file', { required: true })
 
 const { t } = useI18n()
 
 function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
-  const file = data.file.file
-  if (!file) return false
+  const selectedFile = data.file.file
+  if (!selectedFile) return false
 
-  emit('update:file', file)
+  fileModel.value = selectedFile
   return false
 }
 </script>
