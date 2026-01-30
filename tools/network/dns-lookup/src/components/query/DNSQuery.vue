@@ -5,7 +5,7 @@
   <DNSRecordTypeInputFormItem v-model:types="recordTypes" />
   <DOHServerSelectFormItem v-model:value="dohServer" />
 
-  <n-button @click="lookup" round :loading="loading">
+  <n-button round :loading="loading" @click="lookup">
     <template #icon>
       <n-icon>
         <DocumentSearch16Regular />

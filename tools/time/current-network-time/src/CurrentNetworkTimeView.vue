@@ -15,7 +15,7 @@
         <div style="position: relative">
           <n-time class="network-time" :time="networkTime ?? localTime" format="HH:mm:ss" />
           <Transition name="fade" mode="out-in">
-            <div style="position: absolute; top: 8px; right: 8px" v-if="status === 'syncing'">
+            <div v-if="status === 'syncing'" style="position: absolute; top: 8px; right: 8px">
               <n-badge dot processing type="warning" />
               {{ t('syncing') }}
             </div>
@@ -30,12 +30,12 @@
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
             {{ Math.round(offset) }} ms (±{{ Math.round(roundTripTimeMs) }} ms)
           </span>
-          <n-skeleton text style="width: 10em" v-else />
+          <n-skeleton v-else text style="width: 10em" />
         </n-text>
         <n-text depth="3">
           <span>{{ t('lastSyncedAt') }}: </span>
           <span v-if="lastSyncAt > 0">{{ new Date(lastSyncAt).toLocaleTimeString() }}</span>
-          <n-skeleton text style="width: 5em" v-else />
+          <n-skeleton v-else text style="width: 5em" />
         </n-text>
       </n-flex>
     </ToolSection>

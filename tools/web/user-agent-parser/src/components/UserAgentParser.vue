@@ -1,6 +1,6 @@
 <template>
   <UserAgentInputPanel
-    v-model:userAgent="userAgent"
+    v-model:user-agent="userAgent"
     :input-status="inputStatus"
     :input-error="inputError"
     :can-use-current="canUseCurrent"

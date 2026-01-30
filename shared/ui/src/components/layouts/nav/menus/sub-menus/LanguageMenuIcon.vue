@@ -1,10 +1,10 @@
 <template>
   <n-popselect
     :value="language ?? 'auto'"
-    @update:value="handleUpdateValue"
     :options="options"
     trigger="click"
     scrollable
+    @update:value="handleUpdateValue"
   >
     <n-button quaternary circle :aria-label="t('language-selector')">
       <template #icon>

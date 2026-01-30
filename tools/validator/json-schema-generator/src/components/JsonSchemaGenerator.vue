@@ -10,7 +10,7 @@
     :input-error="inputError"
     :schema-text="schemaText"
     :output-error="outputError"
-    @update:inputValue="handleInput"
+    @update:input-value="handleInput"
   />
   <SchemaGeneratorOptions
     :draft="draft"
@@ -19,9 +19,9 @@
     :allow-additional-properties="allowAdditionalProperties"
     :detect-format="detectFormat"
     @update:draft="draft = $event"
-    @update:inferRequired="inferRequired = $event"
-    @update:allowAdditionalProperties="allowAdditionalProperties = $event"
-    @update:detectFormat="detectFormat = $event"
+    @update:infer-required="inferRequired = $event"
+    @update:allow-additional-properties="allowAdditionalProperties = $event"
+    @update:detect-format="detectFormat = $event"
   />
 </template>
 

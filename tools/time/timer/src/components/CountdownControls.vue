@@ -1,13 +1,13 @@
 <template>
   <ToolSection>
     <n-flex :size="12" wrap justify="center">
-      <n-button type="primary" @click="toggleRun" data-testid="start">
+      <n-button type="primary" data-testid="start" @click="toggleRun">
         <template #icon>
           <n-icon :component="toggleIcon" />
         </template>
         {{ toggleLabel }}
       </n-button>
-      <n-button :disabled="!canReset" @click="reset" data-testid="reset">
+      <n-button :disabled="!canReset" data-testid="reset" @click="reset">
         <template #icon>
           <n-icon :component="ArrowCounterclockwise16Regular" />
         </template>
@@ -15,8 +15,8 @@
       </n-button>
       <n-button
         v-show="fullscreenAvailable"
-        @click="enterFullscreen"
         data-testid="fullscreen-enter"
+        @click="enterFullscreen"
       >
         <template #icon>
           <n-icon :component="FullScreenMaximize16Regular" />

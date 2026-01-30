@@ -2,20 +2,20 @@
   <ToolSectionHeader>{{ t('recurrence') }}</ToolSectionHeader>
   <ToolSection>
     <IcalEventRecurrenceFrequencySection
-      v-model:recurrenceFrequency="recurrenceFrequencyModel"
-      v-model:recurrenceInterval="recurrenceIntervalModel"
+      v-model:recurrence-frequency="recurrenceFrequencyModel"
+      v-model:recurrence-interval="recurrenceIntervalModel"
     />
     <IcalEventRecurrencePatternSection
-      v-model:recurrenceFrequency="recurrenceFrequencyModel"
-      v-model:recurrenceWeekdays="recurrenceWeekdaysModel"
-      v-model:recurrenceMonthDay="recurrenceMonthDayModel"
-      v-model:recurrenceMonth="recurrenceMonthModel"
+      v-model:recurrence-frequency="recurrenceFrequencyModel"
+      v-model:recurrence-weekdays="recurrenceWeekdaysModel"
+      v-model:recurrence-month-day="recurrenceMonthDayModel"
+      v-model:recurrence-month="recurrenceMonthModel"
     />
     <IcalEventRecurrenceEndsSection
-      v-model:recurrenceFrequency="recurrenceFrequencyModel"
-      v-model:recurrenceEndMode="recurrenceEndModeModel"
-      v-model:recurrenceCount="recurrenceCountModel"
-      v-model:recurrenceUntilInput="recurrenceUntilInputModel"
+      v-model:recurrence-frequency="recurrenceFrequencyModel"
+      v-model:recurrence-end-mode="recurrenceEndModeModel"
+      v-model:recurrence-count="recurrenceCountModel"
+      v-model:recurrence-until-input="recurrenceUntilInputModel"
       :recurrence-until-status="recurrenceUntilStatus"
       :recurrence-until-error-key="recurrenceUntilErrorKey"
       :is-all-day="isAllDay"

@@ -22,8 +22,8 @@
           size="small"
           type="error"
           :disabled="!canClearLaps"
-          @click="clearLaps"
           data-testid="clear-laps"
+          @click="clearLaps"
         >
           <template #icon>
             <n-icon :component="Delete16Regular" />
@@ -36,6 +36,7 @@
   <ToolSection>
     <n-data-table
       v-if="lapRows.length"
+      ref="tableRef"
       :columns="columns"
       :data="lapRows"
       :bordered="false"
@@ -43,7 +44,6 @@
       :pagination="false"
       :row-key="rowKey"
       :row-props="rowProps"
-      ref="tableRef"
       data-testid="laps-list"
     />
     <n-text v-else depth="3" data-testid="no-laps">

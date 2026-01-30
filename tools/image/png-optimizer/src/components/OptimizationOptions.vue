@@ -21,7 +21,7 @@
         </n-checkbox>
       </n-flex>
 
-      <n-button @click="handleOptimize" :loading="isOptimizing" :disabled="isOptimizing">
+      <n-button :loading="isOptimizing" :disabled="isOptimizing" @click="handleOptimize">
         <template #icon>
           <n-icon><ResizeSmall20Regular /></n-icon>
         </template>

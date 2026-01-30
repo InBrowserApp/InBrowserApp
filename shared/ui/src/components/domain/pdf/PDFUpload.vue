@@ -1,5 +1,5 @@
 <template>
-  <n-upload @before-upload="beforeUpload" accept="application/pdf">
+  <n-upload accept="application/pdf" @before-upload="beforeUpload">
     <n-upload-dragger>
       <div style="margin-bottom: 12px">
         <n-icon size="48" :depth="3">

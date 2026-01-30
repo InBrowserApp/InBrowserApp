@@ -2,12 +2,12 @@
   <n-grid cols="1 l:2" responsive="screen" :x-gap="24" :y-gap="24">
     <n-gi>
       <Bip39MnemonicOptions
-        v-model:activeTab="activeTab"
+        v-model:active-tab="activeTab"
         v-model:wordlist="wordlist"
-        v-model:wordCount="wordCount"
-        v-model:validationMnemonic="validationMnemonic"
-        v-model:entropyInput="entropyInput"
-        v-model:convertMnemonic="convertMnemonic"
+        v-model:word-count="wordCount"
+        v-model:validation-mnemonic="validationMnemonic"
+        v-model:entropy-input="entropyInput"
+        v-model:convert-mnemonic="convertMnemonic"
         :wordlist-options="wordlistOptions"
         :word-count-options="wordCountOptions"
         :strength-bits="strengthBits"

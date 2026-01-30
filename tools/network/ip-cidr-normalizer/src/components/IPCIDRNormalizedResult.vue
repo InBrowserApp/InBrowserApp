@@ -1,6 +1,6 @@
 <template>
   <CopyToClipboardTooltip :content="normalized" #="{ copy }">
-    <n-text @click="copy" code style="font-size: 1.5em; cursor: pointer">{{ normalized }}</n-text>
+    <n-text code style="font-size: 1.5em; cursor: pointer" @click="copy">{{ normalized }}</n-text>
   </CopyToClipboardTooltip>
 </template>
 

@@ -10,11 +10,11 @@
             @randomize-all="handleRandomizeAll"
           />
           <CssGradientStopsPanel
+            v-model:stop-color="activeStopColor"
+            v-model:stop-position="activeStopPosition"
             :stops="activeStops"
             :active-stop-id="activeStopId"
             :gradient-css="activeTrackCss"
-            v-model:stop-color="activeStopColor"
-            v-model:stop-position="activeStopPosition"
             :show-error="showStopError"
             @add-stop="handleAddStop"
             @select-stop="setActiveStop"
@@ -81,8 +81,8 @@
       </n-gi>
       <n-gi>
         <CssGradientJsonPanel
-          :serialized-config="serializedConfig"
           v-model:json-input="jsonInput"
+          :serialized-config="serializedConfig"
           :json-url="jsonUrl"
           :show-error="showJsonError"
           @load-json="loadJson"

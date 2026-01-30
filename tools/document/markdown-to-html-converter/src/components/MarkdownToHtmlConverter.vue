@@ -4,7 +4,7 @@
       <n-flex align="center">
         <n-switch v-model:value="sanitize" size="small"></n-switch>
         <span>{{ t('sanitize-html') }}</span>
-        <n-button @click="importFromFile" text>
+        <n-button text @click="importFromFile">
           <template #icon>
             <n-icon :component="Document16Regular" />
           </template>
@@ -20,7 +20,7 @@
           </template>
           {{ t('download-html') }}
         </n-button>
-        <n-button @click="printHtml" text>
+        <n-button text @click="printHtml">
           <template #icon>
             <n-icon :component="Print20Regular" />
           </template>
@@ -43,6 +43,7 @@
         <n-card size="small">
           <n-code :code="renderedHtml" language="html" :hljs="hljs" word-wrap></n-code>
           <n-divider></n-divider>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <article :class="$style['markdown-body']" v-html="renderedHtml"></article>
         </n-card>
       </n-form-item-gi>

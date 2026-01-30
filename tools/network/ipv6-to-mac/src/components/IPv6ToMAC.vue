@@ -1,7 +1,7 @@
 <template>
   <ToolSectionHeader>{{ t('ipv6Address') }}</ToolSectionHeader>
   <ToolSection>
-    <IPv6Input @update:ipv6="ipv6 = $event" :ipv6="ipv6" />
+    <IPv6Input :ipv6="ipv6" @update:ipv6="ipv6 = $event" />
   </ToolSection>
   <template v-if="ipv6 !== ''">
     <ToolSectionHeader>{{ t('macAddress') }}</ToolSectionHeader>

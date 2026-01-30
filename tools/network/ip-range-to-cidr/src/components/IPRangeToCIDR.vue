@@ -2,14 +2,14 @@
   <ToolSectionHeader>{{ t('ipRange') }}</ToolSectionHeader>
 
   <ToolSection>
-    <IPRangeInput @update:ipRange="ipRange = $event" />
+    <IPRangeInput @update:ip-range="ipRange = $event" />
   </ToolSection>
 
   <template v-if="ipRange[0] !== '' && ipRange[1] !== ''">
     <ToolSectionHeader>{{ t('cidrResult') }}</ToolSectionHeader>
 
     <ToolSection>
-      <IPRangeCIDRResult :ipRange="ipRange" />
+      <IPRangeCIDRResult :ip-range="ipRange" />
     </ToolSection>
   </template>
 </template>

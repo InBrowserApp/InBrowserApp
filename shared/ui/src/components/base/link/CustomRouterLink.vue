@@ -1,8 +1,8 @@
 <template>
   <router-link
+    v-slot="{ navigate, href }"
     v-bind="props"
     :to="localizedPath"
-    v-slot="{ navigate, href }"
     @mouseenter.passive="prefetch"
     @touchstart.passive="prefetch"
   >

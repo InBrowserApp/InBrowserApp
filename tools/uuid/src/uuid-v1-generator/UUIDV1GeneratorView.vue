@@ -14,7 +14,7 @@
     <ToolConfigHeader />
     <ToolSection>
       <MACAddressInputFormItem v-model:address="macAddress" />
-      <ClockSeqInput v-model:clockSeq="clockSeq" />
+      <ClockSeqInput v-model:clock-seq="clockSeq" />
     </ToolSection>
 
     <WhatIsUUIDv1 />

@@ -2,19 +2,19 @@
   <ToolSectionHeader>{{ t('presets') }}</ToolSectionHeader>
   <ToolSection>
     <n-flex :wrap="true" :size="8">
-      <n-button size="small" @click="emit('apply', 'basic')" data-testid="preset-basic">
+      <n-button size="small" data-testid="preset-basic" @click="emit('apply', 'basic')">
         {{ t('presetBasic') }}
       </n-button>
-      <n-button size="small" @click="emit('apply', 'image')" data-testid="preset-image">
+      <n-button size="small" data-testid="preset-image" @click="emit('apply', 'image')">
         {{ t('presetImage') }}
       </n-button>
-      <n-button size="small" @click="emit('apply', 'video')" data-testid="preset-video">
+      <n-button size="small" data-testid="preset-video" @click="emit('apply', 'video')">
         {{ t('presetVideo') }}
       </n-button>
-      <n-button size="small" @click="emit('apply', 'news')" data-testid="preset-news">
+      <n-button size="small" data-testid="preset-news" @click="emit('apply', 'news')">
         {{ t('presetNews') }}
       </n-button>
-      <n-button size="small" @click="emit('apply', 'index')" data-testid="preset-index">
+      <n-button size="small" data-testid="preset-index" @click="emit('apply', 'index')">
         {{ t('presetIndex') }}
       </n-button>
     </n-flex>

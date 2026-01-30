@@ -7,9 +7,9 @@
     }"
   >
     <img
+      ref="iosHomescreenBackground"
       :src="PreviewBackground"
       class="background"
-      ref="iosHomescreenBackground"
       alt="iOS Homescreen Background"
     />
     <div class="icon-container">

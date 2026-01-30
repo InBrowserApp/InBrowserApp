@@ -1,9 +1,9 @@
 <template>
   <n-form-item :label="t('backgroundColor')">
     <n-color-picker
+      v-model:value="options.backgroundColor"
       :show-alpha="false"
       :show-preview="true"
-      v-model:value="options.backgroundColor"
     />
   </n-form-item>
   <n-form-item :label="t('margin')">

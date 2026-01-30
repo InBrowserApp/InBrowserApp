@@ -23,9 +23,9 @@
       :on-input="onInput"
     />
     <NumberBaseCustomInput
+      v-model:custom-base-value="customBaseValue"
       :custom="custom"
       :custom-status="customStatus"
-      v-model:custom-base-value="customBaseValue"
       :on-input="onInput"
     />
   </n-grid>

@@ -28,7 +28,7 @@
       <PWAPreview :image="image" :options="options" :general-info-options="generalInfoOptions" />
     </n-grid-item>
     <n-grid-item span="5 s:3">
-      <PWASettings :image="image" v-model:options="options" />
+      <PWASettings v-model:options="options" :image="image" />
     </n-grid-item>
   </n-grid>
   <n-h3 prefix="bar" align-text>
@@ -45,7 +45,7 @@
       />
     </n-grid-item>
     <n-grid-item span="5 s:3">
-      <PWAMaskableSettings :image="image" v-model:options="options" />
+      <PWAMaskableSettings v-model:options="options" :image="image" />
     </n-grid-item>
   </n-grid>
 </template>

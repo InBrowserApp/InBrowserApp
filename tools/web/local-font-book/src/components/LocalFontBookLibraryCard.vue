@@ -12,8 +12,8 @@
           size="small"
           :disabled="!isSupported || isLoading"
           :loading="isLoading"
-          @click="emit('load-fonts')"
           data-testid="load-fonts"
+          @click="emit('load-fonts')"
         >
           <template #icon>
             <n-icon :component="FolderOpen16Regular" />

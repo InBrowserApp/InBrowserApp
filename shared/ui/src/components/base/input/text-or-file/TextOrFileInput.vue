@@ -28,10 +28,10 @@
 
     <n-divider v-if="!selectedFile && !textValue">{{ t('or') }}</n-divider>
     <n-upload
-      @before-upload="beforeUpload"
+      v-if="!textValue"
       :show-file-list="false"
       :accept="accept"
-      v-if="!textValue"
+      @before-upload="beforeUpload"
     >
       <n-upload-dragger>
         <div style="margin-bottom: 12px">
@@ -53,7 +53,7 @@
     </n-upload>
 
     <div v-if="selectedFile" class="file-actions">
-      <n-button @click="clearFile" type="error" size="small">
+      <n-button type="error" size="small" @click="clearFile">
         {{ t('clear-file') }}
       </n-button>
     </div>
@@ -92,6 +92,11 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   accept: '*',
+  placeholder: undefined,
+  label: undefined,
+  status: undefined,
+  validationStatus: undefined,
+  feedback: undefined,
   showFeedback: false,
   wrapWithFormItem: true,
 })

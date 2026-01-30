@@ -8,17 +8,17 @@
       {{ t('crc-result') }}
     </ToolSectionHeader>
     <ToolSection v-show="textOrFile">
-      <n-grid cols="1 400:2 800:4 1200:5" v-if="crcResults">
+      <n-grid v-if="crcResults" cols="1 400:2 800:4 1200:5">
         <n-grid-item v-for="result in crcResults" :key="result.name">
           <n-text>
             <n-text strong>{{ result.name }}: </n-text>
             <CopyToClipboardTooltip :content="result.crc" #="{ copy }">
               <n-text
                 code
-                @click="copy"
                 style="cursor: pointer"
                 class="crc-result"
                 :class="{ processing: processing }"
+                @click="copy"
               >
                 {{ result.crc }}
               </n-text>

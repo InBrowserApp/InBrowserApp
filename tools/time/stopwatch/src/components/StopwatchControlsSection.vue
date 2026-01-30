@@ -1,25 +1,25 @@
 <template>
   <ToolSection>
     <n-flex :size="12" wrap justify="center">
-      <n-button type="primary" :disabled="running" @click="emit('start')" data-testid="start">
+      <n-button type="primary" :disabled="running" data-testid="start" @click="emit('start')">
         <template #icon>
           <n-icon :component="Play16Regular" />
         </template>
         {{ hasElapsed ? t('resume') : t('start') }}
       </n-button>
-      <n-button :disabled="!running" @click="emit('pause')" data-testid="pause">
+      <n-button :disabled="!running" data-testid="pause" @click="emit('pause')">
         <template #icon>
           <n-icon :component="Pause16Regular" />
         </template>
         {{ t('pause') }}
       </n-button>
-      <n-button :disabled="!canLap" @click="emit('lap')" data-testid="lap">
+      <n-button :disabled="!canLap" data-testid="lap" @click="emit('lap')">
         <template #icon>
           <n-icon :component="Flag16Regular" />
         </template>
         {{ t('lap') }}
       </n-button>
-      <n-button :disabled="!canReset" @click="emit('reset')" data-testid="reset">
+      <n-button :disabled="!canReset" data-testid="reset" @click="emit('reset')">
         <template #icon>
           <n-icon :component="ArrowCounterclockwise16Regular" />
         </template>

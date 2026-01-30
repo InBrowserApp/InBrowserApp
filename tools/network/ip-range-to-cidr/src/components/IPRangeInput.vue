@@ -1,6 +1,6 @@
 <template>
   <n-form-item :label="t('ipRange')" :rule="rule" :show-label="false">
-    <n-input pair separator="-" :placeholder="placeholderText" clearable v-model:value="ipRange" />
+    <n-input v-model:value="ipRange" pair separator="-" :placeholder="placeholderText" clearable />
   </n-form-item>
 </template>
 

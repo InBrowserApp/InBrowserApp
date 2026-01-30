@@ -33,7 +33,7 @@
           <NTag :type="validationResult.isLengthValid ? 'success' : 'error'" size="small">
             {{ validationResult.isLengthValid ? t('pass') : t('fail') }}
           </NTag>
-          <NText depth="3" v-if="validationResult.brand">
+          <NText v-if="validationResult.brand" depth="3">
             ({{ t('expectedLength', { lengths: validationResult.brand.lengths.join(', ') }) }})
           </NText>
         </NFlex>

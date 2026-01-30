@@ -4,10 +4,10 @@
   </n-form-item>
   <n-space style="margin-top: 0.3em; margin-bottom: 1em">
     <n-tag
-      :bordered="false"
-      style="cursor: pointer"
       v-for="predefinedNamespace in predefinedNamespaces"
       :key="predefinedNamespace.value"
+      :bordered="false"
+      style="cursor: pointer"
       @click="namespace = predefinedNamespace.value"
     >
       {{ predefinedNamespace.name }}

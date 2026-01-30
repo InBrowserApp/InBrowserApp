@@ -9,8 +9,8 @@
             ? t('airplane-mode-enabled')
             : t('airplane-mode-disabled')
         "
-        @click="airplaneModeStore.toggleAirplaneMode"
         :type="airplaneModeStore.isAirplaneMode ? 'warning' : 'tertiary'"
+        @click="airplaneModeStore.toggleAirplaneMode"
       >
         <template #icon>
           <n-icon>

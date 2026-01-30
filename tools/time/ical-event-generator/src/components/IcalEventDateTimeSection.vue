@@ -2,14 +2,14 @@
   <ToolSectionHeader>{{ t('date-time') }}</ToolSectionHeader>
   <ToolSection>
     <IcalEventDateTimeSettingsSection
-      v-model:isAllDay="isAllDayModel"
-      v-model:timeZone="timeZoneModel"
-      v-model:outputMode="outputModeModel"
+      v-model:is-all-day="isAllDayModel"
+      v-model:time-zone="timeZoneModel"
+      v-model:output-mode="outputModeModel"
       :time-zone-options="timeZoneOptions"
       :offset-label="offsetLabel"
     />
     <IcalEventDateTimeRangeSection
-      v-model:dateRange="dateRangeModel"
+      v-model:date-range="dateRangeModel"
       :is-all-day="isAllDayModel"
       :range-error-key="rangeErrorKey"
     />

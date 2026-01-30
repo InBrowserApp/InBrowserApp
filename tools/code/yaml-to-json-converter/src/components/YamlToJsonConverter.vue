@@ -2,7 +2,7 @@
   <ToolSection>
     <n-flex align="center" justify="space-between">
       <n-flex align="center">
-        <n-button @click="importFromFile" text>
+        <n-button text @click="importFromFile">
           <template #icon>
             <n-icon :component="Document16Regular" />
           </template>

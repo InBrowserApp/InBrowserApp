@@ -11,8 +11,9 @@
     <n-form-item-gi :label="t('preview')" :show-feedback="false">
       <n-flex :wrap="true" :size="12" align="start" class="preview-row">
         <n-card size="small" class="preview-card">
-          <component :is="'style'" :textContent="scopedMarkdownCss" />
+          <component :is="'style'" :text-content="scopedMarkdownCss" />
           <div :class="markdownScopeClass">
+            <!-- eslint-disable-next-line vue/no-v-html -->
             <article class="markdown-body" v-html="renderedHtml"></article>
           </div>
         </n-card>

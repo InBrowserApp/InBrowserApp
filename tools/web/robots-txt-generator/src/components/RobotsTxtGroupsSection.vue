@@ -29,7 +29,7 @@
         </n-space>
       </n-card>
 
-      <n-button type="primary" dashed @click="addGroup" data-testid="add-group">
+      <n-button type="primary" dashed data-testid="add-group" @click="addGroup">
         <template #icon>
           <n-icon :component="Add16Regular" />
         </template>

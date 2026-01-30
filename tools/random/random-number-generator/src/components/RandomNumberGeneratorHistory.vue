@@ -7,8 +7,8 @@
           text
           size="small"
           :disabled="!hasHistory"
-          @click="emit('clear-history')"
           data-testid="clear-history"
+          @click="emit('clear-history')"
         >
           {{ t('clearHistory') }}
         </n-button>

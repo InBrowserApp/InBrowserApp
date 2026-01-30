@@ -1,7 +1,7 @@
 <template>
   <ToolSectionHeader v-if="!noRelatedTools">{{ t('related-tools') }}</ToolSectionHeader>
   <ToolSection>
-    <ToolsGrid :tools="relatedTools" v-if="!noRelatedTools" />
+    <ToolsGrid v-if="!noRelatedTools" :tools="relatedTools" />
   </ToolSection>
 </template>
 

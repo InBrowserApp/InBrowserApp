@@ -20,7 +20,7 @@
         <n-text depth="3">{{ t('theme') }}</n-text>
         <n-select v-model:value="theme" :options="themeOptions" size="small" style="width: 140px" />
       </n-flex>
-      <n-button @click="emitImport" text>
+      <n-button text @click="emitImport">
         <template #icon>
           <n-icon :component="Document16Regular" />
         </template>
@@ -40,7 +40,7 @@
         </template>
         {{ t('download-html') }}
       </n-button>
-      <n-button @click="emitPrint" text>
+      <n-button text @click="emitPrint">
         <template #icon>
           <n-icon :component="Print20Regular" />
         </template>

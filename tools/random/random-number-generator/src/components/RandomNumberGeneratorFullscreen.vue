@@ -13,8 +13,8 @@
     <n-flex class="fullscreen-actions" align="center" :size="12">
       <RegenerateButton
         :disabled="!canRoll && !isRolling"
-        @click="emit('toggle-rolling')"
         data-testid="fullscreen-regenerate"
+        @click="emit('toggle-rolling')"
       >
         <template #icon>
           <n-icon :component="rollingIcon" />
@@ -23,7 +23,7 @@
           {{ rollingLabel }}
         </template>
       </RegenerateButton>
-      <n-button text @click="emit('close')" data-testid="exit-fullscreen">
+      <n-button text data-testid="exit-fullscreen" @click="emit('close')">
         <template #icon>
           <n-icon :component="ExitFullscreenIcon" />
         </template>

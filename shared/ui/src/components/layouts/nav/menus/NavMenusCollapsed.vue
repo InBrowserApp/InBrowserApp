@@ -3,11 +3,11 @@
     <AirplaneModeToggle />
     <LanguageMenuIcon />
     <n-popover
+      v-model:show="show"
       style="padding: 0; width: 288px"
       placement="bottom-end"
       display-directive="show"
       trigger="click"
-      v-model:show="show"
     >
       <template #trigger>
         <n-icon size="22" class="menu-icon">

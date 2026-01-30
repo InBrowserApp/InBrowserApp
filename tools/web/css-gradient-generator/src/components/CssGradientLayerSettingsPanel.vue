@@ -14,9 +14,9 @@
         v-model:layer-center-y="layerCenterYModel"
       />
       <CssGradientLayerRadialControls
-        :layer-type="layerTypeModel"
         v-model:layer-shape="layerShapeModel"
         v-model:layer-size="layerSizeModel"
+        :layer-type="layerTypeModel"
       />
       <n-divider />
       <CssGradientLayerColorSpaceSelect v-model:layer-color-space="layerColorSpaceModel" />

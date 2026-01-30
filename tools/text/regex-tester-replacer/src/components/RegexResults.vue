@@ -18,6 +18,7 @@
         <n-tab-pane name="preview" :tab="t('preview-title')">
           <n-card size="small" class="preview-card">
             <n-scrollbar class="preview-scroll">
+              <!-- eslint-disable-next-line vue/no-v-html -->
               <div v-if="previewText" class="preview-text" v-html="previewHtml" />
               <n-text v-else depth="3">{{ t('preview-empty') }}</n-text>
             </n-scrollbar>

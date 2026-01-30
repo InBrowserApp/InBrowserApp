@@ -10,12 +10,12 @@
   <n-flex :wrap="true" :size="8">
     <n-button
       size="small"
-      @click="addUserAgents(searchEngineUserAgents)"
       data-testid="preset-useragent-search"
+      @click="addUserAgents(searchEngineUserAgents)"
     >
       {{ t('presetSearchEngines') }}
     </n-button>
-    <n-button size="small" @click="addUserAgents(aiUserAgents)" data-testid="preset-useragent-ai">
+    <n-button size="small" data-testid="preset-useragent-ai" @click="addUserAgents(aiUserAgents)">
       {{ t('presetAiCrawlers') }}
     </n-button>
   </n-flex>

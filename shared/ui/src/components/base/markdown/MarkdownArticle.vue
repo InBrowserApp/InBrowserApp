@@ -1,6 +1,7 @@
 <template>
   <n-el>
-    <p v-html="markdownHtml" class="markdown"></p>
+    <!-- eslint-disable-next-line vue/no-v-html -->
+    <p class="markdown" v-html="markdownHtml"></p>
   </n-el>
 </template>
 

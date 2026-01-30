@@ -2,7 +2,7 @@
   <DNSQuery @update:results="results = $event" />
 
   <n-p v-for="result in results" :key="result.question.type">
-    <DNSResult :result="result.result" v-if="result.result" :title="result.question.type" />
+    <DNSResult v-if="result.result" :result="result.result" :title="result.question.type" />
   </n-p>
 </template>
 

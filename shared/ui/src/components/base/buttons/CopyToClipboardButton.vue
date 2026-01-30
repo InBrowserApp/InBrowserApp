@@ -1,11 +1,11 @@
 <template>
   <n-button
-    @click="onClick"
     :text="variant === 'text'"
     :tertiary="variant === 'tertiary'"
     :secondary="variant === 'secondary'"
     :quaternary="variant === 'quaternary'"
     :disabled="disabled"
+    @click="onClick"
   >
     <template #icon>
       <slot name="icon">

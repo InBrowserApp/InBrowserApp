@@ -1,7 +1,7 @@
 <template>
   <DNSQuery @update:result="result = $event" />
 
-  <DNSResult :result="result" v-if="result" />
+  <DNSResult v-if="result" :result="result" />
 </template>
 
 <script lang="ts" setup>

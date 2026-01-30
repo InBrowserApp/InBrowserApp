@@ -1,52 +1,52 @@
 <template>
   <n-descriptions
+    v-if="parsed !== undefined"
     label-placement="left"
     bordered
     :column="1"
     content-style="width: 100%"
     label-style="white-space: nowrap"
-    v-if="parsed !== undefined"
   >
     <n-descriptions-item :label="t('ipVersion')"> IPv{{ parsed.version }} </n-descriptions-item>
     <n-descriptions-item :label="t('startIP')">
-      <CopyToClipboardTooltip :content="startIP" #="{ copy }" v-if="startIP">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="startIP" :content="startIP" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ startIP }}
         </span>
       </CopyToClipboardTooltip>
     </n-descriptions-item>
     <n-descriptions-item :label="t('startIPInteger')">
-      <CopyToClipboardTooltip :content="startIPInt" #="{ copy }" v-if="startIPInt">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="startIPInt" :content="startIPInt" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ startIPInt }}
         </span>
       </CopyToClipboardTooltip>
     </n-descriptions-item>
     <n-descriptions-item :label="t('endIP')">
-      <CopyToClipboardTooltip :content="endIP" #="{ copy }" v-if="endIP">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="endIP" :content="endIP" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ endIP }}
         </span>
       </CopyToClipboardTooltip>
     </n-descriptions-item>
     <n-descriptions-item :label="t('endIPInteger')">
-      <CopyToClipboardTooltip :content="endIPInt" #="{ copy }" v-if="endIPInt">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="endIPInt" :content="endIPInt" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ endIPInt }}
         </span>
       </CopyToClipboardTooltip>
     </n-descriptions-item>
     <n-descriptions-item :label="t('numberOfIPs')">
-      <CopyToClipboardTooltip :content="IPSize" #="{ copy }" v-if="IPSize">
-        <span @click="copy" class="cursor-pointer">
+      <CopyToClipboardTooltip v-if="IPSize" :content="IPSize" #="{ copy }">
+        <span class="cursor-pointer" @click="copy">
           {{ IPSize }}
         </span>
       </CopyToClipboardTooltip>
     </n-descriptions-item>
 
-    <n-descriptions-item :label="t('netmask')" v-if="netmask">
+    <n-descriptions-item v-if="netmask" :label="t('netmask')">
       <CopyToClipboardTooltip :content="netmask" #="{ copy }">
-        <span @click="copy" class="cursor-pointer">
+        <span class="cursor-pointer" @click="copy">
           {{ netmask }}
         </span>
       </CopyToClipboardTooltip>

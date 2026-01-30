@@ -2,8 +2,8 @@
   <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
     <n-form-item-gi :label="t('input-code')" :show-feedback="false">
       <n-input
-        class="code-input"
         v-model:value="sourceCode"
+        class="code-input"
         type="textarea"
         :autosize="{ minRows: 10, maxRows: 24 }"
         :placeholder="t('input-placeholder')"

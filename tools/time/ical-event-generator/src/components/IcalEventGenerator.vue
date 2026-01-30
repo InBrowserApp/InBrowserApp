@@ -10,31 +10,31 @@
         @regenerate-uid="regenerateUid"
       />
       <IcalEventDateTimeSection
-        v-model:isAllDay="isAllDay"
-        v-model:timeZone="timeZone"
-        v-model:outputMode="outputMode"
-        v-model:dateRange="dateRange"
+        v-model:is-all-day="isAllDay"
+        v-model:time-zone="timeZone"
+        v-model:output-mode="outputMode"
+        v-model:date-range="dateRange"
         :time-zone-options="timeZoneOptions"
         :offset-label="offsetLabel"
         :range-error-key="rangeErrorKey || undefined"
       />
       <IcalEventRecurrenceSection
-        v-model:recurrenceFrequency="recurrenceFrequency"
-        v-model:recurrenceInterval="recurrenceInterval"
-        v-model:recurrenceWeekdays="recurrenceWeekdays"
-        v-model:recurrenceMonthDay="recurrenceMonthDay"
-        v-model:recurrenceMonth="recurrenceMonth"
-        v-model:recurrenceEndMode="recurrenceEndMode"
-        v-model:recurrenceCount="recurrenceCount"
-        v-model:recurrenceUntilInput="recurrenceUntilInput"
+        v-model:recurrence-frequency="recurrenceFrequency"
+        v-model:recurrence-interval="recurrenceInterval"
+        v-model:recurrence-weekdays="recurrenceWeekdays"
+        v-model:recurrence-month-day="recurrenceMonthDay"
+        v-model:recurrence-month="recurrenceMonth"
+        v-model:recurrence-end-mode="recurrenceEndMode"
+        v-model:recurrence-count="recurrenceCount"
+        v-model:recurrence-until-input="recurrenceUntilInput"
         :recurrence-until-status="recurrenceUntilStatus"
         :recurrence-until-error-key="recurrenceUntilErrorKey || undefined"
         :is-all-day="isAllDay"
       />
       <IcalEventRemindersSection
-        v-model:remindersEnabled="remindersEnabled"
+        v-model:reminders-enabled="remindersEnabled"
         v-model:reminders="reminders"
-        v-model:defaultReminder="reminderDefault"
+        v-model:default-reminder="reminderDefault"
       />
     </n-gi>
 

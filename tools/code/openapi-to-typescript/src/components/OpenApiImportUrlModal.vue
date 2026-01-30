@@ -34,7 +34,7 @@
     </n-space>
     <template #footer>
       <n-flex justify="end" :wrap="false">
-        <n-button @click="onClose" :disabled="isImporting">
+        <n-button :disabled="isImporting" @click="onClose">
           {{ t('importUrlCancel') }}
         </n-button>
         <n-button type="primary" :loading="isImporting" @click="onConfirm">

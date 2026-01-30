@@ -2,19 +2,19 @@
   <ToolSection>
     <n-flex align="center" justify="space-between" wrap>
       <n-flex align="center" wrap>
-        <n-button @click="emit('import')" text>
+        <n-button text @click="emit('import')">
           <template #icon>
             <n-icon :component="Document16Regular" />
           </template>
           {{ t('actionsImport') }}
         </n-button>
-        <n-button @click="emit('import-url')" text>
+        <n-button text @click="emit('import-url')">
           <template #icon>
             <n-icon :component="Link16Regular" />
           </template>
           {{ t('actionsImportUrl') }}
         </n-button>
-        <n-button @click="emit('load-sample')" text>
+        <n-button text @click="emit('load-sample')">
           <template #icon>
             <n-icon :component="Wand16Regular" />
           </template>

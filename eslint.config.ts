@@ -33,7 +33,7 @@ export default defineConfigWithVueTs(
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ...(vueI18n.configs.recommended as unknown as any),
@@ -105,6 +105,15 @@ export default defineConfigWithVueTs(
     files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
     rules: {
       'max-lines': 'off',
+    },
+  },
+  {
+    name: 'app/vue-tests',
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+    rules: {
+      'vue/one-component-per-file': 'off',
+      'vue/require-prop-types': 'off',
+      'vue/require-default-prop': 'off',
     },
   },
   {
