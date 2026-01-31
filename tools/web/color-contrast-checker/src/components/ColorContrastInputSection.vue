@@ -9,12 +9,11 @@
           :validation-status="foregroundStatus"
         >
           <n-color-picker
-            :value="foregroundHex"
+            v-model:value="foregroundHex"
             :modes="['hex']"
             :show-alpha="true"
             :swatches="swatches"
             data-testid="foreground-picker"
-            @update:value="onUpdateForeground"
           />
         </n-form-item>
       </n-gi>
@@ -25,12 +24,11 @@
           :validation-status="backgroundStatus"
         >
           <n-color-picker
-            :value="backgroundHex"
+            v-model:value="backgroundHex"
             :modes="['hex']"
             :show-alpha="true"
             :swatches="swatches"
             data-testid="background-picker"
-            @update:value="onUpdateBackground"
           />
         </n-form-item>
       </n-gi>
@@ -53,8 +51,6 @@ import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 defineProps<{
-  foregroundHex: string
-  backgroundHex: string
   swatches: string[]
   foregroundFeedback?: string
   backgroundFeedback?: string
@@ -63,20 +59,13 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (event: 'update:foreground', value: string): void
-  (event: 'update:background', value: string): void
   (event: 'swap'): void
 }>()
 
+const foregroundHex = defineModel<string>('foregroundHex', { required: true })
+const backgroundHex = defineModel<string>('backgroundHex', { required: true })
+
 const { t } = useI18n()
-
-function onUpdateForeground(value: string) {
-  emit('update:foreground', value)
-}
-
-function onUpdateBackground(value: string) {
-  emit('update:background', value)
-}
 
 function onSwap() {
   emit('swap')

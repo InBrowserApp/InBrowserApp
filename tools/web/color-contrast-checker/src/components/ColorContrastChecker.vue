@@ -1,14 +1,12 @@
 <template>
   <ColorContrastInputSection
-    :foreground-hex="foregroundHex"
-    :background-hex="backgroundHex"
+    v-model:foreground-hex="foregroundHexModel"
+    v-model:background-hex="backgroundHexModel"
     :swatches="swatches"
     :foreground-feedback="foregroundFeedback"
     :background-feedback="backgroundFeedback"
     :foreground-status="foregroundStatus"
     :background-status="backgroundStatus"
-    @update:foreground="updateForegroundFromPicker"
-    @update:background="updateBackgroundFromPicker"
     @swap="swapColors"
   />
   <ColorContrastResultsSection :ratio="ratio" :checks="checks" :has-valid-inputs="hasValidInputs" />
@@ -76,6 +74,20 @@ watch(
 
 const foregroundHex = computed(() => rgbaToHex(lastForeground.value, lastForeground.value.a < 1))
 const backgroundHex = computed(() => rgbaToHex(lastBackground.value, lastBackground.value.a < 1))
+
+const foregroundHexModel = computed({
+  get: () => foregroundHex.value,
+  set: (value: string) => {
+    updateForegroundFromPicker(value)
+  },
+})
+
+const backgroundHexModel = computed({
+  get: () => backgroundHex.value,
+  set: (value: string) => {
+    updateBackgroundFromPicker(value)
+  },
+})
 
 const foregroundFeedback = computed(() => {
   if (!foregroundInput.value.trim()) return undefined
