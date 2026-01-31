@@ -16,7 +16,7 @@
     <div>
       <n-text depth="3">{{ t('time-zone') }}</n-text>
       <n-select
-        v-model:value="baseTimeZoneModel"
+        v-model:value="baseTimeZone"
         :options="timeZoneOptions"
         filterable
         :placeholder="t('timezone-placeholder')"
@@ -29,7 +29,7 @@
     <div>
       <n-text depth="3">{{ t('date-time') }}</n-text>
       <n-input
-        v-model:value="baseInputModel"
+        v-model:value="baseInput"
         :placeholder="t('datetime-placeholder')"
         :status="baseStatus"
       />
@@ -44,39 +44,24 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import type { FormValidationStatus, SelectOption } from 'naive-ui'
 import { NInput, NSelect, NText, NFlex, NButton, NIcon } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import Clock16Regular from '@vicons/fluent/Clock16Regular'
 import { useI18n } from 'vue-i18n'
 
-const props = defineProps<{
-  baseInput: string
+defineProps<{
   baseStatus?: FormValidationStatus
   baseError: boolean
-  baseTimeZone: string
   baseOffsetLabel: string
   timeZoneOptions: SelectOption[]
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:baseInput', value: string): void
-  (event: 'update:baseTimeZone', value: string): void
-  (event: 'now'): void
-}>()
+const emit = defineEmits<{ (event: 'now'): void }>()
+const baseInput = defineModel<string>('baseInput', { required: true })
+const baseTimeZone = defineModel<string>('baseTimeZone', { required: true })
 
 const { t } = useI18n()
-
-const baseInputModel = computed({
-  get: () => props.baseInput,
-  set: (value) => emit('update:baseInput', value),
-})
-
-const baseTimeZoneModel = computed({
-  get: () => props.baseTimeZone,
-  set: (value) => emit('update:baseTimeZone', value),
-})
 </script>
 
 <style scoped>

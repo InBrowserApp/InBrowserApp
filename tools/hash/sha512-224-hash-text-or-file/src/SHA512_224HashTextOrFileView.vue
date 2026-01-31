@@ -1,7 +1,7 @@
 <template>
   <ToolDefaultPageLayout :info="toolInfo">
     <HashTextOrFileTemplate :hash="hashFunction" />
-    <WhatIsSHA512_224 />
+    <WhatIsSHA512224 />
   </ToolDefaultPageLayout>
 </template>
 
@@ -10,7 +10,7 @@ import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
 import { sha512_224 } from '@noble/hashes/sha512'
-import WhatIsSHA512_224 from './WhatIsSHA512_224.vue'
+import WhatIsSHA512224 from './WhatIsSHA512_224.vue'
 
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {
   const arrayBuffer = await blob.arrayBuffer()

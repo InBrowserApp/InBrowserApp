@@ -7,11 +7,11 @@ import { computed } from 'vue'
 import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   length: number
 }>()
+
+const { t } = useI18n()
 
 const lengthDisplay = computed(() => (props.length > 0 ? `${props.length}` : t('notAvailable')))
 </script>

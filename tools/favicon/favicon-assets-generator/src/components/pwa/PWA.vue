@@ -58,7 +58,6 @@
 <script setup lang="ts">
 import { NH3, NText, NGrid, NGridItem, NIcon } from 'naive-ui'
 import type { PWAOptions } from '../../utils/favicon-generator/pwa'
-import { useVModel } from '@vueuse/core'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import PWAPreview from './any/PWAPreview.vue'
 import PWAMaskablePreview from './maskable/PWAMaskablePreview.vue'
@@ -69,17 +68,14 @@ import BookInformation20Regular from '@vicons/fluent/BookInformation20Regular'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
-const props = defineProps<{
+defineProps<{
   image: Blob | undefined
-  options: PWAOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
 
-const emit = defineEmits(['update:options'])
+const { t } = useI18n()
 
-const options = useVModel(props, 'options', emit)
+const options = defineModel<PWAOptions>('options', { required: true })
 </script>
 
 <style scoped>

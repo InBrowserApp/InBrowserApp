@@ -81,8 +81,6 @@ import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import type { ShadowLayer } from '../utils/shadow'
 
-const { t } = useI18n()
-
 defineProps<{
   layers: ShadowLayer[]
   activeLayerId: string
@@ -94,6 +92,8 @@ const emit = defineEmits<{
   (event: 'remove-layer', value: string): void
   (event: 'move-layer', value: { id: string; direction: number }): void
 }>()
+
+const { t } = useI18n()
 
 function handleSetActive(value: string) {
   emit('set-active', value)

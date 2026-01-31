@@ -31,12 +31,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="loopLabel" :show-feedback="false">
         <n-flex vertical :size="8" style="width: 100%">
-          <n-select
-            :value="loopMode"
-            :options="loopOptions"
-            style="width: 100%"
-            @update:value="handleLoopModeUpdate"
-          />
+          <n-select v-model:value="loopMode" :options="loopOptions" style="width: 100%" />
           <n-text depth="3">{{ loopHint }}</n-text>
         </n-flex>
       </n-form-item-gi>
@@ -45,13 +40,7 @@
     <n-collapse-transition :show="loopMode === 'custom'">
       <n-grid cols="1 s:2 l:3" :x-gap="12" :y-gap="12" responsive="screen" style="margin-top: 12px">
         <n-form-item-gi :label="loopCountLabel" :show-feedback="false">
-          <n-input-number
-            :value="loopCount"
-            :min="1"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleLoopCountUpdate"
-          />
+          <n-input-number v-model:value="loopCount" :min="1" :step="1" style="width: 100%" />
         </n-form-item-gi>
       </n-grid>
     </n-collapse-transition>
@@ -103,10 +92,6 @@ const props = defineProps<{
   loopCustomLabel: string
   convertLabel: string
   convertingLabel: string
-  scale: number
-  speed: number
-  loopMode: GifLoopMode
-  loopCount: number | null
   minScale: number
   maxScale: number
   minSpeed: number
@@ -116,12 +101,13 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  'update:scale': [value: number]
-  'update:speed': [value: number]
-  'update:loopMode': [value: GifLoopMode]
-  'update:loopCount': [value: number | null]
   convert: []
 }>()
+
+const scale = defineModel<number>('scale', { required: true })
+const speed = defineModel<number>('speed', { required: true })
+const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
+const loopCount = defineModel<number | null>('loopCount', { required: true })
 
 const loopOptions = computed(() => [
   { label: props.loopInheritLabel, value: 'inherit' },
@@ -130,18 +116,14 @@ const loopOptions = computed(() => [
 ])
 
 function handleScaleUpdate(value: number | null) {
-  emit('update:scale', value ?? props.scale)
+  if (value !== null) {
+    scale.value = value
+  }
 }
 
 function handleSpeedUpdate(value: number | null) {
-  emit('update:speed', value ?? props.speed)
-}
-
-function handleLoopModeUpdate(value: GifLoopMode | null) {
-  emit('update:loopMode', value ?? props.loopMode)
-}
-
-function handleLoopCountUpdate(value: number | null) {
-  emit('update:loopCount', value)
+  if (value !== null) {
+    speed.value = value
+  }
 }
 </script>

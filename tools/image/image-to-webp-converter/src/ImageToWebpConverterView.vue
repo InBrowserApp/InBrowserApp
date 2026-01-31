@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useMessage, NAlert } from 'naive-ui'
 import { ToolDefaultPageLayout, ToolSection } from '@shared/ui/tool'
@@ -55,9 +55,7 @@ import ImageToWebpNote from './components/ImageToWebpNote.vue'
 import ImageToWebpOptionsSection from './components/ImageToWebpOptionsSection.vue'
 import ImageToWebpResultsSection from './components/ImageToWebpResultsSection.vue'
 import ImageToWebpUploadSection from './components/ImageToWebpUploadSection.vue'
-import { convertImageToWebp } from './utils/convert-image-to-webp'
-import { createWebpZip } from './utils/create-webp-zip'
-import type { WebpConversionOptions, WebpConversionResult } from './types'
+import { useWebpConversion } from './composables/useWebpConversion'
 
 const { t } = useI18n()
 const message = useMessage()
@@ -83,22 +81,20 @@ const segments = ref<number | null>(null)
 const passCount = ref<number | null>(null)
 const exactMode = ref<TriState>('default')
 const sharpYuvMode = ref<TriState>('default')
-const results = ref<WebpConversionResult[]>([])
-const zipBlob = ref<Blob | null>(null)
-const error = ref('')
-const isConverting = ref(false)
-const isZipping = ref(false)
-
 const minScale = 10
 const maxScale = 400
 const zipName = 'webp-images.zip'
+const messages = {
+  convertSuccess: () => t('convertSuccess'),
+  convertFailed: () => t('convertFailed'),
+  partialFailed: (count: number) => t('partialFailed', { count }),
+  zipFailed: () => t('zipFailed'),
+  invalidImage: () => t('invalidImage'),
+  canvasUnavailable: () => t('canvasUnavailable'),
+}
 
-const canConvert = computed(() => files.value.length > 0 && !isConverting.value)
-
-let runId = 0
-
-watch(
-  [
+const { results, zipBlob, error, isConverting, isZipping, canConvert, convertImages } =
+  useWebpConversion({
     files,
     scale,
     quality,
@@ -118,167 +114,9 @@ watch(
     passCount,
     exactMode,
     sharpYuvMode,
-  ],
-  () => {
-    runId += 1
-    results.value = []
-    zipBlob.value = null
-    error.value = ''
-    isConverting.value = false
-    isZipping.value = false
-  },
-)
-
-async function convertImages() {
-  if (!files.value.length || isConverting.value) return
-
-  const currentRun = ++runId
-  isConverting.value = true
-  isZipping.value = false
-  error.value = ''
-  results.value = []
-  zipBlob.value = null
-
-  const nameCounts = new Map<string, number>()
-  const nextResults: WebpConversionResult[] = []
-  const errors: string[] = []
-
-  try {
-    for (const file of files.value) {
-      const outputName = buildOutputName(file.name, nameCounts)
-      try {
-        const result = await convertImageToWebp(file, buildConversionOptions(), outputName)
-        if (currentRun !== runId) return
-        nextResults.push(result)
-      } catch (err) {
-        errors.push(resolveErrorMessage(err))
-      }
-    }
-
-    if (currentRun !== runId) return
-    results.value = nextResults
-
-    if (nextResults.length > 1) {
-      isZipping.value = true
-      try {
-        const zip = await createWebpZip(nextResults)
-        if (currentRun !== runId) return
-        zipBlob.value = zip
-      } catch {
-        if (currentRun !== runId) return
-        const zipError = t('zipFailed')
-        error.value = zipError
-        message.error(zipError)
-      } finally {
-        if (currentRun === runId) {
-          isZipping.value = false
-        }
-      }
-    }
-
-    if (errors.length) {
-      const errorMessage = nextResults.length
-        ? t('partialFailed', { count: errors.length })
-        : (errors[0] ?? t('convertFailed'))
-      error.value = errorMessage
-      message.error(errorMessage)
-    } else if (nextResults.length) {
-      message.success(t('convertSuccess'))
-    } else {
-      error.value = t('convertFailed')
-      message.error(error.value)
-    }
-  } finally {
-    if (currentRun === runId) {
-      isConverting.value = false
-    }
-  }
-}
-
-function buildConversionOptions(): WebpConversionOptions {
-  const options: WebpConversionOptions = {
-    scale: scale.value,
-    quality: quality.value,
-    method: method.value,
-    lossless: lossless.value,
-  }
-
-  if (!advancedEnabled.value) return options
-
-  if (targetSize.value !== null && Number.isFinite(targetSize.value)) {
-    options.targetSize = Math.max(0, Math.round(targetSize.value * 1024))
-  }
-  if (targetPsnr.value !== null && Number.isFinite(targetPsnr.value)) {
-    options.targetPsnr = targetPsnr.value
-  }
-  if (nearLossless.value !== null && Number.isFinite(nearLossless.value)) {
-    options.nearLossless = nearLossless.value
-  }
-  if (alphaQuality.value !== null && Number.isFinite(alphaQuality.value)) {
-    options.alphaQuality = alphaQuality.value
-  }
-  if (snsStrength.value !== null && Number.isFinite(snsStrength.value)) {
-    options.snsStrength = snsStrength.value
-  }
-  if (filterStrength.value !== null && Number.isFinite(filterStrength.value)) {
-    options.filterStrength = filterStrength.value
-  }
-  if (filterSharpness.value !== null && Number.isFinite(filterSharpness.value)) {
-    options.filterSharpness = filterSharpness.value
-  }
-  if (filterType.value !== null && Number.isFinite(filterType.value)) {
-    options.filterType = filterType.value
-  }
-  if (partitions.value !== null && Number.isFinite(partitions.value)) {
-    options.partitions = partitions.value
-  }
-  if (segments.value !== null && Number.isFinite(segments.value)) {
-    options.segments = segments.value
-  }
-  if (passCount.value !== null && Number.isFinite(passCount.value)) {
-    options.pass = passCount.value
-  }
-  const exactValue = resolveTriState(exactMode.value)
-  if (exactValue !== undefined) {
-    options.exact = exactValue
-  }
-  const sharpYuvValue = resolveTriState(sharpYuvMode.value)
-  if (sharpYuvValue !== undefined) {
-    options.useSharpYuv = sharpYuvValue
-  }
-
-  return options
-}
-
-function resolveTriState(value: TriState) {
-  if (value === 'on') return true
-  if (value === 'off') return false
-  return undefined
-}
-
-function resolveErrorMessage(err: unknown) {
-  if (err instanceof Error) {
-    switch (err.message) {
-      case 'INVALID_IMAGE':
-        return t('invalidImage')
-      case 'CANVAS_CONTEXT_UNAVAILABLE':
-        return t('canvasUnavailable')
-      default:
-        return t('convertFailed')
-    }
-  }
-  return t('convertFailed')
-}
-
-function buildOutputName(name: string, nameCounts: Map<string, number>) {
-  const base = name.replace(/\.[^/.]+$/, '') || 'image'
-  const candidate = `${base}.webp`
-  const currentCount = nameCounts.get(candidate) ?? 0
-  nameCounts.set(candidate, currentCount + 1)
-
-  if (currentCount === 0) return candidate
-  return `${base}-${currentCount + 1}.webp`
-}
+    messages,
+    message,
+  })
 </script>
 
 <i18n lang="json">

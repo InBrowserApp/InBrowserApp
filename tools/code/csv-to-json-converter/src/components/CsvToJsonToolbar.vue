@@ -43,11 +43,11 @@ defineProps<{
   downloadUrl?: string
 }>()
 
-const showSettings = defineModel<boolean>('showSettings', { required: true })
-
 const emit = defineEmits<{
   (e: 'import'): void
 }>()
+
+const showSettings = defineModel<boolean>('showSettings', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 

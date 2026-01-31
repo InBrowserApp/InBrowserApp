@@ -12,9 +12,11 @@ import { NButton, NIcon } from 'naive-ui'
 import Icon from '@vicons/fluent/Delete16Regular'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const emits = defineEmits<{
+  click: []
+}>()
 
-const emits = defineEmits(['click'])
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

@@ -3,25 +3,20 @@
   <ToolSection>
     <n-form-item :label="t('secret-key')">
       <n-input
-        :value="secretKey"
+        v-model:value="secretKey"
         :placeholder="t('secret-key-placeholder')"
         type="password"
         show-password-on="click"
         :input-props="{ autocomplete: 'off' }"
-        @update:value="$emit('update:secretKey', $event)"
       />
     </n-form-item>
     <n-form-item :label="t('algorithm')" :show-feedback="false">
-      <n-select
-        :value="algorithm"
-        :options="ALGORITHM_OPTIONS"
-        @update:value="$emit('update:algorithm', $event)"
-      />
+      <n-select v-model:value="algorithm" :options="ALGORITHM_OPTIONS" />
     </n-form-item>
   </ToolSection>
 
   <ToolSectionHeader>{{ t('message-header') }}</ToolSectionHeader>
-  <TextOrFileInput :value="message" @update:value="$emit('update:message', $event)" />
+  <TextOrFileInput v-model:value="message" />
 </template>
 
 <script setup lang="ts">
@@ -32,19 +27,11 @@ import { TextOrFileInput } from '@shared/ui/base'
 import { NInput, NFormItem, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+const secretKey = defineModel<string>('secretKey', { required: true })
+const algorithm = defineModel<HmacAlgorithm>('algorithm', { required: true })
+const message = defineModel<string | File>('message', { required: true })
+
 const { t } = useI18n()
-
-defineProps<{
-  secretKey: string
-  algorithm: HmacAlgorithm
-  message: string | File
-}>()
-
-defineEmits<{
-  'update:secretKey': [value: string]
-  'update:algorithm': [value: HmacAlgorithm]
-  'update:message': [value: string | File]
-}>()
 </script>
 
 <i18n lang="json">

@@ -12,8 +12,6 @@ import { computed } from 'vue'
 import { normalizePath } from '../../utils/favicon-generator/general-info'
 import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml'
-hljs.registerLanguage('html', xml)
-
 const props = defineProps<{
   image: Blob | undefined
   pwaOptions: PWAOptions
@@ -21,6 +19,8 @@ const props = defineProps<{
   iosWebClipOptions: iOSWebClipOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
+
+hljs.registerLanguage('html', xml)
 
 const prefix = computed(() => {
   return normalizePath(props.generalInfoOptions.path)

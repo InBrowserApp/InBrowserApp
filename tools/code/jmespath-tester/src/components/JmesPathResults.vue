@@ -49,8 +49,6 @@ import hljs from 'highlight.js/lib/core'
 import jsonLang from 'highlight.js/lib/languages/json'
 import type { QueryState } from './types'
 
-hljs.registerLanguage('json', jsonLang)
-
 defineProps<{
   queryState: QueryState
   resultCount: number
@@ -58,6 +56,8 @@ defineProps<{
   downloadUrl?: string
   downloadFilename: string
 }>()
+
+hljs.registerLanguage('json', jsonLang)
 
 const { t } = useI18n({ useScope: 'local' })
 </script>

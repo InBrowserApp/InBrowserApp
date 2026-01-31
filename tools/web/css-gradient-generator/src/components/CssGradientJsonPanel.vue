@@ -59,31 +59,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NAlert, NButton, NCard, NFlex, NIcon, NInput } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
 
-const { t } = useI18n()
-
-const props = defineProps<{
+defineProps<{
   serializedConfig: string
-  jsonInput: string
   jsonUrl?: string
   showError: boolean
 }>()
 
 const emit = defineEmits<{
-  (event: 'update:jsonInput', value: string): void
   (event: 'load-json'): void
 }>()
 
-const jsonInputModel = computed({
-  get: () => props.jsonInput,
-  set: (value: string) => emit('update:jsonInput', value),
-})
+const { t } = useI18n()
+
+const jsonInputModel = defineModel<string>('jsonInput', { required: true })
 
 function handleLoadJson() {
   emit('load-json')

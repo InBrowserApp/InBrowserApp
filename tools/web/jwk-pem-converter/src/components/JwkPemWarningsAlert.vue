@@ -11,11 +11,11 @@ import { NAlert, NSpace } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { WarningEntry } from '../utils/jwkPem'
 
-const { t } = useI18n()
-
 defineProps<{
   warnings: WarningEntry[]
 }>()
+
+const { t } = useI18n()
 
 function formatWarning(warning: WarningEntry): string {
   // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys

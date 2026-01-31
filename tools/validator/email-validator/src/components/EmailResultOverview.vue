@@ -31,8 +31,6 @@ import { NDescriptions, NDescriptionsItem, NFlex, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const { t } = useI18n()
-
 defineProps<{
   isValid: boolean
   normalized: string
@@ -42,6 +40,8 @@ defineProps<{
   domain: string
   domainRaw?: string | null
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

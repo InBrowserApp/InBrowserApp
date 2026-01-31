@@ -6,7 +6,7 @@
     :image="image"
     :general-info-options="generalInfoOptions"
   />
-  <iOSWebClip
+  <IOSWebClip
     v-model:options="iosOptions"
     :image="image"
     :general-info-options="generalInfoOptions"
@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import iOSWebClip from './ios-web-clip/iOSWebClip.vue'
+import IOSWebClip from './ios-web-clip/iOSWebClip.vue'
 import GeneralInfo from './general-info/GeneralInfo.vue'
 import type { iOSWebClipOptions } from '../utils/favicon-generator/ios-web-clip'
 import type { GeneralInfoOptions } from '../utils/favicon-generator/general-info'

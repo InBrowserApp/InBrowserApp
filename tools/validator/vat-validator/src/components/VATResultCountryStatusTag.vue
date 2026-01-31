@@ -10,6 +10,10 @@ import { NTag } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { VATValidationResult } from '../data/vat'
 
+const props = defineProps<{
+  validationResult: VATValidationResult
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -18,10 +22,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-const props = defineProps<{
-  validationResult: VATValidationResult
-}>()
 
 const countryStatus = computed<TagStatus>(() => {
   if (!props.validationResult.countryCode) {

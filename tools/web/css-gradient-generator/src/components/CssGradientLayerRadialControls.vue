@@ -17,28 +17,14 @@ import { NFlex, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { GradientType, RadialShape, RadialSize } from '../types'
 
+defineProps<{
+  layerType: GradientType
+}>()
+
 const { t } = useI18n()
 
-const props = defineProps<{
-  layerType: GradientType
-  layerShape: RadialShape
-  layerSize: RadialSize
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:layerShape', value: RadialShape): void
-  (event: 'update:layerSize', value: RadialSize): void
-}>()
-
-const layerShapeModel = computed({
-  get: () => props.layerShape,
-  set: (value: RadialShape) => emit('update:layerShape', value),
-})
-
-const layerSizeModel = computed({
-  get: () => props.layerSize,
-  set: (value: RadialSize) => emit('update:layerSize', value),
-})
+const layerShapeModel = defineModel<RadialShape>('layerShape', { required: true })
+const layerSizeModel = defineModel<RadialSize>('layerSize', { required: true })
 
 const shapeOptions = computed(() => [
   { label: t('shape.circle'), value: 'circle' },

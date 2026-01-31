@@ -48,8 +48,6 @@ import { useI18n } from 'vue-i18n'
 import type { Pbkdf2Algorithm, SaltFormat } from '../types'
 import { bytesToBase64, bytesToHex, derivePbkdf2 } from '../utils'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   password: string
   salt: string | File
@@ -61,6 +59,8 @@ const props = defineProps<{
   iterationsValid: boolean
   lengthValid: boolean
 }>()
+
+const { t } = useI18n()
 
 const evaluating = shallowRef(false)
 

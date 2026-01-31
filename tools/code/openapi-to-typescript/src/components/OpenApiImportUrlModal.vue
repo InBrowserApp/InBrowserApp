@@ -49,8 +49,6 @@
 import { useI18n } from 'vue-i18n'
 import { NAlert, NButton, NFlex, NFormItem, NInput, NModal, NSpace, NText } from 'naive-ui'
 
-const show = defineModel<boolean>('show', { required: true })
-
 defineProps<{
   importUrl: string
   importUrlError: string
@@ -61,6 +59,8 @@ defineProps<{
   onClose: () => void
   onConfirm: () => void
 }>()
+
+const show = defineModel<boolean>('show', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 

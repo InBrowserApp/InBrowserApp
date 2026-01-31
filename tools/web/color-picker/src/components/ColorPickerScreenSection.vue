@@ -28,8 +28,6 @@ import { useI18n } from 'vue-i18n'
 import EyedropperIcon from '@vicons/fluent/Eyedropper24Filled'
 import { ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   isEyeDropperSupported: boolean
 }>()
@@ -37,6 +35,8 @@ defineProps<{
 const emit = defineEmits<{
   (event: 'pick'): void
 }>()
+
+const { t } = useI18n()
 
 function onPick() {
   emit('pick')

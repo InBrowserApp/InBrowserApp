@@ -2,7 +2,7 @@
   <ToolSectionHeader>{{ t('uploadTitle') }}</ToolSectionHeader>
   <ToolSection>
     <n-flex vertical :size="8">
-      <PDFUpload @upload:file="handleUpload" />
+      <PDFUpload @upload-file="handleUpload" />
       <n-text depth="3">{{ t('localNote') }}</n-text>
     </n-flex>
   </ToolSection>

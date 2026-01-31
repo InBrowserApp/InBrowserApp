@@ -36,11 +36,11 @@ import IBANResultChecks from './IBANResultChecks.vue'
 import IBANResultFormats from './IBANResultFormats.vue'
 import IBANResultStatus from './IBANResultStatus.vue'
 
-const { t, locale } = useI18n()
-
 const props = defineProps<{
   validationResult: IBANValidationResult
 }>()
+
+const { t, locale } = useI18n()
 
 const displayNames = computed(() => {
   if (typeof Intl === 'undefined' || typeof Intl.DisplayNames === 'undefined') return null

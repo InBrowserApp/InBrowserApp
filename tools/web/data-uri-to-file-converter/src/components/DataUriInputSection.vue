@@ -2,7 +2,7 @@
   <ToolSectionHeader>{{ t('data-uri-input') }}</ToolSectionHeader>
   <ToolSection>
     <n-input
-      v-model:value="dataUriModel"
+      v-model:value="dataUri"
       class="data-uri-input"
       type="textarea"
       :placeholder="t('data-uri-placeholder')"
@@ -15,26 +15,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NInput, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
-const props = defineProps<{
-  dataUri: string
+defineProps<{
   showError: boolean
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:dataUri', value: string): void
-}>()
+const dataUri = defineModel<string>('dataUri', { required: true })
 
-const dataUriModel = computed({
-  get: () => props.dataUri,
-  set: (value: string) => emit('update:dataUri', value),
-})
+const { t } = useI18n()
 </script>
 
 <style scoped>

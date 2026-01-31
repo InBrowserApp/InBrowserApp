@@ -30,16 +30,15 @@ const props = defineProps<{
   variant?: 'text' | 'tertiary' | 'secondary' | 'quaternary'
   disabled?: boolean
 }>()
+const emit = defineEmits<{
+  (e: 'click'): void
+}>()
 const content = toRef(props, 'content')
 const variant = computed(() => props.variant ?? 'text')
 const disabled = computed(() => props.disabled ?? false)
 
 const { copy } = useCopyToClipboard(content)
 const { t } = useI18n()
-const emit = defineEmits<{
-  (e: 'click'): void
-}>()
-
 function onClick() {
   emit('click')
   copy()

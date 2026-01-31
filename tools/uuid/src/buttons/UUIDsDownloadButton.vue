@@ -30,11 +30,11 @@ import { NIcon, NButton, NFlex, NPopover } from 'naive-ui'
 import Icon from '@vicons/fluent/ArrowDownload16Regular'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   uuids: string[]
 }>()
+
+const { t } = useI18n()
 
 const txtBlob = computed(() => new Blob([props.uuids.join('\n')], { type: 'text/plain' }))
 const csvBlob = computed(

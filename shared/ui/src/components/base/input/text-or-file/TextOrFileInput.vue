@@ -76,6 +76,17 @@ import DocumentOutline from '@vicons/ionicons5/DocumentOutline'
 import type { UploadFileInfo } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+withDefaults(defineProps<Omit<Props, 'value'>>(), {
+  accept: '*',
+  placeholder: undefined,
+  label: undefined,
+  status: undefined,
+  validationStatus: undefined,
+  feedback: undefined,
+  showFeedback: false,
+  wrapWithFormItem: true,
+})
+
 const { t } = useI18n()
 
 interface Props {
@@ -90,27 +101,14 @@ interface Props {
   wrapWithFormItem?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  accept: '*',
-  placeholder: undefined,
-  label: undefined,
-  status: undefined,
-  validationStatus: undefined,
-  feedback: undefined,
-  showFeedback: false,
-  wrapWithFormItem: true,
-})
-
-const emit = defineEmits<{
-  'update:value': [value: string | File]
-}>()
+const modelValue = defineModel<Props['value']>('value', { required: true })
 
 const textValue = ref<string>('')
 const selectedFile = ref<File | null>(null)
 
 // Initialize values based on prop
 watch(
-  () => props.value,
+  () => modelValue.value,
   (newValue) => {
     if (typeof newValue === 'string') {
       textValue.value = newValue
@@ -134,21 +132,21 @@ function onTextInput() {
   if (textValue.value) {
     selectedFile.value = null
   }
-  emit('update:value', currentValue.value)
+  modelValue.value = currentValue.value
 }
 
 async function beforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
   if (data.file.file) {
     selectedFile.value = data.file.file
     textValue.value = ''
-    emit('update:value', data.file.file)
+    modelValue.value = data.file.file
   }
   return false // Prevent default upload
 }
 
 function clearFile() {
   selectedFile.value = null
-  emit('update:value', textValue.value)
+  modelValue.value = textValue.value
 }
 
 function formatFileSize(bytes: number): string {

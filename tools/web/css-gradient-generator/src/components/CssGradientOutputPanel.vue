@@ -57,10 +57,7 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import type { ColorFormat } from '../types'
 
-const { t } = useI18n()
-
-const props = defineProps<{
-  outputFormat: ColorFormat
+defineProps<{
   cssOutput: string
   backgroundImageDeclaration: string
   backgroundBlendDeclaration: string
@@ -69,14 +66,9 @@ const props = defineProps<{
   cssUrl?: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:outputFormat', value: ColorFormat): void
-}>()
+const { t } = useI18n()
 
-const outputFormatModel = computed({
-  get: () => props.outputFormat,
-  set: (value: ColorFormat) => emit('update:outputFormat', value),
-})
+const outputFormatModel = defineModel<ColorFormat>('outputFormat', { required: true })
 
 const formatOptions = computed(() => [
   { label: t('format.hex'), value: 'hex' },

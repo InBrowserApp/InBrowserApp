@@ -14,18 +14,11 @@
 <script setup lang="ts">
 import { NColorPicker, NSlider, NFormItem } from 'naive-ui'
 import type { PWAOptions } from '../../../utils/favicon-generator/pwa'
-import { useVModel } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const props = defineProps<{
-  options: PWAOptions
-}>()
-
-const emit = defineEmits(['update:options'])
-
-const options = useVModel(props, 'options', emit)
+const options = defineModel<PWAOptions>('options', { required: true })
 </script>
 
 <i18n lang="json">

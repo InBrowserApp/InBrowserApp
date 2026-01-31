@@ -1,16 +1,11 @@
 <template>
   <NFlex vertical :size="16">
-    <NInput
-      :value="search"
-      :placeholder="t('searchPlaceholder')"
-      clearable
-      @update:value="$emit('update:search', $event)"
-    >
+    <NInput v-model:value="search" :placeholder="t('searchPlaceholder')" clearable>
       <template #prefix>
         <NIcon :component="SearchIcon" />
       </template>
     </NInput>
-    <NRadioGroup :value="category" @update:value="$emit('update:category', $event)">
+    <NRadioGroup v-model:value="category">
       <NRadioButton value="all">{{ t('all') }}</NRadioButton>
       <NRadioButton value="common">{{ t('common') }}</NRadioButton>
       <NRadioButton value="informational">
@@ -61,15 +56,9 @@ import CheckmarkCircle16Regular from '@vicons/fluent/CheckmarkCircle16Regular'
 import ArrowForward16Regular from '@vicons/fluent/ArrowForward16Regular'
 import ErrorCircle16Regular from '@vicons/fluent/ErrorCircle16Regular'
 import DismissCircle16Regular from '@vicons/fluent/DismissCircle16Regular'
-defineProps<{
-  search: string
-  category: string
-}>()
 
-defineEmits<{
-  'update:search': [value: string]
-  'update:category': [value: string]
-}>()
+const search = defineModel<string>('search', { required: true })
+const category = defineModel<string>('category', { required: true })
 
 const { t } = useI18n()
 

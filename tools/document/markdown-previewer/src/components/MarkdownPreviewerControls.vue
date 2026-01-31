@@ -59,19 +59,17 @@ import Document16Regular from '@vicons/fluent/Document16Regular'
 import Print20Regular from '@vicons/fluent/Print20Regular'
 import type { MarkdownViewMode, ThemeMode } from '../types'
 
-const sanitize = defineModel<boolean>('sanitize', { required: true })
-const showToc = defineModel<boolean>('showToc', { required: true })
-const viewMode = defineModel<MarkdownViewMode>('viewMode', { required: true })
-const theme = defineModel<ThemeMode>('theme', { required: true })
-
 const props = defineProps<{
   downloadUrl?: string | null
 }>()
-
 const emit = defineEmits<{
   (event: 'import'): void
   (event: 'print'): void
 }>()
+const sanitize = defineModel<boolean>('sanitize', { required: true })
+const showToc = defineModel<boolean>('showToc', { required: true })
+const viewMode = defineModel<MarkdownViewMode>('viewMode', { required: true })
+const theme = defineModel<ThemeMode>('theme', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 

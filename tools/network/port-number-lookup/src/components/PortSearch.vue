@@ -1,16 +1,11 @@
 <template>
   <NFlex vertical :size="16">
-    <NInput
-      :value="search"
-      :placeholder="t('searchPlaceholder')"
-      clearable
-      @update:value="$emit('update:search', $event)"
-    >
+    <NInput v-model:value="search" :placeholder="t('searchPlaceholder')" clearable>
       <template #prefix>
         <NIcon :component="SearchIcon" />
       </template>
     </NInput>
-    <NRadioGroup :value="category" @update:value="$emit('update:category', $event)">
+    <NRadioGroup v-model:value="category">
       <NRadioButton value="all">{{ t('all') }}</NRadioButton>
       <NRadioButton value="common">{{ t('common') }}</NRadioButton>
       <NRadioButton value="system">{{ t('system') }}</NRadioButton>
@@ -23,15 +18,9 @@
 import { useI18n } from 'vue-i18n'
 import { NFlex, NInput, NIcon, NRadioGroup, NRadioButton } from 'naive-ui'
 import SearchIcon from '@vicons/fluent/Search20Regular'
-defineProps<{
-  search: string
-  category: string
-}>()
 
-defineEmits<{
-  'update:search': [value: string]
-  'update:category': [value: string]
-}>()
+const search = defineModel<string>('search', { required: true })
+const category = defineModel<string>('category', { required: true })
 
 const { t } = useI18n()
 </script>

@@ -26,11 +26,11 @@ import { NDescriptions, NDescriptionsItem, NFlex, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { DurationDisplay, StrengthReport } from '../utils'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   analysis: StrengthReport
 }>()
+
+const { t } = useI18n()
 
 const characterTags = computed(() => {
   const entries = [

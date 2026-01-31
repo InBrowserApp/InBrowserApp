@@ -31,18 +31,11 @@
 <script setup lang="ts">
 import { NColorPicker, NSlider, NCheckbox, NCollapseTransition, NP, NFormItem } from 'naive-ui'
 import type { DesktopBrowserOptions } from '../../utils/favicon-generator/desktop-browser'
-import { useVModel } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const props = defineProps<{
-  options: DesktopBrowserOptions
-}>()
-
-const emit = defineEmits(['update:options'])
-
-const options = useVModel(props, 'options', emit)
+const options = defineModel<DesktopBrowserOptions>('options', { required: true })
 </script>
 
 <i18n lang="json">

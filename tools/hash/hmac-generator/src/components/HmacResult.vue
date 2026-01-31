@@ -48,13 +48,13 @@ import { useI18n } from 'vue-i18n'
 import type { HmacAlgorithm } from '../types'
 import { generateHmac } from '../hmac'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   secretKey: string
   algorithm: HmacAlgorithm
   message: string | File
 }>()
+
+const { t } = useI18n()
 
 const evaluating = shallowRef(false)
 

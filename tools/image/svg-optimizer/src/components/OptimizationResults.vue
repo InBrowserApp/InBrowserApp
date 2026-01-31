@@ -48,13 +48,13 @@ import { filesize } from 'filesize'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   originalSvg: string
   optimizedSvg: string
   fileName: string
 }>()
+
+const { t } = useI18n()
 
 const originalSize = computed(() => new Blob([props.originalSvg]).size)
 const optimizedSize = computed(() => new Blob([props.optimizedSvg]).size)

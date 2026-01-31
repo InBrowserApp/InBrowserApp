@@ -9,19 +9,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, computed, toRef } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { NInput } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const props = defineProps<{
-  url: string
-}>()
-const urlRef = toRef(props, 'url')
-const url = ref(props.url)
-const emit = defineEmits<{
-  (e: 'update:url', value: string): void
-}>()
-
+const modelUrl = defineModel<string>('url', { required: true })
+const url = ref(modelUrl.value)
 const { t } = useI18n()
 
 const urlStatus = computed(() => {
@@ -34,7 +27,7 @@ const urlStatus = computed(() => {
   }
 })
 
-watch(urlRef, (newURL) => {
+watch(modelUrl, (newURL) => {
   url.value = newURL
 })
 
@@ -44,7 +37,7 @@ watch(
   (newURL) => {
     try {
       new URL(newURL)
-      emit('update:url', newURL)
+      modelUrl.value = newURL
     } catch {
       console.error('Invalid URL', newURL)
     }

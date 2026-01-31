@@ -56,11 +56,11 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { ValidationResult } from '../data/cardBrands'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: ValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

@@ -52,12 +52,12 @@ import {
   type BarcodeScanResult,
 } from '../barcode-reader'
 
-const { t } = useI18n()
-
 const emit = defineEmits<{
   decoded: [data: BarcodeScanResult]
   error: [message: string]
 }>()
+
+const { t } = useI18n()
 
 const videoRef = ref<HTMLVideoElement>()
 const isScanning = ref(false)

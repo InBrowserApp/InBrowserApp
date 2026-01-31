@@ -110,9 +110,6 @@ import SiteWebManifest from './SiteWebManifest.vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-const message = useMessage()
-
 const props = defineProps<{
   image: Blob | undefined
   pwaOptions: PWAOptions
@@ -120,6 +117,8 @@ const props = defineProps<{
   iosWebClipOptions: iOSWebClipOptions
   generalInfoOptions: GeneralInfoOptions
 }>()
+const { t } = useI18n()
+const message = useMessage()
 
 const prefix = computed(() => {
   return normalizePath(props.generalInfoOptions.path)

@@ -46,14 +46,14 @@ import ImageAdd24Regular from '@vicons/fluent/ImageAdd24Regular'
 import ArrowUpload24Regular from '@vicons/fluent/ArrowUpload24Regular'
 import { readBarcodeFromFile, type BarcodeScanResult } from '../barcode-reader'
 
-const { t } = useI18n()
-
-const file = defineModel<File | null>('file', { default: null })
 const emit = defineEmits<{
   decoded: [data: BarcodeScanResult]
   error: [message: string]
 }>()
 
+const { t } = useI18n()
+
+const file = defineModel<File | null>('file', { default: null })
 const imagePreview = useObjectUrl(computed(() => file.value))
 
 async function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {

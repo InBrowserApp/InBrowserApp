@@ -11,12 +11,12 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
 import { NAlert } from 'naive-ui'
 
-const { t } = useI18n()
-
 // Props
 defineProps<{
   error: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

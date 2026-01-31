@@ -1,26 +1,14 @@
 <template>
   <n-form-item-gi :label="t('name')" :show-feedback="false">
-    <n-input
-      :value="name"
-      :placeholder="t('namePlaceholder')"
-      @update:value="$emit('update:name', $event)"
-    />
+    <n-input v-model:value="name" :placeholder="t('namePlaceholder')" />
   </n-form-item-gi>
 
   <n-form-item-gi :label="t('email')" :show-feedback="false">
-    <n-input
-      :value="email"
-      :placeholder="t('emailPlaceholder')"
-      @update:value="$emit('update:email', $event)"
-    />
+    <n-input v-model:value="email" :placeholder="t('emailPlaceholder')" />
   </n-form-item-gi>
 
   <n-form-item-gi :label="t('comment')" :show-feedback="false" :span="2">
-    <n-input
-      :value="comment"
-      :placeholder="t('commentPlaceholder')"
-      @update:value="$emit('update:comment', $event)"
-    />
+    <n-input v-model:value="comment" :placeholder="t('commentPlaceholder')" />
   </n-form-item-gi>
 </template>
 
@@ -28,17 +16,9 @@
 import { useI18n } from 'vue-i18n'
 import { NFormItemGi, NInput } from 'naive-ui'
 
-defineProps<{
-  name: string
-  email: string
-  comment: string
-}>()
-
-defineEmits<{
-  'update:name': [value: string]
-  'update:email': [value: string]
-  'update:comment': [value: string]
-}>()
+const name = defineModel<string>('name', { required: true })
+const email = defineModel<string>('email', { required: true })
+const comment = defineModel<string>('comment', { required: true })
 
 const { t } = useI18n()
 </script>

@@ -12,7 +12,7 @@
       >
         <template #icon>
           <n-icon>
-            <icon />
+            <Icon />
           </n-icon>
         </template>
       </n-button>
@@ -23,5 +23,5 @@
 
 <script lang="ts" setup>
 import { NIcon, NButton, NTooltip } from 'naive-ui'
-import icon from '@vicons/ionicons5/LogoGithub'
+import Icon from '@vicons/ionicons5/LogoGithub'
 </script>

@@ -19,11 +19,11 @@ import type { CSSProperties } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   previewStyle: CSSProperties
 }>()
+
+const { t } = useI18n()
 </script>
 
 <style scoped>

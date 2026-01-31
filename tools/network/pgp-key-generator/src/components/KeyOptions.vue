@@ -2,25 +2,11 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
     <n-grid cols="1 m:2" responsive="screen" :x-gap="20" :y-gap="16">
-      <KeyIdentityFields
-        :name="name"
-        :email="email"
-        :comment="comment"
-        @update:name="$emit('update:name', $event)"
-        @update:email="$emit('update:email', $event)"
-        @update:comment="$emit('update:comment', $event)"
-      />
-      <KeyAlgorithmFields
-        :algorithm="algorithm"
-        :rsa-key-size="rsaKeySize"
-        @update:algorithm="$emit('update:algorithm', $event)"
-        @update:rsa-key-size="$emit('update:rsaKeySize', $event)"
-      />
+      <KeyIdentityFields v-model:name="name" v-model:email="email" v-model:comment="comment" />
+      <KeyAlgorithmFields v-model:algorithm="algorithm" v-model:rsa-key-size="rsaKeySize" />
       <KeyExpirationFields
-        :expiration-days="expirationDays"
-        :passphrase="passphrase"
-        @update:expiration-days="$emit('update:expirationDays', $event)"
-        @update:passphrase="$emit('update:passphrase', $event)"
+        v-model:expiration-days="expirationDays"
+        v-model:passphrase="passphrase"
       />
     </n-grid>
   </ToolSection>
@@ -35,25 +21,13 @@ import KeyExpirationFields from './KeyExpirationFields.vue'
 import KeyIdentityFields from './KeyIdentityFields.vue'
 import type { KeyAlgorithm, RsaKeySize } from '../pgp-keygen'
 
-defineProps<{
-  algorithm: KeyAlgorithm
-  rsaKeySize: RsaKeySize
-  name: string
-  email: string
-  comment: string
-  passphrase: string
-  expirationDays: number
-}>()
-
-defineEmits<{
-  'update:algorithm': [value: KeyAlgorithm]
-  'update:rsaKeySize': [value: RsaKeySize]
-  'update:name': [value: string]
-  'update:email': [value: string]
-  'update:comment': [value: string]
-  'update:passphrase': [value: string]
-  'update:expirationDays': [value: number]
-}>()
+const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })
+const rsaKeySize = defineModel<RsaKeySize>('rsaKeySize', { required: true })
+const name = defineModel<string>('name', { required: true })
+const email = defineModel<string>('email', { required: true })
+const comment = defineModel<string>('comment', { required: true })
+const passphrase = defineModel<string>('passphrase', { required: true })
+const expirationDays = defineModel<number>('expirationDays', { required: true })
 
 const { t } = useI18n()
 </script>

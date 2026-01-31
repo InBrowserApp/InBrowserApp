@@ -49,11 +49,11 @@ import { createGroup, type RobotsGroup } from '../robotsState'
 import RobotsTxtRulesSection from './RobotsTxtRulesSection.vue'
 import RobotsTxtUserAgentsSection from './RobotsTxtUserAgentsSection.vue'
 
-const groups = defineModel<RobotsGroup[]>('groups', { required: true })
-
 defineProps<{
   advanced: boolean
 }>()
+
+const groups = defineModel<RobotsGroup[]>('groups', { required: true })
 
 const { t } = useI18n()
 

@@ -26,8 +26,6 @@ import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import HashResult from './HashResult.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   hash: (blob: Blob) => Promise<ArrayBuffer>
   hideHex?: boolean
@@ -35,6 +33,8 @@ const props = defineProps<{
   hideBinary?: boolean
   hideDecimal?: boolean
 }>()
+
+const { t } = useI18n()
 
 const textOrFile = ref<string | File>('')
 </script>

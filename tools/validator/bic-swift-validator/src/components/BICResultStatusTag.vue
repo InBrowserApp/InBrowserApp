@@ -8,11 +8,11 @@
 import { NTag } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   isValid: boolean
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

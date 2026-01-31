@@ -14,28 +14,19 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { TextOrFileInput } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
-const props = defineProps<{
-  modelValue: string | File
+defineProps<{
   accept: string
   status?: 'error' | 'success'
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:modelValue', value: string | File): void
-}>()
+const { t } = useI18n()
 
-const inputModel = computed({
-  get: () => props.modelValue,
-  set: (value: string | File) => emit('update:modelValue', value),
-})
+const inputModel = defineModel<string | File>({ required: true })
 </script>
 
 <style scoped>

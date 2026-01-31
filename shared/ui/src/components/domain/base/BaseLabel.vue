@@ -7,11 +7,11 @@
 import { useI18n } from 'vue-i18n'
 import { NText } from 'naive-ui'
 
-const { t } = useI18n()
-
 defineProps<{
   base: 'decimal' | 'octal' | 'binary' | 'base64' | 'hex'
 }>()
+
+const { t } = useI18n()
 </script>
 
 <!-- eslint-disable @intlify/vue-i18n/no-unused-keys -->

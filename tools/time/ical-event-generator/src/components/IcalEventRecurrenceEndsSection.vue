@@ -43,36 +43,36 @@ type RecurrenceErrorKey = 'invalid-date-time' | 'invalid-date'
 
 const props = defineProps<{
   recurrenceFrequency: RecurrenceFrequency
-  recurrenceEndMode: RecurrenceEndMode
-  recurrenceCount: number
-  recurrenceUntilInput: string
   recurrenceUntilStatus?: 'error' | 'success'
   recurrenceUntilErrorKey?: RecurrenceErrorKey
   isAllDay: boolean
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:recurrenceEndMode', value: RecurrenceEndMode): void
-  (event: 'update:recurrenceCount', value: number): void
-  (event: 'update:recurrenceUntilInput', value: string): void
-  (event: 'update:recurrenceFrequency', value: RecurrenceFrequency): void
-}>()
+const recurrenceEndMode = defineModel<RecurrenceEndMode>('recurrenceEndMode', { required: true })
+const recurrenceCount = defineModel<number>('recurrenceCount', { required: true })
+const recurrenceUntilInput = defineModel<string>('recurrenceUntilInput', { required: true })
 
 const { t } = useI18n()
 
 const recurrenceEndModeModel = computed({
-  get: () => props.recurrenceEndMode,
-  set: (value) => emit('update:recurrenceEndMode', value),
+  get: () => recurrenceEndMode.value,
+  set: (value) => {
+    recurrenceEndMode.value = value
+  },
 })
 
 const recurrenceCountModel = computed({
-  get: () => props.recurrenceCount,
-  set: (value) => emit('update:recurrenceCount', value ?? 1),
+  get: () => recurrenceCount.value,
+  set: (value) => {
+    recurrenceCount.value = value ?? 1
+  },
 })
 
 const recurrenceUntilInputModel = computed({
-  get: () => props.recurrenceUntilInput,
-  set: (value) => emit('update:recurrenceUntilInput', value),
+  get: () => recurrenceUntilInput.value,
+  set: (value) => {
+    recurrenceUntilInput.value = value
+  },
 })
 
 const endModeOptions = computed(() => [

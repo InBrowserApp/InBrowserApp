@@ -31,48 +31,41 @@ import { NFlex, NInputNumber, NSelect, NSlider } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { GradientType } from '../types'
 
+const layerType = defineModel<GradientType>('layerType', { required: true })
+const layerAngle = defineModel<number>('layerAngle', { required: true })
+const layerCenterX = defineModel<number>('layerCenterX', { required: true })
+const layerCenterY = defineModel<number>('layerCenterY', { required: true })
+
 const { t } = useI18n()
 
-const props = defineProps<{
-  layerType: GradientType
-  layerAngle: number
-  layerCenterX: number
-  layerCenterY: number
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:layerType', value: GradientType): void
-  (event: 'update:layerAngle', value: number): void
-  (event: 'update:layerCenterX', value: number): void
-  (event: 'update:layerCenterY', value: number): void
-}>()
-
 const layerTypeModel = computed({
-  get: () => props.layerType,
-  set: (value: GradientType) => emit('update:layerType', value),
+  get: () => layerType.value,
+  set: (value: GradientType) => {
+    layerType.value = value
+  },
 })
 
 const layerAngleModel = computed({
-  get: () => props.layerAngle,
+  get: () => layerAngle.value,
   set: (value: number | null) => {
     if (typeof value !== 'number') return
-    emit('update:layerAngle', value)
+    layerAngle.value = value
   },
 })
 
 const layerCenterXModel = computed({
-  get: () => props.layerCenterX,
+  get: () => layerCenterX.value,
   set: (value: number | null) => {
     if (typeof value !== 'number') return
-    emit('update:layerCenterX', value)
+    layerCenterX.value = value
   },
 })
 
 const layerCenterYModel = computed({
-  get: () => props.layerCenterY,
+  get: () => layerCenterY.value,
   set: (value: number | null) => {
     if (typeof value !== 'number') return
-    emit('update:layerCenterY', value)
+    layerCenterY.value = value
   },
 })
 

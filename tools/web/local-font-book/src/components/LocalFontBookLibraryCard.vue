@@ -34,39 +34,31 @@
     </n-alert>
 
     <n-input
-      :value="searchQuery"
+      v-model:value="searchQuery"
       :placeholder="t('search-placeholder')"
       clearable
       class="search-input"
       data-testid="search-input"
-      @update:value="emit('update:searchQuery', $event)"
     />
 
     <n-flex align="center" :size="12" :wrap="true" class="filter-row">
       <n-select
-        :value="filterStyle"
+        v-model:value="filterStyle"
         :options="styleOptions"
         size="small"
         class="filter-control"
         data-testid="style-filter"
-        @update:value="emit('update:filterStyle', $event)"
       />
       <n-select
-        :value="sortBy"
+        v-model:value="sortBy"
         :options="sortOptions"
         size="small"
         class="filter-control"
         data-testid="sort-by"
-        @update:value="emit('update:sortBy', $event)"
       />
       <n-flex align="center" :size="8">
         <n-text depth="3">{{ t('group-label') }}</n-text>
-        <n-switch
-          :value="groupByFamily"
-          size="small"
-          data-testid="group-toggle"
-          @update:value="emit('update:groupByFamily', $event)"
-        />
+        <n-switch v-model:value="groupByFamily" size="small" data-testid="group-toggle" />
       </n-flex>
     </n-flex>
 
@@ -133,10 +125,6 @@ defineProps<{
   isLoading: boolean
   statusMessage: string
   statusType: AlertStatusType
-  searchQuery: string
-  filterStyle: string
-  sortBy: string
-  groupByFamily: boolean
   styleOptions: SelectOption[]
   sortOptions: SelectOption[]
   fontCountLabel: string
@@ -148,11 +136,12 @@ defineProps<{
 const emit = defineEmits<{
   (event: 'load-fonts'): void
   (event: 'select-font', fontId: string): void
-  (event: 'update:searchQuery', value: string): void
-  (event: 'update:filterStyle', value: string): void
-  (event: 'update:sortBy', value: string): void
-  (event: 'update:groupByFamily', value: boolean): void
 }>()
+
+const searchQuery = defineModel<string>('searchQuery', { required: true })
+const filterStyle = defineModel<string>('filterStyle', { required: true })
+const sortBy = defineModel<string>('sortBy', { required: true })
+const groupByFamily = defineModel<boolean>('groupByFamily', { required: true })
 
 const { t } = useI18n()
 </script>

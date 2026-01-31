@@ -9,6 +9,13 @@ import { computed } from 'vue'
 import { NTag } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+const props = defineProps<{
+  isCountrySupported: boolean
+  isFormatValid: boolean
+  isChecksumSupported: boolean
+  isChecksumValid: boolean | null
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -17,13 +24,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-const props = defineProps<{
-  isCountrySupported: boolean
-  isFormatValid: boolean
-  isChecksumSupported: boolean
-  isChecksumValid: boolean | null
-}>()
 
 const checksumStatus = computed<TagStatus>(() => {
   if (!props.isCountrySupported || !props.isFormatValid) {

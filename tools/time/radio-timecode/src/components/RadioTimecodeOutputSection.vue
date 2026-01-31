@@ -32,34 +32,32 @@
 </template>
 
 <script setup lang="ts">
-import { computed, toRefs } from 'vue'
+import { computed } from 'vue'
 import { NFlex, NGrid, NGi, NInputNumber, NSlider, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const props = defineProps<{
-  volume: number
-  offsetMs: number
+defineProps<{
   carrierHz?: number
   baseHz?: number
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:volume', value: number): void
-  (event: 'update:offsetMs', value: number): void
-}>()
+const volume = defineModel<number>('volume', { required: true })
+const offsetMs = defineModel<number>('offsetMs', { required: true })
 
 const { t } = useI18n()
 
-const { volume, offsetMs, carrierHz, baseHz } = toRefs(props)
-
 const volumeModel = computed({
   get: () => volume.value,
-  set: (value) => emit('update:volume', value),
+  set: (value) => {
+    volume.value = value
+  },
 })
 
 const offsetModel = computed({
   get: () => offsetMs.value,
-  set: (value) => emit('update:offsetMs', value ?? 0),
+  set: (value) => {
+    offsetMs.value = value ?? 0
+  },
 })
 </script>
 

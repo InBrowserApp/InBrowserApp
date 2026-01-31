@@ -102,8 +102,6 @@ import { NColorPicker, NFlex, NFormItem, NInputNumber, NSlider, NSwitch, NText }
 import { useI18n } from 'vue-i18n'
 import type { ShadowLayer } from '../utils/shadow'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   activeLayer: ShadowLayer
   offsetRange: { min: number; max: number }
@@ -115,6 +113,8 @@ const props = defineProps<{
 const emit = defineEmits<{
   (event: 'update-layer', value: Partial<ShadowLayer>): void
 }>()
+
+const { t } = useI18n()
 
 const offsetX = computed({
   get: () => props.activeLayer.offsetX,

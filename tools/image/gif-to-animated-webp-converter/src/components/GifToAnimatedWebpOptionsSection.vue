@@ -32,13 +32,6 @@ import { useI18n } from 'vue-i18n'
 import ConversionOptions from './ConversionOptions.vue'
 import type { GifLoopMode } from '../types'
 
-const { t } = useI18n({ useScope: 'local' })
-
-const scale = defineModel<number>('scale', { required: true })
-const speed = defineModel<number>('speed', { required: true })
-const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
-const loopCount = defineModel<number | null>('loopCount', { required: true })
-
 defineProps<{
   minScale: number
   maxScale: number
@@ -49,6 +42,13 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{ (event: 'convert'): void }>()
+
+const { t } = useI18n({ useScope: 'local' })
+
+const scale = defineModel<number>('scale', { required: true })
+const speed = defineModel<number>('speed', { required: true })
+const loopMode = defineModel<GifLoopMode>('loopMode', { required: true })
+const loopCount = defineModel<number | null>('loopCount', { required: true })
 </script>
 
 <i18n lang="json">

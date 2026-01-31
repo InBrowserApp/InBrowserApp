@@ -19,6 +19,13 @@
 import { NDescriptions, NDescriptionsItem, NTag } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+defineProps<{
+  lengthStatus: TagStatus
+  localStatus: TagStatus
+  domainStatus: TagStatus
+  tldStatus: TagStatus
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -27,13 +34,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-defineProps<{
-  lengthStatus: TagStatus
-  localStatus: TagStatus
-  domainStatus: TagStatus
-  tldStatus: TagStatus
-}>()
 </script>
 
 <i18n lang="json">

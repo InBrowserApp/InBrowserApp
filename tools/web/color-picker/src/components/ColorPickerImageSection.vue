@@ -55,8 +55,6 @@ import { useI18n } from 'vue-i18n'
 import ImagePickIcon from '@vicons/fluent/TabDesktopImage16Regular'
 import { ToolSection } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   imageError: string | null
   hasImage: boolean
@@ -72,6 +70,8 @@ const emit = defineEmits<{
   (event: 'canvas-ready', value: HTMLCanvasElement | null): void
   (event: 'wrapper-ready', value: HTMLDivElement | null): void
 }>()
+
+const { t } = useI18n()
 
 const fileInputEl = ref<HTMLInputElement | null>(null)
 const canvasEl = ref<HTMLCanvasElement | null>(null)

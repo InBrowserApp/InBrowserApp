@@ -25,27 +25,18 @@
 </template>
 
 <script setup lang="ts">
-import { useVModel, useObjectUrl } from '@vueuse/core'
+import { computedAsync, useObjectUrl } from '@vueuse/core'
 import ImageUpload from '../ImageUpload.vue'
 import { NButton, NP, NIcon } from 'naive-ui'
 import Icons20Regular from '@vicons/fluent/Icons20Regular'
 import { getImageSize } from '@utils/image'
-import { computedAsync } from '@vueuse/core'
 import FaviconURL from './favicon.svg'
 import { useI18n } from 'vue-i18n'
 import RemoveButton from '../common/RemoveButton.vue'
 
+const image = defineModel<Blob | undefined>('image')
+
 const { t } = useI18n()
-
-const props = defineProps<{
-  image: Blob | undefined
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:image', image: Blob | undefined): void
-}>()
-
-const image = useVModel(props, 'image', emit)
 
 const imageURL = useObjectUrl(image)
 

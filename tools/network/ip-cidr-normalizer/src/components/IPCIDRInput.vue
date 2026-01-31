@@ -11,10 +11,9 @@ import { isIP } from 'is-ip'
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+const ipcidrModel = defineModel<string>('ipcidr', { default: '' })
 const { t } = useI18n()
-const ipcidr = ref('')
-const emit = defineEmits(['update:ipcidr'])
-
+const ipcidr = ref(ipcidrModel.value ?? '')
 const rule: FormItemRule = {
   trigger: ['input', 'change', 'blur'],
   validator() {
@@ -26,9 +25,9 @@ const rule: FormItemRule = {
 
 watch(ipcidr, (value: string) => {
   if (isCidr(value) !== 0 || isIP(value)) {
-    emit('update:ipcidr', value)
+    ipcidrModel.value = value
   } else {
-    emit('update:ipcidr', '')
+    ipcidrModel.value = ''
   }
 })
 </script>

@@ -15,23 +15,16 @@
 <script setup lang="ts">
 import { NImage } from 'naive-ui'
 import type { PWAOptions } from '../../../utils/favicon-generator/pwa'
-import { useVModel, useObjectUrl } from '@vueuse/core'
+import { useObjectUrl } from '@vueuse/core'
 import ImageUpload from '../../ImageUpload.vue'
 import RemoveButton from '../../common/RemoveButton.vue'
 import NotUsingDedicatedImageNote from '../../common/NotUsingDedicatedImageNote.vue'
 import UsingDedicatedImageNote from '../../common/UsingDedicatedImageNote.vue'
-import { toRef, computed } from 'vue'
+import { computed } from 'vue'
 
-const props = defineProps<{
-  options: PWAOptions
-}>()
+const options = defineModel<PWAOptions>('options', { required: true })
 
-const emit = defineEmits(['update:options'])
-
-const options = useVModel(props, 'options', emit)
-
-const optionsRef = toRef(props, 'options')
-const image = computed<Blob | undefined>(() => optionsRef.value.maskableImage)
+const image = computed<Blob | undefined>(() => options.value.maskableImage)
 
 const imageURL = useObjectUrl(image)
 </script>

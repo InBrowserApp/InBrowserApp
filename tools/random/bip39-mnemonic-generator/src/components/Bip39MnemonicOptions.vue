@@ -79,7 +79,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NFormItem, NIcon, NInput, NSelect, NTabPane, NTabs, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
@@ -95,58 +94,20 @@ type Option<T> = {
   value: T
 }
 
-const props = defineProps<{
-  activeTab: TabKey
-  wordlist: Bip39WordlistName
-  wordCount: Bip39WordCount
-  validationMnemonic: string
-  entropyInput: string
-  convertMnemonic: string
+defineProps<{
   wordlistOptions: Array<Option<Bip39WordlistName>>
   wordCountOptions: Array<Option<Bip39WordCount>>
   strengthBits: number
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:activeTab', value: TabKey): void
-  (event: 'update:wordlist', value: Bip39WordlistName): void
-  (event: 'update:wordCount', value: Bip39WordCount): void
-  (event: 'update:validationMnemonic', value: string): void
-  (event: 'update:entropyInput', value: string): void
-  (event: 'update:convertMnemonic', value: string): void
-}>()
+const activeTabModel = defineModel<TabKey>('activeTab', { required: true })
+const wordlistModel = defineModel<Bip39WordlistName>('wordlist', { required: true })
+const wordCountModel = defineModel<Bip39WordCount>('wordCount', { required: true })
+const validationMnemonicModel = defineModel<string>('validationMnemonic', { required: true })
+const entropyInputModel = defineModel<string>('entropyInput', { required: true })
+const convertMnemonicModel = defineModel<string>('convertMnemonic', { required: true })
 
 const { t } = useI18n()
-
-const activeTabModel = computed({
-  get: () => props.activeTab,
-  set: (value: TabKey) => emit('update:activeTab', value),
-})
-
-const wordlistModel = computed({
-  get: () => props.wordlist,
-  set: (value: Bip39WordlistName) => emit('update:wordlist', value),
-})
-
-const wordCountModel = computed({
-  get: () => props.wordCount,
-  set: (value: Bip39WordCount) => emit('update:wordCount', value),
-})
-
-const validationMnemonicModel = computed({
-  get: () => props.validationMnemonic,
-  set: (value: string) => emit('update:validationMnemonic', value),
-})
-
-const entropyInputModel = computed({
-  get: () => props.entropyInput,
-  set: (value: string) => emit('update:entropyInput', value),
-})
-
-const convertMnemonicModel = computed({
-  get: () => props.convertMnemonic,
-  set: (value: string) => emit('update:convertMnemonic', value),
-})
 </script>
 
 <i18n lang="json">

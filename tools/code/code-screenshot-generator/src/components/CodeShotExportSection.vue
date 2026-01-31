@@ -20,8 +20,7 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import CodeShotExportPanel from './CodeShotExportPanel.vue'
 
-const props = defineProps<{
-  filename: string
+defineProps<{
   svgMarkup: string
   svgWidth: number
   svgHeight: number
@@ -30,16 +29,9 @@ const props = defineProps<{
   jpgBackground: string
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:filename', value: string): void
-}>()
-
 const { t } = useI18n()
 
-const fileNameProxy = computed({
-  get: () => props.filename,
-  set: (value: string) => emit('update:filename', value),
-})
+const fileNameProxy = defineModel<string>('filename', { required: true })
 
 const exportLabels = computed(() => ({
   fileName: t('exportFileName'),

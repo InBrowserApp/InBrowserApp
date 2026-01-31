@@ -56,23 +56,14 @@ type ReminderForm = {
   description: string
 }
 
-const props = defineProps<{
-  remindersEnabled: boolean
-  reminders: ReminderForm[]
-}>()
-
 const emit = defineEmits<{
-  (event: 'update:remindersEnabled', value: boolean): void
-  (event: 'update:reminders', value: ReminderForm[]): void
   (event: 'update:defaultReminder', value: string): void
 }>()
 
 const { t } = useI18n()
 
-const remindersEnabledModel = computed({
-  get: () => props.remindersEnabled,
-  set: (value) => emit('update:remindersEnabled', value),
-})
+const remindersEnabledModel = defineModel<boolean>('remindersEnabled', { required: true })
+const reminders = defineModel<ReminderForm[]>('reminders', { required: true })
 
 const reminderUnitOptions = computed(() => [
   { label: t('minutes'), value: 'minutes' },
@@ -82,21 +73,18 @@ const reminderUnitOptions = computed(() => [
 ])
 
 const updateReminder = (index: number, patch: Partial<ReminderForm>) => {
-  const next = props.reminders.map((item, current) =>
+  const next = reminders.value.map((item, current) =>
     current === index ? { ...item, ...patch } : item,
   )
-  emit('update:reminders', next)
+  reminders.value = next
 }
 
 const addReminder = () => {
-  emit('update:reminders', [...props.reminders, { amount: 15, unit: 'minutes', description: '' }])
+  reminders.value = [...reminders.value, { amount: 15, unit: 'minutes', description: '' }]
 }
 
 const removeReminder = (index: number) => {
-  emit(
-    'update:reminders',
-    props.reminders.filter((_, current) => current !== index),
-  )
+  reminders.value = reminders.value.filter((_, current) => current !== index)
 }
 
 const reminderDefault = computed(() => t('reminder-default'))

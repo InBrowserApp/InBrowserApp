@@ -7,22 +7,20 @@
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('min')" :show-feedback="false">
           <n-input-number
-            :value="minValue"
+            v-model:value="minValue"
             :step="inputStep"
             :precision="inputPrecision"
             style="width: 100%"
             data-testid="min-input"
-            @update:value="(value) => emit('update:minValue', value)"
           />
         </n-form-item-gi>
         <n-form-item-gi :label="t('max')" :show-feedback="false">
           <n-input-number
-            :value="maxValue"
+            v-model:value="maxValue"
             :step="inputStep"
             :precision="inputPrecision"
             style="width: 100%"
             data-testid="max-input"
-            @update:value="(value) => emit('update:maxValue', value)"
           />
         </n-form-item-gi>
       </n-grid>
@@ -30,31 +28,22 @@
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('count')" :show-feedback="false">
           <n-input-number
-            :value="count"
+            v-model:value="count"
             :min="1"
             :max="maxCount"
             :step="1"
             style="width: 100%"
             data-testid="count-input"
-            @update:value="(value) => emit('update:count', value)"
           />
         </n-form-item-gi>
         <n-form-item-gi :label="t('allowRepeat')" :show-feedback="false">
-          <n-switch
-            :value="allowRepeat"
-            data-testid="allow-repeat"
-            @update:value="(value) => emit('update:allowRepeat', value)"
-          />
+          <n-switch v-model:value="allowRepeat" data-testid="allow-repeat" />
         </n-form-item-gi>
       </n-grid>
 
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('numberType')" :show-feedback="false">
-          <n-radio-group
-            :value="numberType"
-            data-testid="number-type"
-            @update:value="(value) => emit('update:numberType', value as NumberType)"
-          >
+          <n-radio-group v-model:value="numberType" data-testid="number-type">
             <n-radio-button value="integer">{{ t('integer') }}</n-radio-button>
             <n-radio-button value="decimal">{{ t('decimal') }}</n-radio-button>
           </n-radio-group>
@@ -65,13 +54,12 @@
           :show-feedback="false"
         >
           <n-input-number
-            :value="decimalPlaces"
+            v-model:value="decimalPlaces"
             :min="0"
             :max="maxDecimalPlaces"
             :step="1"
             style="width: 100%"
             data-testid="decimal-places"
-            @update:value="(value) => emit('update:decimalPlaces', value)"
           />
         </n-form-item-gi>
       </n-grid>
@@ -106,12 +94,6 @@ type NumberType = 'integer' | 'decimal'
 type PresetOption = 'dice' | 'ten' | 'hundred' | 'lotto'
 
 defineProps<{
-  minValue: number | null
-  maxValue: number | null
-  count: number | null
-  allowRepeat: boolean
-  numberType: NumberType
-  decimalPlaces: number | null
   inputStep: number
   inputPrecision: number
   maxCount: number
@@ -121,14 +103,15 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (event: 'update:minValue', value: number | null): void
-  (event: 'update:maxValue', value: number | null): void
-  (event: 'update:count', value: number | null): void
-  (event: 'update:allowRepeat', value: boolean): void
-  (event: 'update:numberType', value: NumberType): void
-  (event: 'update:decimalPlaces', value: number | null): void
   (event: 'apply-preset', preset: PresetOption): void
 }>()
+
+const minValue = defineModel<number | null>('minValue', { required: true })
+const maxValue = defineModel<number | null>('maxValue', { required: true })
+const count = defineModel<number | null>('count', { required: true })
+const allowRepeat = defineModel<boolean>('allowRepeat', { required: true })
+const numberType = defineModel<NumberType>('numberType', { required: true })
+const decimalPlaces = defineModel<number | null>('decimalPlaces', { required: true })
 
 const { t } = useI18n()
 

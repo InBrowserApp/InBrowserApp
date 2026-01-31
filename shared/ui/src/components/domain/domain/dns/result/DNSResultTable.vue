@@ -10,11 +10,11 @@ import { DNSRecordTypes } from '@utils/dns'
 import DNSResultData from './DNSResultData.vue'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   result: DNSJSONResponse
 }>()
+
+const { t } = useI18n()
 
 interface DataRow {
   name: string

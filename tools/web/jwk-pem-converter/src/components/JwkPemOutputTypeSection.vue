@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NFormItem, NRadioButton, NRadioGroup } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
@@ -18,18 +17,7 @@ import type { PemOutputType } from '../utils/jwkPem'
 
 const { t } = useI18n()
 
-const props = defineProps<{
-  modelValue: PemOutputType
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:modelValue', value: PemOutputType): void
-}>()
-
-const outputType = computed({
-  get: () => props.modelValue,
-  set: (value: PemOutputType) => emit('update:modelValue', value),
-})
+const outputType = defineModel<PemOutputType>()
 </script>
 
 <style scoped>

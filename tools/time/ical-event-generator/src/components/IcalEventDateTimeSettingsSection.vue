@@ -10,12 +10,14 @@
       <n-flex vertical :size="4" style="width: 100%">
         <n-select
           v-model:value="timeZoneModel"
-          :options="timeZoneOptions"
+          :options="props.timeZoneOptions"
           filterable
           :placeholder="t('timezone-placeholder')"
           style="width: 100%"
         />
-        <n-text v-if="offsetLabel" depth="3"> {{ t('offset') }}: {{ offsetLabel }} </n-text>
+        <n-text v-if="props.offsetLabel" depth="3">
+          {{ t('offset') }}: {{ props.offsetLabel }}
+        </n-text>
       </n-flex>
     </n-form-item-gi>
     <n-form-item-gi :label="t('output-mode')" :show-feedback="false">
@@ -30,44 +32,26 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NFormItemGi, NGrid, NRadio, NRadioGroup, NSelect, NSwitch, NText } from 'naive-ui'
 
 type OutputMode = 'utc' | 'tzid'
 
-const props = defineProps<{
-  isAllDay: boolean
-  timeZone: string
-  timeZoneOptions: Array<{ label: string; value: string }>
-  outputMode: OutputMode
-  offsetLabel?: string
-}>()
+const props = withDefaults(
+  defineProps<{
+    timeZoneOptions: Array<{ label: string; value: string }>
+    offsetLabel?: string
+  }>(),
+  {
+    offsetLabel: '',
+  },
+)
 
-const emit = defineEmits<{
-  (event: 'update:isAllDay', value: boolean): void
-  (event: 'update:timeZone', value: string): void
-  (event: 'update:outputMode', value: OutputMode): void
-}>()
+const isAllDayModel = defineModel<boolean>('isAllDay', { required: true })
+const timeZoneModel = defineModel<string>('timeZone', { required: true })
+const outputModeModel = defineModel<OutputMode>('outputMode', { required: true })
 
 const { t } = useI18n()
-
-const isAllDayModel = computed({
-  get: () => props.isAllDay,
-  set: (value) => emit('update:isAllDay', value),
-})
-
-const timeZoneModel = computed({
-  get: () => props.timeZone,
-  set: (value) => emit('update:timeZone', value),
-})
-
-const outputModeModel = computed({
-  get: () => props.outputMode,
-  set: (value) => emit('update:outputMode', value),
-})
-
-const { timeZoneOptions, offsetLabel } = props
 </script>
 
 <i18n lang="json">

@@ -32,13 +32,10 @@ import type { RGBA } from '../types'
 import ColorSection from './ColorSection.vue'
 
 const props = defineProps<{
-  rgba: RGBA
   showAlpha: boolean
 }>()
 
-const emit = defineEmits<{
-  'update:rgba': [value: RGBA]
-}>()
+const rgba = defineModel<RGBA>('rgba', { required: true })
 
 const { t } = useI18n()
 
@@ -57,7 +54,7 @@ const presetColors = [
 ]
 
 const displayValue = computed(() => {
-  const { r, g, b, a } = props.rgba
+  const { r, g, b, a } = rgba.value
   const hex = convert.rgb.hex(r, g, b)
   if (props.showAlpha) {
     const alpha = Math.round(a * 255)
@@ -99,7 +96,7 @@ function handleUpdate(val: string) {
   const rgb = convert.hex.rgb(hex.slice(0, 6))
   const a = parseInt(hex.slice(6, 8), 16) / 255
 
-  emit('update:rgba', { r: rgb[0], g: rgb[1], b: rgb[2], a: isNaN(a) ? 1 : a })
+  rgba.value = { r: rgb[0], g: rgb[1], b: rgb[2], a: isNaN(a) ? 1 : a }
 }
 </script>
 

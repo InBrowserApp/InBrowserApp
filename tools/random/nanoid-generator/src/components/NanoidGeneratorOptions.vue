@@ -4,44 +4,23 @@
     <n-flex vertical :size="16">
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('count')" :show-feedback="false">
-          <n-input-number
-            :value="count"
-            :min="1"
-            :max="maxCount"
-            style="width: 100%"
-            @update:value="(value) => emit('update:count', value)"
-          />
+          <n-input-number v-model:value="count" :min="1" :max="maxCount" style="width: 100%" />
         </n-form-item-gi>
         <n-form-item-gi :label="t('length')" :show-feedback="false">
-          <n-input-number
-            :value="length"
-            :min="1"
-            :max="maxLength"
-            style="width: 100%"
-            @update:value="(value) => emit('update:length', value)"
-          />
+          <n-input-number v-model:value="length" :min="1" :max="maxLength" style="width: 100%" />
         </n-form-item-gi>
       </n-grid>
 
       <n-grid cols="1 m:2" responsive="screen" :x-gap="16" :y-gap="12">
         <n-form-item-gi :label="t('alphabetPreset')" :show-feedback="false">
-          <n-select
-            :value="alphabetPreset"
-            :options="presetOptions"
-            style="width: 100%"
-            @update:value="(value) => emit('update:alphabetPreset', value as NanoidAlphabetPreset)"
-          />
+          <n-select v-model:value="alphabetPreset" :options="presetOptions" style="width: 100%" />
         </n-form-item-gi>
         <n-form-item-gi
           v-if="alphabetPreset === 'custom'"
           :label="t('customAlphabet')"
           :show-feedback="false"
         >
-          <n-input
-            :value="customAlphabet"
-            :placeholder="t('customAlphabetPlaceholder')"
-            @update:value="(value) => emit('update:customAlphabet', value)"
-          />
+          <n-input v-model:value="customAlphabet" :placeholder="t('customAlphabetPlaceholder')" />
         </n-form-item-gi>
       </n-grid>
 
@@ -60,21 +39,15 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { NanoidAlphabetPreset } from '../utils/nanoid'
 
 defineProps<{
-  count: number | null
-  length: number | null
   maxCount: number
   maxLength: number
-  alphabetPreset: NanoidAlphabetPreset
-  customAlphabet: string
   alphabetError: string
 }>()
 
-const emit = defineEmits<{
-  (event: 'update:count', value: number | null): void
-  (event: 'update:length', value: number | null): void
-  (event: 'update:alphabetPreset', value: NanoidAlphabetPreset): void
-  (event: 'update:customAlphabet', value: string): void
-}>()
+const count = defineModel<number | null>('count', { required: true })
+const length = defineModel<number | null>('length', { required: true })
+const alphabetPreset = defineModel<NanoidAlphabetPreset>('alphabetPreset', { required: true })
+const customAlphabet = defineModel<string>('customAlphabet', { required: true })
 
 const { t } = useI18n()
 

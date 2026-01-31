@@ -18,19 +18,18 @@ import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+const emit = defineEmits<{
+  (event: 'upload-file', file: File): void
+}>()
 const message = useMessage()
 const { t } = useI18n()
-
-const emit = defineEmits<{
-  (event: 'upload:file', file: File): void
-}>()
 
 async function beforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
   if (data.file.file?.type !== 'application/pdf') {
     message.error(t('error_only_pdf'))
     return false
   } else {
-    emit('upload:file', data.file.file)
+    emit('upload-file', data.file.file)
     return false
   }
 }

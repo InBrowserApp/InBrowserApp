@@ -11,11 +11,11 @@ import { NFlex, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   value?: string | null
 }>()
+
+const { t } = useI18n()
 
 const displayValue = computed(() => props.value || t('notAvailable'))
 </script>

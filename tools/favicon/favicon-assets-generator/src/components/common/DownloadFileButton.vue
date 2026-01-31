@@ -20,12 +20,12 @@ import { NButton, NIcon } from 'naive-ui'
 import ArrowDownload16Filled from '@vicons/fluent/ArrowDownload16Filled'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   filename: string
   href?: string | null
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

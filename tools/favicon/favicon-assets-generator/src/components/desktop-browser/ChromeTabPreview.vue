@@ -29,15 +29,14 @@ import DesktopBrowserImage from './DesktopBrowserImage.vue'
 import { ref } from 'vue'
 import { useElementSize } from '@vueuse/core'
 
-const tab = ref<HTMLDivElement>()
-const { width, height } = useElementSize(tab)
-
 const props = defineProps<{
   image: Blob | undefined
   options: DesktopBrowserOptions
   generalInfoOptions: GeneralInfoOptions
   dark?: boolean
 }>()
+const tab = ref<HTMLDivElement>()
+const { width, height } = useElementSize(tab)
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

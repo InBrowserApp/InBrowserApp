@@ -16,15 +16,9 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import { isValidRomanNumeral } from '../utils/conversion'
 import { ref, watch, computed } from 'vue'
 
-const props = defineProps<{
-  value: string
-}>()
+const modelValue = defineModel<string>('value', { required: true })
 
-const internalValue = ref(props.value)
-
-const emit = defineEmits<{
-  'update:value': [value: string]
-}>()
+const internalValue = ref(modelValue.value)
 
 const { t } = useI18n()
 
@@ -47,12 +41,12 @@ const rule: FormItemRule = {
 
 watch(internalValue, (newValue) => {
   if (isValidRomanNumeral(newValue)) {
-    emit('update:value', newValue)
+    modelValue.value = newValue
   }
 })
 
 watch(
-  computed(() => props.value),
+  computed(() => modelValue.value),
   (newValue) => {
     internalValue.value = newValue
   },

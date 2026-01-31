@@ -12,12 +12,12 @@ import { useI18n } from 'vue-i18n'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { BICValidationResult } from '../data/bic'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   type: BICValidationResult['type']
   branchCode?: string | null
 }>()
+
+const { t } = useI18n()
 
 const branchCodeDisplay = computed(() => {
   if (props.type === 'bic-8') return 'XXX'

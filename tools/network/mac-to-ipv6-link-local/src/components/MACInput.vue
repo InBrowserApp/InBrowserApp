@@ -12,27 +12,23 @@ import { isValidMacAddress } from '@utils/mac-address'
 import { MACAddressInputFormItem } from '@shared/ui/domain/mac-address'
 import { useI18n } from 'vue-i18n'
 
+const macModel = defineModel<string>('mac', { required: true })
+const networkInterfaceModel = defineModel<string>('networkInterface', { required: true })
+
 const { t } = useI18n()
 
-const props = defineProps<{
-  mac: string
-  networkInterface: string
-}>()
-
-const mac = ref(props.mac)
-const networkInterface = ref(props.networkInterface)
-const emit = defineEmits(['update:mac', 'update:networkInterface'])
-
+const mac = ref(macModel.value)
+const networkInterface = ref(networkInterfaceModel.value)
 watch(mac, (value: string) => {
   if (isValidMacAddress(mac.value)) {
-    emit('update:mac', value)
+    macModel.value = value
   } else {
-    emit('update:mac', '')
+    macModel.value = ''
   }
 })
 
 watch(networkInterface, (value: string) => {
-  emit('update:networkInterface', value)
+  networkInterfaceModel.value = value
 })
 </script>
 

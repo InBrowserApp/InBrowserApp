@@ -19,12 +19,12 @@
 import { useI18n } from 'vue-i18n'
 import { NFormItem, NInput, NText } from 'naive-ui'
 
-const holidayList = defineModel<string>('holidayList', { required: true })
-
 defineProps<{
   holidayInvalidCount: number
   holidayStatus?: 'error' | 'success'
 }>()
+
+const holidayList = defineModel<string>('holidayList', { required: true })
 
 const { t } = useI18n()
 </script>

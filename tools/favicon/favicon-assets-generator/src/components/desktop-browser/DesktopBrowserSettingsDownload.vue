@@ -35,13 +35,12 @@ import FileMinifiedUsingOxipngAndSvgo from '../common/FileMinifiedUsingOxipngAnd
 import DownloadFileButton from '../common/DownloadFileButton.vue'
 import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml'
-hljs.registerLanguage('html', xml)
-const message = useMessage()
-
 const props = defineProps<{
   image: Blob | undefined
   options: DesktopBrowserOptions
 }>()
+hljs.registerLanguage('html', xml)
+const message = useMessage()
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

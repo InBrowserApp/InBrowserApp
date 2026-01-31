@@ -76,13 +76,13 @@ import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ParsedSshPublicKey } from '../ssh-public-key-fingerprint'
 
-const { t } = useI18n()
-
 const { entries, errorMessage, hasError } = defineProps<{
   entries: ParsedSshPublicKey[]
   errorMessage: string
   hasError: boolean
 }>()
+
+const { t } = useI18n()
 
 function formatValue(value?: string) {
   return value && value.length > 0 ? value : '-'

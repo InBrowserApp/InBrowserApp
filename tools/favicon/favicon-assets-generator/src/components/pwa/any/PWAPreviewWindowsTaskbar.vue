@@ -17,12 +17,12 @@ import { computed } from 'vue'
 import { NSkeleton } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   image: Blob | undefined
   options: PWAOptions
 }>()
+
+const { t } = useI18n()
 
 const image = computed<Blob | undefined>(() => {
   if (props.options.image) {

@@ -3,11 +3,7 @@
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
     <n-grid cols="1 m:2" responsive="screen" :x-gap="20" :y-gap="16">
       <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
-        <n-radio-group
-          :value="algorithm"
-          name="algorithm"
-          @update:value="$emit('update:algorithm', $event)"
-        >
+        <n-radio-group v-model:value="algorithm" name="algorithm">
           <n-space>
             <n-radio value="ed25519">
               <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
@@ -22,11 +18,7 @@
       </n-form-item-gi>
 
       <n-form-item-gi v-if="algorithm === 'rsa'" :label="t('keySize')" :show-feedback="false">
-        <n-select
-          :value="rsaKeySize"
-          :options="keySizeOptions"
-          @update:value="$emit('update:rsaKeySize', $event)"
-        />
+        <n-select v-model:value="rsaKeySize" :options="keySizeOptions" />
       </n-form-item-gi>
 
       <n-form-item-gi
@@ -34,11 +26,7 @@
         :show-feedback="false"
         :span="algorithm === 'rsa' ? 2 : 1"
       >
-        <n-input
-          :value="comment"
-          :placeholder="t('commentPlaceholder')"
-          @update:value="$emit('update:comment', $event)"
-        />
+        <n-input v-model:value="comment" :placeholder="t('commentPlaceholder')" />
       </n-form-item-gi>
     </n-grid>
   </ToolSection>
@@ -51,17 +39,9 @@ import { NGrid, NFormItemGi, NRadioGroup, NRadio, NSpace, NSelect, NInput, NTag 
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { KeyAlgorithm, RsaKeySize } from '../ssh-keygen'
 
-defineProps<{
-  algorithm: KeyAlgorithm
-  rsaKeySize: RsaKeySize
-  comment: string
-}>()
-
-defineEmits<{
-  'update:algorithm': [value: KeyAlgorithm]
-  'update:rsaKeySize': [value: RsaKeySize]
-  'update:comment': [value: string]
-}>()
+const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })
+const rsaKeySize = defineModel<RsaKeySize>('rsaKeySize', { required: true })
+const comment = defineModel<string>('comment', { required: true })
 
 const { t } = useI18n()
 

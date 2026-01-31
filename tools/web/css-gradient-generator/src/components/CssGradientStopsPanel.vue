@@ -78,14 +78,10 @@ import PinOff16Regular from '@vicons/fluent/PinOff16Regular'
 import GradientStopsTrack from './GradientStopsTrack.vue'
 import type { GradientStop } from '../types'
 
-const { t } = useI18n()
-
-const props = defineProps<{
+defineProps<{
   stops: GradientStop[]
   activeStopId: string | null
   gradientCss: string
-  stopColor: string
-  stopPosition: number
   showError: boolean
 }>()
 
@@ -94,20 +90,25 @@ const emit = defineEmits<{
   (event: 'select-stop', id: string): void
   (event: 'update-stop', id: string, position: number): void
   (event: 'remove-stop'): void
-  (event: 'update:stopColor', value: string): void
-  (event: 'update:stopPosition', value: number): void
 }>()
 
+const { t } = useI18n()
+
+const stopColor = defineModel<string>('stopColor', { required: true })
+const stopPosition = defineModel<number>('stopPosition', { required: true })
+
 const stopColorModel = computed({
-  get: () => props.stopColor,
-  set: (value: string) => emit('update:stopColor', value),
+  get: () => stopColor.value,
+  set: (value: string) => {
+    stopColor.value = value
+  },
 })
 
 const stopPositionModel = computed({
-  get: () => props.stopPosition,
+  get: () => stopPosition.value,
   set: (value: number | null) => {
     if (typeof value !== 'number') return
-    emit('update:stopPosition', value)
+    stopPosition.value = value
   },
 })
 

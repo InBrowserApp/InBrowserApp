@@ -8,13 +8,12 @@
         :validation-status="schemaStatus"
       >
         <TextOrFileInput
+          v-model:value="schemaValue"
           class="monospace-input"
-          :value="schemaValue"
           :accept="accept"
           :placeholder="t('schemaPlaceholder')"
           :status="schemaStatus"
           :wrap-with-form-item="false"
-          @update:value="$emit('update:schemaValue', $event)"
         />
         <template v-if="schemaError" #feedback>
           <n-text type="error">{{ t('invalidJson') }}: {{ schemaError }}</n-text>
@@ -27,13 +26,12 @@
         :validation-status="dataStatus"
       >
         <TextOrFileInput
+          v-model:value="dataValue"
           class="monospace-input"
-          :value="dataValue"
           :accept="accept"
           :placeholder="t('dataPlaceholder')"
           :status="dataStatus"
           :wrap-with-form-item="false"
-          @update:value="$emit('update:dataValue', $event)"
         />
         <template v-if="dataError" #feedback>
           <n-text type="error">{{ t('invalidJson') }}: {{ dataError }}</n-text>
@@ -49,21 +47,17 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { TextOrFileInput } from '@shared/ui/base'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   schemaStatus?: 'success' | 'error'
   dataStatus?: 'success' | 'error'
   schemaError?: string
   dataError?: string
-  schemaValue: string | File
-  dataValue: string | File
 }>()
 
-defineEmits<{
-  'update:schemaValue': [value: string | File]
-  'update:dataValue': [value: string | File]
-}>()
+const schemaValue = defineModel<string | File>('schemaValue', { required: true })
+const dataValue = defineModel<string | File>('dataValue', { required: true })
+
+const { t } = useI18n()
 
 const accept = '.json,.txt'
 </script>

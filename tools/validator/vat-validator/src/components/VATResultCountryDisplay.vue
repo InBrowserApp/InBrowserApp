@@ -8,11 +8,11 @@ import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { VATValidationResult } from '../data/vat'
 
-const { t, locale } = useI18n()
-
 const props = defineProps<{
   validationResult: VATValidationResult
 }>()
+
+const { t, locale } = useI18n()
 
 const displayNames = computed(() => {
   if (typeof Intl === 'undefined' || typeof Intl.DisplayNames === 'undefined') return null

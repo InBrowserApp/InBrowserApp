@@ -34,8 +34,6 @@ import type { ShadowLayer } from '../utils/shadow'
 import CssBoxShadowLayerList from './CssBoxShadowLayerList.vue'
 import CssBoxShadowLayerSettings from './CssBoxShadowLayerSettings.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   layers: ShadowLayer[]
   activeLayerId: string
@@ -53,6 +51,8 @@ const emit = defineEmits<{
   (event: 'move-layer', value: { id: string; direction: number }): void
   (event: 'update-layer', value: Partial<ShadowLayer>): void
 }>()
+
+const { t } = useI18n()
 
 function handleSetActive(value: string) {
   emit('set-active', value)

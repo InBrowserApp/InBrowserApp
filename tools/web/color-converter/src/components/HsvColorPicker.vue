@@ -32,13 +32,10 @@ import type { RGBA } from '../types'
 import ColorSection from './ColorSection.vue'
 
 const props = defineProps<{
-  rgba: RGBA
   showAlpha: boolean
 }>()
 
-const emit = defineEmits<{
-  'update:rgba': [value: RGBA]
-}>()
+const rgba = defineModel<RGBA>('rgba', { required: true })
 
 const { t } = useI18n()
 
@@ -47,7 +44,7 @@ function round2(n: number): number {
 }
 
 const displayValue = computed(() => {
-  const { r, g, b, a } = props.rgba
+  const { r, g, b, a } = rgba.value
   const [h, s, v] = convert.rgb.hsv(r, g, b)
   if (props.showAlpha) {
     return `hsva(${h}, ${s}%, ${v}%, ${round2(a)})`
@@ -63,7 +60,7 @@ function handleUpdate(val: string) {
     const v = parseInt(match[3])
     const a = match[4] ? parseFloat(match[4]) : 1
     const [r, g, b] = convert.hsv.rgb(h, s, v)
-    emit('update:rgba', { r, g, b, a })
+    rgba.value = { r, g, b, a }
   }
 }
 </script>

@@ -39,7 +39,6 @@
 </template>
 
 <script setup lang="ts">
-import { toRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useMessage } from 'naive-ui'
 import { useObjectUrl } from '@vueuse/core'
@@ -55,15 +54,7 @@ const message = useMessage()
 
 const accept = 'image/*'
 
-const props = defineProps<{
-  file: File | null
-}>()
-
-const emit = defineEmits<{
-  'update:file': [file: File | null]
-}>()
-
-const file = toRef(props, 'file')
+const file = defineModel<File | null>('file', { required: true })
 const imagePreview = useObjectUrl(file)
 
 function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
@@ -84,12 +75,12 @@ function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileIn
     return false
   }
 
-  emit('update:file', selectedFile)
+  file.value = selectedFile
   return false
 }
 
 function handleClearFile() {
-  emit('update:file', null)
+  file.value = null
 }
 </script>
 

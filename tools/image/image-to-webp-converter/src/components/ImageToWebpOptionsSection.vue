@@ -64,6 +64,13 @@ import ImageToWebpOptionsLabelsCore from './ImageToWebpOptionsLabelsCore.vue'
 
 type TriState = 'default' | 'on' | 'off'
 
+defineProps<{
+  minScale: number
+  maxScale: number
+  isConverting: boolean
+  canConvert: boolean
+}>()
+const emit = defineEmits<{ (event: 'convert'): void }>()
 const scale = defineModel<number>('scale', { required: true })
 const quality = defineModel<number>('quality', { required: true })
 const method = defineModel<number>('method', { required: true })
@@ -82,15 +89,6 @@ const segments = defineModel<number | null>('segments', { required: true })
 const passCount = defineModel<number | null>('passCount', { required: true })
 const exactMode = defineModel<TriState>('exactMode', { required: true })
 const sharpYuvMode = defineModel<TriState>('sharpYuvMode', { required: true })
-
-defineProps<{
-  minScale: number
-  maxScale: number
-  isConverting: boolean
-  canConvert: boolean
-}>()
-
-const emit = defineEmits<{ (event: 'convert'): void }>()
 </script>
 
 <i18n lang="json">

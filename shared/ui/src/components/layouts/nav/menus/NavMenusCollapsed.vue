@@ -11,7 +11,7 @@
     >
       <template #trigger>
         <n-icon size="22" class="menu-icon">
-          <menu-outline />
+          <MenuOutline />
         </n-icon>
       </template>
 

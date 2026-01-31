@@ -8,11 +8,11 @@ import { NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { ResidentIdGender } from '../data/residentId'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   gender: ResidentIdGender
 }>()
+
+const { t } = useI18n()
 
 const genderLabel = computed(() => {
   switch (props.gender) {

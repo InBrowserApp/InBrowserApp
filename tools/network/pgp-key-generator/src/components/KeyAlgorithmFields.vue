@@ -1,10 +1,6 @@
 <template>
   <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
-    <n-radio-group
-      :value="algorithm"
-      name="algorithm"
-      @update:value="$emit('update:algorithm', $event)"
-    >
+    <n-radio-group v-model:value="algorithm" name="algorithm">
       <n-space>
         <n-radio value="ecc">
           ECC
@@ -18,11 +14,7 @@
   </n-form-item-gi>
 
   <n-form-item-gi v-if="algorithm === 'rsa'" :label="t('keySize')" :show-feedback="false">
-    <n-select
-      :value="rsaKeySize"
-      :options="keySizeOptions"
-      @update:value="$emit('update:rsaKeySize', $event)"
-    />
+    <n-select v-model:value="rsaKeySize" :options="keySizeOptions" />
   </n-form-item-gi>
 </template>
 
@@ -32,15 +24,8 @@ import { useI18n } from 'vue-i18n'
 import { NFormItemGi, NRadioGroup, NRadio, NSpace, NSelect, NTag } from 'naive-ui'
 import type { KeyAlgorithm, RsaKeySize } from '../pgp-keygen'
 
-defineProps<{
-  algorithm: KeyAlgorithm
-  rsaKeySize: RsaKeySize
-}>()
-
-defineEmits<{
-  'update:algorithm': [value: KeyAlgorithm]
-  'update:rsaKeySize': [value: RsaKeySize]
-}>()
+const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })
+const rsaKeySize = defineModel<RsaKeySize>('rsaKeySize', { required: true })
 
 const { t } = useI18n()
 

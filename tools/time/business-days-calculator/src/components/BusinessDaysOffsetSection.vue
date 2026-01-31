@@ -68,15 +68,14 @@ import {
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const baseDate = defineModel<number | null>('baseDate', { required: true })
-const dayOffset = defineModel<number | null>('dayOffset', { required: true })
-const includeStart = defineModel<boolean>('includeStart', { required: true })
-
 defineProps<{
   hasWorkingDays: boolean
   addDateLabel: string
   subtractDateLabel: string
 }>()
+const baseDate = defineModel<number | null>('baseDate', { required: true })
+const dayOffset = defineModel<number | null>('dayOffset', { required: true })
+const includeStart = defineModel<boolean>('includeStart', { required: true })
 
 const { t } = useI18n()
 </script>

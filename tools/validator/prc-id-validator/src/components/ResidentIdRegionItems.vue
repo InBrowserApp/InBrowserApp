@@ -36,11 +36,11 @@ import ResidentIdRegionStatusTag from './ResidentIdRegionStatusTag.vue'
 import ResidentIdStatusTag from './ResidentIdStatusTag.vue'
 import ResidentIdTextValue from './ResidentIdTextValue.vue'
 
-const { t } = useI18n()
-
 defineProps<{
   validationResult: ResidentIdValidationResult
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

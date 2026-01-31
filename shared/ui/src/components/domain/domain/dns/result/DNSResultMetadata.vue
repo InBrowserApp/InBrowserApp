@@ -43,11 +43,11 @@ import { DNSRCODEs } from '@utils/dns'
 import { useI18n } from 'vue-i18n'
 import DNSRCODEDescription from './DNSRCODEDescription.vue'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   result: DNSJSONResponse
 }>()
+
+const { t } = useI18n()
 
 const tagsInfo = computed(() => [
   {

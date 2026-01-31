@@ -26,6 +26,10 @@ import { NDescriptions, NDescriptionsItem, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { VINValidationResult } from '../data/vin'
 
+const props = defineProps<{
+  validationResult: VINValidationResult
+}>()
+
 const { t } = useI18n()
 
 type TagType = 'success' | 'error' | 'default' | 'warning' | 'primary' | 'info'
@@ -34,10 +38,6 @@ type TagStatus = {
   label: string
   type: TagType
 }
-
-const props = defineProps<{
-  validationResult: VINValidationResult
-}>()
 
 const hasInput = computed(() => props.validationResult.normalized.length > 0)
 

@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, toRef } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { UploadFileInfo } from 'naive-ui'
 import { useMessage } from 'naive-ui'
@@ -62,43 +62,38 @@ import ImageIcon from '@vicons/fluent/Image24Regular'
 import DeleteIcon from '@vicons/fluent/Delete24Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const props = defineProps<{
-  file: File | null
+defineProps<{
   dimensions?: { width: number; height: number } | null
-}>()
-
-const emit = defineEmits<{
-  'update:file': [file: File | null]
 }>()
 
 const { t } = useI18n()
 const message = useMessage()
 
-const file = toRef(props, 'file')
+const file = defineModel<File | null>('file', { required: true })
 const imagePreview = useObjectUrl(file)
 
 const formattedSize = computed(() => (file.value ? (filesize(file.value.size) as string) : ''))
 
 function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
-  const file = data.file.file
-  if (!file) return false
+  const selectedFile = data.file.file
+  if (!selectedFile) return false
 
   if (data.fileList.length > 1) {
     message.error(t('onlyOneFile'))
     return false
   }
 
-  if (!file.type.startsWith('image/')) {
+  if (!selectedFile.type.startsWith('image/')) {
     message.error(t('invalidFileType'))
     return false
   }
 
-  emit('update:file', file)
+  file.value = selectedFile
   return false
 }
 
 function clearFile() {
-  emit('update:file', null)
+  file.value = null
 }
 
 defineExpose({ handleBeforeUpload })

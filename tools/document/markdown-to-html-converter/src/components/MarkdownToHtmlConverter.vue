@@ -128,7 +128,7 @@ function printHtml(): void {
 }
 </script>
 
-<style lang="css" module src="github-markdown-css/github-markdown-light.css"></style>
+<style module src="github-markdown-css/github-markdown-light.css"></style>
 
 <i18n lang="json">
 {

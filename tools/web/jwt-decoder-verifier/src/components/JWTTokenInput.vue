@@ -17,11 +17,11 @@ import { useI18n } from 'vue-i18n'
 import { NInput } from 'naive-ui'
 import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 
-const value = defineModel<string>('value', { required: true })
-
 defineProps<{
   placeholder?: string
 }>()
+
+const value = defineModel<string>('value', { required: true })
 
 const { t } = useI18n()
 </script>

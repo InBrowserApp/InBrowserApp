@@ -13,26 +13,23 @@ import { ref, watch } from 'vue'
 import { NInput, NFormItem } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
+defineProps<{
+  placeholder?: string
+}>()
+
+const modelValue = defineModel<string>('value', { required: true })
+
 const { t } = useI18n()
 
 const error = ref<boolean>(false)
 
-const props = defineProps<{
-  placeholder?: string
-  value: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:value', value: string): void
-}>()
-
-const value = ref(props.value)
+const value = ref(modelValue.value)
 
 watch(value, (v) => {
   try {
     JSON.parse(v)
     error.value = false
-    emit('update:value', v)
+    modelValue.value = v
   } catch {
     error.value = true
   }

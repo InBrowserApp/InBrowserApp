@@ -5,7 +5,7 @@
       :placeholder="t('placeholder')"
       :status="inputStatus"
       size="large"
-      @update:value="$emit('update:modelValue', $event)"
+      @update:value="modelValue = $event"
     >
       <template #prefix>
         <NIcon :component="TextNumberFormatIcon" :size="24" />
@@ -21,29 +21,26 @@ import { useI18n } from 'vue-i18n'
 import TextNumberFormatIcon from '@vicons/fluent/TextNumberFormat20Regular'
 import type { IBANValidationResult } from '../data/iban'
 
-const { t } = useI18n()
-
 const props = defineProps<{
-  modelValue: string
   validationResult: IBANValidationResult
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
+
+const { t } = useI18n()
 
 const inputStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const validationStatus = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   return props.validationResult.isValid ? 'success' : 'error'
 })
 
 const feedbackMessage = computed(() => {
-  if (props.modelValue.length === 0) return undefined
+  if (modelValue.value.length === 0) return undefined
   if (props.validationResult.isValid) return t('valid')
   if (!props.validationResult.isCountryValid) return t('invalidCountry')
   if (!props.validationResult.isLengthValid) return t('invalidLength')

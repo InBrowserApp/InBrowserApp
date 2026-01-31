@@ -8,7 +8,7 @@
         size="large"
         style="max-width: 200px"
         :status="isValid ? undefined : 'error'"
-        @update:value="$emit('update:modelValue', $event)"
+        @update:value="modelValue = $event"
       />
       <CopyToClipboardButton :content="modelValue" />
     </n-flex>
@@ -22,13 +22,10 @@ import { ToolSectionHeader, ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
 defineProps<{
-  modelValue: string
   isValid: boolean
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: string]
-}>()
+const modelValue = defineModel<string>({ required: true })
 
 const { t } = useI18n()
 </script>

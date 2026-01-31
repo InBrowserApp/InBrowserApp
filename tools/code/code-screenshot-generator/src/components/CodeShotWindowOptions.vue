@@ -1,9 +1,9 @@
 <template>
   <n-form-item-gi :label="t('windowStyle')" :show-feedback="false">
-    <n-select v-model:value="windowStyleProxy" :options="windowStyleOptions" size="small" />
+    <n-select v-model:value="windowStyle" :options="windowStyleOptions" size="small" />
   </n-form-item-gi>
   <n-form-item-gi :label="t('lineNumbers')" :show-feedback="false">
-    <n-switch v-model:value="showLineNumbersProxy" />
+    <n-switch v-model:value="showLineNumbers" />
   </n-form-item-gi>
 </template>
 
@@ -13,27 +13,10 @@ import { useI18n } from 'vue-i18n'
 import { NFormItemGi, NSelect, NSwitch } from 'naive-ui'
 import type { WindowStyle } from '../utils/render'
 
-const props = defineProps<{
-  windowStyle: WindowStyle
-  showLineNumbers: boolean
-}>()
-
-const emit = defineEmits<{
-  (e: 'update:windowStyle', value: WindowStyle): void
-  (e: 'update:showLineNumbers', value: boolean): void
-}>()
+const windowStyle = defineModel<WindowStyle>('windowStyle', { required: true })
+const showLineNumbers = defineModel<boolean>('showLineNumbers', { required: true })
 
 const { t } = useI18n()
-
-const windowStyleProxy = computed({
-  get: () => props.windowStyle,
-  set: (value: WindowStyle) => emit('update:windowStyle', value),
-})
-
-const showLineNumbersProxy = computed({
-  get: () => props.showLineNumbers,
-  set: (value: boolean) => emit('update:showLineNumbers', value),
-})
 
 const windowStyleOptions = computed(() => [
   { label: t('windowMac'), value: 'mac' },

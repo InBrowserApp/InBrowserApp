@@ -25,26 +25,25 @@ import { NFormItemGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
 
 type RecurrenceFrequency = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly'
 
-const props = defineProps<{
-  recurrenceFrequency: RecurrenceFrequency
-  recurrenceInterval: number
-}>()
-
-const emit = defineEmits<{
-  (event: 'update:recurrenceFrequency', value: RecurrenceFrequency): void
-  (event: 'update:recurrenceInterval', value: number): void
-}>()
+const recurrenceFrequency = defineModel<RecurrenceFrequency>('recurrenceFrequency', {
+  required: true,
+})
+const recurrenceInterval = defineModel<number>('recurrenceInterval', { required: true })
 
 const { t } = useI18n()
 
 const recurrenceFrequencyModel = computed({
-  get: () => props.recurrenceFrequency,
-  set: (value) => emit('update:recurrenceFrequency', value),
+  get: () => recurrenceFrequency.value,
+  set: (value) => {
+    recurrenceFrequency.value = value
+  },
 })
 
 const recurrenceIntervalModel = computed({
-  get: () => props.recurrenceInterval,
-  set: (value) => emit('update:recurrenceInterval', value ?? 1),
+  get: () => recurrenceInterval.value,
+  set: (value) => {
+    recurrenceInterval.value = value ?? 1
+  },
 })
 
 const frequencyOptions = computed(() => [

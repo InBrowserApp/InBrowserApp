@@ -11,28 +11,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, toRef } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 import { NInput, NIcon } from 'naive-ui'
 import RefreshOutline from '@vicons/ionicons5/RefreshOutline'
 import { v4 as uuidv4, validate } from 'uuid'
 
-type UUID = `${string}-${string}-${string}-${string}-${string}`
-
 const props = defineProps<{
-  uuid?: string
   showRandom?: boolean
   showError?: boolean
   placeholder?: string
   emitOnInvalid?: boolean
 }>()
+const uuidModel = defineModel<string | undefined>('uuid')
 
-const emit = defineEmits<{
-  (event: 'update:uuid', uuid: UUID): void
-}>()
-
-const uuidRef = ref(props.uuid)
-const uuidOuterRef = toRef(props, 'uuid')
+const uuidRef = ref(uuidModel.value)
 
 const validated = computed(() => {
   return uuidRef.value ? validate(uuidRef.value) : false
@@ -42,14 +35,14 @@ watch(
   () => uuidRef.value,
   (uuid?: string) => {
     if (uuid && validate(uuid)) {
-      emit('update:uuid', uuid as UUID)
+      uuidModel.value = uuid
     } else if (props.emitOnInvalid) {
-      emit('update:uuid', uuid as UUID)
+      uuidModel.value = uuid
     }
   },
 )
 
-watch(uuidOuterRef, (uuid) => {
+watch(uuidModel, (uuid) => {
   uuidRef.value = uuid
 })
 </script>

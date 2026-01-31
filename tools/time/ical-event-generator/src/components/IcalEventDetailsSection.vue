@@ -36,55 +36,22 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NButton, NFlex, NFormItemGi, NGrid, NIcon, NInput } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
 
-const props = defineProps<{
-  title: string
-  location: string
-  description: string
-  url: string
-  uid: string
-}>()
-
 const emit = defineEmits<{
-  (event: 'update:title', value: string): void
-  (event: 'update:location', value: string): void
-  (event: 'update:description', value: string): void
-  (event: 'update:url', value: string): void
-  (event: 'update:uid', value: string): void
   (event: 'regenerate-uid'): void
 }>()
 
 const { t } = useI18n()
 
-const titleModel = computed({
-  get: () => props.title,
-  set: (value) => emit('update:title', value),
-})
-
-const locationModel = computed({
-  get: () => props.location,
-  set: (value) => emit('update:location', value),
-})
-
-const descriptionModel = computed({
-  get: () => props.description,
-  set: (value) => emit('update:description', value),
-})
-
-const urlModel = computed({
-  get: () => props.url,
-  set: (value) => emit('update:url', value),
-})
-
-const uidModel = computed({
-  get: () => props.uid,
-  set: (value) => emit('update:uid', value),
-})
+const titleModel = defineModel<string>('title', { required: true })
+const locationModel = defineModel<string>('location', { required: true })
+const descriptionModel = defineModel<string>('description', { required: true })
+const urlModel = defineModel<string>('url', { required: true })
+const uidModel = defineModel<string>('uid', { required: true })
 </script>
 
 <i18n lang="json">

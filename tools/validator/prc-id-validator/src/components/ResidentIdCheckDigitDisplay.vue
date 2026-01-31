@@ -10,12 +10,12 @@ import { computed } from 'vue'
 import { NFlex, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   expected?: string | null
   actual?: string | null
 }>()
+
+const { t } = useI18n()
 
 const expectedDisplay = computed(() => props.expected ?? t('notAvailable'))
 

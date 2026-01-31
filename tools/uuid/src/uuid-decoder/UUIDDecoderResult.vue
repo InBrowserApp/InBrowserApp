@@ -11,11 +11,11 @@ import DecodeResult from './decode/DecodeResult.vue'
 import type { UUID } from '@utils/uuid'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
-const { t } = useI18n()
-
 defineProps<{
   uuid: UUID
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

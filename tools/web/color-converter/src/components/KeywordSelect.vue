@@ -33,25 +33,19 @@ import colorNames from 'color-name'
 import type { RGBA } from '../types'
 import ColorSection from './ColorSection.vue'
 
-const props = defineProps<{
-  rgba: RGBA
-}>()
-
-const emit = defineEmits<{
-  'update:rgba': [value: RGBA]
-}>()
+const rgba = defineModel<RGBA>('rgba', { required: true })
 
 const { t } = useI18n()
 
 const displayValue = computed(() => {
-  const { r, g, b } = props.rgba
+  const { r, g, b } = rgba.value
   return convert.rgb.keyword(r, g, b)
 })
 
 function handleUpdate(keyword: string) {
   const rgb = colorNames[keyword as keyof typeof colorNames]
   if (rgb) {
-    emit('update:rgba', { r: rgb[0], g: rgb[1], b: rgb[2], a: props.rgba.a })
+    rgba.value = { r: rgb[0], g: rgb[1], b: rgb[2], a: rgba.value.a }
   }
 }
 

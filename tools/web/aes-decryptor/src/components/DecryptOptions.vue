@@ -3,7 +3,7 @@
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
     <n-grid :cols="3" :x-gap="12" :y-gap="12">
       <n-form-item-gi :label="t('mode')">
-        <n-radio-group :value="mode" name="mode" @update:value="$emit('update:mode', $event)">
+        <n-radio-group v-model:value="mode" name="mode">
           <n-space vertical :size="4">
             <n-radio value="GCM">GCM</n-radio>
             <n-radio value="CBC">CBC</n-radio>
@@ -12,11 +12,7 @@
         </n-radio-group>
       </n-form-item-gi>
       <n-form-item-gi :label="t('keyLength')">
-        <n-radio-group
-          :value="keyLength"
-          name="key-length"
-          @update:value="$emit('update:keyLength', $event)"
-        >
+        <n-radio-group v-model:value="keyLength" name="key-length">
           <n-space vertical :size="4">
             <n-radio :value="128">128-bit</n-radio>
             <n-radio :value="192">192-bit</n-radio>
@@ -25,11 +21,7 @@
         </n-radio-group>
       </n-form-item-gi>
       <n-form-item-gi :label="t('inputFormat')">
-        <n-radio-group
-          :value="inputFormat"
-          name="input-format"
-          @update:value="$emit('update:inputFormat', $event)"
-        >
+        <n-radio-group v-model:value="inputFormat" name="input-format">
           <n-space vertical :size="4">
             <n-radio value="base64">Base64</n-radio>
             <n-radio value="hex">Hex</n-radio>
@@ -48,16 +40,11 @@ import type { AesMode, KeyLength, OutputFormat } from '@utils/aes'
 
 defineProps<{
   isJweMode: boolean
-  mode: AesMode
-  keyLength: KeyLength
-  inputFormat: OutputFormat
 }>()
 
-defineEmits<{
-  'update:mode': [value: AesMode]
-  'update:keyLength': [value: KeyLength]
-  'update:inputFormat': [value: OutputFormat]
-}>()
+const mode = defineModel<AesMode>('mode', { required: true })
+const keyLength = defineModel<KeyLength>('keyLength', { required: true })
+const inputFormat = defineModel<OutputFormat>('inputFormat', { required: true })
 
 const { t } = useI18n()
 </script>

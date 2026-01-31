@@ -30,18 +30,12 @@ import convert from 'color-convert'
 import type { RGBA } from '../types'
 import ColorSection from './ColorSection.vue'
 
-const props = defineProps<{
-  rgba: RGBA
-}>()
-
-const emit = defineEmits<{
-  'update:rgba': [value: RGBA]
-}>()
+const rgbaModel = defineModel<RGBA>('rgba', { required: true })
 
 const { t } = useI18n()
 
 const displayValue = computed(() => {
-  const { r, g, b } = props.rgba
+  const { r, g, b } = rgbaModel.value
   const [l, c, h] = convert.rgb.lch(r, g, b)
   return `lch(${l.toFixed(1)}, ${c.toFixed(1)}, ${h.toFixed(1)})`
 })
@@ -79,7 +73,7 @@ function handleBlur() {
   const parsed = parse(localValue.value)
   if (parsed) {
     const [r, g, b] = convert.lch.rgb(parsed.l, parsed.c, parsed.h)
-    emit('update:rgba', { r, g, b, a: props.rgba.a })
+    rgbaModel.value = { r, g, b, a: rgbaModel.value.a }
   } else {
     localValue.value = displayValue.value
     isValid.value = true

@@ -12,16 +12,13 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, toRef, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { NGrid } from 'naive-ui'
 import { syncRef } from '@vueuse/core'
 import URLAuthorityInputs from './URLAuthorityInputs.vue'
 import URLPathInputs from './URLPathInputs.vue'
 
-const props = defineProps<{
-  url: string
-}>()
-const url = toRef(props, 'url')
+const url = defineModel<string>('url', { required: true })
 const urlObject = computed<URL>(() => {
   try {
     return new URL(url.value)
@@ -29,10 +26,6 @@ const urlObject = computed<URL>(() => {
     return new URL('')
   }
 })
-
-const emit = defineEmits<{
-  (e: 'update:url', value: string): void
-}>()
 
 const protocol = ref(urlObject.value.protocol.replace(':', ''))
 const username = ref(urlObject.value.username)
@@ -66,42 +59,42 @@ watch(urlObject, (newURL) => {
 watch(protocol, (newProtocol) => {
   const newURL = new URL(url.value)
   newURL.protocol = newProtocol
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(username, (newUsername) => {
   const newURL = new URL(url.value)
   newURL.username = newUsername
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(password, (newPassword) => {
   const newURL = new URL(url.value)
   newURL.password = newPassword
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(hostname, (newHostname) => {
   const newURL = new URL(url.value)
   newURL.hostname = newHostname
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(port, (newPort) => {
   const newURL = new URL(url.value)
   newURL.port = newPort
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(path, (newPath) => {
   const newURL = new URL(url.value)
   newURL.pathname = newPath
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(hash, (newHash) => {
   const newURL = new URL(url.value)
   newURL.hash = newHash
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 watch(queryString, (newQueryString) => {
   const newURL = new URL(url.value)
   newURL.search = newQueryString
-  emit('update:url', newURL.toString())
+  url.value = newURL.toString()
 })
 </script>
 

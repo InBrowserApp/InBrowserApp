@@ -1,5 +1,5 @@
 <template>
-  <custom-router-link
+  <CustomRouterLink
     :to="{
       path: info.path,
     }"
@@ -17,7 +17,7 @@
         </n-text>
       </div>
     </div>
-  </custom-router-link>
+  </CustomRouterLink>
 </template>
 
 <script lang="ts" setup>

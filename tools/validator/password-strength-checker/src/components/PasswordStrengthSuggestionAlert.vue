@@ -12,11 +12,11 @@ import { NAlert, NLi, NUl } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import type { StrengthSuggestionKey } from '../utils'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   suggestions: StrengthSuggestionKey[]
 }>()
+
+const { t } = useI18n()
 
 const suggestionMessages = computed(() =>
   // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys

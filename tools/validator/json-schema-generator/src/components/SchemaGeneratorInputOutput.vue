@@ -14,7 +14,7 @@
           :placeholder="t('inputPlaceholder')"
           :status="inputStatus"
           :wrap-with-form-item="false"
-          @update:value="$emit('update:inputValue', $event)"
+          @update:value="inputValue = $event"
         />
         <template v-if="inputError" #feedback>
           <n-text type="error">{{ t('invalidJson') }}: {{ inputError }}</n-text>
@@ -48,21 +48,18 @@ import { useI18n } from 'vue-i18n'
 import hljs from 'highlight.js/lib/core'
 import json from 'highlight.js/lib/languages/json'
 
-hljs.registerLanguage('json', json)
-
-const { t } = useI18n()
-
 defineProps<{
-  inputValue: string | File
   inputStatus?: 'success' | 'error'
   inputError?: string
   schemaText: string
   outputError?: string
 }>()
 
-defineEmits<{
-  'update:inputValue': [value: string | File]
-}>()
+const inputValue = defineModel<string | File>('inputValue', { required: true })
+
+hljs.registerLanguage('json', json)
+
+const { t } = useI18n()
 
 const accept = '.json,.txt'
 </script>

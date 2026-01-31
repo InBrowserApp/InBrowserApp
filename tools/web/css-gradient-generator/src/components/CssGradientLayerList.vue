@@ -63,8 +63,6 @@ import { useI18n } from 'vue-i18n'
 import type { GradientLayer, GradientType } from '../types'
 import { createGradientCss } from '../utils/gradient'
 
-const { t } = useI18n()
-
 defineProps<{
   layers: GradientLayer[]
   activeLayerId: string
@@ -76,6 +74,8 @@ const emit = defineEmits<{
   (event: 'move-layer', index: number, direction: number): void
   (event: 'remove-layer', id: string): void
 }>()
+
+const { t } = useI18n()
 
 const typeLabelMap = computed<Record<GradientType, string>>(() => ({
   linear: t('type.linear'),

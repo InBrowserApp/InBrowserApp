@@ -4,18 +4,13 @@
     <n-flex vertical :size="10">
       <n-flex align="center" :size="8" class="setting-row">
         <n-text depth="3">{{ t('systemAudio') }}</n-text>
-        <n-switch
-          :value="includeSystemAudio"
-          :disabled="settingsDisabled"
-          @update:value="emit('update:includeSystemAudio', $event)"
-        />
+        <n-switch v-model:value="includeSystemAudio" :disabled="settingsDisabled" />
       </n-flex>
       <n-flex align="center" :size="8" class="setting-row">
         <n-text depth="3">{{ t('microphone') }}</n-text>
         <n-switch
-          :value="includeMicrophone"
+          v-model:value="includeMicrophone"
           :disabled="settingsDisabled || !isMicSupported"
-          @update:value="emit('update:includeMicrophone', $event)"
         />
       </n-flex>
     </n-flex>
@@ -28,16 +23,12 @@ import { NFlex, NSwitch, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
 defineProps<{
-  includeSystemAudio: boolean
-  includeMicrophone: boolean
   settingsDisabled: boolean
   isMicSupported: boolean
 }>()
 
-const emit = defineEmits<{
-  'update:includeSystemAudio': [boolean]
-  'update:includeMicrophone': [boolean]
-}>()
+const includeSystemAudio = defineModel<boolean>('includeSystemAudio', { required: true })
+const includeMicrophone = defineModel<boolean>('includeMicrophone', { required: true })
 
 const { t } = useI18n({ useScope: 'local' })
 </script>

@@ -49,12 +49,12 @@ import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import type { BarcodeScanResult } from '../barcode-reader'
 
-const { t } = useI18n()
-
 const props = defineProps<{
   result: BarcodeScanResult | null
   error: string | null
 }>()
+
+const { t } = useI18n()
 
 const formatLabel = computed(() =>
   props.result?.format ? props.result.format.replace(/_/g, ' ') : '',

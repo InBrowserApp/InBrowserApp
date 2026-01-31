@@ -3,19 +3,11 @@
     <ToolSectionHeader>{{ t('optionsTitle') }}</ToolSectionHeader>
     <n-flex align="center" :size="16" wrap>
       <n-flex align="center" :size="8">
-        <n-switch
-          :value="validateFormats"
-          size="small"
-          @update:value="$emit('update:validateFormats', $event)"
-        />
+        <n-switch v-model:value="validateFormats" size="small" />
         <span>{{ t('validateFormats') }}</span>
       </n-flex>
       <n-flex align="center" :size="8">
-        <n-switch
-          :value="allErrors"
-          size="small"
-          @update:value="$emit('update:allErrors', $event)"
-        />
+        <n-switch v-model:value="allErrors" size="small" />
         <span>{{ t('allErrors') }}</span>
       </n-flex>
     </n-flex>
@@ -27,17 +19,10 @@ import { NFlex, NSwitch } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 
+const validateFormats = defineModel<boolean>('validateFormats', { required: true })
+const allErrors = defineModel<boolean>('allErrors', { required: true })
+
 const { t } = useI18n()
-
-defineProps<{
-  validateFormats: boolean
-  allErrors: boolean
-}>()
-
-defineEmits<{
-  'update:validateFormats': [value: boolean]
-  'update:allErrors': [value: boolean]
-}>()
 </script>
 
 <i18n lang="json">

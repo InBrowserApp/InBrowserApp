@@ -84,10 +84,6 @@ import {
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 
-const startDate = defineModel<number | null>('startDate', { required: true })
-const endDate = defineModel<number | null>('endDate', { required: true })
-const includeEndpoints = defineModel<boolean>('includeEndpoints', { required: true })
-
 const props = defineProps<{
   businessDaysLabel: string
   totalDaysLabel: string
@@ -95,6 +91,9 @@ const props = defineProps<{
   holidayDaysLabel: string
   isRangeReversed: boolean
 }>()
+const startDate = defineModel<number | null>('startDate', { required: true })
+const endDate = defineModel<number | null>('endDate', { required: true })
+const includeEndpoints = defineModel<boolean>('includeEndpoints', { required: true })
 
 const { t } = useI18n()
 

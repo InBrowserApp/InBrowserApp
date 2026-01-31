@@ -22,8 +22,6 @@
 import { NDescriptionsItem, NFlex, NTag, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 defineProps<{
   expectedLength: string
   actualLength: number
@@ -31,6 +29,8 @@ defineProps<{
   expectedCheckDigits: string
   actualCheckDigits: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <i18n lang="json">

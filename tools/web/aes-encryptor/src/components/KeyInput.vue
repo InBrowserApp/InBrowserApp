@@ -2,33 +2,27 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('keySettings') }}</ToolSectionHeader>
     <n-space vertical :size="12">
-      <n-radio-group
-        :value="keyType"
-        name="key-type"
-        @update:value="$emit('update:keyType', $event)"
-      >
+      <n-radio-group v-model:value="keyType" name="key-type">
         <n-radio-button value="password">{{ t('password') }}</n-radio-button>
         <n-radio-button value="raw">{{ t('rawKey') }}</n-radio-button>
       </n-radio-group>
 
       <template v-if="keyType === 'password'">
         <n-input
-          :value="password"
+          v-model:value="password"
           type="password"
           show-password-on="click"
           :placeholder="t('passwordPlaceholder')"
-          @update:value="$emit('update:password', $event)"
         />
       </template>
 
       <template v-else>
         <n-input-group>
           <n-input
-            :value="rawKey"
+            v-model:value="rawKey"
             :placeholder="t('rawKeyPlaceholder')"
             :status="rawKeyStatus"
             style="font-family: monospace"
-            @update:value="$emit('update:rawKey', $event)"
           />
           <n-button v-if="showGenerate" @click="handleGenerateKey">{{ t('generate') }}</n-button>
         </n-input-group>
@@ -48,9 +42,6 @@ import { type KeyType, type KeyLength, generateRandomKey, isValidHex } from '@ut
 
 const props = withDefaults(
   defineProps<{
-    keyType: KeyType
-    password: string
-    rawKey: string
     keyLength: KeyLength
     showGenerate?: boolean
   }>(),
@@ -59,28 +50,26 @@ const props = withDefaults(
   },
 )
 
-const emit = defineEmits<{
-  'update:keyType': [value: KeyType]
-  'update:password': [value: string]
-  'update:rawKey': [value: string]
-}>()
+const keyType = defineModel<KeyType>('keyType', { required: true })
+const password = defineModel<string>('password', { required: true })
+const rawKey = defineModel<string>('rawKey', { required: true })
 
 const { t } = useI18n()
 
 const expectedKeyLength = computed(() => props.keyLength / 4)
 
 const rawKeyStatus = computed(() => {
-  if (!props.rawKey) return undefined
-  if (!isValidHex(props.rawKey)) return 'error'
-  const cleanHex = props.rawKey.replace(/\s/g, '')
+  if (!rawKey.value) return undefined
+  if (!isValidHex(rawKey.value)) return 'error'
+  const cleanHex = rawKey.value.replace(/\s/g, '')
   if (cleanHex.length !== expectedKeyLength.value) return 'error'
   return 'success'
 })
 
 const rawKeyError = computed(() => {
-  if (!props.rawKey) return ''
-  if (!isValidHex(props.rawKey)) return t('invalidHex')
-  const cleanHex = props.rawKey.replace(/\s/g, '')
+  if (!rawKey.value) return ''
+  if (!isValidHex(rawKey.value)) return t('invalidHex')
+  const cleanHex = rawKey.value.replace(/\s/g, '')
   if (cleanHex.length !== expectedKeyLength.value) {
     return t('wrongKeyLength', {
       expected: expectedKeyLength.value,
@@ -91,7 +80,7 @@ const rawKeyError = computed(() => {
 })
 
 function handleGenerateKey() {
-  emit('update:rawKey', generateRandomKey(props.keyLength))
+  rawKey.value = generateRandomKey(props.keyLength)
 }
 </script>
 
