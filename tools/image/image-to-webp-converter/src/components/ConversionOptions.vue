@@ -2,6 +2,7 @@
   <ToolSection>
     <ToolSectionHeader>{{ title }}</ToolSectionHeader>
     <ConversionOptionsBaseGrid
+      v-model:lossless="lossless"
       :scale-label="scaleLabel"
       :scale-hint="scaleHint"
       :quality-label="qualityLabel"
@@ -12,13 +13,11 @@
       :scale="scale"
       :quality="quality"
       :method="method"
-      :lossless="lossless"
       :min-scale="minScale"
       :max-scale="maxScale"
       @update:scale="handleScaleUpdate"
       @update:quality="handleQualityUpdate"
       @update:method="handleMethodUpdate"
-      @update:lossless="handleLosslessUpdate"
     />
     <ConversionOptionsAdvancedSection
       :advanced-label="advancedLabel"
@@ -28,44 +27,32 @@
       :alpha-quality-label="alphaQualityLabel"
       :sns-strength-label="snsStrengthLabel"
       :filter-strength-label="filterStrengthLabel"
+      v-model:advanced-enabled="advancedEnabled"
       :filter-sharpness-label="filterSharpnessLabel"
       :filter-type-label="filterTypeLabel"
+      v-model:near-lossless="nearLossless"
       :partitions-label="partitionsLabel"
+      v-model:alpha-quality="alphaQuality"
       :segments-label="segmentsLabel"
+      v-model:sns-strength="snsStrength"
       :pass-label="passLabel"
+      v-model:filter-strength="filterStrength"
       :exact-label="exactLabel"
+      v-model:filter-sharpness="filterSharpness"
       :use-sharp-yuv-label="useSharpYuvLabel"
+      v-model:filter-type="filterType"
       :option-default-label="optionDefaultLabel"
+      v-model:partitions="partitions"
       :option-on-label="optionOnLabel"
+      v-model:segments="segments"
       :option-off-label="optionOffLabel"
-      :advanced-enabled="advancedEnabled"
+      v-model:pass-count="passCount"
       :target-size="targetSize"
+      v-model:exact-mode="exactMode"
       :target-psnr="targetPsnr"
-      :near-lossless="nearLossless"
-      :alpha-quality="alphaQuality"
-      :sns-strength="snsStrength"
-      :filter-strength="filterStrength"
-      :filter-sharpness="filterSharpness"
-      :filter-type="filterType"
-      :partitions="partitions"
-      :segments="segments"
-      :pass-count="passCount"
-      :exact-mode="exactMode"
-      :sharp-yuv-mode="sharpYuvMode"
-      @update:advanced-enabled="handleAdvancedEnabledUpdate"
+      v-model:sharp-yuv-mode="sharpYuvMode"
       @update:target-size="handleTargetSizeUpdate"
       @update:target-psnr="handleTargetPsnrUpdate"
-      @update:near-lossless="handleNearLosslessUpdate"
-      @update:alpha-quality="handleAlphaQualityUpdate"
-      @update:sns-strength="handleSnsStrengthUpdate"
-      @update:filter-strength="handleFilterStrengthUpdate"
-      @update:filter-sharpness="handleFilterSharpnessUpdate"
-      @update:filter-type="handleFilterTypeUpdate"
-      @update:partitions="handlePartitionsUpdate"
-      @update:segments="handleSegmentsUpdate"
-      @update:pass-count="handlePassCountUpdate"
-      @update:exact-mode="handleExactModeUpdate"
-      @update:sharp-yuv-mode="handleSharpYuvModeUpdate"
     />
     <ConversionOptionsActions
       :convert-label="convertLabel"
@@ -159,14 +146,6 @@ function handleMethodUpdate(value: number | null) {
   method.value = value
 }
 
-function handleLosslessUpdate(value: boolean) {
-  lossless.value = value
-}
-
-function handleAdvancedEnabledUpdate(value: boolean) {
-  advancedEnabled.value = value
-}
-
 function handleTargetSizeUpdate(value: number | null) {
   targetSize.value = value
   if (value !== null) {
@@ -187,49 +166,5 @@ function handleTargetPsnrUpdate(value: number | null) {
       targetSize.value = null
     }
   }
-}
-
-function handleNearLosslessUpdate(value: number | null) {
-  nearLossless.value = value
-}
-
-function handleAlphaQualityUpdate(value: number | null) {
-  alphaQuality.value = value
-}
-
-function handleSnsStrengthUpdate(value: number | null) {
-  snsStrength.value = value
-}
-
-function handleFilterStrengthUpdate(value: number | null) {
-  filterStrength.value = value
-}
-
-function handleFilterSharpnessUpdate(value: number | null) {
-  filterSharpness.value = value
-}
-
-function handleFilterTypeUpdate(value: number | null) {
-  filterType.value = value
-}
-
-function handlePartitionsUpdate(value: number | null) {
-  partitions.value = value
-}
-
-function handleSegmentsUpdate(value: number | null) {
-  segments.value = value
-}
-
-function handlePassCountUpdate(value: number | null) {
-  passCount.value = value
-}
-
-function handleExactModeUpdate(value: TriState) {
-  exactMode.value = value
-}
-
-function handleSharpYuvModeUpdate(value: TriState) {
-  sharpYuvMode.value = value
 }
 </script>

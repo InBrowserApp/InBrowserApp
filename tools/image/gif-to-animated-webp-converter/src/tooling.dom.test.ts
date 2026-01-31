@@ -471,14 +471,14 @@ describe('ConversionOptions', () => {
     const vm = wrapper.vm as unknown as {
       handleScaleUpdate: (value: number | null) => void
       handleSpeedUpdate: (value: number | null) => void
-      handleLoopModeUpdate: (value: 'inherit' | 'infinite' | 'custom' | null) => void
-      handleLoopCountUpdate: (value: number | null) => void
+      loopMode: 'inherit' | 'infinite' | 'custom'
+      loopCount: number | null
     }
 
     vm.handleScaleUpdate(120)
     vm.handleSpeedUpdate(2)
-    vm.handleLoopModeUpdate('custom')
-    vm.handleLoopCountUpdate(3)
+    vm.loopMode = 'custom'
+    vm.loopCount = 3
 
     expect(wrapper.emitted('update:scale')?.[0]).toEqual([120])
     expect(wrapper.emitted('update:speed')?.[0]).toEqual([2])

@@ -517,10 +517,10 @@ describe('ConversionOptions', () => {
       handleScaleUpdate: (value: number | null) => void
       handleQualityUpdate: (value: number | null) => void
       handleMethodUpdate: (value: number | null) => void
-      handleLosslessUpdate: (value: boolean) => void
-      handleAdvancedEnabledUpdate: (value: boolean) => void
       handleTargetSizeUpdate: (value: number | null) => void
-      handleExactModeUpdate: (value: 'default' | 'on' | 'off') => void
+      lossless: boolean
+      advancedEnabled: boolean
+      exactMode: 'default' | 'on' | 'off'
     }
 
     vm.handleScaleUpdate(80)
@@ -529,14 +529,14 @@ describe('ConversionOptions', () => {
     expect(wrapper.emitted('update:quality')?.[0]).toEqual([72])
     vm.handleMethodUpdate(5)
     expect(wrapper.emitted('update:method')?.[0]).toEqual([5])
-    vm.handleLosslessUpdate(true)
+    vm.lossless = true
     expect(wrapper.emitted('update:lossless')?.[0]).toEqual([true])
-    vm.handleAdvancedEnabledUpdate(true)
+    vm.advancedEnabled = true
     expect(wrapper.emitted('update:advancedEnabled')?.[0]).toEqual([true])
     vm.handleTargetSizeUpdate(128)
     expect(wrapper.emitted('update:targetSize')?.[0]).toEqual([128])
     expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([null])
-    vm.handleExactModeUpdate('on')
+    vm.exactMode = 'on'
     expect(wrapper.emitted('update:exactMode')?.[0]).toEqual(['on'])
   })
 })

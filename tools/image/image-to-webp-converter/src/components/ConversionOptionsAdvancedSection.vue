@@ -1,6 +1,6 @@
 <template>
   <n-flex align="center" :size="8" style="margin-top: 12px">
-    <n-switch :value="advancedEnabled" @update:value="handleAdvancedEnabledUpdate" />
+    <n-switch v-model:value="advancedEnabled" />
     <n-text>{{ advancedLabel }}</n-text>
   </n-flex>
 
@@ -26,109 +26,84 @@
       </n-form-item-gi>
       <n-form-item-gi :label="nearLosslessLabel" :show-feedback="false">
         <n-input-number
-          :value="nearLossless"
+          v-model:value="nearLossless"
           :min="0"
           :max="100"
           :step="1"
           style="width: 100%"
-          @update:value="handleNearLosslessUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="alphaQualityLabel" :show-feedback="false">
         <n-input-number
-          :value="alphaQuality"
+          v-model:value="alphaQuality"
           :min="0"
           :max="100"
           :step="1"
           style="width: 100%"
-          @update:value="handleAlphaQualityUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="snsStrengthLabel" :show-feedback="false">
         <n-input-number
-          :value="snsStrength"
+          v-model:value="snsStrength"
           :min="0"
           :max="100"
           :step="1"
           style="width: 100%"
-          @update:value="handleSnsStrengthUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="filterStrengthLabel" :show-feedback="false">
         <n-input-number
-          :value="filterStrength"
+          v-model:value="filterStrength"
           :min="0"
           :max="100"
           :step="1"
           style="width: 100%"
-          @update:value="handleFilterStrengthUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="filterSharpnessLabel" :show-feedback="false">
         <n-input-number
-          :value="filterSharpness"
+          v-model:value="filterSharpness"
           :min="0"
           :max="7"
           :step="1"
           style="width: 100%"
-          @update:value="handleFilterSharpnessUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="filterTypeLabel" :show-feedback="false">
         <n-input-number
-          :value="filterType"
+          v-model:value="filterType"
           :min="0"
           :max="1"
           :step="1"
           style="width: 100%"
-          @update:value="handleFilterTypeUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="partitionsLabel" :show-feedback="false">
         <n-input-number
-          :value="partitions"
+          v-model:value="partitions"
           :min="0"
           :max="3"
           :step="1"
           style="width: 100%"
-          @update:value="handlePartitionsUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="segmentsLabel" :show-feedback="false">
-        <n-input-number
-          :value="segments"
-          :min="1"
-          :max="4"
-          :step="1"
-          style="width: 100%"
-          @update:value="handleSegmentsUpdate"
-        />
+        <n-input-number v-model:value="segments" :min="1" :max="4" :step="1" style="width: 100%" />
       </n-form-item-gi>
       <n-form-item-gi :label="passLabel" :show-feedback="false">
         <n-input-number
-          :value="passCount"
+          v-model:value="passCount"
           :min="1"
           :max="10"
           :step="1"
           style="width: 100%"
-          @update:value="handlePassCountUpdate"
         />
       </n-form-item-gi>
       <n-form-item-gi :label="exactLabel" :show-feedback="false">
-        <n-select
-          :value="exactMode"
-          :options="toggleOptions"
-          style="width: 100%"
-          @update:value="handleExactModeUpdate"
-        />
+        <n-select v-model:value="exactMode" :options="toggleOptions" style="width: 100%" />
       </n-form-item-gi>
       <n-form-item-gi :label="useSharpYuvLabel" :show-feedback="false">
-        <n-select
-          :value="sharpYuvMode"
-          :options="toggleOptions"
-          style="width: 100%"
-          @update:value="handleSharpYuvModeUpdate"
-        />
+        <n-select v-model:value="sharpYuvMode" :options="toggleOptions" style="width: 100%" />
       </n-form-item-gi>
     </n-grid>
   </n-collapse-transition>
@@ -190,10 +165,6 @@ const toggleOptions = computed(() => [
   { label: props.optionOffLabel, value: 'off' as const },
 ])
 
-function handleAdvancedEnabledUpdate(value: boolean) {
-  advancedEnabled.value = value
-}
-
 function handleTargetSizeUpdate(value: number | null) {
   targetSize.value = value
   if (value !== null) targetPsnr.value = null
@@ -202,50 +173,6 @@ function handleTargetSizeUpdate(value: number | null) {
 function handleTargetPsnrUpdate(value: number | null) {
   targetPsnr.value = value
   if (value !== null) targetSize.value = null
-}
-
-function handleNearLosslessUpdate(value: number | null) {
-  nearLossless.value = value
-}
-
-function handleAlphaQualityUpdate(value: number | null) {
-  alphaQuality.value = value
-}
-
-function handleSnsStrengthUpdate(value: number | null) {
-  snsStrength.value = value
-}
-
-function handleFilterStrengthUpdate(value: number | null) {
-  filterStrength.value = value
-}
-
-function handleFilterSharpnessUpdate(value: number | null) {
-  filterSharpness.value = value
-}
-
-function handleFilterTypeUpdate(value: number | null) {
-  filterType.value = value
-}
-
-function handlePartitionsUpdate(value: number | null) {
-  partitions.value = value
-}
-
-function handleSegmentsUpdate(value: number | null) {
-  segments.value = value
-}
-
-function handlePassCountUpdate(value: number | null) {
-  passCount.value = value
-}
-
-function handleExactModeUpdate(value: TriState) {
-  exactMode.value = value
-}
-
-function handleSharpYuvModeUpdate(value: TriState) {
-  sharpYuvMode.value = value
 }
 </script>
 

@@ -31,12 +31,7 @@
       </n-form-item-gi>
       <n-form-item-gi :label="loopLabel" :show-feedback="false">
         <n-flex vertical :size="8" style="width: 100%">
-          <n-select
-            :value="loopMode"
-            :options="loopOptions"
-            style="width: 100%"
-            @update:value="handleLoopModeUpdate"
-          />
+          <n-select v-model:value="loopMode" :options="loopOptions" style="width: 100%" />
           <n-text depth="3">{{ loopHint }}</n-text>
         </n-flex>
       </n-form-item-gi>
@@ -45,20 +40,14 @@
     <n-collapse-transition :show="loopMode === 'custom'">
       <n-grid cols="1 s:2 l:3" :x-gap="12" :y-gap="12" responsive="screen" style="margin-top: 12px">
         <n-form-item-gi :label="loopCountLabel" :show-feedback="false">
-          <n-input-number
-            :value="loopCount"
-            :min="1"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleLoopCountUpdate"
-          />
+          <n-input-number v-model:value="loopCount" :min="1" :step="1" style="width: 100%" />
         </n-form-item-gi>
       </n-grid>
     </n-collapse-transition>
 
     <n-grid cols="1 s:2 l:3" :x-gap="12" :y-gap="12" responsive="screen" style="margin-top: 12px">
       <n-form-item-gi :label="optimizeLabel" :show-feedback="false">
-        <n-switch :value="optimize" @update:value="handleOptimizeUpdate" />
+        <n-switch v-model:value="optimize" />
       </n-form-item-gi>
       <n-form-item-gi :label="optimizeLevelLabel" :show-feedback="false">
         <n-flex vertical :size="8" style="width: 100%">
@@ -162,20 +151,6 @@ function handleSpeedUpdate(value: number | null) {
   if (value !== null) {
     speed.value = value
   }
-}
-
-function handleLoopModeUpdate(value: GifLoopMode | null) {
-  if (value !== null) {
-    loopMode.value = value
-  }
-}
-
-function handleLoopCountUpdate(value: number | null) {
-  loopCount.value = value
-}
-
-function handleOptimizeUpdate(value: boolean) {
-  optimize.value = value
 }
 
 function handleOptimizeLevelUpdate(value: number | null) {

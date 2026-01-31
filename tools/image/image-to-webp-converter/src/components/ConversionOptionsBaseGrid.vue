@@ -40,7 +40,7 @@
       </n-flex>
     </n-form-item-gi>
     <n-form-item-gi :label="losslessLabel" :show-feedback="false">
-      <n-switch :value="lossless" @update:value="handleLosslessUpdate" />
+      <n-switch v-model:value="lossless" />
     </n-form-item-gi>
   </n-grid>
 </template>
@@ -78,10 +78,6 @@ function handleQualityUpdate(value: number | null) {
 function handleMethodUpdate(value: number | null) {
   if (value === null) return
   method.value = value
-}
-
-function handleLosslessUpdate(value: boolean) {
-  lossless.value = value
 }
 </script>
 
