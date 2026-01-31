@@ -10,12 +10,14 @@
       <n-flex vertical :size="4" style="width: 100%">
         <n-select
           v-model:value="timeZoneModel"
-          :options="timeZoneOptions"
+          :options="props.timeZoneOptions"
           filterable
           :placeholder="t('timezone-placeholder')"
           style="width: 100%"
         />
-        <n-text v-if="offsetLabel" depth="3"> {{ t('offset') }}: {{ offsetLabel }} </n-text>
+        <n-text v-if="props.offsetLabel" depth="3">
+          {{ t('offset') }}: {{ props.offsetLabel }}
+        </n-text>
       </n-flex>
     </n-form-item-gi>
     <n-form-item-gi :label="t('output-mode')" :show-feedback="false">
@@ -35,7 +37,7 @@ import { NFlex, NFormItemGi, NGrid, NRadio, NRadioGroup, NSelect, NSwitch, NText
 
 type OutputMode = 'utc' | 'tzid'
 
-const { timeZoneOptions, offsetLabel } = withDefaults(
+const props = withDefaults(
   defineProps<{
     timeZoneOptions: Array<{ label: string; value: string }>
     offsetLabel?: string

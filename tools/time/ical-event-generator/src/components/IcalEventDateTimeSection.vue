@@ -5,13 +5,13 @@
       v-model:is-all-day="isAllDayModel"
       v-model:time-zone="timeZoneModel"
       v-model:output-mode="outputModeModel"
-      :time-zone-options="timeZoneOptions"
-      :offset-label="offsetLabel"
+      :time-zone-options="props.timeZoneOptions"
+      :offset-label="props.offsetLabel"
     />
     <IcalEventDateTimeRangeSection
       v-model:date-range="dateRangeModel"
       :is-all-day="isAllDayModel"
-      :range-error-key="rangeErrorKey"
+      :range-error-key="props.rangeErrorKey"
     />
   </ToolSection>
 </template>
@@ -24,7 +24,7 @@ import IcalEventDateTimeSettingsSection from './IcalEventDateTimeSettingsSection
 
 type RangeErrorKey = 'invalid-date-time' | 'invalid-date' | 'end-before-start'
 
-const { timeZoneOptions, offsetLabel, rangeErrorKey } = withDefaults(
+const props = withDefaults(
   defineProps<{
     timeZoneOptions: Array<{ label: string; value: string }>
     offsetLabel?: string
