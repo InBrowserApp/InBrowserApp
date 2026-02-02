@@ -1,4 +1,8 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
+
+vi.mock('./TextDiffView.vue', () => ({
+  default: {},
+}))
 import * as toolInfo from './info'
 import { routes } from './routes'
 import * as tool from './index'
