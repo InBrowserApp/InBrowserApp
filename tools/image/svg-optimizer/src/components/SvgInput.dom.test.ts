@@ -1,0 +1,178 @@
+import { describe, it, expect, vi } from 'vitest'
+import { flushPromises, mount } from '@vue/test-utils'
+import { defineComponent, nextTick, ref } from 'vue'
+import SvgInput from './SvgInput.vue'
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  return {
+    ...actual,
+    useObjectUrl: () => ref('blob:preview'),
+  }
+})
+
+vi.mock('vue-i18n', async () => {
+  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
+  return {
+    ...actual,
+    useI18n: () => ({ t: (key: string) => key }),
+  }
+})
+
+vi.mock('@vicons/fluent/CloudArrowUp24Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'CloudArrowUpIcon',
+      template: '<svg class="cloud-upload" />',
+    }),
+  }
+})
+
+vi.mock('naive-ui', async () => {
+  const { defineComponent } = await import('vue')
+
+  const Base = defineComponent({
+    inheritAttrs: false,
+    template: '<div v-bind="$attrs"><slot /></div>',
+  })
+
+  const NUpload = defineComponent({
+    name: 'NUpload',
+    inheritAttrs: false,
+    emits: ['change'],
+    template: '<div class="n-upload"><slot /></div>',
+  })
+
+  const NTabs = defineComponent({
+    name: 'NTabs',
+    props: {
+      value: {
+        type: String,
+        default: '',
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="n-tabs"><slot /></div>',
+  })
+
+  const NTabPane = defineComponent({
+    name: 'NTabPane',
+    props: {
+      name: {
+        type: String,
+        default: '',
+      },
+      tab: {
+        type: String,
+        default: '',
+      },
+    },
+    template: '<div class="n-tab-pane"><slot /></div>',
+  })
+
+  const NInput = defineComponent({
+    name: 'NInput',
+    props: {
+      value: {
+        type: String,
+        default: '',
+      },
+      status: {
+        type: String,
+        default: undefined,
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="n-input" />',
+  })
+
+  return {
+    NUpload,
+    NUploadDragger: Base,
+    NIcon: Base,
+    NText: Base,
+    NP: Base,
+    NTabs,
+    NTabPane,
+    NInput,
+  }
+})
+
+const SvgFilePreviewStub = defineComponent({
+  name: 'SvgFilePreview',
+  props: {
+    fileName: {
+      type: String,
+      default: '',
+    },
+  },
+  template: '<div class="svg-preview">{{ fileName }}</div>',
+})
+
+const mountInput = () =>
+  mount(SvgInput, {
+    global: {
+      stubs: {
+        ToolSection: {
+          template: '<section><slot /></section>',
+        },
+        ToolSectionHeader: {
+          template: '<h2><slot /></h2>',
+        },
+        SvgFilePreview: SvgFilePreviewStub,
+      },
+    },
+  })
+
+describe('SvgInput', () => {
+  it('accepts valid SVG text input', async () => {
+    const wrapper = mountInput()
+
+    const tabs = wrapper.findComponent({ name: 'NTabs' })
+    tabs.vm.$emit('update:value', 'text')
+    await nextTick()
+
+    const input = wrapper.findComponent({ name: 'NInput' })
+    input.vm.$emit('update:value', '<svg></svg>')
+    await nextTick()
+
+    const svgEmits = wrapper.emitted('update:svgString')
+    const fileEmits = wrapper.emitted('update:fileName')
+
+    expect(svgEmits?.[svgEmits.length - 1]).toEqual(['<svg></svg>'])
+    expect(fileEmits?.[fileEmits.length - 1]).toEqual(['pasted.svg'])
+    expect(wrapper.find('.svg-preview').exists()).toBe(true)
+  })
+
+  it('shows an error for invalid SVG text', async () => {
+    const wrapper = mountInput()
+
+    const tabs = wrapper.findComponent({ name: 'NTabs' })
+    tabs.vm.$emit('update:value', 'text')
+    await nextTick()
+
+    const input = wrapper.findComponent({ name: 'NInput' })
+    input.vm.$emit('update:value', 'not svg')
+    await nextTick()
+
+    expect(wrapper.text()).toContain('invalidSvg')
+  })
+
+  it('handles file uploads and updates the models', async () => {
+    const wrapper = mountInput()
+
+    const upload = wrapper.findComponent({ name: 'NUpload' })
+    const file = new File(['<svg></svg>'], 'icon.svg', { type: 'image/svg+xml' })
+
+    upload.vm.$emit('change', { fileList: [{ file }] })
+    await flushPromises()
+
+    const svgEmits = wrapper.emitted('update:svgString')
+    const fileEmits = wrapper.emitted('update:fileName')
+
+    expect(svgEmits?.[svgEmits.length - 1]).toEqual(['<svg></svg>'])
+    expect(fileEmits?.[fileEmits.length - 1]).toEqual(['icon.svg'])
+    expect(wrapper.find('.svg-preview').exists()).toBe(true)
+  })
+})
