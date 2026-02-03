@@ -1,14 +1,18 @@
 import { describe, it, expect, afterEach, vi } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { mount, flushPromises } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import CpuCores from './CpuCores.vue'
 import CpuArchitecture from './CpuArchitecture.vue'
+import CpuBitness from './CpuBitness.vue'
 import DeviceMemory from './DeviceMemory.vue'
+import DeviceModel from './DeviceModel.vue'
+import FormFactor from './FormFactor.vue'
 import ConnectionType from './ConnectionType.vue'
 import ConnectionSpeed from './ConnectionSpeed.vue'
 import MaxTouchPoints from './MaxTouchPoints.vue'
 import GpuVendor from './GpuVendor.vue'
 import GpuRenderer from './GpuRenderer.vue'
+import StorageQuota from './StorageQuota.vue'
 
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
@@ -77,11 +81,46 @@ describe('hardware components', () => {
     expect(wrapper.text()).toContain('x86_64')
   })
 
+  it('reports cpu bitness from user agent data', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          platform: 'Windows',
+          brands: [],
+          mobile: false,
+          getHighEntropyValues: async () => ({ bitness: '64' }),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(CpuBitness)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('64-bit')
+  })
+
   it('reports device memory', () => {
     vi.stubGlobal('navigator', createNavigator({ deviceMemory: 8 }))
     const wrapper = mountWithStub(DeviceMemory)
 
     expect(wrapper.text()).toContain('8 GB')
+  })
+
+  it('reports storage quota when available', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        storage: {
+          estimate: async () => ({ quota: 1024 * 1024 * 1024, usage: 1024 }),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(StorageQuota)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('GB')
   })
 
   it('reports connection type', () => {
@@ -103,6 +142,41 @@ describe('hardware components', () => {
     const wrapper = mountWithStub(MaxTouchPoints)
 
     expect(wrapper.text()).toContain('10')
+  })
+
+  it('reports device model from user agent data', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          platform: 'Android',
+          brands: [],
+          mobile: true,
+          getHighEntropyValues: async () => ({ model: 'Pixel' }),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(DeviceModel)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Pixel')
+  })
+
+  it('reports form factor from user agent data', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          getHighEntropyValues: async () => ({ formFactor: 'tablet' }),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(FormFactor)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('tablet')
   })
 
   it('renders the gpu vendor label', () => {

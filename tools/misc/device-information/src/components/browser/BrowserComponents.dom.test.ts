@@ -1,6 +1,7 @@
 import { describe, it, expect, afterEach, vi } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { mount, flushPromises } from '@vue/test-utils'
 import { defineComponent } from 'vue'
+import ArchitectureInfo from './ArchitectureInfo.vue'
 import BrowserName from './BrowserName.vue'
 import PrimaryLanguage from './PrimaryLanguage.vue'
 import BrowserLanguages from './BrowserLanguages.vue'
@@ -73,6 +74,25 @@ describe('browser components', () => {
     const wrapper = mountWithStub(PrimaryLanguage)
 
     expect(wrapper.text()).toContain('fr-CA')
+  })
+
+  it('renders architecture from user agent data', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          platform: 'macOS',
+          brands: [],
+          mobile: false,
+          getHighEntropyValues: async () => ({ architecture: 'arm64' }),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(ArchitectureInfo)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('arm64')
   })
 
   it('renders the supported languages list', () => {
