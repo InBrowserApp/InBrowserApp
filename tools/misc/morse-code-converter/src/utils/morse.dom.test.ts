@@ -1,5 +1,12 @@
-import { describe, it, expect } from 'vitest'
-import { textToMorse, morseToText, isValidMorse, CHAR_TO_MORSE, MORSE_TO_CHAR } from './morse'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import {
+  textToMorse,
+  morseToText,
+  isValidMorse,
+  CHAR_TO_MORSE,
+  MORSE_TO_CHAR,
+  playMorseAudio,
+} from './morse'
 
 describe('CHAR_TO_MORSE and MORSE_TO_CHAR mappings', () => {
   it('has all letters A-Z', () => {
@@ -182,5 +189,71 @@ describe('round-trip conversion', () => {
     for (const morse of testCases) {
       expect(textToMorse(morseToText(morse))).toBe(morse)
     }
+  })
+})
+
+describe('playMorseAudio', () => {
+  class MockAudioContext {
+    static instances: MockAudioContext[] = []
+    currentTime = 0
+    destination = {}
+    close = vi.fn().mockResolvedValue(undefined)
+
+    constructor() {
+      MockAudioContext.instances.push(this)
+    }
+
+    createOscillator() {
+      return {
+        connect: vi.fn(),
+        frequency: { value: 0 },
+        type: 'sine',
+        start: vi.fn(),
+        stop: vi.fn(),
+      }
+    }
+
+    createGain() {
+      return {
+        connect: vi.fn(),
+        gain: {
+          setValueAtTime: vi.fn(),
+          exponentialRampToValueAtTime: vi.fn(),
+        },
+      }
+    }
+  }
+
+  beforeEach(() => {
+    vi.useFakeTimers()
+    vi.stubGlobal('AudioContext', MockAudioContext)
+  })
+
+  afterEach(() => {
+    vi.useRealTimers()
+    vi.unstubAllGlobals()
+    MockAudioContext.instances = []
+  })
+
+  it('invokes onComplete after playback finishes', async () => {
+    const onComplete = vi.fn()
+
+    playMorseAudio('.-', { dotDuration: 1, onComplete })
+
+    await vi.runAllTimersAsync()
+
+    expect(onComplete).toHaveBeenCalledTimes(1)
+  })
+
+  it('stops playback and avoids calling onComplete', async () => {
+    const onComplete = vi.fn()
+
+    const controller = playMorseAudio('... --- ...', { dotDuration: 1, onComplete })
+    controller.stop()
+
+    await vi.runAllTimersAsync()
+
+    expect(onComplete).not.toHaveBeenCalled()
+    expect(MockAudioContext.instances[0]?.close).toHaveBeenCalledTimes(1)
   })
 })

@@ -179,4 +179,30 @@ describe('MorseConverter', () => {
     expect(stopSpy).toHaveBeenCalledTimes(1)
     expect(getActionButton(wrapper, 'play')).toBeTruthy()
   })
+
+  it('returns to play state when audio completes', async () => {
+    let onComplete: (() => void) | undefined
+    const playMock = vi.mocked(playMorseAudio)
+    playMock.mockImplementation((_morse, options) => {
+      onComplete = options?.onComplete
+      return { stop: vi.fn() }
+    })
+
+    const wrapper = mount(MorseConverter, {
+      global: {
+        stubs,
+      },
+    })
+
+    const playButton = getActionButton(wrapper, 'play')
+    expect(playButton).toBeTruthy()
+    await playButton!.trigger('click')
+
+    expect(onComplete).toBeTypeOf('function')
+    onComplete?.()
+    await nextTick()
+
+    expect(getActionButton(wrapper, 'play')).toBeTruthy()
+    expect(getActionButton(wrapper, 'stop')).toBeFalsy()
+  })
 })
