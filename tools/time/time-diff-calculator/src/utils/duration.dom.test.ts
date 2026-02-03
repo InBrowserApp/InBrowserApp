@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   durationPartsToMilliseconds,
+  formatFraction,
   formatDurationLabel,
   formatIsoDuration,
   millisecondsToDurationParts,
@@ -66,10 +67,28 @@ describe('duration formatting', () => {
     )
   })
 
+  it('formats signed durations', () => {
+    expect(
+      formatIsoDuration({ days: 0, hours: 0, minutes: 1, seconds: 0, milliseconds: 0 }, -1),
+    ).toBe('-PT1M')
+  })
+
   it('formats labels consistently', () => {
     expect(
       formatDurationLabel({ days: 1, hours: 2, minutes: 3, seconds: 4, milliseconds: 5 }),
     ).toBe('1d 02:03:04.005')
+  })
+})
+
+describe('formatFraction', () => {
+  it('trims trailing zeros', () => {
+    expect(formatFraction(1, 3)).toBe('1')
+    expect(formatFraction(1.5, 3)).toBe('1.5')
+  })
+
+  it('handles non-finite values', () => {
+    expect(formatFraction(Number.NaN, 2)).toBe('')
+    expect(formatFraction(Number.POSITIVE_INFINITY, 2)).toBe('')
   })
 })
 
