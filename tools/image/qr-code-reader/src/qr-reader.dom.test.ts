@@ -74,6 +74,18 @@ describe('qr-reader', () => {
     expect(readQRFromVideo(video, canvas)).toBe('decoded')
   })
 
+  it('returns null when canvas context is unavailable for video', () => {
+    const video = document.createElement('video')
+    Object.defineProperty(video, 'videoWidth', { value: 120 })
+    Object.defineProperty(video, 'videoHeight', { value: 80 })
+
+    const canvas = document.createElement('canvas')
+    getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null)
+
+    expect(readQRFromVideo(video, canvas)).toBe(null)
+    expect(jsQRMock).not.toHaveBeenCalled()
+  })
+
   it('reads QR data from an image file', async () => {
     class ImmediateImage {
       onload: null | (() => void) = null
@@ -114,6 +126,71 @@ describe('qr-reader', () => {
     await expect(readQRFromFile(file)).resolves.toBe('decoded')
 
     expect(createObjectURL).toHaveBeenCalledWith(file)
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock')
+  })
+
+  it('returns null when canvas context is missing for file scans', async () => {
+    class ImmediateImage {
+      onload: null | (() => void) = null
+      onerror: null | (() => void) = null
+      width = 100
+      height = 80
+
+      set src(_value: string) {
+        this.onload?.()
+      }
+    }
+
+    globalThis.Image = ImmediateImage as typeof Image
+
+    const createObjectURL = vi.fn(() => 'blob:mock')
+    const revokeObjectURL = vi.fn()
+    Object.defineProperty(globalThis.URL, 'createObjectURL', {
+      value: createObjectURL,
+      writable: true,
+    })
+    Object.defineProperty(globalThis.URL, 'revokeObjectURL', {
+      value: revokeObjectURL,
+      writable: true,
+    })
+
+    getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null)
+
+    const file = new File(['data'], 'qr.png', { type: 'image/png' })
+    await expect(readQRFromFile(file)).resolves.toBe(null)
+
+    expect(jsQRMock).not.toHaveBeenCalled()
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock')
+  })
+
+  it('rejects when image fails to load', async () => {
+    class ErrorImage {
+      onload: null | (() => void) = null
+      onerror: null | ((event?: Event) => void) = null
+      width = 100
+      height = 80
+
+      set src(_value: string) {
+        this.onerror?.(new Event('error'))
+      }
+    }
+
+    globalThis.Image = ErrorImage as typeof Image
+
+    const createObjectURL = vi.fn(() => 'blob:mock')
+    const revokeObjectURL = vi.fn()
+    Object.defineProperty(globalThis.URL, 'createObjectURL', {
+      value: createObjectURL,
+      writable: true,
+    })
+    Object.defineProperty(globalThis.URL, 'revokeObjectURL', {
+      value: revokeObjectURL,
+      writable: true,
+    })
+
+    const file = new File(['data'], 'qr.png', { type: 'image/png' })
+    await expect(readQRFromFile(file)).rejects.toThrow('Failed to load image')
+
     expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock')
   })
 })

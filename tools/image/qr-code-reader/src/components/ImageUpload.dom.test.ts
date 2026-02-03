@@ -110,6 +110,26 @@ describe('ImageUpload', () => {
     expect(wrapper.emitted('error')).toEqual([['noQRCodeFound']])
   })
 
+  it('emits errors when image decoding fails', async () => {
+    readQRFromFileMock.mockRejectedValue(new Error('boom'))
+
+    const wrapper = mount(ImageUpload, {
+      props: {
+        file: null,
+      },
+    })
+
+    const file = new File(['data'], 'qr.png', { type: 'image/png' })
+    wrapper.findComponent({ name: 'NUpload' }).vm.$emit('before-upload', {
+      file: { file },
+      fileList: [],
+    })
+
+    await flushPromises()
+
+    expect(wrapper.emitted('error')).toEqual([['failedToReadImage']])
+  })
+
   it('clears file and errors when uploading another image', async () => {
     readQRFromFileMock.mockResolvedValue('decoded')
 

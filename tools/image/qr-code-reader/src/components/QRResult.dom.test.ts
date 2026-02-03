@@ -62,57 +62,57 @@ const CopyToClipboardButtonStub = defineComponent({
   template: '<button class="copy">copy</button>',
 })
 
+const globalStubs = {
+  ToolSection: ToolSectionStub,
+  ToolSectionHeader: ToolSectionHeaderStub,
+  NAlert: NAlertStub,
+  NFlex: NFlexStub,
+  NCard: NCardStub,
+  NText: NTextStub,
+  NTag: NTagStub,
+  NButton: NButtonStub,
+  CopyToClipboardButton: CopyToClipboardButtonStub,
+}
+
+const mountResult = (props: { result: string | null; error: string | null }) =>
+  mount(QRResult, {
+    props,
+    global: {
+      stubs: globalStubs,
+    },
+  })
+
 describe('QRResult', () => {
   it('renders an error alert when no result is available', () => {
-    const wrapper = mount(QRResult, {
-      props: {
-        result: null,
-        error: 'No QR code',
-      },
-      global: {
-        stubs: {
-          ToolSection: ToolSectionStub,
-          ToolSectionHeader: ToolSectionHeaderStub,
-          NAlert: NAlertStub,
-          NFlex: NFlexStub,
-          NCard: NCardStub,
-          NText: NTextStub,
-          NTag: NTagStub,
-          NButton: NButtonStub,
-          CopyToClipboardButton: CopyToClipboardButtonStub,
-        },
-      },
-    })
+    const wrapper = mountResult({ result: null, error: 'No QR code' })
 
     expect(wrapper.find('.n-alert').exists()).toBe(true)
     expect(wrapper.text()).toContain('No QR code')
   })
 
   it('identifies URL results and shows a link', () => {
-    const wrapper = mount(QRResult, {
-      props: {
-        result: 'https://example.com',
-        error: null,
-      },
-      global: {
-        stubs: {
-          ToolSection: ToolSectionStub,
-          ToolSectionHeader: ToolSectionHeaderStub,
-          NAlert: NAlertStub,
-          NFlex: NFlexStub,
-          NCard: NCardStub,
-          NText: NTextStub,
-          NTag: NTagStub,
-          NButton: NButtonStub,
-          CopyToClipboardButton: CopyToClipboardButtonStub,
-        },
-      },
-    })
+    const wrapper = mountResult({ result: 'https://example.com', error: null })
 
     const tag = wrapper.find('.n-tag')
     expect(tag.text()).toBe('URL')
     const link = wrapper.find('a.n-button')
     expect(link.exists()).toBe(true)
     expect(link.attributes('href')).toBe('https://example.com')
+  })
+
+  it.each([
+    { result: 'mailto:test@example.com', label: 'Email', link: true },
+    { result: 'tel:+1234567890', label: 'phone', link: true },
+    { result: 'sms:+1234567890', label: 'SMS', link: true },
+    { result: 'WIFI:S:MyNetwork;T:WPA;P:secret;;', label: 'WiFi', link: false },
+    { result: 'BEGIN:VCARD\nFN:Jane Doe', label: 'vCard', link: false },
+    { result: 'BEGIN:VCALENDAR\nSUMMARY:Event', label: 'calendar', link: false },
+    { result: 'geo:37.7749,-122.4194', label: 'location', link: true },
+    { result: 'Just some text', label: 'text', link: false },
+  ])('labels %s correctly', ({ result, label, link }) => {
+    const wrapper = mountResult({ result, error: null })
+
+    expect(wrapper.find('.n-tag').text()).toBe(label)
+    expect(wrapper.find('a.n-button').exists()).toBe(link)
   })
 })
