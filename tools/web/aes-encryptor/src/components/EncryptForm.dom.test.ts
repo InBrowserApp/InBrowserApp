@@ -99,12 +99,14 @@ const TextOrFileInputStub = defineComponent({
 const KeyInputStub = defineComponent({
   name: 'KeyInput',
   props: ['keyType', 'password', 'rawKey', 'keyLength'],
+  emits: ['update:key-type', 'update:password', 'update:raw-key'],
   template: '<div class="key-input" />',
 })
 
 const EncryptOptionsStub = defineComponent({
   name: 'EncryptOptions',
   props: ['outputMode', 'mode', 'keyLength', 'outputFormat', 'keyType'],
+  emits: ['update:output-mode', 'update:mode', 'update:key-length', 'update:output-format'],
   template: '<div class="encrypt-options" />',
 })
 
@@ -120,6 +122,14 @@ const AdvancedOptionsStub = defineComponent({
     'manualSalt',
     'ivMode',
     'manualIv',
+  ],
+  emits: [
+    'update:pbkdf2-iterations',
+    'update:pbkdf2-hash',
+    'update:salt-mode',
+    'update:manual-salt',
+    'update:iv-mode',
+    'update:manual-iv',
   ],
   template: '<div class="advanced-options" />',
 })
@@ -205,6 +215,28 @@ describe('EncryptForm', () => {
     expect(result.attributes('data-iv')).toBe('embeddedInJwe')
   })
 
+  it('encrypts JWE with a raw key', async () => {
+    aesMocks.encryptJweWithRawKey.mockResolvedValue('jwe-raw')
+
+    storage.set('tools:aes-encryptor:keyType', ref('raw'))
+    storage.set('tools:aes-encryptor:rawKey', ref('a'.repeat(32)))
+    storage.set('tools:aes-encryptor:mode', ref('GCM'))
+    storage.set('tools:aes-encryptor:keyLength', ref(128))
+    storage.set('tools:aes-encryptor:outputMode', ref('jwe'))
+
+    const wrapper = mountForm()
+    wrapper.findComponent(TextOrFileInputStub).vm.$emit('update:value', 'hello')
+    await nextTick()
+
+    await wrapper.find('button.n-button').trigger('click')
+    await flushPromises()
+
+    expect(aesMocks.encryptJweWithRawKey).toHaveBeenCalledWith('hello', 'a'.repeat(32), 'GCM', 128)
+
+    const result = wrapper.find('.encrypt-result')
+    expect(result.attributes('data-result')).toBe('jwe-raw')
+  })
+
   it('encrypts raw output with password and manual salt/iv', async () => {
     aesMocks.encryptWithPassword.mockResolvedValue({
       output: 'out',
@@ -232,10 +264,10 @@ describe('EncryptForm', () => {
     await nextTick()
 
     const advanced = wrapper.findComponent(AdvancedOptionsStub)
-    advanced.vm.$emit('update:saltMode', 'manual')
-    advanced.vm.$emit('update:manualSalt', '0f0f')
-    advanced.vm.$emit('update:ivMode', 'manual')
-    advanced.vm.$emit('update:manualIv', '0102')
+    advanced.vm.$emit('update:salt-mode', 'manual')
+    advanced.vm.$emit('update:manual-salt', '0f0f')
+    advanced.vm.$emit('update:iv-mode', 'manual')
+    advanced.vm.$emit('update:manual-iv', '0102')
     await nextTick()
 
     await wrapper.find('button.n-button').trigger('click')
@@ -316,5 +348,74 @@ describe('EncryptForm', () => {
 
     const result = wrapper.find('.encrypt-result')
     expect(result.attributes('data-error')).toBe('boom')
+  })
+
+  it('updates state when child components emit changes', async () => {
+    const wrapper = mountForm()
+
+    const keyType = storage.get('tools:aes-encryptor:keyType') as Ref<string>
+    const password = storage.get('tools:aes-encryptor:password') as Ref<string>
+    const rawKey = storage.get('tools:aes-encryptor:rawKey') as Ref<string>
+    const outputMode = storage.get('tools:aes-encryptor:outputMode') as Ref<string>
+    const mode = storage.get('tools:aes-encryptor:mode') as Ref<string>
+    const keyLength = storage.get('tools:aes-encryptor:keyLength') as Ref<number>
+    const outputFormat = storage.get('tools:aes-encryptor:outputFormat') as Ref<string>
+    const pbkdf2Iterations = storage.get('tools:aes-encryptor:pbkdf2Iterations') as Ref<number>
+    const pbkdf2Hash = storage.get('tools:aes-encryptor:pbkdf2Hash') as Ref<string>
+
+    wrapper.findComponent(KeyInputStub).vm.$emit('update:key-type', 'raw')
+    wrapper.findComponent(KeyInputStub).vm.$emit('update:password', 'next')
+    wrapper.findComponent(KeyInputStub).vm.$emit('update:raw-key', 'abcd')
+
+    wrapper.findComponent(EncryptOptionsStub).vm.$emit('update:output-mode', 'raw')
+    wrapper.findComponent(EncryptOptionsStub).vm.$emit('update:mode', 'CTR')
+    wrapper.findComponent(EncryptOptionsStub).vm.$emit('update:key-length', 128)
+    wrapper.findComponent(EncryptOptionsStub).vm.$emit('update:output-format', 'hex')
+
+    const advanced = wrapper.findComponent(AdvancedOptionsStub)
+    advanced.vm.$emit('update:pbkdf2-iterations', 12345)
+    advanced.vm.$emit('update:pbkdf2-hash', 'SHA-512')
+    advanced.vm.$emit('update:salt-mode', 'manual')
+    advanced.vm.$emit('update:manual-salt', '0f0f')
+    advanced.vm.$emit('update:iv-mode', 'manual')
+    advanced.vm.$emit('update:manual-iv', '0102')
+
+    await nextTick()
+
+    expect(keyType.value).toBe('raw')
+    expect(password.value).toBe('next')
+    expect(rawKey.value).toBe('abcd')
+    expect(outputMode.value).toBe('raw')
+    expect(mode.value).toBe('CTR')
+    expect(keyLength.value).toBe(128)
+    expect(outputFormat.value).toBe('hex')
+    expect(pbkdf2Iterations.value).toBe(12345)
+    expect(pbkdf2Hash.value).toBe('SHA-512')
+  })
+
+  it('disables encrypt when raw key is missing or invalid', async () => {
+    storage.set('tools:aes-encryptor:keyType', ref('raw'))
+    storage.set('tools:aes-encryptor:rawKey', ref(''))
+    storage.set('tools:aes-encryptor:keyLength', ref(128))
+
+    const wrapper = mountForm()
+    wrapper.findComponent(TextOrFileInputStub).vm.$emit('update:value', 'data')
+    await nextTick()
+
+    const button = () => wrapper.find('button.n-button')
+    expect(button().attributes('disabled')).toBeDefined()
+
+    aesMocks.isValidHex.mockReturnValue(false)
+    const rawKeyRef = storage.get('tools:aes-encryptor:rawKey') as Ref<string>
+    rawKeyRef.value = 'zz'
+    await nextTick()
+
+    expect(button().attributes('disabled')).toBeDefined()
+
+    aesMocks.isValidHex.mockReturnValue(true)
+    rawKeyRef.value = 'aa'
+    await nextTick()
+
+    expect(button().attributes('disabled')).toBeDefined()
   })
 })

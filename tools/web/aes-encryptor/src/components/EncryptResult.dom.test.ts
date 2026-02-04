@@ -7,7 +7,12 @@ let urlIndex = 0
 const urls = ['blob:binary', 'blob:base64', 'blob:hex', 'blob:jwe']
 
 vi.mock('@vueuse/core', () => ({
-  useObjectUrl: () => ref(urls[urlIndex++] ?? 'blob:url'),
+  useObjectUrl: (source?: { value?: unknown }) => {
+    if (source && typeof source === 'object' && 'value' in source) {
+      void source.value
+    }
+    return ref(urls[urlIndex++] ?? 'blob:url')
+  },
 }))
 
 vi.mock('vue-i18n', async () => {
@@ -120,6 +125,25 @@ describe('EncryptResult', () => {
     expect(downloadLinks).toHaveLength(3)
     expect(wrapper.text()).toContain('aa')
     expect(wrapper.text()).toContain('bb')
+  })
+
+  it('renders base64 and hex links when binary output is missing', () => {
+    const wrapper = mount(EncryptResult, {
+      props: {
+        result: 'AQID',
+        error: '',
+        salt: '',
+        iv: '',
+        binary: null,
+        outputMode: 'raw',
+        outputFormat: 'base64',
+      },
+    })
+
+    const downloadLinks = wrapper.findAll('[data-download]')
+    expect(downloadLinks).toHaveLength(2)
+    expect(wrapper.text()).toContain('Base64')
+    expect(wrapper.text()).toContain('Hex')
   })
 
   it('renders a single JWE download link', () => {

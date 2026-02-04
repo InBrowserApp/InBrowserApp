@@ -37,8 +37,14 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div class="n-select" :data-disabled="disabled" />',
   })
+  const NRadioGroup = defineComponent({
+    name: 'NRadioGroup',
+    emits: ['update:value'],
+    template: '<div class="n-radio-group" />',
+  })
   const NInput = defineComponent({
     name: 'NInput',
+    emits: ['update:value'],
     template: '<input class="n-input" />',
   })
   const NText = defineComponent({
@@ -52,7 +58,7 @@ vi.mock('naive-ui', async () => {
     NCollapseItem: Base,
     NInputNumber,
     NSelect,
-    NRadioGroup: Base,
+    NRadioGroup,
     NRadio: Base,
     NInput,
     NSpace: Base,
@@ -145,5 +151,53 @@ describe('AdvancedOptions', () => {
     const select = wrapper.findComponent({ name: 'NSelect' })
     expect(select.attributes('data-disabled')).toBe('true')
     expect(wrapper.text()).toContain('jweHashNote')
+  })
+
+  it('emits hash and manual option updates', async () => {
+    const onUpdateHash = vi.fn()
+    const onUpdateSaltMode = vi.fn()
+    const onUpdateManualSalt = vi.fn()
+    const onUpdateIvMode = vi.fn()
+    const onUpdateManualIv = vi.fn()
+
+    const wrapper = mount(AdvancedOptions, {
+      props: {
+        keyType: 'password',
+        outputMode: 'raw',
+        ivLength: 16,
+        pbkdf2Iterations: 15000,
+        pbkdf2Hash: 'SHA-256',
+        saltMode: 'auto',
+        manualSalt: '',
+        ivMode: 'auto',
+        manualIv: '',
+        'onUpdate:pbkdf2Iterations': () => {},
+        'onUpdate:pbkdf2Hash': onUpdateHash,
+        'onUpdate:saltMode': onUpdateSaltMode,
+        'onUpdate:manualSalt': onUpdateManualSalt,
+        'onUpdate:ivMode': onUpdateIvMode,
+        'onUpdate:manualIv': onUpdateManualIv,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NSelect' }).vm.$emit('update:value', 'SHA-512')
+    expect(onUpdateHash).toHaveBeenCalledWith('SHA-512')
+
+    const radioGroups = wrapper.findAllComponents({ name: 'NRadioGroup' })
+    radioGroups[0]?.vm.$emit('update:value', 'manual')
+    radioGroups[1]?.vm.$emit('update:value', 'manual')
+
+    expect(onUpdateSaltMode).toHaveBeenCalledWith('manual')
+    expect(onUpdateIvMode).toHaveBeenCalledWith('manual')
+
+    await wrapper.setProps({ saltMode: 'manual', ivMode: 'manual' })
+    await nextTick()
+
+    const inputs = wrapper.findAllComponents({ name: 'NInput' })
+    inputs[0]?.vm.$emit('update:value', 'aabb')
+    inputs[1]?.vm.$emit('update:value', '0102')
+
+    expect(onUpdateManualSalt).toHaveBeenCalledWith('aabb')
+    expect(onUpdateManualIv).toHaveBeenCalledWith('0102')
   })
 })

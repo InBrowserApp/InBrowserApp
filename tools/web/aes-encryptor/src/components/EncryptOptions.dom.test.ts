@@ -94,4 +94,38 @@ describe('EncryptOptions', () => {
     const cbcRadio = wrapper.find('.n-radio[data-value="CBC"]')
     expect(cbcRadio.attributes('data-disabled')).toBe('true')
   })
+
+  it('emits updates from radio groups', () => {
+    const onUpdateOutputMode = vi.fn()
+    const onUpdateMode = vi.fn()
+    const onUpdateKeyLength = vi.fn()
+    const onUpdateOutputFormat = vi.fn()
+
+    const wrapper = mount(EncryptOptions, {
+      props: {
+        keyType: 'password',
+        outputMode: 'raw',
+        mode: 'GCM',
+        keyLength: 256,
+        outputFormat: 'base64',
+        'onUpdate:outputMode': onUpdateOutputMode,
+        'onUpdate:mode': onUpdateMode,
+        'onUpdate:keyLength': onUpdateKeyLength,
+        'onUpdate:outputFormat': onUpdateOutputFormat,
+      },
+    })
+
+    const groups = wrapper.findAllComponents({ name: 'NRadioGroup' })
+    expect(groups).toHaveLength(4)
+
+    groups[0]?.vm.$emit('update:value', 'jwe')
+    groups[1]?.vm.$emit('update:value', 'CBC')
+    groups[2]?.vm.$emit('update:value', 192)
+    groups[3]?.vm.$emit('update:value', 'hex')
+
+    expect(onUpdateOutputMode).toHaveBeenCalledWith('jwe')
+    expect(onUpdateMode).toHaveBeenCalledWith('CBC')
+    expect(onUpdateKeyLength).toHaveBeenCalledWith(192)
+    expect(onUpdateOutputFormat).toHaveBeenCalledWith('hex')
+  })
 })
