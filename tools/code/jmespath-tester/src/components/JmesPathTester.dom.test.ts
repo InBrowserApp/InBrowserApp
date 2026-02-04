@@ -152,6 +152,42 @@ describe('JmesPathTester', () => {
     expect(getOutputCode(wrapper)).toContain('null')
   })
 
+  it('shows the empty state when JSON is cleared', async () => {
+    const wrapper = mount(TestWrapper)
+    const jsonInput = getTextarea(wrapper, 0)
+
+    await jsonInput.setValue(' ')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Enter JSON and a JMESPath expression to see results')
+    expect(wrapper.text()).not.toContain('Invalid JSON')
+  })
+
+  it('treats a trimmed query as empty after parsing', async () => {
+    const originalTrim = String.prototype.trim
+    let calls = 0
+
+    String.prototype.trim = function () {
+      if (this.valueOf() === 'toggle-trim') {
+        calls += 1
+        return calls === 1 ? 'value' : ''
+      }
+      return originalTrim.call(this)
+    }
+
+    try {
+      const wrapper = mount(TestWrapper)
+      const queryInput = getTextarea(wrapper, 1)
+
+      await queryInput.setValue('toggle-trim')
+      await flushPromises()
+
+      expect(wrapper.text()).toContain('Enter JSON and a JMESPath expression to see results')
+    } finally {
+      String.prototype.trim = originalTrim
+    }
+  })
+
   it('imports JSON from a file selection', async () => {
     fileOpenMock.mockResolvedValue({
       text: async () => '{"active":false}',
