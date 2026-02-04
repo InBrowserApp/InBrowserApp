@@ -155,6 +155,33 @@ describe('ExifViewerView', () => {
     expect(empty.text()).toContain('noExifData')
   })
 
+  it('clears data when preview emits clear', async () => {
+    const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
+    exifrMocks.parse.mockResolvedValue({ Make: 'Canon' })
+
+    const wrapper = mount(ExifViewerView, {
+      global: {
+        stubs: globalStubs,
+      },
+    })
+
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:file', file)
+    await nextTick()
+    await flushPromises()
+    await nextTick()
+
+    expect(wrapper.findComponent(ImagePreviewStub).exists()).toBe(true)
+    expect(wrapper.findComponent(ExifDataDisplayStub).exists()).toBe(true)
+
+    wrapper.findComponent(ImagePreviewStub).vm.$emit('clear')
+    await nextTick()
+
+    expect(wrapper.findComponent(ImagePreviewStub).exists()).toBe(false)
+    expect(wrapper.findComponent(ExifDataDisplayStub).exists()).toBe(false)
+    expect(wrapper.findComponent(ExifActionsStub).exists()).toBe(false)
+    expect(wrapper.find('.n-empty').exists()).toBe(false)
+  })
+
   it('shows error alert when parsing fails', async () => {
     const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
     exifrMocks.parse.mockRejectedValue(new Error('boom'))
