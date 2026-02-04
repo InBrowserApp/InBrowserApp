@@ -15,11 +15,15 @@ const CopyToClipboardButtonStub = {
 }
 
 describe('ColorPickerView', () => {
-  it('exposes tool metadata and routes', () => {
+  it('exposes tool metadata and routes', async () => {
     expect(info.toolID).toBe('color-picker')
     expect(info.path).toBe('/tools/color-picker')
     expect(toolInfo.toolID).toBe(info.toolID)
     expect(routes[0]?.path).toBe(info.path)
+
+    const componentLoader = routes[0]?.component as () => Promise<{ default: unknown }>
+    const loadedRoute = await componentLoader()
+    expect(loadedRoute).toHaveProperty('default')
   })
 
   it('renders the color picker tool', () => {
