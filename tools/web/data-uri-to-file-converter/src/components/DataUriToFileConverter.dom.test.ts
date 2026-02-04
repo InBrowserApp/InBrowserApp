@@ -48,4 +48,14 @@ describe('DataUriToFileConverter', () => {
 
     expect(input.element.value).toBe('notes.txt')
   })
+
+  it('shows an error message for invalid data', async () => {
+    const wrapper = mount(DataUriToFileConverter)
+    const textarea = wrapper.find('textarea')
+
+    await textarea.setValue('not-a-data-uri')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Invalid Data URI')
+  })
 })
