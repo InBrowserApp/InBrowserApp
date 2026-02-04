@@ -20,6 +20,10 @@ describe('timecode encoders', () => {
     const startBit = getStationSignal('dcf77', new Date(Date.UTC(2024, 0, 1, 0, 0, 20)))
     expect(startBit.symbol).toBe('1')
     expect(startBit.windows[0]).toEqual({ start: 0, end: 0.2 })
+
+    const zeroBit = getStationSignal('dcf77', new Date(Date.UTC(2024, 0, 1, 0, 0, 0)))
+    expect(zeroBit.symbol).toBe('0')
+    expect(zeroBit.windows[0]).toEqual({ start: 0, end: 0.1 })
   })
 
   it('encodes WWVB markers and zeros', () => {
@@ -30,6 +34,10 @@ describe('timecode encoders', () => {
     const zeroBit = getStationSignal('wwvb', new Date(Date.UTC(2024, 0, 1, 0, 0, 4)))
     expect(zeroBit.symbol).toBe('0')
     expect(zeroBit.windows[0]).toEqual({ start: 0, end: 0.2 })
+
+    const oneBit = getStationSignal('wwvb', new Date(Date.UTC(2024, 0, 1, 0, 1, 8)))
+    expect(oneBit.symbol).toBe('1')
+    expect(oneBit.windows[0]).toEqual({ start: 0, end: 0.5 })
   })
 
   it('encodes MSF minute marker and data bits', () => {
@@ -52,5 +60,10 @@ describe('timecode encoders', () => {
 
     const frameMarker2 = getStationSignal('bpc', new Date(Date.UTC(2024, 0, 1, 0, 0, 21)))
     expect(frameMarker2.windows[0]).toEqual({ start: 0, end: 0.2 })
+  })
+
+  it('returns a placeholder for unknown stations', () => {
+    const fallback = getStationSignal('unknown' as never, new Date())
+    expect(fallback).toEqual({ windows: [], symbol: '-' })
   })
 })
