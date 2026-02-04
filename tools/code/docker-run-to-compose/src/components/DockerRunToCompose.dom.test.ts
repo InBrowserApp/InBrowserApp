@@ -15,7 +15,10 @@ vi.mock('@vueuse/core', async () => {
       }
       return storage.get(key)!
     },
-    useObjectUrl: () => ref('blob:download'),
+    useObjectUrl: (source: { value: unknown }) => {
+      void source.value
+      return ref('blob:download')
+    },
   }
 })
 
@@ -81,7 +84,8 @@ vi.mock('naive-ui', async () => {
           default: undefined,
         },
       },
-      template: '<component :is="tag || \'button\'" v-bind="$attrs"><slot /></component>',
+      template:
+        '<component :is="tag || \'button\'" v-bind="$attrs"><span data-slot="icon"><slot name="icon" /></span><slot /></component>',
     }),
     NCard: defineComponent({
       name: 'NCard',
@@ -175,5 +179,15 @@ describe('DockerRunToCompose', () => {
     await nextTick()
 
     expect(storage.get(storageKey)?.value).toBe('')
+  })
+
+  it('updates output when input changes', async () => {
+    const wrapper = mount(DockerRunToCompose)
+
+    await wrapper.get('textarea').setValue('warn')
+    await nextTick()
+
+    expect(wrapper.find('[data-alert-type="warning"]').exists()).toBe(true)
+    expect(wrapper.get('[data-testid="output-code"]').text()).toContain('warned output')
   })
 })

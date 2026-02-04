@@ -34,6 +34,14 @@ describe('docker run input helpers', () => {
     ])
   })
 
+  it('supports escaped characters and trailing backslashes', () => {
+    const escaped = tokenize('docker run hello\\ world')
+    expect(escaped.tokens.map((token) => token.value)).toEqual(['docker', 'run', 'hello world'])
+
+    const trailing = tokenize('docker run foo\\\\')
+    expect(trailing.tokens.map((token) => token.value)).toEqual(['docker', 'run', 'foo\\'])
+  })
+
   it('returns an error for unclosed quotes', () => {
     const result = tokenize('docker run "nginx')
 

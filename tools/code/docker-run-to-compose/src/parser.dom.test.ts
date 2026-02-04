@@ -50,4 +50,11 @@ describe('docker run parser', () => {
     expect(result.error).toBe('Skipped a docker run command without an image.')
     expect(result.warnings).toContain('Found "--" without an image after it.')
   })
+
+  it('skips empty tokens and reports missing images after separators', () => {
+    const result = parseDockerRunTokens(['docker', 'run', '', '--', '', 'echo'])
+
+    expect(result.error).toBe('Skipped a docker run command without an image.')
+    expect(result.warnings).toContain('Found "--" without an image after it.')
+  })
 })

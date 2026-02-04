@@ -30,6 +30,31 @@ describe('docker-run-to-compose', () => {
     expect(result.output).toContain('redis:')
   })
 
+  it('adds top-level networks and volumes when named resources are used', () => {
+    const result = convertDockerRunToCompose(
+      'docker run --name api --network appnet -v data-volume:/var/lib/data nginx:latest',
+    )
+
+    expect(result.output).toContain('networks:')
+    expect(result.output).toContain('appnet:')
+    expect(result.output).toContain('volumes:')
+    expect(result.output).toContain('data-volume:')
+  })
+
+  it('collects warnings for shell operators and invalid tokens', () => {
+    const splitResult = convertDockerRunToCompose(
+      'docker run nginx:latest && docker run redis:7-alpine',
+    )
+
+    expect(splitResult.warnings.join(' ')).toContain('Found shell operators')
+    expect(splitResult.output).toContain('nginx:')
+    expect(splitResult.output).toContain('redis:')
+
+    const errorResult = convertDockerRunToCompose('docker run \"nginx')
+    expect(errorResult.warnings).toContain('Unclosed quote detected in docker run input.')
+    expect(errorResult.error).toBe('No valid docker run commands found.')
+  })
+
   it('returns an error when no docker run command is found', () => {
     const result = convertDockerRunToCompose('echo "hello"')
 

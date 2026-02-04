@@ -73,8 +73,33 @@ describe('docker run short options', () => {
     const data = createParsedRun()
     const warnings: string[] = []
 
-    parseShortOptions(['-e'], 0, data, warnings)
+    const missingFlags: Array<[string, string]> = [
+      ['-p', 'Missing value for -p.'],
+      ['-e', 'Missing value for -e.'],
+      ['-v', 'Missing value for -v.'],
+      ['-w', 'Missing value for -w.'],
+      ['-u', 'Missing value for -u.'],
+      ['-m', 'Missing value for -m.'],
+    ]
 
-    expect(warnings).toContain('Missing value for -e.')
+    for (const [flag] of missingFlags) {
+      parseShortOptions([flag], 0, data, warnings)
+    }
+
+    for (const [, message] of missingFlags) {
+      expect(warnings).toContain(message)
+    }
+  })
+
+  it('handles single flags and empty tokens', () => {
+    const data = createParsedRun()
+    const warnings: string[] = []
+
+    parseShortOptions([''], 0, data, warnings)
+    parseShortOptions(['-i'], 0, data, warnings)
+    parseShortOptions(['-x'], 0, data, warnings)
+
+    expect(data.stdinOpen).toBe(true)
+    expect(warnings).toContain('Unsupported short flag -x was ignored.')
   })
 })

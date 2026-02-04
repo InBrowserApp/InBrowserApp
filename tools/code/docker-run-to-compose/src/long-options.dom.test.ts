@@ -162,10 +162,72 @@ describe('docker run long options', () => {
     const data = createParsedRun()
     const warnings: string[] = []
 
-    parseLongOption(['--name'], 0, data, warnings)
-    parseLongOption(['--env'], 0, data, warnings)
+    const missingFlags: Array<[string, string]> = [
+      ['--name', 'Missing value for --name.'],
+      ['--publish', 'Missing value for --publish.'],
+      ['--env', 'Missing value for --env.'],
+      ['--env-file', 'Missing value for --env-file.'],
+      ['--volume', 'Missing value for --volume.'],
+      ['--mount', 'Missing value for --mount.'],
+      ['--network', 'Missing value for --network.'],
+      ['--net', 'Missing value for --net.'],
+      ['--restart', 'Missing value for --restart.'],
+      ['--entrypoint', 'Missing value for --entrypoint.'],
+      ['--workdir', 'Missing value for --workdir.'],
+      ['--user', 'Missing value for --user.'],
+      ['--hostname', 'Missing value for --hostname.'],
+      ['--add-host', 'Missing value for --add-host.'],
+      ['--label', 'Missing value for --label.'],
+      ['--cap-add', 'Missing value for --cap-add.'],
+      ['--cap-drop', 'Missing value for --cap-drop.'],
+      ['--dns', 'Missing value for --dns.'],
+      ['--dns-search', 'Missing value for --dns-search.'],
+      ['--device', 'Missing value for --device.'],
+      ['--security-opt', 'Missing value for --security-opt.'],
+      ['--sysctl', 'Missing value for --sysctl.'],
+      ['--log-driver', 'Missing value for --log-driver.'],
+      ['--log-opt', 'Missing value for --log-opt.'],
+      ['--health-cmd', 'Missing value for --health-cmd.'],
+      ['--health-interval', 'Missing value for --health-interval.'],
+      ['--health-timeout', 'Missing value for --health-timeout.'],
+      ['--health-retries', 'Missing value for --health-retries.'],
+      ['--health-start-period', 'Missing value for --health-start-period.'],
+      ['--platform', 'Missing value for --platform.'],
+      ['--ipc', 'Missing value for --ipc.'],
+      ['--pid', 'Missing value for --pid.'],
+      ['--shm-size', 'Missing value for --shm-size.'],
+      ['--gpus', 'Missing value for --gpus.'],
+      ['--cpus', 'Missing value for --cpus.'],
+      ['--cpuset-cpus', 'Missing value for --cpuset-cpus.'],
+      ['--memory', 'Missing value for --memory.'],
+      ['--memory-swap', 'Missing value for --memory-swap.'],
+      ['--expose', 'Missing value for --expose.'],
+      ['--link', 'Missing value for --link.'],
+      ['--tmpfs', 'Missing value for --tmpfs.'],
+      ['--ulimit', 'Missing value for --ulimit.'],
+    ]
 
-    expect(warnings).toContain('Missing value for --name.')
-    expect(warnings).toContain('Missing value for --env.')
+    for (const [flag] of missingFlags) {
+      parseLongOption([flag], 0, data, warnings)
+    }
+
+    for (const [, message] of missingFlags) {
+      expect(warnings).toContain(message)
+    }
+  })
+
+  it('handles inline values and unsupported flags', () => {
+    const data = createParsedRun()
+    const warnings: string[] = []
+
+    parseLongOption([''], 0, data, warnings)
+    parseLongOption(['--name=api'], 0, data, warnings)
+    parseLongOption(['--publish=8080:80'], 0, data, warnings)
+    parseLongOption(['--unsupported=1'], 0, data, warnings)
+    parseLongOption(['--unsupported'], 0, data, warnings)
+
+    expect(data.name).toBe('api')
+    expect(data.ports).toEqual(['8080:80'])
+    expect(warnings).toContain('Unsupported flag --unsupported was ignored.')
   })
 })
