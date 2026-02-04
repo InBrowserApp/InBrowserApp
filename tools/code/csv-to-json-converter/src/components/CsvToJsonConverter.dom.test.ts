@@ -175,6 +175,54 @@ describe('CsvToJsonConverter', () => {
     expect(row.age).toBe(42)
   })
 
+  it('syncs settings updates from child components', async () => {
+    localStorage.setItem('csv2json:showSettings', 'true')
+
+    const wrapper = mountWrapper()
+    await flushPromises()
+
+    const basics = wrapper.findComponent(CsvToJsonSettingsBasics)
+    const advanced = wrapper.findComponent(CsvToJsonSettingsAdvanced)
+    expect(basics.exists()).toBe(true)
+    expect(advanced.exists()).toBe(true)
+
+    await basics.vm.$emit('update:quote', "'")
+    await basics.vm.$emit('update:trim', false)
+    await basics.vm.$emit('update:checkType', true)
+    await basics.vm.$emit('update:skipEmpty', 'true')
+    await basics.vm.$emit('update:escapeChar', '\\')
+    await basics.vm.$emit('update:newline', '\n')
+
+    await advanced.vm.$emit('update:preview', 1)
+    await advanced.vm.$emit('update:comments', '#')
+    await advanced.vm.$emit('update:fastMode', true)
+    await advanced.vm.$emit('update:skipFirstNLines', 0)
+    await advanced.vm.$emit('update:delimitersToGuessText', '\\t,|')
+    await advanced.vm.$emit('update:includeColumns', 'a|b')
+    await advanced.vm.$emit('update:ignoreColumns', 'b')
+    await advanced.vm.$emit('update:spaces', 0)
+
+    await flushPromises()
+
+    expect(localStorage.getItem('csv2json:quote')).toBe("'")
+    expect(localStorage.getItem('csv2json:trim')).toBe('false')
+    expect(localStorage.getItem('csv2json:checkType')).toBe('true')
+    expect(localStorage.getItem('csv2json:skipEmpty')).toBe('true')
+    expect(localStorage.getItem('csv2json:escapeChar')).toBe('\\')
+    expect(localStorage.getItem('csv2json:newline')).toBe('\n')
+    expect(localStorage.getItem('csv2json:preview')).toBe('1')
+    expect(localStorage.getItem('csv2json:comments')).toBe('#')
+    expect(localStorage.getItem('csv2json:fastMode')).toBe('true')
+    expect(localStorage.getItem('csv2json:skipFirstNLines')).toBe('0')
+    expect(localStorage.getItem('csv2json:delimitersToGuess')).toBe('\\t,|')
+    expect(localStorage.getItem('csv2json:includeColumns')).toBe('a|b')
+    expect(localStorage.getItem('csv2json:ignoreColumns')).toBe('b')
+    expect(localStorage.getItem('csv2json:spaces')).toBe('0')
+
+    const parsed = parseRenderedJson(wrapper)
+    expect(parsed).toHaveLength(1)
+  })
+
   it('imports CSV from a file selection', async () => {
     fileOpenMock.mockResolvedValue({
       text: async () => 'name,age\nJane,30',
