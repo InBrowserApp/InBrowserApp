@@ -112,38 +112,48 @@ describe('DecodeResult', () => {
 })
 
 describe('VersionDisplay', () => {
-  it('shows version labels and handles unknowns', () => {
-    const wrapper = mount(VersionDisplay, {
-      props: {
-        version: 4,
-      },
+  it('shows known version labels', () => {
+    const versions = [0, 1, 2, 3, 4, 5, 6, 7, 15]
+    versions.forEach((version) => {
+      const wrapper = mount(VersionDisplay, {
+        props: {
+          version,
+        },
+      })
+      expect(wrapper.text()).toContain(`version-${version}`)
     })
-    expect(wrapper.text()).toContain('version-4')
+  })
 
-    const unknownWrapper = mount(VersionDisplay, {
+  it('handles unknown versions', () => {
+    const wrapper = mount(VersionDisplay, {
       props: {
         version: 99,
       },
     })
-    expect(unknownWrapper.text()).toBe('')
+    expect(wrapper.text()).toBe('')
   })
 })
 
 describe('VariantDisplay', () => {
-  it('shows variant labels and handles unknowns', () => {
-    const wrapper = mount(VariantDisplay, {
-      props: {
-        variant: 2,
-      },
+  it('shows known variant labels', () => {
+    const variants = [0, 1, 2, 3]
+    variants.forEach((variant) => {
+      const wrapper = mount(VariantDisplay, {
+        props: {
+          variant,
+        },
+      })
+      expect(wrapper.text()).toContain(`variant-${variant}`)
     })
-    expect(wrapper.text()).toContain('variant-2')
+  })
 
-    const unknownWrapper = mount(VariantDisplay, {
+  it('handles unknown variants', () => {
+    const wrapper = mount(VariantDisplay, {
       props: {
         variant: 9,
       },
     })
-    expect(unknownWrapper.text()).toBe('')
+    expect(wrapper.text()).toBe('')
   })
 })
 
