@@ -74,6 +74,27 @@ const UploadStub = defineComponent({
 
 const OptionsStub = defineComponent({
   name: 'ImageToWebpOptionsSection',
+  emits: [
+    'update:scale',
+    'update:quality',
+    'update:method',
+    'update:lossless',
+    'update:advanced-enabled',
+    'update:target-size',
+    'update:target-psnr',
+    'update:near-lossless',
+    'update:alpha-quality',
+    'update:sns-strength',
+    'update:filter-strength',
+    'update:filter-sharpness',
+    'update:filter-type',
+    'update:partitions',
+    'update:segments',
+    'update:pass-count',
+    'update:exact-mode',
+    'update:sharp-yuv-mode',
+    'convert',
+  ],
   template: '<div class="options" />',
 })
 
@@ -152,5 +173,45 @@ describe('ImageToWebpConverterView', () => {
     expect(wrapper.find('.options').exists()).toBe(true)
     expect(wrapper.find('.results').text()).toContain('1')
     expect(wrapper.find('.n-alert').text()).toContain('Conversion failed')
+  })
+
+  it('wires option updates and convert events', async () => {
+    const wrapper = mount(ImageToWebpConverterView, {
+      global: {
+        stubs: {
+          ...layoutStubs,
+          ImageToWebpUploadSection: UploadStub,
+          ImageToWebpOptionsSection: OptionsStub,
+          ImageToWebpResultsSection: ResultsStub,
+          ImageToWebpNote: NoteStub,
+        },
+      },
+    })
+
+    await wrapper.find('.upload').trigger('click')
+    const options = wrapper.findComponent(OptionsStub)
+    expect(options.exists()).toBe(true)
+
+    options.vm.$emit('update:scale', 90)
+    options.vm.$emit('update:quality', 75)
+    options.vm.$emit('update:method', 5)
+    options.vm.$emit('update:lossless', true)
+    options.vm.$emit('update:advanced-enabled', true)
+    options.vm.$emit('update:target-size', 256)
+    options.vm.$emit('update:target-psnr', 42)
+    options.vm.$emit('update:near-lossless', 80)
+    options.vm.$emit('update:alpha-quality', 90)
+    options.vm.$emit('update:sns-strength', 70)
+    options.vm.$emit('update:filter-strength', 60)
+    options.vm.$emit('update:filter-sharpness', 3)
+    options.vm.$emit('update:filter-type', 1)
+    options.vm.$emit('update:partitions', 2)
+    options.vm.$emit('update:segments', 4)
+    options.vm.$emit('update:pass-count', 6)
+    options.vm.$emit('update:exact-mode', 'on')
+    options.vm.$emit('update:sharp-yuv-mode', 'off')
+    options.vm.$emit('convert')
+
+    expect(state.convertImages).toHaveBeenCalledTimes(1)
   })
 })

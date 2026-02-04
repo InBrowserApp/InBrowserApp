@@ -132,6 +132,45 @@ describe('convertImageToWebp', () => {
     expect(result.outputHeight).toBe(20)
   })
 
+  it('normalizes inputs and applies encode options', async () => {
+    ;(globalThis as { createImageBitmap?: typeof createImageBitmap }).createImageBitmap = vi
+      .fn()
+      .mockResolvedValue({
+        width: 10,
+        height: 5,
+        close: vi.fn(),
+      })
+
+    encodeMock.mockResolvedValueOnce(new Uint8Array([1, 2, 3]).buffer)
+
+    const file = new File(['data'], 'normalize.png', { type: 'image/png' })
+    const result = await convertImageToWebp(
+      file,
+      {
+        scale: 0,
+        quality: Number.NaN,
+        method: Number.NaN,
+        lossless: true,
+        targetSize: 123.4,
+        exact: true,
+        useSharpYuv: false,
+      },
+      'normalize.webp',
+    )
+
+    const encodeOptions = encodeMock.mock.calls[0]?.[1] as Record<string, unknown>
+    expect(result.outputWidth).toBe(10)
+    expect(result.outputHeight).toBe(5)
+    expect(encodeOptions).toMatchObject({
+      quality: 80,
+      method: 4,
+      lossless: 1,
+      target_size: 123,
+      exact: 1,
+      use_sharp_yuv: 0,
+    })
+  })
+
   it('throws when canvas context is unavailable', async () => {
     ;(globalThis as { createImageBitmap?: typeof createImageBitmap }).createImageBitmap = vi
       .fn()
@@ -152,6 +191,30 @@ describe('convertImageToWebp', () => {
         'broken.webp',
       ),
     ).rejects.toThrow('CANVAS_CONTEXT_UNAVAILABLE')
+  })
+
+  it('throws when HTMLImageElement fails to load', async () => {
+    ;(globalThis as { createImageBitmap?: typeof createImageBitmap }).createImageBitmap = undefined
+    URL.createObjectURL = vi.fn(() => 'blob:mock')
+    URL.revokeObjectURL = vi.fn()
+
+    class MockImage {
+      onload: (() => void) | null = null
+      onerror: (() => void) | null = null
+      set src(_value: string) {
+        this.onerror?.()
+      }
+    }
+
+    globalThis.Image = MockImage as unknown as typeof Image
+
+    const file = new File(['data'], 'bad.png', { type: 'image/png' })
+
+    await expect(
+      convertImageToWebp(file, { scale: 100, quality: 80, method: 4, lossless: false }, 'bad.webp'),
+    ).rejects.toThrow('INVALID_IMAGE')
+
+    expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:mock')
   })
 })
 

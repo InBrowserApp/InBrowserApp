@@ -5,6 +5,15 @@ import { convertImageToWebp } from '../utils/convert-image-to-webp'
 import { createWebpZip } from '../utils/create-webp-zip'
 import type { WebpConversionResult } from '../types'
 
+vi.mock('vue', async () => {
+  const actual = await vi.importActual<typeof import('vue')>('vue')
+  return {
+    ...actual,
+    watch: (...args: Parameters<typeof actual.watch>) =>
+      actual.watch(args[0], args[1], { ...(args[2] ?? {}), flush: 'sync' }),
+  }
+})
+
 vi.mock('../utils/convert-image-to-webp', () => ({
   convertImageToWebp: vi.fn(),
 }))
@@ -308,5 +317,229 @@ describe('useWebpConversion', () => {
 
     expect(conversion.isConverting.value).toBe(false)
     expect(conversion.canConvert.value).toBe(true)
+  })
+
+  it('aborts stale conversions when options change mid-run', async () => {
+    const refs = buildOptions({ files: [new File(['a'], 'a.png', { type: 'image/png' })] })
+
+    let resolveConvert!: (value: WebpConversionResult) => void
+    mockedConvert.mockImplementation(
+      () =>
+        new Promise<WebpConversionResult>((resolve) => {
+          resolveConvert = resolve
+        }),
+    )
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    const promise = conversion.convertImages()
+    refs.scale.value = 90
+    await nextTick()
+
+    resolveConvert(makeResult(refs.files.value[0]!, 'a.webp'))
+    await promise
+
+    expect(conversion.results.value).toHaveLength(0)
+    expect(conversion.isConverting.value).toBe(false)
+  })
+
+  it('drops results when options change after final file', async () => {
+    const fileA = new File(['a'], 'a.png', { type: 'image/png' })
+    const fileB = new File(['b'], 'b.png', { type: 'image/png' })
+    const refs = buildOptions()
+
+    const iterable = {
+      length: 2,
+      [Symbol.iterator]: function* () {
+        yield fileA
+        yield fileB
+        refs.scale.value = 95
+      },
+    } as unknown as File[]
+
+    refs.files.value = iterable
+
+    mockedConvert
+      .mockResolvedValueOnce(makeResult(fileA, 'a.webp'))
+      .mockResolvedValueOnce(makeResult(fileB, 'b.webp'))
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    await conversion.convertImages()
+
+    expect(mockedConvert).toHaveBeenCalledTimes(2)
+    expect(conversion.results.value).toHaveLength(0)
+    expect(conversion.error.value).toBe('')
+    expect(messageMock.success).not.toHaveBeenCalled()
+    expect(messageMock.error).not.toHaveBeenCalled()
+  })
+
+  it('drops stale zip results when options change', async () => {
+    const files = [
+      new File(['a'], 'a.png', { type: 'image/png' }),
+      new File(['b'], 'b.png', { type: 'image/png' }),
+    ]
+    const refs = buildOptions({ files })
+
+    mockedConvert
+      .mockResolvedValueOnce(makeResult(files[0]!, 'a.webp'))
+      .mockResolvedValueOnce(makeResult(files[1]!, 'b.webp'))
+
+    let resolveZip!: (value: Blob) => void
+    mockedZip.mockImplementation(
+      () =>
+        new Promise<Blob>((resolve) => {
+          resolveZip = resolve
+        }),
+    )
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    const promise = conversion.convertImages()
+    await Promise.resolve()
+    await Promise.resolve()
+    expect(resolveZip).toBeDefined()
+
+    refs.scale.value = 95
+    await nextTick()
+
+    resolveZip(new Blob(['zip']))
+    await promise
+
+    expect(conversion.zipBlob.value).toBeNull()
+  })
+
+  it('ignores zip failures for stale runs', async () => {
+    const files = [
+      new File(['a'], 'a.png', { type: 'image/png' }),
+      new File(['b'], 'b.png', { type: 'image/png' }),
+    ]
+    const refs = buildOptions({ files })
+
+    mockedConvert
+      .mockResolvedValueOnce(makeResult(files[0]!, 'a.webp'))
+      .mockResolvedValueOnce(makeResult(files[1]!, 'b.webp'))
+
+    let rejectZip!: (reason?: Error) => void
+    mockedZip.mockImplementation(
+      () =>
+        new Promise<Blob>((_resolve, reject) => {
+          rejectZip = reject
+        }),
+    )
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    const promise = conversion.convertImages()
+    await Promise.resolve()
+    await Promise.resolve()
+    expect(rejectZip).toBeDefined()
+
+    refs.scale.value = 75
+    await nextTick()
+
+    rejectZip(new Error('ZIP_FAIL'))
+    await promise
+
+    expect(messageMock.error).not.toHaveBeenCalledWith('zip-failed')
+  })
+
+  it('reports convert failed when nothing converts', async () => {
+    const emptyIterable = {
+      length: 1,
+      [Symbol.iterator]: function* () {},
+    } as unknown as File[]
+
+    const refs = buildOptions({ files: emptyIterable })
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    await conversion.convertImages()
+
+    expect(mockedConvert).not.toHaveBeenCalled()
+    expect(conversion.error.value).toBe('convert-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('convert-failed')
+  })
+
+  it('omits tri-state options when default', async () => {
+    const file = new File(['a'], 'a.png', { type: 'image/png' })
+    const refs = buildOptions({
+      files: [file],
+      advancedEnabled: true,
+      exactMode: 'default',
+      sharpYuvMode: 'default',
+    })
+
+    mockedConvert.mockResolvedValueOnce(makeResult(file, 'a.webp'))
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    await conversion.convertImages()
+
+    const options = mockedConvert.mock.calls[0]?.[1] as unknown as Record<string, unknown>
+    expect(options.exact).toBeUndefined()
+    expect(options.useSharpYuv).toBeUndefined()
+  })
+
+  it('uses convertFailed for unknown errors', async () => {
+    const refs = buildOptions({
+      files: [new File(['bad'], 'bad.png', { type: 'image/png' })],
+    })
+
+    mockedConvert.mockRejectedValueOnce(new Error('SOMETHING_ELSE'))
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    await conversion.convertImages()
+
+    expect(conversion.error.value).toBe('convert-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('convert-failed')
+  })
+
+  it('uses convertFailed for non-error throws', async () => {
+    const refs = buildOptions({
+      files: [new File(['bad'], 'bad.png', { type: 'image/png' })],
+    })
+
+    mockedConvert.mockRejectedValueOnce('boom')
+
+    const conversion = useWebpConversion({
+      ...refs,
+      messages,
+      message: messageMock,
+    })
+
+    await conversion.convertImages()
+
+    expect(conversion.error.value).toBe('convert-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('convert-failed')
   })
 })

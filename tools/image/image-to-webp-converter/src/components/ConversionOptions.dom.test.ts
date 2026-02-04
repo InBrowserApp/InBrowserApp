@@ -11,7 +11,22 @@ const BaseGridStub = defineComponent({
 
 const AdvancedSectionStub = defineComponent({
   name: 'ConversionOptionsAdvancedSection',
-  emits: ['update:target-size', 'update:target-psnr'],
+  emits: [
+    'update:target-size',
+    'update:target-psnr',
+    'update:advanced-enabled',
+    'update:near-lossless',
+    'update:alpha-quality',
+    'update:sns-strength',
+    'update:filter-strength',
+    'update:filter-sharpness',
+    'update:filter-type',
+    'update:partitions',
+    'update:segments',
+    'update:pass-count',
+    'update:exact-mode',
+    'update:sharp-yuv-mode',
+  ],
   template: '<div />',
 })
 
@@ -131,10 +146,12 @@ describe('ConversionOptions', () => {
     baseGrid.vm.$emit('update:scale', 120)
     baseGrid.vm.$emit('update:quality', 64)
     baseGrid.vm.$emit('update:method', 2)
+    baseGrid.vm.$emit('update:lossless', true)
 
     expect(wrapper.emitted('update:scale')?.[0]).toEqual([120])
     expect(wrapper.emitted('update:quality')?.[0]).toEqual([64])
     expect(wrapper.emitted('update:method')?.[0]).toEqual([2])
+    expect(wrapper.emitted('update:lossless')?.[0]).toEqual([true])
   })
 
   it('ignores null base grid updates', () => {
@@ -155,5 +172,36 @@ describe('ConversionOptions', () => {
 
     await wrapper.find('button').trigger('click')
     expect(wrapper.emitted('convert')).toHaveLength(1)
+  })
+
+  it('forwards advanced option updates', () => {
+    const wrapper = mountOptions()
+    const advanced = wrapper.findComponent(AdvancedSectionStub)
+
+    advanced.vm.$emit('update:advanced-enabled', true)
+    advanced.vm.$emit('update:near-lossless', 90)
+    advanced.vm.$emit('update:alpha-quality', 75)
+    advanced.vm.$emit('update:sns-strength', 70)
+    advanced.vm.$emit('update:filter-strength', 55)
+    advanced.vm.$emit('update:filter-sharpness', 3)
+    advanced.vm.$emit('update:filter-type', 1)
+    advanced.vm.$emit('update:partitions', 2)
+    advanced.vm.$emit('update:segments', 4)
+    advanced.vm.$emit('update:pass-count', 6)
+    advanced.vm.$emit('update:exact-mode', 'on')
+    advanced.vm.$emit('update:sharp-yuv-mode', 'off')
+
+    expect(wrapper.emitted('update:advancedEnabled')?.[0]).toEqual([true])
+    expect(wrapper.emitted('update:nearLossless')?.[0]).toEqual([90])
+    expect(wrapper.emitted('update:alphaQuality')?.[0]).toEqual([75])
+    expect(wrapper.emitted('update:snsStrength')?.[0]).toEqual([70])
+    expect(wrapper.emitted('update:filterStrength')?.[0]).toEqual([55])
+    expect(wrapper.emitted('update:filterSharpness')?.[0]).toEqual([3])
+    expect(wrapper.emitted('update:filterType')?.[0]).toEqual([1])
+    expect(wrapper.emitted('update:partitions')?.[0]).toEqual([2])
+    expect(wrapper.emitted('update:segments')?.[0]).toEqual([4])
+    expect(wrapper.emitted('update:passCount')?.[0]).toEqual([6])
+    expect(wrapper.emitted('update:exactMode')?.[0]).toEqual(['on'])
+    expect(wrapper.emitted('update:sharpYuvMode')?.[0]).toEqual(['off'])
   })
 })
