@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import ScreenResolution from './ScreenResolution.vue'
 import AvailableResolution from './AvailableResolution.vue'
 import WindowSize from './WindowSize.vue'
@@ -19,9 +19,11 @@ vi.mock('vue-i18n', async () => {
   }
 })
 
+const orientationRef = ref('landscape-primary')
+let orientationSupported = true
+
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
 
   return {
     ...actual,
@@ -34,7 +36,10 @@ vi.mock('@vueuse/core', async () => {
     },
     useDevicePixelRatio: () => ({ pixelRatio: ref(2) }),
     useFps: () => ref(60),
-    useScreenOrientation: () => ({ isSupported: true, orientation: ref('landscape-primary') }),
+    useScreenOrientation: () => ({
+      isSupported: orientationSupported,
+      orientation: orientationRef,
+    }),
   }
 })
 
@@ -63,6 +68,8 @@ const mountWithStub = (component: Parameters<typeof mount>[0]) =>
   })
 
 beforeEach(() => {
+  orientationRef.value = 'landscape-primary'
+  orientationSupported = true
   vi.stubGlobal('screen', {
     width: 1920,
     height: 1080,
@@ -115,10 +122,52 @@ describe('screen components', () => {
     expect(wrapper.text()).toContain('hdr')
   })
 
+  it('renders SDR color depth at or below 24 bits', () => {
+    vi.stubGlobal('screen', {
+      width: 1920,
+      height: 1080,
+      availWidth: 1680,
+      availHeight: 1050,
+      colorDepth: 24,
+      isExtended: true,
+    })
+    const wrapper = mountWithStub(ColorDepth)
+
+    expect(wrapper.text()).toContain('24 bits')
+    expect(wrapper.text()).not.toContain('hdr')
+  })
+
   it('renders multiple screens indicator', () => {
     const wrapper = mountWithStub(MultipleScreens)
 
     expect(wrapper.text()).toContain('yes')
+  })
+
+  it('renders single screen indicator', () => {
+    vi.stubGlobal('screen', {
+      width: 1920,
+      height: 1080,
+      availWidth: 1680,
+      availHeight: 1050,
+      colorDepth: 30,
+      isExtended: false,
+    })
+    const wrapper = mountWithStub(MultipleScreens)
+
+    expect(wrapper.text()).toContain('no')
+  })
+
+  it('hides multiple screens indicator when unsupported', () => {
+    vi.stubGlobal('screen', {
+      width: 1920,
+      height: 1080,
+      availWidth: 1680,
+      availHeight: 1050,
+      colorDepth: 30,
+    })
+    const wrapper = mountWithStub(MultipleScreens)
+
+    expect(wrapper.find('.info-stat').exists()).toBe(false)
   })
 
   it('renders fps info', () => {
@@ -127,9 +176,29 @@ describe('screen components', () => {
     expect(wrapper.text()).toContain('60')
   })
 
-  it('renders screen orientation', () => {
+  it.each([
+    ['portrait-primary', 'orientation-portrait-primary'],
+    ['portrait-secondary', 'orientation-portrait-secondary'],
+    ['landscape-primary', 'orientation-landscape-primary'],
+    ['landscape-secondary', 'orientation-landscape-secondary'],
+  ])('renders screen orientation %s', (orientation, expected) => {
+    orientationRef.value = orientation
     const wrapper = mountWithStub(ScreenOrientation)
 
-    expect(wrapper.text()).toContain('orientation-landscape-primary')
+    expect(wrapper.text()).toContain(expected)
+  })
+
+  it('renders empty orientation for unknown values', () => {
+    orientationRef.value = 'diagonal'
+    const wrapper = mountWithStub(ScreenOrientation)
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('hides screen orientation when unsupported', () => {
+    orientationSupported = false
+    const wrapper = mountWithStub(ScreenOrientation)
+
+    expect(wrapper.find('.info-stat').exists()).toBe(false)
   })
 })

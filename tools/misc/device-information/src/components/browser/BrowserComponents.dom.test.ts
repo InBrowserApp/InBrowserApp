@@ -53,6 +53,7 @@ const createNavigator = (overrides: Record<string, unknown> = {}) => ({
 
 afterEach(() => {
   vi.unstubAllGlobals()
+  vi.restoreAllMocks()
 })
 
 describe('browser components', () => {
@@ -93,6 +94,35 @@ describe('browser components', () => {
     await flushPromises()
 
     expect(wrapper.text()).toContain('arm64')
+  })
+
+  it('returns empty architecture when user agent data is unavailable', async () => {
+    vi.stubGlobal('navigator', createNavigator({ userAgentData: undefined }))
+    const wrapper = mountWithStub(ArchitectureInfo)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('returns empty architecture when user agent data errors', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          platform: 'macOS',
+          brands: [],
+          mobile: false,
+          getHighEntropyValues: async () => {
+            throw new Error('fail')
+          },
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(ArchitectureInfo)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
   })
 
   it('renders the supported languages list', () => {
@@ -150,5 +180,19 @@ describe('browser components', () => {
     const wrapper = mountWithStub(TimezoneInfo)
 
     expect(wrapper.text()).toContain('UTC')
+  })
+
+  it('formats negative timezone offsets', () => {
+    const offsetSpy = vi.spyOn(Date.prototype, 'getTimezoneOffset').mockReturnValue(300)
+    const tzSpy = vi
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValue({ timeZone: 'America/New_York' } as Intl.ResolvedDateTimeFormatOptions)
+
+    const wrapper = mountWithStub(TimezoneInfo)
+
+    expect(wrapper.text()).toContain('UTC-05:00')
+
+    offsetSpy.mockRestore()
+    tzSpy.mockRestore()
   })
 })
