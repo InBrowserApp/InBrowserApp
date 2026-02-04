@@ -32,6 +32,9 @@ const TestWrapper = {
 
 const getFormattedCode = (wrapper: ReturnType<typeof mount>) =>
   wrapper.findComponent(NCode).props('code') as string
+const getFormatError = (wrapper: ReturnType<typeof mount>) =>
+  (wrapper.findComponent(PrettierCodeFormatter).vm as unknown as { formatError: string })
+    .formatError
 
 const flushFormatting = async () => {
   vi.advanceTimersByTime(350)
@@ -94,5 +97,48 @@ describe('PrettierCodeFormatter', () => {
 
     const formattedCode = getFormattedCode(wrapper)
     expect(formattedCode).toContain('FORMATTED:typescript:')
+  })
+
+  it('clears output and errors when input is empty', async () => {
+    const wrapper = mount(TestWrapper)
+    const textarea = wrapper.find('textarea')
+
+    await textarea.setValue('   ')
+    await flushFormatting()
+
+    expect(getFormattedCode(wrapper)).toBe('')
+    expect(getFormatError(wrapper)).toBe('')
+  })
+
+  it('uses a fallback message for non-error throws', async () => {
+    const wrapper = mount(TestWrapper)
+    const textarea = wrapper.find('textarea')
+
+    await flushFormatting()
+
+    formatMock.mockImplementationOnce(async () => {
+      throw 'boom'
+    })
+
+    await textarea.setValue('boom')
+    await flushFormatting()
+
+    expect(getFormattedCode(wrapper)).toBe('')
+    expect(getFormatError(wrapper)).not.toBe('')
+    expect(getFormatError(wrapper)).not.toBe('boom')
+  })
+
+  it('replaces the source when language changes from a blank state', async () => {
+    const wrapper = mount(TestWrapper)
+    const textarea = wrapper.find('textarea')
+
+    await textarea.setValue(' ')
+    await flushFormatting()
+
+    const select = wrapper.findComponent(NSelect)
+    await select.vm.$emit('update:value', 'typescript')
+    await flushFormatting()
+
+    expect((textarea.element as HTMLTextAreaElement).value).toContain('type User')
   })
 })
