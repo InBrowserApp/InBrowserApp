@@ -31,20 +31,31 @@ const baseProps = {
 
 describe('PlaceholderPreview', () => {
   let originalGetContext: typeof HTMLCanvasElement.prototype.getContext | undefined
+  let contextMock: {
+    fillStyle: string
+    font: string
+    textAlign: string
+    textBaseline: string
+    fillRect: ReturnType<typeof vi.fn>
+    fillText: ReturnType<typeof vi.fn>
+    createLinearGradient: ReturnType<typeof vi.fn>
+    createRadialGradient: ReturnType<typeof vi.fn>
+  }
 
   beforeEach(() => {
     originalGetContext = HTMLCanvasElement.prototype.getContext
+    contextMock = {
+      fillStyle: '',
+      font: '',
+      textAlign: 'center',
+      textBaseline: 'middle',
+      fillRect: vi.fn(),
+      fillText: vi.fn(),
+      createLinearGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
+      createRadialGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
+    }
     Object.defineProperty(HTMLCanvasElement.prototype, 'getContext', {
-      value: () => ({
-        fillStyle: '',
-        font: '',
-        textAlign: 'center',
-        textBaseline: 'middle',
-        fillRect: vi.fn(),
-        fillText: vi.fn(),
-        createLinearGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
-        createRadialGradient: vi.fn(() => ({ addColorStop: vi.fn() })),
-      }),
+      value: () => contextMock,
       writable: true,
     })
   })
@@ -114,5 +125,43 @@ describe('PlaceholderPreview', () => {
 
     expect(canvas.width).toBe(400)
     expect(canvas.height).toBe(200)
+  })
+
+  it('draws gradient backgrounds to canvas', async () => {
+    const wrapper = mount(PlaceholderPreview, {
+      props: {
+        ...baseProps,
+        bgType: 'linear-gradient',
+      },
+    })
+
+    const vm = wrapper.vm as unknown as {
+      drawToCanvas: (canvas: HTMLCanvasElement, scale?: number) => void
+    }
+    const canvas = document.createElement('canvas')
+
+    vm.drawToCanvas(canvas)
+    expect(contextMock.createLinearGradient).toHaveBeenCalled()
+
+    await wrapper.setProps({ bgType: 'radial-gradient' })
+    vm.drawToCanvas(canvas)
+    expect(contextMock.createRadialGradient).toHaveBeenCalled()
+  })
+
+  it('returns early when canvas context is missing', () => {
+    Object.defineProperty(HTMLCanvasElement.prototype, 'getContext', {
+      value: () => null,
+      writable: true,
+    })
+
+    const wrapper = mount(PlaceholderPreview, {
+      props: baseProps,
+    })
+    const vm = wrapper.vm as unknown as {
+      drawToCanvas: (canvas: HTMLCanvasElement, scale?: number) => void
+    }
+
+    const canvas = document.createElement('canvas')
+    expect(() => vm.drawToCanvas(canvas)).not.toThrow()
   })
 })

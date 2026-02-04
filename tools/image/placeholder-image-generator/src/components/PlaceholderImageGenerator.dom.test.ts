@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, ref, type Ref } from 'vue'
+import { defineComponent, nextTick, ref, type Ref } from 'vue'
 import PlaceholderImageGenerator from './PlaceholderImageGenerator.vue'
 
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())
@@ -58,6 +58,18 @@ const PlaceholderOptionsFormStub = defineComponent({
     'textColor',
     'customText',
     'fontSize',
+  ],
+  emits: [
+    'update:width',
+    'update:height',
+    'update:bg-type',
+    'update:bg-color',
+    'update:gradient-color1',
+    'update:gradient-color2',
+    'update:gradient-angle',
+    'update:text-color',
+    'update:custom-text',
+    'update:font-size',
   ],
   template: '<div class="options-form" />',
 })
@@ -136,5 +148,47 @@ describe('PlaceholderImageGenerator', () => {
     expect(options.bgType).toBe('linear-gradient')
     expect(options.textColor).toBe('#444444')
     expect(options.customText).toBe('Hello')
+  })
+
+  it('syncs option updates across preview and download props', async () => {
+    const wrapper = mountGenerator()
+    const optionsForm = wrapper.findComponent(PlaceholderOptionsFormStub)
+    const preview = wrapper.findComponent(PlaceholderPreviewStub)
+    const download = wrapper.findComponent(PlaceholderDownloadButtonsStub)
+
+    await optionsForm.vm.$emit('update:width', 640)
+    await optionsForm.vm.$emit('update:height', 480)
+    await optionsForm.vm.$emit('update:bg-type', 'radial-gradient')
+    await optionsForm.vm.$emit('update:bg-color', '#111111')
+    await optionsForm.vm.$emit('update:gradient-color1', '#222222')
+    await optionsForm.vm.$emit('update:gradient-color2', '#333333')
+    await optionsForm.vm.$emit('update:gradient-angle', 120)
+    await optionsForm.vm.$emit('update:text-color', '#444444')
+    await optionsForm.vm.$emit('update:custom-text', 'Updated')
+    await optionsForm.vm.$emit('update:font-size', 36)
+    await nextTick()
+
+    expect(preview.props('width')).toBe(640)
+    expect(preview.props('height')).toBe(480)
+    expect(preview.props('bgType')).toBe('radial-gradient')
+    expect(preview.props('bgColor')).toBe('#111111')
+    expect(preview.props('gradientColor1')).toBe('#222222')
+    expect(preview.props('gradientColor2')).toBe('#333333')
+    expect(preview.props('gradientAngle')).toBe(120)
+    expect(preview.props('textColor')).toBe('#444444')
+    expect(preview.props('customText')).toBe('Updated')
+    expect(preview.props('fontSize')).toBe(36)
+
+    const options = download.props('options') as Record<string, unknown>
+    expect(options.width).toBe(640)
+    expect(options.height).toBe(480)
+    expect(options.bgType).toBe('radial-gradient')
+    expect(options.bgColor).toBe('#111111')
+    expect(options.gradientColor1).toBe('#222222')
+    expect(options.gradientColor2).toBe('#333333')
+    expect(options.gradientAngle).toBe(120)
+    expect(options.textColor).toBe('#444444')
+    expect(options.customText).toBe('Updated')
+    expect(options.fontSize).toBe(36)
   })
 })

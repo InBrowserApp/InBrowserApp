@@ -33,7 +33,7 @@ vi.mock('naive-ui', async () => {
     }),
     NIcon: defineComponent({
       name: 'NIcon',
-      template: '<span class="n-icon" />',
+      template: '<span class="n-icon"><slot /></span>',
     }),
     NButton: defineComponent({
       name: 'NButton',
@@ -56,7 +56,7 @@ vi.mock('naive-ui', async () => {
         },
       },
       emits: ['click'],
-      template: '<button @click="$emit(\'click\')"><slot /></button>',
+      template: '<button @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
     }),
     NRadioGroup: defineComponent({
       name: 'NRadioGroup',
@@ -80,6 +80,10 @@ vi.mock('naive-ui', async () => {
           type: Number,
           default: 0.9,
         },
+        formatTooltip: {
+          type: Function,
+          default: undefined,
+        },
       },
       emits: ['update:value'],
       template: '<div class="slider" />',
@@ -88,9 +92,35 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Image24Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Code24Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Copy24Regular', () => ({ default: {} }))
+vi.mock('@vicons/fluent/Image24Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'ImageIcon',
+      template: '<svg class="image-icon" />',
+    }),
+  }
+})
+
+vi.mock('@vicons/fluent/Code24Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'CodeIcon',
+      template: '<svg class="code-icon" />',
+    }),
+  }
+})
+
+vi.mock('@vicons/fluent/Copy24Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'CopyIcon',
+      template: '<svg class="copy-icon" />',
+    }),
+  }
+})
 
 const baseOptions: PlaceholderOptions = {
   width: 200,
@@ -231,6 +261,9 @@ describe('PlaceholderDownloadButtons', () => {
     expect(downloadButtons[1]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[2]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[3]?.props('href')).toBe('blob:mock')
+    expect(wrapper.find('.image-icon').exists()).toBe(true)
+    expect(wrapper.find('.code-icon').exists()).toBe(true)
+    expect(wrapper.find('.copy-icon').exists()).toBe(true)
   })
 
   it('updates filenames when scale changes', async () => {
@@ -249,6 +282,73 @@ describe('PlaceholderDownloadButtons', () => {
       .filter((button) => button.props('tag') === 'a')
 
     expect(downloadButtons[0]?.props('download')).toBe('placeholder-200x100@2x.png')
+  })
+
+  it('updates quality and formats the tooltip', async () => {
+    const toBlobSpy = vi.fn(
+      (callback: (blob: Blob | null) => void, type?: string, _quality?: number) => {
+        callback(new Blob(['mock'], { type: type ?? 'image/png' }))
+      },
+    )
+    Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+      value: toBlobSpy,
+      writable: true,
+    })
+
+    const wrapper = mount(PlaceholderDownloadButtons, {
+      props: {
+        options: baseOptions,
+      },
+    })
+
+    const slider = wrapper.findComponent({ name: 'NSlider' })
+    const formatTooltip = slider.props('formatTooltip') as ((value: number) => string) | undefined
+    expect(formatTooltip?.(0.55)).toBe('55%')
+
+    slider.vm.$emit('update:value', 0.5)
+    await flushPromises()
+
+    const qualityCalls = toBlobSpy.mock.calls.filter((call) => {
+      const type = call[1]
+      return type === 'image/jpeg' || type === 'image/webp'
+    })
+    expect(qualityCalls.some((call) => call[2] === 0.5)).toBe(true)
+  })
+
+  it('drops outdated blob updates when options change quickly', async () => {
+    vi.useFakeTimers()
+    const toBlobSpy = vi.fn(
+      (callback: (blob: Blob | null) => void, type?: string, _quality?: number) => {
+        setTimeout(() => {
+          callback(new Blob(['mock'], { type: type ?? 'image/png' }))
+        }, 0)
+      },
+    )
+    Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+      value: toBlobSpy,
+      writable: true,
+    })
+
+    try {
+      const wrapper = mount(PlaceholderDownloadButtons, {
+        props: {
+          options: baseOptions,
+        },
+      })
+
+      await wrapper.setProps({
+        options: {
+          ...baseOptions,
+          width: 220,
+        },
+      })
+      await vi.runAllTimersAsync()
+      await flushPromises()
+
+      expect(toBlobSpy).toHaveBeenCalled()
+    } finally {
+      vi.useRealTimers()
+    }
   })
 
   it('copies to clipboard and reports success', async () => {
@@ -291,6 +391,42 @@ describe('PlaceholderDownloadButtons', () => {
     await flushPromises()
 
     expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+  })
+
+  it('reports copy failure when clipboard write rejects', async () => {
+    clipboardWrite.mockRejectedValueOnce(new Error('fail'))
+
+    const wrapper = mount(PlaceholderDownloadButtons, {
+      props: {
+        options: baseOptions,
+      },
+    })
+
+    const copyButton = wrapper
+      .findAllComponents({ name: 'NButton' })
+      .find((button) => button.props('tag') !== 'a')
+
+    await copyButton?.trigger('click')
+    await flushPromises()
+
+    expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+  })
+
+  it('handles missing canvas context', async () => {
+    Object.defineProperty(HTMLCanvasElement.prototype, 'getContext', {
+      value: () => null,
+      writable: true,
+    })
+
+    const wrapper = mount(PlaceholderDownloadButtons, {
+      props: {
+        options: baseOptions,
+      },
+    })
+
+    await flushPromises()
+
+    expect(wrapper.findAllComponents({ name: 'NButton' }).length).toBeGreaterThan(0)
   })
 
   it('draws gradient backgrounds when selected', async () => {
