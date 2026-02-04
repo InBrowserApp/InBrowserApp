@@ -2,11 +2,15 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
+  const { computed, isRef } = await import('vue')
 
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:mock'),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:mock' : null
+      }),
   }
 })
 
@@ -59,5 +63,44 @@ describe('Base32Encoder', () => {
     expect(output?.element.value).toBe('MZXW6===')
     const link = wrapper.find('a[download]')
     expect(link.attributes('download')).toBe('sample.b32')
+  })
+
+  it('clears output when input is blank', async () => {
+    const wrapper = mount(Base32Encoder, mountOptions)
+    const textareas = wrapper.findAll('textarea')
+
+    await textareas[0]?.setValue('')
+    await flushPromises()
+
+    const output = textareas[textareas.length - 1]
+    expect(output?.element.value).toBe('')
+    expect(wrapper.text()).not.toContain('Failed to read file')
+  })
+
+  it('shows an error when reading a file fails', async () => {
+    const wrapper = mount(Base32Encoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const file = new File(['foo'], 'bad.txt', { type: 'text/plain' })
+    vi.spyOn(file, 'arrayBuffer').mockRejectedValueOnce(new Error('read failed'))
+
+    await input.vm.$emit('update:value', file)
+    await flushPromises()
+
+    const textareas = wrapper.findAll('textarea')
+    const output = textareas[textareas.length - 1]
+    expect(output?.element.value).toBe('')
+    expect(wrapper.text()).toContain('Failed to read file')
+  })
+
+  it('falls back to file.b32 when file name is only an extension', async () => {
+    const wrapper = mount(Base32Encoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const file = new File(['foo'], '.txt', { type: 'text/plain' })
+
+    await input.vm.$emit('update:value', file)
+    await flushPromises()
+
+    const link = wrapper.find('a[download]')
+    expect(link.attributes('download')).toBe('file.b32')
   })
 })
