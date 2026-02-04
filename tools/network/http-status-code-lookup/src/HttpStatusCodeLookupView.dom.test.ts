@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
+import { defineComponent, nextTick } from 'vue'
 import HttpStatusCodeLookupView from './HttpStatusCodeLookupView.vue'
 
 vi.mock('@vueuse/core', async () => {
@@ -34,6 +34,7 @@ const HttpStatusCodeSearchStub = defineComponent({
       default: '',
     },
   },
+  emits: ['update:search', 'update:category'],
   template: '<div class="status-search" :data-search="search" :data-category="category" />',
 })
 
@@ -53,7 +54,7 @@ const HttpStatusCodeTableStub = defineComponent({
 })
 
 describe('HttpStatusCodeLookupView', () => {
-  it('passes search state to the tool sections', () => {
+  it('passes search state to the tool sections', async () => {
     const wrapper = mount(HttpStatusCodeLookupView, {
       global: {
         stubs: {
@@ -78,5 +79,13 @@ describe('HttpStatusCodeLookupView', () => {
     expect(table.attributes('data-search')).toBe('')
     expect(table.attributes('data-category')).toBe('all')
     expect(wrapper.find('.what-is-status').exists()).toBe(true)
+
+    wrapper.findComponent(HttpStatusCodeSearchStub).vm.$emit('update:search', '404')
+    await nextTick()
+    expect(wrapper.find('.status-table').attributes('data-search')).toBe('404')
+
+    wrapper.findComponent(HttpStatusCodeSearchStub).vm.$emit('update:category', 'client-error')
+    await nextTick()
+    expect(wrapper.find('.status-table').attributes('data-category')).toBe('client-error')
   })
 })

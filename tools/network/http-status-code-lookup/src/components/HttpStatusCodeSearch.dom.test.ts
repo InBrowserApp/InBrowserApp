@@ -194,4 +194,21 @@ describe('HttpStatusCodeSearch', () => {
 
     expect(wrapper.emitted('update:category')?.[0]).toEqual(['client-error'])
   })
+
+  it('falls back to the default icon for unknown categories', () => {
+    const wrapper = mount(HttpStatusCodeSearch, {
+      props: {
+        search: '',
+        category: 'all',
+      },
+    })
+
+    const vm = wrapper.vm as { getCategoryIcon?: (category: string) => unknown; $?: unknown }
+    const setupState = (vm.$ as { setupState?: Record<string, unknown> } | undefined)?.setupState
+    const getCategoryIcon =
+      vm.getCategoryIcon ??
+      (setupState?.getCategoryIcon as ((category: string) => unknown) | undefined)
+
+    expect(getCategoryIcon?.('unknown')).toBeTruthy()
+  })
 })

@@ -174,13 +174,16 @@ describe('HttpStatusCodeTable', () => {
       code: number
       name: string
       category: string
+      description: string
+      common?: boolean
     }>
 
     const successRow = data.find((row) => row.code === 200)
     const redirectionRow = data.find((row) => row.code === 301)
+    const clientErrorRow = data.find((row) => row.code === 404)
     const serverErrorRow = data.find((row) => row.code === 500)
 
-    if (!successRow || !redirectionRow || !serverErrorRow) {
+    if (!successRow || !redirectionRow || !clientErrorRow || !serverErrorRow) {
       throw new Error('Expected rows were not found in the dataset.')
     }
 
@@ -189,24 +192,72 @@ describe('HttpStatusCodeTable', () => {
       render: (row: typeof successRow) => {
         props?: Record<string, unknown>
         type?: unknown
+        children?: Record<string, (context?: { copy?: () => void }) => unknown>
       }
     }>
 
+    const rowKey = wrapper.findComponent({ name: 'NDataTable' }).props('rowKey') as (
+      row: typeof successRow,
+    ) => number
+    expect(rowKey(successRow)).toBe(200)
+
     const codeColumn = columns.find((column) => column.key === 'code')?.render(successRow)
     expect(codeColumn?.props?.content).toBe('200')
+    const codeSlot = codeColumn?.children?.default
+    const codeCopy = vi.fn()
+    const codeSpan = codeSlot?.({ copy: codeCopy }) as
+      | { props?: Record<string, unknown> }
+      | undefined
+    expect(codeSpan?.props?.onClick).toBe(codeCopy)
 
     const nameColumn = columns.find((column) => column.key === 'name')?.render(successRow)
     expect(nameColumn?.props?.content).toBe('OK')
+    const nameSlot = nameColumn?.children?.default
+    const nameCopy = vi.fn()
+    const nameSpan = nameSlot?.({ copy: nameCopy }) as
+      | { props?: Record<string, unknown> }
+      | undefined
+    expect(nameSpan?.props?.onClick).toBe(nameCopy)
 
     const categoryWarning = columns
       .find((column) => column.key === 'category')
       ?.render(redirectionRow)
     expect(categoryWarning?.props?.type).toBe('warning')
 
+    const categorySuccess = columns.find((column) => column.key === 'category')?.render(successRow)
+    expect(categorySuccess?.props?.type).toBe('success')
+
+    const categoryClient = columns
+      .find((column) => column.key === 'category')
+      ?.render(clientErrorRow)
+    expect(categoryClient?.props?.type).toBe('error')
+
+    const categoryInfo = columns
+      .find((column) => column.key === 'category')
+      ?.render({
+        code: 102,
+        name: 'Processing',
+        category: 'informational',
+        description: 'Processing',
+      })
+    expect(categoryInfo?.props?.type).toBe('info')
+
     const categoryError = columns
       .find((column) => column.key === 'category')
       ?.render(serverErrorRow)
     expect(categoryError?.props?.type).toBe('error')
+
+    const categoryUnknown = columns
+      .find((column) => column.key === 'category')
+      ?.render({
+        code: 599,
+        name: 'Mystery',
+        category: 'mystery',
+        description: 'Unknown',
+      })
+    expect(categoryUnknown?.props?.type).toBe('info')
+    expect(categoryUnknown?.children?.default?.()).toBe('mystery')
+    expect(categoryUnknown?.children?.icon?.()).toBeTruthy()
 
     const descriptionColumn = columns
       .find((column) => column.key === 'description')
