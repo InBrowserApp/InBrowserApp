@@ -23,7 +23,8 @@ vi.mock('naive-ui', () => ({
     template: '<div class="descriptions"><slot /></div>',
   },
   NDescriptionsItem: {
-    template: '<div class="descriptions-item"><slot /></div>',
+    template:
+      '<div class="descriptions-item"><div class="label"><slot name="label" /></div><slot /></div>',
   },
   NText: {
     template: '<span class="text"><slot /></span>',
@@ -74,5 +75,25 @@ describe('Pbkdf2Result', () => {
     }
 
     expect(wrapper.text()).toContain(expected)
+  })
+
+  it('hides output when inputs are invalid', async () => {
+    const wrapper = mount(Pbkdf2Result, {
+      props: {
+        password: '',
+        salt: '',
+        saltFormat: 'utf-8',
+        algorithm: 'SHA-256',
+        iterations: 1,
+        length: 32,
+        iterationsValid: true,
+        lengthValid: true,
+        saltErrorType: '',
+      },
+    })
+
+    await flushPromises()
+
+    expect(wrapper.find('.descriptions').exists()).toBe(false)
   })
 })
