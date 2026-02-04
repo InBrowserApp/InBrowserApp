@@ -3,6 +3,8 @@ import { mount, flushPromises } from '@vue/test-utils'
 import { h } from 'vue'
 import { NCode, NMessageProvider, NSwitch } from 'naive-ui'
 import CsvToJsonConverter from './CsvToJsonConverter.vue'
+import CsvToJsonSettingsAdvanced from './CsvToJsonSettingsAdvanced.vue'
+import CsvToJsonSettingsBasics from './CsvToJsonSettingsBasics.vue'
 
 const fileOpenMock = vi.fn()
 
@@ -38,8 +40,13 @@ const TestWrapper = {
   },
 }
 
+const mountWrapper = () => mount(TestWrapper)
+
 const getRenderedJson = (wrapper: ReturnType<typeof mount>) =>
   wrapper.findComponent(NCode).props('code') as string
+
+const parseRenderedJson = (wrapper: ReturnType<typeof mount>) =>
+  JSON.parse(getRenderedJson(wrapper)) as Array<Record<string, unknown>>
 
 describe('CsvToJsonConverter', () => {
   beforeEach(() => {
@@ -48,8 +55,8 @@ describe('CsvToJsonConverter', () => {
   })
 
   it('renders JSON for the default CSV', () => {
-    const wrapper = mount(TestWrapper)
-    const parsed = JSON.parse(getRenderedJson(wrapper)) as Array<Record<string, string>>
+    const wrapper = mountWrapper()
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
 
     expect(parsed).toHaveLength(2)
     expect(parsed[0]).toMatchObject({ a: '1', b: '2', c: '3' })
@@ -59,14 +66,14 @@ describe('CsvToJsonConverter', () => {
   it('shows an error when include regex is invalid', async () => {
     localStorage.setItem('csv2json:includeColumns', '[')
 
-    const wrapper = mount(TestWrapper)
+    const wrapper = mountWrapper()
     await flushPromises()
 
     expect(getRenderedJson(wrapper)).toContain('Invalid CSV')
   })
 
   it('uses custom headers when no-header is enabled', async () => {
-    const wrapper = mount(TestWrapper)
+    const wrapper = mountWrapper()
     const settingsButton = wrapper
       .findAll('button')
       .find((candidate) => candidate.text().includes('Settings'))
@@ -95,10 +102,77 @@ describe('CsvToJsonConverter', () => {
     await textarea.setValue('1;2\n3;4')
     await flushPromises()
 
-    const parsed = JSON.parse(getRenderedJson(wrapper)) as Array<Record<string, string>>
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
     expect(parsed).toHaveLength(2)
     expect(parsed[0]).toMatchObject({ name: '1', age: '2' })
     expect(parsed[1]).toMatchObject({ name: '3', age: '4' })
+  })
+
+  it('renders persisted settings panels when enabled', () => {
+    localStorage.setItem('csv2json:showSettings', 'true')
+
+    const wrapper = mountWrapper()
+    expect(wrapper.findComponent(CsvToJsonSettingsBasics).exists()).toBe(true)
+    expect(wrapper.findComponent(CsvToJsonSettingsAdvanced).exists()).toBe(true)
+  })
+
+  it('filters columns using include and ignore patterns', () => {
+    localStorage.setItem('csv2json:includeColumns', 'name|age')
+    localStorage.setItem('csv2json:ignoreColumns', 'age')
+    localStorage.setItem('csv2json:csvText', 'name,age,city\nJane,30,NY\nBob,40,SF')
+
+    const wrapper = mountWrapper()
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
+
+    expect(parsed).toHaveLength(2)
+    const first = parsed[0]
+    if (!first) {
+      throw new Error('Expected parsed row')
+    }
+    expect(Object.keys(first)).toEqual(['name'])
+    expect(first).toMatchObject({ name: 'Jane' })
+  })
+
+  it('skips comments and empty lines when configured', () => {
+    localStorage.setItem('csv2json:comments', '#')
+    localStorage.setItem('csv2json:skipEmpty', 'greedy')
+    localStorage.setItem('csv2json:csvText', 'name,age\n#skip,me\n\nJane,30\n\nBob,40\n')
+
+    const wrapper = mountWrapper()
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
+
+    expect(parsed).toHaveLength(2)
+    expect(parsed[0]).toMatchObject({ name: 'Jane' })
+    expect(parsed[1]).toMatchObject({ name: 'Bob' })
+  })
+
+  it('honors preview, delimiter guessing, and skipped lines', () => {
+    localStorage.setItem('csv2json:delimiter', 'auto')
+    localStorage.setItem('csv2json:delimitersToGuess', '\\t,|,\\n')
+    localStorage.setItem('csv2json:skipFirstNLines', '1')
+    localStorage.setItem('csv2json:preview', '1')
+    localStorage.setItem('csv2json:fastMode', 'true')
+    localStorage.setItem('csv2json:csvText', 'skip,this\nname\tage\nJane\t30\nBob\t40')
+
+    const wrapper = mountWrapper()
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
+
+    expect(parsed).toHaveLength(1)
+    expect(parsed[0]).toMatchObject({ name: 'Jane', age: '30' })
+  })
+
+  it('preserves whitespace when trim is disabled and checks types', () => {
+    localStorage.setItem('csv2json:trim', 'false')
+    localStorage.setItem('csv2json:checkType', 'true')
+    localStorage.setItem('csv2json:csvText', ' name ,age\n Bob ,42')
+
+    const wrapper = mountWrapper()
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, unknown>>
+    const row = parsed[0] ?? {}
+
+    expect(Object.keys(row)).toContain(' name ')
+    expect(row[' name ']).toBe(' Bob ')
+    expect(row.age).toBe(42)
   })
 
   it('imports CSV from a file selection', async () => {
@@ -106,7 +180,7 @@ describe('CsvToJsonConverter', () => {
       text: async () => 'name,age\nJane,30',
     })
 
-    const wrapper = mount(TestWrapper)
+    const wrapper = mountWrapper()
     const importButton = wrapper
       .findAll('button')
       .find((candidate) => candidate.text().includes('Import from file'))
@@ -119,7 +193,7 @@ describe('CsvToJsonConverter', () => {
     const textarea = wrapper.find('textarea')
     expect((textarea.element as HTMLTextAreaElement).value).toBe('name,age\nJane,30')
 
-    const parsed = JSON.parse(getRenderedJson(wrapper)) as Array<Record<string, string>>
+    const parsed = parseRenderedJson(wrapper) as Array<Record<string, string>>
     expect(parsed[0]).toMatchObject({ name: 'Jane', age: '30' })
   })
 })
