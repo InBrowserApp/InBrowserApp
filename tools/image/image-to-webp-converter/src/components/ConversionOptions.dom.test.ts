@@ -97,6 +97,15 @@ describe('ConversionOptions', () => {
     expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([null])
   })
 
+  it('clears existing target PSNR when target size updates', () => {
+    const wrapper = mountOptions({ targetPsnr: 22 })
+
+    wrapper.findComponent(AdvancedSectionStub).vm.$emit('update:target-size', 14)
+
+    expect(wrapper.emitted('update:targetSize')?.[0]).toEqual([14])
+    expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([null])
+  })
+
   it('clears target size when target PSNR updates', () => {
     const wrapper = mountOptions({ targetSize: 24 })
 
@@ -104,6 +113,41 @@ describe('ConversionOptions', () => {
 
     expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([33])
     expect(wrapper.emitted('update:targetSize')?.[0]).toEqual([null])
+  })
+
+  it('emits target size reset when target PSNR updates without size set', () => {
+    const wrapper = mountOptions({ targetSize: null })
+
+    wrapper.findComponent(AdvancedSectionStub).vm.$emit('update:target-psnr', 18)
+
+    expect(wrapper.emitted('update:targetPsnr')?.[0]).toEqual([18])
+    expect(wrapper.emitted('update:targetSize')?.[0]).toEqual([null])
+  })
+
+  it('updates scale, quality, and method from base grid events', () => {
+    const wrapper = mountOptions()
+    const baseGrid = wrapper.findComponent(BaseGridStub)
+
+    baseGrid.vm.$emit('update:scale', 120)
+    baseGrid.vm.$emit('update:quality', 64)
+    baseGrid.vm.$emit('update:method', 2)
+
+    expect(wrapper.emitted('update:scale')?.[0]).toEqual([120])
+    expect(wrapper.emitted('update:quality')?.[0]).toEqual([64])
+    expect(wrapper.emitted('update:method')?.[0]).toEqual([2])
+  })
+
+  it('ignores null base grid updates', () => {
+    const wrapper = mountOptions()
+    const baseGrid = wrapper.findComponent(BaseGridStub)
+
+    baseGrid.vm.$emit('update:scale', null)
+    baseGrid.vm.$emit('update:quality', null)
+    baseGrid.vm.$emit('update:method', null)
+
+    expect(wrapper.emitted('update:scale')).toBeUndefined()
+    expect(wrapper.emitted('update:quality')).toBeUndefined()
+    expect(wrapper.emitted('update:method')).toBeUndefined()
   })
 
   it('forwards convert events', async () => {

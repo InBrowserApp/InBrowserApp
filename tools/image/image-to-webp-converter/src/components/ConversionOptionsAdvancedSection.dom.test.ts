@@ -104,4 +104,11 @@ describe('ConversionOptionsAdvancedSection', () => {
 
     expect(wrapper.emitted('update:advancedEnabled')?.[0]).toEqual([true])
   })
+
+  it('renders advanced controls when enabled', () => {
+    const wrapper = mountSection({ advancedEnabled: true })
+
+    expect(wrapper.findAllComponents({ name: 'NInputNumber' })).toHaveLength(11)
+    expect(wrapper.findAllComponents({ name: 'NSelect' })).toHaveLength(2)
+  })
 })
