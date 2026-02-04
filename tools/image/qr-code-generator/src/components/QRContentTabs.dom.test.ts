@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref } from 'vue'
+import { defineComponent, nextTick, ref } from 'vue'
 import QRContentTabs from './QRContentTabs.vue'
 import type { WifiModel } from './content/WifiTab.vue'
 import type { VcardModel } from './content/VcardTab.vue'
@@ -119,15 +119,23 @@ const baseModels: BaseModels = {
   calendar: { title: '', start: null, end: null, location: '', description: '' },
 }
 
+const createStub = (name: string, className: string) =>
+  defineComponent({
+    name,
+    props: ['modelValue'],
+    emits: ['update:modelValue'],
+    template: `<div class="${className}" />`,
+  })
+
 const stubs = {
-  TextTab: { template: '<div class="text-tab" />' },
-  WifiTab: { template: '<div class="wifi-tab" />' },
-  VcardTab: { template: '<div class="vcard-tab" />' },
-  SmsTab: { template: '<div class="sms-tab" />' },
-  TelTab: { template: '<div class="tel-tab" />' },
-  MailtoTab: { template: '<div class="mailto-tab" />' },
-  GeoTab: { template: '<div class="geo-tab" />' },
-  CalendarTab: { template: '<div class="calendar-tab" />' },
+  TextTab: createStub('TextTab', 'text-tab'),
+  WifiTab: createStub('WifiTab', 'wifi-tab'),
+  VcardTab: createStub('VcardTab', 'vcard-tab'),
+  SmsTab: createStub('SmsTab', 'sms-tab'),
+  TelTab: createStub('TelTab', 'tel-tab'),
+  MailtoTab: createStub('MailtoTab', 'mailto-tab'),
+  GeoTab: createStub('GeoTab', 'geo-tab'),
+  CalendarTab: createStub('CalendarTab', 'calendar-tab'),
 }
 
 describe('QRContentTabs', () => {
@@ -148,9 +156,59 @@ describe('QRContentTabs', () => {
     expect(wrapper.find('.text-tab').exists()).toBe(true)
   })
 
-  it('renders a select and payload preview in narrow layouts', () => {
-    widthRef.value = 600
+  it('emits updates from wide tab models', async () => {
+    const wrapper = mount(QRContentTabs, {
+      props: {
+        payload: '',
+        ...baseModels,
+      },
+      global: { stubs },
+    })
 
+    const tabs = wrapper.findComponent({ name: 'NTabs' })
+    tabs.vm.$emit('update:value', 'wifi')
+    await nextTick()
+
+    wrapper.findComponent({ name: 'TextTab' }).vm.$emit('update:modelValue', 'hello')
+    wrapper.findComponent({ name: 'WifiTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.wifi,
+      ssid: 'Net',
+    })
+    wrapper.findComponent({ name: 'VcardTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.vcard,
+      firstName: 'Ada',
+    })
+    wrapper.findComponent({ name: 'SmsTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.sms,
+      phone: '123',
+    })
+    wrapper.findComponent({ name: 'TelTab' }).vm.$emit('update:modelValue', '+1')
+    wrapper.findComponent({ name: 'MailtoTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.mailto,
+      to: 'user@example.com',
+    })
+    wrapper.findComponent({ name: 'GeoTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.geo,
+      lat: 1,
+      lng: 2,
+    })
+    wrapper.findComponent({ name: 'CalendarTab' }).vm.$emit('update:modelValue', {
+      ...baseModels.calendar,
+      title: 'Meet',
+    })
+    await nextTick()
+
+    expect(wrapper.find('.text-tab').exists()).toBe(true)
+    expect(wrapper.find('.wifi-tab').exists()).toBe(true)
+    expect(wrapper.find('.vcard-tab').exists()).toBe(true)
+    expect(wrapper.find('.sms-tab').exists()).toBe(true)
+    expect(wrapper.find('.tel-tab').exists()).toBe(true)
+    expect(wrapper.find('.mailto-tab').exists()).toBe(true)
+    expect(wrapper.find('.geo-tab').exists()).toBe(true)
+    expect(wrapper.find('.calendar-tab').exists()).toBe(true)
+  })
+
+  it('renders a select and payload preview in narrow layouts', async () => {
     const wrapper = mount(QRContentTabs, {
       props: {
         payload: 'sms:123',
@@ -160,8 +218,83 @@ describe('QRContentTabs', () => {
       global: { stubs },
     })
 
+    widthRef.value = 600
+    await nextTick()
+
     expect(wrapper.findComponent({ name: 'NSelect' }).exists()).toBe(true)
     expect(wrapper.find('.sms-tab').exists()).toBe(true)
     expect(wrapper.find('.n-alert').exists()).toBe(true)
+  })
+
+  it('switches narrow layout content panes', async () => {
+    const onUpdateActiveTab = vi.fn()
+
+    const wrapper = mount(QRContentTabs, {
+      props: {
+        payload: '',
+        ...baseModels,
+        activeTab: 'text',
+        'onUpdate:activeTab': onUpdateActiveTab,
+      },
+      global: { stubs },
+    })
+
+    widthRef.value = 600
+    await nextTick()
+
+    expect(wrapper.findComponent({ name: 'NSelect' }).exists()).toBe(true)
+
+    const select = wrapper.findComponent({ name: 'NSelect' })
+    select.vm.$emit('update:value', 'wifi')
+    await nextTick()
+    expect(onUpdateActiveTab).toHaveBeenCalledWith('wifi')
+
+    const tabCases: Record<
+      QRContentTab,
+      { selector: string; component: string; payload: unknown }
+    > = {
+      text: { selector: '.text-tab', component: 'TextTab', payload: 'next' },
+      wifi: {
+        selector: '.wifi-tab',
+        component: 'WifiTab',
+        payload: { ...baseModels.wifi, ssid: 'Cafe' },
+      },
+      vcard: {
+        selector: '.vcard-tab',
+        component: 'VcardTab',
+        payload: { ...baseModels.vcard, firstName: 'Ada' },
+      },
+      sms: {
+        selector: '.sms-tab',
+        component: 'SmsTab',
+        payload: { ...baseModels.sms, message: 'Hi' },
+      },
+      tel: { selector: '.tel-tab', component: 'TelTab', payload: '+123' },
+      mailto: {
+        selector: '.mailto-tab',
+        component: 'MailtoTab',
+        payload: { ...baseModels.mailto, to: 'user@example.com' },
+      },
+      geo: {
+        selector: '.geo-tab',
+        component: 'GeoTab',
+        payload: { ...baseModels.geo, lat: 51.5, lng: -0.12 },
+      },
+      calendar: {
+        selector: '.calendar-tab',
+        component: 'CalendarTab',
+        payload: { ...baseModels.calendar, title: 'Call' },
+      },
+    }
+
+    for (const [tab, { selector, component, payload }] of Object.entries(tabCases)) {
+      await wrapper.setProps({ activeTab: tab as QRContentTab })
+      await nextTick()
+      expect(wrapper.find(selector).exists()).toBe(true)
+
+      const tabComponent = wrapper.findComponent({ name: component })
+      tabComponent.vm.$emit('update:modelValue', payload)
+      await nextTick()
+    }
   })
 })

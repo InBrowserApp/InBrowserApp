@@ -32,7 +32,7 @@ vi.mock('naive-ui', async () => {
 
   const NIcon = defineComponent({
     name: 'NIcon',
-    template: '<span />',
+    template: '<span><slot /></span>',
   })
 
   const NButton = defineComponent({
@@ -44,7 +44,7 @@ vi.mock('naive-ui', async () => {
       disabled: { type: Boolean, default: false },
       tertiary: { type: Boolean, default: false },
     },
-    template: '<a><slot /></a>',
+    template: '<a><slot name="icon" /><slot /></a>',
   })
 
   return { NFlex, NButton, NIcon }
@@ -97,5 +97,49 @@ describe('QRDownloadButtons', () => {
     expect(svgProps.href).toBe('blob:mock')
     expect(svgProps.disabled).toBe(false)
     expect(svgProps.download).toBe('qrcode.svg')
+  })
+
+  it('drops stale updates when superseded', async () => {
+    let resolvePng: (value: string) => void = () => {}
+    let resolveSvg: (value: string) => void = () => {}
+
+    qrCodeMock.toDataURL
+      .mockImplementationOnce(
+        () =>
+          new Promise((resolve) => {
+            resolvePng = resolve
+          }),
+      )
+      .mockResolvedValueOnce('data:image/png;base64,BBB')
+
+    qrCodeMock.toString
+      .mockImplementationOnce(
+        () =>
+          new Promise((resolve) => {
+            resolveSvg = resolve
+          }),
+      )
+      .mockResolvedValueOnce('<svg>new</svg>')
+
+    const fetchMock = vi.mocked(fetch)
+    fetchMock.mockResolvedValue({
+      blob: () => Promise.resolve(new Blob(['png'], { type: 'image/png' })),
+    } as Response)
+
+    const wrapper = mount(QRDownloadButtons, {
+      props: baseProps,
+    })
+
+    expect(qrCodeMock.toDataURL).toHaveBeenCalledTimes(1)
+    expect(qrCodeMock.toString).toHaveBeenCalledTimes(1)
+
+    await wrapper.setProps({ text: 'HELLO-2' })
+
+    resolvePng('data:image/png;base64,AAA')
+    resolveSvg('<svg>old</svg>')
+    await flushPromises()
+
+    expect(qrCodeMock.toDataURL).toHaveBeenCalledTimes(2)
+    expect(qrCodeMock.toString).toHaveBeenCalledTimes(2)
   })
 })

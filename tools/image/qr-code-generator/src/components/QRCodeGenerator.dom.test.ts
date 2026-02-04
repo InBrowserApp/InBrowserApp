@@ -58,6 +58,13 @@ const QRContentFormStub = defineComponent({
 const QROptionsFormStub = defineComponent({
   name: 'QROptionsForm',
   props: ['errorCorrectionLevel', 'width', 'margin', 'dark', 'light'],
+  emits: [
+    'update:errorCorrectionLevel',
+    'update:width',
+    'update:margin',
+    'update:dark',
+    'update:light',
+  ],
   template:
     '<div class="qr-options" :data-ecc="errorCorrectionLevel" :data-width="width" :data-margin="margin" :data-dark="dark" :data-light="light" />',
 })
@@ -110,5 +117,23 @@ describe('QRCodeGenerator', () => {
 
     expect(wrapper.find('.qr-preview').attributes('data-text')).toBe('https://example.com')
     expect(wrapper.find('.qr-download').attributes('data-text')).toBe('https://example.com')
+  })
+
+  it('updates stored options from the options form', async () => {
+    const wrapper = mountGenerator()
+    const options = wrapper.findComponent(QROptionsFormStub)
+
+    options.vm.$emit('update:errorCorrectionLevel', 'L')
+    options.vm.$emit('update:width', 320)
+    options.vm.$emit('update:margin', 6)
+    options.vm.$emit('update:dark', '#111111FF')
+    options.vm.$emit('update:light', '#EEEEEEFF')
+    await nextTick()
+
+    expect(storage.get('tools:qr:ecc')?.value).toBe('L')
+    expect(storage.get('tools:qr:width')?.value).toBe(320)
+    expect(storage.get('tools:qr:margin')?.value).toBe(6)
+    expect(storage.get('tools:qr:dark')?.value).toBe('#111111FF')
+    expect(storage.get('tools:qr:light')?.value).toBe('#EEEEEEFF')
   })
 })
