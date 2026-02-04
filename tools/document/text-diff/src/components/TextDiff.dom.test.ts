@@ -262,6 +262,53 @@ describe('TextDiff', () => {
     )
   })
 
+  it('updates language and modified text via v-model', async () => {
+    const wrapper = await mountTextDiff()
+    const diffEditor = getDiffEditor(wrapper)
+
+    const select = wrapper.findComponent({ name: 'NSelect' })
+    select.vm.$emit('update:value', 'json')
+    await nextTick()
+
+    expect(diffEditor.props('language')).toBe('json')
+
+    diffEditor.vm.$emit('update:modelValue', 'updated')
+    await nextTick()
+
+    expect(diffEditor.props('modelValue')).toBe('updated')
+  })
+
+  it('provides Monaco workers for known labels', async () => {
+    await mountTextDiff()
+
+    const env = (
+      globalThis as {
+        self?: {
+          MonacoEnvironment?: { getWorker: (moduleId: unknown, label: string) => unknown }
+        }
+      }
+    ).self?.MonacoEnvironment
+    expect(env).toBeTruthy()
+
+    const labels = [
+      'json',
+      'css',
+      'scss',
+      'less',
+      'html',
+      'handlebars',
+      'razor',
+      'typescript',
+      'javascript',
+      'unknown',
+    ]
+
+    for (const label of labels) {
+      const worker = env!.getWorker({}, label)
+      expect(worker).toBeTruthy()
+    }
+  })
+
   it('disposes the editor on unmount', async () => {
     const wrapper = await mountTextDiff()
     wrapper.unmount()
