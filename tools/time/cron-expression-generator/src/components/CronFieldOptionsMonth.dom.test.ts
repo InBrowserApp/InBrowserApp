@@ -71,4 +71,25 @@ describe('CronFieldOptionsMonth', () => {
     expect(checkboxes).toHaveLength(12)
     expect(checkboxes[0]?.text()).toContain('jan')
   })
+
+  it('renders range selects for range mode', () => {
+    const wrapper = mount(CronFieldOptionsMonth, {
+      props: {
+        fieldConfig: {
+          gridCols: 6,
+        },
+        mode: 'range',
+        specificValues: [],
+        rangeStart: 1,
+        rangeEnd: 12,
+        'onUpdate:rangeStart': () => {},
+        'onUpdate:rangeEnd': () => {},
+      },
+    })
+
+    const selects = wrapper.findAllComponents({ name: 'NSelect' })
+    expect(selects).toHaveLength(2)
+    expect(wrapper.text()).toContain('from')
+    expect(wrapper.text()).toContain('to')
+  })
 })

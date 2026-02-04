@@ -49,4 +49,21 @@ describe('CronFieldIntervalControl', () => {
     expect(input.props('max')).toBe(60)
     expect(wrapper.text()).toContain('minutes')
   })
+
+  it('maps weekday units and interval bounds', () => {
+    const wrapper = mount(CronFieldIntervalControl, {
+      props: {
+        fieldConfig: {
+          min: 1,
+          max: 7,
+          unit: 'daysOfWeek',
+        },
+        intervalValue: 2,
+      },
+    })
+
+    const input = wrapper.findComponent({ name: 'NInputNumber' })
+    expect(input.props('max')).toBe(7)
+    expect(wrapper.text()).toContain('daysOfWeek')
+  })
 })

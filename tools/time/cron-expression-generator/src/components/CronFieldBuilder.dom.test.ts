@@ -27,6 +27,9 @@ const CronFieldModeSelectorStub = defineComponent({
   name: 'CronFieldModeSelector',
   props: ['mode'],
   emits: ['update:mode'],
+  mounted() {
+    this.$emit('update:mode', this.mode)
+  },
   template: '<div class="mode-selector" />',
 })
 
@@ -54,6 +57,8 @@ const CronFieldOptionsNumericStub = defineComponent({
     if (this.mode === 'specific') {
       this.$emit('update:specificValues', [5, 1, 3])
     }
+    this.$emit('update:rangeStart', 2)
+    this.$emit('update:rangeEnd', 7)
   },
   template: '<div class="options-numeric" />',
 })
@@ -61,12 +66,24 @@ const CronFieldOptionsNumericStub = defineComponent({
 const CronFieldOptionsMonthStub = defineComponent({
   name: 'CronFieldOptionsMonth',
   props: ['specificValues', 'rangeStart', 'rangeEnd', 'fieldConfig', 'mode'],
+  emits: ['update:specificValues', 'update:rangeStart', 'update:rangeEnd'],
+  mounted() {
+    this.$emit('update:specificValues', [1, 2])
+    this.$emit('update:rangeStart', 2)
+    this.$emit('update:rangeEnd', 4)
+  },
   template: '<div class="options-month" />',
 })
 
 const CronFieldOptionsWeekdayStub = defineComponent({
   name: 'CronFieldOptionsWeekday',
   props: ['specificValues', 'rangeStart', 'rangeEnd', 'fieldConfig', 'mode'],
+  emits: ['update:specificValues', 'update:rangeStart', 'update:rangeEnd'],
+  mounted() {
+    this.$emit('update:specificValues', [1, 3, 5])
+    this.$emit('update:rangeStart', 1)
+    this.$emit('update:rangeEnd', 5)
+  },
   template: '<div class="options-weekday" />',
 })
 
@@ -136,5 +153,104 @@ describe('CronFieldBuilder', () => {
     await nextTick()
     const emitted = wrapper.emitted('update:modelValue') ?? []
     expect(emitted[emitted.length - 1]).toEqual(['1,3,5'])
+  })
+
+  it('uses month options for range mode', () => {
+    const wrapper = mountBuilder({
+      fieldName: 'month',
+      modelValue: '2-4',
+    })
+
+    expect(wrapper.find('.options-month').exists()).toBe(true)
+  })
+
+  it('uses numeric options for range mode', () => {
+    const wrapper = mountBuilder({
+      fieldName: 'minute',
+      modelValue: '2-4',
+    })
+
+    expect(wrapper.find('.options-numeric').exists()).toBe(true)
+  })
+
+  it('emits wildcard when specific values are cleared', async () => {
+    const CronFieldOptionsNumericEmptyStub = defineComponent({
+      name: 'CronFieldOptionsNumeric',
+      props: ['specificValues', 'rangeStart', 'rangeEnd', 'fieldConfig', 'mode'],
+      emits: ['update:specificValues', 'update:rangeStart', 'update:rangeEnd'],
+      mounted() {
+        if (this.mode === 'specific') {
+          this.$emit('update:specificValues', [])
+        }
+      },
+      template: '<div class="options-numeric" />',
+    })
+
+    const wrapper = mount(CronFieldBuilder, {
+      props: {
+        fieldName: 'minute',
+        modelValue: '1',
+      },
+      global: {
+        stubs: {
+          CronFieldHeader: CronFieldHeaderStub,
+          CronFieldModeSelector: CronFieldModeSelectorStub,
+          CronFieldEveryDescription: CronFieldEveryDescriptionStub,
+          CronFieldIntervalControl: CronFieldIntervalControlStub,
+          CronFieldOptionsNumeric: CronFieldOptionsNumericEmptyStub,
+          CronFieldOptionsMonth: CronFieldOptionsMonthStub,
+          CronFieldOptionsWeekday: CronFieldOptionsWeekdayStub,
+        },
+      },
+    })
+
+    await nextTick()
+    const emitted = wrapper.emitted('update:modelValue') ?? []
+    expect(emitted[emitted.length - 1]).toEqual(['*'])
+  })
+
+  it('reacts to external model value changes', async () => {
+    const wrapper = mountBuilder({
+      fieldName: 'minute',
+      modelValue: '*',
+    })
+
+    await wrapper.setProps({ modelValue: '*/15' })
+    await nextTick()
+
+    expect(wrapper.find('.interval-control').exists()).toBe(true)
+  })
+
+  it('falls back for unknown modes', async () => {
+    const UnknownModeSelectorStub = defineComponent({
+      name: 'CronFieldModeSelector',
+      props: ['mode'],
+      emits: ['update:mode'],
+      mounted() {
+        this.$emit('update:mode', 'custom')
+      },
+      template: '<div class="mode-selector" />',
+    })
+
+    const wrapper = mount(CronFieldBuilder, {
+      props: {
+        fieldName: 'minute',
+        modelValue: '*',
+      },
+      global: {
+        stubs: {
+          CronFieldHeader: CronFieldHeaderStub,
+          CronFieldModeSelector: UnknownModeSelectorStub,
+          CronFieldEveryDescription: CronFieldEveryDescriptionStub,
+          CronFieldIntervalControl: CronFieldIntervalControlStub,
+          CronFieldOptionsNumeric: CronFieldOptionsNumericStub,
+          CronFieldOptionsMonth: CronFieldOptionsMonthStub,
+          CronFieldOptionsWeekday: CronFieldOptionsWeekdayStub,
+        },
+      },
+    })
+
+    await nextTick()
+    expect(wrapper.find('.every-description').exists()).toBe(false)
   })
 })

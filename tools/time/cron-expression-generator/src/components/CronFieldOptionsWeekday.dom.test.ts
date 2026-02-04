@@ -71,4 +71,25 @@ describe('CronFieldOptionsWeekday', () => {
     expect(checkboxes).toHaveLength(7)
     expect(checkboxes[0]?.text()).toContain('sun')
   })
+
+  it('renders range selects for range mode', () => {
+    const wrapper = mount(CronFieldOptionsWeekday, {
+      props: {
+        fieldConfig: {
+          gridCols: 7,
+        },
+        mode: 'range',
+        specificValues: [],
+        rangeStart: 1,
+        rangeEnd: 5,
+        'onUpdate:rangeStart': () => {},
+        'onUpdate:rangeEnd': () => {},
+      },
+    })
+
+    const selects = wrapper.findAllComponents({ name: 'NSelect' })
+    expect(selects).toHaveLength(2)
+    expect(wrapper.text()).toContain('from')
+    expect(wrapper.text()).toContain('to')
+  })
 })
