@@ -3,6 +3,7 @@ import { mount, flushPromises } from '@vue/test-utils'
 import { h } from 'vue'
 import { NMessageProvider, NTag } from 'naive-ui'
 import GitignoreGenerator from './GitignoreGenerator.vue'
+import { getTemplatesByCategory } from '../templates'
 
 const storageKey = 'tools:gitignore-generator:selected'
 
@@ -61,5 +62,75 @@ describe('GitignoreGenerator', () => {
     await flushPromises()
 
     expect((textarea.element as HTMLTextAreaElement).value).toBe('')
+  })
+
+  it('filters templates and expands categories when searching', async () => {
+    const wrapper = mount(TestWrapper)
+    const selector = wrapper.findComponent({ name: 'GitignoreTemplateSelector' })
+    const grouped = getTemplatesByCategory()
+    const toNames = (list: Array<{ name: string }>) => list.map((item) => item.name)
+    const filterNames = (list: Array<{ name: string }>, query: string) =>
+      list.filter((item) => item.name.toLowerCase().includes(query)).map((item) => item.name)
+
+    const testQueries = [
+      grouped.language[0]?.name,
+      grouped.global[0]?.name,
+      grouped.community[0]?.name,
+    ].filter((name): name is string => Boolean(name))
+
+    for (const name of testQueries) {
+      const query = name.toLowerCase()
+      await selector.vm.$emit('update:search-query', query)
+      await flushPromises()
+
+      const expectedLanguage = filterNames(grouped.language, query)
+      const expectedGlobal = filterNames(grouped.global, query)
+      const expectedCommunity = filterNames(grouped.community, query)
+
+      expect(
+        toNames(
+          selector.props('filteredLanguageTemplates') as Array<{
+            name: string
+          }>,
+        ),
+      ).toEqual(expectedLanguage)
+      expect(
+        toNames(
+          selector.props('filteredGlobalTemplates') as Array<{
+            name: string
+          }>,
+        ),
+      ).toEqual(expectedGlobal)
+      expect(
+        toNames(
+          selector.props('filteredCommunityTemplates') as Array<{
+            name: string
+          }>,
+        ),
+      ).toEqual(expectedCommunity)
+
+      const expectedExpanded: string[] = []
+      if (expectedLanguage.length) expectedExpanded.push('language')
+      if (expectedGlobal.length) expectedExpanded.push('global')
+      if (expectedCommunity.length) expectedExpanded.push('community')
+
+      expect(selector.props('expandedNames')).toEqual(expectedExpanded)
+    }
+  })
+
+  it('accepts v-model updates from the selector', async () => {
+    const wrapper = mount(TestWrapper)
+    const selector = wrapper.findComponent({ name: 'GitignoreTemplateSelector' })
+
+    await selector.vm.$emit('update:selected-templates', ['Node'])
+    await flushPromises()
+
+    const textarea = wrapper.find('textarea')
+    expect((textarea.element as HTMLTextAreaElement).value).toContain('### Node ###')
+
+    await selector.vm.$emit('update:expanded-names', ['global'])
+    await flushPromises()
+
+    expect(selector.props('expandedNames')).toEqual(['global'])
   })
 })

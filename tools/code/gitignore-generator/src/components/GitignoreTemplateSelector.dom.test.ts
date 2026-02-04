@@ -59,6 +59,13 @@ vi.mock('naive-ui', async () => {
 
   const NCollapse = defineComponent({
     name: 'NCollapse',
+    props: {
+      expandedNames: {
+        type: Array,
+        default: () => [],
+      },
+    },
+    emits: ['update:expanded-names'],
     template: '<div class="n-collapse"><slot /></div>',
   })
 
@@ -79,6 +86,13 @@ vi.mock('naive-ui', async () => {
 
   const NCheckboxGroup = defineComponent({
     name: 'NCheckboxGroup',
+    props: {
+      value: {
+        type: Array,
+        default: () => [],
+      },
+    },
+    emits: ['update:value'],
     template: '<div class="n-checkbox-group"><slot /></div>',
   })
 
@@ -145,6 +159,7 @@ const SelectedTemplatesStub = defineComponent({
       default: () => [],
     },
   },
+  emits: ['update:modelValue'],
   template: '<div class="selected-templates" />',
 })
 
@@ -286,5 +301,46 @@ describe('GitignoreTemplateSelector', () => {
     await nextTick()
 
     expect((wrapper.vm as { searchQuery: string }).searchQuery).toBe('node')
+  })
+
+  it('syncs v-model updates across sections', async () => {
+    const wrapper = mount(TestHarness, {
+      props: {
+        popularTemplateNames: ['Node'],
+        allTemplateNames: ['Node', 'Windows', 'Custom'],
+        filteredLanguageTemplates: [{ name: 'Node', path: 'Node.gitignore' }],
+        filteredGlobalTemplates: [{ name: 'Windows', path: 'Global/Windows.gitignore' }],
+        filteredCommunityTemplates: [{ name: 'Custom', path: 'community/Custom.gitignore' }],
+        templateIcons: { Node: {} },
+      },
+      global: {
+        stubs: {
+          SelectedTemplates: SelectedTemplatesStub,
+        },
+      },
+    })
+
+    const selected = wrapper.findComponent({ name: 'SelectedTemplates' })
+    await selected.vm.$emit('update:modelValue', ['Node'])
+    await nextTick()
+
+    expect((wrapper.vm as { selectedTemplates: string[] }).selectedTemplates).toEqual(['Node'])
+
+    const collapse = wrapper.findComponent({ name: 'NCollapse' })
+    await collapse.vm.$emit('update:expanded-names', ['language', 'global'])
+    await nextTick()
+
+    expect((wrapper.vm as { expandedNames: string[] }).expandedNames).toEqual([
+      'language',
+      'global',
+    ])
+
+    const groups = wrapper.findAllComponents({ name: 'NCheckboxGroup' })
+    await groups[0]!.vm.$emit('update:value', ['Node'])
+    await groups[1]!.vm.$emit('update:value', ['Windows'])
+    await groups[2]!.vm.$emit('update:value', ['Custom'])
+    await nextTick()
+
+    expect((wrapper.vm as { selectedTemplates: string[] }).selectedTemplates).toEqual(['Custom'])
   })
 })
