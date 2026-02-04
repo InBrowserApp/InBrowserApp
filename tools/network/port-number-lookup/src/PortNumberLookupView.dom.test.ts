@@ -34,6 +34,7 @@ const PortSearchStub = defineComponent({
       default: '',
     },
   },
+  emits: ['update:search', 'update:category'],
   template: '<div class="port-search" :data-search="search" :data-category="category" />',
 })
 
@@ -78,5 +79,32 @@ describe('PortNumberLookupView', () => {
     expect(table.attributes('data-search')).toBe('')
     expect(table.attributes('data-category')).toBe('all')
     expect(wrapper.find('.what-is-port').exists()).toBe(true)
+  })
+
+  it('syncs v-model updates from PortSearch into PortTable', async () => {
+    const wrapper = mount(PortNumberLookupView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: {
+            props: ['info'],
+            template: '<div class="layout"><slot /></div>',
+          },
+          PortSearch: PortSearchStub,
+          PortTable: PortTableStub,
+          WhatIsPort: {
+            template: '<div class="what-is-port" />',
+          },
+        },
+      },
+    })
+
+    const search = wrapper.findComponent(PortSearchStub)
+    await search.vm.$emit('update:search', 'ssh')
+    await search.vm.$emit('update:category', 'system')
+    await wrapper.vm.$nextTick()
+
+    const table = wrapper.find('.port-table')
+    expect(table.attributes('data-search')).toBe('ssh')
+    expect(table.attributes('data-category')).toBe('system')
   })
 })

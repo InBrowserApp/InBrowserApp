@@ -78,13 +78,31 @@ vi.mock('naive-ui', async () => {
         type: Object,
         default: () => ({}),
       },
+      rowKey: {
+        type: Function,
+        default: undefined,
+      },
     },
     template: '<div class="data-table" />',
   })
 
   const NTag = defineComponent({
     name: 'NTag',
-    template: '<span class="tag"><slot /></span>',
+    props: {
+      type: {
+        type: String,
+        default: '',
+      },
+      size: {
+        type: String,
+        default: '',
+      },
+      bordered: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    template: '<span class="tag" :data-type="type"><slot /></span>',
   })
 
   return {
@@ -120,6 +138,23 @@ describe('PortTable', () => {
     expect(data.map((port) => port.port)).toEqual([22, 5432])
   })
 
+  it('filters system and registered categories', async () => {
+    const wrapper = mount(PortTable, {
+      props: {
+        search: '',
+        category: 'system',
+      },
+    })
+
+    const table = wrapper.findComponent({ name: 'NDataTable' })
+    let data = table.props('data') as typeof mockPorts
+    expect(data.map((port) => port.port)).toEqual([22, 53])
+
+    await wrapper.setProps({ category: 'registered' })
+    data = table.props('data') as typeof mockPorts
+    expect(data.map((port) => port.port)).toEqual([5432])
+  })
+
   it('filters by search term', () => {
     const wrapper = mount(PortTable, {
       props: {
@@ -131,5 +166,51 @@ describe('PortTable', () => {
     const table = wrapper.findComponent({ name: 'NDataTable' })
     const data = table.props('data') as typeof mockPorts
     expect(data.map((port) => port.port)).toEqual([53])
+  })
+
+  it('uses row keys and renders column cells', () => {
+    const wrapper = mount(PortTable, {
+      props: {
+        search: '',
+        category: 'all',
+      },
+    })
+
+    const table = wrapper.findComponent({ name: 'NDataTable' })
+    const rowKey = table.props('rowKey') as (row: (typeof mockPorts)[number]) => number
+    const columns = table.props('columns') as Array<{
+      key: string
+      render?: (row: (typeof mockPorts)[number]) => unknown
+    }>
+
+    expect(rowKey(mockPorts[0]!)).toBe(22)
+
+    const portColumn = columns.find((column) => column.key === 'port')
+    const portCell = mount({ render: () => portColumn?.render?.(mockPorts[0]!) })
+    expect(portCell.find('.copy').exists()).toBe(true)
+    expect(portCell.text()).toContain('22')
+
+    const serviceColumn = columns.find((column) => column.key === 'service')
+    const serviceCell = mount({ render: () => serviceColumn?.render?.(mockPorts[0]!) })
+    expect(serviceCell.text()).toBe('SSH')
+
+    const protocolColumn = columns.find((column) => column.key === 'protocol')
+    const tcpCell = mount({ render: () => protocolColumn?.render?.(mockPorts[0]!) })
+    expect(tcpCell.find('.tag').attributes('data-type')).toBe('success')
+    expect(tcpCell.text()).toBe('TCP')
+
+    const udpCell = mount({ render: () => protocolColumn?.render?.(mockPorts[1]!) })
+    expect(udpCell.find('.tag').attributes('data-type')).toBe('warning')
+    expect(udpCell.text()).toBe('UDP')
+
+    const otherCell = mount({
+      render: () =>
+        protocolColumn?.render?.({
+          ...mockPorts[0]!,
+          protocol: 'SCTP',
+        }),
+    })
+    expect(otherCell.find('.tag').attributes('data-type')).toBe('info')
+    expect(otherCell.text()).toBe('SCTP')
   })
 })
