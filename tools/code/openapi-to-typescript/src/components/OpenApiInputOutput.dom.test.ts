@@ -167,4 +167,22 @@ describe('OpenApiInputOutput', () => {
     expect(wrapper.text()).toContain('Something went wrong')
     expect(wrapper.find('[data-testid="alert"]').exists()).toBe(true)
   })
+
+  it('renders input validation feedback', () => {
+    const wrapper = mount(OpenApiInputOutput, {
+      props: {
+        openApiText: 'openapi',
+        accept: '.json',
+        inputError: 'Input error',
+        inputStatus: 'error',
+        outputError: '',
+        outputText: '',
+        externalRefs: [],
+        isGenerating: false,
+        handleInput: vi.fn(),
+      },
+    })
+
+    expect(wrapper.text()).toContain('Input error')
+  })
 })

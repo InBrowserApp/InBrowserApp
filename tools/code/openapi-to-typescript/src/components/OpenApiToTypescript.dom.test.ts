@@ -399,6 +399,15 @@ describe('OpenApiToTypescript', () => {
     expect(getInputOutput(wrapper).props('inputError')).toBe('unsupportedVersion')
   })
 
+  it('falls back to invalid document for unknown parse results', async () => {
+    parseOpenApiDocumentMock.mockImplementation(() => ({ ok: false, code: 'mystery' }))
+
+    const wrapper = mount(OpenApiToTypescript)
+    await flushPromises()
+
+    expect(getInputOutput(wrapper).props('inputError')).toBe('invalidDocument')
+  })
+
   it('shows external ref errors', async () => {
     const wrapper = mount(OpenApiToTypescript)
     await flushPromises()
@@ -465,6 +474,39 @@ describe('OpenApiToTypescript', () => {
     expect(getInputOutput(wrapper).props('openApiText')).toBe('')
   })
 
+  it('syncs option and modal v-model updates', async () => {
+    const wrapper = mount(OpenApiToTypescript)
+    await flushPromises()
+
+    const options = wrapper.getComponent({ name: 'OpenApiOptions' })
+    const updates: Array<[string, boolean]> = [
+      ['update:additionalProperties', true],
+      ['update:defaultNonNullable', false],
+      ['update:propertiesRequiredByDefault', true],
+      ['update:exportType', true],
+      ['update:enumOutput', true],
+      ['update:pathParamsAsTypes', true],
+      ['update:rootTypes', true],
+      ['update:makePathsEnum', true],
+      ['update:generatePathParams', true],
+      ['update:immutable', true],
+      ['update:excludeDeprecated', true],
+      ['update:includeHeader', false],
+    ]
+
+    for (const [eventName, value] of updates) {
+      options.vm.$emit(eventName, value)
+    }
+
+    getModal(wrapper).vm.$emit('update:show', true)
+    await flushPromises()
+
+    expect(options.props('additionalProperties')).toBe(true)
+    expect(options.props('defaultNonNullable')).toBe(false)
+    expect(options.props('includeHeader')).toBe(false)
+    expect(getModal(wrapper).props('show')).toBe(true)
+  })
+
   it('validates and imports from URL', async () => {
     const fetchMock = vi.fn()
     vi.stubGlobal('fetch', fetchMock)
@@ -478,7 +520,7 @@ describe('OpenApiToTypescript', () => {
     let modal = getModal(wrapper)
     expect(modal.props('show')).toBe(true)
 
-    await modal.props('onConfirm')()
+    await modal.props('onEnter')({ isComposing: false } as KeyboardEvent)
     await flushPromises()
     modal = getModal(wrapper)
     expect(modal.props('importUrlError')).toBe('importUrlEmptyError')

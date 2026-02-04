@@ -53,6 +53,7 @@ vi.mock('naive-ui', async () => {
           default: false,
         },
       },
+      emits: ['update:show'],
       template: '<div data-testid="modal" :data-show="show"><slot /><slot name="footer" /></div>',
     }),
     NSpace: defineComponent({
@@ -92,6 +93,9 @@ describe('OpenApiImportUrlModal', () => {
     expect(wrapper.get('[data-testid="modal"]').attributes('data-show')).toBe('true')
     expect(wrapper.text()).toContain('importUrlWarning')
     expect(wrapper.text()).toContain('Invalid URL')
+
+    wrapper.getComponent({ name: 'NModal' }).vm.$emit('update:show', false)
+    expect(wrapper.emitted('update:show')?.[0]).toEqual([false])
 
     await wrapper.get('input').setValue('https://example.com/openapi.yaml')
     expect(onUpdateInput).toHaveBeenCalledWith('https://example.com/openapi.yaml')

@@ -65,7 +65,7 @@ vi.mock('naive-ui', async () => {
               'data-disabled': props.disabled ? 'true' : 'false',
               onClick: () => emit('click'),
             },
-            slots.default?.(),
+            [slots.icon?.(), slots.default?.()],
           )
       },
     }),
