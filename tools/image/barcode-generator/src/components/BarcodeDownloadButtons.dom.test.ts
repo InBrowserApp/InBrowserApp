@@ -18,8 +18,25 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Code16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Image16Regular', () => ({ default: {} }))
+vi.mock('@vicons/fluent/Code16Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'CodeIcon',
+      template: '<svg class="code-icon" />',
+    }),
+  }
+})
+
+vi.mock('@vicons/fluent/Image16Regular', async () => {
+  const { defineComponent } = await import('vue')
+  return {
+    default: defineComponent({
+      name: 'ImageIcon',
+      template: '<svg class="image-icon" />',
+    }),
+  }
+})
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
@@ -31,7 +48,7 @@ vi.mock('naive-ui', async () => {
 
   const NIcon = defineComponent({
     name: 'NIcon',
-    template: '<span />',
+    template: '<span><slot /></span>',
   })
 
   const NButton = defineComponent({
@@ -58,7 +75,7 @@ vi.mock('naive-ui', async () => {
         default: false,
       },
     },
-    template: '<a><slot /></a>',
+    template: '<a><slot name="icon" /><slot /></a>',
   })
 
   return {
@@ -115,13 +132,16 @@ describe('BarcodeDownloadButtons', () => {
       props: baseProps,
     })
 
+    await wrapper.setProps({ text: 'UPDATED' })
     await vi.runAllTimersAsync()
     await flushPromises()
 
-    expect(jsBarcodeMock.fn).toHaveBeenCalled()
+    expect(jsBarcodeMock.fn).toHaveBeenCalledTimes(4)
 
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
     expect(buttons).toHaveLength(2)
+    expect(wrapper.find('.image-icon').exists()).toBe(true)
+    expect(wrapper.find('.code-icon').exists()).toBe(true)
 
     const firstProps = buttons[0]?.props() as Record<string, unknown>
     expect(firstProps.href).toBe('blob:mock')
