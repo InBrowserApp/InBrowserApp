@@ -5,6 +5,24 @@ import { NCode, NMessageProvider } from 'naive-ui'
 import JsonToTomlConverter from './JsonToTomlConverter.vue'
 
 const fileOpenMock = vi.fn()
+const objectUrlState = { value: 'available' as 'available' | 'missing' }
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { computed, isRef } = await import('vue')
+
+  return {
+    ...actual,
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        if (objectUrlState.value === 'missing') {
+          return null
+        }
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:download' : null
+      }),
+  }
+})
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -22,6 +40,7 @@ const getRenderedToml = (wrapper: ReturnType<typeof mount>) =>
 describe('JsonToTomlConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlState.value = 'available'
   })
 
   it('renders TOML from the default JSON', () => {
@@ -43,6 +62,14 @@ describe('JsonToTomlConverter', () => {
     await flushPromises()
 
     expect(getRenderedToml(wrapper)).toMatch(/^# Invalid JSON/)
+  })
+
+  it('omits download href when no object url is available', () => {
+    objectUrlState.value = 'missing'
+    const wrapper = mount(TestWrapper)
+    const link = wrapper.find('a[download=\"converted.toml\"]')
+
+    expect(link.attributes('href')).toBeUndefined()
   })
 
   it('imports JSON from a file selection', async () => {
