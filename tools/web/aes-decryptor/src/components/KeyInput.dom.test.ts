@@ -24,6 +24,11 @@ vi.mock('naive-ui', async () => {
   const Base = defineComponent({
     template: '<div class="base"><slot /></div>',
   })
+  const NRadioGroup = defineComponent({
+    name: 'NRadioGroup',
+    emits: ['update:value'],
+    template: '<div class="n-radio-group"><slot /></div>',
+  })
   const NInput = defineComponent({
     name: 'NInput',
     props: {
@@ -32,6 +37,7 @@ vi.mock('naive-ui', async () => {
         default: undefined,
       },
     },
+    emits: ['update:value'],
     template: '<input class="n-input" :data-status="status" />',
   })
   const NText = defineComponent({
@@ -46,7 +52,7 @@ vi.mock('naive-ui', async () => {
   })
   return {
     NSpace: Base,
-    NRadioGroup: Base,
+    NRadioGroup,
     NRadioButton: Base,
     NInput,
     NText,
@@ -123,5 +129,64 @@ describe('KeyInput', () => {
     const input = wrapper.find('.n-input')
     expect(input.attributes('data-status')).toBe('success')
     expect(wrapper.text()).not.toContain('wrongKeyLength')
+  })
+
+  it('keeps raw key status empty when no raw key is provided', () => {
+    const wrapper = mount(KeyInput, {
+      props: {
+        keyLength: 128,
+        keyType: 'raw',
+        password: '',
+        rawKey: '',
+        'onUpdate:keyType': () => {},
+        'onUpdate:password': () => {},
+        'onUpdate:rawKey': () => {},
+      },
+    })
+
+    const input = wrapper.find('.n-input')
+    expect(input.attributes('data-status')).toBe(undefined)
+    expect(wrapper.text()).not.toContain('invalidHex')
+    expect(wrapper.text()).not.toContain('wrongKeyLength')
+  })
+
+  it('emits updates for key type and inputs', () => {
+    const onUpdateKeyType = vi.fn()
+    const onUpdatePassword = vi.fn()
+    const onUpdateRawKey = vi.fn()
+
+    const passwordWrapper = mount(KeyInput, {
+      props: {
+        keyLength: 128,
+        keyType: 'password',
+        password: 'secret',
+        rawKey: '',
+        'onUpdate:keyType': onUpdateKeyType,
+        'onUpdate:password': onUpdatePassword,
+        'onUpdate:rawKey': () => {},
+      },
+    })
+
+    passwordWrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'raw')
+    passwordWrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'next')
+
+    expect(onUpdateKeyType).toHaveBeenCalledWith('raw')
+    expect(onUpdatePassword).toHaveBeenCalledWith('next')
+
+    const rawWrapper = mount(KeyInput, {
+      props: {
+        keyLength: 128,
+        keyType: 'raw',
+        password: '',
+        rawKey: 'aa',
+        'onUpdate:keyType': () => {},
+        'onUpdate:password': () => {},
+        'onUpdate:rawKey': onUpdateRawKey,
+      },
+    })
+
+    rawWrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'beef')
+
+    expect(onUpdateRawKey).toHaveBeenCalledWith('beef')
   })
 })

@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import DecryptResult from './DecryptResult.vue'
 
 vi.mock('vue-i18n', async () => {
@@ -29,7 +29,13 @@ vi.mock('@shared/ui/base', () => ({
 }))
 
 vi.mock('@vueuse/core', () => ({
-  useObjectUrl: (value: Blob | null) => ref(value ? `blob:${value.type}` : null),
+  useObjectUrl: (value: unknown) => {
+    const resolved =
+      value && typeof value === 'object' && 'value' in value
+        ? (value as { value: Blob | null }).value
+        : (value as Blob | null)
+    return ref(resolved ? `blob:${resolved.type}` : null)
+  },
 }))
 
 vi.mock('naive-ui', async () => {
@@ -62,7 +68,7 @@ vi.mock('naive-ui', async () => {
       },
     },
     template:
-      '<button class="n-button" :data-download="download" :data-href="href" :data-disabled="disabled"><slot /></button>',
+      '<button class="n-button" :data-download="download" :data-href="href" :data-disabled="disabled"><slot name="icon" /><slot /></button>',
   })
   const NPopover = defineComponent({
     name: 'NPopover',
@@ -70,6 +76,13 @@ vi.mock('naive-ui', async () => {
   })
   const NTabs = defineComponent({
     name: 'NTabs',
+    props: {
+      value: {
+        type: String,
+        default: '',
+      },
+    },
+    emits: ['update:value'],
     template: '<div class="n-tabs"><slot /></div>',
   })
   const NTabPane = defineComponent({
@@ -135,5 +148,42 @@ describe('DecryptResult', () => {
 
     expect(downloads).toContain('decrypted.txt')
     expect(downloads).toContain('decrypted.bin')
+  })
+
+  it('switches copy content when changing tabs', async () => {
+    const wrapper = mount(DecryptResult, {
+      props: {
+        result: 'hello',
+        resultHex: '6869',
+        resultBinary: null,
+        error: '',
+      },
+    })
+
+    const tabs = wrapper.findComponent({ name: 'NTabs' })
+    tabs.vm.$emit('update:value', 'hex')
+    await nextTick()
+
+    const copyButton = wrapper.find('.copy-button')
+    expect(copyButton.attributes('data-content')).toBe('6869')
+  })
+
+  it('renders only text download when binary output is missing', () => {
+    const wrapper = mount(DecryptResult, {
+      props: {
+        result: 'hello',
+        resultHex: '6869',
+        resultBinary: null,
+        error: '',
+      },
+    })
+
+    const downloadButtons = wrapper
+      .findAll('button[data-download]')
+      .filter((button) => button.attributes('data-download'))
+
+    const downloads = downloadButtons.map((button) => button.attributes('data-download'))
+
+    expect(downloads).toEqual(['decrypted.txt'])
   })
 })

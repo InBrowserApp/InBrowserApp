@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
 import DecryptOptions from './DecryptOptions.vue'
 
 vi.mock('vue-i18n', async () => {
@@ -70,5 +71,38 @@ describe('DecryptOptions', () => {
     })
 
     expect(wrapper.find('.tool-section').exists()).toBe(false)
+  })
+
+  it('emits updates when changing options', async () => {
+    const onUpdateMode = vi.fn()
+    const onUpdateKeyLength = vi.fn()
+    const onUpdateInputFormat = vi.fn()
+
+    const wrapper = mount(DecryptOptions, {
+      props: {
+        isJweMode: false,
+        mode: 'GCM',
+        keyLength: 256,
+        inputFormat: 'base64',
+        'onUpdate:mode': onUpdateMode,
+        'onUpdate:keyLength': onUpdateKeyLength,
+        'onUpdate:inputFormat': onUpdateInputFormat,
+      },
+    })
+
+    const groups = wrapper.findAllComponents({ name: 'NRadioGroup' })
+    expect(groups).toHaveLength(3)
+
+    const [modeGroup, keyLengthGroup, formatGroup] = groups
+
+    modeGroup!.vm.$emit('update:value', 'CBC')
+    keyLengthGroup!.vm.$emit('update:value', 128)
+    formatGroup!.vm.$emit('update:value', 'hex')
+
+    await nextTick()
+
+    expect(onUpdateMode).toHaveBeenCalledWith('CBC')
+    expect(onUpdateKeyLength).toHaveBeenCalledWith(128)
+    expect(onUpdateInputFormat).toHaveBeenCalledWith('hex')
   })
 })
