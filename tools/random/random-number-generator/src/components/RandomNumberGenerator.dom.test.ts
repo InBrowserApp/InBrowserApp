@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 
 const useRandomNumberGeneratorMock = vi.hoisted(() => vi.fn())
 
@@ -65,7 +65,7 @@ describe('RandomNumberGenerator', () => {
     template: '<div data-testid="fullscreen" />',
   }
 
-  it('wires composable state into child components', () => {
+  it('wires composable state into child components', async () => {
     const state = {
       minValue: ref(1),
       maxValue: ref(6),
@@ -120,6 +120,34 @@ describe('RandomNumberGenerator', () => {
     expect(history.props('historyEntries')).toHaveLength(1)
 
     expect(wrapper.findComponent(FullscreenStub).exists()).toBe(false)
+
+    options.vm.$emit('update:minValue', 4)
+    options.vm.$emit('update:maxValue', 9)
+    options.vm.$emit('update:count', 3)
+    options.vm.$emit('update:allowRepeat', false)
+    options.vm.$emit('update:numberType', 'decimal')
+    options.vm.$emit('update:decimalPlaces', 2)
+    options.vm.$emit('apply-preset', 'dice')
+
+    results.vm.$emit('toggle-rolling')
+    results.vm.$emit('open-fullscreen')
+    history.vm.$emit('clear-history')
+
+    await nextTick()
+
+    expect(state.minValue.value).toBe(4)
+    expect(state.maxValue.value).toBe(9)
+    expect(state.count.value).toBe(3)
+    expect(state.allowRepeat.value).toBe(false)
+    expect(state.numberType.value).toBe('decimal')
+    expect(state.decimalPlaces.value).toBe(2)
+    expect(state.applyPreset).toHaveBeenCalledWith('dice')
+    expect(state.toggleRolling).toHaveBeenCalled()
+    expect(state.openFullscreen).toHaveBeenCalled()
+    expect(state.clearHistory).toHaveBeenCalled()
+
+    const messages = useRandomNumberGeneratorMock.mock.calls[0]?.[0]
+    expect(messages?.stopRandom()).toBe('stopRandom')
   })
 
   it('shows fullscreen panel when enabled', () => {
