@@ -39,6 +39,8 @@ describe('palette-export', () => {
   it('builds file names and mime types', () => {
     expect(getExportFileName('sample.png', 'css')).toBe('sample.css')
     expect(getExportFileName('palette', 'json')).toBe('palette.json')
+    expect(getExportFileName('   .png', 'hex')).toBe('palette.txt')
     expect(getExportMimeType('json')).toBe('application/json')
+    expect(getExportMimeType('hex')).toBe('text/plain')
   })
 })

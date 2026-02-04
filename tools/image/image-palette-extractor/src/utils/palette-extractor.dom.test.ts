@@ -16,6 +16,21 @@ const makeImageData = () =>
         height: 1,
       } as ImageData)
 
+const makeSvgFile = (svg: string, name = 'icon.svg') =>
+  ({
+    name,
+    type: 'image/svg+xml',
+    text: vi.fn().mockResolvedValue(svg),
+  }) as unknown as File
+
+const setMockImage = (ImageClass: typeof Image) => {
+  vi.stubGlobal('Image', ImageClass)
+  const globalWindow = (globalThis as { window?: { Image?: typeof Image } }).window
+  if (globalWindow) {
+    globalWindow.Image = ImageClass
+  }
+}
+
 beforeEach(() => {
   HTMLCanvasElement.prototype.getContext = vi.fn().mockReturnValue({
     drawImage: vi.fn(),
@@ -33,6 +48,7 @@ afterEach(() => {
   HTMLCanvasElement.prototype.getContext = originalGetContext
   URL.createObjectURL = originalCreateObjectURL
   URL.revokeObjectURL = originalRevokeObjectURL
+  vi.unstubAllGlobals()
   vi.restoreAllMocks()
 })
 
@@ -86,7 +102,7 @@ describe('palette-extractor', () => {
       }
     }
 
-    globalThis.Image = MockImage as unknown as typeof Image
+    setMockImage(MockImage as unknown as typeof Image)
 
     const file = new File(['data'], 'fallback.png', { type: 'image/png' })
     const result = await loadImageData(file, 200)
@@ -117,7 +133,7 @@ describe('palette-extractor', () => {
       }
     }
 
-    globalThis.Image = MockImage as unknown as typeof Image
+    setMockImage(MockImage as unknown as typeof Image)
 
     const svg = '<svg viewBox="0 0 320 200"></svg>'
     const file = {
@@ -157,7 +173,7 @@ describe('palette-extractor', () => {
       }
     }
 
-    globalThis.Image = MockImage as unknown as typeof Image
+    setMockImage(MockImage as unknown as typeof Image)
 
     const svg = '<svg width="0" height="0"></svg>'
     const file = new File([svg], 'empty.svg', { type: 'image/svg+xml' })
@@ -174,6 +190,31 @@ describe('palette-extractor', () => {
     expect(result.width).toBe(300)
     expect(result.height).toBe(150)
     expect(context.drawImage).toHaveBeenCalledWith(expect.any(Object), 0, 0, 100, 50)
+  })
+
+  it('returns fallback size when svg tag is missing', async () => {
+    URL.createObjectURL = vi.fn(() => 'blob:svg')
+    URL.revokeObjectURL = vi.fn()
+
+    class MockImage {
+      onload: (() => void) | null = null
+      onerror: (() => void) | null = null
+      naturalWidth = 0
+      naturalHeight = 0
+      width = 0
+      height = 0
+      set src(_value: string) {
+        this.onload?.()
+      }
+    }
+
+    setMockImage(MockImage as unknown as typeof Image)
+
+    const file = makeSvgFile('<div>not svg</div>', 'broken.svg')
+    const result = await loadImageData(file, 200)
+
+    expect(result.width).toBe(300)
+    expect(result.height).toBe(150)
   })
 
   it('throws when canvas context is unavailable', async () => {
@@ -204,7 +245,7 @@ describe('palette-extractor', () => {
       }
     }
 
-    globalThis.Image = MockImage as unknown as typeof Image
+    setMockImage(MockImage as unknown as typeof Image)
 
     const file = new File(['data'], 'broken.png', { type: 'image/png' })
 
