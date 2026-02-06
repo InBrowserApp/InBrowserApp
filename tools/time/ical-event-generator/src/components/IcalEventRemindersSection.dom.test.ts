@@ -88,7 +88,10 @@ describe('IcalEventRemindersSection', () => {
     const wrapper = mount(IcalEventRemindersSection, {
       props: {
         remindersEnabled: false,
-        reminders: [{ amount: 15, unit: 'minutes', description: '' }],
+        reminders: [
+          { amount: 15, unit: 'minutes', description: '' },
+          { amount: 5, unit: 'hours', description: 'second' },
+        ],
       },
     })
     const getReminderEmits = () => wrapper.emitted('update:reminders') as Array<[ReminderForm[]]>
@@ -103,6 +106,13 @@ describe('IcalEventRemindersSection', () => {
 
     await wrapper.setProps({ remindersEnabled: true })
 
+    wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', undefined)
+    await nextTick()
+
+    const fallbackUpdate = getReminderEmits().slice(-1)[0]![0]
+    expect(fallbackUpdate[0]).toMatchObject({ amount: 1 })
+    expect(fallbackUpdate[1]).toMatchObject({ amount: 5, unit: 'hours', description: 'second' })
+
     wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 30)
     wrapper.findComponent({ name: 'NSelect' }).vm.$emit('update:value', 'hours')
     wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'Ping')
@@ -112,6 +122,7 @@ describe('IcalEventRemindersSection', () => {
 
     const lastUpdate = updates![updates!.length - 1]![0]
     expect(lastUpdate[0]).toMatchObject({ amount: 30, unit: 'hours', description: 'Ping' })
+    expect(lastUpdate[1]).toMatchObject({ amount: 5, unit: 'hours', description: 'second' })
 
     const addButton = wrapper.findAll('button').find((button) => {
       return button.text().includes('add-reminder')
@@ -119,7 +130,7 @@ describe('IcalEventRemindersSection', () => {
     await addButton!.trigger('click')
 
     const addUpdate = getReminderEmits().slice(-1)[0]![0]
-    expect(addUpdate).toHaveLength(2)
+    expect(addUpdate).toHaveLength(3)
 
     const removeButton = wrapper.findAll('button').find((button) => {
       return button.text().includes('remove')
@@ -127,6 +138,6 @@ describe('IcalEventRemindersSection', () => {
     await removeButton!.trigger('click')
 
     const removeUpdate = getReminderEmits().slice(-1)[0]![0]
-    expect(removeUpdate).toHaveLength(1)
+    expect(removeUpdate).toHaveLength(2)
   })
 })
