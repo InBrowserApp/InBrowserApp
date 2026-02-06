@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
 const fileOpenMock = vi.fn()
+const objectUrlState = { value: 'available' as 'available' | 'missing' }
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -13,7 +14,7 @@ vi.mock('@vueuse/core', async () => {
   return {
     ...actual,
     useObjectUrl: (source: unknown) => {
-      const url = ref('blob:mock')
+      const url = ref(objectUrlState.value === 'missing' ? null : 'blob:mock')
       watchEffect(() => {
         if (isRef(source)) {
           return void source.value
@@ -56,6 +57,7 @@ const getMarkdown = (wrapper: ReturnType<typeof mount>) =>
 describe('HtmlToMarkdownConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlState.value = 'available'
   })
 
   it('converts html input to markdown and updates clipboard content', async () => {
@@ -101,5 +103,14 @@ describe('HtmlToMarkdownConverter', () => {
     const link = wrapper.find('a[download="converted.md"]')
 
     expect(link.attributes('href')).toBe('blob:mock')
+  })
+
+  it('omits the download href when object url is unavailable', () => {
+    objectUrlState.value = 'missing'
+
+    const wrapper = mount(HtmlToMarkdownConverter, mountOptions)
+    const link = wrapper.find('a[download="converted.md"]')
+
+    expect(link.attributes('href')).toBeUndefined()
   })
 })
