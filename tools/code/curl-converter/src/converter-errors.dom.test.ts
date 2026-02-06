@@ -10,6 +10,9 @@ const mockTarget: CurlTargetConfig = {
     if (curlCommand.includes('boom')) {
       throw new Error('Boom')
     }
+    if (curlCommand.includes('raw')) {
+      throw 'raw'
+    }
     const payload = { echo: curlCommand } as unknown as string
     return [payload, [['WARN', 'Check input']]]
   },
@@ -44,5 +47,13 @@ describe('convertCurlToTarget error handling', () => {
     expect(result.output).toBe('')
     expect(result.warnings).toEqual([])
     expect(result.error).toBe('Boom')
+  })
+
+  it('uses fallback error for non-Error throws', () => {
+    const result = convertCurlToTarget('raw', 'mock')
+
+    expect(result.output).toBe('')
+    expect(result.warnings).toEqual([])
+    expect(result.error).toBe('Failed to parse cURL command.')
   })
 })

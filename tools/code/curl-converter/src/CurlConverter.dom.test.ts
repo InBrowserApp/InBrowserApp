@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const storage = new Map<string, ReturnType<typeof import('vue').ref>>()
 let targetOverride: string | null = null
+let objectUrlValue: string | null = 'blob:download'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
@@ -17,7 +18,12 @@ vi.mock('@vueuse/core', async () => {
       }
       return storage.get(key)!
     },
-    useObjectUrl: () => ref('blob:download'),
+    useObjectUrl: (blobLike: unknown) => {
+      if (blobLike && typeof blobLike === 'object' && 'value' in blobLike) {
+        void (blobLike as { value: unknown }).value
+      }
+      return ref(objectUrlValue)
+    },
   }
 })
 
@@ -83,7 +89,8 @@ vi.mock('naive-ui', async () => {
           default: undefined,
         },
       },
-      template: '<component :is="tag || \'button\'" v-bind="$attrs"><slot /></component>',
+      template:
+        '<component :is="tag || \'button\'" v-bind="$attrs"><slot name="icon" /><slot /></component>',
     }),
     NCard: defineComponent({
       name: 'NCard',
@@ -151,6 +158,7 @@ describe('CurlConverter', () => {
   beforeEach(() => {
     storage.clear()
     targetOverride = null
+    objectUrlValue = 'blob:download'
   })
 
   it('renders default output and download link', () => {
@@ -236,5 +244,24 @@ describe('CurlConverter', () => {
 
     const select = wrapper.findComponent({ name: 'NSelect' })
     expect(select.attributes('data-value')).toBe('javascript-fetch')
+  })
+
+  it('uses plaintext defaults when current target is unknown', async () => {
+    objectUrlValue = null
+    const wrapper = mount(CurlConverter)
+    const select = wrapper.findComponent({ name: 'NSelect' })
+
+    await select.vm.$emit('update:value', 'unknown-target')
+    await nextTick()
+
+    const code = wrapper.get('[data-testid="output-code"]')
+    expect(code.attributes('data-language')).toBe('plaintext')
+
+    const labels = wrapper.findAll('[data-label]')
+    expect(labels.some((label) => label.text() === 'output-code')).toBe(true)
+
+    const download = wrapper.get('a')
+    expect(download.attributes('download')).toBe('converted.txt')
+    expect(download.attributes('href')).toBeUndefined()
   })
 })
