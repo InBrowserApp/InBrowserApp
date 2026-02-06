@@ -5,6 +5,17 @@ import { NCode, NMessageProvider } from 'naive-ui'
 import JsonToYamlBuilder from './JsonToYamlBuilder.vue'
 
 const fileOpenMock = vi.fn()
+let objectUrlValue: string | undefined = 'blob:mock'
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { ref } = await import('vue')
+
+  return {
+    ...actual,
+    useObjectUrl: () => ref(objectUrlValue),
+  }
+})
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -22,6 +33,7 @@ const getRenderedYaml = (wrapper: ReturnType<typeof mount>) =>
 describe('JsonToYamlBuilder', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlValue = 'blob:mock'
   })
 
   it('renders YAML from the default JSON', () => {
@@ -53,6 +65,15 @@ describe('JsonToYamlBuilder', () => {
     const renderedYaml = getRenderedYaml(wrapper)
     expect(renderedYaml).toContain('hello: world')
     expect(renderedYaml).toContain('items:')
+  })
+
+  it('omits download href when object URL is unavailable', async () => {
+    objectUrlValue = undefined
+    const wrapper = mount(TestWrapper)
+    await flushPromises()
+
+    const downloadLink = wrapper.find('a[download="converted.yaml"]')
+    expect(downloadLink.attributes('href')).toBeUndefined()
   })
 
   it('imports JSON from a file selection', async () => {
