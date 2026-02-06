@@ -92,6 +92,30 @@ describe('ColorConverter', () => {
 
     expect(hsl.props('rgba')).toEqual({ r: 9, g: 8, b: 7, a: 1 })
 
+    const updateEmitters = [
+      'HexColorPicker',
+      'RgbColorPicker',
+      'HslColorPicker',
+      'HsvColorPicker',
+      'HwbColorInput',
+      'LabColorInput',
+      'LchColorInput',
+      'CmykColorInput',
+      'KeywordSelect',
+    ]
+
+    for (const [index, name] of updateEmitters.entries()) {
+      const nextColor = {
+        r: 20 + index,
+        g: 40 + index,
+        b: 60 + index,
+        a: 0.1 * ((index % 5) + 1),
+      }
+      wrapper.findComponent({ name }).vm.$emit('update:rgba', nextColor)
+      await nextTick()
+      expect(wrapper.findComponent({ name: 'HexColorPicker' }).props('rgba')).toEqual(nextColor)
+    }
+
     wrapper.findComponent({ name: 'NSwitch' }).vm.$emit('update:value', true)
     await nextTick()
 

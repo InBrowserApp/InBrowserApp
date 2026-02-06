@@ -98,4 +98,22 @@ describe('KeywordSelect', () => {
     expect(vnode).toBeTruthy()
     expect(vnode.props?.style).toBeDefined()
   })
+
+  it('ignores unknown keywords and uses transparent swatches as fallback', async () => {
+    const onUpdate = vi.fn()
+    const wrapper = mountKeyword({ r: 0, g: 0, b: 0, a: 0.3 }, onUpdate)
+
+    await wrapper.find('select').setValue('__unknown__')
+    await nextTick()
+    expect(onUpdate).not.toHaveBeenCalled()
+
+    const select = wrapper.findComponent({ name: 'NSelect' })
+    const renderLabel = select.props('renderLabel') as (option: { value: string }) => {
+      children?: Array<{ props?: { style?: { backgroundColor?: string } } }>
+    }
+
+    const vnode = renderLabel({ value: '__unknown__' })
+    const swatch = vnode.children?.[0]
+    expect(swatch?.props?.style?.backgroundColor).toBe('transparent')
+  })
 })
