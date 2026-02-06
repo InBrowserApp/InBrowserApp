@@ -13,6 +13,14 @@ describe('base16 encoder tool metadata', () => {
     expect(routes[0]?.path).toBe('/tools/base16-encoder')
   })
 
+  it('loads the route component', async () => {
+    const component = routes[0]?.component
+    expect(component).toBeTypeOf('function')
+
+    const loaded = await (component as () => Promise<{ default: unknown }>)()
+    expect(loaded.default).toBe(Base16EncoderView)
+  })
+
   it('renders the tool view', () => {
     const wrapper = mount(Base16EncoderView, {
       global: {
