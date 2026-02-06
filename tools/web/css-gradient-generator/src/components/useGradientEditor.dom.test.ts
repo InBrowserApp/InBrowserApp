@@ -182,4 +182,57 @@ describe('useGradientEditor', () => {
     editor.setActiveLayer(editor.layers.value[0]?.id ?? '')
     expect(editor.showLayerError.value).toBe(false)
   })
+
+  it('handles guard branches when no active layer is available', async () => {
+    const editor = useGradientEditor()
+
+    editor.layers.value = []
+    editor.activeLayerId.value = 'missing'
+    editor.activeStopId.value = 'missing'
+    await nextTick()
+
+    expect(editor.activeTrackCss.value).toContain('linear-gradient(#000, #fff)')
+    expect(editor.activeStopColor.value).toBe('#FFFFFFFF')
+    expect(editor.activeStopPosition.value).toBe(0)
+    expect(editor.layerType.value).toBe('linear')
+    expect(editor.layerAngle.value).toBe(0)
+    expect(editor.layerCenterX.value).toBe(50)
+    expect(editor.layerCenterY.value).toBe(50)
+    expect(editor.layerShape.value).toBe('circle')
+    expect(editor.layerSize.value).toBe('farthest-corner')
+    expect(editor.layerColorSpace.value).toBe('srgb')
+    expect(editor.layerBlendMode.value).toBe('normal')
+
+    editor.activeStopColor.value = '#123456'
+    editor.activeStopPosition.value = null
+    editor.layerType.value = 'conic'
+    editor.layerAngle.value = null
+    editor.layerCenterX.value = null
+    editor.layerCenterY.value = null
+    editor.layerShape.value = 'ellipse'
+    editor.layerSize.value = 'closest-side'
+    editor.layerColorSpace.value = 'oklch'
+    editor.layerBlendMode.value = 'multiply'
+    editor.handleAddStop()
+    editor.removeStop()
+    editor.updateStopPosition('missing', 20)
+    editor.handleRandomizeLayer()
+    editor.handleRandomizeAll()
+
+    expect(editor.layers.value).toHaveLength(0)
+
+    editor.addLayer()
+    const layer = editor.layers.value[0]
+    if (!layer) {
+      throw new Error('Expected layer after addLayer')
+    }
+
+    const stopId = layer.stops[0]?.id
+    if (!stopId) {
+      throw new Error('Expected stop id')
+    }
+
+    editor.updateStopPosition(stopId, Number.NaN)
+    expect(layer.stops[0]?.position).toBe(0)
+  })
 })

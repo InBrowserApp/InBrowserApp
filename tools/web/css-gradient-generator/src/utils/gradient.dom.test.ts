@@ -4,6 +4,7 @@ import {
   createLayer,
   drawLayersToCanvas,
   formatColor,
+  getNearestStopColor,
   normalizeHexColor,
   parseGradientConfig,
   randomizeLayer,
@@ -166,5 +167,138 @@ describe('gradient utils', () => {
     })
 
     expect(drawLayersToCanvas(ctx, [layer], 300, 200)).toBe(false)
+  })
+
+  it('handles invalid hex values and shorthand color forms', () => {
+    expect(normalizeHexColor('')).toBe('#000000FF')
+    expect(normalizeHexColor('not-hex')).toBe('#000000FF')
+    expect(normalizeHexColor('#abcd')).toBe('#AABBCCDD')
+    expect(normalizeHexColor('#123456789A')).toBe('#12345678')
+    expect(normalizeHexColor('#12')).toBe('#000000FF')
+  })
+
+  it('returns nearest stop colors and defaults when no stops exist', () => {
+    expect(getNearestStopColor([], 50)).toBe('#FFFFFFFF')
+
+    const layer = createLayer({
+      stops: [
+        { color: '#000000', position: 0 },
+        { color: '#FF0000', position: 40 },
+        { color: '#FFFFFF', position: 100 },
+      ],
+    })
+
+    expect(getNearestStopColor(layer.stops, 10)).toBe(layer.stops[0]?.color)
+    expect(getNearestStopColor(layer.stops, 35)).toBe(layer.stops[1]?.color)
+    expect(getNearestStopColor(layer.stops, 99)).toBe(layer.stops[2]?.color)
+  })
+
+  it('parses array configs and normalizes invalid layer values', () => {
+    const parsed = parseGradientConfig(
+      JSON.stringify([
+        {
+          type: 'invalid-type',
+          angle: 'oops',
+          centerX: 'bad',
+          centerY: Number.POSITIVE_INFINITY,
+          radialShape: 'triangle',
+          radialSize: 'gigantic',
+          colorSpace: 'display-p3',
+          blendMode: 'xor',
+          stops: [
+            { color: null, position: Number.NaN },
+            { color: '#112233', position: 40 },
+          ],
+        },
+        {
+          type: 'radial',
+        },
+      ]),
+    )
+
+    expect(parsed).toHaveLength(2)
+    const first = parsed?.[0]
+    const second = parsed?.[1]
+
+    expect(first?.type).toBe('linear')
+    expect(first?.radialShape).toBe('circle')
+    expect(first?.radialSize).toBe('farthest-corner')
+    expect(first?.colorSpace).toBe('srgb')
+    expect(first?.blendMode).toBe('normal')
+    expect(first?.angle).toBe(135)
+    expect(first?.centerX).toBe(50)
+    expect(first?.centerY).toBe(0)
+    expect(first?.stops[0]?.color).toBe('#0EA5E9FF')
+    expect(first?.stops[0]?.position).toBe(0)
+
+    expect(second?.stops.length).toBeGreaterThanOrEqual(2)
+    expect(parseGradientConfig(JSON.stringify([]))).toBeNull()
+    expect(parseGradientConfig(JSON.stringify({ layers: [] }))).toBeNull()
+  })
+
+  it('falls back to the previous radial size when random index is out of range', () => {
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(1)
+    const layer = createLayer({ radialSize: 'closest-side' })
+
+    const randomized = randomizeLayer(layer)
+
+    expect(randomized.radialSize).toBe('closest-side')
+    randomSpy.mockRestore()
+  })
+
+  it('draws side-sized radial layers and skips zero-radius rendering', () => {
+    const ctx = createMockContext()
+    const radialLayers: GradientLayer[] = [
+      createLayer({
+        type: 'radial',
+        radialShape: 'circle',
+        radialSize: 'closest-side',
+        centerX: 25,
+        centerY: 20,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'circle',
+        radialSize: 'farthest-side',
+        centerX: 75,
+        centerY: 80,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'ellipse',
+        radialSize: 'closest-side',
+        centerX: 30,
+        centerY: 40,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'ellipse',
+        radialSize: 'farthest-side',
+        centerX: 60,
+        centerY: 50,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'ellipse',
+        radialSize: 'closest-corner',
+        centerX: 40,
+        centerY: 35,
+      }),
+    ]
+
+    expect(drawLayersToCanvas(ctx, radialLayers, 400, 220)).toBe(true)
+    expect(ctx.createRadialGradient).toHaveBeenCalled()
+
+    const zeroRadiusCtx = createMockContext()
+    const zeroRadiusLayer = createLayer({
+      type: 'radial',
+      radialShape: 'ellipse',
+      radialSize: 'closest-side',
+      centerX: 50,
+      centerY: 50,
+    })
+
+    expect(drawLayersToCanvas(zeroRadiusCtx, [zeroRadiusLayer], 0, 0)).toBe(true)
+    expect(zeroRadiusCtx.createRadialGradient).not.toHaveBeenCalled()
   })
 })
