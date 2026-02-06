@@ -36,6 +36,7 @@ vi.mock('github-markdown-css/github-markdown-dark.css?raw', () => ({
 }))
 
 import { flushPromises, mount } from '@vue/test-utils'
+import { defineComponent } from 'vue'
 import MarkdownPreviewer from './MarkdownPreviewer.vue'
 
 type TocItem = {
@@ -205,5 +206,64 @@ describe('MarkdownPreviewer', () => {
     expect(printSpy).toHaveBeenCalled()
 
     openSpy.mockRestore()
+  })
+
+  it('updates state from child v-model bindings', async () => {
+    const ControlsStub = defineComponent({
+      name: 'MarkdownPreviewerControls',
+      props: {
+        sanitize: { type: Boolean, required: true },
+        showToc: { type: Boolean, required: true },
+        viewMode: { type: String, required: true },
+        theme: { type: String, required: true },
+        downloadUrl: { type: String, default: null },
+      },
+      emits: ['update:sanitize', 'update:showToc', 'update:viewMode', 'update:theme'],
+      setup(_props, { emit }) {
+        const emitUpdates = () => {
+          emit('update:sanitize', false)
+          emit('update:showToc', false)
+          emit('update:viewMode', 'preview')
+          emit('update:theme', 'dark')
+        }
+        return { emitUpdates }
+      },
+      template: '<button class="controls" @click="emitUpdates">Controls</button>',
+    })
+
+    const PanelsStub = defineComponent({
+      name: 'MarkdownPreviewerPanels',
+      props: {
+        markdown: { type: String, required: true },
+        viewMode: { type: String, required: true },
+        showToc: { type: Boolean, required: true },
+        renderedHtml: { type: String, required: true },
+        tocItems: { type: Array, required: true },
+        scopedMarkdownCss: { type: String, required: true },
+        markdownScopeClass: { type: String, required: true },
+      },
+      emits: ['update:markdown'],
+      template: '<button class="panels" @click="$emit(\'update:markdown\', \'# Updated\')" />',
+    })
+
+    const wrapper = mount(MarkdownPreviewer, {
+      global: {
+        stubs: {
+          MarkdownPreviewerControls: ControlsStub,
+          MarkdownPreviewerPanels: PanelsStub,
+        },
+      },
+    })
+
+    await wrapper.find('button.controls').trigger('click')
+    await wrapper.find('button.panels').trigger('click')
+    await flushPromises()
+
+    const vm = wrapper.vm as unknown as PreviewerVm
+    expect(vm.sanitize).toBe(false)
+    expect(vm.showToc).toBe(false)
+    expect(vm.viewMode).toBe('preview')
+    expect(vm.theme).toBe('dark')
+    expect(vm.markdown).toBe('# Updated')
   })
 })
