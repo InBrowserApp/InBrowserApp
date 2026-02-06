@@ -133,6 +133,58 @@ describe('SvgOptimizerView', () => {
     expect(wrapper.find('.results').exists()).toBe(true)
   })
 
+  it('clears optimized output when SVG input is removed', async () => {
+    optimizeMock.mockReturnValue({ data: '<svg optimized />' })
+
+    const wrapper = mount(SvgOptimizerView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: ToolDefaultPageLayoutStub,
+          SvgInput: SvgInputStub,
+          OptimizationOptions: OptimizationOptionsStub,
+          OptimizationResults: OptimizationResultsStub,
+          WhatIsSvgOptimizer: WhatIsSvgOptimizerStub,
+        },
+      },
+    })
+
+    const input = wrapper.findComponent(SvgInputStub)
+    input.vm.$emit('update:svgString', '<svg></svg>')
+    await flushPromises()
+    expect(wrapper.find('.results').exists()).toBe(true)
+
+    input.vm.$emit('update:svgString', '')
+    await flushPromises()
+    expect(wrapper.find('.results').exists()).toBe(false)
+  })
+
+  it('returns early when optimizeSvg runs without input', async () => {
+    const wrapper = mount(SvgOptimizerView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: ToolDefaultPageLayoutStub,
+          SvgInput: SvgInputStub,
+          OptimizationOptions: OptimizationOptionsStub,
+          OptimizationResults: OptimizationResultsStub,
+          WhatIsSvgOptimizer: WhatIsSvgOptimizerStub,
+        },
+      },
+    })
+
+    const setupState = (
+      wrapper.vm as unknown as {
+        $: { setupState: { optimizeSvg?: () => Promise<void> } }
+      }
+    ).$.setupState
+    expect(typeof setupState.optimizeSvg).toBe('function')
+
+    await setupState.optimizeSvg?.()
+
+    expect(optimizeMock).not.toHaveBeenCalled()
+    expect(messageSuccess).not.toHaveBeenCalled()
+    expect(messageError).not.toHaveBeenCalled()
+  })
+
   it('handles optimization errors', async () => {
     optimizeMock.mockImplementationOnce(() => {
       throw new Error('fail')

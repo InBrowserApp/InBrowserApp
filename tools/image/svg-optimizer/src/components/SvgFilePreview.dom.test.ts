@@ -35,7 +35,7 @@ vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
     emits: ['click'],
-    template: '<button @click="$emit(\'click\')"><slot /></button>',
+    template: '<button @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   })
 
   return {
@@ -59,6 +59,7 @@ describe('SvgFilePreview', () => {
     expect(wrapper.text()).toContain('icon.svg')
     expect(wrapper.text()).toContain('size-2048')
     expect(wrapper.text()).toContain('delete')
+    expect(wrapper.find('.delete-icon').exists()).toBe(true)
 
     await wrapper.find('button').trigger('click')
     expect(wrapper.emitted('delete')).toBeTruthy()

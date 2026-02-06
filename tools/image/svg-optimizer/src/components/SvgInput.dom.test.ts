@@ -143,6 +143,13 @@ describe('SvgInput', () => {
     expect(svgEmits?.[svgEmits.length - 1]).toEqual(['<svg></svg>'])
     expect(fileEmits?.[fileEmits.length - 1]).toEqual(['pasted.svg'])
     expect(wrapper.find('.svg-preview').exists()).toBe(true)
+
+    input.vm.$emit('update:value', '')
+    await nextTick()
+
+    expect(svgEmits?.[svgEmits.length - 1]).toEqual([''])
+    expect(fileEmits?.[fileEmits.length - 1]).toEqual([''])
+    expect(wrapper.find('.svg-preview').exists()).toBe(false)
   })
 
   it('shows an error for invalid SVG text', async () => {
@@ -157,6 +164,45 @@ describe('SvgInput', () => {
     await nextTick()
 
     expect(wrapper.text()).toContain('invalidSvg')
+  })
+
+  it('handles empty, invalid, and unreadable file uploads', async () => {
+    const wrapper = mountInput()
+
+    const upload = wrapper.findComponent({ name: 'NUpload' })
+    upload.vm.$emit('change', { fileList: [] })
+    await flushPromises()
+
+    const validFile = new File(['<svg></svg>'], 'icon.svg', { type: 'image/svg+xml' })
+    upload.vm.$emit('change', { fileList: [{ file: validFile }] })
+    await flushPromises()
+    expect(wrapper.find('.svg-preview').exists()).toBe(true)
+
+    const preview = wrapper.findComponent({ name: 'SvgFilePreview' })
+    preview.vm.$emit('delete')
+    await nextTick()
+    expect(wrapper.find('.svg-preview').exists()).toBe(false)
+
+    const invalidFile = {
+      name: 'invalid.svg',
+      size: 1,
+      text: vi.fn().mockResolvedValue('not svg'),
+    } as unknown as File
+
+    const uploadAfterClear = wrapper.findComponent({ name: 'NUpload' })
+    uploadAfterClear.vm.$emit('change', { fileList: [{ file: invalidFile }] })
+    await flushPromises()
+    expect(wrapper.text()).toContain('invalidSvg')
+
+    const brokenFile = {
+      name: 'broken.svg',
+      size: 1,
+      text: vi.fn().mockRejectedValue(new Error('boom')),
+    } as unknown as File
+
+    uploadAfterClear.vm.$emit('change', { fileList: [{ file: brokenFile }] })
+    await flushPromises()
+    expect(wrapper.text()).toContain('readError')
   })
 
   it('handles file uploads and updates the models', async () => {

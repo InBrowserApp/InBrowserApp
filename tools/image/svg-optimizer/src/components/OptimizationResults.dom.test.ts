@@ -3,11 +3,17 @@ import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import OptimizationResults from './OptimizationResults.vue'
 
+const objectUrlValue = ref<string | null>('blob:download')
+
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:download'),
+    useObjectUrl: (source: { value: Blob | null }) => {
+      // Access source so the computed blob path is exercised in tests.
+      void source.value
+      return objectUrlValue
+    },
   }
 })
 
@@ -72,7 +78,7 @@ vi.mock('naive-ui', async () => {
         default: false,
       },
     },
-    template: '<a><slot /></a>',
+    template: '<a><slot name="icon" /><slot /></a>',
   })
 
   const NText = defineComponent({
@@ -99,6 +105,7 @@ vi.mock('naive-ui', async () => {
 
 describe('OptimizationResults', () => {
   it('computes sizes and download name', () => {
+    objectUrlValue.value = 'blob:download'
     const wrapper = mount(OptimizationResults, {
       props: {
         originalSvg: '<svg><rect /></svg>',
@@ -129,5 +136,38 @@ describe('OptimizationResults', () => {
     const stats = wrapper.findAllComponents({ name: 'NStatistic' })
     expect(stats[0]?.props('value')).toContain('size-')
     expect(stats[1]?.props('value')).toContain('size-')
+    expect(wrapper.findComponent({ name: 'NIcon' }).exists()).toBe(true)
+  })
+
+  it('renders zero saved percent and disables download when object url is missing', () => {
+    objectUrlValue.value = null
+
+    const wrapper = mount(OptimizationResults, {
+      props: {
+        originalSvg: '',
+        optimizedSvg: '<svg />',
+        fileName: 'icon',
+      },
+      global: {
+        stubs: {
+          ToolSection: {
+            template: '<section><slot /></section>',
+          },
+          ToolSectionHeader: {
+            template: '<h2><slot /></h2>',
+          },
+          CopyToClipboardButton: {
+            template: '<button class="copy-button"><slot /></button>',
+            props: ['value', 'feedback', 'type'],
+          },
+        },
+      },
+    })
+
+    const button = wrapper.findComponent({ name: 'NButton' })
+    expect(button.props('disabled')).toBe(true)
+    expect(button.props('href')).toBeUndefined()
+    expect(button.props('download')).toBe('icon.optimized.svg')
+    expect(wrapper.text()).toContain('0.0%')
   })
 })
