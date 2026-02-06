@@ -29,7 +29,7 @@ vi.mock('naive-ui', async () => {
 
 const LayerTypeControlsStub = defineComponent({
   name: 'CssGradientLayerTypeControls',
-  emits: ['update:layerType'],
+  emits: ['update:layerType', 'update:layerAngle', 'update:layerCenterX', 'update:layerCenterY'],
   template: '<div />',
 })
 
@@ -41,6 +41,7 @@ const RadialControlsStub = defineComponent({
       default: 'linear',
     },
   },
+  emits: ['update:layerShape', 'update:layerSize'],
   template: '<div />',
 })
 
@@ -84,6 +85,22 @@ describe('CssGradientLayerSettingsPanel', () => {
     const typeControls = wrapper.findComponent(LayerTypeControlsStub)
     typeControls.vm.$emit('update:layerType', 'radial')
     expect(wrapper.emitted('update:layerType')?.[0]).toEqual(['radial'])
+
+    typeControls.vm.$emit('update:layerAngle', 45)
+    expect(wrapper.emitted('update:layerAngle')?.[0]).toEqual([45])
+
+    typeControls.vm.$emit('update:layerCenterX', 40)
+    expect(wrapper.emitted('update:layerCenterX')?.[0]).toEqual([40])
+
+    typeControls.vm.$emit('update:layerCenterY', 60)
+    expect(wrapper.emitted('update:layerCenterY')?.[0]).toEqual([60])
+
+    const radialControls = wrapper.findComponent(RadialControlsStub)
+    radialControls.vm.$emit('update:layerShape', 'ellipse')
+    expect(wrapper.emitted('update:layerShape')?.[0]).toEqual(['ellipse'])
+
+    radialControls.vm.$emit('update:layerSize', 'farthest-corner')
+    expect(wrapper.emitted('update:layerSize')?.[0]).toEqual(['farthest-corner'])
 
     const colorSpace = wrapper.findComponent(ColorSpaceStub)
     colorSpace.vm.$emit('update:layerColorSpace', 'oklch')
