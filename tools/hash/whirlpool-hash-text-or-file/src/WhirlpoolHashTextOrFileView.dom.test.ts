@@ -1,17 +1,12 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
 
-const expectedHex =
-  '4e2448a4c6f486bb16b6562c73b4020bf3043e3a731bce721ae1b303d97e6d4c7181eebdb6c57e277d0e34957114cbd6c797fc9d95d8b582d225292076d4eef5'
+const whirlpoolMock = vi.fn(() => '00')
 
-function hexToBytes(hex: string): number[] {
-  const bytes: number[] = []
-  for (let i = 0; i < hex.length; i += 2) {
-    bytes.push(Number.parseInt(hex.slice(i, i + 2), 16))
-  }
-  return bytes
-}
+vi.mock('hash-wasm', () => ({
+  whirlpool: whirlpoolMock,
+}))
 
 describe('WhirlpoolHashTextOrFileView', () => {
   it('renders the hash template and info section', async () => {
@@ -39,7 +34,7 @@ describe('WhirlpoolHashTextOrFileView', () => {
     expect(wrapper.find('.what-is-whirlpool').exists()).toBe(true)
   })
 
-  it('hashes blobs using Whirlpool', async () => {
+  it('hashes blobs and normalizes odd-length hex output', async () => {
     let hashFn: ((blob: Blob) => Promise<ArrayBuffer>) | null = null
 
     const HashTextOrFileTemplateStub = defineComponent({
@@ -54,6 +49,8 @@ describe('WhirlpoolHashTextOrFileView', () => {
         return () => h('div', { class: 'hash-template' })
       },
     })
+
+    whirlpoolMock.mockReturnValueOnce('abc')
 
     const { default: WhirlpoolHashTextOrFileView } =
       await import('./WhirlpoolHashTextOrFileView.vue')
@@ -75,7 +72,10 @@ describe('WhirlpoolHashTextOrFileView', () => {
 
     expect(hashFn).not.toBeNull()
 
-    const result = await hashFn!(new Blob(['abc']))
-    expect(Array.from(new Uint8Array(result))).toEqual(hexToBytes(expectedHex))
+    const oddResult = await hashFn!(new Blob([new Uint8Array([1, 2, 3])]))
+    expect(Array.from(new Uint8Array(oddResult))).toEqual([0x0a, 0xbc])
+
+    const evenResult = await hashFn!(new Blob([new Uint8Array([1])]))
+    expect(Array.from(new Uint8Array(evenResult))).toEqual([0])
   })
 })
