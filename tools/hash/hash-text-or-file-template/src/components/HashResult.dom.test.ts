@@ -13,7 +13,7 @@ vi.mock('naive-ui', () => ({
     template: '<div class="n-descriptions"><slot /></div>',
   },
   NDescriptionsItem: {
-    template: '<div class="n-descriptions-item"><slot /></div>',
+    template: '<div class="n-descriptions-item"><slot name="label" /><slot /></div>',
   },
   NText: {
     inheritAttrs: false,
