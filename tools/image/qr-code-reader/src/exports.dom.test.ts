@@ -3,7 +3,7 @@ import * as info from './info'
 import { routes } from './routes'
 
 describe('qr-code-reader exports', () => {
-  it('exposes tool info and routes', () => {
+  it('exposes tool info and routes', async () => {
     expect(info.toolID).toBe('qr-code-reader')
     expect(info.path).toBe('/tools/qr-code-reader')
 
@@ -17,5 +17,8 @@ describe('qr-code-reader exports', () => {
       path: info.path,
     })
     expect(typeof route.component).toBe('function')
+
+    const routeModule = await (route.component as () => Promise<unknown>)()
+    expect(routeModule).toBeTruthy()
   })
 })
