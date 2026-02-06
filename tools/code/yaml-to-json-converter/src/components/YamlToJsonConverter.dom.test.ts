@@ -1,10 +1,20 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
-import { h } from 'vue'
+import { h, ref } from 'vue'
 import { NCode, NMessageProvider } from 'naive-ui'
 import YamlToJsonConverter from './YamlToJsonConverter.vue'
 
 const fileOpenMock = vi.fn()
+const objectUrlRef = ref<string | null>('blob:download')
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+
+  return {
+    ...actual,
+    useObjectUrl: () => objectUrlRef,
+  }
+})
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -22,6 +32,7 @@ const getRenderedJson = (wrapper: ReturnType<typeof mount>) =>
 describe('YamlToJsonConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlRef.value = 'blob:download'
   })
 
   it('renders JSON for the default YAML', () => {
@@ -45,6 +56,15 @@ describe('YamlToJsonConverter', () => {
     await flushPromises()
 
     expect(getRenderedJson(wrapper)).toContain('// Invalid YAML')
+  })
+
+  it('omits download href when object url is unavailable', () => {
+    objectUrlRef.value = null
+
+    const wrapper = mount(TestWrapper)
+    const downloadLink = wrapper.find('a[download="converted.json"]')
+
+    expect(downloadLink.attributes('href')).toBeUndefined()
   })
 
   it('imports YAML from a file selection', async () => {
