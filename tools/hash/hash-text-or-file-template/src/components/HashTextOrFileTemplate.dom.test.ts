@@ -49,6 +49,10 @@ describe('HashTextOrFileTemplate', () => {
     const headers = wrapper.findAll('.section-header')
     expect(headers).toHaveLength(1)
     expect(headers[0]?.text()).toBe('hash-input')
+
+    const resultBeforeInput = wrapper.find('.hash-result')
+    expect(resultBeforeInput.exists()).toBe(true)
+
     await wrapper.find('.text-or-file-input').trigger('click')
 
     const updatedHeaders = wrapper.findAll('.section-header')

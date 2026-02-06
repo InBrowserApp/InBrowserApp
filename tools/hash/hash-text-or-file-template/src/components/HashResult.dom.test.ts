@@ -51,6 +51,11 @@ describe('HashResult', () => {
 
     const values = wrapper.findAll('.hash-result').map((node) => node.text())
     expect(values).toEqual(['000102ff', 'AAEC/w==', '66303', '00000000000000010000001011111111'])
+
+    for (const value of wrapper.findAll('.hash-result')) {
+      await value.trigger('click')
+    }
+
     expect(hash).toHaveBeenCalled()
   })
 
@@ -69,6 +74,23 @@ describe('HashResult', () => {
 
     const values = wrapper.findAll('.hash-result').map((node) => node.text())
     expect(values).toEqual(['000102ff', '66303'])
+  })
+
+  it('hides hex and decimal sections based on flags', async () => {
+    const hash = vi.fn(async () => hashBuffer)
+    const wrapper = mount(HashResult, {
+      props: {
+        hash,
+        content: 'hello',
+        hideHex: true,
+        hideDecimal: true,
+      },
+    })
+
+    await flushPromises()
+
+    const values = wrapper.findAll('.hash-result').map((node) => node.text())
+    expect(values).toEqual(['AAEC/w==', '00000000000000010000001011111111'])
   })
 
   it('passes file content directly to the hash function', async () => {
