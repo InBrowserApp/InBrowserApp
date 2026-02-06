@@ -167,12 +167,17 @@ vi.mock('./RegexResults.vue', async () => {
   }
 })
 
+const flushAsync = async () => {
+  await Promise.resolve()
+  await nextTick()
+  await nextTick()
+}
+
 describe('RegexTesterReplacer', () => {
   it('computes default results when auto run is enabled', async () => {
     const wrapper = mount(RegexTesterReplacer)
 
-    await nextTick()
-    await nextTick()
+    await flushAsync()
 
     const results = wrapper.getComponent({ name: 'RegexResults' })
 
@@ -194,7 +199,7 @@ describe('RegexTesterReplacer', () => {
     inputs.vm.$emit('update:pattern', '[')
     inputs.vm.$emit('run')
 
-    await nextTick()
+    await flushAsync()
 
     const results = wrapper.getComponent({ name: 'RegexResults' })
 
@@ -202,5 +207,79 @@ describe('RegexTesterReplacer', () => {
     expect(results.props('showSummaryCounts')).toBe(false)
     expect(results.props('matchesCount')).toBe(0)
     expect(results.props('replaceOutput')).toBe('')
+  })
+
+  it('clears results when pattern or source text is empty', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    inputs.vm.$emit('update:autoRun', false)
+    inputs.vm.$emit('update:pattern', '')
+    inputs.vm.$emit('run')
+
+    await flushAsync()
+
+    const results = wrapper.getComponent({ name: 'RegexResults' })
+    expect(results.props('patternError')).toBe('')
+    expect(results.props('showSummaryCounts')).toBe(false)
+    expect(results.props('matchesCount')).toBe(0)
+    expect(wrapper.getComponent({ name: 'RegexInputs' }).props('patternStatus')).toBeUndefined()
+
+    inputs.vm.$emit('update:pattern', '#(\\d+)')
+    await flushAsync()
+    inputs.vm.$emit('update:textOrFile', '')
+    await flushAsync()
+    inputs.vm.$emit('run')
+
+    await flushAsync()
+
+    expect(results.props('matchesCount')).toBe(0)
+    expect(results.props('replaceOutput')).toBe('')
+  })
+
+  it('reads text from files and escapes preview HTML', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    const file = new File(['<b>#12-ABC</b>'], 'sample.txt', { type: 'text/plain' })
+
+    inputs.vm.$emit('update:autoRun', false)
+    inputs.vm.$emit('update:pattern', '#(\\d+)-([A-Z]+)')
+    await flushAsync()
+    inputs.vm.$emit('update:textOrFile', file)
+    await flushAsync()
+    inputs.vm.$emit('run')
+
+    await flushAsync()
+
+    const results = wrapper.getComponent({ name: 'RegexResults' })
+    expect(results.props('previewText')).toContain('<b>#12-ABC</b>')
+    expect(results.props('previewHtml')).toContain('&lt;b&gt;')
+    expect(results.props('previewHtml')).toContain('<mark class="preview-match">#12-ABC</mark>')
+  })
+
+  it('runs automatically when autoRun is toggled back on', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    inputs.vm.$emit('update:autoRun', false)
+    inputs.vm.$emit('update:replacement', 'TOKEN:$1')
+
+    await flushAsync()
+
+    const results = wrapper.getComponent({ name: 'RegexResults' })
+    const previousOutput = String(results.props('replaceOutput'))
+
+    inputs.vm.$emit('update:autoRun', true)
+    await flushAsync()
+
+    expect(String(results.props('replaceOutput'))).not.toBe(previousOutput)
+    expect(String(results.props('replaceOutput'))).toContain('TOKEN:123')
   })
 })

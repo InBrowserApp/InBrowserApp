@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
   buildHighlightSegments,
   collectMatches,
@@ -27,6 +27,24 @@ describe('compileRegex', () => {
     expect(regex).toBeNull()
     expect(error).toBeTruthy()
   })
+
+  it('stringifies non-Error throws', () => {
+    const originalRegExp = globalThis.RegExp
+
+    function ThrowingRegExp() {
+      throw 'regex exploded'
+    }
+
+    globalThis.RegExp = ThrowingRegExp as unknown as RegExpConstructor
+
+    try {
+      const { regex, error } = compileRegex('abc', 'g')
+      expect(regex).toBeNull()
+      expect(error).toBe('regex exploded')
+    } finally {
+      globalThis.RegExp = originalRegExp
+    }
+  })
 })
 
 describe('collectMatches', () => {
@@ -36,6 +54,13 @@ describe('collectMatches', () => {
     expect(matches).toHaveLength(1)
     expect(truncated).toBe(false)
     expect(matches[0]?.groups).toEqual(['1'])
+  })
+
+  it('returns an empty array for non-global regex with no match', () => {
+    const regex = new RegExp('#(\\d+)', '')
+    const { matches, truncated } = collectMatches('no ids here', regex, 10)
+    expect(matches).toEqual([])
+    expect(truncated).toBe(false)
   })
 
   it('collects matches with truncation', () => {
@@ -51,6 +76,33 @@ describe('collectMatches', () => {
     expect(matches).toHaveLength(1)
     expect(matches[0]?.match).toBe('')
     expect(matches[0]?.index).toBe(0)
+  })
+
+  it('handles custom exec results with missing index and match text', () => {
+    const fakeExecResult = [undefined] as unknown as RegExpExecArray
+    Object.defineProperty(fakeExecResult, 'index', {
+      value: undefined,
+      writable: true,
+    })
+    Object.defineProperty(fakeExecResult, 'groups', {
+      value: undefined,
+      writable: true,
+    })
+
+    const fakeRegex = {
+      global: false,
+      lastIndex: 99,
+      exec: vi.fn().mockReturnValue(fakeExecResult),
+    } as unknown as RegExp
+
+    const { matches } = collectMatches('abc', fakeRegex, 10)
+    expect(matches).toHaveLength(1)
+    expect(matches[0]).toMatchObject({
+      index: 0,
+      end: 0,
+      match: '',
+      namedGroups: {},
+    })
   })
 })
 
@@ -79,5 +131,22 @@ describe('buildHighlightSegments', () => {
     const result = buildHighlightSegments('Test message', matches, 4)
     expect(result.previewText).toBe('Test')
     expect(result.truncated).toBe(true)
+  })
+
+  it('skips empty, out-of-range, and overlapping matches', () => {
+    const matches = [
+      { index: 0, end: 0, match: '', groups: [], namedGroups: {} },
+      { index: 12, end: 14, match: 'ZZ', groups: [], namedGroups: {} },
+      { index: 3, end: 6, match: '345', groups: [], namedGroups: {} },
+      { index: 1, end: 2, match: '2', groups: [], namedGroups: {} },
+    ]
+
+    const result = buildHighlightSegments('0123456789', matches, 6)
+
+    expect(result.previewText).toBe('012345')
+    expect(result.segments).toEqual([
+      { text: '012', isMatch: false, matchIndex: null },
+      { text: '345', isMatch: true, matchIndex: 2 },
+    ])
   })
 })
