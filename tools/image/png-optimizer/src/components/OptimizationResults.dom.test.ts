@@ -1,13 +1,17 @@
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import OptimizationResults from './OptimizationResults.vue'
+
+const objectUrlState = vi.hoisted(() => ({
+  downloadUrl: 'blob:download' as string | null,
+}))
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:download'),
+    useObjectUrl: () => ref(objectUrlState.downloadUrl),
   }
 })
 
@@ -84,6 +88,10 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('OptimizationResults', () => {
+  beforeEach(() => {
+    objectUrlState.downloadUrl = 'blob:download'
+  })
+
   it('computes compression ratio and download link', () => {
     const originalFile = new File(['data'], 'original.png', { type: 'image/png' })
     Object.defineProperty(originalFile, 'size', { value: 1000 })
@@ -115,5 +123,39 @@ describe('OptimizationResults', () => {
     expect(button.props('href')).toBe('blob:download')
     expect(button.props('download')).toBe('original.png')
     expect(button.props('disabled')).toBe(false)
+  })
+
+  it('disables download and clamps negative reductions', () => {
+    objectUrlState.downloadUrl = null
+
+    const originalFile = new File(['data'], 'original.png', { type: 'image/png' })
+    Object.defineProperty(originalFile, 'size', { value: 1000 })
+
+    const optimizedFile = new Blob(['data'])
+    Object.defineProperty(optimizedFile, 'size', { value: 1200 })
+
+    const wrapper = mount(OptimizationResults, {
+      props: {
+        originalFile,
+        optimizedFile,
+      },
+      global: {
+        stubs: {
+          ToolSection: {
+            template: '<section><slot /></section>',
+          },
+          ToolSectionHeader: {
+            template: '<h2><slot /></h2>',
+          },
+        },
+      },
+    })
+
+    const stats = wrapper.findAllComponents({ name: 'NStatistic' })
+    expect(stats[0]?.props('value')).toBe(0)
+
+    const button = wrapper.findComponent({ name: 'NButton' })
+    expect(button.props('href')).toBeUndefined()
+    expect(button.props('disabled')).toBe(true)
   })
 })

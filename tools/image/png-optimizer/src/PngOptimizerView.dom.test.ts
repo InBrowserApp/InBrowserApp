@@ -132,6 +132,36 @@ describe('PngOptimizerView', () => {
     expect(wrapper.find('[data-testid="results"]').exists()).toBe(true)
   })
 
+  it('uses a fallback error message for non-Error rejections', async () => {
+    optimizeMocks.optimizePNG.mockRejectedValueOnce('failed')
+
+    const wrapper = mount(PngOptimizerView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: {
+            inheritAttrs: false,
+            props: ['info'],
+            template: '<div><slot /></div>',
+          },
+          FileUpload: FileUploadStub,
+          OptimizationOptions: OptimizationOptionsStub,
+          OptimizationResults: OptimizationResultsStub,
+          ErrorDisplay: ErrorDisplayStub,
+          HowToOptimizePNG: HowToOptimizePNGStub,
+        },
+      },
+    })
+
+    const file = new File(['data'], 'sample.png', { type: 'image/png' })
+    await wrapper.findComponent(FileUploadStub).vm.$emit('update:file', file)
+    await flushPromises()
+
+    await wrapper.findComponent(OptimizationOptionsStub).vm.$emit('optimize')
+    await flushPromises()
+
+    expect(messageMocks.error).toHaveBeenCalledWith('optimizationFailed')
+    expect(wrapper.find('[data-testid="error-display"]').text()).toContain('optimizationFailed')
+  })
   it('surfaces optimization errors and clears on new file', async () => {
     optimizeMocks.optimizePNG.mockRejectedValueOnce(new Error('boom'))
 
