@@ -9,6 +9,16 @@ describe('iban-validator exports', () => {
     expect(routes[0]?.path).toBe(toolInfo.path)
   })
 
+  it('loads the route component', async () => {
+    const loader = routes[0]?.component
+    expect(loader).toBeTypeOf('function')
+
+    const routeLoader = loader as () => Promise<unknown>
+    const module = await routeLoader()
+
+    expect(module).toHaveProperty('default')
+  })
+
   it('re-exports tool info from index', () => {
     expect(indexExports.toolInfo.toolID).toBe(toolInfo.toolID)
   })

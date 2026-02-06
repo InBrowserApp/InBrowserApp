@@ -96,6 +96,7 @@ const baseResult = {
 let originalDisplayNames: typeof Intl.DisplayNames | undefined
 
 beforeEach(() => {
+  localeRef.value = 'en'
   originalDisplayNames = Intl.DisplayNames
   Object.defineProperty(Intl, 'DisplayNames', {
     value: class {
@@ -175,5 +176,90 @@ describe('IBANResult', () => {
     expect(formats.props('normalized')).toBe('notAvailable')
     expect(formats.props('formatted')).toBe('notAvailable')
     expect(formats.props('bban')).toBe('notAvailable')
+  })
+
+  it('uses fallback locale display names when constructor fails', () => {
+    localeRef.value = 'xx'
+    Object.defineProperty(Intl, 'DisplayNames', {
+      value: class {
+        constructor(locales: readonly string[]) {
+          if (locales[0] !== 'en') {
+            throw new Error('unsupported locale')
+          }
+        }
+        of(code: string) {
+          return code === 'DE' ? 'Fallback Germany' : undefined
+        }
+      },
+      configurable: true,
+    })
+
+    const wrapper = mount(IBANResult, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          countryCode: 'DE',
+          isCountryValid: true,
+        },
+      },
+    })
+
+    const status = wrapper.findComponent({ name: 'IBANResultStatus' })
+    expect(status.props('countryDisplay')).toBe('Fallback Germany (DE)')
+  })
+
+  it('returns country code when display names are unavailable or unknown', () => {
+    Object.defineProperty(Intl, 'DisplayNames', {
+      value: undefined,
+      configurable: true,
+    })
+
+    const withoutDisplayNames = mount(IBANResult, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          countryCode: 'DE',
+          isCountryValid: true,
+        },
+      },
+    })
+    expect(
+      withoutDisplayNames.findComponent({ name: 'IBANResultStatus' }).props('countryDisplay'),
+    ).toBe('DE')
+
+    Object.defineProperty(Intl, 'DisplayNames', {
+      value: class {
+        of() {
+          return undefined
+        }
+      },
+      configurable: true,
+    })
+
+    const unknownName = mount(IBANResult, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          countryCode: 'ZZ',
+          isCountryValid: true,
+        },
+      },
+    })
+    expect(unknownName.findComponent({ name: 'IBANResultStatus' }).props('countryDisplay')).toBe(
+      'ZZ',
+    )
+
+    const invalidCountry = mount(IBANResult, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          countryCode: 'ZZ',
+          isCountryValid: false,
+        },
+      },
+    })
+    expect(invalidCountry.findComponent({ name: 'IBANResultStatus' }).props('countryDisplay')).toBe(
+      'ZZ',
+    )
   })
 })

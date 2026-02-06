@@ -25,7 +25,7 @@ vi.mock('naive-ui', async () => {
       props: ['value', 'placeholder', 'status'],
       emits: ['update:value'],
       template:
-        '<input :value="value" :placeholder="placeholder" :data-status="status" @input="$emit(\'update:value\', $event.target.value)" />',
+        '<div><slot name="prefix" /><input :value="value" :placeholder="placeholder" :data-status="status" @input="$emit(\'update:value\', $event.target.value)" /></div>',
     }),
     NIcon: defineComponent({
       name: 'NIcon',
@@ -68,6 +68,10 @@ describe('IBANInput', () => {
     expect(form.attributes('data-status')).toBeUndefined()
     expect(form.attributes('data-feedback')).toBeUndefined()
     expect(wrapper.get('input').attributes('data-status')).toBeUndefined()
+
+    const icon = wrapper.findComponent({ name: 'NIcon' })
+    expect(icon.props('size')).toBe(24)
+    expect(icon.props('component')).toBeTypeOf('object')
   })
 
   it('reports invalid country feedback', () => {
@@ -85,6 +89,40 @@ describe('IBANInput', () => {
     const form = wrapper.get('.form-item')
     expect(form.attributes('data-feedback')).toBe('invalidCountry')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
+  })
+
+  it('reports invalid length feedback', () => {
+    const wrapper = mount(IBANInput, {
+      props: {
+        modelValue: 'GB29',
+        validationResult: {
+          ...baseResult,
+          isCountryValid: true,
+          isLengthValid: false,
+          isValid: false,
+        },
+      },
+    })
+
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidLength')
+  })
+
+  it('reports invalid format feedback', () => {
+    const wrapper = mount(IBANInput, {
+      props: {
+        modelValue: 'GB29',
+        validationResult: {
+          ...baseResult,
+          isCountryValid: true,
+          isLengthValid: true,
+          isFormatValid: false,
+          isStructureValid: true,
+          isValid: false,
+        },
+      },
+    })
+
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidFormat')
   })
 
   it('reports invalid checksum feedback', () => {
@@ -106,6 +144,25 @@ describe('IBANInput', () => {
     const form = wrapper.get('.form-item')
     expect(form.attributes('data-feedback')).toBe('invalidChecksum')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
+  })
+
+  it('uses fallback invalid feedback when checks are inconsistent', () => {
+    const wrapper = mount(IBANInput, {
+      props: {
+        modelValue: 'GB29',
+        validationResult: {
+          ...baseResult,
+          isCountryValid: true,
+          isLengthValid: true,
+          isFormatValid: true,
+          isStructureValid: true,
+          isChecksumValid: true,
+          isValid: false,
+        },
+      },
+    })
+
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalid')
   })
 
   it('marks valid inputs as success', async () => {

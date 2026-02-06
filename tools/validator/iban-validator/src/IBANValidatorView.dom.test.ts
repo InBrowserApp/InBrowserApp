@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref, type Ref } from 'vue'
 import IBANValidatorView from './IBANValidatorView.vue'
+import * as toolInfo from './info'
 
 const storage = vi.hoisted(() => new Map<string, Ref<string>>())
 const validateMock = vi.hoisted(() => vi.fn())
@@ -98,6 +99,10 @@ describe('IBANValidatorView', () => {
     expect(validateMock).toHaveBeenCalledWith('DE89')
     expect(wrapper.find('.iban-input').exists()).toBe(true)
     expect(wrapper.find('.iban-result').exists()).toBe(true)
+    expect(wrapper.find('.iban-info').exists()).toBe(true)
+
+    const layout = wrapper.findComponent({ name: 'ToolDefaultPageLayout' })
+    expect(layout.props('info')).toEqual(toolInfo)
 
     const input = wrapper.findComponent({ name: 'IBANInput' })
     expect(input.props('validationResult')).toEqual(baseResult)
