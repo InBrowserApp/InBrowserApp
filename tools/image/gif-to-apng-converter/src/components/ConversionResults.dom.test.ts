@@ -139,4 +139,41 @@ describe('ConversionResults', () => {
     expect(wrapper.text()).toContain('Download ZIP')
     expect(wrapper.text()).toContain('(5.0%)')
   })
+
+  it('disables batch zip download when the object url is missing', () => {
+    objectUrlState.mode = 'missing'
+    const results = [createResult('a', 1000, 1300), createResult('b', 1000, 1300)]
+    const wrapper = mount(ConversionResults, {
+      props: {
+        ...baseProps,
+        results,
+        zipBlob: new Blob(['zip']),
+        isZipping: false,
+      },
+    })
+
+    const zipLink = wrapper.find('a[download="bundle.zip"]')
+    expect(zipLink.exists()).toBe(true)
+    expect(zipLink.attributes('href')).toBeUndefined()
+    expect(zipLink.attributes('disabled')).toBeDefined()
+    expect(wrapper.text()).toContain('(-30%)')
+  })
+
+  it('falls back to default download state when there are no results', () => {
+    objectUrlState.mode = 'missing'
+    const wrapper = mount(ConversionResults, {
+      props: {
+        ...baseProps,
+        results: [],
+        zipBlob: null,
+        isZipping: false,
+      },
+    })
+
+    const singleLink = wrapper.find('a[download="image.png"]')
+    expect(singleLink.exists()).toBe(true)
+    expect(singleLink.attributes('href')).toBeUndefined()
+    expect(singleLink.attributes('disabled')).toBeDefined()
+    expect(wrapper.text()).not.toContain('Total saved')
+  })
 })
