@@ -131,6 +131,41 @@ describe('JWTDecoderVerifier', () => {
     expect(wrapper.findComponent(JWTVerificationSectionStub).props('token')).toBe('next.token')
   })
 
+  it('propagates verify settings updates and handles empty token input', async () => {
+    const wrapper = await mountDecoderVerifier()
+    await flushPromises()
+
+    const verifySettings = wrapper.findComponent(JWTVerifySettingsStub)
+    await verifySettings.vm.$emit('update:secret', 'top-secret')
+    await verifySettings.vm.$emit('update:alg', 'HS512')
+    await flushPromises()
+
+    const verificationSection = wrapper.findComponent(JWTVerificationSectionStub)
+    expect(verificationSection.props('secret')).toBe('top-secret')
+    expect(verificationSection.props('alg')).toBe('HS512')
+
+    decodeMock.mockClear()
+    const tokenInput = wrapper.findComponent(JWTTokenInputStub)
+    await tokenInput.vm.$emit('update:value', '   ')
+    await flushPromises()
+
+    expect(decodeMock).not.toHaveBeenCalled()
+    const decodedSection = wrapper.findComponent(JWTDecodedSectionStub)
+    expect(decodedSection.props('decodedHeader')).toBeNull()
+    expect(decodedSection.props('decodedPayload')).toBeNull()
+  })
+
+  it('falls back to null when decoded object has no header or payload', async () => {
+    decodeMock.mockReturnValue({})
+
+    const wrapper = await mountDecoderVerifier()
+    await flushPromises()
+
+    const decodedSection = wrapper.findComponent(JWTDecodedSectionStub)
+    expect(decodedSection.props('decodedHeader')).toBeNull()
+    expect(decodedSection.props('decodedPayload')).toBeNull()
+  })
+
   it('returns null decoded values when decode throws', async () => {
     decodeMock.mockImplementation(() => {
       throw new Error('bad token')

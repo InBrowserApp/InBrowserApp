@@ -62,6 +62,30 @@ describe('JWTJsonCard', () => {
     expect(copy.attributes('data-content')).toBe(formatted)
   })
 
+  it('falls back to empty content when stringify throws', () => {
+    const circular: { self?: unknown } = {}
+    circular.self = circular
+
+    const wrapper = mount(JWTJsonCard, {
+      props: {
+        json: circular as unknown as object,
+      },
+      global: {
+        stubs: {
+          ToolSection: {
+            template: '<section><slot /></section>',
+          },
+          CopyToClipboardButton: CopyToClipboardButtonStub,
+        },
+      },
+    })
+
+    const code = wrapper.findComponent({ name: 'NCode' })
+    expect(code.props('code')).toBe('')
+    const copy = wrapper.find('[data-testid="copy"]')
+    expect(copy.attributes('data-content')).toBe('')
+  })
+
   it('renders empty content when JSON is null', () => {
     const wrapper = mount(JWTJsonCard, {
       props: {

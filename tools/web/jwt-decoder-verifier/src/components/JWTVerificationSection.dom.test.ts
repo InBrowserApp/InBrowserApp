@@ -111,6 +111,34 @@ describe('JWTVerificationSection', () => {
     expect(wrapper.findAll('li')).toHaveLength(1)
   })
 
+  it('verifies using detected algorithm in auto mode', async () => {
+    const wrapper = mountSection({
+      token: 'token',
+      secret: 'secret',
+      alg: 'auto',
+      decodedHeader: { alg: 'HS256' },
+    })
+    await flushPromises()
+
+    expect(verifyMock).toHaveBeenCalledWith('token', 'secret', 'HS256')
+    const alert = wrapper.findComponent({ name: 'NAlert' })
+    expect(alert.props('type')).toBe('success')
+    expect(alert.props('title')).toBe('verified')
+  })
+
+  it('reports missing algorithm when detected alg is not a string', async () => {
+    const wrapper = mountSection({
+      token: 'token',
+      secret: 'secret',
+      alg: 'auto',
+      decodedHeader: { alg: 123 },
+    })
+    await flushPromises()
+
+    expect(verifyMock).not.toHaveBeenCalled()
+    expect(wrapper.text()).toContain('no-alg')
+  })
+
   it('verifies a token when algorithm is provided', async () => {
     const wrapper = mountSection({
       token: 'token',
@@ -125,6 +153,23 @@ describe('JWTVerificationSection', () => {
     expect(alert.props('type')).toBe('success')
     expect(alert.props('title')).toBe('verified')
     expect(wrapper.text()).toContain('ok')
+  })
+
+  it('stringifies non-Error verification failures', async () => {
+    verifyMock.mockRejectedValueOnce('bad signature')
+
+    const wrapper = mountSection({
+      token: 'token',
+      secret: 'secret',
+      alg: 'HS256',
+      decodedHeader: { alg: 'HS256' },
+    })
+    await flushPromises()
+
+    const alert = wrapper.findComponent({ name: 'NAlert' })
+    expect(alert.props('type')).toBe('error')
+    expect(alert.props('title')).toBe('failed')
+    expect(wrapper.text()).toContain('bad signature')
   })
 
   it('surfaces verification errors', async () => {
