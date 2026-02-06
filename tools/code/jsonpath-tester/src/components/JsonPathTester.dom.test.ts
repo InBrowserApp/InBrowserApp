@@ -172,4 +172,26 @@ describe('JsonPathTester', () => {
     const jsonInput = getTextarea(wrapper, 0)
     expect((jsonInput.element as HTMLTextAreaElement).value).toBe(initialValue)
   })
+
+  it('shows the empty state when JSON input is cleared', async () => {
+    const wrapper = mount(TestWrapper)
+    const jsonInput = getTextarea(wrapper, 0)
+
+    await jsonInput.setValue('  ')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Enter JSON and a JSONPath query to see results')
+    expect(wrapper.text()).not.toContain('Invalid JSON')
+  })
+
+  it('treats a whitespace query as empty', async () => {
+    const wrapper = mount(TestWrapper)
+    const queryInput = getTextarea(wrapper, 1)
+
+    await queryInput.setValue('   ')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Enter JSON and a JSONPath query to see results')
+    expect(wrapper.text()).not.toContain('Invalid JSONPath')
+  })
 })
