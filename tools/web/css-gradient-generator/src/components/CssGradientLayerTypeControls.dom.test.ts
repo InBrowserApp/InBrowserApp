@@ -77,6 +77,10 @@ describe('CssGradientLayerTypeControls', () => {
     expect(wrapper.text()).toContain('angle')
     expect(wrapper.text()).not.toContain('centerX')
 
+    const angleInput = wrapper.findComponent({ name: 'NInputNumber' })
+    angleInput.vm.$emit('update:value', 120)
+    expect(wrapper.emitted('update:layerAngle')?.[0]).toEqual([120])
+
     const select = wrapper.findComponent({ name: 'NSelect' })
     select.vm.$emit('update:value', 'radial')
     expect(wrapper.emitted('update:layerType')?.[0]).toEqual(['radial'])
@@ -95,6 +99,30 @@ describe('CssGradientLayerTypeControls', () => {
     centerYInput.vm.$emit('update:value', 30)
     expect(wrapper.emitted('update:layerCenterX')?.[0]).toEqual([20])
     expect(wrapper.emitted('update:layerCenterY')?.[0]).toEqual([30])
+  })
+
+  it('guards non-number updates for center inputs', () => {
+    const wrapper = mount(CssGradientLayerTypeControls, {
+      props: {
+        layerType: 'radial',
+        layerAngle: 90,
+        layerCenterX: 50,
+        layerCenterY: 50,
+      },
+    })
+
+    const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
+    const centerXInput = inputs[0]
+    const centerYInput = inputs[1]
+    if (!centerXInput || !centerYInput) {
+      throw new Error('Expected center inputs')
+    }
+
+    centerXInput.vm.$emit('update:value', null)
+    centerYInput.vm.$emit('update:value', null)
+
+    expect(wrapper.emitted('update:layerCenterX')).toBeUndefined()
+    expect(wrapper.emitted('update:layerCenterY')).toBeUndefined()
   })
 
   it('guards non-number updates for the angle input', () => {
