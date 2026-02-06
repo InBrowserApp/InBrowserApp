@@ -63,7 +63,7 @@ const IconStub = defineComponent({
 const EmptyStub = defineComponent({
   name: 'NEmpty',
   props: ['description'],
-  template: '<div />',
+  template: '<div class="empty">{{ description }}</div>',
 })
 
 const CopyStub = defineComponent({
@@ -132,6 +132,7 @@ describe('PaletteResults', () => {
           NButton: ButtonStub,
           NIcon: IconStub,
           NEmpty: EmptyStub,
+          'n-empty': EmptyStub,
           CopyToClipboardButton: CopyStub,
           CopyToClipboardTooltip: CopyTooltipStub,
         },
@@ -140,5 +141,43 @@ describe('PaletteResults', () => {
 
     expect(wrapper.text()).toContain('#112233')
     expect(wrapper.text()).toContain('Export palette')
+  })
+
+  it('renders the empty state when no colors are available', () => {
+    const wrapper = mount(PaletteResults, {
+      props: {
+        colors: [],
+        dominant: null,
+        totalPixels: 0,
+        fileName: 'sample.png',
+        isLoading: true,
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+          NSpin: SpinStub,
+          NGrid: GridStub,
+          NGridItem: GridItemStub,
+          NStatistic: StatisticStub,
+          NFlex: FlexStub,
+          NSelect: SelectStub,
+          NInput: InputStub,
+          'n-input': InputStub,
+          NButton: ButtonStub,
+          NIcon: IconStub,
+          NEmpty: EmptyStub,
+          'n-empty': EmptyStub,
+          CopyToClipboardButton: CopyStub,
+          CopyToClipboardTooltip: CopyTooltipStub,
+        },
+      },
+    })
+
+    const html = wrapper.html()
+
+    expect(html).toContain('No colors extracted yet.')
+    expect(html).toContain('n-empty')
+    expect(wrapper.text()).not.toContain('Export palette')
   })
 })

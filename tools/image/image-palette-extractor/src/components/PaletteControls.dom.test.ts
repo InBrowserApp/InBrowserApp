@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
 import PaletteControls from './PaletteControls.vue'
 
 vi.mock('naive-ui', async () => {
@@ -18,16 +19,19 @@ vi.mock('naive-ui', async () => {
     NSlider: defineComponent({
       name: 'NSlider',
       props: ['value', 'disabled'],
+      emits: ['update:value'],
       template: '<div data-test="slider" />',
     }),
     NInputNumber: defineComponent({
       name: 'NInputNumber',
       props: ['value', 'disabled'],
+      emits: ['update:value'],
       template: '<div data-test="input-number" />',
     }),
     NRadioGroup: defineComponent({
       name: 'NRadioGroup',
       props: ['value', 'disabled'],
+      emits: ['update:value'],
       template: '<div><slot /></div>',
     }),
     NRadioButton: defineComponent({
@@ -37,11 +41,13 @@ vi.mock('naive-ui', async () => {
     NSelect: defineComponent({
       name: 'NSelect',
       props: ['options', 'value', 'disabled'],
+      emits: ['update:value'],
       template: '<select data-test="sort" />',
     }),
     NSwitch: defineComponent({
       name: 'NSwitch',
       props: ['value', 'disabled'],
+      emits: ['update:value'],
       template: '<div data-test="switch" />',
     }),
     NFlex: defineComponent({
@@ -113,5 +119,41 @@ describe('PaletteControls', () => {
     expect(wrapper.findComponent({ name: 'NRadioGroup' }).props('disabled')).toBe(true)
     expect(wrapper.findComponent({ name: 'NSelect' }).props('disabled')).toBe(true)
     expect(wrapper.findComponent({ name: 'NSwitch' }).props('disabled')).toBe(true)
+  })
+
+  it('updates options when controls emit v-model updates', async () => {
+    const options = {
+      colorCount: 4,
+      quality: 'fast' as const,
+      sortBy: 'dominance' as const,
+      ignoreTransparent: true,
+    }
+
+    const wrapper = mount(PaletteControls, {
+      props: {
+        options,
+        isLoading: false,
+      },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          ToolSectionHeader: ToolSectionHeaderStub,
+        },
+      },
+    })
+
+    wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 10)
+    wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 11)
+    wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'precise')
+    wrapper.findComponent({ name: 'NSelect' }).vm.$emit('update:value', 'lightness')
+    wrapper.findComponent({ name: 'NSwitch' }).vm.$emit('update:value', false)
+    await nextTick()
+
+    expect(options).toEqual({
+      colorCount: 11,
+      quality: 'precise',
+      sortBy: 'lightness',
+      ignoreTransparent: false,
+    })
   })
 })
