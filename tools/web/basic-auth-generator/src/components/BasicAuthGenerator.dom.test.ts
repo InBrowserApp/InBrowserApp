@@ -95,4 +95,27 @@ describe('BasicAuthGenerator', () => {
     expect(wrapper.text()).toContain(header)
     expect(wrapper.text()).toContain(curl)
   })
+
+  it('shows empty outputs when encoder returns an empty token', async () => {
+    const previousBtoa = globalThis.btoa
+    globalThis.btoa = () => ''
+
+    try {
+      const wrapper = mount(BasicAuthGenerator, {
+        global: {
+          stubs,
+        },
+      })
+
+      const inputs = wrapper.findAll('input')
+      expect(inputs).toHaveLength(2)
+      await inputs[0]!.setValue('user')
+      await inputs[1]!.setValue('pass')
+
+      expect(wrapper.text()).not.toContain('Basic ')
+      expect(wrapper.text()).not.toContain('curl -H "Authorization:')
+    } finally {
+      globalThis.btoa = previousBtoa
+    }
+  })
 })
