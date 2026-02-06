@@ -7,6 +7,8 @@ const messageApi = {
   error: vi.fn(),
 }
 
+let objectUrlMode: 'normal' | 'fallback' = 'normal'
+
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
   return {
@@ -52,8 +54,21 @@ vi.mock('@shared/ui/domain/pdf', () => ({
 vi.mock('@vueuse/core', async () => {
   const { computed } = await import('vue')
   return {
-    useObjectUrl: (blobRef: { value: Blob | null }) =>
-      computed(() => (blobRef.value ? 'blob:mock' : undefined)),
+    useObjectUrl: (blobRef: { value: Blob | null }) => {
+      if (objectUrlMode === 'fallback') {
+        let reads = 0
+        return {
+          __v_isRef: true,
+          get value() {
+            if (!blobRef.value) return undefined
+            reads += 1
+            return reads === 1 ? 'blob:mock' : undefined
+          },
+        }
+      }
+
+      return computed(() => (blobRef.value ? 'blob:mock' : undefined))
+    },
   }
 })
 
@@ -70,6 +85,7 @@ vi.mock('./WhatIsPDFOwnerPassword.vue', () => ({
 
 describe('RemovePDFOwnerPasswordView', () => {
   beforeEach(() => {
+    objectUrlMode = 'normal'
     messageApi.success.mockClear()
     messageApi.error.mockClear()
     removePDFOwnerPassword.mockReset()
@@ -92,6 +108,21 @@ describe('RemovePDFOwnerPasswordView', () => {
     expect(link.exists()).toBe(true)
     expect(link.attributes('href')).toBe('blob:mock')
     expect(link.attributes('download')).toBe('test.pdf')
+  })
+
+  it('renders the download button even when href falls back to undefined', async () => {
+    objectUrlMode = 'fallback'
+    const file = new File(['pdf'], 'fallback.pdf', { type: 'application/pdf' })
+    removePDFOwnerPassword.mockResolvedValue(new Blob(['out']))
+
+    const wrapper = mount(RemovePDFOwnerPasswordView)
+    wrapper.findComponent({ name: 'PDFUpload' }).vm.$emit('upload-file', file)
+    await flushPromises()
+
+    const link = wrapper.find('a.button')
+    expect(link.exists()).toBe(true)
+    expect(link.attributes('href')).toBeUndefined()
+    expect(link.attributes('download')).toBe('fallback.pdf')
   })
 
   it('falls back to the default filename when missing', async () => {
