@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 import PDFInfoViewer from './PDFInfoViewer.vue'
@@ -9,13 +9,14 @@ vi.mock('../utils/extractPdfInfo', () => ({
   extractPdfInfo: vi.fn(),
 }))
 
-const i18n = createI18n({
-  legacy: false,
-  locale: 'en',
-  messages: {},
-  missingWarn: false,
-  fallbackWarn: false,
-})
+const createTestI18n = () =>
+  createI18n({
+    legacy: false,
+    locale: 'en',
+    messages: {},
+    missingWarn: false,
+    fallbackWarn: false,
+  })
 
 const stubs = {
   PDFUpload: {
@@ -67,13 +68,17 @@ const baseInfo: PdfInfo = {
 }
 
 describe('PDFInfoViewer', () => {
+  beforeEach(() => {
+    vi.mocked(extractPdfInfo).mockReset()
+  })
+
   it('renders results after upload', async () => {
     const mockedExtract = vi.mocked(extractPdfInfo)
     mockedExtract.mockResolvedValueOnce(baseInfo)
 
     const wrapper = mount(PDFInfoViewer, {
       global: {
-        plugins: [i18n],
+        plugins: [createTestI18n()],
         stubs,
       },
     })
@@ -91,7 +96,7 @@ describe('PDFInfoViewer', () => {
 
     const wrapper = mount(PDFInfoViewer, {
       global: {
-        plugins: [i18n],
+        plugins: [createTestI18n()],
         stubs,
       },
     })
@@ -101,5 +106,44 @@ describe('PDFInfoViewer', () => {
 
     expect(wrapper.text()).toContain('Boom')
     expect(wrapper.text()).toContain('Error')
+  })
+
+  it('falls back to parseFailed when a non-Error is thrown', async () => {
+    const mockedExtract = vi.mocked(extractPdfInfo)
+    mockedExtract.mockRejectedValueOnce('bad-value')
+
+    const wrapper = mount(PDFInfoViewer, {
+      global: {
+        plugins: [createTestI18n()],
+        stubs,
+      },
+    })
+
+    await wrapper.find('button.upload').trigger('click')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Failed to read PDF information.')
+  })
+
+  it('skips extraction when the selected file is cleared', async () => {
+    const mockedExtract = vi.mocked(extractPdfInfo)
+    mockedExtract.mockResolvedValueOnce(baseInfo)
+
+    const wrapper = mount(PDFInfoViewer, {
+      global: {
+        plugins: [createTestI18n()],
+        stubs,
+      },
+    })
+
+    await wrapper.find('button.upload').trigger('click')
+    await flushPromises()
+
+    const setupState = (wrapper.vm.$ as unknown as { setupState: { pdfFile: File | null } })
+      .setupState
+    setupState.pdfFile = null
+    await flushPromises()
+
+    expect(mockedExtract).toHaveBeenCalledTimes(1)
   })
 })

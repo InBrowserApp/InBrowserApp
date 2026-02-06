@@ -107,4 +107,64 @@ describe('PDFInfoResults', () => {
     expect(wrapper.text()).toContain('Password protected')
     expect(wrapper.text()).toContain('Encrypted')
   })
+
+  it('shows fallbacks for blank metadata and missing values', () => {
+    const sparseInfo: PdfInfo = {
+      file: {
+        name: 'sample.pdf',
+        size: 1024,
+        type: '   ',
+      },
+      document: {
+        version: '   ',
+        pageCount: Number.NaN,
+        encrypted: false,
+      },
+      metadata: {
+        title: '   ',
+        author: undefined,
+        subject: '',
+        keywords: [],
+        creator: '   ',
+        producer: undefined,
+        creationDate: undefined,
+        modificationDate: new Date('invalid'),
+      },
+    }
+
+    const wrapper = mount(PDFInfoResults, {
+      props: {
+        info: sparseInfo,
+        loading: false,
+      },
+      global: {
+        plugins: [i18n],
+        stubs,
+      },
+    })
+
+    const notAvailableCount = wrapper.text().match(/Not available/g)?.length ?? 0
+    expect(notAvailableCount).toBeGreaterThanOrEqual(6)
+  })
+
+  it('shows fallback for invalid file lastModified dates', () => {
+    const wrapper = mount(PDFInfoResults, {
+      props: {
+        info: {
+          ...baseInfo,
+          file: {
+            ...baseInfo.file,
+            lastModified: new Date('invalid'),
+          },
+        },
+        loading: false,
+      },
+      global: {
+        plugins: [i18n],
+        stubs,
+      },
+    })
+
+    expect(wrapper.text()).toContain('Not available')
+  })
 })

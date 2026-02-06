@@ -9,4 +9,18 @@ describe('pdf info viewer exports', () => {
     expect(toolInfo.path).toBe(routes[0]?.path)
     expect(index).toHaveProperty('toolInfo')
   })
+
+  it('loads the route component', async () => {
+    const loader = routes[0]?.component
+
+    expect(typeof loader).toBe('function')
+
+    if (typeof loader !== 'function') {
+      throw new Error('Route component loader is not a function')
+    }
+
+    const loadRouteComponent = loader as () => Promise<{ default: unknown }>
+    const componentModule = await loadRouteComponent()
+    expect(componentModule).toHaveProperty('default')
+  })
 })
