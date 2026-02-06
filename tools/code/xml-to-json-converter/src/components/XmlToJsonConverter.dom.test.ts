@@ -3,6 +3,7 @@ import { mount, flushPromises } from '@vue/test-utils'
 import { h } from 'vue'
 import { NCode, NMessageProvider, NSwitch } from 'naive-ui'
 import XmlToJsonConverter from './XmlToJsonConverter.vue'
+import XmlToJsonOptions from './XmlToJsonOptions.vue'
 
 const fileOpenMock = vi.fn()
 
@@ -59,6 +60,34 @@ describe('XmlToJsonConverter', () => {
     const renderedJson = getRenderedJson(wrapper)
     expect(renderedJson).not.toContain('"importance"')
     expect(renderedJson).not.toContain('"logged"')
+  })
+
+  it('applies explicit options and spaces model updates', async () => {
+    const wrapper = mount(TestWrapper)
+    const optionsPanel = wrapper.findComponent(XmlToJsonOptions)
+
+    expect(optionsPanel.exists()).toBe(true)
+
+    await optionsPanel.vm.$emit('update:options', {
+      compact: false,
+      ignoreDeclaration: false,
+      ignoreInstruction: false,
+      ignoreAttributes: false,
+      ignoreText: false,
+      ignoreCdata: false,
+      ignoreDoctype: false,
+      ignoreComment: false,
+      trim: false,
+      nativeType: false,
+      alwaysArray: false,
+      alwaysChildren: true,
+    })
+    await optionsPanel.vm.$emit('update:spaces', 4)
+    await flushPromises()
+
+    const renderedJson = getRenderedJson(wrapper)
+    expect(renderedJson).toContain('"elements"')
+    expect(renderedJson).toContain('\"name\": \"note\"')
   })
 
   it('imports XML from a file selection', async () => {
