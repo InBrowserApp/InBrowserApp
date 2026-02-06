@@ -62,6 +62,11 @@ describe('parseIsoDuration', () => {
     })
   })
 
+  it('rejects blank and malformed values', () => {
+    expect(parseIsoDuration('')).toBeNull()
+    expect(parseIsoDuration('not-a-duration')).toBeNull()
+  })
+
   it('rejects empty durations', () => {
     expect(parseIsoDuration('P')).toBeNull()
   })
