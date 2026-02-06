@@ -158,7 +158,7 @@ describe('CodeShotExportPanel', () => {
   it('skips raster generation when svg markup is missing', async () => {
     const wrapper = mount(CodeShotExportPanel, {
       props: {
-        filename: 'My / File',
+        filename: '   ',
         svgMarkup: '',
         svgWidth: 0,
         svgHeight: 0,
@@ -175,6 +175,16 @@ describe('CodeShotExportPanel', () => {
 
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
     expect(buttons).toHaveLength(5)
+
+    const downloads = buttons.map((button) => button.props('download'))
+    expect(downloads).toEqual([
+      'code-shot.png',
+      'code-shot.jpg',
+      'code-shot.webp',
+      'code-shot.svg',
+      'code-shot.html',
+    ])
+
     buttons.forEach((button) => {
       expect(button.props('tag')).toBe('a')
       expect(button.props('disabled')).toBe(true)

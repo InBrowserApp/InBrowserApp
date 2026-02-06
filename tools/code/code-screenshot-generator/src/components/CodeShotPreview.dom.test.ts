@@ -112,4 +112,35 @@ describe('CodeShotPreview', () => {
     const card = wrapper.find('.code-shot-card').element as HTMLDivElement
     expect(card.style.boxShadow).toBe('none')
   })
+
+  it('renders windows controls when window style is set to windows', () => {
+    const theme = themes[0] as Theme
+    const layout: CodeShotLayout = {
+      fontSize: 15,
+      lineHeight: 1.5,
+      padding: 20,
+      framePadding: 14,
+      radius: 10,
+      shadow: true,
+      windowStyle: 'windows',
+      showLineNumbers: false,
+      tabSize: 2,
+      fontFamily: 'JetBrains Mono',
+    }
+    const background: BackgroundConfig = { type: 'transparent' }
+    const lines: StyledToken[][] = [[{ text: 'line', color: '#fff', fontStyle: 'normal' }]]
+
+    const wrapper = mount(CodeShotPreview, {
+      props: {
+        lines,
+        lineNumbers: ['1'],
+        layout,
+        theme,
+        background,
+      },
+    })
+
+    expect(wrapper.find('.window-controls.windows').exists()).toBe(true)
+    expect(wrapper.find('.window-controls.mac').exists()).toBe(false)
+  })
 })
