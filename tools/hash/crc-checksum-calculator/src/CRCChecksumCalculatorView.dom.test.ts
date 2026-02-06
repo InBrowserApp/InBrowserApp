@@ -110,6 +110,29 @@ describe('CRCChecksumCalculatorView', () => {
     expect(wrapper.find('.layout').exists()).toBe(true)
   })
 
+  it('passes file input directly to the calculator worker', async () => {
+    calculateMock.mockResolvedValue([{ name: 'CRC16', crc: 'ffff' }])
+
+    const wrapper = mount(CRCChecksumCalculatorView, {
+      global: {
+        stubs,
+      },
+    })
+
+    await flushPromises()
+    calculateMock.mockClear()
+
+    const file = new File(['payload'], 'payload.txt', { type: 'text/plain' })
+    const setupState = (wrapper.vm.$ as unknown as { setupState: { textOrFile: string | File } })
+      .setupState
+
+    setupState.textOrFile = file
+    await flushPromises()
+
+    expect(calculateMock).toHaveBeenCalledWith(file)
+    expect(wrapper.text()).toContain('CRC16')
+  })
+
   it('computes CRC results for input and supports copy', async () => {
     calculateMock.mockResolvedValue([
       { name: 'CRC16', crc: 'a1b2' },
