@@ -105,6 +105,12 @@ describe('WhatIsCreditCardValidator', () => {
     expect(table.props('data')).toEqual(sampleBrands)
     expect(columns).toHaveLength(4)
     expect(columns[0]?.title()).toBe('brandColumn')
+    expect(columns[1]?.title()).toBe('prefixColumn')
+    expect(columns[2]?.title()).toBe('lengthColumn')
+    expect(columns[3]?.title()).toBe('cvcColumn')
+
+    const brandColumn = columns.find((column) => column.key === 'name')
+    expect(brandColumn?.render?.(sampleBrands[0]!)).toBeTruthy()
 
     const patternsColumn = columns.find((column) => column.key === 'patterns')
     expect(patternsColumn?.render?.(sampleBrands[0]!)).toBe('4, 51-55')

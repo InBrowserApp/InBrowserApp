@@ -36,10 +36,12 @@ describe('card brand utilities', () => {
     const visa = detectCardBrand('4111111111111111')
     const amex = detectCardBrand('378282246310005')
     const mastercard = detectCardBrand('2223000048400011')
+    const unionpay = detectCardBrand('6212345678901234')
 
     expect(visa?.id).toBe('visa')
     expect(amex?.id).toBe('amex')
     expect(mastercard?.id).toBe('mastercard')
+    expect(unionpay?.id).toBe('unionpay')
     expect(detectCardBrand('')).toBeNull()
 
     expect(validateCardLength('4111111111111111', visa)).toBe(true)

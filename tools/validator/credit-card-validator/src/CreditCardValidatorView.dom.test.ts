@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
+import { defineComponent, nextTick } from 'vue'
 import CreditCardValidatorView from './CreditCardValidatorView.vue'
 
 const { storageState } = vi.hoisted(() => ({
@@ -89,6 +89,33 @@ describe('CreditCardValidatorView', () => {
     })
 
     expect(wrapper.find('.credit-card-input').attributes('data-value')).toBe('4111')
+    expect(wrapper.find('.credit-card-result').exists()).toBe(true)
+  })
+
+  it('updates the stored card number from child input events', async () => {
+    storageState.current = ''
+
+    const wrapper = mount(CreditCardValidatorView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: {
+            props: ['info'],
+            template: '<div class="layout"><slot /></div>',
+          },
+          CreditCardInput: CreditCardInputStub,
+          CreditCardResult: CreditCardResultStub,
+          WhatIsCreditCardValidator: {
+            template: '<div class="what-is-credit-card" />',
+          },
+        },
+      },
+    })
+
+    const input = wrapper.findComponent(CreditCardInputStub)
+    await input.vm.$emit('update:modelValue', '4111111111111111')
+    await nextTick()
+
+    expect(wrapper.find('.credit-card-input').attributes('data-value')).toBe('4111111111111111')
     expect(wrapper.find('.credit-card-result').exists()).toBe(true)
   })
 })
