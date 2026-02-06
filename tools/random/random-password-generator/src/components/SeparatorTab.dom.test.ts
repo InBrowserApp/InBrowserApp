@@ -116,4 +116,45 @@ describe('SeparatorTab', () => {
 
     expect(value).toBe('0-0')
   })
+
+  it('builds blocks from upper, lower, and symbol sets', () => {
+    storage.set(
+      'tools:random-password-generator:separator:charsets',
+      ref(['upper', 'lower', 'symbols']),
+    )
+    storage.set('tools:random-password-generator:separator:excludeSimilar', ref(false))
+    storage.set('tools:random-password-generator:separator:blockLength', ref(1))
+    storage.set('tools:random-password-generator:separator:blockCount', ref(2))
+    storage.set('tools:random-password-generator:separator:blockSeparator', ref('.'))
+
+    const wrapper = mount(SeparatorTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    const emitted = wrapper.emitted('update:value')
+    const value = emitted?.[0]?.[0] as string
+
+    expect(value).toBe('A.A')
+  })
+
+  it('falls back to the default charset when none are selected', () => {
+    storage.set('tools:random-password-generator:separator:charsets', ref([]))
+    storage.set('tools:random-password-generator:separator:excludeSimilar', ref(false))
+    storage.set('tools:random-password-generator:separator:blockLength', ref(1))
+    storage.set('tools:random-password-generator:separator:blockCount', ref(2))
+    storage.set('tools:random-password-generator:separator:blockSeparator', ref(':'))
+
+    const wrapper = mount(SeparatorTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    const emitted = wrapper.emitted('update:value')
+    const value = emitted?.[0]?.[0] as string
+
+    expect(value).toBe('A:A')
+  })
 })

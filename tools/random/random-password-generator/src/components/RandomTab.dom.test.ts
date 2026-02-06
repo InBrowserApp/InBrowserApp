@@ -97,4 +97,41 @@ describe('RandomTab', () => {
 
     expect(value).toBe('0')
   })
+
+  it('builds the pool from upper, lower, and symbol sets', () => {
+    storage.set('tools:random-password-generator:random:length', ref(3))
+    storage.set(
+      'tools:random-password-generator:random:charsets',
+      ref(['upper', 'lower', 'symbols']),
+    )
+    storage.set('tools:random-password-generator:random:excludeSimilar', ref(false))
+
+    const wrapper = mount(RandomTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    const emitted = wrapper.emitted('update:value')
+    const value = emitted?.[0]?.[0] as string
+
+    expect(value).toBe('AAA')
+  })
+
+  it('falls back to the default charset when none are selected', () => {
+    storage.set('tools:random-password-generator:random:length', ref(1))
+    storage.set('tools:random-password-generator:random:charsets', ref([]))
+    storage.set('tools:random-password-generator:random:excludeSimilar', ref(false))
+
+    const wrapper = mount(RandomTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    const emitted = wrapper.emitted('update:value')
+    const value = emitted?.[0]?.[0] as string
+
+    expect(value).toBe('A')
+  })
 })
