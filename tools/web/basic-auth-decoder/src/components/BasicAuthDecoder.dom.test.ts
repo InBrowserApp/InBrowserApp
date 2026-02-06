@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, afterEach, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 import { defineComponent, h } from 'vue'
@@ -52,6 +52,10 @@ const mountOptions = {
 }
 
 describe('BasicAuthDecoder', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
   it('decodes a valid Basic header', async () => {
     const wrapper = mount(BasicAuthDecoder, mountOptions)
 
@@ -82,5 +86,36 @@ describe('BasicAuthDecoder', () => {
     await flushPromises()
 
     expect(wrapper.text()).toContain('Invalid Base64 content')
+  })
+
+  it('clears decoded state when input becomes blank', async () => {
+    const wrapper = mount(BasicAuthDecoder, mountOptions)
+
+    const input = wrapper.findComponent(NInput)
+    await input.vm.$emit('update:value', 'Basic dXNlcjpwYXNz')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Decoded Result')
+
+    await input.vm.$emit('update:value', '   ')
+    await flushPromises()
+
+    expect(wrapper.text()).not.toContain('Decoded Result')
+    expect(wrapper.text()).not.toContain('Invalid Base64 content')
+  })
+
+  it('handles decoded credentials with no username token', async () => {
+    vi.spyOn(TextDecoder.prototype, 'decode').mockImplementation(
+      () => ({ split: () => [] }) as unknown as string,
+    )
+
+    const wrapper = mount(BasicAuthDecoder, mountOptions)
+    const input = wrapper.findComponent(NInput)
+
+    await input.vm.$emit('update:value', 'Basic dXNlcjpwYXNz')
+    await flushPromises()
+
+    expect(wrapper.text()).not.toContain('Invalid Base64 content')
+    expect(wrapper.text()).not.toContain('Decoded Result')
   })
 })
