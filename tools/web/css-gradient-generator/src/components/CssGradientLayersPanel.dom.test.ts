@@ -74,4 +74,22 @@ describe('CssGradientLayersPanel', () => {
     expect(wrapper.emitted('move-layer')?.[0]).toEqual([0, 1])
     expect(wrapper.emitted('remove-layer')?.[0]).toEqual([layer.id])
   })
+
+  it('hides the minimum-layer warning when not requested', () => {
+    const layer = createLayer()
+    const wrapper = mount(CssGradientLayersPanel, {
+      props: {
+        layers: [layer],
+        activeLayerId: layer.id,
+        showError: false,
+      },
+      global: {
+        stubs: {
+          CssGradientLayerList: CssGradientLayerListStub,
+        },
+      },
+    })
+
+    expect(wrapper.find('[data-testid="layer-error"]').exists()).toBe(false)
+  })
 })

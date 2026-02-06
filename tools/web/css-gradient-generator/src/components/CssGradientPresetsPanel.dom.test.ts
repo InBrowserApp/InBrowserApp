@@ -42,6 +42,7 @@ describe('CssGradientPresetsPanel', () => {
     if (!preset) {
       throw new Error('Expected at least one preset')
     }
+
     const wrapper = mount(CssGradientPresetsPanel, {
       props: {
         presets: gradientPresets,
@@ -53,5 +54,24 @@ describe('CssGradientPresetsPanel', () => {
 
     await wrapper.get(`[data-testid="preset-${preset.id}"]`).trigger('click')
     expect(wrapper.emitted('apply-preset')?.[0]).toEqual([preset.id])
+  })
+
+  it('uses the preset id when no translated label exists', () => {
+    const basePreset = gradientPresets[0]
+    if (!basePreset) {
+      throw new Error('Expected at least one preset')
+    }
+
+    const customPreset = { ...basePreset, id: 'custom-preset' }
+    const wrapper = mount(CssGradientPresetsPanel, {
+      props: {
+        presets: [customPreset],
+        presetSwatchStyleMap: {
+          [customPreset.id]: { backgroundImage: 'linear-gradient(#111, #eee)' },
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('custom-preset')
   })
 })
