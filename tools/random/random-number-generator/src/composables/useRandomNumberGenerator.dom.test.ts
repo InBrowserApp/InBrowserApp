@@ -192,4 +192,145 @@ describe('useRandomNumberGenerator', () => {
 
     wrapper.unmount()
   })
+
+  it('handles invalid numeric state and refuses rolling/fullscreen', async () => {
+    storage.set(storageKeys.min, ref(null))
+    storage.set(storageKeys.max, ref(Number.NaN))
+    storage.set(storageKeys.count, ref(Number.NaN))
+    storage.set(storageKeys.allowRepeat, ref(true))
+    storage.set(storageKeys.numberType, ref('integer'))
+    storage.set(storageKeys.decimalPlaces, ref(Number.NaN))
+    storage.set(storageKeys.history, ref([]))
+
+    const wrapper = mount(Harness)
+    const state = wrapper.vm.$.exposed as GeneratorState
+
+    await nextTick()
+
+    expect(state.rangeError.value).toBe('range-error')
+    expect(state.countError.value).toBe('')
+    expect(state.canRoll.value).toBe(false)
+    expect(state.count.value).toBe(1)
+    expect(state.decimalPlaces.value).toBe(0)
+
+    state.openFullscreen()
+    expect(state.isFullscreen.value).toBe(false)
+
+    state.toggleRolling()
+    expect(state.isRolling.value).toBe(false)
+
+    wrapper.unmount()
+  })
+
+  it('reports range error when max is invalid even with a valid min', async () => {
+    storage.set(storageKeys.min, ref(2))
+    storage.set(storageKeys.max, ref(Number.NaN))
+    storage.set(storageKeys.count, ref(1))
+    storage.set(storageKeys.allowRepeat, ref(true))
+    storage.set(storageKeys.numberType, ref('integer'))
+    storage.set(storageKeys.decimalPlaces, ref(0))
+    storage.set(storageKeys.history, ref([]))
+
+    const wrapper = mount(Harness)
+    const state = wrapper.vm.$.exposed as GeneratorState
+
+    await nextTick()
+
+    expect(state.rangeError.value).toBe('range-error')
+    expect(state.formattedNumbers.value).toEqual([])
+
+    wrapper.unmount()
+  })
+
+  it('generates non-repeating values and deduplicates rolling history entries', async () => {
+    storage.set(storageKeys.min, ref(1))
+    storage.set(storageKeys.max, ref(3))
+    storage.set(storageKeys.count, ref(3))
+    storage.set(storageKeys.allowRepeat, ref(false))
+    storage.set(storageKeys.numberType, ref('integer'))
+    storage.set(storageKeys.decimalPlaces, ref(0))
+    storage.set(storageKeys.history, ref([]))
+
+    vi.spyOn(Math, 'random')
+      .mockReturnValueOnce(0)
+      .mockReturnValueOnce(0)
+      .mockReturnValueOnce(0.4)
+      .mockReturnValueOnce(0.7)
+      .mockReturnValue(0)
+
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation(() => 1)
+    vi.spyOn(window, 'cancelAnimationFrame').mockImplementation(() => {})
+
+    const wrapper = mount(Harness)
+    const state = wrapper.vm.$.exposed as GeneratorState
+
+    await nextTick()
+    expect(state.formattedNumbers.value).toEqual(['1', '2', '3'])
+
+    state.count.value = 1
+    await nextTick()
+
+    state.toggleRolling()
+    state.toggleRolling()
+    expect(state.historyEntries.value).toHaveLength(1)
+
+    state.toggleRolling()
+    state.toggleRolling()
+    expect(state.historyEntries.value).toHaveLength(1)
+
+    state.clearHistory()
+    expect(state.historyEntries.value).toEqual([])
+
+    wrapper.unmount()
+  })
+
+  it('stops rolling when generation becomes invalid and ignores stale raf ticks', async () => {
+    storage.set(storageKeys.min, ref(1))
+    storage.set(storageKeys.max, ref(1))
+    storage.set(storageKeys.count, ref(1))
+    storage.set(storageKeys.allowRepeat, ref(true))
+    storage.set(storageKeys.numberType, ref('integer'))
+    storage.set(storageKeys.decimalPlaces, ref(0))
+    storage.set(storageKeys.history, ref([]))
+
+    const rafCallbacks: FrameRequestCallback[] = []
+    const cancelSpy = vi.spyOn(window, 'cancelAnimationFrame').mockImplementation(() => {})
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+      rafCallbacks.push(callback)
+      return rafCallbacks.length
+    })
+
+    const wrapper = mount(Harness)
+    const state = wrapper.vm.$.exposed as GeneratorState
+
+    await nextTick()
+
+    state.toggleRolling()
+    expect(state.isRolling.value).toBe(true)
+
+    await nextTick()
+    expect(state.historyEntries.value).toEqual([])
+
+    const tick = rafCallbacks[0]
+    expect(tick).toBeTypeOf('function')
+
+    tick?.(100)
+    tick?.(200)
+
+    await nextTick()
+    expect(state.historyEntries.value).toEqual([])
+
+    state.minValue.value = 5
+    state.maxValue.value = 3
+    await nextTick()
+
+    expect(state.isRolling.value).toBe(false)
+    expect(cancelSpy).toHaveBeenCalled()
+    expect(state.historyEntries.value).toEqual([])
+
+    tick?.(200)
+    expect(state.isRolling.value).toBe(false)
+
+    wrapper.unmount()
+  })
 })

@@ -64,6 +64,7 @@ vi.mock('naive-ui', async () => {
     }),
     NRadioGroup: defineComponent({
       name: 'NRadioGroup',
+      emits: ['update:value'],
       template: '<div><slot /></div>',
     }),
     NText: defineComponent({
@@ -135,6 +136,16 @@ describe('RandomNumberGeneratorOptions', () => {
     })
 
     expect(countWrapper.text()).toContain('Count error')
+
+    const bothWrapper = mount(RandomNumberGeneratorOptions, {
+      props: {
+        ...baseProps,
+        rangeError: 'Range error',
+        countError: 'Count error',
+      },
+    })
+    expect(bothWrapper.text()).toContain('Range error')
+    expect(bothWrapper.text()).not.toContain('Count error')
   })
 
   it('emits apply-preset from presets', async () => {
@@ -145,5 +156,30 @@ describe('RandomNumberGeneratorOptions', () => {
     await wrapper.get('[data-testid="preset-dice"]').trigger('click')
 
     expect(wrapper.emitted('apply-preset')).toEqual([['dice']])
+  })
+
+  it('emits updates for all option controls', async () => {
+    const wrapper = mount(RandomNumberGeneratorOptions, {
+      props: {
+        ...baseProps,
+        numberType: 'decimal',
+      },
+    })
+
+    const inputs = wrapper.findAll('input')
+    await inputs[0]?.setValue('2')
+    await inputs[1]?.setValue('20')
+    await inputs[2]?.setValue('3')
+    await inputs[3]?.setValue('4')
+
+    await wrapper.findComponent({ name: 'NSwitch' }).trigger('click')
+    wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'integer')
+
+    expect(wrapper.emitted('update:minValue')?.[0]).toEqual([2])
+    expect(wrapper.emitted('update:maxValue')?.[0]).toEqual([20])
+    expect(wrapper.emitted('update:count')?.[0]).toEqual([3])
+    expect(wrapper.emitted('update:decimalPlaces')?.[0]).toEqual([4])
+    expect(wrapper.emitted('update:allowRepeat')?.[0]).toEqual([false])
+    expect(wrapper.emitted('update:numberType')?.[0]).toEqual(['integer'])
   })
 })

@@ -31,7 +31,7 @@ vi.mock('@shared/ui/base', () => ({
     name: 'RegenerateButton',
     emits: ['click'],
     template:
-      '<button type="button" v-bind="$attrs" @click="$emit(\'click\')"><slot name="label" /><slot /></button>',
+      '<button type="button" v-bind="$attrs" @click="$emit(\'click\')"><slot name="icon" /><slot name="label" /><slot /></button>',
   }),
 }))
 
@@ -66,7 +66,7 @@ vi.mock('naive-ui', async () => {
       },
       emits: ['click'],
       template:
-        '<component :is="tag" v-bind="$attrs" :disabled="disabled" @click="$emit(\'click\')"><slot /></component>',
+        '<component :is="tag" v-bind="$attrs" :disabled="disabled" @click="$emit(\'click\')"><slot name="icon" /><slot /></component>',
     }),
     NCard: defineComponent({
       name: 'NCard',
@@ -112,6 +112,9 @@ describe('RandomNumberGeneratorResults', () => {
     expect(wrapper.text()).toContain('placeholder')
     expect(wrapper.get('[data-testid="download-results"]').attributes('disabled')).toBeDefined()
     expect(wrapper.get('[data-testid="enter-fullscreen"]').attributes('disabled')).toBeDefined()
+
+    await wrapper.get('[data-testid="results-card"]').trigger('click')
+    expect(wrapper.emitted('open-fullscreen')).toBeUndefined()
   })
 
   it('renders a hero number and emits actions', async () => {
@@ -129,6 +132,8 @@ describe('RandomNumberGeneratorResults', () => {
     expect(wrapper.get('[data-testid="hero-number"]').text()).toBe('7')
     expect(wrapper.get('[data-testid="download-results"]').attributes('href')).toBe('blob:mock')
 
+    expect(wrapper.findAll('.n-icon').length).toBeGreaterThanOrEqual(2)
+
     await wrapper.get('[data-testid="regenerate"]').trigger('click')
     await wrapper.get('[data-testid="results-card"]').trigger('click')
     await wrapper.get('[data-testid="enter-fullscreen"]').trigger('click')
@@ -137,16 +142,20 @@ describe('RandomNumberGeneratorResults', () => {
     expect(wrapper.emitted('open-fullscreen')).toHaveLength(2)
   })
 
-  it('renders tags for multiple values', () => {
+  it('renders tags for multiple values and keeps regenerate enabled while rolling', async () => {
     const wrapper = mount(RandomNumberGeneratorResults, {
       props: {
         ...baseProps,
         formattedNumbers: ['1', '2', '3'],
         outputText: '1\n2\n3',
+        isRolling: true,
       },
     })
 
+    await flushPromises()
+
     expect(wrapper.find('[data-testid="hero-number"]').exists()).toBe(false)
     expect(wrapper.findAll('.n-tag')).toHaveLength(3)
+    expect(wrapper.get('[data-testid="regenerate"]').attributes('disabled')).toBeUndefined()
   })
 })
