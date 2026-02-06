@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref, type Ref } from 'vue'
+import { ref, nextTick, type Ref } from 'vue'
 import RandomTab from './RandomTab.vue'
 
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())
@@ -27,6 +27,28 @@ vi.mock('naive-ui', async () => {
   const Base = defineComponent({
     template: '<div class="base"><slot /></div>',
   })
+  const NSlider = defineComponent({
+    name: 'NSlider',
+    props: {
+      value: {
+        type: Number,
+        default: 0,
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="n-slider" />',
+  })
+  const NCheckboxGroup = defineComponent({
+    name: 'NCheckboxGroup',
+    props: {
+      value: {
+        type: Array<string>,
+        default: () => [],
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="checkbox-group"><slot /></div>',
+  })
   const NCheckbox = defineComponent({
     name: 'NCheckbox',
     props: {
@@ -37,13 +59,24 @@ vi.mock('naive-ui', async () => {
     },
     template: '<label class="checkbox"><slot /></label>',
   })
+  const NSwitch = defineComponent({
+    name: 'NSwitch',
+    props: {
+      value: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    emits: ['update:value'],
+    template: '<button class="n-switch" type="button" />',
+  })
   return {
     NGrid: Base,
     NFormItemGi: Base,
-    NSlider: Base,
-    NCheckboxGroup: Base,
+    NSlider,
+    NCheckboxGroup,
     NCheckbox,
-    NSwitch: Base,
+    NSwitch,
     NFlex: Base,
   }
 })
@@ -133,5 +166,32 @@ describe('RandomTab', () => {
     const value = emitted?.[0]?.[0] as string
 
     expect(value).toBe('A')
+  })
+
+  it('updates stored options from controls', async () => {
+    storage.set('tools:random-password-generator:random:length', ref(8))
+    storage.set('tools:random-password-generator:random:charsets', ref(['digits']))
+    storage.set('tools:random-password-generator:random:excludeSimilar', ref(true))
+
+    const wrapper = mount(RandomTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 12)
+    wrapper.findComponent({ name: 'NCheckboxGroup' }).vm.$emit('update:value', ['upper', 'symbols'])
+    wrapper.findComponent({ name: 'NSwitch' }).vm.$emit('update:value', false)
+    await nextTick()
+
+    expect(
+      (storage.get('tools:random-password-generator:random:length') as Ref<number>).value,
+    ).toBe(12)
+    expect(
+      (storage.get('tools:random-password-generator:random:charsets') as Ref<string[]>).value,
+    ).toEqual(['upper', 'symbols'])
+    expect(
+      (storage.get('tools:random-password-generator:random:excludeSimilar') as Ref<boolean>).value,
+    ).toBe(false)
   })
 })

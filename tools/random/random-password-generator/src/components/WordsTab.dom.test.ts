@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref, type Ref } from 'vue'
+import { ref, nextTick, type Ref } from 'vue'
 import WordsTab from './WordsTab.vue'
 
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())
@@ -29,6 +29,17 @@ vi.mock('naive-ui', async () => {
   const Base = defineComponent({
     template: '<div class="base"><slot /></div>',
   })
+  const NSlider = defineComponent({
+    name: 'NSlider',
+    props: {
+      value: {
+        type: Number,
+        default: 0,
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="n-slider" />',
+  })
   const NInput = defineComponent({
     name: 'NInput',
     props: {
@@ -37,14 +48,26 @@ vi.mock('naive-ui', async () => {
         default: '',
       },
     },
+    emits: ['update:value'],
     template: '<input class="n-input" />',
+  })
+  const NSwitch = defineComponent({
+    name: 'NSwitch',
+    props: {
+      value: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    emits: ['update:value'],
+    template: '<button class="n-switch" type="button" />',
   })
   return {
     NGrid: Base,
     NFormItemGi: Base,
-    NSlider: Base,
+    NSlider,
     NInput,
-    NSwitch: Base,
+    NSwitch,
   }
 })
 
@@ -101,5 +124,38 @@ describe('WordsTab', () => {
     const value = emitted?.[0]?.[0] as string
 
     expect(value.split('-')).toHaveLength(2)
+  })
+
+  it('updates stored options from form controls', async () => {
+    storage.set('tools:random-password-generator:words:count', ref(2))
+    storage.set('tools:random-password-generator:words:sep', ref('-'))
+    storage.set('tools:random-password-generator:words:caps', ref(false))
+    storage.set('tools:random-password-generator:words:num', ref(false))
+
+    const wrapper = mount(WordsTab, {
+      props: {
+        nonce: 0,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 6)
+    wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', '_')
+    const switches = wrapper.findAllComponents({ name: 'NSwitch' })
+    switches[0]?.vm.$emit('update:value', true)
+    switches[1]?.vm.$emit('update:value', true)
+    await nextTick()
+
+    expect((storage.get('tools:random-password-generator:words:count') as Ref<number>).value).toBe(
+      6,
+    )
+    expect((storage.get('tools:random-password-generator:words:sep') as Ref<string>).value).toBe(
+      '_',
+    )
+    expect((storage.get('tools:random-password-generator:words:caps') as Ref<boolean>).value).toBe(
+      true,
+    )
+    expect((storage.get('tools:random-password-generator:words:num') as Ref<boolean>).value).toBe(
+      true,
+    )
   })
 })

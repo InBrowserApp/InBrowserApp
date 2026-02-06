@@ -54,13 +54,38 @@ vi.mock('naive-ui', async () => {
   const Base = defineComponent({
     template: '<div class="base"><slot /></div>',
   })
+  const NTabs = defineComponent({
+    name: 'NTabs',
+    props: {
+      value: {
+        type: String,
+        default: 'random',
+      },
+    },
+    emits: ['update:value'],
+    template: '<div class="n-tabs"><slot /></div>',
+  })
+  const NTabPane = defineComponent({
+    name: 'NTabPane',
+    props: {
+      name: {
+        type: String,
+        default: '',
+      },
+      tab: {
+        type: String,
+        default: '',
+      },
+    },
+    template: '<section class="n-tab-pane"><slot name="tab" /><slot /></section>',
+  })
   const NText = defineComponent({
     name: 'NText',
     template: '<span class="n-text"><slot /></span>',
   })
   return {
-    NTabs: Base,
-    NTabPane: Base,
+    NTabs,
+    NTabPane,
     NText,
     NFlex: Base,
     NIcon: Base,
@@ -243,5 +268,24 @@ describe('RandomPasswordGenerator', () => {
     await wrapper.find('button.regenerate').trigger('click')
 
     expect(nonce.value).toBe(1)
+  })
+
+  it('renders tab labels and updates active tab via tabs v-model', async () => {
+    storage.set(activeTabKey, ref('random'))
+    storage.set(nonceKey, ref(0))
+
+    const wrapper = mountGenerator()
+    await nextTick()
+
+    expect(wrapper.text()).toContain('tab-random')
+    expect(wrapper.text()).toContain('tab-words')
+    expect(wrapper.text()).toContain('tab-separator')
+    expect(wrapper.text()).toContain('tab-pin')
+
+    wrapper.findComponent({ name: 'NTabs' }).vm.$emit('update:value', 'words')
+    await nextTick()
+
+    expect((storage.get(activeTabKey) as Ref<string>).value).toBe('words')
+    expect(wrapper.find('.n-text').text()).toBe('words-value')
   })
 })
