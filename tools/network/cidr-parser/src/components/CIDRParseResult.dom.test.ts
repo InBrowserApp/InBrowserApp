@@ -60,6 +60,14 @@ beforeEach(() => {
   stringifyIpMock.mockReset()
 })
 
+function unwrapMaybeRef<T>(value: T | { value: T }): T {
+  if (typeof value === 'object' && value !== null && 'value' in value) {
+    return value.value
+  }
+
+  return value
+}
+
 describe('CIDRParseResult', () => {
   it('renders parsed IPv4 details and netmask', () => {
     parseCidrMock.mockImplementation((cidr: string) => {
@@ -114,6 +122,28 @@ describe('CIDRParseResult', () => {
     expect(wrapper.text()).toContain('IPv6')
     expect(wrapper.text()).toContain('ip-5')
     expect(wrapper.text()).not.toContain('netmask')
+  })
+
+  it('returns undefined derived values when cidr is missing', () => {
+    const wrapper = mount(CIDRParseResult, {
+      props: {
+        cidr: undefined,
+      },
+    })
+
+    const setupState =
+      (wrapper.vm as { $?: { setupState?: Record<string, unknown> } }).$?.setupState ?? {}
+
+    expect(wrapper.find('.n-descriptions').exists()).toBe(false)
+    expect(unwrapMaybeRef(setupState.parsed as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.startIP as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.startIPInt as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.endIP as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.endIPInt as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.IPSize as { value: unknown } | undefined)).toBeUndefined()
+    expect(unwrapMaybeRef(setupState.netmask as { value: unknown } | undefined)).toBeUndefined()
+    expect(parseCidrMock).not.toHaveBeenCalled()
+    expect(stringifyIpMock).not.toHaveBeenCalled()
   })
 
   it('returns empty output on parse errors', () => {
