@@ -23,6 +23,12 @@ class MockFileReader {
       this.onerror?.()
       return
     }
+    if (file.name === 'empty-result.txt') {
+      this.result = null
+      this.onload?.()
+      return
+    }
+
     this.result = 'data:text/plain;base64,SGVsbG8='
     this.onload?.()
   }
@@ -107,5 +113,90 @@ describe('FileToDataUriConverter', () => {
     await flushPromises()
 
     expect(wrapper.text()).not.toContain('data:text/plain')
+  })
+
+  it('shows validation error when multiple files are provided', async () => {
+    const wrapper = mount(TestWrapper)
+    const vm = getConverterVm(wrapper)
+
+    const fileA = new File(['A'], 'a.txt', { type: 'text/plain' })
+    const fileB = new File(['B'], 'b.txt', { type: 'text/plain' })
+    const fileInfoA = createUploadInfo(fileA)
+    const fileInfoB = createUploadInfo(fileB)
+
+    await vm.handleBeforeUpload({
+      file: fileInfoA,
+      fileList: [fileInfoA, fileInfoB],
+    })
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Only one file can be uploaded')
+  })
+
+  it('returns early when upload info has no file', async () => {
+    const wrapper = mount(TestWrapper)
+    const vm = getConverterVm(wrapper)
+
+    const emptyInfo = {
+      id: 'none',
+      name: 'none',
+      status: 'pending',
+      file: undefined,
+      type: '',
+    } as unknown as UploadFileInfo
+
+    await vm.handleBeforeUpload({
+      file: emptyInfo,
+      fileList: [emptyInfo],
+    })
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Click or drag to upload a file')
+    expect(wrapper.text()).not.toContain('Failed to read file')
+  })
+
+  it('shows unknown type and zero-byte summary for empty files', async () => {
+    const wrapper = mount(TestWrapper)
+    const vm = getConverterVm(wrapper)
+
+    const emptyFile = new File([], 'empty.bin', { type: '' })
+    const fileInfo = createUploadInfo(emptyFile)
+
+    await vm.handleBeforeUpload({
+      file: fileInfo,
+      fileList: [fileInfo],
+    })
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('0 Bytes')
+    expect(wrapper.text()).toContain('Unknown type')
+  })
+
+  it('shows placeholder when FileReader returns an empty result', async () => {
+    const wrapper = mount(TestWrapper)
+    const vm = getConverterVm(wrapper)
+
+    const file = new File(['hello'], 'empty-result.txt', { type: 'text/plain' })
+    const fileInfo = createUploadInfo(file)
+
+    await vm.handleBeforeUpload({
+      file: fileInfo,
+      fileList: [fileInfo],
+    })
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Generated Data URI will appear here...')
+    expect(wrapper.text()).not.toContain('Failed to read file')
+  })
+
+  it('keeps the computed file summary empty before a file is selected', () => {
+    const wrapper = mount(TestWrapper)
+    const state = (
+      wrapper.findComponent(FileToDataUriConverter).vm.$ as unknown as {
+        setupState: { fileSummary: string }
+      }
+    ).setupState
+
+    expect(state.fileSummary).toBe('')
   })
 })
