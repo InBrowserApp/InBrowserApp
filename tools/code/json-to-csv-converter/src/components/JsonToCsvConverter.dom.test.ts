@@ -110,4 +110,38 @@ describe('JsonToCsvConverter', () => {
     expect((textarea.element as HTMLTextAreaElement).value).toBe('[{"a":10,"b":20}]')
     expect(getCsvText(wrapper)).toContain('10')
   })
+
+  it('uses unquoted output when quote input is empty', async () => {
+    const unparseSpy = vi.spyOn(Papa, 'unparse')
+    const wrapper = mount(TestWrapper)
+
+    const settingsButton = wrapper
+      .findAll('button')
+      .find((candidate) => candidate.text().includes('Settings'))
+
+    expect(settingsButton).toBeTruthy()
+    await settingsButton!.trigger('click')
+    await flushPromises()
+
+    const quoteInput = wrapper
+      .findAll('input')
+      .find((input) => input.attributes('placeholder') === '"')
+
+    if (!quoteInput) {
+      throw new Error('Quote input not found')
+    }
+
+    await quoteInput.setValue('')
+    await flushPromises()
+
+    expect(unparseSpy).toHaveBeenCalledWith(
+      expect.anything(),
+      expect.objectContaining({
+        quotes: false,
+        quoteChar: '"',
+      }),
+    )
+
+    unparseSpy.mockRestore()
+  })
 })
