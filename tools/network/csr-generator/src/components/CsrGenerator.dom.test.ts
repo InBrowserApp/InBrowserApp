@@ -3,6 +3,9 @@ import { flushPromises, mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 import { defineComponent, h } from 'vue'
 import CsrGenerator from './CsrGenerator.vue'
+import CsrKeySourceSection from './CsrKeySourceSection.vue'
+import CsrSanSection from './CsrSanSection.vue'
+import CsrSubjectSection from './CsrSubjectSection.vue'
 import { CsrGeneratorError, createCsr } from '../utils/csr'
 
 vi.mock('../utils/csr', async () => {
@@ -339,6 +342,89 @@ describe('CsrGenerator', () => {
     await flushPromises()
 
     expect(wrapper.text()).toContain('Boom')
+  })
+
+  it('syncs section v-model updates from child components', async () => {
+    const wrapper = mountGenerator()
+    const vm = wrapper.vm as unknown as {
+      keySource: string
+      algorithm: string
+      rsaKeySize: number
+      rsaHash: string
+      ecCurve: string
+      keyInput: string | File
+      subject: {
+        commonName: string
+        organization: string
+        organizationalUnit: string
+        country: string
+        state: string
+        locality: string
+        emailAddress: string
+      }
+      sanDns: string
+      sanIp: string
+      sanEmail: string
+      sanUri: string
+    }
+
+    const keySourceSection = wrapper.findComponent(CsrKeySourceSection)
+
+    expect(wrapper.text()).toContain('Generate')
+
+    keySourceSection.vm.$emit('update:keySource', 'import')
+    keySourceSection.vm.$emit('update:keyInput', 'IMPORTED-KEY')
+    await wrapper.vm.$nextTick()
+
+    expect(vm.keySource).toBe('import')
+    expect(vm.keyInput).toBe('IMPORTED-KEY')
+
+    keySourceSection.vm.$emit('update:keySource', 'generate')
+    keySourceSection.vm.$emit('update:algorithm', 'ecdsa')
+    keySourceSection.vm.$emit('update:rsaKeySize', 4096)
+    keySourceSection.vm.$emit('update:rsaHash', 'SHA-512')
+    keySourceSection.vm.$emit('update:ecCurve', 'P-521')
+    await wrapper.vm.$nextTick()
+
+    expect(vm.keySource).toBe('generate')
+    expect(vm.algorithm).toBe('ecdsa')
+    expect(vm.rsaKeySize).toBe(4096)
+    expect(vm.rsaHash).toBe('SHA-512')
+    expect(vm.ecCurve).toBe('P-521')
+
+    const subjectSection = wrapper.findComponent(CsrSubjectSection)
+    subjectSection.vm.$emit('update:subject', {
+      commonName: 'example.org',
+      organization: 'Acme Corp',
+      organizationalUnit: 'Security',
+      country: 'US',
+      state: 'CA',
+      locality: 'San Francisco',
+      emailAddress: 'security@example.org',
+    })
+    await wrapper.vm.$nextTick()
+
+    expect(vm.subject).toEqual({
+      commonName: 'example.org',
+      organization: 'Acme Corp',
+      organizationalUnit: 'Security',
+      country: 'US',
+      state: 'CA',
+      locality: 'San Francisco',
+      emailAddress: 'security@example.org',
+    })
+
+    const sanSection = wrapper.findComponent(CsrSanSection)
+    sanSection.vm.$emit('update:sanDns', 'example.org')
+    sanSection.vm.$emit('update:sanIp', '192.0.2.55')
+    sanSection.vm.$emit('update:sanEmail', 'security@example.org')
+    sanSection.vm.$emit('update:sanUri', 'https://example.org')
+    await wrapper.vm.$nextTick()
+
+    expect(vm.sanDns).toBe('example.org')
+    expect(vm.sanIp).toBe('192.0.2.55')
+    expect(vm.sanEmail).toBe('security@example.org')
+    expect(vm.sanUri).toBe('https://example.org')
   })
 
   it('updates form bindings and download links', async () => {
