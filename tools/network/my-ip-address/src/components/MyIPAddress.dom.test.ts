@@ -149,6 +149,29 @@ describe('MyIPAddress', () => {
     expect(wrapper.text()).toContain('webrtc-leak')
   })
 
+  it('handles WebRTC lookup failures gracefully', async () => {
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+    getMyIPv4Mock.mockResolvedValue('203.0.113.10')
+    getMyIPv6Mock.mockResolvedValue('2001:db8::1')
+    getIPsMock.mockRejectedValue(new Error('webrtc-failed'))
+
+    const wrapper = mount(MyIPAddress, {
+      global: {
+        stubs,
+      },
+    })
+
+    await flushPromises()
+    await flushPromises()
+
+    const titles = wrapper.findAll('.collapse-item').map((item) => item.attributes('data-title'))
+    expect(titles).toEqual(expect.arrayContaining(['203.0.113.10', '2001:db8::1']))
+    expect(wrapper.text()).not.toContain('webrtc-leak')
+    expect(consoleSpy).toHaveBeenCalled()
+
+    consoleSpy.mockRestore()
+  })
+
   it('shows loading fallbacks when address lookups fail', async () => {
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
     getMyIPv4Mock.mockRejectedValue(new Error('fail'))
