@@ -86,6 +86,22 @@ function createApngBuffer(numFrames = 1, numPlays = 0) {
   return buffer
 }
 
+function createPngBufferWithChunk(type: string) {
+  const buffer = new ArrayBuffer(20)
+  const view = new DataView(buffer)
+
+  const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
+  signature.forEach((value, index) => view.setUint8(index, value))
+  view.setUint32(8, 0)
+  view.setUint8(12, type.charCodeAt(0))
+  view.setUint8(13, type.charCodeAt(1))
+  view.setUint8(14, type.charCodeAt(2))
+  view.setUint8(15, type.charCodeAt(3))
+  view.setUint32(16, 0)
+
+  return buffer
+}
+
 type LoopExtensionOptions = {
   identifier?: string
   subBlockSize?: number
@@ -403,6 +419,31 @@ describe('convertGifToApng extra branches', () => {
   it('keeps encoded data unchanged when acTL chunk is missing', async () => {
     const file = createGifFile()
     const raw = new Uint8Array([1, 2, 3, 4]).buffer
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 2 } })
+    decompressFramesMock.mockReturnValue(createFrames())
+    encodeMock.mockReturnValue(raw)
+
+    const result = await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'infinite',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    const output = await result.blob.arrayBuffer()
+    expect(new Uint8Array(output)).toEqual(new Uint8Array(raw))
+  })
+
+  it('walks non-acTL chunks when applying loop metadata', async () => {
+    const file = createGifFile()
+    const raw = createPngBufferWithChunk('IDAT')
 
     parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 2 } })
     decompressFramesMock.mockReturnValue(createFrames())

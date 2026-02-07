@@ -231,4 +231,87 @@ describe('GifToApngConverterView error branches', () => {
     expect(messageMock.error).toHaveBeenLastCalledWith('Failed to convert GIFs. Please try again.')
     expect(wrapper.text()).toContain('Failed to convert GIFs. Please try again.')
   })
+
+  it('applies option updates from child emits and falls back to a default output name', async () => {
+    const wrapper = mountView()
+    const file = createFile('.gif')
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    const options = wrapper.findComponent(OptionsSectionStub)
+    options.vm.$emit('update:scale', 150)
+    options.vm.$emit('update:speed', 1.5)
+    options.vm.$emit('update:loopMode', 'infinite')
+    options.vm.$emit('update:loopMode', 'custom')
+    options.vm.$emit('update:loopCount', 4)
+    options.vm.$emit('update:optimize', false)
+    options.vm.$emit('update:optimizeLevel', 5)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(file, 'image.png'))
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    expect(mockedConvert).toHaveBeenCalledWith(
+      file,
+      {
+        scale: 150,
+        speed: 1.5,
+        loopMode: 'custom',
+        loopCount: 4,
+        optimize: false,
+        optimizeLevel: 5,
+      },
+      'image.png',
+    )
+  })
+
+  it('shows conversion failure when file input length is non-zero but yields no items', async () => {
+    const wrapper = mountView()
+    const filesLike = {
+      length: 1,
+      *[Symbol.iterator]() {
+        return
+      },
+    } as unknown as File[]
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', filesLike)
+    await flushPromises()
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    expect(mockedConvert).not.toHaveBeenCalled()
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to convert GIFs. Please try again.')
+    expect(wrapper.text()).toContain('Failed to convert GIFs. Please try again.')
+  })
+  it('ignores stale conversion results when options change mid-run', async () => {
+    const wrapper = mountView()
+    const file = createFile('slow.gif')
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    let resolveConvert: ((value: GifToApngResult) => void) | undefined
+    mockedConvert.mockImplementationOnce(
+      () =>
+        new Promise<GifToApngResult>((resolve) => {
+          resolveConvert = resolve
+        }),
+    )
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:scale', 200)
+    await flushPromises()
+
+    resolveConvert?.(createResult(file, 'slow.png'))
+    await flushPromises()
+
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+    expect(messageMock.success).not.toHaveBeenCalled()
+  })
 })
