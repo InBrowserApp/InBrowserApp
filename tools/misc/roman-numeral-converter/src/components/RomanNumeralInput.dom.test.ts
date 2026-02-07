@@ -113,6 +113,14 @@ describe('RomanNumeralInput', () => {
     const formItem = wrapper.getComponent({ name: 'NFormItem' })
     const rule = formItem.props('rule') as { validator: () => true | Error }
 
+    expect(rule.validator()).toBe(true)
+
+    await input.setValue('   ')
+    await nextTick()
+
+    expect(rule.validator()).toBe(true)
+    expect(wrapper.emitted('update:value')?.length).toBe(1)
+
     await input.setValue('ABC')
     await nextTick()
 
