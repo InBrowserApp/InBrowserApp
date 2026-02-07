@@ -185,4 +185,59 @@ describe('color input fields', () => {
     const [c, m, y, k] = convert.rgb.cmyk(255, 255, 255)
     expect(wrapper.find('input').element.value).toBe(`cmyk(${c}%, ${m}%, ${y}%, ${k}%)`)
   })
+
+  it('syncs advanced inputs from rgba updates and handles enter blur', async () => {
+    const cases = [
+      {
+        Component: HwbColorInput,
+        display: (rgba: RGBA) => {
+          const [h, w, bk] = convert.rgb.hwb(rgba.r, rgba.g, rgba.b)
+          return `hwb(${h}, ${w}%, ${bk}%)`
+        },
+      },
+      {
+        Component: LabColorInput,
+        display: (rgba: RGBA) => {
+          const [l, a, b] = convert.rgb.lab(rgba.r, rgba.g, rgba.b)
+          return `lab(${l.toFixed(1)}, ${a.toFixed(1)}, ${b.toFixed(1)})`
+        },
+      },
+      {
+        Component: LchColorInput,
+        display: (rgba: RGBA) => {
+          const [l, c, h] = convert.rgb.lch(rgba.r, rgba.g, rgba.b)
+          return `lch(${l.toFixed(1)}, ${c.toFixed(1)}, ${h.toFixed(1)})`
+        },
+      },
+      {
+        Component: CmykColorInput,
+        display: (rgba: RGBA) => {
+          const [c, m, y, k] = convert.rgb.cmyk(rgba.r, rgba.g, rgba.b)
+          return `cmyk(${c}%, ${m}%, ${y}%, ${k}%)`
+        },
+      },
+    ]
+
+    for (const testCase of cases) {
+      const onUpdate = vi.fn()
+      const wrapper = mountInput(testCase.Component, { r: 255, g: 0, b: 0, a: 0.4 }, onUpdate)
+      const input = wrapper.find('input')
+      const blurSpy = vi.spyOn(input.element, 'blur')
+
+      await input.setValue('invalid')
+      await nextTick()
+      expect(wrapper.findComponent({ name: 'NInput' }).props('status')).toBe('error')
+
+      await input.trigger('keydown', { key: 'Enter' })
+      expect(blurSpy).toHaveBeenCalled()
+
+      const nextRgba = { r: 20, g: 120, b: 200, a: 0.4 }
+      await wrapper.setProps({ rgba: nextRgba })
+      await nextTick()
+
+      expect(input.element.value).toBe(testCase.display(nextRgba))
+      expect(wrapper.findComponent({ name: 'NInput' }).props('status')).toBeUndefined()
+      blurSpy.mockRestore()
+    }
+  })
 })
