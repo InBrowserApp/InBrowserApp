@@ -22,7 +22,8 @@ vi.mock('vue-i18n', async () => {
 vi.mock('naive-ui', () => ({
   NButton: {
     props: ['href', 'download', 'tag', 'type'],
-    template: '<a class="button" :href="href" :download="download"><slot /></a>',
+    template:
+      '<a class="button" :href="href" :download="download"><slot name="icon" /><slot /></a>',
   },
   NFlex: {
     template: '<div class="flex"><slot /></div>',
