@@ -38,6 +38,10 @@ describe('time zone utilities', () => {
     expect(parseDateTimeInput('2024-13-01')).toBeNull()
   })
 
+  it('rejects malformed date-time patterns', () => {
+    expect(parseDateTimeInput('2024/01/02 03:04:05')).toBeNull()
+  })
+
   it('formats date-time parts consistently', () => {
     expect(
       formatDateTimeParts({
@@ -79,5 +83,76 @@ describe('time zone utilities', () => {
     expect(zones).toContain('UTC')
     expect(isTimeZoneSupported('UTC')).toBe(true)
     expect(isTimeZoneSupported('Invalid/Zone')).toBe(false)
+  })
+
+  it('adjusts DST transitions when converting local time to UTC', () => {
+    const parts = {
+      year: 2024,
+      month: 3,
+      day: 10,
+      hour: 2,
+      minute: 30,
+      second: 0,
+      millisecond: 0,
+    }
+
+    const guess = Date.UTC(
+      parts.year,
+      parts.month - 1,
+      parts.day,
+      parts.hour,
+      parts.minute,
+      parts.second,
+      parts.millisecond,
+    )
+    const firstOffset = getTimeZoneOffsetMs(guess, 'America/New_York')
+    const firstUtc = guess - firstOffset
+    const secondOffset = getTimeZoneOffsetMs(firstUtc, 'America/New_York')
+
+    expect(secondOffset).not.toBe(firstOffset)
+
+    const timestamp = toUtcTimestamp(parts, 'America/New_York')
+    expect(timestamp).toBe(guess - secondOffset)
+    expect(formatInTimeZone(timestamp, 'America/New_York')).toContain('2024-03-10')
+  })
+
+  it('falls back when supportedValuesOf throws or is unavailable', () => {
+    const originalSupportedValuesOf = Object.getOwnPropertyDescriptor(Intl, 'supportedValuesOf')
+    const originalDateTimeFormat = Intl.DateTimeFormat
+
+    Object.defineProperty(Intl, 'supportedValuesOf', {
+      configurable: true,
+      value: () => {
+        throw new Error('unsupported')
+      },
+    })
+
+    Object.defineProperty(Intl, 'DateTimeFormat', {
+      configurable: true,
+      value: function DateTimeFormatThrows() {
+        throw new RangeError('unsupported timezone')
+      },
+    })
+
+    const fromThrow = getSupportedTimeZones()
+    expect(fromThrow).toContain('UTC')
+
+    Object.defineProperty(Intl, 'supportedValuesOf', {
+      configurable: true,
+      value: undefined,
+    })
+
+    const fromMissing = getSupportedTimeZones()
+    expect(fromMissing).toContain('UTC')
+
+    if (originalSupportedValuesOf) {
+      Object.defineProperty(Intl, 'supportedValuesOf', originalSupportedValuesOf)
+    } else {
+      Reflect.deleteProperty(Intl, 'supportedValuesOf')
+    }
+    Object.defineProperty(Intl, 'DateTimeFormat', {
+      configurable: true,
+      value: originalDateTimeFormat,
+    })
   })
 })

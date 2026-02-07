@@ -135,4 +135,40 @@ describe('TimeDifferenceInputs', () => {
     expect(wrapper.emitted('set-now')).toEqual([['start'], ['end']])
     expect(wrapper.findAll('.copy-btn')).toHaveLength(2)
   })
+
+  it('renders start error text and end offset label when provided', () => {
+    const wrapper = mount(TimeDifferenceInputs, {
+      props: {
+        startInput: 'invalid-start',
+        endInput: '2024-01-03 00:00:00.000',
+        startTimeZone: 'UTC',
+        endTimeZone: 'Asia/Tokyo',
+        startStatus: 'error',
+        endStatus: 'success',
+        startError: true,
+        endError: false,
+        startOffsetLabel: '',
+        endOffsetLabel: 'UTC+09:00',
+        timeZoneOptions: [
+          { label: 'UTC', value: 'UTC' },
+          { label: 'Asia/Tokyo', value: 'Asia/Tokyo' },
+        ],
+      },
+      global: {
+        stubs: {
+          ToolSectionHeader: {
+            template: '<header><slot /></header>',
+          },
+          ToolSection: {
+            template: '<section><slot /></section>',
+          },
+          CopyToClipboardButton: CopyStub,
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('invalid-date-time')
+    expect(wrapper.text()).toContain('offset')
+    expect(wrapper.text()).toContain('UTC+09:00')
+  })
 })

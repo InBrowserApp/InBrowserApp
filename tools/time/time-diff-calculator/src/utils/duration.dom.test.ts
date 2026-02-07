@@ -52,6 +52,11 @@ describe('parseIsoDuration', () => {
   it('rejects empty durations', () => {
     expect(parseIsoDuration('P')).toBeNull()
   })
+
+  it('returns null for blank and malformed ISO strings', () => {
+    expect(parseIsoDuration('   ')).toBeNull()
+    expect(parseIsoDuration('invalid')).toBeNull()
+  })
 })
 
 describe('duration formatting', () => {
@@ -115,5 +120,17 @@ describe('duration math', () => {
       seconds: 0,
       milliseconds: 0,
     })
+  })
+
+  it('coerces non-finite duration parts to zero milliseconds', () => {
+    expect(
+      durationPartsToMilliseconds({
+        days: Number.POSITIVE_INFINITY,
+        hours: Number.NaN,
+        minutes: 1,
+        seconds: Number.NEGATIVE_INFINITY,
+        milliseconds: 5,
+      }),
+    ).toBe(60_005)
   })
 })
