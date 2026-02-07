@@ -131,6 +131,19 @@ describe('TimeZoneConverter', () => {
     expect(getStorageValue('tools:time-zone-converter:from-timezone')).not.toBe('Bad/Zone')
   })
 
+  it('resets unsupported stored target zone and treats empty target input as unset', () => {
+    setStorage('tools:time-zone-converter:from-input', '')
+    setStorage('tools:time-zone-converter:to-input', '')
+    setStorage('tools:time-zone-converter:from-timezone', 'UTC')
+    setStorage('tools:time-zone-converter:to-timezone', 'Bad/Zone')
+
+    const wrapper = mountConverter()
+    const inputs = wrapper.findComponent({ name: 'TimeZoneConverterInputs' })
+
+    expect(getStorageValue('tools:time-zone-converter:to-timezone')).not.toBe('Bad/Zone')
+    expect(inputs.props('toStatus')).toBeUndefined()
+  })
+
   it('swaps inputs and time zones', async () => {
     setStorage('tools:time-zone-converter:from-input', '')
     setStorage('tools:time-zone-converter:to-input', '200')
@@ -147,7 +160,7 @@ describe('TimeZoneConverter', () => {
     expect(getStorageValue('tools:time-zone-converter:to-input')).toBe('200')
   })
 
-  it('sets now and updates the opposite input', async () => {
+  it('sets now and updates the opposite input when source is from', async () => {
     setStorage('tools:time-zone-converter:from-input', '100')
     setStorage('tools:time-zone-converter:to-input', '200')
     setStorage('tools:time-zone-converter:from-timezone', 'UTC')
@@ -161,6 +174,44 @@ describe('TimeZoneConverter', () => {
 
     expect(getStorageValue('tools:time-zone-converter:from-input')).toBe('123456')
     expect(getStorageValue('tools:time-zone-converter:to-input')).toBe('123456')
+  })
+
+  it('sets now and updates the opposite input when source is to', async () => {
+    setStorage('tools:time-zone-converter:from-input', '100')
+    setStorage('tools:time-zone-converter:to-input', '200')
+    setStorage('tools:time-zone-converter:from-timezone', 'UTC')
+    setStorage('tools:time-zone-converter:to-timezone', 'America/New_York')
+
+    vi.spyOn(Date, 'now').mockReturnValue(456789)
+
+    const wrapper = mountConverter()
+
+    await wrapper.get('[data-testid="set-now-to"]').trigger('click')
+
+    expect(getStorageValue('tools:time-zone-converter:to-input')).toBe('456789')
+    expect(getStorageValue('tools:time-zone-converter:from-input')).toBe('456789')
+  })
+
+  it('propagates v-model updates and shows empty offset labels for unsupported zones', async () => {
+    setStorage('tools:time-zone-converter:from-input', '100')
+    setStorage('tools:time-zone-converter:to-input', '200')
+    setStorage('tools:time-zone-converter:from-timezone', 'UTC')
+    setStorage('tools:time-zone-converter:to-timezone', 'UTC')
+
+    const wrapper = mountConverter()
+    const inputs = wrapper.findComponent({ name: 'TimeZoneConverterInputs' })
+
+    inputs.vm.$emit('update:fromInput', '111')
+    inputs.vm.$emit('update:fromTimeZone', 'Bad/Zone')
+    inputs.vm.$emit('update:toTimeZone', 'Bad/Zone')
+
+    await wrapper.vm.$nextTick()
+
+    expect(getStorageValue('tools:time-zone-converter:from-input')).toBe('111')
+    expect(getStorageValue('tools:time-zone-converter:from-timezone')).toBe('Bad/Zone')
+    expect(getStorageValue('tools:time-zone-converter:to-timezone')).toBe('Bad/Zone')
+    expect(inputs.props('fromOffsetLabel')).toBe('')
+    expect(inputs.props('toOffsetLabel')).toBe('')
   })
 
   it('uses the last edited input as the source', async () => {
@@ -178,5 +229,26 @@ describe('TimeZoneConverter', () => {
     await wrapper.vm.$nextTick()
 
     expect(getStorageValue('tools:time-zone-converter:from-input')).toBe('200')
+  })
+
+  it('keeps derived outputs empty when the edited source becomes invalid', async () => {
+    setStorage('tools:time-zone-converter:from-input', '100')
+    setStorage('tools:time-zone-converter:to-input', '200')
+    setStorage('tools:time-zone-converter:from-timezone', 'UTC')
+    setStorage('tools:time-zone-converter:to-timezone', 'UTC')
+
+    const wrapper = mountConverter()
+    const inputs = wrapper.findComponent({ name: 'TimeZoneConverterInputs' })
+    const details = wrapper.findComponent({ name: 'TimeZoneConverterDetails' })
+
+    inputs.vm.$emit('update:toInput', '')
+    inputs.vm.$emit('mark-edited', 'to')
+
+    await wrapper.vm.$nextTick()
+
+    expect(details.props('isoString')).toBe('')
+    expect(details.props('utcString')).toBe('')
+    expect(details.props('unixMilliseconds')).toBe('')
+    expect(details.props('unixSeconds')).toBe('')
   })
 })
