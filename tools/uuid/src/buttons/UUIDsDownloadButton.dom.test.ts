@@ -3,7 +3,8 @@ import { mount } from '@vue/test-utils'
 import UUIDsDownloadButton from './UUIDsDownloadButton.vue'
 
 const objectUrlState = vi.hoisted(() => ({
-  values: ['blob:txt', 'blob:csv', 'blob:tsv', 'blob:json'],
+  defaultValues: ['blob:txt', 'blob:csv', 'blob:tsv', 'blob:json'] as Array<string | undefined>,
+  values: ['blob:txt', 'blob:csv', 'blob:tsv', 'blob:json'] as Array<string | undefined>,
   index: 0,
 }))
 
@@ -97,6 +98,7 @@ vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
 describe('UUIDsDownloadButton', () => {
   beforeEach(() => {
     objectUrlState.index = 0
+    objectUrlState.values = [...objectUrlState.defaultValues]
   })
 
   it('renders download links with object URLs', () => {
@@ -116,5 +118,24 @@ describe('UUIDsDownloadButton', () => {
 
     expect(downloads).toEqual(['uuids.txt', 'uuids.csv', 'uuids.tsv', 'uuids.json'])
     expect(hrefs).toEqual(['blob:txt', 'blob:csv', 'blob:tsv', 'blob:json'])
+  })
+
+  it('keeps download anchors when object URLs are unavailable', () => {
+    objectUrlState.values = [undefined, undefined, undefined, undefined]
+
+    const wrapper = mount(UUIDsDownloadButton, {
+      props: {
+        uuids: [],
+      },
+    })
+
+    const links = wrapper.findAll('a.n-button')
+    expect(links).toHaveLength(4)
+
+    const downloads = links.map((link) => link.attributes('download'))
+    const hrefs = links.map((link) => link.attributes('href'))
+
+    expect(downloads).toEqual(['uuids.txt', 'uuids.csv', 'uuids.tsv', 'uuids.json'])
+    expect(hrefs).toEqual([undefined, undefined, undefined, undefined])
   })
 })
