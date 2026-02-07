@@ -543,6 +543,50 @@ describe('CountdownTimer', () => {
     expect(notification.requestPermission).toHaveBeenCalledTimes(1)
   })
 
+  it('updates alert models from child emits and covers notification hints', async () => {
+    const audio = createAudioContextMock()
+    Object.defineProperty(globalThis, 'AudioContext', {
+      value: audio.MockAudioContext,
+      configurable: true,
+    })
+
+    const notification = createNotificationMock({ permission: 'default' })
+    Object.defineProperty(globalThis, 'Notification', {
+      value: notification,
+      configurable: true,
+    })
+
+    vi.resetModules()
+    const wrapper = await mountCountdownTimer()
+    const vm = wrapper.vm as unknown as {
+      soundEnabled: boolean
+      vibrationEnabled: boolean
+      notificationEnabled: boolean
+      notificationPermission: NotificationPermission
+      notificationHint: string
+    }
+
+    expect(vm.notificationHint).toBe('')
+
+    const alerts = wrapper.findComponent({ name: 'CountdownAlertsSection' })
+    alerts.vm.$emit('update:soundEnabled', false)
+    alerts.vm.$emit('update:vibrationEnabled', false)
+    alerts.vm.$emit('update:notificationEnabled', true)
+    await nextTick()
+
+    expect(vm.soundEnabled).toBe(false)
+    expect(vm.vibrationEnabled).toBe(false)
+    expect(vm.notificationEnabled).toBe(true)
+    expect(vm.notificationHint).toContain('Allow notifications to receive alerts.')
+
+    vm.notificationPermission = 'denied'
+    await nextTick()
+    expect(vm.notificationHint).toContain('Notifications are blocked')
+
+    vm.notificationPermission = 'granted'
+    await nextTick()
+    expect(vm.notificationHint).toContain('Notifications are enabled.')
+  })
   it('shows notification states and handles permission requests', async () => {
     const audio = createAudioContextMock()
     Object.defineProperty(globalThis, 'AudioContext', {
