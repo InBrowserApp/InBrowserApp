@@ -78,6 +78,16 @@ const baseIosOptions: iOSWebClipOptions = {
   margin: 8,
 }
 
+const mockNullContextOnce = () => {
+  getContextSpy?.mockReturnValueOnce(null as unknown as CanvasRenderingContext2D)
+}
+
+const mockNullToBlobOnce = () => {
+  toBlobSpy?.mockImplementationOnce((callback: BlobCallback) => {
+    callback(null)
+  })
+}
+
 beforeEach(() => {
   getImageSizeMock.mockReset()
   optimizePNGMock.mockReset()
@@ -167,19 +177,84 @@ describe('raster output generators', () => {
     ).rejects.toThrow('image is undefined')
   })
 
-  it('generates a pwa png and handles load errors', async () => {
+  it('throws when favicon canvas context is unavailable', async () => {
+    const image = new Blob(['favicon'], { type: 'image/png' })
+
+    mockNullContextOnce()
+
+    await expect(generateFaviconPNG(image, baseDesktopOptions, 32)).rejects.toThrow(
+      'Canvas context is null',
+    )
+  })
+
+  it('skips background fill and margin when generating original favicon', async () => {
+    const image = new Blob(['favicon'], { type: 'image/svg+xml' })
+
+    await generateFaviconPNG(image, { ...baseDesktopOptions, original: true, margin: 60 }, 64)
+
+    expect(contextMock?.roundRect).not.toHaveBeenCalled()
+    expect(contextMock?.fill).not.toHaveBeenCalled()
+
+    const drawCalls = contextMock?.drawImage.mock.calls ?? []
+    const drawCall = drawCalls[drawCalls.length - 1]
+    expect(drawCall?.[1]).toBe(0)
+    expect(drawCall?.[2]).toBe(16)
+    expect(drawCall?.[3]).toBe(64)
+    expect(drawCall?.[4]).toBe(32)
+  })
+
+  it('throws when favicon blob conversion fails', async () => {
+    const image = new Blob(['favicon'], { type: 'image/png' })
+
+    mockNullToBlobOnce()
+
+    await expect(generateFaviconPNG(image, baseDesktopOptions, 32)).rejects.toThrow(
+      'Image conversion to Blob failed',
+    )
+  })
+
+  it('throws when pwa image is missing', async () => {
+    await expect(
+      generatePWAPNG(undefined, { ...basePwaOptions, image: undefined }, 96),
+    ).rejects.toThrow('image is undefined')
+  })
+
+  it('generates a pwa png without background fill when disabled', async () => {
     const image = new Blob(['pwa'], { type: 'image/png' })
-    const options = { ...basePwaOptions, image }
+
+    const result = await generatePWAPNG(image, { ...basePwaOptions, background: false }, 96)
+
+    expect(contextMock?.roundRect).not.toHaveBeenCalled()
+    expect(contextMock?.fill).not.toHaveBeenCalled()
+    expect(result).toBeInstanceOf(Blob)
+  })
+
+  it('throws when pwa canvas context is unavailable', async () => {
+    const image = new Blob(['pwa'], { type: 'image/png' })
+
+    mockNullContextOnce()
+
+    await expect(generatePWAPNG(image, basePwaOptions, 96)).rejects.toThrow(
+      'Canvas context is null',
+    )
+  })
+
+  it('throws when pwa image load fails', async () => {
+    const image = new Blob(['pwa'], { type: 'image/png' })
 
     nextImageBehavior = 'error'
 
-    await expect(generatePWAPNG(image, options, 96)).rejects.toThrow('Image failed to load')
+    await expect(generatePWAPNG(image, basePwaOptions, 96)).rejects.toThrow('Image failed to load')
+  })
 
-    nextImageBehavior = 'load'
-    const result = await generatePWAPNG(image, options, 96)
+  it('throws when pwa blob conversion fails', async () => {
+    const image = new Blob(['pwa'], { type: 'image/png' })
 
-    expect(optimizePNGMock).toHaveBeenCalled()
-    expect(result).toBeInstanceOf(Blob)
+    mockNullToBlobOnce()
+
+    await expect(generatePWAPNG(image, basePwaOptions, 96)).rejects.toThrow(
+      'Image conversion to Blob failed',
+    )
   })
 
   it('generates a maskable pwa png from maskable image', async () => {
@@ -199,6 +274,26 @@ describe('raster output generators', () => {
     ).rejects.toThrow('image is undefined')
   })
 
+  it('throws when maskable canvas context is unavailable', async () => {
+    const image = new Blob(['maskable'], { type: 'image/png' })
+
+    mockNullContextOnce()
+
+    await expect(generatePWAMaskablePNG(image, basePwaOptions, 128)).rejects.toThrow(
+      'Canvas context is null',
+    )
+  })
+
+  it('throws when maskable blob conversion fails', async () => {
+    const image = new Blob(['maskable'], { type: 'image/png' })
+
+    mockNullToBlobOnce()
+
+    await expect(generatePWAMaskablePNG(image, basePwaOptions, 128)).rejects.toThrow(
+      'Image conversion to Blob failed',
+    )
+  })
+
   it('generates iOS web clip output using options image', async () => {
     const image = new Blob(['ios'], { type: 'image/png' })
     const options = { ...baseIosOptions, image }
@@ -215,5 +310,23 @@ describe('raster output generators', () => {
     await expect(
       generateIosOutput(undefined, { ...baseIosOptions, image: undefined }),
     ).rejects.toThrow('image is undefined')
+  })
+
+  it('throws when iOS canvas context is unavailable', async () => {
+    const image = new Blob(['ios'], { type: 'image/png' })
+
+    mockNullContextOnce()
+
+    await expect(generateIosOutput(image, baseIosOptions)).rejects.toThrow('Canvas context is null')
+  })
+
+  it('throws when iOS blob conversion fails', async () => {
+    const image = new Blob(['ios'], { type: 'image/png' })
+
+    mockNullToBlobOnce()
+
+    await expect(generateIosOutput(image, baseIosOptions)).rejects.toThrow(
+      'Image conversion to Blob failed',
+    )
   })
 })

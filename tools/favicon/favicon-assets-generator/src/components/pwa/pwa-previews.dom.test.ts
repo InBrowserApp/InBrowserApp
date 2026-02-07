@@ -130,6 +130,29 @@ describe('PWAPreview', () => {
     const stubImage = wrapper.findComponent(PWAPreviewWindowsTaskbarStub).props('image') as Blob
     await expect(stubImage.text()).resolves.toBe('options')
   })
+
+  it('falls back to the prop image when options image is missing', async () => {
+    const propImage = new Blob(['prop'], { type: 'image/png' })
+
+    const wrapper = mount(PWAPreview, {
+      props: {
+        image: propImage,
+        options: {
+          ...basePwaOptions,
+          image: undefined,
+        },
+        generalInfoOptions: baseGeneralInfo,
+      },
+      global: {
+        stubs: {
+          PWAPreviewWindowsTaskbar: PWAPreviewWindowsTaskbarStub,
+        },
+      },
+    })
+
+    const stubImage = wrapper.findComponent(PWAPreviewWindowsTaskbarStub).props('image') as Blob
+    await expect(stubImage.text()).resolves.toBe('prop')
+  })
 })
 
 describe('PWAPreviewAndroid', () => {
