@@ -40,6 +40,7 @@ const CodeShotInputSection = defineComponent({
       default: '',
     },
   },
+  emits: ['update:code'],
   template: '<div data-input />',
 })
 
@@ -50,8 +51,12 @@ const CodeShotStyleSection = defineComponent({
       type: String,
       default: 'preset',
     },
+    backgroundColor: {
+      type: String,
+      default: '#0f172a',
+    },
   },
-  emits: ['update:backgroundType'],
+  emits: ['update:backgroundType', 'update:backgroundColor'],
   template: '<div data-style />',
 })
 
@@ -208,5 +213,32 @@ describe('CodeScreenshotGenerator', () => {
     expect(layout.props('framePadding')).toBe(48)
     expect(layout.props('shadow')).toBe(true)
     expect(layout.props('isBackgroundNone')).toBe(false)
+  })
+
+  it('updates transparent and solid backgrounds and handles undefined code', async () => {
+    const wrapper = mount(CodeScreenshotGenerator, mountOptions)
+    const style = wrapper.getComponent({ name: 'CodeShotStyleSection' })
+    const input = wrapper.getComponent({ name: 'CodeShotInputSection' })
+
+    style.vm.$emit('update:backgroundType', 'transparent')
+    await nextTick()
+
+    const transparentPreview = wrapper.getComponent({ name: 'CodeShotPreviewSection' })
+    expect(transparentPreview.props('background')).toEqual({ type: 'transparent' })
+
+    const transparentExport = wrapper.getComponent({ name: 'CodeShotExportSection' })
+    expect(transparentExport.props('jpgBackground')).toBe('#0a0a0a')
+
+    input.vm.$emit('update:code', undefined)
+    await nextTick()
+
+    style.vm.$emit('update:backgroundType', 'solid')
+    await nextTick()
+
+    const solidPreview = wrapper.getComponent({ name: 'CodeShotPreviewSection' })
+    expect(solidPreview.props('background')).toEqual({ type: 'solid', color: '#0f172a' })
+
+    const solidExport = wrapper.getComponent({ name: 'CodeShotExportSection' })
+    expect(solidExport.props('jpgBackground')).toBe('')
   })
 })

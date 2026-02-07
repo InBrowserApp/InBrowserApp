@@ -96,30 +96,48 @@ describe('CodeShotLayoutSection', () => {
 
     const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
     expect(inputs).toHaveLength(6)
-    const [fontInput, , , , , tabInput] = inputs
-    if (!fontInput || !tabInput) {
+
+    const [fontInput, lineHeightInput, cardPaddingInput, framePaddingInput, radiusInput, tabInput] =
+      inputs
+
+    if (
+      !fontInput ||
+      !lineHeightInput ||
+      !cardPaddingInput ||
+      !framePaddingInput ||
+      !radiusInput ||
+      !tabInput
+    ) {
       throw new Error('Expected layout inputs to exist')
     }
 
     fontInput.vm.$emit('update:value', 18)
+    lineHeightInput.vm.$emit('update:value', 1.85)
+    cardPaddingInput.vm.$emit('update:value', 30)
+    framePaddingInput.vm.$emit('update:value', 64)
+    radiusInput.vm.$emit('update:value', 20)
     tabInput.vm.$emit('update:value', 4)
 
     const shadowSwitch = wrapper.findComponent({ name: 'NSwitch' })
     shadowSwitch.vm.$emit('update:value', false)
 
     expect(wrapper.emitted('update:fontSize')?.[0]).toEqual([18])
+    expect(wrapper.emitted('update:lineHeight')?.[0]).toEqual([1.85])
+    expect(wrapper.emitted('update:cardPadding')?.[0]).toEqual([30])
+    expect(wrapper.emitted('update:framePadding')?.[0]).toEqual([64])
+    expect(wrapper.emitted('update:radius')?.[0]).toEqual([20])
     expect(wrapper.emitted('update:tabSize')?.[0]).toEqual([4])
     expect(wrapper.emitted('update:shadow')?.[0]).toEqual([false])
 
-    const frameInput = inputs.find((input) => input.props('max') === 120)
-    expect(frameInput?.props('min')).toBe(16)
-    expect(frameInput?.props('disabled')).toBe(false)
+    expect(framePaddingInput.props('min')).toBe(16)
+    expect(framePaddingInput.props('disabled')).toBe(false)
     expect(shadowSwitch.props('disabled')).toBe(false)
 
     await wrapper.setProps({ isBackgroundNone: true })
 
-    const updatedInputs = wrapper.findAllComponents({ name: 'NInputNumber' })
-    const updatedFrame = updatedInputs.find((input) => input.props('max') === 120)
+    const updatedFrame = wrapper
+      .findAllComponents({ name: 'NInputNumber' })
+      .find((input) => input.props('max') === 120)
     expect(updatedFrame?.props('min')).toBe(0)
     expect(updatedFrame?.props('disabled')).toBe(true)
     expect(wrapper.findComponent({ name: 'NSwitch' }).props('disabled')).toBe(true)
