@@ -11,7 +11,10 @@ const objectUrlState = vi.hoisted(() => ({
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
-    useObjectUrl: () => ref(objectUrlState.values[objectUrlState.index++]),
+    useObjectUrl: (source: { value: Blob | null }) => {
+      void source.value
+      return ref(objectUrlState.values[objectUrlState.index++])
+    },
   }
 })
 
@@ -55,7 +58,7 @@ vi.mock('naive-ui', async () => {
             href: props.href,
             download: props.download,
           },
-          slots.default?.(),
+          [slots.icon?.(), slots.default?.()],
         )
     },
   })
