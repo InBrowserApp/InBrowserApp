@@ -409,6 +409,10 @@ describe('unescapeUnicode', () => {
     it('rejects code points beyond valid Unicode range', () => {
       expect(unescapeUnicode('\\u{110000}')).toBe('\\u{110000}')
       expect(unescapeUnicode('&#x110000;')).toBe('&#x110000;')
+      expect(unescapeUnicode('&#1114112;')).toBe('&#1114112;')
+      expect(unescapeUnicode('U+110000')).toBe('U+110000')
+      expect(unescapeUnicode('\\U00110000')).toBe('\\U00110000')
+      expect(unescapeUnicode('0x110000')).toBe('0x110000')
     })
   })
 })
