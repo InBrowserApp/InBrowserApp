@@ -114,6 +114,8 @@ describe('CurrentNetworkTimeView', () => {
 
   it('shows syncing badge and skeletons when data is missing', () => {
     state.status.value = 'syncing'
+    state.networkTime.value = undefined
+    state.localTime.value = 2000
     state.offset.value = undefined
     state.lastSyncAt.value = 0
 
@@ -123,6 +125,7 @@ describe('CurrentNetworkTimeView', () => {
       },
     })
 
+    expect(wrapper.find('.n-time').text()).toBe('2000')
     expect(wrapper.find('.n-badge').exists()).toBe(true)
     expect(wrapper.text()).toContain('syncing')
     expect(wrapper.findAll('.n-skeleton').length).toBeGreaterThan(0)

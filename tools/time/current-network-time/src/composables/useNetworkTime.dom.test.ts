@@ -53,6 +53,10 @@ describe('useNetworkTime', () => {
     const dateSpy = vi.spyOn(Date, 'now').mockReturnValue(120000)
 
     const state = useNetworkTime()
+
+    rafState.callback?.()
+    expect(state.networkTime.value).toBeUndefined()
+
     await flushPromises()
 
     expect(state.status.value).toBe('synced')
@@ -93,6 +97,20 @@ describe('useNetworkTime', () => {
     expect(state.offset.value).toBeUndefined()
 
     performanceSpy.mockRestore()
+    vi.unstubAllGlobals()
+  })
+
+  it('handles non-error failures with string conversion', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockRejectedValue('request failed'))
+
+    const state = useNetworkTime()
+    await flushPromises()
+
+    expect(state.status.value).toBe('synced')
+    expect(state.error.value).toBe('request failed')
+    expect(pauseMock).toHaveBeenCalled()
+    expect(resumeMock).not.toHaveBeenCalled()
+
     vi.unstubAllGlobals()
   })
 })
