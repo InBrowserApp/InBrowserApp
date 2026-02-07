@@ -68,4 +68,21 @@ describe('useChmodState', () => {
     expect(state.numericInput.value).toBe('640')
     expect(state.isValidSymbolicInput.value).toBe(false)
   })
+
+  it('treats empty inputs as valid and falls back command to 000', () => {
+    storage.set('tools:chmod-calculator:numeric', ref(''))
+
+    const state = useChmodState()
+
+    expect(state.numericInput.value).toBe('')
+    expect(state.isValidNumericInput.value).toBe(true)
+    expect(state.chmodCommand.value).toBe('chmod 000 <filename>')
+
+    state.updateFromNumeric('')
+    expect(state.numericInput.value).toBe('')
+
+    state.updateFromSymbolic('')
+    expect(state.symbolicInput.value).toBe('')
+    expect(state.isValidSymbolicInput.value).toBe(true)
+  })
 })
