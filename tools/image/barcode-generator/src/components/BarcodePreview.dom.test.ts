@@ -81,6 +81,25 @@ describe('BarcodePreview', () => {
     expect(decodeURIComponent(encoded)).toContain('data-text="HELLO"')
   })
 
+  it('uses a single space as text fallback for empty values', async () => {
+    jsBarcodeMock.fn.mockImplementation((svg: SVGElement, value: string) => {
+      svg.setAttribute('data-text', value)
+    })
+
+    const wrapper = mount(BarcodePreview, {
+      props: {
+        ...baseProps,
+        text: '',
+      },
+    })
+
+    await flushPromises()
+
+    const src = wrapper.find('img').attributes('src')
+    const encoded = src?.split(',')[1] ?? ''
+    expect(decodeURIComponent(encoded)).toContain('data-text=" "')
+  })
+
   it('renders no image when generation fails', async () => {
     jsBarcodeMock.fn.mockImplementation(() => {
       throw new Error('fail')

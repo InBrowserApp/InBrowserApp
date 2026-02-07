@@ -111,7 +111,7 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('BarcodeOptionsAppearance', () => {
-  it('renders appearance options and emits updates', async () => {
+  it('renders appearance options and emits every model update', async () => {
     const wrapper = mount(BarcodeOptionsAppearance, {
       props: {
         displayValue: true,
@@ -147,7 +147,25 @@ describe('BarcodeOptionsAppearance', () => {
     expect(colorPickers[0]?.props('modes')).toEqual(['hex'])
     expect(colorPickers[0]?.props('size')).toBe('small')
 
+    const [textAlignSelect, textPositionSelect] = selects
+    const [lineColorPicker, backgroundPicker] = colorPickers
+
+    if (!textAlignSelect || !textPositionSelect || !lineColorPicker || !backgroundPicker) {
+      throw new Error('Expected all appearance controls to be rendered')
+    }
+
     await toggles.vm.$emit('update:value', false)
+    await textAlignSelect.vm.$emit('update:value', 'right')
+    await textPositionSelect.vm.$emit('update:value', 'top')
+    await slider.vm.$emit('update:value', 24)
+    await lineColorPicker.vm.$emit('update:value', '#123456')
+    await backgroundPicker.vm.$emit('update:value', '#abcdef')
+
     expect(wrapper.emitted('update:display-value')).toEqual([[false]])
+    expect(wrapper.emitted('update:text-align')).toEqual([['right']])
+    expect(wrapper.emitted('update:text-position')).toEqual([['top']])
+    expect(wrapper.emitted('update:font-size')).toEqual([[24]])
+    expect(wrapper.emitted('update:line-color')).toEqual([['#123456']])
+    expect(wrapper.emitted('update:background')).toEqual([['#abcdef']])
   })
 })

@@ -94,7 +94,7 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('BarcodeOptionsBasics', () => {
-  it('renders basic options and format list', async () => {
+  it('renders basic options and emits all model updates', async () => {
     const wrapper = mount(BarcodeOptionsBasics, {
       props: {
         text: 'ABC',
@@ -131,7 +131,21 @@ describe('BarcodeOptionsBasics', () => {
     expect(sliders[2]?.props('max')).toBe(30)
     expect(sliders[2]?.props('step')).toBe(1)
 
+    const [widthSlider, heightSlider, marginSlider] = sliders
+    if (!widthSlider || !heightSlider || !marginSlider) {
+      throw new Error('Expected all slider components to be rendered')
+    }
+
     await input.vm.$emit('update:value', 'XYZ')
+    await select.vm.$emit('update:value', 'CODE39')
+    await widthSlider.vm.$emit('update:value', 4)
+    await heightSlider.vm.$emit('update:value', 120)
+    await marginSlider.vm.$emit('update:value', 8)
+
     expect(wrapper.emitted('update:text')).toEqual([['XYZ']])
+    expect(wrapper.emitted('update:format')).toEqual([['CODE39']])
+    expect(wrapper.emitted('update:width')).toEqual([[4]])
+    expect(wrapper.emitted('update:height')).toEqual([[120]])
+    expect(wrapper.emitted('update:margin')).toEqual([[8]])
   })
 })

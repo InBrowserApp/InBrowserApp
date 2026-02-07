@@ -6,6 +6,10 @@ const jsBarcodeMock = vi.hoisted(() => ({
   fn: vi.fn(),
 }))
 
+const objectUrlMode = vi.hoisted(() => ({
+  enabled: true,
+}))
+
 vi.mock('jsbarcode', () => ({
   default: jsBarcodeMock.fn,
 }))
@@ -14,7 +18,7 @@ vi.mock('@vueuse/core', async () => {
   const { computed } = await import('vue')
   return {
     useObjectUrl: (blobRef: { value: Blob | null }) =>
-      computed(() => (blobRef.value ? 'blob:mock' : '')),
+      computed(() => (blobRef.value && objectUrlMode.enabled ? 'blob:mock' : undefined)),
   }
 })
 
@@ -104,6 +108,8 @@ describe('BarcodeDownloadButtons', () => {
 
   beforeEach(() => {
     jsBarcodeMock.fn.mockReset()
+    objectUrlMode.enabled = true
+
     originalToBlob = HTMLCanvasElement.prototype.toBlob
     Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
       value: (callback: (blob: Blob | null) => void) => {
@@ -152,5 +158,32 @@ describe('BarcodeDownloadButtons', () => {
     expect(secondProps.href).toBe('blob:mock')
     expect(secondProps.disabled).toBe(false)
     expect(secondProps.download).toBe('barcode.svg')
+  })
+
+  it('uses a blank fallback text and disables links without object URLs', async () => {
+    vi.useFakeTimers()
+    objectUrlMode.enabled = false
+
+    const wrapper = mount(BarcodeDownloadButtons, {
+      props: {
+        ...baseProps,
+        text: '',
+      },
+    })
+
+    await vi.runAllTimersAsync()
+    await flushPromises()
+
+    const textArguments = jsBarcodeMock.fn.mock.calls.map((call) => call[1])
+    expect(textArguments).toContain(' ')
+
+    const buttons = wrapper.findAllComponents({ name: 'NButton' })
+    const firstProps = buttons[0]?.props() as Record<string, unknown>
+    const secondProps = buttons[1]?.props() as Record<string, unknown>
+
+    expect(firstProps.href).toBeUndefined()
+    expect(firstProps.disabled).toBe(true)
+    expect(secondProps.href).toBeUndefined()
+    expect(secondProps.disabled).toBe(true)
   })
 })
