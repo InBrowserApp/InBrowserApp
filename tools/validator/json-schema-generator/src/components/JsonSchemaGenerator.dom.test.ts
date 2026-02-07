@@ -89,6 +89,28 @@ describe('JsonSchemaGenerator', () => {
     expect(sampleCode).toContain('"projects"')
   })
 
+  it('updates draft and inference options from child emits', async () => {
+    const TestWrapper = {
+      render() {
+        return h(NMessageProvider, () => h(JsonSchemaGenerator))
+      },
+    }
+    const wrapper = mount(TestWrapper)
+    const options = wrapper.findComponent({ name: 'SchemaGeneratorOptions' })
+
+    options.vm.$emit('update:draft', 'draft-07')
+    options.vm.$emit('update:infer-required', false)
+    options.vm.$emit('update:allow-additional-properties', false)
+    options.vm.$emit('update:detect-format', false)
+    await flushPromises()
+
+    const updated = wrapper.findComponent({ name: 'SchemaGeneratorOptions' })
+    expect(updated.props('draft')).toBe('draft-07')
+    expect(updated.props('inferRequired')).toBe(false)
+    expect(updated.props('allowAdditionalProperties')).toBe(false)
+    expect(updated.props('detectFormat')).toBe(false)
+  })
+
   it('clears input when file parsing fails', async () => {
     const TestWrapper = {
       render() {
