@@ -61,7 +61,7 @@ vi.mock('naive-ui', async () => {
     },
     emits: ['click'],
     template:
-      '<button class="n-button" :disabled="disabled" @click="$emit(\'click\')"><slot /></button>',
+      '<button class="n-button" :disabled="disabled" @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   })
   return {
     NSpace: Base,
@@ -348,6 +348,26 @@ describe('EncryptForm', () => {
 
     const result = wrapper.find('.encrypt-result')
     expect(result.attributes('data-error')).toBe('boom')
+  })
+
+  it('stringifies non-Error encryption failures', async () => {
+    aesMocks.encryptJweWithPassword.mockRejectedValue('boom-string')
+
+    storage.set('tools:aes-encryptor:keyType', ref('password'))
+    storage.set('tools:aes-encryptor:password', ref('secret'))
+    storage.set('tools:aes-encryptor:mode', ref('GCM'))
+    storage.set('tools:aes-encryptor:keyLength', ref(256))
+    storage.set('tools:aes-encryptor:outputMode', ref('jwe'))
+
+    const wrapper = mountForm()
+    wrapper.findComponent(TextOrFileInputStub).vm.$emit('update:value', 'hello')
+    await nextTick()
+
+    await wrapper.find('button.n-button').trigger('click')
+    await flushPromises()
+
+    const result = wrapper.find('.encrypt-result')
+    expect(result.attributes('data-error')).toBe('boom-string')
   })
 
   it('updates state when child components emit changes', async () => {

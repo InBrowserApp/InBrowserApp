@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
 import KeyInput from './KeyInput.vue'
 
 vi.mock('vue-i18n', async () => {
@@ -32,15 +33,26 @@ vi.mock('naive-ui', async () => {
   const Base = defineComponent({
     template: '<div class="base"><slot /></div>',
   })
+  const NRadioGroup = defineComponent({
+    name: 'NRadioGroup',
+    props: ['value'],
+    emits: ['update:value'],
+    template: '<div class="n-radio-group"><slot /></div>',
+  })
   const NInput = defineComponent({
     name: 'NInput',
     props: {
+      value: {
+        type: String,
+        default: '',
+      },
       status: {
         type: String,
         default: undefined,
       },
     },
-    template: '<input class="n-input" :data-status="status" />',
+    emits: ['update:value'],
+    template: '<input class="n-input" :data-status="status" :value="value" />',
   })
   const NText = defineComponent({
     name: 'NText',
@@ -53,7 +65,7 @@ vi.mock('naive-ui', async () => {
   })
   return {
     NSpace: Base,
-    NRadioGroup: Base,
+    NRadioGroup,
     NRadioButton: Base,
     NInput,
     NInputGroup: Base,
@@ -151,5 +163,35 @@ describe('KeyInput', () => {
     await wrapper.find('.n-button').trigger('click')
 
     expect(onUpdateRawKey).toHaveBeenCalledWith('a'.repeat(32))
+  })
+
+  it('emits key and input updates from field controls', async () => {
+    const onUpdateKeyType = vi.fn()
+    const onUpdatePassword = vi.fn()
+    const onUpdateRawKey = vi.fn()
+
+    const wrapper = mount(KeyInput, {
+      props: {
+        keyLength: 128,
+        keyType: 'password',
+        password: 'secret',
+        rawKey: '',
+        'onUpdate:keyType': onUpdateKeyType,
+        'onUpdate:password': onUpdatePassword,
+        'onUpdate:rawKey': onUpdateRawKey,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'raw')
+    wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'updated-password')
+
+    await wrapper.setProps({ keyType: 'raw' })
+    await nextTick()
+
+    wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'ab'.repeat(16))
+
+    expect(onUpdateKeyType).toHaveBeenCalledWith('raw')
+    expect(onUpdatePassword).toHaveBeenCalledWith('updated-password')
+    expect(onUpdateRawKey).toHaveBeenCalledWith('ab'.repeat(16))
   })
 })

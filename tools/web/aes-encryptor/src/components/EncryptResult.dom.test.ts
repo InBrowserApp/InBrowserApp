@@ -69,7 +69,11 @@ vi.mock('naive-ui', async () => {
     name: 'NButton',
     props: ['tag', 'download', 'disabled', 'href', 'text'],
     template:
-      '<button class="n-button" :data-tag="tag" :data-download="download" :data-disabled="disabled" :data-href="href"><slot /></button>',
+      '<button class="n-button" :data-tag="tag" :data-download="download" :data-disabled="disabled" :data-href="href"><slot name="icon" /><slot /></button>',
+  })
+  const NPopover = defineComponent({
+    name: 'NPopover',
+    template: '<div class="n-popover"><slot name="trigger" /><slot /></div>',
   })
   return {
     NSpace: Base,
@@ -77,7 +81,7 @@ vi.mock('naive-ui', async () => {
     NInput,
     NButton,
     NIcon: Base,
-    NPopover: Base,
+    NPopover,
     NFlex: Base,
     NCollapse: Base,
     NCollapseItem: Base,
@@ -162,5 +166,31 @@ describe('EncryptResult', () => {
     const downloadLinks = wrapper.findAll('[data-download]')
     expect(downloadLinks).toHaveLength(1)
     expect(downloadLinks[0]?.attributes('data-download')).toBe('encrypted.jwe')
+  })
+
+  it('evaluates JWE-only computed exports as empty text payloads', () => {
+    const wrapper = mount(EncryptResult, {
+      props: {
+        result: 'token',
+        error: '',
+        salt: '',
+        iv: '',
+        binary: null,
+        outputMode: 'jwe',
+        outputFormat: 'hex',
+      },
+    })
+
+    const vm = wrapper.vm as unknown as {
+      $?: {
+        setupState?: {
+          base64Content: string
+          hexContent: string
+        }
+      }
+    }
+
+    expect(vm.$?.setupState?.base64Content).toBe('')
+    expect(vm.$?.setupState?.hexContent).toBe('')
   })
 })

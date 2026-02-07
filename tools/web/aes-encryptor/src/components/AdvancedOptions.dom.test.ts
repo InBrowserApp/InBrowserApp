@@ -40,7 +40,7 @@ vi.mock('naive-ui', async () => {
   const NRadioGroup = defineComponent({
     name: 'NRadioGroup',
     emits: ['update:value'],
-    template: '<div class="n-radio-group" />',
+    template: '<div class="n-radio-group"><slot /></div>',
   })
   const NInput = defineComponent({
     name: 'NInput',
