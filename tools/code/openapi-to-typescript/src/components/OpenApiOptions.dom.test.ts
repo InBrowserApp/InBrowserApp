@@ -53,7 +53,7 @@ vi.mock('naive-ui', async () => {
 import OpenApiOptions from './OpenApiOptions.vue'
 
 describe('OpenApiOptions', () => {
-  it('emits updates from switches and renders labels', async () => {
+  it('emits updates from all switches and renders labels', async () => {
     const wrapper = mount(OpenApiOptions, {
       props: {
         additionalProperties: false,
@@ -74,12 +74,31 @@ describe('OpenApiOptions', () => {
     const switches = wrapper.findAllComponents({ name: 'NSwitch' })
     expect(switches).toHaveLength(12)
 
-    await switches[0]?.trigger('click')
-    await switches[switches.length - 1]?.trigger('click')
+    for (const switchWrapper of switches) {
+      await switchWrapper.trigger('click')
+    }
 
-    expect(wrapper.emitted('update:additionalProperties')?.[0]).toEqual([true])
-    expect(wrapper.emitted('update:includeHeader')?.[0]).toEqual([true])
+    const modelKeys = [
+      'additionalProperties',
+      'defaultNonNullable',
+      'propertiesRequiredByDefault',
+      'exportType',
+      'enumOutput',
+      'pathParamsAsTypes',
+      'rootTypes',
+      'makePathsEnum',
+      'generatePathParams',
+      'immutable',
+      'excludeDeprecated',
+      'includeHeader',
+    ]
+
+    for (const key of modelKeys) {
+      expect(wrapper.emitted(`update:${key}`)?.[0]).toEqual([true])
+    }
+
     expect(wrapper.text()).toContain('optionAdditionalProperties')
+    expect(wrapper.text()).toContain('optionGeneratePathParams')
     expect(wrapper.text()).toContain('optionIncludeHeader')
   })
 })
