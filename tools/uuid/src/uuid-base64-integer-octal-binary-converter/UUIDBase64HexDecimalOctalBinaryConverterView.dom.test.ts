@@ -109,6 +109,26 @@ vi.mock('naive-ui', async () => {
   }
 })
 
+const mountView = () =>
+  mount(UUIDBase64HexDecimalOctalBinaryConverterView, {
+    global: {
+      stubs: {
+        ToolDefaultPageLayout: {
+          inheritAttrs: false,
+          props: ['info'],
+          template: '<div><slot /></div>',
+        },
+        ToolSection: {
+          template: '<section><slot /></section>',
+        },
+        ToolSectionHeader: {
+          template: '<h2><slot /></h2>',
+        },
+        WhatIsUUID: { template: '<div />' },
+      },
+    },
+  })
+
 describe('UUIDBase64HexDecimalOctalBinaryConverterView', () => {
   beforeEach(() => {
     vi.stubGlobal('crypto', {
@@ -122,24 +142,7 @@ describe('UUIDBase64HexDecimalOctalBinaryConverterView', () => {
   })
 
   it('derives base representations from the UUID', () => {
-    const wrapper = mount(UUIDBase64HexDecimalOctalBinaryConverterView, {
-      global: {
-        stubs: {
-          ToolDefaultPageLayout: {
-            inheritAttrs: false,
-            props: ['info'],
-            template: '<div><slot /></div>',
-          },
-          ToolSection: {
-            template: '<section><slot /></section>',
-          },
-          ToolSectionHeader: {
-            template: '<h2><slot /></h2>',
-          },
-          WhatIsUUID: { template: '<div />' },
-        },
-      },
-    })
+    const wrapper = mountView()
 
     expect(convertMocks.uuidToBase64).toHaveBeenCalledWith('uuid-1')
     expect(convertMocks.uuidToHex).toHaveBeenCalledWith('uuid-1')
@@ -158,25 +161,8 @@ describe('UUIDBase64HexDecimalOctalBinaryConverterView', () => {
     expect((decimalInput.element as HTMLInputElement).value).toBe('1')
   })
 
-  it('syncs UUID updates from base inputs', async () => {
-    const wrapper = mount(UUIDBase64HexDecimalOctalBinaryConverterView, {
-      global: {
-        stubs: {
-          ToolDefaultPageLayout: {
-            inheritAttrs: false,
-            props: ['info'],
-            template: '<div><slot /></div>',
-          },
-          ToolSection: {
-            template: '<section><slot /></section>',
-          },
-          ToolSectionHeader: {
-            template: '<h2><slot /></h2>',
-          },
-          WhatIsUUID: { template: '<div />' },
-        },
-      },
-    })
+  it('syncs UUID updates from base64 and decimal inputs', async () => {
+    const wrapper = mountView()
 
     const uuidInput = wrapper.find('.uuid-input')
     const base64Input = wrapper.find('input[placeholder="we1n8DS9EfCz/gLXHoQfTw=="]')
@@ -194,5 +180,76 @@ describe('UUIDBase64HexDecimalOctalBinaryConverterView', () => {
 
     expect(convertMocks.integerToUUID).toHaveBeenCalledWith(5n)
     expect((uuidInput.element as HTMLInputElement).value).toBe('uuid-5')
+  })
+
+  it('handles empty branches and syncs octal, binary, and hex updates', async () => {
+    const wrapper = mountView()
+
+    const uuidInput = wrapper.find('.uuid-input')
+    const base64Input = wrapper.find('input[placeholder="we1n8DS9EfCz/gLXHoQfTw=="]')
+    const hexInput = wrapper.find('input[placeholder="c1ed67f034bd11f0b3fe02d71e841f4f"]')
+    const decimalInput = wrapper.find(
+      'input[placeholder="257773685661231489374926881343358115663"]',
+    )
+    const octalInput = wrapper.find(
+      'input[placeholder="3017326376015136421741317760055343641017517"]',
+    )
+    const binaryInput = wrapper.find(
+      'input[placeholder="11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111"]',
+    )
+
+    await uuidInput.setValue('')
+    await nextTick()
+
+    expect((base64Input.element as HTMLInputElement).value).toBe('')
+    expect((hexInput.element as HTMLInputElement).value).toBe('')
+    expect((decimalInput.element as HTMLInputElement).value).toBe('')
+    expect((octalInput.element as HTMLInputElement).value).toBe('')
+    expect((binaryInput.element as HTMLInputElement).value).toBe('')
+
+    await octalInput.setValue('oct:uuid-8')
+    await nextTick()
+    expect(convertMocks.octalToUUID).toHaveBeenCalledWith('oct:uuid-8')
+    expect((uuidInput.element as HTMLInputElement).value).toBe('uuid-8')
+
+    await binaryInput.setValue('bin:uuid-9')
+    await nextTick()
+    expect(convertMocks.binaryToUUID).toHaveBeenCalledWith('bin:uuid-9')
+    expect((uuidInput.element as HTMLInputElement).value).toBe('uuid-9')
+
+    await hexInput.setValue('hex:uuid-10')
+    await nextTick()
+    expect(convertMocks.hexToUUID).toHaveBeenCalledWith('hex:uuid-10')
+    expect((uuidInput.element as HTMLInputElement).value).toBe('uuid-10')
+
+    const base64CallsBeforeEmpty = convertMocks.base64ToUUID.mock.calls.length
+    await base64Input.setValue('')
+    await nextTick()
+    expect((uuidInput.element as HTMLInputElement).value).toBe('')
+    expect(convertMocks.base64ToUUID.mock.calls.length).toBe(base64CallsBeforeEmpty)
+
+    const decimalCallsBeforeEmpty = convertMocks.integerToUUID.mock.calls.length
+    await decimalInput.setValue('')
+    await nextTick()
+    expect((uuidInput.element as HTMLInputElement).value).toBe('')
+    expect(convertMocks.integerToUUID.mock.calls.length).toBe(decimalCallsBeforeEmpty)
+
+    const octalCallsBeforeEmpty = convertMocks.octalToUUID.mock.calls.length
+    await octalInput.setValue('')
+    await nextTick()
+    expect((uuidInput.element as HTMLInputElement).value).toBe('')
+    expect(convertMocks.octalToUUID.mock.calls.length).toBe(octalCallsBeforeEmpty)
+
+    const binaryCallsBeforeEmpty = convertMocks.binaryToUUID.mock.calls.length
+    await binaryInput.setValue('')
+    await nextTick()
+    expect((uuidInput.element as HTMLInputElement).value).toBe('')
+    expect(convertMocks.binaryToUUID.mock.calls.length).toBe(binaryCallsBeforeEmpty)
+
+    const hexCallsBeforeEmpty = convertMocks.hexToUUID.mock.calls.length
+    await hexInput.setValue('')
+    await nextTick()
+    expect((uuidInput.element as HTMLInputElement).value).toBe('')
+    expect(convertMocks.hexToUUID.mock.calls.length).toBe(hexCallsBeforeEmpty)
   })
 })
