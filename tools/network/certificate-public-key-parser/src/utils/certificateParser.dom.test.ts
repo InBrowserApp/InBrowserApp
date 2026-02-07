@@ -52,6 +52,7 @@ vi.mock('@peculiar/x509', () => {
 
   class X509Certificate {
     rawData: ArrayBuffer
+    mode: number
     subject = 'CN=example'
     issuer = 'CN=issuer'
     serialNumber = '0x0102'
@@ -62,7 +63,8 @@ vi.mock('@peculiar/x509', () => {
 
     constructor(buffer: ArrayBuffer) {
       const view = new Uint8Array(buffer)
-      if (view[0] === 0x00 || view[0] === 0xff || view[0] === 0x03) {
+      this.mode = view[0] ?? 0
+      if (this.mode === 0x00 || this.mode === 0xff || this.mode === 0x03) {
         throw new Error('invalid certificate')
       }
       this.rawData = buffer
@@ -71,21 +73,39 @@ vi.mock('@peculiar/x509', () => {
 
     getExtension(extensionClass: unknown) {
       if (extensionClass === SubjectAlternativeNameExtension) {
+        if (this.mode === 0x06) {
+          return { names: { items: [] } }
+        }
         return { names: { items: [{ type: 'dns', value: 'example.com' }] } }
       }
       if (extensionClass === KeyUsagesExtension) {
+        if (this.mode === 0x04) {
+          return { usages: 0 }
+        }
         return { usages: KeyUsageFlags.digitalSignature | KeyUsageFlags.keyEncipherment }
       }
       if (extensionClass === ExtendedKeyUsageExtension) {
+        if (this.mode === 0x05) {
+          return { usages: [] }
+        }
         return { usages: [ExtendedKeyUsage.serverAuth, '1.2.3.4'] }
       }
       if (extensionClass === BasicConstraintsExtension) {
+        if (this.mode === 0x06) {
+          return undefined
+        }
         return { ca: true, pathLength: 1 }
       }
       if (extensionClass === SubjectKeyIdentifierExtension) {
+        if (this.mode === 0x06) {
+          return {}
+        }
         return { keyId: '0x0102' }
       }
       if (extensionClass === AuthorityKeyIdentifierExtension) {
+        if (this.mode === 0x06) {
+          return {}
+        }
         return { keyId: 'abcd' }
       }
       return undefined
@@ -125,6 +145,7 @@ const pemMixed = [
   '-----BEGIN PRIVATE KEY-----\nAQ==\n-----END PRIVATE KEY-----',
 ].join('\n')
 
+const pemUnsupportedOnly = '-----BEGIN PRIVATE KEY-----\nAQ==\n-----END PRIVATE KEY-----'
 const pemInvalidBody = '-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----'
 
 let digestSpy: ReturnType<typeof vi.spyOn> | null = null
@@ -192,6 +213,12 @@ describe('parseCertificateInput', () => {
     expect(publicKey.label).toBe('Public Key 1')
   })
 
+  it('throws the first warning when only unsupported PEM blocks are provided', async () => {
+    await expect(parseCertificateInput(pemUnsupportedOnly, messages)).rejects.toThrow(
+      'Unsupported PRIVATE KEY',
+    )
+  })
+
   it('throws when PEM has no valid blocks', async () => {
     await expect(parseCertificateInput(pemInvalidBody, messages)).rejects.toThrow('Invalid PEM')
   })
@@ -221,6 +248,47 @@ describe('parseCertificateInput', () => {
     }
   })
 
+  it('omits key usage when the extension resolves to an empty list', async () => {
+    const result = await parseCertificateInput('BA==', messages)
+    const parsed = assertParsed(result)
+    const entry = parsed.entries[0]
+
+    if (!entry || entry.type !== 'certificate') {
+      throw new Error('Expected a certificate entry')
+    }
+
+    expect(entry.extensions.keyUsage).toBeUndefined()
+    expect(entry.extensions.extendedKeyUsage).toEqual(['TLS Web Server Authentication', '1.2.3.4'])
+  })
+
+  it('omits extended key usage when the extension has no usages', async () => {
+    const result = await parseCertificateInput('BQ==', messages)
+    const parsed = assertParsed(result)
+    const entry = parsed.entries[0]
+
+    if (!entry || entry.type !== 'certificate') {
+      throw new Error('Expected a certificate entry')
+    }
+
+    expect(entry.extensions.extendedKeyUsage).toBeUndefined()
+    expect(entry.extensions.keyUsage).toEqual(['Digital Signature', 'Key Encipherment'])
+  })
+
+  it('omits optional extension fields when extension values are absent', async () => {
+    const result = await parseCertificateInput('Bg==', messages)
+    const parsed = assertParsed(result)
+    const entry = parsed.entries[0]
+
+    if (!entry || entry.type !== 'certificate') {
+      throw new Error('Expected a certificate entry')
+    }
+
+    expect(entry.extensions.subjectAlternativeNames).toBeUndefined()
+    expect(entry.extensions.basicConstraints).toBeUndefined()
+    expect(entry.extensions.subjectKeyIdentifier).toBeUndefined()
+    expect(entry.extensions.authorityKeyIdentifier).toBeUndefined()
+  })
+
   it('throws when base64 DER cannot be parsed', async () => {
     await expect(parseCertificateInput('/w==', messages)).rejects.toThrow('Parse failed')
   })
@@ -239,6 +307,15 @@ describe('parseCertificateInput', () => {
     const result = await parseCertificateInput(file, messages)
     const parsed = assertParsed(result)
     expect(parsed.entries[0]?.label).toBe('input.der')
+  })
+
+  it('falls back to a generated label when DER file name is empty', async () => {
+    const file = new File([new Uint8Array([0x00])], '', {
+      type: 'application/octet-stream',
+    })
+    const result = await parseCertificateInput(file, messages)
+    const parsed = assertParsed(result)
+    expect(parsed.entries[0]?.label).toBe('Certificate 1')
   })
 
   it('throws for invalid text input', async () => {
