@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref } from 'vue'
+import { computed, ref, type Ref } from 'vue'
 import CameraController from './CameraController.vue'
 
 vi.mock('vue-i18n', async () => {
@@ -12,7 +12,7 @@ vi.mock('vue-i18n', async () => {
 })
 
 vi.mock('@vueuse/core', () => ({
-  useObjectUrl: () => ref('blob:mock'),
+  useObjectUrl: (source: Ref<Blob | null>) => computed(() => (source.value ? 'blob:mock' : null)),
 }))
 
 const originalMediaDevices = navigator.mediaDevices
@@ -63,6 +63,9 @@ class FakeMediaRecorder {
   static instances: FakeMediaRecorder[] = []
   static isTypeSupported = vi.fn((type: string) => type === 'video/webm')
   static shouldThrowOnStart = false
+  static emittedData = new Blob(['data'], { type: 'video/webm' })
+  static forcedMimeType: string | null = null
+  static lastOptions: MediaRecorderOptions | undefined
 
   state: RecordingState = 'inactive'
   mimeType: string
@@ -72,7 +75,8 @@ class FakeMediaRecorder {
   onerror: (() => void) | null = null
 
   constructor(_stream: MediaStream, options?: MediaRecorderOptions) {
-    this.mimeType = options?.mimeType ?? 'video/webm'
+    this.mimeType = FakeMediaRecorder.forcedMimeType ?? options?.mimeType ?? 'video/webm'
+    FakeMediaRecorder.lastOptions = options
     FakeMediaRecorder.instances.push(this)
   }
 
@@ -87,7 +91,7 @@ class FakeMediaRecorder {
   stop = vi.fn(() => {
     this.state = 'inactive'
     this.ondataavailable?.({
-      data: new Blob(['data'], { type: this.mimeType }),
+      data: FakeMediaRecorder.emittedData,
     } as BlobEvent)
     this.onstop?.()
   })
@@ -125,6 +129,9 @@ describe('CameraController', () => {
   beforeEach(() => {
     FakeMediaRecorder.instances = []
     FakeMediaRecorder.shouldThrowOnStart = false
+    FakeMediaRecorder.emittedData = new Blob(['data'], { type: 'video/webm' })
+    FakeMediaRecorder.forcedMimeType = null
+    FakeMediaRecorder.lastOptions = undefined
     setMediaDevices({
       getUserMedia: vi.fn().mockResolvedValue(createStream()),
     } as unknown as MediaDevices)
