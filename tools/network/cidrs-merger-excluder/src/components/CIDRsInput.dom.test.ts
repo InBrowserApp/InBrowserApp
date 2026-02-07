@@ -114,45 +114,61 @@ vi.mock('naive-ui', async () => {
   }
 })
 
+const mountCIDRsInput = () =>
+  mount(CIDRsInput, {
+    props: {
+      cidrs: [],
+    },
+  })
+
+const getLastCidrsEvent = (wrapper: ReturnType<typeof mountCIDRsInput>) => {
+  const events = wrapper.emitted('update:cidrs') ?? []
+  const lastEvent = events[events.length - 1]
+  if (!lastEvent) {
+    throw new Error('Expected update:cidrs emission')
+  }
+  return lastEvent
+}
+
 describe('CIDRsInput', () => {
   it('renders placeholders and the add button label', () => {
-    const wrapper = mount(CIDRsInput, {
-      props: {
-        cidrs: [],
-      },
-    })
+    const wrapper = mountCIDRsInput()
 
     expect(wrapper.find('.dynamic-input').attributes('data-placeholder')).toBe('placeholder')
     expect(wrapper.text()).toContain('addCidr')
     expect(wrapper.find('input').attributes('placeholder')).toBe('placeholder')
   })
 
-  it('emits cidrs updates for valid and invalid inputs', async () => {
-    const wrapper = mount(CIDRsInput, {
-      props: {
-        cidrs: [],
-      },
-    })
-
+  it('emits cidrs updates for valid and invalid list inputs', async () => {
+    const wrapper = mountCIDRsInput()
     const dynamicInput = wrapper.findComponent({ name: 'NDynamicInput' })
+
     dynamicInput.vm.$emit('update:value', ['10.0.0.0/24'])
     await nextTick()
-
-    let events = wrapper.emitted('update:cidrs') ?? []
-    let lastEvent = events[events.length - 1]
-    if (!lastEvent) {
-      throw new Error('Expected update:cidrs emission for valid input')
-    }
-    expect(lastEvent).toEqual([['10.0.0.0/24']])
+    expect(getLastCidrsEvent(wrapper)).toEqual([['10.0.0.0/24']])
 
     dynamicInput.vm.$emit('update:value', ['not-a-cidr'])
     await nextTick()
+    expect(getLastCidrsEvent(wrapper)).toEqual([undefined])
+  })
 
-    events = wrapper.emitted('update:cidrs') ?? []
-    lastEvent = events[events.length - 1]
-    if (!lastEvent) {
-      throw new Error('Expected update:cidrs emission for invalid input')
+  it('handles input editing, create callback, and validation rule branches', async () => {
+    const wrapper = mountCIDRsInput()
+
+    await wrapper.find('input').setValue('10.0.0.0/24')
+    await nextTick()
+    expect(getLastCidrsEvent(wrapper)).toEqual([['10.0.0.0/24']])
+
+    const dynamicInput = wrapper.findComponent({ name: 'NDynamicInput' })
+    const onCreate = dynamicInput.props('onCreate') as (() => string) | undefined
+    expect(onCreate?.()).toBe('')
+
+    const formItem = wrapper.findComponent({ name: 'NFormItem' })
+    const rule = formItem.props('rule') as {
+      validator: (rule: unknown, value: string) => Error | undefined
     }
-    expect(lastEvent).toEqual([undefined])
+
+    expect(rule.validator({}, 'not-a-cidr')).toBeInstanceOf(Error)
+    expect(rule.validator({}, '10.0.0.0/24')).toBeUndefined()
   })
 })
