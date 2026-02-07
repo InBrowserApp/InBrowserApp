@@ -159,4 +159,34 @@ describe('SchemaDataInputs', () => {
     expect(wrapper.emitted('update:schemaValue')?.[0]).toEqual(['{"type":"object"}'])
     expect(wrapper.emitted('update:dataValue')?.[0]).toEqual(['{"name":"Ada"}'])
   })
+
+  it('renders data feedback and hides feedback blocks without errors', () => {
+    const withDataError = mount(SchemaDataInputs, {
+      props: {
+        schemaStatus: 'success',
+        dataStatus: 'error',
+        schemaError: '',
+        dataError: 'bad data',
+        schemaValue: '',
+        dataValue: '',
+      },
+    })
+
+    expect(withDataError.text()).toContain('invalidJson')
+    expect(withDataError.text()).toContain('bad data')
+    expect(withDataError.text()).not.toContain('bad schema')
+
+    const withoutErrors = mount(SchemaDataInputs, {
+      props: {
+        schemaStatus: 'success',
+        dataStatus: 'success',
+        schemaError: '',
+        dataError: '',
+        schemaValue: '',
+        dataValue: '',
+      },
+    })
+
+    expect(withoutErrors.text()).not.toContain('invalidJson')
+  })
 })

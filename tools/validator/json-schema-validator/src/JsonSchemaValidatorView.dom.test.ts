@@ -41,4 +41,20 @@ describe('JsonSchemaValidatorView', () => {
     expect(route.path).toBe('/tools/json-schema-validator')
     expect(route.name).toBe('json-schema-validator')
   })
+
+  it('loads the route component', async () => {
+    const route = routes[0]
+    if (!route) {
+      throw new Error('Expected tool route')
+    }
+
+    const component = route.component
+    if (typeof component !== 'function') {
+      throw new Error('Expected lazy route component loader')
+    }
+
+    const loader = component as unknown as () => Promise<{ default: unknown }>
+    const loaded = await loader()
+    expect(loaded.default).toBeTruthy()
+  })
 })

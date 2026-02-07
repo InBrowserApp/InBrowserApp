@@ -158,6 +158,26 @@ describe('JsonSchemaValidator', () => {
     expect(result.props('state')).toBe('empty')
   })
 
+  it('marks invalid data JSON and stays empty', async () => {
+    storage.set(schemaKey, ref('{"type":"object"}'))
+    storage.set(dataKey, ref('{'))
+    jsonSchemaMocks.detectSchemaDraft.mockReturnValue({ draft: '2020-12', detected: true })
+
+    const wrapper = mountValidator()
+    await flushPromises()
+
+    const inputs = wrapper.findComponent(SchemaDataInputsStub)
+    const result = wrapper.findComponent(ValidationResultStub)
+
+    expect(inputs.props('schemaStatus')).toBe('success')
+    expect(inputs.props('dataStatus')).toBe('error')
+    expect(inputs.props('dataError')).toBeTruthy()
+    expect(result.props('state')).toBe('empty')
+    expect(result.props('draftValue')).toBe('2020-12')
+    expect(result.props('draftDetected')).toBe(true)
+    expect(jsonSchemaMocks.validateJsonSchema).not.toHaveBeenCalled()
+  })
+
   it('reports schema-object errors without validation', async () => {
     storage.set(schemaKey, ref('[]'))
     storage.set(dataKey, ref('{}'))
@@ -212,16 +232,56 @@ describe('JsonSchemaValidator', () => {
     expect(result.props('draftDetected')).toBe(true)
   })
 
-  it('updates storage from schema and data inputs', async () => {
+  it('surfaces schema compilation errors from validator results', async () => {
+    storage.set(schemaKey, ref('{"type":"object"}'))
+    storage.set(dataKey, ref('{"name":"Ada"}'))
+    jsonSchemaMocks.detectSchemaDraft.mockReturnValue({ draft: 'draft-07', detected: true })
+    jsonSchemaMocks.validateJsonSchema.mockReturnValue({
+      valid: false,
+      errors: [],
+      schemaError: 'invalid schema keyword',
+    })
+
+    const wrapper = mountValidator()
+    await flushPromises()
+
+    const result = wrapper.findComponent(ValidationResultStub)
+    expect(result.props('state')).toBe('schema-error')
+    expect(result.props('schemaError')).toBe('invalid schema keyword')
+    expect(result.props('errors')).toEqual([])
+  })
+
+  it('updates options and handles string or file updates', async () => {
     storage.set(schemaKey, ref(''))
     storage.set(dataKey, ref(''))
+    storage.set(validateFormatsKey, ref(true))
+    storage.set(allErrorsKey, ref(true))
     jsonSchemaMocks.detectSchemaDraft.mockReturnValue({ draft: '2020-12', detected: false })
     jsonSchemaMocks.validateJsonSchema.mockReturnValue({ valid: true, errors: [] })
 
     const wrapper = mountValidator()
     const inputs = wrapper.findComponent(SchemaDataInputsStub)
+    const options = wrapper.findComponent(ValidatorOptionsStub)
 
-    inputs.vm.$emit('update:schema-value', '{"type":"object"}')
+    options.vm.$emit('update:validate-formats', false)
+    options.vm.$emit('update:all-errors', false)
+
+    inputs.vm.$emit('update:schema-value', {
+      text: () => Promise.resolve('{"type":"object"}'),
+    })
+    inputs.vm.$emit('update:data-value', '{"name":"Ada"}')
+
+    await flushPromises()
+    await nextTick()
+
+    expect(storage.get(validateFormatsKey)?.value).toBe(false)
+    expect(storage.get(allErrorsKey)?.value).toBe(false)
+    expect(storage.get(schemaKey)?.value).toBe('{"type":"object"}')
+    expect(storage.get(dataKey)?.value).toBe('{"name":"Ada"}')
+
+    inputs.vm.$emit('update:schema-value', {
+      text: () => Promise.reject(new Error('read failed')),
+    })
     inputs.vm.$emit('update:data-value', {
       text: () => Promise.reject(new Error('read failed')),
     })
@@ -229,7 +289,28 @@ describe('JsonSchemaValidator', () => {
     await flushPromises()
     await nextTick()
 
-    expect(storage.get(schemaKey)?.value).toBe('{"type":"object"}')
+    expect(storage.get(schemaKey)?.value).toBe('')
     expect(storage.get(dataKey)?.value).toBe('')
+  })
+
+  it('stringifies non-Error parse failures', async () => {
+    storage.set(schemaKey, ref('{"type":"object"}'))
+    storage.set(dataKey, ref('{"name":"Ada"}'))
+    jsonSchemaMocks.detectSchemaDraft.mockReturnValue({ draft: '2020-12', detected: false })
+
+    const parseSpy = vi.spyOn(JSON, 'parse').mockImplementation(() => {
+      throw 'non-error-parse-failure'
+    })
+
+    try {
+      const wrapper = mountValidator()
+      await flushPromises()
+
+      const inputs = wrapper.findComponent(SchemaDataInputsStub)
+      expect(inputs.props('schemaError')).toBe('non-error-parse-failure')
+      expect(inputs.props('dataError')).toBe('non-error-parse-failure')
+    } finally {
+      parseSpy.mockRestore()
+    }
   })
 })
