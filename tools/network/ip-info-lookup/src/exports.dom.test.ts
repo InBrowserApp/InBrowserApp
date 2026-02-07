@@ -19,5 +19,13 @@ describe('ip info lookup exports', () => {
     const componentLoader = route?.component as () => Promise<{ default: unknown }>
     const loadedRoute = await componentLoader()
     expect(loadedRoute).toHaveProperty('default')
+
+    const ipRoute = routes[1]
+    expect(ipRoute?.name).toBe('ip-info-lookup-ip')
+    expect(ipRoute?.path).toBe('/tools/ip-info-lookup/:ipdomain')
+
+    const ipViewLoader = ipRoute?.component as () => Promise<{ default: unknown }>
+    const loadedIpView = await ipViewLoader()
+    expect(loadedIpView).toHaveProperty('default')
   })
 })

@@ -75,6 +75,7 @@ vi.mock('naive-ui', async () => {
         default: '',
       },
     },
+    emits: ['update:expandedNames'],
     template: '<div class="collapse"><slot /></div>',
   })
 
@@ -160,6 +161,34 @@ describe('IPInfoView', () => {
     expect(items).toHaveLength(1)
     expect(wrapper.find('.ip-info').attributes('data-ip')).toBe('8.8.8.8')
     expect(wrapper.find('.ip-tag').attributes('data-ip')).toBe('8.8.8.8')
+
+    const collapse = wrapper.findComponent({ name: 'NCollapse' })
+    collapse.vm.$emit('update:expandedNames', ['8.8.8.8'])
+    await flushPromises()
+  })
+
+  it('renders collapsible results when domain lookup succeeds', async () => {
+    routeParams.ipdomain = 'example.com'
+    isIPMock.mockReturnValue(false)
+    getDomainIPsMock.mockResolvedValue(['1.1.1.1', '8.8.8.8'])
+
+    const wrapper = mount(IPInfoView, {
+      global: {
+        stubs,
+      },
+    })
+
+    await flushPromises()
+
+    expect(getDomainIPsMock).toHaveBeenCalledWith('example.com')
+    expect(wrapper.findAll('.collapse-item')).toHaveLength(2)
+    expect(wrapper.findAll('.collapse-item')[0]?.attributes('data-title')).toBe('1.1.1.1')
+
+    const collapse = wrapper.findComponent({ name: 'NCollapse' })
+    collapse.vm.$emit('update:expandedNames', ['1.1.1.1'])
+    await flushPromises()
+
+    expect(wrapper.find('.result').exists()).toBe(false)
   })
 
   it('shows an error when domain lookup fails', async () => {
