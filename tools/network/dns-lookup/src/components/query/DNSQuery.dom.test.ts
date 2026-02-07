@@ -20,7 +20,8 @@ vi.mock('@shared/ui/domain/domain', () => ({
   },
   DNSRecordTypeInputFormItem: {
     props: ['types'],
-    template: '<div class="record-types" />',
+    emits: ['update:types'],
+    template: '<button class="record-types" @click="$emit(\'update:types\', [\'MX\'])" />',
   },
   DOHServerSelectFormItem: {
     props: ['value'],
@@ -86,6 +87,22 @@ describe('DNSQuery', () => {
     const results = emitted?.[0]?.[0] as { question: { name: string; type: string } }[] | undefined
     expect(results).toHaveLength(2)
     expect(results?.[0]?.question).toEqual({ name: 'example.net', type: 'A' })
+  })
+
+  it('uses updated record types from v-model updates', async () => {
+    makeDOHQuery.mockResolvedValue({ Status: 0 })
+
+    const wrapper = mount(DNSQuery)
+
+    await wrapper.find('.record-types').trigger('click')
+    await wrapper.find('.n-button').trigger('click')
+    await flushPromises()
+
+    expect(makeDOHQuery).toHaveBeenCalledTimes(1)
+    expect(makeDOHQuery).toHaveBeenCalledWith('https://cloudflare-dns.com/dns-query', {
+      name: 'example.com',
+      type: 'MX',
+    })
   })
 
   it('logs errors when lookups fail', async () => {
