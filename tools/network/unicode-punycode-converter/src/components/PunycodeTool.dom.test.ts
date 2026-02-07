@@ -98,4 +98,24 @@ describe('PunycodeTool', () => {
     expect(toAsciiMock).toHaveBeenCalledWith('unicode.example')
     expect((inputs[0]!.element as HTMLInputElement).value).toBe('xn--unicode')
   })
+
+  it('logs Unicode conversion errors without mutating ASCII text', async () => {
+    const error = new Error('unicode failure')
+    toAsciiMock.mockImplementationOnce(() => {
+      throw error
+    })
+
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+    const wrapper = mount(PunycodeTool)
+    const inputs = wrapper.findAll('.n-input')
+    const initialAscii = (inputs[0]!.element as HTMLInputElement).value
+
+    await inputs[1]!.setValue('bad-unicode')
+    await flushPromises()
+
+    expect(errorSpy).toHaveBeenCalledWith(error)
+    expect((inputs[0]!.element as HTMLInputElement).value).toBe(initialAscii)
+
+    errorSpy.mockRestore()
+  })
 })
