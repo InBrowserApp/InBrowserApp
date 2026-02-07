@@ -70,6 +70,23 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('IcalEventRecurrenceEndsSection', () => {
+  it('emits end mode updates from select changes', () => {
+    const wrapper = mount(IcalEventRecurrenceEndsSection, {
+      props: {
+        recurrenceFrequency: 'weekly',
+        recurrenceEndMode: 'never',
+        recurrenceCount: 2,
+        recurrenceUntilInput: '',
+        isAllDay: false,
+      },
+    })
+
+    const select = wrapper.findComponent({ name: 'NSelect' })
+    select.vm.$emit('update:value', 'until')
+
+    expect(wrapper.emitted('update:recurrenceEndMode')?.[0]).toEqual(['until'])
+  })
+
   it('emits count updates and renders count input', () => {
     const wrapper = mount(IcalEventRecurrenceEndsSection, {
       props: {

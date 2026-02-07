@@ -89,6 +89,31 @@ describe('QRCodeDownloadButtons', () => {
     })
   })
 
+  it('keeps download links disabled when generation fails', async () => {
+    qrcodeMock.toDataURL.mockRejectedValueOnce(new Error('encode failed'))
+
+    const wrapper = mount(QRCodeDownloadButtons, {
+      props: {
+        text: 'hello',
+        errorCorrectionLevel: 'M',
+        width: 128,
+        margin: 2,
+        dark: '#000000',
+        light: '#FFFFFF',
+      },
+    })
+
+    await vi.advanceTimersByTimeAsync(200)
+    await flushPromises()
+    await flushPromises()
+
+    const links = wrapper.findAll('a')
+    expect(links).toHaveLength(3)
+    links.forEach((link) => {
+      expect(link.attributes('href')).toBeUndefined()
+    })
+  })
+
   it('uses fallback text and tolerates non-string SVG output', async () => {
     qrcodeMock.toString.mockResolvedValueOnce({ not: 'svg' })
 

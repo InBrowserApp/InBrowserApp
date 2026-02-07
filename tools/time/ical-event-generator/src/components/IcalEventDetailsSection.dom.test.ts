@@ -76,11 +76,13 @@ describe('IcalEventDetailsSection', () => {
     await inputs[1]!.setValue('Updated location')
     await inputs[2]!.setValue('Updated description')
     await inputs[3]!.setValue('https://example.org')
+    await inputs[4]!.setValue('uid-updated@example.com')
 
     expect(wrapper.emitted('update:title')?.[0]).toEqual(['Updated title'])
     expect(wrapper.emitted('update:location')?.[0]).toEqual(['Updated location'])
     expect(wrapper.emitted('update:description')?.[0]).toEqual(['Updated description'])
     expect(wrapper.emitted('update:url')?.[0]).toEqual(['https://example.org'])
+    expect(wrapper.emitted('update:uid')?.[0]).toEqual(['uid-updated@example.com'])
 
     const regenerateButton = wrapper.findAll('button').find((button) => {
       return button.text().includes('new-uid')
