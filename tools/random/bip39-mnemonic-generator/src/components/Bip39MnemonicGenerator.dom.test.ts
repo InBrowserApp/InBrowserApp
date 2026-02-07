@@ -111,12 +111,19 @@ describe('Bip39MnemonicGenerator', () => {
     expect(results.props('generatedEntropy')).toBe('deadbeef')
     expect(options.props('strengthBits')).toBe(128)
 
+    await options.vm.$emit('update:active-tab', 'convert')
+    await options.vm.$emit('update:wordlist', 'spanish')
+    await nextTick()
+
+    expect(results.props('activeTab')).toBe('convert')
+    expect(options.props('wordlist')).toBe('spanish')
+
     await options.vm.$emit('update:word-count', 24)
     await nextTick()
 
     expect(bip39Mocks.generateMnemonic).toHaveBeenCalledWith({
       wordCount: 24,
-      wordlist: 'english',
+      wordlist: 'spanish',
     })
 
     await options.vm.$emit('update:validation-mnemonic', 'valid words')
@@ -126,16 +133,56 @@ describe('Bip39MnemonicGenerator', () => {
     expect(results.props('validationWordCount')).toBe(12)
     expect(results.props('validationEntropy')).toBe('entropy:valid words')
 
+    await options.vm.$emit('update:validation-mnemonic', 'invalid words')
+    await nextTick()
+
+    expect(results.props('validationState')).toBe('invalid')
+    expect(results.props('validationEntropy')).toBe('')
+
+    bip39Mocks.validateMnemonic.mockImplementation(
+      (mnemonic: string) =>
+        mnemonic === 'valid words' ||
+        mnemonic === 'throw words' ||
+        mnemonic === 'throw convert words',
+    )
+    bip39Mocks.mnemonicToEntropy.mockImplementation((mnemonic: string) => {
+      if (mnemonic === 'throw words' || mnemonic === 'throw convert words') {
+        throw new Error('mnemonic conversion failure')
+      }
+      return `entropy:${mnemonic}`
+    })
+
+    await options.vm.$emit('update:validation-mnemonic', 'throw words')
+    await nextTick()
+
+    expect(results.props('validationState')).toBe('valid')
+    expect(results.props('validationEntropy')).toBe('')
+
     await options.vm.$emit('update:entropy-input', 'bad')
     await nextTick()
 
     expect(results.props('entropyHasError')).toBe(true)
     expect(results.props('entropyMnemonic')).toBe('')
 
-    await options.vm.$emit('update:entropy-input', 'valid')
+    bip39Mocks.isValidEntropyHex.mockImplementation(
+      (entropy: string) => entropy === 'valid' || entropy === 'boom',
+    )
+    bip39Mocks.entropyToMnemonic.mockImplementation((entropy: string) => {
+      if (entropy === 'boom') {
+        throw new Error('entropy conversion failure')
+      }
+      return `mnemonic:${entropy}`
+    })
+
+    await options.vm.$emit('update:entropy-input', 'boom')
     await nextTick()
 
     expect(results.props('entropyHasError')).toBe(false)
+    expect(results.props('entropyMnemonic')).toBe('')
+
+    await options.vm.$emit('update:entropy-input', 'valid')
+    await nextTick()
+
     expect(results.props('entropyMnemonic')).toBe('mnemonic:valid')
 
     await options.vm.$emit('update:convert-mnemonic', 'bad words')
@@ -144,15 +191,20 @@ describe('Bip39MnemonicGenerator', () => {
     expect(results.props('mnemonicHasError')).toBe(true)
     expect(results.props('mnemonicEntropy')).toBe('')
 
-    await options.vm.$emit('update:convert-mnemonic', 'valid words')
+    await options.vm.$emit('update:convert-mnemonic', 'throw convert words')
     await nextTick()
 
     expect(results.props('mnemonicHasError')).toBe(false)
+    expect(results.props('mnemonicEntropy')).toBe('')
+
+    await options.vm.$emit('update:convert-mnemonic', 'valid words')
+    await nextTick()
+
     expect(results.props('mnemonicEntropy')).toBe('entropy:valid words')
 
     await results.vm.$emit('regenerate')
     await nextTick()
 
-    expect(bip39Mocks.generateMnemonic).toHaveBeenCalledTimes(3)
+    expect(bip39Mocks.generateMnemonic).toHaveBeenCalledTimes(4)
   })
 })
