@@ -245,6 +245,16 @@ describe('playMorseAudio', () => {
     expect(onComplete).toHaveBeenCalledTimes(1)
   })
 
+  it('handles dashes plus character and word gaps', async () => {
+    const onComplete = vi.fn()
+
+    playMorseAudio('.- / -', { dotDuration: 1, onComplete })
+
+    await vi.runAllTimersAsync()
+
+    expect(onComplete).toHaveBeenCalledTimes(1)
+  })
+
   it('stops playback and avoids calling onComplete', async () => {
     const onComplete = vi.fn()
 

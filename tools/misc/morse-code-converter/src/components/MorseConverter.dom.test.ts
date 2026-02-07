@@ -155,6 +155,28 @@ describe('MorseConverter', () => {
     expect(inputs[0]!.element.value).toBe('HELLO WORLD')
   })
 
+  it('handles empty text and morse content without triggering playback', async () => {
+    const playMock = vi.mocked(playMorseAudio)
+    const wrapper = mount(MorseConverter, {
+      global: {
+        stubs,
+      },
+    })
+
+    const inputs = wrapper.findAll('textarea')
+    await inputs[0]!.trigger('focus')
+    await inputs[0]!.setValue('')
+    await nextTick()
+
+    expect(inputs[1]!.element.value).toBe('')
+    expect(wrapper.findAll('.copy')).toHaveLength(0)
+    expect(getActionButton(wrapper, 'play')).toBeFalsy()
+    expect(wrapper.text()).not.toContain('valid')
+    expect(wrapper.text()).not.toContain('invalid')
+    ;(wrapper.vm as unknown as { handlePlay: () => void }).handlePlay()
+    expect(playMock).not.toHaveBeenCalled()
+  })
+
   it('plays and stops morse audio', async () => {
     const stopSpy = vi.fn()
     const playMock = vi.mocked(playMorseAudio)
