@@ -156,21 +156,23 @@ describe('ColorContrastChecker', () => {
     expect(vm.backgroundStatus).toBeUndefined()
   })
 
-  it('updates input when using color picker', async () => {
+  it('updates inputs when using color pickers', async () => {
     const wrapper = mount(ColorContrastChecker, { global: { stubs } })
 
+    const inputSection = wrapper.getComponent({ name: 'ColorContrastInputSection' })
+    inputSection.vm.$emit('update:foregroundHex', '#ff0000ff')
+    inputSection.vm.$emit('update:backgroundHex', '#00ff00ff')
+    await nextTick()
+
     const vm = wrapper.vm as {
-      updateForegroundFromPicker?: (value: string) => void
-      updateBackgroundFromPicker?: (value: string) => void
+      foregroundInput?: string
+      backgroundInput?: string
       foregroundHex?: string
       backgroundHex?: string
     }
-    expect(vm.updateForegroundFromPicker).toBeTypeOf('function')
-    expect(vm.updateBackgroundFromPicker).toBeTypeOf('function')
-    vm.updateForegroundFromPicker?.('#ff0000')
-    vm.updateBackgroundFromPicker?.('#00ff00')
-    await nextTick()
 
+    expect(vm.foregroundInput).toBe('#ff0000ff')
+    expect(vm.backgroundInput).toBe('#00ff00ff')
     expect(vm.foregroundHex).toBe('#FF0000')
     expect(vm.backgroundHex).toBe('#00FF00')
   })

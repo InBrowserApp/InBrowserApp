@@ -20,7 +20,17 @@ describe('ColorContrastCheckerView', () => {
     expect(info.path).toBe('/tools/color-contrast-checker')
     expect(toolInfo.toolID).toBe(info.toolID)
     expect(routes[0]?.path).toBe(info.path)
-    expect(routes[0]?.component).toBeDefined()
+
+    const routeComponentLoader = routes[0]?.component as
+      | (() => Promise<{ default: unknown }>)
+      | undefined
+    expect(routeComponentLoader).toBeTypeOf('function')
+    if (!routeComponentLoader) {
+      return
+    }
+
+    const routeComponent = await routeComponentLoader()
+    expect(routeComponent.default).toBe(ColorContrastCheckerView)
   })
 
   it('renders the color contrast checker tool', () => {
