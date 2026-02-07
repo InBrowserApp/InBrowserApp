@@ -140,4 +140,24 @@ describe('SRIHashGeneratorView', () => {
     expect(text).toContain('sha384-BAU=')
     expect(text).toContain('sha512-Bg==')
   })
+
+  it('computes SRI hashes for file input', async () => {
+    const wrapper = mount(SRIHashGeneratorView, {
+      global: {
+        plugins: [i18n],
+        stubs,
+      },
+    })
+
+    const input = wrapper.findComponent(TextOrFileInputStub)
+    const file = new File(['hello'], 'hello.txt', { type: 'text/plain' })
+    await input.vm.$emit('update:value', file)
+    await flushPromises()
+    await flushPromises()
+
+    const text = wrapper.text()
+    expect(text).toContain('sha256-AQID')
+    expect(text).toContain('sha384-BAU=')
+    expect(text).toContain('sha512-Bg==')
+  })
 })
