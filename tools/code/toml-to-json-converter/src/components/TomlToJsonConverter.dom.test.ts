@@ -13,7 +13,10 @@ vi.mock('@vueuse/core', async () => {
 
   return {
     ...actual,
-    useObjectUrl: () => ref(objectUrlValue),
+    useObjectUrl: (source: { value: Blob }) => {
+      void source.value
+      return ref(objectUrlValue)
+    },
   }
 })
 
