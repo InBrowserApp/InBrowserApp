@@ -91,6 +91,26 @@ describe('NextRunTimes', () => {
     expect(data[1]?.relative).toBe('inSeconds:30')
   })
 
+  it('formats day-based relative times', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2024-01-01T00:00:00Z'))
+
+    const wrapper = mount(NextRunTimes, {
+      props: {
+        runTimes: [new Date('2024-01-03T00:00:00Z')],
+      },
+    })
+
+    const table = wrapper.findComponent({ name: 'NDataTable' })
+    const data = table.props('data') as Array<{
+      index: number
+      relative: string
+      dateTime: string
+    }>
+
+    expect(data[0]?.relative).toBe('inDays:2')
+  })
+
   it('renders a hint when there are no run times', () => {
     const wrapper = mount(NextRunTimes, {
       props: {

@@ -66,4 +66,24 @@ describe('CronFieldIntervalControl', () => {
     expect(input.props('max')).toBe(7)
     expect(wrapper.text()).toContain('daysOfWeek')
   })
+
+  it('forwards interval updates from the input model', () => {
+    const onUpdateIntervalValue = vi.fn()
+
+    const wrapper = mount(CronFieldIntervalControl, {
+      props: {
+        fieldConfig: {
+          min: 0,
+          max: 59,
+          unit: 'minutes',
+        },
+        intervalValue: 5,
+        'onUpdate:intervalValue': onUpdateIntervalValue,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 12)
+
+    expect(onUpdateIntervalValue).toHaveBeenCalledWith(12)
+  })
 })

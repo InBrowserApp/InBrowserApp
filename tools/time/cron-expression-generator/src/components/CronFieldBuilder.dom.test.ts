@@ -144,6 +144,17 @@ describe('CronFieldBuilder', () => {
     expect(wrapper.find('.options-weekday').exists()).toBe(true)
   })
 
+  it('applies specific weekday updates through v-model bindings', async () => {
+    const wrapper = mountBuilder({
+      fieldName: 'dayOfWeek',
+      modelValue: '1,3',
+    })
+
+    await nextTick()
+    const emitted = wrapper.emitted('update:modelValue') ?? []
+    expect(emitted[emitted.length - 1]).toEqual(['1,3,5'])
+  })
+
   it('sorts numeric specific values', async () => {
     const wrapper = mountBuilder({
       fieldName: 'minute',
@@ -171,6 +182,42 @@ describe('CronFieldBuilder', () => {
     })
 
     expect(wrapper.find('.options-numeric').exists()).toBe(true)
+  })
+
+  it('accepts specific updates while numeric range mode is active', async () => {
+    const CronFieldOptionsNumericRangeStub = defineComponent({
+      name: 'CronFieldOptionsNumeric',
+      props: ['specificValues', 'rangeStart', 'rangeEnd', 'fieldConfig', 'mode'],
+      emits: ['update:specificValues', 'update:rangeStart', 'update:rangeEnd'],
+      mounted() {
+        this.$emit('update:specificValues', [8, 4])
+        this.$emit('update:rangeStart', 4)
+        this.$emit('update:rangeEnd', 8)
+      },
+      template: '<div class="options-numeric" />',
+    })
+
+    const wrapper = mount(CronFieldBuilder, {
+      props: {
+        fieldName: 'minute',
+        modelValue: '2-4',
+      },
+      global: {
+        stubs: {
+          CronFieldHeader: CronFieldHeaderStub,
+          CronFieldModeSelector: CronFieldModeSelectorStub,
+          CronFieldEveryDescription: CronFieldEveryDescriptionStub,
+          CronFieldIntervalControl: CronFieldIntervalControlStub,
+          CronFieldOptionsNumeric: CronFieldOptionsNumericRangeStub,
+          CronFieldOptionsMonth: CronFieldOptionsMonthStub,
+          CronFieldOptionsWeekday: CronFieldOptionsWeekdayStub,
+        },
+      },
+    })
+
+    await nextTick()
+    const emitted = wrapper.emitted('update:modelValue') ?? []
+    expect(emitted[emitted.length - 1]).toEqual(['4-8'])
   })
 
   it('emits wildcard when specific values are cleared', async () => {

@@ -53,7 +53,8 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('CronFieldOptionsNumeric', () => {
-  it('renders numeric checkboxes for specific mode', () => {
+  it('renders numeric checkboxes for specific mode and emits updates', () => {
+    const onUpdateSpecificValues = vi.fn()
     const wrapper = mount(CronFieldOptionsNumeric, {
       props: {
         fieldConfig: {
@@ -65,14 +66,19 @@ describe('CronFieldOptionsNumeric', () => {
         specificValues: [1],
         rangeStart: 1,
         rangeEnd: 3,
-        'onUpdate:specificValues': () => {},
+        'onUpdate:specificValues': onUpdateSpecificValues,
       },
     })
 
     expect(wrapper.findAll('.n-checkbox')).toHaveLength(3)
+
+    wrapper.findComponent({ name: 'NCheckboxGroup' }).vm.$emit('update:value', [2, 3])
+    expect(onUpdateSpecificValues).toHaveBeenCalledWith([2, 3])
   })
 
-  it('renders range selects for range mode', () => {
+  it('renders range selects for range mode and emits start/end updates', () => {
+    const onUpdateRangeStart = vi.fn()
+    const onUpdateRangeEnd = vi.fn()
     const wrapper = mount(CronFieldOptionsNumeric, {
       props: {
         fieldConfig: {
@@ -84,13 +90,18 @@ describe('CronFieldOptionsNumeric', () => {
         specificValues: [],
         rangeStart: 1,
         rangeEnd: 3,
-        'onUpdate:rangeStart': () => {},
-        'onUpdate:rangeEnd': () => {},
+        'onUpdate:rangeStart': onUpdateRangeStart,
+        'onUpdate:rangeEnd': onUpdateRangeEnd,
       },
     })
 
     const selects = wrapper.findAllComponents({ name: 'NSelect' })
     expect(selects).toHaveLength(2)
     expect(selects[0]?.props('options')).toHaveLength(3)
+
+    selects[0]?.vm.$emit('update:value', 2)
+    selects[1]?.vm.$emit('update:value', 2)
+    expect(onUpdateRangeStart).toHaveBeenCalledWith(2)
+    expect(onUpdateRangeEnd).toHaveBeenCalledWith(2)
   })
 })

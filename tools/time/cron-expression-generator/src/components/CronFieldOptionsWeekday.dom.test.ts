@@ -53,7 +53,8 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('CronFieldOptionsWeekday', () => {
-  it('renders weekday labels for specific mode', () => {
+  it('renders weekday labels for specific mode and emits updates', () => {
+    const onUpdateSpecificValues = vi.fn()
     const wrapper = mount(CronFieldOptionsWeekday, {
       props: {
         fieldConfig: {
@@ -63,16 +64,21 @@ describe('CronFieldOptionsWeekday', () => {
         specificValues: [],
         rangeStart: 0,
         rangeEnd: 6,
-        'onUpdate:specificValues': () => {},
+        'onUpdate:specificValues': onUpdateSpecificValues,
       },
     })
 
     const checkboxes = wrapper.findAll('.n-checkbox')
     expect(checkboxes).toHaveLength(7)
     expect(checkboxes[0]?.text()).toContain('sun')
+
+    wrapper.findComponent({ name: 'NCheckboxGroup' }).vm.$emit('update:value', [1, 3, 5])
+    expect(onUpdateSpecificValues).toHaveBeenCalledWith([1, 3, 5])
   })
 
-  it('renders range selects for range mode', () => {
+  it('renders range selects for range mode and emits start/end updates', () => {
+    const onUpdateRangeStart = vi.fn()
+    const onUpdateRangeEnd = vi.fn()
     const wrapper = mount(CronFieldOptionsWeekday, {
       props: {
         fieldConfig: {
@@ -82,8 +88,8 @@ describe('CronFieldOptionsWeekday', () => {
         specificValues: [],
         rangeStart: 1,
         rangeEnd: 5,
-        'onUpdate:rangeStart': () => {},
-        'onUpdate:rangeEnd': () => {},
+        'onUpdate:rangeStart': onUpdateRangeStart,
+        'onUpdate:rangeEnd': onUpdateRangeEnd,
       },
     })
 
@@ -91,5 +97,10 @@ describe('CronFieldOptionsWeekday', () => {
     expect(selects).toHaveLength(2)
     expect(wrapper.text()).toContain('from')
     expect(wrapper.text()).toContain('to')
+
+    selects[0]?.vm.$emit('update:value', 2)
+    selects[1]?.vm.$emit('update:value', 6)
+    expect(onUpdateRangeStart).toHaveBeenCalledWith(2)
+    expect(onUpdateRangeEnd).toHaveBeenCalledWith(6)
   })
 })

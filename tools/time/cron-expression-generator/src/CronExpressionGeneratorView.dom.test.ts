@@ -93,7 +93,7 @@ const NextRunTimesStub = defineComponent({
   template: '<div class="next-run-times" :data-count="runTimes.length" />',
 })
 
-const mountView = () =>
+const mountView = (stubs: Record<string, unknown> = {}) =>
   mount(CronExpressionGeneratorView, {
     global: {
       stubs: {
@@ -101,6 +101,7 @@ const mountView = () =>
         CronPresets: CronPresetsStub,
         CronFieldBuilder: CronFieldBuilderStub,
         NextRunTimes: NextRunTimesStub,
+        ...stubs,
       },
     },
   })
@@ -168,6 +169,43 @@ describe('CronExpressionGeneratorView', () => {
     expect(wrapper.find('.cron-output').attributes('data-expression')).toBe('0 0 * * *')
   })
 
+  it('updates each cron field when builders emit model updates', async () => {
+    const CronFieldBuilderEmittingStub = defineComponent({
+      name: 'CronFieldBuilder',
+      props: ['fieldName'],
+      emits: ['update:modelValue'],
+      mounted() {
+        const updates = {
+          minute: '5',
+          hour: '6',
+          dayOfMonth: '7',
+          month: '8',
+          dayOfWeek: '1',
+        } as const
+        const value = updates[this.fieldName as keyof typeof updates]
+        if (value) {
+          this.$emit('update:modelValue', value)
+        }
+      },
+      template: '<div class="cron-field" />',
+    })
+
+    setStorage({
+      'tools:cron-expression-generator:minute': '*',
+      'tools:cron-expression-generator:hour': '*',
+      'tools:cron-expression-generator:dayOfMonth': '*',
+      'tools:cron-expression-generator:month': '*',
+      'tools:cron-expression-generator:dayOfWeek': '*',
+    })
+
+    const wrapper = mountView({
+      CronFieldBuilder: CronFieldBuilderEmittingStub,
+    })
+    await nextTick()
+
+    expect(wrapper.find('.cron-output').attributes('data-expression')).toBe('5 6 7 8 1')
+  })
+
   it('clears description and run times for invalid expressions', () => {
     setStorage({
       'tools:cron-expression-generator:minute': 'invalid',
@@ -181,6 +219,44 @@ describe('CronExpressionGeneratorView', () => {
     const output = wrapper.find('.cron-output')
 
     expect(output.attributes('data-description')).toBe('')
+    expect(wrapper.find('.next-run-times').attributes('data-count')).toBe('0')
+  })
+
+  it('returns empty description when cronstrue formatting throws', () => {
+    toStringMock.mockImplementation(() => {
+      throw new Error('format failed')
+    })
+
+    setStorage({
+      'tools:cron-expression-generator:minute': '*',
+      'tools:cron-expression-generator:hour': '*',
+      'tools:cron-expression-generator:dayOfMonth': '*',
+      'tools:cron-expression-generator:month': '*',
+      'tools:cron-expression-generator:dayOfWeek': '*',
+    })
+
+    const wrapper = mountView()
+
+    expect(wrapper.find('.cron-output').attributes('data-description')).toBe('')
+  })
+
+  it('returns no next run times when interval iteration throws', () => {
+    parseMock.mockImplementation(() => ({
+      next: () => {
+        throw new Error('next failed')
+      },
+    }))
+
+    setStorage({
+      'tools:cron-expression-generator:minute': '*',
+      'tools:cron-expression-generator:hour': '*',
+      'tools:cron-expression-generator:dayOfMonth': '*',
+      'tools:cron-expression-generator:month': '*',
+      'tools:cron-expression-generator:dayOfWeek': '*',
+    })
+
+    const wrapper = mountView()
+
     expect(wrapper.find('.next-run-times').attributes('data-count')).toBe('0')
   })
 
