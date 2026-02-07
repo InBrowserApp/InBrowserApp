@@ -17,6 +17,10 @@ describe('getResidentIdCheckDigit', () => {
   it('computes the correct check digit', () => {
     expect(getResidentIdCheckDigit('11010519491231002')).toBe('X')
   })
+
+  it('returns null when the core has an invalid format', () => {
+    expect(getResidentIdCheckDigit('1101051949123100X')).toBeNull()
+  })
 })
 
 describe('validateResidentId', () => {
@@ -60,6 +64,31 @@ describe('validateResidentId', () => {
     expect(result.isChecksumValid).toBe(true)
     expect(result.isBirthdateValid).toBe(false)
     expect(result.isValid).toBe(false)
+  })
+
+  it('flags impossible calendar dates', () => {
+    const core = '11010519990230002'
+    const checkDigit = getResidentIdCheckDigit(core)
+    expect(checkDigit).not.toBe(null)
+
+    const result = validateResidentId(`${core}${checkDigit}`)
+    expect(result.isChecksumValid).toBe(true)
+    expect(result.isBirthdateValid).toBe(false)
+    expect(result.birthDate).toBeNull()
+    expect(result.birthDateText).toBeNull()
+  })
+
+  it('flags future birthdates even when date parsing succeeds', () => {
+    const core = '11010529990101002'
+    const checkDigit = getResidentIdCheckDigit(core)
+    expect(checkDigit).not.toBe(null)
+
+    const result = validateResidentId(`${core}${checkDigit}`)
+    expect(result.isChecksumValid).toBe(true)
+    expect(result.isBirthdateValid).toBe(false)
+    expect(result.birthDate).toBeInstanceOf(Date)
+    expect(result.birthDateText).toBe('2999-01-01')
+    expect(result.age).toBeNull()
   })
 
   it('flags invalid length', () => {

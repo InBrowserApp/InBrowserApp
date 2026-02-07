@@ -60,7 +60,7 @@ vi.mock('naive-ui', async () => {
     },
     emits: ['update:value'],
     template:
-      '<div class="input" :data-value="value" :data-status="status" :data-placeholder="placeholder"><slot /></div>',
+      '<div class="input" :data-value="value" :data-status="status" :data-placeholder="placeholder"><slot name="prefix" /><slot /></div>',
   })
 
   const NIcon = defineComponent({
@@ -86,6 +86,7 @@ describe('ResidentIdInput', () => {
     expect(formItem.attributes('data-feedback')).toBeUndefined()
     expect(formItem.attributes('data-status')).toBeUndefined()
     expect(input.attributes('data-status')).toBeUndefined()
+    expect(wrapper.find('.icon').exists()).toBe(true)
   })
 
   it('marks valid input as success', () => {
@@ -171,6 +172,28 @@ describe('ResidentIdInput', () => {
     })
 
     expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidChecksum')
+  })
+
+  it('falls back to generic invalid feedback when detailed flags do not match', () => {
+    const validationResult = {
+      ...validateResidentId('11010519491231002X'),
+      isValid: false,
+      isLengthValid: true,
+      isFormatValid: true,
+      isRegionValid: true,
+      isBirthdateValid: true,
+      isChecksumValid: true,
+    }
+
+    const wrapper = mount(ResidentIdInput, {
+      props: {
+        modelValue: '11010519491231002X',
+        validationResult,
+      },
+    })
+
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalid')
+    expect(wrapper.get('.form-item').attributes('data-status')).toBe('error')
   })
 
   it('emits updates from input events', async () => {
