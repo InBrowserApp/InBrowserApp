@@ -160,6 +160,9 @@ describe('FaviconGenerator', () => {
     const wrapper = mountGenerator()
     const selectFile = wrapper.findComponent({ name: 'SelectFile' })
     const generalInfo = wrapper.findComponent({ name: 'GeneralInfo' })
+    const desktop = wrapper.findComponent({ name: 'DesktopBrowser' })
+    const ios = wrapper.findComponent({ name: 'IOSWebClip' })
+    const pwa = wrapper.findComponent({ name: 'PWA' })
 
     const imageBlob = new Blob(['icon'], { type: 'image/png' })
     selectFile.vm.$emit('update:image', imageBlob)
@@ -170,16 +173,37 @@ describe('FaviconGenerator', () => {
     }
     generalInfo.vm.$emit('update:options', nextInfo)
 
+    const nextDesktopOptions = {
+      ...desktop.props('options'),
+      background: true,
+    }
+    desktop.vm.$emit('update:options', nextDesktopOptions)
+
+    const nextIosOptions = {
+      ...ios.props('options'),
+      margin: 24,
+    }
+    ios.vm.$emit('update:options', nextIosOptions)
+
+    const nextPwaOptions = {
+      ...pwa.props('options'),
+      background: true,
+      margin: 16,
+    }
+    pwa.vm.$emit('update:options', nextPwaOptions)
+
     await nextTick()
 
-    const desktop = wrapper.findComponent({ name: 'DesktopBrowser' })
-    const ios = wrapper.findComponent({ name: 'IOSWebClip' })
     const generate = wrapper.findComponent({ name: 'GenerateAssets' })
 
     expect(desktop.props('image')).toBeInstanceOf(Blob)
     expect(ios.props('image')).toBeInstanceOf(Blob)
+    expect(pwa.props('image')).toBeInstanceOf(Blob)
     expect(generate.props('image')).toBeInstanceOf(Blob)
     expect((generate.props('image') as Blob).type).toBe('image/png')
     expect(generate.props('generalInfoOptions')).toEqual(nextInfo)
+    expect(generate.props('desktopBrowserOptions')).toEqual(nextDesktopOptions)
+    expect(generate.props('iosWebClipOptions')).toEqual(nextIosOptions)
+    expect(generate.props('pwaOptions')).toEqual(nextPwaOptions)
   })
 })
