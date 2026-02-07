@@ -17,8 +17,8 @@ vi.mock('../utils/languages', () => ({
 
 vi.mock('../utils/themes', () => ({
   DEFAULT_MONO_FONT: 'Test Mono',
-  getThemeById: vi.fn(() => ({ id: 'nebula', background: '#0a0a0a', foreground: '#ffffff' })),
-  getBackgroundPreset: vi.fn(() => ({ id: 'aurora', colors: ['#ffffff'] })),
+  getThemeById: vi.fn((id: string) => ({ id, background: '#0a0a0a', foreground: '#ffffff' })),
+  getBackgroundPreset: vi.fn((id: string) => ({ id, colors: ['#ffffff'] })),
 }))
 
 vi.mock('../utils/render', () => ({
@@ -47,35 +47,97 @@ const CodeShotInputSection = defineComponent({
 const CodeShotStyleSection = defineComponent({
   name: 'CodeShotStyleSection',
   props: {
+    language: {
+      type: String,
+      default: 'auto',
+    },
+    renderMode: {
+      type: String,
+      default: 'highlight',
+    },
+    themeId: {
+      type: String,
+      default: 'nebula',
+    },
     backgroundType: {
       type: String,
       default: 'preset',
+    },
+    backgroundPresetId: {
+      type: String,
+      default: 'aurora',
     },
     backgroundColor: {
       type: String,
       default: '#0f172a',
     },
+    windowStyle: {
+      type: String,
+      default: 'mac',
+    },
+    showLineNumbers: {
+      type: Boolean,
+      default: true,
+    },
   },
-  emits: ['update:backgroundType', 'update:backgroundColor'],
+  emits: [
+    'update:language',
+    'update:renderMode',
+    'update:themeId',
+    'update:backgroundType',
+    'update:backgroundPresetId',
+    'update:backgroundColor',
+    'update:windowStyle',
+    'update:showLineNumbers',
+  ],
   template: '<div data-style />',
 })
 
 const CodeShotLayoutSection = defineComponent({
   name: 'CodeShotLayoutSection',
   props: {
+    fontSize: {
+      type: Number,
+      default: 16,
+    },
+    lineHeight: {
+      type: Number,
+      default: 1.6,
+    },
+    cardPadding: {
+      type: Number,
+      default: 24,
+    },
     framePadding: {
       type: Number,
-      default: 0,
+      default: 48,
+    },
+    radius: {
+      type: Number,
+      default: 18,
     },
     shadow: {
       type: Boolean,
       default: false,
+    },
+    tabSize: {
+      type: Number,
+      default: 2,
     },
     isBackgroundNone: {
       type: Boolean,
       default: false,
     },
   },
+  emits: [
+    'update:fontSize',
+    'update:lineHeight',
+    'update:cardPadding',
+    'update:framePadding',
+    'update:radius',
+    'update:shadow',
+    'update:tabSize',
+  ],
   template:
     '<div data-layout :data-frame-padding="framePadding" :data-shadow="shadow" :data-background-none="isBackgroundNone" />',
 })
@@ -139,6 +201,7 @@ const CodeShotExportSection = defineComponent({
       default: '',
     },
   },
+  emits: ['update:filename'],
   template: '<div data-export />',
 })
 
@@ -240,5 +303,68 @@ describe('CodeScreenshotGenerator', () => {
 
     const solidExport = wrapper.getComponent({ name: 'CodeShotExportSection' })
     expect(solidExport.props('jpgBackground')).toBe('')
+  })
+
+  it('applies section v-model updates from child emits', async () => {
+    const wrapper = mount(CodeScreenshotGenerator, mountOptions)
+    const style = wrapper.getComponent({ name: 'CodeShotStyleSection' })
+    const layoutSection = wrapper.getComponent({ name: 'CodeShotLayoutSection' })
+    const exportSection = wrapper.getComponent({ name: 'CodeShotExportSection' })
+
+    style.vm.$emit('update:language', 'javascript')
+    style.vm.$emit('update:renderMode', 'plain')
+    style.vm.$emit('update:themeId', 'github-dark')
+    style.vm.$emit('update:backgroundType', 'solid')
+    style.vm.$emit('update:backgroundColor', '#112233')
+    style.vm.$emit('update:windowStyle', 'none')
+    style.vm.$emit('update:showLineNumbers', false)
+
+    layoutSection.vm.$emit('update:fontSize', 20)
+    layoutSection.vm.$emit('update:lineHeight', 1.9)
+    layoutSection.vm.$emit('update:cardPadding', 30)
+    layoutSection.vm.$emit('update:framePadding', 16)
+    layoutSection.vm.$emit('update:radius', 14)
+    layoutSection.vm.$emit('update:shadow', false)
+    layoutSection.vm.$emit('update:tabSize', 4)
+
+    style.vm.$emit('update:backgroundType', 'preset')
+    style.vm.$emit('update:backgroundPresetId', 'sunset')
+    exportSection.vm.$emit('update:filename', 'updated-shot')
+    await nextTick()
+
+    const preview = wrapper.getComponent({ name: 'CodeShotPreviewSection' })
+    const layout = preview.props('layout') as {
+      fontSize?: number
+      lineHeight?: number
+      padding?: number
+      framePadding?: number
+      radius?: number
+      shadow?: boolean
+      windowStyle?: string
+      showLineNumbers?: boolean
+      tabSize?: number
+    }
+    expect(layout.fontSize).toBe(20)
+    expect(layout.lineHeight).toBe(1.9)
+    expect(layout.padding).toBe(30)
+    expect(layout.framePadding).toBe(16)
+    expect(layout.radius).toBe(14)
+    expect(layout.shadow).toBe(false)
+    expect(layout.windowStyle).toBe('none')
+    expect(layout.showLineNumbers).toBe(false)
+    expect(layout.tabSize).toBe(4)
+
+    const background = preview.props('background') as {
+      type?: string
+      preset?: { id: string; colors: string[] }
+    }
+    expect(background).toEqual({
+      type: 'preset',
+      preset: { id: 'sunset', colors: ['#ffffff'] },
+    })
+
+    const theme = preview.props('theme') as { id?: string }
+    expect(theme.id).toBe('github-dark')
+    expect(exportSection.props('filename')).toBe('updated-shot')
   })
 })
