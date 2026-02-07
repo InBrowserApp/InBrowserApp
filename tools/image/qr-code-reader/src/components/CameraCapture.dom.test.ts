@@ -56,6 +56,61 @@ describe('CameraCapture', () => {
     expect(wrapper.text()).toContain('cameraNotSupported')
   })
 
+  it('returns early when the video element is unavailable', async () => {
+    const getUserMedia = vi.fn()
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mount(CameraCapture)
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      videoRef: HTMLVideoElement | undefined
+    }
+
+    vm.videoRef = undefined
+    await vm.startCamera()
+
+    expect(getUserMedia).not.toHaveBeenCalled()
+  })
+
+  it('retries permission and starts scanning successfully', async () => {
+    const trackStop = vi.fn()
+    const stream = { getTracks: () => [{ stop: trackStop }] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mount(CameraCapture)
+    const vm = wrapper.vm as unknown as {
+      requestCamera: () => Promise<void>
+      scanLoop: () => void
+      stopCamera: () => void
+      isScanning: boolean
+      permissionDenied: boolean
+    }
+    const video = wrapper.find('video').element as HTMLVideoElement
+
+    Object.defineProperty(video, 'srcObject', {
+      value: null,
+      writable: true,
+    })
+
+    vm.permissionDenied = true
+    await vm.requestCamera()
+
+    expect(getUserMedia).toHaveBeenCalledTimes(1)
+    expect(vm.permissionDenied).toBe(false)
+    expect(vm.isScanning).toBe(true)
+    expect(video.srcObject).toBe(stream)
+
+    requestAnimationFrameMock.mockClear()
+    vm.isScanning = false
+    vm.scanLoop()
+
+    expect(requestAnimationFrameMock).not.toHaveBeenCalled()
+
+    vm.stopCamera()
+    expect(trackStop).toHaveBeenCalled()
+  })
+
   it('emits decoded data and stops the camera when a QR code is found', async () => {
     const trackStop = vi.fn()
     const stream = { getTracks: () => [{ stop: trackStop }] } as unknown as MediaStream

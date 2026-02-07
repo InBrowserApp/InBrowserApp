@@ -56,7 +56,8 @@ vi.mock('naive-ui', async () => {
     NButton: defineComponent({
       name: 'NButton',
       emits: ['click'],
-      template: '<button class="n-button" @click="$emit(\'click\')"><slot /></button>',
+      template:
+        '<button class="n-button" @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
     }),
   }
 })
@@ -88,6 +89,26 @@ describe('ImageUpload', () => {
     expect(readQRFromFileMock).toHaveBeenCalledWith(file)
     expect(wrapper.emitted('decoded')).toEqual([['decoded']])
     expect(wrapper.emitted('update:file')?.[0]).toEqual([file])
+  })
+
+  it('ignores upload events without a file payload', async () => {
+    const wrapper = mount(ImageUpload, {
+      props: {
+        file: null,
+      },
+    })
+
+    wrapper.findComponent({ name: 'NUpload' }).vm.$emit('before-upload', {
+      file: { file: undefined },
+      fileList: [],
+    })
+
+    await flushPromises()
+
+    expect(readQRFromFileMock).not.toHaveBeenCalled()
+    expect(wrapper.emitted('decoded')).toBeUndefined()
+    expect(wrapper.emitted('error')).toBeUndefined()
+    expect(wrapper.emitted('update:file')).toBeUndefined()
   })
 
   it('emits errors when no QR code is found', async () => {
