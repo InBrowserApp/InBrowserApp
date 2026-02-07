@@ -32,6 +32,10 @@ const NSpinStub = defineComponent({
 const NCollapseStub = defineComponent({
   name: 'NCollapse',
   props: { expandedNames: { type: Array, default: () => [] } },
+  emits: ['update:expandedNames'],
+  mounted() {
+    this.$emit('update:expandedNames', ['advanced'])
+  },
   template: '<div class="n-collapse"><slot /></div>',
 })
 
@@ -56,8 +60,18 @@ const ExifCategorySectionStub = defineComponent({
   template: '<div class="exif-category" :data-name="name"><slot /><slot name="extra" /></div>',
 })
 
+const globalStubs = {
+  ToolSection: ToolSectionStub,
+  ToolSectionHeader: ToolSectionHeaderStub,
+  NSpin: NSpinStub,
+  NCollapse: NCollapseStub,
+  NFlex: NFlexStub,
+  NButton: NButtonStub,
+  ExifCategorySection: ExifCategorySectionStub,
+}
+
 describe('ExifDataDisplay', () => {
-  it('splits EXIF data into sections and builds map links', () => {
+  it('splits EXIF data into sections and builds map links', async () => {
     const wrapper = mount(ExifDataDisplay, {
       props: {
         data: {
@@ -70,15 +84,7 @@ describe('ExifDataDisplay', () => {
         isLoading: false,
       },
       global: {
-        stubs: {
-          ToolSection: ToolSectionStub,
-          ToolSectionHeader: ToolSectionHeaderStub,
-          NSpin: NSpinStub,
-          NCollapse: NCollapseStub,
-          NFlex: NFlexStub,
-          NButton: NButtonStub,
-          ExifCategorySection: ExifCategorySectionStub,
-        },
+        stubs: globalStubs,
       },
     })
 
@@ -96,5 +102,28 @@ describe('ExifDataDisplay', () => {
     const links = wrapper.findAll('a.n-button').map((link) => link.attributes('href'))
     expect(links).toContain('https://www.google.com/maps?q=10,20')
     expect(links).toContain('https://uri.amap.com/marker?position=20,10')
+  })
+
+  it('handles missing gps coordinates without map links', () => {
+    const wrapper = mount(ExifDataDisplay, {
+      props: {
+        data: {
+          GPSLatitude: 10,
+          GPSLongitude: 20,
+        },
+        isLoading: false,
+      },
+      global: {
+        stubs: globalStubs,
+      },
+    })
+
+    expect(wrapper.findAll('a.n-button')).toHaveLength(0)
+
+    const setupState = (wrapper.vm.$ as unknown as { setupState: Record<string, unknown> })
+      .setupState
+    expect(setupState.gpsCoords).toBeNull()
+    expect(setupState.googleMapsUrl).toBe('')
+    expect(setupState.amapUrl).toBe('')
   })
 })

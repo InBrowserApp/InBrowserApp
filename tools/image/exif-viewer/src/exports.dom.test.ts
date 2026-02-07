@@ -3,7 +3,7 @@ import * as info from './info'
 import { routes } from './routes'
 
 describe('exif-viewer exports', () => {
-  it('exposes tool info and routes', () => {
+  it('exposes tool info and routes', async () => {
     expect(info.toolID).toBe('exif-viewer')
     expect(info.path).toBe('/tools/exif-viewer')
     expect(info.features).toContain('offline')
@@ -18,5 +18,9 @@ describe('exif-viewer exports', () => {
       path: info.path,
     })
     expect(typeof route.component).toBe('function')
+
+    const componentLoader = route.component as () => Promise<{ default: unknown }>
+    const module = await componentLoader()
+    expect(module.default).toBeTruthy()
   })
 })

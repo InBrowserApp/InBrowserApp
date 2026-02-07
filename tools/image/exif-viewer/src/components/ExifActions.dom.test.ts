@@ -32,7 +32,9 @@ const NFlexStub = defineComponent({
 describe('ExifActions', () => {
   it('formats exif data as JSON for copying', () => {
     const date = new Date('2023-01-01T00:00:00.000Z')
-    const binary = new Uint8Array([1, 2, 3, 4])
+    const dateWithCustomJson = date as unknown as { toJSON: () => unknown }
+    dateWithCustomJson.toJSON = () => date
+    const binary = new ArrayBuffer(4)
 
     const wrapper = mount(ExifActions, {
       props: {
