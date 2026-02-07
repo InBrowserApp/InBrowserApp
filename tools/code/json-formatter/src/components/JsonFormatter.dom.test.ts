@@ -151,4 +151,22 @@ describe('JsonFormatter', () => {
     const textarea = wrapper.find('textarea')
     expect((textarea.element as HTMLTextAreaElement).value).toBe('{"name":"demo"}')
   })
+
+  it('ignores file picker cancellation errors', async () => {
+    fileOpenMock.mockRejectedValue(new Error('cancelled'))
+
+    const wrapper = mountWrapper()
+    const before = (wrapper.find('textarea').element as HTMLTextAreaElement).value
+    const button = wrapper
+      .findAll('button')
+      .find((candidate) => candidate.text().includes('Import from file'))
+
+    expect(button).toBeTruthy()
+
+    await button!.trigger('click')
+    await flushPromises()
+
+    const textarea = wrapper.find('textarea')
+    expect((textarea.element as HTMLTextAreaElement).value).toBe(before)
+  })
 })
