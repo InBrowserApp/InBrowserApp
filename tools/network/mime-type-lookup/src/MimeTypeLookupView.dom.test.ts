@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, ref } from 'vue'
+import { defineComponent, nextTick, ref } from 'vue'
 import MimeTypeLookupView from './MimeTypeLookupView.vue'
 
 vi.mock('@vueuse/core', async () => {
@@ -33,6 +33,7 @@ const MimeTypeSearchStub = defineComponent({
       default: '',
     },
   },
+  emits: ['update:search', 'update:category'],
   template: '<div class="mime-search" :data-search="search" :data-category="category" />',
 })
 
@@ -52,7 +53,7 @@ const MimeTypeTableStub = defineComponent({
 })
 
 describe('MimeTypeLookupView', () => {
-  it('passes search state to child sections', () => {
+  it('passes and syncs search state across child sections', async () => {
     const wrapper = mount(MimeTypeLookupView, {
       global: {
         stubs: {
@@ -77,5 +78,15 @@ describe('MimeTypeLookupView', () => {
     expect(table.attributes('data-search')).toBe('')
     expect(table.attributes('data-category')).toBe('all')
     expect(wrapper.find('.what-is').exists()).toBe(true)
+
+    const searchComponent = wrapper.findComponent({ name: 'MimeTypeSearch' })
+    searchComponent.vm.$emit('update:search', 'json')
+    searchComponent.vm.$emit('update:category', 'application')
+    await nextTick()
+
+    expect(wrapper.find('.mime-search').attributes('data-search')).toBe('json')
+    expect(wrapper.find('.mime-search').attributes('data-category')).toBe('application')
+    expect(wrapper.find('.mime-table').attributes('data-search')).toBe('json')
+    expect(wrapper.find('.mime-table').attributes('data-category')).toBe('application')
   })
 })

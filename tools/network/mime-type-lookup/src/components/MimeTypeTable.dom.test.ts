@@ -86,6 +86,32 @@ vi.mock('naive-ui', async () => {
   }
 })
 
+type CopySlotArgs = { copy: () => void }
+type SpanVNode = {
+  props?: Record<string, unknown>
+  children?: string
+}
+type TooltipVNode = {
+  props?: Record<string, unknown>
+  children?: {
+    default?: (args: CopySlotArgs) => SpanVNode
+  }
+}
+
+const assertCopyCell = (vnode: TooltipVNode | undefined, expectedContent: string) => {
+  expect(vnode?.props?.content).toBe(expectedContent)
+  const slot = vnode?.children?.default
+  expect(slot).toBeTypeOf('function')
+
+  const copy = vi.fn()
+  const span = slot?.({ copy })
+  expect(span?.children).toBe(expectedContent)
+
+  const onClick = span?.props?.onClick as (() => void) | undefined
+  onClick?.()
+  expect(copy).toHaveBeenCalledTimes(1)
+}
+
 describe('MimeTypeTable', () => {
   it('filters rows by category and search', () => {
     const allWrapper = mount(MimeTypeTable, {
@@ -127,7 +153,7 @@ describe('MimeTypeTable', () => {
     expect(searchData.map((row) => row.mimeType)).toEqual(['application/json'])
   })
 
-  it('builds column renderers with expected content', () => {
+  it('builds column renderers, row keys, and slot content', () => {
     const wrapper = mount(MimeTypeTable, {
       props: {
         search: '',
@@ -135,7 +161,8 @@ describe('MimeTypeTable', () => {
       },
     })
 
-    const data = wrapper.findComponent({ name: 'NDataTable' }).props('data') as Array<{
+    const dataTable = wrapper.findComponent({ name: 'NDataTable' })
+    const data = dataTable.props('data') as Array<{
       mimeType: string
       extensions?: string[]
       source?: string
@@ -151,7 +178,10 @@ describe('MimeTypeTable', () => {
       throw new Error('Expected rows were not found in the dataset.')
     }
 
-    const columns = wrapper.findComponent({ name: 'NDataTable' }).props('columns') as Array<{
+    const rowKey = dataTable.props('rowKey') as (row: typeof textRow) => string
+    expect(rowKey(textRow)).toBe('text/plain')
+
+    const columns = dataTable.props('columns') as Array<{
       key: string
       render: (row: typeof textRow) => {
         props?: Record<string, unknown>
@@ -161,10 +191,10 @@ describe('MimeTypeTable', () => {
     }>
 
     const mimeTypeColumn = columns.find((column) => column.key === 'mimeType')?.render(textRow)
-    expect(mimeTypeColumn?.props?.content).toBe('text/plain')
+    assertCopyCell(mimeTypeColumn as TooltipVNode | undefined, 'text/plain')
 
     const extensionsColumn = columns.find((column) => column.key === 'extensions')?.render(octetRow)
-    expect(extensionsColumn?.props?.content).toBe('')
+    assertCopyCell(extensionsColumn as TooltipVNode | undefined, '')
 
     const categoryColumn = columns.find((column) => column.key === 'category')?.render(textRow)
     expect(categoryColumn?.props?.category).toBe('text')
@@ -175,16 +205,41 @@ describe('MimeTypeTable', () => {
 
     const sourceColumnPresent = columns.find((column) => column.key === 'source')?.render(textRow)
     expect(sourceColumnPresent?.props?.type).toBe('info')
+    const sourceChildren = sourceColumnPresent?.children as
+      | (() => string)
+      | {
+          default?: () => string
+        }
+      | undefined
+    const sourceText =
+      typeof sourceChildren === 'function' ? sourceChildren() : sourceChildren?.default?.()
+    expect(sourceText).toBe('IANA')
 
     const compressibleColumnYes = columns
       .find((column) => column.key === 'compressible')
       ?.render(textRow)
     expect(compressibleColumnYes?.props?.type).toBe('success')
+    const yesChildren = compressibleColumnYes?.children as
+      | (() => string)
+      | {
+          default?: () => string
+        }
+      | undefined
+    const yesText = typeof yesChildren === 'function' ? yesChildren() : yesChildren?.default?.()
+    expect(yesText).toBe('yes')
 
     const compressibleColumnNo = columns
       .find((column) => column.key === 'compressible')
       ?.render(imageRow)
     expect(compressibleColumnNo?.props?.type).toBe('default')
+    const noChildren = compressibleColumnNo?.children as
+      | (() => string)
+      | {
+          default?: () => string
+        }
+      | undefined
+    const noText = typeof noChildren === 'function' ? noChildren() : noChildren?.default?.()
+    expect(noText).toBe('no')
 
     const compressibleColumnEmpty = columns
       .find((column) => column.key === 'compressible')
@@ -193,7 +248,7 @@ describe('MimeTypeTable', () => {
     expect(compressibleColumnEmpty?.children).toBe('-')
 
     const charsetColumn = columns.find((column) => column.key === 'charset')?.render(textRow)
-    expect(charsetColumn?.props?.content).toBe('UTF-8')
+    assertCopyCell(charsetColumn as TooltipVNode | undefined, 'UTF-8')
 
     const charsetColumnMissing = columns
       .find((column) => column.key === 'charset')
