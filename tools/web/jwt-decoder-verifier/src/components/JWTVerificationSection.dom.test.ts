@@ -94,6 +94,28 @@ describe('JWTVerificationSection', () => {
     expect(wrapper.text()).not.toContain('problems')
   })
 
+  it('computes decoded-only values when secret is missing', async () => {
+    const wrapper = mountSection({
+      token: 'token',
+      secret: '',
+      alg: 'HS256',
+      decodedHeader: { alg: 'HS256' },
+    })
+    await flushPromises()
+
+    expect(verifyMock).not.toHaveBeenCalled()
+    expect(wrapper.findComponent({ name: 'NAlert' }).exists()).toBe(false)
+
+    const vm = wrapper.vm as unknown as {
+      statusType: string
+      statusTitle: string
+      statusDetail: string
+    }
+    expect(vm.statusType).toBe('default')
+    expect(vm.statusTitle).toBe('decoded-only')
+    expect(vm.statusDetail).toBe('enter-secret')
+  })
+
   it('reports missing algorithm when auto mode cannot detect one', async () => {
     const wrapper = mountSection({
       token: 'token',
