@@ -29,7 +29,7 @@ vi.mock('naive-ui', async () => {
       props: ['value', 'placeholder', 'status', 'size'],
       emits: ['update:value'],
       template:
-        '<input :value="value" :placeholder="placeholder" :data-status="status" @input="$emit(\'update:value\', $event.target.value)" />',
+        '<div><slot name="prefix" /><input :value="value" :placeholder="placeholder" :data-status="status" @input="$emit(\'update:value\', $event.target.value)" /></div>',
     }),
     NIcon: defineComponent({
       name: 'NIcon',
@@ -70,6 +70,7 @@ describe('ISBNInput', () => {
     expect(form.attributes('data-status')).toBeUndefined()
     expect(form.attributes('data-feedback')).toBeUndefined()
     expect(wrapper.get('input').attributes('data-status')).toBeUndefined()
+    expect(wrapper.find('.icon').exists()).toBe(true)
   })
 
   it('reports invalid length feedback', () => {
@@ -124,6 +125,25 @@ describe('ISBNInput', () => {
     const form = wrapper.get('.form-item')
     expect(form.attributes('data-feedback')).toBe('invalidChecksum')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
+  })
+
+  it('falls back to a generic invalid message for inconsistent invalid states', () => {
+    const wrapper = mount(ISBNInput, {
+      props: {
+        modelValue: '0306406152',
+        validationResult: {
+          ...baseResult,
+          isLengthValid: true,
+          isFormatValid: true,
+          isChecksumValid: true,
+          isValid: false,
+        },
+      },
+    })
+
+    const form = wrapper.get('.form-item')
+    expect(form.attributes('data-feedback')).toBe('invalid')
+    expect(form.attributes('data-status')).toBe('error')
   })
 
   it('marks valid inputs as success and emits updates', async () => {

@@ -80,6 +80,27 @@ describe('ISBNResultSummary', () => {
     expect(wrapper.find('.copy').exists()).toBe(true)
   })
 
+  it('renders isbn13 type labels', () => {
+    const wrapper = mount(ISBNResultSummary, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          type: 'isbn-13',
+          normalized: '9780306406157',
+        },
+      },
+      global: {
+        stubs: {
+          CopyToClipboardButton: {
+            template: '<button class="copy" />',
+          },
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('isbn13')
+  })
+
   it('falls back to unknown type and missing digits', () => {
     const wrapper = mount(ISBNResultSummary, {
       props: {

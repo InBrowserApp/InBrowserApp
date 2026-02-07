@@ -69,6 +69,32 @@ describe('ISBNResultIdentifiers', () => {
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
 
+  it('falls back to placeholders when valid values are missing', () => {
+    const wrapper = mount(ISBNResultIdentifiers, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          isValid: true,
+          type: 'isbn-10',
+          length: 10,
+          isbn10: null,
+          isbn13: null,
+        },
+      },
+      global: {
+        stubs: {
+          CopyToClipboardButton: {
+            template: '<button class="copy" />',
+          },
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('notAvailable')
+    expect(wrapper.text()).toContain('-')
+    expect(wrapper.findAll('.copy')).toHaveLength(0)
+  })
+
   it('shows non-convertible ISBN-13 values', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
       props: {
@@ -95,6 +121,34 @@ describe('ISBNResultIdentifiers', () => {
     expect(wrapper.text()).toContain('979')
     expect(wrapper.text()).toContain('13')
     expect(wrapper.findAll('.copy')).toHaveLength(1)
+  })
+
+  it('shows ISBN-13 fallbacks when prefix is missing', () => {
+    const wrapper = mount(ISBNResultIdentifiers, {
+      props: {
+        validationResult: {
+          ...baseResult,
+          isValid: true,
+          type: 'isbn-13',
+          length: 13,
+          isbn10: null,
+          isbn13: null,
+          prefix: null,
+        },
+      },
+      global: {
+        stubs: {
+          CopyToClipboardButton: {
+            template: '<button class="copy" />',
+          },
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('notAvailable')
+    expect(wrapper.text()).toContain('notConvertible')
+    expect(wrapper.text()).toContain('13')
+    expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
 
   it('shows convertible ISBN-13 values and copies both identifiers', () => {

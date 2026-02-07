@@ -4,10 +4,14 @@ import { defineComponent } from 'vue'
 import ISBNValidatorView from './ISBNValidatorView.vue'
 import * as toolInfo from './info'
 
+const storageState = vi.hoisted(() => ({
+  value: '978-0-306-40615-7',
+}))
+
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
-    useStorage: (_key: string, initialValue: string) => ref(initialValue),
+    useStorage: (_key: string, initialValue: string) => ref(storageState.value ?? initialValue),
   }
 })
 
@@ -55,6 +59,8 @@ const WhatIsStub = defineComponent({
 
 describe('ISBNValidatorView', () => {
   it('renders the layout and sections with the stored ISBN', () => {
+    storageState.value = '978-0-306-40615-7'
+
     const wrapper = mount(ISBNValidatorView, {
       global: {
         stubs: {
@@ -73,6 +79,25 @@ describe('ISBNValidatorView', () => {
     expect(input.attributes('data-value')).toBe('978-0-306-40615-7')
 
     expect(wrapper.find('[data-testid="isbn-result"]').exists()).toBe(true)
+    expect(wrapper.find('[data-testid="isbn-what-is"]').exists()).toBe(true)
+  })
+
+  it('hides the result panel when the stored ISBN is empty', () => {
+    storageState.value = ''
+
+    const wrapper = mount(ISBNValidatorView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: LayoutStub,
+          ISBNInput: ISBNInputStub,
+          ISBNResult: ISBNResultStub,
+          WhatIsISBNValidator: WhatIsStub,
+        },
+      },
+    })
+
+    expect(wrapper.get('[data-testid="isbn-input"]').attributes('data-value')).toBe('')
+    expect(wrapper.find('[data-testid="isbn-result"]').exists()).toBe(false)
     expect(wrapper.find('[data-testid="isbn-what-is"]').exists()).toBe(true)
   })
 })
