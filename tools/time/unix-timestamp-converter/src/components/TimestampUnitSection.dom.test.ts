@@ -55,6 +55,15 @@ vi.mock('naive-ui', async () => {
   }
 })
 
+const sectionStubs = {
+  ToolSectionHeader: {
+    template: '<h3 class="section-header"><slot /></h3>',
+  },
+  ToolSection: {
+    template: '<section class="section"><slot /></section>',
+  },
+}
+
 describe('TimestampUnitSection', () => {
   it('renders unit labels and emits updates', async () => {
     const wrapper = mount(TimestampUnitSection, {
@@ -65,14 +74,7 @@ describe('TimestampUnitSection', () => {
         digitCount: 10,
       },
       global: {
-        stubs: {
-          ToolSectionHeader: {
-            template: '<h3 class="section-header"><slot /></h3>',
-          },
-          ToolSection: {
-            template: '<section class="section"><slot /></section>',
-          },
-        },
+        stubs: sectionStubs,
       },
     })
 
@@ -90,6 +92,29 @@ describe('TimestampUnitSection', () => {
     expect(wrapper.emitted('update:unit')?.[0]).toEqual(['milliseconds'])
   })
 
+  it('renders detected labels for milliseconds and nanoseconds', async () => {
+    const wrapper = mount(TimestampUnitSection, {
+      props: {
+        unit: 'auto',
+        showDetected: true,
+        detectedUnit: 'milliseconds',
+        digitCount: 13,
+      },
+      global: {
+        stubs: sectionStubs,
+      },
+    })
+
+    expect(wrapper.find('.n-text').text()).toContain('milliseconds')
+
+    await wrapper.setProps({
+      detectedUnit: 'nanoseconds',
+      digitCount: 16,
+    })
+
+    expect(wrapper.find('.n-text').text()).toContain('nanoseconds')
+  })
+
   it('falls back to milliseconds for unknown detected unit', () => {
     const wrapper = mount(TimestampUnitSection, {
       props: {
@@ -99,14 +124,7 @@ describe('TimestampUnitSection', () => {
         digitCount: 13,
       },
       global: {
-        stubs: {
-          ToolSectionHeader: {
-            template: '<h3 class="section-header"><slot /></h3>',
-          },
-          ToolSection: {
-            template: '<section class="section"><slot /></section>',
-          },
-        },
+        stubs: sectionStubs,
       },
     })
 

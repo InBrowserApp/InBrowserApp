@@ -38,8 +38,8 @@ vi.mock('naive-ui', async () => {
     name: 'NTime',
     props: {
       time: {
-        type: [Number, null],
-        default: null,
+        type: Number,
+        required: false,
       },
       to: {
         type: Date,
@@ -73,6 +73,12 @@ vi.mock('@shared/ui/base', async () => {
   }
 })
 
+const sectionStub = {
+  ToolSection: {
+    template: '<section class="section"><slot /></section>',
+  },
+}
+
 describe('TimestampDetailsSection', () => {
   it('renders iso and utc details with relative time', () => {
     const now = new Date('2024-01-01T00:00:00.000Z')
@@ -84,11 +90,7 @@ describe('TimestampDetailsSection', () => {
         now,
       },
       global: {
-        stubs: {
-          ToolSection: {
-            template: '<section class="section"><slot /></section>',
-          },
-        },
+        stubs: sectionStub,
       },
     })
 
@@ -97,6 +99,24 @@ describe('TimestampDetailsSection', () => {
     expect(wrapper.text()).toContain('2024-01-01T00:00:00.000Z')
     expect(wrapper.text()).toContain('Mon, 01 Jan 2024 00:00:00 GMT')
     expect(wrapper.find('.n-time').attributes('data-time')).toBe('1704067200000')
+    expect(wrapper.find('.n-time').attributes('data-to')).toBe(now.toISOString())
+  })
+
+  it('passes undefined to relative time when date is missing', () => {
+    const now = new Date('2024-01-01T00:00:00.000Z')
+    const wrapper = mount(TimestampDetailsSection, {
+      props: {
+        isoString: '',
+        utcString: '',
+        dateValue: null,
+        now,
+      },
+      global: {
+        stubs: sectionStub,
+      },
+    })
+
+    expect(wrapper.find('.n-time').attributes('data-time')).toBe('undefined')
     expect(wrapper.find('.n-time').attributes('data-to')).toBe(now.toISOString())
   })
 })

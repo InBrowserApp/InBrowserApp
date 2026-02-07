@@ -113,6 +113,15 @@ const mountConverter = () =>
     },
   })
 
+const readSetupStateValue = (wrapper: ReturnType<typeof mountConverter>, key: string): unknown => {
+  const setupState = (wrapper.vm.$ as unknown as { setupState: Record<string, unknown> }).setupState
+  const entry = setupState[key]
+  if (entry && typeof entry === 'object' && 'value' in entry) {
+    return (entry as { value: unknown }).value
+  }
+  return entry
+}
+
 beforeEach(() => {
   vi.useFakeTimers()
   vi.setSystemTime(new Date(fixedMs))
@@ -182,6 +191,37 @@ describe('TimestampConverter', () => {
     expect(wrapper.find('.timestamp-input').attributes('data-timestamp')).toBe(
       String(Math.floor(fixedMs / 1000)),
     )
+  })
+
+  it('handles date updates and invalid-state branches', async () => {
+    const wrapper = mountConverter()
+    const inputStub = wrapper.findComponent(TimestampInputSectionStub)
+    const unitStub = wrapper.findComponent(TimestampUnitSectionStub)
+    const dateStub = wrapper.findComponent(TimestampDateSectionStub)
+
+    await unitStub.vm.$emit('update:unit', 'milliseconds')
+    await nextTick()
+
+    await dateStub.vm.$emit('update:date', 1704067200123)
+    await nextTick()
+
+    expect(wrapper.find('.timestamp-input').attributes('data-timestamp')).toBe('1704067200123')
+
+    await dateStub.vm.$emit('update:date', null)
+    await nextTick()
+
+    expect(wrapper.find('.timestamp-input').attributes('data-timestamp')).toBe('1704067200123')
+
+    await inputStub.vm.$emit('update:timestamp', '')
+    await nextTick()
+
+    expect(readSetupStateValue(wrapper, 'isoString')).toBe('')
+    expect(readSetupStateValue(wrapper, 'utcString')).toBe('')
+
+    await unitStub.vm.$emit('update:unit', 'seconds')
+    await nextTick()
+
+    expect(wrapper.find('.timestamp-input').attributes('data-timestamp')).toBe('')
   })
 
   it('hides details when the timestamp is invalid', async () => {
