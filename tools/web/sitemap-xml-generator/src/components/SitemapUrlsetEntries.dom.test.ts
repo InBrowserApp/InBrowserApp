@@ -31,7 +31,6 @@ vi.mock('naive-ui', async () => {
           'button',
           {
             ...attrs,
-            disabled: props.disabled,
             onClick: () => emit('click'),
           },
           slots.default?.(),

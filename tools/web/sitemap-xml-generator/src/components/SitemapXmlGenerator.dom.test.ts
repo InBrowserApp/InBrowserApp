@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import SitemapXmlGenerator from './SitemapXmlGenerator.vue'
@@ -37,6 +37,7 @@ describe('SitemapXmlGenerator', () => {
                 <button data-testid="preset-video" @click="$emit('apply', 'video')" />
                 <button data-testid="preset-news" @click="$emit('apply', 'news')" />
                 <button data-testid="preset-index" @click="$emit('apply', 'index')" />
+                <button data-testid="preset-unknown" @click="$emit('apply', 'unexpected')" />
               </div>
             `,
           },
@@ -72,5 +73,9 @@ describe('SitemapXmlGenerator', () => {
     expect(stateRef.value.mode).toBe('sitemapindex')
     expect(stateRef.value.sitemaps).toHaveLength(2)
     expect(wrapper.get('[data-testid="output"]').text()).toBe('<sitemapindex />')
+
+    const snapshot = JSON.stringify(stateRef.value)
+    await wrapper.get('[data-testid="preset-unknown"]').trigger('click')
+    expect(JSON.stringify(stateRef.value)).toBe(snapshot)
   })
 })
