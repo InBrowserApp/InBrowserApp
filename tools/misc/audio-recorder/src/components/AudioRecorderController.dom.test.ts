@@ -1,7 +1,19 @@
-import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import AudioRecorderController from './AudioRecorderController.vue'
+
+const recorderUtils = vi.hoisted(() => ({
+  getSupportedMimeType: vi.fn(),
+}))
+
+vi.mock('../utils/recorder', async () => {
+  const actual = await vi.importActual<typeof import('../utils/recorder')>('../utils/recorder')
+  return {
+    ...actual,
+    getSupportedMimeType: (...args: unknown[]) => recorderUtils.getSupportedMimeType(...args),
+  }
+})
 
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
@@ -90,6 +102,11 @@ const mountController = () =>
 describe('AudioRecorderController', () => {
   beforeEach(() => {
     FakeMediaRecorder.instances = []
+    FakeMediaRecorder.isTypeSupported.mockReset()
+    FakeMediaRecorder.isTypeSupported.mockImplementation((type: string) => type === 'audio/webm')
+    recorderUtils.getSupportedMimeType.mockReset()
+    recorderUtils.getSupportedMimeType.mockReturnValue('audio/webm')
+
     setMediaDevices({ getUserMedia: vi.fn() } as unknown as MediaDevices)
     vi.stubGlobal('MediaRecorder', FakeMediaRecorder)
   })
@@ -139,6 +156,38 @@ describe('AudioRecorderController', () => {
     expect(vm.recordingBlob).toBeInstanceOf(Blob)
   })
 
+  it('returns early when preparing, already recording, or controls are unavailable', async () => {
+    const getUserMedia = vi
+      .fn()
+      .mockResolvedValue({ getTracks: () => [] } as unknown as MediaStream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      pauseRecording: () => void
+      resumeRecording: () => void
+      stopRecording: () => void
+      isPreparing: boolean
+      recorderState: 'inactive' | 'recording' | 'paused'
+    }
+
+    vm.isPreparing = true
+    await vm.startRecording()
+    expect(getUserMedia).not.toHaveBeenCalled()
+
+    vm.isPreparing = false
+    vm.recorderState = 'recording'
+    await vm.startRecording()
+    expect(getUserMedia).not.toHaveBeenCalled()
+
+    vm.pauseRecording()
+    vm.resumeRecording()
+    vm.stopRecording()
+
+    expect(FakeMediaRecorder.instances).toHaveLength(0)
+  })
+
   it('handles permission denied errors', async () => {
     const error = Object.assign(new Error('denied'), { name: 'NotAllowedError' })
     const getUserMedia = vi.fn().mockRejectedValue(error)
@@ -157,6 +206,102 @@ describe('AudioRecorderController', () => {
     expect(vm.permissionDenied).toBe(true)
     expect(wrapper.text()).toContain('permissionDenied')
     expect(wrapper.text()).toContain('retryPermission')
+  })
+
+  it('falls back to plain MediaRecorder when options constructor fails', async () => {
+    class ThrowOnOptionsRecorder extends FakeMediaRecorder {
+      constructor(stream: MediaStream, options?: MediaRecorderOptions) {
+        if (options?.mimeType) {
+          throw new Error('options not supported')
+        }
+        super(stream, options)
+      }
+    }
+
+    const stream = { getTracks: () => [] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+    vi.stubGlobal('MediaRecorder', ThrowOnOptionsRecorder as unknown as typeof MediaRecorder)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      mediaRecorder: MediaRecorder | null
+    }
+
+    await vm.startRecording()
+
+    expect(vm.mediaRecorder).toBeTruthy()
+    expect(getUserMedia).toHaveBeenCalledTimes(1)
+  })
+
+  it('handles empty chunks and propagates output file-name updates', async () => {
+    class EmptyChunkRecorder extends FakeMediaRecorder {
+      stop = vi.fn(() => {
+        this.state = 'inactive'
+        this.ondataavailable?.({
+          data: new Blob([], { type: this.mimeType }),
+        } as BlobEvent)
+        this.onstop?.()
+      })
+    }
+
+    const stream = { getTracks: () => [] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+    vi.stubGlobal('MediaRecorder', EmptyChunkRecorder as unknown as typeof MediaRecorder)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      stopRecording: () => void
+      fileName: string
+      recordingBlob: Blob | null
+    }
+
+    await vm.startRecording()
+    vm.stopRecording()
+    await wrapper.vm.$nextTick()
+
+    const output = wrapper.findComponent({ name: 'AudioRecorderOutput' })
+    expect(output.exists()).toBe(true)
+
+    output.vm.$emit('update:fileName', 'renamed')
+    await wrapper.vm.$nextTick()
+
+    expect(vm.fileName).toBe('renamed')
+    expect(vm.recordingBlob).toBeInstanceOf(Blob)
+    expect(vm.recordingBlob?.size).toBe(0)
+  })
+
+  it('uses a fallback mime value when preferred type is unavailable', async () => {
+    class EmptyTypeRecorder extends FakeMediaRecorder {
+      constructor(stream: MediaStream, options?: MediaRecorderOptions) {
+        super(stream, options)
+        this.mimeType = ''
+      }
+    }
+
+    recorderUtils.getSupportedMimeType.mockReturnValue(undefined)
+
+    const stream = { getTracks: () => [] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+    vi.stubGlobal('MediaRecorder', EmptyTypeRecorder as unknown as typeof MediaRecorder)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      stopRecording: () => void
+      mimeType: string
+    }
+
+    await vm.startRecording()
+    vm.mimeType = 'invalid type'
+    vm.stopRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(vm.mimeType).toBe('invalid type')
   })
 
   it('shows resume control when paused', async () => {
@@ -277,5 +422,25 @@ describe('AudioRecorderController', () => {
     await wrapper.vm.$nextTick()
 
     expect(vm.elapsedMs).toBeGreaterThan(0)
+  })
+
+  it('stops recorder and stream during unmount when still active', async () => {
+    const stopTrack = vi.fn()
+    const stream = { getTracks: () => [{ stop: stopTrack }] } as unknown as MediaStream
+    const getUserMedia = vi.fn().mockResolvedValue(stream)
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+    }
+
+    await vm.startRecording()
+
+    const recorder = FakeMediaRecorder.instances[0]
+    wrapper.unmount()
+
+    expect(recorder?.stop).toHaveBeenCalled()
+    expect(stopTrack).toHaveBeenCalled()
   })
 })
