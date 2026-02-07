@@ -22,7 +22,10 @@ vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
 }))
 
+import { languageConfigs } from '../languages'
 import PrettierCodeFormatter from './PrettierCodeFormatter.vue'
+import PrettierOptionsForm from './PrettierOptionsForm.vue'
+import PrettierToolbar from './PrettierToolbar.vue'
 
 const TestWrapper = {
   setup() {
@@ -39,6 +42,11 @@ const getFormatError = (wrapper: ReturnType<typeof mount>) =>
 const flushFormatting = async () => {
   vi.advanceTimersByTime(350)
   await flushPromises()
+}
+
+type PendingFormat = {
+  resolve: (value: string) => void
+  reject: (reason?: unknown) => void
 }
 
 describe('PrettierCodeFormatter', () => {
@@ -99,6 +107,53 @@ describe('PrettierCodeFormatter', () => {
     expect(formattedCode).toContain('FORMATTED:typescript:')
   })
 
+  it('keeps current language for files without a known extension', async () => {
+    fileOpenMock
+      .mockResolvedValueOnce({
+        name: 'README',
+        text: async () => 'const missingExtension = true',
+      })
+      .mockResolvedValueOnce({
+        name: 'notes.unknown',
+        text: async () => 'const unknownExtension = true',
+      })
+
+    const wrapper = mount(TestWrapper)
+    const importButton = wrapper
+      .findAll('button')
+      .find((candidate) => candidate.text().includes('Import from file'))
+
+    expect(importButton).toBeTruthy()
+
+    await importButton!.trigger('click')
+    await flushFormatting()
+    expect(wrapper.findComponent(NSelect).props('value')).toBe('javascript')
+
+    await importButton!.trigger('click')
+    await flushFormatting()
+    expect(wrapper.findComponent(NSelect).props('value')).toBe('javascript')
+  })
+
+  it('ignores cancelled file imports', async () => {
+    fileOpenMock.mockRejectedValueOnce(new Error('cancelled'))
+
+    const wrapper = mount(TestWrapper)
+    await flushFormatting()
+
+    const callCountBeforeImport = formatMock.mock.calls.length
+    const importButton = wrapper
+      .findAll('button')
+      .find((candidate) => candidate.text().includes('Import from file'))
+
+    expect(importButton).toBeTruthy()
+
+    await importButton!.trigger('click')
+    await flushFormatting()
+
+    expect(formatMock.mock.calls.length).toBe(callCountBeforeImport)
+    expect(wrapper.findComponent(NSelect).props('value')).toBe('javascript')
+  })
+
   it('clears output and errors when input is empty', async () => {
     const wrapper = mount(TestWrapper)
     const textarea = wrapper.find('textarea')
@@ -140,5 +195,134 @@ describe('PrettierCodeFormatter', () => {
     await flushFormatting()
 
     expect((textarea.element as HTMLTextAreaElement).value).toContain('type User')
+  })
+
+  it('uses a fallback extension when the active language has no extension', async () => {
+    const originalExtensions = [...languageConfigs.javascript.extensions]
+    languageConfigs.javascript.extensions.splice(0, languageConfigs.javascript.extensions.length)
+
+    try {
+      const wrapper = mount(TestWrapper)
+      await flushFormatting()
+
+      const toolbar = wrapper.findComponent(PrettierToolbar)
+      expect(toolbar.props('downloadFilename')).toBe('formatted.txt')
+    } finally {
+      languageConfigs.javascript.extensions.splice(
+        0,
+        languageConfigs.javascript.extensions.length,
+        ...originalExtensions,
+      )
+    }
+  })
+
+  it('updates formatter options from child form model events', async () => {
+    const wrapper = mount(TestWrapper)
+
+    await flushFormatting()
+
+    const form = wrapper.findComponent(PrettierOptionsForm)
+    await form.vm.$emit('update:printWidth', 120)
+    await form.vm.$emit('update:tabWidth', 4)
+    await form.vm.$emit('update:useTabs', true)
+    await form.vm.$emit('update:semi', false)
+    await form.vm.$emit('update:singleQuote', true)
+    await form.vm.$emit('update:trailingComma', 'all')
+    await flushFormatting()
+
+    expect(formatMock).toHaveBeenLastCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        printWidth: 120,
+        tabWidth: 4,
+        useTabs: true,
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'all',
+      }),
+    )
+  })
+
+  it('applies fallback options when the selected language does not support them', async () => {
+    const wrapper = mount(TestWrapper)
+
+    await flushFormatting()
+
+    const form = wrapper.findComponent(PrettierOptionsForm)
+    await form.vm.$emit('update:semi', false)
+    await form.vm.$emit('update:singleQuote', true)
+    await form.vm.$emit('update:trailingComma', 'all')
+    await form.vm.$emit('update:language', 'json')
+    await flushFormatting()
+
+    expect(formatMock).toHaveBeenLastCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        parser: 'json',
+        semi: true,
+        singleQuote: false,
+        trailingComma: 'none',
+      }),
+    )
+  })
+
+  it('ignores stale async success results', async () => {
+    const pending: PendingFormat[] = []
+    formatMock.mockImplementation(
+      () =>
+        new Promise<string>((resolve, reject) => {
+          pending.push({ resolve, reject })
+        }),
+    )
+
+    const wrapper = mount(TestWrapper)
+    const textarea = wrapper.find('textarea')
+
+    await flushPromises()
+
+    await textarea.setValue('const newest = true')
+    await flushFormatting()
+
+    expect(pending).toHaveLength(2)
+
+    pending[1]!.resolve('SECOND_RESULT')
+    await flushPromises()
+    expect(getFormattedCode(wrapper)).toBe('SECOND_RESULT')
+
+    pending[0]!.resolve('FIRST_RESULT')
+    await flushPromises()
+
+    expect(getFormattedCode(wrapper)).toBe('SECOND_RESULT')
+    expect(getFormatError(wrapper)).toBe('')
+  })
+
+  it('ignores stale async errors', async () => {
+    const pending: PendingFormat[] = []
+    formatMock.mockImplementation(
+      () =>
+        new Promise<string>((resolve, reject) => {
+          pending.push({ resolve, reject })
+        }),
+    )
+
+    const wrapper = mount(TestWrapper)
+    const textarea = wrapper.find('textarea')
+
+    await flushPromises()
+
+    await textarea.setValue('const latest = true')
+    await flushFormatting()
+
+    expect(pending).toHaveLength(2)
+
+    pending[1]!.resolve('LATEST_RESULT')
+    await flushPromises()
+    expect(getFormattedCode(wrapper)).toBe('LATEST_RESULT')
+
+    pending[0]!.reject(new Error('stale error'))
+    await flushPromises()
+
+    expect(getFormattedCode(wrapper)).toBe('LATEST_RESULT')
+    expect(getFormatError(wrapper)).toBe('')
   })
 })
