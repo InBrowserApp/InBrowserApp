@@ -11,10 +11,11 @@ vi.mock('vue-i18n', async () => {
 })
 
 vi.mock('../data/colorData', () => ({
-  colorCategories: ['red', 'blue'],
+  colorCategories: ['red', 'blue', 'white'],
   categoryColors: {
     red: '#ff0000',
     blue: '#0000ff',
+    white: '#ffffff',
   },
 }))
 
@@ -35,7 +36,7 @@ vi.mock('naive-ui', async () => {
     props: ['value', 'placeholder'],
     emits: ['update:value'],
     template:
-      '<input class="n-input" :value="value" :placeholder="placeholder" @input="$emit(\'update:value\', $event.target.value)" />',
+      '<label class="n-input-shell"><span class="n-input-prefix"><slot name="prefix" /></span><input class="n-input" :value="value" :placeholder="placeholder" @input="$emit(\'update:value\', $event.target.value)" /></label>',
   })
 
   const NIcon = defineComponent({
@@ -81,8 +82,13 @@ describe('ColorNameSearch', () => {
       },
     })
 
+    expect(wrapper.find('.n-icon').exists()).toBe(true)
     expect(wrapper.findComponent({ name: 'NInput' }).props('placeholder')).toBe('searchPlaceholder')
-    expect(wrapper.findAll('.n-radio-button')).toHaveLength(3)
+    expect(wrapper.findAll('.n-radio-button')).toHaveLength(4)
+
+    const whiteButton = wrapper.findAll('.n-radio-button')[3]
+    const whiteIndicator = whiteButton?.find('span')
+    expect(whiteIndicator?.attributes('style')).toContain('border: 1px solid #ccc')
 
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'azure')
     expect(wrapper.emitted('update:search')?.[0]).toEqual(['azure'])

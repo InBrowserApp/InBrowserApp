@@ -45,6 +45,32 @@ vi.mock('naive-ui', async () => {
   }
 })
 
+type CopySlotArgs = { copy: () => void }
+type SpanVNode = {
+  props?: Record<string, unknown>
+  children?: string
+}
+type TooltipVNode = {
+  props?: Record<string, unknown>
+  children?: {
+    default?: (args: CopySlotArgs) => SpanVNode
+  }
+}
+
+const assertCopyCell = (vnode: TooltipVNode | undefined, expectedContent: string) => {
+  expect(vnode?.props?.content).toBe(expectedContent)
+  const slot = vnode?.children?.default
+  expect(slot).toBeTypeOf('function')
+
+  const copy = vi.fn()
+  const span = slot?.({ copy })
+  expect(span?.children).toBe(expectedContent)
+
+  const onClick = span?.props?.onClick as (() => void) | undefined
+  onClick?.()
+  expect(copy).toHaveBeenCalledTimes(1)
+}
+
 describe('ColorNameTable', () => {
   it('filters rows by search and category', () => {
     const allWrapper = mount(ColorNameTable, {
@@ -85,7 +111,7 @@ describe('ColorNameTable', () => {
     expect(categoryData[0]?.name).toBe('Sky')
   })
 
-  it('builds column renderers with expected content', () => {
+  it('builds column renderers with expected content and copy handlers', () => {
     const wrapper = mount(ColorNameTable, {
       props: {
         search: '',
@@ -93,22 +119,26 @@ describe('ColorNameTable', () => {
       },
     })
 
-    const columns = wrapper.findComponent({ name: 'NDataTable' }).props('columns') as Array<{
+    const dataTable = wrapper.findComponent({ name: 'NDataTable' })
+    const columns = dataTable.props('columns') as Array<{
       key: string
-      render: (row: (typeof colorDataSample)[number]) => { props?: Record<string, unknown> }
+      render: (row: (typeof colorDataSample)[number]) => TooltipVNode
     }>
 
     const row = colorDataSample[0]!
+    const rowKey = dataTable.props('rowKey') as (row: (typeof colorDataSample)[number]) => string
+    expect(rowKey(row)).toBe(row.name)
+
     const swatch = columns.find((col) => col.key === 'swatch')?.render(row)
     expect(swatch?.props?.style).toMatchObject({ backgroundColor: row.hex })
 
     const nameColumn = columns.find((col) => col.key === 'name')?.render(row)
-    expect(nameColumn?.props?.content).toBe(row.name)
+    assertCopyCell(nameColumn, row.name)
 
     const hexColumn = columns.find((col) => col.key === 'hex')?.render(row)
-    expect(hexColumn?.props?.content).toBe(row.hex)
+    assertCopyCell(hexColumn, row.hex)
 
     const rgbColumn = columns.find((col) => col.key === 'rgb')?.render(row)
-    expect(rgbColumn?.props?.content).toBe('rgb(255, 0, 0)')
+    assertCopyCell(rgbColumn, 'rgb(255, 0, 0)')
   })
 })
