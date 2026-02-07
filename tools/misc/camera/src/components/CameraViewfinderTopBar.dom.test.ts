@@ -62,6 +62,21 @@ describe('CameraViewfinderTopBar', () => {
     expect(wrapper.emitted('switch-camera')).toBeTruthy()
   })
 
+  it('uses the mic-off label when microphone input is disabled', async () => {
+    const wrapper = mountTopBar({
+      torchSupported: true,
+      torchEnabled: true,
+      isVideoMode: true,
+      micEnabled: false,
+    })
+
+    const micButton = wrapper.find('button[aria-label="Mic off"]')
+    expect(micButton.exists()).toBe(true)
+
+    await micButton.trigger('click')
+    expect(wrapper.emitted('toggle-mic')).toBeTruthy()
+  })
+
   it('shows recording status and disables switching', () => {
     const wrapper = mountTopBar({
       isRecording: true,
