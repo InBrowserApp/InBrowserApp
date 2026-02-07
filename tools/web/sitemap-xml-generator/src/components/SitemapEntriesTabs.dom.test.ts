@@ -59,10 +59,12 @@ describe('SitemapEntriesTabs', () => {
       global: {
         stubs: {
           SitemapUrlsetEntries: {
-            template: '<div data-testid="urlset-entries" />',
+            emits: ['update:urls'],
+            template: `<button data-testid="urlset-entries" @click="$emit('update:urls', [{ id: 'url-1', loc: '/about', lastmod: '', changefreq: null, priority: null, images: [], videos: [], news: [] }])" />`,
           },
           SitemapIndexEntries: {
-            template: '<div data-testid="sitemap-entries" />',
+            emits: ['update:sitemaps'],
+            template: `<button data-testid="sitemap-entries" @click="$emit('update:sitemaps', [{ id: 'sitemap-1', loc: '/sitemap.xml', lastmod: '2024-01-15' }])" />`,
           },
         },
       },
@@ -74,6 +76,11 @@ describe('SitemapEntriesTabs', () => {
     expect(wrapper.find('[data-testid="sitemap-entries"]').exists()).toBe(true)
 
     wrapper.findComponent({ name: 'NTabs' }).vm.$emit('update:value', 'sitemapindex')
+    await wrapper.get('[data-testid="urlset-entries"]').trigger('click')
+    await wrapper.get('[data-testid="sitemap-entries"]').trigger('click')
+
     expect(wrapper.emitted('update:mode')?.[0]).toEqual(['sitemapindex'])
+    expect(wrapper.emitted('update:urls')?.[0]?.[0]).toHaveLength(1)
+    expect(wrapper.emitted('update:sitemaps')?.[0]?.[0]).toHaveLength(1)
   })
 })

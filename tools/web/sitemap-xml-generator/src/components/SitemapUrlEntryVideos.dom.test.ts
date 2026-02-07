@@ -136,11 +136,28 @@ describe('SitemapUrlEntryVideos', () => {
 
     expect(wrapper.text()).toContain('addVideo')
 
-    await wrapper.find('input').setValue('https://example.com/thumb.jpg')
-    expect(videos[0]?.thumbnailLoc).toBe('https://example.com/thumb.jpg')
+    await wrapper
+      .get('input[placeholder="https://example.com/thumb.jpg"]')
+      .setValue('https://example.com/thumb.jpg')
+    await wrapper.get('input[placeholder="title"]').setValue('Intro video')
+    await wrapper.get('input[placeholder="description"]').setValue('Intro to our product')
+    await wrapper
+      .get('input[placeholder="https://example.com/video.mp4"]')
+      .setValue('https://example.com/videos/intro.mp4')
+    await wrapper
+      .get('input[placeholder="https://example.com/player"]')
+      .setValue('https://example.com/player')
+    await wrapper.get('input[placeholder="publicationDate"]').setValue('2024-01-20')
 
-    wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 42)
+    await wrapper.get('input[type="number"]').setValue('42')
+
+    expect(videos[0]?.thumbnailLoc).toBe('https://example.com/thumb.jpg')
+    expect(videos[0]?.title).toBe('Intro video')
+    expect(videos[0]?.description).toBe('Intro to our product')
+    expect(videos[0]?.contentLoc).toBe('https://example.com/videos/intro.mp4')
+    expect(videos[0]?.playerLoc).toBe('https://example.com/player')
     expect(videos[0]?.duration).toBe(42)
+    expect(videos[0]?.publicationDate).toBe('2024-01-20')
 
     await wrapper.find('.dynamic-input button').trigger('click')
     expect(wrapper.emitted('update:videos')).toBeTruthy()

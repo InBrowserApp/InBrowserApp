@@ -111,8 +111,19 @@ describe('SitemapUrlEntryImages', () => {
 
     expect(wrapper.text()).toContain('addImage')
 
-    await wrapper.find('input').setValue('https://example.com/image.jpg')
+    await wrapper
+      .get('input[placeholder="https://example.com/image.jpg"]')
+      .setValue('https://example.com/image.jpg')
+    await wrapper.get('input[placeholder="title"]').setValue('Hero image')
+    await wrapper.get('input[placeholder="caption"]').setValue('Homepage hero')
+    await wrapper
+      .get('input[placeholder="https://example.com/license"]')
+      .setValue('https://example.com/license')
+
     expect(images[0]?.loc).toBe('https://example.com/image.jpg')
+    expect(images[0]?.title).toBe('Hero image')
+    expect(images[0]?.caption).toBe('Homepage hero')
+    expect(images[0]?.license).toBe('https://example.com/license')
 
     await wrapper.find('.dynamic-input button').trigger('click')
     expect(wrapper.emitted('update:images')).toBeTruthy()

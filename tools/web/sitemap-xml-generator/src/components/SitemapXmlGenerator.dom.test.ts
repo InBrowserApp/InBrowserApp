@@ -42,10 +42,25 @@ describe('SitemapXmlGenerator', () => {
             `,
           },
           SitemapSettingsSection: {
-            template: '<div data-testid="settings" />',
+            props: ['baseUrl', 'autoJoin'],
+            emits: ['update:baseUrl', 'update:autoJoin'],
+            template: `
+              <div>
+                <button data-testid="set-base-url" @click="$emit('update:baseUrl', 'https://docs.example.com')" />
+                <button data-testid="set-auto-join" @click="$emit('update:autoJoin', false)" />
+              </div>
+            `,
           },
           SitemapEntriesTabs: {
-            template: '<div data-testid="entries" />',
+            props: ['mode', 'urls', 'sitemaps'],
+            emits: ['update:mode', 'update:urls', 'update:sitemaps'],
+            template: `
+              <div>
+                <button data-testid="set-mode-urlset" @click="$emit('update:mode', 'urlset')" />
+                <button data-testid="set-urls" @click="$emit('update:urls', [{ id: 'url-custom', loc: '/custom', lastmod: '', changefreq: null, priority: null, images: [], videos: [], news: [] }])" />
+                <button data-testid="set-sitemaps" @click="$emit('update:sitemaps', [{ id: 'map-custom', loc: '/sitemap-custom.xml', lastmod: '' }])" />
+              </div>
+            `,
           },
           SitemapOutputSection: {
             props: ['mode', 'xmlContent'],
@@ -73,6 +88,19 @@ describe('SitemapXmlGenerator', () => {
     expect(stateRef.value.mode).toBe('sitemapindex')
     expect(stateRef.value.sitemaps).toHaveLength(2)
     expect(wrapper.get('[data-testid="output"]').text()).toBe('<sitemapindex />')
+
+    await wrapper.get('[data-testid="set-base-url"]').trigger('click')
+    await wrapper.get('[data-testid="set-auto-join"]').trigger('click')
+    await wrapper.get('[data-testid="set-mode-urlset"]').trigger('click')
+    await wrapper.get('[data-testid="set-urls"]').trigger('click')
+    await wrapper.get('[data-testid="set-sitemaps"]').trigger('click')
+
+    expect(stateRef.value.baseUrl).toBe('https://docs.example.com')
+    expect(stateRef.value.autoJoin).toBe(false)
+    expect(stateRef.value.mode).toBe('urlset')
+    expect(stateRef.value.urls[0]?.loc).toBe('/custom')
+    expect(stateRef.value.sitemaps[0]?.loc).toBe('/sitemap-custom.xml')
+    expect(wrapper.get('[data-testid="output"]').text()).toBe('<urlset />')
 
     const snapshot = JSON.stringify(stateRef.value)
     await wrapper.get('[data-testid="preset-unknown"]').trigger('click')

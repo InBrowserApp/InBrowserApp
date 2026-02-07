@@ -166,8 +166,12 @@ describe('SitemapIndexEntries', () => {
       },
     })
 
+    const inputs = wrapper.findAll('input')
+
     await wrapper.get('[data-testid="sitemap-loc-0"]').setValue('https://example.com/sitemap.xml')
+    await inputs[1]?.setValue('2024-01-15')
 
     expect(sitemaps[0]?.loc).toBe('https://example.com/sitemap.xml')
+    expect(sitemaps[0]?.lastmod).toBe('2024-01-15')
   })
 })

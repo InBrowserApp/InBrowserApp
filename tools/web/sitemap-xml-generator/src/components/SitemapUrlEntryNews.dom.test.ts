@@ -112,8 +112,17 @@ describe('SitemapUrlEntryNews', () => {
 
     expect(wrapper.text()).toContain('addNews')
 
-    await wrapper.find('input').setValue('Example News')
+    await wrapper.get('input[placeholder="publicationName"]').setValue('Example News')
+    await wrapper.get('input[placeholder="en"]').setValue('en')
+    await wrapper.get('input[placeholder="title"]').setValue('Product launch')
+    await wrapper.get('input[placeholder="publicationDate"]').setValue('2024-01-25')
+    await wrapper.get('input[placeholder="keywords"]').setValue('launch, product')
+
     expect(news[0]?.publicationName).toBe('Example News')
+    expect(news[0]?.publicationLanguage).toBe('en')
+    expect(news[0]?.title).toBe('Product launch')
+    expect(news[0]?.publicationDate).toBe('2024-01-25')
+    expect(news[0]?.keywords).toBe('launch, product')
 
     await wrapper.find('.dynamic-input button').trigger('click')
     expect(wrapper.emitted('update:news')).toBeTruthy()
