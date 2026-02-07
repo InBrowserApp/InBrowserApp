@@ -46,6 +46,11 @@ const mountWithStub = (component: Parameters<typeof mount>[0]) =>
     },
   })
 
+const gpuComponents: Array<[string, Parameters<typeof mount>[0]]> = [
+  ['vendor', GpuVendor],
+  ['renderer', GpuRenderer],
+]
+
 const createNavigator = (overrides: Record<string, unknown> = {}) => ({
   hardwareConcurrency: 8,
   deviceMemory: 16,
@@ -118,6 +123,28 @@ describe('hardware components', () => {
     expect(wrapper.find('.info-stat').text()).toBe('')
   })
 
+  it('falls back to user-agent parsing when user agent data lookup fails', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgent: 'Mozilla/5.0 (X11; Linux x86_64)',
+        userAgentData: {
+          platform: 'Linux',
+          brands: [],
+          mobile: false,
+          getHighEntropyValues: async () => {
+            throw new Error('fail')
+          },
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(CpuArchitecture)
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('x86_64')
+  })
+
   it('reports cpu bitness from user agent data', async () => {
     vi.stubGlobal(
       'navigator',
@@ -146,6 +173,35 @@ describe('hardware components', () => {
           brands: [],
           mobile: false,
           getHighEntropyValues: async () => ({}),
+        },
+      }),
+    )
+
+    const wrapper = mountWithStub(CpuBitness)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('renders empty cpu bitness without user agent data', async () => {
+    vi.stubGlobal('navigator', createNavigator())
+    const wrapper = mountWithStub(CpuBitness)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('renders empty cpu bitness when user agent data lookup fails', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        userAgentData: {
+          platform: 'Windows',
+          brands: [],
+          mobile: false,
+          getHighEntropyValues: async () => {
+            throw new Error('fail')
+          },
         },
       }),
     )
@@ -187,7 +243,23 @@ describe('hardware components', () => {
   })
 
   it('returns empty storage quota when storage is missing', async () => {
-    vi.stubGlobal('navigator', createNavigator({ storage: undefined }))
+    vi.stubGlobal('navigator', createNavigator())
+    const wrapper = mountWithStub(StorageQuota)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('returns empty storage quota when estimate values are missing', async () => {
+    vi.stubGlobal(
+      'navigator',
+      createNavigator({
+        storage: {
+          estimate: async () => ({}),
+        },
+      }),
+    )
+
     const wrapper = mountWithStub(StorageQuota)
     await flushPromises()
 
@@ -320,6 +392,14 @@ describe('hardware components', () => {
     expect(wrapper.find('.info-stat').text()).toBe('')
   })
 
+  it('renders empty device model without user agent data', async () => {
+    vi.stubGlobal('navigator', createNavigator())
+    const wrapper = mountWithStub(DeviceModel)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
   it('reports form factor from user agent data', async () => {
     vi.stubGlobal(
       'navigator',
@@ -348,6 +428,14 @@ describe('hardware components', () => {
       }),
     )
 
+    const wrapper = mountWithStub(FormFactor)
+    await flushPromises()
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+  })
+
+  it('renders empty form factor without user agent data', async () => {
+    vi.stubGlobal('navigator', createNavigator())
     const wrapper = mountWithStub(FormFactor)
     await flushPromises()
 
@@ -423,6 +511,76 @@ describe('hardware components', () => {
     const wrapper = mountWithStub(GpuRenderer)
 
     expect(wrapper.text()).toContain('Test Renderer')
+    createElementSpy.mockRestore()
+  })
+
+  it.each(gpuComponents)('renders empty gpu %s when debug info is unavailable', (_, component) => {
+    const gl = {
+      getExtension: () => null,
+      getParameter: () => 'unused',
+    }
+    const originalCreateElement = document.createElement.bind(document)
+    const createElementSpy = vi
+      .spyOn(document, 'createElement')
+      .mockImplementation((tagName: string) => {
+        if (tagName === 'canvas') {
+          const canvas = originalCreateElement('canvas') as HTMLCanvasElement
+          canvas.getContext = ((contextId: string) =>
+            contextId === 'webgl' || contextId === 'experimental-webgl'
+              ? (gl as unknown as WebGLRenderingContext)
+              : null) as HTMLCanvasElement['getContext']
+          return canvas
+        }
+        return originalCreateElement(tagName)
+      })
+
+    const wrapper = mountWithStub(component)
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+    createElementSpy.mockRestore()
+  })
+
+  it.each(gpuComponents)('renders empty gpu %s when parameters are unavailable', (_, component) => {
+    const debugInfo = { UNMASKED_RENDERER_WEBGL: 1, UNMASKED_VENDOR_WEBGL: 2 }
+    const gl = {
+      getExtension: () => debugInfo,
+      getParameter: () => null,
+    }
+    const originalCreateElement = document.createElement.bind(document)
+    const createElementSpy = vi
+      .spyOn(document, 'createElement')
+      .mockImplementation((tagName: string) => {
+        if (tagName === 'canvas') {
+          const canvas = originalCreateElement('canvas') as HTMLCanvasElement
+          canvas.getContext = ((contextId: string) =>
+            contextId === 'webgl' || contextId === 'experimental-webgl'
+              ? (gl as unknown as WebGLRenderingContext)
+              : null) as HTMLCanvasElement['getContext']
+          return canvas
+        }
+        return originalCreateElement(tagName)
+      })
+
+    const wrapper = mountWithStub(component)
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
+    createElementSpy.mockRestore()
+  })
+
+  it.each(gpuComponents)('renders empty gpu %s when canvas detection throws', (_, component) => {
+    const originalCreateElement = document.createElement.bind(document)
+    const createElementSpy = vi
+      .spyOn(document, 'createElement')
+      .mockImplementation((tagName: string) => {
+        if (tagName === 'canvas') {
+          throw new Error('boom')
+        }
+        return originalCreateElement(tagName)
+      })
+
+    const wrapper = mountWithStub(component)
+
+    expect(wrapper.find('.info-stat').text()).toBe('')
     createElementSpy.mockRestore()
   })
 })
