@@ -11,7 +11,11 @@ vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
     ...actual,
-    useObjectUrl: () => ref(objectUrlState.downloadUrl),
+    useObjectUrl: (source: { value?: unknown }) => {
+      // Read the source once so the computed callback path is covered.
+      void source?.value
+      return ref(objectUrlState.downloadUrl)
+    },
   }
 })
 
@@ -47,11 +51,12 @@ vi.mock('naive-ui', async () => {
         default: '',
       },
     },
-    template: '<div><slot /></div>',
+    template: '<div><slot /><slot name="suffix" /></div>',
   })
 
   const NButton = defineComponent({
     name: 'NButton',
+    inheritAttrs: false,
     props: {
       tag: {
         type: String,
@@ -74,7 +79,7 @@ vi.mock('naive-ui', async () => {
         default: false,
       },
     },
-    template: '<a><slot /></a>',
+    template: '<a v-bind="$attrs"><slot name="icon" /><slot /></a>',
   })
 
   return {

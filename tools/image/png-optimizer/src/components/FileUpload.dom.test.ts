@@ -7,6 +7,10 @@ const messageMocks = vi.hoisted(() => ({
   error: vi.fn(),
 }))
 
+const objectUrlState = vi.hoisted(() => ({
+  previewUrl: 'blob:preview' as string | null,
+}))
+
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -14,6 +18,17 @@ vi.mock('naive-ui', async () => {
       name,
       template: '<div><slot /></div>',
     })
+
+  const NButton = defineComponent({
+    name: 'NButton',
+    template: '<button><slot name="icon" /><slot /></button>',
+  })
+
+  const NImage = defineComponent({
+    name: 'NImage',
+    inheritAttrs: false,
+    template: '<img class="preview" v-bind="$attrs" />',
+  })
 
   return {
     useMessage: () => messageMocks,
@@ -23,8 +38,8 @@ vi.mock('naive-ui', async () => {
     NText: makeStub('NText'),
     NP: makeStub('NP'),
     NFlex: makeStub('NFlex'),
-    NButton: makeStub('NButton'),
-    NImage: makeStub('NImage'),
+    NButton,
+    NImage,
   }
 })
 
@@ -32,7 +47,7 @@ vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:preview'),
+    useObjectUrl: () => ref(objectUrlState.previewUrl),
   }
 })
 
@@ -73,6 +88,7 @@ const mountFileUpload = (file: File | null = null) =>
 describe('FileUpload', () => {
   beforeEach(() => {
     messageMocks.error.mockReset()
+    objectUrlState.previewUrl = 'blob:preview'
   })
 
   it('ignores empty uploads', async () => {
@@ -122,5 +138,15 @@ describe('FileUpload', () => {
     vm.handleClearFile()
     const cleared = wrapper.emitted('update:file') ?? []
     expect(cleared[cleared.length - 1]).toEqual([null])
+  })
+
+  it('falls back to an empty preview src when object URL is missing', () => {
+    objectUrlState.previewUrl = null
+
+    const file = new File(['data'], 'sample.png', { type: 'image/png' })
+    const wrapper = mountFileUpload(file)
+
+    const preview = wrapper.find('img.preview')
+    expect(preview.attributes('src')).toBe('')
   })
 })

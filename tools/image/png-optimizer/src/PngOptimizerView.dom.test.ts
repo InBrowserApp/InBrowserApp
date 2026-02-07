@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { mount, flushPromises } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import PngOptimizerView from './PngOptimizerView.vue'
 
@@ -87,6 +87,24 @@ const HowToOptimizePNGStub = defineComponent({
   template: '<div data-testid="how-to" />',
 })
 
+const mountView = () =>
+  mount(PngOptimizerView, {
+    global: {
+      stubs: {
+        ToolDefaultPageLayout: {
+          inheritAttrs: false,
+          props: ['info'],
+          template: '<div><slot /></div>',
+        },
+        FileUpload: FileUploadStub,
+        OptimizationOptions: OptimizationOptionsStub,
+        OptimizationResults: OptimizationResultsStub,
+        ErrorDisplay: ErrorDisplayStub,
+        HowToOptimizePNG: HowToOptimizePNGStub,
+      },
+    },
+  })
+
 describe('PngOptimizerView', () => {
   beforeEach(() => {
     optimizeMocks.optimizePNG.mockReset()
@@ -97,22 +115,7 @@ describe('PngOptimizerView', () => {
   it('optimizes an image and shows results', async () => {
     optimizeMocks.optimizePNG.mockResolvedValueOnce(new Blob(['optimized']))
 
-    const wrapper = mount(PngOptimizerView, {
-      global: {
-        stubs: {
-          ToolDefaultPageLayout: {
-            inheritAttrs: false,
-            props: ['info'],
-            template: '<div><slot /></div>',
-          },
-          FileUpload: FileUploadStub,
-          OptimizationOptions: OptimizationOptionsStub,
-          OptimizationResults: OptimizationResultsStub,
-          ErrorDisplay: ErrorDisplayStub,
-          HowToOptimizePNG: HowToOptimizePNGStub,
-        },
-      },
-    })
+    const wrapper = mountView()
 
     const file = new File(['data'], 'sample.png', { type: 'image/png' })
     await wrapper.findComponent(FileUploadStub).vm.$emit('update:file', file)
@@ -120,37 +123,45 @@ describe('PngOptimizerView', () => {
 
     expect(wrapper.findComponent(OptimizationOptionsStub).exists()).toBe(true)
 
+    await wrapper.findComponent(OptimizationOptionsStub).vm.$emit('update:options', {
+      level: 4,
+      interlace: true,
+      optimiseAlpha: false,
+    })
     await wrapper.findComponent(OptimizationOptionsStub).vm.$emit('optimize')
     await flushPromises()
 
     expect(optimizeMocks.optimizePNG).toHaveBeenCalledTimes(1)
     const [passedFile, options] = optimizeMocks.optimizePNG.mock.calls[0] ?? []
     expect(passedFile).toMatchObject({ name: 'sample.png', type: 'image/png' })
-    expect(options).toMatchObject({ level: 2, interlace: false, optimiseAlpha: true })
+    expect(options).toMatchObject({ level: 4, interlace: true, optimiseAlpha: false })
 
     expect(messageMocks.success).toHaveBeenCalledWith('optimizationComplete')
     expect(wrapper.find('[data-testid="results"]').exists()).toBe(true)
   })
 
+  it('does nothing when optimize is called without a file', async () => {
+    const wrapper = mountView()
+
+    const setupState = (
+      wrapper.vm.$ as unknown as {
+        setupState: {
+          optimizeImage: () => Promise<void>
+        }
+      }
+    ).setupState
+
+    await setupState.optimizeImage()
+
+    expect(optimizeMocks.optimizePNG).not.toHaveBeenCalled()
+    expect(messageMocks.success).not.toHaveBeenCalled()
+    expect(messageMocks.error).not.toHaveBeenCalled()
+  })
+
   it('uses a fallback error message for non-Error rejections', async () => {
     optimizeMocks.optimizePNG.mockRejectedValueOnce('failed')
 
-    const wrapper = mount(PngOptimizerView, {
-      global: {
-        stubs: {
-          ToolDefaultPageLayout: {
-            inheritAttrs: false,
-            props: ['info'],
-            template: '<div><slot /></div>',
-          },
-          FileUpload: FileUploadStub,
-          OptimizationOptions: OptimizationOptionsStub,
-          OptimizationResults: OptimizationResultsStub,
-          ErrorDisplay: ErrorDisplayStub,
-          HowToOptimizePNG: HowToOptimizePNGStub,
-        },
-      },
-    })
+    const wrapper = mountView()
 
     const file = new File(['data'], 'sample.png', { type: 'image/png' })
     await wrapper.findComponent(FileUploadStub).vm.$emit('update:file', file)
@@ -162,25 +173,11 @@ describe('PngOptimizerView', () => {
     expect(messageMocks.error).toHaveBeenCalledWith('optimizationFailed')
     expect(wrapper.find('[data-testid="error-display"]').text()).toContain('optimizationFailed')
   })
+
   it('surfaces optimization errors and clears on new file', async () => {
     optimizeMocks.optimizePNG.mockRejectedValueOnce(new Error('boom'))
 
-    const wrapper = mount(PngOptimizerView, {
-      global: {
-        stubs: {
-          ToolDefaultPageLayout: {
-            inheritAttrs: false,
-            props: ['info'],
-            template: '<div><slot /></div>',
-          },
-          FileUpload: FileUploadStub,
-          OptimizationOptions: OptimizationOptionsStub,
-          OptimizationResults: OptimizationResultsStub,
-          ErrorDisplay: ErrorDisplayStub,
-          HowToOptimizePNG: HowToOptimizePNGStub,
-        },
-      },
-    })
+    const wrapper = mountView()
 
     const file = new File(['data'], 'sample.png', { type: 'image/png' })
     await wrapper.findComponent(FileUploadStub).vm.$emit('update:file', file)
