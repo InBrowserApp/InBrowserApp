@@ -32,17 +32,26 @@ const setMediaDevices = (value: MediaDevices | undefined) => {
   })
 }
 
-const createStream = () => {
+const createStream = (
+  options: {
+    videoCapabilities?: MediaTrackCapabilities
+    videoSettings?: MediaTrackSettings | undefined
+    videoTrackOverrides?: Partial<MediaStreamTrack>
+    audioTrackOverrides?: Partial<MediaStreamTrack>
+  } = {},
+) => {
   const videoTrack = {
     stop: vi.fn(),
     applyConstraints: vi.fn().mockResolvedValue(undefined),
-    getCapabilities: vi.fn(() => ({})),
-    getSettings: vi.fn(() => ({})),
+    getCapabilities: vi.fn(() => options.videoCapabilities ?? {}),
+    getSettings: vi.fn(() => options.videoSettings ?? {}),
+    ...options.videoTrackOverrides,
   } as unknown as MediaStreamTrack
 
   const audioTrack = {
     stop: vi.fn(),
     enabled: true,
+    ...options.audioTrackOverrides,
   } as unknown as MediaStreamTrack
 
   return {
@@ -58,6 +67,8 @@ class FakeMediaRecorder {
   static emittedData = new Blob(['data'], { type: 'video/webm' })
   static forcedMimeType: string | null = null
   static lastOptions: MediaRecorderOptions | undefined
+  static shouldThrowOnStart = false
+  static shouldThrowWhenOptions = false
 
   state: RecordingState = 'inactive'
   mimeType: string
@@ -66,12 +77,18 @@ class FakeMediaRecorder {
   onstart: (() => void) | null = null
 
   constructor(_stream: MediaStream, options?: MediaRecorderOptions) {
+    if (options && FakeMediaRecorder.shouldThrowWhenOptions) {
+      throw new Error('failed-with-options')
+    }
     this.mimeType = FakeMediaRecorder.forcedMimeType ?? options?.mimeType ?? 'video/webm'
     FakeMediaRecorder.lastOptions = options
     FakeMediaRecorder.instances.push(this)
   }
 
   start = vi.fn(() => {
+    if (FakeMediaRecorder.shouldThrowOnStart) {
+      throw new Error('failed-to-start')
+    }
     this.state = 'recording'
     this.onstart?.()
   })
@@ -143,6 +160,8 @@ describe('CameraController additional branches', () => {
     FakeMediaRecorder.emittedData = new Blob(['data'], { type: 'video/webm' })
     FakeMediaRecorder.forcedMimeType = null
     FakeMediaRecorder.lastOptions = undefined
+    FakeMediaRecorder.shouldThrowOnStart = false
+    FakeMediaRecorder.shouldThrowWhenOptions = false
     FakeMediaRecorder.isTypeSupported.mockReset()
     FakeMediaRecorder.isTypeSupported.mockImplementation((type: string) => type === 'video/webm')
 
@@ -332,5 +351,207 @@ describe('CameraController additional branches', () => {
     wrapper.unmount()
 
     expect(recorder?.stop).toHaveBeenCalled()
+  })
+
+  it('covers metadata callbacks and aspect ratio fallbacks', async () => {
+    const streamWithInfiniteAspect = createStream({
+      videoSettings: {
+        aspectRatio: Number.POSITIVE_INFINITY,
+      } as MediaTrackSettings,
+    })
+    const streamWithoutSettings = createStream({
+      videoTrackOverrides: {
+        getSettings: vi.fn(() => undefined) as unknown as () => MediaTrackSettings,
+      },
+    })
+    const streamWithDimensions = createStream({
+      videoSettings: {
+        width: 1280,
+        height: 720,
+      } as MediaTrackSettings,
+    })
+
+    const getUserMedia = vi
+      .fn()
+      .mockResolvedValueOnce(streamWithInfiniteAspect)
+      .mockResolvedValueOnce(streamWithoutSettings)
+      .mockResolvedValueOnce(streamWithDimensions)
+
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      errorMessage: string
+      isPreparing: boolean
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+
+    const setupState = (
+      wrapper.vm as unknown as {
+        $: {
+          setupState: {
+            previewRef?: { value: HTMLVideoElement | null }
+          }
+        }
+      }
+    ).$.setupState
+
+    if (setupState.previewRef && 'value' in setupState.previewRef) {
+      setupState.previewRef.value = null
+    }
+
+    await vm.startCamera()
+
+    const video = wrapper.find('video').element as HTMLVideoElement
+    if (setupState.previewRef && 'value' in setupState.previewRef) {
+      setupState.previewRef.value = video
+    }
+
+    Object.defineProperty(video, 'videoWidth', { value: 800, configurable: true })
+    Object.defineProperty(video, 'videoHeight', { value: 600, configurable: true })
+
+    vm.errorMessage = 'cameraNotReady'
+    await vm.startCamera()
+    video.onloadedmetadata?.(new Event('loadedmetadata'))
+    await flushPromises()
+
+    expect(getUserMedia).toHaveBeenCalledTimes(3)
+    expect(vm.errorMessage).toBe('')
+  })
+
+  it('handles zoom and torch failures, switching camera, and clearing output', async () => {
+    const stream = createStream({
+      videoCapabilities: {
+        torch: true,
+        zoom: { min: 1, max: 3, step: 0.5 },
+      } as MediaTrackCapabilities,
+      videoSettings: {
+        zoom: 2,
+      } as MediaTrackSettings,
+      videoTrackOverrides: {
+        applyConstraints: vi.fn().mockRejectedValue(new Error('constraint-failed')),
+      },
+    })
+
+    setMediaDevices({
+      getUserMedia: vi.fn().mockResolvedValue(stream),
+    } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      applyZoom: (value: number) => Promise<void>
+      toggleTorch: () => Promise<void>
+      switchCamera: () => void
+      clearOutput: () => void
+      outputBlob: Blob | null
+      outputKind: '' | 'photo' | 'video'
+      zoomValue: number
+      isMirrored: boolean
+      isPreparing: boolean
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+
+    await vm.applyZoom(2.3)
+    await vm.toggleTorch()
+    vm.switchCamera()
+
+    const setupState = (
+      wrapper.vm as unknown as {
+        $: {
+          setupState: {
+            videoTrack?: { value: MediaStreamTrack | null }
+            outputBlob?: { value: Blob | null }
+            outputKind?: { value: '' | 'photo' | 'video' }
+          }
+        }
+      }
+    ).$.setupState
+
+    if (setupState.videoTrack && 'value' in setupState.videoTrack) {
+      setupState.videoTrack.value = null
+    }
+    await vm.applyZoom(1.2)
+
+    if (setupState.outputBlob && 'value' in setupState.outputBlob) {
+      setupState.outputBlob.value = new Blob(['x'], { type: 'image/jpeg' })
+    }
+    if (setupState.outputKind && 'value' in setupState.outputKind) {
+      setupState.outputKind.value = 'photo'
+    }
+
+    vm.clearOutput()
+
+    expect(vm.zoomValue).toBe(2)
+    expect(vm.isMirrored).toBe(true)
+    expect(vm.outputBlob).toBeNull()
+    expect(vm.outputKind).toBe('')
+  })
+
+  it('handles recording guard branches and recorder start failures', async () => {
+    FakeMediaRecorder.shouldThrowWhenOptions = true
+    FakeMediaRecorder.shouldThrowOnStart = true
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      mode: 'photo' | 'video'
+      setMode?: (mode: 'photo' | 'video') => void
+      handleShutter: () => Promise<void>
+      isPreparing: boolean
+      isRecording: boolean
+      errorMessage: string
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+    await setModeToVideo(wrapper, vm)
+
+    vm.isPreparing = true
+    await vm.handleShutter()
+
+    vm.isPreparing = false
+    vm.isRecording = true
+    await vm.handleShutter()
+
+    vm.isRecording = false
+    await vm.handleShutter()
+
+    expect(vm.errorMessage).toContain('recordingFailed')
+    expect(FakeMediaRecorder.instances.length).toBe(1)
+    expect(FakeMediaRecorder.lastOptions).toBeUndefined()
+  })
+
+  it('skips restart watcher for unsupported and recording states', async () => {
+    setMediaDevices(undefined)
+
+    const unsupportedWrapper = mountController()
+    const unsupportedVm = unsupportedWrapper.vm as unknown as {
+      mode: 'photo' | 'video'
+      isPreparing: boolean
+    }
+
+    await waitForIdle(() => !unsupportedVm.isPreparing)
+    unsupportedVm.mode = 'video'
+    await unsupportedWrapper.vm.$nextTick()
+
+    const getUserMedia = vi.fn().mockResolvedValue(createStream())
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const recordingWrapper = mountController()
+    const recordingVm = recordingWrapper.vm as unknown as {
+      mode: 'photo' | 'video'
+      isPreparing: boolean
+      isRecording: boolean
+    }
+
+    await waitForIdle(() => !recordingVm.isPreparing)
+
+    getUserMedia.mockClear()
+    recordingVm.isRecording = true
+    recordingVm.mode = 'video'
+    await recordingWrapper.vm.$nextTick()
+
+    expect(getUserMedia).not.toHaveBeenCalled()
   })
 })
