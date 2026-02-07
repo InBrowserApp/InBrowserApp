@@ -103,6 +103,10 @@ describe('decodeHtmlEntities', () => {
       expect(decodeHtmlEntities('&#20013;')).toBe('中')
       expect(decodeHtmlEntities('&#128512;')).toBe('😀')
     })
+
+    it('preserves out-of-range decimal entities', () => {
+      expect(decodeHtmlEntities('&#1114112;')).toBe('&#1114112;')
+    })
   })
 
   describe('hexadecimal entities', () => {
@@ -119,6 +123,10 @@ describe('decodeHtmlEntities', () => {
     it('decodes Unicode hex entities', () => {
       expect(decodeHtmlEntities('&#x4E2D;')).toBe('中')
       expect(decodeHtmlEntities('&#x1F600;')).toBe('😀')
+    })
+
+    it('preserves out-of-range hex entities', () => {
+      expect(decodeHtmlEntities('&#x110000;')).toBe('&#x110000;')
     })
   })
 
