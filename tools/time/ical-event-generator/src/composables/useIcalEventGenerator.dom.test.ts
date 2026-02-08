@@ -277,6 +277,123 @@ describe('useIcalEventGenerator', () => {
     expect(state.icsContent.value).not.toContain('BEGIN:VALARM')
   })
 
+  it('uses fallback reminder text when both custom reminder labels are empty', () => {
+    setStorage({
+      'tools:ical-event-generator:title': 'Fallback reminder',
+      'tools:ical-event-generator:uid': 'uid@example.com',
+      'tools:ical-event-generator:all-day': false,
+      'tools:ical-event-generator:time-zone': 'UTC',
+      'tools:ical-event-generator:output-mode': 'utc',
+      'tools:ical-event-generator:date-range': [
+        Date.UTC(2024, 0, 2, 10, 0, 0),
+        Date.UTC(2024, 0, 2, 11, 0, 0),
+      ],
+      'tools:ical-event-generator:recurrence-frequency': 'none',
+      'tools:ical-event-generator:reminders-enabled': true,
+      'tools:ical-event-generator:reminders': [{ amount: 5, unit: 'minutes', description: '   ' }],
+    })
+
+    const state = useIcalEventGenerator()
+    state.reminderDefault.value = ''
+
+    expect(state.icsContent.value).toContain('DESCRIPTION:Reminder')
+  })
+
+  it('normalizes zero recurrence values to minimum supported numbers', () => {
+    setStorage({
+      'tools:ical-event-generator:title': 'Normalize',
+      'tools:ical-event-generator:uid': 'uid@example.com',
+      'tools:ical-event-generator:all-day': true,
+      'tools:ical-event-generator:time-zone': 'UTC',
+      'tools:ical-event-generator:output-mode': 'utc',
+      'tools:ical-event-generator:date-range': [
+        Date.UTC(2024, 0, 2, 10, 0, 0),
+        Date.UTC(2024, 0, 3, 10, 0, 0),
+      ],
+      'tools:ical-event-generator:recurrence-frequency': 'yearly',
+      'tools:ical-event-generator:recurrence-interval': 0,
+      'tools:ical-event-generator:recurrence-month-day': 0,
+      'tools:ical-event-generator:recurrence-month': 0,
+      'tools:ical-event-generator:recurrence-end-mode': 'count',
+      'tools:ical-event-generator:recurrence-count': 0,
+      'tools:ical-event-generator:reminders-enabled': false,
+    })
+
+    const state = useIcalEventGenerator()
+
+    expect(state.icsContent.value).toContain('RRULE:FREQ=YEARLY')
+    expect(state.icsContent.value).toContain('BYMONTH=1')
+    expect(state.icsContent.value).toContain('BYMONTHDAY=1')
+    expect(state.icsContent.value).toContain('COUNT=1')
+  })
+
+  it('omits DTEND when the end timestamp resolves to zero', () => {
+    let callCount = 0
+    const originalToUtcTimestamp = timeZoneUtils.toUtcTimestamp
+
+    vi.spyOn(timeZoneUtils, 'toUtcTimestamp').mockImplementation((...args) => {
+      callCount += 1
+      if (callCount === 1) {
+        return 1
+      }
+      if (callCount === 2) {
+        return 0
+      }
+      return originalToUtcTimestamp(...args)
+    })
+
+    setStorage({
+      'tools:ical-event-generator:title': 'Missing end',
+      'tools:ical-event-generator:uid': 'uid@example.com',
+      'tools:ical-event-generator:all-day': false,
+      'tools:ical-event-generator:time-zone': 'UTC',
+      'tools:ical-event-generator:output-mode': 'utc',
+      'tools:ical-event-generator:date-range': [
+        Date.UTC(2024, 0, 2, 10, 0, 0),
+        Date.UTC(2024, 0, 2, 11, 0, 0),
+      ],
+      'tools:ical-event-generator:recurrence-frequency': 'none',
+      'tools:ical-event-generator:reminders-enabled': false,
+    })
+
+    const state = useIcalEventGenerator()
+
+    expect(state.icsContent.value).toContain('DTSTART:')
+    expect(state.icsContent.value).not.toContain('DTEND:')
+  })
+
+  it('keeps DTSTART but drops DTEND when TZID end parsing fails', () => {
+    const originalParseDateTimeInput = timeZoneUtils.parseDateTimeInput
+    let parseCallCount = 0
+
+    vi.spyOn(timeZoneUtils, 'parseDateTimeInput').mockImplementation((value) => {
+      parseCallCount += 1
+      if (parseCallCount === 2) {
+        return null
+      }
+      return originalParseDateTimeInput(value)
+    })
+
+    setStorage({
+      'tools:ical-event-generator:title': 'TZID end parse fail',
+      'tools:ical-event-generator:uid': 'uid@example.com',
+      'tools:ical-event-generator:all-day': false,
+      'tools:ical-event-generator:time-zone': 'UTC',
+      'tools:ical-event-generator:output-mode': 'tzid',
+      'tools:ical-event-generator:date-range': [
+        Date.UTC(2024, 0, 2, 10, 0, 0),
+        Date.UTC(2024, 0, 2, 11, 0, 0),
+      ],
+      'tools:ical-event-generator:recurrence-frequency': 'none',
+      'tools:ical-event-generator:reminders-enabled': false,
+    })
+
+    const state = useIcalEventGenerator()
+
+    expect(state.icsContent.value).toContain('DTSTART;TZID=UTC:')
+    expect(state.icsContent.value).not.toContain('DTEND;TZID=UTC:')
+  })
+
   it('returns empty output when TZID local parsing fails', () => {
     vi.spyOn(timeZoneUtils, 'parseDateTimeInput').mockReturnValue(null)
 
