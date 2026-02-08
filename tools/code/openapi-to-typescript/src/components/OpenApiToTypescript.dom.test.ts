@@ -420,6 +420,29 @@ describe('OpenApiToTypescript', () => {
     expect(inputOutput.props('externalRefs')).toEqual(['https://example.com/schema'])
   })
 
+  it('falls back to generic invalid document when detail is missing', async () => {
+    parseOpenApiDocumentMock.mockImplementation(() => ({ ok: false, code: 'invalid' }))
+
+    const wrapper = mount(OpenApiToTypescript)
+    await flushPromises()
+
+    expect(getInputOutput(wrapper).props('inputError')).toBe('invalidDocument')
+  })
+
+  it('surfaces non-Error generator failures', async () => {
+    generateOpenApiTypesMock.mockImplementation(() => {
+      throw 'string-failure'
+    })
+
+    const wrapper = mount(OpenApiToTypescript)
+    await flushPromises()
+
+    await getInputOutput(wrapper).props('handleInput')('valid schema')
+    await flushPromises()
+
+    expect(getInputOutput(wrapper).props('outputError')).toBe('string-failure')
+  })
+
   it('surfaces generator failures', async () => {
     generateOpenApiTypesMock.mockImplementation(() => {
       throw new Error('boom')
@@ -505,6 +528,47 @@ describe('OpenApiToTypescript', () => {
     expect(options.props('defaultNonNullable')).toBe(false)
     expect(options.props('includeHeader')).toBe(false)
     expect(getModal(wrapper).props('show')).toBe(true)
+  })
+
+  it('handles composing enter and request-failure fallbacks when importing URLs', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+
+    const wrapper = mount(OpenApiToTypescript)
+    await flushPromises()
+
+    await wrapper.get('[data-testid="import-url-button"]').trigger('click')
+    await flushPromises()
+
+    let modal = getModal(wrapper)
+    await modal.props('onUpdateInput')('https://example.com/openapi.yaml')
+    await flushPromises()
+
+    modal = getModal(wrapper)
+    expect(modal.props('importUrlError')).toBe('')
+
+    await modal.props('onEnter')({ isComposing: true } as KeyboardEvent)
+    await flushPromises()
+    expect(fetchMock).not.toHaveBeenCalled()
+
+    fetchMock.mockResolvedValueOnce({
+      ok: false,
+      status: 0,
+      statusText: '',
+      text: vi.fn(),
+    })
+    await modal.props('onConfirm')()
+    await flushPromises()
+
+    modal = getModal(wrapper)
+    expect(modal.props('importUrlError')).toBe('importUrlFetchError:Request failed')
+
+    fetchMock.mockRejectedValueOnce('socket closed')
+    await modal.props('onConfirm')()
+    await flushPromises()
+
+    modal = getModal(wrapper)
+    expect(modal.props('importUrlError')).toBe('importUrlFetchError:socket closed')
   })
 
   it('validates and imports from URL', async () => {
