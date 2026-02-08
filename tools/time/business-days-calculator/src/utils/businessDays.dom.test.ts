@@ -17,6 +17,10 @@ describe('normalizeWeekdayList', () => {
   it('returns an empty array for empty input', () => {
     expect(normalizeWeekdayList([])).toEqual([])
   })
+
+  it('ignores non-integer weekday values', () => {
+    expect(normalizeWeekdayList([1.2, Number.NaN, Number.POSITIVE_INFINITY, 3])).toEqual([3])
+  })
 })
 
 describe('startOfLocalDay', () => {
@@ -50,6 +54,12 @@ describe('parseHolidayList', () => {
     const result = parseHolidayList('  \n2024-01-01\n2024-01-01\n')
     expect(Array.from(result.dates)).toEqual(['2024-01-01'])
     expect(result.invalid).toEqual([])
+  })
+
+  it('marks out-of-range month and day as invalid', () => {
+    const result = parseHolidayList('2024-00-01\n2024-01-00')
+    expect(Array.from(result.dates)).toEqual([])
+    expect(result.invalid).toEqual(['2024-00-01', '2024-01-00'])
   })
 })
 
@@ -139,5 +149,23 @@ describe('addBusinessDays', () => {
     const holidays = new Set<string>()
 
     expect(addBusinessDays(new Date(2024, 0, 5), 3, { weekendDays, holidays })).toBeNull()
+  })
+
+  it('returns null when offset is not finite', () => {
+    const weekendDays = new Set([0, 6])
+    const holidays = new Set<string>()
+
+    expect(
+      addBusinessDays(new Date(2024, 0, 5), Number.POSITIVE_INFINITY, { weekendDays, holidays }),
+    ).toBeNull()
+  })
+
+  it('returns the normalized base date when offset is zero', () => {
+    const weekendDays = new Set([0, 6])
+    const holidays = new Set<string>()
+
+    const result = addBusinessDays(new Date(2024, 0, 5, 9, 30), 0, { weekendDays, holidays })
+    expect(result && toISODate(result)).toBe('2024-01-05')
+    expect(result?.getHours()).toBe(0)
   })
 })

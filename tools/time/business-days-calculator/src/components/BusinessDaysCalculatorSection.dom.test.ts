@@ -87,6 +87,15 @@ describe('BusinessDaysCalculatorSection', () => {
     expect(codes.slice(-2)).toEqual(['2024-01-05', '2024-01-05'])
   })
 
+  it('falls back to zero when the stored offset is invalid', async () => {
+    seedStorage({ dayOffset: Number.NaN })
+
+    const wrapper = mountSection()
+    await flushPromises()
+
+    const codes = wrapper.findAll('code').map((node) => node.text())
+    expect(codes.slice(-2)).toEqual(['2024-01-05', '2024-01-05'])
+  })
   it('shows an error when no working days are selected', async () => {
     seedStorage({ weekendDays: [0, 1, 2, 3, 4, 5, 6] })
     const wrapper = mountSection()

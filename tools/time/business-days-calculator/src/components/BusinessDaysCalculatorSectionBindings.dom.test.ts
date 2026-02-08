@@ -117,7 +117,7 @@ describe('BusinessDaysCalculatorSection bindings', () => {
 
   it('hydrates edge cases from storage and updates models from child events', async () => {
     setStorage({
-      [keys.startDate]: null,
+      [keys.startDate]: toTimestamp(2024, 0, 1),
       [keys.endDate]: null,
       [keys.baseDate]: null,
       [keys.dayOffset]: Number.NaN,
@@ -175,5 +175,13 @@ describe('BusinessDaysCalculatorSection bindings', () => {
     expect(count.props('holidayDaysLabel')).toBe('0')
     expect(offset.props('addDateLabel')).toBe('2024-01-09')
     expect(offset.props('subtractDateLabel')).toBe('2024-01-03')
+
+    count.vm.$emit('update:startDate', null)
+    await flushPromises()
+
+    expect(count.props('businessDaysLabel')).toBe('')
+    expect(count.props('totalDaysLabel')).toBe('')
+    expect(count.props('weekendDaysLabel')).toBe('')
+    expect(count.props('holidayDaysLabel')).toBe('')
   })
 })
