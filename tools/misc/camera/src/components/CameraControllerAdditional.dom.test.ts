@@ -554,4 +554,160 @@ describe('CameraController additional branches', () => {
 
     expect(getUserMedia).not.toHaveBeenCalled()
   })
+
+  it('handles preview lifecycle fallback branches when playback fails', async () => {
+    const getUserMedia = vi.fn().mockResolvedValue(createStream())
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+    const playSpy = vi
+      .spyOn(HTMLMediaElement.prototype, 'play')
+      .mockRejectedValue(new Error('play-failed'))
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startCamera: () => Promise<void>
+      errorMessage: string
+      isPreparing: boolean
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+
+    const setupState = (
+      wrapper.vm as unknown as {
+        $: {
+          setupState: {
+            previewRef?: { value: HTMLVideoElement | null }
+          }
+        }
+      }
+    ).$.setupState
+
+    if (setupState.previewRef && 'value' in setupState.previewRef) {
+      setupState.previewRef.value = null
+    }
+
+    vm.errorMessage = 'cameraNotReady'
+    await vm.startCamera()
+    expect(vm.errorMessage).toBe('')
+
+    const video = wrapper.find('video').element as HTMLVideoElement
+    if (setupState.previewRef && 'value' in setupState.previewRef) {
+      setupState.previewRef.value = video
+    }
+
+    vm.errorMessage = 'cameraNotReady'
+    await vm.startCamera()
+    expect(vm.errorMessage).toBe('')
+
+    vm.errorMessage = 'cameraNotReady'
+    video.onloadedmetadata?.(new Event('loadedmetadata'))
+    await flushPromises()
+
+    expect(vm.errorMessage).toBe('')
+    expect(playSpy).toHaveBeenCalled()
+  })
+
+  it('covers capture guard returns and zoom fallback without a track', async () => {
+    const previewRefState = { current: undefined as { value: HTMLVideoElement | null } | undefined }
+
+    const getUserMedia = vi
+      .fn()
+      .mockRejectedValueOnce(new Error('camera-start-failed'))
+      .mockImplementation(async () => {
+        if (previewRefState.current) {
+          previewRefState.current.value = null
+        }
+        return createStream()
+      })
+
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      handleShutter: () => Promise<void>
+      applyZoom: (value: number) => Promise<void>
+      isPreparing: boolean
+      zoomValue: number
+      outputKind: '' | 'photo' | 'video'
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+
+    const setupState = (
+      wrapper.vm as unknown as {
+        $: {
+          setupState: {
+            previewRef?: { value: HTMLVideoElement | null }
+          }
+        }
+      }
+    ).$.setupState
+
+    previewRefState.current = setupState.previewRef
+
+    vm.isPreparing = true
+    await vm.handleShutter()
+    vm.isPreparing = false
+
+    await vm.applyZoom(1.7)
+    expect(vm.zoomValue).toBe(1.7)
+
+    const video = wrapper.find('video').element as HTMLVideoElement
+    if (previewRefState.current) {
+      previewRefState.current.value = video
+    }
+
+    await vm.handleShutter()
+    expect(vm.outputKind).toBe('')
+
+    await vm.handleShutter()
+
+    expect(getUserMedia).toHaveBeenCalledTimes(2)
+  })
+
+  it('returns early when recording starts without an available stream', async () => {
+    const getUserMedia = vi.fn().mockRejectedValue(new Error('camera-offline'))
+    setMediaDevices({ getUserMedia } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      mode: 'photo' | 'video'
+      setMode?: (mode: 'photo' | 'video') => void
+      handleShutter: () => Promise<void>
+      isPreparing: boolean
+      isRecording: boolean
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+    await setModeToVideo(wrapper, vm)
+
+    FakeMediaRecorder.instances = []
+    await vm.handleShutter()
+
+    expect(vm.isRecording).toBe(false)
+    expect(FakeMediaRecorder.instances).toHaveLength(0)
+  })
+
+  it('updates formatted duration while recording timer ticks', async () => {
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      mode: 'photo' | 'video'
+      setMode?: (mode: 'photo' | 'video') => void
+      handleShutter: () => Promise<void>
+      isPreparing: boolean
+      isRecording: boolean
+      formattedDuration: string
+    }
+
+    await waitForIdle(() => !vm.isPreparing)
+    await setModeToVideo(wrapper, vm)
+
+    await vm.handleShutter()
+    expect(vm.isRecording).toBe(true)
+
+    await new Promise((resolve) => setTimeout(resolve, 1200))
+
+    expect(vm.formattedDuration).toBe('00:01')
+
+    await vm.handleShutter()
+  })
 })
