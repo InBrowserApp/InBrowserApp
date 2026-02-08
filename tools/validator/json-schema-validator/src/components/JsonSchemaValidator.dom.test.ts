@@ -4,6 +4,7 @@ import { defineComponent, nextTick, ref, type Ref } from 'vue'
 import JsonSchemaValidator from './JsonSchemaValidator.vue'
 
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())
+const debounceQueue = vi.hoisted(() => [] as Ref<unknown>[])
 
 type ComputedAsyncOptions = {
   evaluating?: Ref<boolean>
@@ -25,7 +26,7 @@ vi.mock('@vueuse/core', async () => {
       }
       return storage.get(key) as Ref<unknown>
     },
-    useDebounce: <T>(source: Ref<T>) => source,
+    useDebounce: <T>(source: Ref<T>) => (debounceQueue.shift() as Ref<T> | undefined) ?? source,
     computedAsync: (
       getter: () => Promise<unknown>,
       initialValue: unknown,
@@ -115,6 +116,7 @@ const mountValidator = () =>
 describe('JsonSchemaValidator', () => {
   beforeEach(() => {
     storage.clear()
+    debounceQueue.length = 0
     jsonSchemaMocks.detectSchemaDraft.mockReset()
     jsonSchemaMocks.validateJsonSchema.mockReset()
   })
@@ -158,6 +160,22 @@ describe('JsonSchemaValidator', () => {
     expect(result.props('state')).toBe('empty')
   })
 
+  it('falls back to default draft metadata when schema parsing fails', async () => {
+    storage.set(schemaKey, ref('{'))
+    storage.set(dataKey, ref('{}'))
+
+    const wrapper = mountValidator()
+    await flushPromises()
+
+    const vm = wrapper.vm as unknown as {
+      draftDisplay: { label: string; detected: boolean }
+      schemaDraftInfo: { draft: string; detected: boolean }
+    }
+
+    expect(vm.draftDisplay).toEqual({ label: '-', detected: false })
+    expect(vm.schemaDraftInfo).toEqual({ draft: '2020-12', detected: false })
+  })
+
   it('marks invalid data JSON and stays empty', async () => {
     storage.set(schemaKey, ref('{"type":"object"}'))
     storage.set(dataKey, ref('{'))
@@ -191,6 +209,22 @@ describe('JsonSchemaValidator', () => {
     expect(result.props('schemaError')).toBe('schemaObjectError')
     expect(result.props('draftValue')).toBe('2020-12')
     expect(jsonSchemaMocks.detectSchemaDraft).not.toHaveBeenCalled()
+    expect(jsonSchemaMocks.validateJsonSchema).not.toHaveBeenCalled()
+  })
+
+  it('uses empty-string fallbacks when debounced values are undefined', async () => {
+    storage.set(schemaKey, ref('{"type":"object"}'))
+    storage.set(dataKey, ref('{"name":"Ada"}'))
+    debounceQueue.push(ref(undefined), ref(undefined))
+    jsonSchemaMocks.detectSchemaDraft.mockReturnValue({ draft: '2020-12', detected: false })
+    jsonSchemaMocks.validateJsonSchema.mockReturnValue({ valid: true, errors: [] })
+
+    const wrapper = mountValidator()
+    await flushPromises()
+
+    const result = wrapper.findComponent(ValidationResultStub)
+    expect(result.props('state')).toBe('schema-error')
+    expect(result.props('schemaError')).toBe('schemaObjectError')
     expect(jsonSchemaMocks.validateJsonSchema).not.toHaveBeenCalled()
   })
 
@@ -265,6 +299,11 @@ describe('JsonSchemaValidator', () => {
 
     options.vm.$emit('update:validate-formats', false)
     options.vm.$emit('update:all-errors', false)
+
+    inputs.vm.$emit('update:schema-value', '{"type":"array"}')
+    await flushPromises()
+
+    expect(storage.get(schemaKey)?.value).toBe('{"type":"array"}')
 
     inputs.vm.$emit('update:schema-value', {
       text: () => Promise.resolve('{"type":"object"}'),

@@ -120,4 +120,17 @@ describe('ValidationErrorsTable', () => {
 
     expect(wrapper.text()).toContain('No errors')
   })
+
+  it('computes a generic title when there are no errors', () => {
+    const wrapper = mount(ValidationErrorsTable, {
+      props: {
+        statusType: 'error',
+        errors: [],
+      },
+    })
+
+    const vm = wrapper.vm as unknown as { errorsTitle: string }
+    expect(vm.errorsTitle).toBe('errorsTitle')
+    expect(wrapper.text()).toBe('')
+  })
 })
