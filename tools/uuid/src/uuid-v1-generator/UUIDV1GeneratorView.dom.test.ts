@@ -2,6 +2,8 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import { h } from 'vue'
 import { NMessageProvider } from 'naive-ui'
+import { MACAddressInputFormItem } from '@shared/ui/domain/mac-address'
+import ClockSeqInput from './ClockSeqInput.vue'
 import UUIDV1GeneratorView from './UUIDV1GeneratorView.vue'
 
 const { uuidV1Mock } = vi.hoisted(() => ({
@@ -55,6 +57,24 @@ describe('UUIDV1GeneratorView', () => {
     await regenerateButton!.trigger('click')
     await flushPromises()
 
-    expect(wrapper.find('.uuid-display').text()).not.toBe(initialUUID)
+    const regenerated = wrapper.find('.uuid-display').text()
+    expect(regenerated).not.toBe(initialUUID)
+
+    const macAddressInput = wrapper.findComponent(MACAddressInputFormItem)
+    const clockSeqInput = wrapper.findComponent(ClockSeqInput)
+
+    expect(macAddressInput.exists()).toBe(true)
+    expect(clockSeqInput.exists()).toBe(true)
+
+    macAddressInput.vm.$emit('update:address', '11:22:33:44:55:66')
+    await flushPromises()
+
+    const afterMacUpdate = wrapper.find('.uuid-display').text()
+    expect(afterMacUpdate).not.toBe(regenerated)
+
+    clockSeqInput.vm.$emit('update:clockSeq', 42)
+    await flushPromises()
+
+    expect(wrapper.find('.uuid-display').text()).not.toBe(afterMacUpdate)
   })
 })

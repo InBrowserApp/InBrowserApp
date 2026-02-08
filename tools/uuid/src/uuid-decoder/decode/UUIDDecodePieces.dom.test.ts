@@ -198,4 +198,45 @@ describe('DecodeDetailResult', () => {
 
     expect(wrapper.text()).toContain('algorithm.md5')
   })
+
+  it('falls back to the generic label for unknown algorithms', () => {
+    const wrapper = mount(DecodeDetailResult, {
+      props: {
+        result: {
+          uuid: '33333333-3333-3333-3333-333333333333',
+          version: 8,
+          variant: 2,
+          base64: 'b64',
+          integer: 3n,
+          octal: 'oct',
+          binary: 'bin',
+          algorithm: 'custom' as unknown as 'sha1' | 'md5',
+        },
+      },
+    })
+
+    expect(wrapper.text()).toContain('algorithm')
+    expect(wrapper.text()).not.toContain('algorithm.sha1')
+    expect(wrapper.text()).not.toContain('algorithm.md5')
+  })
+
+  it('hides optional fields when metadata is missing', () => {
+    const wrapper = mount(DecodeDetailResult, {
+      props: {
+        result: {
+          uuid: '44444444-4444-4444-4444-444444444444',
+          version: 4,
+          variant: 1,
+          base64: 'b64',
+          integer: 4n,
+          octal: 'oct',
+          binary: 'bin',
+        },
+      },
+    })
+
+    expect(wrapper.text()).not.toContain('algorithm.sha1')
+    expect(wrapper.text()).not.toContain('algorithm.md5')
+    expect(wrapper.text()).not.toContain('aa:bb:cc:dd:ee:ff')
+  })
 })

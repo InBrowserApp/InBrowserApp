@@ -75,7 +75,8 @@ const UUIDsDownloadButtonStub = {
 const SizeInputStub = {
   name: 'SizeInput',
   props: ['size'],
-  template: '<input class="size-input" />',
+  emits: ['update:size'],
+  template: '<button class="size-input" @click="$emit(\'update:size\', 4)" />',
 }
 
 describe('UUIDV4BulkGeneratorView', () => {
@@ -132,6 +133,11 @@ describe('UUIDV4BulkGeneratorView', () => {
     expect(regeneratedUuids).toHaveLength(2)
     expect(regeneratedUuids).not.toEqual(initialUuids)
     expect(copy.props('content')).toBe(regeneratedUuids.join('\n'))
+
+    await wrapper.findComponent(SizeInputStub).trigger('click')
+    await nextTick()
+
+    expect(download.props('uuids')).toHaveLength(4)
 
     const sizeRef = storage.get('tools:uuid-v4-bulk-generator:size') as Ref<number>
     sizeRef.value = 3

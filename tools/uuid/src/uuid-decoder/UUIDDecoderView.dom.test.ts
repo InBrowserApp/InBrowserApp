@@ -82,6 +82,12 @@ describe('UUIDDecoderView', () => {
     await nextTick()
     const input = wrapper.find('.uuid-input')
     expect((input.element as HTMLInputElement).value).toBe('uuid-from-route')
+
+    wrapper.findComponent({ name: 'UUIDInput' }).vm.$emit('update:uuid', 'uuid-updated')
+    await nextTick()
+
+    const stored = storage.get('tools:uuid-decoder:uuid') as Ref<string>
+    expect(stored.value).toBe('uuid-updated')
   })
 
   it('falls back to stored UUID when the route is invalid', async () => {

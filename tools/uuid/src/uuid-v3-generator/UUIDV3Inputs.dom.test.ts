@@ -94,6 +94,23 @@ describe('UUID v3 inputs', () => {
     expect(wrapper.emitted('update:name')?.[0]).toEqual(['Grace'])
   })
 
+  it('emits namespace updates from UUID input', async () => {
+    const wrapper = mount(NamespaceInput, {
+      props: {
+        namespace: '00000000-0000-0000-0000-000000000000',
+      },
+    })
+
+    wrapper
+      .findComponent({ name: 'UUIDInput' })
+      .vm.$emit('update:uuid', '11111111-1111-1111-1111-111111111111')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.emitted('update:namespace')?.[0]).toEqual([
+      '11111111-1111-1111-1111-111111111111',
+    ])
+  })
+
   it('updates namespace from predefined tags', async () => {
     const wrapper = mount(NamespaceInput, {
       props: {
