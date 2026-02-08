@@ -18,6 +18,7 @@ describe('color utils', () => {
     expect(formatHsl(255, 0, 0)).toEqual({ h: 0, s: 100, l: 50 })
     expect(formatHsl(0, 255, 0)).toEqual({ h: 120, s: 100, l: 50 })
     expect(formatHsl(0, 0, 255)).toEqual({ h: 240, s: 100, l: 50 })
+    expect(formatHsl(255, 0, 128)).toEqual({ h: 330, s: 100, l: 50 })
   })
 
   it('chooses contrast colors based on luminance', () => {

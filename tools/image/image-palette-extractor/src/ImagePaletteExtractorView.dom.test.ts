@@ -308,6 +308,56 @@ describe('ImagePaletteExtractorView', () => {
     expect(vi.mocked(extractPalette)).toHaveBeenCalledTimes(1)
   })
 
+  it('ignores stale loading errors when a newer extraction succeeds', async () => {
+    const imageData = makeImageData()
+    let rejectFirst: ((reason?: unknown) => void) | undefined
+
+    vi.mocked(loadImageData)
+      .mockImplementationOnce(
+        () =>
+          new Promise<{ imageData: ImageData; width: number; height: number }>(
+            (_resolve, reject) => {
+              rejectFirst = reject
+            },
+          ),
+      )
+      .mockResolvedValueOnce({ imageData, width: 10, height: 10 })
+
+    vi.mocked(extractPalette).mockReturnValue({
+      colors: [{ r: 20, g: 20, b: 20, count: 1 }],
+      totalPixels: 1,
+    })
+
+    const wrapper = mount(ImagePaletteExtractorView, {
+      global: {
+        stubs: {
+          ToolDefaultPageLayout: ToolDefaultPageLayoutStub,
+          ToolSection: ToolSectionStub,
+          NAlert: NAlertStub,
+          ImageInput: ImageInputStub,
+          PaletteControls: PaletteControlsStub,
+          PaletteResults: PaletteResultsStub,
+        },
+      },
+    })
+
+    const input = wrapper.findComponent(ImageInputStub)
+    input.vm.$emit('update:file', new File(['a'], 'first.png', { type: 'image/png' }))
+    await nextTick()
+    vi.runAllTimers()
+
+    input.vm.$emit('update:file', new File(['b'], 'second.png', { type: 'image/png' }))
+    await nextTick()
+    vi.runAllTimers()
+    await flushPromises()
+
+    rejectFirst?.(new Error('stale-load-failed'))
+    await flushPromises()
+
+    expect(wrapper.text()).not.toContain('Failed to load the image')
+    expect(vi.mocked(extractPalette)).toHaveBeenCalledTimes(1)
+  })
+
   it('shows an error when loading fails', async () => {
     vi.mocked(loadImageData).mockRejectedValue(new Error('load-failed'))
 

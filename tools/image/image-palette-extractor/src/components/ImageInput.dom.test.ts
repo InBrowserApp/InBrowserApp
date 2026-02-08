@@ -8,6 +8,27 @@ const messageMock = {
   error: vi.fn(),
 }
 
+const objectUrlState = vi.hoisted(() => ({
+  value: 'available' as 'available' | 'missing',
+}))
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { computed, isRef } = await import('vue')
+
+  return {
+    ...actual,
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        if (objectUrlState.value === 'missing') {
+          return null
+        }
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:preview' : null
+      }),
+  }
+})
+
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -45,7 +66,7 @@ vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
     emits: ['click'],
-    template: '<button @click="$emit(\'click\')"><slot /></button>',
+    template: '<button @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   })
 
   const NImage = defineComponent({
@@ -97,6 +118,7 @@ const mountInput = (props: ImageInputProps) =>
 describe('ImageInput', () => {
   beforeEach(() => {
     messageMock.error.mockClear()
+    objectUrlState.value = 'available'
     vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:test')
     vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
   })
@@ -181,6 +203,15 @@ describe('ImageInput', () => {
     const wrapper = mountInput({ file, dimensions: { width: 120, height: 80 } })
 
     expect(wrapper.text()).toContain('120 x 80 px')
+  })
+
+  it('renders file details without a preview when object URLs are unavailable', () => {
+    objectUrlState.value = 'missing'
+    const file = new File(['data'], 'sample.png', { type: 'image/png' })
+    const wrapper = mountInput({ file })
+
+    expect(wrapper.find('img').exists()).toBe(false)
+    expect(wrapper.text()).toContain('sample.png')
   })
 
   it('emits update when remove is clicked', async () => {
