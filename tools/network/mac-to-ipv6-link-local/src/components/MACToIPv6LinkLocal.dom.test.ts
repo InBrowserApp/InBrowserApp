@@ -59,10 +59,19 @@ describe('MACToIPv6LinkLocal', () => {
     expect(wrapper.text()).toContain('macAddress')
     expect(wrapper.find('.ipv6-result').exists()).toBe(false)
 
-    await wrapper.findComponent(MACInputStub).vm.$emit('update:mac', 'aa:bb:cc:dd:ee:ff')
+    const inputStub = wrapper.findComponent(MACInputStub)
+
+    await inputStub.vm.$emit('update:network-interface', 'eth0')
     await wrapper.vm.$nextTick()
 
+    expect(wrapper.find('.ipv6-result').exists()).toBe(false)
+
+    await inputStub.vm.$emit('update:mac', 'aa:bb:cc:dd:ee:ff')
+    await wrapper.vm.$nextTick()
+
+    const result = wrapper.findComponent(IPv6LinkLocalResultStub)
     expect(wrapper.text()).toContain('ipv6LinkLocalAddress')
-    expect(wrapper.find('.ipv6-result').exists()).toBe(true)
+    expect(result.exists()).toBe(true)
+    expect(result.props('networkInterface')).toBe('eth0')
   })
 })
