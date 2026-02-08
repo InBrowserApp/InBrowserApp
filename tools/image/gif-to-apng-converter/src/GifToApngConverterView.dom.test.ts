@@ -314,4 +314,96 @@ describe('GifToApngConverterView error branches', () => {
     expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
     expect(messageMock.success).not.toHaveBeenCalled()
   })
+
+  it('stops silently when run settings change before a failed conversion resolves', async () => {
+    const wrapper = mountView()
+    const file = createFile('slow-fail.gif')
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    let rejectConvert: ((reason?: unknown) => void) | undefined
+    mockedConvert.mockImplementationOnce(
+      () =>
+        new Promise<GifToApngResult>((_, reject) => {
+          rejectConvert = reject
+        }),
+    )
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:speed', 2)
+    await flushPromises()
+
+    rejectConvert?.(new Error('EMPTY_GIF'))
+    await flushPromises()
+
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+    expect(messageMock.error).not.toHaveBeenCalled()
+  })
+
+  it('ignores zip output when settings change while zipping', async () => {
+    const wrapper = mountView()
+    const files = [createFile('first.gif'), createFile('second.gif')]
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(files[0]!, 'first.png'))
+    mockedConvert.mockResolvedValueOnce(createResult(files[1]!, 'second.png'))
+
+    let resolveZip: ((value: Blob) => void) | undefined
+    mockedZip.mockImplementationOnce(
+      () =>
+        new Promise<Blob>((resolve) => {
+          resolveZip = resolve
+        }),
+    )
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:optimizeLevel', 6)
+    await flushPromises()
+
+    resolveZip?.(new Blob(['zip']))
+    await flushPromises()
+
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+    expect(messageMock.error).not.toHaveBeenCalled()
+    expect(messageMock.success).not.toHaveBeenCalled()
+  })
+
+  it('ignores zip errors when settings change while zipping', async () => {
+    const wrapper = mountView()
+    const files = [createFile('third.gif'), createFile('fourth.gif')]
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(files[0]!, 'third.png'))
+    mockedConvert.mockResolvedValueOnce(createResult(files[1]!, 'fourth.png'))
+
+    let rejectZip: ((reason?: unknown) => void) | undefined
+    mockedZip.mockImplementationOnce(
+      () =>
+        new Promise<Blob>((_, reject) => {
+          rejectZip = reject
+        }),
+    )
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:loopCount', 9)
+    await flushPromises()
+
+    rejectZip?.(new Error('zip failed'))
+    await flushPromises()
+
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+    expect(messageMock.error).not.toHaveBeenCalled()
+    expect(messageMock.success).not.toHaveBeenCalled()
+  })
 })

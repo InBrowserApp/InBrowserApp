@@ -113,4 +113,16 @@ describe('ResultCard', () => {
 
     expect(wrapper.text()).toContain('Saved: size-0 (0%)')
   })
+
+  it('handles empty originals with negative zero percent savings', () => {
+    const result = createResult('empty', 0, 100)
+    const wrapper = mount(ResultCard, {
+      props: {
+        ...baseProps,
+        result,
+      },
+    })
+
+    expect(wrapper.text()).toContain('Saved: -size-100 (-0%)')
+  })
 })

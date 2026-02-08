@@ -176,4 +176,20 @@ describe('ConversionResults', () => {
     expect(singleLink.attributes('disabled')).toBeDefined()
     expect(wrapper.text()).not.toContain('Total saved')
   })
+
+  it('keeps the single download disabled when there is no single result blob', () => {
+    const wrapper = mount(ConversionResults, {
+      props: {
+        ...baseProps,
+        results: [],
+        zipBlob: null,
+        isZipping: false,
+      },
+    })
+
+    const singleLink = wrapper.find('a[download="image.png"]')
+    expect(singleLink.exists()).toBe(true)
+    expect(singleLink.attributes('href')).toBeUndefined()
+    expect(singleLink.attributes('disabled')).toBeDefined()
+  })
 })

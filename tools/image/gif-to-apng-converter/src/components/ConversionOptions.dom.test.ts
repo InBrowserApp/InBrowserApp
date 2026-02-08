@@ -136,6 +136,30 @@ describe('ConversionOptions', () => {
     expect(wrapper.emitted('convert')?.length).toBe(1)
   })
 
+  it('ignores null updates from numeric controls', () => {
+    const wrapper = mount(ConversionOptions, {
+      props: {
+        ...baseProps,
+      },
+    })
+
+    const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
+    const scaleInput = inputs[0]
+    const speedInput = inputs[1]
+    const loopCountInput = inputs[2]
+    const optimizeLevelInput = inputs[3]
+
+    scaleInput?.vm.$emit('update:value', null)
+    speedInput?.vm.$emit('update:value', null)
+    loopCountInput?.vm.$emit('update:value', null)
+    optimizeLevelInput?.vm.$emit('update:value', null)
+
+    expect(wrapper.emitted('update:scale')).toBeUndefined()
+    expect(wrapper.emitted('update:speed')).toBeUndefined()
+    expect(wrapper.emitted('update:loopCount')?.[0]).toEqual([null])
+    expect(wrapper.emitted('update:optimizeLevel')).toBeUndefined()
+  })
+
   it('shows the converting label when conversion is in progress', () => {
     const wrapper = mount(ConversionOptions, {
       props: {
