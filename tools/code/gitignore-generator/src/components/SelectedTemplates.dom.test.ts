@@ -131,6 +131,11 @@ describe('SelectedTemplates', () => {
     await nextTick()
 
     expect(focus).toHaveBeenCalledTimes(1)
+
+    vm.autoCompleteInstRef = null
+    await nextTick()
+
+    expect(focus).toHaveBeenCalledTimes(1)
   })
 
   it('wires template interactions to model updates', async () => {

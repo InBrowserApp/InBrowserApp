@@ -116,6 +116,12 @@ describe('GitignoreGenerator', () => {
 
       expect(selector.props('expandedNames')).toEqual(expectedExpanded)
     }
+
+    const expandedBeforeClearing = selector.props('expandedNames')
+    await selector.vm.$emit('update:search-query', '')
+    await flushPromises()
+
+    expect(selector.props('expandedNames')).toEqual(expandedBeforeClearing)
   })
 
   it('accepts v-model updates from the selector', async () => {
