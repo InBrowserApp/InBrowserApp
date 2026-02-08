@@ -9,11 +9,19 @@ let objectUrlValue: string | undefined = 'blob:mock'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
+  const { computed, isRef } = await import('vue')
 
   return {
     ...actual,
-    useObjectUrl: () => ref(objectUrlValue),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        if (objectUrlValue === undefined) {
+          return undefined
+        }
+
+        const value = isRef(source) ? source.value : source
+        return value ? objectUrlValue : undefined
+      }),
   }
 })
 
