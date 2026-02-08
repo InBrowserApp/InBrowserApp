@@ -1,7 +1,9 @@
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import RegexTesterReplacer from './RegexTesterReplacer.vue'
+
+const storageRefs = vi.hoisted(() => new Map<string, { value: unknown }>())
 
 vi.mock('@vueuse/core', async () => {
   const { ref, watchEffect } = await import('vue')
@@ -24,7 +26,16 @@ vi.mock('@vueuse/core', async () => {
   return {
     computedAsync,
     useDebounceFn: (fn: () => void) => fn,
-    useStorage: (_key: string, initialValue: unknown) => ref(initialValue),
+    useStorage: (key: string, initialValue: unknown) => {
+      const existing = storageRefs.get(key)
+      if (existing) {
+        return existing
+      }
+
+      const state = ref(initialValue)
+      storageRefs.set(key, state)
+      return state
+    },
   }
 })
 
@@ -174,6 +185,10 @@ const flushAsync = async () => {
 }
 
 describe('RegexTesterReplacer', () => {
+  beforeEach(() => {
+    storageRefs.clear()
+  })
+
   it('computes default results when auto run is enabled', async () => {
     const wrapper = mount(RegexTesterReplacer)
 
@@ -269,8 +284,10 @@ describe('RegexTesterReplacer', () => {
 
     const inputs = wrapper.getComponent({ name: 'RegexInputs' })
     inputs.vm.$emit('update:autoRun', false)
-    inputs.vm.$emit('update:pattern', '(?=\d)')
+    inputs.vm.$emit('update:pattern', '(?=\\d)')
+    await flushAsync()
     inputs.vm.$emit('update:textOrFile', '1')
+    await flushAsync()
     inputs.vm.$emit('run')
 
     await flushAsync()
@@ -280,7 +297,7 @@ describe('RegexTesterReplacer', () => {
     expect(results.props('zeroLengthCount')).toBeGreaterThan(0)
   })
 
-  it('keeps file input when stored text changes internally', async () => {
+  it('keeps file input when persisted text storage changes', async () => {
     const wrapper = mount(RegexTesterReplacer)
 
     await flushAsync()
@@ -291,20 +308,15 @@ describe('RegexTesterReplacer', () => {
 
     await flushAsync()
 
-    const setupState = (
-      wrapper.vm.$ as unknown as {
-        setupState: {
-          textOrFile: string | File
-          storedText: string
-        }
-      }
-    ).setupState
+    const storedTextRef = storageRefs.get('tools:regex-tester-replacer:text')
+    expect(storedTextRef).toBeDefined()
 
-    setupState.storedText = 'persisted text'
+    storedTextRef!.value = 'persisted text'
     await flushAsync()
 
-    expect(setupState.textOrFile).toBeInstanceOf(File)
-    expect((setupState.textOrFile as File).name).toBe('sample.txt')
+    const updatedInput = wrapper.getComponent({ name: 'RegexInputs' }).props('textOrFile')
+    expect(updatedInput).toBeInstanceOf(File)
+    expect((updatedInput as File).name).toBe('sample.txt')
   })
 
   it('updates child v-model bindings for flags and result tab', async () => {
