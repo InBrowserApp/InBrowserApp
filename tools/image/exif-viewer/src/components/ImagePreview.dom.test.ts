@@ -1,10 +1,14 @@
-import { describe, it, expect, vi } from 'vitest'
+import { beforeEach, describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import ImagePreview from './ImagePreview.vue'
 
+const previewUrlState = vi.hoisted(() => ({
+  value: 'blob://preview' as string | null,
+}))
+
 const vueUseMocks = vi.hoisted(() => ({
-  useObjectUrl: vi.fn(() => 'blob://preview'),
+  useObjectUrl: vi.fn(() => previewUrlState.value),
 }))
 
 vi.mock('@vueuse/core', () => ({
@@ -58,6 +62,10 @@ const NIconStub = defineComponent({
 })
 
 describe('ImagePreview', () => {
+  beforeEach(() => {
+    previewUrlState.value = 'blob://preview'
+  })
+
   it('renders file details and emits clear', async () => {
     const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
 
@@ -81,5 +89,27 @@ describe('ImagePreview', () => {
 
     await wrapper.find('button.n-button').trigger('click')
     expect(wrapper.emitted('clear')).toHaveLength(1)
+  })
+
+  it('hides the preview image when no object url is available', () => {
+    previewUrlState.value = null
+    const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
+
+    const wrapper = mount(ImagePreview, {
+      props: { file },
+      global: {
+        stubs: {
+          ToolSection: ToolSectionStub,
+          NImage: NImageStub,
+          NFlex: NFlexStub,
+          NText: NTextStub,
+          NButton: NButtonStub,
+          NIcon: NIconStub,
+        },
+      },
+    })
+
+    expect(wrapper.find('img.n-image').exists()).toBe(false)
+    expect(wrapper.text()).toContain('photo.jpg')
   })
 })

@@ -54,6 +54,7 @@ describe('ExifCategorySection', () => {
           objectValue: { foo: 'bar' },
           dateValue: new Date('2023-01-01T00:00:00Z'),
           binaryValue: new Uint8Array([1, 2, 3]),
+          emptyBinaryValue: new Uint8Array(),
           boolValue: true,
         },
       },
@@ -72,6 +73,7 @@ describe('ExifCategorySection', () => {
     expect(text).toContain('{"foo":"bar"}')
     expect(text).toContain('date-string')
     expect(text).toContain('[Binary data: 3 bytes]')
+    expect(text).toContain('[Binary data: 0 bytes]')
     expect(text).toContain('true')
 
     dateSpy.mockRestore()

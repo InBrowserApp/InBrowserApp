@@ -201,4 +201,24 @@ describe('ExifViewerView', () => {
     expect(alert.exists()).toBe(true)
     expect(wrapper.text()).toContain('boom')
   })
+
+  it('falls back to the localized parse error for non-Error throws', async () => {
+    const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
+    exifrMocks.parse.mockRejectedValue('boom')
+
+    const wrapper = mount(ExifViewerView, {
+      global: {
+        stubs: globalStubs,
+      },
+    })
+
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:file', file)
+    await nextTick()
+    await flushPromises()
+    await nextTick()
+
+    const alert = wrapper.find('.n-alert')
+    expect(alert.exists()).toBe(true)
+    expect(wrapper.text()).toContain('parseError')
+  })
 })

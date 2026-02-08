@@ -60,4 +60,24 @@ describe('ExifActions', () => {
     expect(content).toContain('[Binary data: 4 bytes]')
     expect(content).toContain('Canon')
   })
+
+  it('formats zero-length typed arrays as binary payloads', () => {
+    const wrapper = mount(ExifActions, {
+      props: {
+        exifData: {
+          payload: new Uint8Array(),
+        },
+      },
+      global: {
+        stubs: {
+          CopyToClipboardButton: CopyToClipboardButtonStub,
+          ToolSection: ToolSectionStub,
+          NFlex: NFlexStub,
+        },
+      },
+    })
+
+    const button = wrapper.findComponent(CopyToClipboardButtonStub)
+    expect(button.props('content')).toContain('[Binary data: 0 bytes]')
+  })
 })
