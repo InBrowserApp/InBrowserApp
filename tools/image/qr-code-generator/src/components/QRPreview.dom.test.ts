@@ -80,4 +80,19 @@ describe('QRPreview', () => {
 
     expect(wrapper.find('img').exists()).toBe(false)
   })
+
+  it('uses fallback text and ignores non-string renderer results', async () => {
+    qrCodeMock.toString.mockResolvedValue(123)
+
+    const wrapper = mount(QRPreview, {
+      props: {
+        ...baseProps,
+        text: '',
+      },
+    })
+    await flushPromises()
+
+    expect(qrCodeMock.toString).toHaveBeenCalledWith(' ', expect.objectContaining({ type: 'svg' }))
+    expect(wrapper.find('img').exists()).toBe(false)
+  })
 })

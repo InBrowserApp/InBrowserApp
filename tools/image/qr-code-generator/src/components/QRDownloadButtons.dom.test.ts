@@ -15,7 +15,7 @@ vi.mock('@vueuse/core', async () => {
   const { computed } = await import('vue')
   return {
     useObjectUrl: (blobRef: { value: Blob | null }) =>
-      computed(() => (blobRef.value ? 'blob:mock' : '')),
+      computed(() => (blobRef.value ? 'blob:mock' : undefined)),
   }
 })
 
@@ -83,20 +83,56 @@ describe('QRDownloadButtons', () => {
       props: baseProps,
     })
 
-    await flushPromises()
-
-    const buttons = wrapper.findAllComponents({ name: 'NButton' })
+    let buttons = wrapper.findAllComponents({ name: 'NButton' })
     expect(buttons).toHaveLength(2)
 
-    const pngProps = buttons[0]?.props() as Record<string, unknown>
+    let pngProps = buttons[0]?.props() as Record<string, unknown>
+    expect(pngProps.href).toBeUndefined()
+    expect(pngProps.disabled).toBe(true)
+
+    let svgProps = buttons[1]?.props() as Record<string, unknown>
+    expect(svgProps.href).toBeUndefined()
+    expect(svgProps.disabled).toBe(true)
+
+    await flushPromises()
+
+    buttons = wrapper.findAllComponents({ name: 'NButton' })
+    expect(buttons).toHaveLength(2)
+
+    pngProps = buttons[0]?.props() as Record<string, unknown>
     expect(pngProps.href).toBe('blob:mock')
     expect(pngProps.disabled).toBe(false)
     expect(pngProps.download).toBe('qrcode.png')
 
-    const svgProps = buttons[1]?.props() as Record<string, unknown>
+    svgProps = buttons[1]?.props() as Record<string, unknown>
     expect(svgProps.href).toBe('blob:mock')
     expect(svgProps.disabled).toBe(false)
     expect(svgProps.download).toBe('qrcode.svg')
+  })
+
+  it('uses blank fallback text when the input is empty', async () => {
+    qrCodeMock.toDataURL.mockResolvedValue('data:image/png;base64,AAA')
+    qrCodeMock.toString.mockResolvedValue('<svg>ok</svg>')
+
+    const fetchMock = vi.mocked(fetch)
+    fetchMock.mockResolvedValue({
+      blob: () => Promise.resolve(new Blob(['png'], { type: 'image/png' })),
+    } as Response)
+
+    mount(QRDownloadButtons, {
+      props: {
+        ...baseProps,
+        text: '',
+      },
+    })
+
+    await flushPromises()
+
+    expect(qrCodeMock.toDataURL).toHaveBeenCalledWith(
+      ' ',
+      expect.objectContaining({ type: 'image/png' }),
+    )
+    expect(qrCodeMock.toString).toHaveBeenCalledWith(' ', expect.objectContaining({ type: 'svg' }))
   })
 
   it('drops stale updates when superseded', async () => {

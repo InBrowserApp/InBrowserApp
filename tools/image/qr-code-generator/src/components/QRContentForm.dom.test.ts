@@ -49,6 +49,11 @@ const mountForm = (modelValue: string) =>
     },
   })
 
+const latestModelValue = (wrapper: ReturnType<typeof mountForm>): string => {
+  const emitted = wrapper.emitted('update:modelValue') ?? []
+  return (emitted[emitted.length - 1] ?? [''])[0] as string
+}
+
 describe('QRContentForm', () => {
   it('emits text payload updates', async () => {
     const wrapper = mountForm('hello')
@@ -174,6 +179,88 @@ describe('QRContentForm', () => {
 
     emitted = wrapper.emitted('update:modelValue') ?? []
     expect(emitted[emitted.length - 1]).toEqual(['mailto:user@example.com?subject=Hello&body=Body'])
+  })
+
+  it('covers optional payload branches across tabs', async () => {
+    const wifiWrapper = mountForm('seed')
+    const wifiTabs = wifiWrapper.findComponent(QRContentTabsStub)
+    wifiTabs.vm.$emit('update:activeTab', 'wifi')
+    wifiTabs.vm.$emit('update:wifi', {
+      ssid: 'Guest',
+      auth: 'nopass',
+      password: 'secret',
+      hidden: false,
+    } as WifiModel)
+    await nextTick()
+    expect(latestModelValue(wifiWrapper)).toBe('WIFI:T:nopass;S:Guest;;')
+
+    const vcardWrapper = mountForm('seed')
+    const vcardTabs = vcardWrapper.findComponent(QRContentTabsStub)
+    vcardTabs.vm.$emit('update:activeTab', 'vcard')
+    vcardTabs.vm.$emit('update:vcard', {
+      firstName: '',
+      lastName: '',
+      organization: '',
+      title: '',
+      phone: '',
+      email: '',
+      url: '',
+      address: '',
+    } as VcardModel)
+    await nextTick()
+    expect(latestModelValue(vcardWrapper)).toBe('BEGIN:VCARD\nVERSION:3.0\nN:;;;;\nEND:VCARD')
+
+    const smsWrapper = mountForm('seed')
+    const smsTabs = smsWrapper.findComponent(QRContentTabsStub)
+    smsTabs.vm.$emit('update:activeTab', 'sms')
+    smsTabs.vm.$emit('update:sms', { phone: '123', message: '' } as SmsModel)
+    await nextTick()
+    expect(latestModelValue(smsWrapper)).toBe('sms:123')
+
+    const telWrapper = mountForm('seed')
+    const telTabs = telWrapper.findComponent(QRContentTabsStub)
+    telTabs.vm.$emit('update:activeTab', 'tel')
+    telTabs.vm.$emit('update:tel', '   ')
+    await nextTick()
+    expect(latestModelValue(telWrapper)).toBe('')
+
+    const mailtoWrapper = mountForm('seed')
+    const mailtoTabs = mailtoWrapper.findComponent(QRContentTabsStub)
+    mailtoTabs.vm.$emit('update:activeTab', 'mailto')
+    mailtoTabs.vm.$emit('update:mailto', {
+      to: 'user@example.com',
+      subject: '',
+      body: '',
+    } as MailtoModel)
+    await nextTick()
+    expect(latestModelValue(mailtoWrapper)).toBe('mailto:user@example.com')
+
+    const geoWrapper = mountForm('seed')
+    const geoTabs = geoWrapper.findComponent(QRContentTabsStub)
+    geoTabs.vm.$emit('update:activeTab', 'geo')
+    geoTabs.vm.$emit('update:geo', { lat: 1, lng: 2, alt: 3 } as GeoModel)
+    await nextTick()
+    expect(latestModelValue(geoWrapper)).toBe('geo:1,2,3')
+
+    const calendarWrapper = mountForm('seed')
+    const calendarTabs = calendarWrapper.findComponent(QRContentTabsStub)
+    calendarTabs.vm.$emit('update:activeTab', 'calendar')
+    calendarTabs.vm.$emit('update:calendar', {
+      title: '',
+      start: null,
+      end: null,
+      location: '',
+      description: '',
+    } as CalendarModel)
+    await nextTick()
+
+    const calendarPayload = latestModelValue(calendarWrapper)
+    expect(calendarPayload).toContain('BEGIN:VCALENDAR')
+    expect(calendarPayload).not.toContain('SUMMARY:')
+    expect(calendarPayload).not.toContain('LOCATION:')
+    expect(calendarPayload).not.toContain('DESCRIPTION:')
+    expect(calendarPayload).not.toContain('DTSTART:')
+    expect(calendarPayload).not.toContain('DTEND:')
   })
 
   it('returns empty payloads for incomplete geo and unknown tab', async () => {
