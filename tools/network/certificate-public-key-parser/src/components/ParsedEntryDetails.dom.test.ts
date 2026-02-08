@@ -174,6 +174,9 @@ describe('ParsedEntryDetails', () => {
     expect(overview.attributes('data-key-size')).toBe('256')
     expect(overview.attributes('data-curve')).toBe('P-256')
 
+    const vm = wrapper.vm as unknown as { extensions: CertificateExtensions }
+    expect(vm.extensions).toEqual({})
+
     expect(wrapper.find('[data-testid="subject-issuer"]').exists()).toBe(false)
     expect(wrapper.find('[data-testid="validity"]').exists()).toBe(false)
     expect(wrapper.find('[data-testid="extensions"]').exists()).toBe(false)
