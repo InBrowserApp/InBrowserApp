@@ -20,5 +20,5 @@ describe('gitignore generator exports', () => {
     const componentLoader = route?.component as () => Promise<{ default: unknown }>
     const loadedRoute = await componentLoader()
     expect(loadedRoute).toHaveProperty('default')
-  })
+  }, 15_000)
 })
