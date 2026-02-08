@@ -44,4 +44,14 @@ describe('nanoid utils', () => {
     expect(id).toHaveLength(10)
     expect(id).toMatch(/^[abc]+$/)
   })
+
+  it('skips undefined random bytes and keeps generating', () => {
+    vi.stubGlobal('crypto', {
+      getRandomValues: <T extends ArrayBufferView | null>(_buffer: T): T => [0] as unknown as T,
+    })
+
+    const id = generateNanoid('ab', 3)
+
+    expect(id).toBe('aaa')
+  })
 })
