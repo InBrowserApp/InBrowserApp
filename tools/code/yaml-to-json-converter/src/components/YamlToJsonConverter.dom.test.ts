@@ -1,18 +1,26 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
-import { h, ref } from 'vue'
+import { h } from 'vue'
 import { NCode, NMessageProvider } from 'naive-ui'
 import YamlToJsonConverter from './YamlToJsonConverter.vue'
 
 const fileOpenMock = vi.fn()
-const objectUrlRef = ref<string | null>('blob:download')
+const objectUrlState = { value: 'available' as 'available' | 'missing' }
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { computed, isRef } = await import('vue')
 
   return {
     ...actual,
-    useObjectUrl: () => objectUrlRef,
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        if (objectUrlState.value === 'missing') {
+          return null
+        }
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:download' : null
+      }),
   }
 })
 
@@ -32,7 +40,7 @@ const getRenderedJson = (wrapper: ReturnType<typeof mount>) =>
 describe('YamlToJsonConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
-    objectUrlRef.value = 'blob:download'
+    objectUrlState.value = 'available'
   })
 
   it('renders JSON for the default YAML', () => {
@@ -59,7 +67,7 @@ describe('YamlToJsonConverter', () => {
   })
 
   it('omits download href when object url is unavailable', () => {
-    objectUrlRef.value = null
+    objectUrlState.value = 'missing'
 
     const wrapper = mount(TestWrapper)
     const downloadLink = wrapper.find('a[download="converted.json"]')
