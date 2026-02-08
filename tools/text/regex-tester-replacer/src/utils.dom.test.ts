@@ -104,6 +104,16 @@ describe('collectMatches', () => {
       namedGroups: {},
     })
   })
+
+  it('preserves named capture groups when matches include them', () => {
+    const regex = new RegExp('(?<id>\\d+)', 'g')
+    const { matches, truncated } = collectMatches('id=42', regex, 10)
+
+    expect(truncated).toBe(false)
+    expect(matches).toHaveLength(1)
+    expect(matches[0]?.groups).toEqual(['42'])
+    expect(matches[0]?.namedGroups).toEqual({ id: '42' })
+  })
 })
 
 describe('replaceText', () => {

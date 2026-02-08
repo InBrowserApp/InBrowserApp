@@ -262,6 +262,68 @@ describe('RegexTesterReplacer', () => {
     expect(results.props('previewHtml')).toContain('<mark class="preview-match">#12-ABC</mark>')
   })
 
+  it('counts zero-length matches when the regex matches empty strings', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    inputs.vm.$emit('update:autoRun', false)
+    inputs.vm.$emit('update:pattern', '(?=\d)')
+    inputs.vm.$emit('update:textOrFile', '1')
+    inputs.vm.$emit('run')
+
+    await flushAsync()
+
+    const results = wrapper.getComponent({ name: 'RegexResults' })
+    expect(results.props('matchesCount')).toBeGreaterThan(0)
+    expect(results.props('zeroLengthCount')).toBeGreaterThan(0)
+  })
+
+  it('keeps file input when stored text changes internally', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    const file = new File(['content'], 'sample.txt', { type: 'text/plain' })
+    inputs.vm.$emit('update:textOrFile', file)
+
+    await flushAsync()
+
+    const setupState = (
+      wrapper.vm.$ as unknown as {
+        setupState: {
+          textOrFile: string | File
+          storedText: string
+        }
+      }
+    ).setupState
+
+    setupState.storedText = 'persisted text'
+    await flushAsync()
+
+    expect(setupState.textOrFile).toBeInstanceOf(File)
+    expect((setupState.textOrFile as File).name).toBe('sample.txt')
+  })
+
+  it('updates child v-model bindings for flags and result tab', async () => {
+    const wrapper = mount(RegexTesterReplacer)
+
+    await flushAsync()
+
+    const inputs = wrapper.getComponent({ name: 'RegexInputs' })
+    const results = wrapper.getComponent({ name: 'RegexResults' })
+
+    inputs.vm.$emit('update:selectedFlags', ['g', 'i'])
+    results.vm.$emit('update:activeTab', 'replace')
+
+    await flushAsync()
+
+    expect(wrapper.getComponent({ name: 'RegexInputs' }).props('selectedFlags')).toEqual(['g', 'i'])
+    expect(wrapper.getComponent({ name: 'RegexResults' }).props('activeTab')).toBe('replace')
+  })
+
   it('runs automatically when autoRun is toggled back on', async () => {
     const wrapper = mount(RegexTesterReplacer)
 

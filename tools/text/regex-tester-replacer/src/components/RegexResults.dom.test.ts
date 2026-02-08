@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { h } from 'vue'
-import { NMessageProvider } from 'naive-ui'
+import { NMessageProvider, NTabs } from 'naive-ui'
 import RegexResults from './RegexResults.vue'
 import type { RegexMatch } from '../utils'
 
@@ -134,6 +134,20 @@ describe('RegexResults', () => {
     expect(text).toContain('Named groups:')
     expect(text).toContain('(empty)')
     expect(text).toContain('id=(empty)')
+  })
+
+  it('forwards active tab updates from tabs', () => {
+    const onUpdate = vi.fn()
+    const wrapper = mount(
+      withMessageProvider({
+        activeTab: 'preview',
+        'onUpdate:activeTab': onUpdate,
+      }),
+    )
+
+    wrapper.getComponent(NTabs).vm.$emit('update:value', 'replace')
+
+    expect(onUpdate).toHaveBeenCalledWith('replace')
   })
 
   it('renders replacement output in the replace tab', () => {
