@@ -42,6 +42,12 @@ function createGifBytes() {
   return new Uint8Array([0x47, 0x49, 0x46, 0x38, 0x39, 0x61])
 }
 
+function createGifBytesWithTruncatedBackgroundTable() {
+  return new Uint8Array([
+    0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x02, 0x00, 0x01, 0x00, 0x80, 0x01, 0x00, 0xff, 0x00, 0x00,
+  ])
+}
+
 function createGifFileFromBytes(bytes: Uint8Array) {
   return new File([bytes.buffer as ArrayBuffer], 'demo.gif', { type: 'image/gif' })
 }
@@ -72,6 +78,22 @@ function createFrames() {
 
 function createApngBuffer(numFrames = 1, numPlays = 0) {
   const buffer = new ArrayBuffer(8 + 4 + 4 + 8 + 4)
+  const view = new DataView(buffer)
+
+  const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
+  signature.forEach((value, index) => view.setUint8(index, value))
+  view.setUint32(8, 8)
+  view.setUint8(12, 0x61)
+  view.setUint8(13, 0x63)
+  view.setUint8(14, 0x54)
+  view.setUint8(15, 0x4c)
+  view.setUint32(16, numFrames)
+  view.setUint32(20, numPlays)
+  return buffer
+}
+
+function createApngBufferWithoutChunkCrc(numFrames = 1, numPlays = 0) {
+  const buffer = new ArrayBuffer(8 + 4 + 4 + 8)
   const view = new DataView(buffer)
 
   const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
@@ -159,6 +181,96 @@ describe('convertGifToApng extra branches', () => {
     ).rejects.toThrow('EMPTY_GIF')
   })
 
+  it('uses frame dimensions when gif metadata dimensions are missing', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({})
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray(3 * 2 * 4).fill(255),
+        dims: { top: 0, left: 0, width: 3, height: 2 },
+        delay: 10,
+      },
+    ])
+    encodeMock.mockReturnValue(createApngBuffer())
+
+    const result = await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    expect(result.originalWidth).toBe(3)
+    expect(result.originalHeight).toBe(2)
+    expect(encodeMock).toHaveBeenCalledWith(expect.any(Array), 3, 2, 0, [10])
+  })
+
+  it('falls back to minimum dimensions before rejecting invalid frames', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({})
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([255, 0, 0, 255]),
+        dims: undefined,
+        delay: 10,
+      },
+    ])
+
+    await expect(
+      convertGifToApng(
+        file,
+        {
+          scale: 100,
+          speed: 1,
+          loopMode: 'inherit',
+          loopCount: undefined,
+          optimize: false,
+          optimizeLevel: 2,
+        },
+        'demo.png',
+      ),
+    ).rejects.toThrow('INVALID_FRAME')
+  })
+
+  it('uses default disposal and skips missing patch alpha bytes', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 1, height: 1 } })
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray(),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+      },
+    ])
+    encodeMock.mockReturnValue(createApngBuffer())
+
+    await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    const encodedFrames = encodeMock.mock.calls[0]?.[0] as ArrayBuffer[] | undefined
+    const firstFrame = new Uint8ClampedArray(encodedFrames?.[0] ?? new ArrayBuffer(0))
+    expect(Array.from(firstFrame.slice(0, 4))).toEqual([0, 0, 0, 0])
+  })
+
   it('normalizes invalid scale, speed, and custom loop count values', async () => {
     const file = createGifFile()
 
@@ -187,6 +299,31 @@ describe('convertGifToApng extra branches', () => {
     )
 
     expect(encodeMock).toHaveBeenCalledWith(expect.any(Array), 1, 1, 0, [100])
+
+    const buffer = await result.blob.arrayBuffer()
+    const view = new DataView(buffer)
+    expect(view.getUint32(20)).toBe(1)
+  })
+
+  it('defaults custom loop counts to one when count is omitted', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 2 } })
+    decompressFramesMock.mockReturnValue(createFrames())
+    encodeMock.mockReturnValue(createApngBuffer())
+
+    const result = await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'custom',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
 
     const buffer = await result.blob.arrayBuffer()
     const view = new DataView(buffer)
@@ -374,6 +511,44 @@ describe('convertGifToApng extra branches', () => {
     expect(view.getUint32(20)).toBe(7)
   })
 
+  it('falls back to transparent background when color table bytes are truncated', async () => {
+    const file = createGifFileFromBytes(createGifBytesWithTruncatedBackgroundTable())
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 1 } })
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([0, 255, 0, 255]),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 2,
+      },
+      {
+        patch: new Uint8ClampedArray([0, 0, 255, 255]),
+        dims: { top: 0, left: 1, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 1,
+      },
+    ])
+    encodeMock.mockReturnValue(createApngBuffer(2))
+
+    await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    const encodedFrames = encodeMock.mock.calls[0]?.[0] as ArrayBuffer[] | undefined
+    const secondFrame = new Uint8ClampedArray(encodedFrames?.[1] ?? new ArrayBuffer(0))
+    expect(Array.from(secondFrame.slice(0, 4))).toEqual([0, 0, 0, 0])
+  })
+
   it('falls back to transparent background when metadata is malformed', async () => {
     const malformedBackgroundBytes = new Uint8Array([
       0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x02, 0x00, 0x01, 0x00, 0x80, 0x03, 0x00, 0xff, 0x00,
@@ -439,6 +614,32 @@ describe('convertGifToApng extra branches', () => {
 
     const output = await result.blob.arrayBuffer()
     expect(new Uint8Array(output)).toEqual(new Uint8Array(raw))
+  })
+
+  it('updates loop metadata when the acTL chunk has no crc bytes', async () => {
+    const file = createGifFile()
+    const raw = createApngBufferWithoutChunkCrc()
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 2, height: 2 } })
+    decompressFramesMock.mockReturnValue(createFrames())
+    encodeMock.mockReturnValue(raw)
+
+    const result = await convertGifToApng(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'custom',
+        loopCount: 5,
+        optimize: false,
+        optimizeLevel: 2,
+      },
+      'demo.png',
+    )
+
+    const output = await result.blob.arrayBuffer()
+    const view = new DataView(output)
+    expect(view.getUint32(20)).toBe(5)
   })
 
   it('walks non-acTL chunks when applying loop metadata', async () => {

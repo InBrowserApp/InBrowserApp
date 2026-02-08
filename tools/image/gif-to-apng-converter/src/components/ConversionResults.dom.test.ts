@@ -177,6 +177,23 @@ describe('ConversionResults', () => {
     expect(wrapper.text()).not.toContain('Total saved')
   })
 
+  it('handles zero-byte originals without producing NaN percentages', () => {
+    const result = createResult('empty', 0, 10)
+    const wrapper = mount(ConversionResults, {
+      props: {
+        ...baseProps,
+        results: [result],
+        zipBlob: null,
+        isZipping: false,
+      },
+    })
+
+    const vm = wrapper.vm as unknown as { totalSavedText: string }
+    expect(vm.totalSavedText).toContain('(-0%)')
+    expect(vm.totalSavedText).not.toContain('NaN')
+    expect(wrapper.text()).not.toContain('Total saved')
+  })
+
   it('keeps the single download disabled when there is no single result blob', () => {
     const wrapper = mount(ConversionResults, {
       props: {
