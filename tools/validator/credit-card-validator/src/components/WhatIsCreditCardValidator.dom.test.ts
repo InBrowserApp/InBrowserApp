@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { defineComponent } from 'vue'
 
 const { sampleBrands } = vi.hoisted(() => ({
   sampleBrands: [
@@ -110,7 +111,16 @@ describe('WhatIsCreditCardValidator', () => {
     expect(columns[3]?.title()).toBe('cvcColumn')
 
     const brandColumn = columns.find((column) => column.key === 'name')
-    expect(brandColumn?.render?.(sampleBrands[0]!)).toBeTruthy()
+    const renderedBrandCell = brandColumn?.render?.(sampleBrands[0]!)
+    expect(renderedBrandCell).toBeTruthy()
+
+    const brandCellWrapper = mount(
+      defineComponent({
+        name: 'BrandCellHost',
+        setup: () => () => renderedBrandCell,
+      }),
+    )
+    expect(brandCellWrapper.text()).toContain('Visa')
 
     const patternsColumn = columns.find((column) => column.key === 'patterns')
     expect(patternsColumn?.render?.(sampleBrands[0]!)).toBe('4, 51-55')

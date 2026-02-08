@@ -29,6 +29,7 @@ describe('card brand utilities', () => {
   it('validates card numbers with the Luhn algorithm', () => {
     expect(luhnValidate('4111111111111111')).toBe(true)
     expect(luhnValidate('4111111111111112')).toBe(false)
+    expect(luhnValidate('79927398713')).toBe(true)
     expect(luhnValidate('')).toBe(false)
   })
 
