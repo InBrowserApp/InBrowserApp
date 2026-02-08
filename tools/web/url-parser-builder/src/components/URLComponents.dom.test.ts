@@ -104,6 +104,18 @@ describe('URLComponents', () => {
     expect(updatedInputs[4]?.props('value')).toBe('/new-path')
     expect(updatedInputs[5]?.props('value')).toBe('?next=2')
     expect(updatedInputs[6]?.props('value')).toBe('#part')
+
+    await wrapper.setProps({ url: 'https://demo.test/no-port?next=3#clean' })
+    await nextTick()
+
+    const noPortInputs = wrapper.findAllComponents(NInput)
+    const noPort = wrapper.findComponent(NInputNumber)
+
+    expect(noPortInputs[3]?.props('value')).toBe('demo.test')
+    expect(noPort.props('value')).toBe(null)
+    expect(noPortInputs[4]?.props('value')).toBe('/no-port')
+    expect(noPortInputs[5]?.props('value')).toBe('?next=3')
+    expect(noPortInputs[6]?.props('value')).toBe('#clean')
   })
 
   it('emits url updates when parts change', async () => {
@@ -135,6 +147,10 @@ describe('URLComponents', () => {
     await portInput.vm.$emit('update:value', 9090)
     await nextTick()
     expect(getLastUrl()).toContain(':9090')
+
+    await portInput.vm.$emit('update:value', null)
+    await nextTick()
+    expect(getLastUrl()).not.toContain(':9090')
 
     await inputs[4]?.vm.$emit('update:value', '/docs')
     await nextTick()
