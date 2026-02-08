@@ -107,6 +107,55 @@ describe('time zone conversions', () => {
     }
   })
 
+  it('falls back when Intl.supportedValuesOf is missing from Intl', () => {
+    const descriptor = Object.getOwnPropertyDescriptor(Intl, 'supportedValuesOf')
+    if (!descriptor || !descriptor.configurable) {
+      expect(getSupportedTimeZones()).toContain('UTC')
+      return
+    }
+
+    delete (Intl as { supportedValuesOf?: unknown }).supportedValuesOf
+
+    try {
+      const timeZones = getSupportedTimeZones()
+      expect(timeZones[0]).toBe('UTC')
+      expect(timeZones).toContain('Europe/Berlin')
+    } finally {
+      Object.defineProperty(Intl, 'supportedValuesOf', descriptor)
+    }
+  })
+
+  it('skips preferred time zones that are not actually supported', async () => {
+    if (!('supportedValuesOf' in Intl)) {
+      expect(getSupportedTimeZones()).toContain('UTC')
+      return
+    }
+
+    const realDateTimeFormat = Intl.DateTimeFormat
+    const supportedValuesSpy = vi.spyOn(Intl, 'supportedValuesOf').mockReturnValue(['UTC'])
+    const dateTimeFormatSpy = vi.spyOn(Intl, 'DateTimeFormat').mockImplementation(((
+      locales?: Intl.LocalesArgument,
+      options?: Intl.DateTimeFormatOptions,
+    ) => {
+      const timeZone = options?.timeZone
+      if (timeZone && ['Etc/UTC', 'GMT', 'Etc/GMT'].includes(timeZone)) {
+        throw new RangeError('unsupported')
+      }
+      return new realDateTimeFormat(locales, options)
+    }) as unknown as typeof Intl.DateTimeFormat)
+
+    try {
+      vi.resetModules()
+      const isolated = await import('./timeZone')
+      const timeZones = isolated.getSupportedTimeZones()
+      expect(timeZones).toContain('UTC')
+      expect(timeZones).not.toContain('Etc/GMT')
+    } finally {
+      supportedValuesSpy.mockRestore()
+      dateTimeFormatSpy.mockRestore()
+    }
+  })
+
   it('formats UTC timestamps in UTC', () => {
     expect(formatInTimeZone(0, 'UTC')).toBe('1970-01-01 00:00:00.000')
   })

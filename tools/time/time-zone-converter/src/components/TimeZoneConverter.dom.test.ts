@@ -104,6 +104,9 @@ describe('TimeZoneConverter', () => {
     storage.clear()
     timeZoneUtils.formatInTimeZone.mockClear()
     timeZoneUtils.parseDateTimeInput.mockClear()
+    timeZoneUtils.isTimeZoneSupported.mockImplementation(
+      (timeZone: string) => timeZone !== 'Bad/Zone',
+    )
   })
 
   afterEach(() => {
@@ -142,6 +145,51 @@ describe('TimeZoneConverter', () => {
 
     expect(getStorageValue('tools:time-zone-converter:to-timezone')).not.toBe('Bad/Zone')
     expect(inputs.props('toStatus')).toBeUndefined()
+  })
+
+  it('falls back to UTC when the resolved time zone is unsupported', () => {
+    setStorage('tools:time-zone-converter:from-input', '100')
+    setStorage('tools:time-zone-converter:to-input', '200')
+
+    const dateTimeFormatSpy = vi.spyOn(Intl, 'DateTimeFormat').mockImplementation(
+      () =>
+        ({
+          resolvedOptions: () => ({ timeZone: 'Bad/Zone' }),
+        }) as Intl.DateTimeFormat,
+    )
+
+    const wrapper = mountConverter()
+    const inputs = wrapper.findComponent({ name: 'TimeZoneConverterInputs' })
+
+    expect(inputs.props('fromTimeZone')).toBe('UTC')
+
+    dateTimeFormatSpy.mockRestore()
+  })
+
+  it('falls back target defaults and reports invalid source status for unsupported candidates', () => {
+    setStorage('tools:time-zone-converter:from-input', 'not-a-date')
+    setStorage('tools:time-zone-converter:to-input', '200')
+
+    const dateTimeFormatSpy = vi.spyOn(Intl, 'DateTimeFormat').mockImplementation(
+      () =>
+        ({
+          resolvedOptions: () => ({ timeZone: 'America/Los_Angeles' }),
+        }) as Intl.DateTimeFormat,
+    )
+
+    timeZoneUtils.isTimeZoneSupported.mockImplementation((timeZone: string) => {
+      if (timeZone === 'UTC') return false
+      return timeZone !== 'Bad/Zone'
+    })
+
+    const wrapper = mountConverter()
+    const inputs = wrapper.findComponent({ name: 'TimeZoneConverterInputs' })
+
+    expect(inputs.props('fromTimeZone')).toBe('America/Los_Angeles')
+    expect(inputs.props('toTimeZone')).toBe('UTC')
+    expect(inputs.props('fromStatus')).toBe('error')
+
+    dateTimeFormatSpy.mockRestore()
   })
 
   it('swaps inputs and time zones', async () => {

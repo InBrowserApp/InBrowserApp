@@ -15,7 +15,8 @@ vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
     emits: ['click'],
-    template: '<button class="n-button" @click="$emit(\'click\')"><slot /></button>',
+    template:
+      '<button class="n-button" @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   })
 
   const NFlex = defineComponent({
