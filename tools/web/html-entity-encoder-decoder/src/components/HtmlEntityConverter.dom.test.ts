@@ -4,6 +4,26 @@ import { nextTick } from 'vue'
 import HtmlEntityConverter from './HtmlEntityConverter.vue'
 import { decodeHtmlEntities, encodeHtmlEntities } from '../utils'
 
+vi.mock('vue', async () => {
+  const actual = await vi.importActual<typeof import('vue')>('vue')
+  type Watch = typeof actual.watch
+
+  const watchSync: Watch = (source: unknown, callback: unknown, options?: unknown) =>
+    actual.watch(
+      source as Parameters<Watch>[0],
+      callback as Parameters<Watch>[1],
+      {
+        ...(options ?? {}),
+        flush: 'sync',
+      } as Parameters<Watch>[2],
+    )
+
+  return {
+    ...actual,
+    watch: watchSync,
+  }
+})
+
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
