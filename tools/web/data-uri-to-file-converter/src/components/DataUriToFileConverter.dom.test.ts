@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount, type VueWrapper } from '@vue/test-utils'
 import DataUriDetailsSection from './DataUriDetailsSection.vue'
+import DataUriDownloadSection from './DataUriDownloadSection.vue'
 import DataUriPreviewSection from './DataUriPreviewSection.vue'
 import DataUriToFileConverter from './DataUriToFileConverter.vue'
 
@@ -32,6 +33,19 @@ describe('DataUriToFileConverter', () => {
     expect(input.element.value).toBe('data.txt')
   })
 
+  it('uses generated download names when the custom file name is blank', async () => {
+    const wrapper = mount(DataUriToFileConverter)
+
+    await setDataUri(wrapper, 'data:text/plain;base64,SGVsbG8=')
+
+    const input = getFileNameInput(wrapper)
+    await input.setValue('   ')
+    await flushPromises()
+
+    const download = wrapper.getComponent(DataUriDownloadSection)
+    expect(download.props('downloadName')).toBe('data.txt')
+  })
+
   it('preserves base name and updates extension when mime changes', async () => {
     const wrapper = mount(DataUriToFileConverter)
 
@@ -44,6 +58,20 @@ describe('DataUriToFileConverter', () => {
     await setDataUri(wrapper, 'data:application/json;base64,eyJvayI6dHJ1ZX0=')
 
     expect(input.element.value).toBe('my-file.json')
+  })
+
+  it('adds an extension when the current file name has no suffix', async () => {
+    const wrapper = mount(DataUriToFileConverter)
+
+    await setDataUri(wrapper, 'data:text/plain;base64,SGVsbG8=')
+
+    const input = getFileNameInput(wrapper)
+    await input.setValue('download')
+    await flushPromises()
+
+    await setDataUri(wrapper, 'data:application/json;base64,eyJvayI6dHJ1ZX0=')
+
+    expect(input.element.value).toBe('download.json')
   })
 
   it('keeps file name when extension matches', async () => {
@@ -68,6 +96,23 @@ describe('DataUriToFileConverter', () => {
 
     await setDataUri(wrapper, 'data:text/plain;base64SGVsbG8=')
     expect(wrapper.text()).toContain('Invalid Data URI')
+  })
+
+  it('keeps the existing name when parsing fails with non-empty input', async () => {
+    const wrapper = mount(DataUriToFileConverter)
+
+    await setDataUri(wrapper, 'data:application/json;base64,eyJvayI6dHJ1ZX0=')
+
+    const input = getFileNameInput(wrapper)
+    await input.setValue('archive.json')
+    await flushPromises()
+
+    await setDataUri(wrapper, 'data:text/plain;base64SGVsbG8=')
+    expect(wrapper.text()).toContain('Invalid Data URI')
+
+    await setDataUri(wrapper, 'data:text/plain;base64,SGVsbG8=')
+
+    expect(getFileNameInput(wrapper).element.value).toBe('archive.txt')
   })
 
   it('creates preview URLs for media and revokes previous URLs and on unmount', async () => {
@@ -116,6 +161,16 @@ describe('DataUriToFileConverter', () => {
 
     wrapper.unmount()
     expect(revokeSpy).toHaveBeenCalledWith(thirdPreviewUrl)
+  })
+
+  it('does not revoke object URLs on unmount when no preview URL was created', () => {
+    const revokeSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined)
+
+    const wrapper = mount(DataUriToFileConverter)
+
+    wrapper.unmount()
+
+    expect(revokeSpy).not.toHaveBeenCalled()
   })
 
   it('parses bare base64 metadata as text/plain with default charset', async () => {
