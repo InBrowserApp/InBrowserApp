@@ -159,6 +159,22 @@ describe('ConversionResults', () => {
     expect(wrapper.text()).toContain('(-30%)')
   })
 
+  it('keeps single download disabled when there is no single result blob', () => {
+    const wrapper = mount(ConversionResults, {
+      props: {
+        ...baseProps,
+        results: [],
+        zipBlob: null,
+        isZipping: false,
+      },
+    })
+
+    const singleLink = wrapper.find('a[download="image.webp"]')
+    expect(singleLink.exists()).toBe(true)
+    expect(singleLink.attributes('href')).toBeUndefined()
+    expect(singleLink.attributes('disabled')).toBeDefined()
+  })
+
   it('falls back to default download state when there are no results', () => {
     objectUrlState.mode = 'missing'
     const wrapper = mount(ConversionResults, {

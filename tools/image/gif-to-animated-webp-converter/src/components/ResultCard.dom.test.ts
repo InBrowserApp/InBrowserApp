@@ -102,6 +102,18 @@ describe('ResultCard', () => {
     expect(wrapper.text()).toContain('Saved: -size-300 (-30%)')
   })
 
+  it('keeps percent at 0 when the original file size is zero', () => {
+    const result = createResult('empty', 0, 120)
+    const wrapper = mount(ResultCard, {
+      props: {
+        ...baseProps,
+        result,
+      },
+    })
+
+    expect(wrapper.text()).toContain('Saved: -size-120 (-0%)')
+  })
+
   it('formats zero savings as 0 percent', () => {
     const result = createResult('same', 800, 800)
     const wrapper = mount(ResultCard, {

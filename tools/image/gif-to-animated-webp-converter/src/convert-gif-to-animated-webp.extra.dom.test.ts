@@ -166,6 +166,89 @@ describe('convertGifToAnimatedWebp extra branches', () => {
     expect(framesArg.frames[0]?.duration).toBe(100)
   })
 
+  it('uses frame dimensions when logical screen metadata is missing', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({})
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([255, 0, 0, 255]),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+      },
+    ])
+    encodeFramesMock.mockResolvedValue(new Uint8Array([1]))
+
+    await convertGifToAnimatedWebp(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+      },
+      'demo.webp',
+    )
+
+    const framesArg = encodeFramesMock.mock.calls[0]?.[0] as { width: number; height: number }
+    expect(framesArg.width).toBe(1)
+    expect(framesArg.height).toBe(1)
+  })
+
+  it('falls back to minimum dimensions before surfacing invalid frame errors', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({})
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([255, 0, 0, 255]),
+        delay: 10,
+      },
+    ])
+
+    await expect(
+      convertGifToAnimatedWebp(
+        file,
+        {
+          scale: 100,
+          speed: 1,
+          loopMode: 'inherit',
+          loopCount: undefined,
+        },
+        'demo.webp',
+      ),
+    ).rejects.toThrow('INVALID_FRAME')
+  })
+
+  it('defaults custom loop count to 1 when the provided value is not finite', async () => {
+    const file = createGifFile()
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 1, height: 1 } })
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([255, 0, 0, 255]),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 1,
+      },
+    ])
+    encodeFramesMock.mockResolvedValue(new Uint8Array([1]))
+
+    await convertGifToAnimatedWebp(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'custom',
+        loopCount: Number.NaN,
+      },
+      'demo.webp',
+    )
+
+    const framesArg = encodeFramesMock.mock.calls[0]?.[0] as { loopCount: number }
+    expect(framesArg.loopCount).toBe(1)
+  })
+
   it('restores disposal type 3 snapshots and skips transparent pixels', async () => {
     const file = createGifFile()
 

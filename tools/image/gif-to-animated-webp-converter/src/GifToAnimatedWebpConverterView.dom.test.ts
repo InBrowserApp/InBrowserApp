@@ -332,6 +332,31 @@ describe('GifToAnimatedWebpConverterView error branches', () => {
     expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
   })
 
+  it('stops before reporting errors when a stale run finishes with failures', async () => {
+    const wrapper = mountView()
+    const files = [createFile('first.gif'), createFile('second.gif')]
+    const secondDeferred = createDeferred<GifToAnimatedWebpResult>()
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockRejectedValueOnce(new Error('INVALID_GIF'))
+    mockedConvert.mockImplementationOnce(() => secondDeferred.promise)
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:speed', 1.5)
+    await flushPromises()
+
+    secondDeferred.reject(new Error('EMPTY_GIF'))
+    await flushPromises()
+
+    expect(messageMock.success).not.toHaveBeenCalled()
+    expect(messageMock.error).not.toHaveBeenCalled()
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+  })
+
   it('falls back to convertFailed when files.length is truthy but iterable is empty', async () => {
     const wrapper = mountView()
     const filesLike = {
