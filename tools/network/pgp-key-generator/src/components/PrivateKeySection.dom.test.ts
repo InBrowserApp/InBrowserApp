@@ -12,9 +12,13 @@ vi.mock('vue-i18n', async () => {
 })
 
 vi.mock('@vueuse/core', async () => {
-  const { computed } = await import('vue')
+  const { computed, isRef } = await import('vue')
   return {
-    useObjectUrl: () => computed(() => 'blob:private'),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:private' : null
+      }),
   }
 })
 
