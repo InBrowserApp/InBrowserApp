@@ -137,6 +137,21 @@ describe('useColorPickerTool', () => {
         toJSON: () => ({}),
       }) as DOMRect
     api.handleCanvasClick(new MouseEvent('click'))
+
+    canvas.getBoundingClientRect = () =>
+      ({
+        left: 0,
+        top: 0,
+        width: 100,
+        height: 50,
+        right: 100,
+        bottom: 50,
+        x: 0,
+        y: 0,
+        toJSON: () => ({}),
+      }) as DOMRect
+    context.getImageData.mockReturnValue({ data: new Uint8ClampedArray([]) })
+    api.handleCanvasClick(new MouseEvent('click', { clientX: 10, clientY: 10 }))
   })
 
   it('handles file inputs and drop zone events', () => {
@@ -190,12 +205,31 @@ describe('useColorPickerTool', () => {
     options.onEnter([], undefined)
 
     options.onDrop([null as unknown as File, file])
+    options.onDrop([new File(['text'], 'notes.txt', { type: 'text/plain' })])
+    options.onDrop(null)
+
+    api.handleFileChange({ target: null } as unknown as Event)
+
+    options.onOver([], { dataTransfer: { types: ['Files'] } } as unknown as DragEvent)
+    expect(api.dropOverlayActive).toBe(true)
 
     const itemsWithNull = [
       { kind: 'string', getAsFile: () => null },
       { kind: 'file', getAsFile: () => null },
     ] as unknown as DataTransferItemList
     expect(options.checkValidity(itemsWithNull)).toBe(true)
+
+    const imageFile = new File(['image'], 'pick.png', { type: 'image/png' })
+    const itemsWithImage = [
+      { kind: 'file', getAsFile: () => imageFile },
+    ] as unknown as DataTransferItemList
+    expect(options.checkValidity(itemsWithImage)).toBe(true)
+
+    const textFile = new File(['text'], 'notes.txt', { type: 'text/plain' })
+    const itemsWithTextFile = [
+      { kind: 'file', getAsFile: () => textFile },
+    ] as unknown as DataTransferItemList
+    expect(options.checkValidity(itemsWithTextFile)).toBe(false)
 
     const itemsNoFiles = [
       { kind: 'string', getAsFile: () => null },
@@ -211,6 +245,23 @@ describe('useColorPickerTool', () => {
       open = vi.fn().mockResolvedValue({ sRGBHex: '#zzzzzz' })
     }
     ;(globalThis as { EyeDropper?: unknown }).EyeDropper = BadEyeDropper
+
+    const wrapper = mountTool()
+    const api = (wrapper.vm.$ as unknown as { setupState: unknown }).setupState as unknown as {
+      handleScreenPick: () => Promise<void>
+      pickedSource: string | null
+    }
+
+    await api.handleScreenPick()
+
+    expect(api.pickedSource).toBeNull()
+  })
+
+  it('swallows non-abort eyedropper errors', async () => {
+    class BrokenEyeDropper {
+      open = vi.fn().mockRejectedValue(new Error('boom'))
+    }
+    ;(globalThis as { EyeDropper?: unknown }).EyeDropper = BrokenEyeDropper
 
     const wrapper = mountTool()
     const api = (wrapper.vm.$ as unknown as { setupState: unknown }).setupState as unknown as {
