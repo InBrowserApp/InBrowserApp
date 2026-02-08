@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
+import { defineComponent, h } from 'vue'
 import IPCIDRInput from './IPCIDRInput.vue'
 
 vi.mock('vue-i18n', async () => {
@@ -28,15 +28,24 @@ const NInputStub = defineComponent({
     '<input class="n-input" :value="value" :placeholder="placeholder" @input="$emit(\'update:value\', $event.target.value)" />',
 })
 
+let capturedRule: unknown
+
 const NFormItemStub = defineComponent({
   name: 'NFormItem',
   props: ['label', 'rule', 'showLabel'],
-  template: '<div class="form-item"><slot /></div>',
+  setup(props, { slots }) {
+    capturedRule = props.rule
+
+    return () => h('div', { class: 'form-item' }, slots.default ? slots.default() : [])
+  },
 })
 
 const stubs = {
   NInput: NInputStub,
   NFormItem: NFormItemStub,
+  FormItem: NFormItemStub,
+  'n-input': NInputStub,
+  'n-form-item': NFormItemStub,
 }
 
 describe('IPCIDRInput', () => {
@@ -68,5 +77,44 @@ describe('IPCIDRInput', () => {
     const events = wrapper.emitted('update:ipcidr')
     expect(events).toBeTruthy()
     expect(events?.[events.length - 1]).toEqual([''])
+  })
+
+  it('passes validation for valid cidr input', async () => {
+    capturedRule = undefined
+    const wrapper = mount(IPCIDRInput, {
+      global: {
+        stubs,
+      },
+    })
+
+    await wrapper.find('input').setValue('10.0.0.1/24')
+
+    const rule = capturedRule as { validator?: () => Error | undefined } | undefined
+    if (typeof rule?.validator !== 'function') {
+      throw new Error('Expected validation rule to be captured')
+    }
+
+    const result = rule.validator()
+    expect(result).toBeUndefined()
+  })
+
+  it('returns a validation error for invalid non-cidr input', async () => {
+    capturedRule = undefined
+    const wrapper = mount(IPCIDRInput, {
+      global: {
+        stubs,
+      },
+    })
+
+    await wrapper.find('input').setValue('not-an-ip')
+
+    const rule = capturedRule as { validator?: () => Error | undefined } | undefined
+    if (typeof rule?.validator !== 'function') {
+      throw new Error('Expected validation rule to be captured')
+    }
+
+    const result = rule.validator()
+    expect(result).toBeInstanceOf(Error)
+    expect(result?.message).toBe('error.invalid')
   })
 })
