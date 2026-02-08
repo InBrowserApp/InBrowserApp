@@ -62,6 +62,19 @@ describe('IPCIDRInput', () => {
     expect(events?.[0]).toEqual(['192.168.0.1'])
   })
 
+  it('falls back to an empty input when model starts as null', () => {
+    const wrapper = mount(IPCIDRInput, {
+      props: {
+        ipcidr: null as unknown as string,
+      },
+      global: {
+        stubs,
+      },
+    })
+
+    expect((wrapper.find('input').element as HTMLInputElement).value).toBe('')
+  })
+
   it('clears the model for invalid input', async () => {
     const wrapper = mount(IPCIDRInput, {
       props: {
