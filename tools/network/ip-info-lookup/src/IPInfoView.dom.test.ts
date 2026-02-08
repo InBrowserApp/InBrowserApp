@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
-import { defineComponent, h } from 'vue'
+import { defineComponent, h, nextTick, reactive } from 'vue'
 import IPInfoView from './IPInfoView.vue'
 
-const routeParams = { ipdomain: '8.8.8.8' }
+const routeParams = reactive({ ipdomain: '8.8.8.8' })
 const isIPMock = vi.fn()
 const getDomainIPsMock = vi.fn()
 
@@ -28,6 +28,7 @@ vi.mock('@vueuse/core', async () => {
     computedAsync: (getter: () => Promise<unknown>) => {
       const state = ref<unknown>(undefined)
       watchEffect(() => {
+        state.value = undefined
         void Promise.resolve(getter()).then((value) => {
           state.value = value
         })
@@ -189,6 +190,33 @@ describe('IPInfoView', () => {
     await flushPromises()
 
     expect(wrapper.find('.result').exists()).toBe(false)
+  })
+
+  it('resets expanded names while a domain lookup is pending', async () => {
+    routeParams.ipdomain = 'example.com'
+    isIPMock.mockReturnValue(false)
+    getDomainIPsMock.mockResolvedValueOnce(['1.1.1.1'])
+
+    const wrapper = mount(IPInfoView, {
+      global: {
+        stubs,
+      },
+    })
+
+    await flushPromises()
+
+    const collapse = wrapper.findComponent({ name: 'NCollapse' })
+    collapse.vm.$emit('update:expandedNames', ['1.1.1.1'])
+    await flushPromises()
+
+    getDomainIPsMock.mockReturnValueOnce(new Promise<string[]>(() => {}))
+    routeParams.ipdomain = 'pending.example'
+    await nextTick()
+    await flushPromises()
+
+    expect(getDomainIPsMock).toHaveBeenCalledWith('pending.example')
+    expect(wrapper.findAll('.collapse-item')).toHaveLength(0)
+    expect(wrapper.find('.ip-info').attributes('data-ip')).toBeUndefined()
   })
 
   it('shows an error when domain lookup fails', async () => {
