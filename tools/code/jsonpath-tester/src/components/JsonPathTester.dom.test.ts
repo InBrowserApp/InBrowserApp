@@ -54,6 +54,29 @@ describe('JsonPathTester', () => {
     expect(wrapper.text()).toContain('Invalid JSON')
   })
 
+  it('handles non-Error JSON parse failures', async () => {
+    const originalParse = JSON.parse
+    const parseSpy = vi
+      .spyOn(JSON, 'parse')
+      .mockImplementation((...args: Parameters<typeof JSON.parse>) => {
+        if (args[0] === '__boom__') {
+          throw 'boom'
+        }
+
+        return originalParse(...args)
+      })
+
+    const wrapper = mount(TestWrapper)
+    const jsonInput = getTextarea(wrapper, 0)
+
+    await jsonInput.setValue('__boom__')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Invalid JSON: boom')
+
+    parseSpy.mockRestore()
+  })
+
   it('shows an error when JSONPath is invalid', async () => {
     const wrapper = mount(TestWrapper)
     const queryInput = getTextarea(wrapper, 1)
