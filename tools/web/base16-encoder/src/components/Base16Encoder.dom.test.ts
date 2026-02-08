@@ -124,6 +124,32 @@ describe('Base16Encoder', () => {
     expect(wrapper.text()).not.toContain('Failed to read file')
   })
 
+  it('ignores stale file read rejections after newer input arrives', async () => {
+    let rejectSlow!: (reason?: unknown) => void
+
+    const slowFile = {
+      name: 'slow.bin',
+      arrayBuffer: () =>
+        new Promise<ArrayBuffer>((_resolve, reject) => {
+          rejectSlow = reject
+        }),
+    } as File
+
+    const wrapper = mount(Base16Encoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const textareas = wrapper.findAll('textarea')
+
+    await input.vm.$emit('update:value', slowFile)
+    await input.vm.$emit('update:value', 'new')
+    await flushPromises()
+
+    rejectSlow(new Error('stale'))
+    await flushPromises()
+
+    expect(textareas[textareas.length - 1]?.element.value).toBe('6E6577')
+    expect(wrapper.text()).not.toContain('Failed to read file')
+  })
+
   it('shows an error when file reading fails', async () => {
     const wrapper = mount(Base16Encoder, mountOptions)
     const input = wrapper.findComponent(TextOrFileInput)
