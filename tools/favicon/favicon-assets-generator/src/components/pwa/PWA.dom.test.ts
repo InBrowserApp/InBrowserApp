@@ -245,6 +245,62 @@ describe('PWA', () => {
   })
 })
 
+describe('PWA', () => {
+  it('forwards updates from both settings panels', async () => {
+    const PWAPreviewStub = {
+      name: 'PWAPreview',
+      props: ['image', 'options', 'generalInfoOptions'],
+      template: '<div class="preview" />',
+    }
+    const PWAMaskablePreviewStub = {
+      name: 'PWAMaskablePreview',
+      props: ['image', 'options', 'generalInfoOptions'],
+      template: '<div class="maskable-preview" />',
+    }
+    const PWASettingsStub = {
+      name: 'PWASettings',
+      props: ['image', 'options'],
+      emits: ['update:options'],
+      template: '<div class="settings" />',
+    }
+    const PWAMaskableSettingsStub = {
+      name: 'PWAMaskableSettings',
+      props: ['image', 'options'],
+      emits: ['update:options'],
+      template: '<div class="maskable-settings" />',
+    }
+
+    const options = { ...baseOptions }
+    const wrapper = mount(PWA, {
+      props: {
+        image: undefined,
+        generalInfoOptions,
+        options,
+      },
+      global: {
+        stubs: {
+          PWAPreview: PWAPreviewStub,
+          PWAMaskablePreview: PWAMaskablePreviewStub,
+          PWASettings: PWASettingsStub,
+          PWAMaskableSettings: PWAMaskableSettingsStub,
+          'i18n-t': {
+            template: '<span class="i18n-t"><slot name="any" /><slot name="maskable" /></span>',
+          },
+        },
+      },
+    })
+
+    const nextAnyOptions = { ...options, margin: 12 }
+    const nextMaskableOptions = { ...options, maskableMargin: 20 }
+
+    wrapper.findComponent(PWASettingsStub).vm.$emit('update:options', nextAnyOptions)
+    wrapper.findComponent(PWAMaskableSettingsStub).vm.$emit('update:options', nextMaskableOptions)
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([[nextAnyOptions], [nextMaskableOptions]])
+  })
+})
+
 describe('PWASettings', () => {
   it('renders settings panes with props', async () => {
     const PWASettingsDisplayStub = {

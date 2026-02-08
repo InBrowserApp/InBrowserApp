@@ -172,6 +172,41 @@ describe('IOSWebClip', () => {
     )
     expect(wrapper.findComponent(IOSWebClipSettingsStub).props('options')).toEqual(baseOptions)
   })
+
+  it('forwards settings updates through v-model', async () => {
+    const IOSWebClipPreviewStub = {
+      name: 'IOSWebClipPreview',
+      props: ['image', 'options', 'name'],
+      template: '<div class="preview" />',
+    }
+    const IOSWebClipSettingsStub = {
+      name: 'IOSWebClipSettings',
+      props: ['image', 'options'],
+      emits: ['update:options'],
+      template: '<div class="settings" />',
+    }
+
+    const options = { ...baseOptions }
+    const wrapper = mount(IOSWebClip, {
+      props: {
+        image: undefined,
+        generalInfoOptions,
+        options,
+      },
+      global: {
+        stubs: {
+          IOSWebClipPreview: IOSWebClipPreviewStub,
+          IOSWebClipSettings: IOSWebClipSettingsStub,
+        },
+      },
+    })
+
+    const nextOptions = { ...options, margin: 20 }
+    wrapper.findComponent(IOSWebClipSettingsStub).vm.$emit('update:options', nextOptions)
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([[nextOptions]])
+  })
 })
 
 describe('IOSWebClipSettings', () => {

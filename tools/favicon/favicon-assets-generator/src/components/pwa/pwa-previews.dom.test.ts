@@ -98,6 +98,23 @@ describe('PWAPreviewWindowsTaskbar', () => {
     expect(background.attributes('style')).toContain('--icon-background-color: #abcdef')
     expect(background.attributes('style')).toContain('--icon-background-radius: 10%')
   })
+
+  it('uses options image when provided', () => {
+    const optionsImage = new Blob(['options'], { type: 'image/png' })
+
+    const wrapper = mount(PWAPreviewWindowsTaskbar, {
+      props: {
+        image: undefined,
+        options: {
+          ...basePwaOptions,
+          image: optionsImage,
+        },
+      },
+    })
+
+    expect(wrapper.find('.n-skeleton').exists()).toBe(false)
+    expect(wrapper.find('img.icon').exists()).toBe(true)
+  })
 })
 
 describe('PWAPreview', () => {

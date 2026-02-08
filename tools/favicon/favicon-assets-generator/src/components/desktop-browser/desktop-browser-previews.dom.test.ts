@@ -154,6 +154,30 @@ describe('ChromeTabPreview', () => {
     expect(style).toContain('--chrome-tab-preview-tab-width: 120px')
     expect(style).toContain('--chrome-tab-preview-tab-height: 60px')
   })
+
+  it('falls back to the prop image when options image is missing', async () => {
+    const fallbackImage = new Blob(['fallback'], { type: 'image/png' })
+
+    const wrapper = mount(ChromeTabPreview, {
+      props: {
+        image: fallbackImage,
+        options: {
+          ...baseOptions,
+          image: undefined,
+        },
+        generalInfoOptions: baseGeneralInfo,
+        dark: false,
+      },
+      global: {
+        stubs: {
+          DesktopBrowserImage: DesktopBrowserImageStub,
+        },
+      },
+    })
+
+    const stubImage = wrapper.findComponent(DesktopBrowserImageStub).props('image') as Blob
+    await expect(stubImage.text()).resolves.toBe('fallback')
+  })
 })
 
 describe('DesktopBrowserPreview', () => {
@@ -258,5 +282,28 @@ describe('GoogleSearchResult', () => {
     const stubImage = wrapper.findComponent(DesktopBrowserImageStub).props('image') as Blob
     await expect(stubImage.text()).resolves.toBe('opt')
     expect(wrapper.text()).toContain('InBrowser App')
+  })
+
+  it('falls back to the prop image when options image is missing', async () => {
+    const propImage = new Blob(['prop'], { type: 'image/png' })
+
+    const wrapper = mount(GoogleSearchResult, {
+      props: {
+        image: propImage,
+        options: {
+          ...baseOptions,
+          image: undefined,
+        },
+        generalInfoOptions: baseGeneralInfo,
+      },
+      global: {
+        stubs: {
+          DesktopBrowserImage: DesktopBrowserImageStub,
+        },
+      },
+    })
+
+    const stubImage = wrapper.findComponent(DesktopBrowserImageStub).props('image') as Blob
+    await expect(stubImage.text()).resolves.toBe('prop')
   })
 })
