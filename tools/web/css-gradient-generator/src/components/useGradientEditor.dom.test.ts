@@ -26,7 +26,7 @@ vi.mock('@vueuse/core', async () => {
 
 import { nextTick } from 'vue'
 import { useGradientEditor } from './useGradientEditor'
-import { normalizeHexColor } from '../utils/gradient'
+import * as gradientUtils from '../utils/gradient'
 import { gradientPresets } from '../utils/presets'
 
 describe('useGradientEditor', () => {
@@ -110,7 +110,7 @@ describe('useGradientEditor', () => {
     expect(editor.activeStopId.value).toBeTruthy()
 
     editor.activeStopColor.value = '#fff'
-    expect(editor.activeStopColor.value).toBe(normalizeHexColor('#fff'))
+    expect(editor.activeStopColor.value).toBe(gradientUtils.normalizeHexColor('#fff'))
 
     editor.activeStopPosition.value = 150
     expect(editor.activeStopPosition.value).toBe(100)
@@ -133,6 +133,40 @@ describe('useGradientEditor', () => {
     layer.stops = layer.stops.slice(0, 2)
     editor.removeStop()
     expect(editor.showStopError.value).toBe(true)
+  })
+
+  it('falls back to safe stop selections and handles duplicate stop removal', () => {
+    const editor = useGradientEditor()
+    const layer = editor.layers.value[0]
+    if (!layer) {
+      throw new Error('Expected initial layer')
+    }
+
+    editor.activeStopId.value = 'missing-stop'
+    expect(editor.activeStopPosition.value).toBe(layer.stops[0]?.position ?? 0)
+
+    layer.stops = []
+    expect(editor.activeStopColor.value).toBe('#FFFFFFFF')
+
+    editor.activeStopPosition.value = 20
+    editor.handleAddStop(20)
+    expect(editor.activeStops.value.length).toBe(1)
+
+    editor.setActiveLayer('missing-layer')
+    expect(editor.activeStopId.value).toBeNull()
+
+    const duplicateId = 'duplicate-stop'
+    layer.stops = [
+      { id: duplicateId, color: '#000000FF', position: 0 },
+      { id: duplicateId, color: '#111111FF', position: 50 },
+      { id: duplicateId, color: '#222222FF', position: 100 },
+    ]
+    editor.activeStopId.value = duplicateId
+
+    editor.removeStop()
+
+    expect(layer.stops).toHaveLength(0)
+    expect(editor.activeStopId.value).toBeNull()
   })
 
   it('applies presets, randomizes, and loads JSON', () => {
@@ -160,10 +194,23 @@ describe('useGradientEditor', () => {
     editor.handleRandomizeAll()
     expect(editor.activeLayerId.value).toBe(editor.layers.value[0]?.id)
 
+    const emptyPreset = { ...preset, id: 'empty-preset-coverage', layers: [] }
+    editor.presets.push(emptyPreset)
+    editor.applyPreset(emptyPreset.id)
+    expect(editor.layers.value).toHaveLength(0)
+    editor.presets.pop()
+
+    const parseSpy = vi.spyOn(gradientUtils, 'parseGradientConfig').mockReturnValueOnce([])
+    editor.jsonInput.value = '{}'
+    editor.loadJson()
+    expect(editor.layers.value).toHaveLength(0)
+    parseSpy.mockRestore()
+
     editor.jsonInput.value = 'not-json'
     editor.loadJson()
     expect(editor.showJsonError.value).toBe(true)
 
+    editor.addLayer()
     editor.jsonInput.value = editor.serializedConfig.value
     editor.loadJson()
     expect(editor.showJsonError.value).toBe(false)
@@ -202,12 +249,17 @@ describe('useGradientEditor', () => {
     expect(editor.layerSize.value).toBe('farthest-corner')
     expect(editor.layerColorSpace.value).toBe('srgb')
     expect(editor.layerBlendMode.value).toBe('normal')
+    expect(editor.activeStops.value).toEqual([])
 
     editor.activeStopColor.value = '#123456'
+    editor.activeStopPosition.value = 35
     editor.activeStopPosition.value = null
     editor.layerType.value = 'conic'
+    editor.layerAngle.value = 180
     editor.layerAngle.value = null
+    editor.layerCenterX.value = 20
     editor.layerCenterX.value = null
+    editor.layerCenterY.value = 80
     editor.layerCenterY.value = null
     editor.layerShape.value = 'ellipse'
     editor.layerSize.value = 'closest-side'

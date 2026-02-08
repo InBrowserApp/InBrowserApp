@@ -82,10 +82,27 @@ describe('CssGradientExportPanel', () => {
     expect(wrapper.emitted('update:exportHeight')?.[0]).toEqual([400])
 
     widthInput.vm.$emit('update:value', null)
+    heightInput.vm.$emit('update:value', null)
     expect(wrapper.emitted('update:exportWidth')?.length).toBe(1)
+    expect(wrapper.emitted('update:exportHeight')?.length).toBe(1)
 
     await wrapper.get('[data-testid="download-png"]').trigger('click')
     expect(wrapper.emitted('download-png')).toBeTruthy()
     expect(wrapper.get('[data-testid="download-svg"]').attributes('href')).toBe('blob:svg')
+  })
+
+  it('omits the svg href when no export URL is available', () => {
+    const wrapper = mount(CssGradientExportPanel, {
+      props: {
+        exportWidth: 800,
+        exportHeight: 600,
+        pngUrl: 'blob:png',
+        svgUrl: undefined,
+        isExportingPng: false,
+        showError: false,
+      },
+    })
+
+    expect(wrapper.get('[data-testid="download-svg"]').attributes('href')).toBeUndefined()
   })
 })

@@ -246,6 +246,51 @@ describe('gradient utils', () => {
     randomSpy.mockRestore()
   })
 
+  it('covers corner radius branches and ignores unknown layer types', () => {
+    const ctx = createMockContext()
+    const layers: GradientLayer[] = [
+      createLayer({
+        type: 'linear',
+        angle: 90,
+        stops: [
+          { color: '#000000', position: 0 },
+          { color: '#FFFFFF', position: 100 },
+        ],
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'circle',
+        radialSize: 'farthest-corner',
+        centerX: 5,
+        centerY: 5,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'ellipse',
+        radialSize: 'closest-corner',
+        centerX: 90,
+        centerY: 90,
+      }),
+      createLayer({
+        type: 'radial',
+        radialShape: 'ellipse',
+        radialSize: 'farthest-corner',
+        centerX: 10,
+        centerY: 10,
+      }),
+      createLayer({
+        type: 'linear',
+        angle: 0,
+      }) as GradientLayer,
+    ]
+
+    layers[4].type = 'unknown' as GradientLayer['type']
+
+    expect(drawLayersToCanvas(ctx, layers, 300, 200)).toBe(true)
+    expect(ctx.createRadialGradient).toHaveBeenCalled()
+    expect(ctx.createLinearGradient).toHaveBeenCalled()
+  })
+
   it('draws side-sized radial layers and skips zero-radius rendering', () => {
     const ctx = createMockContext()
     const radialLayers: GradientLayer[] = [

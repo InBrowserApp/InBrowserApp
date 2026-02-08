@@ -125,6 +125,9 @@ describe('CssGradientStopsPanel', () => {
     const inputNumber = wrapper.findComponent({ name: 'NInputNumber' })
     inputNumber.vm.$emit('update:value', 25)
     expect(wrapper.emitted('update:stopPosition')?.[0]).toEqual([25])
+
+    inputNumber.vm.$emit('update:value', null)
+    expect(wrapper.emitted('update:stopPosition')?.length).toBe(1)
   })
 
   it('shows the error alert when requested', () => {
