@@ -251,6 +251,10 @@ describe('unescapeUnicode', () => {
       expect(unescapeUnicode('\\uD835\\uDD73')).toBe('𝕳')
     })
 
+    it('keeps high surrogates when the next escape is not a low surrogate', () => {
+      expect(unescapeUnicode('\\uD83D\\u0041')).toBe('\ud83dA')
+    })
+
     it('preserves regular text', () => {
       expect(unescapeUnicode('Hello World')).toBe('Hello World')
     })

@@ -152,6 +152,54 @@ describe('UnicodeConverter', () => {
     expect((plainInput.element as HTMLTextAreaElement).value).toBe(expectedPlain)
   })
 
+  it('skips escaped text updates when plain text sync is guarded', async () => {
+    const wrapper = mount(UnicodeConverter, {
+      global: {
+        stubs,
+      },
+    })
+
+    const inputs = wrapper.findAll('textarea.n-input')
+    const plainInput = inputs[0]!
+    const escapedInput = inputs[1]!
+    const vm = wrapper.vm as unknown as {
+      isUpdatingFromEscaped: boolean
+    }
+
+    expect(vm.isUpdatingFromEscaped).toBe(false)
+    const escapedBefore = (escapedInput.element as HTMLTextAreaElement).value
+
+    vm.isUpdatingFromEscaped = true
+    await plainInput.setValue('blocked update')
+    await nextTick()
+
+    expect((escapedInput.element as HTMLTextAreaElement).value).toBe(escapedBefore)
+  })
+
+  it('skips plain text updates when escaped text sync is guarded', async () => {
+    const wrapper = mount(UnicodeConverter, {
+      global: {
+        stubs,
+      },
+    })
+
+    const inputs = wrapper.findAll('textarea.n-input')
+    const plainInput = inputs[0]!
+    const escapedInput = inputs[1]!
+    const vm = wrapper.vm as unknown as {
+      isUpdatingFromPlain: boolean
+    }
+
+    expect(vm.isUpdatingFromPlain).toBe(false)
+    const plainBefore = (plainInput.element as HTMLTextAreaElement).value
+
+    vm.isUpdatingFromPlain = true
+    await escapedInput.setValue('\u4F60')
+    await nextTick()
+
+    expect((plainInput.element as HTMLTextAreaElement).value).toBe(plainBefore)
+  })
+
   it('updates escaped text when format changes', async () => {
     const wrapper = mount(UnicodeConverter, {
       global: {
