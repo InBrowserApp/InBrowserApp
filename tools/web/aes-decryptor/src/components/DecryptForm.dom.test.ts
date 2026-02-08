@@ -474,4 +474,25 @@ describe('DecryptForm', () => {
     const result = wrapper.find('.decrypt-result')
     expect(result.attributes('data-error')).toBe('decryptionFailed')
   })
+
+  it('surfaces native error messages when decryption throws an Error', async () => {
+    aesMocks.isJweFormat.mockReturnValue(false)
+    aesMocks.decryptWithPassword.mockRejectedValue(new Error('invalid auth tag'))
+
+    storage.set('tools:aes-decryptor:keyType', ref('password'))
+    storage.set('tools:aes-decryptor:password', ref('secret'))
+    storage.set('tools:aes-decryptor:mode', ref('GCM'))
+    storage.set('tools:aes-decryptor:keyLength', ref(256))
+    storage.set('tools:aes-decryptor:inputFormat', ref('base64'))
+
+    const wrapper = mountForm()
+    wrapper.findComponent(TextOrFileInputStub).vm.$emit('update:value', 'Zm9v')
+    await nextTick()
+
+    await wrapper.find('button.n-button').trigger('click')
+    await flushPromises()
+
+    const result = wrapper.find('.decrypt-result')
+    expect(result.attributes('data-error')).toBe('invalid auth tag')
+  })
 })

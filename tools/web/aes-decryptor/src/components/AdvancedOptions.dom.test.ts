@@ -43,7 +43,7 @@ vi.mock('naive-ui', async () => {
 })
 
 describe('AdvancedOptions', () => {
-  it('updates iterations when value is not null', async () => {
+  it('updates password advanced options through model events', async () => {
     const updateIterations = vi.fn()
     const updateHash = vi.fn()
 
@@ -68,6 +68,12 @@ describe('AdvancedOptions', () => {
     await nextTick()
 
     expect(updateIterations).toHaveBeenCalledWith(12000)
+
+    const hash = wrapper.findComponent({ name: 'NSelect' })
+    hash.vm.$emit('update:value', 'SHA-512')
+    await nextTick()
+
+    expect(updateHash).toHaveBeenCalledWith('SHA-512')
   })
 
   it('hides password-only fields when key type is raw', () => {
