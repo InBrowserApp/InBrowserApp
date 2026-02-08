@@ -97,6 +97,17 @@ function createResult(file: File, outputName: string): GifToAnimatedWebpResult {
   }
 }
 
+function createDeferred<T>() {
+  let resolve!: (value: T | PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((res, rej) => {
+    resolve = res
+    reject = rej
+  })
+
+  return { promise, resolve, reject }
+}
+
 function mountView() {
   return mount(GifToAnimatedWebpConverterView, {
     global: {
@@ -212,6 +223,130 @@ describe('GifToAnimatedWebpConverterView error branches', () => {
     await flushPromises()
 
     expect(messageMock.error).toHaveBeenLastCalledWith('Failed to convert GIFs. Please try again.')
+    expect(wrapper.text()).toContain('Failed to convert GIFs. Please try again.')
+  })
+
+  it('applies option updates and falls back to image.webp for extension-only names', async () => {
+    const wrapper = mountView()
+    const file = createFile('.gif')
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    const options = wrapper.findComponent(OptionsSectionStub)
+    options.vm.$emit('update:scale', 180)
+    options.vm.$emit('update:speed', 2)
+    options.vm.$emit('update:loopMode', 'custom')
+    options.vm.$emit('update:loopCount', 5)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(file, 'image.webp'))
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    expect(mockedConvert).toHaveBeenCalledWith(
+      file,
+      expect.objectContaining({
+        scale: 180,
+        speed: 2,
+        loopMode: 'custom',
+        loopCount: 5,
+      }),
+      'image.webp',
+    )
+  })
+
+  it('cancels an in-flight conversion when options change mid-run', async () => {
+    const wrapper = mountView()
+    const file = createFile('race.gif')
+    const deferred = createDeferred<GifToAnimatedWebpResult>()
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', [file])
+    await flushPromises()
+
+    mockedConvert.mockImplementationOnce(() => deferred.promise)
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:scale', 140)
+    await flushPromises()
+
+    deferred.resolve(createResult(file, 'race.webp'))
+    await flushPromises()
+
+    expect(messageMock.success).not.toHaveBeenCalled()
+    expect(messageMock.error).not.toHaveBeenCalled()
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+  })
+
+  it('abandons zip results when state changes before zip resolves', async () => {
+    const wrapper = mountView()
+    const files = [createFile('a.gif'), createFile('b.gif')]
+    const zipDeferred = createDeferred<Blob>()
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(files[0]!, 'a.webp'))
+    mockedConvert.mockResolvedValueOnce(createResult(files[1]!, 'b.webp'))
+    mockedZip.mockImplementationOnce(() => zipDeferred.promise)
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:speed', 1.5)
+    await flushPromises()
+
+    zipDeferred.resolve(new Blob(['zip']))
+    await flushPromises()
+
+    expect(messageMock.success).not.toHaveBeenCalled()
+    expect(messageMock.error).not.toHaveBeenCalledWith('Failed to create ZIP file.')
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+  })
+
+  it('abandons zip errors when state changes before zip rejection settles', async () => {
+    const wrapper = mountView()
+    const files = [createFile('c.gif'), createFile('d.gif')]
+    const zipDeferred = createDeferred<Blob>()
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', files)
+    await flushPromises()
+
+    mockedConvert.mockResolvedValueOnce(createResult(files[0]!, 'c.webp'))
+    mockedConvert.mockResolvedValueOnce(createResult(files[1]!, 'd.webp'))
+    mockedZip.mockImplementationOnce(() => zipDeferred.promise)
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    wrapper.findComponent(OptionsSectionStub).vm.$emit('update:loopMode', 'infinite')
+    await flushPromises()
+
+    zipDeferred.reject(new Error('zip failed'))
+    await flushPromises()
+
+    expect(messageMock.error).not.toHaveBeenCalledWith('Failed to create ZIP file.')
+    expect(wrapper.findComponent(ResultsSectionStub).exists()).toBe(false)
+  })
+
+  it('falls back to convertFailed when files.length is truthy but iterable is empty', async () => {
+    const wrapper = mountView()
+    const filesLike = {
+      length: 1,
+      *[Symbol.iterator]() {},
+    } as unknown as File[]
+
+    wrapper.findComponent(UploadSectionStub).vm.$emit('update:files', filesLike)
+    await flushPromises()
+
+    await wrapper.find('button.convert').trigger('click')
+    await flushPromises()
+
+    expect(mockedConvert).not.toHaveBeenCalled()
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to convert GIFs. Please try again.')
     expect(wrapper.text()).toContain('Failed to convert GIFs. Please try again.')
   })
 })

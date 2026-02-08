@@ -309,4 +309,37 @@ describe('convertGifToAnimatedWebp extra branches', () => {
     const framesArg = encodeFramesMock.mock.calls[0]?.[0] as { bgColor: number }
     expect(framesArg.bgColor).toBe(0)
   })
+
+  it('falls back to transparent background when the global color table is truncated', async () => {
+    const truncatedBackgroundBytes = new Uint8Array([
+      0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x87, 0x00, 0x00, 0xff, 0x00,
+      0x00,
+    ])
+    const file = createGifFileFromBytes(truncatedBackgroundBytes)
+
+    parseGIFMock.mockReturnValue({ lsd: { width: 1, height: 1 } })
+    decompressFramesMock.mockReturnValue([
+      {
+        patch: new Uint8ClampedArray([255, 0, 0, 255]),
+        dims: { top: 0, left: 0, width: 1, height: 1 },
+        delay: 10,
+        disposalType: 1,
+      },
+    ])
+    encodeFramesMock.mockResolvedValue(new Uint8Array([1]))
+
+    await convertGifToAnimatedWebp(
+      file,
+      {
+        scale: 100,
+        speed: 1,
+        loopMode: 'inherit',
+        loopCount: undefined,
+      },
+      'demo.webp',
+    )
+
+    const framesArg = encodeFramesMock.mock.calls[0]?.[0] as { bgColor: number }
+    expect(framesArg.bgColor).toBe(0)
+  })
 })

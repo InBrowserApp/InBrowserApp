@@ -7,10 +7,14 @@ const objectUrlState = vi.hoisted(() => ({
 }))
 
 vi.mock('@vueuse/core', async () => {
-  const { computed } = await import('vue')
+  const { computed, unref } = await import('vue')
 
   return {
-    useObjectUrl: () => computed(() => objectUrlState.value),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        void unref(source as unknown)
+        return objectUrlState.value
+      }),
   }
 })
 
