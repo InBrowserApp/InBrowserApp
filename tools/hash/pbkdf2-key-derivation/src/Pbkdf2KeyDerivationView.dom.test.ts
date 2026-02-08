@@ -151,6 +151,10 @@ describe('Pbkdf2KeyDerivationView', () => {
     await nextTick()
     expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-base64')
 
+    form.vm.$emit('update:salt', 'AQID')
+    await nextTick()
+    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('')
+
     form.vm.$emit('update:salt', new File(['data'], 'salt.bin'))
     await nextTick()
     expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('')
