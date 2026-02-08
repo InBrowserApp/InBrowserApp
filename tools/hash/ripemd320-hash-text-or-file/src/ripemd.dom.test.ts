@@ -52,4 +52,46 @@ describe('ripemd320 hashing', () => {
 
     expect(digest).toBe(expectedHex)
   })
+
+  it('exercises base hasher helper methods', () => {
+    const hasherProto = Object.getPrototypeOf(Object.getPrototypeOf(Ripemd.prototype))
+    const BaseHasher = hasherProto.constructor as new () => {
+      options: object
+      state: { message: string; length: number }
+      update: (message: string) => void
+      process: () => void
+      finalize: () => string
+      getStateHash: (size?: number) => string
+      addPaddingPKCS7: (length: number) => void
+      addPaddingZero: (length: number) => void
+    }
+
+    const hasher = new BaseHasher()
+    expect(hasher.options).toEqual({})
+
+    hasher.update('ab')
+    expect(hasher.state.length).toBe(2)
+    expect(hasher.finalize()).toBe('')
+    expect(hasher.getStateHash()).toBe('')
+
+    hasher.addPaddingPKCS7(2)
+    hasher.addPaddingZero(1)
+    expect(hasher.state.message).toBe('ab\x02\x02\x00')
+
+    const hasher32leProto = Object.getPrototypeOf(Ripemd.prototype)
+    const BaseHasher32le = hasher32leProto.constructor as new () => {
+      processBlock: (block: number[]) => void
+    }
+    const hasher32le = new BaseHasher32le()
+    expect(hasher32le.processBlock([0, 1, 2])).toBeUndefined()
+  })
+
+  it('uses default length and long-message finalize padding path', () => {
+    const hasher = new Ripemd(undefined)
+    hasher.update('a'.repeat(56))
+
+    const digest = hasher.finalize()
+
+    expect(toHexFromBinary(digest)).toHaveLength(40)
+  })
 })
