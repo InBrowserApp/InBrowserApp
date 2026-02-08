@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 
 const fileOpenMock = vi.fn()
+const objectUrlState = { value: 'blob:mock' as string | null }
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -13,7 +14,7 @@ vi.mock('@vueuse/core', async () => {
   return {
     ...actual,
     useObjectUrl: (source: unknown) => {
-      const url = ref('blob:mock')
+      const url = ref(objectUrlState.value)
       watchEffect(() => {
         if (isRef(source)) {
           return void source.value
@@ -68,6 +69,7 @@ describe('MarkdownToHtmlConverter', () => {
 
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlState.value = 'blob:mock'
     consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
   })
 
@@ -103,6 +105,15 @@ describe('MarkdownToHtmlConverter', () => {
 
     const html = getHtml(wrapper)
     expect(html).toContain('onerror')
+  })
+
+  it('omits the download href when object url is unavailable', () => {
+    objectUrlState.value = null
+
+    const wrapper = mount(MarkdownToHtmlConverter, mountOptions)
+    const link = wrapper.find('a[download="markdown.html"]')
+
+    expect(link.attributes('href')).toBeUndefined()
   })
 
   it('imports markdown from a file and updates the input', async () => {
