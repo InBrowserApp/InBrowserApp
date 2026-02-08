@@ -35,7 +35,7 @@ vi.mock('naive-ui', async () => {
 import IBANResultChecks from './IBANResultChecks.vue'
 
 describe('IBANResultChecks', () => {
-  it('renders expected and actual values with checksum state', () => {
+  it('renders expected and actual values with a failed checksum state', () => {
     const wrapper = mount(IBANResultChecks, {
       props: {
         expectedLength: '22',
@@ -54,5 +54,21 @@ describe('IBANResultChecks', () => {
     const tag = wrapper.get('.tag')
     expect(tag.attributes('data-type')).toBe('error')
     expect(wrapper.text()).toContain('fail')
+  })
+
+  it('renders a success checksum state', () => {
+    const wrapper = mount(IBANResultChecks, {
+      props: {
+        expectedLength: '22',
+        actualLength: 22,
+        isChecksumValid: true,
+        expectedCheckDigits: '29',
+        actualCheckDigits: '29',
+      },
+    })
+
+    const tag = wrapper.get('.tag')
+    expect(tag.attributes('data-type')).toBe('success')
+    expect(wrapper.text()).toContain('pass')
   })
 })

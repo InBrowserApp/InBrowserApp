@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref, type Ref } from 'vue'
+import { nextTick, ref, type Ref } from 'vue'
 import IBANValidatorView from './IBANValidatorView.vue'
 import * as toolInfo from './info'
 
@@ -40,6 +40,7 @@ vi.mock('./components/IBANInput.vue', async () => {
     default: defineComponent({
       name: 'IBANInput',
       props: ['modelValue', 'validationResult'],
+      emits: ['update:modelValue'],
       template: '<div class="iban-input" />',
     }),
   }
@@ -106,6 +107,20 @@ describe('IBANValidatorView', () => {
 
     const input = wrapper.findComponent({ name: 'IBANInput' })
     expect(input.props('validationResult')).toEqual(baseResult)
+  })
+
+  it('updates iban from the input model event and revalidates', async () => {
+    storage.set('tools:iban-validator:iban', ref('DE89'))
+
+    const wrapper = mount(IBANValidatorView)
+
+    expect(wrapper.find('.iban-result').exists()).toBe(true)
+
+    wrapper.findComponent({ name: 'IBANInput' }).vm.$emit('update:modelValue', '')
+    await nextTick()
+
+    expect(validateMock).toHaveBeenLastCalledWith('')
+    expect(wrapper.find('.iban-result').exists()).toBe(false)
   })
 
   it('hides result when iban is empty', () => {

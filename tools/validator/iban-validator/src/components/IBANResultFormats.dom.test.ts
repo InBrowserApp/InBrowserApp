@@ -62,4 +62,21 @@ describe('IBANResultFormats', () => {
     expect(copies[0]?.attributes('data-content')).toBe('GB29NWBK60161331926819')
     expect(copies[1]?.attributes('data-content')).toBe('NWBK60161331926819')
   })
+
+  it('renders only available raw values for copy buttons', () => {
+    const wrapper = mount(IBANResultFormats, {
+      props: {
+        normalized: 'GB29NWBK60161331926819',
+        normalizedRaw: null,
+        formatted: 'GB29 NWBK 6016 1331 9268 19',
+        formattedRaw: 'GB29 NWBK 6016 1331 9268 19',
+        bban: 'NWBK60161331926819',
+        bbanRaw: undefined,
+      },
+    })
+
+    const copies = wrapper.findAll('.copy')
+    expect(copies).toHaveLength(1)
+    expect(copies[0]?.attributes('data-content')).toBe('GB29 NWBK 6016 1331 9268 19')
+  })
 })

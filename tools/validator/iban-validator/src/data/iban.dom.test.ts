@@ -84,6 +84,15 @@ describe('validateIBAN', () => {
     expect(result.isValid).toBe(false)
   })
 
+  it('keeps country-aware structure checks when bban is missing', () => {
+    const result = validateIBAN('DE89')
+
+    expect(result.countryCode).toBe('DE')
+    expect(result.bban).toBeNull()
+    expect(result.isCountryValid).toBe(true)
+    expect(result.isStructureValid).toBe(false)
+  })
+
   it('builds structure regexes for all format tokens', () => {
     const mutableSpecs = IBAN_COUNTRY_SPECS as Record<
       string,
