@@ -144,7 +144,7 @@ describe('color input fields', () => {
     const onUpdate = vi.fn()
     const wrapper = mountInput(LchColorInput, { r: 0, g: 0, b: 0, a: 1 }, onUpdate)
 
-    await wrapper.find('input').setValue('lch(10, -1, 500)')
+    await wrapper.find('input').setValue('lch(120, 10, 500)')
     await nextTick()
 
     expect(wrapper.findComponent({ name: 'NInput' }).props('status')).toBe('error')
