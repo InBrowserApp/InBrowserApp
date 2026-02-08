@@ -24,10 +24,14 @@ vi.mock('@shared/ui/tool', () => ({
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
+  const { computed, isRef } = await import('vue')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:ios'),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:ios' : null
+      }),
   }
 })
 
@@ -171,15 +175,17 @@ describe('IOSWebClip', () => {
 })
 
 describe('IOSWebClipSettings', () => {
-  it('renders tab panes with settings components', () => {
+  it('renders tab panes with settings components', async () => {
     const IOSWebClipSettingsDisplayStub = {
       name: 'IOSWebClipSettingsDisplay',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="display" />',
     }
     const IOSWebClipSettingsDedicatedImageStub = {
       name: 'IOSWebClipSettingsDedicatedImage',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="dedicated" />',
     }
     const IOSWebClipSettingsDownloadStub = {
@@ -209,6 +215,23 @@ describe('IOSWebClipSettings', () => {
       options,
     )
     expect(wrapper.findComponent(IOSWebClipSettingsDownloadStub).props('image')).toBeUndefined()
+
+    const nextDisplayOptions = { ...options, margin: 20 }
+    const nextDedicatedOptions = { ...options, image: new Blob(['icon'], { type: 'image/png' }) }
+
+    wrapper
+      .findComponent(IOSWebClipSettingsDisplayStub)
+      .vm.$emit('update:options', nextDisplayOptions)
+    wrapper
+      .findComponent(IOSWebClipSettingsDedicatedImageStub)
+      .vm.$emit('update:options', nextDedicatedOptions)
+
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([
+      [nextDisplayOptions],
+      [nextDedicatedOptions],
+    ])
   })
 })
 

@@ -25,10 +25,14 @@ vi.mock('@shared/ui/tool', () => ({
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
+  const { computed, isRef } = await import('vue')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:dedicated'),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:dedicated' : null
+      }),
   }
 })
 
@@ -221,15 +225,17 @@ describe('DesktopBrowser', () => {
 })
 
 describe('DesktopBrowserSettings', () => {
-  it('renders tab panes with settings components', () => {
+  it('renders tab panes with settings components', async () => {
     const DesktopBrowserSettingsDisplayStub = {
       name: 'DesktopBrowserSettingsDisplay',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="display" />',
     }
     const DesktopBrowserSettingsDedicatedImageStub = {
       name: 'DesktopBrowserSettingsDedicatedImage',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="dedicated" />',
     }
     const DesktopBrowserSettingsDownloadStub = {
@@ -261,6 +267,23 @@ describe('DesktopBrowserSettings', () => {
       wrapper.findComponent(DesktopBrowserSettingsDedicatedImageStub).props('options'),
     ).toEqual(options)
     expect(wrapper.findComponent(DesktopBrowserSettingsDownloadStub).props('image')).toBeUndefined()
+
+    const nextDisplayOptions = { ...options, original: false }
+    const nextDedicatedOptions = { ...options, image: new Blob(['icon'], { type: 'image/png' }) }
+
+    wrapper
+      .findComponent(DesktopBrowserSettingsDisplayStub)
+      .vm.$emit('update:options', nextDisplayOptions)
+    wrapper
+      .findComponent(DesktopBrowserSettingsDedicatedImageStub)
+      .vm.$emit('update:options', nextDedicatedOptions)
+
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([
+      [nextDisplayOptions],
+      [nextDedicatedOptions],
+    ])
   })
 })
 

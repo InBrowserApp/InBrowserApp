@@ -30,10 +30,14 @@ vi.mock('@shared/ui/tool', () => ({
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  const { ref } = await import('vue')
+  const { computed, isRef } = await import('vue')
   return {
     ...actual,
-    useObjectUrl: () => ref('blob:pwa'),
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:pwa' : null
+      }),
   }
 })
 
@@ -242,15 +246,17 @@ describe('PWA', () => {
 })
 
 describe('PWASettings', () => {
-  it('renders settings panes with props', () => {
+  it('renders settings panes with props', async () => {
     const PWASettingsDisplayStub = {
       name: 'PWASettingsDisplay',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="display" />',
     }
     const PWASettingsDedicatedImageStub = {
       name: 'PWASettingsDedicatedImage',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="dedicated" />',
     }
     const PWASettingsDownloadStub = {
@@ -278,6 +284,21 @@ describe('PWASettings', () => {
     expect(wrapper.findComponent(PWASettingsDisplayStub).props('options')).toEqual(options)
     expect(wrapper.findComponent(PWASettingsDedicatedImageStub).props('options')).toEqual(options)
     expect(wrapper.findComponent(PWASettingsDownloadStub).props('image')).toBeUndefined()
+
+    const nextDisplayOptions = { ...options, margin: 18 }
+    const nextDedicatedOptions = { ...options, image: new Blob(['icon'], { type: 'image/png' }) }
+
+    wrapper.findComponent(PWASettingsDisplayStub).vm.$emit('update:options', nextDisplayOptions)
+    wrapper
+      .findComponent(PWASettingsDedicatedImageStub)
+      .vm.$emit('update:options', nextDedicatedOptions)
+
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([
+      [nextDisplayOptions],
+      [nextDedicatedOptions],
+    ])
   })
 })
 
@@ -359,15 +380,17 @@ describe('PWASettingsDedicatedImage', () => {
 })
 
 describe('PWAMaskableSettings', () => {
-  it('renders maskable settings panes', () => {
+  it('renders maskable settings panes', async () => {
     const PWAMaskableSettingsDisplayStub = {
       name: 'PWAMaskableSettingsDisplay',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="display" />',
     }
     const PWAMaskableSettingsDedicatedImageStub = {
       name: 'PWAMaskableSettingsDedicatedImage',
       props: ['options'],
+      emits: ['update:options'],
       template: '<div class="dedicated" />',
     }
     const PWAMaskableSettingsDownloadStub = {
@@ -396,6 +419,26 @@ describe('PWAMaskableSettings', () => {
     expect(wrapper.findComponent(PWAMaskableSettingsDedicatedImageStub).props('options')).toEqual(
       options,
     )
+
+    const nextDisplayOptions = { ...options, maskableMargin: 16 }
+    const nextDedicatedOptions = {
+      ...options,
+      maskableImage: new Blob(['icon'], { type: 'image/png' }),
+    }
+
+    wrapper
+      .findComponent(PWAMaskableSettingsDisplayStub)
+      .vm.$emit('update:options', nextDisplayOptions)
+    wrapper
+      .findComponent(PWAMaskableSettingsDedicatedImageStub)
+      .vm.$emit('update:options', nextDedicatedOptions)
+
+    await nextTick()
+
+    expect(wrapper.emitted('update:options')).toEqual([
+      [nextDisplayOptions],
+      [nextDedicatedOptions],
+    ])
   })
 })
 
