@@ -284,7 +284,7 @@ describe('gradient utils', () => {
       }) as GradientLayer,
     ]
 
-    layers[4].type = 'unknown' as GradientLayer['type']
+    layers[4]!.type = 'unknown' as GradientLayer['type']
 
     expect(drawLayersToCanvas(ctx, layers, 300, 200)).toBe(true)
     expect(ctx.createRadialGradient).toHaveBeenCalled()
