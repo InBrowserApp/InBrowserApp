@@ -64,6 +64,28 @@ describe('docker run option handlers', () => {
     })
   })
 
+  it('covers mount aliases and gpu/ulimit edge cases', () => {
+    const data = createParsedRun()
+    const warnings: string[] = []
+
+    applyMount('type=tmpfs,target=/runtime,tmpfs_size=32m', data, warnings)
+    applyMount('target=/readonly,readonly', data, warnings)
+
+    expect(data.tmpfs).toContain('/runtime:size=32m')
+    expect(data.volumes).toContain('/readonly:ro')
+
+    const weirdGpu = parseGpus('count=\\d')
+    expect(Number.isNaN(weirdGpu.count as number)).toBe(true)
+    expect(parseGpus('count=all,extra')).toEqual({ count: 'all' })
+
+    const ulimits: Record<string, { soft?: number; hard?: number } | number> = {}
+    applyUlimit('stack=10:bad', ulimits)
+    applyUlimit('nproc=bad', ulimits)
+
+    expect(ulimits.stack).toEqual({ soft: 10, hard: undefined })
+    expect('nproc' in ulimits).toBe(false)
+  })
+
   it('applies ulimit values', () => {
     const ulimits: Record<string, { soft?: number; hard?: number } | number> = {}
 

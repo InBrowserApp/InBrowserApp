@@ -23,7 +23,6 @@ describe('docker run volume normalization', () => {
 
     expect(normalizeVolumeEntry('C:\\data:/app:ro', volumeNames)).toBe('C:\\data:/app:ro')
   })
-
   it('keeps extra mode segments for non-windows paths', () => {
     const volumeNames = new Set<string>()
 

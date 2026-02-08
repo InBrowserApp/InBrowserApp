@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const storage = new Map<string, ReturnType<typeof import('vue').ref>>()
 const storageKey = 'tools:docker-run-to-compose:input'
+let objectUrlValue: string | null = 'blob:download'
 
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
@@ -17,7 +18,7 @@ vi.mock('@vueuse/core', async () => {
     },
     useObjectUrl: (source: { value: unknown }) => {
       void source.value
-      return ref('blob:download')
+      return ref(objectUrlValue)
     },
   }
 })
@@ -132,6 +133,7 @@ import DockerRunToCompose from './DockerRunToCompose.vue'
 describe('DockerRunToCompose', () => {
   beforeEach(() => {
     storage.clear()
+    objectUrlValue = 'blob:download'
   })
 
   it('renders output and download link', () => {
@@ -147,6 +149,14 @@ describe('DockerRunToCompose', () => {
 
     const copy = wrapper.get('[data-testid="copy"]')
     expect(copy.attributes('data-content')).toContain('converted:')
+  })
+
+  it('omits the download href when object url is unavailable', () => {
+    objectUrlValue = null
+
+    const wrapper = mount(DockerRunToCompose)
+
+    expect(wrapper.get('a').attributes('href')).toBeUndefined()
   })
 
   it('shows warning and error alerts', () => {
