@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import {
   isValidForBase,
   parseBase,
@@ -71,6 +71,38 @@ describe('parseBase and toBase', () => {
   it('should return null for invalid input', () => {
     expect(parseBase('', 10)).toBe(null)
     expect(parseBase('xyz', 10)).toBe(null)
+  })
+
+  it('should return null when map lookup misses a valid character', () => {
+    const originalGet = Map.prototype.get
+    const getSpy = vi.spyOn(Map.prototype, 'get').mockImplementation(function (
+      this: Map<string, number>,
+      key: string,
+    ) {
+      if (key === 'a') {
+        return undefined
+      }
+      return originalGet.call(this, key)
+    })
+
+    expect(parseBase('a', 11)).toBe(null)
+    getSpy.mockRestore()
+  })
+
+  it('should return null when BigInt throws in parseBase', () => {
+    const originalBigInt = globalThis.BigInt
+    globalThis.BigInt = ((value: unknown) => {
+      if (value === 10 || value === '10') {
+        throw new Error('forced')
+      }
+      return originalBigInt(value as bigint | boolean | number | string)
+    }) as unknown as typeof BigInt
+
+    try {
+      expect(parseBase('10', 10)).toBe(null)
+    } finally {
+      globalThis.BigInt = originalBigInt
+    }
   })
 
   it('should return empty string for invalid base in toBase', () => {
@@ -234,6 +266,24 @@ describe('parseHex', () => {
   it('should return null for invalid input', () => {
     expect(parseHex('')).toBe(null)
     expect(parseHex('gg')).toBe(null)
+  })
+})
+
+describe('parse helpers with BigInt failures', () => {
+  it('should return null when specific parse helpers hit BigInt errors', () => {
+    const originalBigInt = globalThis.BigInt
+    globalThis.BigInt = (() => {
+      throw new Error('forced')
+    }) as unknown as typeof BigInt
+
+    try {
+      expect(parseBinary('1')).toBe(null)
+      expect(parseOctal('7')).toBe(null)
+      expect(parseDecimal('42')).toBe(null)
+      expect(parseHex('ff')).toBe(null)
+    } finally {
+      globalThis.BigInt = originalBigInt
+    }
   })
 })
 
