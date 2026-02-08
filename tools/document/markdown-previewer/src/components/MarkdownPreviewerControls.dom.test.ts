@@ -1,13 +1,10 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { NRadioGroup, NSelect, NSwitch } from 'naive-ui'
 import { nextTick } from 'vue'
 import MarkdownPreviewerControls from './MarkdownPreviewerControls.vue'
 
 type ControlsVm = {
-  sanitize: boolean
-  showToc: boolean
-  viewMode: 'split' | 'preview'
-  theme: 'light' | 'dark'
   downloadHref?: string
   emitImport: () => void
   emitPrint: () => void
@@ -28,10 +25,13 @@ describe('MarkdownPreviewerControls', () => {
     const vm = wrapper.vm as unknown as ControlsVm
     expect(vm.downloadHref).toBeUndefined()
 
-    vm.sanitize = false
-    vm.showToc = false
-    vm.viewMode = 'preview'
-    vm.theme = 'dark'
+    const switches = wrapper.findAllComponents(NSwitch)
+    expect(switches).toHaveLength(2)
+
+    switches[0]!.vm.$emit('update:value', false)
+    switches[1]!.vm.$emit('update:value', false)
+    wrapper.findComponent(NRadioGroup).vm.$emit('update:value', 'preview')
+    wrapper.findComponent(NSelect).vm.$emit('update:value', 'dark')
     await nextTick()
 
     vm.emitImport()
