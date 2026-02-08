@@ -2,6 +2,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import ScreenRecorderController from './ScreenRecorderController.vue'
+import ScreenRecorderOutput from './ScreenRecorderOutput.vue'
+import ScreenRecorderSettings from './ScreenRecorderSettings.vue'
 
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
@@ -56,8 +58,10 @@ const createStream = ({ videoTracks = 1, audioTracks = 0 } = {}) => {
 
 class FakeMediaRecorder {
   static instances: FakeMediaRecorder[] = []
+  static constructorOptions: Array<MediaRecorderOptions | undefined> = []
   static isTypeSupported = vi.fn((type: string) => type === 'video/webm')
   static shouldThrow = false
+  static forceEmptyMimeType = false
 
   state: RecordingState = 'inactive'
   mimeType: string
@@ -71,7 +75,8 @@ class FakeMediaRecorder {
     if (FakeMediaRecorder.shouldThrow && options) {
       throw new Error('fail')
     }
-    this.mimeType = options?.mimeType ?? 'video/webm'
+    FakeMediaRecorder.constructorOptions.push(options)
+    this.mimeType = FakeMediaRecorder.forceEmptyMimeType ? '' : (options?.mimeType ?? 'video/webm')
     FakeMediaRecorder.instances.push(this)
   }
 
@@ -101,6 +106,7 @@ class FakeMediaRecorder {
 
 class FakeAudioContext {
   static instances: FakeAudioContext[] = []
+  static destinationAudioTracks = 1
   sources: Array<{ connect: () => void; disconnect: () => void }> = []
 
   constructor() {
@@ -108,7 +114,7 @@ class FakeAudioContext {
   }
 
   createMediaStreamDestination = vi.fn(() => ({
-    stream: createStream({ audioTracks: 1 }),
+    stream: createStream({ audioTracks: FakeAudioContext.destinationAudioTracks }),
   }))
 
   createMediaStreamSource = vi.fn(() => {
@@ -172,8 +178,13 @@ const mountController = () =>
 describe('ScreenRecorderController', () => {
   beforeEach(() => {
     FakeMediaRecorder.instances = []
+    FakeMediaRecorder.constructorOptions = []
     FakeMediaRecorder.shouldThrow = false
+    FakeMediaRecorder.forceEmptyMimeType = false
+    FakeMediaRecorder.isTypeSupported.mockReset()
+    FakeMediaRecorder.isTypeSupported.mockImplementation((type: string) => type === 'video/webm')
     FakeAudioContext.instances = []
+    FakeAudioContext.destinationAudioTracks = 1
     setMediaDevices({ getDisplayMedia: vi.fn(), getUserMedia: vi.fn() } as unknown as MediaDevices)
     vi.stubGlobal('MediaRecorder', FakeMediaRecorder)
     vi.stubGlobal('AudioContext', FakeAudioContext)
@@ -546,5 +557,126 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
 
     expect(FakeMediaRecorder.instances.length).toBe(1)
+  })
+
+  it('applies child v-model updates from settings and output components', async () => {
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      includeSystemAudio: boolean
+      includeMicrophone: boolean
+      fileName: string
+      recordingBlob: Blob | null
+    }
+
+    vm.recordingBlob = new Blob(['data'], { type: 'video/webm' })
+    await wrapper.vm.$nextTick()
+
+    const settings = wrapper.findComponent(ScreenRecorderSettings)
+    settings.vm.$emit('update:includeSystemAudio', false)
+    settings.vm.$emit('update:includeMicrophone', true)
+
+    const output = wrapper.findComponent(ScreenRecorderOutput)
+    output.vm.$emit('update:fileName', 'renamed-recording')
+    await wrapper.vm.$nextTick()
+
+    expect(vm.includeSystemAudio).toBe(false)
+    expect(vm.includeMicrophone).toBe(true)
+    expect(vm.fileName).toBe('renamed-recording')
+  })
+
+  it('falls back to undefined recorder options and mime placeholders', async () => {
+    const display = createStream({ videoTracks: 1, audioTracks: 1 })
+    const getDisplayMedia = vi.fn().mockResolvedValue(display)
+    setMediaDevices({ getDisplayMedia, getUserMedia: vi.fn() } as unknown as MediaDevices)
+
+    FakeMediaRecorder.isTypeSupported.mockReturnValue(false)
+    FakeMediaRecorder.forceEmptyMimeType = true
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      stopRecording: () => void
+      mimeType: string
+    }
+
+    await vm.startRecording()
+
+    const recorder = FakeMediaRecorder.instances[0]
+    if (!recorder) throw new Error('Missing media recorder')
+    recorder.ondataavailable?.({ data: new Blob([]) } as BlobEvent)
+    vm.stopRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(FakeMediaRecorder.constructorOptions[0]).toBeUndefined()
+    expect(vm.mimeType).toBe('')
+  })
+
+  it('uses supported mime type when recorder mime type is empty', async () => {
+    const display = createStream({ videoTracks: 1, audioTracks: 1 })
+    const getDisplayMedia = vi.fn().mockResolvedValue(display)
+    setMediaDevices({ getDisplayMedia, getUserMedia: vi.fn() } as unknown as MediaDevices)
+
+    FakeMediaRecorder.forceEmptyMimeType = true
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      mimeType: string
+    }
+
+    await vm.startRecording()
+
+    expect(vm.mimeType).toBe('video/webm')
+  })
+
+  it('handles streams without video tracks and with no mixed audio output', async () => {
+    const display = createStream({ videoTracks: 0, audioTracks: 1 })
+    const mic = createStream({ videoTracks: 0, audioTracks: 1 })
+    const getDisplayMedia = vi.fn().mockResolvedValue(display)
+    const getUserMedia = vi.fn().mockResolvedValue(mic)
+    setMediaDevices({ getDisplayMedia, getUserMedia } as unknown as MediaDevices)
+
+    FakeAudioContext.destinationAudioTracks = 0
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      includeMicrophone: boolean
+      startRecording: () => Promise<void>
+      stopRecording: () => void
+      errorMessage: string
+    }
+
+    vm.includeMicrophone = true
+    await wrapper.vm.$nextTick()
+
+    await vm.startRecording()
+    vm.stopRecording()
+    await wrapper.vm.$nextTick()
+
+    expect(vm.errorMessage).toBe('')
+    expect(FakeAudioContext.instances.length).toBe(1)
+  })
+
+  it('exposes file sizes and cleans up active streams on unmount', async () => {
+    const display = createStream({ videoTracks: 1, audioTracks: 0 })
+    const getDisplayMedia = vi.fn().mockResolvedValue(display)
+    setMediaDevices({ getDisplayMedia, getUserMedia: vi.fn() } as unknown as MediaDevices)
+
+    const wrapper = mountController()
+    const vm = wrapper.vm as unknown as {
+      startRecording: () => Promise<void>
+      recordingBlob: Blob | null
+      fileSizeLabel: string
+    }
+
+    vm.recordingBlob = new Blob(['1234'], { type: 'video/webm' })
+    await wrapper.vm.$nextTick()
+
+    expect(vm.fileSizeLabel).toBe('4 B')
+
+    await vm.startRecording()
+    wrapper.unmount()
+
+    expect(display.getTracks().every((track) => track.stop.mock.calls.length > 0)).toBe(true)
   })
 })
