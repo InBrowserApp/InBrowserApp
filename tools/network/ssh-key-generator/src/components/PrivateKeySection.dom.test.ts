@@ -14,7 +14,8 @@ vi.mock('vue-i18n', async () => {
 vi.mock('@vueuse/core', async () => {
   const { computed } = await import('vue')
   return {
-    useObjectUrl: () => computed(() => 'blob:private'),
+    useObjectUrl: (source: { value: Blob }) =>
+      computed(() => (source.value ? 'blob:private' : null)),
   }
 })
 

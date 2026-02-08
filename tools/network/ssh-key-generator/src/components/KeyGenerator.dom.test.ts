@@ -164,4 +164,22 @@ describe('KeyGenerator', () => {
     expect(wrapper.text()).toContain('boom')
     expect(wrapper.findComponent(KeyOutputStub).exists()).toBe(false)
   })
+
+  it('stringifies non-error failures', async () => {
+    generateSshKeyPairMock.mockRejectedValueOnce('boom-string')
+
+    const wrapper = mount(KeyGenerator, {
+      global: {
+        stubs: {
+          KeyOptions: KeyOptionsStub,
+          KeyOutput: KeyOutputStub,
+        },
+      },
+    })
+
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('boom-string')
+    expect(wrapper.findComponent(KeyOutputStub).exists()).toBe(false)
+  })
 })

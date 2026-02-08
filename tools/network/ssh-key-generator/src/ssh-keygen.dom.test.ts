@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, afterAll } from 'vitest'
+import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest'
 import { execSync } from 'node:child_process'
 import { writeFileSync, unlinkSync, mkdtempSync, rmSync, chmodSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -63,6 +63,40 @@ describe('SSH Key Generator', () => {
         expect(keyPair.fingerprint).toMatch(/^SHA256:/)
       }, 30000) // RSA key generation can be slow
     })
+
+    it('should generate an RSA key without comment and leading-zero JWK fields', async () => {
+      const generateKeySpy = vi.spyOn(crypto.subtle, 'generateKey')
+      const exportKeySpy = vi.spyOn(crypto.subtle, 'exportKey')
+
+      generateKeySpy.mockResolvedValue({
+        publicKey: {} as CryptoKey,
+        privateKey: {} as CryptoKey,
+      } as CryptoKeyPair)
+      exportKeySpy
+        .mockResolvedValueOnce({
+          n: 'AAECAw',
+          e: 'AQAB',
+        } as JsonWebKey)
+        .mockResolvedValueOnce({
+          d: 'AAECAw',
+          p: 'AAE',
+          q: 'AAI',
+          qi: 'AAM',
+        } as JsonWebKey)
+
+      try {
+        const keyPair = await generateSshKeyPair('rsa', '', 2048)
+
+        expect(keyPair.publicKey).toMatch(/^ssh-rsa AAAA/)
+        expect(keyPair.publicKey.trim().split(' ')).toHaveLength(2)
+        expect(keyPair.privateKey).toContain('-----BEGIN OPENSSH PRIVATE KEY-----')
+        expect(keyPair.privateKey).toContain('-----END OPENSSH PRIVATE KEY-----')
+        expect(keyPair.fingerprint).toMatch(/^SHA256:/)
+      } finally {
+        generateKeySpy.mockRestore()
+        exportKeySpy.mockRestore()
+      }
+    })
   })
 
   describe('Fingerprint Calculation', () => {
@@ -73,6 +107,12 @@ describe('SSH Key Generator', () => {
 
       expect(fingerprint1).toBe(fingerprint2)
       expect(fingerprint1).toBe(keyPair.fingerprint)
+    })
+
+    it('throws on invalid public key format', async () => {
+      await expect(calculateFingerprint('invalid-public-key')).rejects.toThrow(
+        'Invalid public key format',
+      )
     })
   })
 })
