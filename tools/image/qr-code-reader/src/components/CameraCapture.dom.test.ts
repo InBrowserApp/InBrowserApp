@@ -175,6 +175,30 @@ describe('CameraCapture', () => {
     expect(vm.permissionDenied).toBe(false)
   })
 
+  it('stops gracefully when there is no active media stream', async () => {
+    const wrapper = mount(CameraCapture)
+    const vm = wrapper.vm as unknown as {
+      stopCamera: () => void
+      isScanning: boolean
+      videoRef: HTMLVideoElement | undefined
+    }
+    const video = wrapper.find('video').element as HTMLVideoElement
+
+    Object.defineProperty(video, 'srcObject', {
+      value: null,
+      writable: true,
+    })
+
+    vm.videoRef = video
+    vm.isScanning = true
+
+    vm.stopCamera()
+
+    expect(vm.isScanning).toBe(false)
+    expect(cancelAnimationFrameMock).not.toHaveBeenCalled()
+    expect(video.srcObject).toBeNull()
+  })
+
   it('cancels animation frames and stops tracks when scanning is stopped', async () => {
     const trackStop = vi.fn()
     const stream = { getTracks: () => [{ stop: trackStop }] } as unknown as MediaStream

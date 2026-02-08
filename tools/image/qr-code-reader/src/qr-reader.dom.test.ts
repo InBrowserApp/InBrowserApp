@@ -54,6 +54,17 @@ describe('qr-reader', () => {
     expect(readQRFromVideo(video, canvas)).toBe(null)
   })
 
+  it('returns null when the video height is zero', () => {
+    const video = document.createElement('video')
+    Object.defineProperty(video, 'videoWidth', { value: 120 })
+    Object.defineProperty(video, 'videoHeight', { value: 0 })
+
+    const canvas = document.createElement('canvas')
+
+    expect(readQRFromVideo(video, canvas)).toBe(null)
+    expect(jsQRMock).not.toHaveBeenCalled()
+  })
+
   it('reads QR data from a video frame', () => {
     const video = document.createElement('video')
     Object.defineProperty(video, 'videoWidth', { value: 120 })
@@ -72,6 +83,26 @@ describe('qr-reader', () => {
     jsQRMock.mockReturnValue(mockQRCode)
 
     expect(readQRFromVideo(video, canvas)).toBe('decoded')
+  })
+
+  it('returns null when no QR code is detected in a video frame', () => {
+    const video = document.createElement('video')
+    Object.defineProperty(video, 'videoWidth', { value: 120 })
+    Object.defineProperty(video, 'videoHeight', { value: 80 })
+
+    const canvas = document.createElement('canvas')
+    getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      drawImage: vi.fn(),
+      getImageData: () => ({
+        data: new Uint8ClampedArray([1, 2, 3, 4]),
+        width: 1,
+        height: 1,
+      }),
+    } as unknown as CanvasRenderingContext2D)
+
+    jsQRMock.mockReturnValue(null)
+
+    expect(readQRFromVideo(video, canvas)).toBe(null)
   })
 
   it('returns null when canvas context is unavailable for video', () => {
@@ -126,6 +157,47 @@ describe('qr-reader', () => {
     await expect(readQRFromFile(file)).resolves.toBe('decoded')
 
     expect(createObjectURL).toHaveBeenCalledWith(file)
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock')
+  })
+
+  it('returns null when no QR code is detected in a file image', async () => {
+    class ImmediateImage {
+      onload: null | (() => void) = null
+      onerror: null | (() => void) = null
+      width = 100
+      height = 80
+
+      set src(_value: string) {
+        this.onload?.()
+      }
+    }
+
+    globalThis.Image = ImmediateImage as typeof Image
+
+    const createObjectURL = vi.fn(() => 'blob:mock')
+    const revokeObjectURL = vi.fn()
+    Object.defineProperty(globalThis.URL, 'createObjectURL', {
+      value: createObjectURL,
+      writable: true,
+    })
+    Object.defineProperty(globalThis.URL, 'revokeObjectURL', {
+      value: revokeObjectURL,
+      writable: true,
+    })
+
+    getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      drawImage: vi.fn(),
+      getImageData: () => ({
+        data: new Uint8ClampedArray([1, 2, 3, 4]),
+        width: 1,
+        height: 1,
+      }),
+    } as unknown as CanvasRenderingContext2D)
+
+    jsQRMock.mockReturnValue(null)
+
+    const file = new File(['data'], 'qr.png', { type: 'image/png' })
+    await expect(readQRFromFile(file)).resolves.toBe(null)
     expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock')
   })
 
