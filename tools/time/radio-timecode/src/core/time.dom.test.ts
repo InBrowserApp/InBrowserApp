@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
   getDayOfYear,
   getDstStatusForUtcDay,
@@ -15,6 +15,33 @@ describe('time helpers', () => {
     expect(getDayOfYear(2024, 2, 29)).toBe(60)
   })
 
+  it('handles non-leap years and out-of-range months defensively', () => {
+    expect(getDayOfYear(2023, 3, 1)).toBe(60)
+    expect(getDayOfYear(2024, 13, 1)).toBe(367)
+  })
+
+  it('falls back to zeros when Intl parts are missing', () => {
+    const formatterSpy = vi
+      .spyOn(Intl, 'DateTimeFormat')
+      .mockImplementation(function DateTimeFormatMock() {
+        return {
+          formatToParts: () => [],
+        } as unknown as Intl.DateTimeFormat
+      } as unknown as typeof Intl.DateTimeFormat)
+
+    try {
+      const date = new Date(Date.UTC(2024, 0, 1, 12, 34, 56))
+      const offset = getTimeZoneOffsetMinutes(date, 'UTC')
+      const parts = getTimeParts(date, 'UTC')
+
+      expect(Number.isFinite(offset)).toBe(true)
+      expect(parts.year).toBe(0)
+      expect(parts.month).toBe(0)
+      expect(parts.day).toBe(0)
+    } finally {
+      formatterSpy.mockRestore()
+    }
+  })
   it('reads UTC time parts', () => {
     const date = new Date(Date.UTC(2024, 0, 1, 12, 34, 56))
     const parts = getTimeParts(date, 'UTC')

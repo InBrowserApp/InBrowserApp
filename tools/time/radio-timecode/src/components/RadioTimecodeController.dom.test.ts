@@ -275,6 +275,93 @@ describe('RadioTimecodeController', () => {
     expect(startMock).not.toHaveBeenCalled()
   })
 
+  it('uses webkitAudioContext as a fallback', async () => {
+    const webkitAudioContext = vi.fn()
+    delete (window as unknown as { AudioContext?: unknown }).AudioContext
+    ;(window as unknown as { webkitAudioContext?: unknown }).webkitAudioContext = webkitAudioContext
+
+    const wrapper = mountController()
+    await wrapper.get('[data-testid="start"]').trigger('click')
+    await flushPromises()
+
+    expect(startMock).toHaveBeenCalledTimes(1)
+    expect(webkitAudioContext).toHaveBeenCalled()
+  })
+
+  it('skips reactive restart and volume updates while stopped', async () => {
+    const wrapper = mountController()
+
+    await wrapper.get('[data-testid="volume"]').trigger('click')
+    await wrapper.get('[data-testid="offset"]').trigger('click')
+
+    const setupState = (wrapper.vm.$ as unknown as { setupState: { stationId: string } }).setupState
+    setupState.stationId = 'unknown-station'
+    await flushPromises()
+
+    await wrapper.get('[data-testid="start"]').trigger('click')
+    await flushPromises()
+
+    expect(setVolumeMock).not.toHaveBeenCalled()
+    expect(startMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        station: expect.objectContaining({ id: 'jjy-40' }),
+      }),
+    )
+  })
+
+  it('ignores stale start resolution after stop', async () => {
+    let resolveStart: (() => void) | undefined
+    startMock.mockImplementationOnce(
+      () =>
+        new Promise<void>((resolve) => {
+          resolveStart = resolve
+        }),
+    )
+
+    const wrapper = mountController()
+    await wrapper.get('[data-testid="start"]').trigger('click')
+    await wrapper.get('[data-testid="stop"]').trigger('click')
+
+    resolveStart?.()
+    await flushPromises()
+
+    expect(wrapper.get('[data-testid="controls"]').attributes('data-playing')).toBe('false')
+  })
+
+  it('ignores stale start failures after stop', async () => {
+    let rejectStart: ((reason?: unknown) => void) | undefined
+    startMock.mockImplementationOnce(
+      () =>
+        new Promise<void>((_resolve, reject) => {
+          rejectStart = reject
+        }),
+    )
+
+    const wrapper = mountController()
+    await wrapper.get('[data-testid="start"]').trigger('click')
+    await wrapper.get('[data-testid="stop"]').trigger('click')
+
+    rejectStart?.(new Error('late failure'))
+    await flushPromises()
+
+    expect(wrapper.get('[data-testid="controls"]').attributes('data-error')).toBe('false')
+  })
+
+  it('does not clear interval when no timer id was created', () => {
+    const clearSpy = vi.spyOn(window, 'clearInterval')
+    const setIntervalSpy = vi
+      .spyOn(window, 'setInterval')
+      .mockReturnValueOnce(null as unknown as ReturnType<typeof setInterval>)
+
+    const wrapper = mountController()
+    wrapper.unmount()
+
+    expect(clearSpy).not.toHaveBeenCalled()
+
+    setIntervalSpy.mockRestore()
+    clearSpy.mockRestore()
+  })
+
   it('flags start errors and stops the engine', async () => {
     startMock.mockRejectedValueOnce(new Error('nope'))
 

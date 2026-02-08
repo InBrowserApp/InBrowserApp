@@ -134,5 +134,9 @@ describe('radio timecode encoder branch coverage', () => {
 
     timeMocks.getTimeParts.mockReturnValue(makeParts({ second: 58 }))
     expect(wwvbSignalForSecond(new Date()).symbol).toBe('1')
+
+    timeMocks.isLeapYear.mockReturnValue(false)
+    timeMocks.getTimeParts.mockReturnValue(makeParts({ year: 2023, second: 55 }))
+    expect(wwvbSignalForSecond(new Date()).symbol).toBe('0')
   })
 })
