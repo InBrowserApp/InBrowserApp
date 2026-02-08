@@ -137,6 +137,19 @@ describe('cron components', () => {
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
+  it('treats blank cron input as invalid without a custom error', () => {
+    const wrapper = mount(CronInput, {
+      props: {
+        expression: '',
+      },
+    })
+
+    expect(wrapper.text()).toContain('invalid')
+    expect(wrapper.text()).not.toContain('Invalid expression')
+    expect(wrapper.find('[data-testid="copy"]').exists()).toBe(false)
+    expect(wrapper.get('input').attributes('data-status')).toBe('error')
+  })
+
   it('renders explanation text and field table', () => {
     const wrapper = mount(CronExplanation, {
       props: {
