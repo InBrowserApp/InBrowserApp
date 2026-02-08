@@ -29,6 +29,16 @@ const mountOptions = {
   },
 }
 
+function createDeferred<T>() {
+  let resolve!: (value: T) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((res, rej) => {
+    resolve = res
+    reject = rej
+  })
+  return { promise, resolve, reject }
+}
+
 describe('Base32Decoder', () => {
   beforeEach(() => {
     localStorage.clear()
@@ -119,6 +129,63 @@ describe('Base32Decoder', () => {
     const file = new File(['MZXW6==='], '.b32', { type: 'text/plain' })
 
     await input.vm.$emit('update:value', file)
+    await flushPromises()
+
+    const link = wrapper.find('a[download]')
+    expect(link.attributes('download')).toBe('decoded.bin')
+  })
+
+  it('ignores stale successful file reads', async () => {
+    const wrapper = mount(Base32Decoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const staleRead = createDeferred<string>()
+    const staleFile = {
+      name: 'stale.b32',
+      text: vi.fn(() => staleRead.promise),
+    } as unknown as File
+    const latest = encodeBase32(new TextEncoder().encode('latest'))
+
+    await input.vm.$emit('update:value', staleFile)
+    await input.vm.$emit('update:value', latest)
+    await flushPromises()
+
+    staleRead.resolve('MZXW6===')
+    await flushPromises()
+
+    const textareas = wrapper.findAll('textarea')
+    expect(textareas[textareas.length - 1]?.element.value).toBe('latest')
+  })
+
+  it('ignores stale file-read errors', async () => {
+    const wrapper = mount(Base32Decoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const staleRead = createDeferred<string>()
+    const staleFile = {
+      name: 'stale-error.b32',
+      text: vi.fn(() => staleRead.promise),
+    } as unknown as File
+    const latest = encodeBase32(new TextEncoder().encode('latest'))
+
+    await input.vm.$emit('update:value', staleFile)
+    await input.vm.$emit('update:value', latest)
+    await flushPromises()
+
+    staleRead.reject(new Error('stale read failed'))
+    await flushPromises()
+
+    const textareas = wrapper.findAll('textarea')
+    expect(textareas[textareas.length - 1]?.element.value).toBe('latest')
+    expect(wrapper.text()).not.toContain('Failed to read file')
+  })
+
+  it('falls back to decoded.bin when file-like input has no name', async () => {
+    const wrapper = mount(Base32Decoder, mountOptions)
+    const input = wrapper.findComponent(TextOrFileInput)
+    const nameless = {
+      text: async () => 'MZXW6===',
+    } as unknown as File
+
+    await input.vm.$emit('update:value', nameless)
     await flushPromises()
 
     const link = wrapper.find('a[download]')
