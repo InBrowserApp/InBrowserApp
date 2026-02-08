@@ -102,4 +102,17 @@ describe('Base64Converter', () => {
     expect(wrapper.text()).toContain('invalid-base64')
     expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('Hello')
   })
+
+  it('treats empty base64 input as valid and clears decoded text', async () => {
+    const wrapper = mount(Base64Converter)
+    const textareas = wrapper.findAll('textarea')
+
+    await textareas[1]!.setValue('')
+
+    expect((textareas[1]?.element as HTMLTextAreaElement).getAttribute('data-status')).toBe(
+      'success',
+    )
+    expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('')
+    expect(wrapper.text()).not.toContain('invalid-base64')
+  })
 })
