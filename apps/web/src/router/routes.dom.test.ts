@@ -26,6 +26,22 @@ describe('router routes', () => {
     ])
   })
 
+  it('loads lazy route components', async () => {
+    const { routesWithoutI18n } = await import('./routes')
+
+    const loaders = routesWithoutI18n
+      .map((route) => route.component)
+      .filter(
+        (component): component is () => Promise<{ default: unknown }> =>
+          typeof component === 'function',
+      )
+
+    const modules = await Promise.all(loaders.map((load) => load()))
+
+    expect(modules).toHaveLength(4)
+    expect(modules.every((module) => 'default' in module)).toBe(true)
+  })
+
   it('adds aliases for every supported language', async () => {
     const { routes } = await import('./routes')
 
