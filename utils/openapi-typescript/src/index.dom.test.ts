@@ -32,6 +32,21 @@ components:
 `
 
 describe('openapi types utils', () => {
+  it('rejects empty source input', () => {
+    const result = parseOpenApiDocument('   ')
+    expect(result.ok).toBe(false)
+    if (result.ok) return
+    expect(result.code).toBe('empty')
+  })
+
+  it('reports invalid JSON-like input when YAML fallback also fails', () => {
+    const result = parseOpenApiDocument('{')
+    expect(result.ok).toBe(false)
+    if (result.ok) return
+    expect(result.code).toBe('invalid')
+    expect(result.message).toBeTruthy()
+  })
+
   it('parses a valid OpenAPI document', () => {
     const result = parseOpenApiDocument(sampleOpenApi)
     expect(result.ok).toBe(true)
