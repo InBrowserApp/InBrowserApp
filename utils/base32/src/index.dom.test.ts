@@ -15,6 +15,13 @@ describe('encodeBase32', () => {
     expect(encodeBase32(encoder.encode('foobar'))).toBe('MZXW6YTBOI======')
   })
 
+  it('accepts ArrayBuffer input', () => {
+    const bytes = encoder.encode('foo')
+    const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)
+
+    expect(encodeBase32(buffer)).toBe('MZXW6===')
+  })
+
   it('can omit padding', () => {
     expect(encodeBase32(encoder.encode('f'), { padding: false })).toBe('MY')
     expect(encodeBase32(encoder.encode('foo'), { padding: false })).toBe('MZXW6')
@@ -38,10 +45,16 @@ describe('decodeBase32', () => {
     expect(decoder.decode(decodeBase32('MZXW6 YQ='))).toBe('foob')
   })
 
-  it('rejects invalid characters and padding', () => {
+  it('rejects invalid characters and lengths', () => {
     expect(() => decodeBase32('M1======')).toThrow('Invalid Base32 character')
     expect(() => decodeBase32('MY===')).toThrow(/Invalid Base32/)
     expect(() => decodeBase32('M')).toThrow(/Invalid Base32/)
+  })
+
+  it('rejects malformed padding and leftover bits', () => {
+    expect(() => decodeBase32('M=ZXW6==')).toThrow('Invalid Base32 padding')
+    expect(() => decodeBase32('MZXW6Y==')).toThrow('Invalid Base32 padding')
+    expect(() => decodeBase32('AB')).toThrow('Invalid Base32 padding')
   })
 })
 
