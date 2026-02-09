@@ -41,6 +41,9 @@ describe('get-my-ip providers', () => {
     mockJSONResponse({ ip: 'invalid-ip' })
     await expect(getIPSBv4()).rejects.toThrow('Invalid IPv4: invalid-ip')
 
+    mockJSONResponse({ ip: '198.51.100.20' })
+    await expect(getIPSBv6()).rejects.toThrow('Invalid IPv4: 198.51.100.20')
+
     expect(ipsbProvider.name).toBe('ip.sb')
     expect(ipsbProvider.ipv4).toBe(getIPSBv4)
     expect(ipsbProvider.ipv6).toBe(getIPSBv6)
@@ -71,6 +74,9 @@ describe('get-my-ip providers', () => {
     mockJSONResponse({ ip: 'broken' })
     await expect(getGeoIPv4()).rejects.toThrow('Invalid IPv4: broken')
 
+    mockJSONResponse({ ip: '198.51.100.42' })
+    await expect(getGeoIPv6()).rejects.toThrow('Invalid IPv4: 198.51.100.42')
+
     expect(geoProvider.name).toBe('GeoJS')
     expect(geoProvider.ipv4).toBe(getGeoIPv4)
     expect(geoProvider.ipv6).toBe(getGeoIPv6)
@@ -86,6 +92,7 @@ describe('get-my-ip providers', () => {
 
     await expect(getMyIPUniversal()).resolves.toBe('203.0.113.42')
     await expect(getCloudflareIPv4()).resolves.toBe('203.0.113.42')
+    await expect(getCloudflareIPv6()).rejects.toThrow('Invalid IPv4: 203.0.113.42')
 
     vi.stubGlobal(
       'fetch',
@@ -95,6 +102,7 @@ describe('get-my-ip providers', () => {
     )
 
     await expect(getCloudflareIPv6()).resolves.toBe('2001:db8::42')
+    await expect(getCloudflareIPv4()).rejects.toThrow('Invalid IPv4: 2001:db8::42')
 
     vi.stubGlobal(
       'fetch',

@@ -48,6 +48,14 @@ describe('getDomainIPs', () => {
     })
   })
 
+  it('returns an empty list when responses have no answers', async () => {
+    makeDOHQueryMock.mockResolvedValueOnce({}).mockResolvedValueOnce({})
+
+    const ips = await getDomainIPs('empty.test')
+
+    expect(ips).toEqual([])
+  })
+
   it('falls back to the next server when the current one fails', async () => {
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined)
 
