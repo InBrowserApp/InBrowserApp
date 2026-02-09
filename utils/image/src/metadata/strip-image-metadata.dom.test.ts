@@ -55,6 +55,33 @@ describe('stripImageMetadata', () => {
     expect(Array.from(result.cleaned.slice(0, 2))).toEqual([0xff, 0xd8])
   })
 
+  it('removes JPEG comment segments', () => {
+    const jpeg = Uint8Array.from([0xff, 0xd8, 0xff, 0xfe, 0x00, 0x04, 0xde, 0xad, 0xff, 0xd9])
+
+    const result = stripImageMetadata(jpeg)
+
+    expect(result.format).toBe('jpeg')
+    expect(result.removedBytes).toBe(6)
+    expect(Array.from(result.cleaned)).toEqual([0xff, 0xd8, 0xff, 0xd9])
+  })
+
+  it('keeps malformed JPEG payloads without throwing', () => {
+    const malformed = [
+      Uint8Array.from([0xff, 0xd8, 0x00, 0x11]),
+      Uint8Array.from([0xff, 0xd8, 0xff]),
+      Uint8Array.from([0xff, 0xd8, 0xff, 0xd9]),
+      Uint8Array.from([0xff, 0xd8, 0xff, 0xe2, 0x00]),
+      Uint8Array.from([0xff, 0xd8, 0xff, 0xe2, 0x00, 0x01, 0x99]),
+      Uint8Array.from([0xff, 0xd8, 0xff, 0xe2, 0x00, 0x10, 0x99]),
+    ]
+
+    for (const jpeg of malformed) {
+      const result = stripImageMetadata(jpeg)
+      expect(result.format).toBe('jpeg')
+      expect(result.cleaned).toEqual(jpeg)
+    }
+  })
+
   it('removes PNG text chunks', () => {
     const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
     const ihdr = makePngChunk(
@@ -70,6 +97,18 @@ describe('stripImageMetadata', () => {
     expect(result.format).toBe('png')
     expect(result.removedBytes).toBe(text.length)
     expect(result.cleaned.length).toBe(png.length - text.length)
+  })
+
+  it('keeps truncated PNG chunks after the signature', () => {
+    const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
+    const truncatedChunk = [0x00, 0x00, 0x00, 0x20, 0x49, 0x48, 0x44, 0x52, 0xff]
+    const png = Uint8Array.from([...signature, ...truncatedChunk])
+
+    const result = stripImageMetadata(png)
+
+    expect(result.format).toBe('png')
+    expect(result.cleaned).toEqual(png)
+    expect(result.removedBytes).toBe(0)
   })
 
   it('removes WebP metadata chunks and updates header size', () => {
@@ -91,6 +130,18 @@ describe('stripImageMetadata', () => {
       ((result.cleaned[6] ?? 0) << 16) |
       ((result.cleaned[7] ?? 0) << 24)
     expect(riffSize).toBe(result.cleaned.length - 8)
+  })
+
+  it('keeps truncated WebP chunks after the header', () => {
+    const truncatedVp8 = [0x56, 0x50, 0x38, 0x20, 0x10, 0x00, 0x00, 0x00, 0xaa]
+    const totalSize = 12 + truncatedVp8.length
+    const webp = Uint8Array.from([...makeWebpHeader(totalSize), ...truncatedVp8])
+
+    const result = stripImageMetadata(webp)
+
+    expect(result.format).toBe('webp')
+    expect(result.cleaned).toEqual(webp)
+    expect(result.removedBytes).toBe(0)
   })
 
   it('throws on unsupported formats', () => {
