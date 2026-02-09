@@ -4,6 +4,8 @@ import {
   decryptWithPassword,
   encryptWithRawKey,
   decryptWithRawKey,
+  deriveKey,
+  importRawKey,
   pack,
   unpack,
   generateRandomKey,
@@ -40,6 +42,16 @@ describe('AES-GCM encryption with password', () => {
     const result = await encryptWithPassword(plaintext, password, 'GCM', 256, 'base64')
     const decrypted = await decryptWithPassword(result.output, password, 'GCM', 256, 'base64')
     expect(arrayBufferToString(decrypted)).toBe(plaintext)
+  })
+
+  it('encrypts and decrypts ArrayBuffer plaintext', async () => {
+    const plaintext = new TextEncoder().encode('buffer-text').buffer
+    const password = 'buffer-password'
+
+    const result = await encryptWithPassword(plaintext, password, 'GCM', 256, 'base64')
+    const decrypted = await decryptWithPassword(result.output, password, 'GCM', 256, 'base64')
+
+    expect(arrayBufferToString(decrypted)).toBe('buffer-text')
   })
 
   it('fails with wrong password', async () => {
@@ -128,6 +140,17 @@ describe('Raw key encryption', () => {
     const result = await encryptWithRawKey(plaintext, keyHex, 'GCM', 128, 'base64')
     const decrypted = await decryptWithRawKey(result.output, keyHex, 'GCM', 128, 'base64')
     expect(arrayBufferToString(decrypted)).toBe(plaintext)
+  })
+
+  it('supports ArrayBuffer plaintext and hex output with raw keys', async () => {
+    const plaintext = new TextEncoder().encode('raw-buffer').buffer
+    const keyHex = generateRandomKey(128)
+
+    const result = await encryptWithRawKey(plaintext, keyHex, 'CBC', 128, 'hex')
+    expect(isValidHex(result.output)).toBe(true)
+
+    const decrypted = await decryptWithRawKey(result.output, keyHex, 'CBC', 128, 'hex')
+    expect(arrayBufferToString(decrypted)).toBe('raw-buffer')
   })
 
   it('fails with wrong key', async () => {
@@ -225,6 +248,10 @@ describe('Encoding utilities', () => {
     it('handles hex with spaces', () => {
       expect(isValidHex('01 23 45')).toBe(true)
     })
+
+    it('throws when hex input length is odd', () => {
+      expect(() => hexToArrayBuffer('abc')).toThrow('Invalid hex string')
+    })
   })
 })
 
@@ -244,6 +271,27 @@ describe('generateRandomKey', () => {
   it('generates valid hex', () => {
     const key = generateRandomKey(256)
     expect(isValidHex(key)).toBe(true)
+  })
+})
+
+describe('Key validation', () => {
+  it('rejects invalid PBKDF2 iteration counts', async () => {
+    const salt = new Uint8Array(16)
+
+    await expect(deriveKey('password', salt, 256, 'GCM', { iterations: 0 })).rejects.toThrow(
+      'Invalid PBKDF2 iterations',
+    )
+  })
+
+  it('rejects mismatched raw key lengths', async () => {
+    await expect(importRawKey('00'.repeat(15), 128, 'GCM')).rejects.toThrow(
+      'Invalid key length: expected 16 bytes, got 15',
+    )
+  })
+
+  it('imports CBC and CTR raw keys with valid lengths', async () => {
+    await expect(importRawKey(generateRandomKey(128), 128, 'CBC')).resolves.toBeDefined()
+    await expect(importRawKey(generateRandomKey(128), 128, 'CTR')).resolves.toBeDefined()
   })
 })
 

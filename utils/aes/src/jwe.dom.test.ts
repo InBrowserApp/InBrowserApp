@@ -16,6 +16,16 @@ function arrayBufferToString(buffer: ArrayBuffer): string {
 }
 
 describe('jwe password mode', () => {
+  it('accepts ArrayBuffer plaintext in password mode', async () => {
+    const plaintext = new TextEncoder().encode('buffer-password-jwe').buffer
+    const password = 'buffer-password'
+
+    const jwe = await encryptJweWithPassword(plaintext, password, 'GCM', 128)
+    const decrypted = await decryptJweWithPassword(jwe, password)
+
+    expect(arrayBufferToString(decrypted)).toBe('buffer-password-jwe')
+  })
+
   it('encrypts and decrypts with GCM + PBES2', async () => {
     const plaintext = 'JWE password round-trip GCM'
     const password = 'strong-password'
@@ -59,6 +69,16 @@ describe('jwe password mode', () => {
 })
 
 describe('jwe raw key mode', () => {
+  it('accepts ArrayBuffer plaintext in raw key mode', async () => {
+    const plaintext = new TextEncoder().encode('buffer-raw-jwe').buffer
+    const keyHex = '22'.repeat(16)
+
+    const jwe = await encryptJweWithRawKey(plaintext, keyHex, 'GCM', 128)
+    const decrypted = await decryptJweWithRawKey(jwe, keyHex)
+
+    expect(arrayBufferToString(decrypted)).toBe('buffer-raw-jwe')
+  })
+
   it('encrypts and decrypts with direct GCM key', async () => {
     const plaintext = 'JWE raw key GCM'
     const keyHex = '11'.repeat(32)
@@ -113,6 +133,8 @@ describe('jwe helpers', () => {
     expect(isJweFormat('a.b.c.d.e')).toBe(false)
     expect(parseJweHeader('not-a-jwe')).toBeNull()
     expect(parseJweHeader('a.b.c.d.e')).toBeNull()
+    expect(isJweFormat('.b.c.d.e')).toBe(false)
+    expect(parseJweHeader('.b.c.d.e')).toBeNull()
   })
 
   it('maps known JWE enc values to AES config', () => {
