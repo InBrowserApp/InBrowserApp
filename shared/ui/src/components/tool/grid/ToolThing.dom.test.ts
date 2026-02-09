@@ -130,4 +130,14 @@ describe('ToolThing', () => {
     expect(wrapper.text()).not.toContain('Third Party')
     expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(false)
   })
+
+  it('shows the icon avatar for external tools when enabled', () => {
+    const tool = createTool({ external: true })
+    const wrapper = mount(ToolThing, {
+      props: { tool, showIcon: true },
+    })
+
+    expect(wrapper.find('a.tool-link').exists()).toBe(true)
+    expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(true)
+  })
 })

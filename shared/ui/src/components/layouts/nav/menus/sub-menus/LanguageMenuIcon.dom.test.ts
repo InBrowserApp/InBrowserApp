@@ -51,7 +51,7 @@ vi.mock('naive-ui', async () => {
         default: '',
       },
     },
-    template: '<button :aria-label="ariaLabel"><slot /></button>',
+    template: '<button :aria-label="ariaLabel"><slot name="icon" /><slot /></button>',
   })
 
   const NIcon = defineComponent({
@@ -97,6 +97,10 @@ describe('LanguageMenuIcon', () => {
 
     const popselect = wrapper.getComponent({ name: 'NPopselect' })
 
+    popselect.vm.$emit('update:value', 'auto')
+    expect(state.pushSpy).toHaveBeenCalledWith({ path: '/tools/demo', force: true })
+
+    state.routeState.fullPath = '/tools/demo'
     popselect.vm.$emit('update:value', 'auto')
     expect(state.pushSpy).toHaveBeenCalledWith({ path: '/tools/demo', force: true })
 

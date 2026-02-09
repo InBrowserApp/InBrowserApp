@@ -7,7 +7,7 @@ import DNSRCODEDescriptionLow from './DNSRCODEDescriptionLow.vue'
 import DNSRCODEDescriptionMid from './DNSRCODEDescriptionMid.vue'
 
 describe('DNSRCODEDescription family', () => {
-  it('switches between primary and extended descriptions', () => {
+  it('switches between primary and extended descriptions', async () => {
     const wrapper = mount(DNSRCODEDescription, {
       props: { rcode: 16 },
       global: {
@@ -24,6 +24,10 @@ describe('DNSRCODEDescription family', () => {
 
     expect(wrapper.find('.extended').exists()).toBe(true)
     expect(wrapper.find('.primary').exists()).toBe(false)
+
+    await wrapper.setProps({ rcode: 15 })
+    expect(wrapper.find('.extended').exists()).toBe(false)
+    expect(wrapper.find('.primary').exists()).toBe(true)
   })
 
   it('switches between low and mid primary descriptions', async () => {

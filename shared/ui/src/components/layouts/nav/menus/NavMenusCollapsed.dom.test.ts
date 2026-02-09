@@ -1,3 +1,4 @@
+import { defineComponent } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import NavMenusCollapsed from './NavMenusCollapsed.vue'
@@ -7,6 +8,41 @@ const collapsedOptions = [{ key: 'tools', label: 'Tools' }]
 vi.mock('./sub-menus/use-menu-links', () => ({
   useCollapsedMenuOptions: () => collapsedOptions,
 }))
+
+vi.mock('naive-ui', async () => {
+  const { defineComponent } = await import('vue')
+
+  return {
+    NFlex: defineComponent({
+      name: 'NFlex',
+      template: '<div class="n-flex"><slot /></div>',
+    }),
+    NIcon: defineComponent({
+      name: 'NIcon',
+      template: '<span class="menu-icon"><slot /></span>',
+    }),
+    NPopover: defineComponent({
+      name: 'NPopover',
+      emits: ['update:show'],
+      template: '<div class="popover"><slot name="trigger" /><slot /></div>',
+    }),
+    NMenu: defineComponent({
+      name: 'NMenu',
+      props: {
+        options: {
+          type: Array,
+          default: () => [],
+        },
+        indent: {
+          type: Number,
+          default: 0,
+        },
+      },
+      emits: ['update:value'],
+      template: '<button class="menu-trigger" @click="$emit(\'update:value\', \'tools\')" />',
+    }),
+  }
+})
 
 describe('NavMenusCollapsed', () => {
   it('renders collapsed menu controls and closes menu in handler', async () => {
@@ -27,17 +63,17 @@ describe('NavMenusCollapsed', () => {
         setupState: {
           show: boolean
           menuOptions: unknown[]
-          handleUpdateMobileMenu: () => void
         }
       }
     ).setupState
 
     expect(setupState.menuOptions).toEqual(collapsedOptions)
 
-    setupState.show = true
-    setupState.handleUpdateMobileMenu()
+    wrapper.getComponent({ name: 'NPopover' }).vm.$emit('update:show', true)
     await wrapper.vm.$nextTick()
+    expect(setupState.show).toBe(true)
 
+    await wrapper.get('.menu-trigger').trigger('click')
     expect(setupState.show).toBe(false)
   })
 })
