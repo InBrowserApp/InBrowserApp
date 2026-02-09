@@ -82,6 +82,16 @@ describe('stripImageMetadata', () => {
     }
   })
 
+  it('keeps trailing JPEG marker bytes after valid segments', () => {
+    const jpeg = Uint8Array.from([0xff, 0xd8, 0xff, 0xe1, 0x00, 0x02, 0xff])
+
+    const result = stripImageMetadata(jpeg)
+
+    expect(result.format).toBe('jpeg')
+    expect(Array.from(result.cleaned)).toEqual([0xff, 0xd8, 0xff])
+    expect(result.removedBytes).toBe(4)
+  })
+
   it('removes PNG text chunks', () => {
     const signature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
     const ihdr = makePngChunk(

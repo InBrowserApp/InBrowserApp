@@ -91,6 +91,56 @@ describe('extractPalette', () => {
     expect(reds[1]).toBeGreaterThan(150)
   })
 
+  it('handles sparse image channel data by falling back to zero-filled channels', () => {
+    const malformedImageData = {
+      data: {
+        length: 4,
+        0: 255,
+      } as unknown as Uint8ClampedArray,
+      width: 1,
+      height: 1,
+    } as unknown as ImageData
+
+    const result = extractPalette(malformedImageData, {
+      colorCount: 4,
+      ignoreTransparent: false,
+    })
+
+    expect(result.totalPixels).toBe(1)
+    expect(result.colors).toHaveLength(1)
+    expect(result.colors[0]?.count).toBe(1)
+  })
+
+  it('handles heavily skewed buckets when splitting by median', () => {
+    const data = new Uint8ClampedArray([0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255])
+    const imageData = createImageData(data, 3, 1)
+
+    const result = extractPalette(imageData, {
+      colorCount: 2,
+      sampleStride: 1,
+      ignoreTransparent: false,
+    })
+
+    expect(result.totalPixels).toBe(3)
+    expect(result.colors).toHaveLength(2)
+    expect(result.colors.map((color) => color.count).sort((a, b) => a - b)).toEqual([1, 2])
+  })
+
+  it('keeps stable output when all samples quantize to one bucket', () => {
+    const data = new Uint8ClampedArray([120, 120, 120, 255, 121, 121, 121, 255])
+    const imageData = createImageData(data, 2, 1)
+
+    const result = extractPalette(imageData, {
+      colorCount: 8,
+      sampleStride: 1,
+      ignoreTransparent: false,
+    })
+
+    expect(result.totalPixels).toBe(2)
+    expect(result.colors).toHaveLength(1)
+    expect(result.colors[0]?.count).toBe(2)
+  })
+
   it('supports single-color inputs even when requesting many colors', () => {
     const data = new Uint8ClampedArray([120, 64, 32, 255])
     const imageData = createImageData(data, 1, 1)
