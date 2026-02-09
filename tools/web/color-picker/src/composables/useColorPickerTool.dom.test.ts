@@ -202,6 +202,9 @@ describe('useColorPickerTool', () => {
     options.onOver([], { dataTransfer: { types: ['Files'] } } as unknown as DragEvent)
     expect(api.dropOverlayActive).toBe(true)
 
+    options.onOver([], undefined)
+    expect(api.dropOverlayActive).toBe(true)
+
     options.onEnter([], undefined)
 
     options.onDrop([null as unknown as File, file])
