@@ -1,20 +1,15 @@
-import { describe, it, expect, vi } from 'vitest'
-import { mount } from '@vue/test-utils'
-import type { Ref } from 'vue'
-import RelatedTools from './RelatedTools.vue'
 import type { ToolInfo } from '@shared/tools'
+import { flushPromises, mount } from '@vue/test-utils'
+import { describe, expect, it, vi } from 'vitest'
+import RelatedTools from './RelatedTools.vue'
 
-const { relatedToolsRef } = vi.hoisted(() => ({
-  relatedToolsRef: { value: undefined, __v_isRef: true } as unknown as Ref<ToolInfo[] | undefined>,
+const { registryState } = vi.hoisted(() => ({
+  registryState: {
+    tools: [] as ToolInfo[],
+  },
 }))
 
-vi.mock('@vueuse/core', async () => {
-  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-  return {
-    ...actual,
-    computedAsync: () => relatedToolsRef,
-  }
-})
+vi.mock('@registry/tools', () => registryState)
 
 const createTool = (toolID: string, tags: string[]): ToolInfo =>
   ({
@@ -28,9 +23,27 @@ const createTool = (toolID: string, tags: string[]): ToolInfo =>
     },
   }) as unknown as ToolInfo
 
+const stubs = {
+  ToolSectionHeader: { template: '<div class="header"><slot /></div>' },
+  ToolSection: { template: '<div class="section"><slot /></div>' },
+  ToolsGrid: {
+    props: {
+      tools: {
+        type: Array,
+        default: () => [],
+      },
+    },
+    template: '<div class="tools-grid">{{ tools.length }}</div>',
+  },
+}
+
 describe('RelatedTools', () => {
-  it('should render related tools based on shared tags', async () => {
-    relatedToolsRef.value = [createTool('match', ['tag-a', 'tag-b'])]
+  it('renders related tools based on shared tags', async () => {
+    registryState.tools = [
+      createTool('current', ['tag-a']),
+      createTool('match', ['tag-a', 'tag-b']),
+      createTool('other', ['tag-c']),
+    ]
 
     const wrapper = mount(RelatedTools, {
       props: {
@@ -40,28 +53,20 @@ describe('RelatedTools', () => {
         },
       },
       global: {
-        stubs: {
-          ToolSectionHeader: { template: '<div class="header"><slot /></div>' },
-          ToolSection: { template: '<div class="section"><slot /></div>' },
-          ToolsGrid: {
-            props: {
-              tools: {
-                type: Array,
-                default: () => [],
-              },
-            },
-            template: '<div class="tools-grid">{{ tools.length }}</div>',
-          },
-        },
+        stubs,
       },
     })
+
+    await flushPromises()
 
     expect(wrapper.find('.header').text()).toContain('Related Tools')
-    expect(wrapper.find('.tools-grid').text()).toBe('1')
+    await vi.waitFor(() => {
+      expect(wrapper.find('.tools-grid').text()).toBe('1')
+    })
   })
 
-  it('should hide related tools when no matches exist', async () => {
-    relatedToolsRef.value = []
+  it('shows placeholders before async tools resolve, then hides empty related tools', async () => {
+    registryState.tools = [createTool('current', ['tag-a'])]
 
     const wrapper = mount(RelatedTools, {
       props: {
@@ -71,21 +76,14 @@ describe('RelatedTools', () => {
         },
       },
       global: {
-        stubs: {
-          ToolSectionHeader: { template: '<div class="header"><slot /></div>' },
-          ToolSection: { template: '<div class="section"><slot /></div>' },
-          ToolsGrid: {
-            props: {
-              tools: {
-                type: Array,
-                default: () => [],
-              },
-            },
-            template: '<div class="tools-grid">{{ tools.length }}</div>',
-          },
-        },
+        stubs,
       },
     })
+
+    expect(wrapper.find('.header').exists()).toBe(true)
+    expect(wrapper.find('.tools-grid').exists()).toBe(true)
+
+    await flushPromises()
 
     expect(wrapper.find('.header').exists()).toBe(false)
     expect(wrapper.find('.tools-grid').exists()).toBe(false)
