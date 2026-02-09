@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { enableAutoUnmount, mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import AudioRecorderController from './AudioRecorderController.vue'
 
@@ -27,6 +27,7 @@ vi.mock('@vueuse/core', () => ({
   useObjectUrl: () => ref('blob:mock'),
 }))
 
+enableAutoUnmount(afterEach)
 const originalMediaDevices = navigator.mediaDevices
 const originalMediaRecorder = globalThis.MediaRecorder
 
