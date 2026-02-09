@@ -16,6 +16,17 @@ describe('json-schema utils', () => {
     expect(info.detected).toBe(false)
   })
 
+  it('falls back to 2020-12 for nullish and unknown schemas', () => {
+    expect(detectSchemaDraft(null)).toEqual({ draft: '2020-12', detected: false })
+
+    const info = detectSchemaDraft({ $schema: 'https://example.com/custom-schema' })
+    expect(info).toEqual({
+      draft: '2020-12',
+      detected: false,
+      raw: 'https://example.com/custom-schema',
+    })
+  })
+
   it('detects other known drafts and ignores non-string draft markers', () => {
     const draft2019 = detectSchemaDraft({
       $schema: ' https://json-schema.org/draft/2019-09/schema# ',
@@ -88,6 +99,53 @@ describe('json-schema utils', () => {
     expect(draft2019Result.detected).toBe(true)
   })
 
+  it('normalizes validation errors with missing message and params', () => {
+    const compileSpy = vi.spyOn(Ajv2020.prototype, 'compile').mockImplementationOnce(() => {
+      const validate = vi.fn(() => false) as unknown as {
+        (data: unknown): boolean
+        errors?: unknown
+      }
+
+      validate.errors = [
+        {
+          instancePath: '',
+          schemaPath: '#/type',
+          keyword: 'type',
+        },
+      ]
+
+      return validate as never
+    })
+
+    const result = validateJsonSchema({ type: 'string' }, 123)
+
+    expect(result.valid).toBe(false)
+    expect(result.errors).toEqual([
+      {
+        instancePath: '/',
+        schemaPath: '#/type',
+        keyword: 'type',
+        message: '',
+        params: {},
+      },
+    ])
+
+    compileSpy.mockRestore()
+  })
+
+  it('returns schema errors when compilation throws Error objects', () => {
+    const compileSpy = vi.spyOn(Ajv2020.prototype, 'compile').mockImplementationOnce(() => {
+      throw new Error('compile from Error object')
+    })
+
+    const result = validateJsonSchema({ type: 'object' }, { value: 1 })
+
+    expect(result.valid).toBe(false)
+    expect(result.errors).toEqual([])
+    expect(result.schemaError).toBe('compile from Error object')
+    compileSpy.mockRestore()
+  })
+
   it('returns schema errors when compilation fails', () => {
     const compileSpy = vi.spyOn(Ajv2020.prototype, 'compile').mockImplementationOnce(() => {
       throw 'compile boom'
@@ -141,6 +199,33 @@ describe('json-schema utils', () => {
     const properties = items.properties as Record<string, Record<string, unknown>>
     expect(Object.keys(properties)).toEqual(['id', 'name', 'email'])
     expect(properties.email?.type).toBe('string')
+  })
+
+  it('supports empty arrays and object arrays without common required fields', () => {
+    const emptyArraySchema = generateJsonSchema([], { detectFormat: false })
+    expect(emptyArraySchema).toMatchObject({ type: 'array', items: {} })
+
+    const objectArraySchema = generateJsonSchema([{ left: 1 }, { right: 2 }], {
+      inferRequired: true,
+      detectFormat: false,
+    })
+    const items = objectArraySchema.items as Record<string, unknown>
+
+    expect(items.type).toBe('object')
+    expect(items.required).toBeUndefined()
+  })
+
+  it('supports merged object arrays when required inference is disabled', () => {
+    const schema = generateJsonSchema([{}, { id: 1 }], {
+      inferRequired: false,
+      allowAdditionalProperties: false,
+      detectFormat: false,
+    })
+
+    const items = schema.items as Record<string, unknown>
+    expect(items.type).toBe('object')
+    expect(items.required).toBeUndefined()
+    expect(items.additionalProperties).toBe(false)
   })
 
   it('merges nested array items and mixed number types', () => {
@@ -202,6 +287,28 @@ describe('json-schema utils', () => {
     expect(mixedItems.format).toBeUndefined()
   })
 
+  it('treats invalid email-like values as plain strings', () => {
+    const schema = generateJsonSchema(
+      {
+        plain: 'not_a_known_format',
+        spaced: 'ada @example.com',
+        missingLocal: '@example.com',
+        missingDomain: 'ada@',
+        noDot: 'ada@example',
+        leadingDot: 'ada@.example.com',
+        trailingDot: 'ada@example.com.',
+        doubleDot: 'ada@example..com',
+      },
+      { detectFormat: true },
+    )
+
+    const properties = schema.properties as Record<string, Record<string, unknown>>
+    for (const [key, property] of Object.entries(properties)) {
+      expect(property.type).toBe('string')
+      expect(property.format, key).toBeUndefined()
+    }
+  })
+
   it('supports optional object fields, unknown values, and anyOf arrays', () => {
     const objectSchema = generateJsonSchema(
       {
@@ -219,7 +326,9 @@ describe('json-schema utils', () => {
     expect(properties.count?.type).toBe('integer')
     expect(properties.maybe).toEqual({})
 
-    const mixedSchema = generateJsonSchema([1, 'two', null, true], { detectFormat: false })
+    const mixedSchema = generateJsonSchema([1, 'two', null, true, undefined], {
+      detectFormat: false,
+    })
     const mixedItems = mixedSchema.items as Record<string, unknown>
     expect(Array.isArray(mixedItems.anyOf)).toBe(true)
   })
