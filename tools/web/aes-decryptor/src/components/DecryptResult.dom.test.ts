@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { beforeEach, describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref, nextTick } from 'vue'
 import DecryptResult from './DecryptResult.vue'
@@ -28,14 +28,18 @@ vi.mock('@shared/ui/base', () => ({
   },
 }))
 
+const createObjectUrlRef = (value: unknown) => {
+  const resolved =
+    value && typeof value === 'object' && 'value' in value
+      ? (value as { value: Blob | null }).value
+      : (value as Blob | null)
+  return ref(resolved ? `blob:${resolved.type}` : null)
+}
+
+const useObjectUrlMock = vi.fn(createObjectUrlRef)
+
 vi.mock('@vueuse/core', () => ({
-  useObjectUrl: (value: unknown) => {
-    const resolved =
-      value && typeof value === 'object' && 'value' in value
-        ? (value as { value: Blob | null }).value
-        : (value as Blob | null)
-    return ref(resolved ? `blob:${resolved.type}` : null)
-  },
+  useObjectUrl: (...args: [unknown]) => useObjectUrlMock(...args),
 }))
 
 vi.mock('naive-ui', async () => {
@@ -113,6 +117,11 @@ vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
 })
 
 describe('DecryptResult', () => {
+  beforeEach(() => {
+    useObjectUrlMock.mockReset()
+    useObjectUrlMock.mockImplementation(createObjectUrlRef)
+  })
+
   it('shows an error alert when provided', () => {
     const wrapper = mount(DecryptResult, {
       props: {
@@ -185,5 +194,28 @@ describe('DecryptResult', () => {
     const downloads = downloadButtons.map((button) => button.attributes('data-download'))
 
     expect(downloads).toEqual(['decrypted.txt'])
+  })
+  it('falls back to undefined href when object URLs are unavailable', () => {
+    useObjectUrlMock.mockImplementationOnce(() => ref(null)).mockImplementationOnce(() => ref(null))
+
+    const wrapper = mount(DecryptResult, {
+      props: {
+        result: 'hello',
+        resultHex: '6869',
+        resultBinary: new ArrayBuffer(2),
+        error: '',
+      },
+    })
+
+    const downloadButtons = wrapper
+      .findAll('button[data-download]')
+      .filter((button) => button.attributes('data-download'))
+
+    const textButton = downloadButtons.find(
+      (button) => button.attributes('data-download') === 'decrypted.txt',
+    )
+
+    expect(textButton?.attributes('data-href')).toBeUndefined()
+    expect(textButton?.attributes('data-disabled')).toBe('true')
   })
 })
