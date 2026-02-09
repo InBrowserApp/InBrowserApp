@@ -162,4 +162,35 @@ describe('CRCChecksumCalculatorView', () => {
     await results[0]?.trigger('click')
     expect(copySpy).toHaveBeenCalled()
   })
+  it('marks displayed results as processing while a new calculation is pending', async () => {
+    let resolvePending: ((value: { name: string; crc: string }[]) => void) | undefined
+    const pendingCalculation = new Promise<{ name: string; crc: string }[]>((resolve) => {
+      resolvePending = resolve
+    })
+
+    calculateMock
+      .mockResolvedValueOnce([{ name: 'CRC8', crc: '11' }])
+      .mockImplementationOnce(() => pendingCalculation)
+
+    const wrapper = mount(CRCChecksumCalculatorView, {
+      global: {
+        stubs,
+      },
+    })
+
+    await flushPromises()
+    calculateMock.mockClear()
+
+    await wrapper.find('input.text-input').setValue('pending')
+    await Promise.resolve()
+
+    expect(calculateMock).toHaveBeenCalled()
+    expect(wrapper.find('.crc-result').classes()).toContain('processing')
+
+    resolvePending?.([{ name: 'CRC16', crc: '22' }])
+    await flushPromises()
+
+    expect(wrapper.find('.crc-result').classes()).not.toContain('processing')
+    expect(wrapper.text()).toContain('CRC16')
+  })
 })
