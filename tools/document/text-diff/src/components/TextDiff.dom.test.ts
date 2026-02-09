@@ -4,6 +4,8 @@ import { nextTick } from 'vue'
 
 const fileOpenMock = vi.fn()
 const disposeSpy = vi.fn()
+const osThemeState = vi.hoisted(() => ({ value: 'dark' as 'dark' | 'light' }))
+const shouldEmitMount = vi.hoisted(() => ({ value: true }))
 
 if (!(globalThis as { self?: unknown }).self) {
   Object.defineProperty(globalThis, 'self', {
@@ -64,7 +66,9 @@ vi.mock('@guolao/vue-monaco-editor', async () => {
     emits: ['update:modelValue', 'mount'],
     setup(_, { emit }) {
       onMounted(() => {
-        emit('mount', { dispose: disposeSpy })
+        if (shouldEmitMount.value) {
+          emit('mount', { dispose: disposeSpy })
+        }
       })
       return () => h('div', { 'data-test': 'diff-editor' })
     },
@@ -133,7 +137,7 @@ vi.mock('naive-ui', async () => {
     NFlex: base('NFlex', 'div'),
     NSelect,
     NSwitch,
-    useOsTheme: () => ref('dark'),
+    useOsTheme: () => ref(osThemeState.value),
   }
 })
 
@@ -185,6 +189,8 @@ describe('TextDiff', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
     disposeSpy.mockReset()
+    osThemeState.value = 'dark'
+    shouldEmitMount.value = true
   })
 
   it('imports original text and detects the language', async () => {
@@ -208,6 +214,26 @@ describe('TextDiff', () => {
     const diffEditor = getDiffEditor(wrapper)
     expect(diffEditor.props('original')).toBe('const original = true')
     expect(diffEditor.props('language')).toBe('typescript')
+  })
+
+  it('keeps language unchanged when imported filename has no extension', async () => {
+    fileOpenMock.mockResolvedValue({
+      name: 'README',
+      text: async () => 'plain text',
+    })
+
+    const wrapper = await mountTextDiff()
+    const diffEditor = getDiffEditor(wrapper)
+    expect(diffEditor.props('language')).toBe('javascript')
+
+    const button = findButton(wrapper, 'import-original')
+    expect(button).toBeTruthy()
+
+    await button!.trigger('click')
+    await flushPromises()
+
+    expect(diffEditor.props('original')).toBe('plain text')
+    expect(diffEditor.props('language')).toBe('javascript')
   })
 
   it('imports modified text and updates the diff editor', async () => {
@@ -276,6 +302,24 @@ describe('TextDiff', () => {
     await nextTick()
 
     expect(diffEditor.props('modelValue')).toBe('updated')
+  })
+
+  it('uses the light Monaco theme when OS theme is light', async () => {
+    osThemeState.value = 'light'
+
+    const wrapper = await mountTextDiff()
+    const diffEditor = getDiffEditor(wrapper)
+
+    expect(diffEditor.props('theme')).toBe('vs')
+  })
+
+  it('skips disposing when the editor mount callback did not run', async () => {
+    shouldEmitMount.value = false
+
+    const wrapper = await mountTextDiff()
+    wrapper.unmount()
+
+    expect(disposeSpy).not.toHaveBeenCalled()
   })
 
   it('provides Monaco workers for known labels', async () => {
