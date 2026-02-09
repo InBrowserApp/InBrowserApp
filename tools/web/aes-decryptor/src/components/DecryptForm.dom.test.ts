@@ -208,6 +208,32 @@ describe('DecryptForm', () => {
     expect(keyLength.value).toBe(256)
   })
 
+  it('keeps mode and key length when JWE header has unsupported enc', async () => {
+    aesMocks.isJweFormat.mockReturnValue(true)
+    aesMocks.parseJweHeader.mockReturnValue({
+      enc: 'unsupported',
+      alg: 'dir',
+    })
+    aesMocks.getConfigFromJweEnc.mockReturnValue(null)
+
+    storage.set('tools:aes-decryptor:mode', ref('CBC'))
+    storage.set('tools:aes-decryptor:keyLength', ref(128))
+    storage.set('tools:aes-decryptor:keyType', ref('password'))
+    storage.set('tools:aes-decryptor:password', ref('secret'))
+
+    const wrapper = mountForm()
+    wrapper.findComponent(TextOrFileInputStub).vm.$emit('update:value', 'jwe-token')
+    await nextTick()
+
+    const mode = storage.get('tools:aes-decryptor:mode') as Ref<string>
+    const keyLength = storage.get('tools:aes-decryptor:keyLength') as Ref<number>
+
+    expect(mode.value).toBe('CBC')
+    expect(keyLength.value).toBe(128)
+    expect(wrapper.text()).toContain('alg: dir')
+    expect(wrapper.text()).not.toContain('iterations:')
+  })
+
   it('decrypts base64 input with password', async () => {
     aesMocks.isJweFormat.mockReturnValue(false)
     aesMocks.parseJweHeader.mockReturnValue(null)
