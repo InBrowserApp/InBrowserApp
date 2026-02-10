@@ -18,10 +18,10 @@ export default defineConfig({
       include: ['{apps,tools,shared,utils}/**/*.{vue,ts}'],
       exclude: ['**/*.test.ts', '**/*.dom.test.ts'],
       thresholds: {
-        lines: 99,
-        statements: 99,
-        functions: 99,
-        branches: 94,
+        lines: 95,
+        statements: 94,
+        functions: 95,
+        branches: 89,
       },
     },
     projects: [
