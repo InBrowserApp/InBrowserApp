@@ -13,121 +13,121 @@ export const meta = {
   zh: {
     name: 'Adler-32 哈希文本或文件',
     description:
-      '为文本输入或文件上传生成 Adler-32 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的',
+      '为文本输入或文件上传生成 Adler-32 校验和。计算快速校验值，用于数据完整性验证和错误检测',
   },
   'zh-CN': {
     name: 'Adler-32 哈希文本或文件',
     description:
-      '为文本输入或文件上传生成 Adler-32 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的',
+      '为文本输入或文件上传生成 Adler-32 校验和。计算快速校验值，用于数据完整性验证和错误检测',
   },
   'zh-TW': {
     name: 'Adler-32 雜湊文字或檔案',
     description:
-      '為文字輸入或檔案上傳產生 Adler-32 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的',
+      '為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測',
   },
   'zh-HK': {
     name: 'Adler-32 雜湊文字或檔案',
     description:
-      '為文字輸入或檔案上傳產生 Adler-32 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的',
+      '為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測',
   },
   es: {
     name: 'Hash Adler-32 de Texto o Archivo',
     description:
-      'Genera hash Adler-32 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad',
+      'Genera checksums Adler-32 para texto o archivos. Calcula checksums rápidos para verificar integridad y detectar errores',
   },
   fr: {
     name: 'Hash Adler-32 de Texte ou Fichier',
     description:
-      "Générez un hash Adler-32 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      'Générez des sommes de contrôle Adler-32 pour du texte ou des fichiers. Calculez des checksums rapides pour vérifier l’intégrité et détecter les erreurs',
   },
   de: {
     name: 'Adler-32-Hash für Text oder Datei',
     description:
-      'Generieren Sie Adler-32-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke',
+      'Erzeuge Adler-32-Prüfsummen für Text oder Dateien. Berechne schnelle Prüfsummen zur Integritätsprüfung und Fehlererkennung',
   },
   it: {
     name: 'Hash Adler-32 di Testo o File',
     description:
-      "Genera hash Adler-32 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      'Genera checksum Adler-32 per testo o file. Calcola checksum rapidi per verificare l’integrità dei dati e rilevare errori',
   },
   ja: {
     name: 'Adler-32 ハッシュ テキストまたはファイル',
     description:
-      'テキスト入力またはファイルアップロードのAdler-32ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算',
+      'テキスト入力またはファイルアップロードに対して Adler-32 チェックサムを生成します。データ整合性の確認とエラー検出のために高速チェックサムを計算します',
   },
   ko: {
     name: 'Adler-32 해시 텍스트 또는 파일',
     description:
-      '텍스트 입력 또는 파일 업로드에 대한 Adler-32 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요',
+      '텍스트 입력 또는 파일 업로드에 대해 Adler-32 체크섬을 생성합니다. 데이터 무결성 검증과 오류 감지를 위한 빠른 체크섬을 계산합니다',
   },
   ru: {
     name: 'Adler-32-хеш текста или файла',
     description:
-      'Генерируйте Adler-32-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности',
+      'Создавайте контрольные суммы Adler-32 для текста и файлов. Вычисляйте быстрые суммы для проверки целостности данных и обнаружения ошибок',
   },
   pt: {
     name: 'Hash Adler-32 de Texto ou Arquivo',
     description:
-      'Gere hash Adler-32 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança',
+      'Gere checksums Adler-32 para texto ou arquivos. Calcule checksums rápidos para verificar integridade de dados e detectar erros',
   },
   ar: {
     name: 'تجزئة Adler-32 للنص أو الملف',
     description:
-      'إنشاء تجزئة Adler-32 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان',
+      'أنشئ قيم Adler-32 للنصوص أو الملفات. احسب قيماً سريعة للتحقق من سلامة البيانات واكتشاف الأخطاء',
   },
   hi: {
     name: 'Adler-32 हैश टेक्स्ट या फ़ाइल',
     description:
-      'टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Adler-32 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें',
+      'टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Adler-32 चेकसम बनाएं। डेटा अखंडता सत्यापन और त्रुटि पहचान के लिए तेज़ चेकसम की गणना करें',
   },
   tr: {
     name: 'Adler-32 Hash Metin veya Dosya',
     description:
-      'Metin girişi veya dosya yükleme için Adler-32 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın',
+      'Metin veya dosya için Adler-32 sağlama toplamı üretin. Veri bütünlüğü doğrulaması ve hata tespiti için hızlı checksum hesaplayın',
   },
   nl: {
     name: 'Adler-32-hash tekst of bestand',
     description:
-      'Genereer Adler-32-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden',
+      'Genereer Adler-32-checksums voor tekst of bestanden. Bereken snelle checksums voor integriteitscontrole en foutdetectie',
   },
   sv: {
     name: 'Adler-32-hash text eller fil',
     description:
-      'Generera Adler-32-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål',
+      'Generera Adler-32-kontrollsummor för text eller filer. Beräkna snabba checksummor för integritetskontroll och feldetektering',
   },
   pl: {
     name: 'Hash Adler-32 tekstu lub pliku',
     description:
-      'Generuj hash Adler-32 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa',
+      'Generuj sumy kontrolne Adler-32 dla tekstu lub plików. Obliczaj szybkie sumy do weryfikacji integralności danych i wykrywania błędów',
   },
   vi: {
     name: 'Hash Adler-32 văn bản hoặc tệp',
     description:
-      'Tạo hash Adler-32 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật',
+      'Tạo checksum Adler-32 cho văn bản hoặc tệp. Tính checksum nhanh để kiểm tra tính toàn vẹn dữ liệu và phát hiện lỗi',
   },
   th: {
     name: 'แฮช Adler-32 ข้อความหรือไฟล์',
     description:
-      'สร้างแฮช Adler-32 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย',
+      'สร้างค่า Adler-32 สำหรับข้อความหรือไฟล์ คำนวณเช็กซัมแบบรวดเร็วเพื่อยืนยันความสมบูรณ์ของข้อมูลและตรวจจับข้อผิดพลาด',
   },
   id: {
     name: 'Hash Adler-32 Teks atau File',
     description:
-      'Buat hash Adler-32 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan',
+      'Buat checksum Adler-32 untuk teks atau file. Hitung checksum cepat untuk verifikasi integritas data dan deteksi kesalahan',
   },
   he: {
     name: 'האש Adler-32 טקסט או קובץ',
     description:
-      'צור האש Adler-32 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה',
+      'צור סכומי ביקורת Adler-32 עבור טקסט או קבצים. חשב סכומים מהירים לאימות שלמות נתונים ולזיהוי שגיאות',
   },
   ms: {
     name: 'Hash Adler-32 Teks atau Fail',
     description:
-      'Jana hash Adler-32 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan',
+      'Jana checksum Adler-32 untuk teks atau fail. Kira checksum pantas bagi pengesahan integriti data dan pengesanan ralat',
   },
   no: {
     name: 'Adler-32-hash tekst eller fil',
     description:
-      'Generer Adler-32-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål',
+      'Generer Adler-32-kontrollsummer for tekst eller filer. Beregn raske kontrollsummer for dataintegritet og feildeteksjon',
   },
 }
