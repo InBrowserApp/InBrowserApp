@@ -82,6 +82,7 @@
     "@tools/ical-event-generator": "workspace:*",
     "@tools/image-metadata-cleaner": "workspace:*",
     "@tools/image-palette-extractor": "workspace:*",
+    "@tools/image-resizer": "workspace:*",
     "@tools/image-to-ico": "workspace:*",
     "@tools/image-to-webp-converter": "workspace:*",
     "@tools/image-tools": "workspace:*",
