@@ -79,6 +79,8 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsJiRR2sYATwrHXlm+GSoS9Q8otnK
 iVB73JKkpH9J3GwiTYaIt5tXVi+ZmlDS2LnVvtrwsTWxVtQDfkZifF2VmA==
 -----END PUBLIC KEY-----`
 
+const storageKey = 'tools:certificate-public-key-parser:input'
+
 const mountWithI18n = () =>
   mount(CertificatePublicKeyParserWithProvider, {
     global: {
@@ -92,8 +94,22 @@ const waitForText = async (wrapper: ReturnType<typeof mountWithI18n>, text: stri
   await expect.poll(() => wrapper.text(), { timeout: 5000, interval: 50 }).toContain(text)
 }
 
+const waitForStatus = async (
+  wrapper: ReturnType<typeof mountWithI18n>,
+  status: 'success' | 'error' | undefined,
+) => {
+  await expect
+    .poll(() => wrapper.findComponent({ name: 'CertificatePublicKeyInput' }).props('status'), {
+      timeout: 5000,
+      interval: 50,
+    })
+    .toBe(status)
+}
+
 describe('CertificatePublicKeyParser', () => {
   beforeEach(() => {
+    localStorage.clear()
+
     try {
       digestSpy = vi.spyOn(globalThis.crypto.subtle, 'digest').mockResolvedValue(new ArrayBuffer(0))
     } catch {
@@ -129,5 +145,65 @@ describe('CertificatePublicKeyParser', () => {
 
     expect(wrapper.text()).toContain('Parsing Error')
     expect(wrapper.text()).toContain('Unrecognized input format')
+  })
+
+  it('parses file input and keeps stored string content unchanged', async () => {
+    const wrapper = mountWithI18n()
+    await waitForText(wrapper, 'Parsed Result')
+
+    const storedBefore = localStorage.getItem(storageKey)
+    const parserVm = wrapper.findComponent(CertificatePublicKeyParser).vm as unknown as {
+      inputValue: string | File
+    }
+
+    parserVm.inputValue = new File([samplePem], 'upload.pem', { type: 'application/x-pem-file' })
+    await waitForStatus(wrapper, 'success')
+
+    expect(wrapper.text()).toContain('Parsed Result')
+    expect(localStorage.getItem(storageKey)).toBe(storedBefore)
+  })
+
+  it('treats blank string input as empty state with no status', async () => {
+    const wrapper = mountWithI18n()
+    const textarea = wrapper.find('textarea')
+
+    await textarea.setValue('   ')
+    await waitForStatus(wrapper, undefined)
+
+    expect(wrapper.text()).not.toContain('Parsed Result')
+    expect(wrapper.text()).not.toContain('Parsing Error')
+  })
+
+  it('treats nullish input as empty state', async () => {
+    const wrapper = mountWithI18n()
+    const parserVm = wrapper.findComponent(CertificatePublicKeyParser).vm as unknown as {
+      inputValue: string | File | null
+    }
+
+    parserVm.inputValue = null
+    await waitForStatus(wrapper, undefined)
+
+    expect(wrapper.text()).not.toContain('Parsing Error')
+  })
+
+  it('stringifies non-Error parser failures', async () => {
+    const wrapper = mountWithI18n()
+    const parserVm = wrapper.findComponent(CertificatePublicKeyParser).vm as unknown as {
+      inputValue: unknown
+    }
+
+    parserVm.inputValue = {
+      name: 'broken.der',
+      slice: () => ({
+        text: async () => 'not a pem preview',
+      }),
+      arrayBuffer: async () => {
+        throw 'string failure'
+      },
+    }
+
+    await waitForText(wrapper, 'Parsing Error')
+    expect(wrapper.text()).toContain('string failure')
+    await waitForStatus(wrapper, 'error')
   })
 })

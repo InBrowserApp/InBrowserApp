@@ -4,7 +4,7 @@ import { h } from 'vue'
 import { NMessageProvider } from 'naive-ui'
 import DurationCalculatorSection from './DurationCalculatorSection.vue'
 import type { DurationParts } from '../utils/duration'
-import { formatInTimeZone } from '../utils/timeZone'
+import { formatInTimeZone, isTimeZoneSupported } from '../utils/timeZone'
 
 type StorageSeed = {
   baseTimeZone: string
@@ -155,6 +155,68 @@ describe('DurationCalculatorSection', () => {
     expect(wrapper.text()).toContain('Invalid date/time')
     expect(sectionVm.durationIsoInvalid).toBe(true)
     expect(wrapper.text()).toContain('Invalid duration')
+  })
+
+  it('reacts to nested model updates and handles unsupported zones', async () => {
+    seedStorage({
+      baseTimeZone: 'Invalid/Zone',
+      baseInput: '',
+      durationIso: '',
+      durationParts: {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        milliseconds: 0,
+      },
+    })
+
+    const wrapper = mountSection()
+    await flushPromises()
+
+    const sectionVm = wrapper.findComponent(DurationCalculatorSection).vm as unknown as {
+      baseTimeZone: string
+      baseInput: string
+      durationIsoInput: string
+      durationParts: DurationParts
+      baseStatus: string | undefined
+      baseOffsetLabel: string
+      durationIsoStatus: string | undefined
+    }
+
+    const resolved = Intl.DateTimeFormat().resolvedOptions().timeZone
+    const expectedTimeZone = isTimeZoneSupported(resolved) ? resolved : 'UTC'
+
+    expect(sectionVm.baseTimeZone).toBe(expectedTimeZone)
+    expect(sectionVm.baseStatus).toBeUndefined()
+    expect(sectionVm.durationIsoStatus).toBeUndefined()
+
+    const inputsComponent = wrapper.findComponent({ name: 'DurationCalculatorInputs' })
+    inputsComponent.vm.$emit('update:baseInput', '2024-03-04 05:06:07.008')
+    inputsComponent.vm.$emit('update:baseTimeZone', 'UTC')
+    inputsComponent.vm.$emit('update:durationIsoInput', 'PT3H4M5.006S')
+    inputsComponent.vm.$emit('update:durationParts', {
+      days: 1,
+      hours: 2,
+      minutes: 3,
+      seconds: 4,
+      milliseconds: 5,
+    })
+
+    sectionVm.baseTimeZone = 'Invalid/Zone'
+    sectionVm.baseInput = '2024-03-04 05:06:07.008'
+    sectionVm.durationIsoInput = 'PT3H4M5.006S'
+    sectionVm.durationParts = {
+      days: 1,
+      hours: 2,
+      minutes: 3,
+      seconds: 4,
+      milliseconds: 5,
+    }
+
+    await flushPromises()
+
+    expect(sectionVm.baseOffsetLabel).toBe('')
   })
 
   it('updates the base time when clicking now', async () => {

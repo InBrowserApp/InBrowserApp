@@ -1,4 +1,4 @@
-import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { rasterizeSvg } from './raster'
 
 class MockImage {
@@ -78,6 +78,54 @@ describe('rasterizeSvg', () => {
 
     expect(result).toBeInstanceOf(Blob)
     expect(getContextSpy).toHaveBeenCalled()
+    expect(contextMock?.drawImage).toHaveBeenCalledTimes(1)
+  })
+
+  it('fills JPEG backgrounds when a color is provided', async () => {
+    await rasterizeSvg({
+      svg: svgMarkup,
+      width: 10,
+      height: 10,
+      scale: 1,
+      format: 'jpeg',
+      backgroundColor: '#123456',
+    })
+
+    expect(contextMock?.fillStyle).toBe('#123456')
+    expect(contextMock?.fillRect).toHaveBeenCalledWith(0, 0, 10, 10)
+  })
+
+  it('skips JPEG background fill when no color is provided', async () => {
+    await rasterizeSvg({
+      svg: svgMarkup,
+      width: 10,
+      height: 10,
+      scale: 1,
+      format: 'jpeg',
+    })
+
+    expect(contextMock?.fillRect).not.toHaveBeenCalled()
+  })
+
+  it('uses the webp mime type when requested', async () => {
+    const toBlobSpy = vi
+      .spyOn(HTMLCanvasElement.prototype, 'toBlob')
+      .mockImplementation((callback: BlobCallback, type?: string) => {
+        expect(type).toBe('image/webp')
+        callback(new Blob(['ok'], { type: 'image/webp' }))
+      })
+
+    const result = await rasterizeSvg({
+      svg: svgMarkup,
+      width: 10,
+      height: 10,
+      scale: 1,
+      format: 'webp',
+      quality: 0.8,
+    })
+
+    expect(result.type).toBe('image/webp')
+    expect(toBlobSpy).toHaveBeenCalledTimes(1)
   })
 
   it('throws when canvas context is missing', async () => {
@@ -93,5 +141,21 @@ describe('rasterizeSvg', () => {
         format: 'png',
       }),
     ).rejects.toThrow('Canvas context unavailable')
+  })
+
+  it('throws when raster output generation fails', async () => {
+    vi.spyOn(HTMLCanvasElement.prototype, 'toBlob').mockImplementation((callback: BlobCallback) => {
+      callback(null)
+    })
+
+    await expect(
+      rasterizeSvg({
+        svg: svgMarkup,
+        width: 10,
+        height: 10,
+        scale: 1,
+        format: 'png',
+      }),
+    ).rejects.toThrow('Failed to generate image')
   })
 })

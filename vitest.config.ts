@@ -15,8 +15,14 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json-summary', 'json', 'html', 'clover'],
-      include: ['tools/**/*.{vue,ts}'],
+      include: ['{apps,tools,shared,utils}/**/*.{vue,ts}'],
       exclude: ['**/*.test.ts', '**/*.dom.test.ts'],
+      thresholds: {
+        lines: 95,
+        statements: 94,
+        functions: 95,
+        branches: 89,
+      },
     },
     projects: [
       {

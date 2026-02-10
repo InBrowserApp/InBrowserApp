@@ -24,11 +24,21 @@ describe('getISBN10CheckDigit', () => {
   it('computes X for check digit 10', () => {
     expect(getISBN10CheckDigit('080442957')).toBe('X')
   })
+
+  it('returns null for invalid cores', () => {
+    expect(getISBN10CheckDigit('123')).toBe(null)
+    expect(getISBN10CheckDigit('12345678X')).toBe(null)
+  })
 })
 
 describe('getISBN13CheckDigit', () => {
   it('computes the ISBN-13 check digit', () => {
     expect(getISBN13CheckDigit('978030640615')).toBe('7')
+  })
+
+  it('returns null for invalid cores', () => {
+    expect(getISBN13CheckDigit('97803064061')).toBe(null)
+    expect(getISBN13CheckDigit('97803064061X')).toBe(null)
   })
 })
 
@@ -45,6 +55,14 @@ describe('validateISBN', () => {
     const result = validateISBN('0-8044-2957-X')
     expect(result.isValid).toBe(true)
     expect(result.actualCheckDigit).toBe('X')
+  })
+
+  it('rejects invalid ISBN-10 format while keeping length checks valid', () => {
+    const result = validateISBN('12345678X9')
+    expect(result.type).toBe('isbn-10')
+    expect(result.isLengthValid).toBe(true)
+    expect(result.isFormatValid).toBe(false)
+    expect(result.isValid).toBe(false)
   })
 
   it('rejects invalid ISBN-10 checksum', () => {
@@ -71,6 +89,22 @@ describe('validateISBN', () => {
     expect(result.isbn10).toBe(null)
   })
 
+  it('rejects invalid ISBN-13 format while keeping length checks valid', () => {
+    const result = validateISBN('97803064061X7')
+    expect(result.type).toBe('isbn-13')
+    expect(result.isLengthValid).toBe(true)
+    expect(result.isFormatValid).toBe(false)
+    expect(result.isValid).toBe(false)
+  })
+
+  it('rejects invalid ISBN-13 checksum', () => {
+    const result = validateISBN('9780306406158')
+    expect(result.type).toBe('isbn-13')
+    expect(result.isFormatValid).toBe(true)
+    expect(result.isChecksumValid).toBe(false)
+    expect(result.isValid).toBe(false)
+  })
+
   it('flags invalid length', () => {
     const result = validateISBN('1234567')
     expect(result.isLengthValid).toBe(false)
@@ -83,8 +117,16 @@ describe('conversions', () => {
     expect(convertISBN10To13('0306406152')).toBe('9780306406157')
   })
 
+  it('returns null for invalid ISBN-10 format', () => {
+    expect(convertISBN10To13('12345678X9')).toBe(null)
+  })
+
   it('converts ISBN-13 to ISBN-10 when prefix is 978', () => {
     expect(convertISBN13To10('9780306406157')).toBe('0306406152')
+  })
+
+  it('returns null for invalid ISBN-13 format', () => {
+    expect(convertISBN13To10('97803064061X7')).toBe(null)
   })
 
   it('returns null for ISBN-13 with 979 prefix', () => {

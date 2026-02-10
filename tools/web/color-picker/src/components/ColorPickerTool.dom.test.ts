@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import ColorPickerTool from './ColorPickerTool.vue'
+import ColorPickerOutputSection from './ColorPickerOutputSection.vue'
 import { nextTick } from 'vue'
 
 const originalResizeObserver = globalThis.ResizeObserver
@@ -69,6 +70,19 @@ describe('ColorPickerTool', () => {
   it('renders output fields without alpha when disabled', () => {
     localStorage.setItem('tools:color-picker:show-alpha', 'false')
     const wrapper = mountTool()
+
+    expect(wrapper.text()).toContain('RGB')
+    expect(wrapper.text()).not.toContain('RGBA')
+  })
+
+  it('updates alpha visibility when output section toggles showAlpha', async () => {
+    const wrapper = mountTool()
+
+    expect(wrapper.text()).toContain('RGBA')
+
+    const outputSection = wrapper.findComponent(ColorPickerOutputSection)
+    outputSection.vm.$emit('update:showAlpha', false)
+    await nextTick()
 
     expect(wrapper.text()).toContain('RGB')
     expect(wrapper.text()).not.toContain('RGBA')

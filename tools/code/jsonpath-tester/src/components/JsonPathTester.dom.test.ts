@@ -54,6 +54,29 @@ describe('JsonPathTester', () => {
     expect(wrapper.text()).toContain('Invalid JSON')
   })
 
+  it('handles non-Error JSON parse failures', async () => {
+    const originalParse = JSON.parse
+    const parseSpy = vi
+      .spyOn(JSON, 'parse')
+      .mockImplementation((...args: Parameters<typeof JSON.parse>) => {
+        if (args[0] === '__boom__') {
+          throw 'boom'
+        }
+
+        return originalParse(...args)
+      })
+
+    const wrapper = mount(TestWrapper)
+    const jsonInput = getTextarea(wrapper, 0)
+
+    await jsonInput.setValue('__boom__')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Invalid JSON: boom')
+
+    parseSpy.mockRestore()
+  })
+
   it('shows an error when JSONPath is invalid', async () => {
     const wrapper = mount(TestWrapper)
     const queryInput = getTextarea(wrapper, 1)
@@ -171,5 +194,27 @@ describe('JsonPathTester', () => {
 
     const jsonInput = getTextarea(wrapper, 0)
     expect((jsonInput.element as HTMLTextAreaElement).value).toBe(initialValue)
+  })
+
+  it('shows the empty state when JSON input is cleared', async () => {
+    const wrapper = mount(TestWrapper)
+    const jsonInput = getTextarea(wrapper, 0)
+
+    await jsonInput.setValue('  ')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Enter JSON and a JSONPath query to see results')
+    expect(wrapper.text()).not.toContain('Invalid JSON')
+  })
+
+  it('treats a whitespace query as empty', async () => {
+    const wrapper = mount(TestWrapper)
+    const queryInput = getTextarea(wrapper, 1)
+
+    await queryInput.setValue('   ')
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Enter JSON and a JSONPath query to see results')
+    expect(wrapper.text()).not.toContain('Invalid JSONPath')
   })
 })

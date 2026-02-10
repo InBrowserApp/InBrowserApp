@@ -1,10 +1,23 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
-import { h } from 'vue'
+import { h, ref } from 'vue'
 import { NCode, NMessageProvider } from 'naive-ui'
 import TomlToYamlConverter from './TomlToYamlConverter.vue'
 
 const fileOpenMock = vi.fn()
+const objectUrlRef = ref<string | null>('blob:download')
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+
+  return {
+    ...actual,
+    useObjectUrl: (source: { value: Blob }) => {
+      void source.value
+      return objectUrlRef
+    },
+  }
+})
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -22,6 +35,7 @@ const getRenderedYaml = (wrapper: ReturnType<typeof mount>) =>
 describe('TomlToYamlConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlRef.value = 'blob:download'
   })
 
   it('renders YAML for the default TOML', () => {
@@ -42,6 +56,15 @@ describe('TomlToYamlConverter', () => {
     await flushPromises()
 
     expect(getRenderedYaml(wrapper)).toContain('# Invalid TOML')
+  })
+
+  it('omits download href when object url is unavailable', () => {
+    objectUrlRef.value = null
+
+    const wrapper = mount(TestWrapper)
+    const downloadLink = wrapper.find('a[download="converted.yaml"]')
+
+    expect(downloadLink.attributes('href')).toBeUndefined()
   })
 
   it('imports TOML from a file selection', async () => {

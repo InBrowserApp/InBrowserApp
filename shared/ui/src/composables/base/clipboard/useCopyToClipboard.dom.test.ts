@@ -77,6 +77,20 @@ describe('useCopyToClipboard', () => {
     expect(mockCreate).toHaveBeenCalled()
   })
 
+  it('provides a renderable success icon callback', async () => {
+    const wrapper = mountWithCopy('test')
+    await wrapper.vm.copy()
+
+    const options = mockCreate.mock.calls[0]?.[1]
+    expect(options).toBeDefined()
+    expect(typeof options.icon).toBe('function')
+
+    const iconVNode = options.icon()
+    const defaultSlot = (iconVNode.children as { default?: () => unknown } | null)?.default
+    expect(typeof defaultSlot).toBe('function')
+    expect(defaultSlot?.()).toBeDefined()
+  })
+
   it('should show error message on clipboard error', async () => {
     mockWriteText.mockRejectedValueOnce(new Error('Clipboard error'))
     const wrapper = mountWithCopy('test')

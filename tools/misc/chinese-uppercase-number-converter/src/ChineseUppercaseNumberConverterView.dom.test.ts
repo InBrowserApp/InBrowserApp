@@ -47,6 +47,19 @@ describe('ChineseUppercaseNumberConverterView', () => {
     expect(wrapper.find('.what-is').exists()).toBe(true)
   })
 
+  it('initializes with an empty uppercase value when stored number is invalid', () => {
+    localStorage.setItem(numberKey, 'not-a-number')
+
+    const wrapper = mount(ChineseUppercaseNumberConverterView, {
+      global: {
+        stubs,
+      },
+    })
+
+    const vm = wrapper.vm as unknown as { uppercaseInput: string }
+    expect(vm.uppercaseInput).toBe('')
+  })
+
   it('updates storage when number input emits', async () => {
     localStorage.setItem(numberKey, '12')
     const wrapper = mount(ChineseUppercaseNumberConverterView, {
@@ -62,6 +75,21 @@ describe('ChineseUppercaseNumberConverterView', () => {
     expect(localStorage.getItem(numberKey)).toBe('123.45')
   })
 
+  it('clears uppercase output when number input is invalid', async () => {
+    const wrapper = mount(ChineseUppercaseNumberConverterView, {
+      global: {
+        stubs,
+      },
+    })
+
+    const input = wrapper.findComponent({ name: 'NumberInput' })
+    input.vm.$emit('update:value', '1.2.3')
+    await wrapper.vm.$nextTick()
+
+    const vm = wrapper.vm as unknown as { uppercaseInput: string }
+    expect(vm.uppercaseInput).toBe('')
+  })
+
   it('updates storage when uppercase input emits', async () => {
     localStorage.setItem(numberKey, '12')
     const wrapper = mount(ChineseUppercaseNumberConverterView, {
@@ -75,6 +103,37 @@ describe('ChineseUppercaseNumberConverterView', () => {
     await wrapper.vm.$nextTick()
 
     expect(localStorage.getItem(numberKey)).toBe('1')
+  })
+
+  it('keeps number storage unchanged when uppercase input is invalid', async () => {
+    localStorage.setItem(numberKey, '12')
+    const wrapper = mount(ChineseUppercaseNumberConverterView, {
+      global: {
+        stubs,
+      },
+    })
+
+    const input = wrapper.findComponent({ name: 'ChineseUppercaseInput' })
+    input.vm.$emit('update:value', '壹拾拾元')
+    await wrapper.vm.$nextTick()
+
+    expect(localStorage.getItem(numberKey)).toBe('12')
+  })
+
+  it('keeps uppercase output empty when variant changes and number is invalid', async () => {
+    localStorage.setItem(numberKey, 'not-a-number')
+    const wrapper = mount(ChineseUppercaseNumberConverterView, {
+      global: {
+        stubs,
+      },
+    })
+
+    const vm = wrapper.vm as unknown as { uppercaseInput: string; variant: string }
+
+    vm.variant = 'traditional'
+    await wrapper.vm.$nextTick()
+
+    expect(vm.uppercaseInput).toBe('')
   })
 
   it('updates uppercase output when variant changes', async () => {

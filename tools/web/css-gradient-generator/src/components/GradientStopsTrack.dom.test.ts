@@ -37,6 +37,39 @@ describe('GradientStopsTrack', () => {
     expect(wrapper.emitted('add')?.[0]).toEqual([50])
   })
 
+  it('emits zero when track bounds are unavailable', async () => {
+    const wrapper = mount(GradientStopsTrack, {
+      props: {
+        stops: [{ id: 'a', color: '#FF0000FF', position: 0 }],
+        activeStopId: 'a',
+        gradientCss: 'linear-gradient(#000, #fff)',
+      },
+    })
+
+    const track = wrapper.get('[data-testid="stops-track"]')
+    vi.spyOn(track.element, 'getBoundingClientRect').mockReturnValue(
+      undefined as unknown as DOMRect,
+    )
+
+    await track.trigger('click', { clientX: 100 })
+
+    expect(wrapper.emitted('add')?.[0]).toEqual([0])
+  })
+
+  it('emits select when clicking a stop handle', async () => {
+    const wrapper = mount(GradientStopsTrack, {
+      props: {
+        stops: [{ id: 'a', color: '#FF0000FF', position: 10 }],
+        activeStopId: null,
+        gradientCss: 'linear-gradient(#000, #fff)',
+      },
+    })
+
+    await wrapper.get('[data-testid="stop-handle"]').trigger('click')
+
+    expect(wrapper.emitted('select')?.[0]).toEqual(['a'])
+  })
+
   it('emits select and update while dragging a stop', async () => {
     const wrapper = mount(GradientStopsTrack, {
       props: {

@@ -181,6 +181,56 @@ describe('CssGradientGeneratorTool', () => {
     expect(wrapper.get('[data-testid="download-css"]').attributes('href')).toBe('blob:mock')
   })
 
+  it('wires panel v-model updates back to the tool state', async () => {
+    const wrapper = mount(CssGradientGeneratorTool, {
+      global: {
+        stubs: {
+          CopyToClipboardButton: CopyToClipboardButtonStub,
+          NColorPicker: NColorPickerStub,
+        },
+      },
+    })
+
+    const stopsPanel = wrapper.getComponent({ name: 'CssGradientStopsPanel' })
+    const layerSettingsPanel = wrapper.getComponent({ name: 'CssGradientLayerSettingsPanel' })
+    const outputPanel = wrapper.getComponent({ name: 'CssGradientOutputPanel' })
+    const exportPanel = wrapper.getComponent({ name: 'CssGradientExportPanel' })
+
+    stopsPanel.vm.$emit('update:stopColor', '#123456')
+    stopsPanel.vm.$emit('update:stopPosition', 33)
+
+    layerSettingsPanel.vm.$emit('update:layerType', 'radial')
+    layerSettingsPanel.vm.$emit('update:layerAngle', 75)
+    layerSettingsPanel.vm.$emit('update:layerCenterX', 40)
+    layerSettingsPanel.vm.$emit('update:layerCenterY', 60)
+    layerSettingsPanel.vm.$emit('update:layerShape', 'ellipse')
+    layerSettingsPanel.vm.$emit('update:layerSize', 'closest-side')
+    layerSettingsPanel.vm.$emit('update:layerColorSpace', 'oklch')
+    layerSettingsPanel.vm.$emit('update:layerBlendMode', 'multiply')
+
+    outputPanel.vm.$emit('update:outputFormat', 'rgba')
+    exportPanel.vm.$emit('update:exportWidth', 640)
+    exportPanel.vm.$emit('update:exportHeight', 360)
+
+    await nextTick()
+
+    expect(stopsPanel.props('stopColor')).toBe('#123456FF')
+    expect(stopsPanel.props('stopPosition')).toBe(33)
+
+    expect(layerSettingsPanel.props('layerType')).toBe('radial')
+    expect(layerSettingsPanel.props('layerAngle')).toBe(75)
+    expect(layerSettingsPanel.props('layerCenterX')).toBe(40)
+    expect(layerSettingsPanel.props('layerCenterY')).toBe(60)
+    expect(layerSettingsPanel.props('layerShape')).toBe('ellipse')
+    expect(layerSettingsPanel.props('layerSize')).toBe('closest-side')
+    expect(layerSettingsPanel.props('layerColorSpace')).toBe('oklch')
+    expect(layerSettingsPanel.props('layerBlendMode')).toBe('multiply')
+
+    expect(outputPanel.props('outputFormat')).toBe('rgba')
+    expect(exportPanel.props('exportWidth')).toBe(640)
+    expect(exportPanel.props('exportHeight')).toBe(360)
+  })
+
   it('rejects invalid JSON input', async () => {
     const wrapper = mount(CssGradientGeneratorTool, {
       global: {

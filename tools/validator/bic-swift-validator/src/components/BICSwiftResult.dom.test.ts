@@ -169,6 +169,36 @@ describe('BICSwiftResult', () => {
     }
   })
 
+  it('falls back to country code when display names returns undefined', () => {
+    const originalDisplayNames = Intl.DisplayNames
+
+    class DisplayNamesMock {
+      of() {
+        return undefined
+      }
+    }
+
+    ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames =
+      DisplayNamesMock as unknown as typeof Intl.DisplayNames
+
+    try {
+      const wrapper = mount(BICSwiftResult, {
+        props: {
+          validationResult: validateBIC('DEUTDEFF'),
+        },
+        global: {
+          stubs,
+        },
+      })
+
+      expect(wrapper.text()).toContain('DE')
+      expect(wrapper.text()).not.toContain('Germany (DE)')
+    } finally {
+      ;(Intl as unknown as { DisplayNames?: typeof Intl.DisplayNames }).DisplayNames =
+        originalDisplayNames
+    }
+  })
+
   it.each([
     {
       bic: 'DEUTDEA0',

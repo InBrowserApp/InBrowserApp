@@ -76,6 +76,16 @@ describe('ChineseUppercaseInput', () => {
     expect(formItem.props().feedback).toBe('Value exceeds the maximum range.')
   })
 
+  it('does not emit updates for invalid non-empty input', async () => {
+    const wrapper = mountUppercaseInput('壹元整')
+
+    const input = wrapper.findComponent(NInput)
+    input.vm.$emit('update:value', '壹拾拾元')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.emitted('update:value')).toBeUndefined()
+  })
+
   it('emits updates when valid', async () => {
     const wrapper = mountUppercaseInput('')
 

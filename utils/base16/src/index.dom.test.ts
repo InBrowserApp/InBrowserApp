@@ -31,6 +31,10 @@ describe('decodeBase16', () => {
     expect(decoder.decode(decodeBase16('66\n6F\n6f'))).toBe('foo')
   })
 
+  it('returns an empty array for empty hex input', () => {
+    expect(Array.from(decodeBase16(''))).toEqual([])
+  })
+
   it('rejects invalid length or characters', () => {
     expect(() => decodeBase16('F')).toThrow('Invalid hex length')
     expect(() => decodeBase16('ZZ')).toThrow('Invalid hex character')

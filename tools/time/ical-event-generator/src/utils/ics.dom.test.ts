@@ -22,6 +22,10 @@ describe('foldLine', () => {
     const line = '1234567890ABCDEFGHIJ'
     expect(foldLine(line, 10)).toBe('1234567890\r\n ABCDEFGHI\r\n J')
   })
+
+  it('returns short lines unchanged', () => {
+    expect(foldLine('short', 75)).toBe('short')
+  })
 })
 
 describe('buildDateLine', () => {
@@ -32,6 +36,12 @@ describe('buildDateLine', () => {
     expect(
       buildDateLine('DTSTART', { type: 'date-time', value: '20240102T030405', tzid: 'UTC' }),
     ).toBe('DTSTART;TZID=UTC:20240102T030405')
+  })
+
+  it('builds date-time lines without tzid', () => {
+    expect(buildDateLine('DTSTART', { type: 'date-time', value: '20240102T030405Z' })).toBe(
+      'DTSTART:20240102T030405Z',
+    )
   })
 })
 
@@ -66,6 +76,34 @@ describe('buildRrule', () => {
       }),
     ).toBe('FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,WE;COUNT=5')
   })
+
+  it('omits default and empty recurrence fields', () => {
+    expect(
+      buildRrule({
+        frequency: 'DAILY',
+        interval: 1,
+        byDay: [],
+      }),
+    ).toBe('FREQ=DAILY')
+  })
+
+  it('supports monthly, yearly, and until options', () => {
+    expect(
+      buildRrule({
+        frequency: 'MONTHLY',
+        byMonthDay: 15,
+        until: '20250101T000000Z',
+      }),
+    ).toBe('FREQ=MONTHLY;BYMONTHDAY=15;UNTIL=20250101T000000Z')
+
+    expect(
+      buildRrule({
+        frequency: 'YEARLY',
+        byMonth: 3,
+        byMonthDay: 10,
+      }),
+    ).toBe('FREQ=YEARLY;BYMONTHDAY=10;BYMONTH=3')
+  })
 })
 
 describe('formatTrigger', () => {
@@ -74,6 +112,13 @@ describe('formatTrigger', () => {
     expect(formatTrigger(2, 'hours')).toBe('-PT2H')
     expect(formatTrigger(3, 'days')).toBe('-P3D')
     expect(formatTrigger(1, 'weeks')).toBe('-P1W')
+  })
+
+  it('rejects invalid amounts and unknown units', () => {
+    expect(formatTrigger(0, 'minutes')).toBe('')
+    expect(formatTrigger(Number.NaN, 'minutes')).toBe('')
+    expect(formatTrigger(1.9, 'hours')).toBe('-PT1H')
+    expect(formatTrigger(5, 'months' as never)).toBe('')
   })
 })
 
@@ -104,5 +149,45 @@ describe('buildIcsCalendar', () => {
     expect(content).toContain('BEGIN:VALARM')
     expect(content).toContain('TRIGGER:-PT15M')
     expect(content).toContain('X-WR-TIMEZONE:UTC')
+  })
+
+  it('omits optional event and calendar fields when absent', () => {
+    const content = buildIcsCalendar({
+      uid: 'uid@example.com',
+      dtstamp: '20240102T030405Z',
+      dtstart: { type: 'date', value: '20240102' },
+    })
+
+    expect(content).toContain('PRODID:-//inbrowser.app//ical-event-generator//EN')
+    expect(content).not.toContain('X-WR-CALNAME:')
+    expect(content).not.toContain('X-WR-TIMEZONE:')
+    expect(content).not.toContain('DTEND:')
+    expect(content).not.toContain('SUMMARY:')
+    expect(content).not.toContain('LOCATION:')
+    expect(content).not.toContain('DESCRIPTION:')
+    expect(content).not.toContain('URL:')
+    expect(content).not.toContain('RRULE:')
+    expect(content).not.toContain('BEGIN:VALARM')
+  })
+
+  it('supports custom metadata and alarms without descriptions', () => {
+    const content = buildIcsCalendar(
+      {
+        uid: 'uid@example.com',
+        dtstamp: '20240102T030405Z',
+        dtstart: { type: 'date-time', value: '20240102T030405Z' },
+        alarms: [{ trigger: '-PT5M' }],
+      },
+      {
+        name: 'Primary Calendar',
+        prodId: '-//custom//calendar//EN',
+      },
+    )
+
+    expect(content).toContain('PRODID:-//custom//calendar//EN')
+    expect(content).toContain('X-WR-CALNAME:Primary Calendar')
+    expect(content).toContain('BEGIN:VALARM')
+    expect(content).toContain('TRIGGER:-PT5M')
+    expect(content).not.toContain('DESCRIPTION:Reminder')
   })
 })

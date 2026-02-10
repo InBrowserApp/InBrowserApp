@@ -67,6 +67,15 @@ describe('SipHash2_4HashTextOrFileView', () => {
     expect(formItem.attributes('data-feedback')).not.toBe('')
   })
 
+  it('requires a 16-byte hex key', async () => {
+    const wrapper = mount(SipHash2_4HashTextOrFileView)
+
+    await wrapper.find('.key-input').setValue('0x')
+    const formItem = wrapper.find('.form-item')
+    expect(formItem.attributes('data-status')).toBe('error')
+    expect(formItem.attributes('data-feedback')).not.toBe('')
+  })
+
   it('accepts empty key input', async () => {
     const wrapper = mount(SipHash2_4HashTextOrFileView)
 

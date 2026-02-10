@@ -5,6 +5,24 @@ import { NCode, NMessageProvider } from 'naive-ui'
 import YamlToJsonConverter from './YamlToJsonConverter.vue'
 
 const fileOpenMock = vi.fn()
+const objectUrlState = { value: 'available' as 'available' | 'missing' }
+
+vi.mock('@vueuse/core', async () => {
+  const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
+  const { computed, isRef } = await import('vue')
+
+  return {
+    ...actual,
+    useObjectUrl: (source: unknown) =>
+      computed(() => {
+        if (objectUrlState.value === 'missing') {
+          return null
+        }
+        const value = isRef(source) ? source.value : source
+        return value ? 'blob:download' : null
+      }),
+  }
+})
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: (...args: unknown[]) => fileOpenMock(...args),
@@ -22,6 +40,7 @@ const getRenderedJson = (wrapper: ReturnType<typeof mount>) =>
 describe('YamlToJsonConverter', () => {
   beforeEach(() => {
     fileOpenMock.mockReset()
+    objectUrlState.value = 'available'
   })
 
   it('renders JSON for the default YAML', () => {
@@ -45,6 +64,15 @@ describe('YamlToJsonConverter', () => {
     await flushPromises()
 
     expect(getRenderedJson(wrapper)).toContain('// Invalid YAML')
+  })
+
+  it('omits download href when object url is unavailable', () => {
+    objectUrlState.value = 'missing'
+
+    const wrapper = mount(TestWrapper)
+    const downloadLink = wrapper.find('a[download="converted.json"]')
+
+    expect(downloadLink.attributes('href')).toBeUndefined()
   })
 
   it('imports YAML from a file selection', async () => {

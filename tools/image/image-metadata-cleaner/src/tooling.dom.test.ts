@@ -232,6 +232,46 @@ describe('ImageMetadataCleanerView', () => {
     expect(wrapper.text()).not.toContain('Download cleaned image')
   })
 
+  it('handles empty state values and zero-size files', async () => {
+    const wrapper = mountView()
+    const view = wrapper.findComponent(ImageMetadataCleanerView)
+    const vm = view.vm as unknown as {
+      cleanMetadata: () => Promise<void>
+      formattedOriginalSize: string
+      formattedCleanedSize: string
+      reductionPercent: number
+      downloadName: string
+    }
+
+    await vm.cleanMetadata()
+
+    expect(mockedStrip).not.toHaveBeenCalled()
+    expect(vm.formattedOriginalSize).toBe('')
+    expect(vm.formattedCleanedSize).toBe('')
+    expect(vm.reductionPercent).toBe(0)
+    expect(vm.downloadName).toBe('cleaned-image')
+
+    const emptyFile = new File([], 'empty.jpg', { type: 'image/jpeg' })
+    wrapper.findComponent(ImageUploadStub).vm.$emit('update:file', emptyFile)
+    await flushPromises()
+
+    mockedStrip.mockReturnValue({
+      cleaned: new Uint8Array([]),
+      removedBytes: 0,
+      format: 'jpeg',
+    })
+
+    const cleanButton = wrapper.findAll('button')[0]
+    if (!cleanButton) {
+      throw new Error('Missing clean metadata button')
+    }
+
+    await cleanButton.trigger('click')
+    await flushPromises()
+
+    expect(vm.reductionPercent).toBe(0)
+  })
+
   it('shows an unsupported format message', async () => {
     const wrapper = mountView()
 
@@ -325,6 +365,32 @@ describe('ImageUpload', () => {
 
     expect(wrapper.emitted('update:file')?.[0]).toEqual([file])
   })
+
+  it('ignores upload entries without a file payload', () => {
+    const wrapper = mount(ImageUpload, {
+      props: { file: null },
+      global: {
+        plugins: [i18n],
+        stubs: {
+          NUpload: BaseStub,
+          NUploadDragger: BaseStub,
+          NIcon: BaseStub,
+          NText: BaseStub,
+          NP: BaseStub,
+          ToolSection: BaseStub,
+        },
+      },
+    })
+
+    const vm = wrapper.vm as unknown as {
+      handleBeforeUpload: (data: { file: { file?: File } | null; fileList: unknown[] }) => boolean
+    }
+
+    const result = vm.handleBeforeUpload({ file: {}, fileList: [] })
+
+    expect(result).toBe(false)
+    expect(wrapper.emitted('update:file')).toBeUndefined()
+  })
 })
 
 describe('ImagePreview', () => {
@@ -352,5 +418,30 @@ describe('ImagePreview', () => {
     await button.trigger('click')
 
     expect(wrapper.emitted('clear')).toBeTruthy()
+  })
+
+  it('hides the preview image when no object URL is available', () => {
+    createObjectUrlSpy?.mockReturnValue('')
+
+    const file = createFile('photo.jpg', 'image/jpeg')
+
+    const wrapper = mount(ImagePreview, {
+      props: { file },
+      global: {
+        plugins: [i18n],
+        stubs: {
+          NImage: {
+            template: '<div class="preview-image" />',
+          },
+          NFlex: BaseStub,
+          NText: BaseStub,
+          NButton: ButtonStub,
+          NIcon: BaseStub,
+          ToolSection: BaseStub,
+        },
+      },
+    })
+
+    expect(wrapper.find('.preview-image').exists()).toBe(false)
   })
 })

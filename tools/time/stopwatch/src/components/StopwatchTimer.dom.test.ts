@@ -133,6 +133,17 @@ describe('StopwatchTimer', () => {
     expect(remount.findAll('.lap-row').length).toBe(1)
   })
 
+  it('recovers from invalid persisted running state and exposes a null table ref', async () => {
+    localStorage.setItem('tools:stopwatch:running', 'true')
+    localStorage.setItem('tools:stopwatch:start-time', '0')
+
+    const wrapper = mountTimer()
+    await nextTick()
+
+    expect(localStorage.getItem('tools:stopwatch:running')).toBe('false')
+    expect(getTableInst(wrapper).tableRef).toBeNull()
+  })
+
   it('sorts and clears laps', async () => {
     const wrapper = mountTimer()
     const start = wrapper.get('[data-testid="start"]')
@@ -162,6 +173,19 @@ describe('StopwatchTimer', () => {
 
     const table = getTableInst(wrapper).tableRef
     expect(table).not.toBeNull()
+
+    table?.sort('index', 'descend')
+    await nextTick()
+
+    rows = wrapper.findAll('.lap-row')
+    expect(rows[0]!.text()).toContain('#3')
+
+    table?.sort('totalTime', 'ascend')
+    await nextTick()
+
+    rows = wrapper.findAll('.lap-row')
+    expect(rows[0]!.text()).toContain('#1')
+
     table?.sort('lapTime', 'ascend')
     await nextTick()
 

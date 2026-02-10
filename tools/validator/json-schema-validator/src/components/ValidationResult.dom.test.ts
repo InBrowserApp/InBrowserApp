@@ -65,4 +65,28 @@ describe('ValidationResult', () => {
     expect(wrapper.text()).toContain('must be string')
     expect(wrapper.text()).toContain('Errors (1)')
   })
+
+  it('shows schema errors when schema is invalid', () => {
+    const props: ValidationResultProps = {
+      ...baseProps,
+      state: 'schema-error',
+      schemaError: 'Schema failed to parse',
+    }
+    const wrapper = mount(withProviders(props))
+
+    expect(wrapper.text()).toContain('Schema failed to parse')
+  })
+
+  it('shows no errors when validation succeeds', () => {
+    const props: ValidationResultProps = {
+      ...baseProps,
+      state: 'validated',
+      valid: true,
+      errors: [],
+      errorsJson: '',
+    }
+    const wrapper = mount(withProviders(props))
+
+    expect(wrapper.text()).toContain('No errors')
+  })
 })

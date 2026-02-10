@@ -36,6 +36,11 @@ describe('pbkdf2 utils', () => {
     expect(text).toBe('salt')
   })
 
+  it('returns empty bytes for blank base64 input', () => {
+    expect(decodeBase64('')).toEqual(new Uint8Array())
+    expect(decodeBase64(' \n\t ')).toEqual(new Uint8Array())
+  })
+
   it('rejects invalid base64 length', () => {
     expect(() => decodeBase64('abcde')).toThrow('Invalid base64 length')
   })
@@ -80,6 +85,19 @@ describe('pbkdf2 utils', () => {
     expect(bytesToHex(derived)).toBe(
       '120fb6cffcf8b32c43e7225256c4f837a86548c92ccc35480805987cb70be17b',
     )
+  })
+
+  it('returns empty bytes when password is missing', async () => {
+    await expect(
+      derivePbkdf2({
+        password: '',
+        salt: 'salt',
+        saltFormat: 'utf-8',
+        iterations: 1,
+        lengthBytes: 32,
+        hash: 'SHA-256',
+      }),
+    ).resolves.toEqual(new Uint8Array())
   })
 
   it('throws on invalid pbkdf2 parameters', async () => {

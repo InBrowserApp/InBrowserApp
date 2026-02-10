@@ -40,4 +40,24 @@ describe('AsciiArtGenerator', () => {
     // Default value is 'Hello' from useStorage
     expect(input.element.value).toBe('Hello')
   })
+
+  it('updates output text when TextInput emits model update', async () => {
+    const wrapper = mount(AsciiArtGeneratorWithProvider)
+    const textInput = wrapper.findComponent({ name: 'TextInput' })
+    await textInput.vm.$emit('update:modelValue', 'World')
+    await wrapper.vm.$nextTick()
+
+    const output = wrapper.findComponent({ name: 'AsciiOutput' })
+    expect(output.props('text')).toBe('World')
+  })
+
+  it('updates output font when FontSelector emits model update', async () => {
+    const wrapper = mount(AsciiArtGeneratorWithProvider)
+    const fontSelector = wrapper.findComponent({ name: 'FontSelector' })
+    await fontSelector.vm.$emit('update:modelValue', 'Banner')
+    await wrapper.vm.$nextTick()
+
+    const output = wrapper.findComponent({ name: 'AsciiOutput' })
+    expect(output.props('font')).toBe('Banner')
+  })
 })

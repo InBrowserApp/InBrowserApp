@@ -50,6 +50,7 @@ describe('SignalEngine', () => {
   it('starts and schedules audio', async () => {
     const fakeContext = new FakeAudioContext()
     const engine = new SignalEngine(() => fakeContext as unknown as AudioContext)
+    const intervalSpy = vi.spyOn(window, 'setInterval')
     await engine.start({
       station: stations[0]!,
       volume: 0.5,
@@ -58,10 +59,12 @@ describe('SignalEngine', () => {
 
     expect(fakeContext.oscillator.start).toHaveBeenCalled()
     expect(fakeContext.gainNode.gain.setValueAtTime).toHaveBeenCalled()
+    expect(intervalSpy).toHaveBeenCalled()
 
     engine.stop()
     expect(fakeContext.oscillator.stop).toHaveBeenCalled()
     expect(fakeContext.close).toHaveBeenCalled()
+    intervalSpy.mockRestore()
   })
 
   it('updates gain when volume changes', async () => {
@@ -78,5 +81,32 @@ describe('SignalEngine', () => {
 
     expect(fakeContext.gainNode.gain.setValueAtTime).toHaveBeenCalledWith(1, 3)
     engine.stop()
+  })
+
+  it('bails out when start is superseded', async () => {
+    const fakeContext = new FakeAudioContext()
+    fakeContext.state = 'suspended'
+    const engine = new SignalEngine(() => fakeContext as unknown as AudioContext)
+
+    const startPromise = engine.start({
+      station: stations[0]!,
+      volume: 0.5,
+      offsetMs: 0,
+    })
+
+    engine.stop()
+    await startPromise
+
+    expect(fakeContext.resume).toHaveBeenCalled()
+  })
+
+  it('ignores volume updates without an active context', () => {
+    const engine = new SignalEngine(() => new FakeAudioContext() as unknown as AudioContext)
+    engine.setVolume(0.2)
+  })
+
+  it('skips scheduling when not initialized', () => {
+    const engine = new SignalEngine(() => new FakeAudioContext() as unknown as AudioContext)
+    ;(engine as unknown as { schedule: () => void }).schedule()
   })
 })

@@ -73,4 +73,77 @@ describe('extractPdfInfo', () => {
 
     await expect(extractPdfInfo(file)).rejects.toThrow('Bad PDF')
   })
+
+  it('normalizes empty metadata values and fallback file fields', async () => {
+    vi.spyOn(PDFDocument, 'load').mockResolvedValueOnce({
+      getPageCount: () => 1,
+      getTitle: () => '   ',
+      getAuthor: () => undefined,
+      getSubject: () => '',
+      getKeywords: () => [' ', ''],
+      getCreator: () => '   ',
+      getProducer: () => undefined,
+      getCreationDate: () => undefined,
+      getModificationDate: () => new Date('invalid'),
+    } as unknown as PDFDocument)
+
+    const blob = new Blob([toBlobBytes(new Uint8Array([0x01, 0x02, 0x03]))])
+    const file = {
+      name: 'minimal.pdf',
+      size: blob.size,
+      type: '',
+      lastModified: 0,
+      arrayBuffer: () => blob.arrayBuffer(),
+    } as unknown as File
+
+    const info = await extractPdfInfo(file)
+
+    expect(info.file.type).toBe('application/pdf')
+    expect(info.file.lastModified).toBeUndefined()
+    expect(info.document.version).toBeUndefined()
+    expect(info.metadata.title).toBeUndefined()
+    expect(info.metadata.author).toBeUndefined()
+    expect(info.metadata.subject).toBeUndefined()
+    expect(info.metadata.keywords).toBeUndefined()
+    expect(info.metadata.creator).toBeUndefined()
+    expect(info.metadata.producer).toBeUndefined()
+    expect(info.metadata.creationDate).toBeUndefined()
+    expect(info.metadata.modificationDate).toBeUndefined()
+  })
+
+  it('normalizes keyword strings and missing keyword values', async () => {
+    vi.spyOn(PDFDocument, 'load')
+      .mockResolvedValueOnce({
+        getPageCount: () => 1,
+        getTitle: () => undefined,
+        getAuthor: () => undefined,
+        getSubject: () => undefined,
+        getKeywords: () => 'alpha',
+        getCreator: () => undefined,
+        getProducer: () => undefined,
+        getCreationDate: () => undefined,
+        getModificationDate: () => undefined,
+      } as unknown as PDFDocument)
+      .mockResolvedValueOnce({
+        getPageCount: () => 1,
+        getTitle: () => undefined,
+        getAuthor: () => undefined,
+        getSubject: () => undefined,
+        getKeywords: () => undefined,
+        getCreator: () => undefined,
+        getProducer: () => undefined,
+        getCreationDate: () => undefined,
+        getModificationDate: () => undefined,
+      } as unknown as PDFDocument)
+
+    const file = new File([toBlobBytes(new Uint8Array([0x25, 0x50, 0x44, 0x46]))], 'keywords.pdf', {
+      type: 'application/pdf',
+    })
+
+    const infoWithKeyword = await extractPdfInfo(file)
+    const infoWithoutKeyword = await extractPdfInfo(file)
+
+    expect(infoWithKeyword.metadata.keywords).toEqual(['alpha'])
+    expect(infoWithoutKeyword.metadata.keywords).toBeUndefined()
+  })
 })

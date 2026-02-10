@@ -22,7 +22,7 @@ vi.mock('@vueuse/core', async () => {
 })
 
 import { flushPromises, mount } from '@vue/test-utils'
-import { NInputNumber, NSwitch } from 'naive-ui'
+import { NButton, NDynamicInput, NInputNumber, NSwitch } from 'naive-ui'
 import RobotsTxtGeneratorView from './RobotsTxtGeneratorView.vue'
 import * as toolInfo from './info'
 import { routes } from './routes'
@@ -36,7 +36,7 @@ const mountOptions = {
         template: '<div><slot /></div>',
       },
       CopyToClipboardButton: {
-        template: '<button />',
+        template: '<button data-testid="copy-robots" />',
       },
     },
   },
@@ -61,7 +61,6 @@ const createDefaultState = () => ({
 const getOutput = (wrapper: ReturnType<typeof mount>) =>
   (wrapper.get('[data-testid="robots-output"]').find('textarea').element as HTMLTextAreaElement)
     .value
-
 describe('RobotsTxtGeneratorView', () => {
   let wrapper: ReturnType<typeof mount> | null = null
 
@@ -136,6 +135,87 @@ describe('RobotsTxtGeneratorView', () => {
     await wrapper.get('[data-testid="preset-useragent-ai"]').trigger('click')
     await flushPromises()
     expect(getOutput(wrapper)).toContain('User-agent: GPTBot')
+  })
+
+  it('shows empty output state when no rules, groups, or sitemaps are provided', async () => {
+    localStorage.setItem(
+      stateKey,
+      JSON.stringify({
+        groups: [],
+        sitemaps: [],
+        host: '',
+        advanced: false,
+      }),
+    )
+
+    const wrapper = mountView()
+    await flushPromises()
+
+    expect(getOutput(wrapper)).toBe('')
+    expect(wrapper.text()).toContain('No content to export yet.')
+    expect(wrapper.find('[data-testid="copy-robots"]').exists()).toBe(false)
+
+    const download = wrapper.get('[data-testid="download-robots"]')
+    expect(download.attributes('href')).toBeUndefined()
+    expect(download.attributes('disabled')).toBeDefined()
+  })
+
+  it('covers dynamic input creation, guard removal, and preset deduplication', async () => {
+    const wrapper = mountView()
+    await flushPromises()
+
+    const removeButtons = wrapper
+      .findAllComponents(NButton)
+      .filter((button) => button.text().includes('Remove group'))
+    await removeButtons[0]!.vm.$emit('click')
+    await flushPromises()
+    expect(wrapper.findAll('[data-testid="group-card"]')).toHaveLength(1)
+
+    const dynamicInputs = wrapper.findAllComponents(NDynamicInput)
+    expect(dynamicInputs.length).toBeGreaterThanOrEqual(3)
+
+    const createSitemap = dynamicInputs[0]!.props('onCreate') as () => string
+    const createUserAgent = dynamicInputs[1]!.props('onCreate') as () => string
+    const createRule = dynamicInputs[2]!.props('onCreate') as () => { type: string; path: string }
+
+    expect(createSitemap()).toBe('')
+    expect(createUserAgent()).toBe('')
+    expect(createRule()).toEqual({ type: 'disallow', path: '' })
+
+    await dynamicInputs[0]!.vm.$emit('update:value', [
+      'https://example.com/sitemap.xml',
+      ' https://example.com/new.xml ',
+    ])
+    await dynamicInputs[2]!.vm.$emit('update:value', [
+      { type: 'disallow', path: '/admin/' },
+      { type: 'disallow', path: '/tmp/' },
+    ])
+    await flushPromises()
+
+    const advancedSwitch = wrapper.findComponent(NSwitch)
+    await advancedSwitch.vm.$emit('update:value', true)
+    await flushPromises()
+
+    const hostInput = wrapper.get('[data-testid="host-input"]').find('input')
+    await hostInput.setValue('   ')
+
+    const crawlDelayInput = wrapper.findComponent(NInputNumber)
+    await crawlDelayInput.vm.$emit('update:value', Number.NaN)
+    await flushPromises()
+
+    await dynamicInputs[1]!.vm.$emit('update:value', ['Googlebot'])
+    await flushPromises()
+
+    await wrapper.get('[data-testid="preset-useragent-search"]').trigger('click')
+    await flushPromises()
+
+    const output = getOutput(wrapper)
+    expect((output.match(/User-agent: Googlebot/g) ?? []).length).toBe(1)
+    expect(output).toContain('User-agent: Bingbot')
+    expect(output).toContain('Disallow: /tmp/')
+    expect(output).toContain('Sitemap: https://example.com/new.xml')
+    expect(output).not.toContain('Host:')
+    expect(output).not.toContain('Crawl-delay:')
   })
 
   it('applies presets and manages groups', async () => {

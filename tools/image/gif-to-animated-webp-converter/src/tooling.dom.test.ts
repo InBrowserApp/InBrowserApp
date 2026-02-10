@@ -241,6 +241,8 @@ describe('GifToAnimatedWebpConverterView', () => {
 
     wrapper.findComponent(ImageUploadStub).vm.$emit('update:files', [file])
     await flushPromises()
+    wrapper.findComponent(ConversionOptionsStub).vm.$emit('update:loopMode', 'custom')
+    await flushPromises()
 
     const result: GifToAnimatedWebpResult = {
       file,
@@ -267,8 +269,8 @@ describe('GifToAnimatedWebpConverterView', () => {
       {
         scale: 100,
         speed: 1,
-        loopMode: 'inherit',
-        loopCount: undefined,
+        loopMode: 'custom',
+        loopCount: 1,
       },
       'demo.webp',
     )

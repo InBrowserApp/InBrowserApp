@@ -251,6 +251,10 @@ describe('unescapeUnicode', () => {
       expect(unescapeUnicode('\\uD835\\uDD73')).toBe('𝕳')
     })
 
+    it('keeps high surrogates when the next escape is not a low surrogate', () => {
+      expect(unescapeUnicode('\\uD83D\\u0041')).toBe('\ud83dA')
+    })
+
     it('preserves regular text', () => {
       expect(unescapeUnicode('Hello World')).toBe('Hello World')
     })
@@ -409,6 +413,10 @@ describe('unescapeUnicode', () => {
     it('rejects code points beyond valid Unicode range', () => {
       expect(unescapeUnicode('\\u{110000}')).toBe('\\u{110000}')
       expect(unescapeUnicode('&#x110000;')).toBe('&#x110000;')
+      expect(unescapeUnicode('&#1114112;')).toBe('&#1114112;')
+      expect(unescapeUnicode('U+110000')).toBe('U+110000')
+      expect(unescapeUnicode('\\U00110000')).toBe('\\U00110000')
+      expect(unescapeUnicode('0x110000')).toBe('0x110000')
     })
   })
 })

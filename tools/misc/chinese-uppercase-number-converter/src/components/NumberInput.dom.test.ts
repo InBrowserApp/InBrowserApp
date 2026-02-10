@@ -76,6 +76,16 @@ describe('NumberInput', () => {
     expect(formItem.props().feedback).toBe('Value exceeds the maximum range.')
   })
 
+  it('does not emit updates for invalid non-empty input', async () => {
+    const wrapper = mountNumberInput('10')
+
+    const input = wrapper.findComponent(NInput)
+    input.vm.$emit('update:value', '12.3.4')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.emitted('update:value')).toBeUndefined()
+  })
+
   it('emits updates when valid', async () => {
     const wrapper = mountNumberInput('')
 

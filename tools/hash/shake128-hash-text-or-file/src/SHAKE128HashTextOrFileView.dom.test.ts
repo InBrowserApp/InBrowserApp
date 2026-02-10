@@ -67,6 +67,15 @@ describe('SHAKE128HashTextOrFileView', () => {
     expect(formItem.attributes('data-feedback')).not.toBe('')
   })
 
+  it('rejects non-numeric output length input', async () => {
+    const wrapper = mount(SHAKE128HashTextOrFileView)
+
+    await wrapper.find('.length-input').setValue('abc')
+    const formItem = wrapper.find('.form-item')
+    expect(formItem.attributes('data-status')).toBe('error')
+    expect(formItem.attributes('data-feedback')).not.toBe('')
+  })
+
   it('accepts empty output length input', async () => {
     const wrapper = mount(SHAKE128HashTextOrFileView)
 

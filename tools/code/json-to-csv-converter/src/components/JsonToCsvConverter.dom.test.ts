@@ -58,8 +58,18 @@ describe('JsonToCsvConverter', () => {
     await settingsButton!.trigger('click')
     await flushPromises()
 
-    const delimiterInput = wrapper.find('input[placeholder=","]')
+    const inputs = wrapper.findAll('input')
+    const delimiterInput = inputs.find((input) => input.attributes('placeholder') === ',')
+    if (!delimiterInput) {
+      throw new Error('Delimiter input not found')
+    }
     await delimiterInput.setValue(';')
+
+    const quoteInput = inputs.find((input) => input.attributes('placeholder') === '"')
+    if (!quoteInput) {
+      throw new Error('Quote input not found')
+    }
+    await quoteInput.setValue("'")
 
     const switches = wrapper.findAllComponents(NSwitch)
     const headerSwitch = switches[0]
@@ -67,10 +77,17 @@ describe('JsonToCsvConverter', () => {
       throw new Error('Header switch not found')
     }
     await headerSwitch.vm.$emit('update:value', false)
+
+    const escapeSwitch = switches[1]
+    if (!escapeSwitch) {
+      throw new Error('Escape switch not found')
+    }
+    await escapeSwitch.vm.$emit('update:value', false)
     await flushPromises()
 
     const csvText = getCsvText(wrapper)
     expect(csvText).toContain(';')
+    expect(csvText).toContain("'")
     expect(csvText).not.toContain('a')
   })
 
@@ -92,5 +109,39 @@ describe('JsonToCsvConverter', () => {
     const textarea = wrapper.find('textarea')
     expect((textarea.element as HTMLTextAreaElement).value).toBe('[{"a":10,"b":20}]')
     expect(getCsvText(wrapper)).toContain('10')
+  })
+
+  it('uses unquoted output when quote input is empty', async () => {
+    const unparseSpy = vi.spyOn(Papa, 'unparse')
+    const wrapper = mount(TestWrapper)
+
+    const settingsButton = wrapper
+      .findAll('button')
+      .find((candidate) => candidate.text().includes('Settings'))
+
+    expect(settingsButton).toBeTruthy()
+    await settingsButton!.trigger('click')
+    await flushPromises()
+
+    const quoteInput = wrapper
+      .findAll('input')
+      .find((input) => input.attributes('placeholder') === '"')
+
+    if (!quoteInput) {
+      throw new Error('Quote input not found')
+    }
+
+    await quoteInput.setValue('')
+    await flushPromises()
+
+    expect(unparseSpy).toHaveBeenCalledWith(
+      expect.anything(),
+      expect.objectContaining({
+        quotes: false,
+        quoteChar: '"',
+      }),
+    )
+
+    unparseSpy.mockRestore()
   })
 })

@@ -35,6 +35,7 @@ vi.mock('@vueuse/core', async () => {
 
 vi.mock('./components/ResidentIdInput.vue', () => ({
   default: {
+    name: 'ResidentIdInput',
     props: ['modelValue', 'validationResult'],
     emits: ['update:modelValue'],
     template: '<div class="resident-input" :data-value="modelValue" />',
@@ -77,5 +78,15 @@ describe('PRCResidentIDValidatorView', () => {
     const wrapper = mount(PRCResidentIDValidatorView)
 
     expect(wrapper.find('.resident-input').attributes('data-value')).toBe('110105199001010020')
+  })
+
+  it('syncs resident id updates from input v-model events', async () => {
+    const wrapper = mount(PRCResidentIDValidatorView)
+    const input = wrapper.getComponent({ name: 'ResidentIdInput' })
+
+    await input.vm.$emit('update:modelValue', '')
+
+    expect(wrapper.find('.resident-input').attributes('data-value')).toBe('')
+    expect(wrapper.find('.resident-result').exists()).toBe(false)
   })
 })

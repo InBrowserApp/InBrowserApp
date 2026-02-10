@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { afterEach, describe, it, expect, vi } from 'vitest'
 import {
   parseDateTimeInput,
   formatDateTimeParts,
@@ -9,6 +9,10 @@ import {
   getSupportedTimeZones,
   isTimeZoneSupported,
 } from './timeZone'
+
+afterEach(() => {
+  vi.restoreAllMocks()
+})
 
 describe('parseDateTimeInput', () => {
   it('parses full date time strings', () => {
@@ -91,6 +95,26 @@ describe('time zone conversions', () => {
       'Asia/Shanghai',
     )
     expect(formatInTimeZone(utc, 'UTC')).toBe('2023-12-31 16:00:00.000')
+  })
+
+  it('falls back when supported time zones cannot be listed', () => {
+    const supportedSpy = vi.spyOn(Intl, 'supportedValuesOf').mockImplementation(() => {
+      throw new Error('unsupported')
+    })
+
+    const zones = getSupportedTimeZones()
+
+    expect(zones).toContain('UTC')
+    supportedSpy.mockRestore()
+  })
+
+  it('handles DST transitions when converting to UTC', () => {
+    const utc = toUtcTimestamp(
+      { year: 2024, month: 3, day: 10, hour: 2, minute: 30, second: 0, millisecond: 0 },
+      'America/New_York',
+    )
+
+    expect(Number.isFinite(utc)).toBe(true)
   })
 
   it('formats offsets with sign and padding', () => {

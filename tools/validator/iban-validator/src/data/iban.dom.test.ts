@@ -1,5 +1,11 @@
-import { describe, it, expect } from 'vitest'
-import { formatIBAN, getExpectedCheckDigits, normalizeIBAN, validateIBAN } from './iban'
+import { describe, it, expect, vi } from 'vitest'
+import {
+  IBAN_COUNTRY_SPECS,
+  formatIBAN,
+  getExpectedCheckDigits,
+  normalizeIBAN,
+  validateIBAN,
+} from './iban'
 
 describe('normalizeIBAN', () => {
   it('removes separators and uppercases', () => {
@@ -11,11 +17,30 @@ describe('formatIBAN', () => {
   it('groups characters in blocks of 4', () => {
     expect(formatIBAN('GB29NWBK60161331926819')).toBe('GB29 NWBK 6016 1331 9268 19')
   })
+
+  it('returns empty string for empty normalized input', () => {
+    expect(formatIBAN('---')).toBe('')
+  })
 })
 
 describe('getExpectedCheckDigits', () => {
   it('computes the check digits', () => {
     expect(getExpectedCheckDigits('GB29NWBK60161331926819')).toBe('29')
+  })
+
+  it('returns null for short and invalid country prefixes', () => {
+    expect(getExpectedCheckDigits('GB2')).toBeNull()
+    expect(getExpectedCheckDigits('1A00ABC')).toBeNull()
+  })
+
+  it('returns null when numeric conversion fails', () => {
+    const charCodeSpy = vi
+      .spyOn(String.prototype, 'charCodeAt')
+      .mockImplementation(() => Number.POSITIVE_INFINITY)
+
+    expect(getExpectedCheckDigits('GB29NWBK60161331926819')).toBeNull()
+
+    charCodeSpy.mockRestore()
   })
 })
 
@@ -57,5 +82,51 @@ describe('validateIBAN', () => {
     const result = validateIBAN('ZZ00TEST12345678901234')
     expect(result.isCountryValid).toBe(false)
     expect(result.isValid).toBe(false)
+  })
+
+  it('keeps country-aware structure checks when bban is missing', () => {
+    const result = validateIBAN('DE89')
+
+    expect(result.countryCode).toBe('DE')
+    expect(result.bban).toBeNull()
+    expect(result.isCountryValid).toBe(true)
+    expect(result.isStructureValid).toBe(false)
+  })
+
+  it('builds structure regexes for all format tokens', () => {
+    const mutableSpecs = IBAN_COUNTRY_SPECS as Record<
+      string,
+      {
+        length: number
+        structure: string
+        example: string
+      }
+    >
+
+    const temporarySpecs = {
+      XA: { length: 6, structure: 'A02', example: 'XA00AB' },
+      XB: { length: 6, structure: 'B02', example: 'XB0009' },
+      XC: { length: 6, structure: 'C02', example: 'XC00AZ' },
+      XL: { length: 6, structure: 'L02', example: 'XL00aa' },
+      XU: { length: 6, structure: 'U02', example: 'XU00AZ' },
+      XW: { length: 6, structure: 'W02', example: 'XW00aa' },
+      XZ: { length: 6, structure: 'Z02', example: 'XZ00A9' },
+    }
+
+    Object.assign(mutableSpecs, temporarySpecs)
+
+    try {
+      expect(validateIBAN('XA00AB').isCountryValid).toBe(true)
+      expect(validateIBAN('XB0009').isCountryValid).toBe(true)
+      expect(validateIBAN('XC00AZ').isCountryValid).toBe(true)
+      expect(validateIBAN('XL00AA').isCountryValid).toBe(true)
+      expect(validateIBAN('XU00AZ').isCountryValid).toBe(true)
+      expect(validateIBAN('XW00AA').isCountryValid).toBe(true)
+      expect(validateIBAN('XZ00A9').isCountryValid).toBe(true)
+    } finally {
+      Object.keys(temporarySpecs).forEach((code) => {
+        delete mutableSpecs[code]
+      })
+    }
   })
 })

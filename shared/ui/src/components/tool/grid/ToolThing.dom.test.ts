@@ -1,8 +1,57 @@
-import { describe, it, expect } from 'vitest'
+import type { ToolInfo } from '@shared/tools'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
+import { describe, expect, it, vi } from 'vitest'
 import ToolThing from './ToolThing.vue'
-import type { ToolInfo } from '@shared/tools'
+
+vi.mock('naive-ui', async () => {
+  const { defineComponent } = await import('vue')
+
+  const base = (name: string, tag = 'div') =>
+    defineComponent({
+      name,
+      inheritAttrs: false,
+      template: `<${tag} v-bind="$attrs"><slot /></${tag}>`,
+    })
+
+  const NThing = defineComponent({
+    name: 'NThing',
+    template: `
+      <article class="n-thing">
+        <div class="avatar"><slot name="avatar" /></div>
+        <h3 class="header"><slot name="header" /></h3>
+        <div class="header-extra"><slot name="header-extra" /></div>
+        <p class="description"><slot name="description" /></p>
+      </article>
+    `,
+  })
+
+  return {
+    NThing,
+    NAvatar: base('NAvatar', 'span'),
+    NIcon: base('NIcon', 'span'),
+    NTag: base('NTag', 'span'),
+    useThemeVars: () => ({
+      cubicBezierEaseInOut: 'ease',
+      hoverColor: '#eee',
+    }),
+  }
+})
+
+vi.mock('vue-i18n', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('vue-i18n')>()
+
+  return {
+    ...actual,
+    useI18n: (options?: { messages?: Record<string, Record<string, string>> }) => {
+      const en = options?.messages?.en ?? {}
+
+      return {
+        t: (key: string) => en[key] ?? (key === 'thirdParty' ? 'Third Party' : ''),
+      }
+    },
+  }
+})
 
 const RouterLinkStub = defineComponent({
   name: 'CustomRouterLink',
@@ -24,10 +73,10 @@ const createTool = (overrides: Partial<ToolInfo> = {}): ToolInfo =>
   }) as ToolInfo
 
 describe('ToolThing', () => {
-  it('should render internal tool with router link', () => {
+  it('renders internal tool with router link', () => {
     const tool = createTool()
     const wrapper = mount(ToolThing, {
-      props: { tool },
+      props: { tool, showIcon: true },
       global: {
         stubs: {
           CustomRouterLink: RouterLinkStub,
@@ -41,9 +90,24 @@ describe('ToolThing', () => {
     expect(wrapper.text()).toContain('Tool Name')
     expect(wrapper.text()).toContain('Tool description')
     expect(wrapper.text()).not.toContain('Third Party')
+    expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(true)
   })
 
-  it('should render external tool as anchor and show third party tag', () => {
+  it('can hide the icon avatar for internal tools', () => {
+    const tool = createTool()
+    const wrapper = mount(ToolThing, {
+      props: { tool, showIcon: false },
+      global: {
+        stubs: {
+          CustomRouterLink: RouterLinkStub,
+        },
+      },
+    })
+
+    expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(false)
+  })
+
+  it('renders external tool as anchor and shows third party tag', () => {
     const tool = createTool({ external: true, thirdParty: true })
     const wrapper = mount(ToolThing, {
       props: { tool },
@@ -54,5 +118,26 @@ describe('ToolThing', () => {
     expect(anchor.attributes('href')).toBe('/tools/tool-1')
     expect(wrapper.findComponent({ name: 'CustomRouterLink' }).exists()).toBe(false)
     expect(wrapper.text()).toContain('Third Party')
+  })
+
+  it('renders external tools without the third-party tag by default', () => {
+    const tool = createTool({ external: true })
+    const wrapper = mount(ToolThing, {
+      props: { tool, showIcon: false },
+    })
+
+    expect(wrapper.find('a.tool-link').exists()).toBe(true)
+    expect(wrapper.text()).not.toContain('Third Party')
+    expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(false)
+  })
+
+  it('shows the icon avatar for external tools when enabled', () => {
+    const tool = createTool({ external: true })
+    const wrapper = mount(ToolThing, {
+      props: { tool, showIcon: true },
+    })
+
+    expect(wrapper.find('a.tool-link').exists()).toBe(true)
+    expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(true)
   })
 })
