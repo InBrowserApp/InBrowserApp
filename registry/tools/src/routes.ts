@@ -197,6 +197,7 @@ export const routes: ToolRoute[] = [
   ...removePDFOwnerPasswordRoutes,
   ...pdfInfoViewerRoutes,
   ...pdfMergerRoutes,
+  ...pdfToImageConverterRoutes,
   ...unicodePunycodeConverterRoutes,
   ...dnsLookupRoutes,
   ...reverseIPLookupRoutes,

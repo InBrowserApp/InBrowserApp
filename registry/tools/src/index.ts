@@ -259,6 +259,7 @@ export const tools: ToolInfo[] = [
   pdfToolsToolInfo,
   removePDFOwnerPasswordToolInfo,
   pdfMergerToolInfo,
+  pdfToImageConverterToolInfo,
   pdfInfoViewerToolInfo,
 
   // Hash Tools
