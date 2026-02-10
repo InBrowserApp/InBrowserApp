@@ -20,24 +20,20 @@ export const meta = {
       'Verify whether a plain password matches an encoded Argon2 hash string, with optional secret support for keyed verification.',
   },
   zh: {
-    name: 'Argon2 Password Hash Verifier',
-    description:
-      'Verify whether a plain password matches an encoded Argon2 hash string, with optional secret support for keyed verification.',
+    name: 'Argon2 哈希密码验证器',
+    description: '验证明文密码是否与编码的 Argon2 哈希字符串匹配，并支持可选密钥参与验证。',
   },
   'zh-CN': {
-    name: 'Argon2 Password Hash Verifier',
-    description:
-      'Verify whether a plain password matches an encoded Argon2 hash string, with optional secret support for keyed verification.',
+    name: 'Argon2 哈希密码验证器',
+    description: '验证明文密码是否与编码的 Argon2 哈希字符串匹配，并支持可选密钥参与验证。',
   },
   'zh-TW': {
-    name: 'Argon2 Password Hash Verifier',
-    description:
-      'Verify whether a plain password matches an encoded Argon2 hash string, with optional secret support for keyed verification.',
+    name: 'Argon2 雜湊密碼驗證器',
+    description: '驗證明文密碼是否與編碼的 Argon2 雜湊字串匹配，並支援可選密鑰參與驗證。',
   },
   'zh-HK': {
-    name: 'Argon2 Password Hash Verifier',
-    description:
-      'Verify whether a plain password matches an encoded Argon2 hash string, with optional secret support for keyed verification.',
+    name: 'Argon2 雜湊密碼驗證器',
+    description: '驗證明文密碼是否與編碼的 Argon2 雜湊字串匹配，並支援可選密鑰參與驗證。',
   },
   es: {
     name: 'Argon2 Password Hash Verifier',

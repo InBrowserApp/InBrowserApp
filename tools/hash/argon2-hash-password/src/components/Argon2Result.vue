@@ -114,24 +114,24 @@ const showOutput = computed(() => Boolean(props.password) && props.configValid)
     "hash-failed": "Failed to generate Argon2 hash."
   },
   "zh": {
-    "output-header": "Argon2 Hash Output",
-    "output": "Encoded Hash",
-    "hash-failed": "Failed to generate Argon2 hash."
+    "output-header": "Argon2 哈希输出",
+    "output": "编码哈希",
+    "hash-failed": "生成 Argon2 哈希失败。"
   },
   "zh-CN": {
-    "output-header": "Argon2 Hash Output",
-    "output": "Encoded Hash",
-    "hash-failed": "Failed to generate Argon2 hash."
+    "output-header": "Argon2 哈希输出",
+    "output": "编码哈希",
+    "hash-failed": "生成 Argon2 哈希失败。"
   },
   "zh-TW": {
-    "output-header": "Argon2 Hash Output",
-    "output": "Encoded Hash",
-    "hash-failed": "Failed to generate Argon2 hash."
+    "output-header": "Argon2 雜湊輸出",
+    "output": "編碼雜湊",
+    "hash-failed": "產生 Argon2 雜湊失敗。"
   },
   "zh-HK": {
-    "output-header": "Argon2 Hash Output",
-    "output": "Encoded Hash",
-    "hash-failed": "Failed to generate Argon2 hash."
+    "output-header": "Argon2 雜湊輸出",
+    "output": "編碼雜湊",
+    "hash-failed": "產生 Argon2 雜湊失敗。"
   },
   "es": {
     "output-header": "Argon2 Hash Output",
