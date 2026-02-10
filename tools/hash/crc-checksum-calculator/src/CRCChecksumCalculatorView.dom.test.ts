@@ -137,6 +137,7 @@ describe('CRCChecksumCalculatorView', () => {
     calculateMock.mockResolvedValue([
       { name: 'CRC16', crc: 'a1b2' },
       { name: 'CRC32', crc: 'c3d4' },
+      { name: 'CRC64 XZ', crc: '995dc9bbdf1939fa' },
     ])
 
     const wrapper = mount(CRCChecksumCalculatorView, {
@@ -155,9 +156,10 @@ describe('CRCChecksumCalculatorView', () => {
     expect(calculateMock).toHaveBeenCalledWith(expect.any(Blob))
 
     const results = wrapper.findAll('.crc-result')
-    expect(results).toHaveLength(2)
+    expect(results).toHaveLength(3)
     expect(wrapper.text()).toContain('CRC16')
     expect(wrapper.text()).toContain('CRC32')
+    expect(wrapper.text()).toContain('CRC64 XZ')
 
     await results[0]?.trigger('click')
     expect(copySpy).toHaveBeenCalled()

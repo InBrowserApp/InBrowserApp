@@ -79,6 +79,35 @@ jobs:
           name: web-dist
           path: apps/web/dist
 
+  test-unit-changed:
+    name: Test Unit (Changed)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run changed unit tests
+        run: pnpm run test:unit --silent passed-only --changed origin/${{ github.base_ref }}
+
   test-unit:
     name: Test Unit
     runs-on: ubuntu-latest
@@ -106,7 +135,7 @@ jobs:
         run: pnpm install
 
       - name: Run unit tests
-        run: pnpm run test:unit --coverage --silent passed-only ${{ github.event_name == 'pull_request' && format('--changed origin/{0}', github.base_ref) || '' }}
+        run: pnpm run test:unit --coverage --silent
 
       - name: Report Coverage
         uses: davelosert/vitest-coverage-report-action@v2
