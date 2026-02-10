@@ -43,6 +43,7 @@ import { toolInfo as sha512_224HashTextOrFileToolInfo } from '@tools/sha512-224-
 import { toolInfo as sha512_256HashTextOrFileToolInfo } from '@tools/sha512-256-hash-text-or-file'
 import { toolInfo as sha1HashTextOrFileToolInfo } from '@tools/sha1-hash-text-or-file'
 import { toolInfo as md4HashTextOrFileToolInfo } from '@tools/md4-hash-text-or-file'
+import { toolInfo as adler32HashTextOrFileToolInfo } from '@tools/adler32-hash-text-or-file'
 import { toolInfo as md5HashTextOrFileToolInfo } from '@tools/md5-hash-text-or-file'
 import { toolInfo as sm3HashTextOrFileToolInfo } from '@tools/sm3-hash-text-or-file'
 import { toolInfo as ripemd128HashTextOrFileToolInfo } from '@tools/ripemd128-hash-text-or-file'
@@ -269,6 +270,7 @@ export const tools: ToolInfo[] = [
   sha512_256HashTextOrFileToolInfo,
   sha1HashTextOrFileToolInfo,
   md4HashTextOrFileToolInfo,
+  adler32HashTextOrFileToolInfo,
   md5HashTextOrFileToolInfo,
   sm3HashTextOrFileToolInfo,
   ripemd128HashTextOrFileToolInfo,
