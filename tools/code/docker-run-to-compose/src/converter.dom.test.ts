@@ -56,7 +56,7 @@ describe('docker-run-to-compose', () => {
     expect(splitResult.output).toContain('nginx:')
     expect(splitResult.output).toContain('redis:')
 
-    const errorResult = convertDockerRunToCompose('docker run \"nginx')
+    const errorResult = convertDockerRunToCompose('docker run "nginx')
     expect(errorResult.warnings).toContain('Unclosed quote detected in docker run input.')
     expect(errorResult.error).toBe('No valid docker run commands found.')
   })

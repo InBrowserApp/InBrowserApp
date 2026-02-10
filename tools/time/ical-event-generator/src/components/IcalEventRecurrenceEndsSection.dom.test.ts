@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import IcalEventRecurrenceEndsSection from './IcalEventRecurrenceEndsSection.vue'
 
 vi.mock('vue-i18n', async () => {

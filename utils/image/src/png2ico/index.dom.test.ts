@@ -64,7 +64,10 @@ describe('PngIcoConverter', () => {
 
   it('throws when inputs exceed the ICO file limit', async () => {
     const converter = new PngIcoConverter()
-    const largeInput = new Array(65537).fill({ png: new ArrayBuffer(0) } as IConvertInputItem)
+    const largeInput = Array.from(
+      { length: 65537 },
+      () => ({ png: new ArrayBuffer(0) }) as IConvertInputItem,
+    )
 
     await expect(converter.convertAsync(largeInput)).rejects.toThrow('TOO_MANY_FILES')
   })

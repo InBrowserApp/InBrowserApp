@@ -1,6 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import Base64Converter from './Base64Converter.vue'
 
 vi.mock('@vueuse/core', async () => {
@@ -81,11 +80,11 @@ describe('Base64Converter', () => {
     const textareas = wrapper.findAll('textarea')
 
     expect(textareas).toHaveLength(2)
-    expect((textareas[1]?.element as HTMLTextAreaElement).value).toBe('SGVsbG8gV29ybGQh')
+    expect((textareas[1]!.element as HTMLTextAreaElement).value).toBe('SGVsbG8gV29ybGQh')
 
     await textareas[0]!.setValue('Test')
 
-    expect((textareas[1]?.element as HTMLTextAreaElement).value).toBe('VGVzdA==')
+    expect((textareas[1]!.element as HTMLTextAreaElement).value).toBe('VGVzdA==')
     expect(wrapper.findAll('[data-testid="copy"]')[1]?.attributes('data-content')).toBe('VGVzdA==')
   })
 
@@ -94,13 +93,13 @@ describe('Base64Converter', () => {
     const textareas = wrapper.findAll('textarea')
 
     await textareas[1]!.setValue('SGVsbG8=')
-    expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('Hello')
+    expect((textareas[0]!.element as HTMLTextAreaElement).value).toBe('Hello')
 
     await textareas[1]!.setValue('@@@')
 
-    expect((textareas[1]?.element as HTMLTextAreaElement).getAttribute('data-status')).toBe('error')
+    expect((textareas[1]!.element as HTMLTextAreaElement).getAttribute('data-status')).toBe('error')
     expect(wrapper.text()).toContain('invalid-base64')
-    expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('Hello')
+    expect((textareas[0]!.element as HTMLTextAreaElement).value).toBe('Hello')
   })
 
   it('treats empty base64 input as valid and clears decoded text', async () => {
@@ -109,10 +108,10 @@ describe('Base64Converter', () => {
 
     await textareas[1]!.setValue('')
 
-    expect((textareas[1]?.element as HTMLTextAreaElement).getAttribute('data-status')).toBe(
+    expect((textareas[1]!.element as HTMLTextAreaElement).getAttribute('data-status')).toBe(
       'success',
     )
-    expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('')
+    expect((textareas[0]!.element as HTMLTextAreaElement).value).toBe('')
     expect(wrapper.text()).not.toContain('invalid-base64')
   })
 })

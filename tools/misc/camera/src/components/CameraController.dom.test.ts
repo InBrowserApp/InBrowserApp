@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { computed, ref, type Ref } from 'vue'
+import { computed, type Ref } from 'vue'
 import CameraController from './CameraController.vue'
 
 vi.mock('vue-i18n', async () => {

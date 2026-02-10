@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import PublicKeySection from './PublicKeySection.vue'
 
 vi.mock('vue-i18n', async () => {

@@ -272,8 +272,8 @@ describe('GifToApngConverterView error branches', () => {
     const wrapper = mountView()
     const filesLike = {
       length: 1,
-      *[Symbol.iterator]() {
-        return
+      [Symbol.iterator]() {
+        return [][Symbol.iterator]()
       },
     } as unknown as File[]
 

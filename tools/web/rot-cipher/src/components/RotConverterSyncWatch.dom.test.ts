@@ -10,7 +10,7 @@ vi.mock('vue', async () => {
     ...actual,
     watch: (source: unknown, callback: unknown, options?: Record<string, unknown>) =>
       actual.watch(source as never, callback as never, {
-        ...(options ?? {}),
+        ...options,
         flush: 'sync',
       }),
   }

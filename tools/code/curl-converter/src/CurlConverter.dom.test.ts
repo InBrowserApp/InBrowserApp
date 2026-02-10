@@ -209,17 +209,17 @@ describe('CurlConverter', () => {
     await textarea.setValue('warn')
     await nextTick()
 
-    const warningAlert = wrapper.find('[data-alert-type=\"warning\"]')
+    const warningAlert = wrapper.find('[data-alert-type="warning"]')
     expect(warningAlert.exists()).toBe(true)
     expect(warningAlert.text()).toContain('[WARN]')
 
     await textarea.setValue('error')
     await nextTick()
 
-    const errorAlert = wrapper.find('[data-alert-type=\"error\"]')
+    const errorAlert = wrapper.find('[data-alert-type="error"]')
     expect(errorAlert.exists()).toBe(true)
     expect(errorAlert.text()).toContain('Failed to parse')
-    expect(wrapper.find('[data-alert-type=\"warning\"]').exists()).toBe(false)
+    expect(wrapper.find('[data-alert-type="warning"]').exists()).toBe(false)
 
     const buttons = wrapper.findAll('button')
     const clearButton = buttons.find((button) => button.text() === 'clear')
@@ -229,11 +229,11 @@ describe('CurlConverter', () => {
 
     await clearButton!.trigger('click')
     await nextTick()
-    expect(wrapper.get('[data-testid=\"output-code\"]').text()).toBe('')
+    expect(wrapper.get('[data-testid="output-code"]').text()).toBe('')
 
     await sampleButton!.trigger('click')
     await nextTick()
-    expect(wrapper.get('[data-testid=\"output-code\"]').text()).toContain('curl -X POST')
+    expect(wrapper.get('[data-testid="output-code"]').text()).toContain('curl -X POST')
   })
 
   it('falls back to the default target when stored value is invalid', async () => {

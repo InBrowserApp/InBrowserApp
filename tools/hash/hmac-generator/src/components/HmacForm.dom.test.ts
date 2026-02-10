@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { nextTick, defineComponent, h } from 'vue'
+import { nextTick, defineComponent } from 'vue'
 import HmacForm from './HmacForm.vue'
 
 vi.mock('vue-i18n', async () => {

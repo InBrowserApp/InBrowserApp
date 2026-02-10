@@ -67,7 +67,7 @@ describe('JsonToTomlConverter', () => {
   it('omits download href when no object url is available', () => {
     objectUrlState.value = 'missing'
     const wrapper = mount(TestWrapper)
-    const link = wrapper.find('a[download=\"converted.toml\"]')
+    const link = wrapper.find('a[download="converted.toml"]')
 
     expect(link.attributes('href')).toBeUndefined()
   })

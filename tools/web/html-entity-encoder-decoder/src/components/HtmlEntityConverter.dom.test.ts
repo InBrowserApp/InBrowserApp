@@ -8,15 +8,19 @@ vi.mock('vue', async () => {
   const actual = await vi.importActual<typeof import('vue')>('vue')
   type Watch = typeof actual.watch
 
-  const watchSync: Watch = (source: unknown, callback: unknown, options?: unknown) =>
-    actual.watch(
+  const watchSync: Watch = (source: unknown, callback: unknown, options?: unknown) => {
+    const normalizedOptions =
+      options && typeof options === 'object' ? (options as NonNullable<Parameters<Watch>[2]>) : {}
+
+    return actual.watch(
       source as Parameters<Watch>[0],
       callback as Parameters<Watch>[1],
       {
-        ...(options ?? {}),
+        ...normalizedOptions,
         flush: 'sync',
       } as Parameters<Watch>[2],
     )
+  }
 
   return {
     ...actual,

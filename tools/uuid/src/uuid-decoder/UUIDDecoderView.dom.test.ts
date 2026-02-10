@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { nextTick, ref, type Ref } from 'vue'
+import { nextTick, type Ref } from 'vue'
 import UUIDDecoderView from './UUIDDecoderView.vue'
 
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())

@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import ColorSection from './ColorSection.vue'
 
 vi.mock('naive-ui', async () => {

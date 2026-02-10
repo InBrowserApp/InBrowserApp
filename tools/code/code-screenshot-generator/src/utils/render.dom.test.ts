@@ -28,7 +28,7 @@ afterEach(() => {
 
 describe('render helpers', () => {
   const theme = getThemeById('nebula')
-  const background: BackgroundConfig = {
+  const _background: BackgroundConfig = {
     type: 'preset',
     preset: getBackgroundPreset('aurora'),
   }

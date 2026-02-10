@@ -87,7 +87,7 @@ describe('XmlToJsonConverter', () => {
 
     const renderedJson = getRenderedJson(wrapper)
     expect(renderedJson).toContain('"elements"')
-    expect(renderedJson).toContain('\"name\": \"note\"')
+    expect(renderedJson).toContain('"name": "note"')
   })
 
   it('imports XML from a file selection', async () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, h, type PropType, type VNodeChild } from 'vue'
+import { type PropType, type VNodeChild } from 'vue'
 import ValidationErrorsTable from './ValidationErrorsTable.vue'
 
 type Column = {

@@ -10,11 +10,12 @@ describe('color-converter exports', () => {
     expect(toolInfo.features).toContain('offline')
 
     expect(routes).toHaveLength(1)
-    expect(routes[0]?.path).toBe(toolInfo.path)
-    expect(routes[0]?.name).toBe('color-converter')
-    expect(typeof routes[0]?.component).toBe('function')
+    const route = routes[0]!
+    expect(route.path).toBe(toolInfo.path)
+    expect(route.name).toBe('color-converter')
+    expect(typeof route.component).toBe('function')
 
-    const view = await (routes[0]?.component as () => Promise<{ default: unknown }>)()
+    const view = await (route.component as () => Promise<{ default: unknown }>)()
     expect(view).toHaveProperty('default')
   })
 })

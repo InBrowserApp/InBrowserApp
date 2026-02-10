@@ -1,4 +1,3 @@
-import { defineComponent } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import NavMenusCollapsed from './NavMenusCollapsed.vue'

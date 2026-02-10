@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, nextTick } from 'vue'
+import { nextTick } from 'vue'
 import IcalEventRemindersSection from './IcalEventRemindersSection.vue'
 
 vi.mock('vue-i18n', async () => {

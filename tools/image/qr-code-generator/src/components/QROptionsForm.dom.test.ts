@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, nextTick } from 'vue'
+import { nextTick } from 'vue'
 import QROptionsForm from './QROptionsForm.vue'
 
 vi.mock('vue-i18n', async () => {

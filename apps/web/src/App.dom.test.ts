@@ -12,9 +12,7 @@ vi.mock('@shared/locale', () => ({
 const makeSlotStub = (name: string, extraProps: Record<string, unknown> = {}) =>
   defineComponent({
     name,
-    props: {
-      ...Object.fromEntries(Object.keys(extraProps).map((key) => [key, null])),
-    },
+    props: Object.fromEntries(Object.keys(extraProps).map((key) => [key, null])),
     setup(props, { slots }) {
       return () => h('div', { 'data-test': name, ...extraProps, ...props }, slots.default?.())
     },

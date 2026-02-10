@@ -89,7 +89,7 @@ vi.mock('naive-ui', async () => {
     defineComponent({
       name,
       inheritAttrs: false,
-      template: `<${tag} v-bind=\"$attrs\"><slot /><slot name=\"icon\" /></${tag}>`,
+      template: `<${tag} v-bind="$attrs"><slot /><slot name="icon" /></${tag}>`,
     })
 
   const NButton = defineComponent({

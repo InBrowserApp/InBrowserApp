@@ -10,7 +10,7 @@ vi.mock('vue', async () => {
   return {
     ...actual,
     watch: (...args: Parameters<typeof actual.watch>) =>
-      actual.watch(args[0], args[1], { ...(args[2] ?? {}), flush: 'sync' }),
+      actual.watch(args[0], args[1], { ...args[2], flush: 'sync' }),
   }
 })
 
