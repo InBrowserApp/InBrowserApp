@@ -645,6 +645,9 @@ importers:
       '@shared/tools':
         specifier: workspace:*
         version: link:../../shared/tools
+      '@tools/adler32-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/hash/adler32-hash-text-or-file
       '@tools/aes-decryptor':
         specifier: workspace:*
         version: link:../../tools/web/aes-decryptor
@@ -2216,6 +2219,39 @@ importers:
       svgo:
         specifier: 'catalog:'
         version: 4.0.0
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/adler32-hash-text-or-file:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@tools/hash-text-or-file-template':
+        specifier: workspace:*
+        version: link:../hash-text-or-file-template
+      '@vicons/tabler':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      hash-wasm:
+        specifier: 'catalog:'
+        version: 4.12.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.27(typescript@5.9.3)
@@ -10522,11 +10558,12 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -14566,7 +14603,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.10.9
+      '@types/node': 25.0.9
 
   '@types/tough-cookie@4.0.5': {}
 

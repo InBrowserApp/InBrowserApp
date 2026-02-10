@@ -41,6 +41,7 @@ import { routes as sha512_224HashTextOrFileRoutes } from '@tools/sha512-224-hash
 import { routes as sha512_256HashTextOrFileRoutes } from '@tools/sha512-256-hash-text-or-file/routes'
 import { routes as sha1HashTextOrFileRoutes } from '@tools/sha1-hash-text-or-file/routes'
 import { routes as md4HashTextOrFileRoutes } from '@tools/md4-hash-text-or-file/routes'
+import { routes as adler32HashTextOrFileRoutes } from '@tools/adler32-hash-text-or-file/routes'
 import { routes as md5HashTextOrFileRoutes } from '@tools/md5-hash-text-or-file/routes'
 import { routes as sm3HashTextOrFileRoutes } from '@tools/sm3-hash-text-or-file/routes'
 import { routes as ripemd128HashTextOrFileRoutes } from '@tools/ripemd128-hash-text-or-file/routes'
@@ -232,6 +233,7 @@ export const routes: ToolRoute[] = [
   ...sha512_256HashTextOrFileRoutes,
   ...sha1HashTextOrFileRoutes,
   ...md4HashTextOrFileRoutes,
+  ...adler32HashTextOrFileRoutes,
   ...md5HashTextOrFileRoutes,
   ...sm3HashTextOrFileRoutes,
   ...ripemd128HashTextOrFileRoutes,

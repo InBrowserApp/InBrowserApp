@@ -11,6 +11,7 @@
   "dependencies": {
     "@shared/locale": "workspace:*",
     "@shared/tools": "workspace:*",
+    "@tools/adler32-hash-text-or-file": "workspace:*",
     "@tools/aes-decryptor": "workspace:*",
     "@tools/aes-encryptor": "workspace:*",
     "@tools/ascii-art-generator": "workspace:*",
