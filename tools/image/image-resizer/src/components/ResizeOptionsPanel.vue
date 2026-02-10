@@ -1,9 +1,9 @@
 <template>
   <ToolSection>
-    <ToolSectionHeader>{{ labels.title }}</ToolSectionHeader>
+    <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
 
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <n-form-item-gi :label="labels.width" :show-feedback="false">
+      <n-form-item-gi :label="t('width')" :show-feedback="false">
         <n-input-number
           :value="options.width"
           :min="1"
@@ -14,7 +14,7 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="labels.height" :show-feedback="false">
+      <n-form-item-gi :label="t('height')" :show-feedback="false">
         <n-input-number
           :value="options.height"
           :min="1"
@@ -25,7 +25,7 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="labels.algorithm" :show-feedback="false">
+      <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
         <n-select
           :value="options.algorithm"
           :options="algorithms"
@@ -34,7 +34,7 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="labels.outputFormat" :show-feedback="false">
+      <n-form-item-gi :label="t('outputFormat')" :show-feedback="false">
         <n-select
           :value="options.outputFormat"
           :options="formats"
@@ -43,7 +43,15 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="labels.quality" :show-feedback="false" :span="2">
+      <n-form-item-gi :label="t('keepAspectRatio')" :show-feedback="false" :span="2">
+        <n-switch
+          :value="options.keepAspectRatio"
+          :disabled="isProcessing"
+          @update:value="updateKeepAspectRatio"
+        />
+      </n-form-item-gi>
+
+      <n-form-item-gi :label="t('quality')" :show-feedback="false" :span="2">
         <n-slider
           :value="options.quality"
           :min="1"
@@ -55,79 +63,41 @@
       </n-form-item-gi>
     </n-grid>
 
-    <n-flex vertical :size="12">
-      <n-switch
-        :value="options.keepAspectRatio"
-        :disabled="isProcessing"
-        @update:value="updateKeepAspectRatio"
-      >
-        <template #checked>{{ labels.keepAspectRatio }}</template>
-        <template #unchecked>{{ labels.keepAspectRatio }}</template>
-      </n-switch>
-
-      <n-switch
-        :value="options.allowUpscale"
-        :disabled="isProcessing"
-        @update:value="updateAllowUpscale"
-      >
-        <template #checked>{{ labels.allowUpscale }}</template>
-        <template #unchecked>{{ labels.allowUpscale }}</template>
-      </n-switch>
-
+    <div style="margin-top: 12px">
       <n-button
         type="primary"
         :loading="isProcessing"
-        :disabled="isProcessing"
+        :disabled="isProcessing || !hasImage"
         @click="$emit('resize')"
       >
-        {{ isProcessing ? labels.resizing : labels.resize }}
+        {{ isProcessing ? t('resizing') : t('resize') }}
       </n-button>
-    </n-flex>
+    </div>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import {
-  NButton,
-  NFlex,
-  NFormItemGi,
-  NGrid,
-  NInputNumber,
-  NSelect,
-  NSlider,
-  NSwitch,
-} from 'naive-ui'
+import { useI18n } from 'vue-i18n'
+import { NButton, NFormItemGi, NGrid, NInputNumber, NSelect, NSlider, NSwitch } from 'naive-ui'
 import type { SelectOption } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ImageDimensions, ResizeAlgorithm, ResizeOptions, ResizeOutputFormat } from '../types'
-
-interface OptionLabels {
-  title: string
-  width: string
-  height: string
-  keepAspectRatio: string
-  allowUpscale: string
-  algorithm: string
-  outputFormat: string
-  quality: string
-  resize: string
-  resizing: string
-}
 
 interface Props {
   sourceDimensions: ImageDimensions | null
   algorithms: SelectOption[]
   formats: SelectOption[]
-  labels: OptionLabels
   isProcessing: boolean
+  hasImage: boolean
 }
 
 const props = defineProps<Props>()
-
 defineEmits<{
   resize: []
 }>()
+
+const { t } = useI18n({ useScope: 'local' })
 
 const options = defineModel<ResizeOptions>('options', { required: true })
 
@@ -191,13 +161,6 @@ function updateKeepAspectRatio(value: boolean) {
   }
 }
 
-function updateAllowUpscale(value: boolean) {
-  options.value = {
-    ...options.value,
-    allowUpscale: value,
-  }
-}
-
 function updateAlgorithm(value: string | number | null) {
   if (typeof value !== 'string') return
   if (!isResizeAlgorithm(value)) return
@@ -239,3 +202,283 @@ function isResizeOutputFormat(value: string): value is ResizeOutputFormat {
   return value === 'original' || value === 'png' || value === 'jpeg' || value === 'webp'
 }
 </script>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "zh": {
+    "title": "调整设置",
+    "width": "宽度",
+    "height": "高度",
+    "keepAspectRatio": "保持比例",
+    "algorithm": "算法",
+    "outputFormat": "输出格式",
+    "quality": "质量",
+    "resize": "调整图片",
+    "resizing": "正在调整图片..."
+  },
+  "zh-CN": {
+    "title": "调整设置",
+    "width": "宽度",
+    "height": "高度",
+    "keepAspectRatio": "保持比例",
+    "algorithm": "算法",
+    "outputFormat": "输出格式",
+    "quality": "质量",
+    "resize": "调整图片",
+    "resizing": "正在调整图片..."
+  },
+  "zh-TW": {
+    "title": "調整設定",
+    "width": "寬度",
+    "height": "高度",
+    "keepAspectRatio": "保持比例",
+    "algorithm": "演算法",
+    "outputFormat": "輸出格式",
+    "quality": "品質",
+    "resize": "調整圖片",
+    "resizing": "正在調整圖片..."
+  },
+  "zh-HK": {
+    "title": "調整設定",
+    "width": "寬度",
+    "height": "高度",
+    "keepAspectRatio": "保持比例",
+    "algorithm": "演算法",
+    "outputFormat": "輸出格式",
+    "quality": "品質",
+    "resize": "調整圖片",
+    "resizing": "正在調整圖片..."
+  },
+  "es": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "fr": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "de": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "it": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "ja": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "ko": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "ru": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "pt": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "ar": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "hi": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "tr": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "nl": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "sv": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "pl": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "vi": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "th": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "id": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "he": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "ms": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  },
+  "no": {
+    "title": "Resize settings",
+    "width": "Width",
+    "height": "Height",
+    "keepAspectRatio": "Keep aspect ratio",
+    "algorithm": "Algorithm",
+    "outputFormat": "Output format",
+    "quality": "Quality",
+    "resize": "Resize image",
+    "resizing": "Resizing image..."
+  }
+}
+</i18n>

@@ -2,22 +2,17 @@
   <ToolDefaultPageLayout :info="toolInfo">
     <n-grid cols="1 l:2" responsive="screen" :x-gap="24" :y-gap="24">
       <n-gi>
-        <ImageResizeInput
-          v-model:file="imageFile"
-          :dimensions="sourceDimensions"
-          :labels="inputLabels"
-        />
+        <ImageResizeInput v-model:file="imageFile" :dimensions="sourceDimensions" />
       </n-gi>
 
       <n-gi>
         <ResizeOptionsPanel
-          v-if="imageFile"
           v-model:options="options"
           :source-dimensions="sourceDimensions"
           :algorithms="algorithmOptions"
           :formats="formatOptions"
-          :labels="optionLabels"
           :is-processing="isProcessing"
+          :has-image="Boolean(imageFile)"
           @resize="runResize"
         />
 
@@ -26,24 +21,14 @@
           :original-file="imageFile"
           :result="result"
           :download-url="downloadUrl"
-          :labels="resultLabels"
         />
       </n-gi>
     </n-grid>
 
-    <ToolSection>
-      <ToolSectionHeader>{{ algorithmHintTitle }}</ToolSectionHeader>
-      <n-flex vertical :size="8">
-        <n-text depth="3">{{ algorithmHintBrowser }}</n-text>
-        <n-text depth="3">{{ algorithmHintBicubic }}</n-text>
-        <n-text depth="3">{{ algorithmHintBilinear }}</n-text>
-        <n-text depth="3">{{ algorithmHintLanczos3 }}</n-text>
-        <n-text depth="3">{{ algorithmHintNearest }}</n-text>
-      </n-flex>
-    </ToolSection>
+    <AlgorithmGuideSection />
 
     <ToolSection v-if="error">
-      <n-alert type="warning" :title="errorTitle" :show-icon="false">
+      <n-alert type="warning" :title="t('errorTitle')" :show-icon="false">
         {{ error }}
       </n-alert>
     </ToolSection>
@@ -52,16 +37,23 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { useStorage, useObjectUrl } from '@vueuse/core'
-import { NAlert, NFlex, NGi, NGrid, NText, useMessage } from 'naive-ui'
+import { useObjectUrl } from '@vueuse/core'
+import { NAlert, NGi, NGrid, useMessage } from 'naive-ui'
 import type { SelectOption } from 'naive-ui'
-import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { useI18n } from 'vue-i18n'
+import { ToolDefaultPageLayout, ToolSection } from '@shared/ui/tool'
 import * as toolInfo from './info'
-import { ImageResizeInput, ResizeOptionsPanel, ResizeResultPanel } from './components'
+import {
+  AlgorithmGuideSection,
+  ImageResizeInput,
+  ResizeOptionsPanel,
+  ResizeResultPanel,
+} from './components'
 import type { ImageDimensions, ResizeAlgorithm, ResizeOptions, ResizeResult } from './types'
 import { imageResizeAlgorithms, resizeImage } from './utils/resize-image'
 
 const message = useMessage()
+const { t } = useI18n({ useScope: 'local' })
 
 const imageFile = ref<File | null>(null)
 const sourceDimensions = ref<ImageDimensions | null>(null)
@@ -69,11 +61,11 @@ const isProcessing = ref(false)
 const error = ref('')
 const result = ref<ResizeResult | null>(null)
 
-const options = useStorage<ResizeOptions>('tools:image-resizer:options', {
+const options = ref<ResizeOptions>({
   width: 1280,
   height: 720,
   keepAspectRatio: true,
-  allowUpscale: false,
+  allowUpscale: true,
   algorithm: 'browser-high',
   outputFormat: 'original',
   quality: 92,
@@ -93,25 +85,24 @@ watch(imageFile, async (file) => {
     const dimensions = await readImageDimensions(file)
     sourceDimensions.value = dimensions
 
-    if (options.value.keepAspectRatio) {
-      const ratio = dimensions.height / dimensions.width
-      options.value = {
-        ...options.value,
-        height: Math.max(1, Math.round(options.value.width * ratio)),
-      }
+    options.value = {
+      ...options.value,
+      width: dimensions.width,
+      height: dimensions.height,
+      allowUpscale: true,
     }
   } catch {
-    error.value = invalidImageText
+    error.value = t('invalidImageText')
   }
 })
 
 const algorithmOptions = computed<SelectOption[]>(() => {
   const labelMap: Record<ResizeAlgorithm, string> = {
-    'browser-high': algorithmLabelBrowserHigh,
-    bicubic: algorithmLabelBicubic,
-    bilinear: algorithmLabelBilinear,
-    lanczos3: algorithmLabelLanczos3,
-    nearest: algorithmLabelNearest,
+    'browser-high': 'Browser high quality',
+    bicubic: 'Bicubic interpolation',
+    bilinear: 'Bilinear interpolation',
+    lanczos3: 'Lanczos filter (radius 3)',
+    nearest: 'Nearest neighbor',
   }
 
   return imageResizeAlgorithms.map((item) => ({
@@ -121,73 +112,11 @@ const algorithmOptions = computed<SelectOption[]>(() => {
 })
 
 const formatOptions = computed<SelectOption[]>(() => [
-  { value: 'original', label: formatLabelOriginal },
-  { value: 'png', label: formatLabelPng },
-  { value: 'jpeg', label: formatLabelJpeg },
-  { value: 'webp', label: formatLabelWebp },
+  { value: 'original', label: 'Keep original' },
+  { value: 'png', label: 'PNG' },
+  { value: 'jpeg', label: 'JPEG' },
+  { value: 'webp', label: 'WebP' },
 ])
-
-const inputLabels = {
-  uploadTitle: 'Upload image',
-  dropHint: 'Click or drag to upload image',
-  supportedFormatsHint: 'Supports PNG, JPEG, WebP and most browser image formats',
-  removeFile: 'Remove file',
-  onlyOneFile: 'Only one file can be uploaded',
-  invalidFileType: 'Please select a valid image file',
-  previewAlt: 'Selected image preview',
-  dimensions: 'Dimensions',
-}
-
-const optionLabels = {
-  title: 'Resize settings',
-  width: 'Width',
-  height: 'Height',
-  keepAspectRatio: 'Keep aspect ratio',
-  allowUpscale: 'Allow upscale',
-  algorithm: 'Algorithm',
-  outputFormat: 'Output format',
-  quality: 'Quality',
-  resize: 'Resize image',
-  resizing: 'Resizing image...',
-}
-
-const resultLabels = {
-  title: 'Resize result',
-  originalSize: 'Original size',
-  resizedSize: 'Resized size',
-  sizeChange: 'Size change',
-  originalDimensions: 'Original dimensions',
-  resizedDimensions: 'Resized dimensions',
-  downloadImage: 'Download resized image',
-}
-
-const errorTitle = 'Resize error'
-const invalidImageText = 'Failed to read this image file. Please choose another image.'
-const resizeSuccessText = 'Image resized successfully.'
-const resizeFailedText = 'Image resize failed. Please try another setting or file.'
-
-const algorithmLabelBrowserHigh = 'Browser high quality'
-const algorithmLabelBicubic = 'Bicubic interpolation'
-const algorithmLabelBilinear = 'Bilinear interpolation'
-const algorithmLabelLanczos3 = 'Lanczos filter (radius 3)'
-const algorithmLabelNearest = 'Nearest neighbor'
-
-const formatLabelOriginal = 'Keep original'
-const formatLabelPng = 'PNG'
-const formatLabelJpeg = 'JPEG'
-const formatLabelWebp = 'WebP'
-
-const algorithmHintTitle = 'Algorithm guide'
-const algorithmHintBrowser =
-  'Browser high quality: best default for photos and general use. Fast and smooth in most browsers.'
-const algorithmHintBicubic =
-  'Bicubic interpolation: smoother edges than bilinear, suitable for portrait and product photos.'
-const algorithmHintBilinear =
-  'Bilinear interpolation: balanced sharpness and speed, useful for common resize workflows.'
-const algorithmHintLanczos3 =
-  'Lanczos filter (radius 3): highest detail retention when downscaling, but usually slower.'
-const algorithmHintNearest =
-  'Nearest neighbor: preserves hard edges for pixel-art style images and UI sprites.'
 
 async function runResize() {
   if (!imageFile.value) return
@@ -196,8 +125,11 @@ async function runResize() {
   error.value = ''
 
   try {
-    result.value = await resizeImage(imageFile.value, options.value)
-    message.success(resizeSuccessText)
+    result.value = await resizeImage(imageFile.value, {
+      ...options.value,
+      allowUpscale: true,
+    })
+    message.success(t('resizeSuccessText'))
   } catch (reason) {
     result.value = null
     error.value = resolveErrorMessage(reason)
@@ -209,9 +141,9 @@ async function runResize() {
 
 function resolveErrorMessage(reason: unknown) {
   if (reason instanceof Error) {
-    if (reason.message === 'INVALID_IMAGE') return invalidImageText
+    if (reason.message === 'INVALID_IMAGE') return t('invalidImageText')
   }
-  return resizeFailedText
+  return t('resizeFailedText')
 }
 
 async function readImageDimensions(file: File): Promise<ImageDimensions> {
@@ -248,3 +180,158 @@ async function readImageDimensions(file: File): Promise<ImageDimensions> {
   }
 }
 </script>
+
+<i18n lang="json">
+{
+  "en": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "zh": {
+    "errorTitle": "调整错误",
+    "invalidImageText": "读取图片文件失败，请选择其他图片。",
+    "resizeSuccessText": "图片调整成功。",
+    "resizeFailedText": "图片调整失败，请尝试其他设置或文件。"
+  },
+  "zh-CN": {
+    "errorTitle": "调整错误",
+    "invalidImageText": "读取图片文件失败，请选择其他图片。",
+    "resizeSuccessText": "图片调整成功。",
+    "resizeFailedText": "图片调整失败，请尝试其他设置或文件。"
+  },
+  "zh-TW": {
+    "errorTitle": "調整錯誤",
+    "invalidImageText": "讀取圖片檔案失敗，請選擇其他圖片。",
+    "resizeSuccessText": "圖片調整成功。",
+    "resizeFailedText": "圖片調整失敗，請嘗試其他設定或檔案。"
+  },
+  "zh-HK": {
+    "errorTitle": "調整錯誤",
+    "invalidImageText": "讀取圖片檔案失敗，請選擇其他圖片。",
+    "resizeSuccessText": "圖片調整成功。",
+    "resizeFailedText": "圖片調整失敗，請嘗試其他設定或檔案。"
+  },
+  "es": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "fr": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "de": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "it": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "ja": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "ko": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "ru": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "pt": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "ar": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "hi": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "tr": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "nl": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "sv": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "pl": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "vi": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "th": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "id": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "he": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "ms": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  },
+  "no": {
+    "errorTitle": "Resize error",
+    "invalidImageText": "Failed to read this image file. Please choose another image.",
+    "resizeSuccessText": "Image resized successfully.",
+    "resizeFailedText": "Image resize failed. Please try another setting or file."
+  }
+}
+</i18n>
