@@ -48,6 +48,8 @@ import { routes as ripemd160HashTextOrFileRoutes } from '@tools/ripemd160-hash-t
 import { routes as ripemd256HashTextOrFileRoutes } from '@tools/ripemd256-hash-text-or-file/routes'
 import { routes as ripemd320HashTextOrFileRoutes } from '@tools/ripemd320-hash-text-or-file/routes'
 import { routes as keccakHashTextOrFileRoutes } from '@tools/keccak-hash-text-or-file/routes'
+import { routes as argon2HashPasswordRoutes } from '@tools/argon2-hash-password/routes'
+import { routes as argon2HashPasswordVerifierRoutes } from '@tools/argon2-hash-password-verifier/routes'
 import { routes as bcryptHashPasswordRoutes } from '@tools/bcrypt-hash-password/routes'
 import { routes as bcryptHashPasswordVerifierRoutes } from '@tools/bcrypt-hash-password-verifier/routes'
 import { routes as pbkdf2KeyDerivationRoutes } from '@tools/pbkdf2-key-derivation/routes'
@@ -237,6 +239,8 @@ export const routes: ToolRoute[] = [
   ...ripemd256HashTextOrFileRoutes,
   ...ripemd320HashTextOrFileRoutes,
   ...keccakHashTextOrFileRoutes,
+  ...argon2HashPasswordRoutes,
+  ...argon2HashPasswordVerifierRoutes,
   ...bcryptHashPasswordRoutes,
   ...bcryptHashPasswordVerifierRoutes,
   ...pbkdf2KeyDerivationRoutes,

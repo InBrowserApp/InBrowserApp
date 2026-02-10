@@ -50,6 +50,8 @@ import { toolInfo as ripemd160HashTextOrFileToolInfo } from '@tools/ripemd160-ha
 import { toolInfo as ripemd256HashTextOrFileToolInfo } from '@tools/ripemd256-hash-text-or-file'
 import { toolInfo as ripemd320HashTextOrFileToolInfo } from '@tools/ripemd320-hash-text-or-file'
 import { toolInfo as keccakHashTextOrFileToolInfo } from '@tools/keccak-hash-text-or-file'
+import { toolInfo as argon2HashPasswordToolInfo } from '@tools/argon2-hash-password'
+import { toolInfo as argon2HashPasswordVerifierToolInfo } from '@tools/argon2-hash-password-verifier'
 import { toolInfo as bcryptHashPasswordToolInfo } from '@tools/bcrypt-hash-password'
 import { toolInfo as bcryptHashPasswordVerifierToolInfo } from '@tools/bcrypt-hash-password-verifier'
 import { toolInfo as hashToolsToolInfo } from '@tools/hash-tools'
@@ -276,6 +278,8 @@ export const tools: ToolInfo[] = [
   ripemd256HashTextOrFileToolInfo,
   ripemd320HashTextOrFileToolInfo,
   keccakHashTextOrFileToolInfo,
+  argon2HashPasswordToolInfo,
+  argon2HashPasswordVerifierToolInfo,
   bcryptHashPasswordToolInfo,
   bcryptHashPasswordVerifierToolInfo,
   pbkdf2KeyDerivationToolInfo,
