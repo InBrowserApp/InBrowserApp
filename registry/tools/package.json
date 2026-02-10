@@ -13,6 +13,7 @@
     "@shared/tools": "workspace:*",
     "@tools/aes-decryptor": "workspace:*",
     "@tools/aes-encryptor": "workspace:*",
+    "@tools/archive-viewer": "workspace:*",
     "@tools/ascii-art-generator": "workspace:*",
     "@tools/audio-recorder": "workspace:*",
     "@tools/barcode-generator": "workspace:*",

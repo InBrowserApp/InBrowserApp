@@ -1,0 +1,411 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { flushPromises, mount } from '@vue/test-utils'
+import { defineComponent, h } from 'vue'
+import ArchiveViewer from './ArchiveViewer.vue'
+import { openArchive } from '../utils/archive-open'
+import type { ArchiveEntry, ArchiveHandle } from '../types'
+
+vi.mock('../utils/archive-open', () => ({
+  openArchive: vi.fn(),
+}))
+
+const mockedOpenArchive = vi.mocked(openArchive)
+
+const BaseStub = defineComponent({
+  name: 'BaseStub',
+  inheritAttrs: false,
+  template: '<div><slot /></div>',
+})
+
+const NInputStub = defineComponent({
+  name: 'NInput',
+  props: {
+    value: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: 'text',
+    },
+  },
+  emits: ['update:value'],
+  setup(props, { emit }) {
+    return () =>
+      props.type === 'textarea'
+        ? h('textarea', {
+            value: props.value,
+            onInput: (event: Event) =>
+              emit('update:value', (event.target as HTMLTextAreaElement).value),
+          })
+        : h('input', {
+            value: props.value,
+            onInput: (event: Event) =>
+              emit('update:value', (event.target as HTMLInputElement).value),
+          })
+  },
+})
+
+const NButtonStub = defineComponent({
+  name: 'NButton',
+  inheritAttrs: false,
+  props: {
+    tag: {
+      type: String,
+      default: 'button',
+    },
+    href: {
+      type: String,
+      default: undefined,
+    },
+    download: {
+      type: String,
+      default: undefined,
+    },
+  },
+  emits: ['click'],
+  template:
+    '<component :is="tag" :href="href" :download="download" @click="$emit(\'click\')"><slot /></component>',
+})
+
+const NStatisticStub = defineComponent({
+  name: 'NStatistic',
+  props: {
+    label: {
+      type: String,
+      default: '',
+    },
+  },
+  template: '<div><span>{{ label }}</span><slot /></div>',
+})
+
+const NDataTableStub = defineComponent({
+  name: 'NDataTable',
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+    rowProps: {
+      type: Function,
+      required: false,
+      default: undefined,
+    },
+  },
+  methods: {
+    handleRowClick(row: unknown) {
+      if (!this.rowProps) return
+      const props = this.rowProps(row)
+      if (props && typeof props === 'object' && 'onClick' in props) {
+        const click = (props as { onClick?: () => void }).onClick
+        click?.()
+      }
+    },
+  },
+  template:
+    '<div class="data-table"><button v-for="row in data" :key="row.key" class="row" @click="handleRowClick(row)">{{ row.path }}</button></div>',
+})
+
+const NImageStub = defineComponent({
+  name: 'NImage',
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      default: '',
+    },
+  },
+  template: '<img :src="src" :alt="alt" />',
+})
+
+const mountViewer = () =>
+  mount(ArchiveViewer, {
+    global: {
+      stubs: {
+        ToolSection: BaseStub,
+        ToolSectionHeader: BaseStub,
+        NAlert: BaseStub,
+        NButton: NButtonStub,
+        NDataTable: NDataTableStub,
+        NFlex: BaseStub,
+        NGrid: BaseStub,
+        NGridItem: BaseStub,
+        NImage: NImageStub,
+        NInput: NInputStub,
+        NSpin: BaseStub,
+        NStatistic: NStatisticStub,
+        NText: BaseStub,
+      },
+    },
+  })
+
+const makeFile = (name: string, content = 'content') => new File([content], name)
+
+const createArchiveHandle = (
+  entries: ArchiveEntry[],
+  readBlob: Blob | Error,
+  format: ArchiveHandle['format'] = 'zip',
+) => {
+  const readEntry =
+    readBlob instanceof Error
+      ? vi.fn(async () => {
+          throw readBlob
+        })
+      : vi.fn(async () => readBlob)
+  const dispose = vi.fn(async () => undefined)
+  return {
+    handle: {
+      format,
+      entries,
+      readEntry,
+      dispose,
+    } satisfies ArchiveHandle,
+    readEntry,
+    dispose,
+  }
+}
+
+async function uploadSingleFile(wrapper: ReturnType<typeof mountViewer>, file: File) {
+  const fileInput = wrapper.find('input[type="file"]')
+  if (!fileInput.exists()) {
+    throw new Error('Missing file input')
+  }
+
+  Object.defineProperty(fileInput.element, 'files', {
+    configurable: true,
+    value: [file],
+  })
+
+  await fileInput.trigger('change')
+  await flushPromises()
+}
+
+let createObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
+let revokeObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
+
+beforeEach(() => {
+  mockedOpenArchive.mockReset()
+
+  const url = URL as Partial<typeof URL>
+  if (!url.createObjectURL) {
+    Object.defineProperty(URL, 'createObjectURL', {
+      value: vi.fn(() => 'blob:mock'),
+      writable: true,
+    })
+  }
+  if (!url.revokeObjectURL) {
+    Object.defineProperty(URL, 'revokeObjectURL', {
+      value: vi.fn(() => undefined),
+      writable: true,
+    })
+  }
+
+  createObjectUrlSpy = vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock')
+  revokeObjectUrlSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined)
+})
+
+afterEach(() => {
+  createObjectUrlSpy?.mockRestore()
+  revokeObjectUrlSpy?.mockRestore()
+  createObjectUrlSpy = null
+  revokeObjectUrlSpy = null
+})
+
+describe('ArchiveViewer', () => {
+  it('opens archive and renders entries summary', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'docs',
+        size: 0,
+        compressedSize: null,
+        kind: 'directory',
+        modifiedAt: null,
+        extension: '',
+      },
+      {
+        path: 'docs/readme.txt',
+        size: 11,
+        compressedSize: 9,
+        kind: 'file',
+        modifiedAt: new Date('2025-01-01T00:00:00.000Z'),
+        extension: 'txt',
+      },
+    ]
+
+    const { handle } = createArchiveHandle(
+      entries,
+      new Blob(['hello world'], { type: 'text/plain' }),
+    )
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    const file = makeFile('docs.zip')
+    await uploadSingleFile(wrapper, file)
+
+    expect(mockedOpenArchive).toHaveBeenCalledWith(file)
+    expect(wrapper.text()).toContain('Archive summary')
+    expect(wrapper.text()).toContain('docs/readme.txt')
+
+    const searchInput = wrapper.find('input[placeholder="Search by path"]')
+    expect(searchInput.exists()).toBe(true)
+    await searchInput.setValue('readme')
+    await flushPromises()
+  })
+
+  it('loads text preview and exposes download link', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'readme.txt',
+        size: 11,
+        compressedSize: 9,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const { handle, readEntry } = createArchiveHandle(
+      entries,
+      new Blob(['hello world'], { type: 'text/plain' }),
+    )
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('single.zip'))
+
+    await flushPromises()
+
+    expect(readEntry).toHaveBeenCalledWith('readme.txt')
+    const preview = wrapper.find('textarea')
+    expect(preview.exists()).toBe(true)
+    expect((preview.element as HTMLTextAreaElement).value).toContain('hello world')
+
+    const downloadLink = wrapper
+      .findAll('a')
+      .find((link) => link.text().includes('Download selected entry'))
+    if (!downloadLink) {
+      throw new Error('Missing download link')
+    }
+
+    expect(downloadLink.attributes('href')).toBe('blob:mock')
+    expect(downloadLink.attributes('download')).toBe('readme.txt')
+  })
+
+  it('renders image preview when selected entry is an image', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'image.png',
+        size: 4,
+        compressedSize: 4,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'png',
+      },
+    ]
+
+    const { handle } = createArchiveHandle(
+      entries,
+      new Blob([new Uint8Array([137, 80, 78, 71])], { type: 'image/png' }),
+    )
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('image.zip'))
+
+    await flushPromises()
+
+    const image = wrapper.find('img')
+    expect(image.exists()).toBe(true)
+    expect(image.attributes('src')).toBe('blob:mock')
+  })
+
+  it('shows informational preview fallback for unsupported file types', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'binary.bin',
+        size: 3,
+        compressedSize: 3,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'bin',
+      },
+    ]
+
+    const { handle } = createArchiveHandle(
+      entries,
+      new Blob([new Uint8Array([1, 2, 3])], { type: 'application/octet-stream' }),
+    )
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('binary.zip'))
+
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Preview is not available for this file type.')
+  })
+
+  it('shows fallback preview text when preview message is empty', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'note.txt',
+        size: 4,
+        compressedSize: 4,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const { handle } = createArchiveHandle(entries, new Error(''))
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('note.zip'))
+    await flushPromises()
+
+    expect(wrapper.text()).toContain('Preview is not available for this file type.')
+  })
+
+  it('shows parse errors when archive cannot be opened', async () => {
+    mockedOpenArchive.mockRejectedValue(new Error('invalid archive file'))
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('broken.zip'))
+
+    expect(wrapper.text()).toContain('invalid archive file')
+  })
+
+  it('disposes opened archive when clearing file', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'note.txt',
+        size: 4,
+        compressedSize: 3,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const { handle, dispose } = createArchiveHandle(entries, new Blob(['test']))
+    mockedOpenArchive.mockResolvedValue(handle)
+
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('clear.zip'))
+
+    const clearButton = wrapper.findAll('button').find((button) => button.text() === 'Clear file')
+    if (!clearButton) {
+      throw new Error('Missing clear button')
+    }
+
+    await clearButton.trigger('click')
+    await flushPromises()
+
+    expect(dispose).toHaveBeenCalledTimes(1)
+    expect(wrapper.text()).not.toContain('clear.zip')
+  })
+})
