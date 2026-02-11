@@ -255,144 +255,144 @@ async function importFromFile(): Promise<void> {
     "format-error": "格式化失敗"
   },
   "es": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opciones de formato",
+    "lint-options": "Opciones de lint",
+    "input-output": "Entrada y salida SQL",
+    "lint-results": "Resultados de lint",
+    "format-error": "Error al formatear"
   },
   "fr": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Options de formatage",
+    "lint-options": "Options de lint",
+    "input-output": "Entrée et sortie SQL",
+    "lint-results": "Résultats du lint",
+    "format-error": "Échec du formatage"
   },
   "de": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Formatierungsoptionen",
+    "lint-options": "Lint-Optionen",
+    "input-output": "SQL-Eingabe & Ausgabe",
+    "lint-results": "Lint-Ergebnisse",
+    "format-error": "Formatierung fehlgeschlagen"
   },
   "it": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opzioni di formattazione",
+    "lint-options": "Opzioni lint",
+    "input-output": "Input e output SQL",
+    "lint-results": "Risultati lint",
+    "format-error": "Formattazione non riuscita"
   },
   "ja": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "フォーマット設定",
+    "lint-options": "Lint 設定",
+    "input-output": "SQL 入出力",
+    "lint-results": "Lint 結果",
+    "format-error": "フォーマットに失敗しました"
   },
   "ko": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "서식 옵션",
+    "lint-options": "Lint 옵션",
+    "input-output": "SQL 입력 및 출력",
+    "lint-results": "Lint 결과",
+    "format-error": "포맷에 실패했습니다"
   },
   "ru": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Параметры форматирования",
+    "lint-options": "Параметры lint",
+    "input-output": "Ввод и вывод SQL",
+    "lint-results": "Результаты lint",
+    "format-error": "Ошибка форматирования"
   },
   "pt": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opções de formatação",
+    "lint-options": "Opções de lint",
+    "input-output": "Entrada e saída SQL",
+    "lint-results": "Resultados de lint",
+    "format-error": "Falha na formatação"
   },
   "ar": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "خيارات التنسيق",
+    "lint-options": "خيارات التدقيق",
+    "input-output": "إدخال وإخراج SQL",
+    "lint-results": "نتائج التدقيق",
+    "format-error": "فشل التنسيق"
   },
   "hi": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "फॉर्मेट विकल्प",
+    "lint-options": "लिंट विकल्प",
+    "input-output": "SQL इनपुट और आउटपुट",
+    "lint-results": "लिंट परिणाम",
+    "format-error": "फॉर्मेटिंग विफल"
   },
   "tr": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Biçimlendirme Seçenekleri",
+    "lint-options": "Lint Seçenekleri",
+    "input-output": "SQL Girdi ve Çıktı",
+    "lint-results": "Lint Sonuçları",
+    "format-error": "Biçimlendirme başarısız"
   },
   "nl": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opmaakopties",
+    "lint-options": "Lint-opties",
+    "input-output": "SQL-invoer en -uitvoer",
+    "lint-results": "Lint-resultaten",
+    "format-error": "Formatteren mislukt"
   },
   "sv": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Formateringsalternativ",
+    "lint-options": "Lint-alternativ",
+    "input-output": "SQL-inmatning och utmatning",
+    "lint-results": "Lint-resultat",
+    "format-error": "Formatering misslyckades"
   },
   "pl": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opcje formatowania",
+    "lint-options": "Opcje lint",
+    "input-output": "Wejście i wyjście SQL",
+    "lint-results": "Wyniki lint",
+    "format-error": "Formatowanie nie powiodło się"
   },
   "vi": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Tùy chọn định dạng",
+    "lint-options": "Tùy chọn lint",
+    "input-output": "SQL đầu vào và đầu ra",
+    "lint-results": "Kết quả lint",
+    "format-error": "Định dạng thất bại"
   },
   "th": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "ตัวเลือกการจัดรูปแบบ",
+    "lint-options": "ตัวเลือก Lint",
+    "input-output": "อินพุตและเอาต์พุต SQL",
+    "lint-results": "ผลลัพธ์ Lint",
+    "format-error": "การจัดรูปแบบล้มเหลว"
   },
   "id": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Opsi Pemformatan",
+    "lint-options": "Opsi Lint",
+    "input-output": "Input & Output SQL",
+    "lint-results": "Hasil Lint",
+    "format-error": "Pemformatan gagal"
   },
   "he": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "אפשרויות עיצוב",
+    "lint-options": "אפשרויות lint",
+    "input-output": "קלט ופלט SQL",
+    "lint-results": "תוצאות lint",
+    "format-error": "העיצוב נכשל"
   },
   "ms": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Pilihan Pemformatan",
+    "lint-options": "Pilihan Lint",
+    "input-output": "Input & Output SQL",
+    "lint-results": "Hasil Lint",
+    "format-error": "Pemformatan gagal"
   },
   "no": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "Formateringsalternativer",
+    "lint-options": "Lint-alternativer",
+    "input-output": "SQL-inndata og utdata",
+    "lint-results": "Lint-resultater",
+    "format-error": "Formatering mislyktes"
   }
 }
 </i18n>

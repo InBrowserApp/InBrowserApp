@@ -70,124 +70,124 @@ const { t } = useI18n({ useScope: 'local' })
     "output-empty": "格式化後的 SQL 會顯示在這裡。"
   },
   "es": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL de origen",
+    "formatted-sql": "SQL formateado",
+    "input-placeholder": "Pega SQL aquí; se admiten múltiples sentencias.",
+    "output-empty": "El SQL formateado aparecerá aquí."
   },
   "fr": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL source",
+    "formatted-sql": "SQL formaté",
+    "input-placeholder": "Collez du SQL ici ; plusieurs requêtes sont prises en charge.",
+    "output-empty": "Le SQL formaté s’affichera ici."
   },
   "de": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Quell-SQL",
+    "formatted-sql": "Formatiertes SQL",
+    "input-placeholder": "SQL hier einfügen; mehrere Anweisungen werden unterstützt.",
+    "output-empty": "Formatiertes SQL erscheint hier."
   },
   "it": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL sorgente",
+    "formatted-sql": "SQL formattato",
+    "input-placeholder": "Incolla SQL qui; sono supportate più istruzioni.",
+    "output-empty": "L’SQL formattato apparirà qui."
   },
   "ja": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "元の SQL",
+    "formatted-sql": "整形済み SQL",
+    "input-placeholder": "ここに SQL を貼り付けてください。複数文に対応します。",
+    "output-empty": "整形後の SQL がここに表示されます。"
   },
   "ko": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "원본 SQL",
+    "formatted-sql": "포맷된 SQL",
+    "input-placeholder": "SQL을 여기에 붙여 넣으세요. 여러 문장을 지원합니다.",
+    "output-empty": "포맷된 SQL이 여기에 표시됩니다."
   },
   "ru": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Исходный SQL",
+    "formatted-sql": "Форматированный SQL",
+    "input-placeholder": "Вставьте SQL сюда; поддерживаются несколько выражений.",
+    "output-empty": "Здесь появится форматированный SQL."
   },
   "pt": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL de origem",
+    "formatted-sql": "SQL formatado",
+    "input-placeholder": "Cole SQL aqui; múltiplas instruções são suportadas.",
+    "output-empty": "O SQL formatado aparecerá aqui."
   },
   "ar": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL المصدر",
+    "formatted-sql": "SQL المنسق",
+    "input-placeholder": "الصق SQL هنا؛ يتم دعم عبارات متعددة.",
+    "output-empty": "سيظهر SQL المنسق هنا."
   },
   "hi": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "स्रोत SQL",
+    "formatted-sql": "फॉर्मेट किया हुआ SQL",
+    "input-placeholder": "यहाँ SQL पेस्ट करें; कई स्टेटमेंट समर्थित हैं।",
+    "output-empty": "फॉर्मेट किया हुआ SQL यहाँ दिखेगा।"
   },
   "tr": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Kaynak SQL",
+    "formatted-sql": "Biçimlendirilmiş SQL",
+    "input-placeholder": "SQL’i buraya yapıştırın; birden çok ifade desteklenir.",
+    "output-empty": "Biçimlendirilmiş SQL burada görünür."
   },
   "nl": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Bron-SQL",
+    "formatted-sql": "Geformatteerde SQL",
+    "input-placeholder": "Plak hier SQL; meerdere statements worden ondersteund.",
+    "output-empty": "Geformatteerde SQL verschijnt hier."
   },
   "sv": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Käll-SQL",
+    "formatted-sql": "Formaterad SQL",
+    "input-placeholder": "Klistra in SQL här; flera satser stöds.",
+    "output-empty": "Formaterad SQL visas här."
   },
   "pl": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Źródłowy SQL",
+    "formatted-sql": "Sformatowany SQL",
+    "input-placeholder": "Wklej tutaj SQL; obsługiwanych jest wiele instrukcji.",
+    "output-empty": "Sformatowany SQL pojawi się tutaj."
   },
   "vi": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL nguồn",
+    "formatted-sql": "SQL đã định dạng",
+    "input-placeholder": "Dán SQL vào đây; hỗ trợ nhiều câu lệnh.",
+    "output-empty": "SQL đã định dạng sẽ hiển thị tại đây."
   },
   "th": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL ต้นฉบับ",
+    "formatted-sql": "SQL ที่จัดรูปแบบแล้ว",
+    "input-placeholder": "วาง SQL ที่นี่ รองรับหลายคำสั่ง",
+    "output-empty": "SQL ที่จัดรูปแบบแล้วจะแสดงที่นี่"
   },
   "id": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL sumber",
+    "formatted-sql": "SQL terformat",
+    "input-placeholder": "Tempel SQL di sini; beberapa pernyataan didukung.",
+    "output-empty": "SQL terformat akan ditampilkan di sini."
   },
   "he": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL מקורי",
+    "formatted-sql": "SQL מעוצב",
+    "input-placeholder": "הדבק כאן SQL; נתמכות כמה פקודות.",
+    "output-empty": "ה-SQL המעוצב יופיע כאן."
   },
   "ms": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "SQL sumber",
+    "formatted-sql": "SQL berformat",
+    "input-placeholder": "Tampal SQL di sini; berbilang pernyataan disokong.",
+    "output-empty": "SQL berformat akan dipaparkan di sini."
   },
   "no": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "Kilde-SQL",
+    "formatted-sql": "Formatert SQL",
+    "input-placeholder": "Lim inn SQL her; flere setninger støttes.",
+    "output-empty": "Formatert SQL vises her."
   }
 }
 </i18n>
