@@ -1,20 +1,26 @@
 <template>
-  <ToolSection>
-    <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
-    <n-flex vertical :size="8">
+  <n-popover trigger="hover" placement="top-start" :width="360">
+    <template #trigger>
+      <n-icon size="16" depth="3" style="cursor: help">
+        <Info16Regular />
+      </n-icon>
+    </template>
+
+    <n-flex vertical :size="6">
+      <n-text strong>{{ t('title') }}</n-text>
       <n-text depth="3">{{ t('browser') }}</n-text>
       <n-text depth="3">{{ t('bicubic') }}</n-text>
       <n-text depth="3">{{ t('bilinear') }}</n-text>
       <n-text depth="3">{{ t('lanczos3') }}</n-text>
       <n-text depth="3">{{ t('nearest') }}</n-text>
     </n-flex>
-  </ToolSection>
+  </n-popover>
 </template>
 
 <script setup lang="ts">
-import { NFlex, NText } from 'naive-ui'
+import { NFlex, NIcon, NPopover, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import Info16Regular from '@vicons/fluent/Info16Regular'
 
 const { t } = useI18n({ useScope: 'local' })
 </script>

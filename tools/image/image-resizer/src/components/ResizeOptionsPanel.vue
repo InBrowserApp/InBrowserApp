@@ -25,7 +25,14 @@
         />
       </n-form-item-gi>
 
-      <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
+      <n-form-item-gi :show-feedback="false">
+        <template #label>
+          <n-flex align="center" :size="6">
+            <span>{{ t('algorithm') }}</span>
+            <AlgorithmInfoPopover />
+          </n-flex>
+        </template>
+
         <n-select
           :value="options.algorithm"
           :options="algorithms"
@@ -70,6 +77,9 @@
         :disabled="isProcessing || !hasImage"
         @click="$emit('resize')"
       >
+        <template #icon>
+          <n-icon><ResizeSmall20Regular /></n-icon>
+        </template>
         {{ isProcessing ? t('resizing') : t('resize') }}
       </n-button>
     </div>
@@ -79,10 +89,27 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NButton, NFormItemGi, NGrid, NInputNumber, NSelect, NSlider, NSwitch } from 'naive-ui'
+import {
+  NButton,
+  NFlex,
+  NFormItemGi,
+  NGrid,
+  NIcon,
+  NInputNumber,
+  NSelect,
+  NSlider,
+  NSwitch,
+} from 'naive-ui'
 import type { SelectOption } from 'naive-ui'
+import ResizeSmall20Regular from '@vicons/fluent/ResizeSmall20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import type { ImageDimensions, ResizeAlgorithm, ResizeOptions, ResizeOutputFormat } from '../types'
+import type { ImageDimensions, ResizeOptions } from '../types'
+import {
+  isResizeAlgorithm,
+  isResizeOutputFormat,
+  normalizeDimension,
+} from '../utils/resize-options'
+import AlgorithmInfoPopover from './AlgorithmInfoPopover.vue'
 
 interface Props {
   sourceDimensions: ImageDimensions | null
@@ -98,15 +125,9 @@ defineEmits<{
 }>()
 
 const { t } = useI18n({ useScope: 'local' })
-
 const options = defineModel<ResizeOptions>('options', { required: true })
 
 const qualityDisabled = computed(() => options.value.outputFormat === 'png')
-
-function normalizeDimension(value: number | null | undefined, fallback: number) {
-  if (!Number.isFinite(value)) return fallback
-  return Math.max(1, Math.round(value ?? fallback))
-}
 
 function updateWidth(value: number | null) {
   const nextWidth = normalizeDimension(value, options.value.width)
@@ -186,20 +207,6 @@ function updateQuality(value: number) {
     ...options.value,
     quality: normalizeDimension(value, options.value.quality),
   }
-}
-
-function isResizeAlgorithm(value: string): value is ResizeAlgorithm {
-  return (
-    value === 'browser-high' ||
-    value === 'bicubic' ||
-    value === 'bilinear' ||
-    value === 'lanczos3' ||
-    value === 'nearest'
-  )
-}
-
-function isResizeOutputFormat(value: string): value is ResizeOutputFormat {
-  return value === 'original' || value === 'png' || value === 'jpeg' || value === 'webp'
 }
 </script>
 

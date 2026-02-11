@@ -25,8 +25,6 @@
       </n-gi>
     </n-grid>
 
-    <AlgorithmGuideSection />
-
     <ToolSection v-if="error">
       <n-alert type="warning" :title="t('errorTitle')" :show-icon="false">
         {{ error }}
@@ -43,17 +41,13 @@ import type { SelectOption } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolDefaultPageLayout, ToolSection } from '@shared/ui/tool'
 import * as toolInfo from './info'
-import {
-  AlgorithmGuideSection,
-  ImageResizeInput,
-  ResizeOptionsPanel,
-  ResizeResultPanel,
-} from './components'
-import type { ImageDimensions, ResizeAlgorithm, ResizeOptions, ResizeResult } from './types'
+import { ImageResizeInput, ResizeOptionsPanel, ResizeResultPanel } from './components'
+import type { ImageDimensions, ResizeOptions, ResizeResult } from './types'
 import { imageResizeAlgorithms, resizeImage } from './utils/resize-image'
+import { getResizeOptionLabels } from './utils/option-labels'
 
 const message = useMessage()
-const { t } = useI18n({ useScope: 'local' })
+const { t, locale } = useI18n({ useScope: 'local' })
 
 const imageFile = ref<File | null>(null)
 const sourceDimensions = ref<ImageDimensions | null>(null)
@@ -73,6 +67,8 @@ const options = ref<ResizeOptions>({
 
 const resultBlob = computed(() => result.value?.blob ?? null)
 const downloadUrl = useObjectUrl(resultBlob)
+
+const optionLabels = computed(() => getResizeOptionLabels(locale.value))
 
 watch(imageFile, async (file) => {
   result.value = null
@@ -97,25 +93,17 @@ watch(imageFile, async (file) => {
 })
 
 const algorithmOptions = computed<SelectOption[]>(() => {
-  const labelMap: Record<ResizeAlgorithm, string> = {
-    'browser-high': 'Browser high quality',
-    bicubic: 'Bicubic interpolation',
-    bilinear: 'Bilinear interpolation',
-    lanczos3: 'Lanczos filter (radius 3)',
-    nearest: 'Nearest neighbor',
-  }
-
   return imageResizeAlgorithms.map((item) => ({
     value: item.value,
-    label: labelMap[item.value],
+    label: optionLabels.value.algorithms[item.value],
   }))
 })
 
 const formatOptions = computed<SelectOption[]>(() => [
-  { value: 'original', label: 'Keep original' },
-  { value: 'png', label: 'PNG' },
-  { value: 'jpeg', label: 'JPEG' },
-  { value: 'webp', label: 'WebP' },
+  { value: 'original', label: optionLabels.value.formats.original },
+  { value: 'png', label: optionLabels.value.formats.png },
+  { value: 'jpeg', label: optionLabels.value.formats.jpeg },
+  { value: 'webp', label: optionLabels.value.formats.webp },
 ])
 
 async function runResize() {

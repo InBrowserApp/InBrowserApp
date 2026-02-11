@@ -39,6 +39,9 @@
         :download="result.outputName"
         style="width: 100%"
       >
+        <template #icon>
+          <n-icon><ArrowDownload16Regular /></n-icon>
+        </template>
         {{ t('downloadImage') }}
       </n-button>
     </n-flex>
@@ -49,7 +52,8 @@
 import { computed } from 'vue'
 import { filesize } from 'filesize'
 import { useI18n } from 'vue-i18n'
-import { NButton, NFlex, NGrid, NGridItem, NStatistic } from 'naive-ui'
+import { NButton, NFlex, NGrid, NGridItem, NIcon, NStatistic } from 'naive-ui'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ResizeResult } from '../types'
 
