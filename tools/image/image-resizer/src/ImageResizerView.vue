@@ -172,154 +172,154 @@ async function readImageDimensions(file: File): Promise<ImageDimensions> {
 <i18n lang="json">
 {
   "en": {
-    "errorTitle": "Resize error",
+    "errorTitle": "Resize Error",
     "invalidImageText": "Failed to read this image file. Please choose another image.",
     "resizeSuccessText": "Image resized successfully.",
     "resizeFailedText": "Image resize failed. Please try another setting or file."
   },
   "zh": {
-    "errorTitle": "调整错误",
-    "invalidImageText": "读取图片文件失败，请选择其他图片。",
-    "resizeSuccessText": "图片调整成功。",
-    "resizeFailedText": "图片调整失败，请尝试其他设置或文件。"
+    "errorTitle": "缩放失败",
+    "invalidImageText": "无法读取该图片文件，请更换一张图片。",
+    "resizeSuccessText": "图片尺寸缩放完成。",
+    "resizeFailedText": "图片尺寸缩放失败，请尝试其他设置或文件。"
   },
   "zh-CN": {
-    "errorTitle": "调整错误",
-    "invalidImageText": "读取图片文件失败，请选择其他图片。",
-    "resizeSuccessText": "图片调整成功。",
-    "resizeFailedText": "图片调整失败，请尝试其他设置或文件。"
+    "errorTitle": "缩放失败",
+    "invalidImageText": "无法读取该图片文件，请更换一张图片。",
+    "resizeSuccessText": "图片尺寸缩放完成。",
+    "resizeFailedText": "图片尺寸缩放失败，请尝试其他设置或文件。"
   },
   "zh-TW": {
-    "errorTitle": "調整錯誤",
-    "invalidImageText": "讀取圖片檔案失敗，請選擇其他圖片。",
-    "resizeSuccessText": "圖片調整成功。",
-    "resizeFailedText": "圖片調整失敗，請嘗試其他設定或檔案。"
+    "errorTitle": "縮放失敗",
+    "invalidImageText": "無法讀取此圖片檔案，請更換其他圖片。",
+    "resizeSuccessText": "圖片尺寸縮放完成。",
+    "resizeFailedText": "圖片尺寸縮放失敗，請嘗試其他設定或檔案。"
   },
   "zh-HK": {
-    "errorTitle": "調整錯誤",
-    "invalidImageText": "讀取圖片檔案失敗，請選擇其他圖片。",
-    "resizeSuccessText": "圖片調整成功。",
-    "resizeFailedText": "圖片調整失敗，請嘗試其他設定或檔案。"
+    "errorTitle": "縮放失敗",
+    "invalidImageText": "無法讀取此圖片檔案，請更換其他圖片。",
+    "resizeSuccessText": "圖片尺寸縮放完成。",
+    "resizeFailedText": "圖片尺寸縮放失敗，請嘗試其他設定或檔案。"
   },
   "es": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Error de escalado",
+    "invalidImageText": "No se pudo leer este archivo de imagen. Elige otra imagen.",
+    "resizeSuccessText": "Imagen escalada correctamente.",
+    "resizeFailedText": "No se pudo escalar la imagen. Prueba otra configuración o archivo."
   },
   "fr": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Erreur de redimensionnement",
+    "invalidImageText": "Impossible de lire ce fichier image. Veuillez choisir une autre image.",
+    "resizeSuccessText": "Image redimensionnée avec succès.",
+    "resizeFailedText": "Échec du redimensionnement. Essayez un autre réglage ou fichier."
   },
   "de": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Skalierungsfehler",
+    "invalidImageText": "Diese Bilddatei konnte nicht gelesen werden. Bitte wähle eine andere.",
+    "resizeSuccessText": "Bild erfolgreich skaliert.",
+    "resizeFailedText": "Bildskalierung fehlgeschlagen. Bitte versuche andere Einstellungen oder Datei."
   },
   "it": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Errore di ridimensionamento",
+    "invalidImageText": "Impossibile leggere questo file immagine. Scegli un’altra immagine.",
+    "resizeSuccessText": "Immagine ridimensionata con successo.",
+    "resizeFailedText": "Ridimensionamento non riuscito. Prova altre impostazioni o file."
   },
   "ja": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "リサイズエラー",
+    "invalidImageText": "この画像ファイルを読み込めませんでした。別の画像を選択してください。",
+    "resizeSuccessText": "画像のサイズ変更が完了しました。",
+    "resizeFailedText": "画像のサイズ変更に失敗しました。別の設定またはファイルをお試しください。"
   },
   "ko": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "크기 조절 오류",
+    "invalidImageText": "이 이미지 파일을 읽을 수 없습니다. 다른 이미지를 선택해 주세요.",
+    "resizeSuccessText": "이미지 크기 조절이 완료되었습니다.",
+    "resizeFailedText": "이미지 크기 조절에 실패했습니다. 다른 설정이나 파일을 시도해 주세요."
   },
   "ru": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Ошибка масштабирования",
+    "invalidImageText": "Не удалось прочитать этот файл изображения. Выберите другой файл.",
+    "resizeSuccessText": "Изображение успешно масштабировано.",
+    "resizeFailedText": "Не удалось масштабировать изображение. Попробуйте другие настройки или файл."
   },
   "pt": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Erro de redimensionamento",
+    "invalidImageText": "Falha ao ler este arquivo de imagem. Escolha outra imagem.",
+    "resizeSuccessText": "Imagem redimensionada com sucesso.",
+    "resizeFailedText": "Falha ao redimensionar a imagem. Tente outra configuração ou arquivo."
   },
   "ar": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "خطأ في التحجيم",
+    "invalidImageText": "تعذر قراءة ملف الصورة هذا. يرجى اختيار صورة أخرى.",
+    "resizeSuccessText": "تم تحجيم الصورة بنجاح.",
+    "resizeFailedText": "فشل تحجيم الصورة. جرّب إعدادًا أو ملفًا آخر."
   },
   "hi": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "स्केलिंग त्रुटि",
+    "invalidImageText": "यह इमेज फ़ाइल पढ़ी नहीं जा सकी। कृपया दूसरी इमेज चुनें।",
+    "resizeSuccessText": "इमेज सफलतापूर्वक स्केल हो गई।",
+    "resizeFailedText": "इमेज स्केल नहीं हो सकी। कृपया दूसरी सेटिंग या फ़ाइल आज़माएँ।"
   },
   "tr": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Ölçekleme hatası",
+    "invalidImageText": "Bu görsel dosyası okunamadı. Lütfen başka bir görsel seçin.",
+    "resizeSuccessText": "Görsel başarıyla ölçeklendi.",
+    "resizeFailedText": "Görsel ölçeklenemedi. Lütfen farklı bir ayar veya dosya deneyin."
   },
   "nl": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Schaalfout",
+    "invalidImageText": "Dit afbeeldingsbestand kon niet worden gelezen. Kies een andere afbeelding.",
+    "resizeSuccessText": "Afbeelding succesvol geschaald.",
+    "resizeFailedText": "Afbeelding schalen mislukt. Probeer een andere instelling of bestand."
   },
   "sv": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Skalningsfel",
+    "invalidImageText": "Det gick inte att läsa bildfilen. Välj en annan bild.",
+    "resizeSuccessText": "Bilden har skalats klart.",
+    "resizeFailedText": "Det gick inte att skala bilden. Prova en annan inställning eller fil."
   },
   "pl": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Błąd skalowania",
+    "invalidImageText": "Nie udało się odczytać tego pliku obrazu. Wybierz inny obraz.",
+    "resizeSuccessText": "Obraz został pomyślnie przeskalowany.",
+    "resizeFailedText": "Skalowanie nie powiodło się. Spróbuj innych ustawień lub pliku."
   },
   "vi": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Lỗi thu phóng",
+    "invalidImageText": "Không thể đọc tệp ảnh này. Vui lòng chọn ảnh khác.",
+    "resizeSuccessText": "Thu phóng ảnh thành công.",
+    "resizeFailedText": "Thu phóng ảnh thất bại. Vui lòng thử cài đặt hoặc tệp khác."
   },
   "th": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "เกิดข้อผิดพลาดในการปรับขนาด",
+    "invalidImageText": "ไม่สามารถอ่านไฟล์รูปภาพนี้ได้ โปรดเลือกรูปภาพอื่น",
+    "resizeSuccessText": "ปรับขนาดรูปภาพเรียบร้อยแล้ว",
+    "resizeFailedText": "ปรับขนาดรูปภาพไม่สำเร็จ โปรดลองการตั้งค่าหรือไฟล์อื่น"
   },
   "id": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Kesalahan penskalaan",
+    "invalidImageText": "Gagal membaca file gambar ini. Silakan pilih gambar lain.",
+    "resizeSuccessText": "Gambar berhasil diskalakan.",
+    "resizeFailedText": "Gagal menskalakan gambar. Coba pengaturan atau file lain."
   },
   "he": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "שגיאת שינוי גודל",
+    "invalidImageText": "לא ניתן לקרוא את קובץ התמונה הזה. נא לבחור תמונה אחרת.",
+    "resizeSuccessText": "שינוי הגודל הושלם בהצלחה.",
+    "resizeFailedText": "שינוי הגודל נכשל. נסו הגדרה או קובץ אחר."
   },
   "ms": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Ralat penskalaan",
+    "invalidImageText": "Gagal membaca fail imej ini. Sila pilih imej lain.",
+    "resizeSuccessText": "Imej berjaya diskalakan.",
+    "resizeFailedText": "Gagal menskalakan imej. Cuba tetapan atau fail lain."
   },
   "no": {
-    "errorTitle": "Resize error",
-    "invalidImageText": "Failed to read this image file. Please choose another image.",
-    "resizeSuccessText": "Image resized successfully.",
-    "resizeFailedText": "Image resize failed. Please try another setting or file."
+    "errorTitle": "Skaleringsfeil",
+    "invalidImageText": "Kunne ikke lese bildefilen. Velg et annet bilde.",
+    "resizeSuccessText": "Bildet ble skalert.",
+    "resizeFailedText": "Kunne ikke skalere bildet. Prøv en annen innstilling eller fil."
   }
 }
 </i18n>

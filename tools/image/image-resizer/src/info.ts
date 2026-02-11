@@ -8,122 +8,122 @@ export const meta = {
   en: {
     name: 'Image Resizer',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Resize image dimensions directly in your browser with multiple scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
   },
   zh: {
-    name: '图片尺寸调整',
-    description: '在浏览器中直接调整图片尺寸，支持多种缩放算法、比例锁定和 PNG/JPEG/WebP 导出',
+    name: '图片尺寸缩放',
+    description: '在浏览器中直接进行图片尺寸缩放，支持多种算法、比例锁定和 PNG/JPEG/WebP 导出',
   },
   'zh-CN': {
-    name: '图片尺寸调整',
-    description: '在浏览器中直接调整图片尺寸，支持多种缩放算法、比例锁定和 PNG/JPEG/WebP 导出',
+    name: '图片尺寸缩放',
+    description: '在浏览器中直接进行图片尺寸缩放，支持多种算法、比例锁定和 PNG/JPEG/WebP 导出',
   },
   'zh-TW': {
-    name: '圖片尺寸調整',
-    description: '在瀏覽器中直接調整圖片尺寸，支援多種縮放演算法、比例鎖定與 PNG/JPEG/WebP 匯出',
+    name: '圖片尺寸縮放',
+    description: '在瀏覽器中直接進行圖片尺寸縮放，支援多種演算法、比例鎖定與 PNG/JPEG/WebP 匯出',
   },
   'zh-HK': {
-    name: '圖片尺寸調整',
-    description: '在瀏覽器中直接調整圖片尺寸，支援多種縮放演算法、比例鎖定與 PNG/JPEG/WebP 匯出',
+    name: '圖片尺寸縮放',
+    description: '在瀏覽器中直接進行圖片尺寸縮放，支援多種演算法、比例鎖定與 PNG/JPEG/WebP 匯出',
   },
   es: {
-    name: 'Redimensionador de imágenes',
+    name: 'Escalado de imagen',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Escala dimensiones de imagen directamente en tu navegador con varios algoritmos, bloqueo de proporción y exportación PNG/JPEG/WebP',
   },
   fr: {
-    name: "Redimensionneur d'images",
+    name: 'Redimensionnement d’image',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Redimensionnez directement vos images dans le navigateur avec plusieurs algorithmes, verrouillage du ratio et export PNG/JPEG/WebP',
   },
   de: {
-    name: 'Bildgrößenänderung',
+    name: 'Bildgrößen-Skalierung',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skaliere Bildabmessungen direkt im Browser mit mehreren Algorithmen, Seitenverhältnis-Sperre und PNG/JPEG/WebP-Export',
   },
   it: {
-    name: 'Ridimensionatore immagini',
+    name: 'Ridimensionamento immagine',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Ridimensiona le dimensioni delle immagini direttamente nel browser con più algoritmi, blocco proporzioni ed export PNG/JPEG/WebP',
   },
   ja: {
-    name: '画像リサイズ',
+    name: '画像サイズの拡大・縮小',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'ブラウザー上で画像サイズを拡大・縮小。複数アルゴリズム、縦横比固定、PNG/JPEG/WebP 出力に対応',
   },
   ko: {
-    name: '이미지 크기 조절',
+    name: '이미지 크기 스케일링',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      '브라우저에서 이미지 크기를 바로 스케일링하세요. 다양한 알고리즘, 비율 잠금, PNG/JPEG/WebP 내보내기를 지원합니다.',
   },
   ru: {
-    name: 'Изменение размера изображений',
+    name: 'Масштабирование размера изображения',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Масштабируйте размеры изображений прямо в браузере: несколько алгоритмов, фиксация пропорций и экспорт PNG/JPEG/WebP',
   },
   pt: {
-    name: 'Redimensionador de imagens',
+    name: 'Escalonamento de tamanho de imagem',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Escalone dimensões de imagem diretamente no navegador com vários algoritmos, trava de proporção e exportação PNG/JPEG/WebP',
   },
   ar: {
-    name: 'تغيير حجم الصور',
+    name: 'تغيير أبعاد الصورة',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'غيّر أبعاد الصور مباشرة في المتصفح مع عدة خوارزميات، وقفل النسبة، وتصدير PNG/JPEG/WebP',
   },
   hi: {
-    name: 'इमेज रिसाइज़र',
+    name: 'इमेज आकार स्केलिंग',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'ब्राउज़र में ही इमेज के आयाम स्केल करें — कई एल्गोरिदम, अनुपात लॉक और PNG/JPEG/WebP निर्यात के साथ',
   },
   tr: {
-    name: 'Görsel yeniden boyutlandırıcı',
+    name: 'Görsel boyut ölçekleme',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Görsel boyutlarını tarayıcıda ölçekleyin: birden fazla algoritma, en-boy oranı kilidi ve PNG/JPEG/WebP dışa aktarma',
   },
   nl: {
-    name: 'Afbeelding resizer',
+    name: 'Afbeeldingsgrootte schalen',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Schaal afbeeldingsafmetingen direct in je browser met meerdere algoritmen, beeldverhouding-lock en PNG/JPEG/WebP-export',
   },
   sv: {
-    name: 'Bildstorleksändrare',
+    name: 'Skalning av bildstorlek',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skala bilddimensioner direkt i webbläsaren med flera algoritmer, låst proportion och export till PNG/JPEG/WebP',
   },
   pl: {
-    name: 'Zmiana rozmiaru obrazu',
+    name: 'Skalowanie rozmiaru obrazu',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skaluj wymiary obrazu bezpośrednio w przeglądarce: wiele algorytmów, blokada proporcji i eksport PNG/JPEG/WebP',
   },
   vi: {
-    name: 'Trình đổi kích thước ảnh',
+    name: 'Thu phóng kích thước ảnh',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Thu phóng kích thước ảnh ngay trong trình duyệt với nhiều thuật toán, khóa tỉ lệ và xuất PNG/JPEG/WebP',
   },
   th: {
-    name: 'เครื่องมือปรับขนาดรูปภาพ',
+    name: 'ปรับสเกลขนาดรูปภาพ',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'ปรับสเกลขนาดรูปภาพได้ทันทีในเบราว์เซอร์ รองรับหลายอัลกอริทึม ล็อกอัตราส่วน และส่งออก PNG/JPEG/WebP',
   },
   id: {
-    name: 'Pengubah ukuran gambar',
+    name: 'Skalakan ukuran gambar',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skalakan dimensi gambar langsung di browser dengan berbagai algoritme, kunci rasio, dan ekspor PNG/JPEG/WebP',
   },
   he: {
-    name: 'שינוי גודל תמונה',
+    name: 'שינוי קנה מידה של תמונה',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'שנו קנה מידה לממדי תמונה ישירות בדפדפן עם כמה אלגוריתמים, נעילת יחס וגיבוי ל‑PNG/JPEG/WebP',
   },
   ms: {
-    name: 'Pengubah saiz imej',
+    name: 'Penskalaan saiz imej',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skalakan dimensi imej terus dalam pelayar dengan pelbagai algoritma, kunci nisbah dan eksport PNG/JPEG/WebP',
   },
   no: {
-    name: 'Endre bildestørrelse',
+    name: 'Skalering av bildestørrelse',
     description:
-      'Resize images directly in your browser with selectable scaling algorithms, aspect ratio lock, and PNG/JPEG/WebP export',
+      'Skaler bildedimensjoner direkte i nettleseren med flere algoritmer, låst forhold og eksport til PNG/JPEG/WebP',
   },
 }

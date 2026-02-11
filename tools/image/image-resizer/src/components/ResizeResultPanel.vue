@@ -87,7 +87,7 @@ const resizedDimensionLabel = computed(
 <i18n lang="json">
 {
   "en": {
-    "title": "Resize result",
+    "title": "Resize Result",
     "originalSize": "Original size",
     "resizedSize": "Resized size",
     "sizeChange": "Size change",
@@ -96,220 +96,220 @@ const resizedDimensionLabel = computed(
     "downloadImage": "Download resized image"
   },
   "zh": {
-    "title": "调整结果",
+    "title": "缩放结果",
     "originalSize": "原始大小",
-    "resizedSize": "调整后大小",
+    "resizedSize": "缩放后大小",
     "sizeChange": "体积变化",
     "originalDimensions": "原始尺寸",
-    "resizedDimensions": "调整后尺寸",
-    "downloadImage": "下载调整后的图片"
+    "resizedDimensions": "缩放后尺寸",
+    "downloadImage": "下载缩放后的图片"
   },
   "zh-CN": {
-    "title": "调整结果",
+    "title": "缩放结果",
     "originalSize": "原始大小",
-    "resizedSize": "调整后大小",
+    "resizedSize": "缩放后大小",
     "sizeChange": "体积变化",
     "originalDimensions": "原始尺寸",
-    "resizedDimensions": "调整后尺寸",
-    "downloadImage": "下载调整后的图片"
+    "resizedDimensions": "缩放后尺寸",
+    "downloadImage": "下载缩放后的图片"
   },
   "zh-TW": {
-    "title": "調整結果",
+    "title": "縮放結果",
     "originalSize": "原始大小",
-    "resizedSize": "調整後大小",
+    "resizedSize": "縮放後大小",
     "sizeChange": "體積變化",
     "originalDimensions": "原始尺寸",
-    "resizedDimensions": "調整後尺寸",
-    "downloadImage": "下載調整後的圖片"
+    "resizedDimensions": "縮放後尺寸",
+    "downloadImage": "下載縮放後圖片"
   },
   "zh-HK": {
-    "title": "調整結果",
+    "title": "縮放結果",
     "originalSize": "原始大小",
-    "resizedSize": "調整後大小",
+    "resizedSize": "縮放後大小",
     "sizeChange": "體積變化",
     "originalDimensions": "原始尺寸",
-    "resizedDimensions": "調整後尺寸",
-    "downloadImage": "下載調整後的圖片"
+    "resizedDimensions": "縮放後尺寸",
+    "downloadImage": "下載縮放後圖片"
   },
   "es": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Resultado del escalado",
+    "originalSize": "Tamaño original",
+    "resizedSize": "Tamaño escalado",
+    "sizeChange": "Cambio de tamaño",
+    "originalDimensions": "Dimensiones originales",
+    "resizedDimensions": "Dimensiones escaladas",
+    "downloadImage": "Descargar imagen escalada"
   },
   "fr": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Résultat du redimensionnement",
+    "originalSize": "Taille d’origine",
+    "resizedSize": "Taille redimensionnée",
+    "sizeChange": "Variation de taille",
+    "originalDimensions": "Dimensions d’origine",
+    "resizedDimensions": "Dimensions redimensionnées",
+    "downloadImage": "Télécharger l’image redimensionnée"
   },
   "de": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Skalierungsergebnis",
+    "originalSize": "Originalgröße",
+    "resizedSize": "Skalierte Größe",
+    "sizeChange": "Größenänderung",
+    "originalDimensions": "Originalabmessungen",
+    "resizedDimensions": "Skalierte Abmessungen",
+    "downloadImage": "Skaliertes Bild herunterladen"
   },
   "it": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Risultato ridimensionamento",
+    "originalSize": "Dimensione originale",
+    "resizedSize": "Dimensione ridimensionata",
+    "sizeChange": "Variazione dimensione",
+    "originalDimensions": "Dimensioni originali",
+    "resizedDimensions": "Dimensioni ridimensionate",
+    "downloadImage": "Scarica immagine ridimensionata"
   },
   "ja": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "リサイズ結果",
+    "originalSize": "元のサイズ",
+    "resizedSize": "リサイズ後のサイズ",
+    "sizeChange": "サイズ変化",
+    "originalDimensions": "元の解像度",
+    "resizedDimensions": "リサイズ後の解像度",
+    "downloadImage": "リサイズ画像をダウンロード"
   },
   "ko": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "크기 조절 결과",
+    "originalSize": "원본 크기",
+    "resizedSize": "조절 후 크기",
+    "sizeChange": "크기 변화",
+    "originalDimensions": "원본 해상도",
+    "resizedDimensions": "조절 후 해상도",
+    "downloadImage": "조절된 이미지 다운로드"
   },
   "ru": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Результат масштабирования",
+    "originalSize": "Исходный размер",
+    "resizedSize": "Размер после масштабирования",
+    "sizeChange": "Изменение размера",
+    "originalDimensions": "Исходные размеры",
+    "resizedDimensions": "Размеры после масштабирования",
+    "downloadImage": "Скачать масштабированное изображение"
   },
   "pt": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Resultado do redimensionamento",
+    "originalSize": "Tamanho original",
+    "resizedSize": "Tamanho redimensionado",
+    "sizeChange": "Variação de tamanho",
+    "originalDimensions": "Dimensões originais",
+    "resizedDimensions": "Dimensões redimensionadas",
+    "downloadImage": "Baixar imagem redimensionada"
   },
   "ar": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "نتيجة التحجيم",
+    "originalSize": "الحجم الأصلي",
+    "resizedSize": "الحجم بعد التحجيم",
+    "sizeChange": "تغيّر الحجم",
+    "originalDimensions": "الأبعاد الأصلية",
+    "resizedDimensions": "الأبعاد بعد التحجيم",
+    "downloadImage": "تنزيل الصورة بعد التحجيم"
   },
   "hi": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "स्केलिंग परिणाम",
+    "originalSize": "मूल आकार",
+    "resizedSize": "स्केल किया हुआ आकार",
+    "sizeChange": "आकार परिवर्तन",
+    "originalDimensions": "मूल आयाम",
+    "resizedDimensions": "स्केल किए हुए आयाम",
+    "downloadImage": "स्केल की गई इमेज डाउनलोड करें"
   },
   "tr": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Ölçekleme sonucu",
+    "originalSize": "Orijinal boyut",
+    "resizedSize": "Ölçeklenmiş boyut",
+    "sizeChange": "Boyut değişimi",
+    "originalDimensions": "Orijinal çözünürlük",
+    "resizedDimensions": "Ölçeklenmiş çözünürlük",
+    "downloadImage": "Ölçeklenmiş görseli indir"
   },
   "nl": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Schaalresultaat",
+    "originalSize": "Originele grootte",
+    "resizedSize": "Geschaalde grootte",
+    "sizeChange": "Grootteverandering",
+    "originalDimensions": "Originele afmetingen",
+    "resizedDimensions": "Geschaalde afmetingen",
+    "downloadImage": "Geschaalde afbeelding downloaden"
   },
   "sv": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Skalningsresultat",
+    "originalSize": "Originalstorlek",
+    "resizedSize": "Skalad storlek",
+    "sizeChange": "Storleksändring",
+    "originalDimensions": "Originaldimensioner",
+    "resizedDimensions": "Skalade dimensioner",
+    "downloadImage": "Ladda ner skalad bild"
   },
   "pl": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Wynik skalowania",
+    "originalSize": "Rozmiar oryginalny",
+    "resizedSize": "Rozmiar po skalowaniu",
+    "sizeChange": "Zmiana rozmiaru",
+    "originalDimensions": "Wymiary oryginalne",
+    "resizedDimensions": "Wymiary po skalowaniu",
+    "downloadImage": "Pobierz przeskalowany obraz"
   },
   "vi": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Kết quả thu phóng",
+    "originalSize": "Kích thước gốc",
+    "resizedSize": "Kích thước sau thu phóng",
+    "sizeChange": "Thay đổi kích thước",
+    "originalDimensions": "Kích thước gốc",
+    "resizedDimensions": "Kích thước sau thu phóng",
+    "downloadImage": "Tải ảnh sau thu phóng"
   },
   "th": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "ผลลัพธ์การปรับขนาด",
+    "originalSize": "ขนาดเดิม",
+    "resizedSize": "ขนาดหลังปรับ",
+    "sizeChange": "การเปลี่ยนแปลงขนาด",
+    "originalDimensions": "มิติเดิม",
+    "resizedDimensions": "มิติหลังปรับ",
+    "downloadImage": "ดาวน์โหลดรูปภาพที่ปรับแล้ว"
   },
   "id": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Hasil penskalaan",
+    "originalSize": "Ukuran asli",
+    "resizedSize": "Ukuran setelah skala",
+    "sizeChange": "Perubahan ukuran",
+    "originalDimensions": "Dimensi asli",
+    "resizedDimensions": "Dimensi setelah skala",
+    "downloadImage": "Unduh gambar yang sudah diskalakan"
   },
   "he": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "תוצאת שינוי הגודל",
+    "originalSize": "גודל מקורי",
+    "resizedSize": "גודל לאחר שינוי",
+    "sizeChange": "שינוי בנפח",
+    "originalDimensions": "ממדים מקוריים",
+    "resizedDimensions": "ממדים לאחר שינוי",
+    "downloadImage": "הורדת התמונה לאחר שינוי גודל"
   },
   "ms": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Hasil penskalaan",
+    "originalSize": "Saiz asal",
+    "resizedSize": "Saiz selepas skala",
+    "sizeChange": "Perubahan saiz",
+    "originalDimensions": "Dimensi asal",
+    "resizedDimensions": "Dimensi selepas skala",
+    "downloadImage": "Muat turun imej yang diskalakan"
   },
   "no": {
-    "title": "Resize result",
-    "originalSize": "Original size",
-    "resizedSize": "Resized size",
-    "sizeChange": "Size change",
-    "originalDimensions": "Original dimensions",
-    "resizedDimensions": "Resized dimensions",
-    "downloadImage": "Download resized image"
+    "title": "Skaleringsresultat",
+    "originalSize": "Original størrelse",
+    "resizedSize": "Skalert størrelse",
+    "sizeChange": "Størrelsesendring",
+    "originalDimensions": "Originale dimensjoner",
+    "resizedDimensions": "Skalerte dimensjoner",
+    "downloadImage": "Last ned skalert bilde"
   }
 }
 </i18n>
