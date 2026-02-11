@@ -18,6 +18,19 @@ class MockBitmap {
   }
 }
 
+function createMockImageData(width: number, height: number, data?: number[]) {
+  const pixelData = new Uint8ClampedArray(width * height * 4)
+  if (data) {
+    pixelData.set(data)
+  }
+
+  return {
+    data: pixelData,
+    width,
+    height,
+  } as ImageData
+}
+
 describe('calculateOutputDimensions', () => {
   it('keeps aspect ratio when requested', () => {
     const result = calculateOutputDimensions(
@@ -73,8 +86,8 @@ describe('resizeImage', () => {
       imageSmoothingEnabled: true,
       imageSmoothingQuality: 'high',
       drawImage: vi.fn(),
-      getImageData: vi.fn(() => new ImageData(40, 20)),
-      createImageData: vi.fn((width: number, height: number) => new ImageData(width, height)),
+      getImageData: vi.fn(() => createMockImageData(40, 20)),
+      createImageData: vi.fn((width: number, height: number) => createMockImageData(width, height)),
       putImageData: vi.fn(),
     } as unknown as CanvasRenderingContext2D)
 
@@ -130,6 +143,59 @@ describe('resizeImage', () => {
     }
 
     await expect(resizeImage(file, options)).rejects.toThrow('CANVAS_CONTEXT_UNAVAILABLE')
+  })
+
+  it('uses premultiplied alpha when resampling transparent edges', async () => {
+    vi.stubGlobal(
+      'createImageBitmap',
+      vi.fn(async () => new MockBitmap(2, 1)),
+    )
+
+    const sourceImageData = createMockImageData(2, 1, [0, 0, 0, 0, 255, 255, 255, 255])
+
+    const outputImages: ImageData[] = []
+
+    const sourceContext = {
+      drawImage: vi.fn(),
+      getImageData: vi.fn(() => sourceImageData),
+    }
+
+    const targetContext = {
+      createImageData: vi.fn((width: number, height: number) => createMockImageData(width, height)),
+      putImageData: vi.fn((imageData: ImageData) => {
+        outputImages.push(imageData)
+      }),
+    }
+
+    const getContextMock = vi.mocked(HTMLCanvasElement.prototype.getContext)
+    getContextMock.mockReset()
+    getContextMock
+      .mockImplementationOnce(() => sourceContext as unknown as CanvasRenderingContext2D)
+      .mockImplementationOnce(() => targetContext as unknown as CanvasRenderingContext2D)
+
+    const file = new File(['image'], 'transparent.png', { type: 'image/png' })
+
+    const options: ResizeOptions = {
+      width: 1,
+      height: 1,
+      keepAspectRatio: false,
+      allowUpscale: true,
+      algorithm: 'bilinear',
+      outputFormat: 'jpeg',
+      quality: 90,
+    }
+
+    await resizeImage(file, options)
+
+    expect(targetContext.putImageData).toHaveBeenCalledTimes(1)
+
+    const output = outputImages[0]
+    expect(output).toBeDefined()
+    expect(output?.data[0]).toBeGreaterThan(240)
+    expect(output?.data[1]).toBeGreaterThan(240)
+    expect(output?.data[2]).toBeGreaterThan(240)
+    expect(output?.data[3]).toBeGreaterThan(120)
+    expect(output?.data[3]).toBeLessThan(140)
   })
 
   it('supports explicit algorithm list metadata', () => {

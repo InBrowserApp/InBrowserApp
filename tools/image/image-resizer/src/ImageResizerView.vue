@@ -69,6 +69,7 @@ const resultBlob = computed(() => result.value?.blob ?? null)
 const downloadUrl = useObjectUrl(resultBlob)
 
 const optionLabels = computed(() => getResizeOptionLabels(locale.value))
+let resizeRunToken = 0
 
 watch(imageFile, async (file) => {
   result.value = null
@@ -77,8 +78,13 @@ watch(imageFile, async (file) => {
 
   if (!file) return
 
+  const activeFile = file
+
   try {
-    const dimensions = await readImageDimensions(file)
+    const dimensions = await readImageDimensions(activeFile)
+
+    if (imageFile.value !== activeFile) return
+
     sourceDimensions.value = dimensions
 
     options.value = {
@@ -88,6 +94,7 @@ watch(imageFile, async (file) => {
       allowUpscale: true,
     }
   } catch {
+    if (imageFile.value !== activeFile) return
     error.value = t('invalidImageText')
   }
 })
@@ -107,23 +114,34 @@ const formatOptions = computed<SelectOption[]>(() => [
 ])
 
 async function runResize() {
-  if (!imageFile.value) return
+  const currentFile = imageFile.value
+  if (!currentFile) return
+
+  const runToken = ++resizeRunToken
 
   isProcessing.value = true
   error.value = ''
 
   try {
-    result.value = await resizeImage(imageFile.value, {
+    const resized = await resizeImage(currentFile, {
       ...options.value,
       allowUpscale: true,
     })
+
+    if (runToken !== resizeRunToken || imageFile.value !== currentFile) return
+
+    result.value = resized
     message.success(t('resizeSuccessText'))
   } catch (reason) {
+    if (runToken !== resizeRunToken || imageFile.value !== currentFile) return
+
     result.value = null
     error.value = resolveErrorMessage(reason)
     message.error(error.value)
   } finally {
-    isProcessing.value = false
+    if (runToken === resizeRunToken) {
+      isProcessing.value = false
+    }
   }
 }
 

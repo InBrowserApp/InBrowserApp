@@ -208,9 +208,9 @@ function drawWithResampling(
       const xEnd = Math.ceil(sourceX + sampler.radius)
 
       let sumWeight = 0
-      let sumRed = 0
-      let sumGreen = 0
-      let sumBlue = 0
+      let sumPremultRed = 0
+      let sumPremultGreen = 0
+      let sumPremultBlue = 0
       let sumAlpha = 0
 
       for (let sampleY = yStart; sampleY <= yEnd; sampleY += 1) {
@@ -227,11 +227,17 @@ function drawWithResampling(
           const clampedX = clamp(sampleX, 0, sourceWidth - 1)
           const sourceIndex = pixelIndex(sourceWidth, clampedX, clampedY)
 
+          const sourceRed = sourcePixels.data[sourceIndex] ?? 0
+          const sourceGreen = sourcePixels.data[sourceIndex + 1] ?? 0
+          const sourceBlue = sourcePixels.data[sourceIndex + 2] ?? 0
+          const sourceAlpha = (sourcePixels.data[sourceIndex + 3] ?? 0) / 255
+          const weightedAlpha = sourceAlpha * weight
+
           sumWeight += weight
-          sumRed += (sourcePixels.data[sourceIndex] ?? 0) * weight
-          sumGreen += (sourcePixels.data[sourceIndex + 1] ?? 0) * weight
-          sumBlue += (sourcePixels.data[sourceIndex + 2] ?? 0) * weight
-          sumAlpha += (sourcePixels.data[sourceIndex + 3] ?? 0) * weight
+          sumPremultRed += sourceRed * weightedAlpha
+          sumPremultGreen += sourceGreen * weightedAlpha
+          sumPremultBlue += sourceBlue * weightedAlpha
+          sumAlpha += weightedAlpha
         }
       }
 
@@ -247,10 +253,24 @@ function drawWithResampling(
         targetPixels.data[targetIndex + 2] = sourcePixels.data[sourceIndex + 2] ?? 0
         targetPixels.data[targetIndex + 3] = sourcePixels.data[sourceIndex + 3] ?? 0
       } else {
-        targetPixels.data[targetIndex] = clampByte(sumRed / sumWeight)
-        targetPixels.data[targetIndex + 1] = clampByte(sumGreen / sumWeight)
-        targetPixels.data[targetIndex + 2] = clampByte(sumBlue / sumWeight)
-        targetPixels.data[targetIndex + 3] = clampByte(sumAlpha / sumWeight)
+        const averagedAlpha = sumAlpha / sumWeight
+        const outputAlpha = clamp(averagedAlpha, 0, 1)
+
+        let outputRed = 0
+        let outputGreen = 0
+        let outputBlue = 0
+
+        if (outputAlpha > 1e-8) {
+          const inverseAlpha = 1 / outputAlpha
+          outputRed = (sumPremultRed / sumWeight) * inverseAlpha
+          outputGreen = (sumPremultGreen / sumWeight) * inverseAlpha
+          outputBlue = (sumPremultBlue / sumWeight) * inverseAlpha
+        }
+
+        targetPixels.data[targetIndex] = clampByte(outputRed)
+        targetPixels.data[targetIndex + 1] = clampByte(outputGreen)
+        targetPixels.data[targetIndex + 2] = clampByte(outputBlue)
+        targetPixels.data[targetIndex + 3] = clampByte(outputAlpha * 255)
       }
     }
   }
