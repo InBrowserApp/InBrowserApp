@@ -24,7 +24,6 @@ vi.mock('../composables/usePdfToImageConverter', () => ({
     errorMessage: ref(''),
     uploadedFileName: ref('demo.pdf'),
     uploadedFileSize: ref(1024),
-    uploadedFileType: ref('application/pdf'),
     currentImageURL: ref('blob:current'),
     currentDownloadName: ref('p1.png'),
     zipDownloadURL: ref(null),
