@@ -30,6 +30,22 @@ function createArchiveHandle(entries: ArchiveEntry[], readBlob: Blob | Error): A
   }
 }
 
+function createDeferred<T>() {
+  let resolve!: (value: T) => void
+  let reject!: (reason?: unknown) => void
+
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise
+    reject = rejectPromise
+  })
+
+  return {
+    promise,
+    resolve,
+    reject,
+  }
+}
+
 type ViewerState = ReturnType<typeof useArchiveViewer>
 
 function mountComposable(): { wrapper: ReturnType<typeof mount>; state: ViewerState } {
@@ -317,6 +333,132 @@ describe('useArchiveViewer', () => {
 
     expect(state.previewKind.value).toBe('text')
     expect(state.previewText.value).toContain('"ok":true')
+  })
+
+  it('ignores stale archive open results from earlier uploads', async () => {
+    const firstEntries: ArchiveEntry[] = [
+      {
+        path: 'old.txt',
+        kind: 'file',
+        size: 3,
+        compressedSize: 2,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+    const secondEntries: ArchiveEntry[] = [
+      {
+        path: 'new.txt',
+        kind: 'file',
+        size: 3,
+        compressedSize: 2,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const firstHandle = createArchiveHandle(firstEntries, new Blob(['old']))
+    const secondHandle = createArchiveHandle(secondEntries, new Blob(['new']))
+    const deferredFirstOpen = createDeferred<ArchiveHandle>()
+
+    mockedOpenArchive
+      .mockImplementationOnce(async () => deferredFirstOpen.promise)
+      .mockResolvedValueOnce(secondHandle)
+
+    const { state } = mountComposable()
+
+    const firstFile = new File(['first'], 'first.zip')
+    const secondFile = new File(['second'], 'second.zip')
+
+    const firstUpload = state.handleBeforeUpload({
+      file: { file: firstFile } as never,
+      fileList: [{ file: firstFile } as never],
+    })
+
+    await flushPromises()
+
+    const secondUpload = state.handleBeforeUpload({
+      file: { file: secondFile } as never,
+      fileList: [{ file: secondFile } as never],
+    })
+
+    await secondUpload
+    await flushPromises()
+
+    deferredFirstOpen.resolve(firstHandle)
+    await firstUpload
+    await flushPromises()
+
+    expect(state.archiveFile.value?.name).toBe('second.zip')
+    expect(state.entries.value.map((entry) => entry.path)).toEqual(['new.txt'])
+    expect(state.selectedEntry.value?.path).toBe('new.txt')
+    expect((firstHandle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1)
+    expect((secondHandle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(0)
+  })
+
+  it('keeps latest preview when earlier preview resolves later', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'a.txt',
+        kind: 'file',
+        size: 1,
+        compressedSize: 1,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+      {
+        path: 'b.txt',
+        kind: 'file',
+        size: 1,
+        compressedSize: 1,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const deferredFirstPreview = createDeferred<Blob>()
+    const readEntry = vi.fn(async (path: string) => {
+      if (path === 'a.txt') {
+        return deferredFirstPreview.promise
+      }
+
+      return new Blob(['second preview'], { type: 'text/plain' })
+    })
+
+    const handle: ArchiveHandle = {
+      format: 'zip',
+      entries,
+      readEntry,
+      dispose: vi.fn(async () => undefined),
+    }
+
+    mockedOpenArchive.mockResolvedValueOnce(handle)
+
+    const { state } = mountComposable()
+
+    const file = new File(['ok'], 'race.zip')
+    await state.handleBeforeUpload({ file: { file } as never, fileList: [{ file } as never] })
+    await flushPromises()
+
+    expect(readEntry).toHaveBeenCalledWith('a.txt')
+
+    const targetRow = state.rows.value.find((row) => row.path === 'b.txt')
+    if (!targetRow) {
+      throw new Error('Missing b.txt row')
+    }
+
+    state.tableRowProps(targetRow).onClick()
+    await flushPromises()
+
+    expect(state.selectedEntry.value?.path).toBe('b.txt')
+    expect(state.previewKind.value).toBe('text')
+    expect(state.previewText.value).toBe('second preview')
+
+    deferredFirstPreview.resolve(new Blob(['first preview'], { type: 'text/plain' }))
+    await flushPromises()
+
+    expect(state.selectedEntry.value?.path).toBe('b.txt')
+    expect(state.previewText.value).toBe('second preview')
   })
 
   it('disposes archive when component scope unmounts', async () => {

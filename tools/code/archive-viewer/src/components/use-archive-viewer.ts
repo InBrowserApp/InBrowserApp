@@ -69,6 +69,8 @@ export function useArchiveViewer() {
   const isParsing = ref(false)
   const isLoadingPreview = ref(false)
   const errorMessage = ref('')
+  let openRequestToken = 0
+  let previewRequestToken = 0
 
   const selectedBlobUrl = useObjectUrl(selectedBlob)
 
@@ -140,32 +142,52 @@ export function useArchiveViewer() {
   }
 
   async function openSelectedFile(file: File) {
+    const requestToken = ++openRequestToken
     isParsing.value = true
     errorMessage.value = ''
     archiveFile.value = file
     search.value = ''
 
+    invalidatePreviewRequests()
     await disposeArchive()
+    if (requestToken !== openRequestToken) {
+      return
+    }
+
     resetPreviewState()
 
     try {
       const opened = await openArchive(file)
+      if (requestToken !== openRequestToken) {
+        await opened.dispose()
+        return
+      }
+
       archiveHandle.value = opened
       entries.value = opened.entries
 
       const firstFile = opened.entries.find((entry) => entry.kind === 'file')
       selectedPath.value = firstFile?.path ?? ''
     } catch (error) {
+      if (requestToken !== openRequestToken) {
+        return
+      }
+
       archiveHandle.value = null
       entries.value = []
       selectedPath.value = ''
       errorMessage.value = error instanceof Error ? error.message : 'Unable to parse archive.'
     } finally {
-      isParsing.value = false
+      if (requestToken === openRequestToken) {
+        isParsing.value = false
+      }
     }
   }
 
   async function clearFile() {
+    invalidateOpenRequests()
+    invalidatePreviewRequests()
+
     archiveFile.value = null
     entries.value = []
     search.value = ''
@@ -193,10 +215,13 @@ export function useArchiveViewer() {
   })
 
   onBeforeUnmount(async () => {
+    invalidateOpenRequests()
+    invalidatePreviewRequests()
     await disposeArchive()
   })
 
   async function loadPreview() {
+    const requestToken = ++previewRequestToken
     resetPreviewState()
 
     const entry = selectedEntry.value
@@ -209,6 +234,10 @@ export function useArchiveViewer() {
 
     try {
       const blob = await handle.readEntry(entry.path)
+      if (requestToken !== previewRequestToken) {
+        return
+      }
+
       selectedBlob.value = blob
 
       if (blob.size > MAX_TEXT_PREVIEW_BYTES) {
@@ -224,25 +253,48 @@ export function useArchiveViewer() {
       }
 
       if (isTextEntry(entry, blob)) {
+        const text = await blob.text()
+        if (requestToken !== previewRequestToken) {
+          return
+        }
+
         previewKind.value = 'text'
-        previewText.value = await blob.text()
+        previewText.value = text
         return
       }
 
       previewKind.value = 'none'
       previewText.value = labels.noPreview
     } catch (error) {
+      if (requestToken !== previewRequestToken) {
+        return
+      }
+
       previewKind.value = 'none'
       previewText.value = error instanceof Error ? error.message : labels.noPreview
     } finally {
-      isLoadingPreview.value = false
+      if (requestToken === previewRequestToken) {
+        isLoadingPreview.value = false
+      }
     }
   }
 
   async function disposeArchive() {
-    if (!archiveHandle.value) return
-    await archiveHandle.value.dispose()
+    const handle = archiveHandle.value
+    if (!handle) return
+
     archiveHandle.value = null
+    await handle.dispose()
+  }
+
+  function invalidateOpenRequests() {
+    openRequestToken += 1
+    isParsing.value = false
+  }
+
+  function invalidatePreviewRequests() {
+    previewRequestToken += 1
+    isLoadingPreview.value = false
   }
 
   return {
