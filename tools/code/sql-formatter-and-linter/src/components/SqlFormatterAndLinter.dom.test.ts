@@ -33,19 +33,6 @@ const ToolSectionHeaderStub = defineComponent({
   template: '<h3><slot /></h3>',
 })
 
-const SqlToolbarStub = defineComponent({
-  name: 'SqlToolbar',
-  props: ['formattedSql', 'downloadUrl', 'downloadFilename'],
-  emits: ['import', 'sample', 'clear'],
-  template: `
-    <div class="toolbar" :data-formatted="formattedSql" :data-download="downloadFilename">
-      <button class="import" @click="$emit('import')">import</button>
-      <button class="sample" @click="$emit('sample')">sample</button>
-      <button class="clear" @click="$emit('clear')">clear</button>
-    </div>
-  `,
-})
-
 const SqlFormatOptionsStub = defineComponent({
   name: 'SqlFormatOptions',
   props: [
@@ -117,10 +104,13 @@ const SqlLintOptionsStub = defineComponent({
 
 const SqlInputOutputStub = defineComponent({
   name: 'SqlInputOutput',
-  props: ['sourceSql', 'formattedSql', 'formatError'],
-  emits: ['update:sourceSql'],
+  props: ['sourceSql', 'formattedSql', 'formatError', 'downloadUrl', 'downloadFilename'],
+  emits: ['update:sourceSql', 'import', 'sample', 'clear'],
   template: `
     <div class="input-output" :data-source="sourceSql" :data-error="formatError" :data-formatted="formattedSql">
+      <button class="import" @click="$emit('import')">import</button>
+      <button class="sample" @click="$emit('sample')">sample</button>
+      <button class="clear" @click="$emit('clear')">clear</button>
       <button class="set-invalid-source" @click="$emit('update:sourceSql', 'SYNTAX_ERROR')">invalid</button>
       <button class="set-valid-source" @click="$emit('update:sourceSql', 'SELECT * FROM users')">valid</button>
     </div>
@@ -150,7 +140,6 @@ const mountComponent = () =>
       stubs: {
         ToolSection: ToolSectionStub,
         ToolSectionHeader: ToolSectionHeaderStub,
-        SqlToolbar: SqlToolbarStub,
         SqlFormatOptions: SqlFormatOptionsStub,
         SqlLintOptions: SqlLintOptionsStub,
         SqlInputOutput: SqlInputOutputStub,

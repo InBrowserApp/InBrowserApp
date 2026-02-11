@@ -1,21 +1,15 @@
 <template>
   <ToolSection>
-    <SqlToolbar
-      :formatted-sql="formattedSql"
-      :download-url="resolvedDownloadUrl"
-      :download-filename="downloadFilename"
-      @import="importFromFile"
-      @sample="applySample"
-      @clear="clearInput"
-    />
-  </ToolSection>
-
-  <ToolSection>
     <ToolSectionHeader>{{ t('input-output') }}</ToolSectionHeader>
     <SqlInputOutput
       v-model:source-sql="sourceSql"
       :formatted-sql="formattedSql"
       :format-error="formatError"
+      :download-url="resolvedDownloadUrl"
+      :download-filename="downloadFilename"
+      @import="importFromFile"
+      @sample="applySample"
+      @clear="clearInput"
     />
   </ToolSection>
 
@@ -63,7 +57,6 @@ import SqlFormatOptions from './SqlFormatOptions.vue'
 import SqlInputOutput from './SqlInputOutput.vue'
 import SqlLintOptions from './SqlLintOptions.vue'
 import SqlLintResult from './SqlLintResult.vue'
-import SqlToolbar from './SqlToolbar.vue'
 
 const { t } = useI18n({ useScope: 'local' })
 
