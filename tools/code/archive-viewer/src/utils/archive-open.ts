@@ -345,7 +345,11 @@ function joinTarPath(prefix: string, name: string): string {
 }
 
 function stripTrailingNulls(value: string): string {
-  return value.replace(/\0+$/, '')
+  let end = value.length
+  while (end > 0 && value.charCodeAt(end - 1) === 0) {
+    end -= 1
+  }
+  return end === value.length ? value : value.slice(0, end)
 }
 
 function toDate(seconds: number): Date | null {
