@@ -165,6 +165,12 @@ describe('ScryptKeyDerivationView', () => {
     await nextTick()
     expect(wrapper.find('[data-label="N (Cost Factor)"]').attributes('data-status')).toBe('error')
 
+    costFactorRef.value = 1048576
+    blockSizeRef.value = 16
+    await nextTick()
+    expect(wrapper.find('[data-label="N (Cost Factor)"]').attributes('data-status')).toBe('error')
+    expect(wrapper.find('[data-label="r (Block Size)"]').attributes('data-status')).toBe('error')
+
     blockSizeRef.value = 33
     await nextTick()
     expect(wrapper.find('[data-label="r (Block Size)"]').attributes('data-status')).toBe('error')

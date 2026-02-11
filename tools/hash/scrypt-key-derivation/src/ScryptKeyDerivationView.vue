@@ -21,7 +21,10 @@
       :parallelism-label="parallelismLabel"
       :cost-factor-valid="costFactorValid"
       :cost-factor-power-of-two="costFactorPowerOfTwo"
-      :block-size-valid="blockSizeState.isValid"
+      :memory-bound-valid="memoryBoundValid"
+      :cost-factor-safe-max="costFactorSafeMax"
+      :block-size-safe-max="blockSizeSafeMax"
+      :block-size-valid="blockSizeValid"
       :parallelism-valid="parallelismState.isValid"
       :length-valid="lengthState.isValid"
       :salt-error-type="saltErrorType"
@@ -36,7 +39,7 @@
       :parallelism="parallelismState.value"
       :length="lengthState.value"
       :cost-factor-valid="costFactorValid"
-      :block-size-valid="blockSizeState.isValid"
+      :block-size-valid="blockSizeValid"
       :parallelism-valid="parallelismState.isValid"
       :length-valid="lengthState.isValid"
       :salt-error-type="saltErrorType"
@@ -54,7 +57,13 @@ import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { isValidBase16 } from '@utils/base16'
 import type { SaltFormat } from './types'
-import { generateRandomSalt, isValidBase64 } from './utils'
+import {
+  generateRandomSalt,
+  getMaxBlockSizeForCostFactor,
+  getMaxCostFactorForBlockSize,
+  isScryptMemoryWithinLimit,
+  isValidBase64,
+} from './utils'
 import ScryptForm from './components/ScryptForm.vue'
 import ScryptResult from './components/ScryptResult.vue'
 import WhatIsScrypt from './components/WhatIsScrypt.vue'
@@ -170,8 +179,29 @@ const lengthState = computed(() =>
   parseIntegerRange(lengthInput.value, minLength, maxLength, defaultLength),
 )
 
+const memoryBoundValid = computed(() =>
+  isScryptMemoryWithinLimit(costFactorState.value.value, blockSizeState.value.value),
+)
+
+const costFactorSafeMax = computed(() =>
+  Math.max(
+    minCostFactor,
+    Math.min(maxCostFactor, getMaxCostFactorForBlockSize(blockSizeState.value.value)),
+  ),
+)
+
+const blockSizeSafeMax = computed(() =>
+  Math.max(
+    minBlockSize,
+    Math.min(maxBlockSize, getMaxBlockSizeForCostFactor(costFactorState.value.value)),
+  ),
+)
+
 const costFactorPowerOfTwo = computed(() => isPowerOfTwo(costFactorState.value.value))
-const costFactorValid = computed(() => costFactorState.value.isValid && costFactorPowerOfTwo.value)
+const costFactorValid = computed(
+  () => costFactorState.value.isValid && costFactorPowerOfTwo.value && memoryBoundValid.value,
+)
+const blockSizeValid = computed(() => blockSizeState.value.isValid && memoryBoundValid.value)
 
 const saltErrorType = computed((): '' | 'hex' | 'base64' => {
   const saltValue = salt.value

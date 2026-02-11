@@ -121,6 +121,9 @@ const props = withDefaults(
     lengthMax: number
     costFactorValid: boolean
     costFactorPowerOfTwo: boolean
+    memoryBoundValid: boolean
+    costFactorSafeMax: number
+    blockSizeSafeMax: number
     blockSizeValid: boolean
     parallelismValid: boolean
     lengthValid: boolean
@@ -154,12 +157,16 @@ const lengthStatus = computed(() => (props.lengthValid ? undefined : 'error'))
 const costFactorFeedback = computed(() => {
   if (props.costFactorValid) return ''
   if (!props.costFactorPowerOfTwo) return 'N must be a power of 2.'
-  return t('range-invalid', { min: props.costFactorMin, max: props.costFactorMax })
+
+  const max = props.memoryBoundValid ? props.costFactorMax : props.costFactorSafeMax
+  return t('range-invalid', { min: props.costFactorMin, max })
 })
 
 const blockSizeFeedback = computed(() => {
   if (props.blockSizeValid) return ''
-  return t('range-invalid', { min: props.blockSizeMin, max: props.blockSizeMax })
+
+  const max = props.memoryBoundValid ? props.blockSizeMax : props.blockSizeSafeMax
+  return t('range-invalid', { min: props.blockSizeMin, max })
 })
 
 const parallelismFeedback = computed(() => {

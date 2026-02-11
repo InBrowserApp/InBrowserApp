@@ -108,15 +108,19 @@ const derivedBytes = computedAsync<Uint8Array | undefined>(
       return undefined
     }
 
-    return deriveScrypt({
-      password,
-      salt,
-      saltFormat,
-      costFactor,
-      blockSize,
-      parallelism,
-      lengthBytes: length,
-    })
+    try {
+      return await deriveScrypt({
+        password,
+        salt,
+        saltFormat,
+        costFactor,
+        blockSize,
+        parallelism,
+        lengthBytes: length,
+      })
+    } catch {
+      return undefined
+    }
   },
   undefined,
   evaluating,

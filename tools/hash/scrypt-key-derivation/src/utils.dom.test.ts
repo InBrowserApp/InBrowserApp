@@ -1,10 +1,14 @@
 import { describe, it, expect } from 'vitest'
 import {
+  MAX_SCRYPT_COST_BLOCK_PRODUCT,
   bytesToBase64,
   bytesToHex,
   decodeBase64,
   deriveScrypt,
   generateRandomSalt,
+  getMaxBlockSizeForCostFactor,
+  getMaxCostFactorForBlockSize,
+  isScryptMemoryWithinLimit,
   isValidBase64,
   normalizeBase64Input,
   saltToBytes,
@@ -69,6 +73,17 @@ describe('scrypt utils', () => {
     expect(utf8Salt.length).toBeGreaterThan(0)
   })
 
+  it('computes scrypt memory safety bounds', () => {
+    expect(MAX_SCRYPT_COST_BLOCK_PRODUCT).toBe(16777215)
+    expect(getMaxCostFactorForBlockSize(16)).toBe(1048575)
+    expect(getMaxBlockSizeForCostFactor(524288)).toBe(31)
+
+    expect(isScryptMemoryWithinLimit(1048575, 16)).toBe(true)
+    expect(isScryptMemoryWithinLimit(1048576, 16)).toBe(false)
+    expect(isScryptMemoryWithinLimit(524288, 31)).toBe(true)
+    expect(isScryptMemoryWithinLimit(524288, 32)).toBe(false)
+  })
+
   it('derives a scrypt key', async () => {
     const derived = await deriveScrypt({
       password: 'password',
@@ -107,6 +122,20 @@ describe('scrypt utils', () => {
         saltFormat: 'utf-8',
         costFactor: 15,
         blockSize: 1,
+        parallelism: 1,
+        lengthBytes: 32,
+      }),
+    ).rejects.toThrow('Invalid scrypt parameters')
+  })
+
+  it('throws when parameters exceed memory bounds', async () => {
+    await expect(
+      deriveScrypt({
+        password: 'password',
+        salt: 'salt',
+        saltFormat: 'utf-8',
+        costFactor: 1048576,
+        blockSize: 16,
         parallelism: 1,
         lengthBytes: 32,
       }),

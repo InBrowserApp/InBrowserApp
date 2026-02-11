@@ -4,6 +4,13 @@ import type { SaltFormat } from './types'
 
 const textEncoder = new TextEncoder()
 
+const SCRYPT_MEMORY_MULTIPLIER = 128
+const MAX_TYPED_ARRAY_LENGTH = 0x7fffffff
+
+export const MAX_SCRYPT_COST_BLOCK_PRODUCT = Math.floor(
+  MAX_TYPED_ARRAY_LENGTH / SCRYPT_MEMORY_MULTIPLIER,
+)
+
 function randomBytes(length: number): Uint8Array {
   const bytes = new Uint8Array(length)
   crypto.getRandomValues(bytes)
@@ -105,6 +112,23 @@ export function generateRandomSalt(format: SaltFormat, lengthBytes = 16): string
   }
 }
 
+export function getMaxCostFactorForBlockSize(blockSize: number): number {
+  if (!Number.isInteger(blockSize) || blockSize <= 0) return 0
+  return Math.floor(MAX_SCRYPT_COST_BLOCK_PRODUCT / blockSize)
+}
+
+export function getMaxBlockSizeForCostFactor(costFactor: number): number {
+  if (!Number.isInteger(costFactor) || costFactor <= 0) return 0
+  return Math.floor(MAX_SCRYPT_COST_BLOCK_PRODUCT / costFactor)
+}
+
+export function isScryptMemoryWithinLimit(costFactor: number, blockSize: number): boolean {
+  if (!Number.isInteger(costFactor) || costFactor <= 0) return false
+  if (!Number.isInteger(blockSize) || blockSize <= 0) return false
+
+  return costFactor <= getMaxCostFactorForBlockSize(blockSize)
+}
+
 export async function deriveScrypt(params: {
   password: string
   salt: string | File
@@ -127,7 +151,8 @@ export async function deriveScrypt(params: {
     !Number.isInteger(parallelism) ||
     parallelism <= 0 ||
     !Number.isInteger(lengthBytes) ||
-    lengthBytes <= 0
+    lengthBytes <= 0 ||
+    !isScryptMemoryWithinLimit(costFactor, blockSize)
   ) {
     throw new Error('Invalid scrypt parameters')
   }
