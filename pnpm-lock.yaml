@@ -1089,6 +1089,9 @@ importers:
       '@tools/screen-recorder':
         specifier: workspace:*
         version: link:../../tools/misc/screen-recorder
+      '@tools/scrypt-key-derivation':
+        specifier: workspace:*
+        version: link:../../tools/hash/scrypt-key-derivation
       '@tools/sha1-hash-text-or-file':
         specifier: workspace:*
         version: link:../../tools/hash/sha1-hash-text-or-file
@@ -3054,6 +3057,36 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.4(vue@3.5.27(typescript@5.9.3))
+
+  tools/hash/scrypt-key-derivation:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/base16':
+        specifier: workspace:*
+        version: link:../../../utils/base16
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.1.0(vue@3.5.27(typescript@5.9.3))
+      hash-wasm:
+        specifier: 'catalog:'
+        version: 4.12.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.27(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.27(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.27(typescript@5.9.3))
 
   tools/hash/sha1-hash-text-or-file:
     dependencies:

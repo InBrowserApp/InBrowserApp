@@ -75,6 +75,7 @@ import { routes as blake2bHashTextOrFileRoutes } from '@tools/blake2b-hash-text-
 import { routes as blake2sHashTextOrFileRoutes } from '@tools/blake2s-hash-text-or-file/routes'
 import { routes as blake3HashTextOrFileRoutes } from '@tools/blake3-hash-text-or-file/routes'
 import { routes as hmacGeneratorRoutes } from '@tools/hmac-generator/routes'
+import { routes as scryptKeyDerivationRoutes } from '@tools/scrypt-key-derivation/routes'
 import { routes as urlComponentEncoderDecoderRoutes } from '@tools/url-component-encoder-decoder/routes'
 import { routes as base16EncoderRoutes } from '@tools/base16-encoder/routes'
 import { routes as base16DecoderRoutes } from '@tools/base16-decoder/routes'
@@ -253,6 +254,7 @@ export const routes: ToolRoute[] = [
   ...bcryptHashPasswordRoutes,
   ...bcryptHashPasswordVerifierRoutes,
   ...pbkdf2KeyDerivationRoutes,
+  ...scryptKeyDerivationRoutes,
   ...hashToolsRoutes,
   ...sriHashGeneratorRoutes,
   ...crcChecksumCalculatorRoutes,
