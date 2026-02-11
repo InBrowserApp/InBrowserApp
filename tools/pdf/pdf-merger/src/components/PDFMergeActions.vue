@@ -17,6 +17,9 @@
           {{ t('clearAll') }}
         </n-button>
         <n-button type="primary" :loading="isMerging" :disabled="!canMerge" @click="emit('merge')">
+          <template #icon>
+            <n-icon :component="DocumentAdd16Regular" />
+          </template>
           {{ isMerging ? t('merging') : t('merge') }}
         </n-button>
       </n-flex>
@@ -47,6 +50,7 @@ import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
+import DocumentAdd16Regular from '@vicons/fluent/DocumentAdd16Regular'
 
 defineProps<{
   itemsCount: number
