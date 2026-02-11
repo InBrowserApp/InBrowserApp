@@ -3,7 +3,7 @@
   <ToolSection>
     <n-grid cols="1 s:2" :x-gap="12" :y-gap="12">
       <n-gi>
-        <n-form-item :label="t('password')">
+        <n-form-item :label="t('password')" :show-feedback="false">
           <n-input
             v-model:value="password"
             type="password"
