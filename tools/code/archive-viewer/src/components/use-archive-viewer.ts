@@ -9,16 +9,19 @@ export const labels = {
   uploadTitle: 'Upload archive',
   uploadHint: 'Click or drag to upload an archive file',
   supportedFormats: 'Supported formats: ZIP, TAR, GZ, TGZ',
+  unsupportedFormat: 'Unsupported file format. Please upload ZIP, TAR, GZ, or TGZ.',
   selectedFile: 'Selected file',
   clearFile: 'Clear file',
   localNote: 'Runs locally in your browser. No uploads.',
   parsingArchive: 'Parsing archive entries...',
-  summaryTitle: 'Archive summary',
   archiveFormat: 'Format',
   entryCount: 'Entries',
   totalUncompressed: 'Total uncompressed size',
-  entriesTitle: 'Entries',
-  searchPlaceholder: 'Search by path',
+  entriesTitle: 'Archive explorer',
+  searchPlaceholder: 'Search in current folder',
+  rootFolder: 'Root',
+  goToParent: 'Up',
+  emptyFolder: 'This folder is empty.',
   previewTitle: 'Preview',
   noSelection: 'Select a file entry to preview.',
   loadingPreview: 'Loading preview...',
@@ -31,9 +34,16 @@ export const labels = {
 export type ArchiveRow = {
   key: string
   path: string
+  name: string
+  kind: ArchiveEntryKind
   kindLabel: string
   sizeLabel: string
   modifiedAtLabel: string
+}
+
+export type ArchiveBreadcrumb = {
+  label: string
+  path: string
 }
 
 const MAX_TEXT_PREVIEW_BYTES = 1024 * 1024
@@ -56,37 +66,68 @@ const TEXT_EXTENSIONS = new Set([
   'ini',
   'conf',
 ])
+const SUPPORTED_ARCHIVE_SUFFIXES = ['.zip', '.tar', '.gz', '.tgz', '.tar.gz']
 
 export function useArchiveViewer() {
   const archiveFile = ref<File | null>(null)
   const archiveHandle = ref<ArchiveHandle | null>(null)
   const entries = ref<ArchiveEntry[]>([])
   const search = ref('')
+  const currentDirectory = ref('')
   const selectedPath = ref('')
   const selectedBlob = ref<Blob | null>(null)
   const previewKind = ref<'none' | 'text' | 'image'>('none')
   const previewText = ref('')
   const isParsing = ref(false)
   const isLoadingPreview = ref(false)
+  const isPreviewModalVisible = ref(false)
   const errorMessage = ref('')
   let openRequestToken = 0
   let previewRequestToken = 0
 
   const selectedBlobUrl = useObjectUrl(selectedBlob)
 
-  const filteredEntries = computed(() => {
+  const acceptedFormats = SUPPORTED_ARCHIVE_SUFFIXES.join(',')
+
+  const breadcrumbs = computed<ArchiveBreadcrumb[]>(() => {
+    const segments = splitPathSegments(currentDirectory.value)
+    const result: ArchiveBreadcrumb[] = [{ label: labels.rootFolder, path: '' }]
+
+    let nextSegments: string[] = []
+    for (const segment of segments) {
+      nextSegments = [...nextSegments, segment]
+      result.push({
+        label: segment,
+        path: toDirectoryPath(nextSegments),
+      })
+    }
+
+    return result
+  })
+
+  const canGoToParentDirectory = computed(
+    () => splitPathSegments(currentDirectory.value).length > 0,
+  )
+
+  const visibleRows = computed(() => {
+    const rows = buildRows(entries.value, currentDirectory.value)
     const query = search.value.trim().toLowerCase()
-    if (!query) return entries.value
-    return entries.value.filter((entry) => entry.path.toLowerCase().includes(query))
+    if (!query) {
+      return rows
+    }
+
+    return rows.filter((row) => row.name.toLowerCase().includes(query))
   })
 
   const rows = computed<ArchiveRow[]>(() =>
-    filteredEntries.value.map((entry) => ({
-      key: entry.path,
-      path: entry.path,
-      kindLabel: kindLabel(entry.kind),
-      sizeLabel: entry.kind === 'file' ? formatBytes(entry.size) : '-',
-      modifiedAtLabel: formatDate(entry.modifiedAt),
+    visibleRows.value.map((row) => ({
+      key: row.path,
+      path: row.path,
+      name: row.name,
+      kind: row.kind,
+      kindLabel: kindLabel(row.kind),
+      sizeLabel: row.kind === 'file' ? formatBytes(row.size) : '-',
+      modifiedAtLabel: formatDate(row.modifiedAt),
     })),
   )
 
@@ -102,10 +143,10 @@ export function useArchiveViewer() {
 
   const columns: DataTableColumns<ArchiveRow> = [
     {
-      title: 'Path',
-      key: 'path',
+      title: 'Name',
+      key: 'name',
       ellipsis: { tooltip: true },
-      minWidth: 280,
+      minWidth: 260,
     },
     {
       title: 'Kind',
@@ -126,9 +167,9 @@ export function useArchiveViewer() {
 
   function tableRowProps(row: ArchiveRow) {
     return {
-      style: row.path === selectedPath.value ? 'background: var(--n-table-color-hover);' : '',
+      style: 'cursor: pointer;',
       onClick: () => {
-        selectedPath.value = row.path
+        onRowClick(row)
       },
     }
   }
@@ -137,8 +178,39 @@ export function useArchiveViewer() {
     const selected = data.file.file
     if (!selected) return false
 
+    if (!isSupportedArchiveFile(selected)) {
+      errorMessage.value = labels.unsupportedFormat
+      return false
+    }
+
     await openSelectedFile(selected)
     return false
+  }
+
+  function onRowClick(row: ArchiveRow) {
+    if (row.kind === 'directory') {
+      goToDirectory(row.path)
+      return
+    }
+
+    selectedPath.value = row.path
+    isPreviewModalVisible.value = true
+  }
+
+  function goToDirectory(path: string) {
+    currentDirectory.value = normalizeDirectoryPath(path)
+  }
+
+  function goToParentDirectory() {
+    const segments = splitPathSegments(currentDirectory.value)
+    if (!segments.length) return
+
+    segments.pop()
+    currentDirectory.value = toDirectoryPath(segments)
+  }
+
+  function closePreviewModal() {
+    isPreviewModalVisible.value = false
   }
 
   async function openSelectedFile(file: File) {
@@ -147,6 +219,8 @@ export function useArchiveViewer() {
     errorMessage.value = ''
     archiveFile.value = file
     search.value = ''
+    currentDirectory.value = ''
+    isPreviewModalVisible.value = false
 
     invalidatePreviewRequests()
     await disposeArchive()
@@ -191,7 +265,11 @@ export function useArchiveViewer() {
     archiveFile.value = null
     entries.value = []
     search.value = ''
+    currentDirectory.value = ''
+    selectedPath.value = ''
     errorMessage.value = ''
+    isPreviewModalVisible.value = false
+
     await disposeArchive()
     resetPreviewState()
   }
@@ -208,6 +286,7 @@ export function useArchiveViewer() {
 
   watch(entries, () => {
     if (!selectedPath.value) return
+
     const exists = entries.value.some((entry) => entry.path === selectedPath.value)
     if (!exists) {
       selectedPath.value = ''
@@ -298,17 +377,24 @@ export function useArchiveViewer() {
   }
 
   return {
+    acceptedFormats,
     archiveFile,
     archiveHandle,
+    breadcrumbs,
+    canGoToParentDirectory,
+    closePreviewModal,
     columns,
     clearFile,
     downloadName,
     entries,
     errorMessage,
     formatBytes,
+    goToDirectory,
+    goToParentDirectory,
     handleBeforeUpload,
     isLoadingPreview,
     isParsing,
+    isPreviewModalVisible,
     labels,
     previewKind,
     previewText,
@@ -321,16 +407,111 @@ export function useArchiveViewer() {
   }
 }
 
+type BuiltRow = {
+  path: string
+  name: string
+  kind: ArchiveEntryKind
+  size: number
+  modifiedAt: Date | null
+}
+
+function buildRows(entries: ArchiveEntry[], currentDirectory: string): BuiltRow[] {
+  const currentSegments = splitPathSegments(currentDirectory)
+
+  const directories = new Map<string, BuiltRow>()
+  const files: BuiltRow[] = []
+
+  for (const entry of entries) {
+    const segments = splitPathSegments(entry.path)
+    if (!segments.length) continue
+    if (!hasPrefixSegments(segments, currentSegments)) continue
+    if (segments.length <= currentSegments.length) continue
+
+    const nextName = segments[currentSegments.length]
+    if (!nextName) continue
+
+    const isDirectChild = segments.length === currentSegments.length + 1
+
+    if (isDirectChild && entry.kind !== 'directory') {
+      files.push({
+        path: entry.path,
+        name: nextName,
+        kind: entry.kind,
+        size: entry.size,
+        modifiedAt: entry.modifiedAt,
+      })
+      continue
+    }
+
+    const directoryPath = toDirectoryPath([...currentSegments, nextName])
+    const existing = directories.get(directoryPath)
+
+    if (!existing || (entry.kind === 'directory' && isDirectChild)) {
+      directories.set(directoryPath, {
+        path: directoryPath,
+        name: nextName,
+        kind: 'directory',
+        size: 0,
+        modifiedAt: entry.kind === 'directory' && isDirectChild ? entry.modifiedAt : null,
+      })
+    }
+  }
+
+  const sortedDirectories = [...directories.values()].sort((left, right) =>
+    left.name.localeCompare(right.name),
+  )
+  const sortedFiles = files.sort((left, right) => left.name.localeCompare(right.name))
+
+  return [...sortedDirectories, ...sortedFiles]
+}
+
+function splitPathSegments(path: string): string[] {
+  return path
+    .split('/')
+    .map((segment) => segment.trim())
+    .filter((segment) => segment.length > 0)
+}
+
+function hasPrefixSegments(pathSegments: string[], prefixSegments: string[]): boolean {
+  if (prefixSegments.length > pathSegments.length) {
+    return false
+  }
+
+  for (let index = 0; index < prefixSegments.length; index += 1) {
+    if (pathSegments[index] !== prefixSegments[index]) {
+      return false
+    }
+  }
+
+  return true
+}
+
+function toDirectoryPath(segments: string[]): string {
+  if (!segments.length) return ''
+  return `${segments.join('/')}/`
+}
+
+function normalizeDirectoryPath(path: string): string {
+  return toDirectoryPath(splitPathSegments(path))
+}
+
 function isTextEntry(entry: ArchiveEntry, blob: Blob): boolean {
   if (blob.type.startsWith('text/')) return true
-  if (blob.type.includes('json') || blob.type.includes('xml') || blob.type.includes('yaml'))
+  if (blob.type.includes('json') || blob.type.includes('xml') || blob.type.includes('yaml')) {
     return true
+  }
+
   return TEXT_EXTENSIONS.has(entry.extension)
 }
 
 function isImageEntry(entry: ArchiveEntry, blob: Blob): boolean {
   if (blob.type.startsWith('image/')) return true
   return ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(entry.extension)
+}
+
+function isSupportedArchiveFile(file: File): boolean {
+  const name = file.name.toLowerCase()
+  return SUPPORTED_ARCHIVE_SUFFIXES.some((suffix) => name.endsWith(suffix))
 }
 
 function kindLabel(kind: ArchiveEntryKind): string {
@@ -340,6 +521,7 @@ function kindLabel(kind: ArchiveEntryKind): string {
     symlink: 'symlink',
     other: 'other',
   }
+
   return map[kind]
 }
 
