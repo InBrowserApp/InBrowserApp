@@ -3,7 +3,7 @@
     <ToolSectionHeader>{{ t('settingsTitle') }}</ToolSectionHeader>
 
     <n-flex vertical :size="16">
-      <n-form label-placement="top" :show-feedback="false">
+      <n-form label-placement="top" show-feedback>
         <n-form-item :label="t('format')">
           <n-select
             :value="format"
@@ -142,253 +142,253 @@ function handleQualityChange(value: number): void {
 {
   "en": {
     "settingsTitle": "Export Options",
-    "format": "Format",
+    "format": "Output format",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
+    "preset": "Preset",
     "quality": "Quality"
   },
   "zh": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "导出选项",
+    "format": "输出格式",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "预设",
+    "quality": "质量"
   },
   "zh-CN": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "导出选项",
+    "format": "输出格式",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "预设",
+    "quality": "质量"
   },
   "zh-TW": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "匯出選項",
+    "format": "輸出格式",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "預設",
+    "quality": "品質"
   },
   "zh-HK": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "匯出選項",
+    "format": "輸出格式",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "預設",
+    "quality": "品質"
   },
   "es": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Opciones de exportación",
+    "format": "Formato de salida",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Preajuste",
+    "quality": "Calidad"
   },
   "fr": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Options d'exportation",
+    "format": "Format de sortie",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Préréglage",
+    "quality": "Qualité"
   },
   "de": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Exportoptionen",
+    "format": "Ausgabeformat",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Voreinstellung",
+    "quality": "Qualität"
   },
   "it": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Opzioni di esportazione",
+    "format": "Formato di output",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Preimpostazione",
+    "quality": "Qualità"
   },
   "ja": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "エクスポートオプション",
+    "format": "出力形式",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "プリセット",
+    "quality": "品質"
   },
   "ko": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "내보내기 옵션",
+    "format": "출력 형식",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "프리셋",
+    "quality": "품질"
   },
   "ru": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Параметры экспорта",
+    "format": "Формат вывода",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Пресет",
+    "quality": "Качество"
   },
   "pt": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Opções de exportação",
+    "format": "Formato de saída",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Predefinição",
+    "quality": "Qualidade"
   },
   "ar": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "خيارات التصدير",
+    "format": "تنسيق الإخراج",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "إعداد مسبق",
+    "quality": "الجودة"
   },
   "hi": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "निर्यात विकल्प",
+    "format": "आउटपुट प्रारूप",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "प्रीसेट",
+    "quality": "गुणवत्ता"
   },
   "tr": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Dışa aktarma seçenekleri",
+    "format": "Çıkış formatı",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Ön ayar",
+    "quality": "Kalite"
   },
   "nl": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Exportopties",
+    "format": "Uitvoerformaat",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Voorinstelling",
+    "quality": "Kwaliteit"
   },
   "sv": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Exportalternativ",
+    "format": "Utdataformat",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Förinställning",
+    "quality": "Kvalitet"
   },
   "pl": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Opcje eksportu",
+    "format": "Format wyjściowy",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Preset",
+    "quality": "Jakość"
   },
   "vi": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Tùy chọn xuất",
+    "format": "Định dạng đầu ra",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Cài đặt sẵn",
+    "quality": "Chất lượng"
   },
   "th": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "ตัวเลือกการส่งออก",
+    "format": "รูปแบบผลลัพธ์",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "ค่าที่ตั้งไว้ล่วงหน้า",
+    "quality": "คุณภาพ"
   },
   "id": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Opsi ekspor",
+    "format": "Format output",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Preset",
+    "quality": "Kualitas"
   },
   "he": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "אפשרויות ייצוא",
+    "format": "פורמט פלט",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "הגדרה קבועה מראש",
+    "quality": "איכות"
   },
   "ms": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Pilihan eksport",
+    "format": "Format output",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Pratetap",
+    "quality": "Kualiti"
   },
   "no": {
-    "settingsTitle": "Export Options",
-    "format": "Format",
+    "settingsTitle": "Eksportalternativer",
+    "format": "Utdataformat",
     "formatPng": "PNG",
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Presets",
-    "quality": "Quality"
+    "preset": "Forhåndsinnstilling",
+    "quality": "Kvalitet"
   }
 }
 </i18n>
