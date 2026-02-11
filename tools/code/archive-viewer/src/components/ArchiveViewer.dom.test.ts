@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
-import { defineComponent, h } from 'vue'
+import { defineComponent } from 'vue'
 import ArchiveViewer from './ArchiveViewer.vue'
 import { openArchive } from '../utils/archive-open'
 import type { ArchiveEntry, ArchiveHandle } from '../types'
@@ -17,127 +17,14 @@ const BaseStub = defineComponent({
   template: '<div><slot /></div>',
 })
 
-const NInputStub = defineComponent({
-  name: 'NInput',
-  props: {
-    value: {
-      type: String,
-      default: '',
-    },
-    type: {
-      type: String,
-      default: 'text',
-    },
-  },
-  emits: ['update:value'],
-  setup(props, { emit }) {
-    return () =>
-      props.type === 'textarea'
-        ? h('textarea', {
-            value: props.value,
-            onInput: (event: Event) =>
-              emit('update:value', (event.target as HTMLTextAreaElement).value),
-          })
-        : h('input', {
-            value: props.value,
-            onInput: (event: Event) =>
-              emit('update:value', (event.target as HTMLInputElement).value),
-          })
-  },
-})
-
-const NButtonStub = defineComponent({
-  name: 'NButton',
-  inheritAttrs: false,
-  props: {
-    tag: {
-      type: String,
-      default: 'button',
-    },
-    href: {
-      type: String,
-      default: undefined,
-    },
-    download: {
-      type: String,
-      default: undefined,
-    },
-  },
-  emits: ['click'],
-  template:
-    '<component :is="tag" :href="href" :download="download" @click="$emit(\'click\')"><slot /></component>',
-})
-
-const NStatisticStub = defineComponent({
-  name: 'NStatistic',
-  props: {
-    label: {
-      type: String,
-      default: '',
-    },
-  },
-  template: '<div><span>{{ label }}</span><slot /></div>',
-})
-
-const NDataTableStub = defineComponent({
-  name: 'NDataTable',
-  props: {
-    data: {
-      type: Array,
-      required: true,
-    },
-    rowProps: {
-      type: Function,
-      required: false,
-      default: undefined,
-    },
-  },
-  methods: {
-    handleRowClick(row: unknown) {
-      if (!this.rowProps) return
-      const props = this.rowProps(row)
-      if (props && typeof props === 'object' && 'onClick' in props) {
-        const click = (props as { onClick?: () => void }).onClick
-        click?.()
-      }
-    },
-  },
-  template:
-    '<div class="data-table"><button v-for="row in data" :key="row.key" class="row" @click="handleRowClick(row)">{{ row.path }}</button></div>',
-})
-
-const NImageStub = defineComponent({
-  name: 'NImage',
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    alt: {
-      type: String,
-      default: '',
-    },
-  },
-  template: '<img :src="src" :alt="alt" />',
-})
-
 const mountViewer = () =>
   mount(ArchiveViewer, {
     global: {
       stubs: {
         ToolSection: BaseStub,
         ToolSectionHeader: BaseStub,
-        NAlert: BaseStub,
-        NButton: NButtonStub,
-        NDataTable: NDataTableStub,
-        NFlex: BaseStub,
-        NGrid: BaseStub,
-        NGridItem: BaseStub,
-        NImage: NImageStub,
-        NInput: NInputStub,
-        NSpin: BaseStub,
-        NStatistic: NStatisticStub,
-        NText: BaseStub,
+        teleport: true,
+        Teleport: true,
       },
     },
   })
@@ -156,6 +43,7 @@ const createArchiveHandle = (
         })
       : vi.fn(async () => readBlob)
   const dispose = vi.fn(async () => undefined)
+
   return {
     handle: {
       format,
@@ -183,6 +71,16 @@ async function uploadSingleFile(wrapper: ReturnType<typeof mountViewer>, file: F
   await flushPromises()
 }
 
+async function clickTableRowByText(wrapper: ReturnType<typeof mountViewer>, text: string) {
+  const row = wrapper.findAll('tbody tr').find((candidate) => candidate.text().includes(text))
+  if (!row) {
+    throw new Error(`Missing table row: ${text}`)
+  }
+
+  await row.trigger('click')
+  await flushPromises()
+}
+
 let createObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
 let revokeObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
 
@@ -196,6 +94,7 @@ beforeEach(() => {
       writable: true,
     })
   }
+
   if (!url.revokeObjectURL) {
     Object.defineProperty(URL, 'revokeObjectURL', {
       value: vi.fn(() => undefined),
@@ -215,10 +114,10 @@ afterEach(() => {
 })
 
 describe('ArchiveViewer', () => {
-  it('opens archive and renders entries summary', async () => {
+  it('opens archive and supports directory-style navigation', async () => {
     const entries: ArchiveEntry[] = [
       {
-        path: 'docs',
+        path: 'docs/',
         size: 0,
         compressedSize: null,
         kind: 'directory',
@@ -246,16 +145,23 @@ describe('ArchiveViewer', () => {
     await uploadSingleFile(wrapper, file)
 
     expect(mockedOpenArchive).toHaveBeenCalledWith(file)
-    expect(wrapper.text()).toContain('Archive summary')
-    expect(wrapper.text()).toContain('docs/readme.txt')
+    expect(wrapper.text()).toContain('Archive explorer')
 
-    const searchInput = wrapper.find('input[placeholder="Search by path"]')
-    expect(searchInput.exists()).toBe(true)
-    await searchInput.setValue('readme')
+    await clickTableRowByText(wrapper, 'docs')
+    expect(wrapper.findAll('tbody tr').some((row) => row.text().includes('readme.txt'))).toBe(true)
+
+    const upButton = wrapper.findAll('button').find((button) => button.text().includes('Up'))
+    if (!upButton) {
+      throw new Error('Missing Up button')
+    }
+
+    await upButton.trigger('click')
     await flushPromises()
+
+    expect(wrapper.findAll('tbody tr').some((row) => row.text().includes('docs'))).toBe(true)
   })
 
-  it('loads text preview and exposes download link', async () => {
+  it('opens modal preview for files and exposes download link', async () => {
     const entries: ArchiveEntry[] = [
       {
         path: 'readme.txt',
@@ -276,9 +182,10 @@ describe('ArchiveViewer', () => {
     const wrapper = mountViewer()
     await uploadSingleFile(wrapper, makeFile('single.zip'))
 
-    await flushPromises()
+    await clickTableRowByText(wrapper, 'readme.txt')
 
     expect(readEntry).toHaveBeenCalledWith('readme.txt')
+
     const preview = wrapper.find('textarea')
     expect(preview.exists()).toBe(true)
     expect((preview.element as HTMLTextAreaElement).value).toContain('hello world')
@@ -294,7 +201,7 @@ describe('ArchiveViewer', () => {
     expect(downloadLink.attributes('download')).toBe('readme.txt')
   })
 
-  it('renders image preview when selected entry is an image', async () => {
+  it('renders image preview when clicking an image file', async () => {
     const entries: ArchiveEntry[] = [
       {
         path: 'image.png',
@@ -315,7 +222,7 @@ describe('ArchiveViewer', () => {
     const wrapper = mountViewer()
     await uploadSingleFile(wrapper, makeFile('image.zip'))
 
-    await flushPromises()
+    await clickTableRowByText(wrapper, 'image.png')
 
     const image = wrapper.find('img')
     expect(image.exists()).toBe(true)
@@ -343,29 +250,7 @@ describe('ArchiveViewer', () => {
     const wrapper = mountViewer()
     await uploadSingleFile(wrapper, makeFile('binary.zip'))
 
-    await flushPromises()
-
-    expect(wrapper.text()).toContain('Preview is not available for this file type.')
-  })
-
-  it('shows fallback preview text when preview message is empty', async () => {
-    const entries: ArchiveEntry[] = [
-      {
-        path: 'note.txt',
-        size: 4,
-        compressedSize: 4,
-        kind: 'file',
-        modifiedAt: null,
-        extension: 'txt',
-      },
-    ]
-
-    const { handle } = createArchiveHandle(entries, new Error(''))
-    mockedOpenArchive.mockResolvedValue(handle)
-
-    const wrapper = mountViewer()
-    await uploadSingleFile(wrapper, makeFile('note.zip'))
-    await flushPromises()
+    await clickTableRowByText(wrapper, 'binary.bin')
 
     expect(wrapper.text()).toContain('Preview is not available for this file type.')
   })
@@ -377,6 +262,14 @@ describe('ArchiveViewer', () => {
     await uploadSingleFile(wrapper, makeFile('broken.zip'))
 
     expect(wrapper.text()).toContain('invalid archive file')
+  })
+
+  it('rejects unsupported file extensions before parsing', async () => {
+    const wrapper = mountViewer()
+    await uploadSingleFile(wrapper, makeFile('wrong.rar'))
+
+    expect(mockedOpenArchive).not.toHaveBeenCalled()
+    expect(wrapper.text()).toContain('Unsupported file format')
   })
 
   it('disposes opened archive when clearing file', async () => {

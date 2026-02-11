@@ -125,20 +125,30 @@ describe('useArchiveViewer', () => {
 
     state.search.value = 'docs'
     expect(state.rows.value).toHaveLength(1)
+    expect(state.rows.value[0]?.path).toBe('docs/')
+
+    const directoryRow = state.rows.value[0]
+    if (!directoryRow) {
+      throw new Error('Missing docs directory row')
+    }
+
+    state.tableRowProps(directoryRow).onClick()
+    await flushPromises()
+
+    state.search.value = ''
+    expect(state.rows.value).toHaveLength(1)
     expect(state.rows.value[0]?.path).toBe('docs/a.txt')
 
-    const rowProps = state.tableRowProps({
-      key: 'images/b.png',
-      path: 'images/b.png',
-      kindLabel: 'file',
-      sizeLabel: '2 B',
-      modifiedAtLabel: '-',
-    })
-    rowProps.onClick()
+    const fileRow = state.rows.value[0]
+    if (!fileRow) {
+      throw new Error('Missing docs/a.txt row')
+    }
+
+    state.tableRowProps(fileRow).onClick()
 
     await flushPromises()
-    expect(state.selectedEntry.value?.path).toBe('images/b.png')
-    expect(state.downloadName.value).toBe('b.png')
+    expect(state.selectedEntry.value?.path).toBe('docs/a.txt')
+    expect(state.downloadName.value).toBe('a.txt')
   })
 
   it('returns false when upload payload has no file', async () => {
@@ -261,7 +271,7 @@ describe('useArchiveViewer', () => {
     expect((handle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1)
   })
 
-  it('falls back preview text for non-Error reads and download filename for empty basename', async () => {
+  it('falls back preview text for non-Error reads and supports directory navigation', async () => {
     const entries: ArchiveEntry[] = [
       {
         path: 'folder/',
@@ -308,7 +318,8 @@ describe('useArchiveViewer', () => {
     state.tableRowProps(directoryRow).onClick()
     await flushPromises()
 
-    expect(state.downloadName.value).toBe('entry.bin')
+    expect(state.selectedEntry.value?.path).toBe('data.bin')
+    expect(state.rows.value).toHaveLength(0)
   })
 
   it('treats json mime as text preview', async () => {
@@ -488,5 +499,57 @@ describe('useArchiveViewer', () => {
     wrapper.unmount()
 
     expect((handle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBeGreaterThan(0)
+  })
+
+  it('closes preview modal and clears stale selection after entries update', async () => {
+    const initialEntry: ArchiveEntry = {
+      path: 'note.txt',
+      kind: 'file',
+      size: 4,
+      compressedSize: 3,
+      modifiedAt: null,
+      extension: 'txt',
+    }
+
+    mockedOpenArchive.mockResolvedValueOnce(createArchiveHandle([initialEntry], new Blob(['note'])))
+
+    const { state } = mountComposable()
+
+    const file = new File(['ok'], 'modal.zip')
+    await state.handleBeforeUpload({ file: { file } as never, fileList: [{ file } as never] })
+    await flushPromises()
+
+    const row = state.rows.value.find((item) => item.path === 'note.txt')
+    if (!row) {
+      throw new Error('Missing note.txt row')
+    }
+
+    state.tableRowProps(row).onClick()
+    await flushPromises()
+
+    expect(state.isPreviewModalVisible.value).toBe(true)
+
+    state.closePreviewModal()
+    expect(state.isPreviewModalVisible.value).toBe(false)
+
+    state.entries.value = []
+    await flushPromises()
+
+    expect(state.selectedEntry.value).toBeNull()
+
+    state.goToDirectory('missing/deep/path/')
+    state.entries.value = [
+      {
+        path: 'root.txt',
+        kind: 'file',
+        size: 1,
+        compressedSize: 1,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+    await flushPromises()
+
+    expect(state.rows.value).toHaveLength(0)
   })
 })
