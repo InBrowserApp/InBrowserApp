@@ -1,5 +1,7 @@
 import { type Component, h } from 'vue'
 import { NIcon } from 'naive-ui'
+import Archive16Regular from '@vicons/fluent/Archive16Regular'
+import Code16Regular from '@vicons/fluent/Code16Regular'
 import Document16Regular from '@vicons/fluent/Document16Regular'
 import DocumentCss20Regular from '@vicons/fluent/DocumentCss20Regular'
 import DocumentJavascript20Regular from '@vicons/fluent/DocumentJavascript20Regular'
@@ -10,8 +12,39 @@ import DocumentSettings16Regular from '@vicons/fluent/DocumentSettings16Regular'
 import DocumentTable16Regular from '@vicons/fluent/DocumentTable16Regular'
 import DocumentText20Regular from '@vicons/fluent/DocumentText20Regular'
 import Folder16Regular from '@vicons/fluent/Folder16Regular'
+import Image16Regular from '@vicons/fluent/Image16Regular'
+import MusicNote2Play20Regular from '@vicons/fluent/MusicNote2Play20Regular'
+import Video16Regular from '@vicons/fluent/Video16Regular'
 import type { ArchiveEntryKind } from '../types'
 
+const IMAGE_EXTENSIONS = new Set([
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'webp',
+  'svg',
+  'bmp',
+  'avif',
+  'ico',
+  'tif',
+  'tiff',
+])
+const VIDEO_EXTENSIONS = new Set([
+  'mp4',
+  'webm',
+  'mkv',
+  'mov',
+  'avi',
+  'flv',
+  'm4v',
+  'mpg',
+  'mpeg',
+  'ogv',
+  '3gp',
+  'ts',
+])
+const AUDIO_EXTENSIONS = new Set(['mp3', 'wav', 'flac', 'aac', 'ogg', 'm4a', 'opus', 'wma'])
 const CSS_EXTENSIONS = new Set(['css', 'scss', 'sass', 'less', 'styl', 'stylus'])
 const JAVASCRIPT_EXTENSIONS = new Set(['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx'])
 const LINK_EXTENSIONS = new Set(['url', 'webloc', 'lnk', 'desktop'])
@@ -29,6 +62,37 @@ const SETTINGS_EXTENSIONS = new Set([
   'properties',
 ])
 const TABLE_EXTENSIONS = new Set(['csv', 'tsv', 'xls', 'xlsx', 'ods'])
+const ARCHIVE_EXTENSIONS = new Set(['zip', 'tar', 'gz', 'tgz', 'bz2', 'xz', '7z', 'rar', 'zst'])
+const CODE_EXTENSIONS = new Set([
+  'c',
+  'cc',
+  'cpp',
+  'cxx',
+  'h',
+  'hpp',
+  'hh',
+  'hxx',
+  'java',
+  'kt',
+  'kts',
+  'swift',
+  'go',
+  'rs',
+  'py',
+  'rb',
+  'php',
+  'cs',
+  'scala',
+  'sh',
+  'bash',
+  'zsh',
+  'fish',
+  'ps1',
+  'bat',
+  'cmd',
+  'sql',
+  'lua',
+])
 const TEXT_EXTENSIONS = new Set([
   'txt',
   'md',
@@ -86,6 +150,18 @@ function resolveRowIcon(kind: ArchiveEntryKind, extensionRaw: string): Component
 
   const extension = extensionRaw.toLowerCase()
 
+  if (IMAGE_EXTENSIONS.has(extension)) {
+    return Image16Regular
+  }
+
+  if (VIDEO_EXTENSIONS.has(extension)) {
+    return Video16Regular
+  }
+
+  if (AUDIO_EXTENSIONS.has(extension)) {
+    return MusicNote2Play20Regular
+  }
+
   if (CSS_EXTENSIONS.has(extension)) {
     return DocumentCss20Regular
   }
@@ -112,6 +188,14 @@ function resolveRowIcon(kind: ArchiveEntryKind, extensionRaw: string): Component
 
   if (RIBBON_EXTENSIONS.has(extension)) {
     return DocumentRibbon16Regular
+  }
+
+  if (ARCHIVE_EXTENSIONS.has(extension)) {
+    return Archive16Regular
+  }
+
+  if (CODE_EXTENSIONS.has(extension)) {
+    return Code16Regular
   }
 
   if (TEXT_EXTENSIONS.has(extension)) {

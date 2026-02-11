@@ -11,6 +11,7 @@
         >
           <n-upload-dragger>
             <n-flex vertical align="center" :size="8" style="padding: 12px 8px">
+              <n-icon :component="FolderZip16Regular" size="40" :depth="3" />
               <n-text strong>{{ labels.uploadHint }}</n-text>
               <n-text depth="3">{{ labels.supportedFormats }}</n-text>
             </n-flex>
@@ -187,6 +188,7 @@ import {
   NUploadDragger,
 } from 'naive-ui'
 import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
+import FolderZip16Regular from '@vicons/fluent/FolderZip16Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useArchiveViewer } from './use-archive-viewer'
 
