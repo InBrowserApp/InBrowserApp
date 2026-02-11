@@ -106,6 +106,13 @@ hljs.registerLanguage('sql', sql)
 const { t } = useI18n({ useScope: 'local' })
 </script>
 
+<style scoped>
+:deep(.n-form-item-label__text) {
+  display: block;
+  width: 100%;
+}
+</style>
+
 <i18n lang="json">
 {
   "en": {
