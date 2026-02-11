@@ -113,178 +113,178 @@ const detailsText = computed(() => {
 {
   "en": {
     "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
+    "renderErrorTitle": "Render Error",
+    "emptyPreview": "Upload a PDF and pick export settings to preview pages.",
     "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "details": "Details: {width} × {height} · {dpi} DPI · {size}"
   },
   "zh": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "预览",
+    "renderErrorTitle": "渲染错误",
+    "emptyPreview": "上传 PDF 并选择导出设置后即可预览页面。",
+    "pageInfo": "第 {page} / {total} 页",
+    "details": "详情: {width} × {height} · {dpi} DPI · {size}"
   },
   "zh-CN": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "预览",
+    "renderErrorTitle": "渲染错误",
+    "emptyPreview": "上传 PDF 并选择导出设置后即可预览页面。",
+    "pageInfo": "第 {page} / {total} 页",
+    "details": "详情: {width} × {height} · {dpi} DPI · {size}"
   },
   "zh-TW": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "預覽",
+    "renderErrorTitle": "渲染錯誤",
+    "emptyPreview": "上傳 PDF 並選擇匯出設定後即可預覽頁面。",
+    "pageInfo": "第 {page} / {total} 頁",
+    "details": "詳情: {width} × {height} · {dpi} DPI · {size}"
   },
   "zh-HK": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "預覽",
+    "renderErrorTitle": "渲染錯誤",
+    "emptyPreview": "上傳 PDF 並選擇匯出設定後即可預覽頁面。",
+    "pageInfo": "第 {page} / {total} 頁",
+    "details": "詳情: {width} × {height} · {dpi} DPI · {size}"
   },
   "es": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Vista previa",
+    "renderErrorTitle": "Error de renderizado",
+    "emptyPreview": "Sube un PDF y elige la configuración de exportación para previsualizar páginas.",
+    "pageInfo": "Página {page} / {total}",
+    "details": "Detalles: {width} × {height} · {dpi} DPI · {size}"
   },
   "fr": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Aperçu",
+    "renderErrorTitle": "Erreur de rendu",
+    "emptyPreview": "Importez un PDF et choisissez les options d'export pour prévisualiser les pages.",
+    "pageInfo": "Page {page} sur {total}",
+    "details": "Détails: {width} × {height} · {dpi} DPI · {size}"
   },
   "de": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Vorschau",
+    "renderErrorTitle": "Rendering-Fehler",
+    "emptyPreview": "Laden Sie eine PDF hoch und wählen Sie Exporteinstellungen, um Seiten vorzuschauen.",
+    "pageInfo": "Seite {page} / {total}",
+    "details": "Einzelheiten: {width} × {height} · {dpi} DPI · {size}"
   },
   "it": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Anteprima",
+    "renderErrorTitle": "Errore di rendering",
+    "emptyPreview": "Carica un PDF e scegli le impostazioni di esportazione per vedere l'anteprima delle pagine.",
+    "pageInfo": "Pagina {page} / {total}",
+    "details": "Dettagli: {width} × {height} · {dpi} DPI · {size}"
   },
   "ja": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "プレビュー",
+    "renderErrorTitle": "レンダリングエラー",
+    "emptyPreview": "PDF をアップロードし、エクスポート設定を選ぶとページをプレビューできます。",
+    "pageInfo": "ページ {page} / {total}",
+    "details": "詳細: {width} × {height} · {dpi} DPI · {size}"
   },
   "ko": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "미리보기",
+    "renderErrorTitle": "렌더링 오류",
+    "emptyPreview": "PDF를 업로드하고 내보내기 설정을 선택하면 페이지를 미리 볼 수 있습니다.",
+    "pageInfo": "페이지 {page} / {total}",
+    "details": "세부 정보: {width} × {height} · {dpi} DPI · {size}"
   },
   "ru": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Предпросмотр",
+    "renderErrorTitle": "Ошибка рендеринга",
+    "emptyPreview": "Загрузите PDF и выберите параметры экспорта, чтобы просмотреть страницы.",
+    "pageInfo": "Страница {page} / {total}",
+    "details": "Детали: {width} × {height} · {dpi} DPI · {size}"
   },
   "pt": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Pré-visualização",
+    "renderErrorTitle": "Erro de renderização",
+    "emptyPreview": "Envie um PDF e escolha as opções de exportação para visualizar as páginas.",
+    "pageInfo": "Página {page} / {total}",
+    "details": "Detalhes: {width} × {height} · {dpi} DPI · {size}"
   },
   "ar": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "المعاينة",
+    "renderErrorTitle": "خطأ في العرض",
+    "emptyPreview": "ارفع ملف PDF واختر إعدادات التصدير لمعاينة الصفحات.",
+    "pageInfo": "الصفحة {page} / {total}",
+    "details": "التفاصيل: {width} × {height} · {dpi} DPI · {size}"
   },
   "hi": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "पूर्वावलोकन",
+    "renderErrorTitle": "रेंडर त्रुटि",
+    "emptyPreview": "PDF अपलोड करें और पेज प्रीव्यू के लिए एक्सपोर्ट सेटिंग चुनें।",
+    "pageInfo": "पेज {page} / {total}",
+    "details": "विवरण: {width} × {height} · {dpi} DPI · {size}"
   },
   "tr": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Önizleme",
+    "renderErrorTitle": "İşleme hatası",
+    "emptyPreview": "Sayfaları önizlemek için bir PDF yükleyin ve dışa aktarma ayarlarını seçin.",
+    "pageInfo": "Sayfa {page} / {total}",
+    "details": "Detaylar: {width} × {height} · {dpi} DPI · {size}"
   },
   "nl": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Voorbeeld",
+    "renderErrorTitle": "Renderfout",
+    "emptyPreview": "Upload een PDF en kies exportinstellingen om pagina's te bekijken.",
+    "pageInfo": "Pagina {page} / {total}",
+    "details": "Nadere info: {width} × {height} · {dpi} DPI · {size}"
   },
   "sv": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Förhandsvisning",
+    "renderErrorTitle": "Renderingsfel",
+    "emptyPreview": "Ladda upp en PDF och välj exportinställningar för att förhandsgranska sidor.",
+    "pageInfo": "Sida {page} / {total}",
+    "details": "Detaljer: {width} × {height} · {dpi} DPI · {size}"
   },
   "pl": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Podgląd",
+    "renderErrorTitle": "Błąd renderowania",
+    "emptyPreview": "Prześlij PDF i wybierz ustawienia eksportu, aby podejrzeć strony.",
+    "pageInfo": "Strona {page} / {total}",
+    "details": "Szczegóły: {width} × {height} · {dpi} DPI · {size}"
   },
   "vi": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Xem trước",
+    "renderErrorTitle": "Lỗi kết xuất",
+    "emptyPreview": "Tải lên PDF và chọn thiết lập xuất để xem trước các trang.",
+    "pageInfo": "Trang {page} / {total}",
+    "details": "Chi tiết: {width} × {height} · {dpi} DPI · {size}"
   },
   "th": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "ตัวอย่าง",
+    "renderErrorTitle": "ข้อผิดพลาดการเรนเดอร์",
+    "emptyPreview": "อัปโหลด PDF และเลือกการตั้งค่าส่งออกเพื่อดูตัวอย่างหน้า",
+    "pageInfo": "หน้า {page} / {total}",
+    "details": "รายละเอียด: {width} × {height} · {dpi} DPI · {size}"
   },
   "id": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Pratinjau",
+    "renderErrorTitle": "Kesalahan render",
+    "emptyPreview": "Unggah PDF dan pilih pengaturan ekspor untuk melihat pratinjau halaman.",
+    "pageInfo": "Halaman {page} / {total}",
+    "details": "Detail: {width} × {height} · {dpi} DPI · {size}"
   },
   "he": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "תצוגה מקדימה",
+    "renderErrorTitle": "שגיאת רינדור",
+    "emptyPreview": "העלה PDF ובחר הגדרות ייצוא כדי להציג תצוגה מקדימה של העמודים.",
+    "pageInfo": "עמוד {page} / {total}",
+    "details": "פרטים: {width} × {height} · {dpi} DPI · {size}"
   },
   "ms": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Pratonton",
+    "renderErrorTitle": "Ralat render",
+    "emptyPreview": "Muat naik PDF dan pilih tetapan eksport untuk pratonton halaman.",
+    "pageInfo": "Halaman {page} / {total}",
+    "details": "Butiran: {width} × {height} · {dpi} DPI · {size}"
   },
   "no": {
-    "previewTitle": "Preview",
-    "renderErrorTitle": "Render Failed",
-    "emptyPreview": "No preview available.",
-    "pageInfo": "Page {page} / {total}",
-    "details": "{width} × {height} px · {dpi} DPI · {size}"
+    "previewTitle": "Forhåndsvisning",
+    "renderErrorTitle": "Renderingsfeil",
+    "emptyPreview": "Last opp en PDF og velg eksportinnstillinger for å forhåndsvise sider.",
+    "pageInfo": "Side {page} / {total}",
+    "details": "Detaljer: {width} × {height} · {dpi} DPI · {size}"
   }
 }
 </i18n>

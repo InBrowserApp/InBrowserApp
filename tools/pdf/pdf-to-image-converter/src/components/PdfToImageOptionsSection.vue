@@ -327,7 +327,7 @@ function handleQualityChange(value: number): void {
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Preset",
+    "preset": "Ustawienie wstępne",
     "quality": "Jakość"
   },
   "vi": {
@@ -357,7 +357,7 @@ function handleQualityChange(value: number): void {
     "formatJpeg": "JPG",
     "formatWebp": "WebP",
     "dpi": "DPI",
-    "preset": "Preset",
+    "preset": "Praset",
     "quality": "Kualitas"
   },
   "he": {
