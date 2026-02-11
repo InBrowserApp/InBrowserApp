@@ -134,6 +134,12 @@ watch(
   },
   { immediate: true },
 )
+
+watch(password, (nextPassword, previousPassword) => {
+  if (!nextPassword || nextPassword === previousPassword) return
+  if (salt.value instanceof File) return
+  setGeneratedSalt(saltFormat.value)
+})
 const costFactorInput = useStorage<number | null>(
   'tools:scrypt-key-derivation:cost-factor',
   defaultCostFactor,

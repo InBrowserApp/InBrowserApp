@@ -131,6 +131,13 @@ describe('ScryptKeyDerivationView', () => {
     await nextTick()
 
     expect(getSaltValue()).toBe('manual-salt')
+
+    form.vm.$emit('update:password', 'new-password')
+    await nextTick()
+
+    const regeneratedBase64Salt = getSaltValue()
+    expect(regeneratedBase64Salt).not.toBe('manual-salt')
+    expect(regeneratedBase64Salt).toMatch(/^[A-Za-z0-9+/]+={0,2}$/)
   })
 
   it('updates validation and salt error states', async () => {
