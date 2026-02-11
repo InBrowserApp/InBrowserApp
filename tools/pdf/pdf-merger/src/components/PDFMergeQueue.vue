@@ -5,80 +5,81 @@
       <n-empty v-if="items.length === 0" size="small" :description="t('emptyState')" />
 
       <template v-else>
-        <div class="queue-list">
-          <div
-            v-for="(item, index) in items"
-            :key="item.id"
-            class="queue-item"
-            :class="{ 'queue-item--dragging': dragIndex === index }"
-            draggable="true"
-            @dragstart="emit('drag-start', index)"
-            @dragover.prevent
-            @drop.prevent="emit('drop', index)"
-            @dragend="emit('drag-end')"
-          >
-            <div class="queue-item__left">
-              <n-icon :depth="3">
-                <ReOrderDotsHorizontal24Regular />
-              </n-icon>
-              <n-flex vertical :size="2">
-                <n-text strong>{{ index + 1 }}. {{ item.name }}</n-text>
-                <n-text :depth="3" :class="{ 'queue-item__error': item.errorCode }">
-                  {{ item.sizeLabel }}{{ listSeparator }}{{ itemStatus(item) }}
-                </n-text>
+        <Sortable
+          class="queue-list"
+          :list="items"
+          item-key="id"
+          tag="div"
+          :options="sortableOptions"
+          @end="handleSortEnd"
+        >
+          <template #item="{ element, index }">
+            <div :key="element.id" class="queue-item">
+              <div class="queue-item__left">
+                <div class="queue-item__handle">
+                  <n-icon :depth="3">
+                    <ReOrderDotsHorizontal24Regular />
+                  </n-icon>
+                </div>
+                <n-flex vertical :size="2">
+                  <n-text strong>{{ index + 1 }}. {{ element.name }}</n-text>
+                  <n-text :depth="3" :class="{ 'queue-item__error': element.errorCode }">
+                    {{ element.sizeLabel }}{{ listSeparator }}{{ itemStatus(element) }}
+                  </n-text>
+                </n-flex>
+              </div>
+
+              <n-flex :size="4">
+                <n-button
+                  quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('moveUp')"
+                  :disabled="index === 0"
+                  @click="emit('move-up', index)"
+                >
+                  <template #icon>
+                    <n-icon :component="ArrowUp16Regular" />
+                  </template>
+                </n-button>
+                <n-button
+                  quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('moveDown')"
+                  :disabled="index === items.length - 1"
+                  @click="emit('move-down', index)"
+                >
+                  <template #icon>
+                    <n-icon :component="ArrowDown16Regular" />
+                  </template>
+                </n-button>
+                <n-button
+                  quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('preview')"
+                  @click="emit('preview', index)"
+                >
+                  <template #icon>
+                    <n-icon :component="Eye16Regular" />
+                  </template>
+                </n-button>
+                <n-button
+                  quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('remove')"
+                  @click="emit('remove', index)"
+                >
+                  <template #icon>
+                    <n-icon :component="Delete16Regular" />
+                  </template>
+                </n-button>
               </n-flex>
             </div>
-
-            <n-flex :size="4">
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('moveUp')"
-                :disabled="index === 0"
-                @click="emit('move-up', index)"
-              >
-                <template #icon>
-                  <n-icon :component="ArrowUp16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('moveDown')"
-                :disabled="index === items.length - 1"
-                @click="emit('move-down', index)"
-              >
-                <template #icon>
-                  <n-icon :component="ArrowDown16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('preview')"
-                @click="emit('preview', index)"
-              >
-                <template #icon>
-                  <n-icon :component="Eye16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('remove')"
-                @click="emit('remove', index)"
-              >
-                <template #icon>
-                  <n-icon :component="Delete16Regular" />
-                </template>
-              </n-button>
-            </n-flex>
-          </div>
-        </div>
+          </template>
+        </Sortable>
       </template>
     </n-flex>
   </ToolSection>
@@ -87,6 +88,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { NButton, NEmpty, NFlex, NIcon, NText } from 'naive-ui'
+import { Sortable } from 'sortablejs-vue3'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ReOrderDotsHorizontal24Regular from '@vicons/fluent/ReOrderDotsHorizontal24Regular'
 import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
@@ -106,13 +108,10 @@ export type PdfQueueItem = {
 
 defineProps<{
   items: PdfQueueItem[]
-  dragIndex: number | null
 }>()
 
 const emit = defineEmits<{
-  (event: 'drag-start', index: number): void
-  (event: 'drag-end'): void
-  (event: 'drop', index: number): void
+  (event: 'reorder', payload: { oldIndex: number | null; newIndex: number | null }): void
   (event: 'move-up', index: number): void
   (event: 'move-down', index: number): void
   (event: 'preview', index: number): void
@@ -121,6 +120,21 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const listSeparator = ' · '
+
+const sortableOptions = {
+  animation: 180,
+  handle: '.queue-item__handle',
+  ghostClass: 'queue-item--ghost',
+  chosenClass: 'queue-item--chosen',
+  dragClass: 'queue-item--dragging',
+}
+
+const handleSortEnd = (event: { oldIndex?: number; newIndex?: number }): void => {
+  emit('reorder', {
+    oldIndex: event.oldIndex ?? null,
+    newIndex: event.newIndex ?? null,
+  })
+}
 
 const itemStatus = (item: PdfQueueItem): string => {
   if (item.isLoading) {
@@ -161,8 +175,16 @@ const itemStatus = (item: PdfQueueItem): string => {
   background: var(--n-card-color);
 }
 
+.queue-item--ghost {
+  opacity: 0.35;
+}
+
+.queue-item--chosen {
+  border-color: var(--n-primary-color);
+}
+
 .queue-item--dragging {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .queue-item__left {
@@ -170,6 +192,17 @@ const itemStatus = (item: PdfQueueItem): string => {
   align-items: center;
   gap: 8px;
   min-width: 0;
+}
+
+.queue-item__handle {
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  touch-action: none;
+}
+
+.queue-item__handle:active {
+  cursor: grabbing;
 }
 
 .queue-item__error {

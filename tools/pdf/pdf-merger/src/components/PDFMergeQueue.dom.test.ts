@@ -19,6 +19,42 @@ vi.mock('vue-i18n', async () => {
   }
 })
 
+vi.mock('sortablejs-vue3', async () => {
+  const { defineComponent, h } = await import('vue')
+
+  const Sortable = defineComponent({
+    name: 'SortableMock',
+    inheritAttrs: false,
+    props: {
+      list: {
+        type: Array,
+        required: true,
+      },
+      itemKey: {
+        type: [String, Function],
+        required: true,
+      },
+      tag: {
+        type: String,
+        default: 'div',
+      },
+    },
+    emits: ['end'],
+    setup(props, { slots, attrs }) {
+      return () =>
+        h(
+          props.tag,
+          attrs,
+          (props.list as Array<unknown>).map((element, index) => slots.item?.({ element, index })),
+        )
+    },
+  })
+
+  return {
+    Sortable,
+  }
+})
+
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -104,7 +140,6 @@ describe('PDFMergeQueue', () => {
     const wrapper = mount(PDFMergeQueue, {
       props: {
         items,
-        dragIndex: null,
       },
       global: {
         stubs: {
@@ -121,7 +156,7 @@ describe('PDFMergeQueue', () => {
     expect(text).toContain('4 pages')
   })
 
-  it('emits move/preview/remove and drag events', async () => {
+  it('emits reorder, move, preview and remove events', async () => {
     const wrapper = mount(PDFMergeQueue, {
       props: {
         items: [
@@ -142,7 +177,6 @@ describe('PDFMergeQueue', () => {
             errorCode: null,
           },
         ],
-        dragIndex: 0,
       },
       global: {
         stubs: {
@@ -152,19 +186,15 @@ describe('PDFMergeQueue', () => {
       },
     })
 
-    const queueItem = wrapper.find('.queue-item')
-    await queueItem.trigger('dragstart')
-    await queueItem.trigger('drop')
-    await queueItem.trigger('dragend')
+    const sortable = wrapper.findComponent({ name: 'SortableMock' })
+    sortable.vm.$emit('end', { oldIndex: 0, newIndex: 1 })
 
     const buttons = wrapper.findAll('button')
     await buttons[1]?.trigger('click')
     await buttons[2]?.trigger('click')
     await buttons[3]?.trigger('click')
 
-    expect(wrapper.emitted('drag-start')?.[0]).toEqual([0])
-    expect(wrapper.emitted('drop')?.[0]).toEqual([0])
-    expect(wrapper.emitted('drag-end')).toHaveLength(1)
+    expect(wrapper.emitted('reorder')?.[0]).toEqual([{ oldIndex: 0, newIndex: 1 }])
     expect(wrapper.emitted('move-down')?.[0]).toEqual([0])
     expect(wrapper.emitted('preview')?.[0]).toEqual([0])
     expect(wrapper.emitted('remove')?.[0]).toEqual([0])
@@ -176,7 +206,6 @@ describe('PDFMergeQueue empty', () => {
     const wrapper = mount(PDFMergeQueue, {
       props: {
         items: [],
-        dragIndex: null,
       },
       global: {
         stubs: {

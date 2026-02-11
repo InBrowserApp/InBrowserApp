@@ -16,6 +16,11 @@ type MergeItem = {
   previewUrl: string
 }
 
+type ReorderPayload = {
+  oldIndex: number | null
+  newIndex: number | null
+}
+
 const createQueueID = (): string => {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID()
@@ -43,7 +48,6 @@ const releasePreviewUrl = (item: MergeItem): void => {
 
 export const usePdfMerger = () => {
   const items = ref<MergeItem[]>([])
-  const dragIndex = ref<number | null>(null)
   const previewItemId = ref<string | null>(null)
   const outputName = ref('merged.pdf')
   const isMerging = ref(false)
@@ -163,21 +167,12 @@ export const usePdfMerger = () => {
       })
   }
 
-  const handleDragStart = (index: number): void => {
-    dragIndex.value = index
-  }
-
-  const handleDragEnd = (): void => {
-    dragIndex.value = null
-  }
-
-  const handleDrop = (targetIndex: number): void => {
-    if (dragIndex.value === null) {
+  const handleReorder = ({ oldIndex, newIndex }: ReorderPayload): void => {
+    if (oldIndex === null || newIndex === null) {
       return
     }
 
-    reorder(dragIndex.value, targetIndex)
-    dragIndex.value = null
+    reorder(oldIndex, newIndex)
   }
 
   const handleMoveUp = (index: number): void => {
@@ -223,7 +218,6 @@ export const usePdfMerger = () => {
 
     items.value = []
     previewItemId.value = null
-    dragIndex.value = null
     mergedBlob.value = null
     mergeErrorCode.value = ''
   }
@@ -260,7 +254,6 @@ export const usePdfMerger = () => {
 
   return {
     items,
-    dragIndex,
     previewItemId,
     outputName,
     isMerging,
@@ -273,9 +266,7 @@ export const usePdfMerger = () => {
     currentPreviewItem,
     queueItems,
     handleAddFile,
-    handleDragStart,
-    handleDragEnd,
-    handleDrop,
+    handleReorder,
     handleMoveUp,
     handleMoveDown,
     handlePreview,

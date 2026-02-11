@@ -11,6 +11,9 @@
 
       <n-flex justify="space-between" align="center" :wrap="false">
         <n-button tertiary :disabled="itemsCount === 0 || isMerging" @click="emit('clear')">
+          <template #icon>
+            <n-icon :component="Delete16Regular" />
+          </template>
           {{ t('clearAll') }}
         </n-button>
         <n-button type="primary" :loading="isMerging" :disabled="!canMerge" @click="emit('merge')">
@@ -43,6 +46,7 @@ import { NAlert, NButton, NFlex, NIcon, NInput, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
 
 defineProps<{
   itemsCount: number

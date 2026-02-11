@@ -103,15 +103,13 @@ describe('PDFMergerTool', () => {
         setupState: {
           handleAddFile: (file: File) => void
           handleMoveDown: (index: number) => void
-          handleDragStart: (index: number) => void
-          handleDrop: (index: number) => void
+          handleReorder: (payload: { oldIndex: number | null; newIndex: number | null }) => void
           handlePreview: (index: number) => void
           handlePreviewVisible: (visible: boolean) => void
           handleRemove: (index: number) => void
           items: Array<{ file: File; pageCount: number }>
           totalPages: number
           currentPreviewItem: { id: string } | null
-          dragIndex: number | null
         }
       }
     ).setupState
@@ -129,10 +127,8 @@ describe('PDFMergerTool', () => {
     setupState.handleMoveDown(0)
     expect(setupState.items[0]?.file.name).toBe('b.pdf')
 
-    setupState.handleDragStart(0)
-    expect(setupState.dragIndex).toBe(0)
-    setupState.handleDrop(1)
-    expect(setupState.dragIndex).toBeNull()
+    setupState.handleReorder({ oldIndex: 0, newIndex: 1 })
+    expect(setupState.items[0]?.file.name).toBe('a.pdf')
 
     setupState.handlePreview(0)
     expect(setupState.currentPreviewItem).toBeTruthy()

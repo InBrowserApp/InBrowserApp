@@ -3,10 +3,7 @@
 
   <PDFMergeQueue
     :items="queueItems"
-    :drag-index="dragIndex"
-    @drag-start="handleDragStart"
-    @drag-end="handleDragEnd"
-    @drop="handleDrop"
+    @reorder="handleReorder"
     @move-up="handleMoveUp"
     @move-down="handleMoveDown"
     @preview="handlePreview"
@@ -60,7 +57,6 @@ const message = useMessage()
 const {
   items,
   queueItems,
-  dragIndex,
   outputName,
   totalPages,
   canMerge,
@@ -70,9 +66,7 @@ const {
   downloadFilename,
   currentPreviewItem,
   handleAddFile,
-  handleDragStart,
-  handleDragEnd,
-  handleDrop,
+  handleReorder,
   handleMoveUp,
   handleMoveDown,
   handlePreview,

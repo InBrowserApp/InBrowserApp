@@ -134,6 +134,8 @@ catalog:
   sitemap: ^9.0.0
   sm-crypto: ^0.4.0
   smol-toml: ^1.6.0
+  sortablejs: ^1.15.6
+  sortablejs-vue3: ^1.3.0
   svgo: ^4.0.0
   transliteration: ^2.6.0
   tsyringe: ^4.10.0
