@@ -108,6 +108,31 @@ describe('ScryptKeyDerivationView', () => {
     expect(wrapper.find('.what-is').exists()).toBe(true)
   })
 
+  it('auto-generates salt and regenerates while still auto-managed', async () => {
+    const wrapper = mount(ScryptKeyDerivationView)
+    const form = wrapper.findComponent({ name: 'ScryptForm' })
+
+    const getSaltValue = () => (wrapper.find('.salt-input').element as HTMLTextAreaElement).value
+
+    const initialSalt = getSaltValue()
+    expect(initialSalt).not.toBe('')
+
+    form.vm.$emit('update:saltFormat', 'hex')
+    await nextTick()
+
+    const regeneratedHexSalt = getSaltValue()
+    expect(regeneratedHexSalt).toMatch(/^[a-f0-9]+$/)
+    expect(regeneratedHexSalt).not.toBe(initialSalt)
+
+    form.vm.$emit('update:salt', 'manual-salt')
+    await nextTick()
+
+    form.vm.$emit('update:saltFormat', 'base64')
+    await nextTick()
+
+    expect(getSaltValue()).toBe('manual-salt')
+  })
+
   it('updates validation and salt error states', async () => {
     const wrapper = mount(ScryptKeyDerivationView)
     const form = wrapper.findComponent({ name: 'ScryptForm' })

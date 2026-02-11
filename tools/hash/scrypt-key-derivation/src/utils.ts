@@ -4,6 +4,12 @@ import type { SaltFormat } from './types'
 
 const textEncoder = new TextEncoder()
 
+function randomBytes(length: number): Uint8Array {
+  const bytes = new Uint8Array(length)
+  crypto.getRandomValues(bytes)
+  return bytes
+}
+
 function isPowerOfTwo(value: number): boolean {
   return Number.isInteger(value) && value > 1 && (value & (value - 1)) === 0
 }
@@ -82,6 +88,21 @@ export function bytesToBase64(bytes: Uint8Array): string {
     binary += String.fromCharCode(bytes[i]!)
   }
   return btoa(binary)
+}
+
+export function generateRandomSalt(format: SaltFormat, lengthBytes = 16): string {
+  const bytes = randomBytes(lengthBytes)
+
+  switch (format) {
+    case 'hex':
+      return bytesToHex(bytes)
+    case 'base64':
+      return bytesToBase64(bytes)
+    default:
+      return typeof crypto.randomUUID === 'function'
+        ? crypto.randomUUID()
+        : bytesToBase64(bytes).replace(/=+$/, '')
+  }
 }
 
 export async function deriveScrypt(params: {

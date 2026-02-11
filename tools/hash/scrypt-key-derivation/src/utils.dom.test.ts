@@ -4,6 +4,7 @@ import {
   bytesToHex,
   decodeBase64,
   deriveScrypt,
+  generateRandomSalt,
   isValidBase64,
   normalizeBase64Input,
   saltToBytes,
@@ -55,6 +56,17 @@ describe('scrypt utils', () => {
     expect(bytesToHex(new Uint8Array([0, 15, 255]))).toBe('000fff')
     expect(bytesToBase64(new Uint8Array())).toBe('')
     expect(bytesToBase64(new Uint8Array([1, 2, 3]))).toBe('AQID')
+  })
+
+  it('generates random salt in selected formats', () => {
+    const hexSalt = generateRandomSalt('hex')
+    expect(hexSalt).toMatch(/^[a-f0-9]{32}$/)
+
+    const base64Salt = generateRandomSalt('base64')
+    expect(isValidBase64(base64Salt)).toBe(true)
+
+    const utf8Salt = generateRandomSalt('utf-8')
+    expect(utf8Salt.length).toBeGreaterThan(0)
   })
 
   it('derives a scrypt key', async () => {
