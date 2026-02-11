@@ -6,7 +6,6 @@
           :is-loading-document="isLoadingDocument"
           :uploaded-file-name="uploadedFileName"
           :uploaded-file-size="uploadedFileSize"
-          :uploaded-file-type="uploadedFileType"
           :num-pages="numPages"
           @upload-file="handleUpload"
         />
@@ -68,7 +67,6 @@ const {
   errorMessage,
   uploadedFileName,
   uploadedFileSize,
-  uploadedFileType,
   currentImageURL,
   currentDownloadName,
   zipDownloadURL,

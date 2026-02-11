@@ -67,7 +67,6 @@ export function usePdfToImageConverter(options: UsePdfToImageConverterOptions = 
 
   const uploadedFileName = computed(() => pdfFile.value?.name ?? '')
   const uploadedFileSize = computed(() => pdfFile.value?.size ?? 0)
-  const uploadedFileType = computed(() => pdfFile.value?.type ?? '')
 
   const currentDownloadName = computed(() => {
     if (!pdfFile.value) return 'page.png'
@@ -239,7 +238,6 @@ export function usePdfToImageConverter(options: UsePdfToImageConverterOptions = 
     errorMessage,
     uploadedFileName,
     uploadedFileSize,
-    uploadedFileType,
     currentImageURL,
     currentDownloadName,
     zipDownloadURL,

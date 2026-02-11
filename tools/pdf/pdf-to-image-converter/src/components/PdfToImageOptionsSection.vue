@@ -3,7 +3,7 @@
     <ToolSectionHeader>{{ t('settingsTitle') }}</ToolSectionHeader>
 
     <n-flex vertical :size="16">
-      <n-form label-placement="left" :show-feedback="false">
+      <n-form label-placement="top" :show-feedback="false">
         <n-form-item :label="t('format')">
           <n-select
             :value="format"
