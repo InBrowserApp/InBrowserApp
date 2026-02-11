@@ -122,7 +122,7 @@ watch(
   { flush: 'sync' },
 )
 
-const saltFormat = useStorage<SaltFormat>('tools:scrypt-key-derivation:salt-format', 'utf-8')
+const saltFormat = useStorage<SaltFormat>('tools:scrypt-key-derivation:salt-format', 'base64')
 
 watch(
   saltFormat,
