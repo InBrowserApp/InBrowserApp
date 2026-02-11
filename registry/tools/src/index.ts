@@ -76,6 +76,7 @@ import { toolInfo as blake2sHashTextOrFileToolInfo } from '@tools/blake2s-hash-t
 import { toolInfo as blake3HashTextOrFileToolInfo } from '@tools/blake3-hash-text-or-file'
 import { toolInfo as hmacGeneratorToolInfo } from '@tools/hmac-generator'
 import { toolInfo as pbkdf2KeyDerivationToolInfo } from '@tools/pbkdf2-key-derivation'
+import { toolInfo as scryptKeyDerivationToolInfo } from '@tools/scrypt-key-derivation'
 import { toolInfo as urlComponentEncoderDecoderToolInfo } from '@tools/url-component-encoder-decoder'
 import { toolInfo as base16EncoderToolInfo } from '@tools/base16-encoder'
 import { toolInfo as base16DecoderToolInfo } from '@tools/base16-decoder'
@@ -290,6 +291,7 @@ export const tools: ToolInfo[] = [
   bcryptHashPasswordToolInfo,
   bcryptHashPasswordVerifierToolInfo,
   pbkdf2KeyDerivationToolInfo,
+  scryptKeyDerivationToolInfo,
   hashToolsToolInfo,
   sriHashGeneratorToolInfo,
   crcChecksumCalculatorToolInfo,

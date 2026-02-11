@@ -154,6 +154,7 @@
     "@tools/roman-numeral-converter": "workspace:*",
     "@tools/rot-cipher": "workspace:*",
     "@tools/screen-recorder": "workspace:*",
+    "@tools/scrypt-key-derivation": "workspace:*",
     "@tools/sha1-hash-text-or-file": "workspace:*",
     "@tools/sha224-hash-text-or-file": "workspace:*",
     "@tools/sha256-hash-text-or-file": "workspace:*",
