@@ -174,6 +174,20 @@ describe('Argon2HashPasswordView', () => {
     expect(form.props('iterationsValid')).toBe(false)
   })
 
+  it('regenerates salt when password is updated', async () => {
+    const wrapper = mount(Argon2HashPasswordView)
+    const form = wrapper.findComponent({ name: 'Argon2Form' })
+
+    generateRandomSaltBytesMock.mockClear()
+    bytesToBase64Mock.mockClear()
+
+    form.vm.$emit('update:password', 'new-password')
+    await nextTick()
+
+    expect(generateRandomSaltBytesMock).toHaveBeenCalledOnce()
+    expect(bytesToBase64Mock).toHaveBeenCalledOnce()
+  })
+
   it('generates random salt when form emits action', async () => {
     const wrapper = mount(Argon2HashPasswordView)
     const form = wrapper.findComponent({ name: 'Argon2Form' })

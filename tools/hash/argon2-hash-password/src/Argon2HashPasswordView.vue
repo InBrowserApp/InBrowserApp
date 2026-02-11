@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import * as toolInfo from './info'
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useStorage } from '@vueuse/core'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import type { Argon2Algorithm } from './types'
@@ -145,4 +145,10 @@ const configValid = computed(() => {
 function generateRandomSalt() {
   salt.value = bytesToBase64(generateRandomSaltBytes())
 }
+
+watch(password, (nextPassword, previousPassword) => {
+  if (nextPassword && nextPassword !== previousPassword) {
+    generateRandomSalt()
+  }
+})
 </script>
