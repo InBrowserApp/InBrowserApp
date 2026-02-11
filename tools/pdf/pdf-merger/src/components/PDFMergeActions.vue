@@ -255,7 +255,7 @@ const { t } = useI18n()
     "summary": "{files} bestanden · {pages} pagina's",
     "outputName": "Uitvoerbestandsnaam",
     "outputPlaceholder": "merged.pdf",
-    "clearAll": "Alles wissen",
+    "clearAll": "Alles verwijderen",
     "merge": "PDF's samenvoegen",
     "merging": "Bezig met samenvoegen...",
     "mergedReady": "Samengevoegd bestand is klaar",
