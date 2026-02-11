@@ -1,6 +1,6 @@
 <template>
   <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-    <n-form-item-gi :show-feedback="false">
+    <n-form-item-gi :show-feedback="false" label-style="width: 100%">
       <template #label>
         <n-flex align="center" justify="space-between" :wrap="false" style="width: 100%">
           <span>{{ t('source-sql') }}</span>
@@ -34,7 +34,7 @@
       />
     </n-form-item-gi>
 
-    <n-form-item-gi :show-feedback="false">
+    <n-form-item-gi :show-feedback="false" label-style="width: 100%">
       <template #label>
         <n-flex align="center" justify="space-between" :wrap="false" style="width: 100%">
           <span>{{ t('formatted-sql') }}</span>
