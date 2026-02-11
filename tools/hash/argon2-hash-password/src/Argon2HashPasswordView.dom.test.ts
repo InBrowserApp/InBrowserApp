@@ -118,8 +118,8 @@ describe('Argon2HashPasswordView', () => {
     const result = wrapper.findComponent({ name: 'Argon2Result' })
 
     expect(form.props('iterationsValid')).toBe(true)
-    expect(form.props('saltErrorType')).toBe('required')
-    expect(result.props('configValid')).toBe(false)
+    expect(form.props('saltErrorType')).toBe('')
+    expect(result.props('configValid')).toBe(true)
 
     form.vm.$emit('update:salt', '***')
     await nextTick()
@@ -159,7 +159,6 @@ describe('Argon2HashPasswordView', () => {
 
     getStorage<number | null>('tools:argon2-hash-password:parallelism').value = 4
     getStorage<number | null>('tools:argon2-hash-password:memory-size').value = 16
-    getStorage<string>('tools:argon2-hash-password:salt').value = 'AQID'
     await nextTick()
 
     expect(form.props('memoryDependencyValid')).toBe(false)
@@ -178,6 +177,9 @@ describe('Argon2HashPasswordView', () => {
   it('generates random salt when form emits action', async () => {
     const wrapper = mount(Argon2HashPasswordView)
     const form = wrapper.findComponent({ name: 'Argon2Form' })
+
+    generateRandomSaltBytesMock.mockClear()
+    bytesToBase64Mock.mockClear()
 
     form.vm.$emit('generate-salt')
     await nextTick()

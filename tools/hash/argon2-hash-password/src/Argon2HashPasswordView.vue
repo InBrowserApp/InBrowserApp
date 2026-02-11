@@ -89,7 +89,7 @@ const hashLengthInput = useStorage<number | null>(
   'tools:argon2-hash-password:hash-length',
   defaultHashLength,
 )
-const salt = useStorage('tools:argon2-hash-password:salt', '')
+const salt = ref(bytesToBase64(generateRandomSaltBytes()))
 
 const parseIntegerRange = (value: number | null, min: number, max: number, fallback: number) => {
   if (value === null) {

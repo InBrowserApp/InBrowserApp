@@ -83,7 +83,7 @@
       </n-gi>
       <n-gi :span="2">
         <n-form-item :label="t('salt')" :validation-status="saltStatus" :show-feedback="false">
-          <n-input v-model:value="salt" />
+          <n-input :value="salt" readonly />
         </n-form-item>
       </n-gi>
       <n-gi :span="2">

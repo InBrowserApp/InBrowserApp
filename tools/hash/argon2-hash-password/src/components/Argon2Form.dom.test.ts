@@ -27,9 +27,9 @@ vi.mock('naive-ui', () => ({
       '<div class="form-item" :data-label="label" :data-status="validationStatus"><slot /></div>',
   },
   NInput: {
-    props: ['value'],
+    props: ['value', 'readonly'],
     emits: ['update:value'],
-    template: `<input class="n-input" :value="value ?? ''" @input="$emit('update:value', $event.target.value)" />`,
+    template: `<input class="n-input" :value="value ?? ''" :readonly="readonly" @input="$emit('update:value', $event.target.value)" />`,
   },
   NInputNumber: {
     props: ['value'],
@@ -102,8 +102,9 @@ describe('Argon2Form', () => {
     const textInputs = wrapper.findAll('.n-input')
     const numberInputs = wrapper.findAll('.n-input-number')
 
+    expect(textInputs[1]!.attributes('readonly')).toBe('')
+
     await textInputs[0]!.setValue('next-password')
-    await textInputs[1]!.setValue('QUJD')
     await textInputs[2]!.setValue('pepper')
 
     await numberInputs[0]!.setValue('4')
@@ -114,7 +115,7 @@ describe('Argon2Form', () => {
     await wrapper.find('.n-select').setValue('argon2i')
 
     expect(wrapper.emitted('update:password')?.[0]).toEqual(['next-password'])
-    expect(wrapper.emitted('update:salt')?.[0]).toEqual(['QUJD'])
+    expect(wrapper.emitted('update:salt')).toBeUndefined()
     expect(wrapper.emitted('update:secret')?.[0]).toEqual(['pepper'])
     expect(wrapper.emitted('update:algorithm')?.[0]).toEqual(['argon2i'])
 
