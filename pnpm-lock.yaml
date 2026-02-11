@@ -1014,6 +1014,9 @@ importers:
       '@tools/pdf-merger':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-merger
+      '@tools/pdf-to-image-converter':
+        specifier: workspace:*
+        version: link:../../tools/pdf/pdf-to-image-converter
       '@tools/pdf-tools':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-tools
