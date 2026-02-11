@@ -9,7 +9,7 @@ describe('certificate public key parser exports', () => {
     expect(toolInfo.path).toBe('/tools/certificate-public-key-parser')
     expect(toolInfo.tags).toContain('x509')
     expect(toolInfo.features).toContain('offline')
-    expect(toolInfo.meta.en.name).toBe('Certificate & Public Key Parser')
+    expect(toolInfo.meta.en.name).toBe('X.509 (PEM/DER) Certificate & Public Key Parser')
     expect(Object.keys(toolInfo.meta)).toHaveLength(25)
     expect(index).toHaveProperty('toolInfo')
 
