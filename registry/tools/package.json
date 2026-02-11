@@ -29,6 +29,8 @@
     "@tools/base85-encoder": "workspace:*",
     "@tools/basic-auth-decoder": "workspace:*",
     "@tools/basic-auth-generator": "workspace:*",
+    "@tools/argon2-hash-password": "workspace:*",
+    "@tools/argon2-hash-password-verifier": "workspace:*",
     "@tools/bcrypt-hash-password": "workspace:*",
     "@tools/bcrypt-hash-password-verifier": "workspace:*",
     "@tools/bic-swift-validator": "workspace:*",
