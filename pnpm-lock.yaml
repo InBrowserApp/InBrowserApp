@@ -388,8 +388,8 @@ catalogs:
       specifier: ^4.0.0
       version: 4.0.0
     transliteration:
-      specifier: ^2.6.0
-      version: 2.6.0
+      specifier: ^2.6.1
+      version: 2.6.1
     tsyringe:
       specifier: ^4.10.0
       version: 4.10.0
@@ -7173,7 +7173,7 @@ importers:
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
       transliteration:
         specifier: 'catalog:'
-        version: 2.6.0
+        version: 2.6.1
       vue:
         specifier: 'catalog:'
         version: 3.5.27(typescript@5.9.3)
@@ -12148,8 +12148,8 @@ packages:
     resolution: {integrity: sha512-bLVMLPtstlZ4iMQHpFHTR7GAGj2jxi8Dg0s2h2MafAE4uSWF98FC/3MomU51iQAMf8/qDUbKWf5GxuvvVcXEhw==}
     engines: {node: '>=20'}
 
-  transliteration@2.6.0:
-    resolution: {integrity: sha512-T6frfMj7N5xNK0l+duIzIWKxkc9ewG72uv7NeOs4dIoysqTnYpwxeVEE5qYdKKmy7hby55ah0wNUoMaLsB2Zjw==}
+  transliteration@2.6.1:
+    resolution: {integrity: sha512-hJ9BhrQAOnNTbpOr1MxsNjZISkn7ppvF5TKUeFmTE1mG4ZPD/XVxF0L0LUoIUCWmQyxH0gJpVtfYLAWf298U9w==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -17665,7 +17665,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  transliteration@2.6.0: {}
+  transliteration@2.6.1: {}
 
   tree-sitter-bash@0.23.3(tree-sitter@0.21.1):
     dependencies:
