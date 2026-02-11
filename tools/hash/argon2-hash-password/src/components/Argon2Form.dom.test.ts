@@ -42,9 +42,14 @@ vi.mock('naive-ui', () => ({
     template:
       '<select class="n-select" :value="value" @change="$emit(\'update:value\', $event.target.value)"><option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option></select>',
   },
+  NIcon: {
+    props: ['component'],
+    template: '<span class="n-icon" />',
+  },
   NButton: {
     emits: ['click'],
-    template: '<button class="n-button" @click="$emit(\'click\')"><slot /></button>',
+    template:
+      '<button class="n-button" @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   },
 }))
 

@@ -87,7 +87,12 @@
         </n-form-item>
       </n-gi>
       <n-gi :span="2">
-        <n-button secondary @click="emit('generate-salt')">{{ t('generate-salt') }}</n-button>
+        <n-button secondary @click="emit('generate-salt')">
+          <template #icon>
+            <n-icon :component="SaltIcon" />
+          </template>
+          {{ t('generate-salt') }}
+        </n-button>
       </n-gi>
       <n-gi :span="2">
         <n-form-item :label="t('secret')" :show-feedback="false">
@@ -106,7 +111,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NButton, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
+import SaltIcon from '@vicons/tabler/Salt'
+import { NButton, NFormItem, NGi, NGrid, NIcon, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { ALGORITHM_OPTIONS } from '../types'
 import type { Argon2Algorithm } from '../types'
