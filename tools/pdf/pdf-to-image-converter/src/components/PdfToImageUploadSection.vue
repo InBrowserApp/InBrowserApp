@@ -9,7 +9,12 @@
         :show-file-list="false"
         @before-upload="beforeUploadNewFile"
       >
-        <n-button secondary>{{ t('uploadNewOne') }}</n-button>
+        <n-button secondary>
+          <template #icon>
+            <n-icon><ArrowUpload24Regular /></n-icon>
+          </template>
+          {{ t('uploadNewOne') }}
+        </n-button>
       </n-upload>
 
       <n-text depth="3">{{ t('localNote') }}</n-text>
@@ -19,8 +24,8 @@
         v-if="uploadedFileName"
         bordered
         size="small"
-        :column="fileInfoColumns"
-        label-placement="top"
+        :column="1"
+        label-placement="left"
       >
         <n-descriptions-item :label="t('fileName')">
           <n-text style="word-break: break-all">{{ uploadedFileName }}</n-text>
@@ -44,12 +49,14 @@ import {
   NDescriptions,
   NDescriptionsItem,
   NFlex,
+  NIcon,
   NText,
   NUpload,
   type UploadFileInfo,
   useMessage,
 } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
+import ArrowUpload24Regular from '@vicons/fluent/ArrowUpload24Regular'
 import { PDFUpload } from '@shared/ui/domain/pdf'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 
@@ -68,7 +75,6 @@ const { t } = useI18n({ useScope: 'local' })
 const message = useMessage()
 
 const formattedUploadedFileSize = computed(() => filesize(props.uploadedFileSize) as string)
-const fileInfoColumns = computed(() => (props.numPages > 0 ? 3 : 2))
 
 function beforeUploadNewFile(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
   if (data.file.file?.type !== 'application/pdf') {

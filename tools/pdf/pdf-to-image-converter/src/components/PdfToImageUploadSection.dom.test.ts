@@ -17,6 +17,7 @@ vi.mock('naive-ui', async () => {
     NDescriptions: wrapper('NDescriptions'),
     NDescriptionsItem: wrapper('NDescriptionsItem'),
     NFlex: wrapper('NFlex'),
+    NIcon: wrapper('NIcon'),
     NText: wrapper('NText'),
     NUpload: defineComponent({
       name: 'NUpload',
