@@ -50,10 +50,41 @@ vi.mock('naive-ui', () => ({
   },
 }))
 
+vi.mock('highwayhasher', () => ({
+  HighwayHash: {
+    load: vi.fn(async (key?: Uint8Array) => {
+      const chunks: number[] = []
+
+      return {
+        append: (input: Uint8Array) => {
+          chunks.push(...input)
+        },
+        finalize64: () => {
+          const isKnownVector =
+            key?.length === 32 &&
+            key.every((byte) => byte === 1) &&
+            chunks.length === 1 &&
+            chunks[0] === 0
+
+          if (isKnownVector) {
+            return Uint8Array.from(Buffer.from('c5452b122c7225df', 'hex'))
+          }
+
+          return new Uint8Array(8)
+        },
+        finalize128: () => new Uint8Array(16),
+        finalize256: () => new Uint8Array(32),
+      }
+    }),
+  },
+}))
+
 let HighwayHashTextOrFileView: typeof import('./HighwayHashTextOrFileView.vue').default
+let mockedHighwayHash: typeof import('highwayhasher').HighwayHash
 
 beforeAll(async () => {
   HighwayHashTextOrFileView = (await import('./HighwayHashTextOrFileView.vue')).default
+  mockedHighwayHash = (await import('highwayhasher')).HighwayHash
 })
 
 describe('HighwayHashTextOrFileView', () => {
@@ -98,6 +129,7 @@ describe('HighwayHashTextOrFileView', () => {
     const hex = Buffer.from(buffer).toString('hex')
 
     expect(hex).toBe('c5452b122c7225df')
+    expect(mockedHighwayHash.load).toHaveBeenCalledTimes(1)
   })
 
   it('switches output size to 128-bit and 256-bit', async () => {
