@@ -31,6 +31,15 @@ type Position = {
   column: number
 }
 
+type MaskMode =
+  | 'code'
+  | 'single-quoted-string'
+  | 'double-quoted-string'
+  | 'backtick-quoted-identifier'
+  | 'bracket-quoted-identifier'
+  | 'line-comment'
+  | 'block-comment'
+
 const keywordRegex = new RegExp(
   `\\b(${[
     'select',
@@ -122,9 +131,9 @@ export function lintSql(
       const index = match.index as number
       const statement = match[0]
       const head = String(match[1]).toLowerCase()
-      const hasWhere = /\bwhere\b/i.test(statement)
+      const hasWhereClause = statementHasWhereClause(statement)
 
-      if (head === 'update' && !hasWhere) {
+      if (head === 'update' && !hasWhereClause) {
         pushIssue(
           issues,
           {
@@ -136,7 +145,7 @@ export function lintSql(
         )
       }
 
-      if (head === 'delete' && /\bdelete\s+from\b/i.test(statement) && !hasWhere) {
+      if (head === 'delete' && !hasWhereClause) {
         pushIssue(
           issues,
           {
@@ -212,6 +221,165 @@ export function lintSql(
     if (a.column !== b.column) return a.column - b.column
     return a.code.localeCompare(b.code)
   })
+}
+
+function statementHasWhereClause(statement: string): boolean {
+  const maskedStatement = maskSqlCommentsAndLiterals(statement)
+  return /\bwhere\b/i.test(maskedStatement)
+}
+
+function maskSqlCommentsAndLiterals(sql: string): string {
+  let masked = ''
+  let mode: MaskMode = 'code'
+  let index = 0
+
+  while (index < sql.length) {
+    const char = sql[index] as string
+    const nextChar = sql[index + 1] as string | undefined
+
+    if (mode === 'code') {
+      if (char === "'") {
+        mode = 'single-quoted-string'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      if (char === '"') {
+        mode = 'double-quoted-string'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      if (char === '`') {
+        mode = 'backtick-quoted-identifier'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      if (char === '[') {
+        mode = 'bracket-quoted-identifier'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      if (char === '-' && nextChar === '-') {
+        mode = 'line-comment'
+        masked += '  '
+        index += 2
+        continue
+      }
+
+      if (char === '/' && nextChar === '*') {
+        mode = 'block-comment'
+        masked += '  '
+        index += 2
+        continue
+      }
+
+      masked += char
+      index += 1
+      continue
+    }
+
+    if (mode === 'single-quoted-string') {
+      if (char === "'" && nextChar === "'") {
+        masked += '  '
+        index += 2
+        continue
+      }
+
+      if (char === "'") {
+        mode = 'code'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      masked += char === '\n' ? '\n' : ' '
+      index += 1
+      continue
+    }
+
+    if (mode === 'double-quoted-string') {
+      if (char === '"' && nextChar === '"') {
+        masked += '  '
+        index += 2
+        continue
+      }
+
+      if (char === '"') {
+        mode = 'code'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      masked += char === '\n' ? '\n' : ' '
+      index += 1
+      continue
+    }
+
+    if (mode === 'backtick-quoted-identifier') {
+      if (char === '`') {
+        mode = 'code'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      masked += char === '\n' ? '\n' : ' '
+      index += 1
+      continue
+    }
+
+    if (mode === 'bracket-quoted-identifier') {
+      if (char === ']' && nextChar === ']') {
+        masked += '  '
+        index += 2
+        continue
+      }
+
+      if (char === ']') {
+        mode = 'code'
+        masked += ' '
+        index += 1
+        continue
+      }
+
+      masked += char === '\n' ? '\n' : ' '
+      index += 1
+      continue
+    }
+
+    if (mode === 'line-comment') {
+      if (char === '\n') {
+        mode = 'code'
+        masked += '\n'
+        index += 1
+        continue
+      }
+
+      masked += ' '
+      index += 1
+      continue
+    }
+
+    if (char === '*' && nextChar === '/') {
+      mode = 'code'
+      masked += '  '
+      index += 2
+      continue
+    }
+
+    masked += char === '\n' ? '\n' : ' '
+    index += 1
+  }
+
+  return masked
 }
 
 function pushIssue(

@@ -1,16 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { lintSql, type SqlLintOptions } from './sqlLint'
+import { lintSql } from './sqlLint'
 
-const defaultOptions: SqlLintOptions = {
+const defaultOptions = {
   checkSelectStar: true,
   checkUnsafeMutation: true,
   requireSemicolon: true,
   maxLineLength: 80,
-  keywordCase: 'preserve',
+  keywordCase: 'preserve' as const,
 }
 
 describe('lintSql', () => {
-  it('returns empty issues for blank input', () => {
+  it('returns no issues for empty input', () => {
     expect(lintSql('   ', defaultOptions)).toEqual([])
   })
 
@@ -85,6 +85,35 @@ DELETE FROM users WHERE id = 1;`,
     )
 
     expect(issues.some((issue) => issue.code === 'unsafe-update-delete')).toBe(false)
+  })
+
+  it('does not treat WHERE in strings or comments as a real filter clause', () => {
+    const issues = lintSql(
+      `UPDATE users SET note = 'where are you';
+DELETE users -- where id = 1
+;`,
+      defaultOptions,
+    )
+
+    const unsafeIssues = issues.filter((issue) => issue.code === 'unsafe-update-delete')
+    expect(unsafeIssues.map((issue) => issue.message)).toEqual(
+      expect.arrayContaining([
+        'UPDATE without WHERE may affect every row.',
+        'DELETE without WHERE may remove every row.',
+      ]),
+    )
+  })
+
+  it('reports DELETE without FROM when WHERE is missing', () => {
+    const issues = lintSql('DELETE users;', defaultOptions)
+
+    expect(
+      issues.some(
+        (issue) =>
+          issue.code === 'unsafe-update-delete' &&
+          issue.message === 'DELETE without WHERE may remove every row.',
+      ),
+    ).toBe(true)
   })
 
   it('reports missing semicolon and long lines', () => {
