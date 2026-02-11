@@ -47,6 +47,9 @@
       </n-gi>
       <n-gi :span="2">
         <n-button class="generate-salt" secondary @click="emit('generate-salt')">
+          <template #icon>
+            <n-icon :component="SaltIcon" />
+          </template>
           {{ t('generate-salt') }}
         </n-button>
       </n-gi>
@@ -108,7 +111,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NButton, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
+import SaltIcon from '@vicons/fluent/ArrowSync16Regular'
+import { NButton, NFormItem, NGi, NGrid, NIcon, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { SALT_FORMAT_OPTIONS } from '../types'
 import type { SaltFormat } from '../types'
