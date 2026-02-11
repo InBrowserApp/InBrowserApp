@@ -150,15 +150,15 @@ describe('ArchiveViewer', () => {
     await clickTableRowByText(wrapper, 'docs')
     expect(wrapper.findAll('tbody tr').some((row) => row.text().includes('readme.txt'))).toBe(true)
 
-    const upButton = wrapper.findAll('button').find((button) => button.text().includes('Up'))
-    if (!upButton) {
-      throw new Error('Missing Up button')
-    }
+    const upButton = wrapper.find('button[aria-label="Up"]')
+    expect(upButton.exists()).toBe(true)
 
     await upButton.trigger('click')
     await flushPromises()
 
     expect(wrapper.findAll('tbody tr').some((row) => row.text().includes('docs'))).toBe(true)
+
+    expect(wrapper.find('button[aria-label="Up"]').exists()).toBe(false)
   })
 
   it('opens modal preview for files and exposes download link', async () => {

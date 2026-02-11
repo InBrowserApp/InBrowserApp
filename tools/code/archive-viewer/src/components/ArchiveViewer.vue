@@ -54,19 +54,11 @@
       <n-text>{{ labels.parsingArchive }}</n-text>
     </n-flex>
   </ToolSection>
-  <template v-else></template>
 
   <ToolSection v-if="archiveHandle && !isParsing && !errorMessage">
     <ToolSectionHeader>{{ labels.entriesTitle }}</ToolSectionHeader>
     <n-flex vertical :size="12">
-      <n-flex justify="space-between" align="center" :size="10">
-        <n-button :disabled="!canGoToParentDirectory" size="small" @click="goToParentDirectory">
-          <template #icon>
-            <n-icon :component="ArrowUp16Regular" />
-          </template>
-          {{ labels.goToParent }}
-        </n-button>
-
+      <n-flex align="center" :size="10">
         <n-breadcrumb>
           <n-breadcrumb-item
             v-for="breadcrumb in breadcrumbs"
@@ -76,6 +68,19 @@
             {{ breadcrumb.label }}
           </n-breadcrumb-item>
         </n-breadcrumb>
+
+        <n-button
+          v-if="canGoToParentDirectory"
+          size="small"
+          circle
+          quaternary
+          :aria-label="labels.goToParent"
+          @click="goToParentDirectory"
+        >
+          <template #icon>
+            <n-icon :component="ArrowUp16Regular" />
+          </template>
+        </n-button>
       </n-flex>
 
       <n-input v-model:value="search" clearable :placeholder="labels.searchPlaceholder" />
@@ -94,7 +99,6 @@
       </template>
     </n-flex>
   </ToolSection>
-  <template v-else></template>
 
   <n-modal
     v-model:show="isPreviewModalVisible"
@@ -122,7 +126,6 @@
             >
               {{ labels.downloadEntry }}
             </n-button>
-            <template v-else></template>
           </n-flex>
 
           <n-flex v-if="isLoadingPreview" align="center" :size="8">
@@ -160,7 +163,6 @@
       {{ errorMessage }}
     </n-alert>
   </ToolSection>
-  <template v-else></template>
 </template>
 
 <script setup lang="ts">
