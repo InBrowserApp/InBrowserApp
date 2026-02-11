@@ -1,0 +1,23 @@
+{
+  "name": "@tools/pdf-merger",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vueuse/core": "catalog:",
+    "naive-ui": "catalog:",
+    "pdf-lib": "catalog:",
+    "sortablejs": "catalog:",
+    "sortablejs-vue3": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

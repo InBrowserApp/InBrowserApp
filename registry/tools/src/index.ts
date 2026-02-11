@@ -4,6 +4,7 @@ import { toolInfo as faviconAssetsGeneratorToolInfo } from '@tools/favicon-asset
 import { tools as uuidTools } from '@tools/uuid'
 import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-owner-password'
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
+import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as unicodePunycodeConverterToolInfo } from '@tools/unicode-punycode-converter'
 import { toolInfo as dnsLookupToolInfo } from '@tools/dns-lookup'
 import { toolInfo as reverseIPLookupToolInfo } from '@tools/reverse-ip-lookup'
@@ -257,6 +258,7 @@ export const tools: ToolInfo[] = [
   // PDF Tools
   pdfToolsToolInfo,
   removePDFOwnerPasswordToolInfo,
+  pdfMergerToolInfo,
   pdfInfoViewerToolInfo,
 
   // Hash Tools

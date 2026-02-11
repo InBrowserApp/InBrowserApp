@@ -129,6 +129,7 @@
     "@tools/password-strength-checker": "workspace:*",
     "@tools/pbkdf2-key-derivation": "workspace:*",
     "@tools/pdf-info-viewer": "workspace:*",
+    "@tools/pdf-merger": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/pgp-key-generator": "workspace:*",
     "@tools/placeholder-image-generator": "workspace:*",
