@@ -50,7 +50,7 @@ import { bytesToBase64, bytesToHex, deriveScrypt } from '../utils'
 
 const props = defineProps<{
   password: string
-  salt: string | File
+  salt: string
   saltFormat: SaltFormat
   costFactor: number
   blockSize: number

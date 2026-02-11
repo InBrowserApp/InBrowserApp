@@ -31,19 +31,24 @@
         </n-form-item>
       </n-gi>
       <n-gi :span="2">
-        <TextOrFileInput
-          v-model:value="salt"
+        <n-form-item
           :label="t('salt')"
-          :placeholder="t('salt')"
           :validation-status="saltStatus"
           :feedback="saltFeedback"
           :show-feedback="!!saltFeedback"
-        />
+        >
+          <n-input v-model:value="salt" class="salt-input" readonly />
+        </n-form-item>
       </n-gi>
       <n-gi>
         <n-form-item :label="t('salt-format')" :show-feedback="false">
           <n-select v-model:value="saltFormat" :options="SALT_FORMAT_OPTIONS" />
         </n-form-item>
+      </n-gi>
+      <n-gi :span="2">
+        <n-button class="generate-salt" secondary @click="emit('generate-salt')">
+          {{ t('generate-salt') }}
+        </n-button>
       </n-gi>
       <n-gi>
         <n-form-item
@@ -103,9 +108,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NFormItem, NInput, NInputNumber, NSelect, NGi, NGrid } from 'naive-ui'
+import { NButton, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import { TextOrFileInput } from '@shared/ui/base'
 import { SALT_FORMAT_OPTIONS } from '../types'
 import type { SaltFormat } from '../types'
 
@@ -139,10 +143,14 @@ const props = withDefaults(
   },
 )
 
+const emit = defineEmits<{
+  'generate-salt': []
+}>()
+
 const { t } = useI18n()
 
 const password = defineModel<string>('password', { required: true })
-const salt = defineModel<string | File>('salt', { required: true })
+const salt = defineModel<string>('salt', { required: true })
 const saltFormat = defineModel<SaltFormat>('saltFormat', { required: true })
 const costFactor = defineModel<number | null>('costFactor', { required: true })
 const blockSize = defineModel<number | null>('blockSize', { required: true })
@@ -199,7 +207,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Enter a whole number between {min} and {max}.",
     "length-invalid": "Enter a number between {min} and {max} bytes.",
     "salt-invalid-hex": "Salt must be valid hex.",
-    "salt-invalid-base64": "Salt must be valid Base64."
+    "salt-invalid-base64": "Salt must be valid Base64.",
+    "generate-salt": "Generate Random Salt"
   },
   "zh": {
     "config-header": "配置",
@@ -210,7 +219,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "请输入介于 {min} 和 {max} 之间的整数。",
     "length-invalid": "请输入介于 {min} 和 {max} 字节之间的数值。",
     "salt-invalid-hex": "盐必须是有效的十六进制。",
-    "salt-invalid-base64": "盐必须是有效的 Base64。"
+    "salt-invalid-base64": "盐必须是有效的 Base64。",
+    "generate-salt": "生成随机盐值"
   },
   "zh-CN": {
     "config-header": "配置",
@@ -221,7 +231,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "请输入介于 {min} 和 {max} 之间的整数。",
     "length-invalid": "请输入介于 {min} 和 {max} 字节之间的数值。",
     "salt-invalid-hex": "盐必须是有效的十六进制。",
-    "salt-invalid-base64": "盐必须是有效的 Base64。"
+    "salt-invalid-base64": "盐必须是有效的 Base64。",
+    "generate-salt": "生成随机盐值"
   },
   "zh-TW": {
     "config-header": "設定",
@@ -232,7 +243,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "請輸入介於 {min} 和 {max} 之間的整數。",
     "length-invalid": "請輸入介於 {min} 和 {max} 位元組之間的數值。",
     "salt-invalid-hex": "鹽必須是有效的十六進位。",
-    "salt-invalid-base64": "鹽必須是有效的 Base64。"
+    "salt-invalid-base64": "鹽必須是有效的 Base64。",
+    "generate-salt": "產生隨機鹽值"
   },
   "zh-HK": {
     "config-header": "設定",
@@ -243,7 +255,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "請輸入介於 {min} 和 {max} 之間的整數。",
     "length-invalid": "請輸入介於 {min} 和 {max} 位元組之間的數值。",
     "salt-invalid-hex": "鹽必須是有效的十六進位。",
-    "salt-invalid-base64": "鹽必須是有效的 Base64。"
+    "salt-invalid-base64": "鹽必須是有效的 Base64。",
+    "generate-salt": "產生隨機鹽值"
   },
   "es": {
     "config-header": "Configuración",
@@ -254,7 +267,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Introduce un número entero entre {min} y {max}.",
     "length-invalid": "Introduce un número entre {min} y {max} bytes.",
     "salt-invalid-hex": "La sal debe ser un hex válido.",
-    "salt-invalid-base64": "La sal debe ser Base64 válida."
+    "salt-invalid-base64": "La sal debe ser Base64 válida.",
+    "generate-salt": "Generar sal aleatoria"
   },
   "fr": {
     "config-header": "Configuration",
@@ -265,7 +279,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Entrez un entier entre {min} et {max}.",
     "length-invalid": "Entrez un nombre entre {min} et {max} octets.",
     "salt-invalid-hex": "Le sel doit être un hex valide.",
-    "salt-invalid-base64": "Le sel doit être un Base64 valide."
+    "salt-invalid-base64": "Le sel doit être un Base64 valide.",
+    "generate-salt": "Générer du sel aléatoire"
   },
   "de": {
     "config-header": "Konfiguration",
@@ -276,7 +291,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Geben Sie eine ganze Zahl zwischen {min} und {max} ein.",
     "length-invalid": "Geben Sie eine Zahl zwischen {min} und {max} Bytes ein.",
     "salt-invalid-hex": "Salt muss gültiges Hex sein.",
-    "salt-invalid-base64": "Salt muss gültiges Base64 sein."
+    "salt-invalid-base64": "Salt muss gültiges Base64 sein.",
+    "generate-salt": "Generieren Sie zufälliges Salz"
   },
   "it": {
     "config-header": "Configurazione",
@@ -287,7 +303,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Inserisci un numero intero tra {min} e {max}.",
     "length-invalid": "Inserisci un numero tra {min} e {max} byte.",
     "salt-invalid-hex": "Il salt deve essere un hex valido.",
-    "salt-invalid-base64": "Il salt deve essere Base64 valido."
+    "salt-invalid-base64": "Il salt deve essere Base64 valido.",
+    "generate-salt": "Genera sale casuale"
   },
   "ja": {
     "config-header": "設定",
@@ -298,7 +315,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "{min}〜{max}の整数を入力してください。",
     "length-invalid": "{min}〜{max}バイトの数値を入力してください。",
     "salt-invalid-hex": "ソルトは有効な16進数である必要があります。",
-    "salt-invalid-base64": "ソルトは有効なBase64である必要があります。"
+    "salt-invalid-base64": "ソルトは有効なBase64である必要があります。",
+    "generate-salt": "ランダムなソルトを生成する"
   },
   "ko": {
     "config-header": "구성",
@@ -309,7 +327,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "{min}~{max} 사이의 정수를 입력하세요.",
     "length-invalid": "{min}~{max}바이트 사이의 값을 입력하세요.",
     "salt-invalid-hex": "솔트는 유효한 16진수여야 합니다.",
-    "salt-invalid-base64": "솔트는 유효한 Base64여야 합니다."
+    "salt-invalid-base64": "솔트는 유효한 Base64여야 합니다.",
+    "generate-salt": "무작위 소금 생성"
   },
   "ru": {
     "config-header": "Конфигурация",
@@ -320,7 +339,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Введите целое число между {min} и {max}.",
     "length-invalid": "Введите число между {min} и {max} байт.",
     "salt-invalid-hex": "Соль должна быть корректным hex.",
-    "salt-invalid-base64": "Соль должна быть корректным Base64."
+    "salt-invalid-base64": "Соль должна быть корректным Base64.",
+    "generate-salt": "Генерация случайной соли"
   },
   "pt": {
     "config-header": "Configuração",
@@ -331,7 +351,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Digite um número inteiro entre {min} e {max}.",
     "length-invalid": "Digite um número entre {min} e {max} bytes.",
     "salt-invalid-hex": "O salt deve ser hex válido.",
-    "salt-invalid-base64": "O salt deve ser Base64 válido."
+    "salt-invalid-base64": "O salt deve ser Base64 válido.",
+    "generate-salt": "Gerar sal aleatório"
   },
   "ar": {
     "config-header": "الإعدادات",
@@ -342,7 +363,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "أدخل عددًا صحيحًا بين {min} و {max}.",
     "length-invalid": "أدخل رقمًا بين {min} و {max} بايت.",
     "salt-invalid-hex": "يجب أن يكون الملح سداسيًا صالحًا.",
-    "salt-invalid-base64": "يجب أن يكون الملح Base64 صالحًا."
+    "salt-invalid-base64": "يجب أن يكون الملح Base64 صالحًا.",
+    "generate-salt": "توليد الملح العشوائي"
   },
   "hi": {
     "config-header": "कॉन्फ़िगरेशन",
@@ -353,7 +375,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "{min} और {max} के बीच पूर्णांक दर्ज करें।",
     "length-invalid": "{min} और {max} बाइट के बीच संख्या दर्ज करें।",
     "salt-invalid-hex": "सॉल्ट मान्य हेक्स होना चाहिए।",
-    "salt-invalid-base64": "सॉल्ट मान्य Base64 होना चाहिए।"
+    "salt-invalid-base64": "सॉल्ट मान्य Base64 होना चाहिए।",
+    "generate-salt": "यादृच्छिक नमक उत्पन्न करें"
   },
   "tr": {
     "config-header": "Yapılandırma",
@@ -364,7 +387,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "{min} ile {max} arasında tam sayı girin.",
     "length-invalid": "{min} ile {max} bayt arasında bir sayı girin.",
     "salt-invalid-hex": "Tuz geçerli bir hex olmalıdır.",
-    "salt-invalid-base64": "Tuz geçerli bir Base64 olmalıdır."
+    "salt-invalid-base64": "Tuz geçerli bir Base64 olmalıdır.",
+    "generate-salt": "Rastgele Tuz Oluştur"
   },
   "nl": {
     "config-header": "Configuratie",
@@ -375,7 +399,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Voer een geheel getal in tussen {min} en {max}.",
     "length-invalid": "Voer een getal in tussen {min} en {max} bytes.",
     "salt-invalid-hex": "Salt moet geldige hex zijn.",
-    "salt-invalid-base64": "Salt moet geldige Base64 zijn."
+    "salt-invalid-base64": "Salt moet geldige Base64 zijn.",
+    "generate-salt": "Genereer willekeurig zout"
   },
   "sv": {
     "config-header": "Konfiguration",
@@ -386,7 +411,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Ange ett heltal mellan {min} och {max}.",
     "length-invalid": "Ange ett tal mellan {min} och {max} byte.",
     "salt-invalid-hex": "Salt måste vara giltig hex.",
-    "salt-invalid-base64": "Salt måste vara giltig Base64."
+    "salt-invalid-base64": "Salt måste vara giltig Base64.",
+    "generate-salt": "Generera slumpmässigt salt"
   },
   "pl": {
     "config-header": "Konfiguracja",
@@ -397,7 +423,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Wprowadź liczbę całkowitą między {min} a {max}.",
     "length-invalid": "Wprowadź liczbę między {min} a {max} bajtów.",
     "salt-invalid-hex": "Sól musi być poprawnym hex.",
-    "salt-invalid-base64": "Sól musi być poprawnym Base64."
+    "salt-invalid-base64": "Sól musi być poprawnym Base64.",
+    "generate-salt": "Wygeneruj losową sól"
   },
   "vi": {
     "config-header": "Cấu hình",
@@ -408,7 +435,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Nhập số nguyên từ {min} đến {max}.",
     "length-invalid": "Nhập số từ {min} đến {max} byte.",
     "salt-invalid-hex": "Muối phải là hex hợp lệ.",
-    "salt-invalid-base64": "Muối phải là Base64 hợp lệ."
+    "salt-invalid-base64": "Muối phải là Base64 hợp lệ.",
+    "generate-salt": "Tạo muối ngẫu nhiên"
   },
   "th": {
     "config-header": "การกำหนดค่า",
@@ -419,7 +447,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "กรอกจำนวนเต็มระหว่าง {min} และ {max}.",
     "length-invalid": "กรอกตัวเลขระหว่าง {min} และ {max} ไบต์.",
     "salt-invalid-hex": "ซอลต์ต้องเป็น hex ที่ถูกต้อง.",
-    "salt-invalid-base64": "ซอลต์ต้องเป็น Base64 ที่ถูกต้อง."
+    "salt-invalid-base64": "ซอลต์ต้องเป็น Base64 ที่ถูกต้อง.",
+    "generate-salt": "สร้างเกลือแบบสุ่ม"
   },
   "id": {
     "config-header": "Konfigurasi",
@@ -430,7 +459,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Masukkan bilangan bulat antara {min} dan {max}.",
     "length-invalid": "Masukkan angka antara {min} dan {max} byte.",
     "salt-invalid-hex": "Salt harus hex yang valid.",
-    "salt-invalid-base64": "Salt harus Base64 yang valid."
+    "salt-invalid-base64": "Salt harus Base64 yang valid.",
+    "generate-salt": "Hasilkan Garam Acak"
   },
   "he": {
     "config-header": "הגדרות",
@@ -441,7 +471,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "הזן מספר שלם בין {min} ל-{max}.",
     "length-invalid": "הזן מספר בין {min} ל-{max} בייט.",
     "salt-invalid-hex": "המלח חייב להיות hex תקין.",
-    "salt-invalid-base64": "המלח חייב להיות Base64 תקין."
+    "salt-invalid-base64": "המלח חייב להיות Base64 תקין.",
+    "generate-salt": "צור מלח אקראי"
   },
   "ms": {
     "config-header": "Konfigurasi",
@@ -452,7 +483,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Masukkan nombor bulat antara {min} dan {max}.",
     "length-invalid": "Masukkan nombor antara {min} dan {max} bait.",
     "salt-invalid-hex": "Salt mesti hex yang sah.",
-    "salt-invalid-base64": "Salt mesti Base64 yang sah."
+    "salt-invalid-base64": "Salt mesti Base64 yang sah.",
+    "generate-salt": "Hasilkan Garam Rawak"
   },
   "no": {
     "config-header": "Konfigurasjon",
@@ -463,7 +495,8 @@ const saltStatus = computed(() => (props.saltErrorType ? 'error' : undefined))
     "range-invalid": "Skriv inn et heltall mellom {min} og {max}.",
     "length-invalid": "Skriv inn et tall mellom {min} og {max} byte.",
     "salt-invalid-hex": "Salt må være gyldig hex.",
-    "salt-invalid-base64": "Salt må være gyldig Base64."
+    "salt-invalid-base64": "Salt må være gyldig Base64.",
+    "generate-salt": "Generer tilfeldig salt"
   }
 }
 </i18n>

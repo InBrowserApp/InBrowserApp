@@ -32,27 +32,21 @@ vi.mock('@shared/ui/tool', () => ({
   },
 }))
 
-vi.mock('@shared/ui/base', () => ({
-  TextOrFileInput: {
-    props: ['value', 'label', 'validationStatus', 'feedback', 'showFeedback'],
-    emits: ['update:value'],
-    template:
-      '<div class="text-or-file" :data-status="validationStatus" :data-feedback="feedback">' +
-      '<textarea class="salt-input" :value="value" @input="$emit(\'update:value\', $event.target.value)" />' +
-      '</div>',
-  },
-}))
-
 vi.mock('naive-ui', () => ({
+  NButton: {
+    emits: ['click'],
+    template:
+      '<button class="generate-salt" @click="$emit(\'click\')"><slot /><slot name="icon" /></button>',
+  },
   NFormItem: {
     props: ['label', 'validationStatus', 'feedback', 'showFeedback'],
     template:
       '<div class="form-item" :data-label="label" :data-status="validationStatus" :data-feedback="feedback"><slot /></div>',
   },
   NInput: {
-    props: ['value'],
+    props: ['value', 'type', 'readonly'],
     emits: ['update:value'],
-    template: `<input class="password-input" :value="value || ''" @input="$emit('update:value', $event.target.value)" />`,
+    template: `<input :class="type === 'password' ? 'password-input' : 'salt-input'" :readonly="readonly" :value="value || ''" @input="$emit('update:value', $event.target.value)" />`,
   },
   NInputNumber: {
     props: ['value'],
@@ -66,6 +60,9 @@ vi.mock('naive-ui', () => ({
       '<select class="select" :value="value" @change="$emit(\'update:value\', $event.target.value)">' +
       '<option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>' +
       '</select>',
+  },
+  NIcon: {
+    template: '<i class="icon" />',
   },
   NGi: {
     template: '<div class="grid-item"><slot /></div>',
@@ -104,15 +101,16 @@ describe('ScryptKeyDerivationView', () => {
     expect(wrapper.find('.section-header').exists()).toBe(true)
     expect(wrapper.find('.password-input').exists()).toBe(true)
     expect(wrapper.find('.salt-input').exists()).toBe(true)
+    expect(wrapper.find('.generate-salt').exists()).toBe(true)
     expect(wrapper.find('.scrypt-result').exists()).toBe(true)
     expect(wrapper.find('.what-is').exists()).toBe(true)
   })
 
-  it('auto-generates salt and regenerates while still auto-managed', async () => {
+  it('regenerates salt for format change, button click, and password change', async () => {
     const wrapper = mount(ScryptKeyDerivationView)
     const form = wrapper.findComponent({ name: 'ScryptForm' })
 
-    const getSaltValue = () => (wrapper.find('.salt-input').element as HTMLTextAreaElement).value
+    const getSaltValue = () => (wrapper.find('.salt-input').element as HTMLInputElement).value
 
     const initialSalt = getSaltValue()
     expect(initialSalt).not.toBe('')
@@ -124,20 +122,26 @@ describe('ScryptKeyDerivationView', () => {
     expect(regeneratedHexSalt).toMatch(/^[a-f0-9]+$/)
     expect(regeneratedHexSalt).not.toBe(initialSalt)
 
-    form.vm.$emit('update:salt', 'manual-salt')
+    form.vm.$emit('generate-salt')
     await nextTick()
+
+    const regeneratedByButton = getSaltValue()
+    expect(regeneratedByButton).toMatch(/^[a-f0-9]+$/)
+    expect(regeneratedByButton).not.toBe(regeneratedHexSalt)
 
     form.vm.$emit('update:saltFormat', 'base64')
     await nextTick()
 
-    expect(getSaltValue()).toBe('manual-salt')
+    const regeneratedBase64Salt = getSaltValue()
+    expect(regeneratedBase64Salt).toMatch(/^[A-Za-z0-9+/]+={0,2}$/)
+    expect(regeneratedBase64Salt).not.toBe(regeneratedByButton)
 
     form.vm.$emit('update:password', 'new-password')
     await nextTick()
 
-    const regeneratedBase64Salt = getSaltValue()
-    expect(regeneratedBase64Salt).not.toBe('manual-salt')
-    expect(regeneratedBase64Salt).toMatch(/^[A-Za-z0-9+/]+={0,2}$/)
+    const regeneratedByPassword = getSaltValue()
+    expect(regeneratedByPassword).toMatch(/^[A-Za-z0-9+/]+={0,2}$/)
+    expect(regeneratedByPassword).not.toBe(regeneratedBase64Salt)
   })
 
   it('updates validation and salt error states', async () => {
@@ -193,24 +197,23 @@ describe('ScryptKeyDerivationView', () => {
     saltFormatRef.value = 'hex'
     form.vm.$emit('update:salt', 'zz')
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('salt-invalid-hex')
 
     saltFormatRef.value = 'base64'
-    form.vm.$emit('update:salt', '***')
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-base64')
+    form.vm.$emit('update:salt', 'a')
+    await nextTick()
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe(
+      'salt-invalid-base64',
+    )
 
     form.vm.$emit('update:salt', 'AQID')
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('')
-
-    form.vm.$emit('update:salt', new File(['data'], 'salt.bin'))
-    await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('')
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('')
 
     form.vm.$emit('update:salt', '')
     saltFormatRef.value = 'utf-8'
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('')
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('')
   })
 })

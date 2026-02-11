@@ -16,34 +16,26 @@ vi.mock('@shared/ui/tool', () => ({
   },
 }))
 
-vi.mock('@shared/ui/base', () => ({
-  TextOrFileInput: {
-    props: ['value', 'label', 'validationStatus', 'feedback', 'showFeedback', 'placeholder'],
-    emits: ['update:value'],
-    template:
-      '<div class="text-or-file" :data-status="validationStatus" :data-feedback="feedback">' +
-      '<textarea class="salt-input" :value="value" @input="$emit(\'update:value\', $event.target.value)" />' +
-      '</div>',
-  },
-}))
-
 vi.mock('naive-ui', () => ({
+  NButton: {
+    emits: ['click'],
+    template:
+      '<button class="generate-salt" @click="$emit(\'click\')"><slot /><slot name="icon" /></button>',
+  },
   NFormItem: {
     props: ['label', 'validationStatus', 'feedback', 'showFeedback'],
     template:
       '<div class="form-item" :data-label="label" :data-status="validationStatus" :data-feedback="feedback"><slot /></div>',
   },
   NInput: {
-    props: ['value'],
+    props: ['value', 'type', 'readonly'],
     emits: ['update:value'],
-    template:
-      '<input class="password-input" :value="value || \'\'" @input="$emit(\'update:value\', $event.target.value)" />',
+    template: `<input :class="type === 'password' ? 'password-input' : 'salt-input'" :readonly="readonly" :value="value || ''" @input="$emit('update:value', $event.target.value)" />`,
   },
   NInputNumber: {
     props: ['value'],
     emits: ['update:value'],
-    template:
-      '<input class="number-input" :value="value ?? \'\'" @input="$emit(\'update:value\', $event.target.value === \'\' ? null : Number($event.target.value))" />',
+    template: `<input class="number-input" :value="value ?? ''" @input="$emit('update:value', $event.target.value === '' ? null : Number($event.target.value))" />`,
   },
   NSelect: {
     props: ['value', 'options'],
@@ -52,6 +44,9 @@ vi.mock('naive-ui', () => ({
       '<select class="select" :value="value" @change="$emit(\'update:value\', $event.target.value)">' +
       '<option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>' +
       '</select>',
+  },
+  NIcon: {
+    template: '<i class="icon" />',
   },
   NGi: {
     template: '<div class="grid-item"><slot /></div>',
@@ -83,7 +78,7 @@ const defaultProps = {
 }
 
 describe('ScryptForm', () => {
-  it('emits v-model updates and shows validation feedback', async () => {
+  it('emits updates, regenerate event, and validation feedback', async () => {
     const wrapper = mount(ScryptForm, {
       props: {
         ...defaultProps,
@@ -97,7 +92,6 @@ describe('ScryptForm', () => {
     })
 
     await wrapper.find('.password-input').setValue('secret')
-    await wrapper.find('.salt-input').setValue('salt')
 
     const select = wrapper.find('.select')
     await select.setValue('hex')
@@ -108,19 +102,21 @@ describe('ScryptForm', () => {
     await numbers[2]?.setValue('4')
     await numbers[3]?.setValue('2')
 
+    await wrapper.find('.generate-salt').trigger('click')
+
     expect(wrapper.emitted('update:password')?.[0]).toEqual(['secret'])
-    expect(wrapper.emitted('update:salt')?.[0]).toEqual(['salt'])
     expect(wrapper.emitted('update:saltFormat')?.[0]).toEqual(['hex'])
     expect(wrapper.emitted('update:costFactor')?.[0]).toEqual([2048])
     expect(wrapper.emitted('update:length')?.[0]).toEqual([64])
     expect(wrapper.emitted('update:blockSize')?.[0]).toEqual([4])
     expect(wrapper.emitted('update:parallelism')?.[0]).toEqual([2])
+    expect(wrapper.emitted('generate-salt')?.length).toBe(1)
 
     expect(wrapper.find('[data-label="N (Cost Factor)"]').attributes('data-feedback')).toBe(
       'range-invalid',
     )
     expect(wrapper.find('[data-label="length"]').attributes('data-feedback')).toBe('length-invalid')
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('salt-invalid-hex')
   })
 
   it('renders power-of-two feedback for cost factor', () => {
@@ -154,6 +150,8 @@ describe('ScryptForm', () => {
       },
     })
 
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-base64')
+    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe(
+      'salt-invalid-base64',
+    )
   })
 })
