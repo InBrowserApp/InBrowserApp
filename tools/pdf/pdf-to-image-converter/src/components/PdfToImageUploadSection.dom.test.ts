@@ -11,6 +11,8 @@ vi.mock('naive-ui', async () => {
     })
 
   return {
+    NDescriptions: wrapper('NDescriptions'),
+    NDescriptionsItem: wrapper('NDescriptionsItem'),
     NFlex: wrapper('NFlex'),
     NText: wrapper('NText'),
   }
@@ -45,10 +47,18 @@ vi.mock('@shared/ui/domain/pdf', () => ({
 
 import PdfToImageUploadSection from './PdfToImageUploadSection.vue'
 
+const baseProps = {
+  isLoadingDocument: false,
+  uploadedFileName: '',
+  uploadedFileSize: 0,
+  uploadedFileType: '',
+  numPages: 0,
+}
+
 describe('PdfToImageUploadSection', () => {
   it('re-emits uploaded file', async () => {
     const wrapper = mount(PdfToImageUploadSection, {
-      props: { isLoadingDocument: false },
+      props: baseProps,
     })
 
     await wrapper.get('button.upload').trigger('click')
@@ -60,9 +70,28 @@ describe('PdfToImageUploadSection', () => {
 
   it('shows loading text when loading', () => {
     const wrapper = mount(PdfToImageUploadSection, {
-      props: { isLoadingDocument: true },
+      props: {
+        ...baseProps,
+        isLoadingDocument: true,
+      },
     })
 
     expect(wrapper.text()).toContain('Loading PDF pages')
+  })
+
+  it('shows uploaded file information', () => {
+    const wrapper = mount(PdfToImageUploadSection, {
+      props: {
+        ...baseProps,
+        uploadedFileName: 'example.pdf',
+        uploadedFileSize: 1024,
+        uploadedFileType: 'application/pdf',
+        numPages: 3,
+      },
+    })
+
+    expect(wrapper.text()).toContain('example.pdf')
+    expect(wrapper.text()).toContain('application/pdf')
+    expect(wrapper.text()).toContain('3')
   })
 })

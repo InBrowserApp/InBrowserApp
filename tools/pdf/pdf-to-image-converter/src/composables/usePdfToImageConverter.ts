@@ -65,6 +65,10 @@ export function usePdfToImageConverter(options: UsePdfToImageConverterOptions = 
   const currentImageURL = computed(() => currentImageObjectURL.value ?? null)
   const zipDownloadURL = computed(() => zipDownloadObjectURL.value ?? null)
 
+  const uploadedFileName = computed(() => pdfFile.value?.name ?? '')
+  const uploadedFileSize = computed(() => pdfFile.value?.size ?? 0)
+  const uploadedFileType = computed(() => pdfFile.value?.type ?? '')
+
   const currentDownloadName = computed(() => {
     if (!pdfFile.value) return 'page.png'
     return createPageImageName(pdfFile.value.name, page.value, format.value)
@@ -233,6 +237,9 @@ export function usePdfToImageConverter(options: UsePdfToImageConverterOptions = 
     isExporting,
     exportProgress,
     errorMessage,
+    uploadedFileName,
+    uploadedFileSize,
+    uploadedFileType,
     currentImageURL,
     currentDownloadName,
     zipDownloadURL,

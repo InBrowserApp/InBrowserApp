@@ -3,28 +3,28 @@
     <ToolSectionHeader>{{ t('previewTitle') }}</ToolSectionHeader>
 
     <n-flex vertical :size="12">
-      <n-card size="small">
-        <div class="preview-wrapper">
-          <n-spin v-if="isRendering" size="small" />
-          <n-alert v-else-if="errorMessage" type="error" :title="t('renderErrorTitle')">
-            {{ errorMessage }}
-          </n-alert>
-          <img
-            v-else-if="previewUrl"
-            :src="previewUrl"
-            :alt="t('previewTitle')"
-            class="preview-image"
-          />
-          <n-empty v-else :description="t('emptyPreview')" />
+      <div class="preview-stage">
+        <n-spin v-if="isRendering" size="small" />
+        <n-alert
+          v-else-if="errorMessage"
+          class="preview-alert"
+          type="error"
+          :title="t('renderErrorTitle')"
+        >
+          {{ errorMessage }}
+        </n-alert>
+        <div v-else-if="previewUrl" class="preview-image-frame">
+          <img :src="previewUrl" :alt="t('previewTitle')" class="preview-image" />
         </div>
-      </n-card>
+        <n-empty v-else :description="t('emptyPreview')" />
+      </div>
 
       <n-flex align="center" justify="space-between" :size="8" wrap>
         <n-text depth="3">{{ t('pageInfo', { page, total: numPages }) }}</n-text>
         <n-text v-if="pageImage" depth="3">{{ detailsText }}</n-text>
       </n-flex>
 
-      <n-flex justify="center">
+      <n-flex v-if="numPages > 1" justify="center">
         <n-pagination
           v-model:page="pageModel"
           :page-count="numPages"
@@ -41,7 +41,7 @@
 import { computed, toRef } from 'vue'
 import { filesize } from 'filesize'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NCard, NEmpty, NFlex, NPagination, NSpin, NText } from 'naive-ui'
+import { NAlert, NEmpty, NFlex, NPagination, NSpin, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PdfPageImage } from '../types'
@@ -81,11 +81,24 @@ const detailsText = computed(() => {
 </script>
 
 <style scoped>
-.preview-wrapper {
+.preview-stage {
   min-height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
+}
+
+.preview-alert {
+  max-width: min(100%, 680px);
+}
+
+.preview-image-frame {
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--n-border-color);
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .preview-image {
