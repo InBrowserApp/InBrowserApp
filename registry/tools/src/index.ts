@@ -57,6 +57,7 @@ import { toolInfo as hashToolsToolInfo } from '@tools/hash-tools'
 import { toolInfo as sriHashGeneratorToolInfo } from '@tools/sri-hash-generator'
 import { toolInfo as crcChecksumCalculatorToolInfo } from '@tools/crc-checksum-calculator'
 import { toolInfo as cityhash64HashTextOrFileToolInfo } from '@tools/cityhash64-hash-text-or-file'
+import { toolInfo as highwayhashHashTextOrFileToolInfo } from '@tools/highwayhash-hash-text-or-file'
 import { toolInfo as siphash2_4HashTextOrFileToolInfo } from '@tools/siphash-2-4-hash-text-or-file'
 import { toolInfo as siphash128_2_4HashTextOrFileToolInfo } from '@tools/siphash-128-2-4-hash-text-or-file'
 import { toolInfo as murmurhash3X64_128HashTextOrFileToolInfo } from '@tools/murmurhash3-x64-128-hash-text-or-file'
@@ -285,6 +286,7 @@ export const tools: ToolInfo[] = [
   sriHashGeneratorToolInfo,
   crcChecksumCalculatorToolInfo,
   cityhash64HashTextOrFileToolInfo,
+  highwayhashHashTextOrFileToolInfo,
   siphash2_4HashTextOrFileToolInfo,
   siphash128_2_4HashTextOrFileToolInfo,
   murmurhash3X86_32HashTextOrFileToolInfo,
