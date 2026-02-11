@@ -46,28 +46,28 @@ const { t } = useI18n({ useScope: 'local' })
     "output-empty": "Formatting output appears here."
   },
   "zh": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "原始 SQL",
+    "formatted-sql": "格式化 SQL",
+    "input-placeholder": "在此粘贴 SQL，支持多语句。",
+    "output-empty": "格式化后的 SQL 将显示在这里。"
   },
   "zh-CN": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "原始 SQL",
+    "formatted-sql": "格式化 SQL",
+    "input-placeholder": "在此粘贴 SQL，支持多语句。",
+    "output-empty": "格式化后的 SQL 将显示在这里。"
   },
   "zh-TW": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "原始 SQL",
+    "formatted-sql": "格式化 SQL",
+    "input-placeholder": "在此貼上 SQL，支援多語句。",
+    "output-empty": "格式化後的 SQL 會顯示在這裡。"
   },
   "zh-HK": {
-    "source-sql": "Source SQL",
-    "formatted-sql": "Formatted SQL",
-    "input-placeholder": "Paste SQL here...",
-    "output-empty": "Formatting output appears here."
+    "source-sql": "原始 SQL",
+    "formatted-sql": "格式化 SQL",
+    "input-placeholder": "在此貼上 SQL，支援多語句。",
+    "output-empty": "格式化後的 SQL 會顯示在這裡。"
   },
   "es": {
     "source-sql": "Source SQL",

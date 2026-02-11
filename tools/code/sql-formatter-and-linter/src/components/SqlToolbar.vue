@@ -72,28 +72,28 @@ const { t } = useI18n({ useScope: 'local' })
     "download-formatted": "Download formatted SQL"
   },
   "zh": {
-    "import-from-file": "Import from file",
-    "use-sample": "Use sample",
-    "clear": "Clear",
-    "download-formatted": "Download formatted SQL"
+    "import-from-file": "从文件导入",
+    "use-sample": "使用示例",
+    "clear": "清空",
+    "download-formatted": "下载格式化 SQL"
   },
   "zh-CN": {
-    "import-from-file": "Import from file",
-    "use-sample": "Use sample",
-    "clear": "Clear",
-    "download-formatted": "Download formatted SQL"
+    "import-from-file": "从文件导入",
+    "use-sample": "使用示例",
+    "clear": "清空",
+    "download-formatted": "下载格式化 SQL"
   },
   "zh-TW": {
-    "import-from-file": "Import from file",
-    "use-sample": "Use sample",
-    "clear": "Clear",
-    "download-formatted": "Download formatted SQL"
+    "import-from-file": "從檔案匯入",
+    "use-sample": "使用範例",
+    "clear": "清除",
+    "download-formatted": "下載格式化 SQL"
   },
   "zh-HK": {
-    "import-from-file": "Import from file",
-    "use-sample": "Use sample",
-    "clear": "Clear",
-    "download-formatted": "Download formatted SQL"
+    "import-from-file": "從檔案匯入",
+    "use-sample": "使用範例",
+    "clear": "清除",
+    "download-formatted": "下載格式化 SQL"
   },
   "es": {
     "import-from-file": "Import from file",

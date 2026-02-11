@@ -11,6 +11,15 @@
   </ToolSection>
 
   <ToolSection>
+    <ToolSectionHeader>{{ t('input-output') }}</ToolSectionHeader>
+    <SqlInputOutput
+      v-model:source-sql="sourceSql"
+      :formatted-sql="formattedSql"
+      :format-error="formatError"
+    />
+  </ToolSection>
+
+  <ToolSection>
     <ToolSectionHeader>{{ t('format-options') }}</ToolSectionHeader>
     <SqlFormatOptions
       v-model:dialect="dialect"
@@ -31,15 +40,6 @@
       v-model:check-unsafe-mutation="checkUnsafeMutation"
       v-model:require-semicolon="requireSemicolon"
       v-model:max-line-length="maxLineLength"
-    />
-  </ToolSection>
-
-  <ToolSection>
-    <ToolSectionHeader>{{ t('input-output') }}</ToolSectionHeader>
-    <SqlInputOutput
-      v-model:source-sql="sourceSql"
-      :formatted-sql="formattedSql"
-      :format-error="formatError"
     />
   </ToolSection>
 
@@ -227,32 +227,32 @@ async function importFromFile(): Promise<void> {
     "format-error": "Formatting failed"
   },
   "zh": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "格式化选项",
+    "lint-options": "Lint 选项",
+    "input-output": "SQL 输入与输出",
+    "lint-results": "Lint 结果",
+    "format-error": "格式化失败"
   },
   "zh-CN": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "格式化选项",
+    "lint-options": "Lint 选项",
+    "input-output": "SQL 输入与输出",
+    "lint-results": "Lint 结果",
+    "format-error": "格式化失败"
   },
   "zh-TW": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "格式化選項",
+    "lint-options": "Lint 選項",
+    "input-output": "SQL 輸入與輸出",
+    "lint-results": "Lint 結果",
+    "format-error": "格式化失敗"
   },
   "zh-HK": {
-    "format-options": "Format Options",
-    "lint-options": "Lint Options",
-    "input-output": "SQL Input & Output",
-    "lint-results": "Lint Results",
-    "format-error": "Formatting failed"
+    "format-options": "格式化選項",
+    "lint-options": "Lint 選項",
+    "input-output": "SQL 輸入與輸出",
+    "lint-results": "Lint 結果",
+    "format-error": "格式化失敗"
   },
   "es": {
     "format-options": "Format Options",

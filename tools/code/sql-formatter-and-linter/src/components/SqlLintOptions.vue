@@ -45,28 +45,28 @@ const { t } = useI18n({ useScope: 'local' })
     "max-line-length": "Max line length"
   },
   "zh": {
-    "no-select-star": "Warn on SELECT *",
-    "unsafe-update-delete": "Warn on UPDATE/DELETE without WHERE",
-    "require-semicolon": "Warn on missing semicolon",
-    "max-line-length": "Max line length"
+    "no-select-star": "检查 SELECT *",
+    "unsafe-update-delete": "检查无 WHERE 的 UPDATE/DELETE",
+    "require-semicolon": "检查语句分号",
+    "max-line-length": "最大行长度"
   },
   "zh-CN": {
-    "no-select-star": "Warn on SELECT *",
-    "unsafe-update-delete": "Warn on UPDATE/DELETE without WHERE",
-    "require-semicolon": "Warn on missing semicolon",
-    "max-line-length": "Max line length"
+    "no-select-star": "检查 SELECT *",
+    "unsafe-update-delete": "检查无 WHERE 的 UPDATE/DELETE",
+    "require-semicolon": "检查语句分号",
+    "max-line-length": "最大行长度"
   },
   "zh-TW": {
-    "no-select-star": "Warn on SELECT *",
-    "unsafe-update-delete": "Warn on UPDATE/DELETE without WHERE",
-    "require-semicolon": "Warn on missing semicolon",
-    "max-line-length": "Max line length"
+    "no-select-star": "檢查 SELECT *",
+    "unsafe-update-delete": "檢查無 WHERE 的 UPDATE/DELETE",
+    "require-semicolon": "檢查語句分號",
+    "max-line-length": "最大行長度"
   },
   "zh-HK": {
-    "no-select-star": "Warn on SELECT *",
-    "unsafe-update-delete": "Warn on UPDATE/DELETE without WHERE",
-    "require-semicolon": "Warn on missing semicolon",
-    "max-line-length": "Max line length"
+    "no-select-star": "檢查 SELECT *",
+    "unsafe-update-delete": "檢查無 WHERE 的 UPDATE/DELETE",
+    "require-semicolon": "檢查語句分號",
+    "max-line-length": "最大行長度"
   },
   "es": {
     "no-select-star": "Warn on SELECT *",
