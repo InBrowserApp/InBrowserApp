@@ -16,6 +16,9 @@
       :parallelism-max="maxParallelism"
       :length-min="minLength"
       :length-max="maxLength"
+      :cost-factor-label="costFactorLabel"
+      :block-size-label="blockSizeLabel"
+      :parallelism-label="parallelismLabel"
       :cost-factor-valid="costFactorValid"
       :cost-factor-power-of-two="costFactorPowerOfTwo"
       :block-size-valid="blockSizeState.isValid"
@@ -48,12 +51,15 @@ import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import { useStorage } from '@vueuse/core'
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { isValidBase16 } from '@utils/base16'
 import type { SaltFormat } from './types'
 import { isValidBase64 } from './utils'
 import ScryptForm from './components/ScryptForm.vue'
 import ScryptResult from './components/ScryptResult.vue'
 import WhatIsScrypt from './components/WhatIsScrypt.vue'
+
+const { t } = useI18n()
 
 const minCostFactor = 1024
 const maxCostFactor = 1048576
@@ -70,6 +76,21 @@ const defaultParallelism = 1
 const minLength = 16
 const maxLength = 256
 const defaultLength = 32
+
+const costFactorLabel = computed(() => {
+  const message = t('cost-factor-label')
+  return message === 'cost-factor-label' ? 'N (Cost Factor)' : message
+})
+
+const blockSizeLabel = computed(() => {
+  const message = t('block-size-label')
+  return message === 'block-size-label' ? 'r (Block Size)' : message
+})
+
+const parallelismLabel = computed(() => {
+  const message = t('parallelism-label')
+  return message === 'parallelism-label' ? 'p (Parallelism)' : message
+})
 
 const password = ref('')
 const salt = ref<string | File>('')
@@ -141,3 +162,133 @@ const saltErrorType = computed((): '' | 'hex' | 'base64' => {
   return ''
 })
 </script>
+
+<i18n lang="json">
+{
+  "en": {
+    "cost-factor-label": "N (Cost Factor)",
+    "block-size-label": "r (Block Size)",
+    "parallelism-label": "p (Parallelism)"
+  },
+  "zh": {
+    "cost-factor-label": "N（成本因子）",
+    "block-size-label": "r（块大小）",
+    "parallelism-label": "p（并行度）"
+  },
+  "zh-CN": {
+    "cost-factor-label": "N（成本因子）",
+    "block-size-label": "r（块大小）",
+    "parallelism-label": "p（并行度）"
+  },
+  "zh-TW": {
+    "cost-factor-label": "N（成本因子）",
+    "block-size-label": "r（區塊大小）",
+    "parallelism-label": "p（並行度）"
+  },
+  "zh-HK": {
+    "cost-factor-label": "N（成本因子）",
+    "block-size-label": "r（區塊大小）",
+    "parallelism-label": "p（並行度）"
+  },
+  "es": {
+    "cost-factor-label": "N (factor de costo)",
+    "block-size-label": "r (tamaño de bloque)",
+    "parallelism-label": "p (paralelismo)"
+  },
+  "fr": {
+    "cost-factor-label": "N (facteur de coût)",
+    "block-size-label": "r (taille de bloc)",
+    "parallelism-label": "p (parallélisme)"
+  },
+  "de": {
+    "cost-factor-label": "N (Kostenfaktor)",
+    "block-size-label": "r (Blockgröße)",
+    "parallelism-label": "p (Parallelität)"
+  },
+  "it": {
+    "cost-factor-label": "N (fattore di costo)",
+    "block-size-label": "r (dimensione del blocco)",
+    "parallelism-label": "p (parallelismo)"
+  },
+  "ja": {
+    "cost-factor-label": "N（コスト係数）",
+    "block-size-label": "r（ブロックサイズ）",
+    "parallelism-label": "p（並列度）"
+  },
+  "ko": {
+    "cost-factor-label": "N(비용 인자)",
+    "block-size-label": "r(블록 크기)",
+    "parallelism-label": "p(병렬화)"
+  },
+  "ru": {
+    "cost-factor-label": "N (коэффициент стоимости)",
+    "block-size-label": "r (размер блока)",
+    "parallelism-label": "p (параллелизм)"
+  },
+  "pt": {
+    "cost-factor-label": "N (fator de custo)",
+    "block-size-label": "r (tamanho de bloco)",
+    "parallelism-label": "p (paralelismo)"
+  },
+  "ar": {
+    "cost-factor-label": "N (عامل الكلفة)",
+    "block-size-label": "r (حجم الكتلة)",
+    "parallelism-label": "p (التوازي)"
+  },
+  "hi": {
+    "cost-factor-label": "N (कॉस्ट फ़ैक्टर)",
+    "block-size-label": "r (ब्लॉक आकार)",
+    "parallelism-label": "p (पैरेललिज़्म)"
+  },
+  "tr": {
+    "cost-factor-label": "N (maliyet faktörü)",
+    "block-size-label": "r (blok boyutu)",
+    "parallelism-label": "p (paralellik)"
+  },
+  "nl": {
+    "cost-factor-label": "N (kostenfactor)",
+    "block-size-label": "r (blokgrootte)",
+    "parallelism-label": "p (parallelisme)"
+  },
+  "sv": {
+    "cost-factor-label": "N (kostnadsfaktor)",
+    "block-size-label": "r (blockstorlek)",
+    "parallelism-label": "p (parallellism)"
+  },
+  "pl": {
+    "cost-factor-label": "N (współczynnik kosztu)",
+    "block-size-label": "r (rozmiar bloku)",
+    "parallelism-label": "p (równoległość)"
+  },
+  "vi": {
+    "cost-factor-label": "N (hệ số chi phí)",
+    "block-size-label": "r (kích thước khối)",
+    "parallelism-label": "p (mức song song)"
+  },
+  "th": {
+    "cost-factor-label": "N (ตัวคูณต้นทุน)",
+    "block-size-label": "r (ขนาดบล็อก)",
+    "parallelism-label": "p (ระดับการทำงานขนาน)"
+  },
+  "id": {
+    "cost-factor-label": "N (faktor biaya)",
+    "block-size-label": "r (ukuran blok)",
+    "parallelism-label": "p (paralelisme)"
+  },
+  "he": {
+    "cost-factor-label": "N (מקדם עלות)",
+    "block-size-label": "r (גודל בלוק)",
+    "parallelism-label": "p (מקביליות)"
+  },
+  "ms": {
+    "cost-factor-label": "N (faktor kos)",
+    "block-size-label": "r (saiz blok)",
+    "parallelism-label": "p (paralelisme)"
+  },
+  "no": {
+    "cost-factor-label": "N (kostnadsfaktor)",
+    "block-size-label": "r (blokkstørrelse)",
+    "parallelism-label": "p (parallellitet)"
+  }
+}
+</i18n>

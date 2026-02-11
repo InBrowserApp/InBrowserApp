@@ -15,7 +15,7 @@
       </n-gi>
       <n-gi>
         <n-form-item
-          label="N (Cost Factor)"
+          :label="props.costFactorLabel"
           :validation-status="costFactorStatus"
           :feedback="costFactorFeedback"
           :show-feedback="!!costFactorFeedback"
@@ -64,7 +64,7 @@
       </n-gi>
       <n-gi>
         <n-form-item
-          label="r (Block Size)"
+          :label="props.blockSizeLabel"
           :validation-status="blockSizeStatus"
           :feedback="blockSizeFeedback"
           :show-feedback="!!blockSizeFeedback"
@@ -81,7 +81,7 @@
       </n-gi>
       <n-gi>
         <n-form-item
-          label="p (Parallelism)"
+          :label="props.parallelismLabel"
           :validation-status="parallelismStatus"
           :feedback="parallelismFeedback"
           :show-feedback="!!parallelismFeedback"
@@ -109,22 +109,32 @@ import { TextOrFileInput } from '@shared/ui/base'
 import { SALT_FORMAT_OPTIONS } from '../types'
 import type { SaltFormat } from '../types'
 
-const props = defineProps<{
-  costFactorMin: number
-  costFactorMax: number
-  blockSizeMin: number
-  blockSizeMax: number
-  parallelismMin: number
-  parallelismMax: number
-  lengthMin: number
-  lengthMax: number
-  costFactorValid: boolean
-  costFactorPowerOfTwo: boolean
-  blockSizeValid: boolean
-  parallelismValid: boolean
-  lengthValid: boolean
-  saltErrorType: '' | 'hex' | 'base64'
-}>()
+const props = withDefaults(
+  defineProps<{
+    costFactorMin: number
+    costFactorMax: number
+    blockSizeMin: number
+    blockSizeMax: number
+    parallelismMin: number
+    parallelismMax: number
+    lengthMin: number
+    lengthMax: number
+    costFactorValid: boolean
+    costFactorPowerOfTwo: boolean
+    blockSizeValid: boolean
+    parallelismValid: boolean
+    lengthValid: boolean
+    saltErrorType: '' | 'hex' | 'base64'
+    costFactorLabel?: string
+    blockSizeLabel?: string
+    parallelismLabel?: string
+  }>(),
+  {
+    costFactorLabel: 'N (Cost Factor)',
+    blockSizeLabel: 'r (Block Size)',
+    parallelismLabel: 'p (Parallelism)',
+  },
+)
 
 const { t } = useI18n()
 
