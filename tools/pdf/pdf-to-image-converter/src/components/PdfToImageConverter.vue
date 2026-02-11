@@ -1,34 +1,48 @@
 <template>
-  <PdfToImageUploadSection :is-loading-document="isLoadingDocument" @upload-file="handleUpload" />
+  <div class="converter-layout">
+    <div class="converter-controls" :class="{ 'has-options': numPages > 0 }">
+      <div class="converter-controls-item">
+        <PdfToImageUploadSection
+          :is-loading-document="isLoadingDocument"
+          :uploaded-file-name="uploadedFileName"
+          :uploaded-file-size="uploadedFileSize"
+          :uploaded-file-type="uploadedFileType"
+          :num-pages="numPages"
+          @upload-file="handleUpload"
+        />
+      </div>
 
-  <PdfToImageOptionsSection
-    v-if="numPages > 0"
-    :format="format"
-    :dpi="dpi"
-    :quality="quality"
-    :num-pages="numPages"
-    :has-current-image="Boolean(currentPageImage)"
-    :is-rendering="isRendering"
-    :is-exporting="isExporting"
-    :export-progress="exportProgress"
-    :current-download-url="currentImageURL"
-    :current-download-name="currentDownloadName"
-    :zip-download-url="zipDownloadURL"
-    :zip-download-name="zipDownloadName"
-    @update:format="setFormat"
-    @update:dpi="setDpi"
-    @update:quality="setQuality"
-    @export-all="exportAllPages"
-  />
+      <div v-if="numPages > 0" class="converter-controls-item">
+        <PdfToImageOptionsSection
+          :format="format"
+          :dpi="dpi"
+          :quality="quality"
+          :num-pages="numPages"
+          :has-current-image="Boolean(currentPageImage)"
+          :is-rendering="isRendering"
+          :is-exporting="isExporting"
+          :export-progress="exportProgress"
+          :current-download-url="currentImageURL"
+          :current-download-name="currentDownloadName"
+          :zip-download-url="zipDownloadURL"
+          :zip-download-name="zipDownloadName"
+          @update:format="setFormat"
+          @update:dpi="setDpi"
+          @update:quality="setQuality"
+          @export-all="exportAllPages"
+        />
+      </div>
+    </div>
 
-  <PdfToImagePreviewSection
-    :page="page"
-    :num-pages="numPages"
-    :page-image="currentPageImage"
-    :is-rendering="isRendering"
-    :error-message="errorMessage"
-    @update:page="page = $event"
-  />
+    <PdfToImagePreviewSection
+      :page="page"
+      :num-pages="numPages"
+      :page-image="currentPageImage"
+      :is-rendering="isRendering"
+      :error-message="errorMessage"
+      @update:page="page = $event"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -52,6 +66,9 @@ const {
   isExporting,
   exportProgress,
   errorMessage,
+  uploadedFileName,
+  uploadedFileSize,
+  uploadedFileType,
   currentImageURL,
   currentDownloadName,
   zipDownloadURL,
@@ -73,6 +90,31 @@ const {
   },
 })
 </script>
+
+<style scoped>
+.converter-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.converter-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.converter-controls-item {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .converter-controls.has-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+</style>
 
 <i18n lang="json">
 {

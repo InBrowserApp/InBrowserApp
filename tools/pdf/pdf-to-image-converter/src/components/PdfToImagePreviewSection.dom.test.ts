@@ -12,7 +12,6 @@ vi.mock('naive-ui', async () => {
 
   return {
     NAlert: wrapper('NAlert'),
-    NCard: wrapper('NCard'),
     NEmpty: wrapper('NEmpty'),
     NFlex: wrapper('NFlex'),
     NPagination: defineComponent({
@@ -63,6 +62,12 @@ describe('PdfToImagePreviewSection', () => {
     await wrapper.findComponent({ name: 'NPagination' }).vm.$emit('update:page', 2)
 
     expect(wrapper.emitted('update:page')?.[0]).toEqual([2])
+  })
+
+  it('hides pagination when only one page', () => {
+    const wrapper = mountComponent({ numPages: 1 })
+
+    expect(wrapper.findComponent({ name: 'NPagination' }).exists()).toBe(false)
   })
 
   it('renders image details text when image exists', () => {

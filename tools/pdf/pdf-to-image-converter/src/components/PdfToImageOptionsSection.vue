@@ -14,32 +14,30 @@
         </n-form-item>
 
         <n-form-item :label="t('dpi')">
-          <n-flex vertical :size="8" style="width: 100%">
-            <n-input-number
-              :value="dpi"
-              :min="minDpi"
-              :max="maxDpi"
-              :step="1"
+          <n-input-number
+            :value="dpi"
+            :min="minDpi"
+            :max="maxDpi"
+            :step="1"
+            :disabled="isRendering || isExporting"
+            style="width: 100%"
+            @update:value="handleDpiChange"
+          />
+        </n-form-item>
+
+        <n-form-item :label="t('preset')">
+          <n-flex :size="8" wrap>
+            <n-button
+              v-for="presetValue in dpiPresets"
+              :key="presetValue"
+              size="small"
+              tertiary
+              :type="dpi === presetValue ? 'primary' : 'default'"
               :disabled="isRendering || isExporting"
-              style="width: 100%"
-              @update:value="handleDpiChange"
-            />
-            <n-flex align="center" :size="8" wrap>
-              <n-text depth="3">{{ t('preset') }}</n-text>
-              <n-button-group>
-                <n-button
-                  v-for="presetValue in dpiPresets"
-                  :key="presetValue"
-                  size="small"
-                  tertiary
-                  :type="dpi === presetValue ? 'primary' : 'default'"
-                  :disabled="isRendering || isExporting"
-                  @click="setDpiPreset(presetValue)"
-                >
-                  {{ presetValue }}
-                </n-button>
-              </n-button-group>
-            </n-flex>
+              @click="setDpiPreset(presetValue)"
+            >
+              {{ presetValue }}
+            </n-button>
           </n-flex>
         </n-form-item>
 
@@ -74,17 +72,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import {
-  NButton,
-  NButtonGroup,
-  NFlex,
-  NForm,
-  NFormItem,
-  NInputNumber,
-  NSlider,
-  NSelect,
-  NText,
-} from 'naive-ui'
+import { NButton, NFlex, NForm, NFormItem, NInputNumber, NSlider, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ImageFormat } from '../types'
