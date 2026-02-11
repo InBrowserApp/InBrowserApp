@@ -20,6 +20,7 @@ import { routes as gifToApngConverterRoutes } from '@tools/gif-to-apng-converter
 import { routes as gifToAnimatedWebpConverterRoutes } from '@tools/gif-to-animated-webp-converter/routes'
 import { routes as imageToIcoRoutes } from '@tools/image-to-ico/routes'
 import { routes as imageToWebpConverterRoutes } from '@tools/image-to-webp-converter/routes'
+import { routes as imageResizerRoutes } from '@tools/image-resizer/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
 import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as imagePaletteExtractorRoutes } from '@tools/image-palette-extractor/routes'
@@ -209,6 +210,7 @@ export const routes: ToolRoute[] = [
   ...gifToAnimatedWebpConverterRoutes,
   ...imageToIcoRoutes,
   ...imageToWebpConverterRoutes,
+  ...imageResizerRoutes,
   ...svgOptimizerRoutes,
   ...svgToImageConverterRoutes,
   ...exifViewerRoutes,
