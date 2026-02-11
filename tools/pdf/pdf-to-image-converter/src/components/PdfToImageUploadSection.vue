@@ -28,13 +28,13 @@
         label-placement="left"
       >
         <n-descriptions-item :label="t('fileName')">
-          <n-text style="word-break: break-all">{{ uploadedFileName }}</n-text>
+          <n-text class="file-info-value" :title="uploadedFileName">{{ uploadedFileName }}</n-text>
         </n-descriptions-item>
         <n-descriptions-item :label="t('fileSize')">
-          <n-text>{{ formattedUploadedFileSize }}</n-text>
+          <n-text class="file-info-value">{{ formattedUploadedFileSize }}</n-text>
         </n-descriptions-item>
         <n-descriptions-item v-if="numPages > 0" :label="t('pageCount')">
-          <n-text>{{ numPages }}</n-text>
+          <n-text class="file-info-value">{{ numPages }}</n-text>
         </n-descriptions-item>
       </n-descriptions>
     </n-flex>
@@ -86,6 +86,16 @@ function beforeUploadNewFile(data: { file: UploadFileInfo; fileList: UploadFileI
   return false
 }
 </script>
+
+<style scoped>
+.file-info-value {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
 
 <i18n lang="json">
 {

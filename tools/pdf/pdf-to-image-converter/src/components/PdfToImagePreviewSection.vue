@@ -4,7 +4,9 @@
 
     <n-flex vertical :size="12">
       <div class="preview-stage">
-        <n-spin v-if="isRendering" size="small" />
+        <div v-if="isRendering" class="preview-image-frame preview-skeleton-frame">
+          <n-skeleton class="preview-skeleton" :style="previewSkeletonStyle" />
+        </div>
         <n-alert
           v-else-if="errorMessage"
           class="preview-alert"
@@ -38,10 +40,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, toRef } from 'vue'
+import { computed, ref, toRef, watch } from 'vue'
 import { filesize } from 'filesize'
 import { useObjectUrl } from '@vueuse/core'
-import { NAlert, NEmpty, NFlex, NPagination, NSpin, NText } from 'naive-ui'
+import { NAlert, NEmpty, NFlex, NPagination, NSkeleton, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PdfPageImage } from '../types'
@@ -67,6 +69,32 @@ const pageModel = computed({
 
 const imageRef = toRef(props, 'pageImage')
 const previewUrl = useObjectUrl(computed(() => imageRef.value?.blob ?? null))
+const lastRenderedWidth = ref<number | null>(null)
+const lastRenderedHeight = ref<number | null>(null)
+
+watch(
+  () => props.pageImage,
+  (image) => {
+    if (!image || image.width <= 0 || image.height <= 0) return
+    lastRenderedWidth.value = image.width
+    lastRenderedHeight.value = image.height
+  },
+  { immediate: true },
+)
+
+const previewSkeletonStyle = computed(() => {
+  const fallbackWidth = 360
+  const fallbackAspectRatio = 1 / Math.SQRT2
+
+  const width = lastRenderedWidth.value
+  const height = lastRenderedHeight.value
+
+  return {
+    width: width ? `${width}px` : `${fallbackWidth}px`,
+    maxWidth: '100%',
+    aspectRatio: width && height ? `${width} / ${height}` : `${fallbackAspectRatio}`,
+  }
+})
 
 const detailsText = computed(() => {
   if (!props.pageImage) return ''
@@ -99,6 +127,16 @@ const detailsText = computed(() => {
   border: 1px solid var(--n-border-color);
   border-radius: 8px;
   padding: 8px;
+}
+
+.preview-skeleton-frame {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.preview-skeleton {
+  display: block;
+  border-radius: 6px;
 }
 
 .preview-image {

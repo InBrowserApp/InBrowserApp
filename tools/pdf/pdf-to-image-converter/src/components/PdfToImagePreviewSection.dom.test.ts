@@ -19,7 +19,7 @@ vi.mock('naive-ui', async () => {
       emits: ['update:page'],
       template: '<div class="n-pagination" />',
     }),
-    NSpin: wrapper('NSpin'),
+    NSkeleton: wrapper('NSkeleton'),
     NText: wrapper('NText'),
   }
 })
