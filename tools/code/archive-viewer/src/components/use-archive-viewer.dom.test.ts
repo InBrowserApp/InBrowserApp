@@ -581,4 +581,57 @@ describe('useArchiveViewer', () => {
 
     expect(state.rows.value).toHaveLength(0)
   })
+
+  it('chooses another archive through browser picker api', async () => {
+    const firstEntry: ArchiveEntry = {
+      path: 'first.txt',
+      kind: 'file',
+      size: 5,
+      compressedSize: 3,
+      modifiedAt: null,
+      extension: 'txt',
+    }
+    const secondEntry: ArchiveEntry = {
+      path: 'next.txt',
+      kind: 'file',
+      size: 4,
+      compressedSize: 2,
+      modifiedAt: null,
+      extension: 'txt',
+    }
+
+    const firstHandle = createArchiveHandle([firstEntry], new Blob(['first']))
+    const secondHandle = createArchiveHandle([secondEntry], new Blob(['next']))
+
+    mockedOpenArchive.mockResolvedValueOnce(firstHandle).mockResolvedValueOnce(secondHandle)
+
+    const { state } = mountComposable()
+
+    const firstFile = new File(['first'], 'first.zip')
+    await state.handleBeforeUpload({
+      file: { file: firstFile } as never,
+      fileList: [{ file: firstFile } as never],
+    })
+    await flushPromises()
+
+    const pickerSpy = vi.fn(async () => [
+      {
+        getFile: async () => new File(['next'], 'next.zip'),
+      },
+    ])
+
+    Object.defineProperty(window, 'showOpenFilePicker', {
+      configurable: true,
+      writable: true,
+      value: pickerSpy,
+    })
+
+    await state.chooseAnotherArchive()
+    await flushPromises()
+
+    expect(pickerSpy).toHaveBeenCalledTimes(1)
+    expect(state.archiveFile.value?.name).toBe('next.zip')
+    expect(state.selectedEntry.value?.path).toBe('next.txt')
+    expect((firstHandle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1)
+  })
 })

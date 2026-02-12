@@ -83,6 +83,7 @@ async function clickTableRowByText(wrapper: ReturnType<typeof mountViewer>, text
 
 let createObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
 let revokeObjectUrlSpy: ReturnType<typeof vi.spyOn> | null = null
+let showOpenFilePickerSpy: ReturnType<typeof vi.spyOn> | null = null
 
 beforeEach(() => {
   mockedOpenArchive.mockReset()
@@ -104,13 +105,36 @@ beforeEach(() => {
 
   createObjectUrlSpy = vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock')
   revokeObjectUrlSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined)
+
+  const pickerWindow = window as Window & {
+    showOpenFilePicker?: () => Promise<Array<{ getFile: () => Promise<File> }>>
+  }
+
+  if (!pickerWindow.showOpenFilePicker) {
+    Object.defineProperty(pickerWindow, 'showOpenFilePicker', {
+      value: vi.fn(),
+      writable: true,
+    })
+  }
+
+  showOpenFilePickerSpy = vi
+    .spyOn(
+      pickerWindow as {
+        showOpenFilePicker: () => Promise<Array<{ getFile: () => Promise<File> }>>
+      },
+      'showOpenFilePicker',
+    )
+    .mockRejectedValue(new DOMException('cancelled', 'AbortError'))
 })
 
 afterEach(() => {
   createObjectUrlSpy?.mockRestore()
   revokeObjectUrlSpy?.mockRestore()
+  showOpenFilePickerSpy?.mockRestore()
+
   createObjectUrlSpy = null
   revokeObjectUrlSpy = null
+  showOpenFilePickerSpy = null
 })
 
 describe('ArchiveViewer', () => {
@@ -157,7 +181,6 @@ describe('ArchiveViewer', () => {
     await flushPromises()
 
     expect(wrapper.findAll('tbody tr').some((row) => row.text().includes('docs'))).toBe(true)
-
     expect(wrapper.find('button[aria-label="Up"]').exists()).toBe(false)
   })
 
@@ -192,11 +215,12 @@ describe('ArchiveViewer', () => {
 
     const downloadLink = wrapper
       .findAll('a')
-      .find((link) => link.text().includes('Download selected entry'))
+      .find((link) => link.attributes('download') === 'readme.txt')
     if (!downloadLink) {
       throw new Error('Missing download link')
     }
 
+    expect(downloadLink.text()).toContain('Download')
     expect(downloadLink.attributes('href')).toBe('blob:mock')
     expect(downloadLink.attributes('download')).toBe('readme.txt')
   })
@@ -272,8 +296,8 @@ describe('ArchiveViewer', () => {
     expect(wrapper.text()).toContain('Unsupported file format')
   })
 
-  it('disposes opened archive when clearing file', async () => {
-    const entries: ArchiveEntry[] = [
+  it('chooses a new archive via browser picker and replaces opened archive', async () => {
+    const firstEntries: ArchiveEntry[] = [
       {
         path: 'note.txt',
         size: 4,
@@ -283,24 +307,45 @@ describe('ArchiveViewer', () => {
         extension: 'txt',
       },
     ]
+    const secondEntries: ArchiveEntry[] = [
+      {
+        path: 'next.txt',
+        size: 5,
+        compressedSize: 4,
+        kind: 'file',
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
 
-    const { handle, dispose } = createArchiveHandle(entries, new Blob(['test']))
-    mockedOpenArchive.mockResolvedValue(handle)
+    const first = createArchiveHandle(firstEntries, new Blob(['first']))
+    const second = createArchiveHandle(secondEntries, new Blob(['second']))
+    mockedOpenArchive.mockResolvedValueOnce(first.handle).mockResolvedValueOnce(second.handle)
+
+    const nextFile = makeFile('next.zip', 'next')
+    showOpenFilePickerSpy?.mockResolvedValueOnce([
+      {
+        getFile: async () => nextFile,
+      },
+    ])
 
     const wrapper = mountViewer()
     await uploadSingleFile(wrapper, makeFile('clear.zip'))
 
-    const clearButton = wrapper
+    const chooseButton = wrapper
       .findAll('button')
       .find((button) => button.text() === 'Choose another archive')
-    if (!clearButton) {
-      throw new Error('Missing clear button')
+    if (!chooseButton) {
+      throw new Error('Missing choose button')
     }
 
-    await clearButton.trigger('click')
+    await chooseButton.trigger('click')
     await flushPromises()
 
-    expect(dispose).toHaveBeenCalledTimes(1)
+    expect(showOpenFilePickerSpy).toHaveBeenCalledTimes(1)
+    expect(mockedOpenArchive).toHaveBeenCalledTimes(2)
+    expect((first.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1)
+    expect(wrapper.text()).toContain('next.zip')
     expect(wrapper.text()).not.toContain('clear.zip')
   })
 })

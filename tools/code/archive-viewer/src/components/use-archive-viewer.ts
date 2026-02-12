@@ -1,5 +1,4 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import { filesize } from 'filesize'
 import { useObjectUrl } from '@vueuse/core'
 import type { DataTableColumns, UploadFileInfo } from 'naive-ui'
 import type { ArchiveEntry, ArchiveEntryKind, ArchiveHandle } from '../types'
@@ -10,6 +9,13 @@ import {
   splitPathSegments,
   toDirectoryPath,
 } from './archive-explorer-rows'
+import {
+  copyImageToClipboard,
+  isAbortError,
+  pickArchiveFile,
+  supportsImageClipboard,
+} from './archive-browser-apis'
+import { formatBytes, formatDate, kindLabel } from './archive-format'
 import { renderArchiveRowNameCell } from './archive-row-icon'
 import {
   MAX_TEXT_PREVIEW_BYTES,
@@ -23,7 +29,7 @@ export const labels = {
   uploadHint: 'Click or drag to upload an archive file',
   supportedFormats: 'Supported formats: ZIP, TAR, GZ, TGZ',
   unsupportedFormat: 'Unsupported file format. Please upload ZIP, TAR, GZ, or TGZ.',
-  selectedFile: 'Selected file',
+  selectFileFailed: 'Unable to select archive.',
   selectNewFile: 'Choose another archive',
   localNote: 'Runs locally in your browser. No uploads.',
   parsingArchive: 'Parsing archive entries...',
@@ -37,7 +43,8 @@ export const labels = {
   loadingPreview: 'Loading preview...',
   noPreview: 'Preview is not available for this file type.',
   previewTooLarge: 'Preview is limited to 1 MB. Download to inspect full content.',
-  downloadEntry: 'Download selected entry',
+  downloadEntry: 'Download',
+  copyPreview: 'Copy',
   errorTitle: 'Error',
 } as const
 
@@ -78,7 +85,6 @@ export function useArchiveViewer() {
   let previewRequestToken = 0
 
   const selectedBlobUrl = useObjectUrl(selectedBlob)
-
   const acceptedFormats = SUPPORTED_ARCHIVE_SUFFIXES.join(',')
 
   const breadcrumbs = computed<ArchiveBreadcrumb[]>(() => {
@@ -148,6 +154,24 @@ export function useArchiveViewer() {
 
     const ratio = Math.round((compressedSize / uncompressedSize) * 100)
     return `${formatBytes(compressedSize)} / ${formatBytes(uncompressedSize)} (${ratio}%)`
+  })
+
+  const shouldShowCopyPreview = computed(
+    () => previewKind.value === 'text' || previewKind.value === 'image',
+  )
+
+  const canCopyPreview = computed(() => {
+    if (previewKind.value === 'text') {
+      return (
+        typeof navigator !== 'undefined' && typeof navigator.clipboard?.writeText === 'function'
+      )
+    }
+
+    if (previewKind.value === 'image') {
+      return supportsImageClipboard(selectedBlob.value)
+    }
+
+    return false
   })
 
   const columns: DataTableColumns<ArchiveRow> = [
@@ -223,6 +247,28 @@ export function useArchiveViewer() {
     isPreviewModalVisible.value = false
   }
 
+  async function chooseAnotherArchive() {
+    try {
+      const selected = await pickArchiveFile(SUPPORTED_ARCHIVE_SUFFIXES)
+      if (!selected) {
+        return
+      }
+
+      if (!isSupportedArchiveFile(selected)) {
+        errorMessage.value = labels.unsupportedFormat
+        return
+      }
+
+      await openSelectedFile(selected)
+    } catch (error) {
+      if (isAbortError(error)) {
+        return
+      }
+
+      errorMessage.value = error instanceof Error ? error.message : labels.selectFileFailed
+    }
+  }
+
   async function openSelectedFile(file: File) {
     const requestToken = ++openRequestToken
     isParsing.value = true
@@ -265,6 +311,30 @@ export function useArchiveViewer() {
       if (requestToken === openRequestToken) {
         isParsing.value = false
       }
+    }
+  }
+
+  async function copyPreview() {
+    try {
+      if (previewKind.value === 'text') {
+        if (!canCopyPreview.value) {
+          return
+        }
+
+        await navigator.clipboard.writeText(previewText.value)
+        return
+      }
+
+      if (previewKind.value === 'image') {
+        const blob = selectedBlob.value
+        if (!blob || !supportsImageClipboard(blob)) {
+          return
+        }
+
+        await copyImageToClipboard(blob)
+      }
+    } catch {
+      // noop
     }
   }
 
@@ -394,10 +464,13 @@ export function useArchiveViewer() {
     archiveHandle,
     archiveSizeSummary,
     breadcrumbs,
+    canCopyPreview,
     canGoToParentDirectory,
+    chooseAnotherArchive,
+    clearFile,
     closePreviewModal,
     columns,
-    clearFile,
+    copyPreview,
     downloadName,
     entries,
     errorMessage,
@@ -416,6 +489,7 @@ export function useArchiveViewer() {
     search,
     selectedBlobUrl,
     selectedEntry,
+    shouldShowCopyPreview,
     tableRowProps,
     totalUncompressedSize,
   }
@@ -424,24 +498,4 @@ export function useArchiveViewer() {
 function isSupportedArchiveFile(file: File): boolean {
   const name = file.name.toLowerCase()
   return SUPPORTED_ARCHIVE_SUFFIXES.some((suffix) => name.endsWith(suffix))
-}
-
-function kindLabel(kind: ArchiveEntryKind): string {
-  const map: Record<ArchiveEntryKind, string> = {
-    file: 'file',
-    directory: 'directory',
-    symlink: 'symlink',
-    other: 'other',
-  }
-
-  return map[kind]
-}
-
-function formatBytes(value: number): string {
-  return filesize(value) as string
-}
-
-function formatDate(value: Date | null): string {
-  if (!value) return '-'
-  return value.toLocaleString()
 }
