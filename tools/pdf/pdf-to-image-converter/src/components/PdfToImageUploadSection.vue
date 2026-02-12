@@ -22,13 +22,21 @@
 
       <n-descriptions
         v-if="uploadedFileName"
+        class="file-info-descriptions"
         bordered
         size="small"
         :column="1"
         label-placement="left"
       >
         <n-descriptions-item :label="t('fileName')">
-          <n-text class="file-info-value" :title="uploadedFileName">{{ uploadedFileName }}</n-text>
+          <n-ellipsis
+            class="file-info-value"
+            :line-clamp="1"
+            :tooltip="false"
+            :title="uploadedFileName"
+          >
+            {{ uploadedFileName }}
+          </n-ellipsis>
         </n-descriptions-item>
         <n-descriptions-item :label="t('fileSize')">
           <n-text class="file-info-value">{{ formattedUploadedFileSize }}</n-text>
@@ -48,6 +56,7 @@ import {
   NButton,
   NDescriptions,
   NDescriptionsItem,
+  NEllipsis,
   NFlex,
   NIcon,
   NText,
@@ -88,12 +97,14 @@ function beforeUploadNewFile(data: { file: UploadFileInfo; fileList: UploadFileI
 </script>
 
 <style scoped>
+.file-info-descriptions :deep(.n-descriptions-table-header),
+.file-info-descriptions :deep(.n-descriptions-table-content__label) {
+  white-space: nowrap;
+}
+
 .file-info-value {
   display: block;
   max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 </style>
 
