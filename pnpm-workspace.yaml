@@ -133,6 +133,7 @@ catalog:
   qrcode: ^1.5.4
   reflect-metadata: ^0.2.2
   sitemap: ^9.0.0
+  sql-formatter: ^15.7.0
   sm-crypto: ^0.4.0
   smol-toml: ^1.6.0
   sortablejs: ^1.15.6

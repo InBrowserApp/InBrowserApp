@@ -125,6 +125,7 @@ import { toolInfo as jmespathTesterToolInfo } from '@tools/jmespath-tester'
 import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
 import { toolInfo as prettierCodeFormatterToolInfo } from '@tools/prettier-code-formatter'
+import { toolInfo as sqlFormatterAndLinterToolInfo } from '@tools/sql-formatter-and-linter'
 import { toolInfo as codeScreenshotGeneratorToolInfo } from '@tools/code-screenshot-generator'
 import { toolInfo as curlConverterToolInfo } from '@tools/curl-converter'
 import { toolInfo as dockerRunToComposeToolInfo } from '@tools/docker-run-to-compose'
@@ -252,6 +253,7 @@ export const tools: ToolInfo[] = [
   jsonpathTesterToolInfo,
   openApiToTypescriptToolInfo,
   prettierCodeFormatterToolInfo,
+  sqlFormatterAndLinterToolInfo,
   codeScreenshotGeneratorToolInfo,
   curlConverterToolInfo,
   dockerRunToComposeToolInfo,
