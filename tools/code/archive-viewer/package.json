@@ -14,6 +14,7 @@
     "@vueuse/core": "catalog:",
     "@zip.js/zip.js": "catalog:",
     "filesize": "catalog:",
+    "highlight.js": "catalog:",
     "naive-ui": "catalog:",
     "vue": "catalog:",
     "vue-i18n": "catalog:"

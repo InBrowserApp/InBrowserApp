@@ -24,25 +24,15 @@
           <n-flex vertical :size="4">
             <n-text strong>{{ labels.selectedFile }}</n-text>
             <n-text>{{ archiveFile.name }}</n-text>
-            <n-text depth="3">{{ formatBytes(archiveFile.size) }}</n-text>
+            <n-text depth="3">{{ archiveSizeSummary }}</n-text>
           </n-flex>
-          <n-button @click="clearFile">{{ labels.clearFile }}</n-button>
+          <n-button @click="clearFile">
+            <template #icon>
+              <n-icon :component="ArrowUpload16Regular" />
+            </template>
+            {{ labels.selectNewFile }}
+          </n-button>
         </n-flex>
-
-        <n-grid v-if="archiveHandle && !isParsing" cols="1 700:3" :x-gap="12" :y-gap="8">
-          <n-grid-item>
-            <n-text depth="3">{{ labels.archiveFormat }}</n-text>
-            <n-text strong>{{ archiveHandle.format.toUpperCase() }}</n-text>
-          </n-grid-item>
-          <n-grid-item>
-            <n-text depth="3">{{ labels.entryCount }}</n-text>
-            <n-text strong>{{ entries.length }}</n-text>
-          </n-grid-item>
-          <n-grid-item>
-            <n-text depth="3">{{ labels.totalUncompressed }}</n-text>
-            <n-text strong>{{ formatBytes(totalUncompressedSize) }}</n-text>
-          </n-grid-item>
-        </n-grid>
       </template>
 
       <n-text depth="3">{{ labels.localNote }}</n-text>
@@ -141,13 +131,12 @@
             :src="selectedBlobUrl"
             :alt="selectedEntry.path"
           />
-
-          <n-input
+          <n-code
             v-else-if="previewKind === 'text'"
-            type="textarea"
-            :value="previewText"
-            readonly
-            :autosize="{ minRows: 8, maxRows: 18 }"
+            :code="previewText"
+            :language="previewLanguage"
+            :hljs="hljs"
+            word-wrap
           />
 
           <n-alert v-else type="info">{{ previewText || labels.noPreview }}</n-alert>
@@ -173,11 +162,10 @@ import {
   NBreadcrumbItem,
   NButton,
   NCard,
+  NCode,
   NDataTable,
   NEmpty,
   NFlex,
-  NGrid,
-  NGridItem,
   NIcon,
   NImage,
   NInput,
@@ -188,21 +176,60 @@ import {
   NUploadDragger,
 } from 'naive-ui'
 import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
+import ArrowUpload16Regular from '@vicons/fluent/ArrowUpload16Regular'
 import FolderZip16Regular from '@vicons/fluent/FolderZip16Regular'
+import hljs from 'highlight.js/lib/core'
+import bashLang from 'highlight.js/lib/languages/bash'
+import cssLang from 'highlight.js/lib/languages/css'
+import goLang from 'highlight.js/lib/languages/go'
+import iniLang from 'highlight.js/lib/languages/ini'
+import javaLang from 'highlight.js/lib/languages/java'
+import javascriptLang from 'highlight.js/lib/languages/javascript'
+import jsonLang from 'highlight.js/lib/languages/json'
+import kotlinLang from 'highlight.js/lib/languages/kotlin'
+import markdownLang from 'highlight.js/lib/languages/markdown'
+import phpLang from 'highlight.js/lib/languages/php'
+import plaintextLang from 'highlight.js/lib/languages/plaintext'
+import pythonLang from 'highlight.js/lib/languages/python'
+import rubyLang from 'highlight.js/lib/languages/ruby'
+import rustLang from 'highlight.js/lib/languages/rust'
+import sqlLang from 'highlight.js/lib/languages/sql'
+import typescriptLang from 'highlight.js/lib/languages/typescript'
+import xmlLang from 'highlight.js/lib/languages/xml'
+import yamlLang from 'highlight.js/lib/languages/yaml'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useArchiveViewer } from './use-archive-viewer'
+
+hljs.registerLanguage('bash', bashLang)
+hljs.registerLanguage('css', cssLang)
+hljs.registerLanguage('go', goLang)
+hljs.registerLanguage('ini', iniLang)
+hljs.registerLanguage('java', javaLang)
+hljs.registerLanguage('javascript', javascriptLang)
+hljs.registerLanguage('json', jsonLang)
+hljs.registerLanguage('kotlin', kotlinLang)
+hljs.registerLanguage('markdown', markdownLang)
+hljs.registerLanguage('php', phpLang)
+hljs.registerLanguage('plaintext', plaintextLang)
+hljs.registerLanguage('python', pythonLang)
+hljs.registerLanguage('ruby', rubyLang)
+hljs.registerLanguage('rust', rustLang)
+hljs.registerLanguage('sql', sqlLang)
+hljs.registerLanguage('typescript', typescriptLang)
+hljs.registerLanguage('xml', xmlLang)
+hljs.registerLanguage('yaml', yamlLang)
 
 const {
   acceptedFormats,
   archiveFile,
   archiveHandle,
+  archiveSizeSummary,
   breadcrumbs,
   canGoToParentDirectory,
   closePreviewModal,
   columns,
   clearFile,
   downloadName,
-  entries,
   errorMessage,
   formatBytes,
   goToDirectory,
@@ -213,12 +240,12 @@ const {
   isPreviewModalVisible,
   labels,
   previewKind,
+  previewLanguage,
   previewText,
   rows,
   search,
   selectedBlobUrl,
   selectedEntry,
   tableRowProps,
-  totalUncompressedSize,
 } = useArchiveViewer()
 </script>

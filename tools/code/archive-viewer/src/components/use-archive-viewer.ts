@@ -11,6 +11,12 @@ import {
   toDirectoryPath,
 } from './archive-explorer-rows'
 import { renderArchiveRowNameCell } from './archive-row-icon'
+import {
+  MAX_TEXT_PREVIEW_BYTES,
+  isImageEntry,
+  isTextEntry,
+  resolveTextPreviewLanguage,
+} from './archive-preview'
 
 export const labels = {
   uploadTitle: 'Upload archive',
@@ -18,12 +24,9 @@ export const labels = {
   supportedFormats: 'Supported formats: ZIP, TAR, GZ, TGZ',
   unsupportedFormat: 'Unsupported file format. Please upload ZIP, TAR, GZ, or TGZ.',
   selectedFile: 'Selected file',
-  clearFile: 'Clear file',
+  selectNewFile: 'Choose another archive',
   localNote: 'Runs locally in your browser. No uploads.',
   parsingArchive: 'Parsing archive entries...',
-  archiveFormat: 'Format',
-  entryCount: 'Entries',
-  totalUncompressed: 'Total uncompressed size',
   entriesTitle: 'Archive explorer',
   searchPlaceholder: 'Search in current folder',
   rootFolder: 'Root',
@@ -54,26 +57,6 @@ export type ArchiveBreadcrumb = {
   path: string
 }
 
-const MAX_TEXT_PREVIEW_BYTES = 1024 * 1024
-const TEXT_EXTENSIONS = new Set([
-  'txt',
-  'md',
-  'json',
-  'js',
-  'ts',
-  'tsx',
-  'jsx',
-  'css',
-  'html',
-  'xml',
-  'yml',
-  'yaml',
-  'toml',
-  'csv',
-  'log',
-  'ini',
-  'conf',
-])
 const SUPPORTED_ARCHIVE_SUFFIXES = ['.zip', '.tar', '.gz', '.tgz', '.tar.gz']
 
 export function useArchiveViewer() {
@@ -86,6 +69,7 @@ export function useArchiveViewer() {
   const selectedBlob = ref<Blob | null>(null)
   const previewKind = ref<'none' | 'text' | 'image'>('none')
   const previewText = ref('')
+  const previewLanguage = ref('plaintext')
   const isParsing = ref(false)
   const isLoadingPreview = ref(false)
   const isPreviewModalVisible = ref(false)
@@ -149,6 +133,22 @@ export function useArchiveViewer() {
   const totalUncompressedSize = computed(() =>
     entries.value.reduce((total, entry) => total + (entry.kind === 'file' ? entry.size : 0), 0),
   )
+
+  const archiveSizeSummary = computed(() => {
+    if (!archiveFile.value) {
+      return ''
+    }
+
+    const compressedSize = archiveFile.value.size
+    const uncompressedSize = totalUncompressedSize.value
+
+    if (!archiveHandle.value || isParsing.value || uncompressedSize <= 0) {
+      return formatBytes(compressedSize)
+    }
+
+    const ratio = Math.round((compressedSize / uncompressedSize) * 100)
+    return `${formatBytes(compressedSize)} / ${formatBytes(uncompressedSize)} (${ratio}%)`
+  })
 
   const columns: DataTableColumns<ArchiveRow> = [
     {
@@ -288,6 +288,7 @@ export function useArchiveViewer() {
     selectedBlob.value = null
     previewKind.value = 'none'
     previewText.value = ''
+    previewLanguage.value = 'plaintext'
   }
 
   watch(selectedPath, async () => {
@@ -342,6 +343,7 @@ export function useArchiveViewer() {
       }
 
       if (isTextEntry(entry, blob)) {
+        previewLanguage.value = resolveTextPreviewLanguage(entry, blob)
         const text = await blob.text()
         if (requestToken !== previewRequestToken) {
           return
@@ -390,6 +392,7 @@ export function useArchiveViewer() {
     acceptedFormats,
     archiveFile,
     archiveHandle,
+    archiveSizeSummary,
     breadcrumbs,
     canGoToParentDirectory,
     closePreviewModal,
@@ -407,6 +410,7 @@ export function useArchiveViewer() {
     isPreviewModalVisible,
     labels,
     previewKind,
+    previewLanguage,
     previewText,
     rows,
     search,
@@ -415,20 +419,6 @@ export function useArchiveViewer() {
     tableRowProps,
     totalUncompressedSize,
   }
-}
-
-function isTextEntry(entry: ArchiveEntry, blob: Blob): boolean {
-  if (blob.type.startsWith('text/')) return true
-  if (blob.type.includes('json') || blob.type.includes('xml') || blob.type.includes('yaml')) {
-    return true
-  }
-
-  return TEXT_EXTENSIONS.has(entry.extension)
-}
-
-function isImageEntry(entry: ArchiveEntry, blob: Blob): boolean {
-  if (blob.type.startsWith('image/')) return true
-  return ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(entry.extension)
 }
 
 function isSupportedArchiveFile(file: File): boolean {

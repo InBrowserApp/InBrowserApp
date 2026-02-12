@@ -346,6 +346,35 @@ describe('useArchiveViewer', () => {
     expect(state.previewText.value).toContain('"ok":true')
   })
 
+  it('formats archive size summary and detects plist code language', async () => {
+    const plistEntry: ArchiveEntry = {
+      path: 'config.plist',
+      kind: 'file',
+      size: 20,
+      compressedSize: 10,
+      modifiedAt: null,
+      extension: 'plist',
+    }
+
+    mockedOpenArchive.mockResolvedValueOnce(
+      createArchiveHandle(
+        [plistEntry],
+        new Blob(['<plist><dict/></plist>'], { type: 'application/xml' }),
+      ),
+    )
+
+    const { state } = mountComposable()
+
+    const file = new File(['1234567890'], 'config.zip')
+    await state.handleBeforeUpload({ file: { file } as never, fileList: [{ file } as never] })
+    await flushPromises()
+
+    expect(state.archiveSizeSummary.value).toBe('10 B / 20 B (50%)')
+    expect(state.previewKind.value).toBe('text')
+    expect(state.previewLanguage.value).toBe('xml')
+    expect(state.previewText.value).toContain('<plist>')
+  })
+
   it('ignores stale archive open results from earlier uploads', async () => {
     const firstEntries: ArchiveEntry[] = [
       {

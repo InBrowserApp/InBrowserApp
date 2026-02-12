@@ -186,9 +186,9 @@ describe('ArchiveViewer', () => {
 
     expect(readEntry).toHaveBeenCalledWith('readme.txt')
 
-    const preview = wrapper.find('textarea')
-    expect(preview.exists()).toBe(true)
-    expect((preview.element as HTMLTextAreaElement).value).toContain('hello world')
+    const codeBlock = wrapper.find('code')
+    expect(codeBlock.exists()).toBe(true)
+    expect(codeBlock.text()).toContain('hello world')
 
     const downloadLink = wrapper
       .findAll('a')
@@ -290,7 +290,9 @@ describe('ArchiveViewer', () => {
     const wrapper = mountViewer()
     await uploadSingleFile(wrapper, makeFile('clear.zip'))
 
-    const clearButton = wrapper.findAll('button').find((button) => button.text() === 'Clear file')
+    const clearButton = wrapper
+      .findAll('button')
+      .find((button) => button.text() === 'Choose another archive')
     if (!clearButton) {
       throw new Error('Missing clear button')
     }

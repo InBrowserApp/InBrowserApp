@@ -1354,6 +1354,9 @@ importers:
       filesize:
         specifier: 'catalog:'
         version: 11.0.13
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
