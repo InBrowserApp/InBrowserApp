@@ -167,9 +167,8 @@ const detailsText = computed(() => {
   position: relative;
   width: fit-content;
   max-width: 100%;
-  border: 1px solid var(--n-border-color);
   border-radius: 8px;
-  padding: 8px;
+  overflow: hidden;
   background: #fff;
   box-shadow:
     0 2px 8px rgba(15, 23, 42, 0.12),
@@ -182,7 +181,7 @@ const detailsText = computed(() => {
   max-width: 100%;
   max-height: min(65vh, 720px);
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .preview-skeleton-standalone {
@@ -191,9 +190,9 @@ const detailsText = computed(() => {
 
 .preview-skeleton-overlay {
   position: absolute;
-  inset: 8px;
+  inset: 0;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 8px;
   pointer-events: none;
 }
 
