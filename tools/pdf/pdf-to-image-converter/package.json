@@ -1,0 +1,22 @@
+{
+  "name": "@tools/pdf-to-image-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/carbon": "catalog:",
+    "@vicons/fluent": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@zip.js/zip.js": "catalog:",
+    "filesize": "catalog:",
+    "naive-ui": "catalog:",
+    "pdfjs-dist": "catalog:",
+    "vue": "catalog:"
+  }
+}
