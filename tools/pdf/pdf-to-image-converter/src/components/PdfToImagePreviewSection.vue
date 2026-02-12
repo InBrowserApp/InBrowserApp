@@ -170,6 +170,10 @@ const detailsText = computed(() => {
   border: 1px solid var(--n-border-color);
   border-radius: 8px;
   padding: 8px;
+  background: #fff;
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.12),
+    0 22px 56px rgba(15, 23, 42, 0.12);
 }
 
 .preview-skeleton {
