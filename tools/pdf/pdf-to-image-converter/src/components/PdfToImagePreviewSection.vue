@@ -5,7 +5,9 @@
     <n-flex vertical :size="12">
       <div class="preview-stage">
         <div v-if="isRendering" class="preview-image-frame preview-skeleton-frame">
-          <n-skeleton class="preview-skeleton" :style="previewSkeletonStyle" />
+          <div class="preview-skeleton" :style="previewSkeletonStyle">
+            <n-skeleton width="100%" height="100%" />
+          </div>
         </div>
         <n-alert
           v-else-if="errorMessage"
@@ -92,7 +94,7 @@ const previewSkeletonStyle = computed(() => {
   return {
     width: width ? `${width}px` : `${fallbackWidth}px`,
     maxWidth: '100%',
-    aspectRatio: width && height ? `${width} / ${height}` : `${fallbackAspectRatio}`,
+    'aspect-ratio': width && height ? `${width} / ${height}` : `${fallbackAspectRatio}`,
   }
 })
 
@@ -135,8 +137,14 @@ const detailsText = computed(() => {
 }
 
 .preview-skeleton {
-  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
   border-radius: 6px;
+}
+
+.preview-skeleton :deep(.n-skeleton) {
+  display: block;
 }
 
 .preview-image {
