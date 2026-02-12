@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
 import { useArchiveViewer } from './use-archive-viewer'
+import * as browserApis from './archive-browser-apis'
 import { openArchive } from '../utils/archive-open'
 import type { ArchiveEntry, ArchiveHandle } from '../types'
 import type { ArchiveRow } from './use-archive-viewer'
@@ -633,5 +634,74 @@ describe('useArchiveViewer', () => {
     expect(state.archiveFile.value?.name).toBe('next.zip')
     expect(state.selectedEntry.value?.path).toBe('next.txt')
     expect((firstHandle.dispose as ReturnType<typeof vi.fn>).mock.calls.length).toBe(1)
+  })
+
+  it('treats ico extension as image preview', async () => {
+    const fileEntry: ArchiveEntry = {
+      path: 'favicon.ico',
+      kind: 'file',
+      size: 4,
+      compressedSize: 3,
+      modifiedAt: null,
+      extension: 'ico',
+    }
+
+    mockedOpenArchive.mockResolvedValueOnce(
+      createArchiveHandle([fileEntry], new Blob([new Uint8Array([0, 0, 1, 0])])),
+    )
+
+    const { state } = mountComposable()
+
+    const file = new File(['ok'], 'icon.zip')
+    await state.handleBeforeUpload({ file: { file } as never, fileList: [{ file } as never] })
+    await flushPromises()
+
+    expect(state.previewKind.value).toBe('image')
+  })
+
+  it('exports all entries to a selected folder', async () => {
+    const entries: ArchiveEntry[] = [
+      {
+        path: 'docs/',
+        kind: 'directory',
+        size: 0,
+        compressedSize: null,
+        modifiedAt: null,
+        extension: '',
+      },
+      {
+        path: 'docs/readme.txt',
+        kind: 'file',
+        size: 11,
+        compressedSize: 9,
+        modifiedAt: null,
+        extension: 'txt',
+      },
+    ]
+
+    const handle = createArchiveHandle(entries, new Blob(['hello world'], { type: 'text/plain' }))
+    mockedOpenArchive.mockResolvedValueOnce(handle)
+
+    const directoryHandle = {} as browserApis.DirectoryHandle
+    const pickDirectorySpy = vi
+      .spyOn(browserApis, 'pickDirectoryForExport')
+      .mockResolvedValue(directoryHandle)
+    const exportSpy = vi.spyOn(browserApis, 'exportArchiveEntriesToDirectory').mockResolvedValue()
+
+    const { state } = mountComposable()
+
+    const file = new File(['ok'], 'docs.zip')
+    await state.handleBeforeUpload({ file: { file } as never, fileList: [{ file } as never] })
+    await flushPromises()
+
+    await state.exportAllEntries()
+    await flushPromises()
+
+    expect(pickDirectorySpy).toHaveBeenCalledTimes(1)
+    expect(exportSpy).toHaveBeenCalledWith({
+      directoryHandle,
+      entries,
+      readEntry: handle.readEntry,
+    })
   })
 })

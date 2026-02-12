@@ -11,8 +11,10 @@ import {
 } from './archive-explorer-rows'
 import {
   copyImageToClipboard,
+  exportArchiveEntriesToDirectory,
   isAbortError,
   pickArchiveFile,
+  pickDirectoryForExport,
   supportsImageClipboard,
 } from './archive-browser-apis'
 import { formatBytes, formatDate, kindLabel } from './archive-format'
@@ -34,6 +36,8 @@ export const labels = {
   localNote: 'Runs locally in your browser. No uploads.',
   parsingArchive: 'Parsing archive entries...',
   entriesTitle: 'Archive explorer',
+  exportAllEntries: 'Export all to folder',
+  exportFailed: 'Failed to export archive entries.',
   searchPlaceholder: 'Search in current folder',
   rootFolder: 'Root',
   goToParent: 'Up',
@@ -57,6 +61,10 @@ export type ArchiveRow = {
   kindLabel: string
   sizeLabel: string
   modifiedAtLabel: string
+  sortName: string
+  sortKind: string
+  sortSize: number
+  sortModifiedAt: number
 }
 
 export type ArchiveBreadcrumb = {
@@ -81,6 +89,7 @@ export function useArchiveViewer() {
   const isLoadingPreview = ref(false)
   const isPreviewModalVisible = ref(false)
   const errorMessage = ref('')
+  const isExportingAll = ref(false)
   let openRequestToken = 0
   let previewRequestToken = 0
 
@@ -127,6 +136,10 @@ export function useArchiveViewer() {
       kindLabel: kindLabel(row.kind),
       sizeLabel: row.kind === 'file' ? formatBytes(row.size) : '-',
       modifiedAtLabel: formatDate(row.modifiedAt),
+      sortName: row.name.toLowerCase(),
+      sortKind: kindLabel(row.kind),
+      sortSize: row.kind === 'file' ? row.size : -1,
+      sortModifiedAt: row.modifiedAt?.getTime() ?? 0,
     })),
   )
 
@@ -156,11 +169,7 @@ export function useArchiveViewer() {
     return `${formatBytes(compressedSize)} / ${formatBytes(uncompressedSize)} (${ratio}%)`
   })
 
-  const shouldShowCopyPreview = computed(
-    () => previewKind.value === 'text' || previewKind.value === 'image',
-  )
-
-  const canCopyPreview = computed(() => {
+  const shouldShowCopyPreview = computed(() => {
     if (previewKind.value === 'text') {
       return (
         typeof navigator !== 'undefined' && typeof navigator.clipboard?.writeText === 'function'
@@ -174,28 +183,36 @@ export function useArchiveViewer() {
     return false
   })
 
+  const canExportAllEntries = computed(() =>
+    entries.value.some((entry) => entry.kind === 'file' || entry.kind === 'directory'),
+  )
+
   const columns: DataTableColumns<ArchiveRow> = [
     {
       title: 'Name',
       key: 'name',
       ellipsis: { tooltip: true },
       minWidth: 260,
+      sorter: (left, right) => left.sortName.localeCompare(right.sortName),
       render: (row) => renderArchiveRowNameCell(row),
     },
     {
       title: 'Kind',
       key: 'kindLabel',
       width: 120,
+      sorter: (left, right) => left.sortKind.localeCompare(right.sortKind),
     },
     {
       title: 'Size',
       key: 'sizeLabel',
       width: 140,
+      sorter: (left, right) => left.sortSize - right.sortSize,
     },
     {
       title: 'Modified',
       key: 'modifiedAtLabel',
       width: 180,
+      sorter: (left, right) => left.sortModifiedAt - right.sortModifiedAt,
     },
   ]
 
@@ -269,6 +286,37 @@ export function useArchiveViewer() {
     }
   }
 
+  async function exportAllEntries() {
+    const handle = archiveHandle.value
+    if (!handle) {
+      return
+    }
+
+    isExportingAll.value = true
+    errorMessage.value = ''
+
+    try {
+      const directoryHandle = await pickDirectoryForExport()
+      if (!directoryHandle) {
+        return
+      }
+
+      await exportArchiveEntriesToDirectory({
+        directoryHandle,
+        entries: entries.value,
+        readEntry: handle.readEntry,
+      })
+    } catch (error) {
+      if (isAbortError(error)) {
+        return
+      }
+
+      errorMessage.value = error instanceof Error ? error.message : labels.exportFailed
+    } finally {
+      isExportingAll.value = false
+    }
+  }
+
   async function openSelectedFile(file: File) {
     const requestToken = ++openRequestToken
     isParsing.value = true
@@ -317,7 +365,10 @@ export function useArchiveViewer() {
   async function copyPreview() {
     try {
       if (previewKind.value === 'text') {
-        if (!canCopyPreview.value) {
+        if (
+          typeof navigator === 'undefined' ||
+          typeof navigator.clipboard?.writeText !== 'function'
+        ) {
           return
         }
 
@@ -400,15 +451,15 @@ export function useArchiveViewer() {
 
       selectedBlob.value = blob
 
-      if (blob.size > MAX_TEXT_PREVIEW_BYTES) {
-        previewKind.value = 'none'
-        previewText.value = labels.previewTooLarge
-        return
-      }
-
       if (isImageEntry(entry, blob)) {
         previewKind.value = 'image'
         previewText.value = ''
+        return
+      }
+
+      if (blob.size > MAX_TEXT_PREVIEW_BYTES) {
+        previewKind.value = 'none'
+        previewText.value = labels.previewTooLarge
         return
       }
 
@@ -464,10 +515,11 @@ export function useArchiveViewer() {
     archiveHandle,
     archiveSizeSummary,
     breadcrumbs,
-    canCopyPreview,
+    canExportAllEntries,
     canGoToParentDirectory,
     chooseAnotherArchive,
     clearFile,
+    exportAllEntries,
     closePreviewModal,
     columns,
     copyPreview,
@@ -478,6 +530,7 @@ export function useArchiveViewer() {
     goToDirectory,
     goToParentDirectory,
     handleBeforeUpload,
+    isExportingAll,
     isLoadingPreview,
     isParsing,
     isPreviewModalVisible,

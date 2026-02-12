@@ -18,12 +18,7 @@
             <n-text depth="3">{{ formatBytes(selectedEntry.size) }}</n-text>
 
             <n-flex align="center" :size="8">
-              <n-button
-                v-if="shouldShowCopyPreview"
-                text
-                :disabled="!canCopyPreview"
-                @click="emit('copy-preview')"
-              >
+              <n-button v-if="shouldShowCopyPreview" text @click="emit('copy-preview')">
                 <template #icon>
                   <n-icon :component="Copy16Regular" />
                 </template>
@@ -67,7 +62,7 @@
               :code="previewText"
               :language="previewLanguage"
               :hljs="hljs"
-              show-line-numbers
+              :show-line-numbers="true"
               word-wrap
             />
 
@@ -137,7 +132,6 @@ defineProps<{
   isLoadingPreview: boolean
   downloadName: string
   labels: PreviewLabels
-  canCopyPreview: boolean
   shouldShowCopyPreview: boolean
   formatBytes: (value: number) => string
 }>()

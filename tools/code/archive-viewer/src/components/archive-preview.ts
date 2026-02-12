@@ -66,7 +66,9 @@ export function isTextEntry(entry: ArchiveEntry, blob: Blob): boolean {
 
 export function isImageEntry(entry: ArchiveEntry, blob: Blob): boolean {
   if (blob.type.startsWith('image/')) return true
-  return ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(entry.extension.toLowerCase())
+  return ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'avif', 'tif', 'tiff'].includes(
+    entry.extension.toLowerCase(),
+  )
 }
 
 export function resolveTextPreviewLanguage(entry: ArchiveEntry, blob: Blob): string {

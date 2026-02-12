@@ -52,28 +52,42 @@
   <ToolSection v-if="archiveHandle && !isParsing && !errorMessage">
     <ToolSectionHeader>{{ labels.entriesTitle }}</ToolSectionHeader>
     <n-flex vertical :size="12">
-      <n-flex align="center" :size="10">
-        <n-breadcrumb>
-          <n-breadcrumb-item
-            v-for="breadcrumb in breadcrumbs"
-            :key="breadcrumb.path || 'root'"
-            @click="goToDirectory(breadcrumb.path)"
+      <n-flex justify="space-between" align="center" :size="10">
+        <n-flex align="center" :size="10">
+          <n-breadcrumb>
+            <n-breadcrumb-item
+              v-for="breadcrumb in breadcrumbs"
+              :key="breadcrumb.path || 'root'"
+              @click="goToDirectory(breadcrumb.path)"
+            >
+              {{ breadcrumb.label }}
+            </n-breadcrumb-item>
+          </n-breadcrumb>
+
+          <n-button
+            v-if="canGoToParentDirectory"
+            size="small"
+            circle
+            quaternary
+            :aria-label="labels.goToParent"
+            @click="goToParentDirectory"
           >
-            {{ breadcrumb.label }}
-          </n-breadcrumb-item>
-        </n-breadcrumb>
+            <template #icon>
+              <n-icon :component="ArrowUp16Regular" />
+            </template>
+          </n-button>
+        </n-flex>
 
         <n-button
-          v-if="canGoToParentDirectory"
-          size="small"
-          circle
-          quaternary
-          :aria-label="labels.goToParent"
-          @click="goToParentDirectory"
+          text
+          :loading="isExportingAll"
+          :disabled="!canExportAllEntries"
+          @click="exportAllEntries"
         >
           <template #icon>
-            <n-icon :component="ArrowUp16Regular" />
+            <n-icon :component="ArrowDownload16Regular" />
           </template>
+          {{ labels.exportAllEntries }}
         </n-button>
       </n-flex>
 
@@ -104,7 +118,6 @@
     :is-loading-preview="isLoadingPreview"
     :download-name="downloadName"
     :labels="labels"
-    :can-copy-preview="canCopyPreview"
     :should-show-copy-preview="shouldShowCopyPreview"
     :format-bytes="formatBytes"
     @copy-preview="copyPreview"
@@ -134,6 +147,7 @@ import {
   NUpload,
   NUploadDragger,
 } from 'naive-ui'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
 import ArrowUpload16Regular from '@vicons/fluent/ArrowUpload16Regular'
 import FolderZip16Regular from '@vicons/fluent/FolderZip16Regular'
@@ -147,7 +161,7 @@ const {
   archiveHandle,
   archiveSizeSummary,
   breadcrumbs,
-  canCopyPreview,
+  canExportAllEntries,
   canGoToParentDirectory,
   chooseAnotherArchive,
   closePreviewModal,
@@ -155,10 +169,12 @@ const {
   copyPreview,
   downloadName,
   errorMessage,
+  exportAllEntries,
   formatBytes,
   goToDirectory,
   goToParentDirectory,
   handleBeforeUpload,
+  isExportingAll,
   isLoadingPreview,
   isParsing,
   isPreviewModalVisible,
