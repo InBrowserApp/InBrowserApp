@@ -4,21 +4,37 @@
 
     <n-flex vertical :size="12">
       <div class="preview-stage">
-        <div v-if="isRendering" class="preview-image-frame preview-skeleton-frame">
-          <div class="preview-skeleton" :style="previewSkeletonStyle">
-            <n-skeleton width="100%" height="100%" />
-          </div>
-        </div>
         <n-alert
-          v-else-if="errorMessage"
+          v-if="errorMessage"
           class="preview-alert"
           type="error"
           :title="t('renderErrorTitle')"
         >
           {{ errorMessage }}
         </n-alert>
-        <div v-else-if="previewUrl" class="preview-image-frame">
-          <img :src="previewUrl" :alt="t('previewTitle')" class="preview-image" />
+        <div v-else-if="previewUrl || isRendering" class="preview-image-frame">
+          <img
+            v-if="previewUrl"
+            :src="previewUrl"
+            :alt="t('previewTitle')"
+            class="preview-image"
+            @load="handlePreviewImageLoad"
+            @error="handlePreviewImageError"
+          />
+          <div
+            v-else
+            class="preview-skeleton preview-skeleton-standalone"
+            :style="previewSkeletonStyle"
+          >
+            <n-skeleton width="100%" height="100%" />
+          </div>
+
+          <div
+            v-if="previewUrl && (isRendering || isPreviewImageLoading)"
+            class="preview-skeleton-overlay"
+          >
+            <n-skeleton width="100%" height="100%" />
+          </div>
         </div>
         <n-empty v-else :description="t('emptyPreview')" />
       </div>
@@ -73,6 +89,22 @@ const imageRef = toRef(props, 'pageImage')
 const previewUrl = useObjectUrl(computed(() => imageRef.value?.blob ?? null))
 const lastRenderedWidth = ref<number | null>(null)
 const lastRenderedHeight = ref<number | null>(null)
+const isPreviewImageLoading = ref(false)
+
+watch(
+  previewUrl,
+  (nextUrl, previousUrl) => {
+    if (!nextUrl) {
+      isPreviewImageLoading.value = false
+      return
+    }
+
+    if (nextUrl !== previousUrl) {
+      isPreviewImageLoading.value = true
+    }
+  },
+  { immediate: true },
+)
 
 watch(
   () => props.pageImage,
@@ -86,7 +118,7 @@ watch(
 
 const previewSkeletonStyle = computed(() => {
   const fallbackWidth = 360
-  const fallbackAspectRatio = 1 / Math.SQRT2
+  const fallbackAspectRatio = 210 / 297
 
   const width = lastRenderedWidth.value
   const height = lastRenderedHeight.value
@@ -97,6 +129,14 @@ const previewSkeletonStyle = computed(() => {
     'aspect-ratio': width && height ? `${width} / ${height}` : `${fallbackAspectRatio}`,
   }
 })
+
+function handlePreviewImageLoad() {
+  isPreviewImageLoading.value = false
+}
+
+function handlePreviewImageError() {
+  isPreviewImageLoading.value = false
+}
 
 const detailsText = computed(() => {
   if (!props.pageImage) return ''
@@ -124,6 +164,7 @@ const detailsText = computed(() => {
 }
 
 .preview-image-frame {
+  position: relative;
   width: fit-content;
   max-width: 100%;
   border: 1px solid var(--n-border-color);
@@ -131,20 +172,32 @@ const detailsText = computed(() => {
   padding: 8px;
 }
 
-.preview-skeleton-frame {
-  width: fit-content;
-  max-width: 100%;
-}
-
 .preview-skeleton {
   width: 100%;
   min-width: 0;
+  max-width: 100%;
+  max-height: min(65vh, 720px);
   overflow: hidden;
   border-radius: 6px;
 }
 
-.preview-skeleton :deep(.n-skeleton) {
+.preview-skeleton-standalone {
   display: block;
+}
+
+.preview-skeleton-overlay {
+  position: absolute;
+  inset: 8px;
+  overflow: hidden;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.preview-skeleton :deep(.n-skeleton),
+.preview-skeleton-overlay :deep(.n-skeleton) {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .preview-image {
