@@ -277,8 +277,8 @@ catalogs:
       specifier: ^0.4.4
       version: 0.4.4
     hono:
-      specifier: ^4.11.4
-      version: 4.11.4
+      specifier: ^4.11.10
+      version: 4.12.0
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -1508,7 +1508,7 @@ importers:
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
       gitignore:
         specifier: 'catalog:'
-        version: https://codeload.github.com/github/gitignore/tar.gz/53fee13f20a05efc93ef4edcad0c62863520e268
+        version: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
@@ -7062,7 +7062,7 @@ importers:
         version: 11.11.1
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.0
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
@@ -7092,7 +7092,7 @@ importers:
         version: 14.1.0(vue@3.5.27(typescript@5.9.3))
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.0
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.27(typescript@5.9.3))
@@ -10742,8 +10742,8 @@ packages:
     resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
     engines: {node: '>=10'}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/53fee13f20a05efc93ef4edcad0c62863520e268:
-    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/53fee13f20a05efc93ef4edcad0c62863520e268}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938:
+    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938}
     version: 0.0.0
 
   glob-parent@5.1.2:
@@ -10827,8 +10827,8 @@ packages:
   highwayhasher@0.4.4:
     resolution: {integrity: sha512-57bU4Fw2baN6j5Ej7w4TVM7hKbsGZf9YrMFlO5joz7Y49Y/jurVYfGcH8WCfmT935IcH92TYt+Eo4Gjw04Iq+w==}
 
-  hono@4.11.4:
-    resolution: {integrity: sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==}
+  hono@4.12.0:
+    resolution: {integrity: sha512-NekXntS5M94pUfiVZ8oXXK/kkri+5WpX2/Ik+LVsl+uvw+soj4roXIsPqO+XsWrAw20mOzaXOZf3Q7PfB9A/IA==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -16275,7 +16275,7 @@ snapshots:
 
   github-markdown-css@5.8.1: {}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/53fee13f20a05efc93ef4edcad0c62863520e268: {}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -16360,7 +16360,7 @@ snapshots:
 
   highwayhasher@0.4.4: {}
 
-  hono@4.11.4: {}
+  hono@4.12.0: {}
 
   hookable@5.5.3: {}
 
