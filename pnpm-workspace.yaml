@@ -101,7 +101,7 @@ catalog:
   hash-wasm: ^4.12.0
   highlight.js: 11.11.1
   highwayhasher: ^0.4.4
-  hono: ^4.11.4
+  hono: ^4.11.10
   husky: ^9.1.7
   ip-bigint: ^8.2.2
   is-cidr: ^6.0.1
