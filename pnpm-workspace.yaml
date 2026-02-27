@@ -129,7 +129,7 @@ catalog:
   pdf-lib: ^1.17.1
   pdfjs-dist: ^5.4.624
   pinia: 3.0.4
-  prettier: 3.8.0
+  prettier: 3.8.1
   punycode: ^2.3.1
   qrcode: ^1.5.4
   reflect-metadata: ^0.2.2
