@@ -474,6 +474,11 @@ overrides:
   '@redocly/openapi-core>minimatch': 5.1.9
   editorconfig>minimatch: 9.0.9
 
+patchedDependencies:
+  curlconverter@4.12.0:
+    hash: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
+    path: patches/curlconverter@4.12.0.patch
+
 importers:
 
   .:
@@ -1449,7 +1454,7 @@ importers:
         version: 14.2.1(vue@3.5.29(typescript@5.9.3))
       curlconverter:
         specifier: 'catalog:'
-        version: 4.12.0
+        version: 4.12.0(patch_hash=c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -15764,7 +15769,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  curlconverter@4.12.0:
+  curlconverter@4.12.0(patch_hash=c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484):
     dependencies:
       jsesc: 3.1.0
       lossless-json: 4.3.0
