@@ -4,6 +4,7 @@ import { routes as uuidRoutes } from '@tools/uuid/routes'
 import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-password/routes'
 import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
+import { routes as pdfToImageConverterRoutes } from '@tools/pdf-to-image-converter/routes'
 import { routes as unicodePunycodeConverterRoutes } from '@tools/unicode-punycode-converter/routes'
 import { routes as dnsLookupRoutes } from '@tools/dns-lookup/routes'
 import { routes as reverseIPLookupRoutes } from '@tools/reverse-ip-lookup/routes'
@@ -199,6 +200,7 @@ export const routes: ToolRoute[] = [
   ...removePDFOwnerPasswordRoutes,
   ...pdfInfoViewerRoutes,
   ...pdfMergerRoutes,
+  ...pdfToImageConverterRoutes,
   ...unicodePunycodeConverterRoutes,
   ...dnsLookupRoutes,
   ...reverseIPLookupRoutes,
