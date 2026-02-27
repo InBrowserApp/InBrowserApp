@@ -1,0 +1,23 @@
+{
+  "name": "@tools/archive-viewer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@zip.js/zip.js": "catalog:",
+    "filesize": "catalog:",
+    "highlight.js": "catalog:",
+    "mime": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:"
+  }
+}
