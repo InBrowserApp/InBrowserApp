@@ -9,7 +9,7 @@
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
-import { sha3_224 } from '@noble/hashes/sha3'
+import { sha3_224 } from '@noble/hashes/sha3.js'
 import WhatIsSHA3224 from './WhatIsSHA3_224.vue'
 
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {
