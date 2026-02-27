@@ -9,7 +9,7 @@
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout } from '@shared/ui/tool'
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
-import { sha512_256 } from '@noble/hashes/sha512'
+import { sha512_256 } from '@noble/hashes/sha2.js'
 import WhatIsSHA512256 from './WhatIsSHA512_256.vue'
 
 async function hashFunction(blob: Blob): Promise<ArrayBuffer> {

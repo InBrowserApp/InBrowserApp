@@ -30,34 +30,34 @@ function buildLocaleObject(langs = supportedLanguages): Record<string, { title: 
 }
 
 function createLinter(): Linter {
-  const linter = new Linter({ configType: 'eslintrc' })
-  linter.defineParser('ts', tsParser as unknown as Linter.ParserModule)
-  linter.defineParser('vue', vueParser as unknown as Linter.ParserModule)
-  linter.defineRule(
-    'inbrowser/i18n-info-meta-complete',
-    inbrowserI18n.rules['i18n-info-meta-complete'],
-  )
-  linter.defineRule(
-    'inbrowser/i18n-vue-block-complete',
-    inbrowserI18n.rules['i18n-vue-block-complete'],
-  )
-  return linter
+  return new Linter({ configType: 'flat' })
 }
 
 function verifyInfo(code: string) {
   const linter = createLinter()
   return linter.verify(
     code,
-    {
-      parser: 'ts',
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
+    [
+      {
+        files: ['**/*.ts'],
+        languageOptions: {
+          parser: tsParser as unknown as Linter.ParserModule,
+          ecmaVersion: 2020,
+          sourceType: 'module',
+        },
+        plugins: {
+          inbrowser: {
+            rules: {
+              'i18n-info-meta-complete': inbrowserI18n.rules['i18n-info-meta-complete'],
+              'i18n-vue-block-complete': inbrowserI18n.rules['i18n-vue-block-complete'],
+            },
+          },
+        },
+        rules: {
+          'inbrowser/i18n-info-meta-complete': 'error',
+        },
       },
-      rules: {
-        'inbrowser/i18n-info-meta-complete': 'error',
-      },
-    },
+    ],
     { filename: 'info.ts' },
   )
 }
@@ -71,17 +71,30 @@ function verifyVue(code: string) {
   const linter = createLinter()
   return linter.verify(
     code,
-    {
-      parser: 'vue',
-      parserOptions: {
-        parser: tsParser as unknown as Linter.ParserModule,
-        ecmaVersion: 2020,
-        sourceType: 'module',
+    [
+      {
+        files: ['**/*.vue'],
+        languageOptions: {
+          parser: vueParser as unknown as Linter.ParserModule,
+          parserOptions: {
+            parser: tsParser as unknown as Linter.ParserModule,
+            ecmaVersion: 2020,
+            sourceType: 'module',
+          },
+        },
+        plugins: {
+          inbrowser: {
+            rules: {
+              'i18n-info-meta-complete': inbrowserI18n.rules['i18n-info-meta-complete'],
+              'i18n-vue-block-complete': inbrowserI18n.rules['i18n-vue-block-complete'],
+            },
+          },
+        },
+        rules: {
+          'inbrowser/i18n-vue-block-complete': 'error',
+        },
       },
-      rules: {
-        'inbrowser/i18n-vue-block-complete': 'error',
-      },
-    },
+    ],
     { filename: 'Test.vue' },
   )
 }

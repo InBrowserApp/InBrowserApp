@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent, nextTick } from 'vue'
+import { defineComponent, nextTick, type Plugin } from 'vue'
 import { createI18n } from 'vue-i18n'
 
 const blake3Mocks = vi.hoisted(() => {
@@ -104,6 +104,7 @@ const i18n = createI18n({
   missingWarn: false,
   fallbackWarn: false,
 })
+const i18nPlugin = [i18n as unknown as Plugin] as [Plugin, ...unknown[]]
 
 const stubs = {
   ToolDefaultPageLayout: defineComponent({
@@ -174,7 +175,7 @@ describe('Blake3HashTextOrFileView', () => {
 
     const wrapper = mount(Blake3HashTextOrFileView, {
       global: {
-        plugins: [i18n],
+        plugins: [i18nPlugin],
         stubs,
       },
     })
@@ -189,7 +190,7 @@ describe('Blake3HashTextOrFileView', () => {
 
     const wrapper = mount(Blake3HashTextOrFileView, {
       global: {
-        plugins: [i18n],
+        plugins: [i18nPlugin],
         stubs,
       },
     })
@@ -220,7 +221,7 @@ describe('Blake3HashTextOrFileView', () => {
 
     const wrapper = mount(Blake3HashTextOrFileView, {
       global: {
-        plugins: [i18n],
+        plugins: [i18nPlugin],
         stubs,
       },
     })
