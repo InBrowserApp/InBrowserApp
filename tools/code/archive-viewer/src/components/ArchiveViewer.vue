@@ -8,6 +8,7 @@
   />
 
   <ArchiveEntriesSection
+    ref="entriesSectionRef"
     v-model:search="search"
     :is-parsing="isParsing"
     :has-archive="Boolean(archiveHandle)"
@@ -46,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { NAlert } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import { ToolSection } from '@shared/ui/tool'
@@ -56,6 +57,7 @@ import ArchiveUploadSection from './ArchiveUploadSection.vue'
 import { type ArchiveViewerLogicLabels, useArchiveViewer } from './use-archive-viewer'
 
 const { t } = useI18n()
+const entriesSectionRef = ref<{ scrollToHeading: () => void } | null>(null)
 
 const logicLabels = computed<ArchiveViewerLogicLabels>(() => ({
   unsupportedFormat: t('unsupported-format'),
@@ -99,6 +101,31 @@ const {
   shouldShowCopyPreview,
   tableRowProps,
 } = useArchiveViewer(logicLabels)
+
+watch(
+  () => ({
+    isParsing: isParsing.value,
+    hasArchive: Boolean(archiveHandle.value),
+    hasError: Boolean(errorMessage.value),
+  }),
+  async (currentState, previousState) => {
+    if (!previousState) {
+      return
+    }
+
+    if (
+      !previousState.isParsing ||
+      currentState.isParsing ||
+      !currentState.hasArchive ||
+      currentState.hasError
+    ) {
+      return
+    }
+
+    await nextTick()
+    entriesSectionRef.value?.scrollToHeading()
+  },
+)
 </script>
 
 <i18n lang="json">

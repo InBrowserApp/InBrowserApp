@@ -7,7 +7,9 @@
   </ToolSection>
 
   <ToolSection v-if="hasArchive && !isParsing && !hasError">
-    <ToolSectionHeader>{{ t('entries-title') }}</ToolSectionHeader>
+    <div id="archive-entries-heading" ref="headingAnchorRef">
+      <ToolSectionHeader>{{ t('entries-title') }}</ToolSectionHeader>
+    </div>
     <n-flex vertical :size="12">
       <n-flex justify="space-between" align="center" :size="10">
         <n-flex align="center" :size="10">
@@ -66,7 +68,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import {
   NBreadcrumb,
   NBreadcrumbItem,
@@ -107,6 +109,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
+const headingAnchorRef = ref<HTMLElement | null>(null)
 
 const displayBreadcrumbs = computed(() => [
   { label: t('root-folder'), path: '' },
@@ -127,6 +130,22 @@ const exportActionLabel = computed(() => {
 function handleSearchChange(value: string) {
   emit('update:search', value)
 }
+
+function scrollToHeading() {
+  const headingAnchor = headingAnchorRef.value
+  if (!headingAnchor || typeof headingAnchor.scrollIntoView !== 'function') {
+    return
+  }
+
+  headingAnchor.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
+
+defineExpose({
+  scrollToHeading,
+})
 </script>
 
 <i18n lang="json">
