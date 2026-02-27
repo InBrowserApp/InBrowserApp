@@ -7,7 +7,7 @@
   </ToolSection>
 
   <ToolSection v-if="hasArchive && !isParsing && !hasError">
-    <div id="archive-entries-heading" ref="headingAnchorRef">
+    <div id="archive-entries-heading" ref="headingAnchorRef" class="entries-heading-anchor">
       <ToolSectionHeader>{{ t('entries-title') }}</ToolSectionHeader>
     </div>
     <n-flex vertical :size="12">
@@ -147,6 +147,12 @@ defineExpose({
   scrollToHeading,
 })
 </script>
+
+<style scoped>
+.entries-heading-anchor {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
+}
+</style>
 
 <i18n lang="json">
 {
