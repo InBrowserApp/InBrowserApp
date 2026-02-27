@@ -17,7 +17,7 @@ import {
   pickArchiveFile,
   pickDirectoryForExport,
 } from './archive-browser-apis'
-import { formatBytes, formatDate, kindLabel } from './archive-format'
+import { formatBytes, formatDate } from './archive-format'
 import { renderArchiveRowNameCell } from './archive-row-icon'
 import {
   MAX_TEXT_PREVIEW_BYTES,
@@ -25,34 +25,7 @@ import {
   isTextEntry,
   resolveTextPreviewLanguage,
 } from './archive-preview'
-
-export const labels = {
-  uploadTitle: 'Upload archive',
-  uploadHint: 'Click or drag to upload an archive file',
-  supportedFormats: 'Supported formats: ZIP, TAR, GZ, TGZ',
-  unsupportedFormat: 'Unsupported file format. Please upload ZIP, TAR, GZ, or TGZ.',
-  selectFileFailed: 'Unable to select archive.',
-  selectNewFile: 'Choose another archive',
-  localNote: 'Runs locally in your browser. No uploads.',
-  parsingArchive: 'Parsing archive entries...',
-  entriesTitle: 'Archive explorer',
-  exportAllEntries: 'Export all to folder',
-  exportingAllEntries: 'Exporting',
-  exportSucceeded: 'Archive exported to local folder.',
-  exportFailed: 'Failed to export archive entries.',
-  searchPlaceholder: 'Search in current folder',
-  rootFolder: 'Root',
-  goToParent: 'Up',
-  emptyFolder: 'This folder is empty.',
-  previewTitle: 'Preview',
-  noSelection: 'Select a file entry to preview.',
-  loadingPreview: 'Loading preview...',
-  noPreview: 'Preview is not available for this file type.',
-  previewTooLarge: 'Preview is limited to 1 MB. Download to inspect full content.',
-  downloadEntry: 'Download',
-  copyPreview: 'Copy',
-  errorTitle: 'Error',
-} as const
+import { useArchiveViewerLabels } from './archive-viewer-labels'
 
 export type ArchiveRow = {
   key: string
@@ -77,6 +50,8 @@ export type ArchiveBreadcrumb = {
 const SUPPORTED_ARCHIVE_SUFFIXES = ['.zip', '.tar', '.gz', '.tgz', '.tar.gz']
 
 export function useArchiveViewer() {
+  const labels = useArchiveViewerLabels()
+
   const archiveFile = ref<File | null>(null)
   const archiveHandle = ref<ArchiveHandle | null>(null)
   const entries = ref<ArchiveEntry[]>([])
@@ -102,7 +77,7 @@ export function useArchiveViewer() {
 
   const breadcrumbs = computed<ArchiveBreadcrumb[]>(() => {
     const segments = splitPathSegments(currentDirectory.value)
-    const result: ArchiveBreadcrumb[] = [{ label: labels.rootFolder, path: '' }]
+    const result: ArchiveBreadcrumb[] = [{ label: labels.value.rootFolder, path: '' }]
 
     let nextSegments: string[] = []
     for (const segment of segments) {
@@ -130,6 +105,18 @@ export function useArchiveViewer() {
     return rows.filter((row) => row.name.toLowerCase().includes(query))
   })
 
+  const getKindLabel = (kind: ArchiveEntryKind) => {
+    switch (kind) {
+      case 'directory':
+        return labels.value.kindDirectory
+      case 'symlink':
+        return labels.value.kindSymlink
+      case 'file':
+      default:
+        return labels.value.kindFile
+    }
+  }
+
   const rows = computed<ArchiveRow[]>(() =>
     visibleRows.value.map((row) => ({
       key: row.path,
@@ -137,11 +124,11 @@ export function useArchiveViewer() {
       name: row.name,
       kind: row.kind,
       extension: row.extension,
-      kindLabel: kindLabel(row.kind),
+      kindLabel: getKindLabel(row.kind),
       sizeLabel: row.kind === 'file' ? formatBytes(row.size) : '-',
       modifiedAtLabel: formatDate(row.modifiedAt),
       sortName: row.name.toLowerCase(),
-      sortKind: kindLabel(row.kind),
+      sortKind: getKindLabel(row.kind),
       sortSize: row.kind === 'file' ? row.size : -1,
       sortModifiedAt: row.modifiedAt?.getTime() ?? 0,
     })),
@@ -183,19 +170,19 @@ export function useArchiveViewer() {
 
   const exportActionLabel = computed(() => {
     if (!isExportingAll.value) {
-      return labels.exportAllEntries
+      return labels.value.exportAllEntries
     }
 
-    return `${labels.exportingAllEntries} ${exportProgressPercent.value}%`
+    return `${labels.value.exportingAllEntries} ${exportProgressPercent.value}%`
   })
 
   const canExportAllEntries = computed(() =>
     entries.value.some((entry) => entry.kind === 'file' || entry.kind === 'directory'),
   )
 
-  const columns: DataTableColumns<ArchiveRow> = [
+  const columns = computed<DataTableColumns<ArchiveRow>>(() => [
     {
-      title: 'Name',
+      title: labels.value.columnName,
       key: 'name',
       ellipsis: { tooltip: true },
       minWidth: 260,
@@ -203,24 +190,24 @@ export function useArchiveViewer() {
       render: (row) => renderArchiveRowNameCell(row),
     },
     {
-      title: 'Kind',
+      title: labels.value.columnKind,
       key: 'kindLabel',
       width: 120,
       sorter: (left, right) => left.sortKind.localeCompare(right.sortKind),
     },
     {
-      title: 'Size',
+      title: labels.value.columnSize,
       key: 'sizeLabel',
       width: 140,
       sorter: (left, right) => left.sortSize - right.sortSize,
     },
     {
-      title: 'Modified',
+      title: labels.value.columnModified,
       key: 'modifiedAtLabel',
       width: 180,
       sorter: (left, right) => left.sortModifiedAt - right.sortModifiedAt,
     },
-  ]
+  ])
 
   function tableRowProps(row: ArchiveRow) {
     return {
@@ -236,7 +223,7 @@ export function useArchiveViewer() {
     if (!selected) return false
 
     if (!isSupportedArchiveFile(selected)) {
-      errorMessage.value = labels.unsupportedFormat
+      errorMessage.value = labels.value.unsupportedFormat
       return false
     }
 
@@ -278,7 +265,7 @@ export function useArchiveViewer() {
       }
 
       if (!isSupportedArchiveFile(selected)) {
-        errorMessage.value = labels.unsupportedFormat
+        errorMessage.value = labels.value.unsupportedFormat
         return
       }
 
@@ -288,7 +275,7 @@ export function useArchiveViewer() {
         return
       }
 
-      errorMessage.value = error instanceof Error ? error.message : labels.selectFileFailed
+      errorMessage.value = error instanceof Error ? error.message : labels.value.selectFileFailed
     }
   }
 
@@ -318,13 +305,13 @@ export function useArchiveViewer() {
       })
 
       exportProgressPercent.value = 100
-      message?.success(labels.exportSucceeded)
+      message?.success(labels.value.exportSucceeded)
     } catch (error) {
       if (isAbortError(error)) {
         return
       }
 
-      errorMessage.value = error instanceof Error ? error.message : labels.exportFailed
+      errorMessage.value = error instanceof Error ? error.message : labels.value.exportFailed
     } finally {
       isExportingAll.value = false
     }
@@ -367,7 +354,7 @@ export function useArchiveViewer() {
       archiveHandle.value = null
       entries.value = []
       selectedPath.value = ''
-      errorMessage.value = error instanceof Error ? error.message : 'Unable to parse archive.'
+      errorMessage.value = error instanceof Error ? error.message : labels.value.parseFailed
     } finally {
       if (requestToken === openRequestToken) {
         isParsing.value = false
@@ -446,7 +433,7 @@ export function useArchiveViewer() {
 
       if (blob.size > MAX_TEXT_PREVIEW_BYTES) {
         previewKind.value = 'none'
-        previewText.value = labels.previewTooLarge
+        previewText.value = labels.value.previewTooLarge
         return
       }
 
@@ -463,14 +450,14 @@ export function useArchiveViewer() {
       }
 
       previewKind.value = 'none'
-      previewText.value = labels.noPreview
+      previewText.value = labels.value.noPreview
     } catch (error) {
       if (requestToken !== previewRequestToken) {
         return
       }
 
       previewKind.value = 'none'
-      previewText.value = error instanceof Error ? error.message : labels.noPreview
+      previewText.value = error instanceof Error ? error.message : labels.value.noPreview
     } finally {
       if (requestToken === previewRequestToken) {
         isLoadingPreview.value = false

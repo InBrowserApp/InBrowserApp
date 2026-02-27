@@ -1,5 +1,6 @@
 import { type Component, h } from 'vue'
 import { NIcon } from 'naive-ui'
+import AppGeneric20Regular from '@vicons/fluent/AppGeneric20Regular'
 import Archive16Regular from '@vicons/fluent/Archive16Regular'
 import Code16Regular from '@vicons/fluent/Code16Regular'
 import Document16Regular from '@vicons/fluent/Document16Regular'
@@ -63,6 +64,34 @@ const SETTINGS_EXTENSIONS = new Set([
 ])
 const TABLE_EXTENSIONS = new Set(['csv', 'tsv', 'xls', 'xlsx', 'ods'])
 const ARCHIVE_EXTENSIONS = new Set(['zip', 'tar', 'gz', 'tgz', 'bz2', 'xz', '7z', 'rar', 'zst'])
+const EXECUTABLE_EXTENSIONS = new Set([
+  'exe',
+  'msi',
+  'msp',
+  'bat',
+  'cmd',
+  'com',
+  'ps1',
+  'sh',
+  'bash',
+  'zsh',
+  'fish',
+  'appimage',
+  'apk',
+  'ipa',
+  'deb',
+  'rpm',
+  'pkg',
+  'dmg',
+  'run',
+  'bin',
+  'out',
+  'elf',
+  'command',
+  'cpl',
+  'scr',
+  'pif',
+])
 const CODE_EXTENSIONS = new Set([
   'c',
   'cc',
@@ -192,6 +221,10 @@ function resolveRowIcon(kind: ArchiveEntryKind, extensionRaw: string): Component
 
   if (ARCHIVE_EXTENSIONS.has(extension)) {
     return Archive16Regular
+  }
+
+  if (EXECUTABLE_EXTENSIONS.has(extension)) {
+    return AppGeneric20Regular
   }
 
   if (CODE_EXTENSIONS.has(extension)) {
