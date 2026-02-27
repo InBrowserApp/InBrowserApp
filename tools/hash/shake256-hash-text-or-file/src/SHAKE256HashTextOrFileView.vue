@@ -30,7 +30,7 @@
 import * as toolInfo from './info'
 import { ToolDefaultPageLayout, ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { HashTextOrFileTemplate } from '@tools/hash-text-or-file-template'
-import { shake256 } from '@noble/hashes/sha3'
+import { shake256 } from '@noble/hashes/sha3.js'
 import WhatIsSHAKE256 from './WhatIsSHAKE256.vue'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'

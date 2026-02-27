@@ -9,26 +9,26 @@ packages:
 
 catalog:
   '@anglinb/city-hash': ^1.1.0
-  '@commitlint/cli': ^20.3.1
-  '@commitlint/config-conventional': ^20.3.1
-  '@commitlint/types': ^20.3.1
-  '@faker-js/faker': ^10.2.0
+  '@commitlint/cli': ^20.4.2
+  '@commitlint/config-conventional': ^20.4.2
+  '@commitlint/types': ^20.4.0
+  '@faker-js/faker': ^10.3.0
   '@guolao/vue-monaco-editor': ^1.6.0
-  '@intlify/eslint-plugin-vue-i18n': ^4.1.1
-  '@intlify/unplugin-vue-i18n': ^11.0.3
+  '@intlify/eslint-plugin-vue-i18n': ^4.2.0
+  '@intlify/unplugin-vue-i18n': ^11.0.7
   '@jspawn/qpdf-wasm': ^0.0.2
   '@jsquash/oxipng': ^2.3.0
   '@jsquash/webp': ^1.5.0
   '@noble/ed25519': ^3.0.0
-  '@noble/hashes': ^1.8.0
-  '@paralleldrive/cuid2': ^3.0.6
-  '@peculiar/asn1-ecc': ^2.6.0
-  '@peculiar/asn1-pkcs8': ^2.6.0
-  '@peculiar/asn1-rsa': ^2.6.0
+  '@noble/hashes': ^2.0.1
+  '@paralleldrive/cuid2': ^3.3.0
+  '@peculiar/asn1-ecc': ^2.6.1
+  '@peculiar/asn1-pkcs8': ^2.6.1
+  '@peculiar/asn1-rsa': ^2.6.1
   '@peculiar/asn1-schema': ^2.6.0
-  '@peculiar/asn1-x509': ^2.6.0
+  '@peculiar/asn1-x509': ^2.6.1
   '@peculiar/x509': ^1.14.3
-  '@playwright/test': ^1.57.0
+  '@playwright/test': ^1.58.2
   '@prettier/plugin-oxc': 0.1.3
   '@tsconfig/node22': ^22.0.5
   '@types/color-convert': ^2.0.4
@@ -37,17 +37,17 @@ catalog:
   '@types/figlet': ^1.7.0
   '@types/jmespath': ^0.15.2
   '@types/js-yaml': ^4.0.9
-  '@types/jsdom': ^27.0.0
+  '@types/jsdom': ^28.0.0
   '@types/mime-db': ^1.43.6
-  '@types/node': ^25.0.9
+  '@types/node': ^25.3.2
   '@types/papaparse': ^5.5.2
   '@types/punycode': ^2.1.4
   '@types/qrcode': ^1.5.6
   '@types/turndown': ^5.0.6
   '@types/ua-parser-js': ^0.7.39
   '@types/validator': ^13.15.10
-  '@typescript-eslint/parser': ^8.53.1
-  '@unhead/vue': 2.1.2
+  '@typescript-eslint/parser': ^8.56.1
+  '@unhead/vue': 2.1.9
   '@vicons/antd': ^0.13.0
   '@vicons/carbon': ^0.13.0
   '@vicons/fa': ^0.13.0
@@ -56,95 +56,96 @@ catalog:
   '@vicons/ionicons5': ^0.13.0
   '@vicons/material': ^0.13.0
   '@vicons/tabler': ^0.13.0
-  '@vitejs/plugin-vue': ^6.0.3
+  '@vitejs/plugin-vue': ^6.0.4
   '@vitest/coverage-istanbul': ^4.0.16
-  '@vitest/coverage-v8': ^4.0.17
-  '@vitest/eslint-plugin': ^1.6.6
+  '@vitest/coverage-v8': ^4.0.18
+  '@vitest/eslint-plugin': ^1.6.9
   '@vue/eslint-config-prettier': ^10.2.0
-  '@vue/eslint-config-typescript': ^14.6.0
+  '@vue/eslint-config-typescript': ^14.7.0
+  '@vue/compiler-dom': ^3.5.29
   '@vue/test-utils': ^2.4.6
   '@vue/tsconfig': ^0.8.1
-  '@vueuse/core': 14.1.0
-  '@zip.js/zip.js': ^2.8.15
+  '@vueuse/core': 14.2.1
+  '@zip.js/zip.js': ^2.8.21
   '@zxing/browser': ^0.1.5
   '@zxing/library': ^0.21.3
-  ajv: ^8.17.1
+  ajv: ^8.18.0
   ajv-formats: ^3.0.1
-  bcrypt-ts: ^8.0.0
+  bcrypt-ts: ^8.0.1
   bip39: ^3.1.0
   blake3-wasm: 2.1.5
   blakejs: ^1.2.1
   browser-fs-access: ^0.38.0
   buffer: ^6.0.3
   cidr-calc: ^1.0.4
-  cidr-tools: ^11.0.3
+  cidr-tools: ^11.0.11
   color-convert: ^3.1.3
   color-name: ^2.1.0
   comlink: ^4.4.2
   crc: ^4.3.2
   cron-parser: ^5.5.0
-  cronstrue: ^3.9.0
+  cronstrue: ^3.13.0
   crypto-js: ^4.2.0
   curlconverter: ^4.12.0
   dompurify: ^3.3.1
-  eslint: ^9.39.2
-  eslint-plugin-oxlint: ~1.41.0
-  eslint-plugin-playwright: ^2.5.0
-  eslint-plugin-vue: ~10.7.0
+  eslint: ^10.0.2
+  eslint-plugin-oxlint: ~1.50.0
+  eslint-plugin-playwright: ^2.7.1
+  eslint-plugin-vue: ~10.8.0
   exifr: ^7.1.3
-  figlet: ^1.9.4
+  figlet: ^1.10.0
   filesize: ^11.0.13
   gifuct-js: ^2.1.2
-  github-markdown-css: ^5.8.1
+  github-markdown-css: ^5.9.0
   gitignore: github:github/gitignore
-  happy-dom: ^20.3.4
+  happy-dom: ^20.7.0
   hash-wasm: ^4.12.0
   highlight.js: 11.11.1
   highwayhasher: ^0.4.4
-  hono: ^4.11.4
+  hono: ^4.12.3
   husky: ^9.1.7
-  ip-bigint: ^8.2.2
-  is-cidr: ^6.0.1
+  ip-bigint: ^8.2.7
+  is-cidr: ^6.0.3
   is-ip: ^5.0.1
   jiti: ^2.6.1
   jmespath: ^0.16.0
   jose: ^6.1.3
   js-yaml: ^4.1.1
   jsbarcode: ^3.12.3
-  jsdom: ^27.4.0
-  jsonpath-plus: ^10.3.0
+  jsdom: ^28.1.0
+  jsonpath-plus: ^10.4.0
   jsqr: ^1.4.0
   lint-staged: ^16.2.7
-  marked: ^17.0.1
+  marked: ^17.0.3
   mime: ^4.1.0
   mime-db: ^1.54.0
   monaco-editor: ^0.55.1
   murmurhash3js-revisited: ^3.0.0
   naive-ui: ^2.43.2
   npm-run-all2: ^8.0.4
-  openapi-typescript: ^7.10.1
+  openapi-typescript: ^7.13.0
   openpgp: ^6.3.0
-  oxlint: ~1.41.0
+  oxlint: ~1.50.0
   papaparse: ^5.5.3
   pdf-lib: ^1.17.1
   pdfjs-dist: ^5.4.624
   pinia: 3.0.4
-  prettier: 3.8.0
+  prettier: 3.8.1
   punycode: ^2.3.1
   qrcode: ^1.5.4
   reflect-metadata: ^0.2.2
   sitemap: ^9.0.0
-  sql-formatter: ^15.7.0
   sm-crypto: ^0.4.0
   smol-toml: ^1.6.0
-  sortablejs: ^1.15.6
+  sortablejs: ^1.15.7
   sortablejs-vue3: ^1.3.0
+  sql-formatter: ^15.7.2
   svgo: ^4.0.0
-  transliteration: ^2.6.0
+  transliteration: ^2.6.1
   tsyringe: ^4.10.0
   turndown: ^7.2.2
   typescript: ~5.9.3
-  ua-parser-js: ^1.0.39
+  ua-parser-js: ^1.0.41
   ulid: ^3.0.2
   upng-js: ^2.1.0
   uuid: ^13.0.0
@@ -152,17 +153,17 @@ catalog:
   vite: ^7.3.1
   vite-node: ^5.2.0
   vite-plugin-pwa: ^1.2.0
-  vite-plugin-vue-devtools: ^8.0.5
-  vitest: ^4.0.17
-  vue: 3.5.27
-  vue-eslint-parser: ^10.2.0
+  vite-plugin-vue-devtools: ^8.0.6
+  vitest: ^4.0.18
+  vue: 3.5.29
+  vue-eslint-parser: ^10.4.0
   vue-i18n: 11.2.8
-  vue-router: ^4.6.4
-  vue-tsc: ^3.2.2
+  vue-router: ^5.0.3
+  vue-tsc: ^3.2.5
   vue3-simple-icons: ^15.6.0
   webpxmux: ^0.0.2
   webrtc-ips: ^0.2.0
-  wrangler: 4.59.2
+  wrangler: 4.69.0
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
 

@@ -149,13 +149,20 @@ const vueI18nRule = {
     },
   },
   create(context: {
-    getSourceCode: () => {
+    sourceCode?: {
+      text: string
+      getLocFromIndex: (index: number) => { line: number; column: number }
+    }
+    getSourceCode?: () => {
       text: string
       getLocFromIndex: (index: number) => { line: number; column: number }
     }
     report: (options: Record<string, unknown>) => void
   }) {
-    const sourceCode = context.getSourceCode()
+    const sourceCode = context.sourceCode ?? context.getSourceCode?.()
+    if (!sourceCode) {
+      return {}
+    }
     const content = sourceCode.text
     const blockRegex = /<i18n(?=\s|>)([^>]*)>([\s\S]*?)<\/i18n>/gi
 
