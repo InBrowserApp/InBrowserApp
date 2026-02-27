@@ -1,3 +1,6 @@
+import { easternMessages } from './archive-viewer-messages-eastern'
+import { westernMessages } from './archive-viewer-messages-western'
+
 const en = {
   'upload-title': 'Upload archive',
   'upload-hint': 'Click or drag to upload an archive file',
@@ -117,24 +120,6 @@ export const messages = {
   'zh-CN': zhHans,
   'zh-TW': zhHant,
   'zh-HK': zhHk,
-  es: en,
-  fr: en,
-  de: en,
-  it: en,
-  ja: en,
-  ko: en,
-  ru: en,
-  pt: en,
-  ar: en,
-  hi: en,
-  tr: en,
-  nl: en,
-  sv: en,
-  pl: en,
-  vi: en,
-  th: en,
-  id: en,
-  he: en,
-  ms: en,
-  no: en,
+  ...westernMessages,
+  ...easternMessages,
 }
