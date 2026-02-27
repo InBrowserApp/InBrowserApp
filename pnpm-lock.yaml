@@ -473,8 +473,6 @@ overrides:
   '@redocly/openapi-core>js-yaml': 4.1.1
   '@redocly/openapi-core>minimatch': 5.1.9
   editorconfig>minimatch: 9.0.9
-  naive-ui>lodash: 4.17.23
-  naive-ui>lodash-es: 4.17.23
 
 importers:
 
