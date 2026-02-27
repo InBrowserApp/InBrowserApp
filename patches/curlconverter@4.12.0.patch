@@ -1,0 +1,24 @@
+diff --git a/dist/src/shell/webParser.js b/dist/src/shell/webParser.js
+index 1b3bab1a4789e926fbe07786188d1dcddf655489..031b57fb392aeaa397851551c3dd1361fea4474a 100644
+--- a/dist/src/shell/webParser.js
++++ b/dist/src/shell/webParser.js
+@@ -1,14 +1,15 @@
+ // This file replaces Parser.ts when curlconverter is running in the browser.
+ import Parser from "web-tree-sitter";
++import treeSitterWasmUrl from "web-tree-sitter/tree-sitter.wasm?url";
++import bashWasmUrl from "../../tree-sitter-bash.wasm?url";
+ // NOTE: top-level await requires Safari 15+
+ // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#browser_compatibility
+ await Parser.init({
+-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+-    locateFile(scriptName, scriptDirectory) {
+-        return "/" + scriptName;
++    locateFile() {
++        return treeSitterWasmUrl;
+     },
+ });
+-const Bash = await Parser.Language.load("/tree-sitter-bash.wasm");
++const Bash = await Parser.Language.load(bashWasmUrl);
+ const parser = new Parser();
+ parser.setLanguage(Bash);
+ export default parser;
