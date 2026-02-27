@@ -1,7 +1,7 @@
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, toValue, watch } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
-import { useMessage } from 'naive-ui'
-import type { DataTableColumns, MessageApi, UploadFileInfo } from 'naive-ui'
+import type { MaybeRefOrGetter } from 'vue'
+import type { UploadFileInfo } from 'naive-ui'
 import type { ArchiveEntry, ArchiveEntryKind, ArchiveHandle } from '../types'
 import { openArchive } from '../utils/archive-open'
 import {
@@ -11,21 +11,23 @@ import {
   toDirectoryPath,
 } from './archive-explorer-rows'
 import {
-  type ExportArchiveProgress,
   exportArchiveEntriesToDirectory,
   isAbortError,
   pickArchiveFile,
   pickDirectoryForExport,
 } from './archive-browser-apis'
-import { formatBytes, formatDate } from './archive-format'
-import { renderArchiveRowNameCell } from './archive-row-icon'
+import { formatBytes } from './archive-format'
+import {
+  computeExportProgressPercent,
+  getMessageApi,
+  isSupportedArchiveFile,
+} from './archive-viewer-helpers'
 import {
   MAX_TEXT_PREVIEW_BYTES,
   isImageEntry,
   isTextEntry,
   resolveTextPreviewLanguage,
 } from './archive-preview'
-import { useArchiveViewerLabels } from './archive-viewer-labels'
 
 export type ArchiveRow = {
   key: string
@@ -33,9 +35,8 @@ export type ArchiveRow = {
   name: string
   kind: ArchiveEntryKind
   extension: string
-  kindLabel: string
-  sizeLabel: string
-  modifiedAtLabel: string
+  size: number
+  modifiedAt: Date | null
   sortName: string
   sortKind: string
   sortSize: number
@@ -43,14 +44,34 @@ export type ArchiveRow = {
 }
 
 export type ArchiveBreadcrumb = {
-  label: string
+  name: string
   path: string
+}
+
+export type ArchiveViewerLogicLabels = {
+  unsupportedFormat: string
+  selectFileFailed: string
+  exportSucceeded: string
+  exportFailed: string
+  previewTooLarge: string
+  noPreview: string
+  parseFailed: string
 }
 
 const SUPPORTED_ARCHIVE_SUFFIXES = ['.zip', '.tar', '.gz', '.tgz', '.tar.gz']
 
-export function useArchiveViewer() {
-  const labels = useArchiveViewerLabels()
+const DEFAULT_LOGIC_LABELS: ArchiveViewerLogicLabels = {
+  unsupportedFormat: 'Unsupported file format. Please upload ZIP, TAR, GZ, or TGZ.',
+  selectFileFailed: 'Unable to select archive.',
+  exportSucceeded: 'Archive exported to local folder.',
+  exportFailed: 'Failed to export archive entries.',
+  previewTooLarge: 'Preview is limited to 1 MB. Download to inspect full content.',
+  noPreview: 'Preview is not available for this file type.',
+  parseFailed: 'Unable to parse archive.',
+}
+
+export function useArchiveViewer(providedLabels?: MaybeRefOrGetter<ArchiveViewerLogicLabels>) {
+  const logicLabels = computed(() => toValue(providedLabels) ?? DEFAULT_LOGIC_LABELS)
 
   const archiveFile = ref<File | null>(null)
   const archiveHandle = ref<ArchiveHandle | null>(null)
@@ -77,13 +98,13 @@ export function useArchiveViewer() {
 
   const breadcrumbs = computed<ArchiveBreadcrumb[]>(() => {
     const segments = splitPathSegments(currentDirectory.value)
-    const result: ArchiveBreadcrumb[] = [{ label: labels.value.rootFolder, path: '' }]
+    const result: ArchiveBreadcrumb[] = []
 
     let nextSegments: string[] = []
     for (const segment of segments) {
       nextSegments = [...nextSegments, segment]
       result.push({
-        label: segment,
+        name: segment,
         path: toDirectoryPath(nextSegments),
       })
     }
@@ -105,18 +126,6 @@ export function useArchiveViewer() {
     return rows.filter((row) => row.name.toLowerCase().includes(query))
   })
 
-  const getKindLabel = (kind: ArchiveEntryKind) => {
-    switch (kind) {
-      case 'directory':
-        return labels.value.kindDirectory
-      case 'symlink':
-        return labels.value.kindSymlink
-      case 'file':
-      default:
-        return labels.value.kindFile
-    }
-  }
-
   const rows = computed<ArchiveRow[]>(() =>
     visibleRows.value.map((row) => ({
       key: row.path,
@@ -124,11 +133,10 @@ export function useArchiveViewer() {
       name: row.name,
       kind: row.kind,
       extension: row.extension,
-      kindLabel: getKindLabel(row.kind),
-      sizeLabel: row.kind === 'file' ? formatBytes(row.size) : '-',
-      modifiedAtLabel: formatDate(row.modifiedAt),
+      size: row.size,
+      modifiedAt: row.modifiedAt,
       sortName: row.name.toLowerCase(),
-      sortKind: getKindLabel(row.kind),
+      sortKind: row.kind,
       sortSize: row.kind === 'file' ? row.size : -1,
       sortModifiedAt: row.modifiedAt?.getTime() ?? 0,
     })),
@@ -168,46 +176,9 @@ export function useArchiveViewer() {
     )
   })
 
-  const exportActionLabel = computed(() => {
-    if (!isExportingAll.value) {
-      return labels.value.exportAllEntries
-    }
-
-    return `${labels.value.exportingAllEntries} ${exportProgressPercent.value}%`
-  })
-
   const canExportAllEntries = computed(() =>
     entries.value.some((entry) => entry.kind === 'file' || entry.kind === 'directory'),
   )
-
-  const columns = computed<DataTableColumns<ArchiveRow>>(() => [
-    {
-      title: labels.value.columnName,
-      key: 'name',
-      ellipsis: { tooltip: true },
-      minWidth: 260,
-      sorter: (left, right) => left.sortName.localeCompare(right.sortName),
-      render: (row) => renderArchiveRowNameCell(row),
-    },
-    {
-      title: labels.value.columnKind,
-      key: 'kindLabel',
-      width: 120,
-      sorter: (left, right) => left.sortKind.localeCompare(right.sortKind),
-    },
-    {
-      title: labels.value.columnSize,
-      key: 'sizeLabel',
-      width: 140,
-      sorter: (left, right) => left.sortSize - right.sortSize,
-    },
-    {
-      title: labels.value.columnModified,
-      key: 'modifiedAtLabel',
-      width: 180,
-      sorter: (left, right) => left.sortModifiedAt - right.sortModifiedAt,
-    },
-  ])
 
   function tableRowProps(row: ArchiveRow) {
     return {
@@ -222,8 +193,8 @@ export function useArchiveViewer() {
     const selected = data.file.file
     if (!selected) return false
 
-    if (!isSupportedArchiveFile(selected)) {
-      errorMessage.value = labels.value.unsupportedFormat
+    if (!isSupportedArchiveFile(selected, SUPPORTED_ARCHIVE_SUFFIXES)) {
+      errorMessage.value = logicLabels.value.unsupportedFormat
       return false
     }
 
@@ -264,8 +235,8 @@ export function useArchiveViewer() {
         return
       }
 
-      if (!isSupportedArchiveFile(selected)) {
-        errorMessage.value = labels.value.unsupportedFormat
+      if (!isSupportedArchiveFile(selected, SUPPORTED_ARCHIVE_SUFFIXES)) {
+        errorMessage.value = logicLabels.value.unsupportedFormat
         return
       }
 
@@ -275,7 +246,8 @@ export function useArchiveViewer() {
         return
       }
 
-      errorMessage.value = error instanceof Error ? error.message : labels.value.selectFileFailed
+      errorMessage.value =
+        error instanceof Error ? error.message : logicLabels.value.selectFileFailed
     }
   }
 
@@ -305,13 +277,13 @@ export function useArchiveViewer() {
       })
 
       exportProgressPercent.value = 100
-      message?.success(labels.value.exportSucceeded)
+      message?.success(logicLabels.value.exportSucceeded)
     } catch (error) {
       if (isAbortError(error)) {
         return
       }
 
-      errorMessage.value = error instanceof Error ? error.message : labels.value.exportFailed
+      errorMessage.value = error instanceof Error ? error.message : logicLabels.value.exportFailed
     } finally {
       isExportingAll.value = false
     }
@@ -354,7 +326,7 @@ export function useArchiveViewer() {
       archiveHandle.value = null
       entries.value = []
       selectedPath.value = ''
-      errorMessage.value = error instanceof Error ? error.message : labels.value.parseFailed
+      errorMessage.value = error instanceof Error ? error.message : logicLabels.value.parseFailed
     } finally {
       if (requestToken === openRequestToken) {
         isParsing.value = false
@@ -433,7 +405,7 @@ export function useArchiveViewer() {
 
       if (blob.size > MAX_TEXT_PREVIEW_BYTES) {
         previewKind.value = 'none'
-        previewText.value = labels.value.previewTooLarge
+        previewText.value = logicLabels.value.previewTooLarge
         return
       }
 
@@ -450,14 +422,14 @@ export function useArchiveViewer() {
       }
 
       previewKind.value = 'none'
-      previewText.value = labels.value.noPreview
+      previewText.value = logicLabels.value.noPreview
     } catch (error) {
       if (requestToken !== previewRequestToken) {
         return
       }
 
       previewKind.value = 'none'
-      previewText.value = error instanceof Error ? error.message : labels.value.noPreview
+      previewText.value = error instanceof Error ? error.message : logicLabels.value.noPreview
     } finally {
       if (requestToken === previewRequestToken) {
         isLoadingPreview.value = false
@@ -495,8 +467,6 @@ export function useArchiveViewer() {
     clearFile,
     exportAllEntries,
     closePreviewModal,
-    columns,
-    exportActionLabel,
     downloadName,
     entries,
     errorMessage,
@@ -509,7 +479,6 @@ export function useArchiveViewer() {
     isLoadingPreview,
     isParsing,
     isPreviewModalVisible,
-    labels,
     previewKind,
     previewLanguage,
     previewText,
@@ -521,25 +490,4 @@ export function useArchiveViewer() {
     tableRowProps,
     totalUncompressedSize,
   }
-}
-
-function getMessageApi(): MessageApi | null {
-  try {
-    return useMessage()
-  } catch {
-    return null
-  }
-}
-
-function computeExportProgressPercent(progress: ExportArchiveProgress): number {
-  if (progress.totalFiles <= 0) {
-    return 100
-  }
-
-  return Math.round((progress.completedFiles / progress.totalFiles) * 100)
-}
-
-function isSupportedArchiveFile(file: File): boolean {
-  const name = file.name.toLowerCase()
-  return SUPPORTED_ARCHIVE_SUFFIXES.some((suffix) => name.endsWith(suffix))
 }
