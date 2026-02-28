@@ -1,15 +1,7 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsChmod from './WhatIsChmod.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const I18nTStub = defineComponent({
   name: 'I18nT',
@@ -47,6 +39,7 @@ describe('WhatIsChmod', () => {
 
     const description = wrapper.find('.description')
     expect(description.exists()).toBe(true)
-    expect(wrapper.text()).toContain('title')
+    expect(wrapper.text()).toContain('What is chmod?')
+    expect(wrapper.text()).toContain('chmod 755 script.sh')
   })
 })

@@ -1,14 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsTextStatistics from './WhatIsTextStatistics.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const stubs = {
   ToolSectionHeader: {
@@ -27,7 +19,9 @@ describe('WhatIsTextStatistics', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('title')
-    expect(wrapper.find('p').text()).toBe('description')
+    expect(wrapper.find('.section-header').text()).toBe('What is Text Statistics?')
+    expect(wrapper.find('p').text()).toContain(
+      'Text statistics tools help you analyze written content by counting characters',
+    )
   })
 })

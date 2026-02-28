@@ -1,10 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -76,7 +72,7 @@ describe('RadioTimecodeOutputSection', () => {
       .map((node) => node.text())
       .filter((value) => value === '-')
 
-    expect(text).toContain('hz')
+    expect(text).toContain('Hz')
     expect(placeholderTexts).toHaveLength(0)
   })
 
@@ -94,6 +90,6 @@ describe('RadioTimecodeOutputSection', () => {
       .filter((value) => value === '-')
 
     expect(placeholderTexts).toHaveLength(2)
-    expect(wrapper.text()).not.toContain('hz')
+    expect(wrapper.text()).not.toContain('Hz')
   })
 })

@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CodeShotInputSection from './CodeShotInputSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -61,7 +53,7 @@ describe('CodeShotInputSection', () => {
 
     const input = wrapper.findComponent({ name: 'NInput' })
     expect(input.props('type')).toBe('textarea')
-    expect(input.props('placeholder')).toBe('codePlaceholder')
+    expect(input.props('placeholder')).toBe('Paste or type your snippet here...')
 
     input.vm.$emit('update:value', 'const next = 13')
     expect(wrapper.emitted('update:code')?.[0]).toEqual(['const next = 13'])

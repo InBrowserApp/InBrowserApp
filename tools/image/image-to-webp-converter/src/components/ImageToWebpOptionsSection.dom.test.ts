@@ -1,15 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import ImageToWebpOptionsSection from './ImageToWebpOptionsSection.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const ConversionOptionsStub = defineComponent({
   name: 'ConversionOptions',
@@ -73,10 +65,10 @@ describe('ImageToWebpOptionsSection', () => {
     })
 
     const options = wrapper.findComponent(ConversionOptionsStub)
-    expect(options.props('title')).toBe('optionsTitle')
-    expect(options.props('scaleLabel')).toBe('scaleLabel')
-    expect(options.props('targetSizeLabel')).toBe('targetSizeLabel')
-    expect(options.props('convertLabel')).toBe('convert')
+    expect(options.props('title')).toBe('Conversion Options')
+    expect(options.props('scaleLabel')).toBe('Scale (%)')
+    expect(options.props('targetSizeLabel')).toBe('Target size (KB)')
+    expect(options.props('convertLabel')).toBe('Convert to WebP')
 
     await wrapper.find('button').trigger('click')
     expect(wrapper.emitted('convert')).toHaveLength(1)

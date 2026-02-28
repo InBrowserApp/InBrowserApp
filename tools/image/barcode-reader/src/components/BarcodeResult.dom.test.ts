@@ -1,15 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
+import { describe, expect, it } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import BarcodeResult from './BarcodeResult.vue'
@@ -72,7 +61,7 @@ describe('BarcodeResult', () => {
       error: null,
     })
 
-    expect(wrapper.text()).toContain('text')
+    expect(wrapper.text()).toContain('Text')
     expect(wrapper.find('a').exists()).toBe(false)
   })
 
@@ -82,7 +71,7 @@ describe('BarcodeResult', () => {
       error: null,
     })
 
-    expect(wrapper.text()).toContain('text')
+    expect(wrapper.text()).toContain('Text')
   })
 
   it.each([
@@ -95,7 +84,7 @@ describe('BarcodeResult', () => {
     {
       name: 'phone links',
       text: 'tel:+123456789',
-      label: 'phone',
+      label: 'Phone',
       hasLink: true,
     },
     {
@@ -119,13 +108,13 @@ describe('BarcodeResult', () => {
     {
       name: 'calendar payloads',
       text: 'BEGIN:VCALENDAR\nBEGIN:VEVENT\nEND:VEVENT\nEND:VCALENDAR',
-      label: 'calendar',
+      label: 'Calendar',
       hasLink: false,
     },
     {
       name: 'geo links',
       text: 'geo:37.7749,-122.4194',
-      label: 'location',
+      label: 'Location',
       hasLink: true,
     },
   ])('labels $name', async ({ text, label, hasLink }) => {
