@@ -12,13 +12,17 @@
     :menu-props="{ class: 'page-search-auto-complete-menu' }"
     role="search"
     @select="handleSearch"
-  />
+  >
+    <template #empty>
+      <n-empty size="small" :description="t('emptyDescription')" />
+    </template>
+  </n-auto-complete>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { VNodeChild } from 'vue'
-import { NAutoComplete, type AutoCompleteOption } from 'naive-ui'
+import { NAutoComplete, NEmpty, type AutoCompleteOption } from 'naive-ui'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useSearchResults, renderSearchResultLabel, type SearchResult } from './useSearchResults'
@@ -103,79 +107,104 @@ const handleSearch = (value?: string | number): void => {
 <i18n lang="json">
 {
   "en": {
-    "searchPlaceholder": "Search for tools..."
+    "searchPlaceholder": "Search for tools...",
+    "emptyDescription": "No tools found"
   },
   "zh": {
-    "searchPlaceholder": "搜索工具..."
+    "searchPlaceholder": "搜索工具...",
+    "emptyDescription": "未找到工具"
   },
   "zh-CN": {
-    "searchPlaceholder": "搜索工具..."
+    "searchPlaceholder": "搜索工具...",
+    "emptyDescription": "未找到工具"
   },
   "zh-TW": {
-    "searchPlaceholder": "搜尋工具..."
+    "searchPlaceholder": "搜尋工具...",
+    "emptyDescription": "找不到工具"
   },
   "zh-HK": {
-    "searchPlaceholder": "搜尋工具..."
+    "searchPlaceholder": "搜尋工具...",
+    "emptyDescription": "找不到工具"
   },
   "es": {
-    "searchPlaceholder": "Buscar herramientas..."
+    "searchPlaceholder": "Buscar herramientas...",
+    "emptyDescription": "No se encontraron herramientas"
   },
   "fr": {
-    "searchPlaceholder": "Rechercher des outils..."
+    "searchPlaceholder": "Rechercher des outils...",
+    "emptyDescription": "Aucun outil trouvé"
   },
   "de": {
-    "searchPlaceholder": "Tools suchen..."
+    "searchPlaceholder": "Tools suchen...",
+    "emptyDescription": "Keine Werkzeuge gefunden"
   },
   "it": {
-    "searchPlaceholder": "Cerca strumenti..."
+    "searchPlaceholder": "Cerca strumenti...",
+    "emptyDescription": "Nessuno strumento trovato"
   },
   "ja": {
-    "searchPlaceholder": "ツールを検索..."
+    "searchPlaceholder": "ツールを検索...",
+    "emptyDescription": "ツールが見つかりません"
   },
   "ko": {
-    "searchPlaceholder": "도구 검색..."
+    "searchPlaceholder": "도구 검색...",
+    "emptyDescription": "도구를 찾을 수 없습니다"
   },
   "ru": {
-    "searchPlaceholder": "Поиск инструментов..."
+    "searchPlaceholder": "Поиск инструментов...",
+    "emptyDescription": "Инструменты не найдены"
   },
   "pt": {
-    "searchPlaceholder": "Pesquisar ferramentas..."
+    "searchPlaceholder": "Pesquisar ferramentas...",
+    "emptyDescription": "Nenhuma ferramenta encontrada"
   },
   "ar": {
-    "searchPlaceholder": "البحث عن الأدوات..."
+    "searchPlaceholder": "البحث عن الأدوات...",
+    "emptyDescription": "لم يتم العثور على أدوات"
   },
   "hi": {
-    "searchPlaceholder": "उपकरण खोजें..."
+    "searchPlaceholder": "उपकरण खोजें...",
+    "emptyDescription": "कोई उपकरण नहीं मिला"
   },
   "tr": {
-    "searchPlaceholder": "Araçları ara..."
+    "searchPlaceholder": "Araçları ara...",
+    "emptyDescription": "Araç bulunamadı"
   },
   "nl": {
-    "searchPlaceholder": "Zoek naar tools..."
+    "searchPlaceholder": "Zoek naar tools...",
+    "emptyDescription": "Geen tools gevonden"
   },
   "sv": {
-    "searchPlaceholder": "Sök verktyg..."
+    "searchPlaceholder": "Sök verktyg...",
+    "emptyDescription": "Inga verktyg hittades"
   },
   "pl": {
-    "searchPlaceholder": "Szukaj narzędzi..."
+    "searchPlaceholder": "Szukaj narzędzi...",
+    "emptyDescription": "Nie znaleziono narzędzi"
   },
   "vi": {
-    "searchPlaceholder": "Tìm kiếm công cụ..."
+    "searchPlaceholder": "Tìm kiếm công cụ...",
+    "emptyDescription": "Không tìm thấy công cụ"
   },
   "th": {
-    "searchPlaceholder": "ค้นหาเครื่องมือ..."
+    "searchPlaceholder": "ค้นหาเครื่องมือ...",
+    "emptyDescription": "ไม่พบเครื่องมือ"
   },
   "id": {
-    "searchPlaceholder": "Cari alat..."
+    "searchPlaceholder": "Cari alat...",
+    "emptyDescription": "Tidak ada alat yang ditemukan"
   },
   "he": {
-    "searchPlaceholder": "חפש כלים..."
+    "searchPlaceholder": "חפש כלים...",
+    "emptyDescription": "לא נמצאו כלים"
   },
   "ms": {
-    "searchPlaceholder": "Cari alat..."
+    "searchPlaceholder": "Cari alat...",
+    "emptyDescription": "Tiada alat ditemui"
   },
   "no": {
-    "searchPlaceholder": "Søk etter verktøy..."
+    "searchPlaceholder": "Søk etter verktøy...",
+    "emptyDescription": "Ingen verktøy funnet"
   }
 }
 </i18n>

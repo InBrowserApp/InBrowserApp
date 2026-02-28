@@ -96,6 +96,12 @@ const AutoCompleteStub = defineComponent({
 
 vi.mock('naive-ui', () => ({
   NAutoComplete: AutoCompleteStub,
+  NEmpty: defineComponent({
+    name: 'NEmpty',
+    setup() {
+      return () => h('div', { 'data-test': 'empty' })
+    },
+  }),
 }))
 
 vi.mock('@shared/locale', () => ({

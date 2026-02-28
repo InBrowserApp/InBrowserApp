@@ -68,8 +68,15 @@ const NInput = defineComponent({
 
 const NEmpty = defineComponent({
   name: 'NEmpty',
-  setup() {
-    return () => h('div', { 'data-test': 'empty' })
+  props: {
+    description: {
+      type: String,
+      default: '',
+    },
+  },
+  setup(props) {
+    return () =>
+      h('div', { 'data-test': 'empty', 'data-description': props.description }, props.description)
   },
 })
 
@@ -227,6 +234,7 @@ describe('ToolsView', () => {
 
     expect(wrapper.find('[data-test="grid"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="empty"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="empty"]').attributes('data-description')).toBe('No tools found')
     expect(wrapper.text()).toContain('Total tools: 0')
   })
 })
