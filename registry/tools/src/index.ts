@@ -122,6 +122,7 @@ import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-conve
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
+import { toolInfo as archiveViewerToolInfo } from '@tools/archive-viewer'
 import { toolInfo as jmespathTesterToolInfo } from '@tools/jmespath-tester'
 import { toolInfo as jsonpathTesterToolInfo } from '@tools/jsonpath-tester'
 import { toolInfo as openApiToTypescriptToolInfo } from '@tools/openapi-to-typescript'
@@ -250,6 +251,7 @@ export const tools: ToolInfo[] = [
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,
+  archiveViewerToolInfo,
   jmespathTesterToolInfo,
   jsonpathTesterToolInfo,
   openApiToTypescriptToolInfo,
