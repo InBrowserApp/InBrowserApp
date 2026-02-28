@@ -234,7 +234,9 @@ describe('ToolsView', () => {
 
     expect(wrapper.find('[data-test="grid"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="empty"]').exists()).toBe(true)
-    expect(wrapper.find('[data-test="empty"]').attributes('data-description')).toBe('No tools found')
+    expect(wrapper.find('[data-test="empty"]').attributes('data-description')).toBe(
+      'No tools found',
+    )
     expect(wrapper.text()).toContain('Total tools: 0')
   })
 })
