@@ -1,32 +1,34 @@
 <template>
-  <n-form-item-gi :label="t('display-value')" :show-feedback="false">
-    <n-switch v-model:value="displayValue" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('display-value')" :show-feedback="false">
+      <n-switch v-model:value="displayValue" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('text-align')" :show-feedback="false">
-    <n-select v-model:value="textAlign" :options="textAlignOptions" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('text-align')" :show-feedback="false">
+      <n-select v-model:value="textAlign" :options="textAlignOptions" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('text-position')" :show-feedback="false">
-    <n-select v-model:value="textPosition" :options="textPositionOptions" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('text-position')" :show-feedback="false">
+      <n-select v-model:value="textPosition" :options="textPositionOptions" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('font-size')" :show-feedback="false">
-    <n-slider v-model:value="fontSize" :min="8" :max="48" :step="1" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('font-size')" :show-feedback="false">
+      <n-slider v-model:value="fontSize" :min="8" :max="48" :step="1" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('line-color')" :show-feedback="false">
-    <n-color-picker v-model:value="lineColor" :modes="['hex']" size="small" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('line-color')" :show-feedback="false">
+      <n-color-picker v-model:value="lineColor" :modes="['hex']" size="small" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('background')" :show-feedback="false">
-    <n-color-picker v-model:value="background" :modes="['hex']" size="small" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('background')" :show-feedback="false">
+      <n-color-picker v-model:value="background" :modes="['hex']" size="small" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { NColorPicker, NFormItemGi, NSelect, NSlider, NSwitch } from 'naive-ui'
+import { NColorPicker, NFormItemGi, NGrid, NSelect, NSlider, NSwitch } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const displayValue = defineModel<boolean>('display-value', { required: true })

@@ -1,28 +1,30 @@
 <template>
-  <n-form-item-gi :label="t('text')" :show-feedback="false">
-    <n-input v-model:value="text" :placeholder="t('text-ph')" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('text')" :show-feedback="false">
+      <n-input v-model:value="text" :placeholder="t('text-ph')" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('format')" :show-feedback="false">
-    <n-select v-model:value="format" :options="formatOptions" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('format')" :show-feedback="false">
+      <n-select v-model:value="format" :options="formatOptions" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('bar-width')" :show-feedback="false">
-    <n-slider v-model:value="width" :min="1" :max="8" :step="1" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('bar-width')" :show-feedback="false">
+      <n-slider v-model:value="width" :min="1" :max="8" :step="1" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('bar-height')" :show-feedback="false">
-    <n-slider v-model:value="height" :min="20" :max="300" :step="2" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('bar-height')" :show-feedback="false">
+      <n-slider v-model:value="height" :min="20" :max="300" :step="2" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('margin')" :show-feedback="false">
-    <n-slider v-model:value="margin" :min="0" :max="30" :step="1" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('margin')" :show-feedback="false">
+      <n-slider v-model:value="margin" :min="0" :max="30" :step="1" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { NFormItemGi, NInput, NSelect, NSlider } from 'naive-ui'
+import { NFormItemGi, NGrid, NInput, NSelect, NSlider } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const text = defineModel<string>('text', { required: true })

@@ -1,27 +1,33 @@
 <template>
-  <n-form-item-gi :label="t('backgroundType')" :show-feedback="false">
-    <n-select v-model:value="backgroundType" :options="backgroundTypeOptions" size="small" />
-  </n-form-item-gi>
-  <n-form-item-gi
-    v-if="backgroundType === 'preset'"
-    :label="t('backgroundPreset')"
-    :show-feedback="false"
-  >
-    <n-select v-model:value="backgroundPresetId" :options="backgroundPresetOptions" size="small" />
-  </n-form-item-gi>
-  <n-form-item-gi
-    v-if="backgroundType === 'solid'"
-    :label="t('backgroundColor')"
-    :show-feedback="false"
-  >
-    <n-color-picker v-model:value="backgroundColor" :modes="['hex']" size="small" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('backgroundType')" :show-feedback="false">
+      <n-select v-model:value="backgroundType" :options="backgroundTypeOptions" size="small" />
+    </n-form-item-gi>
+    <n-form-item-gi
+      v-if="backgroundType === 'preset'"
+      :label="t('backgroundPreset')"
+      :show-feedback="false"
+    >
+      <n-select
+        v-model:value="backgroundPresetId"
+        :options="backgroundPresetOptions"
+        size="small"
+      />
+    </n-form-item-gi>
+    <n-form-item-gi
+      v-if="backgroundType === 'solid'"
+      :label="t('backgroundColor')"
+      :show-feedback="false"
+    >
+      <n-color-picker v-model:value="backgroundColor" :modes="['hex']" size="small" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NColorPicker, NFormItemGi, NSelect } from 'naive-ui'
+import { NColorPicker, NFormItemGi, NGrid, NSelect } from 'naive-ui'
 import { backgroundPresets } from '../utils/themes'
 
 type BackgroundType = 'preset' | 'solid' | 'transparent' | 'none'

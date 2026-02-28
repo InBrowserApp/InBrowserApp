@@ -1,45 +1,47 @@
 <template>
-  <n-gi>
-    <BaseInput
-      :label="t('binary')"
-      :model-value="binary"
-      :status="binaryStatus"
-      :placeholder="t('enterBinary')"
-      @update:model-value="onInput('binary', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('octal')"
-      :model-value="octal"
-      :status="octalStatus"
-      :placeholder="t('enterOctal')"
-      @update:model-value="onInput('octal', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('decimal')"
-      :model-value="decimal"
-      :status="decimalStatus"
-      :placeholder="t('enterDecimal')"
-      @update:model-value="onInput('decimal', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('hex')"
-      :model-value="hex"
-      :status="hexStatus"
-      :placeholder="t('enterHex')"
-      @update:model-value="onInput('hex', $event)"
-    />
-  </n-gi>
+  <n-grid cols="1" :y-gap="20">
+    <n-gi>
+      <BaseInput
+        :label="t('binary')"
+        :model-value="binary"
+        :status="binaryStatus"
+        :placeholder="t('enterBinary')"
+        @update:model-value="onInput('binary', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('octal')"
+        :model-value="octal"
+        :status="octalStatus"
+        :placeholder="t('enterOctal')"
+        @update:model-value="onInput('octal', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('decimal')"
+        :model-value="decimal"
+        :status="decimalStatus"
+        :placeholder="t('enterDecimal')"
+        @update:model-value="onInput('decimal', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('hex')"
+        :model-value="hex"
+        :status="hexStatus"
+        :placeholder="t('enterHex')"
+        @update:model-value="onInput('hex', $event)"
+      />
+    </n-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NGi } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import BaseInput from './BaseInput.vue'
 
 defineProps<{

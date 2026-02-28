@@ -1,19 +1,21 @@
 <template>
-  <n-form-item-gi :label="t('language')" :show-feedback="false">
-    <n-select v-model:value="language" :options="languageSelectOptions" size="small" />
-  </n-form-item-gi>
-  <n-form-item-gi :label="t('renderMode')" :show-feedback="false">
-    <n-select v-model:value="renderMode" :options="renderModeOptions" size="small" />
-  </n-form-item-gi>
-  <n-form-item-gi :label="t('theme')" :show-feedback="false">
-    <n-select v-model:value="themeId" :options="themeOptions" size="small" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('language')" :show-feedback="false">
+      <n-select v-model:value="language" :options="languageSelectOptions" size="small" />
+    </n-form-item-gi>
+    <n-form-item-gi :label="t('renderMode')" :show-feedback="false">
+      <n-select v-model:value="renderMode" :options="renderModeOptions" size="small" />
+    </n-form-item-gi>
+    <n-form-item-gi :label="t('theme')" :show-feedback="false">
+      <n-select v-model:value="themeId" :options="themeOptions" size="small" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NFormItemGi, NSelect } from 'naive-ui'
+import { NFormItemGi, NGrid, NSelect } from 'naive-ui'
 import type { RenderMode } from '../utils/render'
 import { languageOptions } from '../utils/languages'
 import { themes } from '../utils/themes'

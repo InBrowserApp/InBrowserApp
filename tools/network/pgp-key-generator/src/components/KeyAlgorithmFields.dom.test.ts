@@ -13,6 +13,7 @@ vi.mock('vue-i18n', async () => {
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
 
   const Base = defineComponent({
     template: '<div><slot /></div>',
@@ -43,7 +44,8 @@ vi.mock('naive-ui', async () => {
   })
 
   return {
-    NFormItemGi: Base,
+    NGrid: actual.NGrid,
+    NFormItemGi: actual.NFormItemGi,
     NRadioGroup,
     NRadio: Base,
     NSpace: Base,

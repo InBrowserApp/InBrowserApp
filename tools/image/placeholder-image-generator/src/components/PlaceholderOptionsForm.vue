@@ -1,25 +1,31 @@
 <template>
   <n-grid cols="1 s:2 m:3" responsive="screen" :x-gap="20" :y-gap="20">
-    <PlaceholderPresetSizeOptions v-model:width="width" v-model:height="height" />
-    <PlaceholderBackgroundOptions
-      v-model:bg-type="bgType"
-      v-model:bg-color="bgColor"
-      v-model:gradient-color1="gradientColor1"
-      v-model:gradient-color2="gradientColor2"
-      v-model:gradient-angle="gradientAngle"
-    />
-    <PlaceholderTextOptions
-      v-model:text-color="textColor"
-      v-model:custom-text="customText"
-      v-model:font-size="fontSize"
-      :width="width"
-      :height="height"
-    />
+    <n-gi>
+      <PlaceholderPresetSizeOptions v-model:width="width" v-model:height="height" />
+    </n-gi>
+    <n-gi>
+      <PlaceholderBackgroundOptions
+        v-model:bg-type="bgType"
+        v-model:bg-color="bgColor"
+        v-model:gradient-color1="gradientColor1"
+        v-model:gradient-color2="gradientColor2"
+        v-model:gradient-angle="gradientAngle"
+      />
+    </n-gi>
+    <n-gi>
+      <PlaceholderTextOptions
+        v-model:text-color="textColor"
+        v-model:custom-text="customText"
+        v-model:font-size="fontSize"
+        :width="width"
+        :height="height"
+      />
+    </n-gi>
   </n-grid>
 </template>
 
 <script setup lang="ts">
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import PlaceholderBackgroundOptions from './PlaceholderBackgroundOptions.vue'
 import PlaceholderPresetSizeOptions from './PlaceholderPresetSizeOptions.vue'
 import PlaceholderTextOptions from './PlaceholderTextOptions.vue'

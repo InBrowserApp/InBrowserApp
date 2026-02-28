@@ -21,17 +21,6 @@ vi.mock('@shared/ui/tool', () => ({
   },
 }))
 
-vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
-
-  return {
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div><slot /></div>',
-    }),
-  }
-})
-
 vi.mock('./CodeShotSyntaxOptions.vue', async () => {
   const { defineComponent } = await import('vue')
 

@@ -1,45 +1,47 @@
 <template>
-  <n-gi>
-    <BaseInput
-      :label="t('base32')"
-      :model-value="base32"
-      :status="base32Status"
-      :placeholder="t('enterBase32')"
-      @update:model-value="onInput('base32', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('base36')"
-      :model-value="base36"
-      :status="base36Status"
-      :placeholder="t('enterBase36')"
-      @update:model-value="onInput('base36', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('base62')"
-      :model-value="base62"
-      :status="base62Status"
-      :placeholder="t('enterBase62')"
-      @update:model-value="onInput('base62', $event)"
-    />
-  </n-gi>
-  <n-gi>
-    <BaseInput
-      :label="t('base64')"
-      :model-value="base64"
-      :status="base64Status"
-      :placeholder="t('enterBase64')"
-      @update:model-value="onInput('base64', $event)"
-    />
-  </n-gi>
+  <n-grid cols="1" :y-gap="20">
+    <n-gi>
+      <BaseInput
+        :label="t('base32')"
+        :model-value="base32"
+        :status="base32Status"
+        :placeholder="t('enterBase32')"
+        @update:model-value="onInput('base32', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('base36')"
+        :model-value="base36"
+        :status="base36Status"
+        :placeholder="t('enterBase36')"
+        @update:model-value="onInput('base36', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('base62')"
+        :model-value="base62"
+        :status="base62Status"
+        :placeholder="t('enterBase62')"
+        @update:model-value="onInput('base62', $event)"
+      />
+    </n-gi>
+    <n-gi>
+      <BaseInput
+        :label="t('base64')"
+        :model-value="base64"
+        :status="base64Status"
+        :placeholder="t('enterBase64')"
+        @update:model-value="onInput('base64', $event)"
+      />
+    </n-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NGi } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import BaseInput from './BaseInput.vue'
 
 defineProps<{

@@ -2,19 +2,25 @@
   <ToolSection>
     <ToolSectionHeader>{{ t('options') }}</ToolSectionHeader>
     <n-grid cols="1 m:2" responsive="screen" :x-gap="20" :y-gap="16">
-      <KeyIdentityFields v-model:name="name" v-model:email="email" v-model:comment="comment" />
-      <KeyAlgorithmFields v-model:algorithm="algorithm" v-model:rsa-key-size="rsaKeySize" />
-      <KeyExpirationFields
-        v-model:expiration-days="expirationDays"
-        v-model:passphrase="passphrase"
-      />
+      <n-gi>
+        <KeyIdentityFields v-model:name="name" v-model:email="email" v-model:comment="comment" />
+      </n-gi>
+      <n-gi>
+        <KeyAlgorithmFields v-model:algorithm="algorithm" v-model:rsa-key-size="rsaKeySize" />
+      </n-gi>
+      <n-gi>
+        <KeyExpirationFields
+          v-model:expiration-days="expirationDays"
+          v-model:passphrase="passphrase"
+        />
+      </n-gi>
     </n-grid>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import KeyAlgorithmFields from './KeyAlgorithmFields.vue'
 import KeyExpirationFields from './KeyExpirationFields.vue'

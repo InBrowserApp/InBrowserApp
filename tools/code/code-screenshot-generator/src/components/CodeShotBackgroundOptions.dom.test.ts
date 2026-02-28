@@ -13,11 +13,7 @@ vi.mock('vue-i18n', async () => {
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
-  const NFormItemGi = defineComponent({
-    name: 'NFormItemGi',
-    template: '<div><slot /></div>',
-  })
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
 
   const NSelect = defineComponent({
     name: 'NSelect',
@@ -47,7 +43,7 @@ vi.mock('naive-ui', async () => {
     template: '<div />',
   })
 
-  return { NColorPicker, NFormItemGi, NSelect }
+  return { NColorPicker, NFormItemGi: actual.NFormItemGi, NGrid: actual.NGrid, NSelect }
 })
 
 describe('CodeShotBackgroundOptions', () => {

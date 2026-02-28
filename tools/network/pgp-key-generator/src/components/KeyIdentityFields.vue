@@ -1,20 +1,22 @@
 <template>
-  <n-form-item-gi :label="t('name')" :show-feedback="false">
-    <n-input v-model:value="name" :placeholder="t('namePlaceholder')" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('name')" :show-feedback="false">
+      <n-input v-model:value="name" :placeholder="t('namePlaceholder')" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('email')" :show-feedback="false">
-    <n-input v-model:value="email" :placeholder="t('emailPlaceholder')" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('email')" :show-feedback="false">
+      <n-input v-model:value="email" :placeholder="t('emailPlaceholder')" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('comment')" :show-feedback="false" :span="2">
-    <n-input v-model:value="comment" :placeholder="t('commentPlaceholder')" />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('comment')" :show-feedback="false">
+      <n-input v-model:value="comment" :placeholder="t('commentPlaceholder')" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NFormItemGi, NInput } from 'naive-ui'
+import { NFormItemGi, NGrid, NInput } from 'naive-ui'
 
 const name = defineModel<string>('name', { required: true })
 const email = defineModel<string>('email', { required: true })

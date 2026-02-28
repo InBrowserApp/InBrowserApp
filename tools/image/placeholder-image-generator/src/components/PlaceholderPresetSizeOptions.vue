@@ -1,40 +1,42 @@
 <template>
-  <n-form-item-gi :label="t('preset')" :show-feedback="false">
-    <n-select
-      :value="currentPresetIndex"
-      :options="presetOptions"
-      :placeholder="t('preset-placeholder')"
-      clearable
-      @update:value="applyPreset"
-    />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('preset')" :show-feedback="false">
+      <n-select
+        :value="currentPresetIndex"
+        :options="presetOptions"
+        :placeholder="t('preset-placeholder')"
+        clearable
+        @update:value="applyPreset"
+      />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('width')" :show-feedback="false">
-    <n-input-number
-      :value="width"
-      :min="1"
-      :max="4096"
-      :step="1"
-      style="width: 100%"
-      @update:value="(v) => (width = v ?? 800)"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('width')" :show-feedback="false">
+      <n-input-number
+        :value="width"
+        :min="1"
+        :max="4096"
+        :step="1"
+        style="width: 100%"
+        @update:value="(v) => (width = v ?? 800)"
+      />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('height')" :show-feedback="false">
-    <n-input-number
-      :value="height"
-      :min="1"
-      :max="4096"
-      :step="1"
-      style="width: 100%"
-      @update:value="(v) => (height = v ?? 600)"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('height')" :show-feedback="false">
+      <n-input-number
+        :value="height"
+        :min="1"
+        :max="4096"
+        :step="1"
+        style="width: 100%"
+        @update:value="(v) => (height = v ?? 600)"
+      />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { NFormItemGi, NInputNumber, NSelect } from 'naive-ui'
+import { NFormItemGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const width = defineModel<number>('width', { required: true })

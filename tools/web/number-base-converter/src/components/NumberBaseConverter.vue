@@ -1,39 +1,45 @@
 <template>
   <n-grid cols="1 s:2 l:3" :x-gap="24" :y-gap="24" responsive="screen">
-    <NumberBasePrimaryInputs
-      :binary="binary"
-      :binary-status="binaryStatus"
-      :octal="octal"
-      :octal-status="octalStatus"
-      :decimal="decimal"
-      :decimal-status="decimalStatus"
-      :hex="hex"
-      :hex-status="hexStatus"
-      :on-input="onInput"
-    />
-    <NumberBaseExtendedInputs
-      :base32="base32"
-      :base32-status="base32Status"
-      :base36="base36"
-      :base36-status="base36Status"
-      :base62="base62"
-      :base62-status="base62Status"
-      :base64="base64"
-      :base64-status="base64Status"
-      :on-input="onInput"
-    />
-    <NumberBaseCustomInput
-      v-model:custom-base-value="customBaseValue"
-      :custom="custom"
-      :custom-status="customStatus"
-      :on-input="onInput"
-    />
+    <n-gi>
+      <NumberBasePrimaryInputs
+        :binary="binary"
+        :binary-status="binaryStatus"
+        :octal="octal"
+        :octal-status="octalStatus"
+        :decimal="decimal"
+        :decimal-status="decimalStatus"
+        :hex="hex"
+        :hex-status="hexStatus"
+        :on-input="onInput"
+      />
+    </n-gi>
+    <n-gi>
+      <NumberBaseExtendedInputs
+        :base32="base32"
+        :base32-status="base32Status"
+        :base36="base36"
+        :base36-status="base36Status"
+        :base62="base62"
+        :base62-status="base62Status"
+        :base64="base64"
+        :base64-status="base64Status"
+        :on-input="onInput"
+      />
+    </n-gi>
+    <n-gi>
+      <NumberBaseCustomInput
+        v-model:custom-base-value="customBaseValue"
+        :custom="custom"
+        :custom-status="customStatus"
+        :on-input="onInput"
+      />
+    </n-gi>
   </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import { useStorage } from '@vueuse/core'
 import NumberBasePrimaryInputs from './NumberBasePrimaryInputs.vue'
 import NumberBaseExtendedInputs from './NumberBaseExtendedInputs.vue'
