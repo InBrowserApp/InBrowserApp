@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NInput } from 'naive-ui'
 import ScreenRecorderOutput from './ScreenRecorderOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('ScreenRecorderOutput', () => {
   it('shows fallback values when mime type, file name, and blob are missing', () => {
     const wrapper = mount(ScreenRecorderOutput, {
@@ -29,11 +21,11 @@ describe('ScreenRecorderOutput', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('formatUnknown')
+    expect(wrapper.text()).toContain('Unknown')
     expect(wrapper.text()).toContain('0 B')
 
     const downloadLink = wrapper.find('a[download]')
-    expect(downloadLink.attributes('download')).toBe('fileNamePlaceholder.webm')
+    expect(downloadLink.attributes('download')).toBe('screen-recording.webm')
   })
 
   it('emits file name updates, formats details, and clears output', async () => {
@@ -68,7 +60,7 @@ describe('ScreenRecorderOutput', () => {
 
     const clearButton = wrapper
       .findAll('button')
-      .find((candidate) => candidate.text().trim().includes('clear'))
+      .find((candidate) => candidate.text().trim().includes('Clear'))
     expect(clearButton).toBeTruthy()
 
     await clearButton!.trigger('click')

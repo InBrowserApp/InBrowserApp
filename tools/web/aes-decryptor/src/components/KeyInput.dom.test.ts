@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import KeyInput from './KeyInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -74,7 +66,7 @@ describe('KeyInput', () => {
     })
 
     expect(wrapper.findAll('.n-input')).toHaveLength(1)
-    expect(wrapper.text()).not.toContain('invalidHex')
+    expect(wrapper.text()).not.toContain('Invalid hex format')
   })
 
   it('flags invalid hex input', () => {
@@ -92,7 +84,7 @@ describe('KeyInput', () => {
 
     const input = wrapper.find('.n-input')
     expect(input.attributes('data-status')).toBe('error')
-    expect(wrapper.text()).toContain('invalidHex')
+    expect(wrapper.text()).toContain('Invalid hex format')
   })
 
   it('flags wrong key length', () => {
@@ -110,7 +102,7 @@ describe('KeyInput', () => {
 
     const input = wrapper.find('.n-input')
     expect(input.attributes('data-status')).toBe('error')
-    expect(wrapper.text()).toContain('wrongKeyLength')
+    expect(wrapper.text()).toContain('Expected 32 hex chars, got 2')
   })
 
   it('accepts a valid key length', () => {
@@ -128,7 +120,7 @@ describe('KeyInput', () => {
 
     const input = wrapper.find('.n-input')
     expect(input.attributes('data-status')).toBe('success')
-    expect(wrapper.text()).not.toContain('wrongKeyLength')
+    expect(wrapper.text()).not.toContain('Expected 32 hex chars')
   })
 
   it('keeps raw key status empty when no raw key is provided', () => {
@@ -146,8 +138,8 @@ describe('KeyInput', () => {
 
     const input = wrapper.find('.n-input')
     expect(input.attributes('data-status')).toBe(undefined)
-    expect(wrapper.text()).not.toContain('invalidHex')
-    expect(wrapper.text()).not.toContain('wrongKeyLength')
+    expect(wrapper.text()).not.toContain('Invalid hex format')
+    expect(wrapper.text()).not.toContain('Expected 32 hex chars')
   })
 
   it('emits updates for key type and inputs', () => {

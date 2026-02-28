@@ -14,10 +14,6 @@ vi.mock('@utils/airplane-mode', () => ({
   useAirplaneModeStore: () => state.airplaneModeStore,
 }))
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const NTooltip = defineComponent({
     name: 'NTooltip',
@@ -74,9 +70,9 @@ describe('AirplaneModeToggle', () => {
     const wrapper = mountToggle()
 
     const button = wrapper.get('button')
-    expect(button.attributes('aria-label')).toBe('airplane-mode-disabled')
+    expect(button.attributes('aria-label')).toBe('Airplane Mode Disabled')
     expect(button.attributes('data-type')).toBe('tertiary')
-    expect(wrapper.text()).toContain('airplane-mode-disabled')
+    expect(wrapper.text()).toContain('Airplane Mode Disabled')
 
     await button.trigger('click')
     expect(state.airplaneModeStore.toggleAirplaneMode).toHaveBeenCalledTimes(1)
@@ -87,8 +83,8 @@ describe('AirplaneModeToggle', () => {
     const wrapper = mountToggle()
 
     const button = wrapper.get('button')
-    expect(button.attributes('aria-label')).toBe('airplane-mode-enabled')
+    expect(button.attributes('aria-label')).toBe('Airplane Mode Enabled')
     expect(button.attributes('data-type')).toBe('warning')
-    expect(wrapper.text()).toContain('airplane-mode-enabled')
+    expect(wrapper.text()).toContain('Airplane Mode Enabled')
   })
 })

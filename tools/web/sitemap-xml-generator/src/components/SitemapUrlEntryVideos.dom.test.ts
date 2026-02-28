@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SitemapUrlEntryVideos from './SitemapUrlEntryVideos.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -134,20 +126,20 @@ describe('SitemapUrlEntryVideos', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('addVideo')
+    expect(wrapper.text()).toContain('Add video')
 
     await wrapper
       .get('input[placeholder="https://example.com/thumb.jpg"]')
       .setValue('https://example.com/thumb.jpg')
-    await wrapper.get('input[placeholder="title"]').setValue('Intro video')
-    await wrapper.get('input[placeholder="description"]').setValue('Intro to our product')
+    await wrapper.get('input[placeholder="Title"]').setValue('Intro video')
+    await wrapper.get('input[placeholder="Description"]').setValue('Intro to our product')
     await wrapper
       .get('input[placeholder="https://example.com/video.mp4"]')
       .setValue('https://example.com/videos/intro.mp4')
     await wrapper
       .get('input[placeholder="https://example.com/player"]')
       .setValue('https://example.com/player')
-    await wrapper.get('input[placeholder="publicationDate"]').setValue('2024-01-20')
+    await wrapper.get('input[placeholder="Publication date"]').setValue('2024-01-20')
 
     await wrapper.get('input[type="number"]').setValue('42')
 

@@ -4,14 +4,6 @@ import CodeShotSyntaxOptions from './CodeShotSyntaxOptions.vue'
 import { languageOptions } from '../utils/languages'
 import { themes } from '../utils/themes'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
@@ -65,19 +57,19 @@ describe('CodeShotSyntaxOptions', () => {
       value: string
     }[]
     expect(languageSelectOptions).toHaveLength(languageOptions.length)
-    expect(languageSelectOptions[0]).toEqual({ label: 'languageAuto', value: 'auto' })
+    expect(languageSelectOptions[0]).toEqual({ label: 'Auto', value: 'auto' })
 
     const renderModeOptions = renderModeSelect.props('options') as {
       label: string
       value: string
     }[]
     expect(renderModeOptions).toEqual([
-      { label: 'renderModeHighlight', value: 'highlight' },
-      { label: 'renderModePlain', value: 'plain' },
+      { label: 'Syntax highlight', value: 'highlight' },
+      { label: 'Plain text', value: 'plain' },
     ])
 
     const themeOptions = themeSelect.props('options') as { label: string; value: string }[]
-    expect(themeOptions[0]).toEqual({ label: theme.labelKey, value: theme.id })
+    expect(themeOptions[0]).toEqual({ label: 'Nebula', value: theme.id })
 
     languageSelect.vm.$emit('update:value', 'javascript')
     renderModeSelect.vm.$emit('update:value', 'plain')

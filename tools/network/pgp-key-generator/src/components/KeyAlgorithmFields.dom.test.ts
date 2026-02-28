@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 
 import KeyAlgorithmFields from './KeyAlgorithmFields.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
@@ -83,6 +75,6 @@ describe('KeyAlgorithmFields', () => {
     const options = select.props('options') as Array<{ label: string; value: number }>
 
     expect(options.map((option) => option.value)).toEqual([2048, 3072, 4096])
-    expect(options[2]?.label).toContain('recommended')
+    expect(options[2]?.label).toContain('Recommended')
   })
 })

@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import BusinessDaysCountSection from './BusinessDaysCountSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const DatePickerStub = defineComponent({
   name: 'DatePicker',
   props: {
@@ -91,7 +83,7 @@ describe('BusinessDaysCountSection', () => {
   it('renders fallback placeholders when labels are empty', () => {
     const { wrapper } = mountSection()
 
-    expect(wrapper.text()).not.toContain('range-swapped')
+    expect(wrapper.text()).not.toContain('End date is before start date')
     expect(wrapper.text()).toContain('-')
     expect(wrapper.findAll('.copy-button')).toHaveLength(0)
   })
@@ -105,7 +97,7 @@ describe('BusinessDaysCountSection', () => {
       isRangeReversed: true,
     })
 
-    expect(wrapper.text()).toContain('range-swapped')
+    expect(wrapper.text()).toContain('End date is before start date; results use swapped dates.')
     expect(wrapper.text()).toContain('10')
     expect(wrapper.text()).toContain('14')
     expect(wrapper.text()).toContain('3')

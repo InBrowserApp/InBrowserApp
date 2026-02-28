@@ -36,14 +36,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -146,7 +138,7 @@ describe('MyIPAddress', () => {
     )
     expect(wrapper.findAll('.ip-info')).toHaveLength(4)
     expect(wrapper.findAll('.loading-null')).toHaveLength(0)
-    expect(wrapper.text()).toContain('webrtc-leak')
+    expect(wrapper.text()).toContain('WebRTC Leak')
   })
 
   it('handles WebRTC lookup failures gracefully', async () => {
@@ -166,7 +158,7 @@ describe('MyIPAddress', () => {
 
     const titles = wrapper.findAll('.collapse-item').map((item) => item.attributes('data-title'))
     expect(titles).toEqual(expect.arrayContaining(['203.0.113.10', '2001:db8::1']))
-    expect(wrapper.text()).not.toContain('webrtc-leak')
+    expect(wrapper.text()).not.toContain('WebRTC Leak')
     expect(consoleSpy).toHaveBeenCalled()
 
     consoleSpy.mockRestore()
@@ -189,7 +181,7 @@ describe('MyIPAddress', () => {
 
     expect(wrapper.findAll('.loading-null')).toHaveLength(2)
     expect(wrapper.findAll('.collapse-item')).toHaveLength(0)
-    expect(wrapper.text()).not.toContain('webrtc-leak')
+    expect(wrapper.text()).not.toContain('WebRTC Leak')
     expect(consoleSpy).toHaveBeenCalled()
 
     consoleSpy.mockRestore()

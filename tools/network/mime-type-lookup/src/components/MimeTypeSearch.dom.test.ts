@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import MimeTypeSearch from './MimeTypeSearch.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -125,9 +117,9 @@ describe('MimeTypeSearch', () => {
       },
     })
 
-    expect(wrapper.find('input').attributes('placeholder')).toBe('searchPlaceholder')
+    expect(wrapper.find('input').attributes('placeholder')).toBe('Search MIME types, extensions...')
     expect(wrapper.findAll('.radio-button')).toHaveLength(10)
-    expect(wrapper.text()).toContain('all')
+    expect(wrapper.text()).toContain('All')
     expect(wrapper.text()).toContain('application')
   })
 

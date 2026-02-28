@@ -14,14 +14,6 @@ vi.mock('@vueuse/core', () => ({
   },
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -277,10 +269,10 @@ describe('RandomPasswordGenerator', () => {
     const wrapper = mountGenerator()
     await nextTick()
 
-    expect(wrapper.text()).toContain('tab-random')
-    expect(wrapper.text()).toContain('tab-words')
-    expect(wrapper.text()).toContain('tab-separator')
-    expect(wrapper.text()).toContain('tab-pin')
+    expect(wrapper.text()).toContain('Random')
+    expect(wrapper.text()).toContain('Words')
+    expect(wrapper.text()).toContain('Separator')
+    expect(wrapper.text()).toContain('PIN')
 
     wrapper.findComponent({ name: 'NTabs' }).vm.$emit('update:value', 'words')
     await nextTick()
