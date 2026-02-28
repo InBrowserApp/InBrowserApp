@@ -2,27 +2,33 @@
   <ToolSectionHeader>{{ t('styleTitle') }}</ToolSectionHeader>
   <ToolSection>
     <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="12">
-      <CodeShotSyntaxOptions
-        v-model:language="language"
-        v-model:render-mode="renderMode"
-        v-model:theme-id="themeId"
-      />
-      <CodeShotBackgroundOptions
-        v-model:background-type="backgroundType"
-        v-model:background-preset-id="backgroundPresetId"
-        v-model:background-color="backgroundColor"
-      />
-      <CodeShotWindowOptions
-        v-model:window-style="windowStyle"
-        v-model:show-line-numbers="showLineNumbers"
-      />
+      <n-gi>
+        <CodeShotSyntaxOptions
+          v-model:language="language"
+          v-model:render-mode="renderMode"
+          v-model:theme-id="themeId"
+        />
+      </n-gi>
+      <n-gi>
+        <CodeShotBackgroundOptions
+          v-model:background-type="backgroundType"
+          v-model:background-preset-id="backgroundPresetId"
+          v-model:background-color="backgroundColor"
+        />
+      </n-gi>
+      <n-gi>
+        <CodeShotWindowOptions
+          v-model:window-style="windowStyle"
+          v-model:show-line-numbers="showLineNumbers"
+        />
+      </n-gi>
     </n-grid>
   </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { RenderMode, WindowStyle } from '../utils/render'
 import CodeShotBackgroundOptions from './CodeShotBackgroundOptions.vue'

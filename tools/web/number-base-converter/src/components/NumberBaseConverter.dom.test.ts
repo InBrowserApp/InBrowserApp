@@ -38,16 +38,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div class="n-grid"><slot /></div>',
-    }),
-  }
-})
-
 vi.mock('./NumberBasePrimaryInputs.vue', async () => {
   const { defineComponent } = await import('vue')
   return {

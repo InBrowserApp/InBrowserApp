@@ -3,16 +3,6 @@ import { mount } from '@vue/test-utils'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import GeneralInfo from './GeneralInfo.vue'
 
-vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div class="n-grid"><slot /></div>',
-    }),
-  }
-})
-
 const GeneralInfoHeaderStub = {
   name: 'GeneralInfoHeader',
   template: '<div class="general-info-header" />',

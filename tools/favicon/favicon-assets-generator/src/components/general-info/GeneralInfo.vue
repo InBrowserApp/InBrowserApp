@@ -1,15 +1,23 @@
 <template>
   <GeneralInfoHeader />
   <n-grid x-gap="30" :cols="4">
-    <GeneralInfoBasics :options="options" />
-    <GeneralInfoThemeColors :options="options" />
-    <GeneralInfoPaths :options="options" />
-    <GeneralInfoDisplay :options="options" />
+    <n-gi>
+      <GeneralInfoBasics :options="options" />
+    </n-gi>
+    <n-gi>
+      <GeneralInfoThemeColors :options="options" />
+    </n-gi>
+    <n-gi>
+      <GeneralInfoPaths :options="options" />
+    </n-gi>
+    <n-gi>
+      <GeneralInfoDisplay :options="options" />
+    </n-gi>
   </n-grid>
 </template>
 
 <script setup lang="ts">
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import type { GeneralInfoOptions } from '../../utils/favicon-generator/general-info'
 import GeneralInfoHeader from './GeneralInfoHeader.vue'
 import GeneralInfoBasics from './GeneralInfoBasics.vue'

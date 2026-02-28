@@ -29,12 +29,6 @@ vi.mock('./PlaceholderTextOptions.vue', () => ({
   },
 }))
 
-vi.mock('naive-ui', () => ({
-  NGrid: {
-    template: '<div class="n-grid"><slot /></div>',
-  },
-}))
-
 let PlaceholderOptionsForm: typeof import('./PlaceholderOptionsForm.vue').default
 
 beforeAll(async () => {

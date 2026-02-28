@@ -11,15 +11,6 @@ vi.mock('vue-i18n', async () => {
   }
 })
 
-vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    NGrid: defineComponent({
-      template: '<div class="grid"><slot /></div>',
-    }),
-  }
-})
-
 const IdentityStub = defineComponent({
   name: 'KeyIdentityFields',
   emits: ['update:name', 'update:email', 'update:comment'],

@@ -1,19 +1,23 @@
 <template>
   <n-grid :x-gap="12" :y-gap="12" cols="1 s:2 m:3 l:5" responsive="screen">
-    <URLAuthorityInputs
-      v-model:protocol="protocol"
-      v-model:username="username"
-      v-model:password="password"
-      v-model:hostname="hostname"
-      v-model:port-number="portNumber"
-    />
-    <URLPathInputs v-model:path="path" v-model:query-string="queryString" v-model:hash="hash" />
+    <n-gi span="1 s:2 m:3 l:5">
+      <URLAuthorityInputs
+        v-model:protocol="protocol"
+        v-model:username="username"
+        v-model:password="password"
+        v-model:hostname="hostname"
+        v-model:port-number="portNumber"
+      />
+    </n-gi>
+    <n-gi span="1 s:2 m:3 l:5">
+      <URLPathInputs v-model:path="path" v-model:query-string="queryString" v-model:hash="hash" />
+    </n-gi>
   </n-grid>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import { syncRef } from '@vueuse/core'
 import URLAuthorityInputs from './URLAuthorityInputs.vue'
 import URLPathInputs from './URLPathInputs.vue'

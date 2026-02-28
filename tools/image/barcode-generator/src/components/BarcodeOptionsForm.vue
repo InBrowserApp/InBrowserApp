@@ -1,25 +1,29 @@
 <template>
-  <n-grid cols="1 s:2 m:3" responsive="screen" :x-gap="20" :y-gap="20">
-    <BarcodeOptionsBasics
-      v-model:text="text"
-      v-model:format="format"
-      v-model:width="width"
-      v-model:height="height"
-      v-model:margin="margin"
-    />
-    <BarcodeOptionsAppearance
-      v-model:display-value="displayValue"
-      v-model:text-align="textAlign"
-      v-model:text-position="textPosition"
-      v-model:font-size="fontSize"
-      v-model:line-color="lineColor"
-      v-model:background="background"
-    />
+  <n-grid cols="1 s:2" responsive="screen" :x-gap="20" :y-gap="20">
+    <n-gi>
+      <BarcodeOptionsBasics
+        v-model:text="text"
+        v-model:format="format"
+        v-model:width="width"
+        v-model:height="height"
+        v-model:margin="margin"
+      />
+    </n-gi>
+    <n-gi>
+      <BarcodeOptionsAppearance
+        v-model:display-value="displayValue"
+        v-model:text-align="textAlign"
+        v-model:text-position="textPosition"
+        v-model:font-size="fontSize"
+        v-model:line-color="lineColor"
+        v-model:background="background"
+      />
+    </n-gi>
   </n-grid>
 </template>
 
 <script setup lang="ts">
-import { NGrid } from 'naive-ui'
+import { NGrid, NGi } from 'naive-ui'
 import BarcodeOptionsBasics from './BarcodeOptionsBasics.vue'
 import BarcodeOptionsAppearance from './BarcodeOptionsAppearance.vue'
 

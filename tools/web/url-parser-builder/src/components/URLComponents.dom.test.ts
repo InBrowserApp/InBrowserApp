@@ -6,6 +6,7 @@ import URLComponents from './URLComponents.vue'
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
 
   const makeStub = (name: string) =>
     defineComponent({
@@ -61,7 +62,7 @@ vi.mock('naive-ui', async () => {
   })
 
   return {
-    NGrid: makeStub('NGrid'),
+    ...actual,
     NGridItem: makeStub('NGridItem'),
     NFormItem,
     NInput,
