@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import SearchPageLabel from './SearchPageLabel.vue'
 
 describe('SearchPageLabel', () => {
-  it('renders the localized label and links to search route', () => {
+  it('renders the localized label and links to tools route with query', () => {
     const wrapper = mount(SearchPageLabel, {
       props: {
         query: 'json',
@@ -22,7 +22,7 @@ describe('SearchPageLabel', () => {
     expect(wrapper.text()).toContain('Search json')
     const target = wrapper.get('[data-test="router-link"]').attributes('data-target')
 
-    expect(target).toContain('"name":"search-tools"')
+    expect(target).toContain('"name":"tools"')
     expect(target).toContain('"query":"json"')
   })
 })

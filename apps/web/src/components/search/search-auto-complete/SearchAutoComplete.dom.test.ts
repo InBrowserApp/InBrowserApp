@@ -40,7 +40,7 @@ const renderSearchActionLabel = vi.fn(() => h('div', 'search-label'))
 const renderSearchResultLabel = vi.fn(() => h('div', 'result-label'))
 
 const push = vi.fn()
-const resolve = vi.fn(({ query }) => ({ fullPath: `/tools/search?query=${query.query as string}` }))
+const resolve = vi.fn(({ query }) => ({ fullPath: `/tools?query=${query.query as string}` }))
 
 const AutoCompleteStub = defineComponent({
   name: 'NAutoComplete',
@@ -146,11 +146,11 @@ describe('SearchAutoComplete', () => {
     const wrapper = mount(SearchAutoComplete)
 
     await wrapper.get('[data-test="select-search"]').trigger('click')
-    expect(push).toHaveBeenCalledWith('/tools/search?query=hash')
+    expect(push).toHaveBeenCalledWith('/tools?query=hash')
 
     localeRef.value = 'en'
     await wrapper.get('[data-test="select-search"]').trigger('click')
-    expect(push).toHaveBeenLastCalledWith('/en/tools/search?query=hash')
+    expect(push).toHaveBeenLastCalledWith('/en/tools?query=hash')
 
     const optionsLength = Number(
       wrapper.get('[data-options-length]').attributes('data-options-length'),

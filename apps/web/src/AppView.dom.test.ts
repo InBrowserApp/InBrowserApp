@@ -27,7 +27,7 @@ vi.mock('vue-router', async (importOriginal) => {
 
 describe('AppView', () => {
   it('renders the nav layout and router view', async () => {
-    route.fullPath = '/tools/search?query=test'
+    route.fullPath = '/tools?query=test'
 
     const AppView = (await import('./AppView.vue')).default
     const wrapper = mount(AppView)

@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const language = ref<string | undefined>(undefined)
 const resolve = vi.fn((to: unknown) => ({
-  fullPath: typeof to === 'string' ? to : '/tools/search',
+  fullPath: typeof to === 'string' ? to : '/tools',
 }))
 
 vi.mock('@shared/locale', () => ({
@@ -38,9 +38,9 @@ describe('useLocalizedPath', () => {
     const { useLocalizedPath } = await import('./use-localized-path')
 
     language.value = 'en'
-    const { localizedPath } = useLocalizedPath({ name: 'search-tools' })
+    const { localizedPath } = useLocalizedPath({ name: 'tools' })
 
-    expect(localizedPath.value).toBe('/en/tools/search')
-    expect(resolve).toHaveBeenLastCalledWith({ name: 'search-tools' })
+    expect(localizedPath.value).toBe('/en/tools')
+    expect(resolve).toHaveBeenLastCalledWith({ name: 'tools' })
   })
 })

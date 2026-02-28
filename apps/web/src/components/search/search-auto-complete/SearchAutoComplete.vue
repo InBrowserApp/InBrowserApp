@@ -59,7 +59,7 @@ const handleSearch = (value?: string | number): void => {
 
     if (value.startsWith('search:')) {
       const basePath = router.resolve({
-        name: 'search-tools',
+        name: 'tools',
         query: {
           query: value.substring('search:'.length),
         },

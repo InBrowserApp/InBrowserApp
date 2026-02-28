@@ -6,24 +6,71 @@
     </span>
   </div>
   <ToolSection>
-    <ToolsGrid :tools="tools" />
+    <n-input
+      v-model:value="searchQuery"
+      clearable
+      class="tools-filter-input"
+      :aria-label="t('title')"
+    />
+    <n-empty v-if="tools !== undefined && tools.length === 0" class="tools-empty" />
+    <ToolsGrid v-else :tools="tools" />
   </ToolSection>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
 import { ToolsGrid, ToolTitle, ToolSection } from '@shared/ui/tool'
 import { computedAsync } from '@vueuse/core'
+import { useSearchTools } from '@registry/tools/search'
+import { NEmpty, NInput } from 'naive-ui'
+import { useRoute, useRouter, type LocationQueryValue } from 'vue-router'
 
 const { t } = useI18n()
+const route = useRoute()
+const router = useRouter()
 
-const tools = computedAsync(async () => {
+const allTools = computedAsync(async () => {
   const { tools } = await import('@registry/tools')
   return tools
 }, undefined)
 
+const normalizeQuery = (
+  query: LocationQueryValue | LocationQueryValue[] | null | undefined,
+): string => {
+  if (Array.isArray(query)) {
+    return query[0] ?? ''
+  }
+  return query ?? ''
+}
+
+const routeQuery = computed(() => normalizeQuery(route.query.query))
+const searchQuery = ref(routeQuery.value)
+
+watch(routeQuery, (value) => {
+  if (value !== searchQuery.value) {
+    searchQuery.value = value
+  }
+})
+
+watch(searchQuery, (value) => {
+  if (value === routeQuery.value) {
+    return
+  }
+
+  const query = { ...route.query }
+  if (value) {
+    query.query = value
+  } else {
+    delete query.query
+  }
+  router.replace({ query })
+})
+
+const { toolsResults } = useSearchTools(searchQuery)
+
+const tools = computed(() => (allTools.value === undefined ? undefined : toolsResults.value))
 const toolsCount = computed(() => tools.value?.length)
 
 useHead({
@@ -181,5 +228,13 @@ useHead({
   color: var(--n-text-color-3);
   font-size: 0.875rem;
   white-space: nowrap;
+}
+
+.tools-filter-input {
+  margin-bottom: 12px;
+}
+
+.tools-empty {
+  margin-block: 36px;
 }
 </style>
