@@ -1,27 +1,29 @@
 <template>
-  <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
-    <n-radio-group v-model:value="algorithm" name="algorithm">
-      <n-space>
-        <n-radio value="ecc">
-          ECC
-          <n-tag size="tiny" type="success" :bordered="false" style="margin-left: 4px">
-            {{ t('recommended') }}
-          </n-tag>
-        </n-radio>
-        <n-radio value="rsa">RSA</n-radio>
-      </n-space>
-    </n-radio-group>
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('algorithm')" :show-feedback="false">
+      <n-radio-group v-model:value="algorithm" name="algorithm">
+        <n-space>
+          <n-radio value="ecc">
+            ECC
+            <n-tag size="tiny" type="success" :bordered="false" style="margin-left: 4px">
+              {{ t('recommended') }}
+            </n-tag>
+          </n-radio>
+          <n-radio value="rsa">RSA</n-radio>
+        </n-space>
+      </n-radio-group>
+    </n-form-item-gi>
 
-  <n-form-item-gi v-if="algorithm === 'rsa'" :label="t('keySize')" :show-feedback="false">
-    <n-select v-model:value="rsaKeySize" :options="keySizeOptions" />
-  </n-form-item-gi>
+    <n-form-item-gi v-if="algorithm === 'rsa'" :label="t('keySize')" :show-feedback="false">
+      <n-select v-model:value="rsaKeySize" :options="keySizeOptions" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NFormItemGi, NRadioGroup, NRadio, NSpace, NSelect, NTag } from 'naive-ui'
+import { NFormItemGi, NGrid, NRadio, NRadioGroup, NSelect, NSpace, NTag } from 'naive-ui'
 import type { KeyAlgorithm, RsaKeySize } from '../pgp-keygen'
 
 const algorithm = defineModel<KeyAlgorithm>('algorithm', { required: true })

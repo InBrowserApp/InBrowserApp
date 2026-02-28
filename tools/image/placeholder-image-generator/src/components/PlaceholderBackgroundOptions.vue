@@ -1,42 +1,44 @@
 <template>
-  <n-form-item-gi :label="t('bg-type')" :show-feedback="false" span="1 s:2 m:3">
-    <n-radio-group v-model:value="bgType">
-      <n-radio-button value="solid">{{ t('solid') }}</n-radio-button>
-      <n-radio-button value="linear-gradient">{{ t('linear-gradient') }}</n-radio-button>
-      <n-radio-button value="radial-gradient">{{ t('radial-gradient') }}</n-radio-button>
-    </n-radio-group>
-  </n-form-item-gi>
-
-  <n-form-item-gi v-if="bgType === 'solid'" :label="t('bg-color')" :show-feedback="false">
-    <n-color-picker v-model:value="bgColor" :modes="['hex']" :show-alpha="true" />
-  </n-form-item-gi>
-
-  <template v-if="bgType !== 'solid'">
-    <n-form-item-gi :label="t('gradient-color-1')" :show-feedback="false">
-      <n-color-picker v-model:value="gradientColor1" :modes="['hex']" :show-alpha="true" />
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('bg-type')" :show-feedback="false">
+      <n-radio-group v-model:value="bgType">
+        <n-radio-button value="solid">{{ t('solid') }}</n-radio-button>
+        <n-radio-button value="linear-gradient">{{ t('linear-gradient') }}</n-radio-button>
+        <n-radio-button value="radial-gradient">{{ t('radial-gradient') }}</n-radio-button>
+      </n-radio-group>
     </n-form-item-gi>
-    <n-form-item-gi :label="t('gradient-color-2')" :show-feedback="false">
-      <n-color-picker v-model:value="gradientColor2" :modes="['hex']" :show-alpha="true" />
-    </n-form-item-gi>
-  </template>
 
-  <n-form-item-gi
-    v-if="bgType === 'linear-gradient'"
-    :label="t('gradient-angle')"
-    :show-feedback="false"
-  >
-    <n-slider
-      v-model:value="gradientAngle"
-      :min="0"
-      :max="360"
-      :step="1"
-      :format-tooltip="(v) => `${v}°`"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi v-if="bgType === 'solid'" :label="t('bg-color')" :show-feedback="false">
+      <n-color-picker v-model:value="bgColor" :modes="['hex']" :show-alpha="true" />
+    </n-form-item-gi>
+
+    <template v-if="bgType !== 'solid'">
+      <n-form-item-gi :label="t('gradient-color-1')" :show-feedback="false">
+        <n-color-picker v-model:value="gradientColor1" :modes="['hex']" :show-alpha="true" />
+      </n-form-item-gi>
+      <n-form-item-gi :label="t('gradient-color-2')" :show-feedback="false">
+        <n-color-picker v-model:value="gradientColor2" :modes="['hex']" :show-alpha="true" />
+      </n-form-item-gi>
+    </template>
+
+    <n-form-item-gi
+      v-if="bgType === 'linear-gradient'"
+      :label="t('gradient-angle')"
+      :show-feedback="false"
+    >
+      <n-slider
+        v-model:value="gradientAngle"
+        :min="0"
+        :max="360"
+        :step="1"
+        :format-tooltip="(v) => `${v}°`"
+      />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
-import { NColorPicker, NFormItemGi, NRadioButton, NRadioGroup, NSlider } from 'naive-ui'
+import { NColorPicker, NFormItemGi, NGrid, NRadioButton, NRadioGroup, NSlider } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 const bgType = defineModel<'solid' | 'linear-gradient' | 'radial-gradient'>('bg-type', {

@@ -13,11 +13,10 @@ vi.mock('vue-i18n', async () => {
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
-    NFormItemGi: defineComponent({
-      name: 'NFormItemGi',
-      template: '<div class="form-item"><slot /></div>',
-    }),
+    NGrid: actual.NGrid,
+    NFormItemGi: actual.NFormItemGi,
     NColorPicker: defineComponent({
       name: 'NColorPicker',
       template: '<div class="color-picker" />',

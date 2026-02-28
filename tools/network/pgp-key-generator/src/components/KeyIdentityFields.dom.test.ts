@@ -13,6 +13,7 @@ vi.mock('vue-i18n', async () => {
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
 
   const NInput = defineComponent({
     name: 'NInput',
@@ -28,9 +29,8 @@ vi.mock('naive-ui', async () => {
   })
 
   return {
-    NFormItemGi: defineComponent({
-      template: '<div><slot /></div>',
-    }),
+    NGrid: actual.NGrid,
+    NFormItemGi: actual.NFormItemGi,
     NInput,
   }
 })

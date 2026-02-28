@@ -1,33 +1,31 @@
 <template>
-  <n-gi>
-    <ToolSection>
-      <n-flex justify="space-between" align="center" class="section-header">
-        <n-flex align="center" :size="8">
-          <span class="section-title">{{ t('customBase') }}</span>
-          <n-input-number
-            v-model:value="customBaseValue"
-            :min="2"
-            :max="64"
-            size="small"
-            class="base-input"
-          />
-        </n-flex>
-        <CopyToClipboardButton :content="custom" size="small" />
+  <ToolSection>
+    <n-flex justify="space-between" align="center" class="section-header">
+      <n-flex align="center" :size="8">
+        <span class="section-title">{{ t('customBase') }}</span>
+        <n-input-number
+          v-model:value="customBaseValue"
+          :min="2"
+          :max="64"
+          size="small"
+          class="base-input"
+        />
       </n-flex>
-      <n-input
-        :value="custom"
-        :status="customStatus"
-        :placeholder="t('enterCustom')"
-        class="monospace-input"
-        @update:value="onInput('custom', $event)"
-      />
-    </ToolSection>
-  </n-gi>
+      <CopyToClipboardButton :content="custom" size="small" />
+    </n-flex>
+    <n-input
+      :value="custom"
+      :status="customStatus"
+      :placeholder="t('enterCustom')"
+      class="monospace-input"
+      @update:value="onInput('custom', $event)"
+    />
+  </ToolSection>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NGi, NFlex, NInput, NInputNumber } from 'naive-ui'
+import { NFlex, NInput, NInputNumber } from 'naive-ui'
 import { ToolSection } from '@shared/ui/tool'
 import { CopyToClipboardButton } from '@shared/ui/base'
 

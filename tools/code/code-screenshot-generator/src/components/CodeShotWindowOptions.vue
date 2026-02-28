@@ -1,16 +1,18 @@
 <template>
-  <n-form-item-gi :label="t('windowStyle')" :show-feedback="false">
-    <n-select v-model:value="windowStyle" :options="windowStyleOptions" size="small" />
-  </n-form-item-gi>
-  <n-form-item-gi :label="t('lineNumbers')" :show-feedback="false">
-    <n-switch v-model:value="showLineNumbers" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('windowStyle')" :show-feedback="false">
+      <n-select v-model:value="windowStyle" :options="windowStyleOptions" size="small" />
+    </n-form-item-gi>
+    <n-form-item-gi :label="t('lineNumbers')" :show-feedback="false">
+      <n-switch v-model:value="showLineNumbers" />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NFormItemGi, NSelect, NSwitch } from 'naive-ui'
+import { NFormItemGi, NGrid, NSelect, NSwitch } from 'naive-ui'
 import type { WindowStyle } from '../utils/render'
 
 const windowStyle = defineModel<WindowStyle>('windowStyle', { required: true })

@@ -9,12 +9,10 @@ vi.mock('vue-i18n', () => ({
 }))
 
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
+  const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
-    NGi: defineComponent({
-      name: 'NGi',
-      template: '<div class="n-gi"><slot /></div>',
-    }),
+    NGrid: actual.NGrid,
+    NGi: actual.NGi,
   }
 })
 

@@ -1,33 +1,35 @@
 <template>
-  <n-form-item-gi :label="t('text-color')" :show-feedback="false">
-    <n-color-picker v-model:value="textColor" :modes="['hex']" :show-alpha="true" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('text-color')" :show-feedback="false">
+      <n-color-picker v-model:value="textColor" :modes="['hex']" :show-alpha="true" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('custom-text')" :show-feedback="false" span="1 s:2">
-    <n-input
-      :value="customText"
-      :placeholder="`${width} × ${height}`"
-      clearable
-      @update:value="(v) => (customText = v ?? '')"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('custom-text')" :show-feedback="false">
+      <n-input
+        :value="customText"
+        :placeholder="`${width} × ${height}`"
+        clearable
+        @update:value="(v) => (customText = v ?? '')"
+      />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('font-size')" :show-feedback="false">
-    <n-input-number
-      :value="fontSize"
-      :min="0"
-      :max="500"
-      :step="1"
-      :placeholder="t('auto')"
-      style="width: 100%"
-      clearable
-      @update:value="(v) => (fontSize = v ?? 0)"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('font-size')" :show-feedback="false">
+      <n-input-number
+        :value="fontSize"
+        :min="0"
+        :max="500"
+        :step="1"
+        :placeholder="t('auto')"
+        style="width: 100%"
+        clearable
+        @update:value="(v) => (fontSize = v ?? 0)"
+      />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
-import { NColorPicker, NFormItemGi, NInput, NInputNumber } from 'naive-ui'
+import { NColorPicker, NFormItemGi, NGrid, NInput, NInputNumber } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 
 defineProps<{ width: number; height: number }>()

@@ -1,22 +1,24 @@
 <template>
-  <n-form-item-gi :label="t('expires')" :show-feedback="false">
-    <n-select v-model:value="expirationDays" :options="expirationOptions" />
-  </n-form-item-gi>
+  <n-grid cols="1" :y-gap="12">
+    <n-form-item-gi :label="t('expires')" :show-feedback="false">
+      <n-select v-model:value="expirationDays" :options="expirationOptions" />
+    </n-form-item-gi>
 
-  <n-form-item-gi :label="t('passphrase')" :show-feedback="false" :span="2">
-    <n-input
-      v-model:value="passphrase"
-      type="password"
-      show-password-on="click"
-      :placeholder="t('passphrasePlaceholder')"
-    />
-  </n-form-item-gi>
+    <n-form-item-gi :label="t('passphrase')" :show-feedback="false">
+      <n-input
+        v-model:value="passphrase"
+        type="password"
+        show-password-on="click"
+        :placeholder="t('passphrasePlaceholder')"
+      />
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NFormItemGi, NSelect, NInput } from 'naive-ui'
+import { NFormItemGi, NGrid, NInput, NSelect } from 'naive-ui'
 
 const expirationDays = defineModel<number>('expirationDays', { required: true })
 const passphrase = defineModel<string>('passphrase', { required: true })
