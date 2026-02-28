@@ -20,14 +20,6 @@ vi.mock('naive-ui', () => ({
   useMessage: () => messageMocks,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const FileUploadStub = defineComponent({
   name: 'FileUpload',
   props: {
@@ -136,7 +128,7 @@ describe('PngOptimizerView', () => {
     expect(passedFile).toMatchObject({ name: 'sample.png', type: 'image/png' })
     expect(options).toMatchObject({ level: 4, interlace: true, optimiseAlpha: false })
 
-    expect(messageMocks.success).toHaveBeenCalledWith('optimizationComplete')
+    expect(messageMocks.success).toHaveBeenCalledWith('Image optimization completed!')
     expect(wrapper.find('[data-testid="results"]').exists()).toBe(true)
   })
 
@@ -170,8 +162,12 @@ describe('PngOptimizerView', () => {
     await wrapper.findComponent(OptimizationOptionsStub).vm.$emit('optimize')
     await flushPromises()
 
-    expect(messageMocks.error).toHaveBeenCalledWith('optimizationFailed')
-    expect(wrapper.find('[data-testid="error-display"]').text()).toContain('optimizationFailed')
+    expect(messageMocks.error).toHaveBeenCalledWith(
+      'Failed to optimize the image. Please try again.',
+    )
+    expect(wrapper.find('[data-testid="error-display"]').text()).toContain(
+      'Failed to optimize the image. Please try again.',
+    )
   })
 
   it('surfaces optimization errors and clears on new file', async () => {
@@ -186,7 +182,9 @@ describe('PngOptimizerView', () => {
     await wrapper.findComponent(OptimizationOptionsStub).vm.$emit('optimize')
     await flushPromises()
 
-    expect(messageMocks.error).toHaveBeenCalledWith('optimizationFailed')
+    expect(messageMocks.error).toHaveBeenCalledWith(
+      'Failed to optimize the image. Please try again.',
+    )
     expect(wrapper.find('[data-testid="error-display"]').text()).toContain('boom')
 
     const nextFile = new File(['more'], 'next.png', { type: 'image/png' })

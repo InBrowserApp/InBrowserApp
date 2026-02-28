@@ -6,14 +6,6 @@ vi.mock('filesize', () => ({
   filesize: (value: number) => `size-${value}`,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vicons/fluent/Delete24Regular', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -58,7 +50,7 @@ describe('SvgFilePreview', () => {
     expect(wrapper.find('img').attributes('src')).toBe('blob:preview')
     expect(wrapper.text()).toContain('icon.svg')
     expect(wrapper.text()).toContain('size-2048')
-    expect(wrapper.text()).toContain('delete')
+    expect(wrapper.text()).toContain('Delete')
     expect(wrapper.find('.delete-icon').exists()).toBe(true)
 
     await wrapper.find('button').trigger('click')

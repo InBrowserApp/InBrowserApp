@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 
 import FingerprintSection from './FingerprintSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -47,7 +39,7 @@ describe('FingerprintSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('fingerprint')
+    expect(wrapper.text()).toContain('Fingerprint')
     expect(wrapper.get('.fingerprint').attributes('value')).toBe('FINGERPRINT')
     expect(wrapper.find('.copy').exists()).toBe(true)
   })

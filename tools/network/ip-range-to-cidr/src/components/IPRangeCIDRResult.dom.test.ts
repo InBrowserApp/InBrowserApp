@@ -42,16 +42,6 @@ vi.mock('cidr-calc', () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: Record<string, unknown>) => `${key} ${params?.count ?? ''}`.trim(),
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -86,7 +76,7 @@ describe('IPRangeCIDRResult', () => {
     })
 
     const items = wrapper.findAll('.list-item')
-    expect(wrapper.text()).toContain('cidrsCount 2')
+    expect(wrapper.text()).toContain('2 CIDRs:')
     expect(items).toHaveLength(2)
     expect(items[0]?.text()).toBe('10.0.0.1/32')
     expect(items[1]?.text()).toBe('10.0.0.2/32')

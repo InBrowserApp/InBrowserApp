@@ -11,17 +11,6 @@ vi.mock('../../../composables/base/clipboard/useCopyToClipboard', () => ({
   }),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -60,7 +49,7 @@ describe('CopyToClipboardTooltip', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('tooltip')
+    expect(wrapper.text()).toContain('Copy to Clipboard')
 
     await wrapper.get('button.copy-btn').trigger('click')
     expect(copySpy).toHaveBeenCalledTimes(1)

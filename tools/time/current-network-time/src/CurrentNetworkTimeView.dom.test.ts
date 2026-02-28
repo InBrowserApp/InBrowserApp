@@ -17,14 +17,6 @@ vi.mock('./composables/useNetworkTime', () => ({
   useNetworkTime: () => state,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -105,9 +97,9 @@ describe('CurrentNetworkTimeView', () => {
     })
 
     expect(wrapper.find('.n-alert').exists()).toBe(true)
-    expect(wrapper.text()).toContain('errorTitle')
+    expect(wrapper.text()).toContain('Failed to sync time')
     expect(wrapper.text()).toContain('Network error')
-    expect(wrapper.text()).toContain('offset')
+    expect(wrapper.text()).toContain('Offset')
     expect(wrapper.text()).toContain('123 ms (±57 ms)')
     expect(wrapper.findAll('.n-skeleton')).toHaveLength(0)
   })
@@ -127,7 +119,7 @@ describe('CurrentNetworkTimeView', () => {
 
     expect(wrapper.find('.n-time').text()).toBe('2000')
     expect(wrapper.find('.n-badge').exists()).toBe(true)
-    expect(wrapper.text()).toContain('syncing')
+    expect(wrapper.text()).toContain('Syncing')
     expect(wrapper.findAll('.n-skeleton').length).toBeGreaterThan(0)
   })
 

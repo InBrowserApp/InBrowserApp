@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NFormItemGi, NInput, NSelect, NSlider } from 'naive-ui'
 import BarcodeOptionsBasics from './BarcodeOptionsBasics.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
@@ -94,12 +86,12 @@ describe('BarcodeOptionsBasics', () => {
 
     const formItems = wrapper.findAllComponents(NFormItemGi)
     expect(formItems).toHaveLength(5)
-    expect(formItems[0]?.props('label')).toBe('text')
-    expect(formItems[1]?.props('label')).toBe('format')
+    expect(formItems[0]?.props('label')).toBe('Text')
+    expect(formItems[1]?.props('label')).toBe('Format')
 
     const input = wrapper.findComponent(NInput)
     expect(input.props('value')).toBe('ABC')
-    expect(input.props('placeholder')).toBe('text-ph')
+    expect(input.props('placeholder')).toBe('Type content to encode...')
 
     const select = wrapper.findComponent(NSelect)
     const options = select.props('options') as Array<{ label: string; value: string }>

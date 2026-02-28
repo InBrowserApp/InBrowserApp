@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CssGradientLayerTypeControls from './CssGradientLayerTypeControls.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -74,8 +66,8 @@ describe('CssGradientLayerTypeControls', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('angle')
-    expect(wrapper.text()).not.toContain('centerX')
+    expect(wrapper.text()).toContain('Angle')
+    expect(wrapper.text()).not.toContain('Center X')
 
     const angleInput = wrapper.findComponent({ name: 'NInputNumber' })
     angleInput.vm.$emit('update:value', 120)
@@ -86,8 +78,8 @@ describe('CssGradientLayerTypeControls', () => {
     expect(wrapper.emitted('update:layerType')?.[0]).toEqual(['radial'])
 
     await wrapper.setProps({ layerType: 'radial' })
-    expect(wrapper.text()).toContain('centerX')
-    expect(wrapper.text()).toContain('centerY')
+    expect(wrapper.text()).toContain('Center X')
+    expect(wrapper.text()).toContain('Center Y')
 
     const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
     const centerXInput = inputs[0]

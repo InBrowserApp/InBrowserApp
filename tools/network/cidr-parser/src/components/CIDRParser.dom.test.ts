@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import CIDRParser from './CIDRParser.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
@@ -58,14 +50,14 @@ describe('CIDRParser', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('cidrHeader')
+    expect(wrapper.text()).toContain('CIDR')
     expect(wrapper.find('.cidr-result').exists()).toBe(false)
 
     wrapper.findComponent(CIDRInputStub).vm.$emit('update:cidr', '192.168.0.0/24')
     await nextTick()
 
     const result = wrapper.find('.cidr-result')
-    expect(wrapper.text()).toContain('resultHeader')
+    expect(wrapper.text()).toContain('Result')
     expect(result.exists()).toBe(true)
     expect(result.attributes('data-cidr')).toBe('192.168.0.0/24')
   })

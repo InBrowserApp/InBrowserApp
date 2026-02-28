@@ -1,12 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('@vicons/fluent/TextNumberFormat20Regular', () => ({
   default: {},
 }))
@@ -87,7 +81,7 @@ describe('IBANInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalidCountry')
+    expect(form.attributes('data-feedback')).toBe('Unknown country code')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
@@ -104,7 +98,7 @@ describe('IBANInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidLength')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid IBAN length')
   })
 
   it('reports invalid format feedback', () => {
@@ -122,7 +116,7 @@ describe('IBANInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidFormat')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid IBAN format')
   })
 
   it('reports invalid checksum feedback', () => {
@@ -142,7 +136,7 @@ describe('IBANInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalidChecksum')
+    expect(form.attributes('data-feedback')).toBe('Invalid checksum')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
@@ -162,7 +156,7 @@ describe('IBANInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalid')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid IBAN')
   })
 
   it('marks valid inputs as success', async () => {
@@ -177,7 +171,7 @@ describe('IBANInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('valid')
+    expect(form.attributes('data-feedback')).toBe('Valid IBAN')
     expect(form.attributes('data-status')).toBe('success')
 
     await wrapper.get('input').setValue('DE89')

@@ -16,14 +16,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -131,7 +123,7 @@ describe('KeyGenerator', () => {
     wrapper.findComponent({ name: 'NButton' }).vm.$emit('click')
     await nextTick()
 
-    expect(wrapper.text()).toContain('identityHint')
+    expect(wrapper.text()).toContain('Add a name or email to generate a key pair.')
     expect(generatePgpKeyPairMock).not.toHaveBeenCalled()
   })
 

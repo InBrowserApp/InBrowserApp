@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import RobotsTxtUserAgentsSection from './RobotsTxtUserAgentsSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -72,7 +64,7 @@ describe('RobotsTxtUserAgentsSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('addUserAgent')
+    expect(wrapper.text()).toContain('Add user-agent')
 
     const input = wrapper.get('input')
     await input.setValue('Googlebot')

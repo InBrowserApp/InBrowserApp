@@ -3,10 +3,6 @@ import { mount } from '@vue/test-utils'
 import Pbkdf2Form from './Pbkdf2Form.vue'
 import type { Pbkdf2Algorithm, SaltFormat } from '../types'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="section"><slot /></section>',
@@ -103,11 +99,15 @@ describe('Pbkdf2Form', () => {
     expect(wrapper.emitted('update:iterations')?.[0]).toEqual([123])
     expect(wrapper.emitted('update:length')?.[0]).toEqual([64])
 
-    expect(wrapper.find('[data-label="iterations"]').attributes('data-feedback')).toBe(
-      'iterations-invalid',
+    expect(wrapper.find('[data-label="Iterations"]').attributes('data-feedback')).toBe(
+      'Enter a whole number between 1 and 1000000.',
     )
-    expect(wrapper.find('[data-label="length"]').attributes('data-feedback')).toBe('length-invalid')
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('[data-label="Derived Length (bytes)"]').attributes('data-feedback')).toBe(
+      'Enter a number between 16 and 256 bytes.',
+    )
+    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe(
+      'Salt must be valid hex.',
+    )
   })
 
   it('renders base64 salt feedback', () => {
@@ -120,6 +120,8 @@ describe('Pbkdf2Form', () => {
       },
     })
 
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-base64')
+    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe(
+      'Salt must be valid Base64.',
+    )
   })
 })

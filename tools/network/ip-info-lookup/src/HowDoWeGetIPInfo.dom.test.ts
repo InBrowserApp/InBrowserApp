@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import HowDoWeGetIPInfo from './HowDoWeGetIPInfo.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('HowDoWeGetIPInfo', () => {
   it('renders the title and description', () => {
     const wrapper = mount(HowDoWeGetIPInfo, {
@@ -25,7 +17,9 @@ describe('HowDoWeGetIPInfo', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('How We Get IP Information')
+    expect(wrapper.text()).toContain(
+      'This tool fetches IP information by making requests to third-party services including geojs.io, ip.sb, Cloudflare, Google DoH, and other geolocation providers. Please note that this is not an offline service and requires network connectivity to external servers to retrieve detailed IP address information including location, ISP, and other metadata.',
+    )
   })
 })

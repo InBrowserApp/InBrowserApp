@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { getResidentIdCheckDigit, validateResidentId } from '../data/residentId'
 import ResidentIdInput from './ResidentIdInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vicons/fluent/TextNumberFormat20Regular', () => ({
   default: {},
 }))
@@ -101,7 +93,7 @@ describe('ResidentIdInput', () => {
     const formItem = wrapper.get('.form-item')
     const input = wrapper.get('.input')
 
-    expect(formItem.attributes('data-feedback')).toBe('valid')
+    expect(formItem.attributes('data-feedback')).toBe('Valid ID number')
     expect(formItem.attributes('data-status')).toBe('success')
     expect(input.attributes('data-status')).toBe('success')
   })
@@ -115,7 +107,9 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidLength')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe(
+      'ID number must be 18 digits',
+    )
   })
 
   it('shows invalid format feedback', () => {
@@ -128,7 +122,9 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidFormat')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe(
+      'Invalid format (digits or X)',
+    )
   })
 
   it('shows invalid region feedback', () => {
@@ -143,7 +139,9 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidRegion')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe(
+      'Unknown administrative region code',
+    )
   })
 
   it('shows invalid birthdate feedback', () => {
@@ -158,7 +156,7 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidBirthdate')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid birthdate')
   })
 
   it('shows invalid checksum feedback', () => {
@@ -171,7 +169,7 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalidChecksum')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid checksum')
   })
 
   it('falls back to generic invalid feedback when detailed flags do not match', () => {
@@ -192,7 +190,7 @@ describe('ResidentIdInput', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('invalid')
+    expect(wrapper.get('.form-item').attributes('data-feedback')).toBe('Invalid ID number')
     expect(wrapper.get('.form-item').attributes('data-status')).toBe('error')
   })
 

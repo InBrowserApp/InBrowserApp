@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import RandomNumberGeneratorHistory from './RandomNumberGeneratorHistory.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -64,7 +56,7 @@ describe('RandomNumberGeneratorHistory', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('historyEmpty')
+    expect(wrapper.text()).toContain('No history yet.')
     expect(wrapper.get('[data-testid="clear-history"]').attributes('disabled')).toBeDefined()
   })
 

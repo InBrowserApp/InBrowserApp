@@ -2,16 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronOutput from './CronOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -50,7 +40,7 @@ describe('CronOutput', () => {
     })
 
     expect(wrapper.text()).toContain('Every 5 minutes')
-    expect(wrapper.text()).not.toContain('invalidExpression')
+    expect(wrapper.text()).not.toContain('Invalid cron expression')
     expect(wrapper.find('.copy').attributes('data-content')).toBe('*/5 * * * *')
   })
 
@@ -62,6 +52,6 @@ describe('CronOutput', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('invalidExpression')
+    expect(wrapper.text()).toContain('Invalid cron expression')
   })
 })

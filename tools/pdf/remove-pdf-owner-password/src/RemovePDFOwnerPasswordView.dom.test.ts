@@ -9,16 +9,6 @@ const messageApi = {
 
 let objectUrlMode: 'normal' | 'fallback' = 'normal'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: { filename?: string }) => params?.filename ?? key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', () => ({
   NButton: {
     props: ['href', 'download', 'tag', 'type'],
@@ -103,7 +93,7 @@ describe('RemovePDFOwnerPasswordView', () => {
     await flushPromises()
 
     expect(removePDFOwnerPassword).toHaveBeenCalledWith(file)
-    expect(messageApi.success).toHaveBeenCalledWith('success')
+    expect(messageApi.success).toHaveBeenCalledWith('PDF owner password removed')
 
     const link = wrapper.find('a.button')
     expect(link.exists()).toBe(true)

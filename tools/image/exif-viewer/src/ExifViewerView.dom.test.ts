@@ -11,16 +11,6 @@ vi.mock('exifr', () => ({
   parse: exifrMocks.parse,
 }))
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 const ToolDefaultPageLayoutStub = defineComponent({
   name: 'ToolDefaultPageLayout',
   props: { info: { type: Object, required: true } },
@@ -152,7 +142,7 @@ describe('ExifViewerView', () => {
 
     const empty = wrapper.find('.n-empty')
     expect(empty.exists()).toBe(true)
-    expect(empty.text()).toContain('noExifData')
+    expect(empty.text()).toContain('This image does not contain EXIF metadata')
   })
 
   it('clears data when preview emits clear', async () => {
@@ -219,6 +209,6 @@ describe('ExifViewerView', () => {
 
     const alert = wrapper.find('.n-alert')
     expect(alert.exists()).toBe(true)
-    expect(wrapper.text()).toContain('parseError')
+    expect(wrapper.text()).toContain('Failed to parse image metadata')
   })
 })

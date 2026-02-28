@@ -11,14 +11,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vicons/fluent/CloudArrowUp24Regular', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -163,7 +155,7 @@ describe('SvgInput', () => {
     input.vm.$emit('update:value', 'not svg')
     await nextTick()
 
-    expect(wrapper.text()).toContain('invalidSvg')
+    expect(wrapper.text()).toContain('Invalid SVG content')
   })
 
   it('handles empty, invalid, and unreadable file uploads', async () => {
@@ -192,7 +184,7 @@ describe('SvgInput', () => {
     const uploadAfterClear = wrapper.findComponent({ name: 'NUpload' })
     uploadAfterClear.vm.$emit('change', { fileList: [{ file: invalidFile }] })
     await flushPromises()
-    expect(wrapper.text()).toContain('invalidSvg')
+    expect(wrapper.text()).toContain('Invalid SVG content')
 
     const brokenFile = {
       name: 'broken.svg',
@@ -202,7 +194,7 @@ describe('SvgInput', () => {
 
     uploadAfterClear.vm.$emit('change', { fileList: [{ file: brokenFile }] })
     await flushPromises()
-    expect(wrapper.text()).toContain('readError')
+    expect(wrapper.text()).toContain('Failed to read file')
   })
 
   it('handles file uploads and updates the models', async () => {

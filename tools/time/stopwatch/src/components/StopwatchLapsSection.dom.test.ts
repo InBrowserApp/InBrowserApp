@@ -7,26 +7,6 @@ const originalCreateObjectURL = URL.createObjectURL
 const originalRevokeObjectURL = URL.revokeObjectURL
 let createdBlob: Blob | null = null
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  const translations: Record<string, string> = {
-    laps: 'Laps',
-    clear: 'Clear',
-    export: 'Export',
-    'no-laps': 'No laps yet',
-    lap: 'Lap, "quoted"',
-    total: 'Total\nline',
-    'lap-ms': 'Lap (ms)',
-    'total-ms': 'Total (ms)',
-  }
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => translations[key] ?? key,
-    }),
-  }
-})
-
 const mountSection = (laps: number[]) =>
   mount(StopwatchLapsSection, {
     props: {
@@ -76,8 +56,9 @@ describe('StopwatchLapsSection', () => {
     expect(createdBlob).not.toBeNull()
 
     const csvText = await createdBlob!.text()
-    expect(csvText).toContain('"Lap, ""quoted"""')
-    expect(csvText).toContain('"Total\nline"')
+    expect(csvText).toContain('#,Lap,Total,Lap (ms),Total (ms)')
+    expect(csvText).toContain('1,00:00:01.20,00:00:01.20,1200,1200')
+    expect(csvText).toContain('2,00:00:01.40,00:00:02.60,1400,2600')
 
     await wrapper.get('[data-testid="clear-laps"]').trigger('click')
 

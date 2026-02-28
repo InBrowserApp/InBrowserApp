@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import BusinessDaysRulesSection from './BusinessDaysRulesSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const BusinessDaysWeekdayRulesStub = defineComponent({
   name: 'BusinessDaysWeekdayRules',
   props: {
@@ -99,7 +91,7 @@ describe('BusinessDaysRulesSection', () => {
     const { wrapper, onWeekdayModeUpdate, onWeekdaySelectionUpdate, onHolidayListUpdate } =
       mountRulesSection({ hasWorkingDays: false, holidayInvalidCount: 3, holidayStatus: 'error' })
 
-    expect(wrapper.text()).toContain('rules-title')
+    expect(wrapper.text()).toContain('Business Day Rules')
     expect(wrapper.find('.has-working-days').text()).toBe('false')
     expect(wrapper.find('.holiday-status').text()).toBe('error')
 

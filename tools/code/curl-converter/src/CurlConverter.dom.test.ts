@@ -27,14 +27,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -182,7 +174,7 @@ describe('CurlConverter', () => {
     expect(copy.attributes('data-content')).toContain('javascript-fetch')
 
     const labels = wrapper.findAll('[data-label]')
-    expect(labels.some((label) => label.text().includes('output-code'))).toBe(true)
+    expect(labels.some((label) => label.text().includes('Converted Code'))).toBe(true)
   })
 
   it('updates target selection and output metadata', async () => {
@@ -199,7 +191,7 @@ describe('CurlConverter', () => {
     expect(code.attributes('data-language')).toBe('python')
     expect(code.text()).toContain('python-requests')
 
-    expect(wrapper.text()).toContain('output-code (Python (requests))')
+    expect(wrapper.text()).toContain('Converted Code (Python (requests))')
   })
 
   it('handles alerts plus sample and clear actions', async () => {
@@ -222,8 +214,8 @@ describe('CurlConverter', () => {
     expect(wrapper.find('[data-alert-type="warning"]').exists()).toBe(false)
 
     const buttons = wrapper.findAll('button')
-    const clearButton = buttons.find((button) => button.text() === 'clear')
-    const sampleButton = buttons.find((button) => button.text() === 'sample')
+    const clearButton = buttons.find((button) => button.text() === 'Clear')
+    const sampleButton = buttons.find((button) => button.text() === 'Use sample')
     expect(clearButton).toBeDefined()
     expect(sampleButton).toBeDefined()
 
@@ -258,7 +250,7 @@ describe('CurlConverter', () => {
     expect(code.attributes('data-language')).toBe('plaintext')
 
     const labels = wrapper.findAll('[data-label]')
-    expect(labels.some((label) => label.text() === 'output-code')).toBe(true)
+    expect(labels.some((label) => label.text() === 'Converted Code')).toBe(true)
 
     const download = wrapper.get('a')
     expect(download.attributes('download')).toBe('converted.txt')

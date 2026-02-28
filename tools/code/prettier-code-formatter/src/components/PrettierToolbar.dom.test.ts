@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import PrettierToolbar from './PrettierToolbar.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -71,7 +63,7 @@ describe('PrettierToolbar', () => {
     const wrapper = mountComponent()
     const importButton = wrapper
       .findAll('button')
-      .find((button) => button.text().includes('import-from-file'))
+      .find((button) => button.text().includes('Import from file'))
 
     expect(importButton).toBeTruthy()
     await importButton!.trigger('click')

@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NColorPicker, NFormItemGi, NSelect, NSlider, NSwitch } from 'naive-ui'
 import BarcodeOptionsAppearance from './BarcodeOptionsAppearance.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
@@ -112,8 +104,8 @@ describe('BarcodeOptionsAppearance', () => {
 
     const formItems = wrapper.findAllComponents(NFormItemGi)
     expect(formItems).toHaveLength(6)
-    expect(formItems[0]?.props('label')).toBe('display-value')
-    expect(formItems[1]?.props('label')).toBe('text-align')
+    expect(formItems[0]?.props('label')).toBe('Display value')
+    expect(formItems[1]?.props('label')).toBe('Text align')
 
     const toggles = wrapper.findComponent(NSwitch)
     expect(toggles.props('value')).toBe(true)

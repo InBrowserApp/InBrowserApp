@@ -2,16 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsExif from './WhatIsExif.vue'
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     name: 'ToolSection',
@@ -56,16 +46,20 @@ describe('WhatIsExif', () => {
   it('renders the EXIF explanation and privacy notice', () => {
     const wrapper = mount(WhatIsExif)
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('contains')
+    expect(wrapper.text()).toContain('What is EXIF?')
+    expect(wrapper.text()).toContain(
+      'EXIF (Exchangeable Image File Format) is a standard that specifies formats for images and sounds used by digital cameras and other systems.',
+    )
+    expect(wrapper.text()).toContain('EXIF data typically contains:')
 
     const items = wrapper.findAll('.n-li')
     expect(items).toHaveLength(5)
 
     const alert = wrapper.find('.n-alert')
     expect(alert.exists()).toBe(true)
-    expect(alert.attributes('data-title')).toBe('privacy.title')
-    expect(alert.text()).toContain('privacy.description')
+    expect(alert.attributes('data-title')).toBe('Privacy Notice')
+    expect(alert.text()).toContain(
+      'EXIF data may contain sensitive information such as GPS location, device serial numbers, and timestamps. Consider removing EXIF data before sharing photos publicly.',
+    )
   })
 })

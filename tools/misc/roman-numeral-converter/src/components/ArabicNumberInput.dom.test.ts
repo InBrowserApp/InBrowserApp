@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import ArabicNumberInput from './ArabicNumberInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -86,12 +78,12 @@ describe('ArabicNumberInput', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('arabicNumber')
+    expect(wrapper.find('.section-header').text()).toBe('Arabic Number (1-3999)')
 
     const input = wrapper.get('[data-testid="arabic-input"]')
     expect(input.attributes('min')).toBe('1')
     expect(input.attributes('max')).toBe('3999')
-    expect(input.attributes('placeholder')).toBe('arabicPlaceholder')
+    expect(input.attributes('placeholder')).toBe('Enter Arabic number...')
 
     expect(wrapper.get('.copy').attributes('data-content')).toBe('1')
   })

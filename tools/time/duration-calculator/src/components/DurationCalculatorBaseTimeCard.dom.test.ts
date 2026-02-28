@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import DurationCalculatorBaseTimeCard from './DurationCalculatorBaseTimeCard.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: defineComponent({
     name: 'CopyToClipboardButton',
@@ -104,6 +96,6 @@ describe('DurationCalculatorBaseTimeCard', () => {
     })
 
     expect(wrapper.find('[data-testid="copy-button"]').exists()).toBe(false)
-    expect(wrapper.text()).toContain('invalid-date-time')
+    expect(wrapper.text()).toContain('Invalid date/time')
   })
 })

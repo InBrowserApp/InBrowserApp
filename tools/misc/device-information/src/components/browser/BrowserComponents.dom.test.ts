@@ -10,14 +10,6 @@ import PlatformInfo from './PlatformInfo.vue'
 import UserAgent from './UserAgent.vue'
 import TimezoneInfo from './TimezoneInfo.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const InfoStatisticStub = defineComponent({
   name: 'InfoStatistic',
   props: {
@@ -62,7 +54,7 @@ describe('browser components', () => {
     ['Firefox', 'Mozilla/5.0 Firefox/115.0'],
     ['Safari', 'Mozilla/5.0 Safari/605.1.15'],
     ['Edge', 'Mozilla/5.0 Chrome/115.0 Edg/115.0'],
-    ['unknown', 'CustomBrowser/1.0'],
+    ['Unknown', 'CustomBrowser/1.0'],
   ])('detects %s from the user agent', (expected, userAgent) => {
     vi.stubGlobal('navigator', createNavigator({ userAgent }))
     const wrapper = mountWithStub(BrowserName)
@@ -133,8 +125,8 @@ describe('browser components', () => {
   })
 
   it.each([
-    [true, 'yes'],
-    [false, 'no'],
+    [true, 'Yes'],
+    [false, 'No'],
   ])('reports cookie enabled as %s', (cookieEnabled, expected) => {
     vi.stubGlobal('navigator', createNavigator({ cookieEnabled }))
     const wrapper = mountWithStub(CookieEnabled)

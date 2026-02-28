@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NFormItem, NInput } from 'naive-ui'
 import JSONInput from './JSONInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('JSONInput', () => {
   it('shows an error when JSON is invalid', async () => {
     const wrapper = mount(JSONInput, {
@@ -25,7 +17,7 @@ describe('JSONInput', () => {
 
     const formItem = wrapper.findComponent(NFormItem)
     expect(formItem.props().validationStatus).toBe('error')
-    expect(formItem.props().feedback).toBe('invalid-json')
+    expect(formItem.props().feedback).toBe('Invalid JSON')
     expect(wrapper.emitted('update:value')).toBeUndefined()
   })
 

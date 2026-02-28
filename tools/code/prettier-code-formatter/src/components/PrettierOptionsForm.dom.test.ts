@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import PrettierOptionsForm from './PrettierOptionsForm.vue'
 import type { LanguageKey } from '../languages'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -100,9 +92,9 @@ describe('PrettierOptionsForm', () => {
     expect(selects[1]?.attributes('data-options-length')).toBe('3')
 
     const labels = wrapper.findAll('[data-label]').map((label) => label.text())
-    expect(labels).toContain('semi')
-    expect(labels).toContain('single-quote')
-    expect(labels).toContain('trailing-comma')
+    expect(labels).toContain('Semicolons')
+    expect(labels).toContain('Single quotes')
+    expect(labels).toContain('Trailing commas')
   })
 
   it('omits conditional controls when unsupported', () => {
@@ -116,9 +108,9 @@ describe('PrettierOptionsForm', () => {
     expect(selects).toHaveLength(1)
 
     const labels = wrapper.findAll('[data-label]').map((label) => label.text())
-    expect(labels).not.toContain('semi')
-    expect(labels).not.toContain('single-quote')
-    expect(labels).not.toContain('trailing-comma')
+    expect(labels).not.toContain('Semicolons')
+    expect(labels).not.toContain('Single quotes')
+    expect(labels).not.toContain('Trailing commas')
   })
 
   it('emits updates from form controls', async () => {

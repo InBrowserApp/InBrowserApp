@@ -3,19 +3,6 @@ import { mount } from '@vue/test-utils'
 import CronFieldEveryDescription from './CronFieldEveryDescription.vue'
 import CronFieldHeader from './CronFieldHeader.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, args?: Record<string, unknown>) => {
-        if (args?.field) return `${key}:${args.field}`
-        return key
-      },
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -34,7 +21,7 @@ describe('CronField text components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('everyDescription')
+    expect(wrapper.text()).toContain('Runs on every day of week')
   })
 
   it('renders field header label', () => {
@@ -44,6 +31,6 @@ describe('CronField text components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('month')
+    expect(wrapper.text()).toContain('Month')
   })
 })

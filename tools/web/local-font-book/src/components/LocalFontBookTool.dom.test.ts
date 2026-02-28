@@ -10,19 +10,6 @@ type LocalFontData = {
   style: string
 }
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: Record<string, number>) => {
-        if (params?.count !== undefined) return `${key} ${params.count}`
-        return key
-      },
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -245,7 +232,7 @@ describe('LocalFontBookTool', () => {
 
     const wrapper = mount(LocalFontBookTool, { global: { stubs } })
 
-    expect(wrapper.text()).toContain('status-unsupported')
+    expect(wrapper.text()).toContain('Your browser does not support Local Font Access.')
     const vm = wrapper.vm as unknown as { loadFonts?: () => Promise<void> }
     expect(vm.loadFonts).toBeTypeOf('function')
     return vm.loadFonts?.()
@@ -429,7 +416,7 @@ describe('LocalFontBookTool', () => {
     await wrapper.get('[data-testid="sample-text"]').setValue('')
     await wrapper.get('[data-testid="background-toggle"]').trigger('click')
 
-    expect(wrapper.get('[data-testid="preview-text"]').text()).toContain('preview-fallback')
+    expect(wrapper.get('[data-testid="preview-text"]').text()).toContain('Sample text')
   })
 
   it('keeps the stored active font when it exists', async () => {
@@ -484,7 +471,7 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    expect(wrapper.text()).toContain('status-denied')
+    expect(wrapper.text()).toContain('Permission denied. Allow local-fonts to list fonts.')
   })
 
   it('handles SecurityError when access is blocked', async () => {
@@ -495,7 +482,7 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    expect(wrapper.text()).toContain('status-blocked')
+    expect(wrapper.text()).toContain('Access blocked by permissions policy or insecure context.')
   })
 
   it('handles unknown errors', async () => {
@@ -506,7 +493,7 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    expect(wrapper.text()).toContain('status-error')
+    expect(wrapper.text()).toContain('Unable to load fonts. Try again.')
   })
 
   it('handles missing queryLocalFonts function', async () => {
@@ -517,7 +504,7 @@ describe('LocalFontBookTool', () => {
     await flushPromises()
     await nextTick()
 
-    expect(wrapper.text()).toContain('status-blocked')
+    expect(wrapper.text()).toContain('Access blocked by permissions policy or insecure context.')
   })
 
   it('sets permission state to unknown on permission errors', async () => {

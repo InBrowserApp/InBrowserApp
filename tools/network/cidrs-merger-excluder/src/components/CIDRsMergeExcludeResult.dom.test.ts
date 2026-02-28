@@ -10,14 +10,6 @@ vi.mock('cidr-tools', () => ({
   excludeCidr: (...args: unknown[]) => excludeCidrMock(...args),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -72,7 +64,7 @@ describe('CIDRsMergeExcludeResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('noCidrs')
+    expect(wrapper.text()).toContain('No CIDRs')
   })
 
   it('renders an error state when exclusion fails', () => {
@@ -88,7 +80,7 @@ describe('CIDRsMergeExcludeResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('error')
+    expect(wrapper.text()).toContain('Error')
     expect(consoleSpy).toHaveBeenCalled()
 
     consoleSpy.mockRestore()

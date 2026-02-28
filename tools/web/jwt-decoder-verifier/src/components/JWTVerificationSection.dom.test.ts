@@ -8,14 +8,6 @@ vi.mock('hono/jwt', () => ({
   verify: (...args: unknown[]) => verifyMock(...args),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -89,9 +81,9 @@ describe('JWTVerificationSection', () => {
 
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('default')
-    expect(alert.props('title')).toBe('decoded-only')
-    expect(wrapper.text()).toContain('enter-token')
-    expect(wrapper.text()).not.toContain('problems')
+    expect(alert.props('title')).toBe('Decoded only')
+    expect(wrapper.text()).toContain('Enter a JWT token')
+    expect(wrapper.text()).not.toContain('Problems')
   })
 
   it('computes decoded-only values when secret is missing', async () => {
@@ -112,8 +104,8 @@ describe('JWTVerificationSection', () => {
       statusDetail: string
     }
     expect(vm.statusType).toBe('default')
-    expect(vm.statusTitle).toBe('decoded-only')
-    expect(vm.statusDetail).toBe('enter-secret')
+    expect(vm.statusTitle).toBe('Decoded only')
+    expect(vm.statusDetail).toBe('Enter secret to verify')
   })
 
   it('reports missing algorithm when auto mode cannot detect one', async () => {
@@ -128,8 +120,8 @@ describe('JWTVerificationSection', () => {
     expect(verifyMock).not.toHaveBeenCalled()
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('error')
-    expect(alert.props('title')).toBe('failed')
-    expect(wrapper.text()).toContain('no-alg')
+    expect(alert.props('title')).toBe('Verification failed')
+    expect(wrapper.text()).toContain('No algorithm detected')
     expect(wrapper.findAll('li')).toHaveLength(1)
   })
 
@@ -145,7 +137,7 @@ describe('JWTVerificationSection', () => {
     expect(verifyMock).toHaveBeenCalledWith('token', 'secret', 'HS256')
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('success')
-    expect(alert.props('title')).toBe('verified')
+    expect(alert.props('title')).toBe('Verified')
   })
 
   it('reports missing algorithm when detected alg is not a string', async () => {
@@ -158,7 +150,7 @@ describe('JWTVerificationSection', () => {
     await flushPromises()
 
     expect(verifyMock).not.toHaveBeenCalled()
-    expect(wrapper.text()).toContain('no-alg')
+    expect(wrapper.text()).toContain('No algorithm detected')
   })
 
   it('verifies a token when algorithm is provided', async () => {
@@ -173,8 +165,8 @@ describe('JWTVerificationSection', () => {
     expect(verifyMock).toHaveBeenCalledWith('token', 'secret', 'HS256')
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('success')
-    expect(alert.props('title')).toBe('verified')
-    expect(wrapper.text()).toContain('ok')
+    expect(alert.props('title')).toBe('Verified')
+    expect(wrapper.text()).toContain('Signature verified')
   })
 
   it('stringifies non-Error verification failures', async () => {
@@ -190,7 +182,7 @@ describe('JWTVerificationSection', () => {
 
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('error')
-    expect(alert.props('title')).toBe('failed')
+    expect(alert.props('title')).toBe('Verification failed')
     expect(wrapper.text()).toContain('bad signature')
   })
 
@@ -207,7 +199,7 @@ describe('JWTVerificationSection', () => {
 
     const alert = wrapper.findComponent({ name: 'NAlert' })
     expect(alert.props('type')).toBe('error')
-    expect(alert.props('title')).toBe('failed')
+    expect(alert.props('title')).toBe('Verification failed')
     expect(wrapper.text()).toContain('bad signature')
     expect(wrapper.findAll('li')).toHaveLength(1)
   })

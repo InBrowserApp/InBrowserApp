@@ -41,14 +41,6 @@ vi.mock('@utils/aes', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -498,7 +490,9 @@ describe('DecryptForm', () => {
     await flushPromises()
 
     const result = wrapper.find('.decrypt-result')
-    expect(result.attributes('data-error')).toBe('decryptionFailed')
+    expect(result.attributes('data-error')).toBe(
+      'Decryption failed. Check your password/key and settings.',
+    )
   })
 
   it('surfaces native error messages when decryption throws an Error', async () => {

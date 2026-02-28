@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventDetailsSection from './IcalEventDetailsSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<header><slot /></header>',
@@ -84,7 +76,7 @@ describe('IcalEventDetailsSection', () => {
     expect(wrapper.emitted('update:uid')?.[0]).toEqual(['uid-updated@example.com'])
 
     const regenerateButton = wrapper.findAll('button').find((button) => {
-      return button.text().includes('new-uid')
+      return button.text().includes('New UID')
     })
     expect(regenerateButton).toBeDefined()
     await regenerateButton!.trigger('click')

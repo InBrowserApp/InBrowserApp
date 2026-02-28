@@ -8,16 +8,6 @@ vi.mock('../composables/useRandomNumberGenerator', () => ({
   useRandomNumberGenerator: useRandomNumberGeneratorMock,
 }))
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 import RandomNumberGenerator from './RandomNumberGenerator.vue'
 
 describe('RandomNumberGenerator', () => {
@@ -147,7 +137,7 @@ describe('RandomNumberGenerator', () => {
     expect(state.clearHistory).toHaveBeenCalled()
 
     const messages = useRandomNumberGeneratorMock.mock.calls[0]?.[0]
-    expect(messages?.stopRandom()).toBe('stopRandom')
+    expect(messages?.stopRandom()).toBe('Stop random')
   })
 
   it('shows fullscreen panel when enabled', () => {

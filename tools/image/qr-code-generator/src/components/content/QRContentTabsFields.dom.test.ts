@@ -10,14 +10,6 @@ import MailtoTab from './MailtoTab.vue'
 import GeoTab from './GeoTab.vue'
 import CalendarTab from './CalendarTab.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -87,7 +79,7 @@ describe('QR content tabs', () => {
     const select = wrapper.findComponent({ name: 'NSelect' })
     const options = select.props('options') as Array<{ label: string; value: string }>
     expect(options).toHaveLength(3)
-    expect(options[2]?.label).toBe('wifi-no-pass')
+    expect(options[2]?.label).toBe('No password')
   })
 
   it('renders vCard inputs', () => {

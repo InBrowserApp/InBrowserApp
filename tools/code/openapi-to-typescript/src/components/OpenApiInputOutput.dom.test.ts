@@ -1,13 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-const { registerLanguageMock, tMock } = vi.hoisted(() => ({
+const { registerLanguageMock } = vi.hoisted(() => ({
   registerLanguageMock: vi.fn(),
-  tMock: vi.fn((key: string) => key),
-}))
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: tMock }),
 }))
 
 vi.mock('@shared/ui/tool', async () => {
@@ -143,7 +138,7 @@ describe('OpenApiInputOutput', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('outputEmpty')
+    expect(wrapper.text()).toContain('Provide a valid OpenAPI document to generate types.')
 
     await wrapper.get('[data-testid="text-or-file-input"]').setValue('new text')
     expect(handleInput).toHaveBeenCalledWith('new text')

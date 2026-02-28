@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import HttpStatusCodeSearch from './HttpStatusCodeSearch.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -163,15 +155,17 @@ describe('HttpStatusCodeSearch', () => {
       },
     })
 
-    expect(wrapper.find('input').attributes('placeholder')).toBe('searchPlaceholder')
+    expect(wrapper.find('input').attributes('placeholder')).toBe(
+      'Search by status code, name, or description...',
+    )
     expect(wrapper.findAll('.radio-button')).toHaveLength(7)
-    expect(wrapper.text()).toContain('all')
-    expect(wrapper.text()).toContain('common')
-    expect(wrapper.text()).toContain('informational')
-    expect(wrapper.text()).toContain('success')
-    expect(wrapper.text()).toContain('redirection')
-    expect(wrapper.text()).toContain('clientError')
-    expect(wrapper.text()).toContain('serverError')
+    expect(wrapper.text()).toContain('All')
+    expect(wrapper.text()).toContain('Common')
+    expect(wrapper.text()).toContain('Informational (1xx)')
+    expect(wrapper.text()).toContain('Success (2xx)')
+    expect(wrapper.text()).toContain('Redirection (3xx)')
+    expect(wrapper.text()).toContain('Client Error (4xx)')
+    expect(wrapper.text()).toContain('Server Error (5xx)')
   })
 
   it('emits updates when the search or category changes', async () => {

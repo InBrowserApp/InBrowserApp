@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import JWTVerifySettings from './JWTVerifySettings.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -85,16 +77,16 @@ describe('JWTVerifySettings', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('verify-settings')
+    expect(wrapper.text()).toContain('Verify Settings')
     const input = wrapper.findComponent({ name: 'NInput' })
-    expect(input.props('placeholder')).toBe('secret')
+    expect(input.props('placeholder')).toBe('Secret')
     expect(input.props('type')).toBe('password')
     expect(input.props('showPasswordOn')).toBe('click')
 
     const select = wrapper.findComponent({ name: 'NSelect' })
     const options = select.props('options') as Array<{ label: string; value: string }>
     expect(options).toHaveLength(14)
-    expect(options[0]).toEqual({ label: 'auto', value: 'auto' })
+    expect(options[0]).toEqual({ label: 'Auto', value: 'auto' })
 
     await input.vm.$emit('update:value', 'next-secret')
     await select.vm.$emit('update:value', 'HS256')

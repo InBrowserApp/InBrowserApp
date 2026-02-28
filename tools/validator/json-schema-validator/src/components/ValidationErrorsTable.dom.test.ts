@@ -8,22 +8,6 @@ type Column = {
   render?: (row: Record<string, unknown>, rowIndex: number) => unknown
 }
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: Record<string, unknown>) => {
-        if (key === 'errorsTitleWithCount') {
-          return `Errors (${params?.count ?? 0})`
-        }
-        if (key === 'noErrors') return 'No errors'
-        return key
-      },
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -130,7 +114,7 @@ describe('ValidationErrorsTable', () => {
     })
 
     const vm = wrapper.vm as unknown as { errorsTitle: string }
-    expect(vm.errorsTitle).toBe('errorsTitle')
+    expect(vm.errorsTitle).toBe('Errors')
     expect(wrapper.text()).toBe('')
   })
 })

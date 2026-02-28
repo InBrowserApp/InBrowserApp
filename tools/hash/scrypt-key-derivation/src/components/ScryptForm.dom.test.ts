@@ -3,10 +3,6 @@ import { mount } from '@vue/test-utils'
 import ScryptForm from './ScryptForm.vue'
 import type { SaltFormat } from '../types'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="section"><slot /></section>',
@@ -113,10 +109,14 @@ describe('ScryptForm', () => {
     expect(wrapper.emitted('generate-salt')?.length).toBe(1)
 
     expect(wrapper.find('[data-label="N (Cost Factor)"]').attributes('data-feedback')).toBe(
-      'range-invalid',
+      'Enter a whole number between 1024 and 1048576.',
     )
-    expect(wrapper.find('[data-label="length"]').attributes('data-feedback')).toBe('length-invalid')
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('[data-label="Derived Length (bytes)"]').attributes('data-feedback')).toBe(
+      'Enter a number between 16 and 256 bytes.',
+    )
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe(
+      'Salt must be valid hex.',
+    )
   })
 
   it('renders power-of-two feedback for cost factor', () => {
@@ -150,8 +150,8 @@ describe('ScryptForm', () => {
       },
     })
 
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe(
-      'salt-invalid-base64',
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe(
+      'Salt must be valid Base64.',
     )
   })
 })

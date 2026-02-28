@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ValidationSummary from './ValidationSummary.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -83,8 +75,8 @@ describe('ValidationSummary', () => {
     })
 
     expect(wrapper.find('.n-tag').attributes('data-type')).toBe('success')
-    expect(wrapper.text()).toContain('statusValid')
-    expect(wrapper.text()).toContain('draftDefault')
+    expect(wrapper.text()).toContain('Valid')
+    expect(wrapper.text()).toContain('default')
     expect(wrapper.find('.copy-button').attributes('data-content')).toBe('[{"message":"oops"}]')
   })
 
@@ -102,8 +94,8 @@ describe('ValidationSummary', () => {
     })
 
     expect(wrapper.find('.n-tag').attributes('data-type')).toBe('error')
-    expect(wrapper.text()).toContain('statusSchemaError')
-    expect(wrapper.text()).toContain('draftDetected')
+    expect(wrapper.text()).toContain('Schema error')
+    expect(wrapper.text()).toContain('from $schema')
     expect(wrapper.find('.copy-button').exists()).toBe(false)
   })
 })

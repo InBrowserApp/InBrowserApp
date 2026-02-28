@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ValidatorOptions from './ValidatorOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -63,8 +55,8 @@ describe('ValidatorOptions', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('validateFormats')
-    expect(wrapper.text()).toContain('allErrors')
+    expect(wrapper.text()).toContain('Validate formats (email, uri, uuid)')
+    expect(wrapper.text()).toContain('Show all errors')
 
     const switches = wrapper.findAllComponents({ name: 'NSwitch' })
     const validateSwitch = switches[0]

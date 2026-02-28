@@ -17,14 +17,6 @@ vi.mock('@utils/uuid/decode', () => ({
   decode: (...args: unknown[]) => decodeMock(...args),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -106,7 +98,7 @@ describe('DecodeResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('decode-error')
+    expect(wrapper.text()).toContain('Not a valid UUID')
     expect(decodeMock).not.toHaveBeenCalled()
   })
 })
@@ -120,7 +112,7 @@ describe('VersionDisplay', () => {
           version,
         },
       })
-      expect(wrapper.text()).toContain(`version-${version}`)
+      expect(wrapper.text()).toContain(`${version} (`)
     })
   })
 
@@ -143,7 +135,7 @@ describe('VariantDisplay', () => {
           variant,
         },
       })
-      expect(wrapper.text()).toContain(`variant-${variant}`)
+      expect(wrapper.text()).toContain(`${variant} (`)
     })
   })
 
@@ -176,7 +168,7 @@ describe('DecodeDetailResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('algorithm.sha1')
+    expect(wrapper.text()).toContain('SHA1')
     expect(wrapper.text()).toContain('aa:bb:cc:dd:ee:ff')
   })
 
@@ -196,7 +188,7 @@ describe('DecodeDetailResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('algorithm.md5')
+    expect(wrapper.text()).toContain('MD5')
   })
 
   it('falls back to the generic label for unknown algorithms', () => {
@@ -215,9 +207,9 @@ describe('DecodeDetailResult', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('algorithm')
-    expect(wrapper.text()).not.toContain('algorithm.sha1')
-    expect(wrapper.text()).not.toContain('algorithm.md5')
+    expect(wrapper.text()).toContain('Algorithm')
+    expect(wrapper.text()).not.toContain('SHA1')
+    expect(wrapper.text()).not.toContain('MD5')
   })
 
   it('hides optional fields when metadata is missing', () => {
@@ -235,8 +227,8 @@ describe('DecodeDetailResult', () => {
       },
     })
 
-    expect(wrapper.text()).not.toContain('algorithm.sha1')
-    expect(wrapper.text()).not.toContain('algorithm.md5')
+    expect(wrapper.text()).not.toContain('SHA1')
+    expect(wrapper.text()).not.toContain('MD5')
     expect(wrapper.text()).not.toContain('aa:bb:cc:dd:ee:ff')
   })
 })

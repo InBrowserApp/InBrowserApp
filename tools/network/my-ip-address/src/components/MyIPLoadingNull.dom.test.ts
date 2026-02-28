@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import MyIPLoadingNull from './MyIPLoadingNull.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -29,7 +21,7 @@ describe('MyIPLoadingNull', () => {
     })
 
     expect(wrapper.find('.skeleton').exists()).toBe(true)
-    expect(wrapper.text()).not.toContain('unable-to-get-ip')
+    expect(wrapper.text()).not.toContain('Unable to get IP')
   })
 
   it('renders an error message when the IP is unavailable', () => {
@@ -40,6 +32,6 @@ describe('MyIPLoadingNull', () => {
     })
 
     expect(wrapper.find('.skeleton').exists()).toBe(false)
-    expect(wrapper.text()).toContain('unable-to-get-ip')
+    expect(wrapper.text()).toContain('Unable to get IP')
   })
 })

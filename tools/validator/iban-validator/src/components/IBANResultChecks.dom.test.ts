@@ -1,12 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -46,14 +40,14 @@ describe('IBANResultChecks', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('expected: 22')
-    expect(wrapper.text()).toContain('actual: 21')
-    expect(wrapper.text()).toContain('expected: 89')
-    expect(wrapper.text()).toContain('actual: 12')
+    expect(wrapper.text()).toContain('Expected: 22')
+    expect(wrapper.text()).toContain('Actual: 21')
+    expect(wrapper.text()).toContain('Expected: 89')
+    expect(wrapper.text()).toContain('Actual: 12')
 
     const tag = wrapper.get('.tag')
     expect(tag.attributes('data-type')).toBe('error')
-    expect(wrapper.text()).toContain('fail')
+    expect(wrapper.text()).toContain('Fail')
   })
 
   it('renders a success checksum state', () => {
@@ -69,6 +63,6 @@ describe('IBANResultChecks', () => {
 
     const tag = wrapper.get('.tag')
     expect(tag.attributes('data-type')).toBe('success')
-    expect(wrapper.text()).toContain('pass')
+    expect(wrapper.text()).toContain('Pass')
   })
 })

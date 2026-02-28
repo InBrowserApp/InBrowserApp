@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import PrivateKeySection from './PrivateKeySection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { computed, isRef } = await import('vue')
   return {
@@ -88,7 +80,7 @@ describe('PrivateKeySection', () => {
     expect(link.attributes('download')).toBe('private.asc')
 
     const toggle = wrapper.findAll('button.n-button').find((button) => {
-      return button.text().includes('show') || button.text().includes('hide')
+      return button.text().includes('Show') || button.text().includes('Hide')
     })
     await toggle!.trigger('click')
 

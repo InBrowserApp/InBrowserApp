@@ -3,16 +3,6 @@ import { mount, flushPromises } from '@vue/test-utils'
 import ImageUpload from './ImageUpload.vue'
 import { readQRFromFile } from '../qr-reader'
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { computed } = await import('vue')
   return {
@@ -128,7 +118,7 @@ describe('ImageUpload', () => {
 
     await flushPromises()
 
-    expect(wrapper.emitted('error')).toEqual([['noQRCodeFound']])
+    expect(wrapper.emitted('error')).toEqual([['No QR code found in the image']])
   })
 
   it('emits errors when image decoding fails', async () => {
@@ -148,7 +138,7 @@ describe('ImageUpload', () => {
 
     await flushPromises()
 
-    expect(wrapper.emitted('error')).toEqual([['failedToReadImage']])
+    expect(wrapper.emitted('error')).toEqual([['Failed to read the image']])
   })
 
   it('clears file and errors when uploading another image', async () => {

@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import HowToGetYourIPAddress from './HowToGetYourIPAddress.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('HowToGetYourIPAddress', () => {
   it('renders the title and description', () => {
     const wrapper = mount(HowToGetYourIPAddress, {
@@ -25,7 +17,9 @@ describe('HowToGetYourIPAddress', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('How We Get Your IP Address')
+    expect(wrapper.text()).toContain(
+      'This tool fetches your IP address by making requests to third-party services including Cloudflare, geojs.io, ip.sb, and ipify.org. Please note that this is not an offline service and requires network connectivity to external servers to retrieve your public IP information.',
+    )
   })
 })

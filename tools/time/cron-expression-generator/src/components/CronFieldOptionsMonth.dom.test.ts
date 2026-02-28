@@ -2,16 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronFieldOptionsMonth from './CronFieldOptionsMonth.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -70,7 +60,7 @@ describe('CronFieldOptionsMonth', () => {
 
     const checkboxes = wrapper.findAll('.n-checkbox')
     expect(checkboxes).toHaveLength(12)
-    expect(checkboxes[0]?.text()).toContain('jan')
+    expect(checkboxes[0]?.text()).toContain('Jan')
 
     wrapper.findComponent({ name: 'NCheckboxGroup' }).vm.$emit('update:value', [1, 3, 5])
     expect(onUpdateSpecificValues).toHaveBeenCalledWith([1, 3, 5])
@@ -95,7 +85,7 @@ describe('CronFieldOptionsMonth', () => {
 
     const selects = wrapper.findAllComponents({ name: 'NSelect' })
     expect(selects).toHaveLength(2)
-    expect(wrapper.text()).toContain('from')
+    expect(wrapper.text()).toContain('From')
     expect(wrapper.text()).toContain('to')
 
     selects[0]?.vm.$emit('update:value', 2)

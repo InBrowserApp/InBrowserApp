@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 
 const messageError = vi.fn()
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -94,7 +86,7 @@ describe('PDFMergeUploader', () => {
 
     expect(result).toBe(false)
     expect(wrapper.emitted('add-file')).toBeFalsy()
-    expect(messageError).toHaveBeenCalledWith('onlyPdf')
+    expect(messageError).toHaveBeenCalledWith('Only PDF files are allowed')
   })
 })
 

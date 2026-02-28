@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import MimeTypeCategories from './MimeTypeCategories.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -40,9 +32,9 @@ describe('MimeTypeCategories', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('applicationTitle')
-    expect(wrapper.text()).toContain('audioTitle')
-    expect(wrapper.text()).toContain('imageTitle')
-    expect(wrapper.text()).toContain('videoTitle')
+    expect(wrapper.text()).toContain('Application:')
+    expect(wrapper.text()).toContain('Audio:')
+    expect(wrapper.text()).toContain('Image:')
+    expect(wrapper.text()).toContain('Video:')
   })
 })

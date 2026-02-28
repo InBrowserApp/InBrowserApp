@@ -1,16 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -64,7 +54,7 @@ describe('ISBNResultIdentifiers', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('notAvailable')
+    expect(wrapper.text()).toContain('Not available')
     expect(wrapper.text()).toContain('-')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
@@ -90,7 +80,7 @@ describe('ISBNResultIdentifiers', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('notAvailable')
+    expect(wrapper.text()).toContain('Not available')
     expect(wrapper.text()).toContain('-')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
@@ -116,7 +106,7 @@ describe('ISBNResultIdentifiers', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('notConvertible')
+    expect(wrapper.text()).toContain('Not convertible')
     expect(wrapper.text()).toContain('9790306406156')
     expect(wrapper.text()).toContain('979')
     expect(wrapper.text()).toContain('13')
@@ -145,8 +135,8 @@ describe('ISBNResultIdentifiers', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('notAvailable')
-    expect(wrapper.text()).toContain('notConvertible')
+    expect(wrapper.text()).toContain('Not available')
+    expect(wrapper.text()).toContain('Not convertible')
     expect(wrapper.text()).toContain('13')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })

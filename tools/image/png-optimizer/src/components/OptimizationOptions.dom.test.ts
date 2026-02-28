@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import OptimizationOptions from './OptimizationOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -142,6 +134,6 @@ describe('OptimizationOptions', () => {
     const button = wrapper.findComponent({ name: 'NButton' })
     expect(button.props('loading')).toBe(true)
     expect(button.props('disabled')).toBe(true)
-    expect(wrapper.text()).toContain('optimizing')
+    expect(wrapper.text()).toContain('Optimizing...')
   })
 })

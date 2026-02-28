@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import TimestampInputSection from './TimestampInputSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -131,10 +123,10 @@ describe('TimestampInputSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('unix-timestamp')
-    expect(wrapper.text()).toContain('invalid-timestamp')
-    expect(wrapper.text()).toContain('now')
-    expect(wrapper.find('input').attributes('placeholder')).toBe('timestamp-placeholder')
+    expect(wrapper.text()).toContain('Unix Timestamp')
+    expect(wrapper.text()).toContain('Invalid timestamp')
+    expect(wrapper.text()).toContain('Now')
+    expect(wrapper.find('input').attributes('placeholder')).toBe('Enter Unix timestamp...')
     expect(wrapper.find('input').attributes('data-status')).toBe('error')
   })
 

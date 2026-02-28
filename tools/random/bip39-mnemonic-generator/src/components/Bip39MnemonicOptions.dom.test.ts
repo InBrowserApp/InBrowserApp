@@ -3,17 +3,6 @@ import { mount } from '@vue/test-utils'
 import type { Bip39WordCount, Bip39WordlistName } from '@utils/bip39'
 import Bip39MnemonicOptions from './Bip39MnemonicOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: { bits?: number }) =>
-        typeof params?.bits === 'number' ? `${key}:${params.bits}` : key,
-    }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -134,11 +123,11 @@ describe('Bip39MnemonicOptions', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('options')
-    expect(wrapper.text()).toContain('tab-generate')
-    expect(wrapper.text()).toContain('tab-validate')
-    expect(wrapper.text()).toContain('tab-convert')
-    expect(wrapper.text()).toContain('entropy-bits:128')
+    expect(wrapper.text()).toContain('Options')
+    expect(wrapper.text()).toContain('Generate')
+    expect(wrapper.text()).toContain('Validate')
+    expect(wrapper.text()).toContain('Convert')
+    expect(wrapper.text()).toContain('Entropy: 128 bits')
 
     const tabs = wrapper.findComponent({ name: 'NTabs' })
     tabs.vm.$emit('update:value', 'validate')

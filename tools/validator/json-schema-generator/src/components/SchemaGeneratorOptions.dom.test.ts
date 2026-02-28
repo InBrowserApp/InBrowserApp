@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SchemaGeneratorOptions from './SchemaGeneratorOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -95,10 +87,10 @@ describe('SchemaGeneratorOptions', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('optionDraft')
-    expect(wrapper.text()).toContain('optionInferRequired')
-    expect(wrapper.text()).toContain('optionAllowAdditionalProperties')
-    expect(wrapper.text()).toContain('optionDetectFormat')
+    expect(wrapper.text()).toContain('Schema draft')
+    expect(wrapper.text()).toContain('Infer required properties')
+    expect(wrapper.text()).toContain('Allow additional properties')
+    expect(wrapper.text()).toContain('Detect string formats (uuid, email, uri, date-time)')
 
     const select = wrapper.findComponent({ name: 'NSelect' })
     await select.trigger('click')

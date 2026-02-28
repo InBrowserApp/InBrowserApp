@@ -10,19 +10,6 @@ vi.mock('../utils/cron', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  const { ref } = await import('vue')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: { n?: number }) =>
-        params?.n !== undefined ? `${key}:${params.n}` : key,
-      locale: ref('en-US'),
-    }),
-  }
-})
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -119,7 +106,7 @@ describe('cron components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('valid')
+    expect(wrapper.text()).toContain('Valid expression')
     expect(wrapper.find('[data-testid="copy"]').exists()).toBe(true)
 
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'bad')
@@ -144,8 +131,7 @@ describe('cron components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('invalid')
-    expect(wrapper.text()).not.toContain('Invalid expression')
+    expect(wrapper.text()).toContain('Invalid expression')
     expect(wrapper.find('[data-testid="copy"]').exists()).toBe(false)
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
@@ -174,8 +160,8 @@ describe('cron components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('noDescription')
-    expect(wrapper.text()).toContain('noFields')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see description')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see field breakdown')
   })
 
   it('formats next run times and relative labels', () => {
@@ -199,10 +185,10 @@ describe('cron components', () => {
     const rows = JSON.parse(wrapper.get('[data-testid="table"]').attributes('data-rows') || '[]')
     const relatives = rows.map((row: { relative: string }) => row.relative)
 
-    expect(relatives).toContain('inDays:2')
-    expect(relatives).toContain('inHours:3')
-    expect(relatives).toContain('inMinutes:4')
-    expect(relatives).toContain('inSeconds:30')
+    expect(relatives).toContain('in 2 day(s)')
+    expect(relatives).toContain('in 3 hour(s)')
+    expect(relatives).toContain('in 4 minute(s)')
+    expect(relatives).toContain('in 30 second(s)')
   })
 
   it('shows empty state when no run times', () => {
@@ -212,6 +198,6 @@ describe('cron components', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('noTimes')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see execution times')
   })
 })

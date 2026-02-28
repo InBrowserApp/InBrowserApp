@@ -12,14 +12,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -98,7 +90,7 @@ describe('Base64Converter', () => {
     await textareas[1]!.setValue('@@@')
 
     expect((textareas[1]!.element as HTMLTextAreaElement).getAttribute('data-status')).toBe('error')
-    expect(wrapper.text()).toContain('invalid-base64')
+    expect(wrapper.text()).toContain('Invalid Base64 text')
     expect((textareas[0]!.element as HTMLTextAreaElement).value).toBe('Hello')
   })
 
@@ -112,6 +104,6 @@ describe('Base64Converter', () => {
       'success',
     )
     expect((textareas[0]!.element as HTMLTextAreaElement).value).toBe('')
-    expect(wrapper.text()).not.toContain('invalid-base64')
+    expect(wrapper.text()).not.toContain('Invalid Base64 text')
   })
 })

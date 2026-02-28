@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import RomanNumeralInput from './RomanNumeralInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -88,10 +80,10 @@ describe('RomanNumeralInput', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('romanNumeral')
+    expect(wrapper.find('.section-header').text()).toBe('Roman Numeral')
 
     const input = wrapper.get('[data-testid="roman-input"]')
-    expect(input.attributes('placeholder')).toBe('romanPlaceholder')
+    expect(input.attributes('placeholder')).toBe('Enter Roman numeral...')
     expect(wrapper.get('.copy').attributes('data-content')).toBe('I')
   })
 

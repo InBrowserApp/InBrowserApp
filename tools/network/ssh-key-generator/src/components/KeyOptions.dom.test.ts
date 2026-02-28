@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import KeyOptions from './KeyOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -105,7 +97,7 @@ describe('KeyOptions', () => {
 
     const select = wrapper.getComponent({ name: 'NSelect' })
     const options = select.props('options') as Array<{ label: string; value: number }>
-    expect(options.map((option) => option.label)).toContain('4096 bits (recommended)')
+    expect(options.map((option) => option.label)).toContain('4096 bits (Recommended)')
   })
 
   it('emits updates from form controls', async () => {

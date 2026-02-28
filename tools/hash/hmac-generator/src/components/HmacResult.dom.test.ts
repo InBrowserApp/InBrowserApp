@@ -32,14 +32,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent, h } = await import('vue')
   return {
@@ -130,8 +122,8 @@ describe('HmacResult', () => {
     await flushPromises()
 
     expect(generateHmacMock).toHaveBeenCalledWith('hello', 'secret', 'SHA-256')
-    expect(wrapper.text()).toContain('hex')
-    expect(wrapper.text()).toContain('base64')
+    expect(wrapper.text()).toContain('Hexadecimal')
+    expect(wrapper.text()).toContain('Base64')
     expect(wrapper.text()).toContain('010203')
     expect(wrapper.text()).toContain('AQID')
   })

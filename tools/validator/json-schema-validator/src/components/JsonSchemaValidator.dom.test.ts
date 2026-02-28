@@ -54,14 +54,6 @@ vi.mock('@utils/json-schema', () => ({
   validateJsonSchema: (...args: unknown[]) => jsonSchemaMocks.validateJsonSchema(...args),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const SchemaDataInputsStub = defineComponent({
   name: 'SchemaDataInputs',
   props: ['schemaStatus', 'dataStatus', 'schemaError', 'dataError', 'schemaValue', 'dataValue'],
@@ -206,7 +198,7 @@ describe('JsonSchemaValidator', () => {
 
     const result = wrapper.findComponent(ValidationResultStub)
     expect(result.props('state')).toBe('schema-error')
-    expect(result.props('schemaError')).toBe('schemaObjectError')
+    expect(result.props('schemaError')).toBe('Schema must be a JSON object')
     expect(result.props('draftValue')).toBe('2020-12')
     expect(jsonSchemaMocks.detectSchemaDraft).not.toHaveBeenCalled()
     expect(jsonSchemaMocks.validateJsonSchema).not.toHaveBeenCalled()
@@ -224,7 +216,7 @@ describe('JsonSchemaValidator', () => {
 
     const result = wrapper.findComponent(ValidationResultStub)
     expect(result.props('state')).toBe('schema-error')
-    expect(result.props('schemaError')).toBe('schemaObjectError')
+    expect(result.props('schemaError')).toBe('Schema must be a JSON object')
     expect(jsonSchemaMocks.validateJsonSchema).not.toHaveBeenCalled()
   })
 

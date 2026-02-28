@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import SchemaDataInputs from './SchemaDataInputs.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -127,14 +119,14 @@ describe('SchemaDataInputs', () => {
     if (!schemaInput || !dataInput) {
       throw new Error('Expected schema and data inputs')
     }
-    expect(schemaInput.props('placeholder')).toBe('schemaPlaceholder')
+    expect(schemaInput.props('placeholder')).toBe('Paste JSON Schema here...')
     expect(schemaInput.props('status')).toBe('error')
     expect(schemaInput.props('accept')).toBe('.json,.txt')
     expect(schemaInput.props('wrapWithFormItem')).toBe(false)
-    expect(dataInput.props('placeholder')).toBe('dataPlaceholder')
+    expect(dataInput.props('placeholder')).toBe('Paste JSON data here...')
     expect(dataInput.props('status')).toBe('success')
 
-    expect(wrapper.text()).toContain('invalidJson')
+    expect(wrapper.text()).toContain('Invalid JSON')
     expect(wrapper.text()).toContain('bad schema')
   })
 
@@ -172,7 +164,7 @@ describe('SchemaDataInputs', () => {
       },
     })
 
-    expect(withDataError.text()).toContain('invalidJson')
+    expect(withDataError.text()).toContain('Invalid JSON')
     expect(withDataError.text()).toContain('bad data')
     expect(withDataError.text()).not.toContain('bad schema')
 
@@ -187,6 +179,6 @@ describe('SchemaDataInputs', () => {
       },
     })
 
-    expect(withoutErrors.text()).not.toContain('invalidJson')
+    expect(withoutErrors.text()).not.toContain('Invalid JSON')
   })
 })

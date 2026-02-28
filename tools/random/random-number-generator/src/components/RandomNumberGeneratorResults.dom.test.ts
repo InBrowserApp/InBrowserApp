@@ -3,14 +3,6 @@ import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, ref, watchEffect, type Component } from 'vue'
 import RandomNumberGeneratorResults from './RandomNumberGeneratorResults.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -109,7 +101,7 @@ describe('RandomNumberGeneratorResults', () => {
 
     await flushPromises()
 
-    expect(wrapper.text()).toContain('placeholder')
+    expect(wrapper.text()).toContain('Numbers will appear here...')
     expect(wrapper.get('[data-testid="download-results"]').attributes('disabled')).toBeDefined()
     expect(wrapper.get('[data-testid="enter-fullscreen"]').attributes('disabled')).toBeDefined()
 

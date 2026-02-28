@@ -141,16 +141,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 const ToolSectionStub = {
   template: '<section><slot /></section>',
 }
@@ -200,7 +190,7 @@ describe('TextDiff', () => {
     })
 
     const wrapper = await mountTextDiff()
-    const button = findButton(wrapper, 'import-original')
+    const button = findButton(wrapper, 'Import Original')
     expect(button).toBeTruthy()
 
     await button!.trigger('click')
@@ -226,7 +216,7 @@ describe('TextDiff', () => {
     const diffEditor = getDiffEditor(wrapper)
     expect(diffEditor.props('language')).toBe('javascript')
 
-    const button = findButton(wrapper, 'import-original')
+    const button = findButton(wrapper, 'Import Original')
     expect(button).toBeTruthy()
 
     await button!.trigger('click')
@@ -243,7 +233,7 @@ describe('TextDiff', () => {
     })
 
     const wrapper = await mountTextDiff()
-    const button = findButton(wrapper, 'import-modified')
+    const button = findButton(wrapper, 'Import Modified')
     expect(button).toBeTruthy()
 
     await button!.trigger('click')
@@ -260,7 +250,7 @@ describe('TextDiff', () => {
     const original = diffEditor.props('original') as string
     const modified = diffEditor.props('modelValue') as string
 
-    const button = findButton(wrapper, 'swap')
+    const button = findButton(wrapper, 'Swap')
     expect(button).toBeTruthy()
 
     await button!.trigger('click')

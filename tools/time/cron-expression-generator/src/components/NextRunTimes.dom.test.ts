@@ -4,20 +4,6 @@ import NextRunTimes from './NextRunTimes.vue'
 
 const localeRef = { value: 'en' }
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, args?: Record<string, unknown>) => {
-        if (args?.n !== undefined) return `${key}:${args.n}`
-        return key
-      },
-      locale: localeRef,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -66,7 +52,7 @@ describe('NextRunTimes', () => {
 
     expect(data).toHaveLength(1)
     expect(data[0]?.index).toBe(1)
-    expect(data[0]?.relative).toContain('inHours')
+    expect(data[0]?.relative).toContain('in 2 hour(s)')
     expect(data[0]?.dateTime).toBeTruthy()
   })
 
@@ -87,8 +73,8 @@ describe('NextRunTimes', () => {
       dateTime: string
     }>
 
-    expect(data[0]?.relative).toBe('inMinutes:2')
-    expect(data[1]?.relative).toBe('inSeconds:30')
+    expect(data[0]?.relative).toBe('in 2 minute(s)')
+    expect(data[1]?.relative).toBe('in 30 second(s)')
   })
 
   it('formats day-based relative times', () => {
@@ -108,7 +94,7 @@ describe('NextRunTimes', () => {
       dateTime: string
     }>
 
-    expect(data[0]?.relative).toBe('inDays:2')
+    expect(data[0]?.relative).toBe('in 2 day(s)')
   })
 
   it('renders a hint when there are no run times', () => {
@@ -118,6 +104,6 @@ describe('NextRunTimes', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('noTimes')
+    expect(wrapper.text()).toContain('Configure fields above to see execution times')
   })
 })

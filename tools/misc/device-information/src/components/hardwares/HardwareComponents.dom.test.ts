@@ -14,14 +14,6 @@ import GpuVendor from './GpuVendor.vue'
 import GpuRenderer from './GpuRenderer.vue'
 import StorageQuota from './StorageQuota.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const InfoStatisticStub = defineComponent({
   name: 'InfoStatistic',
   props: {
@@ -447,7 +439,7 @@ describe('hardware components', () => {
     const wrapper = mountWithStub(GpuVendor)
 
     const stat = wrapper.find('.info-stat')
-    expect(stat.attributes('data-label')).toBe('gpu-vendor')
+    expect(stat.attributes('data-label')).toBe('GPU Vendor')
   })
 
   it('reports gpu vendor when debug info is available', () => {
@@ -483,7 +475,7 @@ describe('hardware components', () => {
     const wrapper = mountWithStub(GpuRenderer)
 
     const stat = wrapper.find('.info-stat')
-    expect(stat.attributes('data-label')).toBe('gpu-renderer')
+    expect(stat.attributes('data-label')).toBe('GPU Renderer')
   })
 
   it('reports gpu renderer when debug info is available', () => {

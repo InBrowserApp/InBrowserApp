@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import EncryptOptions from './EncryptOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -86,7 +78,7 @@ describe('EncryptOptions', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('ctrWarning')
+    expect(wrapper.text()).toContain('CTR mode has no authentication - data can be tampered')
 
     const jweRadio = wrapper.find('.n-radio[data-value="jwe"]')
     expect(jweRadio.attributes('data-disabled')).toBe('true')

@@ -1,10 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -97,8 +93,8 @@ describe('OpenApiOptions', () => {
       expect(wrapper.emitted(`update:${key}`)?.[0]).toEqual([true])
     }
 
-    expect(wrapper.text()).toContain('optionAdditionalProperties')
-    expect(wrapper.text()).toContain('optionGeneratePathParams')
-    expect(wrapper.text()).toContain('optionIncludeHeader')
+    expect(wrapper.text()).toContain('Allow additional properties')
+    expect(wrapper.text()).toContain('Generate path params helpers')
+    expect(wrapper.text()).toContain('Include header comment')
   })
 })

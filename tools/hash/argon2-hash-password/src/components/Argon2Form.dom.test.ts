@@ -1,10 +1,6 @@
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="section"><slot /></section>',
@@ -100,7 +96,7 @@ describe('Argon2Form', () => {
   it('renders fields and emits model updates', async () => {
     const wrapper = createWrapper()
 
-    expect(wrapper.find('.section-header').text()).toBe('config-header')
+    expect(wrapper.find('.section-header').text()).toBe('Configuration')
     expect(wrapper.findAll('.n-input')).toHaveLength(3)
     expect(wrapper.findAll('.n-input-number')).toHaveLength(4)
 
@@ -145,11 +141,11 @@ describe('Argon2Form', () => {
       return wrapper.findAll('.form-item').find((item) => item.attributes('data-label') === label)
     }
 
-    expect(byLabel('iterations')?.attributes('data-status')).toBe('error')
-    expect(byLabel('parallelism')?.attributes('data-status')).toBe('error')
-    expect(byLabel('hash-length')?.attributes('data-status')).toBe('error')
-    expect(byLabel('memory-size')?.attributes('data-status')).toBe('error')
-    expect(byLabel('salt')?.attributes('data-status')).toBe('error')
+    expect(byLabel('Iterations')?.attributes('data-status')).toBe('error')
+    expect(byLabel('Parallelism')?.attributes('data-status')).toBe('error')
+    expect(byLabel('Hash Length (bytes)')?.attributes('data-status')).toBe('error')
+    expect(byLabel('Memory Size (KiB)')?.attributes('data-status')).toBe('error')
+    expect(byLabel('Salt (Base64)')?.attributes('data-status')).toBe('error')
   })
 
   it('shows memory dependency validation status', async () => {
@@ -161,7 +157,7 @@ describe('Argon2Form', () => {
     })
 
     const memoryItem = wrapper.findAll('.form-item').find((item) => {
-      return item.attributes('data-label') === 'memory-size'
+      return item.attributes('data-label') === 'Memory Size (KiB)'
     })
 
     expect(memoryItem?.attributes('data-status')).toBe('error')

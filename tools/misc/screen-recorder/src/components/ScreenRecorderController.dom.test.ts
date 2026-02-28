@@ -5,14 +5,6 @@ import ScreenRecorderController from './ScreenRecorderController.vue'
 import ScreenRecorderOutput from './ScreenRecorderOutput.vue'
 import ScreenRecorderSettings from './ScreenRecorderSettings.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: () => ref('blob:mock'),
 }))
@@ -218,7 +210,7 @@ describe('ScreenRecorderController', () => {
 
     const wrapper = mountController()
 
-    expect(wrapper.text()).toContain('notSupported')
+    expect(wrapper.text()).toContain('Screen recording is not supported')
   })
 
   it('no-ops when startRecording is called without support', async () => {
@@ -230,7 +222,7 @@ describe('ScreenRecorderController', () => {
 
     await vm.startRecording()
 
-    expect(wrapper.text()).toContain('notSupported')
+    expect(wrapper.text()).toContain('Screen recording is not supported')
   })
 
   it('starts and stops recording', async () => {
@@ -251,15 +243,15 @@ describe('ScreenRecorderController', () => {
       video: true,
       audio: true,
     })
-    expect(wrapper.text()).toContain('statusRecording')
+    expect(wrapper.text()).toContain('Recording')
 
     vm.stopRecording()
     await wrapper.vm.$nextTick()
 
     expect(display.video[0]?.stop).toHaveBeenCalled()
     expect(vm.recordingBlob).toBeInstanceOf(Blob)
-    expect(wrapper.text()).toContain('output')
-    expect(wrapper.text()).toContain('statusIdle')
+    expect(wrapper.text()).toContain('Output')
+    expect(wrapper.text()).toContain('Idle')
   })
 
   it('uses audio settings', async () => {
@@ -317,8 +309,8 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('permissionDenied')
-    expect(wrapper.text()).toContain('retryPermission')
+    expect(wrapper.text()).toContain('Screen permission denied')
+    expect(wrapper.text()).toContain('Retry')
   })
 
   it('handles microphone permission denied', async () => {
@@ -340,7 +332,7 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('microphoneDenied')
+    expect(wrapper.text()).toContain('Microphone permission denied')
     expect(display.video[0]?.stop).toHaveBeenCalled()
     expect(FakeMediaRecorder.instances.length).toBe(0)
   })
@@ -362,7 +354,7 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('microphoneNotSupported')
+    expect(wrapper.text()).toContain('Microphone capture is not supported in this browser.')
     expect(getDisplayMedia).not.toHaveBeenCalled()
   })
 
@@ -384,7 +376,7 @@ describe('ScreenRecorderController', () => {
     await vm.startRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('recordingFailed')
+    expect(wrapper.text()).toContain('Failed to start recording.')
   })
 
   it('keeps existing recording when start fails', async () => {
@@ -414,7 +406,7 @@ describe('ScreenRecorderController', () => {
     expect(vm.mimeType).toBe('video/webm')
     expect(vm.fileName).toBe('existing')
     expect(vm.elapsedMs).toBe(1200)
-    expect(wrapper.text()).toContain('recordingFailed')
+    expect(wrapper.text()).toContain('Failed to start recording.')
   })
 
   it('pauses and resumes recording', async () => {
@@ -433,8 +425,8 @@ describe('ScreenRecorderController', () => {
     vm.pauseRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('statusPaused')
-    expect(wrapper.text()).toContain('resume')
+    expect(wrapper.text()).toContain('Paused')
+    expect(wrapper.text()).toContain('Resume')
 
     vm.resumeRecording()
     await wrapper.vm.$nextTick()
@@ -442,7 +434,7 @@ describe('ScreenRecorderController', () => {
     const recorder = FakeMediaRecorder.instances[0]
     expect(recorder?.pause).toHaveBeenCalled()
     expect(recorder?.resume).toHaveBeenCalled()
-    expect(wrapper.text()).toContain('statusRecording')
+    expect(wrapper.text()).toContain('Recording')
   })
 
   it('stops when display track ends', async () => {
@@ -522,9 +514,9 @@ describe('ScreenRecorderController', () => {
       downloadName: string
     }
 
-    expect(vm.displayMimeType).toBe('formatUnknown')
+    expect(vm.displayMimeType).toBe('Unknown')
     expect(vm.fileSizeLabel).toBe('0 B')
-    expect(vm.downloadName).toBe('fileNamePlaceholder.webm')
+    expect(vm.downloadName).toBe('screen-recording.webm')
   })
 
   it('updates elapsed time while recording', async () => {

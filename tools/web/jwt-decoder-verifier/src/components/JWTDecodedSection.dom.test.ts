@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import JWTDecodedSection from './JWTDecodedSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const JWTJsonCardStub = defineComponent({
   name: 'JWTJsonCard',
   props: {
@@ -51,7 +43,7 @@ describe('JWTDecodedSection', () => {
       },
     })
 
-    expect(wrapper.text()).not.toContain('decoded')
+    expect(wrapper.text()).not.toContain('Decoded')
     expect(wrapper.findComponent(JWTJsonCardStub).exists()).toBe(false)
   })
 
@@ -83,7 +75,7 @@ describe('JWTDecodedSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('decoded')
+    expect(wrapper.text()).toContain('Decoded')
     const cards = wrapper.findAllComponents(JWTJsonCardStub)
     expect(cards).toHaveLength(2)
     expect(cards[0]?.props('json')).toEqual({ sub: 'user' })

@@ -2,16 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronFieldIntervalControl from './CronFieldIntervalControl.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -47,7 +37,7 @@ describe('CronFieldIntervalControl', () => {
 
     const input = wrapper.findComponent({ name: 'NInputNumber' })
     expect(input.props('max')).toBe(60)
-    expect(wrapper.text()).toContain('minutes')
+    expect(wrapper.text()).toContain('minute(s)')
   })
 
   it('maps weekday units and interval bounds', () => {
@@ -64,7 +54,7 @@ describe('CronFieldIntervalControl', () => {
 
     const input = wrapper.findComponent({ name: 'NInputNumber' })
     expect(input.props('max')).toBe(7)
-    expect(wrapper.text()).toContain('daysOfWeek')
+    expect(wrapper.text()).toContain('day(s)')
   })
 
   it('forwards interval updates from the input model', () => {

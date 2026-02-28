@@ -18,14 +18,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     name: 'ToolSection',
@@ -143,7 +135,7 @@ describe('SlugGenerator', () => {
     const clearButton = wrapper.find('[data-testid="clear-button"]')
     await clearButton.trigger('click')
 
-    expect(wrapper.text()).toContain('outputPlaceholder')
+    expect(wrapper.text()).toContain('Slug will appear here...')
     expect(slugifyMock).not.toHaveBeenCalled()
   })
 })

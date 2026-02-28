@@ -40,14 +40,6 @@ vi.mock('mime-db', () => ({
   default: mimeDatabaseSample,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardTooltip: CopyToClipboardTooltipStub,
 }))
@@ -226,7 +218,7 @@ describe('MimeTypeTable', () => {
         }
       | undefined
     const yesText = typeof yesChildren === 'function' ? yesChildren() : yesChildren?.default?.()
-    expect(yesText).toBe('yes')
+    expect(yesText).toBe('Yes')
 
     const compressibleColumnNo = columns
       .find((column) => column.key === 'compressible')
@@ -239,7 +231,7 @@ describe('MimeTypeTable', () => {
         }
       | undefined
     const noText = typeof noChildren === 'function' ? noChildren() : noChildren?.default?.()
-    expect(noText).toBe('no')
+    expect(noText).toBe('No')
 
     const compressibleColumnEmpty = columns
       .find((column) => column.key === 'compressible')

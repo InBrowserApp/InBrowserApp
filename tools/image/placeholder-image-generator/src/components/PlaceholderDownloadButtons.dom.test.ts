@@ -16,14 +16,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -366,7 +358,7 @@ describe('PlaceholderDownloadButtons', () => {
     await flushPromises()
 
     expect(clipboardWrite).toHaveBeenCalled()
-    expect(messageMock.success).toHaveBeenCalledWith('copy-success')
+    expect(messageMock.success).toHaveBeenCalledWith('Image copied to clipboard')
   })
 
   it('reports copy failure when blob is missing', async () => {
@@ -390,7 +382,7 @@ describe('PlaceholderDownloadButtons', () => {
     await copyButton?.trigger('click')
     await flushPromises()
 
-    expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to copy image')
   })
 
   it('reports copy failure when clipboard write rejects', async () => {
@@ -409,7 +401,7 @@ describe('PlaceholderDownloadButtons', () => {
     await copyButton?.trigger('click')
     await flushPromises()
 
-    expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to copy image')
   })
 
   it('handles missing canvas context', async () => {

@@ -9,14 +9,6 @@ const BrandIconStub = defineComponent({
   template: '<svg class="brand-icon" />',
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -159,8 +151,8 @@ describe('CreditCardResult', () => {
     expect(copyButton.props('text')).toBe('4111111111111111')
 
     expect(wrapper.text()).toContain('Visa')
-    expect(wrapper.text()).toContain('expectedLength')
-    expect(wrapper.text()).toContain('digitsLabel')
+    expect(wrapper.text()).toContain('16')
+    expect(wrapper.text()).toContain('digits')
   })
 
   it('renders unknown brand details when a brand is missing', () => {
@@ -192,8 +184,8 @@ describe('CreditCardResult', () => {
     expect(tags[1]?.attributes('data-type')).toBe('error')
 
     expect(wrapper.findComponent({ name: 'CopyToClipboardButton' }).exists()).toBe(false)
-    expect(wrapper.text()).toContain('unknown')
-    expect(wrapper.text()).not.toContain('expectedLength')
-    expect(wrapper.text()).not.toContain('cvcLength')
+    expect(wrapper.text()).toContain('Unknown')
+    expect(wrapper.text()).not.toContain('Expected:')
+    expect(wrapper.text()).not.toContain('CVC Length')
   })
 })

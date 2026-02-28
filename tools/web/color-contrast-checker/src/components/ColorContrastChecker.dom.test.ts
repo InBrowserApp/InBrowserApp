@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import ColorContrastChecker from './ColorContrastChecker.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const BaseStub = defineComponent({
   inheritAttrs: false,
   template: '<div v-bind="$attrs"><slot /></div>',
@@ -101,7 +93,7 @@ describe('ColorContrastChecker', () => {
 
     expect(vm.checks?.length).toBe(0)
 
-    expect(wrapper.text()).toContain('invalid-input')
+    expect(wrapper.text()).toContain('Invalid color format')
     expect(wrapper.findAll('[data-testid^="status-"]').length).toBe(0)
   })
 
@@ -136,7 +128,7 @@ describe('ColorContrastChecker', () => {
     vm.updateBackgroundFromPicker?.('#ffffff')
     await nextTick()
 
-    expect(wrapper.text()).toContain('fail')
+    expect(wrapper.text()).toContain('Fail')
   })
 
   it('treats empty inputs as unset', async () => {

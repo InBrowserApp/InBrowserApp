@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import CssGradientLayerSettingsPanel from './CssGradientLayerSettingsPanel.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -80,7 +72,7 @@ describe('CssGradientLayerSettingsPanel', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('settingsTitle')
+    expect(wrapper.text()).toContain('Layer Settings')
 
     const typeControls = wrapper.findComponent(LayerTypeControlsStub)
     typeControls.vm.$emit('update:layerType', 'radial')

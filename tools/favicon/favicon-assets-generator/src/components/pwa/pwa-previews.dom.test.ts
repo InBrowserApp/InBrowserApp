@@ -20,12 +20,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 import PWAPreview from './any/PWAPreview.vue'
 import PWAPreviewWindowsTaskbar from './any/PWAPreviewWindowsTaskbar.vue'
 import PWAPreviewAndroid from './maskable/PWAPreviewAndroid.vue'
@@ -71,7 +65,7 @@ describe('PWAPreviewWindowsTaskbar', () => {
     const background = wrapper.find('.icon-background')
     expect(background.attributes('style')).toContain('transparent')
 
-    expect(wrapper.find('img.background').attributes('alt')).toBe('windowsTaskbarBackground')
+    expect(wrapper.find('img.background').attributes('alt')).toBe('Windows Taskbar Background')
   })
 
   it('renders the icon with background styles', () => {

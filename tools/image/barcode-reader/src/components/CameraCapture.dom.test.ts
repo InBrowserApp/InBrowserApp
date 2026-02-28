@@ -1,16 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 const barcodeReaderMocks = vi.hoisted(() => ({
   decodeFromVideoDevice: vi.fn(),
   createBarcodeReader: vi.fn(),
@@ -56,7 +45,7 @@ describe('CameraCapture', () => {
     setMediaDevices(undefined)
 
     const wrapper = mount(CameraCapture)
-    expect(wrapper.text()).toContain('cameraNotSupported')
+    expect(wrapper.text()).toContain('Camera is not supported in this browser')
   })
 
   it('emits decoded data when a code is found', async () => {
@@ -100,7 +89,7 @@ describe('CameraCapture', () => {
     vm.isScanning = true
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('pointAtCode')
+    expect(wrapper.text()).toContain('Point camera at a barcode or QR code')
   })
 
   it('emits an error when decoding fails', async () => {
@@ -120,7 +109,7 @@ describe('CameraCapture', () => {
 
     await vm.startCamera()
 
-    expect(wrapper.emitted('error')?.[0]).toEqual(['cameraError'])
+    expect(wrapper.emitted('error')?.[0]).toEqual(['Failed to access camera'])
     expect(controls.stop).toHaveBeenCalled()
   })
 
@@ -205,7 +194,9 @@ describe('CameraCapture', () => {
 
     await vm.startCamera()
 
-    expect(wrapper.emitted('error')?.[0]).toEqual(['cameraPermissionDenied'])
+    expect((wrapper.emitted('error')?.[0]?.[0] as string).toLowerCase()).toContain(
+      'permission denied',
+    )
     expect(vm.permissionDenied).toBe(true)
   })
 
@@ -220,7 +211,7 @@ describe('CameraCapture', () => {
 
     await vm.startCamera()
 
-    expect(wrapper.emitted('error')?.[0]).toEqual(['cameraError'])
+    expect(wrapper.emitted('error')?.[0]).toEqual(['Failed to access camera'])
     expect(vm.permissionDenied).toBe(false)
   })
 })

@@ -10,14 +10,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -86,7 +78,7 @@ describe('TextStatisticsContent', () => {
     const wrapper = mount(TextStatisticsContent)
 
     const input = wrapper.get('textarea.n-input')
-    expect(input.attributes('placeholder')).toBe('placeholder')
+    expect(input.attributes('placeholder')).toBe('Enter or paste your text here...')
     expect(wrapper.get('[data-testid="stats"]').attributes('data-characters')).toBe('0')
 
     await input.setValue('Hello world')

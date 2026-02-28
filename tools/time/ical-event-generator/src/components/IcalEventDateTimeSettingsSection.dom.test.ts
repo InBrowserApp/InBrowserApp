@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventDateTimeSettingsSection from './IcalEventDateTimeSettingsSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -86,7 +78,7 @@ describe('IcalEventDateTimeSettingsSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('offset')
+    expect(wrapper.text()).toContain('Offset')
     expect(wrapper.text()).toContain('UTC+00:00')
 
     const select = wrapper.find('select')

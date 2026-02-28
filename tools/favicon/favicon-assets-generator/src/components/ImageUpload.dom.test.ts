@@ -29,16 +29,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 import ImageUpload from './ImageUpload.vue'
 
 describe('ImageUpload', () => {
@@ -62,7 +52,7 @@ describe('ImageUpload', () => {
     })
     await flushPromises()
 
-    expect(messageErrorMock).toHaveBeenCalledWith('onlyOneFileCanBeUploaded')
+    expect(messageErrorMock).toHaveBeenCalledWith('Only one file can be uploaded')
     expect(updateSpy).not.toHaveBeenCalled()
   })
 
@@ -82,7 +72,7 @@ describe('ImageUpload', () => {
     })
     await flushPromises()
 
-    expect(messageErrorMock).toHaveBeenCalledWith('onlyImageFilesAreAllowed')
+    expect(messageErrorMock).toHaveBeenCalledWith('Only image files are allowed')
     expect(updateSpy).not.toHaveBeenCalled()
   })
 

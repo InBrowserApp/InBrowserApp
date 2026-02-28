@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import KeyOutput from './KeyOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -85,8 +77,10 @@ describe('KeyOutput', () => {
 
     expect(wrapper.findComponent(PublicKeyStub).props('filename')).toBe('id_ed25519.pub')
     expect(wrapper.findComponent(PrivateKeyStub).props('filename')).toBe('id_ed25519')
-    expect(wrapper.text()).toContain('securityWarning')
-    expect(wrapper.text()).toContain('securityWarningContent')
+    expect(wrapper.text()).toContain('Security Warning')
+    expect(wrapper.text()).toContain(
+      'Never share your private key with anyone. Store it securely and consider using a passphrase for additional protection.',
+    )
   })
 
   it('computes filenames for RSA keys', () => {

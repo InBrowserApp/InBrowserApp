@@ -1,16 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('@vicons/fluent/BookSearch20Regular', () => ({
   default: {},
 }))
@@ -86,7 +76,7 @@ describe('ISBNInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalidLength')
+    expect(form.attributes('data-feedback')).toBe('ISBN must be 10 or 13 digits')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
@@ -104,7 +94,7 @@ describe('ISBNInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalidFormat')
+    expect(form.attributes('data-feedback')).toBe('Invalid ISBN format')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
@@ -123,7 +113,7 @@ describe('ISBNInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalidChecksum')
+    expect(form.attributes('data-feedback')).toBe('Invalid checksum')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
 
@@ -142,7 +132,7 @@ describe('ISBNInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('invalid')
+    expect(form.attributes('data-feedback')).toBe('Invalid ISBN')
     expect(form.attributes('data-status')).toBe('error')
   })
 
@@ -161,7 +151,7 @@ describe('ISBNInput', () => {
     })
 
     const form = wrapper.get('.form-item')
-    expect(form.attributes('data-feedback')).toBe('valid')
+    expect(form.attributes('data-feedback')).toBe('Valid ISBN')
     expect(form.attributes('data-status')).toBe('success')
 
     await wrapper.get('input').setValue('9780306406157')

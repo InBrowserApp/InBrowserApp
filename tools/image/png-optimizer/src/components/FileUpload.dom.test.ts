@@ -55,14 +55,6 @@ vi.mock('filesize', () => ({
   filesize: (value: number) => `${value} bytes`,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const createPayload = (file?: File, fileList?: Array<{ file?: File }>) => ({
   file: { file },
   fileList: fileList ?? (file ? [{ file }] : []),
@@ -113,11 +105,11 @@ describe('FileUpload', () => {
 
     const pngFile = new File(['data'], 'sample.png', { type: 'image/png' })
     await vm.handleBeforeUpload(createPayload(pngFile, [{ file: pngFile }, { file: pngFile }]))
-    expect(messageMocks.error).toHaveBeenCalledWith('onlyOneFile')
+    expect(messageMocks.error).toHaveBeenCalledWith('Only one file can be uploaded')
 
     const jpegFile = new File(['data'], 'sample.jpg', { type: 'image/jpeg' })
     await vm.handleBeforeUpload(createPayload(jpegFile, [{ file: jpegFile }]))
-    expect(messageMocks.error).toHaveBeenCalledWith('invalidFileType')
+    expect(messageMocks.error).toHaveBeenCalledWith('Please select a valid PNG image file')
   })
 
   it('accepts a png file and clears it', async () => {

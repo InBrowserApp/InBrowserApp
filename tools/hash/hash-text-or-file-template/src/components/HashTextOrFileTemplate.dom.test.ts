@@ -27,14 +27,6 @@ vi.mock('./HashResult.vue', () => ({
   },
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 let HashTextOrFileTemplate: typeof import('./HashTextOrFileTemplate.vue').default
 
 beforeAll(async () => {
@@ -48,7 +40,7 @@ describe('HashTextOrFileTemplate', () => {
 
     const headers = wrapper.findAll('.section-header')
     expect(headers).toHaveLength(1)
-    expect(headers[0]?.text()).toBe('hash-input')
+    expect(headers[0]?.text()).toBe('Input')
 
     const resultBeforeInput = wrapper.find('.hash-result')
     expect(resultBeforeInput.exists()).toBe(true)
@@ -57,7 +49,7 @@ describe('HashTextOrFileTemplate', () => {
 
     const updatedHeaders = wrapper.findAll('.section-header')
     expect(updatedHeaders).toHaveLength(2)
-    expect(updatedHeaders[1]?.text()).toBe('hash-result')
+    expect(updatedHeaders[1]?.text()).toBe('Hash Result')
     expect(wrapper.find('.hash-result').isVisible()).toBe(true)
   })
 

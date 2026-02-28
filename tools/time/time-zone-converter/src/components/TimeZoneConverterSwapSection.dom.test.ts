@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import TimeZoneConverterSwapSection from './TimeZoneConverterSwapSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
@@ -49,6 +41,6 @@ describe('TimeZoneConverterSwapSection', () => {
     await wrapper.find('button.n-button').trigger('click')
 
     expect(wrapper.emitted('swap')).toHaveLength(1)
-    expect(wrapper.text()).toContain('swap')
+    expect(wrapper.text()).toContain('Swap')
   })
 })

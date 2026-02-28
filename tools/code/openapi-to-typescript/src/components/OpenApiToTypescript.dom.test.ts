@@ -1,18 +1,11 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 
-const { fileOpenMock, generateOpenApiTypesMock, parseOpenApiDocumentMock, tMock } = vi.hoisted(
-  () => ({
-    fileOpenMock: vi.fn(),
-    generateOpenApiTypesMock: vi.fn(),
-    parseOpenApiDocumentMock: vi.fn(),
-    tMock: vi.fn((key: string, params?: { message?: string; count?: number }) => {
-      if (params?.message) return `${key}:${params.message}`
-      if (typeof params?.count === 'number') return `${key}:${params.count}`
-      return key
-    }),
-  }),
-)
+const { fileOpenMock, generateOpenApiTypesMock, parseOpenApiDocumentMock } = vi.hoisted(() => ({
+  fileOpenMock: vi.fn(),
+  generateOpenApiTypesMock: vi.fn(),
+  parseOpenApiDocumentMock: vi.fn(),
+}))
 
 vi.mock('@utils/openapi-typescript', () => ({
   generateOpenApiTypes: generateOpenApiTypesMock,
@@ -21,10 +14,6 @@ vi.mock('@utils/openapi-typescript', () => ({
 
 vi.mock('browser-fs-access', () => ({
   fileOpen: fileOpenMock,
-}))
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: tMock }),
 }))
 
 vi.mock('@vueuse/core', async () => {
@@ -330,7 +319,6 @@ describe('OpenApiToTypescript', () => {
     parseOpenApiDocumentMock.mockReset()
     generateOpenApiTypesMock.mockReset()
     fileOpenMock.mockReset()
-    tMock.mockClear()
 
     parseOpenApiDocumentMock.mockImplementation((text: string) => {
       const value = text.trim()
@@ -374,9 +362,9 @@ describe('OpenApiToTypescript', () => {
     await flushPromises()
 
     let inputOutput = getInputOutput(wrapper)
-    expect(inputOutput.props('inputError')).toBe('invalidDocumentWithMessage:bad')
+    expect(inputOutput.props('inputError')).toBe('Invalid OpenAPI document: bad')
     expect(inputOutput.props('inputStatus')).toBe('error')
-    expect(inputOutput.props('outputError')).toBe('invalidDocumentWithMessage:bad')
+    expect(inputOutput.props('outputError')).toBe('Invalid OpenAPI document: bad')
 
     await inputOutput.props('handleInput')('')
     await flushPromises()
@@ -392,11 +380,11 @@ describe('OpenApiToTypescript', () => {
 
     await getInputOutput(wrapper).props('handleInput')('not-object')
     await flushPromises()
-    expect(getInputOutput(wrapper).props('inputError')).toBe('invalidRoot')
+    expect(getInputOutput(wrapper).props('inputError')).toBe('OpenAPI document must be an object')
 
     await getInputOutput(wrapper).props('handleInput')('unsupported')
     await flushPromises()
-    expect(getInputOutput(wrapper).props('inputError')).toBe('unsupportedVersion')
+    expect(getInputOutput(wrapper).props('inputError')).toBe('Only OpenAPI 3.0/3.1 is supported')
   })
 
   it('falls back to invalid document for unknown parse results', async () => {
@@ -405,7 +393,7 @@ describe('OpenApiToTypescript', () => {
     const wrapper = mount(OpenApiToTypescript)
     await flushPromises()
 
-    expect(getInputOutput(wrapper).props('inputError')).toBe('invalidDocument')
+    expect(getInputOutput(wrapper).props('inputError')).toBe('Invalid OpenAPI document')
   })
 
   it('shows external ref errors', async () => {
@@ -416,7 +404,9 @@ describe('OpenApiToTypescript', () => {
     await flushPromises()
 
     const inputOutput = getInputOutput(wrapper)
-    expect(inputOutput.props('outputError')).toBe('externalRefError:1')
+    expect(inputOutput.props('outputError')).toBe(
+      'External $ref is not supported (1). Inline or bundle the schema.',
+    )
     expect(inputOutput.props('externalRefs')).toEqual(['https://example.com/schema'])
   })
 
@@ -426,7 +416,7 @@ describe('OpenApiToTypescript', () => {
     const wrapper = mount(OpenApiToTypescript)
     await flushPromises()
 
-    expect(getInputOutput(wrapper).props('inputError')).toBe('invalidDocument')
+    expect(getInputOutput(wrapper).props('inputError')).toBe('Invalid OpenAPI document')
   })
 
   it('surfaces non-Error generator failures', async () => {
@@ -561,14 +551,14 @@ describe('OpenApiToTypescript', () => {
     await flushPromises()
 
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlFetchError:Request failed')
+    expect(modal.props('importUrlError')).toBe('Failed to fetch the URL: Request failed')
 
     fetchMock.mockRejectedValueOnce('socket closed')
     await modal.props('onConfirm')()
     await flushPromises()
 
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlFetchError:socket closed')
+    expect(modal.props('importUrlError')).toBe('Failed to fetch the URL: socket closed')
   })
 
   it('validates and imports from URL', async () => {
@@ -587,21 +577,21 @@ describe('OpenApiToTypescript', () => {
     await modal.props('onEnter')({ isComposing: false } as KeyboardEvent)
     await flushPromises()
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlEmptyError')
+    expect(modal.props('importUrlError')).toBe('Enter a URL to import.')
 
     await modal.props('onUpdateInput')('invalid-url')
     await flushPromises()
     await modal.props('onConfirm')()
     await flushPromises()
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlInvalidError')
+    expect(modal.props('importUrlError')).toBe('URL must start with http:// or https://.')
 
     await modal.props('onUpdateInput')('ftp://example.com/openapi.yaml')
     await flushPromises()
     await modal.props('onConfirm')()
     await flushPromises()
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlInvalidError')
+    expect(modal.props('importUrlError')).toBe('URL must start with http:// or https://.')
 
     await modal.props('onUpdateInput')('https://example.com/openapi.yaml')
     await flushPromises()
@@ -615,7 +605,7 @@ describe('OpenApiToTypescript', () => {
     await modal.props('onConfirm')()
     await flushPromises()
     modal = getModal(wrapper)
-    expect(modal.props('importUrlError')).toBe('importUrlFetchError:404 Not Found')
+    expect(modal.props('importUrlError')).toBe('Failed to fetch the URL: 404 Not Found')
 
     fetchMock.mockResolvedValueOnce({
       ok: true,

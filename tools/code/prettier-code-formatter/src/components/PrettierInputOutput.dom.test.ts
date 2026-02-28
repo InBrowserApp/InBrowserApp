@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import PrettierInputOutput from './PrettierInputOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -68,8 +60,8 @@ describe('PrettierInputOutput', () => {
     const wrapper = mountComponent({ formattedCode: 'output', highlightLanguage: 'yaml' })
 
     const labels = wrapper.findAll('[data-label]').map((label) => label.text())
-    expect(labels).toContain('input-code')
-    expect(labels).toContain('formatted-code')
+    expect(labels).toContain('Input code')
+    expect(labels).toContain('Formatted code')
 
     const code = wrapper.get('[data-testid="code"]')
     expect(code.text()).toBe('output')

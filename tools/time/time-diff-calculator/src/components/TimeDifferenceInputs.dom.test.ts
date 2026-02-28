@@ -4,14 +4,6 @@ import { defineComponent } from 'vue'
 
 import TimeDifferenceInputs from './TimeDifferenceInputs.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -127,7 +119,7 @@ describe('TimeDifferenceInputs', () => {
     expect(wrapper.emitted('update:endTimeZone')?.[0]).toEqual(['Asia/Tokyo'])
 
     const nowButtons = wrapper.findAll('button.n-button').filter((button) => {
-      return button.text().includes('now')
+      return button.text().includes('Now')
     })
     await nowButtons[0]!.trigger('click')
     await nowButtons[1]!.trigger('click')
@@ -167,8 +159,8 @@ describe('TimeDifferenceInputs', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('invalid-date-time')
-    expect(wrapper.text()).toContain('offset')
+    expect(wrapper.text()).toContain('Invalid date/time')
+    expect(wrapper.text()).toContain('Offset')
     expect(wrapper.text()).toContain('UTC+09:00')
   })
 })

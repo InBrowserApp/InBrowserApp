@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import URLComponentConverter from './URLComponentConverter.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
@@ -76,7 +68,7 @@ describe('URLComponentConverter', () => {
     await nextTick()
 
     expect(inputs[1]!.element.value).toBe('Hello%20Test')
-    expect(wrapper.text()).not.toContain('invalid-url-encoded-text')
+    expect(wrapper.text()).not.toContain('Invalid URL encoded text')
   })
 
   it('decodes encoded text into plain text', async () => {
@@ -106,7 +98,7 @@ describe('URLComponentConverter', () => {
     await inputs[1]!.setValue('%E0%A4%A')
     await nextTick()
 
-    expect(wrapper.text()).toContain('invalid-url-encoded-text')
+    expect(wrapper.text()).toContain('Invalid URL encoded text')
     expect(errorSpy).toHaveBeenCalledWith('Invalid URL encoded text')
 
     errorSpy.mockRestore()

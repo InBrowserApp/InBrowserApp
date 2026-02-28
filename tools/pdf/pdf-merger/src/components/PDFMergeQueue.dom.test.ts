@@ -3,22 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import { PDF_ERROR } from '../pdf-errors'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: Record<string, unknown>) => {
-        if (key === 'pages') {
-          return `${params?.count as number} pages`
-        }
-
-        return key
-      },
-    }),
-  }
-})
-
 vi.mock('sortablejs-vue3', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -150,9 +134,9 @@ describe('PDFMergeQueue', () => {
     })
 
     const text = wrapper.text()
-    expect(text).toContain('pageLoading')
-    expect(text).toContain('encryptedError')
-    expect(text).toContain('invalidError')
+    expect(text).toContain('Reading pages...')
+    expect(text).toContain('Encrypted PDF')
+    expect(text).toContain('Invalid PDF')
     expect(text).toContain('4 pages')
   })
 

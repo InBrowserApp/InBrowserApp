@@ -11,14 +11,6 @@ import PWAMaskableSettings from './maskable/PWAMaskableSettings.vue'
 import PWAMaskableSettingsDisplay from './maskable/PWAMaskableSettingsDisplay.vue'
 import PWAMaskableSettingsDedicatedImage from './maskable/PWAMaskableSettingsDedicatedImage.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<h3 class="tool-section-header"><slot /></h3>',
@@ -237,7 +229,7 @@ describe('PWA', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
+    expect(wrapper.text()).toContain('Progressive Web App (PWA)')
     expect(wrapper.findComponent(PWAPreviewStub).props('generalInfoOptions')).toEqual(
       generalInfoOptions,
     )
@@ -508,7 +500,7 @@ describe('PWAMaskableSettingsDisplay', () => {
 
     const formItems = wrapper.findAllComponents({ name: 'NFormItem' })
     expect(formItems).toHaveLength(2)
-    expect(formItems.map((item) => item.props('label'))).toEqual(['backgroundColor', 'margin'])
+    expect(formItems.map((item) => item.props('label'))).toEqual(['Background Color', 'Margin'])
   })
 })
 

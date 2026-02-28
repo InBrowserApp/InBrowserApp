@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import CIDRsInput from './CIDRsInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -134,9 +126,11 @@ describe('CIDRsInput', () => {
   it('renders placeholders and the add button label', () => {
     const wrapper = mountCIDRsInput()
 
-    expect(wrapper.find('.dynamic-input').attributes('data-placeholder')).toBe('placeholder')
-    expect(wrapper.text()).toContain('addCidr')
-    expect(wrapper.find('input').attributes('placeholder')).toBe('placeholder')
+    expect(wrapper.find('.dynamic-input').attributes('data-placeholder')).toBe(
+      '10.0.0.0/24 or 2001:db8::/32',
+    )
+    expect(wrapper.text()).toContain('Add CIDR')
+    expect(wrapper.find('input').attributes('placeholder')).toBe('10.0.0.0/24 or 2001:db8::/32')
   })
 
   it('emits cidrs updates for valid and invalid list inputs', async () => {

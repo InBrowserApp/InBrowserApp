@@ -4,19 +4,6 @@ import { defineComponent, nextTick } from 'vue'
 import CssBoxShadowGenerator from './CssBoxShadowGenerator.vue'
 import { buildBoxShadow, type ShadowLayer } from '../utils/shadow'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: Record<string, number>) => {
-        if (params?.index) return `${key} ${params.index}`
-        return key
-      },
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

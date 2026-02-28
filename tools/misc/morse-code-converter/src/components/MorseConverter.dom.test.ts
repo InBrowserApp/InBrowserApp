@@ -4,14 +4,6 @@ import { defineComponent, nextTick } from 'vue'
 import MorseConverter from './MorseConverter.vue'
 import { textToMorse, playMorseAudio } from '../utils/morse'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
@@ -84,7 +76,9 @@ const stubs = {
 }
 
 const getActionButton = (wrapper: ReturnType<typeof mount>, label: string) =>
-  wrapper.findAll('button.n-button').find((button) => button.text().includes(label))
+  wrapper
+    .findAll('button.n-button')
+    .find((button) => button.text().toLowerCase().includes(label.toLowerCase()))
 
 beforeEach(() => {
   vi.clearAllMocks()
@@ -121,7 +115,7 @@ describe('MorseConverter', () => {
     await nextTick()
 
     expect(inputs[1]!.element.value).toBe('... --- ...')
-    expect(wrapper.text()).toContain('valid')
+    expect(wrapper.text()).toContain('Valid Morse code')
   })
 
   it('updates text when valid morse code changes', async () => {
@@ -151,7 +145,7 @@ describe('MorseConverter', () => {
     await inputs[1]!.setValue('.-.-.-.-.-')
     await nextTick()
 
-    expect(wrapper.text()).toContain('invalid')
+    expect(wrapper.text()).toContain('Invalid Morse code')
     expect(inputs[0]!.element.value).toBe('HELLO WORLD')
   })
 
@@ -171,8 +165,8 @@ describe('MorseConverter', () => {
     expect(inputs[1]!.element.value).toBe('')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
     expect(getActionButton(wrapper, 'play')).toBeFalsy()
-    expect(wrapper.text()).not.toContain('valid')
-    expect(wrapper.text()).not.toContain('invalid')
+    expect(wrapper.text()).not.toContain('Valid Morse code')
+    expect(wrapper.text()).not.toContain('Invalid Morse code')
     ;(wrapper.vm as unknown as { handlePlay: () => void }).handlePlay()
     expect(playMock).not.toHaveBeenCalled()
   })

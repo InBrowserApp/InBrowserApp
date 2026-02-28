@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import IcalEventRemindersSection from './IcalEventRemindersSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<header><slot /></header>',
@@ -97,7 +89,7 @@ describe('IcalEventRemindersSection', () => {
     const getReminderEmits = () => wrapper.emitted('update:reminders') as Array<[ReminderForm[]]>
 
     await nextTick()
-    expect(wrapper.emitted('update:defaultReminder')?.[0]).toEqual(['reminder-default'])
+    expect(wrapper.emitted('update:defaultReminder')?.[0]).toEqual(['Reminder'])
     expect(wrapper.find('.reminder-row').exists()).toBe(false)
 
     const switchButton = wrapper.find('.n-switch')
@@ -125,7 +117,7 @@ describe('IcalEventRemindersSection', () => {
     expect(lastUpdate[1]).toMatchObject({ amount: 5, unit: 'hours', description: 'second' })
 
     const addButton = wrapper.findAll('button').find((button) => {
-      return button.text().includes('add-reminder')
+      return button.text().includes('Add reminder')
     })
     await addButton!.trigger('click')
 
@@ -133,7 +125,7 @@ describe('IcalEventRemindersSection', () => {
     expect(addUpdate).toHaveLength(3)
 
     const removeButton = wrapper.findAll('button').find((button) => {
-      return button.text().includes('remove')
+      return button.text().includes('Remove')
     })
     await removeButton!.trigger('click')
 

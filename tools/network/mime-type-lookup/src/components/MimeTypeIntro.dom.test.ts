@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import MimeTypeIntro from './MimeTypeIntro.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -35,7 +27,9 @@ describe('MimeTypeIntro', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('What is a MIME Type?')
+    expect(wrapper.text()).toContain(
+      'MIME (Multipurpose Internet Mail Extensions) types are a standard way of indicating the nature and format of a document or file. They are used by web browsers and servers to determine how to handle files. MIME types consist of a type and a subtype, separated by a slash (e.g., text/html). The main categories are:',
+    )
   })
 })

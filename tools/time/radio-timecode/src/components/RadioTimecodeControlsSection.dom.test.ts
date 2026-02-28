@@ -1,10 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -99,8 +95,10 @@ describe('RadioTimecodeControlsSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('unsupported')
-    expect(wrapper.text()).toContain('startFailed')
+    expect(wrapper.text()).toContain('AudioContext is not supported in this browser.')
+    expect(wrapper.text()).toContain(
+      'Audio output failed to start. Check browser permissions and try again.',
+    )
     expect(wrapper.findAll('[data-testid="alert"]')).toHaveLength(2)
   })
 })

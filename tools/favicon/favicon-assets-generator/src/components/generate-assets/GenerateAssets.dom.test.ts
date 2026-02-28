@@ -52,14 +52,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 import GenerateAssets from './GenerateAssets.vue'
 
 const baseGeneralInfo: GeneralInfoOptions = {
@@ -129,7 +121,7 @@ const stubbed = {
 }
 
 const getDownloadButton = (wrapper: ReturnType<typeof mount>) =>
-  wrapper.findAll('button').find((button) => button.text().includes('downloadZip'))
+  wrapper.findAll('button').find((button) => button.text().includes('favicon-assets.zip'))
 
 describe('GenerateAssets', () => {
   beforeEach(() => {

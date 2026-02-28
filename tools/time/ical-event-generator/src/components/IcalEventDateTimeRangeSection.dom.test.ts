@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventDateTimeRangeSection from './IcalEventDateTimeRangeSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -53,8 +45,10 @@ describe('IcalEventDateTimeRangeSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('end-before-start')
-    expect(wrapper.text()).toContain('all-day-end-hint')
+    expect(wrapper.text()).toContain('End must be after start')
+    expect(wrapper.text()).toContain(
+      'All-day end date is exclusive. Use the next day for a one-day event.',
+    )
   })
 
   it('emits date range updates', async () => {

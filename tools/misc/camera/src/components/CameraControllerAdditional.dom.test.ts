@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { computed, type Ref } from 'vue'
 import CameraController from './CameraController.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: (source: Ref<Blob | null>) => computed(() => (source.value ? 'blob:mock' : null)),
 }))
@@ -217,7 +209,7 @@ describe('CameraController additional branches', () => {
     await waitForIdle(() => !vm.isPreparing)
 
     expect(vm.outputUrl).toBe('')
-    expect(vm.displayMimeType).toBe('formatUnknown')
+    expect(vm.displayMimeType).toBe('Unknown')
     expect(vm.fileSizeLabel).toBe('0 B')
     expect(vm.downloadName).toBe('')
 
@@ -329,7 +321,7 @@ describe('CameraController additional branches', () => {
 
     expect(vm.outputKind).toBe('video')
     expect(vm.outputBlob?.size).toBe(0)
-    expect(vm.displayMimeType).toBe('formatUnknown')
+    expect(vm.displayMimeType).toBe('Unknown')
   })
 
   it('stops an active recorder during unmount cleanup', async () => {
@@ -412,7 +404,7 @@ describe('CameraController additional branches', () => {
     Object.defineProperty(video, 'videoWidth', { value: 800, configurable: true })
     Object.defineProperty(video, 'videoHeight', { value: 600, configurable: true })
 
-    vm.errorMessage = 'cameraNotReady'
+    vm.errorMessage = 'Camera is not ready.'
     await vm.startCamera()
     video.onloadedmetadata?.(new Event('loadedmetadata'))
     await flushPromises()
@@ -517,7 +509,7 @@ describe('CameraController additional branches', () => {
     vm.isRecording = false
     await vm.handleShutter()
 
-    expect(vm.errorMessage).toContain('recordingFailed')
+    expect(vm.errorMessage).toContain('Failed to start recording.')
     expect(FakeMediaRecorder.instances.length).toBe(1)
     expect(FakeMediaRecorder.lastOptions).toBeUndefined()
   })
@@ -585,7 +577,7 @@ describe('CameraController additional branches', () => {
       setupState.previewRef.value = null
     }
 
-    vm.errorMessage = 'cameraNotReady'
+    vm.errorMessage = 'Camera is not ready.'
     await vm.startCamera()
     expect(vm.errorMessage).toBe('')
 
@@ -594,11 +586,11 @@ describe('CameraController additional branches', () => {
       setupState.previewRef.value = video
     }
 
-    vm.errorMessage = 'cameraNotReady'
+    vm.errorMessage = 'Camera is not ready.'
     await vm.startCamera()
     expect(vm.errorMessage).toBe('')
 
-    vm.errorMessage = 'cameraNotReady'
+    vm.errorMessage = 'Camera is not ready.'
     video.onloadedmetadata?.(new Event('loadedmetadata'))
     await flushPromises()
 

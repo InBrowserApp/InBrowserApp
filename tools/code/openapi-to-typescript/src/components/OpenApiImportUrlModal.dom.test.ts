@@ -1,10 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -91,7 +87,9 @@ describe('OpenApiImportUrlModal', () => {
     })
 
     expect(wrapper.get('[data-testid="modal"]').attributes('data-show')).toBe('true')
-    expect(wrapper.text()).toContain('importUrlWarning')
+    expect(wrapper.text()).toContain(
+      'This runs in your browser. The URL must allow CORS, or the request will fail.',
+    )
     expect(wrapper.text()).toContain('Invalid URL')
 
     wrapper.getComponent({ name: 'NModal' }).vm.$emit('update:show', false)

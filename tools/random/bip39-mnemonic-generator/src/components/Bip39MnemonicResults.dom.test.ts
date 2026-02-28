@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Bip39MnemonicResults from './Bip39MnemonicResults.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -102,7 +94,7 @@ describe('Bip39MnemonicResults', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('validation-empty')
+    expect(wrapper.text()).toContain('Enter a mnemonic phrase to validate.')
     expect(wrapper.find('.n-tag').exists()).toBe(false)
   })
 
@@ -116,9 +108,11 @@ describe('Bip39MnemonicResults', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('invalid')
-    expect(wrapper.text()).toContain('word-count-result')
-    expect(wrapper.find('.n-alert').text()).toContain('mnemonic-error')
+    expect(wrapper.text()).toContain('Invalid')
+    expect(wrapper.text()).toContain('Words: 12')
+    expect(wrapper.find('.n-alert').text()).toContain(
+      'Mnemonic does not match the selected wordlist.',
+    )
     expect(wrapper.findAll('.copy-button')).toHaveLength(0)
   })
 
@@ -133,7 +127,7 @@ describe('Bip39MnemonicResults', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('valid')
+    expect(wrapper.text()).toContain('Valid')
     expect(wrapper.find('.copy-button[data-content="cafebabe"]').exists()).toBe(true)
     expect(wrapper.find('.n-alert').exists()).toBe(false)
   })
@@ -148,8 +142,8 @@ describe('Bip39MnemonicResults', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('entropy-error')
-    expect(wrapper.text()).toContain('mnemonic-error')
+    expect(wrapper.text()).toContain('Entropy must be hex with 128, 160, 192, 224, or 256 bits.')
+    expect(wrapper.text()).toContain('Mnemonic does not match the selected wordlist.')
     expect(wrapper.findAll('.copy-button')).toHaveLength(0)
 
     await wrapper.setProps({

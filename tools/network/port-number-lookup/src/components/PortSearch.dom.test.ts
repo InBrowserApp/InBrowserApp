@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import PortSearch from './PortSearch.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -109,11 +101,13 @@ describe('PortSearch', () => {
       },
     })
 
-    expect(wrapper.find('input').attributes('placeholder')).toBe('searchPlaceholder')
-    expect(wrapper.text()).toContain('all')
-    expect(wrapper.text()).toContain('common')
-    expect(wrapper.text()).toContain('system')
-    expect(wrapper.text()).toContain('registered')
+    expect(wrapper.find('input').attributes('placeholder')).toBe(
+      'Search by port number or service name...',
+    )
+    expect(wrapper.text()).toContain('All')
+    expect(wrapper.text()).toContain('Common')
+    expect(wrapper.text()).toContain('System (0-1023)')
+    expect(wrapper.text()).toContain('Registered (1024+)')
   })
 
   it('emits updates when the search or category changes', async () => {

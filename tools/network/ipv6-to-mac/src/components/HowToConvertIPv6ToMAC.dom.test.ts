@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import HowToConvertIPv6ToMAC from './HowToConvertIPv6ToMAC.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const stubs = {
   ToolSectionHeader: {
     template: '<h2 class="section-header"><slot /></h2>',
@@ -27,7 +19,9 @@ describe('HowToConvertIPv6ToMAC', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('How to Convert IPv6 to MAC Address')
+    expect(wrapper.text()).toContain(
+      "Converting an IPv6 address to a MAC address is possible when the IPv6 address was generated using the EUI-64 format from a MAC address. This typically applies to IPv6 link-local addresses (starting with fe80::) and some stateless autoconfigured addresses. The process involves: 1) Extracting the interface identifier (last 64 bits) from the IPv6 address, 2) Inverting the 7th bit (Universal/Local bit) of the first byte, 3) Removing the inserted 'fffe' bytes to reconstruct the original 48-bit MAC address. Note that this only works for IPv6 addresses that were originally derived from MAC addresses using EUI-64.",
+    )
   })
 })

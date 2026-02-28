@@ -15,12 +15,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -152,7 +146,7 @@ describe('SitemapOutputSection', () => {
     await wrapper.vm.$nextTick()
 
     expect(wrapper.find('[data-testid="copy-button"]').exists()).toBe(false)
-    expect(wrapper.text()).toContain('emptyOutput')
+    expect(wrapper.text()).toContain('No content to export yet.')
 
     const download = wrapper.get('[data-testid="download-sitemap"]')
     expect(download.attributes('href')).toBeUndefined()

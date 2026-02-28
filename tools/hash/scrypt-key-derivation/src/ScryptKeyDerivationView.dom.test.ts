@@ -15,10 +15,6 @@ vi.mock('@vueuse/core', () => ({
   useStorage,
 }))
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolDefaultPageLayout: {
     props: ['info'],
@@ -192,28 +188,32 @@ describe('ScryptKeyDerivationView', () => {
 
     lengthRef.value = 512
     await nextTick()
-    expect(wrapper.find('[data-label="length"]').attributes('data-status')).toBe('error')
+    expect(wrapper.find('[data-label="Derived Length (bytes)"]').attributes('data-status')).toBe(
+      'error',
+    )
 
     saltFormatRef.value = 'hex'
     form.vm.$emit('update:salt', 'zz')
     await nextTick()
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe(
+      'Salt must be valid hex.',
+    )
 
     saltFormatRef.value = 'base64'
     await nextTick()
     form.vm.$emit('update:salt', 'a')
     await nextTick()
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe(
-      'salt-invalid-base64',
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe(
+      'Salt must be valid Base64.',
     )
 
     form.vm.$emit('update:salt', 'AQID')
     await nextTick()
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('')
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe('')
 
     form.vm.$emit('update:salt', '')
     saltFormatRef.value = 'utf-8'
     await nextTick()
-    expect(wrapper.find('[data-label="salt"]').attributes('data-feedback')).toBe('')
+    expect(wrapper.find('[data-label="Salt"]').attributes('data-feedback')).toBe('')
   })
 })

@@ -8,14 +8,6 @@ import IOSWebClipSettings from './iOSWebClipSettings.vue'
 import IOSWebClipSettingsDisplay from './iOSWebClipSettingsDisplay.vue'
 import IOSWebClipSettingsDedicatedImage from './iOSWebClipSettingsDedicatedImage.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<h3 class="tool-section-header"><slot /></h3>',
@@ -280,7 +272,7 @@ describe('IOSWebClipSettingsDisplay', () => {
 
     const formItems = wrapper.findAllComponents({ name: 'NFormItem' })
     expect(formItems).toHaveLength(2)
-    expect(formItems.map((item) => item.props('label'))).toEqual(['backgroundColor', 'margin'])
+    expect(formItems.map((item) => item.props('label'))).toEqual(['Background Color', 'Margin'])
   })
 })
 

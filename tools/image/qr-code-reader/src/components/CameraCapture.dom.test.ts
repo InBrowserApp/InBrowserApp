@@ -4,16 +4,6 @@ import { nextTick } from 'vue'
 import CameraCapture from './CameraCapture.vue'
 import { readQRFromVideo } from '../qr-reader'
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('../qr-reader', () => ({
   readQRFromVideo: vi.fn(),
 }))
@@ -53,7 +43,7 @@ describe('CameraCapture', () => {
 
     const wrapper = mount(CameraCapture)
 
-    expect(wrapper.text()).toContain('cameraNotSupported')
+    expect(wrapper.text()).toContain('Camera is not supported in this browser')
   })
 
   it('returns early when the video element is unavailable', async () => {
@@ -154,7 +144,9 @@ describe('CameraCapture', () => {
     await wrapper.vm.$nextTick()
     await vm.startCamera()
 
-    expect(wrapper.emitted('error')?.[0]).toEqual(['cameraPermissionDenied'])
+    expect((wrapper.emitted('error')?.[0]?.[0] as string).toLowerCase()).toContain(
+      'permission denied',
+    )
     expect(vm.permissionDenied).toBe(true)
   })
 
@@ -171,7 +163,7 @@ describe('CameraCapture', () => {
     await wrapper.vm.$nextTick()
     await vm.startCamera()
 
-    expect(wrapper.emitted('error')?.[0]).toEqual(['cameraError'])
+    expect(wrapper.emitted('error')?.[0]).toEqual(['Failed to access camera'])
     expect(vm.permissionDenied).toBe(false)
   })
 

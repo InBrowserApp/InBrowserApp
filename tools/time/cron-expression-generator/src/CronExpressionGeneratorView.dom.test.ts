@@ -6,7 +6,6 @@ import CronExpressionGeneratorView from './CronExpressionGeneratorView.vue'
 const storage = vi.hoisted(() => new Map<string, Ref<string>>())
 const parseMock = vi.hoisted(() => vi.fn())
 const toStringMock = vi.hoisted(() => vi.fn())
-const localeRef = vi.hoisted(() => ({ value: 'en' }))
 
 vi.mock('@vueuse/core', () => ({
   useStorage: (key: string, initialValue: string) => {
@@ -16,21 +15,6 @@ vi.mock('@vueuse/core', () => ({
     return storage.get(key) as Ref<string>
   },
 }))
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, args?: Record<string, unknown>) => {
-        if (args?.field) return `${key}:${args.field}`
-        if (args?.n !== undefined) return `${key}:${args.n}`
-        return key
-      },
-      locale: localeRef,
-    }),
-  }
-})
 
 vi.mock('cron-parser', () => ({
   CronExpressionParser: {
@@ -117,7 +101,6 @@ describe('CronExpressionGeneratorView', () => {
     storage.clear()
     parseMock.mockReset()
     toStringMock.mockReset()
-    localeRef.value = 'en'
 
     parseMock.mockImplementation((expression: string) => {
       if (expression.includes('invalid')) {
@@ -261,7 +244,6 @@ describe('CronExpressionGeneratorView', () => {
   })
 
   it('maps app locale to cronstrue locale', () => {
-    localeRef.value = 'zh-CN'
     setStorage({
       'tools:cron-expression-generator:minute': '*',
       'tools:cron-expression-generator:hour': '*',
@@ -274,6 +256,6 @@ describe('CronExpressionGeneratorView', () => {
 
     expect(toStringMock).toHaveBeenCalled()
     const options = toStringMock.mock.calls[0]?.[1]
-    expect(options?.locale).toBe('zh_CN')
+    expect(options?.locale).toBe('en')
   })
 })

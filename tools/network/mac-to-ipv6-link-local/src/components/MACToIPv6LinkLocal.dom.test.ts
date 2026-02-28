@@ -17,14 +17,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const MACInputStub = defineComponent({
   name: 'MACInput',
   props: ['mac', 'networkInterface'],
@@ -56,7 +48,7 @@ describe('MACToIPv6LinkLocal', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('macAddress')
+    expect(wrapper.text()).toContain('MAC Address')
     expect(wrapper.find('.ipv6-result').exists()).toBe(false)
 
     const inputStub = wrapper.findComponent(MACInputStub)
@@ -70,7 +62,7 @@ describe('MACToIPv6LinkLocal', () => {
     await wrapper.vm.$nextTick()
 
     const result = wrapper.findComponent(IPv6LinkLocalResultStub)
-    expect(wrapper.text()).toContain('ipv6LinkLocalAddress')
+    expect(wrapper.text()).toContain('IPv6 Link Local Address')
     expect(result.exists()).toBe(true)
     expect(result.props('networkInterface')).toBe('eth0')
   })

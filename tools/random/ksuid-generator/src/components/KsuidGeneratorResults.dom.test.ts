@@ -3,17 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import KsuidGeneratorResults from './KsuidGeneratorResults.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: { seconds?: number }) =>
-        key === 'generatedAt' ? `generatedAt:${params?.seconds}` : key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const NFlex = defineComponent({
     name: 'NFlex',
@@ -80,8 +69,10 @@ describe('KsuidGeneratorResults', () => {
     })
 
     const textarea = wrapper.get('textarea')
-    expect((textarea.element as HTMLTextAreaElement).placeholder).toBe('placeholder')
-    expect(wrapper.text()).not.toContain('generatedAt:123')
+    expect((textarea.element as HTMLTextAreaElement).placeholder).toBe(
+      'Generated KSUIDs will appear here...',
+    )
+    expect(wrapper.text()).not.toContain('Generated with Unix time: 123')
 
     const copy = wrapper.get('button.copy')
     expect(copy.attributes('data-content')).toBe('')
@@ -96,7 +87,7 @@ describe('KsuidGeneratorResults', () => {
       global,
     })
 
-    expect(wrapper.text()).toContain('generatedAt:456')
+    expect(wrapper.text()).toContain('Generated with Unix time: 456')
 
     await wrapper.get('button.regen').trigger('click')
     expect(wrapper.emitted('regenerate')).toHaveLength(1)

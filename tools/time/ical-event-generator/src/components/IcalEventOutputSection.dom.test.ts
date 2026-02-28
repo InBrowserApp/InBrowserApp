@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventOutputSection from './IcalEventOutputSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<header><slot /></header>',
@@ -83,7 +75,7 @@ describe('IcalEventOutputSection', () => {
       },
     })
 
-    expect(errorWrapper.text()).toContain('invalid-date-time')
+    expect(errorWrapper.text()).toContain('Invalid date/time')
 
     const emptyWrapper = mount(IcalEventOutputSection, {
       props: {
@@ -91,7 +83,7 @@ describe('IcalEventOutputSection', () => {
       },
     })
 
-    expect(emptyWrapper.text()).toContain('output-empty')
+    expect(emptyWrapper.text()).toContain('Fill in a valid start time to generate the .ics file.')
   })
 
   it('renders download and copy actions when content is present', () => {
