@@ -1,6 +1,6 @@
 <template>
   <NavLayout>
-    <RouterView :key="route.fullPath" />
+    <RouterView :key="route.path" />
   </NavLayout>
 </template>
 
