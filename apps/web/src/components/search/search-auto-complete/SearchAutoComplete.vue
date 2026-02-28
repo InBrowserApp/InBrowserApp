@@ -11,6 +11,9 @@
     :render-label="renderLabel"
     :menu-props="{ class: 'page-search-auto-complete-menu' }"
     role="search"
+    @focus="warmup"
+    @mouseenter="warmup"
+    @touchstart="warmup"
     @select="handleSearch"
   >
     <template #empty>
@@ -36,7 +39,7 @@ import {
 const router = useRouter()
 const { t } = useI18n()
 
-const { query, loading, searchResults } = useSearchResults()
+const { query, loading, searchResults, warmup } = useSearchResults()
 
 type CustomAutoCompleteOption = SearchActionOption | SearchResult
 

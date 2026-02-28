@@ -49,27 +49,30 @@ type UseToolsSearchWorkerOptions = {
   tools: Ref<ToolInfo[] | undefined>
   query: Ref<string>
   debounceMs?: number
+  lazy?: boolean
 }
 
 type UseToolsSearchWorkerResult = {
   toolsResults: Ref<ToolInfo[] | undefined>
   searching: Ref<boolean>
+  warmup: () => void
 }
 
 export const useToolsSearchWorker = (
   options: UseToolsSearchWorkerOptions,
 ): UseToolsSearchWorkerResult => {
-  const { tools, query, debounceMs = 160 } = options
+  const { tools, query, debounceMs = 160, lazy = false } = options
   const { language } = useSiteLanguage()
   const searchableTools = computed(() => toSearchableTools(tools.value ?? []))
   const toolsResults = ref<ToolInfo[] | undefined>(undefined)
   const searching = ref(false)
+  const activated = ref(!lazy)
 
   let requestID = 0
   let activeRequestID = 0
 
   const supportsWorker = typeof window !== 'undefined' && typeof window.Worker !== 'undefined'
-  let worker: Worker | null = supportsWorker ? new ToolsSearchWorker() : null
+  let worker: Worker | null = null
 
   const getLocale = (): string => language.value ?? navigator.language
 
@@ -86,7 +89,8 @@ export const useToolsSearchWorker = (
     searching.value = false
   }
 
-  if (worker) {
+  const attachWorkerHandlers = (nextWorker: Worker): void => {
+    worker = nextWorker
     worker.onmessage = (event: MessageEvent<SearchWorkerResponse>) => {
       if (event.data.type !== 'result' || event.data.requestId !== activeRequestID) {
         return
@@ -102,6 +106,15 @@ export const useToolsSearchWorker = (
       worker = null
       applyInlineSearch(query.value, getLocale())
     }
+  }
+
+  const ensureWorker = (): void => {
+    if (!supportsWorker || worker) {
+      return
+    }
+
+    const nextWorker = new ToolsSearchWorker()
+    attachWorkerHandlers(nextWorker)
   }
 
   const runSearch = (queryValue: string, localeValue: string): void => {
@@ -132,6 +145,10 @@ export const useToolsSearchWorker = (
   const debouncedSearch = createDebouncedFn(runSearch, debounceMs)
 
   const queueSearch = (): void => {
+    if (!activated.value) {
+      return
+    }
+
     if (!tools.value) {
       debouncedSearch.cancel()
       toolsResults.value = undefined
@@ -143,9 +160,38 @@ export const useToolsSearchWorker = (
     debouncedSearch(query.value, getLocale())
   }
 
+  const warmup = (): void => {
+    if (activated.value) {
+      return
+    }
+
+    activated.value = true
+    ensureWorker()
+
+    if (worker) {
+      const payload: SearchWorkerRequest = {
+        type: 'init',
+        tools: searchableTools.value,
+      }
+      worker.postMessage(payload)
+    }
+
+    queueSearch()
+  }
+
+  if (activated.value) {
+    ensureWorker()
+  }
+
   watch(
     searchableTools,
     (nextTools) => {
+      if (!activated.value) {
+        return
+      }
+
+      ensureWorker()
+
       if (worker) {
         const payload: SearchWorkerRequest = {
           type: 'init',
@@ -160,6 +206,10 @@ export const useToolsSearchWorker = (
   )
 
   watch([query, () => language.value], () => {
+    if (!activated.value) {
+      return
+    }
+
     queueSearch()
   })
 
@@ -171,5 +221,6 @@ export const useToolsSearchWorker = (
   return {
     toolsResults,
     searching,
+    warmup,
   }
 }

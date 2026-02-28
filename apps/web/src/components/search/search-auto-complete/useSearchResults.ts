@@ -15,6 +15,7 @@ export const useSearchResults = (): {
   query: Ref<string>
   loading: Ref<boolean>
   searchResults: Ref<SearchResult[]>
+  warmup: () => void
 } => {
   const query = ref('')
   const allTools = computedAsync(async () => {
@@ -22,10 +23,11 @@ export const useSearchResults = (): {
     return tools
   }, undefined)
 
-  const { toolsResults, searching } = useToolsSearchWorker({
+  const { toolsResults, searching, warmup } = useToolsSearchWorker({
     tools: allTools,
     query,
     debounceMs: 80,
+    lazy: true,
   })
 
   const searchResults = computed(() => {
@@ -37,7 +39,7 @@ export const useSearchResults = (): {
     }))
   })
 
-  return { query, loading: searching, searchResults }
+  return { query, loading: searching, searchResults, warmup }
 }
 
 export const renderSearchResultLabel = (option: SearchResult): VNodeChild => {
