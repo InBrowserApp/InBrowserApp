@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { computed, defineComponent, h, reactive, ref } from 'vue'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 const useHead = vi.fn()
 const replace = vi.fn(({ query }: { query: { query?: string } }) => {
@@ -17,16 +17,25 @@ const mockedTools = [
   { toolID: 'three', path: '/tools/three', meta: { en: { name: 'Three', description: 'third' } } },
 ]
 
-const useSearchTools = vi.fn((searchQuery: { value: string }) => ({
-  toolsResults: computed(() => {
-    const keyword = searchQuery.value.trim().toLowerCase()
-    if (!keyword) {
-      return mockedTools
-    }
+const searching = ref(false)
 
-    return mockedTools.filter((tool) => tool.meta.en.name.toLowerCase().includes(keyword))
+const useToolsSearchWorker = vi.fn(
+  (params: { tools: { value: typeof mockedTools }; query: { value: string } }) => ({
+    toolsResults: computed(() => {
+      const sourceTools = params.tools.value
+      const keyword = params.query.value.trim().toLowerCase()
+      if (!sourceTools) {
+        return undefined
+      }
+      if (!keyword) {
+        return sourceTools
+      }
+
+      return sourceTools.filter((tool) => tool.meta.en.name.toLowerCase().includes(keyword))
+    }),
+    searching,
   }),
-}))
+)
 
 const NInput = defineComponent({
   name: 'NInput',
@@ -35,6 +44,14 @@ const NInput = defineComponent({
       type: String,
       default: '',
     },
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ['update:value'],
   setup(props, { emit }) {
@@ -42,6 +59,8 @@ const NInput = defineComponent({
       h('input', {
         'data-test': 'filter-input',
         value: props.value,
+        placeholder: props.placeholder,
+        'data-loading': String(props.loading),
         onInput: (event: Event) => emit('update:value', (event.target as HTMLInputElement).value),
       })
   },
@@ -58,8 +77,8 @@ vi.mock('@unhead/vue', () => ({
   useHead,
 }))
 
-vi.mock('@registry/tools/search', () => ({
-  useSearchTools,
+vi.mock('../composables/useToolsSearchWorker', () => ({
+  useToolsSearchWorker,
 }))
 
 vi.mock('@vueuse/core', () => ({
@@ -85,13 +104,20 @@ vi.mock('vue-router', async (importOriginal) => {
 
 describe('ToolsView', () => {
   beforeEach(() => {
+    vi.useFakeTimers()
     route.query = {}
     replace.mockClear()
     useHead.mockClear()
-    useSearchTools.mockClear()
+    useToolsSearchWorker.mockClear()
+    searching.value = false
   })
 
-  it('renders the tools title, filtered count, and metadata', async () => {
+  afterEach(() => {
+    vi.runOnlyPendingTimers()
+    vi.useRealTimers()
+  })
+
+  it('renders title, count, and search placeholder', async () => {
     const ToolsView = (await import('./ToolsView.vue')).default
     const wrapper = mount(ToolsView, {
       global: {
@@ -109,6 +135,9 @@ describe('ToolsView', () => {
     expect(wrapper.text()).toContain('All Tools')
     expect(wrapper.text()).toContain('Total tools: 3')
     expect(wrapper.get('[data-test="grid"]').attributes('data-count')).toBe('3')
+    expect(wrapper.get('[data-test="filter-input"]').attributes('placeholder')).toBe(
+      'Search for tools...',
+    )
     expect(useHead).toHaveBeenCalledWith({
       title: 'All Tools - InBrowser.App',
       meta: [
@@ -147,7 +176,7 @@ describe('ToolsView', () => {
     expect(wrapper.text()).toContain('Total tools: 1')
   })
 
-  it('syncs the filter input into the route query', async () => {
+  it('syncs the filter input into route query after debounce', async () => {
     const ToolsView = (await import('./ToolsView.vue')).default
     const wrapper = mount(ToolsView, {
       global: {
@@ -163,6 +192,9 @@ describe('ToolsView', () => {
     })
 
     await wrapper.get('[data-test="filter-input"]').setValue('three')
+    expect(replace).not.toHaveBeenCalled()
+
+    await vi.advanceTimersByTimeAsync(401)
     expect(replace).toHaveBeenLastCalledWith({
       query: {
         query: 'three',
@@ -170,6 +202,7 @@ describe('ToolsView', () => {
     })
 
     await wrapper.get('[data-test="filter-input"]').setValue('')
+    await vi.advanceTimersByTimeAsync(401)
     expect(replace).toHaveBeenLastCalledWith({
       query: {},
     })

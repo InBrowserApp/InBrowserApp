@@ -12,6 +12,9 @@
       class="tools-filter-input"
       :aria-label="t('title')"
       :placeholder="t('searchPlaceholder')"
+      :loading="searching"
+      @blur="syncRouteQueryImmediately"
+      @keyup.enter="syncRouteQueryImmediately"
     />
     <n-empty v-if="tools !== undefined && tools.length === 0" class="tools-empty" />
     <ToolsGrid v-else :tools="tools" />
@@ -19,12 +22,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
 import { ToolsGrid, ToolTitle, ToolSection } from '@shared/ui/tool'
 import { computedAsync } from '@vueuse/core'
-import { useSearchTools } from '@registry/tools/search'
+import { useToolsSearchWorker } from '../composables/useToolsSearchWorker'
+import { createDebouncedFn } from '../composables/createDebouncedFn'
 import { NEmpty, NInput } from 'naive-ui'
 import { useRoute, useRouter, type LocationQueryValue } from 'vue-router'
 
@@ -49,13 +53,7 @@ const normalizeQuery = (
 const routeQuery = computed(() => normalizeQuery(route.query.query))
 const searchQuery = ref(routeQuery.value)
 
-watch(routeQuery, (value) => {
-  if (value !== searchQuery.value) {
-    searchQuery.value = value
-  }
-})
-
-watch(searchQuery, (value) => {
+const syncRouteQuery = (value: string): void => {
   if (value === routeQuery.value) {
     return
   }
@@ -67,12 +65,41 @@ watch(searchQuery, (value) => {
     delete query.query
   }
   router.replace({ query })
+}
+
+const debouncedSyncRouteQuery = createDebouncedFn(syncRouteQuery, 400)
+
+const syncRouteQueryImmediately = (): void => {
+  debouncedSyncRouteQuery.cancel()
+  syncRouteQuery(searchQuery.value)
+}
+
+watch(routeQuery, (value) => {
+  if (value !== searchQuery.value) {
+    debouncedSyncRouteQuery.cancel()
+    searchQuery.value = value
+  }
 })
 
-const { toolsResults } = useSearchTools(searchQuery)
+watch(searchQuery, (value) => {
+  if (value === routeQuery.value) {
+    return
+  }
+
+  debouncedSyncRouteQuery(value)
+})
+
+const { toolsResults, searching } = useToolsSearchWorker({
+  tools: allTools,
+  query: searchQuery,
+})
 
 const tools = computed(() => (allTools.value === undefined ? undefined : toolsResults.value))
 const toolsCount = computed(() => tools.value?.length)
+
+onBeforeUnmount(() => {
+  debouncedSyncRouteQuery.cancel()
+})
 
 useHead({
   title: t('title') + ' - InBrowser.App',
