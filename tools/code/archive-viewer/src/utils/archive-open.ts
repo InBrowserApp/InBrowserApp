@@ -3,6 +3,8 @@ import mime from 'mime'
 
 const ZERO_BLOCK_SIZE = 512
 const MAX_HEADER_SNIFF = 512
+const MIN_GZIP_HEADER_SIZE = 10
+const GZIP_HEADER_READ_CHUNK_SIZE = 256
 
 type ZipEntryLike = {
   filename: string
@@ -361,46 +363,120 @@ function toDate(seconds: number): Date | null {
 }
 
 async function parseGzipHeader(file: File): Promise<GzipHeader> {
-  const bytes = new Uint8Array(await file.arrayBuffer())
+  let bytes = new Uint8Array(0)
+
+  async function ensureHeaderBytes(requiredLength: number): Promise<boolean> {
+    while (bytes.length < requiredLength) {
+      const start = bytes.length
+      const end = Math.min(file.size, Math.max(requiredLength, start + GZIP_HEADER_READ_CHUNK_SIZE))
+      if (end <= start) {
+        return false
+      }
+
+      const chunk = new Uint8Array(await file.slice(start, end).arrayBuffer())
+      if (!chunk.length) {
+        return false
+      }
+
+      const nextBytes = new Uint8Array(start + chunk.length)
+      nextBytes.set(bytes)
+      nextBytes.set(chunk, start)
+      bytes = nextBytes
+    }
+
+    return true
+  }
+
+  await ensureHeaderBytes(2)
   if (!isGzipSignature(bytes)) {
     throw new Error('Invalid GZIP signature.')
+  }
+
+  if (!(await ensureHeaderBytes(MIN_GZIP_HEADER_SIZE))) {
+    return {
+      originalName: null,
+      modifiedAt: null,
+    }
   }
 
   const flags = bytes[3] ?? 0
   const mtime =
     (bytes[4] ?? 0) | ((bytes[5] ?? 0) << 8) | ((bytes[6] ?? 0) << 16) | ((bytes[7] ?? 0) << 24)
+  const modifiedAt = toDate(mtime)
 
-  let cursor = 10
+  let cursor = MIN_GZIP_HEADER_SIZE
 
   if ((flags & 0x04) !== 0) {
+    if (!(await ensureHeaderBytes(cursor + 2))) {
+      return {
+        originalName: null,
+        modifiedAt,
+      }
+    }
+
     const xlen = (bytes[cursor] ?? 0) | ((bytes[cursor + 1] ?? 0) << 8)
     cursor += 2 + xlen
+    if (!(await ensureHeaderBytes(cursor))) {
+      return {
+        originalName: null,
+        modifiedAt,
+      }
+    }
   }
 
   let originalName: string | null = null
   if ((flags & 0x08) !== 0) {
     const start = cursor
-    while (cursor < bytes.length && bytes[cursor] !== 0) {
+    while (true) {
+      if (!(await ensureHeaderBytes(cursor + 1))) {
+        return {
+          originalName: null,
+          modifiedAt,
+        }
+      }
+
+      if (bytes[cursor] === 0) {
+        break
+      }
       cursor += 1
     }
+
     originalName = new TextDecoder().decode(bytes.subarray(start, cursor))
     cursor += 1
   }
 
   if ((flags & 0x10) !== 0) {
-    while (cursor < bytes.length && bytes[cursor] !== 0) {
+    while (true) {
+      if (!(await ensureHeaderBytes(cursor + 1))) {
+        return {
+          originalName,
+          modifiedAt,
+        }
+      }
+
+      if (bytes[cursor] === 0) {
+        break
+      }
       cursor += 1
     }
+
     cursor += 1
   }
 
   if ((flags & 0x02) !== 0) {
+    if (!(await ensureHeaderBytes(cursor + 2))) {
+      return {
+        originalName,
+        modifiedAt,
+      }
+    }
+
     cursor += 2
   }
 
   return {
     originalName,
-    modifiedAt: toDate(mtime),
+    modifiedAt,
   }
 }
 

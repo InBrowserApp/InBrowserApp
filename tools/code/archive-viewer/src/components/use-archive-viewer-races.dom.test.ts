@@ -212,4 +212,84 @@ describe('useArchiveViewer race guards', () => {
     expect(state.selectedEntry.value?.path).toBe('b.txt')
     expect(state.previewText.value).toBe('second preview')
   })
+
+  it('reloads preview when next archive keeps the same selected path', async () => {
+    const entry: ArchiveEntry = {
+      path: 'readme.txt',
+      kind: 'file',
+      size: 1,
+      compressedSize: 1,
+      modifiedAt: null,
+      extension: 'txt',
+    }
+
+    mockedOpenArchive
+      .mockResolvedValueOnce(
+        createHandle([entry], {
+          readEntry: vi.fn(async () => new Blob(['first archive'], { type: 'text/plain' })),
+        }),
+      )
+      .mockResolvedValueOnce(
+        createHandle([entry], {
+          readEntry: vi.fn(async () => new Blob(['second archive'], { type: 'text/plain' })),
+        }),
+      )
+
+    const state = mountComposable()
+
+    await state.handleBeforeUpload({
+      file: { file: new File(['first'], 'first.zip') } as never,
+      fileList: [],
+    })
+    await flushPromises()
+    expect(state.previewText.value).toBe('first archive')
+
+    await state.handleBeforeUpload({
+      file: { file: new File(['second'], 'second.zip') } as never,
+      fileList: [],
+    })
+    await flushPromises()
+
+    expect(state.selectedEntry.value?.path).toBe('readme.txt')
+    expect(state.previewText.value).toBe('second archive')
+  })
+
+  it('reloads preview when clicking the same file row again', async () => {
+    const entry: ArchiveEntry = {
+      path: 'same.txt',
+      kind: 'file',
+      size: 1,
+      compressedSize: 1,
+      modifiedAt: null,
+      extension: 'txt',
+    }
+
+    let readCount = 0
+    const readEntry = vi.fn(async () => {
+      readCount += 1
+      return new Blob([`preview-${readCount}`], { type: 'text/plain' })
+    })
+
+    mockedOpenArchive.mockResolvedValueOnce(createHandle([entry], { readEntry }))
+
+    const state = mountComposable()
+
+    await state.handleBeforeUpload({
+      file: { file: new File(['same'], 'same.zip') } as never,
+      fileList: [],
+    })
+    await flushPromises()
+    expect(state.previewText.value).toBe('preview-1')
+
+    const row = state.rows.value.find((currentRow) => currentRow.path === 'same.txt')
+    if (!row) {
+      throw new Error('Missing same.txt row')
+    }
+
+    state.tableRowProps(row).onClick()
+    await flushPromises()
+
+    expect(state.previewText.value).toBe('preview-2')
+    expect(readEntry).toHaveBeenCalledTimes(2)
+  })
 })

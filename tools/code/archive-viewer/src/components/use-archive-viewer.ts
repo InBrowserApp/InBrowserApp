@@ -208,6 +208,12 @@ export function useArchiveViewer(providedLabels?: MaybeRefOrGetter<ArchiveViewer
       return
     }
 
+    if (selectedPath.value === row.path) {
+      void loadPreview()
+      isPreviewModalVisible.value = true
+      return
+    }
+
     selectedPath.value = row.path
     isPreviewModalVisible.value = true
   }
@@ -296,6 +302,7 @@ export function useArchiveViewer(providedLabels?: MaybeRefOrGetter<ArchiveViewer
     archiveFile.value = file
     search.value = ''
     currentDirectory.value = ''
+    selectedPath.value = ''
     isPreviewModalVisible.value = false
 
     invalidatePreviewRequests()

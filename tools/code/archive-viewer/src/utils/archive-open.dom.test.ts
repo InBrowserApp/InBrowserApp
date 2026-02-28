@@ -403,6 +403,38 @@ describe('archive-open edge cases', () => {
     })
   })
 
+  it('parses gzip header without reading full file buffer', async () => {
+    const encoder = new TextEncoder()
+    const headerParts: Uint8Array[] = []
+    const flags = 0x08
+
+    headerParts.push(new Uint8Array([0x1f, 0x8b, 0x08, flags, 0x01, 0x00, 0x00, 0x00, 0x00, 0x03]))
+    headerParts.push(encoder.encode('huge.txt\0'))
+
+    const largePayload = new Uint8Array(1024 * 1024)
+    const blob = new Blob([toBlobPart(concatChunks(headerParts)), toBlobPart(largePayload)])
+
+    const arrayBuffer = vi.fn(async () => {
+      throw new Error('should not read full file arrayBuffer')
+    })
+    const slice = vi.fn((start?: number, end?: number) => blob.slice(start, end))
+
+    const fileLike = {
+      size: blob.size,
+      arrayBuffer,
+      slice,
+    } as unknown as File
+
+    const parsed = await __test__.parseGzipHeader(fileLike)
+
+    expect(parsed.originalName).toBe('huge.txt')
+    expect(arrayBuffer).not.toHaveBeenCalled()
+    expect(slice).toHaveBeenCalled()
+
+    const maxSliceEnd = Math.max(...slice.mock.calls.map(([, end]) => Number(end)))
+    expect(maxSliceEnd).toBeLessThan(blob.size)
+  })
+
   it('handles tar/gzip read errors and parser fallbacks', async () => {
     const tarBytes = createTar([{ path: 'one.txt', content: '1' }])
     const tarFile = new File([toFileArrayBuffer(tarBytes)], 'one.tar')
