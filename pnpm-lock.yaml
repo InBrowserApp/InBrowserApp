@@ -474,6 +474,7 @@ overrides:
   '@redocly/openapi-core>js-yaml': 4.1.1
   '@redocly/openapi-core>minimatch': 5.1.9
   editorconfig>minimatch: 9.0.9
+  serialize-javascript: 7.0.3
 
 patchedDependencies:
   curlconverter@4.12.0:
