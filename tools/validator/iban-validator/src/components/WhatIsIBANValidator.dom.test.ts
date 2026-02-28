@@ -1,12 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -50,9 +44,9 @@ describe('WhatIsIBANValidator', () => {
   it('renders explanatory copy', () => {
     const wrapper = mount(WhatIsIBANValidator)
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('structureTitle')
-    expect(wrapper.text()).toContain('validationTitle')
-    expect(wrapper.text()).toContain('step1')
+    expect(wrapper.text()).toContain('What is IBAN?')
+    expect(wrapper.text()).toContain('IBAN Structure')
+    expect(wrapper.text()).toContain('Checksum Validation')
+    expect(wrapper.text()).toContain('Remove spaces and move the first four characters to the end')
   })
 })

@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsURLEncoding from './WhatIsURLEncoding.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   DescriptionMarkdown: {
     props: ['title', 'description'],
@@ -22,9 +14,10 @@ describe('WhatIsURLEncoding', () => {
     const wrapper = mount(WhatIsURLEncoding)
 
     const description = wrapper.find('.description')
-    expect(description.attributes('data-title')).toBe('what-is-url-encoding')
-    expect(description.attributes('data-description')).toBe(
-      'what-is-url-encoding-description-markdown',
+    expect(description.attributes('data-title')).toBe('What is URL Encoding?')
+    expect(description.attributes('data-description')).toContain(
+      'URL encoding (also called percent encoding) is a method',
     )
+    expect(description.attributes('data-description')).toContain('%20')
   })
 })

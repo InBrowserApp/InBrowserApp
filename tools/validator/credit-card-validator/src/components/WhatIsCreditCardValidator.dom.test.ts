@@ -20,14 +20,6 @@ vi.mock('../data/cardBrands', () => ({
   cardBrands: sampleBrands,
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -86,15 +78,13 @@ describe('WhatIsCreditCardValidator', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('luhnTitle')
-    expect(wrapper.text()).toContain('luhnDescription')
-    expect(wrapper.text()).toContain('luhnStep1')
-    expect(wrapper.text()).toContain('luhnStep2')
-    expect(wrapper.text()).toContain('luhnStep3')
-    expect(wrapper.text()).toContain('brandsTitle')
-    expect(wrapper.text()).toContain('brandsDescription')
+    expect(wrapper.text()).toContain('What is Credit Card Validation?')
+    expect(wrapper.text()).toContain('card number is potentially valid')
+    expect(wrapper.text()).toContain('Luhn Algorithm')
+    expect(wrapper.text()).toContain('checksum formula')
+    expect(wrapper.text()).toContain('Starting from the rightmost digit, double every second digit')
+    expect(wrapper.text()).toContain('Supported Card Brands')
+    expect(wrapper.text()).toContain('Bank Identification Number')
 
     const table = wrapper.findComponent({ name: 'NDataTable' })
     const columns = table.props('columns') as Array<{
@@ -105,10 +95,10 @@ describe('WhatIsCreditCardValidator', () => {
 
     expect(table.props('data')).toEqual(sampleBrands)
     expect(columns).toHaveLength(4)
-    expect(columns[0]?.title()).toBe('brandColumn')
-    expect(columns[1]?.title()).toBe('prefixColumn')
-    expect(columns[2]?.title()).toBe('lengthColumn')
-    expect(columns[3]?.title()).toBe('cvcColumn')
+    expect(columns[0]?.title()).toBe('Brand')
+    expect(columns[1]?.title()).toBe('Prefix')
+    expect(columns[2]?.title()).toBe('Length')
+    expect(columns[3]?.title()).toBe('CVC')
 
     const brandColumn = columns.find((column) => column.key === 'name')
     const renderedBrandCell = brandColumn?.render?.(sampleBrands[0]!)

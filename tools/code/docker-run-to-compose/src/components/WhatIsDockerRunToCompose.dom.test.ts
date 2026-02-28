@@ -1,15 +1,7 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsDockerRunToCompose from './WhatIsDockerRunToCompose.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const DescriptionStub = defineComponent({
   name: 'DescriptionMarkdown',
@@ -37,7 +29,9 @@ describe('WhatIsDockerRunToCompose', () => {
     })
 
     const description = wrapper.find('.description')
-    expect(description.text()).toContain('title')
-    expect(description.text()).toContain('description')
+    expect(description.text()).toContain('What is Docker Run to Compose?')
+    expect(description.text()).toContain(
+      'converts docker run commands into a docker-compose.yml file',
+    )
   })
 })
