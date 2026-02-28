@@ -50,6 +50,7 @@ type UseToolsSearchWorkerOptions = {
   query: Ref<string>
   debounceMs?: number
   lazy?: boolean
+  allowEmptyQuerySearch?: boolean
 }
 
 type UseToolsSearchWorkerResult = {
@@ -61,7 +62,7 @@ type UseToolsSearchWorkerResult = {
 export const useToolsSearchWorker = (
   options: UseToolsSearchWorkerOptions,
 ): UseToolsSearchWorkerResult => {
-  const { tools, query, debounceMs = 160, lazy = false } = options
+  const { tools, query, debounceMs = 160, lazy = false, allowEmptyQuerySearch = true } = options
   const { language } = useSiteLanguage()
   const searchableTools = computed(() => toSearchableTools(tools.value ?? []))
   const toolsResults = ref<ToolInfo[] | undefined>(undefined)
@@ -152,6 +153,13 @@ export const useToolsSearchWorker = (
     if (!tools.value) {
       debouncedSearch.cancel()
       toolsResults.value = undefined
+      searching.value = false
+      return
+    }
+
+    if (!allowEmptyQuerySearch && !query.value.trim()) {
+      debouncedSearch.cancel()
+      toolsResults.value = []
       searching.value = false
       return
     }

@@ -28,6 +28,7 @@ export const useSearchResults = (): {
     query,
     debounceMs: 80,
     lazy: true,
+    allowEmptyQuerySearch: false,
   })
 
   const searchResults = computed(() => {
