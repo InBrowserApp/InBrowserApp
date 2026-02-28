@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NInput, NSelect } from 'naive-ui'
 import JWTOptionsInput from './JWTOptionsInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('JWTOptionsInput', () => {
   it('emits updates for secret and algorithm', async () => {
     const wrapper = mount(JWTOptionsInput, {

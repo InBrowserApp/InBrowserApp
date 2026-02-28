@@ -3,16 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import ExifActions from './ExifActions.vue'
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 const CopyToClipboardButtonStub = defineComponent({
   name: 'CopyToClipboardButton',
   props: { content: { type: String, required: true } },

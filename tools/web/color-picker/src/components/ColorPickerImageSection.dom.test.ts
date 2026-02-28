@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NButton } from 'naive-ui'
 import ColorPickerImageSection from './ColorPickerImageSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 afterEach(() => {
   document.body.innerHTML = ''
 })

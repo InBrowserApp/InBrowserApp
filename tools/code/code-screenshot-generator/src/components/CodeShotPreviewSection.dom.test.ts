@@ -5,14 +5,6 @@ import type { BackgroundConfig, CodeShotLayout, StyledToken } from '../utils/ren
 import type { Theme } from '../utils/themes'
 import { themes } from '../utils/themes'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',

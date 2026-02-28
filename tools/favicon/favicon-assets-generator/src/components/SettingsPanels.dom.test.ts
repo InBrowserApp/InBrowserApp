@@ -5,12 +5,6 @@ import type { DesktopBrowserOptions } from '../utils/favicon-generator/desktop-b
 import type { iOSWebClipOptions } from '../utils/favicon-generator/ios-web-clip'
 import type { PWAOptions } from '../utils/favicon-generator/pwa'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

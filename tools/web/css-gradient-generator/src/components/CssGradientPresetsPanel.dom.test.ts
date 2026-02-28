@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import CssGradientPresetsPanel from './CssGradientPresetsPanel.vue'
 import { gradientPresets } from '../utils/presets'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

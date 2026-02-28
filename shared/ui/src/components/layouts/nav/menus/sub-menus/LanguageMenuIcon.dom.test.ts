@@ -22,10 +22,6 @@ vi.mock('vue-router', () => ({
   useRouter: () => ({ push: state.pushSpy }),
 }))
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const NPopselect = defineComponent({
     name: 'NPopselect',

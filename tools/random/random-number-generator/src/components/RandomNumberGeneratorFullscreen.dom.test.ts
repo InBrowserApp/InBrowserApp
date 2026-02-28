@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, type Component } from 'vue'
 import RandomNumberGeneratorFullscreen from './RandomNumberGeneratorFullscreen.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   RegenerateButton: defineComponent({
     name: 'RegenerateButton',

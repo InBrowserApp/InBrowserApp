@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NSwitch } from 'naive-ui'
 import ScreenRecorderSettings from './ScreenRecorderSettings.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('ScreenRecorderSettings', () => {
   it('emits v-model updates for both switches', async () => {
     const onUpdateSystemAudio = vi.fn()

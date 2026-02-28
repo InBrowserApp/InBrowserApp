@@ -19,16 +19,6 @@ vi.mock('filesize', () => ({
   filesize: () => '1 KB',
 }))
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 const ToolSectionStub = defineComponent({
   name: 'ToolSection',
   template: '<section class="tool-section"><slot /></section>',
