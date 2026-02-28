@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsHttpStatusCode from './WhatIsHttpStatusCode.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -43,12 +35,12 @@ describe('WhatIsHttpStatusCode', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('informationalTitle')
-    expect(wrapper.text()).toContain('successTitle')
-    expect(wrapper.text()).toContain('redirectionTitle')
-    expect(wrapper.text()).toContain('clientErrorTitle')
-    expect(wrapper.text()).toContain('serverErrorTitle')
+    expect(wrapper.text()).toContain('What is an HTTP Status Code?')
+    expect(wrapper.text()).toContain('three-digit numbers returned by a server')
+    expect(wrapper.text()).toContain('1xx Informational:')
+    expect(wrapper.text()).toContain('2xx Success:')
+    expect(wrapper.text()).toContain('3xx Redirection:')
+    expect(wrapper.text()).toContain('4xx Client Error:')
+    expect(wrapper.text()).toContain('5xx Server Error:')
   })
 })

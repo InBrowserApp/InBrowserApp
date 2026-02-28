@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsBip39 from './WhatIsBip39.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   DescriptionMarkdown: defineComponent({
     name: 'DescriptionMarkdown',
@@ -27,7 +19,9 @@ describe('WhatIsBip39', () => {
     const wrapper = mount(WhatIsBip39)
     const description = wrapper.find('.description')
 
-    expect(description.attributes('data-title')).toBe('what-is-bip39')
-    expect(description.attributes('data-description')).toBe('what-is-bip39-description-markdown')
+    expect(description.attributes('data-title')).toBe('What is BIP39?')
+    expect(description.attributes('data-description')).toContain(
+      'defines a standard for turning random entropy into a list of words called a mnemonic phrase',
+    )
   })
 })

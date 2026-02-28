@@ -1,14 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsTimeZone from './WhatIsTimeZone.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('WhatIsTimeZone', () => {
   it('passes title and description to markdown', () => {
@@ -23,7 +15,7 @@ describe('WhatIsTimeZone', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('What is a time zone?')
+    expect(wrapper.text()).toContain('defined by an offset from UTC')
   })
 })
