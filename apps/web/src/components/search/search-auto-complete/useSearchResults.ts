@@ -1,7 +1,8 @@
 import { ref, h, type Ref, type VNodeChild, computed } from 'vue'
+import { computedAsync } from '@vueuse/core'
 import ToolEntry from './ToolEntry.vue'
 import type { ToolInfo } from '@shared/tools'
-import { useRegistryToolsSearchWorker } from '../../../composables/useRegistryToolsSearchWorker'
+import { useToolsSearchWorker } from '../../../composables/useToolsSearchWorker'
 
 export type SearchResult = {
   label: string
@@ -16,7 +17,13 @@ export const useSearchResults = (): {
   searchResults: Ref<SearchResult[]>
 } => {
   const query = ref('')
-  const { toolsResults, searching } = useRegistryToolsSearchWorker({
+  const allTools = computedAsync(async () => {
+    const { tools } = await import('@registry/tools')
+    return tools
+  }, undefined)
+
+  const { toolsResults, searching } = useToolsSearchWorker({
+    tools: allTools,
     query,
     debounceMs: 80,
   })

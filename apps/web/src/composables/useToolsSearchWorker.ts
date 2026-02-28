@@ -48,6 +48,7 @@ const mapToolIDs = (tools: ToolInfo[], toolIDs: string[]): ToolInfo[] => {
 type UseToolsSearchWorkerOptions = {
   tools: Ref<ToolInfo[] | undefined>
   query: Ref<string>
+  debounceMs?: number
 }
 
 type UseToolsSearchWorkerResult = {
@@ -58,7 +59,7 @@ type UseToolsSearchWorkerResult = {
 export const useToolsSearchWorker = (
   options: UseToolsSearchWorkerOptions,
 ): UseToolsSearchWorkerResult => {
-  const { tools, query } = options
+  const { tools, query, debounceMs = 160 } = options
   const { language } = useSiteLanguage()
   const searchableTools = computed(() => toSearchableTools(tools.value ?? []))
   const toolsResults = ref<ToolInfo[] | undefined>(undefined)
@@ -128,7 +129,7 @@ export const useToolsSearchWorker = (
     worker.postMessage(payload)
   }
 
-  const debouncedSearch = createDebouncedFn(runSearch, 160)
+  const debouncedSearch = createDebouncedFn(runSearch, debounceMs)
 
   const queueSearch = (): void => {
     if (!tools.value) {

@@ -14,8 +14,8 @@ const toolsResults = ref<ToolInfo[]>([
 ])
 const searching = ref(false)
 
-vi.mock('../../../composables/useRegistryToolsSearchWorker', () => ({
-  useRegistryToolsSearchWorker: vi.fn(() => ({
+vi.mock('../../../composables/useToolsSearchWorker', () => ({
+  useToolsSearchWorker: vi.fn(() => ({
     toolsResults: computed(() => toolsResults.value),
     searching,
   })),
