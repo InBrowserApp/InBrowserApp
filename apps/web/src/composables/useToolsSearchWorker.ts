@@ -51,6 +51,7 @@ type UseToolsSearchWorkerOptions = {
   debounceMs?: number
   lazy?: boolean
   allowEmptyQuerySearch?: boolean
+  immediateFirstSearch?: boolean
 }
 
 type UseToolsSearchWorkerResult = {
@@ -62,12 +63,20 @@ type UseToolsSearchWorkerResult = {
 export const useToolsSearchWorker = (
   options: UseToolsSearchWorkerOptions,
 ): UseToolsSearchWorkerResult => {
-  const { tools, query, debounceMs = 160, lazy = false, allowEmptyQuerySearch = true } = options
+  const {
+    tools,
+    query,
+    debounceMs = 160,
+    lazy = false,
+    allowEmptyQuerySearch = true,
+    immediateFirstSearch = false,
+  } = options
   const { language } = useSiteLanguage()
   const searchableTools = computed(() => toSearchableTools(tools.value ?? []))
   const toolsResults = ref<ToolInfo[] | undefined>(undefined)
   const searching = ref(false)
   const activated = ref(!lazy)
+  const hadSearchText = ref(false)
 
   let requestID = 0
   let activeRequestID = 0
@@ -150,21 +159,42 @@ export const useToolsSearchWorker = (
       return
     }
 
-    if (!tools.value) {
+    const sourceTools = tools.value
+    if (!sourceTools) {
       debouncedSearch.cancel()
       toolsResults.value = undefined
       searching.value = false
       return
     }
 
-    if (!allowEmptyQuerySearch && !query.value.trim()) {
+    const hasSearchText = !!query.value.trim()
+
+    if (!allowEmptyQuerySearch && !hasSearchText) {
       debouncedSearch.cancel()
       toolsResults.value = []
       searching.value = false
+      hadSearchText.value = false
       return
     }
 
+    if (allowEmptyQuerySearch && !hasSearchText) {
+      debouncedSearch.cancel()
+      toolsResults.value = sourceTools
+      searching.value = false
+      hadSearchText.value = false
+      return
+    }
+
+    const shouldSearchImmediately = immediateFirstSearch && !hadSearchText.value && hasSearchText
+    hadSearchText.value = hasSearchText
     searching.value = true
+
+    if (shouldSearchImmediately) {
+      debouncedSearch.cancel()
+      runSearch(query.value, getLocale())
+      return
+    }
+
     debouncedSearch(query.value, getLocale())
   }
 

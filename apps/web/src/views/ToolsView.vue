@@ -13,6 +13,9 @@
       :aria-label="t('title')"
       :placeholder="t('searchPlaceholder')"
       :loading="searching"
+      @focus="warmup"
+      @mouseenter="warmup"
+      @touchstart="warmup"
       @blur="syncRouteQueryImmediately"
       @keyup.enter="syncRouteQueryImmediately"
     />
@@ -56,6 +59,7 @@ const normalizeQuery = (
 
 const routeQuery = computed(() => normalizeQuery(route.query.query))
 const searchQuery = ref(routeQuery.value)
+const hasSearchQuery = computed(() => !!searchQuery.value.trim())
 
 const syncRouteQuery = (value: string): void => {
   if (value === routeQuery.value) {
@@ -78,6 +82,13 @@ const syncRouteQueryImmediately = (): void => {
   syncRouteQuery(searchQuery.value)
 }
 
+const { toolsResults, searching, warmup } = useToolsSearchWorker({
+  tools: allTools,
+  query: searchQuery,
+  lazy: true,
+  immediateFirstSearch: true,
+})
+
 watch(routeQuery, (value) => {
   if (value !== searchQuery.value) {
     debouncedSyncRouteQuery.cancel()
@@ -85,20 +96,34 @@ watch(routeQuery, (value) => {
   }
 })
 
-watch(searchQuery, (value) => {
-  if (value === routeQuery.value) {
-    return
+watch(
+  searchQuery,
+  (value) => {
+    if (value.trim()) {
+      warmup()
+    }
+
+    if (value === routeQuery.value) {
+      return
+    }
+
+    debouncedSyncRouteQuery(value)
+  },
+  { immediate: true },
+)
+
+const tools = computed(() => {
+  const sourceTools = allTools.value
+  if (sourceTools === undefined) {
+    return undefined
   }
 
-  debouncedSyncRouteQuery(value)
-})
+  if (!hasSearchQuery.value) {
+    return sourceTools
+  }
 
-const { toolsResults, searching } = useToolsSearchWorker({
-  tools: allTools,
-  query: searchQuery,
+  return toolsResults.value ?? []
 })
-
-const tools = computed(() => (allTools.value === undefined ? undefined : toolsResults.value))
 const toolsCount = computed(() => tools.value?.length)
 
 onBeforeUnmount(() => {

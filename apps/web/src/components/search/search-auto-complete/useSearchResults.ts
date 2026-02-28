@@ -29,6 +29,7 @@ export const useSearchResults = (): {
     debounceMs: 80,
     lazy: true,
     allowEmptyQuerySearch: false,
+    immediateFirstSearch: true,
   })
 
   const searchResults = computed(() => {

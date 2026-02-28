@@ -18,6 +18,7 @@ const mockedTools = [
 ]
 
 const searching = ref(false)
+const warmup = vi.fn()
 
 const useToolsSearchWorker = vi.fn(
   (params: { tools: { value: typeof mockedTools }; query: { value: string } }) => ({
@@ -34,6 +35,7 @@ const useToolsSearchWorker = vi.fn(
       return sourceTools.filter((tool) => tool.meta.en.name.toLowerCase().includes(keyword))
     }),
     searching,
+    warmup,
   }),
 )
 
@@ -53,7 +55,7 @@ const NInput = defineComponent({
       default: false,
     },
   },
-  emits: ['update:value'],
+  emits: ['update:value', 'focus', 'mouseenter', 'touchstart'],
   setup(props, { emit }) {
     return () =>
       h('input', {
@@ -62,6 +64,9 @@ const NInput = defineComponent({
         placeholder: props.placeholder,
         'data-loading': String(props.loading),
         onInput: (event: Event) => emit('update:value', (event.target as HTMLInputElement).value),
+        onFocus: () => emit('focus'),
+        onMouseenter: () => emit('mouseenter'),
+        onTouchstart: () => emit('touchstart'),
       })
   },
 })
@@ -116,6 +121,7 @@ describe('ToolsView', () => {
     replace.mockClear()
     useHead.mockClear()
     useToolsSearchWorker.mockClear()
+    warmup.mockClear()
     searching.value = false
   })
 
@@ -155,6 +161,12 @@ describe('ToolsView', () => {
         },
       ],
     })
+    expect(useToolsSearchWorker).toHaveBeenCalledWith(
+      expect.objectContaining({
+        lazy: true,
+        immediateFirstSearch: true,
+      }),
+    )
   })
 
   it('uses the first query item when route query is an array', async () => {
@@ -181,6 +193,32 @@ describe('ToolsView', () => {
     )
     expect(wrapper.get('[data-test="grid"]').attributes('data-count')).toBe('1')
     expect(wrapper.text()).toContain('Total tools: 1')
+  })
+
+  it('warms up worker on initial non-empty query and focus intent', async () => {
+    route.query = {
+      query: 'two',
+    }
+
+    const ToolsView = (await import('./ToolsView.vue')).default
+    const wrapper = mount(ToolsView, {
+      global: {
+        stubs: {
+          ToolTitle: { template: '<h1><slot /></h1>' },
+          ToolSection: { template: '<section><slot /></section>' },
+          ToolsGrid: {
+            props: ['tools'],
+            template: '<div data-test="grid" :data-count="tools?.length ?? 0" />',
+          },
+        },
+      },
+    })
+
+    const warmupCallsBeforeFocus = warmup.mock.calls.length
+    expect(warmupCallsBeforeFocus).toBeGreaterThan(0)
+
+    await wrapper.get('[data-test="filter-input"]').trigger('focus')
+    expect(warmup).toHaveBeenCalledTimes(warmupCallsBeforeFocus + 1)
   })
 
   it('syncs the filter input into route query after debounce', async () => {

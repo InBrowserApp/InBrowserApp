@@ -61,6 +61,7 @@ describe('useSearchResults', () => {
         debounceMs: 80,
         lazy: true,
         allowEmptyQuerySearch: false,
+        immediateFirstSearch: true,
       }),
     )
   })
