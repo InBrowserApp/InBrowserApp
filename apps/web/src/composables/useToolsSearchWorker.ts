@@ -153,6 +153,9 @@ export const useToolsSearchWorker = (
   }
 
   const debouncedSearch = createDebouncedFn(runSearch, debounceMs)
+  const invalidatePendingWorkerResult = (): void => {
+    activeRequestID = 0
+  }
 
   const queueSearch = (): void => {
     if (!activated.value) {
@@ -162,6 +165,7 @@ export const useToolsSearchWorker = (
     const sourceTools = tools.value
     if (!sourceTools) {
       debouncedSearch.cancel()
+      invalidatePendingWorkerResult()
       toolsResults.value = undefined
       searching.value = false
       return
@@ -171,6 +175,7 @@ export const useToolsSearchWorker = (
 
     if (!allowEmptyQuerySearch && !hasSearchText) {
       debouncedSearch.cancel()
+      invalidatePendingWorkerResult()
       toolsResults.value = []
       searching.value = false
       hadSearchText.value = false
@@ -179,6 +184,7 @@ export const useToolsSearchWorker = (
 
     if (allowEmptyQuerySearch && !hasSearchText) {
       debouncedSearch.cancel()
+      invalidatePendingWorkerResult()
       toolsResults.value = sourceTools
       searching.value = false
       hadSearchText.value = false

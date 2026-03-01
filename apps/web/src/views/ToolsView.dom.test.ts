@@ -277,4 +277,28 @@ describe('ToolsView', () => {
     )
     expect(wrapper.text()).toContain('Total tools: 0')
   })
+
+  it('does not render empty state while search is loading', async () => {
+    searching.value = true
+
+    const ToolsView = (await import('./ToolsView.vue')).default
+    const wrapper = mount(ToolsView, {
+      global: {
+        stubs: {
+          ToolTitle: { template: '<h1><slot /></h1>' },
+          ToolSection: { template: '<section><slot /></section>' },
+          ToolsGrid: {
+            props: ['tools'],
+            template: '<div data-test="grid" :data-count="tools?.length ?? 0" />',
+          },
+        },
+      },
+    })
+
+    await wrapper.get('[data-test="filter-input"]').setValue('not-found')
+
+    expect(wrapper.find('[data-test="empty"]').exists()).toBe(false)
+    expect(wrapper.find('[data-test="grid"]').exists()).toBe(true)
+    expect(wrapper.get('[data-test="grid"]').attributes('data-count')).toBe('0')
+  })
 })

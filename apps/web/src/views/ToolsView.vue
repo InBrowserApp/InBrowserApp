@@ -19,11 +19,7 @@
       @blur="syncRouteQueryImmediately"
       @keyup.enter="syncRouteQueryImmediately"
     />
-    <n-empty
-      v-if="tools !== undefined && tools.length === 0"
-      class="tools-empty"
-      :description="t('emptyDescription')"
-    />
+    <n-empty v-if="showEmpty" class="tools-empty" :description="t('emptyDescription')" />
     <ToolsGrid v-else :tools="tools" />
   </ToolSection>
 </template>
@@ -125,6 +121,9 @@ const tools = computed(() => {
   return toolsResults.value ?? []
 })
 const toolsCount = computed(() => tools.value?.length)
+const showEmpty = computed(
+  () => !searching.value && tools.value !== undefined && tools.value.length === 0,
+)
 
 onBeforeUnmount(() => {
   debouncedSyncRouteQuery.cancel()
