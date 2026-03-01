@@ -29,8 +29,10 @@ vi.mock('@shared/locale', () => ({
 
 vi.mock('../workers/tools-search.worker.ts?worker', () => ({
   default: class MockWorker {
-    onmessage = null
-    onerror = null
+    onmessage:
+      | ((event: MessageEvent<{ type: 'result'; requestId: number; toolIDs: string[] }>) => void)
+      | null = null
+    onerror: ((event: ErrorEvent) => void) | null = null
     messages: SearchWorkerRequest[] = []
     terminate = vi.fn()
 
@@ -100,7 +102,7 @@ describe('useToolsSearchWorker', () => {
         features: [],
         meta: { en: { name: 'Two', description: 'second' } },
       },
-    ] as ToolInfo[]
+    ] as unknown as ToolInfo[]
     const tools = ref<ToolInfo[] | undefined>(sourceTools)
     const query = ref('')
 
