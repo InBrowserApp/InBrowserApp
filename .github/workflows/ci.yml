@@ -171,7 +171,7 @@ jobs:
         run: pnpm -F @apps/web exec playwright install --with-deps
 
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -205,7 +205,7 @@ jobs:
 
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -252,7 +252,7 @@ jobs:
         run: pnpm install
 
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -300,7 +300,7 @@ jobs:
         run: pnpm install
 
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -327,7 +327,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
