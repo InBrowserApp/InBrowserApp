@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
-
 const { sampleBrands } = vi.hoisted(() => ({
   sampleBrands: [
     {
@@ -15,22 +14,18 @@ const { sampleBrands } = vi.hoisted(() => ({
     },
   ],
 }))
-
 vi.mock('../data/cardBrands', () => ({
   cardBrands: sampleBrands,
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NDataTable: defineComponent({
       name: 'NDataTable',
       props: ['columns', 'data', 'bordered', 'size'],
       template: '<div class="n-data-table" />',
-    }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
     }),
     NH3: defineComponent({
       name: 'NH3',
@@ -44,10 +39,6 @@ vi.mock('naive-ui', async () => {
       name: 'NLi',
       template: '<li class="n-li"><slot /></li>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
     NIcon: defineComponent({
       name: 'NIcon',
       props: {
@@ -60,9 +51,7 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 import WhatIsCreditCardValidator from './WhatIsCreditCardValidator.vue'
-
 describe('WhatIsCreditCardValidator', () => {
   it('renders the explanation and brand table', () => {
     const wrapper = mount(WhatIsCreditCardValidator, {
@@ -77,7 +66,6 @@ describe('WhatIsCreditCardValidator', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('What is Credit Card Validation?')
     expect(wrapper.text()).toContain('card number is potentially valid')
     expect(wrapper.text()).toContain('Luhn Algorithm')
@@ -85,25 +73,21 @@ describe('WhatIsCreditCardValidator', () => {
     expect(wrapper.text()).toContain('Starting from the rightmost digit, double every second digit')
     expect(wrapper.text()).toContain('Supported Card Brands')
     expect(wrapper.text()).toContain('Bank Identification Number')
-
     const table = wrapper.findComponent({ name: 'NDataTable' })
     const columns = table.props('columns') as Array<{
       key: string
       title: () => string
       render?: (row: (typeof sampleBrands)[number]) => unknown
     }>
-
     expect(table.props('data')).toEqual(sampleBrands)
     expect(columns).toHaveLength(4)
     expect(columns[0]?.title()).toBe('Brand')
     expect(columns[1]?.title()).toBe('Prefix')
     expect(columns[2]?.title()).toBe('Length')
     expect(columns[3]?.title()).toBe('CVC')
-
     const brandColumn = columns.find((column) => column.key === 'name')
     const renderedBrandCell = brandColumn?.render?.(sampleBrands[0]!)
     expect(renderedBrandCell).toBeTruthy()
-
     const brandCellWrapper = mount(
       defineComponent({
         name: 'BrandCellHost',
@@ -111,10 +95,8 @@ describe('WhatIsCreditCardValidator', () => {
       }),
     )
     expect(brandCellWrapper.text()).toContain('Visa')
-
     const patternsColumn = columns.find((column) => column.key === 'patterns')
     expect(patternsColumn?.render?.(sampleBrands[0]!)).toBe('4, 51-55')
-
     const lengthsColumn = columns.find((column) => column.key === 'lengths')
     expect(lengthsColumn?.render?.(sampleBrands[0]!)).toBe('16, 19')
   })

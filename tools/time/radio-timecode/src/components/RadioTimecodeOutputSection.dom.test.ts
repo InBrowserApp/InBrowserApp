@@ -1,21 +1,10 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
-    NGi: defineComponent({
-      name: 'NGi',
-      template: '<div><slot /></div>',
-    }),
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div><slot /></div>',
-    }),
+    ...actual,
     NInputNumber: defineComponent({
       name: 'NInputNumber',
       props: {
@@ -46,9 +35,7 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 import RadioTimecodeOutputSection from './RadioTimecodeOutputSection.vue'
-
 describe('RadioTimecodeOutputSection', () => {
   it('emits volume and offset updates', async () => {
     const wrapper = mount(RadioTimecodeOutputSection, {
@@ -59,23 +46,18 @@ describe('RadioTimecodeOutputSection', () => {
         baseHz: 4000,
       },
     })
-
     await wrapper.get('[data-testid="volume"]').setValue('0.85')
     expect(wrapper.emitted('update:volume')?.[0]).toEqual([0.85])
-
     await wrapper.get('[data-testid="offset"]').setValue('')
     expect(wrapper.emitted('update:offsetMs')?.[0]).toEqual([0])
-
     const text = wrapper.text()
     const placeholderTexts = wrapper
       .findAll('[data-testid="text"]')
       .map((node) => node.text())
       .filter((value) => value === '-')
-
     expect(text).toContain('Hz')
     expect(placeholderTexts).toHaveLength(0)
   })
-
   it('renders placeholders when carrier and base are missing', () => {
     const wrapper = mount(RadioTimecodeOutputSection, {
       props: {
@@ -83,12 +65,10 @@ describe('RadioTimecodeOutputSection', () => {
         offsetMs: 0,
       },
     })
-
     const placeholderTexts = wrapper
       .findAll('[data-testid="text"]')
       .map((node) => node.text())
       .filter((value) => value === '-')
-
     expect(placeholderTexts).toHaveLength(2)
     expect(wrapper.text()).not.toContain('Hz')
   })

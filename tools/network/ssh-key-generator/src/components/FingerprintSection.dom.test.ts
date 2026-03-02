@@ -1,15 +1,14 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
 import FingerprintSection from './FingerprintSection.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
     template: '<div><slot /></div>',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NInput: defineComponent({
       name: 'NInput',
       props: {
@@ -20,10 +19,8 @@ vi.mock('naive-ui', async () => {
       },
       template: '<input class="fingerprint" :value="value" />',
     }),
-    NFlex: Base,
   }
 })
-
 describe('FingerprintSection', () => {
   it('renders fingerprint value and copy button', () => {
     const wrapper = mount(FingerprintSection, {
@@ -38,7 +35,6 @@ describe('FingerprintSection', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Fingerprint')
     expect(wrapper.get('.fingerprint').attributes('value')).toBe('FINGERPRINT')
     expect(wrapper.find('.copy').exists()).toBe(true)

@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Bip39MnemonicResults from './Bip39MnemonicResults.vue'
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -10,7 +9,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<h3 class="tool-section-header"><slot /></h3>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -23,7 +21,6 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="regenerate-button" @click="$emit(\'click\')">Regenerate</button>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -50,17 +47,17 @@ vi.mock('naive-ui', async () => {
     name: 'NText',
     template: '<span class="n-text"><slot /></span>',
   })
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NAlert,
     NDivider,
-    NFlex: Base,
     NInput,
     NSpace: Base,
     NTag,
     NText,
   }
 })
-
 const baseProps = {
   activeTab: 'generate' as const,
   generatedMnemonic: 'alpha beta',
@@ -73,18 +70,14 @@ const baseProps = {
   entropyHasError: false,
   mnemonicHasError: false,
 }
-
 describe('Bip39MnemonicResults', () => {
   it('shows generate outputs and emits regenerate', async () => {
     const wrapper = mount(Bip39MnemonicResults, { props: baseProps })
-
     expect(wrapper.find('.copy-button[data-content="alpha beta"]').exists()).toBe(true)
     expect(wrapper.find('.copy-button[data-content="deadbeef"]').exists()).toBe(true)
-
     await wrapper.find('.regenerate-button').trigger('click')
     expect(wrapper.emitted('regenerate')).toHaveLength(1)
   })
-
   it('shows validation empty state', () => {
     const wrapper = mount(Bip39MnemonicResults, {
       props: {
@@ -93,11 +86,9 @@ describe('Bip39MnemonicResults', () => {
         validationState: 'empty',
       },
     })
-
     expect(wrapper.text()).toContain('Enter a mnemonic phrase to validate.')
     expect(wrapper.find('.n-tag').exists()).toBe(false)
   })
-
   it('shows invalid validation state with error', () => {
     const wrapper = mount(Bip39MnemonicResults, {
       props: {
@@ -107,7 +98,6 @@ describe('Bip39MnemonicResults', () => {
         validationWordCount: 12,
       },
     })
-
     expect(wrapper.text()).toContain('Invalid')
     expect(wrapper.text()).toContain('Words: 12')
     expect(wrapper.find('.n-alert').text()).toContain(
@@ -115,7 +105,6 @@ describe('Bip39MnemonicResults', () => {
     )
     expect(wrapper.findAll('.copy-button')).toHaveLength(0)
   })
-
   it('shows valid validation state with entropy output', () => {
     const wrapper = mount(Bip39MnemonicResults, {
       props: {
@@ -126,12 +115,10 @@ describe('Bip39MnemonicResults', () => {
         validationEntropy: 'cafebabe',
       },
     })
-
     expect(wrapper.text()).toContain('Valid')
     expect(wrapper.find('.copy-button[data-content="cafebabe"]').exists()).toBe(true)
     expect(wrapper.find('.n-alert').exists()).toBe(false)
   })
-
   it('toggles convert errors and outputs', async () => {
     const wrapper = mount(Bip39MnemonicResults, {
       props: {
@@ -141,18 +128,15 @@ describe('Bip39MnemonicResults', () => {
         mnemonicHasError: true,
       },
     })
-
     expect(wrapper.text()).toContain('Entropy must be hex with 128, 160, 192, 224, or 256 bits.')
     expect(wrapper.text()).toContain('Mnemonic does not match the selected wordlist.')
     expect(wrapper.findAll('.copy-button')).toHaveLength(0)
-
     await wrapper.setProps({
       entropyHasError: false,
       mnemonicHasError: false,
       entropyMnemonic: 'mnemonic words',
       mnemonicEntropy: '1234',
     })
-
     expect(wrapper.find('.copy-button[data-content="mnemonic words"]').exists()).toBe(true)
     expect(wrapper.find('.copy-button[data-content="1234"]').exists()).toBe(true)
   })

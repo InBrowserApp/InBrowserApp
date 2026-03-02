@@ -4,9 +4,7 @@ import { computed, isRef } from 'vue'
 import { filesize } from 'filesize'
 import ResultCard from './ResultCard.vue'
 import type { GifToAnimatedWebpResult } from '../types'
-
 const objectUrlState = { mode: 'available' as 'available' | 'missing' }
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
@@ -19,25 +17,20 @@ vi.mock('@vueuse/core', async () => {
       }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   const { defineComponent } = await import('vue')
-
   const BaseStub = defineComponent({
     name: 'BaseStub',
     inheritAttrs: false,
     template: '<div><slot /></div>',
   })
-
   return {
     ...actual,
     NCard: BaseStub,
-    NFlex: BaseStub,
     NText: BaseStub,
   }
 })
-
 const baseProps = {
   originalLabel: 'Original',
   outputLabel: 'Output',
@@ -45,13 +38,11 @@ const baseProps = {
   dimensionsLabel: 'Dimensions',
   fileSizeLabel: 'Size',
 }
-
 function formatPercent(value: number) {
   if (!Number.isFinite(value) || value <= 0) return '0'
   if (value >= 10) return `${Math.round(value)}`
   return value.toFixed(1)
 }
-
 function formatSavedText(originalBytes: number, outputBytes: number) {
   const delta = originalBytes - outputBytes
   const sign = delta < 0 ? '-' : ''
@@ -61,7 +52,6 @@ function formatSavedText(originalBytes: number, outputBytes: number) {
   const percentText = `${sign}${formatPercent(percent)}%`
   return `${sizeText} (${percentText})`
 }
-
 function createResult(name: string, fileSize: number, blobSize: number): GifToAnimatedWebpResult {
   const file = new File([new Uint8Array(fileSize)], `${name}.gif`, { type: 'image/gif' })
   const blob = new Blob([new Uint8Array(blobSize)], { type: 'image/webp' })
@@ -75,12 +65,10 @@ function createResult(name: string, fileSize: number, blobSize: number): GifToAn
     outputHeight: 80,
   }
 }
-
 describe('ResultCard', () => {
   beforeEach(() => {
     objectUrlState.mode = 'available'
   })
-
   it('renders preview image and savings with decimals', () => {
     const result = createResult('demo', 1000, 950)
     const wrapper = mount(ResultCard, {
@@ -89,7 +77,6 @@ describe('ResultCard', () => {
         result,
       },
     })
-
     const image = wrapper.find('img')
     expect(image.exists()).toBe(true)
     expect(image.attributes('src')).toBe('blob:preview')
@@ -100,7 +87,6 @@ describe('ResultCard', () => {
     expect(wrapper.text()).toContain(filesize(950) as string)
     expect(wrapper.text()).toContain(`Saved: ${formatSavedText(1000, 950)}`)
   })
-
   it('handles larger output and hides preview when missing', () => {
     objectUrlState.mode = 'missing'
     const result = createResult('bigger', 1000, 1300)
@@ -110,11 +96,9 @@ describe('ResultCard', () => {
         result,
       },
     })
-
     expect(wrapper.find('img').exists()).toBe(false)
     expect(wrapper.text()).toContain(`Saved: ${formatSavedText(1000, 1300)}`)
   })
-
   it('keeps percent at 0 when the original file size is zero', () => {
     const result = createResult('empty', 0, 120)
     const wrapper = mount(ResultCard, {
@@ -123,10 +107,8 @@ describe('ResultCard', () => {
         result,
       },
     })
-
     expect(wrapper.text()).toContain(`Saved: ${formatSavedText(0, 120)}`)
   })
-
   it('formats zero savings as 0 percent', () => {
     const result = createResult('same', 800, 800)
     const wrapper = mount(ResultCard, {
@@ -135,7 +117,6 @@ describe('ResultCard', () => {
         result,
       },
     })
-
     expect(wrapper.text()).toContain(`Saved: ${formatSavedText(800, 800)}`)
   })
 })

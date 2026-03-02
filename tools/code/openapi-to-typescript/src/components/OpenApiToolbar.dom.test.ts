@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -10,7 +9,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -26,10 +24,11 @@ vi.mock('@shared/ui/base', async () => {
     }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NButton: defineComponent({
       name: 'NButton',
       props: {
@@ -65,19 +64,13 @@ vi.mock('naive-ui', async () => {
           )
       },
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
     NIcon: defineComponent({
       name: 'NIcon',
       template: '<span data-testid="icon" />',
     }),
   }
 })
-
 import OpenApiToolbar from './OpenApiToolbar.vue'
-
 describe('OpenApiToolbar', () => {
   it('emits toolbar actions', async () => {
     const wrapper = mount(OpenApiToolbar, {
@@ -86,18 +79,15 @@ describe('OpenApiToolbar', () => {
         downloadUrl: undefined,
       },
     })
-
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
     await buttons[0]?.trigger('click')
     await buttons[1]?.trigger('click')
     await buttons[2]?.trigger('click')
-
     expect(wrapper.emitted('import')).toBeTruthy()
     expect(wrapper.emitted('import-url')).toBeTruthy()
     expect(wrapper.emitted('load-sample')).toBeTruthy()
     expect(wrapper.get('[data-testid="copy"]').attributes('data-content')).toBe('types')
   })
-
   it('renders download link state', () => {
     const wrapper = mount(OpenApiToolbar, {
       props: {
@@ -105,13 +95,11 @@ describe('OpenApiToolbar', () => {
         downloadUrl: 'blob:download',
       },
     })
-
     const link = wrapper.get('a')
     expect(link.attributes('href')).toBe('blob:download')
     expect(link.attributes('download')).toBe('openapi-types.d.ts')
     expect(link.attributes('data-disabled')).toBe('false')
   })
-
   it('disables download when no url is available', () => {
     const wrapper = mount(OpenApiToolbar, {
       props: {
@@ -119,7 +107,6 @@ describe('OpenApiToolbar', () => {
         downloadUrl: undefined,
       },
     })
-
     const link = wrapper.get('a')
     expect(link.attributes('data-disabled')).toBe('true')
   })

@@ -1,26 +1,20 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
+    ...actual,
     NText: defineComponent({
       name: 'NText',
       template: '<span data-testid="text"><slot /></span>',
     }),
   }
 })
-
 import RadioTimecodeNotesSection from './RadioTimecodeNotesSection.vue'
-
 describe('RadioTimecodeNotesSection', () => {
   it('renders the warning notes', () => {
     const wrapper = mount(RadioTimecodeNotesSection)
-
     const text = wrapper.text()
     expect(text).toContain('Keep volume low; high-frequency audio can be uncomfortable.')
     expect(text).toContain('Uses local system time only (offline).')

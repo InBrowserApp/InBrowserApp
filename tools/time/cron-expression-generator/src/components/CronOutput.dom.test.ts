@@ -1,27 +1,18 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronOutput from './CronOutput.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
-    }),
+    ...actual,
   }
 })
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -29,7 +20,6 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="copy" :data-content="content" />',
   },
 }))
-
 describe('CronOutput', () => {
   it('shows human description when provided', () => {
     const wrapper = mount(CronOutput, {
@@ -38,12 +28,10 @@ describe('CronOutput', () => {
         humanDescription: 'Every 5 minutes',
       },
     })
-
     expect(wrapper.text()).toContain('Every 5 minutes')
     expect(wrapper.text()).not.toContain('Invalid cron expression')
     expect(wrapper.find('.copy').attributes('data-content')).toBe('*/5 * * * *')
   })
-
   it('shows invalid state when description is empty', () => {
     const wrapper = mount(CronOutput, {
       props: {
@@ -51,7 +39,6 @@ describe('CronOutput', () => {
         humanDescription: '',
       },
     })
-
     expect(wrapper.text()).toContain('Invalid cron expression')
   })
 })

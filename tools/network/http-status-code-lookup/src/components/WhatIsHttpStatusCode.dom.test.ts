@@ -1,14 +1,11 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsHttpStatusCode from './WhatIsHttpStatusCode.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="text"><slot /></span>',
-    }),
+    ...actual,
     NUl: defineComponent({
       name: 'NUl',
       template: '<ul class="list"><slot /></ul>',
@@ -19,7 +16,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('WhatIsHttpStatusCode', () => {
   it('renders the description and status code categories', () => {
     const wrapper = mount(WhatIsHttpStatusCode, {
@@ -34,7 +30,6 @@ describe('WhatIsHttpStatusCode', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('What is an HTTP Status Code?')
     expect(wrapper.text()).toContain('three-digit numbers returned by a server')
     expect(wrapper.text()).toContain('1xx Informational:')

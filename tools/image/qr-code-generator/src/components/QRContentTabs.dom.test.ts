@@ -8,9 +8,7 @@ import type { SmsModel } from './content/SmsTab.vue'
 import type { MailtoModel } from './content/MailtoTab.vue'
 import type { GeoModel } from './content/GeoTab.vue'
 import type { CalendarModel } from './content/CalendarTab.vue'
-
 const widthRef = ref(1200)
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
@@ -18,10 +16,11 @@ vi.mock('@vueuse/core', async () => {
     useWindowSize: () => ({ width: widthRef }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NAlert: defineComponent({
       name: 'NAlert',
       template: '<div class="n-alert"><slot /></div>',
@@ -30,18 +29,10 @@ vi.mock('naive-ui', async () => {
       name: 'NDivider',
       template: '<div class="n-divider" />',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
     NFormItem: defineComponent({
       name: 'NFormItem',
       props: ['label', 'showFeedback'],
       template: '<div class="n-form-item"><slot /></div>',
-    }),
-    NIcon: defineComponent({
-      name: 'NIcon',
-      template: '<span class="n-icon"><slot /></span>',
     }),
     NSelect: defineComponent({
       name: 'NSelect',
@@ -60,15 +51,9 @@ vi.mock('naive-ui', async () => {
       emits: ['update:value'],
       template: '<div class="n-tabs"><slot /></div>',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
-    }),
   }
 })
-
 type QRContentTab = 'text' | 'wifi' | 'vcard' | 'sms' | 'tel' | 'mailto' | 'geo' | 'calendar'
-
 type BaseModels = {
   activeTab: QRContentTab
   text: string
@@ -80,7 +65,6 @@ type BaseModels = {
   geo: GeoModel
   calendar: CalendarModel
 }
-
 const baseModels: BaseModels = {
   activeTab: 'text',
   text: 'hello',
@@ -101,7 +85,6 @@ const baseModels: BaseModels = {
   geo: { lat: null, lng: null, alt: null },
   calendar: { title: '', start: null, end: null, location: '', description: '' },
 }
-
 const createStub = (name: string, className: string) =>
   defineComponent({
     name,
@@ -109,7 +92,6 @@ const createStub = (name: string, className: string) =>
     emits: ['update:modelValue'],
     template: `<div class="${className}" />`,
   })
-
 const stubs = {
   TextTab: createStub('TextTab', 'text-tab'),
   WifiTab: createStub('WifiTab', 'wifi-tab'),
@@ -120,12 +102,10 @@ const stubs = {
   GeoTab: createStub('GeoTab', 'geo-tab'),
   CalendarTab: createStub('CalendarTab', 'calendar-tab'),
 }
-
 describe('QRContentTabs', () => {
   beforeEach(() => {
     widthRef.value = 1200
   })
-
   it('renders tab panes in wide layouts', () => {
     const wrapper = mount(QRContentTabs, {
       props: {
@@ -134,11 +114,9 @@ describe('QRContentTabs', () => {
       },
       global: { stubs },
     })
-
     expect(wrapper.findAll('.n-tab-pane')).toHaveLength(8)
     expect(wrapper.find('.text-tab').exists()).toBe(true)
   })
-
   it('emits updates from wide tab models', async () => {
     const wrapper = mount(QRContentTabs, {
       props: {
@@ -147,11 +125,9 @@ describe('QRContentTabs', () => {
       },
       global: { stubs },
     })
-
     const tabs = wrapper.findComponent({ name: 'NTabs' })
     tabs.vm.$emit('update:value', 'wifi')
     await nextTick()
-
     wrapper.findComponent({ name: 'TextTab' }).vm.$emit('update:modelValue', 'hello')
     wrapper.findComponent({ name: 'WifiTab' }).vm.$emit('update:modelValue', {
       ...baseModels.wifi,
@@ -180,7 +156,6 @@ describe('QRContentTabs', () => {
       title: 'Meet',
     })
     await nextTick()
-
     expect(wrapper.find('.text-tab').exists()).toBe(true)
     expect(wrapper.find('.wifi-tab').exists()).toBe(true)
     expect(wrapper.find('.vcard-tab').exists()).toBe(true)
@@ -190,7 +165,6 @@ describe('QRContentTabs', () => {
     expect(wrapper.find('.geo-tab').exists()).toBe(true)
     expect(wrapper.find('.calendar-tab').exists()).toBe(true)
   })
-
   it('renders a select and payload preview in narrow layouts', async () => {
     const wrapper = mount(QRContentTabs, {
       props: {
@@ -200,18 +174,14 @@ describe('QRContentTabs', () => {
       },
       global: { stubs },
     })
-
     widthRef.value = 600
     await nextTick()
-
     expect(wrapper.findComponent({ name: 'NSelect' }).exists()).toBe(true)
     expect(wrapper.find('.sms-tab').exists()).toBe(true)
     expect(wrapper.find('.n-alert').exists()).toBe(true)
   })
-
   it('switches narrow layout content panes', async () => {
     const onUpdateActiveTab = vi.fn()
-
     const wrapper = mount(QRContentTabs, {
       props: {
         payload: '',
@@ -221,20 +191,20 @@ describe('QRContentTabs', () => {
       },
       global: { stubs },
     })
-
     widthRef.value = 600
     await nextTick()
-
     expect(wrapper.findComponent({ name: 'NSelect' }).exists()).toBe(true)
-
     const select = wrapper.findComponent({ name: 'NSelect' })
     select.vm.$emit('update:value', 'wifi')
     await nextTick()
     expect(onUpdateActiveTab).toHaveBeenCalledWith('wifi')
-
     const tabCases: Record<
       QRContentTab,
-      { selector: string; component: string; payload: unknown }
+      {
+        selector: string
+        component: string
+        payload: unknown
+      }
     > = {
       text: { selector: '.text-tab', component: 'TextTab', payload: 'next' },
       wifi: {
@@ -269,12 +239,10 @@ describe('QRContentTabs', () => {
         payload: { ...baseModels.calendar, title: 'Call' },
       },
     }
-
     for (const [tab, { selector, component, payload }] of Object.entries(tabCases)) {
       await wrapper.setProps({ activeTab: tab as QRContentTab })
       await nextTick()
       expect(wrapper.find(selector).exists()).toBe(true)
-
       const tabComponent = wrapper.findComponent({ name: component })
       tabComponent.vm.$emit('update:modelValue', payload)
       await nextTick()

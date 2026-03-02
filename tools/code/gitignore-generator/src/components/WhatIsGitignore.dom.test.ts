@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsGitignore from './WhatIsGitignore.vue'
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -12,14 +11,11 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
+    ...actual,
     NUl: defineComponent({
       name: 'NUl',
       template: '<ul><slot /></ul>',
@@ -30,11 +26,9 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('WhatIsGitignore', () => {
   it('renders the info copy', () => {
     const wrapper = mount(WhatIsGitignore)
-
     expect(wrapper.text()).toContain('What is .gitignore?')
     expect(wrapper.text()).toContain('intentionally untracked files that Git should ignore')
     expect(wrapper.text()).toContain('Build outputs (node_modules/, dist/, build/)')

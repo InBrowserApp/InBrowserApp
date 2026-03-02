@@ -1,14 +1,11 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsPort from './WhatIsPort.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="text"><slot /></span>',
-    }),
+    ...actual,
     NUl: defineComponent({
       name: 'NUl',
       template: '<ul class="list"><slot /></ul>',
@@ -19,7 +16,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('WhatIsPort', () => {
   it('renders the description and port categories', () => {
     const wrapper = mount(WhatIsPort, {
@@ -34,7 +30,6 @@ describe('WhatIsPort', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('What is a Port Number?')
     expect(wrapper.text()).toContain('16-bit unsigned integer (0-65535)')
     expect(wrapper.text()).toContain('System Ports (0-1023):')

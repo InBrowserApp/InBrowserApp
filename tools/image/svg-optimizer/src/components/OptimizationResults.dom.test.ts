@@ -3,9 +3,7 @@ import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import { filesize } from 'filesize'
 import OptimizationResults from './OptimizationResults.vue'
-
 const objectUrlValue = ref<string | null>('blob:download')
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   return {
@@ -17,7 +15,6 @@ vi.mock('@vueuse/core', async () => {
     },
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -25,7 +22,6 @@ vi.mock('naive-ui', async () => {
       name,
       template: '<div><slot /></div>',
     })
-
   const NStatistic = defineComponent({
     name: 'NStatistic',
     props: {
@@ -40,7 +36,6 @@ vi.mock('naive-ui', async () => {
     },
     template: '<div><slot /></div>',
   })
-
   const NButton = defineComponent({
     name: 'NButton',
     props: {
@@ -59,7 +54,6 @@ vi.mock('naive-ui', async () => {
     },
     template: '<a><slot name="icon" /><slot /></a>',
   })
-
   const NText = defineComponent({
     name: 'NText',
     props: {
@@ -70,10 +64,9 @@ vi.mock('naive-ui', async () => {
     },
     template: '<span><slot /></span>',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGrid: makeStub('NGrid'),
-    NGi: makeStub('NGi'),
+    ...actual,
     NSpace: makeStub('NSpace'),
     NIcon: makeStub('NIcon'),
     NStatistic,
@@ -81,7 +74,6 @@ vi.mock('naive-ui', async () => {
     NText,
   }
 })
-
 describe('OptimizationResults', () => {
   it('computes sizes and download name', () => {
     objectUrlValue.value = 'blob:download'
@@ -106,12 +98,10 @@ describe('OptimizationResults', () => {
         },
       },
     })
-
     const button = wrapper.findComponent({ name: 'NButton' })
     expect(button.props('href')).toBe('blob:download')
     expect(button.props('download')).toBe('icon.optimized.svg')
     expect(button.props('disabled')).toBe(false)
-
     const stats = wrapper.findAllComponents({ name: 'NStatistic' })
     const expectedOriginalSize = filesize(new Blob(['<svg><rect /></svg>']).size) as string
     const expectedOptimizedSize = filesize(new Blob(['<svg />']).size) as string
@@ -119,10 +109,8 @@ describe('OptimizationResults', () => {
     expect(stats[1]?.props('value')).toBe(expectedOptimizedSize)
     expect(wrapper.findComponent({ name: 'NIcon' }).exists()).toBe(true)
   })
-
   it('renders zero saved percent and disables download when object url is missing', () => {
     objectUrlValue.value = null
-
     const wrapper = mount(OptimizationResults, {
       props: {
         originalSvg: '',
@@ -144,7 +132,6 @@ describe('OptimizationResults', () => {
         },
       },
     })
-
     const button = wrapper.findComponent({ name: 'NButton' })
     expect(button.props('disabled')).toBe(true)
     expect(button.props('href')).toBeUndefined()

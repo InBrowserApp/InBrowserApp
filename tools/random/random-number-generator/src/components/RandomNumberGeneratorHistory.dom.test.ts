@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import RandomNumberGeneratorHistory from './RandomNumberGeneratorHistory.vue'
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -12,11 +11,11 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NButton: defineComponent({
       name: 'NButton',
       props: {
@@ -33,21 +32,12 @@ vi.mock('naive-ui', async () => {
       name: 'NCard',
       template: '<div class="n-card"><slot /></div>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
     NTag: defineComponent({
       name: 'NTag',
       template: '<span class="n-tag"><slot /></span>',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
   }
 })
-
 describe('RandomNumberGeneratorHistory', () => {
   it('shows empty state with disabled clear button', () => {
     const wrapper = mount(RandomNumberGeneratorHistory, {
@@ -55,11 +45,9 @@ describe('RandomNumberGeneratorHistory', () => {
         historyEntries: [],
       },
     })
-
     expect(wrapper.text()).toContain('No history yet.')
     expect(wrapper.get('[data-testid="clear-history"]').attributes('disabled')).toBeDefined()
   })
-
   it('renders history entries and emits clear', async () => {
     const wrapper = mount(RandomNumberGeneratorHistory, {
       props: {
@@ -69,10 +57,8 @@ describe('RandomNumberGeneratorHistory', () => {
         ],
       },
     })
-
     expect(wrapper.findAll('.n-tag')).toHaveLength(3)
     expect(wrapper.get('[data-testid="clear-history"]').attributes('disabled')).toBeUndefined()
-
     await wrapper.get('[data-testid="clear-history"]').trigger('click')
     expect(wrapper.emitted('clear-history')).toHaveLength(1)
   })

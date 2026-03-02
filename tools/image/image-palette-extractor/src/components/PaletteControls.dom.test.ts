@@ -2,11 +2,11 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import PaletteControls from './PaletteControls.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NForm: defineComponent({
       name: 'NForm',
       template: '<form><slot /></form>',
@@ -50,21 +50,14 @@ vi.mock('naive-ui', async () => {
       emits: ['update:value'],
       template: '<div data-test="switch" />',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
   }
 })
-
 const ToolSectionStub = {
   template: '<div><slot /></div>',
 }
-
 const ToolSectionHeaderStub = {
   template: '<div><slot /></div>',
 }
-
 describe('PaletteControls', () => {
   it('renders palette settings and sort options', () => {
     const wrapper = mount(PaletteControls, {
@@ -84,11 +77,9 @@ describe('PaletteControls', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Palette Settings')
     expect(wrapper.text()).toContain('Fast')
   })
-
   it('disables controls when loading and provides sort options', () => {
     const wrapper = mount(PaletteControls, {
       props: {
@@ -107,12 +98,10 @@ describe('PaletteControls', () => {
         },
       },
     })
-
     const options = wrapper.findComponent({ name: 'NSelect' }).props('options') as Array<{
       label: string
       value: string
     }>
-
     expect(options.map((item) => item.value)).toEqual(['dominance', 'hue', 'lightness'])
     expect(wrapper.findComponent({ name: 'NSlider' }).props('disabled')).toBe(true)
     expect(wrapper.findComponent({ name: 'NInputNumber' }).props('disabled')).toBe(true)
@@ -120,7 +109,6 @@ describe('PaletteControls', () => {
     expect(wrapper.findComponent({ name: 'NSelect' }).props('disabled')).toBe(true)
     expect(wrapper.findComponent({ name: 'NSwitch' }).props('disabled')).toBe(true)
   })
-
   it('updates options when controls emit v-model updates', async () => {
     const options = {
       colorCount: 4,
@@ -128,7 +116,6 @@ describe('PaletteControls', () => {
       sortBy: 'dominance' as const,
       ignoreTransparent: true,
     }
-
     const wrapper = mount(PaletteControls, {
       props: {
         options,
@@ -141,14 +128,12 @@ describe('PaletteControls', () => {
         },
       },
     })
-
     wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 10)
     wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 11)
     wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'precise')
     wrapper.findComponent({ name: 'NSelect' }).vm.$emit('update:value', 'lightness')
     wrapper.findComponent({ name: 'NSwitch' }).vm.$emit('update:value', false)
     await nextTick()
-
     expect(options).toEqual({
       colorCount: 11,
       quality: 'precise',

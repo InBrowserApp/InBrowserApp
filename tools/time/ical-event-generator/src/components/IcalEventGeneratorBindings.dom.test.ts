@@ -1,11 +1,18 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, h, onMounted, ref, type Ref } from 'vue'
-
-type Reminder = { amount: number; unit: string; description: string }
-
+type Reminder = {
+  amount: number
+  unit: string
+  description: string
+}
 type IcalState = {
-  timeZoneOptions: Ref<Array<{ label: string; value: string }>>
+  timeZoneOptions: Ref<
+    Array<{
+      label: string
+      value: string
+    }>
+  >
   title: Ref<string>
   location: Ref<string>
   description: Ref<string>
@@ -35,7 +42,6 @@ type IcalState = {
   icsHref: Ref<string>
   outputErrorKey: Ref<string | null>
 }
-
 const { getState, setState } = vi.hoisted(() => {
   let state: IcalState | null = null
   return {
@@ -45,7 +51,6 @@ const { getState, setState } = vi.hoisted(() => {
     },
   }
 })
-
 const buildState = (): IcalState => ({
   timeZoneOptions: ref([{ label: 'UTC', value: 'UTC' }]),
   title: ref(''),
@@ -77,25 +82,16 @@ const buildState = (): IcalState => ({
   icsHref: ref(''),
   outputErrorKey: ref(null),
 })
-
 vi.mock('../composables/useIcalEventGenerator', () => ({
   useIcalEventGenerator: () => getState(),
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div><slot /></div>',
-    }),
-    NGi: defineComponent({
-      name: 'NGi',
-      template: '<div><slot /></div>',
-    }),
+    ...actual,
   }
 })
-
 const DetailsStub = defineComponent({
   name: 'IcalEventDetailsSection',
   emits: [
@@ -118,7 +114,6 @@ const DetailsStub = defineComponent({
     return () => h('div', { 'data-testid': 'details' })
   },
 })
-
 const DateTimeStub = defineComponent({
   name: 'IcalEventDateTimeSection',
   emits: ['update:is-all-day', 'update:time-zone', 'update:output-mode', 'update:date-range'],
@@ -132,7 +127,6 @@ const DateTimeStub = defineComponent({
     return () => h('div', { 'data-testid': 'date-time' })
   },
 })
-
 const RecurrenceStub = defineComponent({
   name: 'IcalEventRecurrenceSection',
   emits: [
@@ -159,7 +153,6 @@ const RecurrenceStub = defineComponent({
     return () => h('div', { 'data-testid': 'recurrence' })
   },
 })
-
 const RemindersStub = defineComponent({
   name: 'IcalEventRemindersSection',
   emits: ['update:reminders-enabled', 'update:reminders', 'update:default-reminder'],
@@ -172,7 +165,6 @@ const RemindersStub = defineComponent({
     return () => h('div', { 'data-testid': 'reminders' })
   },
 })
-
 const OutputStub = defineComponent({
   name: 'IcalEventOutputSection',
   props: {
@@ -199,7 +191,6 @@ const OutputStub = defineComponent({
       })
   },
 })
-
 const QrCodeStub = defineComponent({
   name: 'IcalEventQrCodeSection',
   props: {
@@ -216,16 +207,13 @@ const QrCodeStub = defineComponent({
     return () => h('div', { 'data-testid': 'qrcode', 'data-text': props.text })
   },
 })
-
 describe('IcalEventGenerator bindings', () => {
   beforeEach(() => {
     setState(buildState())
     vi.resetModules()
   })
-
   it('wires v-model updates and uses QR fallback text', async () => {
     const { default: IcalEventGenerator } = await import('./IcalEventGenerator.vue')
-
     const wrapper = mount(IcalEventGenerator, {
       global: {
         stubs: {
@@ -238,21 +226,17 @@ describe('IcalEventGenerator bindings', () => {
         },
       },
     })
-
     await flushPromises()
-
     const state = getState()
     expect(state.title.value).toBe('Updated title')
     expect(state.location.value).toBe('Updated location')
     expect(state.description.value).toBe('Updated description')
     expect(state.url.value).toBe('https://updated.example')
     expect(state.uid.value).toBe('updated@example.com')
-
     expect(state.isAllDay.value).toBe(true)
     expect(state.timeZone.value).toBe('Asia/Tokyo')
     expect(state.outputMode.value).toBe('tzid')
     expect(state.dateRange.value).toEqual([1000, 2000])
-
     expect(state.recurrenceFrequency.value).toBe('weekly')
     expect(state.recurrenceInterval.value).toBe(2)
     expect(state.recurrenceWeekdays.value).toEqual(['MO', 'WE'])
@@ -261,12 +245,10 @@ describe('IcalEventGenerator bindings', () => {
     expect(state.recurrenceEndMode.value).toBe('count')
     expect(state.recurrenceCount.value).toBe(4)
     expect(state.recurrenceUntilInput.value).toBe('2024-06-01')
-
     expect(state.remindersEnabled.value).toBe(true)
     expect(state.reminders.value).toEqual([{ amount: 5, unit: 'minutes', description: 'Reminder' }])
     expect(state.reminderDefault.value).toEqual({ amount: 10, unit: 'minutes', description: '' })
     expect(state.regenerateUid).toHaveBeenCalledTimes(1)
-
     expect(wrapper.get('[data-testid="qrcode"]').attributes('data-text')).toBe(' ')
   })
 })

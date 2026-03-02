@@ -2,12 +2,11 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick, ref } from 'vue'
 import PlaceholderBackgroundOptions from './PlaceholderBackgroundOptions.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
-    NGrid: actual.NGrid,
+    ...actual,
     NFormItemGi: actual.NFormItemGi,
     NRadioGroup: defineComponent({
       name: 'NRadioGroup',
@@ -52,7 +51,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 const Wrapper = defineComponent({
   components: { PlaceholderBackgroundOptions },
   setup() {
@@ -61,7 +59,6 @@ const Wrapper = defineComponent({
     const gradientColor1 = ref('#667eea')
     const gradientColor2 = ref('#764ba2')
     const gradientAngle = ref(45)
-
     return {
       bgType,
       bgColor,
@@ -80,39 +77,50 @@ const Wrapper = defineComponent({
     />
   `,
 })
-
 describe('PlaceholderBackgroundOptions', () => {
   it('renders controls based on background type', async () => {
     const wrapper = mount(Wrapper)
-
     expect(wrapper.findAll('.color-picker')).toHaveLength(1)
     expect(wrapper.find('.gradient-slider').exists()).toBe(false)
     const solidPicker = wrapper.findComponent({ name: 'NColorPicker' })
     solidPicker.vm.$emit('update:value', '#abcdef')
     await nextTick()
-    expect((wrapper.vm as { bgColor: string }).bgColor).toBe('#abcdef')
+    expect(
+      (
+        wrapper.vm as {
+          bgColor: string
+        }
+      ).bgColor,
+    ).toBe('#abcdef')
     const radioGroup = wrapper.findComponent({ name: 'NRadioGroup' })
     radioGroup.vm.$emit('update:value', 'linear-gradient')
     await nextTick()
-    expect((wrapper.vm as { bgType: string }).bgType).toBe('linear-gradient')
-
+    expect(
+      (
+        wrapper.vm as {
+          bgType: string
+        }
+      ).bgType,
+    ).toBe('linear-gradient')
     expect(wrapper.findAll('.color-picker')).toHaveLength(2)
     expect(wrapper.find('.gradient-slider').exists()).toBe(true)
-
     const colorPickers = wrapper.findAllComponents({ name: 'NColorPicker' })
     colorPickers[0]?.vm.$emit('update:value', '#111111')
     colorPickers[1]?.vm.$emit('update:value', '#222222')
     const slider = wrapper.findComponent({ name: 'NSlider' })
     slider.vm.$emit('update:value', 120)
     await nextTick()
-
     const formatTooltip = slider.props('formatTooltip') as ((value: number) => string) | undefined
     expect(formatTooltip?.(15)).toBe('15°')
-    expect((wrapper.vm as { gradientAngle: number }).gradientAngle).toBe(120)
-
+    expect(
+      (
+        wrapper.vm as {
+          gradientAngle: number
+        }
+      ).gradientAngle,
+    ).toBe(120)
     radioGroup.vm.$emit('update:value', 'radial-gradient')
     await nextTick()
-
     expect(wrapper.findAll('.color-picker')).toHaveLength(2)
     expect(wrapper.find('.gradient-slider').exists()).toBe(false)
   })

@@ -1,14 +1,11 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronFieldModeSelector from './CronFieldModeSelector.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
+    ...actual,
     NRadioGroup: defineComponent({
       name: 'NRadioGroup',
       props: ['value'],
@@ -22,7 +19,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('CronFieldModeSelector', () => {
   it('renders mode options', () => {
     const wrapper = mount(CronFieldModeSelector, {
@@ -30,10 +26,8 @@ describe('CronFieldModeSelector', () => {
         mode: 'every',
       },
     })
-
     expect(wrapper.findAll('.n-radio')).toHaveLength(4)
   })
-
   it('emits mode updates from the radio group', () => {
     const onUpdate = vi.fn()
     const wrapper = mount(CronFieldModeSelector, {
@@ -42,9 +36,7 @@ describe('CronFieldModeSelector', () => {
         'onUpdate:mode': onUpdate,
       },
     })
-
     wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'range')
-
     expect(onUpdate).toHaveBeenCalledWith('range')
   })
 })

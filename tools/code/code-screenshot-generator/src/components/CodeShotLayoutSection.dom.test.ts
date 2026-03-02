@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CodeShotLayoutSection from './CodeShotLayoutSection.vue'
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -12,19 +11,11 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div><slot /></div>',
-    }),
-    NFormItemGi: defineComponent({
-      name: 'NFormItemGi',
-      template: '<label><slot /></label>',
-    }),
+    ...actual,
     NInputNumber: defineComponent({
       name: 'NInputNumber',
       props: {
@@ -70,7 +61,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('CodeShotLayoutSection', () => {
   it('emits updates and toggles background-dependent controls', async () => {
     const wrapper = mount(CodeShotLayoutSection, {
@@ -85,13 +75,10 @@ describe('CodeShotLayoutSection', () => {
         tabSize: 2,
       },
     })
-
     const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
     expect(inputs).toHaveLength(6)
-
     const [fontInput, lineHeightInput, cardPaddingInput, framePaddingInput, radiusInput, tabInput] =
       inputs
-
     if (
       !fontInput ||
       !lineHeightInput ||
@@ -102,17 +89,14 @@ describe('CodeShotLayoutSection', () => {
     ) {
       throw new Error('Expected layout inputs to exist')
     }
-
     fontInput.vm.$emit('update:value', 18)
     lineHeightInput.vm.$emit('update:value', 1.85)
     cardPaddingInput.vm.$emit('update:value', 30)
     framePaddingInput.vm.$emit('update:value', 64)
     radiusInput.vm.$emit('update:value', 20)
     tabInput.vm.$emit('update:value', 4)
-
     const shadowSwitch = wrapper.findComponent({ name: 'NSwitch' })
     shadowSwitch.vm.$emit('update:value', false)
-
     expect(wrapper.emitted('update:fontSize')?.[0]).toEqual([18])
     expect(wrapper.emitted('update:lineHeight')?.[0]).toEqual([1.85])
     expect(wrapper.emitted('update:cardPadding')?.[0]).toEqual([30])
@@ -120,13 +104,10 @@ describe('CodeShotLayoutSection', () => {
     expect(wrapper.emitted('update:radius')?.[0]).toEqual([20])
     expect(wrapper.emitted('update:tabSize')?.[0]).toEqual([4])
     expect(wrapper.emitted('update:shadow')?.[0]).toEqual([false])
-
     expect(framePaddingInput.props('min')).toBe(16)
     expect(framePaddingInput.props('disabled')).toBe(false)
     expect(shadowSwitch.props('disabled')).toBe(false)
-
     await wrapper.setProps({ isBackgroundNone: true })
-
     const updatedFrame = wrapper
       .findAllComponents({ name: 'NInputNumber' })
       .find((input) => input.props('max') === 120)

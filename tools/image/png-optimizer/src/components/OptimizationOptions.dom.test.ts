@@ -2,7 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import OptimizationOptions from './OptimizationOptions.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -10,7 +9,6 @@ vi.mock('naive-ui', async () => {
       name,
       template: '<div><slot /></div>',
     })
-
   const NSlider = defineComponent({
     name: 'NSlider',
     props: {
@@ -38,7 +36,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div />',
   })
-
   const NCheckbox = defineComponent({
     name: 'NCheckbox',
     props: {
@@ -50,7 +47,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:checked'],
     template: '<div><slot /></div>',
   })
-
   const NButton = defineComponent({
     name: 'NButton',
     props: {
@@ -66,9 +62,9 @@ vi.mock('naive-ui', async () => {
     emits: ['click'],
     template: '<button @click="$emit(\'click\')"><slot name="icon" /><slot /></button>',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: makeStub('NFlex'),
+    ...actual,
     NText: makeStub('NText'),
     NIcon: makeStub('NIcon'),
     NSlider,
@@ -76,7 +72,6 @@ vi.mock('naive-ui', async () => {
     NButton,
   }
 })
-
 const mountOptions = (isOptimizing = false) =>
   mount(OptimizationOptions, {
     props: {
@@ -94,43 +89,33 @@ const mountOptions = (isOptimizing = false) =>
       },
     },
   })
-
 describe('OptimizationOptions', () => {
   it('renders slider and emits optimize', async () => {
     const wrapper = mountOptions(false)
-
     const slider = wrapper.findComponent({ name: 'NSlider' })
     expect(slider.props('min')).toBe(0)
     expect(slider.props('max')).toBe(6)
     expect(slider.props('step')).toBe(1)
     expect(Object.keys(slider.props('marks') as Record<string, string>)).toContain('6')
-
     await wrapper.findComponent({ name: 'NButton' }).vm.$emit('click')
     expect(wrapper.emitted('optimize')).toBeTruthy()
   })
-
   it('updates options through slider and checkbox models', async () => {
     const wrapper = mountOptions(false)
-
     await wrapper.findComponent({ name: 'NSlider' }).vm.$emit('update:value', 5)
     await nextTick()
-
     const checkboxes = wrapper.findAllComponents({ name: 'NCheckbox' })
     await checkboxes[0]?.vm.$emit('update:checked', true)
     await checkboxes[1]?.vm.$emit('update:checked', false)
     await nextTick()
-
     const slider = wrapper.findComponent({ name: 'NSlider' })
     expect(slider.props('value')).toBe(5)
-
     const updatedCheckboxes = wrapper.findAllComponents({ name: 'NCheckbox' })
     expect(updatedCheckboxes[0]?.props('checked')).toBe(true)
     expect(updatedCheckboxes[1]?.props('checked')).toBe(false)
   })
-
   it('shows optimizing state', () => {
     const wrapper = mountOptions(true)
-
     const button = wrapper.findComponent({ name: 'NButton' })
     expect(button.props('loading')).toBe(true)
     expect(button.props('disabled')).toBe(true)

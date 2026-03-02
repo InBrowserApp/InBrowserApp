@@ -1,23 +1,21 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import HmacResult from './HmacResult.vue'
-
 const generateHmacMock = vi.fn()
-
 vi.mock('../hmac', () => ({
   generateHmac: (...args: unknown[]) => generateHmacMock(...args),
 }))
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   const { ref, watchEffect } = await import('vue')
-
   return {
     ...actual,
     computedAsync: (
       getter: () => Promise<unknown>,
       initialValue?: unknown,
-      evaluating?: { value: boolean },
+      evaluating?: {
+        value: boolean
+      },
     ) => {
       const state = ref(initialValue)
       watchEffect(() => {
@@ -31,7 +29,6 @@ vi.mock('@vueuse/core', async () => {
     },
   }
 })
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent, h } = await import('vue')
   return {
@@ -52,10 +49,11 @@ vi.mock('@shared/ui/base', async () => {
     }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NDescriptions: defineComponent({
       name: 'NDescriptions',
       template: '<div class="descriptions"><slot /></div>',
@@ -64,18 +62,12 @@ vi.mock('naive-ui', async () => {
       name: 'NDescriptionsItem',
       template: '<div class="description-item"><slot name="label" /><slot /></div>',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
-    }),
   }
 })
-
 describe('HmacResult', () => {
   beforeEach(() => {
     generateHmacMock.mockReset()
   })
-
   it('renders nothing without inputs', () => {
     const wrapper = mount(HmacResult, {
       props: {
@@ -94,13 +86,10 @@ describe('HmacResult', () => {
         },
       },
     })
-
     expect(wrapper.text()).toBe('')
   })
-
   it('shows computed hex and base64 output', async () => {
     generateHmacMock.mockResolvedValue(new Uint8Array([1, 2, 3]).buffer)
-
     const wrapper = mount(HmacResult, {
       props: {
         secretKey: 'secret',
@@ -118,9 +107,7 @@ describe('HmacResult', () => {
         },
       },
     })
-
     await flushPromises()
-
     expect(generateHmacMock).toHaveBeenCalledWith('hello', 'secret', 'SHA-256')
     expect(wrapper.text()).toContain('Hexadecimal')
     expect(wrapper.text()).toContain('Base64')

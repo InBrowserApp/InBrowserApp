@@ -2,9 +2,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref, defineComponent, nextTick, type Ref } from 'vue'
 import RandomPasswordGenerator from './RandomPasswordGenerator.vue'
-
 const storage = vi.hoisted(() => new Map<string, Ref<unknown>>())
-
 vi.mock('@vueuse/core', () => ({
   useStorage: (key: string, initialValue: unknown) => {
     if (!storage.has(key)) {
@@ -13,7 +11,6 @@ vi.mock('@vueuse/core', () => ({
     return storage.get(key) as Ref<unknown>
   },
 }))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -22,7 +19,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<h3 class="tool-section-header"><slot /></h3>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardTooltip: {
     name: 'CopyToClipboardTooltip',
@@ -40,7 +36,6 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="regenerate" @click="$emit(\'click\')">Regenerate</button>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -75,17 +70,15 @@ vi.mock('naive-ui', async () => {
     name: 'NText',
     template: '<span class="n-text"><slot /></span>',
   })
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NTabs,
     NTabPane,
     NText,
-    NFlex: Base,
     NIcon: Base,
-    NGrid: Base,
-    NGi: Base,
   }
 })
-
 const RandomTabStub = defineComponent({
   name: 'RandomTab',
   props: {
@@ -104,7 +97,6 @@ const RandomTabStub = defineComponent({
   },
   template: '<div class="random-tab" />',
 })
-
 const WordsTabStub = defineComponent({
   name: 'WordsTab',
   props: {
@@ -123,7 +115,6 @@ const WordsTabStub = defineComponent({
   },
   template: '<div class="words-tab" />',
 })
-
 const SeparatorTabStub = defineComponent({
   name: 'SeparatorTab',
   props: {
@@ -142,7 +133,6 @@ const SeparatorTabStub = defineComponent({
   },
   template: '<div class="separator-tab" />',
 })
-
 const PinTabStub = defineComponent({
   name: 'PinTab',
   props: {
@@ -161,10 +151,8 @@ const PinTabStub = defineComponent({
   },
   template: '<div class="pin-tab" />',
 })
-
 const activeTabKey = 'tools:random-password-generator:activeTab'
 const nonceKey = 'tools:random-password-generator:nonce'
-
 const mountGenerator = () =>
   mount(RandomPasswordGenerator, {
     global: {
@@ -176,67 +164,50 @@ const mountGenerator = () =>
       },
     },
   })
-
 describe('RandomPasswordGenerator', () => {
   beforeEach(() => {
     storage.clear()
   })
-
   it('switches displayed password based on active tab', async () => {
     storage.set(activeTabKey, ref('random'))
     storage.set(nonceKey, ref(0))
-
     const wrapper = mountGenerator()
     await nextTick()
     const passwordText = () => wrapper.find('.n-text').text()
-
     expect(passwordText()).toBe('random-value')
-
     const activeTab = storage.get(activeTabKey) as Ref<string>
     activeTab.value = 'words'
     await nextTick()
     expect(passwordText()).toBe('words-value')
-
     activeTab.value = 'separator'
     await nextTick()
     expect(passwordText()).toBe('separator-value')
-
     activeTab.value = 'pin'
     await nextTick()
     expect(passwordText()).toBe('pin-value')
-
     activeTab.value = 'unknown'
     await nextTick()
     expect(passwordText()).toBe('')
   })
-
   it('increments nonce when regenerating', async () => {
     storage.set(activeTabKey, ref('random'))
     storage.set(nonceKey, ref(0))
-
     const wrapper = mountGenerator()
     const nonce = storage.get(nonceKey) as Ref<number>
-
     await wrapper.find('button.regenerate').trigger('click')
-
     expect(nonce.value).toBe(1)
   })
-
   it('renders tab labels and updates active tab via tabs v-model', async () => {
     storage.set(activeTabKey, ref('random'))
     storage.set(nonceKey, ref(0))
-
     const wrapper = mountGenerator()
     await nextTick()
-
     expect(wrapper.text()).toContain('Random')
     expect(wrapper.text()).toContain('Words')
     expect(wrapper.text()).toContain('Separator')
     expect(wrapper.text()).toContain('PIN')
-
     wrapper.findComponent({ name: 'NTabs' }).vm.$emit('update:value', 'words')
     await nextTick()
-
     expect((storage.get(activeTabKey) as Ref<string>).value).toBe('words')
     expect(wrapper.find('.n-text').text()).toBe('words-value')
   })

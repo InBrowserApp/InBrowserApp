@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CodeShotInputSection from './CodeShotInputSection.vue'
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -12,15 +11,11 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFormItem: defineComponent({
-      name: 'NFormItem',
-      template: '<label><slot /></label>',
-    }),
+    ...actual,
     NInput: defineComponent({
       name: 'NInput',
       props: {
@@ -42,7 +37,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('CodeShotInputSection', () => {
   it('binds the code input and emits updates', () => {
     const wrapper = mount(CodeShotInputSection, {
@@ -50,11 +44,9 @@ describe('CodeShotInputSection', () => {
         code: 'const answer = 42',
       },
     })
-
     const input = wrapper.findComponent({ name: 'NInput' })
     expect(input.props('type')).toBe('textarea')
     expect(input.props('placeholder')).toBe('Paste or type your snippet here...')
-
     input.vm.$emit('update:value', 'const next = 13')
     expect(wrapper.emitted('update:code')?.[0]).toEqual(['const next = 13'])
   })

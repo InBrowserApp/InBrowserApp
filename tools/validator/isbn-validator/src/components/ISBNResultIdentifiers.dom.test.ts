@@ -1,17 +1,14 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NDescriptionsItem: defineComponent({
       name: 'NDescriptionsItem',
       props: ['label'],
       template: '<div class="item" :data-label="label"><slot /></div>',
-    }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="flex"><slot /></div>',
     }),
     NText: defineComponent({
       name: 'NText',
@@ -20,9 +17,7 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 import ISBNResultIdentifiers from './ISBNResultIdentifiers.vue'
-
 const baseResult = {
   input: '',
   normalized: '',
@@ -38,7 +33,6 @@ const baseResult = {
   isbn13: null,
   prefix: null,
 }
-
 describe('ISBNResultIdentifiers', () => {
   it('reports not available values when invalid', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
@@ -53,12 +47,10 @@ describe('ISBNResultIdentifiers', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Not available')
     expect(wrapper.text()).toContain('-')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
-
   it('falls back to placeholders when valid values are missing', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
       props: {
@@ -79,12 +71,10 @@ describe('ISBNResultIdentifiers', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Not available')
     expect(wrapper.text()).toContain('-')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
-
   it('shows non-convertible ISBN-13 values', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
       props: {
@@ -105,14 +95,12 @@ describe('ISBNResultIdentifiers', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Not convertible')
     expect(wrapper.text()).toContain('9790306406156')
     expect(wrapper.text()).toContain('979')
     expect(wrapper.text()).toContain('13')
     expect(wrapper.findAll('.copy')).toHaveLength(1)
   })
-
   it('shows ISBN-13 fallbacks when prefix is missing', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
       props: {
@@ -134,13 +122,11 @@ describe('ISBNResultIdentifiers', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('Not available')
     expect(wrapper.text()).toContain('Not convertible')
     expect(wrapper.text()).toContain('13')
     expect(wrapper.findAll('.copy')).toHaveLength(0)
   })
-
   it('shows convertible ISBN-13 values and copies both identifiers', () => {
     const wrapper = mount(ISBNResultIdentifiers, {
       props: {
@@ -162,7 +148,6 @@ describe('ISBNResultIdentifiers', () => {
         },
       },
     })
-
     expect(wrapper.text()).toContain('0306406152')
     expect(wrapper.text()).toContain('9780306406157')
     expect(wrapper.text()).toContain('978')

@@ -2,12 +2,11 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick, ref } from 'vue'
 import PlaceholderTextOptions from './PlaceholderTextOptions.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
-    NGrid: actual.NGrid,
+    ...actual,
     NFormItemGi: actual.NFormItemGi,
     NColorPicker: defineComponent({
       name: 'NColorPicker',
@@ -45,7 +44,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 const Wrapper = defineComponent({
   components: { PlaceholderTextOptions },
   setup() {
@@ -54,7 +52,6 @@ const Wrapper = defineComponent({
     const textColor = ref('#000000')
     const customText = ref('')
     const fontSize = ref(0)
-
     return {
       width,
       height,
@@ -73,38 +70,51 @@ const Wrapper = defineComponent({
     />
   `,
 })
-
 describe('PlaceholderTextOptions', () => {
   it('uses dimensions for the custom text placeholder', () => {
     const wrapper = mount(Wrapper)
-
     const input = wrapper.findComponent({ name: 'NInput' })
     expect(input.props('placeholder')).toBe('320 × 240')
   })
-
   it('updates custom text and font size', async () => {
     const wrapper = mount(Wrapper)
-
     const input = wrapper.findComponent({ name: 'NInput' })
     input.vm.$emit('update:value', 'Hello')
     await nextTick()
-
-    expect((wrapper.vm as { customText: string }).customText).toBe('Hello')
-
+    expect(
+      (
+        wrapper.vm as {
+          customText: string
+        }
+      ).customText,
+    ).toBe('Hello')
     input.vm.$emit('update:value', null)
     await nextTick()
-
-    expect((wrapper.vm as { customText: string }).customText).toBe('')
-
+    expect(
+      (
+        wrapper.vm as {
+          customText: string
+        }
+      ).customText,
+    ).toBe('')
     const numberInput = wrapper.findComponent({ name: 'NInputNumber' })
     numberInput.vm.$emit('update:value', 18)
     await nextTick()
-
-    expect((wrapper.vm as { fontSize: number }).fontSize).toBe(18)
-
+    expect(
+      (
+        wrapper.vm as {
+          fontSize: number
+        }
+      ).fontSize,
+    ).toBe(18)
     numberInput.vm.$emit('update:value', null)
     await nextTick()
-
-    expect((wrapper.vm as { fontSize: number }).fontSize).toBe(0)
+    expect(
+      (
+        wrapper.vm as {
+          fontSize: number
+        }
+      ).fontSize,
+    ).toBe(0)
   })
 })

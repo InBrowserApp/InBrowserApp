@@ -2,10 +2,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
 import EncryptResult from './EncryptResult.vue'
-
 let urlIndex = 0
 const urls = ['blob:binary', 'blob:base64', 'blob:hex', 'blob:jwe']
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: (source?: { value?: unknown }) => {
     if (source && typeof source === 'object' && 'value' in source) {
@@ -14,7 +12,6 @@ vi.mock('@vueuse/core', () => ({
     return ref(urls[urlIndex++] ?? 'blob:url')
   },
 }))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -23,7 +20,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<h3 class="tool-section-header"><slot /></h3>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -31,7 +27,6 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="copy" />',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -57,26 +52,25 @@ vi.mock('naive-ui', async () => {
     name: 'NPopover',
     template: '<div class="n-popover"><slot name="trigger" /><slot /></div>',
   })
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NSpace: Base,
     NAlert,
     NInput,
     NButton,
     NIcon: Base,
     NPopover,
-    NFlex: Base,
     NCollapse: Base,
     NCollapseItem: Base,
     NDescriptions: Base,
     NDescriptionsItem: Base,
   }
 })
-
 describe('EncryptResult', () => {
   beforeEach(() => {
     urlIndex = 0
   })
-
   it('renders an error alert', () => {
     const wrapper = mount(EncryptResult, {
       props: {
@@ -89,11 +83,9 @@ describe('EncryptResult', () => {
         outputFormat: 'base64',
       },
     })
-
     expect(wrapper.find('.n-alert').exists()).toBe(true)
     expect(wrapper.text()).toContain('boom')
   })
-
   it('renders raw download links and parameter details', () => {
     const wrapper = mount(EncryptResult, {
       props: {
@@ -106,13 +98,11 @@ describe('EncryptResult', () => {
         outputFormat: 'hex',
       },
     })
-
     const downloadLinks = wrapper.findAll('[data-download]')
     expect(downloadLinks).toHaveLength(3)
     expect(wrapper.text()).toContain('aa')
     expect(wrapper.text()).toContain('bb')
   })
-
   it('renders base64 and hex links when binary output is missing', () => {
     const wrapper = mount(EncryptResult, {
       props: {
@@ -125,13 +115,11 @@ describe('EncryptResult', () => {
         outputFormat: 'base64',
       },
     })
-
     const downloadLinks = wrapper.findAll('[data-download]')
     expect(downloadLinks).toHaveLength(2)
     expect(wrapper.text()).toContain('Base64')
     expect(wrapper.text()).toContain('Hex')
   })
-
   it('renders a single JWE download link', () => {
     const wrapper = mount(EncryptResult, {
       props: {
@@ -144,12 +132,10 @@ describe('EncryptResult', () => {
         outputFormat: 'base64',
       },
     })
-
     const downloadLinks = wrapper.findAll('[data-download]')
     expect(downloadLinks).toHaveLength(1)
     expect(downloadLinks[0]?.attributes('data-download')).toBe('encrypted.jwe')
   })
-
   it('evaluates JWE-only computed exports as empty text payloads', () => {
     const wrapper = mount(EncryptResult, {
       props: {
@@ -162,7 +148,6 @@ describe('EncryptResult', () => {
         outputFormat: 'hex',
       },
     })
-
     const vm = wrapper.vm as unknown as {
       $?: {
         setupState?: {
@@ -171,7 +156,6 @@ describe('EncryptResult', () => {
         }
       }
     }
-
     expect(vm.$?.setupState?.base64Content).toBe('')
     expect(vm.$?.setupState?.hexContent).toBe('')
   })
