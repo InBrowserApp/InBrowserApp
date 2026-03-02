@@ -14,11 +14,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div />',
   })
-  const makeStub = (name: string) =>
-    defineComponent({
-      name,
-      template: '<div><slot /></div>',
-    })
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,

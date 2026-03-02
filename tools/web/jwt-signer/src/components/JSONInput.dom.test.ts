@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { NFormItem, NInput } from 'naive-ui'
 import JSONInput from './JSONInput.vue'

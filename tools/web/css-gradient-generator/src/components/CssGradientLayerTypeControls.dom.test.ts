@@ -3,11 +3,6 @@ import { mount } from '@vue/test-utils'
 import CssGradientLayerTypeControls from './CssGradientLayerTypeControls.vue'
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-  const makeStub = (name: string) =>
-    defineComponent({
-      name,
-      template: '<div><slot /></div>',
-    })
   const NSelect = defineComponent({
     name: 'NSelect',
     props: {

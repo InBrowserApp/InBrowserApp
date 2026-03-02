@@ -1,6 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import CodeShotExportPanel from './CodeShotExportPanel.vue'
 import { rasterizeSvg } from '../utils/raster'
 vi.mock('../utils/raster', () => ({

@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { NButton } from 'naive-ui'
 import ColorPickerImageSection from './ColorPickerImageSection.vue'

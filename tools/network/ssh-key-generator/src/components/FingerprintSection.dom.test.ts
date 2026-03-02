@@ -3,9 +3,6 @@ import { mount } from '@vue/test-utils'
 import FingerprintSection from './FingerprintSection.vue'
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-  const Base = defineComponent({
-    template: '<div><slot /></div>',
-  })
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,

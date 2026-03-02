@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils'
 import CronFieldEveryDescription from './CronFieldEveryDescription.vue'
 import CronFieldHeader from './CronFieldHeader.vue'
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,

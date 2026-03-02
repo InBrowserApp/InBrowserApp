@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import MimeTypeIntro from './MimeTypeIntro.vue'
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,

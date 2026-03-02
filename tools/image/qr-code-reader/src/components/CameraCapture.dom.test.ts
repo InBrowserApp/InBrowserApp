@@ -144,9 +144,8 @@ describe('CameraCapture', () => {
     await wrapper.vm.$nextTick()
     await vm.startCamera()
 
-    expect((wrapper.emitted('error')?.[0]?.[0] as string).toLowerCase()).toContain(
-      'permission denied',
-    )
+    const emittedError = wrapper.emitted('error')?.[0]?.[0]
+    expect(String(emittedError).toLowerCase()).toContain('permission denied')
     expect(vm.permissionDenied).toBe(true)
   })
 

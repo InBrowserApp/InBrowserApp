@@ -5,7 +5,6 @@ vi.mock('@vueuse/core', () => ({
   useDebounce: <T>(value: T) => value,
 }))
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,

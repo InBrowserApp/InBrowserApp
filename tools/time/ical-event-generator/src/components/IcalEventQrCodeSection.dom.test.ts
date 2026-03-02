@@ -11,7 +11,6 @@ vi.mock('@shared/ui/tool', () => ({
   },
 }))
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
   const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
     ...actual,
