@@ -7,19 +7,13 @@
       <n-spin :show="isLoadingDocument">
         <div class="preview-grid">
           <div v-for="item in items" :key="item.page" class="preview-cell">
-            <button
+            <n-checkbox
               class="page-select-toggle"
-              :class="{ 'page-select-toggle--selected': selectedPageSet.has(item.page) }"
-              type="button"
+              size="large"
+              :checked="selectedPageSet.has(item.page)"
               :aria-label="labels.selectPage(item.page)"
-              :aria-pressed="selectedPageSet.has(item.page)"
               @click.stop="emit('toggle-page', item.page, $event)"
-            >
-              <span
-                class="page-select-toggle__inner"
-                :class="{ 'page-select-toggle__inner--selected': selectedPageSet.has(item.page) }"
-              />
-            </button>
+            />
 
             <button
               class="page-card"
@@ -54,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import { NAlert, NEmpty, NFlex, NSpin, NText } from 'naive-ui'
+import { NAlert, NCheckbox, NEmpty, NFlex, NSpin, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PreviewItem } from './usePdfSplitter'
 
@@ -114,34 +108,19 @@ const labels = {
   top: 8px;
   right: 8px;
   z-index: 2;
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--n-border-color) 78%, #a7adb6 22%);
+  border-radius: 10px;
   background: color-mix(in srgb, var(--n-color-target) 72%, #a7adb6 28%);
-  padding: 0;
-  cursor: pointer;
+  padding: 4px 6px;
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 10px color-mix(in srgb, #000 12%, transparent);
 }
 
-.page-select-toggle__inner {
-  display: inline-block;
-  width: 6px;
-  height: 12px;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  transform: rotate(45deg) translate(-1px, -1px);
-  transition: border-color 0.15s ease;
+.page-select-toggle :deep(.n-checkbox__label) {
+  display: none;
 }
 
-.page-select-toggle--selected {
-  border-color: var(--n-primary-color);
-  background: var(--n-primary-color);
-}
-
-.page-select-toggle__inner--selected {
-  border-color: #fff;
+.page-select-toggle :deep(.n-checkbox-box-wrapper) {
+  margin-right: 0;
 }
 
 .page-card__badge {
