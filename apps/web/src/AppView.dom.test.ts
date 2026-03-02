@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 
 const route = {
+  path: '/initial',
   fullPath: '/initial',
 }
 
@@ -27,7 +28,8 @@ vi.mock('vue-router', async (importOriginal) => {
 
 describe('AppView', () => {
   it('renders the nav layout and router view', async () => {
-    route.fullPath = '/tools/search?query=test'
+    route.path = '/tools'
+    route.fullPath = '/tools?query=test'
 
     const AppView = (await import('./AppView.vue')).default
     const wrapper = mount(AppView)

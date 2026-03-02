@@ -13,16 +13,21 @@ const toolsResults = ref<ToolInfo[]>([
   } as unknown as ToolInfo,
 ])
 const searching = ref(false)
+const warmup = vi.fn()
+const useToolsSearchWorkerMock = vi.fn(() => ({
+  toolsResults: computed(() => toolsResults.value),
+  searching,
+  warmup,
+}))
 
-vi.mock('@registry/tools/search', () => ({
-  useSearchTools: vi.fn(() => ({
-    toolsResults: computed(() => toolsResults.value),
-    searching,
-  })),
+vi.mock('../../../composables/useToolsSearchWorker', () => ({
+  useToolsSearchWorker: useToolsSearchWorkerMock,
 }))
 
 describe('useSearchResults', () => {
   beforeEach(() => {
+    useToolsSearchWorkerMock.mockClear()
+    warmup.mockClear()
     toolsResults.value = [
       {
         toolID: 'tool-a',
@@ -38,10 +43,11 @@ describe('useSearchResults', () => {
   it('maps search tools output to autocomplete result options', async () => {
     const { useSearchResults } = await import('./useSearchResults')
 
-    const { query, loading, searchResults } = useSearchResults()
+    const { query, loading, searchResults, warmup: warmupFn } = useSearchResults()
 
     expect(query.value).toBe('')
     expect(loading.value).toBe(false)
+    expect(warmupFn).toBe(warmup)
     expect(searchResults.value).toEqual([
       {
         label: 'tool-a',
@@ -50,6 +56,14 @@ describe('useSearchResults', () => {
         info: toolsResults.value[0],
       },
     ])
+    expect(useToolsSearchWorkerMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        debounceMs: 80,
+        lazy: true,
+        allowEmptyQuerySearch: false,
+        immediateFirstSearch: true,
+      }),
+    )
   })
 
   it('renders result labels with ToolEntry', async () => {

@@ -13,11 +13,6 @@ export const routesWithoutI18n: RouteRecordRaw[] = [
     name: 'tools',
     component: () => import('../views/ToolsView.vue'),
   },
-  {
-    path: '/tools/search',
-    name: 'search-tools',
-    component: () => import('../views/ToolsSearchView.vue'),
-  },
   ...toolRoutes,
 ]
 

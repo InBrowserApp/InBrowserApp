@@ -21,7 +21,6 @@ describe('router routes', () => {
     expect(routesWithoutI18n.map((route) => route.path)).toEqual([
       '/',
       '/tools',
-      '/tools/search',
       '/tools/mock-tool',
     ])
   })
@@ -38,17 +37,16 @@ describe('router routes', () => {
 
     const modules = await Promise.all(loaders.map((load) => load()))
 
-    expect(modules).toHaveLength(4)
+    expect(modules).toHaveLength(3)
     expect(modules.every((module) => 'default' in module)).toBe(true)
   })
 
   it('adds aliases for every supported language', async () => {
     const { routes } = await import('./routes')
 
-    expect(routes).toHaveLength(4)
+    expect(routes).toHaveLength(3)
     expect(routes[0]?.alias).toEqual(['/en/', '/zh-CN/'])
     expect(routes[1]?.alias).toEqual(['/en/tools', '/zh-CN/tools'])
-    expect(routes[2]?.alias).toEqual(['/en/tools/search', '/zh-CN/tools/search'])
-    expect(routes[3]?.alias).toEqual(['/en/tools/mock-tool', '/zh-CN/tools/mock-tool'])
+    expect(routes[2]?.alias).toEqual(['/en/tools/mock-tool', '/zh-CN/tools/mock-tool'])
   })
 })

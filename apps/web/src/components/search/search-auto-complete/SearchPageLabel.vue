@@ -1,7 +1,7 @@
 <template>
   <CustomRouterLink
     :to="{
-      name: 'search-tools',
+      name: 'tools',
       query: {
         query: query,
       },

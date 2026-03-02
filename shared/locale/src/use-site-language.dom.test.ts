@@ -98,11 +98,11 @@ describe('use-site-language', () => {
     const { useSiteLanguagePath } = await import('./use-site-language')
 
     route.path = '/en/tools'
-    const { path } = useSiteLanguagePath({ path: '/tools/search' })
-    expect(path.value).toBe('/en/tools/search')
+    const { path } = useSiteLanguagePath({ path: '/tools' })
+    expect(path.value).toBe('/en/tools')
 
     route.path = '/tools'
-    expect(path.value).toBe('/tools/search')
+    expect(path.value).toBe('/tools')
     expect(resolve).toHaveBeenCalled()
   })
 })

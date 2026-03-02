@@ -38,9 +38,10 @@ const searchActionOption = computed(() => ({
 
 const renderSearchActionLabel = vi.fn(() => h('div', 'search-label'))
 const renderSearchResultLabel = vi.fn(() => h('div', 'result-label'))
+const warmup = vi.fn()
 
 const push = vi.fn()
-const resolve = vi.fn(({ query }) => ({ fullPath: `/tools/search?query=${query.query as string}` }))
+const resolve = vi.fn(({ query }) => ({ fullPath: `/tools?query=${query.query as string}` }))
 
 const AutoCompleteStub = defineComponent({
   name: 'NAutoComplete',
@@ -54,10 +55,13 @@ const AutoCompleteStub = defineComponent({
       required: true,
     },
   },
-  emits: ['select'],
+  emits: ['select', 'focus', 'mouseenter', 'touchstart'],
   setup(props, { emit }) {
     return () =>
       h('div', [
+        h('button', { 'data-test': 'emit-focus', onClick: () => emit('focus') }),
+        h('button', { 'data-test': 'emit-mouseenter', onClick: () => emit('mouseenter') }),
+        h('button', { 'data-test': 'emit-touchstart', onClick: () => emit('touchstart') }),
         h('button', { 'data-test': 'select-search', onClick: () => emit('select', 'search:hash') }),
         h('button', { 'data-test': 'select-local', onClick: () => emit('select', 'tool:local') }),
         h('button', {
@@ -96,6 +100,12 @@ const AutoCompleteStub = defineComponent({
 
 vi.mock('naive-ui', () => ({
   NAutoComplete: AutoCompleteStub,
+  NEmpty: defineComponent({
+    name: 'NEmpty',
+    setup() {
+      return () => h('div', { 'data-test': 'empty' })
+    },
+  }),
 }))
 
 vi.mock('@shared/locale', () => ({
@@ -124,6 +134,7 @@ vi.mock('./useSearchResults', () => ({
     query: queryRef,
     loading: loadingRef,
     searchResults: searchResultsRef,
+    warmup,
   }),
   renderSearchResultLabel,
 }))
@@ -138,7 +149,19 @@ describe('SearchAutoComplete', () => {
     resolve.mockClear()
     renderSearchActionLabel.mockClear()
     renderSearchResultLabel.mockClear()
+    warmup.mockClear()
     openSpy.mockClear()
+  })
+
+  it('warms up search worker on focus and pointer intent', async () => {
+    const SearchAutoComplete = (await import('./SearchAutoComplete.vue')).default
+    const wrapper = mount(SearchAutoComplete)
+
+    await wrapper.get('[data-test="emit-focus"]').trigger('click')
+    await wrapper.get('[data-test="emit-mouseenter"]').trigger('click')
+    await wrapper.get('[data-test="emit-touchstart"]').trigger('click')
+
+    expect(warmup).toHaveBeenCalledTimes(3)
   })
 
   it('routes search actions with and without locale prefixes', async () => {
@@ -146,11 +169,11 @@ describe('SearchAutoComplete', () => {
     const wrapper = mount(SearchAutoComplete)
 
     await wrapper.get('[data-test="select-search"]').trigger('click')
-    expect(push).toHaveBeenCalledWith('/tools/search?query=hash')
+    expect(push).toHaveBeenCalledWith('/tools?query=hash')
 
     localeRef.value = 'en'
     await wrapper.get('[data-test="select-search"]').trigger('click')
-    expect(push).toHaveBeenLastCalledWith('/en/tools/search?query=hash')
+    expect(push).toHaveBeenLastCalledWith('/en/tools?query=hash')
 
     const optionsLength = Number(
       wrapper.get('[data-options-length]').attributes('data-options-length'),
