@@ -12,9 +12,13 @@
               :class="{ 'page-select-toggle--selected': selectedPageSet.has(item.page) }"
               type="button"
               :aria-label="labels.selectPage(item.page)"
+              :aria-pressed="selectedPageSet.has(item.page)"
               @click.stop="emit('toggle-page', item.page, $event)"
             >
-              <span class="page-select-toggle__inner" />
+              <span
+                class="page-select-toggle__inner"
+                :class="{ 'page-select-toggle__inner--selected': selectedPageSet.has(item.page) }"
+              />
             </button>
 
             <button
@@ -123,21 +127,21 @@ const labels = {
 
 .page-select-toggle__inner {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: transparent;
-  transition: background-color 0.15s ease;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: border-color 0.15s ease;
 }
 
 .page-select-toggle--selected {
   border-color: var(--n-primary-color);
-  background: color-mix(in srgb, var(--n-primary-color) 22%, var(--n-color-target));
+  background: var(--n-primary-color);
 }
 
-.page-select-toggle--selected .page-select-toggle__inner {
-  background: var(--n-primary-color);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--n-primary-color) 30%, transparent);
+.page-select-toggle__inner--selected {
+  border-color: #fff;
 }
 
 .page-card__badge {
