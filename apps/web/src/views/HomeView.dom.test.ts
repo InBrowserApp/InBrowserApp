@@ -35,6 +35,9 @@ describe('HomeView', () => {
 
     expect(useHead).toHaveBeenCalledWith({ title: 'InBrowser.App' })
     expect(wrapper.find('[data-test="airplane"]').exists()).toBe(true)
+    expect(wrapper.get('#home-purpose-title').text()).toBe('What Is InBrowser.App?')
+    expect(wrapper.text()).toContain('No account needed, open and use instantly.')
+    expect(wrapper.text()).toContain('2 tools are ready to use right now.')
     expect(wrapper.find('[data-test="dev-say"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="search"]').exists()).toBe(true)
     expect(wrapper.get('[data-test="grid"]').attributes('data-count')).toBe('2')
