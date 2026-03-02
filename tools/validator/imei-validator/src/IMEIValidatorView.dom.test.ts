@@ -21,6 +21,10 @@ const stubs = {
     props: ['validationResult'],
     template: '<div class="imei-result" />',
   },
+  WhatIsIMEIValidator: {
+    name: 'WhatIsIMEIValidator',
+    template: '<div class="imei-what-is" />',
+  },
 }
 
 describe('IMEIValidatorView', () => {
@@ -39,6 +43,7 @@ describe('IMEIValidatorView', () => {
 
     expect(wrapper.find('.imei-input').exists()).toBe(true)
     expect(wrapper.find('.imei-result').exists()).toBe(true)
+    expect(wrapper.find('.imei-what-is').exists()).toBe(true)
   })
 
   it('hides result when input is empty', () => {
@@ -52,6 +57,7 @@ describe('IMEIValidatorView', () => {
 
     expect(wrapper.find('.imei-input').exists()).toBe(true)
     expect(wrapper.find('.imei-result').exists()).toBe(false)
+    expect(wrapper.find('.imei-what-is').exists()).toBe(true)
   })
 
   it('updates storage when input emits a new value', async () => {
