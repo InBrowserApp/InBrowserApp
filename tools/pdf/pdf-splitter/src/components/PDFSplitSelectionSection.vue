@@ -4,16 +4,12 @@
     <n-flex vertical :size="12">
       <n-flex vertical :size="6">
         <n-text strong>{{ labels.rangeLabel }}</n-text>
-        <n-flex :size="8" :wrap="false">
-          <n-input
-            :value="rangeInput"
-            :placeholder="labels.rangePlaceholder"
-            clearable
-            @update:value="emit('update:range-input', $event)"
-            @keydown.enter.prevent="emit('apply-range')"
-          />
-          <n-button type="primary" @click="emit('apply-range')">{{ labels.apply }}</n-button>
-        </n-flex>
+        <n-input
+          :value="rangeInput"
+          :placeholder="labels.rangePlaceholder"
+          clearable
+          @update:value="emit('update:range-input', $event)"
+        />
       </n-flex>
 
       <n-flex :size="8" wrap>
@@ -21,11 +17,6 @@
         <n-button tertiary @click="emit('select-odd')">{{ labels.selectOdd }}</n-button>
         <n-button tertiary @click="emit('select-even')">{{ labels.selectEven }}</n-button>
         <n-button tertiary @click="emit('clear-selection')">{{ labels.clear }}</n-button>
-      </n-flex>
-
-      <n-flex vertical :size="6">
-        <n-text strong>{{ labels.outputName }}</n-text>
-        <n-input :value="outputName" clearable @update:value="emit('update:output-name', $event)" />
       </n-flex>
 
       <n-flex vertical :size="6">
@@ -65,17 +56,14 @@ defineProps<{
   pageCount: number
   selectedCount: number
   rangeInput: string
-  outputName: string
   outputMode: SplitOutputMode
   multipleMode: SplitMultipleMode
 }>()
 
 const emit = defineEmits<{
   (event: 'update:range-input', value: string): void
-  (event: 'update:output-name', value: string): void
   (event: 'update:output-mode', value: SplitOutputMode): void
   (event: 'update:multiple-mode', value: SplitMultipleMode): void
-  (event: 'apply-range'): void
   (event: 'select-all'): void
   (event: 'select-odd'): void
   (event: 'select-even'): void
@@ -86,12 +74,10 @@ const labels = {
   title: 'Select Pages',
   rangeLabel: 'Page ranges',
   rangePlaceholder: 'Examples: 1-3,5,8-10',
-  apply: 'Apply',
   selectAll: 'All',
   selectOdd: 'Odd',
   selectEven: 'Even',
   clear: 'Clear',
-  outputName: 'Output filename',
   outputMode: 'Output mode',
   modeSingle: 'Extract to one PDF',
   modeMultiple: 'Split to multiple PDFs',

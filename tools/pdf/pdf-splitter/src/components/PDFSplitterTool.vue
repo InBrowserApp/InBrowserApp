@@ -13,14 +13,11 @@
       :page-count="pageCount"
       :selected-count="selectedCount"
       :range-input="rangeInput"
-      :output-name="outputName"
       :output-mode="outputMode"
       :multiple-mode="multipleMode"
-      @update:range-input="rangeInput = $event"
-      @update:output-name="outputName = $event"
-      @update:output-mode="outputMode = $event"
-      @update:multiple-mode="multipleMode = $event"
-      @apply-range="handleApplyRange"
+      @update:range-input="handleRangeInputChange($event)"
+      @update:output-mode="setOutputMode($event)"
+      @update:multiple-mode="setMultipleMode($event)"
       @select-all="selectAll"
       @select-odd="selectOddPages"
       @select-even="selectEvenPages"
@@ -45,7 +42,6 @@
       :download-url="downloadUrl"
       :result-filename="resultFilename"
       :result-file-count="resultFileCount"
-      @reset="handleReset"
       @generate="handleGenerate"
     />
   </template>
@@ -83,7 +79,6 @@ const {
   file,
   pageCount,
   rangeInput,
-  outputName,
   outputMode,
   multipleMode,
   isLoadingDocument,
@@ -104,8 +99,10 @@ const {
   downloadUrl,
   canGenerate,
   handleUpload,
-  applyRangeSelection,
+  handleRangeInputChange,
   togglePageSelection,
+  setOutputMode,
+  setMultipleMode,
   selectAll,
   selectOddPages,
   selectEvenPages,
@@ -113,7 +110,6 @@ const {
   openPreview,
   closePreview,
   generate,
-  resetState,
 } = usePdfSplitter()
 
 const rangeErrorMessage = computed(() => {
@@ -170,14 +166,6 @@ const generateErrorMessage = computed(() => {
 
 const previewModalTitle = computed(() => `Page ${previewPage.value ?? ''} Preview`)
 
-const handleApplyRange = (): void => {
-  const result = applyRangeSelection()
-
-  if (!result.success && result.errorCode) {
-    message.error(rangeErrorMessage.value || 'Page range expression is invalid.')
-  }
-}
-
 const handleTogglePage = (page: number, event: MouseEvent): void => {
   togglePageSelection(page, event.shiftKey)
 }
@@ -208,10 +196,6 @@ const handlePreviewVisible = (visible: boolean): void => {
   if (!visible) {
     closePreview()
   }
-}
-
-const handleReset = async (): Promise<void> => {
-  await resetState()
 }
 </script>
 

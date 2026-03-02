@@ -52,13 +52,14 @@ type HarnessVm = {
   selectedPages: number[]
   outputMode: 'single' | 'multiple'
   multipleMode: 'ranges' | 'pages'
-  outputName: string
   items: Array<{ page: number; thumbnailUrl: string | null }>
   resultFilename: string
   resultFileCount: number
   hasResult: boolean
   handleUpload: (file: File) => Promise<void>
-  applyRangeSelection: () => { success: boolean; errorCode?: string }
+  handleRangeInputChange: (value: string) => { success: boolean; errorCode?: string }
+  setOutputMode: (mode: 'single' | 'multiple') => void
+  setMultipleMode: (mode: 'ranges' | 'pages') => void
   generate: () => Promise<{ success: boolean; errorCode?: string }>
 }
 
@@ -112,7 +113,7 @@ describe('usePdfSplitter', () => {
     expect(renderPageMock).toHaveBeenCalled()
   })
 
-  it('applies typed ranges to selection', async () => {
+  it('applies typed ranges to selection automatically', async () => {
     const wrapper = mount(Harness)
     const vm = wrapper.vm as unknown as HarnessVm
 
@@ -120,8 +121,7 @@ describe('usePdfSplitter', () => {
     await vm.handleUpload(file)
     await flushAll()
 
-    vm.rangeInput = '1-2,5'
-    const result = vm.applyRangeSelection()
+    const result = vm.handleRangeInputChange('1-2,5')
 
     expect(result.success).toBe(true)
     expect(vm.selectedPages).toEqual([1, 2, 5])
@@ -135,7 +135,7 @@ describe('usePdfSplitter', () => {
     await vm.handleUpload(file)
     await flushAll()
 
-    vm.outputMode = 'single'
+    vm.setOutputMode('single')
     vm.rangeInput = '1-3'
 
     const result = await vm.generate()
@@ -148,6 +148,7 @@ describe('usePdfSplitter', () => {
       expect.objectContaining({
         outputMode: 'single',
         pages: [1, 2, 3],
+        outputBaseName: 'sample-selected',
       }),
     )
   })
@@ -177,8 +178,8 @@ describe('usePdfSplitter', () => {
     await vm.handleUpload(file)
     await flushAll()
 
-    vm.outputMode = 'multiple'
-    vm.multipleMode = 'ranges'
+    vm.setOutputMode('multiple')
+    vm.setMultipleMode('ranges')
     vm.rangeInput = '1-2,3-4'
 
     const result = await vm.generate()
@@ -188,6 +189,13 @@ describe('usePdfSplitter', () => {
     expect(vm.resultFilename).toBe('sample-split.zip')
     expect(vm.resultFileCount).toBe(2)
     expect(createPdfZipMock).toHaveBeenCalledOnce()
+    expect(splitPdfWithWorkerMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        outputMode: 'multiple',
+        multipleMode: 'ranges',
+        outputBaseName: 'sample-split',
+      }),
+    )
   })
 
   it('returns range parse error for invalid expression', async () => {

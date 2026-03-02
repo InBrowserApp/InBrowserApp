@@ -2,17 +2,14 @@
   <ToolSectionHeader>{{ labels.title }}</ToolSectionHeader>
   <ToolSection>
     <n-flex vertical :size="12">
-      <n-flex :size="8" :wrap="false" justify="space-between">
-        <n-button tertiary @click="emit('reset')">{{ labels.reset }}</n-button>
-        <n-button
-          type="primary"
-          :loading="isGenerating"
-          :disabled="!canGenerate"
-          @click="emit('generate')"
-        >
-          {{ isGenerating ? labels.generating : labels.generate }}
-        </n-button>
-      </n-flex>
+      <n-button
+        type="primary"
+        :loading="isGenerating"
+        :disabled="!canGenerate"
+        @click="emit('generate')"
+      >
+        {{ isGenerating ? labels.generating : labels.generate }}
+      </n-button>
 
       <n-alert v-if="rangeErrorMessage" type="error" :title="rangeErrorMessage" />
       <n-alert v-if="generateErrorMessage" type="error" :title="generateErrorMessage" />
@@ -50,13 +47,11 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (event: 'reset'): void
   (event: 'generate'): void
 }>()
 
 const labels = {
   title: 'Generate',
-  reset: 'Reset',
   generating: 'Generating...',
   generate: 'Generate Result',
   resultReady: 'Result ready:',

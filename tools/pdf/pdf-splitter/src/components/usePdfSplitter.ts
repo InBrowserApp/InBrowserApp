@@ -36,7 +36,6 @@ export const usePdfSplitter = () => {
   const pageCount = ref(0)
   const rangeInput = ref('')
   const selectedPages = ref<number[]>([])
-  const outputName = ref(DEFAULT_OUTPUT_NAME)
   const outputMode = ref<SplitOutputMode>('single')
   const multipleMode = ref<SplitMultipleMode>('ranges')
 
@@ -79,7 +78,11 @@ export const usePdfSplitter = () => {
       return false
     }
 
-    return rangeInput.value.trim().length > 0
+    if (!hasSelection.value) {
+      return false
+    }
+
+    return !rangeErrorCode.value
   })
 
   const hasResult = computed(() => Boolean(resultPdfBlob.value || resultZipBlob.value))
@@ -88,13 +91,17 @@ export const usePdfSplitter = () => {
 
   const downloadUrl = computed(() => resultPdfURL.value ?? resultZipURL.value ?? null)
 
-  const normalizedOutputBaseName = computed(() => {
-    const normalized = getFileBaseName(outputName.value)
-    if (!normalized) {
+  const outputBaseName = computed(() => {
+    if (!file.value) {
       return DEFAULT_OUTPUT_NAME
     }
 
-    return normalized
+    const base = getFileBaseName(file.value.name)
+    if (outputMode.value === 'single') {
+      return `${base}-selected`
+    }
+
+    return `${base}-split`
   })
 
   const clearFileError = (): void => {
@@ -147,7 +154,6 @@ export const usePdfSplitter = () => {
     rangeInput.value = ''
     selectedPages.value = []
     items.value = []
-    outputName.value = DEFAULT_OUTPUT_NAME
     outputMode.value = 'single'
     multipleMode.value = 'ranges'
 
@@ -314,7 +320,6 @@ export const usePdfSplitter = () => {
     items.value = []
     selectedPages.value = []
     rangeInput.value = ''
-    outputName.value = `${getFileBaseName(nextFile.name)}-split`
     previewPage.value = null
     previewBlob.value = null
 
@@ -357,16 +362,24 @@ export const usePdfSplitter = () => {
     }
   }
 
-  const applyRangeSelection = (): SelectionResult => {
+  const handleRangeInputChange = (value: string): SelectionResult => {
+    rangeInput.value = value
+    clearResult()
+
+    if (!value.trim()) {
+      selectedPages.value = []
+      clearRangeError()
+      return { success: false }
+    }
+
     if (!pageCount.value) {
       return { success: false }
     }
 
     try {
-      const parsed = parsePageRanges(rangeInput.value, pageCount.value)
+      const parsed = parsePageRanges(value, pageCount.value)
       setSelectedPages(parsed.pagesInOrder, false)
       clearRangeError()
-      clearResult()
       return { success: true }
     } catch (error) {
       const errorCode = error instanceof Error ? error.message : PAGE_RANGE_ERROR.InvalidToken
@@ -419,9 +432,11 @@ export const usePdfSplitter = () => {
 
     clearGenerateError()
 
-    const applyResult = applyRangeSelection()
-    if (!applyResult.success) {
-      return applyResult
+    if (!selectedPages.value.length || rangeErrorCode.value) {
+      return {
+        success: false,
+        errorCode: rangeErrorCode.value || PAGE_RANGE_ERROR.Empty,
+      }
     }
 
     let parsed
@@ -446,7 +461,7 @@ export const usePdfSplitter = () => {
         segments: parsed.segments,
         outputMode: outputMode.value,
         multipleMode: multipleMode.value,
-        outputBaseName: normalizedOutputBaseName.value,
+        outputBaseName: outputBaseName.value,
       })
 
       if (!workerResult.ok) {
@@ -466,7 +481,7 @@ export const usePdfSplitter = () => {
 
       const zipBlob = await createPdfZip(workerResult.result.files)
       resultZipBlob.value = zipBlob
-      resultFilename.value = `${normalizedOutputBaseName.value}.zip`
+      resultFilename.value = `${outputBaseName.value}.zip`
       resultFileCount.value = workerResult.result.files.length
 
       return { success: true }
@@ -482,6 +497,24 @@ export const usePdfSplitter = () => {
     }
   }
 
+  const setOutputMode = (mode: SplitOutputMode): void => {
+    if (outputMode.value === mode) {
+      return
+    }
+
+    outputMode.value = mode
+    clearResult()
+  }
+
+  const setMultipleMode = (mode: SplitMultipleMode): void => {
+    if (multipleMode.value === mode) {
+      return
+    }
+
+    multipleMode.value = mode
+    clearResult()
+  }
+
   onBeforeUnmount(() => {
     void cleanupRenderer()
     revokeAllThumbnails()
@@ -493,7 +526,6 @@ export const usePdfSplitter = () => {
     rangeInput,
     selectedPages,
     selectedPageSet,
-    outputName,
     outputMode,
     multipleMode,
     isLoadingDocument,
@@ -515,8 +547,10 @@ export const usePdfSplitter = () => {
     canGenerate,
     items,
     handleUpload,
-    applyRangeSelection,
+    handleRangeInputChange,
     togglePageSelection,
+    setOutputMode,
+    setMultipleMode,
     selectAll,
     selectOddPages,
     selectEvenPages,
