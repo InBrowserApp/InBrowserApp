@@ -55,7 +55,12 @@
     >
       <n-spin :show="isPreviewLoading">
         <div class="preview-modal-content">
-          <img v-if="previewBlobURL" :src="previewBlobURL" :alt="previewModalTitle" />
+          <img
+            v-if="previewImageUrl"
+            :src="previewImageUrl"
+            :alt="previewModalTitle"
+            :class="{ 'preview-modal-image--loading': isPreviewLoading && !previewBlobURL }"
+          />
         </div>
       </n-spin>
     </n-card>
@@ -165,6 +170,15 @@ const generateErrorMessage = computed(() => {
 })
 
 const previewModalTitle = computed(() => `Page ${previewPage.value ?? ''} Preview`)
+const previewFallbackUrl = computed(() => {
+  if (previewPage.value === null) {
+    return null
+  }
+
+  const target = items.value.find((item) => item.page === previewPage.value)
+  return target?.thumbnailUrl ?? null
+})
+const previewImageUrl = computed(() => previewBlobURL.value || previewFallbackUrl.value)
 
 const handleTogglePage = (page: number, event: MouseEvent): void => {
   togglePageSelection(page, event.shiftKey)
@@ -212,5 +226,10 @@ const handlePreviewVisible = (visible: boolean): void => {
   max-height: 75vh;
   object-fit: contain;
   border-radius: 8px;
+  transition: filter 0.15s ease;
+}
+
+.preview-modal-image--loading {
+  filter: blur(1px);
 }
 </style>

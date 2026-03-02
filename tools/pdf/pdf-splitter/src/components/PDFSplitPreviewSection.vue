@@ -9,14 +9,12 @@
           <div v-for="item in items" :key="item.page" class="preview-cell">
             <button
               class="page-select-toggle"
+              :class="{ 'page-select-toggle--selected': selectedPageSet.has(item.page) }"
               type="button"
               :aria-label="labels.selectPage(item.page)"
               @click.stop="emit('toggle-page', item.page, $event)"
             >
-              <span
-                class="page-select-toggle__dot"
-                :class="{ 'page-select-toggle__dot--selected': selectedPageSet.has(item.page) }"
-              />
+              <span class="page-select-toggle__inner" />
             </button>
 
             <button
@@ -25,7 +23,6 @@
               type="button"
               @click="emit('open-preview', item.page)"
             >
-              <span class="page-card__badge">{{ item.page }}</span>
               <div class="page-card__thumbnail">
                 <n-spin v-if="item.isLoading" size="small" />
                 <n-empty
@@ -39,6 +36,7 @@
                   :alt="labels.thumbnailAlt(item.page)"
                 />
               </div>
+              <span class="page-card__badge">{{ item.page }}</span>
             </button>
           </div>
         </div>
@@ -90,6 +88,7 @@ const labels = {
 }
 
 .page-card {
+  position: relative;
   width: 100%;
   border: 1px solid var(--n-border-color);
   border-radius: 8px;
@@ -102,8 +101,8 @@ const labels = {
 .page-card--selected {
   border-color: var(--n-primary-color);
   box-shadow:
-    0 0 0 1px var(--n-primary-color-hover),
-    0 8px 18px color-mix(in srgb, var(--n-primary-color) 22%, transparent);
+    0 0 0 1px var(--n-primary-color),
+    0 10px 24px color-mix(in srgb, var(--n-primary-color) 28%, transparent);
 }
 
 .page-select-toggle {
@@ -111,41 +110,53 @@ const labels = {
   top: 8px;
   right: 8px;
   z-index: 2;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 999px;
-  border: none;
-  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--n-border-color) 78%, #a7adb6 22%);
+  background: color-mix(in srgb, var(--n-color-target) 72%, #a7adb6 28%);
   padding: 0;
   cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px color-mix(in srgb, #000 12%, transparent);
 }
 
-.page-select-toggle__dot {
-  display: block;
-  width: 100%;
-  height: 100%;
+.page-select-toggle__inner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
   border-radius: 999px;
-  border: 2px solid var(--n-border-color);
-  background: color-mix(in srgb, var(--n-color-target) 88%, transparent);
+  background: transparent;
+  transition: background-color 0.15s ease;
 }
 
-.page-select-toggle__dot--selected {
+.page-select-toggle--selected {
   border-color: var(--n-primary-color);
+  background: color-mix(in srgb, var(--n-primary-color) 22%, var(--n-color-target));
+}
+
+.page-select-toggle--selected .page-select-toggle__inner {
   background: var(--n-primary-color);
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--n-primary-color) 30%, transparent);
 }
 
 .page-card__badge {
-  display: inline-flex;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  height: 22px;
+  min-width: 28px;
+  height: 24px;
+  padding: 0 8px;
   border-radius: 999px;
   font-size: 12px;
-  color: var(--n-text-color-3);
-  background: var(--n-hover-color);
-  margin-bottom: 6px;
+  color: var(--n-text-color-2);
+  border: 1px solid color-mix(in srgb, var(--n-border-color) 74%, #a7adb6 26%);
+  background: color-mix(in srgb, var(--n-color-target) 72%, #a7adb6 28%);
+  backdrop-filter: blur(8px);
 }
 
 .page-card__thumbnail {
