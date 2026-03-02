@@ -88,17 +88,21 @@ const labels = {
 .page-card {
   position: relative;
   width: 100%;
-  border: 1px solid var(--n-border-color);
-  border-radius: 8px;
-  background: var(--n-card-color);
+  border: 1px solid color-mix(in srgb, var(--n-border-color) 74%, #d7dbe1 26%);
+  border-radius: 10px;
+  background: #fff;
   padding: 6px;
   cursor: pointer;
   text-align: left;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, #fff 75%, transparent) inset,
+    0 4px 10px color-mix(in srgb, #111827 12%, transparent);
 }
 
 .page-card--selected {
   border-color: var(--n-primary-color);
   box-shadow:
+    0 1px 0 color-mix(in srgb, #fff 75%, transparent) inset,
     0 0 0 1px var(--n-primary-color),
     0 10px 24px color-mix(in srgb, var(--n-primary-color) 28%, transparent);
 }
@@ -108,11 +112,6 @@ const labels = {
   top: 8px;
   right: 8px;
   z-index: 2;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--n-color-target) 72%, #a7adb6 28%);
-  padding: 4px 6px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 10px color-mix(in srgb, #000 12%, transparent);
 }
 
 .page-select-toggle :deep(.n-checkbox__label) {
@@ -147,9 +146,10 @@ const labels = {
   align-items: center;
   justify-content: center;
   min-height: 150px;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  background: var(--n-color-target);
+  border: 1px solid color-mix(in srgb, var(--n-border-color) 75%, #e5e7eb 25%);
+  background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
 }
 
 .page-card__thumbnail img {
