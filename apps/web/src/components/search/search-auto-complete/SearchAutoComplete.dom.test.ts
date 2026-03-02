@@ -2,8 +2,6 @@ import { computed, defineComponent, h, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-const localeRef = { value: undefined as string | undefined }
-
 const queryRef = ref('')
 const loadingRef = ref(false)
 const searchResultsRef = ref([
@@ -108,10 +106,6 @@ vi.mock('naive-ui', () => ({
   }),
 }))
 
-vi.mock('@shared/locale', () => ({
-  getLocaleFromPath: () => localeRef.value,
-}))
-
 vi.mock('vue-router', async (importOriginal) => {
   const original = await importOriginal<typeof import('vue-router')>()
 
@@ -143,7 +137,7 @@ describe('SearchAutoComplete', () => {
   const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null)
 
   beforeEach(() => {
-    localeRef.value = undefined
+    window.history.replaceState({}, '', '/tools')
     queryRef.value = 'hash'
     push.mockReset()
     resolve.mockClear()
@@ -171,7 +165,7 @@ describe('SearchAutoComplete', () => {
     await wrapper.get('[data-test="select-search"]').trigger('click')
     expect(push).toHaveBeenCalledWith('/tools?query=hash')
 
-    localeRef.value = 'en'
+    window.history.replaceState({}, '', '/en/tools')
     await wrapper.get('[data-test="select-search"]').trigger('click')
     expect(push).toHaveBeenLastCalledWith('/en/tools?query=hash')
 
@@ -185,10 +179,11 @@ describe('SearchAutoComplete', () => {
     const SearchAutoComplete = (await import('./SearchAutoComplete.vue')).default
     const wrapper = mount(SearchAutoComplete)
 
+    window.history.replaceState({}, '', '/tools')
     await wrapper.get('[data-test="select-local"]').trigger('click')
     expect(push).toHaveBeenCalledWith('/tools/local')
 
-    localeRef.value = 'zh'
+    window.history.replaceState({}, '', '/zh/tools')
     await wrapper.get('[data-test="select-local"]').trigger('click')
     expect(push).toHaveBeenLastCalledWith('/zh/tools/local')
 
