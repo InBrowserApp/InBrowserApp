@@ -1,5 +1,5 @@
 <template>
-  <PDFSplitUploadSection @upload="handleUpload" />
+  <PDFSplitUploadSection @upload="handleUploadAndScroll" />
 
   <n-alert
     v-if="fileErrorMessage"
@@ -10,11 +10,20 @@
 
   <template v-if="file">
     <PDFSplitSelectionSection
+      ref="selectionSectionRef"
       :page-count="pageCount"
       :selected-count="selectedCount"
       :range-input="rangeInput"
       :output-mode="outputMode"
       :multiple-mode="multipleMode"
+      :is-generating="isGenerating"
+      :can-generate="canGenerate"
+      :range-error-message="rangeErrorMessage"
+      :generate-error-message="generateErrorMessage"
+      :has-result="hasResult"
+      :download-url="downloadUrl"
+      :result-filename="resultFilename"
+      :result-file-count="resultFileCount"
       @update:range-input="handleRangeInputChange($event)"
       @update:output-mode="setOutputMode($event)"
       @update:multiple-mode="setMultipleMode($event)"
@@ -22,6 +31,7 @@
       @select-odd="selectOddPages"
       @select-even="selectEvenPages"
       @clear-selection="clearSelectedPages"
+      @generate="handleGenerate"
     />
 
     <PDFSplitPreviewSection
@@ -31,18 +41,6 @@
       :is-rendering-thumbnails="isRenderingThumbnails"
       @toggle-page="handleTogglePage"
       @open-preview="handleOpenPreview"
-    />
-
-    <PDFSplitActionsSection
-      :is-generating="isGenerating"
-      :can-generate="canGenerate"
-      :range-error-message="rangeErrorMessage"
-      :generate-error-message="generateErrorMessage"
-      :has-result="hasResult"
-      :download-url="downloadUrl"
-      :result-filename="resultFilename"
-      :result-file-count="resultFileCount"
-      @generate="handleGenerate"
     />
   </template>
 
@@ -68,7 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 import { NAlert, NCard, NModal, NSpin, useMessage } from 'naive-ui'
 import { PAGE_RANGE_ERROR } from '../utils/parse-page-ranges'
 import { PDF_ERROR } from '../pdf-errors'
@@ -76,9 +74,13 @@ import { usePdfSplitter } from './usePdfSplitter'
 import PDFSplitUploadSection from './PDFSplitUploadSection.vue'
 import PDFSplitSelectionSection from './PDFSplitSelectionSection.vue'
 import PDFSplitPreviewSection from './PDFSplitPreviewSection.vue'
-import PDFSplitActionsSection from './PDFSplitActionsSection.vue'
+
+type SelectionSectionExposed = {
+  scrollToHeading: () => void
+}
 
 const message = useMessage()
+const selectionSectionRef = ref<SelectionSectionExposed | null>(null)
 
 const {
   file,
@@ -200,6 +202,12 @@ const handleGenerate = async (): Promise<void> => {
   if (result.errorCode) {
     message.error(generateErrorMessage.value || rangeErrorMessage.value || 'Generation failed.')
   }
+}
+
+const handleUploadAndScroll = async (nextFile: File): Promise<void> => {
+  await handleUpload(nextFile)
+  await nextTick()
+  selectionSectionRef.value?.scrollToHeading()
 }
 
 const handleOpenPreview = (page: number): void => {
