@@ -194,6 +194,7 @@ export const useToolsSearchWorker = (
     const shouldSearchImmediately = immediateFirstSearch && !hadSearchText.value && hasSearchText
     hadSearchText.value = hasSearchText
     searching.value = true
+    invalidatePendingWorkerResult()
 
     if (shouldSearchImmediately) {
       debouncedSearch.cancel()

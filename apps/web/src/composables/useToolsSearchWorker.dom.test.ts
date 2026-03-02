@@ -62,6 +62,7 @@ describe('useToolsSearchWorker', () => {
   let originalWorker: typeof window.Worker | undefined
 
   beforeEach(() => {
+    vi.useRealTimers()
     originalWorker = window.Worker
     Object.defineProperty(window, 'Worker', {
       value: class Worker {},
@@ -146,6 +147,87 @@ describe('useToolsSearchWorker', () => {
     await nextTick()
 
     expect(toolsResults.value).toEqual(sourceTools)
+
+    wrapper.unmount()
+  })
+
+  it('ignores previous non-empty result while next search is waiting for debounce', async () => {
+    vi.useFakeTimers()
+
+    const sourceTools = [
+      {
+        toolID: 'one',
+        path: '/tools/one',
+        tags: [],
+        features: [],
+        meta: { en: { name: 'One', description: 'first' } },
+      },
+      {
+        toolID: 'two',
+        path: '/tools/two',
+        tags: [],
+        features: [],
+        meta: { en: { name: 'Two', description: 'second' } },
+      },
+    ] as unknown as ToolInfo[]
+    const tools = ref<ToolInfo[] | undefined>(sourceTools)
+    const query = ref('')
+
+    let toolsResults!: Ref<ToolInfo[] | undefined>
+    let searching!: Ref<boolean>
+
+    const Harness = defineComponent({
+      setup() {
+        const state = useToolsSearchWorker({
+          tools,
+          query,
+          debounceMs: 300,
+          immediateFirstSearch: true,
+        })
+        toolsResults = state.toolsResults
+        searching = state.searching
+        return () => h('div')
+      },
+    })
+
+    const wrapper = mount(Harness)
+    await nextTick()
+
+    const worker = workerInstances[0]!
+    expect(toolsResults.value).toEqual(sourceTools)
+
+    query.value = 't'
+    await nextTick()
+
+    const firstSearch = worker.messages.find((message) => message.type === 'search')
+    expect(firstSearch?.requestId).toBeTypeOf('number')
+    expect(searching.value).toBe(true)
+
+    query.value = 'tw'
+    await nextTick()
+
+    const pendingSearches = worker.messages.filter((message) => message.type === 'search')
+    expect(pendingSearches).toHaveLength(1)
+
+    worker.emitResult(firstSearch!.requestId!, ['two'])
+    await nextTick()
+
+    // The stale result from the previous query must be ignored.
+    expect(toolsResults.value).toEqual(sourceTools)
+    expect(searching.value).toBe(true)
+
+    await vi.advanceTimersByTimeAsync(301)
+
+    const allSearches = worker.messages.filter((message) => message.type === 'search')
+    expect(allSearches).toHaveLength(2)
+    const secondSearch = allSearches[1]!
+    expect(secondSearch.requestId).toBeTypeOf('number')
+
+    worker.emitResult(secondSearch.requestId!, ['two'])
+    await nextTick()
+
+    expect(searching.value).toBe(false)
+    expect(toolsResults.value?.map((tool) => tool.toolID)).toEqual(['two'])
 
     wrapper.unmount()
   })
