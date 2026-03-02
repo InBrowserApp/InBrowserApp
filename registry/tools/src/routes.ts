@@ -5,6 +5,7 @@ import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-
 import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
 import { routes as pdfToImageConverterRoutes } from '@tools/pdf-to-image-converter/routes'
+import { routes as pdfTextExtractorRoutes } from '@tools/pdf-text-extractor/routes'
 import { routes as unicodePunycodeConverterRoutes } from '@tools/unicode-punycode-converter/routes'
 import { routes as dnsLookupRoutes } from '@tools/dns-lookup/routes'
 import { routes as reverseIPLookupRoutes } from '@tools/reverse-ip-lookup/routes'
@@ -203,6 +204,7 @@ export const routes: ToolRoute[] = [
   ...pdfInfoViewerRoutes,
   ...pdfMergerRoutes,
   ...pdfToImageConverterRoutes,
+  ...pdfTextExtractorRoutes,
   ...unicodePunycodeConverterRoutes,
   ...dnsLookupRoutes,
   ...reverseIPLookupRoutes,

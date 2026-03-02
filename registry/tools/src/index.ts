@@ -6,6 +6,7 @@ import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-ow
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as pdfToImageConverterToolInfo } from '@tools/pdf-to-image-converter'
+import { toolInfo as pdfTextExtractorToolInfo } from '@tools/pdf-text-extractor'
 import { toolInfo as unicodePunycodeConverterToolInfo } from '@tools/unicode-punycode-converter'
 import { toolInfo as dnsLookupToolInfo } from '@tools/dns-lookup'
 import { toolInfo as reverseIPLookupToolInfo } from '@tools/reverse-ip-lookup'
@@ -268,6 +269,7 @@ export const tools: ToolInfo[] = [
   pdfMergerToolInfo,
   pdfToImageConverterToolInfo,
   pdfInfoViewerToolInfo,
+  pdfTextExtractorToolInfo,
 
   // Hash Tools
   sha256HashTextOrFileToolInfo,
