@@ -19,10 +19,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -35,7 +31,7 @@ vi.mock('naive-ui', async () => {
     name: 'NStatistic',
     props: {
       value: {
-        type: Number,
+        type: [Number, String],
         default: undefined,
       },
       label: {

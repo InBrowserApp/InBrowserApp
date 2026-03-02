@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref } from 'vue'
+import { filesize } from 'filesize'
 import OptimizationResults from './OptimizationResults.vue'
 
 const objectUrlValue = ref<string | null>('blob:download')
@@ -16,10 +17,6 @@ vi.mock('@vueuse/core', async () => {
     },
   }
 })
-
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
@@ -116,8 +113,10 @@ describe('OptimizationResults', () => {
     expect(button.props('disabled')).toBe(false)
 
     const stats = wrapper.findAllComponents({ name: 'NStatistic' })
-    expect(stats[0]?.props('value')).toContain('size-')
-    expect(stats[1]?.props('value')).toContain('size-')
+    const expectedOriginalSize = filesize(new Blob(['<svg><rect /></svg>']).size) as string
+    const expectedOptimizedSize = filesize(new Blob(['<svg />']).size) as string
+    expect(stats[0]?.props('value')).toBe(expectedOriginalSize)
+    expect(stats[1]?.props('value')).toBe(expectedOptimizedSize)
     expect(wrapper.findComponent({ name: 'NIcon' }).exists()).toBe(true)
   })
 

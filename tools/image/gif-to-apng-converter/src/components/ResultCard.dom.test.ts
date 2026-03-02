@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { computed, isRef } from 'vue'
+import { filesize } from 'filesize'
 import ResultCard from './ResultCard.vue'
 import type { GifToApngResult } from '../types'
 
@@ -18,10 +19,6 @@ vi.mock('@vueuse/core', async () => {
       }),
   }
 })
-
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
 
 vi.mock('naive-ui', async () => {
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
@@ -47,6 +44,22 @@ const baseProps = {
   savedLabel: 'Saved',
   dimensionsLabel: 'Dimensions',
   fileSizeLabel: 'Size',
+}
+
+function formatPercent(value: number) {
+  if (!Number.isFinite(value) || value <= 0) return '0'
+  if (value >= 10) return `${Math.round(value)}`
+  return value.toFixed(1)
+}
+
+function formatSavedText(originalBytes: number, outputBytes: number) {
+  const delta = originalBytes - outputBytes
+  const sign = delta < 0 ? '-' : ''
+  const absDelta = Math.abs(delta)
+  const percent = originalBytes > 0 ? (absDelta / originalBytes) * 100 : 0
+  const sizeText = `${sign}${filesize(absDelta) as string}`
+  const percentText = `${sign}${formatPercent(percent)}%`
+  return `${sizeText} (${percentText})`
 }
 
 function createResult(name: string, fileSize: number, blobSize: number): GifToApngResult {
@@ -82,10 +95,10 @@ describe('ResultCard', () => {
     expect(image.attributes('src')).toBe('blob:preview')
     expect(image.attributes('alt')).toBe('demo.png')
     expect(wrapper.text()).toContain('Original:')
-    expect(wrapper.text()).toContain('size-1000')
+    expect(wrapper.text()).toContain(filesize(1000) as string)
     expect(wrapper.text()).toContain('Output:')
-    expect(wrapper.text()).toContain('size-950')
-    expect(wrapper.text()).toContain('Saved: size-50 (5.0%)')
+    expect(wrapper.text()).toContain(filesize(950) as string)
+    expect(wrapper.text()).toContain(`Saved: ${formatSavedText(1000, 950)}`)
   })
 
   it('handles larger output and hides preview when missing', () => {
@@ -99,7 +112,7 @@ describe('ResultCard', () => {
     })
 
     expect(wrapper.find('img').exists()).toBe(false)
-    expect(wrapper.text()).toContain('Saved: -size-300 (-30%)')
+    expect(wrapper.text()).toContain(`Saved: ${formatSavedText(1000, 1300)}`)
   })
 
   it('formats zero savings as 0 percent', () => {
@@ -111,7 +124,7 @@ describe('ResultCard', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('Saved: size-0 (0%)')
+    expect(wrapper.text()).toContain(`Saved: ${formatSavedText(800, 800)}`)
   })
 
   it('handles empty originals with negative zero percent savings', () => {
@@ -123,6 +136,6 @@ describe('ResultCard', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('Saved: -size-100 (-0%)')
+    expect(wrapper.text()).toContain(`Saved: ${formatSavedText(0, 100)}`)
   })
 })

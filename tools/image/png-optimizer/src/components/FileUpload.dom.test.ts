@@ -51,10 +51,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `${value} bytes`,
-}))
-
 const createPayload = (file?: File, fileList?: Array<{ file?: File }>) => ({
   file: { file },
   fileList: fileList ?? (file ? [{ file }] : []),

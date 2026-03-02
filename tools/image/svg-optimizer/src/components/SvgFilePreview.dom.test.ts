@@ -1,10 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { filesize } from 'filesize'
 import SvgFilePreview from './SvgFilePreview.vue'
-
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
@@ -39,7 +36,7 @@ describe('SvgFilePreview', () => {
 
     expect(wrapper.find('img').attributes('src')).toBe('blob:preview')
     expect(wrapper.text()).toContain('icon.svg')
-    expect(wrapper.text()).toContain('size-2048')
+    expect(wrapper.text()).toContain(filesize(2048) as string)
     expect(wrapper.text()).toContain('Delete')
     expect(wrapper.findAllComponents({ name: 'NIcon' })).toHaveLength(1)
 
