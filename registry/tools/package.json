@@ -132,6 +132,7 @@
     "@tools/pbkdf2-key-derivation": "workspace:*",
     "@tools/pdf-info-viewer": "workspace:*",
     "@tools/pdf-merger": "workspace:*",
+    "@tools/pdf-text-extractor": "workspace:*",
     "@tools/pdf-to-image-converter": "workspace:*",
     "@tools/pdf-tools": "workspace:*",
     "@tools/pgp-key-generator": "workspace:*",
