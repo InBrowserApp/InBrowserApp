@@ -77,10 +77,10 @@ export function validateIMEI(input: string): IMEIValidationResult {
   let reason: IMEIValidationReason = 'valid'
   if (length === 0) {
     reason = 'empty'
-  } else if (!isLengthValid) {
-    reason = 'invalid-length'
   } else if (!isFormatValid) {
     reason = 'invalid-format'
+  } else if (!isLengthValid) {
+    reason = 'invalid-length'
   } else if (!isChecksumValid) {
     reason = 'invalid-checksum'
   }

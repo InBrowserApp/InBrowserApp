@@ -50,6 +50,15 @@ describe('imei utilities', () => {
     expect(result.serialNumber).toBeNull()
   })
 
+  it('prioritizes format error when both format and length are invalid', () => {
+    const result = validateIMEI('4901542032375A')
+
+    expect(result.isValid).toBe(false)
+    expect(result.isLengthValid).toBe(false)
+    expect(result.isFormatValid).toBe(false)
+    expect(result.reason).toBe('invalid-format')
+  })
+
   it('marks invalid checksum', () => {
     const result = validateIMEI('490154203237519')
 
