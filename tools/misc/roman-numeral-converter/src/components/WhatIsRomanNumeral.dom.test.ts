@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsRomanNumeral from './WhatIsRomanNumeral.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const NText = defineComponent({
@@ -39,7 +31,7 @@ describe('WhatIsRomanNumeral', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('title')
+    expect(wrapper.find('.section-header').text()).toBe('What are Roman Numerals?')
     expect(wrapper.text()).toContain('MMXXIV = 2024')
   })
 })

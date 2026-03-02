@@ -2,15 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, ref, watchEffect, type Component } from 'vue'
 import RandomNumberGeneratorResults from './RandomNumberGeneratorResults.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -21,7 +12,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -34,10 +24,8 @@ vi.mock('@shared/ui/base', () => ({
       '<button type="button" v-bind="$attrs" @click="$emit(\'click\')"><slot name="icon" /><slot name="label" /><slot /></button>',
   }),
 }))
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
-
   return {
     ...actual,
     useObjectUrl: (_source: unknown) => {
@@ -47,11 +35,11 @@ vi.mock('@vueuse/core', async () => {
     },
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NButton: defineComponent({
       name: 'NButton',
       props: {
@@ -73,25 +61,12 @@ vi.mock('naive-ui', async () => {
       emits: ['click'],
       template: '<div class="n-card" v-bind="$attrs" @click="$emit(\'click\')"><slot /></div>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
-    NIcon: defineComponent({
-      name: 'NIcon',
-      template: '<span class="n-icon" />',
-    }),
     NTag: defineComponent({
       name: 'NTag',
       template: '<span class="n-tag"><slot /></span>',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
   }
 })
-
 const baseProps = {
   formattedNumbers: [] as string[],
   outputText: '',
@@ -100,23 +75,18 @@ const baseProps = {
   rollingLabel: 'start',
   rollingIcon: {} as Component,
 }
-
 describe('RandomNumberGeneratorResults', () => {
   it('shows placeholder and disables actions without results', async () => {
     const wrapper = mount(RandomNumberGeneratorResults, {
       props: baseProps,
     })
-
     await flushPromises()
-
-    expect(wrapper.text()).toContain('placeholder')
+    expect(wrapper.text()).toContain('Numbers will appear here...')
     expect(wrapper.get('[data-testid="download-results"]').attributes('disabled')).toBeDefined()
     expect(wrapper.get('[data-testid="enter-fullscreen"]').attributes('disabled')).toBeDefined()
-
     await wrapper.get('[data-testid="results-card"]').trigger('click')
     expect(wrapper.emitted('open-fullscreen')).toBeUndefined()
   })
-
   it('renders a hero number and emits actions', async () => {
     const wrapper = mount(RandomNumberGeneratorResults, {
       props: {
@@ -126,22 +96,16 @@ describe('RandomNumberGeneratorResults', () => {
         canRoll: true,
       },
     })
-
     await flushPromises()
-
     expect(wrapper.get('[data-testid="hero-number"]').text()).toBe('7')
     expect(wrapper.get('[data-testid="download-results"]').attributes('href')).toBe('blob:mock')
-
     expect(wrapper.findAll('.n-icon').length).toBeGreaterThanOrEqual(2)
-
     await wrapper.get('[data-testid="regenerate"]').trigger('click')
     await wrapper.get('[data-testid="results-card"]').trigger('click')
     await wrapper.get('[data-testid="enter-fullscreen"]').trigger('click')
-
     expect(wrapper.emitted('toggle-rolling')).toHaveLength(1)
     expect(wrapper.emitted('open-fullscreen')).toHaveLength(2)
   })
-
   it('renders tags for multiple values and keeps regenerate enabled while rolling', async () => {
     const wrapper = mount(RandomNumberGeneratorResults, {
       props: {
@@ -151,9 +115,7 @@ describe('RandomNumberGeneratorResults', () => {
         isRolling: true,
       },
     })
-
     await flushPromises()
-
     expect(wrapper.find('[data-testid="hero-number"]').exists()).toBe(false)
     expect(wrapper.findAll('.n-tag')).toHaveLength(3)
     expect(wrapper.get('[data-testid="regenerate"]').attributes('disabled')).toBeUndefined()

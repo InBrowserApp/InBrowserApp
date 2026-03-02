@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SizeInput from './SizeInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -60,7 +52,7 @@ describe('SizeInput', () => {
     })
 
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
-    expect(formItem.props('label')).toBe('size')
+    expect(formItem.props('label')).toBe('Size')
 
     const input = wrapper.findComponent({ name: 'NInputNumber' })
     input.vm.$emit('update:value', 10)

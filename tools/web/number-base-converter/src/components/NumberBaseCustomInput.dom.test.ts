@@ -1,12 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -16,7 +9,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -27,18 +19,11 @@ vi.mock('@shared/ui/base', async () => {
     }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGi: defineComponent({
-      name: 'NGi',
-      template: '<div class="n-gi"><slot /></div>',
-    }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
+    ...actual,
     NInput: defineComponent({
       name: 'NInput',
       props: ['value', 'status', 'placeholder'],
@@ -55,9 +40,7 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 import NumberBaseCustomInput from './NumberBaseCustomInput.vue'
-
 describe('NumberBaseCustomInput', () => {
   it('emits custom base updates and forwards custom input', async () => {
     const onInput = vi.fn()
@@ -69,12 +52,9 @@ describe('NumberBaseCustomInput', () => {
         onInput,
       },
     })
-
     expect(wrapper.get('[data-testid="copy"]').attributes('data-content')).toBe('zz')
-
     await wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 16)
     expect(wrapper.emitted('update:customBaseValue')?.[0]).toEqual([16])
-
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'abc')
     expect(onInput).toHaveBeenCalledWith('custom', 'abc')
   })

@@ -21,14 +21,6 @@ vi.mock('naive-ui', () => ({
   },
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 let HashResult: typeof import('./HashResult.vue').default
 
 beforeAll(async () => {

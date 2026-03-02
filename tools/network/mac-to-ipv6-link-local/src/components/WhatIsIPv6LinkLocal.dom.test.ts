@@ -1,14 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsIPv6LinkLocal from './WhatIsIPv6LinkLocal.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('WhatIsIPv6LinkLocal', () => {
   it('renders the title and description', () => {
@@ -25,7 +17,7 @@ describe('WhatIsIPv6LinkLocal', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('What is IPv6 Link-Local Address?')
+    expect(wrapper.text()).toContain('fe80::/10')
   })
 })

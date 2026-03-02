@@ -2,16 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsRegex from './WhatIsRegex.vue'
 
-const { tMock } = vi.hoisted(() => ({
-  tMock: vi.fn((key: string) => `translated:${key}`),
-}))
-
-vi.mock('vue-i18n', async () => {
-  return {
-    useI18n: () => ({ t: tMock }),
-  }
-})
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
 
@@ -39,11 +29,9 @@ describe('WhatIsRegex', () => {
     const wrapper = mount(WhatIsRegex)
 
     const markdown = wrapper.get('[data-testid="markdown"]')
-    expect(markdown.attributes('data-title')).toBe('translated:what-is-regex')
-    expect(markdown.attributes('data-description')).toBe(
-      'translated:what-is-regex-description-markdown',
+    expect(markdown.attributes('data-title')).toBe('What is Regex?')
+    expect(markdown.attributes('data-description')).toContain(
+      'Regex (regular expression) is a pattern language',
     )
-    expect(tMock).toHaveBeenCalledWith('what-is-regex')
-    expect(tMock).toHaveBeenCalledWith('what-is-regex-description-markdown')
   })
 })

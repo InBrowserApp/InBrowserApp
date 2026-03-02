@@ -4,14 +4,6 @@ import BrowserInfo from './BrowserInfo.vue'
 import HardwareInfo from './HardwareInfo.vue'
 import ScreenInfo from './ScreenInfo.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -89,7 +81,7 @@ describe('info sections', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('browser-info')
+    expect(wrapper.text()).toContain('Browser Information')
     expect(wrapper.find('browser-name-stub').exists()).toBe(true)
   })
 
@@ -103,7 +95,7 @@ describe('info sections', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('hardware-info')
+    expect(wrapper.text()).toContain('Hardware Information')
     expect(wrapper.find('cpu-cores-stub').exists()).toBe(true)
   })
 
@@ -117,7 +109,7 @@ describe('info sections', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('screen-info')
+    expect(wrapper.text()).toContain('Screen Information')
     expect(wrapper.find('screen-resolution-stub').exists()).toBe(true)
   })
 })

@@ -38,14 +38,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -233,7 +225,7 @@ describe('IPInfoView', () => {
     await flushPromises()
 
     expect(getDomainIPsMock).toHaveBeenCalledWith('example.com')
-    expect(wrapper.find('.result').attributes('data-title')).toBe('failed-to-get-ip')
+    expect(wrapper.find('.result').attributes('data-title')).toBe("Failed to get example.com's IP")
     expect(wrapper.findAll('.collapse-item')).toHaveLength(0)
   })
 })

@@ -8,14 +8,6 @@ import NotUsingDedicatedImageNote from './NotUsingDedicatedImageNote.vue'
 import RemoveButton from './RemoveButton.vue'
 import UsingDedicatedImageNote from './UsingDedicatedImageNote.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
@@ -90,16 +82,16 @@ describe('common notes', () => {
     const notUsing = mount(NotUsingDedicatedImageNote)
     const using = mount(UsingDedicatedImageNote)
 
-    expect(notUsing.text()).toContain('notUsingDedicatedImage')
-    expect(using.text()).toContain('usingDedicatedImage')
+    expect(notUsing.text()).toContain('You are not using a dedicated image.')
+    expect(using.text()).toContain('You are using a dedicated image.')
   })
 
   it('renders minification notes with icons', () => {
     const oxipng = mount(FileMinifiedUsingOxipng)
     const oxipngSvgo = mount(FileMinifiedUsingOxipngAndSvgo)
 
-    expect(oxipng.text()).toContain('minificationNote')
-    expect(oxipngSvgo.text()).toContain('minificationNote')
+    expect(oxipng.text()).toContain('All files are losslessly minified using oxipng.')
+    expect(oxipngSvgo.text()).toContain('All files are losslessly minified using oxipng and svgo.')
     expect(oxipng.find('.n-icon').exists()).toBe(true)
     expect(oxipngSvgo.find('.n-icon').exists()).toBe(true)
   })

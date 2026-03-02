@@ -49,16 +49,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 import SelectFile from './SelectFile.vue'
 
 const ImageUploadStub = {
@@ -105,7 +95,7 @@ describe('SelectFile', () => {
       },
     })
 
-    const button = wrapper.findAll('button').find((btn) => btn.text().includes('useDemoIcon'))
+    const button = wrapper.findAll('button').find((btn) => btn.text().includes('Use Demo Icon'))
     expect(button).toBeTruthy()
 
     await button!.trigger('click')

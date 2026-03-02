@@ -1,14 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, h, onMounted } from 'vue'
-
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const ToolSectionStub = defineComponent({
   name: 'ToolSection',
@@ -101,7 +93,7 @@ describe('IcalEventRecurrenceSection', () => {
 
     await flushPromises()
 
-    expect(wrapper.text()).toContain('recurrence')
+    expect(wrapper.text()).toContain('Recurrence')
 
     const frequencyUpdates = wrapper.emitted('update:recurrenceFrequency') ?? []
     expect(frequencyUpdates[frequencyUpdates.length - 1]).toEqual(['daily'])

@@ -1,15 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import CIDRMergerExcluder from './CIDRMergerExcluder.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const CIDRsInputStub = defineComponent({
   name: 'CIDRsInput',
@@ -47,8 +39,8 @@ describe('CIDRMergerExcluder', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('cidrsToMerge')
-    expect(wrapper.text()).toContain('cidrsToExclude')
+    expect(wrapper.text()).toContain('CIDRs to Merge')
+    expect(wrapper.text()).toContain('CIDRs to Exclude')
     expect(wrapper.find('.merge-result').exists()).toBe(false)
 
     const inputs = wrapper.findAllComponents({ name: 'CIDRsInput' })
@@ -67,6 +59,6 @@ describe('CIDRMergerExcluder', () => {
     expect(result.exists()).toBe(true)
     expect(result.attributes('data-merge')).toBe('10.0.0.0/24')
     expect(result.attributes('data-exclude')).toBe('10.0.1.0/24')
-    expect(wrapper.text()).toContain('mergeAndExcludeResult')
+    expect(wrapper.text()).toContain('Merge And Exclude Result')
   })
 })

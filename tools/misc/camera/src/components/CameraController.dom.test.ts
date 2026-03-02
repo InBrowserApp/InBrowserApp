@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { computed, type Ref } from 'vue'
 import CameraController from './CameraController.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: (source: Ref<Blob | null>) => computed(() => (source.value ? 'blob:mock' : null)),
 }))
@@ -174,7 +166,7 @@ describe('CameraController', () => {
 
     const wrapper = mountController()
 
-    expect(wrapper.text()).toContain('cameraNotSupported')
+    expect(wrapper.text()).toContain('Camera is not supported')
   })
 
   it('captures a photo and keeps only the latest output', async () => {
@@ -254,7 +246,7 @@ describe('CameraController', () => {
     await flushPromises()
 
     expect(vm.permissionDenied).toBe(true)
-    expect(wrapper.text()).toContain('cameraPermissionDenied')
+    expect(wrapper.text()).toContain('Camera permission denied')
   })
 
   it('applies zoom, toggles torch, and toggles mic when supported', async () => {
@@ -317,7 +309,7 @@ describe('CameraController', () => {
     const errorVm = errorWrapper.vm as unknown as { errorMessage: string; isPreparing: boolean }
 
     await waitForIdle(() => !errorVm.isPreparing)
-    expect(errorVm.errorMessage).toContain('cameraError')
+    expect(errorVm.errorMessage).toContain('Failed to access camera.')
 
     setMediaDevices({
       getUserMedia: vi.fn().mockResolvedValue(createStream()),
@@ -334,7 +326,7 @@ describe('CameraController', () => {
     await notReadyVm.handleShutter()
     await flushPromises()
 
-    expect(notReadyVm.errorMessage).toContain('cameraNotReady')
+    expect(notReadyVm.errorMessage).toContain('Camera is not ready.')
 
     const contextWrapper = mountController()
     const contextVm = contextWrapper.vm as unknown as {
@@ -351,7 +343,7 @@ describe('CameraController', () => {
     await contextVm.handleShutter()
     await flushPromises()
 
-    expect(contextVm.errorMessage).toContain('cameraError')
+    expect(contextVm.errorMessage).toContain('Failed to access camera.')
   })
 
   it('reports camera errors when photo blobs fail', async () => {
@@ -374,7 +366,7 @@ describe('CameraController', () => {
     await vm.handleShutter()
     await flushPromises()
 
-    expect(vm.errorMessage).toContain('cameraError')
+    expect(vm.errorMessage).toContain('Failed to access camera.')
   })
 
   it('sets video not supported when recorder is unavailable', async () => {
@@ -390,7 +382,7 @@ describe('CameraController', () => {
     await waitForIdle(() => !vm.isPreparing)
     vm.setMode('video')
 
-    expect(vm.errorMessage).toContain('videoNotSupported')
+    expect(vm.errorMessage).toContain('Video recording is not supported in this browser.')
   })
 
   it('sets recordingFailed when the recorder emits an error', async () => {
@@ -425,6 +417,6 @@ describe('CameraController', () => {
 
     FakeMediaRecorder.instances[0]?.onerror?.()
 
-    expect(vm.errorMessage).toContain('recordingFailed')
+    expect(vm.errorMessage).toContain('Failed to start recording.')
   })
 })

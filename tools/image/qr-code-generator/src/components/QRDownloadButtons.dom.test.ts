@@ -19,9 +19,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Code16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Image16Regular', () => ({ default: {} }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

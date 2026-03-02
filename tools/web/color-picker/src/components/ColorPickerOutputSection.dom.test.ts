@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { NSwitch } from 'naive-ui'
 import ColorPickerOutputSection from './ColorPickerOutputSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 describe('ColorPickerOutputSection', () => {
   it('emits show-alpha updates from the switch', async () => {
     const onUpdateShowAlpha = vi.fn()
@@ -39,7 +31,7 @@ describe('ColorPickerOutputSection', () => {
     await wrapper.vm.$nextTick()
 
     expect(onUpdateShowAlpha).toHaveBeenCalledWith(false)
-    expect(wrapper.text()).toContain('sourceScreen')
+    expect(wrapper.text()).toContain('Screen')
   })
 
   it('shows fallback source text when no source is picked', () => {
@@ -63,6 +55,6 @@ describe('ColorPickerOutputSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('sourceUnknown')
+    expect(wrapper.text()).toContain('Not picked yet')
   })
 })

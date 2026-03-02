@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import PermissionMatrix from './PermissionMatrix.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -59,10 +51,10 @@ describe('PermissionMatrix', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('owner')
-    expect(wrapper.text()).toContain('group')
-    expect(wrapper.text()).toContain('others')
+    expect(wrapper.text()).toContain('Permission Matrix')
+    expect(wrapper.text()).toContain('Owner')
+    expect(wrapper.text()).toContain('Group')
+    expect(wrapper.text()).toContain('Others')
 
     const checkboxes = wrapper.findAllComponents({ name: 'NCheckbox' })
     expect(checkboxes).toHaveLength(9)

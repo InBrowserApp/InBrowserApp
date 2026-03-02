@@ -10,16 +10,6 @@ const mergePdfsWithWorkerMock = vi.fn()
 
 let objectURLCounter = 0
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -207,7 +197,7 @@ describe('PDFMergerTool', () => {
     expect(mergePdfsWithWorkerMock).toHaveBeenCalledWith([file1, file2])
     expect(setupState.downloadUrl).toBe('blob:merged')
     expect(setupState.mergeErrorMessage).toBe('')
-    expect(successMock).toHaveBeenCalledWith('mergeSuccess')
+    expect(successMock).toHaveBeenCalledWith('PDF files merged successfully')
   })
 
   it('shows readable merge errors and clears all items', async () => {
@@ -242,8 +232,10 @@ describe('PDFMergerTool', () => {
 
     await setupState.handleMerge()
 
-    expect(setupState.mergeErrorMessage).toBe('errorEncrypted')
-    expect(errorMock).toHaveBeenCalledWith('errorEncrypted')
+    expect(setupState.mergeErrorMessage).toBe(
+      'Encrypted PDF detected. Remove owner password first.',
+    )
+    expect(errorMock).toHaveBeenCalledWith('Encrypted PDF detected. Remove owner password first.')
 
     setupState.handleClearAll()
     expect(setupState.items).toHaveLength(0)

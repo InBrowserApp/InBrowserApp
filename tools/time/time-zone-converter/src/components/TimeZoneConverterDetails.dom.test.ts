@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import TimeZoneConverterDetails from './TimeZoneConverterDetails.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const NDescriptions = defineComponent({
     name: 'NDescriptions',
@@ -85,7 +77,7 @@ describe('TimeZoneConverterDetails', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('iso-8601')
+    expect(wrapper.text()).toContain('ISO 8601')
     expect(wrapper.findAllComponents(CopyToClipboardButtonStub)).toHaveLength(4)
   })
 })

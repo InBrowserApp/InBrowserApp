@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsJsonSchema from './WhatIsJsonSchema.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -34,7 +26,9 @@ describe('WhatIsJsonSchema', () => {
   it('passes title and description to the markdown component', () => {
     const wrapper = mount(WhatIsJsonSchema)
     const description = wrapper.findComponent({ name: 'DescriptionMarkdown' })
-    expect(description.props('title')).toBe('title')
-    expect(description.props('description')).toBe('description')
+    expect(description.props('title')).toBe('What is JSON Schema?')
+    expect(description.props('description')).toContain(
+      'JSON Schema is a standard for describing the shape of JSON data.',
+    )
   })
 })

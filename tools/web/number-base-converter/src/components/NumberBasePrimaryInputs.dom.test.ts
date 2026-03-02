@@ -1,21 +1,12 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import NumberBasePrimaryInputs from './NumberBasePrimaryInputs.vue'
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-  }),
-}))
-
 vi.mock('naive-ui', async () => {
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
-    NGrid: actual.NGrid,
-    NGi: actual.NGi,
+    ...actual,
   }
 })
-
 vi.mock('./BaseInput.vue', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -27,7 +18,6 @@ vi.mock('./BaseInput.vue', async () => {
     }),
   }
 })
-
 describe('NumberBasePrimaryInputs', () => {
   it('forwards updates to the onInput callback', async () => {
     const onInput = vi.fn()
@@ -44,22 +34,19 @@ describe('NumberBasePrimaryInputs', () => {
         onInput,
       },
     })
-
     const inputs = wrapper.findAllComponents({ name: 'BaseInput' })
     expect(inputs).toHaveLength(4)
-    expect(inputs[0]?.props('label')).toBe('binary')
-    expect(inputs[1]?.props('label')).toBe('octal')
-    expect(inputs[2]?.props('label')).toBe('decimal')
-    expect(inputs[3]?.props('label')).toBe('hex')
-
+    expect(inputs[0]?.props('label')).toBe('Binary (Base 2)')
+    expect(inputs[1]?.props('label')).toBe('Octal (Base 8)')
+    expect(inputs[2]?.props('label')).toBe('Decimal (Base 10)')
+    expect(inputs[3]?.props('label')).toBe('Hexadecimal (Base 16)')
     await inputs[0]?.trigger('click')
     await inputs[1]?.trigger('click')
     await inputs[2]?.trigger('click')
     await inputs[3]?.trigger('click')
-
-    expect(onInput).toHaveBeenCalledWith('binary', 'next-binary')
-    expect(onInput).toHaveBeenCalledWith('octal', 'next-octal')
-    expect(onInput).toHaveBeenCalledWith('decimal', 'next-decimal')
-    expect(onInput).toHaveBeenCalledWith('hex', 'next-hex')
+    expect(onInput).toHaveBeenCalledWith('binary', 'next-Binary (Base 2)')
+    expect(onInput).toHaveBeenCalledWith('octal', 'next-Octal (Base 8)')
+    expect(onInput).toHaveBeenCalledWith('decimal', 'next-Decimal (Base 10)')
+    expect(onInput).toHaveBeenCalledWith('hex', 'next-Hexadecimal (Base 16)')
   })
 })

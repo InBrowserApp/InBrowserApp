@@ -19,18 +19,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -43,7 +31,7 @@ vi.mock('naive-ui', async () => {
     name: 'NStatistic',
     props: {
       value: {
-        type: Number,
+        type: [Number, String],
         default: undefined,
       },
       label: {

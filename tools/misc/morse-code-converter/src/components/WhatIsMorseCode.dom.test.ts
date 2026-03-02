@@ -1,14 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsMorseCode from './WhatIsMorseCode.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('WhatIsMorseCode', () => {
   it('renders the section title and SOS example', () => {
@@ -35,7 +27,7 @@ describe('WhatIsMorseCode', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
+    expect(wrapper.text()).toContain('What is Morse Code?')
     expect(wrapper.text()).toContain('... --- ...')
   })
 })

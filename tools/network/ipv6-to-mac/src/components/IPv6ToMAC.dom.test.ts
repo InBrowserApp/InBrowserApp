@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IPv6ToMAC from './IPv6ToMAC.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const { ref } = await import('vue')
   return {
@@ -44,13 +36,13 @@ describe('IPv6ToMAC', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('ipv6Address')
+    expect(wrapper.text()).toContain('IPv6 Address')
     expect(wrapper.find('.mac-result').exists()).toBe(false)
 
     wrapper.findComponent({ name: 'IPv6Input' }).vm.$emit('update:ipv6', 'fe80::1')
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('macAddress')
+    expect(wrapper.text()).toContain('MAC Address')
     expect(wrapper.find('.mac-result').attributes('data-ipv6')).toBe('fe80::1')
   })
 })

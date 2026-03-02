@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import TimestampDateSection from './TimestampDateSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -71,7 +63,7 @@ describe('TimestampDateSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('date-time')
+    expect(wrapper.text()).toContain('Date & Time')
     expect(wrapper.find('.date-picker').attributes('data-disabled')).toBe('true')
     expect(wrapper.find('.copy').attributes('data-content')).toBe('local-date')
   })

@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import TimestampInputSection from './TimestampInputSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -102,16 +94,6 @@ vi.mock('@shared/ui/base', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Clock16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ClockIcon',
-      template: '<svg class="clock-icon" />',
-    }),
-  }
-})
-
 describe('TimestampInputSection', () => {
   it('renders input state and validation message', () => {
     const wrapper = mount(TimestampInputSection, {
@@ -131,10 +113,10 @@ describe('TimestampInputSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('unix-timestamp')
-    expect(wrapper.text()).toContain('invalid-timestamp')
-    expect(wrapper.text()).toContain('now')
-    expect(wrapper.find('input').attributes('placeholder')).toBe('timestamp-placeholder')
+    expect(wrapper.text()).toContain('Unix Timestamp')
+    expect(wrapper.text()).toContain('Invalid timestamp')
+    expect(wrapper.text()).toContain('Now')
+    expect(wrapper.find('input').attributes('placeholder')).toBe('Enter Unix timestamp...')
     expect(wrapper.find('input').attributes('data-status')).toBe('error')
   })
 

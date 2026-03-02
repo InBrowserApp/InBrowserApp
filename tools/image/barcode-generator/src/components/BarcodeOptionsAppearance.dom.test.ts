@@ -2,19 +2,9 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { NColorPicker, NFormItemGi, NSelect, NSlider, NSwitch } from 'naive-ui'
 import BarcodeOptionsAppearance from './BarcodeOptionsAppearance.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
-
   const NSwitch = defineComponent({
     name: 'NSwitch',
     props: {
@@ -26,7 +16,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<button />',
   })
-
   const NSelect = defineComponent({
     name: 'NSelect',
     props: {
@@ -42,7 +31,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div />',
   })
-
   const NSlider = defineComponent({
     name: 'NSlider',
     props: {
@@ -66,7 +54,6 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div />',
   })
-
   const NColorPicker = defineComponent({
     name: 'NColorPicker',
     props: {
@@ -86,9 +73,8 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<div />',
   })
-
   return {
-    NGrid: actual.NGrid,
+    ...actual,
     NFormItemGi: actual.NFormItemGi,
     NSwitch,
     NSelect,
@@ -96,7 +82,6 @@ vi.mock('naive-ui', async () => {
     NColorPicker,
   }
 })
-
 describe('BarcodeOptionsAppearance', () => {
   it('renders appearance options and emits every model update', async () => {
     const wrapper = mount(BarcodeOptionsAppearance, {
@@ -109,45 +94,42 @@ describe('BarcodeOptionsAppearance', () => {
         background: '#ffffff',
       },
     })
-
     const formItems = wrapper.findAllComponents(NFormItemGi)
     expect(formItems).toHaveLength(6)
-    expect(formItems[0]?.props('label')).toBe('display-value')
-    expect(formItems[1]?.props('label')).toBe('text-align')
-
+    expect(formItems[0]?.props('label')).toBe('Display value')
+    expect(formItems[1]?.props('label')).toBe('Text align')
     const toggles = wrapper.findComponent(NSwitch)
     expect(toggles.props('value')).toBe(true)
-
     const selects = wrapper.findAllComponents(NSelect)
-    const alignOptions = selects[0]?.props('options') as Array<{ label: string; value: string }>
-    const positionOptions = selects[1]?.props('options') as Array<{ label: string; value: string }>
+    const alignOptions = selects[0]?.props('options') as Array<{
+      label: string
+      value: string
+    }>
+    const positionOptions = selects[1]?.props('options') as Array<{
+      label: string
+      value: string
+    }>
     expect(alignOptions.map((option) => option.value)).toEqual(['left', 'center', 'right'])
     expect(positionOptions.map((option) => option.value)).toEqual(['top', 'bottom'])
-
     const slider = wrapper.findComponent(NSlider)
     expect(slider.props('min')).toBe(8)
     expect(slider.props('max')).toBe(48)
     expect(slider.props('step')).toBe(1)
-
     const colorPickers = wrapper.findAllComponents(NColorPicker)
     expect(colorPickers).toHaveLength(2)
     expect(colorPickers[0]?.props('modes')).toEqual(['hex'])
     expect(colorPickers[0]?.props('size')).toBe('small')
-
     const [textAlignSelect, textPositionSelect] = selects
     const [lineColorPicker, backgroundPicker] = colorPickers
-
     if (!textAlignSelect || !textPositionSelect || !lineColorPicker || !backgroundPicker) {
       throw new Error('Expected all appearance controls to be rendered')
     }
-
     await toggles.vm.$emit('update:value', false)
     await textAlignSelect.vm.$emit('update:value', 'right')
     await textPositionSelect.vm.$emit('update:value', 'top')
     await slider.vm.$emit('update:value', 24)
     await lineColorPicker.vm.$emit('update:value', '#123456')
     await backgroundPicker.vm.$emit('update:value', '#abcdef')
-
     expect(wrapper.emitted('update:display-value')).toEqual([[false]])
     expect(wrapper.emitted('update:text-align')).toEqual([['right']])
     expect(wrapper.emitted('update:text-position')).toEqual([['top']])

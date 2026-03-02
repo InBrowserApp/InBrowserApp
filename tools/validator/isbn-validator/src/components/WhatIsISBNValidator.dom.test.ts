@@ -1,16 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -51,9 +41,9 @@ describe('WhatIsISBNValidator', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('isbn10Title')
-    expect(wrapper.text()).toContain('isbn13Title')
-    expect(wrapper.text()).toContain('conversionNote')
+    expect(wrapper.text()).toContain('What is ISBN?')
+    expect(wrapper.text()).toContain('ISBN-10 Check')
+    expect(wrapper.text()).toContain('ISBN-13 Check')
+    expect(wrapper.text()).toContain('Valid ISBN-10 converts to ISBN-13 with prefix 978')
   })
 })

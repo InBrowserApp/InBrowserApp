@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SitemapUrlEntryImages from './SitemapUrlEntryImages.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -109,13 +101,13 @@ describe('SitemapUrlEntryImages', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('addImage')
+    expect(wrapper.text()).toContain('Add image')
 
     await wrapper
       .get('input[placeholder="https://example.com/image.jpg"]')
       .setValue('https://example.com/image.jpg')
-    await wrapper.get('input[placeholder="title"]').setValue('Hero image')
-    await wrapper.get('input[placeholder="caption"]').setValue('Homepage hero')
+    await wrapper.get('input[placeholder="Title"]').setValue('Hero image')
+    await wrapper.get('input[placeholder="Caption"]').setValue('Homepage hero')
     await wrapper
       .get('input[placeholder="https://example.com/license"]')
       .setValue('https://example.com/license')

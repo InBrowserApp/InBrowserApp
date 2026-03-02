@@ -1,14 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { defineComponent, h, onMounted } from 'vue'
-
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const ToolSectionStub = defineComponent({
   name: 'ToolSection',
@@ -70,7 +62,7 @@ describe('IcalEventDateTimeSection', () => {
 
     await flushPromises()
 
-    expect(wrapper.text()).toContain('date-time')
+    expect(wrapper.text()).toContain('Date & time')
     expect(wrapper.emitted('update:isAllDay')?.[0]).toEqual([true])
     expect(wrapper.emitted('update:timeZone')?.[0]).toEqual(['Asia/Tokyo'])
     expect(wrapper.emitted('update:outputMode')?.[0]).toEqual(['tzid'])

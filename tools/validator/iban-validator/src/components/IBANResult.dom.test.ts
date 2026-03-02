@@ -1,15 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-const localeRef = { value: 'en' }
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({
-    t: (key: string) => key,
-    locale: localeRef,
-  }),
-}))
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -96,7 +87,6 @@ const baseResult = {
 let originalDisplayNames: typeof Intl.DisplayNames | undefined
 
 beforeEach(() => {
-  localeRef.value = 'en'
   originalDisplayNames = Intl.DisplayNames
   Object.defineProperty(Intl, 'DisplayNames', {
     value: class {
@@ -165,25 +155,26 @@ describe('IBANResult', () => {
     })
 
     const status = wrapper.findComponent({ name: 'IBANResultStatus' })
-    expect(status.props('countryDisplay')).toBe('notAvailable')
+    expect(status.props('countryDisplay')).toBe('Not available')
 
     const checks = wrapper.findComponent({ name: 'IBANResultChecks' })
-    expect(checks.props('expectedLength')).toBe('unknown')
-    expect(checks.props('expectedCheckDigits')).toBe('notAvailable')
-    expect(checks.props('actualCheckDigits')).toBe('notAvailable')
+    expect(checks.props('expectedLength')).toBe('Unknown')
+    expect(checks.props('expectedCheckDigits')).toBe('Not available')
+    expect(checks.props('actualCheckDigits')).toBe('Not available')
 
     const formats = wrapper.findComponent({ name: 'IBANResultFormats' })
-    expect(formats.props('normalized')).toBe('notAvailable')
-    expect(formats.props('formatted')).toBe('notAvailable')
-    expect(formats.props('bban')).toBe('notAvailable')
+    expect(formats.props('normalized')).toBe('Not available')
+    expect(formats.props('formatted')).toBe('Not available')
+    expect(formats.props('bban')).toBe('Not available')
   })
 
   it('uses fallback locale display names when constructor fails', () => {
-    localeRef.value = 'xx'
+    let constructorCallCount = 0
     Object.defineProperty(Intl, 'DisplayNames', {
       value: class {
-        constructor(locales: readonly string[]) {
-          if (locales[0] !== 'en') {
+        constructor() {
+          constructorCallCount += 1
+          if (constructorCallCount === 1) {
             throw new Error('unsupported locale')
           }
         }
@@ -206,6 +197,7 @@ describe('IBANResult', () => {
 
     const status = wrapper.findComponent({ name: 'IBANResultStatus' })
     expect(status.props('countryDisplay')).toBe('Fallback Germany (DE)')
+    expect(constructorCallCount).toBe(2)
   })
 
   it('returns country code when display names are unavailable or unknown', () => {

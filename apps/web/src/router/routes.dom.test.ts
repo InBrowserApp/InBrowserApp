@@ -1,8 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-
-vi.mock('@shared/locale', () => ({
-  supportedLanguages: ['en', 'zh-CN'],
-}))
+import { supportedLanguages } from '@shared/locale'
 
 vi.mock('@registry/tools/routes', () => ({
   routes: [
@@ -45,8 +42,8 @@ describe('router routes', () => {
     const { routes } = await import('./routes')
 
     expect(routes).toHaveLength(3)
-    expect(routes[0]?.alias).toEqual(['/en/', '/zh-CN/'])
-    expect(routes[1]?.alias).toEqual(['/en/tools', '/zh-CN/tools'])
-    expect(routes[2]?.alias).toEqual(['/en/tools/mock-tool', '/zh-CN/tools/mock-tool'])
+    expect(routes[0]?.alias).toEqual(supportedLanguages.map((lang) => `/${lang}/`))
+    expect(routes[1]?.alias).toEqual(supportedLanguages.map((lang) => `/${lang}/tools`))
+    expect(routes[2]?.alias).toEqual(supportedLanguages.map((lang) => `/${lang}/tools/mock-tool`))
   })
 })

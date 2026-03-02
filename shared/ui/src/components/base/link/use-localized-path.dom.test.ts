@@ -1,13 +1,9 @@
 import { ref } from 'vue'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-const language = ref<string | undefined>(undefined)
+const routeState = { path: '/tools' }
 const resolve = vi.fn((to: unknown) => ({
-  fullPath: typeof to === 'string' ? to : '/tools',
-}))
-
-vi.mock('@shared/locale', () => ({
-  useSiteLanguage: () => ({ language }),
+  fullPath: typeof to === 'string' ? to : '/tools/search',
 }))
 
 vi.mock('vue-router', async (importOriginal) => {
@@ -15,6 +11,7 @@ vi.mock('vue-router', async (importOriginal) => {
 
   return {
     ...original,
+    useRoute: () => routeState,
     useRouter: () => ({ resolve }),
   }
 })
@@ -22,12 +19,13 @@ vi.mock('vue-router', async (importOriginal) => {
 describe('useLocalizedPath', () => {
   beforeEach(() => {
     resolve.mockClear()
-    language.value = undefined
+    routeState.path = '/tools'
+    window.history.replaceState({}, '', '/tools')
   })
   it('returns raw path for string targets without language prefix', async () => {
     const { useLocalizedPath } = await import('./use-localized-path')
 
-    language.value = undefined
+    routeState.path = '/tools'
     const target = ref('/tools')
     const { localizedPath } = useLocalizedPath(target)
 
@@ -37,10 +35,10 @@ describe('useLocalizedPath', () => {
   it('resolves route objects and prefixes active language', async () => {
     const { useLocalizedPath } = await import('./use-localized-path')
 
-    language.value = 'en'
-    const { localizedPath } = useLocalizedPath({ name: 'tools' })
+    routeState.path = '/en/tools'
+    const { localizedPath } = useLocalizedPath({ name: 'search-tools' })
 
-    expect(localizedPath.value).toBe('/en/tools')
-    expect(resolve).toHaveBeenLastCalledWith({ name: 'tools' })
+    expect(localizedPath.value).toBe('/en/tools/search')
+    expect(resolve).toHaveBeenLastCalledWith({ name: 'search-tools' })
   })
 })

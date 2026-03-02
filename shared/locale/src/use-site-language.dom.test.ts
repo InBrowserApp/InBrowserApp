@@ -1,5 +1,7 @@
-import { effectScope, nextTick, reactive, ref } from 'vue'
+import { mount } from '@vue/test-utils'
+import { defineComponent, nextTick, reactive } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { useI18n } from 'vue-i18n'
 
 const route = reactive({
   path: '/en/tools',
@@ -8,8 +10,6 @@ const route = reactive({
 const resolve = vi.fn((location: { path?: string }) => ({
   path: location.path ?? '/resolved',
 }))
-
-const locale = ref('en')
 
 vi.mock('vue-router', async (importOriginal) => {
   const original = await importOriginal<typeof import('vue-router')>()
@@ -21,22 +21,12 @@ vi.mock('vue-router', async (importOriginal) => {
   }
 })
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const original = await importOriginal<typeof import('vue-i18n')>()
-
-  return {
-    ...original,
-    useI18n: () => ({ locale }),
-  }
-})
-
 describe('use-site-language', () => {
   const languageSpy = vi.spyOn(navigator, 'language', 'get')
 
   beforeEach(() => {
     route.path = '/en/tools'
     resolve.mockClear()
-    locale.value = 'en'
     document.documentElement.lang = ''
     window.history.replaceState({}, '', '/en/tools')
     languageSpy.mockReturnValue('en-US')
@@ -72,26 +62,31 @@ describe('use-site-language', () => {
 
   it('updates locale and document lang through useSetSiteLanguage', async () => {
     const { useSetSiteLanguage } = await import('./use-site-language')
+    let localeRef: { value: string } | undefined
 
     route.path = '/fr/tools'
-    const scope = effectScope()
-
-    scope.run(() => {
-      useSetSiteLanguage()
+    const SetSiteLanguageProbe = defineComponent({
+      setup() {
+        const { locale } = useI18n()
+        localeRef = locale
+        useSetSiteLanguage()
+        return () => null
+      },
     })
+    const wrapper = mount(SetSiteLanguageProbe)
     await nextTick()
 
-    expect(locale.value).toBe('fr')
+    expect(localeRef?.value).toBe('fr')
     expect(document.documentElement.lang).toBe('fr')
 
     route.path = '/tools'
     languageSpy.mockReturnValue('zh-CN')
     await nextTick()
 
-    expect(locale.value).toBe('zh-CN')
+    expect(localeRef?.value).toBe('zh-CN')
     expect(document.documentElement.lang).toBe('zh-CN')
 
-    scope.stop()
+    wrapper.unmount()
   })
 
   it('builds localized paths for current language', async () => {

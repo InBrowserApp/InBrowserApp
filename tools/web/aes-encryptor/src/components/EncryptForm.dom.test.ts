@@ -34,14 +34,6 @@ vi.mock('@utils/aes', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -67,16 +59,6 @@ vi.mock('naive-ui', async () => {
     NSpace: Base,
     NButton,
     NIcon: Base,
-  }
-})
-
-vi.mock('@vicons/fluent/LockClosed16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'LockClosedIcon',
-      template: '<svg class="lock-closed" />',
-    }),
   }
 })
 
@@ -211,8 +193,8 @@ describe('EncryptForm', () => {
 
     const result = wrapper.find('.encrypt-result')
     expect(result.attributes('data-result')).toBe('jwe-token')
-    expect(result.attributes('data-salt')).toBe('embeddedInJwe')
-    expect(result.attributes('data-iv')).toBe('embeddedInJwe')
+    expect(result.attributes('data-salt')).toBe('(embedded in JWE)')
+    expect(result.attributes('data-iv')).toBe('(embedded in JWE)')
   })
 
   it('encrypts JWE with a raw key', async () => {

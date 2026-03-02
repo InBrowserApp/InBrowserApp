@@ -18,14 +18,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -88,16 +80,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ArrowDownloadIcon',
-      template: '<svg class="download-icon" />',
-    }),
-  }
-})
-
 describe('UUIDsDownloadButton', () => {
   beforeEach(() => {
     objectUrlState.index = 0
@@ -111,7 +93,7 @@ describe('UUIDsDownloadButton', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('download')
+    expect(wrapper.text()).toContain('Download')
 
     const links = wrapper.findAll('a.n-button')
     expect(links).toHaveLength(4)

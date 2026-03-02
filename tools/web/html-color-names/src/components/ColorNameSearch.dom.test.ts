@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ColorNameSearch from './ColorNameSearch.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('../data/colorData', () => ({
   colorCategories: ['red', 'blue', 'white'],
   categoryColors: {
@@ -17,10 +9,6 @@ vi.mock('../data/colorData', () => ({
     blue: '#0000ff',
     white: '#ffffff',
   },
-}))
-
-vi.mock('@vicons/fluent/Search20Regular', () => ({
-  default: {},
 }))
 
 vi.mock('naive-ui', async () => {
@@ -83,7 +71,9 @@ describe('ColorNameSearch', () => {
     })
 
     expect(wrapper.find('.n-icon').exists()).toBe(true)
-    expect(wrapper.findComponent({ name: 'NInput' }).props('placeholder')).toBe('searchPlaceholder')
+    expect(wrapper.findComponent({ name: 'NInput' }).props('placeholder')).toBe(
+      'Search by color name or HEX value...',
+    )
     expect(wrapper.findAll('.n-radio-button')).toHaveLength(4)
 
     const whiteButton = wrapper.findAll('.n-radio-button')[3]

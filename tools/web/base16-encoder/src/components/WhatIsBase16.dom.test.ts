@@ -1,16 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsBase16 from './WhatIsBase16.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const DescriptionMarkdownStub = defineComponent({
   name: 'DescriptionMarkdown',
@@ -37,7 +28,9 @@ describe('WhatIsBase16', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('What is Base16 (Hex)?')
+    expect(wrapper.text()).toContain(
+      'binary-to-text encoding that represents each byte as two characters',
+    )
   })
 })

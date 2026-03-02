@@ -1,22 +1,11 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import StatsDisplay from './StatsDisplay.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
   const Base = defineComponent({
     template: '<div><slot /></div>',
   })
-
   const NStatistic = defineComponent({
     name: 'NStatistic',
     props: {
@@ -31,15 +20,13 @@ vi.mock('naive-ui', async () => {
     },
     template: '<div class="stat" :data-label="label" :data-value="value" />',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGrid: Base,
-    NGi: Base,
+    ...actual,
     NCard: Base,
     NStatistic,
   }
 })
-
 describe('StatsDisplay', () => {
   it('renders formatted statistics', () => {
     const wrapper = mount(StatsDisplay, {
@@ -56,11 +43,10 @@ describe('StatsDisplay', () => {
         },
       },
     })
-
     const stats = wrapper.findAll('.stat')
     expect(stats).toHaveLength(8)
-    expect(wrapper.get('[data-label="characters"]').attributes('data-value')).toBe('10')
-    expect(wrapper.get('[data-label="readingTime"]').attributes('data-value')).toBe('1m 30s')
-    expect(wrapper.get('[data-label="speakingTime"]').attributes('data-value')).toBe('30s')
+    expect(wrapper.get('[data-label="Characters"]').attributes('data-value')).toBe('10')
+    expect(wrapper.get('[data-label="Reading Time"]').attributes('data-value')).toBe('1m 30s')
+    expect(wrapper.get('[data-label="Speaking Time"]').attributes('data-value')).toBe('30s')
   })
 })

@@ -2,11 +2,11 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import ExifCategorySection from './ExifCategorySection.vue'
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NCollapseItem: defineComponent({
       name: 'NCollapseItem',
       props: { title: { type: String, default: '' }, name: { type: String, default: '' } },
@@ -21,27 +21,16 @@ vi.mock('naive-ui', async () => {
       props: { label: { type: String, default: '' } },
       template: '<div class="description-item"><slot /></div>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
-    }),
   }
 })
-
 const CopyToClipboardButtonStub = defineComponent({
   name: 'CopyToClipboardButton',
   props: { content: { type: String, default: '' } },
   template: '<button class="copy">copy</button>',
 })
-
 describe('ExifCategorySection', () => {
   it('formats values for display', () => {
     const dateSpy = vi.spyOn(Date.prototype, 'toLocaleString').mockReturnValue('date-string')
-
     const wrapper = mount(ExifCategorySection, {
       props: {
         name: 'basic',
@@ -64,7 +53,6 @@ describe('ExifCategorySection', () => {
         },
       },
     })
-
     const text = wrapper.text()
     expect(text).toContain('-')
     expect(text).toContain('42')
@@ -75,7 +63,6 @@ describe('ExifCategorySection', () => {
     expect(text).toContain('[Binary data: 3 bytes]')
     expect(text).toContain('[Binary data: 0 bytes]')
     expect(text).toContain('true')
-
     dateSpy.mockRestore()
   })
 })

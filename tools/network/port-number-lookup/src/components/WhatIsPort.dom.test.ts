@@ -1,22 +1,11 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsPort from './WhatIsPort.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="text"><slot /></span>',
-    }),
+    ...actual,
     NUl: defineComponent({
       name: 'NUl',
       template: '<ul class="list"><slot /></ul>',
@@ -27,7 +16,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('WhatIsPort', () => {
   it('renders the description and port categories', () => {
     const wrapper = mount(WhatIsPort, {
@@ -42,11 +30,10 @@ describe('WhatIsPort', () => {
         },
       },
     })
-
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('systemPorts')
-    expect(wrapper.text()).toContain('registeredPorts')
-    expect(wrapper.text()).toContain('dynamicPorts')
+    expect(wrapper.text()).toContain('What is a Port Number?')
+    expect(wrapper.text()).toContain('16-bit unsigned integer (0-65535)')
+    expect(wrapper.text()).toContain('System Ports (0-1023):')
+    expect(wrapper.text()).toContain('Registered Ports (1024-49151):')
+    expect(wrapper.text()).toContain('Dynamic Ports (49152-65535):')
   })
 })

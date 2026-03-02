@@ -2,15 +2,12 @@ import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, nextTick } from 'vue'
 import PaletteExportPanel from './PaletteExportPanel.vue'
-
 const objectUrlState = vi.hoisted(() => ({
   value: 'available' as 'available' | 'missing',
 }))
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   const { computed, isRef } = await import('vue')
-
   return {
     ...actual,
     useObjectUrl: (source: unknown) =>
@@ -23,11 +20,11 @@ vi.mock('@vueuse/core', async () => {
       }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NSelect: defineComponent({
       name: 'NSelect',
       props: ['value', 'options'],
@@ -44,31 +41,13 @@ vi.mock('naive-ui', async () => {
       props: ['href', 'download', 'disabled', 'tag', 'text'],
       template: '<a :href="href" :download="download" :data-disabled="disabled"><slot /></a>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
-    NIcon: defineComponent({
-      name: 'NIcon',
-      template: '<i><slot /></i>',
-    }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
   }
 })
-
-vi.mock('@vicons/fluent/ArrowDownload24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
-
 const CopyStub = defineComponent({
   name: 'CopyToClipboardButton',
   props: ['content'],
   template: '<button><slot /></button>',
 })
-
 const panelProps = {
   colors: [
     {
@@ -84,7 +63,6 @@ const panelProps = {
   ],
   fileName: 'sample.png',
 }
-
 describe('PaletteExportPanel', () => {
   beforeEach(() => {
     objectUrlState.value = 'available'
@@ -92,11 +70,9 @@ describe('PaletteExportPanel', () => {
       localStorage.clear()
     }
   })
-
   afterEach(() => {
     vi.restoreAllMocks()
   })
-
   it('updates export content and download info when format changes', async () => {
     const wrapper = mount(PaletteExportPanel, {
       props: panelProps,
@@ -106,21 +82,16 @@ describe('PaletteExportPanel', () => {
         },
       },
     })
-
     expect(wrapper.find('[data-test="export"]').element.getAttribute('value')).toContain(':root')
     expect(wrapper.find('a').attributes('download')).toBe('sample.css')
     expect(wrapper.find('a').attributes('href')).toBe('blob:export')
-
     wrapper.findComponent({ name: 'NSelect' }).vm.$emit('update:value', 'json')
     await nextTick()
-
     expect(wrapper.find('[data-test="export"]').element.getAttribute('value')).toContain('"hex"')
     expect(wrapper.find('a').attributes('download')).toBe('sample.json')
   })
-
   it('omits href and disables download when no object URL is available', () => {
     objectUrlState.value = 'missing'
-
     const wrapper = mount(PaletteExportPanel, {
       props: panelProps,
       global: {
@@ -129,7 +100,6 @@ describe('PaletteExportPanel', () => {
         },
       },
     })
-
     const link = wrapper.find('a')
     expect(link.attributes('href')).toBeUndefined()
     expect(link.attributes('data-disabled')).toBe('true')

@@ -2,15 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import OptimizationOptions from './OptimizationOptions.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -18,7 +9,6 @@ vi.mock('naive-ui', async () => {
       name,
       template: '<div><slot /></div>',
     })
-
   const NCheckbox = defineComponent({
     name: 'NCheckbox',
     props: {
@@ -30,15 +20,13 @@ vi.mock('naive-ui', async () => {
     emits: ['update:checked'],
     template: '<div><slot /></div>',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NGrid: makeStub('NGrid'),
-    NGi: makeStub('NGi'),
+    ...actual,
     NSpin: makeStub('NSpin'),
     NCheckbox,
   }
 })
-
 describe('OptimizationOptions', () => {
   it('renders all option toggles', () => {
     const wrapper = mount(OptimizationOptions, {
@@ -65,11 +53,9 @@ describe('OptimizationOptions', () => {
         },
       },
     })
-
     expect(wrapper.findAllComponents({ name: 'NCheckbox' })).toHaveLength(7)
     expect(wrapper.findComponent({ name: 'NSpin' }).exists()).toBe(false)
   })
-
   it('updates bound options when toggles emit changes', async () => {
     const options = {
       multipass: true,
@@ -80,7 +66,6 @@ describe('OptimizationOptions', () => {
       removeDimensions: false,
       inlineStyles: false,
     }
-
     const wrapper = mount(OptimizationOptions, {
       props: {
         options,
@@ -97,15 +82,12 @@ describe('OptimizationOptions', () => {
         },
       },
     })
-
     const updates = [false, false, false, false, false, true, true]
     const checkboxes = wrapper.findAllComponents({ name: 'NCheckbox' })
     checkboxes.forEach((checkbox, index) => {
       checkbox.vm.$emit('update:checked', updates[index])
     })
-
     await nextTick()
-
     expect(options).toEqual({
       multipass: false,
       removeComments: false,
@@ -116,7 +98,6 @@ describe('OptimizationOptions', () => {
       inlineStyles: true,
     })
   })
-
   it('shows a spinner when optimizing', () => {
     const wrapper = mount(OptimizationOptions, {
       props: {
@@ -142,7 +123,6 @@ describe('OptimizationOptions', () => {
         },
       },
     })
-
     expect(wrapper.findComponent({ name: 'NSpin' }).exists()).toBe(true)
   })
 })

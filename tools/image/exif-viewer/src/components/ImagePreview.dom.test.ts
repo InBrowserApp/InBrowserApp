@@ -1,6 +1,7 @@
 import { beforeEach, describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
+import { filesize } from 'filesize'
 import ImagePreview from './ImagePreview.vue'
 
 const previewUrlState = vi.hoisted(() => ({
@@ -14,20 +15,6 @@ const vueUseMocks = vi.hoisted(() => ({
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: vueUseMocks.useObjectUrl,
 }))
-
-vi.mock('filesize', () => ({
-  filesize: () => '1 KB',
-}))
-
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
 
 const ToolSectionStub = defineComponent({
   name: 'ToolSection',
@@ -68,6 +55,7 @@ describe('ImagePreview', () => {
 
   it('renders file details and emits clear', async () => {
     const file = new File(['data'], 'photo.jpg', { type: 'image/jpeg' })
+    const expectedSize = filesize(file.size) as string
 
     const wrapper = mount(ImagePreview, {
       props: { file },
@@ -85,7 +73,7 @@ describe('ImagePreview', () => {
 
     expect(vueUseMocks.useObjectUrl).toHaveBeenCalled()
     expect(wrapper.text()).toContain('photo.jpg')
-    expect(wrapper.text()).toContain('1 KB')
+    expect(wrapper.text()).toContain(expectedSize)
 
     await wrapper.find('button.n-button').trigger('click')
     expect(wrapper.emitted('clear')).toHaveLength(1)

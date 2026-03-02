@@ -1,13 +1,18 @@
 import { mount } from '@vue/test-utils'
-import { defineComponent, h } from 'vue'
+import { defineComponent, h, nextTick, reactive } from 'vue'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const osThemeRef = { value: 'dark' as 'dark' | 'light' | null }
-const useSetSiteLanguage = vi.fn()
+const routeState = reactive({ path: '/en/tools' })
 
-vi.mock('@shared/locale', () => ({
-  useSetSiteLanguage,
-}))
+vi.mock('vue-router', async (importOriginal) => {
+  const original = await importOriginal<typeof import('vue-router')>()
+
+  return {
+    ...original,
+    useRoute: () => routeState,
+  }
+})
 
 const makeSlotStub = (name: string, extraProps: Record<string, unknown> = {}) =>
   defineComponent({
@@ -53,7 +58,9 @@ vi.mock('./AppView.vue', () => ({
 
 describe('App', () => {
   beforeEach(() => {
-    useSetSiteLanguage.mockClear()
+    routeState.path = '/en/tools'
+    document.documentElement.lang = ''
+    window.history.replaceState({}, '', '/en/tools')
   })
 
   it('uses the dark theme when OS theme is dark', async () => {
@@ -61,9 +68,10 @@ describe('App', () => {
 
     const App = (await import('./App.vue')).default
     const wrapper = mount(App)
+    await nextTick()
 
     expect(wrapper.get('[data-test="config-provider"]').attributes('data-has-theme')).toBe('true')
-    expect(useSetSiteLanguage).toHaveBeenCalledTimes(1)
+    expect(document.documentElement.lang).toBe('en')
     expect(wrapper.find('[data-test="app-view"]').exists()).toBe(true)
   })
 

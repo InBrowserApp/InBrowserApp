@@ -64,6 +64,12 @@
 - Prefer DOM-focused component tests; utilities can use standard unit tests.
 - Run tests with `pnpm test:unit`.
 - For new tool packages, coverage must be 100% for that tool package only (not the whole repo) before pushing and creating a PR.
+- Mock minimization policy:
+  - Prefer real implementations by default. Only mock when a dependency crosses browser/runtime boundaries (filesystem, workers, wasm, network, timers, random) or is otherwise non-deterministic.
+  - Do not mock purely presentational UI components by default (especially layout/text wrappers such as `n-flex`, `n-grid`, `n-gi`, `n-space`, `n-text`, `n-icon`) unless the test explicitly depends on custom stub behavior.
+  - Avoid identity i18n mocks (`t(key) => key`) and `@shared/locale` mocks; use the global test i18n setup.
+  - For `@vueuse/core`, keep mocks only where deterministic control is required (for example `useStorage` persistence branches and `useObjectUrl` URL lifecycle assertions). Prefer real composables in `happy-dom` when behavior is stable.
+  - If a mock is necessary, keep it minimal, and assert semantic behavior instead of stub-specific markup.
 
 ## Worktrees & PR Checks
 - For any new feature, fix, or chore, create a new worktree under `../InBrowser-worktrees/` named like `<type>_xxxxx` (example: `../InBrowser-worktrees/feat_add-tool-a`).

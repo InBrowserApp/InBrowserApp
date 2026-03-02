@@ -11,14 +11,6 @@ import MultipleScreens from './MultipleScreens.vue'
 import FpsInfo from './FpsInfo.vue'
 import ScreenOrientation from './ScreenOrientation.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const orientationRef = ref('landscape-primary')
 let orientationSupported = true
 
@@ -119,7 +111,7 @@ describe('screen components', () => {
     const wrapper = mountWithStub(ColorDepth)
 
     expect(wrapper.text()).toContain('30 bits')
-    expect(wrapper.text()).toContain('hdr')
+    expect(wrapper.text()).toContain('HDR')
   })
 
   it('renders SDR color depth at or below 24 bits', () => {
@@ -134,13 +126,13 @@ describe('screen components', () => {
     const wrapper = mountWithStub(ColorDepth)
 
     expect(wrapper.text()).toContain('24 bits')
-    expect(wrapper.text()).not.toContain('hdr')
+    expect(wrapper.text()).not.toContain('HDR')
   })
 
   it('renders multiple screens indicator', () => {
     const wrapper = mountWithStub(MultipleScreens)
 
-    expect(wrapper.text()).toContain('yes')
+    expect(wrapper.text()).toContain('Yes')
   })
 
   it('renders single screen indicator', () => {
@@ -154,7 +146,7 @@ describe('screen components', () => {
     })
     const wrapper = mountWithStub(MultipleScreens)
 
-    expect(wrapper.text()).toContain('no')
+    expect(wrapper.text()).toContain('No')
   })
 
   it('hides multiple screens indicator when unsupported', () => {
@@ -177,10 +169,10 @@ describe('screen components', () => {
   })
 
   it.each([
-    ['portrait-primary', 'orientation-portrait-primary'],
-    ['portrait-secondary', 'orientation-portrait-secondary'],
-    ['landscape-primary', 'orientation-landscape-primary'],
-    ['landscape-secondary', 'orientation-landscape-secondary'],
+    ['portrait-primary', 'Portrait Primary'],
+    ['portrait-secondary', 'Portrait Secondary'],
+    ['landscape-primary', 'Landscape Primary'],
+    ['landscape-secondary', 'Landscape Secondary'],
   ])('renders screen orientation %s', (orientation, expected) => {
     orientationRef.value = orientation
     const wrapper = mountWithStub(ScreenOrientation)

@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import JWTTokenInput from './JWTTokenInput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -59,7 +51,7 @@ describe('JWTTokenInput', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('token')
+    expect(wrapper.text()).toContain('Token')
     const input = wrapper.findComponent({ name: 'NInput' })
     expect(input.props('placeholder')).toBe('placeholder')
     expect(input.props('type')).toBe('password')

@@ -4,14 +4,6 @@ import { defineComponent } from 'vue'
 import type { DurationParts } from '../utils/duration'
 import DurationCalculatorDurationCard from './DurationCalculatorDurationCard.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: defineComponent({
     name: 'CopyToClipboardButton',
@@ -112,7 +104,7 @@ describe('DurationCalculatorDurationCard', () => {
     ])
 
     expect(wrapper.find('[data-testid="copy-button"]').exists()).toBe(true)
-    expect(wrapper.text()).toContain('invalid-duration')
+    expect(wrapper.text()).toContain('Invalid duration')
   })
 
   it('hides copy action when normalized ISO output is empty', () => {

@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import TimestampDetailsSection from './TimestampDetailsSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -95,7 +87,7 @@ describe('TimestampDetailsSection', () => {
     })
 
     const labels = wrapper.findAll('.description-item').map((item) => item.attributes('data-label'))
-    expect(labels).toEqual(['iso-8601', 'utc', 'relative'])
+    expect(labels).toEqual(['ISO 8601', 'UTC', 'Relative'])
     expect(wrapper.text()).toContain('2024-01-01T00:00:00.000Z')
     expect(wrapper.text()).toContain('Mon, 01 Jan 2024 00:00:00 GMT')
     expect(wrapper.find('.n-time').attributes('data-time')).toBe('1704067200000')

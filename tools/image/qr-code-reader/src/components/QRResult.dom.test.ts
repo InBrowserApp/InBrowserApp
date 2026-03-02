@@ -1,17 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import QRResult from './QRResult.vue'
-
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
 
 const ToolSectionStub = defineComponent({
   name: 'ToolSection',
@@ -102,13 +92,13 @@ describe('QRResult', () => {
 
   it.each([
     { result: 'mailto:test@example.com', label: 'Email', link: true },
-    { result: 'tel:+1234567890', label: 'phone', link: true },
+    { result: 'tel:+1234567890', label: 'Phone', link: true },
     { result: 'sms:+1234567890', label: 'SMS', link: true },
     { result: 'WIFI:S:MyNetwork;T:WPA;P:secret;;', label: 'WiFi', link: false },
     { result: 'BEGIN:VCARD\nFN:Jane Doe', label: 'vCard', link: false },
-    { result: 'BEGIN:VCALENDAR\nSUMMARY:Event', label: 'calendar', link: false },
-    { result: 'geo:37.7749,-122.4194', label: 'location', link: true },
-    { result: 'Just some text', label: 'text', link: false },
+    { result: 'BEGIN:VCALENDAR\nSUMMARY:Event', label: 'Calendar', link: false },
+    { result: 'geo:37.7749,-122.4194', label: 'Location', link: true },
+    { result: 'Just some text', label: 'Text', link: false },
   ])('labels %s correctly', ({ result, label, link }) => {
     const wrapper = mountResult({ result, error: null })
 

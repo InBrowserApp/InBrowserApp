@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 
 import WhatIsSshKey from './WhatIsSshKey.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/base', () => ({
   DescriptionMarkdown: {
     props: ['title', 'description'],
@@ -23,7 +15,7 @@ describe('WhatIsSshKey', () => {
     const wrapper = mount(WhatIsSshKey)
 
     const markdown = wrapper.get('.markdown')
-    expect(markdown.attributes('data-title')).toBe('title')
-    expect(markdown.attributes('data-description')).toBe('description')
+    expect(markdown.attributes('data-title')).toBe('What is an SSH Key?')
+    expect(markdown.attributes('data-description')).toContain('SSH (Secure Shell) keys')
   })
 })

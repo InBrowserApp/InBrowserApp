@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SitemapEntriesTabs from './SitemapEntriesTabs.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -70,8 +62,8 @@ describe('SitemapEntriesTabs', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('modeUrlset')
-    expect(wrapper.text()).toContain('modeSitemapIndex')
+    expect(wrapper.text()).toContain('URL set')
+    expect(wrapper.text()).toContain('Sitemap index')
     expect(wrapper.find('[data-testid="urlset-entries"]').exists()).toBe(true)
     expect(wrapper.find('[data-testid="sitemap-entries"]').exists()).toBe(true)
 

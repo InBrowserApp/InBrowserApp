@@ -1,16 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('@vueuse/core', async () => {
   const actual = await vi.importActual<typeof import('@vueuse/core')>('@vueuse/core')
   const { computed, unref } = await import('vue')
@@ -118,7 +107,7 @@ describe('ImageUpload', () => {
     await vm.handleBeforeUpload(createFilePayload(file))
     await wrapper.setProps({ file })
 
-    expect(error).toHaveBeenCalledWith('noBarcodeFound')
+    expect(error).toHaveBeenCalledWith('No barcode or QR code found in the image')
   })
 
   it('emits errors on decode failures and clears on reset', async () => {
@@ -144,7 +133,7 @@ describe('ImageUpload', () => {
     }
 
     await vm.handleBeforeUpload(createFilePayload(file))
-    expect(error).toHaveBeenCalledWith('failedToReadImage')
+    expect(error).toHaveBeenCalledWith('Failed to read the image')
 
     vm.clearFile()
     await wrapper.vm.$nextTick()

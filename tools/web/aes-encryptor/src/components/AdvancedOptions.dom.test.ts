@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import AdvancedOptions from './AdvancedOptions.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -123,7 +115,7 @@ describe('AdvancedOptions', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('lowIterationsWarning')
+    expect(wrapper.text()).toContain('Too low - recommend at least 100,000')
     expect(wrapper.findAll('.n-input')).toHaveLength(2)
   })
 
@@ -150,7 +142,7 @@ describe('AdvancedOptions', () => {
 
     const select = wrapper.findComponent({ name: 'NSelect' })
     expect(select.attributes('data-disabled')).toBe('true')
-    expect(wrapper.text()).toContain('jweHashNote')
+    expect(wrapper.text()).toContain('JWE uses hash based on key length')
   })
 
   it('emits hash and manual option updates', async () => {

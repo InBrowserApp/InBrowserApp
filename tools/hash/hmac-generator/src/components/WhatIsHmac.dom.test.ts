@@ -1,14 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsHmac from './WhatIsHmac.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('WhatIsHmac', () => {
   it('passes title and description to the markdown renderer', () => {
@@ -25,7 +17,9 @@ describe('WhatIsHmac', () => {
     })
 
     const description = wrapper.find('.description')
-    expect(description.attributes('data-title')).toBe('what-is-hmac')
-    expect(description.attributes('data-description')).toBe('what-is-hmac-description')
+    expect(description.attributes('data-title')).toBe('What is HMAC?')
+    expect(description.attributes('data-description')).toContain(
+      'Hash-based Message Authentication Code',
+    )
   })
 })

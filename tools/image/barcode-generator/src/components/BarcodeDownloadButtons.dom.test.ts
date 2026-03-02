@@ -22,26 +22,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Code16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CodeIcon',
-      template: '<svg class="code-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Image16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ImageIcon',
-      template: '<svg class="image-icon" />',
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -145,9 +125,9 @@ describe('BarcodeDownloadButtons', () => {
     expect(jsBarcodeMock.fn).toHaveBeenCalledTimes(4)
 
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
+    const icons = wrapper.findAllComponents({ name: 'NIcon' })
     expect(buttons).toHaveLength(2)
-    expect(wrapper.find('.image-icon').exists()).toBe(true)
-    expect(wrapper.find('.code-icon').exists()).toBe(true)
+    expect(icons).toHaveLength(2)
 
     const firstProps = buttons[0]?.props() as Record<string, unknown>
     expect(firstProps.href).toBe('blob:mock')

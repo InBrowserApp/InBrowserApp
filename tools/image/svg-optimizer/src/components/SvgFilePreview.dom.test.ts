@@ -1,28 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { filesize } from 'filesize'
 import SvgFilePreview from './SvgFilePreview.vue'
-
-vi.mock('filesize', () => ({
-  filesize: (value: number) => `size-${value}`,
-}))
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
-vi.mock('@vicons/fluent/Delete24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'DeleteIcon',
-      template: '<svg class="delete-icon" />',
-    }),
-  }
-})
 
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
@@ -57,9 +36,9 @@ describe('SvgFilePreview', () => {
 
     expect(wrapper.find('img').attributes('src')).toBe('blob:preview')
     expect(wrapper.text()).toContain('icon.svg')
-    expect(wrapper.text()).toContain('size-2048')
-    expect(wrapper.text()).toContain('delete')
-    expect(wrapper.find('.delete-icon').exists()).toBe(true)
+    expect(wrapper.text()).toContain(filesize(2048) as string)
+    expect(wrapper.text()).toContain('Delete')
+    expect(wrapper.findAllComponents({ name: 'NIcon' })).toHaveLength(1)
 
     await wrapper.find('button').trigger('click')
     expect(wrapper.emitted('delete')).toBeTruthy()

@@ -9,14 +9,6 @@ import DesktopBrowserSettingsDedicatedImage from './DesktopBrowserSettingsDedica
 import DesktopBrowserSettingsDisplay from './DesktopBrowserSettingsDisplay.vue'
 import ChromeTabDarkNote from './ChromeTabDarkNote.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<h3 class="tool-section-header"><slot /></h3>',
@@ -148,26 +140,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Desktop16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'DesktopIcon',
-      template: '<span class="desktop-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Warning16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'WarningIcon',
-      template: '<span class="warning-icon" />',
-    }),
-  }
-})
-
 const generalInfoOptions: GeneralInfoOptions = {
   name: 'App Name',
   short_name: 'App',
@@ -216,7 +188,7 @@ describe('DesktopBrowser', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
+    expect(wrapper.text()).toContain('Desktop Browser & Google Result')
     expect(wrapper.findComponent(DesktopBrowserPreviewStub).props('generalInfoOptions')).toEqual(
       generalInfoOptions,
     )
@@ -378,7 +350,9 @@ describe('DesktopBrowserSettingsDisplay', () => {
 describe('ChromeTabDarkNote', () => {
   it('renders title and description text', () => {
     const wrapper = mount(ChromeTabDarkNote)
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('Dark Theme SVG Icon Limitation')
+    expect(wrapper.text()).toContain(
+      'Due to the limitation of the browser, the SVG icon of the browser tab in dark theme may not be displayed correctly.',
+    )
   })
 })

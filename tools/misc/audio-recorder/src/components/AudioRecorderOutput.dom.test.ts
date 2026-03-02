@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
 import AudioRecorderOutput from './AudioRecorderOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const NButtonStub = defineComponent({
   name: 'NButton',
   props: {
@@ -110,11 +102,11 @@ describe('AudioRecorderOutput', () => {
       'onUpdate:fileName': onFileNameUpdate,
     })
 
-    expect(wrapper.text()).toContain('formatUnknown')
+    expect(wrapper.text()).toContain('Unknown')
     expect(wrapper.text()).toContain('0 B')
 
     const downloadButton = wrapper.get('a')
-    expect(downloadButton.attributes('download')).toBe('fileNamePlaceholder.webm')
+    expect(downloadButton.attributes('download')).toBe('recording.webm')
 
     const input = wrapper.get('input')
     await input.setValue('clip')

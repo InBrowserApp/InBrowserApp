@@ -1,21 +1,11 @@
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
-
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NSpin: defineComponent({
       name: 'NSpin',
       template: '<div class="n-spin"><slot /></div>',
@@ -27,10 +17,6 @@ vi.mock('naive-ui', async () => {
       template:
         '<div class="n-collapse" @click="$emit(\'update:expandedNames\', [\'advanced\'])"><slot /></div>',
     }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
     NButton: defineComponent({
       name: 'NButton',
       props: { href: { type: String, default: '' } },
@@ -38,7 +24,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     name: 'ToolSection',
@@ -49,7 +34,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<h2 class="tool-section-header"><slot /></h2>',
   },
 }))
-
 vi.mock('./ExifCategorySection.vue', () => ({
   default: defineComponent({
     name: 'ExifCategorySection',
@@ -61,13 +45,10 @@ vi.mock('./ExifCategorySection.vue', () => ({
     template: '<div class="exif-category"><slot /><slot name="extra" /></div>',
   }),
 }))
-
 let ExifDataDisplay: typeof import('./ExifDataDisplay.vue').default
-
 beforeAll(async () => {
   ExifDataDisplay = (await import('./ExifDataDisplay.vue')).default
 })
-
 describe('ExifDataDisplay collapse binding', () => {
   it('updates expanded names through v-model listeners', async () => {
     const wrapper = mount(ExifDataDisplay, {
@@ -79,11 +60,14 @@ describe('ExifDataDisplay collapse binding', () => {
         isLoading: false,
       },
     })
-
     await wrapper.find('.n-collapse').trigger('click')
-
-    const setupState = (wrapper.vm.$ as unknown as { setupState: { expandedCategories: string[] } })
-      .setupState
+    const setupState = (
+      wrapper.vm.$ as unknown as {
+        setupState: {
+          expandedCategories: string[]
+        }
+      }
+    ).setupState
     expect(setupState.expandedCategories).toEqual(['advanced'])
   })
 })

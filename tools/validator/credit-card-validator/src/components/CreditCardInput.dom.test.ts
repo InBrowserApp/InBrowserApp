@@ -9,14 +9,6 @@ const BrandIconStub = defineComponent({
   template: '<svg class="brand-icon" />',
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -88,16 +80,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Payment20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CreditCardIcon',
-      template: '<svg class="credit-card-icon" />',
-    }),
-  }
-})
-
 const createResult = (overrides: Partial<ValidationResult> = {}): ValidationResult => ({
   isValid: false,
   brand: null,
@@ -120,10 +102,10 @@ describe('CreditCardInput', () => {
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
     const input = wrapper.findComponent({ name: 'NInput' })
 
-    expect(formItem.props('label')).toBe('cardNumber')
+    expect(formItem.props('label')).toBe('Credit Card Number')
     expect(formItem.props('feedback')).toBeUndefined()
     expect(formItem.props('validationStatus')).toBeUndefined()
-    expect(input.props('placeholder')).toBe('placeholder')
+    expect(input.props('placeholder')).toBe('Enter credit card number')
     expect(input.props('status')).toBeUndefined()
   })
 
@@ -154,7 +136,7 @@ describe('CreditCardInput', () => {
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
     const input = wrapper.findComponent({ name: 'NInput' })
 
-    expect(formItem.props('feedback')).toBe('valid')
+    expect(formItem.props('feedback')).toBe('Valid card number')
     expect(formItem.props('validationStatus')).toBe('success')
     expect(input.props('status')).toBe('success')
     const icon = wrapper.findComponent({ name: 'NIcon' })
@@ -182,7 +164,7 @@ describe('CreditCardInput', () => {
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
     const input = wrapper.findComponent({ name: 'NInput' })
 
-    expect(formItem.props('feedback')).toBe('invalidLuhn')
+    expect(formItem.props('feedback')).toBe('Invalid checksum (Luhn algorithm failed)')
     expect(formItem.props('validationStatus')).toBe('error')
     expect(input.props('status')).toBe('error')
   })
@@ -201,7 +183,7 @@ describe('CreditCardInput', () => {
     })
 
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
-    expect(formItem.props('feedback')).toBe('invalidLength')
+    expect(formItem.props('feedback')).toBe('Invalid card number length')
   })
 
   it('falls back to the generic invalid message for inconsistent data', () => {
@@ -218,6 +200,6 @@ describe('CreditCardInput', () => {
     })
 
     const formItem = wrapper.findComponent({ name: 'NFormItem' })
-    expect(formItem.props('feedback')).toBe('invalid')
+    expect(formItem.props('feedback')).toBe('Invalid card number')
   })
 })

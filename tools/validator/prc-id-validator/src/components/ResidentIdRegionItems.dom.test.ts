@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { validateResidentId } from '../data/residentId'
 import ResidentIdRegionItems from './ResidentIdRegionItems.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -73,13 +65,13 @@ describe('ResidentIdRegionItems', () => {
 
     const labels = wrapper.findAll('.desc-item').map((item) => item.attributes('data-label'))
     expect(labels).toEqual([
-      'status',
-      'region',
-      'regionCode',
-      'regionStatus',
-      'province',
-      'city',
-      'district',
+      'Status',
+      'Region',
+      'Region Code',
+      'Region Status',
+      'Province',
+      'City',
+      'District/County',
     ])
 
     expect(wrapper.get('.status').attributes('data-valid')).toBe('true')

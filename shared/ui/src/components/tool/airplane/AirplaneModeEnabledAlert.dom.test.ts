@@ -13,10 +13,6 @@ vi.mock('@utils/airplane-mode', () => ({
   useAirplaneModeStore: () => state.airplaneModeStore,
 }))
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const NCollapseTransition = defineComponent({
     name: 'NCollapseTransition',
@@ -76,9 +72,11 @@ describe('AirplaneModeEnabledAlert', () => {
     const wrapper = mountAlert()
 
     expect(wrapper.get('.collapse').attributes('data-show')).toBe('false')
-    expect(wrapper.get('.alert').attributes('data-title')).toBe('airplane-mode-enabled')
+    expect(wrapper.get('.alert').attributes('data-title')).toBe('Airplane Mode Enabled')
     expect(wrapper.get('.alert').attributes('data-type')).toBe('warning')
-    expect(wrapper.text()).toContain('what-is-airplane-mode-description')
+    expect(wrapper.text()).toContain(
+      'When airplane mode is enabled, all network requests to external servers are blocked to ensure your data always stays on your device. Only requests within the same website (same origin) are allowed. Think of it as a privacy shield - your files and data never leave your browser, making our tools completely secure and private.',
+    )
   })
 
   it('shows the alert when airplane mode is enabled', () => {

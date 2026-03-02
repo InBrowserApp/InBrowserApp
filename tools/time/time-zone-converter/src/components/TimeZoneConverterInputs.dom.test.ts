@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import TimeZoneConverterInputs from './TimeZoneConverterInputs.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const NButton = defineComponent({
     name: 'NButton',
@@ -189,7 +181,7 @@ describe('TimeZoneConverterInputs', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('invalid-date-time')
+    expect(wrapper.text()).toContain('Invalid date/time')
   })
 
   it('renders copy buttons when inputs are provided', () => {

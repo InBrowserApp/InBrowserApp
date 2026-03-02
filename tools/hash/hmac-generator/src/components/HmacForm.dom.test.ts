@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick, defineComponent } from 'vue'
 import HmacForm from './HmacForm.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -119,12 +111,12 @@ describe('HmacForm', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('input-header')
-    expect(wrapper.text()).toContain('secret-key')
-    expect(wrapper.text()).toContain('algorithm')
-    expect(wrapper.text()).toContain('message-header')
+    expect(wrapper.text()).toContain('Configuration')
+    expect(wrapper.text()).toContain('Secret Key')
+    expect(wrapper.text()).toContain('Algorithm')
+    expect(wrapper.text()).toContain('Message')
 
-    expect(wrapper.find('input').attributes('placeholder')).toBe('secret-key-placeholder')
+    expect(wrapper.find('input').attributes('placeholder')).toBe('Enter your secret key')
 
     const options = wrapper.findComponent({ name: 'NSelect' }).props('options') as Array<{
       label: string

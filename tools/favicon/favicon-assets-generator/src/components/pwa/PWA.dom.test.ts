@@ -11,14 +11,6 @@ import PWAMaskableSettings from './maskable/PWAMaskableSettings.vue'
 import PWAMaskableSettingsDisplay from './maskable/PWAMaskableSettingsDisplay.vue'
 import PWAMaskableSettingsDedicatedImage from './maskable/PWAMaskableSettingsDedicatedImage.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<h3 class="tool-section-header"><slot /></h3>',
@@ -152,26 +144,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/ionicons5/LogoPwa', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'LogoPwa',
-      template: '<span class="logo-pwa" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/BookInformation20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'BookInformation',
-      template: '<span class="book-info" />',
-    }),
-  }
-})
-
 const generalInfoOptions: GeneralInfoOptions = {
   name: 'App Name',
   short_name: 'App',
@@ -237,7 +209,7 @@ describe('PWA', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
+    expect(wrapper.text()).toContain('Progressive Web App (PWA)')
     expect(wrapper.findComponent(PWAPreviewStub).props('generalInfoOptions')).toEqual(
       generalInfoOptions,
     )
@@ -508,7 +480,7 @@ describe('PWAMaskableSettingsDisplay', () => {
 
     const formItems = wrapper.findAllComponents({ name: 'NFormItem' })
     expect(formItems).toHaveLength(2)
-    expect(formItems.map((item) => item.props('label'))).toEqual(['backgroundColor', 'margin'])
+    expect(formItems.map((item) => item.props('label'))).toEqual(['Background Color', 'Margin'])
   })
 })
 

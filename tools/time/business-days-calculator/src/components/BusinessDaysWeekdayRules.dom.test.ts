@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import BusinessDaysWeekdayRules from './BusinessDaysWeekdayRules.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 const mountWeekdayRules = (overrideProps: Record<string, unknown> = {}) => {
   const onWeekdayModeUpdate = vi.fn()
   const onWeekdaySelectionUpdate = vi.fn()
@@ -32,13 +24,13 @@ describe('BusinessDaysWeekdayRules', () => {
   it('toggles selection hint and emits mode/selection updates', async () => {
     const { wrapper, onWeekdayModeUpdate, onWeekdaySelectionUpdate } = mountWeekdayRules()
 
-    expect(wrapper.text()).toContain('weekend-hint')
+    expect(wrapper.text()).toContain('Select which days are weekends.')
 
     await wrapper.get('input[type="radio"][value="working"]').setValue()
     expect(onWeekdayModeUpdate).toHaveBeenCalledWith('working')
 
     await wrapper.setProps({ weekdayMode: 'working' })
-    expect(wrapper.text()).toContain('working-hint')
+    expect(wrapper.text()).toContain('Select which days are working days.')
 
     const weekdayCheckboxes = wrapper.findAll('[role="checkbox"]')
     await weekdayCheckboxes[1]!.trigger('click')
@@ -53,6 +45,6 @@ describe('BusinessDaysWeekdayRules', () => {
   it('shows an error when no working days remain', () => {
     const { wrapper } = mountWeekdayRules({ hasWorkingDays: false })
 
-    expect(wrapper.text()).toContain('no-working-days')
+    expect(wrapper.text()).toContain('No working days selected.')
   })
 })

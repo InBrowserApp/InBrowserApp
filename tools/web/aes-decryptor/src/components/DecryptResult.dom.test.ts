@@ -2,15 +2,6 @@ import { beforeEach, describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ref, nextTick } from 'vue'
 import DecryptResult from './DecryptResult.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -19,7 +10,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<h3 class="tool-section-header"><slot /></h3>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -27,21 +17,21 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="copy-button" :data-content="content">Copy</button>',
   },
 }))
-
 const createObjectUrlRef = (value: unknown) => {
   const resolved =
     value && typeof value === 'object' && 'value' in value
-      ? (value as { value: Blob | null }).value
+      ? (
+          value as {
+            value: Blob | null
+          }
+        ).value
       : (value as Blob | null)
   return ref(resolved ? `blob:${resolved.type}` : null)
 }
-
 const useObjectUrlMock = vi.fn(createObjectUrlRef)
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: (...args: [unknown]) => useObjectUrlMock(...args),
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -93,35 +83,24 @@ vi.mock('naive-ui', async () => {
     name: 'NTabPane',
     template: '<div class="n-tab-pane"><slot /></div>',
   })
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NSpace: Base,
     NAlert,
     NInput,
     NButton,
     NIcon: Base,
     NPopover,
-    NFlex: Base,
     NTabs,
     NTabPane,
   }
 })
-
-vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ArrowDownloadIcon',
-      template: '<svg class="download-icon" />',
-    }),
-  }
-})
-
 describe('DecryptResult', () => {
   beforeEach(() => {
     useObjectUrlMock.mockReset()
     useObjectUrlMock.mockImplementation(createObjectUrlRef)
   })
-
   it('shows an error alert when provided', () => {
     const wrapper = mount(DecryptResult, {
       props: {
@@ -131,11 +110,9 @@ describe('DecryptResult', () => {
         error: 'boom',
       },
     })
-
     expect(wrapper.find('.n-alert').exists()).toBe(true)
     expect(wrapper.text()).toContain('boom')
   })
-
   it('renders download links for text and binary output', () => {
     const wrapper = mount(DecryptResult, {
       props: {
@@ -145,20 +122,15 @@ describe('DecryptResult', () => {
         error: '',
       },
     })
-
     const copyButton = wrapper.find('.copy-button')
     expect(copyButton.attributes('data-content')).toBe('hello')
-
     const downloadButtons = wrapper
       .findAll('button[data-download]')
       .filter((button) => button.attributes('data-download'))
-
     const downloads = downloadButtons.map((button) => button.attributes('data-download'))
-
     expect(downloads).toContain('decrypted.txt')
     expect(downloads).toContain('decrypted.bin')
   })
-
   it('switches copy content when changing tabs', async () => {
     const wrapper = mount(DecryptResult, {
       props: {
@@ -168,15 +140,12 @@ describe('DecryptResult', () => {
         error: '',
       },
     })
-
     const tabs = wrapper.findComponent({ name: 'NTabs' })
     tabs.vm.$emit('update:value', 'hex')
     await nextTick()
-
     const copyButton = wrapper.find('.copy-button')
     expect(copyButton.attributes('data-content')).toBe('6869')
   })
-
   it('renders only text download when binary output is missing', () => {
     const wrapper = mount(DecryptResult, {
       props: {
@@ -186,18 +155,14 @@ describe('DecryptResult', () => {
         error: '',
       },
     })
-
     const downloadButtons = wrapper
       .findAll('button[data-download]')
       .filter((button) => button.attributes('data-download'))
-
     const downloads = downloadButtons.map((button) => button.attributes('data-download'))
-
     expect(downloads).toEqual(['decrypted.txt'])
   })
   it('falls back to undefined href when object URLs are unavailable', () => {
     useObjectUrlMock.mockImplementationOnce(() => ref(null)).mockImplementationOnce(() => ref(null))
-
     const wrapper = mount(DecryptResult, {
       props: {
         result: 'hello',
@@ -206,15 +171,12 @@ describe('DecryptResult', () => {
         error: '',
       },
     })
-
     const downloadButtons = wrapper
       .findAll('button[data-download]')
       .filter((button) => button.attributes('data-download'))
-
     const textButton = downloadButtons.find(
       (button) => button.attributes('data-download') === 'decrypted.txt',
     )
-
     expect(textButton?.attributes('data-href')).toBeUndefined()
     expect(textButton?.attributes('data-disabled')).toBe('true')
   })

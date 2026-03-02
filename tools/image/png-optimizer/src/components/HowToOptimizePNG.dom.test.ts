@@ -1,14 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import HowToOptimizePNG from './HowToOptimizePNG.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('HowToOptimizePNG', () => {
   it('renders guidance content', () => {
@@ -25,7 +17,9 @@ describe('HowToOptimizePNG', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.text()).toContain('How We Optimize PNG Images')
+    expect(wrapper.text()).toContain(
+      'This tool uses Oxipng, a multithreaded lossless PNG/APNG compression optimizer written in Rust. It provides excellent compression performance while maintaining image quality. Key optimization features include: Optimization levels (0 to 6), where higher levels provide better compression but take longer. Alpha optimization improves compression for transparent images by altering fully transparent pixel colors. Interlacing option for progressive image loading. The optimization process is entirely client-side, ensuring your images never leave your device for maximum privacy.',
+    )
   })
 })

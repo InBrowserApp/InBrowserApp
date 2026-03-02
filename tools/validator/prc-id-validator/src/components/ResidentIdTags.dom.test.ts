@@ -4,14 +4,6 @@ import ResidentIdChecksumTag from './ResidentIdChecksumTag.vue'
 import ResidentIdRegionStatusTag from './ResidentIdRegionStatusTag.vue'
 import ResidentIdStatusTag from './ResidentIdStatusTag.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -36,7 +28,7 @@ describe('ResidentIdStatusTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('success')
-    expect(wrapper.text()).toBe('valid')
+    expect(wrapper.text()).toBe('Valid')
   })
 
   it('renders invalid status', () => {
@@ -45,7 +37,7 @@ describe('ResidentIdStatusTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('error')
-    expect(wrapper.text()).toBe('invalid')
+    expect(wrapper.text()).toBe('Invalid')
   })
 })
 
@@ -56,7 +48,7 @@ describe('ResidentIdChecksumTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('success')
-    expect(wrapper.text()).toBe('pass')
+    expect(wrapper.text()).toBe('Pass')
   })
 
   it('renders fail status', () => {
@@ -65,7 +57,7 @@ describe('ResidentIdChecksumTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('error')
-    expect(wrapper.text()).toBe('fail')
+    expect(wrapper.text()).toBe('Fail')
   })
 })
 
@@ -76,7 +68,7 @@ describe('ResidentIdRegionStatusTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('success')
-    expect(wrapper.text()).toBe('known')
+    expect(wrapper.text()).toBe('Known')
   })
 
   it('renders unknown status', () => {
@@ -85,6 +77,6 @@ describe('ResidentIdRegionStatusTag', () => {
     })
 
     expect(wrapper.get('.tag').attributes('data-type')).toBe('warning')
-    expect(wrapper.text()).toBe('unknown')
+    expect(wrapper.text()).toBe('Unknown')
   })
 })

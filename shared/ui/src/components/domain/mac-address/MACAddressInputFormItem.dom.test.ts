@@ -2,10 +2,6 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import MACAddressInputFormItem from './MACAddressInputFormItem.vue'
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -44,7 +40,7 @@ describe('MACAddressInputFormItem', () => {
       },
     })
 
-    expect(wrapper.get('.form-item').attributes('data-label')).toBe('mac_address')
+    expect(wrapper.get('.form-item').attributes('data-label')).toBe('MAC Address')
     expect(wrapper.get('.mac-input').text()).toContain('00:11:22:33:44:55')
 
     await wrapper.get('.mac-input').trigger('click')

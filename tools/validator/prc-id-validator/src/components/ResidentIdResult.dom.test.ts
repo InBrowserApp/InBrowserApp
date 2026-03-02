@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { validateResidentId } from '../data/residentId'
 import ResidentIdResult from './ResidentIdResult.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -52,7 +44,7 @@ describe('ResidentIdResult', () => {
       props: { validationResult },
     })
 
-    expect(wrapper.get('.tool-header').text()).toBe('result')
+    expect(wrapper.get('.tool-header').text()).toBe('Validation Result')
     expect(wrapper.get('.region-items').attributes('data-input')).toBe('11010519491231002X')
     expect(wrapper.get('.identity-items').attributes('data-input')).toBe('11010519491231002X')
   })

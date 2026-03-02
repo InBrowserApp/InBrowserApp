@@ -1,16 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -64,7 +54,7 @@ describe('ISBNResult', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('result')
+    expect(wrapper.find('.section-header').text()).toBe('Validation Result')
     expect(wrapper.find('[data-testid="summary"]').exists()).toBe(true)
     expect(wrapper.find('[data-testid="identifiers"]').exists()).toBe(true)
   })

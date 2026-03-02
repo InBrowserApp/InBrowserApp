@@ -11,14 +11,6 @@ vi.mock('svgo/browser', () => ({
   optimize: vi.fn(),
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
   return {
@@ -129,7 +121,7 @@ describe('SvgOptimizerView', () => {
       return plugins.some((plugin) => plugin.name === 'removeDimensions')
     })
     expect(hasRemoveDimensions).toBe(true)
-    expect(messageSuccess).toHaveBeenCalledWith('optimizeSuccess')
+    expect(messageSuccess).toHaveBeenCalledWith('SVG optimized successfully!')
     expect(wrapper.find('.results').exists()).toBe(true)
   })
 
@@ -206,7 +198,7 @@ describe('SvgOptimizerView', () => {
     input.vm.$emit('update:svgString', '<svg></svg>')
     await flushPromises()
 
-    expect(messageError).toHaveBeenCalledWith('optimizeFailed')
+    expect(messageError).toHaveBeenCalledWith('Failed to optimize SVG')
     expect(wrapper.find('.results').exists()).toBe(false)
   })
 })

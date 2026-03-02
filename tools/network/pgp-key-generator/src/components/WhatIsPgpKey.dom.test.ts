@@ -1,15 +1,7 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsPgpKey from './WhatIsPgpKey.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const DescriptionStub = defineComponent({
   name: 'DescriptionMarkdown',
@@ -37,7 +29,7 @@ describe('WhatIsPgpKey', () => {
     })
 
     const description = wrapper.find('.description')
-    expect(description.text()).toContain('title')
-    expect(description.text()).toContain('description')
+    expect(description.text()).toContain('What is a PGP Key?')
+    expect(description.text()).toContain('OpenPGP (PGP) keys')
   })
 })

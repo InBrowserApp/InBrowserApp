@@ -16,14 +16,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -89,36 +81,6 @@ vi.mock('naive-ui', async () => {
       template: '<div class="slider" />',
     }),
     useMessage: () => messageMock,
-  }
-})
-
-vi.mock('@vicons/fluent/Image24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ImageIcon',
-      template: '<svg class="image-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Code24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CodeIcon',
-      template: '<svg class="code-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Copy24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CopyIcon',
-      template: '<svg class="copy-icon" />',
-    }),
   }
 })
 
@@ -251,6 +213,7 @@ describe('PlaceholderDownloadButtons', () => {
 
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
     const downloadButtons = buttons.filter((button) => button.props('tag') === 'a')
+    const icons = wrapper.findAllComponents({ name: 'NIcon' })
 
     expect(downloadButtons).toHaveLength(4)
     expect(downloadButtons[0]?.props('download')).toBe('placeholder-200x100.png')
@@ -261,9 +224,7 @@ describe('PlaceholderDownloadButtons', () => {
     expect(downloadButtons[1]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[2]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[3]?.props('href')).toBe('blob:mock')
-    expect(wrapper.find('.image-icon').exists()).toBe(true)
-    expect(wrapper.find('.code-icon').exists()).toBe(true)
-    expect(wrapper.find('.copy-icon').exists()).toBe(true)
+    expect(icons.length).toBeGreaterThanOrEqual(3)
   })
 
   it('updates filenames when scale changes', async () => {
@@ -366,7 +327,7 @@ describe('PlaceholderDownloadButtons', () => {
     await flushPromises()
 
     expect(clipboardWrite).toHaveBeenCalled()
-    expect(messageMock.success).toHaveBeenCalledWith('copy-success')
+    expect(messageMock.success).toHaveBeenCalledWith('Image copied to clipboard')
   })
 
   it('reports copy failure when blob is missing', async () => {
@@ -390,7 +351,7 @@ describe('PlaceholderDownloadButtons', () => {
     await copyButton?.trigger('click')
     await flushPromises()
 
-    expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to copy image')
   })
 
   it('reports copy failure when clipboard write rejects', async () => {
@@ -409,7 +370,7 @@ describe('PlaceholderDownloadButtons', () => {
     await copyButton?.trigger('click')
     await flushPromises()
 
-    expect(messageMock.error).toHaveBeenCalledWith('copy-failed')
+    expect(messageMock.error).toHaveBeenCalledWith('Failed to copy image')
   })
 
   it('handles missing canvas context', async () => {

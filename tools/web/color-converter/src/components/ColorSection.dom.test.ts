@@ -1,17 +1,12 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ColorSection from './ColorSection.vue'
-
 vi.mock('naive-ui', async () => {
-  const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
+    ...actual,
   }
 })
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -21,7 +16,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 describe('ColorSection', () => {
   it('renders label and slots', () => {
     const wrapper = mount(ColorSection, {
@@ -32,7 +26,6 @@ describe('ColorSection', () => {
         'label-suffix': '<span class="suffix" />',
       },
     })
-
     expect(wrapper.text()).toContain('HEX')
     expect(wrapper.find('.content').exists()).toBe(true)
     expect(wrapper.find('.action').exists()).toBe(true)

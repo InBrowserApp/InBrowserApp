@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SitemapUrlEntryNews from './SitemapUrlEntryNews.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
 
@@ -110,13 +102,13 @@ describe('SitemapUrlEntryNews', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('addNews')
+    expect(wrapper.text()).toContain('Add news')
 
-    await wrapper.get('input[placeholder="publicationName"]').setValue('Example News')
+    await wrapper.get('input[placeholder="Publication name"]').setValue('Example News')
     await wrapper.get('input[placeholder="en"]').setValue('en')
-    await wrapper.get('input[placeholder="title"]').setValue('Product launch')
-    await wrapper.get('input[placeholder="publicationDate"]').setValue('2024-01-25')
-    await wrapper.get('input[placeholder="keywords"]').setValue('launch, product')
+    await wrapper.get('input[placeholder="Title"]').setValue('Product launch')
+    await wrapper.get('input[placeholder="Publication date"]').setValue('2024-01-25')
+    await wrapper.get('input[placeholder="Keywords"]').setValue('launch, product')
 
     expect(news[0]?.publicationName).toBe('Example News')
     expect(news[0]?.publicationLanguage).toBe('en')

@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventRecurrenceEndsSection from './IcalEventRecurrenceEndsSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -119,8 +111,8 @@ describe('IcalEventRecurrenceEndsSection', () => {
     })
 
     const input = wrapper.find('.n-input')
-    expect(input.attributes('placeholder')).toBe('until-placeholder')
-    expect(wrapper.text()).toContain('invalid-date-time')
+    expect(input.attributes('placeholder')).toBe('YYYY-MM-DD HH:mm:ss')
+    expect(wrapper.text()).toContain('Invalid date/time')
 
     const inputComponent = wrapper.findComponent({ name: 'NInput' })
     inputComponent.vm.$emit('update:value', '2024-01-02 12:00:00')
@@ -138,6 +130,6 @@ describe('IcalEventRecurrenceEndsSection', () => {
       },
     })
 
-    expect(wrapper.find('.n-input').attributes('placeholder')).toBe('date-placeholder')
+    expect(wrapper.find('.n-input').attributes('placeholder')).toBe('YYYY-MM-DD')
   })
 })

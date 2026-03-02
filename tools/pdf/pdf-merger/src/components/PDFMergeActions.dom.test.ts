@@ -1,27 +1,14 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, h } = await import('vue')
-
   const stub = (name: string, tag = 'div') =>
     defineComponent({
       name,
       inheritAttrs: false,
       template: `<${tag} v-bind="$attrs"><slot /></${tag}>`,
     })
-
   const NButton = defineComponent({
     name: 'NButton',
     inheritAttrs: false,
@@ -59,7 +46,6 @@ vi.mock('naive-ui', async () => {
         )
     },
   })
-
   const NInput = defineComponent({
     name: 'NInput',
     inheritAttrs: false,
@@ -72,33 +58,28 @@ vi.mock('naive-ui', async () => {
     emits: ['update:value'],
     template: '<input :value="value" @input="$emit(\'update:value\', $event.target.value)" />',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NAlert: stub('NAlert'),
     NButton,
-    NFlex: stub('NFlex'),
     NIcon: stub('NIcon'),
     NInput,
     NText: stub('NText', 'span'),
   }
 })
-
 import PDFMergeActions from './PDFMergeActions.vue'
-
 const ToolSection = defineComponent({
   name: 'ToolSection',
   template: '<section><slot /></section>',
 })
-
 const ToolSectionHeader = defineComponent({
   name: 'ToolSectionHeader',
   template: '<h2><slot /></h2>',
 })
-
 describe('PDFMergeActions', () => {
   it('emits clear, merge and output filename updates', async () => {
     let outputName = 'merged.pdf'
-
     const wrapper = mount(PDFMergeActions, {
       props: {
         outputName,
@@ -120,18 +101,14 @@ describe('PDFMergeActions', () => {
         },
       },
     })
-
     await wrapper.find('input').setValue('output')
-
     const buttons = wrapper.findAll('button')
     await buttons[0]?.trigger('click')
     await buttons[1]?.trigger('click')
-
     expect(wrapper.emitted('clear')).toHaveLength(1)
     expect(wrapper.emitted('merge')).toHaveLength(1)
     expect(outputName).toBe('output')
   })
-
   it('renders download anchor when merged file exists', () => {
     const wrapper = mount(PDFMergeActions, {
       props: {
@@ -152,7 +129,6 @@ describe('PDFMergeActions', () => {
         },
       },
     })
-
     const anchor = wrapper.find('a[href="blob:merged"]')
     expect(anchor.exists()).toBe(true)
     expect(anchor.attributes('download')).toBe('result.pdf')

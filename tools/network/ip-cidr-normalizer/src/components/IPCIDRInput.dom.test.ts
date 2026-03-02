@@ -1,15 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
 import IPCIDRInput from './IPCIDRInput.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const NInputStub = defineComponent({
   name: 'NInput',
@@ -128,6 +120,6 @@ describe('IPCIDRInput', () => {
 
     const result = rule.validator()
     expect(result).toBeInstanceOf(Error)
-    expect(result?.message).toBe('error.invalid')
+    expect(result?.message).toBe('Invalid IP/CIDR')
   })
 })

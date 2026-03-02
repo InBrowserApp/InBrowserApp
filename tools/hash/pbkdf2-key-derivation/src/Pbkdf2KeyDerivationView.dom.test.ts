@@ -15,10 +15,6 @@ vi.mock('@vueuse/core', () => ({
   useStorage,
 }))
 
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
-}))
-
 vi.mock('@shared/ui/tool', () => ({
   ToolDefaultPageLayout: {
     props: ['info'],
@@ -127,29 +123,35 @@ describe('Pbkdf2KeyDerivationView', () => {
 
     iterationsRef.value = null
     await nextTick()
-    expect(wrapper.find('[data-label="iterations"]').attributes('data-status')).toBeUndefined()
+    expect(wrapper.find('[data-label="Iterations"]').attributes('data-status')).toBeUndefined()
 
     iterationsRef.value = 1.5
     await nextTick()
-    expect(wrapper.find('[data-label="iterations"]').attributes('data-status')).toBe('error')
+    expect(wrapper.find('[data-label="Iterations"]').attributes('data-status')).toBe('error')
 
     iterationsRef.value = 1000001
     await nextTick()
-    expect(wrapper.find('[data-label="iterations"]').attributes('data-status')).toBe('error')
+    expect(wrapper.find('[data-label="Iterations"]').attributes('data-status')).toBe('error')
 
     lengthRef.value = 512
     await nextTick()
-    expect(wrapper.find('[data-label="length"]').attributes('data-status')).toBe('error')
+    expect(wrapper.find('[data-label="Derived Length (bytes)"]').attributes('data-status')).toBe(
+      'error',
+    )
 
     saltFormatRef.value = 'hex'
     form.vm.$emit('update:salt', 'zz')
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-hex')
+    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe(
+      'Salt must be valid hex.',
+    )
 
     saltFormatRef.value = 'base64'
     form.vm.$emit('update:salt', '***')
     await nextTick()
-    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe('salt-invalid-base64')
+    expect(wrapper.find('.text-or-file').attributes('data-feedback')).toBe(
+      'Salt must be valid Base64.',
+    )
 
     form.vm.$emit('update:salt', 'AQID')
     await nextTick()

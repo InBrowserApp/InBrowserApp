@@ -23,17 +23,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      locale: localeRef,
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('./utils/cron', () => ({
   validateExpression: (expression: string) => validateExpressionMock(expression),
   getHumanDescription: (expression: string, locale?: string) =>
@@ -133,7 +122,7 @@ describe('CronExpressionParserView', () => {
     expect(explanation.attributes('data-fields')).toBe('1')
     expect(wrapper.get('.next-run-times').attributes('data-count')).toBe('2')
 
-    expect(getHumanDescriptionMock).toHaveBeenCalledWith('*/10 * * * *', 'ja')
+    expect(getHumanDescriptionMock).toHaveBeenCalledWith('*/10 * * * *', 'en')
     expect(getNextRunTimesMock).toHaveBeenCalledWith('*/10 * * * *', 10)
     expect(parseFieldsMock).toHaveBeenCalledWith('*/10 * * * *')
   })

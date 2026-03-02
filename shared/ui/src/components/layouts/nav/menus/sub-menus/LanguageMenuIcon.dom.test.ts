@@ -4,26 +4,13 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import LanguageMenuIcon from './LanguageMenuIcon.vue'
 
 const state = vi.hoisted(() => ({
-  language: {
-    value: 'en' as string | null,
-    __v_isRef: true,
-  },
   pushSpy: vi.fn(),
-  routeState: { fullPath: '/en/tools/demo' },
-}))
-
-vi.mock('@shared/locale', () => ({
-  useSiteLanguage: () => ({ language: state.language }),
-  supportedLanguages: ['en', 'zh', 'fr'],
+  routeState: { path: '/en/tools/demo', fullPath: '/en/tools/demo' },
 }))
 
 vi.mock('vue-router', () => ({
   useRoute: () => state.routeState,
   useRouter: () => ({ push: state.pushSpy }),
-}))
-
-vi.mock('vue-i18n', () => ({
-  useI18n: () => ({ t: (key: string) => key }),
 }))
 
 vi.mock('naive-ui', async () => {
@@ -69,12 +56,13 @@ vi.mock('naive-ui', async () => {
 describe('LanguageMenuIcon', () => {
   beforeEach(() => {
     state.pushSpy.mockReset()
+    state.routeState.path = '/en/tools/demo'
     state.routeState.fullPath = '/en/tools/demo'
-    state.language.value = 'en'
   })
 
   it('uses auto as fallback when language is not set', () => {
-    state.language.value = null
+    state.routeState.path = '/tools/demo'
+    state.routeState.fullPath = '/tools/demo'
     const wrapper = mount(LanguageMenuIcon, {
       global: {
         stubs: {
@@ -101,14 +89,17 @@ describe('LanguageMenuIcon', () => {
     expect(state.pushSpy).toHaveBeenCalledWith({ path: '/tools/demo', force: true })
 
     state.routeState.fullPath = '/tools/demo'
+    state.routeState.path = '/tools/demo'
     popselect.vm.$emit('update:value', 'auto')
     expect(state.pushSpy).toHaveBeenCalledWith({ path: '/tools/demo', force: true })
 
     state.routeState.fullPath = '/tools/demo'
+    state.routeState.path = '/tools/demo'
     popselect.vm.$emit('update:value', 'zh')
     expect(state.pushSpy).toHaveBeenCalledWith({ path: '/zh/tools/demo', force: true })
 
     state.routeState.fullPath = '/en/tools/demo'
+    state.routeState.path = '/en/tools/demo'
     popselect.vm.$emit('update:value', 'fr')
     expect(state.pushSpy).toHaveBeenCalledWith({ path: '/fr/tools/demo', force: true })
   })

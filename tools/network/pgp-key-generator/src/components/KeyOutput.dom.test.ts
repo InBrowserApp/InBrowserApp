@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import KeyOutput from './KeyOutput.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({
@@ -101,8 +93,8 @@ describe('KeyOutput', () => {
       'pgp-revocation-abc123.asc',
     )
 
-    expect(wrapper.text()).toContain('securityWarning')
-    expect(wrapper.text()).toContain('unprotectedWarning')
+    expect(wrapper.text()).toContain('Security Warning')
+    expect(wrapper.text()).toContain('Private key not protected')
   })
 
   it('omits the revocation section when not available', () => {
@@ -129,7 +121,7 @@ describe('KeyOutput', () => {
     })
 
     expect(wrapper.findComponent(RevocationStub).exists()).toBe(false)
-    expect(wrapper.text()).toContain('securityWarning')
-    expect(wrapper.text()).not.toContain('unprotectedWarning')
+    expect(wrapper.text()).toContain('Security Warning')
+    expect(wrapper.text()).not.toContain('Private key not protected')
   })
 })

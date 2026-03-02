@@ -1,27 +1,14 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NDescriptionsItem: defineComponent({
       name: 'NDescriptionsItem',
       props: ['label'],
       template: '<div class="item" :data-label="label"><slot /></div>',
-    }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="flex"><slot /></div>',
     }),
     NTag: defineComponent({
       name: 'NTag',
@@ -35,9 +22,7 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 import ISBNResultSummary from './ISBNResultSummary.vue'
-
 const baseResult = {
   input: '',
   normalized: '',
@@ -53,7 +38,6 @@ const baseResult = {
   isbn13: '9780306406157',
   prefix: null,
 }
-
 describe('ISBNResultSummary', () => {
   it('renders type, normalized value, and checksum status', () => {
     const wrapper = mount(ISBNResultSummary, {
@@ -72,14 +56,12 @@ describe('ISBNResultSummary', () => {
         },
       },
     })
-
-    expect(wrapper.text()).toContain('isbn10')
-    expect(wrapper.text()).toContain('expected: 2')
-    expect(wrapper.text()).toContain('actual: 2')
+    expect(wrapper.text()).toContain('ISBN-10')
+    expect(wrapper.text()).toContain('Expected: 2')
+    expect(wrapper.text()).toContain('Actual: 2')
     expect(wrapper.find('.tag').attributes('data-type')).toBe('success')
     expect(wrapper.find('.copy').exists()).toBe(true)
   })
-
   it('renders isbn13 type labels', () => {
     const wrapper = mount(ISBNResultSummary, {
       props: {
@@ -97,10 +79,8 @@ describe('ISBNResultSummary', () => {
         },
       },
     })
-
-    expect(wrapper.text()).toContain('isbn13')
+    expect(wrapper.text()).toContain('ISBN-13')
   })
-
   it('falls back to unknown type and missing digits', () => {
     const wrapper = mount(ISBNResultSummary, {
       props: {
@@ -121,10 +101,9 @@ describe('ISBNResultSummary', () => {
         },
       },
     })
-
-    expect(wrapper.text()).toContain('unknown')
-    expect(wrapper.text()).toContain('expected: -')
-    expect(wrapper.text()).toContain('actual: -')
+    expect(wrapper.text()).toContain('Unknown')
+    expect(wrapper.text()).toContain('Expected: -')
+    expect(wrapper.text()).toContain('Actual: -')
     expect(wrapper.find('.tag').attributes('data-type')).toBe('error')
     expect(wrapper.find('.copy').exists()).toBe(false)
   })

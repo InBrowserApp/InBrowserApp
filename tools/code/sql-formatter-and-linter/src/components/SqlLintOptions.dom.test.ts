@@ -1,26 +1,11 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SqlLintOptions from './SqlLintOptions.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFormItemGi: defineComponent({
-      name: 'NFormItemGi',
-      template: '<label><slot /></label>',
-    }),
-    NGrid: defineComponent({
-      name: 'NGrid',
-      template: '<div><slot /></div>',
-    }),
+    ...actual,
     NInputNumber: defineComponent({
       name: 'NInputNumber',
       props: {
@@ -47,7 +32,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 const mountComponent = () =>
   mount(SqlLintOptions, {
     props: {
@@ -57,20 +41,16 @@ const mountComponent = () =>
       maxLineLength: 100,
     },
   })
-
 describe('SqlLintOptions', () => {
   it('emits updates for lint controls', async () => {
     const wrapper = mountComponent()
-
     const switches = wrapper.findAll('.switch')
     expect(switches).toHaveLength(3)
     await switches[0]!.setValue(false)
     await switches[1]!.setValue(false)
     await switches[2]!.setValue(false)
-
     const numberInput = wrapper.find('.input-number')
     await numberInput.setValue('120')
-
     expect(wrapper.emitted('update:checkSelectStar')?.[0]).toEqual([false])
     expect(wrapper.emitted('update:checkUnsafeMutation')?.[0]).toEqual([false])
     expect(wrapper.emitted('update:requireSemicolon')?.[0]).toEqual([false])

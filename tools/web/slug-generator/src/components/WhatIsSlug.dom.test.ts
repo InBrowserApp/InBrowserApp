@@ -1,15 +1,7 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import WhatIsSlug from './WhatIsSlug.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 const NTextStub = defineComponent({
   name: 'NText',
@@ -50,11 +42,10 @@ describe('WhatIsSlug', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('title')
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('example1')
-    expect(wrapper.text()).toContain('example2')
-    expect(wrapper.text()).toContain('example3')
-    expect(wrapper.text()).toContain('benefits')
+    expect(wrapper.text()).toContain('What is a Slug?')
+    expect(wrapper.text()).toContain('URL-friendly version of a string')
+    expect(wrapper.text()).toContain('"Hello World!" → "hello-world"')
+    expect(wrapper.text()).toContain('"Product: iPhone 15 Pro" → "product-iphone-15-pro"')
+    expect(wrapper.text()).toContain('Slugs improve URL readability')
   })
 })

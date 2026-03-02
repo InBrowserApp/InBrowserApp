@@ -1,6 +1,5 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
 import type { UploadFileInfo } from 'naive-ui'
 import ImageInput from './ImageInput.vue'
 
@@ -86,13 +85,6 @@ vi.mock('naive-ui', async () => {
     NImage,
   }
 })
-
-vi.mock('@vicons/fluent/Image24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
-vi.mock('@vicons/fluent/Delete24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
 
 type ImageInputProps = InstanceType<typeof ImageInput>['$props']
 

@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsPRCResidentIdValidator from './WhatIsPRCResidentIdValidator.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -40,10 +32,14 @@ describe('WhatIsPRCResidentIdValidator', () => {
   it('renders title and description content', () => {
     const wrapper = mount(WhatIsPRCResidentIdValidator)
 
-    expect(wrapper.get('.tool-header').text()).toBe('title')
+    expect(wrapper.get('.tool-header').text()).toBe('What is a PRC Resident ID?')
     const paragraphs = wrapper.findAll('.paragraph')
     expect(paragraphs).toHaveLength(2)
-    expect(wrapper.text()).toContain('description')
-    expect(wrapper.text()).toContain('dataNote')
+    expect(wrapper.text()).toContain(
+      '18-digit PRC Resident ID number includes the address code, birthdate, sequence code, and checksum.',
+    )
+    expect(wrapper.text()).toContain(
+      'Region codes are based on the 2023 administrative division dataset.',
+    )
   })
 })

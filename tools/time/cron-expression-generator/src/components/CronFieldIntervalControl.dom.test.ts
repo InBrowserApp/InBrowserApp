@@ -1,28 +1,11 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CronFieldIntervalControl from './CronFieldIntervalControl.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string) => key,
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div class="n-flex"><slot /></div>',
-    }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span class="n-text"><slot /></span>',
-    }),
+    ...actual,
     NInputNumber: defineComponent({
       name: 'NInputNumber',
       props: ['value', 'min', 'max', 'size'],
@@ -31,7 +14,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 describe('CronFieldIntervalControl', () => {
   it('computes unit labels and max interval', () => {
     const wrapper = mount(CronFieldIntervalControl, {
@@ -44,12 +26,10 @@ describe('CronFieldIntervalControl', () => {
         intervalValue: 5,
       },
     })
-
     const input = wrapper.findComponent({ name: 'NInputNumber' })
     expect(input.props('max')).toBe(60)
-    expect(wrapper.text()).toContain('minutes')
+    expect(wrapper.text()).toContain('minute(s)')
   })
-
   it('maps weekday units and interval bounds', () => {
     const wrapper = mount(CronFieldIntervalControl, {
       props: {
@@ -61,15 +41,12 @@ describe('CronFieldIntervalControl', () => {
         intervalValue: 2,
       },
     })
-
     const input = wrapper.findComponent({ name: 'NInputNumber' })
     expect(input.props('max')).toBe(7)
-    expect(wrapper.text()).toContain('daysOfWeek')
+    expect(wrapper.text()).toContain('day(s)')
   })
-
   it('forwards interval updates from the input model', () => {
     const onUpdateIntervalValue = vi.fn()
-
     const wrapper = mount(CronFieldIntervalControl, {
       props: {
         fieldConfig: {
@@ -81,9 +58,7 @@ describe('CronFieldIntervalControl', () => {
         'onUpdate:intervalValue': onUpdateIntervalValue,
       },
     })
-
     wrapper.findComponent({ name: 'NInputNumber' }).vm.$emit('update:value', 12)
-
     expect(onUpdateIntervalValue).toHaveBeenCalledWith(12)
   })
 })

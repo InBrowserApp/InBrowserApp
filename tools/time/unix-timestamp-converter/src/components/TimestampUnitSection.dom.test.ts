@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import TimestampUnitSection from './TimestampUnitSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -78,12 +70,12 @@ describe('TimestampUnitSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('unit')
-    expect(wrapper.text()).toContain('auto')
-    expect(wrapper.text()).toContain('seconds')
-    expect(wrapper.text()).toContain('milliseconds')
-    expect(wrapper.text()).toContain('nanoseconds')
-    expect(wrapper.text()).toContain('detected')
+    expect(wrapper.text()).toContain('Unit')
+    expect(wrapper.text()).toContain('Auto')
+    expect(wrapper.text()).toContain('Seconds')
+    expect(wrapper.text()).toContain('Milliseconds')
+    expect(wrapper.text()).toContain('Nanoseconds')
+    expect(wrapper.text()).toContain('Detected')
     expect(wrapper.text()).toContain('digits')
 
     wrapper.findComponent({ name: 'NRadioGroup' }).vm.$emit('update:value', 'milliseconds')
@@ -105,14 +97,14 @@ describe('TimestampUnitSection', () => {
       },
     })
 
-    expect(wrapper.find('.n-text').text()).toContain('milliseconds')
+    expect(wrapper.find('.n-text').text()).toContain('Milliseconds')
 
     await wrapper.setProps({
       detectedUnit: 'nanoseconds',
       digitCount: 16,
     })
 
-    expect(wrapper.find('.n-text').text()).toContain('nanoseconds')
+    expect(wrapper.find('.n-text').text()).toContain('Nanoseconds')
   })
 
   it('falls back to milliseconds for unknown detected unit', () => {
@@ -128,6 +120,6 @@ describe('TimestampUnitSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('milliseconds')
+    expect(wrapper.text()).toContain('Milliseconds')
   })
 })

@@ -23,14 +23,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -172,8 +164,8 @@ describe('DockerRunToCompose', () => {
     const wrapper = mount(DockerRunToCompose)
 
     const buttons = wrapper.findAll('button')
-    const sampleButton = buttons.find((button) => button.text().includes('sample'))
-    const clearButton = buttons.find((button) => button.text().includes('clear'))
+    const sampleButton = buttons.find((button) => button.text().includes('Use sample'))
+    const clearButton = buttons.find((button) => button.text().includes('Clear'))
 
     if (!sampleButton || !clearButton) {
       throw new Error('Missing action buttons')

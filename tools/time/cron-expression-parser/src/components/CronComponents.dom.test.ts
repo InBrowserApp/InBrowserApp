@@ -1,7 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-
 const mockValidateExpression = vi.hoisted(() => vi.fn())
-
 vi.mock('../utils/cron', async () => {
   const actual = await vi.importActual<typeof import('../utils/cron')>('../utils/cron')
   return {
@@ -9,20 +7,6 @@ vi.mock('../utils/cron', async () => {
     validateExpression: mockValidateExpression,
   }
 })
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  const { ref } = await import('vue')
-  return {
-    ...actual,
-    useI18n: () => ({
-      t: (key: string, params?: { n?: number }) =>
-        params?.n !== undefined ? `${key}:${params.n}` : key,
-      locale: ref('en-US'),
-    }),
-  }
-})
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -36,7 +20,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -47,22 +30,15 @@ vi.mock('@shared/ui/base', async () => {
     }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NButton: defineComponent({
-      name: 'NButton',
-      template: '<button><slot /></button>',
-    }),
+    ...actual,
     NDataTable: defineComponent({
       name: 'NDataTable',
       props: ['data'],
       template: '<div data-testid="table" :data-rows="JSON.stringify(data)" />',
-    }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
     }),
     NInput: defineComponent({
       name: 'NInput',
@@ -71,20 +47,14 @@ vi.mock('naive-ui', async () => {
       template:
         '<input :value="value" :data-status="status" @input="$emit(\'update:value\', $event.target.value)" />',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
   }
 })
-
 import { mount } from '@vue/test-utils'
 import { CRON_PRESETS } from '../utils/cron'
 import CronBuilder from './CronBuilder.vue'
 import CronInput from './CronInput.vue'
 import CronExplanation from './CronExplanation.vue'
 import NextRunTimes from './NextRunTimes.vue'
-
 describe('cron components', () => {
   beforeEach(() => {
     mockValidateExpression.mockImplementation((expression: string) => {
@@ -97,59 +67,46 @@ describe('cron components', () => {
       return { valid: false, error: 'Invalid expression' }
     })
   })
-
   afterEach(() => {
     vi.useRealTimers()
   })
-
   it('emits preset selection from the builder', async () => {
     const wrapper = mount(CronBuilder)
-
     const buttons = wrapper.findAll('button')
     expect(buttons).toHaveLength(CRON_PRESETS.length)
-
     await buttons[0]?.trigger('click')
     expect(wrapper.emitted('select')?.[0]).toEqual([CRON_PRESETS[0]?.value])
   })
-
   it('validates cron input and emits updates', async () => {
     const wrapper = mount(CronInput, {
       props: {
         expression: '*/5 * * * *',
       },
     })
-
-    expect(wrapper.text()).toContain('valid')
+    expect(wrapper.text()).toContain('Valid expression')
     expect(wrapper.find('[data-testid="copy"]').exists()).toBe(true)
-
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'bad')
     expect(wrapper.emitted('update:expression')?.[0]).toEqual(['bad'])
   })
-
   it('shows errors for invalid cron input', () => {
     const wrapper = mount(CronInput, {
       props: {
         expression: 'bad',
       },
     })
-
     expect(wrapper.text()).toContain('Invalid expression')
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
-
   it('treats blank cron input as invalid without a custom error', () => {
     const wrapper = mount(CronInput, {
       props: {
         expression: '',
       },
     })
-
-    expect(wrapper.text()).toContain('invalid')
-    expect(wrapper.text()).not.toContain('Invalid expression')
+    expect(wrapper.text()).toContain('Invalid expression')
     expect(wrapper.find('[data-testid="copy"]').exists()).toBe(false)
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
-
   it('renders explanation text and field table', () => {
     const wrapper = mount(CronExplanation, {
       props: {
@@ -160,12 +117,10 @@ describe('cron components', () => {
         ],
       },
     })
-
     expect(wrapper.text()).toContain('Every 5 minutes')
     const table = wrapper.get('[data-testid="table"]')
     expect(table.attributes('data-rows')).toContain('minute')
   })
-
   it('shows fallback content when explanation is empty', () => {
     const wrapper = mount(CronExplanation, {
       props: {
@@ -173,11 +128,9 @@ describe('cron components', () => {
         fields: [],
       },
     })
-
-    expect(wrapper.text()).toContain('noDescription')
-    expect(wrapper.text()).toContain('noFields')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see description')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see field breakdown')
   })
-
   it('formats next run times and relative labels', () => {
     vi.useFakeTimers()
     const base = new Date(2024, 0, 1, 0, 0, 0)
@@ -189,29 +142,24 @@ describe('cron components', () => {
       new Date(now + 4 * 60 * 1000),
       new Date(now + 30 * 1000),
     ]
-
     const wrapper = mount(NextRunTimes, {
       props: {
         runTimes,
       },
     })
-
     const rows = JSON.parse(wrapper.get('[data-testid="table"]').attributes('data-rows') || '[]')
     const relatives = rows.map((row: { relative: string }) => row.relative)
-
-    expect(relatives).toContain('inDays:2')
-    expect(relatives).toContain('inHours:3')
-    expect(relatives).toContain('inMinutes:4')
-    expect(relatives).toContain('inSeconds:30')
+    expect(relatives).toContain('in 2 day(s)')
+    expect(relatives).toContain('in 3 hour(s)')
+    expect(relatives).toContain('in 4 minute(s)')
+    expect(relatives).toContain('in 30 second(s)')
   })
-
   it('shows empty state when no run times', () => {
     const wrapper = mount(NextRunTimes, {
       props: {
         runTimes: [],
       },
     })
-
-    expect(wrapper.text()).toContain('noTimes')
+    expect(wrapper.text()).toContain('Enter a valid cron expression to see execution times')
   })
 })

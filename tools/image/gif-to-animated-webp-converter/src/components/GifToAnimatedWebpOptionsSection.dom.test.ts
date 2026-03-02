@@ -1,15 +1,7 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent } from 'vue'
 import GifToAnimatedWebpOptionsSection from './GifToAnimatedWebpOptionsSection.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => `t-${key}` }),
-  }
-})
 
 const ConversionOptionsStub = defineComponent({
   name: 'ConversionOptions',
@@ -69,12 +61,12 @@ describe('GifToAnimatedWebpOptionsSection', () => {
     })
 
     const stub = wrapper.findComponent(ConversionOptionsStub)
-    expect(stub.props('title')).toBe('t-optionsTitle')
-    expect(stub.props('scaleLabel')).toBe('t-scaleLabel')
-    expect(stub.props('speedLabel')).toBe('t-speedLabel')
-    expect(stub.props('loopLabel')).toBe('t-loopLabel')
-    expect(stub.props('convertLabel')).toBe('t-convert')
-    expect(stub.props('convertingLabel')).toBe('t-converting')
+    expect(stub.props('title')).toBe('Conversion Options')
+    expect(stub.props('scaleLabel')).toBe('Scale (%)')
+    expect(stub.props('speedLabel')).toBe('Speed multiplier')
+    expect(stub.props('loopLabel')).toBe('Loop')
+    expect(stub.props('convertLabel')).toBe('Convert to Animated WebP')
+    expect(stub.props('convertingLabel')).toBe('Converting...')
     expect(stub.props('minScale')).toBe(10)
     expect(stub.props('maxSpeed')).toBe(2)
     expect(stub.props('scale')).toBe(100)

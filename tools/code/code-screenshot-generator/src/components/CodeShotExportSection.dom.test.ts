@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import CodeShotExportSection from './CodeShotExportSection.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     name: 'ToolSectionHeader',
@@ -86,9 +78,9 @@ describe('CodeShotExportSection', () => {
     expect(panel.props('svgHeight')).toBe(80)
 
     const labels = panel.props('labels') as Record<string, string>
-    expect(labels.fileName).toBe('exportFileName')
-    expect(labels.exportError).toBe('exportError')
-    expect(labels.copyHtml).toBe('exportCopyHtml')
+    expect(labels.fileName).toBe('File name')
+    expect(labels.exportError).toBe('Export failed')
+    expect(labels.copyHtml).toBe('Copy HTML')
   })
 
   it('emits filename updates from the panel', () => {

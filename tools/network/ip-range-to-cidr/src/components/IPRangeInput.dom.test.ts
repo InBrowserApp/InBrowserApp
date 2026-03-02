@@ -22,14 +22,6 @@ vi.mock('ip-bigint', () => ({
   parseIp: (value: string) => ipData.get(value) ?? { version: 4, number: -1 },
 }))
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent, computed } = await import('vue')
 
@@ -122,8 +114,8 @@ describe('IPRangeInput', () => {
     const events = wrapper.emitted('update:ipRange') ?? []
     expect(events[events.length - 1]).toEqual([['10.0.0.1', '10.0.0.2']])
     expect(wrapper.findComponent({ name: 'NInput' }).props('placeholder')).toEqual([
-      'startIP',
-      'endIP',
+      'Start IP',
+      'End IP',
     ])
   })
 
@@ -144,11 +136,11 @@ describe('IPRangeInput', () => {
     }
 
     const cases: Array<{ range: Range; message: string }> = [
-      { range: ['bad', 'bad'], message: 'invalidIPRange' },
-      { range: ['bad', '10.0.0.2'], message: 'invalidStartIP' },
-      { range: ['10.0.0.2', 'bad'], message: 'invalidEndIP' },
-      { range: ['10.0.0.2', '2001:db8::1'], message: 'ipVersionMismatch' },
-      { range: ['10.0.0.10', '10.0.0.2'], message: 'startIPMustBeSmaller' },
+      { range: ['bad', 'bad'], message: 'Invalid IP Range' },
+      { range: ['bad', '10.0.0.2'], message: 'Invalid Start IP Address' },
+      { range: ['10.0.0.2', 'bad'], message: 'Invalid End IP Address' },
+      { range: ['10.0.0.2', '2001:db8::1'], message: 'IP version mismatch' },
+      { range: ['10.0.0.10', '10.0.0.2'], message: 'Start IP must be smaller than End IP' },
     ]
 
     for (const { range, message } of cases) {

@@ -1,13 +1,4 @@
 import { describe, expect, it, vi } from 'vitest'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -21,7 +12,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/base', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -32,18 +22,11 @@ vi.mock('@shared/ui/base', async () => {
     }),
   }
 })
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
-    NButton: defineComponent({
-      name: 'NButton',
-      template: '<button><slot /></button>',
-    }),
-    NFlex: defineComponent({
-      name: 'NFlex',
-      template: '<div><slot /></div>',
-    }),
+    ...actual,
     NInput: defineComponent({
       name: 'NInput',
       props: ['value', 'status', 'placeholder'],
@@ -62,31 +45,22 @@ vi.mock('naive-ui', async () => {
       template:
         '<input type="checkbox" :checked="checked" @change="$emit(\'update:checked\', $event.target.checked)" />',
     }),
-    NText: defineComponent({
-      name: 'NText',
-      template: '<span><slot /></span>',
-    }),
   }
 })
-
 import { mount } from '@vue/test-utils'
 import CommonPresets from './CommonPresets.vue'
 import NumericInput from './NumericInput.vue'
 import SymbolicInput from './SymbolicInput.vue'
 import PermissionMatrix from './PermissionMatrix.vue'
 import ChmodCommand from './ChmodCommand.vue'
-
 describe('chmod components', () => {
   it('emits selected preset values', async () => {
     const wrapper = mount(CommonPresets)
-
     const buttons = wrapper.findAll('button')
     expect(buttons).toHaveLength(6)
-
     await buttons[0]?.trigger('click')
     expect(wrapper.emitted('select')?.[0]).toEqual(['755'])
   })
-
   it('updates numeric input and shows validity state', async () => {
     const wrapper = mount(NumericInput, {
       props: {
@@ -94,17 +68,13 @@ describe('chmod components', () => {
         isValid: true,
       },
     })
-
     const input = wrapper.get('input')
     expect(input.attributes('data-status')).toBeUndefined()
-
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', '700')
     expect(wrapper.emitted('update:modelValue')?.[0]).toEqual(['700'])
-
     await wrapper.setProps({ isValid: false })
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
-
   it('updates symbolic input and shows validity state', async () => {
     const wrapper = mount(SymbolicInput, {
       props: {
@@ -112,14 +82,11 @@ describe('chmod components', () => {
         isValid: true,
       },
     })
-
     await wrapper.findComponent({ name: 'NInput' }).vm.$emit('update:value', 'rwx------')
     expect(wrapper.emitted('update:modelValue')?.[0]).toEqual(['rwx------'])
-
     await wrapper.setProps({ isValid: false })
     expect(wrapper.get('input').attributes('data-status')).toBe('error')
   })
-
   it('emits matrix updates when toggles change', () => {
     const wrapper = mount(PermissionMatrix, {
       props: {
@@ -130,21 +97,17 @@ describe('chmod components', () => {
         },
       },
     })
-
     const checkboxes = wrapper.findAllComponents({ name: 'NCheckbox' })
     expect(checkboxes).toHaveLength(9)
-
     checkboxes[0]?.vm.$emit('update:checked', false)
     expect(wrapper.emitted('update')?.[0]).toEqual(['owner', 'read', false])
   })
-
   it('renders the chmod command with copy action', () => {
     const wrapper = mount(ChmodCommand, {
       props: {
         command: 'chmod 644 <filename>',
       },
     })
-
     expect(wrapper.text()).toContain('chmod 644 <filename>')
     const copy = wrapper.get('[data-testid="copy"]')
     expect(copy.attributes('data-content')).toBe('chmod 644 <filename>')

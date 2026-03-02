@@ -25,10 +25,6 @@ vi.mock('./router', () => ({
   default: { name: 'router-plugin' },
 }))
 
-vi.mock('@shared/locale', () => ({
-  default: { name: 'locale-plugin' },
-}))
-
 const createHead = vi.fn(() => ({ name: 'head-plugin' }))
 vi.mock('@unhead/vue/client', () => ({
   createHead,

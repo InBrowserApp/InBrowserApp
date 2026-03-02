@@ -3,14 +3,6 @@ import { mount } from '@vue/test-utils'
 import { validateResidentId } from '../data/residentId'
 import ResidentIdIdentityItems from './ResidentIdIdentityItems.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -72,13 +64,13 @@ describe('ResidentIdIdentityItems', () => {
 
     const labels = wrapper.findAll('.desc-item').map((item) => item.attributes('data-label'))
     expect(labels).toEqual([
-      'birthdate',
-      'age',
-      'gender',
-      'sequenceCode',
-      'checksum',
-      'checkDigit',
-      'normalized',
+      'Birthdate',
+      'Age',
+      'Gender',
+      'Sequence Code',
+      'Checksum',
+      'Check Digit',
+      'Normalized ID',
     ])
 
     expect(wrapper.find('.text-value[data-value="1949-12-31"]').exists()).toBe(true)

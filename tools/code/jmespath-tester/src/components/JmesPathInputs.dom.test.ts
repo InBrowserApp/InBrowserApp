@@ -2,14 +2,6 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import JmesPathInputs from './JmesPathInputs.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSection: {
     template: '<section class="tool-section"><slot /></section>',
@@ -57,26 +49,6 @@ vi.mock('naive-ui', async () => {
     NInput,
     NSelect,
     NText,
-  }
-})
-
-vi.mock('@vicons/fluent/Document16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'Document16Regular',
-      template: '<svg class="icon-document" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/TextNumberFormat20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'TextNumberFormat20Regular',
-      template: '<svg class="icon-format" />',
-    }),
   }
 })
 

@@ -1,14 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IPInfoLookupView from './IPInfoLookupView.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
 
 describe('IPInfoLookupView', () => {
   it('renders the search input and info section', () => {
@@ -35,7 +27,7 @@ describe('IPInfoLookupView', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('ip-or-domain')
+    expect(wrapper.find('.section-header').text()).toBe('IPv4 / IPv6 / Domain / URL')
     expect(wrapper.find('.ip-search').exists()).toBe(true)
     expect(wrapper.find('.how-info').exists()).toBe(true)
   })

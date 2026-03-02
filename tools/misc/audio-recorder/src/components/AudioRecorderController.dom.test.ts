@@ -15,14 +15,6 @@ vi.mock('../utils/recorder', async () => {
   }
 })
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: () => ref('blob:mock'),
 }))
@@ -129,7 +121,7 @@ describe('AudioRecorderController', () => {
 
     const wrapper = mountController()
 
-    expect(wrapper.text()).toContain('notSupported')
+    expect(wrapper.text()).toContain('Audio recording is not supported')
   })
 
   it('starts and stops recording with a blob', async () => {
@@ -205,8 +197,8 @@ describe('AudioRecorderController', () => {
     await wrapper.vm.$nextTick()
 
     expect(vm.permissionDenied).toBe(true)
-    expect(wrapper.text()).toContain('permissionDenied')
-    expect(wrapper.text()).toContain('retryPermission')
+    expect(wrapper.text()).toContain('Microphone permission denied')
+    expect(wrapper.text()).toContain('Retry')
   })
 
   it('falls back to plain MediaRecorder when options constructor fails', async () => {
@@ -322,7 +314,7 @@ describe('AudioRecorderController', () => {
     vm.pauseRecording()
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.text()).toContain('resume')
+    expect(wrapper.text()).toContain('Resume')
   })
 
   it('pauses and resumes recording', async () => {
@@ -377,7 +369,7 @@ describe('AudioRecorderController', () => {
     expect(vm.mimeType).toBe('audio/webm')
     expect(vm.fileName).toBe('existing')
     expect(vm.elapsedMs).toBe(1200)
-    expect(wrapper.text()).toContain('recordingFailed')
+    expect(wrapper.text()).toContain('Failed to start recording.')
   })
 
   it('renders output details and clears recording', async () => {
@@ -395,8 +387,8 @@ describe('AudioRecorderController', () => {
     await wrapper.vm.$nextTick()
 
     expect(wrapper.find('audio').exists()).toBe(true)
-    expect(wrapper.text()).toContain('download')
-    expect(wrapper.text()).toContain('clear')
+    expect(wrapper.text()).toContain('Download')
+    expect(wrapper.text()).toContain('Clear')
 
     vm.clearRecording()
     await wrapper.vm.$nextTick()

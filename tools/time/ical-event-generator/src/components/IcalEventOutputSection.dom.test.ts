@@ -1,15 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import IcalEventOutputSection from './IcalEventOutputSection.vue'
-
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('@shared/ui/tool', () => ({
   ToolSectionHeader: {
     template: '<header><slot /></header>',
@@ -18,7 +9,6 @@ vi.mock('@shared/ui/tool', () => ({
     template: '<section><slot /></section>',
   },
 }))
-
 vi.mock('@shared/ui/base', () => ({
   CopyToClipboardButton: {
     name: 'CopyToClipboardButton',
@@ -26,15 +16,12 @@ vi.mock('@shared/ui/base', () => ({
     template: '<button class="copy-button" />',
   },
 }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
   const StubBase = defineComponent({
     name: 'StubBase',
     template: '<div><slot /><slot name="icon" /></div>',
   })
-
   const NButton = defineComponent({
     name: 'NButton',
     props: {
@@ -58,22 +45,20 @@ vi.mock('naive-ui', async () => {
     template:
       '<component :is="tag" class="n-button" :href="href" :download="download" :disabled="disabled"><slot /><slot name="icon" /></component>',
   })
-
   const NInput = defineComponent({
     name: 'NInput',
     template: '<textarea class="n-input" />',
   })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NButton,
     NCard: StubBase,
-    NFlex: StubBase,
     NIcon: StubBase,
     NInput,
     NText: StubBase,
   }
 })
-
 describe('IcalEventOutputSection', () => {
   it('renders error messages and empty state', () => {
     const errorWrapper = mount(IcalEventOutputSection, {
@@ -82,18 +67,14 @@ describe('IcalEventOutputSection', () => {
         outputErrorKey: 'invalid-date-time',
       },
     })
-
-    expect(errorWrapper.text()).toContain('invalid-date-time')
-
+    expect(errorWrapper.text()).toContain('Invalid date/time')
     const emptyWrapper = mount(IcalEventOutputSection, {
       props: {
         icsContent: '',
       },
     })
-
-    expect(emptyWrapper.text()).toContain('output-empty')
+    expect(emptyWrapper.text()).toContain('Fill in a valid start time to generate the .ics file.')
   })
-
   it('renders download and copy actions when content is present', () => {
     const wrapper = mount(IcalEventOutputSection, {
       props: {
@@ -101,9 +82,7 @@ describe('IcalEventOutputSection', () => {
         icsHref: 'blob:mock',
       },
     })
-
     expect(wrapper.find('.copy-button').exists()).toBe(true)
-
     const link = wrapper.find('a.n-button')
     expect(link.attributes('href')).toBe('blob:mock')
     expect(link.attributes('download')).toBe('event.ics')

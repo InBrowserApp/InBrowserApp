@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import {
   luhnValidate,
   detectCardBrand,
@@ -6,24 +6,6 @@ import {
   formatCardNumber,
   validateCardNumber,
 } from './cardBrands'
-
-vi.mock('vue3-simple-icons', async () => {
-  const { defineComponent } = await import('vue')
-  const makeIcon = (name: string) =>
-    defineComponent({
-      name,
-      template: `<svg class="${name}" />`,
-    })
-
-  return {
-    VisaIcon: makeIcon('VisaIcon'),
-    MasterCardIcon: makeIcon('MasterCardIcon'),
-    AmericanExpressIcon: makeIcon('AmericanExpressIcon'),
-    DiscoverIcon: makeIcon('DiscoverIcon'),
-    JcbIcon: makeIcon('JcbIcon'),
-    DinersClubIcon: makeIcon('DinersClubIcon'),
-  }
-})
 
 describe('card brand utilities', () => {
   it('validates card numbers with the Luhn algorithm', () => {

@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import WhatIsRot from './WhatIsRot.vue'
 
-vi.mock('vue-i18n', async () => {
-  const actual = await vi.importActual<typeof import('vue-i18n')>('vue-i18n')
-  return {
-    ...actual,
-    useI18n: () => ({ t: (key: string) => key }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 
@@ -52,8 +44,8 @@ describe('WhatIsRot', () => {
       },
     })
 
-    expect(wrapper.find('.section-header').text()).toBe('title')
-    expect(wrapper.text()).toContain('description')
+    expect(wrapper.find('.section-header').text()).toBe('What is ROT Cipher?')
+    expect(wrapper.text()).toContain('simple letter substitution ciphers')
     expect(wrapper.text()).toContain('Hello')
     expect(wrapper.text()).toContain('Uryyb')
     expect(wrapper.text()).toContain('self-reversing')

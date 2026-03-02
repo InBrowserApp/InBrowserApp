@@ -38,21 +38,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('vue-i18n', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('vue-i18n')>()
-
-  return {
-    ...actual,
-    useI18n: (options?: { messages?: Record<string, Record<string, string>> }) => {
-      const en = options?.messages?.en ?? {}
-
-      return {
-        t: (key: string) => en[key] ?? (key === 'thirdParty' ? 'Third Party' : ''),
-      }
-    },
-  }
-})
-
 const RouterLinkStub = defineComponent({
   name: 'CustomRouterLink',
   props: ['to'],

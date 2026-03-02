@@ -1,23 +1,20 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
-
 const errorMock = vi.fn()
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
-
   const wrapper = (name: string) =>
     defineComponent({
       name,
       template: '<div><slot /></div>',
     })
-
+  const actual = (await vi.importActual('naive-ui')) as Record<string, unknown>
   return {
+    ...actual,
     NButton: wrapper('NButton'),
     NDescriptions: wrapper('NDescriptions'),
     NDescriptionsItem: wrapper('NDescriptionsItem'),
     NEllipsis: wrapper('NEllipsis'),
-    NFlex: wrapper('NFlex'),
     NIcon: wrapper('NIcon'),
     NText: wrapper('NText'),
     NUpload: defineComponent({
@@ -30,7 +27,6 @@ vi.mock('naive-ui', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/tool', async () => {
   const { defineComponent } = await import('vue')
   return {
@@ -44,7 +40,6 @@ vi.mock('@shared/ui/tool', async () => {
     }),
   }
 })
-
 vi.mock('@shared/ui/domain/pdf', () => ({
   PDFUpload: {
     name: 'PDFUpload',
@@ -57,29 +52,23 @@ vi.mock('@shared/ui/domain/pdf', () => ({
     },
   },
 }))
-
 import PdfToImageUploadSection from './PdfToImageUploadSection.vue'
-
 const baseProps = {
   isLoadingDocument: false,
   uploadedFileName: '',
   uploadedFileSize: 0,
   numPages: 0,
 }
-
 describe('PdfToImageUploadSection', () => {
   it('re-emits uploaded file from initial uploader', async () => {
     const wrapper = mount(PdfToImageUploadSection, {
       props: baseProps,
     })
-
     await wrapper.get('button.upload').trigger('click')
-
     const events = wrapper.emitted('upload-file')
     expect(events).toHaveLength(1)
     expect(events?.[0]?.[0]).toBeInstanceOf(File)
   })
-
   it('shows loading text when loading', () => {
     const wrapper = mount(PdfToImageUploadSection, {
       props: {
@@ -87,10 +76,8 @@ describe('PdfToImageUploadSection', () => {
         isLoadingDocument: true,
       },
     })
-
     expect(wrapper.text()).toContain('Loading PDF pages')
   })
-
   it('shows uploaded file information and replacement button', () => {
     const wrapper = mount(PdfToImageUploadSection, {
       props: {
@@ -100,13 +87,11 @@ describe('PdfToImageUploadSection', () => {
         numPages: 3,
       },
     })
-
     expect(wrapper.text()).toContain('example.pdf')
     expect(wrapper.text()).toContain('3')
     expect(wrapper.text()).toContain('Upload a new one')
     expect(wrapper.find('button.upload').exists()).toBe(false)
   })
-
   it('re-emits uploaded file from replacement uploader', async () => {
     const wrapper = mount(PdfToImageUploadSection, {
       props: {
@@ -115,18 +100,15 @@ describe('PdfToImageUploadSection', () => {
         uploadedFileSize: 1024,
       },
     })
-
     const file = new File([new Uint8Array([1])], 'new.pdf', { type: 'application/pdf' })
     await wrapper.findComponent({ name: 'NUpload' }).vm.$emit('before-upload', {
       file: { file },
       fileList: [],
     })
-
     const events = wrapper.emitted('upload-file')
     expect(events).toHaveLength(1)
     expect(events?.[0]?.[0]).toBe(file)
   })
-
   it('shows error when replacement file is not pdf', async () => {
     const wrapper = mount(PdfToImageUploadSection, {
       props: {
@@ -135,13 +117,11 @@ describe('PdfToImageUploadSection', () => {
         uploadedFileSize: 1024,
       },
     })
-
     const file = new File([new Uint8Array([1])], 'bad.txt', { type: 'text/plain' })
     await wrapper.findComponent({ name: 'NUpload' }).vm.$emit('before-upload', {
       file: { file },
       fileList: [],
     })
-
     expect(errorMock).toHaveBeenCalledOnce()
     expect(wrapper.emitted('upload-file')).toBeUndefined()
   })

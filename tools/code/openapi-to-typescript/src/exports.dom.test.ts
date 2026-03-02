@@ -1,8 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
-
-vi.mock('@vicons/fluent/BracesVariable20Regular', () => ({
-  default: {},
-}))
+import { describe, expect, it } from 'vitest'
 
 import * as toolInfo from './info'
 import { routes } from './routes'
