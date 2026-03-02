@@ -58,9 +58,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Image24Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Delete20Regular', () => ({ default: {} }))
-
 const baseProps = {
   title: 'Upload',
   dragDropText: 'Drag and drop',

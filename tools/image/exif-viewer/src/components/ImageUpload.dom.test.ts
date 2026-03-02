@@ -10,10 +10,6 @@ vi.mock('@shared/ui/tool', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/Image24Regular', () => ({
-  default: defineComponent({ name: 'ImageIcon', template: '<span class="image-icon" />' }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

@@ -1,10 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-vi.mock('@vicons/fluent/TextNumberFormat20Regular', () => ({
-  default: {},
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {

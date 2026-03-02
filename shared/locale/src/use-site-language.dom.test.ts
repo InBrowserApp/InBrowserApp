@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
-import { defineComponent, nextTick, reactive, ref } from 'vue'
+import { defineComponent, nextTick, reactive } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n'
 
 const route = reactive({
   path: '/en/tools',
@@ -62,36 +62,28 @@ describe('use-site-language', () => {
 
   it('updates locale and document lang through useSetSiteLanguage', async () => {
     const { useSetSiteLanguage } = await import('./use-site-language')
-    const i18n = createI18n({
-      legacy: false,
-      locale: 'en',
-      messages: {},
-      missingWarn: false,
-      fallbackWarn: false,
-    })
+    let localeRef: { value: string } | undefined
 
     route.path = '/fr/tools'
     const SetSiteLanguageProbe = defineComponent({
       setup() {
+        const { locale } = useI18n()
+        localeRef = locale
         useSetSiteLanguage()
         return () => null
       },
     })
-    const wrapper = mount(SetSiteLanguageProbe, {
-      global: {
-        plugins: [i18n],
-      },
-    })
+    const wrapper = mount(SetSiteLanguageProbe)
     await nextTick()
 
-    expect(i18n.global.locale.value).toBe('fr')
+    expect(localeRef?.value).toBe('fr')
     expect(document.documentElement.lang).toBe('fr')
 
     route.path = '/tools'
     languageSpy.mockReturnValue('zh-CN')
     await nextTick()
 
-    expect(i18n.global.locale.value).toBe('zh-CN')
+    expect(localeRef?.value).toBe('zh-CN')
     expect(document.documentElement.lang).toBe('zh-CN')
 
     wrapper.unmount()

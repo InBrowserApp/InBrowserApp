@@ -3,10 +3,6 @@ import { mount } from '@vue/test-utils'
 import { getResidentIdCheckDigit, validateResidentId } from '../data/residentId'
 import ResidentIdInput from './ResidentIdInput.vue'
 
-vi.mock('@vicons/fluent/TextNumberFormat20Regular', () => ({
-  default: {},
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

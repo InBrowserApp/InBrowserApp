@@ -83,16 +83,6 @@ vi.mock('@shared/ui/base', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/QuestionCircle16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'HelpCircleIcon',
-      template: '<svg class="help-icon" />',
-    }),
-  }
-})
-
 const createResult = (overrides: Partial<ValidationResult> = {}): ValidationResult => ({
   isValid: false,
   brand: null,

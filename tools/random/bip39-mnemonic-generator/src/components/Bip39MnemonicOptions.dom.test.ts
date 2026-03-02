@@ -68,36 +68,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/ArrowSwap20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ArrowSwapIcon',
-      template: '<span class="icon arrow-swap" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/CheckmarkCircle20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CheckmarkIcon',
-      template: '<span class="icon checkmark" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Key20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'KeyIcon',
-      template: '<span class="icon key" />',
-    }),
-  }
-})
-
 describe('Bip39MnemonicOptions', () => {
   it('renders labels and emits model updates', () => {
     const wordlistOptions: Array<{ label: string; value: Bip39WordlistName }> = [

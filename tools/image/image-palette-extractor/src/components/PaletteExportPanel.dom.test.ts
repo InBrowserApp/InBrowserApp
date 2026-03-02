@@ -59,10 +59,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/ArrowDownload24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
-
 const CopyStub = defineComponent({
   name: 'CopyToClipboardButton',
   props: ['content'],

@@ -86,66 +86,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Search20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'SearchIcon',
-      template: '<svg class="search-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Info12Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'InfoIcon',
-      template: '<svg class="info-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/CheckmarkCircle16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'SuccessIcon',
-      template: '<svg class="success-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/ArrowForward16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'RedirectionIcon',
-      template: '<svg class="redirection-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/ErrorCircle16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ClientErrorIcon',
-      template: '<svg class="client-error-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/DismissCircle16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ServerErrorIcon',
-      template: '<svg class="server-error-icon" />',
-    }),
-  }
-})
-
 describe('HttpStatusCodeSearch', () => {
   it('renders the search input and category options', () => {
     const wrapper = mount(HttpStatusCodeSearch, {

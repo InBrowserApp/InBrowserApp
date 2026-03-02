@@ -140,26 +140,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Desktop16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'DesktopIcon',
-      template: '<span class="desktop-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Warning16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'WarningIcon',
-      template: '<span class="warning-icon" />',
-    }),
-  }
-})
-
 const generalInfoOptions: GeneralInfoOptions = {
   name: 'App Name',
   short_name: 'App',

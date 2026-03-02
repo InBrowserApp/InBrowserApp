@@ -76,11 +76,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/ArrowDownload16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Document16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Link16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Wand16Regular', () => ({ default: {} }))
-
 import OpenApiToolbar from './OpenApiToolbar.vue'
 
 describe('OpenApiToolbar', () => {

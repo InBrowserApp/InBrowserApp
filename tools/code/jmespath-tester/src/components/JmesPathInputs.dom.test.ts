@@ -52,26 +52,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Document16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'Document16Regular',
-      template: '<svg class="icon-document" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/TextNumberFormat20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'TextNumberFormat20Regular',
-      template: '<svg class="icon-format" />',
-    }),
-  }
-})
-
 describe('JmesPathInputs', () => {
   it('renders error feedback for JSON and query inputs', () => {
     const wrapper = mount(JmesPathInputs, {

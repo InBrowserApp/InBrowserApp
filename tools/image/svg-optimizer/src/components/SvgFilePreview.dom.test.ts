@@ -6,16 +6,6 @@ vi.mock('filesize', () => ({
   filesize: (value: number) => `size-${value}`,
 }))
 
-vi.mock('@vicons/fluent/Delete24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'DeleteIcon',
-      template: '<svg class="delete-icon" />',
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>
@@ -51,7 +41,7 @@ describe('SvgFilePreview', () => {
     expect(wrapper.text()).toContain('icon.svg')
     expect(wrapper.text()).toContain('size-2048')
     expect(wrapper.text()).toContain('Delete')
-    expect(wrapper.find('.delete-icon').exists()).toBe(true)
+    expect(wrapper.findAllComponents({ name: 'NIcon' })).toHaveLength(1)
 
     await wrapper.find('button').trigger('click')
     expect(wrapper.emitted('delete')).toBeTruthy()

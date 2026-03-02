@@ -11,16 +11,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/CloudArrowUp24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CloudArrowUpIcon',
-      template: '<svg class="cloud-upload" />',
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

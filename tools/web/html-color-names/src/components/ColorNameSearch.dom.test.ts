@@ -11,10 +11,6 @@ vi.mock('../data/colorData', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/Search20Regular', () => ({
-  default: {},
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

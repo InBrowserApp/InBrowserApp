@@ -21,16 +21,6 @@ vi.mock('filesize', () => ({
   filesize: (value: number) => `size-${value}`,
 }))
 
-vi.mock('@vicons/fluent/ArrowDownload24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'DownloadIcon',
-      template: '<svg class="download-icon" />',
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const makeStub = (name: string) =>

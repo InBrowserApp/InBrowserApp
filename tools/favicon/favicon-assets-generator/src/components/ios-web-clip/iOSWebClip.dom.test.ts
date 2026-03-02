@@ -103,16 +103,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fa/Apple', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'AppleIcon',
-      template: '<span class="apple-icon" />',
-    }),
-  }
-})
-
 const generalInfoOptions: GeneralInfoOptions = {
   name: 'App Name',
   short_name: 'App',

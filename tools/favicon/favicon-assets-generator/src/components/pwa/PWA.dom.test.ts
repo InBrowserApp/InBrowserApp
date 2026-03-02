@@ -144,26 +144,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/ionicons5/LogoPwa', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'LogoPwa',
-      template: '<span class="logo-pwa" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/BookInformation20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'BookInformation',
-      template: '<span class="book-info" />',
-    }),
-  }
-})
-
 const generalInfoOptions: GeneralInfoOptions = {
   name: 'App Name',
   short_name: 'App',

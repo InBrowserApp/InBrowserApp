@@ -82,16 +82,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Search20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'SearchIcon',
-      template: '<svg class="search-icon" />',
-    }),
-  }
-})
-
 describe('PortSearch', () => {
   it('renders the search input and category labels', () => {
     const wrapper = mount(PortSearch, {

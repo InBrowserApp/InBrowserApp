@@ -87,13 +87,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Image24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
-vi.mock('@vicons/fluent/Delete24Regular', () => ({
-  default: defineComponent({ template: '<span />' }),
-}))
-
 type ImageInputProps = InstanceType<typeof ImageInput>['$props']
 
 const ToolSectionStub = {

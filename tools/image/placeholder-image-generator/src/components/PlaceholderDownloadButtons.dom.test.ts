@@ -84,36 +84,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Image24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ImageIcon',
-      template: '<svg class="image-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Code24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CodeIcon',
-      template: '<svg class="code-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/Copy24Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CopyIcon',
-      template: '<svg class="copy-icon" />',
-    }),
-  }
-})
-
 const baseOptions: PlaceholderOptions = {
   width: 200,
   height: 100,
@@ -243,6 +213,7 @@ describe('PlaceholderDownloadButtons', () => {
 
     const buttons = wrapper.findAllComponents({ name: 'NButton' })
     const downloadButtons = buttons.filter((button) => button.props('tag') === 'a')
+    const icons = wrapper.findAllComponents({ name: 'NIcon' })
 
     expect(downloadButtons).toHaveLength(4)
     expect(downloadButtons[0]?.props('download')).toBe('placeholder-200x100.png')
@@ -253,9 +224,7 @@ describe('PlaceholderDownloadButtons', () => {
     expect(downloadButtons[1]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[2]?.props('href')).toBe('blob:mock')
     expect(downloadButtons[3]?.props('href')).toBe('blob:mock')
-    expect(wrapper.find('.image-icon').exists()).toBe(true)
-    expect(wrapper.find('.code-icon').exists()).toBe(true)
-    expect(wrapper.find('.copy-icon').exists()).toBe(true)
+    expect(icons.length).toBeGreaterThanOrEqual(3)
   })
 
   it('updates filenames when scale changes', async () => {

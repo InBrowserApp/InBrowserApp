@@ -16,8 +16,6 @@ vi.mock('@shared/ui/base', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/Info16Regular', () => ({ default: {} }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {

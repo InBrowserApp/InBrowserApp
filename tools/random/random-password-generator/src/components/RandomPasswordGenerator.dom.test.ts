@@ -86,46 +86,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/NumberSymbol16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'PinIcon',
-      template: '<svg class="pin-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/TextChangeCase16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'WordsIcon',
-      template: '<svg class="words-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/LineHorizontal120Filled', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'SeparatorIcon',
-      template: '<svg class="separator-icon" />',
-    }),
-  }
-})
-
-vi.mock('@vicons/fluent/MathSymbols16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'RandomIcon',
-      template: '<svg class="random-icon" />',
-    }),
-  }
-})
-
 const RandomTabStub = defineComponent({
   name: 'RandomTab',
   props: {

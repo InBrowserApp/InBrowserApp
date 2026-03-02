@@ -43,19 +43,6 @@ vi.mock('@shared/ui/base', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Image24Regular', () => ({
-  default: defineComponent({ name: 'ImageIcon', template: '<span />' }),
-}))
-vi.mock('@vicons/fluent/Code24Regular', () => ({
-  default: defineComponent({ name: 'CodeIcon', template: '<span />' }),
-}))
-vi.mock('@vicons/fluent/Document16Regular', () => ({
-  default: defineComponent({ name: 'DocumentIcon', template: '<span />' }),
-}))
-vi.mock('@vicons/fluent/Copy24Regular', () => ({
-  default: defineComponent({ name: 'CopyIcon', template: '<span />' }),
-}))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
 

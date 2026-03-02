@@ -94,16 +94,6 @@ vi.mock('@shared/ui/base', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Clock16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ClockIcon',
-      template: '<svg class="clock-icon" />',
-    }),
-  }
-})
-
 describe('TimestampInputSection', () => {
   it('renders input state and validation message', () => {
     const wrapper = mount(TimestampInputSection, {

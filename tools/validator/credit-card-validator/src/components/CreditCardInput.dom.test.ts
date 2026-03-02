@@ -80,16 +80,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/Payment20Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'CreditCardIcon',
-      template: '<svg class="credit-card-icon" />',
-    }),
-  }
-})
-
 const createResult = (overrides: Partial<ValidationResult> = {}): ValidationResult => ({
   isValid: false,
   brand: null,

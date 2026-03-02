@@ -85,16 +85,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/LockOpen16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'LockOpenIcon',
-      template: '<svg class="lock-open" />',
-    }),
-  }
-})
-
 const TextOrFileInputStub = defineComponent({
   name: 'TextOrFileInput',
   props: {

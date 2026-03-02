@@ -19,15 +19,6 @@ vi.mock('@vueuse/core', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/TextDescription20Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Wifi224Filled', () => ({ default: {} }))
-vi.mock('@vicons/fluent/ContactCard20Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Chat16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Mail16Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/GlobeLocation20Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/CalendarLtr20Regular', () => ({ default: {} }))
-vi.mock('@vicons/fluent/Call16Regular', () => ({ default: {} }))
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   return {

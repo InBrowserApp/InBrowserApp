@@ -32,16 +32,6 @@ vi.mock('@shared/ui/base', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ArrowDownloadIcon',
-      template: '<svg class="arrow-download" />',
-    }),
-  }
-})
-
 vi.mock('naive-ui', async () => {
   const { defineComponent } = await import('vue')
   const Base = defineComponent({

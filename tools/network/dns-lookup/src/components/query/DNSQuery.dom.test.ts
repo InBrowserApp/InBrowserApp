@@ -47,12 +47,6 @@ vi.mock('naive-ui', () => ({
   },
 }))
 
-vi.mock('@vicons/fluent/DocumentSearch16Regular', () => ({
-  default: {
-    template: '<svg class="document-search" />',
-  },
-}))
-
 let DNSQuery: typeof import('./DNSQuery.vue').default
 
 beforeAll(async () => {

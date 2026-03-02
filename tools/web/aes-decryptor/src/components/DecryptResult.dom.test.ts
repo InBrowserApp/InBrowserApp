@@ -98,16 +98,6 @@ vi.mock('naive-ui', async () => {
   }
 })
 
-vi.mock('@vicons/fluent/ArrowDownload16Regular', async () => {
-  const { defineComponent } = await import('vue')
-  return {
-    default: defineComponent({
-      name: 'ArrowDownloadIcon',
-      template: '<svg class="download-icon" />',
-    }),
-  }
-})
-
 describe('DecryptResult', () => {
   beforeEach(() => {
     useObjectUrlMock.mockReset()
