@@ -175,6 +175,7 @@ import { routes as regexTesterReplacerRoutes } from '@tools/regex-tester-replace
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as emailValidatorRoutes } from '@tools/email-validator/routes'
+import { routes as imeiValidatorRoutes } from '@tools/imei-validator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as vinValidatorRoutes } from '@tools/vin-validator/routes'
 import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
@@ -374,6 +375,7 @@ export const routes: ToolRoute[] = [
   ...loremIpsumGeneratorRoutes,
   ...gitignoreGeneratorRoutes,
   ...emailValidatorRoutes,
+  ...imeiValidatorRoutes,
   ...creditCardValidatorRoutes,
   ...vinValidatorRoutes,
   ...prcIdValidatorRoutes,
