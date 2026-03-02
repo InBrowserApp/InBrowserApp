@@ -74,7 +74,7 @@ jobs:
         run: pnpm run build
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: web-dist
           path: apps/web/dist
@@ -179,7 +179,7 @@ jobs:
       - name: Run e2e tests
         run: pnpm run test:e2e
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
