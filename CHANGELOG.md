@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.5.0...v1.6.0) (2026-03-02)
+
+
+### Features
+
+* **tools:** add archive viewer for zip tar gz tgz ([#265](https://github.com/InBrowserApp/InBrowserApp/issues/265)) ([9ce89b3](https://github.com/InBrowserApp/InBrowserApp/commit/9ce89b3420f09eb04ecb1944ed6561b6eb2d7def))
+* **tools:** add IMEI validator ([789e9f3](https://github.com/InBrowserApp/InBrowserApp/commit/789e9f35b3dc2aa7d5fb1ae448bab23566dcd035))
+* **web:** add tools query filter and remove search view ([#276](https://github.com/InBrowserApp/InBrowserApp/issues/276)) ([18e39e8](https://github.com/InBrowserApp/InBrowserApp/commit/18e39e8c01175a13c8fd58b203ed35e44ba7f9be))
+
+
+### Bug Fixes
+
+* **tools:** restore n-grid rendering after component split ([#277](https://github.com/InBrowserApp/InBrowserApp/issues/277)) ([3f3437e](https://github.com/InBrowserApp/InBrowserApp/commit/3f3437ea0ddfa7b18a6b6c6044e9bbf96a8ef3e4))
+
 ## [1.5.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.4.0...v1.5.0) (2026-02-27)
 
 
