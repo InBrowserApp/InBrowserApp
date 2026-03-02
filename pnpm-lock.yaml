@@ -918,6 +918,9 @@ importers:
       '@tools/image-tools':
         specifier: workspace:*
         version: link:../../tools/image/image-tools
+      '@tools/imei-validator':
+        specifier: workspace:*
+        version: link:../../tools/validator/imei-validator
       '@tools/ip-cidr-normalizer':
         specifier: workspace:*
         version: link:../../tools/network/ip-cidr-normalizer
@@ -6225,6 +6228,30 @@ importers:
         version: 11.2.8(vue@3.5.29(typescript@5.9.3))
 
   tools/validator/iban-validator:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.2.1(vue@3.5.29(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.29(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.29(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+
+  tools/validator/imei-validator:
     dependencies:
       '@shared/tools':
         specifier: workspace:*
