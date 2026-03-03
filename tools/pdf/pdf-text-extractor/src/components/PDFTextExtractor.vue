@@ -27,7 +27,7 @@
             v-if="hasText"
             tag="a"
             size="small"
-            tertiary
+            text
             :href="downloadUrl ?? undefined"
             :download="downloadFilename"
           >

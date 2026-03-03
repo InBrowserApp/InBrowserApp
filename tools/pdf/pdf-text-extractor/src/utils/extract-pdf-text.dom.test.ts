@@ -63,8 +63,7 @@ describe('extractPdfText', () => {
       text: '',
       likelyScanned: true,
     })
-    expect(result.text).toContain('# Page 1')
-    expect(result.text).toContain('# Page 2')
+    expect(result.text).toBe('Hello world\nFrom PDF')
     expect(page1.cleanup).toHaveBeenCalledOnce()
     expect(page2.cleanup).toHaveBeenCalledOnce()
     expect(documentProxy.destroy).toHaveBeenCalledOnce()

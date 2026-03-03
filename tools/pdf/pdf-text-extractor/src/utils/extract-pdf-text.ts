@@ -78,13 +78,8 @@ async function pageHasImageContent(page: PDFPageProxy): Promise<boolean> {
 
 function toOutputText(pages: PdfTextPage[]): string {
   return pages
-    .map((page) => {
-      if (!page.text) {
-        return `# Page ${page.pageNumber}`
-      }
-
-      return `# Page ${page.pageNumber}\n${page.text}`
-    })
+    .map((page) => page.text)
+    .filter((text) => text.length > 0)
     .join('\n\n')
 }
 
