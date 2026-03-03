@@ -18,27 +18,29 @@
   </ToolSection>
 
   <ToolSection v-if="result">
-    <ToolSectionHeader>
-      <n-flex align="center" justify="space-between">
-        <span>{{ t('result') }}</span>
-        <n-flex align="center" :size="8">
-          <CopyToClipboardButton v-if="hasText" :content="result.text" size="small" />
-          <n-button
-            v-if="hasText"
-            tag="a"
-            size="small"
-            text
-            :href="downloadUrl ?? undefined"
-            :download="downloadFilename"
-          >
-            <template #icon>
-              <n-icon :component="ArrowDownload16Regular" />
-            </template>
-            {{ t('download_txt') }}
-          </n-button>
+    <div ref="resultAnchorRef" class="result-anchor">
+      <ToolSectionHeader>
+        <n-flex align="center" justify="space-between">
+          <span>{{ t('result') }}</span>
+          <n-flex align="center" :size="8">
+            <CopyToClipboardButton v-if="hasText" :content="result.text" size="small" />
+            <n-button
+              v-if="hasText"
+              tag="a"
+              size="small"
+              text
+              :href="downloadUrl ?? undefined"
+              :download="downloadFilename"
+            >
+              <template #icon>
+                <n-icon :component="ArrowDownload16Regular" />
+              </template>
+              {{ t('download_txt') }}
+            </n-button>
+          </n-flex>
         </n-flex>
-      </n-flex>
-    </ToolSectionHeader>
+      </ToolSectionHeader>
+    </div>
 
     <n-grid :cols="3" :x-gap="12">
       <n-gi>
@@ -71,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 import {
@@ -101,6 +103,7 @@ const isExtracting = ref(false)
 const errorMessage = ref('')
 const uploadedFilename = ref('')
 const result = ref<PdfTextExtractionResult | null>(null)
+const resultAnchorRef = ref<HTMLElement | null>(null)
 
 const hasText = computed(() => Boolean(result.value?.text.trim()))
 const textBlob = computed(() => {
@@ -125,6 +128,18 @@ const getErrorMessage = (error: unknown): string => {
   return t('extract_error')
 }
 
+const scrollToResult = () => {
+  const resultAnchor = resultAnchorRef.value
+  if (!resultAnchor || typeof resultAnchor.scrollIntoView !== 'function') {
+    return
+  }
+
+  resultAnchor.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
+
 const handlePDFUpload = async (file: File) => {
   isExtracting.value = true
   errorMessage.value = ''
@@ -138,9 +153,20 @@ const handlePDFUpload = async (file: File) => {
     message.error(errorMessage.value)
   } finally {
     isExtracting.value = false
+
+    if (result.value) {
+      await nextTick()
+      scrollToResult()
+    }
   }
 }
 </script>
+
+<style scoped>
+.result-anchor {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
+}
+</style>
 
 <i18n lang="json">
 {
