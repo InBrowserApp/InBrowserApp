@@ -61,6 +61,8 @@ type HarnessVm = {
   hasResult: boolean
   handleUpload: (file: File) => Promise<{ success: boolean; errorCode?: string }>
   handleRangeInputChange: (value: string) => { success: boolean; errorCode?: string }
+  togglePageSelection: (page: number, useShift?: boolean) => void
+  clearSelectedPages: () => void
   setOutputMode: (mode: 'single' | 'multiple') => void
   setMultipleMode: (mode: 'ranges' | 'pages') => void
   generate: () => Promise<{ success: boolean; errorCode?: string }>
@@ -148,6 +150,22 @@ describe('usePdfSplitter', () => {
 
     expect(result.success).toBe(true)
     expect(vm.selectedPages).toEqual([1, 2, 5])
+  })
+
+  it('supports shift range selection from last interacted page', async () => {
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    const file = new File([new Uint8Array([1, 2, 3])], 'sample.pdf', { type: 'application/pdf' })
+    await vm.handleUpload(file)
+    await flushAll()
+
+    vm.clearSelectedPages()
+    vm.togglePageSelection(2)
+    vm.togglePageSelection(5, true)
+
+    expect(vm.selectedPages).toEqual([2, 3, 4, 5])
+    expect(vm.rangeInput).toBe('2-5')
   })
 
   it('generates single output file', async () => {
