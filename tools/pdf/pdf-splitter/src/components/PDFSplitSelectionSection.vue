@@ -3,90 +3,53 @@
     <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
     <ToolSection>
       <n-flex vertical :size="12">
-        <n-flex vertical :size="6">
-          <n-text strong>{{ t('rangeLabel') }}</n-text>
-          <n-input
-            :value="rangeInput"
-            :placeholder="t('rangePlaceholder')"
-            clearable
-            @update:value="emit('update:range-input', $event)"
-          />
-        </n-flex>
+        <PDFSplitSelectionFilters
+          :page-count="pageCount"
+          :selected-count="selectedCount"
+          :range-input="rangeInput"
+          :range-error-message="rangeErrorMessage"
+          @update:range-input="emit('update:range-input', $event)"
+          @select-all="emit('select-all')"
+          @select-odd="emit('select-odd')"
+          @select-even="emit('select-even')"
+          @clear-selection="emit('clear-selection')"
+        />
 
-        <n-flex :size="8" wrap>
-          <n-button tertiary @click="emit('select-all')">{{ t('selectAll') }}</n-button>
-          <n-button tertiary @click="emit('select-odd')">{{ t('selectOdd') }}</n-button>
-          <n-button tertiary @click="emit('select-even')">{{ t('selectEven') }}</n-button>
-          <n-button tertiary @click="emit('clear-selection')">{{ t('clear') }}</n-button>
-        </n-flex>
+        <PDFSplitSelectionMode
+          :output-mode="outputMode"
+          :multiple-mode="multipleMode"
+          @update:output-mode="emit('update:output-mode', $event)"
+          @update:multiple-mode="emit('update:multiple-mode', $event)"
+        />
 
-        <n-flex vertical :size="6">
-          <n-text strong>{{ t('outputMode') }}</n-text>
-          <n-radio-group :value="outputMode" @update:value="emit('update:output-mode', $event)">
-            <n-space vertical>
-              <n-radio value="single">{{ t('modeSingle') }}</n-radio>
-              <n-radio value="multiple">{{ t('modeMultiple') }}</n-radio>
-            </n-space>
-          </n-radio-group>
-        </n-flex>
-
-        <n-flex v-if="outputMode === 'multiple'" vertical :size="6">
-          <n-text strong>{{ t('splitStrategy') }}</n-text>
-          <n-radio-group :value="multipleMode" @update:value="emit('update:multiple-mode', $event)">
-            <n-space vertical>
-              <n-radio value="ranges">{{ t('strategyRanges') }}</n-radio>
-              <n-radio value="pages">{{ t('strategyPages') }}</n-radio>
-            </n-space>
-          </n-radio-group>
-        </n-flex>
-
-        <n-alert type="info" :bordered="false">
-          {{ t('selectedSummary', { selectedCount, pageCount }) }}
-        </n-alert>
-
-        <n-button
-          type="primary"
-          :loading="isGenerating"
-          :disabled="!canGenerate"
-          @click="emit('generate')"
-        >
-          {{ isGenerating ? t('generating') : t('generate') }}
-        </n-button>
-
-        <n-alert v-if="rangeErrorMessage" type="error" :title="rangeErrorMessage" />
-        <n-alert v-if="generateErrorMessage" type="error" :title="generateErrorMessage" />
-
-        <n-flex
-          v-if="hasResult && downloadUrl"
-          align="center"
-          justify="space-between"
-          :wrap="false"
-        >
-          <n-text>
-            {{ t('resultReady') }} {{ resultFileCount }}
-            {{ resultFileCount === 1 ? t('file') : t('files') }}.
-          </n-text>
-          <n-button tag="a" type="primary" :href="downloadUrl" :download="resultFilename">
-            <template #icon>
-              <n-icon :component="ArrowDownload16Regular" />
-            </template>
-            {{ t('download') }}
-          </n-button>
-        </n-flex>
+        <PDFSplitSelectionGenerate
+          :is-generating="isGenerating"
+          :can-generate="canGenerate"
+          :generate-error-message="generateErrorMessage"
+          :has-result="hasResult"
+          :download-url="downloadUrl"
+          :result-filename="resultFilename"
+          :result-file-count="resultFileCount"
+          @generate="emit('generate')"
+        />
       </n-flex>
     </ToolSection>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NAlert, NButton, NFlex, NIcon, NInput, NRadio, NRadioGroup, NSpace, NText } from 'naive-ui'
+import { NFlex } from 'naive-ui'
 import type { SplitMultipleMode, SplitOutputMode } from '../split-pdf.worker'
+import { PAGE_RANGE_ERROR } from '../utils/parse-page-ranges'
+import { PDF_ERROR } from '../pdf-errors'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import PDFSplitSelectionFilters from './PDFSplitSelectionFilters.vue'
+import PDFSplitSelectionMode from './PDFSplitSelectionMode.vue'
+import PDFSplitSelectionGenerate from './PDFSplitSelectionGenerate.vue'
 
-defineProps<{
+const props = defineProps<{
   pageCount: number
   selectedCount: number
   rangeInput: string
@@ -94,8 +57,8 @@ defineProps<{
   multipleMode: SplitMultipleMode
   isGenerating: boolean
   canGenerate: boolean
-  rangeErrorMessage: string
-  generateErrorMessage: string
+  rangeErrorCode: string
+  generateErrorCode: string
   hasResult: boolean
   downloadUrl: string | null
   resultFilename: string
@@ -115,6 +78,42 @@ const emit = defineEmits<{
 
 const { t } = useI18n({ useScope: 'local' })
 const headingAnchorRef = ref<HTMLElement | null>(null)
+
+const rangeErrorMessage = computed(() => {
+  if (!props.rangeErrorCode) {
+    return ''
+  }
+
+  if (props.rangeErrorCode === PAGE_RANGE_ERROR.Empty) {
+    return t('rangeEmpty')
+  }
+
+  if (props.rangeErrorCode === PAGE_RANGE_ERROR.OutOfBounds) {
+    return t('rangeOutOfBounds')
+  }
+
+  if (props.rangeErrorCode === PAGE_RANGE_ERROR.DescendingRange) {
+    return t('rangeDescending')
+  }
+
+  if (props.rangeErrorCode === PAGE_RANGE_ERROR.DuplicatePage) {
+    return t('rangeDuplicate')
+  }
+
+  return t('rangeInvalid')
+})
+
+const generateErrorMessage = computed(() => {
+  if (!props.generateErrorCode) {
+    return ''
+  }
+
+  if (props.generateErrorCode === PDF_ERROR.WorkerUnsupported) {
+    return t('workerUnsupported')
+  }
+
+  return t('generateFailed')
+})
 
 const scrollToHeading = (): void => {
   const headingAnchor = headingAnchorRef.value
@@ -143,553 +142,253 @@ defineExpose({
 {
   "en": {
     "title": "Select Pages",
-    "rangeLabel": "Page ranges",
-    "rangePlaceholder": "Examples: 1-3,5,8-10",
-    "selectAll": "All",
-    "selectOdd": "Odd",
-    "selectEven": "Even",
-    "clear": "Clear",
-    "outputMode": "Output mode",
-    "modeSingle": "Extract to one PDF",
-    "modeMultiple": "Split to multiple PDFs",
-    "splitStrategy": "Split strategy",
-    "strategyRanges": "Split by range segments",
-    "strategyPages": "Split by single page",
-    "selectedSummary": "Selected {selectedCount} / {pageCount} pages.",
-    "generating": "Generating...",
-    "generate": "Generate Result",
-    "resultReady": "Result ready:",
-    "file": "file",
-    "files": "files",
-    "download": "Download"
+    "rangeEmpty": "Please enter page ranges first.",
+    "rangeOutOfBounds": "Range contains pages outside the current PDF page count.",
+    "rangeDescending": "Range start cannot be greater than range end.",
+    "rangeDuplicate": "Each page can only appear once in the range expression.",
+    "rangeInvalid": "Page range expression is invalid.",
+    "workerUnsupported": "Your browser does not support Web Worker.",
+    "generateFailed": "Failed to generate result file(s)."
   },
   "zh": {
     "title": "选择页面",
-    "rangeLabel": "页面范围",
-    "rangePlaceholder": "示例：1-3,5,8-10",
-    "selectAll": "全部",
-    "selectOdd": "奇数页",
-    "selectEven": "偶数页",
-    "clear": "清空",
-    "outputMode": "输出模式",
-    "modeSingle": "提取为一个 PDF",
-    "modeMultiple": "拆分为多个 PDF",
-    "splitStrategy": "拆分策略",
-    "strategyRanges": "按范围段拆分",
-    "strategyPages": "按单页拆分",
-    "selectedSummary": "已选择 {selectedCount} / {pageCount} 页。",
-    "generating": "生成中...",
-    "generate": "生成结果",
-    "resultReady": "结果已生成：",
-    "file": "个文件",
-    "files": "个文件",
-    "download": "下载"
+    "rangeEmpty": "请先输入页面范围。",
+    "rangeOutOfBounds": "范围包含超出当前 PDF 页数的页面。",
+    "rangeDescending": "范围起始页不能大于结束页。",
+    "rangeDuplicate": "范围表达式中的页面不能重复。",
+    "rangeInvalid": "页面范围表达式无效。",
+    "workerUnsupported": "当前浏览器不支持 Web Worker。",
+    "generateFailed": "生成结果文件失败。"
   },
   "zh-CN": {
     "title": "选择页面",
-    "rangeLabel": "页面范围",
-    "rangePlaceholder": "示例：1-3,5,8-10",
-    "selectAll": "全部",
-    "selectOdd": "奇数页",
-    "selectEven": "偶数页",
-    "clear": "清空",
-    "outputMode": "输出模式",
-    "modeSingle": "提取为一个 PDF",
-    "modeMultiple": "拆分为多个 PDF",
-    "splitStrategy": "拆分策略",
-    "strategyRanges": "按范围段拆分",
-    "strategyPages": "按单页拆分",
-    "selectedSummary": "已选择 {selectedCount} / {pageCount} 页。",
-    "generating": "生成中...",
-    "generate": "生成结果",
-    "resultReady": "结果已生成：",
-    "file": "个文件",
-    "files": "个文件",
-    "download": "下载"
+    "rangeEmpty": "请先输入页面范围。",
+    "rangeOutOfBounds": "范围包含超出当前 PDF 页数的页面。",
+    "rangeDescending": "范围起始页不能大于结束页。",
+    "rangeDuplicate": "范围表达式中的页面不能重复。",
+    "rangeInvalid": "页面范围表达式无效。",
+    "workerUnsupported": "当前浏览器不支持 Web Worker。",
+    "generateFailed": "生成结果文件失败。"
   },
   "zh-TW": {
     "title": "選擇頁面",
-    "rangeLabel": "頁面範圍",
-    "rangePlaceholder": "範例：1-3,5,8-10",
-    "selectAll": "全部",
-    "selectOdd": "奇數頁",
-    "selectEven": "偶數頁",
-    "clear": "清除",
-    "outputMode": "輸出模式",
-    "modeSingle": "擷取為單一 PDF",
-    "modeMultiple": "拆分為多個 PDF",
-    "splitStrategy": "拆分策略",
-    "strategyRanges": "依範圍段拆分",
-    "strategyPages": "依單頁拆分",
-    "selectedSummary": "已選擇 {selectedCount} / {pageCount} 頁。",
-    "generating": "產生中...",
-    "generate": "產生結果",
-    "resultReady": "結果已產生：",
-    "file": "個檔案",
-    "files": "個檔案",
-    "download": "下載"
+    "rangeEmpty": "請先輸入頁面範圍。",
+    "rangeOutOfBounds": "範圍包含超出目前 PDF 頁數的頁面。",
+    "rangeDescending": "範圍起始頁不能大於結束頁。",
+    "rangeDuplicate": "範圍表達式中的頁面不能重複。",
+    "rangeInvalid": "頁面範圍表達式無效。",
+    "workerUnsupported": "目前瀏覽器不支援 Web Worker。",
+    "generateFailed": "產生結果檔案失敗。"
   },
   "zh-HK": {
     "title": "選擇頁面",
-    "rangeLabel": "頁面範圍",
-    "rangePlaceholder": "範例：1-3,5,8-10",
-    "selectAll": "全部",
-    "selectOdd": "奇數頁",
-    "selectEven": "偶數頁",
-    "clear": "清除",
-    "outputMode": "輸出模式",
-    "modeSingle": "擷取為單一 PDF",
-    "modeMultiple": "拆分為多個 PDF",
-    "splitStrategy": "拆分策略",
-    "strategyRanges": "依範圍段拆分",
-    "strategyPages": "依單頁拆分",
-    "selectedSummary": "已選擇 {selectedCount} / {pageCount} 頁。",
-    "generating": "產生中...",
-    "generate": "產生結果",
-    "resultReady": "結果已產生：",
-    "file": "個檔案",
-    "files": "個檔案",
-    "download": "下載"
+    "rangeEmpty": "請先輸入頁面範圍。",
+    "rangeOutOfBounds": "範圍包含超出目前 PDF 頁數的頁面。",
+    "rangeDescending": "範圍起始頁不能大於結束頁。",
+    "rangeDuplicate": "範圍表達式中的頁面不能重複。",
+    "rangeInvalid": "頁面範圍表達式無效。",
+    "workerUnsupported": "目前瀏覽器不支援 Web Worker。",
+    "generateFailed": "產生結果檔案失敗。"
   },
   "es": {
     "title": "Seleccionar páginas",
-    "rangeLabel": "Rangos de páginas",
-    "rangePlaceholder": "Ejemplos: 1-3,5,8-10",
-    "selectAll": "Todo",
-    "selectOdd": "Impares",
-    "selectEven": "Pares",
-    "clear": "Limpiar",
-    "outputMode": "Modo de salida",
-    "modeSingle": "Extraer a un PDF",
-    "modeMultiple": "Dividir en varios PDF",
-    "splitStrategy": "Estrategia de división",
-    "strategyRanges": "Dividir por segmentos de rango",
-    "strategyPages": "Dividir por página individual",
-    "selectedSummary": "Seleccionadas {selectedCount} / {pageCount} páginas.",
-    "generating": "Generando...",
-    "generate": "Generar resultado",
-    "resultReady": "Resultado listo:",
-    "file": "archivo",
-    "files": "archivos",
-    "download": "Descargar"
+    "rangeEmpty": "Primero ingresa los rangos de páginas.",
+    "rangeOutOfBounds": "El rango contiene páginas fuera del total del PDF actual.",
+    "rangeDescending": "El inicio del rango no puede ser mayor que el final.",
+    "rangeDuplicate": "Cada página solo puede aparecer una vez en la expresión de rango.",
+    "rangeInvalid": "La expresión de rango de páginas no es válida.",
+    "workerUnsupported": "Tu navegador no admite Web Worker.",
+    "generateFailed": "No se pudo generar el/los archivo(s) de resultado."
   },
   "fr": {
     "title": "Sélectionner des pages",
-    "rangeLabel": "Plages de pages",
-    "rangePlaceholder": "Exemples : 1-3,5,8-10",
-    "selectAll": "Tout",
-    "selectOdd": "Impaires",
-    "selectEven": "Paires",
-    "clear": "Effacer",
-    "outputMode": "Mode de sortie",
-    "modeSingle": "Extraire en un seul PDF",
-    "modeMultiple": "Diviser en plusieurs PDF",
-    "splitStrategy": "Stratégie de division",
-    "strategyRanges": "Diviser par segments de plage",
-    "strategyPages": "Diviser par page",
-    "selectedSummary": "{selectedCount} / {pageCount} pages sélectionnées.",
-    "generating": "Génération...",
-    "generate": "Générer le résultat",
-    "resultReady": "Résultat prêt :",
-    "file": "fichier",
-    "files": "fichiers",
-    "download": "Télécharger"
+    "rangeEmpty": "Veuillez d'abord saisir des plages de pages.",
+    "rangeOutOfBounds": "La plage contient des pages hors du nombre de pages du PDF actuel.",
+    "rangeDescending": "Le début de la plage ne peut pas être supérieur à la fin.",
+    "rangeDuplicate": "Chaque page ne peut apparaître qu'une seule fois dans l'expression.",
+    "rangeInvalid": "L'expression de plage de pages est invalide.",
+    "workerUnsupported": "Votre navigateur ne prend pas en charge Web Worker.",
+    "generateFailed": "Échec de la génération du ou des fichiers de résultat."
   },
   "de": {
     "title": "Seiten auswählen",
-    "rangeLabel": "Seitenbereiche",
-    "rangePlaceholder": "Beispiele: 1-3,5,8-10",
-    "selectAll": "Alle",
-    "selectOdd": "Ungerade",
-    "selectEven": "Gerade",
-    "clear": "Löschen",
-    "outputMode": "Ausgabemodus",
-    "modeSingle": "In eine PDF extrahieren",
-    "modeMultiple": "In mehrere PDFs aufteilen",
-    "splitStrategy": "Aufteilungsstrategie",
-    "strategyRanges": "Nach Bereichssegmenten aufteilen",
-    "strategyPages": "Nach einzelnen Seiten aufteilen",
-    "selectedSummary": "{selectedCount} / {pageCount} Seiten ausgewählt.",
-    "generating": "Wird erzeugt...",
-    "generate": "Ergebnis erzeugen",
-    "resultReady": "Ergebnis bereit:",
-    "file": "Datei",
-    "files": "Dateien",
-    "download": "Herunterladen"
+    "rangeEmpty": "Bitte geben Sie zuerst Seitenbereiche ein.",
+    "rangeOutOfBounds": "Der Bereich enthält Seiten außerhalb der aktuellen PDF-Seitenzahl.",
+    "rangeDescending": "Der Start eines Bereichs darf nicht größer als das Ende sein.",
+    "rangeDuplicate": "Jede Seite darf in der Bereichsangabe nur einmal vorkommen.",
+    "rangeInvalid": "Die Seitenbereichsangabe ist ungültig.",
+    "workerUnsupported": "Ihr Browser unterstützt keinen Web Worker.",
+    "generateFailed": "Ergebnisdatei(en) konnten nicht erzeugt werden."
   },
   "it": {
     "title": "Seleziona pagine",
-    "rangeLabel": "Intervalli di pagine",
-    "rangePlaceholder": "Esempi: 1-3,5,8-10",
-    "selectAll": "Tutte",
-    "selectOdd": "Dispari",
-    "selectEven": "Pari",
-    "clear": "Cancella",
-    "outputMode": "Modalità di output",
-    "modeSingle": "Estrai in un PDF",
-    "modeMultiple": "Dividi in più PDF",
-    "splitStrategy": "Strategia di divisione",
-    "strategyRanges": "Dividi per segmenti di intervallo",
-    "strategyPages": "Dividi per singola pagina",
-    "selectedSummary": "{selectedCount} / {pageCount} pagine selezionate.",
-    "generating": "Generazione...",
-    "generate": "Genera risultato",
-    "resultReady": "Risultato pronto:",
-    "file": "file",
-    "files": "file",
-    "download": "Scarica"
+    "rangeEmpty": "Inserisci prima gli intervalli di pagine.",
+    "rangeOutOfBounds": "L'intervallo contiene pagine oltre il numero di pagine del PDF corrente.",
+    "rangeDescending": "L'inizio dell'intervallo non può essere maggiore della fine.",
+    "rangeDuplicate": "Ogni pagina può comparire una sola volta nell'espressione.",
+    "rangeInvalid": "L'espressione dell'intervallo pagine non è valida.",
+    "workerUnsupported": "Il browser non supporta Web Worker.",
+    "generateFailed": "Impossibile generare i file di risultato."
   },
   "ja": {
     "title": "ページを選択",
-    "rangeLabel": "ページ範囲",
-    "rangePlaceholder": "例: 1-3,5,8-10",
-    "selectAll": "すべて",
-    "selectOdd": "奇数",
-    "selectEven": "偶数",
-    "clear": "クリア",
-    "outputMode": "出力モード",
-    "modeSingle": "1 つの PDF に抽出",
-    "modeMultiple": "複数の PDF に分割",
-    "splitStrategy": "分割方式",
-    "strategyRanges": "範囲セグメントで分割",
-    "strategyPages": "ページ単位で分割",
-    "selectedSummary": "{selectedCount} / {pageCount} ページを選択中。",
-    "generating": "生成中...",
-    "generate": "結果を生成",
-    "resultReady": "結果の準備完了:",
-    "file": "ファイル",
-    "files": "ファイル",
-    "download": "ダウンロード"
+    "rangeEmpty": "先にページ範囲を入力してください。",
+    "rangeOutOfBounds": "範囲に現在の PDF ページ数を超えるページが含まれています。",
+    "rangeDescending": "範囲の開始ページは終了ページより大きくできません。",
+    "rangeDuplicate": "範囲指定では同じページを重複して指定できません。",
+    "rangeInvalid": "ページ範囲の指定が無効です。",
+    "workerUnsupported": "お使いのブラウザは Web Worker をサポートしていません。",
+    "generateFailed": "結果ファイルの生成に失敗しました。"
   },
   "ko": {
     "title": "페이지 선택",
-    "rangeLabel": "페이지 범위",
-    "rangePlaceholder": "예: 1-3,5,8-10",
-    "selectAll": "전체",
-    "selectOdd": "홀수",
-    "selectEven": "짝수",
-    "clear": "지우기",
-    "outputMode": "출력 모드",
-    "modeSingle": "하나의 PDF로 추출",
-    "modeMultiple": "여러 PDF로 분할",
-    "splitStrategy": "분할 방식",
-    "strategyRanges": "범위 구간으로 분할",
-    "strategyPages": "단일 페이지로 분할",
-    "selectedSummary": "{selectedCount} / {pageCount}페이지 선택됨.",
-    "generating": "생성 중...",
-    "generate": "결과 생성",
-    "resultReady": "결과 준비 완료:",
-    "file": "파일",
-    "files": "파일",
-    "download": "다운로드"
+    "rangeEmpty": "먼저 페이지 범위를 입력하세요.",
+    "rangeOutOfBounds": "범위에 현재 PDF 페이지 수를 벗어나는 페이지가 포함되어 있습니다.",
+    "rangeDescending": "범위 시작 페이지는 종료 페이지보다 클 수 없습니다.",
+    "rangeDuplicate": "범위 식에는 같은 페이지를 한 번만 포함할 수 있습니다.",
+    "rangeInvalid": "페이지 범위 식이 올바르지 않습니다.",
+    "workerUnsupported": "현재 브라우저는 Web Worker를 지원하지 않습니다.",
+    "generateFailed": "결과 파일 생성에 실패했습니다."
   },
   "ru": {
     "title": "Выбор страниц",
-    "rangeLabel": "Диапазоны страниц",
-    "rangePlaceholder": "Примеры: 1-3,5,8-10",
-    "selectAll": "Все",
-    "selectOdd": "Нечетные",
-    "selectEven": "Четные",
-    "clear": "Очистить",
-    "outputMode": "Режим вывода",
-    "modeSingle": "Извлечь в один PDF",
-    "modeMultiple": "Разделить на несколько PDF",
-    "splitStrategy": "Стратегия разделения",
-    "strategyRanges": "Делить по сегментам диапазонов",
-    "strategyPages": "Делить по отдельным страницам",
-    "selectedSummary": "Выбрано страниц: {selectedCount} / {pageCount}.",
-    "generating": "Генерация...",
-    "generate": "Сгенерировать результат",
-    "resultReady": "Результат готов:",
-    "file": "файл",
-    "files": "файлов",
-    "download": "Скачать"
+    "rangeEmpty": "Сначала введите диапазоны страниц.",
+    "rangeOutOfBounds": "Диапазон содержит страницы вне количества страниц текущего PDF.",
+    "rangeDescending": "Начало диапазона не может быть больше конца.",
+    "rangeDuplicate": "Каждая страница может встречаться в выражении диапазона только один раз.",
+    "rangeInvalid": "Некорректное выражение диапазона страниц.",
+    "workerUnsupported": "Ваш браузер не поддерживает Web Worker.",
+    "generateFailed": "Не удалось создать файл(ы) результата."
   },
   "pt": {
     "title": "Selecionar páginas",
-    "rangeLabel": "Intervalos de páginas",
-    "rangePlaceholder": "Exemplos: 1-3,5,8-10",
-    "selectAll": "Todas",
-    "selectOdd": "Ímpares",
-    "selectEven": "Pares",
-    "clear": "Limpar",
-    "outputMode": "Modo de saída",
-    "modeSingle": "Extrair para um PDF",
-    "modeMultiple": "Dividir em vários PDFs",
-    "splitStrategy": "Estratégia de divisão",
-    "strategyRanges": "Dividir por segmentos de intervalo",
-    "strategyPages": "Dividir por página única",
-    "selectedSummary": "Selecionadas {selectedCount} / {pageCount} páginas.",
-    "generating": "Gerando...",
-    "generate": "Gerar resultado",
-    "resultReady": "Resultado pronto:",
-    "file": "arquivo",
-    "files": "arquivos",
-    "download": "Baixar"
+    "rangeEmpty": "Primeiro, informe os intervalos de páginas.",
+    "rangeOutOfBounds": "O intervalo contém páginas fora da contagem de páginas do PDF atual.",
+    "rangeDescending": "O início do intervalo não pode ser maior que o fim.",
+    "rangeDuplicate": "Cada página só pode aparecer uma vez na expressão de intervalo.",
+    "rangeInvalid": "A expressão de intervalo de páginas é inválida.",
+    "workerUnsupported": "Seu navegador não suporta Web Worker.",
+    "generateFailed": "Falha ao gerar arquivo(s) de resultado."
   },
   "ar": {
     "title": "اختيار الصفحات",
-    "rangeLabel": "نطاق الصفحات",
-    "rangePlaceholder": "أمثلة: 1-3,5,8-10",
-    "selectAll": "الكل",
-    "selectOdd": "فردي",
-    "selectEven": "زوجي",
-    "clear": "مسح",
-    "outputMode": "وضع الإخراج",
-    "modeSingle": "استخراج إلى PDF واحد",
-    "modeMultiple": "تقسيم إلى عدة ملفات PDF",
-    "splitStrategy": "استراتيجية التقسيم",
-    "strategyRanges": "تقسيم حسب مقاطع النطاق",
-    "strategyPages": "تقسيم حسب كل صفحة",
-    "selectedSummary": "تم تحديد {selectedCount} / {pageCount} صفحة.",
-    "generating": "جارٍ الإنشاء...",
-    "generate": "إنشاء النتيجة",
-    "resultReady": "النتيجة جاهزة:",
-    "file": "ملف",
-    "files": "ملفات",
-    "download": "تنزيل"
+    "rangeEmpty": "الرجاء إدخال نطاق الصفحات أولاً.",
+    "rangeOutOfBounds": "النطاق يحتوي صفحات خارج عدد صفحات ملف PDF الحالي.",
+    "rangeDescending": "لا يمكن أن تكون بداية النطاق أكبر من نهايته.",
+    "rangeDuplicate": "يمكن لكل صفحة أن تظهر مرة واحدة فقط في تعبير النطاق.",
+    "rangeInvalid": "تعبير نطاق الصفحات غير صالح.",
+    "workerUnsupported": "متصفحك لا يدعم Web Worker.",
+    "generateFailed": "تعذر إنشاء ملف/ملفات النتيجة."
   },
   "hi": {
     "title": "पेज चुनें",
-    "rangeLabel": "पेज रेंज",
-    "rangePlaceholder": "उदाहरण: 1-3,5,8-10",
-    "selectAll": "सभी",
-    "selectOdd": "विषम",
-    "selectEven": "सम",
-    "clear": "साफ़ करें",
-    "outputMode": "आउटपुट मोड",
-    "modeSingle": "एक PDF में निकालें",
-    "modeMultiple": "कई PDF में विभाजित करें",
-    "splitStrategy": "विभाजन रणनीति",
-    "strategyRanges": "रेंज सेगमेंट के अनुसार विभाजित करें",
-    "strategyPages": "एक-एक पेज के अनुसार विभाजित करें",
-    "selectedSummary": "{selectedCount} / {pageCount} पेज चुने गए।",
-    "generating": "जनरेट हो रहा है...",
-    "generate": "परिणाम जनरेट करें",
-    "resultReady": "परिणाम तैयार:",
-    "file": "फाइल",
-    "files": "फाइलें",
-    "download": "डाउनलोड"
+    "rangeEmpty": "कृपया पहले पेज रेंज दर्ज करें।",
+    "rangeOutOfBounds": "रेंज में वर्तमान PDF पेज संख्या से बाहर के पेज शामिल हैं।",
+    "rangeDescending": "रेंज का प्रारंभ अंत से बड़ा नहीं हो सकता।",
+    "rangeDuplicate": "रेंज अभिव्यक्ति में प्रत्येक पेज केवल एक बार आ सकता है।",
+    "rangeInvalid": "पेज रेंज अभिव्यक्ति अमान्य है।",
+    "workerUnsupported": "आपका ब्राउज़र Web Worker सपोर्ट नहीं करता।",
+    "generateFailed": "परिणाम फ़ाइल(ें) बनाने में विफल।"
   },
   "tr": {
     "title": "Sayfaları Seç",
-    "rangeLabel": "Sayfa aralıkları",
-    "rangePlaceholder": "Örnekler: 1-3,5,8-10",
-    "selectAll": "Tümü",
-    "selectOdd": "Tek",
-    "selectEven": "Çift",
-    "clear": "Temizle",
-    "outputMode": "Çıktı modu",
-    "modeSingle": "Tek PDF olarak çıkar",
-    "modeMultiple": "Birden çok PDF'e böl",
-    "splitStrategy": "Bölme stratejisi",
-    "strategyRanges": "Aralık segmentlerine göre böl",
-    "strategyPages": "Tek tek sayfaya göre böl",
-    "selectedSummary": "{selectedCount} / {pageCount} sayfa seçildi.",
-    "generating": "Oluşturuluyor...",
-    "generate": "Sonucu oluştur",
-    "resultReady": "Sonuç hazır:",
-    "file": "dosya",
-    "files": "dosya",
-    "download": "İndir"
+    "rangeEmpty": "Lütfen önce sayfa aralıklarını girin.",
+    "rangeOutOfBounds": "Aralık, mevcut PDF sayfa sayısının dışındaki sayfaları içeriyor.",
+    "rangeDescending": "Aralık başlangıcı bitişten büyük olamaz.",
+    "rangeDuplicate": "Her sayfa aralık ifadesinde yalnızca bir kez yer alabilir.",
+    "rangeInvalid": "Sayfa aralığı ifadesi geçersiz.",
+    "workerUnsupported": "Tarayıcınız Web Worker desteklemiyor.",
+    "generateFailed": "Sonuç dosyası/dosyaları oluşturulamadı."
   },
   "nl": {
     "title": "Pagina's selecteren",
-    "rangeLabel": "Paginabereiken",
-    "rangePlaceholder": "Voorbeelden: 1-3,5,8-10",
-    "selectAll": "Alles",
-    "selectOdd": "Oneven",
-    "selectEven": "Even",
-    "clear": "Wissen",
-    "outputMode": "Uitvoermodus",
-    "modeSingle": "Naar één PDF extraheren",
-    "modeMultiple": "Splitsen naar meerdere PDF's",
-    "splitStrategy": "Splitsstrategie",
-    "strategyRanges": "Splitsen op bereiksegmenten",
-    "strategyPages": "Splitsen per losse pagina",
-    "selectedSummary": "{selectedCount} / {pageCount} pagina's geselecteerd.",
-    "generating": "Genereren...",
-    "generate": "Resultaat genereren",
-    "resultReady": "Resultaat gereed:",
-    "file": "bestand",
-    "files": "bestanden",
-    "download": "Downloaden"
+    "rangeEmpty": "Voer eerst paginabereiken in.",
+    "rangeOutOfBounds": "Het bereik bevat pagina's buiten het huidige aantal PDF-pagina's.",
+    "rangeDescending": "Het begin van het bereik mag niet groter zijn dan het einde.",
+    "rangeDuplicate": "Elke pagina mag maar één keer voorkomen in de bereikexpressie.",
+    "rangeInvalid": "De paginabereikexpressie is ongeldig.",
+    "workerUnsupported": "Je browser ondersteunt geen Web Worker.",
+    "generateFailed": "Kon resultaatbestand(en) niet genereren."
   },
   "sv": {
     "title": "Välj sidor",
-    "rangeLabel": "Sidintervall",
-    "rangePlaceholder": "Exempel: 1-3,5,8-10",
-    "selectAll": "Alla",
-    "selectOdd": "Udda",
-    "selectEven": "Jämna",
-    "clear": "Rensa",
-    "outputMode": "Utdatamodus",
-    "modeSingle": "Extrahera till en PDF",
-    "modeMultiple": "Dela till flera PDF:er",
-    "splitStrategy": "Delningsstrategi",
-    "strategyRanges": "Dela efter intervallsegment",
-    "strategyPages": "Dela per enskild sida",
-    "selectedSummary": "{selectedCount} / {pageCount} sidor valda.",
-    "generating": "Genererar...",
-    "generate": "Generera resultat",
-    "resultReady": "Resultat klart:",
-    "file": "fil",
-    "files": "filer",
-    "download": "Ladda ner"
+    "rangeEmpty": "Ange sidintervall först.",
+    "rangeOutOfBounds": "Intervallet innehåller sidor utanför aktuellt antal PDF-sidor.",
+    "rangeDescending": "Intervallstart kan inte vara större än intervallslut.",
+    "rangeDuplicate": "Varje sida får bara förekomma en gång i intervalluttrycket.",
+    "rangeInvalid": "Sidintervalluttrycket är ogiltigt.",
+    "workerUnsupported": "Din webbläsare stöder inte Web Worker.",
+    "generateFailed": "Kunde inte generera resultatfil(er)."
   },
   "pl": {
     "title": "Wybierz strony",
-    "rangeLabel": "Zakresy stron",
-    "rangePlaceholder": "Przykłady: 1-3,5,8-10",
-    "selectAll": "Wszystkie",
-    "selectOdd": "Nieparzyste",
-    "selectEven": "Parzyste",
-    "clear": "Wyczyść",
-    "outputMode": "Tryb wyjścia",
-    "modeSingle": "Wyodrębnij do jednego PDF",
-    "modeMultiple": "Podziel na wiele PDF",
-    "splitStrategy": "Strategia podziału",
-    "strategyRanges": "Dziel według segmentów zakresu",
-    "strategyPages": "Dziel według pojedynczych stron",
-    "selectedSummary": "Wybrano {selectedCount} / {pageCount} stron.",
-    "generating": "Generowanie...",
-    "generate": "Generuj wynik",
-    "resultReady": "Wynik gotowy:",
-    "file": "plik",
-    "files": "pliki",
-    "download": "Pobierz"
+    "rangeEmpty": "Najpierw wpisz zakresy stron.",
+    "rangeOutOfBounds": "Zakres zawiera strony poza liczbą stron bieżącego PDF.",
+    "rangeDescending": "Początek zakresu nie może być większy niż koniec.",
+    "rangeDuplicate": "Każda strona może wystąpić w wyrażeniu tylko raz.",
+    "rangeInvalid": "Wyrażenie zakresu stron jest nieprawidłowe.",
+    "workerUnsupported": "Twoja przeglądarka nie obsługuje Web Worker.",
+    "generateFailed": "Nie udało się wygenerować pliku(ów) wynikowych."
   },
   "vi": {
     "title": "Chọn trang",
-    "rangeLabel": "Dải trang",
-    "rangePlaceholder": "Ví dụ: 1-3,5,8-10",
-    "selectAll": "Tất cả",
-    "selectOdd": "Lẻ",
-    "selectEven": "Chẵn",
-    "clear": "Xóa",
-    "outputMode": "Chế độ đầu ra",
-    "modeSingle": "Trích xuất thành một PDF",
-    "modeMultiple": "Tách thành nhiều PDF",
-    "splitStrategy": "Chiến lược tách",
-    "strategyRanges": "Tách theo từng đoạn dải",
-    "strategyPages": "Tách theo từng trang",
-    "selectedSummary": "Đã chọn {selectedCount} / {pageCount} trang.",
-    "generating": "Đang tạo...",
-    "generate": "Tạo kết quả",
-    "resultReady": "Kết quả sẵn sàng:",
-    "file": "tệp",
-    "files": "tệp",
-    "download": "Tải xuống"
+    "rangeEmpty": "Vui lòng nhập dải trang trước.",
+    "rangeOutOfBounds": "Dải chứa các trang vượt ngoài số trang của PDF hiện tại.",
+    "rangeDescending": "Trang bắt đầu của dải không thể lớn hơn trang kết thúc.",
+    "rangeDuplicate": "Mỗi trang chỉ được xuất hiện một lần trong biểu thức dải.",
+    "rangeInvalid": "Biểu thức dải trang không hợp lệ.",
+    "workerUnsupported": "Trình duyệt của bạn không hỗ trợ Web Worker.",
+    "generateFailed": "Không thể tạo tệp kết quả."
   },
   "th": {
     "title": "เลือกหน้า",
-    "rangeLabel": "ช่วงหน้า",
-    "rangePlaceholder": "ตัวอย่าง: 1-3,5,8-10",
-    "selectAll": "ทั้งหมด",
-    "selectOdd": "เลขคี่",
-    "selectEven": "เลขคู่",
-    "clear": "ล้าง",
-    "outputMode": "โหมดผลลัพธ์",
-    "modeSingle": "แยกเป็น PDF เดียว",
-    "modeMultiple": "แยกเป็นหลาย PDF",
-    "splitStrategy": "กลยุทธ์การแยก",
-    "strategyRanges": "แยกตามช่วงที่ระบุ",
-    "strategyPages": "แยกตามหน้าเดี่ยว",
-    "selectedSummary": "เลือกแล้ว {selectedCount} / {pageCount} หน้า",
-    "generating": "กำลังสร้าง...",
-    "generate": "สร้างผลลัพธ์",
-    "resultReady": "ผลลัพธ์พร้อมแล้ว:",
-    "file": "ไฟล์",
-    "files": "ไฟล์",
-    "download": "ดาวน์โหลด"
+    "rangeEmpty": "กรุณากรอกช่วงหน้าก่อน",
+    "rangeOutOfBounds": "ช่วงมีหน้าที่เกินจำนวนหน้าของ PDF ปัจจุบัน",
+    "rangeDescending": "หน้าเริ่มต้นของช่วงต้องไม่มากกว่าหน้าที่สิ้นสุด",
+    "rangeDuplicate": "แต่ละหน้าสามารถอยู่ในนิพจน์ช่วงได้เพียงครั้งเดียว",
+    "rangeInvalid": "นิพจน์ช่วงหน้าไม่ถูกต้อง",
+    "workerUnsupported": "เบราว์เซอร์ของคุณไม่รองรับ Web Worker",
+    "generateFailed": "ไม่สามารถสร้างไฟล์ผลลัพธ์ได้"
   },
   "id": {
     "title": "Pilih Halaman",
-    "rangeLabel": "Rentang halaman",
-    "rangePlaceholder": "Contoh: 1-3,5,8-10",
-    "selectAll": "Semua",
-    "selectOdd": "Ganjil",
-    "selectEven": "Genap",
-    "clear": "Hapus",
-    "outputMode": "Mode keluaran",
-    "modeSingle": "Ekstrak ke satu PDF",
-    "modeMultiple": "Bagi ke beberapa PDF",
-    "splitStrategy": "Strategi pemisahan",
-    "strategyRanges": "Pisah berdasarkan segmen rentang",
-    "strategyPages": "Pisah per halaman tunggal",
-    "selectedSummary": "Dipilih {selectedCount} / {pageCount} halaman.",
-    "generating": "Sedang membuat...",
-    "generate": "Buat hasil",
-    "resultReady": "Hasil siap:",
-    "file": "file",
-    "files": "file",
-    "download": "Unduh"
+    "rangeEmpty": "Masukkan rentang halaman terlebih dahulu.",
+    "rangeOutOfBounds": "Rentang berisi halaman di luar jumlah halaman PDF saat ini.",
+    "rangeDescending": "Awal rentang tidak boleh lebih besar dari akhir rentang.",
+    "rangeDuplicate": "Setiap halaman hanya boleh muncul satu kali dalam ekspresi rentang.",
+    "rangeInvalid": "Ekspresi rentang halaman tidak valid.",
+    "workerUnsupported": "Browser Anda tidak mendukung Web Worker.",
+    "generateFailed": "Gagal membuat file hasil."
   },
   "he": {
     "title": "בחירת עמודים",
-    "rangeLabel": "טווחי עמודים",
-    "rangePlaceholder": "דוגמאות: 1-3,5,8-10",
-    "selectAll": "הכול",
-    "selectOdd": "אי-זוגיים",
-    "selectEven": "זוגיים",
-    "clear": "נקה",
-    "outputMode": "מצב פלט",
-    "modeSingle": "חלץ ל-PDF אחד",
-    "modeMultiple": "פצל למספר קובצי PDF",
-    "splitStrategy": "אסטרטגיית פיצול",
-    "strategyRanges": "פיצול לפי מקטעי טווח",
-    "strategyPages": "פיצול לפי עמוד בודד",
-    "selectedSummary": "נבחרו {selectedCount} / {pageCount} עמודים.",
-    "generating": "יוצר...",
-    "generate": "צור תוצאה",
-    "resultReady": "התוצאה מוכנה:",
-    "file": "קובץ",
-    "files": "קבצים",
-    "download": "הורדה"
+    "rangeEmpty": "נא להזין קודם טווחי עמודים.",
+    "rangeOutOfBounds": "הטווח מכיל עמודים מעבר למספר העמודים בקובץ ה-PDF הנוכחי.",
+    "rangeDescending": "תחילת הטווח לא יכולה להיות גדולה מסוף הטווח.",
+    "rangeDuplicate": "כל עמוד יכול להופיע פעם אחת בלבד בביטוי הטווח.",
+    "rangeInvalid": "ביטוי טווח העמודים אינו תקין.",
+    "workerUnsupported": "הדפדפן שלך לא תומך ב-Web Worker.",
+    "generateFailed": "יצירת קובץ/קבצי התוצאה נכשלה."
   },
   "ms": {
     "title": "Pilih Halaman",
-    "rangeLabel": "Julat halaman",
-    "rangePlaceholder": "Contoh: 1-3,5,8-10",
-    "selectAll": "Semua",
-    "selectOdd": "Ganjil",
-    "selectEven": "Genap",
-    "clear": "Kosongkan",
-    "outputMode": "Mod output",
-    "modeSingle": "Ekstrak ke satu PDF",
-    "modeMultiple": "Pisah kepada beberapa PDF",
-    "splitStrategy": "Strategi pemisahan",
-    "strategyRanges": "Pisah mengikut segmen julat",
-    "strategyPages": "Pisah mengikut halaman tunggal",
-    "selectedSummary": "{selectedCount} / {pageCount} halaman dipilih.",
-    "generating": "Sedang menjana...",
-    "generate": "Jana hasil",
-    "resultReady": "Hasil sedia:",
-    "file": "fail",
-    "files": "fail",
-    "download": "Muat turun"
+    "rangeEmpty": "Sila masukkan julat halaman dahulu.",
+    "rangeOutOfBounds": "Julat mengandungi halaman di luar jumlah halaman PDF semasa.",
+    "rangeDescending": "Permulaan julat tidak boleh lebih besar daripada penghujung julat.",
+    "rangeDuplicate": "Setiap halaman hanya boleh muncul sekali dalam ungkapan julat.",
+    "rangeInvalid": "Ungkapan julat halaman tidak sah.",
+    "workerUnsupported": "Pelayar anda tidak menyokong Web Worker.",
+    "generateFailed": "Gagal menjana fail hasil."
   },
   "no": {
     "title": "Velg sider",
-    "rangeLabel": "Sideintervaller",
-    "rangePlaceholder": "Eksempler: 1-3,5,8-10",
-    "selectAll": "Alle",
-    "selectOdd": "Oddetall",
-    "selectEven": "Partall",
-    "clear": "Tøm",
-    "outputMode": "Utdatamodus",
-    "modeSingle": "Trekk ut til én PDF",
-    "modeMultiple": "Del opp i flere PDF-er",
-    "splitStrategy": "Delingsstrategi",
-    "strategyRanges": "Del etter intervallsegmenter",
-    "strategyPages": "Del etter enkeltsider",
-    "selectedSummary": "Valgt {selectedCount} / {pageCount} sider.",
-    "generating": "Genererer...",
-    "generate": "Generer resultat",
-    "resultReady": "Resultat klart:",
-    "file": "fil",
-    "files": "filer",
-    "download": "Last ned"
+    "rangeEmpty": "Angi sideintervaller først.",
+    "rangeOutOfBounds": "Intervallet inneholder sider utenfor sidetallet i gjeldende PDF.",
+    "rangeDescending": "Intervallstart kan ikke være større enn intervallslutt.",
+    "rangeDuplicate": "Hver side kan bare forekomme én gang i intervalluttrykket.",
+    "rangeInvalid": "Ugyldig sideintervalluttrykk.",
+    "workerUnsupported": "Nettleseren din støtter ikke Web Worker.",
+    "generateFailed": "Klarte ikke å generere resultatfil(er)."
   }
 }
 </i18n>
