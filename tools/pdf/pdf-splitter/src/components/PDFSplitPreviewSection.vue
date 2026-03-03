@@ -15,12 +15,7 @@
               @click.stop="emit('toggle-page', item.page, $event)"
             />
 
-            <button
-              class="page-card"
-              :class="{ 'page-card--selected': selectedPageSet.has(item.page) }"
-              type="button"
-              @click="emit('open-preview', item.page)"
-            >
+            <button class="page-card" type="button" @click="emit('open-preview', item.page)">
               <div class="page-card__thumbnail">
                 <n-spin v-if="item.isLoading" size="small" />
                 <n-empty
@@ -97,14 +92,6 @@ const labels = {
   box-shadow:
     0 1px 0 color-mix(in srgb, #fff 75%, transparent) inset,
     0 4px 10px color-mix(in srgb, #111827 12%, transparent);
-}
-
-.page-card--selected {
-  border-color: var(--n-primary-color);
-  box-shadow:
-    0 1px 0 color-mix(in srgb, #fff 75%, transparent) inset,
-    0 0 0 1px var(--n-primary-color),
-    0 10px 24px color-mix(in srgb, var(--n-primary-color) 28%, transparent);
 }
 
 .page-select-toggle {
