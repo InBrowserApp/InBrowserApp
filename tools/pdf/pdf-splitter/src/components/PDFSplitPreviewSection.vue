@@ -6,7 +6,7 @@
 
       <n-spin :show="isLoadingDocument">
         <div class="preview-grid">
-          <div v-for="item in items" :key="item.page" class="preview-cell">
+          <div v-for="item in pagedItems" :key="item.page" class="preview-cell">
             <n-checkbox
               class="page-select-toggle"
               size="large"
@@ -33,6 +33,15 @@
             </button>
           </div>
         </div>
+
+        <n-pagination
+          v-if="items.length > PREVIEW_PAGE_SIZE"
+          style="margin-top: 12px"
+          :page="currentPreviewPage"
+          :page-size="PREVIEW_PAGE_SIZE"
+          :item-count="items.length"
+          @update:page="currentPreviewPage = $event"
+        />
       </n-spin>
 
       <n-alert v-if="isRenderingThumbnails" type="info" :bordered="false">
@@ -43,12 +52,13 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NAlert, NCheckbox, NEmpty, NFlex, NSpin, NText } from 'naive-ui'
+import { NAlert, NCheckbox, NEmpty, NFlex, NPagination, NSpin, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PreviewItem } from './usePdfSplitter'
 
-defineProps<{
+const props = defineProps<{
   items: PreviewItem[]
   selectedPageSet: Set<number>
   isLoadingDocument: boolean
@@ -59,7 +69,35 @@ const emit = defineEmits<{
   (event: 'toggle-page', page: number, mouseEvent: MouseEvent): void
   (event: 'open-preview', page: number): void
 }>()
+
+const PREVIEW_PAGE_SIZE = 60
 const { t } = useI18n({ useScope: 'local' })
+
+const currentPreviewPage = ref(1)
+
+const totalPreviewPages = computed(() =>
+  Math.max(1, Math.ceil(props.items.length / PREVIEW_PAGE_SIZE)),
+)
+
+const pagedItems = computed(() => {
+  const start = (currentPreviewPage.value - 1) * PREVIEW_PAGE_SIZE
+  return props.items.slice(start, start + PREVIEW_PAGE_SIZE)
+})
+
+watch(totalPreviewPages, (total) => {
+  if (currentPreviewPage.value > total) {
+    currentPreviewPage.value = total
+  }
+})
+
+watch(
+  () => props.items.length,
+  (count) => {
+    if (!count) {
+      currentPreviewPage.value = 1
+    }
+  },
+)
 </script>
 
 <style scoped>

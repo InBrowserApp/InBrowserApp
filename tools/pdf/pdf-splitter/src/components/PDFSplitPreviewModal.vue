@@ -9,6 +9,7 @@
             :alt="modalTitle"
             :class="{ 'preview-modal-image--loading': isLoading && isFallbackImage }"
           />
+          <n-empty v-else-if="!isLoading" />
         </div>
       </n-spin>
     </n-card>
@@ -18,7 +19,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NCard, NModal, NSpin } from 'naive-ui'
+import { NCard, NEmpty, NModal, NSpin } from 'naive-ui'
 
 const props = defineProps<{
   visible: boolean
@@ -69,8 +70,32 @@ const handleVisibleChange = (visible: boolean): void => {
   filter: blur(1px);
 }
 </style>
-
-<!-- prettier-ignore -->
 <i18n lang="json">
-{"en":{"previewModalTitle":"Page {page} Preview"},"zh":{"previewModalTitle":"第 {page} 页预览"},"zh-CN":{"previewModalTitle":"第 {page} 页预览"},"zh-TW":{"previewModalTitle":"第 {page} 頁預覽"},"zh-HK":{"previewModalTitle":"第 {page} 頁預覽"},"es":{"previewModalTitle":"Vista previa de la página {page}"},"fr":{"previewModalTitle":"Aperçu de la page {page}"},"de":{"previewModalTitle":"Vorschau Seite {page}"},"it":{"previewModalTitle":"Anteprima pagina {page}"},"ja":{"previewModalTitle":"ページ {page} のプレビュー"},"ko":{"previewModalTitle":"페이지 {page} 미리보기"},"ru":{"previewModalTitle":"Предпросмотр страницы {page}"},"pt":{"previewModalTitle":"Pré-visualização da página {page}"},"ar":{"previewModalTitle":"معاينة الصفحة {page}"},"hi":{"previewModalTitle":"पेज {page} प्रीव्यू"},"tr":{"previewModalTitle":"Sayfa {page} Önizleme"},"nl":{"previewModalTitle":"Voorbeeld pagina {page}"},"sv":{"previewModalTitle":"Förhandsvisning sida {page}"},"pl":{"previewModalTitle":"Podgląd strony {page}"},"vi":{"previewModalTitle":"Xem trước trang {page}"},"th":{"previewModalTitle":"พรีวิวหน้า {page}"},"id":{"previewModalTitle":"Pratinjau halaman {page}"},"he":{"previewModalTitle":"תצוגה מקדימה של עמוד {page}"},"ms":{"previewModalTitle":"Pratonton halaman {page}"},"no":{"previewModalTitle":"Forhåndsvisning side {page}"}}
+{
+  "en": { "previewModalTitle": "Page {page} Preview" },
+  "zh": { "previewModalTitle": "第 {page} 页预览" },
+  "zh-CN": { "previewModalTitle": "第 {page} 页预览" },
+  "zh-TW": { "previewModalTitle": "第 {page} 頁預覽" },
+  "zh-HK": { "previewModalTitle": "第 {page} 頁預覽" },
+  "es": { "previewModalTitle": "Vista previa de la página {page}" },
+  "fr": { "previewModalTitle": "Aperçu de la page {page}" },
+  "de": { "previewModalTitle": "Vorschau Seite {page}" },
+  "it": { "previewModalTitle": "Anteprima pagina {page}" },
+  "ja": { "previewModalTitle": "ページ {page} のプレビュー" },
+  "ko": { "previewModalTitle": "페이지 {page} 미리보기" },
+  "ru": { "previewModalTitle": "Предпросмотр страницы {page}" },
+  "pt": { "previewModalTitle": "Pré-visualização da página {page}" },
+  "ar": { "previewModalTitle": "معاينة الصفحة {page}" },
+  "hi": { "previewModalTitle": "पेज {page} प्रीव्यू" },
+  "tr": { "previewModalTitle": "Sayfa {page} Önizleme" },
+  "nl": { "previewModalTitle": "Voorbeeld pagina {page}" },
+  "sv": { "previewModalTitle": "Förhandsvisning sida {page}" },
+  "pl": { "previewModalTitle": "Podgląd strony {page}" },
+  "vi": { "previewModalTitle": "Xem trước trang {page}" },
+  "th": { "previewModalTitle": "พรีวิวหน้า {page}" },
+  "id": { "previewModalTitle": "Pratinjau halaman {page}" },
+  "he": { "previewModalTitle": "תצוגה מקדימה של עמוד {page}" },
+  "ms": { "previewModalTitle": "Pratonton halaman {page}" },
+  "no": { "previewModalTitle": "Forhåndsvisning side {page}" }
+}
 </i18n>

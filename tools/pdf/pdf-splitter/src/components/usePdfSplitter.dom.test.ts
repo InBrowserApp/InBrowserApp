@@ -32,7 +32,13 @@ vi.mock('../utils/create-pdf-zip', () => ({
   createPdfZip: (entries: Array<{ name: string; blob: Blob }>) => createPdfZipMock(entries),
 }))
 
-const renderPageMock = vi.fn(async (page: number, _width: number) => {
+let shouldFailPreviewRender = false
+
+const renderPageMock = vi.fn(async (page: number, width: number) => {
+  if (shouldFailPreviewRender && width === 900) {
+    throw new Error(PDF_ERROR.PreviewFailed)
+  }
+
   return new Blob([`page-${page}`], { type: 'image/webp' })
 })
 
@@ -65,6 +71,7 @@ type HarnessVm = {
   clearSelectedPages: () => void
   setOutputMode: (mode: 'single' | 'multiple') => void
   setMultipleMode: (mode: 'ranges' | 'pages') => void
+  openPreview: (page: number) => Promise<{ success: boolean; errorCode?: string }>
   generate: () => Promise<{ success: boolean; errorCode?: string }>
 }
 
@@ -88,6 +95,7 @@ const flushAll = async () => {
 describe('usePdfSplitter', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    shouldFailPreviewRender = false
 
     inspectPdfMock.mockResolvedValue({ pageCount: 5 })
     splitPdfWithWorkerMock.mockResolvedValue({
@@ -166,6 +174,21 @@ describe('usePdfSplitter', () => {
 
     expect(vm.selectedPages).toEqual([2, 3, 4, 5])
     expect(vm.rangeInput).toBe('2-5')
+  })
+
+  it('returns preview error when high-resolution preview rendering fails', async () => {
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    const file = new File([new Uint8Array([1, 2, 3])], 'sample.pdf', { type: 'application/pdf' })
+    await vm.handleUpload(file)
+    await flushAll()
+
+    shouldFailPreviewRender = true
+    const result = await vm.openPreview(2)
+
+    expect(result.success).toBe(false)
+    expect(result.errorCode).toBe(PDF_ERROR.PreviewFailed)
   })
 
   it('generates single output file', async () => {

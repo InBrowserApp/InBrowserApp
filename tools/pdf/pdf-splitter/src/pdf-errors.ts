@@ -1,6 +1,7 @@
 export const PDF_ERROR = {
   Encrypted: 'encrypted-pdf',
   Invalid: 'invalid-pdf',
+  PreviewFailed: 'preview-failed',
   SplitFailed: 'split-failed',
   WorkerUnsupported: 'worker-not-supported',
 } as const

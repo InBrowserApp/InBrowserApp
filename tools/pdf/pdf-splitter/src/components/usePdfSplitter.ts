@@ -407,9 +407,9 @@ export const usePdfSplitter = () => {
     isPreviewLoading.value = false
   }
 
-  const openPreview = async (page: number): Promise<void> => {
+  const openPreview = async (page: number): Promise<SelectionResult> => {
     if (!renderer) {
-      return
+      return { success: false }
     }
 
     previewToken += 1
@@ -423,10 +423,21 @@ export const usePdfSplitter = () => {
       const blob = await renderer.renderPage(page, 900)
 
       if (token !== previewToken) {
-        return
+        return { success: false }
       }
 
       previewBlob.value = blob
+      return { success: true }
+    } catch (error) {
+      if (token !== previewToken) {
+        return { success: false }
+      }
+
+      const errorCode = error instanceof Error ? error.message : PDF_ERROR.PreviewFailed
+      return {
+        success: false,
+        errorCode,
+      }
     } finally {
       if (token === previewToken) {
         isPreviewLoading.value = false
