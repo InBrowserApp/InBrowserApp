@@ -7,6 +7,7 @@ import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as pdfSplitterToolInfo } from '@tools/pdf-splitter'
 import { toolInfo as pdfToImageConverterToolInfo } from '@tools/pdf-to-image-converter'
+import { toolInfo as pdfTextExtractorToolInfo } from '@tools/pdf-text-extractor'
 import { toolInfo as unicodePunycodeConverterToolInfo } from '@tools/unicode-punycode-converter'
 import { toolInfo as dnsLookupToolInfo } from '@tools/dns-lookup'
 import { toolInfo as reverseIPLookupToolInfo } from '@tools/reverse-ip-lookup'
@@ -178,6 +179,7 @@ import { toolInfo as regexTesterReplacerToolInfo } from '@tools/regex-tester-rep
 import { toolInfo as loremIpsumGeneratorToolInfo } from '@tools/lorem-ipsum-generator'
 import { toolInfo as gitignoreGeneratorToolInfo } from '@tools/gitignore-generator'
 import { toolInfo as emailValidatorToolInfo } from '@tools/email-validator'
+import { toolInfo as imeiValidatorToolInfo } from '@tools/imei-validator'
 import { toolInfo as creditCardValidatorToolInfo } from '@tools/credit-card-validator'
 import { toolInfo as vinValidatorToolInfo } from '@tools/vin-validator'
 import { toolInfo as prcIdValidatorToolInfo } from '@tools/prc-id-validator'
@@ -269,6 +271,7 @@ export const tools: ToolInfo[] = [
   pdfSplitterToolInfo,
   pdfToImageConverterToolInfo,
   pdfInfoViewerToolInfo,
+  pdfTextExtractorToolInfo,
 
   // Hash Tools
   sha256HashTextOrFileToolInfo,
@@ -413,6 +416,7 @@ export const tools: ToolInfo[] = [
   jsonSchemaValidatorToolInfo,
   passwordStrengthCheckerToolInfo,
   emailValidatorToolInfo,
+  imeiValidatorToolInfo,
   creditCardValidatorToolInfo,
   vinValidatorToolInfo,
   prcIdValidatorToolInfo,

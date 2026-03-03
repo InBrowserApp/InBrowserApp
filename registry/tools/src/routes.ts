@@ -6,6 +6,7 @@ import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
 import { routes as pdfSplitterRoutes } from '@tools/pdf-splitter/routes'
 import { routes as pdfToImageConverterRoutes } from '@tools/pdf-to-image-converter/routes'
+import { routes as pdfTextExtractorRoutes } from '@tools/pdf-text-extractor/routes'
 import { routes as unicodePunycodeConverterRoutes } from '@tools/unicode-punycode-converter/routes'
 import { routes as dnsLookupRoutes } from '@tools/dns-lookup/routes'
 import { routes as reverseIPLookupRoutes } from '@tools/reverse-ip-lookup/routes'
@@ -176,6 +177,7 @@ import { routes as regexTesterReplacerRoutes } from '@tools/regex-tester-replace
 import { routes as loremIpsumGeneratorRoutes } from '@tools/lorem-ipsum-generator/routes'
 import { routes as gitignoreGeneratorRoutes } from '@tools/gitignore-generator/routes'
 import { routes as emailValidatorRoutes } from '@tools/email-validator/routes'
+import { routes as imeiValidatorRoutes } from '@tools/imei-validator/routes'
 import { routes as creditCardValidatorRoutes } from '@tools/credit-card-validator/routes'
 import { routes as vinValidatorRoutes } from '@tools/vin-validator/routes'
 import { routes as prcIdValidatorRoutes } from '@tools/prc-id-validator/routes'
@@ -204,6 +206,7 @@ export const routes: ToolRoute[] = [
   ...pdfMergerRoutes,
   ...pdfSplitterRoutes,
   ...pdfToImageConverterRoutes,
+  ...pdfTextExtractorRoutes,
   ...unicodePunycodeConverterRoutes,
   ...dnsLookupRoutes,
   ...reverseIPLookupRoutes,
@@ -376,6 +379,7 @@ export const routes: ToolRoute[] = [
   ...loremIpsumGeneratorRoutes,
   ...gitignoreGeneratorRoutes,
   ...emailValidatorRoutes,
+  ...imeiValidatorRoutes,
   ...creditCardValidatorRoutes,
   ...vinValidatorRoutes,
   ...prcIdValidatorRoutes,
