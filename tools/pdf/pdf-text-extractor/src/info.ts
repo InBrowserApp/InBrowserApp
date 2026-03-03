@@ -29,101 +29,96 @@ export const meta = {
   es: {
     name: 'Extractor de Texto PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Extrae texto seleccionable de archivos PDF en tu navegador y expórtalo como texto plano',
   },
   fr: {
     name: 'Extracteur de Texte PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Extrayez le texte sélectionnable des fichiers PDF dans votre navigateur et exportez-le en texte brut',
   },
   de: {
     name: 'PDF-Text-Extraktor',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Extrahieren Sie auswählbaren Text aus PDF-Dateien im Browser und exportieren Sie ihn als Klartext',
   },
   it: {
     name: 'Estrattore Testo PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Estrai testo selezionabile dai file PDF nel browser ed esportalo come testo semplice',
   },
   ja: {
-    name: 'PDF テキスト抽出',
+    name: 'PDFテキスト抽出',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'ブラウザで PDF ファイルから選択可能なテキストを抽出し、プレーンテキストとして書き出します',
   },
   ko: {
     name: 'PDF 텍스트 추출기',
-    description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+    description: '브라우저에서 PDF 파일의 선택 가능한 텍스트를 추출하고 일반 텍스트로 내보냅니다',
   },
   ru: {
-    name: 'Извлечение Текста PDF',
+    name: 'Извлечение текста PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Извлекайте выделяемый текст из PDF-файлов в браузере и экспортируйте его как обычный текст',
   },
   pt: {
     name: 'Extrator de Texto PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Extraia texto selecionável de arquivos PDF no navegador e exporte como texto simples',
   },
   ar: {
     name: 'مستخرج نص PDF',
-    description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+    description: 'استخرج النص القابل للتحديد من ملفات PDF في المتصفح وصدّره كنص عادي',
   },
   hi: {
     name: 'PDF टेक्स्ट एक्सट्रैक्टर',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'ब्राउज़र में PDF फ़ाइलों से चयन योग्य टेक्स्ट निकालें और साधारण टेक्स्ट के रूप में निर्यात करें',
   },
   tr: {
     name: 'PDF Metin Çıkarıcı',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Tarayıcınızda PDF dosyalarından seçilebilir metni çıkarın ve düz metin olarak dışa aktarın',
   },
   nl: {
     name: 'PDF-tekstextractor',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Haal selecteerbare tekst uit PDF-bestanden in je browser en exporteer als platte tekst',
   },
   sv: {
-    name: 'PDF-textutdragare',
+    name: 'PDF-textextraherare',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Extrahera markerbar text från PDF-filer i webbläsaren och exportera som oformaterad text',
   },
   pl: {
     name: 'Ekstraktor Tekstu PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Wyodrębnij zaznaczalny tekst z plików PDF w przeglądarce i wyeksportuj go jako zwykły tekst',
   },
   vi: {
     name: 'Trình Trích Xuất Văn Bản PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Trích xuất văn bản có thể chọn từ tệp PDF trong trình duyệt và xuất dưới dạng văn bản thuần',
   },
   th: {
     name: 'เครื่องมือดึงข้อความ PDF',
-    description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+    description: 'ดึงข้อความที่เลือกได้จากไฟล์ PDF ในเบราว์เซอร์ และส่งออกเป็นข้อความล้วน',
   },
   id: {
     name: 'Ekstraktor Teks PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Ekstrak teks yang dapat dipilih dari file PDF di browser dan ekspor sebagai teks biasa',
   },
   he: {
     name: 'מחלץ טקסט PDF',
-    description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+    description: 'חלץ טקסט שניתן לסמן מקובצי PDF בדפדפן וייצא אותו כטקסט פשוט',
   },
   ms: {
     name: 'Pengekstrak Teks PDF',
     description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+      'Ekstrak teks boleh pilih daripada fail PDF dalam pelayar dan eksport sebagai teks biasa',
   },
   no: {
     name: 'PDF-tekstekstraktor',
-    description:
-      'Extract selectable text from PDF files in your browser and export it as plain text',
+    description: 'Trekk ut markerbar tekst fra PDF-filer i nettleseren og eksporter som ren tekst',
   },
 }
