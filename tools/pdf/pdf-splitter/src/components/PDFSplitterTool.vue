@@ -205,7 +205,11 @@ const handleGenerate = async (): Promise<void> => {
 }
 
 const handleUploadAndScroll = async (nextFile: File): Promise<void> => {
-  await handleUpload(nextFile)
+  const result = await handleUpload(nextFile)
+  if (!result.success || !pageCount.value) {
+    return
+  }
+
   await nextTick()
   selectionSectionRef.value?.scrollToHeading()
 }

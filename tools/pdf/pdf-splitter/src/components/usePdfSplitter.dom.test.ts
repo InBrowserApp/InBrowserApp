@@ -1,6 +1,7 @@
 import { defineComponent, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { PDF_ERROR } from '../pdf-errors'
 
 const inspectPdfMock = vi.fn(async (_file: File) => ({ pageCount: 5 }))
 vi.mock('../inspect-pdf', () => ({
@@ -47,16 +48,18 @@ vi.mock('../utils/pdf-thumbnail-renderer', () => ({
 import { usePdfSplitter } from './usePdfSplitter'
 
 type HarnessVm = {
+  file: File | null
   pageCount: number
   rangeInput: string
   selectedPages: number[]
+  fileErrorCode: string
   outputMode: 'single' | 'multiple'
   multipleMode: 'ranges' | 'pages'
   items: Array<{ page: number; thumbnailUrl: string | null }>
   resultFilename: string
   resultFileCount: number
   hasResult: boolean
-  handleUpload: (file: File) => Promise<void>
+  handleUpload: (file: File) => Promise<{ success: boolean; errorCode?: string }>
   handleRangeInputChange: (value: string) => { success: boolean; errorCode?: string }
   setOutputMode: (mode: 'single' | 'multiple') => void
   setMultipleMode: (mode: 'ranges' | 'pages') => void
@@ -103,14 +106,34 @@ describe('usePdfSplitter', () => {
 
     const file = new File([new Uint8Array([1, 2, 3])], 'sample.pdf', { type: 'application/pdf' })
 
-    await vm.handleUpload(file)
+    const result = await vm.handleUpload(file)
     await flushAll()
 
+    expect(result.success).toBe(true)
+    expect(vm.file?.name).toBe('sample.pdf')
     expect(vm.pageCount).toBe(5)
     expect(vm.selectedPages).toEqual([1, 2, 3, 4, 5])
     expect(vm.rangeInput).toBe('1-5')
     expect(vm.items).toHaveLength(5)
     expect(renderPageMock).toHaveBeenCalled()
+  })
+
+  it('clears file state when upload fails to inspect pdf', async () => {
+    inspectPdfMock.mockRejectedValueOnce(new Error(PDF_ERROR.Invalid))
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    const file = new File([new Uint8Array([1, 2, 3])], 'broken.pdf', { type: 'application/pdf' })
+    const result = await vm.handleUpload(file)
+    await flushAll()
+
+    expect(result.success).toBe(false)
+    expect(result.errorCode).toBe(PDF_ERROR.Invalid)
+    expect(vm.file).toBe(null)
+    expect(vm.fileErrorCode).toBe(PDF_ERROR.Invalid)
+    expect(vm.pageCount).toBe(0)
+    expect(vm.items).toEqual([])
   })
 
   it('applies typed ranges to selection automatically', async () => {

@@ -238,16 +238,16 @@ export const usePdfSplitter = () => {
   }
 
   const updateItem = (page: number, patch: Partial<PreviewItem>): void => {
-    items.value = items.value.map((item) => {
-      if (item.page !== page) {
-        return item
-      }
+    const itemIndex = page - 1
+    const current = items.value[itemIndex]
+    if (!current || current.page !== page) {
+      return
+    }
 
-      return {
-        ...item,
-        ...patch,
-      }
-    })
+    items.value[itemIndex] = {
+      ...current,
+      ...patch,
+    }
   }
 
   const renderThumbnails = async (token: number): Promise<void> => {
@@ -270,7 +270,7 @@ export const usePdfSplitter = () => {
         }
 
         const thumbnailUrl = URL.createObjectURL(blob)
-        const previousItem = items.value.find((item) => item.page === page)
+        const previousItem = items.value[page - 1]
         if (previousItem?.thumbnailUrl) {
           URL.revokeObjectURL(previousItem.thumbnailUrl)
         }
@@ -304,8 +304,9 @@ export const usePdfSplitter = () => {
     }
   }
 
-  const handleUpload = async (nextFile: File): Promise<void> => {
+  const handleUpload = async (nextFile: File): Promise<SelectionResult> => {
     loadToken += 1
+    previewToken += 1
     const token = loadToken
 
     await cleanupRenderer()
@@ -315,13 +316,15 @@ export const usePdfSplitter = () => {
     clearRangeError()
     clearResult()
 
-    file.value = nextFile
+    file.value = null
     pageCount.value = 0
     items.value = []
     selectedPages.value = []
     rangeInput.value = ''
     previewPage.value = null
     previewBlob.value = null
+    isPreviewLoading.value = false
+    lastInteractedPage = null
 
     isLoadingDocument.value = true
     isRenderingThumbnails.value = false
@@ -329,9 +332,10 @@ export const usePdfSplitter = () => {
     try {
       const inspectionResult = await inspectPdf(nextFile)
       if (token !== loadToken) {
-        return
+        return { success: false }
       }
 
+      file.value = nextFile
       pageCount.value = inspectionResult.pageCount
       setSelectedPages(
         Array.from({ length: inspectionResult.pageCount }, (_, index) => index + 1),
@@ -348,13 +352,18 @@ export const usePdfSplitter = () => {
       renderer = new PdfThumbnailRenderer(nextFile)
 
       void renderThumbnails(token)
+      return { success: true }
     } catch (error) {
       if (token !== loadToken) {
-        return
+        return { success: false }
       }
 
       const errorCode = error instanceof Error ? error.message : PDF_ERROR.Invalid
       fileErrorCode.value = errorCode
+      return {
+        success: false,
+        errorCode,
+      }
     } finally {
       if (token === loadToken) {
         isLoadingDocument.value = false
