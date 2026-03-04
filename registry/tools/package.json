@@ -98,6 +98,7 @@
     "@tools/ipv6-to-mac": "workspace:*",
     "@tools/isbn-validator": "workspace:*",
     "@tools/jmespath-tester": "workspace:*",
+    "@tools/json-diff-path": "workspace:*",
     "@tools/json-formatter": "workspace:*",
     "@tools/json-schema-generator": "workspace:*",
     "@tools/json-schema-validator": "workspace:*",

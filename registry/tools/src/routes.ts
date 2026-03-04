@@ -121,6 +121,7 @@ import { routes as jsonToXmlConverterRoutes } from '@tools/json-to-xml-converter
 import { routes as csvToJsonConverterRoutes } from '@tools/csv-to-json-converter/routes'
 import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter/routes'
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
+import { routes as jsonDiffPathRoutes } from '@tools/json-diff-path/routes'
 import { routes as archiveViewerRoutes } from '@tools/archive-viewer/routes'
 import { routes as jmespathTesterRoutes } from '@tools/jmespath-tester/routes'
 import { routes as jsonpathTesterRoutes } from '@tools/jsonpath-tester/routes'
@@ -322,6 +323,7 @@ export const routes: ToolRoute[] = [
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,
+  ...jsonDiffPathRoutes,
   ...archiveViewerRoutes,
   ...jmespathTesterRoutes,
   ...jsonpathTesterRoutes,
