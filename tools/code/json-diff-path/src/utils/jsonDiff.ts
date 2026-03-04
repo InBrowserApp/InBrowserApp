@@ -250,7 +250,7 @@ function parseArrayRemovePath(path: string): { parentPointer: string; index: num
   }
 
   const segments = path.slice(1).split('/')
-  const lastSegment = segments.at(-1)
+  const lastSegment = segments[segments.length - 1]
 
   if (!lastSegment || !/^(0|[1-9]\d*)$/.test(lastSegment)) {
     return null
