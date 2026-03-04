@@ -41,11 +41,15 @@ describe('JsonDiffPathInputsSection', () => {
   it('binds original and modified inputs through v-model', async () => {
     const wrapper = mount(Harness)
     const textareas = wrapper.findAll('textarea')
+    expect(textareas).toHaveLength(2)
 
-    expect((textareas[0]?.element as HTMLTextAreaElement).value).toBe('{"a":1}')
-    expect((textareas[1]?.element as HTMLTextAreaElement).value).toBe('{"b":1}')
+    const originalTextarea = textareas[0]!
+    const modifiedTextarea = textareas[1]!
 
-    await textareas[1]?.setValue('{"b":2}')
+    expect((originalTextarea.element as HTMLTextAreaElement).value).toBe('{"a":1}')
+    expect((modifiedTextarea.element as HTMLTextAreaElement).value).toBe('{"b":1}')
+
+    await modifiedTextarea.setValue('{"b":2}')
 
     const vm = wrapper.vm as unknown as { modified: string }
     expect(vm.modified).toBe('{"b":2}')
