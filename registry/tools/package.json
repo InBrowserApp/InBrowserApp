@@ -133,6 +133,7 @@
     "@tools/pbkdf2-key-derivation": "workspace:*",
     "@tools/pdf-info-viewer": "workspace:*",
     "@tools/pdf-merger": "workspace:*",
+    "@tools/pdf-page-number-adder": "workspace:*",
     "@tools/pdf-splitter": "workspace:*",
     "@tools/pdf-text-extractor": "workspace:*",
     "@tools/pdf-to-image-converter": "workspace:*",
