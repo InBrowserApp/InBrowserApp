@@ -110,6 +110,8 @@ describe('PDFPageNumberAdderTool', () => {
   it('renders settings and supports generate/clear actions when file exists', async () => {
     fileRef.value = new File(['x'], 'demo.pdf', { type: 'application/pdf' })
     pageCountRef.value = 8
+    startNumberRef.value = 3
+    formatRef.value = 'n-total'
     hasResultRef.value = true
     resultUrlRef.value = 'blob:demo'
 
@@ -125,6 +127,18 @@ describe('PDFPageNumberAdderTool', () => {
     const clearButton = wrapper.get('[data-test="clear-file-button"]')
     await clearButton.trigger('click')
     expect(clearFileMock).toHaveBeenCalledTimes(1)
+
+    const previewNumber = wrapper.get('[data-test="preview-number"]')
+    expect(previewNumber.text()).toBe('3/8')
+
+    for (const field of [
+      'start-number-input',
+      'font-size-input',
+      'margin-x-input',
+      'margin-y-input',
+    ]) {
+      expect(wrapper.get(`[data-test="${field}"]`).attributes('style')).toContain('width: 100%')
+    }
 
     const downloadAnchor = wrapper.get('a[download="result.pdf"]')
     expect(downloadAnchor.attributes('href')).toBe('blob:demo')

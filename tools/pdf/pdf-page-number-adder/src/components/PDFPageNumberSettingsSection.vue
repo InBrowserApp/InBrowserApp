@@ -18,6 +18,8 @@
             <n-gi :span="12">
               <n-form-item :label="t('startNumber')">
                 <n-input-number
+                  data-test="start-number-input"
+                  style="width: 100%"
                   :value="startNumber"
                   :min="1"
                   :step="1"
@@ -49,6 +51,8 @@
             <n-gi :span="12">
               <n-form-item :label="t('fontSize')">
                 <n-input-number
+                  data-test="font-size-input"
+                  style="width: 100%"
                   :value="fontSize"
                   :min="1"
                   :step="1"
@@ -60,6 +64,8 @@
             <n-gi :span="12">
               <n-form-item :label="t('horizontalMargin')">
                 <n-input-number
+                  data-test="margin-x-input"
+                  style="width: 100%"
                   :value="marginX"
                   :min="0"
                   :step="1"
@@ -71,6 +77,8 @@
             <n-gi :span="12">
               <n-form-item :label="t('verticalMargin')">
                 <n-input-number
+                  data-test="margin-y-input"
+                  style="width: 100%"
                   :value="marginY"
                   :min="0"
                   :step="1"
@@ -80,6 +88,16 @@
             </n-gi>
           </n-grid>
         </n-form>
+
+        <PDFPageNumberPreview
+          :start-number="startNumber"
+          :format="format"
+          :position="position"
+          :font-size="fontSize"
+          :margin-x="marginX"
+          :margin-y="marginY"
+          :page-count="pageCount"
+        />
 
         <PDFPageNumberRangeErrorAlert :range-error-code="rangeErrorCode" />
       </n-flex>
@@ -93,10 +111,12 @@ import { useI18n } from 'vue-i18n'
 import { NFlex, NForm, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PageNumberFormat, PageNumberPosition } from '../types'
+import PDFPageNumberPreview from './PDFPageNumberPreview.vue'
 import PDFPageNumberRangeErrorAlert from './PDFPageNumberRangeErrorAlert.vue'
 import { resolvePageNumberOptionLabels } from './page-number-option-labels'
 
 defineProps<{
+  pageCount: number
   rangeInput: string
   startNumber: number
   format: PageNumberFormat
