@@ -153,7 +153,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "下载路径",
     "downloadPatch": "下载 Patch",
     "pathTab": "路径列表",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 差异补丁（RFC 6902 操作）",
     "noChanges": "当前筛选条件下没有变化"
   },
   "zh-CN": {
@@ -168,7 +168,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "下载路径",
     "downloadPatch": "下载 Patch",
     "pathTab": "路径列表",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 差异补丁（RFC 6902 操作）",
     "noChanges": "当前筛选条件下没有变化"
   },
   "zh-TW": {
@@ -183,7 +183,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "下載路徑",
     "downloadPatch": "下載 Patch",
     "pathTab": "路徑列表",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 差異補丁（RFC 6902 操作）",
     "noChanges": "目前篩選條件下沒有變更"
   },
   "zh-HK": {
@@ -198,7 +198,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "下載路徑",
     "downloadPatch": "下載 Patch",
     "pathTab": "路徑列表",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 差異補丁（RFC 6902 操作）",
     "noChanges": "目前篩選條件下沒有變更"
   },
   "es": {
@@ -213,7 +213,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Descargar rutas",
     "downloadPatch": "Descargar patch",
     "pathTab": "Lista de rutas",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Parche de diferencias JSON (operaciones RFC 6902)",
     "noChanges": "No hay cambios para los filtros actuales"
   },
   "fr": {
@@ -228,7 +228,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Télécharger les chemins",
     "downloadPatch": "Télécharger le patch",
     "pathTab": "Liste des chemins",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch de différence JSON (opérations RFC 6902)",
     "noChanges": "Aucun changement pour les filtres actuels"
   },
   "de": {
@@ -243,7 +243,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Pfade herunterladen",
     "downloadPatch": "Patch herunterladen",
     "pathTab": "Pfadliste",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON-Diff-Patch (RFC-6902-Operationen)",
     "noChanges": "Keine Änderungen für die aktuellen Filter"
   },
   "it": {
@@ -258,7 +258,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Scarica percorsi",
     "downloadPatch": "Scarica patch",
     "pathTab": "Elenco percorsi",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch diff JSON (operazioni RFC 6902)",
     "noChanges": "Nessuna modifica per i filtri correnti"
   },
   "ja": {
@@ -273,7 +273,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "パスをダウンロード",
     "downloadPatch": "Patch をダウンロード",
     "pathTab": "パス一覧",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 差分パッチ（RFC 6902 操作）",
     "noChanges": "現在のフィルターでは変更がありません"
   },
   "ko": {
@@ -288,7 +288,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "경로 다운로드",
     "downloadPatch": "Patch 다운로드",
     "pathTab": "경로 목록",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON 차이 패치 (RFC 6902 작업)",
     "noChanges": "현재 필터에서 변경 사항이 없습니다"
   },
   "ru": {
@@ -303,7 +303,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Скачать пути",
     "downloadPatch": "Скачать patch",
     "pathTab": "Список путей",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Патч различий JSON (операции RFC 6902)",
     "noChanges": "Нет изменений для текущих фильтров"
   },
   "pt": {
@@ -318,7 +318,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Baixar caminhos",
     "downloadPatch": "Baixar patch",
     "pathTab": "Lista de caminhos",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch de diferença JSON (operações RFC 6902)",
     "noChanges": "Sem alterações para os filtros atuais"
   },
   "ar": {
@@ -333,7 +333,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "تنزيل المسارات",
     "downloadPatch": "تنزيل التصحيح",
     "pathTab": "قائمة المسارات",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "تصحيح فروقات JSON (عمليات RFC 6902)",
     "noChanges": "لا توجد تغييرات وفق المرشحات الحالية"
   },
   "hi": {
@@ -348,7 +348,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "पाथ डाउनलोड करें",
     "downloadPatch": "Patch डाउनलोड करें",
     "pathTab": "पाथ सूची",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON डिफ पैच (RFC 6902 ऑपरेशन)",
     "noChanges": "वर्तमान फ़िल्टर के लिए कोई परिवर्तन नहीं"
   },
   "tr": {
@@ -363,7 +363,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Yolları indir",
     "downloadPatch": "Patch indir",
     "pathTab": "Yol listesi",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON fark yaması (RFC 6902 işlemleri)",
     "noChanges": "Mevcut filtreler için değişiklik yok"
   },
   "nl": {
@@ -378,7 +378,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Paden downloaden",
     "downloadPatch": "Patch downloaden",
     "pathTab": "Padlijst",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON-diff-patch (RFC 6902-bewerkingen)",
     "noChanges": "Geen wijzigingen voor de huidige filters"
   },
   "sv": {
@@ -393,7 +393,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Ladda ner sökvägar",
     "downloadPatch": "Ladda ner patch",
     "pathTab": "Sökvägslista",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON-diffpatch (RFC 6902-operationer)",
     "noChanges": "Inga ändringar för aktuella filter"
   },
   "pl": {
@@ -408,7 +408,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Pobierz ścieżki",
     "downloadPatch": "Pobierz patch",
     "pathTab": "Lista ścieżek",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch różnic JSON (operacje RFC 6902)",
     "noChanges": "Brak zmian dla bieżących filtrów"
   },
   "vi": {
@@ -423,7 +423,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Tải đường dẫn",
     "downloadPatch": "Tải patch",
     "pathTab": "Danh sách đường dẫn",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Bản vá khác biệt JSON (thao tác RFC 6902)",
     "noChanges": "Không có thay đổi với bộ lọc hiện tại"
   },
   "th": {
@@ -438,7 +438,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "ดาวน์โหลดเส้นทาง",
     "downloadPatch": "ดาวน์โหลด Patch",
     "pathTab": "รายการเส้นทาง",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "แพตช์ความต่าง JSON (การดำเนินการ RFC 6902)",
     "noChanges": "ไม่มีการเปลี่ยนแปลงตามตัวกรองปัจจุบัน"
   },
   "id": {
@@ -453,7 +453,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Unduh jalur",
     "downloadPatch": "Unduh patch",
     "pathTab": "Daftar jalur",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch perbedaan JSON (operasi RFC 6902)",
     "noChanges": "Tidak ada perubahan untuk filter saat ini"
   },
   "he": {
@@ -468,7 +468,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "הורדת נתיבים",
     "downloadPatch": "הורדת Patch",
     "pathTab": "רשימת נתיבים",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "תיקון הבדלים של JSON (פעולות RFC 6902)",
     "noChanges": "אין שינויים עבור המסננים הנוכחיים"
   },
   "ms": {
@@ -483,7 +483,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Muat turun laluan",
     "downloadPatch": "Muat turun patch",
     "pathTab": "Senarai laluan",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "Patch perbezaan JSON (operasi RFC 6902)",
     "noChanges": "Tiada perubahan untuk penapis semasa"
   },
   "no": {
@@ -498,7 +498,7 @@ function formatParseError(error: JsonParseError): string {
     "downloadPaths": "Last ned stier",
     "downloadPatch": "Last ned patch",
     "pathTab": "Stiliste",
-    "patchTab": "JSON Diff Patch (RFC 6902 Operations)",
+    "patchTab": "JSON-diff-patch (RFC 6902-operasjoner)",
     "noChanges": "Ingen endringer for gjeldende filtre"
   }
 }
