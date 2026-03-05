@@ -27,11 +27,12 @@ describe('pdfjs loader', () => {
 
     expect(globalWorkerOptions.workerSrc).toBe('mock-worker-url')
     expect(getDocumentMock).toHaveBeenCalledOnce()
-    const firstCall = getDocumentMock.mock.calls[0]
-    expect(firstCall?.[0]).toMatchObject({
-      useSystemFonts: true,
-    })
-    expect(firstCall?.[0].data).toEqual(data)
+    expect(getDocumentMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data,
+        useSystemFonts: true,
+      }),
+    )
     expect(task).toBeDefined()
   })
 })

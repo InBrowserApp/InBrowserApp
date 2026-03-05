@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { NFlex, NSpin, NText } from 'naive-ui'
+import type { PDFDocumentProxy } from 'pdfjs-dist/types/src/pdf'
 import { useI18n } from 'vue-i18n'
 import type { PageNumberFormat, PageNumberPosition } from '../types'
 import { buildPageNumberLabel, resolvePageNumberCoordinates } from '../utils/page-number-layout'
@@ -133,10 +134,7 @@ const renderPreviewPage = async (): Promise<void> => {
   hasPreviewError.value = false
 
   let loadingTask: ReturnType<typeof loadPdfDocument> | null = null
-  let documentProxy: {
-    destroy?: () => void
-    getPage: (pageNumber: number) => Promise<unknown>
-  } | null = null
+  let documentProxy: PDFDocumentProxy | null = null
 
   try {
     const data = new Uint8Array(await props.file.arrayBuffer())
@@ -145,16 +143,7 @@ const renderPreviewPage = async (): Promise<void> => {
     }
 
     loadingTask = loadPdfDocument(data)
-    documentProxy = (await loadingTask.promise) as {
-      destroy?: () => void
-      getPage: (pageNumber: number) => Promise<{
-        getViewport: (params: { scale: number }) => { width: number; height: number }
-        render: (params: {
-          canvasContext: CanvasRenderingContext2D
-          viewport: { width: number; height: number }
-        }) => { promise: Promise<void> }
-      }>
-    }
+    documentProxy = await loadingTask.promise
 
     if (currentSequence !== renderSequence) {
       return
@@ -179,6 +168,7 @@ const renderPreviewPage = async (): Promise<void> => {
     }
 
     await page.render({
+      canvas: renderedPageCanvas,
       canvasContext,
       viewport,
     }).promise
@@ -203,7 +193,7 @@ const renderPreviewPage = async (): Promise<void> => {
     }
 
     try {
-      documentProxy?.destroy?.()
+      documentProxy?.destroy()
     } catch {
       // no-op
     }
