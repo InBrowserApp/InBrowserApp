@@ -280,8 +280,8 @@ catalogs:
       specifier: ^0.4.4
       version: 0.4.4
     hono:
-      specifier: ^4.12.3
-      version: 4.12.3
+      specifier: ^4.12.4
+      version: 4.12.5
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -394,8 +394,8 @@ catalogs:
       specifier: ^15.7.2
       version: 15.7.2
     svgo:
-      specifier: ^4.0.0
-      version: 4.0.0
+      specifier: ^4.0.1
+      version: 4.0.1
     transliteration:
       specifier: ^2.6.1
       version: 2.6.1
@@ -2380,7 +2380,7 @@ importers:
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
       svgo:
         specifier: 'catalog:'
-        version: 4.0.0
+        version: 4.0.1
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)
@@ -4417,7 +4417,7 @@ importers:
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
       svgo:
         specifier: 'catalog:'
-        version: 4.0.0
+        version: 4.0.1
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)
@@ -7251,7 +7251,7 @@ importers:
         version: 11.11.1
       hono:
         specifier: 'catalog:'
-        version: 4.12.3
+        version: 4.12.5
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -7281,7 +7281,7 @@ importers:
         version: 14.2.1(vue@3.5.29(typescript@5.9.3))
       hono:
         specifier: 'catalog:'
-        version: 4.12.3
+        version: 4.12.5
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -11037,8 +11037,8 @@ packages:
   highwayhasher@0.4.4:
     resolution: {integrity: sha512-57bU4Fw2baN6j5Ej7w4TVM7hKbsGZf9YrMFlO5joz7Y49Y/jurVYfGcH8WCfmT935IcH92TYt+Eo4Gjw04Iq+w==}
 
-  hono@4.12.3:
-    resolution: {integrity: sha512-SFsVSjp8sj5UumXOOFlkZOG6XS9SJDKw0TbwFeV+AJ8xlST8kxK5Z/5EYa111UY8732lK2S/xB653ceuaoGwpg==}
+  hono@4.12.5:
+    resolution: {integrity: sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -12148,6 +12148,10 @@ packages:
     resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
     engines: {node: '>=11.0.0'}
 
+  sax@1.5.0:
+    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
+    engines: {node: '>=11.0.0'}
+
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -12382,8 +12386,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svgo@4.0.0:
-    resolution: {integrity: sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==}
+  svgo@4.0.1:
+    resolution: {integrity: sha512-XDpWUOPC6FEibaLzjfe0ucaV0YrOjYotGJO1WpF0Zd+n6ZGEQUsSugaoLq9QkEZtAfQIxT42UChcssDVPP3+/w==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -16584,7 +16588,7 @@ snapshots:
 
   highwayhasher@0.4.4: {}
 
-  hono@4.12.3: {}
+  hono@4.12.5: {}
 
   hookable@5.5.3: {}
 
@@ -17677,6 +17681,8 @@ snapshots:
 
   sax@1.4.4: {}
 
+  sax@1.5.0: {}
+
   saxes@6.0.0:
     dependencies:
       xmlchars: 2.2.0
@@ -17956,7 +17962,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svgo@4.0.0:
+  svgo@4.0.1:
     dependencies:
       commander: 11.1.0
       css-select: 5.2.2
@@ -17964,7 +17970,7 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
-      sax: 1.4.4
+      sax: 1.5.0
 
   symbol-tree@3.2.4: {}
 
