@@ -4,8 +4,18 @@
     <n-flex vertical :size="12">
       <n-flex justify="space-between" align="center" :wrap="true">
         <n-flex :size="8">
-          <n-button @click="emit('swap')">{{ t('swap') }}</n-button>
-          <n-button @click="emit('format')">{{ t('format') }}</n-button>
+          <n-button text @click="emit('swap')">
+            <template #icon>
+              <n-icon :component="ArrowSwap20Regular" />
+            </template>
+            {{ t('swap') }}
+          </n-button>
+          <n-button text @click="emit('format')">
+            <template #icon>
+              <n-icon :component="TextNumberFormat20Regular" />
+            </template>
+            {{ t('format') }}
+          </n-button>
           <n-button v-if="showLargeCompareHint" type="primary" @click="emit('compare')">
             {{ t('compareNow') }}
           </n-button>
@@ -63,9 +73,12 @@ import {
   NFlex,
   NGi,
   NGrid,
+  NIcon,
   NInput,
   NText,
 } from 'naive-ui'
+import ArrowSwap20Regular from '@vicons/fluent/ArrowSwap20Regular'
+import TextNumberFormat20Regular from '@vicons/fluent/TextNumberFormat20Regular'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { JsonDiffOperation } from '../utils/jsonDiff'
 
