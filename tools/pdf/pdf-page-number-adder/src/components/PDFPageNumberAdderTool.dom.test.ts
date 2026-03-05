@@ -70,7 +70,7 @@ vi.mock('./usePdfPageNumberAdder', () => ({
 vi.mock('./PDFPageNumberPreview.vue', () => ({
   default: defineComponent({
     name: 'PDFPageNumberPreview',
-    template: '<div data-test=\"preview-section\" />',
+    template: '<div data-test="preview-section" />',
   }),
 }))
 
