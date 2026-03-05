@@ -90,6 +90,7 @@
         </n-form>
 
         <PDFPageNumberPreview
+          :file="file"
           :start-number="startNumber"
           :format="format"
           :position="position"
@@ -116,6 +117,7 @@ import PDFPageNumberRangeErrorAlert from './PDFPageNumberRangeErrorAlert.vue'
 import { resolvePageNumberOptionLabels } from './page-number-option-labels'
 
 defineProps<{
+  file: File | null
   pageCount: number
   rangeInput: string
   startNumber: number

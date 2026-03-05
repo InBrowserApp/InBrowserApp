@@ -5450,6 +5450,9 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 5.4.624
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)

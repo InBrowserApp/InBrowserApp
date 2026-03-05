@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
@@ -67,6 +67,13 @@ vi.mock('./usePdfPageNumberAdder', () => ({
   }),
 }))
 
+vi.mock('./PDFPageNumberPreview.vue', () => ({
+  default: defineComponent({
+    name: 'PDFPageNumberPreview',
+    template: '<div data-test=\"preview-section\" />',
+  }),
+}))
+
 import PDFPageNumberAdderTool from './PDFPageNumberAdderTool.vue'
 
 describe('PDFPageNumberAdderTool', () => {
@@ -128,8 +135,7 @@ describe('PDFPageNumberAdderTool', () => {
     await clearButton.trigger('click')
     expect(clearFileMock).toHaveBeenCalledTimes(1)
 
-    const previewNumber = wrapper.get('[data-test="preview-number"]')
-    expect(previewNumber.text()).toBe('3/8')
+    expect(wrapper.find('[data-test="preview-section"]').exists()).toBe(true)
 
     for (const field of [
       'start-number-input',

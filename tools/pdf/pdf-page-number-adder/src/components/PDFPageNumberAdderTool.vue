@@ -12,6 +12,7 @@
 
   <template v-if="file">
     <PDFPageNumberSettingsSection
+      :file="file"
       :page-count="pageCount"
       :range-input="rangeInput"
       :start-number="startNumber"
