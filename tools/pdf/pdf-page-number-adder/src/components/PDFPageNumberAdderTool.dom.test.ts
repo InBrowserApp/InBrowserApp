@@ -115,14 +115,14 @@ describe('PDFPageNumberAdderTool', () => {
 
     const wrapper = mount(PDFPageNumberAdderTool)
 
-    expect(wrapper.find('[data-test=\"settings-section\"]').exists()).toBe(true)
-    expect(wrapper.find('[data-test=\"generate-section\"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="settings-section"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="generate-section"]').exists()).toBe(true)
 
-    const generateButton = wrapper.get('[data-test=\"generate-button\"]')
+    const generateButton = wrapper.get('[data-test="generate-button"]')
     await generateButton.trigger('click')
     expect(generateMock).toHaveBeenCalledTimes(1)
 
-    const clearButton = wrapper.get('[data-test=\"clear-file-button\"]')
+    const clearButton = wrapper.get('[data-test="clear-file-button"]')
     await clearButton.trigger('click')
     expect(clearFileMock).toHaveBeenCalledTimes(1)
 
