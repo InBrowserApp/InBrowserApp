@@ -54,6 +54,7 @@
                   data-test="font-family-select"
                   :value="fontFamily"
                   :options="fontFamilyOptions"
+                  :render-label="renderFontFamilyOptionLabel"
                   @update:value="handleFontFamilyChange"
                 />
               </n-form-item>
@@ -119,8 +120,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, h } from 'vue'
 import { useI18n } from 'vue-i18n'
+import type { SelectOption } from 'naive-ui'
 import { NFlex, NForm, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
@@ -162,9 +164,23 @@ const formatOptions = computed<Array<{ label: string; value: PageNumberFormat }>
   { label: `# ${optionLabels.value.formatWithTotal} (n/total)`, value: 'n-total' },
 ])
 
-const fontFamilyOptions = computed<Array<{ label: string; value: PageNumberFontFamily }>>(() => [
-  { label: `${t('fontFamilySans')} (Helvetica)`, value: 'sans-serif' },
-  { label: `${t('fontFamilySerif')} (Times Roman)`, value: 'serif' },
+type FontFamilyOption = {
+  label: string
+  value: PageNumberFontFamily
+  previewFontFamily: string
+}
+
+const fontFamilyOptions = computed<FontFamilyOption[]>(() => [
+  {
+    label: `${t('fontFamilySans')} (Helvetica)`,
+    value: 'sans-serif',
+    previewFontFamily: 'Helvetica, Arial, sans-serif',
+  },
+  {
+    label: `${t('fontFamilySerif')} (Times Roman)`,
+    value: 'serif',
+    previewFontFamily: '"Times New Roman", Times, serif',
+  },
 ])
 
 const positionOptions = computed<Array<{ label: string; value: PageNumberPosition }>>(() => [
@@ -178,6 +194,19 @@ const positionOptions = computed<Array<{ label: string; value: PageNumberPositio
 
 const handleFormatChange = (value: string): void => {
   emit('update:format', value as PageNumberFormat)
+}
+
+const renderFontFamilyOptionLabel = (option: SelectOption): ReturnType<typeof h> => {
+  const item = option as FontFamilyOption
+  return h(
+    'span',
+    {
+      style: {
+        fontFamily: item.previewFontFamily,
+      },
+    },
+    item.label,
+  )
 }
 
 const handleFontFamilyChange = (value: string): void => {

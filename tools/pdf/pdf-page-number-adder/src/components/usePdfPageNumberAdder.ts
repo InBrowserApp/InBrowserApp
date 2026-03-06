@@ -37,7 +37,7 @@ export const usePdfPageNumberAdder = () => {
   const rangeInput = ref('')
   const startNumber = ref(1)
   const format = ref<PageNumberFormat>('n')
-  const fontFamily = ref<PageNumberFontFamily>('sans-serif')
+  const fontFamily = ref<PageNumberFontFamily>('serif')
   const position = ref<PageNumberPosition>('bottom-center')
   const fontSize = ref(12)
   const marginX = ref(24)
@@ -93,7 +93,7 @@ export const usePdfPageNumberAdder = () => {
     rangeInput.value = ''
     startNumber.value = 1
     format.value = 'n'
-    fontFamily.value = 'sans-serif'
+    fontFamily.value = 'serif'
     position.value = 'bottom-center'
     fontSize.value = 12
     marginX.value = 24

@@ -19,8 +19,6 @@ type PreviewProps = {
 export const usePdfPageNumberPreview = (props: PreviewProps) => {
   const previewCanvasRef = ref<HTMLCanvasElement | null>(null)
   const previewPage = ref(1)
-  const pageWidthPt = ref(0)
-  const pageHeightPt = ref(0)
   const isRenderingPage = ref(false)
   const hasPreviewError = ref(false)
 
@@ -28,8 +26,6 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   let renderSequence = 0
 
   const totalPreviewPages = computed(() => Math.max(1, props.pageCount))
-  const canGoPrevious = computed(() => previewPage.value > 1)
-  const canGoNext = computed(() => previewPage.value < totalPreviewPages.value)
   const previewFontFamily = computed(() => (props.fontFamily === 'serif' ? 'serif' : 'sans-serif'))
 
   const previewLabel = computed(() =>
@@ -105,8 +101,6 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     if (!props.file) {
       hasPreviewError.value = false
       isRenderingPage.value = false
-      pageWidthPt.value = 0
-      pageHeightPt.value = 0
       clearVisibleCanvas()
       renderedPageCanvas.width = 0
       renderedPageCanvas.height = 0
@@ -144,8 +138,6 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       }
 
       const viewportAtScaleOne = page.getViewport({ scale: 1 })
-      pageWidthPt.value = Math.round(viewportAtScaleOne.width)
-      pageHeightPt.value = Math.round(viewportAtScaleOne.height)
 
       const targetWidth = Math.min(1200, Math.max(600, viewportAtScaleOne.width))
       const scale = targetWidth / viewportAtScaleOne.width
@@ -173,8 +165,6 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     } catch {
       if (currentSequence === renderSequence) {
         hasPreviewError.value = true
-        pageWidthPt.value = 0
-        pageHeightPt.value = 0
         clearVisibleCanvas()
         renderedPageCanvas.width = 0
         renderedPageCanvas.height = 0
@@ -198,29 +188,25 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     }
   }
 
-  const goToPreviousPage = (): void => {
-    if (canGoPrevious.value) {
-      previewPage.value -= 1
+  const setPreviewPage = (value: number): void => {
+    if (!Number.isFinite(value)) {
+      return
     }
-  }
 
-  const goToNextPage = (): void => {
-    if (canGoNext.value) {
-      previewPage.value += 1
-    }
+    previewPage.value = Math.min(Math.max(1, Math.trunc(value)), totalPreviewPages.value)
   }
 
   watch(
     () => props.file,
     () => {
-      previewPage.value = 1
+      setPreviewPage(1)
     },
   )
 
   watch(
     () => props.pageCount,
     () => {
-      previewPage.value = Math.min(previewPage.value, totalPreviewPages.value)
+      setPreviewPage(previewPage.value)
     },
   )
 
@@ -257,14 +243,9 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   return {
     previewCanvasRef,
     previewPage,
-    pageWidthPt,
-    pageHeightPt,
     totalPreviewPages,
-    canGoPrevious,
-    canGoNext,
     isRenderingPage,
     hasPreviewError,
-    goToPreviousPage,
-    goToNextPage,
+    setPreviewPage,
   }
 }

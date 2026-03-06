@@ -10,6 +10,11 @@
           :disabled="!canGenerate"
           @click="emit('generate')"
         >
+          <template #icon>
+            <n-icon>
+              <Sparkle16Filled />
+            </n-icon>
+          </template>
           {{ isGenerating ? t('generating') : t('generate') }}
         </n-button>
 
@@ -18,6 +23,11 @@
         <n-flex v-if="hasResult && resultUrl" align="center" justify="space-between" :wrap="false">
           <n-text>{{ t('resultReady') }}</n-text>
           <n-button tag="a" type="primary" :href="resultUrl" :download="resultFilename">
+            <template #icon>
+              <n-icon>
+                <ArrowDownload16Regular />
+              </n-icon>
+            </template>
             {{ t('download') }}
           </n-button>
         </n-flex>
@@ -29,7 +39,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NAlert, NButton, NFlex, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NIcon, NText } from 'naive-ui'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
+import Sparkle16Filled from '@vicons/fluent/Sparkle16Filled'
 import { PDF_ERROR } from '../pdf-errors'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 

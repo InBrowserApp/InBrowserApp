@@ -15,9 +15,19 @@
           :loading="isLoadingDocument"
           @click="triggerFileDialog"
         >
+          <template #icon>
+            <n-icon>
+              <DocumentArrowUp20Regular />
+            </n-icon>
+          </template>
           {{ file ? t('replaceFile') : t('chooseFile') }}
         </n-button>
         <n-button v-if="file" data-test="clear-file-button" tertiary @click="emit('clear-file')">
+          <template #icon>
+            <n-icon>
+              <Delete16Regular />
+            </n-icon>
+          </template>
           {{ t('clearFile') }}
         </n-button>
       </n-flex>
@@ -37,7 +47,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NAlert, NButton, NFlex, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NIcon, NText } from 'naive-ui'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
+import DocumentArrowUp20Regular from '@vicons/fluent/DocumentArrowUp20Regular'
 import { PDF_ERROR } from '../pdf-errors'
 import { ToolSection } from '@shared/ui/tool'
 

@@ -19,7 +19,7 @@ const pageCountRef = ref(0)
 const rangeInputRef = ref('')
 const startNumberRef = ref(1)
 const formatRef = ref<'n' | 'n-total'>('n')
-const fontFamilyRef = ref<'sans-serif' | 'serif'>('sans-serif')
+const fontFamilyRef = ref<'sans-serif' | 'serif'>('serif')
 const positionRef = ref<
   'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'
 >('bottom-center')
@@ -89,7 +89,7 @@ describe('PDFPageNumberAdderTool', () => {
     rangeInputRef.value = ''
     startNumberRef.value = 1
     formatRef.value = 'n'
-    fontFamilyRef.value = 'sans-serif'
+    fontFamilyRef.value = 'serif'
     positionRef.value = 'bottom-center'
     fontSizeRef.value = 12
     marginXRef.value = 24

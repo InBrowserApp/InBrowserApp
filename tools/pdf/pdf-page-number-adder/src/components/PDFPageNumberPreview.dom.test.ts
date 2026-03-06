@@ -1,5 +1,6 @@
 import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { NPagination } from 'naive-ui'
 
 const { loadPdfDocumentMock } = vi.hoisted(() => ({
   loadPdfDocumentMock: vi.fn(),
@@ -103,17 +104,16 @@ describe('PDFPageNumberPreview', () => {
     expect(wrapper.find('[data-test="preview-error"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="preview-page-canvas"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="preview-paper"]').exists()).toBe(true)
-    expect(wrapper.get('[data-test="preview-page-indicator"]').text()).toContain('1 / 8')
+    expect(wrapper.find('[data-test="preview-pagination"]').exists()).toBe(true)
 
     expect(
       contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '3/8')),
     ).toBe(true)
 
-    await wrapper.get('[data-test="preview-next-page"]').trigger('click')
+    await wrapper.getComponent(NPagination).vm.$emit('update:page', 2)
     await flushPromises()
 
     expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(2)
-    expect(wrapper.get('[data-test="preview-page-indicator"]').text()).toContain('2 / 8')
 
     await wrapper.setProps({
       startNumber: 5,

@@ -103,6 +103,8 @@ describe('usePdfPageNumberAdder', () => {
     const wrapper = mount(Harness)
     const vm = wrapper.vm as unknown as HarnessVm
 
+    expect(vm.fontFamily).toBe('serif')
+
     const result = await vm.handleUpload(new File(['x'], 'sample.pdf', { type: 'application/pdf' }))
     await flushAll()
 
@@ -212,6 +214,7 @@ describe('usePdfPageNumberAdder', () => {
     expect(vm.file).toBe(null)
     expect(vm.pageCount).toBe(0)
     expect(vm.hasResult).toBe(false)
+    expect(vm.fontFamily).toBe('serif')
   })
 
   it('maps inspect failures into file error code', async () => {
