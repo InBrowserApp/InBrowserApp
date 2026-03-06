@@ -43,6 +43,8 @@ import { usePdfPageNumberPreview } from './usePdfPageNumberPreview'
 
 const props = defineProps<{
   file: File | null
+  rangeInput: string
+  rangeErrorCode: string
   startNumber: number
   format: PageNumberFormat
   fontFamily: PageNumberFontFamily

@@ -109,6 +109,8 @@
           <n-gi>
             <PDFPageNumberPreview
               :file="file"
+              :range-input="rangeInput"
+              :range-error-code="rangeErrorCode"
               :start-number="startNumber"
               :format="format"
               :font-family="fontFamily"

@@ -86,6 +86,8 @@ describe('PDFPageNumberPreview', () => {
     const wrapper = mount(PDFPageNumberPreview, {
       props: {
         file: new File(['demo'], 'demo.pdf', { type: 'application/pdf' }),
+        rangeInput: '',
+        rangeErrorCode: '',
         startNumber: 3,
         format: 'n-total',
         fontFamily: 'sans-serif',
@@ -139,6 +141,8 @@ describe('PDFPageNumberPreview', () => {
     const wrapper = mount(PDFPageNumberPreview, {
       props: {
         file: new File(['bad'], 'bad.pdf', { type: 'application/pdf' }),
+        rangeInput: '',
+        rangeErrorCode: '',
         startNumber: 1,
         format: 'n',
         fontFamily: 'sans-serif',
@@ -154,5 +158,43 @@ describe('PDFPageNumberPreview', () => {
 
     const previewError = wrapper.get('[data-test="preview-error"]')
     expect(previewError.text()).toContain('Preview unavailable')
+  })
+
+  it('renders selected range pages in preview order', async () => {
+    const pdfDocumentMock = createPdfDocumentMock()
+
+    loadPdfDocumentMock.mockReturnValue({
+      promise: Promise.resolve(pdfDocumentMock.document),
+      destroy: vi.fn(),
+    })
+
+    const wrapper = mount(PDFPageNumberPreview, {
+      props: {
+        file: new File(['range'], 'range.pdf', { type: 'application/pdf' }),
+        rangeInput: '2,4',
+        rangeErrorCode: '',
+        startNumber: 10,
+        format: 'n',
+        fontFamily: 'serif',
+        position: 'bottom-center',
+        fontSize: 12,
+        marginX: 24,
+        marginY: 24,
+        pageCount: 8,
+      },
+    })
+
+    await flushPromises()
+    expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(2)
+    expect(
+      contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '10')),
+    ).toBe(true)
+
+    await wrapper.getComponent(NPagination).vm.$emit('update:page', 2)
+    await flushPromises()
+    expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(4)
+    expect(
+      contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '11')),
+    ).toBe(true)
   })
 })

@@ -2,10 +2,13 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import type { PDFDocumentProxy } from 'pdfjs-dist/types/src/pdf'
 import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
 import { buildPageNumberLabel, resolvePageNumberCoordinates } from '../utils/page-number-layout'
+import { getAllPages, parsePageSelection } from '../utils/page-range'
 import { loadPdfDocument } from '../utils/pdfjs'
 
 type PreviewProps = {
   file: File | null
+  rangeInput: string
+  rangeErrorCode: string
   startNumber: number
   format: PageNumberFormat
   fontFamily: PageNumberFontFamily
@@ -25,12 +28,34 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   const renderedPageCanvas = document.createElement('canvas')
   let renderSequence = 0
 
-  const totalPreviewPages = computed(() => Math.max(1, props.pageCount))
+  const previewPages = computed<number[]>(() => {
+    if (props.pageCount < 1) {
+      return [1]
+    }
+
+    if (props.rangeErrorCode) {
+      return getAllPages(props.pageCount)
+    }
+
+    try {
+      return parsePageSelection(props.rangeInput, props.pageCount)
+    } catch {
+      return getAllPages(props.pageCount)
+    }
+  })
+
+  const totalPreviewPages = computed(() => Math.max(1, previewPages.value.length))
   const previewFontFamily = computed(() => (props.fontFamily === 'serif' ? 'serif' : 'sans-serif'))
+
+  const previewPageIndex = computed(
+    () => Math.min(Math.max(1, previewPage.value), totalPreviewPages.value) - 1,
+  )
+
+  const previewSourcePage = computed(() => previewPages.value[previewPageIndex.value] ?? 1)
 
   const previewLabel = computed(() =>
     buildPageNumberLabel(
-      Math.max(0, previewPage.value - 1),
+      Math.max(0, previewPageIndex.value),
       Math.max(1, props.pageCount),
       Math.max(1, Math.trunc(props.startNumber)),
       props.format,
@@ -113,6 +138,8 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       return
     }
 
+    const sourcePage = previewSourcePage.value
+
     isRenderingPage.value = true
     hasPreviewError.value = false
 
@@ -132,7 +159,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
         return
       }
 
-      const page = await documentProxy.getPage(effectivePage)
+      const page = await documentProxy.getPage(sourcePage)
       if (currentSequence !== renderSequence) {
         return
       }
@@ -204,14 +231,14 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   )
 
   watch(
-    () => props.pageCount,
+    () => [props.pageCount, props.rangeInput, props.rangeErrorCode],
     () => {
       setPreviewPage(previewPage.value)
     },
   )
 
   watch(
-    () => [props.file, previewPage.value],
+    () => [props.file, previewPage.value, props.rangeInput, props.rangeErrorCode],
     () => {
       void renderPreviewPage()
     },
@@ -228,6 +255,8 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       props.marginX,
       props.marginY,
       props.pageCount,
+      props.rangeInput,
+      props.rangeErrorCode,
     ],
     () => {
       if (!isRenderingPage.value && !hasPreviewError.value) {
