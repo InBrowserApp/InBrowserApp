@@ -14,6 +14,8 @@ describe('page-range', () => {
 
   it('throws invalid token error', () => {
     expect(() => parsePageSelection('1-', 10)).toThrow(PAGE_RANGE_ERROR.InvalidToken)
+    expect(() => parsePageSelection('1,,3', 10)).toThrow(PAGE_RANGE_ERROR.InvalidToken)
+    expect(() => parsePageSelection(',', 10)).toThrow(PAGE_RANGE_ERROR.InvalidToken)
   })
 
   it('throws out-of-bounds error', () => {

@@ -48,6 +48,7 @@ type HarnessVm = {
   generateErrorCode: string
   resultFilename: string
   resultUrl: string | null
+  isGenerating: boolean
   canGenerate: boolean
   hasResult: boolean
   setRangeInput: (value: string) => { success: boolean; errorCode?: string }
@@ -82,6 +83,18 @@ const flushAll = async () => {
   await Promise.resolve()
   await Promise.resolve()
   await nextTick()
+}
+
+const createDeferred = <T>() => {
+  let resolve!: (value: T) => void
+  let reject!: (reason?: unknown) => void
+
+  const promise = new Promise<T>((nextResolve, nextReject) => {
+    resolve = nextResolve
+    reject = nextReject
+  })
+
+  return { promise, resolve, reject }
 }
 
 describe('usePdfPageNumberAdder', () => {
@@ -228,5 +241,38 @@ describe('usePdfPageNumberAdder', () => {
     expect(result.success).toBe(false)
     expect(result.errorCode).toBe(PDF_ERROR.Encrypted)
     expect(vm.fileErrorCode).toBe(PDF_ERROR.Encrypted)
+  })
+
+  it('ignores stale generate result after uploading a different file', async () => {
+    const deferred = createDeferred<unknown>()
+    addPageNumbersWithWorkerMock.mockReturnValueOnce(deferred.promise)
+    inspectPdfMock.mockResolvedValueOnce({ pageCount: 6 }).mockResolvedValueOnce({ pageCount: 3 })
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    await vm.handleUpload(new File(['a'], 'first.pdf', { type: 'application/pdf' }))
+    const pendingGenerate = vm.generate()
+    await flushAll()
+
+    await vm.handleUpload(new File(['b'], 'second.pdf', { type: 'application/pdf' }))
+    expect(vm.file?.name).toBe('second.pdf')
+
+    deferred.resolve({
+      ok: true,
+      result: {
+        file: {
+          name: 'first-numbered.pdf',
+          blob: new Blob(['old'], { type: 'application/pdf' }),
+        },
+      },
+    })
+
+    await pendingGenerate
+    await flushAll()
+
+    expect(vm.hasResult).toBe(false)
+    expect(vm.resultFilename).toBe('')
+    expect(vm.isGenerating).toBe(false)
   })
 })

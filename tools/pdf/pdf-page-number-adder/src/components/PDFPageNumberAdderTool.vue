@@ -5,6 +5,7 @@
     :file="file"
     :page-count="pageCount"
     :is-loading-document="isLoadingDocument"
+    :is-generating="isGenerating"
     :file-error-code="fileErrorCode"
     @upload="handleUpload"
     @clear-file="clearFile"

@@ -31,6 +31,8 @@ const getFileBaseName = (filename: string): string => {
 }
 
 export const usePdfPageNumberAdder = () => {
+  let generationVersion = 0
+
   const file = ref<File | null>(null)
   const pageCount = ref(0)
 
@@ -87,7 +89,13 @@ export const usePdfPageNumberAdder = () => {
     generateErrorCode.value = ''
   }
 
+  const invalidatePendingGeneration = (): void => {
+    generationVersion += 1
+    isGenerating.value = false
+  }
+
   const reset = (): void => {
+    invalidatePendingGeneration()
     file.value = null
     pageCount.value = 0
     rangeInput.value = ''
@@ -99,7 +107,6 @@ export const usePdfPageNumberAdder = () => {
     marginX.value = 24
     marginY.value = 24
     isLoadingDocument.value = false
-    isGenerating.value = false
     clearErrors()
     clearResult()
   }
@@ -167,6 +174,7 @@ export const usePdfPageNumberAdder = () => {
   }
 
   const handleUpload = async (nextFile: File): Promise<ActionResult> => {
+    invalidatePendingGeneration()
     clearErrors()
     clearResult()
 
@@ -204,6 +212,8 @@ export const usePdfPageNumberAdder = () => {
       return rangeResult
     }
 
+    const currentGenerationVersion = generationVersion + 1
+    generationVersion = currentGenerationVersion
     generateErrorCode.value = ''
     isGenerating.value = true
 
@@ -223,6 +233,10 @@ export const usePdfPageNumberAdder = () => {
         outputFileName: outputFileName.value,
       })
 
+      if (currentGenerationVersion !== generationVersion) {
+        return { success: false }
+      }
+
       if (!response.ok) {
         generateErrorCode.value = response.code
         return { success: false, errorCode: response.code }
@@ -233,11 +247,17 @@ export const usePdfPageNumberAdder = () => {
 
       return { success: true }
     } catch (error) {
+      if (currentGenerationVersion !== generationVersion) {
+        return { success: false }
+      }
+
       const code = error instanceof Error ? error.message : PDF_ERROR.AddFailed
       generateErrorCode.value = code
       return { success: false, errorCode: code }
     } finally {
-      isGenerating.value = false
+      if (currentGenerationVersion === generationVersion) {
+        isGenerating.value = false
+      }
     }
   }
 

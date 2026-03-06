@@ -13,6 +13,7 @@
         <n-button
           data-test="choose-file-button"
           :loading="isLoadingDocument"
+          :disabled="isGenerating"
           @click="triggerFileDialog"
         >
           <template #icon>
@@ -22,7 +23,13 @@
           </template>
           {{ file ? t('replaceFile') : t('chooseFile') }}
         </n-button>
-        <n-button v-if="file" data-test="clear-file-button" tertiary @click="emit('clear-file')">
+        <n-button
+          v-if="file"
+          data-test="clear-file-button"
+          tertiary
+          :disabled="isGenerating"
+          @click="emit('clear-file')"
+        >
           <template #icon>
             <n-icon>
               <Delete16Regular />
@@ -57,6 +64,7 @@ const props = defineProps<{
   file: File | null
   pageCount: number
   isLoadingDocument: boolean
+  isGenerating: boolean
   fileErrorCode: string
 }>()
 

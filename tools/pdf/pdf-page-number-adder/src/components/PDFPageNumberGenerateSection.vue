@@ -20,7 +20,13 @@
 
         <n-alert v-if="generateErrorMessage" type="error" :title="generateErrorMessage" />
 
-        <n-flex v-if="hasResult && resultUrl" align="center" justify="space-between" :wrap="false">
+        <n-flex
+          v-if="hasResult && resultUrl"
+          align="center"
+          justify="space-between"
+          :wrap="true"
+          :size="8"
+        >
           <n-text>{{ t('resultReady') }}</n-text>
           <n-button tag="a" type="primary" :href="resultUrl" :download="resultFilename">
             <template #icon>

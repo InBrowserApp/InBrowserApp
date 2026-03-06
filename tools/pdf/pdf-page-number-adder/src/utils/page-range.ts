@@ -30,13 +30,9 @@ export const parsePageSelection = (rawInput: string, maxPage: number): number[] 
     return getAllPages(maxPage)
   }
 
-  const tokens = normalized
-    .split(',')
-    .map((token) => token.trim())
-    .filter(Boolean)
-
-  if (tokens.length === 0) {
-    return getAllPages(maxPage)
+  const tokens = normalized.split(',').map((token) => token.trim())
+  if (tokens.some((token) => token.length === 0)) {
+    throw new Error(PAGE_RANGE_ERROR.InvalidToken)
   }
 
   const selectedPages: number[] = []
