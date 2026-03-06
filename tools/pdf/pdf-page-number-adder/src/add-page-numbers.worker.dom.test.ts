@@ -16,6 +16,7 @@ vi.mock('pdf-lib', () => ({
   },
   StandardFonts: {
     Helvetica: 'Helvetica',
+    TimesRoman: 'TimesRoman',
   },
   rgb: (...args: unknown[]) => rgbMock(...args),
 }))
@@ -84,6 +85,7 @@ describe('add-page-numbers worker', () => {
         pages: [1, 3],
         startNumber: 5,
         format: 'n-total',
+        fontFamily: 'serif',
         position: 'bottom-right',
         fontSize: 12,
         marginX: 20,
@@ -102,6 +104,7 @@ describe('add-page-numbers worker', () => {
       '6/3',
       expect.objectContaining({ size: 12, y: 24 }),
     )
+    expect(embedFontMock).toHaveBeenCalledWith('TimesRoman')
 
     expect(postMessageMock).toHaveBeenCalledWith({
       ok: true,
@@ -129,6 +132,7 @@ describe('add-page-numbers worker', () => {
         pages: [1],
         startNumber: 1,
         format: 'n',
+        fontFamily: 'sans-serif',
         position: 'bottom-center',
         fontSize: 12,
         marginX: 20,
@@ -158,6 +162,7 @@ describe('add-page-numbers worker', () => {
         pages: [1],
         startNumber: 1,
         format: 'n',
+        fontFamily: 'sans-serif',
         position: 'bottom-center',
         fontSize: 12,
         marginX: 20,

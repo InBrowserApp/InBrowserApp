@@ -1,4 +1,5 @@
 export type PageNumberFormat = 'n' | 'n-total'
+export type PageNumberFontFamily = 'sans-serif' | 'serif'
 
 export type PageNumberPosition =
   | 'top-left'
@@ -13,6 +14,7 @@ export type AddPageNumbersPayload = {
   pages: number[]
   startNumber: number
   format: PageNumberFormat
+  fontFamily: PageNumberFontFamily
   position: PageNumberPosition
   fontSize: number
   marginX: number

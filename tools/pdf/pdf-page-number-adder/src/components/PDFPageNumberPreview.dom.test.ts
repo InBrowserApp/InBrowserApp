@@ -34,18 +34,21 @@ const createCanvasContextMock = (): CanvasContextMock => ({
 })
 
 const createPdfDocumentMock = () => {
-  const page = {
+  const createPage = () => ({
     getViewport: vi.fn(({ scale }: { scale: number }) => ({
       width: 200 * scale,
       height: 320 * scale,
     })),
     render: vi.fn(() => ({ promise: Promise.resolve() })),
-  }
+  })
 
+  const firstPage = createPage()
+  const secondPage = createPage()
   return {
-    page,
+    firstPage,
+    secondPage,
     document: {
-      getPage: vi.fn(async () => page),
+      getPage: vi.fn(async (pageNumber: number) => (pageNumber === 2 ? secondPage : firstPage)),
       destroy: vi.fn(),
     },
   }
@@ -84,6 +87,7 @@ describe('PDFPageNumberPreview', () => {
         file: new File(['demo'], 'demo.pdf', { type: 'application/pdf' }),
         startNumber: 3,
         format: 'n-total',
+        fontFamily: 'sans-serif',
         position: 'bottom-center',
         fontSize: 12,
         marginX: 24,
@@ -98,19 +102,30 @@ describe('PDFPageNumberPreview', () => {
     expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(1)
     expect(wrapper.find('[data-test="preview-error"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="preview-page-canvas"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="preview-paper"]').exists()).toBe(true)
+    expect(wrapper.get('[data-test="preview-page-indicator"]').text()).toContain('1 / 8')
 
     expect(
       contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '3/8')),
     ).toBe(true)
 
+    await wrapper.get('[data-test="preview-next-page"]').trigger('click')
+    await flushPromises()
+
+    expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(2)
+    expect(wrapper.get('[data-test="preview-page-indicator"]').text()).toContain('2 / 8')
+
     await wrapper.setProps({
       startNumber: 5,
       format: 'n',
+      fontFamily: 'serif',
     })
+    await flushPromises()
 
     expect(
-      contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '5')),
+      contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '6')),
     ).toBe(true)
+    expect(contexts.some((context) => context.font.includes('serif'))).toBe(true)
     expect(loadingTaskDestroyMock).toHaveBeenCalled()
     expect(pdfDocumentMock.document.destroy).toHaveBeenCalled()
   })
@@ -126,6 +141,7 @@ describe('PDFPageNumberPreview', () => {
         file: new File(['bad'], 'bad.pdf', { type: 'application/pdf' }),
         startNumber: 1,
         format: 'n',
+        fontFamily: 'sans-serif',
         position: 'bottom-center',
         fontSize: 12,
         marginX: 24,

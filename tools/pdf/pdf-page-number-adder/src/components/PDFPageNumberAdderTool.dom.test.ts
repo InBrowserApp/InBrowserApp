@@ -8,6 +8,7 @@ const clearFileMock = vi.fn()
 const setRangeInputMock = vi.fn()
 const setStartNumberMock = vi.fn()
 const setFormatMock = vi.fn()
+const setFontFamilyMock = vi.fn()
 const setPositionMock = vi.fn()
 const setFontSizeMock = vi.fn()
 const setMarginXMock = vi.fn()
@@ -18,6 +19,7 @@ const pageCountRef = ref(0)
 const rangeInputRef = ref('')
 const startNumberRef = ref(1)
 const formatRef = ref<'n' | 'n-total'>('n')
+const fontFamilyRef = ref<'sans-serif' | 'serif'>('sans-serif')
 const positionRef = ref<
   'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'
 >('bottom-center')
@@ -41,6 +43,7 @@ vi.mock('./usePdfPageNumberAdder', () => ({
     rangeInput: rangeInputRef,
     startNumber: startNumberRef,
     format: formatRef,
+    fontFamily: fontFamilyRef,
     position: positionRef,
     fontSize: fontSizeRef,
     marginX: marginXRef,
@@ -57,6 +60,7 @@ vi.mock('./usePdfPageNumberAdder', () => ({
     setRangeInput: setRangeInputMock,
     setStartNumber: setStartNumberMock,
     setFormat: setFormatMock,
+    setFontFamily: setFontFamilyMock,
     setPosition: setPositionMock,
     setFontSize: setFontSizeMock,
     setMarginX: setMarginXMock,
@@ -85,6 +89,7 @@ describe('PDFPageNumberAdderTool', () => {
     rangeInputRef.value = ''
     startNumberRef.value = 1
     formatRef.value = 'n'
+    fontFamilyRef.value = 'sans-serif'
     positionRef.value = 'bottom-center'
     fontSizeRef.value = 12
     marginXRef.value = 24
@@ -139,11 +144,15 @@ describe('PDFPageNumberAdderTool', () => {
 
     for (const field of [
       'start-number-input',
+      'font-family-select',
       'font-size-input',
       'margin-x-input',
       'margin-y-input',
     ]) {
-      expect(wrapper.get(`[data-test="${field}"]`).attributes('style')).toContain('width: 100%')
+      const target = wrapper.get(`[data-test="${field}"]`)
+      if (field !== 'font-family-select') {
+        expect(target.attributes('style')).toContain('width: 100%')
+      }
     }
 
     const downloadAnchor = wrapper.get('a[download="result.pdf"]')

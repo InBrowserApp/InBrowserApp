@@ -39,6 +39,7 @@ type HarnessVm = {
   pageCount: number
   rangeInput: string
   startNumber: number
+  fontFamily: 'sans-serif' | 'serif'
   fontSize: number
   marginX: number
   marginY: number
@@ -52,6 +53,7 @@ type HarnessVm = {
   setRangeInput: (value: string) => { success: boolean; errorCode?: string }
   setStartNumber: (value: number | null) => void
   setFormat: (value: 'n' | 'n-total') => void
+  setFontFamily: (value: 'sans-serif' | 'serif') => void
   setPosition: (
     value:
       | 'top-left'
@@ -144,6 +146,7 @@ describe('usePdfPageNumberAdder', () => {
 
     vm.setStartNumber(7)
     vm.setFormat('n-total')
+    vm.setFontFamily('serif')
     vm.setPosition('top-right')
     vm.setFontSize(16)
     vm.setMarginX(30)
@@ -161,6 +164,7 @@ describe('usePdfPageNumberAdder', () => {
         pages: [1, 2, 3, 4, 5, 6],
         startNumber: 7,
         format: 'n-total',
+        fontFamily: 'serif',
         position: 'top-right',
         fontSize: 16,
         marginX: 30,

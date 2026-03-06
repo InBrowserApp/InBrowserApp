@@ -4,13 +4,45 @@
       <n-text strong>{{ t('previewTitle') }}</n-text>
       <n-text depth="3" class="preview-hint">{{ t('previewHint') }}</n-text>
 
+      <n-flex class="preview-toolbar" align="center" justify="space-between" :wrap="false">
+        <n-button-group>
+          <n-button
+            quaternary
+            size="small"
+            data-test="preview-prev-page"
+            :disabled="isRenderingPage || !canGoPrevious"
+            @click="goToPreviousPage"
+          >
+            {{ t('previousPage') }}
+          </n-button>
+          <n-button
+            quaternary
+            size="small"
+            data-test="preview-next-page"
+            :disabled="isRenderingPage || !canGoNext"
+            @click="goToNextPage"
+          >
+            {{ t('nextPage') }}
+          </n-button>
+        </n-button-group>
+
+        <n-text depth="3" data-test="preview-page-indicator">
+          {{ t('pageIndicator', { current: previewPage, total: totalPreviewPages }) }}
+        </n-text>
+      </n-flex>
+
+      <n-text v-if="pageSizeLabel" depth="3" class="preview-size" data-test="preview-page-size">
+        {{ pageSizeLabel }}
+      </n-text>
+
       <div class="preview-canvas" data-test="preview-canvas">
-        <canvas
-          v-show="!hasPreviewError"
-          ref="previewCanvasRef"
-          class="preview-page-canvas"
-          data-test="preview-page-canvas"
-        />
+        <div v-show="!hasPreviewError" class="preview-paper" data-test="preview-paper">
+          <canvas
+            ref="previewCanvasRef"
+            class="preview-page-canvas"
+            data-test="preview-page-canvas"
+          />
+        </div>
 
         <n-spin v-if="isRenderingPage" class="preview-spin" size="small" />
 
@@ -23,18 +55,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import { NFlex, NSpin, NText } from 'naive-ui'
-import type { PDFDocumentProxy } from 'pdfjs-dist/types/src/pdf'
+import { computed } from 'vue'
+import { NButton, NButtonGroup, NFlex, NSpin, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import type { PageNumberFormat, PageNumberPosition } from '../types'
-import { buildPageNumberLabel, resolvePageNumberCoordinates } from '../utils/page-number-layout'
-import { loadPdfDocument } from '../utils/pdfjs'
+import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
+import { usePdfPageNumberPreview } from './usePdfPageNumberPreview'
 
 const props = defineProps<{
   file: File | null
   startNumber: number
   format: PageNumberFormat
+  fontFamily: PageNumberFontFamily
   position: PageNumberPosition
   fontSize: number
   marginX: number
@@ -43,194 +74,29 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n({ useScope: 'local' })
+const {
+  previewCanvasRef,
+  previewPage,
+  pageWidthPt,
+  pageHeightPt,
+  totalPreviewPages,
+  canGoPrevious,
+  canGoNext,
+  isRenderingPage,
+  hasPreviewError,
+  goToPreviousPage,
+  goToNextPage,
+} = usePdfPageNumberPreview(props)
 
-const previewCanvasRef = ref<HTMLCanvasElement | null>(null)
-const isRenderingPage = ref(false)
-const hasPreviewError = ref(false)
-
-const renderedPageCanvas = document.createElement('canvas')
-let renderSequence = 0
-
-const previewLabel = computed(() =>
-  buildPageNumberLabel(
-    0,
-    Math.max(1, props.pageCount),
-    Math.max(1, Math.trunc(props.startNumber)),
-    props.format,
-  ),
-)
-
-const previewFontSize = computed(() => Math.max(1, Math.trunc(props.fontSize)))
-const previewMarginX = computed(() => Math.max(0, Math.trunc(props.marginX)))
-const previewMarginY = computed(() => Math.max(0, Math.trunc(props.marginY)))
-
-const clearVisibleCanvas = (): void => {
-  const canvas = previewCanvasRef.value
-  if (!canvas) {
-    return
+const pageSizeLabel = computed(() => {
+  if (pageWidthPt.value < 1 || pageHeightPt.value < 1) {
+    return ''
   }
 
-  canvas.width = 0
-  canvas.height = 0
-}
-
-const drawPageNumberPreview = (): void => {
-  const canvas = previewCanvasRef.value
-  if (!canvas || renderedPageCanvas.width < 1 || renderedPageCanvas.height < 1) {
-    return
-  }
-
-  canvas.width = renderedPageCanvas.width
-  canvas.height = renderedPageCanvas.height
-
-  const context = canvas.getContext('2d')
-  if (!context) {
-    return
-  }
-
-  context.clearRect(0, 0, canvas.width, canvas.height)
-  context.drawImage(renderedPageCanvas, 0, 0)
-
-  const fontSize = previewFontSize.value
-  const label = previewLabel.value
-
-  context.font = `${fontSize}px sans-serif`
-  context.textBaseline = 'top'
-
-  const textWidth = context.measureText(label).width
-  const coordinates = resolvePageNumberCoordinates({
-    pageWidth: canvas.width,
-    pageHeight: canvas.height,
-    textWidth,
-    fontSize,
-    marginX: previewMarginX.value,
-    marginY: previewMarginY.value,
-    position: props.position,
+  return t('pageSize', {
+    width: pageWidthPt.value,
+    height: pageHeightPt.value,
   })
-
-  const topY = canvas.height - coordinates.y - fontSize
-  const x = Math.min(Math.max(0, coordinates.x), Math.max(0, canvas.width - textWidth))
-  const y = Math.min(Math.max(0, topY), Math.max(0, canvas.height - fontSize))
-
-  context.fillStyle = 'rgba(255, 255, 255, 0.84)'
-  context.fillRect(x - 4, y - 2, textWidth + 8, fontSize + 4)
-  context.fillStyle = 'rgba(0, 0, 0, 0.82)'
-  context.fillText(label, x, y)
-}
-
-const renderPreviewPage = async (): Promise<void> => {
-  const currentSequence = ++renderSequence
-
-  if (!props.file) {
-    hasPreviewError.value = false
-    isRenderingPage.value = false
-    clearVisibleCanvas()
-    renderedPageCanvas.width = 0
-    renderedPageCanvas.height = 0
-    return
-  }
-
-  isRenderingPage.value = true
-  hasPreviewError.value = false
-
-  let loadingTask: ReturnType<typeof loadPdfDocument> | null = null
-  let documentProxy: PDFDocumentProxy | null = null
-
-  try {
-    const data = new Uint8Array(await props.file.arrayBuffer())
-    if (currentSequence !== renderSequence) {
-      return
-    }
-
-    loadingTask = loadPdfDocument(data)
-    documentProxy = await loadingTask.promise
-
-    if (currentSequence !== renderSequence) {
-      return
-    }
-
-    const page = await documentProxy.getPage(1)
-    if (currentSequence !== renderSequence) {
-      return
-    }
-
-    const viewportAtScaleOne = page.getViewport({ scale: 1 })
-    const targetWidth = Math.min(1200, Math.max(600, viewportAtScaleOne.width))
-    const scale = targetWidth / viewportAtScaleOne.width
-    const viewport = page.getViewport({ scale })
-
-    renderedPageCanvas.width = Math.max(1, Math.floor(viewport.width))
-    renderedPageCanvas.height = Math.max(1, Math.floor(viewport.height))
-
-    const canvasContext = renderedPageCanvas.getContext('2d')
-    if (!canvasContext) {
-      throw new Error('PREVIEW_CONTEXT_UNAVAILABLE')
-    }
-
-    await page.render({
-      canvas: renderedPageCanvas,
-      canvasContext,
-      viewport,
-    }).promise
-
-    if (currentSequence !== renderSequence) {
-      return
-    }
-
-    drawPageNumberPreview()
-  } catch {
-    if (currentSequence === renderSequence) {
-      hasPreviewError.value = true
-      clearVisibleCanvas()
-      renderedPageCanvas.width = 0
-      renderedPageCanvas.height = 0
-    }
-  } finally {
-    try {
-      loadingTask?.destroy()
-    } catch {
-      // no-op
-    }
-
-    try {
-      documentProxy?.destroy()
-    } catch {
-      // no-op
-    }
-
-    if (currentSequence === renderSequence) {
-      isRenderingPage.value = false
-    }
-  }
-}
-
-watch(
-  () => props.file,
-  () => {
-    void renderPreviewPage()
-  },
-  { immediate: true },
-)
-
-watch(
-  () => [
-    props.startNumber,
-    props.format,
-    props.position,
-    props.fontSize,
-    props.marginX,
-    props.marginY,
-    props.pageCount,
-  ],
-  () => {
-    if (!isRenderingPage.value && !hasPreviewError.value) {
-      drawPageNumberPreview()
-    }
-  },
-)
-
-onBeforeUnmount(() => {
-  renderSequence += 1
 })
 </script>
 
@@ -239,17 +105,36 @@ onBeforeUnmount(() => {
   line-height: 1.4;
 }
 
+.preview-toolbar {
+  max-width: 460px;
+}
+
+.preview-size {
+  max-width: 460px;
+}
+
 .preview-canvas {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   min-height: 220px;
   border-radius: 12px;
-  border: 1px dashed var(--n-border-color);
-  background: linear-gradient(145deg, rgba(17, 113, 194, 0.1), rgba(17, 113, 194, 0.02));
+  border: 1px solid rgba(17, 113, 194, 0.2);
+  background: linear-gradient(160deg, rgba(17, 113, 194, 0.08), rgba(17, 113, 194, 0.02));
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.preview-paper {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  box-shadow:
+    0 16px 30px rgba(15, 23, 42, 0.18),
+    0 4px 12px rgba(15, 23, 42, 0.12);
   overflow: hidden;
 }
 
@@ -265,7 +150,7 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.64);
 }
 
 .preview-error {
@@ -275,132 +160,33 @@ onBeforeUnmount(() => {
 }
 </style>
 
+<!-- prettier-ignore -->
 <i18n lang="json">
 {
-  "en": {
-    "previewTitle": "Live Preview",
-    "previewHint": "Rendered from the first page of your uploaded PDF, with current numbering settings.",
-    "previewLoadFailed": "Preview unavailable for this PDF."
-  },
-  "zh": {
-    "previewTitle": "实时预览",
-    "previewHint": "基于你上传 PDF 的第一页渲染，并叠加当前页码设置。",
-    "previewLoadFailed": "该 PDF 暂时无法预览。"
-  },
-  "zh-CN": {
-    "previewTitle": "实时预览",
-    "previewHint": "基于你上传 PDF 的第一页渲染，并叠加当前页码设置。",
-    "previewLoadFailed": "该 PDF 暂时无法预览。"
-  },
-  "zh-TW": {
-    "previewTitle": "即時預覽",
-    "previewHint": "以你上傳 PDF 的第一頁渲染，並套用目前頁碼設定。",
-    "previewLoadFailed": "此 PDF 目前無法預覽。"
-  },
-  "zh-HK": {
-    "previewTitle": "即時預覽",
-    "previewHint": "以你上傳 PDF 的第一頁渲染，並套用目前頁碼設定。",
-    "previewLoadFailed": "此 PDF 目前無法預覽。"
-  },
-  "es": {
-    "previewTitle": "Vista previa en tiempo real",
-    "previewHint": "Se renderiza desde la primera página del PDF subido con la numeración actual.",
-    "previewLoadFailed": "Vista previa no disponible para este PDF."
-  },
-  "fr": {
-    "previewTitle": "Aperçu en direct",
-    "previewHint": "Rendu depuis la première page de votre PDF avec les réglages actuels.",
-    "previewLoadFailed": "Aperçu indisponible pour ce PDF."
-  },
-  "de": {
-    "previewTitle": "Live-Vorschau",
-    "previewHint": "Aus der ersten Seite Ihrer PDF-Datei gerendert, mit den aktuellen Seitennummern-Einstellungen.",
-    "previewLoadFailed": "Vorschau für diese PDF nicht verfügbar."
-  },
-  "it": {
-    "previewTitle": "Anteprima live",
-    "previewHint": "Renderizzata dalla prima pagina del PDF caricato con le impostazioni correnti.",
-    "previewLoadFailed": "Anteprima non disponibile per questo PDF."
-  },
-  "ja": {
-    "previewTitle": "ライブプレビュー",
-    "previewHint": "アップロードした PDF の1ページ目を描画し、現在の設定で表示します。",
-    "previewLoadFailed": "この PDF はプレビューできません。"
-  },
-  "ko": {
-    "previewTitle": "실시간 미리보기",
-    "previewHint": "업로드한 PDF 첫 페이지를 렌더링하고 현재 번호 설정을 반영합니다.",
-    "previewLoadFailed": "이 PDF는 미리보기를 표시할 수 없습니다."
-  },
-  "ru": {
-    "previewTitle": "Предпросмотр в реальном времени",
-    "previewHint": "Рендерится из первой страницы загруженного PDF с текущими настройками нумерации.",
-    "previewLoadFailed": "Предпросмотр для этого PDF недоступен."
-  },
-  "pt": {
-    "previewTitle": "Pré-visualização ao vivo",
-    "previewHint": "Renderizada a partir da primeira página do PDF enviado com as configurações atuais.",
-    "previewLoadFailed": "Pré-visualização indisponível para este PDF."
-  },
-  "ar": {
-    "previewTitle": "معاينة فورية",
-    "previewHint": "يتم العرض من الصفحة الأولى لملف PDF المرفوع مع إعدادات الترقيم الحالية.",
-    "previewLoadFailed": "المعاينة غير متاحة لهذا الملف."
-  },
-  "hi": {
-    "previewTitle": "लाइव प्रीव्यू",
-    "previewHint": "यह आपके अपलोड किए गए PDF के पहले पेज से वर्तमान नंबरिंग सेटिंग के साथ रेंडर होता है।",
-    "previewLoadFailed": "इस PDF के लिए प्रीव्यू उपलब्ध नहीं है।"
-  },
-  "tr": {
-    "previewTitle": "Canlı önizleme",
-    "previewHint": "Yüklediğiniz PDF'nin ilk sayfasından mevcut numaralandırma ayarlarıyla oluşturulur.",
-    "previewLoadFailed": "Bu PDF için önizleme kullanılamıyor."
-  },
-  "nl": {
-    "previewTitle": "Livevoorbeeld",
-    "previewHint": "Gerenderd vanaf de eerste pagina van je geüploade PDF met de huidige instellingen.",
-    "previewLoadFailed": "Voorbeeld niet beschikbaar voor deze PDF."
-  },
-  "sv": {
-    "previewTitle": "Liveförhandsvisning",
-    "previewHint": "Renderas från första sidan i din uppladdade PDF med aktuella sidnumreringsinställningar.",
-    "previewLoadFailed": "Förhandsvisning är inte tillgänglig för denna PDF."
-  },
-  "pl": {
-    "previewTitle": "Podgląd na żywo",
-    "previewHint": "Renderowany z pierwszej strony przesłanego PDF z bieżącymi ustawieniami numeracji.",
-    "previewLoadFailed": "Podgląd dla tego PDF jest niedostępny."
-  },
-  "vi": {
-    "previewTitle": "Xem trước trực tiếp",
-    "previewHint": "Được render từ trang đầu của PDF đã tải lên với cài đặt đánh số hiện tại.",
-    "previewLoadFailed": "Không thể xem trước PDF này."
-  },
-  "th": {
-    "previewTitle": "ตัวอย่างแบบเรียลไทม์",
-    "previewHint": "เรนเดอร์จากหน้าแรกของ PDF ที่อัปโหลด พร้อมการตั้งค่าหมายเลขหน้าปัจจุบัน",
-    "previewLoadFailed": "ไม่สามารถแสดงตัวอย่าง PDF นี้ได้"
-  },
-  "id": {
-    "previewTitle": "Pratinjau langsung",
-    "previewHint": "Dirender dari halaman pertama PDF yang Anda unggah dengan pengaturan penomoran saat ini.",
-    "previewLoadFailed": "Pratinjau tidak tersedia untuk PDF ini."
-  },
-  "he": {
-    "previewTitle": "תצוגה מקדימה חיה",
-    "previewHint": "מוצג מהעמוד הראשון בקובץ ה-PDF שהעלית עם הגדרות המספור הנוכחיות.",
-    "previewLoadFailed": "תצוגה מקדימה אינה זמינה עבור PDF זה."
-  },
-  "ms": {
-    "previewTitle": "Pratonton langsung",
-    "previewHint": "Dirender daripada halaman pertama PDF yang dimuat naik dengan tetapan nombor semasa.",
-    "previewLoadFailed": "Pratonton tidak tersedia untuk PDF ini."
-  },
-  "no": {
-    "previewTitle": "Direkte forhåndsvisning",
-    "previewHint": "Rendret fra den første siden i opplastet PDF med gjeldende nummereringsinnstillinger.",
-    "previewLoadFailed": "Forhåndsvisning er ikke tilgjengelig for denne PDF-filen."
-  }
+  "en": {"previewTitle":"Live Preview","previewHint":"Rendered from your uploaded PDF with current numbering settings.","previewLoadFailed":"Preview unavailable for this PDF.","previousPage":"Previous","nextPage":"Next","pageIndicator":"Page {current} / {total}","pageSize":"Paper {width} × {height} pt"},
+  "zh": {"previewTitle":"实时预览","previewHint":"基于你上传的 PDF 实时渲染，并叠加当前页码设置。","previewLoadFailed":"该 PDF 暂时无法预览。","previousPage":"上一页","nextPage":"下一页","pageIndicator":"第 {current} / {total} 页","pageSize":"纸张 {width} × {height} pt"},
+  "zh-CN": {"previewTitle":"实时预览","previewHint":"基于你上传的 PDF 实时渲染，并叠加当前页码设置。","previewLoadFailed":"该 PDF 暂时无法预览。","previousPage":"上一页","nextPage":"下一页","pageIndicator":"第 {current} / {total} 页","pageSize":"纸张 {width} × {height} pt"},
+  "zh-TW": {"previewTitle":"即時預覽","previewHint":"根據你上傳的 PDF 即時渲染，並套用目前頁碼設定。","previewLoadFailed":"此 PDF 目前無法預覽。","previousPage":"上一頁","nextPage":"下一頁","pageIndicator":"第 {current} / {total} 頁","pageSize":"紙張 {width} × {height} pt"},
+  "zh-HK": {"previewTitle":"即時預覽","previewHint":"根據你上傳的 PDF 即時渲染，並套用目前頁碼設定。","previewLoadFailed":"此 PDF 目前無法預覽。","previousPage":"上一頁","nextPage":"下一頁","pageIndicator":"第 {current} / {total} 頁","pageSize":"紙張 {width} × {height} pt"},
+  "es": {"previewTitle":"Vista previa en tiempo real","previewHint":"Renderizada desde el PDF cargado con la numeración actual.","previewLoadFailed":"Vista previa no disponible para este PDF.","previousPage":"Anterior","nextPage":"Siguiente","pageIndicator":"Página {current} / {total}","pageSize":"Papel {width} × {height} pt"},
+  "fr": {"previewTitle":"Aperçu en direct","previewHint":"Rendu depuis votre PDF avec les réglages actuels.","previewLoadFailed":"Aperçu indisponible pour ce PDF.","previousPage":"Précédente","nextPage":"Suivante","pageIndicator":"Page {current} / {total}","pageSize":"Papier {width} × {height} pt"},
+  "de": {"previewTitle":"Live-Vorschau","previewHint":"Aus Ihrer hochgeladenen PDF mit aktuellen Einstellungen gerendert.","previewLoadFailed":"Vorschau für diese PDF nicht verfügbar.","previousPage":"Zurück","nextPage":"Weiter","pageIndicator":"Seite {current} / {total}","pageSize":"Papier {width} × {height} pt"},
+  "it": {"previewTitle":"Anteprima live","previewHint":"Renderizzata dal PDF caricato con le impostazioni correnti.","previewLoadFailed":"Anteprima non disponibile per questo PDF.","previousPage":"Precedente","nextPage":"Successiva","pageIndicator":"Pagina {current} / {total}","pageSize":"Foglio {width} × {height} pt"},
+  "ja": {"previewTitle":"ライブプレビュー","previewHint":"アップロードした PDF を現在の設定で描画します。","previewLoadFailed":"この PDF はプレビューできません。","previousPage":"前へ","nextPage":"次へ","pageIndicator":"{current} / {total} ページ","pageSize":"用紙 {width} × {height} pt"},
+  "ko": {"previewTitle":"실시간 미리보기","previewHint":"업로드한 PDF를 현재 번호 설정으로 렌더링합니다.","previewLoadFailed":"이 PDF는 미리보기를 표시할 수 없습니다.","previousPage":"이전","nextPage":"다음","pageIndicator":"{current} / {total}페이지","pageSize":"용지 {width} × {height} pt"},
+  "ru": {"previewTitle":"Предпросмотр в реальном времени","previewHint":"Рендер из загруженного PDF с текущими настройками.","previewLoadFailed":"Предпросмотр для этого PDF недоступен.","previousPage":"Назад","nextPage":"Вперёд","pageIndicator":"Страница {current} / {total}","pageSize":"Лист {width} × {height} pt"},
+  "pt": {"previewTitle":"Pré-visualização ao vivo","previewHint":"Renderizada do PDF enviado com as configurações atuais.","previewLoadFailed":"Pré-visualização indisponível para este PDF.","previousPage":"Anterior","nextPage":"Próxima","pageIndicator":"Página {current} / {total}","pageSize":"Papel {width} × {height} pt"},
+  "ar": {"previewTitle":"معاينة فورية","previewHint":"تُعرض من ملف PDF المرفوع مع إعدادات الترقيم الحالية.","previewLoadFailed":"المعاينة غير متاحة لهذا الملف.","previousPage":"السابق","nextPage":"التالي","pageIndicator":"الصفحة {current} / {total}","pageSize":"الورقة {width} × {height} pt"},
+  "hi": {"previewTitle":"लाइव प्रीव्यू","previewHint":"अपलोड किए गए PDF को वर्तमान सेटिंग के साथ रेंडर किया जाता है।","previewLoadFailed":"इस PDF के लिए प्रीव्यू उपलब्ध नहीं है।","previousPage":"पिछला","nextPage":"अगला","pageIndicator":"पेज {current} / {total}","pageSize":"कागज़ {width} × {height} pt"},
+  "tr": {"previewTitle":"Canlı önizleme","previewHint":"Yüklenen PDF, mevcut numaralandırma ayarlarıyla oluşturulur.","previewLoadFailed":"Bu PDF için önizleme kullanılamıyor.","previousPage":"Önceki","nextPage":"Sonraki","pageIndicator":"Sayfa {current} / {total}","pageSize":"Kağıt {width} × {height} pt"},
+  "nl": {"previewTitle":"Livevoorbeeld","previewHint":"Gerenderd vanuit je PDF met de huidige instellingen.","previewLoadFailed":"Voorbeeld niet beschikbaar voor deze PDF.","previousPage":"Vorige","nextPage":"Volgende","pageIndicator":"Pagina {current} / {total}","pageSize":"Papier {width} × {height} pt"},
+  "sv": {"previewTitle":"Liveförhandsvisning","previewHint":"Renderas från din PDF med aktuella inställningar.","previewLoadFailed":"Förhandsvisning är inte tillgänglig för denna PDF.","previousPage":"Föregående","nextPage":"Nästa","pageIndicator":"Sida {current} / {total}","pageSize":"Papper {width} × {height} pt"},
+  "pl": {"previewTitle":"Podgląd na żywo","previewHint":"Renderowany z przesłanego PDF z bieżącymi ustawieniami.","previewLoadFailed":"Podgląd dla tego PDF jest niedostępny.","previousPage":"Poprzednia","nextPage":"Następna","pageIndicator":"Strona {current} / {total}","pageSize":"Arkusz {width} × {height} pt"},
+  "vi": {"previewTitle":"Xem trước trực tiếp","previewHint":"Được render từ PDF tải lên với cài đặt hiện tại.","previewLoadFailed":"Không thể xem trước PDF này.","previousPage":"Trước","nextPage":"Sau","pageIndicator":"Trang {current} / {total}","pageSize":"Giấy {width} × {height} pt"},
+  "th": {"previewTitle":"ตัวอย่างแบบเรียลไทม์","previewHint":"เรนเดอร์จาก PDF ที่อัปโหลดด้วยการตั้งค่าปัจจุบัน","previewLoadFailed":"ไม่สามารถแสดงตัวอย่าง PDF นี้ได้","previousPage":"ก่อนหน้า","nextPage":"ถัดไป","pageIndicator":"หน้า {current} / {total}","pageSize":"กระดาษ {width} × {height} pt"},
+  "id": {"previewTitle":"Pratinjau langsung","previewHint":"Dirender dari PDF yang diunggah dengan pengaturan saat ini.","previewLoadFailed":"Pratinjau tidak tersedia untuk PDF ini.","previousPage":"Sebelumnya","nextPage":"Berikutnya","pageIndicator":"Halaman {current} / {total}","pageSize":"Kertas {width} × {height} pt"},
+  "he": {"previewTitle":"תצוגה מקדימה חיה","previewHint":"מוצג מקובץ ה-PDF שהעלית עם ההגדרות הנוכחיות.","previewLoadFailed":"תצוגה מקדימה אינה זמינה עבור PDF זה.","previousPage":"הקודם","nextPage":"הבא","pageIndicator":"עמוד {current} / {total}","pageSize":"דף {width} × {height} pt"},
+  "ms": {"previewTitle":"Pratonton langsung","previewHint":"Dirender daripada PDF dimuat naik dengan tetapan semasa.","previewLoadFailed":"Pratonton tidak tersedia untuk PDF ini.","previousPage":"Sebelumnya","nextPage":"Seterusnya","pageIndicator":"Halaman {current} / {total}","pageSize":"Kertas {width} × {height} pt"},
+  "no": {"previewTitle":"Direkte forhåndsvisning","previewHint":"Rendret fra opplastet PDF med gjeldende innstillinger.","previewLoadFailed":"Forhåndsvisning er ikke tilgjengelig for denne PDF-filen.","previousPage":"Forrige","nextPage":"Neste","pageIndicator":"Side {current} / {total}","pageSize":"Papir {width} × {height} pt"}
 }
 </i18n>

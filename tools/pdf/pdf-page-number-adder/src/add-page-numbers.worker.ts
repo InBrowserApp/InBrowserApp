@@ -3,6 +3,7 @@ import { PDF_ERROR, isEncryptedPdfError } from './pdf-errors'
 import { buildPageNumberLabel, resolvePageNumberCoordinates } from './utils/page-number-layout'
 import type {
   AddPageNumbersPayload,
+  PageNumberFontFamily,
   AddPageNumbersWorkerError,
   AddPageNumbersWorkerSuccess,
 } from './types'
@@ -21,6 +22,14 @@ const withPdfExtension = (name: string): string => {
   return `${trimmed}.pdf`
 }
 
+const resolveStandardFont = (fontFamily: PageNumberFontFamily): StandardFonts => {
+  if (fontFamily === 'serif') {
+    return StandardFonts.TimesRoman
+  }
+
+  return StandardFonts.Helvetica
+}
+
 const addPageNumbers = async (
   payload: AddPageNumbersPayload,
 ): Promise<AddPageNumbersWorkerSuccess> => {
@@ -29,7 +38,7 @@ const addPageNumbers = async (
   const pages = document.getPages()
   const total = pages.length
 
-  const font = await document.embedFont(StandardFonts.Helvetica)
+  const font = await document.embedFont(resolveStandardFont(payload.fontFamily))
 
   for (let index = 0; index < payload.pages.length; index += 1) {
     const pageNumber = payload.pages[index]

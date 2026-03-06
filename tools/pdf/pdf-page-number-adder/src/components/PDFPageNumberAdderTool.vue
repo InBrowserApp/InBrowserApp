@@ -17,6 +17,7 @@
       :range-input="rangeInput"
       :start-number="startNumber"
       :format="format"
+      :font-family="fontFamily"
       :position="position"
       :font-size="fontSize"
       :margin-x="marginX"
@@ -25,6 +26,7 @@
       @update:range-input="setRangeInput"
       @update:start-number="setStartNumber"
       @update:format="setFormat"
+      @update:font-family="setFontFamily"
       @update:position="setPosition"
       @update:font-size="setFontSize"
       @update:margin-x="setMarginX"
@@ -59,6 +61,7 @@ const {
   rangeInput,
   startNumber,
   format,
+  fontFamily,
   position,
   fontSize,
   marginX,
@@ -75,6 +78,7 @@ const {
   setRangeInput,
   setStartNumber,
   setFormat,
+  setFontFamily,
   setPosition,
   setFontSize,
   setMarginX,

@@ -4,7 +4,7 @@ import { addPageNumbersWithWorker } from '../add-page-numbers'
 import { inspectPdf, isPdfFile } from '../inspect-pdf'
 import { PDF_ERROR } from '../pdf-errors'
 import { PAGE_RANGE_ERROR, parsePageSelection } from '../utils/page-range'
-import type { PageNumberFormat, PageNumberPosition } from '../types'
+import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
 
 type ActionResult = {
   success: boolean
@@ -37,6 +37,7 @@ export const usePdfPageNumberAdder = () => {
   const rangeInput = ref('')
   const startNumber = ref(1)
   const format = ref<PageNumberFormat>('n')
+  const fontFamily = ref<PageNumberFontFamily>('sans-serif')
   const position = ref<PageNumberPosition>('bottom-center')
   const fontSize = ref(12)
   const marginX = ref(24)
@@ -92,6 +93,7 @@ export const usePdfPageNumberAdder = () => {
     rangeInput.value = ''
     startNumber.value = 1
     format.value = 'n'
+    fontFamily.value = 'sans-serif'
     position.value = 'bottom-center'
     fontSize.value = 12
     marginX.value = 24
@@ -155,6 +157,11 @@ export const usePdfPageNumberAdder = () => {
     clearResult()
   }
 
+  const setFontFamily = (value: PageNumberFontFamily): void => {
+    fontFamily.value = value
+    clearResult()
+  }
+
   const clearFile = (): void => {
     reset()
   }
@@ -208,6 +215,7 @@ export const usePdfPageNumberAdder = () => {
         pages: selectedPages,
         startNumber: startNumber.value,
         format: format.value,
+        fontFamily: fontFamily.value,
         position: position.value,
         fontSize: fontSize.value,
         marginX: marginX.value,
@@ -239,6 +247,7 @@ export const usePdfPageNumberAdder = () => {
     rangeInput,
     startNumber,
     format,
+    fontFamily,
     position,
     fontSize,
     marginX,
@@ -255,6 +264,7 @@ export const usePdfPageNumberAdder = () => {
     setRangeInput,
     setStartNumber,
     setFormat,
+    setFontFamily,
     setPosition,
     setFontSize,
     setMarginX,
