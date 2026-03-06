@@ -1,19 +1,8 @@
 <template>
   <section data-test="preview-section">
+    <ToolSectionHeader>{{ t('previewTitle') }}</ToolSectionHeader>
     <n-flex vertical :size="8">
-      <n-text strong>{{ t('previewTitle') }}</n-text>
       <n-text depth="3" class="preview-hint">{{ t('previewHint') }}</n-text>
-
-      <n-pagination
-        v-if="totalPreviewPages > 1"
-        class="preview-pagination"
-        data-test="preview-pagination"
-        size="small"
-        :page="previewPage"
-        :page-count="totalPreviewPages"
-        :simple="false"
-        @update:page="setPreviewPage"
-      />
 
       <div class="preview-canvas" data-test="preview-canvas">
         <div v-show="!hasPreviewError" class="preview-paper" data-test="preview-paper">
@@ -30,6 +19,17 @@
           {{ t('previewLoadFailed') }}
         </n-text>
       </div>
+
+      <n-pagination
+        v-if="totalPreviewPages > 1"
+        class="preview-pagination"
+        data-test="preview-pagination"
+        size="small"
+        :page="previewPage"
+        :page-count="totalPreviewPages"
+        :simple="false"
+        @update:page="setPreviewPage"
+      />
     </n-flex>
   </section>
 </template>
@@ -37,6 +37,7 @@
 <script setup lang="ts">
 import { NFlex, NPagination, NSpin, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
+import { ToolSectionHeader } from '@shared/ui/tool'
 import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
 import { usePdfPageNumberPreview } from './usePdfPageNumberPreview'
 

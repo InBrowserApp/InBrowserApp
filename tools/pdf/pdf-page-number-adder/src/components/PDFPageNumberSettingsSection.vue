@@ -3,115 +3,121 @@
     <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
     <ToolSection>
       <n-flex vertical :size="12">
-        <n-form label-placement="top">
-          <n-grid :cols="24" :x-gap="12" :y-gap="12">
-            <n-gi :span="24">
-              <n-form-item :label="t('pageRanges')">
-                <n-input
-                  :value="rangeInput"
-                  :placeholder="t('pageRangesPlaceholder')"
-                  @update:value="emit('update:range-input', $event)"
-                />
-              </n-form-item>
-            </n-gi>
+        <n-grid cols="1 s:2" responsive="screen" :x-gap="16" :y-gap="16">
+          <n-gi>
+            <n-form label-placement="top">
+              <n-grid :cols="24" :x-gap="12" :y-gap="12">
+                <n-gi :span="24">
+                  <n-form-item :label="t('pageRanges')">
+                    <n-input
+                      :value="rangeInput"
+                      :placeholder="t('pageRangesPlaceholder')"
+                      @update:value="emit('update:range-input', $event)"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('startNumber')">
-                <n-input-number
-                  data-test="start-number-input"
-                  style="width: 100%"
-                  :value="startNumber"
-                  :min="1"
-                  :step="1"
-                  @update:value="emit('update:start-number', $event)"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('startNumber')">
+                    <n-input-number
+                      data-test="start-number-input"
+                      style="width: 100%"
+                      :value="startNumber"
+                      :min="1"
+                      :step="1"
+                      @update:value="emit('update:start-number', $event)"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('format')">
-                <n-select
-                  :value="format"
-                  :options="formatOptions"
-                  @update:value="handleFormatChange"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('format')">
+                    <n-select
+                      :value="format"
+                      :options="formatOptions"
+                      @update:value="handleFormatChange"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('position')">
-                <n-select
-                  :value="position"
-                  :options="positionOptions"
-                  @update:value="handlePositionChange"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('position')">
+                    <n-select
+                      :value="position"
+                      :options="positionOptions"
+                      @update:value="handlePositionChange"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('fontFamily')">
-                <n-select
-                  data-test="font-family-select"
-                  :value="fontFamily"
-                  :options="fontFamilyOptions"
-                  :render-label="renderFontFamilyOptionLabel"
-                  @update:value="handleFontFamilyChange"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('fontFamily')">
+                    <n-select
+                      data-test="font-family-select"
+                      :value="fontFamily"
+                      :options="fontFamilyOptions"
+                      :render-label="renderFontFamilyOptionLabel"
+                      @update:value="handleFontFamilyChange"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('fontSize')">
-                <n-input-number
-                  data-test="font-size-input"
-                  style="width: 100%"
-                  :value="fontSize"
-                  :min="1"
-                  :step="1"
-                  @update:value="emit('update:font-size', $event)"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('fontSize')">
+                    <n-input-number
+                      data-test="font-size-input"
+                      style="width: 100%"
+                      :value="fontSize"
+                      :min="1"
+                      :step="1"
+                      @update:value="emit('update:font-size', $event)"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('horizontalMargin')">
-                <n-input-number
-                  data-test="margin-x-input"
-                  style="width: 100%"
-                  :value="marginX"
-                  :min="0"
-                  :step="1"
-                  @update:value="emit('update:margin-x', $event)"
-                />
-              </n-form-item>
-            </n-gi>
+                <n-gi :span="12">
+                  <n-form-item :label="t('horizontalMargin')">
+                    <n-input-number
+                      data-test="margin-x-input"
+                      style="width: 100%"
+                      :value="marginX"
+                      :min="0"
+                      :step="1"
+                      @update:value="emit('update:margin-x', $event)"
+                    />
+                  </n-form-item>
+                </n-gi>
 
-            <n-gi :span="12">
-              <n-form-item :label="t('verticalMargin')">
-                <n-input-number
-                  data-test="margin-y-input"
-                  style="width: 100%"
-                  :value="marginY"
-                  :min="0"
-                  :step="1"
-                  @update:value="emit('update:margin-y', $event)"
-                />
-              </n-form-item>
-            </n-gi>
-          </n-grid>
-        </n-form>
+                <n-gi :span="12">
+                  <n-form-item :label="t('verticalMargin')">
+                    <n-input-number
+                      data-test="margin-y-input"
+                      style="width: 100%"
+                      :value="marginY"
+                      :min="0"
+                      :step="1"
+                      @update:value="emit('update:margin-y', $event)"
+                    />
+                  </n-form-item>
+                </n-gi>
+              </n-grid>
+            </n-form>
+          </n-gi>
 
-        <PDFPageNumberPreview
-          :file="file"
-          :start-number="startNumber"
-          :format="format"
-          :font-family="fontFamily"
-          :position="position"
-          :font-size="fontSize"
-          :margin-x="marginX"
-          :margin-y="marginY"
-          :page-count="pageCount"
-        />
+          <n-gi>
+            <PDFPageNumberPreview
+              :file="file"
+              :start-number="startNumber"
+              :format="format"
+              :font-family="fontFamily"
+              :position="position"
+              :font-size="fontSize"
+              :margin-x="marginX"
+              :margin-y="marginY"
+              :page-count="pageCount"
+            />
+          </n-gi>
+        </n-grid>
 
         <PDFPageNumberRangeErrorAlert :range-error-code="rangeErrorCode" />
       </n-flex>
