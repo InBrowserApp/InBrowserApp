@@ -1,7 +1,7 @@
 <template>
   <section data-test="preview-section">
     <ToolSectionHeader>{{ t('previewTitle') }}</ToolSectionHeader>
-    <n-flex vertical :size="8">
+    <n-flex vertical :size="12">
       <n-text depth="3" class="preview-hint">{{ t('previewHint') }}</n-text>
 
       <div class="preview-canvas" data-test="preview-canvas">
@@ -71,7 +71,7 @@ const {
 
 .preview-pagination {
   max-width: 460px;
-  margin: 0 auto;
+  margin: 12px auto 0;
 }
 
 .preview-canvas {
