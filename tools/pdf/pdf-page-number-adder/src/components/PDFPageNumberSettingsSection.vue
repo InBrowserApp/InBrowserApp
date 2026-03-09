@@ -12,7 +12,9 @@
                     <n-form-item :label="t('pageRanges')">
                       <n-input
                         :value="rangeInput"
+                        data-test="range-input"
                         :placeholder="t('pageRangesPlaceholder')"
+                        :disabled="isGenerating"
                         @update:value="emit('update:range-input', $event)"
                       />
                     </n-form-item>
@@ -26,6 +28,7 @@
                         :value="startNumber"
                         :min="1"
                         :step="1"
+                        :disabled="isGenerating"
                         @update:value="emit('update:start-number', $event)"
                       />
                     </n-form-item>
@@ -36,6 +39,7 @@
                       <n-select
                         :value="format"
                         :options="formatOptions"
+                        :disabled="isGenerating"
                         @update:value="handleFormatChange"
                       />
                     </n-form-item>
@@ -46,6 +50,7 @@
                       <n-select
                         :value="position"
                         :options="positionOptions"
+                        :disabled="isGenerating"
                         @update:value="handlePositionChange"
                       />
                     </n-form-item>
@@ -58,6 +63,7 @@
                         :value="fontFamily"
                         :options="fontFamilyOptions"
                         :render-label="renderFontFamilyOptionLabel"
+                        :disabled="isGenerating"
                         @update:value="handleFontFamilyChange"
                       />
                     </n-form-item>
@@ -71,6 +77,7 @@
                         :value="fontSize"
                         :min="1"
                         :step="1"
+                        :disabled="isGenerating"
                         @update:value="emit('update:font-size', $event)"
                       />
                     </n-form-item>
@@ -84,6 +91,7 @@
                         :value="marginX"
                         :min="0"
                         :step="1"
+                        :disabled="isGenerating"
                         @update:value="emit('update:margin-x', $event)"
                       />
                     </n-form-item>
@@ -97,6 +105,7 @@
                         :value="marginY"
                         :min="0"
                         :step="1"
+                        :disabled="isGenerating"
                         @update:value="emit('update:margin-y', $event)"
                       />
                     </n-form-item>
@@ -143,6 +152,7 @@ import { resolvePageNumberOptionLabels } from './page-number-option-labels'
 defineProps<{
   file: File | null
   pageCount: number
+  isGenerating: boolean
   rangeInput: string
   startNumber: number
   format: PageNumberFormat

@@ -158,4 +158,24 @@ describe('PDFPageNumberAdderTool', () => {
     const downloadAnchor = wrapper.get('a[download="result.pdf"]')
     expect(downloadAnchor.attributes('href')).toBe('blob:demo')
   })
+
+  it('disables upload actions and settings while generating', () => {
+    fileRef.value = new File(['x'], 'demo.pdf', { type: 'application/pdf' })
+    pageCountRef.value = 8
+    isGeneratingRef.value = true
+
+    const wrapper = mount(PDFPageNumberAdderTool)
+
+    expect(wrapper.get('[data-test="choose-file-button"]').attributes('disabled')).toBeDefined()
+    expect(wrapper.get('[data-test="clear-file-button"]').attributes('disabled')).toBeDefined()
+
+    expect(wrapper.get('[data-test="range-input"] input').attributes('disabled')).toBeDefined()
+    expect(
+      wrapper.get('[data-test="start-number-input"] input').attributes('disabled'),
+    ).toBeDefined()
+    expect(wrapper.get('[data-test="font-size-input"] input').attributes('disabled')).toBeDefined()
+    expect(wrapper.get('[data-test="font-family-select"] .n-base-selection').classes()).toContain(
+      'n-base-selection--disabled',
+    )
+  })
 })

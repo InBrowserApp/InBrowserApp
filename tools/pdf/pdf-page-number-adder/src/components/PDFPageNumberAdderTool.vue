@@ -15,6 +15,7 @@
     <PDFPageNumberSettingsSection
       :file="file"
       :page-count="pageCount"
+      :is-generating="isGenerating"
       :range-input="rangeInput"
       :start-number="startNumber"
       :format="format"
