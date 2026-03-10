@@ -3,7 +3,12 @@
     <ToolSectionHeader>{{ t('uploadTitle') }}</ToolSectionHeader>
 
     <template v-if="!file">
-      <n-upload accept="image/*" @before-upload="handleBeforeUpload">
+      <n-upload
+        accept="image/*"
+        :default-upload="false"
+        :show-file-list="false"
+        @before-upload="handleBeforeUpload"
+      >
         <n-upload-dragger>
           <div style="margin-bottom: 12px">
             <n-icon size="48" :depth="3">
@@ -107,7 +112,7 @@ function clearFile() {
   "en": {
     "uploadTitle": "Upload image",
     "dropHint": "Click or drag to upload image",
-    "supportedFormatsHint": "Supports PNG, JPEG, WebP and most browser image formats",
+    "supportedFormatsHint": "Best with PNG, JPEG, and WebP. Other browser-supported formats may be rasterized to PNG.",
     "removeFile": "Remove image",
     "onlyOneFile": "Only one image can be uploaded",
     "invalidFileType": "Please select a valid image file",
@@ -117,7 +122,7 @@ function clearFile() {
   "zh": {
     "uploadTitle": "上传图片",
     "dropHint": "点击或拖拽图片到这里上传",
-    "supportedFormatsHint": "支持 PNG、JPEG、WebP 及大多数浏览器支持的图片格式",
+    "supportedFormatsHint": "推荐使用 PNG、JPEG、WebP。其他浏览器支持的格式可能会被栅格化并导出为 PNG。",
     "removeFile": "移除图片",
     "onlyOneFile": "一次只能上传一张图片",
     "invalidFileType": "请选择有效的图片文件",
@@ -127,7 +132,7 @@ function clearFile() {
   "zh-CN": {
     "uploadTitle": "上传图片",
     "dropHint": "点击或拖拽图片到这里上传",
-    "supportedFormatsHint": "支持 PNG、JPEG、WebP 及大多数浏览器支持的图片格式",
+    "supportedFormatsHint": "推荐使用 PNG、JPEG、WebP。其他浏览器支持的格式可能会被栅格化并导出为 PNG。",
     "removeFile": "移除图片",
     "onlyOneFile": "一次只能上传一张图片",
     "invalidFileType": "请选择有效的图片文件",
@@ -137,7 +142,7 @@ function clearFile() {
   "zh-TW": {
     "uploadTitle": "上傳圖片",
     "dropHint": "點擊或拖曳圖片到這裡上傳",
-    "supportedFormatsHint": "支援 PNG、JPEG、WebP 與大多數瀏覽器支援的圖片格式",
+    "supportedFormatsHint": "建議使用 PNG、JPEG、WebP。其他瀏覽器支援的格式可能會被點陣化並輸出為 PNG。",
     "removeFile": "移除圖片",
     "onlyOneFile": "一次只能上傳一張圖片",
     "invalidFileType": "請選擇有效的圖片檔案",
@@ -147,7 +152,7 @@ function clearFile() {
   "zh-HK": {
     "uploadTitle": "上傳圖片",
     "dropHint": "點擊或拖曳圖片到這裡上傳",
-    "supportedFormatsHint": "支援 PNG、JPEG、WebP 與大多數瀏覽器支援的圖片格式",
+    "supportedFormatsHint": "建議使用 PNG、JPEG、WebP。其他瀏覽器支援的格式可能會被點陣化並輸出為 PNG。",
     "removeFile": "移除圖片",
     "onlyOneFile": "一次只能上傳一張圖片",
     "invalidFileType": "請選擇有效的圖片檔案",
@@ -157,7 +162,7 @@ function clearFile() {
   "es": {
     "uploadTitle": "Cargar imagen",
     "dropHint": "Haz clic o arrastra una imagen para subirla",
-    "supportedFormatsHint": "Compatible con PNG, JPEG, WebP y la mayoría de formatos de imagen del navegador",
+    "supportedFormatsHint": "Mejor con PNG, JPEG y WebP. Otros formatos compatibles con el navegador pueden rasterizarse y exportarse como PNG.",
     "removeFile": "Quitar imagen",
     "onlyOneFile": "Solo se puede subir una imagen",
     "invalidFileType": "Selecciona un archivo de imagen válido",
@@ -167,7 +172,7 @@ function clearFile() {
   "fr": {
     "uploadTitle": "Téléverser une image",
     "dropHint": "Cliquez ou glissez-déposez une image pour la téléverser",
-    "supportedFormatsHint": "Prend en charge PNG, JPEG, WebP et la plupart des formats d’image du navigateur",
+    "supportedFormatsHint": "Idéal avec PNG, JPEG et WebP. Les autres formats pris en charge par le navigateur peuvent être rasterisés en PNG.",
     "removeFile": "Supprimer l’image",
     "onlyOneFile": "Une seule image peut être téléversée",
     "invalidFileType": "Veuillez sélectionner un fichier image valide",
@@ -177,7 +182,7 @@ function clearFile() {
   "de": {
     "uploadTitle": "Bild hochladen",
     "dropHint": "Klicken oder Bild hierher ziehen zum Hochladen",
-    "supportedFormatsHint": "Unterstützt PNG, JPEG, WebP und die meisten vom Browser unterstützten Bildformate",
+    "supportedFormatsHint": "Am besten mit PNG, JPEG und WebP. Andere vom Browser unterstützte Formate können zu PNG gerastert werden.",
     "removeFile": "Bild entfernen",
     "onlyOneFile": "Es kann nur ein Bild hochgeladen werden",
     "invalidFileType": "Bitte wähle eine gültige Bilddatei aus",
@@ -187,7 +192,7 @@ function clearFile() {
   "it": {
     "uploadTitle": "Carica immagine",
     "dropHint": "Fai clic o trascina un’immagine per caricarla",
-    "supportedFormatsHint": "Supporta PNG, JPEG, WebP e la maggior parte dei formati immagine supportati dal browser",
+    "supportedFormatsHint": "Ideale con PNG, JPEG e WebP. Gli altri formati supportati dal browser potrebbero essere rasterizzati in PNG.",
     "removeFile": "Rimuovi immagine",
     "onlyOneFile": "È possibile caricare una sola immagine",
     "invalidFileType": "Seleziona un file immagine valido",
@@ -197,7 +202,7 @@ function clearFile() {
   "ja": {
     "uploadTitle": "画像をアップロード",
     "dropHint": "クリックまたはドラッグして画像をアップロード",
-    "supportedFormatsHint": "PNG、JPEG、WebP と主要なブラウザー対応画像形式をサポート",
+    "supportedFormatsHint": "PNG、JPEG、WebP を推奨。その他のブラウザー対応形式はラスタライズされて PNG として出力される場合があります。",
     "removeFile": "画像を削除",
     "onlyOneFile": "アップロードできる画像は1枚のみです",
     "invalidFileType": "有効な画像ファイルを選択してください",
@@ -207,7 +212,7 @@ function clearFile() {
   "ko": {
     "uploadTitle": "이미지 업로드",
     "dropHint": "클릭하거나 이미지를 드래그해 업로드하세요",
-    "supportedFormatsHint": "PNG, JPEG, WebP 및 대부분의 브라우저 지원 이미지 형식을 지원합니다",
+    "supportedFormatsHint": "PNG, JPEG, WebP 사용을 권장합니다. 다른 브라우저 지원 형식은 래스터화되어 PNG로 출력될 수 있습니다.",
     "removeFile": "이미지 제거",
     "onlyOneFile": "이미지는 한 개만 업로드할 수 있습니다",
     "invalidFileType": "유효한 이미지 파일을 선택해 주세요",
@@ -217,7 +222,7 @@ function clearFile() {
   "ru": {
     "uploadTitle": "Загрузить изображение",
     "dropHint": "Нажмите или перетащите изображение для загрузки",
-    "supportedFormatsHint": "Поддерживаются PNG, JPEG, WebP и большинство форматов изображений, поддерживаемых браузером",
+    "supportedFormatsHint": "Лучше всего использовать PNG, JPEG и WebP. Другие поддерживаемые браузером форматы могут быть растрированы и сохранены как PNG.",
     "removeFile": "Удалить изображение",
     "onlyOneFile": "Можно загрузить только одно изображение",
     "invalidFileType": "Выберите корректный файл изображения",
@@ -227,7 +232,7 @@ function clearFile() {
   "pt": {
     "uploadTitle": "Enviar imagem",
     "dropHint": "Clique ou arraste uma imagem para enviar",
-    "supportedFormatsHint": "Compatível com PNG, JPEG, WebP e a maioria dos formatos de imagem suportados pelo navegador",
+    "supportedFormatsHint": "Melhor com PNG, JPEG e WebP. Outros formatos suportados pelo navegador podem ser rasterizados e exportados como PNG.",
     "removeFile": "Remover imagem",
     "onlyOneFile": "Só é possível enviar uma imagem",
     "invalidFileType": "Selecione um arquivo de imagem válido",
@@ -237,7 +242,7 @@ function clearFile() {
   "ar": {
     "uploadTitle": "رفع صورة",
     "dropHint": "انقر أو اسحب صورة للرفع",
-    "supportedFormatsHint": "يدعم PNG وJPEG وWebP ومعظم صيغ الصور التي يدعمها المتصفح",
+    "supportedFormatsHint": "الأفضل استخدام PNG وJPEG وWebP. قد يتم تحويل الصيغ الأخرى المدعومة من المتصفح إلى PNG نقطي.",
     "removeFile": "إزالة الصورة",
     "onlyOneFile": "يمكن رفع صورة واحدة فقط",
     "invalidFileType": "يرجى اختيار ملف صورة صالح",
@@ -247,7 +252,7 @@ function clearFile() {
   "hi": {
     "uploadTitle": "इमेज अपलोड करें",
     "dropHint": "क्लिक करें या इमेज ड्रैग करके अपलोड करें",
-    "supportedFormatsHint": "PNG, JPEG, WebP और ब्राउज़र द्वारा समर्थित अधिकांश इमेज फ़ॉर्मेट उपलब्ध हैं",
+    "supportedFormatsHint": "PNG, JPEG और WebP सबसे उपयुक्त हैं। ब्राउज़र समर्थित अन्य फ़ॉर्मेट रास्टराइज़ होकर PNG के रूप में निर्यात हो सकते हैं।",
     "removeFile": "इमेज हटाएँ",
     "onlyOneFile": "एक समय में केवल एक इमेज अपलोड की जा सकती है",
     "invalidFileType": "कृपया मान्य इमेज फ़ाइल चुनें",
@@ -257,7 +262,7 @@ function clearFile() {
   "tr": {
     "uploadTitle": "Görsel yükle",
     "dropHint": "Yüklemek için tıklayın veya görseli sürükleyin",
-    "supportedFormatsHint": "PNG, JPEG, WebP ve tarayıcının desteklediği çoğu görsel biçimini destekler",
+    "supportedFormatsHint": "PNG, JPEG ve WebP ile en iyi sonucu verir. Tarayıcının desteklediği diğer biçimler PNG olarak rasterize edilebilir.",
     "removeFile": "Görseli kaldır",
     "onlyOneFile": "Yalnızca bir görsel yüklenebilir",
     "invalidFileType": "Lütfen geçerli bir görsel dosyası seçin",
@@ -267,7 +272,7 @@ function clearFile() {
   "nl": {
     "uploadTitle": "Afbeelding uploaden",
     "dropHint": "Klik of sleep een afbeelding om te uploaden",
-    "supportedFormatsHint": "Ondersteunt PNG, JPEG, WebP en de meeste door de browser ondersteunde afbeeldingsindelingen",
+    "supportedFormatsHint": "Werkt het best met PNG, JPEG en WebP. Andere door de browser ondersteunde formaten kunnen naar PNG worden gerasterd.",
     "removeFile": "Afbeelding verwijderen",
     "onlyOneFile": "Er kan maar één afbeelding worden geüpload",
     "invalidFileType": "Selecteer een geldig afbeeldingsbestand",
@@ -277,7 +282,7 @@ function clearFile() {
   "sv": {
     "uploadTitle": "Ladda upp bild",
     "dropHint": "Klicka eller dra en bild hit för att ladda upp",
-    "supportedFormatsHint": "Stöder PNG, JPEG, WebP och de flesta bildformat som webbläsaren stöder",
+    "supportedFormatsHint": "Fungerar bäst med PNG, JPEG och WebP. Andra format som stöds av webbläsaren kan rasteriseras till PNG.",
     "removeFile": "Ta bort bild",
     "onlyOneFile": "Endast en bild kan laddas upp",
     "invalidFileType": "Välj en giltig bildfil",
@@ -287,7 +292,7 @@ function clearFile() {
   "pl": {
     "uploadTitle": "Prześlij obraz",
     "dropHint": "Kliknij lub przeciągnij obraz, aby przesłać",
-    "supportedFormatsHint": "Obsługuje PNG, JPEG, WebP i większość formatów obrazów obsługiwanych przez przeglądarkę",
+    "supportedFormatsHint": "Najlepiej używać PNG, JPEG i WebP. Inne formaty obsługiwane przez przeglądarkę mogą zostać zrasteryzowane do PNG.",
     "removeFile": "Usuń obraz",
     "onlyOneFile": "Można przesłać tylko jeden obraz",
     "invalidFileType": "Wybierz prawidłowy plik obrazu",
@@ -297,7 +302,7 @@ function clearFile() {
   "vi": {
     "uploadTitle": "Tải ảnh lên",
     "dropHint": "Nhấp hoặc kéo thả ảnh để tải lên",
-    "supportedFormatsHint": "Hỗ trợ PNG, JPEG, WebP và hầu hết định dạng ảnh được trình duyệt hỗ trợ",
+    "supportedFormatsHint": "Tốt nhất với PNG, JPEG và WebP. Các định dạng khác được trình duyệt hỗ trợ có thể bị raster hóa thành PNG.",
     "removeFile": "Xóa ảnh",
     "onlyOneFile": "Chỉ có thể tải lên một ảnh",
     "invalidFileType": "Vui lòng chọn tệp ảnh hợp lệ",
@@ -307,7 +312,7 @@ function clearFile() {
   "th": {
     "uploadTitle": "อัปโหลดรูปภาพ",
     "dropHint": "คลิกหรือลากรูปภาพเพื่ออัปโหลด",
-    "supportedFormatsHint": "รองรับ PNG, JPEG, WebP และไฟล์รูปภาพส่วนใหญ่ที่เบราว์เซอร์รองรับ",
+    "supportedFormatsHint": "เหมาะที่สุดกับ PNG, JPEG และ WebP รูปแบบอื่นที่เบราว์เซอร์รองรับอาจถูกแปลงเป็นภาพนิ่งและส่งออกเป็น PNG",
     "removeFile": "ลบรูปภาพ",
     "onlyOneFile": "อัปโหลดได้ครั้งละ 1 รูปเท่านั้น",
     "invalidFileType": "โปรดเลือกไฟล์รูปภาพที่ถูกต้อง",
@@ -317,7 +322,7 @@ function clearFile() {
   "id": {
     "uploadTitle": "Unggah gambar",
     "dropHint": "Klik atau seret gambar untuk diunggah",
-    "supportedFormatsHint": "Mendukung PNG, JPEG, WebP, dan sebagian besar format gambar yang didukung browser",
+    "supportedFormatsHint": "Paling cocok untuk PNG, JPEG, dan WebP. Format lain yang didukung browser dapat dirasterkan dan diekspor sebagai PNG.",
     "removeFile": "Hapus gambar",
     "onlyOneFile": "Hanya satu gambar yang dapat diunggah",
     "invalidFileType": "Pilih file gambar yang valid",
@@ -327,7 +332,7 @@ function clearFile() {
   "he": {
     "uploadTitle": "העלאת תמונה",
     "dropHint": "לחצו או גררו תמונה כדי להעלות",
-    "supportedFormatsHint": "תומך ב‑PNG, JPEG, WebP וברוב פורמטי התמונות הנתמכים בדפדפן",
+    "supportedFormatsHint": "מומלץ להשתמש ב‑PNG, JPEG ו‑WebP. פורמטים אחרים הנתמכים בדפדפן עשויים לעבור רסטריזציה ולצאת כ‑PNG.",
     "removeFile": "הסר תמונה",
     "onlyOneFile": "ניתן להעלות תמונה אחת בלבד",
     "invalidFileType": "יש לבחור קובץ תמונה תקין",
@@ -337,7 +342,7 @@ function clearFile() {
   "ms": {
     "uploadTitle": "Muat naik imej",
     "dropHint": "Klik atau seret imej untuk dimuat naik",
-    "supportedFormatsHint": "Menyokong PNG, JPEG, WebP dan kebanyakan format imej yang disokong pelayar",
+    "supportedFormatsHint": "Paling sesuai untuk PNG, JPEG dan WebP. Format lain yang disokong pelayar mungkin dirasterkan dan dieksport sebagai PNG.",
     "removeFile": "Buang imej",
     "onlyOneFile": "Hanya satu imej boleh dimuat naik",
     "invalidFileType": "Sila pilih fail imej yang sah",
@@ -347,7 +352,7 @@ function clearFile() {
   "no": {
     "uploadTitle": "Last opp bilde",
     "dropHint": "Klikk eller dra et bilde for å laste opp",
-    "supportedFormatsHint": "Støtter PNG, JPEG, WebP og de fleste bildeformater som nettleseren støtter",
+    "supportedFormatsHint": "Best med PNG, JPEG og WebP. Andre formater som støttes av nettleseren kan rasteriseres og eksporteres som PNG.",
     "removeFile": "Fjern bilde",
     "onlyOneFile": "Bare ett bilde kan lastes opp",
     "invalidFileType": "Velg en gyldig bildefil",

@@ -1,6 +1,6 @@
 export type ResizeAlgorithm = 'browser-high' | 'bicubic' | 'bilinear' | 'lanczos3' | 'nearest'
 
-export type ResizeOutputFormat = 'original' | 'png' | 'jpeg' | 'webp'
+export type ResizeOutputFormat = 'auto' | 'png' | 'jpeg' | 'webp'
 
 export interface ResizeOptions {
   width: number

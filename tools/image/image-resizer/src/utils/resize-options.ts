@@ -16,5 +16,5 @@ export function isResizeAlgorithm(value: string): value is ResizeAlgorithm {
 }
 
 export function isResizeOutputFormat(value: string): value is ResizeOutputFormat {
-  return value === 'original' || value === 'png' || value === 'jpeg' || value === 'webp'
+  return value === 'auto' || value === 'png' || value === 'jpeg' || value === 'webp'
 }

@@ -7,7 +7,7 @@
         <n-input-number
           :value="options.width"
           :min="1"
-          :max="100000"
+          :max="maxDimension"
           :disabled="isProcessing"
           style="width: 100%"
           @update:value="updateWidth"
@@ -18,13 +18,12 @@
         <n-input-number
           :value="options.height"
           :min="1"
-          :max="100000"
+          :max="maxDimension"
           :disabled="isProcessing"
           style="width: 100%"
           @update:value="updateHeight"
         />
       </n-form-item-gi>
-
       <n-form-item-gi :show-feedback="false">
         <template #label>
           <n-flex align="center" :size="6">
@@ -32,7 +31,6 @@
             <AlgorithmInfoPopover />
           </n-flex>
         </template>
-
         <n-select
           :value="options.algorithm"
           :options="algorithms"
@@ -40,7 +38,6 @@
           @update:value="updateAlgorithm"
         />
       </n-form-item-gi>
-
       <n-form-item-gi :label="t('outputFormat')" :show-feedback="false">
         <n-select
           :value="options.outputFormat"
@@ -49,7 +46,6 @@
           @update:value="updateFormat"
         />
       </n-form-item-gi>
-
       <n-form-item-gi :label="t('keepAspectRatio')" :show-feedback="false" :span="2">
         <n-switch
           :value="options.keepAspectRatio"
@@ -57,7 +53,13 @@
           @update:value="updateKeepAspectRatio"
         />
       </n-form-item-gi>
-
+      <n-form-item-gi :label="allowUpscaleLabel" :show-feedback="false" :span="2">
+        <n-switch
+          :value="options.allowUpscale"
+          :disabled="isProcessing"
+          @update:value="updateAllowUpscale"
+        />
+      </n-form-item-gi>
       <n-form-item-gi :label="t('quality')" :show-feedback="false" :span="2">
         <n-slider
           :value="options.quality"
@@ -69,7 +71,6 @@
         />
       </n-form-item-gi>
     </n-grid>
-
     <div style="margin-top: 12px">
       <n-button
         type="primary"
@@ -88,7 +89,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   NButton,
@@ -116,19 +116,18 @@ interface Props {
   sourceDimensions: ImageDimensions | null
   algorithms: SelectOption[]
   formats: SelectOption[]
+  allowUpscaleLabel: string
+  maxDimension: number
+  qualityDisabled: boolean
   isProcessing: boolean
   hasImage: boolean
 }
 
 const props = defineProps<Props>()
-defineEmits<{
-  resize: []
-}>()
+defineEmits<{ resize: [] }>()
 
 const { t } = useI18n({ useScope: 'local' })
 const options = defineModel<ResizeOptions>('options', { required: true })
-
-const qualityDisabled = computed(() => options.value.outputFormat === 'png')
 
 function updateWidth(value: number | null) {
   const nextWidth = normalizeDimension(value, options.value.width)
@@ -180,6 +179,13 @@ function updateKeepAspectRatio(value: boolean) {
     ...options.value,
     keepAspectRatio: true,
     height: nextHeight,
+  }
+}
+
+function updateAllowUpscale(value: boolean) {
+  options.value = {
+    ...options.value,
+    allowUpscale: value,
   }
 }
 

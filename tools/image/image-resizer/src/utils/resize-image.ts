@@ -1,4 +1,6 @@
 import type { ImageDimensions, ResizeAlgorithm, ResizeOptions, ResizeResult } from '../types'
+import { assertResizeWithinLimits } from './resize-limits'
+import { resolveOutputDescriptor } from './resize-output'
 
 interface ImageSource {
   image: CanvasImageSource
@@ -20,6 +22,11 @@ export async function resizeImage(file: File, options: ResizeOptions): Promise<R
       { width: source.width, height: source.height },
       options,
     )
+    assertResizeWithinLimits(
+      { width: source.width, height: source.height },
+      dimensions,
+      options.algorithm,
+    )
 
     const canvas = createResizedCanvas(
       source.image,
@@ -28,8 +35,15 @@ export async function resizeImage(file: File, options: ResizeOptions): Promise<R
       dimensions,
       options,
     )
-    const { mimeType, outputName } = resolveOutput(file.name, file.type, options.outputFormat)
+    const { mimeType, outputName } = resolveOutputDescriptor(
+      file.name,
+      file.type,
+      options.outputFormat,
+    )
     const quality = resolveQuality(mimeType, options.quality)
+    if (mimeType === 'image/jpeg') {
+      applyCanvasBackground(canvas, '#ffffff')
+    }
     const blob = await canvasToBlob(canvas, mimeType, quality)
 
     return {
@@ -56,14 +70,12 @@ export function calculateOutputDimensions(
   const requestedHeight = Math.max(1, Math.round(options.height || 1))
 
   if (!options.keepAspectRatio) {
-    return applyUpscalePolicy(
-      { width: requestedWidth, height: requestedHeight },
-      {
-        allowUpscale: options.allowUpscale,
-        originalWidth: safeOriginalWidth,
-        originalHeight: safeOriginalHeight,
-      },
-    )
+    return {
+      width: options.allowUpscale ? requestedWidth : Math.min(requestedWidth, safeOriginalWidth),
+      height: options.allowUpscale
+        ? requestedHeight
+        : Math.min(requestedHeight, safeOriginalHeight),
+    }
   }
 
   const ratio = safeOriginalWidth / safeOriginalHeight
@@ -80,22 +92,20 @@ export function calculateOutputDimensions(
       width: Math.max(1, nextWidth),
       height: Math.max(1, nextHeight),
     },
-    {
-      allowUpscale: options.allowUpscale,
-      originalWidth: safeOriginalWidth,
-      originalHeight: safeOriginalHeight,
-    },
+    { width: safeOriginalWidth, height: safeOriginalHeight },
+    options.allowUpscale,
   )
 }
 
 function applyUpscalePolicy(
   size: ImageDimensions,
-  policy: { allowUpscale: boolean; originalWidth: number; originalHeight: number },
+  original: ImageDimensions,
+  allowUpscale: boolean,
 ): ImageDimensions {
-  if (policy.allowUpscale) return size
+  if (allowUpscale) return size
 
-  const widthScale = policy.originalWidth / size.width
-  const heightScale = policy.originalHeight / size.height
+  const widthScale = original.width / size.width
+  const heightScale = original.height / size.height
   const minScale = Math.min(widthScale, heightScale)
 
   if (minScale >= 1) return size
@@ -332,60 +342,33 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value))
 }
 
-function resolveOutput(fileName: string, fileType: string, format: ResizeOptions['outputFormat']) {
-  if (format === 'png') {
-    return {
-      mimeType: 'image/png',
-      outputName: replaceExt(fileName, 'png'),
-    }
-  }
-
-  if (format === 'jpeg') {
-    return {
-      mimeType: 'image/jpeg',
-      outputName: replaceExt(fileName, 'jpg'),
-    }
-  }
-
-  if (format === 'webp') {
-    return {
-      mimeType: 'image/webp',
-      outputName: replaceExt(fileName, 'webp'),
-    }
-  }
-
-  const safeType = normalizeOriginalType(fileType)
-  return {
-    mimeType: safeType,
-    outputName: replaceExt(fileName, extFromMime(safeType)),
-  }
-}
-
-function normalizeOriginalType(type: string) {
-  if (type === 'image/jpeg' || type === 'image/png' || type === 'image/webp') {
-    return type
-  }
-  return 'image/png'
-}
-
-function extFromMime(mimeType: string) {
-  if (mimeType === 'image/jpeg') return 'jpg'
-  if (mimeType === 'image/webp') return 'webp'
-  return 'png'
-}
-
-function replaceExt(fileName: string, ext: string) {
-  const trimmed = (fileName || 'image').trim()
-  const safeName = trimmed || 'image'
-  const dot = safeName.lastIndexOf('.')
-  const base = dot > 0 ? safeName.slice(0, dot) : safeName
-  return `${base}.${ext}`
-}
-
 function resolveQuality(mimeType: string, quality: number) {
   if (mimeType === 'image/png') return undefined
   const clamped = Number.isFinite(quality) ? clamp(Math.round(quality), 1, 100) : 92
   return clamped / 100
+}
+
+function applyCanvasBackground(canvas: HTMLCanvasElement, color: string) {
+  const backgroundCanvas = document.createElement('canvas')
+  backgroundCanvas.width = canvas.width
+  backgroundCanvas.height = canvas.height
+
+  const context = backgroundCanvas.getContext('2d')
+  if (!context) {
+    throw new Error('CANVAS_CONTEXT_UNAVAILABLE')
+  }
+
+  context.fillStyle = color
+  context.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height)
+  context.drawImage(canvas, 0, 0)
+
+  const replacementContext = canvas.getContext('2d')
+  if (!replacementContext) {
+    throw new Error('CANVAS_CONTEXT_UNAVAILABLE')
+  }
+
+  replacementContext.clearRect(0, 0, canvas.width, canvas.height)
+  replacementContext.drawImage(backgroundCanvas, 0, 0)
 }
 
 async function canvasToBlob(canvas: HTMLCanvasElement, mimeType: string, quality?: number) {
