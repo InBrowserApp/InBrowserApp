@@ -4,6 +4,7 @@ import { routes as uuidRoutes } from '@tools/uuid/routes'
 import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-password/routes'
 import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
+import { routes as pdfPageNumberAdderRoutes } from '@tools/pdf-page-number-adder/routes'
 import { routes as pdfSplitterRoutes } from '@tools/pdf-splitter/routes'
 import { routes as pdfToImageConverterRoutes } from '@tools/pdf-to-image-converter/routes'
 import { routes as pdfTextExtractorRoutes } from '@tools/pdf-text-extractor/routes'
@@ -205,6 +206,7 @@ export const routes: ToolRoute[] = [
   ...removePDFOwnerPasswordRoutes,
   ...pdfInfoViewerRoutes,
   ...pdfMergerRoutes,
+  ...pdfPageNumberAdderRoutes,
   ...pdfSplitterRoutes,
   ...pdfToImageConverterRoutes,
   ...pdfTextExtractorRoutes,
