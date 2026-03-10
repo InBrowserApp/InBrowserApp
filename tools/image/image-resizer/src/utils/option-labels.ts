@@ -15,7 +15,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Nearest neighbor',
     },
     formats: {
-      original: 'Keep original format',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -30,7 +30,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '最近邻',
     },
     formats: {
-      original: '保留原始格式',
+      auto: '自动（JPEG/PNG/WebP）',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -45,7 +45,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '最近邻',
     },
     formats: {
-      original: '保留原始格式',
+      auto: '自动（JPEG/PNG/WebP）',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -60,7 +60,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '最近鄰',
     },
     formats: {
-      original: '保留原始格式',
+      auto: '自動（JPEG/PNG/WebP）',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -75,7 +75,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '最近鄰',
     },
     formats: {
-      original: '保留原始格式',
+      auto: '自動（JPEG/PNG/WebP）',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -90,7 +90,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Vecino más cercano',
     },
     formats: {
-      original: 'Conservar formato original',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -105,7 +105,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Voisin le plus proche',
     },
     formats: {
-      original: 'Conserver le format d’origine',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -120,7 +120,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Nächster Nachbar',
     },
     formats: {
-      original: 'Originalformat beibehalten',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -135,7 +135,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Vicino più prossimo',
     },
     formats: {
-      original: 'Mantieni formato originale',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -150,7 +150,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '最近傍',
     },
     formats: {
-      original: '元の形式を保持',
+      auto: '自動（JPEG/PNG/WebP）',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -165,7 +165,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: '최근접 이웃',
     },
     formats: {
-      original: '원본 형식 유지',
+      auto: '자동(JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -180,7 +180,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Ближайший сосед',
     },
     formats: {
-      original: 'Сохранить исходный формат',
+      auto: 'Авто (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -195,7 +195,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Vizinho mais próximo',
     },
     formats: {
-      original: 'Manter formato original',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -210,7 +210,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'أقرب جار',
     },
     formats: {
-      original: 'الاحتفاظ بالتنسيق الأصلي',
+      auto: 'تلقائي (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -225,7 +225,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'नियरस्ट नेबर',
     },
     formats: {
-      original: 'मूल फ़ॉर्मेट रखें',
+      auto: 'ऑटो (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -240,7 +240,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'En yakın komşu',
     },
     formats: {
-      original: 'Orijinal formatı koru',
+      auto: 'Otomatik (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -255,7 +255,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Dichtstbijzijnde buur',
     },
     formats: {
-      original: 'Origineel formaat behouden',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -270,7 +270,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Närmaste granne',
     },
     formats: {
-      original: 'Behåll originalformat',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -285,7 +285,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Najbliższy sąsiad',
     },
     formats: {
-      original: 'Zachowaj format oryginalny',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -300,7 +300,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Láng giềng gần nhất',
     },
     formats: {
-      original: 'Giữ định dạng gốc',
+      auto: 'Tự động (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -315,7 +315,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'เพื่อนบ้านใกล้สุด',
     },
     formats: {
-      original: 'คงรูปแบบเดิม',
+      auto: 'อัตโนมัติ (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -330,7 +330,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Tetangga terdekat',
     },
     formats: {
-      original: 'Pertahankan format asli',
+      auto: 'Otomatis (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -345,7 +345,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'שכן קרוב ביותר',
     },
     formats: {
-      original: 'שמור פורמט מקורי',
+      auto: 'אוטומטי (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -360,7 +360,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Jiran terdekat',
     },
     formats: {
-      original: 'Kekalkan format asal',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',
@@ -375,7 +375,7 @@ const labelsByLocale: Record<string, ResizeOptionLabelSet> = {
       nearest: 'Nærmeste nabo',
     },
     formats: {
-      original: 'Behold originalformat',
+      auto: 'Auto (JPEG/PNG/WebP)',
       png: 'PNG',
       jpeg: 'JPEG',
       webp: 'WebP',

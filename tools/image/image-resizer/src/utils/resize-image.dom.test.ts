@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { calculateOutputDimensions, imageResizeAlgorithms, resizeImage } from './resize-image'
 import type { ResizeOptions } from '../types'
+import { isLossyQualityEnabled, resolveEffectiveOutputMimeType } from './resize-output'
 
 const originalToBlob = HTMLCanvasElement.prototype.toBlob
 
@@ -73,6 +74,20 @@ describe('calculateOutputDimensions', () => {
 
     expect(result).toEqual({ width: 1200, height: 800 })
   })
+
+  it('clamps only upscaled axes when aspect ratio is disabled', () => {
+    const result = calculateOutputDimensions(
+      { width: 1200, height: 800 },
+      {
+        width: 2400,
+        height: 400,
+        keepAspectRatio: false,
+        allowUpscale: false,
+      },
+    )
+
+    expect(result).toEqual({ width: 1200, height: 400 })
+  })
 })
 
 describe('resizeImage', () => {
@@ -83,6 +98,9 @@ describe('resizeImage', () => {
     )
 
     vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      fillStyle: '#ffffff',
+      fillRect: vi.fn(),
+      clearRect: vi.fn(),
       imageSmoothingEnabled: true,
       imageSmoothingQuality: 'high',
       drawImage: vi.fn(),
@@ -160,6 +178,12 @@ describe('resizeImage', () => {
       getImageData: vi.fn(() => sourceImageData),
     }
 
+    const backgroundContext = {
+      fillStyle: '#ffffff',
+      fillRect: vi.fn(),
+      drawImage: vi.fn(),
+    }
+
     const targetContext = {
       createImageData: vi.fn((width: number, height: number) => createMockImageData(width, height)),
       putImageData: vi.fn((imageData: ImageData) => {
@@ -172,6 +196,7 @@ describe('resizeImage', () => {
     getContextMock
       .mockImplementationOnce(() => sourceContext as unknown as CanvasRenderingContext2D)
       .mockImplementationOnce(() => targetContext as unknown as CanvasRenderingContext2D)
+      .mockImplementationOnce(() => backgroundContext as unknown as CanvasRenderingContext2D)
 
     const file = new File(['image'], 'transparent.png', { type: 'image/png' })
 
@@ -181,7 +206,7 @@ describe('resizeImage', () => {
       keepAspectRatio: false,
       allowUpscale: true,
       algorithm: 'bilinear',
-      outputFormat: 'jpeg',
+      outputFormat: 'png',
       quality: 90,
     }
 
@@ -206,5 +231,78 @@ describe('resizeImage', () => {
       'lanczos3',
       'nearest',
     ])
+  })
+
+  it('falls back to PNG when auto output cannot preserve the source format', async () => {
+    const file = new File(['image'], 'sample.gif', { type: 'image/gif' })
+
+    const options: ResizeOptions = {
+      width: 20,
+      height: 20,
+      keepAspectRatio: true,
+      allowUpscale: true,
+      algorithm: 'browser-high',
+      outputFormat: 'auto',
+      quality: 80,
+    }
+
+    const result = await resizeImage(file, options)
+
+    expect(result.outputName).toBe('sample.png')
+    expect(result.mimeType).toBe('image/png')
+  })
+
+  it('rejects resize requests that exceed browser-safe limits', async () => {
+    vi.stubGlobal(
+      'createImageBitmap',
+      vi.fn(async () => new MockBitmap(10_000, 6_000)),
+    )
+
+    const file = new File(['image'], 'huge.png', { type: 'image/png' })
+
+    const options: ResizeOptions = {
+      width: 10_000,
+      height: 6_000,
+      keepAspectRatio: false,
+      allowUpscale: true,
+      algorithm: 'browser-high',
+      outputFormat: 'png',
+      quality: 80,
+    }
+
+    await expect(resizeImage(file, options)).rejects.toThrow('OUTPUT_TOO_LARGE')
+  })
+
+  it('rejects large manual resampling jobs before blocking the main thread', async () => {
+    vi.stubGlobal(
+      'createImageBitmap',
+      vi.fn(async () => new MockBitmap(5_000, 4_000)),
+    )
+
+    const file = new File(['image'], 'large.png', { type: 'image/png' })
+
+    const options: ResizeOptions = {
+      width: 5_000,
+      height: 4_000,
+      keepAspectRatio: false,
+      allowUpscale: true,
+      algorithm: 'lanczos3',
+      outputFormat: 'png',
+      quality: 80,
+    }
+
+    await expect(resizeImage(file, options)).rejects.toThrow('OUTPUT_TOO_LARGE_FOR_ALGORITHM')
+  })
+})
+
+describe('resize-output helpers', () => {
+  it('resolves auto output formats and quality availability consistently', () => {
+    expect(resolveEffectiveOutputMimeType('image/jpeg', 'auto')).toBe('image/jpeg')
+    expect(resolveEffectiveOutputMimeType('image/gif', 'auto')).toBe('image/png')
+    expect(resolveEffectiveOutputMimeType('image/png', 'webp')).toBe('image/webp')
+
+    expect(isLossyQualityEnabled('image/png', 'auto')).toBe(false)
+    expect(isLossyQualityEnabled('image/jpeg', 'auto')).toBe(true)
+    expect(isLossyQualityEnabled('image/gif', 'auto')).toBe(false)
   })
 })
