@@ -4,9 +4,24 @@
     <n-flex vertical :size="12">
       <n-flex justify="space-between" align="center" :wrap="true">
         <n-flex :size="8">
-          <n-button text @click="emit('swap')">{{ t('swap') }}</n-button>
-          <n-button text @click="emit('use-sample')">{{ t('sample') }}</n-button>
-          <n-button text @click="emit('clear')">{{ t('clear') }}</n-button>
+          <n-button text @click="emit('swap')">
+            <template #icon>
+              <n-icon><ArrowsHorizontal /></n-icon>
+            </template>
+            {{ t('swap') }}
+          </n-button>
+          <n-button text @click="emit('use-sample')">
+            <template #icon>
+              <n-icon><Chemistry /></n-icon>
+            </template>
+            {{ t('sample') }}
+          </n-button>
+          <n-button text @click="emit('clear')">
+            <template #icon>
+              <n-icon><TrashCan /></n-icon>
+            </template>
+            {{ t('clear') }}
+          </n-button>
         </n-flex>
       </n-flex>
 
@@ -57,8 +72,11 @@
 </template>
 
 <script setup lang="ts">
+import ArrowsHorizontal from '@vicons/carbon/ArrowsHorizontal'
+import Chemistry from '@vicons/carbon/Chemistry'
+import TrashCan from '@vicons/carbon/TrashCan'
 import { useI18n } from 'vue-i18n'
-import { NButton, NCard, NFlex, NGi, NGrid, NInput, NText } from 'naive-ui'
+import { NButton, NCard, NFlex, NGi, NGrid, NIcon, NInput, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ParsedListSummary } from '../utils/listComparer'
 

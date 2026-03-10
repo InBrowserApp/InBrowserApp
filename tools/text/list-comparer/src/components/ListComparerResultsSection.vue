@@ -15,6 +15,9 @@
               :href="activeCount > 0 ? (downloadUrl ?? undefined) : undefined"
               :download="downloadName"
             >
+              <template #icon>
+                <n-icon><Download /></n-icon>
+              </template>
               {{ t('download') }}
             </n-button>
           </n-flex>
@@ -60,8 +63,9 @@
 </template>
 
 <script setup lang="ts">
+import Download from '@vicons/carbon/Download'
 import { useI18n } from 'vue-i18n'
-import { NButton, NEmpty, NFlex, NInput, NTabPane, NTabs, NText } from 'naive-ui'
+import { NButton, NEmpty, NFlex, NIcon, NInput, NTabPane, NTabs, NText } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ListComparerTab, ListComparisonResult } from '../utils/listComparer'

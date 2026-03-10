@@ -29,7 +29,7 @@ vi.mock('naive-ui', async () => {
       name: 'NButton',
       props: ['href', 'download', 'disabled'],
       template:
-        '<a :href="href" :download="download" :data-disabled="String(!!disabled)"><slot /></a>',
+        '<a :href="href" :download="download" :data-disabled="String(!!disabled)"><span class="button-icon"><slot name="icon" /></span><slot /></a>',
     }),
     NEmpty: defineComponent({
       name: 'NEmpty',
@@ -44,6 +44,10 @@ vi.mock('naive-ui', async () => {
       name: 'NInput',
       props: ['value'],
       template: '<textarea class="result-output" :value="value" />',
+    }),
+    NIcon: defineComponent({
+      name: 'NIcon',
+      template: '<span class="n-icon"><slot /></span>',
     }),
     NTabPane: defineComponent({
       name: 'NTabPane',

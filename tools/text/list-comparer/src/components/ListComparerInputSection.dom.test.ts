@@ -21,7 +21,8 @@ vi.mock('naive-ui', async () => {
     NButton: defineComponent({
       name: 'NButton',
       emits: ['click'],
-      template: '<button @click="$emit(\'click\')"><slot /></button>',
+      template:
+        '<button @click="$emit(\'click\')"><span class="button-icon"><slot name="icon" /></span><slot /></button>',
     }),
     NCard: defineComponent({
       name: 'NCard',
@@ -56,6 +57,10 @@ vi.mock('naive-ui', async () => {
       template:
         '<textarea :value="value" :placeholder="placeholder" @input="$emit(\'update:value\', $event.target.value)" />',
     }),
+    NIcon: defineComponent({
+      name: 'NIcon',
+      template: '<span class="n-icon"><slot /></span>',
+    }),
     NText: defineComponent({
       name: 'NText',
       template: '<span><slot /></span>',
@@ -87,6 +92,7 @@ describe('ListComparerInputSection', () => {
     expect(wrapper.text()).toContain('Compare Lists')
     expect(wrapper.text()).toContain('List A')
     expect(wrapper.text()).toContain('6 items, 5 unique')
+    expect(wrapper.findAll('.button-icon')).toHaveLength(3)
 
     const inputs = wrapper.findAll('textarea')
     expect(inputs[0]?.attributes('placeholder')).toBe('Paste List A here...')
