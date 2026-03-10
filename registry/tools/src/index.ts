@@ -104,6 +104,7 @@ import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-passw
 import { toolInfo as randomNumberGeneratorToolInfo } from '@tools/random-number-generator'
 import { toolInfo as bip39MnemonicGeneratorToolInfo } from '@tools/bip39-mnemonic-generator'
 import { toolInfo as ksuidGeneratorToolInfo } from '@tools/ksuid-generator'
+import { toolInfo as listComparerToolInfo } from '@tools/list-comparer'
 import { toolInfo as nanoidGeneratorToolInfo } from '@tools/nanoid-generator'
 import { toolInfo as cuid2GeneratorToolInfo } from '@tools/cuid2-generator'
 import { toolInfo as qrCodeGeneratorToolInfo } from '@tools/qr-code-generator'
@@ -405,6 +406,7 @@ export const tools: ToolInfo[] = [
   gitignoreGeneratorToolInfo,
 
   // Text Tools
+  listComparerToolInfo,
   regexTesterReplacerToolInfo,
   asciiArtGeneratorToolInfo,
   textStatisticsToolInfo,
