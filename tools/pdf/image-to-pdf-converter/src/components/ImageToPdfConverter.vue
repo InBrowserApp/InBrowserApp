@@ -3,28 +3,34 @@
     <ImageToPdfUploadSection :is-adding-file="isAddingFile" @add-file="handleAddFile" />
 
     <div class="image-to-pdf-converter__main">
-      <ImageToPdfQueue
-        :items="items"
-        @clear="clearAll"
-        @rotate="rotateItem"
-        @move-up="moveItemUp"
-        @move-down="moveItemDown"
-        @reorder="handleReorder"
-        @remove="removeItem"
-      />
+      <div class="image-to-pdf-converter__panel">
+        <ImageToPdfQueue
+          :items="items"
+          @clear="clearAll"
+          @rotate="rotateItem"
+          @move-up="moveItemUp"
+          @move-down="moveItemDown"
+          @reorder="handleReorder"
+          @remove="removeItem"
+        />
+      </div>
 
       <div class="image-to-pdf-converter__sidebar">
-        <ImageToPdfPageLayoutSection v-model:options="options" />
-        <ImageToPdfGenerateSection
-          :can-generate="canGenerate"
-          :is-generating="isGenerating"
-          :progress="generationProgress"
-          :download-url="resultUrl ?? null"
-          :download-filename="resultFilename"
-          :output-size="resultBlob?.size ?? null"
-          :page-count="items.length"
-          @generate="handleGenerate"
-        />
+        <div class="image-to-pdf-converter__panel">
+          <ImageToPdfPageLayoutSection v-model:options="options" />
+        </div>
+        <div class="image-to-pdf-converter__panel">
+          <ImageToPdfGenerateSection
+            :can-generate="canGenerate"
+            :is-generating="isGenerating"
+            :progress="generationProgress"
+            :download-url="resultUrl ?? null"
+            :download-filename="resultFilename"
+            :output-size="resultBlob?.size ?? null"
+            :page-count="items.length"
+            @generate="handleGenerate"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -120,6 +126,10 @@ async function handleGenerate() {
   display: grid;
   gap: 20px;
   align-content: start;
+}
+
+.image-to-pdf-converter__panel {
+  min-width: 0;
 }
 
 @media (min-width: 1280px) {
