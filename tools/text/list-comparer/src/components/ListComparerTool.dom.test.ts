@@ -1,4 +1,4 @@
-import { computed, defineComponent, nextTick } from 'vue'
+import { defineComponent, nextTick } from 'vue'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ListComparerTool from './ListComparerTool.vue'
