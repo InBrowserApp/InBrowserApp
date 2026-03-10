@@ -2,11 +2,29 @@
   <n-modal :show="visible" @update:show="handleVisibleChange">
     <n-card style="width: min(980px, 94vw)" :title="modalTitle" closable @close="emit('close')">
       <n-flex justify="space-between" align="center" wrap style="margin-bottom: 12px">
-        <n-button quaternary :disabled="!canPrev" @click="emit('prev')">
-          {{ t('prev') }}
+        <n-button
+          quaternary
+          circle
+          :aria-label="t('prev')"
+          :title="t('prev')"
+          :disabled="!canPrev"
+          @click="emit('prev')"
+        >
+          <template #icon>
+            <n-icon :component="ArrowLeft20Regular" />
+          </template>
         </n-button>
-        <n-button quaternary :disabled="!canNext" @click="emit('next')">
-          {{ t('next') }}
+        <n-button
+          quaternary
+          circle
+          :aria-label="t('next')"
+          :title="t('next')"
+          :disabled="!canNext"
+          @click="emit('next')"
+        >
+          <template #icon>
+            <n-icon :component="ArrowRight20Regular" />
+          </template>
         </n-button>
       </n-flex>
 
@@ -28,7 +46,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NButton, NCard, NEmpty, NFlex, NModal, NSpin } from 'naive-ui'
+import { NButton, NCard, NEmpty, NFlex, NIcon, NModal, NSpin } from 'naive-ui'
+import ArrowLeft20Regular from '@vicons/fluent/ArrowLeft20Regular'
+import ArrowRight20Regular from '@vicons/fluent/ArrowRight20Regular'
 
 const props = defineProps<{
   visible: boolean

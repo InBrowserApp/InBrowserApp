@@ -26,13 +26,11 @@ describe('PDFOrganizerPreviewModal', () => {
     expect(wrapper.get('img').attributes('src')).toBe('blob:preview')
     expect(wrapper.get('img').attributes('style')).toContain('rotate(90deg)')
 
-    const prevButton = wrapper.findAll('button').find((button) => button.text() === 'Previous page')
-    const nextButton = wrapper.findAll('button').find((button) => button.text() === 'Next page')
-    expect(prevButton).toBeTruthy()
-    expect(nextButton).toBeTruthy()
+    const prevButton = wrapper.get('button[aria-label="Previous page"]')
+    const nextButton = wrapper.get('button[aria-label="Next page"]')
 
-    await prevButton?.trigger('click')
-    await nextButton?.trigger('click')
+    await prevButton.trigger('click')
+    await nextButton.trigger('click')
 
     expect(wrapper.emitted('prev')).toBeTruthy()
     expect(wrapper.emitted('next')).toBeTruthy()

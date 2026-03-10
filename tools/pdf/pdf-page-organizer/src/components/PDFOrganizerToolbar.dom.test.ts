@@ -5,7 +5,9 @@ import PDFOrganizerToolbar from './PDFOrganizerToolbar.vue'
 
 describe('PDFOrganizerToolbar', () => {
   const clickButton = async (wrapper: ReturnType<typeof mount>, label: string) => {
-    const button = wrapper.findAll('button').find((item) => item.text() === label)
+    const button = wrapper.find(`button[aria-label="${label}"]`).exists()
+      ? wrapper.get(`button[aria-label="${label}"]`)
+      : wrapper.findAll('button').find((item) => item.text() === label)
     expect(button, `missing button ${label}`).toBeTruthy()
     await button?.trigger('click')
   }

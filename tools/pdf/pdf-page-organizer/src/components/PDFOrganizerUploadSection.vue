@@ -24,6 +24,9 @@
         <n-flex v-if="fileName" justify="space-between" align="center" wrap>
           <n-text>{{ t('loadedFile', { name: fileName, count: pageCount }) }}</n-text>
           <n-button quaternary type="warning" @click="emit('clear')">
+            <template #icon>
+              <n-icon :component="DismissSquare20Regular" />
+            </template>
             {{ t('clearFile') }}
           </n-button>
         </n-flex>
@@ -48,6 +51,7 @@ import {
   type UploadFileInfo,
 } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import DismissSquare20Regular from '@vicons/fluent/DismissSquare20Regular'
 import DocumentPdf24Regular from '@vicons/fluent/DocumentPdf24Regular'
 import { PDF_ERROR } from '../pdf-errors'
 import { isPdfFile } from '../inspect-pdf'

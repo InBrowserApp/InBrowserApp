@@ -67,36 +67,69 @@
                 t('pageLabel', { page: index + 1, source: element.sourcePageNumber })
               }}</n-text>
 
-              <n-flex wrap :size="[6, 6]">
+              <n-flex class="page-card__actions" wrap :size="[6, 6]">
                 <n-button
                   quaternary
+                  circle
                   size="small"
+                  :aria-label="t('moveUp')"
+                  :title="t('moveUp')"
                   :disabled="index === 0"
                   @click="emit('move-up', element.id)"
                 >
-                  {{ t('moveUp') }}
+                  <template #icon>
+                    <n-icon :component="ArrowUp16Regular" />
+                  </template>
                 </n-button>
                 <n-button
                   quaternary
+                  circle
                   size="small"
+                  :aria-label="t('moveDown')"
+                  :title="t('moveDown')"
                   :disabled="index === pages.length - 1"
                   @click="emit('move-down', element.id)"
                 >
-                  {{ t('moveDown') }}
-                </n-button>
-                <n-button quaternary size="small" @click="emit('rotate-left', element.id)">
-                  {{ t('rotateLeft') }}
-                </n-button>
-                <n-button quaternary size="small" @click="emit('rotate-right', element.id)">
-                  {{ t('rotateRight') }}
+                  <template #icon>
+                    <n-icon :component="ArrowDown16Regular" />
+                  </template>
                 </n-button>
                 <n-button
                   quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('rotateLeft')"
+                  :title="t('rotateLeft')"
+                  @click="emit('rotate-left', element.id)"
+                >
+                  <template #icon>
+                    <n-icon :component="ArrowRotateCounterclockwise20Regular" />
+                  </template>
+                </n-button>
+                <n-button
+                  quaternary
+                  circle
+                  size="small"
+                  :aria-label="t('rotateRight')"
+                  :title="t('rotateRight')"
+                  @click="emit('rotate-right', element.id)"
+                >
+                  <template #icon>
+                    <n-icon :component="ArrowRotateClockwise20Regular" />
+                  </template>
+                </n-button>
+                <n-button
+                  quaternary
+                  circle
                   size="small"
                   type="error"
+                  :aria-label="t('deletePage')"
+                  :title="t('deletePage')"
                   @click="emit('delete-page', element.id)"
                 >
-                  {{ t('deletePage') }}
+                  <template #icon>
+                    <n-icon :component="Delete16Regular" />
+                  </template>
                 </n-button>
               </n-flex>
             </article>
@@ -117,6 +150,11 @@ import { useI18n } from 'vue-i18n'
 import { NAlert, NButton, NCheckbox, NEmpty, NFlex, NIcon, NSpin, NText } from 'naive-ui'
 import { Sortable } from 'sortablejs-vue3'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import ArrowDown16Regular from '@vicons/fluent/ArrowDown16Regular'
+import ArrowRotateClockwise20Regular from '@vicons/fluent/ArrowRotateClockwise20Regular'
+import ArrowRotateCounterclockwise20Regular from '@vicons/fluent/ArrowRotateCounterclockwise20Regular'
+import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import ReOrderDotsHorizontal24Regular from '@vicons/fluent/ReOrderDotsHorizontal24Regular'
 import type { OrganizerPage, ThumbnailSize } from './pageOrganizerState'
 
@@ -298,6 +336,10 @@ defineExpose({
 
 .page-card__preview {
   cursor: zoom-in;
+}
+
+.page-card__actions {
+  justify-content: flex-end;
 }
 
 .page-card__thumbnail {

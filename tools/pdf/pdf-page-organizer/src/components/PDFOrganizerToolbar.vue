@@ -6,20 +6,52 @@
         <n-flex justify="space-between" align="center" wrap :size="[12, 8]">
           <n-text>{{ t('summary', { pageCount, selectedCount }) }}</n-text>
           <n-flex wrap :size="[8, 8]">
-            <n-button quaternary :disabled="!canUndo" @click="emit('undo')">
-              {{ t('undo') }}
+            <n-button
+              quaternary
+              circle
+              :aria-label="t('undo')"
+              :title="t('undo')"
+              :disabled="!canUndo"
+              @click="emit('undo')"
+            >
+              <template #icon>
+                <n-icon :component="ArrowUndo20Regular" />
+              </template>
             </n-button>
-            <n-button quaternary :disabled="!canRedo" @click="emit('redo')">
-              {{ t('redo') }}
+            <n-button
+              quaternary
+              circle
+              :aria-label="t('redo')"
+              :title="t('redo')"
+              :disabled="!canRedo"
+              @click="emit('redo')"
+            >
+              <template #icon>
+                <n-icon :component="ArrowRedo20Regular" />
+              </template>
             </n-button>
-            <n-button quaternary @click="emit('select-all')">{{ t('selectAll') }}</n-button>
+            <n-button quaternary @click="emit('select-all')">
+              <template #icon>
+                <n-icon :component="CheckboxChecked20Regular" />
+              </template>
+              {{ t('selectAll') }}
+            </n-button>
             <n-button quaternary :disabled="selectedCount === 0" @click="emit('clear-selection')">
+              <template #icon>
+                <n-icon :component="CheckboxUnchecked20Regular" />
+              </template>
               {{ t('clearSelection') }}
             </n-button>
             <n-button quaternary :disabled="selectedCount === 0" @click="emit('rotate-left')">
+              <template #icon>
+                <n-icon :component="ArrowRotateCounterclockwise20Regular" />
+              </template>
               {{ t('rotateLeft') }}
             </n-button>
             <n-button quaternary :disabled="selectedCount === 0" @click="emit('rotate-right')">
+              <template #icon>
+                <n-icon :component="ArrowRotateClockwise20Regular" />
+              </template>
               {{ t('rotateRight') }}
             </n-button>
             <n-button
@@ -28,9 +60,15 @@
               :disabled="selectedCount === 0"
               @click="emit('delete-selection')"
             >
+              <template #icon>
+                <n-icon :component="Delete20Regular" />
+              </template>
               {{ t('deleteSelection') }}
             </n-button>
             <n-button quaternary :disabled="!hasChanges" @click="emit('reset')">
+              <template #icon>
+                <n-icon :component="ArrowReset20Regular" />
+              </template>
               {{ t('reset') }}
             </n-button>
             <n-button
@@ -39,6 +77,9 @@
               :disabled="!canExport"
               @click="emit('export')"
             >
+              <template #icon>
+                <n-icon :component="DocumentPdf24Regular" />
+              </template>
               {{ t('exportPdf') }}
             </n-button>
             <n-button
@@ -48,6 +89,9 @@
               :href="downloadUrl"
               :download="resultFilename"
             >
+              <template #icon>
+                <n-icon :component="ArrowDownload20Regular" />
+              </template>
               {{ t('downloadPdf') }}
             </n-button>
           </n-flex>
@@ -64,6 +108,9 @@
               style="width: 110px"
             />
             <n-button quaternary :disabled="!canJump" @click="handleJump">
+              <template #icon>
+                <n-icon :component="ArrowRight20Regular" />
+              </template>
               {{ t('jumpAction') }}
             </n-button>
           </n-flex>
@@ -103,8 +150,19 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NAlert, NButton, NFlex, NInputNumber, NText } from 'naive-ui'
+import { NAlert, NButton, NFlex, NIcon, NInputNumber, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import ArrowDownload20Regular from '@vicons/fluent/ArrowDownload20Regular'
+import ArrowRedo20Regular from '@vicons/fluent/ArrowRedo20Regular'
+import ArrowReset20Regular from '@vicons/fluent/ArrowReset20Regular'
+import ArrowRight20Regular from '@vicons/fluent/ArrowRight20Regular'
+import ArrowRotateClockwise20Regular from '@vicons/fluent/ArrowRotateClockwise20Regular'
+import ArrowRotateCounterclockwise20Regular from '@vicons/fluent/ArrowRotateCounterclockwise20Regular'
+import ArrowUndo20Regular from '@vicons/fluent/ArrowUndo20Regular'
+import CheckboxChecked20Regular from '@vicons/fluent/CheckboxChecked20Regular'
+import CheckboxUnchecked20Regular from '@vicons/fluent/CheckboxUnchecked20Regular'
+import Delete20Regular from '@vicons/fluent/Delete20Regular'
+import DocumentPdf24Regular from '@vicons/fluent/DocumentPdf24Regular'
 import { PDF_ERROR } from '../pdf-errors'
 import type { ThumbnailSize } from './pageOrganizerState'
 

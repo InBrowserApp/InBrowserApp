@@ -75,9 +75,12 @@ describe('PDFOrganizerGrid', () => {
     await wrapper.get('.page-card__preview').trigger('click')
     const clickButton = async (cardIndex: number, label: string) => {
       const card = wrapper.findAll('article')[cardIndex]
-      const button = card?.findAll('button').find((item) => item.text() === label)
-      expect(button, `missing button ${label}`).toBeTruthy()
-      await button?.trigger('click')
+      const button = card?.find(`button[aria-label="${label}"]`)
+      const resolvedButton = button?.exists()
+        ? button
+        : card?.findAll('button').find((item) => item.text() === label)
+      expect(resolvedButton, `missing button ${label}`).toBeTruthy()
+      await resolvedButton?.trigger('click')
     }
 
     await clickButton(1, 'Move up')
