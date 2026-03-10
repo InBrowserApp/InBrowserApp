@@ -25,6 +25,7 @@ import { toolInfo as currentNetworkTimeToolInfo } from '@tools/current-network-t
 import { toolInfo as pngOptimizerToolInfo } from '@tools/png-optimizer'
 import { toolInfo as gifToApngConverterToolInfo } from '@tools/gif-to-apng-converter'
 import { toolInfo as gifToAnimatedWebpConverterToolInfo } from '@tools/gif-to-animated-webp-converter'
+import { toolInfo as imageToAvifConverterToolInfo } from '@tools/image-to-avif-converter'
 import { toolInfo as imageToIcoToolInfo } from '@tools/image-to-ico'
 import { toolInfo as imageToWebpConverterToolInfo } from '@tools/image-to-webp-converter'
 import { toolInfo as imageResizerToolInfo } from '@tools/image-resizer'
@@ -230,6 +231,7 @@ export const tools: ToolInfo[] = [
   faviconAssetsGeneratorToolInfo,
   gifToApngConverterToolInfo,
   gifToAnimatedWebpConverterToolInfo,
+  imageToAvifConverterToolInfo,
   imageToIcoToolInfo,
   imageToWebpConverterToolInfo,
   imageResizerToolInfo,
