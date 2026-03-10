@@ -2,6 +2,7 @@ import { computed, defineComponent, h, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { PDF_ERROR } from '../pdf-errors'
+import type { ActionResult, OrganizerPage } from './pageOrganizerState'
 
 const messageErrorMock = vi.fn()
 const messageSuccessMock = vi.fn()
@@ -20,9 +21,10 @@ vi.mock('naive-ui', async () => {
 const uploadScrollMock = vi.fn()
 const toolbarScrollMock = vi.fn()
 const gridScrollMock = vi.fn()
+const createSuccessResult = (): ActionResult => ({ success: true })
 
 const file = ref<File | null>(null)
-const pages = ref([
+const pages = ref<OrganizerPage[]>([
   {
     id: '1',
     sourcePageNumber: 1,
@@ -65,10 +67,12 @@ const canExport = ref(true)
 const resultFilename = ref('organized.pdf')
 const downloadUrl = ref<string | null>(null)
 
-const handleUploadMock = vi.fn(async (nextFile: File) => {
-  file.value = nextFile
-  return { success: true as const }
-})
+const handleUploadMock = vi.fn<(nextFile: File) => Promise<ActionResult>>(
+  async (nextFile: File) => {
+    file.value = nextFile
+    return createSuccessResult()
+  },
+)
 const reorderPagesMock = vi.fn()
 const movePageMock = vi.fn()
 const rotatePageMock = vi.fn()
@@ -81,10 +85,14 @@ const clearSelectionMock = vi.fn()
 const resetChangesMock = vi.fn()
 const undoChangesMock = vi.fn()
 const redoChangesMock = vi.fn()
-const openPreviewMock = vi.fn(async () => ({ success: true as const }))
-const previewByOffsetMock = vi.fn(async () => ({ success: true as const }))
+const openPreviewMock = vi.fn<(pageId: string) => Promise<ActionResult>>(async () =>
+  createSuccessResult(),
+)
+const previewByOffsetMock = vi.fn<(offset: number) => Promise<ActionResult>>(async () =>
+  createSuccessResult(),
+)
 const closePreviewMock = vi.fn()
-const exportPdfMock = vi.fn(async () => ({ success: true as const }))
+const exportPdfMock = vi.fn<() => Promise<ActionResult>>(async () => createSuccessResult())
 const clearFileMock = vi.fn()
 
 vi.mock('./usePdfPageOrganizer', () => ({
@@ -258,11 +266,11 @@ describe('PDFPageOrganizerTool', () => {
     downloadUrl.value = null
     handleUploadMock.mockImplementation(async (nextFile: File) => {
       file.value = nextFile
-      return { success: true as const }
+      return createSuccessResult()
     })
-    openPreviewMock.mockResolvedValue({ success: true })
-    previewByOffsetMock.mockResolvedValue({ success: true })
-    exportPdfMock.mockResolvedValue({ success: true })
+    openPreviewMock.mockResolvedValue(createSuccessResult())
+    previewByOffsetMock.mockResolvedValue(createSuccessResult())
+    exportPdfMock.mockResolvedValue(createSuccessResult())
     gridScrollMock.mockReturnValue(true)
   })
 

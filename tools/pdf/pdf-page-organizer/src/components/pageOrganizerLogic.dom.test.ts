@@ -16,10 +16,15 @@ import {
   normalizeRotation,
   restorePagesFromSnapshot,
   snapshotPages,
+  type OrganizerPage,
 } from './pageOrganizerState'
 import { usePageOrganizerEdits } from './usePageOrganizerEdits'
 
-const createPages = () => [createPageState(1, 0), createPageState(2, 90), createPageState(3, 180)]
+const createPages = (): OrganizerPage[] => [
+  createPageState(1, 0),
+  createPageState(2, 90),
+  createPageState(3, 180),
+]
 
 describe('page organizer state helpers', () => {
   it('normalizes rotations and builds output file names', () => {
@@ -31,7 +36,7 @@ describe('page organizer state helpers', () => {
   })
 
   it('creates, snapshots, compares, and restores page state', () => {
-    const existingPage = {
+    const existingPage: OrganizerPage = {
       ...createPageState(4, 0),
       rotationOffset: 270,
       thumbnailUrl: 'blob:4',
@@ -60,7 +65,7 @@ describe('page organizer state helpers', () => {
         { sourcePageNumber: 5, rotationOffset: 180 },
       ],
       [0],
-      new Map([[1, existingPage]]),
+      new Map<number, OrganizerPage>([[1, existingPage]]),
     )
     expect(restored[0]).toMatchObject({ originalRotation: 0, thumbnailUrl: 'blob:4' })
     expect(restored[1]).toMatchObject({ originalRotation: 0, rotationOffset: 180 })
@@ -108,8 +113,8 @@ describe('page organizer operations', () => {
       lastSelectedPageId: '2',
     })
 
-    const existingPagesByNumber = new Map([
-      [2, { ...pages[1], thumbnailUrl: 'blob:2', isLoading: false }],
+    const existingPagesByNumber = new Map<number, OrganizerPage>([
+      [2, { ...pages[1]!, thumbnailUrl: 'blob:2', isLoading: false }],
     ])
     expect(createPagesFromRotations([0, 90], existingPagesByNumber)[1]).toMatchObject({
       thumbnailUrl: 'blob:2',
@@ -121,7 +126,7 @@ describe('page organizer operations', () => {
 
 describe('usePageOrganizerEdits', () => {
   it('tracks selection, history, and page edits', () => {
-    const pages = ref(createPages())
+    const pages = ref<OrganizerPage[]>(createPages())
     const originalPageRotations = ref([0, 90, 180])
     const beforeRestore = vi.fn()
     const afterPagesUpdated = vi.fn()
@@ -180,10 +185,11 @@ describe('usePageOrganizerEdits', () => {
     expect(edits.canUndo.value).toBe(false)
     expect(edits.canRedo.value).toBe(false)
 
-    pages.value = [
-      { ...pages.value[0], id: '9', sourcePageNumber: 9 },
-      { ...pages.value[1], id: '2', sourcePageNumber: 2 },
+    const nextPages: OrganizerPage[] = [
+      { ...pages.value[0]!, id: '9', sourcePageNumber: 9 },
+      { ...pages.value[1]!, id: '2', sourcePageNumber: 2 },
     ]
+    pages.value = nextPages
     edits.selectAllPages()
     edits.syncSelectionWithPages()
     edits.resetChanges()

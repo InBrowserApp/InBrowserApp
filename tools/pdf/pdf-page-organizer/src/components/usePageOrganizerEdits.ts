@@ -160,7 +160,7 @@ export const usePageOrganizerEdits = ({
 
   const selectAllPages = (): void => {
     selectedPageIds.value = pages.value.map((page) => page.id)
-    lastSelectedPageId = pages.value.at(-1)?.id ?? null
+    lastSelectedPageId = pages.value[pages.value.length - 1]?.id ?? null
   }
 
   const resetChanges = (): void => {

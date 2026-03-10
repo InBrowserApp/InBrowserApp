@@ -48,7 +48,8 @@ describe('PDFOrganizerUploadSection', () => {
       expect.objectContaining({ name: 'selected.pdf' }),
     ])
 
-    await wrapper.findAll('button').at(-1)?.trigger('click')
+    const buttons = wrapper.findAll('button')
+    await buttons[buttons.length - 1]?.trigger('click')
     expect(wrapper.emitted('clear')).toBeTruthy()
     ;(wrapper.vm as unknown as { scrollIntoView: () => void }).scrollIntoView()
     expect(scrollIntoViewMock).toHaveBeenCalled()

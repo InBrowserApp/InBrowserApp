@@ -112,7 +112,7 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from 'vue'
+import { onBeforeUnmount, ref, type ComponentPublicInstance, type VNodeRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NAlert, NButton, NCheckbox, NEmpty, NFlex, NIcon, NSpin, NText } from 'naive-ui'
 import { Sortable } from 'sortablejs-vue3'
@@ -161,8 +161,8 @@ const clearHighlightTimeout = (): void => {
 }
 
 const setPageElement =
-  (pageId: string) =>
-  (element: Element | null): void => {
+  (pageId: string): VNodeRef =>
+  (element: Element | ComponentPublicInstance | null): void => {
     if (element instanceof HTMLElement) {
       pageElements.set(pageId, element)
       return

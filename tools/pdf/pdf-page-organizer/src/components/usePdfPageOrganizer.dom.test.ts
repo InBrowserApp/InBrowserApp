@@ -1,6 +1,7 @@
 import { computed, defineComponent, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
+import type { OrganizePdfWorkerResponse } from '../organize-pdf'
 import { PDF_ERROR } from '../pdf-errors'
 
 const inspectPdfMock = vi.fn(async (_file: File) => ({
@@ -13,7 +14,7 @@ vi.mock('../inspect-pdf', () => ({
     file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf'),
 }))
 
-const organizePdfWithWorkerMock = vi.fn(async (_payload: unknown) => ({
+const createWorkerSuccess = (): OrganizePdfWorkerResponse => ({
   ok: true,
   result: {
     file: {
@@ -21,7 +22,11 @@ const organizePdfWithWorkerMock = vi.fn(async (_payload: unknown) => ({
       blob: new Blob(['done'], { type: 'application/pdf' }),
     },
   },
-}))
+})
+
+const organizePdfWithWorkerMock = vi.fn<(_payload: unknown) => Promise<OrganizePdfWorkerResponse>>(
+  async () => createWorkerSuccess(),
+)
 
 vi.mock('../organize-pdf', () => ({
   organizePdfWithWorker: (payload: unknown) => organizePdfWithWorkerMock(payload),
@@ -117,15 +122,7 @@ describe('usePdfPageOrganizer', () => {
       pageCount: 3,
       pageRotations: [0, 90, 180],
     })
-    organizePdfWithWorkerMock.mockResolvedValue({
-      ok: true,
-      result: {
-        file: {
-          name: 'organized.pdf',
-          blob: new Blob(['done'], { type: 'application/pdf' }),
-        },
-      },
-    })
+    organizePdfWithWorkerMock.mockResolvedValue(createWorkerSuccess())
   })
 
   it('uploads a pdf, renders thumbnails, previews pages, and exports current state', async () => {

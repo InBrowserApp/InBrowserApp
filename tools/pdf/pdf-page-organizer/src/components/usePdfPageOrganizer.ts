@@ -138,9 +138,19 @@ export const usePdfPageOrganizer = () => {
       return
     }
 
+    const currentPage = pages.value[index]
+    if (!currentPage) {
+      return
+    }
+
     pages.value[index] = {
-      ...pages.value[index],
-      ...patch,
+      id: patch.id ?? currentPage.id,
+      sourcePageNumber: patch.sourcePageNumber ?? currentPage.sourcePageNumber,
+      originalRotation: patch.originalRotation ?? currentPage.originalRotation,
+      rotationOffset: patch.rotationOffset ?? currentPage.rotationOffset,
+      thumbnailUrl: patch.thumbnailUrl ?? currentPage.thumbnailUrl,
+      isLoading: patch.isLoading ?? currentPage.isLoading,
+      hasError: patch.hasError ?? currentPage.hasError,
     }
   }
 
