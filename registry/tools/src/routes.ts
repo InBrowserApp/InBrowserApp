@@ -23,6 +23,7 @@ import { routes as currentNetworkTimeRoutes } from '@tools/current-network-time/
 import { routes as pngOptimizerRoutes } from '@tools/png-optimizer/routes'
 import { routes as gifToApngConverterRoutes } from '@tools/gif-to-apng-converter/routes'
 import { routes as gifToAnimatedWebpConverterRoutes } from '@tools/gif-to-animated-webp-converter/routes'
+import { routes as imageToAvifConverterRoutes } from '@tools/image-to-avif-converter/routes'
 import { routes as imageToIcoRoutes } from '@tools/image-to-ico/routes'
 import { routes as imageToWebpConverterRoutes } from '@tools/image-to-webp-converter/routes'
 import { routes as imageResizerRoutes } from '@tools/image-resizer/routes'
@@ -226,6 +227,7 @@ export const routes: ToolRoute[] = [
   ...pngOptimizerRoutes,
   ...gifToApngConverterRoutes,
   ...gifToAnimatedWebpConverterRoutes,
+  ...imageToAvifConverterRoutes,
   ...imageToIcoRoutes,
   ...imageToWebpConverterRoutes,
   ...imageResizerRoutes,
