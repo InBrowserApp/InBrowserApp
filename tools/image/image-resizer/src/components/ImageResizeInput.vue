@@ -24,14 +24,21 @@
     </template>
 
     <template v-else>
-      <n-flex vertical :size="16">
-        <n-flex align="center" :size="16">
-          <n-image :src="previewUrl || ''" :alt="t('previewAlt')" width="160" />
-          <n-flex vertical :size="4">
-            <n-text strong>{{ file.name }}</n-text>
+      <n-flex vertical :size="16" class="preview-panel">
+        <n-flex align="center" :size="16" class="preview-row">
+          <n-image
+            :src="previewUrl || ''"
+            :alt="t('previewAlt')"
+            width="160"
+            class="preview-image"
+          />
+          <n-flex vertical :size="4" class="preview-meta">
+            <n-text strong>
+              <span class="preview-name">{{ file.name }}</span>
+            </n-text>
             <n-text depth="3">{{ filesize(file.size) }}</n-text>
             <n-text depth="3">{{ dimensionsText }}</n-text>
-            <n-button size="small" @click="clearFile">
+            <n-button size="small" class="preview-action" @click="clearFile">
               <template #icon>
                 <n-icon><Delete20Regular /></n-icon>
               </template>
@@ -106,6 +113,44 @@ function clearFile() {
   file.value = null
 }
 </script>
+
+<style scoped>
+.preview-panel,
+.preview-row,
+.preview-meta {
+  min-width: 0;
+}
+
+.preview-row {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.preview-image {
+  flex: 0 0 auto;
+}
+
+.preview-meta {
+  flex: 1 1 auto;
+}
+
+.preview-name {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.preview-action {
+  align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+  .preview-row {
+    flex-wrap: wrap;
+  }
+}
+</style>
 
 <i18n lang="json">
 {
