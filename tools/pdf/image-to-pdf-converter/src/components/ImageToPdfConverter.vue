@@ -1,50 +1,41 @@
 <template>
-  <n-flex vertical :size="24">
+  <div class="image-to-pdf-converter">
     <ImageToPdfUploadSection :is-adding-file="isAddingFile" @add-file="handleAddFile" />
 
-    <n-grid cols="1 xl:2" responsive="screen" :x-gap="24" :y-gap="24">
-      <n-gi>
-        <ImageToPdfQueue
-          :items="items"
-          :selected-item-id="selectedItemId"
-          @clear="clearAll"
-          @select="selectItem"
-          @rotate="rotateItem"
-          @move-up="moveItemUp"
-          @move-down="moveItemDown"
-          @reorder="handleReorder"
-          @remove="removeItem"
+    <div class="image-to-pdf-converter__main">
+      <ImageToPdfQueue
+        :items="items"
+        @clear="clearAll"
+        @rotate="rotateItem"
+        @move-up="moveItemUp"
+        @move-down="moveItemDown"
+        @reorder="handleReorder"
+        @remove="removeItem"
+      />
+
+      <div class="image-to-pdf-converter__sidebar">
+        <ImageToPdfPageLayoutSection v-model:options="options" />
+        <ImageToPdfGenerateSection
+          :can-generate="canGenerate"
+          :is-generating="isGenerating"
+          :progress="generationProgress"
+          :download-url="resultUrl ?? null"
+          :download-filename="resultFilename"
+          :output-size="resultBlob?.size ?? null"
+          :page-count="items.length"
+          @generate="handleGenerate"
         />
-      </n-gi>
-
-      <n-gi>
-        <n-flex vertical :size="16">
-          <ImageToPdfOptionsSection v-model:options="options" />
-          <ImageToPdfGenerateSection
-            :can-generate="canGenerate"
-            :is-generating="isGenerating"
-            :progress="generationProgress"
-            :download-url="resultUrl ?? null"
-            :download-filename="resultFilename"
-            :output-size="resultBlob?.size ?? null"
-            :page-count="items.length"
-            @generate="handleGenerate"
-          />
-        </n-flex>
-      </n-gi>
-    </n-grid>
-
-    <ImageToPdfPreviewSection :item="selectedItem" :layout="previewLayout" />
-  </n-flex>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { NFlex, NGi, NGrid, useMessage } from 'naive-ui'
+import { useMessage } from 'naive-ui'
 import { useImageToPdfConverter } from '../composables/useImageToPdfConverter'
 import ImageToPdfGenerateSection from './ImageToPdfGenerateSection.vue'
-import ImageToPdfOptionsSection from './ImageToPdfOptionsSection.vue'
-import ImageToPdfPreviewSection from './ImageToPdfPreviewSection.vue'
+import ImageToPdfPageLayoutSection from './ImageToPdfPageLayoutSection.vue'
 import ImageToPdfQueue from './ImageToPdfQueue.vue'
 import ImageToPdfUploadSection from './ImageToPdfUploadSection.vue'
 
@@ -54,9 +45,6 @@ const message = useMessage()
 const {
   items,
   options,
-  selectedItemId,
-  selectedItem,
-  previewLayout,
   isAddingFile,
   isGenerating,
   generationProgress,
@@ -65,7 +53,6 @@ const {
   resultUrl,
   canGenerate,
   addFile,
-  selectItem,
   rotateItem,
   removeItem,
   clearAll,
@@ -117,6 +104,31 @@ async function handleGenerate() {
   message.error(t('generateFailed'))
 }
 </script>
+
+<style scoped>
+.image-to-pdf-converter {
+  display: grid;
+  gap: 20px;
+}
+
+.image-to-pdf-converter__main {
+  display: grid;
+  gap: 20px;
+}
+
+.image-to-pdf-converter__sidebar {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+@media (min-width: 1280px) {
+  .image-to-pdf-converter__main {
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    align-items: start;
+  }
+}
+</style>
 
 <i18n lang="json">
 {

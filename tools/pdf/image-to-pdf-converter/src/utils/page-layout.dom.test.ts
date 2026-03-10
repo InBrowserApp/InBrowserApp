@@ -9,6 +9,17 @@ describe('mmToPt', () => {
 })
 
 describe('resolvePageDimensions', () => {
+  it('returns the dimensions for the extended preset list', () => {
+    expect(resolvePageDimensions('a3', 'portrait', 1600, 900)).toEqual({
+      width: 841.89,
+      height: 1190.55,
+    })
+    expect(resolvePageDimensions('legal', 'portrait', 1600, 900)).toEqual({
+      width: 612,
+      height: 1008,
+    })
+  })
+
   it('keeps portrait pages in portrait mode', () => {
     expect(resolvePageDimensions('a4', 'portrait', 1600, 900)).toEqual({
       width: 595.28,

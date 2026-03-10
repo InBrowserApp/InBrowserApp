@@ -1,5 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { createImageToPdf, getJpegQuality, normalizeOutputFileName } from './image-to-pdf'
+import {
+  createImageToPdf,
+  getJpegQuality,
+  getOutputFileName,
+  normalizeOutputFileName,
+} from './image-to-pdf'
 import type { ConverterOptions, ImageQueueItem } from '../types'
 
 const pdfLibMocks = vi.hoisted(() => {
@@ -45,6 +50,18 @@ describe('normalizeOutputFileName', () => {
     expect(normalizeOutputFileName(' scan:/set ')).toBe('scan-set.pdf')
     expect(normalizeOutputFileName('   ')).toBe('images.pdf')
   })
+
+  it('caps very long file names to keep downloads stable', () => {
+    expect(normalizeOutputFileName('a'.repeat(150))).toHaveLength(124)
+  })
+})
+
+describe('getOutputFileName', () => {
+  it('derives a bounded filename from the queue', () => {
+    expect(getOutputFileName([])).toBe('images.pdf')
+    expect(getOutputFileName([{ name: 'receipt.final.png' }])).toBe('receipt.final.pdf')
+    expect(getOutputFileName([{ name: '1.jpg' }, { name: '2.jpg' }])).toBe('images-2-pages.pdf')
+  })
 })
 
 describe('getJpegQuality', () => {
@@ -57,7 +74,6 @@ describe('getJpegQuality', () => {
 
 describe('createImageToPdf', () => {
   const options: ConverterOptions = {
-    outputName: 'images',
     pageSize: 'a4',
     pageOrientation: 'auto',
     fitMode: 'contain',

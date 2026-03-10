@@ -9,13 +9,33 @@ import type {
 const PT_PER_MM = 72 / 25.4
 
 const pageDimensionsByPreset: Record<PageSizePreset, PageDimensions> = {
+  a3: {
+    width: 841.89,
+    height: 1190.55,
+  },
   a4: {
     width: 595.28,
     height: 841.89,
   },
+  a5: {
+    width: 419.53,
+    height: 595.28,
+  },
+  b5: {
+    width: 498.9,
+    height: 708.66,
+  },
   letter: {
     width: 612,
     height: 792,
+  },
+  legal: {
+    width: 612,
+    height: 1008,
+  },
+  tabloid: {
+    width: 792,
+    height: 1224,
   },
 }
 

@@ -6,17 +6,14 @@ import type {
   GenerateErrorCode,
   ImageQueueItem,
   PdfGenerationProgress,
-  PreviewLayout,
   Rotation,
 } from '../types'
 import { getFileSignature, readImageDimensions } from '../utils/image-file'
-import { createImageToPdf, normalizeOutputFileName } from '../utils/image-to-pdf'
-import { getImagePlacement, mmToPt, resolvePageDimensions } from '../utils/page-layout'
+import { createImageToPdf, getOutputFileName } from '../utils/image-to-pdf'
 
 type GenerateResult = { success: true } | { success: false; code: GenerateErrorCode }
 
 const defaultOptions: ConverterOptions = {
-  outputName: 'images',
   pageSize: 'a4',
   pageOrientation: 'auto',
   fitMode: 'contain',
@@ -29,47 +26,12 @@ let fallbackIdCounter = 0
 export function useImageToPdfConverter() {
   const items = ref<ImageQueueItem[]>([])
   const options = ref<ConverterOptions>({ ...defaultOptions })
-  const selectedItemId = ref<string | null>(null)
   const isAddingFile = ref(false)
   const isGenerating = ref(false)
   const generationProgress = ref<PdfGenerationProgress | null>(null)
   const resultBlob = ref<Blob | null>(null)
-  const resultFilename = computed(() => normalizeOutputFileName(options.value.outputName))
+  const resultFilename = computed(() => getOutputFileName(items.value))
   const resultUrl = useObjectUrl(resultBlob)
-  const totalInputSize = computed(() => items.value.reduce((sum, item) => sum + item.size, 0))
-  const selectedItem = computed(() => {
-    if (!items.value.length) {
-      return null
-    }
-
-    return items.value.find((item) => item.id === selectedItemId.value) ?? items.value[0] ?? null
-  })
-  const previewLayout = computed<PreviewLayout | null>(() => {
-    const item = selectedItem.value
-
-    if (!item) {
-      return null
-    }
-
-    const rotatedDimensions = getRotatedDimensions(item.width, item.height, item.rotation)
-    const page = resolvePageDimensions(
-      options.value.pageSize,
-      options.value.pageOrientation,
-      rotatedDimensions.width,
-      rotatedDimensions.height,
-    )
-
-    return {
-      page,
-      placement: getImagePlacement({
-        page,
-        imageWidth: rotatedDimensions.width,
-        imageHeight: rotatedDimensions.height,
-        marginPt: mmToPt(options.value.marginMm),
-        fitMode: options.value.fitMode,
-      }),
-    }
-  })
   const canGenerate = computed(() => items.value.length > 0 && !isGenerating.value)
   const hasResult = computed(() => resultBlob.value !== null && Boolean(resultUrl.value))
 
@@ -114,17 +76,12 @@ export function useImageToPdfConverter() {
       }
 
       items.value = [...items.value, item]
-      selectedItemId.value = item.id
       return 'added'
     } catch {
       return 'invalid-image'
     } finally {
       isAddingFile.value = false
     }
-  }
-
-  function selectItem(id: string) {
-    selectedItemId.value = id
   }
 
   function rotateItem(id: string) {
@@ -149,10 +106,6 @@ export function useImageToPdfConverter() {
 
     URL.revokeObjectURL(itemToRemove.previewUrl)
     items.value = items.value.filter((item) => item.id !== id)
-
-    if (selectedItemId.value === id) {
-      selectedItemId.value = items.value[0]?.id ?? null
-    }
   }
 
   function clearAll() {
@@ -161,7 +114,6 @@ export function useImageToPdfConverter() {
     }
 
     items.value = []
-    selectedItemId.value = null
     generationProgress.value = null
     resultBlob.value = null
   }
@@ -253,20 +205,15 @@ export function useImageToPdfConverter() {
   return {
     items,
     options,
-    selectedItemId,
-    selectedItem,
-    previewLayout,
     isAddingFile,
     isGenerating,
     generationProgress,
     resultBlob,
     resultFilename,
     resultUrl,
-    totalInputSize,
     canGenerate,
     hasResult,
     addFile,
-    selectItem,
     rotateItem,
     removeItem,
     clearAll,
@@ -287,18 +234,4 @@ function createItemId() {
 
   fallbackIdCounter += 1
   return `image-to-pdf-${fallbackIdCounter}`
-}
-
-function getRotatedDimensions(width: number, height: number, rotation: Rotation) {
-  if (rotation === 90 || rotation === 270) {
-    return {
-      width: height,
-      height: width,
-    }
-  }
-
-  return {
-    width,
-    height,
-  }
 }

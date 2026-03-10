@@ -1,15 +1,15 @@
 <template>
   <ToolSectionHeader>{{ t('queueTitle') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="12">
-      <n-flex align="center" justify="space-between">
+    <div class="queue">
+      <div class="queue__toolbar">
         <n-text depth="3">{{
           t('queueSummary', { count: items.length, size: totalSizeLabel })
         }}</n-text>
         <n-button quaternary size="small" :disabled="items.length === 0" @click="emit('clear')">
           {{ t('clearAll') }}
         </n-button>
-      </n-flex>
+      </div>
 
       <n-empty v-if="items.length === 0" size="small" :description="t('emptyState')" />
 
@@ -23,93 +23,24 @@
         @end="handleSortEnd"
       >
         <template #item="{ element, index }">
-          <div
+          <ImageToPdfQueueItem
             :key="element.id"
-            class="queue-item"
-            :class="{ 'queue-item--selected': element.id === selectedItemId }"
-            @click="emit('select', element.id)"
-          >
-            <div class="queue-item__left">
-              <div
-                class="queue-item__handle"
-                :aria-label="t('dragHandle')"
-                style="display: flex; align-items: center; cursor: grab; touch-action: none"
-              >
-                <n-icon :depth="3" size="20">
-                  <ReOrderDotsHorizontal24Regular />
-                </n-icon>
-              </div>
-
-              <img
-                :src="element.previewUrl"
-                :alt="element.name"
-                style="
-                  width: 56px;
-                  height: 56px;
-                  border-radius: 8px;
-                  object-fit: cover;
-                  background: var(--n-color-embedded);
-                "
-              />
-
-              <div style="display: flex; min-width: 0; flex-direction: column">
-                <n-text strong>{{ index + 1 }}. {{ element.name }}</n-text>
-                <n-text depth="3">{{ formatImageMeta(element) }}</n-text>
-              </div>
-            </div>
-
-            <n-flex :size="4">
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('rotate')"
-                @click.stop="emit('rotate', element.id)"
-              >
-                <template #icon>
-                  <n-icon :component="ArrowCounterclockwise16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :disabled="index === 0"
-                :aria-label="t('moveUp')"
-                @click.stop="emit('move-up', index)"
-              >
-                <template #icon>
-                  <n-icon :component="ArrowUp16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :disabled="index === items.length - 1"
-                :aria-label="t('moveDown')"
-                @click.stop="emit('move-down', index)"
-              >
-                <template #icon>
-                  <n-icon :component="ArrowDown16Regular" />
-                </template>
-              </n-button>
-              <n-button
-                quaternary
-                circle
-                size="small"
-                :aria-label="t('remove')"
-                @click.stop="emit('remove', element.id)"
-              >
-                <template #icon>
-                  <n-icon :component="Delete16Regular" />
-                </template>
-              </n-button>
-            </n-flex>
-          </div>
+            :item="element"
+            :index="index"
+            :is-last="index === items.length - 1"
+            :rotate-label="t('rotate')"
+            :move-up-label="t('moveUp')"
+            :move-down-label="t('moveDown')"
+            :remove-label="t('remove')"
+            :drag-handle-label="t('dragHandle')"
+            @rotate="emit('rotate', element.id)"
+            @move-up="emit('move-up', index)"
+            @move-down="emit('move-down', index)"
+            @remove="emit('remove', element.id)"
+          />
         </template>
       </Sortable>
-    </n-flex>
+    </div>
   </ToolSection>
 </template>
 
@@ -117,24 +48,18 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { filesize } from 'filesize'
-import { NButton, NEmpty, NFlex, NIcon, NText } from 'naive-ui'
+import { NButton, NEmpty, NText } from 'naive-ui'
 import { Sortable } from 'sortablejs-vue3'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
-import ArrowDown16Regular from '@vicons/fluent/ArrowDown16Regular'
-import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
-import Delete16Regular from '@vicons/fluent/Delete16Regular'
-import ReOrderDotsHorizontal24Regular from '@vicons/fluent/ReOrderDotsHorizontal24Regular'
 import type { ImageQueueItem } from '../types'
+import ImageToPdfQueueItem from './ImageToPdfQueueItem.vue'
 
 const props = defineProps<{
   items: ImageQueueItem[]
-  selectedItemId: string | null
 }>()
 
 const emit = defineEmits<{
   (event: 'clear'): void
-  (event: 'select', id: string): void
   (event: 'rotate', id: string): void
   (event: 'move-up', index: number): void
   (event: 'move-down', index: number): void
@@ -163,36 +88,25 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
     newIndex: event.newIndex ?? null,
   })
 }
-
-function formatImageMeta(item: ImageQueueItem) {
-  return `${item.width} × ${item.height} · ${filesize(item.size)}`
-}
 </script>
 
 <style scoped>
+.queue {
+  display: grid;
+  gap: 12px;
+}
+
+.queue__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .queue-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.queue-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--n-border-color);
-  background: var(--n-card-color);
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.queue-item--selected {
-  border-color: var(--n-primary-color);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--n-primary-color) 45%, transparent);
 }
 
 .queue-item--ghost {
@@ -205,14 +119,6 @@ function formatImageMeta(item: ImageQueueItem) {
 
 .queue-item--dragging {
   opacity: 0.75;
-}
-
-.queue-item__left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-  flex: 1;
 }
 </style>
 

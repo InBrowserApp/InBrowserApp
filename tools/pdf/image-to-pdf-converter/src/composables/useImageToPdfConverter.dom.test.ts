@@ -44,7 +44,17 @@ vi.mock('../utils/image-to-pdf', () => ({
     options: unknown
     onProgress?: (progress: { completed: number; total: number }) => void
   }) => imageToPdfMocks.createImageToPdfMock(payload),
-  normalizeOutputFileName: (name: string) => `${name.trim() || 'images'}.pdf`,
+  getOutputFileName: (items: Array<{ name: string }>) => {
+    if (items.length === 1) {
+      return `${items[0]?.name.replace(/\.[^.]+$/, '') || 'images'}.pdf`
+    }
+
+    if (items.length > 1) {
+      return `images-${items.length}-pages.pdf`
+    }
+
+    return 'images.pdf'
+  },
 }))
 
 const Harness = defineComponent({
@@ -89,7 +99,7 @@ describe('useImageToPdfConverter', () => {
     revokeObjectUrlMock.mockImplementation(() => {})
   })
 
-  it('adds files, prevents duplicates, and derives preview layout', async () => {
+  it('adds files, prevents duplicates, and derives the download filename', async () => {
     mount(Harness)
     const vm = latestHarnessState
     const image = createFile('receipt.jpg')
@@ -102,9 +112,7 @@ describe('useImageToPdfConverter', () => {
     await expect(vm.addFile(image)).resolves.toBe('duplicate')
 
     expect(vm.items.value).toHaveLength(1)
-    expect(vm.selectedItem.value?.name).toBe('receipt.jpg')
-    expect(vm.previewLayout.value?.page.width).toBeCloseTo(841.89)
-    expect(vm.previewLayout.value?.placement.width).toBeGreaterThan(0)
+    expect(vm.resultFilename.value).toBe('receipt.pdf')
   })
 
   it('rotates, reorders, and removes queue items', async () => {
@@ -117,6 +125,8 @@ describe('useImageToPdfConverter', () => {
 
     await vm.addFile(createFile('one.jpg'))
     await vm.addFile(createFile('two.jpg'))
+
+    expect(vm.resultFilename.value).toBe('images-2-pages.pdf')
 
     const firstId = vm.items.value[0]?.id
     const secondId = vm.items.value[1]?.id
@@ -145,7 +155,6 @@ describe('useImageToPdfConverter', () => {
     }
 
     await vm.addFile(createFile('scan.jpg'))
-    vm.options.value.outputName = 'scan-export'
 
     const generateResult = await vm.generate()
 
@@ -153,7 +162,7 @@ describe('useImageToPdfConverter', () => {
     expect(imageToPdfMocks.createImageToPdfMock).toHaveBeenCalledTimes(1)
     expect(vm.generationProgress.value).toEqual({ completed: 1, total: 1 })
     expect(vm.resultBlob.value?.type).toBe('application/pdf')
-    expect(vm.resultFilename.value).toBe('scan-export.pdf')
+    expect(vm.resultFilename.value).toBe('scan.pdf')
     expect(vm.resultUrl.value).toBe('blob:download')
 
     wrapper.unmount()

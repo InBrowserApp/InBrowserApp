@@ -1,51 +1,45 @@
 <template>
-  <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-form label-placement="top">
-      <n-grid cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="8">
-        <n-gi>
-          <n-form-item :label="t('fitMode')" :show-feedback="false">
-            <n-select
-              :value="fitMode"
-              :options="fitModeOptions"
-              @update:value="emit('update:fit-mode', $event)"
-            />
-          </n-form-item>
-        </n-gi>
+  <n-grid :aria-label="t('title')" cols="1 s:2" responsive="screen" :x-gap="12" :y-gap="8">
+    <n-gi>
+      <n-form-item :label="t('fitMode')" :show-feedback="false">
+        <n-select
+          :value="fitMode"
+          :options="fitModeOptions"
+          @update:value="emit('update:fit-mode', $event)"
+        />
+      </n-form-item>
+    </n-gi>
 
-        <n-gi>
-          <n-form-item :label="t('quality')" :show-feedback="false">
-            <n-select
-              :value="qualityPreset"
-              :options="qualityOptions"
-              @update:value="emit('update:quality-preset', $event)"
-            />
-          </n-form-item>
-        </n-gi>
+    <n-gi>
+      <n-form-item :label="t('quality')" :show-feedback="false">
+        <n-select
+          :value="qualityPreset"
+          :options="qualityOptions"
+          @update:value="emit('update:quality-preset', $event)"
+        />
+      </n-form-item>
+    </n-gi>
 
-        <n-form-item-gi :label="t('margin')" :show-feedback="false" :span="2">
-          <n-input-number
-            :value="marginMm"
-            :min="0"
-            :max="40"
-            :step="1"
-            style="width: 100%"
-            @update:value="handleMarginUpdate"
-          >
-            <template #suffix>{{ t('millimeterUnit') }}</template>
-          </n-input-number>
-        </n-form-item-gi>
-      </n-grid>
-    </n-form>
-  </ToolSection>
+    <n-form-item-gi :label="t('margin')" :show-feedback="false" :span="2">
+      <n-input-number
+        :value="marginMm"
+        :min="0"
+        :max="40"
+        :step="1"
+        style="width: 100%"
+        @update:value="handleMarginUpdate"
+      >
+        <template #suffix>{{ t('millimeterUnit') }}</template>
+      </n-input-number>
+    </n-form-item-gi>
+  </n-grid>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { SelectOption } from 'naive-ui'
-import { NForm, NFormItem, NFormItemGi, NGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { NFormItem, NFormItemGi, NGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
 import type { FitMode, QualityPreset } from '../types'
 
 defineProps<{

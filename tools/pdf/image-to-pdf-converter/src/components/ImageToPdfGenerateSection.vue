@@ -1,7 +1,7 @@
 <template>
   <ToolSectionHeader>{{ t('generateTitle') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="12">
+    <div class="generate-section">
       <n-button
         type="primary"
         :loading="isGenerating"
@@ -11,7 +11,7 @@
         {{ t('generateButton') }}
       </n-button>
 
-      <n-flex v-if="progress" vertical :size="8">
+      <div v-if="progress" class="generate-section__progress">
         <n-text depth="3">
           {{ t('progressLabel', { completed: progress.completed, total: progress.total }) }}
         </n-text>
@@ -21,10 +21,10 @@
           :show-indicator="false"
           :percentage="progressPercentage"
         />
-      </n-flex>
+      </div>
 
       <n-card v-if="downloadUrl" size="small">
-        <n-flex vertical :size="8">
+        <div class="generate-section__result">
           <n-text strong>{{ t('resultReady') }}</n-text>
           <n-text depth="3">
             {{ t('resultSummary', { pages: pageCount, size: outputSizeLabel }) }}
@@ -38,9 +38,9 @@
           >
             {{ t('downloadButton') }}
           </n-button>
-        </n-flex>
+        </div>
       </n-card>
-    </n-flex>
+    </div>
   </ToolSection>
 </template>
 
@@ -48,7 +48,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { filesize } from 'filesize'
-import { NButton, NCard, NFlex, NProgress, NText } from 'naive-ui'
+import { NButton, NCard, NProgress, NText } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PdfGenerationProgress } from '../types'
 
@@ -84,6 +84,15 @@ const outputSizeLabel = computed(() => {
   return filesize(props.outputSize)
 })
 </script>
+
+<style scoped>
+.generate-section,
+.generate-section__progress,
+.generate-section__result {
+  display: grid;
+  gap: 12px;
+}
+</style>
 
 <i18n lang="json">
 {

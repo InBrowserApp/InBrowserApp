@@ -1,4 +1,4 @@
-export type PageSizePreset = 'a4' | 'letter'
+export type PageSizePreset = 'a3' | 'a4' | 'a5' | 'b5' | 'letter' | 'legal' | 'tabloid'
 
 export type PageOrientation = 'auto' | 'portrait' | 'landscape'
 
@@ -13,7 +13,6 @@ export type AddFileResult = 'added' | 'duplicate' | 'invalid-image'
 export type GenerateErrorCode = 'invalid-image' | 'canvas-unavailable' | 'generate-failed'
 
 export interface ConverterOptions {
-  outputName: string
   pageSize: PageSizePreset
   pageOrientation: PageOrientation
   fitMode: FitMode
@@ -42,11 +41,6 @@ export interface ImagePlacement {
   y: number
   width: number
   height: number
-}
-
-export interface PreviewLayout {
-  page: PageDimensions
-  placement: ImagePlacement
 }
 
 export interface PdfGenerationProgress {

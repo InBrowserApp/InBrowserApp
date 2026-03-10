@@ -56,6 +56,18 @@ export async function createImageToPdf({
   return new Blob([pdfBytes], { type: 'application/pdf' })
 }
 
+export function getOutputFileName(items: Pick<ImageQueueItem, 'name'>[]) {
+  if (items.length === 1) {
+    return normalizeOutputFileName(stripFileExtension(items[0]?.name ?? 'images'))
+  }
+
+  if (items.length > 1) {
+    return normalizeOutputFileName(`images-${items.length}-pages`)
+  }
+
+  return 'images.pdf'
+}
+
 export function normalizeOutputFileName(name: string) {
   const sanitizedBaseName = name
     .trim()
@@ -65,6 +77,7 @@ export function normalizeOutputFileName(name: string) {
     .join('')
     .replace(/-+/g, '-')
     .replace(/\s+/g, ' ')
+    .slice(0, 120)
     .trim()
 
   return `${sanitizedBaseName || 'images'}.pdf`
@@ -88,4 +101,8 @@ function isInvalidFileNameCharacter(character: string) {
   }
 
   return character.charCodeAt(0) <= 31
+}
+
+function stripFileExtension(name: string) {
+  return name.replace(/\.[^.]+$/, '')
 }

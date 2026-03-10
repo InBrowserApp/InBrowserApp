@@ -16,20 +16,10 @@ const composableMocks = vi.hoisted(() => ({
 
 vi.mock('naive-ui', async () => {
   const actual = await vi.importActual<typeof import('naive-ui')>('naive-ui')
-  const { defineComponent } = await import('vue')
-
-  const BaseStub = defineComponent({
-    name: 'BaseStub',
-    inheritAttrs: false,
-    template: '<div><slot /></div>',
-  })
 
   return {
     ...actual,
     useMessage: () => messageMock,
-    NFlex: BaseStub,
-    NGi: BaseStub,
-    NGrid: BaseStub,
   }
 })
 
@@ -135,9 +125,8 @@ function mountConverter() {
       stubs: {
         ImageToPdfUploadSection: UploadStub,
         ImageToPdfQueue: VoidStub,
-        ImageToPdfOptionsSection: VoidStub,
+        ImageToPdfPageLayoutSection: VoidStub,
         ImageToPdfGenerateSection: GenerateStub,
-        ImageToPdfPreviewSection: VoidStub,
       },
     },
   })
@@ -147,27 +136,21 @@ function createComposableState() {
   return {
     items: ref([]),
     options: ref({
-      outputName: 'images',
       pageSize: 'a4',
       pageOrientation: 'auto',
       fitMode: 'contain',
       marginMm: 12,
       qualityPreset: 'balanced',
     }),
-    selectedItemId: ref<string | null>(null),
-    selectedItem: ref(null),
-    previewLayout: ref(null),
     isAddingFile: ref(false),
     isGenerating: ref(false),
     generationProgress: ref(null),
     resultBlob: ref<Blob | null>(null),
     resultFilename: ref('images.pdf'),
     resultUrl: ref<string | null>(null),
-    totalInputSize: ref(0),
     canGenerate: ref(true),
     hasResult: ref(false),
     addFile: vi.fn(),
-    selectItem: vi.fn(),
     rotateItem: vi.fn(),
     removeItem: vi.fn(),
     clearAll: vi.fn(),

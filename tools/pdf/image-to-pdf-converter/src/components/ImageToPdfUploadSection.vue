@@ -1,7 +1,7 @@
 <template>
   <ToolSectionHeader>{{ t('uploadTitle') }}</ToolSectionHeader>
   <ToolSection>
-    <n-flex vertical :size="8">
+    <div class="upload-section">
       <n-upload
         accept="image/*"
         multiple
@@ -21,7 +21,7 @@
       <n-text depth="3">
         {{ isAddingFile ? t('readingFile') : t('localOnlyNote') }}
       </n-text>
-    </n-flex>
+    </div>
   </ToolSection>
 </template>
 
@@ -29,7 +29,7 @@
 import { onBeforeUnmount, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { UploadFileInfo } from 'naive-ui'
-import { NFlex, NIcon, NP, NText, NUpload, NUploadDragger, useMessage } from 'naive-ui'
+import { NIcon, NP, NText, NUpload, NUploadDragger, useMessage } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ImageMultiple24Regular from '@vicons/fluent/ImageMultiple24Regular'
 
@@ -93,6 +93,13 @@ function isProbablyImageFile(file: File) {
   )
 }
 </script>
+
+<style scoped>
+.upload-section {
+  display: grid;
+  gap: 8px;
+}
+</style>
 
 <i18n lang="json">
 {
