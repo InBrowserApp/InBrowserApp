@@ -103,6 +103,7 @@ import { routes as randomPasswordGeneratorRoutes } from '@tools/random-password-
 import { routes as randomNumberGeneratorRoutes } from '@tools/random-number-generator/routes'
 import { routes as bip39MnemonicGeneratorRoutes } from '@tools/bip39-mnemonic-generator/routes'
 import { routes as ksuidGeneratorRoutes } from '@tools/ksuid-generator/routes'
+import { routes as listComparerRoutes } from '@tools/list-comparer/routes'
 import { routes as nanoidGeneratorRoutes } from '@tools/nanoid-generator/routes'
 import { routes as cuid2GeneratorRoutes } from '@tools/cuid2-generator/routes'
 import { routes as qrCodeGeneratorRoutes } from '@tools/qr-code-generator/routes'
@@ -378,6 +379,7 @@ export const routes: ToolRoute[] = [
   ...portNumberLookupRoutes,
   ...httpStatusCodeLookupRoutes,
   ...mimeTypeLookupRoutes,
+  ...listComparerRoutes,
   ...textStatisticsRoutes,
   ...regexTesterReplacerRoutes,
   ...loremIpsumGeneratorRoutes,
