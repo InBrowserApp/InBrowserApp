@@ -185,7 +185,7 @@ describe('usePdfPageOrganizer', () => {
     expect(vm.selectedCount).toBe(3)
 
     vm.rotateSelectedPages(-90)
-    expect(vm.pages.map((page) => page.rotationOffset)).toEqual([270, 270, 270])
+    expect(vm.pages.map((page) => page.rotationOffset)).toEqual([-90, -90, -90])
 
     vm.deleteSelectedPages()
     expect(vm.pages).toHaveLength(0)
@@ -259,6 +259,34 @@ describe('usePdfPageOrganizer', () => {
     vm.deletePage('3')
     expect(vm.pages.map((page) => page.sourcePageNumber)).toEqual([2, 1])
     expect(vm.canRedo).toBe(false)
+  })
+
+  it('treats a full rotation cycle as visually continuous but logically unchanged', async () => {
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    await vm.handleUpload(new File(['pdf'], 'sample.pdf', { type: 'application/pdf' }))
+    await flushAll()
+
+    vm.rotatePage('1', 90)
+    vm.rotatePage('1', 90)
+    vm.rotatePage('1', 90)
+    vm.rotatePage('1', 90)
+
+    expect(vm.pages.find((page) => page.id === '1')?.rotationOffset).toBe(360)
+    expect(vm.hasChanges).toBe(false)
+
+    const exportResult = await vm.exportPdf()
+    expect(exportResult.success).toBe(true)
+    expect(organizePdfWithWorkerMock).toHaveBeenLastCalledWith({
+      file: expect.objectContaining({ name: 'sample.pdf' }),
+      outputFileName: 'sample-organized.pdf',
+      pages: [
+        { sourcePageNumber: 1, rotation: 0 },
+        { sourcePageNumber: 2, rotation: 90 },
+        { sourcePageNumber: 3, rotation: 180 },
+      ],
+    })
   })
 
   it('handles invalid files, stale preview/upload races, and edge export paths', async () => {

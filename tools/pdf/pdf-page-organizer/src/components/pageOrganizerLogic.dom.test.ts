@@ -93,7 +93,7 @@ describe('page organizer operations', () => {
     expect(rotatePageState(pages, '2', 90)?.[1]?.rotationOffset).toBe(90)
     expect(rotatePagesState(pages, [], 90)).toBeNull()
     expect(rotatePagesState(pages, ['1', '3'], -90)?.map((page) => page.rotationOffset)).toEqual([
-      270, 0, 270,
+      -90, 0, -90,
     ])
 
     expect(deletePagesState(pages, [])).toBeNull()
@@ -120,6 +120,7 @@ describe('page organizer operations', () => {
       thumbnailUrl: 'blob:2',
       isLoading: false,
       originalRotation: 90,
+      rotationOffset: 0,
     })
   })
 })

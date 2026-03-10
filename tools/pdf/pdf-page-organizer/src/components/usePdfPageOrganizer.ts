@@ -53,7 +53,8 @@ export const usePdfPageOrganizer = () => {
     }
 
     return pages.value.some(
-      (page, index) => page.sourcePageNumber !== index + 1 || page.rotationOffset !== 0,
+      (page, index) =>
+        page.sourcePageNumber !== index + 1 || normalizeRotation(page.rotationOffset) !== 0,
     )
   })
 

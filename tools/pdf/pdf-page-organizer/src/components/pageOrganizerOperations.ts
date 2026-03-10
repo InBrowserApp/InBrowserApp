@@ -1,4 +1,4 @@
-import { createPageState, normalizeRotation, type OrganizerPage } from './pageOrganizerState'
+import { createPageState, type OrganizerPage } from './pageOrganizerState'
 
 export type SelectionState = {
   selectedPageIds: string[]
@@ -56,7 +56,7 @@ export const rotatePageState = (
     currentPage.id === pageId
       ? {
           ...currentPage,
-          rotationOffset: normalizeRotation(page.rotationOffset + delta),
+          rotationOffset: page.rotationOffset + delta,
         }
       : currentPage,
   )
@@ -76,7 +76,7 @@ export const rotatePagesState = (
     selectedIds.has(page.id)
       ? {
           ...page,
-          rotationOffset: normalizeRotation(page.rotationOffset + delta),
+          rotationOffset: page.rotationOffset + delta,
         }
       : page,
   )
@@ -136,6 +136,7 @@ export const createPagesFromRotations = (
   originalPageRotations: number[],
   existingPagesByNumber?: Map<number, OrganizerPage>,
 ): OrganizerPage[] =>
-  originalPageRotations.map((rotation, index) =>
-    createPageState(index + 1, rotation, existingPagesByNumber?.get(index + 1)),
-  )
+  originalPageRotations.map((rotation, index) => ({
+    ...createPageState(index + 1, rotation, existingPagesByNumber?.get(index + 1)),
+    rotationOffset: 0,
+  }))
