@@ -115,6 +115,7 @@ describe('PDFPageNumberPreview', () => {
     await wrapper.getComponent(NPagination).vm.$emit('update:page', 2)
     await flushPromises()
 
+    expect(loadPdfDocumentMock).toHaveBeenCalledOnce()
     expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(2)
 
     await wrapper.setProps({
@@ -127,7 +128,14 @@ describe('PDFPageNumberPreview', () => {
     expect(
       contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '6')),
     ).toBe(true)
-    expect(contexts.some((context) => context.font.includes('serif'))).toBe(true)
+    expect(contexts.some((context) => context.font.includes('Times New Roman'))).toBe(true)
+    expect(contexts.every((context) => context.fillRect.mock.calls.length === 0)).toBe(true)
+    expect(loadingTaskDestroyMock).not.toHaveBeenCalled()
+    expect(pdfDocumentMock.document.destroy).not.toHaveBeenCalled()
+
+    wrapper.unmount()
+    await flushPromises()
+
     expect(loadingTaskDestroyMock).toHaveBeenCalled()
     expect(pdfDocumentMock.document.destroy).toHaveBeenCalled()
   })
@@ -192,6 +200,7 @@ describe('PDFPageNumberPreview', () => {
 
     await wrapper.getComponent(NPagination).vm.$emit('update:page', 2)
     await flushPromises()
+    expect(loadPdfDocumentMock).toHaveBeenCalledOnce()
     expect(pdfDocumentMock.document.getPage).toHaveBeenCalledWith(4)
     expect(
       contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '11')),

@@ -1,9 +1,9 @@
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
+import { PDFDocument, rgb } from 'pdf-lib'
 import { PDF_ERROR, isEncryptedPdfError } from './pdf-errors'
 import { buildPageNumberLabel, resolvePageNumberCoordinates } from './utils/page-number-layout'
+import { resolveStandardFont } from './utils/page-number-font'
 import type {
   AddPageNumbersPayload,
-  PageNumberFontFamily,
   AddPageNumbersWorkerError,
   AddPageNumbersWorkerSuccess,
 } from './types'
@@ -20,14 +20,6 @@ const withPdfExtension = (name: string): string => {
   }
 
   return `${trimmed}.pdf`
-}
-
-const resolveStandardFont = (fontFamily: PageNumberFontFamily): StandardFonts => {
-  if (fontFamily === 'serif') {
-    return StandardFonts.TimesRoman
-  }
-
-  return StandardFonts.Helvetica
 }
 
 const addPageNumbers = async (

@@ -1,6 +1,7 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import type { PDFDocumentProxy } from 'pdfjs-dist/types/src/pdf'
 import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
+import { measureStandardFontTextWidth, resolvePreviewFontFamily } from '../utils/page-number-font'
 import { buildPageNumberLabel, resolvePageNumberCoordinates } from '../utils/page-number-layout'
 import { getAllPages, parsePageSelection } from '../utils/page-range'
 import { loadPdfDocument } from '../utils/pdfjs'
@@ -19,6 +20,19 @@ type PreviewProps = {
   pageCount: number
 }
 
+const PREVIEW_STALE_ERROR = 'preview-stale'
+
+type PreviewDocumentState = {
+  file: File | null
+  loadingTask: ReturnType<typeof loadPdfDocument> | null
+  promise: Promise<PDFDocumentProxy> | null
+  proxy: PDFDocumentProxy | null
+  version: number
+}
+
+const isPreviewStaleError = (error: unknown): boolean =>
+  error instanceof Error && error.message === PREVIEW_STALE_ERROR
+
 export const usePdfPageNumberPreview = (props: PreviewProps) => {
   const previewCanvasRef = ref<HTMLCanvasElement | null>(null)
   const previewPage = ref(1)
@@ -26,7 +40,20 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   const hasPreviewError = ref(false)
 
   const renderedPageCanvas = document.createElement('canvas')
+  const previewDocumentState: PreviewDocumentState = {
+    file: null,
+    loadingTask: null,
+    promise: null,
+    proxy: null,
+    version: 0,
+  }
+
   let renderSequence = 0
+
+  const nextRenderSequence = (): number => {
+    renderSequence += 1
+    return renderSequence
+  }
 
   const previewPages = computed<number[]>(() => {
     if (props.pageCount < 1) {
@@ -45,7 +72,6 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   })
 
   const totalPreviewPages = computed(() => Math.max(1, previewPages.value.length))
-  const previewFontFamily = computed(() => (props.fontFamily === 'serif' ? 'serif' : 'sans-serif'))
 
   const previewPageIndex = computed(
     () => Math.min(Math.max(1, previewPage.value), totalPreviewPages.value) - 1,
@@ -76,9 +102,93 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     canvas.height = 0
   }
 
-  const drawPageNumberPreview = (): void => {
+  const showPreviewError = (): void => {
+    hasPreviewError.value = true
+    clearVisibleCanvas()
+  }
+
+  const destroyPreviewDocument = async (): Promise<void> => {
+    previewDocumentState.version += 1
+
+    const loadingTask = previewDocumentState.loadingTask
+    const documentProxy = previewDocumentState.proxy
+
+    previewDocumentState.file = null
+    previewDocumentState.loadingTask = null
+    previewDocumentState.promise = null
+    previewDocumentState.proxy = null
+
+    try {
+      await documentProxy?.destroy()
+    } catch {
+      // no-op
+    }
+
+    try {
+      await loadingTask?.destroy()
+    } catch {
+      // no-op
+    }
+  }
+
+  const createPreviewDocumentPromise = (file: File, version: number): Promise<PDFDocumentProxy> =>
+    (async () => {
+      const data = new Uint8Array(await file.arrayBuffer())
+      if (previewDocumentState.version !== version || previewDocumentState.file !== file) {
+        throw new Error(PREVIEW_STALE_ERROR)
+      }
+
+      const loadingTask = loadPdfDocument(data)
+      previewDocumentState.loadingTask = loadingTask
+
+      const documentProxy = await loadingTask.promise
+      if (previewDocumentState.version !== version || previewDocumentState.file !== file) {
+        try {
+          await documentProxy.destroy()
+        } catch {
+          // no-op
+        }
+
+        try {
+          await loadingTask.destroy()
+        } catch {
+          // no-op
+        }
+
+        throw new Error(PREVIEW_STALE_ERROR)
+      }
+
+      previewDocumentState.proxy = documentProxy
+      return documentProxy
+    })()
+
+  const ensurePreviewDocument = async (file: File): Promise<PDFDocumentProxy> => {
+    if (previewDocumentState.file !== file || !previewDocumentState.promise) {
+      await destroyPreviewDocument()
+      previewDocumentState.file = file
+      previewDocumentState.promise = createPreviewDocumentPromise(
+        file,
+        previewDocumentState.version,
+      )
+    }
+
+    return previewDocumentState.promise
+  }
+
+  const drawPageNumberPreview = async (sequence = renderSequence): Promise<void> => {
+    if (renderedPageCanvas.width < 1 || renderedPageCanvas.height < 1) {
+      return
+    }
+
+    const fontSize = previewFontSize.value
+    const label = previewLabel.value
+    const textWidth = await measureStandardFontTextWidth(label, fontSize, props.fontFamily)
+    if (sequence !== renderSequence) {
+      throw new Error(PREVIEW_STALE_ERROR)
+    }
+
     const canvas = previewCanvasRef.value
-    if (!canvas || renderedPageCanvas.width < 1 || renderedPageCanvas.height < 1) {
+    if (!canvas) {
       return
     }
 
@@ -87,19 +197,15 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
 
     const context = canvas.getContext('2d')
     if (!context) {
-      return
+      throw new Error('PREVIEW_CONTEXT_UNAVAILABLE')
     }
 
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.drawImage(renderedPageCanvas, 0, 0)
 
-    const fontSize = previewFontSize.value
-    const label = previewLabel.value
-
-    context.font = `${fontSize}px ${previewFontFamily.value}`
+    context.font = `${fontSize}px ${resolvePreviewFontFamily(props.fontFamily)}`
     context.textBaseline = 'top'
 
-    const textWidth = context.measureText(label).width
     const coordinates = resolvePageNumberCoordinates({
       pageWidth: canvas.width,
       pageHeight: canvas.height,
@@ -114,16 +220,15 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     const x = Math.min(Math.max(0, coordinates.x), Math.max(0, canvas.width - textWidth))
     const y = Math.min(Math.max(0, topY), Math.max(0, canvas.height - fontSize))
 
-    context.fillStyle = 'rgba(255, 255, 255, 0.84)'
-    context.fillRect(x - 4, y - 2, textWidth + 8, fontSize + 4)
-    context.fillStyle = 'rgba(0, 0, 0, 0.84)'
+    context.fillStyle = 'rgba(0, 0, 0, 0.92)'
     context.fillText(label, x, y)
   }
 
   const renderPreviewPage = async (): Promise<void> => {
-    const currentSequence = ++renderSequence
+    const currentSequence = nextRenderSequence()
 
     if (!props.file) {
+      await destroyPreviewDocument()
       hasPreviewError.value = false
       isRenderingPage.value = false
       clearVisibleCanvas()
@@ -143,18 +248,8 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     isRenderingPage.value = true
     hasPreviewError.value = false
 
-    let loadingTask: ReturnType<typeof loadPdfDocument> | null = null
-    let documentProxy: PDFDocumentProxy | null = null
-
     try {
-      const data = new Uint8Array(await props.file.arrayBuffer())
-      if (currentSequence !== renderSequence) {
-        return
-      }
-
-      loadingTask = loadPdfDocument(data)
-      documentProxy = await loadingTask.promise
-
+      const documentProxy = await ensurePreviewDocument(props.file)
       if (currentSequence !== renderSequence) {
         return
       }
@@ -188,27 +283,14 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
         return
       }
 
-      drawPageNumberPreview()
-    } catch {
-      if (currentSequence === renderSequence) {
-        hasPreviewError.value = true
-        clearVisibleCanvas()
+      await drawPageNumberPreview(currentSequence)
+    } catch (error) {
+      if (currentSequence === renderSequence && !isPreviewStaleError(error)) {
+        showPreviewError()
         renderedPageCanvas.width = 0
         renderedPageCanvas.height = 0
       }
     } finally {
-      try {
-        loadingTask?.destroy()
-      } catch {
-        // no-op
-      }
-
-      try {
-        documentProxy?.destroy()
-      } catch {
-        // no-op
-      }
-
       if (currentSequence === renderSequence) {
         isRenderingPage.value = false
       }
@@ -260,13 +342,19 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
     ],
     () => {
       if (!isRenderingPage.value && !hasPreviewError.value) {
-        drawPageNumberPreview()
+        const currentSequence = nextRenderSequence()
+        void drawPageNumberPreview(currentSequence).catch((error: unknown) => {
+          if (!isPreviewStaleError(error)) {
+            showPreviewError()
+          }
+        })
       }
     },
   )
 
   onBeforeUnmount(() => {
     renderSequence += 1
+    void destroyPreviewDocument()
   })
 
   return {

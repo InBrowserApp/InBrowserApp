@@ -145,6 +145,7 @@ import type { SelectOption } from 'naive-ui'
 import { NFlex, NForm, NFormItem, NGi, NGrid, NInput, NInputNumber, NSelect } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { PageNumberFontFamily, PageNumberFormat, PageNumberPosition } from '../types'
+import { resolvePreviewFontFamily } from '../utils/page-number-font'
 import PDFPageNumberPreview from './PDFPageNumberPreview.vue'
 import PDFPageNumberRangeErrorAlert from './PDFPageNumberRangeErrorAlert.vue'
 import { resolvePageNumberOptionLabels } from './page-number-option-labels'
@@ -192,14 +193,14 @@ type FontFamilyOption = {
 
 const fontFamilyOptions = computed<FontFamilyOption[]>(() => [
   {
-    label: `${t('fontFamilySans')} (Helvetica)`,
-    value: 'sans-serif',
-    previewFontFamily: 'Helvetica, Arial, sans-serif',
-  },
-  {
     label: `${t('fontFamilySerif')} (Times Roman)`,
     value: 'serif',
-    previewFontFamily: '"Times New Roman", Times, serif',
+    previewFontFamily: resolvePreviewFontFamily('serif'),
+  },
+  {
+    label: `${t('fontFamilySans')} (Helvetica)`,
+    value: 'sans-serif',
+    previewFontFamily: resolvePreviewFontFamily('sans-serif'),
   },
 ])
 
