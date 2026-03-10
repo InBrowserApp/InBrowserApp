@@ -32,6 +32,7 @@ const getFileBaseName = (filename: string): string => {
 
 export const usePdfPageNumberAdder = () => {
   let generationVersion = 0
+  let uploadVersion = 0
 
   const file = ref<File | null>(null)
   const pageCount = ref(0)
@@ -89,13 +90,23 @@ export const usePdfPageNumberAdder = () => {
     generateErrorCode.value = ''
   }
 
+  const clearUploadError = (): void => {
+    fileErrorCode.value = ''
+  }
+
   const invalidatePendingGeneration = (): void => {
     generationVersion += 1
     isGenerating.value = false
   }
 
+  const invalidatePendingUpload = (): void => {
+    uploadVersion += 1
+    isLoadingDocument.value = false
+  }
+
   const reset = (): void => {
     invalidatePendingGeneration()
+    invalidatePendingUpload()
     file.value = null
     pageCount.value = 0
     rangeInput.value = ''
@@ -106,7 +117,6 @@ export const usePdfPageNumberAdder = () => {
     fontSize.value = 12
     marginX.value = 24
     marginY.value = 24
-    isLoadingDocument.value = false
     clearErrors()
     clearResult()
   }
@@ -175,10 +185,12 @@ export const usePdfPageNumberAdder = () => {
 
   const handleUpload = async (nextFile: File): Promise<ActionResult> => {
     invalidatePendingGeneration()
-    clearErrors()
-    clearResult()
+    const currentUploadVersion = uploadVersion + 1
+    uploadVersion = currentUploadVersion
+    clearUploadError()
 
     if (!isPdfFile(nextFile)) {
+      isLoadingDocument.value = false
       fileErrorCode.value = PDF_ERROR.Invalid
       return { success: false, errorCode: PDF_ERROR.Invalid }
     }
@@ -187,18 +199,29 @@ export const usePdfPageNumberAdder = () => {
 
     try {
       const inspection = await inspectPdf(nextFile)
+      if (currentUploadVersion !== uploadVersion) {
+        return { success: false }
+      }
+
+      clearResult()
+      generateErrorCode.value = ''
       file.value = nextFile
       pageCount.value = inspection.pageCount
       rangeInput.value = ''
+      rangeErrorCode.value = ''
       return { success: true }
     } catch (error) {
-      file.value = null
-      pageCount.value = 0
+      if (currentUploadVersion !== uploadVersion) {
+        return { success: false }
+      }
+
       const code = error instanceof Error ? error.message : PDF_ERROR.Invalid
       fileErrorCode.value = code
       return { success: false, errorCode: code }
     } finally {
-      isLoadingDocument.value = false
+      if (currentUploadVersion === uploadVersion) {
+        isLoadingDocument.value = false
+      }
     }
   }
 
@@ -215,6 +238,7 @@ export const usePdfPageNumberAdder = () => {
     const currentGenerationVersion = generationVersion + 1
     generationVersion = currentGenerationVersion
     generateErrorCode.value = ''
+    clearResult()
     isGenerating.value = true
 
     try {

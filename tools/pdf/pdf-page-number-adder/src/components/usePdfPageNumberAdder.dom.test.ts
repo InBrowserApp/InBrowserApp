@@ -43,6 +43,7 @@ type HarnessVm = {
   fontSize: number
   marginX: number
   marginY: number
+  isLoadingDocument: boolean
   fileErrorCode: string
   rangeErrorCode: string
   generateErrorCode: string
@@ -241,6 +242,138 @@ describe('usePdfPageNumberAdder', () => {
     expect(result.success).toBe(false)
     expect(result.errorCode).toBe(PDF_ERROR.Encrypted)
     expect(vm.fileErrorCode).toBe(PDF_ERROR.Encrypted)
+  })
+
+  it('preserves current file and result when replacement upload fails', async () => {
+    inspectPdfMock
+      .mockResolvedValueOnce({ pageCount: 6 })
+      .mockRejectedValueOnce(new Error(PDF_ERROR.Invalid))
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    await vm.handleUpload(new File(['x'], 'sample.pdf', { type: 'application/pdf' }))
+    await vm.generate()
+
+    const result = await vm.handleUpload(
+      new File(['bad'], 'broken.pdf', { type: 'application/pdf' }),
+    )
+
+    expect(result.success).toBe(false)
+    expect(result.errorCode).toBe(PDF_ERROR.Invalid)
+    expect(vm.file?.name).toBe('sample.pdf')
+    expect(vm.pageCount).toBe(6)
+    expect(vm.hasResult).toBe(true)
+    expect(vm.resultFilename).toBe('output.pdf')
+    expect(vm.fileErrorCode).toBe(PDF_ERROR.Invalid)
+  })
+
+  it('ignores stale upload result after file state is cleared', async () => {
+    const deferred = createDeferred<{ pageCount: number }>()
+    inspectPdfMock.mockReturnValueOnce(deferred.promise)
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    const pendingUpload = vm.handleUpload(
+      new File(['slow'], 'slow.pdf', { type: 'application/pdf' }),
+    )
+    await flushAll()
+
+    expect(vm.isLoadingDocument).toBe(true)
+
+    vm.clearFile()
+
+    expect(vm.file).toBe(null)
+    expect(vm.pageCount).toBe(0)
+    expect(vm.isLoadingDocument).toBe(false)
+
+    deferred.resolve({ pageCount: 4 })
+
+    const result = await pendingUpload
+    await flushAll()
+
+    expect(result.success).toBe(false)
+    expect(vm.file).toBe(null)
+    expect(vm.pageCount).toBe(0)
+    expect(vm.rangeInput).toBe('')
+    expect(vm.isLoadingDocument).toBe(false)
+  })
+
+  it('ignores stale upload result when a newer upload finishes first', async () => {
+    const firstUpload = createDeferred<{ pageCount: number }>()
+    const secondUpload = createDeferred<{ pageCount: number }>()
+    inspectPdfMock
+      .mockReturnValueOnce(firstUpload.promise)
+      .mockReturnValueOnce(secondUpload.promise)
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    const pendingFirstUpload = vm.handleUpload(
+      new File(['first'], 'first.pdf', { type: 'application/pdf' }),
+    )
+    await flushAll()
+
+    const pendingSecondUpload = vm.handleUpload(
+      new File(['second'], 'second.pdf', { type: 'application/pdf' }),
+    )
+    await flushAll()
+
+    secondUpload.resolve({ pageCount: 3 })
+
+    const secondResult = await pendingSecondUpload
+    await flushAll()
+
+    expect(secondResult.success).toBe(true)
+    expect(vm.file?.name).toBe('second.pdf')
+    expect(vm.pageCount).toBe(3)
+
+    firstUpload.resolve({ pageCount: 9 })
+
+    const firstResult = await pendingFirstUpload
+    await flushAll()
+
+    expect(firstResult.success).toBe(false)
+    expect(vm.file?.name).toBe('second.pdf')
+    expect(vm.pageCount).toBe(3)
+    expect(vm.isLoadingDocument).toBe(false)
+  })
+
+  it('clears stale result before a new generate attempt completes', async () => {
+    const deferred = createDeferred<unknown>()
+
+    const wrapper = mount(Harness)
+    const vm = wrapper.vm as unknown as HarnessVm
+
+    await vm.handleUpload(new File(['x'], 'sample.pdf', { type: 'application/pdf' }))
+    await vm.generate()
+
+    expect(vm.hasResult).toBe(true)
+    expect(vm.resultFilename).toBe('output.pdf')
+
+    addPageNumbersWithWorkerMock.mockReturnValueOnce(deferred.promise)
+
+    const pendingGenerate = vm.generate()
+    await flushAll()
+
+    expect(vm.hasResult).toBe(false)
+    expect(vm.resultFilename).toBe('')
+    expect(vm.resultUrl).toBe(null)
+    expect(vm.isGenerating).toBe(true)
+
+    deferred.resolve({
+      ok: false,
+      code: PDF_ERROR.AddFailed,
+    })
+
+    const result = await pendingGenerate
+    await flushAll()
+
+    expect(result.success).toBe(false)
+    expect(vm.generateErrorCode).toBe(PDF_ERROR.AddFailed)
+    expect(vm.hasResult).toBe(false)
+    expect(vm.resultFilename).toBe('')
   })
 
   it('ignores stale generate result after uploading a different file', async () => {

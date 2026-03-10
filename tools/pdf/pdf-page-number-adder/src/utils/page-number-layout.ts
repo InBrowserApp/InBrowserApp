@@ -46,8 +46,11 @@ export const resolvePageNumberCoordinates = ({
     x = pageWidth - marginX - textWidth
   }
 
+  const maxX = Math.max(0, pageWidth - textWidth)
+  const maxY = Math.max(0, pageHeight - fontSize)
+
   return {
-    x: Math.max(0, x),
-    y: Math.max(0, y),
+    x: Math.min(Math.max(0, x), maxX),
+    y: Math.min(Math.max(0, y), maxY),
   }
 }

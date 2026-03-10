@@ -45,7 +45,19 @@ describe('page-number-layout', () => {
     ).toEqual({ x: 340, y: 24 })
   })
 
-  it('clamps negative positions to zero', () => {
+  it('clamps coordinates to page bounds', () => {
+    expect(
+      resolvePageNumberCoordinates({
+        pageWidth: 100,
+        pageHeight: 100,
+        textWidth: 40,
+        fontSize: 20,
+        marginX: 120,
+        marginY: 90,
+        position: 'bottom-left',
+      }),
+    ).toEqual({ x: 60, y: 80 })
+
     expect(
       resolvePageNumberCoordinates({
         pageWidth: 100,
