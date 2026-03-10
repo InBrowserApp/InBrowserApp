@@ -206,4 +206,58 @@ describe('PDFPageNumberPreview', () => {
       contexts.some((context) => context.fillText.mock.calls.some(([text]) => text === '11')),
     ).toBe(true)
   })
+
+  it('scales preview typography and margins to the rendered viewport and reacts to setting changes', async () => {
+    const pdfDocumentMock = createPdfDocumentMock()
+
+    loadPdfDocumentMock.mockReturnValue({
+      promise: Promise.resolve(pdfDocumentMock.document),
+      destroy: vi.fn(),
+    })
+
+    const wrapper = mount(PDFPageNumberPreview, {
+      props: {
+        file: new File(['scaled'], 'scaled.pdf', { type: 'application/pdf' }),
+        rangeInput: '',
+        rangeErrorCode: '',
+        startNumber: 1,
+        format: 'n',
+        fontFamily: 'sans-serif',
+        position: 'bottom-left',
+        fontSize: 12,
+        marginX: 24,
+        marginY: 24,
+        pageCount: 8,
+      },
+    })
+
+    await flushPromises()
+
+    expect(contexts.some((context) => context.font.includes('36px Helvetica'))).toBe(true)
+    expect(
+      contexts.some((context) =>
+        context.fillText.mock.calls.some(([text, x, y]) => text === '1' && x === 72 && y === 852),
+      ),
+    ).toBe(true)
+
+    await wrapper.setProps({
+      fontFamily: 'serif',
+      position: 'top-left',
+      fontSize: 20,
+      marginX: 40,
+      marginY: 30,
+    })
+    await flushPromises()
+
+    expect(
+      contexts.some(
+        (context) => context.font.includes('60px') && context.font.includes('Times New Roman'),
+      ),
+    ).toBe(true)
+    expect(
+      contexts.some((context) =>
+        context.fillText.mock.calls.some(([text, x, y]) => text === '1' && x === 120 && y === 90),
+      ),
+    ).toBe(true)
+  })
 })

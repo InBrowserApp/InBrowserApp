@@ -40,6 +40,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
   const hasPreviewError = ref(false)
 
   const renderedPageCanvas = document.createElement('canvas')
+  let renderedPageScale = 1
   const previewDocumentState: PreviewDocumentState = {
     file: null,
     loadingTask: null,
@@ -180,7 +181,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       return
     }
 
-    const fontSize = previewFontSize.value
+    const fontSize = previewFontSize.value * renderedPageScale
     const label = previewLabel.value
     const textWidth = await measureStandardFontTextWidth(label, fontSize, props.fontFamily)
     if (sequence !== renderSequence) {
@@ -211,8 +212,8 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       pageHeight: canvas.height,
       textWidth,
       fontSize,
-      marginX: previewMarginX.value,
-      marginY: previewMarginY.value,
+      marginX: previewMarginX.value * renderedPageScale,
+      marginY: previewMarginY.value * renderedPageScale,
       position: props.position,
     })
 
@@ -234,6 +235,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
       clearVisibleCanvas()
       renderedPageCanvas.width = 0
       renderedPageCanvas.height = 0
+      renderedPageScale = 1
       return
     }
 
@@ -267,6 +269,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
 
       renderedPageCanvas.width = Math.max(1, Math.floor(viewport.width))
       renderedPageCanvas.height = Math.max(1, Math.floor(viewport.height))
+      renderedPageScale = scale
 
       const canvasContext = renderedPageCanvas.getContext('2d')
       if (!canvasContext) {
@@ -289,6 +292,7 @@ export const usePdfPageNumberPreview = (props: PreviewProps) => {
         showPreviewError()
         renderedPageCanvas.width = 0
         renderedPageCanvas.height = 0
+        renderedPageScale = 1
       }
     } finally {
       if (currentSequence === renderSequence) {
