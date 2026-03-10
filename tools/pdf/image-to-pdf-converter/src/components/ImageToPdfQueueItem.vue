@@ -122,6 +122,10 @@ const imageMeta = computed(
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid var(--n-border-color);
@@ -137,11 +141,13 @@ const imageMeta = computed(
   gap: 10px;
   min-width: 0;
   flex: 1;
+  overflow: hidden;
 }
 
 .queue-item__content {
   display: flex;
   min-width: 0;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -154,6 +160,7 @@ const imageMeta = computed(
 
 .queue-item__actions {
   display: flex;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 4px;

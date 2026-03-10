@@ -107,6 +107,8 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  min-width: 0;
 }
 
 .queue-item--ghost {
