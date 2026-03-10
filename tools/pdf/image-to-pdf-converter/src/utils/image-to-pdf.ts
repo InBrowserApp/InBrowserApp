@@ -60,7 +60,10 @@ export function normalizeOutputFileName(name: string) {
   const sanitizedBaseName = name
     .trim()
     .replace(/\.pdf$/i, '')
-    .replace(/[<>:"/\\|?*\u0000-\u001f]+/g, '-')
+    .split('')
+    .map((character) => (isInvalidFileNameCharacter(character) ? '-' : character))
+    .join('')
+    .replace(/-+/g, '-')
     .replace(/\s+/g, ' ')
     .trim()
 
@@ -77,4 +80,12 @@ export function getJpegQuality(qualityPreset: QualityPreset) {
   }
 
   return 0.82
+}
+
+function isInvalidFileNameCharacter(character: string) {
+  if ('<>:"/\\|?*'.includes(character)) {
+    return true
+  }
+
+  return character.charCodeAt(0) <= 31
 }

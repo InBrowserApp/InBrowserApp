@@ -30,25 +30,31 @@
             @click="emit('select', element.id)"
           >
             <div class="queue-item__left">
-              <div class="queue-item__handle" :aria-label="t('dragHandle')">
+              <div
+                class="queue-item__handle"
+                :aria-label="t('dragHandle')"
+                style="display: flex; align-items: center; cursor: grab; touch-action: none"
+              >
                 <n-icon :depth="3" size="20">
                   <ReOrderDotsHorizontal24Regular />
                 </n-icon>
               </div>
 
-              <img class="queue-item__preview" :src="element.previewUrl" :alt="element.name" />
+              <img
+                :src="element.previewUrl"
+                :alt="element.name"
+                style="
+                  width: 56px;
+                  height: 56px;
+                  border-radius: 8px;
+                  object-fit: cover;
+                  background: var(--n-color-embedded);
+                "
+              />
 
-              <div class="queue-item__content">
+              <div style="display: flex; min-width: 0; flex-direction: column">
                 <n-text strong>{{ index + 1 }}. {{ element.name }}</n-text>
-                <n-text depth="3">
-                  {{
-                    t('imageMeta', {
-                      width: element.width,
-                      height: element.height,
-                      size: filesize(element.size),
-                    })
-                  }}
-                </n-text>
+                <n-text depth="3">{{ formatImageMeta(element) }}</n-text>
               </div>
             </div>
 
@@ -157,6 +163,10 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
     newIndex: event.newIndex ?? null,
   })
 }
+
+function formatImageMeta(item: ImageQueueItem) {
+  return `${item.width} × ${item.height} · ${filesize(item.size)}`
+}
 </script>
 
 <style scoped>
@@ -204,27 +214,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   min-width: 0;
   flex: 1;
 }
-
-.queue-item__handle {
-  display: flex;
-  align-items: center;
-  cursor: grab;
-  touch-action: none;
-}
-
-.queue-item__preview {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  object-fit: cover;
-  background: var(--n-color-embedded);
-}
-
-.queue-item__content {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
 </style>
 
 <i18n lang="json">
@@ -232,7 +221,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "en": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -244,7 +232,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "zh": {
     "queueTitle": "图片队列",
     "queueSummary": "{count} 张图片 · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "清空",
     "emptyState": "添加图片后即可调整 PDF 页顺序",
     "dragHandle": "拖拽排序",
@@ -256,7 +243,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "zh-CN": {
     "queueTitle": "图片队列",
     "queueSummary": "{count} 张图片 · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "清空",
     "emptyState": "添加图片后即可调整 PDF 页顺序",
     "dragHandle": "拖拽排序",
@@ -268,7 +254,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "zh-TW": {
     "queueTitle": "圖片佇列",
     "queueSummary": "{count} 張圖片 · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "清空",
     "emptyState": "新增圖片後即可調整 PDF 頁面順序",
     "dragHandle": "拖曳排序",
@@ -280,7 +265,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "zh-HK": {
     "queueTitle": "圖片佇列",
     "queueSummary": "{count} 張圖片 · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "清空",
     "emptyState": "新增圖片後即可調整 PDF 頁面順序",
     "dragHandle": "拖曳排序",
@@ -292,7 +276,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "es": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -304,7 +287,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "fr": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -316,7 +298,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "de": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -328,7 +309,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "it": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -340,7 +320,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "ja": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -352,7 +331,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "ko": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -364,7 +342,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "ru": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -376,7 +353,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "pt": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -388,7 +364,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "ar": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -400,7 +375,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "hi": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -412,7 +386,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "tr": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -424,7 +397,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "nl": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -436,7 +408,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "sv": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -448,7 +419,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "pl": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -460,7 +430,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "vi": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -472,7 +441,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "th": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -484,7 +452,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "id": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -496,7 +463,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "he": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -508,7 +474,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "ms": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
@@ -520,7 +485,6 @@ function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
   "no": {
     "queueTitle": "Image queue",
     "queueSummary": "{count} images · {size}",
-    "imageMeta": "{width} × {height} · {size}",
     "clearAll": "Clear all",
     "emptyState": "Add images to arrange your PDF pages",
     "dragHandle": "Drag to reorder",
