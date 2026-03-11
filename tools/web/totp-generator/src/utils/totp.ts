@@ -45,9 +45,8 @@ export function validateTotpConfig(config: TotpConfig): TotpConfig {
     throw new TotpValidationError('missing_secret')
   }
 
-  let secretBytes: Uint8Array
   try {
-    secretBytes = decodeBase32(secret)
+    decodeBase32(secret)
   } catch {
     throw new TotpValidationError('invalid_base32')
   }
