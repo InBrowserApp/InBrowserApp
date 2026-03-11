@@ -95,6 +95,7 @@ import { routes as base85DecoderRoutes } from '@tools/base85-decoder/routes'
 import { routes as fileToDataUriConverterRoutes } from '@tools/file-to-data-uri-converter/routes'
 import { routes as dataUriToFileConverterRoutes } from '@tools/data-uri-to-file-converter/routes'
 import { routes as urlParserBuilderRoutes } from '@tools/url-parser-builder/routes'
+import { routes as cspParserBuilderRoutes } from '@tools/csp-parser-builder/routes'
 import { routes as userAgentParserRoutes } from '@tools/user-agent-parser/routes'
 import { routes as cookieParserRoutes } from '@tools/cookie-parser/routes'
 import { routes as basicAuthGeneratorRoutes } from '@tools/basic-auth-generator/routes'
@@ -303,6 +304,7 @@ export const routes: ToolRoute[] = [
   ...fileToDataUriConverterRoutes,
   ...dataUriToFileConverterRoutes,
   ...urlParserBuilderRoutes,
+  ...cspParserBuilderRoutes,
   ...userAgentParserRoutes,
   ...cookieParserRoutes,
   ...basicAuthGeneratorRoutes,
