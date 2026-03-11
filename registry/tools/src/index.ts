@@ -194,6 +194,7 @@ import { toolInfo as ibanValidatorToolInfo } from '@tools/iban-validator'
 import { toolInfo as bicSwiftValidatorToolInfo } from '@tools/bic-swift-validator'
 import { toolInfo as vatValidatorToolInfo } from '@tools/vat-validator'
 import { toolInfo as placeholderImageGeneratorToolInfo } from '@tools/placeholder-image-generator'
+import { toolInfo as openGraphMetaGeneratorToolInfo } from '@tools/open-graph-meta-generator'
 import { toolInfo as robotsTxtGeneratorToolInfo } from '@tools/robots-txt-generator'
 import { toolInfo as sitemapXmlGeneratorToolInfo } from '@tools/sitemap-xml-generator'
 import { toolInfo as slugGeneratorToolInfo } from '@tools/slug-generator'
@@ -438,6 +439,7 @@ export const tools: ToolInfo[] = [
   vatValidatorToolInfo,
 
   // Web Tools (SEO)
+  openGraphMetaGeneratorToolInfo,
   robotsTxtGeneratorToolInfo,
   sitemapXmlGeneratorToolInfo,
   slugGeneratorToolInfo,

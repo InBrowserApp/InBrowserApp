@@ -131,6 +131,7 @@
     "@tools/nanoid-generator": "workspace:*",
     "@tools/network-tools": "workspace:*",
     "@tools/number-base-converter": "workspace:*",
+    "@tools/open-graph-meta-generator": "workspace:*",
     "@tools/openapi-to-typescript": "workspace:*",
     "@tools/password-strength-checker": "workspace:*",
     "@tools/pbkdf2-key-derivation": "workspace:*",
