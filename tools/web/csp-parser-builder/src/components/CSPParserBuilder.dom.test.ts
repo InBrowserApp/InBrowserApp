@@ -31,7 +31,8 @@ describe('CSPParserBuilder', () => {
     })
 
     expect(wrapper.text()).toContain('Directive Builder')
-    expect(wrapper.findAll('textarea').at(-1)?.element.value).toContain('default-src')
+    const textareas = wrapper.findAll('textarea')
+    expect(textareas[textareas.length - 1]?.element.value).toContain('default-src')
   })
 
   it('switches output mode with the context selects', async () => {
@@ -125,7 +126,8 @@ describe('CSPParserBuilder', () => {
       .vm.$emit('update:directives', [{ name: '', tokens: [] }])
     await flushPromises()
 
-    expect(wrapper.findAll('textarea').at(-1)?.element.value).toBe('')
+    const textareas = wrapper.findAll('textarea')
+    expect(textareas[textareas.length - 1]?.element.value).toBe('')
   })
 
   it('handles invalid presets and invalid input errors', async () => {

@@ -13,16 +13,15 @@ describe('CSPDirectivesSection', () => {
       },
     })
 
-    ;(wrapper.vm as { addDirective: () => void }).addDirective()
+    ;(wrapper.vm as unknown as { addDirective: () => void }).addDirective()
     expect(wrapper.emitted('update:directives')).toBeUndefined()
 
     const select = wrapper.getComponent(NSelect)
     await select.vm.$emit('update:value', 'script-src')
     await wrapper.get('button').trigger('click')
 
-    expect(wrapper.emitted('update:directives')?.at(-1)?.[0]).toEqual([
-      { name: 'script-src', tokens: [] },
-    ])
+    const events = wrapper.emitted('update:directives') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual([{ name: 'script-src', tokens: [] }])
   })
 
   it('removes a directive card', async () => {
@@ -35,7 +34,8 @@ describe('CSPDirectivesSection', () => {
 
     await wrapper.get('[data-testid="remove-directive"]').trigger('click')
 
-    expect(wrapper.emitted('update:directives')?.at(-1)?.[0]).toEqual([])
+    const events = wrapper.emitted('update:directives') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual([])
   })
 
   it('renders the empty state and propagates directive updates', async () => {
@@ -64,7 +64,8 @@ describe('CSPDirectivesSection', () => {
     })
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.emitted('update:directives')?.at(-1)?.[0]).toEqual([
+    const events = wrapper.emitted('update:directives') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual([
       { name: 'script-src', tokens: [{ type: 'scheme', value: 'https:' }] },
       { name: 'x-extra', tokens: [] },
     ])

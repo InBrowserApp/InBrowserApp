@@ -18,7 +18,8 @@ describe('CSPInputSection', () => {
 
     await wrapper.get('textarea').setValue("default-src 'self'")
 
-    expect(wrapper.emitted('update:value')?.at(-1)?.[0]).toBe("default-src 'self'")
+    const events = wrapper.emitted('update:value') ?? []
+    expect(events[events.length - 1]?.[0]).toBe("default-src 'self'")
     expect(wrapper.text()).toContain('Detected: header')
     expect(wrapper.text()).toContain('Invalid header')
   })

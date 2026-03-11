@@ -67,7 +67,7 @@ const modeOptions = computed(() => [
   { label: t('report-only'), value: 'report-only' },
 ])
 
-const presetButtons = computed(() => [
+const presetButtons = computed<{ id: CSPPresetID; label: string }[]>(() => [
   { id: 'strict-starter', label: t('strict-starter') },
   { id: 'spa-starter', label: t('spa-starter') },
   { id: 'legacy-relaxed', label: t('legacy-relaxed') },

@@ -20,7 +20,8 @@ describe('CSPDirectiveCard', () => {
     const inputs = wrapper.findAll('input')
     await inputs[0]?.setValue('https:')
 
-    expect(wrapper.emitted('update:directive')?.at(-1)?.[0]).toEqual({
+    const events = wrapper.emitted('update:directive') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual({
       name: 'img-src',
       tokens: [{ type: 'scheme', value: 'https:' }],
     })
@@ -41,7 +42,8 @@ describe('CSPDirectiveCard', () => {
 
     await wrapper.get('button.n-button--secondary').trigger('click')
 
-    expect(wrapper.emitted('update:directive')?.at(-1)?.[0]).toEqual({
+    const events = wrapper.emitted('update:directive') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual({
       name: 'img-src',
       tokens: [{ type: 'keyword', value: "'self'" }],
     })
@@ -81,7 +83,8 @@ describe('CSPDirectiveCard', () => {
 
     await wrapper.get('input').setValue(' X-Custom ')
 
-    expect(wrapper.emitted('update:directive')?.at(-1)?.[0]).toEqual({
+    const events = wrapper.emitted('update:directive') ?? []
+    expect(events[events.length - 1]?.[0]).toEqual({
       name: 'x-custom',
       tokens: [],
     })
@@ -111,7 +114,11 @@ describe('CSPDirectiveCard', () => {
       },
     })
 
-    expect(wrapper.getComponent(NDynamicInput).props('onCreate')()).toBe('')
+    const onCreate = wrapper.getComponent(NDynamicInput).props('onCreate') as
+      | ((value?: unknown) => string)
+      | undefined
+
+    expect(onCreate?.(undefined)).toBe('')
   })
 
   it('uses the custom fallback id and creates token inputs from the UI', async () => {
@@ -127,7 +134,7 @@ describe('CSPDirectiveCard', () => {
       },
     })
 
-    expect(wrapper.get('[data-testid="directive-card-custom"]').exists()).toBe(true)
+    expect(wrapper.find('[data-testid="directive-card-custom"]').exists()).toBe(true)
 
     const addTokenButton = wrapper.findAll('button').find((button) => button.text() === 'Add token')
     if (!addTokenButton) {
