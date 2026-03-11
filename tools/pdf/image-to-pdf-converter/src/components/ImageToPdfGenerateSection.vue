@@ -11,7 +11,7 @@
         {{ t('generateButton') }}
       </n-button>
 
-      <div v-if="progress" class="generate-section__progress">
+      <div v-if="isGenerating && progress" class="generate-section__progress">
         <n-text depth="3">
           {{ t('progressLabel', { completed: progress.completed, total: progress.total }) }}
         </n-text>

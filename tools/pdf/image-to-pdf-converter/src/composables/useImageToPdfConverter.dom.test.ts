@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, nextTick } from 'vue'
 import { useImageToPdfConverter } from './useImageToPdfConverter'
 
 const objectUrlState = {
@@ -99,7 +99,7 @@ describe('useImageToPdfConverter', () => {
     revokeObjectUrlMock.mockImplementation(() => {})
   })
 
-  it('adds files, prevents duplicates, and derives the download filename', async () => {
+  it('adds files, prevents duplicates, blocks concurrent duplicates, and derives the download filename', async () => {
     mount(Harness)
     const vm = latestHarnessState
     const image = createFile('receipt.jpg')
@@ -108,11 +108,23 @@ describe('useImageToPdfConverter', () => {
       throw new Error('Expected harness state to be initialized')
     }
 
-    await expect(vm.addFile(image)).resolves.toBe('added')
+    const dimensionsDeferred = createDeferred<{ width: number; height: number }>()
+    imageFileMocks.readImageDimensionsMock.mockReturnValueOnce(dimensionsDeferred.promise)
+
+    const firstAddPromise = vm.addFile(image)
+    const secondAddPromise = vm.addFile(image)
+
+    expect(vm.isAddingFile.value).toBe(true)
+
+    dimensionsDeferred.resolve({ width: 1200, height: 800 })
+
+    await expect(firstAddPromise).resolves.toBe('added')
+    await expect(secondAddPromise).resolves.toBe('duplicate')
     await expect(vm.addFile(image)).resolves.toBe('duplicate')
 
     expect(vm.items.value).toHaveLength(1)
     expect(vm.resultFilename.value).toBe('receipt.pdf')
+    expect(vm.isAddingFile.value).toBe(false)
   })
 
   it('rotates, reorders, and removes queue items', async () => {
@@ -146,7 +158,7 @@ describe('useImageToPdfConverter', () => {
     expect(revokeObjectUrlMock).toHaveBeenCalledWith('blob:preview-2')
   })
 
-  it('generates a PDF result and revokes preview urls on unmount', async () => {
+  it('generates a PDF result, clears stale state, and revokes preview urls on unmount', async () => {
     const wrapper = mount(Harness)
     const vm = latestHarnessState
 
@@ -160,10 +172,26 @@ describe('useImageToPdfConverter', () => {
 
     expect(generateResult).toEqual({ success: true })
     expect(imageToPdfMocks.createImageToPdfMock).toHaveBeenCalledTimes(1)
-    expect(vm.generationProgress.value).toEqual({ completed: 1, total: 1 })
+    expect(vm.generationProgress.value).toBeNull()
     expect(vm.resultBlob.value?.type).toBe('application/pdf')
     expect(vm.resultFilename.value).toBe('scan.pdf')
     expect(vm.resultUrl.value).toBe('blob:download')
+
+    vm.options.value = {
+      ...vm.options.value,
+      marginMm: 24,
+    }
+    await nextTick()
+    expect(vm.resultBlob.value).toBeNull()
+    expect(vm.generationProgress.value).toBeNull()
+
+    imageToPdfMocks.createImageToPdfMock.mockRejectedValueOnce(new Error('CANVAS_UNAVAILABLE'))
+
+    const failedGenerateResult = await vm.generate()
+
+    expect(failedGenerateResult).toEqual({ success: false, code: 'canvas-unavailable' })
+    expect(vm.resultBlob.value).toBeNull()
+    expect(vm.generationProgress.value).toBeNull()
 
     wrapper.unmount()
 
@@ -176,4 +204,19 @@ function createFile(name: string) {
     type: 'image/jpeg',
     lastModified: 100,
   })
+}
+
+function createDeferred<Value>() {
+  let resolve!: (value: Value) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<Value>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise
+    reject = rejectPromise
+  })
+
+  return {
+    promise,
+    resolve,
+    reject,
+  }
 }

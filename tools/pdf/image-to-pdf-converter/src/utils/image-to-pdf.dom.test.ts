@@ -9,8 +9,10 @@ import type { ConverterOptions, ImageQueueItem } from '../types'
 
 const pdfLibMocks = vi.hoisted(() => {
   const drawImageMock = vi.fn()
+  const pushOperatorsMock = vi.fn()
   const addPageMock = vi.fn(() => ({
     drawImage: drawImageMock,
+    pushOperators: pushOperatorsMock,
   }))
   const embedJpgMock = vi.fn(async () => ({ id: 'image' }))
   const saveMock = vi.fn(async () => new Uint8Array([7, 8, 9]))
@@ -25,6 +27,7 @@ const pdfLibMocks = vi.hoisted(() => {
     embedJpgMock,
     addPageMock,
     drawImageMock,
+    pushOperatorsMock,
     saveMock,
   }
 })
@@ -34,9 +37,20 @@ const imageFileMocks = vi.hoisted(() => ({
 }))
 
 vi.mock('pdf-lib', () => ({
+  clip: vi.fn(() => 'clip'),
+  endPath: vi.fn(() => 'endPath'),
   PDFDocument: {
     create: pdfLibMocks.createMock,
   },
+  popGraphicsState: vi.fn(() => 'popGraphicsState'),
+  pushGraphicsState: vi.fn(() => 'pushGraphicsState'),
+  rectangle: vi.fn((x: number, y: number, width: number, height: number) => [
+    'rectangle',
+    x,
+    y,
+    width,
+    height,
+  ]),
 }))
 
 vi.mock('./image-file', () => ({
@@ -91,6 +105,7 @@ describe('createImageToPdf', () => {
     pdfLibMocks.embedJpgMock.mockClear()
     pdfLibMocks.addPageMock.mockClear()
     pdfLibMocks.drawImageMock.mockClear()
+    pdfLibMocks.pushOperatorsMock.mockClear()
     pdfLibMocks.saveMock.mockClear()
     imageFileMocks.renderImageToJpegMock.mockReset()
   })
@@ -130,6 +145,7 @@ describe('createImageToPdf', () => {
     expect(pdfLibMocks.embedJpgMock).toHaveBeenCalledTimes(2)
     expect(pdfLibMocks.addPageMock).toHaveBeenCalledTimes(2)
     expect(pdfLibMocks.drawImageMock).toHaveBeenCalledTimes(2)
+    expect(pdfLibMocks.pushOperatorsMock).not.toHaveBeenCalled()
     expect(pdfLibMocks.addPageMock).toHaveBeenNthCalledWith(1, [841.89, 595.28])
     expect(pdfLibMocks.addPageMock).toHaveBeenNthCalledWith(2, [841.89, 595.28])
     expect(progressUpdates).toEqual([
@@ -138,6 +154,33 @@ describe('createImageToPdf', () => {
     ])
     expect(blob.type).toBe('application/pdf')
     expect(blob.size).toBeGreaterThan(0)
+  })
+
+  it('clips cover-mode pages to the configured content box when margins are present', async () => {
+    imageFileMocks.renderImageToJpegMock.mockResolvedValue({
+      bytes: new Uint8Array([1, 2, 3]).buffer,
+      width: 1200,
+      height: 800,
+    })
+
+    await createImageToPdf({
+      items: [items[0] as ImageQueueItem],
+      options: {
+        ...options,
+        fitMode: 'cover',
+        marginMm: 10,
+      },
+    })
+
+    expect(pdfLibMocks.pushOperatorsMock).toHaveBeenCalledTimes(2)
+    expect(pdfLibMocks.pushOperatorsMock).toHaveBeenNthCalledWith(
+      1,
+      'pushGraphicsState',
+      ['rectangle', expect.any(Number), expect.any(Number), expect.any(Number), expect.any(Number)],
+      'clip',
+      'endPath',
+    )
+    expect(pdfLibMocks.pushOperatorsMock).toHaveBeenNthCalledWith(2, 'popGraphicsState')
   })
 })
 

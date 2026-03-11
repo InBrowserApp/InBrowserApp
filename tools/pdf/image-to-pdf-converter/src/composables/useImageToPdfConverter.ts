@@ -26,7 +26,9 @@ let fallbackIdCounter = 0
 export function useImageToPdfConverter() {
   const items = ref<ImageQueueItem[]>([])
   const options = ref<ConverterOptions>({ ...defaultOptions })
-  const isAddingFile = ref(false)
+  const activeAddFileCount = ref(0)
+  const pendingFileSignatures = new Set<string>()
+  const isAddingFile = computed(() => activeAddFileCount.value > 0)
   const isGenerating = ref(false)
   const generationProgress = ref<PdfGenerationProgress | null>(null)
   const resultBlob = ref<Blob | null>(null)
@@ -35,10 +37,15 @@ export function useImageToPdfConverter() {
   const canGenerate = computed(() => items.value.length > 0 && !isGenerating.value)
   const hasResult = computed(() => resultBlob.value !== null && Boolean(resultUrl.value))
 
+  function resetGeneratedResult() {
+    resultBlob.value = null
+    generationProgress.value = null
+  }
+
   watch(
     options,
     () => {
-      resultBlob.value = null
+      resetGeneratedResult()
     },
     { deep: true },
   )
@@ -46,21 +53,21 @@ export function useImageToPdfConverter() {
   watch(
     items,
     () => {
-      resultBlob.value = null
+      resetGeneratedResult()
     },
     { deep: true },
   )
 
   async function addFile(file: File): Promise<AddFileResult> {
-    const existingItem = items.value.find(
-      (item) => getFileSignature(item.file) === getFileSignature(file),
-    )
+    const signature = getFileSignature(file)
+    const existingItem = items.value.find((item) => getFileSignature(item.file) === signature)
 
-    if (existingItem) {
+    if (existingItem || pendingFileSignatures.has(signature)) {
       return 'duplicate'
     }
 
-    isAddingFile.value = true
+    pendingFileSignatures.add(signature)
+    activeAddFileCount.value += 1
 
     try {
       const dimensions = await readImageDimensions(file)
@@ -80,7 +87,8 @@ export function useImageToPdfConverter() {
     } catch {
       return 'invalid-image'
     } finally {
-      isAddingFile.value = false
+      pendingFileSignatures.delete(signature)
+      activeAddFileCount.value = Math.max(0, activeAddFileCount.value - 1)
     }
   }
 
@@ -113,9 +121,10 @@ export function useImageToPdfConverter() {
       URL.revokeObjectURL(item.previewUrl)
     }
 
+    pendingFileSignatures.clear()
+    activeAddFileCount.value = 0
     items.value = []
-    generationProgress.value = null
-    resultBlob.value = null
+    resetGeneratedResult()
   }
 
   function moveItem(oldIndex: number, newIndex: number) {
@@ -157,6 +166,7 @@ export function useImageToPdfConverter() {
     }
 
     isGenerating.value = true
+    resultBlob.value = null
     generationProgress.value = {
       completed: 0,
       total: items.value.length,
@@ -195,6 +205,7 @@ export function useImageToPdfConverter() {
       }
     } finally {
       isGenerating.value = false
+      generationProgress.value = null
     }
   }
 

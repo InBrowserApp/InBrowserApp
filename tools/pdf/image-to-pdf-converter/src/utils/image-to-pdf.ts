@@ -1,4 +1,4 @@
-import { PDFDocument } from 'pdf-lib'
+import { clip, endPath, PDFDocument, popGraphicsState, pushGraphicsState, rectangle } from 'pdf-lib'
 import type {
   ConverterOptions,
   ImageQueueItem,
@@ -42,7 +42,24 @@ export async function createImageToPdf({
     const embeddedImage = await pdfDocument.embedJpg(renderedImage.bytes)
     const pdfPage = pdfDocument.addPage([page.width, page.height])
 
+    if (options.fitMode === 'cover' && marginPt > 0) {
+      const contentWidth = Math.max(1, page.width - marginPt * 2)
+      const contentHeight = Math.max(1, page.height - marginPt * 2)
+
+      pdfPage.pushOperators(
+        pushGraphicsState(),
+        rectangle(marginPt, marginPt, contentWidth, contentHeight),
+        clip(),
+        endPath(),
+      )
+    }
+
     pdfPage.drawImage(embeddedImage, placement)
+
+    if (options.fitMode === 'cover' && marginPt > 0) {
+      pdfPage.pushOperators(popGraphicsState())
+    }
+
     onProgress?.({
       completed: index + 1,
       total: items.length,
