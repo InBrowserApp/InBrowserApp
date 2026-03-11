@@ -559,9 +559,12 @@ describe('useArchiveViewer', () => {
     await flushPromises()
 
     expect(state.isPreviewModalVisible.value).toBe(true)
+    expect(state.previewText.value).toContain('note')
 
     state.closePreviewModal()
     expect(state.isPreviewModalVisible.value).toBe(false)
+    expect(state.previewText.value).toBe('')
+    expect(revokeObjectUrlSpy).toHaveBeenCalled()
 
     state.entries.value = []
     await flushPromises()

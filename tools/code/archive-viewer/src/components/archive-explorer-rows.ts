@@ -9,56 +9,80 @@ export type ArchiveExplorerRow = {
   modifiedAt: Date | null
 }
 
-export function buildRows(entries: ArchiveEntry[], currentDirectory: string): ArchiveExplorerRow[] {
-  const currentSegments = splitPathSegments(currentDirectory)
+type DirectoryBucket = {
+  directories: Map<string, ArchiveExplorerRow>
+  files: ArchiveExplorerRow[]
+}
 
-  const directories = new Map<string, ArchiveExplorerRow>()
-  const files: ArchiveExplorerRow[] = []
+export type ArchiveExplorerIndex = Map<string, ArchiveExplorerRow[]>
+
+export function buildRows(entries: ArchiveEntry[], currentDirectory: string): ArchiveExplorerRow[] {
+  return getRowsForDirectory(buildRowIndex(entries), currentDirectory)
+}
+
+export function buildRowIndex(entries: ArchiveEntry[]): ArchiveExplorerIndex {
+  const buckets = new Map<string, DirectoryBucket>()
+  ensureDirectoryBucket(buckets, '')
 
   for (const entry of entries) {
     const segments = splitPathSegments(entry.path)
     if (!segments.length) continue
-    if (!hasPrefixSegments(segments, currentSegments)) continue
-    if (segments.length <= currentSegments.length) continue
 
-    const nextName = segments[currentSegments.length]
-    if (!nextName) continue
+    let parentSegments: string[] = []
+    const lastSegmentIndex = segments.length - 1
 
-    const isDirectChild = segments.length === currentSegments.length + 1
+    for (let index = 0; index < segments.length; index += 1) {
+      const name = segments[index]
+      if (!name) {
+        continue
+      }
 
-    if (isDirectChild && entry.kind !== 'directory') {
-      files.push({
-        path: entry.path,
-        name: nextName,
-        kind: entry.kind,
-        extension: entry.extension,
-        size: entry.size,
-        modifiedAt: entry.modifiedAt,
-      })
-      continue
-    }
+      const parentPath = toDirectoryPath(parentSegments)
+      const isLeaf = index === lastSegmentIndex
+      const isLeafDirectory = isLeaf && entry.kind === 'directory'
 
-    const directoryPath = toDirectoryPath([...currentSegments, nextName])
-    const existing = directories.get(directoryPath)
+      if (!isLeaf || isLeafDirectory) {
+        const directoryPath = toDirectoryPath([...parentSegments, name])
+        const bucket = ensureDirectoryBucket(buckets, parentPath)
+        const existing = bucket.directories.get(directoryPath)
 
-    if (!existing || (entry.kind === 'directory' && isDirectChild)) {
-      directories.set(directoryPath, {
-        path: directoryPath,
-        name: nextName,
-        kind: 'directory',
-        extension: '',
-        size: 0,
-        modifiedAt: entry.kind === 'directory' && isDirectChild ? entry.modifiedAt : null,
-      })
+        if (!existing || isLeafDirectory) {
+          bucket.directories.set(directoryPath, {
+            path: directoryPath,
+            name,
+            kind: 'directory',
+            extension: '',
+            size: 0,
+            modifiedAt: isLeafDirectory ? entry.modifiedAt : null,
+          })
+        }
+
+        ensureDirectoryBucket(buckets, directoryPath)
+      }
+
+      if (isLeaf && !isLeafDirectory) {
+        ensureDirectoryBucket(buckets, parentPath).files.push({
+          path: entry.path,
+          name,
+          kind: entry.kind,
+          extension: entry.extension,
+          size: entry.size,
+          modifiedAt: entry.modifiedAt,
+        })
+      }
+
+      parentSegments = [...parentSegments, name]
     }
   }
 
-  const sortedDirectories = [...directories.values()].sort((left, right) =>
-    left.name.localeCompare(right.name),
-  )
-  const sortedFiles = files.sort((left, right) => left.name.localeCompare(right.name))
+  return new Map([...buckets.entries()].map(([path, bucket]) => [path, sortBucketRows(bucket)]))
+}
 
-  return [...sortedDirectories, ...sortedFiles]
+export function getRowsForDirectory(
+  index: ArchiveExplorerIndex,
+  currentDirectory: string,
+): ArchiveExplorerRow[] {
+  return index.get(normalizeDirectoryPath(currentDirectory)) ?? []
 }
 
 export function splitPathSegments(path: string): string[] {
@@ -77,16 +101,27 @@ export function normalizeDirectoryPath(path: string): string {
   return toDirectoryPath(splitPathSegments(path))
 }
 
-function hasPrefixSegments(pathSegments: string[], prefixSegments: string[]): boolean {
-  if (prefixSegments.length > pathSegments.length) {
-    return false
+function ensureDirectoryBucket(
+  buckets: Map<string, DirectoryBucket>,
+  path: string,
+): DirectoryBucket {
+  const existing = buckets.get(path)
+  if (existing) {
+    return existing
   }
 
-  for (let index = 0; index < prefixSegments.length; index += 1) {
-    if (pathSegments[index] !== prefixSegments[index]) {
-      return false
-    }
+  const nextBucket: DirectoryBucket = {
+    directories: new Map<string, ArchiveExplorerRow>(),
+    files: [],
   }
+  buckets.set(path, nextBucket)
+  return nextBucket
+}
 
-  return true
+function sortBucketRows(bucket: DirectoryBucket): ArchiveExplorerRow[] {
+  const sortedDirectories = [...bucket.directories.values()].sort((left, right) =>
+    left.name.localeCompare(right.name),
+  )
+  const sortedFiles = bucket.files.sort((left, right) => left.name.localeCompare(right.name))
+  return [...sortedDirectories, ...sortedFiles]
 }
