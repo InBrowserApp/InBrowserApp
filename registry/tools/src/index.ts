@@ -97,6 +97,7 @@ import { toolInfo as base85DecoderToolInfo } from '@tools/base85-decoder'
 import { toolInfo as fileToDataUriConverterToolInfo } from '@tools/file-to-data-uri-converter'
 import { toolInfo as dataUriToFileConverterToolInfo } from '@tools/data-uri-to-file-converter'
 import { toolInfo as urlParserBuilderToolInfo } from '@tools/url-parser-builder'
+import { toolInfo as cspParserBuilderToolInfo } from '@tools/csp-parser-builder'
 import { toolInfo as userAgentParserToolInfo } from '@tools/user-agent-parser'
 import { toolInfo as cookieParserToolInfo } from '@tools/cookie-parser'
 import { toolInfo as basicAuthGeneratorToolInfo } from '@tools/basic-auth-generator'
@@ -347,6 +348,7 @@ export const tools: ToolInfo[] = [
   fileToDataUriConverterToolInfo,
   dataUriToFileConverterToolInfo,
   urlParserBuilderToolInfo,
+  cspParserBuilderToolInfo,
   userAgentParserToolInfo,
   cookieParserToolInfo,
   basicAuthGeneratorToolInfo,
