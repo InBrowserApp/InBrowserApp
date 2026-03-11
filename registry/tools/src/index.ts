@@ -4,6 +4,7 @@ import { toolInfo as faviconAssetsGeneratorToolInfo } from '@tools/favicon-asset
 import { tools as uuidTools } from '@tools/uuid'
 import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-owner-password'
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
+import { toolInfo as pdfMetadataEditorToolInfo } from '@tools/pdf-metadata-editor'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as pdfPageOrganizerToolInfo } from '@tools/pdf-page-organizer'
 import { toolInfo as pdfPageNumberAdderToolInfo } from '@tools/pdf-page-number-adder'
@@ -282,6 +283,7 @@ export const tools: ToolInfo[] = [
   pdfSplitterToolInfo,
   pdfToImageConverterToolInfo,
   pdfInfoViewerToolInfo,
+  pdfMetadataEditorToolInfo,
   pdfTextExtractorToolInfo,
 
   // Hash Tools
