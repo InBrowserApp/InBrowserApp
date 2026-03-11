@@ -5,6 +5,7 @@
       <n-upload
         accept="image/*"
         multiple
+        :disabled="disabled"
         :show-file-list="false"
         @before-upload="handleBeforeUpload"
       >
@@ -33,8 +34,9 @@ import { NIcon, NP, NText, NUpload, NUploadDragger, useMessage } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import ImageMultiple24Regular from '@vicons/fluent/ImageMultiple24Regular'
 
-defineProps<{
+const props = defineProps<{
   isAddingFile: boolean
+  disabled: boolean
 }>()
 
 const emit = defineEmits<{
@@ -45,6 +47,10 @@ const { t } = useI18n({ useScope: 'local' })
 const message = useMessage()
 
 function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileInfo[] }) {
+  if (props.disabled) {
+    return false
+  }
+
   const selectedFile = data.file.file
 
   if (!selectedFile) {
@@ -61,6 +67,10 @@ function handleBeforeUpload(data: { file: UploadFileInfo; fileList: UploadFileIn
 }
 
 function handlePaste(event: ClipboardEvent) {
+  if (props.disabled) {
+    return
+  }
+
   const clipboardFiles = Array.from(event.clipboardData?.files ?? [])
 
   if (!clipboardFiles.length) {

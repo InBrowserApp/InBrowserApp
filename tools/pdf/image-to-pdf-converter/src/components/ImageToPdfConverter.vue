@@ -1,11 +1,16 @@
 <template>
   <div class="image-to-pdf-converter">
-    <ImageToPdfUploadSection :is-adding-file="isAddingFile" @add-file="handleAddFile" />
+    <ImageToPdfUploadSection
+      :is-adding-file="isAddingFile"
+      :disabled="isGenerating"
+      @add-file="handleAddFile"
+    />
 
     <div class="image-to-pdf-converter__main">
       <div class="image-to-pdf-converter__panel">
         <ImageToPdfQueue
           :items="items"
+          :disabled="isGenerating"
           @clear="clearAll"
           @rotate="rotateItem"
           @move-up="moveItemUp"
@@ -17,7 +22,7 @@
 
       <div class="image-to-pdf-converter__sidebar">
         <div class="image-to-pdf-converter__panel">
-          <ImageToPdfPageLayoutSection v-model:options="options" />
+          <ImageToPdfPageLayoutSection v-model:options="options" :disabled="isGenerating" />
         </div>
         <div class="image-to-pdf-converter__panel">
           <ImageToPdfGenerateSection
@@ -27,7 +32,7 @@
             :download-url="resultUrl ?? null"
             :download-filename="resultFilename"
             :output-size="resultBlob?.size ?? null"
-            :page-count="items.length"
+            :page-count="resultPageCount"
             @generate="handleGenerate"
           />
         </div>
@@ -56,6 +61,7 @@ const {
   generationProgress,
   resultBlob,
   resultFilename,
+  resultPageCount,
   resultUrl,
   canGenerate,
   addFile,
@@ -73,6 +79,10 @@ async function handleAddFile(file: File) {
 
   if (addResult === 'duplicate') {
     message.warning(t('duplicateFile'))
+    return
+  }
+
+  if (addResult === 'cancelled') {
     return
   }
 
@@ -94,6 +104,10 @@ async function handleGenerate() {
 
   if (result.success) {
     message.success(t('generateSuccess'))
+    return
+  }
+
+  if (result.code === 'cancelled') {
     return
   }
 

@@ -3,8 +3,9 @@
     <div class="queue-item__left">
       <div
         class="queue-item__handle"
+        :class="{ 'queue-item__handle--disabled': disabled }"
         :aria-label="dragHandleLabel"
-        style="display: flex; align-items: center; cursor: grab; touch-action: none"
+        style="display: flex; align-items: center; touch-action: none"
       >
         <n-icon :depth="3" size="20">
           <ReOrderDotsHorizontal24Regular />
@@ -33,6 +34,7 @@
         quaternary
         circle
         size="small"
+        :disabled="disabled"
         :aria-label="rotateLabel"
         @click.stop="emit('rotate')"
       >
@@ -44,7 +46,7 @@
         quaternary
         circle
         size="small"
-        :disabled="index === 0"
+        :disabled="disabled || index === 0"
         :aria-label="moveUpLabel"
         @click.stop="emit('move-up')"
       >
@@ -56,7 +58,7 @@
         quaternary
         circle
         size="small"
-        :disabled="isLast"
+        :disabled="disabled || isLast"
         :aria-label="moveDownLabel"
         @click.stop="emit('move-down')"
       >
@@ -68,6 +70,7 @@
         quaternary
         circle
         size="small"
+        :disabled="disabled"
         :aria-label="removeLabel"
         @click.stop="emit('remove')"
       >
@@ -94,6 +97,7 @@ const props = defineProps<{
   item: ImageQueueItem
   index: number
   isLast: boolean
+  disabled: boolean
   rotateLabel: string
   moveUpLabel: string
   moveDownLabel: string
@@ -174,6 +178,14 @@ const imageMeta = computed(
   min-width: 0;
   flex: 1;
   flex-direction: column;
+}
+
+.queue-item__handle--disabled {
+  cursor: not-allowed;
+}
+
+.queue-item__handle:not(.queue-item__handle--disabled) {
+  cursor: grab;
 }
 
 .queue-item__name,

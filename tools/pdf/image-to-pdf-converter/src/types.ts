@@ -8,9 +8,13 @@ export type QualityPreset = 'best' | 'balanced' | 'small'
 
 export type Rotation = 0 | 90 | 180 | 270
 
-export type AddFileResult = 'added' | 'duplicate' | 'invalid-image'
+export type AddFileResult = 'added' | 'duplicate' | 'invalid-image' | 'cancelled'
 
-export type GenerateErrorCode = 'invalid-image' | 'canvas-unavailable' | 'generate-failed'
+export type GenerateErrorCode =
+  | 'invalid-image'
+  | 'canvas-unavailable'
+  | 'generate-failed'
+  | 'cancelled'
 
 export interface ConverterOptions {
   pageSize: PageSizePreset

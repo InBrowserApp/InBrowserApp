@@ -6,7 +6,12 @@
         <n-text depth="3">{{
           t('queueSummary', { count: items.length, size: totalSizeLabel })
         }}</n-text>
-        <n-button quaternary size="small" :disabled="items.length === 0" @click="emit('clear')">
+        <n-button
+          quaternary
+          size="small"
+          :disabled="items.length === 0 || disabled"
+          @click="emit('clear')"
+        >
           <template #icon>
             <n-icon :component="Delete16Regular" />
           </template>
@@ -31,6 +36,7 @@
             :item="element"
             :index="index"
             :is-last="index === items.length - 1"
+            :disabled="disabled"
             :rotate-label="t('rotate')"
             :move-up-label="t('moveUp')"
             :move-down-label="t('moveDown')"
@@ -60,6 +66,7 @@ import ImageToPdfQueueItem from './ImageToPdfQueueItem.vue'
 
 const props = defineProps<{
   items: ImageQueueItem[]
+  disabled: boolean
 }>()
 
 const emit = defineEmits<{
@@ -78,15 +85,20 @@ const totalSizeLabel = computed(() =>
 )
 const sortableItems = computed(() => [...props.items])
 
-const sortableOptions = {
+const sortableOptions = computed(() => ({
   animation: 180,
+  disabled: props.disabled,
   handle: '.queue-item__handle',
   ghostClass: 'queue-item--ghost',
   chosenClass: 'queue-item--chosen',
   dragClass: 'queue-item--dragging',
-}
+}))
 
 function handleSortEnd(event: { oldIndex?: number; newIndex?: number }) {
+  if (props.disabled) {
+    return
+  }
+
   emit('reorder', {
     oldIndex: event.oldIndex ?? null,
     newIndex: event.newIndex ?? null,

@@ -18,6 +18,7 @@ describe('ImageToPdfQueueItem', () => {
         },
         index: 0,
         isLast: true,
+        disabled: false,
         rotateLabel: 'Rotate 90 degrees',
         moveUpLabel: 'Move up',
         moveDownLabel: 'Move down',

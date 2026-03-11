@@ -4,6 +4,7 @@
       <n-form-item :label="t('fitMode')" :show-feedback="false">
         <n-select
           :value="fitMode"
+          :disabled="disabled"
           :options="fitModeOptions"
           @update:value="emit('update:fit-mode', $event)"
         />
@@ -14,6 +15,7 @@
       <n-form-item :label="t('quality')" :show-feedback="false">
         <n-select
           :value="qualityPreset"
+          :disabled="disabled"
           :options="qualityOptions"
           @update:value="emit('update:quality-preset', $event)"
         />
@@ -23,6 +25,7 @@
     <n-form-item-gi :label="t('margin')" :show-feedback="false" :span="2">
       <n-input-number
         :value="marginMm"
+        :disabled="disabled"
         :min="0"
         :max="40"
         :step="1"
@@ -46,6 +49,7 @@ defineProps<{
   fitMode: FitMode
   qualityPreset: QualityPreset
   marginMm: number
+  disabled: boolean
 }>()
 
 const emit = defineEmits<{

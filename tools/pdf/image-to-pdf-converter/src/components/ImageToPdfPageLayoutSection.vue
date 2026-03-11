@@ -6,6 +6,7 @@
         <ImageToPdfPageSettingsSection
           :page-size="options.pageSize"
           :page-orientation="options.pageOrientation"
+          :disabled="disabled"
           @update:page-size="updateOption('pageSize', $event)"
           @update:page-orientation="updateOption('pageOrientation', $event)"
         />
@@ -14,6 +15,7 @@
           :fit-mode="options.fitMode"
           :quality-preset="options.qualityPreset"
           :margin-mm="options.marginMm"
+          :disabled="disabled"
           @update:fit-mode="updateOption('fitMode', $event)"
           @update:quality-preset="updateOption('qualityPreset', $event)"
           @update:margin-mm="updateOption('marginMm', $event)"
@@ -31,6 +33,10 @@ import type { ConverterOptions } from '../types'
 import ImageToPdfLayoutSettingsSection from './ImageToPdfLayoutSettingsSection.vue'
 import ImageToPdfPageSettingsSection from './ImageToPdfPageSettingsSection.vue'
 
+const props = defineProps<{
+  disabled: boolean
+}>()
+
 const options = defineModel<ConverterOptions>('options', {
   required: true,
 })
@@ -38,6 +44,10 @@ const options = defineModel<ConverterOptions>('options', {
 const { t } = useI18n({ useScope: 'local' })
 
 function updateOption<Key extends keyof ConverterOptions>(key: Key, value: ConverterOptions[Key]) {
+  if (props.disabled) {
+    return
+  }
+
   options.value = {
     ...options.value,
     [key]: value,

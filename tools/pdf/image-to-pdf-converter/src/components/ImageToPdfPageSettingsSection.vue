@@ -4,6 +4,7 @@
       <n-form-item :label="t('pageSize')" :show-feedback="false">
         <n-select
           :value="pageSize"
+          :disabled="disabled"
           :options="pageSizeOptions"
           @update:value="emit('update:page-size', $event)"
         />
@@ -14,6 +15,7 @@
       <n-form-item :label="t('pageOrientation')" :show-feedback="false">
         <n-select
           :value="pageOrientation"
+          :disabled="disabled"
           :options="orientationOptions"
           @update:value="emit('update:page-orientation', $event)"
         />
@@ -32,6 +34,7 @@ import type { PageOrientation, PageSizePreset } from '../types'
 defineProps<{
   pageSize: PageSizePreset
   pageOrientation: PageOrientation
+  disabled: boolean
 }>()
 
 const emit = defineEmits<{

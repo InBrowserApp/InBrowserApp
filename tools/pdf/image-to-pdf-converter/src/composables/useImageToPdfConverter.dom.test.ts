@@ -127,6 +127,36 @@ describe('useImageToPdfConverter', () => {
     expect(vm.isAddingFile.value).toBe(false)
   })
 
+  it('cancels pending additions after clearing the queue and blocks generation while files are still loading', async () => {
+    mount(Harness)
+    const vm = latestHarnessState
+
+    if (!vm) {
+      throw new Error('Expected harness state to be initialized')
+    }
+
+    await vm.addFile(createFile('one.jpg'))
+
+    const dimensionsDeferred = createDeferred<{ width: number; height: number }>()
+    imageFileMocks.readImageDimensionsMock.mockReturnValueOnce(dimensionsDeferred.promise)
+
+    const pendingAddPromise = vm.addFile(createFile('two.jpg'))
+
+    expect(vm.isAddingFile.value).toBe(true)
+    expect(vm.canGenerate.value).toBe(false)
+    await expect(vm.generate()).resolves.toEqual({ success: false, code: 'cancelled' })
+    expect(imageToPdfMocks.createImageToPdfMock).not.toHaveBeenCalled()
+
+    vm.clearAll()
+    expect(vm.items.value).toHaveLength(0)
+
+    dimensionsDeferred.resolve({ width: 1200, height: 800 })
+
+    await expect(pendingAddPromise).resolves.toBe('cancelled')
+    expect(vm.items.value).toHaveLength(0)
+    expect(vm.isAddingFile.value).toBe(false)
+  })
+
   it('rotates, reorders, and removes queue items', async () => {
     mount(Harness)
     const vm = latestHarnessState
@@ -196,6 +226,41 @@ describe('useImageToPdfConverter', () => {
     wrapper.unmount()
 
     expect(revokeObjectUrlMock).toHaveBeenCalledWith('blob:preview-1')
+  })
+
+  it('drops a stale generation result after the queue changes mid-export', async () => {
+    mount(Harness)
+    const vm = latestHarnessState
+
+    if (!vm) {
+      throw new Error('Expected harness state to be initialized')
+    }
+
+    await vm.addFile(createFile('scan.jpg'))
+
+    const pdfDeferred = createDeferred<Blob>()
+    imageToPdfMocks.createImageToPdfMock.mockImplementationOnce(async (payload) => {
+      payload.onProgress?.({
+        completed: payload.items.length,
+        total: payload.items.length,
+      })
+
+      return await pdfDeferred.promise
+    })
+
+    const generatePromise = vm.generate()
+
+    expect(vm.isGenerating.value).toBe(true)
+    vm.clearAll()
+    expect(vm.resultBlob.value).toBeNull()
+
+    pdfDeferred.resolve(new Blob(['pdf'], { type: 'application/pdf' }))
+
+    await expect(generatePromise).resolves.toEqual({ success: false, code: 'cancelled' })
+    expect(vm.isGenerating.value).toBe(false)
+    expect(vm.resultBlob.value).toBeNull()
+    expect(vm.resultFilename.value).toBe('images.pdf')
+    expect(vm.resultPageCount.value).toBe(0)
   })
 })
 

@@ -108,6 +108,20 @@ describe('ImageToPdfConverter', () => {
       'Your browser cannot export images to PDF in this environment.',
     )
   })
+
+  it('does not show a message when generation is cancelled', async () => {
+    const state = createComposableState()
+    state.generate.mockResolvedValue({ success: false, code: 'cancelled' })
+    composableMocks.useImageToPdfConverterMock.mockReturnValue(state)
+
+    const wrapper = mountConverter()
+    await wrapper.get('.generate').trigger('click')
+    await flushPromises()
+
+    expect(messageMock.success).not.toHaveBeenCalled()
+    expect(messageMock.error).not.toHaveBeenCalled()
+    expect(messageMock.warning).not.toHaveBeenCalled()
+  })
 })
 
 function mountConverter() {
@@ -147,6 +161,7 @@ function createComposableState() {
     generationProgress: ref(null),
     resultBlob: ref<Blob | null>(null),
     resultFilename: ref('images.pdf'),
+    resultPageCount: ref(0),
     resultUrl: ref<string | null>(null),
     canGenerate: ref(true),
     hasResult: ref(false),

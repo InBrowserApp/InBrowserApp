@@ -24,6 +24,9 @@ const defaultOptions: ConverterOptions = {
 let fallbackIdCounter = 0
 
 export function useImageToPdfConverter() {
+  let addSessionId = 0
+  let currentGenerationId = 0
+  let cancelledGenerationId = 0
   const items = ref<ImageQueueItem[]>([])
   const options = ref<ConverterOptions>({ ...defaultOptions })
   const activeAddFileCount = ref(0)
@@ -32,13 +35,25 @@ export function useImageToPdfConverter() {
   const isGenerating = ref(false)
   const generationProgress = ref<PdfGenerationProgress | null>(null)
   const resultBlob = ref<Blob | null>(null)
-  const resultFilename = computed(() => getOutputFileName(items.value))
+  const generatedFilename = ref<string | null>(null)
+  const generatedPageCount = ref<number | null>(null)
+  const queueFilename = computed(() => getOutputFileName(items.value))
+  const resultFilename = computed(() => generatedFilename.value ?? queueFilename.value)
+  const resultPageCount = computed(() => generatedPageCount.value ?? items.value.length)
   const resultUrl = useObjectUrl(resultBlob)
-  const canGenerate = computed(() => items.value.length > 0 && !isGenerating.value)
+  const canGenerate = computed(
+    () => items.value.length > 0 && !isGenerating.value && !isAddingFile.value,
+  )
   const hasResult = computed(() => resultBlob.value !== null && Boolean(resultUrl.value))
 
   function resetGeneratedResult() {
+    if (isGenerating.value) {
+      cancelledGenerationId = currentGenerationId
+    }
+
     resultBlob.value = null
+    generatedFilename.value = null
+    generatedPageCount.value = null
     generationProgress.value = null
   }
 
@@ -59,8 +74,13 @@ export function useImageToPdfConverter() {
   )
 
   async function addFile(file: File): Promise<AddFileResult> {
+    if (isGenerating.value) {
+      return 'cancelled'
+    }
+
     const signature = getFileSignature(file)
     const existingItem = items.value.find((item) => getFileSignature(item.file) === signature)
+    const sessionId = addSessionId
 
     if (existingItem || pendingFileSignatures.has(signature)) {
       return 'duplicate'
@@ -71,12 +91,24 @@ export function useImageToPdfConverter() {
 
     try {
       const dimensions = await readImageDimensions(file)
+
+      if (sessionId !== addSessionId || isGenerating.value) {
+        return 'cancelled'
+      }
+
+      const previewUrl = URL.createObjectURL(file)
+
+      if (sessionId !== addSessionId || isGenerating.value) {
+        URL.revokeObjectURL(previewUrl)
+        return 'cancelled'
+      }
+
       const item: ImageQueueItem = {
         id: createItemId(),
         file,
         name: file.name,
         size: file.size,
-        previewUrl: URL.createObjectURL(file),
+        previewUrl,
         width: dimensions.width,
         height: dimensions.height,
         rotation: 0,
@@ -117,6 +149,8 @@ export function useImageToPdfConverter() {
   }
 
   function clearAll() {
+    addSessionId += 1
+
     for (const item of items.value) {
       URL.revokeObjectURL(item.previewUrl)
     }
@@ -158,31 +192,57 @@ export function useImageToPdfConverter() {
   }
 
   async function generate(): Promise<GenerateResult> {
-    if (!items.value.length) {
+    if (!items.value.length || isGenerating.value || isAddingFile.value) {
       return {
         success: false,
-        code: 'generate-failed',
+        code: 'cancelled',
       }
     }
 
+    const generationId = currentGenerationId + 1
+    const generationItems = items.value.map((item) => ({ ...item }))
+    const generationOptions = { ...options.value }
+
+    resetGeneratedResult()
+    currentGenerationId = generationId
+    cancelledGenerationId = 0
     isGenerating.value = true
-    resultBlob.value = null
     generationProgress.value = {
       completed: 0,
-      total: items.value.length,
+      total: generationItems.length,
     }
 
     try {
-      resultBlob.value = await createImageToPdf({
-        items: items.value,
-        options: options.value,
+      const blob = await createImageToPdf({
+        items: generationItems,
+        options: generationOptions,
         onProgress: (progress) => {
-          generationProgress.value = progress
+          if (cancelledGenerationId !== generationId) {
+            generationProgress.value = progress
+          }
         },
       })
 
+      if (cancelledGenerationId === generationId) {
+        return {
+          success: false,
+          code: 'cancelled',
+        }
+      }
+
+      resultBlob.value = blob
+      generatedFilename.value = getOutputFileName(generationItems)
+      generatedPageCount.value = generationItems.length
+
       return { success: true }
     } catch (error) {
+      if (cancelledGenerationId === generationId) {
+        return {
+          success: false,
+          code: 'cancelled',
+        }
+      }
+
       if (error instanceof Error) {
         if (error.message === 'INVALID_IMAGE') {
           return {
@@ -204,8 +264,10 @@ export function useImageToPdfConverter() {
         code: 'generate-failed',
       }
     } finally {
-      isGenerating.value = false
-      generationProgress.value = null
+      if (currentGenerationId === generationId) {
+        isGenerating.value = false
+        generationProgress.value = null
+      }
     }
   }
 
@@ -221,6 +283,7 @@ export function useImageToPdfConverter() {
     generationProgress,
     resultBlob,
     resultFilename,
+    resultPageCount,
     resultUrl,
     canGenerate,
     hasResult,
