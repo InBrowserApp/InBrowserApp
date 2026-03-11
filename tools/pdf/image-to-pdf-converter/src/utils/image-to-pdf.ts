@@ -1,0 +1,125 @@
+import { clip, endPath, PDFDocument, popGraphicsState, pushGraphicsState, rectangle } from 'pdf-lib'
+import type {
+  ConverterOptions,
+  ImageQueueItem,
+  PdfGenerationProgress,
+  QualityPreset,
+} from '../types'
+import { mmToPt, getImagePlacement, resolvePageDimensions } from './page-layout'
+import { renderImageToJpeg } from './image-file'
+
+export async function createImageToPdf({
+  items,
+  options,
+  onProgress,
+}: {
+  items: ImageQueueItem[]
+  options: ConverterOptions
+  onProgress?: (progress: PdfGenerationProgress) => void
+}) {
+  const pdfDocument = await PDFDocument.create()
+  const marginPt = mmToPt(options.marginMm)
+  const quality = getJpegQuality(options.qualityPreset)
+
+  for (const [index, item] of items.entries()) {
+    const renderedImage = await renderImageToJpeg(item.file, {
+      rotation: item.rotation,
+      quality,
+    })
+    const page = resolvePageDimensions(
+      options.pageSize,
+      options.pageOrientation,
+      renderedImage.width,
+      renderedImage.height,
+    )
+    const placement = getImagePlacement({
+      page,
+      imageWidth: renderedImage.width,
+      imageHeight: renderedImage.height,
+      marginPt,
+      fitMode: options.fitMode,
+    })
+    const embeddedImage = await pdfDocument.embedJpg(renderedImage.bytes)
+    const pdfPage = pdfDocument.addPage([page.width, page.height])
+
+    if (options.fitMode === 'cover' && marginPt > 0) {
+      const contentWidth = Math.max(1, page.width - marginPt * 2)
+      const contentHeight = Math.max(1, page.height - marginPt * 2)
+
+      pdfPage.pushOperators(
+        pushGraphicsState(),
+        rectangle(marginPt, marginPt, contentWidth, contentHeight),
+        clip(),
+        endPath(),
+      )
+    }
+
+    pdfPage.drawImage(embeddedImage, placement)
+
+    if (options.fitMode === 'cover' && marginPt > 0) {
+      pdfPage.pushOperators(popGraphicsState())
+    }
+
+    onProgress?.({
+      completed: index + 1,
+      total: items.length,
+    })
+  }
+
+  const bytes = await pdfDocument.save()
+  const pdfBytes = new Uint8Array(bytes.byteLength)
+  pdfBytes.set(bytes)
+
+  return new Blob([pdfBytes], { type: 'application/pdf' })
+}
+
+export function getOutputFileName(items: Pick<ImageQueueItem, 'name'>[]) {
+  if (items.length === 1) {
+    return normalizeOutputFileName(stripFileExtension(items[0]?.name ?? 'images'))
+  }
+
+  if (items.length > 1) {
+    return normalizeOutputFileName(`images-${items.length}-pages`)
+  }
+
+  return 'images.pdf'
+}
+
+export function normalizeOutputFileName(name: string) {
+  const sanitizedBaseName = name
+    .trim()
+    .replace(/\.pdf$/i, '')
+    .split('')
+    .map((character) => (isInvalidFileNameCharacter(character) ? '-' : character))
+    .join('')
+    .replace(/-+/g, '-')
+    .replace(/\s+/g, ' ')
+    .slice(0, 120)
+    .trim()
+
+  return `${sanitizedBaseName || 'images'}.pdf`
+}
+
+export function getJpegQuality(qualityPreset: QualityPreset) {
+  if (qualityPreset === 'best') {
+    return 0.92
+  }
+
+  if (qualityPreset === 'small') {
+    return 0.68
+  }
+
+  return 0.82
+}
+
+function isInvalidFileNameCharacter(character: string) {
+  if ('<>:"/\\|?*'.includes(character)) {
+    return true
+  }
+
+  return character.charCodeAt(0) <= 31
+}
+
+function stripFileExtension(name: string) {
+  return name.replace(/\.[^.]+$/, '')
+}

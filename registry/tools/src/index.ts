@@ -28,6 +28,7 @@ import { toolInfo as gifToApngConverterToolInfo } from '@tools/gif-to-apng-conve
 import { toolInfo as gifToAnimatedWebpConverterToolInfo } from '@tools/gif-to-animated-webp-converter'
 import { toolInfo as imageToAvifConverterToolInfo } from '@tools/image-to-avif-converter'
 import { toolInfo as imageToIcoToolInfo } from '@tools/image-to-ico'
+import { toolInfo as imageToPdfConverterToolInfo } from '@tools/image-to-pdf-converter'
 import { toolInfo as imageToWebpConverterToolInfo } from '@tools/image-to-webp-converter'
 import { toolInfo as imageResizerToolInfo } from '@tools/image-resizer'
 import { toolInfo as exifViewerToolInfo } from '@tools/exif-viewer'
@@ -234,6 +235,7 @@ export const tools: ToolInfo[] = [
   gifToAnimatedWebpConverterToolInfo,
   imageToAvifConverterToolInfo,
   imageToIcoToolInfo,
+  imageToPdfConverterToolInfo,
   imageToWebpConverterToolInfo,
   imageResizerToolInfo,
   pngOptimizerToolInfo,
