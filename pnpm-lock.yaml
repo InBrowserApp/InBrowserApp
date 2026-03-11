@@ -1068,6 +1068,9 @@ importers:
       '@tools/pdf-tools':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-tools
+      '@tools/pdf-watermark-adder':
+        specifier: workspace:*
+        version: link:../../tools/pdf/pdf-watermark-adder
       '@tools/pgp-key-generator':
         specifier: workspace:*
         version: link:../../tools/network/pgp-key-generator
@@ -5624,6 +5627,39 @@ importers:
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.29(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 5.0.3(@vue/compiler-sfc@3.5.29)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
+
+  tools/pdf/pdf-watermark-adder:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.2.1(vue@3.5.29(typescript@5.9.3))
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.29(typescript@5.9.3))
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 5.4.624
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)

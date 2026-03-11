@@ -6,6 +6,7 @@ import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-ow
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as pdfPageNumberAdderToolInfo } from '@tools/pdf-page-number-adder'
+import { toolInfo as pdfWatermarkAdderToolInfo } from '@tools/pdf-watermark-adder'
 import { toolInfo as pdfSplitterToolInfo } from '@tools/pdf-splitter'
 import { toolInfo as pdfToImageConverterToolInfo } from '@tools/pdf-to-image-converter'
 import { toolInfo as pdfTextExtractorToolInfo } from '@tools/pdf-text-extractor'
@@ -275,6 +276,7 @@ export const tools: ToolInfo[] = [
   removePDFOwnerPasswordToolInfo,
   pdfMergerToolInfo,
   pdfPageNumberAdderToolInfo,
+  pdfWatermarkAdderToolInfo,
   pdfSplitterToolInfo,
   pdfToImageConverterToolInfo,
   pdfInfoViewerToolInfo,
