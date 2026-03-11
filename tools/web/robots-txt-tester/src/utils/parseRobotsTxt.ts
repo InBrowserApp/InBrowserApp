@@ -19,7 +19,7 @@ export function parseRobotsTxt(input: string): ParsedRobotsTxt {
 
   for (const [index, rawLine] of lines.entries()) {
     const line = index + 1
-    const withoutComment = rawLine.split('#', 1)[0].trim()
+    const withoutComment = (rawLine.split('#', 1)[0] ?? '').trim()
     if (!withoutComment) {
       continue
     }

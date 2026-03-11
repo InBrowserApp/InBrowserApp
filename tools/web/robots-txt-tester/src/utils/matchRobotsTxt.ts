@@ -163,8 +163,8 @@ function userAgentMatches(normalizedUserAgent: string, ruleUserAgent: string): b
 function normalizeUserAgent(input: string): string {
   const trimmed = input.trim().toLowerCase()
   if (!trimmed) return ''
-  const firstToken = trimmed.split(/\s+/, 1)[0]
-  return firstToken.split('/', 1)[0]
+  const firstToken = trimmed.split(/\s+/, 1)[0] ?? ''
+  return firstToken.split('/', 1)[0] ?? ''
 }
 
 function normalizeRuleUserAgent(input: string): string {
