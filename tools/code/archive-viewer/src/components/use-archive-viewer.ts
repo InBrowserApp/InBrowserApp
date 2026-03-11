@@ -5,7 +5,8 @@ import type { UploadFileInfo } from 'naive-ui'
 import type { ArchiveEntry, ArchiveEntryKind, ArchiveHandle } from '../types'
 import { openArchive } from '../utils/archive-open'
 import {
-  buildRows,
+  buildRowIndex,
+  getRowsForDirectory,
   normalizeDirectoryPath,
   splitPathSegments,
   toDirectoryPath,
@@ -115,9 +116,10 @@ export function useArchiveViewer(providedLabels?: MaybeRefOrGetter<ArchiveViewer
   const canGoToParentDirectory = computed(
     () => splitPathSegments(currentDirectory.value).length > 0,
   )
+  const rowIndex = computed(() => buildRowIndex(entries.value))
 
   const visibleRows = computed(() => {
-    const rows = buildRows(entries.value, currentDirectory.value)
+    const rows = getRowsForDirectory(rowIndex.value, currentDirectory.value)
     const query = search.value.trim().toLowerCase()
     if (!query) {
       return rows
@@ -231,6 +233,8 @@ export function useArchiveViewer(providedLabels?: MaybeRefOrGetter<ArchiveViewer
   }
 
   function closePreviewModal() {
+    invalidatePreviewRequests()
+    resetPreviewState()
     isPreviewModalVisible.value = false
   }
 

@@ -136,25 +136,29 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
+let arePreviewLanguagesRegistered = false
 
-hljs.registerLanguage('bash', bashLang)
-hljs.registerLanguage('css', cssLang)
-hljs.registerLanguage('go', goLang)
-hljs.registerLanguage('ini', iniLang)
-hljs.registerLanguage('java', javaLang)
-hljs.registerLanguage('javascript', javascriptLang)
-hljs.registerLanguage('json', jsonLang)
-hljs.registerLanguage('kotlin', kotlinLang)
-hljs.registerLanguage('markdown', markdownLang)
-hljs.registerLanguage('php', phpLang)
-hljs.registerLanguage('plaintext', plaintextLang)
-hljs.registerLanguage('python', pythonLang)
-hljs.registerLanguage('ruby', rubyLang)
-hljs.registerLanguage('rust', rustLang)
-hljs.registerLanguage('sql', sqlLang)
-hljs.registerLanguage('typescript', typescriptLang)
-hljs.registerLanguage('xml', xmlLang)
-hljs.registerLanguage('yaml', yamlLang)
+if (!arePreviewLanguagesRegistered) {
+  hljs.registerLanguage('bash', bashLang)
+  hljs.registerLanguage('css', cssLang)
+  hljs.registerLanguage('go', goLang)
+  hljs.registerLanguage('ini', iniLang)
+  hljs.registerLanguage('java', javaLang)
+  hljs.registerLanguage('javascript', javascriptLang)
+  hljs.registerLanguage('json', jsonLang)
+  hljs.registerLanguage('kotlin', kotlinLang)
+  hljs.registerLanguage('markdown', markdownLang)
+  hljs.registerLanguage('php', phpLang)
+  hljs.registerLanguage('plaintext', plaintextLang)
+  hljs.registerLanguage('python', pythonLang)
+  hljs.registerLanguage('ruby', rubyLang)
+  hljs.registerLanguage('rust', rustLang)
+  hljs.registerLanguage('sql', sqlLang)
+  hljs.registerLanguage('typescript', typescriptLang)
+  hljs.registerLanguage('xml', xmlLang)
+  hljs.registerLanguage('yaml', yamlLang)
+  arePreviewLanguagesRegistered = true
+}
 
 function handleClose() {
   emit('update:show', false)
