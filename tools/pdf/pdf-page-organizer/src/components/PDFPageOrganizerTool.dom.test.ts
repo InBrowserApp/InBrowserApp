@@ -384,4 +384,31 @@ describe('PDFPageOrganizerTool', () => {
     expect(messageErrorMock).toHaveBeenCalledTimes(4)
     expect(messageSuccessMock).not.toHaveBeenCalled()
   })
+
+  it('ignores stale upload and export results without showing generic errors', async () => {
+    handleUploadMock.mockResolvedValueOnce({ success: false })
+    exportPdfMock.mockResolvedValueOnce({ success: false })
+
+    const wrapper = mount(PDFPageOrganizerTool, {
+      global: {
+        stubs: {
+          PDFOrganizerUploadSection: UploadStub,
+          PDFOrganizerToolbar: ToolbarStub,
+          PDFOrganizerGrid: GridStub,
+          PDFOrganizerPreviewModal: PreviewStub,
+        },
+      },
+    })
+
+    await wrapper.get('.upload-trigger').trigger('click')
+    expect(messageErrorMock).not.toHaveBeenCalled()
+    expect(toolbarScrollMock).not.toHaveBeenCalled()
+
+    file.value = new File(['pdf'], 'demo.pdf', { type: 'application/pdf' })
+    await wrapper.vm.$nextTick()
+
+    await wrapper.get('.export-trigger').trigger('click')
+    expect(messageErrorMock).not.toHaveBeenCalled()
+    expect(messageSuccessMock).not.toHaveBeenCalled()
+  })
 })

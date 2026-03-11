@@ -41,6 +41,7 @@ export const usePdfPageOrganizer = () => {
   let loadToken = 0
   let previewToken = 0
   let thumbnailToken = 0
+  let exportToken = 0
 
   const hasPages = computed(() => pages.value.length > 0)
   const hasResult = computed(() => Boolean(resultBlob.value && resultFilename.value))
@@ -108,6 +109,11 @@ export const usePdfPageOrganizer = () => {
     generateErrorCode.value = ''
   }
 
+  const cancelPendingExport = (): void => {
+    exportToken += 1
+    isGenerating.value = false
+  }
+
   const clearPreview = (): void => {
     previewToken += 1
     previewPageId.value = null
@@ -118,6 +124,7 @@ export const usePdfPageOrganizer = () => {
   const resetState = async (): Promise<void> => {
     loadToken += 1
     thumbnailToken += 1
+    cancelPendingExport()
     await destroyRenderer()
     revokeAllThumbnails()
     resetSelection()
@@ -172,7 +179,7 @@ export const usePdfPageOrganizer = () => {
 
     const currentThumbnailToken = ++thumbnailToken
     const pendingPages = pages.value
-      .filter((page) => !page.thumbnailUrl && !page.hasError)
+      .filter((page) => !page.thumbnailUrl)
       .map((page) => page.sourcePageNumber)
 
     if (!pendingPages.length) {
@@ -230,6 +237,7 @@ export const usePdfPageOrganizer = () => {
   }
 
   const markDocumentChanged = (): void => {
+    cancelPendingExport()
     clearResult()
     ensurePreviewStillValid()
   }
@@ -312,6 +320,7 @@ export const usePdfPageOrganizer = () => {
       return { success: false, errorCode: PDF_ERROR.ExportFailed }
     }
 
+    const currentExportToken = ++exportToken
     isGenerating.value = true
     generateErrorCode.value = ''
     resultBlob.value = null
@@ -327,6 +336,10 @@ export const usePdfPageOrganizer = () => {
         outputFileName: createOutputFileName(file.value),
       })
 
+      if (currentExportToken !== exportToken) {
+        return { success: false }
+      }
+
       if (!response.ok) {
         generateErrorCode.value = response.code
         return { success: false, errorCode: response.code }
@@ -336,11 +349,17 @@ export const usePdfPageOrganizer = () => {
       resultFilename.value = response.result.file.name
       return { success: true }
     } catch (error) {
+      if (currentExportToken !== exportToken) {
+        return { success: false }
+      }
+
       const errorCode = error instanceof Error ? error.message : PDF_ERROR.ExportFailed
       generateErrorCode.value = errorCode
       return { success: false, errorCode }
     } finally {
-      isGenerating.value = false
+      if (currentExportToken === exportToken) {
+        isGenerating.value = false
+      }
     }
   }
 

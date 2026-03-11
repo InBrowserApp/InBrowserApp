@@ -154,7 +154,9 @@ const getErrorMessage = (errorCode?: string): string =>
 const handleUploadAndScroll = async (nextFile: File): Promise<void> => {
   const result = await handleUpload(nextFile)
   if (!result.success) {
-    message.error(getErrorMessage(result.errorCode))
+    if (result.errorCode) {
+      message.error(getErrorMessage(result.errorCode))
+    }
     return
   }
 
@@ -179,7 +181,9 @@ const handlePreviewByOffset = async (offset: number): Promise<void> => {
 const handleExport = async (): Promise<void> => {
   const result = await exportPdf()
   if (!result.success) {
-    message.error(getErrorMessage(result.errorCode))
+    if (result.errorCode) {
+      message.error(getErrorMessage(result.errorCode))
+    }
     return
   }
 

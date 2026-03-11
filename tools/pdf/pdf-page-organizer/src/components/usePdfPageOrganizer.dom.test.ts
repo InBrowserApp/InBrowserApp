@@ -115,6 +115,15 @@ const flushAll = async () => {
   await nextTick()
 }
 
+const createDeferred = <T>() => {
+  let resolve!: (value: T) => void
+  const promise = new Promise<T>((nextResolve) => {
+    resolve = nextResolve
+  })
+
+  return { promise, resolve }
+}
+
 describe('usePdfPageOrganizer', () => {
   beforeEach(() => {
     vi.clearAllMocks()
@@ -360,6 +369,20 @@ describe('usePdfPageOrganizer', () => {
     const exportFailure = await vm.exportPdf()
     expect(exportFailure).toEqual({ success: false, errorCode: PDF_ERROR.ExportFailed })
 
+    const deferredExport = createDeferred<OrganizePdfWorkerResponse>()
+    organizePdfWithWorkerMock.mockImplementationOnce(async () => await deferredExport.promise)
+    const staleExportPromise = vm.exportPdf()
+    expect(vm.isGenerating).toBe(true)
+
+    await vm.clearFile()
+    expect(vm.isGenerating).toBe(false)
+    expect(vm.hasResult).toBe(false)
+
+    deferredExport.resolve(createWorkerSuccess())
+    expect(await staleExportPromise).toEqual({ success: false })
+    expect(vm.hasResult).toBe(false)
+    expect(vm.downloadUrl).toBe(null)
+
     inspectPdfMock.mockRejectedValueOnce('string-error')
     const stringUploadFailure = await vm.handleUpload(
       new File(['pdf'], 'broken.pdf', { type: 'application/pdf' }),
@@ -375,6 +398,12 @@ describe('usePdfPageOrganizer', () => {
     await vm.handleUpload(new File(['pdf'], 'sample.pdf', { type: 'application/pdf' }))
     await flushAll()
     expect(vm.pages[0]?.hasError).toBe(true)
+
+    renderPageMock.mockResolvedValueOnce(new Blob(['thumbnail-retry']))
+    vm.rotatePage('1', 90)
+    await flushAll()
+    expect(vm.pages[0]?.hasError).toBe(false)
+    expect(renderPageMock).toHaveBeenCalledWith(1, 220)
 
     renderPageMock.mockResolvedValue(new Blob(['preview']))
     await vm.openPreview('1')
