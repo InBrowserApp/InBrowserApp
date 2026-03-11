@@ -193,6 +193,7 @@ import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/ro
 import { routes as vatValidatorRoutes } from '@tools/vat-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
 import { routes as robotsTxtGeneratorRoutes } from '@tools/robots-txt-generator/routes'
+import { routes as robotsTxtTesterRoutes } from '@tools/robots-txt-tester/routes'
 import { routes as sitemapXmlGeneratorRoutes } from '@tools/sitemap-xml-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
 import { routes as certificatePublicKeyParserRoutes } from '@tools/certificate-public-key-parser/routes'
@@ -401,6 +402,7 @@ export const routes: ToolRoute[] = [
   ...vatValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
   ...robotsTxtGeneratorRoutes,
+  ...robotsTxtTesterRoutes,
   ...sitemapXmlGeneratorRoutes,
   ...slugGeneratorRoutes,
   ...certificatePublicKeyParserRoutes,
