@@ -1,0 +1,273 @@
+<template>
+  <n-modal :show="visible" @update:show="handleVisibleChange">
+    <n-card style="width: min(980px, 94vw)" :title="modalTitle" closable @close="emit('close')">
+      <n-flex justify="space-between" align="center" wrap style="margin-bottom: 12px">
+        <n-button
+          quaternary
+          circle
+          :aria-label="t('prev')"
+          :title="t('prev')"
+          :disabled="!canPrev"
+          @click="emit('prev')"
+        >
+          <template #icon>
+            <n-icon :component="ArrowLeft20Regular" />
+          </template>
+        </n-button>
+        <n-button
+          quaternary
+          circle
+          :aria-label="t('next')"
+          :title="t('next')"
+          :disabled="!canNext"
+          @click="emit('next')"
+        >
+          <template #icon>
+            <n-icon :component="ArrowRight20Regular" />
+          </template>
+        </n-button>
+      </n-flex>
+
+      <n-spin :show="isLoading">
+        <div class="preview-modal-content">
+          <div v-if="showPreviewStage" class="preview-modal-stage">
+            <img
+              v-if="placeholderUrl"
+              class="preview-image preview-image--placeholder"
+              :class="{ 'preview-image--hidden': isFullImageReady && Boolean(imageUrl) }"
+              :src="placeholderUrl"
+              alt=""
+              aria-hidden="true"
+              :style="imageTransformStyle"
+            />
+            <img
+              v-if="imageUrl"
+              class="preview-image preview-image--full"
+              :class="{ 'preview-image--ready': isFullImageReady }"
+              :src="imageUrl"
+              :alt="modalTitle"
+              :style="imageTransformStyle"
+              @load="handleImageLoad"
+            />
+          </div>
+          <n-empty v-else-if="showEmptyState" />
+        </div>
+      </n-spin>
+    </n-card>
+  </n-modal>
+</template>
+
+<script setup lang="ts">
+import { computed, ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { NButton, NCard, NEmpty, NFlex, NIcon, NModal, NSpin } from 'naive-ui'
+import ArrowLeft20Regular from '@vicons/fluent/ArrowLeft20Regular'
+import ArrowRight20Regular from '@vicons/fluent/ArrowRight20Regular'
+
+const props = defineProps<{
+  visible: boolean
+  page: number | null
+  imageUrl: string | null
+  placeholderUrl: string | null
+  rotation: number
+  isLoading: boolean
+  canPrev: boolean
+  canNext: boolean
+}>()
+
+const emit = defineEmits<{
+  (event: 'close'): void
+  (event: 'prev'): void
+  (event: 'next'): void
+}>()
+
+const { t } = useI18n({ useScope: 'local' })
+const isFullImageReady = ref(false)
+
+const modalTitle = computed(() => {
+  if (props.page === null) {
+    return ''
+  }
+
+  return t('previewModalTitle', { page: props.page })
+})
+
+const imageTransformStyle = computed(() => ({
+  transform: `rotate(${props.rotation}deg)`,
+}))
+
+const showPreviewStage = computed(() => Boolean(props.placeholderUrl || props.imageUrl))
+const showEmptyState = computed(() => !props.isLoading && !props.placeholderUrl && !props.imageUrl)
+
+watch(
+  () => [props.visible, props.page, props.imageUrl, props.placeholderUrl] as const,
+  () => {
+    isFullImageReady.value = !props.placeholderUrl && Boolean(props.imageUrl)
+  },
+  { immediate: true },
+)
+
+const handleImageLoad = (): void => {
+  isFullImageReady.value = true
+}
+
+const handleVisibleChange = (visible: boolean): void => {
+  if (!visible) {
+    emit('close')
+  }
+}
+</script>
+
+<style scoped>
+.preview-modal-content {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-modal-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 180px;
+  place-items: center;
+}
+
+.preview-image {
+  grid-area: 1 / 1;
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  transition:
+    transform 0.15s ease,
+    opacity 0.18s ease;
+}
+
+.preview-image--placeholder {
+  opacity: 1;
+}
+
+.preview-image--full {
+  opacity: 0;
+}
+
+.preview-image--full.preview-image--ready {
+  opacity: 1;
+}
+
+.preview-image--hidden {
+  opacity: 0;
+}
+</style>
+
+<i18n lang="json">
+{
+  "en": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "zh": { "previewModalTitle": "第 {page} 页预览", "prev": "上一页", "next": "下一页" },
+  "zh-CN": { "previewModalTitle": "第 {page} 页预览", "prev": "上一页", "next": "下一页" },
+  "zh-TW": { "previewModalTitle": "第 {page} 頁預覽", "prev": "上一頁", "next": "下一頁" },
+  "zh-HK": { "previewModalTitle": "第 {page} 頁預覽", "prev": "上一頁", "next": "下一頁" },
+  "es": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "fr": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "de": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "it": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "ja": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "ko": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "ru": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "pt": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "ar": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "hi": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "tr": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "nl": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "sv": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "pl": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "vi": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "th": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "id": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "he": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "ms": {
+    "previewModalTitle": "Page {page} Preview",
+    "prev": "Previous page",
+    "next": "Next page"
+  },
+  "no": { "previewModalTitle": "Page {page} Preview", "prev": "Previous page", "next": "Next page" }
+}
+</i18n>

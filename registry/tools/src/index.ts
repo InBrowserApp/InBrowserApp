@@ -5,6 +5,7 @@ import { tools as uuidTools } from '@tools/uuid'
 import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-owner-password'
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
+import { toolInfo as pdfPageOrganizerToolInfo } from '@tools/pdf-page-organizer'
 import { toolInfo as pdfPageNumberAdderToolInfo } from '@tools/pdf-page-number-adder'
 import { toolInfo as pdfSplitterToolInfo } from '@tools/pdf-splitter'
 import { toolInfo as pdfToImageConverterToolInfo } from '@tools/pdf-to-image-converter'
@@ -274,6 +275,7 @@ export const tools: ToolInfo[] = [
   pdfToolsToolInfo,
   removePDFOwnerPasswordToolInfo,
   pdfMergerToolInfo,
+  pdfPageOrganizerToolInfo,
   pdfPageNumberAdderToolInfo,
   pdfSplitterToolInfo,
   pdfToImageConverterToolInfo,
