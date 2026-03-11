@@ -77,6 +77,7 @@ type HarnessVm = {
   generateErrorCode: string
   resultFilename: string
   downloadUrl: string | null
+  isGenerating: boolean
   hasChanges: boolean
   hasResult: boolean
   canUndo: boolean
