@@ -11,17 +11,14 @@
         </n-icon>
       </div>
 
-      <img
-        :src="item.previewUrl"
-        :alt="item.name"
-        style="
-          width: 56px;
-          height: 56px;
-          border-radius: 8px;
-          object-fit: cover;
-          background: var(--n-color-embedded);
-        "
-      />
+      <div class="queue-item__preview">
+        <img
+          :src="item.previewUrl"
+          :alt="item.name"
+          class="queue-item__preview-image"
+          :style="previewImageStyle"
+        />
+      </div>
 
       <div class="queue-item__content">
         <n-text strong class="queue-item__name" :title="item.name">
@@ -40,7 +37,7 @@
         @click.stop="emit('rotate')"
       >
         <template #icon>
-          <n-icon :component="ArrowCounterclockwise16Regular" />
+          <n-icon :component="ArrowClockwise16Regular" />
         </template>
       </n-button>
       <n-button
@@ -86,7 +83,7 @@
 import { computed } from 'vue'
 import { filesize } from 'filesize'
 import { NButton, NIcon, NText } from 'naive-ui'
-import ArrowCounterclockwise16Regular from '@vicons/fluent/ArrowCounterclockwise16Regular'
+import ArrowClockwise16Regular from '@vicons/fluent/ArrowClockwise16Regular'
 import ArrowDown16Regular from '@vicons/fluent/ArrowDown16Regular'
 import ArrowUp16Regular from '@vicons/fluent/ArrowUp16Regular'
 import Delete16Regular from '@vicons/fluent/Delete16Regular'
@@ -111,12 +108,40 @@ const emit = defineEmits<{
   (event: 'remove'): void
 }>()
 
+const isQuarterTurn = computed(() => props.item.rotation === 90 || props.item.rotation === 270)
+
+const previewImageStyle = computed(() => ({
+  transform: props.item.rotation ? `rotate(${props.item.rotation}deg)` : undefined,
+}))
+
 const imageMeta = computed(
-  () => `${props.item.width} × ${props.item.height} · ${filesize(props.item.size)}`,
+  () =>
+    `${isQuarterTurn.value ? props.item.height : props.item.width} × ${
+      isQuarterTurn.value ? props.item.width : props.item.height
+    } · ${filesize(props.item.size)}`,
 )
 </script>
 
 <style scoped>
+.queue-item__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--n-color-embedded);
+}
+
+.queue-item__preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.18s ease;
+}
+
 .queue-item {
   display: flex;
   align-items: center;

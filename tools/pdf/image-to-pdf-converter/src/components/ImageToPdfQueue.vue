@@ -7,6 +7,9 @@
           t('queueSummary', { count: items.length, size: totalSizeLabel })
         }}</n-text>
         <n-button quaternary size="small" :disabled="items.length === 0" @click="emit('clear')">
+          <template #icon>
+            <n-icon :component="Delete16Regular" />
+          </template>
           {{ t('clearAll') }}
         </n-button>
       </div>
@@ -48,7 +51,8 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { filesize } from 'filesize'
-import { NButton, NEmpty, NText } from 'naive-ui'
+import { NButton, NEmpty, NIcon, NText } from 'naive-ui'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
 import { Sortable } from 'sortablejs-vue3'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import type { ImageQueueItem } from '../types'
