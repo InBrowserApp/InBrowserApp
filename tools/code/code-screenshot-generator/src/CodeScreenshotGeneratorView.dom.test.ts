@@ -15,15 +15,7 @@ vi.mock('./utils/raster', () => ({
 }))
 
 import { mount } from '@vue/test-utils'
-import { h } from 'vue'
-import { NMessageProvider } from 'naive-ui'
 import CodeScreenshotGeneratorView from './CodeScreenshotGeneratorView.vue'
-
-const Wrapper = {
-  render() {
-    return h(NMessageProvider, () => h(CodeScreenshotGeneratorView))
-  },
-}
 
 const mountOptions = {
   global: {
@@ -33,18 +25,24 @@ const mountOptions = {
         props: ['info'],
         template: '<div><slot /></div>',
       },
+      CopyToClipboardButton: {
+        props: ['content', 'variant', 'disabled'],
+        template: '<button><slot /><slot name="label" /></button>',
+      },
     },
   },
 }
 
 describe('CodeScreenshotGeneratorView', () => {
   it('renders the editor and export sections', () => {
-    const wrapper = mount(Wrapper, mountOptions)
+    const wrapper = mount(CodeScreenshotGeneratorView, mountOptions)
 
     expect(wrapper.text()).toContain('Code')
     expect(wrapper.text()).toContain('Preview')
     expect(wrapper.text()).toContain('Export')
     expect(wrapper.text()).toContain('PNG')
     expect(wrapper.text()).toContain('HTML')
+
+    wrapper.unmount()
   })
 })
