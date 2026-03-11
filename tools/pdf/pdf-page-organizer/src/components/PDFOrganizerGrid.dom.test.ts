@@ -100,6 +100,8 @@ describe('PDFOrganizerGrid', () => {
     expect(wrapper.emitted('delete-page')?.[0]).toEqual(['2'])
     expect(wrapper.emitted('reorder')?.[0]).toEqual([0, 1])
     expect(wrapper.text()).toContain('Rendering page previews in the background')
+    expect(wrapper.text()).toContain('Page 1')
+    expect(wrapper.text()).toContain('Source 1')
     expect(wrapper.get('.sortable-stub').classes()).toContain('pages-grid--large')
   })
 

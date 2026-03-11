@@ -69,6 +69,7 @@ type HarnessVm = {
   selectedCount: number
   previewPageId: string | null
   previewImageUrl: string | null
+  previewPlaceholderUrl: string | null
   previewRotation: number
   previewDisplayPage: number | null
   canPreviewPrevious: boolean
@@ -158,6 +159,7 @@ describe('usePdfPageOrganizer', () => {
     expect(previewResult.success).toBe(true)
     expect(vm.previewPageId).toBe('2')
     expect(vm.previewImageUrl).toBe('blob:mock-result')
+    expect(vm.previewPlaceholderUrl).toBeTruthy()
     expect(vm.previewRotation).toBe(90)
 
     const nextPreviewResult = await vm.previewByOffset(1)

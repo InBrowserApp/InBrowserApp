@@ -10,6 +10,7 @@ describe('PDFOrganizerPreviewModal', () => {
         visible: true,
         page: 4,
         imageUrl: 'blob:preview',
+        placeholderUrl: 'blob:thumb',
         rotation: 90,
         isLoading: false,
         canPrev: true,
@@ -23,8 +24,17 @@ describe('PDFOrganizerPreviewModal', () => {
     })
 
     expect(wrapper.text()).toContain('Page 4 Preview')
-    expect(wrapper.get('img').attributes('src')).toBe('blob:preview')
-    expect(wrapper.get('img').attributes('style')).toContain('rotate(90deg)')
+    const placeholderImage = wrapper.get('.preview-image--placeholder')
+    const previewImage = wrapper.get('.preview-image--full')
+
+    expect(placeholderImage.attributes('src')).toBe('blob:thumb')
+    expect(previewImage.attributes('src')).toBe('blob:preview')
+    expect(previewImage.attributes('style')).toContain('rotate(90deg)')
+    expect(previewImage.classes()).not.toContain('preview-image--ready')
+
+    await previewImage.trigger('load')
+    expect(previewImage.classes()).toContain('preview-image--ready')
+    expect(placeholderImage.classes()).toContain('preview-image--hidden')
 
     const prevButton = wrapper.get('button[aria-label="Previous page"]')
     const nextButton = wrapper.get('button[aria-label="Next page"]')
@@ -45,6 +55,7 @@ describe('PDFOrganizerPreviewModal', () => {
         visible: true,
         page: null,
         imageUrl: null,
+        placeholderUrl: null,
         rotation: 0,
         isLoading: false,
         canPrev: false,

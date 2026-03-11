@@ -49,6 +49,7 @@ const selectedCount = ref(1)
 const selectedPageSet = computed(() => new Set(['1']))
 const previewPageId = ref<string | null>(null)
 const previewImageUrl = ref<string | null>(null)
+const previewPlaceholderUrl = ref<string | null>(null)
 const previewRotation = ref(0)
 const previewDisplayPage = ref<number | null>(1)
 const canPreviewPrevious = ref(false)
@@ -104,6 +105,7 @@ vi.mock('./usePdfPageOrganizer', () => ({
     selectedPageSet,
     previewPageId,
     previewImageUrl,
+    previewPlaceholderUrl,
     previewRotation,
     previewDisplayPage,
     canPreviewPrevious,
@@ -247,6 +249,7 @@ describe('PDFPageOrganizerTool', () => {
     selectedCount.value = 1
     previewPageId.value = null
     previewImageUrl.value = null
+    previewPlaceholderUrl.value = null
     previewRotation.value = 0
     previewDisplayPage.value = 1
     canPreviewPrevious.value = false

@@ -30,13 +30,27 @@
 
       <n-spin :show="isLoading">
         <div class="preview-modal-content">
-          <img
-            v-if="imageUrl"
-            :src="imageUrl"
-            :alt="modalTitle"
-            :style="{ transform: `rotate(${rotation}deg)` }"
-          />
-          <n-empty v-else-if="!isLoading" />
+          <div v-if="showPreviewStage" class="preview-modal-stage">
+            <img
+              v-if="placeholderUrl"
+              class="preview-image preview-image--placeholder"
+              :class="{ 'preview-image--hidden': isFullImageReady && Boolean(imageUrl) }"
+              :src="placeholderUrl"
+              alt=""
+              aria-hidden="true"
+              :style="imageTransformStyle"
+            />
+            <img
+              v-if="imageUrl"
+              class="preview-image preview-image--full"
+              :class="{ 'preview-image--ready': isFullImageReady }"
+              :src="imageUrl"
+              :alt="modalTitle"
+              :style="imageTransformStyle"
+              @load="handleImageLoad"
+            />
+          </div>
+          <n-empty v-else-if="showEmptyState" />
         </div>
       </n-spin>
     </n-card>
@@ -44,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NButton, NCard, NEmpty, NFlex, NIcon, NModal, NSpin } from 'naive-ui'
 import ArrowLeft20Regular from '@vicons/fluent/ArrowLeft20Regular'
@@ -54,6 +68,7 @@ const props = defineProps<{
   visible: boolean
   page: number | null
   imageUrl: string | null
+  placeholderUrl: string | null
   rotation: number
   isLoading: boolean
   canPrev: boolean
@@ -67,6 +82,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n({ useScope: 'local' })
+const isFullImageReady = ref(false)
 
 const modalTitle = computed(() => {
   if (props.page === null) {
@@ -75,6 +91,25 @@ const modalTitle = computed(() => {
 
   return t('previewModalTitle', { page: props.page })
 })
+
+const imageTransformStyle = computed(() => ({
+  transform: `rotate(${props.rotation}deg)`,
+}))
+
+const showPreviewStage = computed(() => Boolean(props.placeholderUrl || props.imageUrl))
+const showEmptyState = computed(() => !props.isLoading && !props.placeholderUrl && !props.imageUrl)
+
+watch(
+  () => [props.visible, props.page, props.imageUrl, props.placeholderUrl] as const,
+  () => {
+    isFullImageReady.value = !props.placeholderUrl && Boolean(props.imageUrl)
+  },
+  { immediate: true },
+)
+
+const handleImageLoad = (): void => {
+  isFullImageReady.value = true
+}
 
 const handleVisibleChange = (visible: boolean): void => {
   if (!visible) {
@@ -91,12 +126,39 @@ const handleVisibleChange = (visible: boolean): void => {
   justify-content: center;
 }
 
-.preview-modal-content img {
+.preview-modal-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 180px;
+  place-items: center;
+}
+
+.preview-image {
+  grid-area: 1 / 1;
   max-width: 100%;
   max-height: 75vh;
   object-fit: contain;
   border-radius: 8px;
-  transition: transform 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.18s ease;
+}
+
+.preview-image--placeholder {
+  opacity: 1;
+}
+
+.preview-image--full {
+  opacity: 0;
+}
+
+.preview-image--full.preview-image--ready {
+  opacity: 1;
+}
+
+.preview-image--hidden {
+  opacity: 0;
 }
 </style>
 

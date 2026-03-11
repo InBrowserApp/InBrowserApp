@@ -65,9 +65,8 @@ export const usePdfPageOrganizer = () => {
   const currentPreviewIndex = computed(() =>
     pages.value.findIndex((page) => page.id === previewPageId.value),
   )
-  const previewImageUrl = computed(
-    () => previewUrl.value || currentPreviewPage.value?.thumbnailUrl || null,
-  )
+  const previewImageUrl = computed(() => previewUrl.value || null)
+  const previewPlaceholderUrl = computed(() => currentPreviewPage.value?.thumbnailUrl || null)
   const previewRotation = computed(() => currentPreviewPage.value?.rotationOffset ?? 0)
   const previewDisplayPage = computed(() => {
     if (currentPreviewIndex.value < 0) {
@@ -424,6 +423,7 @@ export const usePdfPageOrganizer = () => {
     selectedPageSet,
     previewPageId,
     previewImageUrl,
+    previewPlaceholderUrl,
     previewRotation,
     previewDisplayPage,
     canPreviewPrevious,

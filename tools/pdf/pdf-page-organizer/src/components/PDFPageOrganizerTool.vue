@@ -58,6 +58,7 @@
     :visible="previewPageId !== null"
     :page="previewDisplayPage"
     :image-url="previewImageUrl"
+    :placeholder-url="previewPlaceholderUrl"
     :rotation="previewRotation"
     :is-loading="isPreviewLoading"
     :can-prev="canPreviewPrevious"
@@ -103,6 +104,7 @@ const {
   selectedPageSet,
   previewPageId,
   previewImageUrl,
+  previewPlaceholderUrl,
   previewRotation,
   previewDisplayPage,
   canPreviewPrevious,
