@@ -29,6 +29,7 @@ import { routes as imageToIcoRoutes } from '@tools/image-to-ico/routes'
 import { routes as imageToPdfConverterRoutes } from '@tools/image-to-pdf-converter/routes'
 import { routes as imageToWebpConverterRoutes } from '@tools/image-to-webp-converter/routes'
 import { routes as imageResizerRoutes } from '@tools/image-resizer/routes'
+import { routes as imageCropperRoutes } from '@tools/image-cropper/routes'
 import { routes as exifViewerRoutes } from '@tools/exif-viewer/routes'
 import { routes as imageMetadataCleanerRoutes } from '@tools/image-metadata-cleaner/routes'
 import { routes as imagePaletteExtractorRoutes } from '@tools/image-palette-extractor/routes'
@@ -235,6 +236,7 @@ export const routes: ToolRoute[] = [
   ...imageToPdfConverterRoutes,
   ...imageToWebpConverterRoutes,
   ...imageResizerRoutes,
+  ...imageCropperRoutes,
   ...svgOptimizerRoutes,
   ...svgToImageConverterRoutes,
   ...exifViewerRoutes,
