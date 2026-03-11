@@ -14,7 +14,7 @@ const createProps = (
   uploadImageLabel: 'Upload image',
   replaceImageLabel: 'Replace image',
   clearImageLabel: 'Clear image',
-  imageHint: 'PNG and JPG are supported.',
+  imageHint: 'Browser-supported images are accepted and converted to PNG when needed.',
   pageRangesLabel: 'Page ranges',
   pageRangesPlaceholder: '1-3,5',
   imageErrorMessage: '',
@@ -63,6 +63,7 @@ describe('PDFWatermarkContentPanel', () => {
 
     const fileInput = wrapper.get('input[type="file"]')
     const clickSpy = vi.spyOn(fileInput.element as HTMLInputElement, 'click')
+    expect(fileInput.attributes('accept')).toBe('image/*')
 
     await wrapper.get('[data-test="image-upload-button"]').trigger('click')
     expect(clickSpy).toHaveBeenCalledTimes(1)
@@ -86,11 +87,11 @@ describe('PDFWatermarkContentPanel', () => {
 
     await wrapper.setProps({
       imageFile,
-      imageErrorMessage: 'Please upload a valid PNG or JPG watermark image.',
+      imageErrorMessage: 'Please upload a valid browser-supported watermark image.',
     })
 
     expect(wrapper.text()).toContain('logo.png')
-    expect(wrapper.text()).toContain('Please upload a valid PNG or JPG watermark image.')
+    expect(wrapper.text()).toContain('Please upload a valid browser-supported watermark image.')
 
     await wrapper.get('button:nth-of-type(2)').trigger('click')
     expect(wrapper.emitted('clear-image')).toEqual([[]])

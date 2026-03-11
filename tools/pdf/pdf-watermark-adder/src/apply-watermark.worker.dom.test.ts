@@ -170,7 +170,7 @@ describe('apply-watermark worker', () => {
     )
   })
 
-  it('returns invalid image code for unsupported image files', async () => {
+  it('returns invalid image code for non-image watermark files', async () => {
     await import('./apply-watermark.worker')
 
     await (
@@ -191,7 +191,7 @@ describe('apply-watermark worker', () => {
         position: 'center',
         offsetX: 0,
         offsetY: 0,
-        imageFile: new File(['gif'], 'logo.gif', { type: 'image/gif' }),
+        imageFile: new File(['txt'], 'logo.txt', { type: 'text/plain' }),
         imageScale: 30,
         outputFileName: '',
       },

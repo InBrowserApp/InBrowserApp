@@ -27,6 +27,17 @@ vi.mock('../apply-watermark', () => ({
   applyWatermarkWithWorker: (payload: unknown) => applyWatermarkWithWorkerMock(payload),
 }))
 
+const { normalizeWatermarkImageFileMock } = vi.hoisted(() => ({
+  normalizeWatermarkImageFileMock: vi.fn(async (file: File) => file),
+}))
+
+vi.mock('../utils/watermark-content', () => ({
+  isSupportedWatermarkImageFile: (file: File) =>
+    file.type.toLowerCase().startsWith('image/') ||
+    /\.(avif|bmp|gif|ico|jpe?g|png|svg|tiff?|webp)$/i.test(file.name),
+  normalizeWatermarkImageFile: (file: File) => normalizeWatermarkImageFileMock(file),
+}))
+
 vi.mock('@vueuse/core', () => ({
   useObjectUrl: (target: { value: Blob | null }) =>
     computed(() => (target.value ? 'blob:mock-result' : null)),
@@ -72,7 +83,7 @@ type WatermarkAdderHarnessVm = {
   pageCount: number
   mode: 'text' | 'image'
   text: string
-  fontFamily: 'sans-serif' | 'serif'
+  fontFamily: 'sans-serif' | 'serif' | 'monospace'
   fontSize: number
   color: string
   opacity: number
@@ -104,7 +115,7 @@ type WatermarkAdderHarnessVm = {
   setMode(value: 'text' | 'image'): void
   setText(value: string): void
   setTextPreset(value: string): void
-  setFontFamily(value: 'sans-serif' | 'serif'): void
+  setFontFamily(value: 'sans-serif' | 'serif' | 'monospace'): void
   setFontSize(value: number | null): void
   setColor(value: string): void
   setOpacity(value: number | null): void
@@ -135,6 +146,15 @@ describe('usePdfWatermarkAdder', () => {
           blob: new Blob(['ok'], { type: 'application/pdf' }),
         },
       },
+    })
+    normalizeWatermarkImageFileMock.mockImplementation(async (file: File) => {
+      if (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg') {
+        return file
+      }
+
+      return new File(['png'], file.name.replace(/\.[^.]+$/u, '.png'), {
+        type: 'image/png',
+      })
     })
   })
 
@@ -210,7 +230,7 @@ describe('usePdfWatermarkAdder', () => {
 
     await vm.handleUpload(new File(['x'], 'sample.pdf', { type: 'application/pdf' }))
     vm.setText('TOP SECRET')
-    vm.setFontFamily('serif')
+    vm.setFontFamily('monospace')
     vm.setFontSize(64)
     vm.setColor('#336699')
     vm.setOpacity(22)
@@ -229,7 +249,7 @@ describe('usePdfWatermarkAdder', () => {
       expect.objectContaining({
         mode: 'text',
         text: 'TOP SECRET',
-        fontFamily: 'serif',
+        fontFamily: 'monospace',
         fontSize: 64,
         color: '#336699',
         opacity: 22,
@@ -251,16 +271,17 @@ describe('usePdfWatermarkAdder', () => {
     vm.setMode('image')
 
     const invalidResult = await vm.handleImageUpload(
-      new File(['gif'], 'badge.gif', { type: 'image/gif' }),
+      new File(['txt'], 'badge.txt', { type: 'text/plain' }),
     )
     expect(invalidResult.success).toBe(false)
     expect(vm.imageErrorCode).toBe(PDF_ERROR.InvalidImage)
 
     const validResult = await vm.handleImageUpload(
-      new File(['png'], 'logo.png', { type: 'image/png' }),
+      new File(['webp'], 'logo.webp', { type: 'image/webp' }),
     )
     expect(validResult.success).toBe(true)
     expect(vm.imageFile?.name).toBe('logo.png')
+    expect(vm.imageFile?.type).toBe('image/png')
 
     vm.setImageScale(35)
     const result = await vm.generate()
@@ -273,6 +294,23 @@ describe('usePdfWatermarkAdder', () => {
         imageFile: expect.objectContaining({ name: 'logo.png' }),
       }),
     )
+  })
+
+  it('surfaces image conversion failures as invalid images', async () => {
+    const wrapper = mount(Harness)
+    const vm = getVm(wrapper)
+
+    await vm.handleUpload(new File(['x'], 'sample.pdf', { type: 'application/pdf' }))
+    vm.setMode('image')
+    normalizeWatermarkImageFileMock.mockRejectedValueOnce(new Error('watermark-image-load-failed'))
+
+    const result = await vm.handleImageUpload(new File(['gif'], 'badge.gif', { type: 'image/gif' }))
+
+    expect(result).toEqual({
+      success: false,
+      errorCode: PDF_ERROR.InvalidImage,
+    })
+    expect(vm.imageErrorCode).toBe(PDF_ERROR.InvalidImage)
   })
 
   it('returns early when generation prerequisites are missing', async () => {
@@ -511,7 +549,7 @@ describe('usePdfWatermarkAdder', () => {
     await vm.generate()
     expect(applyWatermarkWithWorkerMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        outputFileName: 'watermarked-watermarked.pdf',
+        outputFileName: 'watermarked.pdf',
       }),
     )
   })

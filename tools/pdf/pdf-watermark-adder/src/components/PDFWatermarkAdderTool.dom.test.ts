@@ -84,7 +84,7 @@ const createAdderState = () => {
   const mode = ref<'text' | 'image'>('text')
   const rangeInput = ref('')
   const text = ref('CONFIDENTIAL')
-  const fontFamily = ref<'sans-serif' | 'serif'>('sans-serif')
+  const fontFamily = ref<'sans-serif' | 'serif' | 'monospace'>('sans-serif')
   const fontSize = ref(48)
   const color = ref('#000000')
   const opacity = ref(18)
@@ -168,10 +168,6 @@ const mountTool = () =>
         PDFWatermarkUploadSection: uploadStub,
         PDFWatermarkSettingsSection: settingsStub,
         PDFWatermarkGenerateSection: generateStub,
-        ToolSectionHeader: defineComponent({
-          name: 'ToolSectionHeader',
-          template: '<h2><slot /></h2>',
-        }),
       },
     },
   })
@@ -219,11 +215,11 @@ describe('PDFWatermarkAdderTool', () => {
     expect(upload.props('pageCountText')).toContain('12')
     expect(upload.props('fileErrorMessage')).toContain('Encrypted PDF')
     expect(settings.props('rangeErrorMessage')).toContain('outside the PDF page count')
-    expect(settings.props('imageErrorMessage')).toContain('valid PNG or JPG')
+    expect(settings.props('imageErrorMessage')).toContain('valid watermark image')
     expect(settings.props('textPresets')).toEqual(['CONFIDENTIAL', 'DRAFT', 'INTERNAL'])
     expect(
       (settings.props('fontFamilyOptions') as Array<{ value: string }>).map(({ value }) => value),
-    ).toEqual(['sans-serif', 'serif'])
+    ).toEqual(['sans-serif', 'serif', 'monospace'])
     expect(
       (settings.props('positionOptions') as Array<{ value: string }>).map(({ value }) => value),
     ).toEqual([
@@ -305,7 +301,7 @@ describe('PDFWatermarkAdderTool', () => {
     await nextTick()
 
     expect(settings.props('rangeErrorMessage')).toContain('selected once')
-    expect(generate.props('generateErrorMessage')).toContain('valid PNG or JPG')
+    expect(generate.props('generateErrorMessage')).toContain('valid watermark image')
 
     state.rangeErrorCode.value = PAGE_RANGE_ERROR.InvalidToken
     state.generateErrorCode.value = PDF_ERROR.ApplyFailed

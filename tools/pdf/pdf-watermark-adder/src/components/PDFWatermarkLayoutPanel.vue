@@ -1,7 +1,7 @@
 <template>
   <n-grid :cols="24" :x-gap="12" :y-gap="12">
     <n-gi :span="12">
-      <n-form-item :label="positionLabel">
+      <n-form-item :label="positionLabel" :show-feedback="false">
         <n-select
           :value="position"
           :options="positionOptions"
@@ -12,7 +12,7 @@
     </n-gi>
 
     <n-gi :span="12">
-      <n-form-item :label="opacityLabel">
+      <n-form-item :label="opacityLabel" :show-feedback="false">
         <n-input-number
           data-test="opacity-input"
           style="width: 100%"
@@ -27,7 +27,7 @@
     </n-gi>
 
     <n-gi :span="12">
-      <n-form-item :label="rotationLabel">
+      <n-form-item :label="rotationLabel" :show-feedback="false">
         <n-input-number
           data-test="rotation-input"
           style="width: 100%"
@@ -42,7 +42,7 @@
     </n-gi>
 
     <n-gi :span="12">
-      <n-form-item :label="offsetXLabel">
+      <n-form-item :label="offsetXLabel" :show-feedback="false">
         <n-input-number
           data-test="offset-x-input"
           style="width: 100%"
@@ -55,7 +55,7 @@
     </n-gi>
 
     <n-gi :span="12">
-      <n-form-item :label="offsetYLabel">
+      <n-form-item :label="offsetYLabel" :show-feedback="false">
         <n-input-number
           data-test="offset-y-input"
           style="width: 100%"
@@ -69,11 +69,13 @@
 
     <template v-if="mode === 'text'">
       <n-gi :span="12">
-        <n-form-item :label="fontFamilyLabel">
+        <n-form-item :label="fontFamilyLabel" :show-feedback="false">
           <n-select
             data-test="font-family-select"
             :value="fontFamily"
             :options="fontFamilyOptions"
+            :render-label="renderFontFamilyOption"
+            :style="{ fontFamily: resolvePreviewFontFamily(props.fontFamily) }"
             :disabled="isGenerating"
             @update:value="handleFontFamilyChange"
           />
@@ -81,7 +83,7 @@
       </n-gi>
 
       <n-gi :span="12">
-        <n-form-item :label="fontSizeLabel">
+        <n-form-item :label="fontSizeLabel" :show-feedback="false">
           <n-input-number
             data-test="font-size-input"
             style="width: 100%"
@@ -96,7 +98,7 @@
       </n-gi>
 
       <n-gi :span="24">
-        <n-form-item :label="colorLabel">
+        <n-form-item :label="colorLabel" :show-feedback="false">
           <n-color-picker
             data-test="color-picker"
             :value="color"
@@ -110,7 +112,7 @@
     </template>
 
     <n-gi v-else :span="12">
-      <n-form-item :label="imageScaleLabel">
+      <n-form-item :label="imageScaleLabel" :show-feedback="false">
         <n-input-number
           data-test="image-scale-input"
           style="width: 100%"
@@ -127,11 +129,13 @@
 </template>
 
 <script setup lang="ts">
+import { h } from 'vue'
 import type { SelectOption } from 'naive-ui'
 import { NColorPicker, NFormItem, NGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
 import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import { resolvePreviewFontFamily } from '../utils/watermark-font'
 
-defineProps<{
+const props = defineProps<{
   positionLabel: string
   fontFamilyLabel: string
   fontSizeLabel: string
@@ -168,6 +172,23 @@ const emit = defineEmits<{
   (event: 'update-image-scale', value: number | null): void
 }>()
 
+const renderFontFamilyOption = (option: SelectOption) => {
+  const value = option.value
+  if (value !== 'sans-serif' && value !== 'serif' && value !== 'monospace') {
+    return String(option.label ?? value ?? '')
+  }
+
+  return h(
+    'span',
+    {
+      style: {
+        fontFamily: resolvePreviewFontFamily(value),
+      },
+    },
+    String(option.label ?? value),
+  )
+}
+
 const handlePositionChange = (value: string): void => {
   if (
     value === 'top-left' ||
@@ -185,7 +206,7 @@ const handlePositionChange = (value: string): void => {
 }
 
 const handleFontFamilyChange = (value: string): void => {
-  if (value === 'serif' || value === 'sans-serif') {
+  if (value === 'serif' || value === 'sans-serif' || value === 'monospace') {
     emit('update-font-family', value)
   }
 }

@@ -7,6 +7,7 @@ import PDFWatermarkSettingsSection from './PDFWatermarkSettingsSection.vue'
 const fontFamilyOptions: SelectOption[] = [
   { label: 'Sans serif', value: 'sans-serif' },
   { label: 'Serif', value: 'serif' },
+  { label: 'Monospace', value: 'monospace' },
 ]
 
 const positionOptions: SelectOption[] = [{ label: 'Center', value: 'center' }]
@@ -102,7 +103,7 @@ const createProps = (
   uploadImageLabel: 'Upload image',
   replaceImageLabel: 'Replace image',
   clearImageLabel: 'Clear image',
-  imageHint: 'PNG and JPG are supported.',
+  imageHint: 'Browser-supported images are accepted and converted to PNG when needed.',
   pageRangesLabel: 'Page ranges',
   pageRangesPlaceholder: '1-3,5',
   positionLabel: 'Position',
@@ -146,7 +147,7 @@ describe('PDFWatermarkSettingsSection', () => {
   it('passes props to child panels and forwards child events', async () => {
     const wrapper = mount(PDFWatermarkSettingsSection, {
       props: createProps({
-        imageErrorMessage: 'Please upload a valid PNG or JPG watermark image.',
+        imageErrorMessage: 'Please upload a valid browser-supported watermark image.',
         rangeInput: '2-4',
       }),
       global: {
@@ -159,7 +160,7 @@ describe('PDFWatermarkSettingsSection', () => {
     })
 
     expect(wrapper.get('[data-test="content-panel"]').text()).toContain(
-      'Please upload a valid PNG or JPG watermark image.',
+      'Please upload a valid browser-supported watermark image.',
     )
     expect(wrapper.get('[data-test="content-panel"]').text()).toContain(
       'CONFIDENTIAL,DRAFT,INTERNAL',

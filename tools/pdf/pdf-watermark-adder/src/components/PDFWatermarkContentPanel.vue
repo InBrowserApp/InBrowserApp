@@ -1,7 +1,7 @@
 <template>
   <n-grid :cols="24" :x-gap="12" :y-gap="12">
     <n-gi :span="24">
-      <n-form-item :label="modeLabel">
+      <n-form-item :label="modeLabel" :show-feedback="false">
         <n-radio-group :value="mode" name="watermark-mode" @update:value="handleModeChange">
           <n-radio-button value="text">{{ textModeLabel }}</n-radio-button>
           <n-radio-button value="image">{{ imageModeLabel }}</n-radio-button>
@@ -10,7 +10,7 @@
     </n-gi>
 
     <n-gi :span="24">
-      <n-form-item :label="pageRangesLabel">
+      <n-form-item :label="pageRangesLabel" :show-feedback="false">
         <n-input
           :value="rangeInput"
           data-test="range-input"
@@ -22,7 +22,7 @@
     </n-gi>
 
     <n-gi v-if="mode === 'text'" :span="24">
-      <n-form-item :label="textContentLabel">
+      <n-form-item :label="textContentLabel" :show-feedback="false">
         <n-input
           type="textarea"
           data-test="text-input"
@@ -48,13 +48,13 @@
     </n-gi>
 
     <n-gi v-else :span="24">
-      <n-form-item :label="imageContentLabel">
+      <n-form-item :label="imageContentLabel" :show-feedback="false">
         <n-flex vertical :size="10">
           <input
             ref="imageInputRef"
             class="hidden-file-input"
             type="file"
-            accept="image/png,image/jpeg,.png,.jpg,.jpeg"
+            accept="image/*"
             @change="handleImageInputChange"
           />
 

@@ -34,6 +34,7 @@ import PDFWatermarkLayoutPanel from './PDFWatermarkLayoutPanel.vue'
 const fontFamilyOptions: SelectOption[] = [
   { label: 'Sans serif', value: 'sans-serif' },
   { label: 'Serif', value: 'serif' },
+  { label: 'Monospace', value: 'monospace' },
 ]
 
 const positionOptions: SelectOption[] = [
@@ -86,6 +87,7 @@ describe('PDFWatermarkLayoutPanel', () => {
     await positionSelect!.vm.$emit('update:value', 'invalid')
     await fontFamilySelect!.vm.$emit('update:value', 'serif')
     await fontFamilySelect!.vm.$emit('update:value', 'monospace')
+    await fontFamilySelect!.vm.$emit('update:value', 'display')
 
     const [opacityInput, rotationInput, offsetXInput, offsetYInput, fontSizeInput] =
       wrapper.findAllComponents({ name: 'NInputNumber' })
@@ -98,7 +100,7 @@ describe('PDFWatermarkLayoutPanel', () => {
     await wrapper.getComponent({ name: 'NColorPicker' }).vm.$emit('update:value', '#336699')
 
     expect(wrapper.emitted('update-position')).toEqual([['bottom-right']])
-    expect(wrapper.emitted('update-font-family')).toEqual([['serif']])
+    expect(wrapper.emitted('update-font-family')).toEqual([['serif'], ['monospace']])
     expect(wrapper.emitted('update-opacity')).toEqual([[24]])
     expect(wrapper.emitted('update-rotation')).toEqual([[-40]])
     expect(wrapper.emitted('update-offset-x')).toEqual([[12]])

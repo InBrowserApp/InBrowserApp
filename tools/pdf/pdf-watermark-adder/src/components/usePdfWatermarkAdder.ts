@@ -5,7 +5,10 @@ import { inspectPdf, isPdfFile } from '../inspect-pdf'
 import { PDF_ERROR } from '../pdf-errors'
 import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
 import { PAGE_RANGE_ERROR, parsePageSelection } from '../utils/page-range'
-import { isSupportedWatermarkImageFile } from '../utils/watermark-content'
+import {
+  isSupportedWatermarkImageFile,
+  normalizeWatermarkImageFile,
+} from '../utils/watermark-content'
 import { normalizeRotation } from '../utils/watermark-layout'
 
 type ActionResult = {
@@ -34,13 +37,18 @@ const sanitizeInteger = (value: number, fallback: number, min?: number, max?: nu
   return result
 }
 
-const getFileBaseName = (filename: string): string => {
+const getOutputFileName = (filename: string): string => {
   const trimmed = filename.trim()
   if (!trimmed) {
-    return DEFAULT_FILE_NAME
+    return `${DEFAULT_FILE_NAME}.pdf`
   }
 
-  return trimmed.replace(/\.pdf$/i, '') || DEFAULT_FILE_NAME
+  const baseName = trimmed.replace(/\.pdf$/i, '')
+  if (!baseName) {
+    return `${DEFAULT_FILE_NAME}.pdf`
+  }
+
+  return `${baseName}-watermarked.pdf`
 }
 
 export const usePdfWatermarkAdder = () => {
@@ -84,7 +92,7 @@ export const usePdfWatermarkAdder = () => {
       return `${DEFAULT_FILE_NAME}.pdf`
     }
 
-    return `${getFileBaseName(file.value.name)}-watermarked.pdf`
+    return getOutputFileName(file.value.name)
   })
 
   const hasTextContent = computed(() => text.value.trim().length > 0)
@@ -206,15 +214,18 @@ export const usePdfWatermarkAdder = () => {
 
   const clearFile = (): void => {
     invalidatePendingGeneration()
+    imageUploadVersion += 1
     file.value = null
     pageCount.value = 0
     rangeInput.value = ''
     fileErrorCode.value = ''
+    imageErrorCode.value = ''
     rangeErrorCode.value = ''
     clearGenerateState()
   }
 
   const clearImage = (): void => {
+    imageUploadVersion += 1
     imageFile.value = null
     imageErrorCode.value = ''
     clearGenerateState()
@@ -244,6 +255,7 @@ export const usePdfWatermarkAdder = () => {
       file.value = nextFile
       pageCount.value = inspection.pageCount
       rangeInput.value = ''
+      imageErrorCode.value = ''
       rangeErrorCode.value = ''
       return { success: true }
     } catch (error) {
@@ -271,14 +283,24 @@ export const usePdfWatermarkAdder = () => {
       return { success: false, errorCode: PDF_ERROR.InvalidImage }
     }
 
-    /* c8 ignore next */
-    if (currentImageUploadVersion !== imageUploadVersion) {
-      return { success: false }
-    }
+    try {
+      const normalizedFile = await normalizeWatermarkImageFile(nextFile)
 
-    imageFile.value = nextFile
-    clearGenerateState()
-    return { success: true }
+      if (currentImageUploadVersion !== imageUploadVersion) {
+        return { success: false }
+      }
+
+      imageFile.value = normalizedFile
+      clearGenerateState()
+      return { success: true }
+    } catch {
+      if (currentImageUploadVersion !== imageUploadVersion) {
+        return { success: false }
+      }
+
+      imageErrorCode.value = PDF_ERROR.InvalidImage
+      return { success: false, errorCode: PDF_ERROR.InvalidImage }
+    }
   }
 
   const generate = async (): Promise<ActionResult> => {

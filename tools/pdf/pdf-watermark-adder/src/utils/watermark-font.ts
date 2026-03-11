@@ -2,6 +2,7 @@ import { PDFDocument, StandardFonts, type PDFFont } from 'pdf-lib'
 import type { WatermarkFontFamily } from '../types'
 
 const previewFontFamilies: Record<WatermarkFontFamily, string> = {
+  monospace: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace',
   serif: '"Times New Roman", Times, serif',
   'sans-serif': 'Helvetica, Arial, sans-serif',
 }
@@ -9,6 +10,10 @@ const previewFontFamilies: Record<WatermarkFontFamily, string> = {
 const fontPromises = new Map<WatermarkFontFamily, Promise<PDFFont>>()
 
 export const resolveStandardFont = (fontFamily: WatermarkFontFamily): StandardFonts => {
+  if (fontFamily === 'monospace') {
+    return StandardFonts.Courier
+  }
+
   if (fontFamily === 'serif') {
     return StandardFonts.TimesRoman
   }

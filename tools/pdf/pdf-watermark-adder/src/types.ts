@@ -1,6 +1,6 @@
 /* c8 ignore file */
 export type WatermarkMode = 'text' | 'image'
-export type WatermarkFontFamily = 'sans-serif' | 'serif'
+export type WatermarkFontFamily = 'sans-serif' | 'serif' | 'monospace'
 
 export type WatermarkPosition =
   | 'top-left'
