@@ -13,31 +13,39 @@
 
     <n-gi :span="12">
       <n-form-item :label="opacityLabel" :show-feedback="false">
-        <n-input-number
-          data-test="opacity-input"
-          style="width: 100%"
-          :value="opacity"
-          :min="0"
-          :max="100"
-          :step="1"
-          :disabled="isGenerating"
-          @update:value="emit('update-opacity', $event)"
-        />
+        <n-flex align="center" :size="12" class="slider-field">
+          <n-slider
+            data-test="opacity-slider"
+            class="slider-field__control"
+            :value="opacity"
+            :min="0"
+            :max="100"
+            :step="1"
+            :disabled="isGenerating"
+            :format-tooltip="formatOpacityTooltip"
+            @update:value="emit('update-opacity', $event)"
+          />
+          <n-text depth="3" class="slider-field__value">{{ formatOpacityValue(opacity) }}</n-text>
+        </n-flex>
       </n-form-item>
     </n-gi>
 
     <n-gi :span="12">
       <n-form-item :label="rotationLabel" :show-feedback="false">
-        <n-input-number
-          data-test="rotation-input"
-          style="width: 100%"
-          :value="rotation"
-          :min="-180"
-          :max="180"
-          :step="1"
-          :disabled="isGenerating"
-          @update:value="emit('update-rotation', $event)"
-        />
+        <n-flex align="center" :size="12" class="slider-field">
+          <n-slider
+            data-test="rotation-slider"
+            class="slider-field__control"
+            :value="rotation"
+            :min="-180"
+            :max="180"
+            :step="1"
+            :disabled="isGenerating"
+            :format-tooltip="formatRotationTooltip"
+            @update:value="emit('update-rotation', $event)"
+          />
+          <n-text depth="3" class="slider-field__value">{{ formatRotationValue(rotation) }}</n-text>
+        </n-flex>
       </n-form-item>
     </n-gi>
 
@@ -131,7 +139,17 @@
 <script setup lang="ts">
 import { h } from 'vue'
 import type { SelectOption } from 'naive-ui'
-import { NColorPicker, NFormItem, NGi, NGrid, NInputNumber, NSelect } from 'naive-ui'
+import {
+  NColorPicker,
+  NFlex,
+  NFormItem,
+  NGi,
+  NGrid,
+  NInputNumber,
+  NSelect,
+  NSlider,
+  NText,
+} from 'naive-ui'
 import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
 import { resolvePreviewFontFamily } from '../utils/watermark-font'
 
@@ -210,4 +228,28 @@ const handleFontFamilyChange = (value: string): void => {
     emit('update-font-family', value)
   }
 }
+
+const formatOpacityValue = (value: number): string => `${value}%`
+
+const formatRotationValue = (value: number): string => `${value}°`
+
+const formatOpacityTooltip = (value: number): string => formatOpacityValue(value)
+
+const formatRotationTooltip = (value: number): string => formatRotationValue(value)
 </script>
+
+<style scoped>
+.slider-field {
+  width: 100%;
+}
+
+.slider-field__control {
+  flex: 1;
+}
+
+.slider-field__value {
+  min-width: 4rem;
+  text-align: right;
+  white-space: nowrap;
+}
+</style>

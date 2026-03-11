@@ -33,18 +33,20 @@
           @update:value="emit('update-text', $event)"
         />
       </n-form-item>
-      <n-flex :size="8" wrap>
-        <n-button
-          v-for="preset in textPresets"
-          :key="preset"
-          size="small"
-          tertiary
-          :disabled="isGenerating"
-          @click="emit('preset-text', preset)"
-        >
-          {{ preset }}
-        </n-button>
-      </n-flex>
+      <div class="text-preset-list">
+        <n-flex :size="8" wrap>
+          <n-button
+            v-for="preset in textPresets"
+            :key="preset"
+            size="small"
+            tertiary
+            :disabled="isGenerating"
+            @click="emit('preset-text', preset)"
+          >
+            {{ preset }}
+          </n-button>
+        </n-flex>
+      </div>
     </n-gi>
 
     <n-gi v-else :span="24">
@@ -159,5 +161,9 @@ const handleImageInputChange = (event: Event): void => {
 <style scoped>
 .hidden-file-input {
   display: none;
+}
+
+.text-preset-list {
+  padding-block: 6px 4px;
 }
 </style>

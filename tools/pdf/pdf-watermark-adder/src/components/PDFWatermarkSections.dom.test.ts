@@ -88,6 +88,23 @@ vi.mock('naive-ui', async () => {
       '<input type="number" :value="value" :disabled="disabled" v-bind="$attrs" @input="$emit(\'update:value\', Number($event.target.value))" />',
   })
 
+  const NSlider = defineComponent({
+    name: 'NSlider',
+    props: {
+      value: {
+        type: Number,
+        default: 0,
+      },
+      disabled: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    emits: ['update:value'],
+    template:
+      '<input type="range" :value="value" :disabled="disabled" v-bind="$attrs" @input="$emit(\'update:value\', Number($event.target.value))" />',
+  })
+
   const NSelect = defineComponent({
     name: 'NSelect',
     props: {
@@ -173,6 +190,7 @@ vi.mock('naive-ui', async () => {
     NRadioButton,
     NRadioGroup,
     NSelect,
+    NSlider,
     NText: makeStub('NText', '<p><slot /></p>'),
   }
 })
@@ -429,12 +447,14 @@ describe('PDFWatermarkLayoutPanel', () => {
     expect(wrapper.emitted('update-position')).toEqual([['bottom-right']])
     expect(wrapper.emitted('update-font-family')).toEqual([['serif']])
 
+    const sliders = wrapper.findAllComponents({ name: 'NSlider' })
+    sliders[0]?.vm.$emit('update:value', 20)
+    sliders[1]?.vm.$emit('update:value', -12)
+
     const inputs = wrapper.findAllComponents({ name: 'NInputNumber' })
-    inputs[0]?.vm.$emit('update:value', 20)
-    inputs[1]?.vm.$emit('update:value', -12)
-    inputs[2]?.vm.$emit('update:value', 8)
-    inputs[3]?.vm.$emit('update:value', -6)
-    inputs[4]?.vm.$emit('update:value', 60)
+    inputs[0]?.vm.$emit('update:value', 8)
+    inputs[1]?.vm.$emit('update:value', -6)
+    inputs[2]?.vm.$emit('update:value', 60)
 
     expect(wrapper.emitted('update-opacity')?.[0]).toEqual([20])
     expect(wrapper.emitted('update-rotation')?.[0]).toEqual([-12])

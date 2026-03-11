@@ -20,11 +20,14 @@ vi.mock('naive-ui', () => {
     })
 
   return {
+    NFlex: passthrough('NFlex'),
     NGrid: passthrough('NGrid'),
     NGi: passthrough('NGi'),
     NFormItem: passthrough('NFormItem'),
     NSelect: inputLike('NSelect'),
     NInputNumber: inputLike('NInputNumber'),
+    NSlider: inputLike('NSlider'),
+    NText: passthrough('NText'),
     NColorPicker: inputLike('NColorPicker'),
   }
 })
@@ -80,6 +83,8 @@ describe('PDFWatermarkLayoutPanel', () => {
     expect(wrapper.find('[data-test="font-family-select"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="font-size-input"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="color-picker"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="opacity-slider"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="rotation-slider"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="image-scale-input"]').exists()).toBe(false)
 
     const [positionSelect, fontFamilySelect] = wrapper.findAllComponents({ name: 'NSelect' })
@@ -89,11 +94,14 @@ describe('PDFWatermarkLayoutPanel', () => {
     await fontFamilySelect!.vm.$emit('update:value', 'monospace')
     await fontFamilySelect!.vm.$emit('update:value', 'display')
 
-    const [opacityInput, rotationInput, offsetXInput, offsetYInput, fontSizeInput] =
-      wrapper.findAllComponents({ name: 'NInputNumber' })
+    const [opacitySlider, rotationSlider] = wrapper.findAllComponents({ name: 'NSlider' })
 
-    await opacityInput!.vm.$emit('update:value', 24)
-    await rotationInput!.vm.$emit('update:value', -40)
+    await opacitySlider!.vm.$emit('update:value', 24)
+    await rotationSlider!.vm.$emit('update:value', -40)
+
+    const [offsetXInput, offsetYInput, fontSizeInput] = wrapper.findAllComponents({
+      name: 'NInputNumber',
+    })
     await offsetXInput!.vm.$emit('update:value', 12)
     await offsetYInput!.vm.$emit('update:value', -8)
     await fontSizeInput!.vm.$emit('update:value', 64)
@@ -119,16 +127,21 @@ describe('PDFWatermarkLayoutPanel', () => {
     expect(wrapper.find('[data-test="font-family-select"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="font-size-input"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="color-picker"]').exists()).toBe(false)
+    expect(wrapper.find('[data-test="opacity-slider"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="rotation-slider"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="image-scale-input"]').exists()).toBe(true)
 
     const [positionSelect] = wrapper.findAllComponents({ name: 'NSelect' })
     await positionSelect!.vm.$emit('update:value', 'top-left')
 
-    const [opacityInput, rotationInput, offsetXInput, offsetYInput, imageScaleInput] =
-      wrapper.findAllComponents({ name: 'NInputNumber' })
+    const [opacitySlider, rotationSlider] = wrapper.findAllComponents({ name: 'NSlider' })
 
-    await opacityInput!.vm.$emit('update:value', 30)
-    await rotationInput!.vm.$emit('update:value', 15)
+    await opacitySlider!.vm.$emit('update:value', 30)
+    await rotationSlider!.vm.$emit('update:value', 15)
+
+    const [offsetXInput, offsetYInput, imageScaleInput] = wrapper.findAllComponents({
+      name: 'NInputNumber',
+    })
     await offsetXInput!.vm.$emit('update:value', 4)
     await offsetYInput!.vm.$emit('update:value', 7)
     await imageScaleInput!.vm.$emit('update:value', 42)
