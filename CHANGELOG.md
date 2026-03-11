@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.6.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.5.0...v1.6.0) (2026-03-11)
+
+
+### Features
+
+* **pdf:** add PDF page number adder tool ([#291](https://github.com/InBrowserApp/InBrowserApp/issues/291)) ([2e50935](https://github.com/InBrowserApp/InBrowserApp/commit/2e5093507987f1c04dd4c17cf622b11410adeb70))
+* **pdf:** add PDF splitter with preview and flexible output modes ([#283](https://github.com/InBrowserApp/InBrowserApp/issues/283)) ([de19f2f](https://github.com/InBrowserApp/InBrowserApp/commit/de19f2fd66a46f9684a3d4684c42da06915890ac))
+* **tools:** add archive viewer for zip tar gz tgz ([#265](https://github.com/InBrowserApp/InBrowserApp/issues/265)) ([9ce89b3](https://github.com/InBrowserApp/InBrowserApp/commit/9ce89b3420f09eb04ecb1944ed6561b6eb2d7def))
+* **tools:** add image to avif converter ([#296](https://github.com/InBrowserApp/InBrowserApp/issues/296)) ([34b1055](https://github.com/InBrowserApp/InBrowserApp/commit/34b105589ad40ca781107066e5f7f5ec0e0cf9bf))
+* **tools:** add image to pdf converter ([#294](https://github.com/InBrowserApp/InBrowserApp/issues/294)) ([31f6292](https://github.com/InBrowserApp/InBrowserApp/commit/31f629220df7460e1601ce71c6b1d22a2e14dd76))
+* **tools:** add IMEI validator ([789e9f3](https://github.com/InBrowserApp/InBrowserApp/commit/789e9f35b3dc2aa7d5fb1ae448bab23566dcd035))
+* **tools:** add json-diff-path tool ([#288](https://github.com/InBrowserApp/InBrowserApp/issues/288)) ([d71324e](https://github.com/InBrowserApp/InBrowserApp/commit/d71324e71ecb789d09e7a7c1eb788a6b853e707a))
+* **tools:** add list comparer tool ([#292](https://github.com/InBrowserApp/InBrowserApp/issues/292)) ([5011444](https://github.com/InBrowserApp/InBrowserApp/commit/50114444fc4c17cc656355e74effd86d3357067e))
+* **tools:** add pdf page organizer ([#295](https://github.com/InBrowserApp/InBrowserApp/issues/295)) ([c765b4c](https://github.com/InBrowserApp/InBrowserApp/commit/c765b4cf77c06f0a17d3c5113f463c960696b997))
+* **tools:** add PDF text extractor tool ([#285](https://github.com/InBrowserApp/InBrowserApp/issues/285)) ([9e9f8e0](https://github.com/InBrowserApp/InBrowserApp/commit/9e9f8e07b482b0a7e91ea608e73c0228fc482b24))
+* **web:** add tools query filter and remove search view ([#276](https://github.com/InBrowserApp/InBrowserApp/issues/276)) ([18e39e8](https://github.com/InBrowserApp/InBrowserApp/commit/18e39e8c01175a13c8fd58b203ed35e44ba7f9be))
+
+
+### Bug Fixes
+
+* **tools:** improve image resizer safety and UX ([#293](https://github.com/InBrowserApp/InBrowserApp/issues/293)) ([1bbdfb5](https://github.com/InBrowserApp/InBrowserApp/commit/1bbdfb5ab114521c0a2b4c5742598708fb42d664))
+* **tools:** restore n-grid rendering after component split ([#277](https://github.com/InBrowserApp/InBrowserApp/issues/277)) ([3f3437e](https://github.com/InBrowserApp/InBrowserApp/commit/3f3437ea0ddfa7b18a6b6c6044e9bbf96a8ef3e4))
+
+
+### Performance Improvements
+
+* **tools:** optimize archive viewer explorer ([c129327](https://github.com/InBrowserApp/InBrowserApp/commit/c129327f49fe4bbc0f32a9776bad5d1461071080))
+
 ## [1.5.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.4.0...v1.5.0) (2026-02-27)
 
 
