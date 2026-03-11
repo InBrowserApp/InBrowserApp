@@ -136,15 +136,8 @@ describe('OpenGraphMetaGenerator', () => {
 
   it('reveals twitter override inputs and recomputes output when inherit mode is disabled', async () => {
     const wrapper = mount(OpenGraphMetaGenerator)
-    const vm = wrapper.vm as {
-      state: {
-        twitter: {
-          inheritFromOpenGraph: boolean
-        }
-      }
-    }
 
-    vm.state.twitter.inheritFromOpenGraph = false
+    await wrapper.get('[data-testid="twitter-inherit"]').setValue(false)
     await wrapper.vm.$nextTick()
 
     await wrapper.get('[data-testid="basic-description"]').setValue('Base description')
