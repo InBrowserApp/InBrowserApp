@@ -134,6 +134,7 @@
     "@tools/openapi-to-typescript": "workspace:*",
     "@tools/password-strength-checker": "workspace:*",
     "@tools/pbkdf2-key-derivation": "workspace:*",
+    "@tools/pdf-compressor": "workspace:*",
     "@tools/pdf-info-viewer": "workspace:*",
     "@tools/pdf-merger": "workspace:*",
     "@tools/pdf-page-organizer": "workspace:*",

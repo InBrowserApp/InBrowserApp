@@ -1050,6 +1050,9 @@ importers:
       '@tools/pbkdf2-key-derivation':
         specifier: workspace:*
         version: link:../../tools/hash/pbkdf2-key-derivation
+      '@tools/pdf-compressor':
+        specifier: workspace:*
+        version: link:../../tools/pdf/pdf-compressor
       '@tools/pdf-info-viewer':
         specifier: workspace:*
         version: link:../../tools/pdf/pdf-info-viewer
@@ -5450,6 +5453,42 @@ importers:
       vue-i18n:
         specifier: 'catalog:'
         version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+
+  tools/pdf/pdf-compressor:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/pdf':
+        specifier: workspace:*
+        version: link:../../../utils/pdf
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.2.1(vue@3.5.29(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.29(typescript@5.9.3))
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.29(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+      vue-router:
+        specifier: 'catalog:'
+        version: 5.0.3(@vue/compiler-sfc@3.5.29)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
 
   tools/pdf/pdf-info-viewer:
     dependencies:

@@ -3,6 +3,7 @@ export type { ToolInfo, ToolRoute }
 import { toolInfo as faviconAssetsGeneratorToolInfo } from '@tools/favicon-assets-generator'
 import { tools as uuidTools } from '@tools/uuid'
 import { toolInfo as removePDFOwnerPasswordToolInfo } from '@tools/remove-pdf-owner-password'
+import { toolInfo as pdfCompressorToolInfo } from '@tools/pdf-compressor'
 import { toolInfo as pdfInfoViewerToolInfo } from '@tools/pdf-info-viewer'
 import { toolInfo as pdfMergerToolInfo } from '@tools/pdf-merger'
 import { toolInfo as pdfPageOrganizerToolInfo } from '@tools/pdf-page-organizer'
@@ -275,6 +276,7 @@ export const tools: ToolInfo[] = [
 
   // PDF Tools
   pdfToolsToolInfo,
+  pdfCompressorToolInfo,
   removePDFOwnerPasswordToolInfo,
   pdfMergerToolInfo,
   pdfPageOrganizerToolInfo,
