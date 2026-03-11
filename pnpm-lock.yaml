@@ -903,6 +903,9 @@ importers:
       '@tools/ical-event-generator':
         specifier: workspace:*
         version: link:../../tools/time/ical-event-generator
+      '@tools/image-cropper':
+        specifier: workspace:*
+        version: link:../../tools/image/image-cropper
       '@tools/image-metadata-cleaner':
         specifier: workspace:*
         version: link:../../tools/image/image-metadata-cleaner
@@ -4111,6 +4114,33 @@ importers:
       upng-js:
         specifier: 'catalog:'
         version: 2.1.0
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.29(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+
+  tools/image/image-cropper:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 14.2.1(vue@3.5.29(typescript@5.9.3))
+      filesize:
+        specifier: 'catalog:'
+        version: 11.0.13
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.29(typescript@5.9.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)
