@@ -37,21 +37,24 @@ export function serializeDotenv(
 
 function formatDotenvValue(value: string, quote: DotenvEntry['quote']): string {
   if (quote === 'single') {
-    return `'${value.replace(/'/g, "\\'")}'`
+    if (/[\\'\n\r\t]/.test(value)) {
+      return formatDoubleQuotedValue(value)
+    }
+
+    return `'${value}'`
   }
 
   if (quote === 'double') {
-    return `"${value
-      .replace(/\\/g, '\\\\')
-      .replace(/\n/g, '\\n')
-      .replace(/\r/g, '\\r')
-      .replace(/\t/g, '\\t')
-      .replace(/"/g, '\\"')}"`
+    return formatDoubleQuotedValue(value)
   }
 
   if (!value) return ''
   if (canUseBareValue(value)) return value
 
+  return formatDoubleQuotedValue(value)
+}
+
+function formatDoubleQuotedValue(value: string): string {
   return `"${value
     .replace(/\\/g, '\\\\')
     .replace(/\n/g, '\\n')

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import type { DotenvEntry } from './types'
 import {
   maskDotenvValue,
   normalizeDotenv,
@@ -82,6 +83,33 @@ describe('@utils/dotenv', () => {
       A: '••••••',
     })
     expect(parseDotenvToJson('A=1\nB=2')).toBe('{\n  "A": "1",\n  "B": "2"\n}')
+  })
+
+  it('falls back to double quotes for single-quoted values that need escaping', () => {
+    const entries: DotenvEntry[] = [
+      {
+        line: 1,
+        key: 'PATH',
+        value: 'C:\\temp\\file',
+        quote: 'single',
+        export: false,
+        inlineComment: null,
+        duplicated: false,
+        active: true,
+      },
+      {
+        line: 2,
+        key: 'QUOTE',
+        value: "it's here",
+        quote: 'single',
+        export: false,
+        inlineComment: null,
+        duplicated: false,
+        active: true,
+      },
+    ]
+
+    expect(serializeDotenv(entries)).toBe('PATH="C:\\\\temp\\\\file"\nQUOTE="it\'s here"')
   })
 
   it('returns empty results for empty input and trims BOM/CRLF', () => {
