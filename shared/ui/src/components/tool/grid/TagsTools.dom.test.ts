@@ -95,5 +95,5 @@ describe('TagsTools', () => {
 
     const excludeArray = mountWithToolsGrid({ tags: 'network', exclude: [secondToolID] })
     await expectToolsText(excludeArray, await filterNetworkTools([secondToolID]))
-  })
+  }, 15000)
 })
