@@ -1,0 +1,70 @@
+<svg
+  width="1200"
+  height="630"
+  viewBox="0 0 1200 630"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="1200" height="630" rx="36" fill="#F3EFE6" />
+  <rect x="32" y="32" width="1136" height="566" rx="28" fill="url(#surface)" />
+  <circle cx="1018" cy="124" r="118" fill="#F1B15A" fill-opacity="0.28" />
+  <circle cx="170" cy="534" r="152" fill="#5C8E7E" fill-opacity="0.18" />
+  <rect x="88" y="96" width="214" height="38" rx="19" fill="#23453F" fill-opacity="0.12" />
+  <rect x="88" y="176" width="560" height="164" rx="24" fill="#FFF8EC" fill-opacity="0.94" />
+  <rect x="88" y="372" width="430" height="24" rx="12" fill="#1C312C" fill-opacity="0.12" />
+  <rect x="88" y="416" width="512" height="24" rx="12" fill="#1C312C" fill-opacity="0.12" />
+  <rect x="88" y="460" width="352" height="24" rx="12" fill="#1C312C" fill-opacity="0.12" />
+  <rect x="744" y="118" width="346" height="394" rx="28" fill="#183733" />
+  <rect x="778" y="154" width="278" height="170" rx="20" fill="#F1B15A" />
+  <rect x="778" y="356" width="124" height="18" rx="9" fill="#F3EFE6" fill-opacity="0.7" />
+  <rect x="778" y="392" width="244" height="16" rx="8" fill="#F3EFE6" fill-opacity="0.44" />
+  <rect x="778" y="422" width="226" height="16" rx="8" fill="#F3EFE6" fill-opacity="0.44" />
+  <rect x="778" y="470" width="160" height="26" rx="13" fill="#5C8E7E" />
+  <text
+    x="88"
+    y="121"
+    fill="#23453F"
+    font-family="Arial, sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="0.24em"
+  >
+    SOCIAL PREVIEW DEMO
+  </text>
+  <text
+    x="88"
+    y="244"
+    fill="#183733"
+    font-family="Arial, sans-serif"
+    font-size="56"
+    font-weight="700"
+  >
+    Open Graph cards
+  </text>
+  <text
+    x="88"
+    y="308"
+    fill="#183733"
+    font-family="Arial, sans-serif"
+    font-size="56"
+    font-weight="700"
+  >
+    with a bundled image
+  </text>
+  <text
+    x="88"
+    y="556"
+    fill="#23453F"
+    font-family="Arial, sans-serif"
+    font-size="28"
+    font-weight="700"
+  >
+    1200 x 630 demo asset for local preview
+  </text>
+  <defs>
+    <linearGradient id="surface" x1="110" y1="68" x2="1080" y2="574" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF7EF" />
+      <stop offset="1" stop-color="#EFE7D8" />
+    </linearGradient>
+  </defs>
+</svg>

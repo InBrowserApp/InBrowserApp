@@ -192,6 +192,7 @@ import { routes as ibanValidatorRoutes } from '@tools/iban-validator/routes'
 import { routes as bicSwiftValidatorRoutes } from '@tools/bic-swift-validator/routes'
 import { routes as vatValidatorRoutes } from '@tools/vat-validator/routes'
 import { routes as placeholderImageGeneratorRoutes } from '@tools/placeholder-image-generator/routes'
+import { routes as openGraphMetaGeneratorRoutes } from '@tools/open-graph-meta-generator/routes'
 import { routes as robotsTxtGeneratorRoutes } from '@tools/robots-txt-generator/routes'
 import { routes as sitemapXmlGeneratorRoutes } from '@tools/sitemap-xml-generator/routes'
 import { routes as slugGeneratorRoutes } from '@tools/slug-generator/routes'
@@ -400,6 +401,7 @@ export const routes: ToolRoute[] = [
   ...bicSwiftValidatorRoutes,
   ...vatValidatorRoutes,
   ...placeholderImageGeneratorRoutes,
+  ...openGraphMetaGeneratorRoutes,
   ...robotsTxtGeneratorRoutes,
   ...sitemapXmlGeneratorRoutes,
   ...slugGeneratorRoutes,
