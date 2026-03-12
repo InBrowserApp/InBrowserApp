@@ -1242,6 +1242,9 @@ importers:
       '@tools/toml-to-yaml-converter':
         specifier: workspace:*
         version: link:../../tools/code/toml-to-yaml-converter
+      '@tools/totp-generator':
+        specifier: workspace:*
+        version: link:../../tools/web/totp-generator
       '@tools/unicode-escape-unescape':
         specifier: workspace:*
         version: link:../../tools/web/unicode-escape-unescape
@@ -7663,6 +7666,30 @@ importers:
       transliteration:
         specifier: 'catalog:'
         version: 2.6.1
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.29(typescript@5.9.3)
+      vue-i18n:
+        specifier: 'catalog:'
+        version: 11.2.8(vue@3.5.29(typescript@5.9.3))
+
+  tools/web/totp-generator:
+    dependencies:
+      '@shared/tools':
+        specifier: workspace:*
+        version: link:../../../shared/tools
+      '@shared/ui':
+        specifier: workspace:*
+        version: link:../../../shared/ui
+      '@utils/base32':
+        specifier: workspace:*
+        version: link:../../../utils/base32
+      '@vicons/fluent':
+        specifier: 'catalog:'
+        version: 0.13.0
+      naive-ui:
+        specifier: 'catalog:'
+        version: 2.43.2(vue@3.5.29(typescript@5.9.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)

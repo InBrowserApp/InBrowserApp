@@ -103,6 +103,7 @@ import { toolInfo as basicAuthGeneratorToolInfo } from '@tools/basic-auth-genera
 import { toolInfo as basicAuthDecoderToolInfo } from '@tools/basic-auth-decoder'
 import { toolInfo as jwtSignerToolInfo } from '@tools/jwt-signer'
 import { toolInfo as jwtDecoderVerifierToolInfo } from '@tools/jwt-decoder-verifier'
+import { toolInfo as totpGeneratorToolInfo } from '@tools/totp-generator'
 import { toolInfo as jwkPemConverterToolInfo } from '@tools/jwk-pem-converter'
 import { toolInfo as randomPasswordGeneratorToolInfo } from '@tools/random-password-generator'
 import { toolInfo as randomNumberGeneratorToolInfo } from '@tools/random-number-generator'
@@ -353,6 +354,7 @@ export const tools: ToolInfo[] = [
   basicAuthDecoderToolInfo,
   jwtSignerToolInfo,
   jwtDecoderVerifierToolInfo,
+  totpGeneratorToolInfo,
   jwkPemConverterToolInfo,
   randomPasswordGeneratorToolInfo,
   randomNumberGeneratorToolInfo,
