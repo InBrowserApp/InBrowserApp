@@ -8,7 +8,7 @@
 
     <TextOrFileInput
       v-model:value="value"
-      accept=".env,.txt,.conf"
+      accept=".env,.env.local,.env.development,.env.production,.env.test,.env.example,.txt,.conf"
       :placeholder="t('inputPlaceholder')"
       :status="status"
       class="monospace-input"

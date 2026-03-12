@@ -1,3 +1,5 @@
+export { default as icon } from '@vicons/fluent/BracesVariable20Regular'
+
 const englishMeta = {
   name: 'Dotenv Parser',
   description:
@@ -17,7 +19,6 @@ const traditionalChineseMeta = {
 }
 
 export const toolID = 'dotenv-parser'
-export { default as icon } from '@vicons/fluent/DocumentSearch16Regular'
 export const path = '/tools/dotenv-parser'
 export const tags = ['dotenv', '.env', 'env', 'parser', 'json', 'config', 'developer']
 export const features = ['offline']
