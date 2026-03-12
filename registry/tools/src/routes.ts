@@ -2,6 +2,7 @@ import type { ToolRoute } from '@shared/tools'
 import { routes as faviconAssetsGeneratorRoutes } from '@tools/favicon-assets-generator/routes'
 import { routes as uuidRoutes } from '@tools/uuid/routes'
 import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-password/routes'
+import { routes as pdfCompressorRoutes } from '@tools/pdf-compressor/routes'
 import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
 import { routes as pdfPageOrganizerRoutes } from '@tools/pdf-page-organizer/routes'
@@ -208,6 +209,7 @@ export const routes: ToolRoute[] = [
   ...faviconAssetsGeneratorRoutes,
   ...uuidRoutes,
   ...removePDFOwnerPasswordRoutes,
+  ...pdfCompressorRoutes,
   ...pdfInfoViewerRoutes,
   ...pdfMergerRoutes,
   ...pdfPageOrganizerRoutes,
