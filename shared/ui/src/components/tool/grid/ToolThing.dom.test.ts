@@ -29,7 +29,16 @@ vi.mock('naive-ui', async () => {
   return {
     NThing,
     NAvatar: base('NAvatar', 'span'),
-    NIcon: base('NIcon', 'span'),
+    NIcon: defineComponent({
+      name: 'NIcon',
+      props: {
+        component: {
+          type: Object,
+          default: undefined,
+        },
+      },
+      template: '<span class="n-icon" :data-has-component="String(!!component)" />',
+    }),
     NTag: base('NTag', 'span'),
     useThemeVars: () => ({
       cubicBezierEaseInOut: 'ease',
@@ -124,5 +133,19 @@ describe('ToolThing', () => {
 
     expect(wrapper.find('a.tool-link').exists()).toBe(true)
     expect(wrapper.findComponent({ name: 'NAvatar' }).exists()).toBe(true)
+  })
+
+  it('falls back to the default icon when a tool does not provide one', () => {
+    const tool = createTool({ icon: undefined })
+    const wrapper = mount(ToolThing, {
+      props: { tool, showIcon: true },
+      global: {
+        stubs: {
+          CustomRouterLink: RouterLinkStub,
+        },
+      },
+    })
+
+    expect(wrapper.find('.n-icon').attributes('data-has-component')).toBe('true')
   })
 })

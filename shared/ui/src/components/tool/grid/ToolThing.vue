@@ -4,7 +4,7 @@
     <n-thing>
       <template v-if="showIcon" #avatar>
         <n-avatar>
-          <n-icon :component="props.tool.icon" />
+          <n-icon :component="iconComponent" />
         </n-avatar>
       </template>
       <template #header>
@@ -19,7 +19,7 @@
     <n-thing>
       <template v-if="showIcon" #avatar>
         <n-avatar>
-          <n-icon :component="props.tool.icon" />
+          <n-icon :component="iconComponent" />
         </n-avatar>
       </template>
       <template v-if="props.tool.thirdParty" #header-extra>
@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import AppGeneric20Regular from '@vicons/fluent/AppGeneric20Regular'
 import { NThing, NAvatar, NIcon, useThemeVars, NTag } from 'naive-ui'
 import type { ToolInfo } from '@shared/tools'
 import { computed } from 'vue'
@@ -52,6 +53,7 @@ const props = defineProps<{
 }>()
 
 const path = computed(() => props.tool.path)
+const iconComponent = computed(() => props.tool.icon ?? AppGeneric20Regular)
 const themeVars = useThemeVars()
 
 const { t } = useI18n({
