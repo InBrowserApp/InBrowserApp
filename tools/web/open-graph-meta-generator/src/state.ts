@@ -95,7 +95,7 @@ export const createPresetState = (preset: OgPreset): OgMetaGeneratorState => {
           type: 'article',
           url: 'https://example.com/blog/social-share-cards',
           image: {
-            url: 'https://example.com/assets/social-share-cards.png',
+            url: 'https://example.com/assets/open-graph-preview-demo.svg',
             alt: 'Illustration of a social media preview card on a blog post',
             width: '1200',
             height: '630',
@@ -135,7 +135,7 @@ export const createPresetState = (preset: OgPreset): OgMetaGeneratorState => {
           type: 'product',
           url: 'https://example.com/products/focusflow',
           image: {
-            url: 'https://example.com/assets/focusflow-product-card.png',
+            url: 'https://example.com/assets/open-graph-preview-demo.svg',
             alt: 'Dashboard preview for the FocusFlow product page',
             width: '1200',
             height: '630',
@@ -198,7 +198,7 @@ export const createPresetState = (preset: OgPreset): OgMetaGeneratorState => {
           type: 'website',
           url: 'https://inbrowser.app/tools/open-graph-meta-generator',
           image: {
-            url: 'https://inbrowser.app/assets/open-graph-meta-generator.png',
+            url: 'https://inbrowser.app/assets/open-graph-preview-demo.svg',
             alt: 'InBrowser.App social preview card for the Open Graph meta tag generator',
             width: '1200',
             height: '630',

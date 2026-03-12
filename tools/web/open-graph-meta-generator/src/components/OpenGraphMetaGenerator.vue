@@ -1,5 +1,5 @@
 <template>
-  <n-grid cols="1 xl:2" responsive="screen" :x-gap="24" :y-gap="24">
+  <n-grid cols="1 l:2" responsive="screen" :x-gap="24" :y-gap="24">
     <n-gi>
       <ToolSectionHeader>{{ t('presetsTitle') }}</ToolSectionHeader>
       <ToolSection>
@@ -119,7 +119,7 @@ const applyPreset = (preset: OgPreset) => {
   gap: 24px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .sticky-column {
     position: sticky;
     top: 20px;

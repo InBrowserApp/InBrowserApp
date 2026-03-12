@@ -1,6 +1,6 @@
 <template>
-  <ToolSectionHeader>{{ t('previewTitle') }}</ToolSectionHeader>
-  <ToolSection>
+  <section>
+    <ToolSectionHeader>{{ t('previewTitle') }}</ToolSectionHeader>
     <n-flex vertical :size="12">
       <n-text depth="3">{{ t('previewNote') }}</n-text>
 
@@ -8,8 +8,8 @@
         <n-flex vertical :size="8">
           <n-text strong>{{ t('previewFacebookLabel') }}</n-text>
           <div class="preview-card" data-testid="facebook-preview">
-            <div v-if="preview.imageUrl" class="preview-image-wrapper">
-              <img :src="preview.imageUrl" :alt="preview.imageAlt" class="preview-image" />
+            <div v-if="displayImageUrl" class="preview-image-wrapper">
+              <img :src="displayImageUrl" :alt="preview.imageAlt" class="preview-image" />
             </div>
             <div v-else class="preview-placeholder">{{ t('previewImagePlaceholder') }}</div>
             <div class="preview-content">
@@ -27,8 +27,8 @@
           <div class="preview-card twitter-card" data-testid="twitter-preview">
             <div class="preview-image-wrapper" :class="twitterImageClass">
               <img
-                v-if="preview.imageUrl"
-                :src="preview.imageUrl"
+                v-if="displayImageUrl"
+                :src="displayImageUrl"
                 :alt="preview.imageAlt"
                 class="preview-image"
               />
@@ -45,14 +45,15 @@
         </n-flex>
       </n-card>
     </n-flex>
-  </ToolSection>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { NCard, NFlex, NText } from 'naive-ui'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
+import { resolvePreviewImageSrc } from '../demoImages'
 import type { PreviewModel } from '../meta'
 import { messages } from '../locale/messages'
 
@@ -62,6 +63,7 @@ const { preview } = defineProps<{
 
 const { t } = useI18n({ useScope: 'local', messages })
 
+const displayImageUrl = computed(() => resolvePreviewImageSrc(preview.imageUrl))
 const twitterImageClass = computed(() =>
   preview.twitterCard === 'summary' ? 'preview-image-thumb' : 'preview-image-large',
 )

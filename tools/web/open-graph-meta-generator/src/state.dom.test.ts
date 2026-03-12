@@ -8,6 +8,8 @@ describe('open graph meta state presets', () => {
     expect(state.preset).toBe('website')
     expect(state.basic.title).toContain('InBrowser.App')
     expect(state.openGraph.type).toBe('website')
+    expect(state.openGraph.image.url.startsWith('https://')).toBe(true)
+    expect(state.openGraph.image.url).toContain('open-graph-preview-demo.svg')
     expect(state.twitter.inheritFromOpenGraph).toBe(true)
   })
 
