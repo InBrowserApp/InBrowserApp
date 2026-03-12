@@ -11,6 +11,7 @@
     "@shared/tools": "workspace:*",
     "@shared/ui": "workspace:*",
     "@vicons/carbon": "catalog:",
+    "@vicons/fluent": "catalog:",
     "@vueuse/core": "catalog:",
     "naive-ui": "catalog:",
     "pdf-lib": "catalog:",
