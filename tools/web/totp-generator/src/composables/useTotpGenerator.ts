@@ -235,9 +235,7 @@ export function useTotpGenerator(options: {
       throw new Error('Web Crypto API is unavailable')
     }
 
-    const secretBytes = globalThis.crypto.getRandomValues(
-      new Uint8Array(RANDOM_SECRET_BYTE_LENGTH),
-    )
+    const secretBytes = globalThis.crypto.getRandomValues(new Uint8Array(RANDOM_SECRET_BYTE_LENGTH))
     secretInput.value = encodeBase32(secretBytes, { padding: false })
   }
 
