@@ -1,11 +1,9 @@
 <template>
-  <n-flex vertical :size="16">
-    <ToolSectionHeader>{{ t('inputTitle') }}</ToolSectionHeader>
-    <ToolSection>
-      <n-flex vertical :size="16">
-        <n-alert type="info" :show-icon="false">
-          {{ t('safetyNote') }}
-        </n-alert>
+  <n-flex vertical :size="24">
+    <div class="totp-tool__block">
+      <ToolSectionHeader>{{ t('inputTitle') }}</ToolSectionHeader>
+      <div class="totp-tool__section">
+        <n-alert type="info" :show-icon="false">{{ t('safetyNote') }}</n-alert>
 
         <n-radio-group v-model:value="inputMode" name="totp-input-mode">
           <n-space>
@@ -21,13 +19,8 @@
 
         <n-form label-placement="top">
           <template v-if="inputMode === 'secret'">
-            <n-form-item
-              :label="t('secretLabel')"
-              :feedback="secretError"
-              :validation-status="secretError ? 'error' : undefined"
-            >
-              <n-input v-model:value="secretInput" :placeholder="sampleConfig.secret" />
-            </n-form-item>
+            <!-- prettier-ignore -->
+            <n-form-item :label="t('secretLabel')" :feedback="secretError" :validation-status="secretError ? 'error' : undefined"><n-input v-model:value="secretInput" :placeholder="sampleConfig.secret" class="totp-tool__secret-input"><template #suffix><n-button quaternary circle size="small" title="Generate random secret" aria-label="Generate random secret" data-testid="random-secret-button" @click="generateRandomSecret"><template #icon><n-icon :component="ArrowSync16Regular" /></template></n-button></template></n-input></n-form-item>
 
             <n-grid cols="1 s:2 m:3" responsive="screen" x-gap="12">
               <n-gi>
@@ -80,81 +73,77 @@
             />
           </template>
 
-          <n-form-item
-            v-else
-            :label="t('uriLabel')"
-            :feedback="uriError"
-            :validation-status="uriError ? 'error' : undefined"
-          >
-            <n-input
-              v-model:value="uriInput"
-              type="textarea"
-              :placeholder="sampleUri"
-              :autosize="{ minRows: 3, maxRows: 6 }"
-            />
-          </n-form-item>
+          <!-- prettier-ignore -->
+          <n-form-item v-else :label="t('uriLabel')" :feedback="uriError" :validation-status="uriError ? 'error' : undefined"><n-input v-model:value="uriInput" type="textarea" :placeholder="sampleUri" :autosize="{ minRows: 3, maxRows: 6 }" /></n-form-item>
         </n-form>
-      </n-flex>
-    </ToolSection>
+      </div>
+    </div>
 
-    <ToolSectionHeader>{{ t('codeTitle') }}</ToolSectionHeader>
-    <ToolSection>
-      <n-empty v-if="!activeConfig" :description="t('noCode')" />
-      <n-card v-else size="small">
-        <n-flex vertical align="center" :size="12">
-          <n-text depth="3">{{ activeDisplayName }}</n-text>
-          <div class="totp-tool__code">{{ currentCode || '......' }}</div>
-          <n-text depth="3">{{ t('timeRemaining', { seconds: remainingSeconds }) }}</n-text>
-          <n-progress type="line" :percentage="progressPercentage" :show-indicator="false" />
-          <CopyToClipboardButton
-            :content="currentCode"
-            variant="secondary"
-            :disabled="!currentCode"
-          />
-        </n-flex>
-      </n-card>
-    </ToolSection>
+    <div class="totp-tool__block">
+      <ToolSectionHeader>{{ t('codeTitle') }}</ToolSectionHeader>
+      <div class="totp-tool__section">
+        <n-empty v-if="!activeConfig" :description="t('noCode')" />
+        <n-card v-else size="small">
+          <n-flex vertical align="center" :size="12">
+            <n-text depth="3">{{ activeDisplayName }}</n-text>
+            <div class="totp-tool__code">{{ currentCode || '......' }}</div>
+            <n-text depth="3">{{ t('timeRemaining', { seconds: remainingSeconds }) }}</n-text>
+            <n-progress type="line" :percentage="progressPercentage" :show-indicator="false" />
+            <CopyToClipboardButton
+              :content="currentCode"
+              variant="secondary"
+              :disabled="!currentCode"
+            />
+          </n-flex>
+        </n-card>
+      </div>
+    </div>
 
-    <ToolSectionHeader>{{ t('detailsTitle') }}</ToolSectionHeader>
-    <ToolSection>
-      <n-empty v-if="!activeConfig" :description="t('detailsEmpty')" />
-      <n-grid v-else cols="1 s:2 m:3" responsive="screen" x-gap="12" y-gap="12">
-        <n-gi v-for="item in detailsItems" :key="item.label">
-          <n-card size="small">
-            <n-text depth="3">{{ item.label }}</n-text>
-            <div class="totp-tool__detail">{{ item.value }}</div>
-          </n-card>
-        </n-gi>
-      </n-grid>
-    </ToolSection>
+    <div class="totp-tool__block">
+      <ToolSectionHeader>{{ t('detailsTitle') }}</ToolSectionHeader>
+      <div class="totp-tool__section">
+        <n-empty v-if="!activeConfig" :description="t('detailsEmpty')" />
+        <n-grid v-else cols="1 s:2 m:3" responsive="screen" x-gap="12" y-gap="12">
+          <n-gi v-for="item in detailsItems" :key="item.label">
+            <n-card size="small">
+              <n-text depth="3">{{ item.label }}</n-text>
+              <div class="totp-tool__detail">{{ item.value }}</div>
+            </n-card>
+          </n-gi>
+        </n-grid>
+      </div>
+    </div>
 
-    <ToolSectionHeader>{{ t('debugTitle') }}</ToolSectionHeader>
-    <ToolSection>
-      <n-empty v-if="debugRows.length === 0" :description="t('debugEmpty')" />
-      <n-table v-else striped size="small">
-        <thead>
-          <tr>
-            <th>{{ t('windowLabel') }}</th>
-            <th>{{ t('codeLabel') }}</th>
-            <th>{{ t('counterLabel') }}</th>
-            <th>{{ t('timeLabel') }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="row in debugRows" :key="row.label">
-            <td>{{ row.label }}</td>
-            <td class="totp-tool__cell-code">{{ row.code }}</td>
-            <td>{{ row.counter }}</td>
-            <td>{{ row.timeRange }}</td>
-          </tr>
-        </tbody>
-      </n-table>
-    </ToolSection>
+    <div class="totp-tool__block">
+      <ToolSectionHeader>{{ t('debugTitle') }}</ToolSectionHeader>
+      <div class="totp-tool__section">
+        <n-empty v-if="debugRows.length === 0" :description="t('debugEmpty')" />
+        <n-table v-else striped size="small">
+          <thead>
+            <tr>
+              <th>{{ t('windowLabel') }}</th>
+              <th>{{ t('codeLabel') }}</th>
+              <th>{{ t('counterLabel') }}</th>
+              <th>{{ t('timeLabel') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in debugRows" :key="row.label">
+              <td>{{ row.label }}</td>
+              <td class="totp-tool__cell-code">{{ row.code }}</td>
+              <td>{{ row.counter }}</td>
+              <td>{{ row.timeRange }}</td>
+            </tr>
+          </tbody>
+        </n-table>
+      </div>
+    </div>
   </n-flex>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import ArrowSync16Regular from '@vicons/fluent/ArrowSync16Regular'
 import { useI18n } from 'vue-i18n'
 import {
   NAlert,
@@ -166,6 +155,7 @@ import {
   NFormItem,
   NGi,
   NGrid,
+  NIcon,
   NInput,
   NProgress,
   NRadioButton,
@@ -176,7 +166,7 @@ import {
   NText,
 } from 'naive-ui'
 import { CopyToClipboardButton } from '@shared/ui/base'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { ToolSectionHeader } from '@shared/ui/tool'
 import {
   algorithmOptions,
   digitsOptions,
@@ -208,6 +198,7 @@ const {
   remainingSeconds,
   progressPercentage,
   loadSample,
+  generateRandomSecret,
   clearAll,
 } = useTotpGenerator({
   getWindowLabels: () => ({
@@ -282,10 +273,29 @@ defineExpose({
   updateAlgorithm,
   updateDigits,
   updatePeriod,
+  generateRandomSecret,
 })
 </script>
 
 <style scoped>
+.totp-tool__block {
+  display: grid;
+  gap: 12px;
+}
+
+.totp-tool__section {
+  display: grid;
+  gap: 16px;
+}
+
+:deep(.n-h2) {
+  margin: 0;
+}
+
+.totp-tool__secret-input :deep(.n-input__suffix) {
+  gap: 4px;
+}
+
 .totp-tool__code {
   font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
   font-size: clamp(2rem, 7vw, 3.5rem);

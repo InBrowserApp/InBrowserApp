@@ -34,9 +34,16 @@ describe('TotpGenerator', () => {
     writeText.mockReset()
     vi.useFakeTimers()
     vi.setSystemTime(new Date('2024-01-01T00:00:05Z'))
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) =>
+      window.setTimeout(() => callback(Date.now()), 16),
+    )
+    vi.spyOn(window, 'cancelAnimationFrame').mockImplementation((handle) => {
+      window.clearTimeout(handle)
+    })
   })
 
   afterEach(() => {
+    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 
@@ -165,6 +172,23 @@ describe('TotpGenerator', () => {
     expect(wrapper.text()).toContain('demo@example.com')
   })
 
+  it('generates a random Base32 secret from the suffix icon button', async () => {
+    const wrapper = mountTool()
+    const randomBytes = Uint8Array.from(Array.from({ length: 20 }, (_, index) => index + 1))
+
+    vi.spyOn(globalThis.crypto, 'getRandomValues').mockImplementation((typedArray) => {
+      typedArray.set(randomBytes)
+      return typedArray
+    })
+
+    await wrapper.find('[data-testid="random-secret-button"]').trigger('click')
+    await flushPromises()
+
+    const secretInput = wrapper.find('input[placeholder="JBSWY3DPEHPK3PXP"]')
+    expect(secretInput.element.value).toMatch(/^[A-Z2-7]{32}$/)
+    expect(wrapper.find('.totp-tool__code').text()).toMatch(/^\d{6}$/)
+  })
+
   it('updates algorithm, digits, and period from the select controls', async () => {
     const wrapper = mountTool()
     const textInputs = wrapper
@@ -180,9 +204,28 @@ describe('TotpGenerator', () => {
     vm.updatePeriod(60)
     await flushPromises()
 
-    expect(wrapper.find('.totp-tool__code').text()).toMatch(/^\d{8}$/)
     expect(wrapper.text()).toContain('SHA-256')
     expect(wrapper.text()).toContain('60s')
+    expect(wrapper.text()).toContain('8')
+  })
+
+  it('updates progress between whole seconds via requestAnimationFrame ticks', async () => {
+    const wrapper = mountTool()
+    const loadSampleButton = wrapper
+      .findAll('button')
+      .find((button) => button.text().includes('Load sample'))
+
+    await loadSampleButton?.trigger('click')
+    await flushPromises()
+
+    const initialProgress = (wrapper.vm as { progressPercentage: number }).progressPercentage
+    vi.advanceTimersByTime(250)
+    await nextTick()
+
+    expect((wrapper.vm as { progressPercentage: number }).progressPercentage).toBeGreaterThan(
+      initialProgress,
+    )
+    expect((wrapper.vm as { remainingSeconds: number }).remainingSeconds).toBe(25)
   })
 
   it('clears previously entered data', async () => {
@@ -203,15 +246,14 @@ describe('TotpGenerator', () => {
     )
   })
 
-  it('cleans up its timer when unmounted', async () => {
-    const clearIntervalSpy = vi.spyOn(window, 'clearInterval')
+  it('cleans up its animation frame when unmounted', async () => {
+    const cancelAnimationFrameSpy = vi.spyOn(window, 'cancelAnimationFrame')
     const wrapper = mountTool()
-    vi.advanceTimersByTime(250)
+    vi.advanceTimersByTime(16)
     await nextTick()
 
     wrapper.unmount()
 
-    expect(clearIntervalSpy).toHaveBeenCalled()
-    clearIntervalSpy.mockRestore()
+    expect(cancelAnimationFrameSpy).toHaveBeenCalled()
   })
 })

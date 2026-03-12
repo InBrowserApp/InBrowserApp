@@ -1,3 +1,4 @@
+import { encodeBase32 } from '@utils/base32'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { buildOtpauthUri, OtpauthValidationError, parseOtpauthUri } from '../utils/otpauth'
 import {
@@ -50,6 +51,7 @@ export const sampleConfig: TotpConfig = {
 }
 
 export const sampleUri = buildOtpauthUri(sampleConfig)
+const RANDOM_SECRET_BYTE_LENGTH = 20
 
 export function useTotpGenerator(options: {
   getWindowLabels: () => { previous: string; current: string; next: string }
@@ -69,7 +71,7 @@ export function useTotpGenerator(options: {
 
   const now = ref(Date.now())
   const debugRows = ref<DebugRow[]>([])
-  let timer: number | undefined
+  let animationFrameId = 0
 
   const secretState = computed<ValidationState>(() => {
     if (!secretInput.value.trim()) {
@@ -148,9 +150,13 @@ export function useTotpGenerator(options: {
       return 0
     }
 
-    const currentSecond = Math.floor(now.value / 1000)
-    const elapsed = currentSecond % activeConfig.value.period
-    return elapsed === 0 ? activeConfig.value.period : activeConfig.value.period - elapsed
+    const periodMs = activeConfig.value.period * 1000
+    const elapsedMs = now.value % periodMs
+    if (elapsedMs === 0) {
+      return activeConfig.value.period
+    }
+
+    return Math.ceil((periodMs - elapsedMs) / 1000)
   })
 
   const progressPercentage = computed(() => {
@@ -158,9 +164,9 @@ export function useTotpGenerator(options: {
       return 0
     }
 
-    return Math.round(
-      ((activeConfig.value.period - remainingSeconds.value) / activeConfig.value.period) * 100,
-    )
+    const periodMs = activeConfig.value.period * 1000
+    const elapsedMs = now.value % periodMs
+    return (elapsedMs / periodMs) * 100
   })
 
   watch(
@@ -198,13 +204,16 @@ export function useTotpGenerator(options: {
   )
 
   onMounted(() => {
-    timer = window.setInterval(() => {
+    const tick = () => {
       now.value = Date.now()
-    }, 250)
+      animationFrameId = window.requestAnimationFrame(tick)
+    }
+
+    animationFrameId = window.requestAnimationFrame(tick)
   })
 
   onBeforeUnmount(() => {
-    window.clearInterval(timer)
+    window.cancelAnimationFrame(animationFrameId)
   })
 
   function loadSample(): void {
@@ -219,6 +228,17 @@ export function useTotpGenerator(options: {
     }
 
     uriInput.value = sampleUri
+  }
+
+  function generateRandomSecret(): void {
+    if (!globalThis.crypto?.getRandomValues) {
+      throw new Error('Web Crypto API is unavailable')
+    }
+
+    const secretBytes = globalThis.crypto.getRandomValues(
+      new Uint8Array(RANDOM_SECRET_BYTE_LENGTH),
+    )
+    secretInput.value = encodeBase32(secretBytes, { padding: false })
   }
 
   function clearAll(): void {
@@ -252,6 +272,7 @@ export function useTotpGenerator(options: {
     remainingSeconds,
     progressPercentage,
     loadSample,
+    generateRandomSecret,
     clearAll,
   }
 }
