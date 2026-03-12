@@ -177,7 +177,9 @@ describe('TotpGenerator', () => {
     const randomBytes = Uint8Array.from(Array.from({ length: 20 }, (_, index) => index + 1))
 
     vi.spyOn(globalThis.crypto, 'getRandomValues').mockImplementation((typedArray) => {
-      typedArray.set(randomBytes)
+      if (typedArray instanceof Uint8Array) {
+        typedArray.set(randomBytes)
+      }
       return typedArray
     })
 
@@ -185,7 +187,7 @@ describe('TotpGenerator', () => {
     await flushPromises()
 
     const secretInput = wrapper.find('input[placeholder="JBSWY3DPEHPK3PXP"]')
-    expect(secretInput.element.value).toMatch(/^[A-Z2-7]{32}$/)
+    expect((secretInput.element as HTMLInputElement).value).toMatch(/^[A-Z2-7]{32}$/)
     expect(wrapper.find('.totp-tool__code').text()).toMatch(/^\d{6}$/)
   })
 
