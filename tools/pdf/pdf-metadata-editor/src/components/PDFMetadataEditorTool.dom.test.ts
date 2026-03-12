@@ -20,27 +20,29 @@ const i18n = createI18n({
   fallbackWarn: false,
 })
 
-const PDFUploadStub = defineComponent({
-  name: 'PDFUpload',
-  emits: ['upload-file'],
-  template: '<div class="pdf-upload" />',
+const uploadSectionStub = defineComponent({
+  name: 'PDFMetadataUploadSection',
+  props: ['title', 'info', 'isLoading'],
+  emits: ['upload-file', 'clear-file'],
+  methods: {
+    emitUploadFile() {
+      this.$emit('upload-file', { name: 'sample.pdf', type: 'application/pdf' })
+    },
+  },
+  template:
+    '<div class="upload-section">{{ title }}<button class="upload-action" @click="emitUploadFile" /><button class="clear-action" @click="$emit(\'clear-file\')" /></div>',
 })
 
 const sectionStubs = {
   ToolSection: defineComponent({ template: '<section><slot /></section>' }),
-  ToolSectionHeader: defineComponent({ template: '<h2><slot /></h2>' }),
   NAlert: defineComponent({
     props: ['title'],
     template: '<div class="n-alert"><strong>{{ title }}</strong><slot /></div>',
   }),
-  NButton: defineComponent({
-    emits: ['click'],
-    template: '<button class="n-button" @click="$emit(\'click\')"><slot /></button>',
-  }),
   NFlex: defineComponent({ template: '<div class="n-flex"><slot /></div>' }),
   NSpin: defineComponent({ template: '<div class="n-spin" />' }),
   NText: defineComponent({ template: '<span class="n-text"><slot /></span>' }),
-  PDFUpload: PDFUploadStub,
+  PDFMetadataUploadSection: uploadSectionStub,
   PDFMetadataEditorSections: defineComponent({
     props: ['currentTitle', 'editTitle', 'saveTitle', 'canEdit'],
     template:
@@ -49,30 +51,28 @@ const sectionStubs = {
 }
 
 const createComposableState = (overrides?: Record<string, unknown>) => ({
-  file: ref<File | null>(null),
   info: ref(null),
   fields: {
-    title: { mode: 'preserve', value: '' },
-    author: { mode: 'preserve', value: '' },
-    subject: { mode: 'preserve', value: '' },
-    keywords: { mode: 'preserve', value: '' },
-    creator: { mode: 'preserve', value: '' },
-    producer: { mode: 'preserve', value: '' },
-    creationDate: { mode: 'preserve', value: '' },
-    modificationDate: { mode: 'preserve', value: '' },
+    title: '',
+    author: '',
+    subject: '',
+    keywords: '',
+    creator: '',
+    producer: '',
+    creationDate: null,
+    modificationDate: null,
   },
   isLoading: ref(false),
   isSaving: ref(false),
   errorMessage: ref(''),
-  validationFieldKeys: computed(() => []),
   changeSummary: computed(() => []),
   canGenerate: computed(() => false),
   resultFilename: ref(''),
   resultUrl: computed(() => undefined),
   handleUpload: vi.fn(),
   clearFile: vi.fn(),
-  setFieldMode: vi.fn(),
-  setFieldValue: vi.fn(),
+  setTextFieldValue: vi.fn(),
+  setDateFieldValue: vi.fn(),
   restoreField: vi.fn(),
   clearAllFields: vi.fn(),
   generate: vi.fn(),
@@ -84,9 +84,8 @@ describe('PDFMetadataEditorTool', () => {
     hoisted.usePdfMetadataEditorMock.mockReset()
   })
 
-  it('renders upload and loading states and forwards upload action', async () => {
+  it('renders upload and loading states and forwards upload actions', async () => {
     const state = createComposableState({
-      file: ref(new File(['pdf'], 'sample.pdf', { type: 'application/pdf' })),
       isLoading: ref(true),
     })
     hoisted.usePdfMetadataEditorMock.mockReturnValue(state)
@@ -98,12 +97,11 @@ describe('PDFMetadataEditorTool', () => {
       },
     })
 
-    const file = new File(['pdf'], 'sample.pdf', { type: 'application/pdf' })
-    wrapper.findComponent(PDFUploadStub).vm.$emit('upload-file', file)
-    await wrapper.find('.n-button').trigger('click')
+    await wrapper.find('.upload-action').trigger('click')
+    await wrapper.find('.clear-action').trigger('click')
 
     expect(wrapper.text()).toContain('Reading PDF metadata...')
-    expect(state.handleUpload).toHaveBeenCalledWith(file)
+    expect(state.handleUpload).toHaveBeenCalledWith(expect.objectContaining({ name: 'sample.pdf' }))
     expect(state.clearFile).toHaveBeenCalled()
   })
 

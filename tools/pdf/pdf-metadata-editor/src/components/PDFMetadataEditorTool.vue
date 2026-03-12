@@ -1,14 +1,11 @@
 <template>
-  <ToolSectionHeader>{{ t('uploadTitle') }}</ToolSectionHeader>
-  <ToolSection>
-    <n-flex vertical :size="8">
-      <PDFUpload @upload-file="handleUpload" />
-      <n-text depth="3">{{ t('uploadNote') }}</n-text>
-      <n-button v-if="file" quaternary size="small" @click="clearFile">
-        {{ t('clearFile') }}
-      </n-button>
-    </n-flex>
-  </ToolSection>
+  <PDFMetadataUploadSection
+    :title="t('uploadTitle')"
+    :info="info"
+    :is-loading="isLoading"
+    @upload-file="handleUpload"
+    @clear-file="clearFile"
+  />
 
   <ToolSection v-if="isLoading">
     <n-flex align="center" :size="8">
@@ -31,15 +28,14 @@
     :info="info"
     :can-edit="!info.document.encrypted"
     :fields="fields"
-    :validation-field-keys="validationFieldKeys"
     :change-summary="changeSummary"
     :can-generate="canGenerate"
     :is-saving="isSaving"
     :result-filename="resultFilename"
     :result-url="resultUrl"
     :error-message="errorMessage"
-    @update:field-mode="setFieldMode"
-    @update:field-value="setFieldValue"
+    @update:text-field="setTextFieldValue"
+    @update:date-field="setDateFieldValue"
     @restore-field="restoreField"
     @clear-all="clearAllFields"
     @generate="generate"
@@ -47,31 +43,29 @@
 </template>
 
 <script setup lang="ts">
-import { NAlert, NButton, NFlex, NSpin, NText } from 'naive-ui'
+import { NAlert, NFlex, NSpin, NText } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { PDFUpload } from '@shared/ui/domain/pdf'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { ToolSection } from '@shared/ui/tool'
 import { usePdfMetadataEditor } from '../composables/usePdfMetadataEditor'
 import PDFMetadataEditorSections from './PDFMetadataEditorSections.vue'
+import PDFMetadataUploadSection from './PDFMetadataUploadSection.vue'
 
 const { t } = useI18n({ useScope: 'local' })
 
 const {
-  file,
   info,
   fields,
   isLoading,
   isSaving,
   errorMessage,
-  validationFieldKeys,
   changeSummary,
   canGenerate,
   resultFilename,
   resultUrl,
   handleUpload,
   clearFile,
-  setFieldMode,
-  setFieldValue,
+  setTextFieldValue,
+  setDateFieldValue,
   restoreField,
   clearAllFields,
   generate,
@@ -82,8 +76,6 @@ const {
 {
   "en": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -93,8 +85,6 @@ const {
   },
   "zh": {
     "uploadTitle": "上传 PDF",
-    "uploadNote": "在浏览器本地处理，不会上传文件。",
-    "clearFile": "清除文件",
     "loading": "正在读取 PDF 元数据...",
     "encryptedTitle": "PDF 已加密",
     "encryptedDescription": "该文件已加密。在解锁之前，无法编辑元数据。",
@@ -104,8 +94,6 @@ const {
   },
   "zh-CN": {
     "uploadTitle": "上传 PDF",
-    "uploadNote": "在浏览器本地处理，不会上传文件。",
-    "clearFile": "清除文件",
     "loading": "正在读取 PDF 元数据...",
     "encryptedTitle": "PDF 已加密",
     "encryptedDescription": "该文件已加密。在解锁之前，无法编辑元数据。",
@@ -115,8 +103,6 @@ const {
   },
   "zh-TW": {
     "uploadTitle": "上傳 PDF",
-    "uploadNote": "在瀏覽器本機處理，不會上傳檔案。",
-    "clearFile": "清除檔案",
     "loading": "正在讀取 PDF 中繼資料...",
     "encryptedTitle": "PDF 已加密",
     "encryptedDescription": "此檔案已加密。在解鎖之前，無法編輯中繼資料。",
@@ -126,8 +112,6 @@ const {
   },
   "zh-HK": {
     "uploadTitle": "上傳 PDF",
-    "uploadNote": "在瀏覽器本機處理，不會上傳檔案。",
-    "clearFile": "清除檔案",
     "loading": "正在讀取 PDF 中繼資料...",
     "encryptedTitle": "PDF 已加密",
     "encryptedDescription": "此檔案已加密。在解鎖之前，無法編輯中繼資料。",
@@ -137,8 +121,6 @@ const {
   },
   "es": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -148,8 +130,6 @@ const {
   },
   "fr": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -159,8 +139,6 @@ const {
   },
   "de": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -170,8 +148,6 @@ const {
   },
   "it": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -181,8 +157,6 @@ const {
   },
   "ja": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -192,8 +166,6 @@ const {
   },
   "ko": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -203,8 +175,6 @@ const {
   },
   "ru": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -214,8 +184,6 @@ const {
   },
   "pt": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -225,8 +193,6 @@ const {
   },
   "ar": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -236,8 +202,6 @@ const {
   },
   "hi": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -247,8 +211,6 @@ const {
   },
   "tr": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -258,8 +220,6 @@ const {
   },
   "nl": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -269,8 +229,6 @@ const {
   },
   "sv": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -280,8 +238,6 @@ const {
   },
   "pl": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -291,8 +247,6 @@ const {
   },
   "vi": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -302,8 +256,6 @@ const {
   },
   "th": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -313,8 +265,6 @@ const {
   },
   "id": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -324,8 +274,6 @@ const {
   },
   "he": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -335,8 +283,6 @@ const {
   },
   "ms": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",
@@ -346,8 +292,6 @@ const {
   },
   "no": {
     "uploadTitle": "Upload PDF",
-    "uploadNote": "Runs locally in your browser. No uploads.",
-    "clearFile": "Clear file",
     "loading": "Reading PDF metadata...",
     "encryptedTitle": "Encrypted PDF",
     "encryptedDescription": "This file is encrypted. Editing metadata is not available until the file is unlocked.",

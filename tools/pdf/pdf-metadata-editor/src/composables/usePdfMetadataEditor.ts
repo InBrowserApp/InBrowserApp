@@ -1,144 +1,149 @@
 import { computed, reactive, ref } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
 import {
-  formatMetadataDateForInput,
-  parseMetadataDateInput,
-  PDF_METADATA_FIELD_KEYS,
   readPdfMetadata,
+  PDF_METADATA_FIELD_KEYS,
   writePdfMetadata,
   type PdfMetadataFieldKey,
   type PdfMetadataInfo,
-  type PdfMetadataUpdateMode,
   type PdfMetadataUpdates,
 } from '../utils/pdfMetadata'
 
-export type MetadataFieldState = {
-  mode: PdfMetadataUpdateMode
-  value: string
-}
+export type MetadataTextFieldKey = Exclude<PdfMetadataFieldKey, 'creationDate' | 'modificationDate'>
 
-export type MetadataFieldsState = Record<PdfMetadataFieldKey, MetadataFieldState>
+export type MetadataDateFieldKey = Extract<PdfMetadataFieldKey, 'creationDate' | 'modificationDate'>
+
+export type MetadataFieldsState = {
+  title: string
+  author: string
+  subject: string
+  keywords: string
+  creator: string
+  producer: string
+  creationDate: number | null
+  modificationDate: number | null
+}
 
 export type MetadataFieldChange = {
   key: PdfMetadataFieldKey
-  action: Exclude<PdfMetadataUpdateMode, 'preserve'>
+  action: 'set' | 'clear'
 }
 
-const DATE_FIELD_KEYS = new Set<PdfMetadataFieldKey>(['creationDate', 'modificationDate'])
+const TEXT_FIELD_KEYS: MetadataTextFieldKey[] = [
+  'title',
+  'author',
+  'subject',
+  'keywords',
+  'creator',
+  'producer',
+]
+
+const DATE_FIELD_KEYS: MetadataDateFieldKey[] = ['creationDate', 'modificationDate']
 const DEFAULT_FILE_NAME = 'metadata'
 
-const isDateField = (key: PdfMetadataFieldKey): boolean => DATE_FIELD_KEYS.has(key)
-
 const normalizeText = (value: string): string => value.trim()
+
+const normalizeTimestamp = (value: number | null): number | null =>
+  typeof value === 'number' && Number.isFinite(value) ? value : null
 
 const getFileBaseName = (filename: string): string =>
   filename.trim().replace(/\.pdf$/i, '') || DEFAULT_FILE_NAME
 
-const getOriginalFieldValue = (info: PdfMetadataInfo | null, key: PdfMetadataFieldKey): string => {
-  if (!info) {
-    return ''
-  }
-
-  if (isDateField(key)) {
-    const value = info.metadata[key]
-    return value instanceof Date ? formatMetadataDateForInput(value) : ''
-  }
-
-  const value = info.metadata[key]
+const getOriginalTextValue = (info: PdfMetadataInfo | null, key: MetadataTextFieldKey): string => {
+  const value = info?.metadata[key]
   return typeof value === 'string' ? value : ''
 }
 
-const hasOriginalFieldValue = (info: PdfMetadataInfo | null, key: PdfMetadataFieldKey): boolean => {
-  if (!info) {
-    return false
-  }
+const getOriginalDateValue = (
+  info: PdfMetadataInfo | null,
+  key: MetadataDateFieldKey,
+): number | null => {
+  const value = info?.metadata[key]
 
-  if (isDateField(key)) {
-    return info.metadata[key] instanceof Date
-  }
-
-  const value = info.metadata[key]
-  return typeof value === 'string' && value.trim().length > 0
-}
-
-const buildEmptyFields = (): MetadataFieldsState => ({
-  title: { mode: 'preserve', value: '' },
-  author: { mode: 'preserve', value: '' },
-  subject: { mode: 'preserve', value: '' },
-  keywords: { mode: 'preserve', value: '' },
-  creator: { mode: 'preserve', value: '' },
-  producer: { mode: 'preserve', value: '' },
-  creationDate: { mode: 'preserve', value: '' },
-  modificationDate: { mode: 'preserve', value: '' },
-})
-
-const syncFieldsFromInfo = (fields: MetadataFieldsState, info: PdfMetadataInfo | null): void => {
-  for (const key of PDF_METADATA_FIELD_KEYS) {
-    fields[key].mode = 'preserve'
-    fields[key].value = getOriginalFieldValue(info, key)
-  }
-}
-
-const getFieldValidationError = (
-  fields: MetadataFieldsState,
-  key: PdfMetadataFieldKey,
-): string | null => {
-  const field = fields[key]
-
-  if (field.mode !== 'set') {
+  if (!(value instanceof Date) || Number.isNaN(value.getTime())) {
     return null
   }
 
-  if (isDateField(key)) {
-    return parseMetadataDateInput(field.value) ? null : 'invalid'
-  }
-
-  return normalizeText(field.value) ? null : 'missing'
+  return value.getTime()
 }
 
-const hasMeaningfulChange = (
+const buildEmptyFields = (): MetadataFieldsState => ({
+  title: '',
+  author: '',
+  subject: '',
+  keywords: '',
+  creator: '',
+  producer: '',
+  creationDate: null,
+  modificationDate: null,
+})
+
+const syncFieldsFromInfo = (fields: MetadataFieldsState, info: PdfMetadataInfo | null): void => {
+  for (const key of TEXT_FIELD_KEYS) {
+    fields[key] = getOriginalTextValue(info, key)
+  }
+
+  for (const key of DATE_FIELD_KEYS) {
+    fields[key] = getOriginalDateValue(info, key)
+  }
+}
+
+const buildTextUpdate = (
   fields: MetadataFieldsState,
   info: PdfMetadataInfo | null,
-  key: PdfMetadataFieldKey,
-): boolean => {
-  const field = fields[key]
+  key: MetadataTextFieldKey,
+): PdfMetadataUpdates[MetadataTextFieldKey] => {
+  const nextValue = normalizeText(fields[key])
+  const originalValue = normalizeText(getOriginalTextValue(info, key))
 
-  if (field.mode === 'clear') {
-    return hasOriginalFieldValue(info, key)
+  if (nextValue === originalValue) {
+    return { mode: 'preserve' }
   }
 
-  if (isDateField(key)) {
-    const current = parseMetadataDateInput(field.value)
-    const original = info?.metadata[key]
-    if (!(original instanceof Date) && !current) {
-      return false
-    }
-    if (!(original instanceof Date) || !current) {
-      return true
-    }
-    return current.getTime() !== original.getTime()
+  if (!nextValue) {
+    return { mode: 'clear' }
   }
 
-  const nextValue = normalizeText(field.value)
-  const originalValue = normalizeText(getOriginalFieldValue(info, key))
-  return nextValue !== originalValue
+  return {
+    mode: 'set',
+    value: nextValue,
+  }
 }
 
-const buildUpdates = (fields: MetadataFieldsState): PdfMetadataUpdates => ({
-  title: { mode: fields.title.mode, value: normalizeText(fields.title.value) },
-  author: { mode: fields.author.mode, value: normalizeText(fields.author.value) },
-  subject: { mode: fields.subject.mode, value: normalizeText(fields.subject.value) },
-  keywords: { mode: fields.keywords.mode, value: normalizeText(fields.keywords.value) },
-  creator: { mode: fields.creator.mode, value: normalizeText(fields.creator.value) },
-  producer: { mode: fields.producer.mode, value: normalizeText(fields.producer.value) },
-  creationDate: {
-    mode: fields.creationDate.mode,
-    value: parseMetadataDateInput(fields.creationDate.value),
-  },
-  modificationDate: {
-    mode: fields.modificationDate.mode,
-    value: parseMetadataDateInput(fields.modificationDate.value),
-  },
+const buildDateUpdate = (
+  fields: MetadataFieldsState,
+  info: PdfMetadataInfo | null,
+  key: MetadataDateFieldKey,
+): PdfMetadataUpdates[MetadataDateFieldKey] => {
+  const nextValue = normalizeTimestamp(fields[key])
+  const originalValue = getOriginalDateValue(info, key)
+
+  if (nextValue === originalValue) {
+    return { mode: 'preserve' }
+  }
+
+  if (nextValue === null) {
+    return { mode: 'clear' }
+  }
+
+  return {
+    mode: 'set',
+    value: new Date(nextValue),
+  }
+}
+
+const buildUpdates = (
+  fields: MetadataFieldsState,
+  info: PdfMetadataInfo | null,
+): PdfMetadataUpdates => ({
+  title: buildTextUpdate(fields, info, 'title'),
+  author: buildTextUpdate(fields, info, 'author'),
+  subject: buildTextUpdate(fields, info, 'subject'),
+  keywords: buildTextUpdate(fields, info, 'keywords'),
+  creator: buildTextUpdate(fields, info, 'creator'),
+  producer: buildTextUpdate(fields, info, 'producer'),
+  creationDate: buildDateUpdate(fields, info, 'creationDate'),
+  modificationDate: buildDateUpdate(fields, info, 'modificationDate'),
 })
 
 export const usePdfMetadataEditor = () => {
@@ -191,51 +196,61 @@ export const usePdfMetadataEditor = () => {
     reset()
   }
 
-  const setFieldMode = (key: PdfMetadataFieldKey, mode: PdfMetadataUpdateMode): void => {
-    fields[key].mode = mode
+  const setTextFieldValue = (key: MetadataTextFieldKey, value: string): void => {
+    fields[key] = value
     clearResult()
     errorMessage.value = ''
   }
 
-  const setFieldValue = (key: PdfMetadataFieldKey, value: string): void => {
-    fields[key].value = value
+  const setDateFieldValue = (key: MetadataDateFieldKey, value: number | null): void => {
+    fields[key] = normalizeTimestamp(value)
     clearResult()
     errorMessage.value = ''
   }
 
   const restoreField = (key: PdfMetadataFieldKey): void => {
-    fields[key].mode = 'preserve'
-    fields[key].value = getOriginalFieldValue(info.value, key)
+    if (DATE_FIELD_KEYS.includes(key as MetadataDateFieldKey)) {
+      fields[key as MetadataDateFieldKey] = getOriginalDateValue(
+        info.value,
+        key as MetadataDateFieldKey,
+      )
+    } else {
+      fields[key as MetadataTextFieldKey] = getOriginalTextValue(
+        info.value,
+        key as MetadataTextFieldKey,
+      )
+    }
+
     clearResult()
     errorMessage.value = ''
   }
 
   const clearAllFields = (): void => {
-    for (const key of PDF_METADATA_FIELD_KEYS) {
-      fields[key].mode = 'clear'
+    for (const key of TEXT_FIELD_KEYS) {
+      fields[key] = ''
     }
+
+    for (const key of DATE_FIELD_KEYS) {
+      fields[key] = null
+    }
+
     clearResult()
     errorMessage.value = ''
   }
 
-  const validationFieldKeys = computed<PdfMetadataFieldKey[]>(() =>
-    PDF_METADATA_FIELD_KEYS.filter((key) => Boolean(getFieldValidationError(fields, key))),
-  )
+  const changeSummary = computed<MetadataFieldChange[]>(() => {
+    const updates = buildUpdates(fields, info.value)
 
-  const changeSummary = computed<MetadataFieldChange[]>(() =>
-    PDF_METADATA_FIELD_KEYS.flatMap((key) => {
-      const field = fields[key]
-      if (field.mode === 'preserve') {
+    return PDF_METADATA_FIELD_KEYS.flatMap((key) => {
+      const update = updates[key]
+
+      if (update.mode === 'preserve') {
         return []
       }
 
-      if (!hasMeaningfulChange(fields, info.value, key)) {
-        return []
-      }
-
-      return [{ key, action: field.mode }]
-    }),
-  )
+      return [{ key, action: update.mode }]
+    })
+  })
 
   const hasChanges = computed(() => changeSummary.value.length > 0)
 
@@ -246,8 +261,7 @@ export const usePdfMetadataEditor = () => {
       !info.value?.document.encrypted &&
       !isLoading.value &&
       !isSaving.value &&
-      hasChanges.value &&
-      validationFieldKeys.value.length === 0,
+      hasChanges.value,
   )
 
   const generate = async (): Promise<void> => {
@@ -259,7 +273,8 @@ export const usePdfMetadataEditor = () => {
     errorMessage.value = ''
 
     try {
-      resultBlob.value = await writePdfMetadata(file.value, buildUpdates(fields))
+      const blob = await writePdfMetadata(file.value, buildUpdates(fields, info.value))
+      resultBlob.value = blob
       resultFilename.value = `${getFileBaseName(file.value.name)}-metadata.pdf`
     } catch (error) {
       clearResult()
@@ -272,11 +287,10 @@ export const usePdfMetadataEditor = () => {
   return {
     file,
     info,
-    fields,
     isLoading,
     isSaving,
     errorMessage,
-    validationFieldKeys,
+    fields,
     changeSummary,
     hasChanges,
     canGenerate,
@@ -284,8 +298,8 @@ export const usePdfMetadataEditor = () => {
     resultUrl,
     handleUpload,
     clearFile,
-    setFieldMode,
-    setFieldValue,
+    setTextFieldValue,
+    setDateFieldValue,
     restoreField,
     clearAllFields,
     generate,

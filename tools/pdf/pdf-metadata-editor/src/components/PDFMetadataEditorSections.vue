@@ -6,9 +6,8 @@
     :title="editTitle"
     :fields="fields"
     :field-labels="fieldLabels"
-    :validation-field-keys="validationFieldKeys"
-    @update:field-mode="forwardFieldMode"
-    @update:field-value="forwardFieldValue"
+    @update:text-field="forwardTextFieldValue"
+    @update:date-field="forwardDateFieldValue"
     @restore-field="forwardRestoreField"
     @clear-all="forwardClearAll"
   />
@@ -30,12 +29,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { MetadataFieldChange, MetadataFieldsState } from '../composables/usePdfMetadataEditor'
 import type {
-  PdfMetadataFieldKey,
-  PdfMetadataInfo,
-  PdfMetadataUpdateMode,
-} from '../utils/pdfMetadata'
+  MetadataDateFieldKey,
+  MetadataFieldChange,
+  MetadataFieldsState,
+  MetadataTextFieldKey,
+} from '../composables/usePdfMetadataEditor'
+import type { PdfMetadataFieldKey, PdfMetadataInfo } from '../utils/pdfMetadata'
 import PDFMetadataCurrentSection from './PDFMetadataCurrentSection.vue'
 import PDFMetadataFormSection from './PDFMetadataFormSection.vue'
 import PDFMetadataSaveSection from './PDFMetadataSaveSection.vue'
@@ -47,7 +47,6 @@ defineProps<{
   info: PdfMetadataInfo
   canEdit: boolean
   fields: MetadataFieldsState
-  validationFieldKeys: PdfMetadataFieldKey[]
   changeSummary: MetadataFieldChange[]
   canGenerate: boolean
   isSaving: boolean
@@ -57,8 +56,8 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (event: 'update:field-mode', key: PdfMetadataFieldKey, mode: PdfMetadataUpdateMode): void
-  (event: 'update:field-value', key: PdfMetadataFieldKey, value: string): void
+  (event: 'update:text-field', key: MetadataTextFieldKey, value: string): void
+  (event: 'update:date-field', key: MetadataDateFieldKey, value: number | null): void
   (event: 'restore-field', key: PdfMetadataFieldKey): void
   (event: 'clear-all'): void
   (event: 'generate'): void
@@ -77,12 +76,12 @@ const fieldLabels = computed<Record<PdfMetadataFieldKey, string>>(() => ({
   modificationDate: t('fieldModificationDate'),
 }))
 
-const forwardFieldMode = (key: PdfMetadataFieldKey, mode: PdfMetadataUpdateMode): void => {
-  emit('update:field-mode', key, mode)
+const forwardTextFieldValue = (key: MetadataTextFieldKey, value: string): void => {
+  emit('update:text-field', key, value)
 }
 
-const forwardFieldValue = (key: PdfMetadataFieldKey, value: string): void => {
-  emit('update:field-value', key, value)
+const forwardDateFieldValue = (key: MetadataDateFieldKey, value: number | null): void => {
+  emit('update:date-field', key, value)
 }
 
 const forwardRestoreField = (key: PdfMetadataFieldKey): void => {

@@ -1,7 +1,7 @@
 import { computed } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { usePdfMetadataEditor } from './usePdfMetadataEditor'
-import { formatMetadataDateForInput, type PdfMetadataInfo } from '../utils/pdfMetadata'
+import type { PdfMetadataInfo } from '../utils/pdfMetadata'
 
 const hoisted = vi.hoisted(() => ({
   useObjectUrlMock: vi.fn(),
@@ -72,11 +72,8 @@ describe('usePdfMetadataEditor', () => {
     await editor.handleUpload(file)
 
     expect(editor.info.value).toEqual(info)
-    expect(editor.fields.title.mode).toBe('preserve')
-    expect(editor.fields.title.value).toBe('Original title')
-    expect(editor.fields.creationDate.value).toBe(
-      formatMetadataDateForInput(info.metadata.creationDate),
-    )
+    expect(editor.fields.title).toBe('Original title')
+    expect(editor.fields.creationDate).toBe(info.metadata.creationDate?.getTime())
     expect(editor.canGenerate.value).toBe(false)
     expect(hoisted.useObjectUrlMock).toHaveBeenCalled()
   })
@@ -97,7 +94,8 @@ describe('usePdfMetadataEditor', () => {
 
     expect(editor.file.value).toBeNull()
     expect(editor.info.value).toBeNull()
-    expect(editor.fields.title.value).toBe('')
+    expect(editor.fields.title).toBe('')
+    expect(editor.fields.creationDate).toBeNull()
     expect(editor.resultUrl.value).toBeUndefined()
   })
 
@@ -113,37 +111,42 @@ describe('usePdfMetadataEditor', () => {
     hoisted.readPdfMetadataMock.mockResolvedValue(createInfo())
     hoisted.writePdfMetadataMock.mockRejectedValueOnce('bad-save')
     await editor.handleUpload(file)
-    editor.setFieldMode('title', 'set')
-    editor.setFieldValue('title', 'Updated title')
+    editor.setTextFieldValue('title', 'Updated title')
     await editor.generate()
 
     expect(editor.errorMessage.value).toBe('Failed to save PDF metadata.')
   })
 
-  it('tracks meaningful changes and validation errors', async () => {
+  it('tracks changes from direct text and date inputs', async () => {
     const file = new File(['pdf'], 'sample.pdf', { type: 'application/pdf' })
-    hoisted.readPdfMetadataMock.mockResolvedValue(createInfo())
+    const info = createInfo()
+    hoisted.readPdfMetadataMock.mockResolvedValue(info)
 
     const editor = usePdfMetadataEditor()
     await editor.handleUpload(file)
 
-    editor.setFieldMode('title', 'set')
-    editor.setFieldValue('title', 'Original title')
+    editor.setTextFieldValue('title', 'Original title')
     expect(editor.hasChanges.value).toBe(false)
 
-    editor.setFieldValue('title', '   ')
-    expect(editor.validationFieldKeys.value).toEqual(['title'])
-    expect(editor.canGenerate.value).toBe(false)
+    editor.setTextFieldValue('title', '   ')
+    expect(editor.changeSummary.value).toEqual([{ key: 'title', action: 'clear' }])
 
-    editor.setFieldValue('title', 'Updated title')
-    editor.setFieldMode('creationDate', 'set')
-    editor.setFieldValue('creationDate', 'not-a-date')
-    expect(editor.validationFieldKeys.value).toEqual(['creationDate'])
+    editor.restoreField('title')
+    editor.setTextFieldValue('title', 'Updated title')
+    editor.setDateFieldValue('creationDate', Number.NaN)
+    expect(editor.changeSummary.value).toEqual([
+      { key: 'title', action: 'set' },
+      { key: 'creationDate', action: 'clear' },
+    ])
 
-    editor.setFieldValue('creationDate', '2024-02-03T04:05')
-    expect(editor.validationFieldKeys.value).toEqual([])
+    editor.setDateFieldValue('creationDate', info.metadata.creationDate!.getTime())
+    editor.setDateFieldValue('modificationDate', Date.parse('2024-02-03T04:05:00Z'))
+
     expect(editor.hasChanges.value).toBe(true)
-    expect(editor.changeSummary.value.map((item) => item.key)).toEqual(['title', 'creationDate'])
+    expect(editor.changeSummary.value).toEqual([
+      { key: 'title', action: 'set' },
+      { key: 'modificationDate', action: 'set' },
+    ])
   })
 
   it('handles clear all and restore behavior', async () => {
@@ -161,10 +164,8 @@ describe('usePdfMetadataEditor', () => {
     ])
 
     editor.restoreField('title')
-    expect(editor.changeSummary.value).toEqual([
-      { key: 'author', action: 'clear' },
-      { key: 'creationDate', action: 'clear' },
-    ])
+    editor.restoreField('creationDate')
+    expect(editor.changeSummary.value).toEqual([{ key: 'author', action: 'clear' }])
   })
 
   it('tracks date-only changes without originals and falls back to a default filename base', async () => {
@@ -196,10 +197,9 @@ describe('usePdfMetadataEditor', () => {
     const editor = usePdfMetadataEditor()
     await editor.handleUpload(file)
 
-    editor.setFieldMode('creationDate', 'set')
     expect(editor.hasChanges.value).toBe(false)
 
-    editor.setFieldValue('creationDate', '2024-02-03T04:05')
+    editor.setDateFieldValue('creationDate', Date.parse('2024-02-03T04:05:00Z'))
     expect(editor.hasChanges.value).toBe(true)
 
     await editor.generate()
@@ -220,8 +220,8 @@ describe('usePdfMetadataEditor', () => {
     const editor = usePdfMetadataEditor()
     await editor.handleUpload(file)
 
-    editor.setFieldMode('title', 'set')
-    editor.setFieldValue('title', 'Updated title')
+    editor.setTextFieldValue('title', 'Updated title')
+    editor.setDateFieldValue('modificationDate', Date.parse('2024-02-03T04:05:00Z'))
 
     await editor.generate()
 
@@ -229,7 +229,8 @@ describe('usePdfMetadataEditor', () => {
       file,
       expect.objectContaining({
         title: { mode: 'set', value: 'Updated title' },
-        author: { mode: 'preserve', value: 'Original author' },
+        author: { mode: 'preserve' },
+        modificationDate: { mode: 'set', value: new Date('2024-02-03T04:05:00.000Z') },
       }),
     )
     expect(editor.resultFilename.value).toBe('sample-metadata.pdf')
@@ -251,6 +252,7 @@ describe('usePdfMetadataEditor', () => {
 
     const editor = usePdfMetadataEditor()
     await editor.handleUpload(file)
+    editor.setTextFieldValue('title', 'Updated title')
 
     expect(editor.canGenerate.value).toBe(false)
     await editor.generate()
@@ -259,8 +261,7 @@ describe('usePdfMetadataEditor', () => {
     hoisted.readPdfMetadataMock.mockResolvedValue(createInfo())
     hoisted.writePdfMetadataMock.mockRejectedValueOnce(new Error('Save failed'))
     await editor.handleUpload(file)
-    editor.setFieldMode('title', 'set')
-    editor.setFieldValue('title', 'Updated title')
+    editor.setTextFieldValue('title', 'Updated title')
     await editor.generate()
 
     expect(editor.errorMessage.value).toBe('Save failed')

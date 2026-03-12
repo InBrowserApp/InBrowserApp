@@ -13,8 +13,11 @@ const i18n = createI18n({
 })
 
 const stubs = {
+  PDFMetadataSectionHeader: defineComponent({
+    props: ['title'],
+    template: '<h2 class="section-header">{{ title }}</h2>',
+  }),
   ToolSection: defineComponent({ template: '<section><slot /></section>' }),
-  ToolSectionHeader: defineComponent({ template: '<h2><slot /></h2>' }),
   NGrid: defineComponent({ template: '<div class="n-grid"><slot /></div>' }),
   NGi: defineComponent({ template: '<div class="n-gi"><slot /></div>' }),
   NFlex: defineComponent({ template: '<div class="n-flex"><slot /></div>' }),
@@ -38,7 +41,7 @@ const fieldLabels = {
 } as const
 
 describe('PDFMetadataCurrentSection', () => {
-  it('renders file and metadata values', () => {
+  it('renders metadata values grouped by basic and advanced fields', () => {
     const wrapper = mount(PDFMetadataCurrentSection, {
       props: {
         title: 'Current metadata',
@@ -64,12 +67,11 @@ describe('PDFMetadataCurrentSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('sample.pdf')
-    expect(wrapper.text()).toContain('3')
-    expect(wrapper.text()).toContain('1.7')
-    expect(wrapper.text()).toContain('Yes')
+    expect(wrapper.text()).toContain('Basic fields')
+    expect(wrapper.text()).toContain('Advanced fields')
     expect(wrapper.text()).toContain('Sample title')
     expect(wrapper.text()).toContain('Sample author')
+    expect(wrapper.text()).toContain('Creator')
   })
 
   it('falls back to not available for empty values', () => {
@@ -98,7 +100,6 @@ describe('PDFMetadataCurrentSection', () => {
       },
     })
 
-    expect(wrapper.text()).toContain('No')
     expect(wrapper.text()).toContain('Not available')
   })
 })

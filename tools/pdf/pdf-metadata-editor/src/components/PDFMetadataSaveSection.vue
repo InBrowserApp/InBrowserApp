@@ -1,5 +1,5 @@
 <template>
-  <ToolSectionHeader>{{ title }}</ToolSectionHeader>
+  <PDFMetadataSectionHeader :title="title" :icon="ArrowDownload16Regular" />
   <ToolSection>
     <n-space vertical :size="12">
       <n-alert v-if="errorMessage" type="error" :title="t('errorTitle')">
@@ -41,10 +41,12 @@
 
 <script setup lang="ts">
 import { NAlert, NButton, NFlex, NSpace, NText } from 'naive-ui'
+import ArrowDownload16Regular from '@vicons/fluent/ArrowDownload16Regular'
 import { useI18n } from 'vue-i18n'
-import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
+import { ToolSection } from '@shared/ui/tool'
 import type { MetadataFieldChange } from '../composables/usePdfMetadataEditor'
 import type { PdfMetadataFieldKey } from '../utils/pdfMetadata'
+import PDFMetadataSectionHeader from './PDFMetadataSectionHeader.vue'
 
 defineProps<{
   title: string

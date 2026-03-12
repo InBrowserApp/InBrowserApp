@@ -24,7 +24,7 @@ const PDFMetadataCurrentSectionStub = defineComponent({
 const PDFMetadataFormSectionStub = defineComponent({
   name: 'PDFMetadataFormSection',
   props: ['title', 'fieldLabels'],
-  emits: ['update:field-mode', 'update:field-value', 'restore-field', 'clear-all'],
+  emits: ['update:text-field', 'update:date-field', 'restore-field', 'clear-all'],
   template: '<div class="form-section">{{ title }}</div>',
 })
 
@@ -43,14 +43,14 @@ const createProps = () => {
   }
 
   const fields: MetadataFieldsState = {
-    title: { mode: 'preserve', value: '' },
-    author: { mode: 'preserve', value: '' },
-    subject: { mode: 'preserve', value: '' },
-    keywords: { mode: 'preserve', value: '' },
-    creator: { mode: 'preserve', value: '' },
-    producer: { mode: 'preserve', value: '' },
-    creationDate: { mode: 'preserve', value: '' },
-    modificationDate: { mode: 'preserve', value: '' },
+    title: '',
+    author: '',
+    subject: '',
+    keywords: '',
+    creator: '',
+    producer: '',
+    creationDate: null,
+    modificationDate: null,
   }
 
   return {
@@ -60,7 +60,6 @@ const createProps = () => {
     info,
     canEdit: true,
     fields,
-    validationFieldKeys: [],
     changeSummary: [],
     canGenerate: false,
     isSaving: false,
@@ -119,16 +118,16 @@ describe('PDFMetadataEditorSections', () => {
 
     wrapper
       .findComponent(PDFMetadataFormSectionStub)
-      .vm.$emit('update:field-mode', 'title', 'clear')
+      .vm.$emit('update:text-field', 'title', 'Updated')
     wrapper
       .findComponent(PDFMetadataFormSectionStub)
-      .vm.$emit('update:field-value', 'title', 'Updated')
+      .vm.$emit('update:date-field', 'creationDate', 123)
     wrapper.findComponent(PDFMetadataFormSectionStub).vm.$emit('restore-field', 'title')
     wrapper.findComponent(PDFMetadataFormSectionStub).vm.$emit('clear-all')
     wrapper.findComponent(PDFMetadataSaveSectionStub).vm.$emit('generate')
 
-    expect(wrapper.emitted('update:field-mode')).toEqual([['title', 'clear']])
-    expect(wrapper.emitted('update:field-value')).toEqual([['title', 'Updated']])
+    expect(wrapper.emitted('update:text-field')).toEqual([['title', 'Updated']])
+    expect(wrapper.emitted('update:date-field')).toEqual([['creationDate', 123]])
     expect(wrapper.emitted('restore-field')).toEqual([['title']])
     expect(wrapper.emitted('clear-all')).toEqual([[]])
     expect(wrapper.emitted('generate')).toEqual([[]])

@@ -14,8 +14,11 @@ const createTestI18n = () =>
   })
 
 const stubs = {
+  PDFMetadataSectionHeader: defineComponent({
+    props: ['title'],
+    template: '<h2 class="section-header">{{ title }}</h2>',
+  }),
   ToolSection: defineComponent({ template: '<section><slot /></section>' }),
-  ToolSectionHeader: defineComponent({ template: '<h2><slot /></h2>' }),
   Space: defineComponent({ template: '<div class="n-space"><slot /></div>' }),
   Flex: defineComponent({ template: '<div class="n-flex"><slot /></div>' }),
   Text: defineComponent({ template: '<span class="n-text"><slot /></span>' }),
