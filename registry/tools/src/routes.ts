@@ -6,6 +6,7 @@ import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
 import { routes as pdfPageOrganizerRoutes } from '@tools/pdf-page-organizer/routes'
 import { routes as pdfPageNumberAdderRoutes } from '@tools/pdf-page-number-adder/routes'
+import { routes as pdfWatermarkAdderRoutes } from '@tools/pdf-watermark-adder/routes'
 import { routes as pdfSplitterRoutes } from '@tools/pdf-splitter/routes'
 import { routes as pdfToImageConverterRoutes } from '@tools/pdf-to-image-converter/routes'
 import { routes as pdfTextExtractorRoutes } from '@tools/pdf-text-extractor/routes'
@@ -212,6 +213,7 @@ export const routes: ToolRoute[] = [
   ...pdfMergerRoutes,
   ...pdfPageOrganizerRoutes,
   ...pdfPageNumberAdderRoutes,
+  ...pdfWatermarkAdderRoutes,
   ...pdfSplitterRoutes,
   ...pdfToImageConverterRoutes,
   ...pdfTextExtractorRoutes,

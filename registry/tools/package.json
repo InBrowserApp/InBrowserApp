@@ -138,6 +138,7 @@
     "@tools/pdf-merger": "workspace:*",
     "@tools/pdf-page-organizer": "workspace:*",
     "@tools/pdf-page-number-adder": "workspace:*",
+    "@tools/pdf-watermark-adder": "workspace:*",
     "@tools/pdf-splitter": "workspace:*",
     "@tools/pdf-text-extractor": "workspace:*",
     "@tools/pdf-to-image-converter": "workspace:*",
