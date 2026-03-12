@@ -126,6 +126,7 @@ import { toolInfo as yamlToTomlConverterToolInfo } from '@tools/yaml-to-toml-con
 import { toolInfo as tomlToYamlConverterToolInfo } from '@tools/toml-to-yaml-converter'
 import { toolInfo as xmlToJsonConverterToolInfo } from '@tools/xml-to-json-converter'
 import { toolInfo as jsonToXmlConverterToolInfo } from '@tools/json-to-xml-converter'
+import { toolInfo as xmlFormatterToolInfo } from '@tools/xml-formatter'
 import { toolInfo as csvToJsonConverterToolInfo } from '@tools/csv-to-json-converter'
 import { toolInfo as jsonToCsvConverterToolInfo } from '@tools/json-to-csv-converter'
 import { toolInfo as jsonFormatterToolInfo } from '@tools/json-formatter'
@@ -259,6 +260,7 @@ export const tools: ToolInfo[] = [
   tomlToYamlConverterToolInfo,
   xmlToJsonConverterToolInfo,
   jsonToXmlConverterToolInfo,
+  xmlFormatterToolInfo,
   csvToJsonConverterToolInfo,
   jsonToCsvConverterToolInfo,
   jsonFormatterToolInfo,

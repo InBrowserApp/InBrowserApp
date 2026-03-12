@@ -124,6 +124,7 @@ import { routes as yamlToTomlConverterRoutes } from '@tools/yaml-to-toml-convert
 import { routes as tomlToYamlConverterRoutes } from '@tools/toml-to-yaml-converter/routes'
 import { routes as xmlToJsonConverterRoutes } from '@tools/xml-to-json-converter/routes'
 import { routes as jsonToXmlConverterRoutes } from '@tools/json-to-xml-converter/routes'
+import { routes as xmlFormatterRoutes } from '@tools/xml-formatter/routes'
 import { routes as csvToJsonConverterRoutes } from '@tools/csv-to-json-converter/routes'
 import { routes as jsonToCsvConverterRoutes } from '@tools/json-to-csv-converter/routes'
 import { routes as jsonFormatterRoutes } from '@tools/json-formatter/routes'
@@ -331,6 +332,7 @@ export const routes: ToolRoute[] = [
   ...tomlToYamlConverterRoutes,
   ...xmlToJsonConverterRoutes,
   ...jsonToXmlConverterRoutes,
+  ...xmlFormatterRoutes,
   ...csvToJsonConverterRoutes,
   ...jsonToCsvConverterRoutes,
   ...jsonFormatterRoutes,

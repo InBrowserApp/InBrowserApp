@@ -1,0 +1,24 @@
+{
+  "name": "@tools/xml-formatter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./routes": "./src/routes.ts"
+  },
+  "dependencies": {
+    "@shared/tools": "workspace:*",
+    "@shared/ui": "workspace:*",
+    "@vicons/fluent": "catalog:",
+    "@vueuse/core": "catalog:",
+    "browser-fs-access": "catalog:",
+    "fast-xml-parser": "catalog:",
+    "highlight.js": "catalog:",
+    "naive-ui": "catalog:",
+    "vue": "catalog:",
+    "vue-i18n": "catalog:",
+    "vue-router": "catalog:",
+    "xml-formatter": "catalog:"
+  }
+}
