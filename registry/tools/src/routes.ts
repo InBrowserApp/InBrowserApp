@@ -140,6 +140,7 @@ import { routes as sqlFormatterAndLinterRoutes } from '@tools/sql-formatter-and-
 import { routes as codeScreenshotGeneratorRoutes } from '@tools/code-screenshot-generator/routes'
 import { routes as curlConverterRoutes } from '@tools/curl-converter/routes'
 import { routes as dockerRunToComposeRoutes } from '@tools/docker-run-to-compose/routes'
+import { routes as dotenvParserRoutes } from '@tools/dotenv-parser/routes'
 import { routes as deviceInformationRoutes } from '@tools/device-information/routes'
 import { routes as romanNumeralConverterRoutes } from '@tools/roman-numeral-converter/routes'
 import { routes as chineseUppercaseNumberConverterRoutes } from '@tools/chinese-uppercase-number-converter/routes'
@@ -346,6 +347,7 @@ export const routes: ToolRoute[] = [
   ...codeScreenshotGeneratorRoutes,
   ...curlConverterRoutes,
   ...dockerRunToComposeRoutes,
+  ...dotenvParserRoutes,
   ...passwordStrengthCheckerRoutes,
   ...deviceInformationRoutes,
   ...romanNumeralConverterRoutes,

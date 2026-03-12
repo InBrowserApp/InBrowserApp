@@ -139,6 +139,7 @@ import { toolInfo as sqlFormatterAndLinterToolInfo } from '@tools/sql-formatter-
 import { toolInfo as codeScreenshotGeneratorToolInfo } from '@tools/code-screenshot-generator'
 import { toolInfo as curlConverterToolInfo } from '@tools/curl-converter'
 import { toolInfo as dockerRunToComposeToolInfo } from '@tools/docker-run-to-compose'
+import { toolInfo as dotenvParserToolInfo } from '@tools/dotenv-parser'
 import { toolInfo as jsonSchemaGeneratorToolInfo } from '@tools/json-schema-generator'
 import { toolInfo as jsonSchemaValidatorToolInfo } from '@tools/json-schema-validator'
 import { toolInfo as passwordStrengthCheckerToolInfo } from '@tools/password-strength-checker'
@@ -272,6 +273,7 @@ export const tools: ToolInfo[] = [
   codeScreenshotGeneratorToolInfo,
   curlConverterToolInfo,
   dockerRunToComposeToolInfo,
+  dotenvParserToolInfo,
 
   // PDF Tools
   pdfToolsToolInfo,
