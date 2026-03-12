@@ -1,6 +1,6 @@
 <template>
+  <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
   <ToolSection>
-    <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
     <n-flex vertical :size="12">
       <n-flex :size="8" wrap>
         <n-button size="small" @click="emit('update:userAgent', '*')">{{ t('wildcard') }}</n-button>

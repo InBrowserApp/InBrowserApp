@@ -1,6 +1,6 @@
 <template>
+  <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
   <ToolSection>
-    <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
     <n-flex vertical :size="12">
       <n-flex justify="space-between" align="center" wrap>
         <n-flex :size="8" wrap>
@@ -11,11 +11,22 @@
         </n-flex>
 
         <n-flex :size="8" wrap>
-          <n-button size="small" @click="emit('update:modelValue', exampleValue)">
+          <n-button text size="small" @click="emit('update:modelValue', exampleValue)">
+            <template #icon>
+              <n-icon :component="ClipboardPaste16Regular" />
+            </template>
             {{ t('useExample') }}
           </n-button>
-          <n-button size="small" @click="importFromFile">{{ t('import') }}</n-button>
-          <n-button size="small" quaternary @click="emit('update:modelValue', '')">
+          <n-button text size="small" @click="importFromFile">
+            <template #icon>
+              <n-icon :component="Document16Regular" />
+            </template>
+            {{ t('import') }}
+          </n-button>
+          <n-button text size="small" @click="emit('update:modelValue', '')">
+            <template #icon>
+              <n-icon :component="Delete16Regular" />
+            </template>
             {{ t('clear') }}
           </n-button>
         </n-flex>
@@ -33,10 +44,13 @@
 </template>
 
 <script setup lang="ts">
-import { NButton, NFlex, NInput, NTag } from 'naive-ui'
+import { NButton, NFlex, NIcon, NInput, NTag } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
 import { useI18n } from 'vue-i18n'
 import { fileOpen } from 'browser-fs-access'
+import ClipboardPaste16Regular from '@vicons/fluent/ClipboardPaste16Regular'
+import Delete16Regular from '@vicons/fluent/Delete16Regular'
+import Document16Regular from '@vicons/fluent/Document16Regular'
 
 const props = defineProps<{
   modelValue: string

@@ -1,6 +1,6 @@
 <template>
+  <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
   <ToolSection>
-    <ToolSectionHeader>{{ t('title') }}</ToolSectionHeader>
     <n-flex vertical :size="12">
       <n-alert v-if="pending" type="info" :bordered="false">
         {{ t('pending') }}
