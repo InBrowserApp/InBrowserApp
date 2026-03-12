@@ -1,141 +1,86 @@
 <template>
   <n-grid :cols="24" :x-gap="12" :y-gap="12">
-    <n-gi :span="12">
-      <n-form-item :label="positionLabel" :show-feedback="false">
-        <n-select
-          :value="position"
-          :options="positionOptions"
-          :disabled="isGenerating"
-          @update:value="handlePositionChange"
-        />
-      </n-form-item>
-    </n-gi>
+    <PDFWatermarkLayoutModeFields
+      :layout-label="layoutLabel"
+      :layout-single-label="layoutSingleLabel"
+      :layout-tile-label="layoutTileLabel"
+      :tile-preset-label="tilePresetLabel"
+      :tile-preset-sparse-label="tilePresetSparseLabel"
+      :tile-preset-medium-label="tilePresetMediumLabel"
+      :tile-preset-dense-label="tilePresetDenseLabel"
+      :tile-gap-hint="tileGapHint"
+      :tile-gap-x-label="tileGapXLabel"
+      :tile-gap-y-label="tileGapYLabel"
+      :position-label="positionLabel"
+      :offset-x-label="offsetXLabel"
+      :offset-y-label="offsetYLabel"
+      :position-options="positionOptions"
+      :layout-mode="layoutMode"
+      :position="position"
+      :offset-x="offsetX"
+      :offset-y="offsetY"
+      :tile-gap-x="tileGapX"
+      :tile-gap-y="tileGapY"
+      :is-generating="isGenerating"
+      @update-layout-mode="emit('update-layout-mode', $event)"
+      @update-position="emit('update-position', $event)"
+      @update-offset-x="emit('update-offset-x', $event)"
+      @update-offset-y="emit('update-offset-y', $event)"
+      @apply-tile-preset="emit('apply-tile-preset', $event)"
+      @update-tile-gap-x="emit('update-tile-gap-x', $event)"
+      @update-tile-gap-y="emit('update-tile-gap-y', $event)"
+    />
 
-    <n-gi :span="12">
-      <n-form-item :label="opacityLabel" :show-feedback="false">
-        <n-slider
-          data-test="opacity-slider"
-          :value="opacity"
-          :min="0"
-          :max="100"
-          :step="1"
-          :disabled="isGenerating"
-          :format-tooltip="formatOpacityTooltip"
-          @update:value="emit('update-opacity', $event)"
-        />
-      </n-form-item>
-    </n-gi>
-
-    <n-gi :span="12">
-      <n-form-item :label="rotationLabel" :show-feedback="false">
-        <n-slider
-          data-test="rotation-slider"
-          :value="rotation"
-          :min="-180"
-          :max="180"
-          :step="1"
-          :disabled="isGenerating"
-          :format-tooltip="formatRotationTooltip"
-          @update:value="emit('update-rotation', $event)"
-        />
-      </n-form-item>
-    </n-gi>
-
-    <n-gi :span="12">
-      <n-form-item :label="offsetXLabel" :show-feedback="false">
-        <n-input-number
-          data-test="offset-x-input"
-          style="width: 100%"
-          :value="offsetX"
-          :step="1"
-          :disabled="isGenerating"
-          @update:value="emit('update-offset-x', $event)"
-        />
-      </n-form-item>
-    </n-gi>
-
-    <n-gi :span="12">
-      <n-form-item :label="offsetYLabel" :show-feedback="false">
-        <n-input-number
-          data-test="offset-y-input"
-          style="width: 100%"
-          :value="offsetY"
-          :step="1"
-          :disabled="isGenerating"
-          @update:value="emit('update-offset-y', $event)"
-        />
-      </n-form-item>
-    </n-gi>
-
-    <template v-if="mode === 'text'">
-      <n-gi :span="12">
-        <n-form-item :label="fontFamilyLabel" :show-feedback="false">
-          <n-select
-            data-test="font-family-select"
-            :value="fontFamily"
-            :options="fontFamilyOptions"
-            :render-label="renderFontFamilyOption"
-            :style="{ fontFamily: resolvePreviewFontFamily(props.fontFamily) }"
-            :disabled="isGenerating"
-            @update:value="handleFontFamilyChange"
-          />
-        </n-form-item>
-      </n-gi>
-
-      <n-gi :span="12">
-        <n-form-item :label="fontSizeLabel" :show-feedback="false">
-          <n-input-number
-            data-test="font-size-input"
-            style="width: 100%"
-            :value="fontSize"
-            :min="8"
-            :max="240"
-            :step="1"
-            :disabled="isGenerating"
-            @update:value="emit('update-font-size', $event)"
-          />
-        </n-form-item>
-      </n-gi>
-
-      <n-gi :span="24">
-        <n-form-item :label="colorLabel" :show-feedback="false">
-          <n-color-picker
-            data-test="color-picker"
-            :value="color"
-            :modes="['hex']"
-            :show-alpha="false"
-            :disabled="isGenerating"
-            @update:value="emit('update-color', $event)"
-          />
-        </n-form-item>
-      </n-gi>
-    </template>
-
-    <n-gi v-else :span="12">
-      <n-form-item :label="imageScaleLabel" :show-feedback="false">
-        <n-input-number
-          data-test="image-scale-input"
-          style="width: 100%"
-          :value="imageScale"
-          :min="5"
-          :max="100"
-          :step="1"
-          :disabled="isGenerating"
-          @update:value="emit('update-image-scale', $event)"
-        />
-      </n-form-item>
-    </n-gi>
+    <PDFWatermarkAppearanceFields
+      :mode="mode"
+      :font-family-label="fontFamilyLabel"
+      :font-size-label="fontSizeLabel"
+      :color-label="colorLabel"
+      :opacity-label="opacityLabel"
+      :rotation-label="rotationLabel"
+      :image-scale-label="imageScaleLabel"
+      :font-family-options="fontFamilyOptions"
+      :font-family="fontFamily"
+      :font-size="fontSize"
+      :color="color"
+      :opacity="opacity"
+      :rotation="rotation"
+      :image-scale="imageScale"
+      :is-generating="isGenerating"
+      @update-font-family="emit('update-font-family', $event)"
+      @update-font-size="emit('update-font-size', $event)"
+      @update-color="emit('update-color', $event)"
+      @update-opacity="emit('update-opacity', $event)"
+      @update-rotation="emit('update-rotation', $event)"
+      @update-image-scale="emit('update-image-scale', $event)"
+    />
   </n-grid>
 </template>
 
 <script setup lang="ts">
-import { h } from 'vue'
 import type { SelectOption } from 'naive-ui'
-import { NColorPicker, NFormItem, NGi, NGrid, NInputNumber, NSelect, NSlider } from 'naive-ui'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
-import { resolvePreviewFontFamily } from '../utils/watermark-font'
+import { NGrid } from 'naive-ui'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+  WatermarkTilePreset,
+} from '../types'
+import PDFWatermarkAppearanceFields from './PDFWatermarkAppearanceFields.vue'
+import PDFWatermarkLayoutModeFields from './PDFWatermarkLayoutModeFields.vue'
 
-const props = defineProps<{
+defineProps<{
+  layoutLabel: string
+  layoutSingleLabel: string
+  layoutTileLabel: string
+  tilePresetLabel: string
+  tilePresetSparseLabel: string
+  tilePresetMediumLabel: string
+  tilePresetDenseLabel: string
+  tileGapHint: string
+  tileGapXLabel: string
+  tileGapYLabel: string
   positionLabel: string
   fontFamilyLabel: string
   fontSizeLabel: string
@@ -148,6 +93,7 @@ const props = defineProps<{
   fontFamilyOptions: SelectOption[]
   positionOptions: SelectOption[]
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   fontFamily: WatermarkFontFamily
   fontSize: number
   color: string
@@ -156,11 +102,14 @@ const props = defineProps<{
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageScale: number
   isGenerating: boolean
 }>()
 
 const emit = defineEmits<{
+  (event: 'update-layout-mode', value: WatermarkLayoutMode): void
   (event: 'update-position', value: WatermarkPosition): void
   (event: 'update-font-family', value: WatermarkFontFamily): void
   (event: 'update-font-size', value: number | null): void
@@ -169,53 +118,9 @@ const emit = defineEmits<{
   (event: 'update-rotation', value: number | null): void
   (event: 'update-offset-x', value: number | null): void
   (event: 'update-offset-y', value: number | null): void
+  (event: 'apply-tile-preset', value: WatermarkTilePreset): void
+  (event: 'update-tile-gap-x', value: number | null): void
+  (event: 'update-tile-gap-y', value: number | null): void
   (event: 'update-image-scale', value: number | null): void
 }>()
-
-const renderFontFamilyOption = (option: SelectOption) => {
-  const value = option.value
-  if (value !== 'sans-serif' && value !== 'serif' && value !== 'monospace') {
-    return String(option.label ?? value ?? '')
-  }
-
-  return h(
-    'span',
-    {
-      style: {
-        fontFamily: resolvePreviewFontFamily(value),
-      },
-    },
-    String(option.label ?? value),
-  )
-}
-
-const handlePositionChange = (value: string): void => {
-  if (
-    value === 'top-left' ||
-    value === 'top-center' ||
-    value === 'top-right' ||
-    value === 'center-left' ||
-    value === 'center' ||
-    value === 'center-right' ||
-    value === 'bottom-left' ||
-    value === 'bottom-center' ||
-    value === 'bottom-right'
-  ) {
-    emit('update-position', value)
-  }
-}
-
-const handleFontFamilyChange = (value: string): void => {
-  if (value === 'serif' || value === 'sans-serif' || value === 'monospace') {
-    emit('update-font-family', value)
-  }
-}
-
-const formatOpacityValue = (value: number): string => `${value}%`
-
-const formatRotationValue = (value: number): string => `${value}°`
-
-const formatOpacityTooltip = (value: number): string => formatOpacityValue(value)
-
-const formatRotationTooltip = (value: number): string => formatRotationValue(value)
 </script>

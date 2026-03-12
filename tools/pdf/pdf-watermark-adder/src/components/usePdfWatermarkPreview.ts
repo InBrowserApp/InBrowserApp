@@ -1,6 +1,11 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import type { PDFDocumentProxy } from 'pdfjs-dist/types/src/pdf'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+} from '../types'
 import { getAllPages, parsePageSelection } from '../utils/page-range'
 import { loadPdfDocument } from '../utils/pdfjs'
 import { normalizeTextLines } from '../utils/watermark-content'
@@ -9,7 +14,7 @@ import {
   calculateLineHeight,
   calculateTextBlockHeight,
   normalizeRotation,
-  resolveWatermarkPlacement,
+  resolveWatermarkPlacements,
   rotatePoint,
   toRadians,
 } from '../utils/watermark-layout'
@@ -20,6 +25,7 @@ type PreviewProps = {
   rangeInput: string
   rangeErrorCode: string
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   text: string
   fontFamily: WatermarkFontFamily
   fontSize: number
@@ -29,6 +35,8 @@ type PreviewProps = {
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageFile: File | null
   imageScale: number
 }
@@ -291,33 +299,38 @@ export const usePdfWatermarkPreview = (props: PreviewProps) => {
 
     const boxWidth = Math.max(1, ...lineWidths)
     const boxHeight = calculateTextBlockHeight(lines.length, fontSize, lineHeight)
-    const placement = resolveWatermarkPlacement({
+    const placements = resolveWatermarkPlacements({
       pageWidth: context.canvas.width,
       pageHeight: context.canvas.height,
       boxWidth,
       boxHeight,
+      layoutMode: props.layoutMode,
       position: props.position,
       offsetX: props.offsetX,
       offsetY: props.offsetY,
       rotation,
+      tileGapX: props.tileGapX,
+      tileGapY: props.tileGapY,
     })
 
     context.fillStyle = toPreviewColor(props.color, props.opacity)
     context.font = `${fontSize}px ${resolvePreviewFontFamily(props.fontFamily)}`
     context.textBaseline = 'bottom'
 
-    for (let index = 0; index < lines.length; index += 1) {
-      const line = lines[index] ?? ''
-      const lineWidth = lineWidths[index] ?? 0
-      const localX = (boxWidth - lineWidth) / 2
-      const localY = boxHeight - fontSize - index * lineHeight
-      const point = rotatePoint(localX, localY, rotation)
+    for (const placement of placements) {
+      for (let index = 0; index < lines.length; index += 1) {
+        const line = lines[index] ?? ''
+        const lineWidth = lineWidths[index] ?? 0
+        const localX = (boxWidth - lineWidth) / 2
+        const localY = boxHeight - fontSize - index * lineHeight
+        const point = rotatePoint(localX, localY, rotation)
 
-      context.save()
-      context.translate(placement.originX + point.x, canvasHeight - (placement.originY + point.y))
-      context.rotate(-toRadians(rotation))
-      context.fillText(line, 0, 0)
-      context.restore()
+        context.save()
+        context.translate(placement.originX + point.x, canvasHeight - (placement.originY + point.y))
+        context.rotate(-toRadians(rotation))
+        context.fillText(line, 0, 0)
+        context.restore()
+      }
     }
   }
 
@@ -344,23 +357,28 @@ export const usePdfWatermarkPreview = (props: PreviewProps) => {
     const rotation = normalizeRotation(props.rotation)
     const width = context.canvas.width * (Math.min(Math.max(props.imageScale, 5), 100) / 100)
     const height = width * (imageHeight / imageWidth)
-    const placement = resolveWatermarkPlacement({
+    const placements = resolveWatermarkPlacements({
       pageWidth: context.canvas.width,
       pageHeight: context.canvas.height,
       boxWidth: width,
       boxHeight: height,
+      layoutMode: props.layoutMode,
       position: props.position,
       offsetX: props.offsetX,
       offsetY: props.offsetY,
       rotation,
+      tileGapX: props.tileGapX,
+      tileGapY: props.tileGapY,
     })
 
-    context.save()
-    context.globalAlpha = Math.min(Math.max(props.opacity / 100, 0), 1)
-    context.translate(placement.originX, canvasHeight - placement.originY)
-    context.rotate(-toRadians(rotation))
-    context.drawImage(image, 0, -height, width, height)
-    context.restore()
+    for (const placement of placements) {
+      context.save()
+      context.globalAlpha = Math.min(Math.max(props.opacity / 100, 0), 1)
+      context.translate(placement.originX, canvasHeight - placement.originY)
+      context.rotate(-toRadians(rotation))
+      context.drawImage(image, 0, -height, width, height)
+      context.restore()
+    }
   }
 
   const drawWatermarkPreview = async (sequence: number): Promise<void> => {
@@ -486,6 +504,7 @@ export const usePdfWatermarkPreview = (props: PreviewProps) => {
       props.rangeInput,
       props.rangeErrorCode,
       props.mode,
+      props.layoutMode,
       props.text,
       props.fontFamily,
       props.fontSize,
@@ -495,6 +514,8 @@ export const usePdfWatermarkPreview = (props: PreviewProps) => {
       props.position,
       props.offsetX,
       props.offsetY,
+      props.tileGapX,
+      props.tileGapY,
       props.imageFile,
       props.imageScale,
       previewPage.value,

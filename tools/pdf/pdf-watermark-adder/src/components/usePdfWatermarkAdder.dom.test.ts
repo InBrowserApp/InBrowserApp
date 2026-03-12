@@ -82,6 +82,7 @@ type WatermarkAdderHarnessVm = {
   file: File | null
   pageCount: number
   mode: 'text' | 'image'
+  layoutMode: 'single' | 'tile'
   text: string
   fontFamily: 'sans-serif' | 'serif' | 'monospace'
   fontSize: number
@@ -100,6 +101,8 @@ type WatermarkAdderHarnessVm = {
     | 'bottom-right'
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageScale: number
   imageFile: File | null
   fileErrorCode: string
@@ -113,6 +116,7 @@ type WatermarkAdderHarnessVm = {
   rangeInput: string
   setRangeInput(value: string): ActionResult
   setMode(value: 'text' | 'image'): void
+  setLayoutMode(value: 'single' | 'tile'): void
   setText(value: string): void
   setTextPreset(value: string): void
   setFontFamily(value: 'sans-serif' | 'serif' | 'monospace'): void
@@ -123,6 +127,9 @@ type WatermarkAdderHarnessVm = {
   setPosition(value: WatermarkAdderHarnessVm['position']): void
   setOffsetX(value: number | null): void
   setOffsetY(value: number | null): void
+  setTileGapX(value: number | null): void
+  setTileGapY(value: number | null): void
+  applyTilePreset(value: 'sparse' | 'medium' | 'dense'): void
   setImageScale(value: number | null): void
   clearFile(): void
   clearImage(): void
@@ -169,6 +176,7 @@ describe('usePdfWatermarkAdder', () => {
     expect(vm.file?.name).toBe('sample.pdf')
     expect(vm.pageCount).toBe(6)
     expect(vm.mode).toBe('text')
+    expect(vm.layoutMode).toBe('single')
     expect(vm.text).toBe('CONFIDENTIAL')
     expect(vm.canGenerate).toBe(true)
   })
@@ -213,6 +221,8 @@ describe('usePdfWatermarkAdder', () => {
     vm.setRotation(999)
     vm.setOffsetX(9999)
     vm.setOffsetY(-9999)
+    vm.setTileGapX(-5)
+    vm.setTileGapY(999)
     vm.setImageScale(1)
 
     expect(vm.fontSize).toBe(240)
@@ -221,7 +231,21 @@ describe('usePdfWatermarkAdder', () => {
     expect(vm.rotation).toBe(180)
     expect(vm.offsetX).toBe(2000)
     expect(vm.offsetY).toBe(-2000)
+    expect(vm.tileGapX).toBe(0)
+    expect(vm.tileGapY).toBe(200)
     expect(vm.imageScale).toBe(5)
+  })
+
+  it('switches layout mode and applies tile presets', () => {
+    const wrapper = mount(Harness)
+    const vm = getVm(wrapper)
+
+    vm.setLayoutMode('tile')
+    vm.applyTilePreset('sparse')
+
+    expect(vm.layoutMode).toBe('tile')
+    expect(vm.tileGapX).toBe(120)
+    expect(vm.tileGapY).toBe(100)
   })
 
   it('generates a text watermarked pdf', async () => {
@@ -248,6 +272,7 @@ describe('usePdfWatermarkAdder', () => {
     expect(applyWatermarkWithWorkerMock).toHaveBeenCalledWith(
       expect.objectContaining({
         mode: 'text',
+        layoutMode: 'single',
         text: 'TOP SECRET',
         fontFamily: 'monospace',
         fontSize: 64,
@@ -257,6 +282,8 @@ describe('usePdfWatermarkAdder', () => {
         position: 'bottom-right',
         offsetX: 12,
         offsetY: -8,
+        tileGapX: 70,
+        tileGapY: 60,
         pages: [1, 2, 3, 4, 5, 6],
         outputFileName: 'sample-watermarked.pdf',
       }),
@@ -283,6 +310,8 @@ describe('usePdfWatermarkAdder', () => {
     expect(vm.imageFile?.name).toBe('logo.png')
     expect(vm.imageFile?.type).toBe('image/png')
 
+    vm.setLayoutMode('tile')
+    vm.applyTilePreset('dense')
     vm.setImageScale(35)
     const result = await vm.generate()
 
@@ -290,6 +319,9 @@ describe('usePdfWatermarkAdder', () => {
     expect(applyWatermarkWithWorkerMock).toHaveBeenCalledWith(
       expect.objectContaining({
         mode: 'image',
+        layoutMode: 'tile',
+        tileGapX: 30,
+        tileGapY: 20,
         imageScale: 35,
         imageFile: expect.objectContaining({ name: 'logo.png' }),
       }),

@@ -1,6 +1,8 @@
 /* c8 ignore file */
 export type WatermarkMode = 'text' | 'image'
 export type WatermarkFontFamily = 'sans-serif' | 'serif' | 'monospace'
+export type WatermarkLayoutMode = 'single' | 'tile'
+export type WatermarkTilePreset = 'sparse' | 'medium' | 'dense'
 
 export type WatermarkPosition =
   | 'top-left'
@@ -19,6 +21,7 @@ export type ApplyWatermarkPayload = {
   file: File
   pages: number[]
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   text: string
   fontFamily: WatermarkFontFamily
   fontSize: number
@@ -28,6 +31,8 @@ export type ApplyWatermarkPayload = {
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageFile: File | null
   imageScale: number
   outputFileName: string

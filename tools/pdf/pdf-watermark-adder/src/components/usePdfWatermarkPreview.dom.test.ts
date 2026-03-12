@@ -1,7 +1,12 @@
 import { defineComponent, nextTick, type PropType } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+} from '../types'
 
 const { loadPdfDocumentMock } = vi.hoisted(() => ({
   loadPdfDocumentMock: vi.fn(),
@@ -19,6 +24,7 @@ type PreviewHarnessProps = {
   rangeInput: string
   rangeErrorCode: string
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   text: string
   fontFamily: WatermarkFontFamily
   fontSize: number
@@ -28,6 +34,8 @@ type PreviewHarnessProps = {
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageFile: File | null
   imageScale: number
 }
@@ -119,6 +127,7 @@ const createProps = (overrides: Partial<PreviewHarnessProps> = {}): PreviewHarne
   rangeInput: '',
   rangeErrorCode: '',
   mode: 'text',
+  layoutMode: 'single',
   text: 'CONFIDENTIAL',
   fontFamily: 'sans-serif',
   fontSize: 48,
@@ -128,6 +137,8 @@ const createProps = (overrides: Partial<PreviewHarnessProps> = {}): PreviewHarne
   position: 'center',
   offsetX: 0,
   offsetY: 0,
+  tileGapX: 70,
+  tileGapY: 60,
   imageFile: null,
   imageScale: 25,
   ...overrides,
@@ -153,6 +164,10 @@ const PreviewHarness = defineComponent({
     },
     mode: {
       type: String as PropType<WatermarkMode>,
+      required: true,
+    },
+    layoutMode: {
+      type: String as PropType<WatermarkLayoutMode>,
       required: true,
     },
     text: {
@@ -188,6 +203,14 @@ const PreviewHarness = defineComponent({
       required: true,
     },
     offsetY: {
+      type: Number,
+      required: true,
+    },
+    tileGapX: {
+      type: Number,
+      required: true,
+    },
+    tileGapY: {
       type: Number,
       required: true,
     },

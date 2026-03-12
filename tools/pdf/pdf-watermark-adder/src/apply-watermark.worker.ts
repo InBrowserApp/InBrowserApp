@@ -10,7 +10,7 @@ import {
   calculateLineHeight,
   calculateTextBlockHeight,
   normalizeRotation,
-  resolveWatermarkPlacement,
+  resolveWatermarkPlacements,
   rotatePoint,
 } from './utils/watermark-layout'
 import { isSupportedWatermarkImageFile, normalizeTextLines } from './utils/watermark-content'
@@ -101,33 +101,38 @@ const applyTextWatermark = async (
     }
 
     const { width, height } = page.getSize()
-    const placement = resolveWatermarkPlacement({
+    const placements = resolveWatermarkPlacements({
       pageWidth: width,
       pageHeight: height,
       boxWidth,
       boxHeight,
+      layoutMode: payload.layoutMode,
       position: payload.position,
       offsetX: payload.offsetX,
       offsetY: payload.offsetY,
       rotation,
+      tileGapX: payload.tileGapX,
+      tileGapY: payload.tileGapY,
     })
 
-    for (let index = 0; index < lines.length; index += 1) {
-      const line = lines[index] ?? ''
-      const lineWidth = lineWidths[index] ?? 0
-      const localX = (boxWidth - lineWidth) / 2
-      const localY = boxHeight - fontSize - index * lineHeight
-      const point = rotatePoint(localX, localY, rotation)
+    for (const placement of placements) {
+      for (let index = 0; index < lines.length; index += 1) {
+        const line = lines[index] ?? ''
+        const lineWidth = lineWidths[index] ?? 0
+        const localX = (boxWidth - lineWidth) / 2
+        const localY = boxHeight - fontSize - index * lineHeight
+        const point = rotatePoint(localX, localY, rotation)
 
-      page.drawText(line, {
-        x: placement.originX + point.x,
-        y: placement.originY + point.y,
-        size: fontSize,
-        font,
-        color,
-        opacity,
-        rotate: degrees(rotation),
-      })
+        page.drawText(line, {
+          x: placement.originX + point.x,
+          y: placement.originY + point.y,
+          size: fontSize,
+          font,
+          color,
+          opacity,
+          rotate: degrees(rotation),
+        })
+      }
     }
   }
 }
@@ -160,25 +165,30 @@ const applyImageWatermark = async (
     const { width, height } = page.getSize()
     const targetWidth = width * scale
     const targetHeight = targetWidth * (embeddedImage.height / embeddedImage.width)
-    const placement = resolveWatermarkPlacement({
+    const placements = resolveWatermarkPlacements({
       pageWidth: width,
       pageHeight: height,
       boxWidth: targetWidth,
       boxHeight: targetHeight,
+      layoutMode: payload.layoutMode,
       position: payload.position,
       offsetX: payload.offsetX,
       offsetY: payload.offsetY,
       rotation,
+      tileGapX: payload.tileGapX,
+      tileGapY: payload.tileGapY,
     })
 
-    page.drawImage(embeddedImage, {
-      x: placement.originX,
-      y: placement.originY,
-      width: targetWidth,
-      height: targetHeight,
-      opacity,
-      rotate: degrees(rotation),
-    })
+    for (const placement of placements) {
+      page.drawImage(embeddedImage, {
+        x: placement.originX,
+        y: placement.originY,
+        width: targetWidth,
+        height: targetHeight,
+        opacity,
+        rotate: degrees(rotation),
+      })
+    }
   }
 }
 

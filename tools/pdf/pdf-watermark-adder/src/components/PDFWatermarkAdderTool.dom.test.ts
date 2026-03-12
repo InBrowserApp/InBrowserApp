@@ -45,6 +45,7 @@ const settingsStub = defineComponent({
   ],
   emits: [
     'update-mode',
+    'update-layout-mode',
     'update-range-input',
     'update-text',
     'preset-text',
@@ -58,6 +59,9 @@ const settingsStub = defineComponent({
     'update-rotation',
     'update-offset-x',
     'update-offset-y',
+    'apply-tile-preset',
+    'update-tile-gap-x',
+    'update-tile-gap-y',
     'update-image-scale',
   ],
   template: '<div data-test="settings-stub" />',
@@ -82,6 +86,7 @@ const createAdderState = () => {
   const pageCount = ref(0)
   const imageFile = ref<File | null>(null)
   const mode = ref<'text' | 'image'>('text')
+  const layoutMode = ref<'single' | 'tile'>('single')
   const rangeInput = ref('')
   const text = ref('CONFIDENTIAL')
   const fontFamily = ref<'sans-serif' | 'serif' | 'monospace'>('sans-serif')
@@ -102,6 +107,8 @@ const createAdderState = () => {
   >('center')
   const offsetX = ref(0)
   const offsetY = ref(0)
+  const tileGapX = ref(70)
+  const tileGapY = ref(60)
   const imageScale = ref(28)
   const isLoadingDocument = ref(false)
   const isGenerating = ref(false)
@@ -119,6 +126,7 @@ const createAdderState = () => {
     pageCount,
     imageFile,
     mode,
+    layoutMode,
     rangeInput,
     text,
     fontFamily,
@@ -129,6 +137,8 @@ const createAdderState = () => {
     position,
     offsetX,
     offsetY,
+    tileGapX,
+    tileGapY,
     imageScale,
     isLoadingDocument,
     isGenerating,
@@ -141,6 +151,7 @@ const createAdderState = () => {
     canGenerate,
     hasResult,
     setMode: vi.fn(),
+    setLayoutMode: vi.fn(),
     setRangeInput: vi.fn(),
     setText: vi.fn(),
     setTextPreset: vi.fn(),
@@ -152,6 +163,9 @@ const createAdderState = () => {
     setPosition: vi.fn(),
     setOffsetX: vi.fn(),
     setOffsetY: vi.fn(),
+    applyTilePreset: vi.fn(),
+    setTileGapX: vi.fn(),
+    setTileGapY: vi.fn(),
     setImageScale: vi.fn(),
     clearFile: vi.fn(),
     clearImage: vi.fn(),
@@ -239,6 +253,7 @@ describe('PDFWatermarkAdderTool', () => {
     upload.vm.$emit('clear-file')
 
     settings.vm.$emit('update-mode', 'image')
+    settings.vm.$emit('update-layout-mode', 'tile')
     settings.vm.$emit('update-range-input', '2-4')
     settings.vm.$emit('update-text', 'DRAFT')
     settings.vm.$emit('preset-text', 'INTERNAL')
@@ -252,12 +267,16 @@ describe('PDFWatermarkAdderTool', () => {
     settings.vm.$emit('update-rotation', -48)
     settings.vm.$emit('update-offset-x', 8)
     settings.vm.$emit('update-offset-y', -6)
+    settings.vm.$emit('apply-tile-preset', 'dense')
+    settings.vm.$emit('update-tile-gap-x', 44)
+    settings.vm.$emit('update-tile-gap-y', 36)
     settings.vm.$emit('update-image-scale', 44)
     generate.vm.$emit('generate')
 
     expect(state.handleUpload).toHaveBeenCalledWith(uploadFile)
     expect(state.clearFile).toHaveBeenCalledOnce()
     expect(state.setMode).toHaveBeenCalledWith('image')
+    expect(state.setLayoutMode).toHaveBeenCalledWith('tile')
     expect(state.setRangeInput).toHaveBeenCalledWith('2-4')
     expect(state.setText).toHaveBeenCalledWith('DRAFT')
     expect(state.setTextPreset).toHaveBeenCalledWith('INTERNAL')
@@ -271,6 +290,9 @@ describe('PDFWatermarkAdderTool', () => {
     expect(state.setRotation).toHaveBeenCalledWith(-48)
     expect(state.setOffsetX).toHaveBeenCalledWith(8)
     expect(state.setOffsetY).toHaveBeenCalledWith(-6)
+    expect(state.applyTilePreset).toHaveBeenCalledWith('dense')
+    expect(state.setTileGapX).toHaveBeenCalledWith(44)
+    expect(state.setTileGapY).toHaveBeenCalledWith(36)
     expect(state.setImageScale).toHaveBeenCalledWith(44)
     expect(state.generate).toHaveBeenCalledOnce()
   })

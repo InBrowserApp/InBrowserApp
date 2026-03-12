@@ -37,6 +37,16 @@
                 />
 
                 <PDFWatermarkLayoutPanel
+                  :layout-label="layoutLabel"
+                  :layout-single-label="layoutSingleLabel"
+                  :layout-tile-label="layoutTileLabel"
+                  :tile-preset-label="tilePresetLabel"
+                  :tile-preset-sparse-label="tilePresetSparseLabel"
+                  :tile-preset-medium-label="tilePresetMediumLabel"
+                  :tile-preset-dense-label="tilePresetDenseLabel"
+                  :tile-gap-hint="tileGapHint"
+                  :tile-gap-x-label="tileGapXLabel"
+                  :tile-gap-y-label="tileGapYLabel"
                   :position-label="positionLabel"
                   :font-family-label="fontFamilyLabel"
                   :font-size-label="fontSizeLabel"
@@ -49,6 +59,7 @@
                   :font-family-options="fontFamilyOptions"
                   :position-options="positionOptions"
                   :mode="mode"
+                  :layout-mode="layoutMode"
                   :font-family="fontFamily"
                   :font-size="fontSize"
                   :color="color"
@@ -57,8 +68,11 @@
                   :position="position"
                   :offset-x="offsetX"
                   :offset-y="offsetY"
+                  :tile-gap-x="tileGapX"
+                  :tile-gap-y="tileGapY"
                   :image-scale="imageScale"
                   :is-generating="isGenerating"
+                  @update-layout-mode="emit('update-layout-mode', $event)"
                   @update-position="emit('update-position', $event)"
                   @update-font-family="emit('update-font-family', $event)"
                   @update-font-size="emit('update-font-size', $event)"
@@ -67,6 +81,9 @@
                   @update-rotation="emit('update-rotation', $event)"
                   @update-offset-x="emit('update-offset-x', $event)"
                   @update-offset-y="emit('update-offset-y', $event)"
+                  @apply-tile-preset="emit('apply-tile-preset', $event)"
+                  @update-tile-gap-x="emit('update-tile-gap-x', $event)"
+                  @update-tile-gap-y="emit('update-tile-gap-y', $event)"
                   @update-image-scale="emit('update-image-scale', $event)"
                 />
               </n-form>
@@ -83,6 +100,7 @@
               :range-input="rangeInput"
               :range-error-code="rangeErrorCode"
               :mode="mode"
+              :layout-mode="layoutMode"
               :text="text"
               :font-family="fontFamily"
               :font-size="fontSize"
@@ -92,6 +110,8 @@
               :position="position"
               :offset-x="offsetX"
               :offset-y="offsetY"
+              :tile-gap-x="tileGapX"
+              :tile-gap-y="tileGapY"
               :image-file="imageFile"
               :image-scale="imageScale"
             />
@@ -108,7 +128,13 @@
 import type { SelectOption } from 'naive-ui'
 import { NAlert, NFlex, NForm, NGi, NGrid } from 'naive-ui'
 import { ToolSection, ToolSectionHeader } from '@shared/ui/tool'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+  WatermarkTilePreset,
+} from '../types'
 import PDFWatermarkContentPanel from './PDFWatermarkContentPanel.vue'
 import PDFWatermarkLayoutPanel from './PDFWatermarkLayoutPanel.vue'
 import PDFWatermarkPreview from './PDFWatermarkPreview.vue'
@@ -127,6 +153,16 @@ defineProps<{
   imageHint: string
   pageRangesLabel: string
   pageRangesPlaceholder: string
+  layoutLabel: string
+  layoutSingleLabel: string
+  layoutTileLabel: string
+  tilePresetLabel: string
+  tilePresetSparseLabel: string
+  tilePresetMediumLabel: string
+  tilePresetDenseLabel: string
+  tileGapHint: string
+  tileGapXLabel: string
+  tileGapYLabel: string
   positionLabel: string
   fontFamilyLabel: string
   fontSizeLabel: string
@@ -148,6 +184,7 @@ defineProps<{
   pageCount: number
   imageFile: File | null
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   rangeInput: string
   rangeErrorCode: string
   text: string
@@ -159,12 +196,15 @@ defineProps<{
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageScale: number
   isGenerating: boolean
 }>()
 
 const emit = defineEmits<{
   (event: 'update-mode', value: WatermarkMode): void
+  (event: 'update-layout-mode', value: WatermarkLayoutMode): void
   (event: 'update-range-input', value: string): void
   (event: 'update-text', value: string): void
   (event: 'preset-text', value: string): void
@@ -178,6 +218,9 @@ const emit = defineEmits<{
   (event: 'update-rotation', value: number | null): void
   (event: 'update-offset-x', value: number | null): void
   (event: 'update-offset-y', value: number | null): void
+  (event: 'apply-tile-preset', value: WatermarkTilePreset): void
+  (event: 'update-tile-gap-x', value: number | null): void
+  (event: 'update-tile-gap-y', value: number | null): void
   (event: 'update-image-scale', value: number | null): void
 }>()
 </script>

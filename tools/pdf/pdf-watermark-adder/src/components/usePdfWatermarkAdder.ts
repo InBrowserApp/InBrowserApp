@@ -3,13 +3,23 @@ import { useObjectUrl } from '@vueuse/core'
 import { applyWatermarkWithWorker } from '../apply-watermark'
 import { inspectPdf, isPdfFile } from '../inspect-pdf'
 import { PDF_ERROR } from '../pdf-errors'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+  WatermarkTilePreset,
+} from '../types'
 import { PAGE_RANGE_ERROR, parsePageSelection } from '../utils/page-range'
 import {
   isSupportedWatermarkImageFile,
   normalizeWatermarkImageFile,
 } from '../utils/watermark-content'
-import { normalizeRotation } from '../utils/watermark-layout'
+import {
+  WATERMARK_TILE_PRESETS,
+  normalizeRotation,
+  sanitizeTileGap,
+} from '../utils/watermark-layout'
 
 type ActionResult = {
   success: boolean
@@ -18,6 +28,8 @@ type ActionResult = {
 
 const DEFAULT_FILE_NAME = 'watermarked'
 const DEFAULT_TEXT = 'CONFIDENTIAL'
+const DEFAULT_TILE_GAP_X = WATERMARK_TILE_PRESETS.medium.gapX
+const DEFAULT_TILE_GAP_Y = WATERMARK_TILE_PRESETS.medium.gapY
 
 const sanitizeInteger = (value: number, fallback: number, min?: number, max?: number): number => {
   if (!Number.isFinite(value)) {
@@ -61,6 +73,7 @@ export const usePdfWatermarkAdder = () => {
   const imageFile = ref<File | null>(null)
 
   const mode = ref<WatermarkMode>('text')
+  const layoutMode = ref<WatermarkLayoutMode>('single')
   const rangeInput = ref('')
   const text = ref(DEFAULT_TEXT)
   const fontFamily = ref<WatermarkFontFamily>('sans-serif')
@@ -71,6 +84,8 @@ export const usePdfWatermarkAdder = () => {
   const position = ref<WatermarkPosition>('center')
   const offsetX = ref(0)
   const offsetY = ref(0)
+  const tileGapX = ref(DEFAULT_TILE_GAP_X)
+  const tileGapY = ref(DEFAULT_TILE_GAP_Y)
   const imageScale = ref(28)
 
   const isLoadingDocument = ref(false)
@@ -157,6 +172,11 @@ export const usePdfWatermarkAdder = () => {
     clearResult()
   }
 
+  const setLayoutMode = (value: WatermarkLayoutMode): void => {
+    layoutMode.value = value
+    clearGenerateState()
+  }
+
   const setText = (value: string): void => {
     text.value = value
     clearGenerateState()
@@ -204,6 +224,23 @@ export const usePdfWatermarkAdder = () => {
 
   const setOffsetY = (value: number | null): void => {
     offsetY.value = sanitizeInteger(value ?? Number.NaN, 0, -2000, 2000)
+    clearGenerateState()
+  }
+
+  const setTileGapX = (value: number | null): void => {
+    tileGapX.value = sanitizeTileGap(value ?? Number.NaN, DEFAULT_TILE_GAP_X)
+    clearGenerateState()
+  }
+
+  const setTileGapY = (value: number | null): void => {
+    tileGapY.value = sanitizeTileGap(value ?? Number.NaN, DEFAULT_TILE_GAP_Y)
+    clearGenerateState()
+  }
+
+  const applyTilePreset = (preset: WatermarkTilePreset): void => {
+    const gaps = WATERMARK_TILE_PRESETS[preset]
+    tileGapX.value = gaps.gapX
+    tileGapY.value = gaps.gapY
     clearGenerateState()
   }
 
@@ -331,6 +368,7 @@ export const usePdfWatermarkAdder = () => {
         file: file.value,
         pages: selectedPages,
         mode: mode.value,
+        layoutMode: layoutMode.value,
         text: text.value,
         fontFamily: fontFamily.value,
         fontSize: fontSize.value,
@@ -340,6 +378,8 @@ export const usePdfWatermarkAdder = () => {
         position: position.value,
         offsetX: offsetX.value,
         offsetY: offsetY.value,
+        tileGapX: tileGapX.value,
+        tileGapY: tileGapY.value,
         imageFile: imageFile.value,
         imageScale: imageScale.value,
         outputFileName: outputFileName.value,
@@ -377,6 +417,7 @@ export const usePdfWatermarkAdder = () => {
     pageCount,
     imageFile,
     mode,
+    layoutMode,
     rangeInput,
     text,
     fontFamily,
@@ -387,6 +428,8 @@ export const usePdfWatermarkAdder = () => {
     position,
     offsetX,
     offsetY,
+    tileGapX,
+    tileGapY,
     imageScale,
     isLoadingDocument,
     isGenerating,
@@ -401,6 +444,7 @@ export const usePdfWatermarkAdder = () => {
     hasTextContent,
     hasImageContent,
     setMode,
+    setLayoutMode,
     setRangeInput,
     setText,
     setTextPreset,
@@ -412,6 +456,9 @@ export const usePdfWatermarkAdder = () => {
     setPosition,
     setOffsetX,
     setOffsetY,
+    setTileGapX,
+    setTileGapY,
+    applyTilePreset,
     setImageScale,
     clearFile,
     clearImage,

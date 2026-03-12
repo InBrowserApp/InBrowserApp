@@ -3,8 +3,11 @@ import {
   calculateLineHeight,
   calculateTextBlockHeight,
   getRotatedBounds,
+  resolveTilePreset,
   resolveWatermarkPlacement,
+  resolveWatermarkPlacements,
   rotatePoint,
+  WATERMARK_TILE_PRESETS,
 } from './watermark-layout'
 
 describe('watermark-layout', () => {
@@ -60,5 +63,65 @@ describe('watermark-layout', () => {
 
     expect(lineHeight).toBe(57.599999999999994)
     expect(height).toBe(163.2)
+  })
+
+  it('creates multiple tiled placements that cover the page', () => {
+    const placements = resolveWatermarkPlacements({
+      pageWidth: 600,
+      pageHeight: 800,
+      boxWidth: 240,
+      boxHeight: 60,
+      position: 'center',
+      offsetX: 0,
+      offsetY: 0,
+      rotation: -35,
+      layoutMode: 'tile',
+      tileGapX: WATERMARK_TILE_PRESETS.medium.gapX,
+      tileGapY: WATERMARK_TILE_PRESETS.medium.gapY,
+    })
+
+    expect(placements.length).toBeGreaterThan(6)
+    expect(placements.some((placement) => placement.left <= 0)).toBe(true)
+    expect(placements.some((placement) => placement.bottom <= 0)).toBe(true)
+    expect(placements.some((placement) => placement.left + placement.bounds.width >= 600)).toBe(
+      true,
+    )
+    expect(placements.some((placement) => placement.bottom + placement.bounds.height >= 800)).toBe(
+      true,
+    )
+  })
+
+  it('matches tile presets from the configured spacing values', () => {
+    expect(
+      resolveTilePreset(WATERMARK_TILE_PRESETS.sparse.gapX, WATERMARK_TILE_PRESETS.sparse.gapY),
+    ).toBe('sparse')
+    expect(
+      resolveTilePreset(WATERMARK_TILE_PRESETS.medium.gapX, WATERMARK_TILE_PRESETS.medium.gapY),
+    ).toBe('medium')
+    expect(resolveTilePreset(41, 22)).toBe(null)
+  })
+
+  it('keeps dense small watermarks covering the full page', () => {
+    const placements = resolveWatermarkPlacements({
+      pageWidth: 612,
+      pageHeight: 792,
+      boxWidth: 24,
+      boxHeight: 8,
+      position: 'center',
+      offsetX: 0,
+      offsetY: 0,
+      rotation: -35,
+      layoutMode: 'tile',
+      tileGapX: WATERMARK_TILE_PRESETS.dense.gapX,
+      tileGapY: WATERMARK_TILE_PRESETS.dense.gapY,
+    })
+
+    expect(placements.length).toBeGreaterThan(500)
+    expect(placements.some((placement) => placement.left + placement.bounds.width >= 612)).toBe(
+      true,
+    )
+    expect(placements.some((placement) => placement.bottom + placement.bounds.height >= 792)).toBe(
+      true,
+    )
   })
 })

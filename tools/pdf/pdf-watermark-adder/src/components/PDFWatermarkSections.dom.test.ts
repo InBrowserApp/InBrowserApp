@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { mount } from '@vue/test-utils'
+import { mount, type VueWrapper } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 
 vi.mock('naive-ui', async () => {
@@ -406,6 +406,16 @@ describe('PDFWatermarkLayoutPanel', () => {
   it('emits layout updates in text mode and ignores invalid select values', async () => {
     const wrapper = mount(PDFWatermarkLayoutPanel, {
       props: {
+        layoutLabel: 'Layout',
+        layoutSingleLabel: 'Single',
+        layoutTileLabel: 'Tile',
+        tilePresetLabel: 'Tile density',
+        tilePresetSparseLabel: 'Sparse',
+        tilePresetMediumLabel: 'Standard',
+        tilePresetDenseLabel: 'Dense',
+        tileGapHint: 'Smaller gaps create denser coverage.',
+        tileGapXLabel: 'Horizontal spacing',
+        tileGapYLabel: 'Vertical spacing',
         positionLabel: 'Position',
         fontFamilyLabel: 'Font family',
         fontSizeLabel: 'Font size',
@@ -424,6 +434,7 @@ describe('PDFWatermarkLayoutPanel', () => {
           { label: 'Bottom right', value: 'bottom-right' },
         ],
         mode: 'text',
+        layoutMode: 'single',
         fontFamily: 'sans-serif',
         fontSize: 48,
         color: '#000000',
@@ -432,11 +443,16 @@ describe('PDFWatermarkLayoutPanel', () => {
         position: 'center',
         offsetX: 0,
         offsetY: 0,
+        tileGapX: 70,
+        tileGapY: 60,
         imageScale: 28,
         isGenerating: false,
       },
       ...globalMountOptions,
     })
+
+    const layoutGroup = wrapper.getComponent({ name: 'NRadioGroup' })
+    layoutGroup.vm.$emit('update:value', 'tile')
 
     const selects = wrapper.findAllComponents({ name: 'NSelect' })
     selects[0]?.vm.$emit('update:value', 'bottom-right')
@@ -444,6 +460,7 @@ describe('PDFWatermarkLayoutPanel', () => {
     selects[1]?.vm.$emit('update:value', 'serif')
     selects[1]?.vm.$emit('update:value', 'mono')
 
+    expect(wrapper.emitted('update-layout-mode')?.[0]).toEqual(['tile'])
     expect(wrapper.emitted('update-position')).toEqual([['bottom-right']])
     expect(wrapper.emitted('update-font-family')).toEqual([['serif']])
 
@@ -469,6 +486,16 @@ describe('PDFWatermarkLayoutPanel', () => {
   it('shows image scale controls in image mode', () => {
     const wrapper = mount(PDFWatermarkLayoutPanel, {
       props: {
+        layoutLabel: 'Layout',
+        layoutSingleLabel: 'Single',
+        layoutTileLabel: 'Tile',
+        tilePresetLabel: 'Tile density',
+        tilePresetSparseLabel: 'Sparse',
+        tilePresetMediumLabel: 'Standard',
+        tilePresetDenseLabel: 'Dense',
+        tileGapHint: 'Smaller gaps create denser coverage.',
+        tileGapXLabel: 'Horizontal spacing',
+        tileGapYLabel: 'Vertical spacing',
         positionLabel: 'Position',
         fontFamilyLabel: 'Font family',
         fontSizeLabel: 'Font size',
@@ -481,6 +508,7 @@ describe('PDFWatermarkLayoutPanel', () => {
         fontFamilyOptions: [{ label: 'Sans', value: 'sans-serif' }],
         positionOptions: [{ label: 'Center', value: 'center' }],
         mode: 'image',
+        layoutMode: 'tile',
         fontFamily: 'sans-serif',
         fontSize: 48,
         color: '#000000',
@@ -489,6 +517,8 @@ describe('PDFWatermarkLayoutPanel', () => {
         position: 'center',
         offsetX: 0,
         offsetY: 0,
+        tileGapX: 70,
+        tileGapY: 60,
         imageScale: 28,
         isGenerating: false,
       },
@@ -497,9 +527,17 @@ describe('PDFWatermarkLayoutPanel', () => {
 
     expect(wrapper.find('[data-test="font-size-input"]').exists()).toBe(false)
     expect(wrapper.find('[data-test="image-scale-input"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="tile-gap-x-slider"]').exists()).toBe(true)
+    expect(wrapper.find('[data-test="tile-gap-y-slider"]').exists()).toBe(true)
 
-    const numberInputs = wrapper.findAllComponents({ name: 'NInputNumber' })
-    numberInputs[numberInputs.length - 1]?.vm.$emit('update:value', 42)
+    const [tileGapXSlider, tileGapYSlider] = wrapper.findAllComponents({ name: 'NSlider' })
+    tileGapXSlider!.vm.$emit('update:value', 44)
+    tileGapYSlider!.vm.$emit('update:value', 36)
+
+    const [imageScaleInput] = wrapper.findAllComponents({ name: 'NInputNumber' }) as VueWrapper[]
+    imageScaleInput!.vm.$emit('update:value', 42)
+    expect(wrapper.emitted('update-tile-gap-x')?.[0]).toEqual([44])
+    expect(wrapper.emitted('update-tile-gap-y')?.[0]).toEqual([36])
     expect(wrapper.emitted('update-image-scale')?.[0]).toEqual([42])
   })
 })
@@ -573,8 +611,9 @@ describe('PDFWatermarkSettingsSection', () => {
 
     const layoutStub = defineComponent({
       name: 'PDFWatermarkLayoutPanel',
-      props: ['fontSize', 'position', 'imageScale'],
+      props: ['fontSize', 'position', 'layoutMode', 'tileGapX', 'imageScale'],
       emits: [
+        'update-layout-mode',
         'update-position',
         'update-font-family',
         'update-font-size',
@@ -583,6 +622,9 @@ describe('PDFWatermarkSettingsSection', () => {
         'update-rotation',
         'update-offset-x',
         'update-offset-y',
+        'apply-tile-preset',
+        'update-tile-gap-x',
+        'update-tile-gap-y',
         'update-image-scale',
       ],
       template: '<div data-test="layout-panel-stub" />',
@@ -590,7 +632,7 @@ describe('PDFWatermarkSettingsSection', () => {
 
     const previewStub = defineComponent({
       name: 'PDFWatermarkPreview',
-      props: ['file', 'pageCount', 'rangeInput', 'position'],
+      props: ['file', 'pageCount', 'rangeInput', 'position', 'layoutMode', 'tileGapX'],
       template: '<div data-test="preview-panel-stub" />',
     })
 
@@ -612,6 +654,16 @@ describe('PDFWatermarkSettingsSection', () => {
         imageHint: 'PNG/JPG only',
         pageRangesLabel: 'Pages',
         pageRangesPlaceholder: '1-3',
+        layoutLabel: 'Layout',
+        layoutSingleLabel: 'Single',
+        layoutTileLabel: 'Tile',
+        tilePresetLabel: 'Tile density',
+        tilePresetSparseLabel: 'Sparse',
+        tilePresetMediumLabel: 'Standard',
+        tilePresetDenseLabel: 'Dense',
+        tileGapHint: 'Smaller gaps create denser coverage.',
+        tileGapXLabel: 'Horizontal spacing',
+        tileGapYLabel: 'Vertical spacing',
         positionLabel: 'Position',
         fontFamilyLabel: 'Font family',
         fontSizeLabel: 'Font size',
@@ -633,6 +685,7 @@ describe('PDFWatermarkSettingsSection', () => {
         pageCount: 3,
         imageFile,
         mode: 'text',
+        layoutMode: 'single',
         rangeInput: '1-2',
         rangeErrorCode: '',
         text: 'CONFIDENTIAL',
@@ -644,6 +697,8 @@ describe('PDFWatermarkSettingsSection', () => {
         position: 'center',
         offsetX: 0,
         offsetY: 0,
+        tileGapX: 70,
+        tileGapY: 60,
         imageScale: 28,
         isGenerating: false,
       },
@@ -671,6 +726,7 @@ describe('PDFWatermarkSettingsSection', () => {
     content.vm.$emit('upload-image', imageFile)
     content.vm.$emit('clear-image')
 
+    layout.vm.$emit('update-layout-mode', 'tile')
     layout.vm.$emit('update-position', 'bottom-right')
     layout.vm.$emit('update-font-family', 'serif')
     layout.vm.$emit('update-font-size', 64)
@@ -679,6 +735,9 @@ describe('PDFWatermarkSettingsSection', () => {
     layout.vm.$emit('update-rotation', -45)
     layout.vm.$emit('update-offset-x', 8)
     layout.vm.$emit('update-offset-y', -6)
+    layout.vm.$emit('apply-tile-preset', 'dense')
+    layout.vm.$emit('update-tile-gap-x', 44)
+    layout.vm.$emit('update-tile-gap-y', 36)
     layout.vm.$emit('update-image-scale', 40)
 
     expect(wrapper.emitted('update-mode')?.[0]).toEqual(['image'])
@@ -687,6 +746,7 @@ describe('PDFWatermarkSettingsSection', () => {
     expect(wrapper.emitted('preset-text')?.[0]).toEqual(['INTERNAL'])
     expect(wrapper.emitted('upload-image')?.[0]).toEqual([imageFile])
     expect(wrapper.emitted('clear-image')).toHaveLength(1)
+    expect(wrapper.emitted('update-layout-mode')?.[0]).toEqual(['tile'])
     expect(wrapper.emitted('update-position')?.[0]).toEqual(['bottom-right'])
     expect(wrapper.emitted('update-font-family')?.[0]).toEqual(['serif'])
     expect(wrapper.emitted('update-font-size')?.[0]).toEqual([64])
@@ -695,6 +755,9 @@ describe('PDFWatermarkSettingsSection', () => {
     expect(wrapper.emitted('update-rotation')?.[0]).toEqual([-45])
     expect(wrapper.emitted('update-offset-x')?.[0]).toEqual([8])
     expect(wrapper.emitted('update-offset-y')?.[0]).toEqual([-6])
+    expect(wrapper.emitted('apply-tile-preset')?.[0]).toEqual(['dense'])
+    expect(wrapper.emitted('update-tile-gap-x')?.[0]).toEqual([44])
+    expect(wrapper.emitted('update-tile-gap-y')?.[0]).toEqual([36])
     expect(wrapper.emitted('update-image-scale')?.[0]).toEqual([40])
   })
 })

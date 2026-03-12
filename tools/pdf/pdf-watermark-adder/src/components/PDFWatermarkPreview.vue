@@ -37,7 +37,12 @@
 <script setup lang="ts">
 import { NFlex, NPagination, NSpin, NText } from 'naive-ui'
 import { ToolSectionHeader } from '@shared/ui/tool'
-import type { WatermarkFontFamily, WatermarkMode, WatermarkPosition } from '../types'
+import type {
+  WatermarkFontFamily,
+  WatermarkLayoutMode,
+  WatermarkMode,
+  WatermarkPosition,
+} from '../types'
 import { usePdfWatermarkPreview } from './usePdfWatermarkPreview'
 
 const props = defineProps<{
@@ -49,6 +54,7 @@ const props = defineProps<{
   rangeInput: string
   rangeErrorCode: string
   mode: WatermarkMode
+  layoutMode: WatermarkLayoutMode
   text: string
   fontFamily: WatermarkFontFamily
   fontSize: number
@@ -58,6 +64,8 @@ const props = defineProps<{
   position: WatermarkPosition
   offsetX: number
   offsetY: number
+  tileGapX: number
+  tileGapY: number
   imageFile: File | null
   imageScale: number
 }>()
