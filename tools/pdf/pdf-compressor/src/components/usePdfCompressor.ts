@@ -1,4 +1,4 @@
-import { computed, ref, watch } from 'vue'
+import { computed, ref, shallowRef, watch } from 'vue'
 import { useObjectUrl } from '@vueuse/core'
 import { inspectPdf } from '../inspect-pdf'
 import { PDF_ERROR } from '../pdf-errors'
@@ -42,11 +42,11 @@ const createOptionsFromPreset = (
 })
 
 export const usePdfCompressor = () => {
-  const file = ref<File | null>(null)
+  const file = shallowRef<File | null>(null)
   const pageCount = ref<number | null>(null)
   const preset = ref<PdfCompressionPreset>('balanced')
   const options = ref<PdfCompressionOptions>(createOptionsFromPreset('balanced'))
-  const resultBlob = ref<Blob | null>(null)
+  const resultBlob = shallowRef<Blob | null>(null)
 
   const isLoadingDocument = ref(false)
   const isCompressing = ref(false)
@@ -123,7 +123,9 @@ export const usePdfCompressor = () => {
   }
 
   const compress = async (): Promise<{ success: boolean; errorCode?: string }> => {
-    if (!file.value || !canCompress.value) {
+    const nextFile = file.value
+
+    if (!nextFile || !canCompress.value) {
       return { success: false }
     }
 
@@ -132,7 +134,11 @@ export const usePdfCompressor = () => {
     resultBlob.value = null
 
     try {
-      resultBlob.value = await compressPdfWithWorker(file.value, options.value)
+      const nextOptions: PdfCompressionOptions = {
+        ...options.value,
+      }
+
+      resultBlob.value = await compressPdfWithWorker(nextFile, nextOptions)
 
       return { success: true }
     } catch (error) {

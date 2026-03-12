@@ -1,4 +1,4 @@
-import { computed, nextTick } from 'vue'
+import { computed, isProxy, nextTick } from 'vue'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { PRESET_OPTIONS, usePdfCompressor } from './usePdfCompressor'
 import { PDF_ERROR } from '../pdf-errors'
@@ -47,9 +47,7 @@ describe('usePdfCompressor', () => {
     const file = new File(['pdf'], 'sample.pdf', { type: 'application/pdf' })
     await state.handleUpload(file)
 
-    expect(state.file.value?.name).toBe('sample.pdf')
-    expect(state.file.value?.type).toBe('application/pdf')
-    expect(state.file.value?.size).toBe(file.size)
+    expect(state.file.value).toBe(file)
     expect(state.pageCount.value).toBe(4)
     expect(state.canCompress.value).toBe(true)
     expect(state.resultFilename.value).toBe('sample-compressed.pdf')
@@ -121,6 +119,7 @@ describe('usePdfCompressor', () => {
       objectStreams: 'generate',
       linearize: true,
     })
+    expect(isProxy(compressPdfWithWorkerMock.mock.calls[0]?.[1])).toBe(false)
     expect(state.hasResult.value).toBe(true)
     expect(state.resultUrl.value).toBe('blob:mock')
     expect(state.noReduction.value).toBe(true)
