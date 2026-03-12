@@ -3,6 +3,7 @@ import { routes as faviconAssetsGeneratorRoutes } from '@tools/favicon-assets-ge
 import { routes as uuidRoutes } from '@tools/uuid/routes'
 import { routes as removePDFOwnerPasswordRoutes } from '@tools/remove-pdf-owner-password/routes'
 import { routes as pdfInfoViewerRoutes } from '@tools/pdf-info-viewer/routes'
+import { routes as pdfMetadataEditorRoutes } from '@tools/pdf-metadata-editor/routes'
 import { routes as pdfMergerRoutes } from '@tools/pdf-merger/routes'
 import { routes as pdfPageOrganizerRoutes } from '@tools/pdf-page-organizer/routes'
 import { routes as pdfPageNumberAdderRoutes } from '@tools/pdf-page-number-adder/routes'
@@ -209,6 +210,7 @@ export const routes: ToolRoute[] = [
   ...uuidRoutes,
   ...removePDFOwnerPasswordRoutes,
   ...pdfInfoViewerRoutes,
+  ...pdfMetadataEditorRoutes,
   ...pdfMergerRoutes,
   ...pdfPageOrganizerRoutes,
   ...pdfPageNumberAdderRoutes,
