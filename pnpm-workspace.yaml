@@ -99,7 +99,7 @@ catalog:
   gifuct-js: ^2.1.2
   github-markdown-css: ^5.9.0
   gitignore: github:github/gitignore
-  happy-dom: ^20.7.0
+  happy-dom: ^20.8.9
   hash-wasm: ^4.12.0
   highlight.js: 11.11.1
   highwayhasher: ^0.4.4
