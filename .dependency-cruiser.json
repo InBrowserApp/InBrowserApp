@@ -1,0 +1,62 @@
+{
+  "forbidden": [
+    {
+      "name": "no-circular",
+      "severity": "warn",
+      "from": {},
+      "to": {
+        "circular": true
+      }
+    },
+    {
+      "name": "not-to-unresolvable",
+      "severity": "error",
+      "from": {},
+      "to": {
+        "couldNotResolve": true
+      }
+    },
+    {
+      "name": "no-non-package-json",
+      "severity": "error",
+      "from": {},
+      "to": {
+        "dependencyTypes": ["npm-no-pkg", "npm-unknown"]
+      }
+    },
+    {
+      "name": "not-to-dev-dep",
+      "severity": "error",
+      "from": {
+        "path": "^(apps/web/src|packages/ui/src)/",
+        "pathNot": "[.](?:spec|test)[.](?:js|mjs|cjs|jsx|ts|mts|cts|tsx)$"
+      },
+      "to": {
+        "dependencyTypes": ["npm-dev"],
+        "dependencyTypesNot": ["type-only"],
+        "pathNot": ["node_modules/@types/"]
+      }
+    }
+  ],
+  "options": {
+    "doNotFollow": {
+      "path": ["node_modules"]
+    },
+    "tsPreCompilationDeps": true,
+    "tsConfig": {
+      "fileName": "tsconfig.json"
+    },
+    "enhancedResolveOptions": {
+      "exportsFields": ["exports"],
+      "conditionNames": ["import", "require", "node", "default", "types"],
+      "extensions": [".js", ".mjs", ".ts", ".tsx"],
+      "mainFields": ["main", "types", "typings"]
+    },
+    "skipAnalysisNotInRules": true,
+    "reporterOptions": {
+      "text": {
+        "highlightFocused": true
+      }
+    }
+  }
+}
