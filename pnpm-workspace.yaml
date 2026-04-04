@@ -1,3 +1,6 @@
+# Tools are intentionally excluded from the workspace: each tool is a directory,
+# not an independently versioned package.
 packages:
   - "apps/*"
   - "packages/*"
+  - "packages/lib/*"

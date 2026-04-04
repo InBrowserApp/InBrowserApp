@@ -28,13 +28,83 @@
       "name": "not-to-dev-dep",
       "severity": "error",
       "from": {
-        "path": "^(apps/web/src|packages/ui/src)/",
+        "path": "^(apps/web/src|packages/ui/src|packages/tool-sdk/src|packages/tool-registry/src|packages/lib/[^/]+/src|tools/[^/]+/)",
         "pathNot": "[.](?:spec|test)[.](?:js|mjs|cjs|jsx|ts|mts|cts|tsx)$"
       },
       "to": {
         "dependencyTypes": ["npm-dev"],
         "dependencyTypesNot": ["type-only"],
         "pathNot": ["node_modules/@types/"]
+      }
+    },
+    {
+      "name": "apps-web-not-to-tools",
+      "severity": "error",
+      "from": {
+        "path": "^apps/web/src/"
+      },
+      "to": {
+        "path": "^tools/"
+      }
+    },
+    {
+      "name": "ui-not-to-app-or-tools",
+      "severity": "error",
+      "from": {
+        "path": "^packages/ui/src/"
+      },
+      "to": {
+        "path": "^(apps/web/|packages/tool-registry/src/|tools/)"
+      }
+    },
+    {
+      "name": "tool-sdk-foundation-only",
+      "severity": "error",
+      "from": {
+        "path": "^packages/tool-sdk/src/"
+      },
+      "to": {
+        "path": "^(apps/web/|packages/ui/src/|packages/tool-registry/src/|packages/lib/|tools/)"
+      }
+    },
+    {
+      "name": "tool-registry-not-to-app-or-ui",
+      "severity": "error",
+      "from": {
+        "path": "^packages/tool-registry/src/"
+      },
+      "to": {
+        "path": "^(apps/web/|packages/ui/src/)"
+      }
+    },
+    {
+      "name": "tool-registry-generated-only-to-tools",
+      "severity": "error",
+      "from": {
+        "path": "^packages/tool-registry/src/(?!generated/)"
+      },
+      "to": {
+        "path": "^tools/"
+      }
+    },
+    {
+      "name": "shared-lib-not-to-app-shell-or-tools",
+      "severity": "error",
+      "from": {
+        "path": "^packages/lib/[^/]+/src/"
+      },
+      "to": {
+        "path": "^(apps/web/|packages/ui/src/|packages/tool-sdk/src/|packages/tool-registry/src/|tools/)"
+      }
+    },
+    {
+      "name": "tools-not-to-app-or-registry",
+      "severity": "error",
+      "from": {
+        "path": "^tools/[^/]+/"
+      },
+      "to": {
+        "path": "^(apps/web/|packages/tool-registry/src/)"
       }
     }
   ],
