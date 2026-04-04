@@ -2,14 +2,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
 
 @custom-variant dark (&:is(.dark *));
-@source "../../../apps/**/*.{ts,tsx,astro}";
-@source "../../../components/**/*.{ts,tsx}";
+@source "../../../apps/web/src/**/*.{ts,tsx,astro}";
 @source "../**/*.{ts,tsx}";
 
 @theme inline {
   --font-heading: var(--font-sans);
+  --font-mono: "Geist Mono Variable", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,6 +50,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --font-sans: "Geist Variable", sans-serif;
+  --tracking-display: -0.035em;
 }
 
 :root {
@@ -84,6 +86,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --spacing-page-x: clamp(1.25rem, 0.9rem + 1.4vw, 2.75rem);
+  --spacing-page-y: clamp(2.5rem, 1.6rem + 3vw, 5rem);
+  --spacing-section-y: clamp(1.5rem, 1rem + 1.6vw, 2.75rem);
+  --shadow-elevated: 0 20px 60px
+    color-mix(in oklab, var(--foreground) 8%, transparent);
 }
 
 .dark {
@@ -118,13 +125,17 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --shadow-elevated: 0 20px 60px color-mix(in oklab, black 45%, transparent);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-feature-settings: "cv11", "ss01";
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground antialiased;
   }
 }
