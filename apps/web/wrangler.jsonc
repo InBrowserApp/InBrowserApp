@@ -1,0 +1,14 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "inbrowserapp-web-astro",
+  "compatibility_date": "2026-04-05",
+  "assets": {
+    "directory": "./dist",
+  },
+  "env": {
+    "staging": {
+      "name": "inbrowserapp-web-astro-staging",
+      "workers_dev": true,
+    },
+  },
+}
