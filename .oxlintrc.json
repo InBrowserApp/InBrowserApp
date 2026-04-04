@@ -13,6 +13,7 @@
     "dist/**",
     ".astro/**",
     ".turbo/**",
+    ".agents/**",
     "coverage/**",
     "node_modules/**"
   ],

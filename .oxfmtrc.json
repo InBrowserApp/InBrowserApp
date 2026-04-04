@@ -15,6 +15,7 @@
     "dist/",
     "node_modules/",
     ".turbo/",
+    ".agents/",
     "coverage/",
     "pnpm-lock.yaml",
     ".pnpm-store/"
