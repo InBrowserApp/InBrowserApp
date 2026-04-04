@@ -2,6 +2,6 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, turbo.json, tsconfig.json, tsconfig.*.json, astro.config.*, components.json, .gitignore, .commitlintrc.json, .lintstagedrc.json, .oxlintrc.json, .oxfmtrc.json, .dependency-cruiser.json, .knip.json"
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, turbo.json, tsconfig.json, tsconfig.*.json, astro.config.*, components.json, .gitignore, .commitlintrc.json, .lintstagedrc.json, .oxlintrc.json, .oxfmtrc.json, .dependency-cruiser.json, .knip.json, skills-lock.json"
   }
 }
