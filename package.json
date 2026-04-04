@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "depcruise": "depcruise --config .dependency-cruiser.json apps/web/src packages/ui/src",
-    "dev": "turbo dev",
+    "build": "pnpm --filter web build",
+    "depcruise": "depcruise --config .dependency-cruiser.json apps/web/src packages/ui/src packages/tool-sdk/src packages/tool-registry/src packages/lib tools",
+    "dev": "pnpm --filter web dev",
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
     "knip": "knip --config .knip.json",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
-    "typecheck": "turbo typecheck"
+    "typecheck": "pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
@@ -23,7 +23,6 @@
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.43.0",
     "oxlint": "^1.58.0",
-    "turbo": "^2.8.17",
     "typescript": "5.9.3"
   },
   "packageManager": "pnpm@9.15.9",
