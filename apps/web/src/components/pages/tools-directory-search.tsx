@@ -3,6 +3,7 @@ import {
   useDeferredValue,
   useEffect,
   useEffectEvent,
+  useRef,
   useState,
 } from "react"
 
@@ -109,6 +110,7 @@ function ToolsDirectorySearch({
 }: ToolsDirectorySearchProps) {
   const [query, setQuery] = useState("")
   const deferredQuery = useDeferredValue(query)
+  const composingRef = useRef(false)
   const syncQueryToUrl = useEffectEvent((nextQuery: string) => {
     if (typeof window === "undefined") {
       return
@@ -183,7 +185,22 @@ function ToolsDirectorySearch({
             className="h-11 pl-10 text-sm"
             placeholder={messages.searchPlaceholder}
             value={query}
+            onCompositionStart={() => {
+              composingRef.current = true
+            }}
+            onCompositionEnd={(event) => {
+              composingRef.current = false
+              const nextQuery = event.currentTarget.value
+
+              startTransition(() => {
+                setQuery(nextQuery)
+              })
+            }}
             onChange={(event) => {
+              if (composingRef.current) {
+                return
+              }
+
               const nextQuery = event.currentTarget.value
 
               startTransition(() => {
