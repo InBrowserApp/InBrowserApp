@@ -276,7 +276,7 @@ function JsonSchemaValidatorClient({
             <CardTitle>{messages.optionsTitle}</CardTitle>
             <CardDescription>{messages.optionsDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-5">
+          <CardContent className="flex flex-1 flex-col gap-5">
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-1">
                 <Label>{messages.validateFormatsLabel}</Label>

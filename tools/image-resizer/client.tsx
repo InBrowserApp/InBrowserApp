@@ -396,7 +396,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             <CardTitle>{messages.optionsTitle}</CardTitle>
             <CardDescription>{messages.optionsDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-5">
+          <CardContent className="flex flex-1 flex-col gap-5">
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
               <div className="space-y-2">
                 <Label htmlFor={`${inputId}-width`}>
