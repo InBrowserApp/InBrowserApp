@@ -1,4 +1,5 @@
 ---
+import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
@@ -47,96 +48,25 @@ type ImageResizerMessagesCatalog = Readonly<{
   formatWebp: string
 }>
 
-type LocalizedSectionModule = {
-  default: AstroComponentFactory
-}
-
 interface Props {
   lang: string
 }
 
 const { lang } = Astro.props
 
-const metaModules = import.meta.glob("./meta/*.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, ToolMeta>
-const messageModules = import.meta.glob("./messages/*.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, ImageResizerMessagesCatalog>
-const sectionModules = import.meta.glob("./sections/**/*.{md,mdx}")
-
-function getLanguageFromPath(path: string) {
-  return path.split("/").at(-1)?.replace(/\.(?:md|mdx|json)$/u, "") ?? "en"
-}
-
-function resolveLocalizedRecord<T>(
-  modules: Record<string, T>,
-  language: string,
-  fileExtension: "json" | "md" | "mdx",
-  basePath: string
-) {
-  const preferredKeys = [
-    `${basePath}/${language}.${fileExtension}`,
-    `${basePath}/en.${fileExtension}`,
-  ]
-
-  for (const key of preferredKeys) {
-    if (key in modules) {
-      return {
-        data: modules[key],
-        language: getLanguageFromPath(key),
-      }
-    }
-  }
-
-  const fallbackEntry = Object.entries(modules)[0]
-
-  if (!fallbackEntry) {
-    throw new Error(`Missing localized asset set at ${basePath}.`)
-  }
-
-  return {
-    data: fallbackEntry[1],
-    language: getLanguageFromPath(fallbackEntry[0]),
-  }
-}
-
-async function loadLocalizedSection(section: string, language: string) {
-  const preferredKeys = [
-    `./sections/${section}/${language}.md`,
-    `./sections/${section}/${language}.mdx`,
-    `./sections/${section}/en.md`,
-    `./sections/${section}/en.mdx`,
-  ]
-
-  for (const key of preferredKeys) {
-    const importer = sectionModules[key]
-
-    if (!importer) {
-      continue
-    }
-
-    const loadedModule = (await importer()) as LocalizedSectionModule
-    return loadedModule.default
-  }
-
-  return null
-}
-
-const { data: meta } = resolveLocalizedRecord(metaModules, lang, "json", "./meta")
-const { data: localizedMessages } = resolveLocalizedRecord(
-  messageModules,
-  lang,
-  "json",
-  "./messages"
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<ImageResizerMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", { eager: true, import: "default" }),
+  lang
 )
-const IntroSection = await loadLocalizedSection("intro", lang)
-const messages = {
-  meta,
-  ...localizedMessages,
-}
+const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>

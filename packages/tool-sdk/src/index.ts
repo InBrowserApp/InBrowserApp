@@ -1,4 +1,5 @@
 export { defineTool } from "./define-tool"
+export { resolveLocale } from "./resolve-locale"
 export { DEFAULT_REQUIRED_TOOL_LANGUAGES, uniqueLanguages } from "./languages"
 export {
   toolDefinitionSchema,
