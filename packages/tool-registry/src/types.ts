@@ -21,13 +21,7 @@ type ToolRegistryEntry = Readonly<{
   locales: Readonly<Record<string, ToolSearchLocaleEntry>>
 }>
 
-type ToolSearchIndexEntry = Readonly<{
-  slug: string
-  category: string
-  icon: string
-  tags: readonly string[]
-  locales: Readonly<Record<string, ToolSearchLocaleEntry>>
-}>
+type ToolSearchIndexEntry = ToolRegistryEntry
 
 type ToolRegistryArtifactPaths = Readonly<{
   repoRoot: string

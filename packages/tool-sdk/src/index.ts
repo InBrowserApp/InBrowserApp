@@ -19,7 +19,9 @@ export {
 export { ToolContractError } from "./errors"
 export type {
   DefaultRequiredToolLanguage,
+  ToolCategory,
   ToolDefinition,
+  ToolIcon,
   ToolLanguage,
   ToolManifest,
   ToolMeta,
