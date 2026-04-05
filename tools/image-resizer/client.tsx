@@ -1,10 +1,11 @@
-import { startTransition, useEffect, useId, useMemo, useState } from "react"
+import { startTransition, useEffect, useId, useState } from "react"
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
+import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
@@ -35,7 +36,6 @@ import {
 } from "@workspace/ui/icons"
 
 import {
-  calculateOutputDimensions,
   readImageDimensions,
   resizeImageFile,
   type ImageDimensions,
@@ -53,6 +53,7 @@ type ImageResizerMessages = Readonly<{
   uploadTitle: string
   uploadDescription: string
   chooseImageLabel: string
+  changeImageLabel: string
   uploadHint: string
   optionsTitle: string
   optionsDescription: string
@@ -91,6 +92,12 @@ type ImageResizerMessages = Readonly<{
 type ImageResizerClientProps = Readonly<{
   messages: ImageResizerMessages
 }>
+
+function formatFileSize(bytes: number) {
+  if (bytes < 1024) return `${bytes} B`
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
+}
 
 const DEFAULT_OPTIONS = {
   algorithm: "high-quality",
@@ -198,14 +205,6 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
       URL.revokeObjectURL(nextUrl)
     }
   }, [result])
-
-  const projectedOutput = useMemo(() => {
-    if (!sourceDimensions) {
-      return null
-    }
-
-    return calculateOutputDimensions(sourceDimensions, options)
-  }, [options, sourceDimensions])
 
   const algorithmOptions = [
     { label: messages.algorithmHighQuality, value: "high-quality" },
@@ -336,20 +335,49 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             <CardDescription>{messages.uploadDescription}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
-            <label
-              htmlFor={inputId}
-              className="flex min-h-52 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
-            >
-              <ImageUp className="size-6 text-muted-foreground" />
-              <div className="mt-4 space-y-1">
-                <p className="font-medium text-foreground">
-                  {messages.chooseImageLabel}
-                </p>
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {messages.uploadHint}
-                </p>
-              </div>
-            </label>
+            {selectedFile && sourcePreviewUrl && sourceDimensions ? (
+              <>
+                <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
+                  <img
+                    src={sourcePreviewUrl}
+                    alt=""
+                    className="h-72 w-full object-contain"
+                  />
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="truncate text-sm font-medium text-foreground">
+                    {selectedFile.name}
+                  </span>
+                  <Badge variant="outline" className="font-mono">
+                    {sourceDimensions.width} × {sourceDimensions.height}
+                  </Badge>
+                  <Badge variant="secondary">
+                    {formatFileSize(selectedFile.size)}
+                  </Badge>
+                </div>
+                <label
+                  htmlFor={inputId}
+                  className="inline-flex cursor-pointer text-sm font-medium text-muted-foreground underline underline-offset-4 hover:text-foreground"
+                >
+                  {messages.changeImageLabel}
+                </label>
+              </>
+            ) : (
+              <label
+                htmlFor={inputId}
+                className="flex min-h-52 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
+              >
+                <ImageUp className="size-6 text-muted-foreground" />
+                <div className="mt-4 space-y-1">
+                  <p className="font-medium text-foreground">
+                    {messages.chooseImageLabel}
+                  </p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {messages.uploadHint}
+                  </p>
+                </div>
+              </label>
+            )}
             <input
               id={inputId}
               type="file"
@@ -359,16 +387,6 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                 void handleFileChange(event.target.files?.[0] ?? null)
               }}
             />
-
-            {sourcePreviewUrl ? (
-              <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
-                <img
-                  src={sourcePreviewUrl}
-                  alt=""
-                  className="h-72 w-full object-contain"
-                />
-              </div>
-            ) : null}
           </CardContent>
         </Card>
 
@@ -467,24 +485,27 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor={`${inputId}-quality`}>
-                {messages.qualityLabel}
-              </Label>
-              <Input
+              <div className="flex items-center justify-between">
+                <Label htmlFor={`${inputId}-quality`}>
+                  {messages.qualityLabel}
+                </Label>
+                <span className="font-mono text-sm text-muted-foreground">
+                  {options.quality}
+                </span>
+              </div>
+              <input
                 id={`${inputId}-quality`}
-                type="number"
+                type="range"
                 min={1}
                 max={100}
                 value={options.quality}
                 onChange={(event) => {
                   setOptions((currentOptions) => ({
                     ...currentOptions,
-                    quality: Math.min(
-                      100,
-                      Math.max(1, Number(event.target.value) || 1)
-                    ),
+                    quality: Number(event.target.value),
                   }))
                 }}
+                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-secondary accent-primary"
               />
               <p className="text-sm leading-6 text-muted-foreground">
                 {messages.qualityDescription}
@@ -584,9 +605,14 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             <>
               <div className="grid gap-4 lg:grid-cols-2">
                 <div className="space-y-3">
-                  <p className="text-sm font-medium text-foreground">
-                    {messages.originalLabel}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-foreground">
+                      {messages.originalLabel}
+                    </span>
+                    <Badge variant="outline" className="font-mono">
+                      {sourceDimensions.width} × {sourceDimensions.height}
+                    </Badge>
+                  </div>
                   <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
                     <img
                       src={sourcePreviewUrl}
@@ -594,15 +620,17 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                       className="h-72 w-full object-contain"
                     />
                   </div>
-                  <p className="font-mono text-sm text-muted-foreground">
-                    {sourceDimensions.width} × {sourceDimensions.height}
-                  </p>
                 </div>
 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium text-foreground">
-                    {messages.outputLabel}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-foreground">
+                      {messages.outputLabel}
+                    </span>
+                    <Badge variant="outline" className="font-mono">
+                      {result.outputWidth} × {result.outputHeight}
+                    </Badge>
+                  </div>
                   <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
                     <img
                       src={resultPreviewUrl}
@@ -610,19 +638,17 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                       className="h-72 w-full object-contain"
                     />
                   </div>
-                  <p className="font-mono text-sm text-muted-foreground">
-                    {result.outputWidth} × {result.outputHeight}
-                  </p>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-dashed border-border/80 bg-muted/30 p-4 text-sm leading-6 text-muted-foreground">
-                {projectedOutput ? (
-                  <>
-                    {projectedOutput.width} × {projectedOutput.height} ·{" "}
-                    {result.mimeType}
-                  </>
-                ) : null}
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge variant="outline" className="font-mono">
+                  {result.outputWidth} × {result.outputHeight}
+                </Badge>
+                <Badge variant="secondary">{result.mimeType}</Badge>
+                <Badge variant="secondary">
+                  {formatFileSize(result.blob.size)}
+                </Badge>
               </div>
             </>
           ) : (
@@ -637,7 +663,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
         </CardContent>
         {result && resultPreviewUrl ? (
           <CardFooter className="justify-end">
-            <Button asChild size="sm">
+            <Button asChild>
               <a href={resultPreviewUrl} download={result.outputName}>
                 <Download data-icon="inline-start" />
                 {messages.downloadLabel}

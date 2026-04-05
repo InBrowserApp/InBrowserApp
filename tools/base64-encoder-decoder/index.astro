@@ -115,9 +115,7 @@ const messages = {
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ToolSurface className="overflow-hidden p-0">
-    <Base64EncoderDecoderClient client:load messages={messages} />
-  </ToolSurface>
+  <Base64EncoderDecoderClient client:load messages={messages} />
 
   {
     IntroSection ? (

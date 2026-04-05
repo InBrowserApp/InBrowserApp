@@ -161,8 +161,8 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
             placeholder={messages.encodedTextPlaceholder}
           />
 
-          <div aria-live="polite">
-            {decodeError ? (
+          {decodeError ? (
+            <div aria-live="polite">
               <Alert variant="destructive">
                 <TriangleAlert />
                 <AlertTitle>{messages.invalidBase64Title}</AlertTitle>
@@ -170,8 +170,8 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
                   {messages.invalidBase64Description}
                 </AlertDescription>
               </Alert>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </CardContent>
         <CardFooter className="justify-end border-t">
           <ToolCopyButton

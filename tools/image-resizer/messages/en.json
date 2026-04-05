@@ -2,6 +2,7 @@
   "uploadTitle": "Source image",
   "uploadDescription": "Pick a local image file to inspect its dimensions and generate a resized export.",
   "chooseImageLabel": "Choose an image",
+  "changeImageLabel": "Change image",
   "uploadHint": "PNG, JPEG, WebP, and other browser-readable formats are supported.",
   "optionsTitle": "Resize options",
   "optionsDescription": "Dimensions, interpolation style, output format, and quality are all controlled locally in the browser.",

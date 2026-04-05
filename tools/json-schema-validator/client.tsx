@@ -32,6 +32,7 @@ import {
   TableRow,
 } from "@workspace/ui/components/ui/table"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   BadgeCheck,
   FileJson2,
@@ -73,6 +74,10 @@ type JsonSchemaMessages = Readonly<{
   errorPathLabel: string
   errorKeywordLabel: string
   errorMessageLabel: string
+  resultTitle: string
+  resultDescription: string
+  copySchemaLabel: string
+  copyDataLabel: string
   copyErrorsLabel: string
   copiedLabel: string
   loadExampleLabel: string
@@ -216,7 +221,7 @@ function JsonSchemaValidatorClient({
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
-            <CardHeader>
+            <CardHeader className="border-b">
               <CardTitle>{messages.schemaLabel}</CardTitle>
               <CardDescription>{messages.schemaDescription}</CardDescription>
             </CardHeader>
@@ -226,14 +231,22 @@ function JsonSchemaValidatorClient({
                 onChange={(event) => {
                   setSchemaText(event.target.value)
                 }}
-                className="min-h-72 resize-y font-mono text-sm"
+                className="min-h-64 resize-y font-mono text-sm"
                 placeholder={messages.schemaPlaceholder}
               />
             </CardContent>
+            <CardFooter className="border-t">
+              <ToolCopyButton
+                value={schemaText}
+                copyLabel={messages.copySchemaLabel}
+                copiedLabel={messages.copiedLabel}
+                variant="ghost"
+              />
+            </CardFooter>
           </Card>
 
           <Card>
-            <CardHeader>
+            <CardHeader className="border-b">
               <CardTitle>{messages.dataLabel}</CardTitle>
               <CardDescription>{messages.dataDescription}</CardDescription>
             </CardHeader>
@@ -243,10 +256,18 @@ function JsonSchemaValidatorClient({
                 onChange={(event) => {
                   setDataText(event.target.value)
                 }}
-                className="min-h-72 resize-y font-mono text-sm"
+                className="min-h-64 resize-y font-mono text-sm"
                 placeholder={messages.dataPlaceholder}
               />
             </CardContent>
+            <CardFooter className="border-t">
+              <ToolCopyButton
+                value={dataText}
+                copyLabel={messages.copyDataLabel}
+                copiedLabel={messages.copiedLabel}
+                variant="ghost"
+              />
+            </CardFooter>
           </Card>
         </div>
 
@@ -284,16 +305,16 @@ function JsonSchemaValidatorClient({
               />
             </div>
 
-            <div className="rounded-xl border border-dashed border-border/80 bg-muted/40 p-4">
-              <p className="text-sm font-medium text-foreground">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-foreground">
                 {messages.draftLabel}
-              </p>
-              <p className="mt-2 font-mono text-sm text-muted-foreground">
+              </span>
+              <Badge variant="outline" className="font-mono">
                 {validation.state === "validated" ||
                 validation.state === "schema-error"
                   ? validation.detectedDraft
                   : "2020-12"}
-              </p>
+              </Badge>
             </div>
           </CardContent>
           <CardFooter className="justify-between gap-3">
@@ -316,8 +337,8 @@ function JsonSchemaValidatorClient({
 
       <Card>
         <CardHeader>
-          <CardTitle>{messages.meta.name}</CardTitle>
-          <CardDescription>{messages.meta.description}</CardDescription>
+          <CardTitle>{messages.resultTitle}</CardTitle>
+          <CardDescription>{messages.resultDescription}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           {validation.state === "idle" ? (

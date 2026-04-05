@@ -2,6 +2,7 @@
   "uploadTitle": "源图片",
   "uploadDescription": "选择本地图片文件，查看其尺寸并生成缩放后的导出结果。",
   "chooseImageLabel": "选择图片",
+  "changeImageLabel": "更换图片",
   "uploadHint": "支持 PNG、JPEG、WebP 以及浏览器可读取的其他图片格式。",
   "optionsTitle": "缩放选项",
   "optionsDescription": "尺寸、插值方式、输出格式和质量都在浏览器本地控制。",

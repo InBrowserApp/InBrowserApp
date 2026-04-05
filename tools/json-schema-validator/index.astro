@@ -32,6 +32,10 @@ type JsonSchemaMessagesCatalog = Readonly<{
   errorPathLabel: string
   errorKeywordLabel: string
   errorMessageLabel: string
+  resultTitle: string
+  resultDescription: string
+  copySchemaLabel: string
+  copyDataLabel: string
   copyErrorsLabel: string
   copiedLabel: string
   loadExampleLabel: string
@@ -131,9 +135,7 @@ const messages = {
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ToolSurface className="space-y-5">
-    <JsonSchemaValidatorClient client:load messages={messages} />
-  </ToolSurface>
+  <JsonSchemaValidatorClient client:load messages={messages} />
 
   {
     IntroSection ? (

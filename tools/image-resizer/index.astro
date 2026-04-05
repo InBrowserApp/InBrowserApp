@@ -11,6 +11,7 @@ type ImageResizerMessagesCatalog = Readonly<{
   uploadTitle: string
   uploadDescription: string
   chooseImageLabel: string
+  changeImageLabel: string
   uploadHint: string
   optionsTitle: string
   optionsDescription: string
@@ -139,9 +140,7 @@ const messages = {
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ToolSurface className="space-y-5">
-    <ImageResizerClient client:load messages={messages} />
-  </ToolSurface>
+  <ImageResizerClient client:load messages={messages} />
 
   {
     IntroSection ? (
