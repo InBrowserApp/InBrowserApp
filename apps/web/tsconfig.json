@@ -8,8 +8,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@workspace/ui/*": ["../../packages/ui/src/*"],
-      "@tools/*": ["../../tools/*"]
+      "@workspace/ui/*": ["../../packages/ui/src/*"]
     }
   }
 }

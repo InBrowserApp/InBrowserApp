@@ -42,10 +42,6 @@ export default defineConfig({
             new URL("../../packages/ui/src/icons/index.ts", import.meta.url)
           ),
         },
-        {
-          find: "@tools",
-          replacement: fileURLToPath(new URL("../../tools", import.meta.url)),
-        },
       ],
     },
   },
