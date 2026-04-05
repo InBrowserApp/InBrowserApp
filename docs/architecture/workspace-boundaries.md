@@ -36,7 +36,7 @@ tools/
 ### `packages/tool-sdk`
 
 - Owns the framework-agnostic tool contract.
-- Future responsibilities include `defineTool()`, shared tool types, localization helpers, and manifest validation.
+- Owns `defineTool()`, shared tool types, localized asset helpers, and manifest/message validation.
 - Must not depend on app shell, UI packages, registry code, or tool implementations.
 
 ### `packages/tool-registry`
