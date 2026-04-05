@@ -6,11 +6,11 @@ import {
   useState,
 } from "react"
 
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
+import { ToolIcon } from "@workspace/ui/components/tool/tool-icon"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import { ArrowRight, LayoutGrid, Search } from "@workspace/ui/icons"
+import { LayoutGrid, Search } from "@workspace/ui/icons"
 import { localizePath } from "@/lib/site"
 
 import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
@@ -25,7 +25,6 @@ type ToolsDirectorySearchMessages = Readonly<{
   emptyRegistryDescription: string
   emptySearchTitle: string
   emptySearchDescription: string
-  openToolLabel: string
 }>
 
 type ToolsDirectorySearchProps = Readonly<{
@@ -261,21 +260,18 @@ function ToolsDirectorySearch({
                 className="group block"
               >
                 <ToolSurface className="flex h-full flex-col gap-3 transition-colors group-hover:border-foreground/20">
-                  <Badge variant="secondary" className="w-fit">
-                    {entry.category}
-                  </Badge>
                   <div className="flex flex-1 flex-col gap-1.5">
-                    <h3 className="font-heading text-lg leading-tight tracking-[var(--tracking-display)]">
+                    <h3 className="flex items-center gap-2 font-heading text-lg leading-tight tracking-[var(--tracking-display)]">
+                      <ToolIcon
+                        icon={entry.icon}
+                        className="size-4 shrink-0 text-muted-foreground"
+                      />
                       {locale.name}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">
                       {locale.description}
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/70 group-hover:text-foreground">
-                    {messages.openToolLabel}
-                    <ArrowRight className="size-3.5" />
-                  </span>
                 </ToolSurface>
               </a>
             )

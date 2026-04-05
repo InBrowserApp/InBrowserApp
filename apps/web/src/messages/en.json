@@ -34,7 +34,6 @@
     "emptyRegistryTitle": "No tools available yet.",
     "emptyRegistryDescription": "Tools are being added — check back soon.",
     "emptySearchTitle": "No matching tools.",
-    "emptySearchDescription": "Try a different keyword or clear the search.",
-    "openToolLabel": "Open tool"
+    "emptySearchDescription": "Try a different keyword or clear the search."
   }
 }
