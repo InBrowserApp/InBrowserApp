@@ -3,16 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "pnpm --filter web build",
+    "build": "pnpm tool-registry:generate && pnpm --filter web build",
     "depcruise": "depcruise --config .dependency-cruiser.json apps/web/src packages/ui/src packages/tool-sdk/src packages/tool-registry/src packages/lib tools",
-    "dev": "pnpm --filter web dev",
+    "dev": "pnpm tool-registry:generate && pnpm --filter web dev",
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
     "knip": "knip --config .knip.json",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
-    "typecheck": "pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
+    "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
+    "typecheck": "pnpm tool-registry:generate && pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",

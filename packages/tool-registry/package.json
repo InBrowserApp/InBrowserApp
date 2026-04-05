@@ -4,16 +4,23 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "generate": "tsx src/generate.ts",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*"
+  },
   "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./generate": "./src/generate.ts"
   }
 }

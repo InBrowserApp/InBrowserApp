@@ -1,6 +1,15 @@
-/**
- * Issue #316 scaffold.
- *
- * Registry generation is introduced in issue #319.
- */
-export {}
+export {
+  toolRegistry,
+  toolRegistryById,
+  toolRegistryBySlug,
+} from "./generated/registry"
+export { toolSearchIndex } from "./generated/search-index"
+export { toolStaticPaths } from "./generated/static-paths"
+export type {
+  ToolRegistryArtifactPaths,
+  ToolRegistryEntrySource,
+  ToolRegistryGenerationOptions,
+  ToolSearchIndexEntry,
+  ToolSearchLocaleEntry,
+  ToolStaticPathEntry,
+} from "./types"
