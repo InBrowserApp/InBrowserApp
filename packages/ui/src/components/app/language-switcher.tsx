@@ -1,6 +1,13 @@
-import { Badge } from "@workspace/ui/components/ui/badge"
+"use client"
+
 import { Button } from "@workspace/ui/components/ui/button"
-import { cn } from "@workspace/ui/lib/utils"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@workspace/ui/components/ui/dropdown-menu"
+import { Languages } from "@workspace/ui/icons"
 
 type LanguageOption = Readonly<{
   code: string
@@ -12,58 +19,27 @@ type LanguageOption = Readonly<{
 type LanguageSwitcherProps = {
   label: string
   options: readonly LanguageOption[]
-  inline?: boolean
-  className?: string
 }
 
-function LanguageSwitcher({
-  className,
-  inline = false,
-  label,
-  options,
-}: LanguageSwitcherProps) {
-  if (inline) {
-    return (
-      <div className={cn("flex flex-wrap items-center gap-2", className)}>
-        <span className="text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase">
-          {label}
-        </span>
-        {options.map((option) => (
-          <Button
-            asChild
-            key={option.code}
-            size="sm"
-            variant={option.current ? "default" : "outline"}
-          >
-            <a href={option.href} hrefLang={option.code} lang={option.code}>
-              {option.label}
-            </a>
-          </Button>
-        ))}
-      </div>
-    )
-  }
-
+function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
   return (
-    <div className={cn("flex flex-col gap-2", className)}>
-      <div className="flex items-center gap-2">
-        <Badge variant="secondary">{label}</Badge>
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon-sm">
+          <Languages className="size-4" />
+          <span className="sr-only">{label}</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
         {options.map((option) => (
-          <Button
-            asChild
-            key={option.code}
-            size="sm"
-            variant={option.current ? "default" : "outline"}
-          >
+          <DropdownMenuItem key={option.code} asChild>
             <a href={option.href} hrefLang={option.code} lang={option.code}>
               {option.label}
             </a>
-          </Button>
+          </DropdownMenuItem>
         ))}
-      </div>
-    </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
 

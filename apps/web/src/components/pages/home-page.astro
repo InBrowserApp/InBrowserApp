@@ -47,19 +47,19 @@ const searchMessages = {
     title={catalog.home.title}
     description={catalog.home.description}
   >
-    <div class="flex flex-wrap items-center gap-3">
-      <Button asChild>
+    <nav class="flex items-center justify-between -mt-4 -order-1">
+      <Button asChild variant="ghost" size="sm">
         <a href={localizePath("/tools", language)}>
           {catalog.home.primaryAction}
           <ArrowRight data-icon="inline-end" />
         </a>
       </Button>
       <LanguageSwitcher
-        inline
+        client:load
         label={catalog.site.languageLabel}
         options={languageOptions}
       />
-    </div>
+    </nav>
 
     <ToolsDirectorySearch
       client:load
