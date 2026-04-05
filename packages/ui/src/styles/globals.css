@@ -139,3 +139,38 @@
     @apply bg-background font-sans text-foreground antialiased;
   }
 }
+
+@layer utilities {
+  .site-grid-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .site-grid-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--border) 55%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--border) 55%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 2.75rem 2.75rem;
+    mask-image: linear-gradient(180deg, black, transparent 92%);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .site-grid-panel > * {
+    position: relative;
+    z-index: 1;
+  }
+}
