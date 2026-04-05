@@ -549,7 +549,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
           <CardFooter className="justify-between gap-3">
             <Button
               type="button"
-              variant="outline"
+              variant="ghost"
               size="sm"
               onClick={resetOptions}
             >

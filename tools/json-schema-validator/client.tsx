@@ -320,7 +320,7 @@ function JsonSchemaValidatorClient({
           <CardFooter className="justify-between gap-3">
             <Button
               type="button"
-              variant="outline"
+              variant="ghost"
               size="sm"
               onClick={loadExample}
             >
