@@ -6,7 +6,6 @@ import {
   useState,
 } from "react"
 
-import { SectionHeading } from "@workspace/ui/components/app/section-heading"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
@@ -20,12 +19,8 @@ import type { SiteLanguage } from "@/lib/site"
 type ToolsDirectorySearchMessages = Readonly<{
   searchLabel: string
   searchPlaceholder: string
-  searchHint: string
-  resultsTitle: string
-  resultsDescription: string
   resultCountSuffix: string
   clearSearchLabel: string
-  cardMetaLabel: string
   emptyRegistryTitle: string
   emptyRegistryDescription: string
   emptySearchTitle: string
@@ -107,14 +102,6 @@ function getSearchScore(
   return score
 }
 
-function formatResultCount(
-  count: number,
-  language: SiteLanguage,
-  suffix: string
-) {
-  return `${new Intl.NumberFormat(language).format(count)} ${suffix}`
-}
-
 function ToolsDirectorySearch({
   entries,
   language,
@@ -176,29 +163,20 @@ function ToolsDirectorySearch({
 
       return right.score - left.score
     })
-  const resultCountLabel = formatResultCount(
-    rankedEntries.length,
-    language,
-    messages.resultCountSuffix
+  const resultCount = new Intl.NumberFormat(language).format(
+    rankedEntries.length
   )
   const isRegistryEmpty = entries.length === 0
   const isSearchEmpty = !isRegistryEmpty && rankedEntries.length === 0
 
   return (
-    <ToolSurface
+    <div
       className="space-y-6"
       aria-busy={query !== deferredQuery}
       aria-live="polite"
     >
-      <SectionHeading
-        eyebrow={messages.searchLabel}
-        title={messages.resultsTitle}
-        description={messages.resultsDescription}
-        action={<Badge variant="secondary">{resultCountLabel}</Badge>}
-      />
-
-      <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
-        <div className="relative">
+      <div className="flex items-center gap-3">
+        <div className="relative flex-1">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             aria-label={messages.searchLabel}
@@ -230,87 +208,62 @@ function ToolsDirectorySearch({
         ) : null}
       </div>
 
-      <p className="text-sm leading-6 text-muted-foreground">
-        {messages.searchHint}
-      </p>
+      {!isRegistryEmpty && !isSearchEmpty ? (
+        <p className="text-sm text-muted-foreground">
+          {resultCount} {messages.resultCountSuffix}
+        </p>
+      ) : null}
 
       {isRegistryEmpty ? (
-        <div className="rounded-[calc(var(--radius)*1.8)] border border-dashed border-border/80 bg-muted/30 p-6 sm:p-7">
-          <div className="flex flex-col gap-3">
-            <LayoutGrid className="size-5 text-muted-foreground" />
-            <div className="space-y-2">
-              <h3 className="font-heading text-2xl leading-tight tracking-[var(--tracking-display)]">
-                {messages.emptyRegistryTitle}
-              </h3>
-              <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-                {messages.emptyRegistryDescription}
-              </p>
-            </div>
-          </div>
+        <div className="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center">
+          <LayoutGrid className="mx-auto size-6 text-muted-foreground" />
+          <h3 className="mt-3 font-medium">{messages.emptyRegistryTitle}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {messages.emptyRegistryDescription}
+          </p>
         </div>
       ) : isSearchEmpty ? (
-        <div className="rounded-[calc(var(--radius)*1.8)] border border-dashed border-border/80 bg-muted/30 p-6 sm:p-7">
-          <div className="flex flex-col gap-3">
-            <Search className="size-5 text-muted-foreground" />
-            <div className="space-y-2">
-              <h3 className="font-heading text-2xl leading-tight tracking-[var(--tracking-display)]">
-                {messages.emptySearchTitle}
-              </h3>
-              <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-                {messages.emptySearchDescription}
-              </p>
-            </div>
-          </div>
+        <div className="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center">
+          <Search className="mx-auto size-6 text-muted-foreground" />
+          <h3 className="mt-3 font-medium">{messages.emptySearchTitle}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {messages.emptySearchDescription}
+          </p>
         </div>
       ) : (
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {rankedEntries.map(({ entry }) => {
             const locale = resolveLocale(entry, language)
 
             return (
-              <ToolSurface
+              <a
                 key={entry.slug}
-                className="flex flex-col gap-5 border-dashed bg-background/70 shadow-none"
+                href={localizePath(`/tools/${entry.slug}`, language)}
+                className="group block"
               >
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="secondary">{entry.category}</Badge>
-                  <Badge variant="outline">{entry.icon}</Badge>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="font-heading text-2xl leading-tight tracking-[var(--tracking-display)]">
-                    {locale.name}
-                  </h3>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {locale.description}
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {entry.tags.slice(0, 4).map((tag) => (
-                    <Badge key={tag} variant="outline">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border/70 pt-4">
-                  <span className="font-mono text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
-                    {messages.cardMetaLabel}
+                <ToolSurface className="flex h-full flex-col gap-3 transition-colors group-hover:border-foreground/20">
+                  <Badge variant="secondary" className="w-fit">
+                    {entry.category}
+                  </Badge>
+                  <div className="flex flex-1 flex-col gap-1.5">
+                    <h3 className="font-heading text-lg leading-tight tracking-[var(--tracking-display)]">
+                      {locale.name}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {locale.description}
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/70 group-hover:text-foreground">
+                    {messages.openToolLabel}
+                    <ArrowRight className="size-3.5" />
                   </span>
-                  <Button asChild size="sm" variant="outline">
-                    <a href={localizePath(`/tools/${entry.slug}`, language)}>
-                      {messages.openToolLabel}
-                      <ArrowRight data-icon="inline-end" />
-                    </a>
-                  </Button>
-                </div>
-              </ToolSurface>
+                </ToolSurface>
+              </a>
             )
           })}
         </div>
       )}
-    </ToolSurface>
+    </div>
   )
 }
 

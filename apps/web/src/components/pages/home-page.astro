@@ -1,17 +1,14 @@
 ---
+import { toolSearchIndex } from "@workspace/tool-registry"
 import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
-import { SectionHeading } from "@workspace/ui/components/app/section-heading"
 import { SiteFrame } from "@workspace/ui/components/app/site-frame"
 import { Button } from "@workspace/ui/components/ui/button"
-import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import { ArrowRight, Languages, LayoutGrid } from "@workspace/ui/icons"
+import { ArrowRight } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
-import { loadSitePageContent } from "@/lib/site-content"
+import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
 import { createLanguageOptions, localizePath, type SiteLanguage } from "@/lib/site"
-
-import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 
 interface Props {
   language: SiteLanguage
@@ -19,27 +16,24 @@ interface Props {
 
 const { language } = Astro.props
 const { catalog } = loadSiteMessages(language)
-const { Content: HomeContent } = await loadSitePageContent("home", language)
 const seo = createPageSeo({
   description: catalog.metadata.homeDescription,
   language,
   pathname: "/",
   title: catalog.metadata.homeTitle,
 })
-const Content = HomeContent as AstroComponentFactory | null
 const languageOptions = createLanguageOptions("/", language, catalog.site.languages)
-const principles = [
-  {
-    description: catalog.home.registryDescription,
-    icon: LayoutGrid,
-    title: catalog.home.registryTitle,
-  },
-  {
-    description: catalog.home.localeDescription,
-    icon: Languages,
-    title: catalog.home.localeTitle,
-  },
-] as const
+const searchMessages = {
+  clearSearchLabel: catalog.tools.clearSearchLabel,
+  emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
+  emptyRegistryTitle: catalog.tools.emptyRegistryTitle,
+  emptySearchDescription: catalog.tools.emptySearchDescription,
+  emptySearchTitle: catalog.tools.emptySearchTitle,
+  openToolLabel: catalog.tools.openToolLabel,
+  resultCountSuffix: catalog.tools.resultCountSuffix,
+  searchLabel: catalog.tools.searchLabel,
+  searchPlaceholder: catalog.tools.searchPlaceholder,
+}
 ---
 
 <MainLayout
@@ -50,7 +44,6 @@ const principles = [
   title={seo.title}
 >
   <SiteFrame
-    eyebrow={catalog.home.eyebrow}
     title={catalog.home.title}
     description={catalog.home.description}
   >
@@ -61,9 +54,6 @@ const principles = [
           <ArrowRight data-icon="inline-end" />
         </a>
       </Button>
-      <Button asChild variant="outline">
-        <a href="#rewrite-notes">{catalog.home.secondaryAction}</a>
-      </Button>
       <LanguageSwitcher
         inline
         label={catalog.site.languageLabel}
@@ -71,66 +61,11 @@ const principles = [
       />
     </div>
 
-    <section class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-      <ToolSurface className="space-y-6">
-        <SectionHeading
-          eyebrow={catalog.home.principlesEyebrow}
-          title={catalog.home.principlesTitle}
-          description={catalog.home.principlesDescription}
-        />
-
-        <div class="grid gap-4 md:grid-cols-2">
-          {
-            principles.map((principle) => {
-              const Icon = principle.icon
-
-              return (
-                <ToolSurface className="flex h-full flex-col gap-4 border-dashed bg-background/70 shadow-none">
-                  <Icon className="size-5 text-muted-foreground" />
-                  <div class="space-y-2">
-                    <h3 class="font-heading text-2xl leading-tight tracking-[var(--tracking-display)]">
-                      {principle.title}
-                    </h3>
-                    <p class="text-sm leading-6 text-muted-foreground">
-                      {principle.description}
-                    </p>
-                  </div>
-                </ToolSurface>
-              )
-            })
-          }
-        </div>
-      </ToolSurface>
-
-      <ToolSurface className="flex flex-col gap-4">
-        <SectionHeading
-          title={catalog.home.sidebarTitle}
-          description={catalog.home.sidebarDescription}
-        />
-
-        <div class="space-y-3 text-sm leading-6 text-muted-foreground">
-          <p>{catalog.site.description}</p>
-          <p>{catalog.home.shellDescription}</p>
-          <p>{catalog.site.footerNote}</p>
-        </div>
-      </ToolSurface>
-    </section>
-
-    {
-      Content ? (
-        <section id="rewrite-notes">
-          <ToolSurface className="space-y-5">
-            <SectionHeading
-              eyebrow={catalog.home.contentEyebrow}
-              title={catalog.home.contentTitle}
-              description={catalog.home.contentDescription}
-            />
-            <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-              <Content />
-            </article>
-          </ToolSurface>
-        </section>
-      ) : null
-    }
+    <ToolsDirectorySearch
+      client:load
+      entries={toolSearchIndex}
+      language={language}
+      messages={searchMessages}
+    />
   </SiteFrame>
 </MainLayout>
