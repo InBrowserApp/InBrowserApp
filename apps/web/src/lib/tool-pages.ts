@@ -23,7 +23,7 @@ type LoadedToolPageData = Readonly<{
   tool: ToolRegistryEntry
 }>
 
-const toolPageModules = import.meta.glob("../../../../tools/*/index.astro")
+const toolPageModules = import.meta.glob("@tools/*/index.astro")
 
 function getToolBySlug(slug: string) {
   const toolRegistry = toolRegistryBySlug as Record<string, ToolRegistryEntry>
@@ -62,7 +62,7 @@ function loadToolMeta(tool: ToolRegistryEntry, language: SiteLanguage) {
 }
 
 async function loadToolPage(slug: string) {
-  const importer = toolPageModules[`../../../../tools/${slug}/index.astro`]
+  const importer = toolPageModules[`@tools/${slug}/index.astro`]
 
   if (!importer) {
     return null
