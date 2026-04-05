@@ -1,5 +1,4 @@
 import {
-  startTransition,
   useDeferredValue,
   useEffect,
   useEffectEvent,
@@ -190,22 +189,14 @@ function ToolsDirectorySearch({
             }}
             onCompositionEnd={(event) => {
               composingRef.current = false
-              const nextQuery = event.currentTarget.value
-
-              startTransition(() => {
-                setQuery(nextQuery)
-              })
+              setQuery(event.currentTarget.value)
             }}
             onChange={(event) => {
               if (composingRef.current) {
                 return
               }
 
-              const nextQuery = event.currentTarget.value
-
-              startTransition(() => {
-                setQuery(nextQuery)
-              })
+              setQuery(event.currentTarget.value)
             }}
           />
         </div>
@@ -215,9 +206,7 @@ function ToolsDirectorySearch({
             type="button"
             variant="outline"
             onClick={() => {
-              startTransition(() => {
-                setQuery("")
-              })
+              setQuery("")
             }}
           >
             {messages.clearSearchLabel}
