@@ -1,3 +1,5 @@
+## What is JSON Schema validation?
+
 Use this tool when you want fast feedback while designing payloads, debugging API examples, or checking whether a schema change breaks sample data. Everything runs locally in the browser, so the raw JSON never leaves the page.
 
 ## Where it fits well

@@ -1,4 +1,5 @@
 ---
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
 import Base64EncoderDecoderClient from "./client"
@@ -114,16 +115,16 @@ const messages = {
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ToolSurface className="space-y-5">
+  <ToolSurface className="overflow-hidden p-0">
     <Base64EncoderDecoderClient client:load messages={messages} />
   </ToolSurface>
 
   {
     IntroSection ? (
       <ToolSurface>
-        <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+        <ToolArticle>
           <IntroSection />
-        </article>
+        </ToolArticle>
       </ToolSurface>
     ) : null
   }

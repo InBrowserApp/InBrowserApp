@@ -1,4 +1,5 @@
 ---
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
 import JsonSchemaValidatorClient from "./client"
@@ -137,9 +138,9 @@ const messages = {
   {
     IntroSection ? (
       <ToolSurface>
-        <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+        <ToolArticle>
           <IntroSection />
-        </article>
+        </ToolArticle>
       </ToolSurface>
     ) : null
   }

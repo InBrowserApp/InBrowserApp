@@ -1,3 +1,5 @@
+## What is Base64?
+
 Base64 is useful when a text-based channel needs to carry binary-friendly payloads, such as email bodies, JSON blobs, or small data URLs. It is an encoding layer, not a security layer.
 
 ## When to use it

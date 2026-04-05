@@ -1,3 +1,5 @@
+## What does image resizing do?
+
 This tool is aimed at straightforward browser-local resizing: adjusting dimensions, changing the export format, and comparing the output before download. It is a good fit when you want privacy and speed more than a full editorial workflow.
 
 ## Good use cases
