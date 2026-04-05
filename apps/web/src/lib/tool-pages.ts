@@ -15,12 +15,17 @@ type LocalizedContentModule = {
   default: AstroComponentFactory
 }
 
+type ToolPageModule = {
+  default: AstroComponentFactory
+}
+
 type LoadedToolPageData = Readonly<{
   tool: ToolManifest
   messages: ToolMessageCatalog
   messageLanguage: string
   contentLanguage: string | null
   Content: AstroComponentFactory | null
+  Page: AstroComponentFactory | null
   Island: ComponentType<Record<string, unknown>> | null
   availableLanguages: readonly SiteLanguage[]
 }>
@@ -29,6 +34,7 @@ const toolMessageModules = import.meta.glob("../../../../tools/*/**/*.json", {
   eager: true,
   import: "default",
 }) as Record<string, ToolMessageCatalog>
+const toolPageModules = import.meta.glob("../../../../tools/*/**/*.astro")
 const toolContentModules = import.meta.glob("../../../../tools/*/**/*.mdx")
 const toolIslandModules = import.meta.glob(
   "../../../../tools/*/**/*.{js,jsx,ts,tsx}"
@@ -149,6 +155,22 @@ async function loadToolIsland(tool: ToolManifest) {
     null) as ComponentType<Record<string, unknown>> | null
 }
 
+async function loadToolPage(tool: ToolManifest) {
+  if (!tool.page) {
+    return null
+  }
+
+  const importer = toolPageModules[toToolModuleKey(tool.slug, tool.page)]
+
+  if (!importer) {
+    return null
+  }
+
+  const loadedModule = (await importer()) as ToolPageModule
+
+  return loadedModule.default
+}
+
 async function loadToolPageData(
   slug: string,
   language: SiteLanguage
@@ -167,10 +189,12 @@ async function loadToolPageData(
     tool,
     language
   )
+  const Page = await loadToolPage(tool)
   const Island = await loadToolIsland(tool)
 
   return {
     Content,
+    Page,
     Island,
     availableLanguages: getAvailableToolLanguages(tool.messages),
     contentLanguage,

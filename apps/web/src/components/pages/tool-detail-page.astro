@@ -36,6 +36,7 @@ const seo = createPageSeo({
   title: `${pageData.messages.meta.name} · ${catalog.metadata.toolTitleSuffix}`,
 })
 const Content = pageData.Content as AstroComponentFactory | null
+const Page = pageData.Page as AstroComponentFactory | null
 const languageOptions = createLanguageOptions(
   `/tools/${slug}`,
   language,
@@ -77,20 +78,73 @@ const contentLanguageLabel = pageData.contentLanguage
         title={pageData.messages.meta.name}
         description={pageData.messages.meta.description}
       >
-        <div class="flex flex-wrap items-center gap-3">
-          <Badge variant="secondary">{pageData.tool.category}</Badge>
-          {pageData.tool.group ? <Badge variant="outline">{pageData.tool.group}</Badge> : null}
-          <Badge variant="outline">{pageData.tool.icon}</Badge>
-        </div>
+        <div class="grid gap-6 xl:grid-cols-[minmax(0,1.18fr)_minmax(18rem,0.82fr)]">
+          <div class="space-y-6">
+            {Page ? (
+              <Page
+                Content={Content}
+                language={language}
+                messages={pageData.messages}
+                tool={pageData.tool}
+              />
+            ) : (
+              <>
+                <ToolSurface className="space-y-5">
+                  <SectionHeading
+                    title={catalog.tool.clientStatusLabel}
+                    description={
+                      pageData.tool.island
+                        ? pageData.tool.island.path
+                        : catalog.tool.clientMissing
+                    }
+                  />
 
-        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-          <ToolSurface className="space-y-5">
+                  {pageData.tool.island ? (
+                    <p class="text-sm leading-6 text-muted-foreground">
+                      <code>{pageData.tool.island.path}</code>
+                    </p>
+                  ) : (
+                    <p class="text-sm leading-6 text-muted-foreground">
+                      {catalog.tool.clientMissing}
+                    </p>
+                  )}
+                </ToolSurface>
+
+                <ToolSurface className="space-y-5">
+                  <SectionHeading
+                    title={catalog.tool.contentTitle}
+                    description={pageData.messages.meta.description}
+                  />
+                  {
+                    Content ? (
+                      <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+                        <Content />
+                      </article>
+                    ) : (
+                      <p class="text-sm leading-6 text-muted-foreground">
+                        {catalog.tool.contentMissing}
+                      </p>
+                    )
+                  }
+                </ToolSurface>
+              </>
+            )}
+          </div>
+
+          <ToolSurface className="space-y-5 xl:sticky xl:top-6">
             <SectionHeading
               eyebrow={catalog.tool.eyebrow}
               title={catalog.tool.detailsTitle}
               description={pageData.messages.meta.description}
             />
-            <dl class="grid gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2">
+
+            <div class="flex flex-wrap items-center gap-3">
+              <Badge variant="secondary">{pageData.tool.category}</Badge>
+              {pageData.tool.group ? <Badge variant="outline">{pageData.tool.group}</Badge> : null}
+              <Badge variant="outline">{pageData.tool.icon}</Badge>
+            </div>
+
+            <dl class="grid gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 xl:grid-cols-1">
               <div class="space-y-1">
                 <dt class="font-medium text-foreground">{catalog.tool.categoryLabel}</dt>
                 <dd>{pageData.tool.category}</dd>
@@ -125,27 +179,6 @@ const contentLanguageLabel = pageData.contentLanguage
                 </div>
               </div>
             </div>
-          </ToolSurface>
-
-          <ToolSurface className="space-y-5">
-            <SectionHeading
-              title={catalog.tool.clientStatusLabel}
-              description={
-                pageData.tool.island
-                  ? pageData.tool.island.path
-                  : catalog.tool.clientMissing
-              }
-            />
-
-            {pageData.tool.island ? (
-              <p class="text-sm leading-6 text-muted-foreground">
-                <code>{pageData.tool.island.path}</code>
-              </p>
-            ) : (
-              <p class="text-sm leading-6 text-muted-foreground">
-                {catalog.tool.clientMissing}
-              </p>
-            )}
 
             <div class="rounded-[calc(var(--radius)*1.4)] border border-dashed border-border/80 bg-muted/30 p-4">
               <p class="font-medium text-foreground">{catalog.site.languageLabel}</p>
@@ -159,24 +192,6 @@ const contentLanguageLabel = pageData.contentLanguage
             </div>
           </ToolSurface>
         </div>
-
-        <ToolSurface className="space-y-5">
-          <SectionHeading
-            title={catalog.tool.contentTitle}
-            description={pageData.messages.meta.description}
-          />
-          {
-            Content ? (
-              <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-                <Content />
-              </article>
-            ) : (
-              <p class="text-sm leading-6 text-muted-foreground">
-                {catalog.tool.contentMissing}
-              </p>
-            )
-          }
-        </ToolSurface>
       </ToolPageShell>
     </div>
   </div>

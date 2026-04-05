@@ -1,6 +1,7 @@
 import type { DefaultRequiredToolLanguage, ToolLanguage } from "./languages"
 
 type RelativeToolPath = `./${string}`
+type ToolAstroFilePath = `./${string}.astro`
 type ToolMessageFilePath = `./${string}.json`
 type ToolContentFilePath = `./${string}.mdx`
 type ToolModuleFilePath = `./${string}.${"js" | "jsx" | "ts" | "tsx"}`
@@ -48,6 +49,7 @@ type ToolDefinition<
   features?: readonly string[]
   messages: TMessages
   content?: TContent
+  page?: ToolAstroFilePath
   island?: ToolIslandDefinition
 }>
 
@@ -71,6 +73,7 @@ export type {
   CreateLocalizedAssetFilesOptions,
   DefaultRequiredToolLanguage,
   RelativeToolPath,
+  ToolAstroFilePath,
   ToolContentFilePath,
   ToolDefinition,
   ToolIslandDefinition,

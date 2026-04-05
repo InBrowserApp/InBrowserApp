@@ -6,6 +6,7 @@ export {
 } from "./files"
 export { DEFAULT_REQUIRED_TOOL_LANGUAGES, uniqueLanguages } from "./languages"
 export {
+  toolAstroFilePathSchema,
   toolContentFilePathSchema,
   toolDefinitionSchema,
   toolManifestSchema,
@@ -31,6 +32,7 @@ export type {
   CreateLocalizedAssetFilesOptions,
   DefaultRequiredToolLanguage,
   RelativeToolPath,
+  ToolAstroFilePath,
   ToolContentFilePath,
   ToolDefinition,
   ToolIslandDefinition,

@@ -29,6 +29,11 @@ const toolContentFilePathSchema = relativeToolPathSchema.refine(
   "must point to a .mdx file"
 )
 
+const toolAstroFilePathSchema = relativeToolPathSchema.refine(
+  (path) => path.endsWith(".astro"),
+  "must point to a .astro file"
+)
+
 const toolModuleFilePathSchema = relativeToolPathSchema.refine(
   (path) => moduleFilePattern.test(path) && /\.(?:js|jsx|ts|tsx)$/.test(path),
   "must point to a .js, .jsx, .ts, or .tsx module"
@@ -71,12 +76,14 @@ const toolDefinitionSchema = z.object({
   features: toolStringListSchema.optional(),
   messages: toolLocalizedMessageFilesSchema,
   content: toolLocalizedContentFilesSchema.optional(),
+  page: toolAstroFilePathSchema.optional(),
   island: toolIslandDefinitionSchema.optional(),
 })
 
 const toolManifestSchema = toolDefinitionSchema
 
 export {
+  toolAstroFilePathSchema,
   toolContentFilePathSchema,
   toolDefinitionSchema,
   toolManifestSchema,

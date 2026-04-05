@@ -1,0 +1,49 @@
+---
+import { SectionHeading } from "@workspace/ui/components/app/section-heading"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import JsonSchemaValidatorClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolManifest, ToolMessageCatalog } from "@workspace/tool-sdk"
+
+type JsonSchemaPageMessages = ToolMessageCatalog & {
+  workspaceTitle: string
+  workspaceDescription: string
+  contentTitle: string
+  contentDescription: string
+}
+
+interface Props {
+  tool: ToolManifest
+  language: string
+  messages: JsonSchemaPageMessages
+  Content: AstroComponentFactory | null
+}
+
+const { language, messages, Content } = Astro.props
+---
+
+<div class="space-y-6">
+  <ToolSurface className="space-y-5">
+    <SectionHeading
+      eyebrow={messages.meta.name}
+      title={messages.workspaceTitle}
+      description={messages.workspaceDescription}
+    />
+    <JsonSchemaValidatorClient client:load language={language} messages={messages} />
+  </ToolSurface>
+
+  {
+    Content ? (
+      <ToolSurface className="space-y-5">
+        <SectionHeading
+          title={messages.contentTitle}
+          description={messages.contentDescription}
+        />
+        <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+          <Content />
+        </article>
+      </ToolSurface>
+    ) : null
+  }
+</div>

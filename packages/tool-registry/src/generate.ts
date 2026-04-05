@@ -173,6 +173,22 @@ async function assertContentFilesExist(
   }
 }
 
+async function assertPageFileExists(
+  manifest: ToolManifest,
+  source: ToolRegistryEntrySource
+) {
+  if (!manifest.page) {
+    return
+  }
+
+  const manifestDirectory = resolve(source.manifestAbsolutePath, "..")
+  const absolutePath = resolve(manifestDirectory, manifest.page)
+
+  if (!(await fileExists(absolutePath))) {
+    throw new ToolContractError("Missing tool page file.", [absolutePath])
+  }
+}
+
 function buildSearchIndexEntry(
   manifest: ToolManifest,
   catalogs: ToolMessageCatalogs
@@ -250,6 +266,7 @@ async function loadToolManifests(paths: ToolRegistryArtifactPaths) {
 
     const catalogs = await loadToolMessageCatalogs(loadedManifest, source)
     await assertContentFilesExist(loadedManifest, source)
+    await assertPageFileExists(loadedManifest, source)
 
     manifests.push({
       manifest: loadedManifest,

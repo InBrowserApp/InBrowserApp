@@ -1,12 +1,13 @@
-## Generated paths, localized payloads
+## Generated paths now point somewhere useful
 
-The tools index no longer needs a hand-written route table. Static paths come from `packages/tool-registry`, while localized metadata and long-form content stay with each tool directory.
+The tools index no longer needs a hand-written route table, and it is no longer pointing at placeholder pages either. Static paths come from `packages/tool-registry`, while localized metadata and long-form content stay with each tool directory.
 
 That keeps the contract small:
 
 - `manifest.ts` defines the tool identity
+- `index.astro` defines the tool page composition
 - `messages/<lang>.json` owns localized labels and metadata
 - `content/<lang>.mdx` owns long-form explanations
-- optional client islands stay in tool-local modules
+- optional `client.tsx` islands stay in tool-local modules
 
-Once the first migrated tools land, this page will render their localized detail routes without any extra registry wiring.
+Adding a new tool now means adding a new directory that satisfies the contract. Routes, search entries, and localized detail pages are generated from that shape automatically.

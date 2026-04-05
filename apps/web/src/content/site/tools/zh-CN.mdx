@@ -1,12 +1,13 @@
-## 生成式路径，本地化负载
+## 生成式路径现在已经连到了真实工具
 
-工具索引页不再依赖手写 route table。静态路径来自 `packages/tool-registry`，而多语言 metadata 和长说明内容继续跟着各自 tool 目录维护。
+工具索引页不再依赖手写 route table，而且也不再只指向占位页。静态路径来自 `packages/tool-registry`，多语言 metadata 和长说明继续跟着各自 tool 目录维护。
 
 这样契约会很小：
 
 - `manifest.ts` 定义工具身份
+- `index.astro` 定义工具页编排
 - `messages/<lang>.json` 负责短文案和 metadata
 - `content/<lang>.mdx` 负责长说明
-- 可选的客户端交互岛继续留在 tool 自己的模块里
+- 可选的 `client.tsx` 交互岛继续留在 tool 自己的模块里
 
-等第一批迁移后的工具落地后，这个页面就能直接渲染它们的多语言详情页，而不需要额外接手工 registry。
+现在只要新增一个满足 contract 的 tool 目录，它就会自动得到路由、搜索条目和多语言详情页，而不需要额外补 registry wiring。
