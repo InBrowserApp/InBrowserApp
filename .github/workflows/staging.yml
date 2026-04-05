@@ -128,7 +128,7 @@ jobs:
     permissions:
       contents: read
     environment:
-      name: cloudflare-workers-preview
+      name: cloudflare-workers-staging
       url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
       - name: Checkout
