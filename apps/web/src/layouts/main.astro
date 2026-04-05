@@ -1,5 +1,7 @@
 ---
 import "@workspace/ui/globals.css"
+import SiteNavbar from "@/components/site-navbar.astro"
+import { resolveSiteLanguage, type SiteLanguage } from "@/lib/site"
 
 interface AlternateLink {
   href: string
@@ -12,6 +14,9 @@ interface Props {
   lang: string
   canonicalUrl: string
   alternateLinks?: readonly AlternateLink[]
+  current: "home" | "tools"
+  pathname: string
+  availableLanguages?: readonly SiteLanguage[]
 }
 
 const {
@@ -20,7 +25,12 @@ const {
   description,
   lang,
   title,
+  current,
+  pathname,
+  availableLanguages,
 } = Astro.props
+
+const language = resolveSiteLanguage(lang)
 ---
 
 <html lang={lang}>
@@ -42,6 +52,16 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <div class="min-h-svh bg-background">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
+        <SiteNavbar
+          language={language}
+          current={current}
+          pathname={pathname}
+          availableLanguages={availableLanguages}
+        />
+        <slot />
+      </div>
+    </div>
   </body>
 </html>

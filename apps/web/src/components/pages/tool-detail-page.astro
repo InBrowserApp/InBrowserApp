@@ -1,6 +1,5 @@
 ---
 import MainLayout from "@/layouts/main.astro"
-import SiteNavbar from "@/components/site-navbar.astro"
 import { createPageSeo } from "@/lib/seo"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { loadToolPageData } from "@/lib/tool-pages"
@@ -37,25 +36,17 @@ const Page = pageData.Page as AstroComponentFactory | null
   description={seo.description}
   lang={language}
   title={seo.title}
+  current="tools"
+  pathname={`/tools/${slug}`}
+  availableLanguages={pageData.availableLanguages}
 >
-  <div class="min-h-svh bg-background">
-    <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
-      <SiteNavbar
-        language={language}
-        current="tools"
-        pathname={`/tools/${slug}`}
-        availableLanguages={pageData.availableLanguages}
-      />
-
-      {
-        Page ? (
-          <Page lang={language} />
-        ) : (
-          <div class="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center text-sm text-muted-foreground">
-            {catalog.tools.emptyRegistryDescription}
-          </div>
-        )
-      }
-    </div>
-  </div>
+  {
+    Page ? (
+      <Page lang={language} />
+    ) : (
+      <div class="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center text-sm text-muted-foreground">
+        {catalog.tools.emptyRegistryDescription}
+      </div>
+    )
+  }
 </MainLayout>

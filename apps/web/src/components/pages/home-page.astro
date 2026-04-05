@@ -1,7 +1,6 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
-import SiteNavbar from "@/components/site-navbar.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
@@ -38,26 +37,22 @@ const searchMessages = {
   description={seo.description}
   lang={language}
   title={seo.title}
+  current="home"
+  pathname="/"
 >
-  <div class="min-h-svh bg-background">
-    <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
-      <SiteNavbar language={language} current="home" pathname="/" />
+  <header class="max-w-3xl space-y-3">
+    <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
+      {catalog.home.title}
+    </h1>
+    <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+      {catalog.home.description}
+    </p>
+  </header>
 
-      <header class="max-w-3xl space-y-3">
-        <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
-          {catalog.home.title}
-        </h1>
-        <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-          {catalog.home.description}
-        </p>
-      </header>
-
-      <ToolsDirectorySearch
-        client:load
-        entries={toolSearchIndex}
-        language={language}
-        messages={searchMessages}
-      />
-    </div>
-  </div>
+  <ToolsDirectorySearch
+    client:load
+    entries={toolSearchIndex}
+    language={language}
+    messages={searchMessages}
+  />
 </MainLayout>
