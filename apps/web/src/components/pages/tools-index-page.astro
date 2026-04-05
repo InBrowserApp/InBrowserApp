@@ -1,6 +1,5 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
-import { SiteFrame } from "@workspace/ui/components/app/site-frame"
 import MainLayout from "@/layouts/main.astro"
 import SiteNavbar from "@/components/site-navbar.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
@@ -40,19 +39,25 @@ const searchMessages = {
   lang={language}
   title={seo.title}
 >
-  <SiteFrame
-    title={catalog.tools.title}
-    description={catalog.tools.description}
-  >
-    <div class="-mt-4 -order-1">
+  <div class="min-h-svh bg-background">
+    <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
       <SiteNavbar language={language} current="tools" pathname="/tools" />
-    </div>
 
-    <ToolsDirectorySearch
-      client:load
-      entries={toolSearchIndex}
-      language={language}
-      messages={searchMessages}
-    />
-  </SiteFrame>
+      <header class="max-w-3xl space-y-3">
+        <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
+          {catalog.tools.title}
+        </h1>
+        <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+          {catalog.tools.description}
+        </p>
+      </header>
+
+      <ToolsDirectorySearch
+        client:load
+        entries={toolSearchIndex}
+        language={language}
+        messages={searchMessages}
+      />
+    </div>
+  </div>
 </MainLayout>
