@@ -7,10 +7,6 @@ type SiteMessageCatalog = Readonly<{
     name: string
     description: string
     languageLabel: string
-    tagline: string
-    currentStatus: string
-    footerNote: string
-    footerStatusLabel: string
     navigation: Readonly<{
       home: string
       tools: string
@@ -25,57 +21,22 @@ type SiteMessageCatalog = Readonly<{
     toolTitleSuffix: string
   }>
   home: Readonly<{
-    eyebrow: string
     title: string
     description: string
     primaryAction: string
-    secondaryAction: string
-    toolCountLabel: string
-    toolCountDetail: string
-    searchCountLabel: string
-    searchCountDetail: string
-    languageCountLabel: string
-    languageCountDetail: string
-    principlesEyebrow: string
-    principlesTitle: string
-    principlesDescription: string
-    registryTitle: string
-    registryDescription: string
-    localeTitle: string
-    localeDescription: string
-    shellTitle: string
-    shellDescription: string
-    contentEyebrow: string
-    contentTitle: string
-    contentDescription: string
-    sidebarTitle: string
-    sidebarDescription: string
   }>
   tools: Readonly<{
-    eyebrow: string
     title: string
     description: string
     searchLabel: string
     searchPlaceholder: string
-    searchHint: string
-    registryCountLabel: string
-    searchIndexLabel: string
-    languageCountLabel: string
-    resultsTitle: string
-    resultsDescription: string
     resultCountSuffix: string
     clearSearchLabel: string
-    cardMetaLabel: string
     emptyRegistryTitle: string
     emptyRegistryDescription: string
     emptySearchTitle: string
     emptySearchDescription: string
     openToolLabel: string
-    contentEyebrow: string
-    contentTitle: string
-    contentDescription: string
-    sidebarTitle: string
-    sidebarDescription: string
   }>
 }>
 

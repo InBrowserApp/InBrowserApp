@@ -1,7 +1,6 @@
 ---
 import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
 import { Button } from "@workspace/ui/components/ui/button"
-import { ArrowRight } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
 import { createPageSeo } from "@/lib/seo"
 import { loadSiteMessages } from "@/lib/site-messages"
@@ -47,27 +46,34 @@ const languageOptions = createLanguageOptions(
   lang={language}
   title={seo.title}
 >
-  <div class="min-h-svh bg-[radial-gradient(circle_at_top,rgba(10,132,255,0.08),transparent_34%),linear-gradient(180deg,var(--background),color-mix(in_oklab,var(--background)_92%,var(--muted)))]">
+  <div class="min-h-svh bg-background">
     <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
-      <div class="flex flex-wrap items-center gap-3">
-        <Button asChild variant="outline">
-          <a href={localizePath("/tools", language)}>
-            {catalog.site.navigation.tools}
-            <ArrowRight data-icon="inline-end" />
-          </a>
-        </Button>
+      <nav class="flex items-center justify-between">
+        <div class="flex items-center gap-1.5">
+          <Button asChild variant="ghost" size="sm">
+            <a href={localizePath("/", language)}>
+              {catalog.site.name}
+            </a>
+          </Button>
+          <span class="text-muted-foreground/40">/</span>
+          <Button asChild variant="ghost" size="sm">
+            <a href={localizePath("/tools", language)}>
+              {catalog.site.navigation.tools}
+            </a>
+          </Button>
+        </div>
         <LanguageSwitcher
-          inline
+          client:load
           label={catalog.site.languageLabel}
           options={languageOptions}
         />
-      </div>
+      </nav>
 
       {
         Page ? (
           <Page lang={language} />
         ) : (
-          <div class="rounded-[calc(var(--radius)*1.8)] border border-dashed border-border/80 bg-muted/30 p-6 text-sm leading-6 text-muted-foreground">
+          <div class="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center text-sm text-muted-foreground">
             {catalog.tools.emptyRegistryDescription}
           </div>
         )
