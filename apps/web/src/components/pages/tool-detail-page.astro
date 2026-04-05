@@ -1,10 +1,8 @@
 ---
-import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
-import { Button } from "@workspace/ui/components/ui/button"
 import MainLayout from "@/layouts/main.astro"
+import SiteNavbar from "@/components/site-navbar.astro"
 import { createPageSeo } from "@/lib/seo"
 import { loadSiteMessages } from "@/lib/site-messages"
-import { createLanguageOptions, localizePath } from "@/lib/site"
 import { loadToolPageData } from "@/lib/tool-pages"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
@@ -31,12 +29,6 @@ const seo = createPageSeo({
   title: `${pageData.meta.name} · ${catalog.metadata.toolTitleSuffix}`,
 })
 const Page = pageData.Page as AstroComponentFactory | null
-const languageOptions = createLanguageOptions(
-  `/tools/${slug}`,
-  language,
-  catalog.site.languages,
-  pageData.availableLanguages
-)
 ---
 
 <MainLayout
@@ -48,26 +40,12 @@ const languageOptions = createLanguageOptions(
 >
   <div class="min-h-svh bg-background">
     <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
-      <nav class="flex items-center justify-between">
-        <div class="flex items-center gap-1.5">
-          <Button asChild variant="ghost" size="sm">
-            <a href={localizePath("/", language)}>
-              {catalog.site.name}
-            </a>
-          </Button>
-          <span class="text-muted-foreground/40">/</span>
-          <Button asChild variant="ghost" size="sm">
-            <a href={localizePath("/tools", language)}>
-              {catalog.site.navigation.tools}
-            </a>
-          </Button>
-        </div>
-        <LanguageSwitcher
-          client:load
-          label={catalog.site.languageLabel}
-          options={languageOptions}
-        />
-      </nav>
+      <SiteNavbar
+        language={language}
+        current="tools"
+        pathname={`/tools/${slug}`}
+        availableLanguages={pageData.availableLanguages}
+      />
 
       {
         Page ? (

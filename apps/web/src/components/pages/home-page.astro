@@ -1,14 +1,12 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
-import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
 import { SiteFrame } from "@workspace/ui/components/app/site-frame"
-import { Button } from "@workspace/ui/components/ui/button"
-import { ArrowRight } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
+import SiteNavbar from "@/components/site-navbar.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import { createLanguageOptions, localizePath, type SiteLanguage } from "@/lib/site"
+import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
   language: SiteLanguage
@@ -22,7 +20,6 @@ const seo = createPageSeo({
   pathname: "/",
   title: catalog.metadata.homeTitle,
 })
-const languageOptions = createLanguageOptions("/", language, catalog.site.languages)
 const searchMessages = {
   clearSearchLabel: catalog.tools.clearSearchLabel,
   emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
@@ -47,19 +44,9 @@ const searchMessages = {
     title={catalog.home.title}
     description={catalog.home.description}
   >
-    <nav class="flex items-center justify-between -mt-4 -order-1">
-      <Button asChild variant="ghost" size="sm">
-        <a href={localizePath("/tools", language)}>
-          {catalog.home.primaryAction}
-          <ArrowRight data-icon="inline-end" />
-        </a>
-      </Button>
-      <LanguageSwitcher
-        client:load
-        label={catalog.site.languageLabel}
-        options={languageOptions}
-      />
-    </nav>
+    <div class="-mt-4 -order-1">
+      <SiteNavbar language={language} current="home" pathname="/" />
+    </div>
 
     <ToolsDirectorySearch
       client:load

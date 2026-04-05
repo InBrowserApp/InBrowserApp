@@ -1,0 +1,51 @@
+---
+import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
+import { createLanguageOptions, localizePath, type SiteLanguage } from "@/lib/site"
+import { loadSiteMessages } from "@/lib/site-messages"
+
+interface Props {
+  language: SiteLanguage
+  current: "home" | "tools"
+  pathname: string
+  availableLanguages?: readonly SiteLanguage[]
+}
+
+const { language, current, pathname, availableLanguages } = Astro.props
+const { catalog } = loadSiteMessages(language)
+const languageOptions = createLanguageOptions(
+  pathname,
+  language,
+  catalog.site.languages,
+  availableLanguages
+)
+const navItems = [
+  { id: "tools" as const, href: localizePath("/tools", language), label: catalog.site.navigation.tools },
+]
+---
+
+<nav class="flex items-center justify-between">
+  <div class="flex items-center gap-4">
+    <a
+      href={localizePath("/", language)}
+      class="text-sm font-semibold text-foreground"
+    >
+      {catalog.site.name}
+    </a>
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class:list={[
+          "text-sm transition-colors hover:text-foreground",
+          item.id === current ? "text-foreground" : "text-muted-foreground",
+        ]}
+      >
+        {item.label}
+      </a>
+    ))}
+  </div>
+  <LanguageSwitcher
+    client:load
+    label={catalog.site.languageLabel}
+    options={languageOptions}
+  />
+</nav>
