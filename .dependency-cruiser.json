@@ -106,6 +106,17 @@
       "to": {
         "path": "^(apps/web/|packages/tool-registry/src/)"
       }
+    },
+    {
+      "name": "tools-not-to-third-party-ui-libs",
+      "severity": "error",
+      "from": {
+        "path": "^tools/[^/]+/"
+      },
+      "to": {
+        "dependencyTypes": ["npm"],
+        "path": "^node_modules/(?:@radix-ui/|radix-ui|lucide-react|sonner|cmdk|vaul|embla-carousel-react|input-otp|react-day-picker|class-variance-authority|tailwind-merge|tw-animate-css|shadcn)(?:/|$)"
+      }
     }
   ],
   "options": {

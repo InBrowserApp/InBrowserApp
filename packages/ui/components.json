@@ -15,7 +15,7 @@
     "utils": "@workspace/ui/lib/utils",
     "hooks": "@workspace/ui/hooks",
     "lib": "@workspace/ui/lib",
-    "ui": "@workspace/ui/components"
+    "ui": "@workspace/ui/components/ui"
   },
   "rtl": false,
   "menuColor": "default",

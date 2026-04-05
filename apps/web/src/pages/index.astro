@@ -1,18 +1,72 @@
 ---
 import "@workspace/ui/globals.css"
-import { Button } from "@workspace/ui/components/button"
+import { SiteFrame } from "@workspace/ui/components/app/site-frame"
+import { SectionHeading } from "@workspace/ui/components/app/section-heading"
+import { Button } from "@workspace/ui/components/ui/button"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import { ArrowRight, LayoutGrid, Sparkles, Wrench } from "@workspace/ui/icons"
 import MainLayout from "../layouts/main.astro"
 ---
 
 <MainLayout>
-  <div class="flex min-h-svh p-6">
-    <div class="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-      <div>
-        <h1 class="font-medium">Project ready!</h1>
-        <p>You may now add components and start building.</p>
-        <p>We've already added the button component for you.</p>
-        <Button client:load className="mt-2">Button</Button>
-      </div>
+  <SiteFrame
+    title="Astro rewrite foundation is live."
+    description="The app shell now consumes a single shared UI package. Site-level and tool-level compositions live in packages/ui, and tools are expected to import UI from there."
+    eyebrow="Issue #317"
+  >
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+      <ToolPageShell
+        title="Shared UI layers"
+        description="Base primitives stay in ui/, shared site patterns in app/, and reusable tool surfaces in tool/. That keeps the design system small and gives tools a predictable import path."
+      >
+        <div class="flex items-center gap-3">
+          <Button>
+            View foundation
+            <ArrowRight />
+          </Button>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <ToolSurface className="flex flex-col gap-3">
+            <LayoutGrid className="size-5 text-muted-foreground" />
+            <div class="space-y-1">
+              <p class="font-medium">Base primitives</p>
+              <p class="text-sm leading-6 text-muted-foreground">
+                Button, input, card, and the rest of the shadcn layer.
+              </p>
+            </div>
+          </ToolSurface>
+          <ToolSurface className="flex flex-col gap-3">
+            <Sparkles className="size-5 text-muted-foreground" />
+            <div class="space-y-1">
+              <p class="font-medium">App compositions</p>
+              <p class="text-sm leading-6 text-muted-foreground">
+                Shared landing-page and navigation patterns for the site shell.
+              </p>
+            </div>
+          </ToolSurface>
+          <ToolSurface className="flex flex-col gap-3">
+            <Wrench className="size-5 text-muted-foreground" />
+            <div class="space-y-1">
+              <p class="font-medium">Tool surfaces</p>
+              <p class="text-sm leading-6 text-muted-foreground">
+                Reusable panels and shells that future tools can compose.
+              </p>
+            </div>
+          </ToolSurface>
+        </div>
+      </ToolPageShell>
+      <ToolSurface className="flex flex-col gap-6">
+        <SectionHeading
+          eyebrow="Design system"
+          title="One UI entrypoint"
+          description="packages/ui now owns the component registry, design tokens, icon exports, and the first shared compositions."
+        />
+        <div class="space-y-3 text-sm leading-6 text-muted-foreground">
+          <p>No tool should import lucide, radix, sonner, or any other UI library directly.</p>
+          <p>Those dependencies stay behind the UI package, and the boundary is enforced in dependency-cruiser.</p>
+        </div>
+      </ToolSurface>
     </div>
-  </div>
+  </SiteFrame>
 </MainLayout>
