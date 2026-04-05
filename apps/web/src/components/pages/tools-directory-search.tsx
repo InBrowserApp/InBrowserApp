@@ -6,13 +6,12 @@ import {
   useState,
 } from "react"
 
-import { ToolDirectoryCard } from "@workspace/ui/components/app/tool-directory-card"
 import { SectionHeading } from "@workspace/ui/components/app/section-heading"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import { LayoutGrid, Search } from "@workspace/ui/icons"
+import { ArrowRight, LayoutGrid, Search } from "@workspace/ui/icons"
 import { localizePath } from "@/lib/site"
 
 import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
@@ -285,19 +284,55 @@ function ToolsDirectorySearch({
             const locale = resolveLocale(entry, language)
 
             return (
-              <ToolDirectoryCard
+              <ToolSurface
                 key={entry.id}
-                actionLabel={messages.openToolLabel}
-                category={entry.category}
-                description={locale.description}
-                features={entry.features}
-                group={entry.group}
-                href={localizePath(`/tools/${entry.slug}`, language)}
-                icon={entry.icon}
-                metaLabel={messages.cardMetaLabel}
-                name={locale.name}
-                tags={entry.tags}
-              />
+                className="flex flex-col gap-5 border-dashed bg-background/70 shadow-none"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant="secondary">{entry.category}</Badge>
+                  {entry.group ? (
+                    <Badge variant="outline">{entry.group}</Badge>
+                  ) : null}
+                  <Badge variant="outline">{entry.icon}</Badge>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="font-heading text-2xl leading-tight tracking-[var(--tracking-display)]">
+                    {locale.name}
+                  </h3>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {locale.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {entry.tags.slice(0, 4).map((tag) => (
+                    <Badge key={tag} variant="outline">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                {entry.features.length > 0 ? (
+                  <div className="flex flex-wrap gap-2">
+                    {entry.features.slice(0, 4).map((feature) => (
+                      <Badge key={feature}>{feature}</Badge>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border/70 pt-4">
+                  <span className="font-mono text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
+                    {messages.cardMetaLabel}
+                  </span>
+                  <Button asChild size="sm" variant="outline">
+                    <a href={localizePath(`/tools/${entry.slug}`, language)}>
+                      {messages.openToolLabel}
+                      <ArrowRight data-icon="inline-end" />
+                    </a>
+                  </Button>
+                </div>
+              </ToolSurface>
             )
           })}
         </div>

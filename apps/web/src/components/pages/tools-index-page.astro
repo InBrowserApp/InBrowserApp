@@ -1,22 +1,16 @@
 ---
 import { toolRegistry, toolSearchIndex } from "@workspace/tool-registry"
 import { SectionHeading } from "@workspace/ui/components/app/section-heading"
-import { SiteChrome } from "@workspace/ui/components/app/site-chrome"
-import { SiteStatCard } from "@workspace/ui/components/app/site-stat-card"
-import { Button } from "@workspace/ui/components/ui/button"
+import { SiteFrame } from "@workspace/ui/components/app/site-frame"
+import { SiteToolbar } from "@workspace/ui/components/app/site-toolbar"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import { ArrowRight } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSitePageContent } from "@/lib/site-content"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import { createSiteChromeData } from "@/lib/site-shell"
-import {
-  SUPPORTED_SITE_LANGUAGES,
-  localizePath,
-  type SiteLanguage,
-} from "@/lib/site"
+import { createSiteToolbarData } from "@/lib/site-shell"
+import { SUPPORTED_SITE_LANGUAGES, type SiteLanguage } from "@/lib/site"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 
@@ -34,7 +28,7 @@ const seo = createPageSeo({
   title: catalog.metadata.toolsTitle,
 })
 const Content = ToolsContent as AstroComponentFactory | null
-const shell = createSiteChromeData("/tools", language, catalog, "tools")
+const shell = createSiteToolbarData("/tools", language, catalog, "tools")
 const numberFormatter = new Intl.NumberFormat(language)
 const stats = [
   {
@@ -77,25 +71,12 @@ const searchMessages = {
   lang={language}
   title={seo.title}
 >
-  <SiteChrome {...shell}>
-    <section>
-      <ToolSurface className="site-grid-panel flex flex-col gap-6">
-        <SectionHeading
-          eyebrow={catalog.tools.eyebrow}
-          title={catalog.tools.title}
-          description={catalog.tools.description}
-        />
-
-        <div class="flex flex-wrap items-center gap-3">
-          <Button asChild size="lg" variant="outline">
-            <a href={localizePath("/", language)}>
-              {catalog.site.navigation.home}
-              <ArrowRight data-icon="inline-end" />
-            </a>
-          </Button>
-        </div>
-      </ToolSurface>
-    </section>
+  <SiteFrame
+    eyebrow={catalog.tools.eyebrow}
+    title={catalog.tools.title}
+    description={catalog.tools.description}
+  >
+    <SiteToolbar {...shell} />
 
     <ToolsDirectorySearch
       client:load
@@ -107,7 +88,13 @@ const searchMessages = {
     <section class="grid gap-4 sm:grid-cols-3">
       {
         stats.map((stat) => (
-          <SiteStatCard detail={stat.detail} label={stat.label} value={stat.value} />
+          <ToolSurface className="flex flex-col gap-3 border-dashed bg-background/70 shadow-none">
+            <p class="text-sm font-medium text-foreground">{stat.label}</p>
+            <p class="font-heading text-3xl leading-none tracking-[var(--tracking-display)] text-foreground">
+              {stat.value}
+            </p>
+            <p class="text-sm leading-6 text-muted-foreground">{stat.detail}</p>
+          </ToolSurface>
         ))
       }
     </section>
@@ -155,5 +142,5 @@ const searchMessages = {
         </div>
       </ToolSurface>
     </section>
-  </SiteChrome>
+  </SiteFrame>
 </MainLayout>

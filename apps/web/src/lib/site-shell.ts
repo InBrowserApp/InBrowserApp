@@ -1,28 +1,18 @@
-import {
-  createLanguageOptions,
-  createPrimaryNavigation,
-  localizePath,
-} from "./site"
+import { createLanguageOptions, createPrimaryNavigation } from "./site"
 
 import type { SiteMessageCatalog } from "./site-messages"
 import type { SiteLanguage } from "./site"
 
-type SiteChromeSection = "home" | "tools"
+type SiteShellSection = "home" | "tools"
 
-function createSiteChromeData(
+function createSiteToolbarData(
   pathname: string,
   language: SiteLanguage,
   catalog: SiteMessageCatalog,
-  current: SiteChromeSection,
+  current: SiteShellSection,
   availableLanguages?: readonly SiteLanguage[]
 ) {
   return {
-    brandHref: localizePath("/", language),
-    brandName: catalog.site.name,
-    brandTagline: catalog.site.tagline,
-    currentStatus: catalog.site.currentStatus,
-    footerNote: catalog.site.footerNote,
-    footerStatusLabel: catalog.site.footerStatusLabel,
     languageLabel: catalog.site.languageLabel,
     languageOptions: createLanguageOptions(
       pathname,
@@ -38,5 +28,5 @@ function createSiteChromeData(
   }
 }
 
-export { createSiteChromeData }
-export type { SiteChromeSection }
+export { createSiteToolbarData }
+export type { SiteShellSection }

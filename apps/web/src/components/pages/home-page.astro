@@ -1,21 +1,16 @@
 ---
 import { toolRegistry, toolSearchIndex } from "@workspace/tool-registry"
 import { SectionHeading } from "@workspace/ui/components/app/section-heading"
-import { SiteChrome } from "@workspace/ui/components/app/site-chrome"
-import { SiteStatCard } from "@workspace/ui/components/app/site-stat-card"
+import { SiteFrame } from "@workspace/ui/components/app/site-frame"
+import { SiteToolbar } from "@workspace/ui/components/app/site-toolbar"
 import { Button } from "@workspace/ui/components/ui/button"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import {
-  ArrowRight,
-  Languages,
-  LayoutGrid,
-  Waypoints,
-} from "@workspace/ui/icons"
+import { ArrowRight, Languages, LayoutGrid } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
 import { loadSitePageContent } from "@/lib/site-content"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import { createSiteChromeData } from "@/lib/site-shell"
+import { createSiteToolbarData } from "@/lib/site-shell"
 import {
   SUPPORTED_SITE_LANGUAGES,
   localizePath,
@@ -38,7 +33,7 @@ const seo = createPageSeo({
   title: catalog.metadata.homeTitle,
 })
 const Content = HomeContent as AstroComponentFactory | null
-const shell = createSiteChromeData("/", language, catalog, "home")
+const shell = createSiteToolbarData("/", language, catalog, "home")
 const numberFormatter = new Intl.NumberFormat(language)
 const stats = [
   {
@@ -68,11 +63,6 @@ const principles = [
     icon: Languages,
     title: catalog.home.localeTitle,
   },
-  {
-    description: catalog.home.shellDescription,
-    icon: Waypoints,
-    title: catalog.home.shellTitle,
-  },
 ] as const
 ---
 
@@ -83,40 +73,40 @@ const principles = [
   lang={language}
   title={seo.title}
 >
-  <SiteChrome {...shell}>
-    <section class="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(18rem,24rem)]">
-      <ToolSurface className="site-grid-panel flex flex-col gap-6">
-        <SectionHeading
-          eyebrow={catalog.home.eyebrow}
-          title={catalog.home.title}
-          description={catalog.home.description}
-        />
+  <SiteFrame
+    eyebrow={catalog.home.eyebrow}
+    title={catalog.home.title}
+    description={catalog.home.description}
+  >
+    <SiteToolbar {...shell} />
 
-        <div class="flex flex-wrap items-center gap-3">
-          <Button asChild size="lg">
-            <a href={localizePath("/tools", language)}>
-              {catalog.home.primaryAction}
-              <ArrowRight data-icon="inline-end" />
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href="#rewrite-notes">{catalog.home.secondaryAction}</a>
-          </Button>
-        </div>
-      </ToolSurface>
+    <ToolSurface className="flex flex-col gap-6">
+      <div class="flex flex-wrap items-center gap-3">
+        <Button asChild>
+          <a href={localizePath("/tools", language)}>
+            {catalog.home.primaryAction}
+            <ArrowRight data-icon="inline-end" />
+          </a>
+        </Button>
+        <Button asChild variant="outline">
+          <a href="#rewrite-notes">{catalog.home.secondaryAction}</a>
+        </Button>
+      </div>
 
-      <div class="grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
+      <div class="grid gap-4 sm:grid-cols-3">
         {
           stats.map((stat) => (
-            <SiteStatCard
-              detail={stat.detail}
-              label={stat.label}
-              value={stat.value}
-            />
+            <ToolSurface className="flex flex-col gap-3 border-dashed bg-background/70 shadow-none">
+              <p class="text-sm font-medium text-foreground">{stat.label}</p>
+              <p class="font-heading text-3xl leading-none tracking-[var(--tracking-display)] text-foreground">
+                {stat.value}
+              </p>
+              <p class="text-sm leading-6 text-muted-foreground">{stat.detail}</p>
+            </ToolSurface>
           ))
         }
       </div>
-    </section>
+    </ToolSurface>
 
     <section class="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)]">
       <ToolSurface className="space-y-6">
@@ -126,7 +116,7 @@ const principles = [
           description={catalog.home.principlesDescription}
         />
 
-        <div class="grid gap-4 md:grid-cols-3">
+        <div class="grid gap-4 md:grid-cols-2">
           {
             principles.map((principle) => {
               const Icon = principle.icon
@@ -173,6 +163,12 @@ const principles = [
               {catalog.home.localeDescription}
             </p>
           </div>
+          <div class="rounded-[calc(var(--radius)*1.4)] border border-dashed border-border/80 bg-muted/30 p-4">
+            <p class="font-medium text-foreground">{catalog.home.shellTitle}</p>
+            <p class="mt-2 text-sm leading-6 text-muted-foreground">
+              {catalog.home.shellDescription}
+            </p>
+          </div>
         </div>
       </ToolSurface>
     </section>
@@ -198,9 +194,14 @@ const principles = [
 
       <ToolSurface className="space-y-5">
         <SectionHeading
-          title={catalog.home.shellTitle}
-          description={catalog.home.shellDescription}
+          title={catalog.home.contentTitle}
+          description={catalog.home.contentDescription}
         />
+
+        <div class="space-y-4 text-sm leading-6 text-muted-foreground">
+          <p>{catalog.site.tagline}</p>
+          <p>{catalog.site.footerNote}</p>
+        </div>
 
         <div class="space-y-4">
           <div class="rounded-[calc(var(--radius)*1.4)] border border-border/80 bg-muted/30 p-4">
@@ -224,5 +225,5 @@ const principles = [
         </div>
       </ToolSurface>
     </section>
-  </SiteChrome>
+  </SiteFrame>
 </MainLayout>
