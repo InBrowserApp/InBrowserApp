@@ -8,6 +8,7 @@
   "env": {
     "staging": {
       "name": "inbrowserapp-web-astro-staging",
+      "preview_urls": true,
       "workers_dev": true,
     },
   },
