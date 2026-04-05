@@ -219,19 +219,19 @@ function JsonSchemaValidatorClient({
   return (
     <div className="flex flex-col gap-5">
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid auto-rows-fr gap-4 md:grid-cols-2">
           <Card>
             <CardHeader className="border-b">
               <CardTitle>{messages.schemaLabel}</CardTitle>
               <CardDescription>{messages.schemaDescription}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent className="flex flex-1 flex-col">
               <Textarea
                 value={schemaText}
                 onChange={(event) => {
                   setSchemaText(event.target.value)
                 }}
-                className="min-h-64 resize-y font-mono text-sm"
+                className="min-h-64 flex-1 resize-y font-mono text-sm"
                 placeholder={messages.schemaPlaceholder}
               />
             </CardContent>
@@ -250,13 +250,13 @@ function JsonSchemaValidatorClient({
               <CardTitle>{messages.dataLabel}</CardTitle>
               <CardDescription>{messages.dataDescription}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent className="flex flex-1 flex-col">
               <Textarea
                 value={dataText}
                 onChange={(event) => {
                   setDataText(event.target.value)
                 }}
-                className="min-h-64 resize-y font-mono text-sm"
+                className="min-h-64 flex-1 resize-y font-mono text-sm"
                 placeholder={messages.dataPlaceholder}
               />
             </CardContent>
