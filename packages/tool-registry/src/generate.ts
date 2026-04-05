@@ -284,15 +284,15 @@ function createRegistrySource(manifests: readonly LoadedToolManifest[]) {
     `import type { ToolManifest } from "@workspace/tool-sdk"`,
     ...importLines,
     "",
-    `export const toolRegistry = [${registryEntries.join(", ")}] as const satisfies readonly ToolManifest[]`,
+    `export const toolRegistry: readonly ToolManifest[] = [${registryEntries.join(", ")}]`,
     "",
-    `export const toolRegistryBySlug = {`,
+    `export const toolRegistryBySlug: Record<string, ToolManifest> = {`,
     ...slugMapEntries,
-    `} as const satisfies Record<string, ToolManifest>`,
+    `}`,
     "",
-    `export const toolRegistryById = {`,
+    `export const toolRegistryById: Record<string, ToolManifest> = {`,
     ...idMapEntries,
-    `} as const satisfies Record<string, ToolManifest>`,
+    `}`,
     "",
   ].join("\n")
 }
@@ -303,7 +303,7 @@ function createStaticPathsSource(manifests: readonly LoadedToolManifest[]) {
   return [
     `import type { ToolStaticPathEntry } from "../types"`,
     "",
-    `export const toolStaticPaths = ${JSON.stringify(staticPaths, null, 2)} as const satisfies readonly ToolStaticPathEntry[]`,
+    `export const toolStaticPaths: readonly ToolStaticPathEntry[] = ${JSON.stringify(staticPaths, null, 2)}`,
     "",
   ].join("\n")
 }
@@ -314,7 +314,7 @@ function createSearchIndexSource(manifests: readonly LoadedToolManifest[]) {
   return [
     `import type { ToolSearchIndexEntry } from "../types"`,
     "",
-    `export const toolSearchIndex = ${JSON.stringify(searchIndex, null, 2)} as const satisfies readonly ToolSearchIndexEntry[]`,
+    `export const toolSearchIndex: readonly ToolSearchIndexEntry[] = ${JSON.stringify(searchIndex, null, 2)}`,
     "",
   ].join("\n")
 }

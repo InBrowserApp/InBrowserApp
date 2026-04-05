@@ -1,0 +1,11 @@
+## One routing model for every page
+
+The Astro rewrite now treats localization as a routing concern first. English pages stay at the root, while non-default languages live behind `/:lang` and reuse the same page components.
+
+This keeps canonical URLs, alternate language links, and sitemap generation aligned with the actual page tree instead of depending on runtime router aliases.
+
+## Content lives next to the page type that owns it
+
+Short labels stay in JSON message catalogs, while long-form explanations stay in localized MDX files. The split keeps UI copy, SEO metadata, and editorial content from collapsing into one component file.
+
+The same fallback rules now apply to both site pages and tool pages, which means future tools can opt into localized content without inventing their own loading model.

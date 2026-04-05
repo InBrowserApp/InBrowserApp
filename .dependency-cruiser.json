@@ -13,7 +13,8 @@
       "severity": "error",
       "from": {},
       "to": {
-        "couldNotResolve": true
+        "couldNotResolve": true,
+        "pathNot": "^astro:"
       }
     },
     {

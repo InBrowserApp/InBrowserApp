@@ -1,0 +1,15 @@
+---
+import ToolDetailPage from "@/components/pages/tool-detail-page.astro"
+import { DEFAULT_SITE_LANGUAGE } from "@/lib/site"
+import { getDefaultToolStaticPaths } from "@/lib/static-paths"
+
+export { getDefaultToolStaticPaths as getStaticPaths }
+
+const language = DEFAULT_SITE_LANGUAGE
+
+if (!Astro.params.slug) {
+  throw new Error("Tool slug is required.")
+}
+---
+
+<ToolDetailPage language={language} slug={Astro.params.slug} />

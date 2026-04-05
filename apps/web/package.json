@@ -16,9 +16,12 @@
     "typecheck": "astro check"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
     "@astrojs/react": "^4.4.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@workspace/tool-registry": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "astro": "^5.17.1",
     "react": "^19.2.4",

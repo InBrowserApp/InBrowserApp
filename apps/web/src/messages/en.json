@@ -1,0 +1,61 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "In-browser utilities that run without a backend server.",
+    "languageLabel": "Languages",
+    "navigation": {
+      "home": "Home",
+      "tools": "Tools"
+    },
+    "languages": {
+      "en": "English",
+      "zh-CN": "简体中文"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App · Localized Astro shell",
+    "homeDescription": "The Astro rewrite now supports localized routes, metadata, and content loading.",
+    "toolsTitle": "Tools · InBrowser.App",
+    "toolsDescription": "Browse the generated tool directory and the Astro rewrite's localization model.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "eyebrow": "Issue #320",
+    "title": "Localized routing is wired into the Astro shell.",
+    "description": "Site pages and future tool pages now share one language model for routes, messages, MDX content, canonicals, alternates, and sitemap generation.",
+    "statusTitle": "Routing milestone",
+    "statusDescription": "English routes stay unprefixed, non-default languages use /:lang, and metadata now resolves from the active locale instead of hard-coded strings.",
+    "registryTitle": "Generated registries stay the source of truth",
+    "registryDescription": "Tool detail routes come from packages/tool-registry, so new tools only need a manifest plus localized assets.",
+    "contentTitle": "Localized MDX content is first-class",
+    "contentDescription": "Long-form page content and tool content resolve with language fallback so static explanations stay separate from UI code.",
+    "contentHeading": "Why this routing model exists"
+  },
+  "tools": {
+    "eyebrow": "Tool directory",
+    "title": "Tool routes are ready for localized manifests.",
+    "description": "The tools index now reads registry output and site translations, while future tool detail pages inherit the same fallback and metadata rules.",
+    "emptyTitle": "No migrated tools yet",
+    "emptyDescription": "The registry is wired and validated, but the first tool archetypes land in issue #322.",
+    "metricsTitle": "Registry status",
+    "contentHeading": "How tool pages will load",
+    "registryCountLabel": "Tools in registry",
+    "searchIndexLabel": "Search entries",
+    "languageCountLabel": "Languages",
+    "loadingModelDescription": "Tool pages will resolve localized metadata and long-form content from the generated registry and each tool directory."
+  },
+  "tool": {
+    "eyebrow": "Tool page",
+    "detailsTitle": "Tool contract",
+    "contentTitle": "Localized content",
+    "categoryLabel": "Category",
+    "groupLabel": "Group",
+    "tagsLabel": "Tags",
+    "featuresLabel": "Features",
+    "messageLanguageLabel": "Message language",
+    "contentLanguageLabel": "Content language",
+    "clientStatusLabel": "Interactive island",
+    "clientMissing": "This tool does not register a client island yet.",
+    "contentMissing": "This tool does not ship long-form content yet."
+  }
+}
