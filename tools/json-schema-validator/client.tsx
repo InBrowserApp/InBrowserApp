@@ -80,7 +80,6 @@ type JsonSchemaMessages = Readonly<{
 }>
 
 type JsonSchemaValidatorClientProps = Readonly<{
-  language: string
   messages: JsonSchemaMessages
 }>
 

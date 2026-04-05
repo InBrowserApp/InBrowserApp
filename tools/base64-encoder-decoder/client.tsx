@@ -40,7 +40,6 @@ type Base64Messages = Readonly<{
 }>
 
 type Base64ToolClientProps = Readonly<{
-  language: string
   messages: Base64Messages
 }>
 

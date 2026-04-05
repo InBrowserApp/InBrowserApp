@@ -1,4 +1,4 @@
-const DEFAULT_REQUIRED_TOOL_LANGUAGES = ["en", "zh-CN"] as const
+const DEFAULT_REQUIRED_TOOL_LANGUAGES = ["en"] as const
 
 type DefaultRequiredToolLanguage =
   (typeof DEFAULT_REQUIRED_TOOL_LANGUAGES)[number]

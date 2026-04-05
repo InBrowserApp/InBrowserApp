@@ -1,11 +1,11 @@
 import type {
   ToolDefinition,
-  ToolMessageCatalogs,
+  ToolMetaCatalogs,
   ToolValidationOptions,
 } from "./types"
 import { ToolContractError } from "./errors"
 import { DEFAULT_REQUIRED_TOOL_LANGUAGES, uniqueLanguages } from "./languages"
-import { toolDefinitionSchema, toolMessageCatalogSchema } from "./schema"
+import { toolDefinitionSchema, toolMetaSchema } from "./schema"
 
 function formatPath(path: readonly PropertyKey[]) {
   return path.length === 0 ? "(root)" : path.map(String).join(".")
@@ -33,7 +33,7 @@ function getMissingLanguages(
 
 function validateToolDefinition<TDefinition extends ToolDefinition>(
   definition: TDefinition,
-  options?: ToolValidationOptions
+  _options?: ToolValidationOptions
 ) {
   const issues: string[] = []
   const parsedDefinition = toolDefinitionSchema.safeParse(definition)
@@ -44,32 +44,6 @@ function validateToolDefinition<TDefinition extends ToolDefinition>(
         (issue) => `${formatPath(issue.path)}: ${issue.message}`
       )
     )
-  }
-
-  const requiredLanguages = resolveRequiredLanguages(options)
-
-  const missingMessageLanguages = getMissingLanguages(
-    definition.messages as Record<string, unknown> | undefined,
-    requiredLanguages
-  )
-
-  if (missingMessageLanguages.length > 0) {
-    issues.push(
-      `messages: missing required languages ${missingMessageLanguages.join(", ")}`
-    )
-  }
-
-  if (definition.content) {
-    const missingContentLanguages = getMissingLanguages(
-      definition.content as Record<string, unknown>,
-      requiredLanguages
-    )
-
-    if (missingContentLanguages.length > 0) {
-      issues.push(
-        `content: missing required languages ${missingContentLanguages.join(", ")}`
-      )
-    }
   }
 
   return {
@@ -92,7 +66,7 @@ function assertToolDefinition<TDefinition extends ToolDefinition>(
 const validateToolManifest = validateToolDefinition
 const assertToolManifest = assertToolDefinition
 
-function validateToolMessageCatalogs<TCatalogs extends ToolMessageCatalogs>(
+function validateToolMetaCatalogs<TCatalogs extends ToolMetaCatalogs>(
   catalogs: TCatalogs,
   options?: ToolValidationOptions
 ) {
@@ -100,7 +74,7 @@ function validateToolMessageCatalogs<TCatalogs extends ToolMessageCatalogs>(
   const requiredLanguages = resolveRequiredLanguages(options)
 
   for (const [language, catalog] of Object.entries(catalogs)) {
-    const parsedCatalog = toolMessageCatalogSchema.safeParse(catalog)
+    const parsedCatalog = toolMetaSchema.safeParse(catalog)
 
     if (!parsedCatalog.success) {
       issues.push(
@@ -118,7 +92,7 @@ function validateToolMessageCatalogs<TCatalogs extends ToolMessageCatalogs>(
 
   if (missingLanguages.length > 0) {
     issues.push(
-      `messages: missing required languages ${missingLanguages.join(", ")}`
+      `meta: missing required languages ${missingLanguages.join(", ")}`
     )
   }
 
@@ -128,23 +102,23 @@ function validateToolMessageCatalogs<TCatalogs extends ToolMessageCatalogs>(
   }
 }
 
-function assertToolMessageCatalogs<TCatalogs extends ToolMessageCatalogs>(
+function assertToolMetaCatalogs<TCatalogs extends ToolMetaCatalogs>(
   catalogs: TCatalogs,
   options?: ToolValidationOptions
 ) {
-  const result = validateToolMessageCatalogs(catalogs, options)
+  const result = validateToolMetaCatalogs(catalogs, options)
 
   if (!result.valid) {
-    throw new ToolContractError("Invalid tool message catalogs.", result.issues)
+    throw new ToolContractError("Invalid tool meta catalogs.", result.issues)
   }
 }
 
 export {
   assertToolDefinition,
   assertToolManifest,
-  assertToolMessageCatalogs,
+  assertToolMetaCatalogs,
   resolveRequiredLanguages,
   validateToolDefinition,
   validateToolManifest,
-  validateToolMessageCatalogs,
+  validateToolMetaCatalogs,
 }

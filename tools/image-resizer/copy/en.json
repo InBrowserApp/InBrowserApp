@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "Image Resizer",
-    "description": "Resize image dimensions directly in your browser and export the result as PNG, JPEG, or WebP."
-  },
-  "workspaceTitle": "Resize images locally, with visible tradeoffs instead of hidden uploads.",
-  "workspaceDescription": "Choose an image, adjust width and height, decide whether to preserve the aspect ratio, and export a resized version without sending the file to a server.",
-  "contentTitle": "What to expect from browser-local resizing",
-  "contentDescription": "These notes explain which cases this tool handles well and where a heavier image pipeline is still the better choice.",
   "uploadTitle": "Source image",
   "uploadDescription": "Pick a local image file to inspect its dimensions and generate a resized export.",
   "chooseImageLabel": "Choose an image",

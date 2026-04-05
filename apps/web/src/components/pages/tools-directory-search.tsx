@@ -77,15 +77,7 @@ function getSearchScore(
 
   const locale = resolveLocale(entry, language)
   const tokens = normalizedQuery.split(" ")
-  const searchableText = [
-    locale.name,
-    locale.description,
-    entry.category,
-    entry.group ?? "",
-    ...entry.tags,
-    ...entry.features,
-    ...entry.searchTerms,
-  ]
+  const searchableText = [locale.name, locale.description]
     .join(" ")
     .toLowerCase()
 
@@ -112,14 +104,6 @@ function getSearchScore(
   if (normalizedDescription.includes(normalizedQuery)) {
     score += 15
   }
-
-  score += entry.tags.filter((tag) =>
-    tag.toLowerCase().includes(normalizedQuery)
-  ).length
-  score += entry.features.filter((feature) =>
-    feature.toLowerCase().includes(normalizedQuery)
-  ).length
-
   return score
 }
 
@@ -285,14 +269,11 @@ function ToolsDirectorySearch({
 
             return (
               <ToolSurface
-                key={entry.id}
+                key={entry.slug}
                 className="flex flex-col gap-5 border-dashed bg-background/70 shadow-none"
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge variant="secondary">{entry.category}</Badge>
-                  {entry.group ? (
-                    <Badge variant="outline">{entry.group}</Badge>
-                  ) : null}
                   <Badge variant="outline">{entry.icon}</Badge>
                 </div>
 
@@ -312,14 +293,6 @@ function ToolsDirectorySearch({
                     </Badge>
                   ))}
                 </div>
-
-                {entry.features.length > 0 ? (
-                  <div className="flex flex-wrap gap-2">
-                    {entry.features.slice(0, 4).map((feature) => (
-                      <Badge key={feature}>{feature}</Badge>
-                    ))}
-                  </div>
-                ) : null}
 
                 <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border/70 pt-4">
                   <span className="font-mono text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">

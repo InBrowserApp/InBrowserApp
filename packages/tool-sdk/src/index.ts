@@ -1,49 +1,27 @@
 export { defineTool } from "./define-tool"
-export {
-  createLocalizedAssetFiles,
-  createLocalizedContentFiles,
-  createLocalizedMessageFiles,
-} from "./files"
 export { DEFAULT_REQUIRED_TOOL_LANGUAGES, uniqueLanguages } from "./languages"
 export {
-  toolAstroFilePathSchema,
-  toolContentFilePathSchema,
   toolDefinitionSchema,
   toolManifestSchema,
-  toolIslandDefinitionSchema,
-  toolLocalizedContentFilesSchema,
-  toolLocalizedMessageFilesSchema,
-  toolMessageCatalogSchema,
-  toolMessageFilePathSchema,
-  toolModuleFilePathSchema,
+  toolMetaSchema,
   toolSlugSchema,
 } from "./schema"
 export {
   assertToolDefinition,
   assertToolManifest,
-  assertToolMessageCatalogs,
+  assertToolMetaCatalogs,
   resolveRequiredLanguages,
   validateToolDefinition,
   validateToolManifest,
-  validateToolMessageCatalogs,
+  validateToolMetaCatalogs,
 } from "./validate"
 export { ToolContractError } from "./errors"
 export type {
-  CreateLocalizedAssetFilesOptions,
   DefaultRequiredToolLanguage,
-  RelativeToolPath,
-  ToolAstroFilePath,
-  ToolContentFilePath,
   ToolDefinition,
-  ToolIslandDefinition,
   ToolLanguage,
   ToolManifest,
-  ToolLocalizedContentFiles,
-  ToolLocalizedMessageFiles,
-  ToolMessageCatalog,
-  ToolMessageCatalogs,
-  ToolMessageFilePath,
-  ToolMessageMeta,
-  ToolModuleFilePath,
+  ToolMeta,
+  ToolMetaCatalogs,
   ToolValidationOptions,
 } from "./types"

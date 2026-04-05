@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema 校验器",
+  "description": "根据 JSON Schema 校验 JSON 数据，支持草案识别，并输出可读的错误信息。"
+}

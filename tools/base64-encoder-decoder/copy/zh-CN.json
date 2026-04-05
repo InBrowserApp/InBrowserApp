@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "Base64 编码器 / 解码器",
-    "description": "直接在浏览器中把纯文本编码为 Base64，或把 Base64 解码回 Unicode 文本。"
-  },
-  "workspaceTitle": "在同一页里完成文本与 Base64 的双向转换。",
-  "workspaceDescription": "编辑任意一侧，另一侧会保持同步。转换器基于浏览器原生 Base64 API，并通过 UTF-8 编码保证 Unicode 文本可用。",
-  "contentTitle": "这个工具适合做什么",
-  "contentDescription": "下面的说明会帮助你快速判断 Base64 适合什么场景，以及它不负责什么。",
   "plainTextLabel": "纯文本",
   "plainTextPlaceholder": "输入要编码的文本…",
   "plainTextDescription": "支持任意 UTF-8 文本，包括 emoji 和非拉丁字符。",

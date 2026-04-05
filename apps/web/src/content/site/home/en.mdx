@@ -1,17 +1,15 @@
-## The shell now hosts real tools
+## The shell now hosts real, self-contained tools
 
-The rewrite is no longer just proving the shell. The first migrated tools now render through the generated registry, which means the same localization model is exercising real text, validation, and file-processing flows.
+The rewrite is no longer just proving the shell. The first migrated tools now render through the generated registry, which means the same platform layer is exercising real text, validation, and file-processing flows.
 
-That matters because a route tree looks stable long before the interaction model is. Shipping the first archetypes proves that manifests, localized assets, page entrypoints, and islands can actually move together.
+That matters because a route tree can look stable long before the tool boundary is actually maintainable. Shipping the first archetypes proves that a smaller contract can still power discovery, search, and localized detail pages.
 
-## Tool-local pages are now part of the contract
+## The contract is smaller now
 
-Each migrated tool now owns:
+Each migrated tool now guarantees only a few things to the shell:
 
-- `manifest.ts` for identity
-- `index.astro` for page-level composition
-- `client.tsx` for interaction
-- `messages/<lang>.json` for short labels
-- `content/<lang>.mdx` for long-form context
+- `manifest.ts` for non-localized discovery metadata
+- `index.astro` as the fixed page entrypoint
+- `meta/<lang>.json` for localized name and description
 
-That keeps tool code self-contained while still allowing the site shell to generate routes, search data, and metadata automatically.
+Everything else stays inside the tool. A tool may use `client.tsx`, `copy/`, `sections/`, `components/`, or `workers/`, but those are no longer shell-level contract fields.

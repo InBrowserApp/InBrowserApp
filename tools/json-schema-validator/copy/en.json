@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "JSON Schema Validator",
-    "description": "Validate JSON data against a JSON Schema with draft-aware validation and readable error output."
-  },
-  "workspaceTitle": "Validate request payloads and schema examples without leaving the browser.",
-  "workspaceDescription": "Paste a schema and a JSON document, toggle strictness options, and review readable validation errors generated locally in the client.",
-  "contentTitle": "When this validator helps most",
-  "contentDescription": "Use the notes below to decide when browser-local validation is enough and when you still need server-side checks.",
   "schemaLabel": "Schema",
   "schemaDescription": "Provide a JSON Schema document. Draft-07 and 2020-12 are detected automatically.",
   "schemaPlaceholder": "Paste a JSON Schema here…",

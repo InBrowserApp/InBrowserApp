@@ -2,19 +2,10 @@ import type { ToolSearchIndexEntry } from "../types"
 
 export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
-    id: "base64-encoder-decoder",
     slug: "base64-encoder-decoder",
-    category: "encoding",
-    group: "text",
+    category: "text",
     icon: "binary",
     tags: ["base64", "encoding", "decoding", "text", "unicode"],
-    features: ["offline", "unicode-safe", "copy"],
-    searchTerms: [
-      "base64 encoder",
-      "base64 decoder",
-      "text encoding",
-      "binary text converter",
-    ],
     locales: {
       en: {
         name: "Base64 Encoder and Decoder",
@@ -29,19 +20,10 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
-    id: "image-resizer",
     slug: "image-resizer",
     category: "image",
-    group: "media",
     icon: "image",
     tags: ["image", "resize", "scale", "photo", "export"],
-    features: ["offline", "download", "preview"],
-    searchTerms: [
-      "image resizer",
-      "photo resize",
-      "browser image resize",
-      "png jpeg webp export",
-    ],
     locales: {
       en: {
         name: "Image Resizer",
@@ -55,19 +37,10 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
-    id: "json-schema-validator",
     slug: "json-schema-validator",
-    category: "validator",
-    group: "json",
+    category: "json",
     icon: "braces",
     tags: ["json", "schema", "validator", "developer", "api"],
-    features: ["offline", "copy", "format validation"],
-    searchTerms: [
-      "json schema validator",
-      "validate json",
-      "schema validation",
-      "json draft-07",
-    ],
     locales: {
       en: {
         name: "JSON Schema Validator",

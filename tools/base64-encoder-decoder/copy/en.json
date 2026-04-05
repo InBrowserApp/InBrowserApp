@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "Base64 Encoder and Decoder",
-    "description": "Encode plain text to Base64 and decode Base64 back to Unicode text directly in your browser."
-  },
-  "workspaceTitle": "Convert text to and from Base64 without leaving the page.",
-  "workspaceDescription": "Edit either side and the other side stays in sync. The converter uses the browser's native Base64 APIs with Unicode-safe text encoding.",
-  "contentTitle": "What this tool is good for",
-  "contentDescription": "Use the notes below when you need a quick refresher on when Base64 is useful and what it does not do.",
   "plainTextLabel": "Plain text",
   "plainTextPlaceholder": "Enter text to encode…",
   "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",

@@ -1,49 +1,125 @@
 ---
-import { SectionHeading } from "@workspace/ui/components/app/section-heading"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
 import Base64EncoderDecoderClient from "./client"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
-import type { ToolManifest, ToolMessageCatalog } from "@workspace/tool-sdk"
+import type { ToolMeta } from "@workspace/tool-sdk"
 
-type Base64PageMessages = ToolMessageCatalog & {
-  workspaceTitle: string
-  workspaceDescription: string
-  contentTitle: string
-  contentDescription: string
+type Base64Copy = Readonly<{
+  plainTextLabel: string
+  plainTextPlaceholder: string
+  plainTextDescription: string
+  encodedTextLabel: string
+  encodedTextPlaceholder: string
+  encodedTextDescription: string
+  invalidBase64Title: string
+  invalidBase64Description: string
+  copyPlainTextLabel: string
+  copyEncodedTextLabel: string
+  copiedLabel: string
+  resetLabel: string
+}>
+
+type LocalizedSectionModule = {
+  default: AstroComponentFactory
 }
 
 interface Props {
-  tool: ToolManifest
-  language: string
-  messages: Base64PageMessages
-  Content: AstroComponentFactory | null
+  lang: string
 }
 
-const { language, messages, Content } = Astro.props
+const { lang } = Astro.props
+
+const metaModules = import.meta.glob("./meta/*.json", {
+  eager: true,
+  import: "default",
+}) as Record<string, ToolMeta>
+const copyModules = import.meta.glob("./copy/*.json", {
+  eager: true,
+  import: "default",
+}) as Record<string, Base64Copy>
+const sectionModules = import.meta.glob("./sections/**/*.{md,mdx}")
+
+function getLanguageFromPath(path: string) {
+  return path.split("/").at(-1)?.replace(/\.(?:md|mdx|json)$/u, "") ?? "en"
+}
+
+function resolveLocalizedRecord<T>(
+  modules: Record<string, T>,
+  language: string,
+  fileExtension: "json" | "md" | "mdx",
+  basePath: string
+) {
+  const preferredKeys = [
+    `${basePath}/${language}.${fileExtension}`,
+    `${basePath}/en.${fileExtension}`,
+  ]
+
+  for (const key of preferredKeys) {
+    if (key in modules) {
+      return {
+        data: modules[key],
+        language: getLanguageFromPath(key),
+      }
+    }
+  }
+
+  const fallbackEntry = Object.entries(modules)[0]
+
+  if (!fallbackEntry) {
+    throw new Error(`Missing localized asset set at ${basePath}.`)
+  }
+
+  return {
+    data: fallbackEntry[1],
+    language: getLanguageFromPath(fallbackEntry[0]),
+  }
+}
+
+async function loadLocalizedSection(section: string, language: string) {
+  const preferredKeys = [
+    `./sections/${section}/${language}.md`,
+    `./sections/${section}/${language}.mdx`,
+    `./sections/${section}/en.md`,
+    `./sections/${section}/en.mdx`,
+  ]
+
+  for (const key of preferredKeys) {
+    const importer = sectionModules[key]
+
+    if (!importer) {
+      continue
+    }
+
+    const loadedModule = (await importer()) as LocalizedSectionModule
+    return loadedModule.default
+  }
+
+  return null
+}
+
+const { data: meta } = resolveLocalizedRecord(metaModules, lang, "json", "./meta")
+const { data: copy } = resolveLocalizedRecord(copyModules, lang, "json", "./copy")
+const IntroSection = await loadLocalizedSection("intro", lang)
+const messages = {
+  meta,
+  ...copy,
+}
 ---
 
-<div class="space-y-6">
+<ToolPageShell title={meta.name} description={meta.description}>
   <ToolSurface className="space-y-5">
-    <SectionHeading
-      eyebrow={messages.meta.name}
-      title={messages.workspaceTitle}
-      description={messages.workspaceDescription}
-    />
-    <Base64EncoderDecoderClient client:load language={language} messages={messages} />
+    <Base64EncoderDecoderClient client:load messages={messages} />
   </ToolSurface>
 
   {
-    Content ? (
-      <ToolSurface className="space-y-5">
-        <SectionHeading
-          title={messages.contentTitle}
-          description={messages.contentDescription}
-        />
+    IntroSection ? (
+      <ToolSurface>
         <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-          <Content />
+          <IntroSection />
         </article>
       </ToolSurface>
     ) : null
   }
-</div>
+</ToolPageShell>

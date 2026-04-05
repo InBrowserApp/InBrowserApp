@@ -1,9 +1,9 @@
-import type { ToolManifest } from "@workspace/tool-sdk"
+import type { ToolManifest, ToolMeta } from "@workspace/tool-sdk"
 
 type ToolRegistryEntrySource = Readonly<{
   directoryName: string
   manifestAbsolutePath: string
-  manifestImportPath: string
+  toolRoot: string
 }>
 
 type ToolStaticPathEntry = Readonly<{
@@ -11,20 +11,21 @@ type ToolStaticPathEntry = Readonly<{
   language: string
 }>
 
-type ToolSearchLocaleEntry = Readonly<{
-  name: string
-  description: string
+type ToolSearchLocaleEntry = ToolMeta
+
+type ToolRegistryEntry = Readonly<{
+  slug: string
+  category: string
+  icon: string
+  tags: readonly string[]
+  locales: Readonly<Record<string, ToolSearchLocaleEntry>>
 }>
 
 type ToolSearchIndexEntry = Readonly<{
-  id: string
   slug: string
   category: string
-  group?: string
   icon: string
   tags: readonly string[]
-  features: readonly string[]
-  searchTerms: readonly string[]
   locales: Readonly<Record<string, ToolSearchLocaleEntry>>
 }>
 
@@ -44,14 +45,16 @@ type ToolRegistryGenerationOptions = Readonly<{
 
 type LoadedToolManifest = Readonly<{
   manifest: ToolManifest
-  source: ToolRegistryEntrySource
+  registryEntry: ToolRegistryEntry
   searchIndexEntry: ToolSearchIndexEntry
+  source: ToolRegistryEntrySource
   staticPaths: readonly ToolStaticPathEntry[]
 }>
 
 export type {
   LoadedToolManifest,
   ToolRegistryArtifactPaths,
+  ToolRegistryEntry,
   ToolRegistryEntrySource,
   ToolRegistryGenerationOptions,
   ToolSearchIndexEntry,

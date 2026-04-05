@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "图片尺寸缩放",
-    "description": "直接在浏览器中缩放图片尺寸，并导出为 PNG、JPEG 或 WebP。"
-  },
-  "workspaceTitle": "在本地缩放图片，而不是把文件交给不透明的上传流程。",
-  "workspaceDescription": "选择图片、调整宽高、决定是否锁定比例，然后直接在浏览器里导出缩放后的结果，不需要把文件发送到服务端。",
-  "contentTitle": "浏览器本地缩放适合什么场景",
-  "contentDescription": "下面的说明会帮助你判断哪些图片处理任务适合直接在浏览器里完成，哪些情况仍然更适合更重的图像流水线。",
   "uploadTitle": "源图片",
   "uploadDescription": "选择本地图片文件，查看其尺寸并生成缩放后的导出结果。",
   "chooseImageLabel": "选择图片",

@@ -1,12 +1,4 @@
 {
-  "meta": {
-    "name": "JSON Schema 校验器",
-    "description": "根据 JSON Schema 校验 JSON 数据，支持草案识别，并输出可读的错误信息。"
-  },
-  "workspaceTitle": "直接在浏览器里校验请求体、示例数据和 Schema。",
-  "workspaceDescription": "粘贴 Schema 和 JSON 文档，切换校验选项，然后查看在客户端本地生成的清晰错误结果。",
-  "contentTitle": "这个校验器最适合什么场景",
-  "contentDescription": "下面的说明会帮助你判断什么时候浏览器内校验已经足够，什么时候仍然需要服务端校验。",
   "schemaLabel": "Schema",
   "schemaDescription": "输入 JSON Schema 文档。会自动识别 Draft-07 与 2020-12。",
   "schemaPlaceholder": "在这里粘贴 JSON Schema…",

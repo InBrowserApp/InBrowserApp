@@ -5,15 +5,16 @@
 ## Responsibilities
 
 - scans `tools/*/manifest.ts`
-- validates manifest shape and uniqueness
-- loads localized message catalogs for generated search data
+- validates manifest shape and slug uniqueness
+- requires a fixed `index.astro` entrypoint per tool
+- loads and validates `meta/*.json`
 - writes generated outputs into `src/generated/`
 
 ## Generated outputs
 
-- `registry.ts`: typed manifest registry and lookup maps
+- `registry.ts`: generated tool registry keyed by slug
 - `static-paths.ts`: language-aware static path entries
-- `search-index.ts`: localized search index data
+- `search-index.ts`: localized search records based on tool metadata
 
 ## Usage
 
@@ -23,4 +24,4 @@ Run the generator from the repo root:
 pnpm tool-registry:generate
 ```
 
-Root `build`, `typecheck`, and `dev` commands run the generator first so the generated source stays in sync with manifests.
+Root `build`, `typecheck`, and `dev` commands run the generator first so the generated source stays in sync with tool manifests and localized meta files.

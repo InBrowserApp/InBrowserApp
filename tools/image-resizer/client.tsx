@@ -86,12 +86,9 @@ type ImageResizerMessages = Readonly<{
   formatPng: string
   formatJpeg: string
   formatWebp: string
-  workspaceTitle: string
-  workspaceDescription: string
 }>
 
 type ImageResizerClientProps = Readonly<{
-  language: string
   messages: ImageResizerMessages
 }>
 
