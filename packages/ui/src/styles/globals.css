@@ -3,8 +3,8 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
-@source "../../../apps/web/src/**/*.{ts,tsx,astro}";
-@source "../../../tools/**/*.{ts,tsx,astro}";
+@source "../../../../apps/web/src/**/*.{ts,tsx,astro}";
+@source "../../../../tools/**/*.{ts,tsx,astro}";
 @source "../**/*.{ts,tsx}";
 
 @theme inline {
