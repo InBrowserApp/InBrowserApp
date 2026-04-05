@@ -7,13 +7,17 @@ import Base64EncoderDecoderClient from "./client"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
-type Base64Copy = Readonly<{
+type Base64MessagesCatalog = Readonly<{
+  workspaceEyebrow: string
+  workspaceDescription: string
+  localOnlyLabel: string
   plainTextLabel: string
   plainTextPlaceholder: string
   plainTextDescription: string
   encodedTextLabel: string
   encodedTextPlaceholder: string
   encodedTextDescription: string
+  lengthLabel: string
   invalidBase64Title: string
   invalidBase64Description: string
   copyPlainTextLabel: string
@@ -39,7 +43,7 @@ const metaModules = import.meta.glob("./meta/*.json", {
 const messageModules = import.meta.glob("./messages/*.json", {
   eager: true,
   import: "default",
-}) as Record<string, Base64Copy>
+}) as Record<string, Base64MessagesCatalog>
 const sectionModules = import.meta.glob("./sections/**/*.{md,mdx}")
 
 function getLanguageFromPath(path: string) {
@@ -101,7 +105,7 @@ async function loadLocalizedSection(section: string, language: string) {
 }
 
 const { data: meta } = resolveLocalizedRecord(metaModules, lang, "json", "./meta")
-const { data: copy } = resolveLocalizedRecord(
+const { data: localizedMessages } = resolveLocalizedRecord(
   messageModules,
   lang,
   "json",
@@ -110,13 +114,13 @@ const { data: copy } = resolveLocalizedRecord(
 const IntroSection = await loadLocalizedSection("intro", lang)
 const messages = {
   meta,
-  ...copy,
+  ...localizedMessages,
 }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ToolSurface className="overflow-hidden p-0">
-    <Base64EncoderDecoderClient client:load messages={messages} />
+    <Base64EncoderDecoderClient client:load lang={lang} messages={messages} />
   </ToolSurface>
 
   {

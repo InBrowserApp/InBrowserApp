@@ -1,14 +1,18 @@
 {
-  "plainTextLabel": "Plain text",
+  "workspaceEyebrow": "Two-Way Conversion",
+  "workspaceDescription": "Type in either panel. Valid Base64 values decode back into text immediately.",
+  "localOnlyLabel": "Runs Locally",
+  "plainTextLabel": "Plain Text",
   "plainTextPlaceholder": "Enter text to encode…",
   "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
-  "encodedTextLabel": "Base64 output",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Paste Base64 to decode…",
-  "encodedTextDescription": "Edit the Base64 text directly to decode it back into plain text.",
+  "encodedTextDescription": "Paste or edit Base64 here to decode it back into readable text.",
+  "lengthLabel": "Length",
   "invalidBase64Title": "The Base64 value is not valid yet.",
   "invalidBase64Description": "Check for missing padding, unexpected characters, or partially pasted data.",
-  "copyPlainTextLabel": "Copy plain text",
+  "copyPlainTextLabel": "Copy Plain Text",
   "copyEncodedTextLabel": "Copy Base64",
   "copiedLabel": "Copied",
-  "resetLabel": "Reset example"
+  "resetLabel": "Reset Example"
 }

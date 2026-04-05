@@ -7,7 +7,7 @@ import JsonSchemaValidatorClient from "./client"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
-type JsonSchemaCopy = Readonly<{
+type JsonSchemaMessagesCatalog = Readonly<{
   schemaLabel: string
   schemaDescription: string
   schemaPlaceholder: string
@@ -55,7 +55,7 @@ const metaModules = import.meta.glob("./meta/*.json", {
 const messageModules = import.meta.glob("./messages/*.json", {
   eager: true,
   import: "default",
-}) as Record<string, JsonSchemaCopy>
+}) as Record<string, JsonSchemaMessagesCatalog>
 const sectionModules = import.meta.glob("./sections/**/*.{md,mdx}")
 
 function getLanguageFromPath(path: string) {
@@ -117,7 +117,7 @@ async function loadLocalizedSection(section: string, language: string) {
 }
 
 const { data: meta } = resolveLocalizedRecord(metaModules, lang, "json", "./meta")
-const { data: copy } = resolveLocalizedRecord(
+const { data: localizedMessages } = resolveLocalizedRecord(
   messageModules,
   lang,
   "json",
@@ -126,7 +126,7 @@ const { data: copy } = resolveLocalizedRecord(
 const IntroSection = await loadLocalizedSection("intro", lang)
 const messages = {
   meta,
-  ...copy,
+  ...localizedMessages,
 }
 ---
 
