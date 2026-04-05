@@ -26,6 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
+import { Slider } from "@workspace/ui/components/ui/slider"
 import { Switch } from "@workspace/ui/components/ui/switch"
 import {
   Download,
@@ -327,8 +328,8 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
   }
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_24rem]">
+    <div className="flex flex-col gap-6">
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <Card>
           <CardHeader>
             <CardTitle>{messages.uploadTitle}</CardTitle>
@@ -484,28 +485,23 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <Label htmlFor={`${inputId}-quality`}>
-                  {messages.qualityLabel}
-                </Label>
+                <Label>{messages.qualityLabel}</Label>
                 <span className="font-mono text-sm text-muted-foreground">
                   {options.quality}
                 </span>
               </div>
-              <input
-                id={`${inputId}-quality`}
-                type="range"
+              <Slider
                 min={1}
                 max={100}
-                value={options.quality}
-                onChange={(event) => {
+                value={[options.quality]}
+                onValueChange={([value]) => {
                   setOptions((currentOptions) => ({
                     ...currentOptions,
-                    quality: Number(event.target.value),
+                    quality: value,
                   }))
                 }}
-                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-secondary accent-primary"
               />
               <p className="text-sm leading-6 text-muted-foreground">
                 {messages.qualityDescription}
@@ -642,9 +638,6 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
               </div>
 
               <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="outline" className="font-mono">
-                  {result.outputWidth} × {result.outputHeight}
-                </Badge>
                 <Badge variant="secondary">{result.mimeType}</Badge>
                 <Badge variant="secondary">
                   {formatFileSize(result.blob.size)}

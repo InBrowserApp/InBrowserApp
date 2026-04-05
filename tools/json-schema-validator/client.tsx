@@ -217,9 +217,9 @@ function JsonSchemaValidatorClient({
   }
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
-        <div className="grid auto-rows-fr gap-4 md:grid-cols-2">
+    <div className="flex flex-col gap-6">
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_20rem]">
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-2">
           <Card>
             <CardHeader className="border-b">
               <CardTitle>{messages.schemaLabel}</CardTitle>

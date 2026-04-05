@@ -104,7 +104,7 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="grid gap-6 lg:grid-cols-2">
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.plainTextLabel}</CardTitle>
