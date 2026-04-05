@@ -7,8 +7,14 @@ import {
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Label } from "@workspace/ui/components/ui/label"
-import { Separator } from "@workspace/ui/components/ui/separator"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { RefreshCcw, TriangleAlert } from "@workspace/ui/icons"
 
@@ -98,29 +104,28 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row">
-      <section className="flex min-w-0 flex-1 flex-col gap-4 px-5 py-5 sm:px-6 sm:py-6">
-        <div className="flex flex-col gap-1.5">
-          <Label htmlFor={plainTextId}>{messages.plainTextLabel}</Label>
-          <p className="text-sm leading-6 text-muted-foreground">
-            {messages.plainTextDescription}
-          </p>
-        </div>
-
-        <Textarea
-          id={plainTextId}
-          name="plain-text"
-          autoComplete="off"
-          rows={10}
-          value={plainText}
-          onChange={(event) => {
-            handlePlainTextChange(event.target.value)
-          }}
-          className="min-h-72 resize-y font-mono text-sm"
-          placeholder={messages.plainTextPlaceholder}
-        />
-
-        <div className="flex flex-wrap items-center justify-between gap-3">
+    <div className="grid gap-4 lg:grid-cols-2">
+      <Card>
+        <CardHeader className="border-b">
+          <CardTitle>{messages.plainTextLabel}</CardTitle>
+          <CardDescription>{messages.plainTextDescription}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Textarea
+            id={plainTextId}
+            name="plain-text"
+            autoComplete="off"
+            rows={10}
+            aria-label={messages.plainTextLabel}
+            value={plainText}
+            onChange={(event) => {
+              handlePlainTextChange(event.target.value)
+            }}
+            className="min-h-64 resize-y font-mono text-sm"
+            placeholder={messages.plainTextPlaceholder}
+          />
+        </CardContent>
+        <CardFooter className="justify-between gap-3 border-t">
           <ToolCopyButton
             value={plainText}
             copyLabel={messages.copyPlainTextLabel}
@@ -131,59 +136,52 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
             <RefreshCcw data-icon="inline-start" />
             {messages.resetLabel}
           </Button>
-        </div>
-      </section>
+        </CardFooter>
+      </Card>
 
-      <Separator className="mx-5 sm:mx-6 lg:hidden" />
-      <Separator
-        orientation="vertical"
-        className="my-12 hidden h-auto lg:block"
-      />
+      <Card>
+        <CardHeader className="border-b">
+          <CardTitle>{messages.encodedTextLabel}</CardTitle>
+          <CardDescription>{messages.encodedTextDescription}</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-4">
+          <Textarea
+            id={encodedTextId}
+            name="base64-output"
+            autoComplete="off"
+            spellCheck={false}
+            rows={10}
+            aria-label={messages.encodedTextLabel}
+            value={encodedText}
+            onChange={(event) => {
+              handleEncodedTextChange(event.target.value)
+            }}
+            aria-invalid={decodeError}
+            className="min-h-64 resize-y font-mono text-sm"
+            placeholder={messages.encodedTextPlaceholder}
+          />
 
-      <section className="flex min-w-0 flex-1 flex-col gap-4 px-5 py-5 sm:px-6 sm:py-6">
-        <div className="flex flex-col gap-1.5">
-          <Label htmlFor={encodedTextId}>{messages.encodedTextLabel}</Label>
-          <p className="text-sm leading-6 text-muted-foreground">
-            {messages.encodedTextDescription}
-          </p>
-        </div>
-
-        <Textarea
-          id={encodedTextId}
-          name="base64-output"
-          autoComplete="off"
-          spellCheck={false}
-          rows={10}
-          value={encodedText}
-          onChange={(event) => {
-            handleEncodedTextChange(event.target.value)
-          }}
-          aria-invalid={decodeError}
-          className="min-h-72 resize-y font-mono text-sm"
-          placeholder={messages.encodedTextPlaceholder}
-        />
-
-        <div aria-live="polite">
-          {decodeError ? (
-            <Alert variant="destructive">
-              <TriangleAlert />
-              <AlertTitle>{messages.invalidBase64Title}</AlertTitle>
-              <AlertDescription>
-                {messages.invalidBase64Description}
-              </AlertDescription>
-            </Alert>
-          ) : null}
-        </div>
-
-        <div className="flex justify-end">
+          <div aria-live="polite">
+            {decodeError ? (
+              <Alert variant="destructive">
+                <TriangleAlert />
+                <AlertTitle>{messages.invalidBase64Title}</AlertTitle>
+                <AlertDescription>
+                  {messages.invalidBase64Description}
+                </AlertDescription>
+              </Alert>
+            ) : null}
+          </div>
+        </CardContent>
+        <CardFooter className="justify-end border-t">
           <ToolCopyButton
             value={encodedText}
             copyLabel={messages.copyEncodedTextLabel}
             copiedLabel={messages.copiedLabel}
             variant="ghost"
           />
-        </div>
-      </section>
+        </CardFooter>
+      </Card>
     </div>
   )
 }
