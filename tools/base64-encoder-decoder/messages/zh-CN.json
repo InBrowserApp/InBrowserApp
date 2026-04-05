@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "纯文本",
+  "plainTextPlaceholder": "输入要编码的文本…",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "encodedTextLabel": "Base64 输出",
+  "encodedTextPlaceholder": "粘贴 Base64 进行解码…",
+  "encodedTextDescription": "直接编辑 Base64 文本即可解码回纯文本。",
+  "invalidBase64Title": "当前 Base64 还不是有效值。",
+  "invalidBase64Description": "请检查是否缺少填充字符、包含意外字符，或只粘贴了一部分数据。",
+  "copyPlainTextLabel": "复制纯文本",
+  "copyEncodedTextLabel": "复制 Base64",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例"
+}

@@ -1,0 +1,28 @@
+import type { PropsWithChildren } from "react"
+
+import { cn } from "@workspace/ui/lib/utils"
+
+type ToolArticleProps = PropsWithChildren<{
+  className?: string
+}>
+
+function ToolArticle({ className, children }: ToolArticleProps) {
+  return (
+    <article
+      className={cn(
+        "text-sm leading-7 text-foreground/80 sm:text-base",
+        "[&_h2]:mt-8 [&_h2]:scroll-m-20 [&_h2]:font-heading [&_h2]:text-lg [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-balance [&_h2]:text-foreground sm:[&_h2]:text-xl",
+        "[&_h2:first-child]:mt-0",
+        "[&_p:not(:first-child)]:mt-5",
+        "[&_ul]:my-5 [&_ul]:ml-6 [&_ul]:list-disc [&_ul]:marker:text-foreground/50 [&_ul_li]:mt-2",
+        "[&_strong]:font-medium [&_strong]:text-foreground",
+        "[&_a]:font-medium [&_a]:text-foreground [&_a]:underline [&_a]:underline-offset-4",
+        className
+      )}
+    >
+      {children}
+    </article>
+  )
+}
+
+export { ToolArticle }

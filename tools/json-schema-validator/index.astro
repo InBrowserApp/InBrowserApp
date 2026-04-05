@@ -1,0 +1,79 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import JsonSchemaValidatorClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type JsonSchemaMessagesCatalog = Readonly<{
+  schemaLabel: string
+  schemaDescription: string
+  schemaPlaceholder: string
+  dataLabel: string
+  dataDescription: string
+  dataPlaceholder: string
+  optionsTitle: string
+  optionsDescription: string
+  validateFormatsLabel: string
+  validateFormatsDescription: string
+  allErrorsLabel: string
+  allErrorsDescription: string
+  draftLabel: string
+  idleTitle: string
+  idleDescription: string
+  parseErrorTitle: string
+  schemaErrorTitle: string
+  validTitle: string
+  validDescription: string
+  invalidTitle: string
+  invalidDescription: string
+  errorPathLabel: string
+  errorKeywordLabel: string
+  errorMessageLabel: string
+  resultTitle: string
+  resultDescription: string
+  copySchemaLabel: string
+  copyDataLabel: string
+  copyErrorsLabel: string
+  copiedLabel: string
+  loadExampleLabel: string
+  clearLabel: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<JsonSchemaMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", { eager: true, import: "default" }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <JsonSchemaValidatorClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolSurface>
+        <ToolArticle>
+          <IntroSection />
+        </ToolArticle>
+      </ToolSurface>
+    ) : null
+  }
+</ToolPageShell>

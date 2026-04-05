@@ -7,7 +7,10 @@
     "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@/*": ["apps/web/src/*"]
+      "@/*": ["apps/web/src/*"],
+      "@workspace/tool-sdk": ["packages/tool-sdk/src/index.ts"],
+      "@workspace/tool-sdk/*": ["packages/tool-sdk/src/*"],
+      "@workspace/ui/*": ["packages/ui/src/*"]
     }
   }
 }

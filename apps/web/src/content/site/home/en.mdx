@@ -1,11 +1,15 @@
-## One routing model for every page
+## The shell now hosts real, self-contained tools
 
-The Astro rewrite now treats localization as a routing concern first. English pages stay at the root, while non-default languages live behind `/:lang` and reuse the same page components.
+The rewrite is no longer just proving the shell. The first migrated tools now render through the generated registry, which means the same platform layer is exercising real text, validation, and file-processing flows.
 
-This keeps canonical URLs, alternate language links, and sitemap generation aligned with the actual page tree instead of depending on runtime router aliases.
+That matters because a route tree can look stable long before the tool boundary is actually maintainable. Shipping the first archetypes proves that a smaller contract can still power discovery, search, and localized detail pages.
 
-## Content lives next to the page type that owns it
+## The contract is smaller now
 
-Short labels stay in JSON message catalogs, while long-form explanations stay in localized MDX files. The split keeps UI copy, SEO metadata, and editorial content from collapsing into one component file.
+Each migrated tool now guarantees only a few things to the shell:
 
-The same fallback rules now apply to both site pages and tool pages, which means future tools can opt into localized content without inventing their own loading model.
+- `manifest.ts` for non-localized discovery metadata
+- `index.astro` as the fixed page entrypoint
+- `meta/<lang>.json` for localized name and description
+
+Everything else stays inside the tool. A tool may use `client.tsx`, `messages/`, `sections/`, `components/`, or `workers/`, but those are no longer shell-level contract fields.

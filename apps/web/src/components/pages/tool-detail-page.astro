@@ -1,10 +1,6 @@
 ---
 import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
-import { SectionHeading } from "@workspace/ui/components/app/section-heading"
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
-import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
-import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
 import { ArrowRight } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
 import { createPageSeo } from "@/lib/seo"
@@ -30,24 +26,18 @@ if (!pageData) {
 
 const seo = createPageSeo({
   availableLanguages: pageData.availableLanguages,
-  description: pageData.messages.meta.description,
+  description: pageData.meta.description,
   language,
   pathname: `/tools/${slug}`,
-  title: `${pageData.messages.meta.name} · ${catalog.metadata.toolTitleSuffix}`,
+  title: `${pageData.meta.name} · ${catalog.metadata.toolTitleSuffix}`,
 })
-const Content = pageData.Content as AstroComponentFactory | null
+const Page = pageData.Page as AstroComponentFactory | null
 const languageOptions = createLanguageOptions(
   `/tools/${slug}`,
   language,
   catalog.site.languages,
   pageData.availableLanguages
 )
-const siteLanguageLabels = catalog.site.languages as Record<string, string>
-const messageLanguageLabel =
-  siteLanguageLabels[pageData.messageLanguage] ?? pageData.messageLanguage
-const contentLanguageLabel = pageData.contentLanguage
-  ? siteLanguageLabels[pageData.contentLanguage] ?? pageData.contentLanguage
-  : "—"
 ---
 
 <MainLayout
@@ -73,111 +63,15 @@ const contentLanguageLabel = pageData.contentLanguage
         />
       </div>
 
-      <ToolPageShell
-        title={pageData.messages.meta.name}
-        description={pageData.messages.meta.description}
-      >
-        <div class="flex flex-wrap items-center gap-3">
-          <Badge variant="secondary">{pageData.tool.category}</Badge>
-          {pageData.tool.group ? <Badge variant="outline">{pageData.tool.group}</Badge> : null}
-          <Badge variant="outline">{pageData.tool.icon}</Badge>
-        </div>
-
-        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-          <ToolSurface className="space-y-5">
-            <SectionHeading
-              eyebrow={catalog.tool.eyebrow}
-              title={catalog.tool.detailsTitle}
-              description={pageData.messages.meta.description}
-            />
-            <dl class="grid gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2">
-              <div class="space-y-1">
-                <dt class="font-medium text-foreground">{catalog.tool.categoryLabel}</dt>
-                <dd>{pageData.tool.category}</dd>
-              </div>
-              <div class="space-y-1">
-                <dt class="font-medium text-foreground">{catalog.tool.groupLabel}</dt>
-                <dd>{pageData.tool.group ?? "—"}</dd>
-              </div>
-              <div class="space-y-1">
-                <dt class="font-medium text-foreground">{catalog.tool.messageLanguageLabel}</dt>
-                <dd>{messageLanguageLabel}</dd>
-              </div>
-              <div class="space-y-1">
-                <dt class="font-medium text-foreground">{catalog.tool.contentLanguageLabel}</dt>
-                <dd>{contentLanguageLabel}</dd>
-              </div>
-            </dl>
-
-            <div class="space-y-3">
-              <div class="space-y-2">
-                <p class="text-sm font-medium text-foreground">{catalog.tool.tagsLabel}</p>
-                <div class="flex flex-wrap gap-2">
-                  {pageData.tool.tags.map((tag) => <Badge>{tag}</Badge>)}
-                </div>
-              </div>
-              <div class="space-y-2">
-                <p class="text-sm font-medium text-foreground">{catalog.tool.featuresLabel}</p>
-                <div class="flex flex-wrap gap-2">
-                  {(pageData.tool.features ?? []).map((feature) => (
-                    <Badge variant="secondary">{feature}</Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </ToolSurface>
-
-          <ToolSurface className="space-y-5">
-            <SectionHeading
-              title={catalog.tool.clientStatusLabel}
-              description={
-                pageData.tool.island
-                  ? pageData.tool.island.path
-                  : catalog.tool.clientMissing
-              }
-            />
-
-            {pageData.tool.island ? (
-              <p class="text-sm leading-6 text-muted-foreground">
-                <code>{pageData.tool.island.path}</code>
-              </p>
-            ) : (
-              <p class="text-sm leading-6 text-muted-foreground">
-                {catalog.tool.clientMissing}
-              </p>
-            )}
-
-            <div class="rounded-[calc(var(--radius)*1.4)] border border-dashed border-border/80 bg-muted/30 p-4">
-              <p class="font-medium text-foreground">{catalog.site.languageLabel}</p>
-              <div class="mt-3 flex flex-wrap gap-2">
-                {pageData.availableLanguages.map((availableLanguage) => (
-                  <Badge variant="outline">
-                    {siteLanguageLabels[availableLanguage] ?? availableLanguage}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </ToolSurface>
-        </div>
-
-        <ToolSurface className="space-y-5">
-          <SectionHeading
-            title={catalog.tool.contentTitle}
-            description={pageData.messages.meta.description}
-          />
-          {
-            Content ? (
-              <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-                <Content />
-              </article>
-            ) : (
-              <p class="text-sm leading-6 text-muted-foreground">
-                {catalog.tool.contentMissing}
-              </p>
-            )
-          }
-        </ToolSurface>
-      </ToolPageShell>
+      {
+        Page ? (
+          <Page lang={language} />
+        ) : (
+          <div class="rounded-[calc(var(--radius)*1.8)] border border-dashed border-border/80 bg-muted/30 p-6 text-sm leading-6 text-muted-foreground">
+            {catalog.tools.emptyRegistryDescription}
+          </div>
+        )
+      }
     </div>
   </div>
 </MainLayout>

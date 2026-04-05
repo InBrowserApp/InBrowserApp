@@ -1,87 +1,62 @@
 import type { DefaultRequiredToolLanguage, ToolLanguage } from "./languages"
 
-type RelativeToolPath = `./${string}`
-type ToolMessageFilePath = `./${string}.json`
-type ToolContentFilePath = `./${string}.mdx`
-type ToolModuleFilePath = `./${string}.${"js" | "jsx" | "ts" | "tsx"}`
-
-type ToolMessageMeta = Readonly<{
+type ToolMeta = Readonly<{
   name: string
   description: string
 }>
 
-type ToolMessageCatalog = Readonly<
-  {
-    meta: ToolMessageMeta
-  } & Record<string, unknown>
+type ToolMetaCatalogs<TLanguage extends string = ToolLanguage> = Readonly<
+  Record<TLanguage, ToolMeta>
 >
 
-type ToolLocalizedMessageFiles<TLanguage extends string = ToolLanguage> =
-  Readonly<Record<TLanguage, ToolMessageFilePath>>
+/**
+ * Known tool categories.  The union is open-ended (`string & {}`) so new
+ * categories can be introduced without updating the SDK first, while
+ * existing values still get autocomplete and typo detection.
+ */
+type ToolCategory =
+  | "crypto"
+  | "developer"
+  | "image"
+  | "json"
+  | "network"
+  | "pdf"
+  | "text"
+  | "web"
+  | (string & {})
 
-type ToolLocalizedContentFiles<TLanguage extends string = ToolLanguage> =
-  Readonly<Record<TLanguage, ToolContentFilePath>>
+/** Known lucide icon identifiers used across tool manifests. */
+type ToolIcon =
+  | "binary"
+  | "braces"
+  | "file-text"
+  | "globe"
+  | "image"
+  | "lock"
+  | "network"
+  | "file-json-2"
+  | (string & {})
 
-type ToolMessageCatalogs<TLanguage extends string = ToolLanguage> = Readonly<
-  Record<TLanguage, ToolMessageCatalog>
->
-
-type ToolIslandDefinition = Readonly<{
-  path: ToolModuleFilePath
-  exportName?: string
+type ToolDefinition = Readonly<{
+  category: ToolCategory
+  icon: ToolIcon
+  tags?: readonly string[]
 }>
 
-type ToolDefinition<
-  TMessages extends ToolLocalizedMessageFiles =
-    ToolLocalizedMessageFiles<DefaultRequiredToolLanguage>,
-  TContent extends ToolLocalizedContentFiles | undefined =
-    | ToolLocalizedContentFiles<DefaultRequiredToolLanguage>
-    | undefined,
-> = Readonly<{
-  id: string
-  slug: string
-  category: string
-  group?: string
-  icon: string
-  tags: readonly string[]
-  searchTerms?: readonly string[]
-  features?: readonly string[]
-  messages: TMessages
-  content?: TContent
-  island?: ToolIslandDefinition
-}>
-
-type ToolManifest<
-  TMessages extends ToolLocalizedMessageFiles =
-    ToolLocalizedMessageFiles<DefaultRequiredToolLanguage>,
-  TContent extends ToolLocalizedContentFiles | undefined =
-    | ToolLocalizedContentFiles<DefaultRequiredToolLanguage>
-    | undefined,
-> = ToolDefinition<TMessages, TContent>
+type ToolManifest = ToolDefinition
 
 type ToolValidationOptions<TLanguage extends string = ToolLanguage> = Readonly<{
   requiredLanguages?: readonly TLanguage[]
 }>
 
-type CreateLocalizedAssetFilesOptions = Readonly<{
-  directory: string
-}>
-
 export type {
-  CreateLocalizedAssetFilesOptions,
   DefaultRequiredToolLanguage,
-  RelativeToolPath,
-  ToolContentFilePath,
+  ToolCategory,
   ToolDefinition,
-  ToolIslandDefinition,
+  ToolIcon,
   ToolLanguage,
   ToolManifest,
-  ToolLocalizedContentFiles,
-  ToolLocalizedMessageFiles,
-  ToolMessageCatalog,
-  ToolMessageCatalogs,
-  ToolMessageFilePath,
-  ToolMessageMeta,
-  ToolModuleFilePath,
+  ToolMeta,
+  ToolMetaCatalogs,
   ToolValidationOptions,
 }

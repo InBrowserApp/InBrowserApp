@@ -1,70 +1,51 @@
 # `@workspace/tool-sdk`
 
-`packages/tool-sdk` owns the framework-agnostic tool contract for the Astro rewrite.
+`packages/tool-sdk` owns the minimal, framework-agnostic tool contract for the Astro rewrite.
 
 ## Responsibilities
 
 - defines the stable tool manifest shape
-- defines localized message/content asset references
-- validates required metadata and required language coverage
+- defines the localized meta shape used by search, routes, and SEO
 - exposes `defineTool()` for authoring manifests
-- keeps UI, Astro routing, and framework component types out of the contract
+- validates manifests and localized meta catalogs
+- keeps UI, Astro routing, and tool-internal structure out of the contract
+
+## Contract shape
+
+The shell should know as little as possible about tool internals.
+
+`manifest.ts` only declares stable, non-localized discovery metadata:
+
+```ts
+import { defineTool } from "@workspace/tool-sdk"
+
+export const tool = defineTool({
+  category: "text",
+  icon: "binary",
+  tags: ["base64", "encoding", "unicode"],
+})
+```
+
+Localized discovery metadata lives in `meta/<lang>.json`:
+
+```json
+{
+  "name": "Base64 Encoder and Decoder",
+  "description": "Encode plain text to Base64 and decode Base64 back to Unicode text directly in your browser."
+}
+```
+
+## What is intentionally not in the contract
+
+The following stay tool-local and are discovered only by the tool's own `index.astro` entrypoint:
+
+- `client.tsx`
+- `messages/`
+- `sections/`
+- `components/`
+- `workers/`
+- any other internal file layout
 
 ## Required languages
 
-The current rewrite baseline requires:
-
-- `en`
-- `zh-CN`
-
-Every tool manifest must provide message assets for those languages. Long-form content is optional, but if a tool opts into content it must cover the required languages as well.
-
-## Example
-
-```ts
-import {
-  DEFAULT_REQUIRED_TOOL_LANGUAGES,
-  createLocalizedContentFiles,
-  createLocalizedMessageFiles,
-  defineTool,
-} from "@workspace/tool-sdk"
-
-export const tool = defineTool({
-  id: "base64-encoder-decoder",
-  slug: "base64-encoder-decoder",
-  category: "encoding",
-  group: "encoding",
-  icon: "binary",
-  tags: ["encoding", "text"],
-  searchTerms: ["base64 encoder", "base64 decoder"],
-  features: ["offline", "copy"],
-  messages: createLocalizedMessageFiles(DEFAULT_REQUIRED_TOOL_LANGUAGES),
-  content: createLocalizedContentFiles(DEFAULT_REQUIRED_TOOL_LANGUAGES),
-  island: {
-    path: "./client.tsx",
-  },
-})
-```
-
-## Message catalog validation
-
-`tool-sdk` also validates the actual message catalogs once they are loaded by tooling such as the registry generator:
-
-```ts
-import { assertToolMessageCatalogs } from "@workspace/tool-sdk"
-
-assertToolMessageCatalogs({
-  en: {
-    meta: {
-      name: "Base64 Encoder / Decoder",
-      description: "Encode and decode Base64 strings in your browser.",
-    },
-  },
-  "zh-CN": {
-    meta: {
-      name: "Base64 编码 / 解码",
-      description: "在浏览器中进行 Base64 编码和解码。",
-    },
-  },
-})
-```
+The default baseline requires `en` localized meta. Additional languages may be added tool by tool.

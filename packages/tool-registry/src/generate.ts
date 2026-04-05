@@ -1,43 +1,24 @@
+import type { Dirent } from "node:fs"
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises"
-import { relative, resolve } from "node:path"
+import { resolve } from "node:path"
 import { fileURLToPath, pathToFileURL } from "node:url"
 
 import {
   assertToolManifest,
-  assertToolMessageCatalogs,
+  assertToolMetaCatalogs,
   ToolContractError,
   type ToolManifest,
-  type ToolMessageCatalogs,
+  type ToolMetaCatalogs,
 } from "@workspace/tool-sdk"
 
 import type {
   LoadedToolManifest,
   ToolRegistryArtifactPaths,
+  ToolRegistryEntry,
   ToolRegistryEntrySource,
   ToolRegistryGenerationOptions,
   ToolSearchIndexEntry,
 } from "./types"
-
-function toPosixPath(path: string) {
-  return path.replaceAll("\\", "/")
-}
-
-function toRelativeImportPath(fromDirectory: string, targetPath: string) {
-  const relativePath = toPosixPath(relative(fromDirectory, targetPath))
-  const normalized = relativePath.startsWith(".")
-    ? relativePath
-    : `./${relativePath}`
-
-  return normalized.replace(/\.(?:ts|tsx|js|jsx)$/, "")
-}
-
-function toVariableName(slug: string) {
-  const camelCase = slug.replace(/-([a-z0-9])/g, (_, character: string) =>
-    character.toUpperCase()
-  )
-
-  return camelCase.replace(/^[0-9]/, (digit) => `tool${digit}`)
-}
 
 function stringifyJson(value: unknown) {
   return `${JSON.stringify(value, null, 2)}\n`
@@ -73,10 +54,7 @@ async function fileExists(path: string) {
   }
 }
 
-async function discoverToolManifestSources(
-  toolsRoot: string,
-  generatedRoot: string
-) {
+async function discoverToolManifestSources(toolsRoot: string) {
   const directoryEntries = await readdir(toolsRoot, { withFileTypes: true })
   const manifestSources: ToolRegistryEntrySource[] = []
 
@@ -85,7 +63,8 @@ async function discoverToolManifestSources(
       continue
     }
 
-    const manifestAbsolutePath = resolve(toolsRoot, entry.name, "manifest.ts")
+    const toolRoot = resolve(toolsRoot, entry.name)
+    const manifestAbsolutePath = resolve(toolRoot, "manifest.ts")
 
     if (!(await fileExists(manifestAbsolutePath))) {
       continue
@@ -94,10 +73,7 @@ async function discoverToolManifestSources(
     manifestSources.push({
       directoryName: entry.name,
       manifestAbsolutePath,
-      manifestImportPath: toRelativeImportPath(
-        generatedRoot,
-        manifestAbsolutePath
-      ),
+      toolRoot,
     })
   }
 
@@ -129,183 +105,151 @@ async function loadManifestModule(source: ToolRegistryEntrySource) {
   return manifest
 }
 
-async function loadToolMessageCatalogs(
-  manifest: ToolManifest,
-  source: ToolRegistryEntrySource
-) {
-  const manifestDirectory = resolve(source.manifestAbsolutePath, "..")
+function getLanguageFromMetaFilename(filename: string) {
+  return filename.replace(/\.json$/u, "")
+}
+
+async function loadToolMetaCatalogs(source: ToolRegistryEntrySource) {
+  const metaDirectory = resolve(source.toolRoot, "meta")
+
+  let directoryEntries: Dirent[]
+  try {
+    directoryEntries = await readdir(metaDirectory, { withFileTypes: true })
+  } catch {
+    throw new ToolContractError("Missing tool meta directory.", [metaDirectory])
+  }
+
+  const metaFiles = directoryEntries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+    .sort((left, right) => left.name.localeCompare(right.name))
+
+  if (metaFiles.length === 0) {
+    throw new ToolContractError("Tool meta directory is empty.", [
+      metaDirectory,
+    ])
+  }
+
   const catalogs = Object.fromEntries(
     await Promise.all(
-      Object.entries(manifest.messages).map(async ([language, path]) => {
-        const absolutePath = resolve(manifestDirectory, path)
+      metaFiles.map(async (entry) => {
+        const language = getLanguageFromMetaFilename(entry.name)
+        const absolutePath = resolve(metaDirectory, entry.name)
         const parsedJson = await readJsonFile(absolutePath)
+
         return [language, parsedJson]
       })
     )
-  ) as ToolMessageCatalogs
+  ) as ToolMetaCatalogs
 
-  assertToolMessageCatalogs(catalogs)
+  assertToolMetaCatalogs(catalogs)
 
   return catalogs
 }
 
-async function assertContentFilesExist(
+async function assertPageFileExists(source: ToolRegistryEntrySource) {
+  const pageAbsolutePath = resolve(source.toolRoot, "index.astro")
+
+  if (!(await fileExists(pageAbsolutePath))) {
+    throw new ToolContractError("Missing tool page file.", [pageAbsolutePath])
+  }
+}
+
+function buildRegistryEntry(
+  source: ToolRegistryEntrySource,
   manifest: ToolManifest,
-  source: ToolRegistryEntrySource
-) {
-  if (!manifest.content) {
-    return
-  }
-
-  const manifestDirectory = resolve(source.manifestAbsolutePath, "..")
-  const missingFiles: string[] = []
-
-  for (const path of Object.values(manifest.content)) {
-    const absolutePath = resolve(manifestDirectory, path)
-
-    if (!(await fileExists(absolutePath))) {
-      missingFiles.push(absolutePath)
-    }
-  }
-
-  if (missingFiles.length > 0) {
-    throw new ToolContractError("Missing tool content files.", missingFiles)
+  catalogs: ToolMetaCatalogs
+): ToolRegistryEntry {
+  return {
+    slug: source.directoryName,
+    category: manifest.category,
+    icon: manifest.icon,
+    tags: manifest.tags ?? [],
+    locales: catalogs,
   }
 }
 
 function buildSearchIndexEntry(
-  manifest: ToolManifest,
-  catalogs: ToolMessageCatalogs
+  registryEntry: ToolRegistryEntry
 ): ToolSearchIndexEntry {
-  const locales = Object.fromEntries(
-    Object.entries(catalogs).map(([language, catalog]) => [
-      language,
-      {
-        name: catalog.meta.name,
-        description: catalog.meta.description,
-      },
-    ])
-  )
-
   return {
-    id: manifest.id,
-    slug: manifest.slug,
-    category: manifest.category,
-    group: manifest.group,
-    icon: manifest.icon,
-    tags: manifest.tags,
-    features: manifest.features ?? [],
-    searchTerms: manifest.searchTerms ?? [],
-    locales,
+    slug: registryEntry.slug,
+    category: registryEntry.category,
+    icon: registryEntry.icon,
+    tags: registryEntry.tags,
+    locales: registryEntry.locales,
   }
 }
 
-function buildStaticPaths(manifest: ToolManifest) {
-  return Object.keys(manifest.messages)
+function buildStaticPaths(
+  source: ToolRegistryEntrySource,
+  catalogs: ToolMetaCatalogs
+) {
+  return Object.keys(catalogs)
     .sort((left, right) => left.localeCompare(right))
     .map((language) => ({
-      slug: manifest.slug,
+      slug: source.directoryName,
       language,
     }))
 }
 
 async function loadToolManifests(paths: ToolRegistryArtifactPaths) {
-  const manifestSources = await discoverToolManifestSources(
-    paths.toolsRoot,
-    paths.generatedRoot
-  )
+  const manifestSources = await discoverToolManifestSources(paths.toolsRoot)
   const manifests: LoadedToolManifest[] = []
   const slugOwners = new Map<string, string>()
-  const idOwners = new Map<string, string>()
 
   for (const source of manifestSources) {
-    const manifest = loadManifestModule(source)
-    const loadedManifest = await manifest
+    const loadedManifest = await loadManifestModule(source)
 
     assertToolManifest(loadedManifest)
 
-    if (loadedManifest.slug !== source.directoryName) {
-      throw new ToolContractError("Tool slug must match its directory name.", [
-        `${source.manifestAbsolutePath}: slug '${loadedManifest.slug}' does not match directory '${source.directoryName}'`,
-      ])
-    }
-
-    const existingSlugOwner = slugOwners.get(loadedManifest.slug)
+    const existingSlugOwner = slugOwners.get(source.directoryName)
     if (existingSlugOwner) {
       throw new ToolContractError("Duplicate tool slug detected.", [
-        `${loadedManifest.slug}: ${existingSlugOwner}`,
-        `${loadedManifest.slug}: ${source.manifestAbsolutePath}`,
+        `${source.directoryName}: ${existingSlugOwner}`,
+        `${source.directoryName}: ${source.manifestAbsolutePath}`,
       ])
     }
-    slugOwners.set(loadedManifest.slug, source.manifestAbsolutePath)
+    slugOwners.set(source.directoryName, source.manifestAbsolutePath)
 
-    const existingIdOwner = idOwners.get(loadedManifest.id)
-    if (existingIdOwner) {
-      throw new ToolContractError("Duplicate tool id detected.", [
-        `${loadedManifest.id}: ${existingIdOwner}`,
-        `${loadedManifest.id}: ${source.manifestAbsolutePath}`,
-      ])
-    }
-    idOwners.set(loadedManifest.id, source.manifestAbsolutePath)
-
-    const catalogs = await loadToolMessageCatalogs(loadedManifest, source)
-    await assertContentFilesExist(loadedManifest, source)
+    await assertPageFileExists(source)
+    const catalogs = await loadToolMetaCatalogs(source)
+    const registryEntry = buildRegistryEntry(source, loadedManifest, catalogs)
 
     manifests.push({
       manifest: loadedManifest,
+      registryEntry,
+      searchIndexEntry: buildSearchIndexEntry(registryEntry),
       source,
-      searchIndexEntry: buildSearchIndexEntry(loadedManifest, catalogs),
-      staticPaths: buildStaticPaths(loadedManifest),
+      staticPaths: buildStaticPaths(source, catalogs),
     })
   }
 
   return manifests.sort((left, right) =>
-    left.manifest.slug.localeCompare(right.manifest.slug)
+    left.registryEntry.slug.localeCompare(right.registryEntry.slug)
   )
 }
 
 function createRegistrySource(manifests: readonly LoadedToolManifest[]) {
-  const importLines = manifests.map(({ manifest, source }) => {
-    const variableName = toVariableName(manifest.slug)
-    return `import { tool as ${variableName} } from "${source.manifestImportPath}"`
-  })
-
-  const registryEntries = manifests.map(({ manifest }) =>
-    toVariableName(manifest.slug)
-  )
+  const registryEntries = manifests.map(({ registryEntry }) => registryEntry)
   const slugMapEntries = manifests.map(
-    ({ manifest }) => `  "${manifest.slug}": ${toVariableName(manifest.slug)},`
+    ({ registryEntry }) =>
+      `  "${registryEntry.slug}": ${JSON.stringify(registryEntry, null, 2)},`
   )
-  const idMapEntries = manifests.map(
-    ({ manifest }) => `  "${manifest.id}": ${toVariableName(manifest.slug)},`
-  )
-
   const toolRegistryBySlug =
     slugMapEntries.length === 0
-      ? `export const toolRegistryBySlug: Record<string, ToolManifest> = {}`
+      ? `export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {}`
       : [
-          `export const toolRegistryBySlug: Record<string, ToolManifest> = {`,
+          `export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {`,
           ...slugMapEntries,
-          `}`,
-        ].join("\n")
-  const toolRegistryById =
-    idMapEntries.length === 0
-      ? `export const toolRegistryById: Record<string, ToolManifest> = {}`
-      : [
-          `export const toolRegistryById: Record<string, ToolManifest> = {`,
-          ...idMapEntries,
           `}`,
         ].join("\n")
 
   return [
-    `import type { ToolManifest } from "@workspace/tool-sdk"`,
-    ...importLines,
+    `import type { ToolRegistryEntry } from "../types"`,
     "",
-    `export const toolRegistry: readonly ToolManifest[] = [${registryEntries.join(", ")}]`,
+    `export const toolRegistry: readonly ToolRegistryEntry[] = ${JSON.stringify(registryEntries, null, 2)}`,
     "",
     toolRegistryBySlug,
-    "",
-    toolRegistryById,
     "",
   ].join("\n")
 }

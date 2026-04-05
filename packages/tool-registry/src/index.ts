@@ -1,12 +1,9 @@
-export {
-  toolRegistry,
-  toolRegistryById,
-  toolRegistryBySlug,
-} from "./generated/registry"
+export { toolRegistry, toolRegistryBySlug } from "./generated/registry"
 export { toolSearchIndex } from "./generated/search-index"
 export { toolStaticPaths } from "./generated/static-paths"
 export type {
   ToolRegistryArtifactPaths,
+  ToolRegistryEntry,
   ToolRegistryEntrySource,
   ToolRegistryGenerationOptions,
   ToolSearchIndexEntry,

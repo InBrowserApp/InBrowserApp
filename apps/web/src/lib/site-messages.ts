@@ -77,20 +77,6 @@ type SiteMessageCatalog = Readonly<{
     sidebarTitle: string
     sidebarDescription: string
   }>
-  tool: Readonly<{
-    eyebrow: string
-    detailsTitle: string
-    contentTitle: string
-    categoryLabel: string
-    groupLabel: string
-    tagsLabel: string
-    featuresLabel: string
-    messageLanguageLabel: string
-    contentLanguageLabel: string
-    clientStatusLabel: string
-    clientMissing: string
-    contentMissing: string
-  }>
 }>
 
 const siteMessageModules = import.meta.glob("../messages/*.json", {

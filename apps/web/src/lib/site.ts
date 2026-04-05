@@ -1,18 +1,10 @@
-import {
-  DEFAULT_REQUIRED_TOOL_LANGUAGES,
-  uniqueLanguages,
-  type DefaultRequiredToolLanguage,
-} from "@workspace/tool-sdk"
-
 const SITE_NAME = "InBrowser.App"
 const SITE_URL = "https://inbrowser.app"
-const DEFAULT_SITE_LANGUAGE: DefaultRequiredToolLanguage = "en"
-const SUPPORTED_SITE_LANGUAGES = uniqueLanguages(
-  DEFAULT_REQUIRED_TOOL_LANGUAGES
-) as readonly DefaultRequiredToolLanguage[]
+const DEFAULT_SITE_LANGUAGE = "en"
+const SUPPORTED_SITE_LANGUAGES = ["en", "zh-CN"] as const
 const NON_DEFAULT_SITE_LANGUAGES = SUPPORTED_SITE_LANGUAGES.filter(
   (language) => language !== DEFAULT_SITE_LANGUAGE
-) as readonly Exclude<DefaultRequiredToolLanguage, "en">[]
+) as readonly Exclude<(typeof SUPPORTED_SITE_LANGUAGES)[number], "en">[]
 
 type SiteLanguage = (typeof SUPPORTED_SITE_LANGUAGES)[number]
 type AlternateLink = Readonly<{

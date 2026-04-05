@@ -1,0 +1,4 @@
+{
+  "name": "Base64 编码器 / 解码器",
+  "description": "直接在浏览器中把纯文本编码为 Base64，或把 Base64 解码回 Unicode 文本。"
+}

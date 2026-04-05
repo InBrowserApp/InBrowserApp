@@ -1,0 +1,59 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import Base64EncoderDecoderClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type Base64MessagesCatalog = Readonly<{
+  plainTextLabel: string
+  plainTextPlaceholder: string
+  plainTextDescription: string
+  encodedTextLabel: string
+  encodedTextPlaceholder: string
+  encodedTextDescription: string
+  invalidBase64Title: string
+  invalidBase64Description: string
+  copyPlainTextLabel: string
+  copyEncodedTextLabel: string
+  copiedLabel: string
+  resetLabel: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<Base64MessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", { eager: true, import: "default" }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <Base64EncoderDecoderClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolSurface>
+        <ToolArticle>
+          <IntroSection />
+        </ToolArticle>
+      </ToolSurface>
+    ) : null
+  }
+</ToolPageShell>
