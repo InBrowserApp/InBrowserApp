@@ -280,19 +280,32 @@ function createRegistrySource(manifests: readonly LoadedToolManifest[]) {
     ({ manifest }) => `  "${manifest.id}": ${toVariableName(manifest.slug)},`
   )
 
+  const toolRegistryBySlug =
+    slugMapEntries.length === 0
+      ? `export const toolRegistryBySlug: Record<string, ToolManifest> = {}`
+      : [
+          `export const toolRegistryBySlug: Record<string, ToolManifest> = {`,
+          ...slugMapEntries,
+          `}`,
+        ].join("\n")
+  const toolRegistryById =
+    idMapEntries.length === 0
+      ? `export const toolRegistryById: Record<string, ToolManifest> = {}`
+      : [
+          `export const toolRegistryById: Record<string, ToolManifest> = {`,
+          ...idMapEntries,
+          `}`,
+        ].join("\n")
+
   return [
     `import type { ToolManifest } from "@workspace/tool-sdk"`,
     ...importLines,
     "",
     `export const toolRegistry: readonly ToolManifest[] = [${registryEntries.join(", ")}]`,
     "",
-    `export const toolRegistryBySlug: Record<string, ToolManifest> = {`,
-    ...slugMapEntries,
-    `}`,
+    toolRegistryBySlug,
     "",
-    `export const toolRegistryById: Record<string, ToolManifest> = {`,
-    ...idMapEntries,
-    `}`,
+    toolRegistryById,
     "",
   ].join("\n")
 }

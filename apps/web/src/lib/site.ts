@@ -19,6 +19,17 @@ type AlternateLink = Readonly<{
   hrefLang: string
   href: string
 }>
+type SiteLanguageOption = Readonly<{
+  code: SiteLanguage
+  href: string
+  label: string
+  current: boolean
+}>
+type SiteNavigationItem = Readonly<{
+  href: string
+  label: string
+  current: boolean
+}>
 
 function normalizePathname(pathname: string) {
   const normalized = pathname.trim().replace(/\/{2,}/g, "/")
@@ -111,13 +122,51 @@ function createNonDefaultLanguageStaticPaths() {
   }))
 }
 
+function createLanguageOptions(
+  pathname: string,
+  language: SiteLanguage,
+  labels: Readonly<Record<string, string>>,
+  languages: readonly SiteLanguage[] = SUPPORTED_SITE_LANGUAGES
+) {
+  return languages.map((optionLanguage) => ({
+    code: optionLanguage,
+    current: optionLanguage === language,
+    href: localizePath(pathname, optionLanguage),
+    label: labels[optionLanguage] ?? optionLanguage,
+  })) as readonly SiteLanguageOption[]
+}
+
+function createPrimaryNavigation(
+  language: SiteLanguage,
+  labels: Readonly<{
+    home: string
+    tools: string
+  }>,
+  current: "home" | "tools"
+) {
+  return [
+    {
+      current: current === "home",
+      href: localizePath("/", language),
+      label: labels.home,
+    },
+    {
+      current: current === "tools",
+      href: localizePath("/tools", language),
+      label: labels.tools,
+    },
+  ] as const satisfies readonly SiteNavigationItem[]
+}
+
 export {
   DEFAULT_SITE_LANGUAGE,
   NON_DEFAULT_SITE_LANGUAGES,
   SITE_NAME,
   SITE_URL,
   SUPPORTED_SITE_LANGUAGES,
+  createLanguageOptions,
   createNonDefaultLanguageStaticPaths,
+  createPrimaryNavigation,
   getAlternateLinks,
   getCanonicalUrl,
   isDefaultSiteLanguage,
@@ -128,4 +177,9 @@ export {
   resolveSiteLanguage,
   toAbsoluteUrl,
 }
-export type { AlternateLink, SiteLanguage }
+export type {
+  AlternateLink,
+  SiteLanguage,
+  SiteLanguageOption,
+  SiteNavigationItem,
+}

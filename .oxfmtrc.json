@@ -16,6 +16,7 @@
     "node_modules/",
     ".turbo/",
     ".agents/",
+    ".playwright-cli/",
     "coverage/",
     "pnpm-lock.yaml",
     ".pnpm-store/"
