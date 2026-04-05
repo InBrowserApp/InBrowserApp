@@ -334,7 +334,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             <CardTitle>{messages.uploadTitle}</CardTitle>
             <CardDescription>{messages.uploadDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent className="flex flex-1 flex-col gap-4">
             {selectedFile && sourcePreviewUrl && sourceDimensions ? (
               <>
                 <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
@@ -365,7 +365,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             ) : (
               <label
                 htmlFor={inputId}
-                className="flex min-h-52 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
+                className="flex flex-1 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
               >
                 <ImageUp className="size-6 text-muted-foreground" />
                 <div className="mt-4 space-y-1">

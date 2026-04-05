@@ -225,7 +225,7 @@ function JsonSchemaValidatorClient({
               <CardTitle>{messages.schemaLabel}</CardTitle>
               <CardDescription>{messages.schemaDescription}</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1">
               <Textarea
                 value={schemaText}
                 onChange={(event) => {
@@ -250,7 +250,7 @@ function JsonSchemaValidatorClient({
               <CardTitle>{messages.dataLabel}</CardTitle>
               <CardDescription>{messages.dataDescription}</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1">
               <Textarea
                 value={dataText}
                 onChange={(event) => {
