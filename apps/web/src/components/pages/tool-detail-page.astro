@@ -1,0 +1,126 @@
+---
+import { Badge } from "@workspace/ui/components/ui/badge"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import MainLayout from "@/layouts/main.astro"
+import { createPageSeo } from "@/lib/seo"
+import { loadSiteMessages } from "@/lib/site-messages"
+import { loadToolPageData } from "@/lib/tool-pages"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { SiteLanguage } from "@/lib/site"
+
+interface Props {
+  language: SiteLanguage
+  slug: string
+}
+
+const { language, slug } = Astro.props
+const { catalog } = loadSiteMessages(language)
+const pageData = await loadToolPageData(slug, language)
+
+if (!pageData) {
+  throw new Error(`Unknown tool slug '${slug}'.`)
+}
+
+const seo = createPageSeo({
+  availableLanguages: pageData.availableLanguages,
+  description: pageData.messages.meta.description,
+  language,
+  pathname: `/tools/${slug}`,
+  title: `${pageData.messages.meta.name} · ${catalog.metadata.toolTitleSuffix}`,
+})
+const Content = pageData.Content as AstroComponentFactory | null
+---
+
+<MainLayout
+  alternateLinks={seo.alternateLinks}
+  canonicalUrl={seo.canonicalUrl}
+  description={seo.description}
+  lang={language}
+  title={seo.title}
+>
+  <div class="min-h-svh bg-[radial-gradient(circle_at_top,rgba(10,132,255,0.08),transparent_34%),linear-gradient(180deg,var(--background),color-mix(in_oklab,var(--background)_92%,var(--muted)))]">
+    <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
+      <ToolPageShell
+        title={pageData.messages.meta.name}
+        description={pageData.messages.meta.description}
+      >
+        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <ToolSurface className="space-y-5">
+            <h2 class="font-heading text-2xl leading-tight tracking-[var(--tracking-display)] text-balance">
+              {catalog.tool.detailsTitle}
+            </h2>
+            <dl class="grid gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2">
+              <div class="space-y-1">
+                <dt class="font-medium text-foreground">{catalog.tool.categoryLabel}</dt>
+                <dd>{pageData.tool.category}</dd>
+              </div>
+              <div class="space-y-1">
+                <dt class="font-medium text-foreground">{catalog.tool.groupLabel}</dt>
+                <dd>{pageData.tool.group ?? "—"}</dd>
+              </div>
+              <div class="space-y-1">
+                <dt class="font-medium text-foreground">{catalog.tool.messageLanguageLabel}</dt>
+                <dd>{pageData.messageLanguage}</dd>
+              </div>
+              <div class="space-y-1">
+                <dt class="font-medium text-foreground">{catalog.tool.contentLanguageLabel}</dt>
+                <dd>{pageData.contentLanguage ?? "—"}</dd>
+              </div>
+            </dl>
+            <div class="space-y-3">
+              <div class="space-y-2">
+                <p class="text-sm font-medium text-foreground">{catalog.tool.tagsLabel}</p>
+                <div class="flex flex-wrap gap-2">
+                  {pageData.tool.tags.map((tag) => <Badge>{tag}</Badge>)}
+                </div>
+              </div>
+              <div class="space-y-2">
+                <p class="text-sm font-medium text-foreground">{catalog.tool.featuresLabel}</p>
+                <div class="flex flex-wrap gap-2">
+                  {(pageData.tool.features ?? []).map((feature) => (
+                    <Badge variant="secondary">{feature}</Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </ToolSurface>
+          <ToolSurface className="space-y-4">
+            <h2 class="font-heading text-2xl leading-tight tracking-[var(--tracking-display)] text-balance">
+              {catalog.tool.clientStatusLabel}
+            </h2>
+            {
+              pageData.tool.island ? (
+                <p class="text-sm leading-6 text-muted-foreground">
+                  <code>{pageData.tool.island.path}</code>
+                </p>
+              ) : (
+                <p class="text-sm leading-6 text-muted-foreground">
+                  {catalog.tool.clientMissing}
+                </p>
+              )
+            }
+          </ToolSurface>
+        </div>
+
+        <ToolSurface className="space-y-5">
+          <h2 class="font-heading text-2xl leading-tight tracking-[var(--tracking-display)] text-balance">
+            {catalog.tool.contentTitle}
+          </h2>
+          {
+            Content ? (
+              <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+                <Content />
+              </article>
+            ) : (
+              <p class="text-sm leading-6 text-muted-foreground">
+                {catalog.tool.contentMissing}
+              </p>
+            )
+          }
+        </ToolSurface>
+      </ToolPageShell>
+    </div>
+  </div>
+</MainLayout>

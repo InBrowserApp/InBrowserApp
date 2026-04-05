@@ -1,0 +1,123 @@
+---
+import { SiteFrame } from "@workspace/ui/components/app/site-frame"
+import { SectionHeading } from "@workspace/ui/components/app/section-heading"
+import { Button } from "@workspace/ui/components/ui/button"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import {
+  ArrowRight,
+  Languages,
+  LayoutGrid,
+} from "@workspace/ui/icons"
+import MainLayout from "@/layouts/main.astro"
+import { loadSitePageContent } from "@/lib/site-content"
+import { loadSiteMessages } from "@/lib/site-messages"
+import { createPageSeo } from "@/lib/seo"
+import { SUPPORTED_SITE_LANGUAGES, localizePath } from "@/lib/site"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { SiteLanguage } from "@/lib/site"
+
+interface Props {
+  language: SiteLanguage
+}
+
+const { language } = Astro.props
+const { catalog } = loadSiteMessages(language)
+const { Content: HomeContent } = await loadSitePageContent("home", language)
+const seo = createPageSeo({
+  description: catalog.metadata.homeDescription,
+  language,
+  pathname: "/",
+  title: catalog.metadata.homeTitle,
+})
+const Content = HomeContent as AstroComponentFactory | null
+---
+
+<MainLayout
+  alternateLinks={seo.alternateLinks}
+  canonicalUrl={seo.canonicalUrl}
+  description={seo.description}
+  lang={language}
+  title={seo.title}
+>
+  <SiteFrame
+    eyebrow={catalog.home.eyebrow}
+    title={catalog.home.title}
+    description={catalog.home.description}
+  >
+    <div class="flex flex-wrap items-center gap-3">
+      <Button asChild>
+        <a href={localizePath("/tools", language)}>
+          {catalog.site.navigation.tools}
+          <ArrowRight />
+        </a>
+      </Button>
+      {
+        SUPPORTED_SITE_LANGUAGES.map((alternateLanguage) => (
+          <Button asChild variant="outline" size="sm">
+            <a href={localizePath("/", alternateLanguage)}>
+              {catalog.site.languages[alternateLanguage]}
+            </a>
+          </Button>
+        ))
+      }
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+      <ToolSurface className="flex flex-col gap-6">
+        <SectionHeading
+          eyebrow={catalog.home.statusTitle}
+          title={catalog.home.registryTitle}
+          description={catalog.home.statusDescription}
+        />
+        <div class="grid gap-4 sm:grid-cols-2">
+          <ToolSurface className="flex flex-col gap-3 border-dashed shadow-none">
+            <LayoutGrid className="size-5 text-muted-foreground" />
+            <div class="space-y-1">
+              <p class="font-medium">{catalog.home.registryTitle}</p>
+              <p class="text-sm leading-6 text-muted-foreground">
+                {catalog.home.registryDescription}
+              </p>
+            </div>
+          </ToolSurface>
+          <ToolSurface className="flex flex-col gap-3 border-dashed shadow-none">
+            <Languages className="size-5 text-muted-foreground" />
+            <div class="space-y-1">
+              <p class="font-medium">{catalog.home.contentTitle}</p>
+              <p class="text-sm leading-6 text-muted-foreground">
+                {catalog.home.contentDescription}
+              </p>
+            </div>
+          </ToolSurface>
+        </div>
+      </ToolSurface>
+      <ToolSurface className="flex flex-col gap-4">
+        <SectionHeading
+          eyebrow={catalog.site.languageLabel}
+          title={catalog.home.contentHeading}
+          description={catalog.site.description}
+        />
+        <div class="space-y-3 text-sm leading-6 text-muted-foreground">
+          <p>{catalog.home.statusDescription}</p>
+          <p>{catalog.home.registryDescription}</p>
+          <p>{catalog.home.contentDescription}</p>
+        </div>
+      </ToolSurface>
+    </div>
+
+    {
+      Content ? (
+        <ToolSurface className="space-y-5">
+          <SectionHeading
+            eyebrow={catalog.home.contentHeading}
+            title={catalog.home.contentTitle}
+            description={catalog.home.contentDescription}
+          />
+          <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+            <Content />
+          </article>
+        </ToolSurface>
+      ) : null
+    }
+  </SiteFrame>
+</MainLayout>

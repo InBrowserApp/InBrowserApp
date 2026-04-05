@@ -1,0 +1,61 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "无需后端、完全在浏览器中运行的工具集合。",
+    "languageLabel": "语言",
+    "navigation": {
+      "home": "首页",
+      "tools": "工具"
+    },
+    "languages": {
+      "en": "English",
+      "zh-CN": "简体中文"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App · Astro 多语言壳层",
+    "homeDescription": "Astro 重写版现在已经支持多语言路由、元数据和内容加载。",
+    "toolsTitle": "工具目录 · InBrowser.App",
+    "toolsDescription": "查看生成式工具目录以及 Astro 重写版的本地化模型。",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "eyebrow": "Issue #320",
+    "title": "多语言路由已经接入新的 Astro 站点壳层。",
+    "description": "站点页面和后续工具页面现在共用一套语言模型，统一处理路由、messages、MDX 内容、canonical、alternate 和 sitemap。",
+    "statusTitle": "路由里程碑",
+    "statusDescription": "英文页面保持无前缀，非默认语言使用 /:lang，页面元数据也不再依赖硬编码字符串。",
+    "registryTitle": "生成式 registry 仍然是唯一事实来源",
+    "registryDescription": "工具详情页的静态路径来自 packages/tool-registry，后续新增工具只需要 manifest 和本地化资源文件。",
+    "contentTitle": "本地化 MDX 内容成为一等公民",
+    "contentDescription": "长说明内容和工具内容都支持语言 fallback，让静态说明继续脱离 UI 逻辑单独维护。",
+    "contentHeading": "为什么要这样组织路由"
+  },
+  "tools": {
+    "eyebrow": "工具目录",
+    "title": "工具路由已经准备好承接多语言 manifest。",
+    "description": "工具索引页现在读取 registry 生成结果和站点翻译，后续工具详情页会继承同一套 fallback 和 metadata 规则。",
+    "emptyTitle": "还没有迁入新的工具",
+    "emptyDescription": "registry 和校验已经就位，第一批工具 archetype 会在 issue #322 落地。",
+    "metricsTitle": "Registry 状态",
+    "contentHeading": "后续工具页会如何加载",
+    "registryCountLabel": "Registry 中的工具",
+    "searchIndexLabel": "搜索索引条目",
+    "languageCountLabel": "语言数",
+    "loadingModelDescription": "工具详情页后续会直接从生成式 registry 和各自 tool 目录中解析本地化 metadata 与长说明内容。"
+  },
+  "tool": {
+    "eyebrow": "工具页面",
+    "detailsTitle": "工具契约",
+    "contentTitle": "本地化内容",
+    "categoryLabel": "分类",
+    "groupLabel": "分组",
+    "tagsLabel": "标签",
+    "featuresLabel": "特性",
+    "messageLanguageLabel": "文案语言",
+    "contentLanguageLabel": "内容语言",
+    "clientStatusLabel": "交互岛",
+    "clientMissing": "这个工具暂时还没有注册客户端交互岛。",
+    "contentMissing": "这个工具暂时还没有提供长说明内容。"
+  }
+}

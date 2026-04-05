@@ -1,13 +1,45 @@
 ---
 import "@workspace/ui/globals.css"
+
+interface AlternateLink {
+  href: string
+  hrefLang: string
+}
+
+interface Props {
+  title: string
+  description: string
+  lang: string
+  canonicalUrl: string
+  alternateLinks?: readonly AlternateLink[]
+}
+
+const {
+  alternateLinks = [],
+  canonicalUrl,
+  description,
+  lang,
+  title,
+} = Astro.props
 ---
 
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro App</title>
+    <link rel="canonical" href={canonicalUrl} />
+    {
+      alternateLinks.map((link) => (
+        <link rel="alternate" hreflang={link.hrefLang} href={link.href} />
+      ))
+    }
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
   </head>
   <body>
     <slot />

@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "paths": {
+      "@/*": ["apps/web/src/*"]
+    }
   }
 }

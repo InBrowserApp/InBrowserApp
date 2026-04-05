@@ -1,0 +1,11 @@
+---
+import ToolsIndexPage from "@/components/pages/tools-index-page.astro"
+import { resolveSiteLanguage } from "@/lib/site"
+import { getNonDefaultSiteStaticPaths } from "@/lib/static-paths"
+
+export { getNonDefaultSiteStaticPaths as getStaticPaths }
+
+const language = resolveSiteLanguage(Astro.params.lang)
+---
+
+<ToolsIndexPage language={language} />

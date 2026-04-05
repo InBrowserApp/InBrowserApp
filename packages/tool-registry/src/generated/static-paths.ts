@@ -1,4 +1,3 @@
 import type { ToolStaticPathEntry } from "../types"
 
-export const toolStaticPaths =
-  [] as const satisfies readonly ToolStaticPathEntry[]
+export const toolStaticPaths: readonly ToolStaticPathEntry[] = []
