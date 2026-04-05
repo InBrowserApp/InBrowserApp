@@ -8,16 +8,12 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
 type Base64MessagesCatalog = Readonly<{
-  workspaceEyebrow: string
-  workspaceDescription: string
-  localOnlyLabel: string
   plainTextLabel: string
   plainTextPlaceholder: string
   plainTextDescription: string
   encodedTextLabel: string
   encodedTextPlaceholder: string
   encodedTextDescription: string
-  lengthLabel: string
   invalidBase64Title: string
   invalidBase64Description: string
   copyPlainTextLabel: string
@@ -120,7 +116,7 @@ const messages = {
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ToolSurface className="overflow-hidden p-0">
-    <Base64EncoderDecoderClient client:load lang={lang} messages={messages} />
+    <Base64EncoderDecoderClient client:load messages={messages} />
   </ToolSurface>
 
   {
