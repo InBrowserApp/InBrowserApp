@@ -41,7 +41,7 @@
     "registryTitle": "生成式发现层",
     "registryDescription": "路由、搜索记录和 sitemap 现在来自最小 manifest 加本地化 meta，而不是手写 wiring。",
     "localeTitle": "约定式多语言",
-    "localeDescription": "站点壳层读取 `meta/<lang>.json`，而每个工具则在 `index.astro` 背后自由组织自己的 copy 和 section。",
+    "localeDescription": "站点壳层读取 `meta/<lang>.json`，而每个工具则在 `index.astro` 背后自由组织自己的 `messages/` 和 `sections/`。",
     "shellTitle": "更薄的站点壳层",
     "shellDescription": "导航、语言切换和 SEO 继续留在站点壳层里，标题、说明和正文编排则回到各个工具自己管理。",
     "contentEyebrow": "重写说明",
@@ -72,7 +72,7 @@
     "openToolLabel": "打开工具",
     "contentEyebrow": "加载模型",
     "contentTitle": "工具页是如何解析数据的",
-    "contentDescription": "站点壳层只需要 slug、本地化 meta 和固定的 `index.astro` 入口。copy、sections 和 client 组件都留在工具内部。",
+    "contentDescription": "站点壳层只需要 slug、本地化 meta 和固定的 `index.astro` 入口。messages、sections 和 client 组件都留在工具内部。",
     "sidebarTitle": "为什么这个搜索方式重要",
     "sidebarDescription": "现在的搜索只依赖最小但足够的 contract：category、icon、tags，以及本地化 name/description。"
   }

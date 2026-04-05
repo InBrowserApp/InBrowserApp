@@ -40,7 +40,7 @@ Localized discovery metadata lives in `meta/<lang>.json`:
 The following stay tool-local and are discovered only by the tool's own `index.astro` entrypoint:
 
 - `client.tsx`
-- `copy/`
+- `messages/`
 - `sections/`
 - `components/`
 - `workers/`

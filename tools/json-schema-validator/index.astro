@@ -51,7 +51,7 @@ const metaModules = import.meta.glob("./meta/*.json", {
   eager: true,
   import: "default",
 }) as Record<string, ToolMeta>
-const copyModules = import.meta.glob("./copy/*.json", {
+const messageModules = import.meta.glob("./messages/*.json", {
   eager: true,
   import: "default",
 }) as Record<string, JsonSchemaCopy>
@@ -116,7 +116,12 @@ async function loadLocalizedSection(section: string, language: string) {
 }
 
 const { data: meta } = resolveLocalizedRecord(metaModules, lang, "json", "./meta")
-const { data: copy } = resolveLocalizedRecord(copyModules, lang, "json", "./copy")
+const { data: copy } = resolveLocalizedRecord(
+  messageModules,
+  lang,
+  "json",
+  "./messages"
+)
 const IntroSection = await loadLocalizedSection("intro", lang)
 const messages = {
   meta,

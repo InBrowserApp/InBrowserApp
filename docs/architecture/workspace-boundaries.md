@@ -26,7 +26,7 @@ tools/
 - Owns Astro routes, layouts, page metadata, static site generation, and deployment configuration.
 - Consumes generated registry data from `packages/tool-registry`.
 - Resolves tool pages through the fixed `tools/<slug>/index.astro` convention.
-- Must not reach into tool-local copy, sections, workers, or private helpers.
+- Must not reach into tool-local messages, sections, workers, or private helpers.
 
 ### `packages/ui`
 
@@ -61,7 +61,7 @@ tools/
   - `manifest.ts`
   - `index.astro`
   - `meta/en.json`
-- Everything else is tool-local, including `client.tsx`, `copy/`, `sections/`, `components/`, `core/`, and `workers/`.
+- Everything else is tool-local, including `client.tsx`, `messages/`, `sections/`, `components/`, `core/`, and `workers/`.
 - Tools may depend on `packages/ui`, `packages/tool-sdk`, and `packages/lib/*`.
 - Tools must not depend on `apps/web` or `packages/tool-registry`.
 

@@ -21,7 +21,7 @@ tools/
       en.json
       zh-CN.json
     client.tsx              # optional
-    copy/                   # optional
+    messages/               # optional
       en.json
       zh-CN.json
     sections/               # optional
@@ -36,6 +36,6 @@ tools/
 
 `manifest.ts` should export a named `tool` constant created with `defineTool()` from `@workspace/tool-sdk`.
 
-`index.astro` is the tool's composition root. The app shell passes only `lang`; the tool decides how to load copy, sections, client code, and any private helpers.
+`index.astro` is the tool's composition root. The app shell passes only `lang`; the tool decides how to load messages, sections, client code, and any private helpers.
 
 Tools may depend on `packages/ui`, `packages/tool-sdk`, and `packages/lib/*`, but they must not import from `apps/web`.

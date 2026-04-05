@@ -41,7 +41,7 @@
     "registryTitle": "Generated discovery",
     "registryDescription": "Routes, search records, and sitemap entries come from minimal manifests plus localized meta instead of hand-maintained wiring.",
     "localeTitle": "Localized by convention",
-    "localeDescription": "The shell reads `meta/<lang>.json`, while each tool chooses its own copy and section structure behind `index.astro`.",
+    "localeDescription": "The shell reads `meta/<lang>.json`, while each tool chooses its own `messages/` and `sections/` structure behind `index.astro`.",
     "shellTitle": "A thinner shell",
     "shellDescription": "Navigation, language switching, and SEO stay in the site shell. Titles, copy, and long-form composition move back into each tool.",
     "contentEyebrow": "Rewrite notes",
@@ -72,7 +72,7 @@
     "openToolLabel": "Open tool",
     "contentEyebrow": "Loading model",
     "contentTitle": "How tool pages resolve data",
-    "contentDescription": "The shell only needs the slug, localized meta, and a fixed `index.astro` entrypoint. Copy, sections, and client components stay inside the tool.",
+    "contentDescription": "The shell only needs the slug, localized meta, and a fixed `index.astro` entrypoint. Messages, sections, and client components stay inside the tool.",
     "sidebarTitle": "Why this search matters",
     "sidebarDescription": "Search now reflects the smallest useful contract: category, icon, tags, and localized name/description."
   }
