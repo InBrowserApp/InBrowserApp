@@ -34,4 +34,6 @@ tools/
     tests/
 ```
 
+`manifest.ts` should export a named `tool` constant created with `defineTool()` from `@workspace/tool-sdk`.
+
 Tools may depend on `packages/ui`, `packages/tool-sdk`, and `packages/lib/*`, but they must not import from `apps/web`.

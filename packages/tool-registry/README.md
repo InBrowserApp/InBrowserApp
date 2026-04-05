@@ -1,9 +1,26 @@
 # `@workspace/tool-registry`
 
-This package will own manifest scanning and generated registry output introduced in issue `#319`.
+`packages/tool-registry` turns `tools/*/manifest.ts` files into generated platform data.
 
-The boundary established in `#316` is:
+## Responsibilities
 
-- hand-written code stays in `src/`
-- generated files live in `src/generated/`
-- only generated files may point directly at tool entries
+- scans `tools/*/manifest.ts`
+- validates manifest shape and uniqueness
+- loads localized message catalogs for generated search data
+- writes generated outputs into `src/generated/`
+
+## Generated outputs
+
+- `registry.ts`: typed manifest registry and lookup maps
+- `static-paths.ts`: language-aware static path entries
+- `search-index.ts`: localized search index data
+
+## Usage
+
+Run the generator from the repo root:
+
+```bash
+pnpm tool-registry:generate
+```
+
+Root `build`, `typecheck`, and `dev` commands run the generator first so the generated source stays in sync with manifests.
