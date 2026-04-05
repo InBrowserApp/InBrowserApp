@@ -19,7 +19,7 @@ function SiteFrame({
   children,
 }: SiteFrameProps) {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-[radial-gradient(circle_at_top,rgba(10,132,255,0.08),transparent_34%),linear-gradient(180deg,var(--background),color-mix(in_oklab,var(--background)_92%,var(--muted)))]">
       <div
         className={cn(
           "mx-auto flex w-full max-w-6xl flex-col gap-10 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]",

@@ -1,16 +1,22 @@
 ---
 import { toolRegistry, toolSearchIndex } from "@workspace/tool-registry"
+import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
 import { SectionHeading } from "@workspace/ui/components/app/section-heading"
 import { SiteFrame } from "@workspace/ui/components/app/site-frame"
-import { SiteToolbar } from "@workspace/ui/components/app/site-toolbar"
+import { Button } from "@workspace/ui/components/ui/button"
 import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import { ArrowRight, LayoutGrid, Search, Wrench } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSitePageContent } from "@/lib/site-content"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import { createSiteToolbarData } from "@/lib/site-shell"
-import { SUPPORTED_SITE_LANGUAGES, type SiteLanguage } from "@/lib/site"
+import {
+  SUPPORTED_SITE_LANGUAGES,
+  createLanguageOptions,
+  localizePath,
+  type SiteLanguage,
+} from "@/lib/site"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 
@@ -28,21 +34,28 @@ const seo = createPageSeo({
   title: catalog.metadata.toolsTitle,
 })
 const Content = ToolsContent as AstroComponentFactory | null
-const shell = createSiteToolbarData("/tools", language, catalog, "tools")
+const languageOptions = createLanguageOptions(
+  "/tools",
+  language,
+  catalog.site.languages
+)
 const numberFormatter = new Intl.NumberFormat(language)
 const stats = [
   {
     detail: catalog.tools.resultsDescription,
+    icon: Wrench,
     label: catalog.tools.registryCountLabel,
     value: numberFormatter.format(toolRegistry.length),
   },
   {
     detail: catalog.tools.searchHint,
+    icon: Search,
     label: catalog.tools.searchIndexLabel,
     value: numberFormatter.format(toolSearchIndex.length),
   },
   {
     detail: catalog.tools.contentDescription,
+    icon: LayoutGrid,
     label: catalog.tools.languageCountLabel,
     value: numberFormatter.format(SUPPORTED_SITE_LANGUAGES.length),
   },
@@ -76,7 +89,19 @@ const searchMessages = {
     title={catalog.tools.title}
     description={catalog.tools.description}
   >
-    <SiteToolbar {...shell} />
+    <div class="flex flex-wrap items-center gap-3">
+      <Button asChild variant="outline">
+        <a href={localizePath("/", language)}>
+          {catalog.site.navigation.home}
+          <ArrowRight data-icon="inline-end" />
+        </a>
+      </Button>
+      <LanguageSwitcher
+        inline
+        label={catalog.site.languageLabel}
+        options={languageOptions}
+      />
+    </div>
 
     <ToolsDirectorySearch
       client:load
@@ -85,62 +110,61 @@ const searchMessages = {
       messages={searchMessages}
     />
 
-    <section class="grid gap-4 sm:grid-cols-3">
-      {
-        stats.map((stat) => (
-          <ToolSurface className="flex flex-col gap-3 border-dashed bg-background/70 shadow-none">
-            <p class="text-sm font-medium text-foreground">{stat.label}</p>
-            <p class="font-heading text-3xl leading-none tracking-[var(--tracking-display)] text-foreground">
-              {stat.value}
-            </p>
-            <p class="text-sm leading-6 text-muted-foreground">{stat.detail}</p>
-          </ToolSurface>
-        ))
-      }
-    </section>
-
-    <section class="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
-      {
-        Content ? (
-          <ToolSurface className="space-y-5">
-            <SectionHeading
-              eyebrow={catalog.tools.contentEyebrow}
-              title={catalog.tools.contentTitle}
-              description={catalog.tools.contentDescription}
-            />
-            <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-              <Content />
-            </article>
-          </ToolSurface>
-        ) : null
-      }
-
-      <ToolSurface className="space-y-5">
+    <section class="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+      <ToolSurface className="flex flex-col gap-6">
         <SectionHeading
-          title={catalog.tools.contentTitle}
-          description={catalog.tools.contentDescription}
+          eyebrow={catalog.tools.contentEyebrow}
+          title={catalog.tools.resultsTitle}
+          description={catalog.tools.resultsDescription}
         />
+        <div class="grid gap-4 sm:grid-cols-3">
+          {
+            stats.map((stat) => {
+              const Icon = stat.icon
 
-        <div class="space-y-4 text-sm leading-6 text-muted-foreground">
+              return (
+                <ToolSurface className="flex flex-col gap-3 border-dashed bg-background/70 shadow-none">
+                  <Icon className="size-5 text-muted-foreground" />
+                  <div class="space-y-1">
+                    <p class="text-sm text-muted-foreground">{stat.label}</p>
+                    <p class="font-heading text-3xl text-foreground">{stat.value}</p>
+                    <p class="text-sm leading-6 text-muted-foreground">
+                      {stat.detail}
+                    </p>
+                  </div>
+                </ToolSurface>
+              )
+            })
+          }
+        </div>
+      </ToolSurface>
+
+      <ToolSurface className="flex flex-col gap-4">
+        <SectionHeading
+          title={catalog.tools.sidebarTitle}
+          description={catalog.tools.sidebarDescription}
+        />
+        <div class="space-y-3 text-sm leading-6 text-muted-foreground">
           <p>{catalog.tools.description}</p>
           <p>{catalog.tools.searchHint}</p>
-        </div>
-
-        <div class="grid gap-3">
-          <div class="rounded-[calc(var(--radius)*1.4)] border border-dashed border-border/80 bg-muted/30 p-4">
-            <p class="font-medium text-foreground">{catalog.tools.searchLabel}</p>
-            <p class="mt-2 text-sm leading-6 text-muted-foreground">
-              {catalog.tools.searchHint}
-            </p>
-          </div>
-          <div class="rounded-[calc(var(--radius)*1.4)] border border-dashed border-border/80 bg-muted/30 p-4">
-            <p class="font-medium text-foreground">{catalog.tools.sidebarTitle}</p>
-            <p class="mt-2 text-sm leading-6 text-muted-foreground">
-              {catalog.tools.sidebarDescription}
-            </p>
-          </div>
+          <p>{catalog.tools.contentDescription}</p>
         </div>
       </ToolSurface>
     </section>
+
+    {
+      Content ? (
+        <ToolSurface className="space-y-5">
+          <SectionHeading
+            eyebrow={catalog.tools.contentEyebrow}
+            title={catalog.tools.contentTitle}
+            description={catalog.tools.contentDescription}
+          />
+          <article class="space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+            <Content />
+          </article>
+        </ToolSurface>
+      ) : null
+    }
   </SiteFrame>
 </MainLayout>
