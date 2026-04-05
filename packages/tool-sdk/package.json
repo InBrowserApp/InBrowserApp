@@ -10,6 +10,9 @@
     "format:check": "oxfmt --check .",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "zod": "^4.1.12"
+  },
   "devDependencies": {
     "typescript": "^5.9.3"
   },
