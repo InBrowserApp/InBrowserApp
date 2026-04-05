@@ -2,7 +2,6 @@
 import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
-import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
 import JsonSchemaValidatorClient from "./client"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
@@ -69,11 +68,9 @@ const messages = { meta, ...localizedMessages }
 
   {
     IntroSection ? (
-      <ToolSurface>
-        <ToolArticle>
-          <IntroSection />
-        </ToolArticle>
-      </ToolSurface>
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
     ) : null
   }
 </ToolPageShell>
