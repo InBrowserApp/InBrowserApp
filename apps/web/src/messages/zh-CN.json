@@ -34,7 +34,6 @@
     "emptyRegistryTitle": "暂无可用工具。",
     "emptyRegistryDescription": "工具正在添加中，请稍后再来。",
     "emptySearchTitle": "没有匹配的工具。",
-    "emptySearchDescription": "试试其他关键词，或清除搜索。",
-    "openToolLabel": "打开工具"
+    "emptySearchDescription": "试试其他关键词，或清除搜索。"
   }
 }

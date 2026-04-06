@@ -36,7 +36,6 @@ type SiteMessageCatalog = Readonly<{
     emptyRegistryDescription: string
     emptySearchTitle: string
     emptySearchDescription: string
-    openToolLabel: string
   }>
 }>
 
