@@ -430,7 +430,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-1">
-              <div className="space-y-2">
+              <div className="flex flex-col gap-2">
                 <Label>{messages.algorithmLabel}</Label>
                 <Select
                   value={options.algorithm}
@@ -463,7 +463,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                 </Select>
               </div>
 
-              <div className="space-y-2">
+              <div className="flex flex-col gap-2">
                 <Label>{messages.formatLabel}</Label>
                 <Select
                   value={options.outputFormat}
