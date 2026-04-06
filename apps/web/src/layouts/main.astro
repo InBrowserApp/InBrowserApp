@@ -54,13 +54,17 @@ const language = resolveSiteLanguage(lang)
     <ClientRouter />
     <script is:inline>
       ;(function () {
-        var theme = localStorage.getItem("theme") || "system"
-        var isDark =
-          theme === "dark" ||
-          (theme === "system" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        document.documentElement.classList[isDark ? "add" : "remove"]("dark")
-        document.documentElement.dataset.theme = theme
+        function applyTheme() {
+          var theme = localStorage.getItem("theme") || "system"
+          var isDark =
+            theme === "dark" ||
+            (theme === "system" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+          document.documentElement.dataset.theme = theme
+        }
+        applyTheme()
+        document.addEventListener("astro:after-swap", applyTheme)
       })()
     </script>
   </head>
