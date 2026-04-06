@@ -2,16 +2,21 @@ import { defineConfig } from "vitest/config"
 
 export default defineConfig({
   test: {
-    include: ["packages/*/src/**/*.test.ts", "tools/*/core/**/*.test.ts"],
+    include: ["**/*.test.{ts,tsx}"],
     coverage: {
       provider: "v8",
-      include: [
-        "packages/tool-sdk/src/**/*.ts",
-        "tools/base64-encoder-decoder/core/**/*.ts",
-        "tools/json-schema-validator/core/**/*.ts",
-        "tools/image-resizer/core/**/*.ts",
+      include: ["packages/tool-sdk/src/**/*.ts", "tools/**/*.{ts,tsx,astro}"],
+      exclude: [
+        "**/*.test.{ts,tsx}",
+        "**/types.ts",
+        "**/index.ts",
+        "**/client.tsx",
+        "**/*.astro",
+        "**/messages/**",
+        "**/meta/**",
+        "**/sections/**",
+        "**/manifest.ts",
       ],
-      exclude: ["**/*.test.ts", "**/types.ts", "**/index.ts"],
       thresholds: {
         lines: 100,
         functions: 100,
