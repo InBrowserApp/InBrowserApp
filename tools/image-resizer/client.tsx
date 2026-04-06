@@ -442,7 +442,13 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                   }}
                 >
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder={messages.algorithmHighQuality} />
+                    <SelectValue>
+                      {
+                        algorithmOptions.find(
+                          (o) => o.value === options.algorithm
+                        )?.label
+                      }
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
@@ -469,7 +475,13 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                   }}
                 >
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder={messages.formatAuto} />
+                    <SelectValue>
+                      {
+                        formatOptions.find(
+                          (o) => o.value === options.outputFormat
+                        )?.label
+                      }
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
