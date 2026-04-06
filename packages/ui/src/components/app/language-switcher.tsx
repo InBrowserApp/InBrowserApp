@@ -79,14 +79,14 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {sortedOptions.map((option) => (
-          <DropdownMenuItem key={option.code} asChild>
+          <DropdownMenuItem key={option.code} asChild className="relative pr-8">
             <a href={option.href} hrefLang={option.code} lang={option.code}>
-              {option.current ? (
-                <Check className="size-4" />
-              ) : (
-                <span className="size-4" />
-              )}
               {option.label}
+              {option.current ? (
+                <span className="pointer-events-none absolute right-2 flex items-center justify-center">
+                  <Check className="size-4" />
+                </span>
+              ) : null}
             </a>
           </DropdownMenuItem>
         ))}
