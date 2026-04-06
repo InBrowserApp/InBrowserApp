@@ -6,11 +6,10 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/ui/dropdown-menu"
-import { Languages } from "@workspace/ui/icons"
+import { Check, Languages } from "@workspace/ui/icons"
 
 type LanguageOption = Readonly<{
   code: string
@@ -69,7 +68,6 @@ function useSortedOptions(options: readonly LanguageOption[]) {
 
 function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
   const sortedOptions = useSortedOptions(options)
-  const currentCode = options.find((o) => o.current)?.code ?? ""
 
   return (
     <DropdownMenu>
@@ -80,19 +78,18 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup value={currentCode}>
-          {sortedOptions.map((option) => (
-            <DropdownMenuRadioItem
-              key={option.code}
-              value={option.code}
-              onSelect={() => {
-                window.location.href = option.href
-              }}
-            >
-              <span lang={option.code}>{option.label}</span>
-            </DropdownMenuRadioItem>
-          ))}
-        </DropdownMenuRadioGroup>
+        {sortedOptions.map((option) => (
+          <DropdownMenuItem key={option.code} asChild>
+            <a href={option.href} hrefLang={option.code} lang={option.code}>
+              {option.current ? (
+                <Check className="size-4" />
+              ) : (
+                <span className="size-4" />
+              )}
+              {option.label}
+            </a>
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   )
