@@ -30,11 +30,6 @@ function applyTheme(theme: ThemeOption) {
   document.documentElement.dataset.theme = theme
 }
 
-/**
- * Read the initial theme synchronously from the `data-theme` attribute
- * that the inline script in `<head>` already set before React hydrates.
- * This avoids a flash where the icon briefly shows the wrong state.
- */
 function getInitialTheme(): ThemeOption {
   if (typeof document === "undefined") {
     return "system"
@@ -49,10 +44,21 @@ function getInitialTheme(): ThemeOption {
   return "system"
 }
 
-const themeIcon: Record<ThemeOption, typeof Sun> = {
-  light: Sun,
-  dark: Moon,
-  system: SunMoon,
+/**
+ * The trigger renders all three icons and uses pure CSS to show the
+ * correct one based on the `data-theme` attribute that the inline
+ * `<script>` in `<head>` sets before first paint.  This means there
+ * is zero flash even though Astro SSG pre-renders static HTML with
+ * all three icons present.
+ */
+function ThemeToggleTriggerIcons() {
+  return (
+    <>
+      <Sun className="hidden size-4 [[data-theme=light]_&]:block" />
+      <Moon className="hidden size-4 [[data-theme=dark]_&]:block" />
+      <SunMoon className="hidden size-4 [[data-theme=system]_&]:block" />
+    </>
+  )
 }
 
 function ThemeToggle({
@@ -86,13 +92,11 @@ function ThemeToggle({
     }
   }, [theme])
 
-  const TriggerIcon = themeIcon[theme]
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon-sm">
-          <TriggerIcon className="size-4" />
+          <ThemeToggleTriggerIcons />
           <span className="sr-only">{srLabel}</span>
         </Button>
       </DropdownMenuTrigger>
