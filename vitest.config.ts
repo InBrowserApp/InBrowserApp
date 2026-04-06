@@ -1,8 +1,13 @@
-import { defineConfig } from "vitest/config"
+import { getViteConfig } from "astro/config"
 
-export default defineConfig({
+export default getViteConfig({
+  esbuild: {
+    jsx: "automatic",
+    jsxImportSource: "react",
+  },
   test: {
     include: ["**/*.test.{ts,tsx}"],
+    environment: "happy-dom",
     coverage: {
       provider: "v8",
       include: ["packages/tool-sdk/src/**/*.ts", "tools/**/*.{ts,tsx,astro}"],
@@ -10,18 +15,24 @@ export default defineConfig({
         "**/*.test.{ts,tsx}",
         "**/types.ts",
         "**/index.ts",
-        "**/client.tsx",
-        "**/*.astro",
         "**/messages/**",
         "**/meta/**",
         "**/sections/**",
         "**/manifest.ts",
       ],
       thresholds: {
-        lines: 100,
-        functions: 100,
-        branches: 100,
-        statements: 100,
+        "packages/tool-sdk/src/**": {
+          lines: 100,
+          functions: 100,
+          branches: 100,
+          statements: 100,
+        },
+        "tools/*/core/**": {
+          lines: 100,
+          functions: 100,
+          branches: 100,
+          statements: 100,
+        },
       },
     },
   },
