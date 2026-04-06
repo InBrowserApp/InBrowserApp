@@ -52,12 +52,13 @@ const language = resolveSiteLanguage(lang)
     <title>{title}</title>
     <script is:inline>
       ;(function () {
-        var theme = localStorage.getItem("theme")
+        var theme = localStorage.getItem("theme") || "system"
         var isDark =
           theme === "dark" ||
-          (theme !== "light" &&
+          (theme === "system" &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+        document.documentElement.dataset.theme = theme
       })()
     </script>
   </head>

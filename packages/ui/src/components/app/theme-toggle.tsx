@@ -6,7 +6,8 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/ui/dropdown-menu"
 import { Moon, Sun, SunMoon } from "@workspace/ui/icons"
@@ -26,20 +27,32 @@ function applyTheme(theme: ThemeOption) {
     (theme === "system" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+  document.documentElement.dataset.theme = theme
 }
 
-function getStoredTheme(): ThemeOption {
-  if (typeof localStorage === "undefined") {
+/**
+ * Read the initial theme synchronously from the `data-theme` attribute
+ * that the inline script in `<head>` already set before React hydrates.
+ * This avoids a flash where the icon briefly shows the wrong state.
+ */
+function getInitialTheme(): ThemeOption {
+  if (typeof document === "undefined") {
     return "system"
   }
 
-  const stored = localStorage.getItem("theme")
+  const attr = document.documentElement.dataset.theme
 
-  if (stored === "light" || stored === "dark" || stored === "system") {
-    return stored
+  if (attr === "light" || attr === "dark" || attr === "system") {
+    return attr
   }
 
   return "system"
+}
+
+const themeIcon: Record<ThemeOption, typeof Sun> = {
+  light: Sun,
+  dark: Moon,
+  system: SunMoon,
 }
 
 function ThemeToggle({
@@ -48,11 +61,7 @@ function ThemeToggle({
   labelSystem,
   srLabel,
 }: ThemeToggleProps) {
-  const [theme, setTheme] = useState<ThemeOption>("system")
-
-  useEffect(() => {
-    setTheme(getStoredTheme())
-  }, [])
+  const [theme, setTheme] = useState<ThemeOption>(getInitialTheme)
 
   useEffect(() => {
     applyTheme(theme)
@@ -77,33 +86,34 @@ function ThemeToggle({
     }
   }, [theme])
 
+  const TriggerIcon = themeIcon[theme]
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon-sm">
-          {theme === "light" ? (
-            <Sun className="size-4" />
-          ) : theme === "dark" ? (
-            <Moon className="size-4" />
-          ) : (
-            <SunMoon className="size-4" />
-          )}
+          <TriggerIcon className="size-4" />
           <span className="sr-only">{srLabel}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun />
-          {labelLight}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon />
-          {labelDark}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <SunMoon />
-          {labelSystem}
-        </DropdownMenuItem>
+        <DropdownMenuRadioGroup
+          value={theme}
+          onValueChange={(value) => setTheme(value as ThemeOption)}
+        >
+          <DropdownMenuRadioItem value="light">
+            <Sun />
+            {labelLight}
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="dark">
+            <Moon />
+            {labelDark}
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="system">
+            <SunMoon />
+            {labelSystem}
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
