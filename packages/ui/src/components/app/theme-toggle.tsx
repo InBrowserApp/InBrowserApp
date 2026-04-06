@@ -81,7 +81,13 @@ function ThemeToggle({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon-sm">
-          <SunMoon className="size-4" />
+          {theme === "light" ? (
+            <Sun className="size-4" />
+          ) : theme === "dark" ? (
+            <Moon className="size-4" />
+          ) : (
+            <SunMoon className="size-4" />
+          )}
           <span className="sr-only">{srLabel}</span>
         </Button>
       </DropdownMenuTrigger>
