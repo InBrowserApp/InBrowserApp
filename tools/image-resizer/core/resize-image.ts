@@ -117,6 +117,7 @@ function calculateOutputDimensions(
   }
 }
 
+/* v8 ignore start -- browser-only functions requiring Canvas/Image APIs */
 async function canvasToBlob(
   canvas: HTMLCanvasElement,
   mimeType: ResizeResult["mimeType"],
@@ -247,7 +248,16 @@ async function resizeImageFile(
   }
 }
 
-export { calculateOutputDimensions, readImageDimensions, resizeImageFile }
+/* v8 ignore stop */
+
+export {
+  calculateOutputDimensions,
+  clampDimension,
+  readImageDimensions,
+  replaceFileExtension,
+  resizeImageFile,
+  resolveOutputMimeType,
+}
 export type {
   ImageDimensions,
   ResizeAlgorithm,

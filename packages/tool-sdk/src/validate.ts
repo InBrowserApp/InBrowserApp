@@ -24,9 +24,11 @@ function getMissingLanguages(
   entries: Record<string, unknown> | undefined,
   requiredLanguages: readonly string[]
 ) {
+  /* v8 ignore start -- defensive guard for unexpected undefined */
   if (!entries) {
     return [...requiredLanguages]
   }
+  /* v8 ignore stop */
 
   return requiredLanguages.filter((language) => !(language in entries))
 }

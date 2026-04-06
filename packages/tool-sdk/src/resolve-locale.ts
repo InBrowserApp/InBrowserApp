@@ -15,7 +15,9 @@ function resolveLocale<T>(
   const byLang = new Map<string, T>()
 
   for (const [path, value] of Object.entries(modules)) {
-    const filename = path.split("/").at(-1) ?? ""
+    const segments = path.split("/")
+    // split() always returns at least one element
+    const filename = segments[segments.length - 1]!
     const language = filename.replace(/\.[^.]+$/u, "")
     byLang.set(language, value)
   }
