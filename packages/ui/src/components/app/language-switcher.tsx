@@ -85,11 +85,11 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
             <DropdownMenuRadioItem
               key={option.code}
               value={option.code}
-              asChild
+              onSelect={() => {
+                window.location.href = option.href
+              }}
             >
-              <a href={option.href} hrefLang={option.code} lang={option.code}>
-                {option.label}
-              </a>
+              <span lang={option.code}>{option.label}</span>
             </DropdownMenuRadioItem>
           ))}
         </DropdownMenuRadioGroup>
