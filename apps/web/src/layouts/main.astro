@@ -50,6 +50,16 @@ const language = resolveSiteLanguage(lang)
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <title>{title}</title>
+    <script is:inline>
+      ;(function () {
+        var theme = localStorage.getItem("theme")
+        var isDark =
+          theme === "dark" ||
+          (theme !== "light" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+      })()
+    </script>
   </head>
   <body>
     <div class="min-h-svh bg-background">

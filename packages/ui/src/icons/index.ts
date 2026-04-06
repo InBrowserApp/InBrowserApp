@@ -15,10 +15,13 @@ export {
   LayoutGrid,
   LoaderCircle,
   Lock,
+  Monitor,
+  Moon,
   Network,
   RefreshCcw,
   Search,
   Sparkles,
+  Sun,
   TriangleAlert,
   Wrench,
 } from "lucide-react"

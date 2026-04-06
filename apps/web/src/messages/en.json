@@ -3,6 +3,10 @@
     "name": "InBrowser.App",
     "description": "Free browser-based tools that run entirely on your device.",
     "languageLabel": "Languages",
+    "themeLabel": "Toggle theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
     "navigation": {
       "home": "Home",
       "tools": "Tools"
