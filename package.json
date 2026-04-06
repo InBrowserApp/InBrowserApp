@@ -13,8 +13,8 @@
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
+    "test": "vitest run --silent",
+    "test:coverage": "vitest run --silent --coverage",
     "typecheck": "pnpm tool-registry:generate && pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
   },
   "devDependencies": {

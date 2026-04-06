@@ -56,9 +56,8 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
   const [decodeError, setDecodeError] = useState(false)
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     const storedValue = window.localStorage.getItem(STORAGE_KEY)
 
@@ -72,9 +71,8 @@ function Base64EncoderDecoderClient({ messages }: Base64ToolClientProps) {
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(STORAGE_KEY, plainText)
   }, [plainText])

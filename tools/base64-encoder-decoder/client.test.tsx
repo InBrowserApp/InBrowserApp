@@ -103,6 +103,35 @@ describe("Base64EncoderDecoderClient", () => {
     expect(screen.queryByText("Invalid Base64")).toBeNull()
   })
 
+  test("restores from localStorage on mount", () => {
+    window.localStorage.setItem(
+      "tools:base64-encoder-decoder:plain-text",
+      "stored value"
+    )
+
+    render(<Base64EncoderDecoderClient messages={messages} />)
+
+    const plainInput = screen.getByLabelText(
+      "Plain text"
+    ) as HTMLTextAreaElement
+    expect(plainInput.value).toBe("stored value")
+
+    window.localStorage.removeItem("tools:base64-encoder-decoder:plain-text")
+  })
+
+  test("persists plain text to localStorage on change", () => {
+    render(<Base64EncoderDecoderClient messages={messages} />)
+
+    const plainInput = screen.getByLabelText(
+      "Plain text"
+    ) as HTMLTextAreaElement
+    fireEvent.change(plainInput, { target: { value: "persist me" } })
+
+    expect(
+      window.localStorage.getItem("tools:base64-encoder-decoder:plain-text")
+    ).toBe("persist me")
+  })
+
   test("clears error when plain text is changed", () => {
     render(<Base64EncoderDecoderClient messages={messages} />)
 

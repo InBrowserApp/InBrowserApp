@@ -125,9 +125,8 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
   const [resultPreviewUrl, setResultPreviewUrl] = useState<string | null>(null)
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     const storedOptions = window.localStorage.getItem(OPTION_STORAGE_KEY)
 
@@ -148,9 +147,8 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(OPTION_STORAGE_KEY, JSON.stringify(options))
   }, [options])

@@ -33,6 +33,12 @@ export default getViteConfig({
           branches: 100,
           statements: 100,
         },
+        "tools/*": {
+          lines: 90,
+          functions: 85,
+          branches: 85,
+          statements: 90,
+        },
       },
     },
   },

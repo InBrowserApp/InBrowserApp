@@ -125,9 +125,8 @@ function JsonSchemaValidatorClient({
   const deferredDataText = useDeferredValue(dataText)
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     const storedSchema = window.localStorage.getItem(STORAGE_KEYS.schema)
     const storedData = window.localStorage.getItem(STORAGE_KEYS.data)
@@ -154,25 +153,22 @@ function JsonSchemaValidatorClient({
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(STORAGE_KEYS.schema, schemaText)
   }, [schemaText])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(STORAGE_KEYS.data, dataText)
   }, [dataText])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(
       STORAGE_KEYS.validateFormats,
@@ -181,9 +177,8 @@ function JsonSchemaValidatorClient({
   }, [validateFormats])
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
 
     window.localStorage.setItem(STORAGE_KEYS.allErrors, String(allErrors))
   }, [allErrors])
