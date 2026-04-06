@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions"
 import "@workspace/ui/globals.css"
 import SiteNavbar from "@/components/site-navbar.astro"
 import { resolveSiteLanguage, type SiteLanguage } from "@/lib/site"
@@ -33,7 +34,7 @@ const {
 const language = resolveSiteLanguage(lang)
 ---
 
-<html lang={lang} data-theme="system">
+<html lang={lang} data-theme="system" transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -50,15 +51,20 @@ const language = resolveSiteLanguage(lang)
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <title>{title}</title>
+    <ClientRouter />
     <script is:inline>
       ;(function () {
-        var theme = localStorage.getItem("theme") || "system"
-        var isDark =
-          theme === "dark" ||
-          (theme === "system" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        document.documentElement.classList[isDark ? "add" : "remove"]("dark")
-        document.documentElement.dataset.theme = theme
+        function applyTheme() {
+          var theme = localStorage.getItem("theme") || "system"
+          var isDark =
+            theme === "dark" ||
+            (theme === "system" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+          document.documentElement.dataset.theme = theme
+        }
+        applyTheme()
+        document.addEventListener("astro:after-swap", applyTheme)
       })()
     </script>
   </head>

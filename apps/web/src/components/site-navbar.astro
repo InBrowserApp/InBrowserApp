@@ -47,6 +47,7 @@ const navItems = [
   <div class="flex items-center gap-1">
     <ThemeToggle
       client:idle
+      transition:persist="theme-toggle"
       labelLight={catalog.site.themeLight}
       labelDark={catalog.site.themeDark}
       labelSystem={catalog.site.themeSystem}
@@ -55,6 +56,7 @@ const navItems = [
     <div class="mx-1 h-4 w-px bg-border" aria-hidden="true" />
     <LanguageSwitcher
       client:idle
+      transition:persist="lang-switcher"
       label={catalog.site.languageLabel}
       options={languageOptions}
     />
