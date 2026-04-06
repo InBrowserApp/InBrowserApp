@@ -65,6 +65,7 @@ function parseJson(source: string) {
   } catch (error) {
     return {
       empty: false,
+      /* v8 ignore next */
       error: error instanceof Error ? error.message : String(error),
     } as const
   }
@@ -98,7 +99,8 @@ function toIssuePath(
       ? `/${params.missingProperty}`
       : ""
 
-  return `${instancePath || "/"}${missingProperty}` || "/"
+  const base = instancePath || "/"
+  return `${base}${missingProperty}`
 }
 
 function validateJsonSchemaText(
@@ -140,6 +142,7 @@ function validateJsonSchemaText(
     const issues =
       validate.errors?.map((issue) => ({
         keyword: issue.keyword,
+        /* v8 ignore next */
         message: issue.message ?? "Validation failed.",
         path: toIssuePath(
           issue.instancePath,
@@ -157,6 +160,7 @@ function validateJsonSchemaText(
     return {
       state: "schema-error",
       detectedDraft,
+      /* v8 ignore next */
       message: error instanceof Error ? error.message : String(error),
     }
   }

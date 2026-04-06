@@ -13,18 +13,22 @@
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "typecheck": "pnpm tool-registry:generate && pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
+    "@vitest/coverage-v8": "^4.1.2",
     "dependency-cruiser": "^17.3.10",
     "husky": "^9.1.7",
     "knip": "^6.3.0",
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.43.0",
     "oxlint": "^1.58.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "^4.1.2"
   },
   "packageManager": "pnpm@9.15.9",
   "engines": {
