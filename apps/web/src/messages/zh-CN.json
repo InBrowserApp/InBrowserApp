@@ -3,6 +3,10 @@
     "name": "InBrowser.App",
     "description": "完全在设备上运行的免费浏览器工具。",
     "languageLabel": "语言",
+    "themeLabel": "切换主题",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeSystem": "跟随系统",
     "navigation": {
       "home": "首页",
       "tools": "工具"

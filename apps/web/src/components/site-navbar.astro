@@ -1,5 +1,6 @@
 ---
 import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
+import { ThemeToggle } from "@workspace/ui/components/app/theme-toggle"
 import { createLanguageOptions, localizePath, type SiteLanguage } from "@/lib/site"
 import { loadSiteMessages } from "@/lib/site-messages"
 
@@ -43,9 +44,19 @@ const navItems = [
       </a>
     ))}
   </div>
-  <LanguageSwitcher
-    client:load
-    label={catalog.site.languageLabel}
-    options={languageOptions}
-  />
+  <div class="flex items-center gap-1">
+    <ThemeToggle
+      client:load
+      labelLight={catalog.site.themeLight}
+      labelDark={catalog.site.themeDark}
+      labelSystem={catalog.site.themeSystem}
+      srLabel={catalog.site.themeLabel}
+    />
+    <div class="mx-1 h-4 w-px bg-border" aria-hidden="true" />
+    <LanguageSwitcher
+      client:load
+      label={catalog.site.languageLabel}
+      options={languageOptions}
+    />
+  </div>
 </nav>

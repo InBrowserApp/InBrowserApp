@@ -7,6 +7,10 @@ type SiteMessageCatalog = Readonly<{
     name: string
     description: string
     languageLabel: string
+    themeLabel: string
+    themeLight: string
+    themeDark: string
+    themeSystem: string
     navigation: Readonly<{
       home: string
       tools: string
