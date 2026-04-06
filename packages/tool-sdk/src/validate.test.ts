@@ -110,7 +110,7 @@ describe("validateToolMetaCatalogs", () => {
   test("returns issues for missing required language", () => {
     const result = validateToolMetaCatalogs({
       "zh-CN": { name: "工具", description: "一个工具" },
-    })
+    } as any)
     expect(result.valid).toBe(false)
     expect(result.issues.some((i) => i.includes("missing"))).toBe(true)
   })
@@ -133,16 +133,14 @@ describe("validateToolMetaCatalogs", () => {
   })
 
   test("reports missing languages for empty catalogs", () => {
-    const result = validateToolMetaCatalogs({})
+    const result = validateToolMetaCatalogs({} as any)
     expect(result.valid).toBe(false)
     expect(result.issues.some((i) => i.includes("missing"))).toBe(true)
   })
 
   test("handles catalogs passed as undefined-like value via getMissingLanguages", () => {
     // Cast to bypass TS — exercises the `if (!entries)` branch
-    const result = validateToolMetaCatalogs(
-      Object.create(null) as Record<string, never>
-    )
+    const result = validateToolMetaCatalogs(Object.create(null) as any)
     expect(result.valid).toBe(false)
   })
 })
