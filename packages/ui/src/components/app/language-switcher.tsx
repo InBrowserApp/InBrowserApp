@@ -1,5 +1,7 @@
 "use client"
 
+import { useMemo } from "react"
+
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   DropdownMenu,
@@ -7,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/ui/dropdown-menu"
-import { Languages } from "@workspace/ui/icons"
+import { Check, Languages } from "@workspace/ui/icons"
 
 type LanguageOption = Readonly<{
   code: string
@@ -21,7 +23,52 @@ type LanguageSwitcherProps = {
   options: readonly LanguageOption[]
 }
 
+/**
+ * Sort options so the current language comes first, then the user's
+ * preferred browser language (if different), then the rest unchanged.
+ */
+function useSortedOptions(options: readonly LanguageOption[]) {
+  return useMemo(() => {
+    if (typeof navigator === "undefined") {
+      return options
+    }
+
+    const browserLangs = navigator.languages ?? [navigator.language]
+    const sorted = [...options]
+
+    sorted.sort((a, b) => {
+      // Current language always first
+      if (a.current) return -1
+      if (b.current) return 1
+
+      // Then prioritise by browser language preference
+      const aIdx = browserLangs.findIndex(
+        (l) =>
+          l === a.code ||
+          l.startsWith(`${a.code}-`) ||
+          a.code.startsWith(`${l}-`) ||
+          l.split("-")[0] === a.code.split("-")[0]
+      )
+      const bIdx = browserLangs.findIndex(
+        (l) =>
+          l === b.code ||
+          l.startsWith(`${b.code}-`) ||
+          b.code.startsWith(`${l}-`) ||
+          l.split("-")[0] === b.code.split("-")[0]
+      )
+      const aPrio = aIdx === -1 ? Infinity : aIdx
+      const bPrio = bIdx === -1 ? Infinity : bIdx
+
+      return aPrio - bPrio
+    })
+
+    return sorted
+  }, [options])
+}
+
 function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
+  const sortedOptions = useSortedOptions(options)
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -31,10 +78,15 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {options.map((option) => (
-          <DropdownMenuItem key={option.code} asChild>
+        {sortedOptions.map((option) => (
+          <DropdownMenuItem key={option.code} asChild className="relative pr-8">
             <a href={option.href} hrefLang={option.code} lang={option.code}>
               {option.label}
+              {option.current ? (
+                <span className="pointer-events-none absolute right-2 flex items-center justify-center">
+                  <Check className="size-4" />
+                </span>
+              ) : null}
             </a>
           </DropdownMenuItem>
         ))}
