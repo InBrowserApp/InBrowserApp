@@ -9,10 +9,6 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy:staging": "wrangler deploy --env staging",
-    "lint": "oxlint .",
-    "lint:fix": "oxlint --fix .",
-    "format": "oxfmt .",
-    "format:check": "oxfmt --check .",
     "typecheck": "astro check"
   },
   "dependencies": {
