@@ -6,3 +6,9 @@ packages:
   - "packages/*"
   - "packages/lib/*"
   - "tools/*"
+
+onlyBuiltDependencies:
+  - esbuild
+  - msw
+  - sharp
+  - workerd
