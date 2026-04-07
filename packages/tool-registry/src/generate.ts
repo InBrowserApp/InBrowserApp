@@ -22,10 +22,6 @@ import type {
 
 const TOOL_PACKAGE_SCOPE = "@tool/"
 
-function stringifyJson(value: unknown) {
-  return `${JSON.stringify(value, null, 2)}\n`
-}
-
 function resolveToolRegistryPaths(
   options: ToolRegistryGenerationOptions = {}
 ): ToolRegistryArtifactPaths {
@@ -240,8 +236,9 @@ function buildStaticPaths(
     }))
 }
 
-async function loadToolManifests(paths: ToolRegistryArtifactPaths) {
-  const manifestSources = await discoverToolManifestSources(paths.toolsRoot)
+async function loadToolManifests(
+  manifestSources: readonly ToolRegistryEntrySource[]
+) {
   const manifests: LoadedToolManifest[] = []
   const slugOwners = new Map<string, string>()
 
@@ -358,17 +355,80 @@ async function writeFileIfChanged(path: string, contents: string) {
     : null
 
   if (currentContents === contents) {
-    return
+    return false
   }
 
   await writeFile(path, contents, "utf8")
+  return true
+}
+
+type RegistryPackageJson = {
+  dependencies?: Record<string, string>
+  [key: string]: unknown
+}
+
+async function syncRegistryPackageDependencies(
+  paths: ToolRegistryArtifactPaths,
+  sources: readonly ToolRegistryEntrySource[]
+) {
+  const packageJsonPath = resolve(paths.packageRoot, "package.json")
+  const packageJsonText = await readFile(packageJsonPath, "utf8")
+  const packageJson = JSON.parse(packageJsonText) as RegistryPackageJson
+  const existingDependencies = packageJson.dependencies ?? {}
+
+  // Preserve every non-@tool/* dep verbatim; replace the @tool/* set with
+  // the discovered tools so removing a tool also removes its dep entry.
+  const preservedDependencies = Object.fromEntries(
+    Object.entries(existingDependencies).filter(
+      ([name]) => !name.startsWith(TOOL_PACKAGE_SCOPE)
+    )
+  )
+  const toolDependencies = Object.fromEntries(
+    sources.map((source) => [source.packageName, "workspace:*"])
+  )
+  const mergedDependencies = Object.fromEntries(
+    Object.entries({ ...preservedDependencies, ...toolDependencies }).sort(
+      ([left], [right]) => left.localeCompare(right)
+    )
+  )
+
+  packageJson.dependencies = mergedDependencies
+
+  const nextText = `${JSON.stringify(packageJson, null, 2)}\n`
+
+  if (nextText === packageJsonText) {
+    return false
+  }
+
+  await writeFile(packageJsonPath, nextText, "utf8")
+  return true
 }
 
 async function generateToolRegistryArtifacts(
   options: ToolRegistryGenerationOptions = {}
 ) {
   const paths = resolveToolRegistryPaths(options)
-  const manifests = await loadToolManifests(paths)
+
+  // First pass: glob tools/*/package.json (filesystem only, no module imports)
+  // and sync the registry's own package.json so workspace symlinks for every
+  // discovered tool exist before we try to import their manifests.
+  const sources = await discoverToolManifestSources(paths.toolsRoot)
+  const dependenciesChanged = await syncRegistryPackageDependencies(
+    paths,
+    sources
+  )
+
+  if (dependenciesChanged) {
+    throw new ToolContractError(
+      "Tool registry dependencies were out of sync.",
+      [
+        `Updated ${resolve(paths.packageRoot, "package.json")} to match the discovered tools.`,
+        "Run 'pnpm install' and then re-run 'pnpm tool-registry:generate'.",
+      ]
+    )
+  }
+
+  const manifests = await loadToolManifests(sources)
 
   await mkdir(paths.generatedRoot, { recursive: true })
 
@@ -399,7 +459,11 @@ const isDirectExecution =
 
 if (isDirectExecution) {
   generateToolRegistryArtifacts().catch((error: unknown) => {
-    console.error(error instanceof Error ? error.message : stringifyJson(error))
+    console.error(
+      error instanceof Error
+        ? error.message
+        : `${JSON.stringify(error, null, 2)}\n`
+    )
     process.exitCode = 1
   })
 }

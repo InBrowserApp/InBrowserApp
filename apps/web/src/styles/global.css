@@ -1,0 +1,10 @@
+@import "@workspace/ui/globals.css";
+
+/*
+ * Tailwind class scanning for the host application. The shared design
+ * system in @workspace/ui only scans its own files; the host app declares
+ * the additional source roots here so packages/ui has no knowledge of
+ * apps/web or tools/*.
+ */
+@source "../**/*.{ts,tsx,astro}";
+@source "../../../../tools/**/*.{ts,tsx,astro}";
