@@ -45,7 +45,7 @@ jobs:
         run: pnpm typecheck
 
       - name: Test
-        run: pnpm test
+        run: pnpm test:coverage
 
       - name: Dep boundaries
         run: pnpm depcruise
