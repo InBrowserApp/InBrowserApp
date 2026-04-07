@@ -28,6 +28,7 @@ const messages = {
   changeImageLabel: "Change image",
   uploadHint:
     "PNG, JPEG, WebP, and other browser-readable formats are supported.",
+  dropHint: "Drag and drop an image here, or click to browse.",
   optionsTitle: "Resize options",
   optionsDescription:
     "Dimensions, interpolation style, output format, and quality are all controlled locally in the browser.",
@@ -692,7 +693,7 @@ describe("ImageResizerClient", () => {
     })
 
     expect(screen.getByText(/800 .* 450/)).toBeTruthy()
-    expect(screen.getByText("image/png")).toBeTruthy()
+    expect(screen.getAllByText("image/png").length).toBeGreaterThan(0)
     expect(screen.getByText("1.0 KB")).toBeTruthy()
 
     const downloadLink = screen.getByText("Download result").closest("a")!
@@ -1128,7 +1129,7 @@ describe("ImageResizerClient", () => {
     fireEvent.click(screen.getByText("Resize image").closest("button")!)
 
     await waitFor(() => {
-      expect(screen.getByText("image/png")).toBeTruthy()
+      expect(screen.getAllByText("image/png").length).toBeGreaterThan(0)
     })
 
     // Second resize

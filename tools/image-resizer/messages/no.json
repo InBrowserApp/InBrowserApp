@@ -4,6 +4,7 @@
   "chooseImageLabel": "Velg et bilde",
   "changeImageLabel": "Bytt bilde",
   "uploadHint": "PNG, JPEG, WebP og andre formater som nettleseren kan lese støttes.",
+  "dropHint": "Dra og slipp et bilde her, eller klikk for å bla.",
   "optionsTitle": "Alternativer for størrelsesendring",
   "optionsDescription": "Dimensjoner, interpolasjonsstil, utdataformat og kvalitet styres alle lokalt i nettleseren.",
   "widthLabel": "Bredde",

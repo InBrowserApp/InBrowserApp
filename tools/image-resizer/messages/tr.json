@@ -4,6 +4,7 @@
   "chooseImageLabel": "Görüntü seç",
   "changeImageLabel": "Görüntüyü değiştir",
   "uploadHint": "PNG, JPEG, WebP ve diğer tarayıcı tarafından okunabilen formatlar desteklenir.",
+  "dropHint": "Bir görüntüyü buraya sürükleyip bırakın veya göz atmak için tıklayın.",
   "optionsTitle": "Yeniden boyutlandırma seçenekleri",
   "optionsDescription": "Boyutlar, enterpolasyon stili, çıktı formatı ve kalite tarayıcıda yerel olarak kontrol edilir.",
   "widthLabel": "Genişlik",

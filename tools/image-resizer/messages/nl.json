@@ -4,6 +4,7 @@
   "chooseImageLabel": "Afbeelding kiezen",
   "changeImageLabel": "Afbeelding wijzigen",
   "uploadHint": "PNG, JPEG, WebP en andere door de browser leesbare formaten worden ondersteund.",
+  "dropHint": "Sleep een afbeelding hierheen, of klik om te bladeren.",
   "optionsTitle": "Formaatopties",
   "optionsDescription": "Afmetingen, interpolatiestijl, uitvoerformaat en kwaliteit worden allemaal lokaal in de browser beheerd.",
   "widthLabel": "Breedte",

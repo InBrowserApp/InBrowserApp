@@ -4,6 +4,7 @@
   "chooseImageLabel": "Bild auswählen",
   "changeImageLabel": "Bild ändern",
   "uploadHint": "PNG, JPEG, WebP und andere vom Browser lesbare Formate werden unterstützt.",
+  "dropHint": "Ziehe ein Bild hierher oder klicke, um es auszuwählen.",
   "optionsTitle": "Größenoptionen",
   "optionsDescription": "Abmessungen, Interpolationsart, Ausgabeformat und Qualität werden lokal im Browser gesteuert.",
   "widthLabel": "Breite",

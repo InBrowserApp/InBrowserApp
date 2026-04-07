@@ -4,6 +4,7 @@
   "chooseImageLabel": "اختر صورة",
   "changeImageLabel": "تغيير الصورة",
   "uploadHint": "يتم دعم PNG وJPEG وWebP وصيغ أخرى يمكن للمتصفح قراءتها.",
+  "dropHint": "اسحب صورة وأفلتها هنا، أو انقر للتصفح.",
   "optionsTitle": "خيارات تغيير الحجم",
   "optionsDescription": "يتم التحكم في الأبعاد ونمط الاستيفاء وصيغة الإخراج والجودة محليًا في المتصفح.",
   "widthLabel": "العرض",

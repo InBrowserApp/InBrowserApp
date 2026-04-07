@@ -9,6 +9,7 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -56,6 +57,7 @@ type ImageResizerMessages = Readonly<{
   chooseImageLabel: string
   changeImageLabel: string
   uploadHint: string
+  dropHint: string
   optionsTitle: string
   optionsDescription: string
   widthLabel: string
@@ -123,6 +125,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
   const [error, setError] = useState<string | null>(null)
   const [sourcePreviewUrl, setSourcePreviewUrl] = useState<string | null>(null)
   const [resultPreviewUrl, setResultPreviewUrl] = useState<string | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
 
   useEffect(() => {
     /* v8 ignore next */
@@ -332,51 +335,91 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
           <CardHeader>
             <CardTitle>{messages.uploadTitle}</CardTitle>
             <CardDescription>{messages.uploadDescription}</CardDescription>
+            {selectedFile ? (
+              <CardAction>
+                <Button type="button" variant="outline" size="sm" asChild>
+                  <label htmlFor={inputId} className="cursor-pointer">
+                    <RefreshCcw data-icon="inline-start" />
+                    {messages.changeImageLabel}
+                  </label>
+                </Button>
+              </CardAction>
+            ) : null}
           </CardHeader>
           <CardContent className="flex flex-1 flex-col gap-4">
-            {selectedFile && sourcePreviewUrl && sourceDimensions ? (
-              <>
-                <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
-                  <img
-                    src={sourcePreviewUrl}
-                    alt=""
-                    className="h-72 w-full object-contain"
-                  />
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="truncate text-sm font-medium text-foreground">
-                    {selectedFile.name}
-                  </span>
-                  <Badge variant="outline" className="font-mono">
-                    {sourceDimensions.width} × {sourceDimensions.height}
-                  </Badge>
-                  <Badge variant="secondary">
-                    {formatFileSize(selectedFile.size)}
-                  </Badge>
-                </div>
+            <div
+              onDragOver={(event) => {
+                event.preventDefault()
+                if (event.dataTransfer) {
+                  event.dataTransfer.dropEffect = "copy"
+                }
+                setIsDragging(true)
+              }}
+              onDragLeave={(event) => {
+                if (event.currentTarget.contains(event.relatedTarget as Node)) {
+                  return
+                }
+                setIsDragging(false)
+              }}
+              onDrop={(event) => {
+                event.preventDefault()
+                setIsDragging(false)
+                const file = event.dataTransfer?.files?.[0] ?? null
+                void handleFileChange(file)
+              }}
+              className={
+                selectedFile && sourcePreviewUrl && sourceDimensions
+                  ? `flex flex-1 flex-col gap-4 rounded-xl transition-colors ${
+                      isDragging ? "ring-2 ring-foreground/30" : ""
+                    }`
+                  : undefined
+              }
+            >
+              {selectedFile && sourcePreviewUrl && sourceDimensions ? (
+                <>
+                  <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
+                    <img
+                      src={sourcePreviewUrl}
+                      alt=""
+                      className="h-72 w-full object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="truncate text-sm font-medium text-foreground">
+                      {selectedFile.name}
+                    </span>
+                    <Badge variant="outline" className="font-mono">
+                      {sourceDimensions.width} × {sourceDimensions.height}
+                    </Badge>
+                    <Badge variant="secondary">
+                      {formatFileSize(selectedFile.size)}
+                    </Badge>
+                  </div>
+                </>
+              ) : (
                 <label
                   htmlFor={inputId}
-                  className="inline-flex cursor-pointer text-sm font-medium text-muted-foreground underline underline-offset-4 hover:text-foreground"
+                  className={`flex flex-1 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed px-6 py-8 text-center transition-colors ${
+                    isDragging
+                      ? "border-foreground/40 bg-muted/60"
+                      : "border-border/80 bg-muted/30 hover:border-foreground/20 hover:bg-muted/45"
+                  }`}
                 >
-                  {messages.changeImageLabel}
+                  <ImageUp className="size-6 text-muted-foreground" />
+                  <div className="mt-4 space-y-1">
+                    <p className="font-medium text-foreground">
+                      {messages.chooseImageLabel}
+                    </p>
+                    <p className="text-sm leading-6 text-muted-foreground">
+                      {messages.dropHint}
+                    </p>
+                    <p className="text-sm leading-6 text-muted-foreground">
+                      {messages.uploadHint}
+                    </p>
+                  </div>
                 </label>
-              </>
-            ) : (
-              <label
-                htmlFor={inputId}
-                className="flex flex-1 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
-              >
-                <ImageUp className="size-6 text-muted-foreground" />
-                <div className="mt-4 space-y-1">
-                  <p className="font-medium text-foreground">
-                    {messages.chooseImageLabel}
-                  </p>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {messages.uploadHint}
-                  </p>
-                </div>
-              </label>
-            )}
+              )}
+            </div>
             <input
               id={inputId}
               type="file"
@@ -607,54 +650,54 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
         <CardContent className="flex flex-col gap-5">
           {result &&
           resultPreviewUrl &&
+          selectedFile &&
           sourcePreviewUrl &&
           sourceDimensions ? (
-            <>
-              <div className="grid gap-4 lg:grid-cols-2">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-foreground">
-                      {messages.originalLabel}
-                    </span>
-                    <Badge variant="outline" className="font-mono">
-                      {sourceDimensions.width} × {sourceDimensions.height}
-                    </Badge>
-                  </div>
-                  <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
-                    <img
-                      src={sourcePreviewUrl}
-                      alt=""
-                      className="h-72 w-full object-contain"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-foreground">
-                      {messages.outputLabel}
-                    </span>
-                    <Badge variant="outline" className="font-mono">
-                      {result.outputWidth} × {result.outputHeight}
-                    </Badge>
-                  </div>
-                  <div className="overflow-hidden rounded-xl border border-border/70 bg-background">
-                    <img
-                      src={resultPreviewUrl}
-                      alt=""
-                      className="h-72 w-full object-contain"
-                    />
-                  </div>
+            <div className="grid gap-4 lg:grid-cols-2">
+              <div className="flex gap-4 rounded-xl border border-border/70 bg-background p-3">
+                <img
+                  src={sourcePreviewUrl}
+                  alt=""
+                  className="size-32 shrink-0 rounded-md object-contain"
+                />
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <span className="text-sm font-medium text-foreground">
+                    {messages.originalLabel}
+                  </span>
+                  <Badge variant="secondary" className="w-fit">
+                    {selectedFile.type || "image"}
+                  </Badge>
+                  <Badge variant="secondary" className="w-fit">
+                    {formatFileSize(selectedFile.size)}
+                  </Badge>
+                  <Badge variant="outline" className="w-fit font-mono">
+                    {sourceDimensions.width} × {sourceDimensions.height}
+                  </Badge>
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="secondary">{result.mimeType}</Badge>
-                <Badge variant="secondary">
-                  {formatFileSize(result.blob.size)}
-                </Badge>
+              <div className="flex gap-4 rounded-xl border border-border/70 bg-background p-3">
+                <img
+                  src={resultPreviewUrl}
+                  alt=""
+                  className="size-32 shrink-0 rounded-md object-contain"
+                />
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <span className="text-sm font-medium text-foreground">
+                    {messages.outputLabel}
+                  </span>
+                  <Badge variant="secondary" className="w-fit">
+                    {result.mimeType}
+                  </Badge>
+                  <Badge variant="secondary" className="w-fit">
+                    {formatFileSize(result.blob.size)}
+                  </Badge>
+                  <Badge variant="outline" className="w-fit font-mono">
+                    {result.outputWidth} × {result.outputHeight}
+                  </Badge>
+                </div>
               </div>
-            </>
+            </div>
           ) : (
             <Alert>
               <ImageUp />

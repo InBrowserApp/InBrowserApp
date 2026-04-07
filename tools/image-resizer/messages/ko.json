@@ -4,6 +4,7 @@
   "chooseImageLabel": "이미지 선택",
   "changeImageLabel": "이미지 변경",
   "uploadHint": "PNG, JPEG, WebP 및 기타 브라우저에서 읽을 수 있는 형식을 지원합니다.",
+  "dropHint": "여기에 이미지를 끌어다 놓거나 클릭해 찾아보세요.",
   "optionsTitle": "리사이즈 옵션",
   "optionsDescription": "크기, 보간 방식, 출력 형식, 품질이 모두 브라우저에서 로컬로 제어됩니다.",
   "widthLabel": "너비",

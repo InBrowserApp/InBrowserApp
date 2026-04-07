@@ -4,6 +4,7 @@
   "chooseImageLabel": "画像を選択",
   "changeImageLabel": "画像を変更",
   "uploadHint": "PNG、JPEG、WebP、その他ブラウザで読み取り可能な形式に対応しています。",
+  "dropHint": "ここに画像をドラッグ＆ドロップするか、クリックして選択してください。",
   "optionsTitle": "リサイズオプション",
   "optionsDescription": "寸法、補間方式、出力形式、品質はすべてブラウザ内でローカルに制御されます。",
   "widthLabel": "幅",

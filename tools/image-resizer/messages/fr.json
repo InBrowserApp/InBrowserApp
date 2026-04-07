@@ -4,6 +4,7 @@
   "chooseImageLabel": "Choisir une image",
   "changeImageLabel": "Changer d'image",
   "uploadHint": "PNG, JPEG, WebP et d'autres formats lisibles par le navigateur sont pris en charge.",
+  "dropHint": "Glissez-déposez une image ici, ou cliquez pour parcourir.",
   "optionsTitle": "Options de redimensionnement",
   "optionsDescription": "Les dimensions, le style d'interpolation, le format de sortie et la qualité sont tous contrôlés localement dans le navigateur.",
   "widthLabel": "Largeur",

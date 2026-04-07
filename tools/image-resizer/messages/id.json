@@ -4,6 +4,7 @@
   "chooseImageLabel": "Pilih gambar",
   "changeImageLabel": "Ganti gambar",
   "uploadHint": "PNG, JPEG, WebP, dan format lain yang dapat dibaca peramban didukung.",
+  "dropHint": "Seret dan lepas gambar di sini, atau klik untuk menelusuri.",
   "optionsTitle": "Opsi pengubahan ukuran",
   "optionsDescription": "Dimensi, gaya interpolasi, format keluaran, dan kualitas semuanya dikontrol secara lokal di peramban.",
   "widthLabel": "Lebar",

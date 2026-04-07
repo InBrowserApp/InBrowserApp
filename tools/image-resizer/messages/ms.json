@@ -4,6 +4,7 @@
   "chooseImageLabel": "Pilih imej",
   "changeImageLabel": "Tukar imej",
   "uploadHint": "PNG, JPEG, WebP dan format lain yang boleh dibaca oleh pelayar disokong.",
+  "dropHint": "Seret dan lepas imej di sini, atau klik untuk melayari.",
   "optionsTitle": "Pilihan ubah saiz",
   "optionsDescription": "Dimensi, gaya interpolasi, format output dan kualiti semuanya dikawal secara setempat dalam pelayar.",
   "widthLabel": "Lebar",

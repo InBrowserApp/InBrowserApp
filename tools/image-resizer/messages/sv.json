@@ -4,6 +4,7 @@
   "chooseImageLabel": "Välj en bild",
   "changeImageLabel": "Byt bild",
   "uploadHint": "PNG, JPEG, WebP och andra format som webbläsaren kan läsa stöds.",
+  "dropHint": "Dra och släpp en bild här, eller klicka för att bläddra.",
   "optionsTitle": "Storleksalternativ",
   "optionsDescription": "Dimensioner, interpolationsstil, utdataformat och kvalitet styrs alla lokalt i webbläsaren.",
   "widthLabel": "Bredd",

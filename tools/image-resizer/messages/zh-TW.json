@@ -4,6 +4,7 @@
   "chooseImageLabel": "選擇圖片",
   "changeImageLabel": "更換圖片",
   "uploadHint": "支援 PNG、JPEG、WebP 及其他瀏覽器可讀取的格式。",
+  "dropHint": "將圖片拖放到此處,或點擊以瀏覽。",
   "optionsTitle": "調整選項",
   "optionsDescription": "尺寸、插值方式、輸出格式和品質都在瀏覽器本地控制。",
   "widthLabel": "寬度",

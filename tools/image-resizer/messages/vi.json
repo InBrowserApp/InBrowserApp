@@ -4,6 +4,7 @@
   "chooseImageLabel": "Chọn ảnh",
   "changeImageLabel": "Đổi ảnh",
   "uploadHint": "Hỗ trợ PNG, JPEG, WebP và các định dạng khác mà trình duyệt có thể đọc.",
+  "dropHint": "Kéo và thả ảnh vào đây, hoặc nhấp để duyệt.",
   "optionsTitle": "Tùy chọn thay đổi kích thước",
   "optionsDescription": "Kích thước, kiểu nội suy, định dạng đầu ra và chất lượng đều được điều khiển cục bộ trong trình duyệt.",
   "widthLabel": "Chiều rộng",
