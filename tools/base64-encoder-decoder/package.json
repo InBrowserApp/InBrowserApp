@@ -12,12 +12,12 @@
     "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
-    "astro": "^5.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@testing-library/react": "^16.3.2",
-    "vitest": "^4.1.2"
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
   }
 }

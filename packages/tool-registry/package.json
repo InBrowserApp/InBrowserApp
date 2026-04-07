@@ -18,12 +18,12 @@
     "@workspace/tool-sdk": "workspace:*"
   },
   "peerDependencies": {
-    "astro": "^5.0.0"
+    "astro": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "^25.1.0",
-    "tsx": "^4.20.6",
-    "typescript": "^5.9.3"
+    "@types/node": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   },
   "exports": {
     ".": "./src/index.ts",
