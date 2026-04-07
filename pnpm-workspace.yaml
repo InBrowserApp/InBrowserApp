@@ -1,6 +1,8 @@
-# Tools are intentionally excluded from the workspace: each tool is a directory,
-# not an independently versioned package.
+# Each leaf tool under tools/* is a workspace package, scoped @tool/<slug>.
+# Per-tool dependencies live in their own package.json so the dep graph stays
+# honest and tools can install runtime deps without polluting the rest.
 packages:
   - "apps/*"
   - "packages/*"
   - "packages/lib/*"
+  - "tools/*"

@@ -2,6 +2,7 @@ import type { ToolManifest, ToolMeta } from "@workspace/tool-sdk"
 
 type ToolRegistryEntrySource = Readonly<{
   directoryName: string
+  packageName: string
   manifestAbsolutePath: string
   toolRoot: string
 }>
@@ -31,6 +32,7 @@ type ToolRegistryArtifactPaths = Readonly<{
   registryFile: string
   staticPathsFile: string
   searchIndexFile: string
+  pageLoadersFile: string
 }>
 
 type ToolRegistryGenerationOptions = Readonly<{

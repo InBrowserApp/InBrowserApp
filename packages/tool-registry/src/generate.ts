@@ -1,7 +1,7 @@
 import type { Dirent } from "node:fs"
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises"
 import { resolve } from "node:path"
-import { fileURLToPath, pathToFileURL } from "node:url"
+import { fileURLToPath } from "node:url"
 
 import {
   assertToolManifest,
@@ -20,9 +20,7 @@ import type {
   ToolSearchIndexEntry,
 } from "./types"
 
-function stringifyJson(value: unknown) {
-  return `${JSON.stringify(value, null, 2)}\n`
-}
+const TOOL_PACKAGE_SCOPE = "@tool/"
 
 function resolveToolRegistryPaths(
   options: ToolRegistryGenerationOptions = {}
@@ -42,6 +40,7 @@ function resolveToolRegistryPaths(
     registryFile: resolve(generatedRoot, "registry.ts"),
     staticPathsFile: resolve(generatedRoot, "static-paths.ts"),
     searchIndexFile: resolve(generatedRoot, "search-index.ts"),
+    pageLoadersFile: resolve(generatedRoot, "page-loaders.ts"),
   }
 }
 
@@ -54,6 +53,16 @@ async function fileExists(path: string) {
   }
 }
 
+async function readJsonFile(path: string) {
+  const fileContents = await readFile(path, "utf8")
+  return JSON.parse(fileContents) as unknown
+}
+
+type ToolPackageJson = Readonly<{
+  name?: string
+  exports?: Readonly<Record<string, unknown>>
+}>
+
 async function discoverToolManifestSources(toolsRoot: string) {
   const directoryEntries = await readdir(toolsRoot, { withFileTypes: true })
   const manifestSources: ToolRegistryEntrySource[] = []
@@ -64,15 +73,41 @@ async function discoverToolManifestSources(toolsRoot: string) {
     }
 
     const toolRoot = resolve(toolsRoot, entry.name)
-    const manifestAbsolutePath = resolve(toolRoot, "manifest.ts")
+    const packageJsonPath = resolve(toolRoot, "package.json")
 
-    if (!(await fileExists(manifestAbsolutePath))) {
-      continue
+    if (!(await fileExists(packageJsonPath))) {
+      throw new ToolContractError("Missing tool package.json.", [
+        `${toolRoot}: every tool directory must declare a package.json with name "${TOOL_PACKAGE_SCOPE}${entry.name}".`,
+      ])
+    }
+
+    const packageJson = (await readJsonFile(packageJsonPath)) as ToolPackageJson
+    const expectedName = `${TOOL_PACKAGE_SCOPE}${entry.name}`
+
+    if (packageJson.name !== expectedName) {
+      throw new ToolContractError(
+        "Tool package name does not match directory.",
+        [
+          `${packageJsonPath}: expected name "${expectedName}", got "${packageJson.name ?? "<missing>"}".`,
+        ]
+      )
+    }
+
+    if (
+      !packageJson.exports ||
+      typeof packageJson.exports !== "object" ||
+      !("./manifest" in packageJson.exports) ||
+      !("./page" in packageJson.exports)
+    ) {
+      throw new ToolContractError("Tool package exports are incomplete.", [
+        `${packageJsonPath}: must declare exports for "./manifest" and "./page".`,
+      ])
     }
 
     manifestSources.push({
       directoryName: entry.name,
-      manifestAbsolutePath,
+      packageName: expectedName,
+      manifestAbsolutePath: resolve(toolRoot, "manifest.ts"),
       toolRoot,
     })
   }
@@ -82,15 +117,24 @@ async function discoverToolManifestSources(toolsRoot: string) {
   )
 }
 
-async function readJsonFile(path: string) {
-  const fileContents = await readFile(path, "utf8")
-  return JSON.parse(fileContents) as unknown
-}
-
 async function loadManifestModule(source: ToolRegistryEntrySource) {
-  const importedModule = (await import(
-    pathToFileURL(source.manifestAbsolutePath).href
-  )) as Record<string, unknown>
+  let importedModule: Record<string, unknown>
+
+  try {
+    importedModule = (await import(`${source.packageName}/manifest`)) as Record<
+      string,
+      unknown
+    >
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error)
+    throw new ToolContractError(
+      "Failed to import tool manifest via package exports.",
+      [
+        `${source.packageName}/manifest: ${reason}`,
+        `Hint: ensure ${source.packageName} is listed in packages/tool-registry/package.json dependencies and that pnpm install has been run.`,
+      ]
+    )
+  }
 
   const manifest = (importedModule.tool ?? importedModule.default) as
     | ToolManifest
@@ -98,7 +142,7 @@ async function loadManifestModule(source: ToolRegistryEntrySource) {
 
   if (!manifest) {
     throw new ToolContractError("Invalid tool manifest module.", [
-      `${source.manifestAbsolutePath}: expected a named 'tool' export or a default export`,
+      `${source.packageName}/manifest: expected a named 'tool' export or a default export`,
     ])
   }
 
@@ -192,8 +236,9 @@ function buildStaticPaths(
     }))
 }
 
-async function loadToolManifests(paths: ToolRegistryArtifactPaths) {
-  const manifestSources = await discoverToolManifestSources(paths.toolsRoot)
+async function loadToolManifests(
+  manifestSources: readonly ToolRegistryEntrySource[]
+) {
   const manifests: LoadedToolManifest[] = []
   const slugOwners = new Map<string, string>()
 
@@ -206,10 +251,10 @@ async function loadToolManifests(paths: ToolRegistryArtifactPaths) {
     if (existingSlugOwner) {
       throw new ToolContractError("Duplicate tool slug detected.", [
         `${source.directoryName}: ${existingSlugOwner}`,
-        `${source.directoryName}: ${source.manifestAbsolutePath}`,
+        `${source.directoryName}: ${source.packageName}`,
       ])
     }
-    slugOwners.set(source.directoryName, source.manifestAbsolutePath)
+    slugOwners.set(source.directoryName, source.packageName)
 
     await assertPageFileExists(source)
     const catalogs = await loadToolMetaCatalogs(source)
@@ -276,23 +321,114 @@ function createSearchIndexSource(manifests: readonly LoadedToolManifest[]) {
   ].join("\n")
 }
 
+function createPageLoadersSource(manifests: readonly LoadedToolManifest[]) {
+  const entries = manifests
+    .map(
+      ({ source }) =>
+        `  "${source.directoryName}": () => import("${source.packageName}/page"),`
+    )
+    .join("\n")
+
+  const body =
+    manifests.length === 0
+      ? `export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {}`
+      : [
+          `export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {`,
+          entries,
+          `}`,
+        ].join("\n")
+
+  return [
+    `import type { AstroComponentFactory } from "astro/runtime/server/index.js"`,
+    "",
+    `type ToolPageModule = { default: AstroComponentFactory }`,
+    `type ToolPageLoader = () => Promise<ToolPageModule>`,
+    "",
+    body,
+    "",
+  ].join("\n")
+}
+
 async function writeFileIfChanged(path: string, contents: string) {
   const currentContents = (await fileExists(path))
     ? await readFile(path, "utf8")
     : null
 
   if (currentContents === contents) {
-    return
+    return false
   }
 
   await writeFile(path, contents, "utf8")
+  return true
+}
+
+type RegistryPackageJson = {
+  dependencies?: Record<string, string>
+  [key: string]: unknown
+}
+
+async function syncRegistryPackageDependencies(
+  paths: ToolRegistryArtifactPaths,
+  sources: readonly ToolRegistryEntrySource[]
+) {
+  const packageJsonPath = resolve(paths.packageRoot, "package.json")
+  const packageJsonText = await readFile(packageJsonPath, "utf8")
+  const packageJson = JSON.parse(packageJsonText) as RegistryPackageJson
+  const existingDependencies = packageJson.dependencies ?? {}
+
+  // Preserve every non-@tool/* dep verbatim; replace the @tool/* set with
+  // the discovered tools so removing a tool also removes its dep entry.
+  const preservedDependencies = Object.fromEntries(
+    Object.entries(existingDependencies).filter(
+      ([name]) => !name.startsWith(TOOL_PACKAGE_SCOPE)
+    )
+  )
+  const toolDependencies = Object.fromEntries(
+    sources.map((source) => [source.packageName, "workspace:*"])
+  )
+  const mergedDependencies = Object.fromEntries(
+    Object.entries({ ...preservedDependencies, ...toolDependencies }).sort(
+      ([left], [right]) => left.localeCompare(right)
+    )
+  )
+
+  packageJson.dependencies = mergedDependencies
+
+  const nextText = `${JSON.stringify(packageJson, null, 2)}\n`
+
+  if (nextText === packageJsonText) {
+    return false
+  }
+
+  await writeFile(packageJsonPath, nextText, "utf8")
+  return true
 }
 
 async function generateToolRegistryArtifacts(
   options: ToolRegistryGenerationOptions = {}
 ) {
   const paths = resolveToolRegistryPaths(options)
-  const manifests = await loadToolManifests(paths)
+
+  // First pass: glob tools/*/package.json (filesystem only, no module imports)
+  // and sync the registry's own package.json so workspace symlinks for every
+  // discovered tool exist before we try to import their manifests.
+  const sources = await discoverToolManifestSources(paths.toolsRoot)
+  const dependenciesChanged = await syncRegistryPackageDependencies(
+    paths,
+    sources
+  )
+
+  if (dependenciesChanged) {
+    throw new ToolContractError(
+      "Tool registry dependencies were out of sync.",
+      [
+        `Updated ${resolve(paths.packageRoot, "package.json")} to match the discovered tools.`,
+        "Run 'pnpm install' and then re-run 'pnpm tool-registry:generate'.",
+      ]
+    )
+  }
+
+  const manifests = await loadToolManifests(sources)
 
   await mkdir(paths.generatedRoot, { recursive: true })
 
@@ -305,6 +441,10 @@ async function generateToolRegistryArtifacts(
     writeFileIfChanged(
       paths.searchIndexFile,
       createSearchIndexSource(manifests)
+    ),
+    writeFileIfChanged(
+      paths.pageLoadersFile,
+      createPageLoadersSource(manifests)
     ),
   ])
 
@@ -319,7 +459,11 @@ const isDirectExecution =
 
 if (isDirectExecution) {
   generateToolRegistryArtifacts().catch((error: unknown) => {
-    console.error(error instanceof Error ? error.message : stringifyJson(error))
+    console.error(
+      error instanceof Error
+        ? error.message
+        : `${JSON.stringify(error, null, 2)}\n`
+    )
     process.exitCode = 1
   })
 }

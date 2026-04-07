@@ -1,0 +1,25 @@
+{
+  "name": "@tool/json-schema-validator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "vitest": "^4.1.2"
+  }
+}

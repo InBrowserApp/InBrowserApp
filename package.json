@@ -20,9 +20,8 @@
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
     "@vitest/coverage-v8": "^4.1.2",
+    "astro": "^5.17.1",
     "dependency-cruiser": "^17.3.10",
     "happy-dom": "^20.8.9",
     "husky": "^9.1.7",
@@ -38,8 +37,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "ajv": "^8.18.0",
-    "ajv-formats": "^3.0.1",
     "react": "^19.2.4"
   }
 }
