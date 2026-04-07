@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      react:
-        specifier: ^19.2.4
-        version: 19.2.4
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.5.0
@@ -157,10 +153,10 @@ importers:
         specifier: ^1.4.3
         version: 1.4.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
-        specifier: ^19.2.4
+        specifier: ^19.0.0
         version: 19.2.4
       react-dom:
-        specifier: ^19.2.4
+        specifier: ^19.0.0
         version: 19.2.4(react@19.2.4)
       shadcn:
         specifier: ^4.1.2
