@@ -12,7 +12,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tool/base64-encoder-decoder": "workspace:*",
+    "@tool/image-resizer": "workspace:*",
+    "@tool/json-schema-validator": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^25.1.0",

@@ -8,12 +8,6 @@ importers:
 
   .:
     dependencies:
-      ajv:
-        specifier: ^8.18.0
-        version: 8.18.0
-      ajv-formats:
-        specifier: ^3.0.1
-        version: 3.0.1(ajv@8.18.0)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -112,9 +106,21 @@ importers:
 
   packages/tool-registry:
     dependencies:
+      '@tool/base64-encoder-decoder':
+        specifier: workspace:*
+        version: link:../../tools/base64-encoder-decoder
+      '@tool/image-resizer':
+        specifier: workspace:*
+        version: link:../../tools/image-resizer
+      '@tool/json-schema-validator':
+        specifier: workspace:*
+        version: link:../../tools/json-schema-validator
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../tool-sdk
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
     devDependencies:
       '@types/node':
         specifier: ^25.1.0
@@ -181,6 +187,66 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+
+  tools/base64-encoder-decoder:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+
+  tools/image-resizer:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+
+  tools/json-schema-validator:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      ajv:
+        specifier: ^8.18.0
+        version: 8.18.0
+      ajv-formats:
+        specifier: ^3.0.1
+        version: 3.0.1(ajv@8.18.0)
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
 
 packages:
 

@@ -1,3 +1,4 @@
+export { toolPageLoaders } from "./generated/page-loaders"
 export { toolRegistry, toolRegistryBySlug } from "./generated/registry"
 export { toolSearchIndex } from "./generated/search-index"
 export { toolStaticPaths } from "./generated/static-paths"

@@ -1,11 +1,7 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "skipLibCheck": true,
-    "strict": true,
     "paths": {
       "@/*": ["apps/web/src/*"],
       "@workspace/tool-sdk": ["packages/tool-sdk/src/index.ts"],

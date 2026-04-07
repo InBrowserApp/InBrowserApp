@@ -1,9 +1,4 @@
-import { toolRegistryBySlug } from "@workspace/tool-registry"
-
-import type { AstroComponentFactory } from "astro/runtime/server/index.js"
-import type { ToolMeta } from "@workspace/tool-sdk"
-import type { ToolRegistryEntry } from "@workspace/tool-registry"
-import type { SiteLanguage } from "./site"
+import { toolPageLoaders, toolRegistryBySlug } from "@workspace/tool-registry"
 
 import {
   DEFAULT_SITE_LANGUAGE,
@@ -11,9 +6,10 @@ import {
   resolveLocalizedAssetLanguage,
 } from "./site"
 
-type ToolPageModule = {
-  default: AstroComponentFactory
-}
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+import type { ToolRegistryEntry } from "@workspace/tool-registry"
+import type { SiteLanguage } from "./site"
 
 type LoadedToolPageData = Readonly<{
   availableLanguages: readonly SiteLanguage[]
@@ -23,12 +19,9 @@ type LoadedToolPageData = Readonly<{
   tool: ToolRegistryEntry
 }>
 
-const toolPageModules = import.meta.glob("../../../../tools/*/index.astro")
-
 function getToolBySlug(slug: string) {
-  const toolRegistry = toolRegistryBySlug as Record<string, ToolRegistryEntry>
-
-  return slug in toolRegistry ? toolRegistry[slug] : null
+  const registry = toolRegistryBySlug as Record<string, ToolRegistryEntry>
+  return slug in registry ? registry[slug] : null
 }
 
 function getAvailableToolLanguages(locales: Record<string, ToolMeta>) {
@@ -62,13 +55,13 @@ function loadToolMeta(tool: ToolRegistryEntry, language: SiteLanguage) {
 }
 
 async function loadToolPage(slug: string) {
-  const importer = toolPageModules[`../../../../tools/${slug}/index.astro`]
+  const loader = toolPageLoaders[slug]
 
-  if (!importer) {
+  if (!loader) {
     return null
   }
 
-  const loadedModule = (await importer()) as ToolPageModule
+  const loadedModule = await loader()
 
   return loadedModule.default
 }
