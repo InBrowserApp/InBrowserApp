@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema 驗證器",
+  "description": "依據 JSON Schema 驗證 JSON 資料，支援草案偵測並輸出易讀的錯誤訊息。"
+}

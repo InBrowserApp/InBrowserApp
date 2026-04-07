@@ -1,10 +1,42 @@
 const SITE_NAME = "InBrowser.App"
 const SITE_URL = "https://inbrowser.app"
 const DEFAULT_SITE_LANGUAGE = "en"
-const SUPPORTED_SITE_LANGUAGES = ["en", "zh-CN"] as const
+const SUPPORTED_SITE_LANGUAGES = [
+  "en",
+  "zh-CN",
+  "zh-TW",
+  "es",
+  "fr",
+  "de",
+  "it",
+  "ja",
+  "ko",
+  "ru",
+  "pt",
+  "ar",
+  "hi",
+  "tr",
+  "nl",
+  "sv",
+  "pl",
+  "vi",
+  "th",
+  "id",
+  "he",
+  "ms",
+  "no",
+] as const
 const NON_DEFAULT_SITE_LANGUAGES = SUPPORTED_SITE_LANGUAGES.filter(
   (language) => language !== DEFAULT_SITE_LANGUAGE
 ) as readonly Exclude<(typeof SUPPORTED_SITE_LANGUAGES)[number], "en">[]
+const RTL_SITE_LANGUAGES = ["ar", "he"] as const
+type RtlSiteLanguage = (typeof RTL_SITE_LANGUAGES)[number]
+
+function getSiteLanguageDirection(language: string): "ltr" | "rtl" {
+  return (RTL_SITE_LANGUAGES as readonly string[]).includes(language)
+    ? "rtl"
+    : "ltr"
+}
 
 type SiteLanguage = (typeof SUPPORTED_SITE_LANGUAGES)[number]
 type AlternateLink = Readonly<{
@@ -14,7 +46,6 @@ type AlternateLink = Readonly<{
 type SiteLanguageOption = Readonly<{
   code: SiteLanguage
   href: string
-  label: string
   current: boolean
 }>
 type SiteNavigationItem = Readonly<{
@@ -117,14 +148,12 @@ function createNonDefaultLanguageStaticPaths() {
 function createLanguageOptions(
   pathname: string,
   language: SiteLanguage,
-  labels: Readonly<Record<string, string>>,
   languages: readonly SiteLanguage[] = SUPPORTED_SITE_LANGUAGES
 ) {
   return languages.map((optionLanguage) => ({
     code: optionLanguage,
     current: optionLanguage === language,
     href: localizePath(pathname, optionLanguage),
-    label: labels[optionLanguage] ?? optionLanguage,
   })) as readonly SiteLanguageOption[]
 }
 
@@ -153,6 +182,7 @@ function createPrimaryNavigation(
 export {
   DEFAULT_SITE_LANGUAGE,
   NON_DEFAULT_SITE_LANGUAGES,
+  RTL_SITE_LANGUAGES,
   SITE_NAME,
   SITE_URL,
   SUPPORTED_SITE_LANGUAGES,
@@ -161,6 +191,7 @@ export {
   createPrimaryNavigation,
   getAlternateLinks,
   getCanonicalUrl,
+  getSiteLanguageDirection,
   isDefaultSiteLanguage,
   isSupportedSiteLanguage,
   localizePath,
@@ -171,6 +202,7 @@ export {
 }
 export type {
   AlternateLink,
+  RtlSiteLanguage,
   SiteLanguage,
   SiteLanguageOption,
   SiteNavigationItem,

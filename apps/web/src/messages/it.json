@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Strumenti gratuiti basati sul browser che funzionano interamente sul tuo dispositivo.",
+    "languageLabel": "Lingue",
+    "themeLabel": "Cambia tema",
+    "themeLight": "Chiaro",
+    "themeDark": "Scuro",
+    "themeSystem": "Sistema",
+    "navigation": {
+      "home": "Home",
+      "tools": "Strumenti"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Strumenti gratuiti basati sul browser",
+    "homeDescription": "Una raccolta di utilità gratuite e rispettose della privacy che funzionano interamente nel tuo browser. Nessun caricamento, nessun server, nessun tracciamento.",
+    "toolsTitle": "Tutti gli strumenti — InBrowser.App",
+    "toolsDescription": "Sfoglia e cerca tutti gli strumenti basati sul browser disponibili.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Strumenti basati sul browser che rispettano la tua privacy",
+    "description": "Ogni strumento viene eseguito localmente nel tuo browser. I tuoi dati non lasciano mai il tuo dispositivo.",
+    "primaryAction": "Sfoglia tutti gli strumenti"
+  },
+  "tools": {
+    "title": "Tutti gli strumenti",
+    "description": "Tutto viene eseguito nel tuo browser — nessun dato viene caricato.",
+    "searchLabel": "Cerca strumenti",
+    "searchPlaceholder": "Cerca per nome o descrizione…",
+    "resultCountSuffix": "strumenti",
+    "clearSearchLabel": "Cancella",
+    "emptyRegistryTitle": "Nessuno strumento ancora disponibile.",
+    "emptyRegistryDescription": "Gli strumenti sono in fase di aggiunta — torna presto.",
+    "emptySearchTitle": "Nessuno strumento corrispondente.",
+    "emptySearchDescription": "Prova una parola chiave diversa o cancella la ricerca."
+  }
+}

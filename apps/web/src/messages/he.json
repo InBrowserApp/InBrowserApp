@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "כלים חינמיים מבוססי דפדפן הפועלים כולם על המכשיר שלך.",
+    "languageLabel": "שפות",
+    "themeLabel": "החלף ערכת נושא",
+    "themeLight": "בהיר",
+    "themeDark": "כהה",
+    "themeSystem": "מערכת",
+    "navigation": {
+      "home": "בית",
+      "tools": "כלים"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — כלים חינמיים מבוססי דפדפן",
+    "homeDescription": "אוסף של כלים חינמיים וידידותיים לפרטיות הפועלים כולם בדפדפן שלך. ללא העלאות, ללא שרתים, ללא מעקב.",
+    "toolsTitle": "כל הכלים — InBrowser.App",
+    "toolsDescription": "עיין וחפש בכל הכלים הזמינים מבוססי הדפדפן.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "כלים מבוססי דפדפן המכבדים את הפרטיות שלך",
+    "description": "כל כלי פועל מקומית בדפדפן שלך. הנתונים שלך לעולם אינם עוזבים את המכשיר.",
+    "primaryAction": "עיין בכל הכלים"
+  },
+  "tools": {
+    "title": "כל הכלים",
+    "description": "הכל פועל בדפדפן שלך — לא מועלים נתונים.",
+    "searchLabel": "חפש כלים",
+    "searchPlaceholder": "חפש לפי שם או תיאור…",
+    "resultCountSuffix": "כלים",
+    "clearSearchLabel": "נקה",
+    "emptyRegistryTitle": "אין כלים זמינים עדיין.",
+    "emptyRegistryDescription": "כלים מתווספים — חזור בקרוב.",
+    "emptySearchTitle": "אין כלים תואמים.",
+    "emptySearchDescription": "נסה מילת מפתח אחרת או נקה את החיפוש."
+  }
+}

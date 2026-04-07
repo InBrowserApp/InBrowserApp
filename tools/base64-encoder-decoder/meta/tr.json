@@ -1,0 +1,4 @@
+{
+  "name": "Base64 Kodlayıcı ve Çözücü",
+  "description": "Düz metni Base64 olarak kodlayın ve Base64'ü Unicode metne doğrudan tarayıcınızda geri çözün."
+}

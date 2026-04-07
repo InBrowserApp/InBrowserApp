@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Teks biasa",
+  "plainTextPlaceholder": "Masukkan teks untuk dikodkan…",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "encodedTextLabel": "Output Base64",
+  "encodedTextPlaceholder": "Tampal Base64 untuk dinyahkod…",
+  "encodedTextDescription": "Edit teks Base64 secara langsung untuk menyahkodnya kembali kepada teks biasa.",
+  "invalidBase64Title": "Nilai Base64 belum sah lagi.",
+  "invalidBase64Description": "Semak sama ada terdapat pelapik yang hilang, aksara yang tidak dijangka, atau data yang ditampal sebahagian.",
+  "copyPlainTextLabel": "Salin teks biasa",
+  "copyEncodedTextLabel": "Salin Base64",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Tetapkan semula contoh"
+}

@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextPlaceholder": "Wprowadź tekst do zakodowania…",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
+  "encodedTextLabel": "Wynik Base64",
+  "encodedTextPlaceholder": "Wklej Base64 do dekodowania…",
+  "encodedTextDescription": "Edytuj tekst Base64 bezpośrednio, aby zdekodować go z powrotem na zwykły tekst.",
+  "invalidBase64Title": "Wartość Base64 nie jest jeszcze prawidłowa.",
+  "invalidBase64Description": "Sprawdź brakujące dopełnienie, nieoczekiwane znaki lub częściowo wklejone dane.",
+  "copyPlainTextLabel": "Kopiuj zwykły tekst",
+  "copyEncodedTextLabel": "Kopiuj Base64",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład"
+}

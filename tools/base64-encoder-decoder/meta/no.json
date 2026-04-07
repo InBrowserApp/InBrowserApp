@@ -1,0 +1,4 @@
+{
+  "name": "Base64-koder og -dekoder",
+  "description": "Kod vanlig tekst til Base64 og dekod Base64 tilbake til Unicode-tekst direkte i nettleseren din."
+}

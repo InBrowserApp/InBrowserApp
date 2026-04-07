@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Düz metin",
+  "plainTextPlaceholder": "Kodlanacak metni girin…",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "encodedTextLabel": "Base64 çıktısı",
+  "encodedTextPlaceholder": "Çözülecek Base64'ü yapıştırın…",
+  "encodedTextDescription": "Base64 metnini doğrudan düzenleyerek düz metne geri çözün.",
+  "invalidBase64Title": "Base64 değeri henüz geçerli değil.",
+  "invalidBase64Description": "Eksik dolgu, beklenmeyen karakterler veya kısmen yapıştırılmış veri olup olmadığını kontrol edin.",
+  "copyPlainTextLabel": "Düz metni kopyala",
+  "copyEncodedTextLabel": "Base64'ü kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

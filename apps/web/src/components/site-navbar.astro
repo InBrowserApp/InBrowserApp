@@ -1,7 +1,11 @@
 ---
 import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
 import { ThemeToggle } from "@workspace/ui/components/app/theme-toggle"
-import { createLanguageOptions, localizePath, type SiteLanguage } from "@/lib/site"
+import {
+  createLanguageOptions,
+  localizePath,
+  type SiteLanguage,
+} from "@/lib/site"
 import { loadSiteMessages } from "@/lib/site-messages"
 
 interface Props {
@@ -16,7 +20,6 @@ const { catalog } = loadSiteMessages(language)
 const languageOptions = createLanguageOptions(
   pathname,
   language,
-  catalog.site.languages,
   availableLanguages
 )
 const navItems = [

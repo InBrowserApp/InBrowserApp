@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema-validerare",
+  "description": "Validera JSON-data mot ett JSON Schema med draft-medveten validering och läsbar felutskrift."
+}

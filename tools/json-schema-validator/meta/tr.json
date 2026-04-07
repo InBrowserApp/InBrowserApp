@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema Doğrulayıcı",
+  "description": "JSON verilerini, taslak farkındalıklı doğrulama ve okunabilir hata çıktısı ile bir JSON Schema'ya karşı doğrulayın."
+}

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "기기에서 완전히 실행되는 무료 브라우저 기반 도구입니다.",
+    "languageLabel": "언어",
+    "themeLabel": "테마 전환",
+    "themeLight": "라이트",
+    "themeDark": "다크",
+    "themeSystem": "시스템",
+    "navigation": {
+      "home": "홈",
+      "tools": "도구"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — 무료 브라우저 기반 도구",
+    "homeDescription": "브라우저에서 완전히 실행되는 무료 개인정보 친화적 유틸리티 모음입니다. 업로드 없음, 서버 없음, 추적 없음.",
+    "toolsTitle": "모든 도구 — InBrowser.App",
+    "toolsDescription": "사용 가능한 모든 브라우저 기반 도구를 탐색하고 검색하세요.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "개인정보를 존중하는 브라우저 기반 도구",
+    "description": "모든 도구는 브라우저에서 로컬로 실행됩니다. 데이터가 기기를 벗어나지 않습니다.",
+    "primaryAction": "모든 도구 보기"
+  },
+  "tools": {
+    "title": "모든 도구",
+    "description": "모든 것이 브라우저에서 실행됩니다 — 데이터가 업로드되지 않습니다.",
+    "searchLabel": "도구 검색",
+    "searchPlaceholder": "이름 또는 설명으로 검색…",
+    "resultCountSuffix": "개 도구",
+    "clearSearchLabel": "지우기",
+    "emptyRegistryTitle": "아직 사용할 수 있는 도구가 없습니다.",
+    "emptyRegistryDescription": "도구가 추가되고 있습니다 — 곧 다시 확인해 주세요.",
+    "emptySearchTitle": "일치하는 도구가 없습니다.",
+    "emptySearchDescription": "다른 키워드를 시도하거나 검색을 지워 보세요."
+  }
+}

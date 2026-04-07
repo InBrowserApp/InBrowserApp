@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Platte tekst",
+  "plainTextPlaceholder": "Voer tekst in om te coderen…",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "encodedTextLabel": "Base64-uitvoer",
+  "encodedTextPlaceholder": "Plak Base64 om te decoderen…",
+  "encodedTextDescription": "Bewerk de Base64-tekst rechtstreeks om hem terug te decoderen naar platte tekst.",
+  "invalidBase64Title": "De Base64-waarde is nog niet geldig.",
+  "invalidBase64Description": "Controleer op ontbrekende padding, onverwachte tekens of gedeeltelijk geplakte gegevens.",
+  "copyPlainTextLabel": "Platte tekst kopiëren",
+  "copyEncodedTextLabel": "Base64 kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

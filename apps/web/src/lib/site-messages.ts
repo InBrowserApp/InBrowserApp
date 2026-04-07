@@ -15,7 +15,6 @@ type SiteMessageCatalog = Readonly<{
       home: string
       tools: string
     }>
-    languages: Readonly<Record<string, string>>
   }>
   metadata: Readonly<{
     homeTitle: string

@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema バリデーター",
+  "description": "ドラフトを自動検出し、読みやすいエラー出力で JSON データを JSON Schema に対して検証します。"
+}

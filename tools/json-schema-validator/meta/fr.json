@@ -1,0 +1,4 @@
+{
+  "name": "Validateur JSON Schema",
+  "description": "Validez des données JSON par rapport à un JSON Schema avec détection du brouillon et sortie d'erreurs lisible."
+}

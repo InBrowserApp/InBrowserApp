@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema 검증기",
+  "description": "드래프트 자동 감지 및 읽기 쉬운 오류 출력으로 JSON 데이터를 JSON Schema에 대해 검증합니다."
+}

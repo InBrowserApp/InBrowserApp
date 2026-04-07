@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "मुफ़्त ब्राउज़र-आधारित उपकरण जो पूरी तरह आपके डिवाइस पर चलते हैं।",
+    "languageLabel": "भाषाएँ",
+    "themeLabel": "थीम बदलें",
+    "themeLight": "हल्का",
+    "themeDark": "गहरा",
+    "themeSystem": "सिस्टम",
+    "navigation": {
+      "home": "मुखपृष्ठ",
+      "tools": "उपकरण"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — मुफ़्त ब्राउज़र-आधारित उपकरण",
+    "homeDescription": "मुफ़्त, गोपनीयता-अनुकूल उपयोगिताओं का संग्रह जो पूरी तरह आपके ब्राउज़र में चलती हैं। कोई अपलोड नहीं, कोई सर्वर नहीं, कोई ट्रैकिंग नहीं।",
+    "toolsTitle": "सभी उपकरण — InBrowser.App",
+    "toolsDescription": "सभी उपलब्ध ब्राउज़र-आधारित उपकरणों को ब्राउज़ और खोजें।",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "ब्राउज़र-आधारित उपकरण जो आपकी गोपनीयता का सम्मान करते हैं",
+    "description": "हर उपकरण स्थानीय रूप से आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "primaryAction": "सभी उपकरण देखें"
+  },
+  "tools": {
+    "title": "सभी उपकरण",
+    "description": "सब कुछ आपके ब्राउज़र में चलता है — कोई डेटा अपलोड नहीं किया जाता।",
+    "searchLabel": "उपकरण खोजें",
+    "searchPlaceholder": "नाम या विवरण से खोजें…",
+    "resultCountSuffix": "उपकरण",
+    "clearSearchLabel": "साफ़ करें",
+    "emptyRegistryTitle": "अभी तक कोई उपकरण उपलब्ध नहीं है।",
+    "emptyRegistryDescription": "उपकरण जोड़े जा रहे हैं — जल्द ही फिर से देखें।",
+    "emptySearchTitle": "कोई मेल खाने वाले उपकरण नहीं।",
+    "emptySearchDescription": "कोई अन्य कीवर्ड आज़माएँ या खोज साफ़ करें।"
+  }
+}

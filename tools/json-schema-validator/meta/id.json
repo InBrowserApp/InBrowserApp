@@ -1,0 +1,4 @@
+{
+  "name": "Validator JSON Schema",
+  "description": "Validasi data JSON terhadap JSON Schema dengan deteksi draft dan keluaran kesalahan yang mudah dibaca."
+}

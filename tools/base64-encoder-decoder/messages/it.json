@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Testo semplice",
+  "plainTextPlaceholder": "Inserisci il testo da codificare…",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
+  "encodedTextLabel": "Output Base64",
+  "encodedTextPlaceholder": "Incolla il Base64 da decodificare…",
+  "encodedTextDescription": "Modifica direttamente il testo Base64 per decodificarlo in testo semplice.",
+  "invalidBase64Title": "Il valore Base64 non è ancora valido.",
+  "invalidBase64Description": "Verifica la presenza di padding mancante, caratteri inattesi o dati incollati parzialmente.",
+  "copyPlainTextLabel": "Copia testo semplice",
+  "copyEncodedTextLabel": "Copia Base64",
+  "copiedLabel": "Copiato",
+  "resetLabel": "Reimposta esempio"
+}

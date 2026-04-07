@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextPlaceholder": "הזינו טקסט לקידוד…",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "encodedTextLabel": "פלט Base64",
+  "encodedTextPlaceholder": "הדביקו Base64 לפענוח…",
+  "encodedTextDescription": "ערכו את הטקסט של Base64 ישירות כדי לפענח אותו בחזרה לטקסט רגיל.",
+  "invalidBase64Title": "ערך ה-Base64 עדיין אינו תקין.",
+  "invalidBase64Description": "בדקו אם חסר ריפוד, יש תווים בלתי צפויים או נתונים שהודבקו באופן חלקי.",
+  "copyPlainTextLabel": "העתק טקסט רגיל",
+  "copyEncodedTextLabel": "העתק Base64",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה"
+}

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "أدوات مجانية تعتمد على المتصفح وتعمل بالكامل على جهازك.",
+    "languageLabel": "اللغات",
+    "themeLabel": "تبديل المظهر",
+    "themeLight": "فاتح",
+    "themeDark": "داكن",
+    "themeSystem": "النظام",
+    "navigation": {
+      "home": "الرئيسية",
+      "tools": "الأدوات"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — أدوات مجانية تعتمد على المتصفح",
+    "homeDescription": "مجموعة من الأدوات المجانية التي تحترم الخصوصية وتعمل بالكامل في متصفحك. لا تحميلات، ولا خوادم، ولا تتبع.",
+    "toolsTitle": "جميع الأدوات — InBrowser.App",
+    "toolsDescription": "تصفح وابحث في جميع الأدوات المتاحة المعتمدة على المتصفح.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "أدوات تعتمد على المتصفح وتحترم خصوصيتك",
+    "description": "تعمل كل أداة محليًا في متصفحك. بياناتك لا تغادر جهازك أبدًا.",
+    "primaryAction": "تصفح جميع الأدوات"
+  },
+  "tools": {
+    "title": "جميع الأدوات",
+    "description": "كل شيء يعمل في متصفحك — لا يتم تحميل أي بيانات.",
+    "searchLabel": "البحث في الأدوات",
+    "searchPlaceholder": "ابحث بالاسم أو الوصف…",
+    "resultCountSuffix": "أدوات",
+    "clearSearchLabel": "مسح",
+    "emptyRegistryTitle": "لا توجد أدوات متاحة بعد.",
+    "emptyRegistryDescription": "تتم إضافة الأدوات — تحقق مرة أخرى قريبًا.",
+    "emptySearchTitle": "لا توجد أدوات مطابقة.",
+    "emptySearchDescription": "جرب كلمة مفتاحية مختلفة أو امسح البحث."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Gratis webbläsarbaserade verktyg som körs helt på din enhet.",
+    "languageLabel": "Språk",
+    "themeLabel": "Växla tema",
+    "themeLight": "Ljust",
+    "themeDark": "Mörkt",
+    "themeSystem": "System",
+    "navigation": {
+      "home": "Hem",
+      "tools": "Verktyg"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Gratis webbläsarbaserade verktyg",
+    "homeDescription": "En samling gratis, integritetsvänliga verktyg som körs helt i din webbläsare. Inga uppladdningar, inga servrar, ingen spårning.",
+    "toolsTitle": "Alla verktyg — InBrowser.App",
+    "toolsDescription": "Bläddra och sök bland alla tillgängliga webbläsarbaserade verktyg.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Webbläsarbaserade verktyg som respekterar din integritet",
+    "description": "Varje verktyg körs lokalt i din webbläsare. Dina data lämnar aldrig din enhet.",
+    "primaryAction": "Bläddra bland alla verktyg"
+  },
+  "tools": {
+    "title": "Alla verktyg",
+    "description": "Allt körs i din webbläsare — inga data laddas upp.",
+    "searchLabel": "Sök verktyg",
+    "searchPlaceholder": "Sök efter namn eller beskrivning…",
+    "resultCountSuffix": "verktyg",
+    "clearSearchLabel": "Rensa",
+    "emptyRegistryTitle": "Inga verktyg tillgängliga ännu.",
+    "emptyRegistryDescription": "Verktyg läggs till — kom tillbaka snart.",
+    "emptySearchTitle": "Inga matchande verktyg.",
+    "emptySearchDescription": "Prova ett annat nyckelord eller rensa sökningen."
+  }
+}

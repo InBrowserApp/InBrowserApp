@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Kostenlose browserbasierte Tools, die vollständig auf Ihrem Gerät laufen.",
+    "languageLabel": "Sprachen",
+    "themeLabel": "Design umschalten",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "themeSystem": "System",
+    "navigation": {
+      "home": "Startseite",
+      "tools": "Tools"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Kostenlose browserbasierte Tools",
+    "homeDescription": "Eine Sammlung kostenloser, datenschutzfreundlicher Dienstprogramme, die vollständig in Ihrem Browser laufen. Keine Uploads, keine Server, kein Tracking.",
+    "toolsTitle": "Alle Tools — InBrowser.App",
+    "toolsDescription": "Durchsuchen Sie alle verfügbaren browserbasierten Tools.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Browserbasierte Tools, die Ihre Privatsphäre respektieren",
+    "description": "Jedes Tool läuft lokal in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.",
+    "primaryAction": "Alle Tools durchsuchen"
+  },
+  "tools": {
+    "title": "Alle Tools",
+    "description": "Alles läuft in Ihrem Browser — es werden keine Daten hochgeladen.",
+    "searchLabel": "Tools suchen",
+    "searchPlaceholder": "Nach Name oder Beschreibung suchen…",
+    "resultCountSuffix": "Tools",
+    "clearSearchLabel": "Löschen",
+    "emptyRegistryTitle": "Noch keine Tools verfügbar.",
+    "emptyRegistryDescription": "Tools werden hinzugefügt — schauen Sie bald wieder vorbei.",
+    "emptySearchTitle": "Keine passenden Tools.",
+    "emptySearchDescription": "Versuchen Sie ein anderes Stichwort oder löschen Sie die Suche."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Texte brut",
+  "plainTextPlaceholder": "Saisissez le texte à encoder…",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris des emojis et des caractères non latins.",
+  "encodedTextLabel": "Sortie Base64",
+  "encodedTextPlaceholder": "Collez du Base64 à décoder…",
+  "encodedTextDescription": "Modifiez directement le texte Base64 pour le décoder en texte brut.",
+  "invalidBase64Title": "La valeur Base64 n'est pas encore valide.",
+  "invalidBase64Description": "Vérifiez l'absence de remplissage, la présence de caractères inattendus ou des données collées partiellement.",
+  "copyPlainTextLabel": "Copier le texte brut",
+  "copyEncodedTextLabel": "Copier le Base64",
+  "copiedLabel": "Copié",
+  "resetLabel": "Réinitialiser l'exemple"
+}

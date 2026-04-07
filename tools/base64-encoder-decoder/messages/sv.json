@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Vanlig text",
+  "plainTextPlaceholder": "Ange text att koda…",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "encodedTextLabel": "Base64-utdata",
+  "encodedTextPlaceholder": "Klistra in Base64 att avkoda…",
+  "encodedTextDescription": "Redigera Base64-texten direkt för att avkoda den tillbaka till vanlig text.",
+  "invalidBase64Title": "Base64-värdet är inte giltigt än.",
+  "invalidBase64Description": "Kontrollera om det saknas utfyllnad, finns oväntade tecken eller om data klistrats in delvis.",
+  "copyPlainTextLabel": "Kopiera vanlig text",
+  "copyEncodedTextLabel": "Kopiera Base64",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel"
+}

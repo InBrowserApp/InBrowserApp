@@ -3,19 +3,195 @@ import type { ToolStaticPathEntry } from "../types"
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
     slug: "base64-encoder-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "de",
+  },
+  {
+    slug: "base64-encoder-decoder",
     language: "en",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "es",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "he",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "id",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "it",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "no",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "th",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base64-encoder-decoder",
+    language: "vi",
   },
   {
     slug: "base64-encoder-decoder",
     language: "zh-CN",
   },
   {
+    slug: "base64-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-resizer",
+    language: "ar",
+  },
+  {
+    slug: "image-resizer",
+    language: "de",
+  },
+  {
     slug: "image-resizer",
     language: "en",
   },
   {
     slug: "image-resizer",
+    language: "es",
+  },
+  {
+    slug: "image-resizer",
+    language: "fr",
+  },
+  {
+    slug: "image-resizer",
+    language: "he",
+  },
+  {
+    slug: "image-resizer",
+    language: "hi",
+  },
+  {
+    slug: "image-resizer",
+    language: "id",
+  },
+  {
+    slug: "image-resizer",
+    language: "it",
+  },
+  {
+    slug: "image-resizer",
+    language: "ja",
+  },
+  {
+    slug: "image-resizer",
+    language: "ko",
+  },
+  {
+    slug: "image-resizer",
+    language: "ms",
+  },
+  {
+    slug: "image-resizer",
+    language: "nl",
+  },
+  {
+    slug: "image-resizer",
+    language: "no",
+  },
+  {
+    slug: "image-resizer",
+    language: "pl",
+  },
+  {
+    slug: "image-resizer",
+    language: "pt",
+  },
+  {
+    slug: "image-resizer",
+    language: "ru",
+  },
+  {
+    slug: "image-resizer",
+    language: "sv",
+  },
+  {
+    slug: "image-resizer",
+    language: "th",
+  },
+  {
+    slug: "image-resizer",
+    language: "tr",
+  },
+  {
+    slug: "image-resizer",
+    language: "vi",
+  },
+  {
+    slug: "image-resizer",
     language: "zh-CN",
+  },
+  {
+    slug: "image-resizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "ar",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "de",
   },
   {
     slug: "json-schema-validator",
@@ -23,6 +199,82 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "json-schema-validator",
+    language: "es",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "fr",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "he",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "hi",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "id",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "it",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "ja",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "ko",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "ms",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "nl",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "no",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "pl",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "pt",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "ru",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "sv",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "th",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "tr",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "vi",
+  },
+  {
+    slug: "json-schema-validator",
     language: "zh-CN",
+  },
+  {
+    slug: "json-schema-validator",
+    language: "zh-TW",
   },
 ]

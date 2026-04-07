@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Обычный текст",
+  "plainTextPlaceholder": "Введите текст для кодирования…",
+  "plainTextDescription": "Вставьте или введите любой текст в UTF-8, включая эмодзи и нелатинские символы.",
+  "encodedTextLabel": "Вывод Base64",
+  "encodedTextPlaceholder": "Вставьте Base64 для декодирования…",
+  "encodedTextDescription": "Редактируйте текст Base64 напрямую, чтобы декодировать его обратно в обычный текст.",
+  "invalidBase64Title": "Значение Base64 пока недействительно.",
+  "invalidBase64Description": "Проверьте отсутствие заполнения, неожиданные символы или частично вставленные данные.",
+  "copyPlainTextLabel": "Копировать обычный текст",
+  "copyEncodedTextLabel": "Копировать Base64",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

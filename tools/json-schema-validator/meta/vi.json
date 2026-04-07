@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực JSON Schema",
+  "description": "Xác thực dữ liệu JSON theo JSON Schema với khả năng nhận diện draft và xuất lỗi dễ đọc."
+}

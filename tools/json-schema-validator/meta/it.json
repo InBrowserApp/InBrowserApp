@@ -1,0 +1,4 @@
+{
+  "name": "Validatore JSON Schema",
+  "description": "Convalida i dati JSON rispetto a un JSON Schema con rilevamento del draft e output di errori leggibile."
+}
