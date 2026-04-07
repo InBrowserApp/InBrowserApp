@@ -10,6 +10,7 @@ export default getViteConfig({
     environment: "happy-dom",
     coverage: {
       provider: "v8",
+      reporter: ["text", "html", "json-summary", "json"],
       include: ["packages/tool-sdk/src/**/*.ts", "tools/**/*.{ts,tsx}"],
       exclude: ["**/*.test.{ts,tsx}", "**/manifest.ts"],
       thresholds: {
