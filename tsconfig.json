@@ -1,9 +1,19 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["apps/web/src/*"]
     }
-  }
+  },
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "tools/**/*.ts",
+    "tools/**/*.tsx",
+    "tests/**/*.ts"
+  ],
+  "exclude": ["**/node_modules", "**/dist", "**/.astro"]
 }

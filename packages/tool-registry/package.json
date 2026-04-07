@@ -8,8 +8,7 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "format": "oxfmt .",
-    "format:check": "oxfmt --check .",
-    "typecheck": "tsc --noEmit"
+    "format:check": "oxfmt --check ."
   },
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
@@ -22,8 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "tsx": "catalog:",
-    "typescript": "catalog:"
+    "tsx": "catalog:"
   },
   "exports": {
     ".": "./src/index.ts",

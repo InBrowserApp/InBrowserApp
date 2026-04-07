@@ -15,7 +15,7 @@
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
     "test": "vitest run --silent",
     "test:coverage": "vitest run --silent --coverage",
-    "typecheck": "pnpm tool-registry:generate && pnpm -r --if-present --filter \"./apps/**\" --filter \"./packages/**\" typecheck"
+    "typecheck": "pnpm tool-registry:generate && tsc --noEmit && pnpm --filter web typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",
