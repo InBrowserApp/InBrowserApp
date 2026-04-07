@@ -38,8 +38,17 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Format check
+        run: pnpm format:check
+
       - name: Typecheck
         run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Dep boundaries
+        run: pnpm depcruise
 
   build-web:
     name: Build Web
