@@ -1,17 +1,79 @@
 import fs from "node:fs"
 import path from "node:path"
 import { describe, expect, test } from "vitest"
+import { SUPPORTED_SITE_LANGUAGES } from "../apps/web/src/lib/site"
 
 const repoRoot = path.resolve(__dirname, "..")
+const SUPPORTED = new Set<string>(SUPPORTED_SITE_LANGUAGES)
+const SUPPORTED_SORTED = [...SUPPORTED_SITE_LANGUAGES].sort()
+
+const SKIP_DIRS = new Set([
+  ".astro",
+  ".git",
+  ".turbo",
+  "coverage",
+  "dist",
+  "generated",
+  "node_modules",
+])
+
+type LocaleExt = "json" | "md"
+
+interface LocaleFamily {
+  dir: string
+  relDir: string
+  ext: LocaleExt
+}
+
+/**
+ * Walk the repo and collect every directory that contains an `en.json` or
+ * `en.md`. Each such directory is one "locale family" — every other locale
+ * file alongside it must be present, named with a supported language code,
+ * and structurally consistent with the English baseline.
+ */
+function discoverLocaleFamilies(): LocaleFamily[] {
+  const out: LocaleFamily[] = []
+  function walk(dir: string) {
+    let entries: fs.Dirent[]
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true })
+    } catch {
+      return
+    }
+    let hasEnJson = false
+    let hasEnMd = false
+    for (const entry of entries) {
+      if (entry.isFile() && entry.name === "en.json") hasEnJson = true
+      if (entry.isFile() && entry.name === "en.md") hasEnMd = true
+    }
+    const relDir = path.relative(repoRoot, dir) || "."
+    if (hasEnJson) out.push({ dir, relDir, ext: "json" })
+    if (hasEnMd) out.push({ dir, relDir, ext: "md" })
+    for (const entry of entries) {
+      if (entry.isDirectory() && !SKIP_DIRS.has(entry.name)) {
+        walk(path.join(dir, entry.name))
+      }
+    }
+  }
+  walk(repoRoot)
+  return out.sort((a, b) =>
+    a.relDir === b.relDir
+      ? a.ext.localeCompare(b.ext)
+      : a.relDir.localeCompare(b.relDir)
+  )
+}
 
 function loadJson(filePath: string): unknown {
   return JSON.parse(fs.readFileSync(filePath, "utf8"))
 }
 
+function loadText(filePath: string): string {
+  return fs.readFileSync(filePath, "utf8")
+}
+
 /**
- * Recursively collect every leaf path in a JSON value. Object keys are joined
- * with `.`, array indices with `[i]`. Two locale files must produce the same
- * set of paths to be considered structurally equivalent.
+ * Recursively collect every leaf path in a JSON value. Two locale files must
+ * produce the same set of paths to be structurally equivalent.
  */
 function collectKeyPaths(value: unknown, prefix = ""): string[] {
   if (value === null || typeof value !== "object") {
@@ -28,63 +90,87 @@ function collectKeyPaths(value: unknown, prefix = ""): string[] {
   )
 }
 
-interface KeyDiff {
-  missing: string[]
-  extra: string[]
+/**
+ * Extract markdown ATX heading levels in document order, ignoring fenced code
+ * blocks. Heading text is intentionally discarded — translated headings are
+ * expected to differ in text but share the same outline shape.
+ */
+function extractHeadingLevels(md: string): number[] {
+  const out: number[] = []
+  let inFence = false
+  for (const line of md.split("\n")) {
+    if (line.startsWith("```")) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const m = /^(#{1,6})\s+\S/.exec(line)
+    if (m) out.push(m[1].length)
+  }
+  return out
 }
 
-function diffKeys(base: string[], other: string[]): KeyDiff {
+interface SetDiff<T> {
+  missing: T[]
+  extra: T[]
+}
+
+function diffSets<T>(base: T[], other: T[]): SetDiff<T> {
   const baseSet = new Set(base)
   const otherSet = new Set(other)
   return {
-    missing: base.filter((k) => !otherSet.has(k)),
-    extra: other.filter((k) => !baseSet.has(k)),
+    missing: base.filter((x) => !otherSet.has(x)),
+    extra: other.filter((x) => !baseSet.has(x)),
   }
 }
 
-function listLocaleFiles(dir: string): string[] {
-  if (!fs.existsSync(dir)) return []
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .sort()
+function langCodeFromFilename(file: string, ext: LocaleExt): string {
+  return file.slice(0, -(ext.length + 1))
 }
 
-describe("site copy locale parity", () => {
-  const dir = path.join(repoRoot, "apps/web/src/messages")
-  const enPath = path.join(dir, "en.json")
-  const enKeys = collectKeyPaths(loadJson(enPath))
-  const others = listLocaleFiles(dir).filter((f) => f !== "en.json")
+const families = discoverLocaleFamilies()
 
-  for (const file of others) {
-    test(file, () => {
-      const keys = collectKeyPaths(loadJson(path.join(dir, file)))
-      expect(diffKeys(enKeys, keys)).toEqual({ missing: [], extra: [] })
-    })
-  }
+describe("locale family discovery", () => {
+  test("at least one en.json or en.md exists in the repo", () => {
+    expect(families.length).toBeGreaterThan(0)
+  })
 })
 
-describe("tool locale parity", () => {
-  const toolsDir = path.join(repoRoot, "tools")
-  const tools = fs
-    .readdirSync(toolsDir)
-    .filter((entry) => fs.statSync(path.join(toolsDir, entry)).isDirectory())
+describe.each(families)("locale family $relDir/*.$ext", ({ dir, ext }) => {
+  const filesInDir = fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(`.${ext}`))
     .sort()
+  const langs = filesInDir.map((f) => langCodeFromFilename(f, ext))
+  const langSet = new Set(langs)
 
-  for (const tool of tools) {
-    for (const sub of ["meta", "messages"] as const) {
-      const dir = path.join(toolsDir, tool, sub)
-      const enPath = path.join(dir, "en.json")
-      if (!fs.existsSync(enPath)) continue
-      const enKeys = collectKeyPaths(loadJson(enPath))
-      const others = listLocaleFiles(dir).filter((f) => f !== "en.json")
+  test("filename language codes are all in SUPPORTED_SITE_LANGUAGES", () => {
+    const unknown = langs.filter((l) => !SUPPORTED.has(l))
+    expect(unknown).toEqual([])
+  })
 
-      for (const file of others) {
-        test(`${tool}/${sub}/${file}`, () => {
-          const keys = collectKeyPaths(loadJson(path.join(dir, file)))
-          expect(diffKeys(enKeys, keys)).toEqual({ missing: [], extra: [] })
-        })
-      }
+  test("every supported language has a file", () => {
+    const missing = SUPPORTED_SORTED.filter((l) => !langSet.has(l))
+    expect(missing).toEqual([])
+  })
+
+  if (ext === "json") {
+    const enKeys = collectKeyPaths(loadJson(path.join(dir, "en.json")))
+    const others = filesInDir.filter((f) => f !== "en.json")
+    for (const file of others) {
+      test(`${file}: JSON key parity with en`, () => {
+        const keys = collectKeyPaths(loadJson(path.join(dir, file)))
+        expect(diffSets(enKeys, keys)).toEqual({ missing: [], extra: [] })
+      })
+    }
+  } else {
+    const enLevels = extractHeadingLevels(loadText(path.join(dir, "en.md")))
+    const others = filesInDir.filter((f) => f !== "en.md")
+    for (const file of others) {
+      test(`${file}: markdown heading structure parity with en`, () => {
+        const levels = extractHeadingLevels(loadText(path.join(dir, file)))
+        expect(levels).toEqual(enLevels)
+      })
     }
   }
 })
