@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "نص عادي",
+  "plainTextPlaceholder": "أدخل النص لترميزه…",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والحروف غير اللاتينية.",
+  "encodedTextLabel": "مخرجات Base64",
+  "encodedTextPlaceholder": "الصق Base64 لفك ترميزه…",
+  "encodedTextDescription": "حرّر نص Base64 مباشرة لفك ترميزه إلى نص عادي.",
+  "invalidBase64Title": "قيمة Base64 ليست صالحة بعد.",
+  "invalidBase64Description": "تحقق من وجود حشو مفقود أو أحرف غير متوقعة أو بيانات مُلصقة جزئيًا.",
+  "copyPlainTextLabel": "نسخ النص العادي",
+  "copyEncodedTextLabel": "نسخ Base64",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}

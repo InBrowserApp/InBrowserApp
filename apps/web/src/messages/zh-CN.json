@@ -10,10 +10,6 @@
     "navigation": {
       "home": "首页",
       "tools": "工具"
-    },
-    "languages": {
-      "en": "English",
-      "zh-CN": "简体中文"
     }
   },
   "metadata": {
@@ -32,7 +28,7 @@
     "title": "所有工具",
     "description": "所有工具都在浏览器中运行，不会上传任何数据。",
     "searchLabel": "搜索工具",
-    "searchPlaceholder": "按名称或描述搜索\u2026",
+    "searchPlaceholder": "按名称或描述搜索…",
     "resultCountSuffix": "个工具",
     "clearSearchLabel": "清除",
     "emptyRegistryTitle": "暂无可用工具。",

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Outils gratuits basés sur le navigateur qui s'exécutent entièrement sur votre appareil.",
+    "languageLabel": "Langues",
+    "themeLabel": "Changer de thème",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système",
+    "navigation": {
+      "home": "Accueil",
+      "tools": "Outils"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Outils gratuits basés sur le navigateur",
+    "homeDescription": "Une collection d'utilitaires gratuits et respectueux de la vie privée qui s'exécutent entièrement dans votre navigateur. Aucun téléversement, aucun serveur, aucun suivi.",
+    "toolsTitle": "Tous les outils — InBrowser.App",
+    "toolsDescription": "Parcourez et recherchez tous les outils disponibles basés sur le navigateur.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Des outils basés sur le navigateur qui respectent votre vie privée",
+    "description": "Chaque outil s'exécute localement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
+    "primaryAction": "Parcourir tous les outils"
+  },
+  "tools": {
+    "title": "Tous les outils",
+    "description": "Tout s'exécute dans votre navigateur — aucune donnée n'est téléversée.",
+    "searchLabel": "Rechercher des outils",
+    "searchPlaceholder": "Rechercher par nom ou description…",
+    "resultCountSuffix": "outils",
+    "clearSearchLabel": "Effacer",
+    "emptyRegistryTitle": "Aucun outil disponible pour le moment.",
+    "emptyRegistryDescription": "Des outils sont en cours d'ajout — revenez bientôt.",
+    "emptySearchTitle": "Aucun outil correspondant.",
+    "emptySearchDescription": "Essayez un autre mot-clé ou effacez la recherche."
+  }
+}

@@ -2,7 +2,11 @@
 import { ClientRouter } from "astro:transitions"
 import "@workspace/ui/globals.css"
 import SiteNavbar from "@/components/site-navbar.astro"
-import { resolveSiteLanguage, type SiteLanguage } from "@/lib/site"
+import {
+  getSiteLanguageDirection,
+  resolveSiteLanguage,
+  type SiteLanguage,
+} from "@/lib/site"
 
 interface AlternateLink {
   href: string
@@ -32,9 +36,10 @@ const {
 } = Astro.props
 
 const language = resolveSiteLanguage(lang)
+const dir = getSiteLanguageDirection(language)
 ---
 
-<html lang={lang} data-theme="system" transition:animate="none">
+<html lang={lang} dir={dir} data-theme="system" transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />

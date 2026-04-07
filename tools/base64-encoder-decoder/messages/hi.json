@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextPlaceholder": "एनकोड करने के लिए टेक्स्ट दर्ज करें…",
+  "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित किसी भी UTF-8 टेक्स्ट को पेस्ट करें या टाइप करें।",
+  "encodedTextLabel": "Base64 आउटपुट",
+  "encodedTextPlaceholder": "डिकोड करने के लिए Base64 पेस्ट करें…",
+  "encodedTextDescription": "Base64 टेक्स्ट को सीधे संपादित करें ताकि वह वापस सादे टेक्स्ट में डिकोड हो जाए।",
+  "invalidBase64Title": "Base64 मान अभी मान्य नहीं है।",
+  "invalidBase64Description": "गुम पैडिंग, अप्रत्याशित वर्ण, या आंशिक रूप से पेस्ट किए गए डेटा की जाँच करें।",
+  "copyPlainTextLabel": "सादा टेक्स्ट कॉपी करें",
+  "copyEncodedTextLabel": "Base64 कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

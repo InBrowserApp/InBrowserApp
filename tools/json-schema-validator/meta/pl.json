@@ -1,0 +1,4 @@
+{
+  "name": "Walidator JSON Schema",
+  "description": "Waliduj dane JSON względem JSON Schema z automatycznym wykrywaniem wersji draftu i czytelnymi komunikatami błędów."
+}

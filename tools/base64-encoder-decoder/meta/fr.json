@@ -1,0 +1,4 @@
+{
+  "name": "Encodeur et décodeur Base64",
+  "description": "Encodez du texte brut en Base64 et décodez du Base64 en texte Unicode directement dans votre navigateur."
+}

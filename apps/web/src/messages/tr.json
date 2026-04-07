@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Tamamen cihazınızda çalışan ücretsiz tarayıcı tabanlı araçlar.",
+    "languageLabel": "Diller",
+    "themeLabel": "Temayı değiştir",
+    "themeLight": "Açık",
+    "themeDark": "Koyu",
+    "themeSystem": "Sistem",
+    "navigation": {
+      "home": "Ana Sayfa",
+      "tools": "Araçlar"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Ücretsiz Tarayıcı Tabanlı Araçlar",
+    "homeDescription": "Tamamen tarayıcınızda çalışan ücretsiz, gizliliğe duyarlı araçlardan oluşan bir koleksiyon. Yükleme yok, sunucu yok, takip yok.",
+    "toolsTitle": "Tüm Araçlar — InBrowser.App",
+    "toolsDescription": "Mevcut tüm tarayıcı tabanlı araçlara göz atın ve arayın.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Gizliliğinize saygı duyan tarayıcı tabanlı araçlar",
+    "description": "Her araç tarayıcınızda yerel olarak çalışır. Verileriniz cihazınızdan asla ayrılmaz.",
+    "primaryAction": "Tüm araçlara göz at"
+  },
+  "tools": {
+    "title": "Tüm Araçlar",
+    "description": "Her şey tarayıcınızda çalışır — hiçbir veri yüklenmez.",
+    "searchLabel": "Araçlarda ara",
+    "searchPlaceholder": "İsme veya açıklamaya göre ara…",
+    "resultCountSuffix": "araç",
+    "clearSearchLabel": "Temizle",
+    "emptyRegistryTitle": "Henüz mevcut araç yok.",
+    "emptyRegistryDescription": "Araçlar ekleniyor — yakında tekrar kontrol edin.",
+    "emptySearchTitle": "Eşleşen araç yok.",
+    "emptySearchDescription": "Farklı bir anahtar kelime deneyin veya aramayı temizleyin."
+  }
+}

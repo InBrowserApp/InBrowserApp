@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Alat gratis berbasis peramban yang berjalan sepenuhnya di perangkat Anda.",
+    "languageLabel": "Bahasa",
+    "themeLabel": "Alihkan tema",
+    "themeLight": "Terang",
+    "themeDark": "Gelap",
+    "themeSystem": "Sistem",
+    "navigation": {
+      "home": "Beranda",
+      "tools": "Alat"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Alat Gratis Berbasis Peramban",
+    "homeDescription": "Koleksi utilitas gratis yang ramah privasi dan berjalan sepenuhnya di peramban Anda. Tanpa unggahan, tanpa server, tanpa pelacakan.",
+    "toolsTitle": "Semua Alat — InBrowser.App",
+    "toolsDescription": "Jelajahi dan cari semua alat berbasis peramban yang tersedia.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Alat berbasis peramban yang menghormati privasi Anda",
+    "description": "Setiap alat berjalan secara lokal di peramban Anda. Data Anda tidak pernah meninggalkan perangkat Anda.",
+    "primaryAction": "Jelajahi semua alat"
+  },
+  "tools": {
+    "title": "Semua Alat",
+    "description": "Semuanya berjalan di peramban Anda — tidak ada data yang diunggah.",
+    "searchLabel": "Cari alat",
+    "searchPlaceholder": "Cari berdasarkan nama atau deskripsi…",
+    "resultCountSuffix": "alat",
+    "clearSearchLabel": "Hapus",
+    "emptyRegistryTitle": "Belum ada alat yang tersedia.",
+    "emptyRegistryDescription": "Alat sedang ditambahkan — periksa kembali nanti.",
+    "emptySearchTitle": "Tidak ada alat yang cocok.",
+    "emptySearchDescription": "Coba kata kunci lain atau hapus pencarian."
+  }
+}

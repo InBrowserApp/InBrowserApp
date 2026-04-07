@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "일반 텍스트",
+  "plainTextPlaceholder": "인코딩할 텍스트를 입력하세요…",
+  "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력할 수 있습니다.",
+  "encodedTextLabel": "Base64 출력",
+  "encodedTextPlaceholder": "디코딩할 Base64를 붙여넣으세요…",
+  "encodedTextDescription": "Base64 텍스트를 직접 편집하면 일반 텍스트로 디코딩됩니다.",
+  "invalidBase64Title": "Base64 값이 아직 유효하지 않습니다.",
+  "invalidBase64Description": "패딩 누락, 예상치 못한 문자, 일부만 붙여넣어진 데이터 등을 확인하세요.",
+  "copyPlainTextLabel": "일반 텍스트 복사",
+  "copyEncodedTextLabel": "Base64 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정"
+}

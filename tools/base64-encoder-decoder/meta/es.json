@@ -1,0 +1,4 @@
+{
+  "name": "Codificador y decodificador Base64",
+  "description": "Codifica texto plano a Base64 y decodifica Base64 de vuelta a texto Unicode directamente en tu navegador."
+}

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Công cụ miễn phí chạy trên trình duyệt, hoạt động hoàn toàn trên thiết bị của bạn.",
+    "languageLabel": "Ngôn ngữ",
+    "themeLabel": "Chuyển đổi giao diện",
+    "themeLight": "Sáng",
+    "themeDark": "Tối",
+    "themeSystem": "Hệ thống",
+    "navigation": {
+      "home": "Trang chủ",
+      "tools": "Công cụ"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Công cụ miễn phí chạy trên trình duyệt",
+    "homeDescription": "Bộ sưu tập các tiện ích miễn phí, thân thiện với quyền riêng tư, chạy hoàn toàn trong trình duyệt của bạn. Không tải lên, không máy chủ, không theo dõi.",
+    "toolsTitle": "Tất cả công cụ — InBrowser.App",
+    "toolsDescription": "Duyệt và tìm kiếm tất cả các công cụ chạy trên trình duyệt hiện có.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Công cụ chạy trên trình duyệt tôn trọng quyền riêng tư của bạn",
+    "description": "Mọi công cụ đều chạy cục bộ trong trình duyệt của bạn. Dữ liệu của bạn không bao giờ rời khỏi thiết bị.",
+    "primaryAction": "Xem tất cả công cụ"
+  },
+  "tools": {
+    "title": "Tất cả công cụ",
+    "description": "Mọi thứ đều chạy trong trình duyệt của bạn — không có dữ liệu nào được tải lên.",
+    "searchLabel": "Tìm kiếm công cụ",
+    "searchPlaceholder": "Tìm theo tên hoặc mô tả…",
+    "resultCountSuffix": "công cụ",
+    "clearSearchLabel": "Xóa",
+    "emptyRegistryTitle": "Chưa có công cụ nào.",
+    "emptyRegistryDescription": "Các công cụ đang được thêm vào — vui lòng quay lại sau.",
+    "emptySearchTitle": "Không tìm thấy công cụ phù hợp.",
+    "emptySearchDescription": "Hãy thử từ khóa khác hoặc xóa tìm kiếm."
+  }
+}

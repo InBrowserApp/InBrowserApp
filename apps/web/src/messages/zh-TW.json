@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "完全在您裝置上執行的免費瀏覽器工具。",
+    "languageLabel": "語言",
+    "themeLabel": "切換主題",
+    "themeLight": "淺色",
+    "themeDark": "深色",
+    "themeSystem": "系統",
+    "navigation": {
+      "home": "首頁",
+      "tools": "工具"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — 免費的瀏覽器工具",
+    "homeDescription": "一系列完全在您瀏覽器中執行的免費隱私友善工具。不上傳、不使用伺服器、不追蹤。",
+    "toolsTitle": "所有工具 — InBrowser.App",
+    "toolsDescription": "瀏覽並搜尋所有可用的瀏覽器工具。",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "尊重您隱私的瀏覽器工具",
+    "description": "每個工具都在您的瀏覽器本地執行。您的資料永遠不會離開您的裝置。",
+    "primaryAction": "瀏覽所有工具"
+  },
+  "tools": {
+    "title": "所有工具",
+    "description": "一切都在您的瀏覽器中執行 — 不會上傳任何資料。",
+    "searchLabel": "搜尋工具",
+    "searchPlaceholder": "依名稱或說明搜尋…",
+    "resultCountSuffix": "個工具",
+    "clearSearchLabel": "清除",
+    "emptyRegistryTitle": "尚無可用的工具。",
+    "emptyRegistryDescription": "工具正在新增中 — 請稍後再回來查看。",
+    "emptySearchTitle": "沒有符合的工具。",
+    "emptySearchDescription": "請嘗試其他關鍵字或清除搜尋。"
+  }
+}

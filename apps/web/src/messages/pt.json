@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Ferramentas gratuitas baseadas no navegador que funcionam inteiramente no seu dispositivo.",
+    "languageLabel": "Idiomas",
+    "themeLabel": "Alternar tema",
+    "themeLight": "Claro",
+    "themeDark": "Escuro",
+    "themeSystem": "Sistema",
+    "navigation": {
+      "home": "Início",
+      "tools": "Ferramentas"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Ferramentas gratuitas baseadas no navegador",
+    "homeDescription": "Uma coleção de utilitários gratuitos e respeitadores da privacidade que funcionam inteiramente no seu navegador. Sem uploads, sem servidores, sem rastreamento.",
+    "toolsTitle": "Todas as ferramentas — InBrowser.App",
+    "toolsDescription": "Navegue e pesquise todas as ferramentas baseadas no navegador disponíveis.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Ferramentas baseadas no navegador que respeitam a sua privacidade",
+    "description": "Cada ferramenta funciona localmente no seu navegador. Os seus dados nunca saem do seu dispositivo.",
+    "primaryAction": "Ver todas as ferramentas"
+  },
+  "tools": {
+    "title": "Todas as ferramentas",
+    "description": "Tudo funciona no seu navegador — nenhum dado é enviado.",
+    "searchLabel": "Pesquisar ferramentas",
+    "searchPlaceholder": "Pesquisar por nome ou descrição…",
+    "resultCountSuffix": "ferramentas",
+    "clearSearchLabel": "Limpar",
+    "emptyRegistryTitle": "Ainda não há ferramentas disponíveis.",
+    "emptyRegistryDescription": "Ferramentas estão a ser adicionadas — volte em breve.",
+    "emptySearchTitle": "Nenhuma ferramenta correspondente.",
+    "emptySearchDescription": "Tente uma palavra-chave diferente ou limpe a pesquisa."
+  }
+}

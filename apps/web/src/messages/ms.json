@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Alat percuma berasaskan pelayar yang berjalan sepenuhnya pada peranti anda.",
+    "languageLabel": "Bahasa",
+    "themeLabel": "Togol tema",
+    "themeLight": "Cerah",
+    "themeDark": "Gelap",
+    "themeSystem": "Sistem",
+    "navigation": {
+      "home": "Laman Utama",
+      "tools": "Alat"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Alat Percuma Berasaskan Pelayar",
+    "homeDescription": "Koleksi utiliti percuma dan mesra privasi yang berjalan sepenuhnya dalam pelayar anda. Tiada muat naik, tiada pelayan, tiada penjejakan.",
+    "toolsTitle": "Semua Alat — InBrowser.App",
+    "toolsDescription": "Layari dan cari semua alat berasaskan pelayar yang tersedia.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Alat berasaskan pelayar yang menghormati privasi anda",
+    "description": "Setiap alat berjalan secara tempatan dalam pelayar anda. Data anda tidak pernah meninggalkan peranti anda.",
+    "primaryAction": "Layari semua alat"
+  },
+  "tools": {
+    "title": "Semua Alat",
+    "description": "Semuanya berjalan dalam pelayar anda — tiada data dimuat naik.",
+    "searchLabel": "Cari alat",
+    "searchPlaceholder": "Cari mengikut nama atau penerangan…",
+    "resultCountSuffix": "alat",
+    "clearSearchLabel": "Kosongkan",
+    "emptyRegistryTitle": "Tiada alat tersedia lagi.",
+    "emptyRegistryDescription": "Alat sedang ditambah — sila semak semula tidak lama lagi.",
+    "emptySearchTitle": "Tiada alat yang sepadan.",
+    "emptySearchDescription": "Cuba kata kunci lain atau kosongkan carian."
+  }
+}

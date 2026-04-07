@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextPlaceholder": "Nhập văn bản để mã hóa…",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
+  "encodedTextLabel": "Đầu ra Base64",
+  "encodedTextPlaceholder": "Dán Base64 để giải mã…",
+  "encodedTextDescription": "Chỉnh sửa trực tiếp văn bản Base64 để giải mã nó trở lại văn bản thuần.",
+  "invalidBase64Title": "Giá trị Base64 chưa hợp lệ.",
+  "invalidBase64Description": "Kiểm tra phần đệm bị thiếu, ký tự không mong đợi hoặc dữ liệu chỉ được dán một phần.",
+  "copyPlainTextLabel": "Sao chép văn bản thuần",
+  "copyEncodedTextLabel": "Sao chép Base64",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ"
+}

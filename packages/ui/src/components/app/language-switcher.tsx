@@ -14,9 +14,43 @@ import { Check, Languages } from "@workspace/ui/icons"
 type LanguageOption = Readonly<{
   code: string
   href: string
-  label: string
+  label?: string
   current?: boolean
 }>
+
+const LANGUAGE_NATIVE_NAMES: Readonly<Record<string, string>> = {
+  en: "English",
+  "zh-CN": "简体中文",
+  "zh-TW": "繁體中文",
+  "zh-HK": "繁體中文（香港）",
+  zh: "中文",
+  es: "Español",
+  fr: "Français",
+  de: "Deutsch",
+  it: "Italiano",
+  ja: "日本語",
+  ko: "한국어",
+  ru: "Русский",
+  pt: "Português",
+  ar: "العربية",
+  hi: "हिन्दी",
+  tr: "Türkçe",
+  nl: "Nederlands",
+  sv: "Svenska",
+  pl: "Polski",
+  vi: "Tiếng Việt",
+  th: "ไทย",
+  id: "Bahasa Indonesia",
+  he: "עברית",
+  ms: "Bahasa Melayu",
+  no: "Norsk",
+  fa: "فارسی",
+  ur: "اردو",
+}
+
+function getLanguageLabel(option: LanguageOption) {
+  return option.label ?? LANGUAGE_NATIVE_NAMES[option.code] ?? option.code
+}
 
 type LanguageSwitcherProps = {
   label: string
@@ -81,7 +115,7 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
         {sortedOptions.map((option) => (
           <DropdownMenuItem key={option.code} asChild className="relative pr-8">
             <a href={option.href} hrefLang={option.code} lang={option.code}>
-              {option.label}
+              {getLanguageLabel(option)}
               {option.current ? (
                 <span className="pointer-events-none absolute right-2 flex items-center justify-center">
                   <Check className="size-4" />

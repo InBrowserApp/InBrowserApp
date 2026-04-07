@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextPlaceholder": "Skriv inn tekst som skal kodes…",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "encodedTextLabel": "Base64-utdata",
+  "encodedTextPlaceholder": "Lim inn Base64 som skal dekodes…",
+  "encodedTextDescription": "Rediger Base64-teksten direkte for å dekode den tilbake til vanlig tekst.",
+  "invalidBase64Title": "Base64-verdien er ikke gyldig ennå.",
+  "invalidBase64Description": "Sjekk om det mangler utfylling, finnes uventede tegn eller om data er limt inn delvis.",
+  "copyPlainTextLabel": "Kopier vanlig tekst",
+  "copyEncodedTextLabel": "Kopier Base64",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel"
+}

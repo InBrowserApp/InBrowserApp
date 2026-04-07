@@ -1,0 +1,4 @@
+{
+  "name": "Encoder dan Decoder Base64",
+  "description": "Encode teks biasa menjadi Base64 dan decode Base64 kembali menjadi teks Unicode langsung di peramban Anda."
+}

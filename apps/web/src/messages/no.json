@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Gratis nettleserbaserte verktøy som kjører helt på enheten din.",
+    "languageLabel": "Språk",
+    "themeLabel": "Bytt tema",
+    "themeLight": "Lyst",
+    "themeDark": "Mørkt",
+    "themeSystem": "System",
+    "navigation": {
+      "home": "Hjem",
+      "tools": "Verktøy"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Gratis nettleserbaserte verktøy",
+    "homeDescription": "En samling gratis, personvernvennlige verktøy som kjører helt i nettleseren din. Ingen opplastinger, ingen servere, ingen sporing.",
+    "toolsTitle": "Alle verktøy — InBrowser.App",
+    "toolsDescription": "Bla gjennom og søk i alle tilgjengelige nettleserbaserte verktøy.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Nettleserbaserte verktøy som respekterer personvernet ditt",
+    "description": "Alle verktøy kjører lokalt i nettleseren din. Dataene dine forlater aldri enheten.",
+    "primaryAction": "Bla gjennom alle verktøy"
+  },
+  "tools": {
+    "title": "Alle verktøy",
+    "description": "Alt kjører i nettleseren din — ingen data lastes opp.",
+    "searchLabel": "Søk i verktøy",
+    "searchPlaceholder": "Søk etter navn eller beskrivelse…",
+    "resultCountSuffix": "verktøy",
+    "clearSearchLabel": "Tøm",
+    "emptyRegistryTitle": "Ingen verktøy tilgjengelig ennå.",
+    "emptyRegistryDescription": "Verktøy legges til — kom tilbake snart.",
+    "emptySearchTitle": "Ingen treff på verktøy.",
+    "emptySearchDescription": "Prøv et annet søkeord eller tøm søket."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "plainTextLabel": "純文字",
+  "plainTextPlaceholder": "輸入要編碼的文字…",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
+  "encodedTextLabel": "Base64 輸出",
+  "encodedTextPlaceholder": "貼上要解碼的 Base64…",
+  "encodedTextDescription": "直接編輯 Base64 文字即可將其解碼回純文字。",
+  "invalidBase64Title": "這個 Base64 值目前無效。",
+  "invalidBase64Description": "請檢查是否缺少填充字元、含有非預期字元，或資料只貼上了一部分。",
+  "copyPlainTextLabel": "複製純文字",
+  "copyEncodedTextLabel": "複製 Base64",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設範例"
+}

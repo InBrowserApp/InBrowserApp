@@ -1,0 +1,4 @@
+{
+  "name": "Bộ mã hóa và giải mã Base64",
+  "description": "Mã hóa văn bản thuần sang Base64 và giải mã Base64 trở lại thành văn bản Unicode ngay trong trình duyệt của bạn."
+}

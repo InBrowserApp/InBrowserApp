@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Darmowe narzędzia przeglądarkowe działające w całości na Twoim urządzeniu.",
+    "languageLabel": "Języki",
+    "themeLabel": "Przełącz motyw",
+    "themeLight": "Jasny",
+    "themeDark": "Ciemny",
+    "themeSystem": "Systemowy",
+    "navigation": {
+      "home": "Strona główna",
+      "tools": "Narzędzia"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Darmowe narzędzia przeglądarkowe",
+    "homeDescription": "Kolekcja darmowych, przyjaznych prywatności narzędzi działających w całości w Twojej przeglądarce. Bez przesyłania, bez serwerów, bez śledzenia.",
+    "toolsTitle": "Wszystkie narzędzia — InBrowser.App",
+    "toolsDescription": "Przeglądaj i wyszukuj wszystkie dostępne narzędzia przeglądarkowe.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Narzędzia przeglądarkowe, które szanują Twoją prywatność",
+    "description": "Każde narzędzie działa lokalnie w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia.",
+    "primaryAction": "Przeglądaj wszystkie narzędzia"
+  },
+  "tools": {
+    "title": "Wszystkie narzędzia",
+    "description": "Wszystko działa w Twojej przeglądarce — żadne dane nie są przesyłane.",
+    "searchLabel": "Szukaj narzędzi",
+    "searchPlaceholder": "Szukaj po nazwie lub opisie…",
+    "resultCountSuffix": "narzędzi",
+    "clearSearchLabel": "Wyczyść",
+    "emptyRegistryTitle": "Brak dostępnych narzędzi.",
+    "emptyRegistryDescription": "Narzędzia są dodawane — zajrzyj wkrótce.",
+    "emptySearchTitle": "Brak pasujących narzędzi.",
+    "emptySearchDescription": "Spróbuj innego słowa kluczowego lub wyczyść wyszukiwanie."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "Gratis browsergebaseerde tools die volledig op je apparaat draaien.",
+    "languageLabel": "Talen",
+    "themeLabel": "Thema wisselen",
+    "themeLight": "Licht",
+    "themeDark": "Donker",
+    "themeSystem": "Systeem",
+    "navigation": {
+      "home": "Start",
+      "tools": "Tools"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — Gratis browsergebaseerde tools",
+    "homeDescription": "Een verzameling gratis, privacyvriendelijke hulpmiddelen die volledig in je browser draaien. Geen uploads, geen servers, geen tracking.",
+    "toolsTitle": "Alle tools — InBrowser.App",
+    "toolsDescription": "Bekijk en doorzoek alle beschikbare browsergebaseerde tools.",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "Browsergebaseerde tools die je privacy respecteren",
+    "description": "Elke tool draait lokaal in je browser. Je gegevens verlaten nooit je apparaat.",
+    "primaryAction": "Alle tools bekijken"
+  },
+  "tools": {
+    "title": "Alle tools",
+    "description": "Alles draait in je browser — er worden geen gegevens geüpload.",
+    "searchLabel": "Tools zoeken",
+    "searchPlaceholder": "Zoeken op naam of beschrijving…",
+    "resultCountSuffix": "tools",
+    "clearSearchLabel": "Wissen",
+    "emptyRegistryTitle": "Nog geen tools beschikbaar.",
+    "emptyRegistryDescription": "Er worden tools toegevoegd — kom snel terug.",
+    "emptySearchTitle": "Geen overeenkomende tools.",
+    "emptySearchDescription": "Probeer een ander trefwoord of wis de zoekopdracht."
+  }
+}

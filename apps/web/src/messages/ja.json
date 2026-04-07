@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "InBrowser.App",
+    "description": "お使いのデバイス上で完全に動作する、無料のブラウザベースツール。",
+    "languageLabel": "言語",
+    "themeLabel": "テーマを切り替え",
+    "themeLight": "ライト",
+    "themeDark": "ダーク",
+    "themeSystem": "システム",
+    "navigation": {
+      "home": "ホーム",
+      "tools": "ツール"
+    }
+  },
+  "metadata": {
+    "homeTitle": "InBrowser.App — 無料のブラウザベースツール",
+    "homeDescription": "ブラウザ内で完全に動作する、無料でプライバシーに配慮したユーティリティ集。アップロードなし、サーバーなし、トラッキングなし。",
+    "toolsTitle": "すべてのツール — InBrowser.App",
+    "toolsDescription": "利用可能なすべてのブラウザベースツールを閲覧・検索できます。",
+    "toolTitleSuffix": "InBrowser.App"
+  },
+  "home": {
+    "title": "あなたのプライバシーを尊重するブラウザベースのツール",
+    "description": "すべてのツールはブラウザ内でローカルに実行されます。データがデバイスの外に出ることはありません。",
+    "primaryAction": "すべてのツールを見る"
+  },
+  "tools": {
+    "title": "すべてのツール",
+    "description": "すべてブラウザ内で動作します — データはアップロードされません。",
+    "searchLabel": "ツールを検索",
+    "searchPlaceholder": "名前または説明で検索…",
+    "resultCountSuffix": "ツール",
+    "clearSearchLabel": "クリア",
+    "emptyRegistryTitle": "利用可能なツールはまだありません。",
+    "emptyRegistryDescription": "ツールは順次追加されています — またご確認ください。",
+    "emptySearchTitle": "一致するツールがありません。",
+    "emptySearchDescription": "別のキーワードを試すか、検索をクリアしてください。"
+  }
+}
