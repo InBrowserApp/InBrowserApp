@@ -7,4 +7,5 @@ CheckScripts: true
 CheckLinks: true
 IgnoreInternalEmptyHash: true
 IgnoreEmptyHref: true
+IgnoreDirectoryMissingTrailingSlash: true
 EnforceHTTPS: false
