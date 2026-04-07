@@ -56,6 +56,8 @@ tools/<slug>/         # self-contained workspace packages, scoped @tool/<slug>.
 
 Tools **are** workspace packages. Each `tools/<slug>/` has its own `package.json` with `name: "@tool/<slug>"` (must equal dirname — the registry generator validates). Per-tool runtime deps live in the tool's own `package.json`; `react`, `react-dom`, and `astro` are peer-deps satisfied by `apps/web`. Shared deps come through `@workspace/tool-sdk` and `@workspace/ui`.
 
+**All external dependency versions live in the `catalog:` block of `pnpm-workspace.yaml`** — every `package.json` references them as `"foo": "catalog:"` (including `peerDependencies`). When adding a new dep, add it to the catalog first, then reference `catalog:` from the package(s) that need it. Never inline a version in a `package.json`. This is the only way to bump a version, and it's what prevents the kind of cross-package drift that motivated the React dedupe in #355.
+
 ### Boundary contract (enforced by `.dependency-cruiser.json`, see `docs/architecture/workspace-boundaries.md`)
 
 - `apps/web` → may import generated registry data and the three packages; must NOT reach into tool-local internals (messages, sections, components, workers).

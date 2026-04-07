@@ -16,22 +16,22 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.14",
-    "@astrojs/react": "^4.4.2",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@astrojs/mdx": "catalog:",
+    "@astrojs/react": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "@workspace/tool-registry": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "astro": "^5.17.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/node": "^25.1.0",
-    "wrangler": "4.80.0",
-    "typescript": "^5.9.3"
+    "@astrojs/check": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@types/node": "catalog:",
+    "wrangler": "catalog:",
+    "typescript": "catalog:"
   }
 }
