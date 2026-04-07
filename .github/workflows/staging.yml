@@ -32,6 +32,9 @@ jobs:
           cache: true
           run_install: true
 
+      - name: Verify pnpm lockfile is deduped
+        run: pnpm dedupe --check
+
       - name: Lint
         run: pnpm lint
 
