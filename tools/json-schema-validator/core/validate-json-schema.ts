@@ -167,9 +167,4 @@ function validateJsonSchemaText(
 }
 
 export { validateJsonSchemaText }
-export type {
-  SchemaDraft,
-  ValidationIssue,
-  ValidationOptions,
-  ValidationResult,
-}
+export type { ValidationOptions, ValidationResult }

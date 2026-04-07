@@ -75,4 +75,3 @@ function loadSiteMessages(language: SiteLanguage) {
 }
 
 export { loadSiteMessages }
-export type { SiteMessageCatalog }

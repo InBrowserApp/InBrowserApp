@@ -88,5 +88,4 @@ async function loadToolPageData(
   }
 }
 
-export { getToolBySlug, loadToolPageData }
-export type { LoadedToolPageData }
+export { loadToolPageData }

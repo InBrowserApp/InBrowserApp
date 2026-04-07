@@ -5,7 +5,6 @@ import type { AlternateLink } from "./site"
 
 import {
   DEFAULT_SITE_LANGUAGE,
-  SITE_URL,
   SUPPORTED_SITE_LANGUAGES,
   getAlternateLinks,
   getCanonicalUrl,
@@ -118,5 +117,4 @@ ${urls}
 `
 }
 
-export { SITE_URL, buildSitemapXml, createPageSeo, getSitemapEntries }
-export type { PageSeo, SitemapEntry }
+export { buildSitemapXml, createPageSeo, getSitemapEntries }

@@ -1,3 +1,14 @@
 {
-  "$schema": "./node_modules/knip/schema.json"
+  "$schema": "./node_modules/knip/schema.json",
+  "workspaces": {
+    "apps/web": {
+      "astro": true
+    },
+    "packages/*": {
+      "astro": false
+    },
+    "tools/*": {
+      "astro": false
+    }
+  }
 }

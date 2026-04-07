@@ -50,6 +50,9 @@ jobs:
       - name: Dep boundaries
         run: pnpm depcruise
 
+      - name: Knip
+        run: pnpm knip
+
   build-web:
     name: Build Web
     runs-on: ubuntu-latest
