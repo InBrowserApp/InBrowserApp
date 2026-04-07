@@ -41,6 +41,11 @@ jobs:
       - name: Format check
         run: pnpm format:check
 
+      - name: Verify generated tool registry is up to date
+        run: |
+          pnpm tool-registry:generate
+          git diff --exit-code -- packages/tool-registry/src/generated
+
       - name: Typecheck
         run: pnpm typecheck
 
