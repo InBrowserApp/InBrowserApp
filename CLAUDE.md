@@ -73,11 +73,12 @@ Default to **tool-local** code. Promote into `packages/lib/*` only when the code
 ```
 tools/<slug>/
   package.json         # name === "@tool/<slug>"; exports "./manifest" + "./page"
-  tsconfig.json        # extends ../../tsconfig.base.json
   manifest.ts          # exports `tool` from defineTool() in @workspace/tool-sdk
   index.astro          # composition root. Receives only `lang` from the shell.
   meta/en.json         # required base locale; meta/<lang>.json adds locales
 ```
+
+Tools do **not** ship a `tsconfig.json`. The root `tsconfig.json` includes `tools/**` and is what `pnpm typecheck` runs against (a single `tsc --noEmit` for everything except `apps/web`, which has its own `astro check`).
 
 Optional, all tool-local: `client.tsx`, `messages/<lang>.json`, `sections/intro/<lang>.md`, `components/`, `core/`, `workers/`, `tests/`.
 

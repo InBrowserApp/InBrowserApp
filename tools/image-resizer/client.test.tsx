@@ -731,7 +731,7 @@ describe("ImageResizerClient", () => {
       expect(mockedResizeImageFile).toHaveBeenCalledOnce()
     })
 
-    const calledOptions = mockedResizeImageFile.mock.calls[0][1]
+    const calledOptions = mockedResizeImageFile.mock.calls[0]![1]
     expect(calledOptions.width).toBe(1000)
     expect(calledOptions.height).toBe(500)
     expect(calledOptions.keepAspectRatio).toBe(true)

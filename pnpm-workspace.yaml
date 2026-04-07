@@ -9,6 +9,13 @@ onlyBuiltDependencies:
   - msw
   - sharp
 
+# Hoist @types/* to the workspace root so a single root tsc run can resolve
+# types for every package without each one having to redeclare them. The
+# canonical owner of each @types package still lives in the package that
+# actually consumes the runtime dep (e.g. @types/react in apps/web).
+publicHoistPattern:
+  - "@types/*"
+
 # Single source of truth for every external dependency version in the
 # workspace. Add new deps here first, then reference them as `catalog:`
 # in the relevant package.json. Tool-local runtime deps belong here too —

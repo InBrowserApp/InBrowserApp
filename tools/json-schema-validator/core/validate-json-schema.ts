@@ -50,24 +50,24 @@ function detectSchemaDraft(schema: unknown): SchemaDraft {
   return "2020-12"
 }
 
-function parseJson(source: string) {
+type ParseResult =
+  | { kind: "empty" }
+  | { kind: "ok"; value: unknown }
+  | { kind: "error"; message: string }
+
+function parseJson(source: string): ParseResult {
   if (source.trim() === "") {
-    return {
-      empty: true,
-    } as const
+    return { kind: "empty" }
   }
 
   try {
-    return {
-      empty: false,
-      value: JSON.parse(source),
-    } as const
+    return { kind: "ok", value: JSON.parse(source) }
   } catch (error) {
     return {
-      empty: false,
+      kind: "error",
       /* v8 ignore next */
-      error: error instanceof Error ? error.message : String(error),
-    } as const
+      message: error instanceof Error ? error.message : String(error),
+    }
   }
 }
 
@@ -111,25 +111,25 @@ function validateJsonSchemaText(
   const parsedSchema = parseJson(schemaText)
   const parsedData = parseJson(dataText)
 
-  if (parsedSchema.empty || parsedData.empty) {
+  if (parsedSchema.kind === "empty" || parsedData.kind === "empty") {
     return {
       state: "idle",
     }
   }
 
-  if ("error" in parsedSchema) {
+  if (parsedSchema.kind === "error") {
     return {
       state: "parse-error",
       source: "schema",
-      message: parsedSchema.error,
+      message: parsedSchema.message,
     }
   }
 
-  if ("error" in parsedData) {
+  if (parsedData.kind === "error") {
     return {
       state: "parse-error",
       source: "data",
-      message: parsedData.error,
+      message: parsedData.message,
     }
   }
 
@@ -137,7 +137,7 @@ function validateJsonSchemaText(
   const ajv = createAjv(detectedDraft, options)
 
   try {
-    const validate = ajv.compile(parsedSchema.value)
+    const validate = ajv.compile(parsedSchema.value as object)
     const valid = Boolean(validate(parsedData.value))
     const issues =
       validate.errors?.map((issue) => ({

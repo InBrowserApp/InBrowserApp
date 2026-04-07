@@ -507,6 +507,7 @@ function ImageResizerClient({ messages }: ImageResizerClientProps) {
                 max={100}
                 value={[options.quality]}
                 onValueChange={([value]) => {
+                  if (value === undefined) return
                   setOptions((currentOptions) => ({
                     ...currentOptions,
                     quality: value,

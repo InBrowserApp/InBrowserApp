@@ -105,7 +105,7 @@ function extractHeadingLevels(md: string): number[] {
     }
     if (inFence) continue
     const m = /^(#{1,6})\s+\S/.exec(line)
-    if (m) out.push(m[1].length)
+    if (m?.[1]) out.push(m[1].length)
   }
   return out
 }

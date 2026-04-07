@@ -85,8 +85,8 @@ describe("validateJsonSchemaText", () => {
     if (result.state === "validated") {
       expect(result.valid).toBe(false)
       expect(result.issues.length).toBeGreaterThan(0)
-      expect(result.issues[0].keyword).toBe("required")
-      expect(result.issues[0].path).toContain("name")
+      expect(result.issues[0]!.keyword).toBe("required")
+      expect(result.issues[0]!.path).toContain("name")
     }
   })
 
@@ -202,7 +202,7 @@ describe("validateJsonSchemaText", () => {
     if (result.state === "validated") {
       expect(result.issues.length).toBeGreaterThan(0)
       // The message should be truthy (either from AJV or our fallback)
-      expect(result.issues[0].message).toBeTruthy()
+      expect(result.issues[0]!.message).toBeTruthy()
     }
   })
 
@@ -221,7 +221,7 @@ describe("validateJsonSchemaText", () => {
 
     if (result.state === "validated") {
       expect(result.valid).toBe(false)
-      expect(result.issues[0].path).toBe("/nested/value")
+      expect(result.issues[0]!.path).toBe("/nested/value")
     }
   })
 })

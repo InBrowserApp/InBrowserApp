@@ -31,7 +31,6 @@
     "@astrojs/check": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",
-    "wrangler": "catalog:",
-    "typescript": "catalog:"
+    "wrangler": "catalog:"
   }
 }
