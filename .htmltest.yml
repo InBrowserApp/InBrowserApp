@@ -1,0 +1,10 @@
+DirectoryPath: apps/web/dist
+CheckExternal: false
+CheckInternal: true
+CheckInternalHash: true
+CheckImages: true
+CheckScripts: true
+CheckLinks: true
+IgnoreInternalEmptyHash: true
+IgnoreEmptyHref: true
+EnforceHTTPS: false
