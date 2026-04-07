@@ -4,11 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "generate": "tsx src/generate.ts && pnpm exec oxfmt src/generated/*.ts",
-    "lint": "oxlint .",
-    "lint:fix": "oxlint --fix .",
-    "format": "oxfmt .",
-    "format:check": "oxfmt --check ."
+    "generate": "tsx src/generate.ts && pnpm exec oxfmt src/generated/*.ts"
   },
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
