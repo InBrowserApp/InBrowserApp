@@ -17,7 +17,6 @@ The current target shape is:
 tools/
   <tool-slug>/
     package.json
-    tsconfig.json
     manifest.ts
     index.astro
     meta/
@@ -36,11 +35,17 @@ tools/
     workers/                # optional
 ```
 
+Tools do **not** ship a `tsconfig.json`. The repo's root `tsconfig.json` includes `tools/**` and is what `pnpm typecheck` runs against — a single `tsc --noEmit` covers every package, tool, and test file in the workspace.
+
+Tools also do **not** define their own `lint`, `format`, or `typecheck` scripts. Those are workspace-wide CLI tools (`oxlint`, `oxfmt`, `tsc`) and are owned by the root `package.json` only.
+
 `manifest.ts` should export a named `tool` constant created with `defineTool()` from `@workspace/tool-sdk`.
 
 `index.astro` is the tool's composition root. The app shell passes only `lang`; the tool decides how to load messages, sections, client code, and any private helpers.
 
 Tools may depend on `@workspace/tool-sdk`, `@workspace/ui`, and `packages/lib/*`. They declare `react`, `react-dom`, and `astro` as peer dependencies, satisfied by `apps/web`. Tool-specific runtime deps (e.g. `ajv`, `pdf-lib`) go directly into the tool's `package.json`. Tools must not import from `apps/web` or `@workspace/tool-registry`.
+
+**All external dependency versions go through the pnpm catalog** in `pnpm-workspace.yaml`. New deps get added to the catalog first, then referenced from the tool's `package.json` as `"foo": "catalog:"` — never inline a version. This includes `peerDependencies`.
 
 ## Adding a new tool
 
@@ -61,19 +66,12 @@ Tools may depend on `@workspace/tool-sdk`, `@workspace/ui`, and `packages/lib/*`
        "@workspace/ui": "workspace:*"
      },
      "peerDependencies": {
-       "astro": "^5.0.0",
-       "react": "^19.0.0",
-       "react-dom": "^19.0.0"
+       "astro": "catalog:",
+       "react": "catalog:",
+       "react-dom": "catalog:"
      }
    }
    ```
-3. Use this `tsconfig.json`:
-   ```json
-   {
-     "extends": "../../tsconfig.base.json",
-     "include": ["**/*.ts", "**/*.tsx", "**/*.astro"]
-   }
-   ```
-4. Add `"@tool/<slug>": "workspace:*"` to `packages/tool-registry/package.json` dependencies (the registry needs this dep edge so its generated `page-loaders.ts` can import the tool).
-5. Run `pnpm install` to materialize the workspace symlinks.
-6. Run `pnpm tool-registry:generate` to refresh the generated registry, static paths, search index, and page loaders.
+3. Add `"@tool/<slug>": "workspace:*"` to `packages/tool-registry/package.json` dependencies (the registry needs this dep edge so its generated `page-loaders.ts` can import the tool).
+4. Run `pnpm install` to materialize the workspace symlinks.
+5. Run `pnpm tool-registry:generate` to refresh the generated registry, static paths, search index, and page loaders.
