@@ -1,0 +1,43 @@
+export type ImageResizerMessages = Readonly<{
+  meta: {
+    name: string
+    description: string
+  }
+  uploadTitle: string
+  uploadDescription: string
+  chooseImageLabel: string
+  changeImageLabel: string
+  uploadHint: string
+  optionsTitle: string
+  optionsDescription: string
+  widthLabel: string
+  heightLabel: string
+  keepAspectRatioLabel: string
+  keepAspectRatioDescription: string
+  allowUpscaleLabel: string
+  allowUpscaleDescription: string
+  algorithmLabel: string
+  formatLabel: string
+  qualityLabel: string
+  qualityDescription: string
+  resizeLabel: string
+  resetLabel: string
+  resultTitle: string
+  resultDescription: string
+  downloadLabel: string
+  originalLabel: string
+  outputLabel: string
+  emptyResultTitle: string
+  emptyResultDescription: string
+  invalidImageTitle: string
+  invalidImageDescription: string
+  resizeErrorTitle: string
+  resizeErrorDescription: string
+  algorithmHighQuality: string
+  algorithmBalanced: string
+  algorithmPixelated: string
+  formatAuto: string
+  formatPng: string
+  formatJpeg: string
+  formatWebp: string
+}>

@@ -4,6 +4,26 @@
   "categories": {
     "correctness": "error"
   },
+  "rules": {
+    "max-lines": [
+      "error",
+      { "max": 300, "skipBlankLines": true, "skipComments": true }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx", "**/tests/**"],
+      "rules": {
+        "max-lines": "off"
+      }
+    },
+    {
+      "files": ["packages/tool-registry/src/generated/**"],
+      "rules": {
+        "max-lines": "off"
+      }
+    }
+  ],
   "env": {
     "builtin": true,
     "browser": true,
