@@ -103,21 +103,20 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
 
             <Field orientation="horizontal">
               <FieldContent>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <FieldLabel
-                        htmlFor={escapeFormulaeId}
-                        className="underline decoration-dotted underline-offset-3"
-                      >
-                        {messages.escapeFormulaeLabel}
-                      </FieldLabel>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      {messages.escapeFormulaeTooltip}
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                <FieldLabel htmlFor={escapeFormulaeId}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="underline decoration-dotted underline-offset-3">
+                          {messages.escapeFormulaeLabel}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent side="top">
+                        {messages.escapeFormulaeTooltip}
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </FieldLabel>
               </FieldContent>
               <Switch
                 id={escapeFormulaeId}
