@@ -616,6 +616,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-to-xml-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "xml", "converter"],
+    locales: {
+      ar: {
+        name: "محول JSON → XML",
+        description:
+          "حوّل JSON إلى XML. الصق JSON أو استورد ملفًا؛ معاينة ونسخ وتنزيل.",
+      },
+      de: {
+        name: "JSON → XML Konverter",
+        description:
+          "Wandelt JSON in XML um. JSON einfügen oder Datei importieren; Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "JSON → XML Converter",
+        description:
+          "Convert JSON to XML. Paste JSON or import a file; preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor JSON → XML",
+        description:
+          "Convierte JSON a XML. Pega JSON o importa un archivo; previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur JSON → XML",
+        description:
+          "Convertissez JSON en XML. Collez du JSON ou importez un fichier ; aperçu, copie et téléchargement.",
+      },
+      he: {
+        name: "ממיר JSON → XML",
+        description:
+          "המרת JSON ל‑XML. הדביקו JSON או ייבאו קובץ; תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "JSON → XML परिवर्तक",
+        description:
+          "JSON को XML में बदलें। JSON पेस्ट करें या फ़ाइल आयात करें; पूर्वावलोकन, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi JSON → XML",
+        description:
+          "Konversi JSON ke XML. Tempel JSON atau impor berkas; pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore JSON → XML",
+        description:
+          "Converti JSON in XML. Incolla JSON o importa un file; anteprima, copia e download.",
+      },
+      ja: {
+        name: "JSON → XML 変換",
+        description:
+          "JSON を XML に変換。JSON を貼り付けるかファイルを読み込み、プレビュー・コピー・ダウンロード。",
+      },
+      ko: {
+        name: "JSON → XML 변환기",
+        description:
+          "JSON을 XML로 변환합니다. JSON 붙여넣기 또는 파일 가져오기; 미리보기, 복사, 다운로드.",
+      },
+      ms: {
+        name: "Penukar JSON → XML",
+        description:
+          "Tukar JSON kepada XML. Tampal JSON atau import fail; pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "JSON → XML-converter",
+        description:
+          "Zet JSON om naar XML. Plak JSON of importeer een bestand; bekijk, kopieer en download.",
+      },
+      no: {
+        name: "JSON → XML-omformer",
+        description:
+          "Konverter JSON til XML. Lim inn JSON eller importer en fil; forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter JSON → XML",
+        description:
+          "Konwertuj JSON na XML. Wklej JSON lub zaimportuj plik; podgląd, kopiowanie i pobieranie.",
+      },
+      pt: {
+        name: "Conversor JSON → XML",
+        description:
+          "Converta JSON para XML. Cole JSON ou importe um arquivo; visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер JSON → XML",
+        description:
+          "Преобразуйте JSON в XML. Вставьте JSON или импортируйте файл; просмотр, копирование и загрузка.",
+      },
+      sv: {
+        name: "JSON → XML-omvandlare",
+        description:
+          "Konvertera JSON till XML. Klistra in JSON eller importera en fil; förhandsgranska, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง JSON → XML",
+        description:
+          "แปลง JSON เป็น XML วาง JSON หรือ นำเข้าไฟล์; ดูตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "JSON → XML Dönüştürücü",
+        description:
+          "JSON’u XML’a dönüştürün. JSON yapıştırın وya dosya içe aktarın; önizleme, kopyalama ve indirme.",
+      },
+      vi: {
+        name: "Trình chuyển JSON → XML",
+        description:
+          "Chuyển JSON sang XML. Dán JSON hoặc nhập tệp; xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "JSON 转 XML 转换器",
+        description:
+          "将 JSON 转为 XML。粘贴 JSON 或导入文件；预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 XML 轉換器",
+        description:
+          "將 JSON 轉為 XML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  {
     slug: "json-to-yaml-converter",
     category: "json",
     icon: "file-json-2",
@@ -1352,6 +1475,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 轉 TOML 轉換器",
         description:
           "將 JSON 轉為 TOML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "json-to-xml-converter": {
+    slug: "json-to-xml-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "xml", "converter"],
+    locales: {
+      ar: {
+        name: "محول JSON → XML",
+        description:
+          "حوّل JSON إلى XML. الصق JSON أو استورد ملفًا؛ معاينة ونسخ وتنزيل.",
+      },
+      de: {
+        name: "JSON → XML Konverter",
+        description:
+          "Wandelt JSON in XML um. JSON einfügen oder Datei importieren; Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "JSON → XML Converter",
+        description:
+          "Convert JSON to XML. Paste JSON or import a file; preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor JSON → XML",
+        description:
+          "Convierte JSON a XML. Pega JSON o importa un archivo; previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur JSON → XML",
+        description:
+          "Convertissez JSON en XML. Collez du JSON ou importez un fichier ; aperçu, copie et téléchargement.",
+      },
+      he: {
+        name: "ממיר JSON → XML",
+        description:
+          "המרת JSON ל‑XML. הדביקו JSON או ייבאו קובץ; תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "JSON → XML परिवर्तक",
+        description:
+          "JSON को XML में बदलें। JSON पेस्ट करें या फ़ाइल आयात करें; पूर्वावलोकन, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi JSON → XML",
+        description:
+          "Konversi JSON ke XML. Tempel JSON atau impor berkas; pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore JSON → XML",
+        description:
+          "Converti JSON in XML. Incolla JSON o importa un file; anteprima, copia e download.",
+      },
+      ja: {
+        name: "JSON → XML 変換",
+        description:
+          "JSON を XML に変換。JSON を貼り付けるかファイルを読み込み、プレビュー・コピー・ダウンロード。",
+      },
+      ko: {
+        name: "JSON → XML 변환기",
+        description:
+          "JSON을 XML로 변환합니다. JSON 붙여넣기 또는 파일 가져오기; 미리보기, 복사, 다운로드.",
+      },
+      ms: {
+        name: "Penukar JSON → XML",
+        description:
+          "Tukar JSON kepada XML. Tampal JSON atau import fail; pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "JSON → XML-converter",
+        description:
+          "Zet JSON om naar XML. Plak JSON of importeer een bestand; bekijk, kopieer en download.",
+      },
+      no: {
+        name: "JSON → XML-omformer",
+        description:
+          "Konverter JSON til XML. Lim inn JSON eller importer en fil; forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter JSON → XML",
+        description:
+          "Konwertuj JSON na XML. Wklej JSON lub zaimportuj plik; podgląd, kopiowanie i pobieranie.",
+      },
+      pt: {
+        name: "Conversor JSON → XML",
+        description:
+          "Converta JSON para XML. Cole JSON ou importe um arquivo; visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер JSON → XML",
+        description:
+          "Преобразуйте JSON в XML. Вставьте JSON или импортируйте файл; просмотр, копирование и загрузка.",
+      },
+      sv: {
+        name: "JSON → XML-omvandlare",
+        description:
+          "Konvertera JSON till XML. Klistra in JSON eller importera en fil; förhandsgranska, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง JSON → XML",
+        description:
+          "แปลง JSON เป็น XML วาง JSON หรือ นำเข้าไฟล์; ดูตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "JSON → XML Dönüştürücü",
+        description:
+          "JSON’u XML’a dönüştürün. JSON yapıştırın وya dosya içe aktarın; önizleme, kopyalama ve indirme.",
+      },
+      vi: {
+        name: "Trình chuyển JSON → XML",
+        description:
+          "Chuyển JSON sang XML. Dán JSON hoặc nhập tệp; xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "JSON 转 XML 转换器",
+        description:
+          "将 JSON 转为 XML。粘贴 JSON 或导入文件；预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 XML 轉換器",
+        description:
+          "將 JSON 轉為 XML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
       },
     },
   },
