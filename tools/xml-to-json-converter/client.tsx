@@ -133,12 +133,6 @@ function XmlToJsonConverterClient({ messages }: XmlToJsonConverterClientProps) {
 
   return (
     <div className="grid gap-6">
-      <OptionsCard
-        messages={messages}
-        options={options}
-        setOptions={setOptions}
-      />
-
       <div className="grid gap-6 xl:grid-cols-2">
         <Card>
           <CardHeader className="border-b">
@@ -223,6 +217,12 @@ function XmlToJsonConverterClient({ messages }: XmlToJsonConverterClientProps) {
           </CardFooter>
         </Card>
       </div>
+
+      <OptionsCard
+        messages={messages}
+        options={options}
+        setOptions={setOptions}
+      />
     </div>
   )
 }
