@@ -188,9 +188,11 @@ For each such family:
 - JSON files must keep the exact same key structure as `en.json`
 - Markdown files must keep the same heading outline as `en.md`
 
-When bulk-translating locale catalogs, follow the parallel single-language
-workflow described in `.claude/agents/i18n-translator.md` instead of updating
-many languages sequentially in one pass.
+When translating locale catalogs, use the dedicated i18n translation subagent
+workflow described in `.claude/agents/i18n-translator.md`. The expected
+default is one subagent per target language running in parallel. Do not
+translate many languages sequentially in one agent when the subagent workflow
+applies.
 
 ## Testing and quality gates
 
