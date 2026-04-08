@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react"
 
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Card,
   CardContent,
@@ -16,7 +17,6 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Switch } from "@workspace/ui/components/ui/switch"
 
 import {
   clampIndentSize,
@@ -135,6 +135,16 @@ function OptionsCard({
 
           <div className="grid gap-4 lg:grid-cols-2">
             <Field orientation="horizontal">
+              <Checkbox
+                id={includeDeclarationId}
+                checked={options.includeXmlDeclaration}
+                onCheckedChange={(checked) => {
+                  setOptions((currentOptions) => ({
+                    ...currentOptions,
+                    includeXmlDeclaration: Boolean(checked),
+                  }))
+                }}
+              />
               <FieldContent>
                 <FieldLabel htmlFor={includeDeclarationId}>
                   {messages.includeDeclarationLabel}
@@ -143,20 +153,19 @@ function OptionsCard({
                   {messages.includeDeclarationDescription}
                 </FieldDescription>
               </FieldContent>
-              <Switch
-                id={includeDeclarationId}
-                checked={options.includeXmlDeclaration}
-                onCheckedChange={(checked) => {
-                  setOptions((currentOptions) => ({
-                    ...currentOptions,
-                    includeXmlDeclaration: checked,
-                  }))
-                }}
-                aria-label={messages.includeDeclarationLabel}
-              />
             </Field>
 
             <Field orientation="horizontal">
+              <Checkbox
+                id={expandEmptyElementsId}
+                checked={options.fullTagEmptyElement}
+                onCheckedChange={(checked) => {
+                  setOptions((currentOptions) => ({
+                    ...currentOptions,
+                    fullTagEmptyElement: Boolean(checked),
+                  }))
+                }}
+              />
               <FieldContent>
                 <FieldLabel htmlFor={expandEmptyElementsId}>
                   {messages.expandEmptyElementsLabel}
@@ -165,17 +174,6 @@ function OptionsCard({
                   {messages.expandEmptyElementsDescription}
                 </FieldDescription>
               </FieldContent>
-              <Switch
-                id={expandEmptyElementsId}
-                checked={options.fullTagEmptyElement}
-                onCheckedChange={(checked) => {
-                  setOptions((currentOptions) => ({
-                    ...currentOptions,
-                    fullTagEmptyElement: checked,
-                  }))
-                }}
-                aria-label={messages.expandEmptyElementsLabel}
-              />
             </Field>
           </div>
         </FieldGroup>

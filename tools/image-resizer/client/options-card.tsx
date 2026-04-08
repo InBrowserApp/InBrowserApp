@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -236,6 +237,16 @@ export function OptionsCard({
           </Field>
 
           <Field orientation="horizontal">
+            <Checkbox
+              id={`${inputId}-allow-upscale`}
+              checked={options.allowUpscale}
+              onCheckedChange={(checked) => {
+                setOptions((currentOptions) => ({
+                  ...currentOptions,
+                  allowUpscale: Boolean(checked),
+                }))
+              }}
+            />
             <FieldContent>
               <FieldLabel htmlFor={`${inputId}-allow-upscale`}>
                 {messages.allowUpscaleLabel}
@@ -244,17 +255,6 @@ export function OptionsCard({
                 {messages.allowUpscaleDescription}
               </FieldDescription>
             </FieldContent>
-            <Switch
-              id={`${inputId}-allow-upscale`}
-              checked={options.allowUpscale}
-              onCheckedChange={(checked) => {
-                setOptions((currentOptions) => ({
-                  ...currentOptions,
-                  allowUpscale: checked,
-                }))
-              }}
-              aria-label={messages.allowUpscaleLabel}
-            />
           </Field>
         </FieldGroup>
       </CardContent>

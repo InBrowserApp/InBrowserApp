@@ -1,3 +1,4 @@
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -14,11 +15,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
-import { Switch } from "@workspace/ui/components/ui/switch"
 
 import type { SkipEmptyLinesMode } from "../core/convert-csv-to-json"
 
-type SwitchFieldProps = Readonly<{
+type CheckboxFieldProps = Readonly<{
   id: string
   label: string
   checked: boolean
@@ -45,23 +45,24 @@ type SelectFieldProps = Readonly<{
   onValueChange: (value: SkipEmptyLinesMode) => void
 }>
 
-function SwitchField({
+function CheckboxField({
   id,
   label,
   checked,
   onCheckedChange,
-}: SwitchFieldProps) {
+}: CheckboxFieldProps) {
   return (
     <Field orientation="horizontal">
+      <Checkbox
+        id={id}
+        checked={checked}
+        onCheckedChange={(nextChecked) => {
+          onCheckedChange(Boolean(nextChecked))
+        }}
+      />
       <FieldContent>
         <FieldLabel htmlFor={id}>{label}</FieldLabel>
       </FieldContent>
-      <Switch
-        id={id}
-        checked={checked}
-        onCheckedChange={onCheckedChange}
-        aria-label={label}
-      />
     </Field>
   )
 }
@@ -133,4 +134,4 @@ function SkipEmptyLinesField({
   )
 }
 
-export { SkipEmptyLinesField, SwitchField, TextField }
+export { CheckboxField, SkipEmptyLinesField, TextField }

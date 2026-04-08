@@ -1,5 +1,6 @@
 import { useId, type Dispatch, type SetStateAction } from "react"
 
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Card,
   CardContent,
@@ -15,7 +16,6 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Switch } from "@workspace/ui/components/ui/switch"
 
 import type { XmlToJsonConverterMessages } from "../client/types"
 import {
@@ -136,23 +136,22 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
                   orientation="horizontal"
                   data-disabled={isDisabled || undefined}
                 >
-                  <FieldContent>
-                    <FieldLabel htmlFor={optionId}>
-                      {toggleOption.label}
-                    </FieldLabel>
-                  </FieldContent>
-                  <Switch
+                  <Checkbox
                     id={optionId}
                     checked={options[toggleOption.key]}
                     disabled={isDisabled}
                     onCheckedChange={(checked) => {
                       setOptions((currentOptions) => ({
                         ...currentOptions,
-                        [toggleOption.key]: checked,
+                        [toggleOption.key]: Boolean(checked),
                       }))
                     }}
-                    aria-label={toggleOption.label}
                   />
+                  <FieldContent>
+                    <FieldLabel htmlFor={optionId}>
+                      {toggleOption.label}
+                    </FieldLabel>
+                  </FieldContent>
                 </Field>
               )
             })}

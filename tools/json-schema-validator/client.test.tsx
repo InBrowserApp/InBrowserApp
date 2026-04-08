@@ -221,13 +221,13 @@ describe("JsonSchemaValidatorClient", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
       // Toggle validateFormats off
-      const validateFormatsSwitch = screen.getByRole("switch", {
+      const validateFormatsSwitch = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       fireEvent.click(validateFormatsSwitch)
 
       // Toggle allErrors off
-      const allErrorsSwitch = screen.getByRole("switch", {
+      const allErrorsSwitch = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       fireEvent.click(allErrorsSwitch)
@@ -457,20 +457,20 @@ describe("JsonSchemaValidatorClient", () => {
     })
   })
 
-  describe("options: toggle switches", () => {
-    test("validateFormats switch starts checked", () => {
+  describe("options: checkboxes", () => {
+    test("validateFormats checkbox starts checked", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("checked")
     })
 
-    test("allErrors switch starts checked", () => {
+    test("allErrors checkbox starts checked", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("checked")
@@ -491,7 +491,7 @@ describe("JsonSchemaValidatorClient", () => {
       expect(screen.getByText(messages.invalidTitle)).toBeTruthy()
 
       // Turn off format validation
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       fireEvent.click(switchEl)
@@ -502,10 +502,10 @@ describe("JsonSchemaValidatorClient", () => {
       expect(screen.getByText(messages.validTitle)).toBeTruthy()
     })
 
-    test("toggling allErrors switch changes its state", () => {
+    test("toggling allErrors checkbox changes its state", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("checked")
@@ -544,7 +544,7 @@ describe("JsonSchemaValidatorClient", () => {
     test("saves validateFormats to localStorage on toggle", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       fireEvent.click(switchEl)
@@ -557,7 +557,7 @@ describe("JsonSchemaValidatorClient", () => {
     test("saves allErrors to localStorage on toggle", () => {
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       fireEvent.click(switchEl)
@@ -588,7 +588,7 @@ describe("JsonSchemaValidatorClient", () => {
 
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("unchecked")
@@ -599,7 +599,7 @@ describe("JsonSchemaValidatorClient", () => {
 
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("unchecked")
@@ -610,7 +610,7 @@ describe("JsonSchemaValidatorClient", () => {
 
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.validateFormatsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("checked")
@@ -621,7 +621,7 @@ describe("JsonSchemaValidatorClient", () => {
 
       render(<JsonSchemaValidatorClient messages={messages} />)
 
-      const switchEl = screen.getByRole("switch", {
+      const switchEl = screen.getByRole("checkbox", {
         name: messages.allErrorsLabel,
       })
       expect(switchEl.getAttribute("data-state")).toBe("checked")

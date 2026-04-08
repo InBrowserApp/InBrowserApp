@@ -167,7 +167,7 @@ describe("CsvToJsonConverterClient", () => {
       target: { value: "Ada;36" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.noHeaderLabel,
       })
     )
@@ -178,7 +178,7 @@ describe("CsvToJsonConverterClient", () => {
       target: { value: ";" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.checkTypeLabel,
       })
     )
@@ -235,7 +235,7 @@ describe("CsvToJsonConverterClient", () => {
       target: { value: "name,age\nAda,36" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.checkTypeLabel,
       })
     )
