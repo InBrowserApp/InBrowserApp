@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Vorlagen suchen...",
+  "quickSelectLabel": "Schnellauswahl",
+  "selectedTemplatesLabel": "Ausgewählt",
+  "selectedCountLabel": "{count} Vorlage(n) ausgewählt",
+  "clearSelectionLabel": "Löschen",
+  "emptySelectionLabel": "Wählen Sie Vorlagen aus, um .gitignore-Inhalt zu generieren",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Sprachen & Frameworks",
+  "globalLabel": "Global (OS, IDE, Editoren)",
+  "communityLabel": "Community",
+  "resultLabel": "Vorschau",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Wählen Sie Vorlagen aus, um .gitignore-Inhalt zu generieren",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopiert",
+  "downloadGitignoreLabel": "Herunterladen"
+}

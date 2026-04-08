@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "搜尋模板...",
+  "quickSelectLabel": "快速選擇",
+  "selectedTemplatesLabel": "已選擇",
+  "selectedCountLabel": "已選擇 {count} 個模板",
+  "clearSelectionLabel": "清除",
+  "emptySelectionLabel": "選擇模板以產生 .gitignore 內容",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "語言和框架",
+  "globalLabel": "全域（作業系統、IDE、編輯器）",
+  "communityLabel": "社群",
+  "resultLabel": "預覽",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "選擇模板以產生 .gitignore 內容",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "已複製",
+  "downloadGitignoreLabel": "下載"
+}

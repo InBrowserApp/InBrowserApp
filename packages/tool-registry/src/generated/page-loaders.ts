@@ -8,6 +8,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
+  "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),

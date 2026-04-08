@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "חפש תבניות...",
+  "quickSelectLabel": "בחירה מהירה",
+  "selectedTemplatesLabel": "נבחר",
+  "selectedCountLabel": "נבחרו {count} תבניות",
+  "clearSelectionLabel": "נקה",
+  "emptySelectionLabel": "בחר תבניות כדי ליצור תוכן .gitignore",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "שפות ומסגרות",
+  "globalLabel": "גלובלי (מערכת הפעלה, IDE, עורכים)",
+  "communityLabel": "קהילה",
+  "resultLabel": "תצוגה מקדימה",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "בחר תבניות כדי ליצור תוכן .gitignore",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "הועתק",
+  "downloadGitignoreLabel": "הורד"
+}

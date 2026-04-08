@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Sök mallar...",
+  "quickSelectLabel": "Snabbval",
+  "selectedTemplatesLabel": "Vald",
+  "selectedCountLabel": "{count} mall(ar) valda",
+  "clearSelectionLabel": "Rensa",
+  "emptySelectionLabel": "Välj mallar för att generera .gitignore-innehåll",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Språk och ramverk",
+  "globalLabel": "Globalt (OS, IDE, redigerare)",
+  "communityLabel": "Community",
+  "resultLabel": "Förhandsvisning",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Välj mallar för att generera .gitignore-innehåll",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopierad",
+  "downloadGitignoreLabel": "Ladda ner"
+}

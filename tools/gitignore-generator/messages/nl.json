@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Sjablonen zoeken...",
+  "quickSelectLabel": "Snelle selectie",
+  "selectedTemplatesLabel": "Geselecteerd",
+  "selectedCountLabel": "{count} sjablo(o)n(en) geselecteerd",
+  "clearSelectionLabel": "Wissen",
+  "emptySelectionLabel": "Selecteer sjablonen om .gitignore-inhoud te genereren",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Talen en frameworks",
+  "globalLabel": "Globaal (OS, IDE, editors)",
+  "communityLabel": "Community",
+  "resultLabel": "Voorbeeld",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Selecteer sjablonen om .gitignore-inhoud te genereren",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Gekopieerd",
+  "downloadGitignoreLabel": "Downloaden"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "テンプレートを検索...",
+  "quickSelectLabel": "クイック選択",
+  "selectedTemplatesLabel": "選択済み",
+  "selectedCountLabel": "{count} 個のテンプレートを選択済み",
+  "clearSelectionLabel": "クリア",
+  "emptySelectionLabel": "テンプレートを選択して .gitignore の内容を生成",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "言語とフレームワーク",
+  "globalLabel": "グローバル（OS、IDE、エディター）",
+  "communityLabel": "コミュニティ",
+  "resultLabel": "プレビュー",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "テンプレートを選択して .gitignore の内容を生成",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "コピーしました",
+  "downloadGitignoreLabel": "ダウンロード"
+}

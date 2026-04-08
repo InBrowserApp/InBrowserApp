@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Cari template...",
+  "quickSelectLabel": "Pilihan cepat",
+  "selectedTemplatesLabel": "Dipilih",
+  "selectedCountLabel": "{count} template dipilih",
+  "clearSelectionLabel": "Hapus",
+  "emptySelectionLabel": "Pilih template untuk menghasilkan konten .gitignore",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Bahasa dan framework",
+  "globalLabel": "Global (OS, IDE, editor)",
+  "communityLabel": "Komunitas",
+  "resultLabel": "Pratinjau",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Pilih template untuk menghasilkan konten .gitignore",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Disalin",
+  "downloadGitignoreLabel": "Unduh"
+}

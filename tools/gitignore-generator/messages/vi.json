@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Tìm kiếm mẫu...",
+  "quickSelectLabel": "Chọn nhanh",
+  "selectedTemplatesLabel": "Đã chọn",
+  "selectedCountLabel": "Đã chọn {count} mẫu",
+  "clearSelectionLabel": "Xóa",
+  "emptySelectionLabel": "Chọn mẫu để tạo nội dung .gitignore",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Ngôn ngữ và framework",
+  "globalLabel": "Toàn cục (OS, IDE, trình soạn thảo)",
+  "communityLabel": "Cộng đồng",
+  "resultLabel": "Xem trước",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Chọn mẫu để tạo nội dung .gitignore",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Đã sao chép",
+  "downloadGitignoreLabel": "Tải xuống"
+}

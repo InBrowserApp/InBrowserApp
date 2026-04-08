@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "टेम्पलेट खोजें...",
+  "quickSelectLabel": "त्वरित चयन",
+  "selectedTemplatesLabel": "चयनित",
+  "selectedCountLabel": "{count} टेम्पलेट चयनित",
+  "clearSelectionLabel": "साफ़ करें",
+  "emptySelectionLabel": ".gitignore सामग्री उत्पन्न करने के लिए टेम्पलेट चुनें",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "भाषाएं और फ्रेमवर्क",
+  "globalLabel": "वैश्विक (OS, IDE, संपादक)",
+  "communityLabel": "समुदाय",
+  "resultLabel": "पूर्वावलोकन",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": ".gitignore सामग्री उत्पन्न करने के लिए टेम्पलेट चुनें",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadGitignoreLabel": "डाउनलोड"
+}

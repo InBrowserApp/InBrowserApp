@@ -278,6 +278,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gitignore-generator",
+    language: "ar",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "de",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "en",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "es",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "fr",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "he",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "hi",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "id",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "it",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "ja",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "ko",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "ms",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "nl",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "no",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "pl",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "pt",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "ru",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "sv",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "th",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "tr",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "vi",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "gitignore-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },

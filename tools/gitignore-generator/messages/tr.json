@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Şablon ara...",
+  "quickSelectLabel": "Hızlı seçim",
+  "selectedTemplatesLabel": "Seçildi",
+  "selectedCountLabel": "{count} şablon seçildi",
+  "clearSelectionLabel": "Temizle",
+  "emptySelectionLabel": ".gitignore içeriği oluşturmak için şablon seçin",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Diller ve çerçeveler",
+  "globalLabel": "Genel (İS, IDE, editörler)",
+  "communityLabel": "Topluluk",
+  "resultLabel": "Önizleme",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": ".gitignore içeriği oluşturmak için şablon seçin",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopyalandı",
+  "downloadGitignoreLabel": "İndir"
+}

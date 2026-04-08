@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "Search templates...",
+  "quickSelectLabel": "Quick Select",
+  "selectedTemplatesLabel": "Selected",
+  "selectedCountLabel": "{count} template(s) selected",
+  "clearSelectionLabel": "Clear",
+  "emptySelectionLabel": "Select templates to generate .gitignore content",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "Languages & Frameworks",
+  "globalLabel": "Global (OS, IDE, Editors)",
+  "communityLabel": "Community",
+  "resultLabel": "Preview",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "Select templates to generate .gitignore content",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "downloadGitignoreLabel": "Download"
+}

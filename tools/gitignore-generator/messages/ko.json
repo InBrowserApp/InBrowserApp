@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "템플릿 검색...",
+  "quickSelectLabel": "빠른 선택",
+  "selectedTemplatesLabel": "선택됨",
+  "selectedCountLabel": "{count}개 템플릿 선택됨",
+  "clearSelectionLabel": "지우기",
+  "emptySelectionLabel": "템플릿을 선택하여 .gitignore 내용 생성",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "언어 및 프레임워크",
+  "globalLabel": "전역 (OS, IDE, 편집기)",
+  "communityLabel": "커뮤니티",
+  "resultLabel": "미리보기",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "템플릿을 선택하여 .gitignore 내용 생성",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "복사됨",
+  "downloadGitignoreLabel": "다운로드"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Templates",
+  "templatesDescription": "Search official gitignore templates, choose the ones that match your stack, and generate a combined .gitignore file.",
+  "searchLabel": "Search templates",
+  "searchDescription": "Filter languages, tools, and environments by name.",
+  "searchPlaceholder": "ค้นหาเทมเพลต...",
+  "quickSelectLabel": "เลือกด่วน",
+  "selectedTemplatesLabel": "ที่เลือก",
+  "selectedCountLabel": "เลือก {count} เทมเพลตแล้ว",
+  "clearSelectionLabel": "ล้าง",
+  "emptySelectionLabel": "เลือกเทมเพลตเพื่อสร้างเนื้อหา .gitignore",
+  "noTemplatesFoundLabel": "No templates match this search.",
+  "languagesLabel": "ภาษาและเฟรมเวิร์ก",
+  "globalLabel": "ทั่วไป (OS, IDE, เอดิเตอร์)",
+  "communityLabel": "ชุมชน",
+  "resultLabel": "ดูตัวอย่าง",
+  "resultDescription": "Templates are combined in a stable order so you can copy, download, and tweak the result.",
+  "previewPlaceholder": "เลือกเทมเพลตเพื่อสร้างเนื้อหา .gitignore",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadGitignoreLabel": "ดาวน์โหลด"
+}
