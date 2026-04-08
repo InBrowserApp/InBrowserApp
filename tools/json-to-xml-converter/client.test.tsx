@@ -176,7 +176,7 @@ describe("JsonToXmlConverterClient", () => {
       target: { value: "0" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.includeDeclarationLabel,
       })
     )

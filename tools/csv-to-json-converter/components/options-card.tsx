@@ -16,7 +16,11 @@ import {
   type CsvToJsonOptions,
   type SkipEmptyLinesMode,
 } from "../core/convert-csv-to-json"
-import { SkipEmptyLinesField, SwitchField, TextField } from "./option-controls"
+import {
+  CheckboxField,
+  SkipEmptyLinesField,
+  TextField,
+} from "./option-controls"
 
 type OptionsCardProps = Readonly<{
   messages: CsvToJsonConverterMessages
@@ -62,7 +66,7 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
       <CardContent className="flex flex-col gap-6">
         <FieldGroup>
           <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
-            <SwitchField
+            <CheckboxField
               id="csv-no-header"
               label={messages.noHeaderLabel}
               checked={options.noHeader}
@@ -139,7 +143,7 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
           </div>
 
           <div className="grid gap-3 lg:grid-cols-2 xl:grid-cols-4">
-            <SwitchField
+            <CheckboxField
               id="csv-trim"
               label={messages.trimLabel}
               checked={options.trim}
@@ -147,7 +151,7 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
                 updateOption("trim", checked)
               }}
             />
-            <SwitchField
+            <CheckboxField
               id="csv-check-type"
               label={messages.checkTypeLabel}
               checked={options.checkType}
@@ -155,7 +159,7 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
                 updateOption("checkType", checked)
               }}
             />
-            <SwitchField
+            <CheckboxField
               id="csv-fast-mode"
               label={messages.fastModeLabel}
               checked={options.fastMode}

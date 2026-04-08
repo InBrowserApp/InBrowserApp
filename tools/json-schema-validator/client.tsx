@@ -9,6 +9,7 @@ import {
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Card,
   CardContent,
@@ -25,7 +26,6 @@ import {
   FieldLabel,
   FieldTitle,
 } from "@workspace/ui/components/ui/field"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { FileJson2, RefreshCcw } from "@workspace/ui/icons"
 
@@ -202,6 +202,13 @@ function JsonSchemaValidatorClient({
           <CardContent className="flex flex-1 flex-col">
             <FieldGroup>
               <Field orientation="horizontal">
+                <Checkbox
+                  id="validate-formats"
+                  checked={validateFormats}
+                  onCheckedChange={(checked) => {
+                    setValidateFormats(Boolean(checked))
+                  }}
+                />
                 <FieldContent>
                   <FieldLabel htmlFor="validate-formats">
                     {messages.validateFormatsLabel}
@@ -210,15 +217,16 @@ function JsonSchemaValidatorClient({
                     {messages.validateFormatsDescription}
                   </FieldDescription>
                 </FieldContent>
-                <Switch
-                  id="validate-formats"
-                  checked={validateFormats}
-                  onCheckedChange={setValidateFormats}
-                  aria-label={messages.validateFormatsLabel}
-                />
               </Field>
 
               <Field orientation="horizontal">
+                <Checkbox
+                  id="all-errors"
+                  checked={allErrors}
+                  onCheckedChange={(checked) => {
+                    setAllErrors(Boolean(checked))
+                  }}
+                />
                 <FieldContent>
                   <FieldLabel htmlFor="all-errors">
                     {messages.allErrorsLabel}
@@ -227,12 +235,6 @@ function JsonSchemaValidatorClient({
                     {messages.allErrorsDescription}
                   </FieldDescription>
                 </FieldContent>
-                <Switch
-                  id="all-errors"
-                  checked={allErrors}
-                  onCheckedChange={setAllErrors}
-                  aria-label={messages.allErrorsLabel}
-                />
               </Field>
 
               <Field>

@@ -356,10 +356,10 @@ describe("ImageResizerClient", () => {
     expect(aspectSwitch.getAttribute("data-state")).toBe("checked")
   })
 
-  test("toggling allow upscale switch", () => {
+  test("toggling allow upscale checkbox", () => {
     render(<ImageResizerClient messages={messages} />)
 
-    const upscaleSwitch = screen.getByRole("switch", {
+    const upscaleSwitch = screen.getByRole("checkbox", {
       name: "Allow upscale",
     })
 
@@ -392,7 +392,7 @@ describe("ImageResizerClient", () => {
     const widthInput = screen.getByLabelText("Width") as HTMLInputElement
     fireEvent.change(widthInput, { target: { value: "400" } })
 
-    const upscaleSwitch = screen.getByRole("switch", {
+    const upscaleSwitch = screen.getByRole("checkbox", {
       name: "Allow upscale",
     })
     fireEvent.click(upscaleSwitch)
@@ -906,7 +906,7 @@ describe("ImageResizerClient", () => {
     })
     expect(aspectSwitch.getAttribute("data-state")).toBe("unchecked")
 
-    const upscaleSwitch = screen.getByRole("switch", {
+    const upscaleSwitch = screen.getByRole("checkbox", {
       name: "Allow upscale",
     })
     expect(upscaleSwitch.getAttribute("data-state")).toBe("checked")

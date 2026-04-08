@@ -148,12 +148,12 @@ describe("XmlToJsonConverterClient", () => {
       target: { value: "0" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.ignoreDeclarationLabel,
       })
     )
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.ignoreAttributesLabel,
       })
     )
@@ -212,7 +212,7 @@ describe("XmlToJsonConverterClient", () => {
       target: { value: "<root><persisted>true</persisted></root>" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.ignoreDeclarationLabel,
       })
     )
