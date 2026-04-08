@@ -37,19 +37,12 @@ export function convertDockerRunToCompose(input: string): ConversionResult {
     }
 
     for (const commandTokens of commands) {
-      if (!commandTokens.length) {
-        continue
-      }
       const parsed = parseDockerRunTokens(commandTokens)
       if (parsed.error) {
         warnings.push(parsed.error)
         continue
       }
       warnings.push(...parsed.warnings)
-      if (!parsed.data.image) {
-        warnings.push("Skipped a command without an image.")
-        continue
-      }
 
       const { serviceName, service, networkNames, volumeNames } = buildService(
         parsed.data,

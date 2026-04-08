@@ -111,15 +111,18 @@ function applyShortFlag(
   data: ParsedRun,
   warnings: string[]
 ): void {
-  if (char === "i") {
-    data.stdinOpen = true
-    return
-  }
-  if (char === "t") {
-    data.tty = true
-    return
-  }
-  if (char === "d") {
-    warnings.push("Detach mode (-d) is ignored in Compose.")
+  switch (char) {
+    case "i": {
+      data.stdinOpen = true
+      return
+    }
+    case "t": {
+      data.tty = true
+      return
+    }
+    case "d": {
+      warnings.push("Detach mode (-d) is ignored in Compose.")
+      return
+    }
   }
 }

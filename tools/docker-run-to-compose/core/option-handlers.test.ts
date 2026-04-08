@@ -77,14 +77,17 @@ describe("docker run option handlers", () => {
     const warnings: string[] = []
 
     applyMount("type=tmpfs,target=/runtime,tmpfs_size=32m", data, warnings)
+    applyMount("type=tmpfs,target=/volatile", data, warnings)
     applyMount("target=/readonly,readonly", data, warnings)
 
     expect(data.tmpfs).toContain("/runtime:size=32m")
+    expect(data.tmpfs).toContain("/volatile")
     expect(data.volumes).toContain("/readonly:ro")
 
     const weirdGpu = parseGpus("count=\\d")
     expect(weirdGpu).toEqual({})
     expect(parseGpus("count=all,extra")).toEqual({ count: "all" })
+    expect(parseGpus("foo=1")).toEqual({})
 
     const ulimits: Record<string, { soft?: number; hard?: number } | number> =
       {}

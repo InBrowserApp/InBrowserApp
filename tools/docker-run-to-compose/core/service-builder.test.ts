@@ -141,4 +141,27 @@ describe("docker run service builder", () => {
     expect(first.serviceName).toBe("nginx")
     expect(second.serviceName).toBe("nginx-2")
   })
+
+  it("builds sparse deploy and healthcheck objects", () => {
+    const data = createParsedRun({
+      gpus: {},
+      healthcheck: {},
+    })
+
+    const { serviceName, service } = buildService(data, new Map())
+
+    expect(serviceName).toBe("service")
+    expect(service.deploy).toEqual({
+      resources: {
+        reservations: {
+          devices: [
+            {
+              capabilities: ["gpu"],
+            },
+          ],
+        },
+      },
+    })
+    expect(service.healthcheck).toEqual({})
+  })
 })

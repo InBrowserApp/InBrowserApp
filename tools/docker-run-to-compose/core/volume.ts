@@ -3,21 +3,20 @@ export function normalizeVolumeEntry(
   volumeNames: Set<string>
 ): string {
   const parts = splitVolume(input)
+  const [first = "", second = "", mode] = parts
+
   if (parts.length === 1) {
     return input
   }
 
   if (parts.length === 2) {
-    const target = parts[0] ?? ""
-    const mode = parts[1] ?? ""
-    if (target && mode && isContainerPath(target) && isVolumeMode(mode)) {
-      return `${target}:${mode}`
+    if (first && second && isContainerPath(first) && isVolumeMode(second)) {
+      return `${first}:${second}`
     }
   }
 
-  const source = parts[0] ?? ""
-  const target = parts[1] ?? ""
-  const mode = parts[2]
+  const source = first
+  const target = second
 
   if (!source || !target) {
     return input
@@ -35,22 +34,21 @@ export function normalizeVolumeEntry(
 }
 
 function splitVolume(value: string): string[] {
-  const parts = value.split(":")
-  if (parts.length <= 2) {
-    return parts.filter(Boolean)
+  const [first = "", second = "", ...rest] = value.split(":")
+  if (rest.length === 0) {
+    return [first, second].filter(Boolean)
   }
 
-  const first = parts[0] ?? ""
-  const second = parts[1] ?? ""
   if (first && second && isWindowsPath(first, second)) {
     const source = `${first}:${second}`
-    const target = parts[2]
-    const mode = parts.slice(3).join(":") || undefined
-    return [source, target, mode].filter(Boolean) as string[]
+    const [target = "", ...modeParts] = rest
+    const mode = modeParts.join(":")
+
+    return [source, target, mode].filter(Boolean)
   }
 
-  const mode = parts.slice(2).join(":") || undefined
-  return [first, second, mode].filter(Boolean) as string[]
+  const mode = rest.join(":")
+  return [first, second, mode].filter(Boolean)
 }
 
 function isWindowsPath(first: string, second: string): boolean {
@@ -61,9 +59,6 @@ function isWindowsPath(first: string, second: string): boolean {
 }
 
 function isNamedVolume(value: string): boolean {
-  if (!value) {
-    return false
-  }
   if (value.startsWith(".") || value.startsWith("~")) {
     return false
   }

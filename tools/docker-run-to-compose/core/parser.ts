@@ -81,12 +81,6 @@ export function parseDockerRunTokens(tokens: string[]): {
       break
     }
 
-    if (data.image) {
-      data.command.push(token)
-      i += 1
-      continue
-    }
-
     if (token.startsWith("-")) {
       i = parseOption(tokens, i, data, warnings)
       continue

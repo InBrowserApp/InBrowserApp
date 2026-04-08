@@ -237,4 +237,29 @@ describe("docker run long options", () => {
     expect(data.ports).toEqual(["8080:80"])
     expect(warnings).toContain("Unsupported flag --unsupported was ignored.")
   })
+
+  it("handles sparse logging and existing healthcheck state", () => {
+    const data = createParsedRun()
+    const warnings: string[] = []
+
+    parseLongOption(["--log-opt", "max-size=10m"], 0, data, warnings)
+    parseLongOption(["--log-opt", "max-file"], 0, data, warnings)
+    parseLongOption(["--log-opt", "=10m"], 0, data, warnings)
+    parseLongOption(["--no-healthcheck"], 0, data, warnings)
+
+    data.healthcheck = { interval: "30s" }
+    parseLongOption(["--health-retries", "nope"], 0, data, warnings)
+    parseLongOption(["--no-healthcheck"], 0, data, warnings)
+
+    expect(data.logging).toEqual({
+      options: {
+        "max-file": "",
+        "max-size": "10m",
+      },
+    })
+    expect(data.healthcheck).toEqual({
+      disable: true,
+      interval: "30s",
+    })
+  })
 })

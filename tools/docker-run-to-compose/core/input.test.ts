@@ -47,6 +47,37 @@ describe("docker run input helpers", () => {
     ])
   })
 
+  it("tokenizes doubled pipe operators", () => {
+    const result = tokenize("docker run nginx:latest || echo fallback")
+
+    expect(result.error).toBeUndefined()
+    expect(
+      result.tokens.map((token) => `${token.type}:${token.value}`)
+    ).toEqual([
+      "word:docker",
+      "word:run",
+      "word:nginx:latest",
+      "op:||",
+      "word:echo",
+      "word:fallback",
+    ])
+  })
+
+  it("tokenizes single pipe operators", () => {
+    const result = tokenize("docker run nginx:latest | cat")
+
+    expect(result.error).toBeUndefined()
+    expect(
+      result.tokens.map((token) => `${token.type}:${token.value}`)
+    ).toEqual([
+      "word:docker",
+      "word:run",
+      "word:nginx:latest",
+      "op:|",
+      "word:cat",
+    ])
+  })
+
   it("supports escaped characters and trailing backslashes", () => {
     const escaped = tokenize("docker run hello\\ world")
     expect(escaped.tokens.map((token) => token.value)).toEqual([

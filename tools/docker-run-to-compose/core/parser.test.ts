@@ -54,6 +54,14 @@ describe("docker run parser", () => {
     expect(result.data.command).toEqual(["echo", "hi"])
   })
 
+  it("supports explicit image separators without a trailing command", () => {
+    const result = parseDockerRunTokens(["docker", "run", "--", "alpine"])
+
+    expect(result.error).toBeUndefined()
+    expect(result.data.image).toBe("alpine")
+    expect(result.data.command).toEqual([])
+  })
+
   it('warns when "--" is missing an image', () => {
     const result = parseDockerRunTokens(["docker", "run", "--"])
 

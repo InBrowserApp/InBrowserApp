@@ -14,6 +14,9 @@ describe("docker run volume normalization", () => {
     const volumeNames = new Set<string>()
 
     expect(normalizeVolumeEntry("/data:ro", volumeNames)).toBe("/data:ro")
+    expect(normalizeVolumeEntry("/data:custom", volumeNames)).toBe(
+      "/data:custom"
+    )
   })
 
   it("detects named volumes and windows paths", () => {
@@ -27,6 +30,9 @@ describe("docker run volume normalization", () => {
     expect(normalizeVolumeEntry("C:\\data:/app:ro", volumeNames)).toBe(
       "C:\\data:/app:ro"
     )
+    expect(normalizeVolumeEntry("C:/data:/app:ro", volumeNames)).toBe(
+      "C:/data:/app:ro"
+    )
   })
 
   it("keeps extra mode segments for non-windows paths", () => {
@@ -35,5 +41,18 @@ describe("docker run volume normalization", () => {
     expect(
       normalizeVolumeEntry("cache:/var/cache:ro:cached", volumeNames)
     ).toBe("cache:/var/cache:ro:cached")
+  })
+
+  it("returns malformed or bind-style sources without registering named volumes", () => {
+    const volumeNames = new Set<string>()
+
+    expect(normalizeVolumeEntry(":", volumeNames)).toBe(":")
+    expect(normalizeVolumeEntry("./cache:/var/cache", volumeNames)).toBe(
+      "./cache:/var/cache"
+    )
+    expect(normalizeVolumeEntry("~/cache:/var/cache", volumeNames)).toBe(
+      "~/cache:/var/cache"
+    )
+    expect(volumeNames.size).toBe(0)
   })
 })
