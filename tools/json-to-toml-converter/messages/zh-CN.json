@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "从文件导入",
+  "downloadTomlLabel": "下载 TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "直接粘贴 JSON，或从当前设备导入 .json 或 .txt 文件。",
+  "tomlLabel": "TOML",
+  "tomlDescription": "输入包含有效 JSON 后，TOML 输出会立即更新。",
+  "tomlEmptyDescription": "在左侧粘贴有效 JSON，即可在这里预览转换后的 TOML。",
+  "jsonPlaceholder": "在此粘贴 JSON...",
+  "invalidJsonLabel": "无效的 JSON",
+  "copyTomlLabel": "复制 TOML",
+  "copiedLabel": "已复制"
+}

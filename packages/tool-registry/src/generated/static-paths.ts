@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-to-toml-converter",
+    language: "ar",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "de",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "en",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "es",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "fr",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "he",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "hi",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "id",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "it",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "ja",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "ko",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "ms",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "nl",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "no",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "pl",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "pt",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "ru",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "sv",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "th",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "tr",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "vi",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-toml-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "json-to-yaml-converter",
     language: "ar",
   },

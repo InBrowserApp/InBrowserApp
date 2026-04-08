@@ -1,0 +1,4 @@
+{
+  "name": "JSON → TOML Converter",
+  "description": "Convert JSON to TOML. Paste JSON or import a file; preview, copy, and download."
+}

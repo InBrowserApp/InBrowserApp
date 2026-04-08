@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Impor dari file",
+  "downloadTomlLabel": "Unduh TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Tempel JSON secara langsung atau impor file .json atau .txt dari perangkat ini.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Output TOML akan diperbarui segera setelah input berisi JSON yang valid.",
+  "tomlEmptyDescription": "Tempel JSON yang valid di sebelah kiri untuk melihat pratinjau TOML hasil konversi di sini.",
+  "jsonPlaceholder": "Tempel JSON di sini...",
+  "invalidJsonLabel": "JSON tidak valid",
+  "copyTomlLabel": "Salin TOML",
+  "copiedLabel": "Disalin"
+}

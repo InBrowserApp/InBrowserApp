@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "יבוא מקובץ",
+  "downloadTomlLabel": "הורד TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "הדביקו JSON ישירות או ייבאו קובץ .json או .txt מהמכשיר הזה.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "פלט ה-TOML מתעדכן מיד כשהקלט מכיל JSON תקין.",
+  "tomlEmptyDescription": "הדבק JSON תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-TOML שהומר.",
+  "jsonPlaceholder": "הדביקו JSON כאן...",
+  "invalidJsonLabel": "JSON לא תקין",
+  "copyTomlLabel": "העתק TOML",
+  "copiedLabel": "הועתק"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "downloadTomlLabel": "Muat turun TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Tampal JSON secara terus atau import fail .json atau .txt daripada peranti ini.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Output TOML akan dikemas kini sebaik sahaja input mengandungi JSON yang sah.",
+  "tomlEmptyDescription": "Tampal JSON yang sah di sebelah kiri untuk pratonton TOML yang ditukar di sini.",
+  "jsonPlaceholder": "Tampal JSON di sini...",
+  "invalidJsonLabel": "JSON tidak sah",
+  "copyTomlLabel": "Salin TOML",
+  "copiedLabel": "Disalin"
+}

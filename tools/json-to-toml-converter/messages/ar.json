@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "استيراد من ملف",
+  "downloadTomlLabel": "تنزيل TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "ألصق JSON مباشرة أو استورد ملف .json أو .txt من هذا الجهاز.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "يتم تحديث مخرجات TOML فور احتواء الإدخال على JSON صالح.",
+  "tomlEmptyDescription": "ألصق JSON صالحًا على اليسار لمعاينة TOML المحوّل هنا.",
+  "jsonPlaceholder": "الصق JSON هنا...",
+  "invalidJsonLabel": "JSON غير صالح",
+  "copyTomlLabel": "نسخ TOML",
+  "copiedLabel": "تم النسخ"
+}
