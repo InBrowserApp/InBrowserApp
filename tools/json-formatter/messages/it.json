@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importa da file",
+  "downloadJsonLabel": "Scarica JSON",
+  "rawJsonLabel": "JSON grezzo",
+  "formattedJsonLabel": "JSON formattato",
+  "jsonPlaceholder": "Incolla il tuo JSON qui...",
+  "invalidJsonLabel": "JSON non valido",
+  "indentSizeLabel": "Indentazione",
+  "rawJsonDescription": "Incolla JSON direttamente o importa un file .json o .txt da questo dispositivo.",
+  "formattedJsonDescription": "L'output formattato si aggiorna non appena l'input contiene JSON valido.",
+  "copyJsonLabel": "Copia JSON",
+  "copiedLabel": "Copiato"
+}

@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-formatter",
+    language: "ar",
+  },
+  {
+    slug: "json-formatter",
+    language: "de",
+  },
+  {
+    slug: "json-formatter",
+    language: "en",
+  },
+  {
+    slug: "json-formatter",
+    language: "es",
+  },
+  {
+    slug: "json-formatter",
+    language: "fr",
+  },
+  {
+    slug: "json-formatter",
+    language: "he",
+  },
+  {
+    slug: "json-formatter",
+    language: "hi",
+  },
+  {
+    slug: "json-formatter",
+    language: "id",
+  },
+  {
+    slug: "json-formatter",
+    language: "it",
+  },
+  {
+    slug: "json-formatter",
+    language: "ja",
+  },
+  {
+    slug: "json-formatter",
+    language: "ko",
+  },
+  {
+    slug: "json-formatter",
+    language: "ms",
+  },
+  {
+    slug: "json-formatter",
+    language: "nl",
+  },
+  {
+    slug: "json-formatter",
+    language: "no",
+  },
+  {
+    slug: "json-formatter",
+    language: "pl",
+  },
+  {
+    slug: "json-formatter",
+    language: "pt",
+  },
+  {
+    slug: "json-formatter",
+    language: "ru",
+  },
+  {
+    slug: "json-formatter",
+    language: "sv",
+  },
+  {
+    slug: "json-formatter",
+    language: "th",
+  },
+  {
+    slug: "json-formatter",
+    language: "tr",
+  },
+  {
+    slug: "json-formatter",
+    language: "vi",
+  },
+  {
+    slug: "json-formatter",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-formatter",
+    language: "zh-TW",
+  },
+  {
     slug: "json-schema-validator",
     language: "ar",
   },

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "从文件导入",
+  "downloadJsonLabel": "下载 JSON",
+  "rawJsonLabel": "原始 JSON",
+  "formattedJsonLabel": "格式化的 JSON",
+  "jsonPlaceholder": "在此粘贴您的 JSON...",
+  "invalidJsonLabel": "无效的 JSON",
+  "indentSizeLabel": "缩进",
+  "rawJsonDescription": "直接粘贴 JSON，或从当前设备导入 .json 或 .txt 文件。",
+  "formattedJsonDescription": "输入包含有效 JSON 后，格式化结果会立即更新。",
+  "copyJsonLabel": "复制 JSON",
+  "copiedLabel": "已复制"
+}

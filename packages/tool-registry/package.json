@@ -9,6 +9,7 @@
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/image-resizer": "workspace:*",
+    "@tool/json-formatter": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
   },

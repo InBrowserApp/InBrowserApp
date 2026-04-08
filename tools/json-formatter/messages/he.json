@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "ייבוא מקובץ",
+  "downloadJsonLabel": "הורד JSON",
+  "rawJsonLabel": "JSON גולמי",
+  "formattedJsonLabel": "JSON מעוצב",
+  "jsonPlaceholder": "הדבק את ה-JSON שלך כאן...",
+  "invalidJsonLabel": "JSON לא תקין",
+  "indentSizeLabel": "הזחה",
+  "rawJsonDescription": "הדביקו JSON ישירות או ייבאו קובץ .json או .txt מהמכשיר הזה.",
+  "formattedJsonDescription": "הפלט המעוצב מתעדכן מיד כשהקלט מכיל JSON תקין.",
+  "copyJsonLabel": "העתק JSON",
+  "copiedLabel": "הועתק"
+}

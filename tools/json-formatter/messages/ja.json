@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "ファイルから読み込み",
+  "downloadJsonLabel": "JSONをダウンロード",
+  "rawJsonLabel": "生のJSON",
+  "formattedJsonLabel": "フォーマット済みJSON",
+  "jsonPlaceholder": "ここにJSONを貼り付けてください...",
+  "invalidJsonLabel": "無効なJSON",
+  "indentSizeLabel": "インデント",
+  "rawJsonDescription": "JSON を直接貼り付けるか、この端末から .json / .txt ファイルを読み込みます。",
+  "formattedJsonDescription": "入力に有効な JSON が含まれると、整形結果がすぐに更新されます。",
+  "copyJsonLabel": "JSON をコピー",
+  "copiedLabel": "コピーしました"
+}

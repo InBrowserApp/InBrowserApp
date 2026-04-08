@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importer fra fil",
+  "downloadJsonLabel": "Last ned JSON",
+  "rawJsonLabel": "Rå JSON",
+  "formattedJsonLabel": "Formatert JSON",
+  "jsonPlaceholder": "Lim inn JSON-en din her...",
+  "invalidJsonLabel": "Ugyldig JSON",
+  "indentSizeLabel": "Innrykk",
+  "rawJsonDescription": "Lim inn JSON direkte eller importer en .json- eller .txt-fil fra denne enheten.",
+  "formattedJsonDescription": "Den formaterte utdataen oppdateres så snart inndataene inneholder gyldig JSON.",
+  "copyJsonLabel": "Kopier JSON",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "downloadJsonLabel": "ดาวน์โหลด JSON",
+  "rawJsonLabel": "JSON ดิบ",
+  "formattedJsonLabel": "JSON ที่จัดรูปแบบแล้ว",
+  "jsonPlaceholder": "วาง JSON ของคุณที่นี่...",
+  "invalidJsonLabel": "JSON ไม่ถูกต้อง",
+  "indentSizeLabel": "การเยื้อง",
+  "rawJsonDescription": "วาง JSON โดยตรงหรือนำเข้าไฟล์ .json หรือ .txt จากอุปกรณ์นี้",
+  "formattedJsonDescription": "ผลลัพธ์ที่จัดรูปแบบจะอัปเดตทันทีเมื่อข้อมูลนำเข้าเป็น JSON ที่ถูกต้อง",
+  "copyJsonLabel": "คัดลอก JSON",
+  "copiedLabel": "คัดลอกแล้ว"
+}

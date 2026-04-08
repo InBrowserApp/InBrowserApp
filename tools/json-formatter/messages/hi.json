@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadJsonLabel": "JSON डाउनलोड करें",
+  "rawJsonLabel": "कच्चा JSON",
+  "formattedJsonLabel": "स्वरूपित JSON",
+  "jsonPlaceholder": "अपना JSON यहां पेस्ट करें...",
+  "invalidJsonLabel": "अमान्य JSON",
+  "indentSizeLabel": "इंडेंट",
+  "rawJsonDescription": "JSON सीधे पेस्ट करें या इस डिवाइस से .json या .txt फ़ाइल आयात करें।",
+  "formattedJsonDescription": "इनपुट में वैध JSON आते ही स्वरूपित आउटपुट तुरंत अपडेट हो जाता है।",
+  "copyJsonLabel": "JSON कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}
