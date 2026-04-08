@@ -1,4 +1,3 @@
-const DEFAULT_INDENT_SIZE = 2
 const DEFAULT_JSON = `{
   "hello": "world",
   "items": [1, 2, 3],
@@ -10,4 +9,4 @@ const STORAGE_KEYS = {
   jsonText: "tools:json-formatter:json-text",
 } as const
 
-export { DEFAULT_INDENT_SIZE, DEFAULT_JSON, STORAGE_KEYS }
+export { DEFAULT_JSON, STORAGE_KEYS }

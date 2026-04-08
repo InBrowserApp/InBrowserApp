@@ -66,4 +66,3 @@ export {
   formatJsonText,
   getFormatJsonErrorMessage,
 }
-export type { FormatJsonResult }
