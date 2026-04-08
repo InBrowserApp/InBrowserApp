@@ -5,7 +5,6 @@ type ParsedJson =
   | {
       error: string
     }
-  | Record<string, never>
 
 type JmespathEvaluation =
   | { state: "empty" }
@@ -19,15 +18,10 @@ type JmespathEvaluation =
     }
 
 function parseJsonText(input: string): ParsedJson {
-  if (!input.trim()) {
-    return {}
-  }
-
   try {
     return { value: JSON.parse(input) }
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error)
-    return { error: message }
+    return { error: String(error) }
   }
 }
 
@@ -64,10 +58,6 @@ function evaluateJmespathText(
     }
   }
 
-  if (!("value" in parsedJson)) {
-    return { state: "empty" }
-  }
-
   try {
     const result = jmespathSearch(parsedJson.value, queryText.trim()) ?? null
 
@@ -78,11 +68,9 @@ function evaluateJmespathText(
       formattedResult: formatJmespathResult(result),
     }
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error)
-
     return {
       state: "query-error",
-      error: message,
+      error: String(error),
     }
   }
 }

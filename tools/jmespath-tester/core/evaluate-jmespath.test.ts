@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest"
+import { afterEach, describe, expect, test, vi } from "vitest"
 
 import {
   countJmespathResults,
@@ -7,9 +7,15 @@ import {
   parseJsonText,
 } from "./evaluate-jmespath"
 
+afterEach(() => {
+  vi.restoreAllMocks()
+})
+
 describe("parseJsonText", () => {
-  test("returns an empty object for blank input", () => {
-    expect(parseJsonText("   ")).toEqual({})
+  test("returns an error for blank input", () => {
+    const parsed = parseJsonText("   ")
+
+    expect("error" in parsed && parsed.error.length > 0).toBe(true)
   })
 
   test("parses valid JSON", () => {
@@ -22,6 +28,16 @@ describe("parseJsonText", () => {
     const parsed = parseJsonText("{")
 
     expect("error" in parsed && parsed.error.length > 0).toBe(true)
+  })
+
+  test("stringifies non-Error parse failures", () => {
+    vi.spyOn(JSON, "parse").mockImplementation(() => {
+      throw "broken-json"
+    })
+
+    expect(parseJsonText('{"name":"Ada"}')).toEqual({
+      error: "broken-json",
+    })
   })
 })
 

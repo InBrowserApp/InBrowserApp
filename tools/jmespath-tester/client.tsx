@@ -146,9 +146,13 @@ function JmespathTesterClient({ messages }: JmespathTesterClientProps) {
   }
 
   function formatJson() {
+    if (!jsonText.trim()) {
+      return
+    }
+
     const parsed = parseJsonText(jsonText)
 
-    if (!jsonText.trim() || !("value" in parsed)) {
+    if (!("value" in parsed)) {
       return
     }
 
