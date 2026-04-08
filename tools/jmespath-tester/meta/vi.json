@@ -1,0 +1,4 @@
+{
+  "name": "Trình kiểm tra JMESPath",
+  "description": "Đánh giá biểu thức JMESPath trên dữ liệu JSON và xem kết quả."
+}

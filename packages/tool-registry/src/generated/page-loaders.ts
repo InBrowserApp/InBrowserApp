@@ -9,6 +9,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),

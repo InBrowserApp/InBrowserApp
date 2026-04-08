@@ -1,0 +1,4 @@
+{
+  "name": "JMESPath 测试器",
+  "description": "对 JSON 数据运行 JMESPath 表达式并查看结果。"
+}
