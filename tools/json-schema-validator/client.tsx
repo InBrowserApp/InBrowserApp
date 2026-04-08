@@ -17,7 +17,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Label } from "@workspace/ui/components/ui/label"
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldTitle,
+} from "@workspace/ui/components/ui/field"
 import { Switch } from "@workspace/ui/components/ui/switch"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { FileJson2, RefreshCcw } from "@workspace/ui/icons"
@@ -192,46 +199,54 @@ function JsonSchemaValidatorClient({
             <CardTitle>{messages.optionsTitle}</CardTitle>
             <CardDescription>{messages.optionsDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-1 flex-col gap-5">
-            <div className="flex items-start justify-between gap-4">
-              <div className="space-y-1">
-                <Label>{messages.validateFormatsLabel}</Label>
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {messages.validateFormatsDescription}
-                </p>
-              </div>
-              <Switch
-                checked={validateFormats}
-                onCheckedChange={setValidateFormats}
-                aria-label={messages.validateFormatsLabel}
-              />
-            </div>
+          <CardContent className="flex flex-1 flex-col">
+            <FieldGroup>
+              <Field orientation="horizontal">
+                <FieldContent>
+                  <FieldLabel htmlFor="validate-formats">
+                    {messages.validateFormatsLabel}
+                  </FieldLabel>
+                  <FieldDescription>
+                    {messages.validateFormatsDescription}
+                  </FieldDescription>
+                </FieldContent>
+                <Switch
+                  id="validate-formats"
+                  checked={validateFormats}
+                  onCheckedChange={setValidateFormats}
+                  aria-label={messages.validateFormatsLabel}
+                />
+              </Field>
 
-            <div className="flex items-start justify-between gap-4">
-              <div className="space-y-1">
-                <Label>{messages.allErrorsLabel}</Label>
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {messages.allErrorsDescription}
-                </p>
-              </div>
-              <Switch
-                checked={allErrors}
-                onCheckedChange={setAllErrors}
-                aria-label={messages.allErrorsLabel}
-              />
-            </div>
+              <Field orientation="horizontal">
+                <FieldContent>
+                  <FieldLabel htmlFor="all-errors">
+                    {messages.allErrorsLabel}
+                  </FieldLabel>
+                  <FieldDescription>
+                    {messages.allErrorsDescription}
+                  </FieldDescription>
+                </FieldContent>
+                <Switch
+                  id="all-errors"
+                  checked={allErrors}
+                  onCheckedChange={setAllErrors}
+                  aria-label={messages.allErrorsLabel}
+                />
+              </Field>
 
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-foreground">
-                {messages.draftLabel}
-              </span>
-              <Badge variant="outline" className="font-mono">
-                {validation.state === "validated" ||
-                validation.state === "schema-error"
-                  ? validation.detectedDraft
-                  : "2020-12"}
-              </Badge>
-            </div>
+              <Field>
+                <div className="flex items-center gap-2">
+                  <FieldTitle>{messages.draftLabel}</FieldTitle>
+                  <Badge variant="outline" className="font-mono">
+                    {validation.state === "validated" ||
+                    validation.state === "schema-error"
+                      ? validation.detectedDraft
+                      : "2020-12"}
+                  </Badge>
+                </div>
+              </Field>
+            </FieldGroup>
           </CardContent>
           <CardFooter className="justify-between gap-3">
             <Button

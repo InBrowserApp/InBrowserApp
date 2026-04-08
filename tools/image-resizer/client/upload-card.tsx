@@ -6,6 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import {
+  Empty,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@workspace/ui/components/ui/empty"
 import { ImageUp } from "@workspace/ui/icons"
 
 import type { ImageDimensions } from "../core/resize-image"
@@ -66,17 +73,18 @@ export function UploadCard({
         ) : (
           <label
             htmlFor={inputId}
-            className="flex flex-1 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-8 text-center transition-colors hover:border-foreground/20 hover:bg-muted/45"
+            aria-label={messages.chooseImageLabel}
+            className="block cursor-pointer"
           >
-            <ImageUp className="size-6 text-muted-foreground" />
-            <div className="mt-4 space-y-1">
-              <p className="font-medium text-foreground">
-                {messages.chooseImageLabel}
-              </p>
-              <p className="text-sm leading-6 text-muted-foreground">
-                {messages.uploadHint}
-              </p>
-            </div>
+            <Empty className="border border-dashed border-border/80 bg-muted/30 transition-colors hover:border-foreground/20 hover:bg-muted/45">
+              <EmptyHeader>
+                <EmptyMedia variant="icon">
+                  <ImageUp />
+                </EmptyMedia>
+                <EmptyTitle>{messages.chooseImageLabel}</EmptyTitle>
+                <EmptyDescription>{messages.uploadHint}</EmptyDescription>
+              </EmptyHeader>
+            </Empty>
           </label>
         )}
         <input

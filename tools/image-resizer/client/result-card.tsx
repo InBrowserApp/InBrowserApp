@@ -1,11 +1,6 @@
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/ui/alert"
-import {
   Card,
   CardContent,
   CardDescription,
@@ -13,6 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import {
+  Empty,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@workspace/ui/components/ui/empty"
 import { Download, ImageUp } from "@workspace/ui/icons"
 
 import type { ImageDimensions, ResizeResult } from "../core/resize-image"
@@ -44,7 +46,7 @@ export function ResultCard({
         {result && resultPreviewUrl && sourcePreviewUrl && sourceDimensions ? (
           <>
             <div className="grid gap-4 lg:grid-cols-2">
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium text-foreground">
                     {messages.originalLabel}
@@ -62,7 +64,7 @@ export function ResultCard({
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium text-foreground">
                     {messages.outputLabel}
@@ -89,13 +91,17 @@ export function ResultCard({
             </div>
           </>
         ) : (
-          <Alert>
-            <ImageUp />
-            <AlertTitle>{messages.emptyResultTitle}</AlertTitle>
-            <AlertDescription>
-              {messages.emptyResultDescription}
-            </AlertDescription>
-          </Alert>
+          <Empty className="border border-dashed border-border/80 bg-muted/20">
+            <EmptyHeader>
+              <EmptyMedia variant="icon">
+                <ImageUp />
+              </EmptyMedia>
+              <EmptyTitle>{messages.emptyResultTitle}</EmptyTitle>
+              <EmptyDescription>
+                {messages.emptyResultDescription}
+              </EmptyDescription>
+            </EmptyHeader>
+          </Empty>
         )}
       </CardContent>
       {result && resultPreviewUrl ? (
