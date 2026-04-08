@@ -55,9 +55,9 @@ function getRawJsonInput() {
 }
 
 function getFormattedJsonInput() {
-  return screen.getByRole("textbox", {
+  return screen.getByRole("region", {
     name: messages.formattedJsonLabel,
-  }) as HTMLTextAreaElement
+  })
 }
 
 function getIndentInput() {
@@ -75,12 +75,13 @@ describe("JsonFormatterClient", () => {
     render(<JsonFormatterClient messages={messages} />)
 
     const rawJsonInput = getRawJsonInput()
-    const formattedJsonInput = getFormattedJsonInput()
+    const formattedJsonOutput = getFormattedJsonInput()
 
     expect(rawJsonInput.value).toContain('"hello": "world"')
-    expect(formattedJsonInput.value).toBe(
+    expect(formattedJsonOutput.textContent).toBe(
       JSON.stringify(JSON.parse(rawJsonInput.value), null, 2)
     )
+    expect(formattedJsonOutput.querySelector(".hljs-attr")).toBeTruthy()
     expect(URL.createObjectURL).toHaveBeenCalled()
   })
 
@@ -92,7 +93,7 @@ describe("JsonFormatterClient", () => {
     })
 
     expect(screen.getByText(messages.invalidJsonLabel)).toBeTruthy()
-    expect(getFormattedJsonInput().value).toBe("")
+    expect(getFormattedJsonInput().querySelector(".hljs")).toBeNull()
     expect(
       screen.getByRole("button", { name: messages.copyJsonLabel })
     ).toHaveProperty("disabled", true)
@@ -109,7 +110,7 @@ describe("JsonFormatterClient", () => {
     })
 
     expect(screen.queryByText(messages.invalidJsonLabel)).toBeNull()
-    expect(getFormattedJsonInput().value).toBe("")
+    expect(getFormattedJsonInput().querySelector(".hljs")).toBeNull()
   })
 
   test("updates formatting when the indent size changes", () => {
@@ -119,7 +120,9 @@ describe("JsonFormatterClient", () => {
       target: { value: "4" },
     })
 
-    expect(getFormattedJsonInput().value).toContain('\n    "hello": "world"')
+    expect(getFormattedJsonInput().textContent).toContain(
+      '\n    "hello": "world"'
+    )
   })
 
   test("imports JSON from a selected file", async () => {
@@ -137,7 +140,7 @@ describe("JsonFormatterClient", () => {
       expect(getRawJsonInput().value).toBe('{"name":"demo"}')
     })
 
-    expect(getFormattedJsonInput().value).toBe('{\n  "name": "demo"\n}')
+    expect(getFormattedJsonInput().textContent).toBe('{\n  "name": "demo"\n}')
   })
 
   test("restores the last stored input and indent size", () => {
@@ -148,7 +151,7 @@ describe("JsonFormatterClient", () => {
 
     expect(getRawJsonInput().value).toBe('{"saved":true}')
     expect(getIndentInput().value).toBe("4")
-    expect(getFormattedJsonInput().value).toBe('{\n    "saved": true\n}')
+    expect(getFormattedJsonInput().textContent).toBe('{\n    "saved": true\n}')
   })
 
   test("persists edits to local storage", () => {

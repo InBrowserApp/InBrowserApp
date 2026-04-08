@@ -33,6 +33,7 @@ import { Download, FileJson2, TriangleAlert } from "@workspace/ui/icons"
 
 import { DEFAULT_JSON, STORAGE_KEYS } from "./client/constants"
 import type { JsonFormatterMessages } from "./client/types"
+import { HighlightedJson } from "./components/highlighted-json"
 import {
   DEFAULT_INDENT_SIZE,
   clampIndentSize,
@@ -45,7 +46,6 @@ type JsonFormatterClientProps = Readonly<{
 
 function JsonFormatterClient({ messages }: JsonFormatterClientProps) {
   const jsonTextId = useId()
-  const formattedTextId = useId()
   const indentSizeId = useId()
   const fileInputRef = useRef<HTMLInputElement | null>(null)
   const downloadUrlRef = useRef<string | null>(null)
@@ -215,14 +215,11 @@ function JsonFormatterClient({ messages }: JsonFormatterClientProps) {
             </Alert>
           ) : null}
 
-          <Textarea
-            id={formattedTextId}
-            aria-label={messages.formattedJsonLabel}
-            spellCheck={false}
-            readOnly
+          <HighlightedJson
+            ariaLabel={messages.formattedJsonLabel}
+            emptyTitle={messages.formattedJsonLabel}
+            emptyDescription={messages.formattedJsonDescription}
             value={result.state === "formatted" ? result.formatted : ""}
-            placeholder={messages.formattedJsonDescription}
-            className="min-h-80 flex-1 resize-y font-mono text-sm"
           />
         </CardContent>
         <CardFooter className="justify-end gap-3 border-t">

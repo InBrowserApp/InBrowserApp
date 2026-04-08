@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "highlight.js": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*"
   },
