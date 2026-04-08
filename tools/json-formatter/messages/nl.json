@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importeren uit bestand",
+  "downloadJsonLabel": "JSON downloaden",
+  "rawJsonLabel": "Ruwe JSON",
+  "formattedJsonLabel": "Geformatteerde JSON",
+  "jsonPlaceholder": "Plak hier uw JSON...",
+  "invalidJsonLabel": "Ongeldige JSON",
+  "indentSizeLabel": "Inspringing",
+  "rawJsonDescription": "Plak JSON direct of importeer een .json- of .txt-bestand vanaf dit apparaat.",
+  "formattedJsonDescription": "De geformatteerde uitvoer wordt bijgewerkt zodra de invoer geldige JSON bevat.",
+  "copyJsonLabel": "JSON kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "استيراد من ملف",
+  "downloadJsonLabel": "تحميل JSON",
+  "rawJsonLabel": "JSON الخام",
+  "formattedJsonLabel": "JSON المنسق",
+  "jsonPlaceholder": "الصق JSON الخاص بك هنا...",
+  "invalidJsonLabel": "JSON غير صالح",
+  "indentSizeLabel": "المسافة البادئة",
+  "rawJsonDescription": "ألصق JSON مباشرة أو استورد ملف .json أو .txt من هذا الجهاز.",
+  "formattedJsonDescription": "يتم تحديث المخرجات المنسقة فور احتواء الإدخال على JSON صالح.",
+  "copyJsonLabel": "نسخ JSON",
+  "copiedLabel": "تم النسخ"
+}

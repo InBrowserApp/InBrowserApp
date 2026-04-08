@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Импорт из файла",
+  "downloadJsonLabel": "Скачать JSON",
+  "rawJsonLabel": "Сырой JSON",
+  "formattedJsonLabel": "Форматированный JSON",
+  "jsonPlaceholder": "Вставьте ваш JSON здесь...",
+  "invalidJsonLabel": "Некорректный JSON",
+  "indentSizeLabel": "Отступ",
+  "rawJsonDescription": "Вставьте JSON напрямую или импортируйте файл .json или .txt с этого устройства.",
+  "formattedJsonDescription": "Форматированный результат обновляется сразу, как только вход содержит корректный JSON.",
+  "copyJsonLabel": "Скопировать JSON",
+  "copiedLabel": "Скопировано"
+}

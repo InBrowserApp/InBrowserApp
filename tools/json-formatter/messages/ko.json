@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "파일에서 가져오기",
+  "downloadJsonLabel": "JSON 다운로드",
+  "rawJsonLabel": "원시 JSON",
+  "formattedJsonLabel": "포맷된 JSON",
+  "jsonPlaceholder": "여기에 JSON을 붙여넣으세요...",
+  "invalidJsonLabel": "유효하지 않은 JSON",
+  "indentSizeLabel": "들여쓰기",
+  "rawJsonDescription": "JSON을 직접 붙여넣거나 이 기기에서 .json 또는 .txt 파일을 가져오세요.",
+  "formattedJsonDescription": "입력에 유효한 JSON이 포함되면 포맷된 출력이 즉시 업데이트됩니다.",
+  "copyJsonLabel": "JSON 복사",
+  "copiedLabel": "복사됨"
+}

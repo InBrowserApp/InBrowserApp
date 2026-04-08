@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadJsonLabel": "JSON indir",
+  "rawJsonLabel": "Ham JSON",
+  "formattedJsonLabel": "Biçimlendirilmiş JSON",
+  "jsonPlaceholder": "JSON'unuzu buraya yapıştırın...",
+  "invalidJsonLabel": "Geçersiz JSON",
+  "indentSizeLabel": "Girinti",
+  "rawJsonDescription": "JSON'u doğrudan yapıştırın veya bu cihazdan bir .json ya da .txt dosyası içe aktarın.",
+  "formattedJsonDescription": "Girdi geçerli JSON içerdiği anda biçimlendirilmiş çıktı güncellenir.",
+  "copyJsonLabel": "JSON'u kopyala",
+  "copiedLabel": "Kopyalandı"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "downloadJsonLabel": "Muat turun JSON",
+  "rawJsonLabel": "JSON mentah",
+  "formattedJsonLabel": "JSON berformat",
+  "jsonPlaceholder": "Tampal JSON anda di sini...",
+  "invalidJsonLabel": "JSON tidak sah",
+  "indentSizeLabel": "Inden",
+  "rawJsonDescription": "Tampal JSON secara terus atau import fail .json atau .txt daripada peranti ini.",
+  "formattedJsonDescription": "Output berformat dikemas kini sebaik sahaja input mengandungi JSON yang sah.",
+  "copyJsonLabel": "Salin JSON",
+  "copiedLabel": "Disalin"
+}

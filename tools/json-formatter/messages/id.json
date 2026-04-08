@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Impor dari file",
+  "downloadJsonLabel": "Unduh JSON",
+  "rawJsonLabel": "JSON mentah",
+  "formattedJsonLabel": "JSON terformat",
+  "jsonPlaceholder": "Tempel JSON Anda di sini...",
+  "invalidJsonLabel": "JSON tidak valid",
+  "indentSizeLabel": "Indentasi",
+  "rawJsonDescription": "Tempel JSON secara langsung atau impor file .json atau .txt dari perangkat ini.",
+  "formattedJsonDescription": "Output terformat akan diperbarui segera setelah input berisi JSON yang valid.",
+  "copyJsonLabel": "Salin JSON",
+  "copiedLabel": "Disalin"
+}
