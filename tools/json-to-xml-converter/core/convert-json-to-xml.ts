@@ -6,6 +6,14 @@ type JsonToXmlOptions = Readonly<{
   fullTagEmptyElement: boolean
 }>
 
+type JsonValue =
+  | null
+  | boolean
+  | number
+  | string
+  | JsonValue[]
+  | { [key: string]: JsonValue }
+
 const DEFAULT_JSON_TO_XML_OPTIONS: JsonToXmlOptions = {
   rootElementName: "root",
   arrayItemTag: "item",
@@ -153,7 +161,7 @@ function wrapChildren(
 
 function renderChildEntry(
   key: string,
-  value: unknown,
+  value: JsonValue,
   depth: number,
   options: JsonToXmlOptions
 ) {
@@ -168,7 +176,7 @@ function renderChildEntry(
 
 function renderElement(
   name: string,
-  value: unknown,
+  value: JsonValue,
   depth: number,
   options: JsonToXmlOptions,
   attributes?: Record<string, string>
@@ -211,15 +219,7 @@ function renderElement(
     )
   }
 
-  if (
-    typeof value === "string" ||
-    typeof value === "number" ||
-    typeof value === "boolean"
-  ) {
-    return renderPrimitiveElement(name, value, depth, options, attributes)
-  }
-
-  return renderEmptyElement(name, depth, options, attributes)
+  return renderPrimitiveElement(name, value, depth, options, attributes)
 }
 
 function convertJsonToXmlText(
@@ -258,7 +258,7 @@ function convertJsonToXmlText(
   }
 
   try {
-    const parsed = JSON.parse(input)
+    const parsed = JSON.parse(input) as JsonValue
     const xml = renderElement(rootElementName, parsed, 0, {
       ...normalizedOptions,
       rootElementName,

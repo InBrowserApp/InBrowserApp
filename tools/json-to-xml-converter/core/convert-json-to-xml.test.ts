@@ -121,6 +121,21 @@ describe("convertJsonToXmlText", () => {
     )
   })
 
+  test("renders empty arrays and objects as empty elements", () => {
+    const result = convertJsonToXmlText('{"items":[],"config":{}}', {
+      includeXmlDeclaration: false,
+    })
+
+    expect(result.state).toBe("converted")
+
+    if (result.state !== "converted") {
+      throw new Error("Expected a converted result")
+    }
+
+    expect(result.xml).toContain("<items />")
+    expect(result.xml).toContain("<config />")
+  })
+
   test("falls back to a property element for invalid JSON keys", () => {
     const result = convertJsonToXmlText('{"first name":"Ada"}', {
       includeXmlDeclaration: false,
