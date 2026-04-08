@@ -1,0 +1,4 @@
+{
+  "name": "Docker Run til Compose",
+  "description": "Konverterer docker run-kommandoer til en docker-compose.yml-fil."
+}

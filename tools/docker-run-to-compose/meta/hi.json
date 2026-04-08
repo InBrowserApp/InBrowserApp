@@ -1,0 +1,4 @@
+{
+  "name": "Docker Run से Compose",
+  "description": "docker run कमांड को docker-compose.yml फ़ाइल में बदलें।"
+}

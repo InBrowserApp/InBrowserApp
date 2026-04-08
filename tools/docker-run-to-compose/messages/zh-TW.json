@@ -1,0 +1,16 @@
+{
+  "dockerRunLabel": "Docker Run 命令",
+  "dockerRunDescription": "直接貼上 docker run 命令，或從目前裝置匯入 .txt 或 .sh 檔案。",
+  "dockerRunPlaceholder": "在此貼上 docker run 命令...",
+  "composeLabel": "docker-compose.yml",
+  "composeDescription": "當輸入包含有效的 docker run 命令時，Compose 輸出會立即更新。",
+  "composeEmptyDescription": "在左側貼上有效的 docker run 命令後，這裡會預覽產生的 Compose 檔案。",
+  "invalidDockerRunLabel": "找不到有效的 docker run 命令",
+  "warningsTitle": "轉換警告",
+  "useSampleLabel": "使用範例",
+  "clearLabel": "清空",
+  "importFromFileLabel": "從檔案匯入",
+  "copyComposeLabel": "複製 Compose",
+  "copiedLabel": "已複製",
+  "downloadComposeLabel": "下載 Compose"
+}

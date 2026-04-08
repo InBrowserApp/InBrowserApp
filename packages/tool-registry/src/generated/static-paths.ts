@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docker-run-to-compose",
+    language: "ar",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "de",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "en",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "es",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "fr",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "he",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "hi",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "id",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "it",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "ja",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "ko",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "ms",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "nl",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "no",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "pl",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "pt",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "ru",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "sv",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "th",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "tr",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "vi",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "zh-CN",
+  },
+  {
+    slug: "docker-run-to-compose",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },

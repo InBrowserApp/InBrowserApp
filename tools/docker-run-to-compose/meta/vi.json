@@ -1,0 +1,4 @@
+{
+  "name": "Docker Run sang Compose",
+  "description": "Chuyển lệnh docker run thành tệp docker-compose.yml."
+}

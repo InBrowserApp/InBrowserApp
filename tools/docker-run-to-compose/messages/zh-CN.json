@@ -1,0 +1,16 @@
+{
+  "dockerRunLabel": "Docker Run 命令",
+  "dockerRunDescription": "直接粘贴 docker run 命令，或从当前设备导入 .txt 或 .sh 文件。",
+  "dockerRunPlaceholder": "在此粘贴 docker run 命令...",
+  "composeLabel": "docker-compose.yml",
+  "composeDescription": "当输入包含有效的 docker run 命令时，Compose 输出会立即更新。",
+  "composeEmptyDescription": "在左侧粘贴有效的 docker run 命令后，这里会预览生成的 Compose 文件。",
+  "invalidDockerRunLabel": "未找到有效的 docker run 命令",
+  "warningsTitle": "转换警告",
+  "useSampleLabel": "使用示例",
+  "clearLabel": "清空",
+  "importFromFileLabel": "从文件导入",
+  "copyComposeLabel": "复制 Compose",
+  "copiedLabel": "已复制",
+  "downloadComposeLabel": "下载 Compose"
+}
