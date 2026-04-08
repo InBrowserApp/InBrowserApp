@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "ファイルからインポート",
+  "downloadJsonLabel": "JSONをダウンロード",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML を直接貼り付けるか、この端末から .yaml / .txt ファイルを読み込みます。",
+  "jsonLabel": "JSON",
+  "jsonDescription": "入力に有効な YAML が含まれると、JSON 出力がすぐに更新されます。",
+  "jsonEmptyDescription": "左側に有効な YAML を貼り付けると、変換後の JSON をここでプレビューできます。",
+  "yamlPlaceholder": "ここにYAMLを貼り付け...",
+  "invalidYamlLabel": "無効なYAML",
+  "copyJsonLabel": "JSON をコピー",
+  "copiedLabel": "コピーしました"
+}

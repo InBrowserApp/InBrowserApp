@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadJsonLabel": "JSON डाउनलोड करें",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML सीधे पेस्ट करें या इस डिवाइस से .yaml या .txt फ़ाइल आयात करें।",
+  "jsonLabel": "JSON",
+  "jsonDescription": "इनपुट में वैध YAML होते ही JSON आउटपुट तुरंत अपडेट हो जाता है।",
+  "jsonEmptyDescription": "यहां बदला हुआ JSON देखने के लिए बाईं ओर मान्य YAML पेस्ट करें।",
+  "yamlPlaceholder": "यहाँ YAML पेस्ट करें...",
+  "invalidYamlLabel": "अमान्य YAML",
+  "copyJsonLabel": "JSON कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importuj z pliku",
+  "downloadJsonLabel": "Pobierz JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Wklej YAML bezpośrednio lub zaimportuj plik .yaml albo .txt z tego urządzenia.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Wynik JSON aktualizuje się natychmiast, gdy wejście zawiera poprawny YAML.",
+  "jsonEmptyDescription": "Wklej po lewej poprawny YAML, aby zobaczyć tutaj podgląd przekonwertowanego JSON.",
+  "yamlPlaceholder": "Wklej YAML tutaj...",
+  "invalidYamlLabel": "Nieprawidłowy YAML",
+  "copyJsonLabel": "Kopiuj JSON",
+  "copiedLabel": "Skopiowano"
+}

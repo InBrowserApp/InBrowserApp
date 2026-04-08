@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "יבוא מקובץ",
+  "downloadJsonLabel": "הורד JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "הדביקו YAML ישירות או ייבאו קובץ .yaml או .txt מהמכשיר הזה.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "פלט ה-JSON מתעדכן מיד כשהקלט מכיל YAML תקין.",
+  "jsonEmptyDescription": "הדבק YAML תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-JSON שהומר.",
+  "yamlPlaceholder": "הדביקו YAML כאן...",
+  "invalidYamlLabel": "YAML לא תקין",
+  "copyJsonLabel": "העתק JSON",
+  "copiedLabel": "הועתק"
+}

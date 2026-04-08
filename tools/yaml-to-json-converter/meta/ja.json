@@ -1,0 +1,4 @@
+{
+  "name": "YAML → JSON 変換",
+  "description": "YAML を JSON に変換。YAML を貼り付けるかファイルを読み込み、プレビュー・コピー・ダウンロード。"
+}

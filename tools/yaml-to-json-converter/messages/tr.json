@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadJsonLabel": "JSON İndir",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML'u doğrudan yapıştırın veya bu cihazdan bir .yaml ya da .txt dosyası içe aktarın.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Girdi geçerli YAML içerir içermez JSON çıktısı güncellenir.",
+  "jsonEmptyDescription": "Dönüştürülen JSON önizlemesini burada görmek için sol tarafa geçerli YAML yapıştırın.",
+  "yamlPlaceholder": "Buraya YAML yapıştırın...",
+  "invalidYamlLabel": "Geçersiz YAML",
+  "copyJsonLabel": "JSON'u kopyala",
+  "copiedLabel": "Kopyalandı"
+}

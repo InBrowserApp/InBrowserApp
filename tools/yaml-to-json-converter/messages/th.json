@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "downloadJsonLabel": "ดาวน์โหลด JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "วาง YAML โดยตรงหรือนำเข้าไฟล์ .yaml หรือ .txt จากอุปกรณ์นี้",
+  "jsonLabel": "JSON",
+  "jsonDescription": "เอาต์พุต JSON จะอัปเดตทันทีเมื่ออินพุตมี YAML ที่ถูกต้อง",
+  "jsonEmptyDescription": "วาง YAML ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง JSON ที่แปลงแล้วที่นี่",
+  "yamlPlaceholder": "วาง YAML ที่นี่...",
+  "invalidYamlLabel": "YAML ไม่ถูกต้อง",
+  "copyJsonLabel": "คัดลอก JSON",
+  "copiedLabel": "คัดลอกแล้ว"
+}
