@@ -54,6 +54,7 @@ catalog:
   react-dom: ^19.2.4
   shadcn: ^4.1.2
   smol-toml: ^1.4.1
+  xml-js: ^1.6.11
   tailwind-merge: ^3.5.0
   tailwindcss: ^4.1.18
   tsx: ^4.20.6

@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor XML → JSON",
+  "description": "Convierte XML a JSON. Pega XML o importa un archivo; ajusta opciones, previsualiza, copia y descarga."
+}
