@@ -1,0 +1,4 @@
+{
+  "name": "JMESPath-tester",
+  "description": "Evaluer JMESPath-uttrykk på JSON-data og inspiser resultatet."
+}

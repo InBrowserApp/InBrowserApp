@@ -1,0 +1,4 @@
+{
+  "name": "JMESPath Test Aracı",
+  "description": "JSON verileri üzerinde JMESPath ifadelerini değerlendirin ve sonucu inceleyin."
+}

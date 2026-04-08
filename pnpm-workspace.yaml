@@ -27,6 +27,7 @@ catalog:
   "@astrojs/sitemap": ^3.7.2
   "@commitlint/cli": ^20.5.0
   "@commitlint/config-conventional": ^20.5.0
+  "@types/jmespath": ^0.15.2
   "@tailwindcss/vite": ^4.1.18
   "@testing-library/react": ^16.3.2
   "@types/node": ^25.1.0
@@ -45,6 +46,7 @@ catalog:
   husky: ^9.1.7
   "@types/js-yaml": ^4.0.9
   js-yaml: ^4.1.1
+  jmespath: ^0.16.0
   knip: ^6.3.0
   lint-staged: ^16.4.0
   lucide-react: ^0.542.0

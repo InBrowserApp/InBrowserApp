@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jmespath-tester",
+    language: "ar",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "de",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "en",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "es",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "fr",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "he",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "hi",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "id",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "it",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "ja",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "ko",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "ms",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "nl",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "no",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "pl",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "pt",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "ru",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "sv",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "th",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "tr",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "vi",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "jmespath-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "json-formatter",
     language: "ar",
   },

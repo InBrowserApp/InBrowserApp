@@ -1,0 +1,4 @@
+{
+  "name": "JMESPath 테스트기",
+  "description": "JSON 데이터에 JMESPath 표현식을 평가하고 결과를 확인합니다."
+}
