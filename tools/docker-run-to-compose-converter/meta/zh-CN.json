@@ -1,0 +1,4 @@
+{
+  "name": "Docker Run 转 Compose 转换器",
+  "description": "将 docker run 命令转换为 docker-compose.yml 文件。"
+}

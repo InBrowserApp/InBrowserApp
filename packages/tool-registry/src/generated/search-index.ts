@@ -248,116 +248,116 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
-    slug: "docker-run-to-compose",
+    slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",
     tags: ["code", "docker", "compose", "converter", "devops"],
     locales: {
       ar: {
-        name: "تحويل Docker Run إلى Compose",
+        name: "محول Docker Run إلى Compose",
         description: "حوّل أوامر docker run إلى ملف docker-compose.yml.",
       },
       de: {
-        name: "Docker Run zu Compose",
+        name: "Docker Run zu Compose Konverter",
         description:
           "Konvertiert docker run-Befehle in eine docker-compose.yml-Datei.",
       },
       en: {
-        name: "Docker Run to Compose",
+        name: "Docker Run to Compose Converter",
         description:
           "Convert docker run commands into a docker-compose.yml file.",
       },
       es: {
-        name: "Docker Run a Compose",
+        name: "Convertidor Docker Run a Compose",
         description:
           "Convierte comandos docker run en un archivo docker-compose.yml.",
       },
       fr: {
-        name: "Docker Run vers Compose",
+        name: "Convertisseur Docker Run vers Compose",
         description:
           "Convertit des commandes docker run en fichier docker-compose.yml.",
       },
       he: {
-        name: "Docker Run ל-Compose",
+        name: "ממיר Docker Run ל-Compose",
         description: "ממיר פקודות docker run לקובץ docker-compose.yml.",
       },
       hi: {
-        name: "Docker Run से Compose",
+        name: "Docker Run से Compose परिवर्तक",
         description: "docker run कमांड को docker-compose.yml फ़ाइल में बदलें।",
       },
       id: {
-        name: "Docker Run ke Compose",
+        name: "Pengonversi Docker Run ke Compose",
         description:
           "Mengonversi perintah docker run menjadi file docker-compose.yml.",
       },
       it: {
-        name: "Docker Run in Compose",
+        name: "Convertitore Docker Run in Compose",
         description:
           "Converte comandi docker run in un file docker-compose.yml.",
       },
       ja: {
-        name: "Docker Run を Compose に変換",
+        name: "Docker Run → Compose 変換",
         description:
           "docker run コマンドを docker-compose.yml ファイルに変換します。",
       },
       ko: {
-        name: "Docker Run을 Compose로 변환",
+        name: "Docker Run → Compose 변환기",
         description: "docker run 명령을 docker-compose.yml 파일로 변환합니다.",
       },
       ms: {
-        name: "Docker Run ke Compose",
+        name: "Penukar Docker Run ke Compose",
         description:
           "Menukar arahan docker run kepada fail docker-compose.yml.",
       },
       nl: {
-        name: "Docker Run naar Compose",
+        name: "Docker Run naar Compose-converter",
         description:
           "Zet docker run-opdrachten om naar een docker-compose.yml-bestand.",
       },
       no: {
-        name: "Docker Run til Compose",
+        name: "Docker Run til Compose-omformer",
         description:
           "Konverterer docker run-kommandoer til en docker-compose.yml-fil.",
       },
       pl: {
-        name: "Docker Run do Compose",
+        name: "Konwerter Docker Run do Compose",
         description:
           "Konwertuje polecenia docker run na plik docker-compose.yml.",
       },
       pt: {
-        name: "Docker Run para Compose",
+        name: "Conversor Docker Run para Compose",
         description:
           "Converte comandos docker run em um arquivo docker-compose.yml.",
       },
       ru: {
-        name: "Docker Run в Compose",
+        name: "Конвертер Docker Run в Compose",
         description:
           "Преобразует команды docker run в файл docker-compose.yml.",
       },
       sv: {
-        name: "Docker Run till Compose",
+        name: "Docker Run till Compose-omvandlare",
         description:
           "Konverterar docker run-kommandon till en docker-compose.yml-fil.",
       },
       th: {
-        name: "Docker Run ไปเป็น Compose",
+        name: "ตัวแปลง Docker Run เป็น Compose",
         description: "แปลงคำสั่ง docker run เป็นไฟล์ docker-compose.yml",
       },
       tr: {
-        name: "Docker Run’dan Compose’a",
+        name: "Docker Run'dan Compose'a Dönüştürücü",
         description:
           "docker run komutlarını docker-compose.yml dosyasına dönüştürür.",
       },
       vi: {
-        name: "Docker Run sang Compose",
+        name: "Trình chuyển Docker Run sang Compose",
         description: "Chuyển lệnh docker run thành tệp docker-compose.yml.",
       },
       "zh-CN": {
-        name: "Docker Run 转 Compose",
+        name: "Docker Run 转 Compose 转换器",
         description: "将 docker run 命令转换为 docker-compose.yml 文件。",
       },
       "zh-TW": {
-        name: "Docker Run 轉 Compose",
+        name: "Docker Run 轉 Compose 轉換器",
         description: "將 docker run 命令轉換為 docker-compose.yml 檔案。",
       },
     },

@@ -1,4 +1,0 @@
-{
-  "name": "Docker Run naar Compose",
-  "description": "Zet docker run-opdrachten om naar een docker-compose.yml-bestand."
-}

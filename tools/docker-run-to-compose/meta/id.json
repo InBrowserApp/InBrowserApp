@@ -1,4 +1,0 @@
-{
-  "name": "Docker Run ke Compose",
-  "description": "Mengonversi perintah docker run menjadi file docker-compose.yml."
-}
