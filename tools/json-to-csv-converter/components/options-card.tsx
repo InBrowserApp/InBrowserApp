@@ -15,6 +15,14 @@ import {
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Switch } from "@workspace/ui/components/ui/switch"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@workspace/ui/components/ui/tooltip"
+import { Button } from "@workspace/ui/components/ui/button"
+import { Info } from "@workspace/ui/icons"
 
 import type { JsonToCsvConverterMessages } from "../client/types"
 import type { JsonToCsvOptions } from "../core/convert-json-to-csv"
@@ -97,9 +105,29 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
 
             <Field orientation="horizontal">
               <FieldContent>
-                <FieldLabel htmlFor={escapeFormulaeId}>
-                  {messages.escapeFormulaeLabel}
-                </FieldLabel>
+                <div className="flex items-center gap-1">
+                  <FieldLabel htmlFor={escapeFormulaeId}>
+                    {messages.escapeFormulaeLabel}
+                  </FieldLabel>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="icon-xs"
+                          className="rounded-full text-muted-foreground"
+                          aria-label={messages.escapeFormulaeTooltip}
+                        >
+                          <Info />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent side="top">
+                        {messages.escapeFormulaeTooltip}
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </FieldContent>
               <Switch
                 id={escapeFormulaeId}

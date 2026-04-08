@@ -15,5 +15,6 @@
   "delimiterLabel": "Разделитель",
   "quoteCharLabel": "Кавычка",
   "includeHeaderRowLabel": "Включить строку заголовков",
-  "escapeFormulaeLabel": "Экранировать формулы Excel"
+  "escapeFormulaeLabel": "Экранировать формулы Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

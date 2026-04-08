@@ -15,5 +15,6 @@
   "delimiterLabel": "Separator",
   "quoteCharLabel": "Cudzysłów",
   "includeHeaderRowLabel": "Dołącz wiersz nagłówków",
-  "escapeFormulaeLabel": "Escapuj formuły Excela"
+  "escapeFormulaeLabel": "Escapuj formuły Excela",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

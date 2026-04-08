@@ -15,5 +15,6 @@
   "delimiterLabel": "Delimiter",
   "quoteCharLabel": "Quote",
   "includeHeaderRowLabel": "Include header row",
-  "escapeFormulaeLabel": "Escape Excel formulae"
+  "escapeFormulaeLabel": "Escape Excel formulae",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

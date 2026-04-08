@@ -15,5 +15,6 @@
   "delimiterLabel": "区切り",
   "quoteCharLabel": "引用符",
   "includeHeaderRowLabel": "ヘッダー行を含める",
-  "escapeFormulaeLabel": "Excel の数式をエスケープ"
+  "escapeFormulaeLabel": "Excel の数式をエスケープ",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

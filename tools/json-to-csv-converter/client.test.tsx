@@ -41,6 +41,8 @@ const messages = {
   quoteCharLabel: "Quote character",
   includeHeaderRowLabel: "Include header row",
   escapeFormulaeLabel: "Escape spreadsheet formulae",
+  escapeFormulaeTooltip:
+    "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas.",
 } as const
 
 const STORAGE_KEYS = {
@@ -218,5 +220,15 @@ describe("JsonToCsvConverterClient", () => {
         escapeFormulae: false,
       })
     )
+  })
+
+  test("shows a tooltip trigger for spreadsheet formula escaping", () => {
+    render(<JsonToCsvConverterClient messages={messages} />)
+
+    expect(
+      screen.getByRole("button", {
+        name: messages.escapeFormulaeTooltip,
+      })
+    ).toBeTruthy()
   })
 })

@@ -15,5 +15,6 @@
   "delimiterLabel": "الفاصل",
   "quoteCharLabel": "علامة الاقتباس",
   "includeHeaderRowLabel": "تضمين صف الرأس",
-  "escapeFormulaeLabel": "تضمين محارف هروب لصيغ Excel"
+  "escapeFormulaeLabel": "تضمين محارف هروب لصيغ Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

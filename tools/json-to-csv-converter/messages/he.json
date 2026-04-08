@@ -15,5 +15,6 @@
   "delimiterLabel": "מפריד",
   "quoteCharLabel": "גרשיים",
   "includeHeaderRowLabel": "כלול שורת כותרת",
-  "escapeFormulaeLabel": "בריחת נוסחאות Excel"
+  "escapeFormulaeLabel": "בריחת נוסחאות Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

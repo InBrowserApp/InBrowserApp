@@ -15,5 +15,6 @@
   "delimiterLabel": "Pemisah",
   "quoteCharLabel": "Petikan",
   "includeHeaderRowLabel": "Sertakan baris pengepala",
-  "escapeFormulaeLabel": "Escape formula Excel"
+  "escapeFormulaeLabel": "Escape formula Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

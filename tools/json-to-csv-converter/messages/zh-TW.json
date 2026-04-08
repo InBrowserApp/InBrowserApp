@@ -15,5 +15,6 @@
   "delimiterLabel": "分隔符號",
   "quoteCharLabel": "引號",
   "includeHeaderRowLabel": "包含表頭",
-  "escapeFormulaeLabel": "跳脫 Excel 公式"
+  "escapeFormulaeLabel": "跳脫 Excel 公式",
+  "escapeFormulaeTooltip": "會為以 =、+、- 或 @ 開頭的值加上前綴，讓試算表軟體把它視為文字而不是公式。"
 }

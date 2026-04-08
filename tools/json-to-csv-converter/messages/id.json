@@ -15,5 +15,6 @@
   "delimiterLabel": "Pemisah",
   "quoteCharLabel": "Tanda kutip",
   "includeHeaderRowLabel": "Sertakan baris header",
-  "escapeFormulaeLabel": "Escape rumus Excel"
+  "escapeFormulaeLabel": "Escape rumus Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

@@ -15,5 +15,6 @@
   "delimiterLabel": "구분자",
   "quoteCharLabel": "인용부호",
   "includeHeaderRowLabel": "헤더 행 포함",
-  "escapeFormulaeLabel": "Excel 수식 이스케이프"
+  "escapeFormulaeLabel": "Excel 수식 이스케이프",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

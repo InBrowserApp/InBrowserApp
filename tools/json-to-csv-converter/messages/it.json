@@ -15,5 +15,6 @@
   "delimiterLabel": "Delimitatore",
   "quoteCharLabel": "Virgolette",
   "includeHeaderRowLabel": "Includi riga di intestazione",
-  "escapeFormulaeLabel": "Evadi le formule Excel"
+  "escapeFormulaeLabel": "Evadi le formule Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

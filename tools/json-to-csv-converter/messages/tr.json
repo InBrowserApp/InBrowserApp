@@ -15,5 +15,6 @@
   "delimiterLabel": "Ayırıcı",
   "quoteCharLabel": "Tırnak",
   "includeHeaderRowLabel": "Başlık satırını dahil et",
-  "escapeFormulaeLabel": "Excel formüllerini kaçışla"
+  "escapeFormulaeLabel": "Excel formüllerini kaçışla",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

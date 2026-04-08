@@ -15,5 +15,6 @@
   "delimiterLabel": "Avgränsare",
   "quoteCharLabel": "Citattecken",
   "includeHeaderRowLabel": "Inkludera rubrikrad",
-  "escapeFormulaeLabel": "Eskapa Excel-formler"
+  "escapeFormulaeLabel": "Eskapa Excel-formler",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

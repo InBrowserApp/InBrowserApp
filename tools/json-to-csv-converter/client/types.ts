@@ -22,6 +22,7 @@ export type JsonToCsvConverterMessages = Readonly<{
   quoteCharLabel: string
   includeHeaderRowLabel: string
   escapeFormulaeLabel: string
+  escapeFormulaeTooltip: string
 }>
 
 export type JsonToCsvOptionsStorageValue = Partial<JsonToCsvOptions>

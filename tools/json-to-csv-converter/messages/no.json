@@ -15,5 +15,6 @@
   "delimiterLabel": "Skilletegn",
   "quoteCharLabel": "Anførselstegn",
   "includeHeaderRowLabel": "Inkluder overskriftsrad",
-  "escapeFormulaeLabel": "Escape Excel-formler"
+  "escapeFormulaeLabel": "Escape Excel-formler",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

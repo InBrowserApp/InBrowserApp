@@ -15,5 +15,6 @@
   "delimiterLabel": "ตัวคั่น",
   "quoteCharLabel": "อัญประกาศ",
   "includeHeaderRowLabel": "รวมแถวส่วนหัว",
-  "escapeFormulaeLabel": "Escape สูตร Excel"
+  "escapeFormulaeLabel": "Escape สูตร Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

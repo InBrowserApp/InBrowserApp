@@ -15,5 +15,6 @@
   "delimiterLabel": "विभाजक",
   "quoteCharLabel": "उद्धरण",
   "includeHeaderRowLabel": "हेडर पंक्ति शामिल करें",
-  "escapeFormulaeLabel": "Excel सूत्रों को एस्केप करें"
+  "escapeFormulaeLabel": "Excel सूत्रों को एस्केप करें",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

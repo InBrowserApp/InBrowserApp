@@ -15,5 +15,6 @@
   "delimiterLabel": "Délimiteur",
   "quoteCharLabel": "Guillemet",
   "includeHeaderRowLabel": "Inclure la ligne d’en-tête",
-  "escapeFormulaeLabel": "Échapper les formules Excel"
+  "escapeFormulaeLabel": "Échapper les formules Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }

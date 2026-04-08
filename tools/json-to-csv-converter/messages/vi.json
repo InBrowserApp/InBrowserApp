@@ -15,5 +15,6 @@
   "delimiterLabel": "Dấu phân cách",
   "quoteCharLabel": "Dấu ngoặc kép",
   "includeHeaderRowLabel": "Bao gồm hàng tiêu đề",
-  "escapeFormulaeLabel": "Escape công thức Excel"
+  "escapeFormulaeLabel": "Escape công thức Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
 }
