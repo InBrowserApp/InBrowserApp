@@ -1,0 +1,4 @@
+{
+  "name": "TOML 转 JSON 转换器",
+  "description": "将 TOML 转为 JSON。粘贴 TOML 或导入文件；预览、复制并下载。"
+}

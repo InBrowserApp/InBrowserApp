@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importer fra fil",
+  "downloadJsonLabel": "Last ned JSON",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Lim inn TOML direkte eller importer en .toml- eller .txt-fil fra denne enheten.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON-utdata oppdateres så snart inndataene inneholder gyldig TOML.",
+  "jsonEmptyDescription": "Lim inn gyldig TOML til venstre for å forhåndsvise den konverterte JSON-en her.",
+  "tomlPlaceholder": "Lim inn TOML her...",
+  "invalidTomlLabel": "Ugyldig TOML",
+  "copyJsonLabel": "Kopier JSON",
+  "copiedLabel": "Kopiert"
+}

@@ -645,4 +645,96 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     slug: "json-to-yaml-converter",
     language: "zh-TW",
   },
+  {
+    slug: "toml-to-json-converter",
+    language: "ar",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "de",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "en",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "es",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "fr",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "he",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "hi",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "id",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "it",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "ja",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "ko",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "ms",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "nl",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "no",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "pl",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "pt",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "ru",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "sv",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "th",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "tr",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "vi",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "toml-to-json-converter",
+    language: "zh-TW",
+  },
 ]

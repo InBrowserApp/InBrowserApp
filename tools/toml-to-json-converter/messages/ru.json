@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Импорт из файла",
+  "downloadJsonLabel": "Скачать JSON",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Вставьте TOML напрямую или импортируйте файл .toml или .txt с этого устройства.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Вывод JSON обновляется сразу, как только во входных данных появляется корректный TOML.",
+  "jsonEmptyDescription": "Вставьте слева корректный TOML, чтобы увидеть здесь предварительный просмотр преобразованного JSON.",
+  "tomlPlaceholder": "Вставьте TOML здесь...",
+  "invalidTomlLabel": "Недопустимый TOML",
+  "copyJsonLabel": "Скопировать JSON",
+  "copiedLabel": "Скопировано"
+}

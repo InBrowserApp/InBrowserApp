@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadJsonLabel": "JSON İndir",
+  "tomlLabel": "TOML",
+  "tomlDescription": "TOML'u doğrudan yapıştırın veya bu cihazdan bir .toml ya da .txt dosyası içe aktarın.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Girdi geçerli TOML içerir içermez JSON çıktısı güncellenir.",
+  "jsonEmptyDescription": "Dönüştürülen JSON önizlemesini burada görmek için sol tarafa geçerli TOML yapıştırın.",
+  "tomlPlaceholder": "Buraya TOML yapıştırın...",
+  "invalidTomlLabel": "Geçersiz TOML",
+  "copyJsonLabel": "JSON'u kopyala",
+  "copiedLabel": "Kopyalandı"
+}
