@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Nhập từ tệp",
+  "downloadTomlLabel": "Tải TOML",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Dán YAML trực tiếp hoặc nhập tệp .yaml hay .txt từ thiết bị này.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Đầu ra TOML sẽ cập nhật ngay khi đầu vào chứa YAML hợp lệ.",
+  "tomlEmptyDescription": "Dán YAML hợp lệ ở bên trái để xem trước TOML đã chuyển đổi tại đây.",
+  "yamlPlaceholder": "Dán YAML vào đây...",
+  "invalidYamlLabel": "YAML không hợp lệ",
+  "copyTomlLabel": "Sao chép TOML",
+  "copiedLabel": "Đã sao chép"
+}

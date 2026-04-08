@@ -1,0 +1,46 @@
+.toml-highlight-surface {
+  overflow: auto;
+}
+
+.toml-highlight {
+  min-height: 20rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.toml-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.toml-highlight-empty {
+  min-height: 20rem;
+  width: 100%;
+}
+
+.toml-highlight .hljs-comment,
+.toml-highlight .hljs-punctuation {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.toml-highlight .hljs-attr,
+.toml-highlight .hljs-section {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.toml-highlight .hljs-string {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.toml-highlight .hljs-number {
+  color: color-mix(in oklab, var(--chart-3) 80%, var(--foreground));
+}
+
+.toml-highlight .hljs-literal {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+  font-weight: 600;
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Aus Datei importieren",
+  "downloadTomlLabel": "TOML herunterladen",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Fügen Sie YAML direkt ein oder importieren Sie eine .yaml- oder .txt-Datei von diesem Gerät.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Die TOML-Ausgabe wird aktualisiert, sobald die Eingabe gültiges YAML enthält.",
+  "tomlEmptyDescription": "Fügen Sie links gültiges YAML ein, um hier die konvertierte TOML-Vorschau zu sehen.",
+  "yamlPlaceholder": "YAML hier einfügen...",
+  "invalidYamlLabel": "Ungültiges YAML",
+  "copyTomlLabel": "TOML kopieren",
+  "copiedLabel": "Kopiert"
+}

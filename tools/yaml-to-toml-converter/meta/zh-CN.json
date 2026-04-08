@@ -1,0 +1,4 @@
+{
+  "name": "YAML 转 TOML 转换器",
+  "description": "将 YAML 转为 TOML。粘贴 YAML 或导入文件；预览、复制并下载。"
+}
