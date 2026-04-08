@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "파일에서 가져오기",
+  "downloadTomlLabel": "TOML 다운로드",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML을 직접 붙여넣거나 이 기기에서 .yaml 또는 .txt 파일을 가져오세요.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "입력에 유효한 YAML이 들어오면 TOML 출력이 바로 업데이트됩니다.",
+  "tomlEmptyDescription": "왼쪽에 유효한 YAML을 붙여 넣으면 변환된 TOML을 여기에서 미리 볼 수 있습니다.",
+  "yamlPlaceholder": "여기에 YAML 붙여넣기...",
+  "invalidYamlLabel": "유효하지 않은 YAML",
+  "copyTomlLabel": "TOML 복사",
+  "copiedLabel": "복사됨"
+}

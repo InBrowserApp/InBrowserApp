@@ -1,0 +1,4 @@
+{
+  "name": "YAML → TOML-omformer",
+  "description": "Konverter YAML til TOML. Lim inn YAML eller importer en fil; forhåndsvis, kopier og last ned."
+}

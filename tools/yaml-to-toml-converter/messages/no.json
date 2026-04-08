@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importer fra fil",
+  "downloadTomlLabel": "Last ned TOML",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Lim inn YAML direkte eller importer en .yaml- eller .txt-fil fra denne enheten.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "TOML-utdata oppdateres så snart inndataene inneholder gyldig YAML.",
+  "tomlEmptyDescription": "Lim inn gyldig YAML til venstre for å forhåndsvise den konverterte TOML-en her.",
+  "yamlPlaceholder": "Lim inn YAML her...",
+  "invalidYamlLabel": "Ugyldig YAML",
+  "copyTomlLabel": "Kopier TOML",
+  "copiedLabel": "Kopiert"
+}

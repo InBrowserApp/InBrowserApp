@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "استيراد من ملف",
+  "downloadTomlLabel": "تنزيل TOML",
+  "yamlLabel": "YAML",
+  "yamlDescription": "ألصق YAML مباشرة أو استورد ملف .yaml أو .txt من هذا الجهاز.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "يتم تحديث مخرجات TOML فور احتواء الإدخال على YAML صالح.",
+  "tomlEmptyDescription": "ألصق YAML صالحًا على اليسار لمعاينة TOML المحوّل هنا.",
+  "yamlPlaceholder": "الصق YAML هنا...",
+  "invalidYamlLabel": "YAML غير صالح",
+  "copyTomlLabel": "نسخ TOML",
+  "copiedLabel": "تم النسخ"
+}

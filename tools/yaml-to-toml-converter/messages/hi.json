@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadTomlLabel": "TOML डाउनलोड करें",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML सीधे पेस्ट करें या इस डिवाइस से .yaml या .txt फ़ाइल आयात करें।",
+  "tomlLabel": "TOML",
+  "tomlDescription": "इनपुट में वैध YAML होते ही TOML आउटपुट तुरंत अपडेट हो जाता है।",
+  "tomlEmptyDescription": "यहां बदला हुआ TOML देखने के लिए बाईं ओर मान्य YAML पेस्ट करें।",
+  "yamlPlaceholder": "यहाँ YAML पेस्ट करें...",
+  "invalidYamlLabel": "अमान्य YAML",
+  "copyTomlLabel": "TOML कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}
