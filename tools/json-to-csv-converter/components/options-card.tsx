@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -14,7 +15,6 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import {
   Tooltip,
   TooltipContent,
@@ -83,25 +83,34 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
 
           <div className="grid gap-3 lg:grid-cols-2">
             <Field orientation="horizontal">
-              <FieldContent>
-                <FieldLabel htmlFor={includeHeaderRowId}>
-                  {messages.includeHeaderRowLabel}
-                </FieldLabel>
-              </FieldContent>
-              <Switch
+              <Checkbox
                 id={includeHeaderRowId}
                 checked={options.includeHeaderRow}
                 onCheckedChange={(checked) => {
                   setOptions((currentOptions) => ({
                     ...currentOptions,
-                    includeHeaderRow: checked,
+                    includeHeaderRow: Boolean(checked),
                   }))
                 }}
-                aria-label={messages.includeHeaderRowLabel}
               />
+              <FieldContent>
+                <FieldLabel htmlFor={includeHeaderRowId}>
+                  {messages.includeHeaderRowLabel}
+                </FieldLabel>
+              </FieldContent>
             </Field>
 
             <Field orientation="horizontal">
+              <Checkbox
+                id={escapeFormulaeId}
+                checked={options.escapeFormulae}
+                onCheckedChange={(checked) => {
+                  setOptions((currentOptions) => ({
+                    ...currentOptions,
+                    escapeFormulae: Boolean(checked),
+                  }))
+                }}
+              />
               <FieldContent>
                 <FieldLabel htmlFor={escapeFormulaeId}>
                   <TooltipProvider>
@@ -118,17 +127,6 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
                   </TooltipProvider>
                 </FieldLabel>
               </FieldContent>
-              <Switch
-                id={escapeFormulaeId}
-                checked={options.escapeFormulae}
-                onCheckedChange={(checked) => {
-                  setOptions((currentOptions) => ({
-                    ...currentOptions,
-                    escapeFormulae: checked,
-                  }))
-                }}
-                aria-label={messages.escapeFormulaeLabel}
-              />
             </Field>
           </div>
         </FieldGroup>

@@ -147,7 +147,7 @@ describe("JsonToCsvConverterClient", () => {
       target: { value: "" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.includeHeaderRowLabel,
       })
     )
@@ -205,7 +205,7 @@ describe("JsonToCsvConverterClient", () => {
       target: { value: ";" },
     })
     fireEvent.click(
-      screen.getByRole("switch", {
+      screen.getByRole("checkbox", {
         name: messages.escapeFormulaeLabel,
       })
     )
