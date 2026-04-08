@@ -738,6 +738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "toml-to-yaml-converter",
+    language: "ar",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "de",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "en",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "es",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "fr",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "he",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "hi",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "id",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "it",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "ja",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "ko",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "ms",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "nl",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "no",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "pl",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "pt",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "ru",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "sv",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "th",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "tr",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "vi",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "toml-to-yaml-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "yaml-to-json-converter",
     language: "ar",
   },

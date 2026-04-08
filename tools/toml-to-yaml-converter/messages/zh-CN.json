@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "从文件导入",
+  "downloadYamlLabel": "下载 YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "直接粘贴 TOML，或从当前设备导入 .toml 或 .txt 文件。",
+  "yamlLabel": "YAML",
+  "yamlDescription": "输入包含有效 TOML 后，YAML 输出会立即更新。",
+  "tomlPlaceholder": "在此粘贴 TOML...",
+  "invalidTomlLabel": "无效的 TOML",
+  "copyYamlLabel": "复制 YAML",
+  "copiedLabel": "已复制",
+  "yamlEmptyDescription": "在左侧粘贴有效 TOML，即可在这里预览转换后的 YAML。"
+}

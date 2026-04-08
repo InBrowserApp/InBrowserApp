@@ -1,0 +1,4 @@
+{
+  "name": "TOML → YAML 변환기",
+  "description": "TOML을 YAML로 변환합니다. TOML 붙여넣기 또는 파일 가져오기; 미리보기, 복사, 다운로드."
+}

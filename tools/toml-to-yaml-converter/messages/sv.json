@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importera från fil",
+  "downloadYamlLabel": "Ladda ner YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Klistra in TOML direkt eller importera en .toml- eller .txt-fil från den här enheten.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML-utdata uppdateras så snart inmatningen innehåller giltig TOML.",
+  "tomlPlaceholder": "Klistra in TOML här...",
+  "invalidTomlLabel": "Ogiltig TOML",
+  "copyYamlLabel": "Kopiera YAML",
+  "copiedLabel": "Kopierad",
+  "yamlEmptyDescription": "Klistra in giltig TOML till vänster för att förhandsgranska den konverterade YAML:en här."
+}

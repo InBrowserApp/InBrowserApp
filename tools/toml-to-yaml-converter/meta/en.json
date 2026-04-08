@@ -1,0 +1,4 @@
+{
+  "name": "TOML → YAML Converter",
+  "description": "Convert TOML to YAML. Paste TOML or import a file; preview, copy, and download."
+}

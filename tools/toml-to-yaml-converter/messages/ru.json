@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Импорт из файла",
+  "downloadYamlLabel": "Скачать YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Вставьте TOML напрямую или импортируйте файл .toml или .txt с этого устройства.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Вывод YAML обновляется сразу, как только во входных данных появляется корректный TOML.",
+  "tomlPlaceholder": "Вставьте TOML здесь...",
+  "invalidTomlLabel": "Некорректный TOML",
+  "copyYamlLabel": "Скопировать YAML",
+  "copiedLabel": "Скопировано",
+  "yamlEmptyDescription": "Вставьте слева корректный TOML, чтобы увидеть здесь предварительный просмотр преобразованного YAML."
+}

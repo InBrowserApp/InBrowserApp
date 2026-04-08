@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "יבוא מקובץ",
+  "downloadYamlLabel": "הורד YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "הדביקו TOML ישירות או ייבאו קובץ .toml או .txt מהמכשיר הזה.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "פלט ה-YAML מתעדכן מיד כשהקלט מכיל TOML תקין.",
+  "tomlPlaceholder": "הדביקו TOML כאן...",
+  "invalidTomlLabel": "TOML לא תקין",
+  "copyYamlLabel": "העתק YAML",
+  "copiedLabel": "הועתק",
+  "yamlEmptyDescription": "הדבק TOML תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-YAML שהומר."
+}

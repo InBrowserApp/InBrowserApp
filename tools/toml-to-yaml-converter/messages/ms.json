@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "downloadYamlLabel": "Muat turun YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Tampal TOML secara terus atau import fail .toml atau .txt daripada peranti ini.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Output YAML akan dikemas kini sebaik sahaja input mengandungi TOML yang sah.",
+  "tomlPlaceholder": "Tampal TOML di sini...",
+  "invalidTomlLabel": "TOML tidak sah",
+  "copyYamlLabel": "Salin YAML",
+  "copiedLabel": "Disalin",
+  "yamlEmptyDescription": "Tampal TOML yang sah di sebelah kiri untuk pratonton YAML yang ditukar di sini."
+}
