@@ -12,6 +12,7 @@
     "@tool/image-resizer": "workspace:*",
     "@tool/json-formatter": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
+    "@tool/json-to-csv-converter": "workspace:*",
     "@tool/json-to-toml-converter": "workspace:*",
     "@tool/json-to-xml-converter": "workspace:*",
     "@tool/json-to-yaml-converter": "workspace:*",

@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "Importer fra fil",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Lim inn JSON direkte eller importer en .json- eller .txt-fil fra denne enheten.",
+  "jsonPlaceholder": "Lim inn en matrise med JSON-objekter her...",
+  "csvLabel": "CSV",
+  "csvDescription": "CSV-utdata oppdateres så snart inndataene inneholder gyldig JSON.",
+  "csvEmptyDescription": "Lim inn gyldig JSON til venstre for å forhåndsvise den konverterte CSV-en her.",
+  "invalidJsonLabel": "Ugyldig JSON",
+  "downloadCsvLabel": "Last ned CSV",
+  "copyCsvLabel": "Kopier CSV",
+  "copiedLabel": "Kopiert",
+  "optionsLabel": "Alternativer",
+  "optionsDescription": "Juster skilletegn, anførselstegn, overskriftsrad og formel-escaping før du kopierer eller laster ned den konverterte CSV-filen.",
+  "delimiterLabel": "Skilletegn",
+  "quoteCharLabel": "Anførselstegn",
+  "includeHeaderRowLabel": "Inkluder overskriftsrad",
+  "escapeFormulaeLabel": "Escape Excel-formler",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

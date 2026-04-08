@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "파일에서 가져오기",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON을 직접 붙여넣거나 이 기기에서 .json 또는 .txt 파일을 가져오세요.",
+  "jsonPlaceholder": "여기에 JSON 객체 배열을 붙여넣기...",
+  "csvLabel": "CSV",
+  "csvDescription": "입력에 유효한 JSON이 들어오면 CSV 출력이 바로 업데이트됩니다.",
+  "csvEmptyDescription": "왼쪽에 유효한 JSON을 붙여 넣으면 변환된 CSV을 여기에서 미리 볼 수 있습니다.",
+  "invalidJsonLabel": "유효하지 않은 JSON",
+  "downloadCsvLabel": "CSV 다운로드",
+  "copyCsvLabel": "CSV 복사",
+  "copiedLabel": "복사됨",
+  "optionsLabel": "옵션",
+  "optionsDescription": "변환된 CSV를 복사하거나 다운로드하기 전에 구분자, 따옴표, 헤더 행, 수식 이스케이프를 조정하세요.",
+  "delimiterLabel": "구분자",
+  "quoteCharLabel": "인용부호",
+  "includeHeaderRowLabel": "헤더 행 포함",
+  "escapeFormulaeLabel": "Excel 수식 이스케이프",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

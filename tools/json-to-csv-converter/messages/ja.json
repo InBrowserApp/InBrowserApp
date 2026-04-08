@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "ファイルからインポート",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON を直接貼り付けるか、この端末から .json / .txt ファイルを読み込みます。",
+  "jsonPlaceholder": "ここにJSONのオブジェクト配列を貼り付け...",
+  "csvLabel": "CSV",
+  "csvDescription": "入力に有効な JSON が含まれると、CSV 出力がすぐに更新されます。",
+  "csvEmptyDescription": "左側に有効な JSON を貼り付けると、変換後の CSV をここでプレビューできます。",
+  "invalidJsonLabel": "無効なJSON",
+  "downloadCsvLabel": "CSVをダウンロード",
+  "copyCsvLabel": "CSV をコピー",
+  "copiedLabel": "コピーしました",
+  "optionsLabel": "オプション",
+  "optionsDescription": "変換後の CSV をコピーまたはダウンロードする前に、区切り文字、引用符、ヘッダー行、数式エスケープを調整します。",
+  "delimiterLabel": "区切り",
+  "quoteCharLabel": "引用符",
+  "includeHeaderRowLabel": "ヘッダー行を含める",
+  "escapeFormulaeLabel": "Excel の数式をエスケープ",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

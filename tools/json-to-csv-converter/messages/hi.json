@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON सीधे पेस्ट करें या इस डिवाइस से .json या .txt फ़ाइल आयात करें।",
+  "jsonPlaceholder": "यहाँ JSON ऑब्जेक्ट्स की array पेस्ट करें...",
+  "csvLabel": "CSV",
+  "csvDescription": "इनपुट में वैध JSON होते ही CSV आउटपुट तुरंत अपडेट हो जाता है।",
+  "csvEmptyDescription": "यहां बदला हुआ CSV देखने के लिए बाईं ओर मान्य JSON पेस्ट करें।",
+  "invalidJsonLabel": "अमान्य JSON",
+  "downloadCsvLabel": "CSV डाउनलोड करें",
+  "copyCsvLabel": "CSV कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "optionsLabel": "विकल्प",
+  "optionsDescription": "परिवर्तित CSV को कॉपी या डाउनलोड करने से पहले विभाजक, उद्धरण चिह्न, हेडर पंक्ति और फ़ॉर्मूला एस्केपिंग समायोजित करें।",
+  "delimiterLabel": "विभाजक",
+  "quoteCharLabel": "उद्धरण",
+  "includeHeaderRowLabel": "हेडर पंक्ति शामिल करें",
+  "escapeFormulaeLabel": "Excel सूत्रों को एस्केप करें",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

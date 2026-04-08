@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "Impor dari file",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Tempel JSON secara langsung atau impor file .json atau .txt dari perangkat ini.",
+  "jsonPlaceholder": "Tempel array objek JSON di sini...",
+  "csvLabel": "CSV",
+  "csvDescription": "Output CSV akan diperbarui segera setelah input berisi JSON yang valid.",
+  "csvEmptyDescription": "Tempel JSON yang valid di sebelah kiri untuk melihat pratinjau CSV hasil konversi di sini.",
+  "invalidJsonLabel": "JSON tidak valid",
+  "downloadCsvLabel": "Unduh CSV",
+  "copyCsvLabel": "Salin CSV",
+  "copiedLabel": "Disalin",
+  "optionsLabel": "Opsi",
+  "optionsDescription": "Sesuaikan pemisah, tanda kutip, baris header, dan escape formula sebelum menyalin atau mengunduh CSV yang dikonversi.",
+  "delimiterLabel": "Pemisah",
+  "quoteCharLabel": "Tanda kutip",
+  "includeHeaderRowLabel": "Sertakan baris header",
+  "escapeFormulaeLabel": "Escape rumus Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

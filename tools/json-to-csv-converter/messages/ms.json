@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Tampal JSON secara terus atau import fail .json atau .txt daripada peranti ini.",
+  "jsonPlaceholder": "Tampal tatasusunan objek JSON di sini...",
+  "csvLabel": "CSV",
+  "csvDescription": "Output CSV akan dikemas kini sebaik sahaja input mengandungi JSON yang sah.",
+  "csvEmptyDescription": "Tampal JSON yang sah di sebelah kiri untuk pratonton CSV yang ditukar di sini.",
+  "invalidJsonLabel": "JSON tidak sah",
+  "downloadCsvLabel": "Muat turun CSV",
+  "copyCsvLabel": "Salin CSV",
+  "copiedLabel": "Disalin",
+  "optionsLabel": "Pilihan",
+  "optionsDescription": "Laraskan pemisah, tanda petik, baris pengepala dan pelolosan formula sebelum menyalin atau memuat turun CSV yang ditukar.",
+  "delimiterLabel": "Pemisah",
+  "quoteCharLabel": "Petikan",
+  "includeHeaderRowLabel": "Sertakan baris pengepala",
+  "escapeFormulaeLabel": "Escape formula Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

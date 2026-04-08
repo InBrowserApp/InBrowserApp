@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "Aus Datei importieren",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Fügen Sie JSON direkt ein oder importieren Sie eine .json- oder .txt-Datei von diesem Gerät.",
+  "jsonPlaceholder": "JSON-Objekt-Array hier einfügen...",
+  "csvLabel": "CSV",
+  "csvDescription": "Die CSV-Ausgabe wird aktualisiert, sobald die Eingabe gültiges JSON enthält.",
+  "csvEmptyDescription": "Fügen Sie links gültiges JSON ein, um hier die konvertierte CSV-Vorschau zu sehen.",
+  "invalidJsonLabel": "Ungültiges JSON",
+  "downloadCsvLabel": "CSV herunterladen",
+  "copyCsvLabel": "CSV kopieren",
+  "copiedLabel": "Kopiert",
+  "optionsLabel": "Optionen",
+  "optionsDescription": "Passen Sie Trennzeichen, Anführungszeichen, Kopfzeile und Formel-Escaping an, bevor Sie das konvertierte CSV kopieren oder herunterladen.",
+  "delimiterLabel": "Trennzeichen",
+  "quoteCharLabel": "Anführungszeichen",
+  "includeHeaderRowLabel": "Kopfzeile einschließen",
+  "escapeFormulaeLabel": "Excel-Formeln maskieren",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

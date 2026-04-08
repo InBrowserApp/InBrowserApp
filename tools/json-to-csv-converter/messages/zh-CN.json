@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "从文件导入",
+  "jsonLabel": "JSON",
+  "jsonDescription": "直接粘贴 JSON，或从当前设备导入 .json 或 .txt 文件。",
+  "jsonPlaceholder": "在此粘贴 JSON 对象数组...",
+  "csvLabel": "CSV",
+  "csvDescription": "输入包含有效 JSON 后，CSV 输出会立即更新。",
+  "csvEmptyDescription": "在左侧粘贴有效 JSON，即可在这里预览转换后的 CSV。",
+  "invalidJsonLabel": "无效的 JSON",
+  "downloadCsvLabel": "下载 CSV",
+  "copyCsvLabel": "复制 CSV",
+  "copiedLabel": "已复制",
+  "optionsLabel": "选项",
+  "optionsDescription": "在复制或下载转换后的 CSV 之前，调整分隔符、引号、表头和公式转义。",
+  "delimiterLabel": "分隔符",
+  "quoteCharLabel": "引号",
+  "includeHeaderRowLabel": "包含表头",
+  "escapeFormulaeLabel": "转义 Excel 公式",
+  "escapeFormulaeTooltip": "会给以 =、+、- 或 @ 开头的值加上前缀，让表格软件把它当作文本而不是公式。"
+}

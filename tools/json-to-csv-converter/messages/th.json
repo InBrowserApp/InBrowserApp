@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "jsonLabel": "JSON",
+  "jsonDescription": "วาง JSON โดยตรงหรือนำเข้าไฟล์ .json หรือ .txt จากอุปกรณ์นี้",
+  "jsonPlaceholder": "วางอาร์เรย์ของอ็อบเจกต์ JSON ที่นี่...",
+  "csvLabel": "CSV",
+  "csvDescription": "เอาต์พุต CSV จะอัปเดตทันทีเมื่ออินพุตมี JSON ที่ถูกต้อง",
+  "csvEmptyDescription": "วาง JSON ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง CSV ที่แปลงแล้วที่นี่",
+  "invalidJsonLabel": "JSON ไม่ถูกต้อง",
+  "downloadCsvLabel": "ดาวน์โหลด CSV",
+  "copyCsvLabel": "คัดลอก CSV",
+  "copiedLabel": "คัดลอกแล้ว",
+  "optionsLabel": "ตัวเลือก",
+  "optionsDescription": "ปรับตัวคั่น เครื่องหมายอัญประกาศ แถวส่วนหัว และการ escape สูตร ก่อนคัดลอกหรือดาวน์โหลด CSV ที่แปลงแล้ว",
+  "delimiterLabel": "ตัวคั่น",
+  "quoteCharLabel": "อัญประกาศ",
+  "includeHeaderRowLabel": "รวมแถวส่วนหัว",
+  "escapeFormulaeLabel": "Escape สูตร Excel",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}

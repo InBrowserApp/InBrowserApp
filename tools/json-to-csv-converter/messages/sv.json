@@ -1,0 +1,20 @@
+{
+  "importFromFileLabel": "Importera från fil",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Klistra in JSON direkt eller importera en .json- eller .txt-fil från den här enheten.",
+  "jsonPlaceholder": "Klistra in en array med JSON-objekt här...",
+  "csvLabel": "CSV",
+  "csvDescription": "CSV-utdata uppdateras så snart inmatningen innehåller giltig JSON.",
+  "csvEmptyDescription": "Klistra in giltig JSON till vänster för att förhandsgranska den konverterade CSV:en här.",
+  "invalidJsonLabel": "Ogiltig JSON",
+  "downloadCsvLabel": "Ladda ner CSV",
+  "copyCsvLabel": "Kopiera CSV",
+  "copiedLabel": "Kopierad",
+  "optionsLabel": "Alternativ",
+  "optionsDescription": "Justera avgränsare, citattecken, rubrikrad och formel-escaping innan du kopierar eller laddar ner den konverterade CSV-filen.",
+  "delimiterLabel": "Avgränsare",
+  "quoteCharLabel": "Citattecken",
+  "includeHeaderRowLabel": "Inkludera rubrikrad",
+  "escapeFormulaeLabel": "Eskapa Excel-formler",
+  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+}
