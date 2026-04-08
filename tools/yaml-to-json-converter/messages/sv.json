@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importera från fil",
+  "downloadJsonLabel": "Ladda ner JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Klistra in YAML direkt eller importera en .yaml- eller .txt-fil från den här enheten.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON-utdata uppdateras så snart inmatningen innehåller giltig YAML.",
+  "jsonEmptyDescription": "Klistra in giltig YAML till vänster för att förhandsgranska den konverterade JSON:en här.",
+  "yamlPlaceholder": "Klistra in YAML här...",
+  "invalidYamlLabel": "Ogiltig YAML",
+  "copyJsonLabel": "Kopiera JSON",
+  "copiedLabel": "Kopierad"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importeren uit bestand",
+  "downloadJsonLabel": "JSON downloaden",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Plak YAML direct of importeer een .yaml- of .txt-bestand vanaf dit apparaat.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "De JSON-uitvoer wordt bijgewerkt zodra de invoer geldige YAML bevat.",
+  "jsonEmptyDescription": "Plak links geldige YAML om hier een voorbeeld van de geconverteerde JSON te bekijken.",
+  "yamlPlaceholder": "Plak hier YAML...",
+  "invalidYamlLabel": "Ongeldige YAML",
+  "copyJsonLabel": "JSON kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

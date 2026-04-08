@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "استيراد من ملف",
+  "downloadJsonLabel": "تنزيل JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "ألصق YAML مباشرة أو استورد ملف .yaml أو .txt من هذا الجهاز.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "يتم تحديث مخرجات JSON فور احتواء الإدخال على YAML صالح.",
+  "jsonEmptyDescription": "ألصق YAML صالحًا على اليسار لمعاينة JSON المحوّل هنا.",
+  "yamlPlaceholder": "الصق YAML هنا...",
+  "invalidYamlLabel": "YAML غير صالح",
+  "copyJsonLabel": "نسخ JSON",
+  "copiedLabel": "تم النسخ"
+}

@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "從檔案匯入",
+  "downloadJsonLabel": "下載 JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "直接貼上 YAML，或從目前裝置匯入 .yaml 或 .txt 檔案。",
+  "jsonLabel": "JSON",
+  "jsonDescription": "輸入包含有效 YAML 後，JSON 輸出會立即更新。",
+  "jsonEmptyDescription": "在左側貼上有效的 YAML，即可在這裡預覽轉換後的 JSON。",
+  "yamlPlaceholder": "在此貼上 YAML...",
+  "invalidYamlLabel": "無效的 YAML",
+  "copyJsonLabel": "複製 JSON",
+  "copiedLabel": "已複製"
+}

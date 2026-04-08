@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Impor dari file",
+  "downloadJsonLabel": "Unduh JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Tempel YAML secara langsung atau impor file .yaml atau .txt dari perangkat ini.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Output JSON akan diperbarui segera setelah input berisi YAML yang valid.",
+  "jsonEmptyDescription": "Tempel YAML yang valid di sebelah kiri untuk melihat pratinjau JSON hasil konversi di sini.",
+  "yamlPlaceholder": "Tempel YAML di sini...",
+  "invalidYamlLabel": "YAML tidak valid",
+  "copyJsonLabel": "Salin JSON",
+  "copiedLabel": "Disalin"
+}

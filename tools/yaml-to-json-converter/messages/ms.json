@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "downloadJsonLabel": "Muat turun JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Tampal YAML secara terus atau import fail .yaml atau .txt daripada peranti ini.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Output JSON akan dikemas kini sebaik sahaja input mengandungi YAML yang sah.",
+  "jsonEmptyDescription": "Tampal YAML yang sah di sebelah kiri untuk pratonton JSON yang ditukar di sini.",
+  "yamlPlaceholder": "Tampal YAML di sini...",
+  "invalidYamlLabel": "YAML tidak sah",
+  "copyJsonLabel": "Salin JSON",
+  "copiedLabel": "Disalin"
+}

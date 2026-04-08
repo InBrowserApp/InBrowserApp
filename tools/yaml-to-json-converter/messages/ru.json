@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Импорт из файла",
+  "downloadJsonLabel": "Скачать JSON",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Вставьте YAML напрямую или импортируйте файл .yaml или .txt с этого устройства.",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Вывод JSON обновляется сразу, как только во входных данных появляется корректный YAML.",
+  "jsonEmptyDescription": "Вставьте слева корректный YAML, чтобы увидеть здесь предварительный просмотр преобразованного JSON.",
+  "yamlPlaceholder": "Вставьте YAML здесь...",
+  "invalidYamlLabel": "Недопустимый YAML",
+  "copyJsonLabel": "Скопировать JSON",
+  "copiedLabel": "Скопировано"
+}
