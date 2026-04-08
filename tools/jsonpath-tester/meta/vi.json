@@ -1,0 +1,4 @@
+{
+  "name": "Trình kiểm tra JSONPath",
+  "description": "Kiểm tra truy vấn JSONPath trên dữ liệu JSON và xem các giá trị cùng đường dẫn khớp."
+}

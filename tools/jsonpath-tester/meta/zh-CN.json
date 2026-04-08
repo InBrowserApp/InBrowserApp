@@ -1,0 +1,4 @@
+{
+  "name": "JSONPath 测试器",
+  "description": "对 JSON 数据运行 JSONPath 查询，查看匹配的值和路径。"
+}

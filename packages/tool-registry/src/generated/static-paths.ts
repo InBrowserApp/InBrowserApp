@@ -1014,6 +1014,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jsonpath-tester",
+    language: "ar",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "de",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "en",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "es",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "fr",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "he",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "hi",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "id",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "it",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "ja",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "ko",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "ms",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "nl",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "no",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "pl",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "pt",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "ru",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "sv",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "th",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "tr",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "vi",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "jsonpath-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },
