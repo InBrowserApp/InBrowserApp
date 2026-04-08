@@ -1,0 +1,4 @@
+{
+  "name": "CSV → JSON-omvandlare",
+  "description": "Konvertera CSV till JSON. Klistra in CSV eller importera en fil; justera alternativ (huvuden, avgränsare, trim m.m.), förhandsgranska, kopiera och ladda ner."
+}

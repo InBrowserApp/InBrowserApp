@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-to-json-converter",
+    language: "ar",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "de",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "en",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "es",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "fr",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "he",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "hi",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "id",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "it",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "ja",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "ko",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "ms",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "nl",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "no",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "pl",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "pt",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "ru",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "sv",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "th",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "tr",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "vi",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-to-json-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },

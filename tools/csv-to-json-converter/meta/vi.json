@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển CSV → JSON",
+  "description": "Chuyển CSV sang JSON. Dán CSV hoặc nhập tệp; điều chỉnh tùy chọn (tiêu đề, dấu phân cách, trim, v.v.), xem trước, sao chép và tải xuống."
+}

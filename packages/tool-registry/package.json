@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
+    "@tool/csv-to-json-converter": "workspace:*",
     "@tool/image-resizer": "workspace:*",
     "@tool/json-formatter": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",

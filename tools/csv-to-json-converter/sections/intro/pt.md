@@ -1,0 +1,15 @@
+## Para que serve esta ferramenta
+
+Use esta ferramenta quando precisar transformar CSV válido em JSON mais fácil de ler, compartilhar ou versionar. Tudo roda localmente no navegador.
+
+## Onde ela ajuda
+
+- Converter exemplos de API em JSON para documentação ou arquivos de configuração.
+- Reescrever payloads CSV copiados em um formato mais fácil de comparar visualmente.
+- Preparar conteúdo estruturado para ferramentas e fluxos que esperam JSON.
+
+## O que observar
+
+- Nesta ferramenta a entrada precisa ser CSV válido.
+- O conversor preserva a estrutura dos dados, mas a apresentação em JSON ainda pode diferir de um estilo escrito à mão.
+- Se você precisar do caminho inverso, use o conversor de JSON para CSV.

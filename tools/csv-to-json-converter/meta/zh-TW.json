@@ -1,0 +1,4 @@
+{
+  "name": "CSV 轉 JSON 轉換器",
+  "description": "將 CSV 轉為 JSON。貼上 CSV 或匯入檔案；調整選項（表頭、分隔符、裁剪 等），預覽、複製並下載。"
+}

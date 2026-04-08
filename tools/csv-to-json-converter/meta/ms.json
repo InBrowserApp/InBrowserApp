@@ -1,0 +1,4 @@
+{
+  "name": "Penukar CSV → JSON",
+  "description": "Tukar CSV kepada JSON. Tampal CSV atau import fail; laraskan pilihan (pengepala, pemisah, trim, dll.), pratonton, salin dan muat turun."
+}
