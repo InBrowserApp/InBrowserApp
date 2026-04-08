@@ -222,13 +222,9 @@ describe("JsonToCsvConverterClient", () => {
     )
   })
 
-  test("shows a tooltip trigger for spreadsheet formula escaping", () => {
+  test("renders the spreadsheet formula escaping label", () => {
     render(<JsonToCsvConverterClient messages={messages} />)
 
-    expect(
-      screen.getByRole("button", {
-        name: messages.escapeFormulaeTooltip,
-      })
-    ).toBeTruthy()
+    expect(screen.getByText(messages.escapeFormulaeLabel)).toBeTruthy()
   })
 })

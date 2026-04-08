@@ -4,7 +4,6 @@ export {
   Binary,
   Braces,
   Check,
-  Info,
   Copy,
   Download,
   FileJson2,

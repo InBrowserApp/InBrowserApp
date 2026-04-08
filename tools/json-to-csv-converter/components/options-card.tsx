@@ -21,8 +21,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@workspace/ui/components/ui/tooltip"
-import { Button } from "@workspace/ui/components/ui/button"
-import { Info } from "@workspace/ui/icons"
 
 import type { JsonToCsvConverterMessages } from "../client/types"
 import type { JsonToCsvOptions } from "../core/convert-json-to-csv"
@@ -105,29 +103,21 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
 
             <Field orientation="horizontal">
               <FieldContent>
-                <div className="flex items-center gap-1">
-                  <FieldLabel htmlFor={escapeFormulaeId}>
-                    {messages.escapeFormulaeLabel}
-                  </FieldLabel>
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button
-                          type="button"
-                          variant="ghost"
-                          size="icon-xs"
-                          className="rounded-full text-muted-foreground"
-                          aria-label={messages.escapeFormulaeTooltip}
-                        >
-                          <Info />
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent side="top">
-                        {messages.escapeFormulaeTooltip}
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </div>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <FieldLabel
+                        htmlFor={escapeFormulaeId}
+                        className="underline decoration-dotted underline-offset-3"
+                      >
+                        {messages.escapeFormulaeLabel}
+                      </FieldLabel>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      {messages.escapeFormulaeTooltip}
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </FieldContent>
               <Switch
                 id={escapeFormulaeId}
