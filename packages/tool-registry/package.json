@@ -16,6 +16,7 @@
     "@tool/json-to-yaml-converter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
+    "@tool/xml-to-json-converter": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
     "@tool/yaml-to-toml-converter": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
