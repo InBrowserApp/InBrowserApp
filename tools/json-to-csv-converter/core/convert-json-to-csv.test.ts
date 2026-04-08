@@ -168,6 +168,7 @@ describe("convert-json-to-csv", () => {
       })
     ).toBe(true)
     expect(isJsonToCsvInput({ name: "Ada" })).toBe(false)
+    expect(isJsonToCsvInput("Ada")).toBe(false)
   })
 
   test("normalizes unknown thrown values", () => {

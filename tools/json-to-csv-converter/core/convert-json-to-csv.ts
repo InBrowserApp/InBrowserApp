@@ -58,9 +58,7 @@ function normalizeQuoteChar(quoteChar: string | undefined) {
     return DEFAULT_JSON_TO_CSV_OPTIONS.quoteChar
   }
 
-  return quoteChar === ""
-    ? ""
-    : quoteChar[0] || DEFAULT_JSON_TO_CSV_OPTIONS.quoteChar
+  return quoteChar === "" ? "" : quoteChar[0]!
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
