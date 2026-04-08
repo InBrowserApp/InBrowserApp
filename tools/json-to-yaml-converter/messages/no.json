@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importer fra fil",
+  "downloadYamlLabel": "Last ned YAML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Lim inn JSON direkte eller importer en .json- eller .txt-fil fra denne enheten.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML-utdata oppdateres så snart inndataene inneholder gyldig JSON.",
+  "jsonPlaceholder": "Lim inn JSON her...",
+  "invalidJsonLabel": "Ugyldig JSON",
+  "copyYamlLabel": "Kopier YAML",
+  "copiedLabel": "Kopiert",
+  "yamlEmptyDescription": "Lim inn gyldig JSON til venstre for å forhåndsvise den konverterte YAML-en her."
+}

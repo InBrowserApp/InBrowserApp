@@ -1,0 +1,46 @@
+.yaml-highlight-surface {
+  overflow: auto;
+}
+
+.yaml-highlight {
+  min-height: 20rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.yaml-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.yaml-highlight-empty {
+  min-height: 20rem;
+  width: 100%;
+}
+
+.yaml-highlight .hljs-punctuation,
+.yaml-highlight .hljs-bullet {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.yaml-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.yaml-highlight .hljs-string {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.yaml-highlight .hljs-number {
+  color: color-mix(in oklab, var(--chart-3) 80%, var(--foreground));
+}
+
+.yaml-highlight .hljs-literal,
+.yaml-highlight .hljs-meta {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+  font-weight: 600;
+}

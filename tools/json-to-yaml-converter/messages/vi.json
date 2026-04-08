@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Nhập từ tệp",
+  "downloadYamlLabel": "Tải YAML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Dán JSON trực tiếp hoặc nhập tệp .json hay .txt từ thiết bị này.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Đầu ra YAML sẽ cập nhật ngay khi đầu vào chứa JSON hợp lệ.",
+  "jsonPlaceholder": "Dán JSON vào đây...",
+  "invalidJsonLabel": "JSON không hợp lệ",
+  "copyYamlLabel": "Sao chép YAML",
+  "copiedLabel": "Đã sao chép",
+  "yamlEmptyDescription": "Dán JSON hợp lệ ở bên trái để xem trước YAML đã chuyển đổi tại đây."
+}
