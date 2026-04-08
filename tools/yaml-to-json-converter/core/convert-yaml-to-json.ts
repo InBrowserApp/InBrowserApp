@@ -28,12 +28,9 @@ function convertYamlToJsonText(input: string): ConvertYamlToJsonResult {
   }
 
   try {
-    const parsed = load(input)
-    const normalized = parsed === undefined ? null : parsed
-
     return {
       state: "converted",
-      json: JSON.stringify(normalized, null, 2),
+      json: JSON.stringify(load(input), null, 2) as string,
     }
   } catch (error) {
     return {
