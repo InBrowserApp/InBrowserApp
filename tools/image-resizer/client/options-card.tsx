@@ -9,8 +9,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldTitle,
+} from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Label } from "@workspace/ui/components/ui/label"
 import {
   Select,
   SelectContent,
@@ -81,162 +88,175 @@ export function OptionsCard({
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col gap-5">
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
-          <div className="space-y-2">
-            <Label htmlFor={`${inputId}-width`}>{messages.widthLabel}</Label>
-            <Input
-              id={`${inputId}-width`}
-              type="number"
-              min={1}
-              value={options.width}
-              onChange={(event) => {
-                updateWidth(Math.max(1, Number(event.target.value) || 1))
-              }}
-            />
+      <CardContent className="flex flex-1 flex-col">
+        <FieldGroup>
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+            <Field>
+              <FieldLabel htmlFor={`${inputId}-width`}>
+                {messages.widthLabel}
+              </FieldLabel>
+              <Input
+                id={`${inputId}-width`}
+                type="number"
+                min={1}
+                value={options.width}
+                onChange={(event) => {
+                  updateWidth(Math.max(1, Number(event.target.value) || 1))
+                }}
+              />
+            </Field>
+
+            <Field>
+              <FieldLabel htmlFor={`${inputId}-height`}>
+                {messages.heightLabel}
+              </FieldLabel>
+              <Input
+                id={`${inputId}-height`}
+                type="number"
+                min={1}
+                value={options.height}
+                onChange={(event) => {
+                  updateHeight(Math.max(1, Number(event.target.value) || 1))
+                }}
+              />
+            </Field>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor={`${inputId}-height`}>{messages.heightLabel}</Label>
-            <Input
-              id={`${inputId}-height`}
-              type="number"
-              min={1}
-              value={options.height}
-              onChange={(event) => {
-                updateHeight(Math.max(1, Number(event.target.value) || 1))
-              }}
-            />
-          </div>
-        </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-1">
+            <Field>
+              <FieldLabel>{messages.algorithmLabel}</FieldLabel>
+              <Select
+                value={options.algorithm}
+                onValueChange={(value) => {
+                  setOptions((currentOptions) => ({
+                    ...currentOptions,
+                    algorithm: value as ResizeAlgorithm,
+                  }))
+                }}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue>
+                    {
+                      algorithmOptions.find(
+                        (o) => o.value === options.algorithm
+                      )?.label
+                    }
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>{messages.algorithmLabel}</SelectLabel>
+                    {algorithmOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </Field>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-1">
-          <div className="flex flex-col gap-2">
-            <Label>{messages.algorithmLabel}</Label>
-            <Select
-              value={options.algorithm}
-              onValueChange={(value) => {
+            <Field>
+              <FieldLabel>{messages.formatLabel}</FieldLabel>
+              <Select
+                value={options.outputFormat}
+                onValueChange={(value) => {
+                  setOptions((currentOptions) => ({
+                    ...currentOptions,
+                    outputFormat: value as ResizeOutputFormat,
+                  }))
+                }}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue>
+                    {
+                      formatOptions.find(
+                        (o) => o.value === options.outputFormat
+                      )?.label
+                    }
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>{messages.formatLabel}</SelectLabel>
+                    {formatOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
+
+          <Field>
+            <div className="flex items-center justify-between gap-3">
+              <FieldTitle>{messages.qualityLabel}</FieldTitle>
+              <span className="font-mono text-sm text-muted-foreground">
+                {options.quality}
+              </span>
+            </div>
+            <Slider
+              aria-label={messages.qualityLabel}
+              min={1}
+              max={100}
+              value={[options.quality]}
+              onValueChange={([value]) => {
+                if (value === undefined) return
                 setOptions((currentOptions) => ({
                   ...currentOptions,
-                  algorithm: value as ResizeAlgorithm,
+                  quality: value,
                 }))
               }}
-            >
-              <SelectTrigger className="w-full">
-                <SelectValue>
-                  {
-                    algorithmOptions.find((o) => o.value === options.algorithm)
-                      ?.label
-                  }
-                </SelectValue>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>{messages.algorithmLabel}</SelectLabel>
-                  {algorithmOptions.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
+            />
+            <FieldDescription>{messages.qualityDescription}</FieldDescription>
+          </Field>
 
-          <div className="flex flex-col gap-2">
-            <Label>{messages.formatLabel}</Label>
-            <Select
-              value={options.outputFormat}
-              onValueChange={(value) => {
+          <Field orientation="horizontal">
+            <FieldContent>
+              <FieldLabel htmlFor={`${inputId}-keep-aspect-ratio`}>
+                {messages.keepAspectRatioLabel}
+              </FieldLabel>
+              <FieldDescription>
+                {messages.keepAspectRatioDescription}
+              </FieldDescription>
+            </FieldContent>
+            <Switch
+              id={`${inputId}-keep-aspect-ratio`}
+              checked={options.keepAspectRatio}
+              onCheckedChange={(checked) => {
                 setOptions((currentOptions) => ({
                   ...currentOptions,
-                  outputFormat: value as ResizeOutputFormat,
+                  keepAspectRatio: checked,
                 }))
               }}
-            >
-              <SelectTrigger className="w-full">
-                <SelectValue>
-                  {
-                    formatOptions.find((o) => o.value === options.outputFormat)
-                      ?.label
-                  }
-                </SelectValue>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>{messages.formatLabel}</SelectLabel>
-                  {formatOptions.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
+              aria-label={messages.keepAspectRatioLabel}
+            />
+          </Field>
 
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <Label>{messages.qualityLabel}</Label>
-            <span className="font-mono text-sm text-muted-foreground">
-              {options.quality}
-            </span>
-          </div>
-          <Slider
-            min={1}
-            max={100}
-            value={[options.quality]}
-            onValueChange={([value]) => {
-              if (value === undefined) return
-              setOptions((currentOptions) => ({
-                ...currentOptions,
-                quality: value,
-              }))
-            }}
-          />
-          <p className="text-sm leading-6 text-muted-foreground">
-            {messages.qualityDescription}
-          </p>
-        </div>
-
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-1">
-            <Label>{messages.keepAspectRatioLabel}</Label>
-            <p className="text-sm leading-6 text-muted-foreground">
-              {messages.keepAspectRatioDescription}
-            </p>
-          </div>
-          <Switch
-            checked={options.keepAspectRatio}
-            onCheckedChange={(checked) => {
-              setOptions((currentOptions) => ({
-                ...currentOptions,
-                keepAspectRatio: checked,
-              }))
-            }}
-            aria-label={messages.keepAspectRatioLabel}
-          />
-        </div>
-
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-1">
-            <Label>{messages.allowUpscaleLabel}</Label>
-            <p className="text-sm leading-6 text-muted-foreground">
-              {messages.allowUpscaleDescription}
-            </p>
-          </div>
-          <Switch
-            checked={options.allowUpscale}
-            onCheckedChange={(checked) => {
-              setOptions((currentOptions) => ({
-                ...currentOptions,
-                allowUpscale: checked,
-              }))
-            }}
-            aria-label={messages.allowUpscaleLabel}
-          />
-        </div>
+          <Field orientation="horizontal">
+            <FieldContent>
+              <FieldLabel htmlFor={`${inputId}-allow-upscale`}>
+                {messages.allowUpscaleLabel}
+              </FieldLabel>
+              <FieldDescription>
+                {messages.allowUpscaleDescription}
+              </FieldDescription>
+            </FieldContent>
+            <Switch
+              id={`${inputId}-allow-upscale`}
+              checked={options.allowUpscale}
+              onCheckedChange={(checked) => {
+                setOptions((currentOptions) => ({
+                  ...currentOptions,
+                  allowUpscale: checked,
+                }))
+              }}
+              aria-label={messages.allowUpscaleLabel}
+            />
+          </Field>
+        </FieldGroup>
       </CardContent>
       <CardFooter className="justify-between gap-3">
         <Button type="button" variant="ghost" size="sm" onClick={onReset}>

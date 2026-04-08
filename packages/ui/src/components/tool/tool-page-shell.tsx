@@ -21,7 +21,7 @@ function ToolPageShell({
       className={cn("flex flex-col gap-[var(--spacing-section-y)]", className)}
     >
       <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-        <div className="space-y-2">
+        <div className="flex flex-col gap-2">
           <h1 className="font-heading text-3xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-4xl">
             {title}
           </h1>
