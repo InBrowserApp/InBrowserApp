@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "Importera från fil",
+  "downloadYamlLabel": "Ladda ner YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "Klistra in JSON här...",
+  "invalidJsonLabel": "Ogiltig JSON",
+  "copyYamlLabel": "Kopiera YAML",
+  "copiedLabel": "Kopierad"
+}

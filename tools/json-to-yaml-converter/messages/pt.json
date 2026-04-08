@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "Importar de arquivo",
+  "downloadYamlLabel": "Baixar YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "Cole JSON aqui...",
+  "invalidJsonLabel": "JSON inválido",
+  "copyYamlLabel": "Copiar YAML",
+  "copiedLabel": "Copiado"
+}

@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "ファイルからインポート",
+  "downloadYamlLabel": "YAMLをダウンロード",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "ここにJSONを貼り付け...",
+  "invalidJsonLabel": "無効なJSON",
+  "copyYamlLabel": "YAML をコピー",
+  "copiedLabel": "コピーしました"
+}

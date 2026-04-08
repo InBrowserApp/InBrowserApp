@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "יבוא מקובץ",
+  "downloadYamlLabel": "הורד YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "הדביקו JSON כאן...",
+  "invalidJsonLabel": "JSON לא תקין",
+  "copyYamlLabel": "העתק YAML",
+  "copiedLabel": "הועתק"
+}

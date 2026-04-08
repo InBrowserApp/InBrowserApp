@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadYamlLabel": "YAML İndir",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "Buraya JSON yapıştırın...",
+  "invalidJsonLabel": "Geçersiz JSON",
+  "copyYamlLabel": "YAML'u kopyala",
+  "copiedLabel": "Kopyalandı"
+}

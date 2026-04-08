@@ -8,4 +8,5 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-resizer": () => import("@tool/image-resizer/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
+  "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
 }

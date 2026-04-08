@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "파일에서 가져오기",
+  "downloadYamlLabel": "YAML 다운로드",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "여기에 JSON 붙여넣기...",
+  "invalidJsonLabel": "유효하지 않은 JSON",
+  "copyYamlLabel": "YAML 복사",
+  "copiedLabel": "복사됨"
+}

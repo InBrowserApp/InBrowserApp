@@ -42,6 +42,8 @@ catalog:
   happy-dom: ^20.8.9
   highlight.js: ^11.11.1
   husky: ^9.1.7
+  "@types/js-yaml": ^4.0.9
+  js-yaml: ^4.1.1
   knip: ^6.3.0
   lint-staged: ^16.4.0
   lucide-react: ^0.542.0

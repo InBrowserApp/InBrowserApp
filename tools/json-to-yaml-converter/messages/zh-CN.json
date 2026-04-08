@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "从文件导入",
+  "downloadYamlLabel": "下载 YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "在此粘贴 JSON...",
+  "invalidJsonLabel": "无效的 JSON",
+  "copyYamlLabel": "复制 YAML",
+  "copiedLabel": "已复制"
+}

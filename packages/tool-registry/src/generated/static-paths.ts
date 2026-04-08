@@ -369,4 +369,96 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     slug: "json-schema-validator",
     language: "zh-TW",
   },
+  {
+    slug: "json-to-yaml-converter",
+    language: "ar",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "de",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "en",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "es",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "fr",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "he",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "hi",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "id",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "it",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "ja",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "ko",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "ms",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "nl",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "no",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "pl",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "pt",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "ru",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "sv",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "th",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "tr",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "vi",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-yaml-converter",
+    language: "zh-TW",
+  },
 ]

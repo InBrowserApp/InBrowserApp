@@ -11,6 +11,7 @@
     "@tool/image-resizer": "workspace:*",
     "@tool/json-formatter": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
+    "@tool/json-to-yaml-converter": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
   },
   "peerDependencies": {

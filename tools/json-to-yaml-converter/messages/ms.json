@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "Import dari fail",
+  "downloadYamlLabel": "Muat turun YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "Tampal JSON di sini...",
+  "invalidJsonLabel": "JSON tidak sah",
+  "copyYamlLabel": "Salin YAML",
+  "copiedLabel": "Disalin"
+}

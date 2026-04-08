@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor JSON → YAML",
+  "description": "Convierte JSON a YAML. Pega JSON o importa un archivo; previsualiza, copia y descarga."
+}

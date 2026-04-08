@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadYamlLabel": "YAML डाउनलोड करें",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "यहाँ JSON पेस्ट करें...",
+  "invalidJsonLabel": "अमान्य JSON",
+  "copyYamlLabel": "YAML कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

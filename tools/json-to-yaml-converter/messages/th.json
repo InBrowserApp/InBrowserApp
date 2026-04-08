@@ -1,0 +1,10 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "downloadYamlLabel": "ดาวน์โหลด YAML",
+  "jsonLabel": "JSON",
+  "yamlLabel": "YAML",
+  "jsonPlaceholder": "วาง JSON ที่นี่...",
+  "invalidJsonLabel": "JSON ไม่ถูกต้อง",
+  "copyYamlLabel": "คัดลอก YAML",
+  "copiedLabel": "คัดลอกแล้ว"
+}
