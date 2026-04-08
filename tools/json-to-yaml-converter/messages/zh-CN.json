@@ -8,5 +8,6 @@
   "jsonPlaceholder": "在此粘贴 JSON...",
   "invalidJsonLabel": "无效的 JSON",
   "copyYamlLabel": "复制 YAML",
-  "copiedLabel": "已复制"
+  "copiedLabel": "已复制",
+  "yamlEmptyDescription": "在左侧粘贴有效 JSON，即可在这里预览转换后的 YAML。"
 }

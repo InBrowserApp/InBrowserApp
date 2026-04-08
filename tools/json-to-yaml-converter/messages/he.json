@@ -8,5 +8,6 @@
   "jsonPlaceholder": "הדביקו JSON כאן...",
   "invalidJsonLabel": "JSON לא תקין",
   "copyYamlLabel": "העתק YAML",
-  "copiedLabel": "הועתק"
+  "copiedLabel": "הועתק",
+  "yamlEmptyDescription": "הדבק JSON תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-YAML שהומר."
 }

@@ -8,5 +8,6 @@
   "jsonPlaceholder": "ここにJSONを貼り付け...",
   "invalidJsonLabel": "無効なJSON",
   "copyYamlLabel": "YAML をコピー",
-  "copiedLabel": "コピーしました"
+  "copiedLabel": "コピーしました",
+  "yamlEmptyDescription": "左側に有効な JSON を貼り付けると、変換後の YAML をここでプレビューできます。"
 }

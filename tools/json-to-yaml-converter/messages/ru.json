@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Вставьте JSON здесь...",
   "invalidJsonLabel": "Некорректный JSON",
   "copyYamlLabel": "Скопировать YAML",
-  "copiedLabel": "Скопировано"
+  "copiedLabel": "Скопировано",
+  "yamlEmptyDescription": "Вставьте слева корректный JSON, чтобы увидеть здесь предварительный просмотр преобразованного YAML."
 }

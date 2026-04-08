@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Klistra in JSON här...",
   "invalidJsonLabel": "Ogiltig JSON",
   "copyYamlLabel": "Kopiera YAML",
-  "copiedLabel": "Kopierad"
+  "copiedLabel": "Kopierad",
+  "yamlEmptyDescription": "Klistra in giltig JSON till vänster för att förhandsgranska den konverterade YAML:en här."
 }

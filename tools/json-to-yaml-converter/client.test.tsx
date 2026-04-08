@@ -4,6 +4,7 @@ import {
   render,
   screen,
   waitFor,
+  within,
 } from "@testing-library/react"
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
@@ -24,6 +25,8 @@ const messages = {
   yamlLabel: "YAML",
   yamlDescription:
     "YAML output updates as soon as the input contains valid JSON.",
+  yamlEmptyDescription:
+    "Paste valid JSON on the left to preview the converted YAML here.",
   jsonPlaceholder: "Paste JSON here...",
   invalidJsonLabel: "Invalid JSON",
   copyYamlLabel: "Copy YAML",
@@ -90,8 +93,15 @@ describe("JsonToYamlConverterClient", () => {
       target: { value: "{" },
     })
 
-    expect(screen.getByText(messages.invalidJsonLabel)).toBeTruthy()
-    expect(getYamlOutput().querySelector(".hljs")).toBeNull()
+    const yamlOutput = getYamlOutput()
+    const outputAlert = within(yamlOutput).getByRole("alert")
+    const invalidResult = convertJsonToYamlText("{")
+
+    expect(outputAlert.textContent).toContain(messages.invalidJsonLabel)
+    expect(outputAlert.textContent).toContain(
+      invalidResult.state === "error" ? invalidResult.message : ""
+    )
+    expect(yamlOutput.querySelector(".hljs")).toBeNull()
     expect(
       screen.getByRole("button", { name: messages.copyYamlLabel })
     ).toHaveProperty("disabled", true)
@@ -107,8 +117,12 @@ describe("JsonToYamlConverterClient", () => {
       target: { value: "   " },
     })
 
+    const yamlOutput = getYamlOutput()
+
     expect(screen.queryByText(messages.invalidJsonLabel)).toBeNull()
-    expect(getYamlOutput().querySelector(".hljs")).toBeNull()
+    expect(yamlOutput.textContent).not.toContain(messages.yamlDescription)
+    expect(yamlOutput.textContent).toContain(messages.yamlEmptyDescription)
+    expect(yamlOutput.querySelector(".hljs")).toBeNull()
   })
 
   test("imports JSON from a selected file", async () => {

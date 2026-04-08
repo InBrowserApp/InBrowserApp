@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Pega JSON aquí...",
   "invalidJsonLabel": "JSON inválido",
   "copyYamlLabel": "Copiar YAML",
-  "copiedLabel": "Copiado"
+  "copiedLabel": "Copiado",
+  "yamlEmptyDescription": "Pega JSON válido a la izquierda para previsualizar aquí el YAML convertido."
 }

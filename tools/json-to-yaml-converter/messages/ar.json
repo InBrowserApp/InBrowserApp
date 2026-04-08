@@ -8,5 +8,6 @@
   "jsonPlaceholder": "الصق JSON هنا...",
   "invalidJsonLabel": "JSON غير صالح",
   "copyYamlLabel": "نسخ YAML",
-  "copiedLabel": "تم النسخ"
+  "copiedLabel": "تم النسخ",
+  "yamlEmptyDescription": "ألصق JSON صالحًا على اليسار لمعاينة YAML المحوّل هنا."
 }

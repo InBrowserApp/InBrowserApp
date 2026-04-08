@@ -8,5 +8,6 @@
   "jsonPlaceholder": "여기에 JSON 붙여넣기...",
   "invalidJsonLabel": "유효하지 않은 JSON",
   "copyYamlLabel": "YAML 복사",
-  "copiedLabel": "복사됨"
+  "copiedLabel": "복사됨",
+  "yamlEmptyDescription": "왼쪽에 유효한 JSON을 붙여 넣으면 변환된 YAML을 여기에서 미리 볼 수 있습니다."
 }

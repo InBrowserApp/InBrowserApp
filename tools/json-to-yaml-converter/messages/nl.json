@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Plak hier JSON...",
   "invalidJsonLabel": "Ongeldige JSON",
   "copyYamlLabel": "YAML kopiëren",
-  "copiedLabel": "Gekopieerd"
+  "copiedLabel": "Gekopieerd",
+  "yamlEmptyDescription": "Plak links geldige JSON om hier een voorbeeld van de geconverteerde YAML te bekijken."
 }

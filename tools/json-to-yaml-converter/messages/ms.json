@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Tampal JSON di sini...",
   "invalidJsonLabel": "JSON tidak sah",
   "copyYamlLabel": "Salin YAML",
-  "copiedLabel": "Disalin"
+  "copiedLabel": "Disalin",
+  "yamlEmptyDescription": "Tampal JSON yang sah di sebelah kiri untuk pratonton YAML yang ditukar di sini."
 }

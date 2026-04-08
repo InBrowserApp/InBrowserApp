@@ -9,6 +9,7 @@ export type JsonToYamlConverterMessages = Readonly<{
   jsonDescription: string
   yamlLabel: string
   yamlDescription: string
+  yamlEmptyDescription: string
   jsonPlaceholder: string
   invalidJsonLabel: string
   copyYamlLabel: string

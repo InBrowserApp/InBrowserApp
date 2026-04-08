@@ -8,5 +8,6 @@
   "jsonPlaceholder": "วาง JSON ที่นี่...",
   "invalidJsonLabel": "JSON ไม่ถูกต้อง",
   "copyYamlLabel": "คัดลอก YAML",
-  "copiedLabel": "คัดลอกแล้ว"
+  "copiedLabel": "คัดลอกแล้ว",
+  "yamlEmptyDescription": "วาง JSON ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง YAML ที่แปลงแล้วที่นี่"
 }

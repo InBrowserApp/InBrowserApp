@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Lim inn JSON her...",
   "invalidJsonLabel": "Ugyldig JSON",
   "copyYamlLabel": "Kopier YAML",
-  "copiedLabel": "Kopiert"
+  "copiedLabel": "Kopiert",
+  "yamlEmptyDescription": "Lim inn gyldig JSON til venstre for å forhåndsvise den konverterte YAML-en her."
 }

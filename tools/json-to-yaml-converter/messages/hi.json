@@ -8,5 +8,6 @@
   "jsonPlaceholder": "यहाँ JSON पेस्ट करें...",
   "invalidJsonLabel": "अमान्य JSON",
   "copyYamlLabel": "YAML कॉपी करें",
-  "copiedLabel": "कॉपी हो गया"
+  "copiedLabel": "कॉपी हो गया",
+  "yamlEmptyDescription": "यहां बदला हुआ YAML देखने के लिए बाईं ओर मान्य JSON पेस्ट करें।"
 }

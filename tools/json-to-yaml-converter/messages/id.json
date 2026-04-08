@@ -8,5 +8,6 @@
   "jsonPlaceholder": "Tempel JSON di sini...",
   "invalidJsonLabel": "JSON tidak valid",
   "copyYamlLabel": "Salin YAML",
-  "copiedLabel": "Disalin"
+  "copiedLabel": "Disalin",
+  "yamlEmptyDescription": "Tempel JSON yang valid di sebelah kiri untuk melihat pratinjau YAML hasil konversi di sini."
 }

@@ -9,11 +9,6 @@ import {
 } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
@@ -24,7 +19,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Download, FileJson2, TriangleAlert } from "@workspace/ui/icons"
+import { Download, FileJson2 } from "@workspace/ui/icons"
 
 import { DEFAULT_JSON, STORAGE_KEYS } from "./client/constants"
 import type { JsonToYamlConverterMessages } from "./client/types"
@@ -47,6 +42,12 @@ function JsonToYamlConverterClient({
 
   const deferredJsonText = useDeferredValue(jsonText)
   const result = convertJsonToYamlText(deferredJsonText)
+  const yamlOutputState =
+    result.state === "converted"
+      ? "success"
+      : result.state === "error"
+        ? "error"
+        : "empty"
 
   useEffect(() => {
     /* v8 ignore next */
@@ -120,6 +121,7 @@ function JsonToYamlConverterClient({
           <Textarea
             id={jsonTextId}
             aria-label={messages.jsonLabel}
+            aria-invalid={result.state === "error"}
             spellCheck={false}
             value={jsonText}
             onChange={(event) => {
@@ -160,18 +162,12 @@ function JsonToYamlConverterClient({
           <CardDescription>{messages.yamlDescription}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-1 flex-col gap-4">
-          {result.state === "error" ? (
-            <Alert variant="destructive">
-              <TriangleAlert />
-              <AlertTitle>{messages.invalidJsonLabel}</AlertTitle>
-              <AlertDescription>{result.message}</AlertDescription>
-            </Alert>
-          ) : null}
-
           <HighlightedYaml
             ariaLabel={messages.yamlLabel}
-            emptyTitle={messages.yamlLabel}
-            emptyDescription={messages.yamlDescription}
+            emptyDescription={messages.yamlEmptyDescription}
+            errorTitle={messages.invalidJsonLabel}
+            errorDescription={result.state === "error" ? result.message : ""}
+            state={yamlOutputState}
             value={result.state === "converted" ? result.yaml : ""}
           />
         </CardContent>
