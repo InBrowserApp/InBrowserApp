@@ -1,0 +1,58 @@
+import { describe, expect, it } from "vitest"
+
+import { normalizeVolumeEntry } from "./volume"
+
+describe("docker run volume normalization", () => {
+  it("returns simple volume entries unchanged", () => {
+    const volumeNames = new Set<string>()
+
+    expect(normalizeVolumeEntry("/data", volumeNames)).toBe("/data")
+    expect(volumeNames.size).toBe(0)
+  })
+
+  it("keeps container path plus mode", () => {
+    const volumeNames = new Set<string>()
+
+    expect(normalizeVolumeEntry("/data:ro", volumeNames)).toBe("/data:ro")
+    expect(normalizeVolumeEntry("/data:custom", volumeNames)).toBe(
+      "/data:custom"
+    )
+  })
+
+  it("detects named volumes and windows paths", () => {
+    const volumeNames = new Set<string>()
+
+    expect(normalizeVolumeEntry("cache:/var/cache", volumeNames)).toBe(
+      "cache:/var/cache"
+    )
+    expect(volumeNames.has("cache")).toBe(true)
+
+    expect(normalizeVolumeEntry("C:\\data:/app:ro", volumeNames)).toBe(
+      "C:\\data:/app:ro"
+    )
+    expect(normalizeVolumeEntry("C:/data:/app:ro", volumeNames)).toBe(
+      "C:/data:/app:ro"
+    )
+  })
+
+  it("keeps extra mode segments for non-windows paths", () => {
+    const volumeNames = new Set<string>()
+
+    expect(
+      normalizeVolumeEntry("cache:/var/cache:ro:cached", volumeNames)
+    ).toBe("cache:/var/cache:ro:cached")
+  })
+
+  it("returns malformed or bind-style sources without registering named volumes", () => {
+    const volumeNames = new Set<string>()
+
+    expect(normalizeVolumeEntry(":", volumeNames)).toBe(":")
+    expect(normalizeVolumeEntry("./cache:/var/cache", volumeNames)).toBe(
+      "./cache:/var/cache"
+    )
+    expect(normalizeVolumeEntry("~/cache:/var/cache", volumeNames)).toBe(
+      "~/cache:/var/cache"
+    )
+    expect(volumeNames.size).toBe(0)
+  })
+})

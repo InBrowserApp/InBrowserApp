@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docker-run-to-compose-converter",
+    language: "ar",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "de",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "en",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "es",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "fr",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "he",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "hi",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "id",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "it",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "ja",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "ko",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "ms",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "nl",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "no",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "pl",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "pt",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "ru",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "sv",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "th",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "tr",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "vi",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "docker-run-to-compose-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },
