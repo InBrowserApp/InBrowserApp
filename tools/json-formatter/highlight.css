@@ -1,30 +1,18 @@
 .json-highlight-surface {
   overflow: auto;
-  border: 1px solid color-mix(in oklab, var(--border) 82%, transparent);
-  border-radius: calc(var(--radius) * 1.4);
-  background:
-    radial-gradient(
-      circle at top,
-      color-mix(in oklab, var(--primary) 8%, transparent),
-      transparent 42%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--card) 86%, var(--muted)) 0%,
-      var(--card) 100%
-    );
-  box-shadow:
-    inset 0 1px 0 color-mix(in oklab, var(--background) 88%, transparent),
-    var(--shadow-elevated);
+  width: 100%;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  background: transparent;
 }
 
 .json-highlight {
   min-height: 20rem;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem 0.625rem;
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  line-height: 1.75;
+  line-height: 1.5;
   color: var(--foreground);
   white-space: pre;
 }
@@ -32,6 +20,12 @@
 .json-highlight code {
   display: block;
   min-width: fit-content;
+}
+
+.json-highlight-empty {
+  min-height: 20rem;
+  width: 100%;
+  padding: 0.5rem 0.625rem;
 }
 
 .json-highlight .hljs-punctuation {
@@ -57,6 +51,6 @@
 
 @media (min-width: 640px) {
   .json-highlight {
-    padding: 1.25rem;
+    padding: 0.5rem 0.625rem;
   }
 }
