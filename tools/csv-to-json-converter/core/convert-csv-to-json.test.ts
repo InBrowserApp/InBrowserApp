@@ -56,7 +56,9 @@ describe("normalizeCsvToJsonOptions", () => {
     expect(
       normalizeCsvToJsonOptions({
         noHeader: true,
+        quoteChar: "'",
         skipEmptyLines: "greedy",
+        escapeChar: "\\",
         preview: 4.4,
         indentSize: 0,
       })
@@ -64,11 +66,11 @@ describe("normalizeCsvToJsonOptions", () => {
       noHeader: true,
       headersText: "",
       delimiter: ",",
-      quoteChar: '"',
+      quoteChar: "'",
       trim: true,
       checkType: false,
       skipEmptyLines: "greedy",
-      escapeChar: '"',
+      escapeChar: "\\",
       newline: "",
       preview: 4,
       comments: "",
@@ -90,6 +92,18 @@ describe("normalizeCsvToJsonOptions", () => {
       skipEmptyLines: "none",
     })
   })
+
+  test("falls back to defaults for invalid quote and escape values", () => {
+    expect(
+      normalizeCsvToJsonOptions({
+        quoteChar: 1 as unknown as string,
+        escapeChar: true as unknown as string,
+      })
+    ).toMatchObject({
+      quoteChar: '"',
+      escapeChar: '"',
+    })
+  })
 })
 
 describe("delimiter helpers", () => {
@@ -100,6 +114,7 @@ describe("delimiter helpers", () => {
     expect(resolveNewline("")).toBeUndefined()
     expect(resolveNewline("auto")).toBeUndefined()
     expect(resolveNewline("\\r\\n")).toBe("\r\n")
+    expect(resolveNewline("\\t")).toBeUndefined()
   })
 
   test("parses delimiter guesses into decoded values", () => {
@@ -252,6 +267,21 @@ describe("convertCsvToJsonText", () => {
     expect(result.json).toBe('[{"name":"Ada","age":36}]')
   })
 
+  test("falls back to the default quote handling and keeps whitespace when trim is disabled", () => {
+    const result = convertCsvToJsonText('" name "|" age "\n" Ada "|" 36 "', {
+      delimiter: "|",
+      trim: false,
+      quoteChar: "",
+      escapeChar: "",
+      indentSize: 0,
+    })
+
+    expect(result).toEqual({
+      state: "converted",
+      json: '[{" name ":" Ada "," age ":" 36 "}]',
+    })
+  })
+
   test("supports raw rows, skip options, comments, newline, delimiter guesses, and fast mode", () => {
     const result = convertCsvToJsonText(
       "# comment\r\nskip-me\r\n1\t2\r\n\r\n3\t4",
@@ -276,6 +306,44 @@ describe("convertCsvToJsonText", () => {
     expect(result.json).toBe(
       '[\n  [\n    "skip-me"\n  ],\n  [\n    "1",\n    "2"\n  ],\n  [\n    "3",\n    "4"\n  ]\n]'
     )
+  })
+
+  test("supports the boolean skip-empty-lines mode", () => {
+    const result = convertCsvToJsonText("1\n\n2", {
+      noHeader: true,
+      skipEmptyLines: "true",
+      indentSize: 0,
+    })
+
+    expect(result).toEqual({
+      state: "converted",
+      json: '[["1"],["2"]]',
+    })
+  })
+
+  test("supports ignore-column filters without include filters", () => {
+    const result = convertCsvToJsonText("name,age,city\nAda,36,Paris", {
+      ignoreColumns: "age",
+      indentSize: 0,
+    })
+
+    expect(result).toEqual({
+      state: "converted",
+      json: '[{"name":"Ada","city":"Paris"}]',
+    })
+  })
+
+  test("keeps raw array rows when column filters are set without headers", () => {
+    const result = convertCsvToJsonText("1,2", {
+      noHeader: true,
+      includeColumns: "value",
+      indentSize: 0,
+    })
+
+    expect(result).toEqual({
+      state: "converted",
+      json: '[["1","2"]]',
+    })
   })
 
   test("returns a parse error when the CSV content is malformed", () => {

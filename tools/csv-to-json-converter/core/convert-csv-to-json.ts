@@ -133,12 +133,8 @@ function parseCsv(
     comments: options.comments.trim() === "" ? false : options.comments,
     delimitersToGuess: resolveDelimitersToGuess(options.delimitersToGuessText),
     skipFirstNLines: options.skipFirstNLines,
-    transformHeader: options.trim
-      ? (value) => (typeof value === "string" ? value.trim() : value)
-      : undefined,
-    transform: options.trim
-      ? (value) => (typeof value === "string" ? value.trim() : value)
-      : undefined,
+    transformHeader: options.trim ? (value) => value.trim() : undefined,
+    transform: options.trim ? (value) => value.trim() : undefined,
   })
 }
 

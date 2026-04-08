@@ -165,11 +165,7 @@ function resolveDelimitersToGuess(rawValue: string) {
   const segments = rawValue.split(",")
 
   for (let index = 0; index < segments.length; index += 1) {
-    const segment = segments[index]
-
-    if (segment === undefined) {
-      continue
-    }
+    const segment = segments[index]!
 
     if (segment === "") {
       values.push(",")
