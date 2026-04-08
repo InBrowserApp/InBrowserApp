@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadJsonLabel": "JSON डाउनलोड करें",
+  "tomlLabel": "TOML",
+  "tomlDescription": "TOML सीधे पेस्ट करें या इस डिवाइस से .toml या .txt फ़ाइल आयात करें।",
+  "jsonLabel": "JSON",
+  "jsonDescription": "इनपुट में वैध TOML होते ही JSON आउटपुट तुरंत अपडेट हो जाता है।",
+  "jsonEmptyDescription": "यहां बदला हुआ JSON देखने के लिए बाईं ओर मान्य TOML पेस्ट करें।",
+  "tomlPlaceholder": "यहाँ TOML पेस्ट करें...",
+  "invalidTomlLabel": "अमान्य TOML",
+  "copyJsonLabel": "JSON कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

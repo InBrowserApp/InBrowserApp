@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "ファイルからインポート",
+  "downloadJsonLabel": "JSONをダウンロード",
+  "tomlLabel": "TOML",
+  "tomlDescription": "TOML を直接貼り付けるか、この端末から .toml / .txt ファイルを読み込みます。",
+  "jsonLabel": "JSON",
+  "jsonDescription": "入力に有効な TOML が含まれると、JSON 出力がすぐに更新されます。",
+  "jsonEmptyDescription": "左側に有効な TOML を貼り付けると、変換後の JSON をここでプレビューできます。",
+  "tomlPlaceholder": "ここにTOMLを貼り付け...",
+  "invalidTomlLabel": "無効なTOML",
+  "copyJsonLabel": "JSON をコピー",
+  "copiedLabel": "コピーしました"
+}

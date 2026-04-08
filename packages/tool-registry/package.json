@@ -14,6 +14,7 @@
     "@tool/json-to-toml-converter": "workspace:*",
     "@tool/json-to-xml-converter": "workspace:*",
     "@tool/json-to-yaml-converter": "workspace:*",
+    "@tool/toml-to-json-converter": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
   },
   "peerDependencies": {
