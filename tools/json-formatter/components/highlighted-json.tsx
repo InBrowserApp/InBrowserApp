@@ -23,7 +23,7 @@ function HighlightedJson({
       <div
         role="region"
         aria-label={ariaLabel}
-        className="json-highlight-surface flex min-h-80 flex-1 items-stretch"
+        className="json-highlight-surface flex min-h-80 w-full flex-1 items-stretch rounded-lg border border-input bg-transparent px-2.5 py-2"
       >
         <div className="json-highlight-empty">
           <p className="font-mono text-sm text-muted-foreground">
@@ -45,7 +45,7 @@ function HighlightedJson({
     <div
       role="region"
       aria-label={ariaLabel}
-      className="json-highlight-surface min-h-80"
+      className="json-highlight-surface min-h-80 w-full rounded-lg border border-input bg-transparent px-2.5 py-2"
     >
       <pre className="json-highlight hljs">
         <code dangerouslySetInnerHTML={{ __html: highlightedJson }} />

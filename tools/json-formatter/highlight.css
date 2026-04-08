@@ -1,15 +1,10 @@
 .json-highlight-surface {
   overflow: auto;
-  width: 100%;
-  border: 1px solid var(--input);
-  border-radius: var(--radius-lg);
-  background: transparent;
 }
 
 .json-highlight {
   min-height: 20rem;
   margin: 0;
-  padding: 0.5rem 0.625rem;
   font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 1.5;
@@ -25,7 +20,6 @@
 .json-highlight-empty {
   min-height: 20rem;
   width: 100%;
-  padding: 0.5rem 0.625rem;
 }
 
 .json-highlight .hljs-punctuation {
@@ -47,10 +41,4 @@
 .json-highlight .hljs-literal {
   color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
   font-weight: 600;
-}
-
-@media (min-width: 640px) {
-  .json-highlight {
-    padding: 0.5rem 0.625rem;
-  }
 }
