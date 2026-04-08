@@ -1,0 +1,4 @@
+{
+  "name": "Tester JSONPath",
+  "description": "Testa query JSONPath su dati JSON e visualizza valori e percorsi corrispondenti."
+}

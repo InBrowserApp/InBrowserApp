@@ -1,0 +1,4 @@
+{
+  "name": "JSONPath 測試器",
+  "description": "對 JSON 資料執行 JSONPath 查詢，檢視匹配的值與路徑。"
+}

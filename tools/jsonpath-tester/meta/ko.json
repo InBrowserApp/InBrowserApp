@@ -1,0 +1,4 @@
+{
+  "name": "JSONPath 테스트기",
+  "description": "JSON 데이터에 JSONPath 쿼리를 실행하고 일치하는 값과 경로를 확인합니다."
+}

@@ -1339,6 +1339,125 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "jsonpath-tester",
+    category: "json",
+    icon: "search",
+    tags: ["code", "jsonpath", "json", "query", "filter", "selector", "data"],
+    locales: {
+      ar: {
+        name: "مختبر JSONPath",
+        description:
+          "اختبر استعلامات JSONPath على بيانات JSON واعرض القيم والمسارات المطابقة.",
+      },
+      de: {
+        name: "JSONPath-Tester",
+        description:
+          "Teste JSONPath-Abfragen auf JSON-Daten und zeige passende Werte und Pfade an.",
+      },
+      en: {
+        name: "JSONPath Tester",
+        description:
+          "Test JSONPath queries against JSON data and view matched values and paths.",
+      },
+      es: {
+        name: "Probador de JSONPath",
+        description:
+          "Prueba consultas JSONPath en datos JSON y visualiza valores y rutas coincidentes.",
+      },
+      fr: {
+        name: "Testeur JSONPath",
+        description:
+          "Testez des requêtes JSONPath sur des données JSON et affichez les valeurs et chemins correspondants.",
+      },
+      he: {
+        name: "בודק JSONPath",
+        description:
+          "בדוק שאילתות JSONPath על נתוני JSON והצג ערכים ונתיבים תואמים.",
+      },
+      hi: {
+        name: "JSONPath परीक्षक",
+        description: "JSON डेटा पर JSONPath क्वेरी चलाएँ और मेल खाते मान व पथ देखें।",
+      },
+      id: {
+        name: "Penguji JSONPath",
+        description:
+          "Uji kueri JSONPath pada data JSON dan lihat nilai serta jalur yang cocok.",
+      },
+      it: {
+        name: "Tester JSONPath",
+        description:
+          "Testa query JSONPath su dati JSON e visualizza valori e percorsi corrispondenti.",
+      },
+      ja: {
+        name: "JSONPath テスター",
+        description:
+          "JSON データに対して JSONPath クエリを実行し、一致した値とパスを表示します。",
+      },
+      ko: {
+        name: "JSONPath 테스트기",
+        description:
+          "JSON 데이터에 JSONPath 쿼리를 실행하고 일치하는 값과 경로를 확인합니다.",
+      },
+      ms: {
+        name: "Penguji JSONPath",
+        description:
+          "Uji pertanyaan JSONPath pada data JSON dan lihat nilai serta laluan yang sepadan.",
+      },
+      nl: {
+        name: "JSONPath-tester",
+        description:
+          "Test JSONPath-query's op JSON-data en bekijk overeenkomende waarden en paden.",
+      },
+      no: {
+        name: "JSONPath-tester",
+        description:
+          "Test JSONPath-spørringer på JSON-data og se samsvarende verdier og stier.",
+      },
+      pl: {
+        name: "Tester JSONPath",
+        description:
+          "Testuj zapytania JSONPath na danych JSON i wyświetl pasujące wartości oraz ścieżki.",
+      },
+      pt: {
+        name: "Testador de JSONPath",
+        description:
+          "Teste consultas JSONPath em dados JSON e visualize valores e caminhos correspondentes.",
+      },
+      ru: {
+        name: "Тестер JSONPath",
+        description:
+          "Проверяйте запросы JSONPath на данных JSON и просматривайте совпавшие значения и пути.",
+      },
+      sv: {
+        name: "JSONPath-testare",
+        description:
+          "Testa JSONPath-frågor på JSON-data och visa matchande värden och sökvägar.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบ JSONPath",
+        description: "ทดสอบคำสั่ง JSONPath กับข้อมูล JSON และดูค่ากับเส้นทางที่ตรงกัน",
+      },
+      tr: {
+        name: "JSONPath Test Aracı",
+        description:
+          "JSON verileri üzerinde JSONPath sorgularını test edin ve eşleşen değerleri ile yolları görüntüleyin.",
+      },
+      vi: {
+        name: "Trình kiểm tra JSONPath",
+        description:
+          "Kiểm tra truy vấn JSONPath trên dữ liệu JSON và xem các giá trị cùng đường dẫn khớp.",
+      },
+      "zh-CN": {
+        name: "JSONPath 测试器",
+        description: "对 JSON 数据运行 JSONPath 查询，查看匹配的值和路径。",
+      },
+      "zh-TW": {
+        name: "JSONPath 測試器",
+        description: "對 JSON 資料執行 JSONPath 查詢，檢視匹配的值與路徑。",
+      },
+    },
+  },
+  {
     slug: "toml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -3290,6 +3409,125 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 轉 YAML 轉換器",
         description:
           "將 JSON 轉為 YAML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "jsonpath-tester": {
+    slug: "jsonpath-tester",
+    category: "json",
+    icon: "search",
+    tags: ["code", "jsonpath", "json", "query", "filter", "selector", "data"],
+    locales: {
+      ar: {
+        name: "مختبر JSONPath",
+        description:
+          "اختبر استعلامات JSONPath على بيانات JSON واعرض القيم والمسارات المطابقة.",
+      },
+      de: {
+        name: "JSONPath-Tester",
+        description:
+          "Teste JSONPath-Abfragen auf JSON-Daten und zeige passende Werte und Pfade an.",
+      },
+      en: {
+        name: "JSONPath Tester",
+        description:
+          "Test JSONPath queries against JSON data and view matched values and paths.",
+      },
+      es: {
+        name: "Probador de JSONPath",
+        description:
+          "Prueba consultas JSONPath en datos JSON y visualiza valores y rutas coincidentes.",
+      },
+      fr: {
+        name: "Testeur JSONPath",
+        description:
+          "Testez des requêtes JSONPath sur des données JSON et affichez les valeurs et chemins correspondants.",
+      },
+      he: {
+        name: "בודק JSONPath",
+        description:
+          "בדוק שאילתות JSONPath על נתוני JSON והצג ערכים ונתיבים תואמים.",
+      },
+      hi: {
+        name: "JSONPath परीक्षक",
+        description: "JSON डेटा पर JSONPath क्वेरी चलाएँ और मेल खाते मान व पथ देखें।",
+      },
+      id: {
+        name: "Penguji JSONPath",
+        description:
+          "Uji kueri JSONPath pada data JSON dan lihat nilai serta jalur yang cocok.",
+      },
+      it: {
+        name: "Tester JSONPath",
+        description:
+          "Testa query JSONPath su dati JSON e visualizza valori e percorsi corrispondenti.",
+      },
+      ja: {
+        name: "JSONPath テスター",
+        description:
+          "JSON データに対して JSONPath クエリを実行し、一致した値とパスを表示します。",
+      },
+      ko: {
+        name: "JSONPath 테스트기",
+        description:
+          "JSON 데이터에 JSONPath 쿼리를 실행하고 일치하는 값과 경로를 확인합니다.",
+      },
+      ms: {
+        name: "Penguji JSONPath",
+        description:
+          "Uji pertanyaan JSONPath pada data JSON dan lihat nilai serta laluan yang sepadan.",
+      },
+      nl: {
+        name: "JSONPath-tester",
+        description:
+          "Test JSONPath-query's op JSON-data en bekijk overeenkomende waarden en paden.",
+      },
+      no: {
+        name: "JSONPath-tester",
+        description:
+          "Test JSONPath-spørringer på JSON-data og se samsvarende verdier og stier.",
+      },
+      pl: {
+        name: "Tester JSONPath",
+        description:
+          "Testuj zapytania JSONPath na danych JSON i wyświetl pasujące wartości oraz ścieżki.",
+      },
+      pt: {
+        name: "Testador de JSONPath",
+        description:
+          "Teste consultas JSONPath em dados JSON e visualize valores e caminhos correspondentes.",
+      },
+      ru: {
+        name: "Тестер JSONPath",
+        description:
+          "Проверяйте запросы JSONPath на данных JSON и просматривайте совпавшие значения и пути.",
+      },
+      sv: {
+        name: "JSONPath-testare",
+        description:
+          "Testa JSONPath-frågor på JSON-data och visa matchande värden och sökvägar.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบ JSONPath",
+        description: "ทดสอบคำสั่ง JSONPath กับข้อมูล JSON และดูค่ากับเส้นทางที่ตรงกัน",
+      },
+      tr: {
+        name: "JSONPath Test Aracı",
+        description:
+          "JSON verileri üzerinde JSONPath sorgularını test edin ve eşleşen değerleri ile yolları görüntüleyin.",
+      },
+      vi: {
+        name: "Trình kiểm tra JSONPath",
+        description:
+          "Kiểm tra truy vấn JSONPath trên dữ liệu JSON và xem các giá trị cùng đường dẫn khớp.",
+      },
+      "zh-CN": {
+        name: "JSONPath 测试器",
+        description: "对 JSON 数据运行 JSONPath 查询，查看匹配的值和路径。",
+      },
+      "zh-TW": {
+        name: "JSONPath 測試器",
+        description: "對 JSON 資料執行 JSONPath 查詢，檢視匹配的值與路徑。",
       },
     },
   },

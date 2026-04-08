@@ -47,6 +47,7 @@ catalog:
   "@types/js-yaml": ^4.0.9
   js-yaml: ^4.1.1
   jmespath: ^0.16.0
+  jsonpath-plus: ^10.3.0
   knip: ^6.3.0
   lint-staged: ^16.4.0
   lucide-react: ^0.542.0
