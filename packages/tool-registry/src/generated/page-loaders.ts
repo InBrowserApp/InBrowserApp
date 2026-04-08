@@ -12,5 +12,6 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
+  "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
 }

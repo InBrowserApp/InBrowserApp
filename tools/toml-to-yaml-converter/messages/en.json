@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Import from file",
+  "downloadYamlLabel": "Download YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Paste TOML directly or import a .toml or .txt file from this device.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "YAML output updates as soon as the input contains valid TOML.",
+  "tomlPlaceholder": "Paste TOML here...",
+  "invalidTomlLabel": "Invalid TOML",
+  "copyYamlLabel": "Copy YAML",
+  "copiedLabel": "Copied",
+  "yamlEmptyDescription": "Paste valid TOML on the left to preview the converted YAML here."
+}

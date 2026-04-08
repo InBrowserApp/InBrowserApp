@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importeren uit bestand",
+  "downloadYamlLabel": "YAML downloaden",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Plak TOML direct of importeer een .toml- of .txt-bestand vanaf dit apparaat.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "De YAML-uitvoer wordt bijgewerkt zodra de invoer geldige TOML bevat.",
+  "tomlPlaceholder": "Plak hier TOML...",
+  "invalidTomlLabel": "Ongeldige TOML",
+  "copyYamlLabel": "YAML kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "yamlEmptyDescription": "Plak links geldige TOML om hier een voorbeeld van de geconverteerde YAML te bekijken."
+}

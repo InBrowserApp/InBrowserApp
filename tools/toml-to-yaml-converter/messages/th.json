@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "downloadYamlLabel": "ดาวน์โหลด YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "วาง TOML โดยตรงหรือนำเข้าไฟล์ .toml หรือ .txt จากอุปกรณ์นี้",
+  "yamlLabel": "YAML",
+  "yamlDescription": "เอาต์พุต YAML จะอัปเดตทันทีเมื่ออินพุตมี TOML ที่ถูกต้อง",
+  "tomlPlaceholder": "วาง TOML ที่นี่...",
+  "invalidTomlLabel": "TOML ไม่ถูกต้อง",
+  "copyYamlLabel": "คัดลอก YAML",
+  "copiedLabel": "คัดลอกแล้ว",
+  "yamlEmptyDescription": "วาง TOML ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง YAML ที่แปลงแล้วที่นี่"
+}

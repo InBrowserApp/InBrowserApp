@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadYamlLabel": "YAML İndir",
+  "tomlLabel": "TOML",
+  "tomlDescription": "TOML'u doğrudan yapıştırın veya bu cihazdan bir .toml ya da .txt dosyası içe aktarın.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Girdi geçerli TOML içerir içermez YAML çıktısı güncellenir.",
+  "tomlPlaceholder": "Buraya TOML yapıştırın...",
+  "invalidTomlLabel": "Geçersiz TOML",
+  "copyYamlLabel": "YAML'u kopyala",
+  "copiedLabel": "Kopyalandı",
+  "yamlEmptyDescription": "Dönüştürülen YAML önizlemesini burada görmek için sol tarafa geçerli TOML yapıştırın."
+}

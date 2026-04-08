@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Impor dari file",
+  "downloadYamlLabel": "Unduh YAML",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Tempel TOML secara langsung atau impor file .toml atau .txt dari perangkat ini.",
+  "yamlLabel": "YAML",
+  "yamlDescription": "Output YAML akan diperbarui segera setelah input berisi TOML yang valid.",
+  "tomlPlaceholder": "Tempel TOML di sini...",
+  "invalidTomlLabel": "TOML tidak valid",
+  "copyYamlLabel": "Salin YAML",
+  "copiedLabel": "Disalin",
+  "yamlEmptyDescription": "Tempel TOML yang valid di sebelah kiri untuk melihat pratinjau YAML hasil konversi di sini."
+}
