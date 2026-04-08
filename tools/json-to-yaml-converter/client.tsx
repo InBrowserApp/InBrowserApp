@@ -18,6 +18,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -113,6 +114,7 @@ function JsonToYamlConverterClient({
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.jsonLabel}</CardTitle>
+          <CardDescription>{messages.jsonDescription}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-1 flex-col gap-4">
           <Textarea
@@ -155,6 +157,7 @@ function JsonToYamlConverterClient({
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.yamlLabel}</CardTitle>
+          <CardDescription>{messages.yamlDescription}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-1 flex-col gap-4">
           {result.state === "error" ? (
@@ -168,7 +171,7 @@ function JsonToYamlConverterClient({
           <HighlightedYaml
             ariaLabel={messages.yamlLabel}
             emptyTitle={messages.yamlLabel}
-            emptyDescription={messages.meta.description}
+            emptyDescription={messages.yamlDescription}
             value={result.state === "converted" ? result.yaml : ""}
           />
         </CardContent>

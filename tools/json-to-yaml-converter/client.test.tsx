@@ -19,7 +19,11 @@ const messages = {
   importFromFileLabel: "Import from file",
   downloadYamlLabel: "Download YAML",
   jsonLabel: "JSON",
+  jsonDescription:
+    "Paste JSON directly or import a .json or .txt file from this device.",
   yamlLabel: "YAML",
+  yamlDescription:
+    "YAML output updates as soon as the input contains valid JSON.",
   jsonPlaceholder: "Paste JSON here...",
   invalidJsonLabel: "Invalid JSON",
   copyYamlLabel: "Copy YAML",
@@ -67,6 +71,8 @@ describe("JsonToYamlConverterClient", () => {
     const jsonInput = getJsonInput()
     const yamlOutput = getYamlOutput()
 
+    expect(screen.getByText(messages.jsonDescription)).toBeTruthy()
+    expect(screen.getByText(messages.yamlDescription)).toBeTruthy()
     expect(jsonInput.value).toContain('"hello": "world"')
     expect(yamlOutput.textContent).toBe(
       convertJsonToYamlText(jsonInput.value).state === "converted"
