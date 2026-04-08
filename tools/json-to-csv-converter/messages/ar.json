@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "استيراد من ملف",
+  "jsonLabel": "JSON",
+  "jsonDescription": "ألصق JSON مباشرة أو استورد ملف .json أو .txt من هذا الجهاز.",
+  "jsonPlaceholder": "الصق هنا مصفوفة كائنات JSON...",
+  "csvLabel": "CSV",
+  "csvDescription": "يتم تحديث مخرجات CSV فور احتواء الإدخال على JSON صالح.",
+  "csvEmptyDescription": "ألصق JSON صالحًا على اليسار لمعاينة CSV المحوّل هنا.",
+  "invalidJsonLabel": "JSON غير صالح",
+  "downloadCsvLabel": "تنزيل CSV",
+  "copyCsvLabel": "نسخ CSV",
+  "copiedLabel": "تم النسخ",
+  "optionsLabel": "الخيارات",
+  "optionsDescription": "اضبط الفاصل وعلامات الاقتباس وصف العنوان وتهريب الصيغ قبل نسخ ملف CSV المحوّل أو تنزيله.",
+  "delimiterLabel": "الفاصل",
+  "quoteCharLabel": "علامة الاقتباس",
+  "includeHeaderRowLabel": "تضمين صف الرأس",
+  "escapeFormulaeLabel": "تضمين محارف هروب لصيغ Excel"
+}

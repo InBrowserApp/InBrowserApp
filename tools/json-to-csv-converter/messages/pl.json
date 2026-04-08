@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Importuj z pliku",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Wklej JSON bezpośrednio lub zaimportuj plik .json albo .txt z tego urządzenia.",
+  "jsonPlaceholder": "Wklej tutaj tablicę obiektów JSON...",
+  "csvLabel": "CSV",
+  "csvDescription": "Wynik CSV aktualizuje się natychmiast, gdy wejście zawiera poprawny JSON.",
+  "csvEmptyDescription": "Wklej po lewej poprawny JSON, aby zobaczyć tutaj podgląd przekonwertowanego CSV.",
+  "invalidJsonLabel": "Nieprawidłowy JSON",
+  "downloadCsvLabel": "Pobierz CSV",
+  "copyCsvLabel": "Kopiuj CSV",
+  "copiedLabel": "Skopiowano",
+  "optionsLabel": "Opcje",
+  "optionsDescription": "Dostosuj separator, cudzysłów, wiersz nagłówka i ucieczkę formuł przed skopiowaniem lub pobraniem przekonwertowanego CSV.",
+  "delimiterLabel": "Separator",
+  "quoteCharLabel": "Cudzysłów",
+  "includeHeaderRowLabel": "Dołącz wiersz nagłówków",
+  "escapeFormulaeLabel": "Escapuj formuły Excela"
+}

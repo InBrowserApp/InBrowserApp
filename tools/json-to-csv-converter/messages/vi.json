@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Nhập từ tệp",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Dán JSON trực tiếp hoặc nhập tệp .json hay .txt từ thiết bị này.",
+  "jsonPlaceholder": "Dán mảng đối tượng JSON vào đây...",
+  "csvLabel": "CSV",
+  "csvDescription": "Đầu ra CSV sẽ cập nhật ngay khi đầu vào chứa JSON hợp lệ.",
+  "csvEmptyDescription": "Dán JSON hợp lệ ở bên trái để xem trước CSV đã chuyển đổi tại đây.",
+  "invalidJsonLabel": "JSON không hợp lệ",
+  "downloadCsvLabel": "Tải CSV",
+  "copyCsvLabel": "Sao chép CSV",
+  "copiedLabel": "Đã sao chép",
+  "optionsLabel": "Tùy chọn",
+  "optionsDescription": "Điều chỉnh dấu phân cách, dấu ngoặc kép, hàng tiêu đề và cơ chế thoát công thức trước khi sao chép hoặc tải xuống CSV đã chuyển đổi.",
+  "delimiterLabel": "Dấu phân cách",
+  "quoteCharLabel": "Dấu ngoặc kép",
+  "includeHeaderRowLabel": "Bao gồm hàng tiêu đề",
+  "escapeFormulaeLabel": "Escape công thức Excel"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@tool/json-to-csv-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "papaparse": "catalog:",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/papaparse": "catalog:",
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

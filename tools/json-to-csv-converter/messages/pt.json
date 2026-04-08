@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Importar de arquivo",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Cole JSON diretamente ou importe um arquivo .json ou .txt deste dispositivo.",
+  "jsonPlaceholder": "Cole aqui um array de objetos JSON...",
+  "csvLabel": "CSV",
+  "csvDescription": "A saída CSV é atualizada assim que a entrada contém JSON válido.",
+  "csvEmptyDescription": "Cole um JSON válido à esquerda para visualizar aqui o CSV convertido.",
+  "invalidJsonLabel": "JSON inválido",
+  "downloadCsvLabel": "Baixar CSV",
+  "copyCsvLabel": "Copiar CSV",
+  "copiedLabel": "Copiado",
+  "optionsLabel": "Opções",
+  "optionsDescription": "Ajuste delimitador, aspas, linha de cabeçalho e escape de fórmulas antes de copiar ou baixar o CSV convertido.",
+  "delimiterLabel": "Delimitador",
+  "quoteCharLabel": "Aspas",
+  "includeHeaderRowLabel": "Incluir linha de cabeçalho",
+  "escapeFormulaeLabel": "Escapar fórmulas do Excel"
+}

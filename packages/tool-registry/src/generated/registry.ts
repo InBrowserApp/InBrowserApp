@@ -616,6 +616,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-to-csv-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "csv", "converter"],
+    locales: {
+      ar: {
+        name: "محول JSON → CSV",
+        description:
+          "حوّل JSON إلى CSV. الصق JSON أو استورد ملفًا؛ اضبط الخيارات، عاين، انسخ ونزّل.",
+      },
+      de: {
+        name: "JSON → CSV Konverter",
+        description:
+          "Wandelt JSON in CSV um. JSON einfügen oder Datei importieren; Optionen anpassen, Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "JSON → CSV Converter",
+        description:
+          "Convert JSON to CSV. Paste JSON or import a file; adjust options, preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor JSON → CSV",
+        description:
+          "Convierte JSON a CSV. Pega JSON o importa un archivo; ajusta opciones, previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur JSON → CSV",
+        description:
+          "Convertissez JSON en CSV. Collez du JSON ou importez un fichier ; réglez les options, prévisualisez, copiez et téléchargez.",
+      },
+      he: {
+        name: "ממיר JSON → CSV",
+        description:
+          "המרת JSON ל‑CSV. הדביקו JSON או ייבאו קובץ; התאימו אפשרויות, תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "JSON → CSV परिवर्तक",
+        description:
+          "JSON को CSV में बदलें। JSON पेस्ट करें या फ़ाइल आयात करें; विकल्प समायोजित करें, पूर्वावलोकन करें, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi JSON → CSV",
+        description:
+          "Konversi JSON ke CSV. Tempel JSON atau impor berkas; sesuaikan opsi, pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore JSON → CSV",
+        description:
+          "Converti JSON in CSV. Incolla JSON o importa un file; regola le opzioni, anteprima, copia e download.",
+      },
+      ja: {
+        name: "JSON → CSV 変換",
+        description:
+          "JSON を CSV に変換。JSON を貼り付けるかファイルを読み込み、オプション調整、プレビュー、コピー、ダウンロード。",
+      },
+      ko: {
+        name: "JSON → CSV 변환기",
+        description:
+          "JSON을 CSV로 변환합니다. JSON 붙여넣기 또는 파일 가져오기; 옵션 조정, 미리보기, 복사 및 다운로드.",
+      },
+      ms: {
+        name: "Penukar JSON → CSV",
+        description:
+          "Tukar JSON kepada CSV. Tampal JSON atau import fail; laraskan pilihan, pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "JSON → CSV-converter",
+        description:
+          "Zet JSON om naar CSV. Plak JSON of importeer een bestand; stel opties in, bekijk, kopieer en download.",
+      },
+      no: {
+        name: "JSON → CSV-omformer",
+        description:
+          "Konverter JSON til CSV. Lim inn JSON eller importer en fil; juster alternativer, forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter JSON → CSV",
+        description:
+          "Konwertuj JSON na CSV. Wklej JSON lub zaimportuj plik; dostosuj opcje, podglądaj, kopiuj i pobieraj.",
+      },
+      pt: {
+        name: "Conversor JSON → CSV",
+        description:
+          "Converta JSON para CSV. Cole JSON ou importe um arquivo; ajuste opções, visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер JSON → CSV",
+        description:
+          "Преобразуйте JSON в CSV. Вставьте JSON или импортируйте файл; настройте опции, просматривайте, копируйте и загружайте.",
+      },
+      sv: {
+        name: "JSON → CSV-omvandlare",
+        description:
+          "Konvertera JSON till CSV. Klistra in JSON eller importera en fil; justera alternativ, förhandsgranska, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง JSON → CSV",
+        description:
+          "แปลง JSON เป็น CSV วาง JSON หรือ นำเข้าไฟล์; ปรับตัวเลือก แสดงตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "JSON → CSV Dönüştürücü",
+        description:
+          "JSON’i CSV’ye dönüştürün. JSON yapıştırın veya dosya içe aktarın; seçenekleri ayarlayın, önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển JSON → CSV",
+        description:
+          "Chuyển JSON sang CSV. Dán JSON hoặc nhập tệp; điều chỉnh tùy chọn, xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "JSON 转 CSV 转换器",
+        description:
+          "将 JSON 转为 CSV。粘贴 JSON 或导入文件；调整选项、预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 CSV 轉換器",
+        description:
+          "將 JSON 轉為 CSV。貼上 JSON 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  {
     slug: "json-to-toml-converter",
     category: "json",
     icon: "file-json-2",
@@ -2213,6 +2336,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON Schema 驗證器",
         description:
           "依據 JSON Schema 驗證 JSON 資料，支援草案偵測並輸出易讀的錯誤訊息。",
+      },
+    },
+  },
+  "json-to-csv-converter": {
+    slug: "json-to-csv-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "csv", "converter"],
+    locales: {
+      ar: {
+        name: "محول JSON → CSV",
+        description:
+          "حوّل JSON إلى CSV. الصق JSON أو استورد ملفًا؛ اضبط الخيارات، عاين، انسخ ونزّل.",
+      },
+      de: {
+        name: "JSON → CSV Konverter",
+        description:
+          "Wandelt JSON in CSV um. JSON einfügen oder Datei importieren; Optionen anpassen, Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "JSON → CSV Converter",
+        description:
+          "Convert JSON to CSV. Paste JSON or import a file; adjust options, preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor JSON → CSV",
+        description:
+          "Convierte JSON a CSV. Pega JSON o importa un archivo; ajusta opciones, previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur JSON → CSV",
+        description:
+          "Convertissez JSON en CSV. Collez du JSON ou importez un fichier ; réglez les options, prévisualisez, copiez et téléchargez.",
+      },
+      he: {
+        name: "ממיר JSON → CSV",
+        description:
+          "המרת JSON ל‑CSV. הדביקו JSON או ייבאו קובץ; התאימו אפשרויות, תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "JSON → CSV परिवर्तक",
+        description:
+          "JSON को CSV में बदलें। JSON पेस्ट करें या फ़ाइल आयात करें; विकल्प समायोजित करें, पूर्वावलोकन करें, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi JSON → CSV",
+        description:
+          "Konversi JSON ke CSV. Tempel JSON atau impor berkas; sesuaikan opsi, pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore JSON → CSV",
+        description:
+          "Converti JSON in CSV. Incolla JSON o importa un file; regola le opzioni, anteprima, copia e download.",
+      },
+      ja: {
+        name: "JSON → CSV 変換",
+        description:
+          "JSON を CSV に変換。JSON を貼り付けるかファイルを読み込み、オプション調整、プレビュー、コピー、ダウンロード。",
+      },
+      ko: {
+        name: "JSON → CSV 변환기",
+        description:
+          "JSON을 CSV로 변환합니다. JSON 붙여넣기 또는 파일 가져오기; 옵션 조정, 미리보기, 복사 및 다운로드.",
+      },
+      ms: {
+        name: "Penukar JSON → CSV",
+        description:
+          "Tukar JSON kepada CSV. Tampal JSON atau import fail; laraskan pilihan, pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "JSON → CSV-converter",
+        description:
+          "Zet JSON om naar CSV. Plak JSON of importeer een bestand; stel opties in, bekijk, kopieer en download.",
+      },
+      no: {
+        name: "JSON → CSV-omformer",
+        description:
+          "Konverter JSON til CSV. Lim inn JSON eller importer en fil; juster alternativer, forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter JSON → CSV",
+        description:
+          "Konwertuj JSON na CSV. Wklej JSON lub zaimportuj plik; dostosuj opcje, podglądaj, kopiuj i pobieraj.",
+      },
+      pt: {
+        name: "Conversor JSON → CSV",
+        description:
+          "Converta JSON para CSV. Cole JSON ou importe um arquivo; ajuste opções, visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер JSON → CSV",
+        description:
+          "Преобразуйте JSON в CSV. Вставьте JSON или импортируйте файл; настройте опции, просматривайте, копируйте и загружайте.",
+      },
+      sv: {
+        name: "JSON → CSV-omvandlare",
+        description:
+          "Konvertera JSON till CSV. Klistra in JSON eller importera en fil; justera alternativ, förhandsgranska, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง JSON → CSV",
+        description:
+          "แปลง JSON เป็น CSV วาง JSON หรือ นำเข้าไฟล์; ปรับตัวเลือก แสดงตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "JSON → CSV Dönüştürücü",
+        description:
+          "JSON’i CSV’ye dönüştürün. JSON yapıştırın veya dosya içe aktarın; seçenekleri ayarlayın, önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển JSON → CSV",
+        description:
+          "Chuyển JSON sang CSV. Dán JSON hoặc nhập tệp; điều chỉnh tùy chọn, xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "JSON 转 CSV 转换器",
+        description:
+          "将 JSON 转为 CSV。粘贴 JSON 或导入文件；调整选项、预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 CSV 轉換器",
+        description:
+          "將 JSON 轉為 CSV。貼上 JSON 或匯入檔案；調整選項、預覽、複製並下載。",
       },
     },
   },

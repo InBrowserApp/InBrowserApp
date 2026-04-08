@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "יבוא מקובץ",
+  "jsonLabel": "JSON",
+  "jsonDescription": "הדביקו JSON ישירות או ייבאו קובץ .json או .txt מהמכשיר הזה.",
+  "jsonPlaceholder": "הדביקו כאן מערך של אובייקטי JSON...",
+  "csvLabel": "CSV",
+  "csvDescription": "פלט ה-CSV מתעדכן מיד כשהקלט מכיל JSON תקין.",
+  "csvEmptyDescription": "הדבק JSON תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-CSV שהומר.",
+  "invalidJsonLabel": "JSON לא תקין",
+  "downloadCsvLabel": "הורד CSV",
+  "copyCsvLabel": "העתק CSV",
+  "copiedLabel": "הועתק",
+  "optionsLabel": "אפשרויות",
+  "optionsDescription": "התאימו את המפריד, סימן הציטוט, שורת הכותרת ובריחת הנוסחאות לפני שמעתיקים או מורידים את ה-CSV שהומר.",
+  "delimiterLabel": "מפריד",
+  "quoteCharLabel": "גרשיים",
+  "includeHeaderRowLabel": "כלול שורת כותרת",
+  "escapeFormulaeLabel": "בריחת נוסחאות Excel"
+}

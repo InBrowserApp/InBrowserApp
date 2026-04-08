@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Importeren uit bestand",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Plak JSON direct of importeer een .json- of .txt-bestand vanaf dit apparaat.",
+  "jsonPlaceholder": "Plak hier een array met JSON-objecten...",
+  "csvLabel": "CSV",
+  "csvDescription": "De CSV-uitvoer wordt bijgewerkt zodra de invoer geldige JSON bevat.",
+  "csvEmptyDescription": "Plak links geldige JSON om hier een voorbeeld van de geconverteerde CSV te bekijken.",
+  "invalidJsonLabel": "Ongeldige JSON",
+  "downloadCsvLabel": "CSV downloaden",
+  "copyCsvLabel": "CSV kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "optionsLabel": "Opties",
+  "optionsDescription": "Pas het scheidingsteken, aanhalingsteken, de kopregel en formule-escaping aan voordat je het geconverteerde CSV kopieert of downloadt.",
+  "delimiterLabel": "Scheidingsteken",
+  "quoteCharLabel": "Aanhalingsteken",
+  "includeHeaderRowLabel": "Koprij opnemen",
+  "escapeFormulaeLabel": "Excel-formules escapen"
+}

@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Import from file",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Paste JSON directly or import a .json or .txt file from this device.",
+  "jsonPlaceholder": "Paste JSON array of objects here...",
+  "csvLabel": "CSV",
+  "csvDescription": "CSV output updates as soon as the input contains valid JSON.",
+  "csvEmptyDescription": "Paste valid JSON on the left to preview the converted CSV here.",
+  "invalidJsonLabel": "Invalid JSON",
+  "downloadCsvLabel": "Download CSV",
+  "copyCsvLabel": "Copy CSV",
+  "copiedLabel": "Copied",
+  "optionsLabel": "Options",
+  "optionsDescription": "Adjust delimiter, quote, header, and formula escaping before you copy or download the converted CSV.",
+  "delimiterLabel": "Delimiter",
+  "quoteCharLabel": "Quote",
+  "includeHeaderRowLabel": "Include header row",
+  "escapeFormulaeLabel": "Escape Excel formulae"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JSON → CSV 변환기",
+  "description": "JSON을 CSV로 변환합니다. JSON 붙여넣기 또는 파일 가져오기; 옵션 조정, 미리보기, 복사 및 다운로드."
+}

@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Импорт из файла",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Вставьте JSON напрямую или импортируйте файл .json или .txt с этого устройства.",
+  "jsonPlaceholder": "Вставьте здесь массив объектов JSON...",
+  "csvLabel": "CSV",
+  "csvDescription": "Вывод CSV обновляется сразу, как только во входных данных появляется корректный JSON.",
+  "csvEmptyDescription": "Вставьте слева корректный JSON, чтобы увидеть здесь предварительный просмотр преобразованного CSV.",
+  "invalidJsonLabel": "Некорректный JSON",
+  "downloadCsvLabel": "Скачать CSV",
+  "copyCsvLabel": "Скопировать CSV",
+  "copiedLabel": "Скопировано",
+  "optionsLabel": "Параметры",
+  "optionsDescription": "Перед копированием или загрузкой преобразованного CSV настройте разделитель, кавычки, строку заголовков и экранирование формул.",
+  "delimiterLabel": "Разделитель",
+  "quoteCharLabel": "Кавычка",
+  "includeHeaderRowLabel": "Включить строку заголовков",
+  "escapeFormulaeLabel": "Экранировать формулы Excel"
+}

@@ -1,0 +1,19 @@
+{
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "jsonLabel": "JSON",
+  "jsonDescription": "JSON'u doğrudan yapıştırın veya bu cihazdan bir .json ya da .txt dosyası içe aktarın.",
+  "jsonPlaceholder": "Buraya JSON nesne dizisini yapıştırın...",
+  "csvLabel": "CSV",
+  "csvDescription": "Girdi geçerli JSON içerir içermez CSV çıktısı güncellenir.",
+  "csvEmptyDescription": "Dönüştürülen CSV önizlemesini burada görmek için sol tarafa geçerli JSON yapıştırın.",
+  "invalidJsonLabel": "Geçersiz JSON",
+  "downloadCsvLabel": "CSV İndir",
+  "copyCsvLabel": "CSV'u kopyala",
+  "copiedLabel": "Kopyalandı",
+  "optionsLabel": "Seçenekler",
+  "optionsDescription": "Dönüştürülen CSV’yi kopyalamadan veya indirmeden önce ayırıcıyı, tırnak karakterini, başlık satırını ve formül kaçışını ayarlayın.",
+  "delimiterLabel": "Ayırıcı",
+  "quoteCharLabel": "Tırnak",
+  "includeHeaderRowLabel": "Başlık satırını dahil et",
+  "escapeFormulaeLabel": "Excel formüllerini kaçışla"
+}
