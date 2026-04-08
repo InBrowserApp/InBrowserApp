@@ -1,0 +1,4 @@
+{
+  "name": "CSV → JSON-omformer",
+  "description": "Konverter CSV til JSON. Lim inn CSV eller importer en fil; juster alternativer (overskrifter, skilletegn, trim osv.), forhåndsvis, kopier og last ned."
+}

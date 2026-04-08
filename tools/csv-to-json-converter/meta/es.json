@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor CSV → JSON",
+  "description": "Convierte CSV a JSON. Pega CSV o importa un archivo; ajusta opciones (encabezados, delimitador, trim, etc.), previsualiza, copia y descarga."
+}

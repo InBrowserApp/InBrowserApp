@@ -1,0 +1,4 @@
+{
+  "name": "CSV → JSON-converter",
+  "description": "Zet CSV om naar JSON. Plak CSV of importeer een bestand; stel opties (headers, scheidingsteken, trim, enz.) in, bekijk, kopieer en download."
+}

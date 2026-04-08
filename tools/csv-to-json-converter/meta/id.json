@@ -1,0 +1,4 @@
+{
+  "name": "Pengonversi CSV → JSON",
+  "description": "Konversi CSV ke JSON. Tempel CSV atau impor berkas; sesuaikan opsi (header, delimiter, trim, dll.), pratinjau, salin, dan unduh."
+}
