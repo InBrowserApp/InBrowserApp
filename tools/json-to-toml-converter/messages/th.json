@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "downloadTomlLabel": "ดาวน์โหลด TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "วาง JSON โดยตรงหรือนำเข้าไฟล์ .json หรือ .txt จากอุปกรณ์นี้",
+  "tomlLabel": "TOML",
+  "tomlDescription": "เอาต์พุต TOML จะอัปเดตทันทีเมื่ออินพุตมี JSON ที่ถูกต้อง",
+  "tomlEmptyDescription": "วาง JSON ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง TOML ที่แปลงแล้วที่นี่",
+  "jsonPlaceholder": "วาง JSON ที่นี่...",
+  "invalidJsonLabel": "JSON ไม่ถูกต้อง",
+  "copyTomlLabel": "คัดลอก TOML",
+  "copiedLabel": "คัดลอกแล้ว"
+}

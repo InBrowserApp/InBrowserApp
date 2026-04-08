@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Nhập từ tệp",
+  "downloadTomlLabel": "Tải TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Dán JSON trực tiếp hoặc nhập tệp .json hay .txt từ thiết bị này.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "Đầu ra TOML sẽ cập nhật ngay khi đầu vào chứa JSON hợp lệ.",
+  "tomlEmptyDescription": "Dán JSON hợp lệ ở bên trái để xem trước TOML đã chuyển đổi tại đây.",
+  "jsonPlaceholder": "Dán JSON vào đây...",
+  "invalidJsonLabel": "JSON không hợp lệ",
+  "copyTomlLabel": "Sao chép TOML",
+  "copiedLabel": "Đã sao chép"
+}

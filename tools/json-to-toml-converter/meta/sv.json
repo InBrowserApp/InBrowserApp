@@ -1,0 +1,4 @@
+{
+  "name": "JSON → TOML-omvandlare",
+  "description": "Konvertera JSON till TOML. Klistra in JSON eller importera en fil; förhandsgranska, kopiera och ladda ner."
+}

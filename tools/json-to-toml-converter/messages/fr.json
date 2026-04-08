@@ -1,0 +1,13 @@
+{
+  "importFromFileLabel": "Importer depuis un fichier",
+  "downloadTomlLabel": "Télécharger le TOML",
+  "jsonLabel": "JSON",
+  "jsonDescription": "Collez du JSON directement ou importez un fichier .json ou .txt depuis cet appareil.",
+  "tomlLabel": "TOML",
+  "tomlDescription": "La sortie TOML se met à jour dès que l'entrée contient un JSON valide.",
+  "tomlEmptyDescription": "Collez un JSON valide à gauche pour prévisualiser ici le TOML converti.",
+  "jsonPlaceholder": "Collez du JSON ici...",
+  "invalidJsonLabel": "JSON invalide",
+  "copyTomlLabel": "Copier le TOML",
+  "copiedLabel": "Copié"
+}
