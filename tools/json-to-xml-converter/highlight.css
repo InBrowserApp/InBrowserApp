@@ -1,0 +1,47 @@
+.xml-highlight-surface {
+  overflow: auto;
+}
+
+.xml-highlight {
+  min-height: 20rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.xml-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.xml-highlight-empty {
+  min-height: 20rem;
+  width: 100%;
+}
+
+.xml-highlight .hljs-comment,
+.xml-highlight .hljs-punctuation {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.xml-highlight .hljs-tag,
+.xml-highlight .hljs-name,
+.xml-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.xml-highlight .hljs-string {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.xml-highlight .hljs-symbol,
+.xml-highlight .hljs-meta {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}
+
+.xml-highlight .hljs-number {
+  color: color-mix(in oklab, var(--chart-3) 80%, var(--foreground));
+}

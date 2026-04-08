@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-to-xml-converter",
+    language: "ar",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "de",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "en",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "es",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "fr",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "he",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "hi",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "id",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "it",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "ja",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "ko",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "ms",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "nl",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "no",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "pl",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "pt",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "ru",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "sv",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "th",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "tr",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "vi",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-xml-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "json-to-yaml-converter",
     language: "ar",
   },
