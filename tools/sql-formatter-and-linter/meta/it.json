@@ -1,0 +1,4 @@
+{
+  "name": "SQL Formatter & Linter",
+  "description": "Formatta query SQL nel browser, regola le opzioni di layout in base al dialect e segnala i problemi di lint più comuni prima di copiare o scaricare il risultato."
+}

@@ -58,6 +58,7 @@ catalog:
   radix-ui: ^1.4.3
   react: ^19.2.4
   react-dom: ^19.2.4
+  sql-formatter: ^15.7.2
   shadcn: ^4.1.2
   smol-toml: ^1.4.1
   xml-js: ^1.6.11

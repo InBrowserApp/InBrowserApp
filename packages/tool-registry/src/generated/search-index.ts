@@ -1820,6 +1820,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "sql-formatter-and-linter",
+    category: "developer",
+    icon: "braces",
+    tags: ["code", "sql", "formatter", "linter", "query", "database"],
+    locales: {
+      ar: {
+        name: "منسق SQL ومدقق",
+        description:
+          "نسّق استعلامات SQL في متصفحك، واضبط قواعد التنسيق الحساسة للغة، واكتشف مشكلات التدقيق الشائعة قبل نسخ النتيجة أو تنزيلها.",
+      },
+      de: {
+        name: "SQL-Formatter & Linter",
+        description:
+          "SQL-Abfragen direkt im Browser formatieren, layoutbezogene Regeln mit Dialektunterstützung anpassen und gängige Lint-Probleme erkennen, bevor du das Ergebnis kopierst oder herunterlädst.",
+      },
+      en: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Format SQL queries in your browser, tune dialect-aware layout rules, and catch common lint issues before you copy or download the result.",
+      },
+      es: {
+        name: "Formateador y linter de SQL",
+        description:
+          "Formatea consultas SQL en tu navegador, ajusta reglas de diseño según el dialecto y detecta problemas comunes de lint antes de copiar o descargar el resultado.",
+      },
+      fr: {
+        name: "Formateur et linter SQL",
+        description:
+          "Formatez des requêtes SQL dans votre navigateur, ajustez les règles de mise en page selon le dialecte et détectez les problèmes de lint courants avant de copier ou télécharger le résultat.",
+      },
+      he: {
+        name: "מעצב SQL ובודק תקינות",
+        description:
+          "עצב שאילתות SQL בדפדפן, כוונן כללי פריסה תלויי דיאלקט, וזיהוי בעיות lint נפוצות לפני שאתה מעתיק או מוריד את התוצאה.",
+      },
+      hi: {
+        name: "SQL फ़ॉर्मैटर और लिंटर",
+        description:
+          "अपने ब्राउज़र में SQL क्वेरी को फ़ॉर्मैट करें, dialect-aware layout rules को समायोजित करें, और परिणाम को कॉपी या डाउनलोड करने से पहले सामान्य lint समस्याएँ पकड़ें।",
+      },
+      id: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Format kueri SQL di browser Anda, sesuaikan aturan tata letak yang peka terhadap dialek, dan tangkap masalah linting umum sebelum Anda menyalin atau mengunduh hasilnya.",
+      },
+      it: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Formatta query SQL nel browser, regola le opzioni di layout in base al dialect e segnala i problemi di lint più comuni prima di copiare o scaricare il risultato.",
+      },
+      ja: {
+        name: "SQL フォーマッタ & リンター",
+        description:
+          "ブラウザ内で SQL クエリを整形し、方言に応じたレイアウトルールを調整し、結果をコピーまたはダウンロードする前に一般的な lint の問題を検出します。",
+      },
+      ko: {
+        name: "SQL Formatter & Linter",
+        description:
+          "브라우저에서 SQL 쿼리를 포맷하고, 방언 인식 레이아웃 규칙을 조정하며, 결과를 복사하거나 다운로드하기 전에 흔한 lint 문제를 찾아냅니다.",
+      },
+      ms: {
+        name: "Pemformat dan Linter SQL",
+        description:
+          "Format pertanyaan SQL dalam pelayar anda, laraskan peraturan susun atur yang peka terhadap dialek, dan kesan isu lint biasa sebelum anda menyalin atau memuat turun hasilnya.",
+      },
+      nl: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Formatteer SQL-query's in je browser, stem dialectbewuste lay-outregels af en vang veelvoorkomende lintproblemen op voordat je het resultaat kopieert of downloadt.",
+      },
+      no: {
+        name: "SQL-formatter og linter",
+        description:
+          "Formater SQL-spørringer i nettleseren, juster dialektbevisste oppsettregler, og fang opp vanlige linter-feil før du kopierer eller laster ned resultatet.",
+      },
+      pl: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Formatuj zapytania SQL w przeglądarce, dostosowuj reguły układu zależne od dialektu i wykrywaj typowe problemy lintowania, zanim skopiujesz lub pobierzesz wynik.",
+      },
+      pt: {
+        name: "Formatador e Linter de SQL",
+        description:
+          "Formate consultas SQL no navegador, ajuste regras de layout sensíveis ao dialeto e detecte problemas comuns de lint antes de copiar ou baixar o resultado.",
+      },
+      ru: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Форматируйте SQL-запросы прямо в браузере, настраивайте правила компоновки с учётом диалекта и находите распространённые проблемы lint до копирования или скачивания результата.",
+      },
+      sv: {
+        name: "SQL-formaterare och linter",
+        description:
+          "Formatera SQL-frågor i webbläsaren, finjustera dialektmedvetna layoutregler och fånga vanliga lint-problem innan du kopierar eller laddar ner resultatet.",
+      },
+      th: {
+        name: "SQL Formatter & Linter",
+        description:
+          "จัดรูปแบบคำสั่ง SQL ในเบราว์เซอร์ของคุณ ปรับกฎการจัดวางให้เหมาะกับแต่ละ dialect และตรวจจับปัญหา lint ทั่วไปก่อนที่คุณจะคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "SQL Biçimlendirici ve Linter",
+        description:
+          "SQL sorgularını tarayıcınızda biçimlendirin, diyalekt farkındalığına sahip yerleşim kurallarını ayarlayın ve sonucu kopyalamadan ya da indirmeden önce yaygın lint hatalarını yakalayın.",
+      },
+      vi: {
+        name: "SQL Formatter & Linter",
+        description:
+          "Định dạng truy vấn SQL ngay trong trình duyệt, tinh chỉnh các quy tắc bố cục theo dialect và phát hiện các lỗi lint phổ biến trước khi bạn sao chép hoặc tải xuống kết quả.",
+      },
+      "zh-CN": {
+        name: "SQL 格式化器与 Linter",
+        description:
+          "在浏览器中格式化 SQL 查询，调整与方言相关的布局规则，并在复制或下载结果前捕获常见的 lint 问题。",
+      },
+      "zh-TW": {
+        name: "SQL 格式化與 Linter",
+        description:
+          "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  {
     slug: "toml-to-json-converter",
     category: "json",
     icon: "file-json-2",

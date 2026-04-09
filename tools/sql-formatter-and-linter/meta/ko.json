@@ -1,0 +1,4 @@
+{
+  "name": "SQL Formatter & Linter",
+  "description": "브라우저에서 SQL 쿼리를 포맷하고, 방언 인식 레이아웃 규칙을 조정하며, 결과를 복사하거나 다운로드하기 전에 흔한 lint 문제를 찾아냅니다."
+}

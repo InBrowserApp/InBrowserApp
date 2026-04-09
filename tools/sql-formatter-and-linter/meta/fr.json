@@ -1,0 +1,4 @@
+{
+  "name": "Formateur et linter SQL",
+  "description": "Formatez des requêtes SQL dans votre navigateur, ajustez les règles de mise en page selon le dialecte et détectez les problèmes de lint courants avant de copier ou télécharger le résultat."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Formateador y linter de SQL",
+  "description": "Formatea consultas SQL en tu navegador, ajusta reglas de diseño según el dialecto y detecta problemas comunes de lint antes de copiar o descargar el resultado."
+}
