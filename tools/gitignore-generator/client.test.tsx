@@ -123,6 +123,7 @@ describe("GitignoreGeneratorClient", () => {
     })
 
     expect(getPreviewArea().textContent).toContain("node_modules/")
+    expect(document.querySelector(".gitignore-highlight.hljs")).toBeTruthy()
     expect(window.localStorage.getItem(STORAGE_KEYS.selectedTemplates)).toBe(
       JSON.stringify(["Node"])
     )

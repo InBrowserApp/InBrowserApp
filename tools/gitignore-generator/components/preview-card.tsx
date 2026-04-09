@@ -14,6 +14,7 @@ import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import { Download } from "@workspace/ui/icons"
 
 import type { GitignoreGeneratorMessages } from "../client/types"
+import { HighlightedGitignore } from "./highlighted-gitignore"
 
 type PreviewCardProps = Readonly<{
   downloadUrl: string | null
@@ -34,27 +35,11 @@ function PreviewCard({
       </CardHeader>
       <ToolPanelCardContent>
         <ScrollArea className="h-[28rem] overflow-hidden rounded-lg border border-input bg-transparent sm:h-[32rem]">
-          {generatedContent ? (
-            <pre
-              role="textbox"
-              aria-label={messages.resultLabel}
-              aria-multiline="true"
-              aria-readonly="true"
-              className="min-h-full min-w-max p-3 font-mono text-sm leading-6 whitespace-pre"
-            >
-              {generatedContent}
-            </pre>
-          ) : (
-            <div
-              role="textbox"
-              aria-label={messages.resultLabel}
-              aria-multiline="true"
-              aria-readonly="true"
-              className="flex min-h-full p-3 font-mono text-sm leading-6 text-muted-foreground"
-            >
-              {messages.previewPlaceholder}
-            </div>
-          )}
+          <HighlightedGitignore
+            ariaLabel={messages.resultLabel}
+            placeholder={messages.previewPlaceholder}
+            value={generatedContent}
+          />
         </ScrollArea>
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-end gap-3 border-t">
