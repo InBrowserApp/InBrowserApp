@@ -1,4 +1,4 @@
-# Was ist .gitignore?
+## Was ist .gitignore?
 
 Eine .gitignore-Datei gibt absichtlich nicht verfolgte Dateien an, die Git ignorieren soll. Bereits von Git verfolgte Dateien sind nicht betroffen.
 

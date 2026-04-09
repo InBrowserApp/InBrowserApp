@@ -1,4 +1,4 @@
-# Vad är .gitignore?
+## Vad är .gitignore?
 
 En .gitignore-fil specificerar avsiktligt ospårade filer som Git ska ignorera. Filer som redan spåras av Git påverkas inte.
 

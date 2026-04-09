@@ -1,4 +1,4 @@
-# .gitignore nedir?
+## .gitignore nedir?
 
 Bir .gitignore dosyası, Git'in yoksayması gereken kasıtlı olarak izlenmeyen dosyaları belirtir. Zaten Git tarafından izlenen dosyalar etkilenmez.
 

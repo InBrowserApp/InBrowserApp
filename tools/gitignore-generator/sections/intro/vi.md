@@ -1,4 +1,4 @@
-# .gitignore là gì?
+## .gitignore là gì?
 
 Tệp .gitignore chỉ định các tệp cố ý không được theo dõi mà Git nên bỏ qua. Các tệp đã được Git theo dõi không bị ảnh hưởng.
 

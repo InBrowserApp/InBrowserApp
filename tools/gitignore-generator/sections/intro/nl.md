@@ -1,4 +1,4 @@
-# Wat is .gitignore?
+## Wat is .gitignore?
 
 Een .gitignore-bestand specificeert opzettelijk niet-gevolgde bestanden die Git moet negeren. Bestanden die al door Git worden gevolgd, worden niet beïnvloed.
 

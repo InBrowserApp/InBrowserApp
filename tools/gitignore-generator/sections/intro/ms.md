@@ -1,4 +1,4 @@
-# Apakah .gitignore?
+## Apakah .gitignore?
 
 Fail .gitignore menentukan fail yang sengaja tidak dijejaki yang Git harus abaikan. Fail yang sudah dijejaki oleh Git tidak terjejas.
 

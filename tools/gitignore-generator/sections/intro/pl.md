@@ -1,4 +1,4 @@
-# Czym jest .gitignore?
+## Czym jest .gitignore?
 
 Plik .gitignore określa celowo nieśledzone pliki, które Git powinien ignorować. Pliki już śledzone przez Git nie są dotknięte.
 

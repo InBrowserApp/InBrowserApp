@@ -1,4 +1,4 @@
-# .gitignore란?
+## .gitignore란?
 
 .gitignore 파일은 Git이 무시해야 하는 의도적으로 추적되지 않는 파일을 지정합니다. 이미 Git에서 추적 중인 파일은 영향을 받지 않습니다.
 

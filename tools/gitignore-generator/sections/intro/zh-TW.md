@@ -1,4 +1,4 @@
-# 什麼是 .gitignore？
+## 什麼是 .gitignore？
 
 .gitignore 檔案指定了 Git 應該忽略的未追蹤檔案。已被 Git 追蹤的檔案不受影響。
 
