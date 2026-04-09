@@ -23,6 +23,7 @@ import {
 } from "@workspace/ui/components/ui/input-group"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Search } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 
 import type { GitignoreGeneratorMessages } from "../client/types"
 import type {
@@ -195,7 +196,13 @@ function TemplateSelectionCard({
                       {section.templates.length}
                     </Badge>
                   </div>
-                  <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  <div
+                    className={cn(
+                      "grid gap-3 md:grid-cols-2 xl:grid-cols-3",
+                      section.category === "language" &&
+                        "max-h-96 overflow-y-auto pr-1"
+                    )}
+                  >
                     {section.templates.map((template) => {
                       const isSelected = selectedTemplates.includes(
                         template.name
@@ -224,9 +231,10 @@ function TemplateSelectionCard({
                             />
                             <Label
                               htmlFor={controlId}
-                              className="min-w-0 cursor-pointer items-start"
+                              title={template.name}
+                              className="min-w-0 flex-1 cursor-pointer items-start"
                             >
-                              <span className="leading-5 break-all">
+                              <span className="block truncate leading-5">
                                 {template.name}
                               </span>
                             </Label>

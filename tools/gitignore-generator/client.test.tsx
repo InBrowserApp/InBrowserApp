@@ -22,6 +22,12 @@ vi.mock("./template-catalog", () => ({
       content: "__pycache__/\n.venv/",
     },
     {
+      name: "MetaProgrammingSystem",
+      path: "./node_modules/gitignore/MetaProgrammingSystem.gitignore",
+      category: "language",
+      content: ".mps/",
+    },
+    {
       name: "Windows",
       path: "./node_modules/gitignore/Global/Windows.gitignore",
       category: "global",
@@ -134,6 +140,12 @@ describe("GitignoreGeneratorClient", () => {
     expect(screen.getByText("Laravel")).toBeTruthy()
     expect(screen.queryByLabelText("Node")).toBeNull()
     expect(screen.queryByLabelText("Windows")).toBeNull()
+  })
+
+  test("keeps the full template name in the truncated label title", () => {
+    render(<GitignoreGeneratorClient messages={messages} />)
+
+    expect(screen.getByTitle("MetaProgrammingSystem")).toBeTruthy()
   })
 
   test("shows an empty search state when no templates match", () => {
