@@ -23,8 +23,6 @@ import {
 } from "@workspace/ui/components/ui/input-group"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Search } from "@workspace/ui/icons"
-import { cn } from "@workspace/ui/lib/utils"
-
 import type { GitignoreGeneratorMessages } from "../client/types"
 import type {
   GitignoreTemplate,
@@ -184,68 +182,66 @@ function TemplateSelectionCard({
 
         <section className="flex flex-col gap-4">
           {hasVisibleTemplates ? (
-            categorySections.map((section) =>
-              section.templates.length > 0 ? (
-                <div
-                  key={section.category}
-                  className="rounded-xl border bg-card/60 p-4"
-                >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <h2 className="text-sm font-medium">{section.label}</h2>
-                    <Badge variant="secondary">
-                      {section.templates.length}
-                    </Badge>
-                  </div>
-                  <div
-                    className={cn(
-                      "grid gap-3 md:grid-cols-2 xl:grid-cols-3",
-                      section.category === "language" &&
-                        "max-h-96 overflow-y-auto pr-1"
-                    )}
-                  >
-                    {section.templates.map((template) => {
-                      const isSelected = selectedTemplates.includes(
-                        template.name
-                      )
-                      const controlId = `gitignore-template-${template.name.replace(
-                        /[^a-z0-9]+/giu,
-                        "-"
-                      )}`
+            <div className="max-h-[40rem] overflow-y-auto pr-1">
+              <div className="flex flex-col gap-4">
+                {categorySections.map((section) =>
+                  section.templates.length > 0 ? (
+                    <div
+                      key={section.category}
+                      className="rounded-xl border bg-card/60 p-4"
+                    >
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <h2 className="text-sm font-medium">{section.label}</h2>
+                        <Badge variant="secondary">
+                          {section.templates.length}
+                        </Badge>
+                      </div>
+                      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                        {section.templates.map((template) => {
+                          const isSelected = selectedTemplates.includes(
+                            template.name
+                          )
+                          const controlId = `gitignore-template-${template.name.replace(
+                            /[^a-z0-9]+/giu,
+                            "-"
+                          )}`
 
-                      return (
-                        <div
-                          key={template.path}
-                          className={`rounded-lg border px-3 py-2 ${
-                            isSelected
-                              ? "border-primary bg-accent/40"
-                              : "border-border"
-                          }`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <Checkbox
-                              id={controlId}
-                              checked={isSelected}
-                              onCheckedChange={() => {
-                                onTemplateToggle(template.name)
-                              }}
-                            />
-                            <Label
-                              htmlFor={controlId}
-                              title={template.name}
-                              className="min-w-0 flex-1 cursor-pointer items-start"
+                          return (
+                            <div
+                              key={template.path}
+                              className={`rounded-lg border px-3 py-2 ${
+                                isSelected
+                                  ? "border-primary bg-accent/40"
+                                  : "border-border"
+                              }`}
                             >
-                              <span className="block truncate leading-5">
-                                {template.name}
-                              </span>
-                            </Label>
-                          </div>
-                        </div>
-                      )
-                    })}
-                  </div>
-                </div>
-              ) : null
-            )
+                              <div className="flex items-start gap-3">
+                                <Checkbox
+                                  id={controlId}
+                                  checked={isSelected}
+                                  onCheckedChange={() => {
+                                    onTemplateToggle(template.name)
+                                  }}
+                                />
+                                <Label
+                                  htmlFor={controlId}
+                                  title={template.name}
+                                  className="min-w-0 flex-1 cursor-pointer items-start"
+                                >
+                                  <span className="block truncate leading-5">
+                                    {template.name}
+                                  </span>
+                                </Label>
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ) : null
+                )}
+              </div>
+            </div>
           ) : (
             <p className="text-sm text-muted-foreground">
               {messages.noTemplatesFoundLabel}
