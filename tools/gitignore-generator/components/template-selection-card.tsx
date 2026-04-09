@@ -183,15 +183,15 @@ function TemplateSelectionCard({
 
         <section className="flex flex-col gap-4">
           {hasVisibleTemplates ? (
-            <ScrollArea className="h-[32rem] rounded-xl border bg-card/30">
-              <div className="flex flex-col gap-4 p-1 pr-3">
+            <ScrollArea className="h-[28rem] rounded-xl border">
+              <div className="flex flex-col gap-6 p-3 pr-4">
                 {categorySections.map((section) =>
                   section.templates.length > 0 ? (
-                    <div
+                    <section
                       key={section.category}
-                      className="rounded-xl border bg-card/60 p-4"
+                      className="flex flex-col gap-4"
                     >
-                      <div className="mb-4 flex items-center justify-between gap-3">
+                      <div className="flex items-center justify-between gap-3">
                         <h2 className="text-sm font-medium">{section.label}</h2>
                         <Badge variant="secondary">
                           {section.templates.length}
@@ -238,7 +238,7 @@ function TemplateSelectionCard({
                           )
                         })}
                       </div>
-                    </div>
+                    </section>
                   ) : null
                 )}
               </div>
