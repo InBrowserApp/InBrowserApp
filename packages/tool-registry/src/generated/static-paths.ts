@@ -554,6 +554,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-diff-path",
+    language: "ar",
+  },
+  {
+    slug: "json-diff-path",
+    language: "de",
+  },
+  {
+    slug: "json-diff-path",
+    language: "en",
+  },
+  {
+    slug: "json-diff-path",
+    language: "es",
+  },
+  {
+    slug: "json-diff-path",
+    language: "fr",
+  },
+  {
+    slug: "json-diff-path",
+    language: "he",
+  },
+  {
+    slug: "json-diff-path",
+    language: "hi",
+  },
+  {
+    slug: "json-diff-path",
+    language: "id",
+  },
+  {
+    slug: "json-diff-path",
+    language: "it",
+  },
+  {
+    slug: "json-diff-path",
+    language: "ja",
+  },
+  {
+    slug: "json-diff-path",
+    language: "ko",
+  },
+  {
+    slug: "json-diff-path",
+    language: "ms",
+  },
+  {
+    slug: "json-diff-path",
+    language: "nl",
+  },
+  {
+    slug: "json-diff-path",
+    language: "no",
+  },
+  {
+    slug: "json-diff-path",
+    language: "pl",
+  },
+  {
+    slug: "json-diff-path",
+    language: "pt",
+  },
+  {
+    slug: "json-diff-path",
+    language: "ru",
+  },
+  {
+    slug: "json-diff-path",
+    language: "sv",
+  },
+  {
+    slug: "json-diff-path",
+    language: "th",
+  },
+  {
+    slug: "json-diff-path",
+    language: "tr",
+  },
+  {
+    slug: "json-diff-path",
+    language: "vi",
+  },
+  {
+    slug: "json-diff-path",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-diff-path",
+    language: "zh-TW",
+  },
+  {
     slug: "json-formatter",
     language: "ar",
   },

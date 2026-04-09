@@ -1,0 +1,4 @@
+{
+  "name": "ตัวเปรียบเทียบเส้นทาง JSON",
+  "description": "เปรียบเทียบเอกสาร JSON สองชุดและสร้าง diff ตามเส้นทาง พร้อมเอาต์พุต JSON Pointer และ JSON Patch ตาม RFC 6902"
+}

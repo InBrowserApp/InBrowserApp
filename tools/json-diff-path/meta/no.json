@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "Sammenlign to JSON-dokumenter og generer sti-baserte diff-resultater med JSON Pointer-stier og RFC 6902 JSON Patch-utdata."
+}

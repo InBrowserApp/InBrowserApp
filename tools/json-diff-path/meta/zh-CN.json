@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "比较两个 JSON 文档，并生成基于路径的差异，同时输出 JSON Pointer 路径和符合 RFC 6902 的 JSON Patch。"
+}

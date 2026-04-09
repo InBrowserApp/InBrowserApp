@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "두 JSON 문서를 비교해 JSON Pointer 경로와 RFC 6902 JSON Patch 출력을 포함한 경로 기반 diff를 생성합니다."
+}

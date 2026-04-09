@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "Vergelijk twee JSON-documenten en genereer padgebaseerde verschillen met JSON Pointer-paden en RFC 6902 JSON Patch-uitvoer."
+}

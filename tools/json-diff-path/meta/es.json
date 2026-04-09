@@ -1,0 +1,4 @@
+{
+  "name": "Ruta de diferencias JSON",
+  "description": "Compara dos documentos JSON y genera diferencias por ruta con rutas JSON Pointer y salida JSON Patch RFC 6902."
+}
