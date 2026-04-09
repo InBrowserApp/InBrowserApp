@@ -136,7 +136,7 @@ function GitignoreGeneratorClient({ messages }: GitignoreGeneratorClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(22rem,0.75fr)] xl:items-start">
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(22rem,0.75fr)] xl:items-stretch">
       <TemplateSelectionCard
         groupedTemplates={groupedTemplates}
         messages={messages}

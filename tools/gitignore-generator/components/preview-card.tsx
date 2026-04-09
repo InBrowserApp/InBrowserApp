@@ -25,21 +25,21 @@ function PreviewCard({
   messages,
 }: PreviewCardProps) {
   return (
-    <Card className="h-full">
+    <Card className="flex h-full flex-col">
       <CardHeader className="border-b">
         <CardTitle>{messages.resultLabel}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-1">
         <Textarea
           value={generatedContent}
           readOnly
           placeholder={messages.previewPlaceholder}
           aria-label={messages.resultLabel}
-          className="min-h-96 resize-none font-mono text-sm leading-6"
+          className="min-h-96 flex-1 resize-none font-mono text-sm leading-6"
         />
       </CardContent>
-      <CardFooter className="justify-end gap-3 border-t">
+      <CardFooter className="mt-auto justify-end gap-3 border-t">
         <ToolCopyButton
           value={generatedContent}
           copyLabel={messages.copyResultLabel}
