@@ -33,14 +33,14 @@ function PreviewCard({
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent>
-        <ScrollArea className="min-h-96 flex-1 rounded-lg border border-input bg-transparent">
+        <ScrollArea className="h-[28rem] rounded-lg border border-input bg-transparent xl:h-full">
           {generatedContent ? (
             <pre
               role="textbox"
               aria-label={messages.resultLabel}
               aria-multiline="true"
               aria-readonly="true"
-              className="min-h-96 min-w-max p-3 font-mono text-sm leading-6 whitespace-pre"
+              className="min-h-full min-w-max p-3 font-mono text-sm leading-6 whitespace-pre"
             >
               {generatedContent}
             </pre>
@@ -50,7 +50,7 @@ function PreviewCard({
               aria-label={messages.resultLabel}
               aria-multiline="true"
               aria-readonly="true"
-              className="min-h-96 p-3 font-mono text-sm leading-6 text-muted-foreground"
+              className="flex min-h-full p-3 font-mono text-sm leading-6 text-muted-foreground"
             >
               {messages.previewPlaceholder}
             </div>

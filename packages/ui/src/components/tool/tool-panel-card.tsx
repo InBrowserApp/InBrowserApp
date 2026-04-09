@@ -15,7 +15,10 @@ function ToolPanelCardContent({
   ...props
 }: React.ComponentProps<typeof CardContent>) {
   return (
-    <CardContent className={cn("flex flex-1 flex-col", className)} {...props} />
+    <CardContent
+      className={cn("flex min-h-0 flex-1 flex-col", className)}
+      {...props}
+    />
   )
 }
 
