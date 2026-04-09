@@ -237,7 +237,9 @@ paths:
       expect(getInput().value).toContain("Pet API")
     })
 
-    expect(getOutput().textContent).toContain("Pet")
+    await waitFor(() => {
+      expect(getOutput().textContent).toContain("Pet")
+    })
   })
 
   test("fetches an OpenAPI document from a URL", async () => {
