@@ -28,6 +28,7 @@ import { Textarea } from "@workspace/ui/components/ui/textarea"
 import {
   Braces,
   FileText,
+  FileJson2,
   Globe,
   LoaderCircle,
   RefreshCcw,
@@ -153,7 +154,7 @@ function OpenApiInputCard({
                 onOpenApiChange(event.target.value)
               }}
               placeholder={messages.openApiPlaceholder}
-              className="min-h-80 flex-1 resize-y font-mono text-sm"
+              className="min-h-72 flex-1 resize-y font-mono text-sm"
             />
           </Field>
         </FieldGroup>
@@ -161,6 +162,7 @@ function OpenApiInputCard({
       <ToolPanelCardFooter className="flex flex-wrap justify-between gap-3 border-t">
         <div className="flex flex-wrap gap-3">
           <Button type="button" variant="ghost" size="sm" onClick={onUseSample}>
+            <FileJson2 data-icon="inline-start" />
             {messages.useSampleLabel}
           </Button>
           <Button type="button" variant="ghost" size="sm" onClick={onClear}>
