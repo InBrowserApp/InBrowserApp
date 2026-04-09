@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI → TypeScript",
+  "description": "OpenAPI 3.x ドキュメントから、よく使う openapi-typescript の生成オプション付きで TypeScript 型をブラウザ内だけで変換します。"
+}

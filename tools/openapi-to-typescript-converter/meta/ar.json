@@ -1,0 +1,4 @@
+{
+  "name": "محول OpenAPI إلى TypeScript",
+  "description": "حوّل مستندات OpenAPI 3.x إلى أنواع TypeScript مباشرة في المتصفح مع خيارات التوليد الشائعة في openapi-typescript."
+}

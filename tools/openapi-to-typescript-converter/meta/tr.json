@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI'den TypeScript'e Dönüştürücü",
+  "description": "OpenAPI 3.x belgelerini tarayıcınızda tamamen TypeScript türlerine dönüştürün; yaygın openapi-typescript üretim seçenekleriyle."
+}

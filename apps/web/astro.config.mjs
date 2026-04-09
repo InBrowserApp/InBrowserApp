@@ -5,6 +5,7 @@ import { defineConfig } from "astro/config"
 import mdx from "@astrojs/mdx"
 import react from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
+import { fileURLToPath } from "node:url"
 
 import {
   DEFAULT_SITE_LANGUAGE,
@@ -15,6 +16,13 @@ import {
 export default defineConfig({
   site: "https://inbrowser.app",
   vite: {
+    resolve: {
+      alias: {
+        "node:perf_hooks": fileURLToPath(
+          new URL("./src/shims/perf-hooks.ts", import.meta.url)
+        ),
+      },
+    },
     plugins: [tailwindcss()],
   },
   integrations: [

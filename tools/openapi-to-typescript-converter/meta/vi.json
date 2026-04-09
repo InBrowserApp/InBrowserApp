@@ -1,0 +1,4 @@
+{
+  "name": "Bộ chuyển OpenAPI sang TypeScript",
+  "description": "Chuyển tài liệu OpenAPI 3.x thành kiểu TypeScript ngay trong trình duyệt với các tùy chọn tạo openapi-typescript phổ biến."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI til TypeScript-konvertering",
+  "description": "Konverter OpenAPI 3.x-dokumenter til TypeScript-typer helt i nettleseren, med vanlige openapi-typescript-innstillinger."
+}

@@ -1697,6 +1697,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "openapi-to-typescript-converter",
+    category: "developer",
+    icon: "braces",
+    tags: ["code", "openapi", "typescript", "schema", "converter", "api"],
+    locales: {
+      ar: {
+        name: "محول OpenAPI إلى TypeScript",
+        description:
+          "حوّل مستندات OpenAPI 3.x إلى أنواع TypeScript مباشرة في المتصفح مع خيارات التوليد الشائعة في openapi-typescript.",
+      },
+      de: {
+        name: "OpenAPI-zu-TypeScript-Konverter",
+        description:
+          "OpenAPI-3.x-Dokumente direkt im Browser mit gängigen openapi-typescript-Optionen in TypeScript-Typen umwandeln.",
+      },
+      en: {
+        name: "OpenAPI to TypeScript Converter",
+        description:
+          "Convert OpenAPI 3.x documents into TypeScript types entirely in your browser with common openapi-typescript generation options.",
+      },
+      es: {
+        name: "Convertidor de OpenAPI a TypeScript",
+        description:
+          "Convierte documentos OpenAPI 3.x en tipos de TypeScript directamente en tu navegador con las opciones de generación habituales de openapi-typescript.",
+      },
+      fr: {
+        name: "Convertisseur OpenAPI vers TypeScript",
+        description:
+          "Convertissez des documents OpenAPI 3.x en types TypeScript directement dans votre navigateur, avec des options courantes de génération openapi-typescript.",
+      },
+      he: {
+        name: "ממיר OpenAPI ל-TypeScript",
+        description:
+          "המרת מסמכי OpenAPI 3.x לסוגי TypeScript ישירות בדפדפן, עם אפשרויות נפוצות של openapi-typescript.",
+      },
+      hi: {
+        name: "OpenAPI से TypeScript कन्वर्टर",
+        description:
+          "ब्राउज़र में OpenAPI 3.x दस्तावेज़ों को TypeScript प्रकारों में बदलें, common openapi-typescript generation options के साथ।",
+      },
+      id: {
+        name: "Konverter OpenAPI ke TypeScript",
+        description:
+          "Ubah dokumen OpenAPI 3.x menjadi tipe TypeScript sepenuhnya di browser dengan opsi generasi openapi-typescript yang umum.",
+      },
+      it: {
+        name: "Convertitore da OpenAPI a TypeScript",
+        description:
+          "Converti documenti OpenAPI 3.x in tipi TypeScript direttamente nel browser con le opzioni comuni di generazione di openapi-typescript.",
+      },
+      ja: {
+        name: "OpenAPI → TypeScript",
+        description:
+          "OpenAPI 3.x ドキュメントから、よく使う openapi-typescript の生成オプション付きで TypeScript 型をブラウザ内だけで変換します。",
+      },
+      ko: {
+        name: "OpenAPI to TypeScript 변환기",
+        description:
+          "일반적인 openapi-typescript 생성 옵션을 사용해 OpenAPI 3.x 문서를 브라우저에서 바로 TypeScript 타입으로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar OpenAPI ke TypeScript",
+        description:
+          "Tukar dokumen OpenAPI 3.x kepada jenis TypeScript sepenuhnya dalam pelayar anda dengan pilihan penjanaan openapi-typescript yang biasa.",
+      },
+      nl: {
+        name: "OpenAPI naar TypeScript-converter",
+        description:
+          "Zet OpenAPI 3.x-documenten rechtstreeks in je browser om naar TypeScript-types met gangbare openapi-typescript-generatieopties.",
+      },
+      no: {
+        name: "OpenAPI til TypeScript-konvertering",
+        description:
+          "Konverter OpenAPI 3.x-dokumenter til TypeScript-typer helt i nettleseren, med vanlige openapi-typescript-innstillinger.",
+      },
+      pl: {
+        name: "Konwerter OpenAPI do TypeScript",
+        description:
+          "Konwertuj dokumenty OpenAPI 3.x na typy TypeScript bezpośrednio w przeglądarce, z popularnymi opcjami generowania openapi-typescript.",
+      },
+      pt: {
+        name: "Conversor de OpenAPI para TypeScript",
+        description:
+          "Converta documentos OpenAPI 3.x em tipos TypeScript totalmente no navegador, com opções comuns de geração do openapi-typescript.",
+      },
+      ru: {
+        name: "Конвертер OpenAPI в TypeScript",
+        description:
+          "Преобразуйте документы OpenAPI 3.x в типы TypeScript прямо в браузере с распространенными параметрами генерации openapi-typescript.",
+      },
+      sv: {
+        name: "OpenAPI till TypeScript-konverterare",
+        description:
+          "Konvertera OpenAPI 3.x-dokument till TypeScript-typer direkt i webbläsaren med vanliga openapi-typescript-inställningar.",
+      },
+      th: {
+        name: "ตัวแปลง OpenAPI เป็น TypeScript",
+        description:
+          "แปลงเอกสาร OpenAPI 3.x เป็น TypeScript types ได้ทั้งหมดในเบราว์เซอร์ พร้อมตัวเลือกสร้างโค้ดแบบ openapi-typescript ที่ใช้บ่อย",
+      },
+      tr: {
+        name: "OpenAPI'den TypeScript'e Dönüştürücü",
+        description:
+          "OpenAPI 3.x belgelerini tarayıcınızda tamamen TypeScript türlerine dönüştürün; yaygın openapi-typescript üretim seçenekleriyle.",
+      },
+      vi: {
+        name: "Bộ chuyển OpenAPI sang TypeScript",
+        description:
+          "Chuyển tài liệu OpenAPI 3.x thành kiểu TypeScript ngay trong trình duyệt với các tùy chọn tạo openapi-typescript phổ biến.",
+      },
+      "zh-CN": {
+        name: "OpenAPI 转 TypeScript 生成器",
+        description:
+          "在浏览器中将 OpenAPI 3.x 文档转换为 TypeScript 类型，并提供常见的 openapi-typescript 生成选项。",
+      },
+      "zh-TW": {
+        name: "OpenAPI 轉 TypeScript 轉換器",
+        description:
+          "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  {
     slug: "toml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -4006,6 +4129,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "JSONPath 測試器",
         description: "對 JSON 資料執行 JSONPath 查詢，檢視匹配的值與路徑。",
+      },
+    },
+  },
+  "openapi-to-typescript-converter": {
+    slug: "openapi-to-typescript-converter",
+    category: "developer",
+    icon: "braces",
+    tags: ["code", "openapi", "typescript", "schema", "converter", "api"],
+    locales: {
+      ar: {
+        name: "محول OpenAPI إلى TypeScript",
+        description:
+          "حوّل مستندات OpenAPI 3.x إلى أنواع TypeScript مباشرة في المتصفح مع خيارات التوليد الشائعة في openapi-typescript.",
+      },
+      de: {
+        name: "OpenAPI-zu-TypeScript-Konverter",
+        description:
+          "OpenAPI-3.x-Dokumente direkt im Browser mit gängigen openapi-typescript-Optionen in TypeScript-Typen umwandeln.",
+      },
+      en: {
+        name: "OpenAPI to TypeScript Converter",
+        description:
+          "Convert OpenAPI 3.x documents into TypeScript types entirely in your browser with common openapi-typescript generation options.",
+      },
+      es: {
+        name: "Convertidor de OpenAPI a TypeScript",
+        description:
+          "Convierte documentos OpenAPI 3.x en tipos de TypeScript directamente en tu navegador con las opciones de generación habituales de openapi-typescript.",
+      },
+      fr: {
+        name: "Convertisseur OpenAPI vers TypeScript",
+        description:
+          "Convertissez des documents OpenAPI 3.x en types TypeScript directement dans votre navigateur, avec des options courantes de génération openapi-typescript.",
+      },
+      he: {
+        name: "ממיר OpenAPI ל-TypeScript",
+        description:
+          "המרת מסמכי OpenAPI 3.x לסוגי TypeScript ישירות בדפדפן, עם אפשרויות נפוצות של openapi-typescript.",
+      },
+      hi: {
+        name: "OpenAPI से TypeScript कन्वर्टर",
+        description:
+          "ब्राउज़र में OpenAPI 3.x दस्तावेज़ों को TypeScript प्रकारों में बदलें, common openapi-typescript generation options के साथ।",
+      },
+      id: {
+        name: "Konverter OpenAPI ke TypeScript",
+        description:
+          "Ubah dokumen OpenAPI 3.x menjadi tipe TypeScript sepenuhnya di browser dengan opsi generasi openapi-typescript yang umum.",
+      },
+      it: {
+        name: "Convertitore da OpenAPI a TypeScript",
+        description:
+          "Converti documenti OpenAPI 3.x in tipi TypeScript direttamente nel browser con le opzioni comuni di generazione di openapi-typescript.",
+      },
+      ja: {
+        name: "OpenAPI → TypeScript",
+        description:
+          "OpenAPI 3.x ドキュメントから、よく使う openapi-typescript の生成オプション付きで TypeScript 型をブラウザ内だけで変換します。",
+      },
+      ko: {
+        name: "OpenAPI to TypeScript 변환기",
+        description:
+          "일반적인 openapi-typescript 생성 옵션을 사용해 OpenAPI 3.x 문서를 브라우저에서 바로 TypeScript 타입으로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar OpenAPI ke TypeScript",
+        description:
+          "Tukar dokumen OpenAPI 3.x kepada jenis TypeScript sepenuhnya dalam pelayar anda dengan pilihan penjanaan openapi-typescript yang biasa.",
+      },
+      nl: {
+        name: "OpenAPI naar TypeScript-converter",
+        description:
+          "Zet OpenAPI 3.x-documenten rechtstreeks in je browser om naar TypeScript-types met gangbare openapi-typescript-generatieopties.",
+      },
+      no: {
+        name: "OpenAPI til TypeScript-konvertering",
+        description:
+          "Konverter OpenAPI 3.x-dokumenter til TypeScript-typer helt i nettleseren, med vanlige openapi-typescript-innstillinger.",
+      },
+      pl: {
+        name: "Konwerter OpenAPI do TypeScript",
+        description:
+          "Konwertuj dokumenty OpenAPI 3.x na typy TypeScript bezpośrednio w przeglądarce, z popularnymi opcjami generowania openapi-typescript.",
+      },
+      pt: {
+        name: "Conversor de OpenAPI para TypeScript",
+        description:
+          "Converta documentos OpenAPI 3.x em tipos TypeScript totalmente no navegador, com opções comuns de geração do openapi-typescript.",
+      },
+      ru: {
+        name: "Конвертер OpenAPI в TypeScript",
+        description:
+          "Преобразуйте документы OpenAPI 3.x в типы TypeScript прямо в браузере с распространенными параметрами генерации openapi-typescript.",
+      },
+      sv: {
+        name: "OpenAPI till TypeScript-konverterare",
+        description:
+          "Konvertera OpenAPI 3.x-dokument till TypeScript-typer direkt i webbläsaren med vanliga openapi-typescript-inställningar.",
+      },
+      th: {
+        name: "ตัวแปลง OpenAPI เป็น TypeScript",
+        description:
+          "แปลงเอกสาร OpenAPI 3.x เป็น TypeScript types ได้ทั้งหมดในเบราว์เซอร์ พร้อมตัวเลือกสร้างโค้ดแบบ openapi-typescript ที่ใช้บ่อย",
+      },
+      tr: {
+        name: "OpenAPI'den TypeScript'e Dönüştürücü",
+        description:
+          "OpenAPI 3.x belgelerini tarayıcınızda tamamen TypeScript türlerine dönüştürün; yaygın openapi-typescript üretim seçenekleriyle.",
+      },
+      vi: {
+        name: "Bộ chuyển OpenAPI sang TypeScript",
+        description:
+          "Chuyển tài liệu OpenAPI 3.x thành kiểu TypeScript ngay trong trình duyệt với các tùy chọn tạo openapi-typescript phổ biến.",
+      },
+      "zh-CN": {
+        name: "OpenAPI 转 TypeScript 生成器",
+        description:
+          "在浏览器中将 OpenAPI 3.x 文档转换为 TypeScript 类型，并提供常见的 openapi-typescript 生成选项。",
+      },
+      "zh-TW": {
+        name: "OpenAPI 轉 TypeScript 轉換器",
+        description:
+          "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
       },
     },
   },
