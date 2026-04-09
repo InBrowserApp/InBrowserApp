@@ -1,10 +1,12 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -25,12 +27,12 @@ function PreviewCard({
   messages,
 }: PreviewCardProps) {
   return (
-    <Card className="flex h-full flex-col">
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.resultLabel}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1">
+      <ToolPanelCardContent>
         <Textarea
           value={generatedContent}
           readOnly
@@ -38,8 +40,8 @@ function PreviewCard({
           aria-label={messages.resultLabel}
           className="min-h-96 flex-1 resize-none font-mono text-sm leading-6"
         />
-      </CardContent>
-      <CardFooter className="mt-auto justify-end gap-3 border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="justify-end gap-3 border-t">
         <ToolCopyButton
           value={generatedContent}
           copyLabel={messages.copyResultLabel}
@@ -60,8 +62,8 @@ function PreviewCard({
             {messages.downloadGitignoreLabel}
           </Button>
         )}
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 
