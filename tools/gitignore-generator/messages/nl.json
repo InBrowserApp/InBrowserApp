@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Sjabloonbibliotheek",
+  "templatesDescription": "Zoek officiële gitignore-sjablonen, kies wat bij je project past en genereer één gecombineerd .gitignore-bestand.",
+  "searchLabel": "Sjablonen zoeken",
+  "searchDescription": "Zoek op taal, framework, editor of omgeving.",
+  "searchPlaceholder": "Sjablonen zoeken...",
+  "quickSelectLabel": "Snelle selectie",
+  "selectedTemplatesLabel": "Geselecteerd",
+  "selectedCountLabel": "{count} sjablo(o)n(en) geselecteerd",
+  "clearSelectionLabel": "Wissen",
+  "emptySelectionLabel": "Selecteer sjablonen om .gitignore-inhoud te genereren",
+  "noTemplatesFoundLabel": "Geen sjablonen gevonden voor deze zoekopdracht.",
+  "languagesLabel": "Talen",
+  "globalLabel": "Tools en OS",
+  "communityLabel": "Community",
+  "resultLabel": "Voorbeeld",
+  "resultDescription": "Geselecteerde sjablonen worden in een vaste volgorde samengevoegd zodat je het resultaat kunt kopiëren, downloaden en bewerken.",
+  "previewPlaceholder": "Selecteer sjablonen om .gitignore-inhoud te genereren",
+  "copyResultLabel": ".gitignore kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadGitignoreLabel": "Downloaden"
+}

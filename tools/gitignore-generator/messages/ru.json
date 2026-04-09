@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Библиотека шаблонов",
+  "templatesDescription": "Ищите официальные шаблоны gitignore, выбирайте подходящие для проекта и создавайте один объединённый файл .gitignore.",
+  "searchLabel": "Найти шаблоны",
+  "searchDescription": "Поиск по языку, фреймворку, редактору или окружению.",
+  "searchPlaceholder": "Поиск шаблонов...",
+  "quickSelectLabel": "Быстрый выбор",
+  "selectedTemplatesLabel": "Выбрано",
+  "selectedCountLabel": "Выбрано шаблонов: {count}",
+  "clearSelectionLabel": "Очистить",
+  "emptySelectionLabel": "Выберите шаблоны для генерации содержимого .gitignore",
+  "noTemplatesFoundLabel": "По этому запросу шаблоны не найдены.",
+  "languagesLabel": "Языки",
+  "globalLabel": "Инструменты и ОС",
+  "communityLabel": "Сообщество",
+  "resultLabel": "Предпросмотр",
+  "resultDescription": "Выбранные шаблоны объединяются в стабильном порядке, чтобы вы могли скопировать, скачать и отредактировать результат.",
+  "previewPlaceholder": "Выберите шаблоны для генерации содержимого .gitignore",
+  "copyResultLabel": "Скопировать .gitignore",
+  "copiedLabel": "Скопировано",
+  "downloadGitignoreLabel": "Скачать"
+}

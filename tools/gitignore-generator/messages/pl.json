@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Biblioteka szablonów",
+  "templatesDescription": "Przeszukuj oficjalne szablony gitignore, wybierz te pasujące do projektu i wygeneruj jeden połączony plik .gitignore.",
+  "searchLabel": "Szukaj szablonów",
+  "searchDescription": "Szukaj według języka, frameworka, edytora lub środowiska.",
+  "searchPlaceholder": "Szukaj szablonów...",
+  "quickSelectLabel": "Szybki wybór",
+  "selectedTemplatesLabel": "Wybrano",
+  "selectedCountLabel": "Wybrano {count} szablon(ów)",
+  "clearSelectionLabel": "Wyczyść",
+  "emptySelectionLabel": "Wybierz szablony, aby wygenerować zawartość .gitignore",
+  "noTemplatesFoundLabel": "Nie znaleziono szablonów dla tego wyszukiwania.",
+  "languagesLabel": "Języki",
+  "globalLabel": "Narzędzia i OS",
+  "communityLabel": "Społeczność",
+  "resultLabel": "Podgląd",
+  "resultDescription": "Wybrane szablony są łączone w stałej kolejności, dzięki czemu możesz skopiować, pobrać i edytować wynik.",
+  "previewPlaceholder": "Wybierz szablony, aby wygenerować zawartość .gitignore",
+  "copyResultLabel": "Kopiuj .gitignore",
+  "copiedLabel": "Skopiowano",
+  "downloadGitignoreLabel": "Pobierz"
+}

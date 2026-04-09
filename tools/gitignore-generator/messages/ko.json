@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "템플릿 라이브러리",
+  "templatesDescription": "공식 gitignore 템플릿을 검색하고 프로젝트에 맞는 항목을 골라 하나의 .gitignore 파일로 합쳐 생성합니다.",
+  "searchLabel": "템플릿 찾기",
+  "searchDescription": "언어, 프레임워크, 편집기 또는 환경으로 검색하세요.",
+  "searchPlaceholder": "템플릿 검색...",
+  "quickSelectLabel": "빠른 선택",
+  "selectedTemplatesLabel": "선택됨",
+  "selectedCountLabel": "{count}개 템플릿 선택됨",
+  "clearSelectionLabel": "지우기",
+  "emptySelectionLabel": "템플릿을 선택하여 .gitignore 내용 생성",
+  "noTemplatesFoundLabel": "이 검색과 일치하는 템플릿이 없습니다.",
+  "languagesLabel": "언어",
+  "globalLabel": "도구와 OS",
+  "communityLabel": "커뮤니티",
+  "resultLabel": "미리보기",
+  "resultDescription": "선택한 템플릿은 안정적인 순서로 합쳐져서 결과를 복사하고 다운로드하고 수정하기 쉽습니다.",
+  "previewPlaceholder": "템플릿을 선택하여 .gitignore 내용 생성",
+  "copyResultLabel": ".gitignore 복사",
+  "copiedLabel": "복사됨",
+  "downloadGitignoreLabel": "다운로드"
+}

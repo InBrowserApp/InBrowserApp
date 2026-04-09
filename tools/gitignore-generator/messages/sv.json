@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Mallbibliotek",
+  "templatesDescription": "Sök bland officiella gitignore-mallar, välj det som passar ditt projekt och skapa en sammanslagen .gitignore-fil.",
+  "searchLabel": "Sök mallar",
+  "searchDescription": "Sök efter språk, ramverk, editor eller miljö.",
+  "searchPlaceholder": "Sök mallar...",
+  "quickSelectLabel": "Snabbval",
+  "selectedTemplatesLabel": "Vald",
+  "selectedCountLabel": "{count} mall(ar) valda",
+  "clearSelectionLabel": "Rensa",
+  "emptySelectionLabel": "Välj mallar för att generera .gitignore-innehåll",
+  "noTemplatesFoundLabel": "Inga mallar hittades för den här sökningen.",
+  "languagesLabel": "Språk",
+  "globalLabel": "Verktyg och OS",
+  "communityLabel": "Community",
+  "resultLabel": "Förhandsvisning",
+  "resultDescription": "Valda mallar sammanfogas i en stabil ordning så att du kan kopiera, ladda ner och redigera resultatet.",
+  "previewPlaceholder": "Välj mallar för att generera .gitignore-innehåll",
+  "copyResultLabel": "Kopiera .gitignore",
+  "copiedLabel": "Kopierad",
+  "downloadGitignoreLabel": "Ladda ner"
+}

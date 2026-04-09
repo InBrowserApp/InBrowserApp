@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Malbibliotek",
+  "templatesDescription": "Søk blant offisielle gitignore-maler, velg det som passer prosjektet ditt, og lag én sammenslått .gitignore-fil.",
+  "searchLabel": "Søk maler",
+  "searchDescription": "Søk etter språk, rammeverk, editor eller miljø.",
+  "searchPlaceholder": "Søk maler...",
+  "quickSelectLabel": "Hurtigvalg",
+  "selectedTemplatesLabel": "Valgt",
+  "selectedCountLabel": "{count} mal(er) valgt",
+  "clearSelectionLabel": "Tøm",
+  "emptySelectionLabel": "Velg maler for å generere .gitignore-innhold",
+  "noTemplatesFoundLabel": "Ingen maler funnet for dette søket.",
+  "languagesLabel": "Språk",
+  "globalLabel": "Verktøy og OS",
+  "communityLabel": "Fellesskap",
+  "resultLabel": "Forhåndsvisning",
+  "resultDescription": "Valgte maler blir slått sammen i en stabil rekkefølge slik at du kan kopiere, laste ned og redigere resultatet.",
+  "previewPlaceholder": "Velg maler for å generere .gitignore-innhold",
+  "copyResultLabel": "Kopier .gitignore",
+  "copiedLabel": "Kopiert",
+  "downloadGitignoreLabel": "Last ned"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Pustaka template",
+  "templatesDescription": "Cari template gitignore resmi, pilih yang sesuai dengan proyek Anda, lalu buat satu file .gitignore gabungan.",
+  "searchLabel": "Cari template",
+  "searchDescription": "Cari berdasarkan bahasa, framework, editor, atau lingkungan.",
+  "searchPlaceholder": "Cari template...",
+  "quickSelectLabel": "Pilihan cepat",
+  "selectedTemplatesLabel": "Dipilih",
+  "selectedCountLabel": "{count} template dipilih",
+  "clearSelectionLabel": "Hapus",
+  "emptySelectionLabel": "Pilih template untuk menghasilkan konten .gitignore",
+  "noTemplatesFoundLabel": "Tidak ada template yang cocok untuk pencarian ini.",
+  "languagesLabel": "Bahasa",
+  "globalLabel": "Alat dan OS",
+  "communityLabel": "Komunitas",
+  "resultLabel": "Pratinjau",
+  "resultDescription": "Template yang dipilih digabungkan dalam urutan yang stabil agar Anda bisa menyalin, mengunduh, dan mengedit hasilnya.",
+  "previewPlaceholder": "Pilih template untuk menghasilkan konten .gitignore",
+  "copyResultLabel": "Salin .gitignore",
+  "copiedLabel": "Disalin",
+  "downloadGitignoreLabel": "Unduh"
+}

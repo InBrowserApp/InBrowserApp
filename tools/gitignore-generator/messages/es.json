@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Biblioteca de plantillas",
+  "templatesDescription": "Busca plantillas oficiales de gitignore, elige las que encajan con tu proyecto y genera un único archivo .gitignore combinado.",
+  "searchLabel": "Buscar plantillas",
+  "searchDescription": "Busca por lenguaje, framework, editor o entorno.",
+  "searchPlaceholder": "Buscar plantillas...",
+  "quickSelectLabel": "Selección rápida",
+  "selectedTemplatesLabel": "Seleccionados",
+  "selectedCountLabel": "{count} plantilla(s) seleccionada(s)",
+  "clearSelectionLabel": "Limpiar",
+  "emptySelectionLabel": "Seleccione plantillas para generar el contenido .gitignore",
+  "noTemplatesFoundLabel": "No se encontraron plantillas para esta búsqueda.",
+  "languagesLabel": "Lenguajes",
+  "globalLabel": "Herramientas y SO",
+  "communityLabel": "Comunidad",
+  "resultLabel": "Vista previa",
+  "resultDescription": "Las plantillas seleccionadas se combinan en un orden estable para que puedas copiar, descargar y editar el resultado.",
+  "previewPlaceholder": "Seleccione plantillas para generar el contenido .gitignore",
+  "copyResultLabel": "Copiar .gitignore",
+  "copiedLabel": "Copiado",
+  "downloadGitignoreLabel": "Descargar"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Vorlagenbibliothek",
+  "templatesDescription": "Durchsuche offizielle gitignore-Vorlagen, wähle passende Einträge für dein Projekt aus und erstelle eine zusammengeführte .gitignore-Datei.",
+  "searchLabel": "Vorlagen suchen",
+  "searchDescription": "Suche nach Sprache, Framework, Editor oder Umgebung.",
+  "searchPlaceholder": "Vorlagen suchen...",
+  "quickSelectLabel": "Schnellauswahl",
+  "selectedTemplatesLabel": "Ausgewählt",
+  "selectedCountLabel": "{count} Vorlage(n) ausgewählt",
+  "clearSelectionLabel": "Löschen",
+  "emptySelectionLabel": "Wählen Sie Vorlagen aus, um .gitignore-Inhalt zu generieren",
+  "noTemplatesFoundLabel": "Für diese Suche wurden keine Vorlagen gefunden.",
+  "languagesLabel": "Sprachen",
+  "globalLabel": "Tools und OS",
+  "communityLabel": "Community",
+  "resultLabel": "Vorschau",
+  "resultDescription": "Die ausgewählten Vorlagen werden in stabiler Reihenfolge zusammengeführt, damit du das Ergebnis kopieren, herunterladen und weiter bearbeiten kannst.",
+  "previewPlaceholder": "Wählen Sie Vorlagen aus, um .gitignore-Inhalt zu generieren",
+  "copyResultLabel": ".gitignore kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadGitignoreLabel": "Herunterladen"
+}

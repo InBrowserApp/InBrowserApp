@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Pustaka templat",
+  "templatesDescription": "Cari templat gitignore rasmi, pilih yang sesuai dengan projek anda, dan jana satu fail .gitignore yang digabungkan.",
+  "searchLabel": "Cari templat",
+  "searchDescription": "Cari mengikut bahasa, rangka kerja, editor, atau persekitaran.",
+  "searchPlaceholder": "Cari templat...",
+  "quickSelectLabel": "Pilihan pantas",
+  "selectedTemplatesLabel": "Dipilih",
+  "selectedCountLabel": "{count} templat dipilih",
+  "clearSelectionLabel": "Kosongkan",
+  "emptySelectionLabel": "Pilih templat untuk menjana kandungan .gitignore",
+  "noTemplatesFoundLabel": "Tiada templat ditemui untuk carian ini.",
+  "languagesLabel": "Bahasa",
+  "globalLabel": "Alat dan OS",
+  "communityLabel": "Komuniti",
+  "resultLabel": "Pratonton",
+  "resultDescription": "Templat yang dipilih digabungkan dalam susunan yang stabil supaya anda boleh menyalin, memuat turun, dan mengedit hasilnya.",
+  "previewPlaceholder": "Pilih templat untuk menjana kandungan .gitignore",
+  "copyResultLabel": "Salin .gitignore",
+  "copiedLabel": "Disalin",
+  "downloadGitignoreLabel": "Muat turun"
+}

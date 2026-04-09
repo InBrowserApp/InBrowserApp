@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Şablon kitaplığı",
+  "templatesDescription": "Resmî gitignore şablonlarını ara, projen için uygun olanları seç ve tek bir birleşik .gitignore dosyası oluştur.",
+  "searchLabel": "Şablon ara",
+  "searchDescription": "Dil, çerçeve, editör veya ortama göre ara.",
+  "searchPlaceholder": "Şablon ara...",
+  "quickSelectLabel": "Hızlı seçim",
+  "selectedTemplatesLabel": "Seçildi",
+  "selectedCountLabel": "{count} şablon seçildi",
+  "clearSelectionLabel": "Temizle",
+  "emptySelectionLabel": ".gitignore içeriği oluşturmak için şablon seçin",
+  "noTemplatesFoundLabel": "Bu arama için şablon bulunamadı.",
+  "languagesLabel": "Diller",
+  "globalLabel": "Araçlar ve OS",
+  "communityLabel": "Topluluk",
+  "resultLabel": "Önizleme",
+  "resultDescription": "Seçilen şablonlar sabit bir sırayla birleştirilir; böylece sonucu kopyalayabilir, indirebilir ve düzenleyebilirsin.",
+  "previewPlaceholder": ".gitignore içeriği oluşturmak için şablon seçin",
+  "copyResultLabel": ".gitignore kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadGitignoreLabel": "İndir"
+}

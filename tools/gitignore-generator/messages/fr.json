@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Bibliothèque de modèles",
+  "templatesDescription": "Recherchez des modèles gitignore officiels, choisissez ceux qui conviennent à votre projet et générez un seul fichier .gitignore fusionné.",
+  "searchLabel": "Rechercher des modèles",
+  "searchDescription": "Recherchez par langage, framework, éditeur ou environnement.",
+  "searchPlaceholder": "Rechercher des modèles...",
+  "quickSelectLabel": "Sélection rapide",
+  "selectedTemplatesLabel": "Sélectionnés",
+  "selectedCountLabel": "{count} modèle(s) sélectionné(s)",
+  "clearSelectionLabel": "Effacer",
+  "emptySelectionLabel": "Sélectionnez des modèles pour générer le contenu .gitignore",
+  "noTemplatesFoundLabel": "Aucun modèle ne correspond à cette recherche.",
+  "languagesLabel": "Langages",
+  "globalLabel": "Outils et OS",
+  "communityLabel": "Communauté",
+  "resultLabel": "Aperçu",
+  "resultDescription": "Les modèles sélectionnés sont fusionnés dans un ordre stable afin que vous puissiez copier, télécharger et modifier le résultat.",
+  "previewPlaceholder": "Sélectionnez des modèles pour générer le contenu .gitignore",
+  "copyResultLabel": "Copier le .gitignore",
+  "copiedLabel": "Copié",
+  "downloadGitignoreLabel": "Télécharger"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "टेम्पलेट लाइब्रेरी",
+  "templatesDescription": "आधिकारिक gitignore टेम्पलेट खोजें, अपने प्रोजेक्ट के लिए सही विकल्प चुनें, और एक संयुक्त .gitignore फ़ाइल बनाएं।",
+  "searchLabel": "टेम्पलेट खोजें",
+  "searchDescription": "भाषा, फ्रेमवर्क, एडिटर या वातावरण के आधार पर खोजें।",
+  "searchPlaceholder": "टेम्पलेट खोजें...",
+  "quickSelectLabel": "त्वरित चयन",
+  "selectedTemplatesLabel": "चयनित",
+  "selectedCountLabel": "{count} टेम्पलेट चयनित",
+  "clearSelectionLabel": "साफ़ करें",
+  "emptySelectionLabel": ".gitignore सामग्री उत्पन्न करने के लिए टेम्पलेट चुनें",
+  "noTemplatesFoundLabel": "इस खोज के लिए कोई टेम्पलेट नहीं मिला।",
+  "languagesLabel": "भाषाएँ",
+  "globalLabel": "टूल और OS",
+  "communityLabel": "समुदाय",
+  "resultLabel": "पूर्वावलोकन",
+  "resultDescription": "चयनित टेम्पलेट एक स्थिर क्रम में जोड़े जाते हैं ताकि आप परिणाम को कॉपी, डाउनलोड और संपादित कर सकें।",
+  "previewPlaceholder": ".gitignore सामग्री उत्पन्न करने के लिए टेम्पलेट चुनें",
+  "copyResultLabel": ".gitignore कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadGitignoreLabel": "डाउनलोड"
+}

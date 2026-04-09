@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "模板庫",
+  "templatesDescription": "搜尋官方 gitignore 模板，挑選適合你專案的項目，並產生一個合併後的 .gitignore 檔案。",
+  "searchLabel": "查找模板",
+  "searchDescription": "依語言、框架、編輯器或環境搜尋。",
+  "searchPlaceholder": "搜尋模板...",
+  "quickSelectLabel": "快速選擇",
+  "selectedTemplatesLabel": "已選擇",
+  "selectedCountLabel": "已選擇 {count} 個模板",
+  "clearSelectionLabel": "清除",
+  "emptySelectionLabel": "選擇模板以產生 .gitignore 內容",
+  "noTemplatesFoundLabel": "找不到符合的模板。",
+  "languagesLabel": "語言",
+  "globalLabel": "工具與系統",
+  "communityLabel": "社群",
+  "resultLabel": "預覽",
+  "resultDescription": "已選模板會依穩定順序合併，方便你複製、下載並繼續編輯。",
+  "previewPlaceholder": "選擇模板以產生 .gitignore 內容",
+  "copyResultLabel": "複製 .gitignore",
+  "copiedLabel": "已複製",
+  "downloadGitignoreLabel": "下載"
+}

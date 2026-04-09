@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "ספריית תבניות",
+  "templatesDescription": "חפש תבניות gitignore רשמיות, בחר מה שמתאים לפרויקט שלך, וצור קובץ ‎.gitignore‎ משולב אחד.",
+  "searchLabel": "חפש תבניות",
+  "searchDescription": "חפש לפי שפה, מסגרת, עורך או סביבה.",
+  "searchPlaceholder": "חפש תבניות...",
+  "quickSelectLabel": "בחירה מהירה",
+  "selectedTemplatesLabel": "נבחר",
+  "selectedCountLabel": "נבחרו {count} תבניות",
+  "clearSelectionLabel": "נקה",
+  "emptySelectionLabel": "בחר תבניות כדי ליצור תוכן .gitignore",
+  "noTemplatesFoundLabel": "לא נמצאו תבניות לחיפוש הזה.",
+  "languagesLabel": "שפות",
+  "globalLabel": "כלים ומערכת",
+  "communityLabel": "קהילה",
+  "resultLabel": "תצוגה מקדימה",
+  "resultDescription": "התבניות שנבחרו משולבות בסדר קבוע כדי שתוכל להעתיק, להוריד ולערוך את התוצאה.",
+  "previewPlaceholder": "בחר תבניות כדי ליצור תוכן .gitignore",
+  "copyResultLabel": "העתק ‎.gitignore‎",
+  "copiedLabel": "הועתק",
+  "downloadGitignoreLabel": "הורד"
+}

@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "مكتبة القوالب",
+  "templatesDescription": "ابحث في قوالب gitignore الرسمية، واختر ما يناسب مشروعك، ثم أنشئ ملف .gitignore واحداً مدمجاً.",
+  "searchLabel": "ابحث عن القوالب",
+  "searchDescription": "ابحث حسب اللغة أو الإطار أو المحرر أو البيئة.",
+  "searchPlaceholder": "البحث عن القوالب...",
+  "quickSelectLabel": "اختيار سريع",
+  "selectedTemplatesLabel": "المحدد",
+  "selectedCountLabel": "تم اختيار {count} قالب/قوالب",
+  "clearSelectionLabel": "مسح",
+  "emptySelectionLabel": "اختر القوالب لإنشاء محتوى .gitignore",
+  "noTemplatesFoundLabel": "لم يتم العثور على قوالب لهذه العملية البحثية.",
+  "languagesLabel": "اللغات",
+  "globalLabel": "الأدوات والنظام",
+  "communityLabel": "المجتمع",
+  "resultLabel": "معاينة",
+  "resultDescription": "تُدمج القوالب المحددة بترتيب ثابت حتى تتمكن من نسخ النتيجة وتنزيلها وتعديلها.",
+  "previewPlaceholder": "اختر القوالب لإنشاء محتوى .gitignore",
+  "copyResultLabel": "انسخ .gitignore",
+  "copiedLabel": "تم النسخ",
+  "downloadGitignoreLabel": "تنزيل"
+}

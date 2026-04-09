@@ -1,0 +1,22 @@
+{
+  "templatesLabel": "Thư viện mẫu",
+  "templatesDescription": "Tìm các mẫu gitignore chính thức, chọn những gì phù hợp với dự án của bạn và tạo một tệp .gitignore hợp nhất.",
+  "searchLabel": "Tìm mẫu",
+  "searchDescription": "Tìm theo ngôn ngữ, framework, trình soạn thảo hoặc môi trường.",
+  "searchPlaceholder": "Tìm kiếm mẫu...",
+  "quickSelectLabel": "Chọn nhanh",
+  "selectedTemplatesLabel": "Đã chọn",
+  "selectedCountLabel": "Đã chọn {count} mẫu",
+  "clearSelectionLabel": "Xóa",
+  "emptySelectionLabel": "Chọn mẫu để tạo nội dung .gitignore",
+  "noTemplatesFoundLabel": "Không tìm thấy mẫu nào cho tìm kiếm này.",
+  "languagesLabel": "Ngôn ngữ",
+  "globalLabel": "Công cụ và OS",
+  "communityLabel": "Cộng đồng",
+  "resultLabel": "Xem trước",
+  "resultDescription": "Các mẫu đã chọn được gộp theo thứ tự ổn định để bạn có thể sao chép, tải xuống và chỉnh sửa kết quả.",
+  "previewPlaceholder": "Chọn mẫu để tạo nội dung .gitignore",
+  "copyResultLabel": "Sao chép .gitignore",
+  "copiedLabel": "Đã sao chép",
+  "downloadGitignoreLabel": "Tải xuống"
+}
