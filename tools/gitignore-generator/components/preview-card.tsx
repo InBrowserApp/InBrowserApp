@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import { Download } from "@workspace/ui/icons"
 
 import type { GitignoreGeneratorMessages } from "../client/types"
@@ -33,13 +33,29 @@ function PreviewCard({
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent>
-        <Textarea
-          value={generatedContent}
-          readOnly
-          placeholder={messages.previewPlaceholder}
-          aria-label={messages.resultLabel}
-          className="min-h-96 flex-1 resize-none font-mono text-sm leading-6"
-        />
+        <ScrollArea className="min-h-96 flex-1 rounded-lg border border-input bg-transparent">
+          {generatedContent ? (
+            <pre
+              role="textbox"
+              aria-label={messages.resultLabel}
+              aria-multiline="true"
+              aria-readonly="true"
+              className="min-h-96 min-w-max p-3 font-mono text-sm leading-6 whitespace-pre"
+            >
+              {generatedContent}
+            </pre>
+          ) : (
+            <div
+              role="textbox"
+              aria-label={messages.resultLabel}
+              aria-multiline="true"
+              aria-readonly="true"
+              className="min-h-96 p-3 font-mono text-sm leading-6 text-muted-foreground"
+            >
+              {messages.previewPlaceholder}
+            </div>
+          )}
+        </ScrollArea>
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-end gap-3 border-t">
         <ToolCopyButton

@@ -99,7 +99,7 @@ function getSearchInput() {
 function getPreviewArea() {
   return screen.getByRole("textbox", {
     name: messages.resultLabel,
-  }) as HTMLTextAreaElement
+  })
 }
 
 describe("GitignoreGeneratorClient", () => {
@@ -107,8 +107,7 @@ describe("GitignoreGeneratorClient", () => {
     render(<GitignoreGeneratorClient messages={messages} />)
 
     expect(screen.getByText(messages.emptySelectionLabel)).toBeTruthy()
-    expect(getPreviewArea().value).toBe("")
-    expect(getPreviewArea().placeholder).toBe(messages.previewPlaceholder)
+    expect(getPreviewArea().textContent).toBe(messages.previewPlaceholder)
     expect(
       screen.getByRole("button", { name: messages.downloadGitignoreLabel })
     ).toHaveProperty("disabled", true)
@@ -120,10 +119,10 @@ describe("GitignoreGeneratorClient", () => {
     fireEvent.click(screen.getByRole("button", { name: "Node" }))
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toContain("### Node ###")
+      expect(getPreviewArea().textContent).toContain("### Node ###")
     })
 
-    expect(getPreviewArea().value).toContain("node_modules/")
+    expect(getPreviewArea().textContent).toContain("node_modules/")
     expect(window.localStorage.getItem(STORAGE_KEYS.selectedTemplates)).toBe(
       JSON.stringify(["Node"])
     )
@@ -167,11 +166,11 @@ describe("GitignoreGeneratorClient", () => {
     render(<GitignoreGeneratorClient messages={messages} />)
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toContain("### Node ###")
+      expect(getPreviewArea().textContent).toContain("### Node ###")
     })
 
-    expect(getPreviewArea().value).toContain("### Windows ###")
-    expect(getPreviewArea().value).not.toContain("Unknown")
+    expect(getPreviewArea().textContent).toContain("### Windows ###")
+    expect(getPreviewArea().textContent).not.toContain("Unknown")
   })
 
   test("ignores invalid local storage JSON", () => {
@@ -179,7 +178,7 @@ describe("GitignoreGeneratorClient", () => {
 
     render(<GitignoreGeneratorClient messages={messages} />)
 
-    expect(getPreviewArea().value).toBe("")
+    expect(getPreviewArea().textContent).toBe(messages.previewPlaceholder)
     expect(screen.getByText(messages.emptySelectionLabel)).toBeTruthy()
   })
 
@@ -189,14 +188,14 @@ describe("GitignoreGeneratorClient", () => {
     fireEvent.click(screen.getByRole("button", { name: "Node" }))
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toContain("### Node ###")
+      expect(getPreviewArea().textContent).toContain("### Node ###")
     })
 
     const nodeButtons = screen.getAllByRole("button", { name: "Node" })
     fireEvent.click(nodeButtons.at(-1)!)
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toBe("")
+      expect(getPreviewArea().textContent).toBe(messages.previewPlaceholder)
     })
 
     expect(URL.revokeObjectURL).toHaveBeenCalled()
@@ -208,7 +207,7 @@ describe("GitignoreGeneratorClient", () => {
     fireEvent.click(screen.getByRole("checkbox", { name: "Windows" }))
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toContain("### Windows ###")
+      expect(getPreviewArea().textContent).toContain("### Windows ###")
     })
   })
 
@@ -218,14 +217,14 @@ describe("GitignoreGeneratorClient", () => {
     fireEvent.click(screen.getByRole("button", { name: "Node" }))
 
     await waitFor(() => {
-      expect(getPreviewArea().value).toContain("### Node ###")
+      expect(getPreviewArea().textContent).toContain("### Node ###")
     })
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.clearSelectionLabel })
     )
 
-    expect(getPreviewArea().value).toBe("")
+    expect(getPreviewArea().textContent).toBe(messages.previewPlaceholder)
     expect(screen.getByText(messages.emptySelectionLabel)).toBeTruthy()
   })
 })
