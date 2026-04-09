@@ -717,6 +717,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-diff-path",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "diff", "patch", "pointer", "compare", "jsonpath"],
+    locales: {
+      ar: {
+        name: "JSON Diff Path",
+        description:
+          "قارن مستندَي JSON وأنشئ فروقًا قائمة على المسارات مع مسارات JSON Pointer ومخرجات JSON Patch وفق RFC 6902.",
+      },
+      de: {
+        name: "JSON Diff Path",
+        description:
+          "Zwei JSON-Dokumente vergleichen und pfadbasierte Diffs mit JSON-Pointer-Pfaden und RFC-6902-JSON-Patch-Ausgabe erzeugen.",
+      },
+      en: {
+        name: "JSON Diff Path",
+        description:
+          "Compare two JSON documents and generate path-based diffs with JSON Pointer paths and RFC 6902 JSON Patch output.",
+      },
+      es: {
+        name: "Ruta de diferencias JSON",
+        description:
+          "Compara dos documentos JSON y genera diferencias por ruta con rutas JSON Pointer y salida JSON Patch RFC 6902.",
+      },
+      fr: {
+        name: "JSON Diff Path",
+        description:
+          "Comparez deux documents JSON et générez des diffs basés sur les chemins avec des chemins JSON Pointer et une sortie JSON Patch RFC 6902.",
+      },
+      he: {
+        name: "JSON Diff Path",
+        description:
+          "השוואה בין שני מסמכי JSON והפקת הבדלים מבוססי נתיב עם נתיבי JSON Pointer ופלט JSON Patch לפי RFC 6902.",
+      },
+      hi: {
+        name: "JSON Diff Path",
+        description:
+          "दो JSON दस्तावेज़ों की तुलना करें और JSON Pointer paths तथा RFC 6902 JSON Patch output के साथ path-based diffs जनरेट करें।",
+      },
+      id: {
+        name: "JSON Diff Path",
+        description:
+          "Bandingkan dua dokumen JSON dan hasilkan diff berbasis path dengan path JSON Pointer serta output JSON Patch RFC 6902.",
+      },
+      it: {
+        name: "JSON Diff Path",
+        description:
+          "Confronta due documenti JSON e genera diff basati sui percorsi con percorsi JSON Pointer e output JSON Patch RFC 6902.",
+      },
+      ja: {
+        name: "JSON Diff Path",
+        description:
+          "2つの JSON ドキュメントを比較し、JSON Pointer パスと RFC 6902 JSON Patch 出力を使ったパスベースの差分を生成します。",
+      },
+      ko: {
+        name: "JSON Diff Path",
+        description:
+          "두 JSON 문서를 비교해 JSON Pointer 경로와 RFC 6902 JSON Patch 출력을 포함한 경로 기반 diff를 생성합니다.",
+      },
+      ms: {
+        name: "JSON Diff Path",
+        description:
+          "Bandingkan dua dokumen JSON dan jana perbezaan berasaskan laluan dengan laluan JSON Pointer dan output JSON Patch RFC 6902.",
+      },
+      nl: {
+        name: "JSON Diff Path",
+        description:
+          "Vergelijk twee JSON-documenten en genereer padgebaseerde verschillen met JSON Pointer-paden en RFC 6902 JSON Patch-uitvoer.",
+      },
+      no: {
+        name: "JSON Diff Path",
+        description:
+          "Sammenlign to JSON-dokumenter og generer sti-baserte diff-resultater med JSON Pointer-stier og RFC 6902 JSON Patch-utdata.",
+      },
+      pl: {
+        name: "JSON Diff Path",
+        description:
+          "Porównuje dwa dokumenty JSON i generuje różnice oparte na ścieżkach z użyciem ścieżek JSON Pointer oraz wyjścia RFC 6902 JSON Patch.",
+      },
+      pt: {
+        name: "JSON Diff Path",
+        description:
+          "Compare dois documentos JSON e gere diffs por caminho com caminhos JSON Pointer e saída JSON Patch RFC 6902.",
+      },
+      ru: {
+        name: "JSON Diff Path",
+        description:
+          "Сравнивает два JSON-документа и формирует диффы на основе путей с JSON Pointer-путями и выводом RFC 6902 JSON Patch.",
+      },
+      sv: {
+        name: "JSON Diff Path",
+        description:
+          "Jämför två JSON-dokument och genererar sökvägsbaserade diffar med JSON Pointer-sökvägar och RFC 6902 JSON Patch-utdata.",
+      },
+      th: {
+        name: "ตัวเปรียบเทียบเส้นทาง JSON",
+        description:
+          "เปรียบเทียบเอกสาร JSON สองชุดและสร้าง diff ตามเส้นทาง พร้อมเอาต์พุต JSON Pointer และ JSON Patch ตาม RFC 6902",
+      },
+      tr: {
+        name: "JSON Diff Path",
+        description:
+          "İki JSON belgesini karşılaştırır ve JSON Pointer yolları ile RFC 6902 JSON Patch çıktısı içeren yola dayalı farklar üretir.",
+      },
+      vi: {
+        name: "JSON Diff Path",
+        description:
+          "So sánh hai tài liệu JSON và tạo diff theo đường dẫn với các đường dẫn JSON Pointer và đầu ra JSON Patch RFC 6902.",
+      },
+      "zh-CN": {
+        name: "JSON Diff Path",
+        description:
+          "比较两个 JSON 文档，并生成基于路径的差异，同时输出 JSON Pointer 路径和符合 RFC 6902 的 JSON Patch。",
+      },
+      "zh-TW": {
+        name: "JSON 差異路徑",
+        description:
+          "比較兩份 JSON 文件，並產生以路徑為基礎的差異，輸出 JSON Pointer 路徑與 RFC 6902 JSON Patch。",
+      },
+    },
+  },
+  {
     slug: "json-formatter",
     category: "json",
     icon: "file-json-2",
@@ -2903,6 +3026,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "JMESPath 測試器",
         description: "對 JSON 資料執行 JMESPath 表達式並檢視結果。",
+      },
+    },
+  },
+  "json-diff-path": {
+    slug: "json-diff-path",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["code", "json", "diff", "patch", "pointer", "compare", "jsonpath"],
+    locales: {
+      ar: {
+        name: "JSON Diff Path",
+        description:
+          "قارن مستندَي JSON وأنشئ فروقًا قائمة على المسارات مع مسارات JSON Pointer ومخرجات JSON Patch وفق RFC 6902.",
+      },
+      de: {
+        name: "JSON Diff Path",
+        description:
+          "Zwei JSON-Dokumente vergleichen und pfadbasierte Diffs mit JSON-Pointer-Pfaden und RFC-6902-JSON-Patch-Ausgabe erzeugen.",
+      },
+      en: {
+        name: "JSON Diff Path",
+        description:
+          "Compare two JSON documents and generate path-based diffs with JSON Pointer paths and RFC 6902 JSON Patch output.",
+      },
+      es: {
+        name: "Ruta de diferencias JSON",
+        description:
+          "Compara dos documentos JSON y genera diferencias por ruta con rutas JSON Pointer y salida JSON Patch RFC 6902.",
+      },
+      fr: {
+        name: "JSON Diff Path",
+        description:
+          "Comparez deux documents JSON et générez des diffs basés sur les chemins avec des chemins JSON Pointer et une sortie JSON Patch RFC 6902.",
+      },
+      he: {
+        name: "JSON Diff Path",
+        description:
+          "השוואה בין שני מסמכי JSON והפקת הבדלים מבוססי נתיב עם נתיבי JSON Pointer ופלט JSON Patch לפי RFC 6902.",
+      },
+      hi: {
+        name: "JSON Diff Path",
+        description:
+          "दो JSON दस्तावेज़ों की तुलना करें और JSON Pointer paths तथा RFC 6902 JSON Patch output के साथ path-based diffs जनरेट करें।",
+      },
+      id: {
+        name: "JSON Diff Path",
+        description:
+          "Bandingkan dua dokumen JSON dan hasilkan diff berbasis path dengan path JSON Pointer serta output JSON Patch RFC 6902.",
+      },
+      it: {
+        name: "JSON Diff Path",
+        description:
+          "Confronta due documenti JSON e genera diff basati sui percorsi con percorsi JSON Pointer e output JSON Patch RFC 6902.",
+      },
+      ja: {
+        name: "JSON Diff Path",
+        description:
+          "2つの JSON ドキュメントを比較し、JSON Pointer パスと RFC 6902 JSON Patch 出力を使ったパスベースの差分を生成します。",
+      },
+      ko: {
+        name: "JSON Diff Path",
+        description:
+          "두 JSON 문서를 비교해 JSON Pointer 경로와 RFC 6902 JSON Patch 출력을 포함한 경로 기반 diff를 생성합니다.",
+      },
+      ms: {
+        name: "JSON Diff Path",
+        description:
+          "Bandingkan dua dokumen JSON dan jana perbezaan berasaskan laluan dengan laluan JSON Pointer dan output JSON Patch RFC 6902.",
+      },
+      nl: {
+        name: "JSON Diff Path",
+        description:
+          "Vergelijk twee JSON-documenten en genereer padgebaseerde verschillen met JSON Pointer-paden en RFC 6902 JSON Patch-uitvoer.",
+      },
+      no: {
+        name: "JSON Diff Path",
+        description:
+          "Sammenlign to JSON-dokumenter og generer sti-baserte diff-resultater med JSON Pointer-stier og RFC 6902 JSON Patch-utdata.",
+      },
+      pl: {
+        name: "JSON Diff Path",
+        description:
+          "Porównuje dwa dokumenty JSON i generuje różnice oparte na ścieżkach z użyciem ścieżek JSON Pointer oraz wyjścia RFC 6902 JSON Patch.",
+      },
+      pt: {
+        name: "JSON Diff Path",
+        description:
+          "Compare dois documentos JSON e gere diffs por caminho com caminhos JSON Pointer e saída JSON Patch RFC 6902.",
+      },
+      ru: {
+        name: "JSON Diff Path",
+        description:
+          "Сравнивает два JSON-документа и формирует диффы на основе путей с JSON Pointer-путями и выводом RFC 6902 JSON Patch.",
+      },
+      sv: {
+        name: "JSON Diff Path",
+        description:
+          "Jämför två JSON-dokument och genererar sökvägsbaserade diffar med JSON Pointer-sökvägar och RFC 6902 JSON Patch-utdata.",
+      },
+      th: {
+        name: "ตัวเปรียบเทียบเส้นทาง JSON",
+        description:
+          "เปรียบเทียบเอกสาร JSON สองชุดและสร้าง diff ตามเส้นทาง พร้อมเอาต์พุต JSON Pointer และ JSON Patch ตาม RFC 6902",
+      },
+      tr: {
+        name: "JSON Diff Path",
+        description:
+          "İki JSON belgesini karşılaştırır ve JSON Pointer yolları ile RFC 6902 JSON Patch çıktısı içeren yola dayalı farklar üretir.",
+      },
+      vi: {
+        name: "JSON Diff Path",
+        description:
+          "So sánh hai tài liệu JSON và tạo diff theo đường dẫn với các đường dẫn JSON Pointer và đầu ra JSON Patch RFC 6902.",
+      },
+      "zh-CN": {
+        name: "JSON Diff Path",
+        description:
+          "比较两个 JSON 文档，并生成基于路径的差异，同时输出 JSON Pointer 路径和符合 RFC 6902 的 JSON Patch。",
+      },
+      "zh-TW": {
+        name: "JSON 差異路徑",
+        description:
+          "比較兩份 JSON 文件，並產生以路徑為基礎的差異，輸出 JSON Pointer 路徑與 RFC 6902 JSON Patch。",
       },
     },
   },

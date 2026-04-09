@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "قارن مستندَي JSON وأنشئ فروقًا قائمة على المسارات مع مسارات JSON Pointer ومخرجات JSON Patch وفق RFC 6902."
+}

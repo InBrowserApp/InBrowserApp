@@ -1,0 +1,4 @@
+{
+  "name": "JSON 差異路徑",
+  "description": "比較兩份 JSON 文件，並產生以路徑為基礎的差異，輸出 JSON Pointer 路徑與 RFC 6902 JSON Patch。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "Jämför två JSON-dokument och genererar sökvägsbaserade diffar med JSON Pointer-sökvägar och RFC 6902 JSON Patch-utdata."
+}

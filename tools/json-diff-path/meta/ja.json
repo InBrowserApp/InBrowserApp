@@ -1,0 +1,4 @@
+{
+  "name": "JSON Diff Path",
+  "description": "2つの JSON ドキュメントを比較し、JSON Pointer パスと RFC 6902 JSON Patch 出力を使ったパスベースの差分を生成します。"
+}
