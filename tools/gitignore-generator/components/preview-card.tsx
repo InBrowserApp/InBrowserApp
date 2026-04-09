@@ -33,7 +33,7 @@ function PreviewCard({
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent>
-        <ScrollArea className="h-[28rem] overflow-hidden rounded-lg border border-input bg-transparent xl:h-auto xl:min-h-0 xl:flex-1">
+        <ScrollArea className="h-[28rem] overflow-hidden rounded-lg border border-input bg-transparent sm:h-[32rem]">
           {generatedContent ? (
             <pre
               role="textbox"
