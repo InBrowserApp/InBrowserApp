@@ -3,7 +3,6 @@
 }
 
 .typescript-highlight {
-  min-height: 20rem;
   margin: 0;
   font-family: var(--font-mono);
   font-size: 0.875rem;
