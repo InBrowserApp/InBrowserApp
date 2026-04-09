@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest"
+import { afterEach, describe, expect, it, vi } from "vitest"
 
 import {
   DEFAULT_OPENAPI_TYPEGEN_OPTIONS,
@@ -6,6 +6,12 @@ import {
   generateOpenApiTypes,
   parseOpenApiDocument,
 } from "./openapi-typescript"
+
+afterEach(() => {
+  vi.restoreAllMocks()
+  vi.doUnmock("js-yaml")
+  vi.resetModules()
+})
 
 describe("parseOpenApiDocument", () => {
   it("returns an empty error for blank input", () => {
@@ -50,6 +56,94 @@ paths: {}
     expect(parseOpenApiDocument("{ invalid")).toMatchObject({
       ok: false,
       code: "invalid",
+    })
+  })
+
+  it("returns the parse error for invalid YAML input", () => {
+    expect(parseOpenApiDocument("openapi: [")).toMatchObject({
+      ok: false,
+      code: "invalid",
+    })
+  })
+
+  it("surfaces non-Error JSON parse failures", async () => {
+    vi.resetModules()
+    vi.spyOn(JSON, "parse").mockImplementation(() => {
+      throw "bad json"
+    })
+    vi.doMock("js-yaml", () => ({
+      load: () => {
+        throw "bad yaml"
+      },
+    }))
+
+    const { parseOpenApiDocument: parseWithMockedYaml } =
+      await import("./openapi-typescript")
+
+    expect(parseWithMockedYaml("{ invalid")).toEqual({
+      ok: false,
+      code: "invalid",
+      message: "bad json",
+    })
+  })
+
+  it("falls back to the YAML parse message when the JSON parse message is empty", async () => {
+    vi.resetModules()
+    vi.spyOn(JSON, "parse").mockImplementation(() => {
+      throw ""
+    })
+    vi.doMock("js-yaml", () => ({
+      load: () => {
+        throw "bad yaml"
+      },
+    }))
+
+    const { parseOpenApiDocument: parseWithMockedYaml } =
+      await import("./openapi-typescript")
+
+    expect(parseWithMockedYaml("{ invalid")).toEqual({
+      ok: false,
+      code: "invalid",
+      message: "bad yaml",
+    })
+  })
+
+  it("uses the YAML Error message when the JSON parse message is empty", async () => {
+    vi.resetModules()
+    vi.spyOn(JSON, "parse").mockImplementation(() => {
+      throw ""
+    })
+    vi.doMock("js-yaml", () => ({
+      load: () => {
+        throw new Error("bad yaml error")
+      },
+    }))
+
+    const { parseOpenApiDocument: parseWithMockedYaml } =
+      await import("./openapi-typescript")
+
+    expect(parseWithMockedYaml("{ invalid")).toEqual({
+      ok: false,
+      code: "invalid",
+      message: "bad yaml error",
+    })
+  })
+
+  it("surfaces non-Error YAML parse failures", async () => {
+    vi.resetModules()
+    vi.doMock("js-yaml", () => ({
+      load: () => {
+        throw "bad yaml"
+      },
+    }))
+
+    const { parseOpenApiDocument: parseWithMockedYaml } =
+      await import("./openapi-typescript")
+
+    expect(parseWithMockedYaml("openapi: [")).toEqual({
+      ok: false,
+      code: "invalid",
+      message: "bad yaml",
     })
   })
 
@@ -132,6 +226,17 @@ describe("collectExternalRefs", () => {
 
   it("ignores scalar values", () => {
     expect(collectExternalRefs("demo")).toEqual([])
+  })
+
+  it("ignores nullish and falsey nested values", () => {
+    expect(
+      collectExternalRefs({
+        nullable: null,
+        missing: undefined,
+        disabled: false,
+        items: [null, undefined, false],
+      })
+    ).toEqual([])
   })
 })
 
@@ -217,5 +322,38 @@ components:
     expect(output).toContain("ApiPaths")
     expect(output).toContain("readonly [path: `/users/${string}`]")
     expect(output).not.toContain("deprecated")
+  })
+
+  it("resolves local parameter refs while generating types", () => {
+    const parameterRefResult = parseOpenApiDocument(`openapi: 3.1.0
+info:
+  title: Demo
+  version: 1.0.0
+paths:
+  /users/{userId}:
+    get:
+      parameters:
+        - $ref: "#/components/parameters/UserId"
+      responses:
+        "200":
+          description: OK
+components:
+  parameters:
+    UserId:
+      name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+`)
+
+    if (!parameterRefResult.ok) {
+      throw new Error("expected valid parameter ref fixture")
+    }
+
+    const output = generateOpenApiTypes(parameterRefResult.document)
+
+    expect(output).toContain('userId: components["parameters"]["UserId"]')
+    expect(output).toContain("UserId: string")
   })
 })
