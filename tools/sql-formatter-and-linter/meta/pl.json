@@ -1,0 +1,4 @@
+{
+  "name": "SQL Formatter & Linter",
+  "description": "Formatuj zapytania SQL w przeglądarce, dostosowuj reguły układu zależne od dialektu i wykrywaj typowe problemy lintowania, zanim skopiujesz lub pobierzesz wynik."
+}

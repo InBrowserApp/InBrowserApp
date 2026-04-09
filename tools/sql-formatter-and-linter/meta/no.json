@@ -1,0 +1,4 @@
+{
+  "name": "SQL-formatter og linter",
+  "description": "Formater SQL-spørringer i nettleseren, juster dialektbevisste oppsettregler, og fang opp vanlige linter-feil før du kopierer eller laster ned resultatet."
+}

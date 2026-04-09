@@ -1382,6 +1382,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sql-formatter-and-linter",
+    language: "ar",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "de",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "en",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "es",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "fr",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "he",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "hi",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "id",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "it",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "ja",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "ko",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "ms",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "nl",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "no",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "pl",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "pt",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "ru",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "sv",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "th",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "tr",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "vi",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "zh-CN",
+  },
+  {
+    slug: "sql-formatter-and-linter",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },
