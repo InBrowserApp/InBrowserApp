@@ -1,0 +1,4 @@
+{
+  "name": "Konverter OpenAPI ke TypeScript",
+  "description": "Ubah dokumen OpenAPI 3.x menjadi tipe TypeScript sepenuhnya di browser dengan opsi generasi openapi-typescript yang umum."
+}

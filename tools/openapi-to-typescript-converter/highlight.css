@@ -1,0 +1,46 @@
+.typescript-highlight-surface {
+  overflow: auto;
+}
+
+.typescript-highlight {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.typescript-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.typescript-highlight-empty,
+.typescript-highlight-error {
+  width: 100%;
+}
+
+.typescript-highlight .hljs-comment {
+  color: color-mix(in oklab, var(--foreground) 44%, transparent);
+}
+
+.typescript-highlight .hljs-keyword,
+.typescript-highlight .hljs-operator {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.typescript-highlight .hljs-title.class_,
+.typescript-highlight .hljs-title.function_ {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.typescript-highlight .hljs-property,
+.typescript-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--chart-3) 78%, var(--foreground));
+}
+
+.typescript-highlight .hljs-string,
+.typescript-highlight .hljs-literal {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}

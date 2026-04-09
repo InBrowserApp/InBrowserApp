@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI 轉 TypeScript 轉換器",
+  "description": "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。"
+}

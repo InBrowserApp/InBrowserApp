@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI 转 TypeScript 生成器",
+  "description": "在浏览器中将 OpenAPI 3.x 文档转换为 TypeScript 类型，并提供常见的 openapi-typescript 生成选项。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI to TypeScript Converter",
+  "description": "Convert OpenAPI 3.x documents into TypeScript types entirely in your browser with common openapi-typescript generation options."
+}

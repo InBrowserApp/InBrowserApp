@@ -1,0 +1,4 @@
+{
+  "name": "OpenAPI से TypeScript कन्वर्टर",
+  "description": "ब्राउज़र में OpenAPI 3.x दस्तावेज़ों को TypeScript प्रकारों में बदलें, common openapi-typescript generation options के साथ।"
+}

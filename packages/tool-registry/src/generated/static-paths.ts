@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "openapi-to-typescript-converter",
+    language: "ar",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "de",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "en",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "es",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "fr",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "he",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "hi",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "id",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "it",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "ja",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "ko",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "ms",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "nl",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "no",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "pl",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "pt",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "ru",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "sv",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "th",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "tr",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "vi",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "openapi-to-typescript-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },
