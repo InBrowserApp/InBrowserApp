@@ -22,6 +22,7 @@ import {
   InputGroupText,
 } from "@workspace/ui/components/ui/input-group"
 import { Label } from "@workspace/ui/components/ui/label"
+import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import { Search } from "@workspace/ui/icons"
 import type { GitignoreGeneratorMessages } from "../client/types"
 import type {
@@ -182,8 +183,8 @@ function TemplateSelectionCard({
 
         <section className="flex flex-col gap-4">
           {hasVisibleTemplates ? (
-            <div className="max-h-[40rem] overflow-y-auto pr-1">
-              <div className="flex flex-col gap-4">
+            <ScrollArea className="h-[32rem] rounded-xl border bg-card/30">
+              <div className="flex flex-col gap-4 p-1 pr-3">
                 {categorySections.map((section) =>
                   section.templates.length > 0 ? (
                     <div
@@ -241,7 +242,7 @@ function TemplateSelectionCard({
                   ) : null
                 )}
               </div>
-            </div>
+            </ScrollArea>
           ) : (
             <p className="text-sm text-muted-foreground">
               {messages.noTemplatesFoundLabel}
