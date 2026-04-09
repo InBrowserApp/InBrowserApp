@@ -1,5 +1,4 @@
 import { Button } from "@workspace/ui/components/ui/button"
-import { RefreshCcw } from "@workspace/ui/icons"
 
 import type { JsonDiffPathMessages } from "../client/types"
 
@@ -35,7 +34,6 @@ function CompareToolbar({
         {messages.useSampleLabel}
       </Button>
       <Button type="button" variant="ghost" size="sm" onClick={onClearAll}>
-        <RefreshCcw data-icon="inline-start" />
         {messages.clearLabel}
       </Button>
       {pendingLargeCompare ? (
