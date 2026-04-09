@@ -154,7 +154,7 @@ function OpenApiInputCard({
                 onOpenApiChange(event.target.value)
               }}
               placeholder={messages.openApiPlaceholder}
-              className="[field-sizing:fixed] h-[16em] flex-1 resize-y font-mono text-sm"
+              className="[field-sizing:fixed] h-[16em] resize-y font-mono text-sm"
             />
           </Field>
         </FieldGroup>
