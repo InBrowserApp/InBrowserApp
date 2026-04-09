@@ -158,7 +158,6 @@ export {
   getFormatErrorMessage,
   isSqlCaseStyle,
   runSqlTool,
-  type SqlCaseStyle,
   type SqlFormatOptions,
   type SqlFormatResult,
   type SqlLintIssue,

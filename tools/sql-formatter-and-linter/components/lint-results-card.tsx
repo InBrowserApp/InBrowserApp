@@ -21,7 +21,7 @@ import {
 } from "@workspace/ui/components/ui/table"
 import { BadgeCheck, FileText } from "@workspace/ui/icons"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import type { SqlLintIssue } from "../core/sql-format"
 
 type LintResultsCardProps = Readonly<{

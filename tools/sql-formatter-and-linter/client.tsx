@@ -7,12 +7,12 @@ import {
   type ChangeEvent,
 } from "react"
 
-import type { SqlFormatterAndLinterMessages } from "./client/types"
 import {
   DEFAULT_SQL,
   DEFAULT_SQL_FORMAT_OPTIONS,
   DEFAULT_SQL_LINT_OPTIONS,
   STORAGE_KEYS,
+  type SqlFormatterAndLinterMessages,
 } from "./client/constants"
 import {
   parseStoredFormatOptions,
@@ -104,10 +104,8 @@ function SqlFormatterAndLinterClient({
     setDownloadUrl(nextUrl)
 
     return () => {
-      if (downloadUrlRef.current === nextUrl) {
-        URL.revokeObjectURL(nextUrl)
-        downloadUrlRef.current = null
-      }
+      URL.revokeObjectURL(nextUrl)
+      downloadUrlRef.current = null
     }
   }, [formattedSql, toolState.formatResult.state])
 

@@ -15,7 +15,7 @@ import { Field, FieldGroup } from "@workspace/ui/components/ui/field"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { FileText, RefreshCcw, Sparkles } from "@workspace/ui/icons"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import { SQL_FILE_ACCEPT } from "../core/sql-dialects"
 
 type SqlInputCardProps = Readonly<{

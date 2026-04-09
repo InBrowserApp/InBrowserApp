@@ -16,7 +16,7 @@ import {
   SelectValue,
 } from "@workspace/ui/components/ui/select"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import {
   SQL_CASE_STYLES,
   clampExpressionWidth,

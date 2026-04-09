@@ -9,7 +9,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { FieldGroup, FieldSeparator } from "@workspace/ui/components/ui/field"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import type { SqlFormatOptions, SqlLintOptions } from "../core/sql-format"
 import { FormatOptionsSection } from "./format-options-section"
 import { LintOptionsSection } from "./lint-options-section"

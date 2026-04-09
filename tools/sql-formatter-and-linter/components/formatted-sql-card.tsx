@@ -12,7 +12,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Download } from "@workspace/ui/icons"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import type { SqlFormatResult } from "../core/sql-format"
 import { HighlightedSql } from "./highlighted-sql"
 

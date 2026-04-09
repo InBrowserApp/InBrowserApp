@@ -9,7 +9,7 @@ import {
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 
-import type { SqlFormatterAndLinterMessages } from "../client/types"
+import type { SqlFormatterAndLinterMessages } from "../client/constants"
 import { clampMaxLineLength, type SqlLintOptions } from "../core/sql-format"
 
 type LintOptionsSectionProps = Readonly<{
