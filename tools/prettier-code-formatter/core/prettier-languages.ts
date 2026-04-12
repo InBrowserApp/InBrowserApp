@@ -75,8 +75,8 @@ function createPrettierFormatRequest(
 
 function detectPrettierLanguageFromFilename(filename: string) {
   const normalizedFilename = filename.toLowerCase()
-  const basename =
-    normalizedFilename.split(/[\\/]/).at(-1) ?? normalizedFilename
+  const pathSegments = normalizedFilename.split(/[\\/]/)
+  const basename = pathSegments[pathSegments.length - 1]
 
   const exactMatch = Object.entries(PRETTIER_LANGUAGE_CONFIGS).find(
     ([, config]) =>
