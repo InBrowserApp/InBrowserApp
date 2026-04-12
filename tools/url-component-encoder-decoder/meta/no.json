@@ -1,0 +1,4 @@
+{
+  "name": "URL-komponent koder/dekoder",
+  "description": "Kod og dekod URL-komponenter med prosentkoding. Konverter spesialtegn til URL-trygt format og omvendt for webutvikling og API-bruk"
+}

@@ -25,6 +25,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sql-formatter-and-linter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "url-component-encoder-decoder": () =>
+    import("@tool/url-component-encoder-decoder/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),

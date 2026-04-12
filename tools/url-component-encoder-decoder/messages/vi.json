@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Văn Bản Thô",
+  "plainTextPlaceholder": "Nhập văn bản để mã hóa...",
+  "encodedTextLabel": "Văn Bản Mã Hóa URL",
+  "encodedTextPlaceholder": "Nhập văn bản mã hóa URL để giải mã...",
+  "invalidEncodedTextLabel": "Văn bản mã hóa URL không hợp lệ",
+  "copyPlainTextLabel": "Sao chép văn bản thuần",
+  "copyEncodedTextLabel": "Sao chép văn bản mã hóa URL",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ"
+}

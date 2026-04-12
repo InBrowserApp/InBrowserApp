@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "纯文本",
+  "plainTextPlaceholder": "输入要编码的文本...",
+  "encodedTextLabel": "URL 编码文本",
+  "encodedTextPlaceholder": "输入要解码的 URL 编码文本...",
+  "invalidEncodedTextLabel": "无效的 URL 编码文本",
+  "copyPlainTextLabel": "复制纯文本",
+  "copyEncodedTextLabel": "复制 URL 编码文本",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例"
+}

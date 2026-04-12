@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "نص عادي",
+  "plainTextPlaceholder": "أدخل النص للترميز...",
+  "encodedTextLabel": "نص مُرمز URL",
+  "encodedTextPlaceholder": "أدخل النص المُرمز URL لفك التشفير...",
+  "invalidEncodedTextLabel": "نص مُرمز URL غير صالح",
+  "copyPlainTextLabel": "نسخ النص العادي",
+  "copyEncodedTextLabel": "نسخ النص المُرمز في URL",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}

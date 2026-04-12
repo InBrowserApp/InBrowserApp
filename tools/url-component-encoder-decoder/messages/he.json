@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextPlaceholder": "הזן טקסט לקידוד...",
+  "encodedTextLabel": "טקסט מקודד URL",
+  "encodedTextPlaceholder": "הזן טקסט מקודד URL לפענוח...",
+  "invalidEncodedTextLabel": "טקסט מקודד URL לא תקין",
+  "copyPlainTextLabel": "העתק טקסט רגיל",
+  "copyEncodedTextLabel": "העתק טקסט מקודד URL",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה"
+}

@@ -1658,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "url-component-encoder-decoder",
+    language: "ar",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "de",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "en",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "es",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "fr",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "he",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "hi",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "id",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "it",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "ja",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "ko",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "ms",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "nl",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "no",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "pl",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "pt",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "ru",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "sv",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "th",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "tr",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "vi",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },

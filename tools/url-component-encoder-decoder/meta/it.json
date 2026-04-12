@@ -1,0 +1,4 @@
+{
+  "name": "Codificatore/Decodificatore Componenti URL",
+  "description": "Codifica e decodifica componenti URL con codifica percentuale. Converte caratteri speciali in formato sicuro per URL e viceversa per sviluppo web e utilizzo API"
+}

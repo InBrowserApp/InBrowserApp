@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "सादा पाठ",
+  "plainTextPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "encodedTextLabel": "URL एन्कोडेड पाठ",
+  "encodedTextPlaceholder": "डिकोड करने के लिए URL एन्कोडेड पाठ दर्ज करें...",
+  "invalidEncodedTextLabel": "अमान्य URL एन्कोडेड पाठ",
+  "copyPlainTextLabel": "सादा टेक्स्ट कॉपी करें",
+  "copyEncodedTextLabel": "URL एन्कोडेड पाठ कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें"
+}
