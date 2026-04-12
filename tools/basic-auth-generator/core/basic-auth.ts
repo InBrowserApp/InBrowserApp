@@ -9,10 +9,6 @@ function toBinaryString(bytes: Uint8Array) {
 }
 
 function encodeBase64(value: string) {
-  if (value === "") {
-    return ""
-  }
-
   const bytes = new TextEncoder().encode(value)
   return btoa(toBinaryString(bytes))
 }
