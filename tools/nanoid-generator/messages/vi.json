@@ -16,6 +16,7 @@
   "resultsPlaceholder": "NanoID tạo ra sẽ hiển thị ở đây...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "Đã sao chép",
+  "downloadResultsLabel": "Tải xuống kết quả",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "An toàn URL (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "Chữ và số (A-Z, a-z, 0-9)",

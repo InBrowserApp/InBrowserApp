@@ -16,6 +16,7 @@
   "resultsPlaceholder": "生成された NanoID がここに表示されます...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "コピーしました",
+  "downloadResultsLabel": "結果をダウンロード",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "URL セーフ (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "英数字 (A-Z, a-z, 0-9)",

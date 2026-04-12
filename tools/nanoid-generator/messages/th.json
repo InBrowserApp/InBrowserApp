@@ -16,6 +16,7 @@
   "resultsPlaceholder": "NanoID ที่สร้างจะปรากฏที่นี่...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "คัดลอกแล้ว",
+  "downloadResultsLabel": "ดาวน์โหลดผลลัพธ์",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "ปลอดภัยกับ URL (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "ตัวอักษรและตัวเลข (A-Z, a-z, 0-9)",

@@ -16,6 +16,7 @@
   "resultsPlaceholder": "生成的 NanoID 将显示在这里...",
   "copyResultsLabel": "复制 NanoID",
   "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载结果",
   "regenerateLabel": "重新生成",
   "presetUrlSafe": "URL 安全（A-Z、a-z、0-9、-_）",
   "presetAlphanumeric": "字母数字（A-Z、a-z、0-9）",

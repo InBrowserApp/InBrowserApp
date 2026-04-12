@@ -16,6 +16,7 @@
   "resultsPlaceholder": "NanoID yang dihasilkan akan muncul di sini...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Unduh hasil",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "Aman untuk URL (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "Alfanumerik (A-Z, a-z, 0-9)",

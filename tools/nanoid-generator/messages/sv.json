@@ -16,6 +16,7 @@
   "resultsPlaceholder": "Genererade NanoID visas här...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "Kopierad",
+  "downloadResultsLabel": "Ladda ner resultat",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "URL-säker (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "Alfanumerisk (A-Z, a-z, 0-9)",

@@ -16,6 +16,7 @@
   "resultsPlaceholder": "ה-NanoID שנוצרו יופיעו כאן...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "הועתק",
+  "downloadResultsLabel": "הורד תוצאה",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "בטוח ל-URL (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "אלפאנומרי (A-Z, a-z, 0-9)",

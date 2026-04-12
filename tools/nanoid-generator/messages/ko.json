@@ -16,6 +16,7 @@
   "resultsPlaceholder": "생성된 NanoID가 여기에 표시됩니다...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "복사됨",
+  "downloadResultsLabel": "결과 다운로드",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "URL 안전 (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "영숫자 (A-Z, a-z, 0-9)",

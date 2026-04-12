@@ -16,6 +16,7 @@
   "resultsPlaceholder": "जनरेट किए गए NanoID यहाँ दिखेंगे...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "कॉपी हो गया",
+  "downloadResultsLabel": "परिणाम डाउनलोड करें",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "URL सुरक्षित (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "अल्फ़ान्यूमेरिक (A-Z, a-z, 0-9)",

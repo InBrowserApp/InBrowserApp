@@ -16,6 +16,7 @@
   "resultsPlaceholder": "Üretilen NanoID'ler burada görünecek...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "Sonucu indir",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "URL güvenli (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "Alfanümerik (A-Z, a-z, 0-9)",

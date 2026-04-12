@@ -32,6 +32,7 @@ const messages = {
   resultsPlaceholder: "Generated NanoIDs will appear here…",
   copyResultsLabel: "Copy NanoIDs",
   copiedLabel: "Copied",
+  downloadResultsLabel: "Download TXT",
   regenerateLabel: "Regenerate",
   presetUrlSafe: "URL-safe",
   presetAlphanumeric: "Alphanumeric",
@@ -47,6 +48,17 @@ let byteOffset = 0
 
 beforeEach(() => {
   byteOffset = 0
+
+  const NativeURL = globalThis.URL
+
+  class MockURL extends NativeURL {}
+
+  Object.assign(MockURL, {
+    createObjectURL: vi.fn(() => "blob:nanoid-results"),
+    revokeObjectURL: vi.fn(),
+  })
+
+  vi.stubGlobal("URL", MockURL)
   window.localStorage.clear()
 
   vi.spyOn(globalThis.crypto, "getRandomValues").mockImplementation((array) => {
@@ -64,6 +76,7 @@ beforeEach(() => {
 afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
+  vi.unstubAllGlobals()
 })
 
 function getResultsTextarea() {
@@ -89,6 +102,8 @@ describe("NanoidGeneratorClient", () => {
       expect(lines).toHaveLength(5)
       expect(lines.every((value) => value.length === 21)).toBe(true)
     })
+
+    expect(URL.createObjectURL).toHaveBeenCalled()
   })
 
   test("switches to the numeric alphabet preset", async () => {
@@ -125,6 +140,11 @@ describe("NanoidGeneratorClient", () => {
       expect(screen.getByText(messages.alphabetDuplicate)).toBeTruthy()
       expect(getResultsTextarea().value).toBe("")
     })
+
+    expect(
+      screen.getByRole("button", { name: messages.downloadResultsLabel })
+    ).toHaveProperty("disabled", true)
+    expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:nanoid-results")
   })
 
   test("generates IDs from a custom alphabet after the error is fixed", async () => {
@@ -207,5 +227,20 @@ describe("NanoidGeneratorClient", () => {
     await waitFor(() => {
       expect(getResultsTextarea().value).not.toBe(before)
     })
+  })
+
+  test("exposes the generated NanoIDs as a downloadable text file", async () => {
+    render(<NanoidGeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(getResultsTextarea().value).not.toBe("")
+    })
+
+    const downloadLink = screen.getByRole("link", {
+      name: messages.downloadResultsLabel,
+    })
+
+    expect(downloadLink.getAttribute("href")).toBe("blob:nanoid-results")
+    expect(downloadLink.getAttribute("download")).toBe("nanoid-5x21.txt")
   })
 })

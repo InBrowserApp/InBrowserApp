@@ -16,6 +16,7 @@
   "resultsPlaceholder": "ستظهر NanoID المُولَّدة هنا...",
   "copyResultsLabel": "Copy NanoIDs",
   "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل النتيجة",
   "regenerateLabel": "Regenerate",
   "presetUrlSafe": "آمن لعنوان URL (A-Z, a-z, 0-9, -_)",
   "presetAlphanumeric": "أبجدي رقمي (A-Z, a-z, 0-9)",

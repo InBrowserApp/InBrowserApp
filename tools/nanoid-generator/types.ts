@@ -16,6 +16,7 @@ type NanoidMessagesCatalog = Readonly<{
   resultsPlaceholder: string
   copyResultsLabel: string
   copiedLabel: string
+  downloadResultsLabel: string
   regenerateLabel: string
   presetUrlSafe: string
   presetAlphanumeric: string

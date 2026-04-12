@@ -66,6 +66,7 @@ function NanoidGeneratorClient({ messages }: NanoidGeneratorClientProps) {
   const [customAlphabet, setCustomAlphabet] = useState<string>(
     NANOID_ALPHABETS["url-safe"]
   )
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
   const [generatedIds, setGeneratedIds] = useState<string[]>([])
 
   useEffect(() => {
@@ -162,6 +163,7 @@ function NanoidGeneratorClient({ messages }: NanoidGeneratorClientProps) {
         ? messages.alphabetDuplicate
         : ""
   const output = generatedIds.join("\n")
+  const downloadFilename = `nanoid-${count}x${length}.txt`
 
   useEffect(() => {
     const nextCount = normalizeNanoidCount(count)
@@ -188,6 +190,25 @@ function NanoidGeneratorClient({ messages }: NanoidGeneratorClientProps) {
       )
     })
   }, [alphabetError, count, length, resolvedAlphabet])
+
+  useEffect(() => {
+    if (output.length === 0) {
+      setDownloadUrl(null)
+      return
+    }
+
+    const nextUrl = URL.createObjectURL(
+      new Blob([output], {
+        type: "text/plain;charset=utf-8",
+      })
+    )
+
+    setDownloadUrl(nextUrl)
+
+    return () => {
+      URL.revokeObjectURL(nextUrl)
+    }
+  }, [output])
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
@@ -218,6 +239,8 @@ function NanoidGeneratorClient({ messages }: NanoidGeneratorClientProps) {
       />
 
       <NanoidResultsCard
+        downloadFilename={downloadFilename}
+        downloadUrl={downloadUrl}
         messages={messages}
         output={output}
         onRegenerate={() => {
