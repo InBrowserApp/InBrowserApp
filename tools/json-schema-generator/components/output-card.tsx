@@ -56,7 +56,7 @@ function OutputCard({
             value={schemaText}
           />
         ) : (
-          <Empty className="h-80 border-0 p-0">
+          <Empty className="min-h-80 flex-1 border-0 p-0">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 <FileJson2 />

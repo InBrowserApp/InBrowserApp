@@ -21,10 +21,10 @@ function HighlightedJson({ ariaLabel, value }: HighlightedJsonProps) {
     <div
       role="region"
       aria-label={ariaLabel}
-      className="json-schema-highlight-surface h-80 w-full rounded-lg border border-input bg-transparent"
+      className="json-schema-highlight-surface flex min-h-80 min-w-0 flex-1 flex-col overflow-hidden rounded-lg border border-input bg-transparent"
     >
-      <ScrollArea className="h-full w-full">
-        <pre className="json-schema-highlight hljs px-2.5 py-2">
+      <ScrollArea className="min-h-0 flex-1">
+        <pre className="json-schema-highlight hljs min-h-full px-2.5 py-2">
           <code dangerouslySetInnerHTML={{ __html: highlightedJson }} />
         </pre>
       </ScrollArea>
