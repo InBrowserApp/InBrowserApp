@@ -136,84 +136,82 @@ function TextStatisticsClient({ messages }: TextStatisticsClientProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
-        <ToolPanelCard>
-          <CardHeader className="gap-3 border-b">
-            <div className="flex flex-wrap items-center gap-3">
-              <CardTitle>{messages.inputTitle}</CardTitle>
-              <Badge variant="secondary">{messages.inputEyebrow}</Badge>
-            </div>
-            <CardDescription>{messages.inputDescription}</CardDescription>
-          </CardHeader>
-          <ToolPanelCardContent className="gap-4 pt-6">
-            <label htmlFor={textareaId} className="sr-only">
-              {messages.placeholder}
-            </label>
-            <Textarea
-              id={textareaId}
-              aria-label={messages.placeholder}
-              value={text}
-              onChange={(event) => {
-                setText(event.target.value)
-              }}
-              placeholder={messages.placeholder}
-              rows={14}
-              className="min-h-80 flex-1 resize-y text-sm"
-            />
-          </ToolPanelCardContent>
-          <ToolPanelCardFooter className="flex flex-wrap justify-start gap-3 border-t">
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                startTransition(() => {
-                  setText(SAMPLE_TEXT)
-                })
-              }}
-            >
-              {messages.loadSample}
-            </Button>
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                startTransition(() => {
-                  setText("")
-                })
-              }}
-            >
-              {messages.clearText}
-            </Button>
-          </ToolPanelCardFooter>
-        </ToolPanelCard>
+      <ToolPanelCard>
+        <CardHeader className="border-b">
+          <div className="flex flex-wrap items-center gap-3">
+            <CardTitle>{messages.inputTitle}</CardTitle>
+            <Badge variant="secondary">{messages.inputEyebrow}</Badge>
+          </div>
+          <CardDescription>{messages.inputDescription}</CardDescription>
+        </CardHeader>
+        <ToolPanelCardContent>
+          <label htmlFor={textareaId} className="sr-only">
+            {messages.placeholder}
+          </label>
+          <Textarea
+            id={textareaId}
+            aria-label={messages.placeholder}
+            value={text}
+            onChange={(event) => {
+              setText(event.target.value)
+            }}
+            placeholder={messages.placeholder}
+            rows={14}
+            className="min-h-80 flex-1 resize-y text-sm"
+          />
+        </ToolPanelCardContent>
+        <ToolPanelCardFooter className="flex flex-wrap justify-start gap-3 border-t">
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              startTransition(() => {
+                setText(SAMPLE_TEXT)
+              })
+            }}
+          >
+            {messages.loadSample}
+          </Button>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              startTransition(() => {
+                setText("")
+              })
+            }}
+          >
+            {messages.clearText}
+          </Button>
+        </ToolPanelCardFooter>
+      </ToolPanelCard>
 
-        <ToolPanelCard>
-          <CardHeader className="gap-2 border-b">
-            <CardTitle>{messages.snapshotTitle}</CardTitle>
-            <CardDescription>{messages.snapshotDescription}</CardDescription>
-          </CardHeader>
-          <ToolPanelCardContent className="grid gap-3 pt-6 sm:grid-cols-2 xl:grid-cols-1">
-            {overviewMetrics.map((item) => (
-              <MetricCard
-                key={item.label}
-                label={item.label}
-                value={item.value}
-                tone="default"
-              />
-            ))}
-          </ToolPanelCardContent>
-        </ToolPanelCard>
-      </div>
+      <ToolPanelCard>
+        <CardHeader className="border-b">
+          <CardTitle>{messages.snapshotTitle}</CardTitle>
+          <CardDescription>{messages.snapshotDescription}</CardDescription>
+        </CardHeader>
+        <ToolPanelCardContent className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {overviewMetrics.map((item) => (
+            <MetricCard
+              key={item.label}
+              label={item.label}
+              value={item.value}
+              tone="default"
+            />
+          ))}
+        </ToolPanelCardContent>
+      </ToolPanelCard>
 
       <div className="grid gap-6 xl:grid-cols-2">
         <Card>
-          <CardHeader className="gap-2 border-b">
+          <CardHeader className="border-b">
             <CardTitle>{messages.styleTitle}</CardTitle>
             <CardDescription>{messages.styleDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-3 pt-6 sm:grid-cols-3 xl:grid-cols-1">
+          <CardContent className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
             {styleMetrics.map((item) => (
               <MetricCard
                 key={item.label}
@@ -225,11 +223,11 @@ function TextStatisticsClient({ messages }: TextStatisticsClientProps) {
         </Card>
 
         <Card>
-          <CardHeader className="gap-2 border-b">
+          <CardHeader className="border-b">
             <CardTitle>{messages.structureTitle}</CardTitle>
             <CardDescription>{messages.structureDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-3 pt-6 sm:grid-cols-3 xl:grid-cols-1">
+          <CardContent className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
             {structureMetrics.map((item) => (
               <MetricCard
                 key={item.label}
@@ -242,11 +240,11 @@ function TextStatisticsClient({ messages }: TextStatisticsClientProps) {
       </div>
 
       <Card>
-        <CardHeader className="gap-2 border-b">
+        <CardHeader className="border-b">
           <CardTitle>{messages.repeatedTermsTitle}</CardTitle>
           <CardDescription>{messages.repeatedTermsDescription}</CardDescription>
         </CardHeader>
-        <CardContent className="pt-6">
+        <CardContent>
           {stats.topTerms.length > 0 ? (
             <div className="flex flex-wrap gap-2">
               {stats.topTerms.map((term) => (
