@@ -138,6 +138,16 @@ describe("ImageMetadataCleanerClient", () => {
     })
   })
 
+  test("hides the empty upload section after a file is selected", async () => {
+    render(<ImageMetadataCleanerClient messages={messages} />)
+
+    await uploadFile(createImageFile())
+
+    await waitFor(() => {
+      expect(screen.queryByText(messages.dragDropOrClick)).toBeNull()
+    })
+  })
+
   test("maps unsupported format failures to the localized error message", async () => {
     mockedStripImageMetadata.mockImplementation(() => {
       throw new Error("Unsupported image format")

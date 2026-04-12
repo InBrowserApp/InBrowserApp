@@ -14,6 +14,7 @@ import {
 import { Download, TriangleAlert, Wrench } from "@workspace/ui/icons"
 
 import { stripImageMetadata } from "./core/strip-image-metadata"
+import { SelectedImagePreview } from "./components/selected-image-preview"
 import { UploadDropzone } from "./components/upload-dropzone"
 import { formatBytes, formatToMime, toErrorMessage } from "./client/utils"
 import type { ImageMetadataCleanerMessages } from "./client/types"
@@ -151,23 +152,46 @@ function ImageMetadataCleanerClient({
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <ToolPanelCard>
           <ToolPanelCardContent className="gap-5">
-            <UploadDropzone
-              isDraggingOver={isDraggingOver}
-              messages={messages}
-              onClick={openFilePicker}
-              onDragEnter={handleDragEnter}
-              onDragLeave={handleDragLeave}
-              onDragOver={handleDragOver}
-              onDrop={handleDrop}
-              onKeyDown={(event) => {
-                if (event.key !== "Enter" && event.key !== " ") {
-                  return
-                }
+            {selectedFile ? (
+              <SelectedImagePreview
+                fileSizeLabel={formatBytes(selectedFile.size)}
+                isDraggingOver={isDraggingOver}
+                messages={messages}
+                onClick={openFilePicker}
+                onDragEnter={handleDragEnter}
+                onDragLeave={handleDragLeave}
+                onDragOver={handleDragOver}
+                onDrop={handleDrop}
+                onKeyDown={(event) => {
+                  if (event.key !== "Enter" && event.key !== " ") {
+                    return
+                  }
 
-                event.preventDefault()
-                openFilePicker()
-              }}
-            />
+                  event.preventDefault()
+                  openFilePicker()
+                }}
+                selectedFileName={selectedFile.name}
+                selectedFileUrl={selectedFileUrl}
+              />
+            ) : (
+              <UploadDropzone
+                isDraggingOver={isDraggingOver}
+                messages={messages}
+                onClick={openFilePicker}
+                onDragEnter={handleDragEnter}
+                onDragLeave={handleDragLeave}
+                onDragOver={handleDragOver}
+                onDrop={handleDrop}
+                onKeyDown={(event) => {
+                  if (event.key !== "Enter" && event.key !== " ") {
+                    return
+                  }
+
+                  event.preventDefault()
+                  openFilePicker()
+                }}
+              />
+            )}
 
             <input
               ref={inputRef}
@@ -177,22 +201,6 @@ function ImageMetadataCleanerClient({
               onChange={handleFileChange}
               type="file"
             />
-
-            {selectedFile && selectedFileUrl ? (
-              <div className="grid gap-4 sm:grid-cols-[8rem_minmax(0,1fr)]">
-                <img
-                  alt={selectedFile.name}
-                  className="aspect-square w-full rounded-xl border bg-muted object-contain p-2"
-                  src={selectedFileUrl}
-                />
-                <div className="space-y-2">
-                  <p className="font-medium break-all">{selectedFile.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {formatBytes(selectedFile.size)}
-                  </p>
-                </div>
-              </div>
-            ) : null}
           </ToolPanelCardContent>
 
           {selectedFile ? (
