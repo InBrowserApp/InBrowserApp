@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "nanoid-generator",
+    language: "ar",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "de",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "en",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "es",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "fr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "he",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "hi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "id",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "it",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ja",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ko",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ms",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "nl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "no",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pt",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ru",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "sv",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "th",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "tr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "vi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "openapi-to-typescript-converter",
     language: "ar",
   },
@@ -1471,6 +1563,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "rot-cipher",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
     language: "zh-TW",
   },
   {

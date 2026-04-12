@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-256 tekstu lub pliku",
+  "description": "Generuj hash SHA-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

@@ -1,0 +1,13 @@
+{
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "decimalLabel": "十进制",
+  "binaryLabel": "二进制",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制"
+}

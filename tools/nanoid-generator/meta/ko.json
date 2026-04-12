@@ -1,0 +1,4 @@
+{
+  "name": "NanoID 생성기",
+  "description": "브라우저에서 URL 안전한 NanoID를 생성하고 길이와 알파벳 프리셋을 사용자 지정합니다."
+}

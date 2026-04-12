@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto simples",
+  "plainTextDescription": "Cole ou digite qualquer texto UTF-8, incluindo emojis e caracteres não latinos.",
+  "importFromFileLabel": "Importar de arquivo",
+  "hashResultLabel": "Resultado do Hash",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binário",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado"
+}

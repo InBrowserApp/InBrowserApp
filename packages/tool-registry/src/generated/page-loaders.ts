@@ -19,9 +19,12 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
+  "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
+  "sha256-hash-text-or-file": () =>
+    import("@tool/sha256-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
