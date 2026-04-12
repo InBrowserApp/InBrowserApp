@@ -1,0 +1,4 @@
+{
+  "name": "Duration Add/Subtract Calculator",
+  "description": "Add or subtract ISO 8601 durations from a base time in any time zone, with millisecond precision."
+}

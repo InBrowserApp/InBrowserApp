@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur d'ajout/soustraction de durée",
+  "description": "Ajoutez ou soustrayez des durées ISO 8601 à partir d'une heure de base dans n'importe quel fuseau horaire, avec une précision à la milliseconde."
+}

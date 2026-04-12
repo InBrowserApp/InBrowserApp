@@ -1,0 +1,77 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import DurationCalculatorClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type DurationCalculatorMessagesCatalog = Readonly<{
+  baseTimeLabel: string
+  timeZoneLabel: string
+  timeZonePlaceholder: string
+  dateTimeLabel: string
+  dateTimePlaceholder: string
+  formatHint: string
+  nowLabel: string
+  offsetLabel: string
+  invalidDateTimeLabel: string
+  durationLabel: string
+  durationIsoLabel: string
+  durationPlaceholder: string
+  durationHint: string
+  daysLabel: string
+  hoursLabel: string
+  minutesLabel: string
+  secondsLabel: string
+  millisecondsLabel: string
+  invalidDurationLabel: string
+  resultsLabel: string
+  addLabel: string
+  subtractLabel: string
+  iso8601Label: string
+  unixMillisecondsLabel: string
+  unixSecondsLabel: string
+  copyLabel: string
+  copiedLabel: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<DurationCalculatorMessagesCatalog>(
+  import.meta.glob("./messages/*.json", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <DurationCalculatorClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>

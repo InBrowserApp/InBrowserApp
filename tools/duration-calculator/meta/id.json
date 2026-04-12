@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator tambah/kurangi durasi",
+  "description": "Tambahkan atau kurangi durasi ISO 8601 dari waktu dasar di zona waktu mana pun, dengan presisi milidetik."
+}

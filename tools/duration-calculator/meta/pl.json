@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator dodawania/odejmowania czasu trwania",
+  "description": "Dodawaj lub odejmuj czasy trwania ISO 8601 od czasu bazowego w dowolnej strefie czasowej z dokładnością do milisekundy."
+}

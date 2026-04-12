@@ -9,6 +9,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "current-network-time": () => import("@tool/current-network-time/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
+  "duration-calculator": () => import("@tool/duration-calculator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),

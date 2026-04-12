@@ -1,0 +1,4 @@
+{
+  "name": "Máy tính cộng/trừ thời lượng",
+  "description": "Cộng hoặc trừ thời lượng ISO 8601 từ thời gian gốc ở bất kỳ múi giờ nào, với độ chính xác đến mili giây."
+}
