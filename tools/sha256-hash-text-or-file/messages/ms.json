@@ -4,6 +4,7 @@
   "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
   "importFromFileLabel": "Import dari fail",
   "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks semasa.",
   "hexLabel": "Heksadesimal",
   "base64Label": "Base64",
   "decimalLabel": "Perpuluhan",

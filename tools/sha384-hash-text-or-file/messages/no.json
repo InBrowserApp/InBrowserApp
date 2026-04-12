@@ -4,6 +4,7 @@
   "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
   "importFromFileLabel": "Importer fra fil",
   "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat for gjeldende tekstinndata.",
   "hexLabel": "Heksadesimal",
   "base64Label": "Base64",
   "decimalLabel": "Desimal",

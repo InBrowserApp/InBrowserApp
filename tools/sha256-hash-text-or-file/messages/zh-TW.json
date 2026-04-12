@@ -4,6 +4,7 @@
   "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
   "importFromFileLabel": "從檔案匯入",
   "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入的雜湊結果。",
   "hexLabel": "十六進制",
   "base64Label": "Base64",
   "decimalLabel": "十進制",

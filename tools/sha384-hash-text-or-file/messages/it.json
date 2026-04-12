@@ -4,6 +4,7 @@
   "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
   "importFromFileLabel": "Importa da file",
   "hashResultLabel": "Risultato Hash",
+  "hashResultDescription": "Risultato hash per l'input di testo corrente.",
   "hexLabel": "Esadecimale",
   "base64Label": "Base64",
   "decimalLabel": "Decimale",

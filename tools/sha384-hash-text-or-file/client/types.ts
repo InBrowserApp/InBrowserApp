@@ -4,6 +4,7 @@ type Sha384HashTextOrFileMessages = Readonly<{
   plainTextDescription: string
   importFromFileLabel: string
   hashResultLabel: string
+  hashResultDescription: string
   hexLabel: string
   base64Label: string
   decimalLabel: string

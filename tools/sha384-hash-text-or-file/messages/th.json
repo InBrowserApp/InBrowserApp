@@ -4,6 +4,7 @@
   "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
   "importFromFileLabel": "นำเข้าจากไฟล์",
   "hashResultLabel": "ผลลัพธ์ Hash",
+  "hashResultDescription": "ผลลัพธ์แฮชสำหรับข้อความที่ป้อนอยู่ในขณะนี้",
   "hexLabel": "เลขฐานสิบหก",
   "base64Label": "Base64",
   "decimalLabel": "เลขฐานสิบ",

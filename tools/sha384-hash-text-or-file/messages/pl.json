@@ -4,6 +4,7 @@
   "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
   "importFromFileLabel": "Importuj z pliku",
   "hashResultLabel": "Wynik Hash",
+  "hashResultDescription": "Wynik haszowania dla bieżącego tekstu wejściowego.",
   "hexLabel": "Szesnastkowy",
   "base64Label": "Base64",
   "decimalLabel": "Dziesiętny",

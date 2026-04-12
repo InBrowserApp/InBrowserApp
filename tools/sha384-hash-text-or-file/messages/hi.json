@@ -4,6 +4,7 @@
   "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित किसी भी UTF-8 टेक्स्ट को पेस्ट करें या टाइप करें।",
   "importFromFileLabel": "फ़ाइल से आयात करें",
   "hashResultLabel": "हैश परिणाम",
+  "hashResultDescription": "वर्तमान टेक्स्ट इनपुट का हैश परिणाम।",
   "hexLabel": "हेक्साडेसिमल",
   "base64Label": "Base64",
   "decimalLabel": "दशमलव",
