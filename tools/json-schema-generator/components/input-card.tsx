@@ -40,7 +40,10 @@ function InputCard({
         <CardTitle>{messages.inputTitle}</CardTitle>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
-        <Field data-invalid={Boolean(errorMessage) || undefined}>
+        <Field
+          data-invalid={Boolean(errorMessage) || undefined}
+          className="min-h-0 flex-1"
+        >
           <Textarea
             id={inputId}
             aria-label={messages.inputTitle}
@@ -51,7 +54,7 @@ function InputCard({
               onInputChange(event.target.value)
             }}
             placeholder={messages.inputPlaceholder}
-            className="min-h-80 flex-1 resize-y font-mono text-sm"
+            className="min-h-80 flex-1 resize-y font-mono text-sm xl:min-h-0"
           />
           <FieldError>{errorMessage}</FieldError>
         </Field>

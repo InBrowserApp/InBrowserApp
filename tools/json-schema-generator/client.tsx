@@ -184,25 +184,31 @@ function JsonSchemaGeneratorClient({
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_20rem]">
-      <InputCard
-        errorMessage={parseResult.error ?? ""}
-        fileInputRef={fileInputRef}
-        inputText={inputText}
-        messages={messages}
-        onFileChange={(event) => {
-          void handleFileChange(event)
-        }}
-        onInputChange={setInputText}
-        onUseSample={useSample}
-      />
+    <div className="grid gap-6">
+      <div className="grid gap-6 xl:grid-cols-2">
+        <div className="xl:h-[80vh]">
+          <InputCard
+            errorMessage={parseResult.error ?? ""}
+            fileInputRef={fileInputRef}
+            inputText={inputText}
+            messages={messages}
+            onFileChange={(event) => {
+              void handleFileChange(event)
+            }}
+            onInputChange={setInputText}
+            onUseSample={useSample}
+          />
+        </div>
 
-      <OutputCard
-        downloadUrl={downloadUrl}
-        errorMessage={parseResult.error ?? ""}
-        messages={messages}
-        schemaText={schemaText}
-      />
+        <div className="xl:h-[80vh]">
+          <OutputCard
+            downloadUrl={downloadUrl}
+            errorMessage={parseResult.error ?? ""}
+            messages={messages}
+            schemaText={schemaText}
+          />
+        </div>
+      </div>
 
       <OptionsCard
         messages={messages}

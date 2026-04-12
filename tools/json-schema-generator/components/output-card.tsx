@@ -43,7 +43,7 @@ function OutputCard({
       <CardHeader className="border-b">
         <CardTitle>{messages.outputTitle}</CardTitle>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4">
+      <ToolPanelCardContent className="min-h-0 gap-4">
         {errorMessage ? (
           <Alert variant="destructive">
             <TriangleAlert />

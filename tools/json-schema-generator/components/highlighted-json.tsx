@@ -21,7 +21,7 @@ function HighlightedJson({ ariaLabel, value }: HighlightedJsonProps) {
     <div
       role="region"
       aria-label={ariaLabel}
-      className="json-schema-highlight-surface flex min-h-80 min-w-0 flex-1 flex-col overflow-hidden rounded-lg border border-input bg-transparent"
+      className="json-schema-highlight-surface flex min-h-80 min-w-0 flex-1 flex-col overflow-hidden rounded-lg border border-input bg-transparent xl:min-h-0"
     >
       <ScrollArea className="min-h-0 flex-1">
         <pre className="json-schema-highlight hljs min-h-full px-2.5 py-2">

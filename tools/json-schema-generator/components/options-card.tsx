@@ -42,9 +42,9 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
       <CardHeader className="border-b">
         <CardTitle>{messages.optionsTitle}</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-5">
-        <FieldGroup>
-          <Field>
+      <CardContent>
+        <FieldGroup className="grid gap-4 md:grid-cols-2 xl:grid-cols-[minmax(14rem,18rem)_repeat(3,minmax(0,1fr))] xl:items-center">
+          <Field className="xl:min-w-0">
             <FieldLabel htmlFor={`${idPrefix}-draft`}>
               {messages.optionDraft}
             </FieldLabel>
@@ -79,7 +79,10 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
             </Select>
           </Field>
 
-          <Field orientation="horizontal">
+          <Field
+            orientation="horizontal"
+            className="rounded-lg border border-input px-3 py-2"
+          >
             <FieldContent>
               <FieldLabel htmlFor={`${idPrefix}-infer-required`}>
                 {messages.optionInferRequired}
@@ -98,7 +101,10 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
             />
           </Field>
 
-          <Field orientation="horizontal">
+          <Field
+            orientation="horizontal"
+            className="rounded-lg border border-input px-3 py-2"
+          >
             <FieldContent>
               <FieldLabel htmlFor={`${idPrefix}-allow-additional-properties`}>
                 {messages.optionAllowAdditionalProperties}
@@ -117,7 +123,10 @@ function OptionsCard({ messages, options, setOptions }: OptionsCardProps) {
             />
           </Field>
 
-          <Field orientation="horizontal">
+          <Field
+            orientation="horizontal"
+            className="rounded-lg border border-input px-3 py-2"
+          >
             <FieldContent>
               <FieldLabel htmlFor={`${idPrefix}-detect-format`}>
                 {messages.optionDetectFormat}
