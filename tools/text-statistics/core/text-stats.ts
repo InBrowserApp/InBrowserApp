@@ -1,4 +1,4 @@
-export interface TextStats {
+interface TextStats {
   characters: number
   charactersNoSpaces: number
   words: number
