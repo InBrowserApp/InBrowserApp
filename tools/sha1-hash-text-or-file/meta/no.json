@@ -1,0 +1,4 @@
+{
+  "name": "SHA-1-hash tekst eller fil",
+  "description": "Generer SHA-1-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål"
+}

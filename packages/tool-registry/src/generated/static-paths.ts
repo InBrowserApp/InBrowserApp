@@ -1842,6 +1842,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sha1-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sha256-hash-text-or-file",
     language: "ar",
   },
