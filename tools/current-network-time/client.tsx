@@ -5,8 +5,6 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
-import { Badge } from "@workspace/ui/components/ui/badge"
-import { Card, CardContent } from "@workspace/ui/components/ui/card"
 import { TriangleAlert } from "@workspace/ui/icons"
 
 import {
@@ -185,6 +183,7 @@ function CurrentNetworkTimeClient({
   }, [])
 
   const displayedTimeMs = networkTimeMs ?? localTimeMs
+  const showSyncingIndicator = status === "syncing" && lastSyncAtMs === 0
 
   return (
     <div className="grid gap-6">
@@ -196,54 +195,48 @@ function CurrentNetworkTimeClient({
         </Alert>
       ) : null}
 
-      <Card className="overflow-hidden border-border/80 bg-linear-to-br from-sky-500/10 via-card to-emerald-500/10 shadow-[var(--shadow-elevated)]">
-        <CardContent className="p-0">
-          <div className="relative isolate overflow-hidden px-6 py-10 sm:px-8 sm:py-12">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.16),_transparent_48%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.14),_transparent_42%)]" />
-
-            <div className="relative flex flex-col items-center gap-6 text-center">
-              {status === "syncing" ? (
-                <Badge
-                  variant="secondary"
-                  className="gap-1.5 border-sky-500/20 bg-sky-500/10 text-sky-700 dark:text-sky-300"
-                >
-                  <span className="size-2 animate-pulse rounded-full bg-current opacity-80" />
-                  {messages.syncing}
-                </Badge>
-              ) : null}
-
-              <div className="w-full rounded-[2rem] border border-border/70 bg-background/75 px-4 py-8 shadow-inner backdrop-blur sm:px-8 sm:py-10">
-                <p className="font-mono text-[clamp(3rem,11vw,6.5rem)] font-semibold tracking-tight text-foreground tabular-nums">
-                  {formatClockTime(displayedTimeMs, language)}
-                </p>
-                <p className="mt-3 text-sm text-muted-foreground sm:text-base">
-                  {formatCalendarDate(displayedTimeMs, language)}
-                </p>
-              </div>
-
-              <div className="grid w-full gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-border/70 bg-background/70 p-5 text-left shadow-xs backdrop-blur">
-                  <p className="text-sm text-muted-foreground">
-                    {messages.offset}
-                  </p>
-                  <p className="mt-2 font-mono text-xl text-foreground tabular-nums sm:text-2xl">
-                    {formatOffset(offsetMs, roundTripTimeMs, language)}
-                  </p>
-                </div>
-
-                <div className="rounded-[1.5rem] border border-border/70 bg-background/70 p-5 text-left shadow-xs backdrop-blur">
-                  <p className="text-sm text-muted-foreground">
-                    {messages.lastSyncedAt}
-                  </p>
-                  <p className="mt-2 font-mono text-xl text-foreground tabular-nums sm:text-2xl">
-                    {formatLastSyncedAt(lastSyncAtMs, language)}
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div className="space-y-8 px-1 py-2">
+        <div className="space-y-4 text-center">
+          <div
+            aria-live="polite"
+            className="flex min-h-5 items-center justify-center text-sm text-muted-foreground"
+          >
+            {showSyncingIndicator ? (
+              <span className="inline-flex items-center gap-2">
+                <span className="size-1.5 animate-pulse rounded-full bg-current opacity-70" />
+                {messages.syncing}
+              </span>
+            ) : null}
           </div>
-        </CardContent>
-      </Card>
+
+          <div className="space-y-3">
+            <p className="font-mono text-[clamp(3rem,11vw,6.5rem)] font-semibold tracking-tight text-foreground tabular-nums">
+              {formatClockTime(displayedTimeMs, language)}
+            </p>
+            <p className="text-sm text-muted-foreground sm:text-base">
+              {formatCalendarDate(displayedTimeMs, language)}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid gap-6 border-t pt-6 sm:grid-cols-2">
+          <div className="space-y-2 text-left">
+            <p className="text-sm text-muted-foreground">{messages.offset}</p>
+            <p className="min-h-8 font-mono text-lg text-foreground tabular-nums sm:min-h-9 sm:text-2xl">
+              {formatOffset(offsetMs, roundTripTimeMs, language)}
+            </p>
+          </div>
+
+          <div className="space-y-2 text-left">
+            <p className="text-sm text-muted-foreground">
+              {messages.lastSyncedAt}
+            </p>
+            <p className="min-h-8 font-mono text-lg text-foreground tabular-nums sm:min-h-9 sm:text-2xl">
+              {formatLastSyncedAt(lastSyncAtMs, language)}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

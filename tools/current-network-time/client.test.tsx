@@ -58,6 +58,7 @@ describe("CurrentNetworkTimeClient", () => {
     })
 
     expect(screen.getByText("Last synced at")).toBeTruthy()
+    expect(screen.queryByText("Syncing")).toBeNull()
     expect(screen.queryByText("Failed to sync time")).toBeNull()
   })
 
@@ -123,6 +124,70 @@ describe("CurrentNetworkTimeClient", () => {
     await waitFor(() => {
       expect(screen.getByText("123 ms (±200 ms)")).toBeTruthy()
     })
+  })
+
+  test("keeps the syncing indicator hidden during background re-syncs", async () => {
+    let performanceMs = 1_000
+    let epochMs = 1_700_000_000_000
+    const intervalCallbacks: Array<() => void> = []
+    let resolveInitialFetch:
+      | ((value: { text: () => Promise<string> }) => void)
+      | undefined
+    let resolveBackgroundFetch:
+      | ((value: { text: () => Promise<string> }) => void)
+      | undefined
+    const fetchMock = vi
+      .fn()
+      .mockImplementationOnce(
+        () =>
+          new Promise<{ text: () => Promise<string> }>((resolve) => {
+            resolveInitialFetch = resolve
+          })
+      )
+      .mockImplementationOnce(
+        () =>
+          new Promise<{ text: () => Promise<string> }>((resolve) => {
+            resolveBackgroundFetch = resolve
+          })
+      )
+
+    vi.spyOn(performance, "now").mockImplementation(() => performanceMs)
+    vi.spyOn(Date, "now").mockImplementation(() => epochMs)
+    vi.spyOn(window, "setInterval").mockImplementation(((
+      callback: TimerHandler,
+      _delay?: number
+    ) => {
+      intervalCallbacks.push(callback as () => void)
+      return intervalCallbacks.length as unknown as ReturnType<
+        typeof window.setInterval
+      >
+    }) as unknown as typeof window.setInterval)
+    vi.spyOn(window, "clearInterval").mockImplementation(() => undefined)
+    vi.stubGlobal("fetch", fetchMock)
+
+    render(<CurrentNetworkTimeClient language="en" messages={messages} />)
+
+    expect(screen.getByText("Syncing")).toBeTruthy()
+
+    performanceMs = 1_200
+    epochMs = 1_700_000_000_200
+    resolveInitialFetch?.({
+      text: async () => "ts=1700000000.323",
+    })
+
+    await waitFor(() => {
+      expect(screen.getByText("123 ms (±200 ms)")).toBeTruthy()
+    })
+
+    expect(screen.queryByText("Syncing")).toBeNull()
+    intervalCallbacks[1]?.()
+
+    await waitFor(() => {
+      expect(fetchMock).toHaveBeenCalledTimes(2)
+      expect(resolveBackgroundFetch).toBeTypeOf("function")
+    })
+
+    expect(screen.queryByText("Syncing")).toBeNull()
   })
 
   test("falls back to String for non-Error sync failures", async () => {
