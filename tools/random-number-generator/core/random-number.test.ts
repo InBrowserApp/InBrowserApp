@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest"
+import { describe, expect, test, vi } from "vitest"
 
 import {
   MAX_HISTORY_ITEMS,
@@ -189,6 +189,15 @@ describe("addHistoryEntry", () => {
     expect(many).toHaveLength(MAX_HISTORY_ITEMS)
     expect(many[0]?.values).toEqual(["21"])
     expect(many.at(-1)?.values).toEqual(["2"])
+  })
+
+  test("falls back to the built-in history id generator", () => {
+    vi.spyOn(Date, "now").mockReturnValue(1700000000000)
+    vi.spyOn(Math, "random").mockReturnValue(0.5)
+
+    expect(addHistoryEntry([], ["7"])).toEqual([
+      { id: "1700000000000-8", values: ["7"] },
+    ])
   })
 })
 
