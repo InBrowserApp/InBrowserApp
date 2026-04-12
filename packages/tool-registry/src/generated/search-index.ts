@@ -1930,6 +1930,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "list-comparer",
+    category: "text",
+    icon: "file-text",
+    tags: ["list", "compare", "diff", "dedupe", "text"],
+    locales: {
+      ar: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      de: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      en: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      es: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      fr: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      he: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      hi: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      id: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      it: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ja: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ko: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ms: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      nl: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      no: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      pl: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      pt: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ru: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      sv: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      th: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      tr: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      vi: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      "zh-CN": {
+        name: "列表比较",
+        description:
+          "比较两份列表，找出重合项、差异项和重复项，并导出你真正要处理的结果集。",
+      },
+      "zh-TW": {
+        name: "列表比較",
+        description:
+          "比較兩份列表，找出重疊項、差異項與重複項，並匯出你真正要處理的結果集。",
+      },
+    },
+  },
+  {
     slug: "nanoid-generator",
     category: "developer",
     icon: "lock",
