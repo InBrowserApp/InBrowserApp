@@ -34,7 +34,7 @@ function UploadDropzone({
   return (
     <button
       aria-label={messages.dragDropOrClick}
-      className="cursor-pointer text-inherit"
+      className="flex min-h-0 w-full flex-1 cursor-pointer appearance-none bg-transparent p-0 text-inherit"
       onClick={onClick}
       onDragEnter={onDragEnter}
       onDragLeave={onDragLeave}
@@ -45,7 +45,7 @@ function UploadDropzone({
     >
       <Empty
         className={cn(
-          "border border-dashed border-border/80 bg-muted/30 transition-colors hover:border-foreground/20 hover:bg-muted/45",
+          "min-h-full flex-1 border border-dashed border-border/80 bg-muted/30 transition-colors hover:border-foreground/20 hover:bg-muted/45",
           isDraggingOver && "border-foreground/30 bg-muted/45"
         )}
       >
