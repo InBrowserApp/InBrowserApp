@@ -8,10 +8,15 @@ import {
 
 import { Button } from "@workspace/ui/components/ui/button"
 import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
+import { Badge } from "@workspace/ui/components/ui/badge"
+import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -130,155 +135,146 @@ function TextStatisticsClient({ messages }: TextStatisticsClientProps) {
   ] as const
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(20rem,1fr)]">
-      <Card className="overflow-hidden border-foreground/10 bg-gradient-to-br from-amber-50/80 via-background to-orange-50/60 shadow-sm shadow-black/5 dark:from-stone-950 dark:via-background dark:to-stone-900">
-        <CardHeader className="gap-4 border-b bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.24),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.12),transparent_36%)]">
-          <div className="space-y-2">
-            <p className="text-[0.68rem] font-medium tracking-[0.28em] text-muted-foreground uppercase">
-              {messages.inputEyebrow}
-            </p>
-            <CardTitle className="max-w-xl text-2xl text-balance sm:text-3xl">
-              {messages.inputTitle}
-            </CardTitle>
-            <CardDescription className="max-w-2xl text-sm/relaxed text-foreground/70">
-              {messages.inputDescription}
-            </CardDescription>
-          </div>
-        </CardHeader>
-        <CardContent className="pt-6">
-          <label htmlFor={textareaId} className="sr-only">
-            {messages.placeholder}
-          </label>
-          <Textarea
-            id={textareaId}
-            aria-label={messages.placeholder}
-            value={text}
-            onChange={(event) => {
-              setText(event.target.value)
-            }}
-            placeholder={messages.placeholder}
-            rows={14}
-            className="min-h-[24rem] resize-y border-foreground/10 bg-background/80 text-sm shadow-inner shadow-black/5 dark:bg-background/60"
-          />
-        </CardContent>
-        <CardFooter className="justify-between gap-3 border-t bg-background/50">
-          <Button
-            type="button"
-            variant="secondary"
-            size="sm"
-            onClick={() => {
-              startTransition(() => {
-                setText(SAMPLE_TEXT)
-              })
-            }}
-          >
-            {messages.loadSample}
-          </Button>
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            onClick={() => {
-              startTransition(() => {
-                setText("")
-              })
-            }}
-          >
-            {messages.clearText}
-          </Button>
-        </CardFooter>
-      </Card>
+    <div className="flex flex-col gap-6">
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
+        <ToolPanelCard>
+          <CardHeader className="gap-3 border-b">
+            <div className="flex flex-wrap items-center gap-3">
+              <CardTitle>{messages.inputTitle}</CardTitle>
+              <Badge variant="secondary">{messages.inputEyebrow}</Badge>
+            </div>
+            <CardDescription>{messages.inputDescription}</CardDescription>
+          </CardHeader>
+          <ToolPanelCardContent className="gap-4 pt-6">
+            <label htmlFor={textareaId} className="sr-only">
+              {messages.placeholder}
+            </label>
+            <Textarea
+              id={textareaId}
+              aria-label={messages.placeholder}
+              value={text}
+              onChange={(event) => {
+                setText(event.target.value)
+              }}
+              placeholder={messages.placeholder}
+              rows={14}
+              className="min-h-80 flex-1 resize-y text-sm"
+            />
+          </ToolPanelCardContent>
+          <ToolPanelCardFooter className="flex flex-wrap justify-start gap-3 border-t">
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                startTransition(() => {
+                  setText(SAMPLE_TEXT)
+                })
+              }}
+            >
+              {messages.loadSample}
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                startTransition(() => {
+                  setText("")
+                })
+              }}
+            >
+              {messages.clearText}
+            </Button>
+          </ToolPanelCardFooter>
+        </ToolPanelCard>
 
-      <div className="grid gap-6">
-        <Card className="overflow-hidden border-foreground/10 bg-gradient-to-br from-background via-background to-muted/50">
+        <ToolPanelCard>
           <CardHeader className="gap-2 border-b">
             <CardTitle>{messages.snapshotTitle}</CardTitle>
             <CardDescription>{messages.snapshotDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-4 pt-6 sm:grid-cols-2">
+          <ToolPanelCardContent className="grid gap-3 pt-6 sm:grid-cols-2 xl:grid-cols-1">
             {overviewMetrics.map((item) => (
               <MetricCard
                 key={item.label}
                 label={item.label}
                 value={item.value}
-                tone="warm"
+                tone="default"
+              />
+            ))}
+          </ToolPanelCardContent>
+        </ToolPanelCard>
+      </div>
+
+      <div className="grid gap-6 xl:grid-cols-2">
+        <Card>
+          <CardHeader className="gap-2 border-b">
+            <CardTitle>{messages.styleTitle}</CardTitle>
+            <CardDescription>{messages.styleDescription}</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-3 pt-6 sm:grid-cols-3 xl:grid-cols-1">
+            {styleMetrics.map((item) => (
+              <MetricCard
+                key={item.label}
+                label={item.label}
+                value={item.value}
               />
             ))}
           </CardContent>
         </Card>
 
-        <div className="grid gap-6 2xl:grid-cols-2">
-          <Card className="border-foreground/10">
-            <CardHeader className="gap-2 border-b">
-              <CardTitle>{messages.styleTitle}</CardTitle>
-              <CardDescription>{messages.styleDescription}</CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-4 pt-6">
-              {styleMetrics.map((item) => (
-                <MetricCard
-                  key={item.label}
-                  label={item.label}
-                  value={item.value}
-                  tone="quiet"
-                />
-              ))}
-            </CardContent>
-          </Card>
-
-          <Card className="border-foreground/10">
-            <CardHeader className="gap-2 border-b">
-              <CardTitle>{messages.structureTitle}</CardTitle>
-              <CardDescription>{messages.structureDescription}</CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-4 pt-6">
-              {structureMetrics.map((item) => (
-                <MetricCard
-                  key={item.label}
-                  label={item.label}
-                  value={item.value}
-                  tone="default"
-                />
-              ))}
-            </CardContent>
-          </Card>
-        </div>
-
-        <Card className="border-foreground/10">
+        <Card>
           <CardHeader className="gap-2 border-b">
-            <CardTitle>{messages.repeatedTermsTitle}</CardTitle>
-            <CardDescription>
-              {messages.repeatedTermsDescription}
-            </CardDescription>
+            <CardTitle>{messages.structureTitle}</CardTitle>
+            <CardDescription>{messages.structureDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="pt-6">
-            {stats.topTerms.length > 0 ? (
-              <div className="flex flex-wrap gap-2">
-                {stats.topTerms.map((term) => (
-                  <div
-                    key={term.term}
-                    className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-muted/50 px-3 py-1.5 text-sm"
-                  >
-                    <span className="font-medium">{term.term}</span>
-                    <span className="text-muted-foreground">×{term.count}</span>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <Empty className="border-border/80 bg-muted/20">
-                <EmptyHeader>
-                  <EmptyMedia variant="icon">
-                    <FileText />
-                  </EmptyMedia>
-                  <EmptyTitle>{messages.repeatedTermsTitle}</EmptyTitle>
-                  <EmptyDescription>
-                    {messages.repeatedTermsEmpty}
-                  </EmptyDescription>
-                </EmptyHeader>
-              </Empty>
-            )}
+          <CardContent className="grid gap-3 pt-6 sm:grid-cols-3 xl:grid-cols-1">
+            {structureMetrics.map((item) => (
+              <MetricCard
+                key={item.label}
+                label={item.label}
+                value={item.value}
+              />
+            ))}
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader className="gap-2 border-b">
+          <CardTitle>{messages.repeatedTermsTitle}</CardTitle>
+          <CardDescription>{messages.repeatedTermsDescription}</CardDescription>
+        </CardHeader>
+        <CardContent className="pt-6">
+          {stats.topTerms.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              {stats.topTerms.map((term) => (
+                <Badge
+                  key={term.term}
+                  variant="secondary"
+                  className="gap-2 rounded-full px-3 py-1"
+                >
+                  <span className="font-medium">{term.term}</span>
+                  <span className="text-muted-foreground">×{term.count}</span>
+                </Badge>
+              ))}
+            </div>
+          ) : (
+            <Empty className="border-border/80 bg-muted/20">
+              <EmptyHeader>
+                <EmptyMedia variant="icon">
+                  <FileText />
+                </EmptyMedia>
+                <EmptyTitle>{messages.repeatedTermsTitle}</EmptyTitle>
+                <EmptyDescription>
+                  {messages.repeatedTermsEmpty}
+                </EmptyDescription>
+              </EmptyHeader>
+            </Empty>
+          )}
+        </CardContent>
+      </Card>
     </div>
   )
 }
