@@ -23,6 +23,19 @@ describe("formatRequest", () => {
     ).resolves.toBe("const answer = 42;\n")
   })
 
+  it("formats mjml templates with the official html plugin", async () => {
+    await expect(
+      formatRequest(
+        createPrettierFormatRequest(
+          "<mjml><mj-body><mj-section><mj-column><mj-text>Hello</mj-text></mj-column></mj-section></mj-body></mjml>",
+          {
+            language: "mjml",
+          }
+        )
+      )
+    ).resolves.toContain("<mj-text>Hello</mj-text>")
+  })
+
   it("rejects invalid input with the underlying prettier message", async () => {
     await expect(
       formatRequest(createPrettierFormatRequest("{", { language: "json" }))

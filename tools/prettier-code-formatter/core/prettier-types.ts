@@ -1,17 +1,22 @@
 type PrettierTrailingComma = "none" | "es5" | "all"
 type PrettierLanguageKey =
   | "javascript"
+  | "jsx"
   | "typescript"
+  | "tsx"
   | "flow"
   | "json"
+  | "json-stringify"
   | "json5"
   | "jsonc"
   | "html"
   | "angular"
   | "vue"
   | "lwc"
+  | "mjml"
   | "handlebars"
   | "css"
+  | "postcss"
   | "scss"
   | "less"
   | "markdown"
@@ -47,6 +52,8 @@ type PrettierLanguageConfig = Readonly<{
   pluginKeys: readonly PrettierPluginKey[]
   highlightLanguage: string
   extensions: readonly string[]
+  filenames?: readonly string[]
+  outputExtension?: string
   sample: string
   supportsSemi: boolean
   supportsSingleQuote: boolean
@@ -70,17 +77,22 @@ type PrettierFormatRequest = Readonly<{
 
 const PRETTIER_LANGUAGE_KEYS = [
   "javascript",
+  "jsx",
   "typescript",
+  "tsx",
   "flow",
   "json",
+  "json-stringify",
   "json5",
   "jsonc",
   "html",
   "angular",
   "vue",
   "lwc",
+  "mjml",
   "handlebars",
   "css",
+  "postcss",
   "scss",
   "less",
   "markdown",

@@ -58,16 +58,32 @@ describe("prettier-languages", () => {
     })
   })
 
-  it("detects languages from supported file extensions", () => {
-    expect(detectPrettierLanguageFromFilename("demo.tsx")).toBe("typescript")
+  it("detects languages from supported file names and extensions", () => {
+    expect(detectPrettierLanguageFromFilename("demo.jsx")).toBe("jsx")
+    expect(detectPrettierLanguageFromFilename("demo.tsx")).toBe("tsx")
+    expect(detectPrettierLanguageFromFilename("schema.js.flow")).toBe("flow")
+    expect(
+      detectPrettierLanguageFromFilename("component/button.component.html")
+    ).toBe("angular")
+    expect(detectPrettierLanguageFromFilename("package.json")).toBe(
+      "json-stringify"
+    )
+    expect(detectPrettierLanguageFromFilename("map.importmap")).toBe(
+      "json-stringify"
+    )
     expect(detectPrettierLanguageFromFilename("README.MD")).toBe("markdown")
+    expect(detectPrettierLanguageFromFilename("newsletter.mjml")).toBe("mjml")
+    expect(detectPrettierLanguageFromFilename("theme.postcss")).toBe("postcss")
     expect(detectPrettierLanguageFromFilename("snippet.unknown")).toBeNull()
     expect(detectPrettierLanguageFromFilename("no-extension")).toBeNull()
   })
 
   it("returns config labels and download filenames", () => {
     expect(getPrettierLanguageConfig("graphql").label).toBe("GraphQL")
+    expect(getPrettierLanguageConfig("mjml").label).toBe("MJML")
     expect(getPrettierDownloadFilename("yaml")).toBe("formatted.yaml")
+    expect(getPrettierDownloadFilename("postcss")).toBe("formatted.postcss")
+    expect(getPrettierDownloadFilename("json-stringify")).toBe("formatted.json")
   })
 
   it("falls back to generic extensions when a config exposes none", () => {
@@ -76,6 +92,7 @@ describe("prettier-languages", () => {
     PRETTIER_LANGUAGE_CONFIGS.yaml = {
       ...originalYamlConfig,
       extensions: [],
+      outputExtension: undefined,
     }
 
     try {
@@ -92,6 +109,7 @@ describe("prettier-languages", () => {
 
   it("guards language and trailing comma values", () => {
     expect(isPrettierLanguageKey("typescript")).toBe(true)
+    expect(isPrettierLanguageKey("mjml")).toBe(true)
     expect(isPrettierLanguageKey("lua")).toBe(false)
     expect(isPrettierTrailingComma("es5")).toBe(true)
     expect(isPrettierTrailingComma("never")).toBe(false)

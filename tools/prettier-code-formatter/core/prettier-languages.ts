@@ -50,6 +50,8 @@ function createPrettierFormatRequest(
 ): PrettierFormatRequest {
   const sanitizedOptions = sanitizePrettierFormatOptions(options)
   const config = getPrettierLanguageConfig(sanitizedOptions.language)
+  const outputExtension =
+    config.outputExtension ?? config.extensions[0] ?? ".txt"
 
   return {
     code,
@@ -57,7 +59,7 @@ function createPrettierFormatRequest(
     parser: config.parser,
     pluginKeys: config.pluginKeys,
     highlightLanguage: config.highlightLanguage,
-    outputExtension: config.extensions[0] ?? ".txt",
+    outputExtension,
     printWidth: sanitizedOptions.printWidth,
     tabWidth: sanitizedOptions.tabWidth,
     useTabs: sanitizedOptions.useTabs,
@@ -72,26 +74,45 @@ function createPrettierFormatRequest(
 }
 
 function detectPrettierLanguageFromFilename(filename: string) {
-  const match = filename.toLowerCase().match(/\.([a-z0-9]+)$/)
-  const extension = match?.[1]
+  const normalizedFilename = filename.toLowerCase()
+  const basename =
+    normalizedFilename.split(/[\\/]/).at(-1) ?? normalizedFilename
 
-  if (!extension) {
-    return null
-  }
-
-  const detectedLanguage = Object.entries(PRETTIER_LANGUAGE_CONFIGS).find(
+  const exactMatch = Object.entries(PRETTIER_LANGUAGE_CONFIGS).find(
     ([, config]) =>
-      config.extensions.some(
-        (candidateExtension) => candidateExtension.slice(1) === extension
+      config.filenames?.some(
+        (candidateFilename) => candidateFilename.toLowerCase() === basename
       )
   )
 
-  return (detectedLanguage?.[0] as PrettierLanguageKey | undefined) ?? null
+  if (exactMatch) {
+    return exactMatch[0] as PrettierLanguageKey
+  }
+
+  let detectedLanguage: PrettierLanguageKey | null = null
+  let detectedExtensionLength = 0
+
+  for (const [language, config] of Object.entries(PRETTIER_LANGUAGE_CONFIGS)) {
+    for (const candidateExtension of config.extensions) {
+      const normalizedExtension = candidateExtension.toLowerCase()
+
+      if (
+        normalizedFilename.endsWith(normalizedExtension) &&
+        normalizedExtension.length > detectedExtensionLength
+      ) {
+        detectedLanguage = language as PrettierLanguageKey
+        detectedExtensionLength = normalizedExtension.length
+      }
+    }
+  }
+
+  return detectedLanguage
 }
 
 function getPrettierDownloadFilename(language: PrettierLanguageKey) {
+  const config = getPrettierLanguageConfig(language)
   const extension =
-    getPrettierLanguageConfig(language).extensions[0] ?? ".formatted"
+    config.outputExtension ?? config.extensions[0] ?? ".formatted"
 
   return `formatted${extension}`
 }
