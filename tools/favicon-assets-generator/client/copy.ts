@@ -1,0 +1,75 @@
+const faviconGeneratorCopy = {
+  uploadTitle: "Source icon",
+  uploadDescription:
+    "Choose a local SVG, PNG, JPEG, WebP, or other browser-readable image. Everything stays in the browser.",
+  chooseImageLabel: "Choose an image",
+  changeImageLabel: "Change image",
+  uploadHint:
+    "SVG works best if you want to keep a dedicated `favicon.svg` alongside the generated ICO file.",
+  siteTitle: "Site and manifest settings",
+  siteDescription:
+    "These values drive the generated `site.webmanifest` plus the HTML snippet for your document head.",
+  siteNameLabel: "App name",
+  siteShortNameLabel: "Short name",
+  siteDescriptionLabel: "Description",
+  startUrlLabel: "Start URL",
+  assetPathLabel: "Asset path",
+  assetPathDescription:
+    "Used in the generated `<link>` and manifest icon paths. `/` puts everything at the site root.",
+  displayLabel: "Display mode",
+  themeColorLabel: "Theme color",
+  enableDarkThemeColorLabel: "Add a dark mode theme color tag",
+  darkThemeColorLabel: "Dark theme color",
+  backgroundColorLabel: "Manifest background color",
+  desktopTitle: "Desktop browser icons",
+  desktopDescription:
+    "Generate the classic favicon files used by tabs, bookmarks, and pinned browser UI.",
+  keepOriginalSvgLabel: "Keep the original SVG when possible",
+  keepOriginalSvgDescription:
+    "When the source is SVG, the bundle includes `favicon.svg` and points to it in the HTML snippet.",
+  desktopBackgroundLabel: "Add a background behind raster desktop icons",
+  desktopBackgroundColorLabel: "Desktop background color",
+  desktopBackgroundRadiusLabel: "Desktop corner radius",
+  desktopMarginLabel: "Desktop icon margin",
+  iosTitle: "iOS touch icon",
+  iosDescription:
+    "Generate `apple-touch-icon.png` for Safari home screen shortcuts.",
+  iosBackgroundColorLabel: "iOS background color",
+  iosMarginLabel: "iOS icon margin",
+  pwaTitle: "PWA icons",
+  pwaDescription:
+    "Generate launcher icons for web app manifests, including optional maskable variants.",
+  pwaBackgroundLabel: "Add a background behind standard PWA icons",
+  pwaBackgroundColorLabel: "PWA background color",
+  pwaBackgroundRadiusLabel: "PWA corner radius",
+  pwaMarginLabel: "PWA icon margin",
+  maskableLabel: "Include maskable icons",
+  maskableBackgroundColorLabel: "Maskable background color",
+  maskableMarginLabel: "Maskable icon safe-zone margin",
+  sliderSuffix: "%",
+  generateLabel: "Generate assets",
+  generatingLabel: "Generating assets...",
+  outputTitle: "Generated bundle",
+  outputDescription:
+    "Review the HTML head markup, inspect the manifest, and download a single zip archive with every generated file.",
+  outputEmptyTitle: "Upload an image and generate the bundle.",
+  outputEmptyDescription:
+    "The zip archive, HTML snippet, and manifest preview appear here after generation finishes.",
+  filesLabel: "Included files",
+  headMarkupLabel: "HTML head markup",
+  manifestLabel: "Manifest preview",
+  downloadZipLabel: "Download favicon-assets.zip",
+  copyHeadLabel: "Copy head markup",
+  copiedHeadLabel: "Head markup copied",
+  copyManifestLabel: "Copy manifest",
+  copiedManifestLabel: "Manifest copied",
+  errorTitle: "The favicon bundle could not be generated.",
+  errorDescription:
+    "Try another image or reduce the padding/background options if the source asset is unusual.",
+  displayFullscreen: "Fullscreen",
+  displayStandalone: "Standalone",
+  displayMinimalUi: "Minimal UI",
+  displayBrowser: "Browser",
+} as const
+
+export { faviconGeneratorCopy }

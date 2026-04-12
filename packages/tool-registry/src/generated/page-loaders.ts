@@ -13,6 +13,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
+  "favicon-assets-generator": () =>
+    import("@tool/favicon-assets-generator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),

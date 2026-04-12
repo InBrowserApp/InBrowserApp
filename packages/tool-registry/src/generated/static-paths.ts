@@ -738,6 +738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "favicon-assets-generator",
+    language: "ar",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "de",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "en",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "es",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "fr",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "he",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "hi",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "id",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "it",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ja",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ko",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ms",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "nl",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "no",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "pl",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "pt",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ru",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "sv",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "th",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "tr",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "vi",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },
