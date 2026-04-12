@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import BasicAuthGeneratorClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
 type BasicAuthGeneratorMessagesCatalog = Readonly<{
@@ -30,9 +32,24 @@ const localizedMessages = resolveLocale<BasicAuthGeneratorMessagesCatalog>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
 const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <BasicAuthGeneratorClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
 </ToolPageShell>
