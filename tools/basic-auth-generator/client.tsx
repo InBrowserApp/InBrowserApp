@@ -1,12 +1,14 @@
 import { useEffect, useId, useState } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -95,12 +97,12 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,24rem)_minmax(0,1fr)]">
-      <Card>
+      <ToolPanelCard>
         <CardHeader className="border-b">
           <CardTitle>{messages.credentialsLabel}</CardTitle>
           <CardDescription>{messages.meta.description}</CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-4">
+        <ToolPanelCardContent className="gap-4">
           <div className="grid gap-2">
             <Label htmlFor={usernameId}>{messages.usernameLabel}</Label>
             <Input
@@ -130,21 +132,21 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
               }}
             />
           </div>
-        </CardContent>
-        <CardFooter className="justify-end border-t">
+        </ToolPanelCardContent>
+        <ToolPanelCardFooter className="justify-end border-t">
           <Button type="button" variant="ghost" size="sm" onClick={handleReset}>
             <RefreshCcw data-icon="inline-start" />
             {messages.resetLabel}
           </Button>
-        </CardFooter>
-      </Card>
+        </ToolPanelCardFooter>
+      </ToolPanelCard>
 
       <div className="grid gap-6">
-        <Card>
+        <ToolPanelCard>
           <CardHeader className="border-b">
             <CardTitle>{messages.authorizationHeaderLabel}</CardTitle>
           </CardHeader>
-          <CardContent>
+          <ToolPanelCardContent>
             <Textarea
               id={headerId}
               name="authorization-header"
@@ -155,22 +157,22 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
               className="min-h-24 resize-y font-mono text-sm"
               spellCheck={false}
             />
-          </CardContent>
-          <CardFooter className="justify-end border-t">
+          </ToolPanelCardContent>
+          <ToolPanelCardFooter className="justify-end border-t">
             <ToolCopyButton
               value={authHeader}
               copyLabel={messages.copyResultLabel}
               copiedLabel={messages.copiedLabel}
               variant="ghost"
             />
-          </CardFooter>
-        </Card>
+          </ToolPanelCardFooter>
+        </ToolPanelCard>
 
-        <Card>
+        <ToolPanelCard>
           <CardHeader className="border-b">
             <CardTitle>{messages.curlExampleLabel}</CardTitle>
           </CardHeader>
-          <CardContent>
+          <ToolPanelCardContent>
             <Textarea
               id={curlId}
               name="curl-example"
@@ -181,16 +183,16 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
               className="min-h-28 resize-y font-mono text-sm"
               spellCheck={false}
             />
-          </CardContent>
-          <CardFooter className="justify-end border-t">
+          </ToolPanelCardContent>
+          <ToolPanelCardFooter className="justify-end border-t">
             <ToolCopyButton
               value={curlCommand}
               copyLabel={messages.copyResultLabel}
               copiedLabel={messages.copiedLabel}
               variant="ghost"
             />
-          </CardFooter>
-        </Card>
+          </ToolPanelCardFooter>
+        </ToolPanelCard>
       </div>
     </div>
   )
