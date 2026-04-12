@@ -26,7 +26,7 @@ function HashOutputGrid({
   loading = false,
 }: HashOutputGridProps) {
   return (
-    <div className="grid gap-3 lg:grid-cols-2">
+    <div className="grid gap-3">
       {DIGEST_FIELDS.map(({ key, labelKey }) => (
         <section
           key={key}

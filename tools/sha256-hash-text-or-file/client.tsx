@@ -122,7 +122,7 @@ function Sha256HashTextOrFileClient({
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-2">
+    <div className="grid gap-6">
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.inputLabel}</CardTitle>
