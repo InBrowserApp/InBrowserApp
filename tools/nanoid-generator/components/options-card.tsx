@@ -18,7 +18,11 @@ import {
 } from "@workspace/ui/components/ui/select"
 import { TriangleAlert } from "@workspace/ui/icons"
 
-import type { NanoidAlphabetPreset } from "../core/nanoid"
+import {
+  NANOID_MAX_COUNT,
+  NANOID_MAX_LENGTH,
+  type NanoidAlphabetPreset,
+} from "../core/nanoid"
 import type { NanoidMessages } from "../types"
 
 type AlphabetMetrics = Readonly<{
@@ -100,7 +104,7 @@ function NanoidOptionsCard({
               type="number"
               inputMode="numeric"
               min={1}
-              max={100}
+              max={NANOID_MAX_COUNT}
               value={count}
               onChange={(event) => {
                 onCountChange(event.target.value)
@@ -115,7 +119,7 @@ function NanoidOptionsCard({
               type="number"
               inputMode="numeric"
               min={1}
-              max={128}
+              max={NANOID_MAX_LENGTH}
               value={length}
               onChange={(event) => {
                 onLengthChange(event.target.value)
