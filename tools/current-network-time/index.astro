@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import CurrentNetworkTimeClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
 type CurrentNetworkTimeMessagesCatalog = Readonly<{
@@ -29,9 +31,24 @@ const localizedMessages = resolveLocale<CurrentNetworkTimeMessagesCatalog>(
   }),
   lang
 )!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+) 
 const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <CurrentNetworkTimeClient client:load language={lang} messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
 </ToolPageShell>
