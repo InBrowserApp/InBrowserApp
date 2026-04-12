@@ -1,6 +1,6 @@
 export type JsonSchemaDraft = "2020-12" | "2019-09" | "draft-07"
 
-export interface JsonSchemaGenerateOptions {
+interface JsonSchemaGenerateOptions {
   draft?: JsonSchemaDraft
   inferRequired?: boolean
   allowAdditionalProperties?: boolean
