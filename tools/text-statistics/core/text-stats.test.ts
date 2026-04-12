@@ -1,6 +1,26 @@
-import { describe, expect, test } from "vitest"
+import { describe, expect, test, vi } from "vitest"
 
 import { calculateTextStats, formatTime } from "./text-stats"
+
+async function importModuleWithoutSegmenter() {
+  const originalDescriptor = Object.getOwnPropertyDescriptor(globalThis, "Intl")
+
+  try {
+    Object.defineProperty(globalThis, "Intl", {
+      configurable: true,
+      value: {},
+    })
+    vi.resetModules()
+
+    return await import("./text-stats")
+  } finally {
+    vi.resetModules()
+
+    if (originalDescriptor) {
+      Object.defineProperty(globalThis, "Intl", originalDescriptor)
+    }
+  }
+}
 
 describe("calculateTextStats", () => {
   test("returns zeroed stats for an empty string", () => {
@@ -61,6 +81,49 @@ describe("calculateTextStats", () => {
       words: 7,
       uniqueWords: 5,
       topTerms: [{ term: "signal", count: 3 }],
+    })
+  })
+
+  test("sorts repeated terms by frequency and then alphabetically", () => {
+    expect(
+      calculateTextStats(
+        "Gamma gamma gamma. Beta beta. Alpha alpha. Delta delta."
+      ).topTerms
+    ).toEqual([
+      { term: "gamma", count: 3 },
+      { term: "alpha", count: 2 },
+      { term: "beta", count: 2 },
+      { term: "delta", count: 2 },
+    ])
+  })
+
+  test("falls back gracefully when Intl.Segmenter is unavailable", async () => {
+    const fallbackModule = await importModuleWithoutSegmenter()
+    const stats = fallbackModule.calculateTextStats(
+      "Cafe cafe. Numbers 123.\n\nCafe again."
+    )
+
+    expect(stats).toMatchObject({
+      characters: 36,
+      charactersNoSpaces: 30,
+      words: 6,
+      uniqueWords: 4,
+      sentences: 3,
+      paragraphs: 2,
+      longestSentenceWords: 2,
+      longestParagraphWords: 4,
+      topTerms: [{ term: "cafe", count: 3 }],
+    })
+  })
+
+  test("returns empty fallback token lists for symbol-only text", async () => {
+    const fallbackModule = await importModuleWithoutSegmenter()
+    const stats = fallbackModule.calculateTextStats("!!!")
+
+    expect(stats).toMatchObject({
+      words: 0,
+      sentences: 0,
+      topTerms: [],
     })
   })
 })
