@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Clicca o trascina l'immagine per caricarla",
+  "supportedFormats": "Supporta JPEG, PNG, WebP",
+  "remove": "Rimuovi",
+  "cleanMetadata": "Pulisci metadati",
+  "cleaningMetadata": "Pulizia metadati...",
+  "results": "Risultati della pulizia",
+  "removed": "Metadati rimossi",
+  "reduction": "Riduzione dimensione",
+  "fileSize": "Dimensione file",
+  "downloadCleaned": "Scarica immagine pulita",
+  "note": "Elaborazione locale nel browser. Nessun caricamento.",
+  "error": "Errore",
+  "unsupportedFormat": "Formato non supportato. Carica JPEG, PNG o WebP.",
+  "cleaningComplete": "Metadati puliti.",
+  "cleaningFailed": "Impossibile pulire i metadati. Riprova."
+}

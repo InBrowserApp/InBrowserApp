@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "點擊或拖曳圖片上傳",
+  "supportedFormats": "支援 JPEG、PNG、WebP",
+  "remove": "移除",
+  "cleanMetadata": "清理元資料",
+  "cleaningMetadata": "正在清理元資料...",
+  "results": "清理結果",
+  "removed": "已移除的元資料",
+  "reduction": "大小減少",
+  "fileSize": "檔案大小",
+  "downloadCleaned": "下載清理後的圖片",
+  "note": "在瀏覽器本地處理，不會上傳檔案。",
+  "error": "錯誤",
+  "unsupportedFormat": "不支援的格式，請上傳 JPEG、PNG 或 WebP。",
+  "cleaningComplete": "元資料已清理。",
+  "cleaningFailed": "清理元資料失敗，請重試。"
+}

@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "คลิกหรือลากภาพเพื่ออัปโหลด",
+  "supportedFormats": "รองรับ JPEG, PNG, WebP",
+  "remove": "ลบ",
+  "cleanMetadata": "ล้างเมตาดาตา",
+  "cleaningMetadata": "กำลังล้างเมตาดาตา...",
+  "results": "ผลลัพธ์การล้าง",
+  "removed": "เมตาดาตาที่ลบแล้ว",
+  "reduction": "ลดขนาด",
+  "fileSize": "ขนาดไฟล์",
+  "downloadCleaned": "ดาวน์โหลดรูปที่ล้างแล้ว",
+  "note": "ประมวลผลในเบราว์เซอร์แบบโลคัล ไม่มีการอัปโหลด",
+  "error": "ข้อผิดพลาด",
+  "unsupportedFormat": "รูปแบบไม่รองรับ โปรดอัปโหลด JPEG, PNG หรือ WebP",
+  "cleaningComplete": "ล้างเมตาดาตาแล้ว",
+  "cleaningFailed": "ล้างเมตาดาตาไม่สำเร็จ โปรดลองอีกครั้ง"
+}

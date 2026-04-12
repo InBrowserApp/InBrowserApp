@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klikk eller dra bilde for å laste opp",
+  "supportedFormats": "Støtter JPEG, PNG, WebP",
+  "remove": "Fjern",
+  "cleanMetadata": "Rens metadata",
+  "cleaningMetadata": "Renser metadata...",
+  "results": "Rense-resultater",
+  "removed": "Fjernet metadata",
+  "reduction": "Størrelsesreduksjon",
+  "fileSize": "Filstørrelse",
+  "downloadCleaned": "Last ned renset bilde",
+  "note": "Behandles lokalt i nettleseren. Ingen opplasting.",
+  "error": "Feil",
+  "unsupportedFormat": "Formatet støttes ikke. Last opp JPEG, PNG eller WebP.",
+  "cleaningComplete": "Metadata renset.",
+  "cleaningFailed": "Kunne ikke rense metadata. Prøv igjen."
+}

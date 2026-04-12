@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Nhấp hoặc kéo hình ảnh để tải lên",
+  "supportedFormats": "Hỗ trợ JPEG, PNG, WebP",
+  "remove": "Xóa",
+  "cleanMetadata": "Làm sạch siêu dữ liệu",
+  "cleaningMetadata": "Đang làm sạch siêu dữ liệu...",
+  "results": "Kết quả làm sạch",
+  "removed": "Siêu dữ liệu đã xóa",
+  "reduction": "Giảm kích thước",
+  "fileSize": "Kích thước tệp",
+  "downloadCleaned": "Tải ảnh đã làm sạch",
+  "note": "Xử lý cục bộ trong trình duyệt. Không tải lên.",
+  "error": "Lỗi",
+  "unsupportedFormat": "Định dạng không hỗ trợ. Vui lòng tải JPEG, PNG hoặc WebP.",
+  "cleaningComplete": "Đã làm sạch siêu dữ liệu.",
+  "cleaningFailed": "Không thể làm sạch siêu dữ liệu. Vui lòng thử lại."
+}

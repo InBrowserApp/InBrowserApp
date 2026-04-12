@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "לחץ או גרור תמונה להעלאה",
+  "supportedFormats": "תומך ב-JPEG, PNG, WebP",
+  "remove": "הסר",
+  "cleanMetadata": "נקה מטא-נתונים",
+  "cleaningMetadata": "מנקה מטא-נתונים...",
+  "results": "תוצאות הניקוי",
+  "removed": "מטא-נתונים שהוסרו",
+  "reduction": "הפחתת גודל",
+  "fileSize": "גודל הקובץ",
+  "downloadCleaned": "הורד תמונה נקייה",
+  "note": "מעובד מקומית בדפדפן. אין העלאה.",
+  "error": "שגיאה",
+  "unsupportedFormat": "פורמט לא נתמך. אנא העלה JPEG, PNG או WebP.",
+  "cleaningComplete": "המטא-נתונים נוקו.",
+  "cleaningFailed": "נכשל בניקוי המטא-נתונים. נסה שוב."
+}

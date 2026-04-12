@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klicken oder Bild hierher ziehen",
+  "supportedFormats": "Unterstützt JPEG, PNG, WebP",
+  "remove": "Entfernen",
+  "cleanMetadata": "Metadaten bereinigen",
+  "cleaningMetadata": "Metadaten werden bereinigt...",
+  "results": "Bereinigungsergebnisse",
+  "removed": "Entfernte Metadaten",
+  "reduction": "Größenreduktion",
+  "fileSize": "Dateigröße",
+  "downloadCleaned": "Bereinigtes Bild herunterladen",
+  "note": "Lokal im Browser verarbeitet. Keine Uploads.",
+  "error": "Fehler",
+  "unsupportedFormat": "Nicht unterstütztes Format. Bitte JPEG, PNG oder WebP hochladen.",
+  "cleaningComplete": "Metadaten bereinigt.",
+  "cleaningFailed": "Metadaten konnten nicht bereinigt werden. Bitte erneut versuchen."
+}

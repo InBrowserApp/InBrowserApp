@@ -1,0 +1,4 @@
+{
+  "name": "Afbeeldingsmetadata-opschoner (EXIF)",
+  "description": "Verwijdert EXIF/XMP/IPTC/ICC-metadata uit afbeeldingen zonder hercodering. Behoudt het originele formaat en werkt offline."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Pembersih Metadata Imej (EXIF)",
+  "description": "Buang metadata EXIF/XMP/IPTC/ICC daripada imej tanpa pengekodan semula. Kekalkan format asal dan berfungsi di luar talian."
+}

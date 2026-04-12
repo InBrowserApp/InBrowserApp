@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Cliquez ou déposez l'image pour télécharger",
+  "supportedFormats": "Prend en charge JPEG, PNG, WebP",
+  "remove": "Supprimer",
+  "cleanMetadata": "Nettoyer les métadonnées",
+  "cleaningMetadata": "Nettoyage des métadonnées...",
+  "results": "Résultats du nettoyage",
+  "removed": "Métadonnées supprimées",
+  "reduction": "Réduction de taille",
+  "fileSize": "Taille du fichier",
+  "downloadCleaned": "Télécharger l'image nettoyée",
+  "note": "Traitement local dans le navigateur. Aucun fichier n'est envoyé.",
+  "error": "Erreur",
+  "unsupportedFormat": "Format non pris en charge. Importez JPEG, PNG ou WebP.",
+  "cleaningComplete": "Métadonnées nettoyées.",
+  "cleaningFailed": "Échec du nettoyage des métadonnées. Veuillez réessayer."
+}
