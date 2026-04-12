@@ -28,6 +28,7 @@
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
+    "@tool/sha384-hash-text-or-file": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/text-statistics": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
