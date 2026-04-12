@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "current-network-time",
+    language: "ar",
+  },
+  {
+    slug: "current-network-time",
+    language: "de",
+  },
+  {
+    slug: "current-network-time",
+    language: "en",
+  },
+  {
+    slug: "current-network-time",
+    language: "es",
+  },
+  {
+    slug: "current-network-time",
+    language: "fr",
+  },
+  {
+    slug: "current-network-time",
+    language: "he",
+  },
+  {
+    slug: "current-network-time",
+    language: "hi",
+  },
+  {
+    slug: "current-network-time",
+    language: "id",
+  },
+  {
+    slug: "current-network-time",
+    language: "it",
+  },
+  {
+    slug: "current-network-time",
+    language: "ja",
+  },
+  {
+    slug: "current-network-time",
+    language: "ko",
+  },
+  {
+    slug: "current-network-time",
+    language: "ms",
+  },
+  {
+    slug: "current-network-time",
+    language: "nl",
+  },
+  {
+    slug: "current-network-time",
+    language: "no",
+  },
+  {
+    slug: "current-network-time",
+    language: "pl",
+  },
+  {
+    slug: "current-network-time",
+    language: "pt",
+  },
+  {
+    slug: "current-network-time",
+    language: "ru",
+  },
+  {
+    slug: "current-network-time",
+    language: "sv",
+  },
+  {
+    slug: "current-network-time",
+    language: "th",
+  },
+  {
+    slug: "current-network-time",
+    language: "tr",
+  },
+  {
+    slug: "current-network-time",
+    language: "vi",
+  },
+  {
+    slug: "current-network-time",
+    language: "zh-CN",
+  },
+  {
+    slug: "current-network-time",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },
