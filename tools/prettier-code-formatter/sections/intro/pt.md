@@ -9,12 +9,7 @@ imediatamente.
 
 ## Formatos Suportados
 
-Este rewrite mantém a ferramenta focada nos formatos que o Prettier já lida
-bem no navegador: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS, Less,
-Markdown, MDX, YAML, GraphQL e formatos de template relacionados, como Vue e
-Handlebars. O seletor de idioma controla qual parser é executado, e a
-importação de arquivo detecta automaticamente o parser quando a extensão é
-reconhecida.
+Este rewrite mantém a ferramenta focada nos formatos que o Prettier já lida bem no navegador: JavaScript, JSX, TypeScript, TSX, Flow, variantes de JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL e formatos de template como Angular, Vue, Svelte, LWC, MJML e Handlebars. O seletor de idioma controla qual parser é executado, e a importação de arquivo detecta automaticamente o parser quando a extensão é reconhecida.
 
 ## Como Este Rewrite Funciona
 

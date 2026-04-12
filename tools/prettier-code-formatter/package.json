@@ -11,7 +11,10 @@
     "highlight.js": "catalog:",
     "prettier": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "@prettier/plugin-xml": "catalog:",
+    "prettier-plugin-svelte": "catalog:",
+    "svelte": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",

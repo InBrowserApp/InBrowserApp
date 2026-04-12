@@ -8,12 +8,7 @@ eller laste ned med en gang.
 
 ## Støttede formater
 
-Denne nyversjonen holder verktøyet fokusert på formatene Prettier allerede
-håndterer godt i nettleseren: JavaScript, TypeScript, Flow, JSON, HTML, CSS,
-SCSS, Less, Markdown, MDX, YAML, GraphQL og beslektede malformater som Vue og
-Handlebars. Språkvelgeren styrer hvilken parser som kjøres, og når du importerer
-en fil, forsøker verktøyet å oppdage parseren automatisk når filendelsen
-gjenkjennes.
+Denne nyversjonen holder verktøyet fokusert på formatene Prettier allerede håndterer godt i nettleseren: JavaScript, JSX, TypeScript, TSX, Flow, JSON-varianter, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL og malformater som Angular, Vue, Svelte, LWC, MJML og Handlebars. Språkvelgeren styrer hvilken parser som kjøres, og når du importerer en fil, forsøker verktøyet å oppdage parseren automatisk når filendelsen gjenkjennes.
 
 ## Slik fungerer nyversjonen
 

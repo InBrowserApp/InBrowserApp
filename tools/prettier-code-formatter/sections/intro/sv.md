@@ -8,11 +8,7 @@ ladda ner.
 
 ## Stödda Format
 
-Den här omskrivningen håller verktyget fokuserat på de format som Prettier redan
-hanterar bra i webbläsaren: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS,
-Less, Markdown, MDX, YAML, GraphQL och relaterade mallformat som Vue och
-Handlebars. Språkvalet styr vilken parser som körs, och när du importerar en fil
-identifieras parsaren automatiskt om filtillägget känns igen.
+Den här omskrivningen håller verktyget fokuserat på de format som Prettier redan hanterar bra i webbläsaren: JavaScript, JSX, TypeScript, TSX, Flow, JSON-varianter, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL och mallformat som Angular, Vue, Svelte, LWC, MJML och Handlebars. Språkvalet styr vilken parser som körs, och när du importerar en fil identifieras parsaren automatiskt om filtillägget känns igen.
 
 ## Hur Omskrivningen Fungerar
 

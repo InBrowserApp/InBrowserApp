@@ -12,9 +12,11 @@ type PrettierLanguageKey =
   | "html"
   | "angular"
   | "vue"
+  | "svelte"
   | "lwc"
   | "mjml"
   | "handlebars"
+  | "xml"
   | "css"
   | "postcss"
   | "scss"
@@ -33,7 +35,9 @@ type PrettierPluginKey =
   | "html"
   | "markdown"
   | "postcss"
+  | "svelte"
   | "typescript"
+  | "xml"
   | "yaml"
 
 type PrettierFormatOptions = Readonly<{
@@ -88,9 +92,11 @@ const PRETTIER_LANGUAGE_KEYS = [
   "html",
   "angular",
   "vue",
+  "svelte",
   "lwc",
   "mjml",
   "handlebars",
+  "xml",
   "css",
   "postcss",
   "scss",

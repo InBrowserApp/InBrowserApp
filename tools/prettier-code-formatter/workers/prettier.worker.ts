@@ -1,3 +1,5 @@
+import xmlPlugin from "@prettier/plugin-xml"
+import * as sveltePlugin from "prettier-plugin-svelte/browser"
 import prettier from "prettier/standalone"
 import angularPlugin from "prettier/plugins/angular"
 import babelPlugin from "prettier/plugins/babel"
@@ -31,7 +33,9 @@ const pluginModules: Record<PrettierPluginKey, Plugin> = {
   html: htmlPlugin,
   markdown: markdownPlugin,
   postcss: postcssPlugin,
+  svelte: sveltePlugin as unknown as Plugin,
   typescript: typescriptPlugin,
+  xml: xmlPlugin,
   yaml: yamlPlugin,
 }
 

@@ -8,12 +8,7 @@ disalin atau dimuat turun serta-merta.
 
 ## Format Yang Disokong
 
-Penulisan semula ini mengekalkan fokus pada format yang memang sudah disokong
-Prettier dengan baik dalam pelayar: JavaScript, TypeScript, Flow, JSON, HTML,
-CSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, dan format templat berkaitan
-seperti Vue dan Handlebars. Pemilih bahasa mengawal parser yang dijalankan, dan
-import fail akan mengesan parser secara automatik apabila sambungannya dikenal
-pasti.
+Penulisan semula ini mengekalkan fokus pada format yang memang sudah disokong Prettier dengan baik dalam pelayar: JavaScript, JSX, TypeScript, TSX, Flow, varian JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, dan format templat seperti Angular, Vue, Svelte, LWC, MJML, serta Handlebars. Pemilih bahasa mengawal parser yang dijalankan, dan import fail akan mengesan parser secara automatik apabila sambungannya dikenal pasti.
 
 ## Cara Penulisan Semula Ini Berfungsi
 

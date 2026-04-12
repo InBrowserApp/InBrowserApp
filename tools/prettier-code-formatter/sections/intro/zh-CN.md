@@ -4,7 +4,7 @@ Prettier 代码格式化工具会直接在浏览器中运行官方 Prettier stan
 
 ## 支持的格式
 
-这个重写版本把工具聚焦在 Prettier 已经能在浏览器中稳定处理的格式：JavaScript、TypeScript、Flow、JSON、HTML、CSS、SCSS、Less、Markdown、MDX、YAML、GraphQL，以及 Vue、Handlebars 这类相关模板格式。语言选择器决定运行哪个解析器，导入文件时只要扩展名能被识别，就会自动检测解析器。
+这个重写版本把工具聚焦在 Prettier 已经能在浏览器中稳定处理的格式：JavaScript、JSX、TypeScript、TSX、Flow、各类 JSON、HTML、XML、CSS、PostCSS、SCSS、Less、Markdown、MDX、YAML、GraphQL，以及 Angular、Vue、Svelte、LWC、MJML、Handlebars 这类模板格式。语言选择器决定运行哪个解析器，导入文件时只要扩展名能被识别，就会自动检测解析器。
 
 ## 这个重写是如何工作的
 

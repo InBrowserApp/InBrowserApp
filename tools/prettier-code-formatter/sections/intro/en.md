@@ -8,11 +8,7 @@ immediately.
 
 ## Supported Formats
 
-This rewrite keeps the tool focused on the formats Prettier already handles
-well in the browser: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS, Less,
-Markdown, MDX, YAML, GraphQL, and related template formats such as Vue and
-Handlebars. The language selector controls which parser runs, and importing a
-file will auto-detect the parser when the extension is recognized.
+This rewrite keeps the tool focused on the formats Prettier already handles well in the browser: JavaScript, JSX, TypeScript, TSX, Flow, JSON variants, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, and template formats such as Angular, Vue, Svelte, LWC, MJML, and Handlebars. The language selector controls which parser runs, and importing a file will auto-detect the parser when the extension is recognized.
 
 ## How This Rewrite Works
 

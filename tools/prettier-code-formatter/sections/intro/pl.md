@@ -8,12 +8,7 @@ potrzebujesz czystego pliku, który można od razu skopiować lub pobrać.
 
 ## Obsługiwane Formaty
 
-To odświeżenie skupia narzędzie na formatach, które Prettier już dobrze
-obsługuje w przeglądarce: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS,
-Less, Markdown, MDX, YAML, GraphQL oraz pokrewnych formatach szablonów, takich
-jak Vue i Handlebars. Lista języków steruje tym, który parser zostanie użyty,
-a import pliku automatycznie rozpoznaje parser, gdy rozszerzenie jest
-obsługiwane.
+To odświeżenie skupia narzędzie na formatach, które Prettier już dobrze obsługuje w przeglądarce: JavaScript, JSX, TypeScript, TSX, Flow, warianty JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL oraz formatach szablonów takich jak Angular, Vue, Svelte, LWC, MJML i Handlebars. Lista języków steruje tym, który parser zostanie użyty, a import pliku automatycznie rozpoznaje parser, gdy rozszerzenie jest obsługiwane.
 
 ## Jak Działa To Odświeżenie
 

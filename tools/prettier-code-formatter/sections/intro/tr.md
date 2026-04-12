@@ -8,11 +8,7 @@ elde etmek istediğinizde kullanışlıdır.
 
 ## Desteklenen Biçimler
 
-Bu yeniden yazım, aracı Prettier'ın tarayıcıda zaten iyi desteklediği biçimlere
-odaklı tutar: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS, Less,
-Markdown, MDX, YAML, GraphQL ve Vue ile Handlebars gibi ilgili şablon biçimleri.
-Dil seçici hangi ayrıştırıcının çalışacağını belirler; bir dosya içe
-aktarılırsa, uzantı tanınabildiğinde ayrıştırıcı otomatik olarak algılanır.
+Bu yeniden yazım, aracı Prettier'ın tarayıcıda zaten iyi desteklediği biçimlere odaklı tutar: JavaScript, JSX, TypeScript, TSX, Flow, JSON varyantları, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL ve Angular, Vue, Svelte, LWC, MJML, Handlebars gibi şablon biçimleri. Dil seçici hangi ayrıştırıcının çalışacağını belirler; bir dosya içe aktarılırsa, uzantı tanınabildiğinde ayrıştırıcı otomatik olarak algılanır.
 
 ## Bu Yeniden Yazım Nasıl Çalışır?
 

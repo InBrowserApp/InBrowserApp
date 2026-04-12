@@ -8,11 +8,7 @@ ngay lập tức.
 
 ## Định dạng được hỗ trợ
 
-Bản rewrite này tập trung vào những định dạng mà Prettier đã xử lý tốt trong
-trình duyệt: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS, Less,
-Markdown, MDX, YAML, GraphQL, cùng các định dạng mẫu liên quan như Vue và
-Handlebars. Bộ chọn ngôn ngữ quyết định parser nào sẽ chạy, và khi nhập tệp
-thì parser sẽ được tự động phát hiện nếu phần mở rộng được nhận diện.
+Bản rewrite này tập trung vào những định dạng mà Prettier đã xử lý tốt trong trình duyệt: JavaScript, JSX, TypeScript, TSX, Flow, các biến thể JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, cùng các định dạng mẫu như Angular, Vue, Svelte, LWC, MJML và Handlebars. Bộ chọn ngôn ngữ quyết định parser nào sẽ chạy, và khi nhập tệp thì parser sẽ được tự động phát hiện nếu phần mở rộng được nhận diện.
 
 ## Cách bản rewrite này hoạt động
 

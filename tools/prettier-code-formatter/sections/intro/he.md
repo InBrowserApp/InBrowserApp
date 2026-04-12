@@ -7,11 +7,7 @@
 
 ## פורמטים נתמכים
 
-השכתוב הזה שומר את הכלי ממוקד בפורמטים ש-Prettier כבר מטפל בהם היטב
-בדפדפן: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS, Less,
-Markdown, MDX, YAML, GraphQL, ופורמטי תבנית קרובים כמו Vue ו-Handlebars.
-בורר השפה קובע איזה מנתח ירוץ, וייבוא קובץ יזהה את המנתח אוטומטית כאשר
-הסיומת מוכרת.
+השכתוב הזה שומר את הכלי ממוקד בפורמטים ש-Prettier כבר מטפל בהם היטב בדפדפן: JavaScript, JSX, TypeScript, TSX, Flow, וריאציות של JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, ופורמטי תבנית כמו Angular, Vue, Svelte, LWC, MJML ו-Handlebars. בורר השפה קובע איזה מנתח ירוץ, וייבוא קובץ יזהה את המנתח אוטומטית כאשר הסיומת מוכרת.
 
 ## איך השכתוב עובד
 

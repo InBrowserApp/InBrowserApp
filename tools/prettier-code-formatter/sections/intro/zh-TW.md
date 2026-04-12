@@ -4,7 +4,7 @@ Prettier 程式碼格式化工具會直接在瀏覽器中執行官方 Prettier s
 
 ## 支援格式
 
-這次重寫把工具聚焦在 Prettier 已經能在瀏覽器中穩定處理的格式：JavaScript、TypeScript、Flow、JSON、HTML、CSS、SCSS、Less、Markdown、MDX、YAML、GraphQL，以及 Vue、Handlebars 這類相關模板格式。語言選擇器會決定使用哪個解析器，而匯入檔案時只要副檔名可辨識，就會自動偵測解析器。
+這次重寫把工具聚焦在 Prettier 已經能在瀏覽器中穩定處理的格式：JavaScript、JSX、TypeScript、TSX、Flow、各種 JSON、HTML、XML、CSS、PostCSS、SCSS、Less、Markdown、MDX、YAML、GraphQL，以及 Angular、Vue、Svelte、LWC、MJML、Handlebars 這類模板格式。語言選擇器會決定使用哪個解析器，而匯入檔案時只要副檔名可辨識，就會自動偵測解析器。
 
 ## 這次重寫怎麼運作
 

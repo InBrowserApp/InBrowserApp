@@ -9,12 +9,7 @@ ou télécharger.
 
 ## Formats Pris En Charge
 
-Cette version rewrite garde l’outil centré sur les formats que Prettier gère
-déjà bien dans le navigateur : JavaScript, TypeScript, Flow, JSON, HTML, CSS,
-SCSS, Less, Markdown, MDX, YAML, GraphQL, ainsi que des formats de templates
-associés comme Vue et Handlebars. Le sélecteur de langue contrôle le parseur
-utilisé, et l’import d’un fichier détecte automatiquement le parseur lorsque
-l’extension est reconnue.
+Cette version rewrite garde l’outil centré sur les formats que Prettier gère déjà bien dans le navigateur : JavaScript, JSX, TypeScript, TSX, Flow, les variantes de JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, ainsi que des formats de templates comme Angular, Vue, Svelte, LWC, MJML et Handlebars. Le sélecteur de langue contrôle le parseur utilisé, et l’import d’un fichier détecte automatiquement le parseur lorsque l’extension est reconnue.
 
 ## Comment Fonctionne Cette Refonte
 

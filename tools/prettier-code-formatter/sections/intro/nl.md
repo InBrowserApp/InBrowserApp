@@ -8,12 +8,7 @@ of downloaden.
 
 ## Ondersteunde formaten
 
-Deze rewrite houdt de tool gericht op de formaten die Prettier al goed in de
-browser ondersteunt: JavaScript, TypeScript, Flow, JSON, HTML, CSS, SCSS,
-Less, Markdown, MDX, YAML, GraphQL en verwante templatingformaten zoals Vue en
-Handlebars. De taalkeuze bepaalt welke parser wordt gebruikt, en bij het
-importeren van een bestand wordt de parser automatisch herkend zodra de
-extensie bekend is.
+Deze rewrite houdt de tool gericht op de formaten die Prettier al goed in de browser ondersteunt: JavaScript, JSX, TypeScript, TSX, Flow, JSON-varianten, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL en templateformaten zoals Angular, Vue, Svelte, LWC, MJML en Handlebars. De taalkeuze bepaalt welke parser wordt gebruikt, en bij het importeren van een bestand wordt de parser automatisch herkend zodra de extensie bekend is.
 
 ## Hoe deze rewrite werkt
 

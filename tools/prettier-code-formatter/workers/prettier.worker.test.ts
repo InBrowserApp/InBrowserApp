@@ -9,6 +9,7 @@ type WorkerMessagePayload = {
 }
 
 afterEach(() => {
+  vi.doUnmock("prettier/standalone")
   vi.unstubAllGlobals()
 })
 
@@ -34,6 +35,29 @@ describe("formatRequest", () => {
         )
       )
     ).resolves.toContain("<mj-text>Hello</mj-text>")
+  })
+
+  it("formats svelte components with the svelte browser plugin pipeline", async () => {
+    await expect(
+      formatRequest(
+        createPrettierFormatRequest(
+          '<script lang="ts">let count=0</script><button on:click={() => count += 1}>{count}</button>',
+          {
+            language: "svelte",
+          }
+        )
+      )
+    ).resolves.toContain("let count = 0")
+  })
+
+  it("formats xml documents with the xml plugin", async () => {
+    await expect(
+      formatRequest(
+        createPrettierFormatRequest('<root><item id="1">Hello</item></root>', {
+          language: "xml",
+        })
+      )
+    ).resolves.toContain('<item id="1">Hello</item>')
   })
 
   it("rejects invalid input with the underlying prettier message", async () => {
@@ -126,13 +150,19 @@ describe("formatRequest", () => {
       | null = null
     const postMessage = vi.fn()
 
-    vi.doMock("prettier/standalone", () => ({
-      default: {
-        format: vi.fn(async () => {
-          throw "string failure"
-        }),
-      },
-    }))
+    vi.doMock("prettier/standalone", async (importOriginal) => {
+      const actual = await importOriginal<any>()
+
+      return {
+        ...actual,
+        default: {
+          ...actual.default,
+          format: vi.fn(async () => {
+            throw "string failure"
+          }),
+        },
+      }
+    })
     vi.stubGlobal("self", {
       addEventListener: vi.fn(
         (type: string, listener: typeof messageListener) => {

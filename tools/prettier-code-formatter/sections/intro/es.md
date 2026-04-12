@@ -8,12 +8,7 @@ que puedas copiar o descargar al instante.
 
 ## Formatos compatibles
 
-Esta reescritura mantiene la herramienta centrada en los formatos que Prettier
-ya maneja bien en el navegador: JavaScript, TypeScript, Flow, JSON, HTML, CSS,
-SCSS, Less, Markdown, MDX, YAML, GraphQL y formatos de plantilla relacionados
-como Vue y Handlebars. El selector de idioma controla qué parser se ejecuta, y
-al importar un archivo el parser se detecta automáticamente cuando la extensión
-es reconocida.
+Esta reescritura mantiene la herramienta centrada en los formatos que Prettier ya maneja bien en el navegador: JavaScript, JSX, TypeScript, TSX, Flow, variantes de JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL y formatos de plantilla como Angular, Vue, Svelte, LWC, MJML y Handlebars. El selector de idioma controla qué parser se ejecuta, y al importar un archivo el parser se detecta automáticamente cuando la extensión es reconocida.
 
 ## Cómo funciona esta reescritura
 

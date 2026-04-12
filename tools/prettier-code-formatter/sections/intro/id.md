@@ -8,11 +8,7 @@ langsung disalin atau diunduh.
 
 ## Format Yang Didukung
 
-Rewrite ini tetap memusatkan alat pada format yang memang sudah ditangani
-Prettier dengan baik di browser: JavaScript, TypeScript, Flow, JSON, HTML, CSS,
-SCSS, Less, Markdown, MDX, YAML, GraphQL, dan format templat terkait seperti
-Vue dan Handlebars. Pemilih bahasa menentukan parser yang berjalan, dan saat
-mengimpor file parser akan terdeteksi otomatis jika ekstensinya dikenali.
+Rewrite ini tetap memusatkan alat pada format yang memang sudah ditangani Prettier dengan baik di browser: JavaScript, JSX, TypeScript, TSX, Flow, varian JSON, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, dan format templat seperti Angular, Vue, Svelte, LWC, MJML, serta Handlebars. Pemilih bahasa menentukan parser yang berjalan, dan saat mengimpor file parser akan terdeteksi otomatis jika ekstensinya dikenali.
 
 ## Cara Rewrite Ini Bekerja
 

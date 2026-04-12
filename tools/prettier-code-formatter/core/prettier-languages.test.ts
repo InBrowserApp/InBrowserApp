@@ -74,15 +74,22 @@ describe("prettier-languages", () => {
     expect(detectPrettierLanguageFromFilename("README.MD")).toBe("markdown")
     expect(detectPrettierLanguageFromFilename("newsletter.mjml")).toBe("mjml")
     expect(detectPrettierLanguageFromFilename("theme.postcss")).toBe("postcss")
+    expect(detectPrettierLanguageFromFilename("src/lib/app.svelte")).toBe(
+      "svelte"
+    )
+    expect(detectPrettierLanguageFromFilename("assets/icon.svg")).toBe("xml")
+    expect(detectPrettierLanguageFromFilename("feed.xml")).toBe("xml")
     expect(detectPrettierLanguageFromFilename("snippet.unknown")).toBeNull()
     expect(detectPrettierLanguageFromFilename("no-extension")).toBeNull()
   })
 
   it("returns config labels and download filenames", () => {
     expect(getPrettierLanguageConfig("graphql").label).toBe("GraphQL")
+    expect(getPrettierLanguageConfig("svelte").label).toBe("Svelte")
     expect(getPrettierLanguageConfig("mjml").label).toBe("MJML")
     expect(getPrettierDownloadFilename("yaml")).toBe("formatted.yaml")
     expect(getPrettierDownloadFilename("postcss")).toBe("formatted.postcss")
+    expect(getPrettierDownloadFilename("xml")).toBe("formatted.xml")
     expect(getPrettierDownloadFilename("json-stringify")).toBe("formatted.json")
   })
 
