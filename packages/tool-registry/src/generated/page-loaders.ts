@@ -28,6 +28,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha256-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
+  "text-statistics": () => import("@tool/text-statistics/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "url-component-encoder-decoder": () =>

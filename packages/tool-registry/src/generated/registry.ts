@@ -2444,6 +2444,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "text-statistics",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "text",
+      "statistics",
+      "word",
+      "count",
+      "character",
+      "line",
+      "paragraph",
+    ],
+    locales: {
+      ar: {
+        name: "إحصائيات النص",
+        description:
+          "تحليل النص للحصول على عدد الأحرف والكلمات والأسطر والفقرات والجمل مع تقدير وقت القراءة",
+      },
+      de: {
+        name: "Textstatistik",
+        description:
+          "Analysieren Sie Text, um Zeichen-, Wort-, Zeilen-, Absatz- und Satzzählungen mit Lesezeitschätzungen zu erhalten",
+      },
+      en: {
+        name: "Text Statistics",
+        description:
+          "Turn any draft into a live writing dashboard with multilingual counts, vocabulary signals, structure clues, and reading-time estimates.",
+      },
+      es: {
+        name: "Estadísticas de Texto",
+        description:
+          "Analiza texto para obtener recuentos de caracteres, palabras, líneas, párrafos y oraciones con estimaciones de tiempo de lectura",
+      },
+      fr: {
+        name: "Statistiques de Texte",
+        description:
+          "Analysez le texte pour obtenir le nombre de caractères, mots, lignes, paragraphes et phrases avec des estimations de temps de lecture",
+      },
+      he: {
+        name: "סטטיסטיקת טקסט",
+        description:
+          "נתח טקסט כדי לקבל ספירת תווים, מילים, שורות, פסקאות ומשפטים עם הערכות זמן קריאה",
+      },
+      hi: {
+        name: "टेक्स्ट आँकड़े",
+        description:
+          "पढ़ने के समय के अनुमान के साथ वर्ण, शब्द, पंक्ति, पैराग्राफ और वाक्य गणना प्राप्त करने के लिए टेक्स्ट का विश्लेषण करें",
+      },
+      id: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan jumlah karakter, kata, baris, paragraf, dan kalimat dengan perkiraan waktu baca",
+      },
+      it: {
+        name: "Statistiche del Testo",
+        description:
+          "Analizza il testo per ottenere conteggi di caratteri, parole, righe, paragrafi e frasi con stime del tempo di lettura",
+      },
+      ja: {
+        name: "テキスト統計",
+        description:
+          "テキストを分析して、文字数、単語数、行数、段落数、文数と読書時間の見積もりを取得",
+      },
+      ko: {
+        name: "텍스트 통계",
+        description:
+          "텍스트를 분석하여 문자, 단어, 줄, 단락, 문장 수와 예상 읽기 시간을 확인",
+      },
+      ms: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan kiraan aksara, perkataan, baris, perenggan dan ayat dengan anggaran masa membaca",
+      },
+      nl: {
+        name: "Tekststatistieken",
+        description:
+          "Analyseer tekst om aantallen tekens, woorden, regels, alineas en zinnen te krijgen met leestijdschattingen",
+      },
+      no: {
+        name: "Tekststatistikk",
+        description:
+          "Analyser tekst for å få antall tegn, ord, linjer, avsnitt og setninger med estimert lesetid",
+      },
+      pl: {
+        name: "Statystyki Tekstu",
+        description:
+          "Analizuj tekst, aby uzyskać liczbę znaków, słów, wierszy, akapitów i zdań z szacowanym czasem czytania",
+      },
+      pt: {
+        name: "Estatísticas de Texto",
+        description:
+          "Analise o texto para obter contagens de caracteres, palavras, linhas, parágrafos e frases com estimativas de tempo de leitura",
+      },
+      ru: {
+        name: "Статистика Текста",
+        description:
+          "Анализ текста для подсчёта символов, слов, строк, абзацев и предложений с оценкой времени чтения",
+      },
+      sv: {
+        name: "Textstatistik",
+        description:
+          "Analysera text för att få antal tecken, ord, rader, stycken och meningar med uppskattad lästid",
+      },
+      th: {
+        name: "สถิติข้อความ",
+        description:
+          "วิเคราะห์ข้อความเพื่อรับจำนวนตัวอักษร คำ บรรทัด ย่อหน้า และประโยค พร้อมประมาณเวลาอ่าน",
+      },
+      tr: {
+        name: "Metin İstatistikleri",
+        description:
+          "Okuma süresi tahminleriyle birlikte karakter, kelime, satır, paragraf ve cümle sayılarını almak için metni analiz edin",
+      },
+      vi: {
+        name: "Thống Kê Văn Bản",
+        description:
+          "Phân tích văn bản để đếm ký tự, từ, dòng, đoạn văn và câu cùng với ước tính thời gian đọc",
+      },
+      "zh-CN": {
+        name: "文本统计",
+        description:
+          "把任意草稿变成实时写作分析面板，查看多语言计数、词汇信号、结构线索和阅读时长估算。",
+      },
+      "zh-TW": {
+        name: "文字統計",
+        description:
+          "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  {
     slug: "toml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -5623,6 +5754,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  "text-statistics": {
+    slug: "text-statistics",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "text",
+      "statistics",
+      "word",
+      "count",
+      "character",
+      "line",
+      "paragraph",
+    ],
+    locales: {
+      ar: {
+        name: "إحصائيات النص",
+        description:
+          "تحليل النص للحصول على عدد الأحرف والكلمات والأسطر والفقرات والجمل مع تقدير وقت القراءة",
+      },
+      de: {
+        name: "Textstatistik",
+        description:
+          "Analysieren Sie Text, um Zeichen-, Wort-, Zeilen-, Absatz- und Satzzählungen mit Lesezeitschätzungen zu erhalten",
+      },
+      en: {
+        name: "Text Statistics",
+        description:
+          "Turn any draft into a live writing dashboard with multilingual counts, vocabulary signals, structure clues, and reading-time estimates.",
+      },
+      es: {
+        name: "Estadísticas de Texto",
+        description:
+          "Analiza texto para obtener recuentos de caracteres, palabras, líneas, párrafos y oraciones con estimaciones de tiempo de lectura",
+      },
+      fr: {
+        name: "Statistiques de Texte",
+        description:
+          "Analysez le texte pour obtenir le nombre de caractères, mots, lignes, paragraphes et phrases avec des estimations de temps de lecture",
+      },
+      he: {
+        name: "סטטיסטיקת טקסט",
+        description:
+          "נתח טקסט כדי לקבל ספירת תווים, מילים, שורות, פסקאות ומשפטים עם הערכות זמן קריאה",
+      },
+      hi: {
+        name: "टेक्स्ट आँकड़े",
+        description:
+          "पढ़ने के समय के अनुमान के साथ वर्ण, शब्द, पंक्ति, पैराग्राफ और वाक्य गणना प्राप्त करने के लिए टेक्स्ट का विश्लेषण करें",
+      },
+      id: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan jumlah karakter, kata, baris, paragraf, dan kalimat dengan perkiraan waktu baca",
+      },
+      it: {
+        name: "Statistiche del Testo",
+        description:
+          "Analizza il testo per ottenere conteggi di caratteri, parole, righe, paragrafi e frasi con stime del tempo di lettura",
+      },
+      ja: {
+        name: "テキスト統計",
+        description:
+          "テキストを分析して、文字数、単語数、行数、段落数、文数と読書時間の見積もりを取得",
+      },
+      ko: {
+        name: "텍스트 통계",
+        description:
+          "텍스트를 분석하여 문자, 단어, 줄, 단락, 문장 수와 예상 읽기 시간을 확인",
+      },
+      ms: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan kiraan aksara, perkataan, baris, perenggan dan ayat dengan anggaran masa membaca",
+      },
+      nl: {
+        name: "Tekststatistieken",
+        description:
+          "Analyseer tekst om aantallen tekens, woorden, regels, alineas en zinnen te krijgen met leestijdschattingen",
+      },
+      no: {
+        name: "Tekststatistikk",
+        description:
+          "Analyser tekst for å få antall tegn, ord, linjer, avsnitt og setninger med estimert lesetid",
+      },
+      pl: {
+        name: "Statystyki Tekstu",
+        description:
+          "Analizuj tekst, aby uzyskać liczbę znaków, słów, wierszy, akapitów i zdań z szacowanym czasem czytania",
+      },
+      pt: {
+        name: "Estatísticas de Texto",
+        description:
+          "Analise o texto para obter contagens de caracteres, palavras, linhas, parágrafos e frases com estimativas de tempo de leitura",
+      },
+      ru: {
+        name: "Статистика Текста",
+        description:
+          "Анализ текста для подсчёта символов, слов, строк, абзацев и предложений с оценкой времени чтения",
+      },
+      sv: {
+        name: "Textstatistik",
+        description:
+          "Analysera text för att få antal tecken, ord, rader, stycken och meningar med uppskattad lästid",
+      },
+      th: {
+        name: "สถิติข้อความ",
+        description:
+          "วิเคราะห์ข้อความเพื่อรับจำนวนตัวอักษร คำ บรรทัด ย่อหน้า และประโยค พร้อมประมาณเวลาอ่าน",
+      },
+      tr: {
+        name: "Metin İstatistikleri",
+        description:
+          "Okuma süresi tahminleriyle birlikte karakter, kelime, satır, paragraf ve cümle sayılarını almak için metni analiz edin",
+      },
+      vi: {
+        name: "Thống Kê Văn Bản",
+        description:
+          "Phân tích văn bản để đếm ký tự, từ, dòng, đoạn văn và câu cùng với ước tính thời gian đọc",
+      },
+      "zh-CN": {
+        name: "文本统计",
+        description:
+          "把任意草稿变成实时写作分析面板，查看多语言计数、词汇信号、结构线索和阅读时长估算。",
+      },
+      "zh-TW": {
+        name: "文字統計",
+        description:
+          "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
       },
     },
   },

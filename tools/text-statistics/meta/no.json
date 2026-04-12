@@ -1,0 +1,4 @@
+{
+  "name": "Tekststatistikk",
+  "description": "Analyser tekst for å få antall tegn, ord, linjer, avsnitt og setninger med estimert lesetid"
+}
