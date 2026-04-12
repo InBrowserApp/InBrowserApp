@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-1 Teks atau File",
+  "description": "Buat hash SHA-1 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan."
+}

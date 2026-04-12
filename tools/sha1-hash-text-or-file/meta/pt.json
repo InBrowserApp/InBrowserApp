@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-1 de Texto ou Arquivo",
+  "description": "Gere hashes SHA-1 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança."
+}

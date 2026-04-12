@@ -1,0 +1,4 @@
+{
+  "name": "SHA-1-hash tekst eller fil",
+  "description": "Generer SHA-1-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske."
+}
