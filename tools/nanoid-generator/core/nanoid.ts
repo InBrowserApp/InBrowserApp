@@ -98,12 +98,7 @@ function generateNanoid(alphabet: string, size: number): string {
       index < step && id.length < normalizedSize;
       index += 1
     ) {
-      const byte = bytes[index]
-
-      if (byte === undefined) {
-        continue
-      }
-
+      const byte = bytes[index]!
       const character = alphabetCharacters[byte & mask]
 
       if (character !== undefined) {
