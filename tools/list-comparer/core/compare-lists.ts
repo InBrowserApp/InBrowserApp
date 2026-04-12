@@ -98,9 +98,7 @@ function compareLists(
   const sharedItems = sortIfNeeded(
     left.order
       .filter((key) => right.keySet.has(key))
-      .map(
-        (key) => left.displayByKey.get(key) ?? right.displayByKey.get(key) ?? ""
-      ),
+      .map((key) => left.displayByKey.get(key)!),
     options.sortResults,
     collator
   )
@@ -108,7 +106,7 @@ function compareLists(
   const leftOnlyItems = sortIfNeeded(
     left.order
       .filter((key) => !right.keySet.has(key))
-      .map((key) => left.displayByKey.get(key) ?? ""),
+      .map((key) => left.displayByKey.get(key)!),
     options.sortResults,
     collator
   )
@@ -116,7 +114,7 @@ function compareLists(
   const rightOnlyItems = sortIfNeeded(
     right.order
       .filter((key) => !left.keySet.has(key))
-      .map((key) => right.displayByKey.get(key) ?? ""),
+      .map((key) => right.displayByKey.get(key)!),
     options.sortResults,
     collator
   )
@@ -126,8 +124,10 @@ function compareLists(
     ...right.order.filter((key) => !left.keySet.has(key)),
   ]
   const allUniqueItems = sortIfNeeded(
-    unionOrder.map(
-      (key) => left.displayByKey.get(key) ?? right.displayByKey.get(key) ?? ""
+    unionOrder.map((key) =>
+      left.keySet.has(key)
+        ? left.displayByKey.get(key)!
+        : right.displayByKey.get(key)!
     ),
     options.sortResults,
     collator
@@ -181,16 +181,16 @@ function buildParsedList(
 
   const collator = createCollator(locale, options.ignoreCase)
   const uniqueItems = sortIfNeeded(
-    order.map((key) => displayByKey.get(key) ?? ""),
+    order.map((key) => displayByKey.get(key)!),
     options.sortResults,
     collator
   )
   const duplicateItems = sortDuplicateItems(
     order
-      .filter((key) => (countsByKey.get(key) ?? 0) > 1)
+      .filter((key) => countsByKey.get(key)! > 1)
       .map((key) => ({
-        value: displayByKey.get(key) ?? "",
-        count: countsByKey.get(key) ?? 0,
+        value: displayByKey.get(key)!,
+        count: countsByKey.get(key)!,
       })),
     options.sortResults,
     collator

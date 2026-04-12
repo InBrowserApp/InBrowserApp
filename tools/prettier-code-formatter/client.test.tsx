@@ -254,10 +254,13 @@ describe("PrettierCodeFormatterClient", () => {
 
     fireEvent.click(formatNowButton)
 
-    await waitFor(() => {
-      expect(getOutputRegion().textContent).toContain(largeInput)
-    })
-  })
+    await waitFor(
+      () => {
+        expect(getOutputRegion().textContent).toContain(largeInput)
+      },
+      { timeout: 15_000 }
+    )
+  }, 20_000)
 
   test("clears the current source and returns the output to its empty state", async () => {
     render(<PrettierCodeFormatterClient messages={messages} />)

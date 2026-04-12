@@ -96,6 +96,30 @@ describe("compareLists", () => {
     expect(result.rightOnlyItems).toEqual(["item1"])
     expect(result.allUniqueItems).toEqual(["", "item1", "item2", "item10"])
   })
+
+  test("sorts duplicate groups and falls back to the runtime locale when locale is blank", () => {
+    const result = compareLists(
+      "beta|beta|alpha|alpha|shared",
+      "shared|gamma|gamma",
+      {
+        ...DEFAULT_OPTIONS,
+        delimiterMode: "custom",
+        ignoreCase: true,
+        sortResults: true,
+      },
+      ""
+    )
+
+    expect(result.left.duplicateItems).toEqual([
+      { value: "alpha", count: 2 },
+      { value: "beta", count: 2 },
+    ])
+    expect(result.right.duplicateItems).toEqual([{ value: "gamma", count: 2 }])
+    expect(result.sharedItems).toEqual(["shared"])
+    expect(result.leftOnlyItems).toEqual(["alpha", "beta"])
+    expect(result.rightOnlyItems).toEqual(["gamma"])
+    expect(result.allUniqueItems).toEqual(["alpha", "beta", "gamma", "shared"])
+  })
 })
 
 describe("export formatting", () => {
