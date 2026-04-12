@@ -18,15 +18,14 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, FileJson2, TriangleAlert } from "@workspace/ui/icons"
 
 import type { JsonSchemaGeneratorMessages } from "../client/types"
+import { HighlightedJson } from "./highlighted-json"
 
 type OutputCardProps = Readonly<{
   downloadUrl: string | null
   errorMessage: string
-  hasInput: boolean
   messages: JsonSchemaGeneratorMessages
   schemaText: string
 }>
@@ -34,7 +33,6 @@ type OutputCardProps = Readonly<{
 function OutputCard({
   downloadUrl,
   errorMessage,
-  hasInput,
   messages,
   schemaText,
 }: OutputCardProps) {
@@ -53,22 +51,18 @@ function OutputCard({
             <AlertDescription>{errorMessage}</AlertDescription>
           </Alert>
         ) : hasSchema ? (
-          <Textarea
-            aria-label={messages.outputTitle}
-            readOnly
+          <HighlightedJson
+            ariaLabel={messages.outputTitle}
             value={schemaText}
-            className="min-h-80 flex-1 resize-y font-mono text-sm"
           />
         ) : (
-          <Empty className="min-h-80 border-0 p-0">
+          <Empty className="h-80 border-0 p-0">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 <FileJson2 />
               </EmptyMedia>
               <EmptyTitle>{messages.outputTitle}</EmptyTitle>
-              <EmptyDescription>
-                {hasInput ? messages.outputEmpty : messages.outputEmpty}
-              </EmptyDescription>
+              <EmptyDescription>{messages.outputEmpty}</EmptyDescription>
             </EmptyHeader>
           </Empty>
         )}

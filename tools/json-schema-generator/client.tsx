@@ -126,7 +126,6 @@ function JsonSchemaGeneratorClient({
     () => parseJsonInput(deferredInputText),
     [deferredInputText]
   )
-  const hasInput = inputText.trim().length > 0
   const schemaText = useMemo(() => {
     if (parseResult.error || parseResult.value === undefined) {
       return ""
@@ -201,7 +200,6 @@ function JsonSchemaGeneratorClient({
       <OutputCard
         downloadUrl={downloadUrl}
         errorMessage={parseResult.error ?? ""}
-        hasInput={hasInput}
         messages={messages}
         schemaText={schemaText}
       />

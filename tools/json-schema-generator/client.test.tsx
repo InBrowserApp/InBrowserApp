@@ -64,10 +64,12 @@ function getInput() {
   }) as HTMLTextAreaElement
 }
 
-function getOutput() {
-  return screen.getByRole("textbox", {
-    name: messages.outputTitle,
-  }) as HTMLTextAreaElement
+function getOutputText() {
+  return (
+    screen.getByRole("region", {
+      name: messages.outputTitle,
+    }).textContent ?? ""
+  )
 }
 
 function getFileInput() {
@@ -79,10 +81,10 @@ describe("JsonSchemaGeneratorClient", () => {
     render(<JsonSchemaGeneratorClient messages={messages} />)
 
     expect(getInput().value).toBe(sampleJson)
-    expect(getOutput().value).toContain(
+    expect(getOutputText()).toContain(
       '"$schema": "https://json-schema.org/draft/2020-12/schema"'
     )
-    expect(getOutput().value).toContain('"format": "uuid"')
+    expect(getOutputText()).toContain('"format": "uuid"')
     expect(
       screen.getByRole("link", { name: messages.downloadSchemaLabel })
     ).toBeTruthy()
@@ -137,7 +139,7 @@ describe("JsonSchemaGeneratorClient", () => {
 
     await waitFor(() => {
       expect(getInput().value).toBe('{"project":"Compiler"}')
-      expect(getOutput().value).toContain('"project"')
+      expect(getOutputText()).toContain('"project"')
     })
   })
 
@@ -159,9 +161,9 @@ describe("JsonSchemaGeneratorClient", () => {
     fireEvent.click(inferRequiredSwitch)
 
     await waitFor(() => {
-      expect(getOutput().value).not.toContain('"format": "uuid"')
-      expect(getOutput().value).toContain('"additionalProperties": false')
-      expect(getOutput().value).not.toContain('"required": [')
+      expect(getOutputText()).not.toContain('"format": "uuid"')
+      expect(getOutputText()).toContain('"additionalProperties": false')
+      expect(getOutputText()).not.toContain('"required": [')
     })
   })
 
@@ -174,7 +176,7 @@ describe("JsonSchemaGeneratorClient", () => {
     fireEvent.click(screen.getByRole("option", { name: "Draft-07" }))
 
     await waitFor(() => {
-      expect(getOutput().value).toContain(
+      expect(getOutputText()).toContain(
         '"$schema": "http://json-schema.org/draft-07/schema"'
       )
     })
@@ -203,12 +205,12 @@ describe("JsonSchemaGeneratorClient", () => {
 
     await waitFor(() => {
       expect(getInput().value).toBe('{"email":"ada@example.com"}')
-      expect(getOutput().value).toContain(
+      expect(getOutputText()).toContain(
         '"$schema": "http://json-schema.org/draft-07/schema"'
       )
-      expect(getOutput().value).not.toContain('"format": "email"')
-      expect(getOutput().value).toContain('"additionalProperties": false')
-      expect(getOutput().value).not.toContain('"required": [')
+      expect(getOutputText()).not.toContain('"format": "email"')
+      expect(getOutputText()).toContain('"additionalProperties": false')
+      expect(getOutputText()).not.toContain('"required": [')
     })
   })
 })

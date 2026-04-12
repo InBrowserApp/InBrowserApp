@@ -1,9 +1,50 @@
 ## JSON Schema क्या है?
 
-JSON Schema JSON डेटा की संरचना का वर्णन करने का मानक है। यह आवश्यक फ़ील्ड, डेटा प्रकार, रेंज और फ़ॉर्मैट नियम परिभाषित करता है ताकि डेटा का सुसंगत सत्यापन हो सके।
+JSON Schema, JSON डेटा की संरचना बताने का एक मानक है। इसकी मदद से आप फ़ील्ड के प्रकार, nested structure, required keys और validation के लिए उपयोगी constraints को मशीन-पठनीय रूप में व्यक्त कर सकते हैं।
 
-**आम उपयोग**
+### यह generator क्या करता है
 
-- API अनुरोध और प्रतिक्रिया पेलोड सत्यापित करना
-- कॉन्फ़िग फ़ाइल संरचना लागू करना
-- टीमों के बीच डेटा अनुबंध दस्तावेज़ित करना
+उदाहरण JSON पेस्ट करने पर यह टूल objects, arrays, numbers, booleans, null और सामान्य string formats के लिए शुरुआती schema तैयार करता है। परिणाम को कॉपी, डाउनलोड और आगे refine किया जा सकता है।
+
+### उदाहरण
+
+उदाहरण के लिए, इस sample payload को देखें:
+
+**उदाहरण इनपुट**
+
+```json
+{
+  "id": "bk-101",
+  "title": "In-browser Tools",
+  "price": 19.99,
+  "tags": ["json", "schema"],
+  "published": true
+}
+```
+
+**जेनरेट किया गया schema**
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "price": { "type": "number" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "published": { "type": "boolean" }
+  },
+  "required": ["id", "title", "price", "tags", "published"]
+}
+```
+
+### सुझाव
+
+- जहाँ संभव हो representative sample data दें, खासकर arrays के अंदर, ताकि optional fields बेहतर पकड़े जाएँ।
+- अगर इनपुट केवल अधूरा उदाहरण है, तो “Infer required properties” बंद कर दें।
+- अगर आपको default रूप से अधिक strict schema चाहिए, तो “Allow additional properties” बंद करें।
+- email, URI, UUID और date-time पहचानने के लिए string format detection चालू रखें।
