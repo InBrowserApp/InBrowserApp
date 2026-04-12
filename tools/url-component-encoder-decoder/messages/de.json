@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Klartext",
+  "plainTextPlaceholder": "Text zum Kodieren eingeben...",
+  "encodedTextLabel": "URL-kodierter Text",
+  "encodedTextPlaceholder": "URL-kodierten Text zum Dekodieren eingeben...",
+  "invalidEncodedTextLabel": "Ungültiger URL-kodierter Text",
+  "copyPlainTextLabel": "Klartext kopieren",
+  "copyEncodedTextLabel": "URL-kodierten Text kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen"
+}

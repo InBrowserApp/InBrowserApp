@@ -1,0 +1,4 @@
+{
+  "name": "URL-komponent kodare/avkodare",
+  "description": "Koda och avkoda URL-komponenter med procentkodning. Konvertera specialtecken till URL-säkert format och vice versa för webbutveckling och API-användning"
+}

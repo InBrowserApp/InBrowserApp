@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Teks Biasa",
+  "plainTextPlaceholder": "Masukkan teks untuk dikodekan...",
+  "encodedTextLabel": "Teks Terkode URL",
+  "encodedTextPlaceholder": "Masukkan teks terkode URL untuk didekodekan...",
+  "invalidEncodedTextLabel": "Teks terkode URL tidak valid",
+  "copyPlainTextLabel": "Salin teks biasa",
+  "copyEncodedTextLabel": "Salin teks berkode URL",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Atur ulang contoh"
+}

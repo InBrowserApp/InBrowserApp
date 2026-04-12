@@ -1,0 +1,4 @@
+{
+  "name": "Bộ mã hóa/giải mã thành phần URL",
+  "description": "Mã hóa và giải mã thành phần URL bằng mã hóa phần trăm. Chuyển đổi ký tự đặc biệt sang định dạng an toàn cho URL và ngược lại cho phát triển web và sử dụng API"
+}

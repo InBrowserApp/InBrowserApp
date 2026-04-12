@@ -25,6 +25,7 @@
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
+    "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
     "@tool/yaml-to-toml-converter": "workspace:*",

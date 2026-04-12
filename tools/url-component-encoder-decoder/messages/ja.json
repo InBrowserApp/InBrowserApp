@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextPlaceholder": "エンコードするテキストを入力...",
+  "encodedTextLabel": "URLエンコードテキスト",
+  "encodedTextPlaceholder": "デコードするURLエンコードテキストを入力...",
+  "invalidEncodedTextLabel": "無効なURLエンコードテキスト",
+  "copyPlainTextLabel": "プレーンテキストをコピー",
+  "copyEncodedTextLabel": "URLエンコードテキストをコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット"
+}

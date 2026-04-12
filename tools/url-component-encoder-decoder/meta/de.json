@@ -1,0 +1,4 @@
+{
+  "name": "URL-Komponenten-Encoder/Decoder",
+  "description": "Kodiert und dekodiert URL-Komponenten mit Prozent-Kodierung. Konvertiert Sonderzeichen in URL-sicheres Format und umgekehrt für Webentwicklung und API-Nutzung"
+}

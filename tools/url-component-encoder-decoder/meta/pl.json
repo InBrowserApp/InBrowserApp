@@ -1,0 +1,4 @@
+{
+  "name": "Koder/Dekoder Komponentów URL",
+  "description": "Koduj i dekoduj komponenty URL za pomocą kodowania procentowego. Konwertuj znaki specjalne na format bezpieczny dla URL-i i odwrotnie dla rozwoju stron internetowych i użycia API"
+}
