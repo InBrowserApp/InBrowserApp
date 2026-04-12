@@ -1,0 +1,4 @@
+{
+  "name": "ROT 密碼加密 & 解密",
+  "description": "使用 ROT13、ROT5、ROT18 和 ROT47 密碼演算法加密和解密文字。支援字母、數字和 ASCII 字元的自反加密"
+}

@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Tipe ROT",
+  "inputLabel": "Teks Masukan",
+  "inputPlaceholder": "Masukkan teks untuk dienkripsi/didekripsi...",
+  "outputLabel": "Teks Keluaran",
+  "outputPlaceholder": "Teks terenkripsi/terdekripsi akan muncul di sini...",
+  "rot13Description": "Hanya huruf (A-Z, a-z)",
+  "rot5Description": "Hanya angka (0-9)",
+  "rot18Description": "Huruf + Angka (ROT13 + ROT5)",
+  "rot47Description": "Semua ASCII yang dapat dicetak (33-126)",
+  "copyInputLabel": "Salin teks masukan",
+  "copyOutputLabel": "Salin teks keluaran",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Atur ulang contoh"
+}

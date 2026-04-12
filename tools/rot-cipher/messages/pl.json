@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Typ ROT",
+  "inputLabel": "Tekst wejsciowy",
+  "inputPlaceholder": "Wprowadz tekst do zaszyfrowania/odszyfrowania...",
+  "outputLabel": "Tekst wyjsciowy",
+  "outputPlaceholder": "Zaszyfrowany/odszyfrowany tekst pojawi sie tutaj...",
+  "rot13Description": "Tylko litery (A-Z, a-z)",
+  "rot5Description": "Tylko cyfry (0-9)",
+  "rot18Description": "Litery + Cyfry (ROT13 + ROT5)",
+  "rot47Description": "Wszystkie drukowalne ASCII (33-126)",
+  "copyInputLabel": "Kopiuj tekst wejściowy",
+  "copyOutputLabel": "Kopiuj tekst wyjściowy",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład"
+}

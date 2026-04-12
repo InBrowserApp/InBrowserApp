@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT प्रकार",
+  "inputLabel": "इनपुट टेक्स्ट",
+  "inputPlaceholder": "एन्क्रिप्ट/डिक्रिप्ट करने के लिए टेक्स्ट दर्ज करें...",
+  "outputLabel": "आउटपुट टेक्स्ट",
+  "outputPlaceholder": "एन्क्रिप्टेड/डिक्रिप्टेड टेक्स्ट यहाँ दिखाई देगा...",
+  "rot13Description": "केवल अक्षर (A-Z, a-z)",
+  "rot5Description": "केवल अंक (0-9)",
+  "rot18Description": "अक्षर + अंक (ROT13 + ROT5)",
+  "rot47Description": "सभी मुद्रण योग्य ASCII (33-126)",
+  "copyInputLabel": "इनपुट टेक्स्ट कॉपी करें",
+  "copyOutputLabel": "आउटपुट टेक्स्ट कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

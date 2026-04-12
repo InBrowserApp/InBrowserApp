@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "סוג ROT",
+  "inputLabel": "טקסט קלט",
+  "inputPlaceholder": "הזן טקסט להצפנה/פענוח...",
+  "outputLabel": "טקסט פלט",
+  "outputPlaceholder": "הטקסט המוצפן/המפוענח יופיע כאן...",
+  "rot13Description": "אותיות בלבד (A-Z, a-z)",
+  "rot5Description": "ספרות בלבד (0-9)",
+  "rot18Description": "אותיות + ספרות (ROT13 + ROT5)",
+  "rot47Description": "כל תווי ASCII הניתנים להדפסה (33-126)",
+  "copyInputLabel": "העתק טקסט קלט",
+  "copyOutputLabel": "העתק טקסט פלט",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה"
+}

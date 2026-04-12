@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Jenis ROT",
+  "inputLabel": "Teks Input",
+  "inputPlaceholder": "Masukkan teks untuk disulitkan/dinyahsulit...",
+  "outputLabel": "Teks Output",
+  "outputPlaceholder": "Teks yang disulitkan/dinyahsulit akan dipaparkan di sini...",
+  "rot13Description": "Huruf sahaja (A-Z, a-z)",
+  "rot5Description": "Digit sahaja (0-9)",
+  "rot18Description": "Huruf + Digit (ROT13 + ROT5)",
+  "rot47Description": "Semua ASCII boleh cetak (33-126)",
+  "copyInputLabel": "Salin teks input",
+  "copyOutputLabel": "Salin teks output",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Tetapkan semula contoh"
+}

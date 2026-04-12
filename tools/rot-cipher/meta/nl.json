@@ -1,0 +1,4 @@
+{
+  "name": "ROT-cijfer Versleutelen & Ontsleutelen",
+  "description": "Versleutel en ontsleutel tekst met ROT13, ROT5, ROT18 en ROT47 versleutelingsalgoritmen. Zelf-omkeerbare versleuteling voor letters, cijfers en ASCII-tekens"
+}
