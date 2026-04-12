@@ -262,8 +262,4 @@ function bytesToAscii(bytes: Uint8Array) {
   return String.fromCharCode(...bytes)
 }
 
-export {
-  stripImageMetadata,
-  type StripMetadataFormat,
-  type StripMetadataResult,
-}
+export { stripImageMetadata, type StripMetadataFormat }
