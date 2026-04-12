@@ -9,6 +9,7 @@
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
+    "@tool/current-network-time": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/image-resizer": "workspace:*",
