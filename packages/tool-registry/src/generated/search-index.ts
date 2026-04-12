@@ -1969,7 +1969,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       en: {
         name: "Text Statistics",
         description:
-          "Analyze text to get character, word, line, paragraph, and sentence counts with reading time estimates",
+          "Turn any draft into a live writing dashboard with multilingual counts, vocabulary signals, structure clues, and reading-time estimates.",
       },
       es: {
         name: "Estadísticas de Texto",
@@ -2064,12 +2064,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-CN": {
         name: "文本统计",
         description:
-          "分析文本，获取字符、单词、行数、段落和句子统计，以及预计阅读时间",
+          "把任意草稿变成实时写作分析面板，查看多语言计数、词汇信号、结构线索和阅读时长估算。",
       },
       "zh-TW": {
         name: "文字統計",
         description:
-          "分析文字，取得字元、字數、行數、段落和句子統計，以及預估閱讀時間",
+          "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
       },
     },
   },

@@ -1,3 +1,11 @@
-## 텍스트 통계란?
+## Why this tool feels different
 
-텍스트 통계 도구는 문자, 단어, 문장 등을 세어 작성된 콘텐츠를 분석하는 데 도움이 됩니다. 이러한 지표는 특정 길이 요구 사항을 충족하거나 읽기 시간을 추정해야 하는 작가, 학생 및 콘텐츠 제작자에게 유용합니다.
+Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+
+## What it measures
+
+You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+
+## When to use it
+
+Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.

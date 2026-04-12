@@ -8,51 +8,66 @@ describe("calculateTextStats", () => {
       characters: 0,
       charactersNoSpaces: 0,
       words: 0,
+      uniqueWords: 0,
       lines: 0,
       paragraphs: 0,
       sentences: 0,
+      averageWordLength: 0,
+      averageSentenceWords: 0,
+      lexicalDiversity: 0,
+      longestSentenceWords: 0,
+      longestParagraphWords: 0,
       readingTimeMinutes: 0,
       speakingTimeMinutes: 0,
+      topTerms: [],
     })
   })
 
-  test("counts words, lines, paragraphs, and punctuated sentences", () => {
-    expect(
-      calculateTextStats("Hello world!\nThis is a test.\n\nAnother paragraph?")
-    ).toEqual({
-      characters: 48,
-      charactersNoSpaces: 40,
-      words: 8,
-      lines: 4,
+  test("builds a richer draft profile instead of just raw counts", () => {
+    const stats = calculateTextStats(
+      "Write fast. Edit later.\n\nWrite better drafts."
+    )
+
+    expect(stats).toMatchObject({
+      words: 7,
+      uniqueWords: 6,
+      lines: 3,
       paragraphs: 2,
       sentences: 3,
-      readingTimeMinutes: 0.04,
-      speakingTimeMinutes: 0.05333333333333334,
+      longestSentenceWords: 3,
+      longestParagraphWords: 4,
+      topTerms: [{ term: "write", count: 2 }],
     })
+    expect(stats.averageWordLength).toBeCloseTo(5, 5)
+    expect(stats.averageSentenceWords).toBeCloseTo(7 / 3, 5)
+    expect(stats.lexicalDiversity).toBeCloseTo(6 / 7, 5)
   })
 
   test("falls back to a single sentence for non-empty text without punctuation", () => {
-    expect(calculateTextStats("A sentence without punctuation")).toMatchObject({
+    const stats = calculateTextStats("A sentence without punctuation")
+
+    expect(stats).toMatchObject({
       words: 4,
       sentences: 1,
+      averageSentenceWords: 4,
+      longestSentenceWords: 4,
     })
   })
 
-  test("normalizes repeated whitespace when counting words and paragraphs", () => {
-    expect(calculateTextStats(" one   two \n\n three ")).toMatchObject({
-      characters: 20,
-      charactersNoSpaces: 11,
-      words: 3,
-      lines: 3,
-      paragraphs: 2,
-      sentences: 1,
+  test("tracks repeated vocabulary for revision passes", () => {
+    expect(
+      calculateTextStats("Signal signal noise. Signal keeps showing up.")
+    ).toMatchObject({
+      words: 7,
+      uniqueWords: 5,
+      topTerms: [{ term: "signal", count: 3 }],
     })
   })
 })
 
 describe("formatTime", () => {
   test("formats durations under a minute as seconds", () => {
-    expect(formatTime(0.5)).toBe("30s")
+    expect(formatTime(0.1)).toBe("6s")
   })
 
   test("formats exact minute values without seconds", () => {
