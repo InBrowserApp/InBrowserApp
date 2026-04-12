@@ -256,4 +256,4 @@ export {
   parseDateTimeInput,
   toUtcTimestamp,
 }
-export type { DateTimeParts, TimeZoneOption }
+export type { TimeZoneOption }

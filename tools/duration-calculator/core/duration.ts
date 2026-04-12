@@ -142,4 +142,4 @@ export {
   normalizeDurationParts,
   parseIsoDuration,
 }
-export type { DurationParts, ParsedDuration }
+export type { DurationParts }

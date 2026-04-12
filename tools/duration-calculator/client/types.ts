@@ -82,7 +82,6 @@ type ResultsCardProps = Readonly<{
 export type {
   BaseTimeCardProps,
   DurationCalculatorClientProps,
-  DurationCalculatorMessages,
   DurationInputSource,
   DurationCardProps,
   ResultSnapshot,
