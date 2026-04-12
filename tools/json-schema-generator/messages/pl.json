@@ -1,0 +1,17 @@
+{
+  "inputTitle": "Wejście JSON",
+  "inputPlaceholder": "Wklej dane JSON tutaj...",
+  "outputTitle": "Wygenerowany schemat",
+  "outputEmpty": "Podaj poprawne dane JSON, aby wygenerować schemat",
+  "invalidJson": "Nieprawidłowy JSON",
+  "optionsTitle": "Opcje",
+  "optionDraft": "Wersja schematu",
+  "optionInferRequired": "Wnioskuj wymagane właściwości",
+  "optionAllowAdditionalProperties": "Zezwalaj na dodatkowe właściwości",
+  "optionDetectFormat": "Wykrywaj formaty ciągów (uuid, email, uri, date-time)",
+  "useSampleLabel": "Użyj przykładu",
+  "importFromFileLabel": "Importuj z pliku",
+  "downloadSchemaLabel": "Pobierz schemat",
+  "copySchemaLabel": "Kopiuj schemat",
+  "copiedLabel": "Skopiowano"
+}

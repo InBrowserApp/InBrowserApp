@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON-inndata",
+  "inputPlaceholder": "Lim inn JSON-data her...",
+  "outputTitle": "Generert skjema",
+  "outputEmpty": "Oppgi gyldige JSON-data for å generere et skjema",
+  "invalidJson": "Ugyldig JSON",
+  "optionsTitle": "Alternativer",
+  "optionDraft": "Skjemautkast",
+  "optionInferRequired": "Utrede obligatoriske egenskaper",
+  "optionAllowAdditionalProperties": "Tillat ekstra egenskaper",
+  "optionDetectFormat": "Oppdag strengformater (uuid, email, uri, date-time)",
+  "useSampleLabel": "Bruk eksempel",
+  "importFromFileLabel": "Importer fra fil",
+  "downloadSchemaLabel": "Last ned skjema",
+  "copySchemaLabel": "Kopier skjema",
+  "copiedLabel": "Kopiert"
+}

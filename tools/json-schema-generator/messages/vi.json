@@ -1,0 +1,17 @@
+{
+  "inputTitle": "Đầu vào JSON",
+  "inputPlaceholder": "Dán dữ liệu JSON ở đây...",
+  "outputTitle": "Schema được tạo",
+  "outputEmpty": "Cung cấp dữ liệu JSON hợp lệ để tạo schema",
+  "invalidJson": "JSON không hợp lệ",
+  "optionsTitle": "Tùy chọn",
+  "optionDraft": "Bản nháp schema",
+  "optionInferRequired": "Suy luận thuộc tính bắt buộc",
+  "optionAllowAdditionalProperties": "Cho phép thuộc tính bổ sung",
+  "optionDetectFormat": "Phát hiện định dạng chuỗi (uuid, email, uri, date-time)",
+  "useSampleLabel": "Dùng mẫu",
+  "importFromFileLabel": "Nhập từ tệp",
+  "downloadSchemaLabel": "Tải schema",
+  "copySchemaLabel": "Sao chép lược đồ",
+  "copiedLabel": "Đã sao chép"
+}

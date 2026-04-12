@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON-inmatning",
+  "inputPlaceholder": "Klistra in JSON-data här...",
+  "outputTitle": "Genererat schema",
+  "outputEmpty": "Ange giltig JSON-data för att generera ett schema",
+  "invalidJson": "Ogiltig JSON",
+  "optionsTitle": "Alternativ",
+  "optionDraft": "Schemakast",
+  "optionInferRequired": "Härled obligatoriska egenskaper",
+  "optionAllowAdditionalProperties": "Tillåt extra egenskaper",
+  "optionDetectFormat": "Upptäck strängformat (uuid, email, uri, date-time)",
+  "useSampleLabel": "Använd exempel",
+  "importFromFileLabel": "Importera från fil",
+  "downloadSchemaLabel": "Ladda ner schema",
+  "copySchemaLabel": "Kopiera schema",
+  "copiedLabel": "Kopierat"
+}

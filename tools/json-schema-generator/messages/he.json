@@ -1,0 +1,17 @@
+{
+  "inputTitle": "קלט JSON",
+  "inputPlaceholder": "הדבק נתוני JSON כאן...",
+  "outputTitle": "סכימה שנוצרה",
+  "outputEmpty": "ספק נתוני JSON תקינים כדי ליצור סכימה",
+  "invalidJson": "JSON לא תקין",
+  "optionsTitle": "אפשרויות",
+  "optionDraft": "טיוטת סכימה",
+  "optionInferRequired": "הסקת מאפיינים נדרשים",
+  "optionAllowAdditionalProperties": "אפשר מאפיינים נוספים",
+  "optionDetectFormat": "זיהוי פורמטים של מחרוזות (uuid, email, uri, date-time)",
+  "useSampleLabel": "השתמש בדוגמה",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "downloadSchemaLabel": "הורד סכימה",
+  "copySchemaLabel": "העתק סכמה",
+  "copiedLabel": "הועתק"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema-generator",
+  "description": "Genereert JSON Schema op basis van voorbeeld-JSON-gegevens"
+}

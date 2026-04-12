@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON 入力",
+  "inputPlaceholder": "ここに JSON データを貼り付け...",
+  "outputTitle": "生成されたスキーマ",
+  "outputEmpty": "有効な JSON データを入力してスキーマを生成してください",
+  "invalidJson": "無効な JSON",
+  "optionsTitle": "オプション",
+  "optionDraft": "スキーマ草案",
+  "optionInferRequired": "必須プロパティを推定",
+  "optionAllowAdditionalProperties": "追加プロパティを許可",
+  "optionDetectFormat": "文字列フォーマットを検出 (uuid, email, uri, date-time)",
+  "useSampleLabel": "サンプルを使用",
+  "importFromFileLabel": "ファイルから読み込み",
+  "downloadSchemaLabel": "スキーマをダウンロード",
+  "copySchemaLabel": "スキーマをコピー",
+  "copiedLabel": "コピーしました"
+}

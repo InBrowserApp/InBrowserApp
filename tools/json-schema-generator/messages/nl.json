@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON-invoer",
+  "inputPlaceholder": "Plak hier JSON-gegevens...",
+  "outputTitle": "Gegenereerd schema",
+  "outputEmpty": "Voer geldige JSON-gegevens in om een schema te genereren",
+  "invalidJson": "Ongeldig JSON",
+  "optionsTitle": "Opties",
+  "optionDraft": "Schema-concept",
+  "optionInferRequired": "Verplichte eigenschappen afleiden",
+  "optionAllowAdditionalProperties": "Extra eigenschappen toestaan",
+  "optionDetectFormat": "Stringformaten detecteren (uuid, email, uri, date-time)",
+  "useSampleLabel": "Voorbeeld gebruiken",
+  "importFromFileLabel": "Importeren uit bestand",
+  "downloadSchemaLabel": "Schema downloaden",
+  "copySchemaLabel": "Schema kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

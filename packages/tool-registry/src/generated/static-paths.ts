@@ -922,6 +922,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-schema-generator",
+    language: "ar",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "de",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "en",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "es",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "fr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "he",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "hi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "id",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "it",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ja",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ko",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ms",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "nl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "no",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pt",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ru",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "sv",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "th",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "tr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "vi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "json-schema-validator",
     language: "ar",
   },

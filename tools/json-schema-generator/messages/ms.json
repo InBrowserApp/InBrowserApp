@@ -1,0 +1,17 @@
+{
+  "inputTitle": "Input JSON",
+  "inputPlaceholder": "Tampal data JSON di sini...",
+  "outputTitle": "Skema yang dijana",
+  "outputEmpty": "Sediakan data JSON yang sah untuk menjana skema",
+  "invalidJson": "JSON tidak sah",
+  "optionsTitle": "Pilihan",
+  "optionDraft": "Draf skema",
+  "optionInferRequired": "Buat inferens sifat wajib",
+  "optionAllowAdditionalProperties": "Benarkan sifat tambahan",
+  "optionDetectFormat": "Kesan format rentetan (uuid, email, uri, date-time)",
+  "useSampleLabel": "Guna contoh",
+  "importFromFileLabel": "Import dari fail",
+  "downloadSchemaLabel": "Muat turun skema",
+  "copySchemaLabel": "Salin skema",
+  "copiedLabel": "Disalin"
+}

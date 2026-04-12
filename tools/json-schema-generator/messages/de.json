@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON-Eingabe",
+  "inputPlaceholder": "JSON-Daten hier einfügen...",
+  "outputTitle": "Generiertes Schema",
+  "outputEmpty": "Geben Sie gültige JSON-Daten ein, um ein Schema zu erzeugen",
+  "invalidJson": "Ungültiges JSON",
+  "optionsTitle": "Optionen",
+  "optionDraft": "Schema-Entwurf",
+  "optionInferRequired": "Pflichtfelder ableiten",
+  "optionAllowAdditionalProperties": "Zusätzliche Eigenschaften erlauben",
+  "optionDetectFormat": "String-Formate erkennen (uuid, email, uri, date-time)",
+  "useSampleLabel": "Beispiel verwenden",
+  "importFromFileLabel": "Aus Datei importieren",
+  "downloadSchemaLabel": "Schema herunterladen",
+  "copySchemaLabel": "Schema kopieren",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,17 @@
+{
+  "inputTitle": "JSON Input",
+  "inputPlaceholder": "Paste JSON data here...",
+  "outputTitle": "Generated Schema",
+  "outputEmpty": "Provide valid JSON data to generate a schema",
+  "invalidJson": "Invalid JSON",
+  "optionsTitle": "Options",
+  "optionDraft": "Schema draft",
+  "optionInferRequired": "Infer required properties",
+  "optionAllowAdditionalProperties": "Allow additional properties",
+  "optionDetectFormat": "Detect string formats (uuid, email, uri, date-time)",
+  "useSampleLabel": "Use sample",
+  "importFromFileLabel": "Import from file",
+  "downloadSchemaLabel": "Download schema",
+  "copySchemaLabel": "Copy schema",
+  "copiedLabel": "Copied"
+}

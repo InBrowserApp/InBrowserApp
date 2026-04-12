@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),
+  "json-schema-generator": () => import("@tool/json-schema-generator/page"),
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),
   "json-to-toml-converter": () => import("@tool/json-to-toml-converter/page"),

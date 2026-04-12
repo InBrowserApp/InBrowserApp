@@ -1,0 +1,17 @@
+{
+  "inputTitle": "Input JSON",
+  "inputPlaceholder": "Tempel data JSON di sini...",
+  "outputTitle": "Skema yang dihasilkan",
+  "outputEmpty": "Berikan data JSON yang valid untuk menghasilkan skema",
+  "invalidJson": "JSON tidak valid",
+  "optionsTitle": "Opsi",
+  "optionDraft": "Draf skema",
+  "optionInferRequired": "Inferensi properti wajib",
+  "optionAllowAdditionalProperties": "Izinkan properti tambahan",
+  "optionDetectFormat": "Deteksi format string (uuid, email, uri, date-time)",
+  "useSampleLabel": "Gunakan contoh",
+  "importFromFileLabel": "Impor dari file",
+  "downloadSchemaLabel": "Unduh skema",
+  "copySchemaLabel": "Salin skema",
+  "copiedLabel": "Disalin"
+}
