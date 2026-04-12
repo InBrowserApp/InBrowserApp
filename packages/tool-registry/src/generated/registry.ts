@@ -1942,14 +1942,14 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
           "Định dạng JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL và các tệp liên quan bằng Prettier ngay trong trình duyệt.",
       },
       "zh-CN": {
-        name: "Prettier 代码格式化器",
+        name: "Prettier 代码格式化工具",
         description:
-          "直接在浏览器中使用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
+          "直接在浏览器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
       },
       "zh-TW": {
-        name: "Prettier 程式碼格式化器",
+        name: "Prettier 程式碼格式化工具",
         description:
-          "直接在瀏覽器中使用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+          "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
       },
     },
   },
@@ -4635,14 +4635,14 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
           "Định dạng JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL và các tệp liên quan bằng Prettier ngay trong trình duyệt.",
       },
       "zh-CN": {
-        name: "Prettier 代码格式化器",
+        name: "Prettier 代码格式化工具",
         description:
-          "直接在浏览器中使用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
+          "直接在浏览器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
       },
       "zh-TW": {
-        name: "Prettier 程式碼格式化器",
+        name: "Prettier 程式碼格式化工具",
         description:
-          "直接在瀏覽器中使用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+          "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
       },
     },
   },
