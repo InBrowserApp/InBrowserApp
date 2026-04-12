@@ -24,6 +24,7 @@
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
+    "@tool/sha384-hash-text-or-file": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",

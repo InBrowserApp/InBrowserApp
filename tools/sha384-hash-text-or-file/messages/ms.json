@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "hashResultLabel": "Hasil Hash",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Perpuluhan",
+  "binaryLabel": "Binari",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Ввод",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите любой текст в UTF-8, включая эмодзи и нелатинские символы.",
+  "importFromFileLabel": "Импорт из файла",
+  "hashResultLabel": "Результат Хеширования",
+  "hexLabel": "Шестнадцатеричный",
+  "base64Label": "Base64",
+  "decimalLabel": "Десятичный",
+  "binaryLabel": "Двоичный",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано"
+}

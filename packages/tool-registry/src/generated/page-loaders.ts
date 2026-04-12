@@ -24,6 +24,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/openapi-to-typescript-converter/page"),
   "sha256-hash-text-or-file": () =>
     import("@tool/sha256-hash-text-or-file/page"),
+  "sha384-hash-text-or-file": () =>
+    import("@tool/sha384-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
