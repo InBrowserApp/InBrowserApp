@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de caractères invisibles Unicode",
+  "description": "Détecte les caractères à largeur nulle, les contrôles bidi et les espaces spéciaux, puis exporte une version nettoyée."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Unicode-kontroll av usynlige tegn",
+  "description": "Oppdager nullbredde-, bidi-kontroll- og spesialmellomromstegn og eksporterer en renset versjon."
+}
