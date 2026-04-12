@@ -10,6 +10,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-run-to-compose-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),
