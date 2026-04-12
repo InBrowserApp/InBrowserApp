@@ -150,10 +150,6 @@ function clampPrettierTabWidth(value: unknown) {
 
 export {
   DEFAULT_PRETTIER_FORMAT_OPTIONS,
-  MAX_PRETTIER_PRINT_WIDTH,
-  MAX_PRETTIER_TAB_WIDTH,
-  MIN_PRETTIER_PRINT_WIDTH,
-  MIN_PRETTIER_TAB_WIDTH,
   PRETTIER_LANGUAGE_KEYS,
   PRETTIER_TRAILING_COMMA_VALUES,
   clampPrettierPrintWidth,
@@ -167,5 +163,4 @@ export type {
   PrettierLanguageConfig,
   PrettierLanguageKey,
   PrettierPluginKey,
-  PrettierTrailingComma,
 }
