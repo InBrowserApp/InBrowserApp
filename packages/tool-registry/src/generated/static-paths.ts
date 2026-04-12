@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "nanoid-generator",
+    language: "ar",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "de",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "en",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "es",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "fr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "he",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "hi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "id",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "it",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ja",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ko",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ms",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "nl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "no",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pt",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ru",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "sv",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "th",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "tr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "vi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "openapi-to-typescript-converter",
     language: "ar",
   },
