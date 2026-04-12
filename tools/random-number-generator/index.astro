@@ -1,0 +1,28 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import RandomNumberGeneratorClient from "./client"
+
+import type { ToolMeta } from "@workspace/tool-sdk"
+import type { RandomNumberGeneratorMessagesCatalog } from "./types"
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<RandomNumberGeneratorMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <RandomNumberGeneratorClient client:load messages={messages} />
+</ToolPageShell>

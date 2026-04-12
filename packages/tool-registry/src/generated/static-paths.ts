@@ -1658,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-number-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-number-generator",
+    language: "de",
+  },
+  {
+    slug: "random-number-generator",
+    language: "en",
+  },
+  {
+    slug: "random-number-generator",
+    language: "es",
+  },
+  {
+    slug: "random-number-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "he",
+  },
+  {
+    slug: "random-number-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "id",
+  },
+  {
+    slug: "random-number-generator",
+    language: "it",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-number-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "no",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-number-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-number-generator",
+    language: "th",
+  },
+  {
+    slug: "random-number-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-number-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },

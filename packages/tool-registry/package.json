@@ -25,6 +25,7 @@
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
+    "@tool/random-number-generator": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",

@@ -24,6 +24,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "random-number-generator": () => import("@tool/random-number-generator/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha256-hash-text-or-file": () =>
     import("@tool/sha256-hash-text-or-file/page"),
