@@ -1,0 +1,4 @@
+{
+  "name": "ROT Cipher Encrypt & Decrypt",
+  "description": "Encrypt and decrypt text using ROT13, ROT5, ROT18, and ROT47 cipher algorithms. Self-reversing encryption for letters, digits, and ASCII characters"
+}

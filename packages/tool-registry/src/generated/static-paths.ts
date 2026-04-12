@@ -1382,6 +1382,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "rot-cipher",
+    language: "ar",
+  },
+  {
+    slug: "rot-cipher",
+    language: "de",
+  },
+  {
+    slug: "rot-cipher",
+    language: "en",
+  },
+  {
+    slug: "rot-cipher",
+    language: "es",
+  },
+  {
+    slug: "rot-cipher",
+    language: "fr",
+  },
+  {
+    slug: "rot-cipher",
+    language: "he",
+  },
+  {
+    slug: "rot-cipher",
+    language: "hi",
+  },
+  {
+    slug: "rot-cipher",
+    language: "id",
+  },
+  {
+    slug: "rot-cipher",
+    language: "it",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ja",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ko",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ms",
+  },
+  {
+    slug: "rot-cipher",
+    language: "nl",
+  },
+  {
+    slug: "rot-cipher",
+    language: "no",
+  },
+  {
+    slug: "rot-cipher",
+    language: "pl",
+  },
+  {
+    slug: "rot-cipher",
+    language: "pt",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ru",
+  },
+  {
+    slug: "rot-cipher",
+    language: "sv",
+  },
+  {
+    slug: "rot-cipher",
+    language: "th",
+  },
+  {
+    slug: "rot-cipher",
+    language: "tr",
+  },
+  {
+    slug: "rot-cipher",
+    language: "vi",
+  },
+  {
+    slug: "rot-cipher",
+    language: "zh-CN",
+  },
+  {
+    slug: "rot-cipher",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },

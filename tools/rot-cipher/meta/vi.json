@@ -1,0 +1,4 @@
+{
+  "name": "Mã hóa ROT Mã hóa & Giải mã",
+  "description": "Mã hóa và giải mã văn bản bằng các thuật toán mã hóa ROT13, ROT5, ROT18 và ROT47. Mã hóa tự đảo ngược cho chữ cái, chữ số và ký tự ASCII"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Cifrado ROT Encriptar & Desencriptar",
+  "description": "Encripta y desencripta texto usando los algoritmos de cifrado ROT13, ROT5, ROT18 y ROT47. Encriptación autorreversible para letras, dígitos y caracteres ASCII"
+}

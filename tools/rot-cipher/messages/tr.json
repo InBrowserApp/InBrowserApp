@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT Tipi",
+  "inputLabel": "Giris Metni",
+  "inputPlaceholder": "Sifrelenecek/cozulecek metni girin...",
+  "outputLabel": "Cikis Metni",
+  "outputPlaceholder": "Sifrelenmis/cozulmus metin burada gorunecek...",
+  "rot13Description": "Yalnizca harfler (A-Z, a-z)",
+  "rot5Description": "Yalnizca rakamlar (0-9)",
+  "rot18Description": "Harfler + Rakamlar (ROT13 + ROT5)",
+  "rot47Description": "Tum yazdirilabilir ASCII (33-126)",
+  "copyInputLabel": "Giriş metnini kopyala",
+  "copyOutputLabel": "Çıkış metnini kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

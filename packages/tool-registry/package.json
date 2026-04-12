@@ -22,6 +22,7 @@
     "@tool/json-to-yaml-converter": "workspace:*",
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
+    "@tool/rot-cipher": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",

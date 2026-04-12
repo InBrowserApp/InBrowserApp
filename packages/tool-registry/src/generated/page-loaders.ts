@@ -21,6 +21,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),

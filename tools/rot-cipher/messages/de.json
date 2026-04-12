@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT-Typ",
+  "inputLabel": "Eingabetext",
+  "inputPlaceholder": "Text zum Verschlusseln/Entschlusseln eingeben...",
+  "outputLabel": "Ausgabetext",
+  "outputPlaceholder": "Verschlusselter/entschlusselter Text erscheint hier...",
+  "rot13Description": "Nur Buchstaben (A-Z, a-z)",
+  "rot5Description": "Nur Ziffern (0-9)",
+  "rot18Description": "Buchstaben + Ziffern (ROT13 + ROT5)",
+  "rot47Description": "Alle druckbaren ASCII-Zeichen (33-126)",
+  "copyInputLabel": "Eingabetext kopieren",
+  "copyOutputLabel": "Ausgabetext kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen"
+}

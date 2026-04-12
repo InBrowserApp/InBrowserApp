@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT 类型",
+  "inputLabel": "输入文本",
+  "inputPlaceholder": "输入要加密/解密的文本...",
+  "outputLabel": "输出文本",
+  "outputPlaceholder": "加密/解密后的文本将显示在这里...",
+  "rot13Description": "仅字母 (A-Z, a-z)",
+  "rot5Description": "仅数字 (0-9)",
+  "rot18Description": "字母 + 数字 (ROT13 + ROT5)",
+  "rot47Description": "所有可打印 ASCII 字符 (33-126)",
+  "copyInputLabel": "复制输入文本",
+  "copyOutputLabel": "复制输出文本",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例"
+}
