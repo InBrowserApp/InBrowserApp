@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-statistics",
+    language: "ar",
+  },
+  {
+    slug: "text-statistics",
+    language: "de",
+  },
+  {
+    slug: "text-statistics",
+    language: "en",
+  },
+  {
+    slug: "text-statistics",
+    language: "es",
+  },
+  {
+    slug: "text-statistics",
+    language: "fr",
+  },
+  {
+    slug: "text-statistics",
+    language: "he",
+  },
+  {
+    slug: "text-statistics",
+    language: "hi",
+  },
+  {
+    slug: "text-statistics",
+    language: "id",
+  },
+  {
+    slug: "text-statistics",
+    language: "it",
+  },
+  {
+    slug: "text-statistics",
+    language: "ja",
+  },
+  {
+    slug: "text-statistics",
+    language: "ko",
+  },
+  {
+    slug: "text-statistics",
+    language: "ms",
+  },
+  {
+    slug: "text-statistics",
+    language: "nl",
+  },
+  {
+    slug: "text-statistics",
+    language: "no",
+  },
+  {
+    slug: "text-statistics",
+    language: "pl",
+  },
+  {
+    slug: "text-statistics",
+    language: "pt",
+  },
+  {
+    slug: "text-statistics",
+    language: "ru",
+  },
+  {
+    slug: "text-statistics",
+    language: "sv",
+  },
+  {
+    slug: "text-statistics",
+    language: "th",
+  },
+  {
+    slug: "text-statistics",
+    language: "tr",
+  },
+  {
+    slug: "text-statistics",
+    language: "vi",
+  },
+  {
+    slug: "text-statistics",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-statistics",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },

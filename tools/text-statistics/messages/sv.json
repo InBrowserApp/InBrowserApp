@@ -1,0 +1,11 @@
+{
+  "placeholder": "Skriv eller klistra in din text här...",
+  "characters": "Tecken",
+  "charactersNoSpaces": "Tecken (utan mellanslag)",
+  "words": "Ord",
+  "lines": "Rader",
+  "paragraphs": "Stycken",
+  "sentences": "Meningar",
+  "readingTime": "Lästid",
+  "speakingTime": "Taltid"
+}

@@ -23,6 +23,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/openapi-to-typescript-converter/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
+  "text-statistics": () => import("@tool/text-statistics/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),

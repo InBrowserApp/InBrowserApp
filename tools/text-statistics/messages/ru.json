@@ -1,0 +1,11 @@
+{
+  "placeholder": "Введите или вставьте текст здесь...",
+  "characters": "Символы",
+  "charactersNoSpaces": "Символы (без пробелов)",
+  "words": "Слова",
+  "lines": "Строки",
+  "paragraphs": "Абзацы",
+  "sentences": "Предложения",
+  "readingTime": "Время чтения",
+  "speakingTime": "Время произнесения"
+}

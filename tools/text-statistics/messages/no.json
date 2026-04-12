@@ -1,0 +1,11 @@
+{
+  "placeholder": "Skriv inn eller lim inn teksten din her...",
+  "characters": "Tegn",
+  "charactersNoSpaces": "Tegn (uten mellomrom)",
+  "words": "Ord",
+  "lines": "Linjer",
+  "paragraphs": "Avsnitt",
+  "sentences": "Setninger",
+  "readingTime": "Lesetid",
+  "speakingTime": "Taletid"
+}

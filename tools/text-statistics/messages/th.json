@@ -1,0 +1,11 @@
+{
+  "placeholder": "ป้อนหรือวางข้อความของคุณที่นี่...",
+  "characters": "ตัวอักษร",
+  "charactersNoSpaces": "ตัวอักษร (ไม่รวมช่องว่าง)",
+  "words": "คำ",
+  "lines": "บรรทัด",
+  "paragraphs": "ย่อหน้า",
+  "sentences": "ประโยค",
+  "readingTime": "เวลาอ่าน",
+  "speakingTime": "เวลาพูด"
+}

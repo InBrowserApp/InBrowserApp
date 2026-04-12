@@ -23,6 +23,7 @@
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
+    "@tool/text-statistics": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",

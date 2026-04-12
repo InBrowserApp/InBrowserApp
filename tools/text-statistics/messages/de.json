@@ -1,0 +1,11 @@
+{
+  "placeholder": "Geben Sie hier Ihren Text ein oder fügen Sie ihn ein...",
+  "characters": "Zeichen",
+  "charactersNoSpaces": "Zeichen (ohne Leerzeichen)",
+  "words": "Wörter",
+  "lines": "Zeilen",
+  "paragraphs": "Absätze",
+  "sentences": "Sätze",
+  "readingTime": "Lesezeit",
+  "speakingTime": "Sprechzeit"
+}

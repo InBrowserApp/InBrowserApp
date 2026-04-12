@@ -1,0 +1,11 @@
+{
+  "placeholder": "在此輸入或貼上文字...",
+  "characters": "字元數",
+  "charactersNoSpaces": "字元數（不含空格）",
+  "words": "字數",
+  "lines": "行數",
+  "paragraphs": "段落數",
+  "sentences": "句子數",
+  "readingTime": "閱讀時間",
+  "speakingTime": "朗讀時間"
+}

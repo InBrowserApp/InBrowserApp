@@ -1,0 +1,11 @@
+{
+  "placeholder": "ここにテキストを入力または貼り付けてください...",
+  "characters": "文字数",
+  "charactersNoSpaces": "文字数（空白除く）",
+  "words": "単語数",
+  "lines": "行数",
+  "paragraphs": "段落数",
+  "sentences": "文数",
+  "readingTime": "読書時間",
+  "speakingTime": "発話時間"
+}

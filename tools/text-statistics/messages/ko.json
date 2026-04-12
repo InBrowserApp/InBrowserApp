@@ -1,0 +1,11 @@
+{
+  "placeholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
+  "characters": "문자 수",
+  "charactersNoSpaces": "문자 수 (공백 제외)",
+  "words": "단어 수",
+  "lines": "줄 수",
+  "paragraphs": "단락 수",
+  "sentences": "문장 수",
+  "readingTime": "읽기 시간",
+  "speakingTime": "말하기 시간"
+}
