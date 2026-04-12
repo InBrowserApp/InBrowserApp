@@ -1,5 +1,5 @@
-import { useEffect, useId, useMemo, useState, type ReactNode } from "react"
-import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import { useEffect, useId, useMemo, useState } from "react"
+
 import {
   Alert,
   AlertDescription,
@@ -9,6 +9,7 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -19,8 +20,8 @@ import {
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { BadgeCheck, TriangleAlert } from "@workspace/ui/icons"
-import { cn } from "@workspace/ui/lib/utils"
 
+import { DetailItem, ValueWithCopy } from "./components/result-detail"
 import { validateISBN, type ISBNValidationResult } from "./core/isbn"
 
 type IsbnMessages = Readonly<{
@@ -97,50 +98,6 @@ function getIsbn13Display(
   return validation.isbn13 ?? messages.notAvailable
 }
 
-function DetailItem({
-  label,
-  content,
-}: Readonly<{ label: string; content: ReactNode }>) {
-  return (
-    <div className="rounded-xl border border-border/70 bg-muted/20 p-4">
-      <dt className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-        {label}
-      </dt>
-      <dd className="mt-2 text-sm leading-6">{content}</dd>
-    </div>
-  )
-}
-
-function ValueWithCopy({
-  value,
-  copyValue,
-  messages,
-  monospace = false,
-}: Readonly<{
-  value: string
-  copyValue?: string
-  messages: IsbnMessages
-  monospace?: boolean
-}>) {
-  return (
-    <div className="flex flex-wrap items-center gap-2">
-      <span
-        className={cn("break-all", monospace ? "font-mono text-sm" : "text-sm")}
-      >
-        {value}
-      </span>
-      {copyValue ? (
-        <ToolCopyButton
-          value={copyValue}
-          copyLabel={messages.copyLabel}
-          copiedLabel={messages.copiedLabel}
-          variant="ghost"
-        />
-      ) : null}
-    </div>
-  )
-}
-
 function IsbnValidatorClient({
   messages,
 }: Readonly<{ messages: IsbnMessages }>) {
@@ -169,16 +126,24 @@ function IsbnValidatorClient({
   const feedbackMessage = hasInput
     ? getFeedbackMessage(validation, messages)
     : null
+  const typeLabel = getTypeLabel(validation, messages)
   const isbn10Display = getIsbn10Display(validation, messages)
   const isbn13Display = getIsbn13Display(validation, messages)
   const prefixDisplay =
     validation.type === "isbn-13" ? (validation.prefix ?? "-") : "-"
+  const resultDescription =
+    typeLabel +
+    " / " +
+    messages.checksum +
+    ": " +
+    (validation.isChecksumValid ? messages.pass : messages.fail)
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.isbn}</CardTitle>
+          <CardDescription>{messages.meta.description}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <Field>
@@ -224,16 +189,13 @@ function IsbnValidatorClient({
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.result}</CardTitle>
+            <CardDescription>{resultDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <dl className="grid gap-4 sm:grid-cols-2">
               <DetailItem
                 label={messages.type}
-                content={
-                  <span className="font-medium">
-                    {getTypeLabel(validation, messages)}
-                  </span>
-                }
+                content={<span className="font-medium">{typeLabel}</span>}
               />
               <DetailItem
                 label={messages.checksum}
@@ -253,7 +215,8 @@ function IsbnValidatorClient({
                   <ValueWithCopy
                     value={validation.normalized || "-"}
                     copyValue={validation.normalized || undefined}
-                    messages={messages}
+                    copyLabel={messages.copyLabel}
+                    copiedLabel={messages.copiedLabel}
                     monospace
                   />
                 }
@@ -281,7 +244,8 @@ function IsbnValidatorClient({
                   <ValueWithCopy
                     value={isbn10Display}
                     copyValue={validation.isbn10 ?? undefined}
-                    messages={messages}
+                    copyLabel={messages.copyLabel}
+                    copiedLabel={messages.copiedLabel}
                     monospace
                   />
                 }
@@ -292,7 +256,8 @@ function IsbnValidatorClient({
                   <ValueWithCopy
                     value={isbn13Display}
                     copyValue={validation.isbn13 ?? undefined}
-                    messages={messages}
+                    copyLabel={messages.copyLabel}
+                    copiedLabel={messages.copiedLabel}
                     monospace
                   />
                 }
