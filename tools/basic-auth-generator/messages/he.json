@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "אישורים",
+  "usernameLabel": "שם משתמש",
+  "passwordLabel": "סיסמה",
+  "authorizationHeaderLabel": "כותרת Authorization",
+  "curlExampleLabel": "דוגמת cURL",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה"
+}

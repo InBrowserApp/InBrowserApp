@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "자격 증명",
+  "usernameLabel": "사용자 이름",
+  "passwordLabel": "비밀번호",
+  "authorizationHeaderLabel": "Authorization 헤더",
+  "curlExampleLabel": "cURL 예",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정"
+}

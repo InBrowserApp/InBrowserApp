@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Legitimasjon",
+  "usernameLabel": "Brukernavn",
+  "passwordLabel": "Passord",
+  "authorizationHeaderLabel": "Authorization-header",
+  "curlExampleLabel": "cURL-eksempel",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel"
+}

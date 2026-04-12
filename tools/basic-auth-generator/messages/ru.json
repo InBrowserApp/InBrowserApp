@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Учетные данные",
+  "usernameLabel": "Имя пользователя",
+  "passwordLabel": "Пароль",
+  "authorizationHeaderLabel": "Заголовок Authorization",
+  "curlExampleLabel": "Пример cURL",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

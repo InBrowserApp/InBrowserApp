@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "प्रमाण-पत्र",
+  "usernameLabel": "उपयोगकर्ता नाम",
+  "passwordLabel": "पासवर्ड",
+  "authorizationHeaderLabel": "Authorization हेडर",
+  "curlExampleLabel": "cURL उदाहरण",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

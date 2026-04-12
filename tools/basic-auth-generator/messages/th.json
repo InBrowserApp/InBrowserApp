@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "ข้อมูลรับรอง",
+  "usernameLabel": "ชื่อผู้ใช้",
+  "passwordLabel": "รหัสผ่าน",
+  "authorizationHeaderLabel": "ส่วนหัว Authorization",
+  "curlExampleLabel": "ตัวอย่าง cURL",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

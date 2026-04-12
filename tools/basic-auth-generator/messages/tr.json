@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Kimlik Bilgileri",
+  "usernameLabel": "Kullanıcı Adı",
+  "passwordLabel": "Parola",
+  "authorizationHeaderLabel": "Authorization Başlığı",
+  "curlExampleLabel": "cURL Örneği",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

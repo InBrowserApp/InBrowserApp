@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Kredensial",
+  "usernameLabel": "Nama pengguna",
+  "passwordLabel": "Kata sandi",
+  "authorizationHeaderLabel": "Header Authorization",
+  "curlExampleLabel": "Contoh cURL",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Atur ulang contoh"
+}

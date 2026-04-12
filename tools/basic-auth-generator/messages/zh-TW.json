@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "憑證",
+  "usernameLabel": "使用者名稱",
+  "passwordLabel": "密碼",
+  "authorizationHeaderLabel": "Authorization 標頭",
+  "curlExampleLabel": "cURL 範例",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設範例"
+}

@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Inloggningsuppgifter",
+  "usernameLabel": "Användarnamn",
+  "passwordLabel": "Lösenord",
+  "authorizationHeaderLabel": "Authorization-rubrik",
+  "curlExampleLabel": "cURL-exempel",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel"
+}

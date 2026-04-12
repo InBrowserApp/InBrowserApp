@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Thông tin xác thực",
+  "usernameLabel": "Tên người dùng",
+  "passwordLabel": "Mật khẩu",
+  "authorizationHeaderLabel": "Tiêu đề Authorization",
+  "curlExampleLabel": "Ví dụ cURL",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ"
+}

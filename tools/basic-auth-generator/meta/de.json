@@ -1,0 +1,4 @@
+{
+  "name": "Basic-Auth-Generator",
+  "description": "Generieren Sie den HTTP Basic Authorization Header, indem Sie Benutzername und Passwort als Base64 kodieren. Erstellen Sie schnell Anmeldedaten für API-Tests und Entwicklung"
+}

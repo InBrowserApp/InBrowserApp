@@ -1,0 +1,4 @@
+{
+  "name": "Generador de Basic Auth",
+  "description": "Genera el encabezado HTTP Basic Authorization codificando usuario y contraseña en Base64. Crea credenciales rápidamente para pruebas de API y desarrollo"
+}

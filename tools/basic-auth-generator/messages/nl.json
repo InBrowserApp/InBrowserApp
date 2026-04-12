@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Referenties",
+  "usernameLabel": "Gebruikersnaam",
+  "passwordLabel": "Wachtwoord",
+  "authorizationHeaderLabel": "Authorization-header",
+  "curlExampleLabel": "cURL-voorbeeld",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

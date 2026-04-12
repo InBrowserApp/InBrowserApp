@@ -1,0 +1,4 @@
+{
+  "name": "Penjana Basic Auth",
+  "description": "Jana pengepala HTTP Basic Authorization dengan mengekod nama pengguna dan kata laluan sebagai Base64. Cipta kelayakan dengan cepat untuk ujian dan pembangunan API"
+}

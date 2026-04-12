@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "Credentials",
+  "usernameLabel": "Username",
+  "passwordLabel": "Password",
+  "authorizationHeaderLabel": "Authorization Header",
+  "curlExampleLabel": "cURL Example",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example"
+}

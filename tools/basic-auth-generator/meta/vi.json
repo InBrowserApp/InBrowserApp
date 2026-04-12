@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo Basic Auth",
+  "description": "Tạo tiêu đề HTTP Basic Authorization bằng cách mã hóa tên người dùng và mật khẩu ở dạng Base64. Tạo nhanh thông tin xác thực cho kiểm thử và phát triển API"
+}

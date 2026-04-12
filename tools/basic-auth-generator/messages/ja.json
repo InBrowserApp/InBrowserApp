@@ -1,0 +1,10 @@
+{
+  "credentialsLabel": "認証情報",
+  "usernameLabel": "ユーザー名",
+  "passwordLabel": "パスワード",
+  "authorizationHeaderLabel": "Authorization ヘッダー",
+  "curlExampleLabel": "cURL 例",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット"
+}
