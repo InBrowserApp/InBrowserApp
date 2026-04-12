@@ -45,6 +45,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),
   "unicode-invisible-character-checker": () =>
     import("@tool/unicode-invisible-character-checker/page"),
+  "unicode-punycode-converter": () =>
+    import("@tool/unicode-punycode-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),

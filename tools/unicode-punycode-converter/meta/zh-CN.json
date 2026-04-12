@@ -1,0 +1,4 @@
+{
+  "name": "Unicode ↔ Punycode 转换器",
+  "description": "双向转换 Unicode（IDN）与 ASCII（Punycode）域名"
+}

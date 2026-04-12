@@ -1,0 +1,4 @@
+{
+  "name": "Bộ chuyển đổi Unicode ↔ Punycode",
+  "description": "Chuyển đổi tên miền Unicode (IDN) và ASCII (Punycode) hai chiều"
+}

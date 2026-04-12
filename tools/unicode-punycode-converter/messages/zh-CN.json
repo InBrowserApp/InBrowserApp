@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII 域名",
+  "unicodeDomainLabel": "Unicode 域名",
+  "whatIsPunycodeTitle": "什么是 Punycode？",
+  "whatIsPunycodeDescription": "Punycode 是一种仅使用 ASCII 的字母‑数字‑连字符（LDH）子集来表示 Unicode 的方式，是 IDNA 采用的编码规范，并实现于 Bootstring 算法（RFC 3492）。在实际编码中，标签内的 ASCII 字符保持不变，与编码后的非 ASCII 部分之间以连字符分隔；在互联网域名中还会加上 ACE 前缀 xn--。例如 “München” 在码位层面可表示为 “Mnchen-3ya”，其 DNS 标签为 “xn--mnchen-3ya”。在经过 IDNA 处理与规范化后，转换是精确且可逆的；本工具在浏览器内完成双向转换。",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例"
+}

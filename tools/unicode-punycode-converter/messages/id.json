@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "Domain ASCII",
+  "unicodeDomainLabel": "Domain Unicode",
+  "whatIsPunycodeTitle": "Apa itu Punycode?",
+  "whatIsPunycodeDescription": "Punycode adalah representasi Unicode yang hanya menggunakan subkumpulan ASCII huruf‑angka‑tanda hubung (LDH) yang disyaratkan untuk nama host DNS. Ini adalah profil pengodean yang dipakai oleh IDNA dan merupakan instans dari algoritme Bootstring (RFC 3492). Dalam praktiknya, karakter ASCII pada label dibiarkan apa adanya dan tanda hubung memisahkannya dari bagian non‑ASCII yang dikodekan; untuk penggunaan di Internet publik, awalan ACE xn-- ditambahkan di depan label. Contohnya, München menjadi Mnchen‑3ya pada tingkat kode titik dan menjadi label DNS xn--mnchen-3ya. Konversi bersifat tepat dan dapat dibalik di bawah pemrosesan dan normalisasi IDNA; alat ini melakukan konversi dua arah langsung di peramban Anda.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Atur ulang contoh"
+}

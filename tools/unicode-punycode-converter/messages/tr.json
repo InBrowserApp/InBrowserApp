@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII Alan Adı",
+  "unicodeDomainLabel": "Unicode Alan Adı",
+  "whatIsPunycodeTitle": "Punycode nedir?",
+  "whatIsPunycodeDescription": "Punycode, DNS ana makine adları için gerekli olan ASCII’nin harf‑rakam‑tire (LDH) alt kümesini kullanarak Unicode’u temsil eden bir yöntemdir. IDNA’nın kullandığı kodlama profili olup Bootstring algoritmasının (RFC 3492) bir örneğidir. Uygulamada, etiketteki ASCII karakterleri olduğu gibi kalır ve tire, kodlanmış ASCII dışı bölümden ayırır; genel İnternet kullanımı için etikete ACE öneki xn-- eklenir. Örneğin, München kod noktası düzeyinde Mnchen‑3ya’ya ve DNS etiketi olarak xn--mnchen-3ya’ya dönüşür. Dönüşümler IDNA işleme ve normalizasyonu altında tam ve tersine çevrilebilir niteliktedir; bu araç her iki yönü de tamamen tarayıcınızda gerçekleştirir.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Örneği sıfırla"
+}

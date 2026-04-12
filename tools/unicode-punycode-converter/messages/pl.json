@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "Domena ASCII",
+  "unicodeDomainLabel": "Domena Unicode",
+  "whatIsPunycodeTitle": "Czym jest Punycode?",
+  "whatIsPunycodeDescription": "Punycode to sposób reprezentacji Unicode z użyciem wyłącznie podzbioru ASCII: litery‑cyfry‑myślnik (LDH), wymaganego dla nazw hostów DNS. Jest to profil kodowania używany przez IDNA i implementacja algorytmu Bootstring (RFC 3492). W praktyce znaki ASCII w etykiecie pozostają niezmienione, a myślnik oddziela je od zakodowanej części nie‑ASCII; na potrzeby publicznego Internetu do etykiety dodaje się prefiks ACE xn--. Na przykład München staje się na poziomie punktów kodowych Mnchen‑3ya, a jako etykieta DNS — xn--mnchen-3ya. Konwersje są dokładne i odwracalne w ramach przetwarzania i normalizacji IDNA; to narzędzie wykonuje oba kierunki bezpośrednio w przeglądarce.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Resetuj przykład"
+}

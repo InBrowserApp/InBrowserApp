@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "Tên miền ASCII",
+  "unicodeDomainLabel": "Tên miền Unicode",
+  "whatIsPunycodeTitle": "Punycode là gì?",
+  "whatIsPunycodeDescription": "Punycode là cách biểu diễn Unicode chỉ dùng tập con ASCII gồm chữ cái‑chữ số‑dấu gạch nối (LDH) theo yêu cầu của tên máy chủ DNS. Đây là hồ sơ mã hóa do IDNA sử dụng và là một hiện thân của thuật toán Bootstring (RFC 3492). Trong thực tế, các ký tự ASCII trong nhãn được giữ nguyên và một dấu gạch nối sẽ tách chúng khỏi phần đã mã hóa không phải ASCII; khi dùng trên Internet công cộng, tiền tố ACE xn-- sẽ được thêm trước nhãn. Ví dụ, München trở thành Mnchen‑3ya ở mức điểm mã và thành nhãn DNS xn--mnchen-3ya. Các phép chuyển đổi là chính xác và có thể đảo ngược theo xử lý và chuẩn hóa IDNA; công cụ này thực hiện chuyển đổi hai chiều ngay trong trình duyệt.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Đặt lại ví dụ"
+}

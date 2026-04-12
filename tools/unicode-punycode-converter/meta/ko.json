@@ -1,0 +1,4 @@
+{
+  "name": "Unicode ↔ Punycode 변환기",
+  "description": "Unicode(IDN)와 ASCII(Punycode) 도메인을 양방향으로 변환"
+}
