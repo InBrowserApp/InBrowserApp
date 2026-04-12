@@ -1,4 +1,4 @@
 {
   "name": "SHA-1-hash tekst of bestand",
-  "description": "Genereer SHA-1-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+  "description": "Genereer SHA-1-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn."
 }

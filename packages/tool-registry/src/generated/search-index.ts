@@ -2450,117 +2450,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "تجزئة SHA-1 للنص أو الملف",
         description:
-          "إنشاء تجزئة SHA-1 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+          "أنشئ تجزئات SHA-1 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
       },
       de: {
         name: "SHA-1-Hash für Text oder Datei",
         description:
-          "Generieren Sie SHA-1-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+          "Erstellen Sie SHA-1-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
       },
       en: {
         name: "SHA-1 Hash Text or File",
         description:
-          "Generate SHA-1 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+          "Generate SHA-1 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
       },
       es: {
         name: "Hash SHA-1 de Texto o Archivo",
         description:
-          "Genera hash SHA-1 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+          "Genera hashes SHA-1 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
       },
       fr: {
         name: "Hash SHA-1 de Texte ou Fichier",
         description:
-          "Générez un hash SHA-1 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+          "Générez des hachages SHA-1 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
       },
       he: {
         name: "האש SHA-1 טקסט או קובץ",
         description:
-          "צור האש SHA-1 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+          "צור ערכי SHA-1 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
       },
       hi: {
         name: "SHA-1 हैश टेक्स्ट या फ़ाइल",
         description:
-          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-1 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-1 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
       },
       id: {
         name: "Hash SHA-1 Teks atau File",
         description:
-          "Buat hash SHA-1 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+          "Buat hash SHA-1 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
       },
       it: {
         name: "Hash SHA-1 di Testo o File",
         description:
-          "Genera hash SHA-1 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+          "Genera hash SHA-1 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
       },
       ja: {
         name: "SHA-1 ハッシュ テキストまたはファイル",
         description:
-          "テキスト入力またはファイルアップロードのSHA-1ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+          "テキスト入力やファイルアップロード向けに SHA-1 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
       },
       ko: {
         name: "SHA-1 해시 텍스트 또는 파일",
         description:
-          "텍스트 입력 또는 파일 업로드에 대한 SHA-1 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+          "텍스트 입력이나 파일 업로드용 SHA-1 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
       },
       ms: {
         name: "Hash SHA-1 Teks atau Fail",
         description:
-          "Jana hash SHA-1 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+          "Jana hash SHA-1 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
       },
       nl: {
         name: "SHA-1-hash tekst of bestand",
         description:
-          "Genereer SHA-1-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+          "Genereer SHA-1-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
       },
       no: {
         name: "SHA-1-hash tekst eller fil",
         description:
-          "Generer SHA-1-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+          "Generer SHA-1-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
       },
       pl: {
         name: "Hash SHA-1 tekstu lub pliku",
         description:
-          "Generuj hash SHA-1 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+          "Generuj hashe SHA-1 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
       },
       pt: {
         name: "Hash SHA-1 de Texto ou Arquivo",
         description:
-          "Gere hash SHA-1 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+          "Gere hashes SHA-1 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
       },
       ru: {
         name: "SHA-1-хеш текста или файла",
         description:
-          "Генерируйте SHA-1-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+          "Создавайте SHA-1-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
       },
       sv: {
         name: "SHA-1-hash text eller fil",
         description:
-          "Generera SHA-1-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+          "Generera SHA-1-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
       },
       th: {
         name: "แฮช SHA-1 ข้อความหรือไฟล์",
         description:
-          "สร้างแฮช SHA-1 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+          "สร้างแฮช SHA-1 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
       },
       tr: {
         name: "SHA-1 Hash Metin veya Dosya",
         description:
-          "Metin girişi veya dosya yükleme için SHA-1 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+          "Metin girişi veya dosya yükleme için SHA-1 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
       },
       vi: {
         name: "Hash SHA-1 văn bản hoặc tệp",
         description:
-          "Tạo hash SHA-1 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+          "Tạo hash SHA-1 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
       },
       "zh-CN": {
         name: "SHA-1 哈希文本或文件",
         description:
-          "为文本输入或文件上传生成 SHA-1 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+          "为文本输入或文件上传生成 SHA-1 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
       },
       "zh-TW": {
         name: "SHA-1 雜湊文字或檔案",
         description:
-          "為文字輸入或檔案上傳產生 SHA-1 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+          "為文字輸入或檔案上傳產生 SHA-1 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
       },
     },
   },

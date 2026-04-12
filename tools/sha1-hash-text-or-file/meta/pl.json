@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-1 tekstu lub pliku",
-  "description": "Generuj hash SHA-1 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+  "description": "Generuj hashe SHA-1 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa."
 }

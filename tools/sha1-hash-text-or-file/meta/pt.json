@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-1 de Texto ou Arquivo",
-  "description": "Gere hash SHA-1 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança"
+  "description": "Gere hashes SHA-1 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança."
 }

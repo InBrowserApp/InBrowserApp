@@ -1,4 +1,4 @@
 {
   "name": "SHA-1 Hash Text or File",
-  "description": "Generate SHA-1 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes"
+  "description": "Generate SHA-1 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks."
 }

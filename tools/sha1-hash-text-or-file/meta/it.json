@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-1 di Testo o File",
-  "description": "Genera hash SHA-1 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza"
+  "description": "Genera hash SHA-1 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza."
 }

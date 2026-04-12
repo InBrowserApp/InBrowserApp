@@ -1,4 +1,4 @@
 {
   "name": "SHA-1-Hash für Text oder Datei",
-  "description": "Generieren Sie SHA-1-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke"
+  "description": "Erstellen Sie SHA-1-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen"
 }

@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-1 Teks atau Fail",
-  "description": "Jana hash SHA-1 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan"
+  "description": "Jana hash SHA-1 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan."
 }
