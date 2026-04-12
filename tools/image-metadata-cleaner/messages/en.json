@@ -1,5 +1,5 @@
 {
-  "dragDropOrClick": "Drag and click to upload",
+  "dragDropOrClick": "Drag and drop an image here, or click to upload",
   "supportedFormats": "Supports JPEG, PNG, WebP",
   "remove": "Remove",
   "cleanMetadata": "Clean metadata",

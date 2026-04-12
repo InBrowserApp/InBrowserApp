@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import {
   Alert,
@@ -6,63 +6,21 @@ import {
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Input } from "@workspace/ui/components/ui/input"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { Download, ImageUp, TriangleAlert, Wrench } from "@workspace/ui/icons"
+import { Download, TriangleAlert, Wrench } from "@workspace/ui/icons"
 
-import {
-  stripImageMetadata,
-  type StripMetadataFormat,
-} from "./core/strip-image-metadata"
+import { stripImageMetadata } from "./core/strip-image-metadata"
+import { UploadDropzone } from "./components/upload-dropzone"
+import { formatBytes, formatToMime, toErrorMessage } from "./client/utils"
 import type { ImageMetadataCleanerMessages } from "./client/types"
 
 type ImageMetadataCleanerClientProps = Readonly<{
   messages: ImageMetadataCleanerMessages
 }>
-
-function formatBytes(bytes: number) {
-  if (!Number.isFinite(bytes) || bytes <= 0) {
-    return "0 B"
-  }
-
-  const units = ["B", "KB", "MB", "GB"] as const
-  const unitIndex = Math.min(
-    Math.floor(Math.log(bytes) / Math.log(1024)),
-    units.length - 1
-  )
-  const value = bytes / 1024 ** unitIndex
-
-  return `${new Intl.NumberFormat(undefined, {
-    maximumFractionDigits: value >= 100 ? 0 : value >= 10 ? 1 : 2,
-  }).format(value)} ${units[unitIndex]}`
-}
-
-function formatToMime(format: StripMetadataFormat) {
-  if (format === "jpeg") {
-    return "image/jpeg"
-  }
-
-  if (format === "png") {
-    return "image/png"
-  }
-
-  return "image/webp"
-}
-
-function toErrorMessage(
-  error: unknown,
-  messages: ImageMetadataCleanerMessages
-) {
-  if (error instanceof Error && error.message === "Unsupported image format") {
-    return messages.unsupportedFormat
-  }
-
-  return error instanceof Error ? error.message : messages.cleaningFailed
-}
 
 function useObjectUrl(blob: Blob | null) {
   const [url, setUrl] = useState<string | null>(null)
@@ -87,12 +45,14 @@ function useObjectUrl(blob: Blob | null) {
 function ImageMetadataCleanerClient({
   messages,
 }: ImageMetadataCleanerClientProps) {
-  const inputId = useId()
+  const inputRef = useRef<HTMLInputElement | null>(null)
+  const dragDepthRef = useRef(0)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [cleanedBlob, setCleanedBlob] = useState<Blob | null>(null)
   const [removedBytes, setRemovedBytes] = useState(0)
   const [error, setError] = useState("")
   const [isCleaning, setIsCleaning] = useState(false)
+  const [isDraggingOver, setIsDraggingOver] = useState(false)
 
   const selectedFileUrl = useObjectUrl(selectedFile)
   const cleanedFileUrl = useObjectUrl(cleanedBlob)
@@ -102,6 +62,11 @@ function ImageMetadataCleanerClient({
       : 0
   const downloadName = selectedFile?.name || "cleaned-image"
 
+  function selectFile(file: File | null) {
+    setSelectedFile(file)
+    resetResults()
+  }
+
   function resetResults() {
     setCleanedBlob(null)
     setRemovedBytes(0)
@@ -109,15 +74,53 @@ function ImageMetadataCleanerClient({
   }
 
   function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const file = event.target.files?.[0] ?? null
-    setSelectedFile(file)
-    resetResults()
+    selectFile(event.target.files?.[0] ?? null)
     event.target.value = ""
   }
 
   function handleClear() {
+    dragDepthRef.current = 0
+    setIsDraggingOver(false)
     setSelectedFile(null)
     resetResults()
+  }
+
+  function openFilePicker() {
+    inputRef.current?.click()
+  }
+
+  function handleDragEnter(event: React.DragEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    dragDepthRef.current += 1
+    setIsDraggingOver(true)
+  }
+
+  function handleDragOver(event: React.DragEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    event.dataTransfer.dropEffect = "copy"
+    setIsDraggingOver(true)
+  }
+
+  function handleDragLeave(event: React.DragEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    dragDepthRef.current = Math.max(0, dragDepthRef.current - 1)
+
+    if (dragDepthRef.current === 0) {
+      setIsDraggingOver(false)
+    }
+  }
+
+  function handleDrop(event: React.DragEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    dragDepthRef.current = 0
+    setIsDraggingOver(false)
+
+    const file = event.dataTransfer.files?.[0] ?? null
+    if (!file) {
+      return
+    }
+
+    selectFile(file)
   }
 
   async function handleCleanMetadata() {
@@ -148,24 +151,29 @@ function ImageMetadataCleanerClient({
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <ToolPanelCard>
           <ToolPanelCardContent className="gap-5">
-            <div className="space-y-2">
-              <div className="inline-flex size-10 items-center justify-center rounded-full bg-muted text-muted-foreground">
-                <ImageUp className="size-5" />
-              </div>
-              <div className="space-y-1">
-                <h2 className="font-heading text-base font-medium">
-                  {messages.dragDropOrClick}
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                  {messages.supportedFormats}
-                </p>
-              </div>
-            </div>
+            <UploadDropzone
+              isDraggingOver={isDraggingOver}
+              messages={messages}
+              onClick={openFilePicker}
+              onDragEnter={handleDragEnter}
+              onDragLeave={handleDragLeave}
+              onDragOver={handleDragOver}
+              onDrop={handleDrop}
+              onKeyDown={(event) => {
+                if (event.key !== "Enter" && event.key !== " ") {
+                  return
+                }
 
-            <Input
-              id={inputId}
+                event.preventDefault()
+                openFilePicker()
+              }}
+            />
+
+            <input
+              ref={inputRef}
               aria-label={messages.dragDropOrClick}
               accept="image/jpeg,image/png,image/webp"
+              className="sr-only"
               onChange={handleFileChange}
               type="file"
             />
@@ -184,21 +192,16 @@ function ImageMetadataCleanerClient({
                   </p>
                 </div>
               </div>
-            ) : (
-              <div className="flex min-h-40 items-center justify-center rounded-xl border border-dashed bg-muted/30 p-6 text-center text-sm text-muted-foreground">
-                {messages.note}
-              </div>
-            )}
+            ) : null}
           </ToolPanelCardContent>
 
-          <ToolPanelCardFooter className="flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-sm text-muted-foreground">{messages.note}</p>
-            {selectedFile ? (
+          {selectedFile ? (
+            <ToolPanelCardFooter className="justify-end">
               <Button onClick={handleClear} type="button" variant="outline">
                 {messages.remove}
               </Button>
-            ) : null}
-          </ToolPanelCardFooter>
+            </ToolPanelCardFooter>
+          ) : null}
         </ToolPanelCard>
 
         <ToolPanelCard>

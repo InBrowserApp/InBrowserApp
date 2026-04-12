@@ -23,7 +23,7 @@ const messages = {
     description:
       "Remove EXIF/XMP/IPTC/ICC metadata from images without re-encoding.",
   },
-  dragDropOrClick: "Click or drag image to upload",
+  dragDropOrClick: "Drag and drop an image here, or click to upload",
   supportedFormats: "Supports JPEG, PNG, WebP",
   remove: "Remove",
   cleanMetadata: "Clean metadata",
@@ -49,7 +49,13 @@ function createImageFile(
 }
 
 function getFileInput() {
-  return screen.getByLabelText(messages.dragDropOrClick) as HTMLInputElement
+  return document.querySelector('input[type="file"]') as HTMLInputElement
+}
+
+function getDropzone() {
+  return screen.getByRole("button", {
+    name: messages.dragDropOrClick,
+  }) as HTMLButtonElement
 }
 
 beforeEach(() => {
@@ -116,6 +122,20 @@ describe("ImageMetadataCleanerClient", () => {
     expect(downloadLink.getAttribute("href")).toBe("blob:mock-2")
     expect(screen.getByText("2 B")).toBeTruthy()
     expect(screen.getByText("50%")).toBeTruthy()
+  })
+
+  test("accepts a dragged and dropped file", async () => {
+    render(<ImageMetadataCleanerClient messages={messages} />)
+
+    const file = createImageFile()
+
+    fireEvent.drop(getDropzone(), {
+      dataTransfer: { files: [file] },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByText(file.name)).toBeTruthy()
+    })
   })
 
   test("maps unsupported format failures to the localized error message", async () => {
