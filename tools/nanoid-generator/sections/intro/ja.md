@@ -1,9 +1,19 @@
-## What is NanoID?
+## NanoID とは？
 
-NanoID is a tiny, URL-safe unique ID generator designed for modern web apps. A standard NanoID is 21 characters long and uses a 64-character alphabet, providing about 126 bits of randomness.
+NanoID は、最新の Web アプリ、API、内部ツール向けに設計された、コンパクトで URL セーフな一意 ID ジェネレーターです。デフォルト形式では 64 文字のアルファベットから 21 文字を使用し、URL、ファイル名、テスト用フィクスチャに収まる短さを保ちながら、約 126 ビットのランダム性を確保します。
 
-**Key points:**
+このツールの処理はすべてブラウザ内でローカルに実行されます。カスタム文字セットや生成された ID がページの外へ送られることはないため、素早いプロトタイピング、フィクスチャ生成、単発の運用作業に向いています。
 
-- **URL-safe**: uses A-Z, a-z, 0-9, - and \_.
-- **Customizable**: adjust length and alphabet to match constraints.
-- **Secure randomness**: uses cryptographic random values in the browser.
+**ポイント:**
+
+- **URL セーフ**: A-Z、a-z、0-9、-、\_ を使用します。
+- **カスタマイズ可能**: 制約に合わせて長さや文字セットを調整できます。
+- **安全なランダム性**: ブラウザ内で暗号学的に安全な乱数を使用します。
+- **プレーンテキスト書き出し**: シードデータ、デモ用コンテンツ、インポート用リストが必要なときに、現在のバッチをコピーまたはダウンロードできます。
+
+**実践的な指針:**
+
+- 衝突確率が非常に低い汎用 ID が必要なら、デフォルトの 21 文字を維持してください。
+- 短い ID は一時的な UI トークンやローカルのモックデータには向いていますが、長さを短くしたり生成数を増やしたりすると衝突リスクは高まります。
+- アルファベットが大きいほど 1 文字あたりのエントロピーが増えるため、一意性をあまり損なわずに ID を短くしやすくなります。
+- カスタム文字セットには重複しない文字だけを含めるべきです。重複文字は分布をゆがめるため、このツールは生成前にそれらをブロックします。
