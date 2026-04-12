@@ -27,7 +27,7 @@ import {
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { FileText } from "@workspace/ui/icons"
+import { FileText, RefreshCcw } from "@workspace/ui/icons"
 
 import {
   DEFAULT_ENABLED_CATEGORIES,
@@ -187,6 +187,7 @@ function UnicodeInvisibleCharacterCheckerClient({
                 })
               }}
             >
+              <FileText data-icon="inline-start" />
               {messages.loadSample}
             </Button>
             <Button
@@ -199,6 +200,7 @@ function UnicodeInvisibleCharacterCheckerClient({
                 })
               }}
             >
+              <RefreshCcw data-icon="inline-start" />
               {messages.clearText}
             </Button>
           </ToolPanelCardFooter>
