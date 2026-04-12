@@ -59,6 +59,36 @@ describe("BasicAuthGeneratorClient", () => {
     )
   })
 
+  test("renders lightweight highlighted tokens for the outputs", () => {
+    render(<BasicAuthGeneratorClient messages={messages} />)
+
+    const headerOutput = screen.getByRole("region", {
+      name: "Authorization Header",
+    })
+    const curlOutput = screen.getByRole("region", {
+      name: "cURL Example",
+    })
+
+    expect(
+      headerOutput.querySelector('[data-token="scheme"]')?.textContent
+    ).toBe("Basic")
+    expect(
+      headerOutput.querySelector('[data-token="credential"]')?.textContent
+    ).toBe("QWxhZGRpbjpvcGVuIHNlc2FtZQ==")
+    expect(
+      curlOutput.querySelector('[data-token="command"]')?.textContent
+    ).toBe("curl")
+    expect(curlOutput.querySelector('[data-token="flag"]')?.textContent).toBe(
+      "-H"
+    )
+    expect(
+      curlOutput.querySelector('[data-token="header-name"]')?.textContent
+    ).toBe("Authorization:")
+    expect(curlOutput.querySelector('[data-token="url"]')?.textContent).toBe(
+      "https://api.example.com/protected"
+    )
+  })
+
   test("clears the outputs when both credentials are empty", () => {
     render(<BasicAuthGeneratorClient messages={messages} />)
 

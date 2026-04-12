@@ -149,6 +149,7 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
               ariaLabel={messages.authorizationHeaderLabel}
               value={authHeader}
               className="min-h-24"
+              variant="auth-header"
             />
           </ToolPanelCardContent>
           <ToolPanelCardFooter className="justify-end border-t">
@@ -170,6 +171,7 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
               ariaLabel={messages.curlExampleLabel}
               value={curlCommand}
               className="min-h-28"
+              variant="curl-command"
             />
           </ToolPanelCardContent>
           <ToolPanelCardFooter className="justify-end border-t">
