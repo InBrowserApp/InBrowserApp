@@ -14,13 +14,13 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Label } from "@workspace/ui/components/ui/label"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { RefreshCcw } from "@workspace/ui/icons"
 
 import {
   createBasicAuthCurlCommand,
   createBasicAuthHeader,
 } from "./core/basic-auth"
+import { ReadOnlyOutput } from "./components/read-only-output"
 
 type BasicAuthGeneratorMessages = Readonly<{
   meta: {
@@ -53,8 +53,6 @@ const DEFAULT_URL = "https://api.example.com/protected"
 function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
   const usernameId = useId()
   const passwordId = useId()
-  const headerId = useId()
-  const curlId = useId()
   const [username, setUsername] = useState(DEFAULT_USERNAME)
   const [password, setPassword] = useState(DEFAULT_PASSWORD)
 
@@ -147,15 +145,10 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
             <CardTitle>{messages.authorizationHeaderLabel}</CardTitle>
           </CardHeader>
           <ToolPanelCardContent>
-            <Textarea
-              id={headerId}
-              name="authorization-header"
-              readOnly
-              rows={3}
-              aria-label={messages.authorizationHeaderLabel}
+            <ReadOnlyOutput
+              ariaLabel={messages.authorizationHeaderLabel}
               value={authHeader}
-              className="min-h-24 resize-y font-mono text-sm"
-              spellCheck={false}
+              className="min-h-24"
             />
           </ToolPanelCardContent>
           <ToolPanelCardFooter className="justify-end border-t">
@@ -173,15 +166,10 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
             <CardTitle>{messages.curlExampleLabel}</CardTitle>
           </CardHeader>
           <ToolPanelCardContent>
-            <Textarea
-              id={curlId}
-              name="curl-example"
-              readOnly
-              rows={4}
-              aria-label={messages.curlExampleLabel}
+            <ReadOnlyOutput
+              ariaLabel={messages.curlExampleLabel}
               value={curlCommand}
-              className="min-h-28 resize-y font-mono text-sm"
-              spellCheck={false}
+              className="min-h-28"
             />
           </ToolPanelCardContent>
           <ToolPanelCardFooter className="justify-end border-t">

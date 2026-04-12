@@ -35,8 +35,7 @@ describe("BasicAuthGeneratorClient", () => {
       "open sesame"
     )
     expect(
-      (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
-        .value
+      screen.getByRole("region", { name: "Authorization Header" }).textContent
     ).toBe("Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==")
   })
 
@@ -51,11 +50,10 @@ describe("BasicAuthGeneratorClient", () => {
     })
 
     expect(
-      (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
-        .value
+      screen.getByRole("region", { name: "Authorization Header" }).textContent
     ).toBe("Basic ZGVtbzpzM2NyM3Q=")
     expect(
-      (screen.getByLabelText("cURL Example") as HTMLTextAreaElement).value
+      screen.getByRole("region", { name: "cURL Example" }).textContent
     ).toBe(
       'curl -H "Authorization: Basic ZGVtbzpzM2NyM3Q=" https://api.example.com/protected'
     )
@@ -72,11 +70,10 @@ describe("BasicAuthGeneratorClient", () => {
     })
 
     expect(
-      (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
-        .value
+      screen.getByRole("region", { name: "Authorization Header" }).textContent
     ).toBe("")
     expect(
-      (screen.getByLabelText("cURL Example") as HTMLTextAreaElement).value
+      screen.getByRole("region", { name: "cURL Example" }).textContent
     ).toBe("")
   })
 
@@ -109,8 +106,7 @@ describe("BasicAuthGeneratorClient", () => {
       "value"
     )
     expect(
-      (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
-        .value
+      screen.getByRole("region", { name: "Authorization Header" }).textContent
     ).toBe("Basic c3RvcmVkOnZhbHVl")
   })
 })
