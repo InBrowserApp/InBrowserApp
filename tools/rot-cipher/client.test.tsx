@@ -29,6 +29,9 @@ describe("RotCipherClient", () => {
   test("renders with the default rot13 example", () => {
     render(<RotCipherClient messages={messages} />)
 
+    expect(screen.getByText("Encrypt and decrypt text.")).toBeTruthy()
+    expect(screen.getByText("Enter text...")).toBeTruthy()
+    expect(screen.getByText("Converted text...")).toBeTruthy()
     expect(
       (screen.getByLabelText("Input Text") as HTMLTextAreaElement).value
     ).toBe("Hello World! 12345")

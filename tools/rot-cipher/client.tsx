@@ -5,6 +5,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -140,6 +141,7 @@ function RotCipherClient({ messages }: RotCipherClientProps) {
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.rotTypeLabel}</CardTitle>
+          <CardDescription>{messages.meta.description}</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
           <ToggleGroup
@@ -172,6 +174,7 @@ function RotCipherClient({ messages }: RotCipherClientProps) {
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.inputLabel}</CardTitle>
+            <CardDescription>{messages.inputPlaceholder}</CardDescription>
           </CardHeader>
           <CardContent>
             <Textarea
@@ -208,6 +211,7 @@ function RotCipherClient({ messages }: RotCipherClientProps) {
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.outputLabel}</CardTitle>
+            <CardDescription>{messages.outputPlaceholder}</CardDescription>
           </CardHeader>
           <CardContent>
             <Textarea
