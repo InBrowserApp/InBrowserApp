@@ -12,6 +12,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { FieldError } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { Clock3 } from "@workspace/ui/icons"
 import { Label } from "@workspace/ui/components/ui/label"
 
 import type { BaseTimeCardProps } from "../client/types"
@@ -87,6 +88,7 @@ function BaseTimeCard({
           variant="ghost"
         />
         <Button type="button" variant="ghost" size="sm" onClick={onSetNow}>
+          <Clock3 data-icon="inline-start" />
           {messages.nowLabel}
         </Button>
       </ToolPanelCardFooter>

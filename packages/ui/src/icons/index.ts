@@ -5,6 +5,7 @@ export {
   Binary,
   Braces,
   Check,
+  Clock3,
   Copy,
   Download,
   FileJson2,
