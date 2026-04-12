@@ -1,0 +1,4 @@
+{
+  "name": "Encodeur/Décodeur de Composants d'URL",
+  "description": "Encode et décode les composants d'URL avec l'encodage par pourcentage. Convertit les caractères spéciaux au format sûr pour les URL et vice versa pour le développement web et l'utilisation d'API"
+}

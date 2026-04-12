@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "نوع ROT",
+  "inputLabel": "نص الإدخال",
+  "inputPlaceholder": "أدخل النص للتشفير/فك التشفير...",
+  "outputLabel": "نص الإخراج",
+  "outputPlaceholder": "سيظهر النص المشفر/المفكك هنا...",
+  "rot13Description": "الحروف فقط (A-Z, a-z)",
+  "rot5Description": "الأرقام فقط (0-9)",
+  "rot18Description": "الحروف + الأرقام (ROT13 + ROT5)",
+  "rot47Description": "جميع أحرف ASCII القابلة للطباعة (33-126)",
+  "copyInputLabel": "نسخ نص الإدخال",
+  "copyOutputLabel": "نسخ نص الإخراج",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}

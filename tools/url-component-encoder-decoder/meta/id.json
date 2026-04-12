@@ -1,0 +1,4 @@
+{
+  "name": "Encoder/Decoder Komponen URL",
+  "description": "Encode dan decode komponen URL dengan encoding persen. Konversi karakter khusus ke format aman URL dan sebaliknya untuk pengembangan web dan penggunaan API"
+}

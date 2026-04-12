@@ -1,0 +1,4 @@
+{
+  "name": "ISBN 验证器",
+  "description": "验证 ISBN-10/ISBN-13，检查校验位并提供转换结果"
+}

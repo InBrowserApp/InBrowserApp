@@ -248,6 +248,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "current-network-time",
+    category: "network",
+    icon: "network",
+    tags: ["time", "clock", "timezone", "network"],
+    locales: {
+      ar: {
+        name: "الوقت الشبكي الحالي",
+        description:
+          "احصل على الوقت الشبكي الحالي وقارنه مع وقت النظام المحلي. اعرض الوقت الشبكي الدقيق واكتشف أي اختلافات زمنية.",
+      },
+      de: {
+        name: "Aktuelle Netzwerkzeit",
+        description:
+          "Ermitteln Sie die aktuelle Netzwerkzeit und vergleichen Sie sie mit Ihrer lokalen Systemzeit. Zeigen Sie die genaue Netzwerkzeit an und erkennen Sie Zeitunterschiede.",
+      },
+      en: {
+        name: "Current Network Time",
+        description:
+          "Get the current network time and compare it with your local system time. View accurate network time and detect any time differences.",
+      },
+      es: {
+        name: "Hora de Red Actual",
+        description:
+          "Obtén la hora actual de la red y compárala con tu hora local del sistema. Ve la hora de red precisa y detecta cualquier diferencia horaria.",
+      },
+      fr: {
+        name: "Heure Réseau Actuelle",
+        description:
+          "Obtenez l'heure réseau actuelle et comparez-la avec votre heure système locale. Visualisez l'heure réseau précise et détectez toute différence horaire.",
+      },
+      he: {
+        name: "זמן הרשת הנוכחי",
+        description:
+          "קבל את זמן הרשת הנוכחי והשווה אותו לזמן המערכת המקומי שלך. הצג זמן רשת מדויק וזהה הבדלי זמן.",
+      },
+      hi: {
+        name: "वर्तमान नेटवर्क समय",
+        description:
+          "वर्तमान नेटवर्क समय प्राप्त करें और इसे अपने स्थानीय सिस्टम समय से तुलना करें। सटीक नेटवर्क समय देखें और किसी भी समय अंतर का पता लगाएं।",
+      },
+      id: {
+        name: "Waktu Jaringan Saat Ini",
+        description:
+          "Dapatkan waktu jaringan saat ini dan bandingkan dengan waktu sistem lokal Anda. Lihat waktu jaringan yang akurat dan deteksi perbedaan waktu.",
+      },
+      it: {
+        name: "Ora di Rete Corrente",
+        description:
+          "Ottieni l'ora di rete corrente e confrontala con l'ora locale del sistema. Visualizza l'ora di rete precisa e rileva eventuali differenze temporali.",
+      },
+      ja: {
+        name: "現在のネットワーク時刻",
+        description:
+          "現在のネットワーク時刻を取得し、ローカルシステム時刻と比較します。正確なネットワーク時刻を表示し、時刻の差異を検出します。",
+      },
+      ko: {
+        name: "현재 네트워크 시간",
+        description:
+          "현재 네트워크 시간을 가져와 로컬 시스템 시간과 비교합니다. 정확한 네트워크 시간을 확인하고 시간 차이를 감지하세요.",
+      },
+      ms: {
+        name: "Masa Rangkaian Semasa",
+        description:
+          "Dapatkan masa rangkaian semasa dan bandingkan dengan masa sistem tempatan anda. Lihat masa rangkaian yang tepat dan kesan sebarang perbezaan masa.",
+      },
+      nl: {
+        name: "Huidige Netwerktijd",
+        description:
+          "Verkrijg de huidige netwerktijd en vergelijk deze met uw lokale systeemtijd. Bekijk de nauwkeurige netwerktijd en detecteer eventuele tijdverschillen.",
+      },
+      no: {
+        name: "Gjeldende Nettverkstid",
+        description:
+          "Få gjeldende nettverkstid og sammenlign den med din lokale systemtid. Vis nøyaktig nettverkstid og oppdag eventuelle tidsforskjeller.",
+      },
+      pl: {
+        name: "Aktualny Czas Sieciowy",
+        description:
+          "Pobierz aktualny czas sieciowy i porównaj go z lokalnym czasem systemowym. Wyświetl dokładny czas sieciowy i wykryj wszelkie różnice czasowe.",
+      },
+      pt: {
+        name: "Hora de Rede Atual",
+        description:
+          "Obtenha a hora de rede atual e compare-a com sua hora local do sistema. Visualize a hora de rede precisa e detecte qualquer diferença horária.",
+      },
+      ru: {
+        name: "Текущее Сетевое Время",
+        description:
+          "Получите текущее сетевое время и сравните его с вашим локальным системным временем. Просматривайте точное сетевое время и обнаруживайте любые временные различия.",
+      },
+      sv: {
+        name: "Aktuell Nätverkstid",
+        description:
+          "Hämta aktuell nätverkstid och jämför den med din lokala systemtid. Visa exakt nätverkstid och upptäck eventuella tidsskillnader.",
+      },
+      th: {
+        name: "เวลาเครือข่ายปัจจุบัน",
+        description:
+          "รับเวลาเครือข่ายปัจจุบันและเปรียบเทียบกับเวลาระบบในเครื่องของคุณ ดูเวลาเครือข่ายที่แม่นยำและตรวจจับความแตกต่างของเวลา",
+      },
+      tr: {
+        name: "Mevcut Ağ Saati",
+        description:
+          "Mevcut ağ saatini alın ve yerel sistem saatinizle karşılaştırın. Doğru ağ saatini görüntüleyin ve herhangi bir zaman farkını tespit edin.",
+      },
+      vi: {
+        name: "Thời Gian Mạng Hiện Tại",
+        description:
+          "Lấy thời gian mạng hiện tại và so sánh với thời gian hệ thống cục bộ của bạn. Xem thời gian mạng chính xác và phát hiện bất kỳ sự khác biệt thời gian nào.",
+      },
+      "zh-CN": {
+        name: "当前网络时间",
+        description:
+          "从网络获取当前时间，并与您的本地系统时间进行比较。查看准确的网络时间并检测任何时间差异。",
+      },
+      "zh-TW": {
+        name: "目前網路時間",
+        description:
+          "從網路取得目前時間，並與您的本機系統時間進行比較。檢視準確的網路時間並偵測任何時間差異。",
+      },
+    },
+  },
+  {
     slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",
@@ -597,6 +720,116 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "圖片尺寸調整器",
         description:
           "直接在瀏覽器中調整圖片尺寸,並將結果匯出為 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  {
+    slug: "isbn-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["isbn", "validator", "checksum", "book", "publishing"],
+    locales: {
+      ar: {
+        name: "مدقق ISBN",
+        description: "تحقق من ISBN-10/ISBN-13 وأرقام التحقق ونتائج التحويل",
+      },
+      de: {
+        name: "ISBN-Validator",
+        description:
+          "Prüfen Sie ISBN-10/ISBN-13, Prüfziffern und Konvertierungen",
+      },
+      en: {
+        name: "ISBN Validator",
+        description:
+          "Validate ISBN-10/ISBN-13 numbers, check digits, and conversions",
+      },
+      es: {
+        name: "Validador de ISBN",
+        description:
+          "Valida ISBN-10/ISBN-13, el dígito de control y las conversiones",
+      },
+      fr: {
+        name: "Validateur ISBN",
+        description:
+          "Validez les ISBN-10/ISBN-13, les chiffres de contrôle et les conversions",
+      },
+      he: {
+        name: "מאמת ISBN",
+        description: "אמת ISBN-10/ISBN-13, ספרת ביקורת והמרות",
+      },
+      hi: {
+        name: "ISBN सत्यापनकर्ता",
+        description: "ISBN-10/ISBN-13 सत्यापित करें, चेक अंक और रूपांतरण देखें",
+      },
+      id: {
+        name: "Validator ISBN",
+        description: "Validasi ISBN-10/ISBN-13, digit pemeriksa, dan konversi",
+      },
+      it: {
+        name: "Validatore ISBN",
+        description: "Valida ISBN-10/ISBN-13, cifra di controllo e conversioni",
+      },
+      ja: {
+        name: "ISBN 検証",
+        description:
+          "ISBN-10/ISBN-13 を検証し、チェックディジットと変換結果を確認します",
+      },
+      ko: {
+        name: "ISBN 검증기",
+        description:
+          "ISBN-10/ISBN-13을 검증하고 체크 디지트와 변환 결과를 확인합니다",
+      },
+      ms: {
+        name: "Pengesah ISBN",
+        description: "Sahkan ISBN-10/ISBN-13, digit semakan dan penukaran",
+      },
+      nl: {
+        name: "ISBN-validator",
+        description: "Valideer ISBN-10/ISBN-13, controlecijfers en conversies",
+      },
+      no: {
+        name: "ISBN-validator",
+        description:
+          "Valider ISBN-10/ISBN-13, kontrollsiffer og konverteringer",
+      },
+      pl: {
+        name: "Walidator ISBN",
+        description: "Waliduj ISBN-10/ISBN-13, cyfry kontrolne i konwersje",
+      },
+      pt: {
+        name: "Validador de ISBN",
+        description: "Valide ISBN-10/ISBN-13, dígito verificador e conversões",
+      },
+      ru: {
+        name: "Валидатор ISBN",
+        description:
+          "Проверяйте ISBN-10/ISBN-13, контрольные цифры и результаты конвертации",
+      },
+      sv: {
+        name: "ISBN-validator",
+        description:
+          "Validera ISBN-10/ISBN-13, kontrollsiffror och konverteringar",
+      },
+      th: {
+        name: "ตัวตรวจสอบ ISBN",
+        description: "ตรวจสอบ ISBN-10/ISBN-13 เลขตรวจสอบ และการแปลง",
+      },
+      tr: {
+        name: "ISBN Doğrulayıcı",
+        description:
+          "ISBN-10/ISBN-13 doğrulama, kontrol basamağı ve dönüşümler",
+      },
+      vi: {
+        name: "Trình xác thực ISBN",
+        description: "Xác thực ISBN-10/ISBN-13, chữ số kiểm tra và chuyển đổi",
+      },
+      "zh-CN": {
+        name: "ISBN 验证器",
+        description: "验证 ISBN-10/ISBN-13，检查校验位并提供转换结果",
+      },
+      "zh-TW": {
+        name: "ISBN 驗證器",
+        description: "驗證 ISBN-10/ISBN-13，檢查校驗位並提供轉換結果",
       },
     },
   },
@@ -1697,6 +1930,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "nanoid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "nanoid",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "url",
+    ],
+    locales: {
+      ar: {
+        name: "مولد NanoID",
+        description:
+          "أنشئ NanoID آمنة لعناوين URL في المتصفح مع طول وحروف أبجدية مسبقة قابلة للتخصيص.",
+      },
+      de: {
+        name: "NanoID-Generator",
+        description:
+          "Erzeuge URL-sichere NanoIDs im Browser mit anpassbarer Länge und Alphabet-Voreinstellungen.",
+      },
+      en: {
+        name: "NanoID Generator",
+        description:
+          "Generate URL-safe NanoIDs in the browser with custom length and alphabet presets.",
+      },
+      es: {
+        name: "Generador de NanoID",
+        description:
+          "Genera NanoID seguros para URL en el navegador con longitud y alfabetos preestablecidos personalizables.",
+      },
+      fr: {
+        name: "Générateur de NanoID",
+        description:
+          "Générez des NanoID compatibles URL dans le navigateur avec une longueur et des alphabets préréglés personnalisables.",
+      },
+      he: {
+        name: "מחולל NanoID",
+        description:
+          "צור NanoID בטוחות ל-URL בדפדפן עם אורך וקבוצות תווים מוגדרות מראש.",
+      },
+      hi: {
+        name: "NanoID जनरेटर",
+        description:
+          "ब्राउज़र में URL-सुरक्षित NanoID बनाएँ, कस्टम लंबाई और वर्णमाला प्रीसेट के साथ।",
+      },
+      id: {
+        name: "Generator NanoID",
+        description:
+          "Hasilkan NanoID aman untuk URL di browser dengan panjang dan preset alfabet yang dapat disesuaikan.",
+      },
+      it: {
+        name: "Generatore NanoID",
+        description:
+          "Genera NanoID compatibili con URL nel browser con lunghezza e alfabeti predefiniti personalizzabili.",
+      },
+      ja: {
+        name: "NanoID ジェネレーター",
+        description:
+          "ブラウザ内で URL 安全な NanoID を生成。長さと文字集合のプリセットをカスタマイズできます。",
+      },
+      ko: {
+        name: "NanoID 생성기",
+        description:
+          "브라우저에서 URL 안전한 NanoID를 생성하고 길이와 알파벳 프리셋을 사용자 지정합니다.",
+      },
+      ms: {
+        name: "Penjana NanoID",
+        description:
+          "Jana NanoID selamat URL dalam pelayar dengan panjang dan pratetap abjad tersuai.",
+      },
+      nl: {
+        name: "NanoID-generator",
+        description:
+          "Genereer URL-veilige NanoID's in de browser met aanpasbare lengte en alfabetpresets.",
+      },
+      no: {
+        name: "NanoID-generator",
+        description:
+          "Generer URL-sikre NanoID-er i nettleseren med tilpasset lengde og alfabetforhåndsinnstillinger.",
+      },
+      pl: {
+        name: "Generator NanoID",
+        description:
+          "Generuj NanoID bezpieczne dla URL w przeglądarce z niestandardową długością i zestawami znaków.",
+      },
+      pt: {
+        name: "Gerador de NanoID",
+        description:
+          "Gere NanoIDs seguros para URL no navegador com comprimento e alfabetos predefinidos personalizáveis.",
+      },
+      ru: {
+        name: "Генератор NanoID",
+        description:
+          "Создавайте безопасные для URL NanoID в браузере с настраиваемой длиной и наборами символов.",
+      },
+      sv: {
+        name: "NanoID-generator",
+        description:
+          "Skapa URL-säkra NanoID i webbläsaren med anpassad längd och alfabetförinställningar.",
+      },
+      th: {
+        name: "ตัวสร้าง NanoID",
+        description:
+          "สร้าง NanoID ที่ปลอดภัยสำหรับ URL ในเบราว์เซอร์ พร้อมความยาวและชุดอักขระที่ปรับได้.",
+      },
+      tr: {
+        name: "NanoID Oluşturucu",
+        description:
+          "Tarayıcıda URL-güvenli NanoID'ler üretin; uzunluk ve alfabe ön ayarlarını özelleştirin.",
+      },
+      vi: {
+        name: "Trình tạo NanoID",
+        description:
+          "Tạo NanoID an toàn cho URL trong trình duyệt với độ dài và bảng chữ cái đặt trước tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "NanoID 生成器",
+        description:
+          "在浏览器内生成 URL 安全的 NanoID，支持自定义长度和字符集预设。",
+      },
+      "zh-TW": {
+        name: "NanoID 產生器",
+        description:
+          "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
+  {
     slug: "openapi-to-typescript-converter",
     category: "developer",
     icon: "braces",
@@ -1954,6 +2319,252 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "rot-cipher",
+    category: "web",
+    icon: "lock",
+    tags: ["cipher", "rot13", "rot47", "encryption", "decryption", "text"],
+    locales: {
+      ar: {
+        name: "تشفير ROT تشفير وفك التشفير",
+        description:
+          "تشفير وفك تشفير النص باستخدام خوارزميات ROT13 و ROT5 و ROT18 و ROT47. تشفير ذاتي الانعكاس للحروف والأرقام وأحرف ASCII",
+      },
+      de: {
+        name: "ROT-Chiffre Ver- & Entschlüsselung",
+        description:
+          "Ver- und entschlüsseln Sie Text mit ROT13, ROT5, ROT18 und ROT47 Chiffrier-Algorithmen. Selbstumkehrende Verschlüsselung für Buchstaben, Ziffern und ASCII-Zeichen",
+      },
+      en: {
+        name: "ROT Cipher Encrypt & Decrypt",
+        description:
+          "Encrypt and decrypt text using ROT13, ROT5, ROT18, and ROT47 cipher algorithms. Self-reversing encryption for letters, digits, and ASCII characters",
+      },
+      es: {
+        name: "Cifrado ROT Encriptar & Desencriptar",
+        description:
+          "Encripta y desencripta texto usando los algoritmos de cifrado ROT13, ROT5, ROT18 y ROT47. Encriptación autorreversible para letras, dígitos y caracteres ASCII",
+      },
+      fr: {
+        name: "Chiffrement ROT Crypter & Décrypter",
+        description:
+          "Chiffrez et déchiffrez du texte avec les algorithmes ROT13, ROT5, ROT18 et ROT47. Chiffrement auto-réversible pour les lettres, chiffres et caractères ASCII",
+      },
+      he: {
+        name: "צופן ROT הצפנה ופענוח",
+        description:
+          "הצפן ופענח טקסט באמצעות אלגוריתמי צופן ROT13, ROT5, ROT18 ו-ROT47. הצפנה הפיכה עצמית לאותיות, ספרות ותווי ASCII",
+      },
+      hi: {
+        name: "ROT सिफर एन्क्रिप्ट और डिक्रिप्ट",
+        description:
+          "ROT13, ROT5, ROT18 और ROT47 सिफर एल्गोरिदम का उपयोग करके टेक्स्ट को एन्क्रिप्ट और डिक्रिप्ट करें। अक्षरों, अंकों और ASCII वर्णों के लिए स्व-प्रतिवर्ती एन्क्रिप्शन",
+      },
+      id: {
+        name: "Sandi ROT Enkripsi & Dekripsi",
+        description:
+          "Enkripsi dan dekripsi teks menggunakan algoritma sandi ROT13, ROT5, ROT18, dan ROT47. Enkripsi yang dapat membalik diri sendiri untuk huruf, angka, dan karakter ASCII",
+      },
+      it: {
+        name: "Cifratura ROT Cripta & Decripta",
+        description:
+          "Cripta e decripta il testo usando gli algoritmi di cifratura ROT13, ROT5, ROT18 e ROT47. Crittografia auto-reversibile per lettere, cifre e caratteri ASCII",
+      },
+      ja: {
+        name: "ROT 暗号 暗号化 & 復号化",
+        description:
+          "ROT13、ROT5、ROT18、ROT47 暗号アルゴリズムでテキストを暗号化・復号化。文字、数字、ASCII 文字の自己可逆暗号化",
+      },
+      ko: {
+        name: "ROT 암호 암호화 & 복호화",
+        description:
+          "ROT13, ROT5, ROT18, ROT47 암호 알고리즘으로 텍스트 암호화 및 복호화. 문자, 숫자, ASCII 문자를 위한 자기 가역 암호화",
+      },
+      ms: {
+        name: "Sifer ROT Sulitkan & Nyahsulit",
+        description:
+          "Sulitkan dan nyahsulit teks menggunakan algoritma sifer ROT13, ROT5, ROT18 dan ROT47. Penyulitan boleh balik kendiri untuk huruf, digit dan aksara ASCII",
+      },
+      nl: {
+        name: "ROT-cijfer Versleutelen & Ontsleutelen",
+        description:
+          "Versleutel en ontsleutel tekst met ROT13, ROT5, ROT18 en ROT47 versleutelingsalgoritmen. Zelf-omkeerbare versleuteling voor letters, cijfers en ASCII-tekens",
+      },
+      no: {
+        name: "ROT-siffer Krypter & Dekrypter",
+        description:
+          "Krypter og dekrypter tekst med ROT13, ROT5, ROT18 og ROT47 sifferalgoritmer. Selvreverserende kryptering for bokstaver, siffer og ASCII-tegn",
+      },
+      pl: {
+        name: "Szyfr ROT Szyfrowanie i Deszyfrowanie",
+        description:
+          "Szyfruj i deszyfruj tekst za pomocą algorytmów ROT13, ROT5, ROT18 i ROT47. Samoodwracalne szyfrowanie dla liter, cyfr i znaków ASCII",
+      },
+      pt: {
+        name: "Cifra ROT Encriptar & Desencriptar",
+        description:
+          "Encripte e desencripte texto usando os algoritmos de cifra ROT13, ROT5, ROT18 e ROT47. Encriptação auto-reversível para letras, dígitos e caracteres ASCII",
+      },
+      ru: {
+        name: "ROT-шифр Шифрование & Дешифрование",
+        description:
+          "Шифруйте и дешифруйте текст с помощью алгоритмов ROT13, ROT5, ROT18 и ROT47. Самообратимое шифрование для букв, цифр и символов ASCII",
+      },
+      sv: {
+        name: "ROT-chiffer Kryptera & Dekryptera",
+        description:
+          "Kryptera och dekryptera text med ROT13, ROT5, ROT18 och ROT47 chifferalgoritmer. Självomvändbar kryptering för bokstäver, siffror och ASCII-tecken",
+      },
+      th: {
+        name: "รหัส ROT เข้ารหัส & ถอดรหัส",
+        description:
+          "เข้ารหัสและถอดรหัสข้อความด้วยอัลกอริทึม ROT13, ROT5, ROT18 และ ROT47 การเข้ารหัสแบบย้อนกลับได้สำหรับตัวอักษร ตัวเลข และอักขระ ASCII",
+      },
+      tr: {
+        name: "ROT Şifre Şifreleme & Şifre Çözme",
+        description:
+          "ROT13, ROT5, ROT18 ve ROT47 şifre algoritmaları kullanarak metni şifreleyin ve şifresini çözün. Harfler, rakamlar ve ASCII karakterler için kendinden tersine çevrilebilir şifreleme",
+      },
+      vi: {
+        name: "Mã hóa ROT Mã hóa & Giải mã",
+        description:
+          "Mã hóa và giải mã văn bản bằng các thuật toán mã hóa ROT13, ROT5, ROT18 và ROT47. Mã hóa tự đảo ngược cho chữ cái, chữ số và ký tự ASCII",
+      },
+      "zh-CN": {
+        name: "ROT 密码加密 & 解密",
+        description:
+          "使用 ROT13、ROT5、ROT18 和 ROT47 密码算法加密和解密文本。支持字母、数字和 ASCII 字符的自反加密",
+      },
+      "zh-TW": {
+        name: "ROT 密碼加密 & 解密",
+        description:
+          "使用 ROT13、ROT5、ROT18 和 ROT47 密碼演算法加密和解密文字。支援字母、數字和 ASCII 字元的自反加密",
+      },
+    },
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha256", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-256 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-256 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-256-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-256 Hash Text or File",
+        description:
+          "Generate SHA-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-256 de Texto o Archivo",
+        description:
+          "Genera hash SHA-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-256 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-256 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-256 טקסט או קובץ",
+        description:
+          "צור האש SHA-256 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-256 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-256 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-256 Teks atau File",
+        description:
+          "Buat hash SHA-256 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-256 di Testo o File",
+        description:
+          "Genera hash SHA-256 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-256 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-256ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-256 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-256 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-256 Teks atau Fail",
+        description:
+          "Jana hash SHA-256 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-256-hash tekst of bestand",
+        description:
+          "Genereer SHA-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-256-hash tekst eller fil",
+        description:
+          "Generer SHA-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-256 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-256 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-256 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-256-хеш текста или файла",
+        description:
+          "Генерируйте SHA-256-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-256-hash text eller fil",
+        description:
+          "Generera SHA-256-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-256 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-256 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-256 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-256 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-256 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-256 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-256 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "sql-formatter-and-linter",
     category: "developer",
     icon: "braces",
@@ -2073,6 +2684,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  {
+    slug: "text-statistics",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "text",
+      "statistics",
+      "word",
+      "count",
+      "character",
+      "line",
+      "paragraph",
+    ],
+    locales: {
+      ar: {
+        name: "إحصائيات النص",
+        description:
+          "تحليل النص للحصول على عدد الأحرف والكلمات والأسطر والفقرات والجمل مع تقدير وقت القراءة",
+      },
+      de: {
+        name: "Textstatistik",
+        description:
+          "Analysieren Sie Text, um Zeichen-, Wort-, Zeilen-, Absatz- und Satzzählungen mit Lesezeitschätzungen zu erhalten",
+      },
+      en: {
+        name: "Text Statistics",
+        description:
+          "Turn any draft into a live writing dashboard with multilingual counts, vocabulary signals, structure clues, and reading-time estimates.",
+      },
+      es: {
+        name: "Estadísticas de Texto",
+        description:
+          "Analiza texto para obtener recuentos de caracteres, palabras, líneas, párrafos y oraciones con estimaciones de tiempo de lectura",
+      },
+      fr: {
+        name: "Statistiques de Texte",
+        description:
+          "Analysez le texte pour obtenir le nombre de caractères, mots, lignes, paragraphes et phrases avec des estimations de temps de lecture",
+      },
+      he: {
+        name: "סטטיסטיקת טקסט",
+        description:
+          "נתח טקסט כדי לקבל ספירת תווים, מילים, שורות, פסקאות ומשפטים עם הערכות זמן קריאה",
+      },
+      hi: {
+        name: "टेक्स्ट आँकड़े",
+        description:
+          "पढ़ने के समय के अनुमान के साथ वर्ण, शब्द, पंक्ति, पैराग्राफ और वाक्य गणना प्राप्त करने के लिए टेक्स्ट का विश्लेषण करें",
+      },
+      id: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan jumlah karakter, kata, baris, paragraf, dan kalimat dengan perkiraan waktu baca",
+      },
+      it: {
+        name: "Statistiche del Testo",
+        description:
+          "Analizza il testo per ottenere conteggi di caratteri, parole, righe, paragrafi e frasi con stime del tempo di lettura",
+      },
+      ja: {
+        name: "テキスト統計",
+        description:
+          "テキストを分析して、文字数、単語数、行数、段落数、文数と読書時間の見積もりを取得",
+      },
+      ko: {
+        name: "텍스트 통계",
+        description:
+          "텍스트를 분석하여 문자, 단어, 줄, 단락, 문장 수와 예상 읽기 시간을 확인",
+      },
+      ms: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan kiraan aksara, perkataan, baris, perenggan dan ayat dengan anggaran masa membaca",
+      },
+      nl: {
+        name: "Tekststatistieken",
+        description:
+          "Analyseer tekst om aantallen tekens, woorden, regels, alineas en zinnen te krijgen met leestijdschattingen",
+      },
+      no: {
+        name: "Tekststatistikk",
+        description:
+          "Analyser tekst for å få antall tegn, ord, linjer, avsnitt og setninger med estimert lesetid",
+      },
+      pl: {
+        name: "Statystyki Tekstu",
+        description:
+          "Analizuj tekst, aby uzyskać liczbę znaków, słów, wierszy, akapitów i zdań z szacowanym czasem czytania",
+      },
+      pt: {
+        name: "Estatísticas de Texto",
+        description:
+          "Analise o texto para obter contagens de caracteres, palavras, linhas, parágrafos e frases com estimativas de tempo de leitura",
+      },
+      ru: {
+        name: "Статистика Текста",
+        description:
+          "Анализ текста для подсчёта символов, слов, строк, абзацев и предложений с оценкой времени чтения",
+      },
+      sv: {
+        name: "Textstatistik",
+        description:
+          "Analysera text för att få antal tecken, ord, rader, stycken och meningar med uppskattad lästid",
+      },
+      th: {
+        name: "สถิติข้อความ",
+        description:
+          "วิเคราะห์ข้อความเพื่อรับจำนวนตัวอักษร คำ บรรทัด ย่อหน้า และประโยค พร้อมประมาณเวลาอ่าน",
+      },
+      tr: {
+        name: "Metin İstatistikleri",
+        description:
+          "Okuma süresi tahminleriyle birlikte karakter, kelime, satır, paragraf ve cümle sayılarını almak için metni analiz edin",
+      },
+      vi: {
+        name: "Thống Kê Văn Bản",
+        description:
+          "Phân tích văn bản để đếm ký tự, từ, dòng, đoạn văn và câu cùng với ước tính thời gian đọc",
+      },
+      "zh-CN": {
+        name: "文本统计",
+        description:
+          "把任意草稿变成实时写作分析面板，查看多语言计数、词汇信号、结构线索和阅读时长估算。",
+      },
+      "zh-TW": {
+        name: "文字統計",
+        description:
+          "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
       },
     },
   },
@@ -2319,6 +3061,250 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    category: "text",
+    icon: "search",
+    tags: ["unicode", "text", "invisible", "bidi", "whitespace"],
+    locales: {
+      ar: {
+        name: "أداة فحص الأحرف غير المرئية في Unicode",
+        description:
+          "تكشف أحرف العرض الصفري وعناصر التحكم ثنائية الاتجاه والمسافات الخاصة وتصدر نسخة منظفة.",
+      },
+      de: {
+        name: "Unicode-Unsichtbarzeichen-Prüfer",
+        description:
+          "Erkennt Nullbreite-, Bidi-Steuer- und Sonderleerzeichen und exportiert eine bereinigte Version.",
+      },
+      en: {
+        name: "Unicode Invisible Character Checker",
+        description:
+          "Detect zero-width, bidi control, and special whitespace characters, then export a cleaned version.",
+      },
+      es: {
+        name: "Comprobador de caracteres invisibles Unicode",
+        description:
+          "Detecta caracteres de ancho cero, control bidi y espacios especiales, y exporta una versión limpia.",
+      },
+      fr: {
+        name: "Vérificateur de caractères invisibles Unicode",
+        description:
+          "Détecte les caractères à largeur nulle, les contrôles bidi et les espaces spéciaux, puis exporte une version nettoyée.",
+      },
+      he: {
+        name: "בודק תווים בלתי נראים של Unicode",
+        description:
+          "מזהה תווים ברוחב אפס, בקרות bidi ורווחים מיוחדים, ומייצא גרסה נקייה.",
+      },
+      hi: {
+        name: "यूनिकोड अदृश्य वर्ण जाँचक",
+        description:
+          "शून्य-चौड़ाई, बिडी नियंत्रण और विशेष रिक्त वर्णों का पता लगाता है और साफ़ संस्करण निर्यात करता है।",
+      },
+      id: {
+        name: "Pemeriksa karakter tak terlihat Unicode",
+        description:
+          "Mendeteksi karakter lebar nol, kontrol bidi, dan spasi khusus, lalu mengekspor versi yang dibersihkan.",
+      },
+      it: {
+        name: "Verificatore di caratteri invisibili Unicode",
+        description:
+          "Rileva caratteri a larghezza zero, controlli bidi e spazi speciali ed esporta una versione pulita.",
+      },
+      ja: {
+        name: "Unicode不可視文字チェッカー",
+        description:
+          "ゼロ幅、双方向制御、特殊空白文字を検出し、クリーンなバージョンをエクスポートします。",
+      },
+      ko: {
+        name: "유니코드 보이지 않는 문자 검사기",
+        description:
+          "제로 폭, 양방향 제어 및 특수 공백 문자를 감지하고 정리된 버전을 내보냅니다.",
+      },
+      ms: {
+        name: "Pemeriksa aksara tidak kelihatan Unicode",
+        description:
+          "Mengesan aksara lebar sifar, kawalan bidi dan ruang khas, dan mengeksport versi yang dibersihkan.",
+      },
+      nl: {
+        name: "Unicode onzichtbare-tekenscontrole",
+        description:
+          "Detecteert nulbreedte-, bidi-besturing- en speciale spatie-tekens en exporteert een opgeschoonde versie.",
+      },
+      no: {
+        name: "Unicode-kontroll av usynlige tegn",
+        description:
+          "Oppdager nullbredde-, bidi-kontroll- og spesialmellomromstegn og eksporterer en renset versjon.",
+      },
+      pl: {
+        name: "Sprawdzanie niewidocznych znaków Unicode",
+        description:
+          "Wykrywa znaki o zerowej szerokości, sterowanie bidi i specjalne spacje oraz eksportuje oczyszczoną wersję.",
+      },
+      pt: {
+        name: "Verificador de caracteres invisíveis Unicode",
+        description:
+          "Detecta caracteres de largura zero, controles bidi e espaços especiais e exporta uma versão limpa.",
+      },
+      ru: {
+        name: "Проверка невидимых символов Unicode",
+        description:
+          "Обнаруживает символы нулевой ширины, управляющие bidi и специальные пробелы и экспортирует очищенную версию.",
+      },
+      sv: {
+        name: "Unicode osynliga tecken-kontroll",
+        description:
+          "Upptäcker nollbredds-, bidi-kontroll- och specialblankstegstecken och exporterar en rensad version.",
+      },
+      th: {
+        name: "ตัวตรวจสอบอักขระที่มองไม่เห็นของ Unicode",
+        description:
+          "ตรวจจับอักขระกว้างศูนย์ การควบคุมแบบ bidi และช่องว่างพิเศษ แล้วส่งออกเวอร์ชันที่ทำความสะอาดแล้ว",
+      },
+      tr: {
+        name: "Unicode Görünmez Karakter Denetleyici",
+        description:
+          "Sıfır genişlikli, bidi kontrol ve özel boşluk karakterlerini algılar ve temizlenmiş sürümü dışa aktarır.",
+      },
+      vi: {
+        name: "Trình kiểm tra ký tự ẩn Unicode",
+        description:
+          "Phát hiện ký tự độ rộng bằng 0, điều khiển bidi và khoảng trắng đặc biệt, rồi xuất phiên bản đã làm sạch.",
+      },
+      "zh-CN": {
+        name: "Unicode 不可见字符检查",
+        description: "检测零宽、双向控制和特殊空白字符，并导出清理后的版本。",
+      },
+      "zh-TW": {
+        name: "Unicode 不可見字元檢查",
+        description: "偵測零寬、雙向控制與特殊空白字元，並匯出清理後的版本。",
+      },
+    },
+  },
+  {
+    slug: "url-component-encoder-decoder",
+    category: "web",
+    icon: "globe",
+    tags: ["url", "encoding", "decoding", "percent", "uri", "text"],
+    locales: {
+      ar: {
+        name: "مُرمز/مُفكك تشفير مكونات URL",
+        description:
+          "ترميز وفك تشفير مكونات عناوين URL بالترميز بالنسبة المئوية. تحويل الأحرف الخاصة إلى تنسيق آمن لعناوين URL والعكس لتطوير الويب واستخدام واجهة برمجة التطبيقات",
+      },
+      de: {
+        name: "URL-Komponenten-Encoder/Decoder",
+        description:
+          "Kodiert und dekodiert URL-Komponenten mit Prozent-Kodierung. Konvertiert Sonderzeichen in URL-sicheres Format und umgekehrt für Webentwicklung und API-Nutzung",
+      },
+      en: {
+        name: "URL Component Encoder and Decoder",
+        description:
+          "Encode and decode URL components with percent encoding. Convert special characters to URL-safe format and vice versa for web development and API usage",
+      },
+      es: {
+        name: "Codificador/Decodificador de Componentes URL",
+        description:
+          "Codifica y decodifica componentes de URL con codificación por porcentaje. Convierte caracteres especiales a formato seguro para URL y viceversa para desarrollo web y uso de API",
+      },
+      fr: {
+        name: "Encodeur/Décodeur de Composants d'URL",
+        description:
+          "Encode et décode les composants d'URL avec l'encodage par pourcentage. Convertit les caractères spéciaux au format sûr pour les URL et vice versa pour le développement web et l'utilisation d'API",
+      },
+      he: {
+        name: "מקודד/מפענח רכיבי URL",
+        description:
+          "קידוד ופענוח רכיבי URL עם קידוד אחוזים. המרת תווים מיוחדים לפורמט בטוח עבור URL ולהיפך לפיתוח אתרים ושימוש ב-API",
+      },
+      hi: {
+        name: "URL घटक एनकोडर/डिकोडर",
+        description:
+          "प्रतिशत एन्कोडिंग के साथ URL घटक एन्कोड और डिकोड करें। विशेष वर्णों को URL-सुरक्षित प्रारूप में परिवर्तित करें और वेब डेवलपमेंट और API उपयोग के लिए इसके विपरीत",
+      },
+      id: {
+        name: "Encoder/Decoder Komponen URL",
+        description:
+          "Encode dan decode komponen URL dengan encoding persen. Konversi karakter khusus ke format aman URL dan sebaliknya untuk pengembangan web dan penggunaan API",
+      },
+      it: {
+        name: "Codificatore/Decodificatore Componenti URL",
+        description:
+          "Codifica e decodifica componenti URL con codifica percentuale. Converte caratteri speciali in formato sicuro per URL e viceversa per sviluppo web e utilizzo API",
+      },
+      ja: {
+        name: "URL コンポーネント エンコーダー/デコーダー",
+        description:
+          "パーセントエンコーディングを使用してURLコンポーネントをエンコード・デコードします。特殊文字をURL安全形式に変換し、その逆も行い、Web開発とAPI使用に対応",
+      },
+      ko: {
+        name: "URL 컴포넌트 인코더/디코더",
+        description:
+          "퍼센트 인코딩을 사용하여 URL 컴포넌트를 인코딩 및 디코딩합니다. 특수 문자를 URL 안전 형식으로 변환하고 그 반대로도 변환하여 웹 개발 및 API 사용에 활용",
+      },
+      ms: {
+        name: "Pengekod/Penyahkod Komponen URL",
+        description:
+          "Kod dan nyahkod komponen URL dengan pengekodan peratus. Tukar aksara khas kepada format selamat URL dan sebaliknya untuk pembangunan web dan penggunaan API",
+      },
+      nl: {
+        name: "URL-component encoder/decoder",
+        description:
+          "Codeer en decodeer URL-componenten met procentcodering. Converteer speciale tekens naar URL-veilig formaat en omgekeerd voor webontwikkeling en API-gebruik",
+      },
+      no: {
+        name: "URL-komponent koder/dekoder",
+        description:
+          "Kod og dekod URL-komponenter med prosentkoding. Konverter spesialtegn til URL-trygt format og omvendt for webutvikling og API-bruk",
+      },
+      pl: {
+        name: "Koder/Dekoder Komponentów URL",
+        description:
+          "Koduj i dekoduj komponenty URL za pomocą kodowania procentowego. Konwertuj znaki specjalne na format bezpieczny dla URL-i i odwrotnie dla rozwoju stron internetowych i użycia API",
+      },
+      pt: {
+        name: "Codificador/Decodificador de Componentes URL",
+        description:
+          "Codifica e decodifica componentes de URL com codificação por porcentagem. Converte caracteres especiais para formato seguro de URL e vice-versa para desenvolvimento web e uso de API",
+      },
+      ru: {
+        name: "URL-кодировщик/декодер компонентов",
+        description:
+          "Кодирует и декодирует компоненты URL с процентным кодированием. Преобразует специальные символы в URL-безопасный формат и наоборот для веб-разработки и использования API",
+      },
+      sv: {
+        name: "URL-komponent kodare/avkodare",
+        description:
+          "Koda och avkoda URL-komponenter med procentkodning. Konvertera specialtecken till URL-säkert format och vice versa för webbutveckling och API-användning",
+      },
+      th: {
+        name: "ตัวเข้ารหัส/ถอดรหัสองค์ประกอบ URL",
+        description:
+          "เข้ารหัสและถอดรหัสองค์ประกอบ URL ด้วยการเข้ารหัสแบบเปอร์เซ็นต์ แปลงอักขระพิเศษเป็นรูปแบบที่ปลอดภัยสำหรับ URL และในทางกลับกันสำหรับการพัฒนาเว็บและการใช้ API",
+      },
+      tr: {
+        name: "URL Bileşen Kodlayıcı/Kod Çözücü",
+        description:
+          "Yüzde kodlaması ile URL bileşenlerini kodlayın ve kod çözün. Özel karakterleri URL güvenli formatına dönüştürün ve web geliştirme ve API kullanımı için tersini yapın",
+      },
+      vi: {
+        name: "Bộ mã hóa/giải mã thành phần URL",
+        description:
+          "Mã hóa và giải mã thành phần URL bằng mã hóa phần trăm. Chuyển đổi ký tự đặc biệt sang định dạng an toàn cho URL và ngược lại cho phát triển web và sử dụng API",
+      },
+      "zh-CN": {
+        name: "URL 组件编码器/解码器",
+        description:
+          "使用百分号编码对 URL 组件进行编码和解码。将特殊字符转换为 URL 安全格式，反之亦然，用于 Web 开发和 API 使用",
+      },
+      "zh-TW": {
+        name: "URL 組件編碼器/解碼器",
+        description:
+          "使用百分號編碼對 URL 組件進行編碼和解碼。將特殊字元轉換為 URL 安全格式，反之亦然，用於 Web 開發和 API 使用",
       },
     },
   },
@@ -2940,6 +3926,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "current-network-time": {
+    slug: "current-network-time",
+    category: "network",
+    icon: "network",
+    tags: ["time", "clock", "timezone", "network"],
+    locales: {
+      ar: {
+        name: "الوقت الشبكي الحالي",
+        description:
+          "احصل على الوقت الشبكي الحالي وقارنه مع وقت النظام المحلي. اعرض الوقت الشبكي الدقيق واكتشف أي اختلافات زمنية.",
+      },
+      de: {
+        name: "Aktuelle Netzwerkzeit",
+        description:
+          "Ermitteln Sie die aktuelle Netzwerkzeit und vergleichen Sie sie mit Ihrer lokalen Systemzeit. Zeigen Sie die genaue Netzwerkzeit an und erkennen Sie Zeitunterschiede.",
+      },
+      en: {
+        name: "Current Network Time",
+        description:
+          "Get the current network time and compare it with your local system time. View accurate network time and detect any time differences.",
+      },
+      es: {
+        name: "Hora de Red Actual",
+        description:
+          "Obtén la hora actual de la red y compárala con tu hora local del sistema. Ve la hora de red precisa y detecta cualquier diferencia horaria.",
+      },
+      fr: {
+        name: "Heure Réseau Actuelle",
+        description:
+          "Obtenez l'heure réseau actuelle et comparez-la avec votre heure système locale. Visualisez l'heure réseau précise et détectez toute différence horaire.",
+      },
+      he: {
+        name: "זמן הרשת הנוכחי",
+        description:
+          "קבל את זמן הרשת הנוכחי והשווה אותו לזמן המערכת המקומי שלך. הצג זמן רשת מדויק וזהה הבדלי זמן.",
+      },
+      hi: {
+        name: "वर्तमान नेटवर्क समय",
+        description:
+          "वर्तमान नेटवर्क समय प्राप्त करें और इसे अपने स्थानीय सिस्टम समय से तुलना करें। सटीक नेटवर्क समय देखें और किसी भी समय अंतर का पता लगाएं।",
+      },
+      id: {
+        name: "Waktu Jaringan Saat Ini",
+        description:
+          "Dapatkan waktu jaringan saat ini dan bandingkan dengan waktu sistem lokal Anda. Lihat waktu jaringan yang akurat dan deteksi perbedaan waktu.",
+      },
+      it: {
+        name: "Ora di Rete Corrente",
+        description:
+          "Ottieni l'ora di rete corrente e confrontala con l'ora locale del sistema. Visualizza l'ora di rete precisa e rileva eventuali differenze temporali.",
+      },
+      ja: {
+        name: "現在のネットワーク時刻",
+        description:
+          "現在のネットワーク時刻を取得し、ローカルシステム時刻と比較します。正確なネットワーク時刻を表示し、時刻の差異を検出します。",
+      },
+      ko: {
+        name: "현재 네트워크 시간",
+        description:
+          "현재 네트워크 시간을 가져와 로컬 시스템 시간과 비교합니다. 정확한 네트워크 시간을 확인하고 시간 차이를 감지하세요.",
+      },
+      ms: {
+        name: "Masa Rangkaian Semasa",
+        description:
+          "Dapatkan masa rangkaian semasa dan bandingkan dengan masa sistem tempatan anda. Lihat masa rangkaian yang tepat dan kesan sebarang perbezaan masa.",
+      },
+      nl: {
+        name: "Huidige Netwerktijd",
+        description:
+          "Verkrijg de huidige netwerktijd en vergelijk deze met uw lokale systeemtijd. Bekijk de nauwkeurige netwerktijd en detecteer eventuele tijdverschillen.",
+      },
+      no: {
+        name: "Gjeldende Nettverkstid",
+        description:
+          "Få gjeldende nettverkstid og sammenlign den med din lokale systemtid. Vis nøyaktig nettverkstid og oppdag eventuelle tidsforskjeller.",
+      },
+      pl: {
+        name: "Aktualny Czas Sieciowy",
+        description:
+          "Pobierz aktualny czas sieciowy i porównaj go z lokalnym czasem systemowym. Wyświetl dokładny czas sieciowy i wykryj wszelkie różnice czasowe.",
+      },
+      pt: {
+        name: "Hora de Rede Atual",
+        description:
+          "Obtenha a hora de rede atual e compare-a com sua hora local do sistema. Visualize a hora de rede precisa e detecte qualquer diferença horária.",
+      },
+      ru: {
+        name: "Текущее Сетевое Время",
+        description:
+          "Получите текущее сетевое время и сравните его с вашим локальным системным временем. Просматривайте точное сетевое время и обнаруживайте любые временные различия.",
+      },
+      sv: {
+        name: "Aktuell Nätverkstid",
+        description:
+          "Hämta aktuell nätverkstid och jämför den med din lokala systemtid. Visa exakt nätverkstid och upptäck eventuella tidsskillnader.",
+      },
+      th: {
+        name: "เวลาเครือข่ายปัจจุบัน",
+        description:
+          "รับเวลาเครือข่ายปัจจุบันและเปรียบเทียบกับเวลาระบบในเครื่องของคุณ ดูเวลาเครือข่ายที่แม่นยำและตรวจจับความแตกต่างของเวลา",
+      },
+      tr: {
+        name: "Mevcut Ağ Saati",
+        description:
+          "Mevcut ağ saatini alın ve yerel sistem saatinizle karşılaştırın. Doğru ağ saatini görüntüleyin ve herhangi bir zaman farkını tespit edin.",
+      },
+      vi: {
+        name: "Thời Gian Mạng Hiện Tại",
+        description:
+          "Lấy thời gian mạng hiện tại và so sánh với thời gian hệ thống cục bộ của bạn. Xem thời gian mạng chính xác và phát hiện bất kỳ sự khác biệt thời gian nào.",
+      },
+      "zh-CN": {
+        name: "当前网络时间",
+        description:
+          "从网络获取当前时间，并与您的本地系统时间进行比较。查看准确的网络时间并检测任何时间差异。",
+      },
+      "zh-TW": {
+        name: "目前網路時間",
+        description:
+          "從網路取得目前時間，並與您的本機系統時間進行比較。檢視準確的網路時間並偵測任何時間差異。",
+      },
+    },
+  },
   "docker-run-to-compose-converter": {
     slug: "docker-run-to-compose-converter",
     category: "developer",
@@ -3290,6 +4399,116 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片尺寸調整器",
         description:
           "直接在瀏覽器中調整圖片尺寸,並將結果匯出為 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  "isbn-validator": {
+    slug: "isbn-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["isbn", "validator", "checksum", "book", "publishing"],
+    locales: {
+      ar: {
+        name: "مدقق ISBN",
+        description: "تحقق من ISBN-10/ISBN-13 وأرقام التحقق ونتائج التحويل",
+      },
+      de: {
+        name: "ISBN-Validator",
+        description:
+          "Prüfen Sie ISBN-10/ISBN-13, Prüfziffern und Konvertierungen",
+      },
+      en: {
+        name: "ISBN Validator",
+        description:
+          "Validate ISBN-10/ISBN-13 numbers, check digits, and conversions",
+      },
+      es: {
+        name: "Validador de ISBN",
+        description:
+          "Valida ISBN-10/ISBN-13, el dígito de control y las conversiones",
+      },
+      fr: {
+        name: "Validateur ISBN",
+        description:
+          "Validez les ISBN-10/ISBN-13, les chiffres de contrôle et les conversions",
+      },
+      he: {
+        name: "מאמת ISBN",
+        description: "אמת ISBN-10/ISBN-13, ספרת ביקורת והמרות",
+      },
+      hi: {
+        name: "ISBN सत्यापनकर्ता",
+        description: "ISBN-10/ISBN-13 सत्यापित करें, चेक अंक और रूपांतरण देखें",
+      },
+      id: {
+        name: "Validator ISBN",
+        description: "Validasi ISBN-10/ISBN-13, digit pemeriksa, dan konversi",
+      },
+      it: {
+        name: "Validatore ISBN",
+        description: "Valida ISBN-10/ISBN-13, cifra di controllo e conversioni",
+      },
+      ja: {
+        name: "ISBN 検証",
+        description:
+          "ISBN-10/ISBN-13 を検証し、チェックディジットと変換結果を確認します",
+      },
+      ko: {
+        name: "ISBN 검증기",
+        description:
+          "ISBN-10/ISBN-13을 검증하고 체크 디지트와 변환 결과를 확인합니다",
+      },
+      ms: {
+        name: "Pengesah ISBN",
+        description: "Sahkan ISBN-10/ISBN-13, digit semakan dan penukaran",
+      },
+      nl: {
+        name: "ISBN-validator",
+        description: "Valideer ISBN-10/ISBN-13, controlecijfers en conversies",
+      },
+      no: {
+        name: "ISBN-validator",
+        description:
+          "Valider ISBN-10/ISBN-13, kontrollsiffer og konverteringer",
+      },
+      pl: {
+        name: "Walidator ISBN",
+        description: "Waliduj ISBN-10/ISBN-13, cyfry kontrolne i konwersje",
+      },
+      pt: {
+        name: "Validador de ISBN",
+        description: "Valide ISBN-10/ISBN-13, dígito verificador e conversões",
+      },
+      ru: {
+        name: "Валидатор ISBN",
+        description:
+          "Проверяйте ISBN-10/ISBN-13, контрольные цифры и результаты конвертации",
+      },
+      sv: {
+        name: "ISBN-validator",
+        description:
+          "Validera ISBN-10/ISBN-13, kontrollsiffror och konverteringar",
+      },
+      th: {
+        name: "ตัวตรวจสอบ ISBN",
+        description: "ตรวจสอบ ISBN-10/ISBN-13 เลขตรวจสอบ และการแปลง",
+      },
+      tr: {
+        name: "ISBN Doğrulayıcı",
+        description:
+          "ISBN-10/ISBN-13 doğrulama, kontrol basamağı ve dönüşümler",
+      },
+      vi: {
+        name: "Trình xác thực ISBN",
+        description: "Xác thực ISBN-10/ISBN-13, chữ số kiểm tra và chuyển đổi",
+      },
+      "zh-CN": {
+        name: "ISBN 验证器",
+        description: "验证 ISBN-10/ISBN-13，检查校验位并提供转换结果",
+      },
+      "zh-TW": {
+        name: "ISBN 驗證器",
+        description: "驗證 ISBN-10/ISBN-13，檢查校驗位並提供轉換結果",
       },
     },
   },
@@ -4389,6 +5608,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "nanoid-generator": {
+    slug: "nanoid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "nanoid",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "url",
+    ],
+    locales: {
+      ar: {
+        name: "مولد NanoID",
+        description:
+          "أنشئ NanoID آمنة لعناوين URL في المتصفح مع طول وحروف أبجدية مسبقة قابلة للتخصيص.",
+      },
+      de: {
+        name: "NanoID-Generator",
+        description:
+          "Erzeuge URL-sichere NanoIDs im Browser mit anpassbarer Länge und Alphabet-Voreinstellungen.",
+      },
+      en: {
+        name: "NanoID Generator",
+        description:
+          "Generate URL-safe NanoIDs in the browser with custom length and alphabet presets.",
+      },
+      es: {
+        name: "Generador de NanoID",
+        description:
+          "Genera NanoID seguros para URL en el navegador con longitud y alfabetos preestablecidos personalizables.",
+      },
+      fr: {
+        name: "Générateur de NanoID",
+        description:
+          "Générez des NanoID compatibles URL dans le navigateur avec une longueur et des alphabets préréglés personnalisables.",
+      },
+      he: {
+        name: "מחולל NanoID",
+        description:
+          "צור NanoID בטוחות ל-URL בדפדפן עם אורך וקבוצות תווים מוגדרות מראש.",
+      },
+      hi: {
+        name: "NanoID जनरेटर",
+        description:
+          "ब्राउज़र में URL-सुरक्षित NanoID बनाएँ, कस्टम लंबाई और वर्णमाला प्रीसेट के साथ।",
+      },
+      id: {
+        name: "Generator NanoID",
+        description:
+          "Hasilkan NanoID aman untuk URL di browser dengan panjang dan preset alfabet yang dapat disesuaikan.",
+      },
+      it: {
+        name: "Generatore NanoID",
+        description:
+          "Genera NanoID compatibili con URL nel browser con lunghezza e alfabeti predefiniti personalizzabili.",
+      },
+      ja: {
+        name: "NanoID ジェネレーター",
+        description:
+          "ブラウザ内で URL 安全な NanoID を生成。長さと文字集合のプリセットをカスタマイズできます。",
+      },
+      ko: {
+        name: "NanoID 생성기",
+        description:
+          "브라우저에서 URL 안전한 NanoID를 생성하고 길이와 알파벳 프리셋을 사용자 지정합니다.",
+      },
+      ms: {
+        name: "Penjana NanoID",
+        description:
+          "Jana NanoID selamat URL dalam pelayar dengan panjang dan pratetap abjad tersuai.",
+      },
+      nl: {
+        name: "NanoID-generator",
+        description:
+          "Genereer URL-veilige NanoID's in de browser met aanpasbare lengte en alfabetpresets.",
+      },
+      no: {
+        name: "NanoID-generator",
+        description:
+          "Generer URL-sikre NanoID-er i nettleseren med tilpasset lengde og alfabetforhåndsinnstillinger.",
+      },
+      pl: {
+        name: "Generator NanoID",
+        description:
+          "Generuj NanoID bezpieczne dla URL w przeglądarce z niestandardową długością i zestawami znaków.",
+      },
+      pt: {
+        name: "Gerador de NanoID",
+        description:
+          "Gere NanoIDs seguros para URL no navegador com comprimento e alfabetos predefinidos personalizáveis.",
+      },
+      ru: {
+        name: "Генератор NanoID",
+        description:
+          "Создавайте безопасные для URL NanoID в браузере с настраиваемой длиной и наборами символов.",
+      },
+      sv: {
+        name: "NanoID-generator",
+        description:
+          "Skapa URL-säkra NanoID i webbläsaren med anpassad längd och alfabetförinställningar.",
+      },
+      th: {
+        name: "ตัวสร้าง NanoID",
+        description:
+          "สร้าง NanoID ที่ปลอดภัยสำหรับ URL ในเบราว์เซอร์ พร้อมความยาวและชุดอักขระที่ปรับได้.",
+      },
+      tr: {
+        name: "NanoID Oluşturucu",
+        description:
+          "Tarayıcıda URL-güvenli NanoID'ler üretin; uzunluk ve alfabe ön ayarlarını özelleştirin.",
+      },
+      vi: {
+        name: "Trình tạo NanoID",
+        description:
+          "Tạo NanoID an toàn cho URL trong trình duyệt với độ dài và bảng chữ cái đặt trước tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "NanoID 生成器",
+        description:
+          "在浏览器内生成 URL 安全的 NanoID，支持自定义长度和字符集预设。",
+      },
+      "zh-TW": {
+        name: "NanoID 產生器",
+        description:
+          "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
   "openapi-to-typescript-converter": {
     slug: "openapi-to-typescript-converter",
     category: "developer",
@@ -4646,6 +5997,252 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "rot-cipher": {
+    slug: "rot-cipher",
+    category: "web",
+    icon: "lock",
+    tags: ["cipher", "rot13", "rot47", "encryption", "decryption", "text"],
+    locales: {
+      ar: {
+        name: "تشفير ROT تشفير وفك التشفير",
+        description:
+          "تشفير وفك تشفير النص باستخدام خوارزميات ROT13 و ROT5 و ROT18 و ROT47. تشفير ذاتي الانعكاس للحروف والأرقام وأحرف ASCII",
+      },
+      de: {
+        name: "ROT-Chiffre Ver- & Entschlüsselung",
+        description:
+          "Ver- und entschlüsseln Sie Text mit ROT13, ROT5, ROT18 und ROT47 Chiffrier-Algorithmen. Selbstumkehrende Verschlüsselung für Buchstaben, Ziffern und ASCII-Zeichen",
+      },
+      en: {
+        name: "ROT Cipher Encrypt & Decrypt",
+        description:
+          "Encrypt and decrypt text using ROT13, ROT5, ROT18, and ROT47 cipher algorithms. Self-reversing encryption for letters, digits, and ASCII characters",
+      },
+      es: {
+        name: "Cifrado ROT Encriptar & Desencriptar",
+        description:
+          "Encripta y desencripta texto usando los algoritmos de cifrado ROT13, ROT5, ROT18 y ROT47. Encriptación autorreversible para letras, dígitos y caracteres ASCII",
+      },
+      fr: {
+        name: "Chiffrement ROT Crypter & Décrypter",
+        description:
+          "Chiffrez et déchiffrez du texte avec les algorithmes ROT13, ROT5, ROT18 et ROT47. Chiffrement auto-réversible pour les lettres, chiffres et caractères ASCII",
+      },
+      he: {
+        name: "צופן ROT הצפנה ופענוח",
+        description:
+          "הצפן ופענח טקסט באמצעות אלגוריתמי צופן ROT13, ROT5, ROT18 ו-ROT47. הצפנה הפיכה עצמית לאותיות, ספרות ותווי ASCII",
+      },
+      hi: {
+        name: "ROT सिफर एन्क्रिप्ट और डिक्रिप्ट",
+        description:
+          "ROT13, ROT5, ROT18 और ROT47 सिफर एल्गोरिदम का उपयोग करके टेक्स्ट को एन्क्रिप्ट और डिक्रिप्ट करें। अक्षरों, अंकों और ASCII वर्णों के लिए स्व-प्रतिवर्ती एन्क्रिप्शन",
+      },
+      id: {
+        name: "Sandi ROT Enkripsi & Dekripsi",
+        description:
+          "Enkripsi dan dekripsi teks menggunakan algoritma sandi ROT13, ROT5, ROT18, dan ROT47. Enkripsi yang dapat membalik diri sendiri untuk huruf, angka, dan karakter ASCII",
+      },
+      it: {
+        name: "Cifratura ROT Cripta & Decripta",
+        description:
+          "Cripta e decripta il testo usando gli algoritmi di cifratura ROT13, ROT5, ROT18 e ROT47. Crittografia auto-reversibile per lettere, cifre e caratteri ASCII",
+      },
+      ja: {
+        name: "ROT 暗号 暗号化 & 復号化",
+        description:
+          "ROT13、ROT5、ROT18、ROT47 暗号アルゴリズムでテキストを暗号化・復号化。文字、数字、ASCII 文字の自己可逆暗号化",
+      },
+      ko: {
+        name: "ROT 암호 암호화 & 복호화",
+        description:
+          "ROT13, ROT5, ROT18, ROT47 암호 알고리즘으로 텍스트 암호화 및 복호화. 문자, 숫자, ASCII 문자를 위한 자기 가역 암호화",
+      },
+      ms: {
+        name: "Sifer ROT Sulitkan & Nyahsulit",
+        description:
+          "Sulitkan dan nyahsulit teks menggunakan algoritma sifer ROT13, ROT5, ROT18 dan ROT47. Penyulitan boleh balik kendiri untuk huruf, digit dan aksara ASCII",
+      },
+      nl: {
+        name: "ROT-cijfer Versleutelen & Ontsleutelen",
+        description:
+          "Versleutel en ontsleutel tekst met ROT13, ROT5, ROT18 en ROT47 versleutelingsalgoritmen. Zelf-omkeerbare versleuteling voor letters, cijfers en ASCII-tekens",
+      },
+      no: {
+        name: "ROT-siffer Krypter & Dekrypter",
+        description:
+          "Krypter og dekrypter tekst med ROT13, ROT5, ROT18 og ROT47 sifferalgoritmer. Selvreverserende kryptering for bokstaver, siffer og ASCII-tegn",
+      },
+      pl: {
+        name: "Szyfr ROT Szyfrowanie i Deszyfrowanie",
+        description:
+          "Szyfruj i deszyfruj tekst za pomocą algorytmów ROT13, ROT5, ROT18 i ROT47. Samoodwracalne szyfrowanie dla liter, cyfr i znaków ASCII",
+      },
+      pt: {
+        name: "Cifra ROT Encriptar & Desencriptar",
+        description:
+          "Encripte e desencripte texto usando os algoritmos de cifra ROT13, ROT5, ROT18 e ROT47. Encriptação auto-reversível para letras, dígitos e caracteres ASCII",
+      },
+      ru: {
+        name: "ROT-шифр Шифрование & Дешифрование",
+        description:
+          "Шифруйте и дешифруйте текст с помощью алгоритмов ROT13, ROT5, ROT18 и ROT47. Самообратимое шифрование для букв, цифр и символов ASCII",
+      },
+      sv: {
+        name: "ROT-chiffer Kryptera & Dekryptera",
+        description:
+          "Kryptera och dekryptera text med ROT13, ROT5, ROT18 och ROT47 chifferalgoritmer. Självomvändbar kryptering för bokstäver, siffror och ASCII-tecken",
+      },
+      th: {
+        name: "รหัส ROT เข้ารหัส & ถอดรหัส",
+        description:
+          "เข้ารหัสและถอดรหัสข้อความด้วยอัลกอริทึม ROT13, ROT5, ROT18 และ ROT47 การเข้ารหัสแบบย้อนกลับได้สำหรับตัวอักษร ตัวเลข และอักขระ ASCII",
+      },
+      tr: {
+        name: "ROT Şifre Şifreleme & Şifre Çözme",
+        description:
+          "ROT13, ROT5, ROT18 ve ROT47 şifre algoritmaları kullanarak metni şifreleyin ve şifresini çözün. Harfler, rakamlar ve ASCII karakterler için kendinden tersine çevrilebilir şifreleme",
+      },
+      vi: {
+        name: "Mã hóa ROT Mã hóa & Giải mã",
+        description:
+          "Mã hóa và giải mã văn bản bằng các thuật toán mã hóa ROT13, ROT5, ROT18 và ROT47. Mã hóa tự đảo ngược cho chữ cái, chữ số và ký tự ASCII",
+      },
+      "zh-CN": {
+        name: "ROT 密码加密 & 解密",
+        description:
+          "使用 ROT13、ROT5、ROT18 和 ROT47 密码算法加密和解密文本。支持字母、数字和 ASCII 字符的自反加密",
+      },
+      "zh-TW": {
+        name: "ROT 密碼加密 & 解密",
+        description:
+          "使用 ROT13、ROT5、ROT18 和 ROT47 密碼演算法加密和解密文字。支援字母、數字和 ASCII 字元的自反加密",
+      },
+    },
+  },
+  "sha256-hash-text-or-file": {
+    slug: "sha256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha256", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-256 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-256 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-256-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-256 Hash Text or File",
+        description:
+          "Generate SHA-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-256 de Texto o Archivo",
+        description:
+          "Genera hash SHA-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-256 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-256 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-256 טקסט או קובץ",
+        description:
+          "צור האש SHA-256 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-256 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-256 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-256 Teks atau File",
+        description:
+          "Buat hash SHA-256 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-256 di Testo o File",
+        description:
+          "Genera hash SHA-256 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-256 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-256ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-256 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-256 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-256 Teks atau Fail",
+        description:
+          "Jana hash SHA-256 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-256-hash tekst of bestand",
+        description:
+          "Genereer SHA-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-256-hash tekst eller fil",
+        description:
+          "Generer SHA-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-256 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-256 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-256 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-256-хеш текста или файла",
+        description:
+          "Генерируйте SHA-256-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-256-hash text eller fil",
+        description:
+          "Generera SHA-256-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-256 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-256 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-256 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-256 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-256 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-256 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-256 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "sql-formatter-and-linter": {
     slug: "sql-formatter-and-linter",
     category: "developer",
@@ -4766,6 +6363,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  "text-statistics": {
+    slug: "text-statistics",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "text",
+      "statistics",
+      "word",
+      "count",
+      "character",
+      "line",
+      "paragraph",
+    ],
+    locales: {
+      ar: {
+        name: "إحصائيات النص",
+        description:
+          "تحليل النص للحصول على عدد الأحرف والكلمات والأسطر والفقرات والجمل مع تقدير وقت القراءة",
+      },
+      de: {
+        name: "Textstatistik",
+        description:
+          "Analysieren Sie Text, um Zeichen-, Wort-, Zeilen-, Absatz- und Satzzählungen mit Lesezeitschätzungen zu erhalten",
+      },
+      en: {
+        name: "Text Statistics",
+        description:
+          "Turn any draft into a live writing dashboard with multilingual counts, vocabulary signals, structure clues, and reading-time estimates.",
+      },
+      es: {
+        name: "Estadísticas de Texto",
+        description:
+          "Analiza texto para obtener recuentos de caracteres, palabras, líneas, párrafos y oraciones con estimaciones de tiempo de lectura",
+      },
+      fr: {
+        name: "Statistiques de Texte",
+        description:
+          "Analysez le texte pour obtenir le nombre de caractères, mots, lignes, paragraphes et phrases avec des estimations de temps de lecture",
+      },
+      he: {
+        name: "סטטיסטיקת טקסט",
+        description:
+          "נתח טקסט כדי לקבל ספירת תווים, מילים, שורות, פסקאות ומשפטים עם הערכות זמן קריאה",
+      },
+      hi: {
+        name: "टेक्स्ट आँकड़े",
+        description:
+          "पढ़ने के समय के अनुमान के साथ वर्ण, शब्द, पंक्ति, पैराग्राफ और वाक्य गणना प्राप्त करने के लिए टेक्स्ट का विश्लेषण करें",
+      },
+      id: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan jumlah karakter, kata, baris, paragraf, dan kalimat dengan perkiraan waktu baca",
+      },
+      it: {
+        name: "Statistiche del Testo",
+        description:
+          "Analizza il testo per ottenere conteggi di caratteri, parole, righe, paragrafi e frasi con stime del tempo di lettura",
+      },
+      ja: {
+        name: "テキスト統計",
+        description:
+          "テキストを分析して、文字数、単語数、行数、段落数、文数と読書時間の見積もりを取得",
+      },
+      ko: {
+        name: "텍스트 통계",
+        description:
+          "텍스트를 분석하여 문자, 단어, 줄, 단락, 문장 수와 예상 읽기 시간을 확인",
+      },
+      ms: {
+        name: "Statistik Teks",
+        description:
+          "Analisis teks untuk mendapatkan kiraan aksara, perkataan, baris, perenggan dan ayat dengan anggaran masa membaca",
+      },
+      nl: {
+        name: "Tekststatistieken",
+        description:
+          "Analyseer tekst om aantallen tekens, woorden, regels, alineas en zinnen te krijgen met leestijdschattingen",
+      },
+      no: {
+        name: "Tekststatistikk",
+        description:
+          "Analyser tekst for å få antall tegn, ord, linjer, avsnitt og setninger med estimert lesetid",
+      },
+      pl: {
+        name: "Statystyki Tekstu",
+        description:
+          "Analizuj tekst, aby uzyskać liczbę znaków, słów, wierszy, akapitów i zdań z szacowanym czasem czytania",
+      },
+      pt: {
+        name: "Estatísticas de Texto",
+        description:
+          "Analise o texto para obter contagens de caracteres, palavras, linhas, parágrafos e frases com estimativas de tempo de leitura",
+      },
+      ru: {
+        name: "Статистика Текста",
+        description:
+          "Анализ текста для подсчёта символов, слов, строк, абзацев и предложений с оценкой времени чтения",
+      },
+      sv: {
+        name: "Textstatistik",
+        description:
+          "Analysera text för att få antal tecken, ord, rader, stycken och meningar med uppskattad lästid",
+      },
+      th: {
+        name: "สถิติข้อความ",
+        description:
+          "วิเคราะห์ข้อความเพื่อรับจำนวนตัวอักษร คำ บรรทัด ย่อหน้า และประโยค พร้อมประมาณเวลาอ่าน",
+      },
+      tr: {
+        name: "Metin İstatistikleri",
+        description:
+          "Okuma süresi tahminleriyle birlikte karakter, kelime, satır, paragraf ve cümle sayılarını almak için metni analiz edin",
+      },
+      vi: {
+        name: "Thống Kê Văn Bản",
+        description:
+          "Phân tích văn bản để đếm ký tự, từ, dòng, đoạn văn và câu cùng với ước tính thời gian đọc",
+      },
+      "zh-CN": {
+        name: "文本统计",
+        description:
+          "把任意草稿变成实时写作分析面板，查看多语言计数、词汇信号、结构线索和阅读时长估算。",
+      },
+      "zh-TW": {
+        name: "文字統計",
+        description:
+          "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
       },
     },
   },
@@ -5012,6 +6740,250 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "unicode-invisible-character-checker": {
+    slug: "unicode-invisible-character-checker",
+    category: "text",
+    icon: "search",
+    tags: ["unicode", "text", "invisible", "bidi", "whitespace"],
+    locales: {
+      ar: {
+        name: "أداة فحص الأحرف غير المرئية في Unicode",
+        description:
+          "تكشف أحرف العرض الصفري وعناصر التحكم ثنائية الاتجاه والمسافات الخاصة وتصدر نسخة منظفة.",
+      },
+      de: {
+        name: "Unicode-Unsichtbarzeichen-Prüfer",
+        description:
+          "Erkennt Nullbreite-, Bidi-Steuer- und Sonderleerzeichen und exportiert eine bereinigte Version.",
+      },
+      en: {
+        name: "Unicode Invisible Character Checker",
+        description:
+          "Detect zero-width, bidi control, and special whitespace characters, then export a cleaned version.",
+      },
+      es: {
+        name: "Comprobador de caracteres invisibles Unicode",
+        description:
+          "Detecta caracteres de ancho cero, control bidi y espacios especiales, y exporta una versión limpia.",
+      },
+      fr: {
+        name: "Vérificateur de caractères invisibles Unicode",
+        description:
+          "Détecte les caractères à largeur nulle, les contrôles bidi et les espaces spéciaux, puis exporte une version nettoyée.",
+      },
+      he: {
+        name: "בודק תווים בלתי נראים של Unicode",
+        description:
+          "מזהה תווים ברוחב אפס, בקרות bidi ורווחים מיוחדים, ומייצא גרסה נקייה.",
+      },
+      hi: {
+        name: "यूनिकोड अदृश्य वर्ण जाँचक",
+        description:
+          "शून्य-चौड़ाई, बिडी नियंत्रण और विशेष रिक्त वर्णों का पता लगाता है और साफ़ संस्करण निर्यात करता है।",
+      },
+      id: {
+        name: "Pemeriksa karakter tak terlihat Unicode",
+        description:
+          "Mendeteksi karakter lebar nol, kontrol bidi, dan spasi khusus, lalu mengekspor versi yang dibersihkan.",
+      },
+      it: {
+        name: "Verificatore di caratteri invisibili Unicode",
+        description:
+          "Rileva caratteri a larghezza zero, controlli bidi e spazi speciali ed esporta una versione pulita.",
+      },
+      ja: {
+        name: "Unicode不可視文字チェッカー",
+        description:
+          "ゼロ幅、双方向制御、特殊空白文字を検出し、クリーンなバージョンをエクスポートします。",
+      },
+      ko: {
+        name: "유니코드 보이지 않는 문자 검사기",
+        description:
+          "제로 폭, 양방향 제어 및 특수 공백 문자를 감지하고 정리된 버전을 내보냅니다.",
+      },
+      ms: {
+        name: "Pemeriksa aksara tidak kelihatan Unicode",
+        description:
+          "Mengesan aksara lebar sifar, kawalan bidi dan ruang khas, dan mengeksport versi yang dibersihkan.",
+      },
+      nl: {
+        name: "Unicode onzichtbare-tekenscontrole",
+        description:
+          "Detecteert nulbreedte-, bidi-besturing- en speciale spatie-tekens en exporteert een opgeschoonde versie.",
+      },
+      no: {
+        name: "Unicode-kontroll av usynlige tegn",
+        description:
+          "Oppdager nullbredde-, bidi-kontroll- og spesialmellomromstegn og eksporterer en renset versjon.",
+      },
+      pl: {
+        name: "Sprawdzanie niewidocznych znaków Unicode",
+        description:
+          "Wykrywa znaki o zerowej szerokości, sterowanie bidi i specjalne spacje oraz eksportuje oczyszczoną wersję.",
+      },
+      pt: {
+        name: "Verificador de caracteres invisíveis Unicode",
+        description:
+          "Detecta caracteres de largura zero, controles bidi e espaços especiais e exporta uma versão limpa.",
+      },
+      ru: {
+        name: "Проверка невидимых символов Unicode",
+        description:
+          "Обнаруживает символы нулевой ширины, управляющие bidi и специальные пробелы и экспортирует очищенную версию.",
+      },
+      sv: {
+        name: "Unicode osynliga tecken-kontroll",
+        description:
+          "Upptäcker nollbredds-, bidi-kontroll- och specialblankstegstecken och exporterar en rensad version.",
+      },
+      th: {
+        name: "ตัวตรวจสอบอักขระที่มองไม่เห็นของ Unicode",
+        description:
+          "ตรวจจับอักขระกว้างศูนย์ การควบคุมแบบ bidi และช่องว่างพิเศษ แล้วส่งออกเวอร์ชันที่ทำความสะอาดแล้ว",
+      },
+      tr: {
+        name: "Unicode Görünmez Karakter Denetleyici",
+        description:
+          "Sıfır genişlikli, bidi kontrol ve özel boşluk karakterlerini algılar ve temizlenmiş sürümü dışa aktarır.",
+      },
+      vi: {
+        name: "Trình kiểm tra ký tự ẩn Unicode",
+        description:
+          "Phát hiện ký tự độ rộng bằng 0, điều khiển bidi và khoảng trắng đặc biệt, rồi xuất phiên bản đã làm sạch.",
+      },
+      "zh-CN": {
+        name: "Unicode 不可见字符检查",
+        description: "检测零宽、双向控制和特殊空白字符，并导出清理后的版本。",
+      },
+      "zh-TW": {
+        name: "Unicode 不可見字元檢查",
+        description: "偵測零寬、雙向控制與特殊空白字元，並匯出清理後的版本。",
+      },
+    },
+  },
+  "url-component-encoder-decoder": {
+    slug: "url-component-encoder-decoder",
+    category: "web",
+    icon: "globe",
+    tags: ["url", "encoding", "decoding", "percent", "uri", "text"],
+    locales: {
+      ar: {
+        name: "مُرمز/مُفكك تشفير مكونات URL",
+        description:
+          "ترميز وفك تشفير مكونات عناوين URL بالترميز بالنسبة المئوية. تحويل الأحرف الخاصة إلى تنسيق آمن لعناوين URL والعكس لتطوير الويب واستخدام واجهة برمجة التطبيقات",
+      },
+      de: {
+        name: "URL-Komponenten-Encoder/Decoder",
+        description:
+          "Kodiert und dekodiert URL-Komponenten mit Prozent-Kodierung. Konvertiert Sonderzeichen in URL-sicheres Format und umgekehrt für Webentwicklung und API-Nutzung",
+      },
+      en: {
+        name: "URL Component Encoder and Decoder",
+        description:
+          "Encode and decode URL components with percent encoding. Convert special characters to URL-safe format and vice versa for web development and API usage",
+      },
+      es: {
+        name: "Codificador/Decodificador de Componentes URL",
+        description:
+          "Codifica y decodifica componentes de URL con codificación por porcentaje. Convierte caracteres especiales a formato seguro para URL y viceversa para desarrollo web y uso de API",
+      },
+      fr: {
+        name: "Encodeur/Décodeur de Composants d'URL",
+        description:
+          "Encode et décode les composants d'URL avec l'encodage par pourcentage. Convertit les caractères spéciaux au format sûr pour les URL et vice versa pour le développement web et l'utilisation d'API",
+      },
+      he: {
+        name: "מקודד/מפענח רכיבי URL",
+        description:
+          "קידוד ופענוח רכיבי URL עם קידוד אחוזים. המרת תווים מיוחדים לפורמט בטוח עבור URL ולהיפך לפיתוח אתרים ושימוש ב-API",
+      },
+      hi: {
+        name: "URL घटक एनकोडर/डिकोडर",
+        description:
+          "प्रतिशत एन्कोडिंग के साथ URL घटक एन्कोड और डिकोड करें। विशेष वर्णों को URL-सुरक्षित प्रारूप में परिवर्तित करें और वेब डेवलपमेंट और API उपयोग के लिए इसके विपरीत",
+      },
+      id: {
+        name: "Encoder/Decoder Komponen URL",
+        description:
+          "Encode dan decode komponen URL dengan encoding persen. Konversi karakter khusus ke format aman URL dan sebaliknya untuk pengembangan web dan penggunaan API",
+      },
+      it: {
+        name: "Codificatore/Decodificatore Componenti URL",
+        description:
+          "Codifica e decodifica componenti URL con codifica percentuale. Converte caratteri speciali in formato sicuro per URL e viceversa per sviluppo web e utilizzo API",
+      },
+      ja: {
+        name: "URL コンポーネント エンコーダー/デコーダー",
+        description:
+          "パーセントエンコーディングを使用してURLコンポーネントをエンコード・デコードします。特殊文字をURL安全形式に変換し、その逆も行い、Web開発とAPI使用に対応",
+      },
+      ko: {
+        name: "URL 컴포넌트 인코더/디코더",
+        description:
+          "퍼센트 인코딩을 사용하여 URL 컴포넌트를 인코딩 및 디코딩합니다. 특수 문자를 URL 안전 형식으로 변환하고 그 반대로도 변환하여 웹 개발 및 API 사용에 활용",
+      },
+      ms: {
+        name: "Pengekod/Penyahkod Komponen URL",
+        description:
+          "Kod dan nyahkod komponen URL dengan pengekodan peratus. Tukar aksara khas kepada format selamat URL dan sebaliknya untuk pembangunan web dan penggunaan API",
+      },
+      nl: {
+        name: "URL-component encoder/decoder",
+        description:
+          "Codeer en decodeer URL-componenten met procentcodering. Converteer speciale tekens naar URL-veilig formaat en omgekeerd voor webontwikkeling en API-gebruik",
+      },
+      no: {
+        name: "URL-komponent koder/dekoder",
+        description:
+          "Kod og dekod URL-komponenter med prosentkoding. Konverter spesialtegn til URL-trygt format og omvendt for webutvikling og API-bruk",
+      },
+      pl: {
+        name: "Koder/Dekoder Komponentów URL",
+        description:
+          "Koduj i dekoduj komponenty URL za pomocą kodowania procentowego. Konwertuj znaki specjalne na format bezpieczny dla URL-i i odwrotnie dla rozwoju stron internetowych i użycia API",
+      },
+      pt: {
+        name: "Codificador/Decodificador de Componentes URL",
+        description:
+          "Codifica e decodifica componentes de URL com codificação por porcentagem. Converte caracteres especiais para formato seguro de URL e vice-versa para desenvolvimento web e uso de API",
+      },
+      ru: {
+        name: "URL-кодировщик/декодер компонентов",
+        description:
+          "Кодирует и декодирует компоненты URL с процентным кодированием. Преобразует специальные символы в URL-безопасный формат и наоборот для веб-разработки и использования API",
+      },
+      sv: {
+        name: "URL-komponent kodare/avkodare",
+        description:
+          "Koda och avkoda URL-komponenter med procentkodning. Konvertera specialtecken till URL-säkert format och vice versa för webbutveckling och API-användning",
+      },
+      th: {
+        name: "ตัวเข้ารหัส/ถอดรหัสองค์ประกอบ URL",
+        description:
+          "เข้ารหัสและถอดรหัสองค์ประกอบ URL ด้วยการเข้ารหัสแบบเปอร์เซ็นต์ แปลงอักขระพิเศษเป็นรูปแบบที่ปลอดภัยสำหรับ URL และในทางกลับกันสำหรับการพัฒนาเว็บและการใช้ API",
+      },
+      tr: {
+        name: "URL Bileşen Kodlayıcı/Kod Çözücü",
+        description:
+          "Yüzde kodlaması ile URL bileşenlerini kodlayın ve kod çözün. Özel karakterleri URL güvenli formatına dönüştürün ve web geliştirme ve API kullanımı için tersini yapın",
+      },
+      vi: {
+        name: "Bộ mã hóa/giải mã thành phần URL",
+        description:
+          "Mã hóa và giải mã thành phần URL bằng mã hóa phần trăm. Chuyển đổi ký tự đặc biệt sang định dạng an toàn cho URL và ngược lại cho phát triển web và sử dụng API",
+      },
+      "zh-CN": {
+        name: "URL 组件编码器/解码器",
+        description:
+          "使用百分号编码对 URL 组件进行编码和解码。将特殊字符转换为 URL 安全格式，反之亦然，用于 Web 开发和 API 使用",
+      },
+      "zh-TW": {
+        name: "URL 組件編碼器/解碼器",
+        description:
+          "使用百分號編碼對 URL 組件進行編碼和解碼。將特殊字元轉換為 URL 安全格式，反之亦然，用於 Web 開發和 API 使用",
       },
     },
   },

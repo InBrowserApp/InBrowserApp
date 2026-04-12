@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "encodedTextLabel": "ข้อความเข้ารหัส URL",
+  "encodedTextPlaceholder": "ป้อนข้อความเข้ารหัส URL เพื่อถอดรหัส...",
+  "invalidEncodedTextLabel": "ข้อความเข้ารหัส URL ไม่ถูกต้อง",
+  "copyPlainTextLabel": "คัดลอกข้อความธรรมดา",
+  "copyEncodedTextLabel": "คัดลอกข้อความที่เข้ารหัส URL",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

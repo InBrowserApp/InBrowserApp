@@ -1,0 +1,4 @@
+{
+  "name": "ROT-chiffer Kryptera & Dekryptera",
+  "description": "Kryptera och dekryptera text med ROT13, ROT5, ROT18 och ROT47 chifferalgoritmer. Självomvändbar kryptering för bokstäver, siffror och ASCII-tecken"
+}

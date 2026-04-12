@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT-type",
+  "inputLabel": "Inndatatekst",
+  "inputPlaceholder": "Skriv inn tekst for a kryptere/dekryptere...",
+  "outputLabel": "Utdatatekst",
+  "outputPlaceholder": "Kryptert/dekryptert tekst vises her...",
+  "rot13Description": "Kun bokstaver (A-Z, a-z)",
+  "rot5Description": "Kun sifre (0-9)",
+  "rot18Description": "Bokstaver + Sifre (ROT13 + ROT5)",
+  "rot47Description": "Alle utskrivbare ASCII (33-126)",
+  "copyInputLabel": "Kopier inndata",
+  "copyOutputLabel": "Kopier utdata",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel"
+}

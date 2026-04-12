@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Plain Text",
+  "plainTextPlaceholder": "Enter text to encode...",
+  "encodedTextLabel": "URL Encoded Text",
+  "encodedTextPlaceholder": "Enter URL encoded text to decode...",
+  "invalidEncodedTextLabel": "Invalid URL encoded text",
+  "copyPlainTextLabel": "Copy plain text",
+  "copyEncodedTextLabel": "Copy URL encoded text",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example"
+}

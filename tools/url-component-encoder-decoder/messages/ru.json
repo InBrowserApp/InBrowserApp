@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Обычный текст",
+  "plainTextPlaceholder": "Введите текст для кодирования...",
+  "encodedTextLabel": "URL-кодированный текст",
+  "encodedTextPlaceholder": "Введите URL-кодированный текст для декодирования...",
+  "invalidEncodedTextLabel": "Неверный URL-кодированный текст",
+  "copyPlainTextLabel": "Копировать обычный текст",
+  "copyEncodedTextLabel": "Скопировать URL-кодированный текст",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

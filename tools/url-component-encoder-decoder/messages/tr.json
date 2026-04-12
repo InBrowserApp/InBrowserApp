@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Düz Metin",
+  "plainTextPlaceholder": "Kodlanacak metni girin...",
+  "encodedTextLabel": "URL Kodlanmış Metin",
+  "encodedTextPlaceholder": "Kod çözülecek URL kodlanmış metni girin...",
+  "invalidEncodedTextLabel": "Geçersiz URL kodlanmış metin",
+  "copyPlainTextLabel": "Düz metni kopyala",
+  "copyEncodedTextLabel": "URL kodlu metni kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

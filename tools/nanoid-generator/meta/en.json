@@ -1,0 +1,4 @@
+{
+  "name": "NanoID Generator",
+  "description": "Generate URL-safe NanoIDs in the browser with custom length and alphabet presets."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "ROT-Chiffre Ver- & Entschlüsselung",
+  "description": "Ver- und entschlüsseln Sie Text mit ROT13, ROT5, ROT18 und ROT47 Chiffrier-Algorithmen. Selbstumkehrende Verschlüsselung für Buchstaben, Ziffern und ASCII-Zeichen"
+}

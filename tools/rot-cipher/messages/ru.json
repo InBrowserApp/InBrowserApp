@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Tип ROT",
+  "inputLabel": "Входной текст",
+  "inputPlaceholder": "Введите текст для шифрования/дешифрования...",
+  "outputLabel": "Выходной текст",
+  "outputPlaceholder": "Зашифрованный/расшифрованный текст появится здесь...",
+  "rot13Description": "Только буквы (A-Z, a-z)",
+  "rot5Description": "Только цифры (0-9)",
+  "rot18Description": "Буквы + Цифры (ROT13 + ROT5)",
+  "rot47Description": "Все печатные символы ASCII (33-126)",
+  "copyInputLabel": "Скопировать входной текст",
+  "copyOutputLabel": "Скопировать выходной текст",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

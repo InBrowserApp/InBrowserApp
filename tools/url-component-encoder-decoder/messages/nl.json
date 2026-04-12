@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Platte Tekst",
+  "plainTextPlaceholder": "Voer tekst in om te coderen...",
+  "encodedTextLabel": "URL Gecodeerde Tekst",
+  "encodedTextPlaceholder": "Voer URL gecodeerde tekst in om te decoderen...",
+  "invalidEncodedTextLabel": "Ongeldige URL gecodeerde tekst",
+  "copyPlainTextLabel": "Platte tekst kopiëren",
+  "copyEncodedTextLabel": "URL-gecodeerde tekst kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

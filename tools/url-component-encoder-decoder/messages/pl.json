@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Zwykły Tekst",
+  "plainTextPlaceholder": "Wprowadź tekst do kodowania...",
+  "encodedTextLabel": "Tekst Zakodowany URL",
+  "encodedTextPlaceholder": "Wprowadź tekst zakodowany URL do dekodowania...",
+  "invalidEncodedTextLabel": "Nieprawidłowy tekst zakodowany URL",
+  "copyPlainTextLabel": "Kopiuj zwykły tekst",
+  "copyEncodedTextLabel": "Kopiuj tekst zakodowany w URL",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład"
+}

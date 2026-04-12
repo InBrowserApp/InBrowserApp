@@ -1,0 +1,4 @@
+{
+  "name": "Sandi ROT Enkripsi & Dekripsi",
+  "description": "Enkripsi dan dekripsi teks menggunakan algoritma sandi ROT13, ROT5, ROT18, dan ROT47. Enkripsi yang dapat membalik diri sendiri untuk huruf, angka, dan karakter ASCII"
+}

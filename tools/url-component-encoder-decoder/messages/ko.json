@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "일반 텍스트",
+  "plainTextPlaceholder": "인코딩할 텍스트 입력...",
+  "encodedTextLabel": "URL 인코딩 텍스트",
+  "encodedTextPlaceholder": "디코딩할 URL 인코딩 텍스트 입력...",
+  "invalidEncodedTextLabel": "유효하지 않은 URL 인코딩 텍스트",
+  "copyPlainTextLabel": "일반 텍스트 복사",
+  "copyEncodedTextLabel": "URL 인코딩 텍스트 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정"
+}

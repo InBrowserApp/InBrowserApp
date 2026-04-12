@@ -1,0 +1,4 @@
+{
+  "name": "URL-component encoder/decoder",
+  "description": "Codeer en decodeer URL-componenten met procentcodering. Converteer speciale tekens naar URL-veilig formaat en omgekeerd voor webontwikkeling en API-gebruik"
+}

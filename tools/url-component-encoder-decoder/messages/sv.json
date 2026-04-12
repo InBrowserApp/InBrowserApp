@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Vanlig Text",
+  "plainTextPlaceholder": "Ange text att koda...",
+  "encodedTextLabel": "URL-kodad Text",
+  "encodedTextPlaceholder": "Ange URL-kodad text att avkoda...",
+  "invalidEncodedTextLabel": "Ogiltig URL-kodad text",
+  "copyPlainTextLabel": "Kopiera vanlig text",
+  "copyEncodedTextLabel": "Kopiera URL-kodad text",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel"
+}

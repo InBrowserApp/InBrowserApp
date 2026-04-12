@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT タイプ",
+  "inputLabel": "入力テキスト",
+  "inputPlaceholder": "暗号化/復号化するテキストを入力...",
+  "outputLabel": "出力テキスト",
+  "outputPlaceholder": "暗号化/復号化されたテキストがここに表示されます...",
+  "rot13Description": "英字のみ (A-Z, a-z)",
+  "rot5Description": "数字のみ (0-9)",
+  "rot18Description": "英字 + 数字 (ROT13 + ROT5)",
+  "rot47Description": "すべての印刷可能 ASCII 文字 (33-126)",
+  "copyInputLabel": "入力テキストをコピー",
+  "copyOutputLabel": "出力テキストをコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット"
+}
