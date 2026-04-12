@@ -89,7 +89,33 @@ describe("Sha256HashTextOrFileClient", () => {
       expect(screen.getByText("demo.txt")).toBeTruthy()
     })
 
+    expect(
+      screen.queryByRole("textbox", { name: messages.plainTextLabel })
+    ).toBeNull()
     expect(await screen.findByText(sha256Hex("hello from file"))).toBeTruthy()
+  })
+
+  test("switches back to text mode after importing a file", async () => {
+    render(<Sha256HashTextOrFileClient messages={messages} />)
+
+    const file = new File(["hello from file"], "demo.txt", {
+      type: "text/plain",
+    })
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [file] },
+    })
+
+    await screen.findByText(sha256Hex("hello from file"))
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.plainTextLabel })
+    )
+
+    expect(getPlainTextInput().value).toBe("Hello, browser-native world!")
+    expect(
+      await screen.findByText(sha256Hex("Hello, browser-native world!"))
+    ).toBeTruthy()
   })
 
   test("restores the last stored text value", async () => {

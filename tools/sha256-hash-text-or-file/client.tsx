@@ -11,24 +11,21 @@ import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
+import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { FileText, LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
 
 import { DEFAULT_TEXT, STORAGE_KEYS } from "./client/constants"
+import type { Sha256HashTextOrFilePageMessages } from "./client/types"
 import { HashOutputGrid } from "./components/hash-output-grid"
 import { hashSha256, type Sha256Digest } from "./core/sha256"
-
-import type { Sha256HashTextOrFilePageMessages } from "./client/types"
 
 type Sha256DigestState =
   | { status: "idle" }
@@ -48,11 +45,8 @@ function Sha256HashTextOrFileClient({
 
   const [plainText, setPlainText] = useState(DEFAULT_TEXT)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
-  const [textDigestState, setTextDigestState] = useState<Sha256DigestState>({
+  const [digestState, setDigestState] = useState<Sha256DigestState>({
     status: "loading",
-  })
-  const [fileDigestState, setFileDigestState] = useState<Sha256DigestState>({
-    status: "idle",
   })
 
   const deferredPlainText = useDeferredValue(plainText)
@@ -78,25 +72,35 @@ function Sha256HashTextOrFileClient({
   useEffect(() => {
     let cancelled = false
 
-    if (deferredPlainText.length === 0) {
-      setTextDigestState({ status: "idle" })
+    const source = selectedFile
+      ? selectedFile
+      : deferredPlainText.length > 0
+        ? new Blob([deferredPlainText])
+        : null
+
+    if (!source) {
+      setDigestState({ status: "idle" })
       return
     }
 
-    setTextDigestState({ status: "loading" })
+    setDigestState({ status: "loading" })
 
-    void hashSha256(new Blob([deferredPlainText]))
+    void hashSha256(source)
       .then((digest) => {
         if (!cancelled) {
-          setTextDigestState({ status: "ready", digest })
+          setDigestState({ status: "ready", digest })
         }
       })
       .catch((error: unknown) => {
         if (!cancelled) {
-          setTextDigestState({
+          setDigestState({
             status: "error",
             message:
-              error instanceof Error ? error.message : "Failed to hash text.",
+              error instanceof Error
+                ? error.message
+                : selectedFile
+                  ? "Failed to hash file."
+                  : "Failed to hash text.",
           })
         }
       })
@@ -104,42 +108,15 @@ function Sha256HashTextOrFileClient({
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText])
-
-  useEffect(() => {
-    let cancelled = false
-
-    if (!selectedFile) {
-      setFileDigestState({ status: "idle" })
-      return
-    }
-
-    setFileDigestState({ status: "loading" })
-
-    void hashSha256(selectedFile)
-      .then((digest) => {
-        if (!cancelled) {
-          setFileDigestState({ status: "ready", digest })
-        }
-      })
-      .catch((error: unknown) => {
-        if (!cancelled) {
-          setFileDigestState({
-            status: "error",
-            message:
-              error instanceof Error ? error.message : "Failed to hash file.",
-          })
-        }
-      })
-
-    return () => {
-      cancelled = true
-    }
-  }, [selectedFile])
+  }, [deferredPlainText, selectedFile])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
-    const nextFile = event.target.files?.[0] ?? null
+    const nextFile = event.target.files?.[0]
     event.target.value = ""
+
+    if (!nextFile) {
+      return
+    }
 
     setSelectedFile(nextFile)
   }
@@ -149,59 +126,68 @@ function Sha256HashTextOrFileClient({
       <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.inputLabel}</CardTitle>
+          <CardDescription>
+            {selectedFile
+              ? `${selectedFile.name} • ${formatFileSize(selectedFile.size)}`
+              : messages.plainTextDescription}
+          </CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-6">
-          <Field>
-            <FieldLabel htmlFor={plainTextId}>
-              {messages.plainTextLabel}
-            </FieldLabel>
-            <FieldDescription>{messages.plainTextDescription}</FieldDescription>
-            <Textarea
-              id={plainTextId}
-              aria-label={messages.plainTextLabel}
-              spellCheck={false}
-              value={plainText}
-              onChange={(event) => {
-                setPlainText(event.target.value)
-              }}
-              className="min-h-64 resize-y font-mono text-sm"
-            />
-          </Field>
-
-          <DigestSection
-            title={messages.hashResultLabel}
-            state={textDigestState}
-            messages={messages}
-          />
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader className="border-b">
-          <CardTitle>{messages.importFromFileLabel}</CardTitle>
-          <CardDescription>{messages.meta.description}</CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-6">
-          <div className="flex flex-wrap items-center gap-3">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => {
-                fileInputRef.current?.click()
-              }}
-            >
-              <FileText data-icon="inline-start" />
-              {messages.importFromFileLabel}
-            </Button>
-            {selectedFile ? (
-              <div className="min-w-0 text-sm text-muted-foreground">
-                <p className="truncate font-medium text-foreground">
+        <CardContent className="flex flex-1 flex-col">
+          {selectedFile ? (
+            <div className="flex min-h-64 flex-1 flex-col items-center justify-center gap-3 rounded-xl border border-dashed bg-muted/20 p-6 text-center">
+              <FileText className="size-5 text-muted-foreground" />
+              <div className="grid gap-1">
+                <p className="text-sm font-medium break-all text-foreground">
                   {selectedFile.name}
                 </p>
-                <p>{formatFileSize(selectedFile.size)}</p>
+                <p className="text-sm text-muted-foreground">
+                  {formatFileSize(selectedFile.size)}
+                </p>
               </div>
-            ) : null}
-          </div>
+            </div>
+          ) : (
+            <Field className="flex flex-1 flex-col">
+              <FieldLabel htmlFor={plainTextId}>
+                {messages.plainTextLabel}
+              </FieldLabel>
+              <Textarea
+                id={plainTextId}
+                aria-label={messages.plainTextLabel}
+                spellCheck={false}
+                value={plainText}
+                onChange={(event) => {
+                  setPlainText(event.target.value)
+                }}
+                className="min-h-64 flex-1 resize-y font-mono text-sm"
+              />
+            </Field>
+          )}
+        </CardContent>
+        <CardFooter className="justify-start gap-3 border-t">
+          {selectedFile ? (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setSelectedFile(null)
+              }}
+            >
+              {messages.plainTextLabel}
+            </Button>
+          ) : null}
+
+          <Button
+            type="button"
+            variant={selectedFile ? "outline" : "ghost"}
+            size="sm"
+            onClick={() => {
+              fileInputRef.current?.click()
+            }}
+          >
+            <FileText data-icon="inline-start" />
+            {messages.importFromFileLabel}
+          </Button>
 
           <input
             ref={fileInputRef}
@@ -212,12 +198,27 @@ function Sha256HashTextOrFileClient({
               void handleFileChange(event)
             }}
           />
+        </CardFooter>
+      </Card>
 
-          <DigestSection
-            title={messages.hashResultLabel}
-            state={fileDigestState}
-            messages={messages}
-          />
+      <Card>
+        <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+          <div className="grid gap-1">
+            <CardTitle>{messages.hashResultLabel}</CardTitle>
+            <CardDescription>
+              {selectedFile
+                ? `${selectedFile.name} • ${formatFileSize(selectedFile.size)}`
+                : messages.plainTextLabel}
+            </CardDescription>
+          </div>
+          {digestState.status === "loading" ? (
+            <CardAction>
+              <LoaderCircle className="size-4 animate-spin text-muted-foreground" />
+            </CardAction>
+          ) : null}
+        </CardHeader>
+        <CardContent className="flex flex-1 flex-col">
+          <DigestSection state={digestState} messages={messages} />
         </CardContent>
       </Card>
     </div>
@@ -225,27 +226,22 @@ function Sha256HashTextOrFileClient({
 }
 
 function DigestSection({
-  title,
   state,
   messages,
 }: Readonly<{
-  title: string
   state: Sha256DigestState
   messages: Sha256HashTextOrFilePageMessages
 }>) {
   if (state.status === "idle") {
-    return null
+    return (
+      <div className="flex min-h-64 flex-1 items-center justify-center rounded-xl border border-dashed bg-muted/20 p-6 text-center text-sm text-muted-foreground">
+        {messages.plainTextDescription}
+      </div>
+    )
   }
 
   return (
     <section className="grid gap-4">
-      <div className="flex items-center gap-2 text-sm font-medium">
-        {state.status === "loading" ? (
-          <LoaderCircle className="size-4 animate-spin text-muted-foreground" />
-        ) : null}
-        <span>{title}</span>
-      </div>
-
       {state.status === "error" ? (
         <Alert variant="destructive">
           <TriangleAlert />

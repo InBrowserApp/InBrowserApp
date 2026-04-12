@@ -1,11 +1,5 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
+import { cn } from "@workspace/ui/lib/utils"
 
 import type { Sha256HashTextOrFilePageMessages } from "../client/types"
 import type { Sha256Digest } from "../core/sha256"
@@ -34,24 +28,27 @@ function HashOutputGrid({
   return (
     <div className="grid gap-3 lg:grid-cols-2">
       {DIGEST_FIELDS.map(({ key, labelKey }) => (
-        <Card key={key} size="sm">
-          <CardHeader className="gap-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
-            <CardTitle>{messages[labelKey]}</CardTitle>
-            <CardAction>
-              <ToolCopyButton
-                value={digest?.[key] ?? ""}
-                copyLabel={messages.copyResultLabel}
-                copiedLabel={messages.copiedLabel}
-                disabled={loading || !digest}
-              />
-            </CardAction>
-          </CardHeader>
-          <CardContent>
-            <code className="block text-xs leading-6 break-all sm:text-sm">
-              {digest?.[key] ?? ""}
-            </code>
-          </CardContent>
-        </Card>
+        <section
+          key={key}
+          className={cn(
+            "grid gap-3 rounded-xl border bg-muted/20 p-4",
+            loading && "opacity-75"
+          )}
+        >
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <h3 className="text-sm font-medium">{messages[labelKey]}</h3>
+            <ToolCopyButton
+              value={digest?.[key] ?? ""}
+              copyLabel={messages.copyResultLabel}
+              copiedLabel={messages.copiedLabel}
+              disabled={loading || !digest}
+            />
+          </div>
+
+          <code className="block text-xs leading-6 break-all sm:text-sm">
+            {digest?.[key] ?? ""}
+          </code>
+        </section>
       ))}
     </div>
   )
