@@ -160,7 +160,7 @@ describe("RandomNumberGeneratorClient", () => {
       target: { value: "3" },
     })
     fireEvent.click(
-      screen.getByRole("switch", { name: messages.allowRepeatLabel })
+      screen.getByRole("checkbox", { name: messages.allowRepeatLabel })
     )
 
     await waitFor(() => {
@@ -174,6 +174,10 @@ describe("RandomNumberGeneratorClient", () => {
     render(<RandomNumberGeneratorClient messages={messages} />)
 
     fireEvent.click(screen.getByText(messages.decimalLabel))
+
+    expect(screen.getByLabelText(messages.minLabel)).toBeTruthy()
+    expect(screen.getByLabelText(messages.maxLabel)).toBeTruthy()
+
     fireEvent.change(screen.getByLabelText(messages.minLabel), {
       target: { value: "1.5" },
     })
@@ -207,7 +211,7 @@ describe("RandomNumberGeneratorClient", () => {
       "6"
     )
     expect(
-      screen.getByRole("switch", { name: messages.allowRepeatLabel })
+      screen.getByRole("checkbox", { name: messages.allowRepeatLabel })
     ).toHaveProperty("dataset", expect.objectContaining({ state: "unchecked" }))
   })
 
@@ -276,7 +280,7 @@ describe("RandomNumberGeneratorClient", () => {
       "3"
     )
     expect(
-      screen.getByRole("switch", { name: messages.allowRepeatLabel })
+      screen.getByRole("checkbox", { name: messages.allowRepeatLabel })
     ).toHaveProperty("dataset", expect.objectContaining({ state: "unchecked" }))
   })
 })

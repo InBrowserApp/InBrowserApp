@@ -1,12 +1,11 @@
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
+import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import { Download, RefreshCcw } from "@workspace/ui/icons"
 
 import type { RandomNumberGeneratorMessages } from "../types"
@@ -35,14 +34,14 @@ function ResultsCard({
   const hasResults = formattedNumbers.length > 0
 
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.resultsTitle}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         <button
           type="button"
-          className="flex min-h-52 w-full items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-4 py-6 text-center transition-colors hover:border-primary/40 hover:bg-muted/40 disabled:cursor-default disabled:hover:border-border disabled:hover:bg-muted/20"
+          className="flex min-h-52 w-full flex-1 items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-4 py-6 text-center transition-colors hover:border-primary/40 hover:bg-muted/40 disabled:cursor-default disabled:hover:border-border disabled:hover:bg-muted/20"
           disabled={!hasResults}
           onClick={onOpenFullscreen}
         >
@@ -67,8 +66,8 @@ function ResultsCard({
             </span>
           )}
         </button>
-      </CardContent>
-      <CardFooter className="flex flex-wrap items-center gap-2 border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="flex flex-wrap items-center gap-2 border-t">
         <Button
           type="button"
           size="sm"
@@ -113,8 +112,8 @@ function ResultsCard({
         >
           {messages.enterFullscreenLabel}
         </Button>
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 

@@ -1,13 +1,13 @@
 import type { ChangeEvent } from "react"
 
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
+import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import {
   Field,
   FieldContent,
@@ -16,7 +16,6 @@ import {
   FieldSet,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import {
   ToggleGroup,
   ToggleGroupItem,
@@ -78,11 +77,11 @@ function OptionsCard({
   const activeError = rangeError || countError
 
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.optionsTitle}</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <ToolPanelCardContent className="gap-6">
         <FieldSet>
           <div className="space-y-3">
             <div className="text-sm font-medium text-muted-foreground">
@@ -181,16 +180,20 @@ function OptionsCard({
 
             <Field
               orientation="horizontal"
-              className="justify-between rounded-lg border p-3"
+              className="items-center gap-3 md:pt-8"
             >
-              <FieldLabel htmlFor={`${countId}-repeat`}>
-                {messages.allowRepeatLabel}
-              </FieldLabel>
-              <Switch
+              <Checkbox
                 id={`${countId}-repeat`}
                 checked={allowRepeat}
-                onCheckedChange={onAllowRepeatChange}
+                onCheckedChange={(checked) => {
+                  onAllowRepeatChange(Boolean(checked))
+                }}
               />
+              <FieldContent>
+                <FieldLabel htmlFor={`${countId}-repeat`}>
+                  {messages.allowRepeatLabel}
+                </FieldLabel>
+              </FieldContent>
             </Field>
           </FieldGroup>
 
@@ -243,8 +246,8 @@ function OptionsCard({
             <AlertDescription>{activeError}</AlertDescription>
           </Alert>
         ) : null}
-      </CardContent>
-    </Card>
+      </ToolPanelCardContent>
+    </ToolPanelCard>
   )
 }
 

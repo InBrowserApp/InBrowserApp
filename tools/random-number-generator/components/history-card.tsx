@@ -1,10 +1,9 @@
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
+  ToolPanelCard,
+  ToolPanelCardContent,
+} from "@workspace/ui/components/tool/tool-panel-card"
+import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 
 import type { HistoryEntry, RandomNumberGeneratorMessages } from "../types"
 
@@ -20,7 +19,7 @@ function HistoryCard({
   onClearHistory,
 }: HistoryCardProps) {
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="flex flex-row items-center justify-between gap-3 border-b">
         <CardTitle>{messages.historyTitle}</CardTitle>
         <Button
@@ -33,7 +32,7 @@ function HistoryCard({
           {messages.clearHistoryLabel}
         </Button>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         {historyEntries.length === 0 ? (
           <div className="rounded-xl border border-dashed border-border px-4 py-6 text-sm text-muted-foreground">
             {messages.historyEmptyLabel}
@@ -59,8 +58,8 @@ function HistoryCard({
             ))}
           </div>
         )}
-      </CardContent>
-    </Card>
+      </ToolPanelCardContent>
+    </ToolPanelCard>
   )
 }
 
