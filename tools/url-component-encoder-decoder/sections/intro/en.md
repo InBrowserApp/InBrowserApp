@@ -5,13 +5,13 @@ URL encoding (also called percent encoding) is a method to convert special chara
 **How it works:**
 
 - Special characters are converted to `%` followed by their hexadecimal ASCII code
-- Example: a space becomes `%20`, `{'@'}` becomes `%40`
+- Example: a space becomes `%20`, `@` becomes `%40`
 - Only letters (A-Z, a-z), numbers (0-9), and some symbols (- \_ . ~) don't need encoding
 
 **Common examples:**
 
 - Space → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

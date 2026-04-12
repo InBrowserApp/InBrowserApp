@@ -5,13 +5,13 @@ La codifica URL (chiamata anche codifica percentuale) è un metodo per convertir
 **Come funziona:**
 
 - I caratteri speciali vengono convertiti in `%` seguito dal loro codice ASCII esadecimale
-- Esempio: uno spazio diventa `%20`, `{'@'}` diventa `%40`
+- Esempio: uno spazio diventa `%20`, `@` diventa `%40`
 - Solo lettere (A-Z, a-z), numeri (0-9) e alcuni simboli (- \_ . ~) non necessitano codifica
 
 **Esempi comuni:**
 
 - Spazio → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

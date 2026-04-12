@@ -5,13 +5,13 @@ Kodowanie URL (nazywane także kodowaniem procentowym) to metoda konwersji znak�
 **Jak to działa:**
 
 - Znaki specjalne są konwertowane na `%` a następnie ich szesnastkowy kod ASCII
-- Przykład: spacja staje się `%20`, `{'@'}` staje się `%40`
+- Przykład: spacja staje się `%20`, `@` staje się `%40`
 - Tylko litery (A-Z, a-z), cyfry (0-9) i niektóre symbole (- \_ . ~) nie wymagają kodowania
 
 **Typowe przykłady:**
 
 - Spacja → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

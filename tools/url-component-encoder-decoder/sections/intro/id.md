@@ -5,13 +5,13 @@ URL encoding (juga disebut percent encoding) adalah metode untuk mengkonversi ka
 **Cara kerjanya:**
 
 - Karakter khusus dikonversi ke `%` diikuti oleh kode ASCII heksadesimal mereka
-- Contoh: spasi menjadi `%20`, `{'@'}` menjadi `%40`
+- Contoh: spasi menjadi `%20`, `@` menjadi `%40`
 - Hanya huruf (A-Z, a-z), angka (0-9), dan beberapa simbol (- \_ . ~) yang tidak perlu encoding
 
 **Contoh umum:**
 
 - Spasi → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

@@ -5,13 +5,13 @@ URL encoding (juga dipanggil percent encoding) adalah kaedah untuk menukar aksar
 **Bagaimana ia berfungsi:**
 
 - Aksara khas ditukar kepada `%` diikuti dengan kod ASCII heksadesimal mereka
-- Contoh: ruang menjadi `%20`, `{'@'}` menjadi `%40`
+- Contoh: ruang menjadi `%20`, `@` menjadi `%40`
 - Hanya huruf (A-Z, a-z), nombor (0-9), dan beberapa simbol (- \_ . ~) yang tidak memerlukan pengkodan
 
 **Contoh biasa:**
 
 - Ruang → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

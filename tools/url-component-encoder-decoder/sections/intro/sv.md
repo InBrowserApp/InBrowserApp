@@ -5,13 +5,13 @@ URL-kodning (även kallad procentkodning) är en metod för att konvertera speci
 **Hur det fungerar:**
 
 - Specialtecken konverteras till `%` följt av deras hexadecimala ASCII-kod
-- Exempel: ett mellanslag blir `%20`, `{'@'}` blir `%40`
+- Exempel: ett mellanslag blir `%20`, `@` blir `%40`
 - Endast bokstäver (A-Z, a-z), siffror (0-9) och vissa symboler (- \_ . ~) behöver inte kodas
 
 **Vanliga exempel:**
 
 - Mellanslag → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

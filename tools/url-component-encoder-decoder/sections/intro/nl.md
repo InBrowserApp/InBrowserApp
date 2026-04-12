@@ -5,13 +5,13 @@ URL-codering (ook wel procentcodering genoemd) is een methode om speciale tekens
 **Hoe het werkt:**
 
 - Speciale tekens worden omgezet naar `%` gevolgd door hun hexadecimale ASCII-code
-- Voorbeeld: een spatie wordt `%20`, `{'@'}` wordt `%40`
+- Voorbeeld: een spatie wordt `%20`, `@` wordt `%40`
 - Alleen letters (A-Z, a-z), cijfers (0-9) en enkele symbolen (- \_ . ~) hoeven niet gecodeerd te worden
 
 **Veel voorkomende voorbeelden:**
 
 - Spatie → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

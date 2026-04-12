@@ -5,13 +5,13 @@ URL-koding (også kalt prosentkoding) er en metode for å konvertere spesialtegn
 **Hvordan det fungerer:**
 
 - Spesialtegn konverteres til `%` etterfulgt av deres heksadesimale ASCII-kode
-- Eksempel: et mellomrom blir `%20`, `{'@'}` blir `%40`
+- Eksempel: et mellomrom blir `%20`, `@` blir `%40`
 - Bare bokstaver (A-Z, a-z), tall (0-9) og noen symboler (- \_ . ~) trenger ikke koding
 
 **Vanlige eksempler:**
 
 - Mellomrom → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

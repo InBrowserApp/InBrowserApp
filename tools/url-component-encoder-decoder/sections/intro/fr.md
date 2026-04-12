@@ -5,13 +5,13 @@ L'encodage URL (aussi appelé encodage par pourcentage) est une méthode pour co
 **Comment ça fonctionne :**
 
 - Les caractères spéciaux sont convertis en `%` suivi de leur code ASCII hexadécimal
-- Exemple : un espace devient `%20`, `{'@'}` devient `%40`
+- Exemple : un espace devient `%20`, `@` devient `%40`
 - Seules les lettres (A-Z, a-z), les chiffres (0-9) et certains symboles (- \_ . ~) n'ont pas besoin d'encodage
 
 **Exemples courants :**
 
 - Espace → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

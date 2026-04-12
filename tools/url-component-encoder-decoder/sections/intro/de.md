@@ -5,13 +5,13 @@ URL-Codierung (auch Prozent-Codierung genannt) ist eine Methode, um Sonderzeiche
 **Wie es funktioniert:**
 
 - Sonderzeichen werden zu `%` gefolgt von ihrem hexadezimalen ASCII-Code konvertiert
-- Beispiel: ein Leerzeichen wird zu `%20`, `{'@'}` wird zu `%40`
+- Beispiel: ein Leerzeichen wird zu `%20`, `@` wird zu `%40`
 - Nur Buchstaben (A-Z, a-z), Zahlen (0-9) und einige Symbole (- \_ . ~) benötigen keine Codierung
 
 **Häufige Beispiele:**
 
 - Leerzeichen → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

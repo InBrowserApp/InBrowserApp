@@ -5,13 +5,13 @@ Mã hóa URL (còn gọi là mã hóa phần trăm) là một phương thức ch
 **Cách hoạt động:**
 
 - Các ký tự đặc biệt được chuyển đổi thành `%` theo sau là mã ASCII thập lục phân của chúng
-- Ví dụ: dấu cách trở thành `%20`, `{'@'}` trở thành `%40`
+- Ví dụ: dấu cách trở thành `%20`, `@` trở thành `%40`
 - Chỉ các chữ cái (A-Z, a-z), số (0-9) và một số ký hiệu (- \_ . ~) không cần mã hóa
 
 **Ví dụ phổ biến:**
 
 - Dấu cách → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

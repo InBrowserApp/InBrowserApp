@@ -5,13 +5,13 @@ La codificación URL (también llamada codificación por porcentajes) es un mét
 **Cómo funciona:**
 
 - Los caracteres especiales se convierten a `%` seguido de su código ASCII hexadecimal
-- Ejemplo: un espacio se convierte en `%20`, `{'@'}` se convierte en `%40`
+- Ejemplo: un espacio se convierte en `%20`, `@` se convierte en `%40`
 - Solo las letras (A-Z, a-z), números (0-9) y algunos símbolos (- \_ . ~) no necesitan codificación
 
 **Ejemplos comunes:**
 
 - Espacio → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`

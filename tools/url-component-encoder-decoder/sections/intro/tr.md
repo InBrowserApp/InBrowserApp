@@ -5,13 +5,13 @@ URL kodlaması (yüzde kodlaması olarak da adlandırılır) özel karakterleri 
 **Nasıl çalışır:**
 
 - Özel karakterler `%` ve ardından onaltılık ASCII kodlarına dönüştürülür
-- Örnek: boşluk `%20` olur, `{'@'}` `%40` olur
+- Örnek: boşluk `%20` olur, `@` `%40` olur
 - Sadece harfler (A-Z, a-z), sayılar (0-9) ve bazı semboller (- \_ . ~) kodlama gerektirmez
 
 **Yaygın örnekler:**
 
 - Boşluk → `%20`
-- `{'@'}` → `%40`
+- `@` → `%40`
 - `#` → `%23`
 - `&` → `%26`
 - `?` → `%3F`
