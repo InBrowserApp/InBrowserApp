@@ -1,6 +1,6 @@
-## ¿Qué es Prettier Code Formatter?
+## ¿Qué es el formateador de código Prettier?
 
-Prettier Code Formatter ejecuta la versión oficial independiente de Prettier
+El formateador de código Prettier ejecuta la versión oficial independiente de Prettier
 directamente en tu navegador para que puedas normalizar archivos fuente sin
 enviar el código a un servidor. Es útil cuando necesitas un formateo rápido,
 quieres comparar distintos ajustes de impresión o necesitas un archivo limpio

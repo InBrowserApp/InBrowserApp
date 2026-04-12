@@ -1,6 +1,6 @@
-## Wat is Prettier Code Formatter?
+## Wat is Prettier-codeformatter?
 
-Prettier Code Formatter draait de officiële Prettier-standalone pipeline direct
+Prettier-codeformatter draait de officiële Prettier-standalone pipeline direct
 in je browser, zodat je bronbestanden kunt normaliseren zonder code naar een
 server te sturen. Het is handig wanneer je snel wilt formatteren, verschillende
 printinstellingen wilt vergelijken, of meteen een schoon bestand wilt kopiëren

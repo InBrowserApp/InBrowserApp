@@ -1,6 +1,6 @@
-## Prettier Code Formatter とは?
+## Prettier コードフォーマッターとは?
 
-Prettier Code Formatter は、公式の Prettier standalone パイプラインを
+Prettier コードフォーマッターは、公式の Prettier standalone パイプラインを
 ブラウザ内で直接実行し、コードをサーバーに送らずにソースファイルを
 整形できます。すばやく整形したいとき、さまざまな行幅設定を比較したいとき、
 あるいはすぐにコピーやダウンロードできるきれいなファイルが欲しいときに便利です。

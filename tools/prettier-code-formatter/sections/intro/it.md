@@ -1,6 +1,6 @@
-## Cos'è Prettier Code Formatter?
+## Cos'è Formatter di codice Prettier?
 
-Prettier Code Formatter esegue direttamente nel browser la pipeline ufficiale
+Formatter di codice Prettier esegue direttamente nel browser la pipeline ufficiale
 standalone di Prettier, così puoi normalizzare i file sorgente senza inviare il
 codice a un server. È utile quando ti serve una formattazione rapida, vuoi
 confrontare diverse impostazioni di stampa oppure hai bisogno subito di un file

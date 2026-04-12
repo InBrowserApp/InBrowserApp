@@ -1,6 +1,6 @@
-## Apa Itu Prettier Code Formatter?
+## Apa Itu Pemformat Kode Prettier?
 
-Prettier Code Formatter menjalankan pipeline resmi Prettier standalone langsung
+Pemformat Kode Prettier menjalankan pipeline resmi Prettier standalone langsung
 di browser Anda, sehingga Anda bisa menormalkan file sumber tanpa mengirim kode
 ke server. Ini berguna saat Anda ingin melakukan pemformatan cepat, membandingkan
 pengaturan lebar baris yang berbeda, atau membutuhkan file bersih yang bisa
@@ -20,5 +20,5 @@ Rewrite ini menjaga logika pemformatan berat tetap di luar jalur UI utama.
 Permintaan pemformatan dibangun dari konfigurasi tool yang murni, lalu dijalankan
 melalui pipeline Prettier berbasis worker yang diload secara lazy agar pengetikan
 biasa tetap responsif. Input besar menjeda pemformatan otomatis dan beralih ke
-aksi eksplisit `Format now`, yang lebih dapat diprediksi daripada mencoba
+aksi eksplisit `Format sekarang`, yang lebih dapat diprediksi daripada mencoba
 memformat ulang file besar pada setiap penekanan tombol.

@@ -1,6 +1,6 @@
-## Vad är Prettier Code Formatter?
+## Vad är Prettier-kodformaterare?
 
-Prettier Code Formatter kör den officiella Prettier-stacken direkt i
+Prettier-kodformaterare kör den officiella Prettier-stacken direkt i
 webbläsaren så att du kan normalisera källfiler utan att skicka kod till en
 server. Det är användbart när du vill göra en snabb formateringskörning, jämföra
 olika radbreddsinställningar eller direkt få en ren fil som du kan kopiera eller

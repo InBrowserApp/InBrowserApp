@@ -1,6 +1,6 @@
-## Hva er Prettier Code Formatter?
+## Hva er Prettier-kodeformatterer?
 
-Prettier Code Formatter kjører den offisielle Prettier-standalone-pipelinen
+Prettier-kodeformatterer kjører den offisielle Prettier-standalone-pipelinen
 direkte i nettleseren, slik at du kan normalisere kildefiler uten å sende kode
 til en server. Det er nyttig når du vil ha en rask formateringsrunde, vil
 sammenligne ulike linjelengdevalg, eller trenger en ren fil du kan kopiere

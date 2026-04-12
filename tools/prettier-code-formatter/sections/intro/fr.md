@@ -1,6 +1,6 @@
-## Qu’est-ce que Prettier Code Formatter ?
+## Qu’est-ce que le formateur de code Prettier ?
 
-Prettier Code Formatter exécute directement dans votre navigateur le pipeline
+Le formateur de code Prettier exécute directement dans votre navigateur le pipeline
 officiel standalone de Prettier afin de normaliser des fichiers source sans
 envoyer le code à un serveur. C’est utile lorsque vous avez besoin d’un
 formatage rapide, que vous voulez comparer différents réglages de largeur de
