@@ -13,6 +13,7 @@
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/image-resizer": "workspace:*",
+    "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",
     "@tool/json-formatter": "workspace:*",

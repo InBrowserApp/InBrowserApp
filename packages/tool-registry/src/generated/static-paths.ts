@@ -554,6 +554,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "isbn-validator",
+    language: "ar",
+  },
+  {
+    slug: "isbn-validator",
+    language: "de",
+  },
+  {
+    slug: "isbn-validator",
+    language: "en",
+  },
+  {
+    slug: "isbn-validator",
+    language: "es",
+  },
+  {
+    slug: "isbn-validator",
+    language: "fr",
+  },
+  {
+    slug: "isbn-validator",
+    language: "he",
+  },
+  {
+    slug: "isbn-validator",
+    language: "hi",
+  },
+  {
+    slug: "isbn-validator",
+    language: "id",
+  },
+  {
+    slug: "isbn-validator",
+    language: "it",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ja",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ko",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ms",
+  },
+  {
+    slug: "isbn-validator",
+    language: "nl",
+  },
+  {
+    slug: "isbn-validator",
+    language: "no",
+  },
+  {
+    slug: "isbn-validator",
+    language: "pl",
+  },
+  {
+    slug: "isbn-validator",
+    language: "pt",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ru",
+  },
+  {
+    slug: "isbn-validator",
+    language: "sv",
+  },
+  {
+    slug: "isbn-validator",
+    language: "th",
+  },
+  {
+    slug: "isbn-validator",
+    language: "tr",
+  },
+  {
+    slug: "isbn-validator",
+    language: "vi",
+  },
+  {
+    slug: "isbn-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "isbn-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "jmespath-tester",
     language: "ar",
   },
