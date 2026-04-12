@@ -1382,6 +1382,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sha256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },
