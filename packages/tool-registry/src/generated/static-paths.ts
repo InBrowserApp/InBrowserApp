@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-invisible-character-checker",
+    language: "ar",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "de",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "en",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "es",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "fr",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "he",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "hi",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "id",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "it",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ja",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ko",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ms",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "nl",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "no",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "pl",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "pt",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ru",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "sv",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "th",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "tr",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "vi",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "url-component-encoder-decoder",
     language: "ar",
   },

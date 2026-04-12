@@ -31,6 +31,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "text-statistics": () => import("@tool/text-statistics/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "unicode-invisible-character-checker": () =>
+    import("@tool/unicode-invisible-character-checker/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),

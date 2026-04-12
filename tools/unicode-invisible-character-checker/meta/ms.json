@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa aksara tidak kelihatan Unicode",
+  "description": "Mengesan aksara lebar sifar, kawalan bidi dan ruang khas, dan mengeksport versi yang dibersihkan."
+}

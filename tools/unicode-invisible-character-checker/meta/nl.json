@@ -1,0 +1,4 @@
+{
+  "name": "Unicode onzichtbare-tekenscontrole",
+  "description": "Detecteert nulbreedte-, bidi-besturing- en speciale spatie-tekens en exporteert een opgeschoonde versie."
+}
