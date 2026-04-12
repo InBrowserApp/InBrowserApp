@@ -93,11 +93,7 @@ function stripJpegMetadata(bytes: Uint8Array) {
   let offset = 2
 
   while (offset < bytes.length) {
-    const current = bytes[offset]
-    if (current === undefined) {
-      chunks.push(bytes.slice(offset))
-      break
-    }
+    const current = bytes[offset]!
 
     if (current !== 0xff) {
       chunks.push(bytes.slice(offset))
@@ -127,14 +123,7 @@ function stripJpegMetadata(bytes: Uint8Array) {
       break
     }
 
-    const lengthHigh = bytes[offset + 2]
-    const lengthLow = bytes[offset + 3]
-    if (lengthHigh === undefined || lengthLow === undefined) {
-      chunks.push(bytes.slice(offset))
-      break
-    }
-
-    const length = (lengthHigh << 8) | lengthLow
+    const length = (bytes[offset + 2]! << 8) | bytes[offset + 3]!
     if (length < 2) {
       chunks.push(bytes.slice(offset))
       break
@@ -165,10 +154,6 @@ function isJpegMetadataMarker(marker: number) {
 }
 
 function stripPngMetadata(bytes: Uint8Array) {
-  if (!matchesSignature(bytes, PNG_SIGNATURE)) {
-    return bytes
-  }
-
   const chunks: Uint8Array[] = [bytes.slice(0, PNG_SIGNATURE.length)]
   let offset = PNG_SIGNATURE.length
 
@@ -204,13 +189,6 @@ function isPngMetadataChunk(type: string) {
 }
 
 function stripWebpMetadata(bytes: Uint8Array) {
-  if (
-    !matchesSignature(bytes, RIFF_HEADER) ||
-    !matchesSignature(bytes.subarray(8), WEBP_HEADER)
-  ) {
-    return bytes
-  }
-
   const header = bytes.slice(0, 12)
   const chunks: Uint8Array[] = []
   let offset = 12
@@ -256,28 +234,24 @@ function concatUint8Arrays(chunks: Uint8Array[]) {
 }
 
 function readUint32BE(bytes: Uint8Array, offset: number) {
-  const b0 = bytes[offset] ?? 0
-  const b1 = bytes[offset + 1] ?? 0
-  const b2 = bytes[offset + 2] ?? 0
-  const b3 = bytes[offset + 3] ?? 0
+  const b0 = bytes[offset]!
+  const b1 = bytes[offset + 1]!
+  const b2 = bytes[offset + 2]!
+  const b3 = bytes[offset + 3]!
 
   return ((b0 << 24) | (b1 << 16) | (b2 << 8) | b3) >>> 0
 }
 
 function readUint32LE(bytes: Uint8Array, offset: number) {
-  const b0 = bytes[offset] ?? 0
-  const b1 = bytes[offset + 1] ?? 0
-  const b2 = bytes[offset + 2] ?? 0
-  const b3 = bytes[offset + 3] ?? 0
+  const b0 = bytes[offset]!
+  const b1 = bytes[offset + 1]!
+  const b2 = bytes[offset + 2]!
+  const b3 = bytes[offset + 3]!
 
   return (b0 | (b1 << 8) | (b2 << 16) | (b3 << 24)) >>> 0
 }
 
 function writeUint32LE(bytes: Uint8Array, offset: number, value: number) {
-  if (offset + 3 >= bytes.length) {
-    return
-  }
-
   bytes[offset] = value & 0xff
   bytes[offset + 1] = (value >> 8) & 0xff
   bytes[offset + 2] = (value >> 16) & 0xff
