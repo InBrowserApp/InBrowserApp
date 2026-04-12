@@ -1,0 +1,42 @@
+.prettier-highlight {
+  margin: 0;
+  min-width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.prettier-highlight code {
+  display: block;
+}
+
+.prettier-highlight .hljs {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.prettier-highlight .hljs-comment {
+  color: color-mix(in oklab, var(--foreground) 44%, transparent);
+}
+
+.prettier-highlight .hljs-keyword,
+.prettier-highlight .hljs-operator,
+.prettier-highlight .hljs-selector-tag {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.prettier-highlight .hljs-title.class_,
+.prettier-highlight .hljs-title.function_,
+.prettier-highlight .hljs-attribute,
+.prettier-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.prettier-highlight .hljs-string,
+.prettier-highlight .hljs-literal,
+.prettier-highlight .hljs-number {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}

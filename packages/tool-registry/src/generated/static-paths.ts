@@ -1658,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "prettier-code-formatter",
+    language: "ar",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "de",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "en",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "es",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "fr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "he",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "hi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "id",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "it",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ja",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ko",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ms",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "nl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "no",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pt",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ru",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "sv",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "th",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "tr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "vi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-CN",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },

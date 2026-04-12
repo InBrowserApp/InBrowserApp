@@ -1,0 +1,11 @@
+## 什么是 Prettier 代码格式化工具？
+
+Prettier 代码格式化工具会直接在浏览器中运行官方 Prettier standalone 流程，因此你可以在不把代码发送到服务器的情况下整理源文件。它适合快速跑一遍格式化、比较不同行宽设置，或者马上复制、下载一份干净的结果文件。
+
+## 支持的格式
+
+这个重写版本把工具聚焦在 Prettier 已经能在浏览器中稳定处理的格式：JavaScript、JSX、TypeScript、TSX、Flow、各类 JSON、HTML、XML、CSS、PostCSS、SCSS、Less、Markdown、MDX、YAML、GraphQL，以及 Angular、Vue、Svelte、LWC、MJML、Handlebars 这类模板格式。语言选择器决定运行哪个解析器，导入文件时只要扩展名能被识别，就会自动检测解析器。
+
+## 这个重写是如何工作的
+
+这个重写把繁重的格式化逻辑留在主 UI 路径之外。格式化请求会先根据工具内的纯配置生成，再交给按需加载的 worker 执行 Prettier 流程，这样正常输入时编辑仍然保持流畅。对于大输入，自动格式化会暂停，并切换为显式的 `立即格式化` 操作，这比在每次按键时都重新格式化整份大文件更可控。

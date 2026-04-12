@@ -2185,6 +2185,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "prettier-code-formatter",
+    category: "developer",
+    icon: "braces",
+    tags: [
+      "code",
+      "formatter",
+      "prettier",
+      "javascript",
+      "typescript",
+      "json",
+      "html",
+      "css",
+      "markdown",
+      "yaml",
+    ],
+    locales: {
+      ar: {
+        name: "منسق كود Prettier",
+        description:
+          "نسق ملفات JavaScript وTypeScript وJSON وHTML وCSS وMarkdown وYAML وGraphQL والملفات المرتبطة بها باستخدام Prettier مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Prettier-Code-Formatierer",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL und verwandte Dateien direkt im Browser mit Prettier formatieren.",
+      },
+      en: {
+        name: "Prettier Code Formatter",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, and related files with Prettier directly in your browser.",
+      },
+      es: {
+        name: "Formateador de código Prettier",
+        description:
+          "Da formato con Prettier directamente en el navegador a JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL y archivos relacionados.",
+      },
+      fr: {
+        name: "Formatteur de code Prettier",
+        description:
+          "Formatez JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL et les fichiers associés avec Prettier directement dans votre navigateur.",
+      },
+      he: {
+        name: "מפרמט קוד Prettier",
+        description:
+          "עצבו JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL וקבצים קרובים להם ישירות בדפדפן עם Prettier.",
+      },
+      hi: {
+        name: "Prettier कोड फ़ॉर्मैटर",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL और संबंधित फ़ाइलों को अपने ब्राउज़र में सीधे Prettier से फ़ॉर्मैट करें।",
+      },
+      id: {
+        name: "Pemformat Kode Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, dan file terkait dengan Prettier langsung di browser Anda.",
+      },
+      it: {
+        name: "Formatter di codice Prettier",
+        description:
+          "Formatta JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e file correlati con Prettier direttamente nel browser.",
+      },
+      ja: {
+        name: "Prettier コードフォーマッター",
+        description:
+          "Prettier を使って JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL などの関連ファイルをブラウザ上で直接整形します。",
+      },
+      ko: {
+        name: "Prettier 코드 포맷터",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL 및 관련 파일을 브라우저에서 Prettier로 바로 포맷합니다.",
+      },
+      ms: {
+        name: "Pemformat Kod Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL dan fail berkaitan dengan Prettier terus di pelayar anda.",
+      },
+      nl: {
+        name: "Prettier-codeformatter",
+        description:
+          "Formatteer JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL en verwante bestanden rechtstreeks in je browser met Prettier.",
+      },
+      no: {
+        name: "Prettier-kodeformatterer",
+        description:
+          "Formater JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL og relaterte filer med Prettier direkte i nettleseren.",
+      },
+      pl: {
+        name: "Formatowanie kodu Prettier",
+        description:
+          "Formatuj JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL i powiązane pliki za pomocą Prettier bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Formatador de Código Prettier",
+        description:
+          "Formate JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e arquivos relacionados com o Prettier diretamente no navegador.",
+      },
+      ru: {
+        name: "Форматировщик кода Prettier",
+        description:
+          "Форматируйте JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL и связанные файлы с помощью Prettier прямо в браузере.",
+      },
+      sv: {
+        name: "Prettier-kodformaterare",
+        description:
+          "Formatera JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL och relaterade filer med Prettier direkt i webbläsaren.",
+      },
+      th: {
+        name: "Prettier ตัวจัดรูปแบบโค้ด",
+        description:
+          "จัดรูปแบบ JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL และไฟล์ที่เกี่ยวข้องด้วย Prettier ได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Prettier Kod Biçimlendirici",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL ve ilgili dosyaları doğrudan tarayıcınızda Prettier ile biçimlendirin.",
+      },
+      vi: {
+        name: "Trình định dạng mã Prettier",
+        description:
+          "Định dạng JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL và các tệp liên quan bằng Prettier ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Prettier 代码格式化工具",
+        description:
+          "直接在浏览器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
+      },
+      "zh-TW": {
+        name: "Prettier 程式碼格式化工具",
+        description:
+          "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  {
     slug: "rot-cipher",
     category: "web",
     icon: "lock",
@@ -5726,6 +5860,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  "prettier-code-formatter": {
+    slug: "prettier-code-formatter",
+    category: "developer",
+    icon: "braces",
+    tags: [
+      "code",
+      "formatter",
+      "prettier",
+      "javascript",
+      "typescript",
+      "json",
+      "html",
+      "css",
+      "markdown",
+      "yaml",
+    ],
+    locales: {
+      ar: {
+        name: "منسق كود Prettier",
+        description:
+          "نسق ملفات JavaScript وTypeScript وJSON وHTML وCSS وMarkdown وYAML وGraphQL والملفات المرتبطة بها باستخدام Prettier مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Prettier-Code-Formatierer",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL und verwandte Dateien direkt im Browser mit Prettier formatieren.",
+      },
+      en: {
+        name: "Prettier Code Formatter",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, and related files with Prettier directly in your browser.",
+      },
+      es: {
+        name: "Formateador de código Prettier",
+        description:
+          "Da formato con Prettier directamente en el navegador a JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL y archivos relacionados.",
+      },
+      fr: {
+        name: "Formatteur de code Prettier",
+        description:
+          "Formatez JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL et les fichiers associés avec Prettier directement dans votre navigateur.",
+      },
+      he: {
+        name: "מפרמט קוד Prettier",
+        description:
+          "עצבו JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL וקבצים קרובים להם ישירות בדפדפן עם Prettier.",
+      },
+      hi: {
+        name: "Prettier कोड फ़ॉर्मैटर",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL और संबंधित फ़ाइलों को अपने ब्राउज़र में सीधे Prettier से फ़ॉर्मैट करें।",
+      },
+      id: {
+        name: "Pemformat Kode Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, dan file terkait dengan Prettier langsung di browser Anda.",
+      },
+      it: {
+        name: "Formatter di codice Prettier",
+        description:
+          "Formatta JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e file correlati con Prettier direttamente nel browser.",
+      },
+      ja: {
+        name: "Prettier コードフォーマッター",
+        description:
+          "Prettier を使って JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL などの関連ファイルをブラウザ上で直接整形します。",
+      },
+      ko: {
+        name: "Prettier 코드 포맷터",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL 및 관련 파일을 브라우저에서 Prettier로 바로 포맷합니다.",
+      },
+      ms: {
+        name: "Pemformat Kod Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL dan fail berkaitan dengan Prettier terus di pelayar anda.",
+      },
+      nl: {
+        name: "Prettier-codeformatter",
+        description:
+          "Formatteer JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL en verwante bestanden rechtstreeks in je browser met Prettier.",
+      },
+      no: {
+        name: "Prettier-kodeformatterer",
+        description:
+          "Formater JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL og relaterte filer med Prettier direkte i nettleseren.",
+      },
+      pl: {
+        name: "Formatowanie kodu Prettier",
+        description:
+          "Formatuj JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL i powiązane pliki za pomocą Prettier bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Formatador de Código Prettier",
+        description:
+          "Formate JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e arquivos relacionados com o Prettier diretamente no navegador.",
+      },
+      ru: {
+        name: "Форматировщик кода Prettier",
+        description:
+          "Форматируйте JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL и связанные файлы с помощью Prettier прямо в браузере.",
+      },
+      sv: {
+        name: "Prettier-kodformaterare",
+        description:
+          "Formatera JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL och relaterade filer med Prettier direkt i webbläsaren.",
+      },
+      th: {
+        name: "Prettier ตัวจัดรูปแบบโค้ด",
+        description:
+          "จัดรูปแบบ JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL และไฟล์ที่เกี่ยวข้องด้วย Prettier ได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Prettier Kod Biçimlendirici",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL ve ilgili dosyaları doğrudan tarayıcınızda Prettier ile biçimlendirin.",
+      },
+      vi: {
+        name: "Trình định dạng mã Prettier",
+        description:
+          "Định dạng JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL và các tệp liên quan bằng Prettier ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Prettier 代码格式化工具",
+        description:
+          "直接在浏览器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
+      },
+      "zh-TW": {
+        name: "Prettier 程式碼格式化工具",
+        description:
+          "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
       },
     },
   },
