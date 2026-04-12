@@ -165,6 +165,10 @@ function calculateTextStats(text: string): TextStats {
 }
 
 function formatTime(minutes: number) {
+  if (minutes <= 0) {
+    return "0s"
+  }
+
   if (minutes < 1) {
     return `${Math.max(1, Math.round(minutes * 60))}s`
   }

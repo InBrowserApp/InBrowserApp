@@ -129,6 +129,10 @@ describe("calculateTextStats", () => {
 })
 
 describe("formatTime", () => {
+  test("formats empty durations as zero seconds", () => {
+    expect(formatTime(0)).toBe("0s")
+  })
+
   test("formats durations under a minute as seconds", () => {
     expect(formatTime(0.1)).toBe("6s")
   })

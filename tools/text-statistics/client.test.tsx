@@ -64,7 +64,7 @@ describe("TextStatisticsClient", () => {
     ).toBe("")
     expect(screen.getByText(messages.snapshotTitle)).toBeTruthy()
     expect(screen.getAllByText("0")).not.toHaveLength(0)
-    expect(screen.getAllByText("1s")).toHaveLength(2)
+    expect(screen.getAllByText("0s")).toHaveLength(2)
     expect(screen.getByText(messages.repeatedTermsEmpty)).toBeTruthy()
   })
 
