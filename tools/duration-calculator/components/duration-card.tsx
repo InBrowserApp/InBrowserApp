@@ -1,9 +1,11 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
-  Card,
-  CardContent,
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
+import {
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -35,12 +37,12 @@ function DurationCard({
   onDurationPartChange,
 }: DurationCardProps) {
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.durationLabel}</CardTitle>
         <CardDescription>{messages.durationHint}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <ToolPanelCardContent className="gap-4">
         <div className="grid gap-2">
           <Label htmlFor="duration-calculator-iso-input">
             {messages.durationIsoLabel}
@@ -84,16 +86,16 @@ function DurationCard({
             </div>
           ))}
         </div>
-      </CardContent>
-      <CardFooter className="justify-end border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="justify-end border-t">
         <ToolCopyButton
           value={normalizedDurationIso}
           copyLabel={messages.copyLabel}
           copiedLabel={messages.copiedLabel}
           variant="ghost"
         />
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 

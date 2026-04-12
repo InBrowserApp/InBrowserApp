@@ -1,10 +1,12 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -26,12 +28,12 @@ function BaseTimeCard({
   onSetNow,
 }: BaseTimeCardProps) {
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.baseTimeLabel}</CardTitle>
         <CardDescription>{messages.formatHint}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <ToolPanelCardContent className="gap-4">
         <div className="grid gap-2">
           <Label htmlFor="duration-calculator-time-zone">
             {messages.timeZoneLabel}
@@ -76,8 +78,8 @@ function BaseTimeCard({
             {baseError ? messages.invalidDateTimeLabel : null}
           </FieldError>
         </div>
-      </CardContent>
-      <CardFooter className="justify-between gap-3 border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="justify-between gap-3 border-t">
         <ToolCopyButton
           value={baseInput}
           copyLabel={messages.copyLabel}
@@ -87,8 +89,8 @@ function BaseTimeCard({
         <Button type="button" variant="ghost" size="sm" onClick={onSetNow}>
           {messages.nowLabel}
         </Button>
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 
