@@ -11,10 +11,10 @@ function ToolArticle({ className, children }: ToolArticleProps) {
     <article
       className={cn(
         "text-sm leading-7 text-foreground/80 sm:text-base",
-        "[&_h2]:mt-10 [&_h2]:scroll-m-20 [&_h2]:font-heading [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-balance [&_h2]:text-foreground sm:[&_h2]:text-2xl",
+        "[&_h2]:mt-10 [&_h2]:scroll-m-20 [&_h2]:font-heading [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-balance [&_h2]:text-foreground",
         "[&_h2:first-child]:mt-0",
-        "[&_h3]:mt-8 [&_h3]:scroll-m-20 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:tracking-tight [&_h3]:text-foreground sm:[&_h3]:text-xl",
-        "[&_h4]:mt-6 [&_h4]:scroll-m-20 [&_h4]:font-heading [&_h4]:text-base [&_h4]:font-semibold [&_h4]:tracking-tight [&_h4]:text-foreground sm:[&_h4]:text-lg",
+        "[&_h3]:mt-8 [&_h3]:scroll-m-20 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:tracking-tight [&_h3]:text-foreground",
+        "[&_h4]:mt-6 [&_h4]:scroll-m-20 [&_h4]:font-heading [&_h4]:text-base [&_h4]:font-semibold [&_h4]:tracking-tight [&_h4]:text-foreground",
         "[&_p:not(:first-child)]:mt-5",
         "[&_blockquote]:mt-6 [&_blockquote]:border-l-2 [&_blockquote]:border-border [&_blockquote]:pl-6 [&_blockquote]:text-foreground/90 [&_blockquote]:italic",
         "[&_ul]:my-5 [&_ul]:ml-6 [&_ul]:list-disc [&_ul]:marker:text-foreground/50 [&_ul_li]:mt-2",
