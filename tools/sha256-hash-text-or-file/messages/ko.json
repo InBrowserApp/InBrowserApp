@@ -1,0 +1,13 @@
+{
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력할 수 있습니다.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hashResultLabel": "해시 결과",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "decimalLabel": "10진수",
+  "binaryLabel": "2진수",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

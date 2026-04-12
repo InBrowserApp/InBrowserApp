@@ -1,0 +1,13 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์ Hash",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว"
+}
