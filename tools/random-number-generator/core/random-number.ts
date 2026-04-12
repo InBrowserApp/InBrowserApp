@@ -256,9 +256,7 @@ export {
   DEFAULT_RANDOM_COUNT,
   DEFAULT_RANDOM_MAX,
   DEFAULT_RANDOM_MIN,
-  MAX_DECIMAL_PLACES,
   MAX_HISTORY_ITEMS,
-  MAX_RANDOM_COUNT,
   addHistoryEntry,
   applyPreset,
   formatRandomNumber,
@@ -272,4 +270,3 @@ export {
   normalizeRandomCount,
   resolveRangeInfo,
 }
-export type { RangeInfo, RandomNumberConfig }
