@@ -56,4 +56,4 @@ export {
   parseCloudflareTraceTimestamp,
   readNetworkClockTime,
 }
-export type { CreateNetworkBaselineOptions, NetworkTimeBaseline }
+export type { NetworkTimeBaseline }
