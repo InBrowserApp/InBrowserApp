@@ -4,6 +4,7 @@ type ToolPageModule = { default: AstroComponentFactory }
 type ToolPageLoader = () => Promise<ToolPageModule>
 
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
+  "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),

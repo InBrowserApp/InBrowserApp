@@ -2,6 +2,129 @@ import type { ToolSearchIndexEntry } from "../types"
 
 export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
+    slug: "ascii-art-generator",
+    category: "text",
+    icon: "sparkles",
+    tags: ["ascii", "art", "banner", "figlet", "text"],
+    locales: {
+      ar: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      de: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      en: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      es: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      fr: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      he: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      hi: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      id: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      it: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      ja: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      ko: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      ms: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      nl: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      no: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      pl: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      pt: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      ru: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      sv: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      th: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      tr: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      vi: {
+        name: "ASCII Art Generator",
+        description:
+          "Turn short text into browser-rendered ASCII banners with curated FIGlet fonts, alignment controls, and export-ready output.",
+      },
+      "zh-CN": {
+        name: "ASCII 横幅生成器",
+        description:
+          "把短文本排成可复制的 ASCII 横幅，提供精选 FIGlet 字体、对齐控制和可导出的纯文本输出。",
+      },
+      "zh-TW": {
+        name: "ASCII 橫幅產生器",
+        description:
+          "把短文字排成可複製的 ASCII 橫幅，提供精選 FIGlet 字型、對齊控制和可匯出的純文字輸出。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",

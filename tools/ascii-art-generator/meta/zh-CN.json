@@ -1,0 +1,4 @@
+{
+  "name": "ASCII 横幅生成器",
+  "description": "把短文本排成可复制的 ASCII 横幅，提供精选 FIGlet 字体、对齐控制和可导出的纯文本输出。"
+}
