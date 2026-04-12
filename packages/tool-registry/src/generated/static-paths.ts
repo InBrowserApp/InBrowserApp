@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "list-comparer",
+    language: "ar",
+  },
+  {
+    slug: "list-comparer",
+    language: "de",
+  },
+  {
+    slug: "list-comparer",
+    language: "en",
+  },
+  {
+    slug: "list-comparer",
+    language: "es",
+  },
+  {
+    slug: "list-comparer",
+    language: "fr",
+  },
+  {
+    slug: "list-comparer",
+    language: "he",
+  },
+  {
+    slug: "list-comparer",
+    language: "hi",
+  },
+  {
+    slug: "list-comparer",
+    language: "id",
+  },
+  {
+    slug: "list-comparer",
+    language: "it",
+  },
+  {
+    slug: "list-comparer",
+    language: "ja",
+  },
+  {
+    slug: "list-comparer",
+    language: "ko",
+  },
+  {
+    slug: "list-comparer",
+    language: "ms",
+  },
+  {
+    slug: "list-comparer",
+    language: "nl",
+  },
+  {
+    slug: "list-comparer",
+    language: "no",
+  },
+  {
+    slug: "list-comparer",
+    language: "pl",
+  },
+  {
+    slug: "list-comparer",
+    language: "pt",
+  },
+  {
+    slug: "list-comparer",
+    language: "ru",
+  },
+  {
+    slug: "list-comparer",
+    language: "sv",
+  },
+  {
+    slug: "list-comparer",
+    language: "th",
+  },
+  {
+    slug: "list-comparer",
+    language: "tr",
+  },
+  {
+    slug: "list-comparer",
+    language: "vi",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-CN",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-TW",
+  },
+  {
     slug: "nanoid-generator",
     language: "ar",
   },
