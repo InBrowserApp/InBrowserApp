@@ -226,4 +226,4 @@ function unescapeUnicode(text: string): string {
 }
 
 export { ESCAPE_FORMATS, escapeAllUnicode, escapeUnicode, unescapeUnicode }
-export type { EscapeFormat, EscapeFormatDescriptor }
+export type { EscapeFormat }
