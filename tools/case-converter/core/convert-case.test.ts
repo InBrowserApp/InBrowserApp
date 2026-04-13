@@ -275,7 +275,7 @@ describe("CASE_TYPES", () => {
     expect(CASE_TYPES).toHaveLength(12)
   })
 
-  it("every entry is a valid key in caseConverters", () => {
+  it("every entry produces a valid conversion via convertCase", () => {
     for (const caseType of CASE_TYPES) {
       expect(convertCase("test", caseType as CaseType)).toEqual(
         expect.any(String)

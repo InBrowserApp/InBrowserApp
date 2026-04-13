@@ -131,7 +131,7 @@ export type CaseType =
   | "UPPERCASE"
   | "lowercase"
 
-export const caseConverters: Record<CaseType, (input: string) => string> = {
+const caseConverters: Record<CaseType, (input: string) => string> = {
   camelCase: toCamelCase,
   PascalCase: toPascalCase,
   snake_case: toSnakeCase,
