@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "Teks Biasa",
+  "plainTextDescription": "Aksara asal yang tidak dilepaskan",
   "plainTextPlaceholder": "Masukkan teks untuk dilepaskan...",
   "escapeFormatLabel": "Format Lepasan",
   "escapedTextLabel": "Teks Dilepaskan",
+  "escapedTextDescription": "Jujukan pelepasan Unicode dalam format yang dipilih",
   "escapedTextPlaceholder": "Masukkan teks yang dilepaskan untuk dinyahlepas...",
   "copyPlainTextLabel": "Salin teks biasa",
   "copyEscapedTextLabel": "Salin teks yang dilepaskan",

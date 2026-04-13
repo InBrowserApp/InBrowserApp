@@ -5,6 +5,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -33,9 +34,11 @@ type UnicodeEscapeUnescapeMessages = Readonly<{
     description: string
   }
   plainTextLabel: string
+  plainTextDescription: string
   plainTextPlaceholder: string
   escapeFormatLabel: string
   escapedTextLabel: string
+  escapedTextDescription: string
   escapedTextPlaceholder: string
   copyPlainTextLabel: string
   copyEscapedTextLabel: string
@@ -155,6 +158,7 @@ function UnicodeEscapeUnescapeClient({
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.plainTextLabel}</CardTitle>
+            <CardDescription>{messages.plainTextDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Textarea
@@ -193,6 +197,7 @@ function UnicodeEscapeUnescapeClient({
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.escapedTextLabel}</CardTitle>
+            <CardDescription>{messages.escapedTextDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Textarea

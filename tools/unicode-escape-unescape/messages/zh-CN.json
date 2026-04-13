@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "纯文本",
+  "plainTextDescription": "原始未转义字符",
   "plainTextPlaceholder": "输入要转义的文本……",
   "escapeFormatLabel": "转义格式",
   "escapedTextLabel": "转义文本",
+  "escapedTextDescription": "所选格式的 Unicode 转义序列",
   "escapedTextPlaceholder": "输入要反转义的文本……",
   "copyPlainTextLabel": "复制纯文本",
   "copyEscapedTextLabel": "复制转义文本",

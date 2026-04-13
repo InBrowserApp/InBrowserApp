@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "Teks Biasa",
+  "plainTextDescription": "Karakter asli tanpa escape",
   "plainTextPlaceholder": "Masukkan teks untuk di-escape...",
   "escapeFormatLabel": "Format Escape",
   "escapedTextLabel": "Teks Ter-escape",
+  "escapedTextDescription": "Urutan escape Unicode dalam format yang dipilih",
   "escapedTextPlaceholder": "Masukkan teks ter-escape untuk di-unescape...",
   "copyPlainTextLabel": "Salin teks biasa",
   "copyEscapedTextLabel": "Salin teks ter-escape",

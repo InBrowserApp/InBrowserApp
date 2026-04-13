@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "सादा पाठ",
+  "plainTextDescription": "मूल अनएस्केप किए गए वर्ण",
   "plainTextPlaceholder": "एस्केप करने के लिए पाठ दर्ज करें...",
   "escapeFormatLabel": "एस्केप प्रारूप",
   "escapedTextLabel": "एस्केप किया गया पाठ",
+  "escapedTextDescription": "चयनित प्रारूप में यूनिकोड एस्केप अनुक्रम",
   "escapedTextPlaceholder": "अनएस्केप करने के लिए एस्केप किया गया पाठ दर्ज करें...",
   "copyPlainTextLabel": "सादा पाठ कॉपी करें",
   "copyEscapedTextLabel": "एस्केप किया गया पाठ कॉपी करें",

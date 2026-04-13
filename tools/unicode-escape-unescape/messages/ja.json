@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "エスケープ前の元の文字",
   "plainTextPlaceholder": "エスケープするテキストを入力...",
   "escapeFormatLabel": "エスケープ形式",
   "escapedTextLabel": "エスケープ済みテキスト",
+  "escapedTextDescription": "選択した形式のUnicodeエスケープシーケンス",
   "escapedTextPlaceholder": "アンエスケープするテキストを入力...",
   "copyPlainTextLabel": "プレーンテキストをコピー",
   "copyEscapedTextLabel": "エスケープ済みテキストをコピー",

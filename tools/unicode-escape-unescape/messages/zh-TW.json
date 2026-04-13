@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "純文字",
+  "plainTextDescription": "原始的未轉義字元",
   "plainTextPlaceholder": "輸入要轉義的文字……",
   "escapeFormatLabel": "轉義格式",
   "escapedTextLabel": "轉義文字",
+  "escapedTextDescription": "所選格式的 Unicode 轉義序列",
   "escapedTextPlaceholder": "輸入要反轉義的文字……",
   "copyPlainTextLabel": "複製純文字",
   "copyEscapedTextLabel": "複製轉義文字",

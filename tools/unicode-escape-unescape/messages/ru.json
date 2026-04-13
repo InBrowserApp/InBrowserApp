@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Исходные неэкранированные символы",
   "plainTextPlaceholder": "Введите текст для экранирования...",
   "escapeFormatLabel": "Формат экранирования",
   "escapedTextLabel": "Экранированный текст",
+  "escapedTextDescription": "Экранированные последовательности Unicode в выбранном формате",
   "escapedTextPlaceholder": "Введите экранированный текст для деэкранирования...",
   "copyPlainTextLabel": "Копировать обычный текст",
   "copyEscapedTextLabel": "Копировать экранированный текст",

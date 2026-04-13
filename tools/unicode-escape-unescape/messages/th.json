@@ -1,8 +1,10 @@
 {
   "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "อักขระต้นฉบับที่ยังไม่ได้เข้ารหัส",
   "plainTextPlaceholder": "ป้อนข้อความที่ต้องการเข้ารหัส...",
   "escapeFormatLabel": "รูปแบบการเข้ารหัส",
   "escapedTextLabel": "ข้อความที่เข้ารหัสแล้ว",
+  "escapedTextDescription": "ลำดับ Unicode escape ในรูปแบบที่เลือก",
   "escapedTextPlaceholder": "ป้อนข้อความที่เข้ารหัสเพื่อถอดรหัส...",
   "copyPlainTextLabel": "คัดลอกข้อความธรรมดา",
   "copyEscapedTextLabel": "คัดลอกข้อความที่เข้ารหัส",
