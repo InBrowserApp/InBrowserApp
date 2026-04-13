@@ -3801,6 +3801,120 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "vin-validator",
+    category: "text",
+    icon: "car",
+    tags: ["vin", "validator", "vehicle", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق رقم VIN",
+        description: "تحقق من أرقام VIN من حيث الطول والأحرف ورقم التحقق",
+      },
+      de: {
+        name: "VIN-Validator",
+        description:
+          "VINs mit Regeln zu Länge, Zeichen und Prüfziffer validieren",
+      },
+      en: {
+        name: "VIN Validator",
+        description:
+          "Validate VINs with length, character, and check digit rules",
+      },
+      es: {
+        name: "Validador de VIN",
+        description:
+          "Valida VINs con reglas de longitud, caracteres y dígito de control",
+      },
+      fr: {
+        name: "Validateur de NIV",
+        description:
+          "Validez les NIV avec les règles de longueur, de caractères et de chiffre de contrôle",
+      },
+      he: {
+        name: "מאמת VIN",
+        description: "אימות מספרי VIN עם בדיקת אורך, תווים וספרת ביקורת",
+      },
+      hi: {
+        name: "VIN वैलिडेटर",
+        description: "लंबाई, अक्षर और चेक डिजिट नियमों से VIN की जाँच करें",
+      },
+      id: {
+        name: "Validator VIN",
+        description:
+          "Validasi VIN dengan aturan panjang, karakter, dan digit cek",
+      },
+      it: {
+        name: "Validatore VIN",
+        description:
+          "Valida i VIN con regole di lunghezza, caratteri e cifra di controllo",
+      },
+      ja: {
+        name: "VINバリデーター",
+        description: "桁数、使用文字、チェックディジットのルールでVINを検証",
+      },
+      ko: {
+        name: "VIN 검증기",
+        description: "길이, 문자 및 체크 디짓 규칙으로 VIN을 검증합니다",
+      },
+      ms: {
+        name: "Pengesah VIN",
+        description:
+          "Sahkan VIN dengan peraturan panjang, aksara dan digit semak",
+      },
+      nl: {
+        name: "VIN-validator",
+        description: "Valideer VIN's op lengte, tekens en controlecijferregels",
+      },
+      no: {
+        name: "VIN-validator",
+        description:
+          "Valider VIN med regler for lengde, tegn og kontrollsiffer",
+      },
+      pl: {
+        name: "Walidator VIN",
+        description:
+          "Waliduj numery VIN z kontrolą długości, znaków i cyfry kontrolnej",
+      },
+      pt: {
+        name: "Validador de VIN",
+        description:
+          "Valide VINs com regras de comprimento, caracteres e digito verificador",
+      },
+      ru: {
+        name: "Валидатор VIN",
+        description:
+          "Проверка VIN по длине, допустимым символам и контрольной цифре",
+      },
+      sv: {
+        name: "VIN-validator",
+        description:
+          "Validera VIN med regler för längd, tecken och kontrollsiffra",
+      },
+      th: {
+        name: "ตรวจสอบ VIN",
+        description: "ตรวจสอบ VIN ด้วยกฎความยาว อักขระ และเลขตรวจสอบ",
+      },
+      tr: {
+        name: "VIN Doğrulayıcı",
+        description:
+          "Uzunluk, karakter ve kontrol basamağı kurallarıyla VIN doğrulayın",
+      },
+      vi: {
+        name: "Kiểm tra VIN",
+        description:
+          "Xác thực VIN theo quy tắc độ dài, ký tự và chữ số kiểm tra",
+      },
+      "zh-CN": {
+        name: "VIN 验证器",
+        description: "通过长度、字符和校验位规则验证车辆识别号（VIN）",
+      },
+      "zh-TW": {
+        name: "VIN 驗證器",
+        description: "依據長度、字元及校驗碼規則驗證車輛識別號碼（VIN）",
+      },
+    },
+  },
+  {
     slug: "xml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -7968,6 +8082,120 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "URL 組件編碼器/解碼器",
         description:
           "使用百分號編碼對 URL 組件進行編碼和解碼。將特殊字元轉換為 URL 安全格式，反之亦然，用於 Web 開發和 API 使用",
+      },
+    },
+  },
+  "vin-validator": {
+    slug: "vin-validator",
+    category: "text",
+    icon: "car",
+    tags: ["vin", "validator", "vehicle", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق رقم VIN",
+        description: "تحقق من أرقام VIN من حيث الطول والأحرف ورقم التحقق",
+      },
+      de: {
+        name: "VIN-Validator",
+        description:
+          "VINs mit Regeln zu Länge, Zeichen und Prüfziffer validieren",
+      },
+      en: {
+        name: "VIN Validator",
+        description:
+          "Validate VINs with length, character, and check digit rules",
+      },
+      es: {
+        name: "Validador de VIN",
+        description:
+          "Valida VINs con reglas de longitud, caracteres y dígito de control",
+      },
+      fr: {
+        name: "Validateur de NIV",
+        description:
+          "Validez les NIV avec les règles de longueur, de caractères et de chiffre de contrôle",
+      },
+      he: {
+        name: "מאמת VIN",
+        description: "אימות מספרי VIN עם בדיקת אורך, תווים וספרת ביקורת",
+      },
+      hi: {
+        name: "VIN वैलिडेटर",
+        description: "लंबाई, अक्षर और चेक डिजिट नियमों से VIN की जाँच करें",
+      },
+      id: {
+        name: "Validator VIN",
+        description:
+          "Validasi VIN dengan aturan panjang, karakter, dan digit cek",
+      },
+      it: {
+        name: "Validatore VIN",
+        description:
+          "Valida i VIN con regole di lunghezza, caratteri e cifra di controllo",
+      },
+      ja: {
+        name: "VINバリデーター",
+        description: "桁数、使用文字、チェックディジットのルールでVINを検証",
+      },
+      ko: {
+        name: "VIN 검증기",
+        description: "길이, 문자 및 체크 디짓 규칙으로 VIN을 검증합니다",
+      },
+      ms: {
+        name: "Pengesah VIN",
+        description:
+          "Sahkan VIN dengan peraturan panjang, aksara dan digit semak",
+      },
+      nl: {
+        name: "VIN-validator",
+        description: "Valideer VIN's op lengte, tekens en controlecijferregels",
+      },
+      no: {
+        name: "VIN-validator",
+        description:
+          "Valider VIN med regler for lengde, tegn og kontrollsiffer",
+      },
+      pl: {
+        name: "Walidator VIN",
+        description:
+          "Waliduj numery VIN z kontrolą długości, znaków i cyfry kontrolnej",
+      },
+      pt: {
+        name: "Validador de VIN",
+        description:
+          "Valide VINs com regras de comprimento, caracteres e digito verificador",
+      },
+      ru: {
+        name: "Валидатор VIN",
+        description:
+          "Проверка VIN по длине, допустимым символам и контрольной цифре",
+      },
+      sv: {
+        name: "VIN-validator",
+        description:
+          "Validera VIN med regler för längd, tecken och kontrollsiffra",
+      },
+      th: {
+        name: "ตรวจสอบ VIN",
+        description: "ตรวจสอบ VIN ด้วยกฎความยาว อักขระ และเลขตรวจสอบ",
+      },
+      tr: {
+        name: "VIN Doğrulayıcı",
+        description:
+          "Uzunluk, karakter ve kontrol basamağı kurallarıyla VIN doğrulayın",
+      },
+      vi: {
+        name: "Kiểm tra VIN",
+        description:
+          "Xác thực VIN theo quy tắc độ dài, ký tự và chữ số kiểm tra",
+      },
+      "zh-CN": {
+        name: "VIN 验证器",
+        description: "通过长度、字符和校验位规则验证车辆识别号（VIN）",
+      },
+      "zh-TW": {
+        name: "VIN 驗證器",
+        description: "依據長度、字元及校驗碼規則驗證車輛識別號碼（VIN）",
       },
     },
   },
