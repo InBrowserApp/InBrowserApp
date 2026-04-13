@@ -38,6 +38,7 @@
     "@tool/text-statistics": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
+    "@tool/unicode-escape-unescape": "workspace:*",
     "@tool/unicode-invisible-character-checker": "workspace:*",
     "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/vin-validator": "workspace:*",

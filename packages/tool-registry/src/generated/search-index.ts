@@ -3810,6 +3810,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "unicode-escape-unescape",
+    category: "web",
+    icon: "globe",
+    tags: ["unicode", "escape", "unescape", "encoding", "text"],
+    locales: {
+      ar: {
+        name: "تحويل Unicode",
+        description:
+          "تحويل أحرف Unicode من وإلى صيغ متعددة بما في ذلك \\uXXXX و \\u{XXXXX} وكيانات HTML وترميز URL وترميز U+XXXX",
+      },
+      de: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Unicode-Zeichen in verschiedenen Formaten escapen und unescapen, einschließlich \\uXXXX, \\u{XXXXX}, HTML-Entitäten, URL-Kodierung und U+XXXX-Notation",
+      },
+      en: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape and unescape Unicode characters in various formats including \\uXXXX, \\u{XXXXX}, HTML entities, URL encoding, and U+XXXX notation",
+      },
+      es: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Escapar y desescapar caracteres Unicode en varios formatos incluyendo \\uXXXX, \\u{XXXXX}, entidades HTML, codificación URL y notación U+XXXX",
+      },
+      fr: {
+        name: "Échappement / Désechappement Unicode",
+        description:
+          "Échapper et désechapper les caractères Unicode dans divers formats incluant \\uXXXX, \\u{XXXXX}, entités HTML, encodage URL et notation U+XXXX",
+      },
+      he: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "המרת תווי Unicode לפורמטים שונים כולל \\uXXXX, \\u{XXXXX}, ישויות HTML, קידוד URL וסימון U+XXXX",
+      },
+      hi: {
+        name: "Unicode एस्केप / अनएस्केप",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML एंटिटी, URL एन्कोडिंग और U+XXXX नोटेशन सहित विभिन्न प्रारूपों में Unicode वर्णों को एस्केप और अनएस्केप करें",
+      },
+      id: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape dan unescape karakter Unicode dalam berbagai format termasuk \\uXXXX, \\u{XXXXX}, entitas HTML, encoding URL, dan notasi U+XXXX",
+      },
+      it: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Esegui escape e unescape di caratteri Unicode in vari formati inclusi \\uXXXX, \\u{XXXXX}, entità HTML, codifica URL e notazione U+XXXX",
+      },
+      ja: {
+        name: "Unicode エスケープ / アンエスケープ",
+        description:
+          "\\uXXXX、\\u{XXXXX}、HTML エンティティ、URL エンコーディング、U+XXXX 表記を含む様々な形式で Unicode 文字をエスケープ・アンエスケープ",
+      },
+      ko: {
+        name: "Unicode 이스케이프 / 언이스케이프",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML 엔티티, URL 인코딩, U+XXXX 표기법을 포함한 다양한 형식으로 Unicode 문자를 이스케이프 및 언이스케이프",
+      },
+      ms: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape dan unescape aksara Unicode dalam pelbagai format termasuk \\uXXXX, \\u{XXXXX}, entiti HTML, pengekodan URL dan notasi U+XXXX",
+      },
+      nl: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Unicode-tekens escapen en unescapen in verschillende formaten waaronder \\uXXXX, \\u{XXXXX}, HTML-entiteiten, URL-codering en U+XXXX-notatie",
+      },
+      no: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape og unescape Unicode-tegn i ulike formater inkludert \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-koding og U+XXXX-notasjon",
+      },
+      pl: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Kodowanie i dekodowanie znaków Unicode w różnych formatach w tym \\uXXXX, \\u{XXXXX}, encje HTML, kodowanie URL i notacja U+XXXX",
+      },
+      pt: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Escape e unescape de caracteres Unicode em vários formatos incluindo \\uXXXX, \\u{XXXXX}, entidades HTML, codificação URL e notação U+XXXX",
+      },
+      ru: {
+        name: "Unicode экранирование / деэкранирование",
+        description:
+          "Экранирование и деэкранирование символов Unicode в различных форматах, включая \\uXXXX, \\u{XXXXX}, HTML-сущности, URL-кодирование и нотацию U+XXXX",
+      },
+      sv: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape och unescape Unicode-tecken i olika format inklusive \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-kodning och U+XXXX-notation",
+      },
+      th: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "แปลงอักขระ Unicode ไปและกลับในรูปแบบต่างๆ รวมถึง \\uXXXX, \\u{XXXXX}, HTML entities, การเข้ารหัส URL และสัญลักษณ์ U+XXXX",
+      },
+      tr: {
+        name: "Unicode Kaçış / Kaçış Geri Alma",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML varlıkları, URL kodlama ve U+XXXX gösterimi dahil çeşitli formatlarda Unicode karakterlerini kaçış ve kaçış geri alma",
+      },
+      vi: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Chuyển đổi ký tự Unicode sang và từ các định dạng bao gồm \\uXXXX, \\u{XXXXX}, thực thể HTML, mã hóa URL và ký hiệu U+XXXX",
+      },
+      "zh-CN": {
+        name: "Unicode 转义 / 反转义",
+        description:
+          "将 Unicode 字符转义和反转义为多种格式，包括 \\uXXXX、\\u{XXXXX}、HTML 实体、URL 编码和 U+XXXX 表示法",
+      },
+      "zh-TW": {
+        name: "Unicode 轉義 / 反轉義",
+        description:
+          "將 Unicode 字元轉義和反轉義為多種格式，包括 \\uXXXX、\\u{XXXXX}、HTML 實體、URL 編碼和 U+XXXX 表示法",
+      },
+    },
+  },
+  {
     slug: "unicode-invisible-character-checker",
     category: "text",
     icon: "search",

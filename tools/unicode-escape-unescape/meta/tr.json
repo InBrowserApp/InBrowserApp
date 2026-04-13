@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Kaçış / Kaçış Geri Alma",
+  "description": "\\uXXXX, \\u{XXXXX}, HTML varlıkları, URL kodlama ve U+XXXX gösterimi dahil çeşitli formatlarda Unicode karakterlerini kaçış ve kaçış geri alma"
+}

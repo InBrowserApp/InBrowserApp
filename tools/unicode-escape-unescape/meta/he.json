@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Escape / Unescape",
+  "description": "המרת תווי Unicode לפורמטים שונים כולל \\uXXXX, \\u{XXXXX}, ישויות HTML, קידוד URL וסימון U+XXXX"
+}

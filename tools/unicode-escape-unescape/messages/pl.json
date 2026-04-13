@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Oryginalne niezakodowane znaki",
+  "plainTextPlaceholder": "Wpisz tekst do zakodowania...",
+  "escapeFormatLabel": "Format kodowania",
+  "escapedTextLabel": "Zakodowany tekst",
+  "escapedTextDescription": "Sekwencje ucieczki Unicode w wybranym formacie",
+  "escapedTextPlaceholder": "Wpisz zakodowany tekst do odkodowania...",
+  "copyPlainTextLabel": "Kopiuj zwykły tekst",
+  "copyEscapedTextLabel": "Kopiuj zakodowany tekst",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład"
+}

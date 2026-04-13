@@ -2854,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-escape-unescape",
+    language: "ar",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "de",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "en",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "es",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "fr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "he",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "hi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "id",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "it",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ja",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ko",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ms",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "nl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "no",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pt",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ru",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "sv",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "th",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "tr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "vi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-invisible-character-checker",
     language: "ar",
   },

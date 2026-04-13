@@ -1,0 +1,4 @@
+{
+  "name": "Escape / Unescape Unicode",
+  "description": "Escape e unescape de caracteres Unicode em vários formatos incluindo \\uXXXX, \\u{XXXXX}, entidades HTML, codificação URL e notação U+XXXX"
+}
