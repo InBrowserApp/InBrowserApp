@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "نص عادي",
+  "plainTextPlaceholder": "أدخل النص لتهريبه...",
+  "escapeFormatLabel": "صيغة التهريب",
+  "escapedTextLabel": "نص مُهرَّب",
+  "escapedTextPlaceholder": "أدخل النص المُهرَّب لإلغاء تهريبه...",
+  "copyPlainTextLabel": "نسخ النص العادي",
+  "copyEscapedTextLabel": "نسخ النص المُهرَّب",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}

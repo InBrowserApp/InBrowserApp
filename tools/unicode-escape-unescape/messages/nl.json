@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Platte tekst",
+  "plainTextPlaceholder": "Voer tekst in om te escapen...",
+  "escapeFormatLabel": "Escape-indeling",
+  "escapedTextLabel": "Geëscapete tekst",
+  "escapedTextPlaceholder": "Voer geëscapete tekst in om te unescapen...",
+  "copyPlainTextLabel": "Platte tekst kopiëren",
+  "copyEscapedTextLabel": "Geëscapete tekst kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

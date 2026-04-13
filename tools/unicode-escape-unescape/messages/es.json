@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Texto plano",
+  "plainTextPlaceholder": "Introduce texto para escapar...",
+  "escapeFormatLabel": "Formato de escape",
+  "escapedTextLabel": "Texto escapado",
+  "escapedTextPlaceholder": "Introduce texto escapado para desescapar...",
+  "copyPlainTextLabel": "Copiar texto plano",
+  "copyEscapedTextLabel": "Copiar texto escapado",
+  "copiedLabel": "Copiado",
+  "resetLabel": "Restablecer ejemplo"
+}

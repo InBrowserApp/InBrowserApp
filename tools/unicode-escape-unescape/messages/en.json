@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Plain Text",
+  "plainTextPlaceholder": "Enter text to escape...",
+  "escapeFormatLabel": "Escape Format",
+  "escapedTextLabel": "Escaped Text",
+  "escapedTextPlaceholder": "Enter escaped text to unescape...",
+  "copyPlainTextLabel": "Copy plain text",
+  "copyEscapedTextLabel": "Copy escaped text",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example"
+}

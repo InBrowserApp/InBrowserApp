@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Düz Metin",
+  "plainTextPlaceholder": "Kaçış uygulanacak metni girin...",
+  "escapeFormatLabel": "Kaçış Biçimi",
+  "escapedTextLabel": "Kaçışlı Metin",
+  "escapedTextPlaceholder": "Kaçışı kaldırılacak metni girin...",
+  "copyPlainTextLabel": "Düz metni kopyala",
+  "copyEscapedTextLabel": "Kaçışlı metni kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

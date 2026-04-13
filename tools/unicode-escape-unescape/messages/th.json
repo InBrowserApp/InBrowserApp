@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextPlaceholder": "ป้อนข้อความที่ต้องการเข้ารหัส...",
+  "escapeFormatLabel": "รูปแบบการเข้ารหัส",
+  "escapedTextLabel": "ข้อความที่เข้ารหัสแล้ว",
+  "escapedTextPlaceholder": "ป้อนข้อความที่เข้ารหัสเพื่อถอดรหัส...",
+  "copyPlainTextLabel": "คัดลอกข้อความธรรมดา",
+  "copyEscapedTextLabel": "คัดลอกข้อความที่เข้ารหัส",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

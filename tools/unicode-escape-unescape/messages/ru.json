@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Обычный текст",
+  "plainTextPlaceholder": "Введите текст для экранирования...",
+  "escapeFormatLabel": "Формат экранирования",
+  "escapedTextLabel": "Экранированный текст",
+  "escapedTextPlaceholder": "Введите экранированный текст для деэкранирования...",
+  "copyPlainTextLabel": "Копировать обычный текст",
+  "copyEscapedTextLabel": "Копировать экранированный текст",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Ren tekst",
+  "plainTextPlaceholder": "Skriv inn tekst som skal escapes...",
+  "escapeFormatLabel": "Escape-format",
+  "escapedTextLabel": "Escaped tekst",
+  "escapedTextPlaceholder": "Skriv inn escaped tekst som skal unescapes...",
+  "copyPlainTextLabel": "Kopier ren tekst",
+  "copyEscapedTextLabel": "Kopier escaped tekst",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel"
+}

@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "일반 텍스트",
+  "plainTextPlaceholder": "이스케이프할 텍스트를 입력하세요...",
+  "escapeFormatLabel": "이스케이프 형식",
+  "escapedTextLabel": "이스케이프된 텍스트",
+  "escapedTextPlaceholder": "언이스케이프할 텍스트를 입력하세요...",
+  "copyPlainTextLabel": "일반 텍스트 복사",
+  "copyEscapedTextLabel": "이스케이프된 텍스트 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 초기화"
+}

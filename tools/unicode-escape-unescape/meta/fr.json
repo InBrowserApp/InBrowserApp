@@ -1,0 +1,4 @@
+{
+  "name": "Échappement / Désechappement Unicode",
+  "description": "Échapper et désechapper les caractères Unicode dans divers formats incluant \\uXXXX, \\u{XXXXX}, entités HTML, encodage URL et notation U+XXXX"
+}

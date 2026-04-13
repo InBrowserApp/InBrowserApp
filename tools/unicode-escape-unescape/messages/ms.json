@@ -1,0 +1,11 @@
+{
+  "plainTextLabel": "Teks Biasa",
+  "plainTextPlaceholder": "Masukkan teks untuk dilepaskan...",
+  "escapeFormatLabel": "Format Lepasan",
+  "escapedTextLabel": "Teks Dilepaskan",
+  "escapedTextPlaceholder": "Masukkan teks yang dilepaskan untuk dinyahlepas...",
+  "copyPlainTextLabel": "Salin teks biasa",
+  "copyEscapedTextLabel": "Salin teks yang dilepaskan",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Set semula contoh"
+}
