@@ -1,0 +1,4 @@
+{
+  "name": "Validatore VIN",
+  "description": "Valida i VIN con regole di lunghezza, caratteri e cifra di controllo"
+}

@@ -2854,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vin-validator",
+    language: "ar",
+  },
+  {
+    slug: "vin-validator",
+    language: "de",
+  },
+  {
+    slug: "vin-validator",
+    language: "en",
+  },
+  {
+    slug: "vin-validator",
+    language: "es",
+  },
+  {
+    slug: "vin-validator",
+    language: "fr",
+  },
+  {
+    slug: "vin-validator",
+    language: "he",
+  },
+  {
+    slug: "vin-validator",
+    language: "hi",
+  },
+  {
+    slug: "vin-validator",
+    language: "id",
+  },
+  {
+    slug: "vin-validator",
+    language: "it",
+  },
+  {
+    slug: "vin-validator",
+    language: "ja",
+  },
+  {
+    slug: "vin-validator",
+    language: "ko",
+  },
+  {
+    slug: "vin-validator",
+    language: "ms",
+  },
+  {
+    slug: "vin-validator",
+    language: "nl",
+  },
+  {
+    slug: "vin-validator",
+    language: "no",
+  },
+  {
+    slug: "vin-validator",
+    language: "pl",
+  },
+  {
+    slug: "vin-validator",
+    language: "pt",
+  },
+  {
+    slug: "vin-validator",
+    language: "ru",
+  },
+  {
+    slug: "vin-validator",
+    language: "sv",
+  },
+  {
+    slug: "vin-validator",
+    language: "th",
+  },
+  {
+    slug: "vin-validator",
+    language: "tr",
+  },
+  {
+    slug: "vin-validator",
+    language: "vi",
+  },
+  {
+    slug: "vin-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vin-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },
