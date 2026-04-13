@@ -3,6 +3,7 @@ import type { LucideProps } from "lucide-react"
 import {
   Binary,
   Braces,
+  CaseSensitive,
   FileJson2,
   FileText,
   Globe,
@@ -15,6 +16,7 @@ import {
 const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   binary: Binary,
   braces: Braces,
+  "case-sensitive": CaseSensitive,
   "file-json-2": FileJson2,
   "file-text": FileText,
   globe: Globe,

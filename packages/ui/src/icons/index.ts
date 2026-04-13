@@ -4,6 +4,7 @@ export {
   BadgeCheck,
   Binary,
   Braces,
+  CaseSensitive,
   Check,
   Copy,
   Download,

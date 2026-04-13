@@ -1,0 +1,4 @@
+{
+  "name": "Konvertering av store/sm\u00e5 bokstaver",
+  "description": "Konverter tekst mellom ulike navnekonvensjoner: camelCase, PascalCase, snake_case, kebab-case og flere."
+}

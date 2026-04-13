@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/base64-encoder-decoder": "workspace:*",
+    "@tool/case-converter": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/current-network-time": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",

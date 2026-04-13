@@ -1,0 +1,8 @@
+{
+  "inputLabel": "Texto de entrada",
+  "inputPlaceholder": "Escribe el texto a convertir\u2026",
+  "inputDescription": "Escribe o pega texto en cualquier convención de nomenclatura. Todas las variantes se generan a continuación.",
+  "clearLabel": "Limpiar",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

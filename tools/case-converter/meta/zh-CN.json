@@ -1,0 +1,4 @@
+{
+  "name": "大小写转换器",
+  "description": "在不同命名约定之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。"
+}
