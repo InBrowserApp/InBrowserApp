@@ -4,6 +4,7 @@ import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -50,20 +51,20 @@ function CaseOutputCard({
     <Card size="sm">
       <CardHeader>
         <CardTitle>{label}</CardTitle>
+        <CardAction>
+          <ToolCopyButton
+            value={value}
+            copyLabel={copyLabel}
+            copiedLabel={copiedLabel}
+            variant="ghost"
+          />
+        </CardAction>
       </CardHeader>
       <CardContent>
         <code className="block rounded bg-muted px-3 py-2 font-mono text-sm break-all">
           {value || "\u2014"}
         </code>
       </CardContent>
-      <CardFooter className="justify-end">
-        <ToolCopyButton
-          value={value}
-          copyLabel={copyLabel}
-          copiedLabel={copiedLabel}
-          variant="ghost"
-        />
-      </CardFooter>
     </Card>
   )
 }
