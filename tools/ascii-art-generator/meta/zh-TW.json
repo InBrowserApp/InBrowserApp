@@ -1,0 +1,4 @@
+{
+  "name": "ASCII 藝術產生器",
+  "description": "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。"
+}

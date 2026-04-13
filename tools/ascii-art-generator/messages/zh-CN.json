@@ -1,0 +1,12 @@
+{
+  "inputLabel": "输入文本",
+  "inputDescription": "输入一个单词或短语，将其转换为 ASCII art。",
+  "inputPlaceholder": "输入要转换的文本……",
+  "fontLabel": "字体",
+  "fontDescription": "选择一种 FIGlet 字体样式作为输出。",
+  "fontSearchPlaceholder": "搜索字体……",
+  "outputLabel": "ASCII 艺术字输出",
+  "outputPlaceholder": "ASCII 艺术字将显示在此处……",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

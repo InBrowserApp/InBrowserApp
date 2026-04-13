@@ -1,0 +1,4 @@
+{
+  "name": "ASCII-konstgenerator",
+  "description": "Konvertera text till ASCII-konst med olika figlet-typsnitt. Skriv ett ord eller en fras, välj ett typsnitt och kopiera resultatet."
+}
