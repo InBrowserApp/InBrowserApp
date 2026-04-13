@@ -1,7 +1,9 @@
 {
   "inputLabel": "טקסט קלט",
+  "inputDescription": "הקלידו מילה או ביטוי כדי להפוך אותם ל-ASCII art.",
   "inputPlaceholder": "הזינו טקסט להמרה...",
   "fontLabel": "גופן",
+  "fontDescription": "בחרו סגנון גופן FIGlet לפלט.",
   "fontSearchPlaceholder": "חיפוש גופנים...",
   "outputLabel": "פלט אמנות ASCII",
   "outputPlaceholder": "אמנות ASCII תופיע כאן...",

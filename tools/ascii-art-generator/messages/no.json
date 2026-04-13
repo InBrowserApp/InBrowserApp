@@ -1,7 +1,9 @@
 {
   "inputLabel": "Inndatatekst",
+  "inputDescription": "Skriv et ord eller en setning for å gjøre det om til ASCII art.",
   "inputPlaceholder": "Skriv inn tekst for konvertering...",
   "fontLabel": "Skrifttype",
+  "fontDescription": "Velg en FIGlet-skriftstil for utdata.",
   "fontSearchPlaceholder": "Søk i skrifttyper...",
   "outputLabel": "ASCII-kunst",
   "outputPlaceholder": "ASCII-kunst vises her...",

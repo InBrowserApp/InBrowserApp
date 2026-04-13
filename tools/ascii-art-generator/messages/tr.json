@@ -1,7 +1,9 @@
 {
   "inputLabel": "Giriş metni",
+  "inputDescription": "ASCII art'a dönüştürmek için bir kelime veya ifade yazın.",
   "inputPlaceholder": "Dönüştürülecek metni girin...",
   "fontLabel": "Yazı tipi",
+  "fontDescription": "Çıktı için bir FIGlet yazı tipi stili seçin.",
   "fontSearchPlaceholder": "Yazı tipi ara...",
   "outputLabel": "ASCII sanat çıktısı",
   "outputPlaceholder": "ASCII sanat burada görünecek...",

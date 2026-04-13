@@ -101,6 +101,7 @@ function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.inputLabel}</CardTitle>
+            <CardDescription>{messages.inputDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Input
@@ -119,6 +120,7 @@ function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
         <Card>
           <CardHeader className="border-b">
             <CardTitle>{messages.fontLabel}</CardTitle>
+            <CardDescription>{messages.fontDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Select value={font} onValueChange={setFont}>

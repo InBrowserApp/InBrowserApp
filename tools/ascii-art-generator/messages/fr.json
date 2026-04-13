@@ -1,7 +1,9 @@
 {
   "inputLabel": "Texte d'entrée",
+  "inputDescription": "Saisissez un mot ou une phrase à convertir en ASCII art.",
   "inputPlaceholder": "Saisissez le texte à convertir...",
   "fontLabel": "Police",
+  "fontDescription": "Choisissez un style de police FIGlet pour la sortie.",
   "fontSearchPlaceholder": "Rechercher une police...",
   "outputLabel": "Art ASCII généré",
   "outputPlaceholder": "L'art ASCII apparaîtra ici...",

@@ -1,7 +1,9 @@
 {
   "inputLabel": "Invoertekst",
+  "inputDescription": "Typ een woord of zin om om te zetten naar ASCII art.",
   "inputPlaceholder": "Voer tekst in om te converteren...",
   "fontLabel": "Lettertype",
+  "fontDescription": "Kies een FIGlet-letterstijl voor de uitvoer.",
   "fontSearchPlaceholder": "Lettertypen zoeken...",
   "outputLabel": "ASCII-art uitvoer",
   "outputPlaceholder": "ASCII-art verschijnt hier...",

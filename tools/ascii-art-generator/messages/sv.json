@@ -1,7 +1,9 @@
 {
   "inputLabel": "Inmatningstext",
+  "inputDescription": "Skriv ett ord eller en fras att omvandla till ASCII art.",
   "inputPlaceholder": "Ange text att konvertera...",
   "fontLabel": "Typsnitt",
+  "fontDescription": "Välj en FIGlet-typsnittsstil för utdata.",
   "fontSearchPlaceholder": "Sök typsnitt...",
   "outputLabel": "ASCII-konstutdata",
   "outputPlaceholder": "ASCII-konst visas här...",

@@ -1,7 +1,9 @@
 {
   "inputLabel": "入力テキスト",
+  "inputDescription": "ASCII art に変換する単語やフレーズを入力してください。",
   "inputPlaceholder": "変換するテキストを入力…",
   "fontLabel": "フォント",
+  "fontDescription": "出力用の FIGlet フォントスタイルを選択してください。",
   "fontSearchPlaceholder": "フォントを検索…",
   "outputLabel": "ASCIIアート出力",
   "outputPlaceholder": "ASCIIアートがここに表示されます…",

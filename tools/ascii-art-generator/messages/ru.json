@@ -1,7 +1,9 @@
 {
   "inputLabel": "Введите текст",
+  "inputDescription": "Введите слово или фразу для преобразования в ASCII art.",
   "inputPlaceholder": "Введите текст для преобразования...",
   "fontLabel": "Шрифт",
+  "fontDescription": "Выберите стиль шрифта FIGlet для вывода.",
   "fontSearchPlaceholder": "Поиск шрифтов...",
   "outputLabel": "Результат в ASCII-арт",
   "outputPlaceholder": "ASCII-арт появится здесь...",
