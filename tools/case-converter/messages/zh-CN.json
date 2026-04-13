@@ -1,0 +1,8 @@
+{
+  "inputLabel": "输入文本",
+  "inputPlaceholder": "输入要转换的文本…",
+  "inputDescription": "输入或粘贴任意命名约定的文本，下方将自动生成所有大小写变体。",
+  "clearLabel": "清除",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

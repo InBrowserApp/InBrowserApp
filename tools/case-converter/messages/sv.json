@@ -1,0 +1,8 @@
+{
+  "inputLabel": "Inmatningstext",
+  "inputPlaceholder": "Ange text att konvertera\u2026",
+  "inputDescription": "Skriv eller klistra in text i valfri namnkonvention. Alla skiftl\u00e4gesvarianter genereras nedan.",
+  "clearLabel": "Rensa",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierad"
+}

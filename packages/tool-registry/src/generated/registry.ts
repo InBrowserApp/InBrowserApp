@@ -125,6 +125,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "case-converter",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "case",
+      "converter",
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case",
+      "text",
+      "naming",
+      "convention",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل حالة الأحرف",
+        description:
+          "حوّل النص بين اصطلاحات التسمية المختلفة: camelCase وPascalCase وsnake_case وkebab-case والمزيد.",
+      },
+      de: {
+        name: "Schreibweisenkonverter",
+        description:
+          "Text zwischen verschiedenen Namenskonventionen umwandeln: camelCase, PascalCase, snake_case, kebab-case und mehr.",
+      },
+      en: {
+        name: "Case Converter",
+        description:
+          "Convert text between different naming conventions: camelCase, PascalCase, snake_case, kebab-case, and more.",
+      },
+      es: {
+        name: "Conversor de mayúsculas y minúsculas",
+        description:
+          "Convierte texto entre diferentes convenciones de nomenclatura: camelCase, PascalCase, snake_case, kebab-case y más.",
+      },
+      fr: {
+        name: "Convertisseur de casse",
+        description:
+          "Convertissez du texte entre différentes conventions de nommage : camelCase, PascalCase, snake_case, kebab-case, et plus encore.",
+      },
+      he: {
+        name: "ממיר רישיות",
+        description:
+          "המרת טקסט בין מוסכמות שמות שונות: camelCase,‏ PascalCase,‏ snake_case,‏ kebab-case ועוד.",
+      },
+      hi: {
+        name: "केस कन्वर्टर",
+        description:
+          "टेक्स्ट को विभिन्न नामकरण शैलियों में बदलें: camelCase, PascalCase, snake_case, kebab-case, और अन्य।",
+      },
+      id: {
+        name: "Konverter Huruf Besar-Kecil",
+        description:
+          "Konversi teks antar konvensi penamaan: camelCase, PascalCase, snake_case, kebab-case, dan lainnya.",
+      },
+      it: {
+        name: "Convertitore di maiuscole/minuscole",
+        description:
+          "Converti il testo tra diverse convenzioni di denominazione: camelCase, PascalCase, snake_case, kebab-case e altro.",
+      },
+      ja: {
+        name: "ケースコンバーター",
+        description:
+          "camelCase、PascalCase、snake_case、kebab-case など、さまざまな命名規則間でテキストを変換します。",
+      },
+      ko: {
+        name: "대소문자 변환기",
+        description:
+          "camelCase, PascalCase, snake_case, kebab-case 등 다양한 명명 규칙 간에 텍스트를 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Kes Huruf",
+        description:
+          "Tukar teks antara konvensyen penamaan yang berbeza: camelCase, PascalCase, snake_case, kebab-case dan banyak lagi.",
+      },
+      nl: {
+        name: "Hoofdletterconverter",
+        description:
+          "Converteer tekst tussen verschillende naamgevingsconventies: camelCase, PascalCase, snake_case, kebab-case en meer.",
+      },
+      no: {
+        name: "Konvertering av store/små bokstaver",
+        description:
+          "Konverter tekst mellom ulike navnekonvensjoner: camelCase, PascalCase, snake_case, kebab-case og flere.",
+      },
+      pl: {
+        name: "Konwerter wielkości liter",
+        description:
+          "Konwertuj tekst pomiędzy różnymi konwencjami nazewnictwa: camelCase, PascalCase, snake_case, kebab-case i inne.",
+      },
+      pt: {
+        name: "Conversor de Maiusculas/Minusculas",
+        description:
+          "Converta texto entre diferentes convenções de nomenclatura: camelCase, PascalCase, snake_case, kebab-case e mais.",
+      },
+      ru: {
+        name: "Конвертер регистра",
+        description:
+          "Преобразуйте текст между различными соглашениями об именовании: camelCase, PascalCase, snake_case, kebab-case и другими.",
+      },
+      sv: {
+        name: "Konvertera skiftläge",
+        description:
+          "Konvertera text mellan olika namnkonventioner: camelCase, PascalCase, snake_case, kebab-case med mera.",
+      },
+      th: {
+        name: "ตัวแปลงรูปแบบตัวอักษร",
+        description:
+          "แปลงข้อความระหว่างรูปแบบการตั้งชื่อต่าง ๆ: camelCase, PascalCase, snake_case, kebab-case และอื่น ๆ",
+      },
+      tr: {
+        name: "Harf Durumu Dönüştürücü",
+        description:
+          "Metni farklı adlandırma kuralları arasında dönüştürün: camelCase, PascalCase, snake_case, kebab-case ve daha fazlası.",
+      },
+      vi: {
+        name: "Chuyển đổi kiểu chữ",
+        description:
+          "Chuyển đổi văn bản giữa các quy ước đặt tên khác nhau: camelCase, PascalCase, snake_case, kebab-case và nhiều kiểu khác.",
+      },
+      "zh-CN": {
+        name: "大小写转换器",
+        description:
+          "在不同命名约定之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+      "zh-TW": {
+        name: "大小寫轉換器",
+        description:
+          "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  {
     slug: "csv-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -4526,6 +4659,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  "case-converter": {
+    slug: "case-converter",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "case",
+      "converter",
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case",
+      "text",
+      "naming",
+      "convention",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل حالة الأحرف",
+        description:
+          "حوّل النص بين اصطلاحات التسمية المختلفة: camelCase وPascalCase وsnake_case وkebab-case والمزيد.",
+      },
+      de: {
+        name: "Schreibweisenkonverter",
+        description:
+          "Text zwischen verschiedenen Namenskonventionen umwandeln: camelCase, PascalCase, snake_case, kebab-case und mehr.",
+      },
+      en: {
+        name: "Case Converter",
+        description:
+          "Convert text between different naming conventions: camelCase, PascalCase, snake_case, kebab-case, and more.",
+      },
+      es: {
+        name: "Conversor de mayúsculas y minúsculas",
+        description:
+          "Convierte texto entre diferentes convenciones de nomenclatura: camelCase, PascalCase, snake_case, kebab-case y más.",
+      },
+      fr: {
+        name: "Convertisseur de casse",
+        description:
+          "Convertissez du texte entre différentes conventions de nommage : camelCase, PascalCase, snake_case, kebab-case, et plus encore.",
+      },
+      he: {
+        name: "ממיר רישיות",
+        description:
+          "המרת טקסט בין מוסכמות שמות שונות: camelCase,‏ PascalCase,‏ snake_case,‏ kebab-case ועוד.",
+      },
+      hi: {
+        name: "केस कन्वर्टर",
+        description:
+          "टेक्स्ट को विभिन्न नामकरण शैलियों में बदलें: camelCase, PascalCase, snake_case, kebab-case, और अन्य।",
+      },
+      id: {
+        name: "Konverter Huruf Besar-Kecil",
+        description:
+          "Konversi teks antar konvensi penamaan: camelCase, PascalCase, snake_case, kebab-case, dan lainnya.",
+      },
+      it: {
+        name: "Convertitore di maiuscole/minuscole",
+        description:
+          "Converti il testo tra diverse convenzioni di denominazione: camelCase, PascalCase, snake_case, kebab-case e altro.",
+      },
+      ja: {
+        name: "ケースコンバーター",
+        description:
+          "camelCase、PascalCase、snake_case、kebab-case など、さまざまな命名規則間でテキストを変換します。",
+      },
+      ko: {
+        name: "대소문자 변환기",
+        description:
+          "camelCase, PascalCase, snake_case, kebab-case 등 다양한 명명 규칙 간에 텍스트를 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Kes Huruf",
+        description:
+          "Tukar teks antara konvensyen penamaan yang berbeza: camelCase, PascalCase, snake_case, kebab-case dan banyak lagi.",
+      },
+      nl: {
+        name: "Hoofdletterconverter",
+        description:
+          "Converteer tekst tussen verschillende naamgevingsconventies: camelCase, PascalCase, snake_case, kebab-case en meer.",
+      },
+      no: {
+        name: "Konvertering av store/små bokstaver",
+        description:
+          "Konverter tekst mellom ulike navnekonvensjoner: camelCase, PascalCase, snake_case, kebab-case og flere.",
+      },
+      pl: {
+        name: "Konwerter wielkości liter",
+        description:
+          "Konwertuj tekst pomiędzy różnymi konwencjami nazewnictwa: camelCase, PascalCase, snake_case, kebab-case i inne.",
+      },
+      pt: {
+        name: "Conversor de Maiusculas/Minusculas",
+        description:
+          "Converta texto entre diferentes convenções de nomenclatura: camelCase, PascalCase, snake_case, kebab-case e mais.",
+      },
+      ru: {
+        name: "Конвертер регистра",
+        description:
+          "Преобразуйте текст между различными соглашениями об именовании: camelCase, PascalCase, snake_case, kebab-case и другими.",
+      },
+      sv: {
+        name: "Konvertera skiftläge",
+        description:
+          "Konvertera text mellan olika namnkonventioner: camelCase, PascalCase, snake_case, kebab-case med mera.",
+      },
+      th: {
+        name: "ตัวแปลงรูปแบบตัวอักษร",
+        description:
+          "แปลงข้อความระหว่างรูปแบบการตั้งชื่อต่าง ๆ: camelCase, PascalCase, snake_case, kebab-case และอื่น ๆ",
+      },
+      tr: {
+        name: "Harf Durumu Dönüştürücü",
+        description:
+          "Metni farklı adlandırma kuralları arasında dönüştürün: camelCase, PascalCase, snake_case, kebab-case ve daha fazlası.",
+      },
+      vi: {
+        name: "Chuyển đổi kiểu chữ",
+        description:
+          "Chuyển đổi văn bản giữa các quy ước đặt tên khác nhau: camelCase, PascalCase, snake_case, kebab-case và nhiều kiểu khác.",
+      },
+      "zh-CN": {
+        name: "大小写转换器",
+        description:
+          "在不同命名约定之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+      "zh-TW": {
+        name: "大小寫轉換器",
+        description:
+          "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
       },
     },
   },

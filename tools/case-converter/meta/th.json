@@ -1,0 +1,4 @@
+{
+  "name": "ตัวแปลงรูปแบบตัวอักษร",
+  "description": "แปลงข้อความระหว่างรูปแบบการตั้งชื่อต่าง ๆ: camelCase, PascalCase, snake_case, kebab-case และอื่น ๆ"
+}

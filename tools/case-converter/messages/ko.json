@@ -1,0 +1,8 @@
+{
+  "inputLabel": "입력 텍스트",
+  "inputPlaceholder": "변환할 텍스트를 입력하세요\u2026",
+  "inputDescription": "아무 명명 규칙의 텍스트를 입력하거나 붙여넣으세요. 모든 대소문자 변형이 아래에 생성됩니다.",
+  "clearLabel": "지우기",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

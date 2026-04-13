@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "case-converter",
+    language: "ar",
+  },
+  {
+    slug: "case-converter",
+    language: "de",
+  },
+  {
+    slug: "case-converter",
+    language: "en",
+  },
+  {
+    slug: "case-converter",
+    language: "es",
+  },
+  {
+    slug: "case-converter",
+    language: "fr",
+  },
+  {
+    slug: "case-converter",
+    language: "he",
+  },
+  {
+    slug: "case-converter",
+    language: "hi",
+  },
+  {
+    slug: "case-converter",
+    language: "id",
+  },
+  {
+    slug: "case-converter",
+    language: "it",
+  },
+  {
+    slug: "case-converter",
+    language: "ja",
+  },
+  {
+    slug: "case-converter",
+    language: "ko",
+  },
+  {
+    slug: "case-converter",
+    language: "ms",
+  },
+  {
+    slug: "case-converter",
+    language: "nl",
+  },
+  {
+    slug: "case-converter",
+    language: "no",
+  },
+  {
+    slug: "case-converter",
+    language: "pl",
+  },
+  {
+    slug: "case-converter",
+    language: "pt",
+  },
+  {
+    slug: "case-converter",
+    language: "ru",
+  },
+  {
+    slug: "case-converter",
+    language: "sv",
+  },
+  {
+    slug: "case-converter",
+    language: "th",
+  },
+  {
+    slug: "case-converter",
+    language: "tr",
+  },
+  {
+    slug: "case-converter",
+    language: "vi",
+  },
+  {
+    slug: "case-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "case-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-to-json-converter",
     language: "ar",
   },
