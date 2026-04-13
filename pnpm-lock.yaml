@@ -33,6 +33,9 @@ catalogs:
     '@testing-library/react':
       specifier: ^16.3.2
       version: 16.3.2
+    '@types/figlet':
+      specifier: ^1.7.0
+      version: 1.7.0
     '@types/jmespath':
       specifier: ^0.15.2
       version: 0.15.2
@@ -72,6 +75,9 @@ catalogs:
     dependency-cruiser:
       specifier: ^17.3.10
       version: 17.3.10
+    figlet:
+      specifier: ^1.10.0
+      version: 1.11.0
     happy-dom:
       specifier: ^20.8.9
       version: 20.8.9
@@ -261,6 +267,9 @@ importers:
 
   packages/tool-registry:
     dependencies:
+      '@tool/ascii-art-generator':
+        specifier: workspace:*
+        version: link:../../tools/ascii-art-generator
       '@tool/base64-encoder-decoder':
         specifier: workspace:*
         version: link:../../tools/base64-encoder-decoder
@@ -432,6 +441,37 @@ importers:
       tailwindcss:
         specifier: 'catalog:'
         version: 4.2.2
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/ascii-art-generator:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      figlet:
+        specifier: 'catalog:'
+        version: 1.11.0
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@types/figlet':
+        specifier: 'catalog:'
+        version: 1.7.0
       vitest:
         specifier: 'catalog:'
         version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
@@ -4128,6 +4168,9 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
+  '@types/figlet@1.7.0':
+    resolution: {integrity: sha512-KwrT7p/8Eo3Op/HBSIwGXOsTZKYiM9NpWRBJ5sVjWP/SmlS+oxxRvJht/FNAtliJvja44N3ul1yATgohnVBV0Q==}
+
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
@@ -5013,6 +5056,11 @@ packages:
   fetch-blob@3.2.0:
     resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
     engines: {node: ^12.20 || >= 14.13}
+
+  figlet@1.11.0:
+    resolution: {integrity: sha512-EEx3OS/l2bFqcUNN2NM9FPJp8vAMrgbCxsbl2hbcJNNxOEwVe3mEzrhan7TbJQViZa8mMqhihlbCaqD+LyYKTQ==}
+    engines: {node: '>= 17.0.0'}
+    hasBin: true
 
   figures@6.1.0:
     resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
@@ -9645,6 +9693,8 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
+  '@types/figlet@1.7.0': {}
+
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -10710,6 +10760,10 @@ snapshots:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.3.3
+
+  figlet@1.11.0:
+    dependencies:
+      commander: 14.0.3
 
   figures@6.1.0:
     dependencies:

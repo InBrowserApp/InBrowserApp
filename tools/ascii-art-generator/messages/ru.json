@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Введите текст",
+  "inputPlaceholder": "Введите текст для преобразования...",
+  "fontLabel": "Шрифт",
+  "fontSearchPlaceholder": "Поиск шрифтов...",
+  "outputLabel": "Результат в ASCII-арт",
+  "outputPlaceholder": "ASCII-арт появится здесь...",
+  "copyLabel": "Копировать",
+  "copiedLabel": "Скопировано"
+}

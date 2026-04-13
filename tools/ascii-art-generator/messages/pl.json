@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Tekst wejściowy",
+  "inputPlaceholder": "Wpisz tekst do przekształcenia...",
+  "fontLabel": "Czcionka",
+  "fontSearchPlaceholder": "Szukaj czcionek...",
+  "outputLabel": "Wygenerowana grafika ASCII",
+  "outputPlaceholder": "Grafika ASCII pojawi się tutaj...",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

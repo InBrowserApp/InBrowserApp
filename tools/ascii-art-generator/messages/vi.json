@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Văn bản đầu vào",
+  "inputPlaceholder": "Nhập văn bản để chuyển đổi...",
+  "fontLabel": "Phông chữ",
+  "fontSearchPlaceholder": "Tìm phông chữ...",
+  "outputLabel": "Kết quả ASCII art",
+  "outputPlaceholder": "ASCII art sẽ hiển thị ở đây...",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

@@ -7,6 +7,7 @@
     "generate": "tsx src/generate.ts && pnpm exec oxfmt src/generated/*.ts"
   },
   "dependencies": {
+    "@tool/ascii-art-generator": "workspace:*",
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/current-network-time": "workspace:*",

@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Texto de entrada",
+  "inputPlaceholder": "Introduce el texto a convertir...",
+  "fontLabel": "Fuente",
+  "fontSearchPlaceholder": "Buscar fuentes...",
+  "outputLabel": "Arte ASCII generado",
+  "outputPlaceholder": "El arte ASCII aparecerá aquí...",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

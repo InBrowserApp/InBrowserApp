@@ -2,6 +2,98 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "ascii-art-generator",
+    language: "ar",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "de",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "en",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "es",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "fr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "he",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "hi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "id",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "it",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ja",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ko",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ms",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "nl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "no",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pt",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ru",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "sv",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "th",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "tr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "vi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },

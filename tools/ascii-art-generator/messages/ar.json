@@ -1,0 +1,10 @@
+{
+  "inputLabel": "نص الإدخال",
+  "inputPlaceholder": "أدخل النص للتحويل...",
+  "fontLabel": "الخط",
+  "fontSearchPlaceholder": "البحث عن الخطوط...",
+  "outputLabel": "مخرجات فن ASCII",
+  "outputPlaceholder": "سيظهر فن ASCII هنا...",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

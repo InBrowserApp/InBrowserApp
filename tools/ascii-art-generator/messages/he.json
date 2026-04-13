@@ -1,0 +1,10 @@
+{
+  "inputLabel": "טקסט קלט",
+  "inputPlaceholder": "הזינו טקסט להמרה...",
+  "fontLabel": "גופן",
+  "fontSearchPlaceholder": "חיפוש גופנים...",
+  "outputLabel": "פלט אמנות ASCII",
+  "outputPlaceholder": "אמנות ASCII תופיע כאן...",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק"
+}

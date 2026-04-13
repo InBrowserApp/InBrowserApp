@@ -2,6 +2,129 @@ import type { ToolRegistryEntry } from "../types"
 
 export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
+    slug: "ascii-art-generator",
+    category: "text",
+    icon: "binary",
+    tags: ["ascii", "art", "text", "generator", "figlet", "banner", "font"],
+    locales: {
+      ar: {
+        name: "مولّد فن ASCII",
+        description:
+          "حوّل النصوص إلى فن ASCII باستخدام خطوط figlet متنوعة. اكتب كلمة أو عبارة، واختر خطًا، وانسخ النتيجة.",
+      },
+      de: {
+        name: "ASCII-Art-Generator",
+        description:
+          "Text in ASCII-Art umwandeln mit verschiedenen Figlet-Schriftarten. Wort oder Satz eingeben, Schriftart wählen und das Ergebnis kopieren.",
+      },
+      en: {
+        name: "ASCII Art Generator",
+        description:
+          "Convert text to ASCII art using various figlet fonts. Type a word or phrase, pick a font, and copy the result.",
+      },
+      es: {
+        name: "Generador de arte ASCII",
+        description:
+          "Convierte texto en arte ASCII usando diversas fuentes figlet. Escribe una palabra o frase, elige una fuente y copia el resultado.",
+      },
+      fr: {
+        name: "Générateur d'art ASCII",
+        description:
+          "Convertissez du texte en art ASCII avec différentes polices figlet. Saisissez un mot ou une phrase, choisissez une police et copiez le résultat.",
+      },
+      he: {
+        name: "מחולל אמנות ASCII",
+        description:
+          "המרת טקסט לאמנות ASCII באמצעות גופני figlet מגוונים. הקלידו מילה או ביטוי, בחרו גופן והעתיקו את התוצאה.",
+      },
+      hi: {
+        name: "ASCII आर्ट जनरेटर",
+        description:
+          "विभिन्न figlet फ़ॉन्ट का उपयोग करके टेक्स्ट को ASCII आर्ट में बदलें। कोई शब्द या वाक्यांश टाइप करें, फ़ॉन्ट चुनें और परिणाम कॉपी करें।",
+      },
+      id: {
+        name: "Generator Seni ASCII",
+        description:
+          "Ubah teks menjadi seni ASCII menggunakan berbagai font figlet. Ketik kata atau frasa, pilih font, lalu salin hasilnya.",
+      },
+      it: {
+        name: "Generatore di ASCII Art",
+        description:
+          "Converti il testo in ASCII art utilizzando vari font figlet. Digita una parola o una frase, scegli un font e copia il risultato.",
+      },
+      ja: {
+        name: "ASCIIアートジェネレーター",
+        description:
+          "さまざまなfigletフォントを使ってテキストをASCIIアートに変換します。単語やフレーズを入力し、フォントを選んで結果をコピーできます。",
+      },
+      ko: {
+        name: "ASCII 아트 생성기",
+        description:
+          "다양한 figlet 글꼴을 사용하여 텍스트를 ASCII 아트로 변환합니다. 단어나 문구를 입력하고, 글꼴을 선택한 후 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Penjana Seni ASCII",
+        description:
+          "Tukar teks kepada seni ASCII menggunakan pelbagai fon figlet. Taipkan perkataan atau frasa, pilih fon, dan salin hasilnya.",
+      },
+      nl: {
+        name: "ASCII-kunstgenerator",
+        description:
+          "Converteer tekst naar ASCII-kunst met verschillende figlet-lettertypen. Typ een woord of zin, kies een lettertype en kopieer het resultaat.",
+      },
+      no: {
+        name: "ASCII Art-generator",
+        description:
+          "Konverter tekst til ASCII-kunst med ulike figlet-skrifttyper. Skriv inn et ord eller en setning, velg en skrifttype og kopier resultatet.",
+      },
+      pl: {
+        name: "Generator ASCII Art",
+        description:
+          "Konwertuj tekst na grafikę ASCII za pomocą czcionek figlet. Wpisz wyraz lub frazę, wybierz czcionkę i skopiuj wynik.",
+      },
+      pt: {
+        name: "Gerador de Arte ASCII",
+        description:
+          "Converta texto em arte ASCII usando diversas fontes figlet. Digite uma palavra ou frase, escolha uma fonte e copie o resultado.",
+      },
+      ru: {
+        name: "Генератор ASCII-арта",
+        description:
+          "Преобразуйте текст в ASCII-арт с помощью различных шрифтов figlet. Введите слово или фразу, выберите шрифт и скопируйте результат.",
+      },
+      sv: {
+        name: "ASCII-konstgenerator",
+        description:
+          "Konvertera text till ASCII-konst med olika figlet-typsnitt. Skriv ett ord eller en fras, välj ett typsnitt och kopiera resultatet.",
+      },
+      th: {
+        name: "ตัวสร้าง ASCII Art",
+        description:
+          "แปลงข้อความเป็น ASCII Art ด้วยฟอนต์ figlet หลากหลายรูปแบบ พิมพ์คำหรือวลี เลือกฟอนต์ แล้วคัดลอกผลลัพธ์",
+      },
+      tr: {
+        name: "ASCII Sanat Oluşturucu",
+        description:
+          "Çeşitli figlet fontları kullanarak metni ASCII sanatına dönüştürün. Bir kelime veya ifade yazın, font seçin ve sonucu kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo ASCII Art",
+        description:
+          "Chuyển đổi văn bản thành ASCII art bằng nhiều phông chữ figlet khác nhau. Nhập một từ hoặc cụm từ, chọn phông chữ và sao chép kết quả.",
+      },
+      "zh-CN": {
+        name: "ASCII 艺术字生成器",
+        description:
+          "使用多种 figlet 字体将文本转换为 ASCII 艺术字。输入单词或短语，选择字体，然后复制结果。",
+      },
+      "zh-TW": {
+        name: "ASCII 藝術產生器",
+        description:
+          "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",
@@ -4172,6 +4295,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
 ]
 
 export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
+  "ascii-art-generator": {
+    slug: "ascii-art-generator",
+    category: "text",
+    icon: "binary",
+    tags: ["ascii", "art", "text", "generator", "figlet", "banner", "font"],
+    locales: {
+      ar: {
+        name: "مولّد فن ASCII",
+        description:
+          "حوّل النصوص إلى فن ASCII باستخدام خطوط figlet متنوعة. اكتب كلمة أو عبارة، واختر خطًا، وانسخ النتيجة.",
+      },
+      de: {
+        name: "ASCII-Art-Generator",
+        description:
+          "Text in ASCII-Art umwandeln mit verschiedenen Figlet-Schriftarten. Wort oder Satz eingeben, Schriftart wählen und das Ergebnis kopieren.",
+      },
+      en: {
+        name: "ASCII Art Generator",
+        description:
+          "Convert text to ASCII art using various figlet fonts. Type a word or phrase, pick a font, and copy the result.",
+      },
+      es: {
+        name: "Generador de arte ASCII",
+        description:
+          "Convierte texto en arte ASCII usando diversas fuentes figlet. Escribe una palabra o frase, elige una fuente y copia el resultado.",
+      },
+      fr: {
+        name: "Générateur d'art ASCII",
+        description:
+          "Convertissez du texte en art ASCII avec différentes polices figlet. Saisissez un mot ou une phrase, choisissez une police et copiez le résultat.",
+      },
+      he: {
+        name: "מחולל אמנות ASCII",
+        description:
+          "המרת טקסט לאמנות ASCII באמצעות גופני figlet מגוונים. הקלידו מילה או ביטוי, בחרו גופן והעתיקו את התוצאה.",
+      },
+      hi: {
+        name: "ASCII आर्ट जनरेटर",
+        description:
+          "विभिन्न figlet फ़ॉन्ट का उपयोग करके टेक्स्ट को ASCII आर्ट में बदलें। कोई शब्द या वाक्यांश टाइप करें, फ़ॉन्ट चुनें और परिणाम कॉपी करें।",
+      },
+      id: {
+        name: "Generator Seni ASCII",
+        description:
+          "Ubah teks menjadi seni ASCII menggunakan berbagai font figlet. Ketik kata atau frasa, pilih font, lalu salin hasilnya.",
+      },
+      it: {
+        name: "Generatore di ASCII Art",
+        description:
+          "Converti il testo in ASCII art utilizzando vari font figlet. Digita una parola o una frase, scegli un font e copia il risultato.",
+      },
+      ja: {
+        name: "ASCIIアートジェネレーター",
+        description:
+          "さまざまなfigletフォントを使ってテキストをASCIIアートに変換します。単語やフレーズを入力し、フォントを選んで結果をコピーできます。",
+      },
+      ko: {
+        name: "ASCII 아트 생성기",
+        description:
+          "다양한 figlet 글꼴을 사용하여 텍스트를 ASCII 아트로 변환합니다. 단어나 문구를 입력하고, 글꼴을 선택한 후 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Penjana Seni ASCII",
+        description:
+          "Tukar teks kepada seni ASCII menggunakan pelbagai fon figlet. Taipkan perkataan atau frasa, pilih fon, dan salin hasilnya.",
+      },
+      nl: {
+        name: "ASCII-kunstgenerator",
+        description:
+          "Converteer tekst naar ASCII-kunst met verschillende figlet-lettertypen. Typ een woord of zin, kies een lettertype en kopieer het resultaat.",
+      },
+      no: {
+        name: "ASCII Art-generator",
+        description:
+          "Konverter tekst til ASCII-kunst med ulike figlet-skrifttyper. Skriv inn et ord eller en setning, velg en skrifttype og kopier resultatet.",
+      },
+      pl: {
+        name: "Generator ASCII Art",
+        description:
+          "Konwertuj tekst na grafikę ASCII za pomocą czcionek figlet. Wpisz wyraz lub frazę, wybierz czcionkę i skopiuj wynik.",
+      },
+      pt: {
+        name: "Gerador de Arte ASCII",
+        description:
+          "Converta texto em arte ASCII usando diversas fontes figlet. Digite uma palavra ou frase, escolha uma fonte e copie o resultado.",
+      },
+      ru: {
+        name: "Генератор ASCII-арта",
+        description:
+          "Преобразуйте текст в ASCII-арт с помощью различных шрифтов figlet. Введите слово или фразу, выберите шрифт и скопируйте результат.",
+      },
+      sv: {
+        name: "ASCII-konstgenerator",
+        description:
+          "Konvertera text till ASCII-konst med olika figlet-typsnitt. Skriv ett ord eller en fras, välj ett typsnitt och kopiera resultatet.",
+      },
+      th: {
+        name: "ตัวสร้าง ASCII Art",
+        description:
+          "แปลงข้อความเป็น ASCII Art ด้วยฟอนต์ figlet หลากหลายรูปแบบ พิมพ์คำหรือวลี เลือกฟอนต์ แล้วคัดลอกผลลัพธ์",
+      },
+      tr: {
+        name: "ASCII Sanat Oluşturucu",
+        description:
+          "Çeşitli figlet fontları kullanarak metni ASCII sanatına dönüştürün. Bir kelime veya ifade yazın, font seçin ve sonucu kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo ASCII Art",
+        description:
+          "Chuyển đổi văn bản thành ASCII art bằng nhiều phông chữ figlet khác nhau. Nhập một từ hoặc cụm từ, chọn phông chữ và sao chép kết quả.",
+      },
+      "zh-CN": {
+        name: "ASCII 艺术字生成器",
+        description:
+          "使用多种 figlet 字体将文本转换为 ASCII 艺术字。输入单词或短语，选择字体，然后复制结果。",
+      },
+      "zh-TW": {
+        name: "ASCII 藝術產生器",
+        description:
+          "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
   "base64-encoder-decoder": {
     slug: "base64-encoder-decoder",
     category: "text",

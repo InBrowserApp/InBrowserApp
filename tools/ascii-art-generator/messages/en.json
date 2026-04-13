@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Input text",
+  "inputPlaceholder": "Enter text to convert...",
+  "fontLabel": "Font",
+  "fontSearchPlaceholder": "Search fonts...",
+  "outputLabel": "ASCII art output",
+  "outputPlaceholder": "ASCII art will appear here...",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

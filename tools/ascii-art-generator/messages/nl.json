@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Invoertekst",
+  "inputPlaceholder": "Voer tekst in om te converteren...",
+  "fontLabel": "Lettertype",
+  "fontSearchPlaceholder": "Lettertypen zoeken...",
+  "outputLabel": "ASCII-art uitvoer",
+  "outputPlaceholder": "ASCII-art verschijnt hier...",
+  "copyLabel": "Kopieer",
+  "copiedLabel": "Gekopieerd"
+}

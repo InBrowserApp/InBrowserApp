@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Inmatningstext",
+  "inputPlaceholder": "Ange text att konvertera...",
+  "fontLabel": "Typsnitt",
+  "fontSearchPlaceholder": "Sök typsnitt...",
+  "outputLabel": "ASCII-konstutdata",
+  "outputPlaceholder": "ASCII-konst visas här...",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierad"
+}

@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Inndatatekst",
+  "inputPlaceholder": "Skriv inn tekst for konvertering...",
+  "fontLabel": "Skrifttype",
+  "fontSearchPlaceholder": "Søk i skrifttyper...",
+  "outputLabel": "ASCII-kunst",
+  "outputPlaceholder": "ASCII-kunst vises her...",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}

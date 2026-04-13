@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Eingabetext",
+  "inputPlaceholder": "Text zur Umwandlung eingeben...",
+  "fontLabel": "Schriftart",
+  "fontSearchPlaceholder": "Schriftarten suchen...",
+  "outputLabel": "ASCII-Art-Ausgabe",
+  "outputPlaceholder": "ASCII-Art wird hier angezeigt...",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Giriş metni",
+  "inputPlaceholder": "Dönüştürülecek metni girin...",
+  "fontLabel": "Yazı tipi",
+  "fontSearchPlaceholder": "Yazı tipi ara...",
+  "outputLabel": "ASCII sanat çıktısı",
+  "outputPlaceholder": "ASCII sanat burada görünecek...",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

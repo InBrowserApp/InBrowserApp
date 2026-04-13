@@ -1,0 +1,10 @@
+{
+  "inputLabel": "輸入文字",
+  "inputPlaceholder": "輸入要轉換的文字……",
+  "fontLabel": "字型",
+  "fontSearchPlaceholder": "搜尋字型……",
+  "outputLabel": "ASCII 藝術輸出",
+  "outputPlaceholder": "ASCII 藝術將顯示在此……",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

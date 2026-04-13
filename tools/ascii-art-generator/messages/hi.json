@@ -1,0 +1,10 @@
+{
+  "inputLabel": "इनपुट टेक्स्ट",
+  "inputPlaceholder": "कन्वर्ट करने के लिए टेक्स्ट दर्ज करें...",
+  "fontLabel": "फ़ॉन्ट",
+  "fontSearchPlaceholder": "फ़ॉन्ट खोजें...",
+  "outputLabel": "ASCII आर्ट आउटपुट",
+  "outputPlaceholder": "ASCII आर्ट यहाँ दिखाई देगी...",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

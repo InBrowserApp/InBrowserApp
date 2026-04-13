@@ -1,0 +1,10 @@
+{
+  "inputLabel": "Teks input",
+  "inputPlaceholder": "Masukkan teks untuk ditukar...",
+  "fontLabel": "Fon",
+  "fontSearchPlaceholder": "Cari fon...",
+  "outputLabel": "Output seni ASCII",
+  "outputPlaceholder": "Seni ASCII akan dipaparkan di sini...",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

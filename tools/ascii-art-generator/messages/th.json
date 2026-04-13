@@ -1,0 +1,10 @@
+{
+  "inputLabel": "ข้อความ",
+  "inputPlaceholder": "ป้อนข้อความที่ต้องการแปลง...",
+  "fontLabel": "ฟอนต์",
+  "fontSearchPlaceholder": "ค้นหาฟอนต์...",
+  "outputLabel": "ผลลัพธ์ ASCII art",
+  "outputPlaceholder": "ASCII art จะแสดงที่นี่...",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

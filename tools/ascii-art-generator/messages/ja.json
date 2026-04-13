@@ -1,0 +1,10 @@
+{
+  "inputLabel": "入力テキスト",
+  "inputPlaceholder": "変換するテキストを入力…",
+  "fontLabel": "フォント",
+  "fontSearchPlaceholder": "フォントを検索…",
+  "outputLabel": "ASCIIアート出力",
+  "outputPlaceholder": "ASCIIアートがここに表示されます…",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピー済み"
+}

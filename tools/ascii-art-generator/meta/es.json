@@ -1,0 +1,4 @@
+{
+  "name": "Generador de arte ASCII",
+  "description": "Convierte texto en arte ASCII usando diversas fuentes figlet. Escribe una palabra o frase, elige una fuente y copia el resultado."
+}
