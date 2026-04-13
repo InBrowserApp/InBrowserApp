@@ -1,0 +1,16 @@
+{
+  "inputLabel": "輸入文字",
+  "inputPlaceholder": "輸入要轉換為 slug 的文字...",
+  "outputLabel": "產生的 Slug",
+  "outputPlaceholder": "Slug 將顯示在這裡...",
+  "separatorLabel": "分隔符",
+  "hyphenLabel": "連字符",
+  "underscoreLabel": "底線",
+  "dotLabel": "點",
+  "caseLabel": "大小寫",
+  "lowercaseLabel": "小寫",
+  "preserveLabel": "保留原樣",
+  "copyLabel": "複製 slug",
+  "copiedLabel": "已複製",
+  "clearLabel": "清除"
+}

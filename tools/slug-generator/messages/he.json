@@ -1,0 +1,16 @@
+{
+  "inputLabel": "טקסט קלט",
+  "inputPlaceholder": "הזן טקסט להמרה ל-slug...",
+  "outputLabel": "Slug שנוצר",
+  "outputPlaceholder": "ה-slug יופיע כאן...",
+  "separatorLabel": "מפריד",
+  "hyphenLabel": "מקף",
+  "underscoreLabel": "קו תחתון",
+  "dotLabel": "נקודה",
+  "caseLabel": "רישיות",
+  "lowercaseLabel": "אותיות קטנות",
+  "preserveLabel": "שמור",
+  "copyLabel": "העתק slug",
+  "copiedLabel": "הועתק",
+  "clearLabel": "נקה"
+}

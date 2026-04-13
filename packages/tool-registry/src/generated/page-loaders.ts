@@ -34,6 +34,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha384-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
+  "slug-generator": () => import("@tool/slug-generator/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),

@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Tekst wejściowy",
+  "inputPlaceholder": "Wprowadź tekst do konwersji na slug...",
+  "outputLabel": "Wygenerowany Slug",
+  "outputPlaceholder": "Slug pojawi się tutaj...",
+  "separatorLabel": "Separator",
+  "hyphenLabel": "myślnik",
+  "underscoreLabel": "podkreślenie",
+  "dotLabel": "kropka",
+  "caseLabel": "Wielkość liter",
+  "lowercaseLabel": "Małe litery",
+  "preserveLabel": "Zachowaj",
+  "copyLabel": "Kopiuj slug",
+  "copiedLabel": "Skopiowano",
+  "clearLabel": "Wyczyść"
+}

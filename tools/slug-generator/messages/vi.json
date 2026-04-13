@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Văn bản đầu vào",
+  "inputPlaceholder": "Nhập văn bản để chuyển đổi thành slug...",
+  "outputLabel": "Slug đã tạo",
+  "outputPlaceholder": "Slug sẽ xuất hiện ở đây...",
+  "separatorLabel": "Dấu phân cách",
+  "hyphenLabel": "gạch ngang",
+  "underscoreLabel": "gạch dưới",
+  "dotLabel": "chấm",
+  "caseLabel": "Chữ hoa/thường",
+  "lowercaseLabel": "Chữ thường",
+  "preserveLabel": "Giữ nguyên",
+  "copyLabel": "Sao chép slug",
+  "copiedLabel": "Đã sao chép",
+  "clearLabel": "Xóa"
+}
