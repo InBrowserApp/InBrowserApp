@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Giriş Metni",
+  "inputPlaceholder": "Slug'a dönüştürülecek metni girin...",
+  "outputLabel": "Oluşturulan Slug",
+  "outputPlaceholder": "Slug burada görünecek...",
+  "separatorLabel": "Ayırıcı",
+  "hyphenLabel": "tire",
+  "underscoreLabel": "alt çizgi",
+  "dotLabel": "nokta",
+  "caseLabel": "Büyük/Küçük Harf",
+  "lowercaseLabel": "Küçük harf",
+  "preserveLabel": "Koru",
+  "copyLabel": "Slug'ı kopyala",
+  "copiedLabel": "Kopyalandı",
+  "clearLabel": "Temizle"
+}

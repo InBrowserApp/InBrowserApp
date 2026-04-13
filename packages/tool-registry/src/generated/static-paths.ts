@@ -2302,6 +2302,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "slug-generator",
+    language: "ar",
+  },
+  {
+    slug: "slug-generator",
+    language: "de",
+  },
+  {
+    slug: "slug-generator",
+    language: "en",
+  },
+  {
+    slug: "slug-generator",
+    language: "es",
+  },
+  {
+    slug: "slug-generator",
+    language: "fr",
+  },
+  {
+    slug: "slug-generator",
+    language: "he",
+  },
+  {
+    slug: "slug-generator",
+    language: "hi",
+  },
+  {
+    slug: "slug-generator",
+    language: "id",
+  },
+  {
+    slug: "slug-generator",
+    language: "it",
+  },
+  {
+    slug: "slug-generator",
+    language: "ja",
+  },
+  {
+    slug: "slug-generator",
+    language: "ko",
+  },
+  {
+    slug: "slug-generator",
+    language: "ms",
+  },
+  {
+    slug: "slug-generator",
+    language: "nl",
+  },
+  {
+    slug: "slug-generator",
+    language: "no",
+  },
+  {
+    slug: "slug-generator",
+    language: "pl",
+  },
+  {
+    slug: "slug-generator",
+    language: "pt",
+  },
+  {
+    slug: "slug-generator",
+    language: "ru",
+  },
+  {
+    slug: "slug-generator",
+    language: "sv",
+  },
+  {
+    slug: "slug-generator",
+    language: "th",
+  },
+  {
+    slug: "slug-generator",
+    language: "tr",
+  },
+  {
+    slug: "slug-generator",
+    language: "vi",
+  },
+  {
+    slug: "slug-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "slug-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },

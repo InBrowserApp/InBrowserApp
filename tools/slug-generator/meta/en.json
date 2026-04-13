@@ -1,0 +1,4 @@
+{
+  "name": "Slug Generator",
+  "description": "Convert text into URL-friendly slugs. Supports Unicode transliteration for Chinese, Japanese, Korean, Cyrillic, and more."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Slug 產生器",
+  "description": "將文字轉換為網址友善的 slug，支援中文、日文、韓文、西里爾文等多語言 Unicode 轉寫"
+}
