@@ -1382,6 +1382,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-ico",
+    language: "ar",
+  },
+  {
+    slug: "image-to-ico",
+    language: "de",
+  },
+  {
+    slug: "image-to-ico",
+    language: "en",
+  },
+  {
+    slug: "image-to-ico",
+    language: "es",
+  },
+  {
+    slug: "image-to-ico",
+    language: "fr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "he",
+  },
+  {
+    slug: "image-to-ico",
+    language: "hi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "id",
+  },
+  {
+    slug: "image-to-ico",
+    language: "it",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ja",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ko",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ms",
+  },
+  {
+    slug: "image-to-ico",
+    language: "nl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "no",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pt",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ru",
+  },
+  {
+    slug: "image-to-ico",
+    language: "sv",
+  },
+  {
+    slug: "image-to-ico",
+    language: "th",
+  },
+  {
+    slug: "image-to-ico",
+    language: "tr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "vi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

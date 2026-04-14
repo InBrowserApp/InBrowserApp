@@ -21,6 +21,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "image-to-ico": () => import("@tool/image-to-ico/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
