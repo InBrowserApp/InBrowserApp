@@ -1,0 +1,4 @@
+{
+  "name": "Adler-32-hash tekst eller fil",
+  "description": "Generer Adler-32-kontrollsummer for tekst eller filer. Beregn raske kontrollsummer for dataintegritet og feildeteksjon"
+}

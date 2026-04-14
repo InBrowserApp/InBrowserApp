@@ -1,0 +1,4 @@
+{
+  "name": "Hash Adler-32 Teks atau File",
+  "description": "Buat checksum Adler-32 untuk teks atau file. Hitung checksum cepat untuk verifikasi integritas data dan deteksi kesalahan"
+}
