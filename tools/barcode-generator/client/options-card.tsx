@@ -8,7 +8,6 @@ import {
 import {
   Field,
   FieldContent,
-  FieldGroup,
   FieldLabel,
   FieldTitle,
 } from "@workspace/ui/components/ui/field"
@@ -172,8 +171,8 @@ function OptionsCard({ handlers, messages, options }: OptionsCardProps) {
         <CardTitle>{messages.options}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-6">
-        <Field>
+      <CardContent className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <Field className="sm:col-span-2 xl:col-span-3">
           <FieldLabel htmlFor="barcode-text">{messages.text}</FieldLabel>
           <Input
             id="barcode-text"
@@ -185,110 +184,101 @@ function OptionsCard({ handlers, messages, options }: OptionsCardProps) {
           />
         </Field>
 
-        <div className="grid gap-6 xl:grid-cols-2">
-          <FieldGroup className="rounded-xl border bg-muted/20 p-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <SelectField
-                label={messages.format}
-                onValueChange={handlers.onFormatChange}
-                options={formatOptions}
-                value={options.format}
-              />
+        <SelectField
+          label={messages.format}
+          onValueChange={handlers.onFormatChange}
+          options={formatOptions}
+          value={options.format}
+        />
 
-              <Field className="rounded-lg border bg-background px-3 py-2.5">
-                <FieldLabel htmlFor="barcode-display-value">
-                  {messages.displayValue}
-                </FieldLabel>
-                <FieldContent className="items-start">
-                  <Switch
-                    checked={options.displayValue}
-                    id="barcode-display-value"
-                    onCheckedChange={(checked) => {
-                      handlers.onBooleanChange("displayValue", checked)
-                    }}
-                  />
-                </FieldContent>
-              </Field>
-            </div>
+        <Field className="gap-3">
+          <FieldLabel htmlFor="barcode-display-value">
+            {messages.displayValue}
+          </FieldLabel>
+          <FieldContent className="items-start">
+            <Switch
+              checked={options.displayValue}
+              id="barcode-display-value"
+              onCheckedChange={(checked) => {
+                handlers.onBooleanChange("displayValue", checked)
+              }}
+            />
+          </FieldContent>
+        </Field>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              <SliderField
-                label={messages.barWidth}
-                max={8}
-                min={1}
-                step={1}
-                value={options.width}
-                onValueChange={(value) => {
-                  handlers.onNumberChange("width", value)
-                }}
-              />
-              <SliderField
-                label={messages.barHeight}
-                max={300}
-                min={20}
-                step={2}
-                value={options.height}
-                onValueChange={(value) => {
-                  handlers.onNumberChange("height", value)
-                }}
-              />
-              <SliderField
-                label={messages.margin}
-                max={30}
-                min={0}
-                step={1}
-                value={options.margin}
-                onValueChange={(value) => {
-                  handlers.onNumberChange("margin", value)
-                }}
-              />
-              <SliderField
-                label={messages.fontSize}
-                max={48}
-                min={8}
-                step={1}
-                value={options.fontSize}
-                onValueChange={(value) => {
-                  handlers.onNumberChange("fontSize", value)
-                }}
-              />
-            </div>
-          </FieldGroup>
+        <SelectField
+          label={messages.textAlign}
+          onValueChange={handlers.onTextAlignChange}
+          options={alignmentOptions}
+          value={options.textAlign}
+        />
 
-          <FieldGroup className="rounded-xl border bg-muted/20 p-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <SelectField
-                label={messages.textAlign}
-                onValueChange={handlers.onTextAlignChange}
-                options={alignmentOptions}
-                value={options.textAlign}
-              />
-              <SelectField
-                label={messages.textPosition}
-                onValueChange={handlers.onTextPositionChange}
-                options={positionOptions}
-                value={options.textPosition}
-              />
-            </div>
+        <SelectField
+          label={messages.textPosition}
+          onValueChange={handlers.onTextPositionChange}
+          options={positionOptions}
+          value={options.textPosition}
+        />
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <ColorField
-                label={messages.lineColor}
-                value={options.lineColor}
-                onChange={(value) => {
-                  handlers.onColorChange("lineColor", value)
-                }}
-              />
-              <ColorField
-                label={messages.background}
-                value={options.background}
-                onChange={(value) => {
-                  handlers.onColorChange("background", value)
-                }}
-              />
-            </div>
-          </FieldGroup>
-        </div>
+        <ColorField
+          label={messages.lineColor}
+          value={options.lineColor}
+          onChange={(value) => {
+            handlers.onColorChange("lineColor", value)
+          }}
+        />
+
+        <ColorField
+          label={messages.background}
+          value={options.background}
+          onChange={(value) => {
+            handlers.onColorChange("background", value)
+          }}
+        />
+
+        <SliderField
+          label={messages.barWidth}
+          max={8}
+          min={1}
+          step={1}
+          value={options.width}
+          onValueChange={(value) => {
+            handlers.onNumberChange("width", value)
+          }}
+        />
+
+        <SliderField
+          label={messages.barHeight}
+          max={300}
+          min={20}
+          step={2}
+          value={options.height}
+          onValueChange={(value) => {
+            handlers.onNumberChange("height", value)
+          }}
+        />
+
+        <SliderField
+          label={messages.margin}
+          max={30}
+          min={0}
+          step={1}
+          value={options.margin}
+          onValueChange={(value) => {
+            handlers.onNumberChange("margin", value)
+          }}
+        />
+
+        <SliderField
+          label={messages.fontSize}
+          max={48}
+          min={8}
+          step={1}
+          value={options.fontSize}
+          onValueChange={(value) => {
+            handlers.onNumberChange("fontSize", value)
+          }}
+        />
       </CardContent>
     </Card>
   )
