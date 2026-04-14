@@ -150,7 +150,7 @@ function PortNumberLookupClient({
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
-      <Card className="gap-0 pb-0">
+      <Card>
         <CardHeader className="border-b">
           <CardTitle>{messages.meta.name}</CardTitle>
           <CardDescription>
