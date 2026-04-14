@@ -48,6 +48,7 @@ catalog:
   highlight.js: ^11.11.1
   husky: ^9.1.7
   "@types/js-yaml": ^4.0.9
+  jsbarcode: ^3.12.3
   js-yaml: ^4.1.1
   jmespath: ^0.16.0
   jsonpath-plus: ^10.3.0

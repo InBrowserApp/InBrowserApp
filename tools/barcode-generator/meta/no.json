@@ -1,0 +1,4 @@
+{
+  "name": "Strekkodegenerator",
+  "description": "Generer strekkoder (CODE128, EAN, UPC m.fl.) og last ned som PNG, SVG, JPEG eller WebP."
+}

@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "barcode-generator",
+    language: "ar",
+  },
+  {
+    slug: "barcode-generator",
+    language: "de",
+  },
+  {
+    slug: "barcode-generator",
+    language: "en",
+  },
+  {
+    slug: "barcode-generator",
+    language: "es",
+  },
+  {
+    slug: "barcode-generator",
+    language: "fr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "he",
+  },
+  {
+    slug: "barcode-generator",
+    language: "hi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "id",
+  },
+  {
+    slug: "barcode-generator",
+    language: "it",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ja",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ko",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ms",
+  },
+  {
+    slug: "barcode-generator",
+    language: "nl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "no",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pt",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ru",
+  },
+  {
+    slug: "barcode-generator",
+    language: "sv",
+  },
+  {
+    slug: "barcode-generator",
+    language: "th",
+  },
+  {
+    slug: "barcode-generator",
+    language: "tr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "vi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },
