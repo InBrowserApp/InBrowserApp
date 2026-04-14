@@ -10,20 +10,10 @@ type DecodeBasicAuthHeaderResult =
     }
 
 function extractBasicToken(value: string) {
-  const trimmedValue = value.trim()
-
-  if (trimmedValue === "") {
-    return null
-  }
-
-  const withoutHeaderName = trimmedValue.replace(/^authorization\s*:\s*/i, "")
+  const withoutHeaderName = value.trim().replace(/^authorization\s*:\s*/i, "")
   const match = withoutHeaderName.match(/^basic\s+(.+)$/i)
 
-  if (!match) {
-    return null
-  }
-
-  return match[1]?.trim() ?? null
+  return match ? match[1].trim() : null
 }
 
 function decodeBase64Utf8(value: string) {
