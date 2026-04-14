@@ -1,0 +1,49 @@
+{
+  "inputTitle": "密码",
+  "resultTitle": "强度摘要",
+  "passwordLabel": "密码",
+  "passwordPlaceholder": "输入要评估的密码",
+  "show": "显示",
+  "hide": "隐藏",
+  "privacyHint": "强度检测在本地浏览器中完成。",
+  "empty": "请输入密码以检查强度。",
+  "entropyBits": "熵值：{bits} 位",
+  "log10Guesses": "猜测次数（log10）：{value}",
+  "strength0": "非常弱",
+  "strength1": "较弱",
+  "strength2": "一般",
+  "strength3": "强",
+  "strength4": "非常强",
+  "length": "长度",
+  "unique": "唯一字符数",
+  "characterSets": "字符集",
+  "crackOffline": "破解时间（离线 1e10/秒）",
+  "crackOnline": "破解时间（在线 100/秒）",
+  "durationFormat": "约 {value} {unit}",
+  "durationUnderSecond": "少于 1 秒",
+  "unit": {
+    "seconds": "秒",
+    "minutes": "分钟",
+    "hours": "小时",
+    "days": "天",
+    "months": "个月",
+    "years": "年"
+  },
+  "warning": {
+    "common": "这是非常常见的密码。",
+    "short": "密码过短。",
+    "sequence": "连续模式容易被猜中。",
+    "repeat": "重复模式会降低强度。",
+    "singleClass": "仅使用一种字符类型会降低强度。"
+  },
+  "suggestion": {
+    "use-longer": "使用更长的密码或口令短语。",
+    "add-uppercase": "添加大写字母。",
+    "add-lowercase": "添加小写字母。",
+    "add-numbers": "添加数字。",
+    "add-symbols": "添加符号。",
+    "avoid-common": "避免常见密码和已泄露的短语。",
+    "avoid-sequences": "避免 123 或 abc 之类的序列。",
+    "avoid-repetition": "避免重复模式。"
+  }
+}

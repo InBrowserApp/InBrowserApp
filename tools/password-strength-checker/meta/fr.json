@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de Robustesse de Mot de Passe",
+  "description": "Évalue la robustesse via entropie, composition et motifs, avec des conseils pour améliorer la sécurité."
+}

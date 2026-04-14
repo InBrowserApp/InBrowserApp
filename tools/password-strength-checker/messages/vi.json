@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Mật khẩu",
+  "resultTitle": "Tóm tắt độ mạnh",
+  "passwordLabel": "Mật khẩu",
+  "passwordPlaceholder": "Nhập mật khẩu để đánh giá",
+  "show": "Hiện",
+  "hide": "Ẩn",
+  "privacyHint": "Việc kiểm tra được thực hiện cục bộ trong trình duyệt.",
+  "empty": "Nhập mật khẩu để kiểm tra độ mạnh.",
+  "entropyBits": "Entropy: {bits} bit",
+  "log10Guesses": "Số lần đoán (log10): {value}",
+  "strength0": "Rất yếu",
+  "strength1": "Yếu",
+  "strength2": "Trung bình",
+  "strength3": "Mạnh",
+  "strength4": "Rất mạnh",
+  "length": "Độ dài",
+  "unique": "Ký tự duy nhất",
+  "characterSets": "Tập ký tự",
+  "crackOffline": "Thời gian bẻ (offline, 1e10/s)",
+  "crackOnline": "Thời gian bẻ (online, 100/s)",
+  "durationFormat": "Khoảng {value} {unit}",
+  "durationUnderSecond": "Nhỏ hơn 1 giây",
+  "unit": {
+    "seconds": "giây",
+    "minutes": "phút",
+    "hours": "giờ",
+    "days": "ngày",
+    "months": "tháng",
+    "years": "năm"
+  },
+  "warning": {
+    "common": "Đây là mật khẩu rất phổ biến.",
+    "short": "Mật khẩu quá ngắn.",
+    "sequence": "Chuỗi liên tiếp dễ đoán.",
+    "repeat": "Mẫu lặp lại làm giảm độ mạnh.",
+    "singleClass": "Chỉ dùng một loại ký tự làm giảm độ mạnh."
+  },
+  "suggestion": {
+    "use-longer": "Dùng mật khẩu hoặc cụm từ dài hơn.",
+    "add-uppercase": "Thêm chữ in hoa.",
+    "add-lowercase": "Thêm chữ thường.",
+    "add-numbers": "Thêm số.",
+    "add-symbols": "Thêm ký hiệu.",
+    "avoid-common": "Tránh mật khẩu phổ biến hoặc đã lộ.",
+    "avoid-sequences": "Tránh chuỗi như 123 hoặc abc.",
+    "avoid-repetition": "Tránh mẫu lặp lại."
+  }
+}

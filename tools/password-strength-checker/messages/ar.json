@@ -1,0 +1,49 @@
+{
+  "inputTitle": "كلمة المرور",
+  "resultTitle": "ملخص القوة",
+  "passwordLabel": "كلمة المرور",
+  "passwordPlaceholder": "أدخل كلمة مرور لتقييمها",
+  "show": "إظهار",
+  "hide": "إخفاء",
+  "privacyHint": "الفحص يتم محليًا في المتصفح.",
+  "empty": "أدخل كلمة مرور لفحص القوة.",
+  "entropyBits": "الإنتروبيا: {bits} بت",
+  "log10Guesses": "محاولات (log10): {value}",
+  "strength0": "ضعيفة جدًا",
+  "strength1": "ضعيفة",
+  "strength2": "متوسطة",
+  "strength3": "قوية",
+  "strength4": "قوية جدًا",
+  "length": "الطول",
+  "unique": "حروف فريدة",
+  "characterSets": "مجموعات الأحرف",
+  "crackOffline": "زمن الكسر (غير متصل 1e10/ث)",
+  "crackOnline": "زمن الكسر (متصل 100/ث)",
+  "durationFormat": "حوالي {value} {unit}",
+  "durationUnderSecond": "أقل من ثانية واحدة",
+  "unit": {
+    "seconds": "ثوانٍ",
+    "minutes": "دقائق",
+    "hours": "ساعات",
+    "days": "أيام",
+    "months": "أشهر",
+    "years": "سنوات"
+  },
+  "warning": {
+    "common": "هذه كلمة مرور شائعة جدًا.",
+    "short": "كلمة المرور قصيرة جدًا.",
+    "sequence": "التسلسلات سهلة التخمين.",
+    "repeat": "الأنماط المتكررة تقلل القوة.",
+    "singleClass": "استخدام نوع واحد من الأحرف يقلل القوة."
+  },
+  "suggestion": {
+    "use-longer": "استخدم كلمة مرور أو عبارة أطول.",
+    "add-uppercase": "أضف أحرفًا كبيرة.",
+    "add-lowercase": "أضف أحرفًا صغيرة.",
+    "add-numbers": "أضف أرقامًا.",
+    "add-symbols": "أضف رموزًا.",
+    "avoid-common": "تجنب كلمات المرور الشائعة أو المسرّبة.",
+    "avoid-sequences": "تجنب تسلسلات مثل 123 أو abc.",
+    "avoid-repetition": "تجنب الأنماط المتكررة."
+  }
+}

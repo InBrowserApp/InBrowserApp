@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Kata sandi",
+  "resultTitle": "Ringkasan kekuatan",
+  "passwordLabel": "Kata sandi",
+  "passwordPlaceholder": "Masukkan kata sandi untuk menilai",
+  "show": "Tampilkan",
+  "hide": "Sembunyikan",
+  "privacyHint": "Pemeriksaan berjalan lokal di browser Anda.",
+  "empty": "Masukkan kata sandi untuk mengecek kekuatannya.",
+  "entropyBits": "Entropi: {bits} bit",
+  "log10Guesses": "Perkiraan (log10): {value}",
+  "strength0": "Sangat lemah",
+  "strength1": "Lemah",
+  "strength2": "Cukup",
+  "strength3": "Kuat",
+  "strength4": "Sangat kuat",
+  "length": "Panjang",
+  "unique": "Karakter unik",
+  "characterSets": "Set karakter",
+  "crackOffline": "Waktu pecah (offline, 1e10/detik)",
+  "crackOnline": "Waktu pecah (online, 100/detik)",
+  "durationFormat": "Sekitar {value} {unit}",
+  "durationUnderSecond": "Kurang dari 1 detik",
+  "unit": {
+    "seconds": "detik",
+    "minutes": "menit",
+    "hours": "jam",
+    "days": "hari",
+    "months": "bulan",
+    "years": "tahun"
+  },
+  "warning": {
+    "common": "Ini adalah kata sandi yang sangat umum.",
+    "short": "Kata sandi terlalu pendek.",
+    "sequence": "Urutan mudah ditebak.",
+    "repeat": "Pola berulang mengurangi kekuatan.",
+    "singleClass": "Hanya satu jenis karakter menurunkan kekuatan."
+  },
+  "suggestion": {
+    "use-longer": "Gunakan kata sandi atau frasa yang lebih panjang.",
+    "add-uppercase": "Tambahkan huruf kapital.",
+    "add-lowercase": "Tambahkan huruf kecil.",
+    "add-numbers": "Tambahkan angka.",
+    "add-symbols": "Tambahkan simbol.",
+    "avoid-common": "Hindari kata sandi umum atau yang bocor.",
+    "avoid-sequences": "Hindari urutan seperti 123 atau abc.",
+    "avoid-repetition": "Hindari pola berulang."
+  }
+}

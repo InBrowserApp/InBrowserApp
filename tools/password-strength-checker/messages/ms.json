@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Kata laluan",
+  "resultTitle": "Ringkasan kekuatan",
+  "passwordLabel": "Kata laluan",
+  "passwordPlaceholder": "Masukkan kata laluan untuk dinilai",
+  "show": "Tunjuk",
+  "hide": "Sembunyi",
+  "privacyHint": "Pemeriksaan dijalankan secara tempatan dalam pelayar.",
+  "empty": "Masukkan kata laluan untuk semak kekuatan.",
+  "entropyBits": "Entropi: {bits} bit",
+  "log10Guesses": "Tebakan (log10): {value}",
+  "strength0": "Sangat lemah",
+  "strength1": "Lemah",
+  "strength2": "Sederhana",
+  "strength3": "Kuat",
+  "strength4": "Sangat kuat",
+  "length": "Panjang",
+  "unique": "Aksara unik",
+  "characterSets": "Set aksara",
+  "crackOffline": "Masa pecah (offline, 1e10/s)",
+  "crackOnline": "Masa pecah (online, 100/s)",
+  "durationFormat": "Kira-kira {value} {unit}",
+  "durationUnderSecond": "Kurang daripada 1 saat",
+  "unit": {
+    "seconds": "saat",
+    "minutes": "minit",
+    "hours": "jam",
+    "days": "hari",
+    "months": "bulan",
+    "years": "tahun"
+  },
+  "warning": {
+    "common": "Ini kata laluan yang sangat biasa.",
+    "short": "Kata laluan terlalu pendek.",
+    "sequence": "Jujukan mudah diteka.",
+    "repeat": "Corak berulang mengurangkan kekuatan.",
+    "singleClass": "Hanya satu jenis aksara menurunkan kekuatan."
+  },
+  "suggestion": {
+    "use-longer": "Gunakan kata laluan atau frasa yang lebih panjang.",
+    "add-uppercase": "Tambah huruf besar.",
+    "add-lowercase": "Tambah huruf kecil.",
+    "add-numbers": "Tambah nombor.",
+    "add-symbols": "Tambah simbol.",
+    "avoid-common": "Elakkan kata laluan biasa atau yang bocor.",
+    "avoid-sequences": "Elakkan jujukan seperti 123 atau abc.",
+    "avoid-repetition": "Elakkan corak berulang."
+  }
+}

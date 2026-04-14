@@ -1,0 +1,4 @@
+{
+  "name": "Kiểm tra độ mạnh mật khẩu",
+  "description": "Đánh giá độ mạnh bằng entropy, thành phần ký tự và mẫu, kèm gợi ý cải thiện bảo mật."
+}

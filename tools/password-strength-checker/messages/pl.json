@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Hasło",
+  "resultTitle": "Podsumowanie siły",
+  "passwordLabel": "Hasło",
+  "passwordPlaceholder": "Wpisz hasło do oceny",
+  "show": "Pokaż",
+  "hide": "Ukryj",
+  "privacyHint": "Sprawdzanie odbywa się lokalnie w przeglądarce.",
+  "empty": "Wpisz hasło, aby sprawdzić siłę.",
+  "entropyBits": "Entropia: {bits} bitów",
+  "log10Guesses": "Próby (log10): {value}",
+  "strength0": "Bardzo słabe",
+  "strength1": "Słabe",
+  "strength2": "Przeciętne",
+  "strength3": "Silne",
+  "strength4": "Bardzo silne",
+  "length": "Długość",
+  "unique": "Unikalne znaki",
+  "characterSets": "Zestawy znaków",
+  "crackOffline": "Czas złamania (offline, 1e10/s)",
+  "crackOnline": "Czas złamania (online, 100/s)",
+  "durationFormat": "Około {value} {unit}",
+  "durationUnderSecond": "Mniej niż 1 sekunda",
+  "unit": {
+    "seconds": "sekund",
+    "minutes": "minut",
+    "hours": "godzin",
+    "days": "dni",
+    "months": "miesięcy",
+    "years": "lat"
+  },
+  "warning": {
+    "common": "To bardzo popularne hasło.",
+    "short": "Hasło jest zbyt krótkie.",
+    "sequence": "Sekwencje są łatwe do odgadnięcia.",
+    "repeat": "Powtarzające się wzorce obniżają siłę.",
+    "singleClass": "Użycie tylko jednego typu znaków obniża siłę."
+  },
+  "suggestion": {
+    "use-longer": "Użyj dłuższego hasła lub frazy.",
+    "add-uppercase": "Dodaj wielkie litery.",
+    "add-lowercase": "Dodaj małe litery.",
+    "add-numbers": "Dodaj cyfry.",
+    "add-symbols": "Dodaj symbole.",
+    "avoid-common": "Unikaj popularnych lub wyciekłych haseł.",
+    "avoid-sequences": "Unikaj sekwencji jak 123 lub abc.",
+    "avoid-repetition": "Unikaj powtarzających się wzorców."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Wachtwoord",
+  "resultTitle": "Sterkteoverzicht",
+  "passwordLabel": "Wachtwoord",
+  "passwordPlaceholder": "Typ een wachtwoord om te beoordelen",
+  "show": "Tonen",
+  "hide": "Verbergen",
+  "privacyHint": "De controle gebeurt lokaal in je browser.",
+  "empty": "Voer een wachtwoord in om de sterkte te controleren.",
+  "entropyBits": "Entropie: {bits} bits",
+  "log10Guesses": "Gissingen (log10): {value}",
+  "strength0": "Zeer zwak",
+  "strength1": "Zwak",
+  "strength2": "Redelijk",
+  "strength3": "Sterk",
+  "strength4": "Zeer sterk",
+  "length": "Lengte",
+  "unique": "Unieke tekens",
+  "characterSets": "Tekensets",
+  "crackOffline": "Kraaktijd (offline, 1e10/s)",
+  "crackOnline": "Kraaktijd (online, 100/s)",
+  "durationFormat": "Ongeveer {value} {unit}",
+  "durationUnderSecond": "Minder dan 1 seconde",
+  "unit": {
+    "seconds": "seconden",
+    "minutes": "minuten",
+    "hours": "uur",
+    "days": "dagen",
+    "months": "maanden",
+    "years": "jaar"
+  },
+  "warning": {
+    "common": "Dit is een zeer veelvoorkomend wachtwoord.",
+    "short": "Het wachtwoord is te kort.",
+    "sequence": "Reeksen zijn makkelijk te raden.",
+    "repeat": "Herhaalde patronen verlagen de sterkte.",
+    "singleClass": "Slechts één tekentype gebruiken verlaagt de sterkte."
+  },
+  "suggestion": {
+    "use-longer": "Gebruik een langer wachtwoord of wachtzin.",
+    "add-uppercase": "Voeg hoofdletters toe.",
+    "add-lowercase": "Voeg kleine letters toe.",
+    "add-numbers": "Voeg cijfers toe.",
+    "add-symbols": "Voeg symbolen toe.",
+    "avoid-common": "Vermijd veelvoorkomende of gelekte wachtwoorden.",
+    "avoid-sequences": "Vermijd reeksen zoals 123 of abc.",
+    "avoid-repetition": "Vermijd herhaalde patronen."
+  }
+}
