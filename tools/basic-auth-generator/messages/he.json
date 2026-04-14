@@ -3,7 +3,9 @@
   "usernameLabel": "שם משתמש",
   "passwordLabel": "סיסמה",
   "authorizationHeaderLabel": "כותרת Authorization",
+  "authorizationHeaderDescription": "העתיקו את ערך כותרת Authorization המדויק לשימוש בקריאות fetch, בלקוחות API או בבקשות ידניות.",
   "curlExampleLabel": "דוגמת cURL",
+  "curlExampleDescription": "התחילו מפקודת ה-curl המוכנה הזו, ואז החליפו את כתובת ה-URL לדוגמה אם צריך.",
   "copyResultLabel": "Copy result",
   "copiedLabel": "הועתק",
   "resetLabel": "אפס דוגמה"

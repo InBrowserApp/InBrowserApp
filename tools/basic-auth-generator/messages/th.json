@@ -3,7 +3,9 @@
   "usernameLabel": "ชื่อผู้ใช้",
   "passwordLabel": "รหัสผ่าน",
   "authorizationHeaderLabel": "ส่วนหัว Authorization",
+  "authorizationHeaderDescription": "คัดลอกค่า Authorization header แบบตรงตามนี้ไปใช้กับคำสั่ง fetch, API client หรือคำขอแบบกำหนดเอง",
   "curlExampleLabel": "ตัวอย่าง cURL",
+  "curlExampleDescription": "เริ่มจากคำสั่ง curl ที่พร้อมใช้ชุดนี้ แล้วเปลี่ยน URL ตัวอย่างเมื่อจำเป็น",
   "copyResultLabel": "Copy result",
   "copiedLabel": "คัดลอกแล้ว",
   "resetLabel": "รีเซ็ตตัวอย่าง"

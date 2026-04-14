@@ -3,7 +3,9 @@
   "usernameLabel": "Användarnamn",
   "passwordLabel": "Lösenord",
   "authorizationHeaderLabel": "Authorization-rubrik",
+  "authorizationHeaderDescription": "Kopiera det exakta värdet för Authorization-huvudet till fetch-anrop, API-klienter eller manuella förfrågningar.",
   "curlExampleLabel": "cURL-exempel",
+  "curlExampleDescription": "Börja med det här körklara curl-kommandot och byt ut exempel-URL:en vid behov.",
   "copyResultLabel": "Copy result",
   "copiedLabel": "Kopierad",
   "resetLabel": "Återställ exempel"

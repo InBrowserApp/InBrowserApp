@@ -3,7 +3,9 @@
   "usernameLabel": "Brukernavn",
   "passwordLabel": "Passord",
   "authorizationHeaderLabel": "Authorization-header",
+  "authorizationHeaderDescription": "Kopier den nøyaktige Authorization-headerverdien for fetch-kall, API-klienter eller manuelle forespørsler.",
   "curlExampleLabel": "cURL-eksempel",
+  "curlExampleDescription": "Start med denne kjøreklare curl-kommandoen, og bytt ut eksempel-URL-en ved behov.",
   "copyResultLabel": "Copy result",
   "copiedLabel": "Kopiert",
   "resetLabel": "Tilbakestill eksempel"

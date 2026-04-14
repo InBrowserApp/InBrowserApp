@@ -13,7 +13,11 @@ const messages = {
   usernameLabel: "Username",
   passwordLabel: "Password",
   authorizationHeaderLabel: "Authorization Header",
+  authorizationHeaderDescription:
+    "Copy the exact Authorization header value for fetch calls, API clients, or manual requests.",
   curlExampleLabel: "cURL Example",
+  curlExampleDescription:
+    "Start with this ready-to-run curl command, then replace the example URL if needed.",
   copyResultLabel: "Copy result",
   copiedLabel: "Copied",
   resetLabel: "Reset example",
@@ -28,6 +32,10 @@ describe("BasicAuthGeneratorClient", () => {
   test("renders the default example", () => {
     render(<BasicAuthGeneratorClient messages={messages} />)
 
+    expect(
+      screen.getByText(messages.authorizationHeaderDescription)
+    ).toBeTruthy()
+    expect(screen.getByText(messages.curlExampleDescription)).toBeTruthy()
     expect((screen.getByLabelText("Username") as HTMLInputElement).value).toBe(
       "Aladdin"
     )

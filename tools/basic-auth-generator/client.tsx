@@ -31,7 +31,9 @@ type BasicAuthGeneratorMessages = Readonly<{
   usernameLabel: string
   passwordLabel: string
   authorizationHeaderLabel: string
+  authorizationHeaderDescription: string
   curlExampleLabel: string
+  curlExampleDescription: string
   copyResultLabel: string
   copiedLabel: string
   resetLabel: string
@@ -143,6 +145,9 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
         <ToolPanelCard>
           <CardHeader className="border-b">
             <CardTitle>{messages.authorizationHeaderLabel}</CardTitle>
+            <CardDescription>
+              {messages.authorizationHeaderDescription}
+            </CardDescription>
           </CardHeader>
           <ToolPanelCardContent>
             <ReadOnlyOutput
@@ -165,6 +170,7 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
         <ToolPanelCard>
           <CardHeader className="border-b">
             <CardTitle>{messages.curlExampleLabel}</CardTitle>
+            <CardDescription>{messages.curlExampleDescription}</CardDescription>
           </CardHeader>
           <ToolPanelCardContent>
             <ReadOnlyOutput

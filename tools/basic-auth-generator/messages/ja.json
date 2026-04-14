@@ -3,7 +3,9 @@
   "usernameLabel": "ユーザー名",
   "passwordLabel": "パスワード",
   "authorizationHeaderLabel": "Authorization ヘッダー",
+  "authorizationHeaderDescription": "fetch 呼び出し、API クライアント、または手動リクエストで使えるように、Authorization ヘッダーの値をそのままコピーします。",
   "curlExampleLabel": "cURL 例",
+  "curlExampleDescription": "このまま使える curl コマンドを土台にして、必要ならサンプル URL を差し替えてください。",
   "copyResultLabel": "Copy result",
   "copiedLabel": "コピーしました",
   "resetLabel": "例をリセット"

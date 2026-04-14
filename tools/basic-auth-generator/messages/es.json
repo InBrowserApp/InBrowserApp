@@ -3,7 +3,9 @@
   "usernameLabel": "Usuario",
   "passwordLabel": "Contraseña",
   "authorizationHeaderLabel": "Encabezado Authorization",
+  "authorizationHeaderDescription": "Copia el valor exacto del encabezado Authorization para llamadas fetch, clientes de API o solicitudes manuales.",
   "curlExampleLabel": "Ejemplo cURL",
+  "curlExampleDescription": "Empieza con este comando curl listo para usar y sustituye la URL de ejemplo si hace falta.",
   "copyResultLabel": "Copy result",
   "copiedLabel": "Copiado",
   "resetLabel": "Restablecer ejemplo"
