@@ -3038,6 +3038,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "regex-tester-replacer",
+    language: "ar",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "de",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "en",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "es",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "fr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "he",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "hi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "id",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "it",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ja",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ko",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ms",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "nl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "no",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pt",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ru",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "sv",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "th",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "tr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "vi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-CN",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },

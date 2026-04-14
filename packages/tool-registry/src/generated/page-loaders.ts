@@ -40,6 +40,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
+  "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
