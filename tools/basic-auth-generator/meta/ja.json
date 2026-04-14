@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth ジェネレーター",
+  "description": "ユーザー名とパスワードをBase64でエンコードしてHTTP Basic Authorizationヘッダーを生成します。APIテストと開発のための認証情報を迅速に作成"
+}

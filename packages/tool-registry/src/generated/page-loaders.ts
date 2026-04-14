@@ -6,6 +6,7 @@ type ToolPageLoader = () => Promise<ToolPageModule>
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),

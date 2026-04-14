@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth 생성기",
+  "description": "사용자 이름과 비밀번호를 Base64로 인코딩하여 HTTP Basic Authorization 헤더를 생성합니다. API 테스트 및 개발을 위한 자격 증명을 빠르게 생성"
+}

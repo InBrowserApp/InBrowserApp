@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "Dane logowania",
+  "usernameLabel": "Nazwa użytkownika",
+  "passwordLabel": "Hasło",
+  "authorizationHeaderLabel": "Nagłówek Authorization",
+  "authorizationHeaderDescription": "Skopiuj dokładną wartość nagłówka Authorization do wywołań fetch, klientów API lub ręcznych żądań.",
+  "curlExampleLabel": "Przykład cURL",
+  "curlExampleDescription": "Zacznij od tego gotowego polecenia curl, a w razie potrzeby podmień przykładowy adres URL.",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład"
+}

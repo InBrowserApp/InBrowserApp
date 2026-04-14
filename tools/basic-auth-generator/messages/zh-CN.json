@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "凭证",
+  "usernameLabel": "用户名",
+  "passwordLabel": "密码",
+  "authorizationHeaderLabel": "Authorization 头",
+  "authorizationHeaderDescription": "复制完整的 Authorization 请求头值，用于 fetch、API 客户端或手动请求。",
+  "curlExampleLabel": "cURL 示例",
+  "curlExampleDescription": "直接以这条可运行的 cURL 命令为起点，需要时再替换示例 URL。",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例"
+}

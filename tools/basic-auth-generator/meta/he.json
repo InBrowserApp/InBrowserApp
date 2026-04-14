@@ -1,0 +1,4 @@
+{
+  "name": "מחולל Basic Auth",
+  "description": "צרו כותרת HTTP Basic Authorization על ידי קידוד שם משתמש וסיסמה ל-Base64. צרו במהירות אישורי גישה לבדיקת API ופיתוח"
+}

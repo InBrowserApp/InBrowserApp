@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "basic-auth-generator",
+    language: "ar",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "de",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "en",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "es",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "fr",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "he",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "hi",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "id",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "it",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ja",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ko",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ms",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "nl",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "no",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "pl",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "pt",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ru",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "sv",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "th",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "tr",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "vi",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },

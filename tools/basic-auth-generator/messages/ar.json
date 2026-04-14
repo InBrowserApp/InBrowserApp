@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "بيانات الاعتماد",
+  "usernameLabel": "اسم المستخدم",
+  "passwordLabel": "كلمة المرور",
+  "authorizationHeaderLabel": "ترويسة Authorization",
+  "authorizationHeaderDescription": "انسخ قيمة ترويسة Authorization كما هي لاستخدامها في طلبات fetch أو عملاء API أو الطلبات اليدوية.",
+  "curlExampleLabel": "مثال cURL",
+  "curlExampleDescription": "ابدأ بأمر curl الجاهز هذا، ثم استبدل عنوان URL المثال إذا لزم الأمر.",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}
