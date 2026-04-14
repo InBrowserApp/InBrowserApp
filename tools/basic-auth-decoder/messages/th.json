@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "ส่วนหัว Authorization",
+  "authorizationHeaderDescription": "วางข้อความเช่น: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "วางข้อความเช่น: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "ผลลัพธ์ที่ถอดรหัส",
+  "decodedCredentialsDescription": "ถอดรหัสส่วนหัว HTTP Basic Authorization เพื่อดึงชื่อผู้ใช้และรหัสผ่านจาก Base64 มีประโยชน์สำหรับการดีบักและการทดสอบ API",
+  "usernameLabel": "ชื่อผู้ใช้",
+  "passwordLabel": "รหัสผ่าน",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง",
+  "invalidHeaderTitle": "ส่วนหัว Basic Authorization ไม่ถูกต้อง",
+  "invalidBase64Title": "เนื้อหา Base64 ไม่ถูกต้อง"
+}

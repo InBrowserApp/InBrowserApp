@@ -1,0 +1,4 @@
+{
+  "name": "Penyahkod Basic Auth",
+  "description": "Nyahkod pengepala HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata laluan daripada Base64. Berguna untuk penyahpepijatan dan ujian API"
+}

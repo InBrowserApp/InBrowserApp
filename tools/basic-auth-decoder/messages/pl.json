@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Nagłówek Authorization",
+  "authorizationHeaderDescription": "Wklej coś w rodzaju: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Wklej coś w rodzaju: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Zdekodowany wynik",
+  "decodedCredentialsDescription": "Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API",
+  "usernameLabel": "Nazwa użytkownika",
+  "passwordLabel": "Hasło",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Skopiowano",
+  "resetLabel": "Resetuj przykład",
+  "invalidHeaderTitle": "Nieprawidłowy nagłówek Basic Authorization",
+  "invalidBase64Title": "Nieprawidłowa zawartość Base64"
+}

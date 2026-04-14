@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth-avkodare",
+  "description": "Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning"
+}
