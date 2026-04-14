@@ -1,4 +1,4 @@
-# Test Patterns Before They Ship
+## Test Patterns Before They Ship
 
 Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
 

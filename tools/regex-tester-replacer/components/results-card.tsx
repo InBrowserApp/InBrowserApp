@@ -66,6 +66,11 @@ function ResultsCard({
   onActiveViewChange,
 }: ResultsCardProps) {
   const hasInput = hasPattern && hasSourceText
+  const showExportActions =
+    !patternError &&
+    hasInput &&
+    activeView !== "preview" &&
+    exportState.value.length > 0
 
   return (
     <ToolPanelCard>
@@ -201,30 +206,26 @@ function ResultsCard({
           </>
         )}
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="justify-end gap-3 border-t">
-        <ToolCopyButton
-          value={exportState.value}
-          copyLabel={messages.copyLabel}
-          copiedLabel={messages.copiedLabel}
-          disabled={exportState.value.length === 0}
-        />
-        {exportState.downloadUrl ? (
-          <Button asChild size="sm">
-            <a
-              href={exportState.downloadUrl}
-              download={exportState.downloadName}
-            >
-              <Download data-icon="inline-start" />
-              {messages.downloadLabel}
-            </a>
-          </Button>
-        ) : (
-          <Button type="button" size="sm" disabled>
-            <Download data-icon="inline-start" />
-            {messages.downloadLabel}
-          </Button>
-        )}
-      </ToolPanelCardFooter>
+      {showExportActions ? (
+        <ToolPanelCardFooter className="justify-end gap-3 border-t">
+          <ToolCopyButton
+            value={exportState.value}
+            copyLabel={messages.copyLabel}
+            copiedLabel={messages.copiedLabel}
+          />
+          {exportState.downloadUrl ? (
+            <Button asChild size="sm">
+              <a
+                href={exportState.downloadUrl}
+                download={exportState.downloadName}
+              >
+                <Download data-icon="inline-start" />
+                {messages.downloadLabel}
+              </a>
+            </Button>
+          ) : null}
+        </ToolPanelCardFooter>
+      ) : null}
     </ToolPanelCard>
   )
 }
