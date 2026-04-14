@@ -1,0 +1,8 @@
+{
+  "placeholder": "Input IPv6",
+  "invalidAddress": "Invalid IPv6 Address",
+  "result": "Validation Result",
+  "notConvertible": "Not convertible",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

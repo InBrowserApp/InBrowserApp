@@ -1,0 +1,3 @@
+## IPv6 in MAC-Adresse konvertieren
+
+Die Konvertierung einer IPv6-Adresse in eine MAC-Adresse ist möglich, wenn die IPv6-Adresse mit dem EUI-64-Format aus einer MAC-Adresse generiert wurde. Dies gilt normalerweise für IPv6 Link-Local-Adressen (beginnend mit fe80::) und einige zustandslose autokonfigurierte Adressen. Der Prozess umfasst: 1) Extrahieren der Schnittstellenkennung (letzte 64 Bits) aus der IPv6-Adresse, 2) Invertieren des 7. Bits (Universal/Local-Bit) des ersten Bytes, 3) Entfernen der eingefügten 'fffe'-Bytes zur Rekonstruktion der ursprünglichen 48-Bit-MAC-Adresse. Beachten Sie, dass dies nur für IPv6-Adressen funktioniert, die ursprünglich mit EUI-64 aus MAC-Adressen abgeleitet wurden.

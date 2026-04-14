@@ -1,0 +1,3 @@
+## IPv6'yı MAC Adresine Nasıl Dönüştürülür
+
+IPv6 adresi MAC adresinden EUI-64 formatı kullanılarak oluşturulduğunda, bir IPv6 adresini MAC adresine dönüştürmek mümkündür. Bu genellikle IPv6 link-local adresler (fe80:: ile başlayan) ve bazı durumsuz otomatik yapılandırılmış adresler için geçerlidir. Süreç şunları içerir: 1) IPv6 adresinden arayüz tanımlayıcısını (son 64 bit) çıkarma, 2) İlk baytın 7. bitini (Evrensel/Yerel bit) ters çevirme, 3) Orijinal 48-bit MAC adresini yeniden oluşturmak için eklenen 'fffe' baytlarını kaldırma. Bunun yalnızca orijinal olarak EUI-64 kullanılarak MAC adreslerinden türetilen IPv6 adresleri için çalıştığını unutmayın.

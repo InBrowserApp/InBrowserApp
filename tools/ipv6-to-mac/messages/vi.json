@@ -1,0 +1,8 @@
+{
+  "placeholder": "Nhập IPv6",
+  "invalidAddress": "Địa chỉ IPv6 không hợp lệ",
+  "result": "Kết Quả Xác Thực",
+  "notConvertible": "Không thể chuyển đổi",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

@@ -1,0 +1,3 @@
+## Cách chuyển đổi IPv6 thành địa chỉ MAC
+
+Chuyển đổi địa chỉ IPv6 thành địa chỉ MAC là có thể khi địa chỉ IPv6 được tạo bằng định dạng EUI-64 từ địa chỉ MAC. Điều này thường áp dụng cho địa chỉ IPv6 link-local (bắt đầu bằng fe80::) và một số địa chỉ tự động cấu hình không trạng thái. Quá trình bao gồm: 1) Trích xuất bộ nhận dạng giao diện (64 bit cuối) từ địa chỉ IPv6, 2) Đảo ngược bit thứ 7 (bit Universal/Local) của byte đầu tiên, 3) Loại bỏ các byte 'fffe' được chèn vào để tái tạo địa chỉ MAC 48-bit gốc. Lưu ý rằng điều này chỉ hoạt động với các địa chỉ IPv6 ban đầu được tạo từ địa chỉ MAC bằng EUI-64.

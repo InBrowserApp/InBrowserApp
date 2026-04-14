@@ -1,0 +1,3 @@
+## Cara Menukar IPv6 kepada Alamat MAC
+
+Menukar alamat IPv6 kepada alamat MAC adalah mungkin apabila alamat IPv6 dijana menggunakan format EUI-64 daripada alamat MAC. Ini biasanya terpakai kepada alamat IPv6 link-local (bermula dengan fe80::) dan beberapa alamat autoconfigured tanpa keadaan. Proses ini melibatkan: 1) Mengekstrak pengecam antara muka (64 bit terakhir) daripada alamat IPv6, 2) Membalikkan bit ke-7 (bit Universal/Local) bagi bait pertama, 3) Membuang bait 'fffe' yang diselitkan untuk membina semula alamat MAC 48-bit asal. Perhatikan bahawa ini hanya berfungsi untuk alamat IPv6 yang asalnya diperoleh daripada alamat MAC menggunakan EUI-64.

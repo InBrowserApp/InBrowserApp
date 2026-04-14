@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipv6-to-mac",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "de",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "en",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "es",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "he",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "id",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "it",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "no",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "th",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-to-mac",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

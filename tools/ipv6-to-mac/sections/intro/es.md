@@ -1,0 +1,3 @@
+## Cómo convertir IPv6 a dirección MAC
+
+Convertir una dirección IPv6 a una dirección MAC es posible cuando la dirección IPv6 se generó usando el formato EUI-64 a partir de una dirección MAC. Esto generalmente se aplica a las direcciones IPv6 de enlace local (que comienzan con fe80::) y algunas direcciones autoconfiguradas sin estado. El proceso involucra: 1) Extraer el identificador de interfaz (últimos 64 bits) de la dirección IPv6, 2) Invertir el 7º bit (bit Universal/Local) del primer byte, 3) Eliminar los bytes 'fffe' insertados para reconstruir la dirección MAC original de 48 bits. Tenga en cuenta que esto solo funciona para direcciones IPv6 que originalmente se derivaron de direcciones MAC usando EUI-64.

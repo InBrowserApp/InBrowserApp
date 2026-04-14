@@ -1,0 +1,4 @@
+{
+  "name": "IPv6 till MAC-konverterare",
+  "description": "Konverterar IPv6-adresser till MAC-adresser. Ange valfri IPv6-adress för att extrahera motsvarande MAC-adress omedelbart."
+}

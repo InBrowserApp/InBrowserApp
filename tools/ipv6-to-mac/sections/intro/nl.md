@@ -1,0 +1,3 @@
+## Hoe IPv6 naar MAC-adres te converteren
+
+Het converteren van een IPv6-adres naar een MAC-adres is mogelijk wanneer het IPv6-adres is gegenereerd met behulp van het EUI-64-formaat van een MAC-adres. Dit geldt meestal voor IPv6 link-local adressen (beginnend met fe80::) en sommige stateless autoconfigured adressen. Het proces omvat: 1) Extractie van de interface-identifier (laatste 64 bits) uit het IPv6-adres, 2) Omkering van de 7e bit (Universeel/Lokaal bit) van de eerste byte, 3) Verwijdering van de ingevoegde 'fffe' bytes om het oorspronkelijke 48-bits MAC-adres te reconstrueren. Merk op dat dit alleen werkt voor IPv6-adressen die oorspronkelijk zijn afgeleid van MAC-adressen met behulp van EUI-64.

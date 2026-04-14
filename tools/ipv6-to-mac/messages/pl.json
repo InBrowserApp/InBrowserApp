@@ -1,0 +1,8 @@
+{
+  "placeholder": "Wprowadź IPv6",
+  "invalidAddress": "Nieprawidłowy adres IPv6",
+  "result": "Wynik Walidacji",
+  "notConvertible": "Nie do konwersji",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}
