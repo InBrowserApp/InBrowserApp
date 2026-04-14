@@ -38,6 +38,7 @@ describe("local-date", () => {
   })
 
   test("formats relative time across small and large ranges", () => {
+    expect(formatRelativeTime(0, 0, "en")).toBe("now")
     expect(formatRelativeTime(61_000, 0, "en")).toBe("in 1 minute")
     expect(formatRelativeTime(0, 8 * 24 * 60 * 60 * 1000, "en")).toBe(
       "last week"

@@ -80,12 +80,15 @@ function formatRelativeTime(targetMs: number, nowMs: number, language: string) {
   const formatter = new Intl.RelativeTimeFormat(language, { numeric: "auto" })
 
   for (const [unit, sizeMs] of RELATIVE_TIME_STEPS) {
-    if (Math.abs(diffMs) >= sizeMs || unit === "second") {
+    if (Math.abs(diffMs) >= sizeMs) {
       return formatter.format(Math.round(diffMs / sizeMs), unit)
     }
   }
 
-  return formatter.format(0, "second")
+  const [fallbackUnit, fallbackSizeMs] =
+    RELATIVE_TIME_STEPS[RELATIVE_TIME_STEPS.length - 1]!
+
+  return formatter.format(Math.round(diffMs / fallbackSizeMs), fallbackUnit)
 }
 
 export {
