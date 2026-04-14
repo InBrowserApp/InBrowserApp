@@ -32,6 +32,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
+  "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>

@@ -3223,6 +3223,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "regex-tester-replacer",
+    category: "text",
+    icon: "search",
+    tags: ["regex", "text", "replace", "match", "pattern"],
+    locales: {
+      ar: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      de: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      en: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      es: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      fr: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      he: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      hi: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      id: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      it: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ja: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ko: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ms: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      nl: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      no: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      pl: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      pt: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ru: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      sv: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      th: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      tr: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      vi: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      "zh-CN": {
+        name: "正则测试与替换",
+        description:
+          "测试正则表达式、检查匹配结果，并直接预览替换后的文本输出。",
+      },
+      "zh-TW": {
+        name: "正則測試與取代",
+        description:
+          "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
+      },
+    },
+  },
+  {
     slug: "rot-cipher",
     category: "web",
     icon: "lock",
