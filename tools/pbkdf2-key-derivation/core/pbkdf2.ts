@@ -196,8 +196,4 @@ export {
   parseIntegerRangeInput,
   saltToBytes,
 }
-export type {
-  DerivedKey,
-  Pbkdf2Algorithm,
-  SaltFormat,
-}
+export type { DerivedKey, Pbkdf2Algorithm, SaltFormat }
