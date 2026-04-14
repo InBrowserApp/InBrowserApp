@@ -5,7 +5,7 @@
   "decodedOutputLabel": "المخرجات المفككة",
   "decodedOutputEmptyDescription": "سيظهر النص المفكك هنا...",
   "downloadFileLabel": "تنزيل الملف",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "نسخ النتيجة",
   "copiedLabel": "تم النسخ",
   "resetLabel": "إعادة تعيين المثال",
   "invalidBase16Title": "نص Hex غير صالح",

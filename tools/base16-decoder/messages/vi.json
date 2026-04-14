@@ -5,7 +5,7 @@
   "decodedOutputLabel": "Đầu ra đã giải mã",
   "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
   "downloadFileLabel": "Tải tệp",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",
   "resetLabel": "Đặt lại ví dụ",
   "invalidBase16Title": "Văn bản Hex không hợp lệ",

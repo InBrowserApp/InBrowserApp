@@ -5,7 +5,7 @@
   "decodedOutputLabel": "デコード結果",
   "decodedOutputEmptyDescription": "デコードされたテキストがここに表示されます...",
   "downloadFileLabel": "ファイルをダウンロード",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "結果をコピー",
   "copiedLabel": "コピーしました",
   "resetLabel": "例をリセット",
   "invalidBase16Title": "無効な Hex テキスト",

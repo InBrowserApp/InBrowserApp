@@ -5,7 +5,7 @@
   "decodedOutputLabel": "解码结果",
   "decodedOutputEmptyDescription": "解码后的文本将显示在这里...",
   "downloadFileLabel": "下载文件",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "复制结果",
   "copiedLabel": "已复制",
   "resetLabel": "重置示例",
   "invalidBase16Title": "无效的 Hex 文本",

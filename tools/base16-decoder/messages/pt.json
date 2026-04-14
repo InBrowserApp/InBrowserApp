@@ -5,7 +5,7 @@
   "decodedOutputLabel": "Saída decodificada",
   "decodedOutputEmptyDescription": "O texto decodificado aparecerá aqui...",
   "downloadFileLabel": "Baixar arquivo",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Copiar resultado",
   "copiedLabel": "Copiado",
   "resetLabel": "Redefinir exemplo",
   "invalidBase16Title": "Texto Hex inválido",

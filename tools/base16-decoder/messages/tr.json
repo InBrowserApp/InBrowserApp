@@ -5,7 +5,7 @@
   "decodedOutputLabel": "Çözülen çıktı",
   "decodedOutputEmptyDescription": "Çözülen metin burada görünecek...",
   "downloadFileLabel": "Dosyayı indir",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sonucu kopyala",
   "copiedLabel": "Kopyalandı",
   "resetLabel": "Örneği sıfırla",
   "invalidBase16Title": "Geçersiz Hex metni",
