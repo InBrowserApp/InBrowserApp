@@ -12,6 +12,9 @@
     },
     "tools/ascii-art-generator": {
       "ignoreDependencies": ["@types/figlet"]
+    },
+    "tools/unicode-punycode-converter": {
+      "ignoreDependencies": ["punycode", "@types/punycode"]
     }
   }
 }
