@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "ฟอนต์",
   "fontDescription": "เลือกรูปแบบฟอนต์ FIGlet สำหรับผลลัพธ์",
-  "fontSearchPlaceholder": "ค้นหาฟอนต์...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

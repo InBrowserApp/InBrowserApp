@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Yazı tipi",
   "fontDescription": "Çıktı için bir FIGlet yazı tipi stili seçin.",
-  "fontSearchPlaceholder": "Yazı tipi ara...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

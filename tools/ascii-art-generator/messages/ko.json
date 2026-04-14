@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "글꼴",
   "fontDescription": "출력에 사용할 FIGlet 글꼴 스타일을 선택하세요.",
-  "fontSearchPlaceholder": "글꼴 검색...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

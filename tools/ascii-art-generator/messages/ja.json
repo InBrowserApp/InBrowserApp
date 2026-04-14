@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "フォント",
   "fontDescription": "出力用の FIGlet フォントスタイルを選択してください。",
-  "fontSearchPlaceholder": "フォントを検索…",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

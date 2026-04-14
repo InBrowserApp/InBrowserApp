@@ -1,9 +1,11 @@
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -30,12 +32,12 @@ function InputCard({
   onClear,
 }: InputCardProps) {
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.inputLabel}</CardTitle>
         <CardDescription>{messages.inputDescription}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent className="gap-4">
         <label htmlFor={inputId} className="sr-only">
           {messages.inputLabel}
         </label>
@@ -50,8 +52,8 @@ function InputCard({
           rows={12}
           className="min-h-72 resize-y font-mono text-sm"
         />
-      </CardContent>
-      <CardFooter className="justify-start gap-3 border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="justify-start gap-3 border-t">
         <Button type="button" variant="ghost" size="sm" onClick={onLoadSample}>
           <FileText data-icon="inline-start" />
           {messages.loadSample}
@@ -60,8 +62,8 @@ function InputCard({
           <RefreshCcw data-icon="inline-start" />
           {messages.clearText}
         </Button>
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 

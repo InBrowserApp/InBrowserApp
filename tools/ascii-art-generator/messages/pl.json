@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Czcionka",
   "fontDescription": "Wybierz styl czcionki FIGlet dla wyjścia.",
-  "fontSearchPlaceholder": "Szukaj czcionek...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

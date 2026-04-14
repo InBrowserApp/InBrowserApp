@@ -73,7 +73,6 @@ const messages = {
   clearText: "Clear text",
   fontLabel: "Font",
   fontDescription: "Pick a FIGlet font style for the output.",
-  fontSearchPlaceholder: "Search fonts...",
   optionsLabel: "Layout options",
   optionsDescription: "Control alignment and banner width.",
   alignLabel: "Alignment",
@@ -192,22 +191,6 @@ describe("AsciiArtGeneratorClient", () => {
     await waitFor(() => {
       expect(window.localStorage.getItem(STORAGE_KEYS.text)).toBe("Saved")
       expect(window.localStorage.getItem(STORAGE_KEYS.width)).toBe("44")
-    })
-  })
-
-  test("filters font names from the search field", async () => {
-    render(<AsciiArtGeneratorClient messages={messages} />)
-
-    fireEvent.change(
-      screen.getByRole("textbox", { name: messages.fontSearchPlaceholder }),
-      { target: { value: "sla" } }
-    )
-
-    fireEvent.click(screen.getByRole("combobox", { name: messages.fontLabel }))
-
-    await waitFor(() => {
-      expect(screen.getByText("Slant")).not.toBeNull()
-      expect(screen.queryByText("Banner")).toBeNull()
     })
   })
 })

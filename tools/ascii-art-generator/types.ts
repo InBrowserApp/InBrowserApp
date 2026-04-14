@@ -6,7 +6,6 @@ type AsciiArtGeneratorLocalizedCatalog = Readonly<{
   clearText: string
   fontLabel: string
   fontDescription: string
-  fontSearchPlaceholder: string
   optionsLabel: string
   optionsDescription: string
   alignLabel: string

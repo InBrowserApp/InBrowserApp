@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Phông chữ",
   "fontDescription": "Chọn kiểu phông chữ FIGlet cho đầu ra.",
-  "fontSearchPlaceholder": "Tìm phông chữ...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Lettertype",
   "fontDescription": "Kies een FIGlet-letterstijl voor de uitvoer.",
-  "fontSearchPlaceholder": "Lettertypen zoeken...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

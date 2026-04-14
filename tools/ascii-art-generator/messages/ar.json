@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "الخط",
   "fontDescription": "اختر نمط خط FIGlet للمخرجات.",
-  "fontSearchPlaceholder": "البحث عن الخطوط...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

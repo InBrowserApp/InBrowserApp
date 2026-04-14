@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Skrifttype",
   "fontDescription": "Velg en FIGlet-skriftstil for utdata.",
-  "fontSearchPlaceholder": "Søk i skrifttyper...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

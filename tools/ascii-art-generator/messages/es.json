@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Fuente",
   "fontDescription": "Elige un estilo de fuente FIGlet para la salida.",
-  "fontSearchPlaceholder": "Buscar fuentes...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

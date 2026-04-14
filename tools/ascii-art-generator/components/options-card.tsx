@@ -13,15 +13,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
-import { Search } from "@workspace/ui/icons"
 
 import type { AsciiArtOptions } from "../core/generate-ascii-art"
 import type { AsciiArtGeneratorMessages } from "../types"
 
 type OptionsCardProps = Readonly<{
   alignSelectId: string
-  fontQuery: string
-  fontSearchId: string
   fontSelectId: string
   fontNames: readonly string[]
   messages: AsciiArtGeneratorMessages
@@ -29,14 +26,11 @@ type OptionsCardProps = Readonly<{
   widthInputId: string
   onAlignChange: (value: string) => void
   onFontChange: (value: string) => void
-  onFontQueryChange: (value: string) => void
   onWidthChange: (value: string) => void
 }>
 
 function OptionsCard({
   alignSelectId,
-  fontQuery,
-  fontSearchId,
   fontSelectId,
   fontNames,
   messages,
@@ -44,7 +38,6 @@ function OptionsCard({
   widthInputId,
   onAlignChange,
   onFontChange,
-  onFontQueryChange,
   onWidthChange,
 }: OptionsCardProps) {
   return (
@@ -54,26 +47,7 @@ function OptionsCard({
           <CardTitle>{messages.fontLabel}</CardTitle>
           <CardDescription>{messages.fontDescription}</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <label htmlFor={fontSearchId} className="sr-only">
-              {messages.fontSearchPlaceholder}
-            </label>
-            <div className="relative">
-              <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                id={fontSearchId}
-                aria-label={messages.fontSearchPlaceholder}
-                value={fontQuery}
-                onChange={(event) => {
-                  onFontQueryChange(event.target.value)
-                }}
-                placeholder={messages.fontSearchPlaceholder}
-                className="pl-9"
-              />
-            </div>
-          </div>
-
+        <CardContent>
           <div className="space-y-2">
             <label htmlFor={fontSelectId} className="sr-only">
               {messages.fontLabel}

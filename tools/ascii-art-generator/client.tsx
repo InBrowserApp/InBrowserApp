@@ -25,13 +25,11 @@ type AsciiArtGeneratorClientProps = Readonly<{
 
 function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
   const textInputId = useId()
-  const fontSearchId = useId()
   const fontSelectId = useId()
   const alignSelectId = useId()
   const widthInputId = useId()
 
   const [text, setText] = useState(DEFAULT_TEXT)
-  const [fontQuery, setFontQuery] = useState("")
   const [options, setOptions] = useState(DEFAULT_OPTIONS)
   const [output, setOutput] = useState("")
   const [loading, setLoading] = useState(false)
@@ -39,10 +37,6 @@ function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
 
   const deferredText = useDeferredValue(text)
   const deferredOptions = useDeferredValue(options)
-
-  const filteredFontNames = fontNames.filter((name) =>
-    name.toLowerCase().includes(fontQuery.trim().toLowerCase())
-  )
 
   useEffect(() => {
     /* v8 ignore next */
@@ -167,10 +161,8 @@ function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
 
         <OptionsCard
           alignSelectId={alignSelectId}
-          fontQuery={fontQuery}
-          fontSearchId={fontSearchId}
           fontSelectId={fontSelectId}
-          fontNames={filteredFontNames}
+          fontNames={fontNames}
           messages={messages}
           options={options}
           widthInputId={widthInputId}
@@ -190,7 +182,6 @@ function AsciiArtGeneratorClient({ messages }: AsciiArtGeneratorClientProps) {
               })
             )
           }}
-          onFontQueryChange={setFontQuery}
           onWidthChange={(value) => {
             setOptions((current) =>
               normalizeAsciiArtOptions({

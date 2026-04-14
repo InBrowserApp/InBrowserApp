@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "Шрифт",
   "fontDescription": "Выберите стиль шрифта FIGlet для вывода.",
-  "fontSearchPlaceholder": "Поиск шрифтов...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",

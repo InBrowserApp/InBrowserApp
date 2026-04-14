@@ -6,7 +6,6 @@
   "clearText": "清空文本",
   "fontLabel": "字体",
   "fontDescription": "选择一种 FIGlet 字体样式作为输出。",
-  "fontSearchPlaceholder": "搜索字体……",
   "optionsLabel": "布局选项",
   "optionsDescription": "在导出前调整对齐方式和横幅宽度。",
   "alignLabel": "对齐方式",

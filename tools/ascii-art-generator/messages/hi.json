@@ -6,7 +6,6 @@
   "clearText": "Clear text",
   "fontLabel": "फ़ॉन्ट",
   "fontDescription": "आउटपुट के लिए एक FIGlet फ़ॉन्ट शैली चुनें।",
-  "fontSearchPlaceholder": "फ़ॉन्ट खोजें...",
   "optionsLabel": "Layout options",
   "optionsDescription": "Control alignment and banner width before you export the block.",
   "alignLabel": "Alignment",
