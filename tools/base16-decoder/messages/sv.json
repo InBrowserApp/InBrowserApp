@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex-indata",
+  "base16InputPlaceholder": "Ange Hex-text...",
+  "importFromFileLabel": "Importera från fil",
+  "decodedOutputLabel": "Avkodad output",
+  "decodedOutputEmptyDescription": "Avkodad text visas här...",
+  "downloadFileLabel": "Ladda ner fil",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel",
+  "invalidBase16Title": "Ogiltig Hex-text",
+  "fileReadFailedTitle": "Kunde inte läsa filen",
+  "previewTruncatedLabel": "Förhandsvisning avkortad"
+}

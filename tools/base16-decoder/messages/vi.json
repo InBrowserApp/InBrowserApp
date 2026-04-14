@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Đầu vào Hex",
+  "base16InputPlaceholder": "Nhập văn bản Hex...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "decodedOutputLabel": "Đầu ra đã giải mã",
+  "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
+  "downloadFileLabel": "Tải tệp",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ",
+  "invalidBase16Title": "Văn bản Hex không hợp lệ",
+  "fileReadFailedTitle": "Không thể đọc tệp",
+  "previewTruncatedLabel": "Bản xem trước đã bị cắt"
+}

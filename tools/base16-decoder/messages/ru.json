@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Ввод Hex",
+  "base16InputPlaceholder": "Введите Hex текст...",
+  "importFromFileLabel": "Импорт из файла",
+  "decodedOutputLabel": "Декодированный результат",
+  "decodedOutputEmptyDescription": "Декодированный текст появится здесь...",
+  "downloadFileLabel": "Скачать файл",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример",
+  "invalidBase16Title": "Неверный Hex текст",
+  "fileReadFailedTitle": "Не удалось прочитать файл",
+  "previewTruncatedLabel": "Предпросмотр усечен"
+}

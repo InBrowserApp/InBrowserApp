@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "อินพุต Hex",
+  "base16InputPlaceholder": "ป้อนข้อความ Hex...",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "decodedOutputLabel": "ผลลัพธ์ที่ถอดรหัส",
+  "decodedOutputEmptyDescription": "ข้อความที่ถอดรหัสจะแสดงที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลดไฟล์",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง",
+  "invalidBase16Title": "ข้อความ Hex ไม่ถูกต้อง",
+  "fileReadFailedTitle": "ไม่สามารถอ่านไฟล์ได้",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน"
+}

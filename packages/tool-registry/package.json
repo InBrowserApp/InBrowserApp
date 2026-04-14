@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/ascii-art-generator": "workspace:*",
+    "@tool/base16-decoder": "workspace:*",
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",

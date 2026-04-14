@@ -1,0 +1,4 @@
+{
+  "name": "Base16-dekoder",
+  "description": "Dekoder Base16 (Hex)-tekst eller filer til rå byte for inspeksjon, testing og verktøy."
+}

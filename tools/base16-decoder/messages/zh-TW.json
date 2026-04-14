@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex 輸入",
+  "base16InputPlaceholder": "輸入 Hex 文字...",
+  "importFromFileLabel": "從檔案匯入",
+  "decodedOutputLabel": "解碼結果",
+  "decodedOutputEmptyDescription": "解碼後的文字會顯示在這裡...",
+  "downloadFileLabel": "下載檔案",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設範例",
+  "invalidBase16Title": "無效的 Hex 文字",
+  "fileReadFailedTitle": "讀取檔案失敗",
+  "previewTruncatedLabel": "預覽已截斷"
+}

@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "קלט Hex",
+  "base16InputPlaceholder": "הזן טקסט Hex...",
+  "importFromFileLabel": "יבוא מקובץ",
+  "decodedOutputLabel": "פלט מפוענח",
+  "decodedOutputEmptyDescription": "הטקסט המפוענח יופיע כאן...",
+  "downloadFileLabel": "הורד קובץ",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה",
+  "invalidBase16Title": "טקסט Hex לא תקין",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה"
+}

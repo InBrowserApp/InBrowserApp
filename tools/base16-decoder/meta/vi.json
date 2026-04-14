@@ -1,0 +1,4 @@
+{
+  "name": "Bộ giải mã Base16",
+  "description": "Giải mã văn bản hoặc tệp Base16 (Hex) thành byte thô để kiểm tra, thử nghiệm và công cụ."
+}

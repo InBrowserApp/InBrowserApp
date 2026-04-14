@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Input Hex",
+  "base16InputPlaceholder": "Masukkan teks Hex...",
+  "importFromFileLabel": "Import dari fail",
+  "decodedOutputLabel": "Output dinyahkod",
+  "decodedOutputEmptyDescription": "Teks dinyahkod akan muncul di sini...",
+  "downloadFileLabel": "Muat turun fail",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Tetapkan semula contoh",
+  "invalidBase16Title": "Teks Hex tidak sah",
+  "fileReadFailedTitle": "Gagal membaca fail",
+  "previewTruncatedLabel": "Pratonton dipendekkan"
+}

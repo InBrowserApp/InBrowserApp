@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex-Eingabe",
+  "base16InputPlaceholder": "Hex-Text eingeben...",
+  "importFromFileLabel": "Aus Datei importieren",
+  "decodedOutputLabel": "Dekodierte Ausgabe",
+  "decodedOutputEmptyDescription": "Dekodierter Text erscheint hier...",
+  "downloadFileLabel": "Datei herunterladen",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen",
+  "invalidBase16Title": "Ungültiger Hex-Text",
+  "fileReadFailedTitle": "Datei konnte nicht gelesen werden",
+  "previewTruncatedLabel": "Vorschau abgeschnitten"
+}
