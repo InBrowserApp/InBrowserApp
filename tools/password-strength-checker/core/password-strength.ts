@@ -310,7 +310,6 @@ export {
   formatDuration,
   scoreFromEntropy,
   type DurationDisplay,
-  type DurationUnit,
   type StrengthReport,
   type StrengthScore,
   type StrengthSuggestionKey,
