@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "כותרת Authorization",
+  "authorizationHeaderDescription": "הדבק משהו כמו: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "הדבק משהו כמו: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "תוצאה מפוענחת",
+  "decodedCredentialsDescription": "פענוח כותרת HTTP Basic Authorization כדי לחלץ שם משתמש וסיסמה מ-Base64. שימושי לניפוי שגיאות ובדיקות API",
+  "usernameLabel": "שם משתמש",
+  "passwordLabel": "סיסמה",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה",
+  "invalidHeaderTitle": "כותרת Basic Authorization שגויה",
+  "invalidBase64Title": "תוכן Base64 שגוי"
+}

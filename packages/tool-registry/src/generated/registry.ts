@@ -2,6 +2,137 @@ import type { ToolRegistryEntry } from "../types"
 
 export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
+    slug: "adler32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "adler32",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "error-detection",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Adler-32 للنص أو الملف",
+        description:
+          "أنشئ قيم Adler-32 للنصوص أو الملفات. احسب قيماً سريعة للتحقق من سلامة البيانات واكتشاف الأخطاء",
+      },
+      de: {
+        name: "Adler-32-Hash für Text oder Datei",
+        description:
+          "Erzeuge Adler-32-Prüfsummen für Text oder Dateien. Berechne schnelle Prüfsummen zur Integritätsprüfung und Fehlererkennung",
+      },
+      en: {
+        name: "Adler-32 Hash Text or File",
+        description:
+          "Generate Adler-32 checksums for text input or file upload. Calculate fast checksums for data integrity verification and error detection",
+      },
+      es: {
+        name: "Hash Adler-32 de Texto o Archivo",
+        description:
+          "Genera checksums Adler-32 para texto o archivos. Calcula checksums rápidos para verificar integridad y detectar errores",
+      },
+      fr: {
+        name: "Hash Adler-32 de Texte ou Fichier",
+        description:
+          "Générez des sommes de contrôle Adler-32 pour du texte ou des fichiers. Calculez des checksums rapides pour vérifier l’intégrité et détecter les erreurs",
+      },
+      he: {
+        name: "האש Adler-32 טקסט או קובץ",
+        description:
+          "צור סכומי ביקורת Adler-32 עבור טקסט או קבצים. חשב סכומים מהירים לאימות שלמות נתונים ולזיהוי שגיאות",
+      },
+      hi: {
+        name: "Adler-32 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Adler-32 चेकसम बनाएं। डेटा अखंडता सत्यापन और त्रुटि पहचान के लिए तेज़ चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Adler-32 Teks atau File",
+        description:
+          "Buat checksum Adler-32 untuk teks atau file. Hitung checksum cepat untuk verifikasi integritas data dan deteksi kesalahan",
+      },
+      it: {
+        name: "Hash Adler-32 di Testo o File",
+        description:
+          "Genera checksum Adler-32 per testo o file. Calcola checksum rapidi per verificare l’integrità dei dati e rilevare errori",
+      },
+      ja: {
+        name: "Adler-32 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードに対して Adler-32 チェックサムを生成します。データ整合性の確認とエラー検出のために高速チェックサムを計算します",
+      },
+      ko: {
+        name: "Adler-32 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대해 Adler-32 체크섬을 생성합니다. 데이터 무결성 검증과 오류 감지를 위한 빠른 체크섬을 계산합니다",
+      },
+      ms: {
+        name: "Hash Adler-32 Teks atau Fail",
+        description:
+          "Jana checksum Adler-32 untuk teks atau fail. Kira checksum pantas bagi pengesahan integriti data dan pengesanan ralat",
+      },
+      nl: {
+        name: "Adler-32-hash tekst of bestand",
+        description:
+          "Genereer Adler-32-checksums voor tekst of bestanden. Bereken snelle checksums voor integriteitscontrole en foutdetectie",
+      },
+      no: {
+        name: "Adler-32-hash tekst eller fil",
+        description:
+          "Generer Adler-32-kontrollsummer for tekst eller filer. Beregn raske kontrollsummer for dataintegritet og feildeteksjon",
+      },
+      pl: {
+        name: "Hash Adler-32 tekstu lub pliku",
+        description:
+          "Generuj sumy kontrolne Adler-32 dla tekstu lub plików. Obliczaj szybkie sumy do weryfikacji integralności danych i wykrywania błędów",
+      },
+      pt: {
+        name: "Hash Adler-32 de Texto ou Arquivo",
+        description:
+          "Gere checksums Adler-32 para texto ou arquivos. Calcule checksums rápidos para verificar integridade de dados e detectar erros",
+      },
+      ru: {
+        name: "Adler-32-хеш текста или файла",
+        description:
+          "Создавайте контрольные суммы Adler-32 для текста и файлов. Вычисляйте быстрые суммы для проверки целостности данных и обнаружения ошибок",
+      },
+      sv: {
+        name: "Adler-32-hash text eller fil",
+        description:
+          "Generera Adler-32-kontrollsummor för text eller filer. Beräkna snabba checksummor för integritetskontroll och feldetektering",
+      },
+      th: {
+        name: "แฮช Adler-32 ข้อความหรือไฟล์",
+        description:
+          "สร้างค่า Adler-32 สำหรับข้อความหรือไฟล์ คำนวณเช็กซัมแบบรวดเร็วเพื่อยืนยันความสมบูรณ์ของข้อมูลและตรวจจับข้อผิดพลาด",
+      },
+      tr: {
+        name: "Adler-32 Hash Metin veya Dosya",
+        description:
+          "Metin veya dosya için Adler-32 sağlama toplamı üretin. Veri bütünlüğü doğrulaması ve hata tespiti için hızlı checksum hesaplayın",
+      },
+      vi: {
+        name: "Hash Adler-32 văn bản hoặc tệp",
+        description:
+          "Tạo checksum Adler-32 cho văn bản hoặc tệp. Tính checksum nhanh để kiểm tra tính toàn vẹn dữ liệu và phát hiện lỗi",
+      },
+      "zh-CN": {
+        name: "Adler-32 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Adler-32 校验和。计算快速校验值，用于数据完整性验证和错误检测",
+      },
+      "zh-TW": {
+        name: "Adler-32 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測",
+      },
+    },
+  },
+  {
     slug: "ascii-art-generator",
     category: "text",
     icon: "binary",
@@ -244,6 +375,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  {
+    slug: "basic-auth-decoder",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "basic",
+      "auth",
+      "authorization",
+      "header",
+      "base64",
+      "username",
+      "password",
+      "http",
+      "network",
+      "decode",
+      "decoder",
+    ],
+    locales: {
+      ar: {
+        name: "مفكك تشفير المصادقة الأساسية",
+        description:
+          "فك تشفير ترويسة HTTP Basic Authorization لاستخراج اسم المستخدم وكلمة المرور من Base64. مفيد لاستكشاف الأخطاء وإصلاحها واختبار واجهة برمجة التطبيقات",
+      },
+      de: {
+        name: "Basic-Auth-Decoder",
+        description:
+          "Dekodieren Sie den HTTP Basic Authorization Header, um Benutzername und Passwort aus Base64 zu extrahieren. Nützlich zum Debuggen und API-Tests",
+      },
+      en: {
+        name: "Basic Auth Decoder",
+        description:
+          "Decode HTTP Basic Authorization header to extract username and password from Base64. Useful for debugging and API testing",
+      },
+      es: {
+        name: "Decodificador de Basic Auth",
+        description:
+          "Decodifica el encabezado HTTP Basic Authorization para extraer usuario y contraseña desde Base64. Útil para depuración y pruebas de API",
+      },
+      fr: {
+        name: "Décodeur d'Authentification Basique",
+        description:
+          "Décode l'en-tête HTTP Basic Authorization pour extraire le nom d'utilisateur et le mot de passe depuis Base64. Utile pour le débogage et les tests d'API",
+      },
+      he: {
+        name: "מפענח Basic Auth",
+        description:
+          "פענוח כותרת HTTP Basic Authorization כדי לחלץ שם משתמש וסיסמה מ-Base64. שימושי לניפוי שגיאות ובדיקות API",
+      },
+      hi: {
+        name: "बेसिक ऑथ डिकोडर",
+        description:
+          "HTTP Basic Authorization हेडर को डिकोड कर Base64 से उपयोगकर्ता नाम और पासवर्ड निकालें। डिबगिंग और API परीक्षण के लिए उपयोगी",
+      },
+      id: {
+        name: "Decoder Basic Auth",
+        description:
+          "Dekode header HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata sandi dari Base64. Berguna untuk debugging dan pengujian API",
+      },
+      it: {
+        name: "Decoder Basic Auth",
+        description:
+          "Decodifica l'intestazione HTTP Basic Authorization per estrarre nome utente e password da Base64. Utile per il debugging e i test API",
+      },
+      ja: {
+        name: "Basic Auth デコーダー",
+        description:
+          "HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに有用",
+      },
+      ko: {
+        name: "Basic Auth 디코더",
+        description:
+          "HTTP Basic Authorization 헤더를 디코딩하여 Base64에서 사용자 이름과 비밀번호를 추출합니다. 디버깅 및 API 테스트에 유용",
+      },
+      ms: {
+        name: "Penyahkod Basic Auth",
+        description:
+          "Nyahkod pengepala HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata laluan daripada Base64. Berguna untuk penyahpepijatan dan ujian API",
+      },
+      nl: {
+        name: "Basic Auth-decoder",
+        description:
+          "Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests",
+      },
+      no: {
+        name: "Basic Auth-dekoder",
+        description:
+          "Dekodér HTTP Basic Authorization-headeren for å hente brukernavn og passord fra Base64. Nyttig for feilsøking og API-testing",
+      },
+      pl: {
+        name: "Dekoder Basic Auth",
+        description:
+          "Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API",
+      },
+      pt: {
+        name: "Decodificador de Basic Auth",
+        description:
+          "Decodifique o cabeçalho HTTP Basic Authorization para extrair nome de usuário e senha do Base64. Útil para depuração e testes de API",
+      },
+      ru: {
+        name: "Декодер Basic Auth",
+        description:
+          "Декодируйте заголовок HTTP Basic Authorization, чтобы извлечь имя пользователя и пароль из Base64. Полезно для отладки и тестирования API",
+      },
+      sv: {
+        name: "Basic Auth-avkodare",
+        description:
+          "Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning",
+      },
+      th: {
+        name: "เครื่องมือถอดรหัส Basic Auth",
+        description:
+          "ถอดรหัสส่วนหัว HTTP Basic Authorization เพื่อดึงชื่อผู้ใช้และรหัสผ่านจาก Base64 มีประโยชน์สำหรับการดีบักและการทดสอบ API",
+      },
+      tr: {
+        name: "Basic Auth Çözücü",
+        description:
+          "HTTP Basic Authorization başlığını çözüp Base64’ten kullanıcı adı ve parolayı çıkarın. Hata ayıklama ve API testi için yararlı",
+      },
+      vi: {
+        name: "Trình giải mã Basic Auth",
+        description:
+          "Giải mã tiêu đề HTTP Basic Authorization để trích xuất tên người dùng và mật khẩu từ Base64. Hữu ích cho gỡ lỗi và kiểm thử API",
+      },
+      "zh-CN": {
+        name: "Basic Auth 解码器",
+        description:
+          "解码 HTTP Basic Authorization 头，从 Base64 中提取用户名和密码。用于调试和 API 测试",
+      },
+      "zh-TW": {
+        name: "Basic Auth 解碼器",
+        description:
+          "解碼 HTTP Basic Authorization 標頭，從 Base64 提取使用者名稱與密碼。用於除錯與 API 測試",
       },
     },
   },
@@ -1977,6 +2243,108 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-schema-generator",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "schema", "generator", "developer"],
+    locales: {
+      ar: {
+        name: "مولد مخطط JSON",
+        description: "ينشئ مخطط JSON من بيانات JSON نموذجية",
+      },
+      de: {
+        name: "JSON-Schema-Generator",
+        description: "Erstellt ein JSON Schema aus Beispiel-JSON-Daten",
+      },
+      en: {
+        name: "JSON Schema Generator",
+        description: "Generate JSON Schema from example JSON data",
+      },
+      es: {
+        name: "Generador de JSON Schema",
+        description: "Genera JSON Schema a partir de datos JSON de ejemplo",
+      },
+      fr: {
+        name: "Générateur de JSON Schema",
+        description: "Génère un JSON Schema à partir de données JSON d'exemple",
+      },
+      he: {
+        name: "מחולל JSON Schema",
+        description: "יוצר JSON Schema מתוך נתוני JSON לדוגמה",
+      },
+      hi: {
+        name: "JSON स्कीमा जनरेटर",
+        description: "उदाहरण JSON डेटा से JSON Schema जनरेट करें",
+      },
+      id: {
+        name: "Generator JSON Schema",
+        description: "Menghasilkan JSON Schema dari data JSON contoh",
+      },
+      it: {
+        name: "Generatore di JSON Schema",
+        description: "Genera JSON Schema da dati JSON di esempio",
+      },
+      ja: {
+        name: "JSON Schema ジェネレーター",
+        description: "例の JSON データから JSON Schema を生成します",
+      },
+      ko: {
+        name: "JSON 스키마 생성기",
+        description: "예시 JSON 데이터에서 JSON Schema를 생성합니다",
+      },
+      ms: {
+        name: "Penjana JSON Schema",
+        description: "Menjana JSON Schema daripada data JSON contoh",
+      },
+      nl: {
+        name: "JSON Schema-generator",
+        description:
+          "Genereert JSON Schema op basis van voorbeeld-JSON-gegevens",
+      },
+      no: {
+        name: "JSON Schema-generator",
+        description: "Genererer JSON Schema fra eksempeldata i JSON",
+      },
+      pl: {
+        name: "Generator JSON Schema",
+        description:
+          "Generuje JSON Schema na podstawie przykładowych danych JSON",
+      },
+      pt: {
+        name: "Gerador de JSON Schema",
+        description: "Gera JSON Schema a partir de dados JSON de exemplo",
+      },
+      ru: {
+        name: "Генератор JSON Schema",
+        description: "Создает JSON Schema из примеров JSON-данных",
+      },
+      sv: {
+        name: "JSON Schema-generator",
+        description: "Genererar JSON Schema från exempel-JSON-data",
+      },
+      th: {
+        name: "ตัวสร้าง JSON Schema",
+        description: "สร้าง JSON Schema จากข้อมูล JSON ตัวอย่าง",
+      },
+      tr: {
+        name: "JSON Schema Oluşturucu",
+        description: "Örnek JSON verilerinden JSON Schema oluşturur",
+      },
+      vi: {
+        name: "Trình tạo JSON Schema",
+        description: "Tạo JSON Schema từ dữ liệu JSON mẫu",
+      },
+      "zh-CN": {
+        name: "JSON Schema 生成器",
+        description: "从示例 JSON 数据生成 JSON Schema",
+      },
+      "zh-TW": {
+        name: "JSON Schema 產生器",
+        description: "從範例 JSON 資料產生 JSON Schema",
+      },
+    },
+  },
+  {
     slug: "json-schema-validator",
     category: "json",
     icon: "braces",
@@ -3219,6 +3587,123 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  {
+    slug: "random-number-generator",
+    category: "random",
+    icon: "binary",
+    tags: ["random", "number", "generator", "dice", "lottery", "draw"],
+    locales: {
+      ar: {
+        name: "مولد أرقام عشوائية",
+        description:
+          "أنشئ أرقامًا عشوائية بنطاق وعدد مخصصين مع خيار الأرقام العشرية.",
+      },
+      de: {
+        name: "Zufallszahlengenerator",
+        description:
+          "Erzeuge Zufallszahlen mit benutzerdefiniertem Bereich und Anzahl, optional mit Dezimalstellen.",
+      },
+      en: {
+        name: "Random Number Generator",
+        description:
+          "Generate random numbers with custom ranges, counts, and optional decimals.",
+      },
+      es: {
+        name: "Generador de números aleatorios",
+        description:
+          "Genera números aleatorios con rango y cantidad personalizados, con opción de decimales.",
+      },
+      fr: {
+        name: "Générateur de nombres aléatoires",
+        description:
+          "Générez des nombres aléatoires avec une plage et une quantité personnalisées, avec option décimale.",
+      },
+      he: {
+        name: "מחולל מספרים אקראיים",
+        description:
+          "צור מספרים אקראיים עם טווח וכמות מותאמים, עם אפשרות לעשרוניות.",
+      },
+      hi: {
+        name: "रैंडम नंबर जनरेटर",
+        description: "कस्टम रेंज और संख्या के साथ रैंडम नंबर बनाएं, दशमलव का विकल्प सहित।",
+      },
+      id: {
+        name: "Generator angka acak",
+        description:
+          "Buat angka acak dengan rentang dan jumlah khusus, dengan opsi desimal.",
+      },
+      it: {
+        name: "Generatore di numeri casuali",
+        description:
+          "Genera numeri casuali con intervallo e quantità personalizzati, con decimali opzionali.",
+      },
+      ja: {
+        name: "乱数生成器",
+        description: "範囲と個数を指定して乱数を生成し、小数にも対応します。",
+      },
+      ko: {
+        name: "난수 생성기",
+        description: "범위와 개수를 지정해 난수를 생성하고 소수도 지원합니다.",
+      },
+      ms: {
+        name: "Penjana nombor rawak",
+        description:
+          "Jana nombor rawak dengan julat dan jumlah tersuai, dengan pilihan perpuluhan.",
+      },
+      nl: {
+        name: "Randomgetallengenerator",
+        description:
+          "Genereer willekeurige getallen met aangepast bereik en aantal, optioneel met decimalen.",
+      },
+      no: {
+        name: "Tilfeldig tallgenerator",
+        description:
+          "Generer tilfeldige tall med tilpasset område og antall, med valgfrie desimaler.",
+      },
+      pl: {
+        name: "Generator liczb losowych",
+        description:
+          "Generuj liczby losowe z niestandardowym zakresem i liczbą, z opcjonalnymi miejscami dziesiętnymi.",
+      },
+      pt: {
+        name: "Gerador de números aleatórios",
+        description:
+          "Gere números aleatórios com intervalo e quantidade personalizados, com opção de decimais.",
+      },
+      ru: {
+        name: "Генератор случайных чисел",
+        description:
+          "Создавайте случайные числа с настраиваемым диапазоном и количеством, с поддержкой десятичных.",
+      },
+      sv: {
+        name: "Slumptalsgenerator",
+        description:
+          "Generera slumptal med anpassat intervall och antal, med valfria decimaler.",
+      },
+      th: {
+        name: "ตัวสร้างตัวเลขสุ่ม",
+        description: "สร้างตัวเลขสุ่มด้วยช่วงและจำนวนที่กำหนดเอง พร้อมตัวเลือกทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Sayı Üretici",
+        description:
+          "Özel aralık ve miktarla rastgele sayılar üretin, isteğe bağlı ondalıklarla.",
+      },
+      vi: {
+        name: "Trình tạo số ngẫu nhiên",
+        description:
+          "Tạo số ngẫu nhiên với khoảng và số lượng tùy chỉnh, có tùy chọn số thập phân.",
+      },
+      "zh-CN": {
+        name: "随机数生成器",
+        description: "生成指定范围与数量的随机数字，支持小数。",
+      },
+      "zh-TW": {
+        name: "隨機數產生器",
+        description: "產生指定範圍與數量的隨機數字，支援小數。",
       },
     },
   },
@@ -5076,6 +5561,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "unix-timestamp-converter",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "unix",
+      "timestamp",
+      "epoch",
+      "time",
+      "date",
+      "converter",
+      "seconds",
+      "milliseconds",
+      "nanoseconds",
+    ],
+    locales: {
+      ar: {
+        name: "محول الطابع الزمني Unix",
+        description:
+          "تحويل الطوابع الزمنية Unix إلى تواريخ قابلة للقراءة والعكس. يدعم الكشف التلقائي عن الثواني والمللي ثانية والنانو ثانية.",
+      },
+      de: {
+        name: "Unix-Zeitstempel-Konverter",
+        description:
+          "Konvertiert Unix-Zeitstempel in lesbare Daten und umgekehrt. Unterstützt automatische Erkennung von Sekunden, Millisekunden und Nanosekunden.",
+      },
+      en: {
+        name: "Unix Timestamp Converter",
+        description:
+          "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds.",
+      },
+      es: {
+        name: "Convertidor de Marca de Tiempo Unix",
+        description:
+          "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos.",
+      },
+      fr: {
+        name: "Convertisseur de Timestamp Unix",
+        description:
+          "Convertit les timestamps Unix en dates lisibles et vice versa. Prend en charge la détection automatique des secondes, millisecondes et nanosecondes.",
+      },
+      he: {
+        name: "ממיר חותמת זמן Unix",
+        description:
+          "המר חותמות זמן Unix לתאריכים קריאים ולהיפך. תומך בזיהוי אוטומטי של שניות, אלפיות שנייה וננושניות.",
+      },
+      hi: {
+        name: "Unix टाइमस्टैम्प कनवर्टर",
+        description:
+          "Unix टाइमस्टैम्प को पढ़ने योग्य तिथियों में बदलें और इसके विपरीत। सेकंड, मिलीसेकंड और नैनोसेकंड की स्वचालित पहचान का समर्थन करता है।",
+      },
+      id: {
+        name: "Konverter Timestamp Unix",
+        description:
+          "Konversi timestamp Unix ke tanggal yang dapat dibaca dan sebaliknya. Mendukung deteksi otomatis detik, milidetik, dan nanodetik.",
+      },
+      it: {
+        name: "Convertitore Timestamp Unix",
+        description:
+          "Converte i timestamp Unix in date leggibili e viceversa. Supporta il rilevamento automatico di secondi, millisecondi e nanosecondi.",
+      },
+      ja: {
+        name: "Unixタイムスタンプ変換",
+        description:
+          "Unixタイムスタンプを読みやすい日付に変換し、その逆も可能。秒、ミリ秒、ナノ秒の自動検出に対応。",
+      },
+      ko: {
+        name: "Unix 타임스탬프 변환기",
+        description:
+          "Unix 타임스탬프를 읽기 쉬운 날짜로 변환하고 그 반대도 가능합니다. 초, 밀리초, 나노초 자동 감지를 지원합니다.",
+      },
+      ms: {
+        name: "Penukar Cap Masa Unix",
+        description:
+          "Tukar cap masa Unix kepada tarikh yang boleh dibaca dan sebaliknya. Menyokong pengesanan automatik saat, milisaat dan nanosaat.",
+      },
+      nl: {
+        name: "Unix Tijdstempel Converter",
+        description:
+          "Converteer Unix-tijdstempels naar leesbare datums en omgekeerd. Ondersteunt automatische detectie van seconden, milliseconden en nanoseconden.",
+      },
+      no: {
+        name: "Unix Tidsstempel Konverterer",
+        description:
+          "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder.",
+      },
+      pl: {
+        name: "Konwerter Znacznika Czasu Unix",
+        description:
+          "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund.",
+      },
+      pt: {
+        name: "Conversor de Timestamp Unix",
+        description:
+          "Converte timestamps Unix em datas legíveis e vice-versa. Suporta detecção automática de segundos, milissegundos e nanossegundos.",
+      },
+      ru: {
+        name: "Конвертер Unix-меток времени",
+        description:
+          "Преобразует метки времени Unix в читаемые даты и обратно. Поддерживает автоматическое определение секунд, миллисекунд и наносекунд.",
+      },
+      sv: {
+        name: "Unix Tidsstämpel Konverterare",
+        description:
+          "Konvertera Unix-tidsstämplar till läsbara datum och vice versa. Stödjer automatisk detektering av sekunder, millisekunder och nanosekunder.",
+      },
+      th: {
+        name: "ตัวแปลง Unix Timestamp",
+        description:
+          "แปลง Unix timestamp เป็นวันที่ที่อ่านได้และในทางกลับกัน รองรับการตรวจจับอัตโนมัติของวินาที มิลลิวินาที และนาโนวินาที",
+      },
+      tr: {
+        name: "Unix Zaman Damgası Dönüştürücü",
+        description:
+          "Unix zaman damgalarını okunabilir tarihlere dönüştürün ve tam tersi. Saniye, milisaniye ve nanosaniye otomatik algılamayı destekler.",
+      },
+      vi: {
+        name: "Bộ Chuyển Đổi Dấu Thời Gian Unix",
+        description:
+          "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây.",
+      },
+      "zh-CN": {
+        name: "Unix 时间戳转换器",
+        description:
+          "将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持自动检测秒、毫秒和纳秒。",
+      },
+      "zh-TW": {
+        name: "Unix 時間戳記轉換器",
+        description:
+          "將 Unix 時間戳記轉換為可讀日期，或將日期轉換為時間戳記。支援自動偵測秒、毫秒和奈秒。",
+      },
+    },
+  },
+  {
     slug: "url-component-encoder-decoder",
     category: "web",
     icon: "globe",
@@ -5684,6 +6302,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
 ]
 
 export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
+  "adler32-hash-text-or-file": {
+    slug: "adler32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "adler32",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "error-detection",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Adler-32 للنص أو الملف",
+        description:
+          "أنشئ قيم Adler-32 للنصوص أو الملفات. احسب قيماً سريعة للتحقق من سلامة البيانات واكتشاف الأخطاء",
+      },
+      de: {
+        name: "Adler-32-Hash für Text oder Datei",
+        description:
+          "Erzeuge Adler-32-Prüfsummen für Text oder Dateien. Berechne schnelle Prüfsummen zur Integritätsprüfung und Fehlererkennung",
+      },
+      en: {
+        name: "Adler-32 Hash Text or File",
+        description:
+          "Generate Adler-32 checksums for text input or file upload. Calculate fast checksums for data integrity verification and error detection",
+      },
+      es: {
+        name: "Hash Adler-32 de Texto o Archivo",
+        description:
+          "Genera checksums Adler-32 para texto o archivos. Calcula checksums rápidos para verificar integridad y detectar errores",
+      },
+      fr: {
+        name: "Hash Adler-32 de Texte ou Fichier",
+        description:
+          "Générez des sommes de contrôle Adler-32 pour du texte ou des fichiers. Calculez des checksums rapides pour vérifier l’intégrité et détecter les erreurs",
+      },
+      he: {
+        name: "האש Adler-32 טקסט או קובץ",
+        description:
+          "צור סכומי ביקורת Adler-32 עבור טקסט או קבצים. חשב סכומים מהירים לאימות שלמות נתונים ולזיהוי שגיאות",
+      },
+      hi: {
+        name: "Adler-32 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Adler-32 चेकसम बनाएं। डेटा अखंडता सत्यापन और त्रुटि पहचान के लिए तेज़ चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Adler-32 Teks atau File",
+        description:
+          "Buat checksum Adler-32 untuk teks atau file. Hitung checksum cepat untuk verifikasi integritas data dan deteksi kesalahan",
+      },
+      it: {
+        name: "Hash Adler-32 di Testo o File",
+        description:
+          "Genera checksum Adler-32 per testo o file. Calcola checksum rapidi per verificare l’integrità dei dati e rilevare errori",
+      },
+      ja: {
+        name: "Adler-32 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードに対して Adler-32 チェックサムを生成します。データ整合性の確認とエラー検出のために高速チェックサムを計算します",
+      },
+      ko: {
+        name: "Adler-32 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대해 Adler-32 체크섬을 생성합니다. 데이터 무결성 검증과 오류 감지를 위한 빠른 체크섬을 계산합니다",
+      },
+      ms: {
+        name: "Hash Adler-32 Teks atau Fail",
+        description:
+          "Jana checksum Adler-32 untuk teks atau fail. Kira checksum pantas bagi pengesahan integriti data dan pengesanan ralat",
+      },
+      nl: {
+        name: "Adler-32-hash tekst of bestand",
+        description:
+          "Genereer Adler-32-checksums voor tekst of bestanden. Bereken snelle checksums voor integriteitscontrole en foutdetectie",
+      },
+      no: {
+        name: "Adler-32-hash tekst eller fil",
+        description:
+          "Generer Adler-32-kontrollsummer for tekst eller filer. Beregn raske kontrollsummer for dataintegritet og feildeteksjon",
+      },
+      pl: {
+        name: "Hash Adler-32 tekstu lub pliku",
+        description:
+          "Generuj sumy kontrolne Adler-32 dla tekstu lub plików. Obliczaj szybkie sumy do weryfikacji integralności danych i wykrywania błędów",
+      },
+      pt: {
+        name: "Hash Adler-32 de Texto ou Arquivo",
+        description:
+          "Gere checksums Adler-32 para texto ou arquivos. Calcule checksums rápidos para verificar integridade de dados e detectar erros",
+      },
+      ru: {
+        name: "Adler-32-хеш текста или файла",
+        description:
+          "Создавайте контрольные суммы Adler-32 для текста и файлов. Вычисляйте быстрые суммы для проверки целостности данных и обнаружения ошибок",
+      },
+      sv: {
+        name: "Adler-32-hash text eller fil",
+        description:
+          "Generera Adler-32-kontrollsummor för text eller filer. Beräkna snabba checksummor för integritetskontroll och feldetektering",
+      },
+      th: {
+        name: "แฮช Adler-32 ข้อความหรือไฟล์",
+        description:
+          "สร้างค่า Adler-32 สำหรับข้อความหรือไฟล์ คำนวณเช็กซัมแบบรวดเร็วเพื่อยืนยันความสมบูรณ์ของข้อมูลและตรวจจับข้อผิดพลาด",
+      },
+      tr: {
+        name: "Adler-32 Hash Metin veya Dosya",
+        description:
+          "Metin veya dosya için Adler-32 sağlama toplamı üretin. Veri bütünlüğü doğrulaması ve hata tespiti için hızlı checksum hesaplayın",
+      },
+      vi: {
+        name: "Hash Adler-32 văn bản hoặc tệp",
+        description:
+          "Tạo checksum Adler-32 cho văn bản hoặc tệp. Tính checksum nhanh để kiểm tra tính toàn vẹn dữ liệu và phát hiện lỗi",
+      },
+      "zh-CN": {
+        name: "Adler-32 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Adler-32 校验和。计算快速校验值，用于数据完整性验证和错误检测",
+      },
+      "zh-TW": {
+        name: "Adler-32 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測",
+      },
+    },
+  },
   "ascii-art-generator": {
     slug: "ascii-art-generator",
     category: "text",
@@ -5927,6 +6676,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  "basic-auth-decoder": {
+    slug: "basic-auth-decoder",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "basic",
+      "auth",
+      "authorization",
+      "header",
+      "base64",
+      "username",
+      "password",
+      "http",
+      "network",
+      "decode",
+      "decoder",
+    ],
+    locales: {
+      ar: {
+        name: "مفكك تشفير المصادقة الأساسية",
+        description:
+          "فك تشفير ترويسة HTTP Basic Authorization لاستخراج اسم المستخدم وكلمة المرور من Base64. مفيد لاستكشاف الأخطاء وإصلاحها واختبار واجهة برمجة التطبيقات",
+      },
+      de: {
+        name: "Basic-Auth-Decoder",
+        description:
+          "Dekodieren Sie den HTTP Basic Authorization Header, um Benutzername und Passwort aus Base64 zu extrahieren. Nützlich zum Debuggen und API-Tests",
+      },
+      en: {
+        name: "Basic Auth Decoder",
+        description:
+          "Decode HTTP Basic Authorization header to extract username and password from Base64. Useful for debugging and API testing",
+      },
+      es: {
+        name: "Decodificador de Basic Auth",
+        description:
+          "Decodifica el encabezado HTTP Basic Authorization para extraer usuario y contraseña desde Base64. Útil para depuración y pruebas de API",
+      },
+      fr: {
+        name: "Décodeur d'Authentification Basique",
+        description:
+          "Décode l'en-tête HTTP Basic Authorization pour extraire le nom d'utilisateur et le mot de passe depuis Base64. Utile pour le débogage et les tests d'API",
+      },
+      he: {
+        name: "מפענח Basic Auth",
+        description:
+          "פענוח כותרת HTTP Basic Authorization כדי לחלץ שם משתמש וסיסמה מ-Base64. שימושי לניפוי שגיאות ובדיקות API",
+      },
+      hi: {
+        name: "बेसिक ऑथ डिकोडर",
+        description:
+          "HTTP Basic Authorization हेडर को डिकोड कर Base64 से उपयोगकर्ता नाम और पासवर्ड निकालें। डिबगिंग और API परीक्षण के लिए उपयोगी",
+      },
+      id: {
+        name: "Decoder Basic Auth",
+        description:
+          "Dekode header HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata sandi dari Base64. Berguna untuk debugging dan pengujian API",
+      },
+      it: {
+        name: "Decoder Basic Auth",
+        description:
+          "Decodifica l'intestazione HTTP Basic Authorization per estrarre nome utente e password da Base64. Utile per il debugging e i test API",
+      },
+      ja: {
+        name: "Basic Auth デコーダー",
+        description:
+          "HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに有用",
+      },
+      ko: {
+        name: "Basic Auth 디코더",
+        description:
+          "HTTP Basic Authorization 헤더를 디코딩하여 Base64에서 사용자 이름과 비밀번호를 추출합니다. 디버깅 및 API 테스트에 유용",
+      },
+      ms: {
+        name: "Penyahkod Basic Auth",
+        description:
+          "Nyahkod pengepala HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata laluan daripada Base64. Berguna untuk penyahpepijatan dan ujian API",
+      },
+      nl: {
+        name: "Basic Auth-decoder",
+        description:
+          "Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests",
+      },
+      no: {
+        name: "Basic Auth-dekoder",
+        description:
+          "Dekodér HTTP Basic Authorization-headeren for å hente brukernavn og passord fra Base64. Nyttig for feilsøking og API-testing",
+      },
+      pl: {
+        name: "Dekoder Basic Auth",
+        description:
+          "Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API",
+      },
+      pt: {
+        name: "Decodificador de Basic Auth",
+        description:
+          "Decodifique o cabeçalho HTTP Basic Authorization para extrair nome de usuário e senha do Base64. Útil para depuração e testes de API",
+      },
+      ru: {
+        name: "Декодер Basic Auth",
+        description:
+          "Декодируйте заголовок HTTP Basic Authorization, чтобы извлечь имя пользователя и пароль из Base64. Полезно для отладки и тестирования API",
+      },
+      sv: {
+        name: "Basic Auth-avkodare",
+        description:
+          "Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning",
+      },
+      th: {
+        name: "เครื่องมือถอดรหัส Basic Auth",
+        description:
+          "ถอดรหัสส่วนหัว HTTP Basic Authorization เพื่อดึงชื่อผู้ใช้และรหัสผ่านจาก Base64 มีประโยชน์สำหรับการดีบักและการทดสอบ API",
+      },
+      tr: {
+        name: "Basic Auth Çözücü",
+        description:
+          "HTTP Basic Authorization başlığını çözüp Base64’ten kullanıcı adı ve parolayı çıkarın. Hata ayıklama ve API testi için yararlı",
+      },
+      vi: {
+        name: "Trình giải mã Basic Auth",
+        description:
+          "Giải mã tiêu đề HTTP Basic Authorization để trích xuất tên người dùng và mật khẩu từ Base64. Hữu ích cho gỡ lỗi và kiểm thử API",
+      },
+      "zh-CN": {
+        name: "Basic Auth 解码器",
+        description:
+          "解码 HTTP Basic Authorization 头，从 Base64 中提取用户名和密码。用于调试和 API 测试",
+      },
+      "zh-TW": {
+        name: "Basic Auth 解碼器",
+        description:
+          "解碼 HTTP Basic Authorization 標頭，從 Base64 提取使用者名稱與密碼。用於除錯與 API 測試",
       },
     },
   },
@@ -7659,6 +8543,108 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "json-schema-generator": {
+    slug: "json-schema-generator",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "schema", "generator", "developer"],
+    locales: {
+      ar: {
+        name: "مولد مخطط JSON",
+        description: "ينشئ مخطط JSON من بيانات JSON نموذجية",
+      },
+      de: {
+        name: "JSON-Schema-Generator",
+        description: "Erstellt ein JSON Schema aus Beispiel-JSON-Daten",
+      },
+      en: {
+        name: "JSON Schema Generator",
+        description: "Generate JSON Schema from example JSON data",
+      },
+      es: {
+        name: "Generador de JSON Schema",
+        description: "Genera JSON Schema a partir de datos JSON de ejemplo",
+      },
+      fr: {
+        name: "Générateur de JSON Schema",
+        description: "Génère un JSON Schema à partir de données JSON d'exemple",
+      },
+      he: {
+        name: "מחולל JSON Schema",
+        description: "יוצר JSON Schema מתוך נתוני JSON לדוגמה",
+      },
+      hi: {
+        name: "JSON स्कीमा जनरेटर",
+        description: "उदाहरण JSON डेटा से JSON Schema जनरेट करें",
+      },
+      id: {
+        name: "Generator JSON Schema",
+        description: "Menghasilkan JSON Schema dari data JSON contoh",
+      },
+      it: {
+        name: "Generatore di JSON Schema",
+        description: "Genera JSON Schema da dati JSON di esempio",
+      },
+      ja: {
+        name: "JSON Schema ジェネレーター",
+        description: "例の JSON データから JSON Schema を生成します",
+      },
+      ko: {
+        name: "JSON 스키마 생성기",
+        description: "예시 JSON 데이터에서 JSON Schema를 생성합니다",
+      },
+      ms: {
+        name: "Penjana JSON Schema",
+        description: "Menjana JSON Schema daripada data JSON contoh",
+      },
+      nl: {
+        name: "JSON Schema-generator",
+        description:
+          "Genereert JSON Schema op basis van voorbeeld-JSON-gegevens",
+      },
+      no: {
+        name: "JSON Schema-generator",
+        description: "Genererer JSON Schema fra eksempeldata i JSON",
+      },
+      pl: {
+        name: "Generator JSON Schema",
+        description:
+          "Generuje JSON Schema na podstawie przykładowych danych JSON",
+      },
+      pt: {
+        name: "Gerador de JSON Schema",
+        description: "Gera JSON Schema a partir de dados JSON de exemplo",
+      },
+      ru: {
+        name: "Генератор JSON Schema",
+        description: "Создает JSON Schema из примеров JSON-данных",
+      },
+      sv: {
+        name: "JSON Schema-generator",
+        description: "Genererar JSON Schema från exempel-JSON-data",
+      },
+      th: {
+        name: "ตัวสร้าง JSON Schema",
+        description: "สร้าง JSON Schema จากข้อมูล JSON ตัวอย่าง",
+      },
+      tr: {
+        name: "JSON Schema Oluşturucu",
+        description: "Örnek JSON verilerinden JSON Schema oluşturur",
+      },
+      vi: {
+        name: "Trình tạo JSON Schema",
+        description: "Tạo JSON Schema từ dữ liệu JSON mẫu",
+      },
+      "zh-CN": {
+        name: "JSON Schema 生成器",
+        description: "从示例 JSON 数据生成 JSON Schema",
+      },
+      "zh-TW": {
+        name: "JSON Schema 產生器",
+        description: "從範例 JSON 資料產生 JSON Schema",
+      },
+    },
+  },
   "json-schema-validator": {
     slug: "json-schema-validator",
     category: "json",
@@ -8902,6 +9888,123 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  "random-number-generator": {
+    slug: "random-number-generator",
+    category: "random",
+    icon: "binary",
+    tags: ["random", "number", "generator", "dice", "lottery", "draw"],
+    locales: {
+      ar: {
+        name: "مولد أرقام عشوائية",
+        description:
+          "أنشئ أرقامًا عشوائية بنطاق وعدد مخصصين مع خيار الأرقام العشرية.",
+      },
+      de: {
+        name: "Zufallszahlengenerator",
+        description:
+          "Erzeuge Zufallszahlen mit benutzerdefiniertem Bereich und Anzahl, optional mit Dezimalstellen.",
+      },
+      en: {
+        name: "Random Number Generator",
+        description:
+          "Generate random numbers with custom ranges, counts, and optional decimals.",
+      },
+      es: {
+        name: "Generador de números aleatorios",
+        description:
+          "Genera números aleatorios con rango y cantidad personalizados, con opción de decimales.",
+      },
+      fr: {
+        name: "Générateur de nombres aléatoires",
+        description:
+          "Générez des nombres aléatoires avec une plage et une quantité personnalisées, avec option décimale.",
+      },
+      he: {
+        name: "מחולל מספרים אקראיים",
+        description:
+          "צור מספרים אקראיים עם טווח וכמות מותאמים, עם אפשרות לעשרוניות.",
+      },
+      hi: {
+        name: "रैंडम नंबर जनरेटर",
+        description: "कस्टम रेंज और संख्या के साथ रैंडम नंबर बनाएं, दशमलव का विकल्प सहित।",
+      },
+      id: {
+        name: "Generator angka acak",
+        description:
+          "Buat angka acak dengan rentang dan jumlah khusus, dengan opsi desimal.",
+      },
+      it: {
+        name: "Generatore di numeri casuali",
+        description:
+          "Genera numeri casuali con intervallo e quantità personalizzati, con decimali opzionali.",
+      },
+      ja: {
+        name: "乱数生成器",
+        description: "範囲と個数を指定して乱数を生成し、小数にも対応します。",
+      },
+      ko: {
+        name: "난수 생성기",
+        description: "범위와 개수를 지정해 난수를 생성하고 소수도 지원합니다.",
+      },
+      ms: {
+        name: "Penjana nombor rawak",
+        description:
+          "Jana nombor rawak dengan julat dan jumlah tersuai, dengan pilihan perpuluhan.",
+      },
+      nl: {
+        name: "Randomgetallengenerator",
+        description:
+          "Genereer willekeurige getallen met aangepast bereik en aantal, optioneel met decimalen.",
+      },
+      no: {
+        name: "Tilfeldig tallgenerator",
+        description:
+          "Generer tilfeldige tall med tilpasset område og antall, med valgfrie desimaler.",
+      },
+      pl: {
+        name: "Generator liczb losowych",
+        description:
+          "Generuj liczby losowe z niestandardowym zakresem i liczbą, z opcjonalnymi miejscami dziesiętnymi.",
+      },
+      pt: {
+        name: "Gerador de números aleatórios",
+        description:
+          "Gere números aleatórios com intervalo e quantidade personalizados, com opção de decimais.",
+      },
+      ru: {
+        name: "Генератор случайных чисел",
+        description:
+          "Создавайте случайные числа с настраиваемым диапазоном и количеством, с поддержкой десятичных.",
+      },
+      sv: {
+        name: "Slumptalsgenerator",
+        description:
+          "Generera slumptal med anpassat intervall och antal, med valfria decimaler.",
+      },
+      th: {
+        name: "ตัวสร้างตัวเลขสุ่ม",
+        description: "สร้างตัวเลขสุ่มด้วยช่วงและจำนวนที่กำหนดเอง พร้อมตัวเลือกทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Sayı Üretici",
+        description:
+          "Özel aralık ve miktarla rastgele sayılar üretin, isteğe bağlı ondalıklarla.",
+      },
+      vi: {
+        name: "Trình tạo số ngẫu nhiên",
+        description:
+          "Tạo số ngẫu nhiên với khoảng và số lượng tùy chỉnh, có tùy chọn số thập phân.",
+      },
+      "zh-CN": {
+        name: "随机数生成器",
+        description: "生成指定范围与数量的随机数字，支持小数。",
+      },
+      "zh-TW": {
+        name: "隨機數產生器",
+        description: "產生指定範圍與數量的隨機數字，支援小數。",
       },
     },
   },
@@ -10755,6 +11858,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Unicode ↔ Punycode 轉換器",
         description: "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域",
+      },
+    },
+  },
+  "unix-timestamp-converter": {
+    slug: "unix-timestamp-converter",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "unix",
+      "timestamp",
+      "epoch",
+      "time",
+      "date",
+      "converter",
+      "seconds",
+      "milliseconds",
+      "nanoseconds",
+    ],
+    locales: {
+      ar: {
+        name: "محول الطابع الزمني Unix",
+        description:
+          "تحويل الطوابع الزمنية Unix إلى تواريخ قابلة للقراءة والعكس. يدعم الكشف التلقائي عن الثواني والمللي ثانية والنانو ثانية.",
+      },
+      de: {
+        name: "Unix-Zeitstempel-Konverter",
+        description:
+          "Konvertiert Unix-Zeitstempel in lesbare Daten und umgekehrt. Unterstützt automatische Erkennung von Sekunden, Millisekunden und Nanosekunden.",
+      },
+      en: {
+        name: "Unix Timestamp Converter",
+        description:
+          "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds.",
+      },
+      es: {
+        name: "Convertidor de Marca de Tiempo Unix",
+        description:
+          "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos.",
+      },
+      fr: {
+        name: "Convertisseur de Timestamp Unix",
+        description:
+          "Convertit les timestamps Unix en dates lisibles et vice versa. Prend en charge la détection automatique des secondes, millisecondes et nanosecondes.",
+      },
+      he: {
+        name: "ממיר חותמת זמן Unix",
+        description:
+          "המר חותמות זמן Unix לתאריכים קריאים ולהיפך. תומך בזיהוי אוטומטי של שניות, אלפיות שנייה וננושניות.",
+      },
+      hi: {
+        name: "Unix टाइमस्टैम्प कनवर्टर",
+        description:
+          "Unix टाइमस्टैम्प को पढ़ने योग्य तिथियों में बदलें और इसके विपरीत। सेकंड, मिलीसेकंड और नैनोसेकंड की स्वचालित पहचान का समर्थन करता है।",
+      },
+      id: {
+        name: "Konverter Timestamp Unix",
+        description:
+          "Konversi timestamp Unix ke tanggal yang dapat dibaca dan sebaliknya. Mendukung deteksi otomatis detik, milidetik, dan nanodetik.",
+      },
+      it: {
+        name: "Convertitore Timestamp Unix",
+        description:
+          "Converte i timestamp Unix in date leggibili e viceversa. Supporta il rilevamento automatico di secondi, millisecondi e nanosecondi.",
+      },
+      ja: {
+        name: "Unixタイムスタンプ変換",
+        description:
+          "Unixタイムスタンプを読みやすい日付に変換し、その逆も可能。秒、ミリ秒、ナノ秒の自動検出に対応。",
+      },
+      ko: {
+        name: "Unix 타임스탬프 변환기",
+        description:
+          "Unix 타임스탬프를 읽기 쉬운 날짜로 변환하고 그 반대도 가능합니다. 초, 밀리초, 나노초 자동 감지를 지원합니다.",
+      },
+      ms: {
+        name: "Penukar Cap Masa Unix",
+        description:
+          "Tukar cap masa Unix kepada tarikh yang boleh dibaca dan sebaliknya. Menyokong pengesanan automatik saat, milisaat dan nanosaat.",
+      },
+      nl: {
+        name: "Unix Tijdstempel Converter",
+        description:
+          "Converteer Unix-tijdstempels naar leesbare datums en omgekeerd. Ondersteunt automatische detectie van seconden, milliseconden en nanoseconden.",
+      },
+      no: {
+        name: "Unix Tidsstempel Konverterer",
+        description:
+          "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder.",
+      },
+      pl: {
+        name: "Konwerter Znacznika Czasu Unix",
+        description:
+          "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund.",
+      },
+      pt: {
+        name: "Conversor de Timestamp Unix",
+        description:
+          "Converte timestamps Unix em datas legíveis e vice-versa. Suporta detecção automática de segundos, milissegundos e nanossegundos.",
+      },
+      ru: {
+        name: "Конвертер Unix-меток времени",
+        description:
+          "Преобразует метки времени Unix в читаемые даты и обратно. Поддерживает автоматическое определение секунд, миллисекунд и наносекунд.",
+      },
+      sv: {
+        name: "Unix Tidsstämpel Konverterare",
+        description:
+          "Konvertera Unix-tidsstämplar till läsbara datum och vice versa. Stödjer automatisk detektering av sekunder, millisekunder och nanosekunder.",
+      },
+      th: {
+        name: "ตัวแปลง Unix Timestamp",
+        description:
+          "แปลง Unix timestamp เป็นวันที่ที่อ่านได้และในทางกลับกัน รองรับการตรวจจับอัตโนมัติของวินาที มิลลิวินาที และนาโนวินาที",
+      },
+      tr: {
+        name: "Unix Zaman Damgası Dönüştürücü",
+        description:
+          "Unix zaman damgalarını okunabilir tarihlere dönüştürün ve tam tersi. Saniye, milisaniye ve nanosaniye otomatik algılamayı destekler.",
+      },
+      vi: {
+        name: "Bộ Chuyển Đổi Dấu Thời Gian Unix",
+        description:
+          "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây.",
+      },
+      "zh-CN": {
+        name: "Unix 时间戳转换器",
+        description:
+          "将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持自动检测秒、毫秒和纳秒。",
+      },
+      "zh-TW": {
+        name: "Unix 時間戳記轉換器",
+        description:
+          "將 Unix 時間戳記轉換為可讀日期，或將日期轉換為時間戳記。支援自動偵測秒、毫秒和奈秒。",
       },
     },
   },

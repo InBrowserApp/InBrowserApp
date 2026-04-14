@@ -15,6 +15,14 @@ import {
 // https://astro.build/config
 export default defineConfig({
   site: "https://inbrowser.app",
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+    },
+  },
   vite: {
     resolve: {
       alias: {

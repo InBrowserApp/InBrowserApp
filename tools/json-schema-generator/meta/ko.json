@@ -1,0 +1,4 @@
+{
+  "name": "JSON 스키마 생성기",
+  "description": "예시 JSON 데이터에서 JSON Schema를 생성합니다"
+}

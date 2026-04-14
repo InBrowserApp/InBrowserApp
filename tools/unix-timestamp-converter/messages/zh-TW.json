@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix 時間戳記",
+  "timestampPlaceholder": "輸入 Unix 時間戳記...",
+  "invalidTimestamp": "無效的時間戳記",
+  "nowLabel": "現在",
+  "unitLabel": "單位",
+  "autoLabel": "自動",
+  "secondsLabel": "秒",
+  "millisecondsLabel": "毫秒",
+  "nanosecondsLabel": "奈秒",
+  "detectedLabel": "偵測到",
+  "digitsLabel": "位",
+  "dateTimeLabel": "日期與時間",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "相對時間",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

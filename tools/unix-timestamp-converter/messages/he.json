@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "חותמת זמן Unix",
+  "timestampPlaceholder": "הזן חותמת זמן Unix...",
+  "invalidTimestamp": "חותמת זמן לא תקינה",
+  "nowLabel": "עכשיו",
+  "unitLabel": "יחידה",
+  "autoLabel": "אוטומטי",
+  "secondsLabel": "שניות",
+  "millisecondsLabel": "אלפיות שנייה",
+  "nanosecondsLabel": "ננושניות",
+  "detectedLabel": "זוהה",
+  "digitsLabel": "ספרות",
+  "dateTimeLabel": "תאריך ושעה",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "יחסי",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

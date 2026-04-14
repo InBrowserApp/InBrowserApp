@@ -1,0 +1,4 @@
+{
+  "name": "Unix Timestamp Converter",
+  "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds."
+}

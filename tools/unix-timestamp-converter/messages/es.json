@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Marca de Tiempo Unix",
+  "timestampPlaceholder": "Ingrese marca de tiempo Unix...",
+  "invalidTimestamp": "Marca de tiempo inválida",
+  "nowLabel": "Ahora",
+  "unitLabel": "Unidad",
+  "autoLabel": "Auto",
+  "secondsLabel": "Segundos",
+  "millisecondsLabel": "Milisegundos",
+  "nanosecondsLabel": "Nanosegundos",
+  "detectedLabel": "Detectado",
+  "digitsLabel": "dígitos",
+  "dateTimeLabel": "Fecha y Hora",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Relativo",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

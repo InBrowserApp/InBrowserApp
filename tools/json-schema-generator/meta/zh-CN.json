@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema 生成器",
+  "description": "从示例 JSON 数据生成 JSON Schema"
+}

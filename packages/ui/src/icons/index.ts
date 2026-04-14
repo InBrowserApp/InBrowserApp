@@ -9,6 +9,8 @@ export {
   Clock3,
   Copy,
   Download,
+  Maximize2,
+  Minimize2,
   FileJson2,
   FileText,
   Globe,
@@ -25,6 +27,7 @@ export {
   Sparkles,
   Sun,
   SunMoon,
+  Trash2,
   TriangleAlert,
   Wrench,
 } from "lucide-react"

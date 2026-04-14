@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema-generator",
+  "description": "Genererar JSON Schema från exempel-JSON-data"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter Znacznika Czasu Unix",
+  "description": "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund."
+}

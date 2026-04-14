@@ -4,8 +4,11 @@ type ToolPageModule = { default: AstroComponentFactory }
 type ToolPageLoader = () => Promise<ToolPageModule>
 
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
+  "adler32-hash-text-or-file": () =>
+    import("@tool/adler32-hash-text-or-file/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
@@ -21,6 +24,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
   "json-formatter": () => import("@tool/json-formatter/page"),
+  "json-schema-generator": () => import("@tool/json-schema-generator/page"),
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),
   "json-to-toml-converter": () => import("@tool/json-to-toml-converter/page"),
@@ -32,6 +36,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
+  "random-number-generator": () => import("@tool/random-number-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
@@ -53,6 +58,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unicode-invisible-character-checker/page"),
   "unicode-punycode-converter": () =>
     import("@tool/unicode-punycode-converter/page"),
+  "unix-timestamp-converter": () =>
+    import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),

@@ -2,6 +2,98 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "adler32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "ascii-art-generator",
     language: "ar",
   },
@@ -183,6 +275,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "base64-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ar",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "de",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "en",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "es",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "fr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "he",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "hi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "id",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "it",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ja",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ko",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ms",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "nl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "no",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pt",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ru",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "sv",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "th",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "tr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "vi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "basic-auth-decoder",
     language: "zh-TW",
   },
   {
@@ -1474,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-schema-generator",
+    language: "ar",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "de",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "en",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "es",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "fr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "he",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "hi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "id",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "it",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ja",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ko",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ms",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "nl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "no",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pt",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ru",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "sv",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "th",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "tr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "vi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "json-schema-validator",
     language: "ar",
   },
@@ -2391,6 +2667,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "prettier-code-formatter",
+    language: "zh-TW",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-number-generator",
+    language: "de",
+  },
+  {
+    slug: "random-number-generator",
+    language: "en",
+  },
+  {
+    slug: "random-number-generator",
+    language: "es",
+  },
+  {
+    slug: "random-number-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "he",
+  },
+  {
+    slug: "random-number-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "id",
+  },
+  {
+    slug: "random-number-generator",
+    language: "it",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-number-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "no",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-number-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-number-generator",
+    language: "th",
+  },
+  {
+    slug: "random-number-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-number-generator",
     language: "zh-TW",
   },
   {
@@ -3771,6 +4139,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "unicode-punycode-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ar",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "de",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "en",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "es",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "fr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "he",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "hi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "id",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "it",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ja",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ko",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ms",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "nl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "no",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pt",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ru",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "sv",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "th",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "tr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "vi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unix-timestamp-converter",
     language: "zh-TW",
   },
   {

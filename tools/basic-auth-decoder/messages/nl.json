@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization-header",
+  "authorizationHeaderDescription": "Plak iets als: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Plak iets als: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Gedecodeerd Resultaat",
+  "decodedCredentialsDescription": "Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests",
+  "usernameLabel": "Gebruikersnaam",
+  "passwordLabel": "Wachtwoord",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten",
+  "invalidHeaderTitle": "Ongeldige Basic Authorization-header",
+  "invalidBase64Title": "Ongeldige Base64-inhoud"
+}

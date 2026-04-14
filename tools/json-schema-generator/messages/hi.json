@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON इनपुट",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "यहाँ JSON डेटा पेस्ट करें...",
+  "outputTitle": "जनरेट किया गया स्कीमा",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "स्कीमा बनाने के लिए मान्य JSON डेटा प्रदान करें",
+  "invalidJson": "अमान्य JSON",
+  "optionsTitle": "विकल्प",
+  "optionDraft": "स्कीमा ड्राफ्ट",
+  "optionInferRequired": "आवश्यक प्रॉपर्टी अनुमानित करें",
+  "optionAllowAdditionalProperties": "अतिरिक्त प्रॉपर्टी अनुमति दें",
+  "optionDetectFormat": "स्ट्रिंग फॉर्मेट पहचानें (uuid, email, uri, date-time)",
+  "useSampleLabel": "उदाहरण उपयोग करें",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "downloadSchemaLabel": "स्कीमा डाउनलोड करें",
+  "copySchemaLabel": "स्कीमा कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

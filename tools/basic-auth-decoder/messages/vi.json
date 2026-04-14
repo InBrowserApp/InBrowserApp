@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Tiêu đề Authorization",
+  "authorizationHeaderDescription": "Dán thứ gì đó như: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Dán thứ gì đó như: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Kết quả giải mã",
+  "decodedCredentialsDescription": "Giải mã tiêu đề HTTP Basic Authorization để trích xuất tên người dùng và mật khẩu từ Base64. Hữu ích cho gỡ lỗi và kiểm thử API",
+  "usernameLabel": "Tên người dùng",
+  "passwordLabel": "Mật khẩu",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ",
+  "invalidHeaderTitle": "Tiêu đề Basic Authorization không hợp lệ",
+  "invalidBase64Title": "Nội dung Base64 không hợp lệ"
+}
