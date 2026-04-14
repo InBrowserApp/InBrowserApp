@@ -1,0 +1,4 @@
+{
+  "name": "Penjana Hash SRI",
+  "description": "Jana hash Subresource Integrity (SRI) untuk sumber web. Cipta hash SHA-256, SHA-384 atau SHA-512 untuk memastikan integriti skrip luaran, stylesheet dan sumber lain"
+}

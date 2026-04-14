@@ -1,0 +1,4 @@
+{
+  "name": "SRI Hash Üretici",
+  "description": "Web kaynakları için Alt Kaynak Bütünlüğü (SRI) hash'leri oluşturun. Harici komut dosyaları, stil sayfaları ve diğer kaynakların bütünlüğünü sağlamak için SHA-256, SHA-384 veya SHA-512 hash'leri oluşturun"
+}

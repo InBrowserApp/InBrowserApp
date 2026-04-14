@@ -1,0 +1,13 @@
+{
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والحروف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التشفير",
+  "hashResultDescription": "نتيجة التجزئة لإدخال النص الحالي.",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}
