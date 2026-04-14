@@ -17,7 +17,6 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
-import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import {
   Table,
   TableBody,
@@ -224,7 +223,7 @@ function PortNumberLookupClient({
               </EmptyHeader>
             </Empty>
           ) : (
-            <ScrollArea className="max-h-[65vh]">
+            <div className="max-h-[65vh] overflow-auto">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/30 hover:bg-muted/30">
@@ -268,7 +267,7 @@ function PortNumberLookupClient({
                   ))}
                 </TableBody>
               </Table>
-            </ScrollArea>
+            </div>
           )}
         </CardContent>
       </Card>
