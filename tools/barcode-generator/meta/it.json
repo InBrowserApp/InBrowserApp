@@ -1,4 +1,4 @@
 {
   "name": "Generatore di Codici a Barre",
-  "description": "Genera codici a barre (CODE128, EAN, UPC, ecc.) e scaricali in PNG o SVG."
+  "description": "Genera codici a barre (CODE128, EAN, UPC, ecc.) e scaricali in PNG, SVG, JPEG o WebP."
 }

@@ -159,7 +159,7 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
   }
 
   return (
-    <div className="mx-auto grid w-full max-w-5xl gap-6">
+    <div className="grid w-full gap-6">
       <PreviewCard
         error={error}
         isRendering={isRendering}

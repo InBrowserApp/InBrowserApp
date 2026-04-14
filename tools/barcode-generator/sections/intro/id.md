@@ -15,4 +15,4 @@ mengunduh.
 
 Pilih format kode batang, masukkan konten, lalu atur lebar, tinggi, margin,
 warna, dan pengaturan label. Saat pratinjau sudah sesuai, unduh kode batang
-sebagai PNG atau SVG.
+sebagai PNG, SVG, JPEG, atau WebP.

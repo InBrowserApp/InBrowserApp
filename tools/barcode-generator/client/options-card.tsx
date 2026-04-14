@@ -195,14 +195,11 @@ function OptionsCard({ handlers, messages, options }: OptionsCardProps) {
                 value={options.format}
               />
 
-              <Field
-                className="rounded-lg border bg-background px-3 py-2.5"
-                orientation="horizontal"
-              >
+              <Field className="rounded-lg border bg-background px-3 py-2.5">
                 <FieldLabel htmlFor="barcode-display-value">
                   {messages.displayValue}
                 </FieldLabel>
-                <FieldContent className="items-end">
+                <FieldContent className="items-start">
                   <Switch
                     checked={options.displayValue}
                     id="barcode-display-value"

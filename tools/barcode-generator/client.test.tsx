@@ -31,7 +31,7 @@ const messages = {
   meta: {
     name: "Barcode Generator",
     description:
-      "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG or SVG.",
+      "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG, SVG, JPEG, or WebP.",
   },
   options: "Options",
   optionsDescription:

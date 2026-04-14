@@ -15,4 +15,4 @@ før nedlasting.
 
 Velg et strekkodeformat, skriv inn innholdet, og juster deretter bredde, høyde,
 marg, farger og etikettinnstillinger. Når forhåndsvisningen ser riktig ut,
-laster du ned strekkoden som PNG eller SVG.
+laster du ned strekkoden som PNG, SVG, JPEG eller WebP.

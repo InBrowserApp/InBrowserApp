@@ -14,4 +14,4 @@ dễ kiểm tra khoảng cách và độ dễ đọc trước khi tải xuống.
 
 Chọn định dạng mã vạch, nhập nội dung, rồi chỉnh chiều rộng, chiều cao, lề,
 màu sắc và thiết lập nhãn. Khi bản xem trước ổn, hãy tải mã vạch xuống dưới
-dạng PNG hoặc SVG.
+dạng PNG, SVG, JPEG hoặc WebP.

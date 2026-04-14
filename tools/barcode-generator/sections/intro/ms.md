@@ -15,4 +15,4 @@ sebelum memuat turun.
 
 Pilih format kod bar, masukkan kandungan, kemudian laraskan lebar, tinggi,
 margin, warna dan tetapan label. Apabila pratonton kelihatan betul, muat
-turun kod bar sebagai PNG atau SVG.
+turun kod bar sebagai PNG, SVG, JPEG atau WebP.

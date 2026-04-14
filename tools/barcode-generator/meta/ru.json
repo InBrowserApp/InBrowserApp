@@ -1,4 +1,4 @@
 {
   "name": "Генератор штрихкодов",
-  "description": "Создавайте штрихкоды (CODE128, EAN, UPC и др.) и скачивайте их в PNG или SVG."
+  "description": "Создавайте штрихкоды (CODE128, EAN, UPC и др.) и скачивайте их в PNG, SVG, JPEG или WebP."
 }

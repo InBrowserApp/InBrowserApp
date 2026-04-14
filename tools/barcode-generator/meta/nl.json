@@ -1,4 +1,4 @@
 {
   "name": "Barcodegenerator",
-  "description": "Genereer barcodes (CODE128, EAN, UPC, enz.) en download als PNG of SVG."
+  "description": "Genereer barcodes (CODE128, EAN, UPC, enz.) en download als PNG, SVG, JPEG of WebP."
 }

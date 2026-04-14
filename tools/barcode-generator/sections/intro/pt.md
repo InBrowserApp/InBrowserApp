@@ -15,4 +15,4 @@ espaçamento e legibilidade antes do download.
 
 Escolha um formato de código de barras, digite o conteúdo e ajuste largura,
 altura, margem, cores e configurações do texto. Quando a pré-visualização
-estiver certa, baixe o código de barras em PNG ou SVG.
+estiver certa, baixe o código de barras em PNG, SVG, JPEG ou WebP.

@@ -14,4 +14,4 @@ instantly, so it is easy to check spacing and readability before download.
 
 Choose a barcode format, enter the content, then tune width, height, margin,
 colors, and label settings. When the preview looks right, download the barcode
-as PNG or SVG.
+as PNG, SVG, JPEG, or WebP.

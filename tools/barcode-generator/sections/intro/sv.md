@@ -15,4 +15,4 @@ nedladdning.
 
 Välj ett streckkodsformat, skriv in innehållet och justera sedan bredd, höjd,
 marginal, färger och textinställningar. När förhandsgranskningen ser rätt ut
-laddar du ner streckkoden som PNG eller SVG.
+laddar du ner streckkoden som PNG, SVG, JPEG eller WebP.

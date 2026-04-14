@@ -15,4 +15,4 @@ etmek kolaydır.
 
 Bir barkod formatı seçin, içeriği girin, sonra genişlik, yükseklik, kenar
 boşluğu, renkler ve etiket ayarlarını düzenleyin. Önizleme doğru göründüğünde
-barkodu PNG veya SVG olarak indirin.
+barkodu PNG, SVG, JPEG veya WebP olarak indirin.

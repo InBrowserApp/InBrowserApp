@@ -17,4 +17,4 @@ téléchargement.
 
 Choisissez un format de code-barres, saisissez le contenu, puis ajustez la
 largeur, la hauteur, les marges, les couleurs et les options de texte. Quand
-l’aperçu vous convient, téléchargez le code-barres en PNG ou SVG.
+l’aperçu vous convient, téléchargez le code-barres en PNG, SVG, JPEG ou WebP.

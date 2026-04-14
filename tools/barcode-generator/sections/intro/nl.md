@@ -15,4 +15,4 @@ controleren vóór het downloaden.
 
 Kies een barcodeformaat, voer de inhoud in en stel daarna breedte, hoogte,
 marge, kleuren en labelinstellingen af. Wanneer de voorvertoning goed is,
-download je de barcode als PNG of SVG.
+download je de barcode als PNG, SVG, JPEG of WebP.

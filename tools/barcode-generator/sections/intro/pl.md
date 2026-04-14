@@ -15,4 +15,4 @@ pobraniem.
 
 Wybierz format kodu kreskowego, wpisz treść, a następnie dostosuj szerokość,
 wysokość, margines, kolory i ustawienia etykiety. Gdy podgląd wygląda dobrze,
-pobierz kod kreskowy jako PNG lub SVG.
+pobierz kod kreskowy jako PNG, SVG, JPEG lub WebP.

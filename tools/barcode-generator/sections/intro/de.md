@@ -15,4 +15,4 @@ leicht prüfen können.
 
 Wählen Sie ein Barcode-Format, geben Sie den Inhalt ein und passen Sie dann
 Breite, Höhe, Rand, Farben und Beschriftung an. Wenn die Vorschau passt, laden
-Sie den Barcode als PNG oder SVG herunter.
+Sie den Barcode als PNG, SVG, JPEG oder WebP herunter.

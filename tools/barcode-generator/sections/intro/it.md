@@ -16,4 +16,4 @@ leggibilità prima del download.
 
 Scegli un formato di codice a barre, inserisci il contenuto e regola larghezza,
 altezza, margine, colori e impostazioni del testo. Quando l’anteprima è
-corretta, scarica il codice a barre in PNG o SVG.
+corretta, scarica il codice a barre in PNG, SVG, JPEG o WebP.
