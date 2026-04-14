@@ -13,7 +13,7 @@ function extractBasicToken(value: string) {
   const withoutHeaderName = value.trim().replace(/^authorization\s*:\s*/i, "")
   const match = withoutHeaderName.match(/^basic\s+(.+)$/i)
 
-  return match ? match[1].trim() : null
+  return match ? match[1]!.trim() : null
 }
 
 function decodeBase64Utf8(value: string) {
