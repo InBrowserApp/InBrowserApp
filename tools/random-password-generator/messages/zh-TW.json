@@ -23,7 +23,7 @@
   "pinLengthLabel": "長度",
   "allowLeadingZeroLabel": "允許前導 0",
   "resultsTitle": "結果",
-  "resultsDescription": "產生新的結果、複製、暫時隱藏，或下載為文字檔。",
+  "resultsDescription": "產生新的結果後會預設隱藏；你可以在需要時再顯示、複製或下載。",
   "resultsPlaceholder": "產生的密碼會顯示在這裡...",
   "generateLabel": "重新產生",
   "copyResultLabel": "複製結果",

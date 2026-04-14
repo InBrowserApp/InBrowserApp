@@ -23,7 +23,7 @@
   "pinLengthLabel": "Length",
   "allowLeadingZeroLabel": "Allow leading zero",
   "resultsTitle": "Results",
-  "resultsDescription": "Generate a fresh value, copy it, hide it on screen, or download it as a text file.",
+  "resultsDescription": "Generate a fresh value, keep it hidden by default, then reveal, copy, or download it only when needed.",
   "resultsPlaceholder": "A generated password will appear here...",
   "generateLabel": "Regenerate",
   "copyResultLabel": "Copy result",

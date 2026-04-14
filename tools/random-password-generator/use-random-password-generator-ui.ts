@@ -2,14 +2,14 @@ import { useEffect, useState } from "react"
 
 function useRandomPasswordGeneratorUi(outputText: string, hasResult: boolean) {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
-  const [isResultHidden, setIsResultHidden] = useState(false)
+  const [isResultHidden, setIsResultHidden] = useState(true)
 
   useEffect(() => {
     if (hasResult) {
       return
     }
 
-    setIsResultHidden(false)
+    setIsResultHidden(true)
   }, [hasResult])
 
   useEffect(() => {

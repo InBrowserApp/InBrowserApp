@@ -23,7 +23,7 @@
   "pinLengthLabel": "长度",
   "allowLeadingZeroLabel": "允许前导 0",
   "resultsTitle": "结果",
-  "resultsDescription": "生成新的结果、复制、临时隐藏，或下载为文本文件。",
+  "resultsDescription": "生成新的结果后会默认隐藏；你可以在需要时再显示、复制或下载。",
   "resultsPlaceholder": "生成的密码会显示在这里...",
   "generateLabel": "重新生成",
   "copyResultLabel": "复制结果",

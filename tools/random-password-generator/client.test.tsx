@@ -96,6 +96,14 @@ describe("RandomPasswordGeneratorClient", () => {
     })
     expect(downloadLink).toHaveProperty("href", "blob:password-results")
     expect(URL.createObjectURL).toHaveBeenCalled()
+    expect(
+      document
+        .querySelector('[data-slot="password-result-value"]')
+        ?.getAttribute("data-concealed")
+    ).toBe("true")
+    expect(
+      screen.getByRole("button", { name: messages.showResultLabel })
+    ).toBeTruthy()
     expect(screen.queryByRole("button", { name: /full screen/i })).toBeNull()
     expect(screen.queryByText(/history/i)).toBeNull()
   })
@@ -164,19 +172,19 @@ describe("RandomPasswordGeneratorClient", () => {
     )
 
     expect(resultValue).not.toBeNull()
-    expect(resultValue?.getAttribute("data-concealed")).toBe("false")
-
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.hideResultLabel })
-    )
-
     expect(resultValue?.getAttribute("data-concealed")).toBe("true")
-    expect(getResultValue()).toBe("AAAAAAAAAAAAAAAA")
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.showResultLabel })
     )
 
     expect(resultValue?.getAttribute("data-concealed")).toBe("false")
+    expect(getResultValue()).toBe("AAAAAAAAAAAAAAAA")
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.hideResultLabel })
+    )
+
+    expect(resultValue?.getAttribute("data-concealed")).toBe("true")
   })
 })
