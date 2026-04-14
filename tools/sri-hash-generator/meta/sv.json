@@ -1,0 +1,4 @@
+{
+  "name": "SRI Hash-generator",
+  "description": "Generera Subresource Integrity (SRI) hash-värden för webbresurser. Skapa SHA-256, SHA-384 eller SHA-512 hash-värden för att säkerställa integriteten hos externa skript, stilmallar och andra resurser"
+}

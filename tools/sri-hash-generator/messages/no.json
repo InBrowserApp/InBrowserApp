@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat for gjeldende tekstinndata.",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

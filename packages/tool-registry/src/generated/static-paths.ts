@@ -2670,6 +2670,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sri-hash-generator",
+    language: "ar",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "de",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "en",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "es",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "fr",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "he",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "hi",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "id",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "it",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ja",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ko",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ms",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "nl",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "no",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "pl",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "pt",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ru",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "sv",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "th",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "tr",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "vi",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },

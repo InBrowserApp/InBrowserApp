@@ -36,6 +36,7 @@
     "@tool/sha512-hash-text-or-file": "workspace:*",
     "@tool/slug-generator": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
+    "@tool/sri-hash-generator": "workspace:*",
     "@tool/text-statistics": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",

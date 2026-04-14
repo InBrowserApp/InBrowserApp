@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hash-Ergebnis für die aktuelle Texteingabe.",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}
