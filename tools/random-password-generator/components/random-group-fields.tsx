@@ -13,6 +13,7 @@ import {
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
 import { Check } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 
 import type { CharsetOption, RandomPasswordGeneratorMessages } from "../types"
 
@@ -72,8 +73,9 @@ function CharsetSelector({
           type="multiple"
           variant="outline"
           size="sm"
+          spacing={0}
           value={[...selectedCharsets]}
-          className="flex w-full flex-wrap gap-2"
+          className="w-full [&>[data-slot=toggle-group-item]]:min-w-0 [&>[data-slot=toggle-group-item]]:flex-1"
           aria-label={label}
           onValueChange={(value) => {
             const previous = new Set(selectedCharsets)
@@ -93,9 +95,12 @@ function CharsetSelector({
               <ToggleGroupItem
                 key={item.value}
                 value={item.value}
-                className="min-w-[8.5rem] justify-start"
+                className="justify-start"
               >
-                {isSelected ? <Check data-icon="inline-start" /> : null}
+                <Check
+                  data-icon="inline-start"
+                  className={cn(isSelected ? "opacity-100" : "opacity-0")}
+                />
                 {messages[item.labelKey]}
               </ToggleGroupItem>
             )
