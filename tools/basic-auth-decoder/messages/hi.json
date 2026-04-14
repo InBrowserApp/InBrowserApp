@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "HTTP Basic Authorization हेडर को डिकोड कर Base64 से उपयोगकर्ता नाम और पासवर्ड निकालें। डिबगिंग और API परीक्षण के लिए उपयोगी",
   "usernameLabel": "उपयोगकर्ता नाम",
   "passwordLabel": "पासवर्ड",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "परिणाम कॉपी करें",
   "copiedLabel": "कॉपी हो गया",
   "resetLabel": "उदाहरण रीसेट करें",
   "invalidHeaderTitle": "अमान्य Basic Authorization हेडर",

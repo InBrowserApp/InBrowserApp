@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "Kopier den nøyaktige Authorization-headerverdien for fetch-kall, API-klienter eller manuelle forespørsler.",
   "curlExampleLabel": "cURL-eksempel",
   "curlExampleDescription": "Start med denne kjøreklare curl-kommandoen, og bytt ut eksempel-URL-en ved behov.",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Kopier resultat",
   "copiedLabel": "Kopiert",
   "resetLabel": "Tilbakestill eksempel"
 }

@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Dekodér HTTP Basic Authorization-headeren for å hente brukernavn og passord fra Base64. Nyttig for feilsøking og API-testing",
   "usernameLabel": "Brukernavn",
   "passwordLabel": "Passord",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Kopier resultat",
   "copiedLabel": "Kopiert",
   "resetLabel": "Tilbakestill eksempel",
   "invalidHeaderTitle": "Ugyldig Basic Authorization-header",

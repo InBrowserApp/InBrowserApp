@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "fetch 호출, API 클라이언트, 또는 수동 요청에 사용할 수 있도록 Authorization 헤더 값을 그대로 복사하세요.",
   "curlExampleLabel": "cURL 예",
   "curlExampleDescription": "이 바로 실행 가능한 curl 명령을 시작점으로 쓰고, 필요하면 예시 URL만 바꾸세요.",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "결과 복사",
   "copiedLabel": "복사됨",
   "resetLabel": "예제 재설정"
 }

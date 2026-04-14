@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests",
   "usernameLabel": "Gebruikersnaam",
   "passwordLabel": "Wachtwoord",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Resultaat kopiëren",
   "copiedLabel": "Gekopieerd",
   "resetLabel": "Voorbeeld resetten",
   "invalidHeaderTitle": "Ongeldige Basic Authorization-header",

@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "ล้าง",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
   "copiedLabel": "คัดลอกแล้ว",
   "resultLabel": "ผลลัพธ์",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",
