@@ -1,0 +1,18 @@
+{
+  "startLabel": "بدء",
+  "resumeLabel": "استئناف",
+  "pauseLabel": "إيقاف مؤقت",
+  "lapLabel": "لفة",
+  "resetLabel": "إعادة ضبط",
+  "lapsLabel": "اللفات",
+  "clearLabel": "مسح",
+  "exportLabel": "تصدير",
+  "noLapsLabel": "لا توجد لفات بعد",
+  "statusRunningLabel": "قيد التشغيل",
+  "statusPausedLabel": "متوقف مؤقتًا",
+  "lapTimeLabel": "لفة",
+  "totalTimeLabel": "الإجمالي",
+  "lapMillisecondsLabel": "لفة (مللي ثانية)",
+  "totalMillisecondsLabel": "الإجمالي (مللي ثانية)",
+  "lapsDescription": "راجع زمن كل لفة والإجمالي التراكمي. يمكنك تصدير القائمة بصيغة CSV أو مسحها للبدء من جديد."
+}

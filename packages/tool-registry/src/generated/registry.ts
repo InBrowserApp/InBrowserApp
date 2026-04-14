@@ -4800,6 +4800,122 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "stopwatch",
+    category: "developer",
+    icon: "wrench",
+    tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
+    locales: {
+      ar: {
+        name: "ساعة إيقاف",
+        description:
+          "تتبّع الوقت المنقضي باستخدام بدء وإيقاف مؤقت ولفة وإعادة ضبط.",
+      },
+      de: {
+        name: "Stoppuhr",
+        description:
+          "Erfassen Sie die verstrichene Zeit mit Start-, Pause-, Runden- und Reset-Steuerung.",
+      },
+      en: {
+        name: "Stopwatch",
+        description:
+          "Track elapsed time with start, pause, lap, and reset controls.",
+      },
+      es: {
+        name: "Cronómetro",
+        description:
+          "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer.",
+      },
+      fr: {
+        name: "Chronomètre",
+        description:
+          "Suivez le temps écoulé avec les contrôles démarrer, pause, tour et réinitialisation.",
+      },
+      he: {
+        name: "סטופר",
+        description: "עקבו אחר הזמן שחלף עם התחל, השהה, הקפה ואיפוס.",
+      },
+      hi: {
+        name: "स्टॉपवॉच",
+        description: "शुरू, रोकें, लैप और रीसेट नियंत्रण के साथ बीता समय ट्रैक करें।",
+      },
+      id: {
+        name: "Stopwatch",
+        description:
+          "Lacak waktu berlalu dengan kontrol mulai, jeda, putaran, dan reset.",
+      },
+      it: {
+        name: "Cronometro",
+        description:
+          "Tieni traccia del tempo trascorso con avvio, pausa, giro e reset.",
+      },
+      ja: {
+        name: "ストップウォッチ",
+        description:
+          "開始、停止（一時停止）、ラップ、リセットで経過時間を計測します。",
+      },
+      ko: {
+        name: "스톱워치",
+        description: "시작, 일시정지, 랩, 초기화로 경과 시간을 기록합니다.",
+      },
+      ms: {
+        name: "Jam randik",
+        description:
+          "Jejak masa berlalu dengan mula, jeda, pusingan, dan set semula.",
+      },
+      nl: {
+        name: "Stopwatch",
+        description:
+          "Houd de verstreken tijd bij met start-, pauze-, ronde- en resetknoppen.",
+      },
+      no: {
+        name: "Stoppeklokke",
+        description:
+          "Følg med på medgått tid med start, pause, runde og nullstill.",
+      },
+      pl: {
+        name: "Stoper",
+        description:
+          "Śledź czas upływu za pomocą startu, pauzy, okrążenia i resetu.",
+      },
+      pt: {
+        name: "Cronômetro",
+        description:
+          "Acompanhe o tempo decorrido com iniciar, pausar, volta e redefinir.",
+      },
+      ru: {
+        name: "Секундомер",
+        description:
+          "Измеряйте прошедшее время с помощью старта, паузы, круга и сброса.",
+      },
+      sv: {
+        name: "Stoppur",
+        description: "Följ förloppstid med start, paus, varv och återställ.",
+      },
+      th: {
+        name: "นาฬิกาจับเวลา",
+        description: "ติดตามเวลาที่ผ่านไปด้วยเริ่ม หยุดชั่วคราว รอบ และรีเซ็ต",
+      },
+      tr: {
+        name: "Kronometre",
+        description:
+          "Başlat, duraklat, tur ve sıfırla kontrolleriyle geçen süreyi takip edin.",
+      },
+      vi: {
+        name: "Đồng hồ bấm giờ",
+        description:
+          "Theo dõi thời gian đã trôi qua với bắt đầu, tạm dừng, vòng và đặt lại.",
+      },
+      "zh-CN": {
+        name: "秒表",
+        description: "使用开始、暂停、计次和重置控制来记录经过的时间。",
+      },
+      "zh-TW": {
+        name: "秒錶",
+        description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
@@ -11075,6 +11191,122 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SRI 雜湊產生器",
         description:
           "為網頁資源產生子資源完整性（SRI）雜湊值。建立 SHA-256、SHA-384 或 SHA-512 雜湊值以確保外部腳本、樣式表和其他資源的完整性",
+      },
+    },
+  },
+  stopwatch: {
+    slug: "stopwatch",
+    category: "developer",
+    icon: "wrench",
+    tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
+    locales: {
+      ar: {
+        name: "ساعة إيقاف",
+        description:
+          "تتبّع الوقت المنقضي باستخدام بدء وإيقاف مؤقت ولفة وإعادة ضبط.",
+      },
+      de: {
+        name: "Stoppuhr",
+        description:
+          "Erfassen Sie die verstrichene Zeit mit Start-, Pause-, Runden- und Reset-Steuerung.",
+      },
+      en: {
+        name: "Stopwatch",
+        description:
+          "Track elapsed time with start, pause, lap, and reset controls.",
+      },
+      es: {
+        name: "Cronómetro",
+        description:
+          "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer.",
+      },
+      fr: {
+        name: "Chronomètre",
+        description:
+          "Suivez le temps écoulé avec les contrôles démarrer, pause, tour et réinitialisation.",
+      },
+      he: {
+        name: "סטופר",
+        description: "עקבו אחר הזמן שחלף עם התחל, השהה, הקפה ואיפוס.",
+      },
+      hi: {
+        name: "स्टॉपवॉच",
+        description: "शुरू, रोकें, लैप और रीसेट नियंत्रण के साथ बीता समय ट्रैक करें।",
+      },
+      id: {
+        name: "Stopwatch",
+        description:
+          "Lacak waktu berlalu dengan kontrol mulai, jeda, putaran, dan reset.",
+      },
+      it: {
+        name: "Cronometro",
+        description:
+          "Tieni traccia del tempo trascorso con avvio, pausa, giro e reset.",
+      },
+      ja: {
+        name: "ストップウォッチ",
+        description:
+          "開始、停止（一時停止）、ラップ、リセットで経過時間を計測します。",
+      },
+      ko: {
+        name: "스톱워치",
+        description: "시작, 일시정지, 랩, 초기화로 경과 시간을 기록합니다.",
+      },
+      ms: {
+        name: "Jam randik",
+        description:
+          "Jejak masa berlalu dengan mula, jeda, pusingan, dan set semula.",
+      },
+      nl: {
+        name: "Stopwatch",
+        description:
+          "Houd de verstreken tijd bij met start-, pauze-, ronde- en resetknoppen.",
+      },
+      no: {
+        name: "Stoppeklokke",
+        description:
+          "Følg med på medgått tid med start, pause, runde og nullstill.",
+      },
+      pl: {
+        name: "Stoper",
+        description:
+          "Śledź czas upływu za pomocą startu, pauzy, okrążenia i resetu.",
+      },
+      pt: {
+        name: "Cronômetro",
+        description:
+          "Acompanhe o tempo decorrido com iniciar, pausar, volta e redefinir.",
+      },
+      ru: {
+        name: "Секундомер",
+        description:
+          "Измеряйте прошедшее время с помощью старта, паузы, круга и сброса.",
+      },
+      sv: {
+        name: "Stoppur",
+        description: "Följ förloppstid med start, paus, varv och återställ.",
+      },
+      th: {
+        name: "นาฬิกาจับเวลา",
+        description: "ติดตามเวลาที่ผ่านไปด้วยเริ่ม หยุดชั่วคราว รอบ และรีเซ็ต",
+      },
+      tr: {
+        name: "Kronometre",
+        description:
+          "Başlat, duraklat, tur ve sıfırla kontrolleriyle geçen süreyi takip edin.",
+      },
+      vi: {
+        name: "Đồng hồ bấm giờ",
+        description:
+          "Theo dõi thời gian đã trôi qua với bắt đầu, tạm dừng, vòng và đặt lại.",
+      },
+      "zh-CN": {
+        name: "秒表",
+        description: "使用开始、暂停、计次和重置控制来记录经过的时间。",
+      },
+      "zh-TW": {
+        name: "秒錶",
+        description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
       },
     },
   },

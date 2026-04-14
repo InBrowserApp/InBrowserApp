@@ -50,6 +50,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
+  stopwatch: () => import("@tool/stopwatch/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
