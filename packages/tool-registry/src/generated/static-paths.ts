@@ -554,6 +554,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "duration-calculator",
+    language: "ar",
+  },
+  {
+    slug: "duration-calculator",
+    language: "de",
+  },
+  {
+    slug: "duration-calculator",
+    language: "en",
+  },
+  {
+    slug: "duration-calculator",
+    language: "es",
+  },
+  {
+    slug: "duration-calculator",
+    language: "fr",
+  },
+  {
+    slug: "duration-calculator",
+    language: "he",
+  },
+  {
+    slug: "duration-calculator",
+    language: "hi",
+  },
+  {
+    slug: "duration-calculator",
+    language: "id",
+  },
+  {
+    slug: "duration-calculator",
+    language: "it",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ja",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ko",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ms",
+  },
+  {
+    slug: "duration-calculator",
+    language: "nl",
+  },
+  {
+    slug: "duration-calculator",
+    language: "no",
+  },
+  {
+    slug: "duration-calculator",
+    language: "pl",
+  },
+  {
+    slug: "duration-calculator",
+    language: "pt",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ru",
+  },
+  {
+    slug: "duration-calculator",
+    language: "sv",
+  },
+  {
+    slug: "duration-calculator",
+    language: "th",
+  },
+  {
+    slug: "duration-calculator",
+    language: "tr",
+  },
+  {
+    slug: "duration-calculator",
+    language: "vi",
+  },
+  {
+    slug: "duration-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "duration-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },

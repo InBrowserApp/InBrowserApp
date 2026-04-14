@@ -6,6 +6,7 @@ export {
   Braces,
   CaseSensitive,
   Check,
+  Clock3,
   Copy,
   Download,
   FileJson2,
