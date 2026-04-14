@@ -108,6 +108,15 @@ function StopwatchClient({ messages }: StopwatchClientProps) {
     setRunning(false)
   }
 
+  function handleToggleRun() {
+    if (running) {
+      handlePause()
+      return
+    }
+
+    handleStart()
+  }
+
   function handleLap() {
     if (!canLap) {
       return
@@ -136,8 +145,7 @@ function StopwatchClient({ messages }: StopwatchClientProps) {
         hasElapsed={hasElapsed}
         canLap={canLap}
         canReset={canReset}
-        onStart={handleStart}
-        onPause={handlePause}
+        onToggleRun={handleToggleRun}
         onLap={handleLap}
         onReset={handleReset}
       />

@@ -20,8 +20,7 @@ type StopwatchCardProps = Readonly<{
   hasElapsed: boolean
   canLap: boolean
   canReset: boolean
-  onStart: () => void
-  onPause: () => void
+  onToggleRun: () => void
   onLap: () => void
   onReset: () => void
 }>
@@ -33,11 +32,16 @@ function StopwatchCard({
   hasElapsed,
   canLap,
   canReset,
-  onStart,
-  onPause,
+  onToggleRun,
   onLap,
   onReset,
 }: StopwatchCardProps) {
+  const runLabel = running
+    ? messages.pauseLabel
+    : hasElapsed
+      ? messages.resumeLabel
+      : messages.startLabel
+
   return (
     <ToolPanelCard>
       <CardHeader className="border-b">
@@ -58,19 +62,13 @@ function StopwatchCard({
       </ToolPanelCardContent>
 
       <ToolPanelCardFooter className="flex flex-wrap items-center justify-center gap-3 border-t">
-        <Button type="button" size="sm" onClick={onStart} disabled={running}>
-          <Play data-icon="inline-start" />
-          {hasElapsed ? messages.resumeLabel : messages.startLabel}
-        </Button>
-        <Button
-          type="button"
-          size="sm"
-          variant="outline"
-          onClick={onPause}
-          disabled={!running}
-        >
-          <Pause data-icon="inline-start" />
-          {messages.pauseLabel}
+        <Button type="button" size="sm" onClick={onToggleRun}>
+          {running ? (
+            <Pause data-icon="inline-start" />
+          ) : (
+            <Play data-icon="inline-start" />
+          )}
+          {runLabel}
         </Button>
         <Button
           type="button"

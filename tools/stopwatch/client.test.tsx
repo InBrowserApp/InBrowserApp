@@ -60,7 +60,7 @@ describe("StopwatchClient", () => {
     URL.revokeObjectURL = originalRevokeObjectURL
   })
 
-  test("starts, laps, pauses, and resets", () => {
+  test("starts, laps, pauses, and resets from a single run button", () => {
     render(<StopwatchClient messages={messages} />)
 
     expect(getElapsedText()).toBe("00:00:00.00")
@@ -72,6 +72,7 @@ describe("StopwatchClient", () => {
     })
 
     expect(getElapsedText()).toBe("00:00:01.20")
+    expect(screen.getByRole("button", { name: "Pause" })).toBeTruthy()
 
     fireEvent.click(screen.getByRole("button", { name: "Lap" }))
 
@@ -85,6 +86,7 @@ describe("StopwatchClient", () => {
     })
 
     expect(getElapsedText()).toBe("00:00:01.23")
+    expect(screen.getByRole("button", { name: "Resume" })).toBeTruthy()
 
     fireEvent.click(screen.getByRole("button", { name: "Reset" }))
 
