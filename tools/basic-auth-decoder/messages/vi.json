@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Giải mã tiêu đề HTTP Basic Authorization để trích xuất tên người dùng và mật khẩu từ Base64. Hữu ích cho gỡ lỗi và kiểm thử API",
   "usernameLabel": "Tên người dùng",
   "passwordLabel": "Mật khẩu",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",
   "resetLabel": "Đặt lại ví dụ",
   "invalidHeaderTitle": "Tiêu đề Basic Authorization không hợp lệ",

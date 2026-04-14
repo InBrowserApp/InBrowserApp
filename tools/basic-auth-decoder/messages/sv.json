@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning",
   "usernameLabel": "Användarnamn",
   "passwordLabel": "Lösenord",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Kopiera resultat",
   "copiedLabel": "Kopierad",
   "resetLabel": "Återställ exempel",
   "invalidHeaderTitle": "Ogiltig Basic Authorization-rubrik",

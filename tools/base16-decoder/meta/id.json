@@ -1,0 +1,4 @@
+{
+  "name": "Decoder Base16",
+  "description": "Decode teks atau file Base16 (Hex) menjadi byte mentah untuk inspeksi, pengujian, dan alat."
+}

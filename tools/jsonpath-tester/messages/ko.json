@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "지우기",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "결과 복사",
   "copiedLabel": "복사됨",
   "resultLabel": "결과",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",

@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "Sao chép đúng giá trị header Authorization để dùng cho lệnh fetch, API client hoặc các yêu cầu thủ công.",
   "curlExampleLabel": "Ví dụ cURL",
   "curlExampleDescription": "Bắt đầu với lệnh curl dùng ngay này, rồi thay URL ví dụ nếu cần.",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",
   "resetLabel": "Đặt lại ví dụ"
 }

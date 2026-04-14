@@ -8,6 +8,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/adler32-hash-text-or-file/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
+  "base16-decoder": () => import("@tool/base16-decoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),

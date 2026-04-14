@@ -1,0 +1,4 @@
+{
+  "name": "Base16-Dekoder",
+  "description": "Dekodiert Base16 (Hex)-Text oder -Dateien in Rohbytes für Inspektion, Tests und Tools."
+}

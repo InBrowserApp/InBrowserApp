@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Temizle",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sonucu kopyala",
   "copiedLabel": "Kopyalandı",
   "resultLabel": "Sonuçlar",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",

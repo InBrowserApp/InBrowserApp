@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに有用",
   "usernameLabel": "ユーザー名",
   "passwordLabel": "パスワード",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "結果をコピー",
   "copiedLabel": "コピーしました",
   "resetLabel": "例をリセット",
   "invalidHeaderTitle": "無効な Basic Authorization ヘッダー",

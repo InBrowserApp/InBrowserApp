@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "解码 HTTP Basic Authorization 头，从 Base64 中提取用户名和密码。用于调试和 API 测试",
   "usernameLabel": "用户名",
   "passwordLabel": "密码",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "复制结果",
   "copiedLabel": "已复制",
   "resetLabel": "重置示例",
   "invalidHeaderTitle": "无效的 Basic Authorization 头",
