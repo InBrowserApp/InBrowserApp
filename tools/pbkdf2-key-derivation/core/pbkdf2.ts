@@ -199,7 +199,5 @@ export {
 export type {
   DerivedKey,
   Pbkdf2Algorithm,
-  Pbkdf2Params,
-  RangeValidation,
   SaltFormat,
 }
