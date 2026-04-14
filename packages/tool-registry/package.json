@@ -25,6 +25,7 @@
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",
     "@tool/json-formatter": "workspace:*",
+    "@tool/json-schema-generator": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
     "@tool/json-to-csv-converter": "workspace:*",
     "@tool/json-to-toml-converter": "workspace:*",

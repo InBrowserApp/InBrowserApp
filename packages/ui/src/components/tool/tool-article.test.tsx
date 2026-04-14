@@ -25,6 +25,8 @@ describe("ToolArticle", () => {
     expect(article?.className).toContain("[&_h4]:text-base")
     expect(article?.className).not.toContain("sm:[&_h4]:text-lg")
     expect(article?.className).toContain("[&_blockquote]:border-l-2")
+    expect(article?.className).toContain("[&_pre]:overflow-x-auto")
+    expect(article?.className).toContain("[&_pre_code]:bg-transparent")
     expect(article?.className).toContain("[&_code]:font-mono")
     expect(article?.className).toContain("[&_code]:font-normal")
     expect(article?.className).not.toContain("[&_code]:font-semibold")

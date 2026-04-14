@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON 輸入",
+  "inputDescription": "貼上範例 JSON 或匯入檔案，快速推斷初始 Schema。",
+  "inputPlaceholder": "在此貼上 JSON 資料...",
+  "outputTitle": "生成的 Schema",
+  "outputDescription": "查看生成的 Schema，然後複製或下載後再繼續調整。",
+  "outputEmpty": "請輸入有效的 JSON 資料以產生 Schema",
+  "invalidJson": "無效的 JSON",
+  "optionsTitle": "選項",
+  "optionDraft": "Schema 草案",
+  "optionInferRequired": "推斷必填屬性",
+  "optionAllowAdditionalProperties": "允許額外屬性",
+  "optionDetectFormat": "偵測字串格式 (uuid, email, uri, date-time)",
+  "useSampleLabel": "使用範例",
+  "importFromFileLabel": "從檔案匯入",
+  "downloadSchemaLabel": "下載 Schema",
+  "copySchemaLabel": "複製結構描述",
+  "copiedLabel": "已複製"
+}

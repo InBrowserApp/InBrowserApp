@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON 输入",
+  "inputDescription": "粘贴示例 JSON 或导入文件，快速推断初始 Schema。",
+  "inputPlaceholder": "在此粘贴 JSON 数据...",
+  "outputTitle": "生成的 Schema",
+  "outputDescription": "查看生成的 Schema，然后复制或下载后继续调整。",
+  "outputEmpty": "请输入有效的 JSON 数据以生成 Schema",
+  "invalidJson": "无效的 JSON",
+  "optionsTitle": "选项",
+  "optionDraft": "Schema 草案",
+  "optionInferRequired": "推断必填属性",
+  "optionAllowAdditionalProperties": "允许额外属性",
+  "optionDetectFormat": "检查字符串格式",
+  "useSampleLabel": "使用示例",
+  "importFromFileLabel": "从文件导入",
+  "downloadSchemaLabel": "下载 Schema",
+  "copySchemaLabel": "复制 Schema",
+  "copiedLabel": "已复制"
+}

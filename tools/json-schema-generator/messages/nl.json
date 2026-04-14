@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON-invoer",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "Plak hier JSON-gegevens...",
+  "outputTitle": "Gegenereerd schema",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "Voer geldige JSON-gegevens in om een schema te genereren",
+  "invalidJson": "Ongeldig JSON",
+  "optionsTitle": "Opties",
+  "optionDraft": "Schema-concept",
+  "optionInferRequired": "Verplichte eigenschappen afleiden",
+  "optionAllowAdditionalProperties": "Extra eigenschappen toestaan",
+  "optionDetectFormat": "Stringformaten detecteren (uuid, email, uri, date-time)",
+  "useSampleLabel": "Voorbeeld gebruiken",
+  "importFromFileLabel": "Importeren uit bestand",
+  "downloadSchemaLabel": "Schema downloaden",
+  "copySchemaLabel": "Schema kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

@@ -19,6 +19,8 @@ function ToolArticle({ className, children }: ToolArticleProps) {
         "[&_blockquote]:mt-6 [&_blockquote]:border-l-2 [&_blockquote]:border-border [&_blockquote]:pl-6 [&_blockquote]:text-foreground/90 [&_blockquote]:italic",
         "[&_ul]:my-5 [&_ul]:ml-6 [&_ul]:list-disc [&_ul]:marker:text-foreground/50 [&_ul_li]:mt-2",
         "[&_ol]:my-5 [&_ol]:ml-6 [&_ol]:list-decimal [&_ol_li]:mt-2",
+        "[&_pre]:my-6 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:border [&_pre]:border-border/70 [&_pre]:bg-muted/40 [&_pre]:px-4 [&_pre]:py-3 [&_pre]:text-sm [&_pre]:leading-6",
+        "[&_pre_code]:block [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit",
         "[&_code]:relative [&_code]:rounded [&_code]:bg-muted [&_code]:px-[0.3rem] [&_code]:py-[0.2rem] [&_code]:font-mono [&_code]:text-sm [&_code]:font-normal [&_code]:text-foreground",
         "[&_table]:my-6 [&_table]:w-full [&_table]:border-collapse [&_td]:border-b [&_td]:border-border/60 [&_td]:px-4 [&_td]:py-2 [&_th]:border-b [&_th]:border-border [&_th]:px-4 [&_th]:py-2 [&_th]:text-left [&_th]:font-medium [&_th]:text-foreground",
         "[&_strong]:font-medium [&_strong]:text-foreground",

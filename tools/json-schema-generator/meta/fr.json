@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de JSON Schema",
+  "description": "Génère un JSON Schema à partir de données JSON d'exemple"
+}
