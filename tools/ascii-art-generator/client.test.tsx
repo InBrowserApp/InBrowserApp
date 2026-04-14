@@ -95,14 +95,24 @@ beforeEach(() => {
 afterEach(cleanup)
 
 describe("AsciiArtGeneratorClient", () => {
-  test("renders placeholder output before text is entered", () => {
+  test("renders default hello text and output", async () => {
     render(<AsciiArtGeneratorClient messages={messages} />)
 
     expect(
-      screen.getByRole("region", {
-        name: messages.outputLabel,
-      }).textContent
-    ).toContain(messages.outputPlaceholder)
+      (
+        screen.getByRole("textbox", {
+          name: messages.inputLabel,
+        }) as HTMLTextAreaElement
+      ).value
+    ).toBe("Hello")
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("region", {
+          name: messages.outputLabel,
+        }).textContent
+      ).toContain("[Standard|left|100] Hello")
+    })
   })
 
   test("renders generated output when text changes", async () => {

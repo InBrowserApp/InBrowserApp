@@ -1,7 +1,7 @@
 const SAMPLE_TEXT = `Launch notes
 ship today`
 
-const DEFAULT_TEXT = ""
+const DEFAULT_TEXT = "Hello"
 
 const STORAGE_KEYS = {
   text: "tools:ascii-art-generator:text",
