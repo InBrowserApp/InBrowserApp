@@ -1,0 +1,4 @@
+{
+  "name": "Trình kiểm tra ký tự ẩn Unicode",
+  "description": "Phát hiện ký tự độ rộng bằng 0, điều khiển bidi và khoảng trắng đặc biệt, rồi xuất phiên bản đã làm sạch."
+}

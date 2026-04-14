@@ -1,0 +1,4 @@
+{
+  "name": "Sprawdzanie niewidocznych znaków Unicode",
+  "description": "Wykrywa znaki o zerowej szerokości, sterowanie bidi i specjalne spacje oraz eksportuje oczyszczoną wersję."
+}

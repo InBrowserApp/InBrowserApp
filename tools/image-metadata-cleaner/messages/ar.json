@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "انقر أو اسحب الصورة للتحميل",
+  "supportedFormats": "يدعم JPEG وPNG وWebP",
+  "remove": "إزالة",
+  "cleanMetadata": "تنظيف البيانات الوصفية",
+  "cleaningMetadata": "جارٍ تنظيف البيانات الوصفية...",
+  "results": "نتائج التنظيف",
+  "removed": "البيانات الوصفية المُزالة",
+  "reduction": "تقليل الحجم",
+  "fileSize": "حجم الملف",
+  "downloadCleaned": "تنزيل الصورة المنظفة",
+  "note": "يتم المعالجة محليًا في المتصفح. لا يتم رفع الملفات.",
+  "error": "خطأ",
+  "unsupportedFormat": "تنسيق غير مدعوم. يرجى رفع JPEG أو PNG أو WebP.",
+  "cleaningComplete": "تم تنظيف البيانات الوصفية.",
+  "cleaningFailed": "فشل في تنظيف البيانات الوصفية. حاول مرة أخرى."
+}

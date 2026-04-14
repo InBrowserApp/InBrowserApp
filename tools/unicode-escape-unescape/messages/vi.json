@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Các ký tự gốc chưa escape",
+  "plainTextPlaceholder": "Nhập văn bản để escape...",
+  "escapeFormatLabel": "Định dạng escape",
+  "escapedTextLabel": "Văn bản đã escape",
+  "escapedTextDescription": "Các chuỗi escape Unicode theo định dạng đã chọn",
+  "escapedTextPlaceholder": "Nhập văn bản đã escape để unescape...",
+  "copyPlainTextLabel": "Sao chép văn bản thuần",
+  "copyEscapedTextLabel": "Sao chép văn bản đã escape",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ"
+}

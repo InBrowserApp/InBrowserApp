@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Wejście",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik Hash",
+  "hashResultDescription": "Wynik haszowania dla bieżącego tekstu wejściowego.",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

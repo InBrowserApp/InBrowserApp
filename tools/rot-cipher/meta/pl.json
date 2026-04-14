@@ -1,0 +1,4 @@
+{
+  "name": "Szyfr ROT Szyfrowanie i Deszyfrowanie",
+  "description": "Szyfruj i deszyfruj tekst za pomocą algorytmów ROT13, ROT5, ROT18 i ROT47. Samoodwracalne szyfrowanie dla liter, cyfr i znaków ASCII"
+}

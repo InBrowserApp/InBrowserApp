@@ -1,0 +1,16 @@
+{
+  "inputLabel": "इनपुट टेक्स्ट",
+  "inputPlaceholder": "slug में बदलने के लिए टेक्स्ट दर्ज करें...",
+  "outputLabel": "जनरेट किया गया Slug",
+  "outputPlaceholder": "Slug यहाँ दिखाई देगा...",
+  "separatorLabel": "विभाजक",
+  "hyphenLabel": "हाइफ़न",
+  "underscoreLabel": "अंडरस्कोर",
+  "dotLabel": "डॉट",
+  "caseLabel": "केस",
+  "lowercaseLabel": "लोअरकेस",
+  "preserveLabel": "संरक्षित करें",
+  "copyLabel": "slug कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "clearLabel": "साफ़ करें"
+}

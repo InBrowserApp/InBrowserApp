@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di Hash SRI",
+  "description": "Genera hash di Integrità delle Sottoresorse (SRI) per risorse web. Crea hash SHA-256, SHA-384 o SHA-512 per garantire l'integrità di script esterni, fogli di stile e altre risorse"
+}

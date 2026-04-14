@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Tipo de ROT",
+  "inputLabel": "Texto de entrada",
+  "inputPlaceholder": "Digite o texto para criptografar/descriptografar...",
+  "outputLabel": "Texto de saida",
+  "outputPlaceholder": "O texto criptografado/descriptografado aparecera aqui...",
+  "rot13Description": "Apenas letras (A-Z, a-z)",
+  "rot5Description": "Apenas digitos (0-9)",
+  "rot18Description": "Letras + Digitos (ROT13 + ROT5)",
+  "rot47Description": "Todos os ASCII imprimiveis (33-126)",
+  "copyInputLabel": "Copiar texto de entrada",
+  "copyOutputLabel": "Copiar texto de saída",
+  "copiedLabel": "Copiado",
+  "resetLabel": "Redefinir exemplo"
+}

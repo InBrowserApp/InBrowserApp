@@ -1,0 +1,4 @@
+{
+  "name": "Generator Hash SRI",
+  "description": "Buat hash Subresource Integrity (SRI) untuk sumber daya web. Buat hash SHA-256, SHA-384 atau SHA-512 untuk memastikan integritas skrip eksternal, stylesheet, dan sumber daya lainnya"
+}

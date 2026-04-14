@@ -1,0 +1,4 @@
+{
+  "name": "대소문자 변환기",
+  "description": "camelCase, PascalCase, snake_case, kebab-case 등 다양한 명명 규칙 간에 텍스트를 변환합니다."
+}

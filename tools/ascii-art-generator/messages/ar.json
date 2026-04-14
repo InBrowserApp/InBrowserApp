@@ -1,0 +1,12 @@
+{
+  "inputLabel": "نص الإدخال",
+  "inputDescription": "اكتب كلمة أو عبارة لتحويلها إلى ASCII art.",
+  "inputPlaceholder": "أدخل النص للتحويل...",
+  "fontLabel": "الخط",
+  "fontDescription": "اختر نمط خط FIGlet للمخرجات.",
+  "fontSearchPlaceholder": "البحث عن الخطوط...",
+  "outputLabel": "مخرجات فن ASCII",
+  "outputPlaceholder": "سيظهر فن ASCII هنا...",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

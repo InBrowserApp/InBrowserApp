@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الأحرف الأصلية غير المُهرَّبة",
+  "plainTextPlaceholder": "أدخل النص لتهريبه...",
+  "escapeFormatLabel": "صيغة التهريب",
+  "escapedTextLabel": "نص مُهرَّب",
+  "escapedTextDescription": "تسلسلات تهريب يونيكود بالصيغة المحددة",
+  "escapedTextPlaceholder": "أدخل النص المُهرَّب لإلغاء تهريبه...",
+  "copyPlainTextLabel": "نسخ النص العادي",
+  "copyEscapedTextLabel": "نسخ النص المُهرَّب",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال"
+}

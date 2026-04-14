@@ -1,9 +1,19 @@
-## What is NanoID?
+## NanoID란?
 
-NanoID is a tiny, URL-safe unique ID generator designed for modern web apps. A standard NanoID is 21 characters long and uses a 64-character alphabet, providing about 126 bits of randomness.
+NanoID는 최신 웹 앱, API, 내부 도구를 위해 설계된, URL에 안전한 간결한 고유 ID 생성기입니다. 기본 형식은 64자 알파벳에서 21자를 사용하며, URL, 파일 이름, 테스트 픽스처에 넣기 충분히 짧으면서도 약 126비트의 무작위성을 제공합니다.
 
-**Key points:**
+이 도구의 모든 처리는 브라우저 안에서 로컬로 실행됩니다. 사용자가 입력한 커스텀 알파벳과 생성된 ID는 페이지 밖으로 나가지 않으므로, 빠른 프로토타이핑, 픽스처 생성, 일회성 운영 작업에 실용적입니다.
 
-- **URL-safe**: uses A-Z, a-z, 0-9, - and \_.
-- **Customizable**: adjust length and alphabet to match constraints.
-- **Secure randomness**: uses cryptographic random values in the browser.
+**핵심 포인트:**
+
+- **URL 안전**: A-Z, a-z, 0-9, -, \_를 사용합니다.
+- **사용자 지정 가능**: 제약 조건에 맞게 길이와 알파벳을 조정할 수 있습니다.
+- **안전한 무작위성**: 브라우저에서 암호학적으로 안전한 난수를 사용합니다.
+- **평문 내보내기**: 시드 데이터, 데모 콘텐츠, 가져오기용 목록이 필요할 때 현재 배치를 복사하거나 다운로드할 수 있습니다.
+
+**실전 가이드:**
+
+- 충돌 가능성이 매우 낮은 강력한 범용 식별자가 필요하다면 기본 21자 길이를 유지하세요.
+- 더 짧은 ID는 임시 UI 토큰이나 로컬 목 데이터에 적합하지만, 길이를 줄이거나 배치 크기를 늘릴수록 충돌 위험은 커집니다.
+- 더 큰 알파벳은 문자당 더 많은 엔트로피를 제공하므로, 고유성을 크게 희생하지 않고도 ID를 더 짧게 유지할 수 있습니다.
+- 커스텀 알파벳에는 중복 없는 문자만 포함해야 합니다. 중복 문자는 분포를 왜곡하므로 이 도구는 생성 전에 이를 차단합니다.

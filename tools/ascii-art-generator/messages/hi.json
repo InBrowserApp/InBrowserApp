@@ -1,0 +1,12 @@
+{
+  "inputLabel": "इनपुट टेक्स्ट",
+  "inputDescription": "ASCII art में बदलने के लिए कोई शब्द या वाक्यांश टाइप करें।",
+  "inputPlaceholder": "कन्वर्ट करने के लिए टेक्स्ट दर्ज करें...",
+  "fontLabel": "फ़ॉन्ट",
+  "fontDescription": "आउटपुट के लिए एक FIGlet फ़ॉन्ट शैली चुनें।",
+  "fontSearchPlaceholder": "फ़ॉन्ट खोजें...",
+  "outputLabel": "ASCII आर्ट आउटपुट",
+  "outputPlaceholder": "ASCII आर्ट यहाँ दिखाई देगी...",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

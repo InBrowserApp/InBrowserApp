@@ -22,6 +22,7 @@ const messages = {
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
   hashResultLabel: "Hash Result",
+  hashResultDescription: "Hash result for the current text input.",
   hexLabel: "Hexadecimal",
   base64Label: "Base64",
   decimalLabel: "Decimal",
@@ -58,6 +59,7 @@ describe("Sha256HashTextOrFileClient", () => {
     render(<Sha256HashTextOrFileClient messages={messages} />)
 
     expect(getPlainTextInput().value).toBe("Hello, browser-native world!")
+    expect(screen.getByText(messages.hashResultDescription)).toBeTruthy()
 
     expect(
       await screen.findByText(sha256Hex("Hello, browser-native world!"))

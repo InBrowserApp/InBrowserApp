@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Görünmez Karakter Denetleyici",
+  "description": "Sıfır genişlikli, bidi kontrol ve özel boşluk karakterlerini algılar ve temizlenmiş sürümü dışa aktarır."
+}

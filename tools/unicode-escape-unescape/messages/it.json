@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Testo normale",
+  "plainTextDescription": "Caratteri originali non codificati",
+  "plainTextPlaceholder": "Inserisci il testo da codificare...",
+  "escapeFormatLabel": "Formato di escape",
+  "escapedTextLabel": "Testo codificato",
+  "escapedTextDescription": "Sequenze di escape Unicode nel formato selezionato",
+  "escapedTextPlaceholder": "Inserisci il testo codificato da decodificare...",
+  "copyPlainTextLabel": "Copia testo normale",
+  "copyEscapedTextLabel": "Copia testo codificato",
+  "copiedLabel": "Copiato",
+  "resetLabel": "Ripristina esempio"
+}

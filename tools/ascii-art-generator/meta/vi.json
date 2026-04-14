@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo ASCII Art",
+  "description": "Chuyển đổi văn bản thành ASCII art bằng nhiều phông chữ figlet khác nhau. Nhập một từ hoặc cụm từ, chọn phông chữ và sao chép kết quả."
+}

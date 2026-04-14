@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa karakter tak terlihat Unicode",
+  "description": "Mendeteksi karakter lebar nol, kontrol bidi, dan spasi khusus, lalu mengekspor versi yang dibersihkan."
+}

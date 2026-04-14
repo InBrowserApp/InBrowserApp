@@ -1,0 +1,4 @@
+{
+  "name": "Görüntü Meta Verisi Temizleyici (EXIF)",
+  "description": "Görüntülerden EXIF/XMP/IPTC/ICC meta verilerini yeniden kodlama olmadan kaldırır. Orijinal formatı korur ve çevrimdışı çalışır."
+}

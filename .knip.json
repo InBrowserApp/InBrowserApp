@@ -9,6 +9,9 @@
     },
     "tools/*": {
       "astro": false
+    },
+    "tools/ascii-art-generator": {
+      "ignoreDependencies": ["@types/figlet"]
     }
   }
 }

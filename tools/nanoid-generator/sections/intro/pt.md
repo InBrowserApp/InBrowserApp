@@ -1,9 +1,19 @@
-## What is NanoID?
+## O que é NanoID?
 
-NanoID is a tiny, URL-safe unique ID generator designed for modern web apps. A standard NanoID is 21 characters long and uses a 64-character alphabet, providing about 126 bits of randomness.
+NanoID é um gerador compacto de IDs únicos, seguro para URL, criado para aplicações web modernas, APIs e ferramentas internas. O formato padrão usa 21 caracteres de um alfabeto com 64 caracteres, o que fornece cerca de 126 bits de aleatoriedade e ainda assim permanece curto o suficiente para URLs, nomes de ficheiros e dados de teste.
 
-**Key points:**
+Tudo nesta ferramenta é executado localmente no seu navegador. O seu alfabeto personalizado e os IDs gerados não saem da página, o que a torna prática para prototipagem rápida, geração de fixtures e tarefas operacionais pontuais.
 
-- **URL-safe**: uses A-Z, a-z, 0-9, - and \_.
-- **Customizable**: adjust length and alphabet to match constraints.
-- **Secure randomness**: uses cryptographic random values in the browser.
+**Pontos principais:**
+
+- **Seguro para URL**: usa A-Z, a-z, 0-9, - e \_.
+- **Personalizável**: ajuste o comprimento e o alfabeto às suas restrições.
+- **Aleatoriedade segura**: usa valores aleatórios criptográficos no navegador.
+- **Exportação em texto simples**: copie ou transfira o lote atual quando precisar de dados-semente, conteúdo de demonstração ou listas prontas para importar.
+
+**Orientações práticas:**
+
+- Mantenha o comprimento padrão de 21 caracteres quando quiser um identificador genérico forte com uma probabilidade muito baixa de colisão.
+- IDs mais curtos servem para tokens temporários de UI ou dados mock locais, mas o risco de colisão aumenta à medida que reduz o comprimento ou gera lotes maiores.
+- Um alfabeto maior fornece mais entropia por caractere, por isso muitas vezes é possível manter IDs mais curtos sem perder tanta unicidade.
+- Alfabetos personalizados devem conter apenas caracteres únicos. Duplicados distorcem a distribuição, por isso esta ferramenta bloqueia-os antes de gerar o resultado.

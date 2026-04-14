@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-1 de Texte ou Fichier",
+  "description": "Générez des hachages SHA-1 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité."
+}

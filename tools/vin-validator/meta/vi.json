@@ -1,0 +1,4 @@
+{
+  "name": "Kiểm tra VIN",
+  "description": "Xác thực VIN theo quy tắc độ dài, ký tự và chữ số kiểm tra"
+}

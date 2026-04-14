@@ -1,0 +1,4 @@
+{
+  "name": "Image Metadata Cleaner (EXIF)",
+  "description": "Remove EXIF/XMP/IPTC/ICC metadata from images without re-encoding. Keeps the original format and works offline."
+}

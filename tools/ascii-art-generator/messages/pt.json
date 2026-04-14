@@ -1,0 +1,12 @@
+{
+  "inputLabel": "Texto de entrada",
+  "inputDescription": "Digite uma palavra ou frase para transformar em ASCII art.",
+  "inputPlaceholder": "Insira o texto para converter...",
+  "fontLabel": "Fonte",
+  "fontDescription": "Escolha um estilo de fonte FIGlet para a saída.",
+  "fontSearchPlaceholder": "Pesquisar fontes...",
+  "outputLabel": "Arte ASCII gerada",
+  "outputPlaceholder": "A arte ASCII aparecerá aqui...",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

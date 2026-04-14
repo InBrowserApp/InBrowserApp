@@ -1,0 +1,4 @@
+{
+  "name": "圖片元資料清理器（EXIF）",
+  "description": "無需重新編碼，移除圖片中的 EXIF/XMP/IPTC/ICC 等元資料，保留原始格式並離線運行。"
+}

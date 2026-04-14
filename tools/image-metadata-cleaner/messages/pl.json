@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Kliknij lub przeciągnij obraz, aby przesłać",
+  "supportedFormats": "Obsługuje JPEG, PNG, WebP",
+  "remove": "Usuń",
+  "cleanMetadata": "Wyczyść metadane",
+  "cleaningMetadata": "Czyszczenie metadanych...",
+  "results": "Wyniki czyszczenia",
+  "removed": "Usunięte metadane",
+  "reduction": "Zmniejszenie rozmiaru",
+  "fileSize": "Rozmiar pliku",
+  "downloadCleaned": "Pobierz oczyszczony obraz",
+  "note": "Przetwarzanie lokalne w przeglądarce. Bez przesyłania.",
+  "error": "Błąd",
+  "unsupportedFormat": "Nieobsługiwany format. Prześlij JPEG, PNG lub WebP.",
+  "cleaningComplete": "Metadane wyczyszczone.",
+  "cleaningFailed": "Nie udało się wyczyścić metadanych. Spróbuj ponownie."
+}

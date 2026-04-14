@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Входной текст",
+  "inputPlaceholder": "Введите текст для преобразования в slug...",
+  "outputLabel": "Сгенерированный Slug",
+  "outputPlaceholder": "Slug появится здесь...",
+  "separatorLabel": "Разделитель",
+  "hyphenLabel": "дефис",
+  "underscoreLabel": "подчёркивание",
+  "dotLabel": "точка",
+  "caseLabel": "Регистр",
+  "lowercaseLabel": "Нижний регистр",
+  "preserveLabel": "Сохранить",
+  "copyLabel": "Копировать slug",
+  "copiedLabel": "Скопировано",
+  "clearLabel": "Очистить"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Validador de ISBN",
+  "description": "Valide ISBN-10/ISBN-13, dígito verificador e conversões"
+}

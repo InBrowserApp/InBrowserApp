@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ประเภท ROT",
+  "inputLabel": "ข้อความนำเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส/ถอดรหัส...",
+  "outputLabel": "ข้อความส่งออก",
+  "outputPlaceholder": "ข้อความที่เข้ารหัส/ถอดรหัสแล้วจะแสดงที่นี่...",
+  "rot13Description": "ตัวอักษรเท่านั้น (A-Z, a-z)",
+  "rot5Description": "ตัวเลขเท่านั้น (0-9)",
+  "rot18Description": "ตัวอักษร + ตัวเลข (ROT13 + ROT5)",
+  "rot47Description": "อักขระ ASCII ที่พิมพ์ได้ทั้งหมด (33-126)",
+  "copyInputLabel": "คัดลอกข้อความอินพุต",
+  "copyOutputLabel": "คัดลอกข้อความเอาต์พุต",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

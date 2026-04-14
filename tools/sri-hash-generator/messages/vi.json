@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hashResultLabel": "Kết quả Hash",
+  "hashResultDescription": "Kết quả băm cho đầu vào văn bản hiện tại.",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter wielkości liter",
+  "description": "Konwertuj tekst pomiędzy różnymi konwencjami nazewnictwa: camelCase, PascalCase, snake_case, kebab-case i inne."
+}

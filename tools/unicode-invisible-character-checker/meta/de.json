@@ -1,0 +1,4 @@
+{
+  "name": "Unicode-Unsichtbarzeichen-Prüfer",
+  "description": "Erkennt Nullbreite-, Bidi-Steuer- und Sonderleerzeichen und exportiert eine bereinigte Version."
+}
