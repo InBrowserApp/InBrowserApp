@@ -1,9 +1,13 @@
-const DEFAULT_TEXT = "Hello"
-const DEFAULT_FONT = "Standard"
+const SAMPLE_TEXT = `Launch notes
+ship today`
+
+const DEFAULT_TEXT = ""
 
 const STORAGE_KEYS = {
   text: "tools:ascii-art-generator:text",
   font: "tools:ascii-art-generator:font",
+  align: "tools:ascii-art-generator:align",
+  width: "tools:ascii-art-generator:width",
 } as const
 
-export { DEFAULT_FONT, DEFAULT_TEXT, STORAGE_KEYS }
+export { DEFAULT_TEXT, SAMPLE_TEXT, STORAGE_KEYS }
