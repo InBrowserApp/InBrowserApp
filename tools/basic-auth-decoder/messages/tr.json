@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization Başlığı",
+  "authorizationHeaderDescription": "Şunun gibi yapıştırın: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Şunun gibi yapıştırın: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Çözümlenmiş Sonuç",
+  "decodedCredentialsDescription": "HTTP Basic Authorization başlığını çözüp Base64’ten kullanıcı adı ve parolayı çıkarın. Hata ayıklama ve API testi için yararlı",
+  "usernameLabel": "Kullanıcı Adı",
+  "passwordLabel": "Parola",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla",
+  "invalidHeaderTitle": "Geçersiz Basic Authorization başlığı",
+  "invalidBase64Title": "Geçersiz Base64 içeriği"
+}

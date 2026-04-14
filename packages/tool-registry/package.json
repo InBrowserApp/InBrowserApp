@@ -9,6 +9,7 @@
   "dependencies": {
     "@tool/ascii-art-generator": "workspace:*",
     "@tool/base64-encoder-decoder": "workspace:*",
+    "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",

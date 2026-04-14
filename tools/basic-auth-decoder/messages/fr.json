@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "En-tête Authorization",
+  "authorizationHeaderDescription": "Collez quelque chose comme : Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Collez quelque chose comme : Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Résultat Décodé",
+  "decodedCredentialsDescription": "Décode l'en-tête HTTP Basic Authorization pour extraire le nom d'utilisateur et le mot de passe depuis Base64. Utile pour le débogage et les tests d'API",
+  "usernameLabel": "Nom d'utilisateur",
+  "passwordLabel": "Mot de passe",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copié",
+  "resetLabel": "Réinitialiser l'exemple",
+  "invalidHeaderTitle": "En-tête Basic Authorization invalide",
+  "invalidBase64Title": "Contenu Base64 invalide"
+}

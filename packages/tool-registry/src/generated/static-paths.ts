@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "basic-auth-decoder",
+    language: "ar",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "de",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "en",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "es",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "fr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "he",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "hi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "id",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "it",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ja",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ko",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ms",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "nl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "no",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pt",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ru",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "sv",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "th",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "tr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "vi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "basic-auth-generator",
     language: "ar",
   },

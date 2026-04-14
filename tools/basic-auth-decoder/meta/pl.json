@@ -1,0 +1,4 @@
+{
+  "name": "Dekoder Basic Auth",
+  "description": "Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API"
+}

@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Encabezado Authorization",
+  "authorizationHeaderDescription": "Pega algo como: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Pega algo como: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Resultado Decodificado",
+  "decodedCredentialsDescription": "Decodifica el encabezado HTTP Basic Authorization para extraer usuario y contraseña desde Base64. Útil para depuración y pruebas de API",
+  "usernameLabel": "Usuario",
+  "passwordLabel": "Contraseña",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copiado",
+  "resetLabel": "Restablecer ejemplo",
+  "invalidHeaderTitle": "Encabezado Basic Authorization inválido",
+  "invalidBase64Title": "Contenido Base64 inválido"
+}

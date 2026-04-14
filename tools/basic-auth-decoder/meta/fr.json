@@ -1,0 +1,4 @@
+{
+  "name": "Décodeur d'Authentification Basique",
+  "description": "Décode l'en-tête HTTP Basic Authorization pour extraire le nom d'utilisateur et le mot de passe depuis Base64. Utile pour le débogage et les tests d'API"
+}

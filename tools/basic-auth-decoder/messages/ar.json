@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "ترويسة Authorization",
+  "authorizationHeaderDescription": "الصق شيئًا مثل: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "الصق شيئًا مثل: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "النتيجة المفككة",
+  "decodedCredentialsDescription": "فك تشفير ترويسة HTTP Basic Authorization لاستخراج اسم المستخدم وكلمة المرور من Base64. مفيد لاستكشاف الأخطاء وإصلاحها واختبار واجهة برمجة التطبيقات",
+  "usernameLabel": "اسم المستخدم",
+  "passwordLabel": "كلمة المرور",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال",
+  "invalidHeaderTitle": "ترويسة Basic Authorization غير صالحة",
+  "invalidBase64Title": "محتوى Base64 غير صالح"
+}
