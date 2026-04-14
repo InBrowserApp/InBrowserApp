@@ -171,7 +171,13 @@ function Pbkdf2KeyDerivationClient({
       return
     }
 
-    setDerivedKeyState({ status: "loading" })
+    setDerivedKeyState((currentState) => ({
+      status: "loading",
+      derivedKey:
+        currentState.status === "ready" || currentState.status === "loading"
+          ? currentState.derivedKey
+          : null,
+    }))
 
     void derivePbkdf2({
       password: deferredPassword,

@@ -69,6 +69,7 @@ function InputCard({
             <Input
               id={saltId}
               aria-label={messages.saltLabel}
+              placeholder={messages.saltLabel}
               spellCheck={false}
               value={saltText}
               onChange={(event) => {

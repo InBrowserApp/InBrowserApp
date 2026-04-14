@@ -117,6 +117,7 @@ describe("Pbkdf2KeyDerivationClient", () => {
     render(<Pbkdf2KeyDerivationClient messages={messages} />)
 
     expect(screen.getByText(messages.emptyStateDescription)).toBeTruthy()
+    expect(getSaltInput().getAttribute("placeholder")).toBe(messages.saltLabel)
   })
 
   test("derives a key from password and text salt", async () => {

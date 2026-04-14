@@ -7,7 +7,7 @@ import { DerivedKeyOutputList } from "./derived-key-output-list"
 
 type DerivedKeyState =
   | { status: "idle" }
-  | { status: "loading" }
+  | { status: "loading"; derivedKey: DerivedKey | null }
   | { status: "ready"; derivedKey: DerivedKey }
   | { status: "error"; message: string }
 
@@ -38,7 +38,7 @@ function DerivedKeySection({
       {state.status === "loading" || state.status === "ready" ? (
         <DerivedKeyOutputList
           messages={messages}
-          derivedKey={state.status === "ready" ? state.derivedKey : null}
+          derivedKey={state.derivedKey}
           loading={state.status === "loading"}
         />
       ) : null}
