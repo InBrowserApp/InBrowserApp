@@ -3606,6 +3606,135 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      de: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      fr: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      he: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      hi: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      id: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      it: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ja: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ko: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ms: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      nl: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      no: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      pl: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      pt: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ru: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      sv: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      th: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      tr: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      vi: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
+      },
+    },
+  },
+  {
     slug: "rot-cipher",
     category: "web",
     icon: "lock",
@@ -9678,6 +9807,135 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "隨機數產生器",
         description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  "random-password-generator": {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      de: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      fr: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      he: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      hi: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      id: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      it: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ja: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ko: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ms: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      nl: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      no: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      pl: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      pt: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      ru: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      sv: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      th: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      tr: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      vi: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
       },
     },
   },

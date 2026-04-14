@@ -1,0 +1,158 @@
+import {
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
+
+import RandomPasswordGeneratorClient from "./client"
+
+const messages = {
+  meta: {
+    name: "Random Password Generator",
+    description:
+      "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+  },
+  optionsTitle: "Options",
+  optionsDescription:
+    "Switch between random passwords, passphrases, grouped codes, and PINs without leaving the page.",
+  modeLabel: "Mode",
+  randomTabLabel: "Random",
+  wordsTabLabel: "Words",
+  separatorTabLabel: "Blocks",
+  pinTabLabel: "PIN",
+  randomLengthLabel: "Length",
+  characterSetLabel: "Character set",
+  uppercaseLabel: "Uppercase",
+  lowercaseLabel: "Lowercase",
+  digitsLabel: "Digits",
+  symbolsLabel: "Symbols",
+  excludeSimilarLabel: "Exclude similar characters (Il1O0)",
+  wordsCountLabel: "Word count",
+  separatorLabel: "Separator",
+  capitalizeWordsLabel: "Capitalize words",
+  includeNumberLabel: "Append a number",
+  blockLengthLabel: "Block length",
+  blockCountLabel: "Block count",
+  blockSeparatorLabel: "Block separator",
+  pinLengthLabel: "Length",
+  allowLeadingZeroLabel: "Allow leading zero",
+  resultsTitle: "Results",
+  resultsDescription:
+    "Generate a fresh value, copy it, download it, or open it full screen for easier handoff.",
+  resultsPlaceholder: "A generated password will appear here...",
+  generateLabel: "Regenerate",
+  copyResultLabel: "Copy result",
+  copiedLabel: "Copied",
+  downloadLabel: "Download",
+  enterFullscreenLabel: "Full screen",
+  exitFullscreenLabel: "Exit full screen",
+  historyTitle: "History",
+  historyDescription:
+    "Recent outputs stay here so you can compare formats before you clear them.",
+  historyEmptyLabel: "No history yet.",
+  clearHistoryLabel: "Clear history",
+} as const
+
+beforeEach(() => {
+  const NativeURL = globalThis.URL
+
+  class MockURL extends NativeURL {}
+
+  Object.assign(MockURL, {
+    createObjectURL: vi.fn(() => "blob:password-results"),
+    revokeObjectURL: vi.fn(),
+  })
+
+  vi.stubGlobal("URL", MockURL)
+  window.localStorage.clear()
+  vi.spyOn(globalThis.crypto, "getRandomValues").mockImplementation((array) => {
+    const view = array as Uint8Array
+    view.fill(0)
+    return array
+  })
+})
+
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals()
+})
+
+function getResultValue() {
+  return (
+    screen
+      .getByLabelText(messages.resultsTitle)
+      .querySelector('[data-slot="password-result-value"]')?.textContent ?? ""
+  )
+}
+
+describe("RandomPasswordGeneratorClient", () => {
+  test("renders the default random mode with a downloadable result", async () => {
+    render(<RandomPasswordGeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(getResultValue()).toBe("AAAAAAAAAAAAAAAA")
+    })
+
+    const downloadLink = screen.getByRole("link", {
+      name: messages.downloadLabel,
+    })
+    expect(downloadLink).toHaveProperty("href", "blob:password-results")
+    expect(URL.createObjectURL).toHaveBeenCalled()
+  })
+
+  test("switches to pin mode, disables leading zero, and persists the mode", async () => {
+    render(<RandomPasswordGeneratorClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("radio", { name: messages.pinTabLabel }))
+    fireEvent.click(
+      screen.getByRole("switch", { name: messages.allowLeadingZeroLabel })
+    )
+
+    await waitFor(() => {
+      expect(getResultValue()).toBe("100000")
+    })
+
+    expect(
+      window.localStorage.getItem("tools:random-password-generator:mode")
+    ).toBe("pin")
+    expect(
+      window.localStorage.getItem(
+        "tools:random-password-generator:pin:allowLeadingZero"
+      )
+    ).toBe("false")
+  })
+
+  test("restores stored word settings from localStorage", async () => {
+    window.localStorage.setItem("tools:random-password-generator:mode", "words")
+    window.localStorage.setItem(
+      "tools:random-password-generator:words:count",
+      "3"
+    )
+    window.localStorage.setItem(
+      "tools:random-password-generator:words:separator",
+      "."
+    )
+    window.localStorage.setItem(
+      "tools:random-password-generator:words:capitalize",
+      "true"
+    )
+    window.localStorage.setItem(
+      "tools:random-password-generator:words:includeNumber",
+      "true"
+    )
+
+    render(<RandomPasswordGeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(screen.getByLabelText(messages.separatorLabel)).toHaveProperty(
+        "value",
+        "."
+      )
+      expect(getResultValue()).toBe("Abandon.Abandon.Abandon.0")
+    })
+  })
+})

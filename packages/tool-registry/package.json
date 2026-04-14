@@ -36,6 +36,7 @@
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
+    "@tool/random-password-generator": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha1-hash-text-or-file": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
