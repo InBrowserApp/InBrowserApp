@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix टाइमस्टैम्प",
+  "timestampPlaceholder": "Unix टाइमस्टैम्प दर्ज करें...",
+  "invalidTimestamp": "अमान्य टाइमस्टैम्प",
+  "nowLabel": "अभी",
+  "unitLabel": "इकाई",
+  "autoLabel": "स्वचालित",
+  "secondsLabel": "सेकंड",
+  "millisecondsLabel": "मिलीसेकंड",
+  "nanosecondsLabel": "नैनोसेकंड",
+  "detectedLabel": "पता लगाया",
+  "digitsLabel": "अंक",
+  "dateTimeLabel": "तिथि और समय",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "सापेक्ष",
+  "copyLabel": "कॉपी",
+  "copiedLabel": "कॉपी हो गया"
+}

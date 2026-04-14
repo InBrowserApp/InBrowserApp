@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix Tijdstempel",
+  "timestampPlaceholder": "Voer Unix tijdstempel in...",
+  "invalidTimestamp": "Ongeldige tijdstempel",
+  "nowLabel": "Nu",
+  "unitLabel": "Eenheid",
+  "autoLabel": "Auto",
+  "secondsLabel": "Seconden",
+  "millisecondsLabel": "Milliseconden",
+  "nanosecondsLabel": "Nanoseconden",
+  "detectedLabel": "Gedetecteerd",
+  "digitsLabel": "cijfers",
+  "dateTimeLabel": "Datum en Tijd",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Relatief",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

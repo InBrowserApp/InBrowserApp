@@ -1,0 +1,4 @@
+{
+  "name": "Unix Tidsstempel Konverterer",
+  "description": "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder."
+}

@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Znacznik Czasu Unix",
+  "timestampPlaceholder": "Wprowadź znacznik czasu Unix...",
+  "invalidTimestamp": "Nieprawidłowy znacznik czasu",
+  "nowLabel": "Teraz",
+  "unitLabel": "Jednostka",
+  "autoLabel": "Auto",
+  "secondsLabel": "Sekundy",
+  "millisecondsLabel": "Milisekundy",
+  "nanosecondsLabel": "Nanosekundy",
+  "detectedLabel": "Wykryto",
+  "digitsLabel": "cyfr",
+  "dateTimeLabel": "Data i Czas",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Względny",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

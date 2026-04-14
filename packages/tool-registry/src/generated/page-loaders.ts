@@ -51,6 +51,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unicode-invisible-character-checker/page"),
   "unicode-punycode-converter": () =>
     import("@tool/unicode-punycode-converter/page"),
+  "unix-timestamp-converter": () =>
+    import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),

@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix 时间戳",
+  "timestampPlaceholder": "输入 Unix 时间戳...",
+  "invalidTimestamp": "无效的时间戳",
+  "nowLabel": "现在",
+  "unitLabel": "单位",
+  "autoLabel": "自动",
+  "secondsLabel": "秒",
+  "millisecondsLabel": "毫秒",
+  "nanosecondsLabel": "纳秒",
+  "detectedLabel": "检测到",
+  "digitsLabel": "位",
+  "dateTimeLabel": "日期与时间",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "相对时间",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

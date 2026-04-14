@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore Timestamp Unix",
+  "description": "Converte i timestamp Unix in date leggibili e viceversa. Supporta il rilevamento automatico di secondi, millisecondi e nanosecondi."
+}

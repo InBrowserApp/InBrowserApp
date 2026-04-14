@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unixタイムスタンプ",
+  "timestampPlaceholder": "Unixタイムスタンプを入力...",
+  "invalidTimestamp": "無効なタイムスタンプ",
+  "nowLabel": "現在",
+  "unitLabel": "単位",
+  "autoLabel": "自動",
+  "secondsLabel": "秒",
+  "millisecondsLabel": "ミリ秒",
+  "nanosecondsLabel": "ナノ秒",
+  "detectedLabel": "検出",
+  "digitsLabel": "桁",
+  "dateTimeLabel": "日付と時刻",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "相対時間",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました"
+}

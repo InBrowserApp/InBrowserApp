@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix Timestamp",
+  "timestampPlaceholder": "ป้อน Unix timestamp...",
+  "invalidTimestamp": "Timestamp ไม่ถูกต้อง",
+  "nowLabel": "ตอนนี้",
+  "unitLabel": "หน่วย",
+  "autoLabel": "อัตโนมัติ",
+  "secondsLabel": "วินาที",
+  "millisecondsLabel": "มิลลิวินาที",
+  "nanosecondsLabel": "นาโนวินาที",
+  "detectedLabel": "ตรวจพบ",
+  "digitsLabel": "หลัก",
+  "dateTimeLabel": "วันที่และเวลา",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "สัมพัทธ์",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

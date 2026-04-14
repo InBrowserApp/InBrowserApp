@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "الطابع الزمني Unix",
+  "timestampPlaceholder": "أدخل الطابع الزمني Unix...",
+  "invalidTimestamp": "طابع زمني غير صالح",
+  "nowLabel": "الآن",
+  "unitLabel": "الوحدة",
+  "autoLabel": "تلقائي",
+  "secondsLabel": "ثواني",
+  "millisecondsLabel": "ملي ثانية",
+  "nanosecondsLabel": "نانو ثانية",
+  "detectedLabel": "تم الكشف",
+  "digitsLabel": "أرقام",
+  "dateTimeLabel": "التاريخ والوقت",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "نسبي",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Cap Masa Unix",
+  "timestampPlaceholder": "Masukkan cap masa Unix...",
+  "invalidTimestamp": "Cap masa tidak sah",
+  "nowLabel": "Sekarang",
+  "unitLabel": "Unit",
+  "autoLabel": "Auto",
+  "secondsLabel": "Saat",
+  "millisecondsLabel": "Milisaat",
+  "nanosecondsLabel": "Nanosaat",
+  "detectedLabel": "Dikesan",
+  "digitsLabel": "digit",
+  "dateTimeLabel": "Tarikh dan Masa",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Relatif",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}
