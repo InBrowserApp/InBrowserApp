@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII‑Domain",
+  "unicodeDomainLabel": "Unicode‑Domain",
+  "whatIsPunycodeTitle": "Was ist Punycode?",
+  "whatIsPunycodeDescription": "Punycode ist eine Darstellung von Unicode unter Verwendung ausschließlich der ASCII‑Teilmenge aus Buchstaben, Ziffern und Bindestrich (LDH), wie sie für DNS‑Hostnamen gefordert ist. Es ist das von IDNA verwendete Kodierungsprofil und eine Instanz des Bootstring‑Algorithmus (RFC 3492). In der Praxis bleiben ASCII‑Zeichen im Label unverändert; ein Bindestrich trennt sie vom codierten Nicht‑ASCII‑Teil. Für den Einsatz im öffentlichen Internet wird das ACE‑Präfix xn-- vorangestellt. Beispielsweise wird München auf Codepoint‑Ebene zu Mnchen‑3ya und als DNS‑Label zu xn--mnchen-3ya. Umwandlungen sind nach IDNA‑Verarbeitung und ‑Normalisierung exakt und reversibel; dieses Tool konvertiert beide Richtungen vollständig im Browser.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Beispiel zurücksetzen"
+}

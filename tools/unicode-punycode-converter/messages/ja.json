@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII ドメイン",
+  "unicodeDomainLabel": "Unicode ドメイン",
+  "whatIsPunycodeTitle": "Punycode とは？",
+  "whatIsPunycodeDescription": "Punycode は、DNS ホスト名に求められる ASCII の英字・数字・ハイフン（LDH）サブセットだけを用いて Unicode を表現する方式です。IDNA で採用されるエンコーディング・プロファイルであり、Bootstring アルゴリズム（RFC 3492）の一実装でもあります。実際には、ラベル内の ASCII 文字はそのまま残り、エンコードされた非 ASCII 部分とはハイフンで区切られます。公開インターネットで使用する際は ACE 接頭辞 xn-- が付与されます。例えば「München」はコードポイントの観点では「Mnchen-3ya」、DNS ラベルでは「xn--mnchen-3ya」となります。IDNA の処理と正規化のもとで変換は厳密かつ可逆であり、本ツールはブラウザだけで双方向の変換を行います。",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "例をリセット"
+}

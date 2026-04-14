@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII 도메인",
+  "unicodeDomainLabel": "유니코드 도메인",
+  "whatIsPunycodeTitle": "Punycode란?",
+  "whatIsPunycodeDescription": "Punycode는 DNS 호스트 이름에 요구되는 ASCII의 문자‑숫자‑하이픈(LDH) 부분집합만을 사용해 Unicode를 표현하는 방식입니다. IDNA에서 사용하는 인코딩 프로파일이며 Bootstring 알고리즘(RFC 3492)의 한 구현입니다. 실제로는 라벨의 ASCII 문자는 그대로 유지되고, 인코딩된 비‑ASCII 부분과는 하이픈으로 구분됩니다. 공용 인터넷에서는 ACE 접두사 xn-- 가 라벨 앞에 붙습니다. 예를 들어 ‘München’은 코드 포인트 수준에서 ‘Mnchen‑3ya’, DNS 라벨로는 ‘xn--mnchen-3ya’가 됩니다. IDNA 처리와 정규화 하에서 변환은 정확하고 역변환 가능합니다. 이 도구는 브라우저에서 양방향 변환을 수행합니다.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "예제 재설정"
+}

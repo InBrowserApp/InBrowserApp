@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "Dominio ASCII",
+  "unicodeDomainLabel": "Dominio Unicode",
+  "whatIsPunycodeTitle": "Che cos'è Punycode?",
+  "whatIsPunycodeDescription": "Punycode è una rappresentazione di Unicode che utilizza solo il sottoinsieme ASCII lettere‑cifre‑trattino (LDH) richiesto dai nomi host DNS. È il profilo di codifica usato da IDNA e un’istanza dell’algoritmo Bootstring (RFC 3492). In pratica, i caratteri ASCII in un’etichetta restano invariati e un trattino separa la parte codificata non ASCII; per l’uso su Internet pubblico si premette il prefisso ACE xn--. Ad esempio, München diventa Mnchen‑3ya a livello di code point e l’etichetta DNS xn--mnchen-3ya. Le conversioni sono esatte e reversibili con l’elaborazione e la normalizzazione IDNA; questo strumento converte in entrambe le direzioni direttamente nel browser.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reimposta esempio"
+}

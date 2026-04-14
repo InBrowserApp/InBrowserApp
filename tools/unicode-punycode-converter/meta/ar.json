@@ -1,0 +1,4 @@
+{
+  "name": "محول Unicode ↔ Punycode",
+  "description": "حوّل نطاقات Unicode (IDN) وASCII (Punycode) في كلا الاتجاهين"
+}

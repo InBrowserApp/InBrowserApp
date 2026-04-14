@@ -3498,6 +3498,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-punycode-converter",
+    language: "ar",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "de",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "en",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "es",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "fr",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "he",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "hi",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "id",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "it",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ja",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ko",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ms",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "nl",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "no",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "pl",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "pt",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ru",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "sv",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "th",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "tr",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "vi",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "url-component-encoder-decoder",
     language: "ar",
   },
