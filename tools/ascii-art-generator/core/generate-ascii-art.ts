@@ -161,4 +161,4 @@ export {
   registerFont,
   renderAsciiArt,
 }
-export type { AsciiArtAlign, AsciiArtOptionInput, AsciiArtOptions }
+export type { AsciiArtOptions }
