@@ -165,7 +165,7 @@ function OptionsCard({
             </Field>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 md:items-end">
+          <div className="grid gap-4 md:grid-cols-2">
             <Field>
               <FieldLabel htmlFor={countId}>{messages.countLabel}</FieldLabel>
               <Input
@@ -182,7 +182,7 @@ function OptionsCard({
               />
             </Field>
 
-            <Field className="gap-3 md:pt-8">
+            <Field className="gap-3">
               <FieldLabel htmlFor={`${countId}-repeat`}>
                 {messages.allowRepeatLabel}
               </FieldLabel>
