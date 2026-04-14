@@ -76,4 +76,4 @@ export {
   resolveTimestampUnit,
   toMilliseconds,
 }
-export type { ResolvedTimestampUnit, TimestampUnit }
+export type { TimestampUnit }
