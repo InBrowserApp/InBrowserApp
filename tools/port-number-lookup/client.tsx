@@ -150,7 +150,7 @@ function PortNumberLookupClient({
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
-      <Card>
+      <Card className="gap-0 pb-0">
         <CardHeader className="border-b">
           <CardTitle>{messages.meta.name}</CardTitle>
           <CardDescription>
@@ -206,7 +206,7 @@ function PortNumberLookupClient({
         </CardContent>
       </Card>
 
-      <Card className="overflow-hidden">
+      <Card className="gap-0 overflow-hidden pb-0">
         <CardHeader className="border-b">
           <div className="flex items-start justify-between gap-3">
             <div className="space-y-2">
