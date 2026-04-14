@@ -4,6 +4,7 @@ import {
   MAX_HISTORY_ITEMS,
   addHistoryEntry,
   buildCharsetPool,
+  createCryptoRandomIndex,
   generatePasswordByMode,
   generatePinPassword,
   generateRandomPassword,
@@ -18,10 +19,32 @@ describe("buildCharsetPool", () => {
     )
   })
 
+  test("deduplicates selected charsets", () => {
+    expect(buildCharsetPool(["lower", "lower", "symbols"], false)).toBe(
+      "abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-={}[]|:;<>,.?/~"
+    )
+  })
+
   test("falls back to the default character sets when none are selected", () => {
     expect(buildCharsetPool([], false)).toBe(
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     )
+  })
+})
+
+describe("createCryptoRandomIndex", () => {
+  test("returns zero for empty ranges and uses crypto bytes otherwise", () => {
+    expect(createCryptoRandomIndex(0)).toBe(0)
+
+    vi.spyOn(globalThis.crypto, "getRandomValues").mockImplementation(
+      (array) => {
+        const view = array as Uint32Array
+        view[0] = 17
+        return array
+      }
+    )
+
+    expect(createCryptoRandomIndex(10)).toBe(7)
   })
 })
 
@@ -64,6 +87,20 @@ describe("generateWordPassword", () => {
 
     expect(password).toBe("Abandon.Ability.42")
   })
+
+  test("falls back to the default separator and word count", () => {
+    const password = generateWordPassword(
+      {
+        wordCount: null,
+        separator: "",
+        capitalize: false,
+        includeNumber: false,
+      },
+      () => 0
+    )
+
+    expect(password).toBe("abandon-abandon-abandon-abandon")
+  })
 })
 
 describe("generateSeparatorPassword", () => {
@@ -85,6 +122,21 @@ describe("generateSeparatorPassword", () => {
     )
 
     expect(password).toBe("01:23:45")
+  })
+
+  test("falls back to the default grouping separator and lengths", () => {
+    const password = generateSeparatorPassword(
+      {
+        charsets: ["upper"],
+        excludeSimilar: false,
+        blockLength: undefined,
+        blockCount: undefined,
+        blockSeparator: "",
+      },
+      () => 0
+    )
+
+    expect(password).toBe("AAA-AAA-AAA")
   })
 })
 
@@ -112,6 +164,99 @@ describe("generatePasswordByMode", () => {
     const randomIndex = vi
       .fn<(max: number) => number>()
       .mockImplementation((max: number) => 0 % max)
+
+    expect(
+      generatePasswordByMode(
+        "random",
+        {
+          random: {
+            length: 3,
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+          },
+          words: {
+            wordCount: 4,
+            separator: "-",
+            capitalize: false,
+            includeNumber: false,
+          },
+          separator: {
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+            blockLength: 3,
+            blockCount: 3,
+            blockSeparator: "-",
+          },
+          pin: {
+            length: 3,
+            allowLeadingZero: true,
+          },
+        },
+        randomIndex
+      )
+    ).toBe("AAA")
+
+    expect(
+      generatePasswordByMode(
+        "words",
+        {
+          random: {
+            length: 12,
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+          },
+          words: {
+            wordCount: 2,
+            separator: "-",
+            capitalize: false,
+            includeNumber: false,
+          },
+          separator: {
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+            blockLength: 3,
+            blockCount: 3,
+            blockSeparator: "-",
+          },
+          pin: {
+            length: 3,
+            allowLeadingZero: true,
+          },
+        },
+        randomIndex
+      )
+    ).toBe("abandon-abandon")
+
+    expect(
+      generatePasswordByMode(
+        "separator",
+        {
+          random: {
+            length: 12,
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+          },
+          words: {
+            wordCount: 4,
+            separator: "-",
+            capitalize: false,
+            includeNumber: false,
+          },
+          separator: {
+            charsets: ["upper", "lower", "digits"],
+            excludeSimilar: true,
+            blockLength: 2,
+            blockCount: 2,
+            blockSeparator: "-",
+          },
+          pin: {
+            length: 3,
+            allowLeadingZero: true,
+          },
+        },
+        randomIndex
+      )
+    ).toBe("AA-AA")
 
     expect(
       generatePasswordByMode(
@@ -175,6 +320,17 @@ describe("addHistoryEntry", () => {
 
     expect(many).toHaveLength(MAX_HISTORY_ITEMS)
     expect(many[0]?.value).toBe("22")
+  })
+
+  test("returns a copy of the history when the next value is empty", () => {
+    const historyEntries = [
+      { id: "existing", mode: "random", value: "abcd" },
+    ] as const
+
+    expect(addHistoryEntry(historyEntries, "words", "")).toEqual(historyEntries)
+    expect(addHistoryEntry(historyEntries, "words", "")).not.toBe(
+      historyEntries
+    )
   })
 
   test("uses the built-in id generator when one is not provided", () => {

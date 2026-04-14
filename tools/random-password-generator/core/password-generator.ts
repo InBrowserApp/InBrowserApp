@@ -100,9 +100,7 @@ function buildCharsetPool(
     pool = pool.replace(SIMILAR_CHARACTERS_PATTERN, "")
   }
 
-  return pool.length > 0
-    ? pool
-    : DEFAULT_CHARSETS.map((value) => RANDOM_CHARSETS[value]).join("")
+  return pool
 }
 
 function createCryptoRandomIndex(max: number) {
