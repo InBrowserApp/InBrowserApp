@@ -62,10 +62,10 @@ function getPasswordInput() {
   return screen.getByLabelText(messages.passwordLabel) as HTMLInputElement
 }
 
-function getSaltTextarea() {
+function getSaltInput() {
   return screen.getByRole("textbox", {
     name: messages.saltLabel,
-  }) as HTMLTextAreaElement
+  }) as HTMLInputElement
 }
 
 function getIterationsInput() {
@@ -125,7 +125,7 @@ describe("Pbkdf2KeyDerivationClient", () => {
     fireEvent.change(getPasswordInput(), {
       target: { value: "correct horse battery staple" },
     })
-    fireEvent.change(getSaltTextarea(), {
+    fireEvent.change(getSaltInput(), {
       target: { value: "pepper" },
     })
     fireEvent.change(getIterationsInput(), {
@@ -208,14 +208,14 @@ describe("Pbkdf2KeyDerivationClient", () => {
     })
     selectOption(messages.saltFormatLabel, "Hex")
 
-    fireEvent.change(getSaltTextarea(), {
+    fireEvent.change(getSaltInput(), {
       target: { value: "abc" },
     })
 
     expect(await screen.findByText(messages.saltInvalidHexMessage)).toBeTruthy()
     expect(screen.getByText(messages.emptyStateDescription)).toBeTruthy()
 
-    fireEvent.change(getSaltTextarea(), {
+    fireEvent.change(getSaltInput(), {
       target: { value: "706570706572" },
     })
 
@@ -274,7 +274,7 @@ describe("Pbkdf2KeyDerivationClient", () => {
     fireEvent.change(getPasswordInput(), {
       target: { value: "hunter2" },
     })
-    fireEvent.change(getSaltTextarea(), {
+    fireEvent.change(getSaltInput(), {
       target: { value: "pepper" },
     })
     fireEvent.change(getIterationsInput(), {
@@ -297,7 +297,7 @@ describe("Pbkdf2KeyDerivationClient", () => {
     fireEvent.change(getPasswordInput(), {
       target: { value: "hunter2" },
     })
-    fireEvent.change(getSaltTextarea(), {
+    fireEvent.change(getSaltInput(), {
       target: { value: "pepper" },
     })
     fireEvent.change(getIterationsInput(), {

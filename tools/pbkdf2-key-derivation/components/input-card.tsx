@@ -9,12 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import {
-  Field,
-  FieldError,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { Field, FieldError } from "@workspace/ui/components/ui/field"
+import { Input } from "@workspace/ui/components/ui/input"
 import { FileText } from "@workspace/ui/icons"
 
 import type { Pbkdf2KeyDerivationPageMessages } from "../client/types"
@@ -70,8 +66,7 @@ function InputCard({
             className="flex flex-1 flex-col"
             data-invalid={invalidSaltFormat.length > 0}
           >
-            <FieldLabel htmlFor={saltId}>{messages.saltLabel}</FieldLabel>
-            <Textarea
+            <Input
               id={saltId}
               aria-label={messages.saltLabel}
               spellCheck={false}
@@ -79,7 +74,7 @@ function InputCard({
               onChange={(event) => {
                 onSaltTextChange(event.target.value)
               }}
-              className="min-h-64 flex-1 resize-y font-mono text-sm"
+              className="font-mono text-sm"
             />
             {invalidSaltFormat === "hex" ? (
               <FieldError>{messages.saltInvalidHexMessage}</FieldError>
