@@ -8,7 +8,7 @@
   "optionDraft": "Schema 草案",
   "optionInferRequired": "推断必填属性",
   "optionAllowAdditionalProperties": "允许额外属性",
-  "optionDetectFormat": "检测字符串格式 (uuid, email, uri, date-time)",
+  "optionDetectFormat": "检查字符串格式",
   "useSampleLabel": "使用示例",
   "importFromFileLabel": "从文件导入",
   "downloadSchemaLabel": "下载 Schema",
