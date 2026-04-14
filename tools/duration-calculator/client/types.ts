@@ -76,6 +76,7 @@ type DurationCardProps = Readonly<{
 type ResultsCardProps = Readonly<{
   messages: DurationCalculatorMessages
   title: string
+  operation: "add" | "subtract"
   result: ResultSnapshot | null
 }>
 

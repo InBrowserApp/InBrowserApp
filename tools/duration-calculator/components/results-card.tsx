@@ -2,6 +2,7 @@ import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -39,11 +40,16 @@ function ResultField({
   )
 }
 
-function ResultsCard({ messages, title, result }: ResultsCardProps) {
+function ResultsCard({ messages, title, operation, result }: ResultsCardProps) {
+  const operator = operation === "add" ? "+" : "−"
+
   return (
     <Card>
       <CardHeader className="border-b">
         <CardTitle>{title}</CardTitle>
+        <CardDescription>
+          {messages.baseTimeLabel} {operator} {messages.durationLabel}
+        </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <ResultField

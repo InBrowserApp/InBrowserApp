@@ -279,11 +279,13 @@ function DurationCalculatorClient({ messages }: DurationCalculatorClientProps) {
           <ResultsCard
             messages={messages}
             title={messages.addLabel}
+            operation="add"
             result={addedResult}
           />
           <ResultsCard
             messages={messages}
             title={messages.subtractLabel}
+            operation="subtract"
             result={subtractedResult}
           />
         </div>
