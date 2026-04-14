@@ -64,7 +64,7 @@ describe("PortNumberLookupClient", () => {
   test("filters rows by category", () => {
     render(<PortNumberLookupClient language="en" messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: "Registered (1024+)" }))
+    fireEvent.click(screen.getByRole("radio", { name: "Registered (1024+)" }))
 
     expect(screen.getByText("MySQL")).toBeTruthy()
     expect(screen.queryByText("SSH")).toBeNull()
@@ -111,7 +111,7 @@ describe("PortNumberLookupClient", () => {
         target: { value: "dns" },
       }
     )
-    fireEvent.click(screen.getByRole("button", { name: "Common" }))
+    fireEvent.click(screen.getByRole("radio", { name: "Common" }))
 
     expect(window.localStorage.getItem("tools:port-number-lookup:search")).toBe(
       "dns"

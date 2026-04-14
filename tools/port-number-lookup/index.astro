@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import PortNumberLookupClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
 type PortNumberLookupMessages = Readonly<{
@@ -15,14 +17,9 @@ type PortNumberLookupMessages = Readonly<{
   service: string
   protocol: string
   description: string
-  aboutTitle: string
   aboutDescription: string
-  systemPorts: string
   systemPortsDesc: string
-  registeredPorts: string
   registeredPortsDesc: string
-  dynamicPorts: string
-  dynamicPortsDesc: string
   noResultsTitle: string
   noResultsDescription: string
 }>
@@ -41,9 +38,24 @@ const localizedMessages = resolveLocale<PortNumberLookupMessages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
 const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <PortNumberLookupClient client:load language={lang} messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
 </ToolPageShell>
