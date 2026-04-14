@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Decodifica l'intestazione HTTP Basic Authorization per estrarre nome utente e password da Base64. Utile per il debugging e i test API",
   "usernameLabel": "Nome utente",
   "passwordLabel": "Password",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Copia risultato",
   "copiedLabel": "Copiato",
   "resetLabel": "Reimposta esempio",
   "invalidHeaderTitle": "Header Basic Authorization non valido",

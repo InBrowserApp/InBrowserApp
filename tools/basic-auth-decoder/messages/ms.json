@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Nyahkod pengepala HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata laluan daripada Base64. Berguna untuk penyahpepijatan dan ujian API",
   "usernameLabel": "Nama pengguna",
   "passwordLabel": "Kata laluan",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Salin hasil",
   "copiedLabel": "Disalin",
   "resetLabel": "Tetapkan semula contoh",
   "invalidHeaderTitle": "Pengepala Basic Authorization tidak sah",

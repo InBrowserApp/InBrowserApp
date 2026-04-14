@@ -256,6 +256,261 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "barcode-generator",
+    category: "image",
+    icon: "image",
+    tags: ["barcode", "code128", "ean", "upc", "generator", "image"],
+    locales: {
+      ar: {
+        name: "مولد الباركود",
+        description:
+          "أنشئ باركود (CODE128 وEAN وUPC وغيرها) وحمّله بصيغ PNG أو SVG أو JPEG أو WebP.",
+      },
+      de: {
+        name: "Barcode-Generator",
+        description:
+          "Erzeugen Sie Barcodes (CODE128, EAN, UPC usw.) und laden Sie sie als PNG, SVG, JPEG oder WebP herunter.",
+      },
+      en: {
+        name: "Barcode Generator",
+        description:
+          "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG, SVG, JPEG, or WebP.",
+      },
+      es: {
+        name: "Generador de Códigos de Barras",
+        description:
+          "Genera códigos de barras (CODE128, EAN, UPC, etc.) y descárgalos como PNG, SVG, JPEG o WebP.",
+      },
+      fr: {
+        name: "Générateur de Codes-barres",
+        description:
+          "Générez des codes‑barres (CODE128, EAN, UPC, etc.) et téléchargez-les en PNG, SVG, JPEG ou WebP.",
+      },
+      he: {
+        name: "מחולל ברקוד",
+        description:
+          "צור ברקודים (CODE128, EAN, UPC ועוד) והורד כ‑PNG, SVG, JPEG או WebP.",
+      },
+      hi: {
+        name: "बारकोड जनरेटर",
+        description:
+          "ब्राउज़र में बारकोड (CODE128, EAN, UPC आदि) बनाएँ और PNG, SVG, JPEG या WebP के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator Kode Batang",
+        description:
+          "Buat kode batang (CODE128, EAN, UPC, dll.) dan unduh sebagai PNG, SVG, JPEG, atau WebP.",
+      },
+      it: {
+        name: "Generatore di Codici a Barre",
+        description:
+          "Genera codici a barre (CODE128, EAN, UPC, ecc.) e scaricali in PNG, SVG, JPEG o WebP.",
+      },
+      ja: {
+        name: "バーコードジェネレーター",
+        description:
+          "バーコード（CODE128、EAN、UPC など）を生成し、PNG / SVG / JPEG / WebP でダウンロード。",
+      },
+      ko: {
+        name: "바코드 생성기",
+        description:
+          "브라우저에서 바코드(CODE128, EAN, UPC 등)를 생성하고 PNG / SVG / JPEG / WebP로 다운로드합니다.",
+      },
+      ms: {
+        name: "Penjana Kod Bar",
+        description:
+          "Jana kod bar (CODE128, EAN, UPC, dll.) dan muat turun sebagai PNG, SVG, JPEG atau WebP.",
+      },
+      nl: {
+        name: "Barcodegenerator",
+        description:
+          "Genereer barcodes (CODE128, EAN, UPC, enz.) en download als PNG, SVG, JPEG of WebP.",
+      },
+      no: {
+        name: "Strekkodegenerator",
+        description:
+          "Generer strekkoder (CODE128, EAN, UPC m.fl.) og last ned som PNG, SVG, JPEG eller WebP.",
+      },
+      pl: {
+        name: "Generator kodów kreskowych",
+        description:
+          "Generuj kody kreskowe (CODE128, EAN, UPC itd.) i pobieraj jako PNG, SVG, JPEG lub WebP.",
+      },
+      pt: {
+        name: "Gerador de Código de Barras",
+        description:
+          "Gere códigos de barras (CODE128, EAN, UPC, etc.) e faça download em PNG, SVG, JPEG ou WebP.",
+      },
+      ru: {
+        name: "Генератор штрихкодов",
+        description:
+          "Создавайте штрихкоды (CODE128, EAN, UPC и др.) и скачивайте их в PNG, SVG, JPEG или WebP.",
+      },
+      sv: {
+        name: "Streckkodsgenerator",
+        description:
+          "Skapa streckkoder (CODE128, EAN, UPC m.fl.) och ladda ner som PNG, SVG, JPEG eller WebP.",
+      },
+      th: {
+        name: "ตัวสร้างบาร์โค้ด",
+        description:
+          "สร้างบาร์โค้ด (CODE128, EAN, UPC เป็นต้น) และดาวน์โหลดเป็น PNG, SVG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "Barkod Oluşturucu",
+        description:
+          "Barkodlar (CODE128, EAN, UPC vb.) oluşturun ve PNG, SVG, JPEG veya WebP olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã vạch",
+        description:
+          "Tạo mã vạch (CODE128, EAN, UPC, v.v.) và tải về dưới dạng PNG, SVG, JPEG hoặc WebP.",
+      },
+      "zh-CN": {
+        name: "条形码生成器",
+        description:
+          "在浏览器内生成条形码（CODE128、EAN、UPC 等），并可下载为 PNG / SVG / JPEG / WebP。",
+      },
+      "zh-TW": {
+        name: "條碼產生器",
+        description:
+          "在瀏覽器內產生條碼（CODE128、EAN、UPC 等），可下載為 PNG / SVG / JPEG / WebP。",
+      },
+    },
+  },
+  {
+    slug: "base16-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base16",
+      "hex",
+      "hexadecimal",
+      "decode",
+      "decoder",
+      "binary",
+      "text",
+      "file",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك Base16",
+        description:
+          "يفك ترميز نصوص أو ملفات Base16 (Hex) إلى بايتات خام للفحص والاختبار والأدوات.",
+      },
+      de: {
+        name: "Base16-Dekoder",
+        description:
+          "Dekodiert Base16 (Hex)-Text oder -Dateien in Rohbytes für Inspektion, Tests und Tools.",
+      },
+      en: {
+        name: "Base16 Decoder",
+        description:
+          "Decode Base16 (Hex) text or files into raw bytes for inspection, testing, and tooling.",
+      },
+      es: {
+        name: "Decodificador Base16",
+        description:
+          "Decodifica texto o archivos Base16 (Hex) a bytes sin procesar para inspección, pruebas y herramientas.",
+      },
+      fr: {
+        name: "Décodeur Base16",
+        description:
+          "Décode du texte ou des fichiers Base16 (Hex) en octets bruts pour l’inspection, les tests et les outils.",
+      },
+      he: {
+        name: "מפענח Base16",
+        description:
+          "מפענח טקסט או קבצים Base16 (Hex) לבייטים גולמיים לצורך בדיקה, ניסוי וכלים.",
+      },
+      hi: {
+        name: "Base16 डिकोडर",
+        description:
+          "Base16 (Hex) टेक्स्ट या फ़ाइलों को कच्चे बाइट्स में डिकोड करें ताकि निरीक्षण, परीक्षण और टूलिंग में उपयोग हो।",
+      },
+      id: {
+        name: "Decoder Base16",
+        description:
+          "Decode teks atau file Base16 (Hex) menjadi byte mentah untuk inspeksi, pengujian, dan alat.",
+      },
+      it: {
+        name: "Decodificatore Base16",
+        description:
+          "Decodifica testo o file Base16 (Hex) in byte grezzi per ispezione, test e strumenti.",
+      },
+      ja: {
+        name: "Base16 デコーダー",
+        description:
+          "Base16（Hex）のテキストやファイルを生バイトにデコードし、検査やテストに使用。",
+      },
+      ko: {
+        name: "Base16 디코더",
+        description:
+          "Base16(Hex) 텍스트나 파일을 원시 바이트로 디코딩하여 검사, 테스트, 도구에 활용.",
+      },
+      ms: {
+        name: "Penyahkod Base16",
+        description:
+          "Nyahkod teks atau fail Base16 (Hex) kepada bait mentah untuk pemeriksaan, ujian dan alat.",
+      },
+      nl: {
+        name: "Base16-decoder",
+        description:
+          "Decodeer Base16 (Hex)-tekst of -bestanden naar ruwe bytes voor inspectie, testen en tools.",
+      },
+      no: {
+        name: "Base16-dekoder",
+        description:
+          "Dekoder Base16 (Hex)-tekst eller filer til rå byte for inspeksjon, testing og verktøy.",
+      },
+      pl: {
+        name: "Dekoder Base16",
+        description:
+          "Dekoduj tekst lub pliki Base16 (Hex) do surowych bajtów do inspekcji, testów i narzędzi.",
+      },
+      pt: {
+        name: "Decodificador Base16",
+        description:
+          "Decodifica texto ou arquivos Base16 (Hex) em bytes brutos para inspeção, testes e ferramentas.",
+      },
+      ru: {
+        name: "Base16-декодер",
+        description:
+          "Декодирует текст или файлы Base16 (Hex) в сырые байты для проверки, тестирования и инструментов.",
+      },
+      sv: {
+        name: "Base16-avkodare",
+        description:
+          "Avkoda Base16 (Hex)-text eller filer till råa byte för inspektion, testning och verktyg.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base16",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base16 (Hex) เป็นไบต์ดิบสำหรับการตรวจสอบ การทดสอบ และเครื่องมือ",
+      },
+      tr: {
+        name: "Base16 Kod Çözücü",
+        description:
+          "Base16 (Hex) metin veya dosyalarını inceleme, test ve araçlar için ham baytlara dönüştürür.",
+      },
+      vi: {
+        name: "Bộ giải mã Base16",
+        description:
+          "Giải mã văn bản hoặc tệp Base16 (Hex) thành byte thô để kiểm tra, thử nghiệm và công cụ.",
+      },
+      "zh-CN": {
+        name: "Base16 解码器",
+        description:
+          "将 Base16（Hex）文本或文件解码为原始字节，用于检查、测试和工具处理。",
+      },
+      "zh-TW": {
+        name: "Base16 解碼器",
+        description:
+          "將 Base16（Hex）文字或檔案解碼為原始位元組，用於檢視、測試和工具處理。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",
@@ -3580,6 +3835,107 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "port-number-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["port", "tcp", "udp", "iana", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أرقام المنافذ",
+        description: "البحث وتصفح أرقام منافذ الشبكة الشائعة",
+      },
+      de: {
+        name: "Port-Nummern-Suche",
+        description: "Suchen und durchsuchen Sie gängige Netzwerk-Portnummern",
+      },
+      en: {
+        name: "Port Number Lookup",
+        description: "Search and browse common network port numbers",
+      },
+      es: {
+        name: "Consulta de Puertos",
+        description: "Buscar y explorar números de puertos de red comunes",
+      },
+      fr: {
+        name: "Recherche de Ports",
+        description:
+          "Rechercher et parcourir les numéros de ports réseau courants",
+      },
+      he: {
+        name: "חיפוש מספרי פורט",
+        description: "חפש ועיין במספרי פורט רשת נפוצים",
+      },
+      hi: {
+        name: "पोर्ट नंबर खोज",
+        description: "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Nomor Port",
+        description: "Cari dan jelajahi nomor port jaringan umum",
+      },
+      it: {
+        name: "Ricerca Porte",
+        description: "Cerca e sfoglia i numeri di porta di rete comuni",
+      },
+      ja: {
+        name: "ポート番号検索",
+        description: "一般的なネットワークポート番号を検索・閲覧",
+      },
+      ko: {
+        name: "포트 번호 조회",
+        description: "일반적인 네트워크 포트 번호 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Nombor Port",
+        description: "Cari dan semak nombor port rangkaian biasa",
+      },
+      nl: {
+        name: "Poortnummer Opzoeken",
+        description: "Zoek en blader door veelvoorkomende netwerkpoortnummers",
+      },
+      no: {
+        name: "Portnummersok",
+        description: "Sok og bla gjennom vanlige nettverksportnumre",
+      },
+      pl: {
+        name: "Wyszukiwanie Portów",
+        description: "Wyszukuj i przeglądaj popularne numery portów sieciowych",
+      },
+      pt: {
+        name: "Consulta de Portas",
+        description: "Pesquisar e navegar por números de portas de rede comuns",
+      },
+      ru: {
+        name: "Поиск Портов",
+        description: "Поиск и просмотр распространённых сетевых портов",
+      },
+      sv: {
+        name: "Portnummerssökning",
+        description: "Sök och bläddra bland vanliga nätverksportnummer",
+      },
+      th: {
+        name: "ค้นหาหมายเลขพอร์ต",
+        description: "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป",
+      },
+      tr: {
+        name: "Port Numarası Arama",
+        description: "Yaygın ağ port numaralarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Số Cổng",
+        description: "Tìm kiếm và duyệt các số cổng mạng phổ biến",
+      },
+      "zh-CN": {
+        name: "端口号查询",
+        description: "搜索和浏览常见网络端口号",
+      },
+      "zh-TW": {
+        name: "連接埠號碼查詢",
+        description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  {
     slug: "prettier-code-formatter",
     category: "developer",
     icon: "braces",
@@ -4818,6 +5174,122 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "SRI 雜湊產生器",
         description:
           "為網頁資源產生子資源完整性（SRI）雜湊值。建立 SHA-256、SHA-384 或 SHA-512 雜湊值以確保外部腳本、樣式表和其他資源的完整性",
+      },
+    },
+  },
+  {
+    slug: "stopwatch",
+    category: "developer",
+    icon: "wrench",
+    tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
+    locales: {
+      ar: {
+        name: "ساعة إيقاف",
+        description:
+          "تتبّع الوقت المنقضي باستخدام بدء وإيقاف مؤقت ولفة وإعادة ضبط.",
+      },
+      de: {
+        name: "Stoppuhr",
+        description:
+          "Erfassen Sie die verstrichene Zeit mit Start-, Pause-, Runden- und Reset-Steuerung.",
+      },
+      en: {
+        name: "Stopwatch",
+        description:
+          "Track elapsed time with start, pause, lap, and reset controls.",
+      },
+      es: {
+        name: "Cronómetro",
+        description:
+          "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer.",
+      },
+      fr: {
+        name: "Chronomètre",
+        description:
+          "Suivez le temps écoulé avec les contrôles démarrer, pause, tour et réinitialisation.",
+      },
+      he: {
+        name: "סטופר",
+        description: "עקבו אחר הזמן שחלף עם התחל, השהה, הקפה ואיפוס.",
+      },
+      hi: {
+        name: "स्टॉपवॉच",
+        description: "शुरू, रोकें, लैप और रीसेट नियंत्रण के साथ बीता समय ट्रैक करें।",
+      },
+      id: {
+        name: "Stopwatch",
+        description:
+          "Lacak waktu berlalu dengan kontrol mulai, jeda, putaran, dan reset.",
+      },
+      it: {
+        name: "Cronometro",
+        description:
+          "Tieni traccia del tempo trascorso con avvio, pausa, giro e reset.",
+      },
+      ja: {
+        name: "ストップウォッチ",
+        description:
+          "開始、停止（一時停止）、ラップ、リセットで経過時間を計測します。",
+      },
+      ko: {
+        name: "스톱워치",
+        description: "시작, 일시정지, 랩, 초기화로 경과 시간을 기록합니다.",
+      },
+      ms: {
+        name: "Jam randik",
+        description:
+          "Jejak masa berlalu dengan mula, jeda, pusingan, dan set semula.",
+      },
+      nl: {
+        name: "Stopwatch",
+        description:
+          "Houd de verstreken tijd bij met start-, pauze-, ronde- en resetknoppen.",
+      },
+      no: {
+        name: "Stoppeklokke",
+        description:
+          "Følg med på medgått tid med start, pause, runde og nullstill.",
+      },
+      pl: {
+        name: "Stoper",
+        description:
+          "Śledź czas upływu za pomocą startu, pauzy, okrążenia i resetu.",
+      },
+      pt: {
+        name: "Cronômetro",
+        description:
+          "Acompanhe o tempo decorrido com iniciar, pausar, volta e redefinir.",
+      },
+      ru: {
+        name: "Секундомер",
+        description:
+          "Измеряйте прошедшее время с помощью старта, паузы, круга и сброса.",
+      },
+      sv: {
+        name: "Stoppur",
+        description: "Följ förloppstid med start, paus, varv och återställ.",
+      },
+      th: {
+        name: "นาฬิกาจับเวลา",
+        description: "ติดตามเวลาที่ผ่านไปด้วยเริ่ม หยุดชั่วคราว รอบ และรีเซ็ต",
+      },
+      tr: {
+        name: "Kronometre",
+        description:
+          "Başlat, duraklat, tur ve sıfırla kontrolleriyle geçen süreyi takip edin.",
+      },
+      vi: {
+        name: "Đồng hồ bấm giờ",
+        description:
+          "Theo dõi thời gian đã trôi qua với bắt đầu, tạm dừng, vòng và đặt lại.",
+      },
+      "zh-CN": {
+        name: "秒表",
+        description: "使用开始、暂停、计次和重置控制来记录经过的时间。",
+      },
+      "zh-TW": {
+        name: "秒錶",
+        description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
       },
     },
   },
@@ -6553,6 +7025,261 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "barcode-generator": {
+    slug: "barcode-generator",
+    category: "image",
+    icon: "image",
+    tags: ["barcode", "code128", "ean", "upc", "generator", "image"],
+    locales: {
+      ar: {
+        name: "مولد الباركود",
+        description:
+          "أنشئ باركود (CODE128 وEAN وUPC وغيرها) وحمّله بصيغ PNG أو SVG أو JPEG أو WebP.",
+      },
+      de: {
+        name: "Barcode-Generator",
+        description:
+          "Erzeugen Sie Barcodes (CODE128, EAN, UPC usw.) und laden Sie sie als PNG, SVG, JPEG oder WebP herunter.",
+      },
+      en: {
+        name: "Barcode Generator",
+        description:
+          "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG, SVG, JPEG, or WebP.",
+      },
+      es: {
+        name: "Generador de Códigos de Barras",
+        description:
+          "Genera códigos de barras (CODE128, EAN, UPC, etc.) y descárgalos como PNG, SVG, JPEG o WebP.",
+      },
+      fr: {
+        name: "Générateur de Codes-barres",
+        description:
+          "Générez des codes‑barres (CODE128, EAN, UPC, etc.) et téléchargez-les en PNG, SVG, JPEG ou WebP.",
+      },
+      he: {
+        name: "מחולל ברקוד",
+        description:
+          "צור ברקודים (CODE128, EAN, UPC ועוד) והורד כ‑PNG, SVG, JPEG או WebP.",
+      },
+      hi: {
+        name: "बारकोड जनरेटर",
+        description:
+          "ब्राउज़र में बारकोड (CODE128, EAN, UPC आदि) बनाएँ और PNG, SVG, JPEG या WebP के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator Kode Batang",
+        description:
+          "Buat kode batang (CODE128, EAN, UPC, dll.) dan unduh sebagai PNG, SVG, JPEG, atau WebP.",
+      },
+      it: {
+        name: "Generatore di Codici a Barre",
+        description:
+          "Genera codici a barre (CODE128, EAN, UPC, ecc.) e scaricali in PNG, SVG, JPEG o WebP.",
+      },
+      ja: {
+        name: "バーコードジェネレーター",
+        description:
+          "バーコード（CODE128、EAN、UPC など）を生成し、PNG / SVG / JPEG / WebP でダウンロード。",
+      },
+      ko: {
+        name: "바코드 생성기",
+        description:
+          "브라우저에서 바코드(CODE128, EAN, UPC 등)를 생성하고 PNG / SVG / JPEG / WebP로 다운로드합니다.",
+      },
+      ms: {
+        name: "Penjana Kod Bar",
+        description:
+          "Jana kod bar (CODE128, EAN, UPC, dll.) dan muat turun sebagai PNG, SVG, JPEG atau WebP.",
+      },
+      nl: {
+        name: "Barcodegenerator",
+        description:
+          "Genereer barcodes (CODE128, EAN, UPC, enz.) en download als PNG, SVG, JPEG of WebP.",
+      },
+      no: {
+        name: "Strekkodegenerator",
+        description:
+          "Generer strekkoder (CODE128, EAN, UPC m.fl.) og last ned som PNG, SVG, JPEG eller WebP.",
+      },
+      pl: {
+        name: "Generator kodów kreskowych",
+        description:
+          "Generuj kody kreskowe (CODE128, EAN, UPC itd.) i pobieraj jako PNG, SVG, JPEG lub WebP.",
+      },
+      pt: {
+        name: "Gerador de Código de Barras",
+        description:
+          "Gere códigos de barras (CODE128, EAN, UPC, etc.) e faça download em PNG, SVG, JPEG ou WebP.",
+      },
+      ru: {
+        name: "Генератор штрихкодов",
+        description:
+          "Создавайте штрихкоды (CODE128, EAN, UPC и др.) и скачивайте их в PNG, SVG, JPEG или WebP.",
+      },
+      sv: {
+        name: "Streckkodsgenerator",
+        description:
+          "Skapa streckkoder (CODE128, EAN, UPC m.fl.) och ladda ner som PNG, SVG, JPEG eller WebP.",
+      },
+      th: {
+        name: "ตัวสร้างบาร์โค้ด",
+        description:
+          "สร้างบาร์โค้ด (CODE128, EAN, UPC เป็นต้น) และดาวน์โหลดเป็น PNG, SVG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "Barkod Oluşturucu",
+        description:
+          "Barkodlar (CODE128, EAN, UPC vb.) oluşturun ve PNG, SVG, JPEG veya WebP olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã vạch",
+        description:
+          "Tạo mã vạch (CODE128, EAN, UPC, v.v.) và tải về dưới dạng PNG, SVG, JPEG hoặc WebP.",
+      },
+      "zh-CN": {
+        name: "条形码生成器",
+        description:
+          "在浏览器内生成条形码（CODE128、EAN、UPC 等），并可下载为 PNG / SVG / JPEG / WebP。",
+      },
+      "zh-TW": {
+        name: "條碼產生器",
+        description:
+          "在瀏覽器內產生條碼（CODE128、EAN、UPC 等），可下載為 PNG / SVG / JPEG / WebP。",
+      },
+    },
+  },
+  "base16-decoder": {
+    slug: "base16-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base16",
+      "hex",
+      "hexadecimal",
+      "decode",
+      "decoder",
+      "binary",
+      "text",
+      "file",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك Base16",
+        description:
+          "يفك ترميز نصوص أو ملفات Base16 (Hex) إلى بايتات خام للفحص والاختبار والأدوات.",
+      },
+      de: {
+        name: "Base16-Dekoder",
+        description:
+          "Dekodiert Base16 (Hex)-Text oder -Dateien in Rohbytes für Inspektion, Tests und Tools.",
+      },
+      en: {
+        name: "Base16 Decoder",
+        description:
+          "Decode Base16 (Hex) text or files into raw bytes for inspection, testing, and tooling.",
+      },
+      es: {
+        name: "Decodificador Base16",
+        description:
+          "Decodifica texto o archivos Base16 (Hex) a bytes sin procesar para inspección, pruebas y herramientas.",
+      },
+      fr: {
+        name: "Décodeur Base16",
+        description:
+          "Décode du texte ou des fichiers Base16 (Hex) en octets bruts pour l’inspection, les tests et les outils.",
+      },
+      he: {
+        name: "מפענח Base16",
+        description:
+          "מפענח טקסט או קבצים Base16 (Hex) לבייטים גולמיים לצורך בדיקה, ניסוי וכלים.",
+      },
+      hi: {
+        name: "Base16 डिकोडर",
+        description:
+          "Base16 (Hex) टेक्स्ट या फ़ाइलों को कच्चे बाइट्स में डिकोड करें ताकि निरीक्षण, परीक्षण और टूलिंग में उपयोग हो।",
+      },
+      id: {
+        name: "Decoder Base16",
+        description:
+          "Decode teks atau file Base16 (Hex) menjadi byte mentah untuk inspeksi, pengujian, dan alat.",
+      },
+      it: {
+        name: "Decodificatore Base16",
+        description:
+          "Decodifica testo o file Base16 (Hex) in byte grezzi per ispezione, test e strumenti.",
+      },
+      ja: {
+        name: "Base16 デコーダー",
+        description:
+          "Base16（Hex）のテキストやファイルを生バイトにデコードし、検査やテストに使用。",
+      },
+      ko: {
+        name: "Base16 디코더",
+        description:
+          "Base16(Hex) 텍스트나 파일을 원시 바이트로 디코딩하여 검사, 테스트, 도구에 활용.",
+      },
+      ms: {
+        name: "Penyahkod Base16",
+        description:
+          "Nyahkod teks atau fail Base16 (Hex) kepada bait mentah untuk pemeriksaan, ujian dan alat.",
+      },
+      nl: {
+        name: "Base16-decoder",
+        description:
+          "Decodeer Base16 (Hex)-tekst of -bestanden naar ruwe bytes voor inspectie, testen en tools.",
+      },
+      no: {
+        name: "Base16-dekoder",
+        description:
+          "Dekoder Base16 (Hex)-tekst eller filer til rå byte for inspeksjon, testing og verktøy.",
+      },
+      pl: {
+        name: "Dekoder Base16",
+        description:
+          "Dekoduj tekst lub pliki Base16 (Hex) do surowych bajtów do inspekcji, testów i narzędzi.",
+      },
+      pt: {
+        name: "Decodificador Base16",
+        description:
+          "Decodifica texto ou arquivos Base16 (Hex) em bytes brutos para inspeção, testes e ferramentas.",
+      },
+      ru: {
+        name: "Base16-декодер",
+        description:
+          "Декодирует текст или файлы Base16 (Hex) в сырые байты для проверки, тестирования и инструментов.",
+      },
+      sv: {
+        name: "Base16-avkodare",
+        description:
+          "Avkoda Base16 (Hex)-text eller filer till råa byte för inspektion, testning och verktyg.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base16",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base16 (Hex) เป็นไบต์ดิบสำหรับการตรวจสอบ การทดสอบ และเครื่องมือ",
+      },
+      tr: {
+        name: "Base16 Kod Çözücü",
+        description:
+          "Base16 (Hex) metin veya dosyalarını inceleme, test ve araçlar için ham baytlara dönüştürür.",
+      },
+      vi: {
+        name: "Bộ giải mã Base16",
+        description:
+          "Giải mã văn bản hoặc tệp Base16 (Hex) thành byte thô để kiểm tra, thử nghiệm và công cụ.",
+      },
+      "zh-CN": {
+        name: "Base16 解码器",
+        description:
+          "将 Base16（Hex）文本或文件解码为原始字节，用于检查、测试和工具处理。",
+      },
+      "zh-TW": {
+        name: "Base16 解碼器",
+        description:
+          "將 Base16（Hex）文字或檔案解碼為原始位元組，用於檢視、測試和工具處理。",
       },
     },
   },
@@ -9880,6 +10607,107 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "port-number-lookup": {
+    slug: "port-number-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["port", "tcp", "udp", "iana", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أرقام المنافذ",
+        description: "البحث وتصفح أرقام منافذ الشبكة الشائعة",
+      },
+      de: {
+        name: "Port-Nummern-Suche",
+        description: "Suchen und durchsuchen Sie gängige Netzwerk-Portnummern",
+      },
+      en: {
+        name: "Port Number Lookup",
+        description: "Search and browse common network port numbers",
+      },
+      es: {
+        name: "Consulta de Puertos",
+        description: "Buscar y explorar números de puertos de red comunes",
+      },
+      fr: {
+        name: "Recherche de Ports",
+        description:
+          "Rechercher et parcourir les numéros de ports réseau courants",
+      },
+      he: {
+        name: "חיפוש מספרי פורט",
+        description: "חפש ועיין במספרי פורט רשת נפוצים",
+      },
+      hi: {
+        name: "पोर्ट नंबर खोज",
+        description: "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Nomor Port",
+        description: "Cari dan jelajahi nomor port jaringan umum",
+      },
+      it: {
+        name: "Ricerca Porte",
+        description: "Cerca e sfoglia i numeri di porta di rete comuni",
+      },
+      ja: {
+        name: "ポート番号検索",
+        description: "一般的なネットワークポート番号を検索・閲覧",
+      },
+      ko: {
+        name: "포트 번호 조회",
+        description: "일반적인 네트워크 포트 번호 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Nombor Port",
+        description: "Cari dan semak nombor port rangkaian biasa",
+      },
+      nl: {
+        name: "Poortnummer Opzoeken",
+        description: "Zoek en blader door veelvoorkomende netwerkpoortnummers",
+      },
+      no: {
+        name: "Portnummersok",
+        description: "Sok og bla gjennom vanlige nettverksportnumre",
+      },
+      pl: {
+        name: "Wyszukiwanie Portów",
+        description: "Wyszukuj i przeglądaj popularne numery portów sieciowych",
+      },
+      pt: {
+        name: "Consulta de Portas",
+        description: "Pesquisar e navegar por números de portas de rede comuns",
+      },
+      ru: {
+        name: "Поиск Портов",
+        description: "Поиск и просмотр распространённых сетевых портов",
+      },
+      sv: {
+        name: "Portnummerssökning",
+        description: "Sök och bläddra bland vanliga nätverksportnummer",
+      },
+      th: {
+        name: "ค้นหาหมายเลขพอร์ต",
+        description: "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป",
+      },
+      tr: {
+        name: "Port Numarası Arama",
+        description: "Yaygın ağ port numaralarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Số Cổng",
+        description: "Tìm kiếm và duyệt các số cổng mạng phổ biến",
+      },
+      "zh-CN": {
+        name: "端口号查询",
+        description: "搜索和浏览常见网络端口号",
+      },
+      "zh-TW": {
+        name: "連接埠號碼查詢",
+        description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
   "prettier-code-formatter": {
     slug: "prettier-code-formatter",
     category: "developer",
@@ -11119,6 +11947,122 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SRI 雜湊產生器",
         description:
           "為網頁資源產生子資源完整性（SRI）雜湊值。建立 SHA-256、SHA-384 或 SHA-512 雜湊值以確保外部腳本、樣式表和其他資源的完整性",
+      },
+    },
+  },
+  stopwatch: {
+    slug: "stopwatch",
+    category: "developer",
+    icon: "wrench",
+    tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
+    locales: {
+      ar: {
+        name: "ساعة إيقاف",
+        description:
+          "تتبّع الوقت المنقضي باستخدام بدء وإيقاف مؤقت ولفة وإعادة ضبط.",
+      },
+      de: {
+        name: "Stoppuhr",
+        description:
+          "Erfassen Sie die verstrichene Zeit mit Start-, Pause-, Runden- und Reset-Steuerung.",
+      },
+      en: {
+        name: "Stopwatch",
+        description:
+          "Track elapsed time with start, pause, lap, and reset controls.",
+      },
+      es: {
+        name: "Cronómetro",
+        description:
+          "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer.",
+      },
+      fr: {
+        name: "Chronomètre",
+        description:
+          "Suivez le temps écoulé avec les contrôles démarrer, pause, tour et réinitialisation.",
+      },
+      he: {
+        name: "סטופר",
+        description: "עקבו אחר הזמן שחלף עם התחל, השהה, הקפה ואיפוס.",
+      },
+      hi: {
+        name: "स्टॉपवॉच",
+        description: "शुरू, रोकें, लैप और रीसेट नियंत्रण के साथ बीता समय ट्रैक करें।",
+      },
+      id: {
+        name: "Stopwatch",
+        description:
+          "Lacak waktu berlalu dengan kontrol mulai, jeda, putaran, dan reset.",
+      },
+      it: {
+        name: "Cronometro",
+        description:
+          "Tieni traccia del tempo trascorso con avvio, pausa, giro e reset.",
+      },
+      ja: {
+        name: "ストップウォッチ",
+        description:
+          "開始、停止（一時停止）、ラップ、リセットで経過時間を計測します。",
+      },
+      ko: {
+        name: "스톱워치",
+        description: "시작, 일시정지, 랩, 초기화로 경과 시간을 기록합니다.",
+      },
+      ms: {
+        name: "Jam randik",
+        description:
+          "Jejak masa berlalu dengan mula, jeda, pusingan, dan set semula.",
+      },
+      nl: {
+        name: "Stopwatch",
+        description:
+          "Houd de verstreken tijd bij met start-, pauze-, ronde- en resetknoppen.",
+      },
+      no: {
+        name: "Stoppeklokke",
+        description:
+          "Følg med på medgått tid med start, pause, runde og nullstill.",
+      },
+      pl: {
+        name: "Stoper",
+        description:
+          "Śledź czas upływu za pomocą startu, pauzy, okrążenia i resetu.",
+      },
+      pt: {
+        name: "Cronômetro",
+        description:
+          "Acompanhe o tempo decorrido com iniciar, pausar, volta e redefinir.",
+      },
+      ru: {
+        name: "Секундомер",
+        description:
+          "Измеряйте прошедшее время с помощью старта, паузы, круга и сброса.",
+      },
+      sv: {
+        name: "Stoppur",
+        description: "Följ förloppstid med start, paus, varv och återställ.",
+      },
+      th: {
+        name: "นาฬิกาจับเวลา",
+        description: "ติดตามเวลาที่ผ่านไปด้วยเริ่ม หยุดชั่วคราว รอบ และรีเซ็ต",
+      },
+      tr: {
+        name: "Kronometre",
+        description:
+          "Başlat, duraklat, tur ve sıfırla kontrolleriyle geçen süreyi takip edin.",
+      },
+      vi: {
+        name: "Đồng hồ bấm giờ",
+        description:
+          "Theo dõi thời gian đã trôi qua với bắt đầu, tạm dừng, vòng và đặt lại.",
+      },
+      "zh-CN": {
+        name: "秒表",
+        description: "使用开始、暂停、计次和重置控制来记录经过的时间。",
+      },
+      "zh-TW": {
+        name: "秒錶",
+        description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
       },
     },
   },

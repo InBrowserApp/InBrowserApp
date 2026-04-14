@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Очистить",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Скопировать результат",
   "copiedLabel": "Скопировано",
   "resultLabel": "Результаты",
   "resultDescription": "Results update as soon as both the JSON input and the JMESPath expression are valid.",

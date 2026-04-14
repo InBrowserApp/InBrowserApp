@@ -1,0 +1,18 @@
+{
+  "startLabel": "Start",
+  "resumeLabel": "Wznów",
+  "pauseLabel": "Pauza",
+  "lapLabel": "Okrążenie",
+  "resetLabel": "Resetuj",
+  "lapsLabel": "Okrążenia",
+  "clearLabel": "Wyczyść",
+  "exportLabel": "Eksportuj",
+  "noLapsLabel": "Brak okrążeń",
+  "statusRunningLabel": "Trwa",
+  "statusPausedLabel": "Wstrzymany",
+  "lapTimeLabel": "Okrążenie",
+  "totalTimeLabel": "Razem",
+  "lapMillisecondsLabel": "Okrążenie (ms)",
+  "totalMillisecondsLabel": "Razem (ms)",
+  "lapsDescription": "Sprawdź czas okrążenia i łączny czas narastająco. Wyeksportuj listę do CSV albo wyczyść ją, aby zacząć od nowa."
+}

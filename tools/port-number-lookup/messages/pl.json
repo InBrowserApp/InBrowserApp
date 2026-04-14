@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Szukaj po numerze portu lub nazwie uslugi...",
+  "all": "Wszystkie",
+  "common": "Popularne",
+  "system": "Systemowe (0-1023)",
+  "registered": "Zarejestrowane (1024+)",
+  "port": "Port",
+  "service": "Usluga",
+  "protocol": "Protokol",
+  "description": "Opis",
+  "aboutTitle": "Czym jest Numer Portu?",
+  "aboutDescription": "Numer portu to 16-bitowa liczba calkowita bez znaku (0-65535) uzywana do identyfikacji konkretnych procesow lub uslug na urzadzeniu sieciowym. Porty umozliwiaja dzialanie wielu uslug sieciowych pod tym samym adresem IP.",
+  "systemPorts": "Porty Systemowe (0-1023):",
+  "systemPortsDesc": "Nazywane rowniez \"dobrze znanymi portami\", zarezerwowane dla popularnych uslug jak HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Porty Zarejestrowane (1024-49151):",
+  "registeredPortsDesc": "Uzywane przez aplikacje i uslugi zarejestrowane w IANA, takie jak MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Porty Dynamiczne (49152-65535):",
+  "dynamicPortsDesc": "Nazywane rowniez \"portami efemerycznymi\", uzywane do tymczasowych polaczen przez aplikacje klienckie.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

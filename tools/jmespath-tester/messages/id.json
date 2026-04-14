@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Hapus",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Salin hasil",
   "copiedLabel": "Disalin",
   "resultLabel": "Hasil",
   "resultDescription": "Results update as soon as both the JSON input and the JMESPath expression are valid.",

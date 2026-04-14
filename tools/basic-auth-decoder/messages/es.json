@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Decodifica el encabezado HTTP Basic Authorization para extraer usuario y contraseña desde Base64. Útil para depuración y pruebas de API",
   "usernameLabel": "Usuario",
   "passwordLabel": "Contraseña",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Copiar resultado",
   "copiedLabel": "Copiado",
   "resetLabel": "Restablecer ejemplo",
   "invalidHeaderTitle": "Encabezado Basic Authorization inválido",

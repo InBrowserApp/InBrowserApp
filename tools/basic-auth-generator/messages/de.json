@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "Kopieren Sie den genauen Authorization-Header-Wert für Fetch-Aufrufe, API-Clients oder manuelle Anfragen.",
   "curlExampleLabel": "cURL Beispiel",
   "curlExampleDescription": "Starten Sie mit diesem direkt nutzbaren curl-Befehl und ersetzen Sie bei Bedarf die Beispiel-URL.",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Ergebnis kopieren",
   "copiedLabel": "Kopiert",
   "resetLabel": "Beispiel zurücksetzen"
 }

@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "Salin nilai pengepala Authorization yang tepat untuk panggilan fetch, klien API atau permintaan manual.",
   "curlExampleLabel": "Contoh cURL",
   "curlExampleDescription": "Mulakan dengan arahan curl yang sedia digunakan ini, kemudian gantikan URL contoh jika perlu.",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Salin hasil",
   "copiedLabel": "Disalin",
   "resetLabel": "Tetapkan semula contoh"
 }

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "पोर्ट नंबर या सेवा नाम से खोजें...",
+  "all": "सभी",
+  "common": "सामान्य",
+  "system": "सिस्टम (0-1023)",
+  "registered": "पंजीकृत (1024+)",
+  "port": "पोर्ट",
+  "service": "सेवा",
+  "protocol": "प्रोटोकॉल",
+  "description": "विवरण",
+  "aboutTitle": "पोर्ट नंबर क्या है?",
+  "aboutDescription": "पोर्ट नंबर एक 16-बिट अहस्ताक्षरित पूर्णांक (0-65535) है जिसका उपयोग नेटवर्क डिवाइस पर विशिष्ट प्रक्रियाओं या सेवाओं की पहचान के लिए किया जाता है। पोर्ट एक ही IP पते पर कई नेटवर्क सेवाओं को चलाने की अनुमति देते हैं।",
+  "systemPorts": "सिस्टम पोर्ट (0-1023):",
+  "systemPortsDesc": "\"प्रसिद्ध पोर्ट\" भी कहा जाता है, HTTP (80), HTTPS (443), SSH (22) जैसी सामान्य सेवाओं के लिए आरक्षित।",
+  "registeredPorts": "पंजीकृत पोर्ट (1024-49151):",
+  "registeredPortsDesc": "IANA के साथ पंजीकृत अनुप्रयोगों और सेवाओं द्वारा उपयोग किया जाता है, जैसे MySQL (3306), PostgreSQL (5432)।",
+  "dynamicPorts": "गतिशील पोर्ट (49152-65535):",
+  "dynamicPortsDesc": "\"अस्थायी पोर्ट\" भी कहा जाता है, क्लाइंट अनुप्रयोगों द्वारा अस्थायी कनेक्शन के लिए उपयोग किया जाता है।",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

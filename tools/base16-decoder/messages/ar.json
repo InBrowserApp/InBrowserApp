@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "إدخال Hex",
+  "base16InputPlaceholder": "أدخل نص Hex...",
+  "importFromFileLabel": "استيراد من ملف",
+  "decodedOutputLabel": "المخرجات المفككة",
+  "decodedOutputEmptyDescription": "سيظهر النص المفكك هنا...",
+  "downloadFileLabel": "تنزيل الملف",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال",
+  "invalidBase16Title": "نص Hex غير صالح",
+  "fileReadFailedTitle": "فشل في قراءة الملف",
+  "previewTruncatedLabel": "تم اقتطاع المعاينة"
+}

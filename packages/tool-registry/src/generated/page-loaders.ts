@@ -7,6 +7,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "adler32-hash-text-or-file": () =>
     import("@tool/adler32-hash-text-or-file/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
+  "barcode-generator": () => import("@tool/barcode-generator/page"),
+  "base16-decoder": () => import("@tool/base16-decoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
@@ -37,6 +39,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/openapi-to-typescript-converter/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
+  "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
@@ -51,6 +54,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
+  stopwatch: () => import("@tool/stopwatch/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),

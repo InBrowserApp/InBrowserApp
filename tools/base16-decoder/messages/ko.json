@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex 입력",
+  "base16InputPlaceholder": "Hex 텍스트 입력...",
+  "importFromFileLabel": "파일에서 가져오기",
+  "decodedOutputLabel": "디코딩 결과",
+  "decodedOutputEmptyDescription": "디코딩된 텍스트가 여기에 표시됩니다...",
+  "downloadFileLabel": "파일 다운로드",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정",
+  "invalidBase16Title": "유효하지 않은 Hex 텍스트",
+  "fileReadFailedTitle": "파일을 읽지 못했습니다",
+  "previewTruncatedLabel": "미리보기가 잘렸습니다"
+}

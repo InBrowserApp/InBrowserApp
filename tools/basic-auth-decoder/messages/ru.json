@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Декодируйте заголовок HTTP Basic Authorization, чтобы извлечь имя пользователя и пароль из Base64. Полезно для отладки и тестирования API",
   "usernameLabel": "Имя пользователя",
   "passwordLabel": "Пароль",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Скопировать результат",
   "copiedLabel": "Скопировано",
   "resetLabel": "Сбросить пример",
   "invalidHeaderTitle": "Недействительный заголовок Basic Authorization",

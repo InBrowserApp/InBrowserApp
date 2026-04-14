@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "HTTP Basic Authorization başlığını çözüp Base64’ten kullanıcı adı ve parolayı çıkarın. Hata ayıklama ve API testi için yararlı",
   "usernameLabel": "Kullanıcı Adı",
   "passwordLabel": "Parola",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sonucu kopyala",
   "copiedLabel": "Kopyalandı",
   "resetLabel": "Örneği sıfırla",
   "invalidHeaderTitle": "Geçersiz Basic Authorization başlığı",

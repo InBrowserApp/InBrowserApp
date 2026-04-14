@@ -1,0 +1,18 @@
+{
+  "startLabel": "Avvia",
+  "resumeLabel": "Riprendi",
+  "pauseLabel": "Pausa",
+  "lapLabel": "Giro",
+  "resetLabel": "Reimposta",
+  "lapsLabel": "Giri",
+  "clearLabel": "Cancella",
+  "exportLabel": "Esporta",
+  "noLapsLabel": "Nessun giro",
+  "statusRunningLabel": "In corso",
+  "statusPausedLabel": "In pausa",
+  "lapTimeLabel": "Giro",
+  "totalTimeLabel": "Totale",
+  "lapMillisecondsLabel": "Giro (ms)",
+  "totalMillisecondsLabel": "Totale (ms)",
+  "lapsDescription": "Controlla i tempi parziali di ogni giro e il totale cumulato. Esporta l'elenco in CSV oppure cancellalo per ricominciare."
+}

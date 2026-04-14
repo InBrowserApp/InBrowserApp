@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Xóa",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",
   "resultLabel": "Kết quả",
   "resultDescription": "Results update as soon as both the JSON input and the JMESPath expression are valid.",

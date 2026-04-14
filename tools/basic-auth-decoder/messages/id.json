@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Dekode header HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata sandi dari Base64. Berguna untuk debugging dan pengujian API",
   "usernameLabel": "Nama pengguna",
   "passwordLabel": "Kata sandi",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Salin hasil",
   "copiedLabel": "Disalin",
   "resetLabel": "Atur ulang contoh",
   "invalidHeaderTitle": "Header Basic Authorization tidak valid",

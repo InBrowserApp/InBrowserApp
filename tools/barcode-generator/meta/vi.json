@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo mã vạch",
+  "description": "Tạo mã vạch (CODE128, EAN, UPC, v.v.) và tải về dưới dạng PNG, SVG, JPEG hoặc WebP."
+}

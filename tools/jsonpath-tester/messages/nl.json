@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Wissen",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Resultaat kopiëren",
   "copiedLabel": "Gekopieerd",
   "resultLabel": "Resultaten",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",

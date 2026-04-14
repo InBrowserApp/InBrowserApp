@@ -1,0 +1,4 @@
+{
+  "name": "條碼產生器",
+  "description": "在瀏覽器內產生條碼（CODE128、EAN、UPC 等），可下載為 PNG / SVG / JPEG / WebP。"
+}

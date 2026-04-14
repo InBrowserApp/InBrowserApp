@@ -186,6 +186,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "barcode-generator",
+    language: "ar",
+  },
+  {
+    slug: "barcode-generator",
+    language: "de",
+  },
+  {
+    slug: "barcode-generator",
+    language: "en",
+  },
+  {
+    slug: "barcode-generator",
+    language: "es",
+  },
+  {
+    slug: "barcode-generator",
+    language: "fr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "he",
+  },
+  {
+    slug: "barcode-generator",
+    language: "hi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "id",
+  },
+  {
+    slug: "barcode-generator",
+    language: "it",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ja",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ko",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ms",
+  },
+  {
+    slug: "barcode-generator",
+    language: "nl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "no",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pt",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ru",
+  },
+  {
+    slug: "barcode-generator",
+    language: "sv",
+  },
+  {
+    slug: "barcode-generator",
+    language: "th",
+  },
+  {
+    slug: "barcode-generator",
+    language: "tr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "vi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base16-decoder",
+    language: "de",
+  },
+  {
+    slug: "base16-decoder",
+    language: "en",
+  },
+  {
+    slug: "base16-decoder",
+    language: "es",
+  },
+  {
+    slug: "base16-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base16-decoder",
+    language: "he",
+  },
+  {
+    slug: "base16-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base16-decoder",
+    language: "id",
+  },
+  {
+    slug: "base16-decoder",
+    language: "it",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base16-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base16-decoder",
+    language: "no",
+  },
+  {
+    slug: "base16-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base16-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base16-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base16-decoder",
+    language: "th",
+  },
+  {
+    slug: "base16-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base16-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base16-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base16-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },
@@ -2670,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "port-number-lookup",
+    language: "ar",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "de",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "en",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "es",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "fr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "he",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "hi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "id",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "it",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ja",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ko",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ms",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "nl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "no",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pt",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ru",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "sv",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "th",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "tr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "vi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "prettier-code-formatter",
     language: "ar",
   },
@@ -3587,6 +3863,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sri-hash-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "stopwatch",
+    language: "ar",
+  },
+  {
+    slug: "stopwatch",
+    language: "de",
+  },
+  {
+    slug: "stopwatch",
+    language: "en",
+  },
+  {
+    slug: "stopwatch",
+    language: "es",
+  },
+  {
+    slug: "stopwatch",
+    language: "fr",
+  },
+  {
+    slug: "stopwatch",
+    language: "he",
+  },
+  {
+    slug: "stopwatch",
+    language: "hi",
+  },
+  {
+    slug: "stopwatch",
+    language: "id",
+  },
+  {
+    slug: "stopwatch",
+    language: "it",
+  },
+  {
+    slug: "stopwatch",
+    language: "ja",
+  },
+  {
+    slug: "stopwatch",
+    language: "ko",
+  },
+  {
+    slug: "stopwatch",
+    language: "ms",
+  },
+  {
+    slug: "stopwatch",
+    language: "nl",
+  },
+  {
+    slug: "stopwatch",
+    language: "no",
+  },
+  {
+    slug: "stopwatch",
+    language: "pl",
+  },
+  {
+    slug: "stopwatch",
+    language: "pt",
+  },
+  {
+    slug: "stopwatch",
+    language: "ru",
+  },
+  {
+    slug: "stopwatch",
+    language: "sv",
+  },
+  {
+    slug: "stopwatch",
+    language: "th",
+  },
+  {
+    slug: "stopwatch",
+    language: "tr",
+  },
+  {
+    slug: "stopwatch",
+    language: "vi",
+  },
+  {
+    slug: "stopwatch",
+    language: "zh-CN",
+  },
+  {
+    slug: "stopwatch",
     language: "zh-TW",
   },
   {

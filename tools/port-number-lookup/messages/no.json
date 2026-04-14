@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Sok etter portnummer eller tjenestenavn...",
+  "all": "Alle",
+  "common": "Vanlige",
+  "system": "System (0-1023)",
+  "registered": "Registrerte (1024+)",
+  "port": "Port",
+  "service": "Tjeneste",
+  "protocol": "Protokoll",
+  "description": "Beskrivelse",
+  "aboutTitle": "Hva er et Portnummer?",
+  "aboutDescription": "Et portnummer er et 16-bits heltall uten fortegn (0-65535) som brukes til a identifisere spesifikke prosesser eller tjenester pa en nettverksenhet. Porter gjor det mulig for flere nettverkstjenester a kjore pa samme IP-adresse.",
+  "systemPorts": "Systemporter (0-1023):",
+  "systemPortsDesc": "Ogsa kalt \"velkjente porter\", reservert for vanlige tjenester som HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Registrerte Porter (1024-49151):",
+  "registeredPortsDesc": "Brukes av applikasjoner og tjenester registrert hos IANA, som MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Dynamiske Porter (49152-65535):",
+  "dynamicPortsDesc": "Ogsa kalt \"efemere porter\", brukes for midlertidige tilkoblinger av klientapplikasjoner.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

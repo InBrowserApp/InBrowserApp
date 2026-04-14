@@ -6,7 +6,7 @@
   "decodedCredentialsDescription": "Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API",
   "usernameLabel": "Nazwa użytkownika",
   "passwordLabel": "Hasło",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",
   "resetLabel": "Resetuj przykład",
   "invalidHeaderTitle": "Nieprawidłowy nagłówek Basic Authorization",
