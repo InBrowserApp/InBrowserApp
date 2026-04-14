@@ -1,0 +1,4 @@
+{
+  "name": "바코드 생성기",
+  "description": "브라우저에서 바코드(CODE128, EAN, UPC 등)를 생성하고 PNG / SVG / JPEG / WebP로 다운로드합니다."
+}

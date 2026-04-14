@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Rechercher par numero de port ou nom de service...",
+  "all": "Tous",
+  "common": "Courants",
+  "system": "Systeme (0-1023)",
+  "registered": "Enregistres (1024+)",
+  "port": "Port",
+  "service": "Service",
+  "protocol": "Protocole",
+  "description": "Description",
+  "aboutTitle": "Qu'est-ce qu'un Numero de Port ?",
+  "aboutDescription": "Un numero de port est un entier non signe de 16 bits (0-65535) utilise pour identifier des processus ou services specifiques sur un appareil en reseau. Les ports permettent a plusieurs services reseau de fonctionner sur la meme adresse IP.",
+  "systemPorts": "Ports Systeme (0-1023) :",
+  "systemPortsDesc": "Egalement appeles \"ports bien connus\", reserves aux services courants comme HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Ports Enregistres (1024-49151) :",
+  "registeredPortsDesc": "Utilises par les applications et services enregistres aupres de l'IANA, tels que MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Ports Dynamiques (49152-65535) :",
+  "dynamicPortsDesc": "Egalement appeles \"ports ephemeres\", utilises pour les connexions temporaires par les applications clientes.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

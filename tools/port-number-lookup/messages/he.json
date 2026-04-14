@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "חפש לפי מספר פורט או שם שירות...",
+  "all": "הכל",
+  "common": "נפוצים",
+  "system": "מערכת (0-1023)",
+  "registered": "רשומים (1024+)",
+  "port": "פורט",
+  "service": "שירות",
+  "protocol": "פרוטוקול",
+  "description": "תיאור",
+  "aboutTitle": "מהו מספר פורט?",
+  "aboutDescription": "מספר פורט הוא מספר שלם ללא סימן בן 16 סיביות (0-65535) המשמש לזיהוי תהליכים או שירותים ספציפיים בהתקן רשת. פורטים מאפשרים לשירותי רשת מרובים לפעול על אותה כתובת IP.",
+  "systemPorts": "פורטים מערכתיים (0-1023):",
+  "systemPortsDesc": "נקראים גם \"פורטים ידועים\", שמורים לשירותים נפוצים כמו HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "פורטים רשומים (1024-49151):",
+  "registeredPortsDesc": "משמשים יישומים ושירותים הרשומים ב-IANA, כגון MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "פורטים דינמיים (49152-65535):",
+  "dynamicPortsDesc": "נקראים גם \"פורטים זמניים\", משמשים לחיבורים זמניים על ידי יישומי לקוח.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

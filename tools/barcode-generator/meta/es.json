@@ -1,0 +1,4 @@
+{
+  "name": "Generador de Códigos de Barras",
+  "description": "Genera códigos de barras (CODE128, EAN, UPC, etc.) y descárgalos como PNG, SVG, JPEG o WebP."
+}

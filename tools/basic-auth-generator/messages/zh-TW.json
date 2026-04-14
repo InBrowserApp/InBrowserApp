@@ -6,7 +6,7 @@
   "authorizationHeaderDescription": "複製完整的 Authorization 標頭值，用於 fetch、API 用戶端或手動請求。",
   "curlExampleLabel": "cURL 範例",
   "curlExampleDescription": "直接以這條可執行的 cURL 指令為起點，需要時再替換範例 URL。",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "複製結果",
   "copiedLabel": "已複製",
   "resetLabel": "重設範例"
 }

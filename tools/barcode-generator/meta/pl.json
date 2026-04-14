@@ -1,0 +1,4 @@
+{
+  "name": "Generator kodów kreskowych",
+  "description": "Generuj kody kreskowe (CODE128, EAN, UPC itd.) i pobieraj jako PNG, SVG, JPEG lub WebP."
+}

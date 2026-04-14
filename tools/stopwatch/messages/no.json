@@ -1,0 +1,18 @@
+{
+  "startLabel": "Start",
+  "resumeLabel": "Fortsett",
+  "pauseLabel": "Pause",
+  "lapLabel": "Runde",
+  "resetLabel": "Nullstill",
+  "lapsLabel": "Runder",
+  "clearLabel": "Tøm",
+  "exportLabel": "Eksporter",
+  "noLapsLabel": "Ingen runder",
+  "statusRunningLabel": "Kjører",
+  "statusPausedLabel": "Pauset",
+  "lapTimeLabel": "Runde",
+  "totalTimeLabel": "Totalt",
+  "lapMillisecondsLabel": "Runde (ms)",
+  "totalMillisecondsLabel": "Totalt (ms)",
+  "lapsDescription": "Se rundetidene og den akkumulerte totalen. Eksporter listen som CSV eller tøm den for å starte på nytt."
+}

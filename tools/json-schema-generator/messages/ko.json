@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON 입력",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "여기에 JSON 데이터를 붙여넣으세요...",
+  "outputTitle": "생성된 스키마",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "유효한 JSON 데이터를 입력하면 스키마가 생성됩니다",
+  "invalidJson": "유효하지 않은 JSON",
+  "optionsTitle": "옵션",
+  "optionDraft": "스키마 드래프트",
+  "optionInferRequired": "필수 속성 추론",
+  "optionAllowAdditionalProperties": "추가 속성 허용",
+  "optionDetectFormat": "문자열 형식 감지 (uuid, email, uri, date-time)",
+  "useSampleLabel": "샘플 사용",
+  "importFromFileLabel": "파일에서 가져오기",
+  "downloadSchemaLabel": "스키마 다운로드",
+  "copySchemaLabel": "스키마 복사",
+  "copiedLabel": "복사됨"
+}

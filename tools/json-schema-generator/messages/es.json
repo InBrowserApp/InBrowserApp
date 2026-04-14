@@ -1,0 +1,19 @@
+{
+  "inputTitle": "Entrada JSON",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "Pegue los datos JSON aquí...",
+  "outputTitle": "Esquema generado",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "Proporcione datos JSON válidos para generar un esquema",
+  "invalidJson": "JSON no válido",
+  "optionsTitle": "Opciones",
+  "optionDraft": "Borrador del esquema",
+  "optionInferRequired": "Inferir propiedades obligatorias",
+  "optionAllowAdditionalProperties": "Permitir propiedades adicionales",
+  "optionDetectFormat": "Detectar formatos de cadena (uuid, email, uri, date-time)",
+  "useSampleLabel": "Usar ejemplo",
+  "importFromFileLabel": "Importar desde archivo",
+  "downloadSchemaLabel": "Descargar esquema",
+  "copySchemaLabel": "Copiar esquema",
+  "copiedLabel": "Copiado"
+}

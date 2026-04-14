@@ -1,0 +1,4 @@
+{
+  "name": "Décodeur Base16",
+  "description": "Décode du texte ou des fichiers Base16 (Hex) en octets bruts pour l’inspection, les tests et les outils."
+}

@@ -1,0 +1,19 @@
+{
+  "inputTitle": "JSON Girdisi",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "JSON verisini buraya yapıştırın...",
+  "outputTitle": "Oluşturulan Şema",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "Şema oluşturmak için geçerli JSON verisi sağlayın",
+  "invalidJson": "Geçersiz JSON",
+  "optionsTitle": "Seçenekler",
+  "optionDraft": "Şema taslağı",
+  "optionInferRequired": "Zorunlu özellikleri çıkar",
+  "optionAllowAdditionalProperties": "Ek özelliklere izin ver",
+  "optionDetectFormat": "Dize biçimlerini algıla (uuid, email, uri, date-time)",
+  "useSampleLabel": "Örnek kullan",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "downloadSchemaLabel": "Şemayı indir",
+  "copySchemaLabel": "Şemayı kopyala",
+  "copiedLabel": "Kopyalandı"
+}

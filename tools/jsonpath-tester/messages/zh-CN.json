@@ -12,7 +12,7 @@
   "useSampleLabel": "使用示例",
   "clearLabel": "清空",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "复制结果",
   "copiedLabel": "已复制",
   "resultLabel": "结果",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",

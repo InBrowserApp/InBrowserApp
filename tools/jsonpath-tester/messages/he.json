@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "נקה",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "העתק תוצאה",
   "copiedLabel": "הועתק",
   "resultLabel": "תוצאות",
   "resultDescription": "Matched values and paths update as soon as both the JSON input and the JSONPath query are valid.",

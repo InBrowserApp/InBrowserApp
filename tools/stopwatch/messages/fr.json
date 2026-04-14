@@ -1,0 +1,18 @@
+{
+  "startLabel": "Démarrer",
+  "resumeLabel": "Reprendre",
+  "pauseLabel": "Pause",
+  "lapLabel": "Tour",
+  "resetLabel": "Réinitialiser",
+  "lapsLabel": "Tours",
+  "clearLabel": "Effacer",
+  "exportLabel": "Exporter",
+  "noLapsLabel": "Aucun tour",
+  "statusRunningLabel": "En cours",
+  "statusPausedLabel": "En pause",
+  "lapTimeLabel": "Tour",
+  "totalTimeLabel": "Total",
+  "lapMillisecondsLabel": "Tour (ms)",
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Consultez le temps de chaque tour et le total cumulé. Exportez la liste en CSV ou effacez-la pour recommencer."
+}

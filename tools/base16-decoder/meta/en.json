@@ -1,0 +1,4 @@
+{
+  "name": "Base16 Decoder",
+  "description": "Decode Base16 (Hex) text or files into raw bytes for inspection, testing, and tooling."
+}

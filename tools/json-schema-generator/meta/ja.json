@@ -1,0 +1,4 @@
+{
+  "name": "JSON Schema ジェネレーター",
+  "description": "例の JSON データから JSON Schema を生成します"
+}

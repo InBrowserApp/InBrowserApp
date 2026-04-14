@@ -12,7 +12,7 @@
   "useSampleLabel": "Use sample",
   "clearLabel": "Wyczyść",
   "copyQueryLabel": "Copy query",
-  "copyResultLabel": "Copy result",
+  "copyResultLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",
   "resultLabel": "Wyniki",
   "resultDescription": "Results update as soon as both the JSON input and the JMESPath expression are valid.",
