@@ -1,0 +1,4 @@
+{
+  "name": "Limpiador de Metadatos de Imagen (EXIF)",
+  "description": "Elimina metadatos EXIF/XMP/IPTC/ICC de imágenes sin recodificar. Mantiene el formato original y funciona sin conexión."
+}

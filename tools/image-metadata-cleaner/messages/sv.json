@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klicka eller dra bild för att ladda upp",
+  "supportedFormats": "Stöder JPEG, PNG, WebP",
+  "remove": "Ta bort",
+  "cleanMetadata": "Rensa metadata",
+  "cleaningMetadata": "Rensar metadata...",
+  "results": "Rensningsresultat",
+  "removed": "Borttagen metadata",
+  "reduction": "Storleksminskning",
+  "fileSize": "Filstorlek",
+  "downloadCleaned": "Ladda ner rensad bild",
+  "note": "Bearbetas lokalt i webbläsaren. Inga uppladdningar.",
+  "error": "Fel",
+  "unsupportedFormat": "Formatet stöds inte. Ladda upp JPEG, PNG eller WebP.",
+  "cleaningComplete": "Metadata rensad.",
+  "cleaningFailed": "Kunde inte rensa metadata. Försök igen."
+}

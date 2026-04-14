@@ -1,0 +1,4 @@
+{
+  "name": "Nettoyeur de Métadonnées d'Image (EXIF)",
+  "description": "Supprime les métadonnées EXIF/XMP/IPTC/ICC des images sans réencodage. Conserve le format original et fonctionne hors ligne."
+}

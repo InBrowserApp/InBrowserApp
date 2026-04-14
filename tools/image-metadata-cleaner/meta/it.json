@@ -1,0 +1,4 @@
+{
+  "name": "Pulitore Metadati Immagini (EXIF)",
+  "description": "Rimuove i metadati EXIF/XMP/IPTC/ICC dalle immagini senza ricodifica. Mantiene il formato originale e funziona offline."
+}

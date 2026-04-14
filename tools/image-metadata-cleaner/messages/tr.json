@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Yüklemek için tıklayın veya görüntüyü sürükleyin",
+  "supportedFormats": "JPEG, PNG, WebP desteklenir",
+  "remove": "Kaldır",
+  "cleanMetadata": "Meta verileri temizle",
+  "cleaningMetadata": "Meta veriler temizleniyor...",
+  "results": "Temizleme sonuçları",
+  "removed": "Kaldırılan meta veriler",
+  "reduction": "Boyut azaltma",
+  "fileSize": "Dosya boyutu",
+  "downloadCleaned": "Temizlenmiş resmi indir",
+  "note": "Tarayıcıda yerel olarak işlenir. Yükleme yapılmaz.",
+  "error": "Hata",
+  "unsupportedFormat": "Desteklenmeyen format. JPEG, PNG veya WebP yükleyin.",
+  "cleaningComplete": "Meta veriler temizlendi.",
+  "cleaningFailed": "Meta veriler temizlenemedi. Tekrar deneyin."
+}

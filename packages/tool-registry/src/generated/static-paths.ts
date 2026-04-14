@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-metadata-cleaner",
+    language: "ar",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "de",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "en",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "es",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "fr",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "he",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "hi",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "id",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "it",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ja",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ko",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ms",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "nl",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "no",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "pl",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "pt",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ru",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "sv",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "th",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "tr",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "vi",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },

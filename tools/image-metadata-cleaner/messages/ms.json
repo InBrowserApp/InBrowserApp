@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klik atau seret imej untuk muat naik",
+  "supportedFormats": "Menyokong JPEG, PNG, WebP",
+  "remove": "Buang",
+  "cleanMetadata": "Bersihkan metadata",
+  "cleaningMetadata": "Membersihkan metadata...",
+  "results": "Hasil pembersihan",
+  "removed": "Metadata yang dibuang",
+  "reduction": "Pengurangan saiz",
+  "fileSize": "Saiz fail",
+  "downloadCleaned": "Muat turun imej yang dibersihkan",
+  "note": "Diproses secara tempatan di pelayar. Tiada muat naik.",
+  "error": "Ralat",
+  "unsupportedFormat": "Format tidak disokong. Muat naik JPEG, PNG atau WebP.",
+  "cleaningComplete": "Metadata dibersihkan.",
+  "cleaningFailed": "Gagal membersihkan metadata. Cuba lagi."
+}

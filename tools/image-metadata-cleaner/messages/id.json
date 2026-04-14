@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klik atau seret gambar untuk mengunggah",
+  "supportedFormats": "Mendukung JPEG, PNG, WebP",
+  "remove": "Hapus",
+  "cleanMetadata": "Bersihkan metadata",
+  "cleaningMetadata": "Membersihkan metadata...",
+  "results": "Hasil pembersihan",
+  "removed": "Metadata yang dihapus",
+  "reduction": "Pengurangan ukuran",
+  "fileSize": "Ukuran file",
+  "downloadCleaned": "Unduh gambar yang dibersihkan",
+  "note": "Diproses secara lokal di browser. Tidak ada unggahan.",
+  "error": "Kesalahan",
+  "unsupportedFormat": "Format tidak didukung. Unggah JPEG, PNG, atau WebP.",
+  "cleaningComplete": "Metadata dibersihkan.",
+  "cleaningFailed": "Gagal membersihkan metadata. Silakan coba lagi."
+}
