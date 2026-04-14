@@ -45,6 +45,15 @@ describe("isSupportedInputImage", () => {
       })
     ).toBe(false)
   })
+
+  test("rejects files with an empty extension when mime type is missing", () => {
+    expect(
+      isSupportedInputImage({
+        name: "README.",
+        type: "",
+      })
+    ).toBe(false)
+  })
 })
 
 describe("resolveIcoOutputName", () => {
@@ -54,6 +63,10 @@ describe("resolveIcoOutputName", () => {
 
   test("adds the ico extension when no extension exists", () => {
     expect(resolveIcoOutputName("favicon")).toBe("favicon.ico")
+  })
+
+  test("preserves dotfile-style names before appending ico", () => {
+    expect(resolveIcoOutputName(".png")).toBe(".png.ico")
   })
 
   test("falls back to the default icon name", () => {

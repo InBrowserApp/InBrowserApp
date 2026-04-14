@@ -69,7 +69,7 @@ function resolveIcoOutputName(fileName: string) {
   const dotIndex = fileName.lastIndexOf(".")
   const baseName = dotIndex > 0 ? fileName.slice(0, dotIndex) : fileName
 
-  return `${baseName || "icon"}.ico`
+  return `${baseName}.ico`
 }
 
 function buildIcoBinary(frames: readonly IcoFrame[]) {
