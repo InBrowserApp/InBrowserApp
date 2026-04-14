@@ -57,7 +57,7 @@ function expandIpv6(input: string) {
     return null
   }
 
-  const head = normalizeIpv6Segments(segments[0] ?? "")
+  const head = normalizeIpv6Segments(segments[0]!)
   if (head === null) {
     return null
   }
@@ -66,7 +66,7 @@ function expandIpv6(input: string) {
     return head.length === 8 ? head : null
   }
 
-  const tail = normalizeIpv6Segments(segments[1] ?? "")
+  const tail = normalizeIpv6Segments(segments[1]!)
   if (tail === null) {
     return null
   }

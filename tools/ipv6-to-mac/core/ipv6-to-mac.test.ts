@@ -41,8 +41,19 @@ describe("convertIpv6ToMac", () => {
 
   test("returns invalid for malformed IPv6 addresses", () => {
     expect(convertIpv6ToMac("not-an-ip")).toEqual({ status: "invalid" })
+    expect(convertIpv6ToMac("%eth0")).toEqual({ status: "invalid" })
     expect(convertIpv6ToMac("2001:::1")).toEqual({ status: "invalid" })
+    expect(convertIpv6ToMac("2001::1::1")).toEqual({ status: "invalid" })
     expect(convertIpv6ToMac("2001:db8::gggg")).toEqual({
+      status: "invalid",
+    })
+    expect(convertIpv6ToMac("2001:db8:1:2:3:4:5")).toEqual({
+      status: "invalid",
+    })
+    expect(convertIpv6ToMac("2001:db8:1:2:3:4:5:6::")).toEqual({
+      status: "invalid",
+    })
+    expect(convertIpv6ToMac("2001:db8::192.0.2.128:1")).toEqual({
       status: "invalid",
     })
     expect(convertIpv6ToMac("::ffff:192.0.2.999")).toEqual({
