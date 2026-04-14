@@ -2958,6 +2958,107 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "port-number-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["port", "tcp", "udp", "iana", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أرقام المنافذ",
+        description: "البحث وتصفح أرقام منافذ الشبكة الشائعة",
+      },
+      de: {
+        name: "Port-Nummern-Suche",
+        description: "Suchen und durchsuchen Sie gängige Netzwerk-Portnummern",
+      },
+      en: {
+        name: "Port Number Lookup",
+        description: "Search and browse common network port numbers",
+      },
+      es: {
+        name: "Consulta de Puertos",
+        description: "Buscar y explorar números de puertos de red comunes",
+      },
+      fr: {
+        name: "Recherche de Ports",
+        description:
+          "Rechercher et parcourir les numéros de ports réseau courants",
+      },
+      he: {
+        name: "חיפוש מספרי פורט",
+        description: "חפש ועיין במספרי פורט רשת נפוצים",
+      },
+      hi: {
+        name: "पोर्ट नंबर खोज",
+        description: "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Nomor Port",
+        description: "Cari dan jelajahi nomor port jaringan umum",
+      },
+      it: {
+        name: "Ricerca Porte",
+        description: "Cerca e sfoglia i numeri di porta di rete comuni",
+      },
+      ja: {
+        name: "ポート番号検索",
+        description: "一般的なネットワークポート番号を検索・閲覧",
+      },
+      ko: {
+        name: "포트 번호 조회",
+        description: "일반적인 네트워크 포트 번호 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Nombor Port",
+        description: "Cari dan semak nombor port rangkaian biasa",
+      },
+      nl: {
+        name: "Poortnummer Opzoeken",
+        description: "Zoek en blader door veelvoorkomende netwerkpoortnummers",
+      },
+      no: {
+        name: "Portnummersok",
+        description: "Sok og bla gjennom vanlige nettverksportnumre",
+      },
+      pl: {
+        name: "Wyszukiwanie Portów",
+        description: "Wyszukuj i przeglądaj popularne numery portów sieciowych",
+      },
+      pt: {
+        name: "Consulta de Portas",
+        description: "Pesquisar e navegar por números de portas de rede comuns",
+      },
+      ru: {
+        name: "Поиск Портов",
+        description: "Поиск и просмотр распространённых сетевых портов",
+      },
+      sv: {
+        name: "Portnummerssökning",
+        description: "Sök och bläddra bland vanliga nätverksportnummer",
+      },
+      th: {
+        name: "ค้นหาหมายเลขพอร์ต",
+        description: "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป",
+      },
+      tr: {
+        name: "Port Numarası Arama",
+        description: "Yaygın ağ port numaralarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Số Cổng",
+        description: "Tìm kiếm và duyệt các số cổng mạng phổ biến",
+      },
+      "zh-CN": {
+        name: "端口号查询",
+        description: "搜索和浏览常见网络端口号",
+      },
+      "zh-TW": {
+        name: "連接埠號碼查詢",
+        description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  {
     slug: "prettier-code-formatter",
     category: "developer",
     icon: "braces",
@@ -8383,6 +8484,107 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  "port-number-lookup": {
+    slug: "port-number-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["port", "tcp", "udp", "iana", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أرقام المنافذ",
+        description: "البحث وتصفح أرقام منافذ الشبكة الشائعة",
+      },
+      de: {
+        name: "Port-Nummern-Suche",
+        description: "Suchen und durchsuchen Sie gängige Netzwerk-Portnummern",
+      },
+      en: {
+        name: "Port Number Lookup",
+        description: "Search and browse common network port numbers",
+      },
+      es: {
+        name: "Consulta de Puertos",
+        description: "Buscar y explorar números de puertos de red comunes",
+      },
+      fr: {
+        name: "Recherche de Ports",
+        description:
+          "Rechercher et parcourir les numéros de ports réseau courants",
+      },
+      he: {
+        name: "חיפוש מספרי פורט",
+        description: "חפש ועיין במספרי פורט רשת נפוצים",
+      },
+      hi: {
+        name: "पोर्ट नंबर खोज",
+        description: "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Nomor Port",
+        description: "Cari dan jelajahi nomor port jaringan umum",
+      },
+      it: {
+        name: "Ricerca Porte",
+        description: "Cerca e sfoglia i numeri di porta di rete comuni",
+      },
+      ja: {
+        name: "ポート番号検索",
+        description: "一般的なネットワークポート番号を検索・閲覧",
+      },
+      ko: {
+        name: "포트 번호 조회",
+        description: "일반적인 네트워크 포트 번호 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Nombor Port",
+        description: "Cari dan semak nombor port rangkaian biasa",
+      },
+      nl: {
+        name: "Poortnummer Opzoeken",
+        description: "Zoek en blader door veelvoorkomende netwerkpoortnummers",
+      },
+      no: {
+        name: "Portnummersok",
+        description: "Sok og bla gjennom vanlige nettverksportnumre",
+      },
+      pl: {
+        name: "Wyszukiwanie Portów",
+        description: "Wyszukuj i przeglądaj popularne numery portów sieciowych",
+      },
+      pt: {
+        name: "Consulta de Portas",
+        description: "Pesquisar e navegar por números de portas de rede comuns",
+      },
+      ru: {
+        name: "Поиск Портов",
+        description: "Поиск и просмотр распространённых сетевых портов",
+      },
+      sv: {
+        name: "Portnummerssökning",
+        description: "Sök och bläddra bland vanliga nätverksportnummer",
+      },
+      th: {
+        name: "ค้นหาหมายเลขพอร์ต",
+        description: "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป",
+      },
+      tr: {
+        name: "Port Numarası Arama",
+        description: "Yaygın ağ port numaralarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Số Cổng",
+        description: "Tìm kiếm và duyệt các số cổng mạng phổ biến",
+      },
+      "zh-CN": {
+        name: "端口号查询",
+        description: "搜索和浏览常见网络端口号",
+      },
+      "zh-TW": {
+        name: "連接埠號碼查詢",
+        description: "搜尋和瀏覽常見網路連接埠號碼",
       },
     },
   },

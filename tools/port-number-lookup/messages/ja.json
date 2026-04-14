@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "ポート番号またはサービス名で検索...",
+  "all": "すべて",
+  "common": "一般的",
+  "system": "システム (0-1023)",
+  "registered": "登録済み (1024+)",
+  "port": "ポート",
+  "service": "サービス",
+  "protocol": "プロトコル",
+  "description": "説明",
+  "aboutTitle": "ポート番号とは？",
+  "aboutDescription": "ポート番号は、ネットワークデバイス上の特定のプロセスやサービスを識別するために使用される 16 ビットの符号なし整数 (0-65535) です。ポートにより、複数のネットワークサービスが同じ IP アドレス上で動作できます。",
+  "systemPorts": "システムポート (0-1023)：",
+  "systemPortsDesc": "「ウェルノウンポート」とも呼ばれ、HTTP (80)、HTTPS (443)、SSH (22) などの一般的なサービス用に予約されています。",
+  "registeredPorts": "登録済みポート (1024-49151)：",
+  "registeredPortsDesc": "IANA に登録されたアプリケーションやサービスが使用します。例：MySQL (3306)、PostgreSQL (5432)。",
+  "dynamicPorts": "動的ポート (49152-65535)：",
+  "dynamicPortsDesc": "「エフェメラルポート」とも呼ばれ、クライアントアプリケーションによる一時的な接続に使用されます。",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

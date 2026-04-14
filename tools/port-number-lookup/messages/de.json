@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Nach Portnummer oder Dienstname suchen...",
+  "all": "Alle",
+  "common": "Haufig",
+  "system": "System (0-1023)",
+  "registered": "Registriert (1024+)",
+  "port": "Port",
+  "service": "Dienst",
+  "protocol": "Protokoll",
+  "description": "Beschreibung",
+  "aboutTitle": "Was ist eine Portnummer?",
+  "aboutDescription": "Eine Portnummer ist eine 16-Bit-Ganzzahl ohne Vorzeichen (0-65535), die verwendet wird, um bestimmte Prozesse oder Dienste auf einem Netzwerkgerat zu identifizieren. Ports ermoglichen es, mehrere Netzwerkdienste auf derselben IP-Adresse auszufuhren.",
+  "systemPorts": "Systemports (0-1023):",
+  "systemPortsDesc": "Auch \"bekannte Ports\" genannt, reserviert fur gangige Dienste wie HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Registrierte Ports (1024-49151):",
+  "registeredPortsDesc": "Verwendet von Anwendungen und Diensten, die bei der IANA registriert sind, wie MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Dynamische Ports (49152-65535):",
+  "dynamicPortsDesc": "Auch \"ephemere Ports\" genannt, verwendet fur temporare Verbindungen durch Client-Anwendungen.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

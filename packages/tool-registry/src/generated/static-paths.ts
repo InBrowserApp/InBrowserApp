@@ -2210,6 +2210,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "port-number-lookup",
+    language: "ar",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "de",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "en",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "es",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "fr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "he",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "hi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "id",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "it",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ja",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ko",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ms",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "nl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "no",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pt",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ru",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "sv",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "th",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "tr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "vi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "prettier-code-formatter",
     language: "ar",
   },

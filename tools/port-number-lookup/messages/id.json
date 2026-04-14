@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Cari berdasarkan nomor port atau nama layanan...",
+  "all": "Semua",
+  "common": "Umum",
+  "system": "Sistem (0-1023)",
+  "registered": "Terdaftar (1024+)",
+  "port": "Port",
+  "service": "Layanan",
+  "protocol": "Protokol",
+  "description": "Deskripsi",
+  "aboutTitle": "Apa itu Nomor Port?",
+  "aboutDescription": "Nomor port adalah bilangan bulat tak bertanda 16-bit (0-65535) yang digunakan untuk mengidentifikasi proses atau layanan tertentu pada perangkat jaringan. Port memungkinkan beberapa layanan jaringan berjalan pada alamat IP yang sama.",
+  "systemPorts": "Port Sistem (0-1023):",
+  "systemPortsDesc": "Juga disebut \"port terkenal\", dicadangkan untuk layanan umum seperti HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Port Terdaftar (1024-49151):",
+  "registeredPortsDesc": "Digunakan oleh aplikasi dan layanan yang terdaftar di IANA, seperti MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Port Dinamis (49152-65535):",
+  "dynamicPortsDesc": "Juga disebut \"port efemeral\", digunakan untuk koneksi sementara oleh aplikasi klien.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}
