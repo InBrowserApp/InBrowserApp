@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro"
+
 import { ImageIcon } from "@workspace/ui/icons"
 
 import androidLauncherBackground from "./preview-assets/android-launcher.webp"
@@ -59,6 +61,20 @@ function SurfaceIcon({
         </div>
       )}
     </div>
+  )
+}
+
+type PreviewBackgroundProps = Readonly<{
+  asset: ImageMetadata
+}>
+
+function PreviewBackground({ asset }: PreviewBackgroundProps) {
+  return (
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${asset.src})` }}
+    />
   )
 }
 
@@ -135,11 +151,8 @@ function ChromeTabPreview({
       }
       className="relative aspect-[524/86] w-full"
     >
-      <img
-        src={dark ? windowsChromeTabDark : windowsChromeTab}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
+      <PreviewBackground
+        asset={dark ? windowsChromeTabDark : windowsChromeTab}
       />
 
       <div className="absolute top-[27.9%] left-[8.78%] h-[37.2%] w-[6.11%]">
@@ -178,12 +191,7 @@ function IOSHomeScreenPreview({ ios, label, src }: IOSHomeScreenPreviewProps) {
       data-testid="ios-home-screen-preview"
       className="relative aspect-[1126/892] w-full overflow-hidden rounded-[1.75rem]"
     >
-      <img
-        src={iosHomeScreenBackground}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <PreviewBackground asset={iosHomeScreenBackground} />
 
       <div className="absolute top-[69.5%] left-[76.7%] aspect-square w-[16.2%] overflow-hidden rounded-[20%]">
         <SurfaceIcon
@@ -213,12 +221,7 @@ function PWAAnyPreview({ pwa, src }: PWAAnyPreviewProps) {
       data-testid="pwa-any-preview"
       className="relative aspect-[460/94] w-full overflow-hidden rounded-[1.75rem]"
     >
-      <img
-        src={windowsTaskbarBackground}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <PreviewBackground asset={windowsTaskbarBackground} />
 
       <div className="absolute top-[24.47%] left-[83.48%] aspect-square w-[10%] overflow-hidden">
         <SurfaceIcon
@@ -244,12 +247,7 @@ function PWAMaskablePreview({ pwa, src }: PWAMaskablePreviewProps) {
       data-testid="pwa-maskable-preview"
       className="relative aspect-[1080/195] w-full overflow-hidden rounded-[1.75rem]"
     >
-      <img
-        src={androidLauncherBackground}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <PreviewBackground asset={androidLauncherBackground} />
 
       <div className="absolute top-[6.73%] left-[42.24%] aspect-square w-[15.63%] overflow-hidden">
         <SurfaceIcon

@@ -1,4 +1,6 @@
 declare module "*.webp" {
-  const src: string
-  export default src
+  import type { ImageMetadata } from "astro"
+
+  const metadata: ImageMetadata
+  export default metadata
 }
