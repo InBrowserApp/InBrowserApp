@@ -17,6 +17,7 @@ const faviconGeneratorCopy = {
   searchResultLabel: "Search result",
   lightTabLabel: "Light tab",
   darkTabLabel: "Dark tab",
+  darkTabSvgNoticeLabel: "SVG icons may not render correctly in dark tabs.",
   iosPreviewTitle: "iOS home screen",
   pwaPreviewTitle: "PWA launcher",
   pwaAnyLabel: "Any purpose",

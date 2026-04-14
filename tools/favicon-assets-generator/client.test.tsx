@@ -87,6 +87,15 @@ describe("FaviconAssetsGeneratorClient", () => {
     expect(
       screen.getByText((value) => value.includes("demo-favicon.svg"))
     ).toBeTruthy()
+    expect(screen.getByTestId("google-search-result-preview")).toBeTruthy()
+    expect(screen.getByTestId("desktop-light-tab-preview")).toBeTruthy()
+    expect(screen.getByTestId("desktop-dark-tab-preview")).toBeTruthy()
+    expect(screen.getByTestId("ios-home-screen-preview")).toBeTruthy()
+    expect(screen.getByTestId("pwa-any-preview")).toBeTruthy()
+    expect(screen.getByTestId("pwa-maskable-preview")).toBeTruthy()
+    expect(
+      screen.getByText("SVG icons may not render correctly in dark tabs.")
+    ).toBeTruthy()
   })
 
   test("opens the desktop dedicated-image panel", async () => {
