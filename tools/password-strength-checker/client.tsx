@@ -2,10 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 
 import { PasswordInputCard } from "./components/password-input-card"
 import { PasswordResultsCard } from "./components/password-results-card"
-import {
-  analyzePassword,
-  type StrengthReport,
-} from "./core/password-strength"
+import { analyzePassword, type StrengthReport } from "./core/password-strength"
 import type { PasswordStrengthCheckerMessages } from "./client/types"
 
 const STORAGE_KEY = "tools:password-strength-checker:password"

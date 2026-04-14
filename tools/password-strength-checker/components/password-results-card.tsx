@@ -4,10 +4,7 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import {
-  Alert,
-  AlertDescription,
-} from "@workspace/ui/components/ui/alert"
+import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   CardDescription,
@@ -39,10 +36,7 @@ type PasswordResultsCardProps = Readonly<{
   messages: PasswordStrengthCheckerMessages
 }>
 
-function PasswordResultsCard({
-  analysis,
-  messages,
-}: PasswordResultsCardProps) {
+function PasswordResultsCard({ analysis, messages }: PasswordResultsCardProps) {
   const description = analysis
     ? [
         getStrengthLabel(analysis.score, messages),
