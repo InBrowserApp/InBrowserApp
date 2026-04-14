@@ -16,6 +16,7 @@
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
+    "@tool/hmac-generator": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-resizer": "workspace:*",
     "@tool/isbn-validator": "workspace:*",

@@ -1,0 +1,18 @@
+{
+  "configurationLabel": "कॉन्फ़िगरेशन",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "secretKeyLabel": "गुप्त कुंजी",
+  "secretKeyPlaceholder": "अपनी गुप्त कुंजी दर्ज करें",
+  "algorithmLabel": "एल्गोरिदम",
+  "inputLabel": "इनपुट",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hmacOutputLabel": "HMAC आउटपुट",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "हेक्साडेसिमल",
+  "base64Label": "Base64",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी किया गया"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "HMAC Generator",
+  "description": "Genereer HMAC (Hash-based Message Authentication Code) handtekeningen voor tekst of bestanden. Ondersteunt SHA-1, SHA-256, SHA-384 en SHA-512 algoritmen met hexadecimale en base64 uitvoerformaten."
+}

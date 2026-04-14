@@ -14,6 +14,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
+  "hmac-generator": () => import("@tool/hmac-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),

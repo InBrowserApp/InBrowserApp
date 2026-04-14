@@ -1,0 +1,18 @@
+{
+  "configurationLabel": "Конфигурация",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "secretKeyLabel": "Секретный ключ",
+  "secretKeyPlaceholder": "Введите ваш секретный ключ",
+  "algorithmLabel": "Алгоритм",
+  "inputLabel": "Ввод",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Импорт из файла",
+  "hmacOutputLabel": "Вывод HMAC",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Шестнадцатеричный",
+  "base64Label": "Base64",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано"
+}
