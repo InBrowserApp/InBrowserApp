@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Jana kata laluan, frasa laluan, kod berkelompok dan PIN terus dalam pelayar tanpa menghantar nilai semasa ke perkhidmatan lain. Alat ini berguna apabila anda memerlukan satu penjana untuk meliputi kelayakan web, frasa yang mudah disebut, kod persediaan dan rahsia angka pendek dalam aliran kerja yang sama.
 
-## Choose the Right Format
+## Pilih format yang sesuai
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Gunakan **Rawak** untuk kata laluan akaun yang padat apabila entropi lebih penting daripada mudah diingati. Gunakan **Perkataan** apabila rahsia perlu dibaca kuat, ditaip pada peranti lain atau dikongsi sekali dengan risiko salah salin yang lebih rendah. Gunakan **Blok** untuk kod jemputan, pengaktifan atau pengesahan yang lebih mudah dikendalikan apabila dipaparkan secara bersegmen. Gunakan **PIN** apabila anda hanya memerlukan digit untuk kunci, kiosk atau akses nombor sementara.
 
-## Tune the Output
+## Laraskan output
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Laraskan panjang, set aksara, pemisah, pengelompokan dan penapis aksara serupa mengikut cara hasil itu benar-benar akan digunakan. Mengecualikan aksara yang kelihatan serupa seperti `I`, `l`, `1`, `O` dan `0` boleh mengurangkan kesilapan penghantaran, manakala pemisah atau peraturan huruf besar yang berbeza boleh menjadikan frasa laluan lebih mudah disebut atau disemak.
 
-## Export and Share
+## Eksport dan kongsi
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Jana sehingga formatnya sesuai, kemudian salin atau muat turun satu nilai akhir sahaja. Hasil kekal tersembunyi secara lalai supaya anda hanya memaparkannya apabila sudah bersedia untuk menyemak atau menyerahkannya. Ini berguna dalam ruang kerja bersama, rakaman dan sesi perkongsian skrin.

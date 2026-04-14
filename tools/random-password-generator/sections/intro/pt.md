@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Crie senhas, frases-senha, códigos em blocos e PINs no navegador sem enviar o valor atual para outro serviço. Esta ferramenta é útil quando você precisa de um único gerador para cobrir credenciais da web, frases fáceis de ditar, códigos de ativação e segredos numéricos curtos no mesmo fluxo.
 
-## Choose the Right Format
+## Escolha o formato certo
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Use **Aleatório** para senhas densas de contas, em que a entropia importa mais do que a memorização. Use **Palavras** quando o segredo precisar ser lido em voz alta, digitado em outro dispositivo ou compartilhado uma única vez com menos risco de transcrição. Use **Blocos** para códigos de convite, ativação ou verificação que ficam melhores quando apresentados em partes. Use **PIN** quando você só precisa de dígitos para fechaduras, terminais ou acessos numéricos temporários.
 
-## Tune the Output
+## Ajuste a saída
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Ajuste comprimento, conjunto de caracteres, separadores, agrupamento e filtro de caracteres parecidos de acordo com o uso real do resultado. Excluir caracteres semelhantes como `I`, `l`, `1`, `O` e `0` pode reduzir erros de repasse, enquanto mudar separadores ou regras de capitalização pode tornar uma frase-senha mais fácil de ditar ou conferir.
 
-## Export and Share
+## Exporte e compartilhe
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Gere até que o formato esteja certo e então copie ou baixe apenas um valor final. A saída fica oculta por padrão para que você a revele somente quando for revisar ou entregar, o que é útil em espaços compartilhados, gravações e sessões de compartilhamento de tela.

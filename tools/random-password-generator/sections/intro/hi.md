@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+ब्राउज़र के अंदर ही पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाइए, बिना वर्तमान मान को किसी दूसरी सेवा पर भेजे। यह टूल तब उपयोगी है जब आपको एक ही वर्कफ़्लो में वेबसाइट क्रेडेंशियल, बोलकर बताए जा सकने वाले वाक्यांश, सेटअप कोड और छोटे संख्यात्मक रहस्य बनाने हों।
 
-## Choose the Right Format
+## सही फ़ॉर्मैट चुनें
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+जब आपको अकाउंट लॉगिन के लिए मज़बूत और घना पासवर्ड चाहिए, तब **रैंडम** इस्तेमाल करें। जब परिणाम को बोलकर बताना हो, किसी दूसरे डिवाइस पर टाइप करना हो, या लिखते समय गलती की संभावना कम करनी हो, तब **शब्द** इस्तेमाल करें। निमंत्रण कोड, ऑनबोर्डिंग कोड या ऐसे प्रारूपों के लिए जो हिस्सों में दिखाने पर बेहतर लगते हैं, **ब्लॉक** इस्तेमाल करें। जब आपको केवल अंकों वाला छोटा रहस्य चाहिए, तब **PIN** इस्तेमाल करें।
 
-## Tune the Output
+## आउटपुट समायोजित करें
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+लंबाई, अक्षर सेट, विभाजक, समूहबद्धता और मिलते-जुलते अक्षरों को हटाने की सेटिंग को वास्तविक उपयोग के अनुसार बदलें। `I`, `l`, `1`, `O` और `0` जैसे मिलते-जुलते अक्षरों को हटाने से साझा करते समय गलती कम हो सकती है, जबकि अलग विभाजक या कैपिटलाइज़ेशन नियम पासफ़्रेज़ को बोलकर बताने या जाँचने में आसान बना सकते हैं।
 
-## Export and Share
+## निर्यात और साझा करें
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+फ़ॉर्मैट सही लगने तक जनरेट करें, फिर केवल एक अंतिम परिणाम को कॉपी या डाउनलोड करें। परिणाम डिफ़ॉल्ट रूप से छिपा रहता है, इसलिए आप उसे तभी दिखाते हैं जब उसे देखना, जाँचना या सौंपना हो। यह साझा कार्यक्षेत्र, रिकॉर्डिंग और स्क्रीन-शेयरिंग सत्रों में उपयोगी है।

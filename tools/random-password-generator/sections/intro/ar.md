@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح من دون إرسال القيمة الحالية إلى خدمة أخرى. هذه الأداة مفيدة عندما تحتاج إلى مولد واحد يغطي بيانات اعتماد الويب والعبارات السهلة للإملاء ورموز التهيئة والأسرار الرقمية القصيرة ضمن نفس سير العمل.
 
-## Choose the Right Format
+## اختر التنسيق المناسب
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+استخدم **عشوائي** لكلمات مرور الحسابات الكثيفة التي تكون فيها القوة أهم من سهولة التذكر. استخدم **كلمات** عندما تحتاج إلى قراءة السر بصوت عالٍ أو إدخاله على جهاز آخر أو مشاركته مرة واحدة مع تقليل أخطاء النسخ. استخدم **مجموعات** لرموز الدعوات أو التهيئة أو التحقق التي تستفيد من العرض على شكل مقاطع. استخدم **PIN** عندما تحتاج إلى أرقام فقط للأقفال أو الأكشاك أو الوصول الرقمي المؤقت.
 
-## Tune the Output
+## اضبط المخرجات
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+اضبط الطول ومجموعة المحارف والفواصل وطريقة التجميع وخيار استبعاد المحارف المتشابهة وفقًا لكيفية استخدام النتيجة فعليًا. استبعاد المحارف المتشابهة مثل `I` و`l` و`1` و`O` و`0` يمكن أن يقلل أخطاء التسليم، بينما قد تجعل الفواصل المختلفة أو قواعد الكتابة الكبيرة عبارة المرور أسهل في الإملاء أو التحقق.
 
-## Export and Share
+## صدّر وشارك
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+واصل التوليد حتى يصبح التنسيق مناسبًا، ثم انسخ أو نزّل قيمة نهائية واحدة فقط. تبقى النتيجة مخفية افتراضيًا حتى تعرضها فقط عندما تكون مستعدًا لمراجعتها أو تسليمها، وهذا مفيد في المساحات المشتركة والتسجيلات وجلسات مشاركة الشاشة.

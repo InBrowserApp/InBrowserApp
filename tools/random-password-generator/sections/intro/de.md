@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser, ohne den aktuellen Wert an einen anderen Dienst zu senden. Das Tool ist nützlich, wenn du in einem einzigen Ablauf Web-Zugangsdaten, gut diktierbare Passphrasen, Einrichtungscodes und kurze numerische Geheimnisse abdecken willst.
 
-## Choose the Right Format
+## Das passende Format wählen
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Nutze **Zufall** für dichte Kontopasswörter, bei denen Entropie wichtiger ist als Merkfähigkeit. Nutze **Wörter**, wenn das Geheimnis vorgelesen, auf einem anderen Gerät eingegeben oder einmalig mit geringerem Abschreibrisiko weitergegeben werden soll. Nutze **Blöcke** für Einladungs-, Einrichtungs- oder Verifizierungscodes, die von einer segmentierten Darstellung profitieren. Nutze **PIN**, wenn du nur Ziffern für Schlösser, Terminals oder temporäre numerische Zugänge brauchst.
 
-## Tune the Output
+## Ausgabe anpassen
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Passe Länge, Zeichensatz, Trennzeichen, Gruppierung und den Filter für ähnliche Zeichen an den tatsächlichen Einsatzzweck an. Das Ausschließen ähnlich aussehender Zeichen wie `I`, `l`, `1`, `O` und `0` kann Übertragungsfehler reduzieren, während andere Trennzeichen oder Großschreibungsregeln eine Passphrase leichter diktier- oder prüfbar machen.
 
-## Export and Share
+## Exportieren und teilen
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Generiere so lange, bis das Format stimmt, und kopiere oder lade dann genau einen finalen Wert herunter. Die Ausgabe bleibt standardmäßig verborgen, sodass du sie erst anzeigst, wenn du sie prüfen oder weitergeben willst. Das ist besonders in geteilten Arbeitsumgebungen, Aufnahmen und Bildschirmfreigaben hilfreich.

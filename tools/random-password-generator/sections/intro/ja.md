@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+現在の値を他のサービスに送信せず、ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成できます。このツールは、Web の認証情報、口頭で伝えやすいフレーズ、セットアップコード、短い数値シークレットを同じ流れで扱いたいときに役立ちます。
 
-## Choose the Right Format
+## 適切な形式を選ぶ
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+**ランダム** は、覚えやすさよりも強度を優先した高密度なアカウント用パスワードに向いています。**単語** は、声に出して伝える、別の端末で入力する、1 回だけ共有する、といった場面で転記ミスを減らしたい場合に向いています。**ブロック** は、招待コード、初期設定コード、確認コードのように、区切って見せると扱いやすい形式に向いています。**PIN** は、ロックや端末、短期的な数値アクセスに必要な数字だけの秘密に向いています。
 
-## Tune the Output
+## 出力を調整する
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+長さ、文字セット、区切り文字、グループ化、似た文字の除外を、実際の使い方に合わせて調整してください。`I`、`l`、`1`、`O`、`0` のような見分けにくい文字を除外すると受け渡し時のミスを減らせますし、区切りや大文字化のルールを変えると、パスフレーズを読み上げたり確認したりしやすくなります。
 
-## Export and Share
+## 書き出しと共有
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+形式が整うまで生成を繰り返し、最終的に必要な 1 つだけをコピーまたはダウンロードしてください。結果は初期状態で非表示のままなので、確認や受け渡しの直前にだけ表示できます。共有スペース、録画、画面共有の場面でも扱いやすくなります。

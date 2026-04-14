@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+현재 값을 다른 서비스로 보내지 않고 브라우저 안에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 만들 수 있습니다. 이 도구는 웹 자격 증명, 소리 내어 읽기 쉬운 문구, 설정 코드, 짧은 숫자 비밀값을 하나의 흐름에서 처리하고 싶을 때 유용합니다.
 
-## Choose the Right Format
+## 알맞은 형식 선택
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+**랜덤**은 기억하기 쉬운 것보다 강도가 더 중요한 계정용 비밀번호에 적합합니다. **단어**는 비밀값을 소리 내어 읽거나 다른 기기에서 입력하거나 한 번만 전달해야 할 때 필기 오류를 줄이는 데 적합합니다. **블록**은 초대 코드, 초기 설정 코드, 확인 코드처럼 구간을 나눠 보여주면 더 다루기 쉬운 형식에 적합합니다. **PIN**은 잠금 장치, 키오스크, 임시 숫자 접근처럼 숫자만 필요한 경우에 적합합니다.
 
-## Tune the Output
+## 출력 조정
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+길이, 문자 집합, 구분자, 그룹 방식, 비슷한 문자 제외 옵션을 실제 사용 방식에 맞게 조정하세요. `I`, `l`, `1`, `O`, `0`처럼 헷갈리기 쉬운 문자를 제외하면 전달 실수를 줄일 수 있고, 구분자나 대문자 규칙을 바꾸면 패스프레이즈를 읽어 주거나 확인하기가 쉬워집니다.
 
-## Export and Share
+## 내보내기 및 공유
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+형식이 만족스러울 때까지 생성한 뒤 최종값 하나만 복사하거나 다운로드하세요. 결과는 기본적으로 숨겨져 있으므로 검토하거나 전달할 때에만 표시할 수 있어, 공유 작업 공간이나 녹화, 화면 공유 상황에서도 더 안전하게 다룰 수 있습니다.

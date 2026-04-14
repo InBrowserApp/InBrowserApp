@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN ישירות בדפדפן בלי לשלוח את הערך הנוכחי לשירות אחר. הכלי הזה שימושי כאשר אתם צריכים מחולל אחד שמכסה פרטי התחברות לאתרים, ביטויים שקל להקריא, קודי הגדרה וסודות מספריים קצרים באותו תהליך עבודה.
 
-## Choose the Right Format
+## בחרו את הפורמט המתאים
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+השתמשו ב-**אקראי** עבור סיסמאות חשבון צפופות שבהן האנטרופיה חשובה יותר מזכירות. השתמשו ב-**מילים** כאשר צריך להקריא את הסוד, להקליד אותו במכשיר אחר או לשתף אותו פעם אחת עם פחות סיכון לשגיאות העתקה. השתמשו ב-**בלוקים** עבור קודי הזמנה, הפעלה או אימות שנוחים יותר כאשר מציגים אותם במקטעים. השתמשו ב-**PIN** כאשר אתם צריכים רק ספרות עבור מנעולים, קיוסקים או גישה מספרית זמנית.
 
-## Tune the Output
+## התאימו את הפלט
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+התאימו את האורך, קבוצת התווים, המפרידים, אופן הקיבוץ וסינון התווים הדומים לאופן שבו התוצאה באמת תשמש. החרגת תווים דומים כמו `I`, `l`, `1`, `O` ו-`0` יכולה להפחית טעויות במסירה, בעוד שמפרידים אחרים או כללי אותיות גדולות יכולים להפוך ביטוי סיסמה לקל יותר להכתבה או לבדיקה.
 
-## Export and Share
+## ייצוא ושיתוף
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+המשיכו לייצר עד שהפורמט מתאים, ואז העתיקו או הורידו ערך סופי אחד בלבד. התוצאה נשארת מוסתרת כברירת מחדל, כך שתציגו אותה רק כשאתם מוכנים לבדוק או למסור אותה. זה שימושי במיוחד במרחבי עבודה משותפים, בהקלטות ובשיתופי מסך.

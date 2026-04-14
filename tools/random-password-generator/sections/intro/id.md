@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Buat kata sandi, frasa sandi, kode berkelompok, dan PIN langsung di browser tanpa mengirim nilai saat ini ke layanan lain. Alat ini berguna ketika Anda membutuhkan satu generator untuk menangani kredensial web, frasa yang mudah diucapkan, kode penyiapan, dan rahasia numerik pendek dalam alur kerja yang sama.
 
-## Choose the Right Format
+## Pilih format yang tepat
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Gunakan **Acak** untuk kata sandi akun yang padat ketika entropi lebih penting daripada kemudahan mengingat. Gunakan **Kata** ketika rahasia perlu dibacakan, diketik di perangkat lain, atau dibagikan sekali dengan risiko salah salin yang lebih rendah. Gunakan **Blok** untuk kode undangan, aktivasi, atau verifikasi yang lebih mudah ditangani saat ditampilkan per segmen. Gunakan **PIN** ketika Anda hanya membutuhkan digit untuk kunci, kiosk, atau akses numerik sementara.
 
-## Tune the Output
+## Sesuaikan keluaran
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Sesuaikan panjang, kumpulan karakter, pemisah, pengelompokan, dan filter karakter mirip dengan cara hasil itu benar-benar akan dipakai. Mengecualikan karakter yang mirip seperti `I`, `l`, `1`, `O`, dan `0` dapat mengurangi kesalahan saat menyerahkan hasil, sementara pemisah atau aturan kapitalisasi yang berbeda dapat membuat frasa sandi lebih mudah didiktekan atau diverifikasi.
 
-## Export and Share
+## Ekspor dan bagikan
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Buat hingga formatnya terasa tepat, lalu salin atau unduh hanya satu nilai akhir. Hasil tetap tersembunyi secara default sehingga Anda hanya menampilkannya saat siap meninjau atau menyerahkannya. Ini berguna di ruang kerja bersama, rekaman, dan sesi berbagi layar.

@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Skapa lösenord, lösenfraser, grupperade koder och PIN-koder direkt i webbläsaren utan att skicka det aktuella värdet till någon annan tjänst. Verktyget är användbart när du vill täcka webbautentisering, fraser som går att läsa upp, aktiveringskoder och korta numeriska hemligheter i samma arbetsflöde.
 
-## Choose the Right Format
+## Välj rätt format
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Använd **Slump** för täta kontolösenord där entropi är viktigare än att de är lätta att komma ihåg. Använd **Ord** när hemligheten behöver läsas upp, skrivas in på en annan enhet eller delas en gång med mindre risk för avskriftsfel. Använd **Block** för inbjudnings-, aktiverings- eller verifieringskoder som blir lättare att hantera när de visas i segment. Använd **PIN** när du bara behöver siffror för lås, kiosker eller tillfällig numerisk åtkomst.
 
-## Tune the Output
+## Justera resultatet
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Anpassa längd, teckenuppsättning, avgränsare, gruppering och filtret för liknande tecken efter hur resultatet faktiskt ska användas. Att utesluta liknande tecken som `I`, `l`, `1`, `O` och `0` kan minska överföringsfel, medan andra avgränsare eller regler för versaler kan göra en lösenfras lättare att diktera eller kontrollera.
 
-## Export and Share
+## Exportera och dela
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Generera tills formatet känns rätt och kopiera eller ladda sedan ner exakt ett slutligt värde. Resultatet är dolt som standard så att du bara visar det när du är redo att granska eller lämna över det. Det är användbart i delade arbetsytor, inspelningar och skärmdelningssessioner.

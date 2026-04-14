@@ -1,13 +1,13 @@
-Create browser-side passwords, passphrases, grouped codes, and PINs without sending the current value to another service. This tool is useful when you need one generator that can cover website credentials, spoken passphrases, setup codes, and short numeric secrets in the same workflow.
+Создавайте пароли, парольные фразы, коды по блокам и PIN прямо в браузере, не отправляя текущее значение в другой сервис. Этот инструмент полезен, когда в одном потоке нужно покрыть веб-учётные данные, фразы для устной передачи, коды активации и короткие числовые секреты.
 
-## Choose the Right Format
+## Выберите подходящий формат
 
-Use **Random** for dense account passwords where maximum entropy matters more than memorability. Use **Words** when the secret may need to be read aloud, typed on another device, or shared once with less transcription risk. Use **Blocks** for invitation codes, onboarding codes, or other grouped formats that benefit from visual chunking. Use **PIN** when you only need digits for locks, kiosks, or temporary numeric access.
+Используйте **Случайный** для плотных паролей учётных записей, где энтропия важнее запоминаемости. Используйте **Слова**, когда секрет нужно произнести вслух, ввести на другом устройстве или один раз передать с меньшим риском ошибок при переписывании. Используйте **Блоки** для пригласительных, активационных или проверочных кодов, которые удобнее показывать по сегментам. Используйте **PIN**, когда нужны только цифры для замков, терминалов или временного числового доступа.
 
-## Tune the Output
+## Настройте вывод
 
-Adjust the length, character set, separators, grouping, and similar-character filtering based on how the result will actually be used. Excluding look-alike characters such as `I`, `l`, `1`, `O`, and `0` can reduce handoff mistakes, while different separators or capitalization rules can make a passphrase easier to dictate or verify.
+Подберите длину, набор символов, разделители, группировку и фильтр похожих символов под реальный способ использования результата. Исключение похожих символов, таких как `I`, `l`, `1`, `O` и `0`, помогает сократить ошибки при передаче, а изменение разделителей или правил капитализации делает парольную фразу удобнее для диктовки и проверки.
 
-## Export and Share
+## Экспорт и передача
 
-Generate until the format looks right, then copy or download exactly one final result. The output stays hidden by default so you can reveal it only when you are ready to inspect or hand it off, which is useful in shared workspaces, recordings, and screen-sharing sessions.
+Генерируйте, пока формат не станет подходящим, а затем копируйте или скачивайте только одно финальное значение. Результат по умолчанию остаётся скрытым, поэтому его можно показать только в момент проверки или передачи. Это удобно в общих рабочих пространствах, при записи экрана и в сеансах совместного показа.
