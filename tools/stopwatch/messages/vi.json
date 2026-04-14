@@ -1,0 +1,17 @@
+{
+  "startLabel": "Bắt đầu",
+  "resumeLabel": "Tiếp tục",
+  "pauseLabel": "Tạm dừng",
+  "lapLabel": "Vòng",
+  "resetLabel": "Đặt lại",
+  "lapsLabel": "Vòng",
+  "clearLabel": "Xóa",
+  "exportLabel": "Xuất",
+  "noLapsLabel": "Chưa có vòng",
+  "statusRunningLabel": "Đang chạy",
+  "statusPausedLabel": "Đã tạm dừng",
+  "lapTimeLabel": "Vòng",
+  "totalTimeLabel": "Tổng",
+  "lapMillisecondsLabel": "Vòng (ms)",
+  "totalMillisecondsLabel": "Tổng (ms)"
+}

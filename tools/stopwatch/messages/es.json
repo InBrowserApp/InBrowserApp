@@ -1,0 +1,17 @@
+{
+  "startLabel": "Iniciar",
+  "resumeLabel": "Reanudar",
+  "pauseLabel": "Pausar",
+  "lapLabel": "Vuelta",
+  "resetLabel": "Restablecer",
+  "lapsLabel": "Vueltas",
+  "clearLabel": "Limpiar",
+  "exportLabel": "Exportar",
+  "noLapsLabel": "Sin vueltas",
+  "statusRunningLabel": "En marcha",
+  "statusPausedLabel": "Pausado",
+  "lapTimeLabel": "Vuelta",
+  "totalTimeLabel": "Total",
+  "lapMillisecondsLabel": "Vuelta (ms)",
+  "totalMillisecondsLabel": "Total (ms)"
+}

@@ -1,0 +1,17 @@
+{
+  "startLabel": "Start",
+  "resumeLabel": "Hervatten",
+  "pauseLabel": "Pauze",
+  "lapLabel": "Ronde",
+  "resetLabel": "Reset",
+  "lapsLabel": "Rondes",
+  "clearLabel": "Wissen",
+  "exportLabel": "Exporteren",
+  "noLapsLabel": "Geen rondes",
+  "statusRunningLabel": "Bezig",
+  "statusPausedLabel": "Gepauzeerd",
+  "lapTimeLabel": "Ronde",
+  "totalTimeLabel": "Totaal",
+  "lapMillisecondsLabel": "Ronde (ms)",
+  "totalMillisecondsLabel": "Totaal (ms)"
+}

@@ -3222,6 +3222,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "stopwatch",
+    language: "ar",
+  },
+  {
+    slug: "stopwatch",
+    language: "de",
+  },
+  {
+    slug: "stopwatch",
+    language: "en",
+  },
+  {
+    slug: "stopwatch",
+    language: "es",
+  },
+  {
+    slug: "stopwatch",
+    language: "fr",
+  },
+  {
+    slug: "stopwatch",
+    language: "he",
+  },
+  {
+    slug: "stopwatch",
+    language: "hi",
+  },
+  {
+    slug: "stopwatch",
+    language: "id",
+  },
+  {
+    slug: "stopwatch",
+    language: "it",
+  },
+  {
+    slug: "stopwatch",
+    language: "ja",
+  },
+  {
+    slug: "stopwatch",
+    language: "ko",
+  },
+  {
+    slug: "stopwatch",
+    language: "ms",
+  },
+  {
+    slug: "stopwatch",
+    language: "nl",
+  },
+  {
+    slug: "stopwatch",
+    language: "no",
+  },
+  {
+    slug: "stopwatch",
+    language: "pl",
+  },
+  {
+    slug: "stopwatch",
+    language: "pt",
+  },
+  {
+    slug: "stopwatch",
+    language: "ru",
+  },
+  {
+    slug: "stopwatch",
+    language: "sv",
+  },
+  {
+    slug: "stopwatch",
+    language: "th",
+  },
+  {
+    slug: "stopwatch",
+    language: "tr",
+  },
+  {
+    slug: "stopwatch",
+    language: "vi",
+  },
+  {
+    slug: "stopwatch",
+    language: "zh-CN",
+  },
+  {
+    slug: "stopwatch",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },

@@ -1,0 +1,17 @@
+{
+  "startLabel": "Başlat",
+  "resumeLabel": "Sürdür",
+  "pauseLabel": "Duraklat",
+  "lapLabel": "Tur",
+  "resetLabel": "Sıfırla",
+  "lapsLabel": "Turlar",
+  "clearLabel": "Temizle",
+  "exportLabel": "Dışa Aktar",
+  "noLapsLabel": "Tur yok",
+  "statusRunningLabel": "Çalışıyor",
+  "statusPausedLabel": "Duraklatıldı",
+  "lapTimeLabel": "Tur",
+  "totalTimeLabel": "Toplam",
+  "lapMillisecondsLabel": "Tur (ms)",
+  "totalMillisecondsLabel": "Toplam (ms)"
+}

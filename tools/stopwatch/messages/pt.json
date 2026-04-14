@@ -1,0 +1,17 @@
+{
+  "startLabel": "Iniciar",
+  "resumeLabel": "Retomar",
+  "pauseLabel": "Pausar",
+  "lapLabel": "Volta",
+  "resetLabel": "Redefinir",
+  "lapsLabel": "Voltas",
+  "clearLabel": "Limpar",
+  "exportLabel": "Exportar",
+  "noLapsLabel": "Sem voltas",
+  "statusRunningLabel": "Em andamento",
+  "statusPausedLabel": "Pausado",
+  "lapTimeLabel": "Volta",
+  "totalTimeLabel": "Total",
+  "lapMillisecondsLabel": "Volta (ms)",
+  "totalMillisecondsLabel": "Total (ms)"
+}

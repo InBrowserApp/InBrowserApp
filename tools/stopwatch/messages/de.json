@@ -1,0 +1,17 @@
+{
+  "startLabel": "Start",
+  "resumeLabel": "Fortsetzen",
+  "pauseLabel": "Pause",
+  "lapLabel": "Runde",
+  "resetLabel": "Zurücksetzen",
+  "lapsLabel": "Runden",
+  "clearLabel": "Leeren",
+  "exportLabel": "Exportieren",
+  "noLapsLabel": "Keine Runden",
+  "statusRunningLabel": "Läuft",
+  "statusPausedLabel": "Pausiert",
+  "lapTimeLabel": "Runde",
+  "totalTimeLabel": "Gesamt",
+  "lapMillisecondsLabel": "Runde (ms)",
+  "totalMillisecondsLabel": "Gesamt (ms)"
+}

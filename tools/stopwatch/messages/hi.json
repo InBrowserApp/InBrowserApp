@@ -1,0 +1,17 @@
+{
+  "startLabel": "शुरू",
+  "resumeLabel": "फिर से शुरू करें",
+  "pauseLabel": "रोकें",
+  "lapLabel": "लैप",
+  "resetLabel": "रीसेट",
+  "lapsLabel": "लैप्स",
+  "clearLabel": "साफ़ करें",
+  "exportLabel": "निर्यात",
+  "noLapsLabel": "कोई लैप नहीं",
+  "statusRunningLabel": "चल रहा है",
+  "statusPausedLabel": "रुका हुआ",
+  "lapTimeLabel": "लैप",
+  "totalTimeLabel": "कुल",
+  "lapMillisecondsLabel": "लैप (मि.से.)",
+  "totalMillisecondsLabel": "कुल (मि.से.)"
+}

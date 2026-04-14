@@ -1,0 +1,17 @@
+{
+  "startLabel": "เริ่ม",
+  "resumeLabel": "ทำต่อ",
+  "pauseLabel": "หยุดชั่วคราว",
+  "lapLabel": "รอบ",
+  "resetLabel": "รีเซ็ต",
+  "lapsLabel": "รอบ",
+  "clearLabel": "ล้าง",
+  "exportLabel": "ส่งออก",
+  "noLapsLabel": "ยังไม่มีรอบ",
+  "statusRunningLabel": "กำลังทำงาน",
+  "statusPausedLabel": "หยุดชั่วคราว",
+  "lapTimeLabel": "รอบ",
+  "totalTimeLabel": "รวม",
+  "lapMillisecondsLabel": "รอบ (มิลลิวินาที)",
+  "totalMillisecondsLabel": "รวม (มิลลิวินาที)"
+}

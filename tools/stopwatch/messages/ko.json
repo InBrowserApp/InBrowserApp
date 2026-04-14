@@ -1,0 +1,17 @@
+{
+  "startLabel": "시작",
+  "resumeLabel": "재개",
+  "pauseLabel": "일시정지",
+  "lapLabel": "랩",
+  "resetLabel": "초기화",
+  "lapsLabel": "랩",
+  "clearLabel": "지우기",
+  "exportLabel": "내보내기",
+  "noLapsLabel": "랩 없음",
+  "statusRunningLabel": "진행 중",
+  "statusPausedLabel": "일시정지됨",
+  "lapTimeLabel": "랩",
+  "totalTimeLabel": "총합",
+  "lapMillisecondsLabel": "랩(ms)",
+  "totalMillisecondsLabel": "총합(ms)"
+}

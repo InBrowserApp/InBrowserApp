@@ -1,0 +1,17 @@
+{
+  "startLabel": "Avvia",
+  "resumeLabel": "Riprendi",
+  "pauseLabel": "Pausa",
+  "lapLabel": "Giro",
+  "resetLabel": "Reimposta",
+  "lapsLabel": "Giri",
+  "clearLabel": "Cancella",
+  "exportLabel": "Esporta",
+  "noLapsLabel": "Nessun giro",
+  "statusRunningLabel": "In corso",
+  "statusPausedLabel": "In pausa",
+  "lapTimeLabel": "Giro",
+  "totalTimeLabel": "Totale",
+  "lapMillisecondsLabel": "Giro (ms)",
+  "totalMillisecondsLabel": "Totale (ms)"
+}

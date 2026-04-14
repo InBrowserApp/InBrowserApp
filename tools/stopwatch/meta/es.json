@@ -1,0 +1,4 @@
+{
+  "name": "Cronómetro",
+  "description": "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer."
+}

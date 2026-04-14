@@ -1,0 +1,17 @@
+{
+  "startLabel": "Старт",
+  "resumeLabel": "Продолжить",
+  "pauseLabel": "Пауза",
+  "lapLabel": "Круг",
+  "resetLabel": "Сброс",
+  "lapsLabel": "Круги",
+  "clearLabel": "Очистить",
+  "exportLabel": "Экспорт",
+  "noLapsLabel": "Кругов нет",
+  "statusRunningLabel": "Идет",
+  "statusPausedLabel": "Пауза",
+  "lapTimeLabel": "Круг",
+  "totalTimeLabel": "Итого",
+  "lapMillisecondsLabel": "Круг (мс)",
+  "totalMillisecondsLabel": "Итого (мс)"
+}

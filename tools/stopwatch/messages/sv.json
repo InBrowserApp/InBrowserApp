@@ -1,0 +1,17 @@
+{
+  "startLabel": "Starta",
+  "resumeLabel": "Fortsätt",
+  "pauseLabel": "Pausa",
+  "lapLabel": "Varv",
+  "resetLabel": "Återställ",
+  "lapsLabel": "Varv",
+  "clearLabel": "Rensa",
+  "exportLabel": "Exportera",
+  "noLapsLabel": "Inga varv",
+  "statusRunningLabel": "Pågår",
+  "statusPausedLabel": "Pausad",
+  "lapTimeLabel": "Varv",
+  "totalTimeLabel": "Totalt",
+  "lapMillisecondsLabel": "Varv (ms)",
+  "totalMillisecondsLabel": "Totalt (ms)"
+}

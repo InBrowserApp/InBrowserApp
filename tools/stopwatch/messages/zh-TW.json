@@ -1,0 +1,17 @@
+{
+  "startLabel": "開始",
+  "resumeLabel": "繼續",
+  "pauseLabel": "暫停",
+  "lapLabel": "計次",
+  "resetLabel": "重置",
+  "lapsLabel": "計次記錄",
+  "clearLabel": "清除",
+  "exportLabel": "匯出",
+  "noLapsLabel": "尚無計次記錄",
+  "statusRunningLabel": "計時中",
+  "statusPausedLabel": "已暫停",
+  "lapTimeLabel": "計次",
+  "totalTimeLabel": "總計",
+  "lapMillisecondsLabel": "計次(毫秒)",
+  "totalMillisecondsLabel": "總計(毫秒)"
+}
