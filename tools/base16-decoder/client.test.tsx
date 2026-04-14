@@ -73,6 +73,7 @@ describe("Base16DecoderClient", () => {
       expect(getInput().value).toBe("48656C6C6F2C20576F726C6421")
     })
 
+    expect(screen.getAllByText(messages.base16InputLabel)).toHaveLength(1)
     expect(screen.getByText(messages.meta.description)).toBeTruthy()
     expect(getOutput().textContent).toContain("Hello, World!")
     expect(URL.createObjectURL).toHaveBeenCalled()
@@ -145,6 +146,31 @@ describe("Base16DecoderClient", () => {
     })
 
     const downloadLink = await screen.findByRole("link", {
+      name: messages.downloadFileLabel,
+    })
+    expect(downloadLink.getAttribute("download")).toBe("decoded.bin")
+  })
+
+  test("clears the imported file state after manual edits", async () => {
+    render(<Base16DecoderClient messages={messages} />)
+
+    const file = new File(["666F6F"], "sample.hex", {
+      type: "text/plain",
+    })
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [file] },
+    })
+
+    await screen.findByText("Import from file: sample.hex")
+
+    fireEvent.change(getInput(), {
+      target: { value: "626172" },
+    })
+
+    expect(screen.queryByText("Import from file: sample.hex")).toBeNull()
+
+    const downloadLink = screen.getByRole("link", {
       name: messages.downloadFileLabel,
     })
     expect(downloadLink.getAttribute("download")).toBe("decoded.bin")

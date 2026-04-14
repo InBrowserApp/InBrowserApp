@@ -21,7 +21,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Label } from "@workspace/ui/components/ui/label"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import {
   Download,
@@ -127,6 +126,7 @@ function Base16DecoderClient({ messages }: Base16DecoderClientProps) {
   function handleInputChange(nextValue: string) {
     pendingFileReadIdRef.current += 1
     setBase16Input(nextValue)
+    setSourceFileName(null)
     setFileReadFailed(false)
   }
 
@@ -193,26 +193,23 @@ function Base16DecoderClient({ messages }: Base16DecoderClientProps) {
           </CardDescription>
         </CardHeader>
         <ToolPanelCardContent className="gap-4">
-          <div className="grid gap-2">
-            <Label htmlFor={base16InputId}>{messages.base16InputLabel}</Label>
-            <Textarea
-              id={base16InputId}
-              name="base16-input"
-              rows={10}
-              autoComplete="off"
-              spellCheck={false}
-              aria-label={messages.base16InputLabel}
-              aria-invalid={
-                !fileReadFailed && decodeState.state === "invalid-base16"
-              }
-              value={base16Input}
-              onChange={(event) => {
-                handleInputChange(event.target.value)
-              }}
-              placeholder={messages.base16InputPlaceholder}
-              className="min-h-72 resize-y font-mono text-sm"
-            />
-          </div>
+          <Textarea
+            id={base16InputId}
+            name="base16-input"
+            rows={10}
+            autoComplete="off"
+            spellCheck={false}
+            aria-label={messages.base16InputLabel}
+            aria-invalid={
+              !fileReadFailed && decodeState.state === "invalid-base16"
+            }
+            value={base16Input}
+            onChange={(event) => {
+              handleInputChange(event.target.value)
+            }}
+            placeholder={messages.base16InputPlaceholder}
+            className="min-h-72 resize-y font-mono text-sm"
+          />
         </ToolPanelCardContent>
         <ToolPanelCardFooter className="justify-between gap-3 border-t">
           <Button
