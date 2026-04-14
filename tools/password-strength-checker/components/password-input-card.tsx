@@ -21,7 +21,7 @@ import {
   InputGroupInput,
   InputGroupText,
 } from "@workspace/ui/components/ui/input-group"
-import { Lock } from "@workspace/ui/icons"
+import { Eye, EyeOff, Lock } from "@workspace/ui/icons"
 
 import type { PasswordStrengthCheckerMessages } from "../client/types"
 
@@ -41,6 +41,7 @@ function PasswordInputCard({
   onToggleVisibility,
 }: PasswordInputCardProps) {
   const inputId = useId()
+  const visibilityLabel = showPassword ? messages.hide : messages.show
 
   return (
     <ToolPanelCard>
@@ -72,8 +73,14 @@ function PasswordInputCard({
                 }}
               />
               <InputGroupAddon align="inline-end">
-                <InputGroupButton onClick={onToggleVisibility}>
-                  {showPassword ? messages.hide : messages.show}
+                <InputGroupButton
+                  size="icon-sm"
+                  aria-label={visibilityLabel}
+                  aria-pressed={showPassword}
+                  title={visibilityLabel}
+                  onClick={onToggleVisibility}
+                >
+                  {showPassword ? <EyeOff /> : <Eye />}
                 </InputGroupButton>
               </InputGroupAddon>
             </InputGroup>

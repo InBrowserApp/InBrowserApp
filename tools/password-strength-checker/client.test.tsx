@@ -26,19 +26,6 @@ describe("PasswordStrengthCheckerClient", () => {
     expect(screen.queryAllByRole("alert")).toHaveLength(0)
   })
 
-  it("loads the saved password from local storage", () => {
-    window.localStorage.setItem(
-      "tools:password-strength-checker:password",
-      "StoredPass1!"
-    )
-
-    render(<PasswordStrengthCheckerClient messages={messages} />)
-
-    expect(
-      (screen.getByLabelText(messages.passwordLabel) as HTMLInputElement).value
-    ).toBe("StoredPass1!")
-  })
-
   it("toggles password visibility", () => {
     render(<PasswordStrengthCheckerClient messages={messages} />)
 
@@ -48,6 +35,16 @@ describe("PasswordStrengthCheckerClient", () => {
     fireEvent.click(screen.getByRole("button", { name: messages.show }))
     expect((input as HTMLInputElement).type).toBe("text")
     expect(screen.getByRole("button", { name: messages.hide })).toBeTruthy()
+  })
+
+  it("does not persist passwords to local storage", () => {
+    render(<PasswordStrengthCheckerClient messages={messages} />)
+
+    fireEvent.change(screen.getByLabelText(messages.passwordLabel), {
+      target: { value: "StoredPass1!" },
+    })
+
+    expect(window.localStorage.length).toBe(0)
   })
 
   it("renders warnings and fast crack times for weak passwords", () => {
