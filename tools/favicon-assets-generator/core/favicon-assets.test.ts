@@ -7,7 +7,11 @@ import {
   calculateSquareDrawLayout,
   clampPercentage,
   clampRadius,
+  createDesktopHeadMarkup,
   createHeadMarkup,
+  createIOSHeadMarkup,
+  createManifestIcons,
+  createManifestIconsText,
   createManifestObject,
   createManifestText,
   listGeneratedAssetNames,
@@ -160,32 +164,10 @@ describe("manifest builders", () => {
       name: "Starter",
       short_name: "Start",
       description: "Launch fast",
-      icons: [
-        {
-          src: "/assets/icons/pwa-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
-          purpose: "any",
-        },
-        {
-          src: "/assets/icons/pwa-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-          purpose: "any",
-        },
-        {
-          src: "/assets/icons/pwa-maskable-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
-          purpose: "maskable",
-        },
-        {
-          src: "/assets/icons/pwa-maskable-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-          purpose: "maskable",
-        },
-      ],
+      icons: createManifestIcons(
+        { assetPath: "/assets/icons" },
+        DEFAULT_PWA_ICON_CONFIG
+      ),
       start_url: "/",
       display: "standalone",
       background_color: "#FFFFFF",
@@ -225,6 +207,69 @@ describe("manifest builders", () => {
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF"
 }`)
+  })
+})
+
+describe("separate output snippets", () => {
+  test("creates desktop-only head markup", () => {
+    expect(
+      createDesktopHeadMarkup(
+        "image/svg+xml",
+        { assetPath: "/icons" },
+        DEFAULT_DESKTOP_ICON_CONFIG
+      )
+    ).toBe(`<link rel="icon" href="/icons/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icons/favicon.svg" sizes="any" type="image/svg+xml">`)
+  })
+
+  test("creates the iOS head markup", () => {
+    expect(createIOSHeadMarkup({ assetPath: "/icons" })).toBe(
+      `<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">`
+    )
+  })
+
+  test("creates manifest icon snippets for any and maskable outputs", () => {
+    expect(
+      createManifestIconsText(
+        { assetPath: "/icons" },
+        DEFAULT_PWA_ICON_CONFIG,
+        "any"
+      )
+    ).toBe(`[
+  {
+    "src": "/icons/pwa-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "/icons/pwa-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any"
+  }
+]`)
+
+    expect(
+      createManifestIconsText(
+        { assetPath: "/icons" },
+        DEFAULT_PWA_ICON_CONFIG,
+        "maskable"
+      )
+    ).toBe(`[
+  {
+    "src": "/icons/pwa-maskable-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "maskable"
+  },
+  {
+    "src": "/icons/pwa-maskable-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+  }
+]`)
   })
 })
 

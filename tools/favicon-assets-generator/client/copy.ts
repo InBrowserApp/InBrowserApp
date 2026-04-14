@@ -73,6 +73,37 @@ const faviconGeneratorCopy = {
   outputEmptyDescription:
     "The zip archive, HTML snippet, and manifest preview appear here after generation finishes.",
   filesLabel: "Included files",
+  settingsTabLabel: "Settings",
+  dedicatedImageTabLabel: "Dedicated image",
+  downloadSeparatelyTabLabel: "Download separately",
+  dedicatedImageLabel: "Dedicated image",
+  dedicatedImageFallbackDescription:
+    "This platform uses the shared source icon until you upload a dedicated replacement.",
+  dedicatedImageActiveDescription:
+    "A dedicated image is active for this platform.",
+  removeDedicatedImageLabel: "Remove dedicated image",
+  desktopDedicatedImageDescription:
+    "Use a dedicated source when browser tabs and search results need a different icon than the shared one.",
+  iosDedicatedImageDescription:
+    "Use a dedicated source when the iOS home-screen icon should differ from the shared source.",
+  pwaDedicatedImageDescription:
+    "Use a dedicated source for standard PWA launcher icons with `purpose: any`.",
+  pwaMaskableDedicatedImageDescription:
+    "Use a dedicated source for maskable launcher icons if Android needs a different safe-zone composition.",
+  separateDownloadEmptyTitle: "Add a source image to generate platform files.",
+  separateDownloadEmptyDescription:
+    "Separate downloads are generated from the shared source icon or this platform's dedicated image.",
+  desktopDownloadDescription:
+    "Download only the desktop favicon files and copy the desktop-specific HTML snippet.",
+  iosDownloadDescription:
+    "Download only the Apple touch icon and copy the iOS-specific head snippet.",
+  pwaDownloadDescription:
+    "Download PWA icons separately and copy the matching manifest icon arrays.",
+  desktopSnippetLabel: "Desktop head markup",
+  iosSnippetLabel: "iOS head markup",
+  manifestIconsLabel: "Manifest icons snippet",
+  standardPwaLabel: "Standard PWA icons",
+  loadingDownloadsLabel: "Refreshing downloads...",
   headMarkupLabel: "HTML head markup",
   manifestLabel: "Manifest preview",
   downloadZipLabel: "Download favicon-assets.zip",

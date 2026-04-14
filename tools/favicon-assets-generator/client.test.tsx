@@ -89,6 +89,22 @@ describe("FaviconAssetsGeneratorClient", () => {
     ).toBeTruthy()
   })
 
+  test("opens the desktop dedicated-image panel", async () => {
+    render(<FaviconAssetsGeneratorClient />)
+
+    fireEvent.click(
+      screen.getAllByRole("button", {
+        name: "Dedicated image",
+      })[0] as HTMLButtonElement
+    )
+
+    expect(
+      screen.getByText(
+        "Use a dedicated source when browser tabs and search results need a different icon than the shared one."
+      )
+    ).toBeTruthy()
+  })
+
   test("uploads a source image, generates a bundle, and exposes the zip download", async () => {
     const sourceFile = createImageFile()
 

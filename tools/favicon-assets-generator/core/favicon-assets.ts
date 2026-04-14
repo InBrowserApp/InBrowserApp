@@ -1,3 +1,12 @@
+import {
+  createDesktopHeadMarkup,
+  createHeadMarkup,
+  createIOSHeadMarkup,
+  listGeneratedAssetNames,
+  normalizeAssetPath,
+  shouldIncludeVectorDesktopIcon,
+} from "./favicon-output"
+
 type DisplayMode = "fullscreen" | "standalone" | "minimal-ui" | "browser"
 
 type SiteConfig = Readonly<{
@@ -19,11 +28,13 @@ type DesktopIconConfig = Readonly<{
   backgroundColor: string
   backgroundRadius: number
   margin: number
+  sourceFile: File | null
 }>
 
 type IOSIconConfig = Readonly<{
   backgroundColor: string
   margin: number
+  sourceFile: File | null
 }>
 
 type PWAIconConfig = Readonly<{
@@ -34,6 +45,8 @@ type PWAIconConfig = Readonly<{
   includeMaskable: boolean
   maskableBackgroundColor: string
   maskableMargin: number
+  sourceFile: File | null
+  maskableSourceFile: File | null
 }>
 
 type SquareDrawLayout = Readonly<{
@@ -62,11 +75,13 @@ const DEFAULT_DESKTOP_ICON_CONFIG = {
   backgroundColor: "#FFFFFF",
   backgroundRadius: 0,
   margin: 0,
+  sourceFile: null,
 } as const satisfies DesktopIconConfig
 
 const DEFAULT_IOS_ICON_CONFIG = {
   backgroundColor: "#FFFFFF",
   margin: 0,
+  sourceFile: null,
 } as const satisfies IOSIconConfig
 
 const DEFAULT_PWA_ICON_CONFIG = {
@@ -77,6 +92,8 @@ const DEFAULT_PWA_ICON_CONFIG = {
   includeMaskable: true,
   maskableBackgroundColor: "#FFFFFF",
   maskableMargin: 40,
+  sourceFile: null,
+  maskableSourceFile: null,
 } as const satisfies PWAIconConfig
 
 function clampNumber(
@@ -92,29 +109,12 @@ function clampNumber(
   return Math.min(maximum, Math.max(minimum, value))
 }
 
-function normalizeAssetPath(path: string) {
-  const trimmed = path.trim()
-
-  if (trimmed === "" || trimmed === "/") {
-    return "/"
-  }
-
-  return trimmed.endsWith("/") ? trimmed : `${trimmed}/`
-}
-
 function clampPercentage(value: number, fallback = 0, maximum = 100) {
   return clampNumber(value, 0, maximum, fallback)
 }
 
 function clampRadius(value: number) {
   return clampPercentage(value, 0, 100)
-}
-
-function shouldIncludeVectorDesktopIcon(
-  sourceMimeType: string,
-  desktop: DesktopIconConfig
-) {
-  return desktop.useOriginalSvg && sourceMimeType === "image/svg+xml"
 }
 
 function calculateSquareDrawLayout(input: {
@@ -142,26 +142,6 @@ function calculateSquareDrawLayout(input: {
     width,
     height,
   } as const satisfies SquareDrawLayout
-}
-
-function listGeneratedAssetNames(
-  sourceMimeType: string,
-  desktop: DesktopIconConfig,
-  pwa: Pick<PWAIconConfig, "includeMaskable">
-) {
-  const assetNames = shouldIncludeVectorDesktopIcon(sourceMimeType, desktop)
-    ? ["favicon.ico", "favicon.svg"]
-    : ["favicon.ico", "favicon-32x32.png", "favicon-16x16.png"]
-
-  assetNames.push("apple-touch-icon.png", "pwa-192x192.png", "pwa-512x512.png")
-
-  if (pwa.includeMaskable) {
-    assetNames.push("pwa-maskable-192x192.png", "pwa-maskable-512x512.png")
-  }
-
-  assetNames.push("site.webmanifest")
-
-  return assetNames as readonly string[]
 }
 
 function createManifestObject(
@@ -213,47 +193,68 @@ function createManifestObject(
   }
 }
 
+function createManifestIcons(
+  site: Pick<SiteConfig, "assetPath">,
+  pwa: Pick<PWAIconConfig, "includeMaskable">,
+  purpose: "any" | "maskable" | "all" = "all"
+) {
+  const assetPath = normalizeAssetPath(site.assetPath)
+  const anyIcons = [
+    {
+      src: `${assetPath}pwa-192x192.png`,
+      sizes: "192x192",
+      type: "image/png",
+      purpose: "any",
+    },
+    {
+      src: `${assetPath}pwa-512x512.png`,
+      sizes: "512x512",
+      type: "image/png",
+      purpose: "any",
+    },
+  ]
+
+  const maskableIcons = pwa.includeMaskable
+    ? [
+        {
+          src: `${assetPath}pwa-maskable-192x192.png`,
+          sizes: "192x192",
+          type: "image/png",
+          purpose: "maskable",
+        },
+        {
+          src: `${assetPath}pwa-maskable-512x512.png`,
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable",
+        },
+      ]
+    : []
+
+  if (purpose === "any") {
+    return anyIcons
+  }
+
+  if (purpose === "maskable") {
+    return maskableIcons
+  }
+
+  return [...anyIcons, ...maskableIcons]
+}
+
+function createManifestIconsText(
+  site: Pick<SiteConfig, "assetPath">,
+  pwa: Pick<PWAIconConfig, "includeMaskable">,
+  purpose: "any" | "maskable" | "all" = "all"
+) {
+  return JSON.stringify(createManifestIcons(site, pwa, purpose), null, 2)
+}
+
 function createManifestText(
   site: SiteConfig,
   pwa: Pick<PWAIconConfig, "includeMaskable">
 ) {
   return JSON.stringify(createManifestObject(site, pwa), null, 2)
-}
-
-function createHeadMarkup(
-  sourceMimeType: string,
-  site: SiteConfig,
-  desktop: DesktopIconConfig
-) {
-  const assetPath = normalizeAssetPath(site.assetPath)
-  const lines = [
-    `<link rel="apple-touch-icon" href="${assetPath}apple-touch-icon.png">`,
-  ]
-
-  if (shouldIncludeVectorDesktopIcon(sourceMimeType, desktop)) {
-    lines.push(
-      `<link rel="icon" href="${assetPath}favicon.ico" sizes="48x48">`,
-      `<link rel="icon" href="${assetPath}favicon.svg" sizes="any" type="image/svg+xml">`
-    )
-  } else {
-    lines.push(
-      `<link rel="icon" href="${assetPath}favicon-32x32.png" type="image/png" sizes="32x32">`,
-      `<link rel="icon" href="${assetPath}favicon-16x16.png" type="image/png" sizes="16x16">`
-    )
-  }
-
-  lines.push(`<link rel="manifest" href="${assetPath}site.webmanifest">`)
-
-  if (site.enableDarkThemeColor) {
-    lines.push(
-      `<meta name="theme-color" content="${site.themeColor}" media="(prefers-color-scheme: light)">`,
-      `<meta name="theme-color" content="${site.darkThemeColor}" media="(prefers-color-scheme: dark)">`
-    )
-  } else {
-    lines.push(`<meta name="theme-color" content="${site.themeColor}">`)
-  }
-
-  return lines.join("\n")
 }
 
 export {
@@ -264,7 +265,11 @@ export {
   calculateSquareDrawLayout,
   clampPercentage,
   clampRadius,
+  createDesktopHeadMarkup,
   createHeadMarkup,
+  createIOSHeadMarkup,
+  createManifestIcons,
+  createManifestIconsText,
   createManifestObject,
   createManifestText,
   listGeneratedAssetNames,

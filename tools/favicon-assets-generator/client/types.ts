@@ -11,6 +11,16 @@ type GeneratedAssetFile = Readonly<{
   type: string
 }>
 
+type GeneratedBlobFile = Readonly<{
+  name: string
+  blob: Blob
+}>
+
+type GeneratedAssetGroup = Readonly<{
+  files: readonly GeneratedBlobFile[]
+  snippetText: string
+}>
+
 type GeneratedFaviconBundle = Readonly<{
   files: readonly GeneratedAssetFile[]
   headMarkup: string
@@ -26,4 +36,9 @@ type GenerateFaviconAssetsInput = Readonly<{
   pwa: PWAIconConfig
 }>
 
-export type { GenerateFaviconAssetsInput, GeneratedFaviconBundle }
+export type {
+  GenerateFaviconAssetsInput,
+  GeneratedAssetGroup,
+  GeneratedBlobFile,
+  GeneratedFaviconBundle,
+}

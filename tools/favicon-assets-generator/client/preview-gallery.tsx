@@ -1,5 +1,7 @@
 import type { ReactNode } from "react"
 
+import { useBlobObjectUrl } from "./use-blob-object-url"
+
 import {
   Card,
   CardContent,
@@ -86,8 +88,15 @@ function PreviewGallery({
   sourceFile,
   sourcePreviewUrl,
 }: PreviewGalleryProps) {
+  const desktopPreviewUrl =
+    useBlobObjectUrl(desktop.sourceFile) ?? sourcePreviewUrl
+  const iosPreviewUrl = useBlobObjectUrl(ios.sourceFile) ?? sourcePreviewUrl
+  const pwaAnyPreviewUrl = useBlobObjectUrl(pwa.sourceFile) ?? sourcePreviewUrl
+  const pwaMaskablePreviewUrl =
+    useBlobObjectUrl(pwa.maskableSourceFile) ?? sourcePreviewUrl
   const desktopUsesOriginal =
-    sourceFile?.type === "image/svg+xml" && desktop.useOriginalSvg
+    (desktop.sourceFile?.type ?? sourceFile?.type) === "image/svg+xml" &&
+    desktop.useOriginalSvg
   const desktopAddBackground = desktopUsesOriginal
     ? false
     : desktop.addBackground
@@ -113,7 +122,7 @@ function PreviewGallery({
                 <div className="flex items-start gap-3">
                   <div className="w-10 shrink-0">
                     <IconPreview
-                      src={sourcePreviewUrl}
+                      src={desktopPreviewUrl}
                       addBackground={desktopAddBackground}
                       backgroundColor={desktop.backgroundColor}
                       margin={desktopMargin}
@@ -140,7 +149,7 @@ function PreviewGallery({
                 <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-muted/30 px-3 py-2">
                   <div className="w-6 shrink-0">
                     <IconPreview
-                      src={sourcePreviewUrl}
+                      src={desktopPreviewUrl}
                       addBackground={desktopAddBackground}
                       backgroundColor={desktop.backgroundColor}
                       margin={desktopMargin}
@@ -159,7 +168,7 @@ function PreviewGallery({
                 <div className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 px-3 py-2">
                   <div className="w-6 shrink-0">
                     <IconPreview
-                      src={sourcePreviewUrl}
+                      src={desktopPreviewUrl}
                       addBackground={desktopAddBackground}
                       backgroundColor={desktop.backgroundColor}
                       margin={desktopMargin}
@@ -184,7 +193,7 @@ function PreviewGallery({
             <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(180deg,#1d3557_0%,#2a9d8f_45%,#f4a261_100%)] p-6">
               <div className="ml-auto grid w-24 gap-2 text-center">
                 <IconPreview
-                  src={sourcePreviewUrl}
+                  src={iosPreviewUrl}
                   addBackground
                   backgroundColor={ios.backgroundColor}
                   margin={ios.margin}
@@ -207,7 +216,7 @@ function PreviewGallery({
                 <div className="mb-6 flex justify-center">
                   <div className="w-24">
                     <IconPreview
-                      src={sourcePreviewUrl}
+                      src={pwaAnyPreviewUrl}
                       addBackground={pwa.addBackground}
                       backgroundColor={pwa.backgroundColor}
                       margin={pwa.margin}
@@ -219,7 +228,7 @@ function PreviewGallery({
                   <div className="flex items-center gap-3">
                     <div className="w-8 shrink-0">
                       <IconPreview
-                        src={sourcePreviewUrl}
+                        src={pwaAnyPreviewUrl}
                         addBackground={pwa.addBackground}
                         backgroundColor={pwa.backgroundColor}
                         margin={pwa.margin}
@@ -240,7 +249,7 @@ function PreviewGallery({
                   <div className="mx-auto grid w-28 gap-3 text-center">
                     <div className="rounded-[30%] bg-white/95 p-3 shadow-sm">
                       <IconPreview
-                        src={sourcePreviewUrl}
+                        src={pwaMaskablePreviewUrl}
                         addBackground
                         backgroundColor={pwa.maskableBackgroundColor}
                         margin={pwa.maskableMargin}

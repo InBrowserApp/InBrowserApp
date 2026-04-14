@@ -173,6 +173,8 @@ function FaviconAssetsGeneratorClient() {
           desktop={desktop}
           ios={ios}
           pwa={pwa}
+          site={site}
+          sourceFile={sourceFile}
           onDesktopChange={updateDesktop}
           onIOSChange={updateIOS}
           onPWAChange={updatePWA}
