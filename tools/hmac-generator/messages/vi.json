@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Cấu hình",
+  "secretKeyLabel": "Khóa Bí mật",
+  "secretKeyPlaceholder": "Nhập khóa bí mật của bạn",
+  "algorithmLabel": "Thuật toán",
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hmacOutputLabel": "Đầu ra HMAC",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Thập lục phân",
+  "base64Label": "Base64",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép"
+}

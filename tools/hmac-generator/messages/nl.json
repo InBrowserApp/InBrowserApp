@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Configuratie",
+  "secretKeyLabel": "Geheime Sleutel",
+  "secretKeyPlaceholder": "Voer uw geheime sleutel in",
+  "algorithmLabel": "Algoritme",
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hmacOutputLabel": "HMAC-uitvoer",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

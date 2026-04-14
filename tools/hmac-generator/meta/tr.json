@@ -1,0 +1,4 @@
+{
+  "name": "HMAC Oluşturucu",
+  "description": "Metin veya dosya girişi için HMAC (Hash Tabanlı Mesaj Kimlik Doğrulama Kodu) imzaları oluşturun. SHA-1, SHA-256, SHA-384 ve SHA-512 algoritmalarını destekler ve onaltılık ve base64 çıktı formatları sunar."
+}

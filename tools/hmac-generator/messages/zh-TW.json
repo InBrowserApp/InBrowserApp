@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "設定",
+  "secretKeyLabel": "密鑰",
+  "secretKeyPlaceholder": "輸入您的密鑰",
+  "algorithmLabel": "演算法",
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包括檔案內容或 API 負載。",
+  "importFromFileLabel": "從檔案匯入",
+  "hmacOutputLabel": "HMAC 輸出",
+  "hmacOutputDescription": "目前文字輸入與密鑰對應的 HMAC 輸出。",
+  "emptyStateDescription": "輸入密鑰並提供文字，或匯入檔案以產生 HMAC 輸出。",
+  "hexLabel": "十六進位",
+  "base64Label": "Base64",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generator HMAC",
+  "description": "Hasilkan tanda tangan HMAC (Hash-based Message Authentication Code) untuk teks atau file. Mendukung algoritma SHA-1, SHA-256, SHA-384, dan SHA-512 dengan format output heksadesimal dan base64."
+}

@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Yapılandırma",
+  "secretKeyLabel": "Gizli Anahtar",
+  "secretKeyPlaceholder": "Gizli anahtarınızı girin",
+  "algorithmLabel": "Algoritma",
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hmacOutputLabel": "HMAC Çıktısı",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}

@@ -1,0 +1,55 @@
+import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import { cn } from "@workspace/ui/lib/utils"
+
+import type { HmacGeneratorPageMessages } from "../client/types"
+import type { HmacDigest } from "../core/hmac"
+
+type HmacOutputListProps = Readonly<{
+  messages: HmacGeneratorPageMessages
+  digest: HmacDigest | null
+  loading?: boolean
+}>
+
+const HMAC_FIELDS = [
+  { key: "hex", labelKey: "hexLabel" },
+  { key: "base64", labelKey: "base64Label" },
+] as const satisfies ReadonlyArray<{
+  key: keyof HmacDigest
+  labelKey: keyof HmacGeneratorPageMessages
+}>
+
+function HmacOutputList({
+  messages,
+  digest,
+  loading = false,
+}: HmacOutputListProps) {
+  return (
+    <div className="grid gap-3">
+      {HMAC_FIELDS.map(({ key, labelKey }) => (
+        <section
+          key={key}
+          className={cn(
+            "grid gap-3 rounded-xl border bg-muted/20 p-4",
+            loading && "opacity-75"
+          )}
+        >
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <h3 className="text-sm font-medium">{messages[labelKey]}</h3>
+            <ToolCopyButton
+              value={digest?.[key] ?? ""}
+              copyLabel={messages.copyResultLabel}
+              copiedLabel={messages.copiedLabel}
+              disabled={loading || !digest}
+            />
+          </div>
+
+          <code className="block text-xs leading-6 break-all sm:text-sm">
+            {digest?.[key] ?? ""}
+          </code>
+        </section>
+      ))}
+    </div>
+  )
+}
+
+export { HmacOutputList }

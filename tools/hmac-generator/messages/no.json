@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Konfigurasjon",
+  "secretKeyLabel": "Hemmelig Nøkkel",
+  "secretKeyPlaceholder": "Skriv inn din hemmelige nøkkel",
+  "algorithmLabel": "Algoritme",
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Importer fra fil",
+  "hmacOutputLabel": "HMAC-utdata",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Konfigurasi",
+  "secretKeyLabel": "Kunci Rahsia",
+  "secretKeyPlaceholder": "Masukkan kunci rahsia anda",
+  "algorithmLabel": "Algoritma",
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Import dari fail",
+  "hmacOutputLabel": "Output HMAC",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

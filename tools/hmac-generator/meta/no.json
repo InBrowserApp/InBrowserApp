@@ -1,0 +1,4 @@
+{
+  "name": "HMAC-generator",
+  "description": "Generer HMAC (Hash-based Message Authentication Code) signaturer for tekst eller filer. Støtter SHA-1, SHA-256, SHA-384 og SHA-512 algoritmer med heksadesimale og base64 utdataformater."
+}

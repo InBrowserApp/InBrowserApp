@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "구성",
+  "secretKeyLabel": "비밀 키",
+  "secretKeyPlaceholder": "비밀 키를 입력하세요",
+  "algorithmLabel": "알고리즘",
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hmacOutputLabel": "HMAC 출력",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

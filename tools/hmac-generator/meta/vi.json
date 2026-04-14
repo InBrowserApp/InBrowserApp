@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo HMAC",
+  "description": "Tạo chữ ký HMAC (Mã xác thực thông điệp dựa trên Hash) cho văn bản hoặc tệp đầu vào. Hỗ trợ các thuật toán SHA-1, SHA-256, SHA-384 và SHA-512 với định dạng đầu ra thập lục phân và base64."
+}

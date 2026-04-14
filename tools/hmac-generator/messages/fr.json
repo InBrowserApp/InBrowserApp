@@ -1,0 +1,17 @@
+{
+  "configurationLabel": "Configuration",
+  "secretKeyLabel": "Clé Secrète",
+  "secretKeyPlaceholder": "Entrez votre clé secrète",
+  "algorithmLabel": "Algorithme",
+  "inputLabel": "Entrée",
+  "plainTextLabel": "Texte brut",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "hmacOutputLabel": "Sortie HMAC",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Hexadécimal",
+  "base64Label": "Base64",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié"
+}

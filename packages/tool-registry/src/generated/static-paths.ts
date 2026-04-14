@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hmac-generator",
+    language: "ar",
+  },
+  {
+    slug: "hmac-generator",
+    language: "de",
+  },
+  {
+    slug: "hmac-generator",
+    language: "en",
+  },
+  {
+    slug: "hmac-generator",
+    language: "es",
+  },
+  {
+    slug: "hmac-generator",
+    language: "fr",
+  },
+  {
+    slug: "hmac-generator",
+    language: "he",
+  },
+  {
+    slug: "hmac-generator",
+    language: "hi",
+  },
+  {
+    slug: "hmac-generator",
+    language: "id",
+  },
+  {
+    slug: "hmac-generator",
+    language: "it",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ja",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ko",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ms",
+  },
+  {
+    slug: "hmac-generator",
+    language: "nl",
+  },
+  {
+    slug: "hmac-generator",
+    language: "no",
+  },
+  {
+    slug: "hmac-generator",
+    language: "pl",
+  },
+  {
+    slug: "hmac-generator",
+    language: "pt",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ru",
+  },
+  {
+    slug: "hmac-generator",
+    language: "sv",
+  },
+  {
+    slug: "hmac-generator",
+    language: "th",
+  },
+  {
+    slug: "hmac-generator",
+    language: "tr",
+  },
+  {
+    slug: "hmac-generator",
+    language: "vi",
+  },
+  {
+    slug: "hmac-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "hmac-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
