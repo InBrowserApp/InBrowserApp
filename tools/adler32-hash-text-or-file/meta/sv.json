@@ -1,0 +1,4 @@
+{
+  "name": "Adler-32-hash text eller fil",
+  "description": "Generera Adler-32-kontrollsummor för text eller filer. Beräkna snabba checksummor för integritetskontroll och feldetektering"
+}

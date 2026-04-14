@@ -1,0 +1,19 @@
+{
+  "inputTitle": "إدخال JSON",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "الصق بيانات JSON هنا...",
+  "outputTitle": "المخطط المُولّد",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "أدخل بيانات JSON صالحة لتوليد مخطط",
+  "invalidJson": "JSON غير صالح",
+  "optionsTitle": "الخيارات",
+  "optionDraft": "مسودة المخطط",
+  "optionInferRequired": "استنتاج الخصائص المطلوبة",
+  "optionAllowAdditionalProperties": "السماح بخصائص إضافية",
+  "optionDetectFormat": "اكتشاف تنسيقات السلاسل (uuid, email, uri, date-time)",
+  "useSampleLabel": "استخدم مثالاً",
+  "importFromFileLabel": "استيراد من ملف",
+  "downloadSchemaLabel": "تنزيل المخطط",
+  "copySchemaLabel": "نسخ المخطط",
+  "copiedLabel": "تم النسخ"
+}

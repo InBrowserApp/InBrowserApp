@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Tim kiem theo so cong hoac ten dich vu...",
+  "all": "Tat ca",
+  "common": "Pho bien",
+  "system": "He thong (0-1023)",
+  "registered": "Da dang ky (1024+)",
+  "port": "Cong",
+  "service": "Dich vu",
+  "protocol": "Giao thuc",
+  "description": "Mo ta",
+  "aboutTitle": "So Cong la gi?",
+  "aboutDescription": "So cong la mot so nguyen khong dau 16 bit (0-65535) duoc su dung de xac dinh cac quy trinh hoac dich vu cu the tren thiet bi mang. Cong cho phep nhieu dich vu mang chay tren cung mot dia chi IP.",
+  "systemPorts": "Cong He thong (0-1023):",
+  "systemPortsDesc": "Con goi la \"cong noi tieng\", duoc danh rieng cho cac dich vu pho bien nhu HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Cong Da dang ky (1024-49151):",
+  "registeredPortsDesc": "Duoc su dung boi cac ung dung va dich vu da dang ky voi IANA, nhu MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Cong Dong (49152-65535):",
+  "dynamicPortsDesc": "Con goi la \"cong tam thoi\", duoc su dung cho cac ket noi tam thoi boi cac ung dung khach.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "バーコードジェネレーター",
+  "description": "バーコード（CODE128、EAN、UPC など）を生成し、PNG / SVG / JPEG / WebP でダウンロード。"
+}

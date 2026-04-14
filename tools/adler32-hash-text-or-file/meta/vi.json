@@ -1,0 +1,4 @@
+{
+  "name": "Hash Adler-32 văn bản hoặc tệp",
+  "description": "Tạo checksum Adler-32 cho văn bản hoặc tệp. Tính checksum nhanh để kiểm tra tính toàn vẹn dữ liệu và phát hiện lỗi"
+}

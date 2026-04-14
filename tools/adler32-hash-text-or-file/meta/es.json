@@ -1,0 +1,4 @@
+{
+  "name": "Hash Adler-32 de Texto o Archivo",
+  "description": "Genera checksums Adler-32 para texto o archivos. Calcula checksums rápidos para verificar integridad y detectar errores"
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "按連接埠號碼或服務名稱搜尋...",
+  "all": "全部",
+  "common": "常用",
+  "system": "系統 (0-1023)",
+  "registered": "註冊 (1024+)",
+  "port": "連接埠",
+  "service": "服務",
+  "protocol": "協定",
+  "description": "描述",
+  "aboutTitle": "什麼是連接埠號碼？",
+  "aboutDescription": "連接埠號碼是一個 16 位元無符號整數 (0-65535)，用於識別網路裝置上的特定程序或服務。連接埠允許多個網路服務在同一 IP 位址上執行。",
+  "systemPorts": "系統連接埠 (0-1023)：",
+  "systemPortsDesc": "也稱為「知名連接埠」，保留用於常見服務，如 HTTP (80)、HTTPS (443)、SSH (22)。",
+  "registeredPorts": "註冊連接埠 (1024-49151)：",
+  "registeredPortsDesc": "由在 IANA 註冊的應用程式和服務使用，如 MySQL (3306)、PostgreSQL (5432)。",
+  "dynamicPorts": "動態連接埠 (49152-65535)：",
+  "dynamicPortsDesc": "也稱為「臨時連接埠」，由用戶端應用程式用於臨時連線。",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}

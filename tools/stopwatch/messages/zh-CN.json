@@ -1,0 +1,18 @@
+{
+  "startLabel": "开始",
+  "resumeLabel": "继续",
+  "pauseLabel": "暂停",
+  "lapLabel": "计次",
+  "resetLabel": "重置",
+  "lapsLabel": "计次记录",
+  "clearLabel": "清空",
+  "exportLabel": "导出",
+  "noLapsLabel": "暂无计次记录",
+  "statusRunningLabel": "计时中",
+  "statusPausedLabel": "已暂停",
+  "lapTimeLabel": "计次",
+  "totalTimeLabel": "总计",
+  "lapMillisecondsLabel": "计次(毫秒)",
+  "totalMillisecondsLabel": "总计(毫秒)",
+  "lapsDescription": "查看每圈分段时间和累计总时间。你可以导出 CSV，或清空后重新开始。"
+}

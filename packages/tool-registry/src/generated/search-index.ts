@@ -2,6 +2,137 @@ import type { ToolSearchIndexEntry } from "../types"
 
 export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
+    slug: "adler32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "adler32",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "error-detection",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Adler-32 للنص أو الملف",
+        description:
+          "أنشئ قيم Adler-32 للنصوص أو الملفات. احسب قيماً سريعة للتحقق من سلامة البيانات واكتشاف الأخطاء",
+      },
+      de: {
+        name: "Adler-32-Hash für Text oder Datei",
+        description:
+          "Erzeuge Adler-32-Prüfsummen für Text oder Dateien. Berechne schnelle Prüfsummen zur Integritätsprüfung und Fehlererkennung",
+      },
+      en: {
+        name: "Adler-32 Hash Text or File",
+        description:
+          "Generate Adler-32 checksums for text input or file upload. Calculate fast checksums for data integrity verification and error detection",
+      },
+      es: {
+        name: "Hash Adler-32 de Texto o Archivo",
+        description:
+          "Genera checksums Adler-32 para texto o archivos. Calcula checksums rápidos para verificar integridad y detectar errores",
+      },
+      fr: {
+        name: "Hash Adler-32 de Texte ou Fichier",
+        description:
+          "Générez des sommes de contrôle Adler-32 pour du texte ou des fichiers. Calculez des checksums rapides pour vérifier l’intégrité et détecter les erreurs",
+      },
+      he: {
+        name: "האש Adler-32 טקסט או קובץ",
+        description:
+          "צור סכומי ביקורת Adler-32 עבור טקסט או קבצים. חשב סכומים מהירים לאימות שלמות נתונים ולזיהוי שגיאות",
+      },
+      hi: {
+        name: "Adler-32 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Adler-32 चेकसम बनाएं। डेटा अखंडता सत्यापन और त्रुटि पहचान के लिए तेज़ चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Adler-32 Teks atau File",
+        description:
+          "Buat checksum Adler-32 untuk teks atau file. Hitung checksum cepat untuk verifikasi integritas data dan deteksi kesalahan",
+      },
+      it: {
+        name: "Hash Adler-32 di Testo o File",
+        description:
+          "Genera checksum Adler-32 per testo o file. Calcola checksum rapidi per verificare l’integrità dei dati e rilevare errori",
+      },
+      ja: {
+        name: "Adler-32 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードに対して Adler-32 チェックサムを生成します。データ整合性の確認とエラー検出のために高速チェックサムを計算します",
+      },
+      ko: {
+        name: "Adler-32 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대해 Adler-32 체크섬을 생성합니다. 데이터 무결성 검증과 오류 감지를 위한 빠른 체크섬을 계산합니다",
+      },
+      ms: {
+        name: "Hash Adler-32 Teks atau Fail",
+        description:
+          "Jana checksum Adler-32 untuk teks atau fail. Kira checksum pantas bagi pengesahan integriti data dan pengesanan ralat",
+      },
+      nl: {
+        name: "Adler-32-hash tekst of bestand",
+        description:
+          "Genereer Adler-32-checksums voor tekst of bestanden. Bereken snelle checksums voor integriteitscontrole en foutdetectie",
+      },
+      no: {
+        name: "Adler-32-hash tekst eller fil",
+        description:
+          "Generer Adler-32-kontrollsummer for tekst eller filer. Beregn raske kontrollsummer for dataintegritet og feildeteksjon",
+      },
+      pl: {
+        name: "Hash Adler-32 tekstu lub pliku",
+        description:
+          "Generuj sumy kontrolne Adler-32 dla tekstu lub plików. Obliczaj szybkie sumy do weryfikacji integralności danych i wykrywania błędów",
+      },
+      pt: {
+        name: "Hash Adler-32 de Texto ou Arquivo",
+        description:
+          "Gere checksums Adler-32 para texto ou arquivos. Calcule checksums rápidos para verificar integridade de dados e detectar erros",
+      },
+      ru: {
+        name: "Adler-32-хеш текста или файла",
+        description:
+          "Создавайте контрольные суммы Adler-32 для текста и файлов. Вычисляйте быстрые суммы для проверки целостности данных и обнаружения ошибок",
+      },
+      sv: {
+        name: "Adler-32-hash text eller fil",
+        description:
+          "Generera Adler-32-kontrollsummor för text eller filer. Beräkna snabba checksummor för integritetskontroll och feldetektering",
+      },
+      th: {
+        name: "แฮช Adler-32 ข้อความหรือไฟล์",
+        description:
+          "สร้างค่า Adler-32 สำหรับข้อความหรือไฟล์ คำนวณเช็กซัมแบบรวดเร็วเพื่อยืนยันความสมบูรณ์ของข้อมูลและตรวจจับข้อผิดพลาด",
+      },
+      tr: {
+        name: "Adler-32 Hash Metin veya Dosya",
+        description:
+          "Metin veya dosya için Adler-32 sağlama toplamı üretin. Veri bütünlüğü doğrulaması ve hata tespiti için hızlı checksum hesaplayın",
+      },
+      vi: {
+        name: "Hash Adler-32 văn bản hoặc tệp",
+        description:
+          "Tạo checksum Adler-32 cho văn bản hoặc tệp. Tính checksum nhanh để kiểm tra tính toàn vẹn dữ liệu và phát hiện lỗi",
+      },
+      "zh-CN": {
+        name: "Adler-32 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Adler-32 校验和。计算快速校验值，用于数据完整性验证和错误检测",
+      },
+      "zh-TW": {
+        name: "Adler-32 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測",
+      },
+    },
+  },
+  {
     slug: "ascii-art-generator",
     category: "text",
     icon: "binary",
@@ -121,6 +252,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  {
+    slug: "barcode-generator",
+    category: "image",
+    icon: "image",
+    tags: ["barcode", "code128", "ean", "upc", "generator", "image"],
+    locales: {
+      ar: {
+        name: "مولد الباركود",
+        description:
+          "أنشئ باركود (CODE128 وEAN وUPC وغيرها) وحمّله بصيغ PNG أو SVG أو JPEG أو WebP.",
+      },
+      de: {
+        name: "Barcode-Generator",
+        description:
+          "Erzeugen Sie Barcodes (CODE128, EAN, UPC usw.) und laden Sie sie als PNG, SVG, JPEG oder WebP herunter.",
+      },
+      en: {
+        name: "Barcode Generator",
+        description:
+          "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG, SVG, JPEG, or WebP.",
+      },
+      es: {
+        name: "Generador de Códigos de Barras",
+        description:
+          "Genera códigos de barras (CODE128, EAN, UPC, etc.) y descárgalos como PNG, SVG, JPEG o WebP.",
+      },
+      fr: {
+        name: "Générateur de Codes-barres",
+        description:
+          "Générez des codes‑barres (CODE128, EAN, UPC, etc.) et téléchargez-les en PNG, SVG, JPEG ou WebP.",
+      },
+      he: {
+        name: "מחולל ברקוד",
+        description:
+          "צור ברקודים (CODE128, EAN, UPC ועוד) והורד כ‑PNG, SVG, JPEG או WebP.",
+      },
+      hi: {
+        name: "बारकोड जनरेटर",
+        description:
+          "ब्राउज़र में बारकोड (CODE128, EAN, UPC आदि) बनाएँ और PNG, SVG, JPEG या WebP के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator Kode Batang",
+        description:
+          "Buat kode batang (CODE128, EAN, UPC, dll.) dan unduh sebagai PNG, SVG, JPEG, atau WebP.",
+      },
+      it: {
+        name: "Generatore di Codici a Barre",
+        description:
+          "Genera codici a barre (CODE128, EAN, UPC, ecc.) e scaricali in PNG, SVG, JPEG o WebP.",
+      },
+      ja: {
+        name: "バーコードジェネレーター",
+        description:
+          "バーコード（CODE128、EAN、UPC など）を生成し、PNG / SVG / JPEG / WebP でダウンロード。",
+      },
+      ko: {
+        name: "바코드 생성기",
+        description:
+          "브라우저에서 바코드(CODE128, EAN, UPC 등)를 생성하고 PNG / SVG / JPEG / WebP로 다운로드합니다.",
+      },
+      ms: {
+        name: "Penjana Kod Bar",
+        description:
+          "Jana kod bar (CODE128, EAN, UPC, dll.) dan muat turun sebagai PNG, SVG, JPEG atau WebP.",
+      },
+      nl: {
+        name: "Barcodegenerator",
+        description:
+          "Genereer barcodes (CODE128, EAN, UPC, enz.) en download als PNG, SVG, JPEG of WebP.",
+      },
+      no: {
+        name: "Strekkodegenerator",
+        description:
+          "Generer strekkoder (CODE128, EAN, UPC m.fl.) og last ned som PNG, SVG, JPEG eller WebP.",
+      },
+      pl: {
+        name: "Generator kodów kreskowych",
+        description:
+          "Generuj kody kreskowe (CODE128, EAN, UPC itd.) i pobieraj jako PNG, SVG, JPEG lub WebP.",
+      },
+      pt: {
+        name: "Gerador de Código de Barras",
+        description:
+          "Gere códigos de barras (CODE128, EAN, UPC, etc.) e faça download em PNG, SVG, JPEG ou WebP.",
+      },
+      ru: {
+        name: "Генератор штрихкодов",
+        description:
+          "Создавайте штрихкоды (CODE128, EAN, UPC и др.) и скачивайте их в PNG, SVG, JPEG или WebP.",
+      },
+      sv: {
+        name: "Streckkodsgenerator",
+        description:
+          "Skapa streckkoder (CODE128, EAN, UPC m.fl.) och ladda ner som PNG, SVG, JPEG eller WebP.",
+      },
+      th: {
+        name: "ตัวสร้างบาร์โค้ด",
+        description:
+          "สร้างบาร์โค้ด (CODE128, EAN, UPC เป็นต้น) และดาวน์โหลดเป็น PNG, SVG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "Barkod Oluşturucu",
+        description:
+          "Barkodlar (CODE128, EAN, UPC vb.) oluşturun ve PNG, SVG, JPEG veya WebP olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã vạch",
+        description:
+          "Tạo mã vạch (CODE128, EAN, UPC, v.v.) và tải về dưới dạng PNG, SVG, JPEG hoặc WebP.",
+      },
+      "zh-CN": {
+        name: "条形码生成器",
+        description:
+          "在浏览器内生成条形码（CODE128、EAN、UPC 等），并可下载为 PNG / SVG / JPEG / WebP。",
+      },
+      "zh-TW": {
+        name: "條碼產生器",
+        description:
+          "在瀏覽器內產生條碼（CODE128、EAN、UPC 等），可下載為 PNG / SVG / JPEG / WebP。",
       },
     },
   },
@@ -2244,6 +2498,108 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "json-schema-generator",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "schema", "generator", "developer"],
+    locales: {
+      ar: {
+        name: "مولد مخطط JSON",
+        description: "ينشئ مخطط JSON من بيانات JSON نموذجية",
+      },
+      de: {
+        name: "JSON-Schema-Generator",
+        description: "Erstellt ein JSON Schema aus Beispiel-JSON-Daten",
+      },
+      en: {
+        name: "JSON Schema Generator",
+        description: "Generate JSON Schema from example JSON data",
+      },
+      es: {
+        name: "Generador de JSON Schema",
+        description: "Genera JSON Schema a partir de datos JSON de ejemplo",
+      },
+      fr: {
+        name: "Générateur de JSON Schema",
+        description: "Génère un JSON Schema à partir de données JSON d'exemple",
+      },
+      he: {
+        name: "מחולל JSON Schema",
+        description: "יוצר JSON Schema מתוך נתוני JSON לדוגמה",
+      },
+      hi: {
+        name: "JSON स्कीमा जनरेटर",
+        description: "उदाहरण JSON डेटा से JSON Schema जनरेट करें",
+      },
+      id: {
+        name: "Generator JSON Schema",
+        description: "Menghasilkan JSON Schema dari data JSON contoh",
+      },
+      it: {
+        name: "Generatore di JSON Schema",
+        description: "Genera JSON Schema da dati JSON di esempio",
+      },
+      ja: {
+        name: "JSON Schema ジェネレーター",
+        description: "例の JSON データから JSON Schema を生成します",
+      },
+      ko: {
+        name: "JSON 스키마 생성기",
+        description: "예시 JSON 데이터에서 JSON Schema를 생성합니다",
+      },
+      ms: {
+        name: "Penjana JSON Schema",
+        description: "Menjana JSON Schema daripada data JSON contoh",
+      },
+      nl: {
+        name: "JSON Schema-generator",
+        description:
+          "Genereert JSON Schema op basis van voorbeeld-JSON-gegevens",
+      },
+      no: {
+        name: "JSON Schema-generator",
+        description: "Genererer JSON Schema fra eksempeldata i JSON",
+      },
+      pl: {
+        name: "Generator JSON Schema",
+        description:
+          "Generuje JSON Schema na podstawie przykładowych danych JSON",
+      },
+      pt: {
+        name: "Gerador de JSON Schema",
+        description: "Gera JSON Schema a partir de dados JSON de exemplo",
+      },
+      ru: {
+        name: "Генератор JSON Schema",
+        description: "Создает JSON Schema из примеров JSON-данных",
+      },
+      sv: {
+        name: "JSON Schema-generator",
+        description: "Genererar JSON Schema från exempel-JSON-data",
+      },
+      th: {
+        name: "ตัวสร้าง JSON Schema",
+        description: "สร้าง JSON Schema จากข้อมูล JSON ตัวอย่าง",
+      },
+      tr: {
+        name: "JSON Schema Oluşturucu",
+        description: "Örnek JSON verilerinden JSON Schema oluşturur",
+      },
+      vi: {
+        name: "Trình tạo JSON Schema",
+        description: "Tạo JSON Schema từ dữ liệu JSON mẫu",
+      },
+      "zh-CN": {
+        name: "JSON Schema 生成器",
+        description: "从示例 JSON 数据生成 JSON Schema",
+      },
+      "zh-TW": {
+        name: "JSON Schema 產生器",
+        description: "從範例 JSON 資料產生 JSON Schema",
+      },
+    },
+  },
+  {
     slug: "json-schema-validator",
     category: "json",
     icon: "braces",
@@ -3352,6 +3708,107 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  {
+    slug: "port-number-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["port", "tcp", "udp", "iana", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أرقام المنافذ",
+        description: "البحث وتصفح أرقام منافذ الشبكة الشائعة",
+      },
+      de: {
+        name: "Port-Nummern-Suche",
+        description: "Suchen und durchsuchen Sie gängige Netzwerk-Portnummern",
+      },
+      en: {
+        name: "Port Number Lookup",
+        description: "Search and browse common network port numbers",
+      },
+      es: {
+        name: "Consulta de Puertos",
+        description: "Buscar y explorar números de puertos de red comunes",
+      },
+      fr: {
+        name: "Recherche de Ports",
+        description:
+          "Rechercher et parcourir les numéros de ports réseau courants",
+      },
+      he: {
+        name: "חיפוש מספרי פורט",
+        description: "חפש ועיין במספרי פורט רשת נפוצים",
+      },
+      hi: {
+        name: "पोर्ट नंबर खोज",
+        description: "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Nomor Port",
+        description: "Cari dan jelajahi nomor port jaringan umum",
+      },
+      it: {
+        name: "Ricerca Porte",
+        description: "Cerca e sfoglia i numeri di porta di rete comuni",
+      },
+      ja: {
+        name: "ポート番号検索",
+        description: "一般的なネットワークポート番号を検索・閲覧",
+      },
+      ko: {
+        name: "포트 번호 조회",
+        description: "일반적인 네트워크 포트 번호 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Nombor Port",
+        description: "Cari dan semak nombor port rangkaian biasa",
+      },
+      nl: {
+        name: "Poortnummer Opzoeken",
+        description: "Zoek en blader door veelvoorkomende netwerkpoortnummers",
+      },
+      no: {
+        name: "Portnummersok",
+        description: "Sok og bla gjennom vanlige nettverksportnumre",
+      },
+      pl: {
+        name: "Wyszukiwanie Portów",
+        description: "Wyszukuj i przeglądaj popularne numery portów sieciowych",
+      },
+      pt: {
+        name: "Consulta de Portas",
+        description: "Pesquisar e navegar por números de portas de rede comuns",
+      },
+      ru: {
+        name: "Поиск Портов",
+        description: "Поиск и просмотр распространённых сетевых портов",
+      },
+      sv: {
+        name: "Portnummerssökning",
+        description: "Sök och bläddra bland vanliga nätverksportnummer",
+      },
+      th: {
+        name: "ค้นหาหมายเลขพอร์ต",
+        description: "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป",
+      },
+      tr: {
+        name: "Port Numarası Arama",
+        description: "Yaygın ağ port numaralarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Số Cổng",
+        description: "Tìm kiếm và duyệt các số cổng mạng phổ biến",
+      },
+      "zh-CN": {
+        name: "端口号查询",
+        description: "搜索和浏览常见网络端口号",
+      },
+      "zh-TW": {
+        name: "連接埠號碼查詢",
+        description: "搜尋和瀏覽常見網路連接埠號碼",
       },
     },
   },
@@ -4594,6 +5051,122 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SRI 雜湊產生器",
         description:
           "為網頁資源產生子資源完整性（SRI）雜湊值。建立 SHA-256、SHA-384 或 SHA-512 雜湊值以確保外部腳本、樣式表和其他資源的完整性",
+      },
+    },
+  },
+  {
+    slug: "stopwatch",
+    category: "developer",
+    icon: "wrench",
+    tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
+    locales: {
+      ar: {
+        name: "ساعة إيقاف",
+        description:
+          "تتبّع الوقت المنقضي باستخدام بدء وإيقاف مؤقت ولفة وإعادة ضبط.",
+      },
+      de: {
+        name: "Stoppuhr",
+        description:
+          "Erfassen Sie die verstrichene Zeit mit Start-, Pause-, Runden- und Reset-Steuerung.",
+      },
+      en: {
+        name: "Stopwatch",
+        description:
+          "Track elapsed time with start, pause, lap, and reset controls.",
+      },
+      es: {
+        name: "Cronómetro",
+        description:
+          "Registra el tiempo transcurrido con controles de iniciar, pausar, vuelta y restablecer.",
+      },
+      fr: {
+        name: "Chronomètre",
+        description:
+          "Suivez le temps écoulé avec les contrôles démarrer, pause, tour et réinitialisation.",
+      },
+      he: {
+        name: "סטופר",
+        description: "עקבו אחר הזמן שחלף עם התחל, השהה, הקפה ואיפוס.",
+      },
+      hi: {
+        name: "स्टॉपवॉच",
+        description: "शुरू, रोकें, लैप और रीसेट नियंत्रण के साथ बीता समय ट्रैक करें।",
+      },
+      id: {
+        name: "Stopwatch",
+        description:
+          "Lacak waktu berlalu dengan kontrol mulai, jeda, putaran, dan reset.",
+      },
+      it: {
+        name: "Cronometro",
+        description:
+          "Tieni traccia del tempo trascorso con avvio, pausa, giro e reset.",
+      },
+      ja: {
+        name: "ストップウォッチ",
+        description:
+          "開始、停止（一時停止）、ラップ、リセットで経過時間を計測します。",
+      },
+      ko: {
+        name: "스톱워치",
+        description: "시작, 일시정지, 랩, 초기화로 경과 시간을 기록합니다.",
+      },
+      ms: {
+        name: "Jam randik",
+        description:
+          "Jejak masa berlalu dengan mula, jeda, pusingan, dan set semula.",
+      },
+      nl: {
+        name: "Stopwatch",
+        description:
+          "Houd de verstreken tijd bij met start-, pauze-, ronde- en resetknoppen.",
+      },
+      no: {
+        name: "Stoppeklokke",
+        description:
+          "Følg med på medgått tid med start, pause, runde og nullstill.",
+      },
+      pl: {
+        name: "Stoper",
+        description:
+          "Śledź czas upływu za pomocą startu, pauzy, okrążenia i resetu.",
+      },
+      pt: {
+        name: "Cronômetro",
+        description:
+          "Acompanhe o tempo decorrido com iniciar, pausar, volta e redefinir.",
+      },
+      ru: {
+        name: "Секундомер",
+        description:
+          "Измеряйте прошедшее время с помощью старта, паузы, круга и сброса.",
+      },
+      sv: {
+        name: "Stoppur",
+        description: "Följ förloppstid med start, paus, varv och återställ.",
+      },
+      th: {
+        name: "นาฬิกาจับเวลา",
+        description: "ติดตามเวลาที่ผ่านไปด้วยเริ่ม หยุดชั่วคราว รอบ และรีเซ็ต",
+      },
+      tr: {
+        name: "Kronometre",
+        description:
+          "Başlat, duraklat, tur ve sıfırla kontrolleriyle geçen süreyi takip edin.",
+      },
+      vi: {
+        name: "Đồng hồ bấm giờ",
+        description:
+          "Theo dõi thời gian đã trôi qua với bắt đầu, tạm dừng, vòng và đặt lại.",
+      },
+      "zh-CN": {
+        name: "秒表",
+        description: "使用开始、暂停、计次和重置控制来记录经过的时间。",
+      },
+      "zh-TW": {
+        name: "秒錶",
+        description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
       },
     },
   },
