@@ -13,5 +13,6 @@
   "lapTimeLabel": "Tour",
   "totalTimeLabel": "Total",
   "lapMillisecondsLabel": "Tour (ms)",
-  "totalMillisecondsLabel": "Total (ms)"
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Consultez le temps de chaque tour et le total cumulé. Exportez la liste en CSV ou effacez-la pour recommencer."
 }

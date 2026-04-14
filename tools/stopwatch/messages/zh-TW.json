@@ -13,5 +13,6 @@
   "lapTimeLabel": "計次",
   "totalTimeLabel": "總計",
   "lapMillisecondsLabel": "計次(毫秒)",
-  "totalMillisecondsLabel": "總計(毫秒)"
+  "totalMillisecondsLabel": "總計(毫秒)",
+  "lapsDescription": "查看每圈分段時間和累計總時間。你可以匯出 CSV，或清除後重新開始。"
 }

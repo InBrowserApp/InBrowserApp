@@ -13,5 +13,6 @@
   "lapTimeLabel": "Runde",
   "totalTimeLabel": "Gesamt",
   "lapMillisecondsLabel": "Runde (ms)",
-  "totalMillisecondsLabel": "Gesamt (ms)"
+  "totalMillisecondsLabel": "Gesamt (ms)",
+  "lapsDescription": "Prüfen Sie die Zwischenzeiten jeder Runde und die kumulierte Gesamtzeit. Exportieren Sie die Liste als CSV oder leeren Sie sie für einen Neustart."
 }

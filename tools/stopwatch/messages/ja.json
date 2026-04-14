@@ -13,5 +13,6 @@
   "lapTimeLabel": "ラップ",
   "totalTimeLabel": "合計",
   "lapMillisecondsLabel": "ラップ(ms)",
-  "totalMillisecondsLabel": "合計(ms)"
+  "totalMillisecondsLabel": "合計(ms)",
+  "lapsDescription": "各ラップの区間タイムと累計タイムを確認できます。CSV に書き出すか、クリアして最初からやり直せます。"
 }

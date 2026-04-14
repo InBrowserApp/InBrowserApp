@@ -18,6 +18,8 @@ const messages = {
   clearLabel: "Clear",
   exportLabel: "Export",
   noLapsLabel: "No laps yet",
+  lapsDescription:
+    "Review lap splits and cumulative totals. Export the list as CSV or clear it to start over.",
   statusRunningLabel: "Running",
   statusPausedLabel: "Paused",
   lapTimeLabel: "Lap",

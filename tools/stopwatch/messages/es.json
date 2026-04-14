@@ -13,5 +13,6 @@
   "lapTimeLabel": "Vuelta",
   "totalTimeLabel": "Total",
   "lapMillisecondsLabel": "Vuelta (ms)",
-  "totalMillisecondsLabel": "Total (ms)"
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Revisa los parciales de cada vuelta y el tiempo total acumulado. Exporta la lista como CSV o límpiala para empezar de nuevo."
 }

@@ -13,5 +13,6 @@
   "lapTimeLabel": "Okrążenie",
   "totalTimeLabel": "Razem",
   "lapMillisecondsLabel": "Okrążenie (ms)",
-  "totalMillisecondsLabel": "Razem (ms)"
+  "totalMillisecondsLabel": "Razem (ms)",
+  "lapsDescription": "Sprawdź czas okrążenia i łączny czas narastająco. Wyeksportuj listę do CSV albo wyczyść ją, aby zacząć od nowa."
 }

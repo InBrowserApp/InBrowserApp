@@ -13,5 +13,6 @@
   "lapTimeLabel": "Lap",
   "totalTimeLabel": "Total",
   "lapMillisecondsLabel": "Lap (ms)",
-  "totalMillisecondsLabel": "Total (ms)"
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Review lap splits and cumulative totals. Export the list as CSV or clear it to start over."
 }

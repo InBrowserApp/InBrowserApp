@@ -13,5 +13,6 @@
   "lapTimeLabel": "Varv",
   "totalTimeLabel": "Totalt",
   "lapMillisecondsLabel": "Varv (ms)",
-  "totalMillisecondsLabel": "Totalt (ms)"
+  "totalMillisecondsLabel": "Totalt (ms)",
+  "lapsDescription": "Granska varvtiderna och den sammanlagda tiden. Exportera listan som CSV eller rensa den för att börja om."
 }

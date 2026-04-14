@@ -13,5 +13,6 @@
   "lapTimeLabel": "랩",
   "totalTimeLabel": "총합",
   "lapMillisecondsLabel": "랩(ms)",
-  "totalMillisecondsLabel": "총합(ms)"
+  "totalMillisecondsLabel": "총합(ms)",
+  "lapsDescription": "각 랩의 구간 시간과 누적 시간을 확인할 수 있습니다. CSV로 내보내거나 지우고 다시 시작하세요."
 }

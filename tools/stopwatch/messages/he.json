@@ -13,5 +13,6 @@
   "lapTimeLabel": "הקפה",
   "totalTimeLabel": "סך הכל",
   "lapMillisecondsLabel": "הקפה (מילישניות)",
-  "totalMillisecondsLabel": "סך הכל (מילישניות)"
+  "totalMillisecondsLabel": "סך הכל (מילישניות)",
+  "lapsDescription": "עיינו בזמני ההקפות ובזמן המצטבר הכולל. אפשר לייצא את הרשימה כ-CSV או לנקות אותה כדי להתחיל מחדש."
 }

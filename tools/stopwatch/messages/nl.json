@@ -13,5 +13,6 @@
   "lapTimeLabel": "Ronde",
   "totalTimeLabel": "Totaal",
   "lapMillisecondsLabel": "Ronde (ms)",
-  "totalMillisecondsLabel": "Totaal (ms)"
+  "totalMillisecondsLabel": "Totaal (ms)",
+  "lapsDescription": "Bekijk de rondetijden en de cumulatieve totaaltijd. Exporteer de lijst als CSV of wis hem om opnieuw te beginnen."
 }

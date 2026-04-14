@@ -13,5 +13,6 @@
   "lapTimeLabel": "Putaran",
   "totalTimeLabel": "Total",
   "lapMillisecondsLabel": "Putaran (ms)",
-  "totalMillisecondsLabel": "Total (ms)"
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Tinjau split setiap putaran dan total waktu kumulatif. Ekspor daftar sebagai CSV atau bersihkan untuk memulai lagi."
 }

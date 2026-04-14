@@ -13,5 +13,6 @@
   "lapTimeLabel": "Giro",
   "totalTimeLabel": "Totale",
   "lapMillisecondsLabel": "Giro (ms)",
-  "totalMillisecondsLabel": "Totale (ms)"
+  "totalMillisecondsLabel": "Totale (ms)",
+  "lapsDescription": "Controlla i tempi parziali di ogni giro e il totale cumulato. Esporta l'elenco in CSV oppure cancellalo per ricominciare."
 }

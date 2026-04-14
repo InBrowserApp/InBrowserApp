@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { RefreshCcw } from "@workspace/ui/icons"
+import { Flag, Pause, Play, RefreshCcw } from "@workspace/ui/icons"
 
 import type { StopwatchMessages } from "../types"
 
@@ -59,6 +59,7 @@ function StopwatchCard({
 
       <ToolPanelCardFooter className="flex flex-wrap items-center justify-center gap-3 border-t">
         <Button type="button" size="sm" onClick={onStart} disabled={running}>
+          <Play data-icon="inline-start" />
           {hasElapsed ? messages.resumeLabel : messages.startLabel}
         </Button>
         <Button
@@ -68,6 +69,7 @@ function StopwatchCard({
           onClick={onPause}
           disabled={!running}
         >
+          <Pause data-icon="inline-start" />
           {messages.pauseLabel}
         </Button>
         <Button
@@ -77,12 +79,13 @@ function StopwatchCard({
           onClick={onLap}
           disabled={!canLap}
         >
+          <Flag data-icon="inline-start" />
           {messages.lapLabel}
         </Button>
         <Button
           type="button"
           size="sm"
-          variant="ghost"
+          variant="outline"
           onClick={onReset}
           disabled={!canReset}
         >

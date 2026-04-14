@@ -13,5 +13,6 @@
   "lapTimeLabel": "Круг",
   "totalTimeLabel": "Итого",
   "lapMillisecondsLabel": "Круг (мс)",
-  "totalMillisecondsLabel": "Итого (мс)"
+  "totalMillisecondsLabel": "Итого (мс)",
+  "lapsDescription": "Просматривайте время круга и накопленный итог. Экспортируйте список в CSV или очистите его, чтобы начать заново."
 }

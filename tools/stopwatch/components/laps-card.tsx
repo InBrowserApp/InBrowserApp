@@ -5,7 +5,11 @@ import {
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Table,
@@ -66,6 +70,7 @@ function LapsCard({ messages, laps, onClear }: LapsCardProps) {
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.lapsLabel}</CardTitle>
+        <CardDescription>{messages.lapsDescription}</CardDescription>
       </CardHeader>
 
       <ToolPanelCardContent className="gap-4 pt-4">

@@ -13,5 +13,6 @@
   "lapTimeLabel": "लैप",
   "totalTimeLabel": "कुल",
   "lapMillisecondsLabel": "लैप (मि.से.)",
-  "totalMillisecondsLabel": "कुल (मि.से.)"
+  "totalMillisecondsLabel": "कुल (मि.से.)",
+  "lapsDescription": "हर लैप का स्प्लिट समय और कुल बीता समय देखें। सूची को CSV में निर्यात करें या साफ़ करके फिर से शुरू करें।"
 }

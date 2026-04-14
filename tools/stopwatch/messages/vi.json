@@ -13,5 +13,6 @@
   "lapTimeLabel": "Vòng",
   "totalTimeLabel": "Tổng",
   "lapMillisecondsLabel": "Vòng (ms)",
-  "totalMillisecondsLabel": "Tổng (ms)"
+  "totalMillisecondsLabel": "Tổng (ms)",
+  "lapsDescription": "Xem thời gian từng vòng và tổng thời gian tích lũy. Xuất danh sách dưới dạng CSV hoặc xóa để bắt đầu lại."
 }

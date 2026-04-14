@@ -13,5 +13,6 @@
   "lapTimeLabel": "Runde",
   "totalTimeLabel": "Totalt",
   "lapMillisecondsLabel": "Runde (ms)",
-  "totalMillisecondsLabel": "Totalt (ms)"
+  "totalMillisecondsLabel": "Totalt (ms)",
+  "lapsDescription": "Se rundetidene og den akkumulerte totalen. Eksporter listen som CSV eller tøm den for å starte på nytt."
 }

@@ -13,5 +13,6 @@
   "lapTimeLabel": "لفة",
   "totalTimeLabel": "الإجمالي",
   "lapMillisecondsLabel": "لفة (مللي ثانية)",
-  "totalMillisecondsLabel": "الإجمالي (مللي ثانية)"
+  "totalMillisecondsLabel": "الإجمالي (مللي ثانية)",
+  "lapsDescription": "راجع زمن كل لفة والإجمالي التراكمي. يمكنك تصدير القائمة بصيغة CSV أو مسحها للبدء من جديد."
 }

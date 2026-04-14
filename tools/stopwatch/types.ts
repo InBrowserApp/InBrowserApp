@@ -12,6 +12,7 @@ type StopwatchMessages = Readonly<{
   clearLabel: string
   exportLabel: string
   noLapsLabel: string
+  lapsDescription: string
   statusRunningLabel: string
   statusPausedLabel: string
   lapTimeLabel: string
