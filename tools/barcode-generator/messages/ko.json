@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "바코드 형식을 선택하고 크기, 라벨, 색상을 조정하세요.",
   "preview": "Preview",
+  "previewDescription": "생성된 바코드를 확인하고 PNG, SVG, JPEG 또는 WebP로 내보내세요.",
   "download": "Download",
   "text": "텍스트",
   "textPlaceholder": "내용 입력...",

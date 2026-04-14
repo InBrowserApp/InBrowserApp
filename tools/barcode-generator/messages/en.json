@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "Choose a barcode format and adjust size, labels, and colors.",
   "preview": "Preview",
+  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   "download": "Download",
   "text": "Text",
   "textPlaceholder": "Type content to encode...",

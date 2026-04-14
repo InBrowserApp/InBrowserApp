@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "اختر تنسيق الباركود واضبط الحجم والتسميات والألوان.",
   "preview": "Preview",
+  "previewDescription": "راجع الباركود الناتج وصدّره بصيغة PNG أو SVG أو JPEG أو WebP.",
   "download": "Download",
   "text": "نص",
   "textPlaceholder": "أدخل المحتوى...",

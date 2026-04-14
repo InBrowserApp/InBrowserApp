@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "Choisissez un format de code-barres et ajustez la taille, les libellés et les couleurs.",
   "preview": "Preview",
+  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   "download": "Download",
   "text": "Texte",
   "textPlaceholder": "Saisir le contenu...",

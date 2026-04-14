@@ -13,6 +13,7 @@ type BarcodeGeneratorMessages = Readonly<{
   options: string
   optionsDescription: string
   preview: string
+  previewDescription: string
   download: string
   text: string
   textPlaceholder: string

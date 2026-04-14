@@ -8,7 +8,10 @@ import {
 import { STORAGE_KEY } from "./client/constants"
 import { OptionsCard } from "./client/options-card"
 import { PreviewCard } from "./client/preview-card"
-import { renderBarcodePngBlob, renderBarcodeSvgMarkup } from "./client/render"
+import {
+  renderBarcodeRasterBlob,
+  renderBarcodeSvgMarkup,
+} from "./client/render"
 
 import type {
   BarcodeFormat,
@@ -21,6 +24,18 @@ import type { BarcodeGeneratorMessages } from "./client/types"
 type BarcodeGeneratorClientProps = Readonly<{
   messages: BarcodeGeneratorMessages
 }>
+
+type RasterDownloads = Readonly<{
+  jpeg: Blob | null
+  png: Blob | null
+  webp: Blob | null
+}>
+
+const EMPTY_RASTER_DOWNLOADS: RasterDownloads = {
+  jpeg: null,
+  png: null,
+  webp: null,
+}
 
 function useObjectUrl(blob: Blob | null) {
   const [url, setUrl] = useState<string | null>(null)
@@ -44,7 +59,7 @@ function useObjectUrl(blob: Blob | null) {
 
 function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
   const [options, setOptions] = useState(DEFAULT_BARCODE_GENERATOR_OPTIONS)
-  const [pngBlob, setPngBlob] = useState<Blob | null>(null)
+  const [rasterDownloads, setRasterDownloads] = useState(EMPTY_RASTER_DOWNLOADS)
   const [svgMarkup, setSvgMarkup] = useState("")
   const [error, setError] = useState("")
   const [isRendering, setIsRendering] = useState(false)
@@ -73,21 +88,29 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
     void (async () => {
       try {
         const nextSvgMarkup = renderBarcodeSvgMarkup(deferredOptions)
-        const nextPngBlob = await renderBarcodePngBlob(deferredOptions)
+        const [pngResult, jpegResult, webpResult] = await Promise.allSettled([
+          renderBarcodeRasterBlob(deferredOptions, "png"),
+          renderBarcodeRasterBlob(deferredOptions, "jpeg"),
+          renderBarcodeRasterBlob(deferredOptions, "webp"),
+        ])
 
         if (cancelled) {
           return
         }
 
         setSvgMarkup(nextSvgMarkup)
-        setPngBlob(nextPngBlob)
+        setRasterDownloads({
+          jpeg: jpegResult.status === "fulfilled" ? jpegResult.value : null,
+          png: pngResult.status === "fulfilled" ? pngResult.value : null,
+          webp: webpResult.status === "fulfilled" ? webpResult.value : null,
+        })
       } catch (renderError) {
         if (cancelled) {
           return
         }
 
         setSvgMarkup("")
-        setPngBlob(null)
+        setRasterDownloads(EMPTY_RASTER_DOWNLOADS)
         setError(
           renderError instanceof Error
             ? renderError.message
@@ -114,8 +137,10 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
         : null,
     [svgMarkup]
   )
-  const pngUrl = useObjectUrl(pngBlob)
+  const pngUrl = useObjectUrl(rasterDownloads.png)
+  const jpegUrl = useObjectUrl(rasterDownloads.jpeg)
   const svgUrl = useObjectUrl(svgBlob)
+  const webpUrl = useObjectUrl(rasterDownloads.webp)
   const previewUrl = useMemo(
     () =>
       svgMarkup
@@ -134,14 +159,16 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
+    <div className="mx-auto grid w-full max-w-5xl gap-6">
       <PreviewCard
         error={error}
         isRendering={isRendering}
+        jpegUrl={jpegUrl}
         messages={messages}
         pngUrl={pngUrl}
         previewUrl={previewUrl}
         svgUrl={svgUrl}
+        webpUrl={webpUrl}
       />
       <OptionsCard
         handlers={{

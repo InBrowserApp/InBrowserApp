@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "Chọn định dạng mã vạch rồi điều chỉnh kích thước, nhãn và màu sắc.",
   "preview": "Preview",
+  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   "download": "Download",
   "text": "Văn bản",
   "textPlaceholder": "Nhập nội dung...",

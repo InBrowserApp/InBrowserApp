@@ -19,25 +19,29 @@ import type { BarcodeGeneratorMessages } from "./types"
 type PreviewCardProps = Readonly<{
   error: string
   isRendering: boolean
+  jpegUrl: string | null
   messages: BarcodeGeneratorMessages
   pngUrl: string | null
   previewUrl: string | null
   svgUrl: string | null
+  webpUrl: string | null
 }>
 
 function PreviewCard({
   error,
   isRendering,
+  jpegUrl,
   messages,
   pngUrl,
   previewUrl,
   svgUrl,
+  webpUrl,
 }: PreviewCardProps) {
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader className="border-b">
         <CardTitle>{messages.preview}</CardTitle>
-        <CardDescription>{messages.meta.description}</CardDescription>
+        <CardDescription>{messages.previewDescription}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4">
         {error ? (
@@ -62,11 +66,11 @@ function PreviewCard({
           )}
         </div>
       </CardContent>
-      <CardFooter className="justify-between gap-3">
+      <CardFooter className="flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
         <span className="text-sm text-muted-foreground">
           {messages.download}
         </span>
-        <div className="flex items-center gap-2">
+        <div className="grid w-full gap-2 sm:w-auto sm:grid-cols-2 lg:flex">
           {pngUrl ? (
             <Button asChild variant="outline">
               <a download="barcode.png" href={pngUrl}>
@@ -91,6 +95,32 @@ function PreviewCard({
             <Button disabled variant="outline">
               <Download className="size-4" />
               SVG
+            </Button>
+          )}
+          {jpegUrl ? (
+            <Button asChild variant="outline">
+              <a download="barcode.jpeg" href={jpegUrl}>
+                <Download className="size-4" />
+                JPEG
+              </a>
+            </Button>
+          ) : (
+            <Button disabled variant="outline">
+              <Download className="size-4" />
+              JPEG
+            </Button>
+          )}
+          {webpUrl ? (
+            <Button asChild variant="outline">
+              <a download="barcode.webp" href={webpUrl}>
+                <Download className="size-4" />
+                WebP
+              </a>
+            </Button>
+          ) : (
+            <Button disabled variant="outline">
+              <Download className="size-4" />
+              WebP
             </Button>
           )}
         </div>

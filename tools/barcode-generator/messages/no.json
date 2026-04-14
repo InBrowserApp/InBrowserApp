@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "Velg et strekkodeformat og juster størrelse, etiketter og farger.",
   "preview": "Preview",
+  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   "download": "Download",
   "text": "Tekst",
   "textPlaceholder": "Skriv innhold...",

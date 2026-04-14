@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "बारकोड फ़ॉर्मैट चुनें और आकार, लेबल तथा रंग समायोजित करें।",
   "preview": "Preview",
+  "previewDescription": "बने हुए बारकोड को देखें और उसे PNG, SVG, JPEG या WebP में एक्सपोर्ट करें।",
   "download": "Download",
   "text": "टेक्स्ट",
   "textPlaceholder": "सामग्री दर्ज करें...",

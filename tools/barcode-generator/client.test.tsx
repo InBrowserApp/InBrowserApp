@@ -10,17 +10,21 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 import BarcodeGeneratorClient from "./client"
 
 vi.mock("./client/render", () => ({
-  renderBarcodePngBlob: vi.fn(
-    async () => new Blob(["png"], { type: "image/png" })
+  renderBarcodeRasterBlob: vi.fn(
+    async (_options, format: string) =>
+      new Blob([format], { type: `image/${format}` })
   ),
   renderBarcodeSvgMarkup: vi.fn(
     () => '<svg xmlns="http://www.w3.org/2000/svg"></svg>'
   ),
 }))
 
-import { renderBarcodePngBlob, renderBarcodeSvgMarkup } from "./client/render"
+import {
+  renderBarcodeRasterBlob,
+  renderBarcodeSvgMarkup,
+} from "./client/render"
 
-const mockedRenderBarcodePngBlob = vi.mocked(renderBarcodePngBlob)
+const mockedRenderBarcodeRasterBlob = vi.mocked(renderBarcodeRasterBlob)
 const mockedRenderBarcodeSvgMarkup = vi.mocked(renderBarcodeSvgMarkup)
 
 const messages = {
@@ -33,6 +37,8 @@ const messages = {
   optionsDescription:
     "Choose a barcode format and adjust size, labels, and colors.",
   preview: "Preview",
+  previewDescription:
+    "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   download: "Download",
   text: "Text",
   textPlaceholder: "Type content to encode...",
@@ -55,7 +61,7 @@ const messages = {
 
 beforeEach(() => {
   window.localStorage.clear()
-  mockedRenderBarcodePngBlob.mockClear()
+  mockedRenderBarcodeRasterBlob.mockClear()
   mockedRenderBarcodeSvgMarkup.mockClear()
 
   let urlCounter = 0
@@ -82,10 +88,12 @@ describe("BarcodeGeneratorClient", () => {
     await waitFor(() => {
       expect(screen.getByRole("link", { name: "PNG" })).toBeTruthy()
       expect(screen.getByRole("link", { name: "SVG" })).toBeTruthy()
+      expect(screen.getByRole("link", { name: "JPEG" })).toBeTruthy()
+      expect(screen.getByRole("link", { name: "WebP" })).toBeTruthy()
     })
 
     expect(mockedRenderBarcodeSvgMarkup).toHaveBeenCalled()
-    expect(mockedRenderBarcodePngBlob).toHaveBeenCalled()
+    expect(mockedRenderBarcodeRasterBlob).toHaveBeenCalledTimes(3)
   })
 
   test("restores persisted options from localStorage", async () => {
@@ -140,5 +148,7 @@ describe("BarcodeGeneratorClient", () => {
 
     expect(screen.queryByRole("link", { name: "PNG" })).toBeNull()
     expect(screen.queryByRole("link", { name: "SVG" })).toBeNull()
+    expect(screen.queryByRole("link", { name: "JPEG" })).toBeNull()
+    expect(screen.queryByRole("link", { name: "WebP" })).toBeNull()
   })
 })

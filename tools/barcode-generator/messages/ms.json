@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "Pilih format kod bar dan laraskan saiz, label dan warna.",
   "preview": "Preview",
+  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
   "download": "Download",
   "text": "Teks",
   "textPlaceholder": "Masukkan kandungan...",

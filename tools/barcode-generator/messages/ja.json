@@ -2,6 +2,7 @@
   "options": "Options",
   "optionsDescription": "バーコード形式を選び、サイズ、ラベル、色を調整します。",
   "preview": "Preview",
+  "previewDescription": "生成したバーコードを確認し、PNG、SVG、JPEG、または WebP として書き出します。",
   "download": "Download",
   "text": "テキスト",
   "textPlaceholder": "内容を入力...",

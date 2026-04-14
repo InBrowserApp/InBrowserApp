@@ -2,6 +2,7 @@
   "options": "選項",
   "optionsDescription": "選擇條碼格式，並調整尺寸、文字標籤與顏色。",
   "preview": "預覽",
+  "previewDescription": "檢視產生後的條碼，並匯出為 PNG、SVG、JPEG 或 WebP。",
   "download": "下載",
   "text": "文字",
   "textPlaceholder": "輸入要編碼的內容...",
