@@ -3223,6 +3223,123 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "random-number-generator",
+    category: "random",
+    icon: "binary",
+    tags: ["random", "number", "generator", "dice", "lottery", "draw"],
+    locales: {
+      ar: {
+        name: "مولد أرقام عشوائية",
+        description:
+          "أنشئ أرقامًا عشوائية بنطاق وعدد مخصصين مع خيار الأرقام العشرية.",
+      },
+      de: {
+        name: "Zufallszahlengenerator",
+        description:
+          "Erzeuge Zufallszahlen mit benutzerdefiniertem Bereich und Anzahl, optional mit Dezimalstellen.",
+      },
+      en: {
+        name: "Random Number Generator",
+        description:
+          "Generate random numbers with custom ranges, counts, and optional decimals.",
+      },
+      es: {
+        name: "Generador de números aleatorios",
+        description:
+          "Genera números aleatorios con rango y cantidad personalizados, con opción de decimales.",
+      },
+      fr: {
+        name: "Générateur de nombres aléatoires",
+        description:
+          "Générez des nombres aléatoires avec une plage et une quantité personnalisées, avec option décimale.",
+      },
+      he: {
+        name: "מחולל מספרים אקראיים",
+        description:
+          "צור מספרים אקראיים עם טווח וכמות מותאמים, עם אפשרות לעשרוניות.",
+      },
+      hi: {
+        name: "रैंडम नंबर जनरेटर",
+        description: "कस्टम रेंज और संख्या के साथ रैंडम नंबर बनाएं, दशमलव का विकल्प सहित।",
+      },
+      id: {
+        name: "Generator angka acak",
+        description:
+          "Buat angka acak dengan rentang dan jumlah khusus, dengan opsi desimal.",
+      },
+      it: {
+        name: "Generatore di numeri casuali",
+        description:
+          "Genera numeri casuali con intervallo e quantità personalizzati, con decimali opzionali.",
+      },
+      ja: {
+        name: "乱数生成器",
+        description: "範囲と個数を指定して乱数を生成し、小数にも対応します。",
+      },
+      ko: {
+        name: "난수 생성기",
+        description: "범위와 개수를 지정해 난수를 생성하고 소수도 지원합니다.",
+      },
+      ms: {
+        name: "Penjana nombor rawak",
+        description:
+          "Jana nombor rawak dengan julat dan jumlah tersuai, dengan pilihan perpuluhan.",
+      },
+      nl: {
+        name: "Randomgetallengenerator",
+        description:
+          "Genereer willekeurige getallen met aangepast bereik en aantal, optioneel met decimalen.",
+      },
+      no: {
+        name: "Tilfeldig tallgenerator",
+        description:
+          "Generer tilfeldige tall med tilpasset område og antall, med valgfrie desimaler.",
+      },
+      pl: {
+        name: "Generator liczb losowych",
+        description:
+          "Generuj liczby losowe z niestandardowym zakresem i liczbą, z opcjonalnymi miejscami dziesiętnymi.",
+      },
+      pt: {
+        name: "Gerador de números aleatórios",
+        description:
+          "Gere números aleatórios com intervalo e quantidade personalizados, com opção de decimais.",
+      },
+      ru: {
+        name: "Генератор случайных чисел",
+        description:
+          "Создавайте случайные числа с настраиваемым диапазоном и количеством, с поддержкой десятичных.",
+      },
+      sv: {
+        name: "Slumptalsgenerator",
+        description:
+          "Generera slumptal med anpassat intervall och antal, med valfria decimaler.",
+      },
+      th: {
+        name: "ตัวสร้างตัวเลขสุ่ม",
+        description: "สร้างตัวเลขสุ่มด้วยช่วงและจำนวนที่กำหนดเอง พร้อมตัวเลือกทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Sayı Üretici",
+        description:
+          "Özel aralık ve miktarla rastgele sayılar üretin, isteğe bağlı ondalıklarla.",
+      },
+      vi: {
+        name: "Trình tạo số ngẫu nhiên",
+        description:
+          "Tạo số ngẫu nhiên với khoảng và số lượng tùy chỉnh, có tùy chọn số thập phân.",
+      },
+      "zh-CN": {
+        name: "随机数生成器",
+        description: "生成指定范围与数量的随机数字，支持小数。",
+      },
+      "zh-TW": {
+        name: "隨機數產生器",
+        description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  {
     slug: "rot-cipher",
     category: "web",
     icon: "lock",
@@ -8779,6 +8896,123 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  "random-number-generator": {
+    slug: "random-number-generator",
+    category: "random",
+    icon: "binary",
+    tags: ["random", "number", "generator", "dice", "lottery", "draw"],
+    locales: {
+      ar: {
+        name: "مولد أرقام عشوائية",
+        description:
+          "أنشئ أرقامًا عشوائية بنطاق وعدد مخصصين مع خيار الأرقام العشرية.",
+      },
+      de: {
+        name: "Zufallszahlengenerator",
+        description:
+          "Erzeuge Zufallszahlen mit benutzerdefiniertem Bereich und Anzahl, optional mit Dezimalstellen.",
+      },
+      en: {
+        name: "Random Number Generator",
+        description:
+          "Generate random numbers with custom ranges, counts, and optional decimals.",
+      },
+      es: {
+        name: "Generador de números aleatorios",
+        description:
+          "Genera números aleatorios con rango y cantidad personalizados, con opción de decimales.",
+      },
+      fr: {
+        name: "Générateur de nombres aléatoires",
+        description:
+          "Générez des nombres aléatoires avec une plage et une quantité personnalisées, avec option décimale.",
+      },
+      he: {
+        name: "מחולל מספרים אקראיים",
+        description:
+          "צור מספרים אקראיים עם טווח וכמות מותאמים, עם אפשרות לעשרוניות.",
+      },
+      hi: {
+        name: "रैंडम नंबर जनरेटर",
+        description: "कस्टम रेंज और संख्या के साथ रैंडम नंबर बनाएं, दशमलव का विकल्प सहित।",
+      },
+      id: {
+        name: "Generator angka acak",
+        description:
+          "Buat angka acak dengan rentang dan jumlah khusus, dengan opsi desimal.",
+      },
+      it: {
+        name: "Generatore di numeri casuali",
+        description:
+          "Genera numeri casuali con intervallo e quantità personalizzati, con decimali opzionali.",
+      },
+      ja: {
+        name: "乱数生成器",
+        description: "範囲と個数を指定して乱数を生成し、小数にも対応します。",
+      },
+      ko: {
+        name: "난수 생성기",
+        description: "범위와 개수를 지정해 난수를 생성하고 소수도 지원합니다.",
+      },
+      ms: {
+        name: "Penjana nombor rawak",
+        description:
+          "Jana nombor rawak dengan julat dan jumlah tersuai, dengan pilihan perpuluhan.",
+      },
+      nl: {
+        name: "Randomgetallengenerator",
+        description:
+          "Genereer willekeurige getallen met aangepast bereik en aantal, optioneel met decimalen.",
+      },
+      no: {
+        name: "Tilfeldig tallgenerator",
+        description:
+          "Generer tilfeldige tall med tilpasset område og antall, med valgfrie desimaler.",
+      },
+      pl: {
+        name: "Generator liczb losowych",
+        description:
+          "Generuj liczby losowe z niestandardowym zakresem i liczbą, z opcjonalnymi miejscami dziesiętnymi.",
+      },
+      pt: {
+        name: "Gerador de números aleatórios",
+        description:
+          "Gere números aleatórios com intervalo e quantidade personalizados, com opção de decimais.",
+      },
+      ru: {
+        name: "Генератор случайных чисел",
+        description:
+          "Создавайте случайные числа с настраиваемым диапазоном и количеством, с поддержкой десятичных.",
+      },
+      sv: {
+        name: "Slumptalsgenerator",
+        description:
+          "Generera slumptal med anpassat intervall och antal, med valfria decimaler.",
+      },
+      th: {
+        name: "ตัวสร้างตัวเลขสุ่ม",
+        description: "สร้างตัวเลขสุ่มด้วยช่วงและจำนวนที่กำหนดเอง พร้อมตัวเลือกทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Sayı Üretici",
+        description:
+          "Özel aralık ve miktarla rastgele sayılar üretin, isteğe bağlı ondalıklarla.",
+      },
+      vi: {
+        name: "Trình tạo số ngẫu nhiên",
+        description:
+          "Tạo số ngẫu nhiên với khoảng và số lượng tùy chỉnh, có tùy chọn số thập phân.",
+      },
+      "zh-CN": {
+        name: "随机数生成器",
+        description: "生成指定范围与数量的随机数字，支持小数。",
+      },
+      "zh-TW": {
+        name: "隨機數產生器",
+        description: "產生指定範圍與數量的隨機數字，支援小數。",
       },
     },
   },
