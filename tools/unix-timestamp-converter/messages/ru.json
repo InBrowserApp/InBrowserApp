@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix-метка времени",
+  "timestampPlaceholder": "Введите Unix-метку времени...",
+  "invalidTimestamp": "Недопустимая метка времени",
+  "nowLabel": "Сейчас",
+  "unitLabel": "Единица",
+  "autoLabel": "Авто",
+  "secondsLabel": "Секунды",
+  "millisecondsLabel": "Миллисекунды",
+  "nanosecondsLabel": "Наносекунды",
+  "detectedLabel": "Обнаружено",
+  "digitsLabel": "цифр",
+  "dateTimeLabel": "Дата и время",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Относительное",
+  "copyLabel": "Скопировать",
+  "copiedLabel": "Скопировано"
+}

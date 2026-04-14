@@ -1,0 +1,4 @@
+{
+  "name": "Konverter Timestamp Unix",
+  "description": "Konversi timestamp Unix ke tanggal yang dapat dibaca dan sebaliknya. Mendukung deteksi otomatis detik, milidetik, dan nanodetik."
+}

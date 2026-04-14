@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de Marca de Tiempo Unix",
+  "description": "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos."
+}

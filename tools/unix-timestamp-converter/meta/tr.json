@@ -1,0 +1,4 @@
+{
+  "name": "Unix Zaman Damgası Dönüştürücü",
+  "description": "Unix zaman damgalarını okunabilir tarihlere dönüştürün ve tam tersi. Saniye, milisaniye ve nanosaniye otomatik algılamayı destekler."
+}

@@ -3774,6 +3774,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unix-timestamp-converter",
+    language: "ar",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "de",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "en",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "es",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "fr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "he",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "hi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "id",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "it",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ja",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ko",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ms",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "nl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "no",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pt",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ru",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "sv",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "th",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "tr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "vi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "url-component-encoder-decoder",
     language: "ar",
   },

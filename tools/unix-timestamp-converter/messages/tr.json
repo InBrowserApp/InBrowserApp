@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix Zaman Damgası",
+  "timestampPlaceholder": "Unix zaman damgası girin...",
+  "invalidTimestamp": "Geçersiz zaman damgası",
+  "nowLabel": "Şimdi",
+  "unitLabel": "Birim",
+  "autoLabel": "Otomatik",
+  "secondsLabel": "Saniye",
+  "millisecondsLabel": "Milisaniye",
+  "nanosecondsLabel": "Nanosaniye",
+  "detectedLabel": "Algılandı",
+  "digitsLabel": "basamak",
+  "dateTimeLabel": "Tarih ve Saat",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Göreceli",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

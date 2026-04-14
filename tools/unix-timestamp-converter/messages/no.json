@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix Tidsstempel",
+  "timestampPlaceholder": "Skriv inn Unix tidsstempel...",
+  "invalidTimestamp": "Ugyldig tidsstempel",
+  "nowLabel": "Nå",
+  "unitLabel": "Enhet",
+  "autoLabel": "Auto",
+  "secondsLabel": "Sekunder",
+  "millisecondsLabel": "Millisekunder",
+  "nanosecondsLabel": "Nanosekunder",
+  "detectedLabel": "Oppdaget",
+  "digitsLabel": "sifre",
+  "dateTimeLabel": "Dato og Tid",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Relativ",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}
