@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react"
+
 import { Badge } from "@workspace/ui/components/ui/badge"
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -13,13 +16,15 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { ImageUp } from "@workspace/ui/icons"
+import { ImageUp, Sparkles } from "@workspace/ui/icons"
 
+import { readImageDimensions } from "./browser-image"
 import { formatFileSize } from "./format-file-size"
 import { faviconGeneratorCopy } from "./copy"
 
 type UploadCardProps = Readonly<{
   inputId: string
+  onUseDemoIcon: () => void
   previewUrl: string | null
   sourceFile: File | null
   onFileChange: (file: File | null) => void
@@ -27,10 +32,41 @@ type UploadCardProps = Readonly<{
 
 function UploadCard({
   inputId,
+  onUseDemoIcon,
   previewUrl,
   sourceFile,
   onFileChange,
 }: UploadCardProps) {
+  const [dimensions, setDimensions] = useState<{
+    width: number
+    height: number
+  } | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+
+    if (!sourceFile) {
+      setDimensions(null)
+      return
+    }
+
+    void readImageDimensions(sourceFile)
+      .then((nextDimensions) => {
+        if (!cancelled) {
+          setDimensions(nextDimensions)
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setDimensions(null)
+        }
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [sourceFile])
+
   return (
     <Card>
       <CardHeader>
@@ -53,8 +89,17 @@ function UploadCard({
               <span className="truncate text-sm font-medium text-foreground">
                 {sourceFile.name}
               </span>
-              <Badge variant="outline">{sourceFile.type || "unknown"}</Badge>
+              {dimensions ? (
+                <Badge variant="outline">
+                  {faviconGeneratorCopy.dimensionsLabel}: {dimensions.width}x
+                  {dimensions.height}
+                </Badge>
+              ) : null}
+              <Badge variant="outline">
+                {faviconGeneratorCopy.typeLabel}: {sourceFile.type || "unknown"}
+              </Badge>
               <Badge variant="secondary">
+                {faviconGeneratorCopy.sizeLabel}:{" "}
                 {formatFileSize(sourceFile.size)}
               </Badge>
             </div>
@@ -84,6 +129,20 @@ function UploadCard({
             </Empty>
           </label>
         )}
+        {!sourceFile ? (
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="w-fit"
+            onClick={() => {
+              onUseDemoIcon()
+            }}
+          >
+            <Sparkles data-icon="inline-start" />
+            {faviconGeneratorCopy.useDemoIconLabel}
+          </Button>
+        ) : null}
         <input
           id={inputId}
           type="file"

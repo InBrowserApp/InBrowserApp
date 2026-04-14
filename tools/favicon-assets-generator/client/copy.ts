@@ -4,8 +4,25 @@ const faviconGeneratorCopy = {
     "Choose a local SVG, PNG, JPEG, WebP, or other browser-readable image. Everything stays in the browser.",
   chooseImageLabel: "Choose an image",
   changeImageLabel: "Change image",
+  useDemoIconLabel: "Use demo icon",
   uploadHint:
     "SVG works best if you want to keep a dedicated `favicon.svg` alongside the generated ICO file.",
+  dimensionsLabel: "Dimensions",
+  typeLabel: "Type",
+  sizeLabel: "Size",
+  previewTitle: "Platform previews",
+  previewDescription:
+    "Check how the icon reads across desktop tabs, search results, iOS home screen, and PWA launch surfaces before exporting.",
+  desktopPreviewTitle: "Desktop browser and search",
+  searchResultLabel: "Search result",
+  lightTabLabel: "Light tab",
+  darkTabLabel: "Dark tab",
+  iosPreviewTitle: "iOS home screen",
+  pwaPreviewTitle: "PWA launcher",
+  pwaAnyLabel: "Any purpose",
+  pwaMaskableLabel: "Maskable purpose",
+  maskableDisabledLabel:
+    "Enable maskable icons to preview the Android launcher.",
   siteTitle: "Site and manifest settings",
   siteDescription:
     "These values drive the generated `site.webmanifest` plus the HTML snippet for your document head.",

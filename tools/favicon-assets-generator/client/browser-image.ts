@@ -60,6 +60,19 @@ async function loadImageSource(file: Blob): Promise<LoadedImageSource> {
   }
 }
 
+async function readImageDimensions(file: Blob) {
+  const source = await loadImageSource(file)
+
+  try {
+    return {
+      width: source.width,
+      height: source.height,
+    }
+  } finally {
+    source.cleanup?.()
+  }
+}
+
 function fillRoundedBackground(
   context: CanvasRenderingContext2D,
   size: number,
@@ -79,6 +92,11 @@ function fillRoundedBackground(
   context.fillRect(0, 0, size, size)
 }
 
-export { canvasToPngBlob, fillRoundedBackground, loadImageSource }
+export {
+  canvasToPngBlob,
+  fillRoundedBackground,
+  loadImageSource,
+  readImageDimensions,
+}
 export type { LoadedImageSource }
 /* v8 ignore stop */

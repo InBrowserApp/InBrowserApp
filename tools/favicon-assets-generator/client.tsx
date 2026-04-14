@@ -16,9 +16,11 @@ import {
   DEFAULT_SITE_CONFIG,
 } from "./core/favicon-assets"
 import { faviconGeneratorCopy } from "./client/copy"
+import { createDemoIconFile } from "./client/demo-icon"
 import { generateFaviconAssets } from "./client/generate-favicon-assets"
 import { IconSettingsCard } from "./client/icon-settings-card"
 import { OutputCard } from "./client/output-card"
+import { PreviewGallery } from "./client/preview-gallery"
 import { SiteSettingsCard } from "./client/site-settings-card"
 import { UploadCard } from "./client/upload-card"
 
@@ -125,11 +127,16 @@ function FaviconAssetsGeneratorClient() {
       })
   }
 
+  function handleUseDemoIcon() {
+    setSourceFile(createDemoIconFile())
+  }
+
   return (
     <div className="flex flex-col gap-6">
       <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
         <UploadCard
           inputId={inputId}
+          onUseDemoIcon={handleUseDemoIcon}
           previewUrl={sourcePreviewUrl}
           sourceFile={sourceFile}
           onFileChange={setSourceFile}
@@ -150,6 +157,15 @@ function FaviconAssetsGeneratorClient() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       ) : null}
+
+      <PreviewGallery
+        desktop={desktop}
+        ios={ios}
+        pwa={pwa}
+        site={site}
+        sourceFile={sourceFile}
+        sourcePreviewUrl={sourcePreviewUrl}
+      />
 
       <div className="grid gap-6 xl:grid-cols-2">
         <SiteSettingsCard site={site} onSiteChange={updateSite} />

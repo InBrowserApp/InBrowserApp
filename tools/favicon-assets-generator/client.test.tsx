@@ -59,6 +59,7 @@ describe("FaviconAssetsGeneratorClient", () => {
 
     expect(screen.getByText("Source icon")).toBeTruthy()
     expect(screen.getByText("Generated bundle")).toBeTruthy()
+    expect(screen.getByText("Platform previews")).toBeTruthy()
     expect(
       screen.getByText("Upload an image and generate the bundle.")
     ).toBeTruthy()
@@ -68,6 +69,24 @@ describe("FaviconAssetsGeneratorClient", () => {
     }) as HTMLButtonElement
 
     expect(generateButton.disabled).toBe(true)
+  })
+
+  test("loads the demo icon from the source card", async () => {
+    render(<FaviconAssetsGeneratorClient />)
+
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: "Use demo icon",
+      })
+    )
+
+    await waitFor(() => {
+      expect(screen.getByText("Change image")).toBeTruthy()
+    })
+
+    expect(
+      screen.getByText((value) => value.includes("demo-favicon.svg"))
+    ).toBeTruthy()
   })
 
   test("uploads a source image, generates a bundle, and exposes the zip download", async () => {
@@ -118,7 +137,7 @@ describe("FaviconAssetsGeneratorClient", () => {
     })
 
     expect(downloadLink.getAttribute("download")).toBe("favicon-assets.zip")
-    expect(downloadLink.getAttribute("href")).toBe("blob:mock-url-2")
+    expect(downloadLink.getAttribute("href")).toMatch(/^blob:mock-url-\d+$/)
     expect(
       screen.getByDisplayValue((value) =>
         value.includes('<link rel="manifest" href="/site.webmanifest">')
