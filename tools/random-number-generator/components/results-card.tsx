@@ -5,8 +5,12 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
-import { Download, RefreshCcw } from "@workspace/ui/icons"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import { Download, Maximize2, RefreshCcw } from "@workspace/ui/icons"
 
 import type { RandomNumberGeneratorMessages } from "../types"
 
@@ -37,8 +41,9 @@ function ResultsCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.resultsTitle}</CardTitle>
+        <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent>
+      <ToolPanelCardContent className="gap-5">
         <button
           type="button"
           className="flex min-h-52 w-full flex-1 items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-4 py-6 text-center transition-colors hover:border-primary/40 hover:bg-muted/40 disabled:cursor-default disabled:hover:border-border disabled:hover:bg-muted/20"
@@ -110,6 +115,7 @@ function ResultsCard({
           disabled={!hasResults}
           onClick={onOpenFullscreen}
         >
+          <Maximize2 data-icon="inline-start" />
           {messages.enterFullscreenLabel}
         </Button>
       </ToolPanelCardFooter>

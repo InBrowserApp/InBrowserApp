@@ -1,5 +1,6 @@
 {
   "optionsTitle": "オプション",
+  "optionsDescription": "数字を生成する前に、範囲、件数、重複、小数精度を設定します。",
   "presetsLabel": "プリセット",
   "presetDiceLabel": "サイコロ（1-6）",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "最小値は最大値以下である必要があります。",
   "countError": "個数が範囲内のユニーク値数（{range}）を超えています。",
   "resultsTitle": "結果",
+  "resultsDescription": "最新の数字を確認し、コピー、ダウンロード、または全画面で表示できます。",
   "resultsPlaceholder": "数値はここに表示されます...",
   "startRandomLabel": "ランダム開始",
   "stopRandomLabel": "ランダム停止",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "全画面",
   "exitFullscreenLabel": "全画面を終了",
   "historyTitle": "履歴",
+  "historyDescription": "最近の結果は、履歴をクリアするまでここに保持されます。",
   "historyEmptyLabel": "履歴はまだありません。",
   "clearHistoryLabel": "履歴をクリア"
 }

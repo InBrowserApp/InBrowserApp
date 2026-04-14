@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Alternativ",
+  "optionsDescription": "Ställ in intervall, antal, duplicat och precision innan du genererar tal.",
   "presetsLabel": "Förinställningar",
   "presetDiceLabel": "Tärning (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Min måste vara mindre än eller lika med max.",
   "countError": "Antalet överskrider unika värden i intervallet ({range}).",
   "resultsTitle": "Resultat",
+  "resultsDescription": "Granska de senaste talen, kopiera dem, ladda ner dem eller öppna dem i helskärm.",
   "resultsPlaceholder": "Tal visas här...",
   "startRandomLabel": "Starta slump",
   "stopRandomLabel": "Stoppa slump",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Fullskärm",
   "exitFullscreenLabel": "Avsluta fullskärm",
   "historyTitle": "Historik",
+  "historyDescription": "De senaste resultaten ligger kvar här tills du rensar historiken.",
   "historyEmptyLabel": "Ingen historik ännu.",
   "clearHistoryLabel": "Rensa historik"
 }

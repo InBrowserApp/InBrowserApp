@@ -7,11 +7,14 @@ import {
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Checkbox } from "@workspace/ui/components/ui/checkbox"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import {
   Field,
   FieldContent,
-  FieldGroup,
   FieldLabel,
   FieldSet,
 } from "@workspace/ui/components/ui/field"
@@ -80,6 +83,7 @@ function OptionsCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.optionsTitle}</CardTitle>
+        <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-6">
         <FieldSet>
@@ -131,7 +135,7 @@ function OptionsCard({
             </div>
           </div>
 
-          <FieldGroup className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <Field>
               <FieldLabel htmlFor={minId}>{messages.minLabel}</FieldLabel>
               <Input
@@ -159,9 +163,9 @@ function OptionsCard({
                 }}
               />
             </Field>
-          </FieldGroup>
+          </div>
 
-          <FieldGroup className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 md:items-end">
             <Field>
               <FieldLabel htmlFor={countId}>{messages.countLabel}</FieldLabel>
               <Input
@@ -195,7 +199,7 @@ function OptionsCard({
                 </FieldLabel>
               </FieldContent>
             </Field>
-          </FieldGroup>
+          </div>
 
           <Field>
             <FieldLabel>{messages.numberTypeLabel}</FieldLabel>

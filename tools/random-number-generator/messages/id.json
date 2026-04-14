@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Opsi",
+  "optionsDescription": "Atur rentang, jumlah, duplikasi, dan presisi sebelum membuat angka.",
   "presetsLabel": "Preset",
   "presetDiceLabel": "Dadu (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Minimum harus kurang dari atau sama dengan maksimum.",
   "countError": "Jumlah melebihi nilai unik dalam rentang ({range}).",
   "resultsTitle": "Hasil",
+  "resultsDescription": "Tinjau angka terbaru, salin, unduh, atau buka dalam layar penuh.",
   "resultsPlaceholder": "Angka akan muncul di sini...",
   "startRandomLabel": "Mulai acak",
   "stopRandomLabel": "Hentikan acak",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Layar penuh",
   "exitFullscreenLabel": "Keluar layar penuh",
   "historyTitle": "Riwayat",
+  "historyDescription": "Hasil terbaru tetap ada di sini sampai Anda menghapus riwayat.",
   "historyEmptyLabel": "Belum ada riwayat.",
   "clearHistoryLabel": "Hapus riwayat"
 }

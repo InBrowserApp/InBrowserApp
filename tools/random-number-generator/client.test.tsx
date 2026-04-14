@@ -16,6 +16,8 @@ const messages = {
       "Generate random numbers with custom ranges, counts, and optional decimals.",
   },
   optionsTitle: "Options",
+  optionsDescription:
+    "Set the range, amount, duplicates, and precision before generating numbers.",
   presetsLabel: "Presets",
   presetDiceLabel: "Dice (1-6)",
   presetTenLabel: "1-10",
@@ -33,6 +35,8 @@ const messages = {
   countError:
     "Count exceeds the number of unique values in the range ({range}).",
   resultsTitle: "Results",
+  resultsDescription:
+    "Review the latest numbers, copy them, download them, or open them full screen.",
   resultsPlaceholder: "Numbers will appear here...",
   startRandomLabel: "Start random",
   stopRandomLabel: "Stop random",
@@ -42,6 +46,7 @@ const messages = {
   enterFullscreenLabel: "Full screen",
   exitFullscreenLabel: "Exit full screen",
   historyTitle: "History",
+  historyDescription: "Recent results stay here until you clear the history.",
   historyEmptyLabel: "No history yet.",
   clearHistoryLabel: "Clear history",
 } as const

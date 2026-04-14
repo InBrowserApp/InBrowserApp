@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Options",
+  "optionsDescription": "Réglez la plage, la quantité, les doublons et la précision avant de générer des nombres.",
   "presetsLabel": "Préréglages",
   "presetDiceLabel": "Dé (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Le minimum doit être inférieur ou égal au maximum.",
   "countError": "La quantité dépasse les valeurs uniques de la plage ({range}).",
   "resultsTitle": "Résultats",
+  "resultsDescription": "Consultez les derniers nombres, copiez-les, téléchargez-les ou ouvrez-les en plein écran.",
   "resultsPlaceholder": "Les nombres apparaîtront ici...",
   "startRandomLabel": "Démarrer aléatoire",
   "stopRandomLabel": "Arrêter aléatoire",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Plein écran",
   "exitFullscreenLabel": "Quitter le plein écran",
   "historyTitle": "Historique",
+  "historyDescription": "Les résultats récents restent ici jusqu'à ce que vous effaciez l'historique.",
   "historyEmptyLabel": "Aucun historique pour le moment.",
   "clearHistoryLabel": "Effacer l'historique"
 }

@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Opzioni",
+  "optionsDescription": "Imposta intervallo, quantità, duplicati e precisione prima di generare i numeri.",
   "presetsLabel": "Preset",
   "presetDiceLabel": "Dado (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Il minimo deve essere minore o uguale al massimo.",
   "countError": "La quantità supera i valori unici nell'intervallo ({range}).",
   "resultsTitle": "Risultati",
+  "resultsDescription": "Controlla gli ultimi numeri, copiali, scaricali o aprili a schermo intero.",
   "resultsPlaceholder": "I numeri appariranno qui...",
   "startRandomLabel": "Avvia casuale",
   "stopRandomLabel": "Ferma casuale",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Schermo intero",
   "exitFullscreenLabel": "Esci da schermo intero",
   "historyTitle": "Cronologia",
+  "historyDescription": "I risultati recenti restano qui finché non cancelli la cronologia.",
   "historyEmptyLabel": "Nessuna cronologia.",
   "clearHistoryLabel": "Cancella cronologia"
 }

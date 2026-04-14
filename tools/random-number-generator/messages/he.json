@@ -1,5 +1,6 @@
 {
   "optionsTitle": "אפשרויות",
+  "optionsDescription": "הגדירו את הטווח, הכמות, החזרות והדיוק לפני יצירת המספרים.",
   "presetsLabel": "הגדרות מראש",
   "presetDiceLabel": "קובייה (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "המינימום חייב להיות קטן או שווה למקסימום.",
   "countError": "הכמות חורגת ממספר הערכים הייחודיים בטווח ({range}).",
   "resultsTitle": "תוצאות",
+  "resultsDescription": "בדקו את המספרים האחרונים, העתיקו אותם, הורידו אותם או פתחו אותם במסך מלא.",
   "resultsPlaceholder": "מספרים יופיעו כאן...",
   "startRandomLabel": "התחל אקראי",
   "stopRandomLabel": "עצור אקראי",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "מסך מלא",
   "exitFullscreenLabel": "צא ממסך מלא",
   "historyTitle": "היסטוריה",
+  "historyDescription": "התוצאות האחרונות נשארות כאן עד שתנקו את ההיסטוריה.",
   "historyEmptyLabel": "אין היסטוריה עדיין.",
   "clearHistoryLabel": "נקה היסטוריה"
 }

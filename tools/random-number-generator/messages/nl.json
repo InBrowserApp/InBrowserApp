@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Opties",
+  "optionsDescription": "Stel bereik, aantal, duplicaten en precisie in voordat u getallen genereert.",
   "presetsLabel": "Voorinstellingen",
   "presetDiceLabel": "Dobbelsteen (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Minimum moet kleiner dan of gelijk zijn aan maximum.",
   "countError": "Aantal overschrijdt het aantal unieke waarden in het bereik ({range}).",
   "resultsTitle": "Resultaten",
+  "resultsDescription": "Bekijk de nieuwste getallen, kopieer ze, download ze of open ze schermvullend.",
   "resultsPlaceholder": "Getallen verschijnen hier...",
   "startRandomLabel": "Willekeurig starten",
   "stopRandomLabel": "Willekeurig stoppen",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Volledig scherm",
   "exitFullscreenLabel": "Volledig scherm verlaten",
   "historyTitle": "Geschiedenis",
+  "historyDescription": "Recente resultaten blijven hier staan totdat u de geschiedenis wist.",
   "historyEmptyLabel": "Nog geen geschiedenis.",
   "clearHistoryLabel": "Geschiedenis wissen"
 }

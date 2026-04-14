@@ -1,5 +1,6 @@
 {
   "optionsTitle": "विकल्प",
+  "optionsDescription": "नंबर बनाने से पहले रेंज, संख्या, दोहराव और दशमलव सटीकता सेट करें।",
   "presetsLabel": "प्रीसेट",
   "presetDiceLabel": "पासा (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "न्यूनतम मान अधिकतम से कम या बराबर होना चाहिए।",
   "countError": "संख्या सीमा में अद्वितीय मानों ({range}) से अधिक है।",
   "resultsTitle": "परिणाम",
+  "resultsDescription": "नवीनतम नंबर देखें, उन्हें कॉपी करें, डाउनलोड करें या फुल स्क्रीन में खोलें।",
   "resultsPlaceholder": "संख्याएँ यहाँ दिखाई देंगी...",
   "startRandomLabel": "रैंडम शुरू करें",
   "stopRandomLabel": "रैंडम रोकें",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "पूर्ण स्क्रीन",
   "exitFullscreenLabel": "पूर्ण स्क्रीन से बाहर निकलें",
   "historyTitle": "इतिहास",
+  "historyDescription": "हाल के परिणाम यहाँ तब तक बने रहते हैं जब तक आप इतिहास साफ़ नहीं करते।",
   "historyEmptyLabel": "अभी कोई इतिहास नहीं है।",
   "clearHistoryLabel": "इतिहास साफ करें"
 }

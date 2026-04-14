@@ -9,6 +9,7 @@ type HistoryEntry = Readonly<{
 
 type RandomNumberGeneratorMessagesCatalog = Readonly<{
   optionsTitle: string
+  optionsDescription: string
   presetsLabel: string
   presetDiceLabel: string
   presetTenLabel: string
@@ -25,6 +26,7 @@ type RandomNumberGeneratorMessagesCatalog = Readonly<{
   rangeError: string
   countError: string
   resultsTitle: string
+  resultsDescription: string
   resultsPlaceholder: string
   startRandomLabel: string
   stopRandomLabel: string
@@ -34,6 +36,7 @@ type RandomNumberGeneratorMessagesCatalog = Readonly<{
   enterFullscreenLabel: string
   exitFullscreenLabel: string
   historyTitle: string
+  historyDescription: string
   historyEmptyLabel: string
   clearHistoryLabel: string
 }>

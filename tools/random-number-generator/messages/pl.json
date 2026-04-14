@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Opcje",
+  "optionsDescription": "Ustaw zakres, liczbę, duplikaty i precyzję przed wygenerowaniem liczb.",
   "presetsLabel": "Ustawienia",
   "presetDiceLabel": "Kostka (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Minimum musi być mniejsze lub równe maksimum.",
   "countError": "Liczba przekracza unikalne wartości w zakresie ({range}).",
   "resultsTitle": "Wyniki",
+  "resultsDescription": "Sprawdź najnowsze liczby, skopiuj je, pobierz lub otwórz na pełnym ekranie.",
   "resultsPlaceholder": "Liczby pojawią się tutaj...",
   "startRandomLabel": "Uruchom losowo",
   "stopRandomLabel": "Zatrzymaj losowo",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Pełny ekran",
   "exitFullscreenLabel": "Wyjdź z pełnego ekranu",
   "historyTitle": "Historia",
+  "historyDescription": "Ostatnie wyniki pozostają tutaj, dopóki nie wyczyścisz historii.",
   "historyEmptyLabel": "Brak historii.",
   "clearHistoryLabel": "Wyczyść historię"
 }

@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Optionen",
+  "optionsDescription": "Stellen Sie Bereich, Anzahl, Duplikate und Genauigkeit ein, bevor Sie Zahlen erzeugen.",
   "presetsLabel": "Voreinstellungen",
   "presetDiceLabel": "Würfel (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "Minimum muss kleiner oder gleich Maximum sein.",
   "countError": "Die Anzahl überschreitet die eindeutigen Werte im Bereich ({range}).",
   "resultsTitle": "Ergebnisse",
+  "resultsDescription": "Prüfen Sie die neuesten Zahlen, kopieren Sie sie, laden Sie sie herunter oder öffnen Sie sie im Vollbild.",
   "resultsPlaceholder": "Zahlen erscheinen hier...",
   "startRandomLabel": "Zufall starten",
   "stopRandomLabel": "Zufall stoppen",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Vollbild",
   "exitFullscreenLabel": "Vollbild verlassen",
   "historyTitle": "Verlauf",
+  "historyDescription": "Die zuletzt erzeugten Ergebnisse bleiben hier, bis Sie den Verlauf löschen.",
   "historyEmptyLabel": "Noch kein Verlauf.",
   "clearHistoryLabel": "Verlauf löschen"
 }

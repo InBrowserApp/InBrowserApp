@@ -1,5 +1,6 @@
 {
   "optionsTitle": "Opciones",
+  "optionsDescription": "Ajusta el rango, la cantidad, los duplicados y la precisión antes de generar números.",
   "presetsLabel": "Preajustes",
   "presetDiceLabel": "Dado (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "El mínimo debe ser menor o igual que el máximo.",
   "countError": "La cantidad supera los valores únicos del rango ({range}).",
   "resultsTitle": "Resultados",
+  "resultsDescription": "Revisa los últimos números, cópialos, descárgalos o ábrelos en pantalla completa.",
   "resultsPlaceholder": "Los números aparecerán aquí...",
   "startRandomLabel": "Iniciar aleatorio",
   "stopRandomLabel": "Detener aleatorio",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "Pantalla completa",
   "exitFullscreenLabel": "Salir de pantalla completa",
   "historyTitle": "Historial",
+  "historyDescription": "Los resultados recientes permanecen aquí hasta que borres el historial.",
   "historyEmptyLabel": "Aún no hay historial.",
   "clearHistoryLabel": "Borrar historial"
 }

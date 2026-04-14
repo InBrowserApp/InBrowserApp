@@ -1,5 +1,6 @@
 {
   "optionsTitle": "الخيارات",
+  "optionsDescription": "اضبط النطاق والكمية والتكرار والدقة قبل إنشاء الأرقام.",
   "presetsLabel": "إعدادات مسبقة",
   "presetDiceLabel": "نرد (1-6)",
   "presetTenLabel": "1-10",
@@ -16,6 +17,7 @@
   "rangeError": "يجب أن يكون الحد الأدنى أقل من أو يساوي الحد الأقصى.",
   "countError": "العدد يتجاوز القيم الفريدة ضمن النطاق ({range}).",
   "resultsTitle": "النتائج",
+  "resultsDescription": "راجع أحدث الأرقام، وانسخها، أو نزّلها، أو افتحها بملء الشاشة.",
   "resultsPlaceholder": "ستظهر الأرقام هنا...",
   "startRandomLabel": "بدء عشوائي",
   "stopRandomLabel": "إيقاف عشوائي",
@@ -25,6 +27,7 @@
   "enterFullscreenLabel": "ملء الشاشة",
   "exitFullscreenLabel": "الخروج من ملء الشاشة",
   "historyTitle": "السجل",
+  "historyDescription": "تبقى أحدث النتائج هنا حتى تمسح السجل.",
   "historyEmptyLabel": "لا يوجد سجل بعد.",
   "clearHistoryLabel": "مسح السجل"
 }
