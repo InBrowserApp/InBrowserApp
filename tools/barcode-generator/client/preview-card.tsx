@@ -7,6 +7,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -34,8 +35,9 @@ function PreviewCard({
 }: PreviewCardProps) {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="border-b">
         <CardTitle>{messages.preview}</CardTitle>
+        <CardDescription>{messages.meta.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4">
         {error ? (

@@ -30,6 +30,8 @@ const messages = {
       "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG or SVG.",
   },
   options: "Options",
+  optionsDescription:
+    "Choose a barcode format and adjust size, labels, and colors.",
   preview: "Preview",
   download: "Download",
   text: "Text",

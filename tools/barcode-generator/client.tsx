@@ -134,7 +134,15 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
+      <PreviewCard
+        error={error}
+        isRendering={isRendering}
+        messages={messages}
+        pngUrl={pngUrl}
+        previewUrl={previewUrl}
+        svgUrl={svgUrl}
+      />
       <OptionsCard
         handlers={{
           onBooleanChange: (key, value) => {
@@ -161,14 +169,6 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
         }}
         messages={messages}
         options={options}
-      />
-      <PreviewCard
-        error={error}
-        isRendering={isRendering}
-        messages={messages}
-        pngUrl={pngUrl}
-        previewUrl={previewUrl}
-        svgUrl={svgUrl}
       />
     </div>
   )

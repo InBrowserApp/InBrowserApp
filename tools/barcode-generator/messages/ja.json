@@ -1,5 +1,6 @@
 {
   "options": "Options",
+  "optionsDescription": "バーコード形式を選び、サイズ、ラベル、色を調整します。",
   "preview": "Preview",
   "download": "Download",
   "text": "テキスト",

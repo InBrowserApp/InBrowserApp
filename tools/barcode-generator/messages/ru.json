@@ -1,5 +1,6 @@
 {
   "options": "Options",
+  "optionsDescription": "Выберите формат штрихкода и настройте размер, подписи и цвета.",
   "preview": "Preview",
   "download": "Download",
   "text": "Текст",

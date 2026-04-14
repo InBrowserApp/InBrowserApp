@@ -1,6 +1,7 @@
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -167,8 +168,9 @@ function OptionsCard({ handlers, messages, options }: OptionsCardProps) {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="border-b">
         <CardTitle>{messages.options}</CardTitle>
+        <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col">
         <FieldGroup>

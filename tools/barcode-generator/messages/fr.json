@@ -1,5 +1,6 @@
 {
   "options": "Options",
+  "optionsDescription": "Choisissez un format de code-barres et ajustez la taille, les libellés et les couleurs.",
   "preview": "Preview",
   "download": "Download",
   "text": "Texte",
