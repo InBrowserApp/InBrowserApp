@@ -208,6 +208,24 @@ describe("manifest builders", () => {
   "theme_color": "#FFFFFF"
 }`)
   })
+
+  test("returns no maskable manifest icons when maskable outputs are disabled", () => {
+    expect(
+      createManifestIcons(
+        { assetPath: "/icons" },
+        { includeMaskable: false },
+        "maskable"
+      )
+    ).toEqual([])
+
+    expect(
+      createManifestIconsText(
+        { assetPath: "/icons" },
+        { includeMaskable: false },
+        "maskable"
+      )
+    ).toBe("[]")
+  })
 })
 
 describe("separate output snippets", () => {
