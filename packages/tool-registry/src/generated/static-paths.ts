@@ -2,6 +2,98 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "adler32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "ascii-art-generator",
     language: "ar",
   },

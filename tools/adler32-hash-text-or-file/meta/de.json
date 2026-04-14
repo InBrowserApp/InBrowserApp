@@ -1,0 +1,4 @@
+{
+  "name": "Adler-32-Hash für Text oder Datei",
+  "description": "Erzeuge Adler-32-Prüfsummen für Text oder Dateien. Berechne schnelle Prüfsummen zur Integritätsprüfung und Fehlererkennung"
+}

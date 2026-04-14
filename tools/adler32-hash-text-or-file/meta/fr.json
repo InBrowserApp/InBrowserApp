@@ -1,0 +1,4 @@
+{
+  "name": "Hash Adler-32 de Texte ou Fichier",
+  "description": "Générez des sommes de contrôle Adler-32 pour du texte ou des fichiers. Calculez des checksums rapides pour vérifier l’intégrité et détecter les erreurs"
+}
