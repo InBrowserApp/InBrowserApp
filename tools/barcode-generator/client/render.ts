@@ -58,4 +58,3 @@ async function renderBarcodeRasterBlob(
 }
 
 export { renderBarcodeRasterBlob, renderBarcodeSvgMarkup }
-export type { BarcodeRasterFormat }
