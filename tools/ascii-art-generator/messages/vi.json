@@ -1,0 +1,12 @@
+{
+  "inputLabel": "Văn bản đầu vào",
+  "inputDescription": "Nhập một từ hoặc cụm từ để chuyển thành ASCII art.",
+  "inputPlaceholder": "Nhập văn bản để chuyển đổi...",
+  "fontLabel": "Phông chữ",
+  "fontDescription": "Chọn kiểu phông chữ FIGlet cho đầu ra.",
+  "fontSearchPlaceholder": "Tìm phông chữ...",
+  "outputLabel": "Kết quả ASCII art",
+  "outputPlaceholder": "ASCII art sẽ hiển thị ở đây...",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

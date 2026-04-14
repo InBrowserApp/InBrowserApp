@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Testo di input",
+  "inputPlaceholder": "Inserisci il testo da convertire in slug...",
+  "outputLabel": "Slug generato",
+  "outputPlaceholder": "Lo slug apparirà qui...",
+  "separatorLabel": "Separatore",
+  "hyphenLabel": "trattino",
+  "underscoreLabel": "underscore",
+  "dotLabel": "punto",
+  "caseLabel": "Maiuscole/minuscole",
+  "lowercaseLabel": "Minuscolo",
+  "preserveLabel": "Mantieni",
+  "copyLabel": "Copia slug",
+  "copiedLabel": "Copiato",
+  "clearLabel": "Cancella"
+}

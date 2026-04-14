@@ -1,0 +1,4 @@
+{
+  "name": "Schreibweisenkonverter",
+  "description": "Text zwischen verschiedenen Namenskonventionen umwandeln: camelCase, PascalCase, snake_case, kebab-case und mehr."
+}

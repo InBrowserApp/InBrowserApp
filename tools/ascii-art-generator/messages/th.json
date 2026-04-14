@@ -1,0 +1,12 @@
+{
+  "inputLabel": "ข้อความ",
+  "inputDescription": "พิมพ์คำหรือวลีเพื่อแปลงเป็น ASCII art",
+  "inputPlaceholder": "ป้อนข้อความที่ต้องการแปลง...",
+  "fontLabel": "ฟอนต์",
+  "fontDescription": "เลือกรูปแบบฟอนต์ FIGlet สำหรับผลลัพธ์",
+  "fontSearchPlaceholder": "ค้นหาฟอนต์...",
+  "outputLabel": "ผลลัพธ์ ASCII art",
+  "outputPlaceholder": "ASCII art จะแสดงที่นี่...",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

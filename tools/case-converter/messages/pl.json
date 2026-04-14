@@ -1,0 +1,8 @@
+{
+  "inputLabel": "Tekst wejściowy",
+  "inputPlaceholder": "Wpisz tekst do konwersji\u2026",
+  "inputDescription": "Wpisz lub wklej tekst w dowolnej konwencji nazewnictwa. Wszystkie warianty zostaną wygenerowane poniżej.",
+  "clearLabel": "Wyczyść",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

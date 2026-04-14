@@ -1,0 +1,4 @@
+{
+  "name": "Walidator VIN",
+  "description": "Waliduj numery VIN z kontrolą długości, znaków i cyfry kontrolnej"
+}

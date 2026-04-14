@@ -1,0 +1,16 @@
+{
+  "inputLabel": "ข้อความนำเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อแปลงเป็น slug...",
+  "outputLabel": "Slug ที่สร้างขึ้น",
+  "outputPlaceholder": "Slug จะปรากฏที่นี่...",
+  "separatorLabel": "ตัวคั่น",
+  "hyphenLabel": "ขีด",
+  "underscoreLabel": "ขีดล่าง",
+  "dotLabel": "จุด",
+  "caseLabel": "ตัวพิมพ์",
+  "lowercaseLabel": "ตัวพิมพ์เล็ก",
+  "preserveLabel": "คงไว้",
+  "copyLabel": "คัดลอก slug",
+  "copiedLabel": "คัดลอกแล้ว",
+  "clearLabel": "ล้าง"
+}

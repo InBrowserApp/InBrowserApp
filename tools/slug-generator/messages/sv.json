@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Inmatningstext",
+  "inputPlaceholder": "Ange text att konvertera till slug...",
+  "outputLabel": "Genererad Slug",
+  "outputPlaceholder": "Slug visas här...",
+  "separatorLabel": "Separator",
+  "hyphenLabel": "bindestreck",
+  "underscoreLabel": "understreck",
+  "dotLabel": "punkt",
+  "caseLabel": "Skiftläge",
+  "lowercaseLabel": "Gemener",
+  "preserveLabel": "Bevara",
+  "copyLabel": "Kopiera slug",
+  "copiedLabel": "Kopierad",
+  "clearLabel": "Rensa"
+}

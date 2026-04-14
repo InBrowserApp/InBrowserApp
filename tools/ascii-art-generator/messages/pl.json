@@ -1,0 +1,12 @@
+{
+  "inputLabel": "Tekst wejściowy",
+  "inputDescription": "Wpisz słowo lub frazę, aby zamienić je w ASCII art.",
+  "inputPlaceholder": "Wpisz tekst do przekształcenia...",
+  "fontLabel": "Czcionka",
+  "fontDescription": "Wybierz styl czcionki FIGlet dla wyjścia.",
+  "fontSearchPlaceholder": "Szukaj czcionek...",
+  "outputLabel": "Wygenerowana grafika ASCII",
+  "outputPlaceholder": "Grafika ASCII pojawi się tutaj...",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

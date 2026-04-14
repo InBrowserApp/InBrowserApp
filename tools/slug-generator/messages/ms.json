@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Teks Input",
+  "inputPlaceholder": "Masukkan teks untuk ditukar kepada slug...",
+  "outputLabel": "Slug yang Dijana",
+  "outputPlaceholder": "Slug akan muncul di sini...",
+  "separatorLabel": "Pemisah",
+  "hyphenLabel": "sempang",
+  "underscoreLabel": "garis bawah",
+  "dotLabel": "titik",
+  "caseLabel": "Huruf Besar/Kecil",
+  "lowercaseLabel": "Huruf kecil",
+  "preserveLabel": "Kekalkan",
+  "copyLabel": "Salin slug",
+  "copiedLabel": "Disalin",
+  "clearLabel": "Kosongkan"
+}

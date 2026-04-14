@@ -1,0 +1,8 @@
+{
+  "inputLabel": "入力テキスト",
+  "inputPlaceholder": "変換するテキストを入力\u2026",
+  "inputDescription": "任意の命名規則のテキストを入力または貼り付けてください。すべてのケースバリエーションが下に生成されます。",
+  "clearLabel": "クリア",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピー済み"
+}

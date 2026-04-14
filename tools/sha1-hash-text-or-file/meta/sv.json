@@ -1,0 +1,4 @@
+{
+  "name": "SHA-1-hash text eller fil",
+  "description": "Generera SHA-1-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska."
+}

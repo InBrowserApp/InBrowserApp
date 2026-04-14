@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de mayúsculas y minúsculas",
+  "description": "Convierte texto entre diferentes convenciones de nomenclatura: camelCase, PascalCase, snake_case, kebab-case y más."
+}

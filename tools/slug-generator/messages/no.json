@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Inndatatekst",
+  "inputPlaceholder": "Skriv inn tekst for å konvertere til slug...",
+  "outputLabel": "Generert Slug",
+  "outputPlaceholder": "Slug vises her...",
+  "separatorLabel": "Skilletegn",
+  "hyphenLabel": "bindestrek",
+  "underscoreLabel": "understrek",
+  "dotLabel": "punktum",
+  "caseLabel": "Store/små bokstaver",
+  "lowercaseLabel": "Små bokstaver",
+  "preserveLabel": "Bevar",
+  "copyLabel": "Kopier slug",
+  "copiedLabel": "Kopiert",
+  "clearLabel": "Tøm"
+}

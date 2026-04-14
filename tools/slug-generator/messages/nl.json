@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Invoertekst",
+  "inputPlaceholder": "Voer tekst in om naar slug te converteren...",
+  "outputLabel": "Gegenereerde Slug",
+  "outputPlaceholder": "Slug verschijnt hier...",
+  "separatorLabel": "Scheidingsteken",
+  "hyphenLabel": "koppelteken",
+  "underscoreLabel": "underscore",
+  "dotLabel": "punt",
+  "caseLabel": "Hoofdletters",
+  "lowercaseLabel": "Kleine letters",
+  "preserveLabel": "Behouden",
+  "copyLabel": "Slug kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "clearLabel": "Wissen"
+}

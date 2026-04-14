@@ -1,0 +1,4 @@
+{
+  "name": "Harf Durumu Dönüştürücü",
+  "description": "Metni farklı adlandırma kuralları arasında dönüştürün: camelCase, PascalCase, snake_case, kebab-case ve daha fazlası."
+}

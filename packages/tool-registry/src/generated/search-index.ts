@@ -2,6 +2,129 @@ import type { ToolSearchIndexEntry } from "../types"
 
 export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
+    slug: "ascii-art-generator",
+    category: "text",
+    icon: "binary",
+    tags: ["ascii", "art", "text", "generator", "figlet", "banner", "font"],
+    locales: {
+      ar: {
+        name: "مولّد فن ASCII",
+        description:
+          "حوّل النصوص إلى فن ASCII باستخدام خطوط figlet متنوعة. اكتب كلمة أو عبارة، واختر خطًا، وانسخ النتيجة.",
+      },
+      de: {
+        name: "ASCII-Art-Generator",
+        description:
+          "Text in ASCII-Art umwandeln mit verschiedenen Figlet-Schriftarten. Wort oder Satz eingeben, Schriftart wählen und das Ergebnis kopieren.",
+      },
+      en: {
+        name: "ASCII Art Generator",
+        description:
+          "Convert text to ASCII art using various figlet fonts. Type a word or phrase, pick a font, and copy the result.",
+      },
+      es: {
+        name: "Generador de arte ASCII",
+        description:
+          "Convierte texto en arte ASCII usando diversas fuentes figlet. Escribe una palabra o frase, elige una fuente y copia el resultado.",
+      },
+      fr: {
+        name: "Générateur d'art ASCII",
+        description:
+          "Convertissez du texte en art ASCII avec différentes polices figlet. Saisissez un mot ou une phrase, choisissez une police et copiez le résultat.",
+      },
+      he: {
+        name: "מחולל אמנות ASCII",
+        description:
+          "המרת טקסט לאמנות ASCII באמצעות גופני figlet מגוונים. הקלידו מילה או ביטוי, בחרו גופן והעתיקו את התוצאה.",
+      },
+      hi: {
+        name: "ASCII आर्ट जनरेटर",
+        description:
+          "विभिन्न figlet फ़ॉन्ट का उपयोग करके टेक्स्ट को ASCII आर्ट में बदलें। कोई शब्द या वाक्यांश टाइप करें, फ़ॉन्ट चुनें और परिणाम कॉपी करें।",
+      },
+      id: {
+        name: "Generator Seni ASCII",
+        description:
+          "Ubah teks menjadi seni ASCII menggunakan berbagai font figlet. Ketik kata atau frasa, pilih font, lalu salin hasilnya.",
+      },
+      it: {
+        name: "Generatore di ASCII Art",
+        description:
+          "Converti il testo in ASCII art utilizzando vari font figlet. Digita una parola o una frase, scegli un font e copia il risultato.",
+      },
+      ja: {
+        name: "ASCIIアートジェネレーター",
+        description:
+          "さまざまなfigletフォントを使ってテキストをASCIIアートに変換します。単語やフレーズを入力し、フォントを選んで結果をコピーできます。",
+      },
+      ko: {
+        name: "ASCII 아트 생성기",
+        description:
+          "다양한 figlet 글꼴을 사용하여 텍스트를 ASCII 아트로 변환합니다. 단어나 문구를 입력하고, 글꼴을 선택한 후 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Penjana Seni ASCII",
+        description:
+          "Tukar teks kepada seni ASCII menggunakan pelbagai fon figlet. Taipkan perkataan atau frasa, pilih fon, dan salin hasilnya.",
+      },
+      nl: {
+        name: "ASCII-kunstgenerator",
+        description:
+          "Converteer tekst naar ASCII-kunst met verschillende figlet-lettertypen. Typ een woord of zin, kies een lettertype en kopieer het resultaat.",
+      },
+      no: {
+        name: "ASCII Art-generator",
+        description:
+          "Konverter tekst til ASCII-kunst med ulike figlet-skrifttyper. Skriv inn et ord eller en setning, velg en skrifttype og kopier resultatet.",
+      },
+      pl: {
+        name: "Generator ASCII Art",
+        description:
+          "Konwertuj tekst na grafikę ASCII za pomocą czcionek figlet. Wpisz wyraz lub frazę, wybierz czcionkę i skopiuj wynik.",
+      },
+      pt: {
+        name: "Gerador de Arte ASCII",
+        description:
+          "Converta texto em arte ASCII usando diversas fontes figlet. Digite uma palavra ou frase, escolha uma fonte e copie o resultado.",
+      },
+      ru: {
+        name: "Генератор ASCII-арта",
+        description:
+          "Преобразуйте текст в ASCII-арт с помощью различных шрифтов figlet. Введите слово или фразу, выберите шрифт и скопируйте результат.",
+      },
+      sv: {
+        name: "ASCII-konstgenerator",
+        description:
+          "Konvertera text till ASCII-konst med olika figlet-typsnitt. Skriv ett ord eller en fras, välj ett typsnitt och kopiera resultatet.",
+      },
+      th: {
+        name: "ตัวสร้าง ASCII Art",
+        description:
+          "แปลงข้อความเป็น ASCII Art ด้วยฟอนต์ figlet หลากหลายรูปแบบ พิมพ์คำหรือวลี เลือกฟอนต์ แล้วคัดลอกผลลัพธ์",
+      },
+      tr: {
+        name: "ASCII Sanat Oluşturucu",
+        description:
+          "Çeşitli figlet fontları kullanarak metni ASCII sanatına dönüştürün. Bir kelime veya ifade yazın, font seçin ve sonucu kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo ASCII Art",
+        description:
+          "Chuyển đổi văn bản thành ASCII art bằng nhiều phông chữ figlet khác nhau. Nhập một từ hoặc cụm từ, chọn phông chữ và sao chép kết quả.",
+      },
+      "zh-CN": {
+        name: "ASCII 艺术字生成器",
+        description:
+          "使用多种 figlet 字体将文本转换为 ASCII 艺术字。输入单词或短语，选择字体，然后复制结果。",
+      },
+      "zh-TW": {
+        name: "ASCII 藝術產生器",
+        description:
+          "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",
@@ -121,6 +244,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  {
+    slug: "case-converter",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "case",
+      "converter",
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case",
+      "text",
+      "naming",
+      "convention",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل حالة الأحرف",
+        description:
+          "حوّل النص بين اصطلاحات التسمية المختلفة: camelCase وPascalCase وsnake_case وkebab-case والمزيد.",
+      },
+      de: {
+        name: "Schreibweisenkonverter",
+        description:
+          "Text zwischen verschiedenen Namenskonventionen umwandeln: camelCase, PascalCase, snake_case, kebab-case und mehr.",
+      },
+      en: {
+        name: "Case Converter",
+        description:
+          "Convert text between different naming conventions: camelCase, PascalCase, snake_case, kebab-case, and more.",
+      },
+      es: {
+        name: "Conversor de mayúsculas y minúsculas",
+        description:
+          "Convierte texto entre diferentes convenciones de nomenclatura: camelCase, PascalCase, snake_case, kebab-case y más.",
+      },
+      fr: {
+        name: "Convertisseur de casse",
+        description:
+          "Convertissez du texte entre différentes conventions de nommage : camelCase, PascalCase, snake_case, kebab-case, et plus encore.",
+      },
+      he: {
+        name: "ממיר רישיות",
+        description:
+          "המרת טקסט בין מוסכמות שמות שונות: camelCase,‏ PascalCase,‏ snake_case,‏ kebab-case ועוד.",
+      },
+      hi: {
+        name: "केस कन्वर्टर",
+        description:
+          "टेक्स्ट को विभिन्न नामकरण शैलियों में बदलें: camelCase, PascalCase, snake_case, kebab-case, और अन्य।",
+      },
+      id: {
+        name: "Konverter Huruf Besar-Kecil",
+        description:
+          "Konversi teks antar konvensi penamaan: camelCase, PascalCase, snake_case, kebab-case, dan lainnya.",
+      },
+      it: {
+        name: "Convertitore di maiuscole/minuscole",
+        description:
+          "Converti il testo tra diverse convenzioni di denominazione: camelCase, PascalCase, snake_case, kebab-case e altro.",
+      },
+      ja: {
+        name: "ケースコンバーター",
+        description:
+          "camelCase、PascalCase、snake_case、kebab-case など、さまざまな命名規則間でテキストを変換します。",
+      },
+      ko: {
+        name: "대소문자 변환기",
+        description:
+          "camelCase, PascalCase, snake_case, kebab-case 등 다양한 명명 규칙 간에 텍스트를 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Kes Huruf",
+        description:
+          "Tukar teks antara konvensyen penamaan yang berbeza: camelCase, PascalCase, snake_case, kebab-case dan banyak lagi.",
+      },
+      nl: {
+        name: "Hoofdletterconverter",
+        description:
+          "Converteer tekst tussen verschillende naamgevingsconventies: camelCase, PascalCase, snake_case, kebab-case en meer.",
+      },
+      no: {
+        name: "Konvertering av store/små bokstaver",
+        description:
+          "Konverter tekst mellom ulike navnekonvensjoner: camelCase, PascalCase, snake_case, kebab-case og flere.",
+      },
+      pl: {
+        name: "Konwerter wielkości liter",
+        description:
+          "Konwertuj tekst pomiędzy różnymi konwencjami nazewnictwa: camelCase, PascalCase, snake_case, kebab-case i inne.",
+      },
+      pt: {
+        name: "Conversor de Maiusculas/Minusculas",
+        description:
+          "Converta texto entre diferentes convenções de nomenclatura: camelCase, PascalCase, snake_case, kebab-case e mais.",
+      },
+      ru: {
+        name: "Конвертер регистра",
+        description:
+          "Преобразуйте текст между различными соглашениями об именовании: camelCase, PascalCase, snake_case, kebab-case и другими.",
+      },
+      sv: {
+        name: "Konvertera skiftläge",
+        description:
+          "Konvertera text mellan olika namnkonventioner: camelCase, PascalCase, snake_case, kebab-case med mera.",
+      },
+      th: {
+        name: "ตัวแปลงรูปแบบตัวอักษร",
+        description:
+          "แปลงข้อความระหว่างรูปแบบการตั้งชื่อต่าง ๆ: camelCase, PascalCase, snake_case, kebab-case และอื่น ๆ",
+      },
+      tr: {
+        name: "Harf Durumu Dönüştürücü",
+        description:
+          "Metni farklı adlandırma kuralları arasında dönüştürün: camelCase, PascalCase, snake_case, kebab-case ve daha fazlası.",
+      },
+      vi: {
+        name: "Chuyển đổi kiểu chữ",
+        description:
+          "Chuyển đổi văn bản giữa các quy ước đặt tên khác nhau: camelCase, PascalCase, snake_case, kebab-case và nhiều kiểu khác.",
+      },
+      "zh-CN": {
+        name: "大小写转换器",
+        description:
+          "在不同命名约定之间转换文本：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+      "zh-TW": {
+        name: "大小寫轉換器",
+        description:
+          "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
       },
     },
   },
@@ -1930,6 +2186,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "list-comparer",
+    category: "text",
+    icon: "file-text",
+    tags: ["list", "compare", "diff", "dedupe", "text"],
+    locales: {
+      ar: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      de: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      en: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      es: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      fr: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      he: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      hi: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      id: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      it: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ja: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ko: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ms: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      nl: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      no: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      pl: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      pt: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      ru: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      sv: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      th: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      tr: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      vi: {
+        name: "List Comparer",
+        description:
+          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+      },
+      "zh-CN": {
+        name: "列表比较",
+        description:
+          "比较两份列表，找出重合项、差异项和重复项，并导出你真正要处理的结果集。",
+      },
+      "zh-TW": {
+        name: "列表比較",
+        description:
+          "比較兩份列表，找出重疊項、差異項與重複項，並匯出你真正要處理的結果集。",
+      },
+    },
+  },
+  {
     slug: "nanoid-generator",
     category: "developer",
     icon: "lock",
@@ -2185,6 +2564,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "prettier-code-formatter",
+    category: "developer",
+    icon: "braces",
+    tags: [
+      "code",
+      "formatter",
+      "prettier",
+      "javascript",
+      "typescript",
+      "json",
+      "html",
+      "css",
+      "markdown",
+      "yaml",
+    ],
+    locales: {
+      ar: {
+        name: "منسق كود Prettier",
+        description:
+          "نسق ملفات JavaScript وTypeScript وJSON وHTML وCSS وMarkdown وYAML وGraphQL والملفات المرتبطة بها باستخدام Prettier مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Prettier-Code-Formatierer",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL und verwandte Dateien direkt im Browser mit Prettier formatieren.",
+      },
+      en: {
+        name: "Prettier Code Formatter",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, and related files with Prettier directly in your browser.",
+      },
+      es: {
+        name: "Formateador de código Prettier",
+        description:
+          "Da formato con Prettier directamente en el navegador a JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL y archivos relacionados.",
+      },
+      fr: {
+        name: "Formatteur de code Prettier",
+        description:
+          "Formatez JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL et les fichiers associés avec Prettier directement dans votre navigateur.",
+      },
+      he: {
+        name: "מפרמט קוד Prettier",
+        description:
+          "עצבו JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL וקבצים קרובים להם ישירות בדפדפן עם Prettier.",
+      },
+      hi: {
+        name: "Prettier कोड फ़ॉर्मैटर",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL और संबंधित फ़ाइलों को अपने ब्राउज़र में सीधे Prettier से फ़ॉर्मैट करें।",
+      },
+      id: {
+        name: "Pemformat Kode Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL, dan file terkait dengan Prettier langsung di browser Anda.",
+      },
+      it: {
+        name: "Formatter di codice Prettier",
+        description:
+          "Formatta JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e file correlati con Prettier direttamente nel browser.",
+      },
+      ja: {
+        name: "Prettier コードフォーマッター",
+        description:
+          "Prettier を使って JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL などの関連ファイルをブラウザ上で直接整形します。",
+      },
+      ko: {
+        name: "Prettier 코드 포맷터",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL 및 관련 파일을 브라우저에서 Prettier로 바로 포맷합니다.",
+      },
+      ms: {
+        name: "Pemformat Kod Prettier",
+        description:
+          "Format JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL dan fail berkaitan dengan Prettier terus di pelayar anda.",
+      },
+      nl: {
+        name: "Prettier-codeformatter",
+        description:
+          "Formatteer JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL en verwante bestanden rechtstreeks in je browser met Prettier.",
+      },
+      no: {
+        name: "Prettier-kodeformatterer",
+        description:
+          "Formater JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL og relaterte filer med Prettier direkte i nettleseren.",
+      },
+      pl: {
+        name: "Formatowanie kodu Prettier",
+        description:
+          "Formatuj JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL i powiązane pliki za pomocą Prettier bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Formatador de Código Prettier",
+        description:
+          "Formate JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL e arquivos relacionados com o Prettier diretamente no navegador.",
+      },
+      ru: {
+        name: "Форматировщик кода Prettier",
+        description:
+          "Форматируйте JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL и связанные файлы с помощью Prettier прямо в браузере.",
+      },
+      sv: {
+        name: "Prettier-kodformaterare",
+        description:
+          "Formatera JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL och relaterade filer med Prettier direkt i webbläsaren.",
+      },
+      th: {
+        name: "Prettier ตัวจัดรูปแบบโค้ด",
+        description:
+          "จัดรูปแบบ JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL และไฟล์ที่เกี่ยวข้องด้วย Prettier ได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Prettier Kod Biçimlendirici",
+        description:
+          "JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL ve ilgili dosyaları doğrudan tarayıcınızda Prettier ile biçimlendirin.",
+      },
+      vi: {
+        name: "Trình định dạng mã Prettier",
+        description:
+          "Định dạng JavaScript, TypeScript, JSON, HTML, CSS, Markdown, YAML, GraphQL và các tệp liên quan bằng Prettier ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Prettier 代码格式化工具",
+        description:
+          "直接在浏览器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 及相关文件。",
+      },
+      "zh-TW": {
+        name: "Prettier 程式碼格式化工具",
+        description:
+          "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  {
     slug: "random-number-generator",
     category: "random",
     icon: "binary",
@@ -2425,6 +2938,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "sha1-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha1", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-1 للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHA-1 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "SHA-1-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie SHA-1-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "SHA-1 Hash Text or File",
+        description:
+          "Generate SHA-1 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash SHA-1 de Texto o Archivo",
+        description:
+          "Genera hashes SHA-1 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash SHA-1 de Texte ou Fichier",
+        description:
+          "Générez des hachages SHA-1 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש SHA-1 טקסט או קובץ",
+        description:
+          "צור ערכי SHA-1 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "SHA-1 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-1 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash SHA-1 Teks atau File",
+        description:
+          "Buat hash SHA-1 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash SHA-1 di Testo o File",
+        description:
+          "Genera hash SHA-1 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "SHA-1 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHA-1 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "SHA-1 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 SHA-1 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash SHA-1 Teks atau Fail",
+        description:
+          "Jana hash SHA-1 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "SHA-1-hash tekst of bestand",
+        description:
+          "Genereer SHA-1-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "SHA-1-hash tekst eller fil",
+        description:
+          "Generer SHA-1-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash SHA-1 tekstu lub pliku",
+        description:
+          "Generuj hashe SHA-1 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash SHA-1 de Texto ou Arquivo",
+        description:
+          "Gere hashes SHA-1 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "SHA-1-хеш текста или файла",
+        description:
+          "Создавайте SHA-1-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "SHA-1-hash text eller fil",
+        description:
+          "Generera SHA-1-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช SHA-1 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-1 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-1 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-1 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash SHA-1 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-1 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "SHA-1 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-1 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "SHA-1 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-1 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  {
     slug: "sha256-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -2544,6 +3180,372 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SHA-256 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha384", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-384 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-384 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-384-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-384-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-384 Hash Text or File",
+        description:
+          "Generate SHA-384 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-384 de Texto o Archivo",
+        description:
+          "Genera hash SHA-384 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-384 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-384 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-384 טקסט או קובץ",
+        description:
+          "צור האש SHA-384 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-384 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-384 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-384 Teks atau File",
+        description:
+          "Buat hash SHA-384 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-384 di Testo o File",
+        description:
+          "Genera hash SHA-384 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-384 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-384ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-384 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-384 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-384 Teks atau Fail",
+        description:
+          "Jana hash SHA-384 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-384-hash tekst of bestand",
+        description:
+          "Genereer SHA-384-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-384-hash tekst eller fil",
+        description:
+          "Generer SHA-384-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-384 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-384 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-384 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-384 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-384-хеш текста или файла",
+        description:
+          "Генерируйте SHA-384-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-384-hash text eller fil",
+        description:
+          "Generera SHA-384-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-384 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-384 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-384 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-384 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-384 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-384 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-384 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-384 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-384 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-384 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha512", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-512 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-512 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-512-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-512-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-512 Hash Text or File",
+        description:
+          "Generate SHA-512 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-512 de Texto o Archivo",
+        description:
+          "Genera hash SHA-512 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-512 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-512 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-512 טקסט או קובץ",
+        description:
+          "צור האש SHA-512 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-512 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-512 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-512 Teks atau File",
+        description:
+          "Buat hash SHA-512 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-512 di Testo o File",
+        description:
+          "Genera hash SHA-512 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-512 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-512ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-512 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-512 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-512 Teks atau Fail",
+        description:
+          "Jana hash SHA-512 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-512-hash tekst of bestand",
+        description:
+          "Genereer SHA-512-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-512-hash tekst eller fil",
+        description:
+          "Generer SHA-512-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-512 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-512 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-512 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-512 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-512-хеш текста или файла",
+        description:
+          "Генерируйте SHA-512-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-512-hash text eller fil",
+        description:
+          "Generera SHA-512-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-512 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-512 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-512 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-512 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-512 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-512 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-512 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-512 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-512 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-512 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "slug-generator",
+    category: "web",
+    icon: "globe",
+    tags: ["slug", "url", "seo", "permalink", "text", "converter"],
+    locales: {
+      ar: {
+        name: "مولد Slug",
+        description:
+          "تحويل النص إلى slug متوافق مع عناوين URL لتحسين محركات البحث والروابط الدائمة",
+      },
+      de: {
+        name: "Slug-Generator",
+        description:
+          "Konvertiert Text in URL-freundliche Slugs für SEO und Permalinks",
+      },
+      en: {
+        name: "Slug Generator",
+        description:
+          "Convert text into URL-friendly slugs. Supports Unicode transliteration for Chinese, Japanese, Korean, Cyrillic, and more.",
+      },
+      es: {
+        name: "Generador de Slug",
+        description:
+          "Convierte texto en slugs amigables para URLs, SEO y enlaces permanentes",
+      },
+      fr: {
+        name: "Générateur de Slug",
+        description:
+          "Convertit le texte en slugs compatibles URL pour le SEO et les permaliens",
+      },
+      he: {
+        name: "מחולל Slug",
+        description:
+          "המרת טקסט ל-slug ידידותי לכתובות URL עבור SEO וקישורים קבועים",
+      },
+      hi: {
+        name: "Slug जेनरेटर",
+        description: "टेक्स्ट को SEO और पर्मालिंक के लिए URL-अनुकूल slug में बदलें",
+      },
+      id: {
+        name: "Generator Slug",
+        description:
+          "Konversi teks menjadi slug yang ramah URL untuk SEO dan tautan permanen",
+      },
+      it: {
+        name: "Generatore di Slug",
+        description:
+          "Converte il testo in slug compatibili con URL per SEO e permalink",
+      },
+      ja: {
+        name: "Slug ジェネレーター",
+        description:
+          "テキストを SEO やパーマリンク用の URL フレンドリーな slug に変換",
+      },
+      ko: {
+        name: "Slug 생성기",
+        description: "텍스트를 SEO 및 퍼머링크용 URL 친화적인 slug로 변환",
+      },
+      ms: {
+        name: "Penjana Slug",
+        description:
+          "Tukar teks kepada slug mesra URL untuk SEO dan pautan kekal",
+      },
+      nl: {
+        name: "Slug Generator",
+        description:
+          "Converteer tekst naar URL-vriendelijke slugs voor SEO en permalinks",
+      },
+      no: {
+        name: "Slug-generator",
+        description:
+          "Konverter tekst til URL-vennlige slugs for SEO og permalenker",
+      },
+      pl: {
+        name: "Generator Slug",
+        description:
+          "Konwertuj tekst na przyjazne dla URL slugi do SEO i linków bezpośrednich",
+      },
+      pt: {
+        name: "Gerador de Slug",
+        description:
+          "Converte texto em slugs amigáveis para URL, SEO e links permanentes",
+      },
+      ru: {
+        name: "Генератор Slug",
+        description:
+          "Преобразует текст в URL-совместимые slug для SEO и постоянных ссылок",
+      },
+      sv: {
+        name: "Slug-generator",
+        description:
+          "Konvertera text till URL-vänliga slugs för SEO och permalänkar",
+      },
+      th: {
+        name: "ตัวสร้าง Slug",
+        description: "แปลงข้อความเป็น slug ที่เข้ากันได้กับ URL สำหรับ SEO และลิงก์ถาวร",
+      },
+      tr: {
+        name: "Slug Oluşturucu",
+        description:
+          "Metni SEO ve kalıcı bağlantılar için URL dostu slug'lara dönüştürün",
+      },
+      vi: {
+        name: "Tạo Slug",
+        description:
+          "Chuyển đổi văn bản thành slug thân thiện với URL cho SEO và liên kết cố định",
+      },
+      "zh-CN": {
+        name: "Slug 生成器",
+        description:
+          "将文本转换为 URL 友好的 slug，支持中文、日文、韩文、西里尔文等多语言 Unicode 转写",
+      },
+      "zh-TW": {
+        name: "Slug 產生器",
+        description:
+          "將文字轉換為網址友善的 slug，支援中文、日文、韓文、西里爾文等多語言 Unicode 轉寫",
       },
     },
   },
@@ -3048,6 +4050,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "unicode-escape-unescape",
+    category: "web",
+    icon: "globe",
+    tags: ["unicode", "escape", "unescape", "encoding", "text"],
+    locales: {
+      ar: {
+        name: "تحويل Unicode",
+        description:
+          "تحويل أحرف Unicode من وإلى صيغ متعددة بما في ذلك \\uXXXX و \\u{XXXXX} وكيانات HTML وترميز URL وترميز U+XXXX",
+      },
+      de: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Unicode-Zeichen in verschiedenen Formaten escapen und unescapen, einschließlich \\uXXXX, \\u{XXXXX}, HTML-Entitäten, URL-Kodierung und U+XXXX-Notation",
+      },
+      en: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape and unescape Unicode characters in various formats including \\uXXXX, \\u{XXXXX}, HTML entities, URL encoding, and U+XXXX notation",
+      },
+      es: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Escapar y desescapar caracteres Unicode en varios formatos incluyendo \\uXXXX, \\u{XXXXX}, entidades HTML, codificación URL y notación U+XXXX",
+      },
+      fr: {
+        name: "Échappement / Désechappement Unicode",
+        description:
+          "Échapper et désechapper les caractères Unicode dans divers formats incluant \\uXXXX, \\u{XXXXX}, entités HTML, encodage URL et notation U+XXXX",
+      },
+      he: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "המרת תווי Unicode לפורמטים שונים כולל \\uXXXX, \\u{XXXXX}, ישויות HTML, קידוד URL וסימון U+XXXX",
+      },
+      hi: {
+        name: "Unicode एस्केप / अनएस्केप",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML एंटिटी, URL एन्कोडिंग और U+XXXX नोटेशन सहित विभिन्न प्रारूपों में Unicode वर्णों को एस्केप और अनएस्केप करें",
+      },
+      id: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape dan unescape karakter Unicode dalam berbagai format termasuk \\uXXXX, \\u{XXXXX}, entitas HTML, encoding URL, dan notasi U+XXXX",
+      },
+      it: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Esegui escape e unescape di caratteri Unicode in vari formati inclusi \\uXXXX, \\u{XXXXX}, entità HTML, codifica URL e notazione U+XXXX",
+      },
+      ja: {
+        name: "Unicode エスケープ / アンエスケープ",
+        description:
+          "\\uXXXX、\\u{XXXXX}、HTML エンティティ、URL エンコーディング、U+XXXX 表記を含む様々な形式で Unicode 文字をエスケープ・アンエスケープ",
+      },
+      ko: {
+        name: "Unicode 이스케이프 / 언이스케이프",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML 엔티티, URL 인코딩, U+XXXX 표기법을 포함한 다양한 형식으로 Unicode 문자를 이스케이프 및 언이스케이프",
+      },
+      ms: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape dan unescape aksara Unicode dalam pelbagai format termasuk \\uXXXX, \\u{XXXXX}, entiti HTML, pengekodan URL dan notasi U+XXXX",
+      },
+      nl: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Unicode-tekens escapen en unescapen in verschillende formaten waaronder \\uXXXX, \\u{XXXXX}, HTML-entiteiten, URL-codering en U+XXXX-notatie",
+      },
+      no: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape og unescape Unicode-tegn i ulike formater inkludert \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-koding og U+XXXX-notasjon",
+      },
+      pl: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Kodowanie i dekodowanie znaków Unicode w różnych formatach w tym \\uXXXX, \\u{XXXXX}, encje HTML, kodowanie URL i notacja U+XXXX",
+      },
+      pt: {
+        name: "Escape / Unescape Unicode",
+        description:
+          "Escape e unescape de caracteres Unicode em vários formatos incluindo \\uXXXX, \\u{XXXXX}, entidades HTML, codificação URL e notação U+XXXX",
+      },
+      ru: {
+        name: "Unicode экранирование / деэкранирование",
+        description:
+          "Экранирование и деэкранирование символов Unicode в различных форматах, включая \\uXXXX, \\u{XXXXX}, HTML-сущности, URL-кодирование и нотацию U+XXXX",
+      },
+      sv: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Escape och unescape Unicode-tecken i olika format inklusive \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-kodning och U+XXXX-notation",
+      },
+      th: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "แปลงอักขระ Unicode ไปและกลับในรูปแบบต่างๆ รวมถึง \\uXXXX, \\u{XXXXX}, HTML entities, การเข้ารหัส URL และสัญลักษณ์ U+XXXX",
+      },
+      tr: {
+        name: "Unicode Kaçış / Kaçış Geri Alma",
+        description:
+          "\\uXXXX, \\u{XXXXX}, HTML varlıkları, URL kodlama ve U+XXXX gösterimi dahil çeşitli formatlarda Unicode karakterlerini kaçış ve kaçış geri alma",
+      },
+      vi: {
+        name: "Unicode Escape / Unescape",
+        description:
+          "Chuyển đổi ký tự Unicode sang và từ các định dạng bao gồm \\uXXXX, \\u{XXXXX}, thực thể HTML, mã hóa URL và ký hiệu U+XXXX",
+      },
+      "zh-CN": {
+        name: "Unicode 转义 / 反转义",
+        description:
+          "将 Unicode 字符转义和反转义为多种格式，包括 \\uXXXX、\\u{XXXXX}、HTML 实体、URL 编码和 U+XXXX 表示法",
+      },
+      "zh-TW": {
+        name: "Unicode 轉義 / 反轉義",
+        description:
+          "將 Unicode 字元轉義和反轉義為多種格式，包括 \\uXXXX、\\u{XXXXX}、HTML 實體、URL 編碼和 U+XXXX 表示法",
+      },
+    },
+  },
+  {
     slug: "unicode-invisible-character-checker",
     category: "text",
     icon: "search",
@@ -3288,6 +4413,120 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "URL 組件編碼器/解碼器",
         description:
           "使用百分號編碼對 URL 組件進行編碼和解碼。將特殊字元轉換為 URL 安全格式，反之亦然，用於 Web 開發和 API 使用",
+      },
+    },
+  },
+  {
+    slug: "vin-validator",
+    category: "text",
+    icon: "car",
+    tags: ["vin", "validator", "vehicle", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق رقم VIN",
+        description: "تحقق من أرقام VIN من حيث الطول والأحرف ورقم التحقق",
+      },
+      de: {
+        name: "VIN-Validator",
+        description:
+          "VINs mit Regeln zu Länge, Zeichen und Prüfziffer validieren",
+      },
+      en: {
+        name: "VIN Validator",
+        description:
+          "Validate VINs with length, character, and check digit rules",
+      },
+      es: {
+        name: "Validador de VIN",
+        description:
+          "Valida VINs con reglas de longitud, caracteres y dígito de control",
+      },
+      fr: {
+        name: "Validateur de NIV",
+        description:
+          "Validez les NIV avec les règles de longueur, de caractères et de chiffre de contrôle",
+      },
+      he: {
+        name: "מאמת VIN",
+        description: "אימות מספרי VIN עם בדיקת אורך, תווים וספרת ביקורת",
+      },
+      hi: {
+        name: "VIN वैलिडेटर",
+        description: "लंबाई, अक्षर और चेक डिजिट नियमों से VIN की जाँच करें",
+      },
+      id: {
+        name: "Validator VIN",
+        description:
+          "Validasi VIN dengan aturan panjang, karakter, dan digit cek",
+      },
+      it: {
+        name: "Validatore VIN",
+        description:
+          "Valida i VIN con regole di lunghezza, caratteri e cifra di controllo",
+      },
+      ja: {
+        name: "VINバリデーター",
+        description: "桁数、使用文字、チェックディジットのルールでVINを検証",
+      },
+      ko: {
+        name: "VIN 검증기",
+        description: "길이, 문자 및 체크 디짓 규칙으로 VIN을 검증합니다",
+      },
+      ms: {
+        name: "Pengesah VIN",
+        description:
+          "Sahkan VIN dengan peraturan panjang, aksara dan digit semak",
+      },
+      nl: {
+        name: "VIN-validator",
+        description: "Valideer VIN's op lengte, tekens en controlecijferregels",
+      },
+      no: {
+        name: "VIN-validator",
+        description:
+          "Valider VIN med regler for lengde, tegn og kontrollsiffer",
+      },
+      pl: {
+        name: "Walidator VIN",
+        description:
+          "Waliduj numery VIN z kontrolą długości, znaków i cyfry kontrolnej",
+      },
+      pt: {
+        name: "Validador de VIN",
+        description:
+          "Valide VINs com regras de comprimento, caracteres e digito verificador",
+      },
+      ru: {
+        name: "Валидатор VIN",
+        description:
+          "Проверка VIN по длине, допустимым символам и контрольной цифре",
+      },
+      sv: {
+        name: "VIN-validator",
+        description:
+          "Validera VIN med regler för längd, tecken och kontrollsiffra",
+      },
+      th: {
+        name: "ตรวจสอบ VIN",
+        description: "ตรวจสอบ VIN ด้วยกฎความยาว อักขระ และเลขตรวจสอบ",
+      },
+      tr: {
+        name: "VIN Doğrulayıcı",
+        description:
+          "Uzunluk, karakter ve kontrol basamağı kurallarıyla VIN doğrulayın",
+      },
+      vi: {
+        name: "Kiểm tra VIN",
+        description:
+          "Xác thực VIN theo quy tắc độ dài, ký tự và chữ số kiểm tra",
+      },
+      "zh-CN": {
+        name: "VIN 验证器",
+        description: "通过长度、字符和校验位规则验证车辆识别号（VIN）",
+      },
+      "zh-TW": {
+        name: "VIN 驗證器",
+        description: "依據長度、字元及校驗碼規則驗證車輛識別號碼（VIN）",
       },
     },
   },

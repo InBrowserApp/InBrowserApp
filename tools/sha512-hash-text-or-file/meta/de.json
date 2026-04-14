@@ -1,0 +1,4 @@
+{
+  "name": "SHA-512-Hash für Text oder Datei",
+  "description": "Generieren Sie SHA-512-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke"
+}

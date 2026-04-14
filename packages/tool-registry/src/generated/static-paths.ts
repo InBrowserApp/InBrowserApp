@@ -2,6 +2,98 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "ascii-art-generator",
+    language: "ar",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "de",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "en",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "es",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "fr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "he",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "hi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "id",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "it",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ja",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ko",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ms",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "nl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "no",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pt",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ru",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "sv",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "th",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "tr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "vi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },
@@ -91,6 +183,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "base64-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "case-converter",
+    language: "ar",
+  },
+  {
+    slug: "case-converter",
+    language: "de",
+  },
+  {
+    slug: "case-converter",
+    language: "en",
+  },
+  {
+    slug: "case-converter",
+    language: "es",
+  },
+  {
+    slug: "case-converter",
+    language: "fr",
+  },
+  {
+    slug: "case-converter",
+    language: "he",
+  },
+  {
+    slug: "case-converter",
+    language: "hi",
+  },
+  {
+    slug: "case-converter",
+    language: "id",
+  },
+  {
+    slug: "case-converter",
+    language: "it",
+  },
+  {
+    slug: "case-converter",
+    language: "ja",
+  },
+  {
+    slug: "case-converter",
+    language: "ko",
+  },
+  {
+    slug: "case-converter",
+    language: "ms",
+  },
+  {
+    slug: "case-converter",
+    language: "nl",
+  },
+  {
+    slug: "case-converter",
+    language: "no",
+  },
+  {
+    slug: "case-converter",
+    language: "pl",
+  },
+  {
+    slug: "case-converter",
+    language: "pt",
+  },
+  {
+    slug: "case-converter",
+    language: "ru",
+  },
+  {
+    slug: "case-converter",
+    language: "sv",
+  },
+  {
+    slug: "case-converter",
+    language: "th",
+  },
+  {
+    slug: "case-converter",
+    language: "tr",
+  },
+  {
+    slug: "case-converter",
+    language: "vi",
+  },
+  {
+    slug: "case-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "case-converter",
     language: "zh-TW",
   },
   {
@@ -1474,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "list-comparer",
+    language: "ar",
+  },
+  {
+    slug: "list-comparer",
+    language: "de",
+  },
+  {
+    slug: "list-comparer",
+    language: "en",
+  },
+  {
+    slug: "list-comparer",
+    language: "es",
+  },
+  {
+    slug: "list-comparer",
+    language: "fr",
+  },
+  {
+    slug: "list-comparer",
+    language: "he",
+  },
+  {
+    slug: "list-comparer",
+    language: "hi",
+  },
+  {
+    slug: "list-comparer",
+    language: "id",
+  },
+  {
+    slug: "list-comparer",
+    language: "it",
+  },
+  {
+    slug: "list-comparer",
+    language: "ja",
+  },
+  {
+    slug: "list-comparer",
+    language: "ko",
+  },
+  {
+    slug: "list-comparer",
+    language: "ms",
+  },
+  {
+    slug: "list-comparer",
+    language: "nl",
+  },
+  {
+    slug: "list-comparer",
+    language: "no",
+  },
+  {
+    slug: "list-comparer",
+    language: "pl",
+  },
+  {
+    slug: "list-comparer",
+    language: "pt",
+  },
+  {
+    slug: "list-comparer",
+    language: "ru",
+  },
+  {
+    slug: "list-comparer",
+    language: "sv",
+  },
+  {
+    slug: "list-comparer",
+    language: "th",
+  },
+  {
+    slug: "list-comparer",
+    language: "tr",
+  },
+  {
+    slug: "list-comparer",
+    language: "vi",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-CN",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-TW",
+  },
+  {
     slug: "nanoid-generator",
     language: "ar",
   },
@@ -1658,6 +1934,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "prettier-code-formatter",
+    language: "ar",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "de",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "en",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "es",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "fr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "he",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "hi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "id",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "it",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ja",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ko",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ms",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "nl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "no",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pt",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ru",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "sv",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "th",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "tr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "vi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-CN",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-TW",
+  },
+  {
     slug: "random-number-generator",
     language: "ar",
   },
@@ -1842,6 +2210,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sha1-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sha256-hash-text-or-file",
     language: "ar",
   },
@@ -1931,6 +2391,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "slug-generator",
+    language: "ar",
+  },
+  {
+    slug: "slug-generator",
+    language: "de",
+  },
+  {
+    slug: "slug-generator",
+    language: "en",
+  },
+  {
+    slug: "slug-generator",
+    language: "es",
+  },
+  {
+    slug: "slug-generator",
+    language: "fr",
+  },
+  {
+    slug: "slug-generator",
+    language: "he",
+  },
+  {
+    slug: "slug-generator",
+    language: "hi",
+  },
+  {
+    slug: "slug-generator",
+    language: "id",
+  },
+  {
+    slug: "slug-generator",
+    language: "it",
+  },
+  {
+    slug: "slug-generator",
+    language: "ja",
+  },
+  {
+    slug: "slug-generator",
+    language: "ko",
+  },
+  {
+    slug: "slug-generator",
+    language: "ms",
+  },
+  {
+    slug: "slug-generator",
+    language: "nl",
+  },
+  {
+    slug: "slug-generator",
+    language: "no",
+  },
+  {
+    slug: "slug-generator",
+    language: "pl",
+  },
+  {
+    slug: "slug-generator",
+    language: "pt",
+  },
+  {
+    slug: "slug-generator",
+    language: "ru",
+  },
+  {
+    slug: "slug-generator",
+    language: "sv",
+  },
+  {
+    slug: "slug-generator",
+    language: "th",
+  },
+  {
+    slug: "slug-generator",
+    language: "tr",
+  },
+  {
+    slug: "slug-generator",
+    language: "vi",
+  },
+  {
+    slug: "slug-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "slug-generator",
     language: "zh-TW",
   },
   {
@@ -2302,6 +3038,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-escape-unescape",
+    language: "ar",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "de",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "en",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "es",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "fr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "he",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "hi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "id",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "it",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ja",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ko",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ms",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "nl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "no",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pt",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ru",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "sv",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "th",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "tr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "vi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-invisible-character-checker",
     language: "ar",
   },
@@ -2483,6 +3311,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "url-component-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "vin-validator",
+    language: "ar",
+  },
+  {
+    slug: "vin-validator",
+    language: "de",
+  },
+  {
+    slug: "vin-validator",
+    language: "en",
+  },
+  {
+    slug: "vin-validator",
+    language: "es",
+  },
+  {
+    slug: "vin-validator",
+    language: "fr",
+  },
+  {
+    slug: "vin-validator",
+    language: "he",
+  },
+  {
+    slug: "vin-validator",
+    language: "hi",
+  },
+  {
+    slug: "vin-validator",
+    language: "id",
+  },
+  {
+    slug: "vin-validator",
+    language: "it",
+  },
+  {
+    slug: "vin-validator",
+    language: "ja",
+  },
+  {
+    slug: "vin-validator",
+    language: "ko",
+  },
+  {
+    slug: "vin-validator",
+    language: "ms",
+  },
+  {
+    slug: "vin-validator",
+    language: "nl",
+  },
+  {
+    slug: "vin-validator",
+    language: "no",
+  },
+  {
+    slug: "vin-validator",
+    language: "pl",
+  },
+  {
+    slug: "vin-validator",
+    language: "pt",
+  },
+  {
+    slug: "vin-validator",
+    language: "ru",
+  },
+  {
+    slug: "vin-validator",
+    language: "sv",
+  },
+  {
+    slug: "vin-validator",
+    language: "th",
+  },
+  {
+    slug: "vin-validator",
+    language: "tr",
+  },
+  {
+    slug: "vin-validator",
+    language: "vi",
+  },
+  {
+    slug: "vin-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vin-validator",
     language: "zh-TW",
   },
   {

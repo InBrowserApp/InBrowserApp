@@ -1,0 +1,4 @@
+{
+  "name": "Prettier コードフォーマッター",
+  "description": "Prettier を使って JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL などの関連ファイルをブラウザ上で直接整形します。"
+}

@@ -1,0 +1,12 @@
+{
+  "inputLabel": "Teks masukan",
+  "inputDescription": "Ketik kata atau frasa untuk diubah menjadi ASCII art.",
+  "inputPlaceholder": "Masukkan teks untuk dikonversi...",
+  "fontLabel": "Font",
+  "fontDescription": "Pilih gaya font FIGlet untuk keluaran.",
+  "fontSearchPlaceholder": "Cari font...",
+  "outputLabel": "Keluaran seni ASCII",
+  "outputPlaceholder": "Seni ASCII akan muncul di sini...",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

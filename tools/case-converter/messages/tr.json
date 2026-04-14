@@ -1,0 +1,8 @@
+{
+  "inputLabel": "Girdi metni",
+  "inputPlaceholder": "Dönüştürülecek metni girin\u2026",
+  "inputDescription": "Herhangi bir adlandırma kuralındaki metni yazın veya yapıştırın. Tüm varyantlar aşağıda oluşturulur.",
+  "clearLabel": "Temizle",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

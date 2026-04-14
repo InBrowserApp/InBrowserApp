@@ -208,7 +208,7 @@ function Sha256HashTextOrFileClient({
             <CardDescription>
               {selectedFile
                 ? `${selectedFile.name} • ${formatFileSize(selectedFile.size)}`
-                : messages.plainTextLabel}
+                : messages.hashResultDescription}
             </CardDescription>
           </div>
           {digestState.status === "loading" ? (

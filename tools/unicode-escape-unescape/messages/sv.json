@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Ursprungliga icke-escapade tecken",
+  "plainTextPlaceholder": "Ange text att escape-konvertera...",
+  "escapeFormatLabel": "Escape-format",
+  "escapedTextLabel": "Escape-konverterad text",
+  "escapedTextDescription": "Unicode-escapesekvenser i det valda formatet",
+  "escapedTextPlaceholder": "Ange escape-konverterad text att avkoda...",
+  "copyPlainTextLabel": "Kopiera vanlig text",
+  "copyEscapedTextLabel": "Kopiera escape-konverterad text",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel"
+}

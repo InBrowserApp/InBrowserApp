@@ -1,0 +1,4 @@
+{
+  "name": "ASCII Art Generator",
+  "description": "Convert text to ASCII art using various figlet fonts. Type a word or phrase, pick a font, and copy the result."
+}

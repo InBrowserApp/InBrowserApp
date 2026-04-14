@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Teks Masukan",
+  "inputPlaceholder": "Masukkan teks untuk dikonversi ke slug...",
+  "outputLabel": "Slug yang Dihasilkan",
+  "outputPlaceholder": "Slug akan muncul di sini...",
+  "separatorLabel": "Pemisah",
+  "hyphenLabel": "tanda hubung",
+  "underscoreLabel": "garis bawah",
+  "dotLabel": "titik",
+  "caseLabel": "Huruf Besar/Kecil",
+  "lowercaseLabel": "Huruf kecil",
+  "preserveLabel": "Pertahankan",
+  "copyLabel": "Salin slug",
+  "copiedLabel": "Disalin",
+  "clearLabel": "Hapus"
+}
