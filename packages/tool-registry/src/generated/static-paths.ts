@@ -2854,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pbkdf2-key-derivation",
+    language: "ar",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "de",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "en",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "es",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "fr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "he",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "hi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "id",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "it",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ja",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ko",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ms",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "nl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "no",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pt",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ru",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "sv",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "th",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "tr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "vi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-CN",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },

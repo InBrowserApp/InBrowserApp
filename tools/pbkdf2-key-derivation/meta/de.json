@@ -1,0 +1,4 @@
+{
+  "name": "PBKDF2-Schlüsselableitung",
+  "description": "Leiten Sie Schlüssel aus Passwort und Salt mit PBKDF2 ab. Konfigurieren Sie Iterationen, Hash-Algorithmus und Ausgabelänge mit Hex- oder Base64-Ausgabe."
+}
