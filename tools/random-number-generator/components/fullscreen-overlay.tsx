@@ -1,5 +1,5 @@
 import { Button } from "@workspace/ui/components/ui/button"
-import { RefreshCcw } from "@workspace/ui/icons"
+import { Minimize2, RefreshCcw } from "@workspace/ui/icons"
 
 import type { RandomNumberGeneratorMessages } from "../types"
 
@@ -75,6 +75,7 @@ function FullscreenOverlay({
           </Button>
 
           <Button type="button" variant="ghost" size="sm" onClick={onClose}>
+            <Minimize2 data-icon="inline-start" />
             {messages.exitFullscreenLabel}
           </Button>
         </div>

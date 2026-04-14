@@ -6,7 +6,6 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
   CardDescription,
   CardHeader,
@@ -19,6 +18,7 @@ import {
   FieldSet,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { Switch } from "@workspace/ui/components/ui/switch"
 import {
   ToggleGroup,
   ToggleGroupItem,
@@ -182,22 +182,17 @@ function OptionsCard({
               />
             </Field>
 
-            <Field
-              orientation="horizontal"
-              className="items-center gap-3 md:pt-8"
-            >
-              <Checkbox
+            <Field className="gap-3 md:pt-8">
+              <FieldLabel htmlFor={`${countId}-repeat`}>
+                {messages.allowRepeatLabel}
+              </FieldLabel>
+              <Switch
                 id={`${countId}-repeat`}
                 checked={allowRepeat}
-                onCheckedChange={(checked) => {
-                  onAllowRepeatChange(Boolean(checked))
+                onCheckedChange={(checked: boolean) => {
+                  onAllowRepeatChange(checked)
                 }}
               />
-              <FieldContent>
-                <FieldLabel htmlFor={`${countId}-repeat`}>
-                  {messages.allowRepeatLabel}
-                </FieldLabel>
-              </FieldContent>
             </Field>
           </div>
 

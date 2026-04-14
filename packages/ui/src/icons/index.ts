@@ -9,6 +9,7 @@ export {
   Copy,
   Download,
   Maximize2,
+  Minimize2,
   FileJson2,
   FileText,
   Globe,
