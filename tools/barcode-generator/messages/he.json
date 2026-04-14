@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "טקסט",
+  "textPlaceholder": "הזן תוכן...",
+  "format": "פורמט",
+  "barWidth": "רוחב קווים",
+  "barHeight": "גובה קווים",
+  "margin": "שוליים",
+  "displayValue": "הצג ערך",
+  "textAlign": "יישור",
+  "textPosition": "מיקום טקסט",
+  "fontSize": "גודל גופן",
+  "lineColor": "צבע קווים",
+  "background": "רקע",
+  "left": "שמאל",
+  "center": "מרכז",
+  "right": "ימין",
+  "top": "למעלה",
+  "bottom": "למטה"
+}

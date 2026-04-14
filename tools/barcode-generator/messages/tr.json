@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Metin",
+  "textPlaceholder": "İçerik yazın...",
+  "format": "Biçim",
+  "barWidth": "Çubuk genişliği",
+  "barHeight": "Çubuk yüksekliği",
+  "margin": "Kenar boşluğu",
+  "displayValue": "Değeri göster",
+  "textAlign": "Hizalama",
+  "textPosition": "Metin konumu",
+  "fontSize": "Yazı tipi boyutu",
+  "lineColor": "Çizgi rengi",
+  "background": "Arka plan",
+  "left": "Sol",
+  "center": "Orta",
+  "right": "Sağ",
+  "top": "Üst",
+  "bottom": "Alt"
+}

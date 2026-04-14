@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "نص",
+  "textPlaceholder": "أدخل المحتوى...",
+  "format": "التنسيق",
+  "barWidth": "عرض الأشرطة",
+  "barHeight": "ارتفاع الأشرطة",
+  "margin": "الهامش",
+  "displayValue": "عرض القيمة",
+  "textAlign": "محاذاة النص",
+  "textPosition": "موضع النص",
+  "fontSize": "حجم الخط",
+  "lineColor": "لون الخطوط",
+  "background": "الخلفية",
+  "left": "يسار",
+  "center": "وسط",
+  "right": "يمين",
+  "top": "أعلى",
+  "bottom": "أسفل"
+}

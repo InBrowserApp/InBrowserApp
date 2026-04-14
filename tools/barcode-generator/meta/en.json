@@ -1,0 +1,4 @@
+{
+  "name": "Barcode Generator",
+  "description": "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG or SVG."
+}

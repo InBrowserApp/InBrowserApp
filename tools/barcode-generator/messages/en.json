@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Text",
+  "textPlaceholder": "Type content to encode...",
+  "format": "Format",
+  "barWidth": "Bar width",
+  "barHeight": "Bar height",
+  "margin": "Margin",
+  "displayValue": "Display value",
+  "textAlign": "Text align",
+  "textPosition": "Text position",
+  "fontSize": "Font size",
+  "lineColor": "Line color",
+  "background": "Background",
+  "left": "Left",
+  "center": "Center",
+  "right": "Right",
+  "top": "Top",
+  "bottom": "Bottom"
+}

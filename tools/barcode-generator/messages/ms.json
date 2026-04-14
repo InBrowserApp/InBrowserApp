@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Teks",
+  "textPlaceholder": "Masukkan kandungan...",
+  "format": "Format",
+  "barWidth": "Lebar bar",
+  "barHeight": "Tinggi bar",
+  "margin": "Jidar",
+  "displayValue": "Papar nilai",
+  "textAlign": "Jajaran",
+  "textPosition": "Kedudukan teks",
+  "fontSize": "Saiz fon",
+  "lineColor": "Warna garisan",
+  "background": "Latar belakang",
+  "left": "Kiri",
+  "center": "Tengah",
+  "right": "Kanan",
+  "top": "Atas",
+  "bottom": "Bawah"
+}

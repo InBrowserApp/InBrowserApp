@@ -1,0 +1,22 @@
+{
+  "options": "选项",
+  "preview": "预览",
+  "download": "下载",
+  "text": "文本",
+  "textPlaceholder": "输入要编码的内容...",
+  "format": "格式",
+  "barWidth": "条宽",
+  "barHeight": "条高",
+  "margin": "边距",
+  "displayValue": "显示文字",
+  "textAlign": "文字对齐",
+  "textPosition": "文字位置",
+  "fontSize": "字体大小",
+  "lineColor": "线条颜色",
+  "background": "背景色",
+  "left": "左",
+  "center": "中",
+  "right": "右",
+  "top": "上",
+  "bottom": "下"
+}

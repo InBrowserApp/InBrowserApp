@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "텍스트",
+  "textPlaceholder": "내용 입력...",
+  "format": "형식",
+  "barWidth": "바 폭",
+  "barHeight": "바 높이",
+  "margin": "여백",
+  "displayValue": "값 표시",
+  "textAlign": "정렬",
+  "textPosition": "텍스트 위치",
+  "fontSize": "글꼴 크기",
+  "lineColor": "선 색상",
+  "background": "배경",
+  "left": "왼쪽",
+  "center": "가운데",
+  "right": "오른쪽",
+  "top": "위",
+  "bottom": "아래"
+}

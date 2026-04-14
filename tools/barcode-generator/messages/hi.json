@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "टेक्स्ट",
+  "textPlaceholder": "सामग्री दर्ज करें...",
+  "format": "फॉर्मेट",
+  "barWidth": "बार चौड़ाई",
+  "barHeight": "बार ऊंचाई",
+  "margin": "मार्जिन",
+  "displayValue": "मान दिखाएं",
+  "textAlign": "टेक्स्ट एलाइन",
+  "textPosition": "टेक्स्ट स्थिति",
+  "fontSize": "फ़ॉन्ट आकार",
+  "lineColor": "लाइन रंग",
+  "background": "पृष्ठभूमि",
+  "left": "बाएँ",
+  "center": "मध्य",
+  "right": "दाएँ",
+  "top": "ऊपर",
+  "bottom": "नीचे"
+}

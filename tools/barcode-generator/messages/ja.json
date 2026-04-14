@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "テキスト",
+  "textPlaceholder": "内容を入力...",
+  "format": "フォーマット",
+  "barWidth": "バー幅",
+  "barHeight": "バー高さ",
+  "margin": "マージン",
+  "displayValue": "値を表示",
+  "textAlign": "配置",
+  "textPosition": "テキスト位置",
+  "fontSize": "フォントサイズ",
+  "lineColor": "線の色",
+  "background": "背景",
+  "left": "左",
+  "center": "中央",
+  "right": "右",
+  "top": "上",
+  "bottom": "下"
+}

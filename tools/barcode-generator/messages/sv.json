@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Text",
+  "textPlaceholder": "Ange innehåll...",
+  "format": "Format",
+  "barWidth": "Streckbredd",
+  "barHeight": "Streckhöjd",
+  "margin": "Marginal",
+  "displayValue": "Visa värde",
+  "textAlign": "Justering",
+  "textPosition": "Textposition",
+  "fontSize": "Teckenstorlek",
+  "lineColor": "Linjefärg",
+  "background": "Bakgrund",
+  "left": "Vänster",
+  "center": "Mitten",
+  "right": "Höger",
+  "top": "Topp",
+  "bottom": "Botten"
+}

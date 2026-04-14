@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Tekst",
+  "textPlaceholder": "Voer inhoud in...",
+  "format": "Formaat",
+  "barWidth": "Balkbreedte",
+  "barHeight": "Balkhoogte",
+  "margin": "Marge",
+  "displayValue": "Waarde weergeven",
+  "textAlign": "Uitlijning",
+  "textPosition": "Tekstpositie",
+  "fontSize": "Lettergrootte",
+  "lineColor": "Lijnkleur",
+  "background": "Achtergrond",
+  "left": "Links",
+  "center": "Midden",
+  "right": "Rechts",
+  "top": "Boven",
+  "bottom": "Onder"
+}

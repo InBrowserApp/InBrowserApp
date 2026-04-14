@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Tekst",
+  "textPlaceholder": "Skriv innhold...",
+  "format": "Format",
+  "barWidth": "Strekbredde",
+  "barHeight": "Strekhøyde",
+  "margin": "Marg",
+  "displayValue": "Vis verdi",
+  "textAlign": "Justering",
+  "textPosition": "Tekstposisjon",
+  "fontSize": "Skriftstørrelse",
+  "lineColor": "Linjefarge",
+  "background": "Bakgrunn",
+  "left": "Venstre",
+  "center": "Midten",
+  "right": "Høyre",
+  "top": "Topp",
+  "bottom": "Bunn"
+}

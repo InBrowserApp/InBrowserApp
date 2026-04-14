@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Text",
+  "textPlaceholder": "Geben Sie Inhalt ein...",
+  "format": "Format",
+  "barWidth": "Balkenbreite",
+  "barHeight": "Balkenhöhe",
+  "margin": "Rand",
+  "displayValue": "Wert anzeigen",
+  "textAlign": "Textausrichtung",
+  "textPosition": "Textposition",
+  "fontSize": "Schriftgröße",
+  "lineColor": "Linienfarbe",
+  "background": "Hintergrund",
+  "left": "Links",
+  "center": "Mitte",
+  "right": "Rechts",
+  "top": "Oben",
+  "bottom": "Unten"
+}

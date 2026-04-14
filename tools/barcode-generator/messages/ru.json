@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "Текст",
+  "textPlaceholder": "Введите данные...",
+  "format": "Формат",
+  "barWidth": "Ширина штрихов",
+  "barHeight": "Высота штрихов",
+  "margin": "Отступ",
+  "displayValue": "Показывать значение",
+  "textAlign": "Выравнивание",
+  "textPosition": "Положение текста",
+  "fontSize": "Размер шрифта",
+  "lineColor": "Цвет линий",
+  "background": "Фон",
+  "left": "Слева",
+  "center": "По центру",
+  "right": "Справа",
+  "top": "Сверху",
+  "bottom": "Снизу"
+}

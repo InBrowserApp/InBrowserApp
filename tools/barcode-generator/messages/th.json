@@ -1,0 +1,22 @@
+{
+  "options": "Options",
+  "preview": "Preview",
+  "download": "Download",
+  "text": "ข้อความ",
+  "textPlaceholder": "พิมพ์เนื้อหา...",
+  "format": "รูปแบบ",
+  "barWidth": "ความกว้างแท่ง",
+  "barHeight": "ความสูงแท่ง",
+  "margin": "ระยะขอบ",
+  "displayValue": "แสดงค่า",
+  "textAlign": "การจัดตำแหน่ง",
+  "textPosition": "ตำแหน่งข้อความ",
+  "fontSize": "ขนาดแบบอักษร",
+  "lineColor": "สีเส้น",
+  "background": "พื้นหลัง",
+  "left": "ซ้าย",
+  "center": "กลาง",
+  "right": "ขวา",
+  "top": "บน",
+  "bottom": "ล่าง"
+}
