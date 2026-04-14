@@ -1,5 +1,6 @@
 {
   "configurationLabel": "التكوين",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "المفتاح السري",
   "secretKeyPlaceholder": "أدخل مفتاحك السري",
   "algorithmLabel": "الخوارزمية",

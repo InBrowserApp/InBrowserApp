@@ -1,6 +1,7 @@
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -41,8 +42,9 @@ function ConfigurationCard({
     <Card>
       <CardHeader className="border-b">
         <CardTitle>{messages.configurationLabel}</CardTitle>
+        <CardDescription>{messages.configurationDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4 pt-6 sm:grid-cols-2">
+      <CardContent className="grid gap-4 sm:grid-cols-2">
         <Field className="grid gap-2">
           <FieldLabel htmlFor={secretKeyId}>
             {messages.secretKeyLabel}

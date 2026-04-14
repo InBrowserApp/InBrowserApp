@@ -1,5 +1,6 @@
 {
   "configurationLabel": "कॉन्फ़िगरेशन",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "गुप्त कुंजी",
   "secretKeyPlaceholder": "अपनी गुप्त कुंजी दर्ज करें",
   "algorithmLabel": "एल्गोरिदम",

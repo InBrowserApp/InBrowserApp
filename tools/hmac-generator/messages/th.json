@@ -1,5 +1,6 @@
 {
   "configurationLabel": "การกำหนดค่า",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "คีย์ลับ",
   "secretKeyPlaceholder": "ป้อนคีย์ลับของคุณ",
   "algorithmLabel": "อัลกอริทึม",

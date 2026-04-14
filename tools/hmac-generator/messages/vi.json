@@ -1,5 +1,6 @@
 {
   "configurationLabel": "Cấu hình",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "Khóa Bí mật",
   "secretKeyPlaceholder": "Nhập khóa bí mật của bạn",
   "algorithmLabel": "Thuật toán",

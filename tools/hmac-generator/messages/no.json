@@ -1,5 +1,6 @@
 {
   "configurationLabel": "Konfigurasjon",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "Hemmelig Nøkkel",
   "secretKeyPlaceholder": "Skriv inn din hemmelige nøkkel",
   "algorithmLabel": "Algoritme",

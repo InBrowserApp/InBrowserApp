@@ -1,5 +1,6 @@
 {
   "configurationLabel": "תצורה",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "מפתח סודי",
   "secretKeyPlaceholder": "הזן את המפתח הסודי שלך",
   "algorithmLabel": "אלגוריתם",

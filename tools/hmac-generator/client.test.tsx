@@ -17,6 +17,8 @@ const messages = {
     description: "Generate HMAC output directly in your browser.",
   },
   configurationLabel: "Configuration",
+  configurationDescription:
+    "Set the secret key and HMAC algorithm for the current signature.",
   secretKeyLabel: "Secret Key",
   secretKeyPlaceholder: "Enter your secret key",
   algorithmLabel: "Algorithm",

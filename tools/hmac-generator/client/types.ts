@@ -1,5 +1,6 @@
 type HmacGeneratorMessages = Readonly<{
   configurationLabel: string
+  configurationDescription: string
   secretKeyLabel: string
   secretKeyPlaceholder: string
   algorithmLabel: string

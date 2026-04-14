@@ -1,5 +1,6 @@
 {
   "configurationLabel": "配置",
+  "configurationDescription": "设置当前签名使用的密钥和 HMAC 算法。",
   "secretKeyLabel": "密钥",
   "secretKeyPlaceholder": "输入您的密钥",
   "algorithmLabel": "算法",

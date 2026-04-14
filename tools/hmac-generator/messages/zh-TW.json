@@ -1,5 +1,6 @@
 {
   "configurationLabel": "設定",
+  "configurationDescription": "設定目前簽章使用的金鑰與 HMAC 演算法。",
   "secretKeyLabel": "密鑰",
   "secretKeyPlaceholder": "輸入您的密鑰",
   "algorithmLabel": "演算法",

@@ -1,5 +1,6 @@
 {
   "configurationLabel": "구성",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "비밀 키",
   "secretKeyPlaceholder": "비밀 키를 입력하세요",
   "algorithmLabel": "알고리즘",

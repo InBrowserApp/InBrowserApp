@@ -1,5 +1,6 @@
 {
   "configurationLabel": "Yapılandırma",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
   "secretKeyLabel": "Gizli Anahtar",
   "secretKeyPlaceholder": "Gizli anahtarınızı girin",
   "algorithmLabel": "Algoritma",
