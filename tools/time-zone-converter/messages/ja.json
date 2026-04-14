@@ -1,0 +1,19 @@
+{
+  "fromLabel": "元",
+  "toLabel": "先",
+  "timeZoneLabel": "タイムゾーン",
+  "dateTimeLabel": "日付と時刻",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "形式: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "現在",
+  "offsetLabel": "オフセット",
+  "invalidDateTimeLabel": "無効な日付/時刻",
+  "swapLabel": "入れ替え",
+  "detailsLabel": "詳細",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix タイムスタンプ (ms)",
+  "unixSecondsLabel": "Unix タイムスタンプ (s)",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピー済み"
+}

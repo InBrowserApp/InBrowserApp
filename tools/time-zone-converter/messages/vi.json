@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Từ",
+  "toLabel": "Đến",
+  "timeZoneLabel": "Múi giờ",
+  "dateTimeLabel": "Ngày & giờ",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Định dạng: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Bây giờ",
+  "offsetLabel": "Độ lệch",
+  "invalidDateTimeLabel": "Ngày/giờ không hợp lệ",
+  "swapLabel": "Hoán đổi",
+  "detailsLabel": "Chi tiết",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Dấu thời gian Unix (ms)",
+  "unixSecondsLabel": "Dấu thời gian Unix (s)",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

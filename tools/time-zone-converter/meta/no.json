@@ -1,0 +1,4 @@
+{
+  "name": "Tidssonekonverterer",
+  "description": "Konverter dato og tid mellom tidssoner med støtte for sommertid. Sammenlign offset og kopier ISO/UTC-formater."
+}

@@ -52,6 +52,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
+  "time-zone-converter": () => import("@tool/time-zone-converter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),

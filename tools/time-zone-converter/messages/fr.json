@@ -1,0 +1,19 @@
+{
+  "fromLabel": "De",
+  "toLabel": "À",
+  "timeZoneLabel": "Fuseau horaire",
+  "dateTimeLabel": "Date et heure",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format : YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Maintenant",
+  "offsetLabel": "Décalage",
+  "invalidDateTimeLabel": "Date/heure invalide",
+  "swapLabel": "Inverser",
+  "detailsLabel": "Détails",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Timestamp Unix (ms)",
+  "unixSecondsLabel": "Timestamp Unix (s)",
+  "copyLabel": "Copier",
+  "copiedLabel": "Copié"
+}

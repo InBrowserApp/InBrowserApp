@@ -1,0 +1,19 @@
+{
+  "fromLabel": "จาก",
+  "toLabel": "ถึง",
+  "timeZoneLabel": "เขตเวลา",
+  "dateTimeLabel": "วันที่และเวลา",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "รูปแบบ: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "ตอนนี้",
+  "offsetLabel": "ออฟเซ็ต",
+  "invalidDateTimeLabel": "วันที่/เวลาไม่ถูกต้อง",
+  "swapLabel": "สลับ",
+  "detailsLabel": "รายละเอียด",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix timestamp (มิลลิวินาที)",
+  "unixSecondsLabel": "Unix timestamp (วินาที)",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

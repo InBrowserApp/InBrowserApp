@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de fuseau horaire",
+  "description": "Convertit une date et une heure entre fuseaux horaires avec prise en charge de l'heure d'été. Compare les décalages et copie les formats ISO/UTC."
+}
