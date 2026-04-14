@@ -10,8 +10,8 @@ import {
 import {
   Field,
   FieldContent,
+  FieldGroup,
   FieldLabel,
-  FieldSet,
 } from "@workspace/ui/components/ui/field"
 import {
   ToggleGroup,
@@ -30,7 +30,6 @@ import type {
 type OptionsCardProps = Readonly<{
   messages: RandomPasswordGeneratorMessages
   mode: PasswordMode
-  result: string
   randomLengthId: string
   wordsCountId: string
   wordsSeparatorId: string
@@ -79,7 +78,6 @@ const MODE_ITEMS = [
 function OptionsCard({
   messages,
   mode,
-  result,
   randomLengthId,
   wordsCountId,
   wordsSeparatorId,
@@ -124,35 +122,37 @@ function OptionsCard({
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-6">
-        <Field>
-          <FieldLabel>{messages.modeLabel}</FieldLabel>
-          <FieldContent>
-            <ToggleGroup
-              type="single"
-              value={mode}
-              variant="outline"
-              className="grid w-full grid-cols-2 gap-2 xl:grid-cols-4"
-              onValueChange={(value: string) => {
-                if (
-                  value === "random" ||
-                  value === "words" ||
-                  value === "separator" ||
-                  value === "pin"
-                ) {
-                  onModeChange(value)
-                }
-              }}
-            >
-              {MODE_ITEMS.map((item) => (
-                <ToggleGroupItem key={item.value} value={item.value}>
-                  {messages[item.labelKey]}
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
-          </FieldContent>
-        </Field>
+        <FieldGroup>
+          <Field>
+            <FieldLabel>{messages.modeLabel}</FieldLabel>
+            <FieldContent>
+              <ToggleGroup
+                type="single"
+                value={mode}
+                variant="outline"
+                size="sm"
+                spacing={0}
+                className="w-full [&>[data-slot=toggle-group-item]]:flex-1"
+                onValueChange={(value: string) => {
+                  if (
+                    value === "random" ||
+                    value === "words" ||
+                    value === "separator" ||
+                    value === "pin"
+                  ) {
+                    onModeChange(value)
+                  }
+                }}
+              >
+                {MODE_ITEMS.map((item) => (
+                  <ToggleGroupItem key={item.value} value={item.value}>
+                    {messages[item.labelKey]}
+                  </ToggleGroupItem>
+                ))}
+              </ToggleGroup>
+            </FieldContent>
+          </Field>
 
-        <FieldSet>
           {mode === "random" ? (
             <RandomModeFields
               messages={messages}
@@ -211,11 +211,7 @@ function OptionsCard({
               onPinAllowLeadingZeroChange={onPinAllowLeadingZeroChange}
             />
           ) : null}
-        </FieldSet>
-
-        <div className="rounded-xl border border-dashed border-border bg-muted/15 px-4 py-3 text-sm text-muted-foreground">
-          {result || messages.resultsPlaceholder}
-        </div>
+        </FieldGroup>
       </ToolPanelCardContent>
     </ToolPanelCard>
   )

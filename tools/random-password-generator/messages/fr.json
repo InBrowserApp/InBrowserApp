@@ -23,16 +23,12 @@
   "pinLengthLabel": "Length",
   "allowLeadingZeroLabel": "Allow leading zero",
   "resultsTitle": "Results",
-  "resultsDescription": "Generate a fresh value, copy it, download it, or open it full screen for easier handoff.",
+  "resultsDescription": "Generate a fresh value, copy it, hide it on screen, or download it as a text file.",
   "resultsPlaceholder": "A generated password will appear here...",
   "generateLabel": "Regenerate",
   "copyResultLabel": "Copy result",
   "copiedLabel": "Copied",
   "downloadLabel": "Download",
-  "enterFullscreenLabel": "Full screen",
-  "exitFullscreenLabel": "Exit full screen",
-  "historyTitle": "History",
-  "historyDescription": "Recent outputs stay here so you can compare formats before you clear them.",
-  "historyEmptyLabel": "No history yet.",
-  "clearHistoryLabel": "Clear history"
+  "hideResultLabel": "Hide result",
+  "showResultLabel": "Show result"
 }

@@ -1,15 +1,13 @@
-# Random Password Generator
-
-Use this tool to generate several kinds of secrets in one place: classic random passwords, word-based passphrases, grouped access codes, and numeric PINs. Everything runs locally in your browser, so the generated values do not need to leave the page.
+Generate passwords, passphrases, grouped codes, and PINs locally in your browser.
 
 ## Choose the Right Format
 
-Use **Random** when you want a dense password for websites or apps. Use **Words** when you need something easier to read aloud or type manually. Use **Blocks** for grouped invitation codes, device setup codes, or voucher-like formats. Use **PIN** for short numeric credentials.
+Use **Random** for dense passwords, **Words** for passphrases you may need to read aloud, **Blocks** for grouped codes, and **PIN** for short numeric secrets.
 
 ## Tune the Output
 
-You can control the character mix, remove look-alike characters such as `I`, `l`, `1`, `O`, and `0`, or change separators for passphrases and grouped codes. The result updates immediately, and the history panel helps you compare a few candidates before copying one.
+Adjust the character mix, separators, grouping, and similar-character filtering until the format matches how the value will actually be typed or shared.
 
 ## Export and Share
 
-When the current output looks right, copy it directly, download it as a text file, or open it full screen if you need to move it to another device. If you are generating credentials for someone else, sharing one final value is usually safer than sending multiple discarded versions.
+Copy or download the current result when it looks right. You can also hide the result on screen while keeping the current settings in place.

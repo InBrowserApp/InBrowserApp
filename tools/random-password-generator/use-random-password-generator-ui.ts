@@ -2,32 +2,15 @@ import { useEffect, useState } from "react"
 
 function useRandomPasswordGeneratorUi(outputText: string, hasResult: boolean) {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  const [isResultHidden, setIsResultHidden] = useState(false)
 
   useEffect(() => {
     if (hasResult) {
       return
     }
 
-    setIsFullscreen(false)
+    setIsResultHidden(false)
   }, [hasResult])
-
-  useEffect(() => {
-    if (!isFullscreen) {
-      return
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setIsFullscreen(false)
-      }
-    }
-
-    window.addEventListener("keydown", handleKeyDown)
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown)
-    }
-  }, [isFullscreen])
 
   useEffect(() => {
     if (!outputText) {
@@ -49,14 +32,11 @@ function useRandomPasswordGeneratorUi(outputText: string, hasResult: boolean) {
 
   return {
     downloadUrl,
-    isFullscreen,
-    openFullscreen() {
+    isResultHidden,
+    toggleResultHidden() {
       if (hasResult) {
-        setIsFullscreen(true)
+        setIsResultHidden((value) => !value)
       }
-    },
-    closeFullscreen() {
-      setIsFullscreen(false)
     },
   }
 }

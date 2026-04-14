@@ -1,6 +1,10 @@
 import type { ChangeEvent } from "react"
 
-import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Switch } from "@workspace/ui/components/ui/switch"
 
@@ -76,7 +80,7 @@ function WordsModeFields({
         />
       </Field>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <FieldGroup className="grid gap-4 md:grid-cols-2">
         <Field className="gap-3">
           <FieldLabel htmlFor={`${wordsCountId}-capitalize`}>
             {messages.capitalizeWordsLabel}
@@ -102,7 +106,7 @@ function WordsModeFields({
             }}
           />
         </Field>
-      </div>
+      </FieldGroup>
     </>
   )
 }

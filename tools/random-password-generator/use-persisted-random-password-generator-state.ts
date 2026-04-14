@@ -11,11 +11,10 @@ import {
   isPasswordMode,
   parseBoolean,
   parseCharsets,
-  parseHistory,
   parseNullableInteger,
 } from "./storage"
 
-import type { CharsetOption, HistoryEntry, PasswordMode } from "./types"
+import type { CharsetOption, PasswordMode } from "./types"
 
 function usePersistedRandomPasswordGeneratorState() {
   const [hasLoadedStorage, setHasLoadedStorage] = useState(false)
@@ -60,7 +59,6 @@ function usePersistedRandomPasswordGeneratorState() {
   const [pinAllowLeadingZero, setPinAllowLeadingZero] = useState<boolean>(
     DEFAULT_PIN_OPTIONS.allowLeadingZero
   )
-  const [historyEntries, setHistoryEntries] = useState<HistoryEntry[]>([])
 
   useEffect(() => {
     const storedMode = window.localStorage.getItem(STORAGE_KEYS.mode)
@@ -149,9 +147,7 @@ function usePersistedRandomPasswordGeneratorState() {
         DEFAULT_PIN_OPTIONS.allowLeadingZero
       )
     )
-    setHistoryEntries(
-      parseHistory(window.localStorage.getItem(STORAGE_KEYS.history))
-    )
+    window.localStorage.removeItem("tools:random-password-generator:history")
     setHasLoadedStorage(true)
   }, [])
 
@@ -205,13 +201,8 @@ function usePersistedRandomPasswordGeneratorState() {
       STORAGE_KEYS.pinAllowLeadingZero,
       String(pinAllowLeadingZero)
     )
-    window.localStorage.setItem(
-      STORAGE_KEYS.history,
-      JSON.stringify(historyEntries)
-    )
   }, [
     hasLoadedStorage,
-    historyEntries,
     mode,
     pinAllowLeadingZero,
     pinLength,
@@ -246,7 +237,6 @@ function usePersistedRandomPasswordGeneratorState() {
     separatorBlockSeparator,
     pinLength,
     pinAllowLeadingZero,
-    historyEntries,
     setMode,
     setRandomLength(value: string) {
       setRandomLengthState(
@@ -280,7 +270,6 @@ function usePersistedRandomPasswordGeneratorState() {
       setPinLengthState(parseNullableInteger(value, DEFAULT_PIN_OPTIONS.length))
     },
     setPinAllowLeadingZero,
-    setHistoryEntries,
   }
 }
 

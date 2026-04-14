@@ -10,7 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Download, Maximize2, RefreshCcw } from "@workspace/ui/icons"
+import { Download, Eye, EyeOff, RefreshCcw } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 
 import type { PasswordMode, RandomPasswordGeneratorMessages } from "../types"
 
@@ -18,9 +19,10 @@ type ResultsCardProps = Readonly<{
   messages: RandomPasswordGeneratorMessages
   mode: PasswordMode
   result: string
+  isResultHidden: boolean
   downloadUrl: string | null
   onRegenerate: () => void
-  onOpenFullscreen: () => void
+  onToggleResultHidden: () => void
 }>
 
 function getModeLabel(
@@ -43,9 +45,10 @@ function ResultsCard({
   messages,
   mode,
   result,
+  isResultHidden,
   downloadUrl,
   onRegenerate,
-  onOpenFullscreen,
+  onToggleResultHidden,
 }: ResultsCardProps) {
   const hasResult = result.length > 0
 
@@ -56,12 +59,9 @@ function ResultsCard({
         <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-5">
-        <button
-          type="button"
+        <div
           aria-label={messages.resultsTitle}
-          className="group/result flex min-h-56 w-full flex-1 items-center justify-center rounded-2xl border border-dashed border-border bg-linear-to-br from-muted/10 via-background to-muted/25 px-5 py-6 text-center transition-colors hover:border-primary/40 hover:from-muted/20 hover:to-primary/5 disabled:cursor-default"
-          disabled={!hasResult}
-          onClick={onOpenFullscreen}
+          className="flex min-h-56 w-full flex-1 items-center justify-center rounded-2xl border border-dashed border-border bg-linear-to-br from-muted/10 via-background to-muted/25 px-5 py-6 text-center"
         >
           {hasResult ? (
             <div className="w-full space-y-3">
@@ -70,7 +70,11 @@ function ResultsCard({
               </div>
               <div
                 data-slot="password-result-value"
-                className="font-mono text-2xl font-semibold tracking-tight break-all sm:text-4xl"
+                data-concealed={isResultHidden}
+                className={cn(
+                  "font-mono text-2xl font-semibold tracking-tight break-all transition-[filter] duration-200 sm:text-4xl",
+                  isResultHidden ? "blur-md select-none" : ""
+                )}
               >
                 {result}
               </div>
@@ -80,7 +84,7 @@ function ResultsCard({
               {messages.resultsPlaceholder}
             </span>
           )}
-        </button>
+        </div>
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="flex flex-wrap items-center gap-2 border-t">
         <Button
@@ -119,10 +123,14 @@ function ResultsCard({
           variant="ghost"
           size="sm"
           disabled={!hasResult}
-          onClick={onOpenFullscreen}
+          onClick={onToggleResultHidden}
         >
-          <Maximize2 data-icon="inline-start" />
-          {messages.enterFullscreenLabel}
+          {isResultHidden ? (
+            <Eye data-icon="inline-start" />
+          ) : (
+            <EyeOff data-icon="inline-start" />
+          )}
+          {isResultHidden ? messages.showResultLabel : messages.hideResultLabel}
         </Button>
       </ToolPanelCardFooter>
     </ToolPanelCard>

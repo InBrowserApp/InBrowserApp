@@ -1,17 +1,10 @@
-import { startTransition, useEffect, useMemo, useRef, useState } from "react"
+import { startTransition, useEffect, useState } from "react"
 
-import {
-  addHistoryEntry,
-  generatePasswordByMode,
-} from "./core/password-generator"
+import { generatePasswordByMode } from "./core/password-generator"
 import { usePersistedRandomPasswordGeneratorState } from "./use-persisted-random-password-generator-state"
 import { useRandomPasswordGeneratorUi } from "./use-random-password-generator-ui"
 
-import type { CharsetOption, HistoryEntry, PasswordMode } from "./types"
-
-function createHistoryId() {
-  return `${Date.now()}-${Math.random().toString(16).slice(2)}`
-}
+import type { CharsetOption } from "./types"
 
 function toggleCharset(
   currentCharsets: readonly CharsetOption[],
@@ -28,9 +21,6 @@ function useRandomPasswordGenerator() {
   const persisted = usePersistedRandomPasswordGeneratorState()
   const [result, setResult] = useState("")
   const [nonce, setNonce] = useState(0)
-  const hasInitializedResultRef = useRef(false)
-  const resultRef = useRef("")
-  const modeRef = useRef<PasswordMode>("random")
 
   const {
     hasLoadedStorage,
@@ -49,7 +39,6 @@ function useRandomPasswordGenerator() {
     separatorBlockSeparator,
     pinLength,
     pinAllowLeadingZero,
-    historyEntries,
     setMode,
     setRandomLength,
     setRandomCharsets,
@@ -65,14 +54,9 @@ function useRandomPasswordGenerator() {
     setSeparatorBlockSeparator,
     setPinLength,
     setPinAllowLeadingZero,
-    setHistoryEntries,
   } = persisted
 
-  modeRef.current = mode
-  resultRef.current = result
-
-  const outputText = useMemo(() => result, [result])
-  const ui = useRandomPasswordGeneratorUi(outputText, result.length > 0)
+  const ui = useRandomPasswordGeneratorUi(result, result.length > 0)
 
   function setCurrentResult(value: string) {
     startTransition(() => {
@@ -86,7 +70,7 @@ function useRandomPasswordGenerator() {
     }
 
     setCurrentResult(
-      generatePasswordByMode(modeRef.current, {
+      generatePasswordByMode(mode, {
         random: {
           length: randomLength,
           charsets: randomCharsets,
@@ -131,30 +115,11 @@ function useRandomPasswordGenerator() {
     wordsSeparator,
   ])
 
-  useEffect(() => {
-    if (!hasLoadedStorage) {
-      return
-    }
-
-    if (!hasInitializedResultRef.current) {
-      hasInitializedResultRef.current = true
-      return
-    }
-
-    setHistoryEntries((currentHistoryEntries: HistoryEntry[]) =>
-      addHistoryEntry(currentHistoryEntries, modeRef.current, result, {
-        createId: createHistoryId,
-      })
-    )
-  }, [hasLoadedStorage, result, setHistoryEntries])
-
   return {
     mode,
     result,
-    outputText,
     downloadUrl: ui.downloadUrl,
-    historyEntries,
-    isFullscreen: ui.isFullscreen,
+    isResultHidden: ui.isResultHidden,
     randomLength,
     randomCharsets,
     randomExcludeSimilar,
@@ -191,11 +156,7 @@ function useRandomPasswordGenerator() {
     regenerate() {
       setNonce((value) => value + 1)
     },
-    clearHistory() {
-      setHistoryEntries([])
-    },
-    openFullscreen: ui.openFullscreen,
-    closeFullscreen: ui.closeFullscreen,
+    toggleResultHidden: ui.toggleResultHidden,
   }
 }
 

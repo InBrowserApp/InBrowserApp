@@ -41,19 +41,14 @@ const messages = {
   allowLeadingZeroLabel: "Allow leading zero",
   resultsTitle: "Results",
   resultsDescription:
-    "Generate a fresh value, copy it, download it, or open it full screen for easier handoff.",
+    "Generate a fresh value, copy it, hide it on screen, or download it as a text file.",
   resultsPlaceholder: "A generated password will appear here...",
   generateLabel: "Regenerate",
   copyResultLabel: "Copy result",
   copiedLabel: "Copied",
   downloadLabel: "Download",
-  enterFullscreenLabel: "Full screen",
-  exitFullscreenLabel: "Exit full screen",
-  historyTitle: "History",
-  historyDescription:
-    "Recent outputs stay here so you can compare formats before you clear them.",
-  historyEmptyLabel: "No history yet.",
-  clearHistoryLabel: "Clear history",
+  hideResultLabel: "Hide result",
+  showResultLabel: "Show result",
 } as const
 
 beforeEach(() => {
@@ -83,9 +78,8 @@ afterEach(() => {
 
 function getResultValue() {
   return (
-    screen
-      .getByLabelText(messages.resultsTitle)
-      .querySelector('[data-slot="password-result-value"]')?.textContent ?? ""
+    document.querySelector('[data-slot="password-result-value"]')
+      ?.textContent ?? ""
   )
 }
 
@@ -102,6 +96,8 @@ describe("RandomPasswordGeneratorClient", () => {
     })
     expect(downloadLink).toHaveProperty("href", "blob:password-results")
     expect(URL.createObjectURL).toHaveBeenCalled()
+    expect(screen.queryByRole("button", { name: /full screen/i })).toBeNull()
+    expect(screen.queryByText(/history/i)).toBeNull()
   })
 
   test("switches to pin mode, disables leading zero, and persists the mode", async () => {
@@ -154,5 +150,33 @@ describe("RandomPasswordGeneratorClient", () => {
       )
       expect(getResultValue()).toBe("Abandon.Abandon.Abandon.0")
     })
+  })
+
+  test("toggles result concealment without regenerating the value", async () => {
+    render(<RandomPasswordGeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(getResultValue()).toBe("AAAAAAAAAAAAAAAA")
+    })
+
+    const resultValue = document.querySelector(
+      '[data-slot="password-result-value"]'
+    )
+
+    expect(resultValue).not.toBeNull()
+    expect(resultValue?.getAttribute("data-concealed")).toBe("false")
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.hideResultLabel })
+    )
+
+    expect(resultValue?.getAttribute("data-concealed")).toBe("true")
+    expect(getResultValue()).toBe("AAAAAAAAAAAAAAAA")
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.showResultLabel })
+    )
+
+    expect(resultValue?.getAttribute("data-concealed")).toBe("false")
   })
 })

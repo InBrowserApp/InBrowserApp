@@ -5,7 +5,7 @@ import {
   DEFAULT_WORD_OPTIONS,
 } from "./core/password-generator"
 
-import type { CharsetOption, HistoryEntry, PasswordMode } from "./types"
+import type { CharsetOption, PasswordMode } from "./types"
 
 const STORAGE_KEYS = {
   mode: "tools:random-password-generator:mode",
@@ -25,7 +25,6 @@ const STORAGE_KEYS = {
     "tools:random-password-generator:separator:blockSeparator",
   pinLength: "tools:random-password-generator:pin:length",
   pinAllowLeadingZero: "tools:random-password-generator:pin:allowLeadingZero",
-  history: "tools:random-password-generator:history",
 } as const
 
 function parseNullableInteger(value: string | null, fallback: number) {
@@ -81,51 +80,6 @@ function parseCharsets(
   }
 }
 
-function parseHistory(value: string | null): HistoryEntry[] {
-  if (!value) {
-    return []
-  }
-
-  try {
-    const parsed = JSON.parse(value)
-
-    if (!Array.isArray(parsed)) {
-      return []
-    }
-
-    return parsed.flatMap((entry: unknown) => {
-      if (!entry || typeof entry !== "object") {
-        return []
-      }
-
-      const candidate = entry as {
-        id?: unknown
-        mode?: unknown
-        value?: unknown
-      }
-
-      if (
-        typeof candidate.id !== "string" ||
-        typeof candidate.value !== "string" ||
-        typeof candidate.mode !== "string" ||
-        !isPasswordMode(candidate.mode)
-      ) {
-        return []
-      }
-
-      return [
-        {
-          id: candidate.id,
-          mode: candidate.mode,
-          value: candidate.value,
-        },
-      ]
-    })
-  } catch {
-    return []
-  }
-}
-
 export {
   DEFAULT_PIN_OPTIONS,
   DEFAULT_RANDOM_OPTIONS,
@@ -134,7 +88,6 @@ export {
   STORAGE_KEYS,
   parseBoolean,
   parseCharsets,
-  parseHistory,
   parseNullableInteger,
   isPasswordMode,
 }

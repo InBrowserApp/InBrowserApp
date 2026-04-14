@@ -23,16 +23,12 @@
   "pinLengthLabel": "长度",
   "allowLeadingZeroLabel": "允许前导 0",
   "resultsTitle": "结果",
-  "resultsDescription": "生成新的结果、复制、下载，或全屏查看后再交付给别人。",
+  "resultsDescription": "生成新的结果、复制、临时隐藏，或下载为文本文件。",
   "resultsPlaceholder": "生成的密码会显示在这里...",
   "generateLabel": "重新生成",
   "copyResultLabel": "复制结果",
   "copiedLabel": "已复制",
   "downloadLabel": "下载",
-  "enterFullscreenLabel": "全屏",
-  "exitFullscreenLabel": "退出全屏",
-  "historyTitle": "历史记录",
-  "historyDescription": "最近生成的结果会保留在这里，方便你比较不同格式。",
-  "historyEmptyLabel": "还没有历史记录。",
-  "clearHistoryLabel": "清空历史"
+  "hideResultLabel": "隐藏结果",
+  "showResultLabel": "显示结果"
 }

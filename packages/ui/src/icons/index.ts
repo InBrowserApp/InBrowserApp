@@ -9,6 +9,8 @@ export {
   Clock3,
   Copy,
   Download,
+  Eye,
+  EyeOff,
   Maximize2,
   Minimize2,
   FileJson2,

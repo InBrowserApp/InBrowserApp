@@ -1,13 +1,18 @@
 import type { ChangeEvent } from "react"
 
-import { Button } from "@workspace/ui/components/ui/button"
 import {
   Field,
   FieldContent,
+  FieldGroup,
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Switch } from "@workspace/ui/components/ui/switch"
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@workspace/ui/components/ui/toggle-group"
+import { Check } from "@workspace/ui/icons"
 
 import type { CharsetOption, RandomPasswordGeneratorMessages } from "../types"
 
@@ -63,25 +68,39 @@ function CharsetSelector({
     <Field>
       <FieldLabel>{label}</FieldLabel>
       <FieldContent>
-        <div className="flex flex-wrap gap-2">
+        <ToggleGroup
+          type="multiple"
+          variant="outline"
+          size="sm"
+          value={[...selectedCharsets]}
+          className="flex w-full flex-wrap gap-2"
+          aria-label={label}
+          onValueChange={(value) => {
+            const previous = new Set(selectedCharsets)
+            const next = new Set(value as CharsetOption[])
+
+            for (const option of CHARSET_ITEMS) {
+              if (previous.has(option.value) !== next.has(option.value)) {
+                onToggle(option.value)
+              }
+            }
+          }}
+        >
           {CHARSET_ITEMS.map((item) => {
             const isSelected = selectedCharsets.includes(item.value)
 
             return (
-              <Button
+              <ToggleGroupItem
                 key={item.value}
-                type="button"
-                size="sm"
-                variant={isSelected ? "secondary" : "outline"}
-                onClick={() => {
-                  onToggle(item.value)
-                }}
+                value={item.value}
+                className="min-w-[8.5rem] justify-start"
               >
+                {isSelected ? <Check data-icon="inline-start" /> : null}
                 {messages[item.labelKey]}
-              </Button>
+              </ToggleGroupItem>
             )
           })}
-        </div>
+        </ToggleGroup>
       </FieldContent>
     </Field>
   )
@@ -178,7 +197,7 @@ function SeparatorModeFields({
         />
       </Field>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <FieldGroup className="grid gap-4 md:grid-cols-2">
         <Field>
           <FieldLabel htmlFor={separatorBlockLengthId}>
             {messages.blockLengthLabel}
@@ -214,7 +233,7 @@ function SeparatorModeFields({
             }}
           />
         </Field>
-      </div>
+      </FieldGroup>
 
       <Field>
         <FieldLabel htmlFor={separatorBlockSeparatorId}>

@@ -39,12 +39,8 @@ type RandomPasswordGeneratorMessagesCatalog = Readonly<{
   copyResultLabel: string
   copiedLabel: string
   downloadLabel: string
-  enterFullscreenLabel: string
-  exitFullscreenLabel: string
-  historyTitle: string
-  historyDescription: string
-  historyEmptyLabel: string
-  clearHistoryLabel: string
+  hideResultLabel: string
+  showResultLabel: string
 }>
 
 type RandomPasswordGeneratorMessages =

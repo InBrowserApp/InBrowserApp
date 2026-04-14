@@ -23,16 +23,12 @@
   "pinLengthLabel": "長度",
   "allowLeadingZeroLabel": "允許前導 0",
   "resultsTitle": "結果",
-  "resultsDescription": "產生新的結果、複製、下載，或全螢幕檢視後再交付給其他人。",
+  "resultsDescription": "產生新的結果、複製、暫時隱藏，或下載為文字檔。",
   "resultsPlaceholder": "產生的密碼會顯示在這裡...",
   "generateLabel": "重新產生",
   "copyResultLabel": "複製結果",
   "copiedLabel": "已複製",
   "downloadLabel": "下載",
-  "enterFullscreenLabel": "全螢幕",
-  "exitFullscreenLabel": "退出全螢幕",
-  "historyTitle": "歷史記錄",
-  "historyDescription": "最近產生的結果會保留在這裡，方便你比較不同格式。",
-  "historyEmptyLabel": "還沒有歷史記錄。",
-  "clearHistoryLabel": "清空歷史"
+  "hideResultLabel": "隱藏結果",
+  "showResultLabel": "顯示結果"
 }
