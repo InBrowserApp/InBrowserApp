@@ -35,6 +35,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),

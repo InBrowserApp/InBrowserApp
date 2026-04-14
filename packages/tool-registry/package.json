@@ -35,6 +35,7 @@
     "@tool/list-comparer": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
+    "@tool/port-number-lookup": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/rot-cipher": "workspace:*",

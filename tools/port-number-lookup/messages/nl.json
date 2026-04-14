@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Zoeken op poortnummer of servicenaam...",
+  "all": "Alle",
+  "common": "Algemeen",
+  "system": "Systeem (0-1023)",
+  "registered": "Geregistreerd (1024+)",
+  "port": "Poort",
+  "service": "Service",
+  "protocol": "Protocol",
+  "description": "Beschrijving",
+  "aboutTitle": "Wat is een Poortnummer?",
+  "aboutDescription": "Een poortnummer is een 16-bits unsigned integer (0-65535) dat wordt gebruikt om specifieke processen of services op een netwerkapparaat te identificeren. Poorten maken het mogelijk dat meerdere netwerkservices op hetzelfde IP-adres draaien.",
+  "systemPorts": "Systeempoorten (0-1023):",
+  "systemPortsDesc": "Ook wel \"bekende poorten\" genoemd, gereserveerd voor gangbare services zoals HTTP (80), HTTPS (443), SSH (22).",
+  "registeredPorts": "Geregistreerde Poorten (1024-49151):",
+  "registeredPortsDesc": "Gebruikt door applicaties en services die bij IANA zijn geregistreerd, zoals MySQL (3306), PostgreSQL (5432).",
+  "dynamicPorts": "Dynamische Poorten (49152-65535):",
+  "dynamicPortsDesc": "Ook wel \"kortstondige poorten\" genoemd, gebruikt voor tijdelijke verbindingen door clientapplicaties.",
+  "noResultsTitle": "No matching ports found",
+  "noResultsDescription": "Try a different port number, service name, or category."
+}
