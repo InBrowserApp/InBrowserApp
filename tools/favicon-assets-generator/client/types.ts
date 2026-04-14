@@ -26,8 +26,4 @@ type GenerateFaviconAssetsInput = Readonly<{
   pwa: PWAIconConfig
 }>
 
-export type {
-  GenerateFaviconAssetsInput,
-  GeneratedAssetFile,
-  GeneratedFaviconBundle,
-}
+export type { GenerateFaviconAssetsInput, GeneratedFaviconBundle }

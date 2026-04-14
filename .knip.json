@@ -15,6 +15,9 @@
     },
     "tools/unicode-punycode-converter": {
       "ignoreDependencies": ["punycode", "@types/punycode"]
+    },
+    "tools/prettier-code-formatter": {
+      "ignoreDependencies": ["svelte"]
     }
   }
 }

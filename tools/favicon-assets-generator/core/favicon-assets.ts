@@ -277,5 +277,4 @@ export type {
   IOSIconConfig,
   PWAIconConfig,
   SiteConfig,
-  SquareDrawLayout,
 }
