@@ -1,7 +1,9 @@
 {
   "inputTitle": "Input JSON",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "Tampal data JSON di sini...",
   "outputTitle": "Skema yang dijana",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "Sediakan data JSON yang sah untuk menjana skema",
   "invalidJson": "JSON tidak sah",
   "optionsTitle": "Pilihan",

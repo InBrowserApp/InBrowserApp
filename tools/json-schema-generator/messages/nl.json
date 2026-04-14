@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON-invoer",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "Plak hier JSON-gegevens...",
   "outputTitle": "Gegenereerd schema",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "Voer geldige JSON-gegevens in om een schema te genereren",
   "invalidJson": "Ongeldig JSON",
   "optionsTitle": "Opties",

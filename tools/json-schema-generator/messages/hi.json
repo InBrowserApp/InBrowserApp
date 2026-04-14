@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON इनपुट",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "यहाँ JSON डेटा पेस्ट करें...",
   "outputTitle": "जनरेट किया गया स्कीमा",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "स्कीमा बनाने के लिए मान्य JSON डेटा प्रदान करें",
   "invalidJson": "अमान्य JSON",
   "optionsTitle": "विकल्प",

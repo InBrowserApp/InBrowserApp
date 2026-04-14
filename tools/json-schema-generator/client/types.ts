@@ -6,8 +6,10 @@ type JsonSchemaGeneratorMessages = Readonly<{
     description: string
   }
   inputTitle: string
+  inputDescription: string
   inputPlaceholder: string
   outputTitle: string
+  outputDescription: string
   outputEmpty: string
   invalidJson: string
   optionsTitle: string

@@ -1,7 +1,9 @@
 {
   "inputTitle": "อินพุต JSON",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "วางข้อมูล JSON ที่นี่...",
   "outputTitle": "สคีมาที่สร้างแล้ว",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "กรุณาใส่ข้อมูล JSON ที่ถูกต้องเพื่อสร้างสคีมา",
   "invalidJson": "JSON ไม่ถูกต้อง",
   "optionsTitle": "ตัวเลือก",

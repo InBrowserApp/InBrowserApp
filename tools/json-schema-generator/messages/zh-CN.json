@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON 输入",
+  "inputDescription": "粘贴示例 JSON 或导入文件，快速推断初始 Schema。",
   "inputPlaceholder": "在此粘贴 JSON 数据...",
   "outputTitle": "生成的 Schema",
+  "outputDescription": "查看生成的 Schema，然后复制或下载后继续调整。",
   "outputEmpty": "请输入有效的 JSON 数据以生成 Schema",
   "invalidJson": "无效的 JSON",
   "optionsTitle": "选项",

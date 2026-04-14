@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON-inndata",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "Lim inn JSON-data her...",
   "outputTitle": "Generert skjema",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "Oppgi gyldige JSON-data for å generere et skjema",
   "invalidJson": "Ugyldig JSON",
   "optionsTitle": "Alternativer",

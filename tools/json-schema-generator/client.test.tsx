@@ -15,8 +15,12 @@ const messages = {
     description: "Generate JSON Schema from example JSON data",
   },
   inputTitle: "JSON Input",
+  inputDescription:
+    "Paste example JSON or import a file to infer a starting schema.",
   inputPlaceholder: "Paste JSON data here...",
   outputTitle: "Generated Schema",
+  outputDescription:
+    "Review the generated schema, then copy or download it for further refinement.",
   outputEmpty: "Provide valid JSON data to generate a schema",
   invalidJson: "Invalid JSON",
   optionsTitle: "Options",
@@ -80,6 +84,8 @@ describe("JsonSchemaGeneratorClient", () => {
   test("renders the sample JSON and generated schema by default", () => {
     render(<JsonSchemaGeneratorClient messages={messages} />)
 
+    expect(screen.getByText(messages.inputDescription)).toBeTruthy()
+    expect(screen.getByText(messages.outputDescription)).toBeTruthy()
     expect(getInput().value).toBe(sampleJson)
     expect(getOutputText()).toContain(
       '"$schema": "https://json-schema.org/draft/2020-12/schema"'

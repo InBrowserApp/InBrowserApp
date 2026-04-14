@@ -6,7 +6,11 @@ import {
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Field, FieldError } from "@workspace/ui/components/ui/field"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { FileJson2, FileText } from "@workspace/ui/icons"
@@ -38,6 +42,7 @@ function InputCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.inputTitle}</CardTitle>
+        <CardDescription>{messages.inputDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <Field

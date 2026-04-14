@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON-Eingabe",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "JSON-Daten hier einfügen...",
   "outputTitle": "Generiertes Schema",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "Geben Sie gültige JSON-Daten ein, um ein Schema zu erzeugen",
   "invalidJson": "Ungültiges JSON",
   "optionsTitle": "Optionen",

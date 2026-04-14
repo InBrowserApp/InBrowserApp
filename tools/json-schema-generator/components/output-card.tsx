@@ -10,7 +10,11 @@ import {
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import {
   Empty,
   EmptyDescription,
@@ -42,6 +46,7 @@ function OutputCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.outputTitle}</CardTitle>
+        <CardDescription>{messages.outputDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="min-h-0 gap-4">
         {errorMessage ? (

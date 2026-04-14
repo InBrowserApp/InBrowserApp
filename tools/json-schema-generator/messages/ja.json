@@ -1,7 +1,9 @@
 {
   "inputTitle": "JSON 入力",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
   "inputPlaceholder": "ここに JSON データを貼り付け...",
   "outputTitle": "生成されたスキーマ",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
   "outputEmpty": "有効な JSON データを入力してスキーマを生成してください",
   "invalidJson": "無効な JSON",
   "optionsTitle": "オプション",
