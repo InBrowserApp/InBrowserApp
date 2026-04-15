@@ -62,6 +62,7 @@
     "@tool/sha224-hash-text-or-file": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
     "@tool/sha3-224-hash-text-or-file": "workspace:*",
+    "@tool/sha3-256-hash-text-or-file": "workspace:*",
     "@tool/sha384-hash-text-or-file": "workspace:*",
     "@tool/sha512-hash-text-or-file": "workspace:*",
     "@tool/slug-generator": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "SHA3-256 (FIPS 202)-hash text eller fil",
+  "description": "Generera SHA3-256 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål"
+}
