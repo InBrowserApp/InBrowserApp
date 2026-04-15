@@ -145,12 +145,5 @@ function isEncodeRange(value: string): value is EncodeRange {
   return ENCODE_RANGE_VALUES.includes(value as EncodeRange)
 }
 
-export {
-  ENCODE_RANGE_VALUES,
-  ENTITY_FORMAT_VALUES,
-  decodeHtmlEntities,
-  encodeHtmlEntities,
-  isEncodeRange,
-  isEntityFormat,
-}
+export { decodeHtmlEntities, encodeHtmlEntities, isEncodeRange, isEntityFormat }
 export type { EncodeRange, EntityFormat }
