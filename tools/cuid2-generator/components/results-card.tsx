@@ -43,7 +43,7 @@ function Cuid2ResultsCard({
           readOnly
           rows={14}
           placeholder={messages.resultsPlaceholder}
-          className="min-h-80 resize-y font-mono text-sm"
+          className="max-h-[min(32rem,60vh)] min-h-80 resize-y overflow-y-auto font-mono text-sm"
         />
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-between gap-3 border-t">
