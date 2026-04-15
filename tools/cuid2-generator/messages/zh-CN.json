@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "选项",
+  "optionsDescription": "设置每批要生成多少个标识符，以及每个 CUID2 的长度。",
+  "countLabel": "数量",
+  "lengthLabel": "长度",
+  "resultsTitle": "结果",
+  "resultsDescription": "每一批结果都会在浏览器本地生成，你可以直接查看、复制或下载，无需把标识符发送到其他服务。",
+  "resultsPlaceholder": "生成的 CUID2 标识符将显示在这里...",
+  "copyResultsLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载",
+  "regenerateLabel": "重新生成"
+}

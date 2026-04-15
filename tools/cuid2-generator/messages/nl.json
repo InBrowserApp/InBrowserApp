@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Opties",
+  "optionsDescription": "Stel in hoeveel identifiers je per batch wilt genereren en hoe lang elke CUID2 moet zijn.",
+  "countLabel": "Aantal",
+  "lengthLabel": "Lengte",
+  "resultsTitle": "Resultaten",
+  "resultsDescription": "Elke batch wordt lokaal in je browser gegenereerd, zodat je die kunt controleren, kopiëren of downloaden zonder de ID’s naar een andere dienst te sturen.",
+  "resultsPlaceholder": "De gegenereerde CUID2-ID’s verschijnen hier...",
+  "copyResultsLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadResultsLabel": "Downloaden",
+  "regenerateLabel": "Opnieuw genereren"
+}

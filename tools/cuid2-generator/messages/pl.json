@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Opcje",
+  "optionsDescription": "Ustaw, ile identyfikatorów ma zostać wygenerowanych w każdej partii oraz jaką długość ma mieć każdy CUID2.",
+  "countLabel": "Liczba",
+  "lengthLabel": "Długość",
+  "resultsTitle": "Wyniki",
+  "resultsDescription": "Każda partia jest generowana lokalnie w przeglądarce, dzięki czemu możesz ją sprawdzić, skopiować lub pobrać bez wysyłania identyfikatorów do innej usługi.",
+  "resultsPlaceholder": "Wygenerowane identyfikatory CUID2 pojawią się tutaj...",
+  "copyResultsLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "downloadResultsLabel": "Pobierz",
+  "regenerateLabel": "Generuj ponownie"
+}
