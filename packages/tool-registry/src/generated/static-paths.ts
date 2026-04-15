@@ -2762,6 +2762,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "password-strength-checker",
+    language: "ar",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "de",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "en",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "es",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "fr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "he",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "hi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "id",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "it",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ja",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ko",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ms",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "nl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "no",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pt",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ru",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "sv",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "th",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "tr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "vi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },

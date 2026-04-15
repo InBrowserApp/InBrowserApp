@@ -1,0 +1,4 @@
+{
+  "name": "Sprawdzanie Siły Hasła",
+  "description": "Ocenia siłę hasła na podstawie entropii, składu i wzorców oraz podaje wskazówki bezpieczeństwa."
+}
