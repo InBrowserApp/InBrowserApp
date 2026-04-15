@@ -1,0 +1,4 @@
+{
+  "name": "Walidator e-mail",
+  "description": "Waliduje adresy e-mail z kontrolą składni, długości i domeny."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Validator email",
+  "description": "Memvalidasi alamat email dengan pemeriksaan sintaks, panjang, dan domain."
+}

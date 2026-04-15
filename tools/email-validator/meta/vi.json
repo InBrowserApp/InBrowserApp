@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực email",
+  "description": "Xác thực địa chỉ email với kiểm tra cú pháp, độ dài và tên miền."
+}
