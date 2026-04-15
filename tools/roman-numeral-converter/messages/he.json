@@ -1,0 +1,22 @@
+{
+  "converterTitle": "ממיר ערבי ↔ רומי",
+  "converterDescription": "ממיר דו-כיווני בין ספרות רומיות וערביות. תומך בספרות רומיות סטנדרטיות מ-1 עד 3999 (I עד MMMCMXCIX).",
+  "arabicNumber": "מספר ערבי (1-3999)",
+  "arabicPlaceholder": "הכנס מספר ערבי...",
+  "romanNumeral": "מספר רומי",
+  "romanPlaceholder": "הכנס מספר רומי...",
+  "invalidRomanNumeral": "אנא הכנס מספר רומי תקין",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

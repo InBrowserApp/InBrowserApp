@@ -1,0 +1,22 @@
+{
+  "converterTitle": "Trình Chuyển Đổi Ả Rập ↔ La Mã",
+  "converterDescription": "Trình chuyển đổi hai chiều giữa số La Mã và số Ả Rập. Hỗ trợ số La Mã tiêu chuẩn từ 1 đến 3999 (I đến MMMCMXCIX).",
+  "arabicNumber": "Số Ả Rập (1-3999)",
+  "arabicPlaceholder": "Nhập số Ả Rập...",
+  "romanNumeral": "Số La Mã",
+  "romanPlaceholder": "Nhập số La Mã...",
+  "invalidRomanNumeral": "Vui lòng nhập một số La Mã hợp lệ",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}
