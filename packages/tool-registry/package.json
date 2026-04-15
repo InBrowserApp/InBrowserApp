@@ -22,6 +22,7 @@
     "@tool/duration-calculator": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
+    "@tool/html-entity-encoder-decoder": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-resizer": "workspace:*",
     "@tool/image-to-ico": "workspace:*",

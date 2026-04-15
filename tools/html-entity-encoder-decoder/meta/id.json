@@ -1,0 +1,4 @@
+{
+  "name": "Encoder & Decoder Entitas HTML",
+  "description": "Encode dan decode entitas HTML. Konversi karakter khusus ke entitas HTML bernama, desimal, atau heksadesimal dan sebaliknya"
+}
