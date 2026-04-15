@@ -5,7 +5,7 @@ import Ipv6ToMacClient from "./client"
 
 const messages = {
   meta: {
-    name: "IPv6 to MAC Converter",
+    name: "IPv6 Address to MAC Address Converter",
     description: "Recover a MAC address from an EUI-64 derived IPv6 address.",
   },
   placeholder: "Enter IPv6",
@@ -70,6 +70,20 @@ describe("Ipv6ToMacClient", () => {
   })
 
   test("restores the stored IPv6 value from local storage", () => {
+    window.localStorage.setItem(
+      "tools:ipv6-address-to-mac-address-converter:ipv6",
+      "fe80::0211:22ff:fe33:4455"
+    )
+
+    render(<Ipv6ToMacClient messages={messages} />)
+
+    const input = screen.getByLabelText("IPv6") as HTMLInputElement
+
+    expect(input.value).toBe("fe80::0211:22ff:fe33:4455")
+    expect(screen.getByText("00:11:22:33:44:55")).toBeTruthy()
+  })
+
+  test("restores the legacy stored IPv6 value from the previous slug", () => {
     window.localStorage.setItem(
       "tools:ipv6-to-mac:ipv6",
       "fe80::0211:22ff:fe33:4455"

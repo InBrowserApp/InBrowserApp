@@ -1,4 +1,4 @@
 {
-  "name": "IPv6 til MAC-konverterer",
+  "name": "Konverterer for IPv6-adresse til MAC-adresse",
   "description": "Konverterer IPv6-adresser til MAC-adresser. Skriv inn hvilken som helst IPv6-adresse for å trekke ut den tilsvarende MAC-adressen øyeblikkelig."
 }

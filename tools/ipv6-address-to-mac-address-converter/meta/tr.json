@@ -1,4 +1,4 @@
 {
-  "name": "IPv6'dan MAC Dönüştürücü",
+  "name": "IPv6 Adresinden MAC Adresine Dönüştürücü",
   "description": "IPv6 adreslerini MAC adreslerine dönüştürür. Herhangi bir IPv6 adresi girin ve karşılık gelen MAC adresini anında çıkarın."
 }

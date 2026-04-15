@@ -1,4 +1,4 @@
 {
-  "name": "Conversor IPv6 para MAC",
+  "name": "Conversor de endereço IPv6 para endereço MAC",
   "description": "Converte endereços IPv6 em endereços MAC. Digite qualquer endereço IPv6 para extrair o endereço MAC correspondente instantaneamente."
 }

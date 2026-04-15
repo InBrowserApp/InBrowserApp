@@ -41,7 +41,8 @@ type Ipv6ToMacClientProps = Readonly<{
 }>
 
 const DEFAULT_IPV6 = "fe80::a8bb:ccff:fedd:eeff"
-const STORAGE_KEY = "tools:ipv6-to-mac:ipv6"
+const STORAGE_KEY = "tools:ipv6-address-to-mac-address-converter:ipv6"
+const LEGACY_STORAGE_KEY = "tools:ipv6-to-mac:ipv6"
 
 function Ipv6ToMacClient({ messages }: Ipv6ToMacClientProps) {
   const inputId = useId()
@@ -51,7 +52,9 @@ function Ipv6ToMacClient({ messages }: Ipv6ToMacClientProps) {
     /* v8 ignore next */
     if (typeof window === "undefined") return
 
-    const storedValue = window.localStorage.getItem(STORAGE_KEY)
+    const storedValue =
+      window.localStorage.getItem(STORAGE_KEY) ??
+      window.localStorage.getItem(LEGACY_STORAGE_KEY)
     if (storedValue !== null) {
       setIpv6(storedValue)
     }

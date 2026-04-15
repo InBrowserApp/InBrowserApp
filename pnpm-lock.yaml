@@ -327,9 +327,9 @@ importers:
       '@tool/image-resizer':
         specifier: workspace:*
         version: link:../../tools/image-resizer
-      '@tool/ipv6-to-mac':
+      '@tool/ipv6-address-to-mac-address-converter':
         specifier: workspace:*
-        version: link:../../tools/ipv6-to-mac
+        version: link:../../tools/ipv6-address-to-mac-address-converter
       '@tool/isbn-validator':
         specifier: workspace:*
         version: link:../../tools/isbn-validator
@@ -944,7 +944,7 @@ importers:
         specifier: 'catalog:'
         version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
 
-  tools/ipv6-to-mac:
+  tools/ipv6-address-to-mac-address-converter:
     dependencies:
       '@workspace/tool-sdk':
         specifier: workspace:*
