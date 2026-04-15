@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur de différence de temps",
+  "description": "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales."
+}

@@ -1,0 +1,23 @@
+{
+  "startLabel": "Başlangıç",
+  "endLabel": "Bitiş",
+  "timeZoneLabel": "Saat dilimi",
+  "dateTimeLabel": "Tarih ve saat",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Biçim: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Şimdi",
+  "offsetLabel": "Ofset",
+  "invalidDateTimeLabel": "Geçersiz tarih/saat",
+  "swapLabel": "Değiştir",
+  "resultsLabel": "Sonuçlar",
+  "signedDurationLabel": "İşaretli süre",
+  "absoluteDurationLabel": "Mutlak süre",
+  "iso8601DurationLabel": "ISO 8601 süresi",
+  "totalMillisecondsLabel": "Toplam milisaniye",
+  "totalSecondsLabel": "Toplam saniye",
+  "totalMinutesLabel": "Toplam dakika",
+  "totalHoursLabel": "Toplam saat",
+  "totalDaysLabel": "Toplam gün",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

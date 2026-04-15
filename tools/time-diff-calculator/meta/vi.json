@@ -1,0 +1,4 @@
+{
+  "name": "Trình tính chênh lệch thời gian",
+  "description": "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị."
+}

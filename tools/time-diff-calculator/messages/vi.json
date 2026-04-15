@@ -1,0 +1,23 @@
+{
+  "startLabel": "Bắt đầu",
+  "endLabel": "Kết thúc",
+  "timeZoneLabel": "Múi giờ",
+  "dateTimeLabel": "Ngày và giờ",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Định dạng: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Bây giờ",
+  "offsetLabel": "Độ lệch",
+  "invalidDateTimeLabel": "Ngày/giờ không hợp lệ",
+  "swapLabel": "Hoán đổi",
+  "resultsLabel": "Kết quả",
+  "signedDurationLabel": "Thời lượng có dấu",
+  "absoluteDurationLabel": "Thời lượng tuyệt đối",
+  "iso8601DurationLabel": "Thời lượng ISO 8601",
+  "totalMillisecondsLabel": "Tổng mili giây",
+  "totalSecondsLabel": "Tổng giây",
+  "totalMinutesLabel": "Tổng phút",
+  "totalHoursLabel": "Tổng giờ",
+  "totalDaysLabel": "Tổng ngày",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

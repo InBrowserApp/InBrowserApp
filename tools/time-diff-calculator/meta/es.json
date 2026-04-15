@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de diferencia de tiempo",
+  "description": "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales."
+}

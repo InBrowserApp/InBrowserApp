@@ -1,0 +1,4 @@
+{
+  "name": "Zaman farkı hesaplayıcısı",
+  "description": "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün."
+}

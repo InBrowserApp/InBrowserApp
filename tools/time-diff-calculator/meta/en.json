@@ -1,0 +1,4 @@
+{
+  "name": "Time Difference Calculator",
+  "description": "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences."
+}

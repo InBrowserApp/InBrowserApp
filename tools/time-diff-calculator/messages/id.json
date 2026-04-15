@@ -1,0 +1,23 @@
+{
+  "startLabel": "Mulai",
+  "endLabel": "Selesai",
+  "timeZoneLabel": "Zona waktu",
+  "dateTimeLabel": "Tanggal dan waktu",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Sekarang",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Tanggal/waktu tidak valid",
+  "swapLabel": "Tukar",
+  "resultsLabel": "Hasil",
+  "signedDurationLabel": "Durasi bertanda",
+  "absoluteDurationLabel": "Durasi absolut",
+  "iso8601DurationLabel": "Durasi ISO 8601",
+  "totalMillisecondsLabel": "Total milidetik",
+  "totalSecondsLabel": "Total detik",
+  "totalMinutesLabel": "Total menit",
+  "totalHoursLabel": "Total jam",
+  "totalDaysLabel": "Total hari",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin"
+}

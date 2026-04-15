@@ -1,0 +1,23 @@
+{
+  "startLabel": "Start",
+  "endLabel": "Slut",
+  "timeZoneLabel": "Tidszon",
+  "dateTimeLabel": "Datum och tid",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Nu",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ogiltigt datum/tid",
+  "swapLabel": "Byt",
+  "resultsLabel": "Resultat",
+  "signedDurationLabel": "Signerad varaktighet",
+  "absoluteDurationLabel": "Absolut varaktighet",
+  "iso8601DurationLabel": "ISO 8601-varaktighet",
+  "totalMillisecondsLabel": "Totala millisekunder",
+  "totalSecondsLabel": "Totala sekunder",
+  "totalMinutesLabel": "Totala minuter",
+  "totalHoursLabel": "Totala timmar",
+  "totalDaysLabel": "Totala dagar",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierad"
+}
