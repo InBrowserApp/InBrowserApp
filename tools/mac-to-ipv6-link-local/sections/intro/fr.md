@@ -1,0 +1,22 @@
+## Qu'est-ce qu'une adresse IPv6 de lien local ?
+
+Les adresses IPv6 de lien local sont des adresses IPv6 spéciales qui sont automatiquement configurées sur chaque interface activée pour IPv6. Elles commencent toujours par le préfixe fe80::/10 et sont utilisées pour la communication entre les appareils sur le même segment de réseau. Ces adresses ne sont pas routables au-delà du lien local et sont couramment utilisées pour la découverte de voisins, la découverte de routeurs et d'autres protocoles de réseau local. Les adresses de lien local peuvent être générées à partir de l'adresse MAC d'un appareil en utilisant le format EUI-64.
+
+### Formats d'entrée
+
+- `00:11:22:33:44:55`
+- `00-11-22-33-44-55`
+- `0011.2233.4455`
+- `001122334455`
+
+### Sortie EUI-64
+
+- `fe80::/10`
+- flip the U/L bit
+- insert `ff:fe`
+
+### Suffixe d'interface
+
+- `%eth0`
+- `%en0`
+- `%wlan0`

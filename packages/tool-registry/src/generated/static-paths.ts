@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mac-to-ipv6-link-local",
+    language: "ar",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "de",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "en",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "es",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "fr",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "he",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "hi",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "id",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "it",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "ja",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "ko",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "ms",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "nl",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "no",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "pl",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "pt",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "ru",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "sv",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "th",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "tr",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "vi",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-to-ipv6-link-local",
+    language: "zh-TW",
+  },
+  {
     slug: "md5-hash-text-or-file",
     language: "ar",
   },

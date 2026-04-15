@@ -1,0 +1,10 @@
+{
+  "macLabel": "عنوان MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "واجهة الشبكة",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "عنوان MAC غير صالح",
+  "resultLabel": "عنوان IPv6 المحلي للرابط",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

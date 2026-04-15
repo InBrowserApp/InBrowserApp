@@ -1,0 +1,10 @@
+{
+  "macLabel": "כתובת MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "ממשק רשת",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "כתובת MAC לא תקינה",
+  "resultLabel": "כתובת קישור מקומית IPv6",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

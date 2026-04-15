@@ -43,6 +43,7 @@
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
+    "@tool/mac-to-ipv6-link-local": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
