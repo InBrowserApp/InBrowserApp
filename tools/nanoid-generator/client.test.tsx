@@ -106,6 +106,8 @@ describe("NanoidGeneratorClient", () => {
     expect(URL.createObjectURL).toHaveBeenCalled()
     expect(getResultsTextarea().className).toContain("max-h-[min(32rem,60vh)]")
     expect(getResultsTextarea().className).toContain("overflow-y-auto")
+    expect(screen.queryByText(messages.alphabetUniqueLabel)).toBeNull()
+    expect(screen.queryByText(messages.alphabetDuplicatesLabel)).toBeNull()
   })
 
   test("switches to the numeric alphabet preset", async () => {
@@ -139,6 +141,9 @@ describe("NanoidGeneratorClient", () => {
     fireEvent.change(customAlphabetInput, { target: { value: "aab" } })
 
     await waitFor(() => {
+      expect(screen.getByText(messages.alphabetUniqueLabel)).toBeTruthy()
+      expect(screen.getByText(messages.alphabetDuplicatesLabel)).toBeTruthy()
+      expect(screen.getByText("a")).toBeTruthy()
       expect(screen.getByText(messages.alphabetDuplicate)).toBeTruthy()
       expect(getResultsTextarea().value).toBe("")
     })
