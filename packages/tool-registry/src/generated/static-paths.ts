@@ -4970,6 +4970,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "timer",
+    language: "ar",
+  },
+  {
+    slug: "timer",
+    language: "de",
+  },
+  {
+    slug: "timer",
+    language: "en",
+  },
+  {
+    slug: "timer",
+    language: "es",
+  },
+  {
+    slug: "timer",
+    language: "fr",
+  },
+  {
+    slug: "timer",
+    language: "he",
+  },
+  {
+    slug: "timer",
+    language: "hi",
+  },
+  {
+    slug: "timer",
+    language: "id",
+  },
+  {
+    slug: "timer",
+    language: "it",
+  },
+  {
+    slug: "timer",
+    language: "ja",
+  },
+  {
+    slug: "timer",
+    language: "ko",
+  },
+  {
+    slug: "timer",
+    language: "ms",
+  },
+  {
+    slug: "timer",
+    language: "nl",
+  },
+  {
+    slug: "timer",
+    language: "no",
+  },
+  {
+    slug: "timer",
+    language: "pl",
+  },
+  {
+    slug: "timer",
+    language: "pt",
+  },
+  {
+    slug: "timer",
+    language: "ru",
+  },
+  {
+    slug: "timer",
+    language: "sv",
+  },
+  {
+    slug: "timer",
+    language: "th",
+  },
+  {
+    slug: "timer",
+    language: "tr",
+  },
+  {
+    slug: "timer",
+    language: "vi",
+  },
+  {
+    slug: "timer",
+    language: "zh-CN",
+  },
+  {
+    slug: "timer",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },
