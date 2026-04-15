@@ -1,0 +1,8 @@
+{
+  "placeholder": "輸入 IPv6",
+  "invalidAddress": "無效的 IPv6 位址",
+  "result": "驗證結果",
+  "notConvertible": "無法轉換",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

@@ -2641,6 +2641,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipv6-address-to-mac-address-converter",
+    category: "network",
+    icon: "network",
+    tags: ["ipv6", "mac", "eui-64", "link-local", "network", "converter"],
+    locales: {
+      ar: {
+        name: "محول عنوان IPv6 إلى عنوان MAC",
+        description:
+          "يحول عناوين IPv6 إلى عناوين MAC. أدخل أي عنوان IPv6 لاستخراج عنوان MAC المقابل فوراً.",
+      },
+      de: {
+        name: "IPv6-Adresse zu MAC-Adresse Konverter",
+        description:
+          "Konvertiert IPv6-Adressen zu MAC-Adressen. Geben Sie eine beliebige IPv6-Adresse ein, um die entsprechende MAC-Adresse sofort zu extrahieren.",
+      },
+      en: {
+        name: "IPv6 Address to MAC Address Converter",
+        description:
+          "Convert IPv6 addresses to MAC addresses. Enter any IPv6 address to extract the corresponding MAC address instantly.",
+      },
+      es: {
+        name: "Convertidor de dirección IPv6 a dirección MAC",
+        description:
+          "Convierte direcciones IPv6 a direcciones MAC. Introduce cualquier dirección IPv6 para extraer la dirección MAC correspondiente al instante.",
+      },
+      fr: {
+        name: "Convertisseur d'adresse IPv6 en adresse MAC",
+        description:
+          "Convertit les adresses IPv6 en adresses MAC. Saisissez n'importe quelle adresse IPv6 pour extraire l'adresse MAC correspondante instantanément.",
+      },
+      he: {
+        name: "ממיר כתובת IPv6 לכתובת MAC",
+        description:
+          "ממיר כתובות IPv6 לכתובות MAC. הזן כל כתובת IPv6 כדי לחלץ את כתובת ה-MAC המתאימה מיידית.",
+      },
+      hi: {
+        name: "IPv6 पते से MAC पता कनवर्टर",
+        description:
+          "IPv6 पतों को MAC पतों में परिवर्तित करता है। किसी भी IPv6 पते को दर्ज करें और संबंधित MAC पता तुरंत निकालें।",
+      },
+      id: {
+        name: "Konverter alamat IPv6 ke alamat MAC",
+        description:
+          "Mengonversi alamat IPv6 menjadi alamat MAC. Masukkan alamat IPv6 apa pun untuk mengekstrak alamat MAC yang sesuai secara instan.",
+      },
+      it: {
+        name: "Convertitore da indirizzo IPv6 a indirizzo MAC",
+        description:
+          "Converte indirizzi IPv6 in indirizzi MAC. Inserisci qualsiasi indirizzo IPv6 per estrarre il corrispondente indirizzo MAC istantaneamente.",
+      },
+      ja: {
+        name: "IPv6 アドレスから MAC アドレスへの変換ツール",
+        description:
+          "IPv6 アドレスを MAC アドレスに変換します。任意の IPv6 アドレスを入力すると、対応する MAC アドレスを即座に抽出できます。",
+      },
+      ko: {
+        name: "IPv6 주소를 MAC 주소로 변환",
+        description:
+          "IPv6 주소를 MAC 주소로 변환합니다. 임의의 IPv6 주소를 입력하여 해당하는 MAC 주소를 즉시 추출하세요.",
+      },
+      ms: {
+        name: "Penukar alamat IPv6 kepada alamat MAC",
+        description:
+          "Menukar alamat IPv6 kepada alamat MAC. Masukkan mana-mana alamat IPv6 untuk mengekstrak alamat MAC yang berkaitan dengan serta-merta.",
+      },
+      nl: {
+        name: "IPv6-adres naar MAC-adres-converter",
+        description:
+          "Converteert IPv6-adressen naar MAC-adressen. Voer een willekeurig IPv6-adres in om het overeenkomstige MAC-adres direct te extraheren.",
+      },
+      no: {
+        name: "Konverterer for IPv6-adresse til MAC-adresse",
+        description:
+          "Konverterer IPv6-adresser til MAC-adresser. Skriv inn hvilken som helst IPv6-adresse for å trekke ut den tilsvarende MAC-adressen øyeblikkelig.",
+      },
+      pl: {
+        name: "Konwerter adresu IPv6 na adres MAC",
+        description:
+          "Konwertuje adresy IPv6 na adresy MAC. Wprowadź dowolny adres IPv6, aby natychmiast wyodrębnić odpowiadający adres MAC.",
+      },
+      pt: {
+        name: "Conversor de endereço IPv6 para endereço MAC",
+        description:
+          "Converte endereços IPv6 em endereços MAC. Digite qualquer endereço IPv6 para extrair o endereço MAC correspondente instantaneamente.",
+      },
+      ru: {
+        name: "Конвертер адреса IPv6 в MAC-адрес",
+        description:
+          "Преобразует IPv6-адреса в MAC-адреса. Введите любой IPv6-адрес, чтобы мгновенно извлечь соответствующий MAC-адрес.",
+      },
+      sv: {
+        name: "Konverterare för IPv6-adress till MAC-adress",
+        description:
+          "Konverterar IPv6-adresser till MAC-adresser. Ange valfri IPv6-adress för att extrahera motsvarande MAC-adress omedelbart.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ IPv6 เป็นที่อยู่ MAC",
+        description:
+          "แปลงที่อยู่ IPv6 เป็นที่อยู่ MAC ป้อนที่อยู่ IPv6 ใดก็ได้เพื่อสกัดที่อยู่ MAC ที่สอดคล้องกันทันที",
+      },
+      tr: {
+        name: "IPv6 Adresinden MAC Adresine Dönüştürücü",
+        description:
+          "IPv6 adreslerini MAC adreslerine dönüştürür. Herhangi bir IPv6 adresi girin ve karşılık gelen MAC adresini anında çıkarın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ IPv6 sang địa chỉ MAC",
+        description:
+          "Chuyển đổi địa chỉ IPv6 thành địa chỉ MAC. Nhập bất kỳ địa chỉ IPv6 nào để trích xuất địa chỉ MAC tương ứng ngay lập tức.",
+      },
+      "zh-CN": {
+        name: "IPv6 地址转 MAC 地址转换器",
+        description:
+          "将 IPv6 地址转换为 MAC 地址。输入任何 IPv6 地址，立即提取对应的 MAC 地址。",
+      },
+      "zh-TW": {
+        name: "IPv6 位址轉 MAC 位址轉換器",
+        description:
+          "將 IPv6 位址轉換為 MAC 位址。輸入任何 IPv6 位址，立即提取對應的 MAC 位址。",
+      },
+    },
+  },
+  {
     slug: "isbn-validator",
     category: "text",
     icon: "file-text",

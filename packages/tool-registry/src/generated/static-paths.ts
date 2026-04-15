@@ -1934,6 +1934,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "de",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "en",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "es",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "he",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "id",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "it",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "no",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "th",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

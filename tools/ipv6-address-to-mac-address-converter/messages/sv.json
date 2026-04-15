@@ -1,0 +1,8 @@
+{
+  "placeholder": "Ange IPv6",
+  "invalidAddress": "Ogiltig IPv6-adress",
+  "result": "Valideringsresultat",
+  "notConvertible": "Kan inte konverteras",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Penukar alamat IPv6 kepada alamat MAC",
+  "description": "Menukar alamat IPv6 kepada alamat MAC. Masukkan mana-mana alamat IPv6 untuk mengekstrak alamat MAC yang berkaitan dengan serta-merta."
+}

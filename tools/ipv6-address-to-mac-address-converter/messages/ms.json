@@ -1,0 +1,8 @@
+{
+  "placeholder": "Masukkan IPv6",
+  "invalidAddress": "Alamat IPv6 tidak sah",
+  "result": "Keputusan Pengesahan",
+  "notConvertible": "Tidak boleh ditukar",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

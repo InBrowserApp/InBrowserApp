@@ -28,6 +28,7 @@
     "@tool/image-resizer": "workspace:*",
     "@tool/image-to-ico": "workspace:*",
     "@tool/imei-validator": "workspace:*",
+    "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",
