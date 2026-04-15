@@ -1,0 +1,4 @@
+{
+  "name": "KSUID Generator",
+  "description": "Generate K-Sortable Unique Identifiers (KSUIDs) in-browser with optional custom timestamps."
+}

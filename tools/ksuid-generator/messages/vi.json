@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Tùy chọn",
+  "countLabel": "Số lượng",
+  "timestampModeLabel": "Chế độ dấu thời gian",
+  "timestampNowLabel": "Dùng thời gian hiện tại",
+  "timestampCustomLabel": "Thời gian tùy chỉnh",
+  "customDateTimeLabel": "Ngày/giờ tùy chỉnh",
+  "customUnixSecondsLabel": "Giây Unix tùy chỉnh",
+  "setNowLabel": "Đặt về hiện tại",
+  "ksuidEpochLabel": "Mốc KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Dấu thời gian không hợp lệ.",
+  "timestampOutOfRange": "Dấu thời gian phải nằm giữa {min} và {max} (giây Unix).",
+  "resultsTitle": "Kết quả",
+  "resultsPlaceholder": "KSUID tạo ra sẽ hiển thị ở đây...",
+  "generatedAtLabel": "Tạo với thời gian Unix: {seconds}",
+  "copyResultsLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadResultsLabel": "Tải xuống",
+  "regenerateLabel": "Tạo lại"
+}

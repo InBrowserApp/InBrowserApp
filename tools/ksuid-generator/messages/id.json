@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Opsi",
+  "countLabel": "Jumlah",
+  "timestampModeLabel": "Mode stempel waktu",
+  "timestampNowLabel": "Gunakan waktu saat ini",
+  "timestampCustomLabel": "Waktu khusus",
+  "customDateTimeLabel": "Tanggal/waktu khusus",
+  "customUnixSecondsLabel": "Detik Unix khusus",
+  "setNowLabel": "Setel ke sekarang",
+  "ksuidEpochLabel": "Epoch KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Stempel waktu tidak valid.",
+  "timestampOutOfRange": "Stempel waktu harus antara {min} dan {max} (detik Unix).",
+  "resultsTitle": "Hasil",
+  "resultsPlaceholder": "KSUID yang dihasilkan akan muncul di sini...",
+  "generatedAtLabel": "Dihasilkan dengan waktu Unix: {seconds}",
+  "copyResultsLabel": "Salin hasil",
+  "copiedLabel": "Tersalin",
+  "downloadResultsLabel": "Unduh",
+  "regenerateLabel": "Buat ulang"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "KSUID-generator",
+  "description": "Genereer sorteerbare unieke identifiers (KSUID) in de browser met optionele tijdstempel."
+}

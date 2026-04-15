@@ -1,0 +1,4 @@
+{
+  "name": "KSUID-Generator",
+  "description": "Erzeuge sortierbare eindeutige Kennungen (KSUID) im Browser mit optionalem Zeitstempel."
+}

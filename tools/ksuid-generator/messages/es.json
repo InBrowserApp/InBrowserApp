@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Opciones",
+  "countLabel": "Cantidad",
+  "timestampModeLabel": "Modo de marca de tiempo",
+  "timestampNowLabel": "Usar hora actual",
+  "timestampCustomLabel": "Hora personalizada",
+  "customDateTimeLabel": "Fecha/hora personalizada",
+  "customUnixSecondsLabel": "Segundos Unix personalizados",
+  "setNowLabel": "Establecer a ahora",
+  "ksuidEpochLabel": "Época KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Marca de tiempo no válida.",
+  "timestampOutOfRange": "La marca de tiempo debe estar entre {min} y {max} (segundos Unix).",
+  "resultsTitle": "Resultados",
+  "resultsPlaceholder": "Los KSUID generados aparecerán aquí...",
+  "generatedAtLabel": "Generado con tiempo Unix: {seconds}",
+  "copyResultsLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadResultsLabel": "Descargar",
+  "regenerateLabel": "Regenerar"
+}

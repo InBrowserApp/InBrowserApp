@@ -2946,6 +2946,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ksuid-generator",
+    language: "ar",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "de",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "en",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "es",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "fr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "he",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "hi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "id",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "it",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ja",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ko",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ms",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "nl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "no",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pt",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ru",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "sv",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "th",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "tr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "vi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "list-comparer",
     language: "ar",
   },
