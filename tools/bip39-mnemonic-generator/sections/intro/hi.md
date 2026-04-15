@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+ब्राउज़र में BIP39 seed phrase बनाएँ, आयातित mnemonic को उस पर भरोसा करने से पहले जाँचें, और किसी दूसरी सेवा को संवेदनशील सामग्री भेजे बिना raw entropy और wallet words के बीच रूपांतरण करें। यह टूल तब उपयोगी है जब आपको generation, checksum validation और low-level recovery के लिए एक ही workspace चाहिए।
 
-## Generate With Intent
+## सोच-समझकर जनरेट करें
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+समर्थित wordlist और word count चुनें, फिर तब तक फिर से जनरेट करें जब तक आपको वह seed phrase न मिल जाए जिसे आप सुरक्षित रखना चाहते हैं। संबंधित entropy साथ में दिखाई जाती है ताकि आप सटीक strength देख सकें और recovery flow दस्तावेज़ करते समय दोनों रूपों को साथ रख सकें।
 
-## Validate Before You Import
+## इम्पोर्ट से पहले सत्यापित करें
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+जब कोई आपको mnemonic phrase देता है और आप उसे किसी दूसरे wallet में इम्पोर्ट करने से पहले checksum और word count की जल्दी जाँच करना चाहते हैं, तब validation mode उपयोगी है। मान्य परिणाम recovered entropy भी दिखाता है, जो recovery sources की तुलना करने या derivation steps डिबग करने में मदद करता है।
 
-## Convert Entropy Carefully
+## एंट्रॉपी को सावधानी से रूपांतरित करें
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Conversion mode दोनों दिशाओं में काम करता है: raw entropy से words तक और mnemonic words से वापस entropy तक। इससे यह test fixtures, deterministic wallet demos और incident review के लिए उपयोगी हो जाता है, जहाँ आपको पुष्टि करनी होती है कि कोई phrase किसी खास BIP39 wordlist के तहत अभी भी अपेक्षित bytes से मेल खाती है।

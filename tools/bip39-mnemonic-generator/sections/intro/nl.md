@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Maak BIP39-seedzinnen in de browser, inspecteer geïmporteerde mnemonics voordat je ze vertrouwt en converteer tussen ruwe entropie en walletwoorden zonder gevoelig materiaal naar een andere dienst te sturen. Deze tool is handig wanneer je één werkruimte nodig hebt voor generatie, checksumvalidatie en herstelwerk op laag niveau.
 
-## Generate With Intent
+## Gericht genereren
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Kies een ondersteunde woordenlijst en woordaantal en genereer opnieuw totdat je de seedzin hebt die je wilt bewaren. De bijbehorende entropie wordt naast de zin getoond zodat je de exacte sterkte kunt controleren en beide representaties samen kunt bewaren wanneer je een herstelproces documenteert.
 
-## Validate Before You Import
+## Valideren vóór import
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Gebruik de validatiemodus wanneer iemand je een mnemonic-zin geeft en je snel de checksum en het aantal woorden wilt controleren voordat je die in een andere wallet importeert. Een geldig resultaat toont ook de herstelde entropie, wat helpt bij het vergelijken van twee herstelbronnen of het debuggen van afleidingsstappen.
 
-## Convert Entropy Carefully
+## Entropie zorgvuldig converteren
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+De conversiemodus werkt in beide richtingen: van ruwe entropie naar woorden en van mnemonic-woorden terug naar entropie. Daardoor is hij praktisch voor testdata, deterministische walletdemo’s en incidentreviews waarbij je moet bevestigen dat een zin onder een specifieke BIP39-woordenlijst nog steeds naar de verwachte bytes wijst.

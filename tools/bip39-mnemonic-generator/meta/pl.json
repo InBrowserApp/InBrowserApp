@@ -1,4 +1,4 @@
 {
-  "name": "BIP39 Mnemonic Generator",
-  "description": "Generate, validate, and convert BIP39 mnemonic phrases in your browser."
+  "name": "Generator fraz mnemonicznych BIP39",
+  "description": "Generuj, weryfikuj i konwertuj frazy mnemoniczne BIP39 w przeglądarce."
 }

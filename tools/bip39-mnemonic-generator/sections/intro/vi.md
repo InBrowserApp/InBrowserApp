@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Tạo seed phrase BIP39 trong trình duyệt, kiểm tra mnemonic đã nhập trước khi tin tưởng chúng, và chuyển đổi giữa entropy thô với các từ của ví mà không gửi dữ liệu nhạy cảm sang dịch vụ khác. Công cụ này hữu ích khi bạn cần một không gian làm việc duy nhất cho việc tạo, kiểm tra checksum và thao tác khôi phục ở mức thấp.
 
-## Generate With Intent
+## Tạo có chủ đích
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Chọn danh sách từ và số lượng từ được hỗ trợ, rồi tạo lại cho đến khi bạn có seed phrase muốn lưu. Entropy tương ứng được hiển thị bên cạnh cụm từ để bạn kiểm tra chính xác độ mạnh và giữ cả hai dạng biểu diễn khi ghi chép quy trình khôi phục.
 
-## Validate Before You Import
+## Xác thực trước khi nhập
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Dùng chế độ xác thực khi ai đó đưa cho bạn một cụm từ ghi nhớ và bạn muốn kiểm tra nhanh checksum cùng số lượng từ trước khi nhập vào ví khác. Kết quả hợp lệ cũng hiển thị entropy đã khôi phục, rất hữu ích khi so sánh hai nguồn khôi phục hoặc gỡ lỗi các bước suy diễn.
 
-## Convert Entropy Carefully
+## Chuyển đổi entropy cẩn thận
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Chế độ chuyển đổi hoạt động theo cả hai hướng: từ entropy thô sang từ và từ các từ mnemonic quay lại entropy. Điều này khiến nó phù hợp cho dữ liệu kiểm thử, bản demo ví tất định và các đợt rà soát sự cố khi bạn cần xác nhận rằng một cụm từ vẫn ánh xạ tới đúng các byte mong đợi dưới một danh sách từ BIP39 cụ thể.

@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+ブラウザー内で BIP39 シードフレーズを作成し、取り込んだニーモニックを信頼する前に確認し、機密情報を別サービスへ送らずに生のエントロピーとウォレット用の単語を相互変換できます。生成、チェックサム検証、低レベルのリカバリー作業をひとつの場所で行いたいときに便利です。
 
-## Generate With Intent
+## 意図を持って生成する
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+対応する単語リストと単語数を選び、保存したいシードフレーズになるまで再生成します。対応するエントロピーも横に表示されるため、強度を正確に確認したり、復旧手順を記録するときに両方の表現を一緒に残したりできます。
 
-## Validate Before You Import
+## インポート前に検証する
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+誰かからニーモニックフレーズを受け取り、別のウォレットに取り込む前にチェックサムと単語数をすばやく確認したいときは、検証モードを使います。有効な結果では復元されたエントロピーも表示されるため、複数の復旧ソースを比較したり、導出手順をデバッグしたりするときに役立ちます。
 
-## Convert Entropy Carefully
+## エントロピーを慎重に変換する
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+変換モードは双方向に対応しており、生のエントロピーから単語へ、ニーモニックの単語からエントロピーへ戻せます。テストデータ、決定論的ウォレットのデモ、特定の BIP39 単語リストの下でそのフレーズが期待どおりのバイト列に対応するかを確認したいインシデントレビューに実用的です。

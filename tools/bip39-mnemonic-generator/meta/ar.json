@@ -1,4 +1,4 @@
 {
-  "name": "BIP39 Mnemonic Generator",
-  "description": "Generate, validate, and convert BIP39 mnemonic phrases in your browser."
+  "name": "مولد العبارات التذكّرية BIP39",
+  "description": "أنشئ عبارات BIP39 التذكّرية وتحقق منها وحوّلها داخل المتصفح."
 }

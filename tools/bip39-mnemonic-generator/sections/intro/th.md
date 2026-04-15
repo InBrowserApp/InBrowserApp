@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+สร้าง seed phrase แบบ BIP39 ในเบราว์เซอร์ ตรวจสอบ mnemonic ที่นำเข้าก่อนจะเชื่อถือ และแปลงระหว่างเอนโทรปีดิบกับคำของกระเป๋าเงินโดยไม่ต้องส่งข้อมูลอ่อนไปยังบริการอื่น เครื่องมือนี้เหมาะเมื่อคุณต้องการพื้นที่ทำงานเดียวสำหรับการสร้าง การตรวจสอบเช็กซัม และงานกู้คืนระดับล่าง
 
-## Generate With Intent
+## สร้างอย่างมีจุดหมาย
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+เลือกรายการคำและจำนวนคำที่รองรับ แล้วสร้างใหม่ไปเรื่อย ๆ จนกว่าจะได้ seed phrase ที่ต้องการเก็บไว้ เอนโทรปีที่ตรงกันจะแสดงอยู่ข้าง ๆ เพื่อให้คุณตรวจสอบความแข็งแรงที่แท้จริงและเก็บทั้งสองรูปแบบไว้ด้วยกันเมื่อบันทึกขั้นตอนการกู้คืน
 
-## Validate Before You Import
+## ตรวจสอบก่อนนำเข้า
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+ใช้โหมดตรวจสอบเมื่อมีคนส่งวลีช่วยจำมาให้คุณ และคุณต้องการเช็กเช็กซัมกับจำนวนคำอย่างรวดเร็วก่อนนำเข้าไปยังกระเป๋าเงินอื่น ผลลัพธ์ที่ถูกต้องยังจะแสดงเอนโทรปีที่กู้คืนได้ด้วย ซึ่งช่วยเมื่อคุณเปรียบเทียบแหล่งกู้คืนสองชุดหรือไล่ดีบักขั้นตอนการอนุมานคีย์
 
-## Convert Entropy Carefully
+## แปลงเอนโทรปีอย่างระมัดระวัง
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+โหมดแปลงทำงานได้ทั้งสองทิศทาง: จากเอนโทรปีดิบเป็นคำ และจากคำช่วยจำกลับเป็นเอนโทรปี จึงเหมาะกับข้อมูลทดสอบ เดโมกระเป๋าเงินแบบกำหนดแน่นอน และการทบทวนเหตุการณ์ที่คุณต้องยืนยันว่า วลียังคงแมปกับไบต์ที่คาดไว้ภายใต้รายการคำ BIP39 ชุดใดชุดหนึ่ง

@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Erzeuge BIP39-Seed-Phrasen im Browser, prüfe importierte Mnemoniken, bevor du ihnen vertraust, und konvertiere zwischen roher Entropie und Wallet-Wörtern, ohne sensibles Material an einen anderen Dienst zu senden. Das Tool ist nützlich, wenn du Erzeugung, Prüfsummenprüfung und Low-Level-Recovery in einer einzigen Arbeitsfläche bündeln willst.
 
-## Generate With Intent
+## Gezielt erzeugen
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Wähle eine unterstützte Wortliste und Wortanzahl und generiere so lange neu, bis du die Seed-Phrase hast, die du speichern möchtest. Die passende Entropie wird direkt daneben angezeigt, damit du die genaue Stärke prüfen und beide Darstellungen gemeinsam dokumentieren kannst.
 
-## Validate Before You Import
+## Vor dem Import prüfen
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Nutze den Prüfmodus, wenn dir jemand eine Mnemonik gibt und du vor dem Import in eine andere Wallet schnell Prüfsumme und Wortanzahl kontrollieren willst. Bei einem gültigen Ergebnis wird auch die wiederhergestellte Entropie angezeigt, was beim Vergleich mehrerer Recovery-Quellen oder beim Debuggen von Ableitungsschritten hilft.
 
-## Convert Entropy Carefully
+## Entropie mit Bedacht umwandeln
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Der Konvertierungsmodus funktioniert in beide Richtungen: rohe Entropie zu Wörtern und Mnemonik zurück zu Entropie. Das ist praktisch für Testdaten, deterministische Wallet-Demos und Incident-Reviews, in denen du bestätigen musst, dass eine Phrase unter einer bestimmten BIP39-Wortliste noch den erwarteten Bytes entspricht.

@@ -1,4 +1,4 @@
 {
-  "name": "BIP39 Mnemonic Generator",
-  "description": "Generate, validate, and convert BIP39 mnemonic phrases in your browser."
+  "name": "BIP39 ニーモニック生成ツール",
+  "description": "ブラウザー内で BIP39 ニーモニックの生成、検証、変換を行います。"
 }

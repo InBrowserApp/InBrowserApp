@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Cipta frasa seed BIP39 dalam pelayar, semak mnemonic yang diimport sebelum anda mempercayainya, dan tukar antara entropi mentah dengan perkataan dompet tanpa menghantar bahan sensitif ke perkhidmatan lain. Alat ini berguna apabila anda memerlukan satu ruang kerja untuk penjanaan, pengesahan checksum, dan kerja pemulihan tahap rendah.
 
-## Generate With Intent
+## Jana dengan tujuan
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Pilih senarai perkataan yang disokong dan bilangan perkataan, kemudian jana semula sehingga anda mendapat frasa seed yang mahu disimpan. Entropi yang sepadan dipaparkan bersama frasa supaya anda boleh menyemak kekuatan tepat dan menyimpan kedua-dua representasi semasa mendokumenkan aliran pemulihan.
 
-## Validate Before You Import
+## Sahkan sebelum import
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Gunakan mod pengesahan apabila seseorang memberikan anda frasa mnemonik dan anda mahu semakan cepat untuk checksum serta bilangan perkataan sebelum mengimportnya ke dompet lain. Keputusan yang sah juga memaparkan entropi yang dipulihkan, yang membantu apabila anda membandingkan dua sumber pemulihan atau menyahpepijat langkah derivasi.
 
-## Convert Entropy Carefully
+## Tukar entropi dengan cermat
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Mod penukaran berfungsi dua hala: entropi mentah kepada perkataan dan perkataan mnemonik kembali kepada entropi. Ini menjadikannya praktikal untuk data ujian, demo dompet deterministik, dan semakan insiden apabila anda perlu mengesahkan bahawa sesuatu frasa masih memetakan kepada bait yang dijangka di bawah senarai perkataan BIP39 tertentu.

@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Twórz frazy seed BIP39 w przeglądarce, sprawdzaj zaimportowane mnemoniki zanim im zaufasz i konwertuj między surową entropią a słowami portfela bez wysyłania wrażliwych danych do innej usługi. To narzędzie przydaje się, gdy potrzebujesz jednego miejsca do generowania, walidacji checksumy i pracy nad odzyskiwaniem na niskim poziomie.
 
-## Generate With Intent
+## Generuj świadomie
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Wybierz obsługiwaną listę słów i liczbę słów, a potem generuj ponownie, aż otrzymasz frazę seed, którą chcesz zachować. Pasująca entropia jest wyświetlana obok frazy, dzięki czemu możesz sprawdzić dokładną siłę i zachować obie reprezentacje podczas dokumentowania procesu odzyskiwania.
 
-## Validate Before You Import
+## Weryfikuj przed importem
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Użyj trybu weryfikacji, gdy ktoś przekazuje Ci frazę mnemoniczną i chcesz szybko sprawdzić checksumę oraz liczbę słów przed importem do innego portfela. Prawidłowy wynik pokazuje też odzyskaną entropię, co pomaga przy porównywaniu dwóch źródeł odzyskiwania albo debugowaniu kroków derivacji.
 
-## Convert Entropy Carefully
+## Konwertuj entropię ostrożnie
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Tryb konwersji działa w obie strony: od surowej entropii do słów i od słów mnemonicznych z powrotem do entropii. To praktyczne przy danych testowych, prezentacjach portfeli deterministycznych i przeglądach incydentów, gdy trzeba potwierdzić, że dana fraza nadal odpowiada oczekiwanym bajtom w ramach określonej listy słów BIP39.

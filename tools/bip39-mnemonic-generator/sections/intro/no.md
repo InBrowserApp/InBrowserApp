@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+Lag BIP39-seed-fraser i nettleseren, kontroller importerte mnemonikker før du stoler på dem, og konverter mellom rå entropi og lommebokord uten å sende sensitivt materiale til en annen tjeneste. Dette verktøyet er nyttig når du trenger ett arbeidsområde for generering, checksum-validering og lavnivå-gjenoppretting.
 
-## Generate With Intent
+## Generer med hensikt
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+Velg en støttet ordliste og et antall ord, og generer på nytt til du har seed-frasen du vil lagre. Den tilhørende entropien vises ved siden av frasen slik at du kan kontrollere den nøyaktige styrken og ta vare på begge representasjonene når du dokumenterer en gjenopprettingsflyt.
 
-## Validate Before You Import
+## Valider før import
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+Bruk valideringsmodus når noen gir deg en mnemonic-frase og du vil ha en rask kontroll av checksum og ordantall før du importerer den i en annen lommebok. Et gyldig resultat viser også den gjenopprettede entropien, noe som hjelper når du sammenligner to gjenopprettingskilder eller feilsøker avledningssteg.
 
-## Convert Entropy Carefully
+## Konverter entropi med omtanke
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+Konverteringsmodus fungerer begge veier: fra rå entropi til ord og fra mnemonic-ord tilbake til entropi. Det gjør den praktisk for testdata, deterministiske lommebokdemoer og hendelsesgjennomganger der du må bekrefte at en frase fortsatt tilsvarer de forventede bytene under en bestemt BIP39-ordliste.

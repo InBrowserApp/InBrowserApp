@@ -1,4 +1,4 @@
 {
-  "name": "BIP39 Mnemonic Generator",
-  "description": "Generate, validate, and convert BIP39 mnemonic phrases in your browser."
+  "name": "เครื่องมือสร้างวลีช่วยจำ BIP39",
+  "description": "สร้าง ตรวจสอบ และแปลงวลีช่วยจำ BIP39 ได้โดยตรงในเบราว์เซอร์"
 }

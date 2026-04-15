@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+在瀏覽器中建立 BIP39 種子短語，在真正匯入前檢查別人給你的助記詞，並在原始熵與錢包單詞之間雙向轉換，全程不必把敏感內容送到第三方服務。這個工具適合把產生、校驗與底層復原工作集中在同一個離線工作台中完成。
 
-## Generate With Intent
+## 有意識地產生
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+選擇支援的詞表與單詞數量，然後反覆重新產生，直到得到你要保存的種子短語。旁邊會同步顯示對應的熵，方便你檢查實際強度，或在記錄復原流程時把兩種表示一起保存。
 
-## Validate Before You Import
+## 匯入前先驗證
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+當有人交給你一組助記詞，而你想在匯入到其他錢包前先快速檢查校驗碼與單詞數量時，驗證模式最合適。若結果有效，工具也會顯示還原出的熵，方便你比較不同復原來源，或排查衍生流程中的問題。
 
-## Convert Entropy Carefully
+## 謹慎轉換熵
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+轉換模式支援雙向操作：既可以把原始熵轉成單詞，也可以把助記詞還原成熵。它適合測試資料、確定性錢包示範，以及安全事件檢討時確認某組助記詞在特定 BIP39 詞表下是否仍對應到預期位元組。

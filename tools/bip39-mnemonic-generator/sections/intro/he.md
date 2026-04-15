@@ -1,13 +1,13 @@
-Create BIP39 seed phrases in the browser, inspect imported mnemonics before you trust them, and convert between raw entropy and wallet words without sending sensitive material to another service. This tool is useful when you need one workspace for generation, checksum validation, and low-level recovery work.
+צור ביטויי seed של BIP39 בדפדפן, בדוק מנמוניקות מיובאות לפני שאתה סומך עליהן והמר בין אנטרופיה גולמית למילות ארנק בלי לשלוח חומר רגיש לשירות אחר. הכלי הזה שימושי כשצריך מרחב עבודה אחד ליצירה, לאימות checksum ולעבודת שחזור ברמה נמוכה.
 
-## Generate With Intent
+## ליצור בכוונה
 
-Pick a supported wordlist and word count, then regenerate until you have the seed phrase you want to store. The matching entropy is shown alongside the phrase so you can inspect the exact strength and keep both representations together when documenting a recovery flow.
+בחר רשימת מילים נתמכת ומספר מילים, ואז צור מחדש עד שתקבל את ביטוי ה-seed שברצונך לשמור. האנטרופיה התואמת מוצגת לצד הביטוי כדי שתוכל לבדוק את החוזק המדויק ולשמור את שתי הצורות יחד כשאתה מתעד תהליך שחזור.
 
-## Validate Before You Import
+## לאמת לפני ייבוא
 
-Use the validation mode when someone hands you a mnemonic phrase and you want a fast checksum and word-count sanity check before importing it into another wallet. A valid result also reveals the recovered entropy, which helps when you are comparing two recovery sources or debugging derivation steps.
+השתמש במצב האימות כשמישהו מוסר לך ביטוי מנמוני ואתה רוצה בדיקת checksum וספירת מילים מהירה לפני ייבוא לארנק אחר. תוצאה תקינה גם מציגה את האנטרופיה ששוחזרה, מה שעוזר להשוות בין שני מקורות שחזור או לנפות בעיות בשלבי גזירה.
 
-## Convert Entropy Carefully
+## להמיר אנטרופיה בזהירות
 
-The conversion mode works both ways: raw entropy to words and mnemonic words back to entropy. That makes it practical for test fixtures, deterministic wallet demos, and incident review work where you need to confirm that a phrase still maps to the expected bytes under a specific BIP39 wordlist.
+מצב ההמרה פועל בשני הכיוונים: מאנטרופיה גולמית למילים, וממילים מנמוניות חזרה לאנטרופיה. זה מעשי עבור נתוני בדיקה, הדגמות של ארנקים דטרמיניסטיים וביקורות אירוע, כאשר צריך לוודא שביטוי עדיין ממופה לבתים הצפויים תחת רשימת מילים מסוימת של BIP39.
