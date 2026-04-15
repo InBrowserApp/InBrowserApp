@@ -39,6 +39,7 @@
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
+    "@tool/pbkdf2-key-derivation": "workspace:*",
     "@tool/port-number-lookup": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/random-number-generator": "workspace:*",

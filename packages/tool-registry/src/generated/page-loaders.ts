@@ -40,6 +40,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/openapi-to-typescript-converter/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
+  "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),

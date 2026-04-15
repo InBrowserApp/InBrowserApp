@@ -1,0 +1,4 @@
+{
+  "name": "PBKDF2 Anahtar Türetme",
+  "description": "PBKDF2 ile parola ve tuzdan anahtar türetin. Yineleme sayısı, hash algoritması ve çıktı uzunluğunu ayarlayın; hex veya base64 çıktı alın."
+}
