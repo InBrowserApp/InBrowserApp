@@ -1,11 +1,25 @@
-# Que vérifie ce validateur ?
+## Qu'est-ce que la validation d'e-mail ?
 
-Cet outil valide la syntaxe des adresses e-mail. Il ne vérifie pas l'existence de la boîte.
+La validation d'e-mail vérifie si une adresse respecte les règles syntaxiques courantes pour la partie locale, le signe `@`, les labels de domaine et le domaine de premier niveau. Elle est utile pour tester des formulaires, nettoyer des données d'exemple et repérer des fautes de frappe évidentes avant l'envoi.
 
-## Vérifications
+### Ce que ce validateur vérifie
 
-- Un seul @ avec partie locale et domaine
-- Caractères, points et longueur de la partie locale
-- Étiquettes de domaine, règles de tirets et TLD
+- Un seul `@` séparant la partie locale et le domaine
+- Les limites de longueur de l'adresse complète, de la partie locale et du domaine
+- Les caractères autorisés, la position des points, les règles sur les tirets et la structure du TLD
+- Un résultat normalisé avec le domaine en minuscules pour faciliter la comparaison
 
-Les domaines internationalisés doivent être en Punycode (ASCII).
+### Exemples
+
+- Valide : `name@example.com`
+- Valide : `first.last+news@example.co.uk`
+- Invalide : `name..dots@example.com`
+- Invalide : `user@-example.com`
+
+Les domaines internationalisés doivent être saisis en Punycode ASCII, par exemple `user@xn--bcher-kva.example`.
+
+### Ce que cet outil ne vérifie pas
+
+- Si la boîte mail existe ou peut recevoir des messages
+- Les vérifications DNS, MX, SMTP ou de fournisseurs jetables
+- Si un site acceptera l'adresse selon ses propres règles métier

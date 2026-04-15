@@ -1,11 +1,25 @@
-# Was prüft dieser Validator?
+## Was ist E-Mail-Validierung?
 
-Dieses Tool prüft die E-Mail-Syntax. Es bestätigt nicht die Zustellbarkeit.
+Die E-Mail-Validierung prüft, ob eine Adresse gängigen Syntaxregeln für den lokalen Teil, das `@`-Zeichen, Domain-Labels und die Top-Level-Domain folgt. Sie eignet sich für Formular-Tests, die Bereinigung von Beispieldaten und das Erkennen offensichtlicher Tippfehler vor dem Absenden.
 
-## Prüfungen
+### Was dieser Validator prüft
 
-- Genau ein @ mit lokalem Teil und Domain
-- Zeichen, Punktsetzung und Länge des lokalen Teils
-- Domain-Labels, Bindestrichregeln und TLD
+- Ein einzelnes `@`, das lokalen Teil und Domain trennt
+- Längenlimits für die gesamte Adresse, den lokalen Teil und die Domain
+- Erlaubte Zeichen, Punktplatzierung, Bindestrichregeln und TLD-Struktur
+- Ein normalisiertes Ergebnis mit kleingeschriebener Domain zum Vergleichen
 
-Internationalisierte Domains müssen in Punycode (ASCII) vorliegen.
+### Beispiele
+
+- Gültig: `name@example.com`
+- Gültig: `first.last+news@example.co.uk`
+- Ungültig: `name..dots@example.com`
+- Ungültig: `user@-example.com`
+
+Internationalisierte Domains sollten in Punycode-ASCII eingegeben werden, zum Beispiel `user@xn--bcher-kva.example`.
+
+### Was dieses Tool nicht prüft
+
+- Ob das Postfach existiert oder E-Mails empfangen kann
+- DNS-, MX-, SMTP- oder Wegwerf-Anbieter-Prüfungen
+- Ob eine Website die Adresse nach ihren eigenen Geschäftsregeln akzeptiert
