@@ -4234,6 +4234,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },

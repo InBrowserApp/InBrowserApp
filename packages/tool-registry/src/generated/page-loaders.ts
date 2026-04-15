@@ -59,6 +59,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
+  "ripemd160-hash-text-or-file": () =>
+    import("@tool/ripemd160-hash-text-or-file/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
