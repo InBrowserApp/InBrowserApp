@@ -1,3 +1,36 @@
 ## Come convertire IPv6 in indirizzo MAC
 
-Convertire un indirizzo IPv6 in un indirizzo MAC è possibile quando l'indirizzo IPv6 è stato generato utilizzando il formato EUI-64 da un indirizzo MAC. Questo si applica tipicamente agli indirizzi IPv6 link-local (che iniziano con fe80::) e ad alcuni indirizzi autoconfigurati senza stato. Il processo comporta: 1) Estrarre l'identificatore di interfaccia (ultimi 64 bit) dall'indirizzo IPv6, 2) Invertire il 7° bit (bit Universale/Locale) del primo byte, 3) Rimuovere i byte 'fffe' inseriti per ricostruire l'indirizzo MAC originale a 48 bit. Nota che questo funziona solo per indirizzi IPv6 che sono stati originariamente derivati da indirizzi MAC usando EUI-64.
+Puoi ricavare di nuovo un indirizzo MAC da un indirizzo IPv6 solo quando
+l'identificatore di interfaccia IPv6 è stato derivato da quel MAC con il
+metodo EUI-64. Questo accade più spesso con indirizzi link-local meno recenti
+che iniziano con `fe80::` e con alcuni indirizzi autoconfigurati senza stato.
+
+### Quando funziona
+
+Questa conversione inversa funziona quando gli ultimi 64 bit dell'indirizzo
+IPv6 contengono ancora un identificatore di interfaccia EUI-64.
+
+- L'identificatore di interfaccia è stato costruito a partire da un MAC a
+  48 bit.
+- I byte centrali sono ancora `ff:fe`.
+- L'indirizzo non è stato generato da estensioni per la privacy o da un altro
+  schema di randomizzazione.
+
+### Come funziona la conversione
+
+Il convertitore ricostruisce il MAC con questi passaggi:
+
+1. Legge gli ultimi 64 bit dell'indirizzo IPv6.
+2. Rimuove i byte `ff:fe` inseriti al centro dell'identificatore di
+   interfaccia.
+3. Inverte il bit universal/local del primo byte.
+4. Formatta i restanti 48 bit come un indirizzo MAC standard.
+
+### Perché non appare un MAC
+
+Potresti non ottenere un risultato per diversi motivi:
+
+- L'indirizzo IPv6 non è sintatticamente valido.
+- L'indirizzo è valido, ma non è stato generato da un MAC tramite EUI-64.
+- L'indirizzo usa privacy, randomizzazione stabile, DHCPv6 o un altro metodo
+  di assegnazione non basato su MAC.

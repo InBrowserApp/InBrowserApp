@@ -1,3 +1,34 @@
 ## Hoe IPv6 naar MAC-adres te converteren
 
-Het converteren van een IPv6-adres naar een MAC-adres is mogelijk wanneer het IPv6-adres is gegenereerd met behulp van het EUI-64-formaat van een MAC-adres. Dit geldt meestal voor IPv6 link-local adressen (beginnend met fe80::) en sommige stateless autoconfigured adressen. Het proces omvat: 1) Extractie van de interface-identifier (laatste 64 bits) uit het IPv6-adres, 2) Omkering van de 7e bit (Universeel/Lokaal bit) van de eerste byte, 3) Verwijdering van de ingevoegde 'fffe' bytes om het oorspronkelijke 48-bits MAC-adres te reconstrueren. Merk op dat dit alleen werkt voor IPv6-adressen die oorspronkelijk zijn afgeleid van MAC-adressen met behulp van EUI-64.
+U kunt alleen een MAC-adres uit een IPv6-adres terughalen wanneer de
+IPv6-interface-id met de EUI-64-methode uit dat MAC-adres is afgeleid. Dit
+komt het meest voor bij oudere link-local-adressen die met `fe80::` beginnen
+en bij sommige stateless automatisch geconfigureerde adressen.
+
+### Wanneer het werkt
+
+Deze omgekeerde omzetting werkt wanneer de laatste 64 bits van het IPv6-adres
+nog steeds een EUI-64-interface-id bevatten.
+
+- De interface-id is opgebouwd uit een 48-bits MAC-adres.
+- De middelste bytes zijn nog steeds `ff:fe`.
+- Het adres is niet gemaakt met privacy-extensies of een ander
+  randomisatieschema.
+
+### Hoe de omzetting werkt
+
+De converter bouwt het MAC-adres opnieuw op met deze stappen:
+
+1. Lees de laatste 64 bits van het IPv6-adres.
+2. Verwijder de ingevoegde bytes `ff:fe` uit het midden van de interface-id.
+3. Draai de universal/local-bit in de eerste byte om.
+4. Formatteer de resterende 48 bits als een standaard MAC-adres.
+
+### Waarom er geen MAC verschijnt
+
+U krijgt mogelijk geen resultaat om verschillende redenen:
+
+- Het IPv6-adres is syntactisch ongeldig.
+- Het adres is geldig, maar niet via EUI-64 uit een MAC-adres gegenereerd.
+- Het adres gebruikt privacy, stable-random, DHCPv6 of een andere
+  toewijzingsmethode die niet op een MAC-adres is gebaseerd.

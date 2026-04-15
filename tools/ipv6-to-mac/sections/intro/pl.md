@@ -1,3 +1,34 @@
 ## Jak przekonwertować IPv6 na adres MAC
 
-Konwersja adresu IPv6 na adres MAC jest możliwa, gdy adres IPv6 został wygenerowany przy użyciu formatu EUI-64 z adresu MAC. Dotyczy to zazwyczaj adresów IPv6 link-local (zaczynających się od fe80::) i niektórych adresów autoconfigured bez stanu. Proces obejmuje: 1) Wyodrębnienie identyfikatora interfejsu (ostatnie 64 bity) z adresu IPv6, 2) Odwrócenie 7. bitu (bit Uniwersalny/Lokalny) pierwszego bajtu, 3) Usunięcie wstawionych bajtów 'fffe' w celu rekonstrukcji oryginalnego 48-bitowego adresu MAC. Zauważ, że działa to tylko dla adresów IPv6, które zostały pierwotnie wyprowadzone z adresów MAC przy użyciu EUI-64.
+Adres MAC można odzyskać z adresu IPv6 tylko wtedy, gdy identyfikator
+interfejsu IPv6 został wyprowadzony z tego adresu MAC metodą EUI-64. Najczęściej
+dotyczy to starszych adresów link-local zaczynających się od `fe80::` oraz
+niektórych adresów konfigurowanych bezstanowo.
+
+### Kiedy to działa
+
+Ta odwrotna konwersja działa, gdy ostatnie 64 bity adresu IPv6 nadal zawierają
+identyfikator interfejsu EUI-64.
+
+- Identyfikator interfejsu został zbudowany z 48-bitowego adresu MAC.
+- Środkowe bajty nadal mają wartość `ff:fe`.
+- Adres nie został wygenerowany przez rozszerzenia prywatności ani inny
+  mechanizm losowania.
+
+### Jak działa konwersja
+
+Konwerter odtwarza adres MAC w następujących krokach:
+
+1. Odczytuje ostatnie 64 bity adresu IPv6.
+2. Usuwa bajty `ff:fe` wstawione w środek identyfikatora interfejsu.
+3. Odwraca bit universal/local w pierwszym bajcie.
+4. Formatuje pozostałe 48 bitów jako standardowy adres MAC.
+
+### Dlaczego nie pojawia się wynik
+
+Możesz nie otrzymać wyniku z kilku powodów:
+
+- Adres IPv6 ma nieprawidłową składnię.
+- Adres jest poprawny, ale nie został wygenerowany z adresu MAC metodą EUI-64.
+- Adres używa prywatności, stable-random, DHCPv6 lub innej metody przydziału
+  niezwiązanej z MAC.
