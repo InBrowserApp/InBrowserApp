@@ -14,6 +14,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
+  "blake2b-hash-text-or-file": () =>
+    import("@tool/blake2b-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),

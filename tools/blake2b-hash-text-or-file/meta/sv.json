@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE2b-hash text eller fil",
+  "description": "Generera BLAKE2b-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål"
+}
