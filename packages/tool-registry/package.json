@@ -57,6 +57,7 @@
     "@tool/ripemd160-hash-text-or-file": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha1-hash-text-or-file": "workspace:*",
+    "@tool/sha224-hash-text-or-file": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",
     "@tool/sha384-hash-text-or-file": "workspace:*",
     "@tool/sha512-hash-text-or-file": "workspace:*",
