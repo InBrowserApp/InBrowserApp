@@ -36,6 +36,18 @@ describe("normalizePlaceholderOptions", () => {
   test("falls back to defaults when values are omitted", () => {
     expect(normalizePlaceholderOptions({})).toEqual(DEFAULT_PLACEHOLDER_OPTIONS)
   })
+
+  test("coerces zero dimensions to the minimum supported size", () => {
+    expect(
+      normalizePlaceholderOptions({
+        height: 0,
+        width: 0,
+      })
+    ).toMatchObject({
+      height: 1,
+      width: 1,
+    })
+  })
 })
 
 describe("normalizePlaceholderScale", () => {
