@@ -1,3 +1,11 @@
-## Czym są cyfry rzymskie?
+## Dlaczego cyfry rzymskie nadal się pojawiają
 
-Cyfry rzymskie to system liczbowy pochodzący ze starożytnego Rzymu, wykorzystujący litery alfabetu łacińskiego do reprezentowania liczb. Podstawowe symbole to I (1), V (5), X (10), L (50), C (100), D (500) i M (1000). Liczby tworzone są przez łączenie tych symboli zgodnie z określonymi zasadami: symbole są zwykle dodawane (VI = 6), ale gdy mniejsza cyfra pojawia się przed większą, jest odejmowana (IV = 4). System ten był szeroko używany w Cesarstwie Rzymskim i średniowiecznej Europie i nadal jest używany dziś w celach dekoracyjnych, na tarczach zegarów, datach praw autorskich filmów i listach numerowanych. Na przykład MMXXIV = 2024 reprezentuje rok 2024.
+Cyfry rzymskie to stary system zapisu liczb oparty na I, V, X, L, C, D i M. Mimo to nadal pojawiają się na tarczach zegarów, w tytułach rozdziałów, latach praw autorskich, konspektach, nazwach władców i edycjach wydarzeń, więc ich konwersja wciąż jest praktyczna, a nie tylko historyczna.
+
+## W czym pomaga ten konwerter
+
+To narzędzie konwertuje standardowe cyfry rzymskie i liczby arabskie w obie strony, sprawdza, czy zapis trzyma się zwyczajowej notacji odejmowania, i pomaga szybko potwierdzić formy takie jak IV, XL, CM lub MMXXIV. Zostało przygotowane dla najczęściej używanego dziś zakresu od 1 do 3999.
+
+## Kiedy go używać
+
+Użyj go, gdy czytasz tytuły, porządkujesz listy, sprawdzasz rok, przygotowujesz materiały edukacyjne albo walidujesz dane wejściowe, w których mieszają się cyfry rzymskie i arabskie. Jest szczególnie przydatne, gdy potrzebujesz szybkiej odpowiedzi bez ponownego przypominania sobie zasad.

@@ -1,3 +1,11 @@
-## Que sont les chiffres romains ?
+## Pourquoi les chiffres romains sont encore utilisés
 
-Les chiffres romains sont un système numéral originaire de la Rome antique, utilisant des lettres de l'alphabet latin pour représenter les nombres. Les symboles de base sont I (1), V (5), X (10), L (50), C (100), D (500) et M (1000). Les nombres sont formés en combinant ces symboles selon des règles spécifiques : les symboles sont généralement additionnés (VI = 6), mais quand un chiffre plus petit apparaît avant un plus grand, il est soustrait (IV = 4). Ce système était largement utilisé dans l'Empire romain et l'Europe médiévale, et continue d'être utilisé aujourd'hui à des fins décoratives, sur les cadrans d'horloge, les dates de droits d'auteur de films et les listes numérotées. Par exemple, MMXXIV = 2024 représente l'année 2024.
+Les chiffres romains sont un ancien système de numération fondé sur I, V, X, L, C, D et M. On les voit encore sur des cadrans d'horloge, des titres de chapitres, des dates de copyright, des plans, des noms de souverains et des éditions d'événements, donc les convertir reste une tâche pratique et pas seulement historique.
+
+## Ce que ce convertisseur permet de faire
+
+Cet outil convertit dans les deux sens les chiffres romains standards et les nombres arabes, vérifie si une écriture respecte la notation soustractive habituelle et aide à confirmer rapidement des formes comme IV, XL, CM ou MMXXIV. Il est conçu pour la plage moderne la plus courante, de 1 à 3999.
+
+## Quand l'utiliser
+
+Utilisez-le lorsque vous lisez des titres, modifiez des listes, vérifiez une année, préparez du contenu pédagogique ou validez une saisie qui mélange chiffres romains et arabes. Il est particulièrement utile quand vous voulez une réponse rapide sans refaire mentalement toutes les règles.

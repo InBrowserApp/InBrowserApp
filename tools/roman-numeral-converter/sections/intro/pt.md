@@ -1,3 +1,11 @@
-## O que são números romanos?
+## Por que os numerais romanos ainda aparecem
 
-Os números romanos são um sistema numérico originário da Roma antiga, usando letras do alfabeto latino para representar números. Os símbolos básicos são I (1), V (5), X (10), L (50), C (100), D (500) e M (1000). Os números são formados combinando esses símbolos de acordo com regras específicas: os símbolos são tipicamente somados (VI = 6), mas quando um numeral menor aparece antes de um maior, ele é subtraído (IV = 4). Este sistema foi amplamente usado no Império Romano e na Europa medieval, e continua sendo usado hoje para propósitos decorativos, faces de relógios, datas de direitos autorais de filmes e listas numeradas. Por exemplo, MMXXIV = 2024 representa o ano 2024.
+Os numerais romanos são um sistema antigo formado por I, V, X, L, C, D e M. Mesmo assim, eles ainda aparecem em mostradores de relógio, títulos de capítulos, anos de copyright, esquemas, nomes de monarcas e edições de eventos, então convertê-los continua sendo algo prático, e não apenas histórico.
+
+## Em que este conversor ajuda
+
+Esta ferramenta converte numerais romanos padrão e números arábicos nos dois sentidos, verifica se a escrita segue a notação subtrativa convencional e ajuda a confirmar rapidamente formas como IV, XL, CM ou MMXXIV. Ela foi pensada para a faixa moderna mais comum, de 1 a 3999.
+
+## Quando usar
+
+Use quando estiver lendo títulos, ajustando listas, conferindo um ano, preparando material educativo ou validando entradas que misturam numerais romanos e arábicos. É especialmente útil quando você precisa de uma resposta rápida sem revisar todas as regras.

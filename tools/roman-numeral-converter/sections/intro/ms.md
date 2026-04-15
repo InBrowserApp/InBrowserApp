@@ -1,3 +1,11 @@
-## Apakah nombor Rom?
+## Mengapa angka Rom masih kerap muncul
 
-Nombor Rom adalah sistem angka yang berasal dari Rom purba, menggunakan huruf-huruf dari abjad Latin untuk mewakili nombor. Simbol asas ialah I (1), V (5), X (10), L (50), C (100), D (500), dan M (1000). Nombor dibentuk dengan menggabungkan simbol-simbol ini mengikut peraturan tertentu: simbol biasanya ditambah bersama (VI = 6), tetapi apabila angka yang lebih kecil muncul sebelum yang lebih besar, ia dikurangkan (IV = 4). Sistem ini digunakan secara meluas di Empayar Rom dan Eropah zaman pertengahan, dan terus digunakan hari ini untuk tujuan hiasan, muka jam, tarikh hak cipta filem, dan senarai bernombor. Sebagai contoh, MMXXIV = 2024 mewakili tahun 2024.
+Angka Rom ialah sistem nombor lama yang menggunakan I, V, X, L, C, D dan M. Walaupun begitu, ia masih muncul pada muka jam, tajuk bab, tahun hak cipta, rangka senarai, nama raja dan edisi acara, jadi menukarnya masih merupakan tugas yang praktikal dan bukan sekadar pengetahuan sejarah.
+
+## Apa yang dibantu oleh penukar ini
+
+Alat ini menukar angka Rom piawai dan angka Arab dalam kedua-dua arah, menyemak sama ada bentuk penulisan mematuhi notasi tolak yang biasa digunakan, dan membantu anda mengesahkan bentuk seperti IV, XL, CM atau MMXXIV dengan cepat. Ia direka untuk julat moden yang paling lazim, iaitu 1 hingga 3999.
+
+## Bila sesuai digunakan
+
+Gunakan apabila anda sedang membaca tajuk, menyunting senarai, menyemak tahun, menyediakan bahan pembelajaran atau mengesahkan input yang mencampurkan angka Rom dan angka Arab. Ia amat berguna apabila anda memerlukan jawapan pantas tanpa perlu mengingati semula semua peraturannya.

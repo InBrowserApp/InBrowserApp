@@ -1,3 +1,11 @@
-## Apa itu angka Romawi?
+## Mengapa angka Romawi masih sering muncul
 
-Angka Romawi adalah sistem angka yang berasal dari Roma kuno, menggunakan huruf-huruf dari alfabet Latin untuk mewakili angka. Simbol dasarnya adalah I (1), V (5), X (10), L (50), C (100), D (500), dan M (1000). Angka dibentuk dengan menggabungkan simbol-simbol ini sesuai aturan tertentu: simbol biasanya ditambahkan bersama (VI = 6), tetapi ketika angka yang lebih kecil muncul sebelum yang lebih besar, maka dikurangkan (IV = 4). Sistem ini banyak digunakan di Kekaisaran Romawi dan Eropa abad pertengahan, dan terus digunakan hingga hari ini untuk tujuan dekoratif, muka jam, tanggal hak cipta film, dan daftar bernomor. Sebagai contoh, MMXXIV = 2024 mewakili tahun 2024.
+Angka Romawi adalah sistem bilangan lama yang menggunakan I, V, X, L, C, D, dan M. Meski begitu, angka ini masih muncul pada jam, judul bab, tahun hak cipta, kerangka daftar, nama raja, dan edisi acara, jadi mengonversinya tetap merupakan kebutuhan praktis, bukan sekadar pelajaran sejarah.
+
+## Apa yang dibantu oleh konverter ini
+
+Alat ini mengonversi angka Romawi standar dan angka Arab ke dua arah, memeriksa apakah penulisannya mengikuti notasi pengurangan yang umum, dan membantu Anda memastikan bentuk seperti IV, XL, CM, atau MMXXIV dengan cepat. Alat ini dirancang untuk rentang modern yang paling umum, yaitu 1 sampai 3999.
+
+## Kapan sebaiknya digunakan
+
+Gunakan saat Anda membaca judul, mengedit daftar, memeriksa tahun, menyiapkan materi pembelajaran, atau memvalidasi input yang mencampurkan angka Romawi dan angka Arab. Alat ini sangat berguna saat Anda membutuhkan jawaban cepat tanpa meninjau ulang semua aturannya.

@@ -1,3 +1,11 @@
-## Roma rakamları nedir?
+## Roma rakamları neden hâlâ karşımıza çıkıyor
 
-Roma rakamları, antik Roma'da ortaya çıkan ve sayıları temsil etmek için Latin alfabesinin harflerini kullanan bir sayı sistemidir. Temel semboller I (1), V (5), X (10), L (50), C (100), D (500) ve M (1000)'dir. Sayılar, bu sembolleri belirli kurallar doğrultusunda birleştirerek oluşturulur: semboller genellikle toplanır (VI = 6), ancak küçük bir rakam büyük bir rakamın önünde göründüğünde çıkarılır (IV = 4). Bu sistem Roma İmparatorluğu ve ortaçağ Avrupa'sında yaygın olarak kullanılmış olup, bugün hala dekoratif amaçlar, saat yüzleri, film telif hakkı tarihleri ve numaralı listeler için kullanılmaya devam etmektedir. Örneğin, MMXXIV = 2024 2024 yılını temsil eder.
+Roma rakamları I, V, X, L, C, D ve M harflerine dayanan eski bir sayı sistemidir. Buna rağmen saat kadranlarında, bölüm başlıklarında, telif yıllarında, ana hat listelerinde, hükümdar adlarında ve etkinlik sürümlerinde hâlâ görünürler. Bu yüzden dönüştürmek yalnızca tarihsel değil, bugün de pratik bir iştir.
+
+## Bu dönüştürücü ne işe yarar
+
+Bu araç standart Roma rakamları ile Arap rakamları arasında iki yönlü dönüşüm yapar, yazımın yaygın çıkarma kurallarına uyup uymadığını kontrol eder ve IV, XL, CM ya da MMXXIV gibi biçimleri hızlıca doğrulamanıza yardımcı olur. En yaygın modern aralık olan 1 ile 3999 için tasarlanmıştır.
+
+## Ne zaman kullanılır
+
+Başlık okurken, listeleri düzenlerken, bir yılı kontrol ederken, eğitim materyali hazırlarken veya Roma ve Arap rakamlarının karıştığı girdileri doğrularken kullanın. Kuralları yeniden gözden geçirmeden hızlı bir cevap gerektiğinde özellikle faydalıdır.

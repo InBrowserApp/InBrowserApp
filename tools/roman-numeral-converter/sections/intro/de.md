@@ -1,3 +1,11 @@
-## Was sind römische Zahlen?
+## Warum römische Zahlen noch immer auftauchen
 
-Römische Zahlen sind ein Zahlensystem, das im antiken Rom entstanden ist und Buchstaben des lateinischen Alphabets zur Darstellung von Zahlen verwendet. Die Grundsymbole sind I (1), V (5), X (10), L (50), C (100), D (500) und M (1000). Zahlen werden durch die Kombination dieser Symbole nach bestimmten Regeln gebildet: Symbole werden normalerweise addiert (VI = 6), aber wenn eine kleinere Zahl vor einer größeren steht, wird sie subtrahiert (IV = 4). Dieses System war im Römischen Reich und im mittelalterlichen Europa weit verbreitet und wird heute noch für dekorative Zwecke, Uhrengesichter, Film-Copyright-Daten und nummerierte Listen verwendet. Zum Beispiel repräsentiert MMXXIV = 2024 das Jahr 2024.
+Römische Zahlen sind ein altes Zahlensystem auf Basis von I, V, X, L, C, D und M. Trotzdem begegnet man ihnen noch auf Zifferblättern, in Kapitelüberschriften, Copyright-Jahren, Gliederungen, Herrschernamen und Veranstaltungseditionen. Deshalb ist das Umrechnen bis heute praktisch und nicht nur ein historisches Thema.
+
+## Wobei dieser Konverter hilft
+
+Dieses Tool rechnet in beide Richtungen zwischen standardmäßigen römischen Zahlen und arabischen Zahlen um, prüft die übliche Subtraktionsschreibweise und hilft dabei, Formen wie IV, XL, CM oder MMXXIV schnell zu bestätigen. Es ist für den heute üblichen Bereich von 1 bis 3999 ausgelegt.
+
+## Wann man es verwenden sollte
+
+Nutze es beim Lesen von Titeln, beim Bearbeiten von Listen, beim Prüfen einer Jahreszahl, beim Vorbereiten von Lernmaterial oder beim Validieren von Eingaben, die römische und arabische Zahlen mischen. Besonders nützlich ist es, wenn du schnell ein korrektes Ergebnis brauchst, ohne die Regeln noch einmal herzuleiten.
