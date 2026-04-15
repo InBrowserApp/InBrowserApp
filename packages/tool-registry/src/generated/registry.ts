@@ -917,14 +917,14 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     ],
     locales: {
       ar: {
-        name: "BIP39 Mnemonic Generator",
+        name: "مولد العبارات التذكّرية BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "أنشئ عبارات BIP39 التذكّرية وتحقق منها وحوّلها داخل المتصفح.",
       },
       de: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-Mnemonik-Generator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "BIP39-Mnemonikphrasen im Browser erzeugen, prüfen und umwandeln.",
       },
       en: {
         name: "BIP39 Mnemonic Generator",
@@ -932,104 +932,99 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
           "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
       },
       es: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generador de frases mnemónicas BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genera, valida y convierte frases mnemónicas BIP39 en el navegador.",
       },
       fr: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Générateur de phrases mnémoniques BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Générez, validez et convertissez des phrases mnémoniques BIP39 dans le navigateur.",
       },
       he: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "מחולל מנמוניקות BIP39",
+        description: "צור, אמת והמר ביטויי BIP39 ישירות בדפדפן.",
       },
       hi: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 निमोनिक जनरेटर",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "ब्राउज़र में BIP39 निमोनिक वाक्यांश बनाएँ, सत्यापित करें और रूपांतरित करें।",
       },
       id: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generator Mnemonik BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Buat, validasi, dan konversi frasa mnemonik BIP39 langsung di browser.",
       },
       it: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generatore di frasi mnemoniche BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genera, valida e converti frasi mnemoniche BIP39 direttamente nel browser.",
       },
       ja: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 ニーモニック生成ツール",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "ブラウザー内で BIP39 ニーモニックの生成、検証、変換を行います。",
       },
       ko: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 니모닉 생성기",
+        description: "브라우저에서 BIP39 니모닉을 생성, 검증, 변환합니다.",
       },
       ms: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Penjana Mnemonik BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Jana, sahkan dan tukar frasa mnemonik BIP39 terus dalam pelayar.",
       },
       nl: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonicgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genereer, valideer en converteer BIP39-mnemonics in de browser.",
       },
       no: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonikkgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generer, valider og konverter BIP39-mnemonikker i nettleseren.",
       },
       pl: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generator fraz mnemonicznych BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generuj, weryfikuj i konwertuj frazy mnemoniczne BIP39 w przeglądarce.",
       },
       pt: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Gerador de frases mnemônicas BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Gere, valide e converta frases mnemônicas BIP39 no navegador.",
       },
       ru: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Генератор мнемонических фраз BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Создавайте, проверяйте и конвертируйте мнемонические фразы BIP39 прямо в браузере.",
       },
       sv: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonicgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generera, validera och konvertera BIP39-mnemonics i webbläsaren.",
       },
       th: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "เครื่องมือสร้างวลีช่วยจำ BIP39",
+        description: "สร้าง ตรวจสอบ และแปลงวลีช่วยจำ BIP39 ได้โดยตรงในเบราว์เซอร์",
       },
       tr: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 anımsatıcı üreticisi",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "BIP39 anımsatıcı ifadeleri tarayıcıda oluşturun, doğrulayın ve dönüştürün.",
       },
       vi: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Trình tạo cụm từ ghi nhớ BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Tạo, xác thực và chuyển đổi cụm từ ghi nhớ BIP39 ngay trong trình duyệt.",
       },
       "zh-CN": {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 助记词生成器",
+        description: "在浏览器中生成、验证和转换 BIP39 助记词。",
       },
       "zh-TW": {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 助記詞產生器",
+        description: "在瀏覽器中產生、驗證與轉換 BIP39 助記詞。",
       },
     },
   },
@@ -8072,14 +8067,14 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     ],
     locales: {
       ar: {
-        name: "BIP39 Mnemonic Generator",
+        name: "مولد العبارات التذكّرية BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "أنشئ عبارات BIP39 التذكّرية وتحقق منها وحوّلها داخل المتصفح.",
       },
       de: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-Mnemonik-Generator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "BIP39-Mnemonikphrasen im Browser erzeugen, prüfen und umwandeln.",
       },
       en: {
         name: "BIP39 Mnemonic Generator",
@@ -8087,104 +8082,99 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
           "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
       },
       es: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generador de frases mnemónicas BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genera, valida y convierte frases mnemónicas BIP39 en el navegador.",
       },
       fr: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Générateur de phrases mnémoniques BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Générez, validez et convertissez des phrases mnémoniques BIP39 dans le navigateur.",
       },
       he: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "מחולל מנמוניקות BIP39",
+        description: "צור, אמת והמר ביטויי BIP39 ישירות בדפדפן.",
       },
       hi: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 निमोनिक जनरेटर",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "ब्राउज़र में BIP39 निमोनिक वाक्यांश बनाएँ, सत्यापित करें और रूपांतरित करें।",
       },
       id: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generator Mnemonik BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Buat, validasi, dan konversi frasa mnemonik BIP39 langsung di browser.",
       },
       it: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generatore di frasi mnemoniche BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genera, valida e converti frasi mnemoniche BIP39 direttamente nel browser.",
       },
       ja: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 ニーモニック生成ツール",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "ブラウザー内で BIP39 ニーモニックの生成、検証、変換を行います。",
       },
       ko: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 니모닉 생성기",
+        description: "브라우저에서 BIP39 니모닉을 생성, 검증, 변환합니다.",
       },
       ms: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Penjana Mnemonik BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Jana, sahkan dan tukar frasa mnemonik BIP39 terus dalam pelayar.",
       },
       nl: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonicgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Genereer, valideer en converteer BIP39-mnemonics in de browser.",
       },
       no: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonikkgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generer, valider og konverter BIP39-mnemonikker i nettleseren.",
       },
       pl: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Generator fraz mnemonicznych BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generuj, weryfikuj i konwertuj frazy mnemoniczne BIP39 w przeglądarce.",
       },
       pt: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Gerador de frases mnemônicas BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Gere, valide e converta frases mnemônicas BIP39 no navegador.",
       },
       ru: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Генератор мнемонических фраз BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Создавайте, проверяйте и конвертируйте мнемонические фразы BIP39 прямо в браузере.",
       },
       sv: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39-mnemonicgenerator",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Generera, validera och konvertera BIP39-mnemonics i webbläsaren.",
       },
       th: {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "เครื่องมือสร้างวลีช่วยจำ BIP39",
+        description: "สร้าง ตรวจสอบ และแปลงวลีช่วยจำ BIP39 ได้โดยตรงในเบราว์เซอร์",
       },
       tr: {
-        name: "BIP39 Mnemonic Generator",
+        name: "BIP39 anımsatıcı üreticisi",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "BIP39 anımsatıcı ifadeleri tarayıcıda oluşturun, doğrulayın ve dönüştürün.",
       },
       vi: {
-        name: "BIP39 Mnemonic Generator",
+        name: "Trình tạo cụm từ ghi nhớ BIP39",
         description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+          "Tạo, xác thực và chuyển đổi cụm từ ghi nhớ BIP39 ngay trong trình duyệt.",
       },
       "zh-CN": {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 助记词生成器",
+        description: "在浏览器中生成、验证和转换 BIP39 助记词。",
       },
       "zh-TW": {
-        name: "BIP39 Mnemonic Generator",
-        description:
-          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+        name: "BIP39 助記詞產生器",
+        description: "在瀏覽器中產生、驗證與轉換 BIP39 助記詞。",
       },
     },
   },
