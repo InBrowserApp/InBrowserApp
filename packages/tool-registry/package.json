@@ -41,6 +41,7 @@
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
+    "@tool/lorem-ipsum-generator": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

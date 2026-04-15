@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opties",
+  "wordsLabel": "Woorden",
+  "sentencesLabel": "Zinnen",
+  "paragraphsLabel": "Alinea's",
+  "countLabel": "Aantal",
+  "localeLabel": "Taal",
+  "resultsTitle": "Resultaten",
+  "resultsPlaceholder": "Gegenereerde tekst verschijnt hier...",
+  "copyResultsLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadResultsLabel": "Downloaden",
+  "regenerateLabel": "Opnieuw genereren"
+}

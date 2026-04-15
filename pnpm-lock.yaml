@@ -24,6 +24,9 @@ catalogs:
     '@commitlint/config-conventional':
       specifier: ^20.5.0
       version: 20.5.0
+    '@faker-js/faker':
+      specifier: ^10.3.0
+      version: 10.4.0
     '@paralleldrive/cuid2':
       specifier: ^3.3.0
       version: 3.3.0
@@ -390,6 +393,9 @@ importers:
       '@tool/list-comparer':
         specifier: workspace:*
         version: link:../../tools/list-comparer
+      '@tool/lorem-ipsum-generator':
+        specifier: workspace:*
+        version: link:../../tools/lorem-ipsum-generator
       '@tool/nanoid-generator':
         specifier: workspace:*
         version: link:../../tools/nanoid-generator
@@ -1479,6 +1485,34 @@ importers:
 
   tools/list-comparer:
     dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/lorem-ipsum-generator:
+    dependencies:
+      '@faker-js/faker':
+        specifier: 'catalog:'
+        version: 10.4.0
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -3260,6 +3294,10 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@faker-js/faker@10.4.0':
+    resolution: {integrity: sha512-sDBWI3yLy8EcDzgobvJTWq1MJYzAkQdpjXuPukga9wXonhpMRvd1Izuo2Qgwey2OiEoRIBr35RMU9HJRoOHzpw==}
+    engines: {node: ^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0, npm: '>=10'}
 
   '@floating-ui/core@1.7.5':
     resolution: {integrity: sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ==}
@@ -9084,6 +9122,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.7':
     optional: true
+
+  '@faker-js/faker@10.4.0': {}
 
   '@floating-ui/core@1.7.5':
     dependencies:

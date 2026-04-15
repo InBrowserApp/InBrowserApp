@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Pilihan",
+  "wordsLabel": "Perkataan",
+  "sentencesLabel": "Ayat",
+  "paragraphsLabel": "Perenggan",
+  "countLabel": "Bilangan",
+  "localeLabel": "Bahasa",
+  "resultsTitle": "Keputusan",
+  "resultsPlaceholder": "Teks yang dijana akan muncul di sini...",
+  "copyResultsLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Muat turun",
+  "regenerateLabel": "Jana semula"
+}

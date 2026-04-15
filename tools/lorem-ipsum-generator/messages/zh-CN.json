@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "选项",
+  "wordsLabel": "单词",
+  "sentencesLabel": "句子",
+  "paragraphsLabel": "段落",
+  "countLabel": "数量",
+  "localeLabel": "语言",
+  "resultsTitle": "结果",
+  "resultsPlaceholder": "生成的文本将显示在这里...",
+  "copyResultsLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载",
+  "regenerateLabel": "重新生成"
+}

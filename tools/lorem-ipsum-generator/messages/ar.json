@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "الخيارات",
+  "wordsLabel": "كلمات",
+  "sentencesLabel": "جمل",
+  "paragraphsLabel": "فقرات",
+  "countLabel": "العدد",
+  "localeLabel": "اللغة",
+  "resultsTitle": "النتائج",
+  "resultsPlaceholder": "سيظهر النص المُنشأ هنا...",
+  "copyResultsLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل",
+  "regenerateLabel": "إعادة التوليد"
+}

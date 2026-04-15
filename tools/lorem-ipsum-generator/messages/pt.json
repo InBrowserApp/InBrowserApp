@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opções",
+  "wordsLabel": "Palavras",
+  "sentencesLabel": "Frases",
+  "paragraphsLabel": "Parágrafos",
+  "countLabel": "Quantidade",
+  "localeLabel": "Idioma",
+  "resultsTitle": "Resultados",
+  "resultsPlaceholder": "O texto gerado aparecerá aqui...",
+  "copyResultsLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadResultsLabel": "Baixar",
+  "regenerateLabel": "Gerar novamente"
+}

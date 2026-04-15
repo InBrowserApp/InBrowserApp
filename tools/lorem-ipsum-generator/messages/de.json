@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Optionen",
+  "wordsLabel": "Wörter",
+  "sentencesLabel": "Sätze",
+  "paragraphsLabel": "Absätze",
+  "countLabel": "Anzahl",
+  "localeLabel": "Sprache",
+  "resultsTitle": "Ergebnisse",
+  "resultsPlaceholder": "Generierter Text erscheint hier...",
+  "copyResultsLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Herunterladen",
+  "regenerateLabel": "Neu generieren"
+}

@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opcje",
+  "wordsLabel": "Słowa",
+  "sentencesLabel": "Zdania",
+  "paragraphsLabel": "Akapity",
+  "countLabel": "Ilość",
+  "localeLabel": "Język",
+  "resultsTitle": "Wyniki",
+  "resultsPlaceholder": "Wygenerowany tekst pojawi się tutaj...",
+  "copyResultsLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "downloadResultsLabel": "Pobierz",
+  "regenerateLabel": "Generuj ponownie"
+}

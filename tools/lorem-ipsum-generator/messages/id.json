@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opsi",
+  "wordsLabel": "Kata",
+  "sentencesLabel": "Kalimat",
+  "paragraphsLabel": "Paragraf",
+  "countLabel": "Jumlah",
+  "localeLabel": "Bahasa",
+  "resultsTitle": "Hasil",
+  "resultsPlaceholder": "Teks yang dihasilkan akan muncul di sini...",
+  "copyResultsLabel": "Salin hasil",
+  "copiedLabel": "Tersalin",
+  "downloadResultsLabel": "Unduh",
+  "regenerateLabel": "Buat ulang"
+}

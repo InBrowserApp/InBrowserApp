@@ -21,6 +21,7 @@ publicHoistPattern:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@faker-js/faker": ^10.3.0
   "@astrojs/check": ^0.9.8
   "@astrojs/mdx": ^4.3.14
   "@astrojs/react": ^4.4.2

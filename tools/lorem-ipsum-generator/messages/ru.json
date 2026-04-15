@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Параметры",
+  "wordsLabel": "Слова",
+  "sentencesLabel": "Предложения",
+  "paragraphsLabel": "Абзацы",
+  "countLabel": "Количество",
+  "localeLabel": "Язык",
+  "resultsTitle": "Результаты",
+  "resultsPlaceholder": "Сгенерированный текст появится здесь...",
+  "copyResultsLabel": "Копировать результат",
+  "copiedLabel": "Скопировано",
+  "downloadResultsLabel": "Скачать",
+  "regenerateLabel": "Сгенерировать снова"
+}

@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "ตัวเลือก",
+  "wordsLabel": "คำ",
+  "sentencesLabel": "ประโยค",
+  "paragraphsLabel": "ย่อหน้า",
+  "countLabel": "จำนวน",
+  "localeLabel": "ภาษา",
+  "resultsTitle": "ผลลัพธ์",
+  "resultsPlaceholder": "ข้อความที่สร้างจะแสดงที่นี่...",
+  "copyResultsLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadResultsLabel": "ดาวน์โหลด",
+  "regenerateLabel": "สร้างใหม่"
+}

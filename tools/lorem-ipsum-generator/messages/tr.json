@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Seçenekler",
+  "wordsLabel": "Kelimeler",
+  "sentencesLabel": "Cümleler",
+  "paragraphsLabel": "Paragraflar",
+  "countLabel": "Sayı",
+  "localeLabel": "Dil",
+  "resultsTitle": "Sonuçlar",
+  "resultsPlaceholder": "Oluşturulan metin burada görünecek...",
+  "copyResultsLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "İndir",
+  "regenerateLabel": "Yeniden üret"
+}

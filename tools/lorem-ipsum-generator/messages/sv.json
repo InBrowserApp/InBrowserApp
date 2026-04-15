@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Alternativ",
+  "wordsLabel": "Ord",
+  "sentencesLabel": "Meningar",
+  "paragraphsLabel": "Stycken",
+  "countLabel": "Antal",
+  "localeLabel": "Språk",
+  "resultsTitle": "Resultat",
+  "resultsPlaceholder": "Genererad text visas här...",
+  "copyResultsLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "downloadResultsLabel": "Ladda ner",
+  "regenerateLabel": "Generera igen"
+}

@@ -42,6 +42,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
+  "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

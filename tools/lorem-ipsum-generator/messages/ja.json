@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "オプション",
+  "wordsLabel": "単語",
+  "sentencesLabel": "文",
+  "paragraphsLabel": "段落",
+  "countLabel": "数量",
+  "localeLabel": "言語",
+  "resultsTitle": "結果",
+  "resultsPlaceholder": "生成されたテキストがここに表示されます...",
+  "copyResultsLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadResultsLabel": "ダウンロード",
+  "regenerateLabel": "再生成"
+}

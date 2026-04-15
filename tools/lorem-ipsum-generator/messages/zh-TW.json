@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "選項",
+  "wordsLabel": "單詞",
+  "sentencesLabel": "句子",
+  "paragraphsLabel": "段落",
+  "countLabel": "數量",
+  "localeLabel": "語言",
+  "resultsTitle": "結果",
+  "resultsPlaceholder": "產生的文字將顯示在這裡...",
+  "copyResultsLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "downloadResultsLabel": "下載",
+  "regenerateLabel": "重新產生"
+}

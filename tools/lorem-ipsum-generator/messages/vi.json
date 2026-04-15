@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Tùy chọn",
+  "wordsLabel": "Từ",
+  "sentencesLabel": "Câu",
+  "paragraphsLabel": "Đoạn văn",
+  "countLabel": "Số lượng",
+  "localeLabel": "Ngôn ngữ",
+  "resultsTitle": "Kết quả",
+  "resultsPlaceholder": "Văn bản được tạo sẽ xuất hiện ở đây...",
+  "copyResultsLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadResultsLabel": "Tải xuống",
+  "regenerateLabel": "Tạo lại"
+}

@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "विकल्प",
+  "wordsLabel": "शब्द",
+  "sentencesLabel": "वाक्य",
+  "paragraphsLabel": "पैराग्राफ",
+  "countLabel": "गिनती",
+  "localeLabel": "भाषा",
+  "resultsTitle": "परिणाम",
+  "resultsPlaceholder": "जनरेट किया गया टेक्स्ट यहां दिखाई देगा...",
+  "copyResultsLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadResultsLabel": "डाउनलोड",
+  "regenerateLabel": "फिर से जनरेट करें"
+}
