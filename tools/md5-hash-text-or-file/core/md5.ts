@@ -66,7 +66,7 @@ function wordArrayToArrayBuffer(wordArray: {
   const bytes = new Uint8Array(wordArray.sigBytes)
 
   for (let index = 0; index < wordArray.sigBytes; index += 1) {
-    const word = wordArray.words[index >>> 2] ?? 0
+    const word = wordArray.words[index >>> 2]!
     bytes[index] = (word >>> (24 - (index % 4) * 8)) & 0xff
   }
 
