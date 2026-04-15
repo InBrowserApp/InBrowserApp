@@ -51,7 +51,7 @@ const NAMED_ENTITY_TO_CHAR = Object.fromEntries(
 const MINIMAL_ENCODE_CHARS = new Set(["&", "<", ">", '"', "'"])
 
 function getCodePoint(character: string) {
-  return character.codePointAt(0) ?? character.charCodeAt(0)
+  return character.codePointAt(0)!
 }
 
 function shouldEncode(character: string, range: EncodeRange) {

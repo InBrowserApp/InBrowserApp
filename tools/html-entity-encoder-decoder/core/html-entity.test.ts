@@ -1,6 +1,11 @@
 import { describe, expect, test } from "vitest"
 
-import { decodeHtmlEntities, encodeHtmlEntities } from "./html-entity"
+import {
+  decodeHtmlEntities,
+  encodeHtmlEntities,
+  isEncodeRange,
+  isEntityFormat,
+} from "./html-entity"
 
 describe("encodeHtmlEntities", () => {
   test("encodes minimal HTML characters with named entities", () => {
@@ -147,5 +152,21 @@ describe("round trips", () => {
         decodeHtmlEntities(encodeHtmlEntities(text, "hex", "all-special"))
       ).toBe(text)
     }
+  })
+})
+
+describe("type guards", () => {
+  test("validates supported entity formats", () => {
+    expect(isEntityFormat("named")).toBe(true)
+    expect(isEntityFormat("decimal")).toBe(true)
+    expect(isEntityFormat("hex")).toBe(true)
+    expect(isEntityFormat("binary")).toBe(false)
+  })
+
+  test("validates supported encode ranges", () => {
+    expect(isEncodeRange("minimal")).toBe(true)
+    expect(isEncodeRange("non-ascii")).toBe(true)
+    expect(isEncodeRange("all-special")).toBe(true)
+    expect(isEncodeRange("ascii-only")).toBe(false)
   })
 })
