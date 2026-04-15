@@ -201,6 +201,5 @@ export {
   getExpectedCheckDigits,
   normalizeIBAN,
   validateIBAN,
-  type IBANCountrySpec,
   type IBANValidationResult,
 }
