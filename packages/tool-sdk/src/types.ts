@@ -29,6 +29,7 @@ type ToolCategory =
 type ToolIcon =
   | "binary"
   | "braces"
+  | "credit-card"
   | "file-text"
   | "globe"
   | "image"

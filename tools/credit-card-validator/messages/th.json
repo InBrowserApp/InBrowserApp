@@ -1,0 +1,22 @@
+{
+  "cardNumber": "หมายเลขบัตรเครดิต",
+  "placeholder": "ใส่หมายเลขบัตรเครดิต",
+  "valid": "หมายเลขบัตรถูกต้อง",
+  "invalid": "หมายเลขบัตรไม่ถูกต้อง",
+  "invalidLuhn": "Checksum ไม่ถูกต้อง (อัลกอริทึม Luhn ล้มเหลว)",
+  "invalidLength": "ความยาวหมายเลขบัตรไม่ถูกต้อง",
+  "result": "ผลการตรวจสอบ",
+  "brand": "แบรนด์บัตร",
+  "unknown": "ไม่ทราบ",
+  "formattedNumber": "หมายเลขที่จัดรูปแบบ",
+  "luhnCheck": "การตรวจสอบ Luhn",
+  "lengthCheck": "การตรวจสอบความยาว",
+  "digits": "จำนวนหลักทั้งหมด",
+  "cvcLength": "ความยาว CVC",
+  "digitsLabel": "หลัก",
+  "pass": "ผ่าน",
+  "fail": "ไม่ผ่าน",
+  "expectedLength": "คาดหวัง: {lengths}",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว"
+}

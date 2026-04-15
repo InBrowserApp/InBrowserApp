@@ -16,6 +16,7 @@
     "@tool/basic-auth-generator": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/case-converter": "workspace:*",
+    "@tool/credit-card-validator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",
     "@tool/current-network-time": "workspace:*",

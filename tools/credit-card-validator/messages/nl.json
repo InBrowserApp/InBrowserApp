@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Creditcardnummer",
+  "placeholder": "Voer creditcardnummer in",
+  "valid": "Geldig kaartnummer",
+  "invalid": "Ongeldig kaartnummer",
+  "invalidLuhn": "Ongeldige controlesom (Luhn-algoritme mislukt)",
+  "invalidLength": "Ongeldige kaartnummerlengte",
+  "result": "Validatieresultaat",
+  "brand": "Kaartmerk",
+  "unknown": "Onbekend",
+  "formattedNumber": "Geformatteerd Nummer",
+  "luhnCheck": "Luhn Controle",
+  "lengthCheck": "Lengtecontrole",
+  "digits": "Totaal Cijfers",
+  "cvcLength": "CVC Lengte",
+  "digitsLabel": "cijfers",
+  "pass": "Geslaagd",
+  "fail": "Mislukt",
+  "expectedLength": "verwacht: {lengths}",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

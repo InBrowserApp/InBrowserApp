@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Kredi Kartı Numarası",
+  "placeholder": "Kredi kartı numarasını girin",
+  "valid": "Geçerli kart numarası",
+  "invalid": "Geçersiz kart numarası",
+  "invalidLuhn": "Geçersiz sağlama toplamı (Luhn algoritması başarısız)",
+  "invalidLength": "Geçersiz kart numarası uzunluğu",
+  "result": "Doğrulama Sonucu",
+  "brand": "Kart Markası",
+  "unknown": "Bilinmiyor",
+  "formattedNumber": "Biçimlendirilmiş Numara",
+  "luhnCheck": "Luhn Kontrolü",
+  "lengthCheck": "Uzunluk Kontrolü",
+  "digits": "Toplam Rakam",
+  "cvcLength": "CVC Uzunluğu",
+  "digitsLabel": "rakam",
+  "pass": "Geçti",
+  "fail": "Başarısız",
+  "expectedLength": "beklenen: {lengths}",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}

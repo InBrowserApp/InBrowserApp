@@ -1,0 +1,4 @@
+{
+  "name": "Credit Card Validator",
+  "description": "Validate credit card numbers using Luhn algorithm and identify card brand"
+}

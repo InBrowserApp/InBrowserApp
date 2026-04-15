@@ -1,0 +1,4 @@
+{
+  "name": "Kredi Kartı Doğrulayıcı",
+  "description": "Luhn algoritması ile kredi kartı numaralarını doğrulayın ve kart markasını belirleyin"
+}

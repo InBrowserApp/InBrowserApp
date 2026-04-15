@@ -1,0 +1,22 @@
+{
+  "cardNumber": "מספר כרטיס אשראי",
+  "placeholder": "הזן מספר כרטיס אשראי",
+  "valid": "מספר כרטיס תקין",
+  "invalid": "מספר כרטיס לא תקין",
+  "invalidLuhn": "סכום ביקורת לא תקין (אלגוריתם Luhn נכשל)",
+  "invalidLength": "אורך מספר כרטיס לא תקין",
+  "result": "תוצאת אימות",
+  "brand": "מותג כרטיס",
+  "unknown": "לא ידוע",
+  "formattedNumber": "מספר מעוצב",
+  "luhnCheck": "בדיקת Luhn",
+  "lengthCheck": "בדיקת אורך",
+  "digits": "סה\"כ ספרות",
+  "cvcLength": "אורך CVC",
+  "digitsLabel": "ספרות",
+  "pass": "עבר",
+  "fail": "נכשל",
+  "expectedLength": "צפוי: {lengths}",
+  "copyResultLabel": "העתיקו את התוצאה",
+  "copiedLabel": "הועתק"
+}

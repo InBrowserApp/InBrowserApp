@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
