@@ -3038,6 +3038,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-password-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-password-generator",
+    language: "de",
+  },
+  {
+    slug: "random-password-generator",
+    language: "en",
+  },
+  {
+    slug: "random-password-generator",
+    language: "es",
+  },
+  {
+    slug: "random-password-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "he",
+  },
+  {
+    slug: "random-password-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "id",
+  },
+  {
+    slug: "random-password-generator",
+    language: "it",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-password-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "no",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-password-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-password-generator",
+    language: "th",
+  },
+  {
+    slug: "random-password-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "regex-tester-replacer",
     language: "ar",
   },

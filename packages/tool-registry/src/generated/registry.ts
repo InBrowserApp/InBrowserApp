@@ -4064,6 +4064,133 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "مولد كلمات المرور العشوائية",
+        description:
+          "أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح.",
+      },
+      de: {
+        name: "Zufalls-Passwortgenerator",
+        description:
+          "Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Generador de contraseñas aleatorias",
+        description:
+          "Genera contraseñas, frases de paso, códigos agrupados y PIN en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de mots de passe aléatoires",
+        description:
+          "Générez des mots de passe, phrases de passe, codes groupés et PIN dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל סיסמאות אקראיות",
+        description:
+          "צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN בדפדפן.",
+      },
+      hi: {
+        name: "रैंडम पासवर्ड जेनरेटर",
+        description: "अपने ब्राउज़र में पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाएं।",
+      },
+      id: {
+        name: "Generator Kata Sandi Acak",
+        description:
+          "Buat kata sandi, frasa sandi, kode berkelompok, dan PIN di browser.",
+      },
+      it: {
+        name: "Generatore di password casuali",
+        description:
+          "Genera password, frasi segrete, codici a blocchi e PIN nel browser.",
+      },
+      ja: {
+        name: "ランダムパスワード生成器",
+        description:
+          "ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成します。",
+      },
+      ko: {
+        name: "랜덤 비밀번호 생성기",
+        description:
+          "브라우저에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kata Laluan Rawak",
+        description:
+          "Jana kata laluan, frasa laluan, kod berkelompok dan PIN dalam pelayar anda.",
+      },
+      nl: {
+        name: "Willekeurige wachtwoordgenerator",
+        description:
+          "Genereer wachtwoorden, wachtzinnen, gegroepeerde codes en pincodes in je browser.",
+      },
+      no: {
+        name: "Generator for tilfeldige passord",
+        description:
+          "Generer passord, passfraser, grupperte koder og PIN-koder i nettleseren.",
+      },
+      pl: {
+        name: "Generator losowych haseł",
+        description:
+          "Generuj hasła, frazy hasłowe, pogrupowane kody i PIN-y w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de senhas aleatórias",
+        description:
+          "Gere senhas, frases-senha, códigos em blocos e PINs no navegador.",
+      },
+      ru: {
+        name: "Генератор случайных паролей",
+        description:
+          "Генерируйте пароли, парольные фразы, коды по блокам и PIN прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga lösenord",
+        description:
+          "Generera lösenord, lösenfraser, grupperade koder och PIN-koder i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
+        description: "สร้างรหัสผ่าน วลีรหัสผ่าน รหัสแบบแบ่งกลุ่ม และ PIN ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Rastgele Parola Oluşturucu",
+        description:
+          "Tarayıcınızda parolalar, parola ifadeleri, gruplanmış kodlar ve PIN'ler oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo mật khẩu ngẫu nhiên",
+        description:
+          "Tạo mật khẩu, cụm mật khẩu, mã theo nhóm và mã PIN ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
+      },
+    },
+  },
+  {
     slug: "regex-tester-replacer",
     category: "text",
     icon: "search",
@@ -10833,6 +10960,133 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "隨機數產生器",
         description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  "random-password-generator": {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "مولد كلمات المرور العشوائية",
+        description:
+          "أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح.",
+      },
+      de: {
+        name: "Zufalls-Passwortgenerator",
+        description:
+          "Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Generador de contraseñas aleatorias",
+        description:
+          "Genera contraseñas, frases de paso, códigos agrupados y PIN en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de mots de passe aléatoires",
+        description:
+          "Générez des mots de passe, phrases de passe, codes groupés et PIN dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל סיסמאות אקראיות",
+        description:
+          "צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN בדפדפן.",
+      },
+      hi: {
+        name: "रैंडम पासवर्ड जेनरेटर",
+        description: "अपने ब्राउज़र में पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाएं।",
+      },
+      id: {
+        name: "Generator Kata Sandi Acak",
+        description:
+          "Buat kata sandi, frasa sandi, kode berkelompok, dan PIN di browser.",
+      },
+      it: {
+        name: "Generatore di password casuali",
+        description:
+          "Genera password, frasi segrete, codici a blocchi e PIN nel browser.",
+      },
+      ja: {
+        name: "ランダムパスワード生成器",
+        description:
+          "ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成します。",
+      },
+      ko: {
+        name: "랜덤 비밀번호 생성기",
+        description:
+          "브라우저에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kata Laluan Rawak",
+        description:
+          "Jana kata laluan, frasa laluan, kod berkelompok dan PIN dalam pelayar anda.",
+      },
+      nl: {
+        name: "Willekeurige wachtwoordgenerator",
+        description:
+          "Genereer wachtwoorden, wachtzinnen, gegroepeerde codes en pincodes in je browser.",
+      },
+      no: {
+        name: "Generator for tilfeldige passord",
+        description:
+          "Generer passord, passfraser, grupperte koder og PIN-koder i nettleseren.",
+      },
+      pl: {
+        name: "Generator losowych haseł",
+        description:
+          "Generuj hasła, frazy hasłowe, pogrupowane kody i PIN-y w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de senhas aleatórias",
+        description:
+          "Gere senhas, frases-senha, códigos em blocos e PINs no navegador.",
+      },
+      ru: {
+        name: "Генератор случайных паролей",
+        description:
+          "Генерируйте пароли, парольные фразы, коды по блокам и PIN прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga lösenord",
+        description:
+          "Generera lösenord, lösenfraser, grupperade koder och PIN-koder i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
+        description: "สร้างรหัสผ่าน วลีรหัสผ่าน รหัสแบบแบ่งกลุ่ม และ PIN ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Rastgele Parola Oluşturucu",
+        description:
+          "Tarayıcınızda parolalar, parola ifadeleri, gruplanmış kodlar ve PIN'ler oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo mật khẩu ngẫu nhiên",
+        description:
+          "Tạo mật khẩu, cụm mật khẩu, mã theo nhóm và mã PIN ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
       },
     },
   },

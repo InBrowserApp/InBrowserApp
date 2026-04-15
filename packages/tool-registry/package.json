@@ -40,6 +40,7 @@
     "@tool/port-number-lookup": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
+    "@tool/random-password-generator": "workspace:*",
     "@tool/regex-tester-replacer": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha1-hash-text-or-file": "workspace:*",
