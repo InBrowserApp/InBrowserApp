@@ -1,0 +1,4 @@
+{
+  "name": "占位图生成器",
+  "description": "生成自定义尺寸、颜色、渐变和文字的占位图。支持 PNG、JPG、SVG、WebP 格式及 Retina 高清输出。"
+}

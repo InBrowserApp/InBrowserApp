@@ -1,0 +1,4 @@
+{
+  "name": "Generador de Imágenes de Marcador",
+  "description": "Genera imágenes de marcador con dimensiones, colores, degradados y texto personalizados. Exporta como PNG, JPG, SVG o WebP con soporte Retina."
+}
