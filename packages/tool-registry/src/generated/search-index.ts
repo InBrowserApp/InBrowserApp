@@ -902,6 +902,133 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bip39-mnemonic-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "bip39",
+      "mnemonic",
+      "seed phrase",
+      "wallet",
+      "entropy",
+      "crypto",
+      "generator",
+      "validator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد العبارات التذكّرية BIP39",
+        description:
+          "أنشئ عبارات BIP39 التذكّرية وتحقق منها وحوّلها داخل المتصفح.",
+      },
+      de: {
+        name: "BIP39-Mnemonik-Generator",
+        description:
+          "BIP39-Mnemonikphrasen im Browser erzeugen, prüfen und umwandeln.",
+      },
+      en: {
+        name: "BIP39 Mnemonic Generator",
+        description:
+          "Generate, validate, and convert BIP39 mnemonic phrases in your browser.",
+      },
+      es: {
+        name: "Generador de frases mnemónicas BIP39",
+        description:
+          "Genera, valida y convierte frases mnemónicas BIP39 en el navegador.",
+      },
+      fr: {
+        name: "Générateur de phrases mnémoniques BIP39",
+        description:
+          "Générez, validez et convertissez des phrases mnémoniques BIP39 dans le navigateur.",
+      },
+      he: {
+        name: "מחולל מנמוניקות BIP39",
+        description: "צור, אמת והמר ביטויי BIP39 ישירות בדפדפן.",
+      },
+      hi: {
+        name: "BIP39 निमोनिक जनरेटर",
+        description:
+          "ब्राउज़र में BIP39 निमोनिक वाक्यांश बनाएँ, सत्यापित करें और रूपांतरित करें।",
+      },
+      id: {
+        name: "Generator Mnemonik BIP39",
+        description:
+          "Buat, validasi, dan konversi frasa mnemonik BIP39 langsung di browser.",
+      },
+      it: {
+        name: "Generatore di frasi mnemoniche BIP39",
+        description:
+          "Genera, valida e converti frasi mnemoniche BIP39 direttamente nel browser.",
+      },
+      ja: {
+        name: "BIP39 ニーモニック生成ツール",
+        description:
+          "ブラウザー内で BIP39 ニーモニックの生成、検証、変換を行います。",
+      },
+      ko: {
+        name: "BIP39 니모닉 생성기",
+        description: "브라우저에서 BIP39 니모닉을 생성, 검증, 변환합니다.",
+      },
+      ms: {
+        name: "Penjana Mnemonik BIP39",
+        description:
+          "Jana, sahkan dan tukar frasa mnemonik BIP39 terus dalam pelayar.",
+      },
+      nl: {
+        name: "BIP39-mnemonicgenerator",
+        description:
+          "Genereer, valideer en converteer BIP39-mnemonics in de browser.",
+      },
+      no: {
+        name: "BIP39-mnemonikkgenerator",
+        description:
+          "Generer, valider og konverter BIP39-mnemonikker i nettleseren.",
+      },
+      pl: {
+        name: "Generator fraz mnemonicznych BIP39",
+        description:
+          "Generuj, weryfikuj i konwertuj frazy mnemoniczne BIP39 w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de frases mnemônicas BIP39",
+        description:
+          "Gere, valide e converta frases mnemônicas BIP39 no navegador.",
+      },
+      ru: {
+        name: "Генератор мнемонических фраз BIP39",
+        description:
+          "Создавайте, проверяйте и конвертируйте мнемонические фразы BIP39 прямо в браузере.",
+      },
+      sv: {
+        name: "BIP39-mnemonicgenerator",
+        description:
+          "Generera, validera och konvertera BIP39-mnemonics i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้างวลีช่วยจำ BIP39",
+        description: "สร้าง ตรวจสอบ และแปลงวลีช่วยจำ BIP39 ได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "BIP39 anımsatıcı üreticisi",
+        description:
+          "BIP39 anımsatıcı ifadeleri tarayıcıda oluşturun, doğrulayın ve dönüştürün.",
+      },
+      vi: {
+        name: "Trình tạo cụm từ ghi nhớ BIP39",
+        description:
+          "Tạo, xác thực và chuyển đổi cụm từ ghi nhớ BIP39 ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "BIP39 助记词生成器",
+        description: "在浏览器中生成、验证和转换 BIP39 助记词。",
+      },
+      "zh-TW": {
+        name: "BIP39 助記詞產生器",
+        description: "在瀏覽器中產生、驗證與轉換 BIP39 助記詞。",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",

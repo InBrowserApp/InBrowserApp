@@ -12,6 +12,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
+  "bip39-mnemonic-generator": () =>
+    import("@tool/bip39-mnemonic-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),

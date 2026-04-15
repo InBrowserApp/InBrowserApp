@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bip39-mnemonic-generator",
+    language: "ar",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "de",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "en",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "es",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "fr",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "he",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "hi",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "id",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "it",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ja",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ko",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ms",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "nl",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "no",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "pl",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "pt",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ru",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "sv",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "th",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "tr",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "vi",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },

@@ -14,6 +14,7 @@
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",
+    "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",

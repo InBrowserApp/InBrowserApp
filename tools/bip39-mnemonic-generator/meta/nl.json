@@ -1,0 +1,4 @@
+{
+  "name": "BIP39-mnemonicgenerator",
+  "description": "Genereer, valideer en converteer BIP39-mnemonics in de browser."
+}
