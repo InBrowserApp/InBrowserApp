@@ -146,7 +146,7 @@ function ImageToIcoClient({ messages }: ImageToIcoClientProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
+      <div className="grid items-stretch gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <UploadCard
           inputId={inputId}
           messages={messages}

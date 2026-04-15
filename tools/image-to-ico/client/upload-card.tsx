@@ -74,7 +74,7 @@ export function UploadCard({
   }
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle>{messages.uploadTitle}</CardTitle>
         <CardDescription>{messages.uploadDescription}</CardDescription>
@@ -130,7 +130,7 @@ export function UploadCard({
         ) : (
           <label
             aria-label={messages.chooseImageLabel}
-            className="block cursor-pointer"
+            className="flex flex-1 cursor-pointer"
             htmlFor={inputId}
             onDragLeave={handleDragLeave}
             onDragOver={handleDragOver}
@@ -138,7 +138,7 @@ export function UploadCard({
           >
             <Empty
               className={cn(
-                "border border-dashed border-border/80 bg-muted/30 transition-colors hover:border-foreground/20 hover:bg-muted/45",
+                "h-full min-h-[20rem] flex-1 border border-dashed border-border/80 bg-muted/30 transition-colors hover:border-foreground/20 hover:bg-muted/45",
                 isDraggingOver && "border-primary bg-primary/5"
               )}
             >
