@@ -4602,6 +4602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },

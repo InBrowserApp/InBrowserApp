@@ -64,6 +64,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
+  "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),

@@ -57,6 +57,7 @@
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/sri-hash-generator": "workspace:*",
     "@tool/stopwatch": "workspace:*",
+    "@tool/svg-to-image-converter": "workspace:*",
     "@tool/text-statistics": "workspace:*",
     "@tool/time-zone-converter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
