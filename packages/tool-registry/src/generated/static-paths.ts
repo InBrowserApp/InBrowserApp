@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base16-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base16-encoder",
+    language: "de",
+  },
+  {
+    slug: "base16-encoder",
+    language: "en",
+  },
+  {
+    slug: "base16-encoder",
+    language: "es",
+  },
+  {
+    slug: "base16-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base16-encoder",
+    language: "he",
+  },
+  {
+    slug: "base16-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base16-encoder",
+    language: "id",
+  },
+  {
+    slug: "base16-encoder",
+    language: "it",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base16-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base16-encoder",
+    language: "no",
+  },
+  {
+    slug: "base16-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base16-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base16-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base16-encoder",
+    language: "th",
+  },
+  {
+    slug: "base16-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base16-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base16-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base16-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },

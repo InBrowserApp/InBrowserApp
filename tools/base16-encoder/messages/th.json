@@ -1,0 +1,13 @@
+{
+  "inputLabel": "อินพุต",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "encodedOutputLabel": "เข้ารหัส Hex",
+  "encodedOutputEmptyDescription": "ผลลัพธ์ Hex จะแสดงที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลด Hex",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "fileReadFailedTitle": "ไม่สามารถอ่านไฟล์ได้"
+}

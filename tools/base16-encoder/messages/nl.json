@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Invoer",
+  "inputPlaceholder": "Voer tekst in om te coderen...",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "encodedOutputLabel": "Hex-gecodeerd",
+  "encodedOutputEmptyDescription": "Hex-uitvoer verschijnt hier...",
+  "downloadFileLabel": "Hex downloaden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen"
+}

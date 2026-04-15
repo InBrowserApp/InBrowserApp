@@ -1,0 +1,4 @@
+{
+  "name": "Base16 編碼器",
+  "description": "將文字或檔案編碼為 Base16（Hex），用於資料傳輸、除錯和 Web 開發。"
+}

@@ -511,6 +511,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "base16-encoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base16",
+      "hex",
+      "hexadecimal",
+      "encode",
+      "encoder",
+      "binary",
+      "text",
+      "file",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base16",
+        description:
+          "ترميز النص أو الملفات إلى Base16 (Hex) لنقل البيانات وتصحيح الأخطاء وتطوير الويب.",
+      },
+      de: {
+        name: "Base16-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base16 (Hex) für Datenübertragung, Debugging und Webentwicklung.",
+      },
+      en: {
+        name: "Base16 Encoder",
+        description:
+          "Encode text or files to Base16 (Hex) for data transport, debugging, and web development.",
+      },
+      es: {
+        name: "Codificador Base16",
+        description:
+          "Codifica texto o archivos a Base16 (Hex) para transmisión de datos, depuración y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base16",
+        description:
+          "Encode du texte ou des fichiers en Base16 (Hex) pour la transmission de données, le débogage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base16",
+        description:
+          "מקודד טקסט או קבצים ל-Base16 (Hex) להעברת נתונים, ניפוי שגיאות ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base16 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base16 (Hex) में एनकोड करें ताकि डेटा ट्रांसमिशन, डीबगिंग और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base16",
+        description:
+          "Encode teks atau file ke Base16 (Hex) untuk transmisi data, debugging, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base16",
+        description:
+          "Codifica testo o file in Base16 (Hex) per trasmissione dati, debug e sviluppo web.",
+      },
+      ja: {
+        name: "Base16 エンコーダー",
+        description:
+          "テキストやファイルをBase16（Hex）にエンコードし、データ転送、デバッグ、Web開発に利用。",
+      },
+      ko: {
+        name: "Base16 인코더",
+        description:
+          "텍스트나 파일을 Base16(Hex)로 인코딩하여 데이터 전송, 디버깅 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base16",
+        description:
+          "Kod teks atau fail ke Base16 (Hex) untuk penghantaran data, penyahpepijatan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base16-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base16 (Hex) voor gegevensoverdracht, debuggen en webontwikkeling.",
+      },
+      no: {
+        name: "Base16-koder",
+        description:
+          "Kod tekst eller filer til Base16 (Hex) for dataoverføring, feilsøking og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base16",
+        description:
+          "Koduj tekst lub pliki do Base16 (Hex) w celu transmisji danych, debugowania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base16",
+        description:
+          "Codifica texto ou arquivos em Base16 (Hex) para transmissão de dados, depuração e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base16-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base16 (Hex) для передачи данных, отладки и веб-разработки.",
+      },
+      sv: {
+        name: "Base16-kodare",
+        description:
+          "Koda text eller filer till Base16 (Hex) för dataöverföring, felsökning och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base16",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base16 (Hex) สำหรับการส่งข้อมูล การดีบัก และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base16 Kodlayıcı",
+        description:
+          "Veri iletimi, hata ayıklama ve web geliştirme için metni veya dosyaları Base16 (Hex) olarak kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base16",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base16 (Hex) cho truyền dữ liệu, gỡ lỗi và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base16 编码器",
+        description:
+          "将文本或文件编码为 Base16（Hex），用于数据传输、调试和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base16 編碼器",
+        description:
+          "將文字或檔案編碼為 Base16（Hex），用於資料傳輸、除錯和 Web 開發。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",
@@ -9869,6 +10001,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Base16 解碼器",
         description:
           "將 Base16（Hex）文字或檔案解碼為原始位元組，用於檢視、測試和工具處理。",
+      },
+    },
+  },
+  "base16-encoder": {
+    slug: "base16-encoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base16",
+      "hex",
+      "hexadecimal",
+      "encode",
+      "encoder",
+      "binary",
+      "text",
+      "file",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base16",
+        description:
+          "ترميز النص أو الملفات إلى Base16 (Hex) لنقل البيانات وتصحيح الأخطاء وتطوير الويب.",
+      },
+      de: {
+        name: "Base16-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base16 (Hex) für Datenübertragung, Debugging und Webentwicklung.",
+      },
+      en: {
+        name: "Base16 Encoder",
+        description:
+          "Encode text or files to Base16 (Hex) for data transport, debugging, and web development.",
+      },
+      es: {
+        name: "Codificador Base16",
+        description:
+          "Codifica texto o archivos a Base16 (Hex) para transmisión de datos, depuración y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base16",
+        description:
+          "Encode du texte ou des fichiers en Base16 (Hex) pour la transmission de données, le débogage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base16",
+        description:
+          "מקודד טקסט או קבצים ל-Base16 (Hex) להעברת נתונים, ניפוי שגיאות ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base16 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base16 (Hex) में एनकोड करें ताकि डेटा ट्रांसमिशन, डीबगिंग और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base16",
+        description:
+          "Encode teks atau file ke Base16 (Hex) untuk transmisi data, debugging, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base16",
+        description:
+          "Codifica testo o file in Base16 (Hex) per trasmissione dati, debug e sviluppo web.",
+      },
+      ja: {
+        name: "Base16 エンコーダー",
+        description:
+          "テキストやファイルをBase16（Hex）にエンコードし、データ転送、デバッグ、Web開発に利用。",
+      },
+      ko: {
+        name: "Base16 인코더",
+        description:
+          "텍스트나 파일을 Base16(Hex)로 인코딩하여 데이터 전송, 디버깅 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base16",
+        description:
+          "Kod teks atau fail ke Base16 (Hex) untuk penghantaran data, penyahpepijatan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base16-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base16 (Hex) voor gegevensoverdracht, debuggen en webontwikkeling.",
+      },
+      no: {
+        name: "Base16-koder",
+        description:
+          "Kod tekst eller filer til Base16 (Hex) for dataoverføring, feilsøking og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base16",
+        description:
+          "Koduj tekst lub pliki do Base16 (Hex) w celu transmisji danych, debugowania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base16",
+        description:
+          "Codifica texto ou arquivos em Base16 (Hex) para transmissão de dados, depuração e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base16-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base16 (Hex) для передачи данных, отладки и веб-разработки.",
+      },
+      sv: {
+        name: "Base16-kodare",
+        description:
+          "Koda text eller filer till Base16 (Hex) för dataöverföring, felsökning och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base16",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base16 (Hex) สำหรับการส่งข้อมูล การดีบัก และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base16 Kodlayıcı",
+        description:
+          "Veri iletimi, hata ayıklama ve web geliştirme için metni veya dosyaları Base16 (Hex) olarak kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base16",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base16 (Hex) cho truyền dữ liệu, gỡ lỗi và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base16 编码器",
+        description:
+          "将文本或文件编码为 Base16（Hex），用于数据传输、调试和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base16 編碼器",
+        description:
+          "將文字或檔案編碼為 Base16（Hex），用於資料傳輸、除錯和 Web 開發。",
       },
     },
   },
