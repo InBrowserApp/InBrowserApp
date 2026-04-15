@@ -1,6 +1,7 @@
-import { useState, type DragEvent } from "react"
+import { useRef, useState, type DragEvent } from "react"
 
 import { Badge } from "@workspace/ui/components/ui/badge"
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -53,6 +54,7 @@ export function UploadCard({
   sourcePreviewUrl,
 }: UploadCardProps) {
   const [isDraggingOver, setIsDraggingOver] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   function handleDragLeave() {
     setIsDraggingOver(false)
@@ -68,6 +70,10 @@ export function UploadCard({
     event.preventDefault()
     setIsDraggingOver(false)
     onFilesSelected(Array.from(event.dataTransfer.files))
+  }
+
+  function handleOpenFilePicker() {
+    inputRef.current?.click()
   }
 
   return (
@@ -113,20 +119,25 @@ export function UploadCard({
               ) : null}
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm">
-              <label
-                className="cursor-pointer text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                htmlFor={inputId}
+            <div className="flex flex-wrap items-center gap-2">
+              <Button
+                className="h-auto px-0 text-muted-foreground hover:bg-transparent hover:text-foreground"
+                onClick={handleOpenFilePicker}
+                size="sm"
+                type="button"
+                variant="ghost"
               >
                 {messages.changeFileLabel}
-              </label>
-              <button
-                className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
+              </Button>
+              <Button
+                className="h-auto px-0 text-muted-foreground hover:bg-transparent hover:text-foreground"
                 onClick={onRemoveFile}
+                size="sm"
                 type="button"
+                variant="ghost"
               >
                 {messages.removeFileLabel}
-              </button>
+              </Button>
             </div>
           </>
         ) : (
@@ -163,6 +174,7 @@ export function UploadCard({
           className="sr-only"
           data-testid="svg-to-image-input"
           id={inputId}
+          ref={inputRef}
           onChange={(event) => {
             onFilesSelected(Array.from(event.target.files ?? []))
             event.target.value = ""
