@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Kreditkartennummer",
+  "placeholder": "Kreditkartennummer eingeben",
+  "valid": "Gültige Kartennummer",
+  "invalid": "Ungültige Kartennummer",
+  "invalidLuhn": "Ungültige Prüfsumme (Luhn-Algorithmus fehlgeschlagen)",
+  "invalidLength": "Ungültige Kartennummernlänge",
+  "result": "Validierungsergebnis",
+  "brand": "Kartenmarke",
+  "unknown": "Unbekannt",
+  "formattedNumber": "Formatierte Nummer",
+  "luhnCheck": "Luhn-Prüfung",
+  "lengthCheck": "Längenprüfung",
+  "digits": "Gesamtziffern",
+  "cvcLength": "CVC-Länge",
+  "digitsLabel": "Ziffern",
+  "pass": "Bestanden",
+  "fail": "Fehlgeschlagen",
+  "expectedLength": "erwartet: {lengths}",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert"
+}

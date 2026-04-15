@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Credit Card Number",
+  "placeholder": "Enter credit card number",
+  "valid": "Valid card number",
+  "invalid": "Invalid card number",
+  "invalidLuhn": "Invalid checksum (Luhn algorithm failed)",
+  "invalidLength": "Invalid card number length",
+  "result": "Validation Result",
+  "brand": "Card Brand",
+  "unknown": "Unknown",
+  "formattedNumber": "Formatted Number",
+  "luhnCheck": "Luhn Check",
+  "lengthCheck": "Length Check",
+  "digits": "Total Digits",
+  "cvcLength": "CVC Length",
+  "digitsLabel": "digits",
+  "pass": "Pass",
+  "fail": "Fail",
+  "expectedLength": "expected: {lengths}",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied"
+}

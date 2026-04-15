@@ -1,0 +1,4 @@
+{
+  "name": "Kreditkortsvalidator",
+  "description": "Validera kreditkortsnummer med Luhn-algoritmen och identifiera kortmärket"
+}

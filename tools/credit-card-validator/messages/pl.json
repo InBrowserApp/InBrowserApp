@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Numer Karty Kredytowej",
+  "placeholder": "Wprowadź numer karty kredytowej",
+  "valid": "Prawidłowy numer karty",
+  "invalid": "Nieprawidłowy numer karty",
+  "invalidLuhn": "Nieprawidłowa suma kontrolna (algorytm Luhna nie powiódł się)",
+  "invalidLength": "Nieprawidłowa długość numeru karty",
+  "result": "Wynik Walidacji",
+  "brand": "Marka Karty",
+  "unknown": "Nieznany",
+  "formattedNumber": "Sformatowany Numer",
+  "luhnCheck": "Sprawdzenie Luhna",
+  "lengthCheck": "Sprawdzenie Długości",
+  "digits": "Całkowita Liczba Cyfr",
+  "cvcLength": "Długość CVC",
+  "digitsLabel": "cyfr",
+  "pass": "Zaliczony",
+  "fail": "Niezaliczony",
+  "expectedLength": "oczekiwane: {lengths}",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano"
+}

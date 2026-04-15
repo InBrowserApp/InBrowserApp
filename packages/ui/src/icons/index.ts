@@ -8,6 +8,7 @@ export {
   CaseSensitive,
   Check,
   Clock3,
+  CreditCard,
   Copy,
   Download,
   Eye,

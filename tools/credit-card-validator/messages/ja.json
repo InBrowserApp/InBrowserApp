@@ -1,0 +1,22 @@
+{
+  "cardNumber": "クレジットカード番号",
+  "placeholder": "クレジットカード番号を入力",
+  "valid": "有効なカード番号",
+  "invalid": "無効なカード番号",
+  "invalidLuhn": "チェックサムが無効 (Luhnアルゴリズム失敗)",
+  "invalidLength": "カード番号の長さが無効",
+  "result": "検証結果",
+  "brand": "カードブランド",
+  "unknown": "不明",
+  "formattedNumber": "フォーマット番号",
+  "luhnCheck": "Luhn チェック",
+  "lengthCheck": "長さチェック",
+  "digits": "総桁数",
+  "cvcLength": "CVC 桁数",
+  "digitsLabel": "桁",
+  "pass": "合格",
+  "fail": "不合格",
+  "expectedLength": "期待値: {lengths}",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました"
+}

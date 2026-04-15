@@ -1,0 +1,4 @@
+{
+  "name": "Validador de Cartão de Crédito",
+  "description": "Valida números de cartão de crédito usando o algoritmo de Luhn e identifica a bandeira"
+}

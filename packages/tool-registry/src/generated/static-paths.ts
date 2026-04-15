@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "credit-card-validator",
+    language: "ar",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "de",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "en",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "es",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "fr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "he",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "hi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "id",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "it",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ja",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ko",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ms",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "nl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "no",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pt",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ru",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "sv",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "th",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "tr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "vi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-to-json-converter",
     language: "ar",
   },

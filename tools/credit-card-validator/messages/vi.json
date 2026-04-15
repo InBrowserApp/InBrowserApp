@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Số Thẻ Tín Dụng",
+  "placeholder": "Nhập số thẻ tín dụng",
+  "valid": "Số thẻ hợp lệ",
+  "invalid": "Số thẻ không hợp lệ",
+  "invalidLuhn": "Checksum không hợp lệ (thuật toán Luhn thất bại)",
+  "invalidLength": "Độ dài số thẻ không hợp lệ",
+  "result": "Kết Quả Xác Thực",
+  "brand": "Thương Hiệu Thẻ",
+  "unknown": "Không xác định",
+  "formattedNumber": "Số Đã Định Dạng",
+  "luhnCheck": "Kiểm Tra Luhn",
+  "lengthCheck": "Kiểm Tra Độ Dài",
+  "digits": "Tổng Số Chữ Số",
+  "cvcLength": "Độ Dài CVC",
+  "digitsLabel": "chữ số",
+  "pass": "Đạt",
+  "fail": "Không đạt",
+  "expectedLength": "dự kiến: {lengths}",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép"
+}

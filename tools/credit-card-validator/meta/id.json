@@ -1,0 +1,4 @@
+{
+  "name": "Validator Kartu Kredit",
+  "description": "Validasi nomor kartu kredit menggunakan algoritma Luhn dan identifikasi merek kartu"
+}

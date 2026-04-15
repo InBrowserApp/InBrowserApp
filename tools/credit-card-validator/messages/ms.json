@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Nombor Kad Kredit",
+  "placeholder": "Masukkan nombor kad kredit",
+  "valid": "Nombor kad sah",
+  "invalid": "Nombor kad tidak sah",
+  "invalidLuhn": "Checksum tidak sah (algoritma Luhn gagal)",
+  "invalidLength": "Panjang nombor kad tidak sah",
+  "result": "Keputusan Pengesahan",
+  "brand": "Jenama Kad",
+  "unknown": "Tidak diketahui",
+  "formattedNumber": "Nombor Berformat",
+  "luhnCheck": "Semakan Luhn",
+  "lengthCheck": "Semakan Panjang",
+  "digits": "Jumlah Digit",
+  "cvcLength": "Panjang CVC",
+  "digitsLabel": "digit",
+  "pass": "Lulus",
+  "fail": "Gagal",
+  "expectedLength": "dijangka: {lengths}",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}
