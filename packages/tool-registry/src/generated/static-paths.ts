@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "html-entity-encoder-decoder",
+    language: "ar",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "de",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "en",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "es",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "fr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "he",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "hi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "id",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "it",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ja",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ko",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ms",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "nl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "no",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pt",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ru",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "sv",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "th",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "tr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "vi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },

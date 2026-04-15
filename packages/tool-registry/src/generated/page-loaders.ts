@@ -20,6 +20,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
+  "html-entity-encoder-decoder": () =>
+    import("@tool/html-entity-encoder-decoder/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
