@@ -15,6 +15,7 @@ import {
 
 describe("ksuid", () => {
   test("validates unix seconds against the KSUID epoch range", () => {
+    expect(isValidKsuidUnixSeconds(Number.NaN)).toBe(false)
     expect(isValidKsuidUnixSeconds(KSUID_EPOCH_SECONDS - 1)).toBe(false)
     expect(isValidKsuidUnixSeconds(KSUID_EPOCH_SECONDS)).toBe(true)
     expect(
@@ -40,6 +41,13 @@ describe("ksuid", () => {
     expect(Array.from(bytes.slice(4))).toEqual(Array.from(payload))
   })
 
+  test("rejects invalid timestamps and payload lengths", () => {
+    expect(() => createKsuidBytes(KSUID_EPOCH_SECONDS - 1)).toThrow(RangeError)
+    expect(() =>
+      createKsuidBytes(KSUID_EPOCH_SECONDS, new Uint8Array(15))
+    ).toThrow("KSUID requires 16 random bytes")
+  })
+
   test("encodes deterministic KSUIDs with a fixed payload", () => {
     const payload = new Uint8Array(16)
     const ksuid = generateKsuid(KSUID_EPOCH_SECONDS, payload)
@@ -48,6 +56,12 @@ describe("ksuid", () => {
     expect(ksuid).toHaveLength(KSUID_LENGTH)
     expect(encodeKsuid(createKsuidBytes(KSUID_EPOCH_SECONDS, payload))).toBe(
       ksuid
+    )
+  })
+
+  test("rejects KSUID byte arrays with the wrong length", () => {
+    expect(() => encodeKsuid(new Uint8Array(19))).toThrow(
+      "KSUID requires 20 bytes"
     )
   })
 

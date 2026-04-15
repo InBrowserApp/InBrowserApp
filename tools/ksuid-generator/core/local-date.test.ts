@@ -16,6 +16,9 @@ describe("local-date", () => {
     expect(parseDateTimeLocalInput("2026-04-15T08:30:45")).toBe(
       new Date(2026, 3, 15, 8, 30, 45, 0).getTime()
     )
+    expect(parseDateTimeLocalInput("2026-04-15T08:30:45.123")).toBe(
+      new Date(2026, 3, 15, 8, 30, 45, 123).getTime()
+    )
   })
 
   test("rejects invalid datetime-local values", () => {

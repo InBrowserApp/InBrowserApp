@@ -39,13 +39,7 @@ function bytesToBigInt(bytes: Uint8Array) {
 
 function encodeBase62(value: bigint) {
   if (value === 0n) {
-    const char = KSUID_ALPHABET[0]
-
-    if (!char) {
-      throw new Error("Failed to encode KSUID base62 value")
-    }
-
-    return char
+    return KSUID_ALPHABET[0]!
   }
 
   let result = ""
@@ -54,13 +48,7 @@ function encodeBase62(value: bigint) {
 
   while (current > 0n) {
     const index = Number(current % base)
-    const char = KSUID_ALPHABET[index]
-
-    if (!char) {
-      throw new Error("Failed to encode KSUID base62 value")
-    }
-
-    result = char + result
+    result = KSUID_ALPHABET[index]! + result
     current /= base
   }
 
