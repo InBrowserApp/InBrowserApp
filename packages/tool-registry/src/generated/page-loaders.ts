@@ -39,6 +39,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
+  "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

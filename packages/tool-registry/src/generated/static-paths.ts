@@ -2946,6 +2946,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "md5-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "nanoid-generator",
     language: "ar",
   },

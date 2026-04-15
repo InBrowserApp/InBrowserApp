@@ -39,6 +39,7 @@
     "@tool/json-to-yaml-converter": "workspace:*",
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/list-comparer": "workspace:*",
+    "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
