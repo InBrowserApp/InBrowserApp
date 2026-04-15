@@ -104,6 +104,8 @@ describe("NanoidGeneratorClient", () => {
     })
 
     expect(URL.createObjectURL).toHaveBeenCalled()
+    expect(getResultsTextarea().className).toContain("max-h-[min(32rem,60vh)]")
+    expect(getResultsTextarea().className).toContain("overflow-y-auto")
   })
 
   test("switches to the numeric alphabet preset", async () => {
