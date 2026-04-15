@@ -27,6 +27,7 @@ catalog:
   "@astrojs/sitemap": ^3.7.2
   "@commitlint/cli": ^20.5.0
   "@commitlint/config-conventional": ^20.5.0
+  "@noble/hashes": ^2.2.0
   "@paralleldrive/cuid2": ^3.3.0
   "@types/crypto-js": ^4.2.2
   "@types/jmespath": ^0.15.2

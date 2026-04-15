@@ -64,6 +64,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
     import("@tool/sha256-hash-text-or-file/page"),
+  "sha3-224-hash-text-or-file": () =>
+    import("@tool/sha3-224-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
     import("@tool/sha384-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
