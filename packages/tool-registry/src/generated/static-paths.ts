@@ -3314,95 +3314,95 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ar",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "de",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "en",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "es",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "fr",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "he",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "hi",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "id",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "it",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ja",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ko",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ms",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "nl",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "no",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "pl",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "pt",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ru",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "sv",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "th",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "tr",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "vi",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "zh-CN",
   },
   {
-    slug: "mac-to-ipv6-link-local",
+    slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "zh-TW",
   },
   {
