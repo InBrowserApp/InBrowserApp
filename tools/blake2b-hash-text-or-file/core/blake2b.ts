@@ -115,4 +115,4 @@ export {
   formatBlake2bDigest,
   hashBlake2b,
 }
-export type { Blake2bDigest, Blake2bHashOptions }
+export type { Blake2bDigest }
