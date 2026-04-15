@@ -1,10 +1,12 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -29,22 +31,22 @@ function NanoidResultsCard({
   onRegenerate,
 }: NanoidResultsCardProps) {
   return (
-    <Card>
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.resultsTitle}</CardTitle>
         <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         <Textarea
           aria-label={messages.resultsTitle}
           value={output}
           readOnly
           rows={14}
           placeholder={messages.resultsPlaceholder}
-          className="min-h-80 resize-y font-mono text-sm"
+          className="max-h-[min(32rem,60vh)] min-h-80 resize-y overflow-y-auto font-mono text-sm"
         />
-      </CardContent>
-      <CardFooter className="justify-between gap-3 border-t">
+      </ToolPanelCardContent>
+      <ToolPanelCardFooter className="justify-between gap-3 border-t">
         <div className="flex flex-wrap items-center gap-2">
           <ToolCopyButton
             value={output}
@@ -73,8 +75,8 @@ function NanoidResultsCard({
           <RefreshCcw data-icon="inline-start" />
           {messages.regenerateLabel}
         </Button>
-      </CardFooter>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 

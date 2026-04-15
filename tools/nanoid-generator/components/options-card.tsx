@@ -172,26 +172,28 @@ function NanoidOptionsCard({
           </Field>
         ) : null}
 
-        <div className="grid gap-4 rounded-xl border border-dashed border-border/80 bg-muted/30 p-4 sm:grid-cols-2">
-          <div className="space-y-1">
-            <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-              {messages.alphabetUniqueLabel}
-            </p>
-            <p className="font-mono text-2xl leading-none">
-              {alphabetMetrics.uniqueCount}
-            </p>
+        {alphabetPreset === "custom" ? (
+          <div className="grid gap-4 rounded-xl border border-dashed border-border/80 bg-muted/30 p-4 sm:grid-cols-2">
+            <div className="space-y-1">
+              <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                {messages.alphabetUniqueLabel}
+              </p>
+              <p className="font-mono text-2xl leading-none">
+                {alphabetMetrics.uniqueCount}
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                {messages.alphabetDuplicatesLabel}
+              </p>
+              <p className="font-mono text-sm leading-6 break-all">
+                {alphabetMetrics.duplicates.length > 0
+                  ? alphabetMetrics.duplicates.join(" ")
+                  : messages.alphabetNoDuplicatesLabel}
+              </p>
+            </div>
           </div>
-          <div className="space-y-1">
-            <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-              {messages.alphabetDuplicatesLabel}
-            </p>
-            <p className="font-mono text-sm leading-6 break-all">
-              {alphabetMetrics.duplicates.length > 0
-                ? alphabetMetrics.duplicates.join(" ")
-                : messages.alphabetNoDuplicatesLabel}
-            </p>
-          </div>
-        </div>
+        ) : null}
 
         {alphabetError ? (
           <Alert variant="destructive">

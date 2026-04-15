@@ -1,0 +1,4 @@
+{
+  "name": "Hash MD5 de Texto o Archivo",
+  "description": "Genera hashes MD5 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad."
+}

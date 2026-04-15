@@ -1784,6 +1784,122 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "email-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["email", "validator", "format", "address"],
+    locales: {
+      ar: {
+        name: "مدقق البريد الإلكتروني",
+        description:
+          "يتحقق من عناوين البريد الإلكتروني عبر فحوصات الصياغة والطول والنطاق.",
+      },
+      de: {
+        name: "E-Mail-Validator",
+        description:
+          "Validiert E-Mail-Adressen mit Syntax-, Längen- und Domain-Prüfungen.",
+      },
+      en: {
+        name: "Email Validator",
+        description:
+          "Validate email addresses with syntax, length, and domain checks.",
+      },
+      es: {
+        name: "Validador de correo electrónico",
+        description:
+          "Valida direcciones de correo electrónico con comprobaciones de sintaxis, longitud y dominio.",
+      },
+      fr: {
+        name: "Validateur d'e-mail",
+        description:
+          "Valide les adresses e-mail avec des contrôles de syntaxe, de longueur et de domaine.",
+      },
+      he: {
+        name: 'מאמת דוא"ל',
+        description: 'מאמת כתובות דוא"ל עם בדיקות תחביר, אורך ודומיין.',
+      },
+      hi: {
+        name: "ईमेल सत्यापनकर्ता",
+        description: "ईमेल पतों को सिंटैक्स, लंबाई और डोमेन जांच के साथ सत्यापित करता है।",
+      },
+      id: {
+        name: "Validator email",
+        description:
+          "Memvalidasi alamat email dengan pemeriksaan sintaks, panjang, dan domain.",
+      },
+      it: {
+        name: "Validatore email",
+        description:
+          "Convalida indirizzi email con controlli di sintassi, lunghezza e dominio.",
+      },
+      ja: {
+        name: "メール検証",
+        description: "メールアドレスを構文・長さ・ドメインで検証します。",
+      },
+      ko: {
+        name: "이메일 검증기",
+        description: "이메일 주소를 문법, 길이, 도메인 규칙으로 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah e-mel",
+        description:
+          "Sahkan alamat e-mel dengan semakan sintaks, panjang dan domain.",
+      },
+      nl: {
+        name: "E-mail-validator",
+        description:
+          "Valideert e-mailadressen met syntax-, lengte- en domeincontroles.",
+      },
+      no: {
+        name: "E-post-validerer",
+        description:
+          "Validerer e-postadresser med syntaks-, lengde- og domenesjekker.",
+      },
+      pl: {
+        name: "Walidator e-mail",
+        description:
+          "Waliduje adresy e-mail z kontrolą składni, długości i domeny.",
+      },
+      pt: {
+        name: "Validador de e-mail",
+        description:
+          "Valida endereços de e-mail com verificações de sintaxe, comprimento e domínio.",
+      },
+      ru: {
+        name: "Валидатор электронной почты",
+        description:
+          "Проверяет адреса электронной почты по синтаксису, длине и домену.",
+      },
+      sv: {
+        name: "E-post-validerare",
+        description:
+          "Validerar e-postadresser med syntax-, längd- och domänkontroller.",
+      },
+      th: {
+        name: "ตัวตรวจสอบอีเมล",
+        description: "ตรวจสอบอีเมลด้วยการตรวจไวยากรณ์ ความยาว และโดเมน",
+      },
+      tr: {
+        name: "E-posta Doğrulayıcı",
+        description:
+          "E-posta adreslerini sözdizimi, uzunluk ve alan adı kontrolleriyle doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực email",
+        description:
+          "Xác thực địa chỉ email với kiểm tra cú pháp, độ dài và tên miền.",
+      },
+      "zh-CN": {
+        name: "邮箱验证器",
+        description: "验证邮箱地址，检查语法、长度和域名。",
+      },
+      "zh-TW": {
+        name: "電子郵件驗證器",
+        description: "驗證電子郵件地址，檢查語法、長度與網域。",
+      },
+    },
+  },
+  {
     slug: "gitignore-generator",
     category: "developer",
     icon: "file-text",
@@ -2637,6 +2753,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "IMEI 驗證器",
         description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
+      },
+    },
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    category: "network",
+    icon: "network",
+    tags: ["ipv6", "mac", "eui-64", "link-local", "network", "converter"],
+    locales: {
+      ar: {
+        name: "محول عنوان IPv6 إلى عنوان MAC",
+        description:
+          "يحول عناوين IPv6 إلى عناوين MAC. أدخل أي عنوان IPv6 لاستخراج عنوان MAC المقابل فوراً.",
+      },
+      de: {
+        name: "IPv6-Adresse zu MAC-Adresse Konverter",
+        description:
+          "Konvertiert IPv6-Adressen zu MAC-Adressen. Geben Sie eine beliebige IPv6-Adresse ein, um die entsprechende MAC-Adresse sofort zu extrahieren.",
+      },
+      en: {
+        name: "IPv6 Address to MAC Address Converter",
+        description:
+          "Convert IPv6 addresses to MAC addresses. Enter any IPv6 address to extract the corresponding MAC address instantly.",
+      },
+      es: {
+        name: "Convertidor de dirección IPv6 a dirección MAC",
+        description:
+          "Convierte direcciones IPv6 a direcciones MAC. Introduce cualquier dirección IPv6 para extraer la dirección MAC correspondiente al instante.",
+      },
+      fr: {
+        name: "Convertisseur d'adresse IPv6 en adresse MAC",
+        description:
+          "Convertit les adresses IPv6 en adresses MAC. Saisissez n'importe quelle adresse IPv6 pour extraire l'adresse MAC correspondante instantanément.",
+      },
+      he: {
+        name: "ממיר כתובת IPv6 לכתובת MAC",
+        description:
+          "ממיר כתובות IPv6 לכתובות MAC. הזן כל כתובת IPv6 כדי לחלץ את כתובת ה-MAC המתאימה מיידית.",
+      },
+      hi: {
+        name: "IPv6 पते से MAC पता कनवर्टर",
+        description:
+          "IPv6 पतों को MAC पतों में परिवर्तित करता है। किसी भी IPv6 पते को दर्ज करें और संबंधित MAC पता तुरंत निकालें।",
+      },
+      id: {
+        name: "Konverter alamat IPv6 ke alamat MAC",
+        description:
+          "Mengonversi alamat IPv6 menjadi alamat MAC. Masukkan alamat IPv6 apa pun untuk mengekstrak alamat MAC yang sesuai secara instan.",
+      },
+      it: {
+        name: "Convertitore da indirizzo IPv6 a indirizzo MAC",
+        description:
+          "Converte indirizzi IPv6 in indirizzi MAC. Inserisci qualsiasi indirizzo IPv6 per estrarre il corrispondente indirizzo MAC istantaneamente.",
+      },
+      ja: {
+        name: "IPv6 アドレスから MAC アドレスへの変換ツール",
+        description:
+          "IPv6 アドレスを MAC アドレスに変換します。任意の IPv6 アドレスを入力すると、対応する MAC アドレスを即座に抽出できます。",
+      },
+      ko: {
+        name: "IPv6 주소를 MAC 주소로 변환",
+        description:
+          "IPv6 주소를 MAC 주소로 변환합니다. 임의의 IPv6 주소를 입력하여 해당하는 MAC 주소를 즉시 추출하세요.",
+      },
+      ms: {
+        name: "Penukar alamat IPv6 kepada alamat MAC",
+        description:
+          "Menukar alamat IPv6 kepada alamat MAC. Masukkan mana-mana alamat IPv6 untuk mengekstrak alamat MAC yang berkaitan dengan serta-merta.",
+      },
+      nl: {
+        name: "IPv6-adres naar MAC-adres-converter",
+        description:
+          "Converteert IPv6-adressen naar MAC-adressen. Voer een willekeurig IPv6-adres in om het overeenkomstige MAC-adres direct te extraheren.",
+      },
+      no: {
+        name: "Konverterer for IPv6-adresse til MAC-adresse",
+        description:
+          "Konverterer IPv6-adresser til MAC-adresser. Skriv inn hvilken som helst IPv6-adresse for å trekke ut den tilsvarende MAC-adressen øyeblikkelig.",
+      },
+      pl: {
+        name: "Konwerter adresu IPv6 na adres MAC",
+        description:
+          "Konwertuje adresy IPv6 na adresy MAC. Wprowadź dowolny adres IPv6, aby natychmiast wyodrębnić odpowiadający adres MAC.",
+      },
+      pt: {
+        name: "Conversor de endereço IPv6 para endereço MAC",
+        description:
+          "Converte endereços IPv6 em endereços MAC. Digite qualquer endereço IPv6 para extrair o endereço MAC correspondente instantaneamente.",
+      },
+      ru: {
+        name: "Конвертер адреса IPv6 в MAC-адрес",
+        description:
+          "Преобразует IPv6-адреса в MAC-адреса. Введите любой IPv6-адрес, чтобы мгновенно извлечь соответствующий MAC-адрес.",
+      },
+      sv: {
+        name: "Konverterare för IPv6-adress till MAC-adress",
+        description:
+          "Konverterar IPv6-adresser till MAC-adresser. Ange valfri IPv6-adress för att extrahera motsvarande MAC-adress omedelbart.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ IPv6 เป็นที่อยู่ MAC",
+        description:
+          "แปลงที่อยู่ IPv6 เป็นที่อยู่ MAC ป้อนที่อยู่ IPv6 ใดก็ได้เพื่อสกัดที่อยู่ MAC ที่สอดคล้องกันทันที",
+      },
+      tr: {
+        name: "IPv6 Adresinden MAC Adresine Dönüştürücü",
+        description:
+          "IPv6 adreslerini MAC adreslerine dönüştürür. Herhangi bir IPv6 adresi girin ve karşılık gelen MAC adresini anında çıkarın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ IPv6 sang địa chỉ MAC",
+        description:
+          "Chuyển đổi địa chỉ IPv6 thành địa chỉ MAC. Nhập bất kỳ địa chỉ IPv6 nào để trích xuất địa chỉ MAC tương ứng ngay lập tức.",
+      },
+      "zh-CN": {
+        name: "IPv6 地址转 MAC 地址转换器",
+        description:
+          "将 IPv6 地址转换为 MAC 地址。输入任何 IPv6 地址，立即提取对应的 MAC 地址。",
+      },
+      "zh-TW": {
+        name: "IPv6 位址轉 MAC 位址轉換器",
+        description:
+          "將 IPv6 位址轉換為 MAC 位址。輸入任何 IPv6 位址，立即提取對應的 MAC 位址。",
       },
     },
   },
@@ -3949,6 +4188,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ksuid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "ksuid",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+      "uuid",
+      "ulid",
+    ],
+    locales: {
+      ar: {
+        name: "مولد KSUID",
+        description:
+          "أنشئ معرفات فريدة قابلة للفرز (KSUID) في المتصفح مع طابع زمني اختياري.",
+      },
+      de: {
+        name: "KSUID-Generator",
+        description:
+          "Erzeuge sortierbare eindeutige Kennungen (KSUID) im Browser mit optionalem Zeitstempel.",
+      },
+      en: {
+        name: "KSUID Generator",
+        description:
+          "Generate K-Sortable Unique Identifiers (KSUIDs) in-browser with optional custom timestamps.",
+      },
+      es: {
+        name: "Generador de KSUID",
+        description:
+          "Genera identificadores únicos ordenables (KSUID) en el navegador con marca de tiempo opcional.",
+      },
+      fr: {
+        name: "Générateur de KSUID",
+        description:
+          "Générez des identifiants uniques triables (KSUID) dans le navigateur avec horodatage optionnel.",
+      },
+      he: {
+        name: "מחולל KSUID",
+        description:
+          "צור מזהים ייחודיים ניתנים למיון (KSUID) בדפדפן עם חותמת זמן אופציונלית.",
+      },
+      hi: {
+        name: "KSUID जनरेटर",
+        description:
+          "ब्राउज़र में KSUID (क्रमबद्ध होने योग्य यूनिक आईडी) बनाएँ, वैकल्पिक टाइमस्टैम्प के साथ।",
+      },
+      id: {
+        name: "Generator KSUID",
+        description:
+          "Hasilkan pengenal unik yang dapat diurutkan (KSUID) di browser dengan cap waktu opsional.",
+      },
+      it: {
+        name: "Generatore di KSUID",
+        description:
+          "Genera identificatori univoci ordinabili (KSUID) nel browser con timestamp opzionale.",
+      },
+      ja: {
+        name: "KSUIDジェネレーター",
+        description:
+          "ブラウザ内でKSUID（並べ替え可能な一意ID）を生成。任意のタイムスタンプに対応。",
+      },
+      ko: {
+        name: "KSUID 생성기",
+        description:
+          "브라우저에서 KSUID(정렬 가능한 고유 ID)를 생성하고 선택적으로 타임스탬프를 지정합니다.",
+      },
+      ms: {
+        name: "Penjana KSUID",
+        description:
+          "Jana pengecam unik boleh diisih (KSUID) dalam pelayar dengan cap masa pilihan.",
+      },
+      nl: {
+        name: "KSUID-generator",
+        description:
+          "Genereer sorteerbare unieke identifiers (KSUID) in de browser met optionele tijdstempel.",
+      },
+      no: {
+        name: "KSUID-generator",
+        description:
+          "Generer sorterbare unike identifikatorer (KSUID) i nettleseren med valgfri tidsstempel.",
+      },
+      pl: {
+        name: "Generator KSUID",
+        description:
+          "Generuj sortowalne unikalne identyfikatory (KSUID) w przeglądarce z opcjonalnym znacznikiem czasu.",
+      },
+      pt: {
+        name: "Gerador de KSUID",
+        description:
+          "Gere identificadores únicos ordenáveis (KSUID) no navegador com carimbo de data/hora opcional.",
+      },
+      ru: {
+        name: "Генератор KSUID",
+        description:
+          "Создавайте сортируемые уникальные идентификаторы (KSUID) в браузере с необязательной временной меткой.",
+      },
+      sv: {
+        name: "KSUID-generator",
+        description:
+          "Skapa sorterbara unika identifierare (KSUID) i webbläsaren med valfri tidsstämpel.",
+      },
+      th: {
+        name: "ตัวสร้าง KSUID",
+        description:
+          "สร้างตัวระบุไม่ซ้ำที่จัดเรียงได้ (KSUID) ในเบราว์เซอร์ พร้อมตัวประทับเวลาแบบเลือกได้.",
+      },
+      tr: {
+        name: "KSUID Oluşturucu",
+        description:
+          "Tarayıcıda sıralanabilir benzersiz tanımlayıcılar (KSUID) üretin, isteğe bağlı zaman damgasıyla.",
+      },
+      vi: {
+        name: "Trình tạo KSUID",
+        description:
+          "Tạo định danh duy nhất có thể sắp xếp (KSUID) trong trình duyệt với dấu thời gian tùy chọn.",
+      },
+      "zh-CN": {
+        name: "KSUID 生成器",
+        description:
+          "在浏览器内生成 KSUID（可排序唯一标识），支持自定义时间戳。",
+      },
+      "zh-TW": {
+        name: "KSUID 產生器",
+        description:
+          "在瀏覽器內產生 KSUID（可排序的唯一識別），支援自訂時間戳。",
+      },
+    },
+  },
+  {
     slug: "list-comparer",
     category: "text",
     icon: "file-text",
@@ -4068,6 +4441,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "列表比較",
         description:
           "比較兩份列表，找出重疊項、差異項與重複項，並匯出你真正要處理的結果集。",
+      },
+    },
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "md5", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة MD5 للنص أو الملف",
+        description:
+          "أنشئ تجزئات MD5 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "MD5-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie MD5-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "MD5 Hash Text or File",
+        description:
+          "Generate MD5 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash MD5 de Texto o Archivo",
+        description:
+          "Genera hashes MD5 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash MD5 de Texte ou Fichier",
+        description:
+          "Générez des hachages MD5 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש MD5 טקסט או קובץ",
+        description:
+          "צור ערכי MD5 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "MD5 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MD5 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash MD5 Teks atau File",
+        description:
+          "Buat hash MD5 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash MD5 di Testo o File",
+        description:
+          "Genera hash MD5 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "MD5 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに MD5 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "MD5 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 MD5 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash MD5 Teks atau Fail",
+        description:
+          "Jana hash MD5 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "MD5-hash tekst of bestand",
+        description:
+          "Genereer MD5-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "MD5-hash tekst eller fil",
+        description:
+          "Generer MD5-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash MD5 tekstu lub pliku",
+        description:
+          "Generuj hashe MD5 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash MD5 de Texto ou Arquivo",
+        description:
+          "Gere hashes MD5 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "MD5-хеш текста или файла",
+        description:
+          "Создавайте MD5-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "MD5-hash text eller fil",
+        description:
+          "Generera MD5-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช MD5 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MD5 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "MD5 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MD5 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash MD5 văn bản hoặc tệp",
+        description:
+          "Tạo hash MD5 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "MD5 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MD5 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "MD5 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
       },
     },
   },
@@ -5303,6 +5799,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "正則測試與取代",
         description:
           "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
+      },
+    },
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "ripemd160",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة RIPEMD-160 للنص أو الملف",
+        description:
+          "إنشاء تجزئة RIPEMD-160 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "RIPEMD-160-Hash für Text oder Datei",
+        description:
+          "Generieren Sie RIPEMD-160-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "RIPEMD-160 Hash Text or File",
+        description:
+          "Generate RIPEMD-160 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash RIPEMD-160 de Texto o Archivo",
+        description:
+          "Genera hash RIPEMD-160 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash RIPEMD-160 de Texte ou Fichier",
+        description:
+          "Générez un hash RIPEMD-160 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש RIPEMD-160 טקסט או קובץ",
+        description:
+          "צור האש RIPEMD-160 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "RIPEMD-160 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए RIPEMD-160 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash RIPEMD-160 Teks atau File",
+        description:
+          "Buat hash RIPEMD-160 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash RIPEMD-160 di Testo o File",
+        description:
+          "Genera hash RIPEMD-160 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "RIPEMD-160 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのRIPEMD-160ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "RIPEMD-160 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 RIPEMD-160 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash RIPEMD-160 Teks atau Fail",
+        description:
+          "Jana hash RIPEMD-160 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "RIPEMD-160-hash tekst of bestand",
+        description:
+          "Genereer RIPEMD-160-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "RIPEMD-160-hash tekst eller fil",
+        description:
+          "Generer RIPEMD-160-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash RIPEMD-160 tekstu lub pliku",
+        description:
+          "Generuj hash RIPEMD-160 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash RIPEMD-160 de Texto ou Arquivo",
+        description:
+          "Gere hash RIPEMD-160 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "RIPEMD-160-хеш текста или файла",
+        description:
+          "Генерируйте RIPEMD-160-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "RIPEMD-160-hash text eller fil",
+        description:
+          "Generera RIPEMD-160-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช RIPEMD-160 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช RIPEMD-160 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "RIPEMD-160 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için RIPEMD-160 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash RIPEMD-160 văn bản hoặc tệp",
+        description:
+          "Tạo hash RIPEMD-160 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "RIPEMD-160 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 RIPEMD-160 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "RIPEMD-160 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 RIPEMD-160 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -6543,6 +7170,110 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "svg-to-image-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "svg", "converter", "png", "jpeg", "webp"],
+    locales: {
+      ar: {
+        name: "محول SVG إلى صورة",
+        description: "حوّل ملفات SVG إلى صور PNG أو JPEG أو WebP",
+      },
+      de: {
+        name: "SVG-zu-Bild-Konverter",
+        description:
+          "Konvertieren Sie SVG-Dateien in PNG-, JPEG- oder WebP-Bilder",
+      },
+      en: {
+        name: "SVG to Image Converter",
+        description: "Convert SVG files to PNG, JPEG, or WebP images",
+      },
+      es: {
+        name: "Convertidor de SVG a imagen",
+        description: "Convierte archivos SVG en imágenes PNG, JPEG o WebP",
+      },
+      fr: {
+        name: "Convertisseur SVG en image",
+        description:
+          "Convertissez des fichiers SVG en images PNG, JPEG ou WebP",
+      },
+      he: {
+        name: "ממיר SVG לתמונה",
+        description: "המר קבצי SVG לתמונות PNG, JPEG או WebP",
+      },
+      hi: {
+        name: "SVG से इमेज कन्वर्टर",
+        description: "SVG फ़ाइलों को PNG, JPEG या WebP छवियों में बदलें",
+      },
+      id: {
+        name: "Konverter SVG ke gambar",
+        description: "Ubah file SVG menjadi gambar PNG, JPEG, atau WebP",
+      },
+      it: {
+        name: "Convertitore da SVG a immagine",
+        description: "Converti file SVG in immagini PNG, JPEG o WebP",
+      },
+      ja: {
+        name: "SVG 画像コンバーター",
+        description: "SVG ファイルを PNG、JPEG、WebP 画像に変換",
+      },
+      ko: {
+        name: "SVG 이미지 변환기",
+        description: "SVG 파일을 PNG, JPEG 또는 WebP 이미지로 변환",
+      },
+      ms: {
+        name: "Penukar SVG ke imej",
+        description: "Tukar fail SVG kepada imej PNG, JPEG atau WebP",
+      },
+      nl: {
+        name: "SVG-naar-afbeelding converter",
+        description:
+          "Converteer SVG-bestanden naar PNG-, JPEG- of WebP-afbeeldingen",
+      },
+      no: {
+        name: "SVG-til-bilde-konverterer",
+        description: "Konverter SVG-filer til PNG-, JPEG- eller WebP-bilder",
+      },
+      pl: {
+        name: "Konwerter SVG na obraz",
+        description: "Konwertuj pliki SVG na obrazy PNG, JPEG lub WebP",
+      },
+      pt: {
+        name: "Conversor de SVG para imagem",
+        description: "Converta arquivos SVG em imagens PNG, JPEG ou WebP",
+      },
+      ru: {
+        name: "Конвертер SVG в изображения",
+        description: "Преобразуйте файлы SVG в изображения PNG, JPEG или WebP",
+      },
+      sv: {
+        name: "SVG-till-bild-konverterare",
+        description: "Konvertera SVG-filer till PNG-, JPEG- eller WebP-bilder",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็นรูปภาพ",
+        description: "แปลงไฟล์ SVG เป็นรูปภาพ PNG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "SVG'den Görüntü Dönüştürücü",
+        description:
+          "SVG dosyalarını PNG, JPEG veya WebP görüntülerine dönüştürün",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang ảnh",
+        description: "Chuyển tệp SVG thành ảnh PNG, JPEG hoặc WebP",
+      },
+      "zh-CN": {
+        name: "SVG 转图片转换器",
+        description: "将 SVG 文件转换为 PNG、JPEG 或 WebP 图片",
+      },
+      "zh-TW": {
+        name: "SVG 轉圖片轉換器",
+        description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
@@ -6674,6 +7405,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "time-diff-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "difference", "duration", "calculator", "timezone", "utc"],
+    locales: {
+      ar: {
+        name: "حاسبة فرق الوقت",
+        description:
+          "قارن بين وقتين محليين في منطقتين زمنيتين مختلفتين واحصل على فرق الوقت بالإشارة والقيمة المطلقة وبصيغة ISO 8601 وبالوحدات الإجمالية.",
+      },
+      de: {
+        name: "Zeitdifferenz-Rechner",
+        description:
+          "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten.",
+      },
+      en: {
+        name: "Time Difference Calculator",
+        description:
+          "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences.",
+      },
+      es: {
+        name: "Calculadora de diferencia de tiempo",
+        description:
+          "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales.",
+      },
+      fr: {
+        name: "Calculateur de différence de temps",
+        description:
+          "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales.",
+      },
+      he: {
+        name: "מחשבון הפרש זמן",
+        description:
+          "השוו בין שני זמנים מקומיים באזורי זמן שונים וקבלו את ההפרש עם סימן, בערך מוחלט, בפורמט ISO 8601 וביחידות כוללות.",
+      },
+      hi: {
+        name: "समय अंतर कैलकुलेटर",
+        description:
+          "अलग-अलग समय क्षेत्रों के दो स्थानीय समयों की तुलना करें और signed, absolute, ISO 8601 तथा कुल इकाइयों में अंतर पाएं।",
+      },
+      id: {
+        name: "Kalkulator selisih waktu",
+        description:
+          "Bandingkan dua waktu lokal di zona waktu berbeda dan dapatkan selisih bertanda, absolut, ISO 8601, dan dalam satuan total.",
+      },
+      it: {
+        name: "Calcolatore della differenza di tempo",
+        description:
+          "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali.",
+      },
+      ja: {
+        name: "時間差計算ツール",
+        description:
+          "異なるタイムゾーンにある2つのローカル時刻を比較し、符号付き・絶対値・ISO 8601・合計単位の差分を求めます。",
+      },
+      ko: {
+        name: "시간 차이 계산기",
+        description:
+          "서로 다른 시간대의 두 로컬 시간을 비교하고 부호 있는 차이, 절대 차이, ISO 8601, 총 단위 차이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator perbezaan masa",
+        description:
+          "Bandingkan dua masa setempat dalam zon masa berbeza dan dapatkan perbezaan bertanda, mutlak, ISO 8601 dan dalam unit jumlah.",
+      },
+      nl: {
+        name: "Tijdsverschilcalculator",
+        description:
+          "Vergelijk twee lokale tijden in verschillende tijdzones en krijg verschillen met teken, absolute verschillen, ISO 8601 en totale eenheden.",
+      },
+      no: {
+        name: "Kalkulator for tidsforskjell",
+        description:
+          "Sammenlign to lokale tider i ulike tidssoner og få forskjeller med fortegn, absolutte forskjeller, som ISO 8601 og i totale enheter.",
+      },
+      pl: {
+        name: "Kalkulator różnicy czasu",
+        description:
+          "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych.",
+      },
+      pt: {
+        name: "Calculadora de diferença de tempo",
+        description:
+          "Compare dois horários locais em fusos diferentes e obtenha diferenças com sinal, absolutas, em ISO 8601 e em unidades totais.",
+      },
+      ru: {
+        name: "Калькулятор разницы во времени",
+        description:
+          "Сравнивайте два локальных времени в разных часовых поясах и получайте разницу со знаком, абсолютную, в ISO 8601 и в суммарных единицах.",
+      },
+      sv: {
+        name: "Tidsdifferenskalkylator",
+        description:
+          "Jämför två lokala tider i olika tidszoner och få skillnader med tecken, absoluta skillnader, ISO 8601 och totala enheter.",
+      },
+      th: {
+        name: "เครื่องคำนวณความต่างของเวลา",
+        description:
+          "เปรียบเทียบเวลาท้องถิ่นสองค่าในเขตเวลาที่ต่างกัน แล้วดูผลต่างแบบมีเครื่องหมาย แบบค่าสัมบูรณ์ แบบ ISO 8601 และแบบหน่วยรวม",
+      },
+      tr: {
+        name: "Zaman farkı hesaplayıcısı",
+        description:
+          "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün.",
+      },
+      vi: {
+        name: "Trình tính chênh lệch thời gian",
+        description:
+          "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị.",
+      },
+      "zh-CN": {
+        name: "时间差计算器",
+        description:
+          "比较不同时区中的两个本地时间，计算带符号、绝对值、ISO 8601 和总单位形式的时间差。",
+      },
+      "zh-TW": {
+        name: "時間差計算器",
+        description:
+          "比較不同時區中的兩個本地時間，計算帶符號、絕對值、ISO 8601 與總單位形式的時間差。",
+      },
+    },
+  },
+  {
     slug: "time-zone-converter",
     category: "time",
     icon: "globe",
@@ -6793,6 +7647,126 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "時區轉換器",
         description:
           "在不同時區之間轉換日期與時間，支援夏令時間。比較時區偏移並複製 ISO/UTC 格式。",
+      },
+    },
+  },
+  {
+    slug: "timer",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "timer", "countdown", "alarm", "fullscreen"],
+    locales: {
+      ar: {
+        name: "مؤقّت",
+        description:
+          "اضبط عدادًا تنازليًا مع صوت واهتزاز وإشعارات المتصفح بشكل اختياري.",
+      },
+      de: {
+        name: "Timer",
+        description:
+          "Stellen Sie einen Countdown mit optionalem Ton, Vibration und Browser-Benachrichtigungen ein.",
+      },
+      en: {
+        name: "Timer",
+        description:
+          "Set a countdown timer with optional sound, vibration, and browser notifications.",
+      },
+      es: {
+        name: "Temporizador",
+        description:
+          "Configura una cuenta atrás con sonido, vibración y notificaciones del navegador opcionales.",
+      },
+      fr: {
+        name: "Minuteur",
+        description:
+          "Réglez un compte à rebours avec son, vibration et notifications du navigateur en option.",
+      },
+      he: {
+        name: "טיימר",
+        description: "הגדר ספירה לאחור עם צליל, רטט והתראות דפדפן אופציונליים.",
+      },
+      hi: {
+        name: "टाइमर",
+        description:
+          "काउंटडाउन टाइमर सेट करें, और चाहें तो ध्वनि, कंपन और ब्राउज़र सूचनाएँ सक्षम करें।",
+      },
+      id: {
+        name: "Timer",
+        description:
+          "Atur hitung mundur dengan suara, getaran, dan notifikasi browser opsional.",
+      },
+      it: {
+        name: "Timer",
+        description:
+          "Imposta un conto alla rovescia con suono, vibrazione e notifiche del browser opzionali.",
+      },
+      ja: {
+        name: "タイマー",
+        description:
+          "カウントダウンを設定し、任意で音・振動・ブラウザ通知を利用できます。",
+      },
+      ko: {
+        name: "타이머",
+        description:
+          "카운트다운을 설정하고 필요 시 소리, 진동, 브라우저 알림을 사용합니다.",
+      },
+      ms: {
+        name: "Pemasa",
+        description:
+          "Tetapkan kira detik dengan bunyi, getaran dan pemberitahuan pelayar secara pilihan.",
+      },
+      nl: {
+        name: "Timer",
+        description:
+          "Stel een afteltimer in met optioneel geluid, trilling en browsermeldingen.",
+      },
+      no: {
+        name: "Nedtelling",
+        description:
+          "Still inn en nedtelling med valgfri lyd, vibrasjon og nettleservarsler.",
+      },
+      pl: {
+        name: "Minutnik",
+        description:
+          "Ustaw odliczanie z opcjonalnym dźwiękiem, wibracją i powiadomieniami przeglądarki.",
+      },
+      pt: {
+        name: "Temporizador",
+        description:
+          "Defina um cronômetro regressivo com som, vibração e notificações do navegador opcionais.",
+      },
+      ru: {
+        name: "Таймер",
+        description:
+          "Настройте обратный отсчёт с дополнительным звуком, вибрацией и уведомлениями браузера.",
+      },
+      sv: {
+        name: "Timer",
+        description:
+          "Ställ in en nedräkning med valfritt ljud, vibration och webbläsaraviseringar.",
+      },
+      th: {
+        name: "ตัวตั้งเวลา",
+        description:
+          "ตั้งเวลานับถอยหลังพร้อมเสียง การสั่น และการแจ้งเตือนจากเบราว์เซอร์ตามต้องการ",
+      },
+      tr: {
+        name: "Zamanlayıcı",
+        description:
+          "İsteğe bağlı ses, titreşim ve tarayıcı bildirimleriyle bir geri sayım ayarlayın.",
+      },
+      vi: {
+        name: "Bộ hẹn giờ",
+        description:
+          "Đặt đếm ngược với âm thanh, rung và thông báo trình duyệt tùy chọn.",
+      },
+      "zh-CN": {
+        name: "倒计时器",
+        description: "设置倒计时，结束时可使用提示音、震动和浏览器通知。",
+      },
+      "zh-TW": {
+        name: "倒數計時器",
+        description: "設定倒數計時，結束時可使用提示音、震動與瀏覽器通知。",
       },
     },
   },

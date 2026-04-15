@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "オプション",
+  "countLabel": "件数",
+  "timestampModeLabel": "タイムスタンプモード",
+  "timestampNowLabel": "現在時刻を使用",
+  "timestampCustomLabel": "カスタム時刻",
+  "customDateTimeLabel": "カスタム日時",
+  "customUnixSecondsLabel": "カスタム Unix 秒",
+  "setNowLabel": "現在時刻に設定",
+  "ksuidEpochLabel": "KSUID エポック: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "無効なタイムスタンプです。",
+  "timestampOutOfRange": "タイムスタンプは {min} から {max}（Unix 秒）の間である必要があります。",
+  "resultsTitle": "結果",
+  "resultsPlaceholder": "生成された KSUID がここに表示されます...",
+  "generatedAtLabel": "使用した Unix 時間: {seconds}",
+  "copyResultsLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadResultsLabel": "ダウンロード",
+  "regenerateLabel": "再生成"
+}

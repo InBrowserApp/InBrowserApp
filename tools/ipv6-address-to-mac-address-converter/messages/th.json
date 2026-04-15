@@ -1,0 +1,8 @@
+{
+  "placeholder": "ป้อน IPv6",
+  "invalidAddress": "ที่อยู่ IPv6 ไม่ถูกต้อง",
+  "result": "ผลการตรวจสอบ",
+  "notConvertible": "ไม่สามารถแปลงได้",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

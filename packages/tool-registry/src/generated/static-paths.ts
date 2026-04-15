@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-validator",
+    language: "ar",
+  },
+  {
+    slug: "email-validator",
+    language: "de",
+  },
+  {
+    slug: "email-validator",
+    language: "en",
+  },
+  {
+    slug: "email-validator",
+    language: "es",
+  },
+  {
+    slug: "email-validator",
+    language: "fr",
+  },
+  {
+    slug: "email-validator",
+    language: "he",
+  },
+  {
+    slug: "email-validator",
+    language: "hi",
+  },
+  {
+    slug: "email-validator",
+    language: "id",
+  },
+  {
+    slug: "email-validator",
+    language: "it",
+  },
+  {
+    slug: "email-validator",
+    language: "ja",
+  },
+  {
+    slug: "email-validator",
+    language: "ko",
+  },
+  {
+    slug: "email-validator",
+    language: "ms",
+  },
+  {
+    slug: "email-validator",
+    language: "nl",
+  },
+  {
+    slug: "email-validator",
+    language: "no",
+  },
+  {
+    slug: "email-validator",
+    language: "pl",
+  },
+  {
+    slug: "email-validator",
+    language: "pt",
+  },
+  {
+    slug: "email-validator",
+    language: "ru",
+  },
+  {
+    slug: "email-validator",
+    language: "sv",
+  },
+  {
+    slug: "email-validator",
+    language: "th",
+  },
+  {
+    slug: "email-validator",
+    language: "tr",
+  },
+  {
+    slug: "email-validator",
+    language: "vi",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },
@@ -1931,6 +2023,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "imei-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "de",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "en",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "es",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "he",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "id",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "it",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "no",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "th",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
     language: "zh-TW",
   },
   {
@@ -2946,6 +3130,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ksuid-generator",
+    language: "ar",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "de",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "en",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "es",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "fr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "he",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "hi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "id",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "it",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ja",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ko",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ms",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "nl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "no",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pt",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ru",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "sv",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "th",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "tr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "vi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "list-comparer",
     language: "ar",
   },
@@ -3035,6 +3311,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "list-comparer",
+    language: "zh-TW",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "md5-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -3958,6 +4326,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "roman-numeral-converter",
     language: "ar",
   },
@@ -4878,6 +5338,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },
@@ -4970,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "time-diff-calculator",
+    language: "ar",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "de",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "en",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "es",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "fr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "he",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "hi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "id",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "it",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ja",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ko",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ms",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "nl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "no",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pt",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ru",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "sv",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "th",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "tr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "vi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "time-zone-converter",
     language: "ar",
   },
@@ -5059,6 +5703,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "time-zone-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "timer",
+    language: "ar",
+  },
+  {
+    slug: "timer",
+    language: "de",
+  },
+  {
+    slug: "timer",
+    language: "en",
+  },
+  {
+    slug: "timer",
+    language: "es",
+  },
+  {
+    slug: "timer",
+    language: "fr",
+  },
+  {
+    slug: "timer",
+    language: "he",
+  },
+  {
+    slug: "timer",
+    language: "hi",
+  },
+  {
+    slug: "timer",
+    language: "id",
+  },
+  {
+    slug: "timer",
+    language: "it",
+  },
+  {
+    slug: "timer",
+    language: "ja",
+  },
+  {
+    slug: "timer",
+    language: "ko",
+  },
+  {
+    slug: "timer",
+    language: "ms",
+  },
+  {
+    slug: "timer",
+    language: "nl",
+  },
+  {
+    slug: "timer",
+    language: "no",
+  },
+  {
+    slug: "timer",
+    language: "pl",
+  },
+  {
+    slug: "timer",
+    language: "pt",
+  },
+  {
+    slug: "timer",
+    language: "ru",
+  },
+  {
+    slug: "timer",
+    language: "sv",
+  },
+  {
+    slug: "timer",
+    language: "th",
+  },
+  {
+    slug: "timer",
+    language: "tr",
+  },
+  {
+    slug: "timer",
+    language: "vi",
+  },
+  {
+    slug: "timer",
+    language: "zh-CN",
+  },
+  {
+    slug: "timer",
     language: "zh-TW",
   },
   {

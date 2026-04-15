@@ -1,0 +1,8 @@
+{
+  "placeholder": "Skriv inn IPv6",
+  "invalidAddress": "Ugyldig IPv6-adresse",
+  "result": "Valideringsresultat",
+  "notConvertible": "Kan ikke konverteres",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}

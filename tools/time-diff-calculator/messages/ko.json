@@ -1,0 +1,23 @@
+{
+  "startLabel": "시작",
+  "endLabel": "끝",
+  "timeZoneLabel": "시간대",
+  "dateTimeLabel": "날짜 및 시간",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "형식: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "현재",
+  "offsetLabel": "오프셋",
+  "invalidDateTimeLabel": "유효하지 않은 날짜/시간",
+  "swapLabel": "교환",
+  "resultsLabel": "결과",
+  "signedDurationLabel": "부호 있는 기간",
+  "absoluteDurationLabel": "절대 기간",
+  "iso8601DurationLabel": "ISO 8601 기간",
+  "totalMillisecondsLabel": "총 밀리초",
+  "totalSecondsLabel": "총 초",
+  "totalMinutesLabel": "총 분",
+  "totalHoursLabel": "총 시간",
+  "totalDaysLabel": "총 일",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

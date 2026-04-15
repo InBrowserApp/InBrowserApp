@@ -1,0 +1,4 @@
+{
+  "name": "E-Mail-Validator",
+  "description": "Validiert E-Mail-Adressen mit Syntax-, Längen- und Domain-Prüfungen."
+}

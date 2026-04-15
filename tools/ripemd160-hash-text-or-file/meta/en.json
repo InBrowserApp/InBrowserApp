@@ -1,0 +1,4 @@
+{
+  "name": "RIPEMD-160 Hash Text or File",
+  "description": "Generate RIPEMD-160 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes"
+}

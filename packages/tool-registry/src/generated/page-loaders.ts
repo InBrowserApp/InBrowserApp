@@ -21,6 +21,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
+  "email-validator": () => import("@tool/email-validator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>
@@ -29,6 +30,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
+  "ipv6-address-to-mac-address-converter": () =>
+    import("@tool/ipv6-address-to-mac-address-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
@@ -40,7 +43,9 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
+  "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
+  "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
@@ -55,6 +60,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
+  "ripemd160-hash-text-or-file": () =>
+    import("@tool/ripemd160-hash-text-or-file/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
@@ -69,8 +76,11 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
+  "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
+  "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),
+  timer: () => import("@tool/timer/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "Generator KSUID",
+  "description": "Hasilkan pengenal unik yang dapat diurutkan (KSUID) di browser dengan cap waktu opsional."
+}

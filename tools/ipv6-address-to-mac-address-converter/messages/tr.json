@@ -1,0 +1,8 @@
+{
+  "placeholder": "IPv6 girin",
+  "invalidAddress": "Geçersiz IPv6 adresi",
+  "result": "Doğrulama Sonucu",
+  "notConvertible": "Dönüştürülemez",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

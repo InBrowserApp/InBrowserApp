@@ -28,6 +28,7 @@ catalog:
   "@commitlint/cli": ^20.5.0
   "@commitlint/config-conventional": ^20.5.0
   "@paralleldrive/cuid2": ^3.3.0
+  "@types/crypto-js": ^4.2.2
   "@types/jmespath": ^0.15.2
   "@tailwindcss/vite": ^4.1.18
   "@testing-library/react": ^16.3.2
@@ -45,6 +46,7 @@ catalog:
   buffer: ^6.0.3
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
+  crypto-js: ^4.2.0
   dependency-cruiser: ^17.3.10
   figlet: ^1.10.0
   happy-dom: ^20.8.9

@@ -1,0 +1,4 @@
+{
+  "name": "MD5-Hash für Text oder Datei",
+  "description": "Erstellen Sie MD5-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen"
+}

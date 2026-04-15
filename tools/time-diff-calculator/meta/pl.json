@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator różnicy czasu",
+  "description": "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych."
+}

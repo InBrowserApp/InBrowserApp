@@ -1,0 +1,4 @@
+{
+  "name": "Hash MD5 di Testo o File",
+  "description": "Genera hash MD5 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza."
+}

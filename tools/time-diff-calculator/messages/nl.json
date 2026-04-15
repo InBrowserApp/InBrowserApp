@@ -1,0 +1,23 @@
+{
+  "startLabel": "Start",
+  "endLabel": "Einde",
+  "timeZoneLabel": "Tijdzone",
+  "dateTimeLabel": "Datum en tijd",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Formaat: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Nu",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ongeldige datum/tijd",
+  "swapLabel": "Wisselen",
+  "resultsLabel": "Resultaten",
+  "signedDurationLabel": "Gesigneerde duur",
+  "absoluteDurationLabel": "Absolute duur",
+  "iso8601DurationLabel": "ISO 8601-duur",
+  "totalMillisecondsLabel": "Totaal milliseconden",
+  "totalSecondsLabel": "Totaal seconden",
+  "totalMinutesLabel": "Totaal minuten",
+  "totalHoursLabel": "Totaal uren",
+  "totalDaysLabel": "Totaal dagen",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

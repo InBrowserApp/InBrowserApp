@@ -1,0 +1,8 @@
+{
+  "placeholder": "Digite IPv6",
+  "invalidAddress": "Endereço IPv6 inválido",
+  "result": "Resultado da Validação",
+  "notConvertible": "Não conversível",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}
