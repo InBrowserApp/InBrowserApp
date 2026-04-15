@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -16,7 +17,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { ImageUp } from "@workspace/ui/icons"
+import { ImageUp, RefreshCcw, Trash2 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import type { SvgDimensions } from "../core/svg-conversion"
@@ -118,27 +119,6 @@ export function UploadCard({
                 </Badge>
               ) : null}
             </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <Button
-                className="h-auto px-0 text-muted-foreground hover:bg-transparent hover:text-foreground"
-                onClick={handleOpenFilePicker}
-                size="sm"
-                type="button"
-                variant="ghost"
-              >
-                {messages.changeFileLabel}
-              </Button>
-              <Button
-                className="h-auto px-0 text-muted-foreground hover:bg-transparent hover:text-foreground"
-                onClick={onRemoveFile}
-                size="sm"
-                type="button"
-                variant="ghost"
-              >
-                {messages.removeFileLabel}
-              </Button>
-            </div>
           </>
         ) : (
           <label
@@ -182,6 +162,22 @@ export function UploadCard({
           type="file"
         />
       </CardContent>
+      {selectedFile ? (
+        <CardFooter className="flex flex-col-reverse gap-3 border-t sm:flex-row sm:justify-end">
+          <Button onClick={onRemoveFile} type="button" variant="outline">
+            <Trash2 data-icon="inline-start" />
+            {messages.removeFileLabel}
+          </Button>
+          <Button
+            onClick={handleOpenFilePicker}
+            type="button"
+            variant="outline"
+          >
+            <RefreshCcw data-icon="inline-start" />
+            {messages.changeFileLabel}
+          </Button>
+        </CardFooter>
+      ) : null}
     </Card>
   )
 }
