@@ -23,6 +23,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
+  "imei-validator": () => import("@tool/imei-validator/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),

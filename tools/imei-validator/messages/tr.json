@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "15 haneli IMEI girin",
+  "valid": "Geçerli IMEI",
+  "invalid": "Geçersiz IMEI",
+  "invalidLength": "IMEI tam olarak 15 haneli olmalıdır",
+  "invalidFormat": "IMEI yalnızca rakamlardan oluşmalıdır",
+  "invalidChecksum": "Geçersiz kontrol hanesi",
+  "result": "Doğrulama Sonucu",
+  "status": "Durum",
+  "reason": "Neden",
+  "normalized": "Normalize IMEI",
+  "expectedCheckDigit": "Beklenen kontrol hanesi",
+  "actualCheckDigit": "Gerçek kontrol hanesi"
+}

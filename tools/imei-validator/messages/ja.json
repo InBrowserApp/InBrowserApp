@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "15桁のIMEIを入力",
+  "valid": "有効な IMEI",
+  "invalid": "無効な IMEI",
+  "invalidLength": "IMEI は 15 桁である必要があります",
+  "invalidFormat": "IMEI は数字のみを含める必要があります",
+  "invalidChecksum": "チェックディジットが無効です",
+  "result": "検証結果",
+  "status": "ステータス",
+  "reason": "理由",
+  "normalized": "正規化 IMEI",
+  "expectedCheckDigit": "期待チェックディジット",
+  "actualCheckDigit": "実際のチェックディジット"
+}

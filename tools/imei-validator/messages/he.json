@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "הזן IMEI בן 15 ספרות",
+  "valid": "IMEI תקין",
+  "invalid": "IMEI לא תקין",
+  "invalidLength": "IMEI חייב להכיל בדיוק 15 ספרות",
+  "invalidFormat": "IMEI חייב להכיל ספרות בלבד",
+  "invalidChecksum": "ספרת ביקורת לא תקינה",
+  "result": "תוצאת אימות",
+  "status": "סטטוס",
+  "reason": "סיבה",
+  "normalized": "IMEI מנורמל",
+  "expectedCheckDigit": "ספרת ביקורת צפויה",
+  "actualCheckDigit": "ספרת ביקורת בפועל"
+}
