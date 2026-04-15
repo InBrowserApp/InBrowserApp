@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "输入 15 位 IMEI",
+  "valid": "有效的 IMEI",
+  "invalid": "无效的 IMEI",
+  "invalidLength": "IMEI 必须正好为 15 位",
+  "invalidFormat": "IMEI 只能包含数字",
+  "invalidChecksum": "校验位无效",
+  "result": "验证结果",
+  "status": "状态",
+  "reason": "原因",
+  "normalized": "标准化 IMEI",
+  "expectedCheckDigit": "期望校验位",
+  "actualCheckDigit": "实际校验位"
+}

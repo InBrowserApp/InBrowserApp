@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "أدخل IMEI مكوّنًا من 15 رقمًا",
+  "valid": "IMEI صالح",
+  "invalid": "IMEI غير صالح",
+  "invalidLength": "يجب أن يتكون IMEI من 15 رقمًا بالضبط",
+  "invalidFormat": "يجب أن يحتوي IMEI على أرقام فقط",
+  "invalidChecksum": "رقم التحقق غير صالح",
+  "result": "نتيجة التحقق",
+  "status": "الحالة",
+  "reason": "السبب",
+  "normalized": "IMEI بعد التنسيق",
+  "expectedCheckDigit": "رقم التحقق المتوقع",
+  "actualCheckDigit": "رقم التحقق الفعلي"
+}

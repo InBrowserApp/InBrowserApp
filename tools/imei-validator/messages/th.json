@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "กรอก IMEI 15 หลัก",
+  "valid": "IMEI ถูกต้อง",
+  "invalid": "IMEI ไม่ถูกต้อง",
+  "invalidLength": "IMEI ต้องมี 15 หลักพอดี",
+  "invalidFormat": "IMEI ต้องเป็นตัวเลขเท่านั้น",
+  "invalidChecksum": "เลขตรวจสอบไม่ถูกต้อง",
+  "result": "ผลการตรวจสอบ",
+  "status": "สถานะ",
+  "reason": "สาเหตุ",
+  "normalized": "IMEI ที่จัดรูปแบบ",
+  "expectedCheckDigit": "เลขตรวจสอบที่คาดหวัง",
+  "actualCheckDigit": "เลขตรวจสอบจริง"
+}

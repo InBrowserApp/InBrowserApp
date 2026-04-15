@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "15자리 IMEI 입력",
+  "valid": "유효한 IMEI",
+  "invalid": "유효하지 않은 IMEI",
+  "invalidLength": "IMEI는 정확히 15자리여야 합니다",
+  "invalidFormat": "IMEI는 숫자만 포함해야 합니다",
+  "invalidChecksum": "체크 디지트가 올바르지 않습니다",
+  "result": "검증 결과",
+  "status": "상태",
+  "reason": "사유",
+  "normalized": "정규화된 IMEI",
+  "expectedCheckDigit": "예상 체크 디지트",
+  "actualCheckDigit": "실제 체크 디지트"
+}

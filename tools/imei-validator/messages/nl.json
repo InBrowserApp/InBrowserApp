@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Voer een 15-cijferige IMEI in",
+  "valid": "Geldige IMEI",
+  "invalid": "Ongeldige IMEI",
+  "invalidLength": "IMEI moet exact 15 cijfers bevatten",
+  "invalidFormat": "IMEI mag alleen cijfers bevatten",
+  "invalidChecksum": "Ongeldig controlecijfer",
+  "result": "Validatieresultaat",
+  "status": "Status",
+  "reason": "Reden",
+  "normalized": "Genormaliseerde IMEI",
+  "expectedCheckDigit": "Verwacht controlecijfer",
+  "actualCheckDigit": "Werkelijk controlecijfer"
+}

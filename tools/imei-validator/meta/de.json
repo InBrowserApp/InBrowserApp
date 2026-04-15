@@ -1,0 +1,4 @@
+{
+  "name": "IMEI-Validator",
+  "description": "Prüft 15-stellige IMEI auf Format und Luhn-Prüfsumme."
+}

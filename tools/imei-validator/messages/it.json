@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Inserisci un IMEI di 15 cifre",
+  "valid": "IMEI valido",
+  "invalid": "IMEI non valido",
+  "invalidLength": "L'IMEI deve contenere esattamente 15 cifre",
+  "invalidFormat": "L'IMEI deve contenere solo cifre",
+  "invalidChecksum": "Cifra di controllo non valida",
+  "result": "Risultato di Validazione",
+  "status": "Stato",
+  "reason": "Motivo",
+  "normalized": "IMEI normalizzato",
+  "expectedCheckDigit": "Cifra attesa",
+  "actualCheckDigit": "Cifra reale"
+}

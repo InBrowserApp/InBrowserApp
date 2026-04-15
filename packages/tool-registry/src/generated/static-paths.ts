@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "imei-validator",
+    language: "ar",
+  },
+  {
+    slug: "imei-validator",
+    language: "de",
+  },
+  {
+    slug: "imei-validator",
+    language: "en",
+  },
+  {
+    slug: "imei-validator",
+    language: "es",
+  },
+  {
+    slug: "imei-validator",
+    language: "fr",
+  },
+  {
+    slug: "imei-validator",
+    language: "he",
+  },
+  {
+    slug: "imei-validator",
+    language: "hi",
+  },
+  {
+    slug: "imei-validator",
+    language: "id",
+  },
+  {
+    slug: "imei-validator",
+    language: "it",
+  },
+  {
+    slug: "imei-validator",
+    language: "ja",
+  },
+  {
+    slug: "imei-validator",
+    language: "ko",
+  },
+  {
+    slug: "imei-validator",
+    language: "ms",
+  },
+  {
+    slug: "imei-validator",
+    language: "nl",
+  },
+  {
+    slug: "imei-validator",
+    language: "no",
+  },
+  {
+    slug: "imei-validator",
+    language: "pl",
+  },
+  {
+    slug: "imei-validator",
+    language: "pt",
+  },
+  {
+    slug: "imei-validator",
+    language: "ru",
+  },
+  {
+    slug: "imei-validator",
+    language: "sv",
+  },
+  {
+    slug: "imei-validator",
+    language: "th",
+  },
+  {
+    slug: "imei-validator",
+    language: "tr",
+  },
+  {
+    slug: "imei-validator",
+    language: "vi",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

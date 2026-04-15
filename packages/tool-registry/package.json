@@ -23,6 +23,7 @@
     "@tool/hmac-generator": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-resizer": "workspace:*",
+    "@tool/imei-validator": "workspace:*",
     "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",

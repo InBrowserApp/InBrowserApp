@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Masukkan IMEI 15 digit",
+  "valid": "IMEI valid",
+  "invalid": "IMEI tidak valid",
+  "invalidLength": "IMEI harus tepat 15 digit",
+  "invalidFormat": "IMEI hanya boleh berisi angka",
+  "invalidChecksum": "Digit pemeriksa tidak valid",
+  "result": "Hasil Validasi",
+  "status": "Status",
+  "reason": "Alasan",
+  "normalized": "IMEI ternormalisasi",
+  "expectedCheckDigit": "Digit pemeriksa yang diharapkan",
+  "actualCheckDigit": "Digit pemeriksa aktual"
+}
