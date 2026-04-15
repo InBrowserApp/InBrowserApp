@@ -28,7 +28,7 @@ function clampTimePart(value: number | null | undefined, max?: number) {
     return 0
   }
 
-  const safeValue = Math.max(0, Math.floor(value ?? 0))
+  const safeValue = Math.max(0, Math.floor(Number(value)))
 
   if (typeof max === "number") {
     return Math.min(max, safeValue)
