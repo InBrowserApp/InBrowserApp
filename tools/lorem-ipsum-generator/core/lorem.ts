@@ -4,10 +4,8 @@ import {
   base,
   de,
   en,
-  es,
   fr,
   he,
-  id_ID,
   it,
   ja,
   ko,
@@ -15,12 +13,8 @@ import {
   pl,
   pt_BR,
   ru,
-  sv,
-  th,
   tr,
   vi,
-  zh_CN,
-  zh_TW,
 } from "@faker-js/faker"
 
 const LOREM_IPSUM_MIN_COUNT = 1
@@ -32,24 +26,18 @@ const LOREM_IPSUM_MODES = ["words", "sentences", "paragraphs"] as const
 
 const LOREM_IPSUM_FAKER_LOCALES = {
   en,
-  zh_CN,
-  zh_TW,
   ja,
   ko,
   it,
   de,
   fr,
-  es,
   ru,
   pt_BR,
   ar,
   tr,
   nl,
-  sv,
   pl,
   vi,
-  th,
-  id_ID,
   he,
 } as const
 
@@ -58,23 +46,17 @@ type LoremIpsumLocale = keyof typeof LOREM_IPSUM_FAKER_LOCALES
 
 const LOREM_IPSUM_LOCALE_OPTIONS = [
   { value: "en", label: "English" },
-  { value: "zh_CN", label: "简体中文" },
-  { value: "zh_TW", label: "繁體中文" },
   { value: "ja", label: "日本語" },
   { value: "ko", label: "한국어" },
   { value: "de", label: "Deutsch" },
   { value: "fr", label: "Français" },
-  { value: "es", label: "Español" },
   { value: "ru", label: "Русский" },
   { value: "pt_BR", label: "Português (Brasil)" },
   { value: "ar", label: "العربية" },
   { value: "tr", label: "Türkçe" },
   { value: "nl", label: "Nederlands" },
-  { value: "sv", label: "Svenska" },
   { value: "pl", label: "Polski" },
   { value: "vi", label: "Tiếng Việt" },
-  { value: "th", label: "ไทย" },
-  { value: "id_ID", label: "Bahasa Indonesia" },
   { value: "he", label: "עברית" },
 ] as const satisfies readonly {
   value: LoremIpsumLocale

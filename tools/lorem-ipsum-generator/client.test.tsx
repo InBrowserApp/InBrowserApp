@@ -119,6 +119,22 @@ describe("LoremIpsumGeneratorClient", () => {
     ).toHaveProperty("download", "lorem-ipsum-sentences-4-ja.txt")
   })
 
+  test("falls back to English when a stored locale is no longer supported", async () => {
+    window.localStorage.setItem("tools:lorem-ipsum-generator:locale", "zh_CN")
+
+    render(<LoremIpsumGeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("combobox", { name: messages.localeLabel }).textContent
+      ).toContain("English")
+    })
+
+    expect(
+      screen.getByRole("link", { name: messages.downloadResultsLabel })
+    ).toHaveProperty("download", "lorem-ipsum-paragraphs-3-en.txt")
+  })
+
   test("regenerates a fresh batch on demand", async () => {
     render(<LoremIpsumGeneratorClient messages={messages} />)
 

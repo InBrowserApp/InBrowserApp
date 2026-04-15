@@ -26,14 +26,18 @@ describe("lorem", () => {
     expect(normalizeLoremIpsumMode("words")).toBe("words")
     expect(normalizeLoremIpsumMode("invalid")).toBe(DEFAULT_LOREM_IPSUM_MODE)
     expect(resolveLoremIpsumLocale("ja")).toBe("ja")
+    expect(resolveLoremIpsumLocale("zh_CN")).toBe(DEFAULT_LOREM_IPSUM_LOCALE)
     expect(resolveLoremIpsumLocale("invalid")).toBe(DEFAULT_LOREM_IPSUM_LOCALE)
   })
 
-  test("exports locale options with native labels", () => {
+  test("exports only lorem-capable locale options with native labels", () => {
     expect(LOREM_IPSUM_LOCALE_OPTIONS).toContainEqual({
       value: "pt_BR",
       label: "Português (Brasil)",
     })
+    expect(
+      LOREM_IPSUM_LOCALE_OPTIONS.map((option) => option.value)
+    ).not.toContain("zh_CN")
   })
 
   test("generates deterministic words and sentences for a fixed seed", () => {
