@@ -1,0 +1,4 @@
+{
+  "name": "IMEI 验证器",
+  "description": "验证 15 位 IMEI，检查格式和 Luhn 校验位。"
+}

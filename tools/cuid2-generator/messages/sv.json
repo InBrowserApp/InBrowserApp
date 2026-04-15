@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Alternativ",
+  "optionsDescription": "Ställ in hur många identifierare som ska skapas per batch och hur lång varje CUID2 ska vara.",
+  "countLabel": "Antal",
+  "lengthLabel": "Längd",
+  "resultsTitle": "Resultat",
+  "resultsDescription": "Varje batch genereras lokalt i webbläsaren så att du kan granska, kopiera eller ladda ner den utan att skicka ID:n till någon annan tjänst.",
+  "resultsPlaceholder": "De genererade CUID2-ID:na visas här...",
+  "copyResultsLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "downloadResultsLabel": "Ladda ner",
+  "regenerateLabel": "Generera igen"
+}

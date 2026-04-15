@@ -1,0 +1,19 @@
+{
+  "fromLabel": "من",
+  "toLabel": "إلى",
+  "timeZoneLabel": "المنطقة الزمنية",
+  "dateTimeLabel": "التاريخ والوقت",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "التنسيق: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "الآن",
+  "offsetLabel": "الإزاحة",
+  "invalidDateTimeLabel": "تاريخ/وقت غير صالح",
+  "swapLabel": "تبديل",
+  "detailsLabel": "التفاصيل",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "طابع زمني Unix (مللي ثانية)",
+  "unixSecondsLabel": "طابع زمني Unix (ثانية)",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

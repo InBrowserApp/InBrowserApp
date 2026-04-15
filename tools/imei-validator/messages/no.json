@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Skriv inn en 15-sifret IMEI",
+  "valid": "Gyldig IMEI",
+  "invalid": "Ugyldig IMEI",
+  "invalidLength": "IMEI må være nøyaktig 15 sifre",
+  "invalidFormat": "IMEI kan bare inneholde sifre",
+  "invalidChecksum": "Ugyldig kontrollsiffer",
+  "result": "Valideringsresultat",
+  "status": "Status",
+  "reason": "Årsak",
+  "normalized": "Normalisert IMEI",
+  "expectedCheckDigit": "Forventet kontrollsiffer",
+  "actualCheckDigit": "Faktisk kontrollsiffer"
+}

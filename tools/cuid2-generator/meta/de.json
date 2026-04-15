@@ -1,0 +1,4 @@
+{
+  "name": "CUID2-Generator",
+  "description": "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "佔位圖產生器",
+  "description": "產生自訂尺寸、顏色、漸層和文字的佔位圖。支援 PNG、JPG、SVG、WebP 格式及 Retina 高清輸出。"
+}

@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Options",
+  "optionsDescription": "Définissez combien d’identifiants générer par lot et quelle longueur chaque CUID2 doit avoir.",
+  "countLabel": "Nombre",
+  "lengthLabel": "Longueur",
+  "resultsTitle": "Résultats",
+  "resultsDescription": "Chaque lot est généré localement dans votre navigateur afin que vous puissiez le vérifier, le copier ou le télécharger sans envoyer les identifiants ailleurs.",
+  "resultsPlaceholder": "Les identifiants CUID2 générés apparaîtront ici...",
+  "copyResultsLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "downloadResultsLabel": "Télécharger",
+  "regenerateLabel": "Régénérer"
+}

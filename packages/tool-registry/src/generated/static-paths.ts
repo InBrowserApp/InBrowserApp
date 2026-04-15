@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cuid2-generator",
+    language: "ar",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "de",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "en",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "es",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "fr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "he",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "hi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "id",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "it",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ja",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ko",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ms",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "nl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "no",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pt",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ru",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "sv",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "th",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "tr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "vi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "current-network-time",
     language: "ar",
   },
@@ -1655,6 +1747,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-to-ico",
+    language: "zh-TW",
+  },
+  {
+    slug: "imei-validator",
+    language: "ar",
+  },
+  {
+    slug: "imei-validator",
+    language: "de",
+  },
+  {
+    slug: "imei-validator",
+    language: "en",
+  },
+  {
+    slug: "imei-validator",
+    language: "es",
+  },
+  {
+    slug: "imei-validator",
+    language: "fr",
+  },
+  {
+    slug: "imei-validator",
+    language: "he",
+  },
+  {
+    slug: "imei-validator",
+    language: "hi",
+  },
+  {
+    slug: "imei-validator",
+    language: "id",
+  },
+  {
+    slug: "imei-validator",
+    language: "it",
+  },
+  {
+    slug: "imei-validator",
+    language: "ja",
+  },
+  {
+    slug: "imei-validator",
+    language: "ko",
+  },
+  {
+    slug: "imei-validator",
+    language: "ms",
+  },
+  {
+    slug: "imei-validator",
+    language: "nl",
+  },
+  {
+    slug: "imei-validator",
+    language: "no",
+  },
+  {
+    slug: "imei-validator",
+    language: "pl",
+  },
+  {
+    slug: "imei-validator",
+    language: "pt",
+  },
+  {
+    slug: "imei-validator",
+    language: "ru",
+  },
+  {
+    slug: "imei-validator",
+    language: "sv",
+  },
+  {
+    slug: "imei-validator",
+    language: "th",
+  },
+  {
+    slug: "imei-validator",
+    language: "tr",
+  },
+  {
+    slug: "imei-validator",
+    language: "vi",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "imei-validator",
     language: "zh-TW",
   },
   {
@@ -3130,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "placeholder-image-generator",
+    language: "ar",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "de",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "en",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "es",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "fr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "he",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "hi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "id",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "it",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ja",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ko",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ms",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "nl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "no",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pt",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ru",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "sv",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "th",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "tr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "vi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },
@@ -4507,6 +4783,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "text-statistics",
+    language: "zh-TW",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ar",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "de",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "en",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "es",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "fr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "he",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "hi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "id",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "it",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ja",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ko",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ms",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "nl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "no",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pt",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ru",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "sv",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "th",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "tr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "vi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-zone-converter",
     language: "zh-TW",
   },
   {

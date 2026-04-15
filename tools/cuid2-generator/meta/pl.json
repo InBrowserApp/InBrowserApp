@@ -1,0 +1,4 @@
+{
+  "name": "Generator CUID2",
+  "description": "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii."
+}

@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "אפשרויות",
+  "optionsDescription": "הגדירו כמה מזהים להפיק בכל אצווה ומה יהיה האורך של כל CUID2.",
+  "countLabel": "כמות",
+  "lengthLabel": "אורך",
+  "resultsTitle": "תוצאות",
+  "resultsDescription": "כל אצווה נוצרת מקומית בדפדפן, כך שאפשר לבדוק, להעתיק או להוריד אותה בלי לשלוח את המזהים לשום שירות אחר.",
+  "resultsPlaceholder": "מזהי CUID2 שנוצרו יופיעו כאן...",
+  "copyResultsLabel": "העתיקו את התוצאה",
+  "copiedLabel": "הועתק",
+  "downloadResultsLabel": "הורדה",
+  "regenerateLabel": "צור מחדש"
+}

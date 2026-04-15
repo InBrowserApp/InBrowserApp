@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "الخيارات",
+  "optionsDescription": "حدّد عدد المعرّفات التي تريد إنشاءها في كل دفعة والطول الذي يجب أن يحمله كل CUID2.",
+  "countLabel": "العدد",
+  "lengthLabel": "الطول",
+  "resultsTitle": "النتائج",
+  "resultsDescription": "تُنشأ كل دفعة محلياً داخل المتصفح، بحيث يمكنك مراجعتها أو نسخها أو تنزيلها من دون إرسال المعرّفات إلى أي خدمة أخرى.",
+  "resultsPlaceholder": "ستظهر معرّفات CUID2 التي تم إنشاؤها هنا...",
+  "copyResultsLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل",
+  "regenerateLabel": "إعادة التوليد"
+}

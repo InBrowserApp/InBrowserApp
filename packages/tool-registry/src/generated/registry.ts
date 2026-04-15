@@ -1158,6 +1158,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cuid2-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "cuid2",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "slug",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CUID2",
+        description:
+          "أنشئ معرّفات CUID2 آمنة وقليلة التصادم داخل المتصفح مع إمكانية ضبط الطول وعدد العناصر في الدفعة.",
+      },
+      de: {
+        name: "CUID2-Generator",
+        description:
+          "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße.",
+      },
+      en: {
+        name: "CUID2 Generator",
+        description:
+          "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count.",
+      },
+      es: {
+        name: "Generador de CUID2",
+        description:
+          "Genera identificadores CUID2 seguros y resistentes a colisiones en tu navegador con longitud y tamaño de lote ajustables.",
+      },
+      fr: {
+        name: "Générateur de CUID2",
+        description:
+          "Générez des identifiants CUID2 sûrs et résistants aux collisions dans votre navigateur, avec longueur et taille de lot ajustables.",
+      },
+      he: {
+        name: "מחולל CUID2",
+        description:
+          "צרו מזהי CUID2 מאובטחים ובעלי סיכוי נמוך להתנגשות ישירות בדפדפן, עם אורך וגודל אצווה הניתנים להתאמה.",
+      },
+      hi: {
+        name: "CUID2 जनरेटर",
+        description:
+          "ब्राउज़र में सुरक्षित और कम टकराव वाले CUID2 ID बनाएँ, जहाँ लंबाई और बैच आकार दोनों समायोज्य हों।",
+      },
+      id: {
+        name: "Generator CUID2",
+        description:
+          "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan.",
+      },
+      it: {
+        name: "Generatore CUID2",
+        description:
+          "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili.",
+      },
+      ja: {
+        name: "CUID2 ジェネレーター",
+        description:
+          "長さとバッチ件数を調整しながら、安全で衝突しにくい CUID2 ID をブラウザ内で生成します。",
+      },
+      ko: {
+        name: "CUID2 생성기",
+        description:
+          "길이와 배치 수량을 조절하면서 충돌 가능성이 낮은 안전한 CUID2 ID를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana CUID2",
+        description:
+          "Jana ID CUID2 yang selamat dan tahan perlanggaran dalam pelayar dengan panjang dan saiz kelompok yang boleh dilaraskan.",
+      },
+      nl: {
+        name: "CUID2-generator",
+        description:
+          "Genereer veilige CUID2-ID’s met weinig kans op botsingen in je browser, met instelbare lengte en batchgrootte.",
+      },
+      no: {
+        name: "CUID2-generator",
+        description:
+          "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse.",
+      },
+      pl: {
+        name: "Generator CUID2",
+        description:
+          "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii.",
+      },
+      pt: {
+        name: "Gerador de CUID2",
+        description:
+          "Gere IDs CUID2 seguros e resistentes a colisões no navegador, com comprimento e tamanho de lote ajustáveis.",
+      },
+      ru: {
+        name: "Генератор CUID2",
+        description:
+          "Создавайте безопасные идентификаторы CUID2 с низким риском коллизий прямо в браузере, настраивая длину и размер пакета.",
+      },
+      sv: {
+        name: "CUID2-generator",
+        description:
+          "Generera säkra CUID2-ID:n med låg kollisionsrisk i webbläsaren, med justerbar längd och batchstorlek.",
+      },
+      th: {
+        name: "ตัวสร้าง CUID2",
+        description:
+          "สร้าง ID แบบ CUID2 ที่ปลอดภัยและมีโอกาสชนกันต่ำในเบราว์เซอร์ พร้อมปรับความยาวและขนาดแบตช์ได้",
+      },
+      tr: {
+        name: "CUID2 Oluşturucu",
+        description:
+          "Uzunluğu ve toplu üretim boyutunu ayarlayarak güvenli ve çakışmaya dayanıklı CUID2 kimlikleri tarayıcıda üretin.",
+      },
+      vi: {
+        name: "Trình tạo CUID2",
+        description:
+          "Tạo ID CUID2 an toàn, ít va chạm ngay trong trình duyệt với độ dài và kích thước lô có thể điều chỉnh.",
+      },
+      "zh-CN": {
+        name: "CUID2 生成器",
+        description:
+          "在浏览器内生成安全、低碰撞的 CUID2 标识符，支持自定义长度和批量数量。",
+      },
+      "zh-TW": {
+        name: "CUID2 產生器",
+        description:
+          "在瀏覽器內產生安全、低碰撞的 CUID2 識別碼，支援自訂長度與批次數量。",
+      },
+    },
+  },
+  {
     slug: "current-network-time",
     category: "network",
     icon: "network",
@@ -2255,6 +2388,121 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "圖片轉 ICO 轉換器",
         description: "將圖片轉換為用於網站圖示與應用圖示的 ICO 檔案。",
+      },
+    },
+  },
+  {
+    slug: "imei-validator",
+    category: "text",
+    icon: "binary",
+    tags: ["imei", "validator", "mobile", "device", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق IMEI",
+        description: "يتحقق من IMEI المكوّن من 15 رقمًا عبر التنسيق وفحص Luhn.",
+      },
+      de: {
+        name: "IMEI-Validator",
+        description: "Prüft 15-stellige IMEI auf Format und Luhn-Prüfsumme.",
+      },
+      en: {
+        name: "IMEI Validator",
+        description:
+          "Validate 15-digit IMEI numbers with format and Luhn checksum checks.",
+      },
+      es: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEI de 15 dígitos con comprobaciones de formato y checksum Luhn.",
+      },
+      fr: {
+        name: "Validateur IMEI",
+        description:
+          "Valide les IMEI à 15 chiffres avec contrôle de format et checksum Luhn.",
+      },
+      he: {
+        name: "מאמת IMEI",
+        description:
+          "מאמת מספרי IMEI בני 15 ספרות עם בדיקות פורמט וסכום ביקורת Luhn.",
+      },
+      hi: {
+        name: "IMEI सत्यापनकर्ता",
+        description: "15 अंकों के IMEI को प्रारूप और Luhn चेकसम से सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IMEI",
+        description:
+          "Memvalidasi IMEI 15 digit dengan pemeriksaan format dan checksum Luhn.",
+      },
+      it: {
+        name: "Validatore IMEI",
+        description:
+          "Convalida IMEI a 15 cifre con controlli di formato e checksum Luhn.",
+      },
+      ja: {
+        name: "IMEI 検証",
+        description: "15 桁の IMEI を形式と Luhn チェックサムで検証します。",
+      },
+      ko: {
+        name: "IMEI 검증기",
+        description: "15자리 IMEI의 형식과 Luhn 체크섬을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IMEI",
+        description:
+          "Sahkan IMEI 15 digit dengan semakan format dan checksum Luhn.",
+      },
+      nl: {
+        name: "IMEI-validator",
+        description:
+          "Valideer 15-cijferige IMEI met formaat- en Luhn-controles.",
+      },
+      no: {
+        name: "IMEI-validerer",
+        description:
+          "Validerer 15-sifrede IMEI med format- og Luhn-kontroller.",
+      },
+      pl: {
+        name: "Walidator IMEI",
+        description:
+          "Sprawdza 15-cyfrowy IMEI pod kątem formatu i sumy kontrolnej Luhna.",
+      },
+      pt: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEIs de 15 dígitos com verificações de formato e checksum de Luhn.",
+      },
+      ru: {
+        name: "Валидатор IMEI",
+        description:
+          "Проверяет 15-значный IMEI по формату и контрольной сумме Луна.",
+      },
+      sv: {
+        name: "IMEI-validerare",
+        description:
+          "Validera 15-siffriga IMEI med format- och Luhn-kontroller.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IMEI",
+        description: "ตรวจสอบ IMEI 15 หลักด้วยรูปแบบและเช็กซัม Luhn",
+      },
+      tr: {
+        name: "IMEI Doğrulayıcı",
+        description:
+          "15 haneli IMEI numaralarını biçim ve Luhn sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IMEI",
+        description:
+          "Xác thực IMEI 15 chữ số bằng kiểm tra định dạng và checksum Luhn.",
+      },
+      "zh-CN": {
+        name: "IMEI 验证器",
+        description: "验证 15 位 IMEI，检查格式和 Luhn 校验位。",
+      },
+      "zh-TW": {
+        name: "IMEI 驗證器",
+        description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
       },
     },
   },
@@ -4191,6 +4439,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "placeholder-image-generator",
+    category: "image",
+    icon: "image",
+    tags: [
+      "placeholder",
+      "image",
+      "generator",
+      "gradient",
+      "png",
+      "jpeg",
+      "svg",
+      "webp",
+    ],
+    locales: {
+      ar: {
+        name: "مولد الصور النائبة",
+        description:
+          "أنشئ صور نائبة بأبعاد وألوان وتدرجات ونص مخصص. صدّر بصيغ PNG أو JPG أو SVG أو WebP مع دعم Retina.",
+      },
+      de: {
+        name: "Platzhalter-Bildgenerator",
+        description:
+          "Erstellen Sie Platzhalterbilder mit benutzerdefinierten Abmessungen, Farben, Verläufen und Text. Export als PNG, JPG, SVG oder WebP mit Retina-Unterstützung.",
+      },
+      en: {
+        name: "Placeholder Image Generator",
+        description:
+          "Generate placeholder images with custom dimensions, colors, gradients, and text. Export as PNG, JPG, SVG, or WebP with Retina support.",
+      },
+      es: {
+        name: "Generador de Imágenes de Marcador",
+        description:
+          "Genera imágenes de marcador con dimensiones, colores, degradados y texto personalizados. Exporta como PNG, JPG, SVG o WebP con soporte Retina.",
+      },
+      fr: {
+        name: "Générateur d'Images Placeholder",
+        description:
+          "Générez des images placeholder avec dimensions, couleurs, dégradés et texte personnalisés. Exportez en PNG, JPG, SVG ou WebP avec support Retina.",
+      },
+      he: {
+        name: "מחולל תמונות שומר מקום",
+        description:
+          "צרו תמונות שומר מקום עם ממדים, צבעים, מעברי צבע וטקסט מותאמים אישית. ייצוא כ-PNG, JPG, SVG או WebP עם תמיכת Retina.",
+      },
+      hi: {
+        name: "प्लेसहोल्डर छवि जनरेटर",
+        description:
+          "कस्टम आयाम, रंग, ग्रेडिएंट और टेक्स्ट के साथ प्लेसहोल्डर छवियाँ बनाएँ। Retina समर्थन के साथ PNG, JPG, SVG या WebP में निर्यात करें।",
+      },
+      id: {
+        name: "Generator Gambar Placeholder",
+        description:
+          "Buat gambar placeholder dengan dimensi, warna, gradien, dan teks khusus. Ekspor sebagai PNG, JPG, SVG, atau WebP dengan dukungan Retina.",
+      },
+      it: {
+        name: "Generatore di Immagini Segnaposto",
+        description:
+          "Genera immagini segnaposto con dimensioni, colori, sfumature e testo personalizzati. Esporta come PNG, JPG, SVG o WebP con supporto Retina.",
+      },
+      ja: {
+        name: "プレースホルダー画像ジェネレーター",
+        description:
+          "カスタムサイズ、色、グラデーション、テキストのプレースホルダー画像を生成。PNG、JPG、SVG、WebP形式でRetina対応出力。",
+      },
+      ko: {
+        name: "플레이스홀더 이미지 생성기",
+        description:
+          "사용자 정의 크기, 색상, 그라데이션 및 텍스트로 플레이스홀더 이미지를 생성합니다. Retina 지원 PNG, JPG, SVG, WebP로 내보내기.",
+      },
+      ms: {
+        name: "Penjana Imej Pemegang Tempat",
+        description:
+          "Jana imej pemegang tempat dengan dimensi, warna, kecerunan dan teks tersuai. Eksport sebagai PNG, JPG, SVG atau WebP dengan sokongan Retina.",
+      },
+      nl: {
+        name: "Plaatshouder Afbeelding Generator",
+        description:
+          "Genereer plaatshouder afbeeldingen met aangepaste afmetingen, kleuren, verlopen en tekst. Exporteer als PNG, JPG, SVG of WebP met Retina-ondersteuning.",
+      },
+      no: {
+        name: "Plassholder-bildegenerator",
+        description:
+          "Generer plassholderbilder med tilpassede dimensjoner, farger, gradienter og tekst. Eksporter som PNG, JPG, SVG eller WebP med Retina-støtte.",
+      },
+      pl: {
+        name: "Generator obrazów zastępczych",
+        description:
+          "Generuj obrazy zastępcze z niestandardowymi wymiarami, kolorami, gradientami i tekstem. Eksportuj jako PNG, JPG, SVG lub WebP z obsługą Retina.",
+      },
+      pt: {
+        name: "Gerador de Imagens Placeholder",
+        description:
+          "Gere imagens placeholder com dimensões, cores, gradientes e texto personalizados. Exporte como PNG, JPG, SVG ou WebP com suporte Retina.",
+      },
+      ru: {
+        name: "Генератор изображений-заполнителей",
+        description:
+          "Создавайте изображения-заполнители с настраиваемыми размерами, цветами, градиентами и текстом. Экспорт в PNG, JPG, SVG или WebP с поддержкой Retina.",
+      },
+      sv: {
+        name: "Platshållarbildgenerator",
+        description:
+          "Generera platshållarbilder med anpassade dimensioner, färger, gradienter och text. Exportera som PNG, JPG, SVG eller WebP med Retina-stöd.",
+      },
+      th: {
+        name: "ตัวสร้างภาพตัวยึดตำแหน่ง",
+        description:
+          "สร้างภาพตัวยึดตำแหน่งด้วยขนาด สี การไล่ระดับสี และข้อความที่กำหนดเอง ส่งออกเป็น PNG, JPG, SVG หรือ WebP พร้อมรองรับ Retina",
+      },
+      tr: {
+        name: "Yer Tutucu Görüntü Oluşturucu",
+        description:
+          "Özel boyutlar, renkler, degradeler ve metin ile yer tutucu görüntüler oluşturun. Retina desteğiyle PNG, JPG, SVG veya WebP olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo ảnh giữ chỗ",
+        description:
+          "Tạo ảnh giữ chỗ với kích thước, màu sắc, gradient và văn bản tùy chỉnh. Xuất dưới dạng PNG, JPG, SVG hoặc WebP với hỗ trợ Retina.",
+      },
+      "zh-CN": {
+        name: "占位图生成器",
+        description:
+          "生成自定义尺寸、颜色、渐变和文字的占位图。支持 PNG、JPG、SVG、WebP 格式及 Retina 高清输出。",
+      },
+      "zh-TW": {
+        name: "佔位圖產生器",
+        description:
+          "產生自訂尺寸、顏色、漸層和文字的佔位圖。支援 PNG、JPG、SVG、WebP 格式及 Retina 高清輸出。",
+      },
+    },
+  },
+  {
     slug: "port-number-lookup",
     category: "network",
     icon: "network",
@@ -6027,6 +6407,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  {
+    slug: "time-zone-converter",
+    category: "time",
+    icon: "globe",
+    tags: ["time", "timezone", "converter", "utc", "offset", "dst", "clock"],
+    locales: {
+      ar: {
+        name: "محول المناطق الزمنية",
+        description:
+          "حوّل التاريخ والوقت بين المناطق الزمنية مع دعم التوقيت الصيفي. قارن الإزاحات وانسخ تنسيقات ISO/UTC.",
+      },
+      de: {
+        name: "Zeitzonen-Konverter",
+        description:
+          "Wandelt Datum und Uhrzeit zwischen Zeitzonen mit Sommerzeit-Unterstützung um. Vergleiche Offsets und kopiere ISO/UTC-Formate.",
+      },
+      en: {
+        name: "Time Zone Converter",
+        description:
+          "Convert a date and time between time zones with daylight saving support. Compare offsets and copy ISO/UTC formats.",
+      },
+      es: {
+        name: "Convertidor de Zona Horaria",
+        description:
+          "Convierte fecha y hora entre zonas horarias con soporte de horario de verano. Compara desfases y copia formatos ISO/UTC.",
+      },
+      fr: {
+        name: "Convertisseur de fuseau horaire",
+        description:
+          "Convertit une date et une heure entre fuseaux horaires avec prise en charge de l'heure d'été. Compare les décalages et copie les formats ISO/UTC.",
+      },
+      he: {
+        name: "ממיר אזורי זמן",
+        description:
+          "המר תאריך ושעה בין אזורי זמן עם תמיכה בשעון קיץ. השווה היסטים והעתק פורמטים ISO/UTC.",
+      },
+      hi: {
+        name: "समय क्षेत्र परिवर्तक",
+        description:
+          "डे-लाइट सेविंग के समर्थन के साथ समय क्षेत्रों के बीच दिनांक और समय रूपांतरित करें। ऑफ़सेट की तुलना करें और ISO/UTC प्रारूप कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Zona Waktu",
+        description:
+          "Konversi tanggal dan waktu antar zona waktu dengan dukungan daylight saving. Bandingkan offset dan salin format ISO/UTC.",
+      },
+      it: {
+        name: "Convertitore di fuso orario",
+        description:
+          "Converte data e ora tra fusi orari con supporto dell'ora legale. Confronta gli offset e copia i formati ISO/UTC.",
+      },
+      ja: {
+        name: "タイムゾーン変換",
+        description:
+          "夏時間に対応して日時をタイムゾーン間で変換します。オフセットを比較し、ISO/UTC 形式をコピーできます。",
+      },
+      ko: {
+        name: "시간대 변환기",
+        description:
+          "일광 절약 시간제를 지원하여 시간대를 넘나드는 날짜/시간을 변환합니다. 오프셋을 비교하고 ISO/UTC 형식을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Zon Masa",
+        description:
+          "Tukar tarikh dan masa antara zon masa dengan sokongan waktu musim panas. Bandingkan ofset dan salin format ISO/UTC.",
+      },
+      nl: {
+        name: "Tijdzoneconverter",
+        description:
+          "Converteer datum en tijd tussen tijdzones met ondersteuning voor zomertijd. Vergelijk offsets en kopieer ISO/UTC-indelingen.",
+      },
+      no: {
+        name: "Tidssonekonverterer",
+        description:
+          "Konverter dato og tid mellom tidssoner med støtte for sommertid. Sammenlign offset og kopier ISO/UTC-formater.",
+      },
+      pl: {
+        name: "Konwerter stref czasowych",
+        description:
+          "Konwertuje datę i godzinę między strefami czasowymi z obsługą czasu letniego. Porównuj przesunięcia i kopiuj formaty ISO/UTC.",
+      },
+      pt: {
+        name: "Conversor de fuso horário",
+        description:
+          "Converte data e hora entre fusos horários com suporte ao horário de verão. Compare offsets e copie formatos ISO/UTC.",
+      },
+      ru: {
+        name: "Конвертер часовых поясов",
+        description:
+          "Преобразует дату и время между часовыми поясами с учетом летнего времени. Сравнивайте смещения и копируйте форматы ISO/UTC.",
+      },
+      sv: {
+        name: "Tidszonskonverterare",
+        description:
+          "Konverterar datum och tid mellan tidszoner med stöd för sommartid. Jämför offset och kopiera ISO/UTC-format.",
+      },
+      th: {
+        name: "ตัวแปลงเขตเวลา",
+        description:
+          "แปลงวันที่และเวลาระหว่างเขตเวลา พร้อมรองรับเวลาออมแสง เปรียบเทียบออฟเซ็ตและคัดลอกรูปแบบ ISO/UTC",
+      },
+      tr: {
+        name: "Saat Dilimi Dönüştürücü",
+        description:
+          "Yaz saati desteğiyle tarih ve saati saat dilimleri arasında dönüştürür. Ofsetleri karşılaştırın ve ISO/UTC biçimlerini kopyalayın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi múi giờ",
+        description:
+          "Chuyển đổi ngày giờ giữa các múi giờ với hỗ trợ giờ mùa hè. So sánh độ lệch và sao chép định dạng ISO/UTC.",
+      },
+      "zh-CN": {
+        name: "时区转换器",
+        description:
+          "在不同时区之间转换日期和时间，支持夏令时。对比时区偏移并复制 ISO/UTC 格式。",
+      },
+      "zh-TW": {
+        name: "時區轉換器",
+        description:
+          "在不同時區之間轉換日期與時間，支援夏令時間。比較時區偏移並複製 ISO/UTC 格式。",
       },
     },
   },
@@ -8536,6 +9039,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "cuid2-generator": {
+    slug: "cuid2-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "cuid2",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "slug",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CUID2",
+        description:
+          "أنشئ معرّفات CUID2 آمنة وقليلة التصادم داخل المتصفح مع إمكانية ضبط الطول وعدد العناصر في الدفعة.",
+      },
+      de: {
+        name: "CUID2-Generator",
+        description:
+          "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße.",
+      },
+      en: {
+        name: "CUID2 Generator",
+        description:
+          "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count.",
+      },
+      es: {
+        name: "Generador de CUID2",
+        description:
+          "Genera identificadores CUID2 seguros y resistentes a colisiones en tu navegador con longitud y tamaño de lote ajustables.",
+      },
+      fr: {
+        name: "Générateur de CUID2",
+        description:
+          "Générez des identifiants CUID2 sûrs et résistants aux collisions dans votre navigateur, avec longueur et taille de lot ajustables.",
+      },
+      he: {
+        name: "מחולל CUID2",
+        description:
+          "צרו מזהי CUID2 מאובטחים ובעלי סיכוי נמוך להתנגשות ישירות בדפדפן, עם אורך וגודל אצווה הניתנים להתאמה.",
+      },
+      hi: {
+        name: "CUID2 जनरेटर",
+        description:
+          "ब्राउज़र में सुरक्षित और कम टकराव वाले CUID2 ID बनाएँ, जहाँ लंबाई और बैच आकार दोनों समायोज्य हों।",
+      },
+      id: {
+        name: "Generator CUID2",
+        description:
+          "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan.",
+      },
+      it: {
+        name: "Generatore CUID2",
+        description:
+          "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili.",
+      },
+      ja: {
+        name: "CUID2 ジェネレーター",
+        description:
+          "長さとバッチ件数を調整しながら、安全で衝突しにくい CUID2 ID をブラウザ内で生成します。",
+      },
+      ko: {
+        name: "CUID2 생성기",
+        description:
+          "길이와 배치 수량을 조절하면서 충돌 가능성이 낮은 안전한 CUID2 ID를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana CUID2",
+        description:
+          "Jana ID CUID2 yang selamat dan tahan perlanggaran dalam pelayar dengan panjang dan saiz kelompok yang boleh dilaraskan.",
+      },
+      nl: {
+        name: "CUID2-generator",
+        description:
+          "Genereer veilige CUID2-ID’s met weinig kans op botsingen in je browser, met instelbare lengte en batchgrootte.",
+      },
+      no: {
+        name: "CUID2-generator",
+        description:
+          "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse.",
+      },
+      pl: {
+        name: "Generator CUID2",
+        description:
+          "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii.",
+      },
+      pt: {
+        name: "Gerador de CUID2",
+        description:
+          "Gere IDs CUID2 seguros e resistentes a colisões no navegador, com comprimento e tamanho de lote ajustáveis.",
+      },
+      ru: {
+        name: "Генератор CUID2",
+        description:
+          "Создавайте безопасные идентификаторы CUID2 с низким риском коллизий прямо в браузере, настраивая длину и размер пакета.",
+      },
+      sv: {
+        name: "CUID2-generator",
+        description:
+          "Generera säkra CUID2-ID:n med låg kollisionsrisk i webbläsaren, med justerbar längd och batchstorlek.",
+      },
+      th: {
+        name: "ตัวสร้าง CUID2",
+        description:
+          "สร้าง ID แบบ CUID2 ที่ปลอดภัยและมีโอกาสชนกันต่ำในเบราว์เซอร์ พร้อมปรับความยาวและขนาดแบตช์ได้",
+      },
+      tr: {
+        name: "CUID2 Oluşturucu",
+        description:
+          "Uzunluğu ve toplu üretim boyutunu ayarlayarak güvenli ve çakışmaya dayanıklı CUID2 kimlikleri tarayıcıda üretin.",
+      },
+      vi: {
+        name: "Trình tạo CUID2",
+        description:
+          "Tạo ID CUID2 an toàn, ít va chạm ngay trong trình duyệt với độ dài và kích thước lô có thể điều chỉnh.",
+      },
+      "zh-CN": {
+        name: "CUID2 生成器",
+        description:
+          "在浏览器内生成安全、低碰撞的 CUID2 标识符，支持自定义长度和批量数量。",
+      },
+      "zh-TW": {
+        name: "CUID2 產生器",
+        description:
+          "在瀏覽器內產生安全、低碰撞的 CUID2 識別碼，支援自訂長度與批次數量。",
+      },
+    },
+  },
   "current-network-time": {
     slug: "current-network-time",
     category: "network",
@@ -9634,6 +10270,121 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "圖片轉 ICO 轉換器",
         description: "將圖片轉換為用於網站圖示與應用圖示的 ICO 檔案。",
+      },
+    },
+  },
+  "imei-validator": {
+    slug: "imei-validator",
+    category: "text",
+    icon: "binary",
+    tags: ["imei", "validator", "mobile", "device", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق IMEI",
+        description: "يتحقق من IMEI المكوّن من 15 رقمًا عبر التنسيق وفحص Luhn.",
+      },
+      de: {
+        name: "IMEI-Validator",
+        description: "Prüft 15-stellige IMEI auf Format und Luhn-Prüfsumme.",
+      },
+      en: {
+        name: "IMEI Validator",
+        description:
+          "Validate 15-digit IMEI numbers with format and Luhn checksum checks.",
+      },
+      es: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEI de 15 dígitos con comprobaciones de formato y checksum Luhn.",
+      },
+      fr: {
+        name: "Validateur IMEI",
+        description:
+          "Valide les IMEI à 15 chiffres avec contrôle de format et checksum Luhn.",
+      },
+      he: {
+        name: "מאמת IMEI",
+        description:
+          "מאמת מספרי IMEI בני 15 ספרות עם בדיקות פורמט וסכום ביקורת Luhn.",
+      },
+      hi: {
+        name: "IMEI सत्यापनकर्ता",
+        description: "15 अंकों के IMEI को प्रारूप और Luhn चेकसम से सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IMEI",
+        description:
+          "Memvalidasi IMEI 15 digit dengan pemeriksaan format dan checksum Luhn.",
+      },
+      it: {
+        name: "Validatore IMEI",
+        description:
+          "Convalida IMEI a 15 cifre con controlli di formato e checksum Luhn.",
+      },
+      ja: {
+        name: "IMEI 検証",
+        description: "15 桁の IMEI を形式と Luhn チェックサムで検証します。",
+      },
+      ko: {
+        name: "IMEI 검증기",
+        description: "15자리 IMEI의 형식과 Luhn 체크섬을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IMEI",
+        description:
+          "Sahkan IMEI 15 digit dengan semakan format dan checksum Luhn.",
+      },
+      nl: {
+        name: "IMEI-validator",
+        description:
+          "Valideer 15-cijferige IMEI met formaat- en Luhn-controles.",
+      },
+      no: {
+        name: "IMEI-validerer",
+        description:
+          "Validerer 15-sifrede IMEI med format- og Luhn-kontroller.",
+      },
+      pl: {
+        name: "Walidator IMEI",
+        description:
+          "Sprawdza 15-cyfrowy IMEI pod kątem formatu i sumy kontrolnej Luhna.",
+      },
+      pt: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEIs de 15 dígitos com verificações de formato e checksum de Luhn.",
+      },
+      ru: {
+        name: "Валидатор IMEI",
+        description:
+          "Проверяет 15-значный IMEI по формату и контрольной сумме Луна.",
+      },
+      sv: {
+        name: "IMEI-validerare",
+        description:
+          "Validera 15-siffriga IMEI med format- och Luhn-kontroller.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IMEI",
+        description: "ตรวจสอบ IMEI 15 หลักด้วยรูปแบบและเช็กซัม Luhn",
+      },
+      tr: {
+        name: "IMEI Doğrulayıcı",
+        description:
+          "15 haneli IMEI numaralarını biçim ve Luhn sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IMEI",
+        description:
+          "Xác thực IMEI 15 chữ số bằng kiểm tra định dạng và checksum Luhn.",
+      },
+      "zh-CN": {
+        name: "IMEI 验证器",
+        description: "验证 15 位 IMEI，检查格式和 Luhn 校验位。",
+      },
+      "zh-TW": {
+        name: "IMEI 驗證器",
+        description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
       },
     },
   },
@@ -11569,6 +12320,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "placeholder-image-generator": {
+    slug: "placeholder-image-generator",
+    category: "image",
+    icon: "image",
+    tags: [
+      "placeholder",
+      "image",
+      "generator",
+      "gradient",
+      "png",
+      "jpeg",
+      "svg",
+      "webp",
+    ],
+    locales: {
+      ar: {
+        name: "مولد الصور النائبة",
+        description:
+          "أنشئ صور نائبة بأبعاد وألوان وتدرجات ونص مخصص. صدّر بصيغ PNG أو JPG أو SVG أو WebP مع دعم Retina.",
+      },
+      de: {
+        name: "Platzhalter-Bildgenerator",
+        description:
+          "Erstellen Sie Platzhalterbilder mit benutzerdefinierten Abmessungen, Farben, Verläufen und Text. Export als PNG, JPG, SVG oder WebP mit Retina-Unterstützung.",
+      },
+      en: {
+        name: "Placeholder Image Generator",
+        description:
+          "Generate placeholder images with custom dimensions, colors, gradients, and text. Export as PNG, JPG, SVG, or WebP with Retina support.",
+      },
+      es: {
+        name: "Generador de Imágenes de Marcador",
+        description:
+          "Genera imágenes de marcador con dimensiones, colores, degradados y texto personalizados. Exporta como PNG, JPG, SVG o WebP con soporte Retina.",
+      },
+      fr: {
+        name: "Générateur d'Images Placeholder",
+        description:
+          "Générez des images placeholder avec dimensions, couleurs, dégradés et texte personnalisés. Exportez en PNG, JPG, SVG ou WebP avec support Retina.",
+      },
+      he: {
+        name: "מחולל תמונות שומר מקום",
+        description:
+          "צרו תמונות שומר מקום עם ממדים, צבעים, מעברי צבע וטקסט מותאמים אישית. ייצוא כ-PNG, JPG, SVG או WebP עם תמיכת Retina.",
+      },
+      hi: {
+        name: "प्लेसहोल्डर छवि जनरेटर",
+        description:
+          "कस्टम आयाम, रंग, ग्रेडिएंट और टेक्स्ट के साथ प्लेसहोल्डर छवियाँ बनाएँ। Retina समर्थन के साथ PNG, JPG, SVG या WebP में निर्यात करें।",
+      },
+      id: {
+        name: "Generator Gambar Placeholder",
+        description:
+          "Buat gambar placeholder dengan dimensi, warna, gradien, dan teks khusus. Ekspor sebagai PNG, JPG, SVG, atau WebP dengan dukungan Retina.",
+      },
+      it: {
+        name: "Generatore di Immagini Segnaposto",
+        description:
+          "Genera immagini segnaposto con dimensioni, colori, sfumature e testo personalizzati. Esporta come PNG, JPG, SVG o WebP con supporto Retina.",
+      },
+      ja: {
+        name: "プレースホルダー画像ジェネレーター",
+        description:
+          "カスタムサイズ、色、グラデーション、テキストのプレースホルダー画像を生成。PNG、JPG、SVG、WebP形式でRetina対応出力。",
+      },
+      ko: {
+        name: "플레이스홀더 이미지 생성기",
+        description:
+          "사용자 정의 크기, 색상, 그라데이션 및 텍스트로 플레이스홀더 이미지를 생성합니다. Retina 지원 PNG, JPG, SVG, WebP로 내보내기.",
+      },
+      ms: {
+        name: "Penjana Imej Pemegang Tempat",
+        description:
+          "Jana imej pemegang tempat dengan dimensi, warna, kecerunan dan teks tersuai. Eksport sebagai PNG, JPG, SVG atau WebP dengan sokongan Retina.",
+      },
+      nl: {
+        name: "Plaatshouder Afbeelding Generator",
+        description:
+          "Genereer plaatshouder afbeeldingen met aangepaste afmetingen, kleuren, verlopen en tekst. Exporteer als PNG, JPG, SVG of WebP met Retina-ondersteuning.",
+      },
+      no: {
+        name: "Plassholder-bildegenerator",
+        description:
+          "Generer plassholderbilder med tilpassede dimensjoner, farger, gradienter og tekst. Eksporter som PNG, JPG, SVG eller WebP med Retina-støtte.",
+      },
+      pl: {
+        name: "Generator obrazów zastępczych",
+        description:
+          "Generuj obrazy zastępcze z niestandardowymi wymiarami, kolorami, gradientami i tekstem. Eksportuj jako PNG, JPG, SVG lub WebP z obsługą Retina.",
+      },
+      pt: {
+        name: "Gerador de Imagens Placeholder",
+        description:
+          "Gere imagens placeholder com dimensões, cores, gradientes e texto personalizados. Exporte como PNG, JPG, SVG ou WebP com suporte Retina.",
+      },
+      ru: {
+        name: "Генератор изображений-заполнителей",
+        description:
+          "Создавайте изображения-заполнители с настраиваемыми размерами, цветами, градиентами и текстом. Экспорт в PNG, JPG, SVG или WebP с поддержкой Retina.",
+      },
+      sv: {
+        name: "Platshållarbildgenerator",
+        description:
+          "Generera platshållarbilder med anpassade dimensioner, färger, gradienter och text. Exportera som PNG, JPG, SVG eller WebP med Retina-stöd.",
+      },
+      th: {
+        name: "ตัวสร้างภาพตัวยึดตำแหน่ง",
+        description:
+          "สร้างภาพตัวยึดตำแหน่งด้วยขนาด สี การไล่ระดับสี และข้อความที่กำหนดเอง ส่งออกเป็น PNG, JPG, SVG หรือ WebP พร้อมรองรับ Retina",
+      },
+      tr: {
+        name: "Yer Tutucu Görüntü Oluşturucu",
+        description:
+          "Özel boyutlar, renkler, degradeler ve metin ile yer tutucu görüntüler oluşturun. Retina desteğiyle PNG, JPG, SVG veya WebP olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo ảnh giữ chỗ",
+        description:
+          "Tạo ảnh giữ chỗ với kích thước, màu sắc, gradient và văn bản tùy chỉnh. Xuất dưới dạng PNG, JPG, SVG hoặc WebP với hỗ trợ Retina.",
+      },
+      "zh-CN": {
+        name: "占位图生成器",
+        description:
+          "生成自定义尺寸、颜色、渐变和文字的占位图。支持 PNG、JPG、SVG、WebP 格式及 Retina 高清输出。",
+      },
+      "zh-TW": {
+        name: "佔位圖產生器",
+        description:
+          "產生自訂尺寸、顏色、漸層和文字的佔位圖。支援 PNG、JPG、SVG、WebP 格式及 Retina 高清輸出。",
+      },
+    },
+  },
   "port-number-lookup": {
     slug: "port-number-lookup",
     category: "network",
@@ -13406,6 +14289,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  "time-zone-converter": {
+    slug: "time-zone-converter",
+    category: "time",
+    icon: "globe",
+    tags: ["time", "timezone", "converter", "utc", "offset", "dst", "clock"],
+    locales: {
+      ar: {
+        name: "محول المناطق الزمنية",
+        description:
+          "حوّل التاريخ والوقت بين المناطق الزمنية مع دعم التوقيت الصيفي. قارن الإزاحات وانسخ تنسيقات ISO/UTC.",
+      },
+      de: {
+        name: "Zeitzonen-Konverter",
+        description:
+          "Wandelt Datum und Uhrzeit zwischen Zeitzonen mit Sommerzeit-Unterstützung um. Vergleiche Offsets und kopiere ISO/UTC-Formate.",
+      },
+      en: {
+        name: "Time Zone Converter",
+        description:
+          "Convert a date and time between time zones with daylight saving support. Compare offsets and copy ISO/UTC formats.",
+      },
+      es: {
+        name: "Convertidor de Zona Horaria",
+        description:
+          "Convierte fecha y hora entre zonas horarias con soporte de horario de verano. Compara desfases y copia formatos ISO/UTC.",
+      },
+      fr: {
+        name: "Convertisseur de fuseau horaire",
+        description:
+          "Convertit une date et une heure entre fuseaux horaires avec prise en charge de l'heure d'été. Compare les décalages et copie les formats ISO/UTC.",
+      },
+      he: {
+        name: "ממיר אזורי זמן",
+        description:
+          "המר תאריך ושעה בין אזורי זמן עם תמיכה בשעון קיץ. השווה היסטים והעתק פורמטים ISO/UTC.",
+      },
+      hi: {
+        name: "समय क्षेत्र परिवर्तक",
+        description:
+          "डे-लाइट सेविंग के समर्थन के साथ समय क्षेत्रों के बीच दिनांक और समय रूपांतरित करें। ऑफ़सेट की तुलना करें और ISO/UTC प्रारूप कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Zona Waktu",
+        description:
+          "Konversi tanggal dan waktu antar zona waktu dengan dukungan daylight saving. Bandingkan offset dan salin format ISO/UTC.",
+      },
+      it: {
+        name: "Convertitore di fuso orario",
+        description:
+          "Converte data e ora tra fusi orari con supporto dell'ora legale. Confronta gli offset e copia i formati ISO/UTC.",
+      },
+      ja: {
+        name: "タイムゾーン変換",
+        description:
+          "夏時間に対応して日時をタイムゾーン間で変換します。オフセットを比較し、ISO/UTC 形式をコピーできます。",
+      },
+      ko: {
+        name: "시간대 변환기",
+        description:
+          "일광 절약 시간제를 지원하여 시간대를 넘나드는 날짜/시간을 변환합니다. 오프셋을 비교하고 ISO/UTC 형식을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Zon Masa",
+        description:
+          "Tukar tarikh dan masa antara zon masa dengan sokongan waktu musim panas. Bandingkan ofset dan salin format ISO/UTC.",
+      },
+      nl: {
+        name: "Tijdzoneconverter",
+        description:
+          "Converteer datum en tijd tussen tijdzones met ondersteuning voor zomertijd. Vergelijk offsets en kopieer ISO/UTC-indelingen.",
+      },
+      no: {
+        name: "Tidssonekonverterer",
+        description:
+          "Konverter dato og tid mellom tidssoner med støtte for sommertid. Sammenlign offset og kopier ISO/UTC-formater.",
+      },
+      pl: {
+        name: "Konwerter stref czasowych",
+        description:
+          "Konwertuje datę i godzinę między strefami czasowymi z obsługą czasu letniego. Porównuj przesunięcia i kopiuj formaty ISO/UTC.",
+      },
+      pt: {
+        name: "Conversor de fuso horário",
+        description:
+          "Converte data e hora entre fusos horários com suporte ao horário de verão. Compare offsets e copie formatos ISO/UTC.",
+      },
+      ru: {
+        name: "Конвертер часовых поясов",
+        description:
+          "Преобразует дату и время между часовыми поясами с учетом летнего времени. Сравнивайте смещения и копируйте форматы ISO/UTC.",
+      },
+      sv: {
+        name: "Tidszonskonverterare",
+        description:
+          "Konverterar datum och tid mellan tidszoner med stöd för sommartid. Jämför offset och kopiera ISO/UTC-format.",
+      },
+      th: {
+        name: "ตัวแปลงเขตเวลา",
+        description:
+          "แปลงวันที่และเวลาระหว่างเขตเวลา พร้อมรองรับเวลาออมแสง เปรียบเทียบออฟเซ็ตและคัดลอกรูปแบบ ISO/UTC",
+      },
+      tr: {
+        name: "Saat Dilimi Dönüştürücü",
+        description:
+          "Yaz saati desteğiyle tarih ve saati saat dilimleri arasında dönüştürür. Ofsetleri karşılaştırın ve ISO/UTC biçimlerini kopyalayın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi múi giờ",
+        description:
+          "Chuyển đổi ngày giờ giữa các múi giờ với hỗ trợ giờ mùa hè. So sánh độ lệch và sao chép định dạng ISO/UTC.",
+      },
+      "zh-CN": {
+        name: "时区转换器",
+        description:
+          "在不同时区之间转换日期和时间，支持夏令时。对比时区偏移并复制 ISO/UTC 格式。",
+      },
+      "zh-TW": {
+        name: "時區轉換器",
+        description:
+          "在不同時區之間轉換日期與時間，支援夏令時間。比較時區偏移並複製 ISO/UTC 格式。",
       },
     },
   },

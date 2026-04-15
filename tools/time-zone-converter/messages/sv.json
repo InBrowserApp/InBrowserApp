@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Från",
+  "toLabel": "Till",
+  "timeZoneLabel": "Tidszon",
+  "dateTimeLabel": "Datum och tid",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Nu",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ogiltigt datum/tid",
+  "swapLabel": "Byt",
+  "detailsLabel": "Detaljer",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix-tidsstämpel (ms)",
+  "unixSecondsLabel": "Unix-tidsstämpel (s)",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierad"
+}

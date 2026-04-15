@@ -1,0 +1,19 @@
+{
+  "fromLabel": "מ",
+  "toLabel": "ל",
+  "timeZoneLabel": "אזור זמן",
+  "dateTimeLabel": "תאריך ושעה",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "פורמט: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "עכשיו",
+  "offsetLabel": "היסט",
+  "invalidDateTimeLabel": "תאריך/שעה לא תקינים",
+  "swapLabel": "החלפה",
+  "detailsLabel": "פרטים",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "חותמת זמן Unix (ms)",
+  "unixSecondsLabel": "חותמת זמן Unix (s)",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

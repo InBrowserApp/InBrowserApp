@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Введите 15-значный IMEI",
+  "valid": "Действительный IMEI",
+  "invalid": "Недействительный IMEI",
+  "invalidLength": "IMEI должен содержать ровно 15 цифр",
+  "invalidFormat": "IMEI должен содержать только цифры",
+  "invalidChecksum": "Неверная контрольная цифра",
+  "result": "Результат проверки",
+  "status": "Статус",
+  "reason": "Причина",
+  "normalized": "Нормализованный IMEI",
+  "expectedCheckDigit": "Ожидаемая цифра",
+  "actualCheckDigit": "Фактическая цифра"
+}

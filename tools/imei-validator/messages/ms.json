@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Masukkan IMEI 15 digit",
+  "valid": "IMEI sah",
+  "invalid": "IMEI tidak sah",
+  "invalidLength": "IMEI mesti tepat 15 digit",
+  "invalidFormat": "IMEI hanya boleh mengandungi digit",
+  "invalidChecksum": "Digit semakan tidak sah",
+  "result": "Keputusan Pengesahan",
+  "status": "Status",
+  "reason": "Sebab",
+  "normalized": "IMEI dinormalkan",
+  "expectedCheckDigit": "Digit semakan jangkaan",
+  "actualCheckDigit": "Digit semakan sebenar"
+}

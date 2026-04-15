@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Da",
+  "toLabel": "A",
+  "timeZoneLabel": "Fuso orario",
+  "dateTimeLabel": "Data e ora",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Formato: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Adesso",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Data/ora non valida",
+  "swapLabel": "Scambia",
+  "detailsLabel": "Dettagli",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Timestamp Unix (ms)",
+  "unixSecondsLabel": "Timestamp Unix (s)",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
+}
