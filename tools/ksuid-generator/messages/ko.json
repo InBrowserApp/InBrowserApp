@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "옵션",
+  "countLabel": "개수",
+  "timestampModeLabel": "타임스탬프 모드",
+  "timestampNowLabel": "현재 시간 사용",
+  "timestampCustomLabel": "사용자 지정 시간",
+  "customDateTimeLabel": "사용자 지정 날짜/시간",
+  "customUnixSecondsLabel": "사용자 지정 Unix 초",
+  "setNowLabel": "지금으로 설정",
+  "ksuidEpochLabel": "KSUID 기준 시각: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "잘못된 타임스탬프입니다.",
+  "timestampOutOfRange": "타임스탬프는 {min}에서 {max} 사이여야 합니다(Unix 초).",
+  "resultsTitle": "결과",
+  "resultsPlaceholder": "생성된 KSUID가 여기에 표시됩니다...",
+  "generatedAtLabel": "사용된 Unix 시간: {seconds}",
+  "copyResultsLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "downloadResultsLabel": "다운로드",
+  "regenerateLabel": "다시 생성"
+}

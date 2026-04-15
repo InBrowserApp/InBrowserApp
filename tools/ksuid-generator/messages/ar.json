@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "الخيارات",
+  "countLabel": "العدد",
+  "timestampModeLabel": "وضع الطابع الزمني",
+  "timestampNowLabel": "استخدام الوقت الحالي",
+  "timestampCustomLabel": "وقت مخصص",
+  "customDateTimeLabel": "تاريخ/وقت مخصص",
+  "customUnixSecondsLabel": "ثواني Unix مخصصة",
+  "setNowLabel": "تعيين إلى الآن",
+  "ksuidEpochLabel": "حقبة KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "طابع زمني غير صالح.",
+  "timestampOutOfRange": "يجب أن يكون الطابع الزمني بين {min} و {max} (ثواني Unix).",
+  "resultsTitle": "النتائج",
+  "resultsPlaceholder": "ستظهر KSUIDs المُولَّدة هنا...",
+  "generatedAtLabel": "تم الإنشاء باستخدام وقت Unix: {seconds}",
+  "copyResultsLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل",
+  "regenerateLabel": "إعادة التوليد"
+}

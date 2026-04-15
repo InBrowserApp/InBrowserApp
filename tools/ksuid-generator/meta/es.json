@@ -1,0 +1,4 @@
+{
+  "name": "Generador de KSUID",
+  "description": "Genera identificadores únicos ordenables (KSUID) en el navegador con marca de tiempo opcional."
+}

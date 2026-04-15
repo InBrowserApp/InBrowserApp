@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Opties",
+  "countLabel": "Aantal",
+  "timestampModeLabel": "Tijdstempelmodus",
+  "timestampNowLabel": "Huidige tijd gebruiken",
+  "timestampCustomLabel": "Aangepaste tijd",
+  "customDateTimeLabel": "Aangepaste datum/tijd",
+  "customUnixSecondsLabel": "Aangepaste Unix-seconden",
+  "setNowLabel": "Instellen op nu",
+  "ksuidEpochLabel": "KSUID-epoch: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Ongeldige tijdstempel.",
+  "timestampOutOfRange": "De tijdstempel moet tussen {min} en {max} liggen (Unix-seconden).",
+  "resultsTitle": "Resultaten",
+  "resultsPlaceholder": "Gegenereerde KSUID's verschijnen hier...",
+  "generatedAtLabel": "Gegenereerd met Unix-tijd: {seconds}",
+  "copyResultsLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadResultsLabel": "Downloaden",
+  "regenerateLabel": "Opnieuw genereren"
+}

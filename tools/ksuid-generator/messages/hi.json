@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "विकल्प",
+  "countLabel": "संख्या",
+  "timestampModeLabel": "टाइमस्टैम्प मोड",
+  "timestampNowLabel": "वर्तमान समय उपयोग करें",
+  "timestampCustomLabel": "कस्टम समय",
+  "customDateTimeLabel": "कस्टम दिनांक/समय",
+  "customUnixSecondsLabel": "कस्टम Unix सेकंड",
+  "setNowLabel": "अब सेट करें",
+  "ksuidEpochLabel": "KSUID युग: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "अमान्य टाइमस्टैम्प।",
+  "timestampOutOfRange": "टाइमस्टैम्प {min} और {max} (Unix सेकंड) के बीच होना चाहिए।",
+  "resultsTitle": "परिणाम",
+  "resultsPlaceholder": "जनरेट किए गए KSUID यहाँ दिखेंगे...",
+  "generatedAtLabel": "Unix समय के साथ जनरेट किया गया: {seconds}",
+  "copyResultsLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadResultsLabel": "डाउनलोड",
+  "regenerateLabel": "फिर से जनरेट करें"
+}

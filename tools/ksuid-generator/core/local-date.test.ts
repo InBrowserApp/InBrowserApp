@@ -1,0 +1,25 @@
+import { describe, expect, test } from "vitest"
+
+import { formatDateTimeLocalInput, parseDateTimeLocalInput } from "./local-date"
+
+describe("local-date", () => {
+  test("formats a local datetime-local value with second precision", () => {
+    const value = new Date(2026, 3, 15, 8, 30, 45, 123).getTime()
+
+    expect(formatDateTimeLocalInput(value)).toBe("2026-04-15T08:30:45")
+  })
+
+  test("parses datetime-local values with and without seconds", () => {
+    expect(parseDateTimeLocalInput("2026-04-15T08:30")).toBe(
+      new Date(2026, 3, 15, 8, 30, 0, 0).getTime()
+    )
+    expect(parseDateTimeLocalInput("2026-04-15T08:30:45")).toBe(
+      new Date(2026, 3, 15, 8, 30, 45, 0).getTime()
+    )
+  })
+
+  test("rejects invalid datetime-local values", () => {
+    expect(parseDateTimeLocalInput("not-a-date")).toBeNull()
+    expect(parseDateTimeLocalInput("2026-02-31T08:30:45")).toBeNull()
+  })
+})

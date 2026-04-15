@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de KSUID",
+  "description": "Générez des identifiants uniques triables (KSUID) dans le navigateur avec horodatage optionnel."
+}

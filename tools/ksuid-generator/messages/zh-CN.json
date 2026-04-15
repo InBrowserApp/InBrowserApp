@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "选项",
+  "countLabel": "数量",
+  "timestampModeLabel": "时间戳模式",
+  "timestampNowLabel": "使用当前时间",
+  "timestampCustomLabel": "自定义时间",
+  "customDateTimeLabel": "自定义日期/时间",
+  "customUnixSecondsLabel": "自定义 Unix 秒",
+  "setNowLabel": "设为现在",
+  "ksuidEpochLabel": "KSUID 基准时间：2014-05-13T16:53:20Z",
+  "timestampInvalid": "时间戳无效。",
+  "timestampOutOfRange": "时间戳必须在 {min} 到 {max} 之间（Unix 秒）。",
+  "resultsTitle": "结果",
+  "resultsPlaceholder": "生成的 KSUID 将显示在这里...",
+  "generatedAtLabel": "生成所用 Unix 时间：{seconds}",
+  "copyResultsLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载",
+  "regenerateLabel": "重新生成"
+}

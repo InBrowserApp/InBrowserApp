@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Opcje",
+  "countLabel": "Liczba",
+  "timestampModeLabel": "Tryb znacznika czasu",
+  "timestampNowLabel": "Użyj bieżącego czasu",
+  "timestampCustomLabel": "Czas niestandardowy",
+  "customDateTimeLabel": "Niestandardowa data/godzina",
+  "customUnixSecondsLabel": "Niestandardowe sekundy Unix",
+  "setNowLabel": "Ustaw na teraz",
+  "ksuidEpochLabel": "Epoka KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Nieprawidłowy znacznik czasu.",
+  "timestampOutOfRange": "Znacznik czasu musi być między {min} a {max} (sekundy Unix).",
+  "resultsTitle": "Wyniki",
+  "resultsPlaceholder": "Wygenerowane KSUID pojawią się tutaj...",
+  "generatedAtLabel": "Wygenerowano z czasem Unix: {seconds}",
+  "copyResultsLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "downloadResultsLabel": "Pobierz",
+  "regenerateLabel": "Generuj ponownie"
+}

@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Seçenekler",
+  "countLabel": "Adet",
+  "timestampModeLabel": "Zaman damgası modu",
+  "timestampNowLabel": "Geçerli zamanı kullan",
+  "timestampCustomLabel": "Özel zaman",
+  "customDateTimeLabel": "Özel tarih/saat",
+  "customUnixSecondsLabel": "Özel Unix saniyesi",
+  "setNowLabel": "Şimdiye ayarla",
+  "ksuidEpochLabel": "KSUID dönemi: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Geçersiz zaman damgası.",
+  "timestampOutOfRange": "Zaman damgası {min} ile {max} arasında olmalıdır (Unix saniye).",
+  "resultsTitle": "Sonuçlar",
+  "resultsPlaceholder": "Üretilen KSUID'ler burada görünecek...",
+  "generatedAtLabel": "Unix zamanı ile üretildi: {seconds}",
+  "copyResultsLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "İndir",
+  "regenerateLabel": "Yeniden üret"
+}
