@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest"
+import { afterEach, describe, expect, test } from "vitest"
 
 import {
   WORD_COUNTS,
@@ -13,6 +13,15 @@ import {
   validateMnemonic,
   wordCountToStrength,
 } from "./bip39"
+
+const originalCrypto = globalThis.crypto
+
+afterEach(() => {
+  Object.defineProperty(globalThis, "crypto", {
+    configurable: true,
+    value: originalCrypto,
+  })
+})
 
 describe("bip39 core helpers", () => {
   test("maps word counts to entropy strength", () => {
@@ -52,6 +61,31 @@ describe("bip39 core helpers", () => {
     expect(entropy).toBe("abababababababababababababababab")
   })
 
+  test("uses crypto.getRandomValues by default when creating entropy", () => {
+    Object.defineProperty(globalThis, "crypto", {
+      configurable: true,
+      value: {
+        getRandomValues(values: Uint8Array) {
+          values.fill(0xcd)
+          return values
+        },
+      },
+    })
+
+    expect(createEntropyHex(128)).toBe("cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd")
+  })
+
+  test("throws when secure random generation is unavailable", () => {
+    Object.defineProperty(globalThis, "crypto", {
+      configurable: true,
+      value: undefined,
+    })
+
+    expect(() => createEntropyHex(128)).toThrow(
+      "Secure random generation is not available"
+    )
+  })
+
   test("generates a deterministic english mnemonic with injected entropy", () => {
     const result = generateMnemonic(
       { wordCount: 12, wordlist: "english" },
@@ -65,6 +99,18 @@ describe("bip39 core helpers", () => {
       strength: 128,
       wordCount: 12,
     })
+  })
+
+  test("falls back to the default word count and english wordlist", () => {
+    const result = generateMnemonic(undefined, () => {
+      return "00000000000000000000000000000000"
+    })
+
+    expect(result.wordCount).toBe(12)
+    expect(result.strength).toBe(128)
+    expect(result.mnemonic).toBe(
+      "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+    )
   })
 
   test("converts entropy and mnemonics both directions", () => {

@@ -10,9 +10,7 @@ const bufferGlobal = globalThis as typeof globalThis & {
   Buffer?: typeof Buffer
 }
 
-if (!bufferGlobal.Buffer) {
-  bufferGlobal.Buffer = Buffer
-}
+bufferGlobal.Buffer = Buffer
 
 const BIP39_WORDLISTS = {
   english: wordlists.english,
