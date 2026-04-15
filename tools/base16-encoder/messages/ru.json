@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Ввод",
+  "plainTextPlaceholder": "Введите текст для кодирования...",
+  "importFromFileLabel": "Импорт из файла",
+  "hexOutputLabel": "Hex-кодировка",
+  "hexOutputEmptyDescription": "Hex вывод появится здесь...",
+  "downloadHexLabel": "Скачать Hex",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример",
+  "fileReadFailedTitle": "Не удалось прочитать файл",
+  "previewTruncatedLabel": "Предпросмотр усечен"
+}

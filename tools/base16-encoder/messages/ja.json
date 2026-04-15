@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "入力",
+  "plainTextPlaceholder": "エンコードするテキストを入力...",
+  "importFromFileLabel": "ファイルからインポート",
+  "hexOutputLabel": "Hexエンコード済み",
+  "hexOutputEmptyDescription": "Hex 出力がここに表示されます...",
+  "downloadHexLabel": "Hex をダウンロード",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました",
+  "previewTruncatedLabel": "プレビューは切り詰められました"
+}

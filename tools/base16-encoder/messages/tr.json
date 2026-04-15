@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Girdi",
+  "plainTextPlaceholder": "Kodlamak için metin girin...",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hexOutputLabel": "Hex Kodlandı",
+  "hexOutputEmptyDescription": "Hex çıktısı burada görünecek...",
+  "downloadHexLabel": "Hex indir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla",
+  "fileReadFailedTitle": "Dosya okunamadı",
+  "previewTruncatedLabel": "Önizleme kırpıldı"
+}

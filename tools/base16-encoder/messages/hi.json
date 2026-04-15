@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "इनपुट",
+  "plainTextPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hexOutputLabel": "Hex एन्कोडेड",
+  "hexOutputEmptyDescription": "Hex आउटपुट यहां दिखाई देगा...",
+  "downloadHexLabel": "Hex डाउनलोड करें",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल",
+  "previewTruncatedLabel": "पूर्वावलोकन छोटा किया गया"
+}

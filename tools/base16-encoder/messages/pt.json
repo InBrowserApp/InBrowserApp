@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Entrada",
+  "plainTextPlaceholder": "Digite texto para codificar...",
+  "importFromFileLabel": "Importar de arquivo",
+  "hexOutputLabel": "Codificado Hex",
+  "hexOutputEmptyDescription": "A saída Hex aparecerá aqui...",
+  "downloadHexLabel": "Baixar Hex",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "resetLabel": "Redefinir exemplo",
+  "fileReadFailedTitle": "Falha ao ler o arquivo",
+  "previewTruncatedLabel": "Pré-visualização truncada"
+}

@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "الإدخال",
+  "plainTextPlaceholder": "أدخل النص للترميز...",
+  "importFromFileLabel": "استيراد من ملف",
+  "hexOutputLabel": "مُرمز Hex",
+  "hexOutputEmptyDescription": "سيظهر إخراج Hex هنا...",
+  "downloadHexLabel": "تنزيل Hex",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال",
+  "fileReadFailedTitle": "فشل في قراءة الملف",
+  "previewTruncatedLabel": "تم اقتطاع المعاينة"
+}

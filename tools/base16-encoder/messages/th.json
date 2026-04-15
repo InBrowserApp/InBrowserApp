@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "อินพุต",
+  "plainTextPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hexOutputLabel": "เข้ารหัส Hex",
+  "hexOutputEmptyDescription": "ผลลัพธ์ Hex จะแสดงที่นี่...",
+  "downloadHexLabel": "ดาวน์โหลด Hex",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง",
+  "fileReadFailedTitle": "ไม่สามารถอ่านไฟล์ได้",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน"
+}

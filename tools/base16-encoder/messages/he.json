@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "קלט",
+  "plainTextPlaceholder": "הזן טקסט לקידוד...",
+  "importFromFileLabel": "יבוא מקובץ",
+  "hexOutputLabel": "מקודד Hex",
+  "hexOutputEmptyDescription": "פלט Hex יופיע כאן...",
+  "downloadHexLabel": "הורד Hex",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה"
+}

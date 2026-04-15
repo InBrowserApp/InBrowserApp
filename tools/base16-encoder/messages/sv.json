@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Indata",
+  "plainTextPlaceholder": "Ange text för kodning...",
+  "importFromFileLabel": "Importera från fil",
+  "hexOutputLabel": "Hex-kodad",
+  "hexOutputEmptyDescription": "Hex-utdata visas här...",
+  "downloadHexLabel": "Ladda ner Hex",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel",
+  "fileReadFailedTitle": "Kunde inte läsa filen",
+  "previewTruncatedLabel": "Förhandsvisning avkortad"
+}

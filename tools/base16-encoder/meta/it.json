@@ -1,0 +1,4 @@
+{
+  "name": "Codificatore Base16",
+  "description": "Codifica testo o file in Base16 (Hex) per trasmissione dati, debug e sviluppo web."
+}

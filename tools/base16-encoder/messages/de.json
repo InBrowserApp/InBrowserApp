@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Eingabe",
+  "plainTextPlaceholder": "Text zum Kodieren eingeben...",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hexOutputLabel": "Hex-kodiert",
+  "hexOutputEmptyDescription": "Hex-Ausgabe erscheint hier...",
+  "downloadHexLabel": "Hex herunterladen",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen",
+  "fileReadFailedTitle": "Datei konnte nicht gelesen werden",
+  "previewTruncatedLabel": "Vorschau abgeschnitten"
+}

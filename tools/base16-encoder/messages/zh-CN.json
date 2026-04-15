@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "输入",
+  "plainTextPlaceholder": "输入要编码的文本...",
+  "importFromFileLabel": "从文件导入",
+  "hexOutputLabel": "Hex 编码",
+  "hexOutputEmptyDescription": "Hex 输出将显示在这里...",
+  "downloadHexLabel": "下载 Hex",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例",
+  "fileReadFailedTitle": "读取文件失败",
+  "previewTruncatedLabel": "预览已截断"
+}

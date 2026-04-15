@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Input",
+  "plainTextPlaceholder": "Masukkan teks untuk dikodkan...",
+  "importFromFileLabel": "Import dari fail",
+  "hexOutputLabel": "Dikod Hex",
+  "hexOutputEmptyDescription": "Output Hex akan muncul di sini...",
+  "downloadHexLabel": "Muat turun Hex",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Tetapkan semula contoh",
+  "fileReadFailedTitle": "Gagal membaca fail",
+  "previewTruncatedLabel": "Pratonton dipendekkan"
+}

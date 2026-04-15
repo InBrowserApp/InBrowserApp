@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Invoer",
+  "plainTextPlaceholder": "Voer tekst in om te coderen...",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hexOutputLabel": "Hex-gecodeerd",
+  "hexOutputEmptyDescription": "Hex-uitvoer verschijnt hier...",
+  "downloadHexLabel": "Hex downloaden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen",
+  "previewTruncatedLabel": "Voorbeeld ingekort"
+}

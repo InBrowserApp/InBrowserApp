@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Đầu vào",
+  "plainTextPlaceholder": "Nhập văn bản để mã hóa...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hexOutputLabel": "Đã mã hóa Hex",
+  "hexOutputEmptyDescription": "Đầu ra Hex sẽ xuất hiện ở đây...",
+  "downloadHexLabel": "Tải Hex",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ",
+  "fileReadFailedTitle": "Không thể đọc tệp",
+  "previewTruncatedLabel": "Bản xem trước đã bị cắt"
+}

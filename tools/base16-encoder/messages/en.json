@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Input",
+  "plainTextPlaceholder": "Enter text to encode...",
+  "importFromFileLabel": "Import from file",
+  "hexOutputLabel": "Hex Encoded",
+  "hexOutputEmptyDescription": "Hex output will appear here...",
+  "downloadHexLabel": "Download Hex",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example",
+  "fileReadFailedTitle": "Failed to read file",
+  "previewTruncatedLabel": "Preview truncated"
+}

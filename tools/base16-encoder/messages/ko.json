@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "입력",
+  "plainTextPlaceholder": "인코딩할 텍스트 입력...",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hexOutputLabel": "Hex 인코딩됨",
+  "hexOutputEmptyDescription": "Hex 출력이 여기에 표시됩니다...",
+  "downloadHexLabel": "Hex 다운로드",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정",
+  "fileReadFailedTitle": "파일을 읽지 못했습니다",
+  "previewTruncatedLabel": "미리보기가 잘렸습니다"
+}

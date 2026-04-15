@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "輸入",
+  "plainTextPlaceholder": "輸入要編碼的文字...",
+  "importFromFileLabel": "從檔案匯入",
+  "hexOutputLabel": "Hex 編碼",
+  "hexOutputEmptyDescription": "Hex 輸出會顯示在這裡...",
+  "downloadHexLabel": "下載 Hex",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設範例",
+  "fileReadFailedTitle": "讀取檔案失敗",
+  "previewTruncatedLabel": "預覽已截斷"
+}
