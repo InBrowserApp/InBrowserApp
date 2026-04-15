@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "オプション",
+  "optionsDescription": "1 バッチで生成する識別子の数と、各 CUID2 の長さを設定します。",
+  "countLabel": "件数",
+  "lengthLabel": "長さ",
+  "resultsTitle": "結果",
+  "resultsDescription": "各バッチはブラウザ内でローカル生成されるため、ID を外部サービスへ送らずに確認、コピー、ダウンロードできます。",
+  "resultsPlaceholder": "生成された CUID2 ID がここに表示されます...",
+  "copyResultsLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadResultsLabel": "ダウンロード",
+  "regenerateLabel": "再生成"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "PBKDF2-nyckelhärledning",
+  "description": "Härled nycklar från lösenord och salt med PBKDF2. Konfigurera iterationer, hash-algoritm och utmatningslängd med hex- eller base64‑utdata."
+}

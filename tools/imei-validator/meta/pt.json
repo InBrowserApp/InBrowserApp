@@ -1,0 +1,4 @@
+{
+  "name": "Validador de IMEI",
+  "description": "Valida IMEIs de 15 dígitos com verificações de formato e checksum de Luhn."
+}

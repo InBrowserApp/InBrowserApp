@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cuid2-generator",
+    language: "ar",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "de",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "en",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "es",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "fr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "he",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "hi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "id",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "it",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ja",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ko",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ms",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "nl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "no",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pt",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ru",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "sv",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "th",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "tr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "vi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "current-network-time",
     language: "ar",
   },
@@ -1290,6 +1382,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "html-entity-encoder-decoder",
+    language: "ar",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "de",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "en",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "es",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "fr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "he",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "hi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "id",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "it",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ja",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ko",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ms",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "nl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "no",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pt",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ru",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "sv",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "th",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "tr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "vi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
@@ -1471,6 +1655,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-resizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ar",
+  },
+  {
+    slug: "image-to-ico",
+    language: "de",
+  },
+  {
+    slug: "image-to-ico",
+    language: "en",
+  },
+  {
+    slug: "image-to-ico",
+    language: "es",
+  },
+  {
+    slug: "image-to-ico",
+    language: "fr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "he",
+  },
+  {
+    slug: "image-to-ico",
+    language: "hi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "id",
+  },
+  {
+    slug: "image-to-ico",
+    language: "it",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ja",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ko",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ms",
+  },
+  {
+    slug: "image-to-ico",
+    language: "nl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "no",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pt",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ru",
+  },
+  {
+    slug: "image-to-ico",
+    language: "sv",
+  },
+  {
+    slug: "image-to-ico",
+    language: "th",
+  },
+  {
+    slug: "image-to-ico",
+    language: "tr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "vi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-TW",
+  },
+  {
+    slug: "imei-validator",
+    language: "ar",
+  },
+  {
+    slug: "imei-validator",
+    language: "de",
+  },
+  {
+    slug: "imei-validator",
+    language: "en",
+  },
+  {
+    slug: "imei-validator",
+    language: "es",
+  },
+  {
+    slug: "imei-validator",
+    language: "fr",
+  },
+  {
+    slug: "imei-validator",
+    language: "he",
+  },
+  {
+    slug: "imei-validator",
+    language: "hi",
+  },
+  {
+    slug: "imei-validator",
+    language: "id",
+  },
+  {
+    slug: "imei-validator",
+    language: "it",
+  },
+  {
+    slug: "imei-validator",
+    language: "ja",
+  },
+  {
+    slug: "imei-validator",
+    language: "ko",
+  },
+  {
+    slug: "imei-validator",
+    language: "ms",
+  },
+  {
+    slug: "imei-validator",
+    language: "nl",
+  },
+  {
+    slug: "imei-validator",
+    language: "no",
+  },
+  {
+    slug: "imei-validator",
+    language: "pl",
+  },
+  {
+    slug: "imei-validator",
+    language: "pt",
+  },
+  {
+    slug: "imei-validator",
+    language: "ru",
+  },
+  {
+    slug: "imei-validator",
+    language: "sv",
+  },
+  {
+    slug: "imei-validator",
+    language: "th",
+  },
+  {
+    slug: "imei-validator",
+    language: "tr",
+  },
+  {
+    slug: "imei-validator",
+    language: "vi",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "imei-validator",
     language: "zh-TW",
   },
   {
@@ -2854,6 +3222,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "password-strength-checker",
+    language: "ar",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "de",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "en",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "es",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "fr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "he",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "hi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "id",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "it",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ja",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ko",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ms",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "nl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "no",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pt",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ru",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "sv",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "th",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "tr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "vi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-TW",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ar",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "de",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "en",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "es",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "fr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "he",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "hi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "id",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "it",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ja",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ko",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ms",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "nl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "no",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pt",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ru",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "sv",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "th",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "tr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "vi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-CN",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-TW",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ar",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "de",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "en",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "es",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "fr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "he",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "hi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "id",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "it",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ja",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ko",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ms",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "nl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "no",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pt",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ru",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "sv",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "th",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "tr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "vi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },
@@ -3130,6 +3774,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-password-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-password-generator",
+    language: "de",
+  },
+  {
+    slug: "random-password-generator",
+    language: "en",
+  },
+  {
+    slug: "random-password-generator",
+    language: "es",
+  },
+  {
+    slug: "random-password-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "he",
+  },
+  {
+    slug: "random-password-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "id",
+  },
+  {
+    slug: "random-password-generator",
+    language: "it",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-password-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "no",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-password-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-password-generator",
+    language: "th",
+  },
+  {
+    slug: "random-password-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ar",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "de",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "en",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "es",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "fr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "he",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "hi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "id",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "it",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ja",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ko",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ms",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "nl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "no",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pt",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ru",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "sv",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "th",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "tr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "vi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-CN",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },
@@ -4047,6 +4875,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "text-statistics",
+    language: "zh-TW",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ar",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "de",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "en",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "es",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "fr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "he",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "hi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "id",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "it",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ja",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ko",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ms",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "nl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "no",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pt",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ru",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "sv",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "th",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "tr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "vi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-zone-converter",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "Dérivation de Clé PBKDF2",
+  "description": "Dérivez des clés à partir d’un mot de passe et d’un sel avec PBKDF2. Configurez les itérations, l’algorithme de hachage et la longueur de sortie en hex ou base64."
+}

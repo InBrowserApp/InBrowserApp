@@ -1,0 +1,19 @@
+{
+  "fromLabel": "से",
+  "toLabel": "तक",
+  "timeZoneLabel": "समय क्षेत्र",
+  "dateTimeLabel": "दिनांक और समय",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "फ़ॉर्मेट: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "अभी",
+  "offsetLabel": "ऑफ़सेट",
+  "invalidDateTimeLabel": "अमान्य दिनांक/समय",
+  "swapLabel": "अदला-बदली",
+  "detailsLabel": "विवरण",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix टाइमस्टैम्प (ms)",
+  "unixSecondsLabel": "Unix टाइमस्टैम्प (s)",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "ตัวเลือก",
+  "optionsDescription": "กำหนดว่าต้องการสร้างตัวระบุกี่รายการในแต่ละแบตช์ และแต่ละ CUID2 ควรยาวเท่าใด",
+  "countLabel": "จำนวน",
+  "lengthLabel": "ความยาว",
+  "resultsTitle": "ผลลัพธ์",
+  "resultsDescription": "แต่ละแบตช์จะถูกสร้างภายในเบราว์เซอร์ของคุณ จึงสามารถตรวจสอบ คัดลอก หรือดาวน์โหลดได้โดยไม่ต้องส่ง ID ไปยังบริการอื่น",
+  "resultsPlaceholder": "ID CUID2 ที่สร้างไว้จะแสดงที่นี่...",
+  "copyResultsLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadResultsLabel": "ดาวน์โหลด",
+  "regenerateLabel": "สร้างใหม่"
+}

@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Passord",
+  "resultTitle": "Styrkesammendrag",
+  "passwordLabel": "Passord",
+  "passwordPlaceholder": "Skriv inn et passord for vurdering",
+  "show": "Vis",
+  "hide": "Skjul",
+  "privacyHint": "Sjekken kjøres lokalt i nettleseren.",
+  "empty": "Skriv inn et passord for å sjekke styrken.",
+  "entropyBits": "Entropi: {bits} bit",
+  "log10Guesses": "Gjetninger (log10): {value}",
+  "strength0": "Svært svakt",
+  "strength1": "Svakt",
+  "strength2": "Greit",
+  "strength3": "Sterkt",
+  "strength4": "Svært sterkt",
+  "length": "Lengde",
+  "unique": "Unike tegn",
+  "characterSets": "Tegnsett",
+  "crackOffline": "Knekktid (offline, 1e10/s)",
+  "crackOnline": "Knekktid (online, 100/s)",
+  "durationFormat": "Omtrent {value} {unit}",
+  "durationUnderSecond": "Mindre enn 1 sekund",
+  "unit": {
+    "seconds": "sekunder",
+    "minutes": "minutter",
+    "hours": "timer",
+    "days": "dager",
+    "months": "måneder",
+    "years": "år"
+  },
+  "warning": {
+    "common": "Dette er et svært vanlig passord.",
+    "short": "Passordet er for kort.",
+    "sequence": "Sekvenser er lette å gjette.",
+    "repeat": "Gjentatte mønstre reduserer styrken.",
+    "singleClass": "Kun én tegnkategori reduserer styrken."
+  },
+  "suggestion": {
+    "use-longer": "Bruk et lengre passord eller en passfrase.",
+    "add-uppercase": "Legg til store bokstaver.",
+    "add-lowercase": "Legg til små bokstaver.",
+    "add-numbers": "Legg til tall.",
+    "add-symbols": "Legg til symboler.",
+    "avoid-common": "Unngå vanlige eller lekkede passord.",
+    "avoid-sequences": "Unngå sekvenser som 123 eller abc.",
+    "avoid-repetition": "Unngå gjentatte mønstre."
+  }
+}

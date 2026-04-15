@@ -1,0 +1,4 @@
+{
+  "name": "IMEI-validerare",
+  "description": "Validera 15-siffriga IMEI med format- och Luhn-kontroller."
+}

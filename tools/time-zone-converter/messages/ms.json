@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Dari",
+  "toLabel": "Ke",
+  "timeZoneLabel": "Zon masa",
+  "dateTimeLabel": "Tarikh & masa",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Sekarang",
+  "offsetLabel": "Ofset",
+  "invalidDateTimeLabel": "Tarikh/masa tidak sah",
+  "swapLabel": "Tukar",
+  "detailsLabel": "Butiran",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Cap masa Unix (ms)",
+  "unixSecondsLabel": "Cap masa Unix (s)",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

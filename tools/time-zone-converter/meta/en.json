@@ -1,0 +1,4 @@
+{
+  "name": "Time Zone Converter",
+  "description": "Convert a date and time between time zones with daylight saving support. Compare offsets and copy ISO/UTC formats."
+}

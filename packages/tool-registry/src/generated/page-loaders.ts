@@ -14,14 +14,19 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
+  "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
+  "html-entity-encoder-decoder": () =>
+    import("@tool/html-entity-encoder-decoder/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "image-to-ico": () => import("@tool/image-to-ico/page"),
+  "imei-validator": () => import("@tool/imei-validator/page"),
   "ipv6-address-to-mac-address-converter": () =>
     import("@tool/ipv6-address-to-mac-address-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
@@ -39,9 +44,17 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "password-strength-checker": () =>
+    import("@tool/password-strength-checker/page"),
+  "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
+  "placeholder-image-generator": () =>
+    import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
+  "random-password-generator": () =>
+    import("@tool/random-password-generator/page"),
+  "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
@@ -56,6 +69,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
+  "time-zone-converter": () => import("@tool/time-zone-converter/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),

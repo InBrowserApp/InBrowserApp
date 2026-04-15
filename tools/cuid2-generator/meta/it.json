@@ -1,0 +1,4 @@
+{
+  "name": "Generatore CUID2",
+  "description": "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Wyprowadzanie klucza PBKDF2",
+  "description": "Wyprowadzaj klucze z hasła i soli za pomocą PBKDF2. Ustaw iteracje, algorytm hash i długość wyjścia z wynikiem w hex lub base64."
+}

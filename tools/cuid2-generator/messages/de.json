@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Optionen",
+  "optionsDescription": "Lege fest, wie viele Kennungen pro Stapel erzeugt werden und wie lang jede CUID2 sein soll.",
+  "countLabel": "Anzahl",
+  "lengthLabel": "Länge",
+  "resultsTitle": "Ergebnisse",
+  "resultsDescription": "Jeder Stapel wird lokal in deinem Browser erzeugt, sodass du ihn prüfen, kopieren oder herunterladen kannst, ohne die IDs irgendwohin zu senden.",
+  "resultsPlaceholder": "Die erzeugten CUID2-IDs erscheinen hier...",
+  "copyResultsLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Herunterladen",
+  "regenerateLabel": "Neu generieren"
+}

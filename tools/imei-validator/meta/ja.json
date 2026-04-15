@@ -1,0 +1,4 @@
+{
+  "name": "IMEI 検証",
+  "description": "15 桁の IMEI を形式と Luhn チェックサムで検証します。"
+}

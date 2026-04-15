@@ -27,6 +27,7 @@ catalog:
   "@astrojs/sitemap": ^3.7.2
   "@commitlint/cli": ^20.5.0
   "@commitlint/config-conventional": ^20.5.0
+  "@paralleldrive/cuid2": ^3.3.0
   "@types/jmespath": ^0.15.2
   "@tailwindcss/vite": ^4.1.18
   "@testing-library/react": ^16.3.2
@@ -40,6 +41,7 @@ catalog:
   ajv: ^8.18.0
   ajv-formats: ^3.0.1
   astro: ^5.17.1
+  bip39: ^3.1.0
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
   dependency-cruiser: ^17.3.10

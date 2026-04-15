@@ -1,0 +1,4 @@
+{
+  "name": "CUID2 Generator",
+  "description": "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count."
+}

@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Pilihan",
+  "optionsDescription": "Tetapkan berapa banyak pengecam yang perlu dijana bagi setiap kelompok dan berapa panjang setiap CUID2.",
+  "countLabel": "Jumlah",
+  "lengthLabel": "Panjang",
+  "resultsTitle": "Hasil",
+  "resultsDescription": "Setiap kelompok dijana secara tempatan dalam pelayar supaya anda boleh menyemak, menyalin atau memuat turunnya tanpa menghantar ID ke perkhidmatan lain.",
+  "resultsPlaceholder": "ID CUID2 yang dijana akan muncul di sini...",
+  "copyResultsLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Muat turun",
+  "regenerateLabel": "Jana semula"
+}

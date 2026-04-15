@@ -1,0 +1,4 @@
+{
+  "name": "HTML Entity Encoder & Decoder",
+  "description": "Encode and decode HTML entities. Convert special characters to named, decimal, or hexadecimal HTML entities and vice versa"
+}

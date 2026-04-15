@@ -1,0 +1,4 @@
+{
+  "name": "Validator IMEI",
+  "description": "Memvalidasi IMEI 15 digit dengan pemeriksaan format dan checksum Luhn."
+}

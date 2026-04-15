@@ -1158,6 +1158,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cuid2-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "cuid2",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "slug",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CUID2",
+        description:
+          "أنشئ معرّفات CUID2 آمنة وقليلة التصادم داخل المتصفح مع إمكانية ضبط الطول وعدد العناصر في الدفعة.",
+      },
+      de: {
+        name: "CUID2-Generator",
+        description:
+          "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße.",
+      },
+      en: {
+        name: "CUID2 Generator",
+        description:
+          "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count.",
+      },
+      es: {
+        name: "Generador de CUID2",
+        description:
+          "Genera identificadores CUID2 seguros y resistentes a colisiones en tu navegador con longitud y tamaño de lote ajustables.",
+      },
+      fr: {
+        name: "Générateur de CUID2",
+        description:
+          "Générez des identifiants CUID2 sûrs et résistants aux collisions dans votre navigateur, avec longueur et taille de lot ajustables.",
+      },
+      he: {
+        name: "מחולל CUID2",
+        description:
+          "צרו מזהי CUID2 מאובטחים ובעלי סיכוי נמוך להתנגשות ישירות בדפדפן, עם אורך וגודל אצווה הניתנים להתאמה.",
+      },
+      hi: {
+        name: "CUID2 जनरेटर",
+        description:
+          "ब्राउज़र में सुरक्षित और कम टकराव वाले CUID2 ID बनाएँ, जहाँ लंबाई और बैच आकार दोनों समायोज्य हों।",
+      },
+      id: {
+        name: "Generator CUID2",
+        description:
+          "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan.",
+      },
+      it: {
+        name: "Generatore CUID2",
+        description:
+          "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili.",
+      },
+      ja: {
+        name: "CUID2 ジェネレーター",
+        description:
+          "長さとバッチ件数を調整しながら、安全で衝突しにくい CUID2 ID をブラウザ内で生成します。",
+      },
+      ko: {
+        name: "CUID2 생성기",
+        description:
+          "길이와 배치 수량을 조절하면서 충돌 가능성이 낮은 안전한 CUID2 ID를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana CUID2",
+        description:
+          "Jana ID CUID2 yang selamat dan tahan perlanggaran dalam pelayar dengan panjang dan saiz kelompok yang boleh dilaraskan.",
+      },
+      nl: {
+        name: "CUID2-generator",
+        description:
+          "Genereer veilige CUID2-ID’s met weinig kans op botsingen in je browser, met instelbare lengte en batchgrootte.",
+      },
+      no: {
+        name: "CUID2-generator",
+        description:
+          "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse.",
+      },
+      pl: {
+        name: "Generator CUID2",
+        description:
+          "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii.",
+      },
+      pt: {
+        name: "Gerador de CUID2",
+        description:
+          "Gere IDs CUID2 seguros e resistentes a colisões no navegador, com comprimento e tamanho de lote ajustáveis.",
+      },
+      ru: {
+        name: "Генератор CUID2",
+        description:
+          "Создавайте безопасные идентификаторы CUID2 с низким риском коллизий прямо в браузере, настраивая длину и размер пакета.",
+      },
+      sv: {
+        name: "CUID2-generator",
+        description:
+          "Generera säkra CUID2-ID:n med låg kollisionsrisk i webbläsaren, med justerbar längd och batchstorlek.",
+      },
+      th: {
+        name: "ตัวสร้าง CUID2",
+        description:
+          "สร้าง ID แบบ CUID2 ที่ปลอดภัยและมีโอกาสชนกันต่ำในเบราว์เซอร์ พร้อมปรับความยาวและขนาดแบตช์ได้",
+      },
+      tr: {
+        name: "CUID2 Oluşturucu",
+        description:
+          "Uzunluğu ve toplu üretim boyutunu ayarlayarak güvenli ve çakışmaya dayanıklı CUID2 kimlikleri tarayıcıda üretin.",
+      },
+      vi: {
+        name: "Trình tạo CUID2",
+        description:
+          "Tạo ID CUID2 an toàn, ít va chạm ngay trong trình duyệt với độ dài và kích thước lô có thể điều chỉnh.",
+      },
+      "zh-CN": {
+        name: "CUID2 生成器",
+        description:
+          "在浏览器内生成安全、低碰撞的 CUID2 标识符，支持自定义长度和批量数量。",
+      },
+      "zh-TW": {
+        name: "CUID2 產生器",
+        description:
+          "在瀏覽器內產生安全、低碰撞的 CUID2 識別碼，支援自訂長度與批次數量。",
+      },
+    },
+  },
+  {
     slug: "current-network-time",
     category: "network",
     icon: "network",
@@ -1771,6 +1904,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "html-entity-encoder-decoder",
+    category: "web",
+    icon: "globe",
+    tags: ["html", "entity", "encoding", "decoding", "escape", "web"],
+    locales: {
+      ar: {
+        name: "مشفر ومفكك كيانات HTML",
+        description:
+          "تشفير وفك تشفير كيانات HTML. تحويل الأحرف الخاصة إلى كيانات HTML مسماة أو عشرية أو سداسية عشرية والعكس",
+      },
+      de: {
+        name: "HTML-Entitäten Encoder & Decoder",
+        description:
+          "Kodiert und dekodiert HTML-Entitäten. Konvertiert Sonderzeichen in benannte, dezimale oder hexadezimale HTML-Entitäten und umgekehrt",
+      },
+      en: {
+        name: "HTML Entity Encoder & Decoder",
+        description:
+          "Encode and decode HTML entities. Convert special characters to named, decimal, or hexadecimal HTML entities and vice versa",
+      },
+      es: {
+        name: "Codificador y Decodificador de Entidades HTML",
+        description:
+          "Codifica y decodifica entidades HTML. Convierte caracteres especiales a entidades HTML con nombre, decimales o hexadecimales y viceversa",
+      },
+      fr: {
+        name: "Encodeur et Décodeur d'Entités HTML",
+        description:
+          "Encode et décode les entités HTML. Convertit les caractères spéciaux en entités HTML nommées, décimales ou hexadécimales et vice versa",
+      },
+      he: {
+        name: "מקודד ומפענח ישויות HTML",
+        description:
+          "קידוד ופענוח ישויות HTML. המרת תווים מיוחדים לישויות HTML בשם, עשרוניות או הקסדצימליות ולהיפך",
+      },
+      hi: {
+        name: "HTML एंटिटी एनकोडर और डिकोडर",
+        description:
+          "HTML एंटिटी को एनकोड और डिकोड करें। विशेष वर्णों को नामित, दशमलव या हेक्साडेसिमल HTML एंटिटी में बदलें और इसके विपरीत",
+      },
+      id: {
+        name: "Encoder & Decoder Entitas HTML",
+        description:
+          "Encode dan decode entitas HTML. Konversi karakter khusus ke entitas HTML bernama, desimal, atau heksadesimal dan sebaliknya",
+      },
+      it: {
+        name: "Codificatore e Decodificatore Entità HTML",
+        description:
+          "Codifica e decodifica entità HTML. Converte caratteri speciali in entità HTML con nome, decimali o esadecimali e viceversa",
+      },
+      ja: {
+        name: "HTML エンティティ エンコーダ & デコーダ",
+        description:
+          "HTML エンティティのエンコードとデコード。特殊文字を名前付き、10 進数、または 16 進数の HTML エンティティに変換、またはその逆を行います",
+      },
+      ko: {
+        name: "HTML 엔티티 인코더 & 디코더",
+        description:
+          "HTML 엔티티를 인코딩 및 디코딩합니다. 특수 문자를 이름, 10진수 또는 16진수 HTML 엔티티로 변환하거나 그 반대로 변환합니다",
+      },
+      ms: {
+        name: "Pengekod & Penyahkod Entiti HTML",
+        description:
+          "Mengekod dan menyahkod entiti HTML. Tukar aksara khas kepada entiti HTML bernama, perpuluhan atau perenambelasan dan sebaliknya",
+      },
+      nl: {
+        name: "HTML-entiteit Encoder & Decoder",
+        description:
+          "Codeer en decodeer HTML-entiteiten. Converteer speciale tekens naar benoemde, decimale of hexadecimale HTML-entiteiten en vice versa",
+      },
+      no: {
+        name: "HTML-entitet Koder & Dekoder",
+        description:
+          "Kod og dekod HTML-entiteter. Konverter spesialtegn til navngitte, desimale eller heksadesimale HTML-entiteter og omvendt",
+      },
+      pl: {
+        name: "Koder i Dekoder Encji HTML",
+        description:
+          "Koduj i dekoduj encje HTML. Konwertuj znaki specjalne na nazwane, dziesiętne lub szesnastkowe encje HTML i odwrotnie",
+      },
+      pt: {
+        name: "Codificador e Decodificador de Entidades HTML",
+        description:
+          "Codifica e decodifica entidades HTML. Converte caracteres especiais em entidades HTML nomeadas, decimais ou hexadecimais e vice-versa",
+      },
+      ru: {
+        name: "Кодировщик и декодировщик HTML-сущностей",
+        description:
+          "Кодирование и декодирование HTML-сущностей. Преобразование специальных символов в именованные, десятичные или шестнадцатеричные HTML-сущности и обратно",
+      },
+      sv: {
+        name: "HTML-entitet Kodare & Avkodare",
+        description:
+          "Koda och avkoda HTML-entiteter. Konvertera specialtecken till namngivna, decimala eller hexadecimala HTML-entiteter och vice versa",
+      },
+      th: {
+        name: "ตัวเข้ารหัสและถอดรหัส HTML Entity",
+        description:
+          "เข้ารหัสและถอดรหัส HTML entity แปลงอักขระพิเศษเป็น HTML entity แบบชื่อ ทศนิยม หรือเลขฐานสิบหก และในทางกลับกัน",
+      },
+      tr: {
+        name: "HTML Varlık Kodlayıcı ve Çözücü",
+        description:
+          "HTML varlıklarını kodlayın ve çözün. Özel karakterleri adlandırılmış, ondalık veya onaltılık HTML varlıklarına dönüştürün veya tersini yapın",
+      },
+      vi: {
+        name: "Bộ Mã Hóa & Giải Mã Thực Thể HTML",
+        description:
+          "Mã hóa và giải mã thực thể HTML. Chuyển đổi các ký tự đặc biệt thành thực thể HTML có tên, thập phân hoặc thập lục phân và ngược lại",
+      },
+      "zh-CN": {
+        name: "HTML 实体编码 & 解码",
+        description:
+          "编码和解码 HTML 实体。将特殊字符转换为命名、十进制或十六进制 HTML 实体，或将实体解码为原始字符",
+      },
+      "zh-TW": {
+        name: "HTML 實體編碼 & 解碼",
+        description:
+          "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",
@@ -2022,6 +2278,238 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "圖片尺寸調整器",
         description:
           "直接在瀏覽器中調整圖片尺寸,並將結果匯出為 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  {
+    slug: "image-to-ico",
+    category: "image",
+    icon: "image",
+    tags: ["image", "ico", "favicon", "icon", "converter"],
+    locales: {
+      ar: {
+        name: "محول الصور إلى ICO",
+        description:
+          "حوّل الصور إلى ملفات ICO للأيقونات المفضلة وأيقونات التطبيقات.",
+      },
+      de: {
+        name: "Bild-zu-ICO-Konverter",
+        description:
+          "Konvertieren Sie Bilder in ICO-Dateien für Favicons und App-Symbole.",
+      },
+      en: {
+        name: "Image to ICO Converter",
+        description:
+          "Convert images into ICO files for favicons and app icons.",
+      },
+      es: {
+        name: "Convertidor de imagen a ICO",
+        description:
+          "Convierte imágenes en archivos ICO para favicons e iconos de apps.",
+      },
+      fr: {
+        name: "Convertisseur d'image en ICO",
+        description:
+          "Convertissez des images en fichiers ICO pour les favicons et les icônes d'applications.",
+      },
+      he: {
+        name: "ממיר תמונה ל-ICO",
+        description: "המר תמונות לקבצי ICO עבור פייביקונים ואייקוני אפליקציה.",
+      },
+      hi: {
+        name: "इमेज से ICO कन्वर्टर",
+        description: "छवियों को फेविकॉन और ऐप आइकन के लिए ICO फ़ाइलों में बदलें।",
+      },
+      id: {
+        name: "Konverter gambar ke ICO",
+        description:
+          "Ubah gambar menjadi file ICO untuk favicon dan ikon aplikasi.",
+      },
+      it: {
+        name: "Convertitore da immagine a ICO",
+        description:
+          "Converti immagini in file ICO per favicon e icone delle app.",
+      },
+      ja: {
+        name: "画像からICOへのコンバーター",
+        description:
+          "画像をファビコンやアプリアイコン用の ICO ファイルに変換。",
+      },
+      ko: {
+        name: "이미지 ICO 변환기",
+        description: "이미지를 파비콘 및 앱 아이콘용 ICO 파일로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar imej ke ICO",
+        description:
+          "Tukar imej kepada fail ICO untuk favicon dan ikon aplikasi.",
+      },
+      nl: {
+        name: "Afbeelding naar ICO-converter",
+        description:
+          "Converteer afbeeldingen naar ICO-bestanden voor favicons en app-pictogrammen.",
+      },
+      no: {
+        name: "Bilde til ICO-konverterer",
+        description:
+          "Konverter bilder til ICO-filer for favicons og appikoner.",
+      },
+      pl: {
+        name: "Konwerter obrazu na ICO",
+        description:
+          "Konwertuj obrazy na pliki ICO dla favicon i ikon aplikacji.",
+      },
+      pt: {
+        name: "Conversor de imagem para ICO",
+        description:
+          "Converta imagens em arquivos ICO para favicons e ícones de aplicativos.",
+      },
+      ru: {
+        name: "Конвертер изображений в ICO",
+        description:
+          "Преобразуйте изображения в файлы ICO для фавиконов и значков приложений.",
+      },
+      sv: {
+        name: "Bild till ICO-konverterare",
+        description:
+          "Konvertera bilder till ICO-filer för favicons och appikoner.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น ICO",
+        description: "แปลงรูปภาพเป็นไฟล์ ICO สำหรับแฟวคอนและไอคอนแอป",
+      },
+      tr: {
+        name: "Görüntüden ICO'ya Dönüştürücü",
+        description:
+          "Görüntüleri favicon ve uygulama simgeleri için ICO dosyalarına dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển ảnh sang ICO",
+        description:
+          "Chuyển ảnh sang tệp ICO cho favicon và biểu tượng ứng dụng.",
+      },
+      "zh-CN": {
+        name: "图片转 ICO 转换器",
+        description: "将图片转换为用于网站图标和应用图标的 ICO 文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉 ICO 轉換器",
+        description: "將圖片轉換為用於網站圖示與應用圖示的 ICO 檔案。",
+      },
+    },
+  },
+  {
+    slug: "imei-validator",
+    category: "text",
+    icon: "binary",
+    tags: ["imei", "validator", "mobile", "device", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق IMEI",
+        description: "يتحقق من IMEI المكوّن من 15 رقمًا عبر التنسيق وفحص Luhn.",
+      },
+      de: {
+        name: "IMEI-Validator",
+        description: "Prüft 15-stellige IMEI auf Format und Luhn-Prüfsumme.",
+      },
+      en: {
+        name: "IMEI Validator",
+        description:
+          "Validate 15-digit IMEI numbers with format and Luhn checksum checks.",
+      },
+      es: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEI de 15 dígitos con comprobaciones de formato y checksum Luhn.",
+      },
+      fr: {
+        name: "Validateur IMEI",
+        description:
+          "Valide les IMEI à 15 chiffres avec contrôle de format et checksum Luhn.",
+      },
+      he: {
+        name: "מאמת IMEI",
+        description:
+          "מאמת מספרי IMEI בני 15 ספרות עם בדיקות פורמט וסכום ביקורת Luhn.",
+      },
+      hi: {
+        name: "IMEI सत्यापनकर्ता",
+        description: "15 अंकों के IMEI को प्रारूप और Luhn चेकसम से सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IMEI",
+        description:
+          "Memvalidasi IMEI 15 digit dengan pemeriksaan format dan checksum Luhn.",
+      },
+      it: {
+        name: "Validatore IMEI",
+        description:
+          "Convalida IMEI a 15 cifre con controlli di formato e checksum Luhn.",
+      },
+      ja: {
+        name: "IMEI 検証",
+        description: "15 桁の IMEI を形式と Luhn チェックサムで検証します。",
+      },
+      ko: {
+        name: "IMEI 검증기",
+        description: "15자리 IMEI의 형식과 Luhn 체크섬을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IMEI",
+        description:
+          "Sahkan IMEI 15 digit dengan semakan format dan checksum Luhn.",
+      },
+      nl: {
+        name: "IMEI-validator",
+        description:
+          "Valideer 15-cijferige IMEI met formaat- en Luhn-controles.",
+      },
+      no: {
+        name: "IMEI-validerer",
+        description:
+          "Validerer 15-sifrede IMEI med format- og Luhn-kontroller.",
+      },
+      pl: {
+        name: "Walidator IMEI",
+        description:
+          "Sprawdza 15-cyfrowy IMEI pod kątem formatu i sumy kontrolnej Luhna.",
+      },
+      pt: {
+        name: "Validador de IMEI",
+        description:
+          "Valida IMEIs de 15 dígitos com verificações de formato e checksum de Luhn.",
+      },
+      ru: {
+        name: "Валидатор IMEI",
+        description:
+          "Проверяет 15-значный IMEI по формату и контрольной сумме Луна.",
+      },
+      sv: {
+        name: "IMEI-validerare",
+        description:
+          "Validera 15-siffriga IMEI med format- och Luhn-kontroller.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IMEI",
+        description: "ตรวจสอบ IMEI 15 หลักด้วยรูปแบบและเช็กซัม Luhn",
+      },
+      tr: {
+        name: "IMEI Doğrulayıcı",
+        description:
+          "15 haneli IMEI numaralarını biçim ve Luhn sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IMEI",
+        description:
+          "Xác thực IMEI 15 chữ số bằng kiểm tra định dạng và checksum Luhn.",
+      },
+      "zh-CN": {
+        name: "IMEI 验证器",
+        description: "验证 15 位 IMEI，检查格式和 Luhn 校验位。",
+      },
+      "zh-TW": {
+        name: "IMEI 驗證器",
+        description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
       },
     },
   },
@@ -3835,6 +4323,384 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "password-strength-checker",
+    category: "text",
+    icon: "lock",
+    tags: ["password", "security", "strength", "validator"],
+    locales: {
+      ar: {
+        name: "مدقق قوة كلمة المرور",
+        description:
+          "قيّم القوة عبر الإنتروبيا والتركيب وفحص الأنماط مع نصائح لتحسين الأمان.",
+      },
+      de: {
+        name: "Passwortstärke-Checker",
+        description:
+          "Bewertet die Passwortstärke anhand von Entropie, Zusammensetzung und Mustern und gibt Tipps zur Sicherheit.",
+      },
+      en: {
+        name: "Password Strength Checker",
+        description:
+          "Assess password strength with entropy, composition, and pattern checks plus tips to improve security.",
+      },
+      es: {
+        name: "Comprobador de Fuerza de Contraseña",
+        description:
+          "Evalúa la fortaleza con entropía, composición y patrones, y ofrece sugerencias para mejorar la seguridad.",
+      },
+      fr: {
+        name: "Vérificateur de Robustesse de Mot de Passe",
+        description:
+          "Évalue la robustesse via entropie, composition et motifs, avec des conseils pour améliorer la sécurité.",
+      },
+      he: {
+        name: "בודק חוזק סיסמה",
+        description:
+          "מעריך חוזק באמצעות אנטרופיה, הרכב ובדיקות דפוסים ומספק טיפים לשיפור האבטחה.",
+      },
+      hi: {
+        name: "पासवर्ड मजबूती जांचकर्ता",
+        description:
+          "एंट्रॉपी, संरचना और पैटर्न जांच के साथ मजबूती का आकलन करें और सुरक्षा सुझाव पाएं।",
+      },
+      id: {
+        name: "Pemeriksa Kekuatan Kata Sandi",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi, dan pola, serta memberi saran untuk meningkatkan keamanan.",
+      },
+      it: {
+        name: "Verificatore di Forza Password",
+        description:
+          "Valuta la forza con entropia, composizione e pattern, con suggerimenti per migliorare la sicurezza.",
+      },
+      ja: {
+        name: "パスワード強度チェッカー",
+        description:
+          "エントロピーや構成、パターン検査で強度を評価し、安全性向上のヒントを提供します。",
+      },
+      ko: {
+        name: "비밀번호 강도 검사기",
+        description:
+          "엔트로피, 구성, 패턴 검사를 통해 강도를 평가하고 보안을 높이는 팁을 제공합니다.",
+      },
+      ms: {
+        name: "Pemeriksa Kekuatan Kata Laluan",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi dan corak, serta memberi cadangan untuk meningkatkan keselamatan.",
+      },
+      nl: {
+        name: "Wachtwoordsterkte Checker",
+        description:
+          "Beoordeelt sterkte met entropie-, samenstellings- en patroonchecks, plus tips voor betere veiligheid.",
+      },
+      no: {
+        name: "Passordstyrke-sjekk",
+        description:
+          "Vurderer passordstyrke med entropi, sammensetning og mønstre, og gir tips for bedre sikkerhet.",
+      },
+      pl: {
+        name: "Sprawdzanie Siły Hasła",
+        description:
+          "Ocenia siłę hasła na podstawie entropii, składu i wzorców oraz podaje wskazówki bezpieczeństwa.",
+      },
+      pt: {
+        name: "Verificador de Força de Senha",
+        description:
+          "Avalia a força com entropia, composição e padrões, além de dicas para melhorar a segurança.",
+      },
+      ru: {
+        name: "Проверка Стойкости Пароля",
+        description:
+          "Оценивает стойкость по энтропии, составу и шаблонам и дает советы по повышению безопасности.",
+      },
+      sv: {
+        name: "Lösenordsstyrke-kontroll",
+        description:
+          "Bedömer lösenordsstyrka med entropi-, sammansättnings- och mönsterkontroller samt tips för säkerhet.",
+      },
+      th: {
+        name: "ตัวตรวจสอบความแข็งแรงของรหัสผ่าน",
+        description:
+          "ประเมินความแข็งแรงด้วยเอนโทรปี องค์ประกอบ และรูปแบบ พร้อมคำแนะนำเพื่อเพิ่มความปลอดภัย.",
+      },
+      tr: {
+        name: "Parola Gücü Denetleyici",
+        description:
+          "Entropi, bileşim ve desen kontrolleriyle gücü değerlendirir ve güvenliği artırmak için öneriler sunar.",
+      },
+      vi: {
+        name: "Kiểm tra độ mạnh mật khẩu",
+        description:
+          "Đánh giá độ mạnh bằng entropy, thành phần ký tự và mẫu, kèm gợi ý cải thiện bảo mật.",
+      },
+      "zh-CN": {
+        name: "密码强度检测",
+        description:
+          "通过熵值、字符组成和模式检测评估密码强度，并提供提升安全性的建议。",
+      },
+      "zh-TW": {
+        name: "密碼強度檢測",
+        description:
+          "透過熵值、字元組成與模式檢查評估密碼強度，並提供提升安全性的建議。",
+      },
+    },
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "kdf", "pbkdf2", "password", "key", "crypto", "security"],
+    locales: {
+      ar: {
+        name: "اشتقاق مفاتيح PBKDF2",
+        description:
+          "اشتق المفاتيح من كلمة مرور وملح باستخدام PBKDF2. اضبط عدد التكرارات وخوارزمية الهاش وطول الإخراج مع نتائج بصيغة hex أو base64.",
+      },
+      de: {
+        name: "PBKDF2-Schlüsselableitung",
+        description:
+          "Leiten Sie Schlüssel aus Passwort und Salt mit PBKDF2 ab. Konfigurieren Sie Iterationen, Hash-Algorithmus und Ausgabelänge mit Hex- oder Base64-Ausgabe.",
+      },
+      en: {
+        name: "PBKDF2 Key Derivation",
+        description:
+          "Derive keys from a password and salt with PBKDF2. Configure iterations, hash algorithm, and output length with hex or base64 output.",
+      },
+      es: {
+        name: "Derivación de Claves PBKDF2",
+        description:
+          "Deriva claves a partir de una contraseña y una sal con PBKDF2. Configura iteraciones, algoritmo hash y longitud de salida con resultados en hex o base64.",
+      },
+      fr: {
+        name: "Dérivation de Clé PBKDF2",
+        description:
+          "Dérivez des clés à partir d’un mot de passe et d’un sel avec PBKDF2. Configurez les itérations, l’algorithme de hachage et la longueur de sortie en hex ou base64.",
+      },
+      he: {
+        name: "נגזרת מפתח PBKDF2",
+        description:
+          "גזור מפתחות מסיסמה וממלח באמצעות PBKDF2. הגדר איטרציות, אלגוריתם גיבוב ואורך פלט עם תוצאות hex או base64.",
+      },
+      hi: {
+        name: "PBKDF2 कुंजी व्युत्पत्ति",
+        description:
+          "PBKDF2 के साथ पासवर्ड और सॉल्ट से कुंजियाँ व्युत्पन्न करें। इटरेशन, हैश एल्गोरिदम और आउटपुट लंबाई सेट करें, आउटपुट hex या base64 में।",
+      },
+      id: {
+        name: "Derivasi Kunci PBKDF2",
+        description:
+          "Derivasi kunci dari kata sandi dan salt dengan PBKDF2. Atur iterasi, algoritma hash, dan panjang output dengan hasil hex atau base64.",
+      },
+      it: {
+        name: "Derivazione Chiave PBKDF2",
+        description:
+          "Deriva chiavi da password e salt con PBKDF2. Configura iterazioni, algoritmo hash e lunghezza dell’output con risultati in hex o base64.",
+      },
+      ja: {
+        name: "PBKDF2 鍵導出",
+        description:
+          "PBKDF2 を使ってパスワードとソルトから鍵を導出します。反復回数、ハッシュアルゴリズム、出力長を設定し、16進数またはBase64で出力します。",
+      },
+      ko: {
+        name: "PBKDF2 키 파생",
+        description:
+          "PBKDF2로 비밀번호와 솔트에서 키를 파생합니다. 반복 횟수, 해시 알고리즘, 출력 길이를 설정하고 hex 또는 base64로 출력합니다.",
+      },
+      ms: {
+        name: "Derivasi Kunci PBKDF2",
+        description:
+          "Derivasi kunci daripada kata laluan dan salt dengan PBKDF2. Tetapkan iterasi, algoritma hash dan panjang output dengan hasil hex atau base64.",
+      },
+      nl: {
+        name: "PBKDF2-sleutelafleiding",
+        description:
+          "Leid sleutels af uit een wachtwoord en salt met PBKDF2. Stel iteraties, hash-algoritme en uitvoerlengte in met hex- of base64-uitvoer.",
+      },
+      no: {
+        name: "PBKDF2-nøkkelavledning",
+        description:
+          "Avled nøkler fra passord og salt med PBKDF2. Konfigurer iterasjoner, hash‑algoritme og utdata‑lengde med hex- eller base64‑utdata.",
+      },
+      pl: {
+        name: "Wyprowadzanie klucza PBKDF2",
+        description:
+          "Wyprowadzaj klucze z hasła i soli za pomocą PBKDF2. Ustaw iteracje, algorytm hash i długość wyjścia z wynikiem w hex lub base64.",
+      },
+      pt: {
+        name: "Derivação de Chaves PBKDF2",
+        description:
+          "Derive chaves a partir de senha e salt com PBKDF2. Configure iterações, algoritmo hash e comprimento de saída com resultado em hex ou base64.",
+      },
+      ru: {
+        name: "Вывод ключей PBKDF2",
+        description:
+          "Выводите ключи из пароля и соли с PBKDF2. Настраивайте число итераций, хэш‑алгоритм и длину вывода с результатом в hex или base64.",
+      },
+      sv: {
+        name: "PBKDF2-nyckelhärledning",
+        description:
+          "Härled nycklar från lösenord och salt med PBKDF2. Konfigurera iterationer, hash-algoritm och utmatningslängd med hex- eller base64‑utdata.",
+      },
+      th: {
+        name: "การสร้างคีย์ PBKDF2",
+        description:
+          "สร้างคีย์จากรหัสผ่านและซอลต์ด้วย PBKDF2 ปรับจำนวนรอบ อัลกอริทึมแฮช และความยาวผลลัพธ์ พร้อมเอาต์พุตแบบ hex หรือ base64",
+      },
+      tr: {
+        name: "PBKDF2 Anahtar Türetme",
+        description:
+          "PBKDF2 ile parola ve tuzdan anahtar türetin. Yineleme sayısı, hash algoritması ve çıktı uzunluğunu ayarlayın; hex veya base64 çıktı alın.",
+      },
+      vi: {
+        name: "Suy xuất khóa PBKDF2",
+        description:
+          "Suy xuất khóa từ mật khẩu và muối bằng PBKDF2. Cấu hình số vòng lặp, thuật toán băm và độ dài đầu ra với kết quả hex hoặc base64.",
+      },
+      "zh-CN": {
+        name: "PBKDF2 密钥派生",
+        description:
+          "使用 PBKDF2 从密码和盐派生密钥。可配置迭代次数、哈希算法和输出长度，支持十六进制或 Base64 输出。",
+      },
+      "zh-TW": {
+        name: "PBKDF2 金鑰派生",
+        description:
+          "使用 PBKDF2 從密碼和鹽派生金鑰。可設定迭代次數、雜湊演算法與輸出長度，支援十六進位或 Base64 輸出。",
+      },
+    },
+  },
+  {
+    slug: "placeholder-image-generator",
+    category: "image",
+    icon: "image",
+    tags: [
+      "placeholder",
+      "image",
+      "generator",
+      "gradient",
+      "png",
+      "jpeg",
+      "svg",
+      "webp",
+    ],
+    locales: {
+      ar: {
+        name: "مولد الصور النائبة",
+        description:
+          "أنشئ صور نائبة بأبعاد وألوان وتدرجات ونص مخصص. صدّر بصيغ PNG أو JPG أو SVG أو WebP مع دعم Retina.",
+      },
+      de: {
+        name: "Platzhalter-Bildgenerator",
+        description:
+          "Erstellen Sie Platzhalterbilder mit benutzerdefinierten Abmessungen, Farben, Verläufen und Text. Export als PNG, JPG, SVG oder WebP mit Retina-Unterstützung.",
+      },
+      en: {
+        name: "Placeholder Image Generator",
+        description:
+          "Generate placeholder images with custom dimensions, colors, gradients, and text. Export as PNG, JPG, SVG, or WebP with Retina support.",
+      },
+      es: {
+        name: "Generador de Imágenes de Marcador",
+        description:
+          "Genera imágenes de marcador con dimensiones, colores, degradados y texto personalizados. Exporta como PNG, JPG, SVG o WebP con soporte Retina.",
+      },
+      fr: {
+        name: "Générateur d'Images Placeholder",
+        description:
+          "Générez des images placeholder avec dimensions, couleurs, dégradés et texte personnalisés. Exportez en PNG, JPG, SVG ou WebP avec support Retina.",
+      },
+      he: {
+        name: "מחולל תמונות שומר מקום",
+        description:
+          "צרו תמונות שומר מקום עם ממדים, צבעים, מעברי צבע וטקסט מותאמים אישית. ייצוא כ-PNG, JPG, SVG או WebP עם תמיכת Retina.",
+      },
+      hi: {
+        name: "प्लेसहोल्डर छवि जनरेटर",
+        description:
+          "कस्टम आयाम, रंग, ग्रेडिएंट और टेक्स्ट के साथ प्लेसहोल्डर छवियाँ बनाएँ। Retina समर्थन के साथ PNG, JPG, SVG या WebP में निर्यात करें।",
+      },
+      id: {
+        name: "Generator Gambar Placeholder",
+        description:
+          "Buat gambar placeholder dengan dimensi, warna, gradien, dan teks khusus. Ekspor sebagai PNG, JPG, SVG, atau WebP dengan dukungan Retina.",
+      },
+      it: {
+        name: "Generatore di Immagini Segnaposto",
+        description:
+          "Genera immagini segnaposto con dimensioni, colori, sfumature e testo personalizzati. Esporta come PNG, JPG, SVG o WebP con supporto Retina.",
+      },
+      ja: {
+        name: "プレースホルダー画像ジェネレーター",
+        description:
+          "カスタムサイズ、色、グラデーション、テキストのプレースホルダー画像を生成。PNG、JPG、SVG、WebP形式でRetina対応出力。",
+      },
+      ko: {
+        name: "플레이스홀더 이미지 생성기",
+        description:
+          "사용자 정의 크기, 색상, 그라데이션 및 텍스트로 플레이스홀더 이미지를 생성합니다. Retina 지원 PNG, JPG, SVG, WebP로 내보내기.",
+      },
+      ms: {
+        name: "Penjana Imej Pemegang Tempat",
+        description:
+          "Jana imej pemegang tempat dengan dimensi, warna, kecerunan dan teks tersuai. Eksport sebagai PNG, JPG, SVG atau WebP dengan sokongan Retina.",
+      },
+      nl: {
+        name: "Plaatshouder Afbeelding Generator",
+        description:
+          "Genereer plaatshouder afbeeldingen met aangepaste afmetingen, kleuren, verlopen en tekst. Exporteer als PNG, JPG, SVG of WebP met Retina-ondersteuning.",
+      },
+      no: {
+        name: "Plassholder-bildegenerator",
+        description:
+          "Generer plassholderbilder med tilpassede dimensjoner, farger, gradienter og tekst. Eksporter som PNG, JPG, SVG eller WebP med Retina-støtte.",
+      },
+      pl: {
+        name: "Generator obrazów zastępczych",
+        description:
+          "Generuj obrazy zastępcze z niestandardowymi wymiarami, kolorami, gradientami i tekstem. Eksportuj jako PNG, JPG, SVG lub WebP z obsługą Retina.",
+      },
+      pt: {
+        name: "Gerador de Imagens Placeholder",
+        description:
+          "Gere imagens placeholder com dimensões, cores, gradientes e texto personalizados. Exporte como PNG, JPG, SVG ou WebP com suporte Retina.",
+      },
+      ru: {
+        name: "Генератор изображений-заполнителей",
+        description:
+          "Создавайте изображения-заполнители с настраиваемыми размерами, цветами, градиентами и текстом. Экспорт в PNG, JPG, SVG или WebP с поддержкой Retina.",
+      },
+      sv: {
+        name: "Platshållarbildgenerator",
+        description:
+          "Generera platshållarbilder med anpassade dimensioner, färger, gradienter och text. Exportera som PNG, JPG, SVG eller WebP med Retina-stöd.",
+      },
+      th: {
+        name: "ตัวสร้างภาพตัวยึดตำแหน่ง",
+        description:
+          "สร้างภาพตัวยึดตำแหน่งด้วยขนาด สี การไล่ระดับสี และข้อความที่กำหนดเอง ส่งออกเป็น PNG, JPG, SVG หรือ WebP พร้อมรองรับ Retina",
+      },
+      tr: {
+        name: "Yer Tutucu Görüntü Oluşturucu",
+        description:
+          "Özel boyutlar, renkler, degradeler ve metin ile yer tutucu görüntüler oluşturun. Retina desteğiyle PNG, JPG, SVG veya WebP olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo ảnh giữ chỗ",
+        description:
+          "Tạo ảnh giữ chỗ với kích thước, màu sắc, gradient và văn bản tùy chỉnh. Xuất dưới dạng PNG, JPG, SVG hoặc WebP với hỗ trợ Retina.",
+      },
+      "zh-CN": {
+        name: "占位图生成器",
+        description:
+          "生成自定义尺寸、颜色、渐变和文字的占位图。支持 PNG、JPG、SVG、WebP 格式及 Retina 高清输出。",
+      },
+      "zh-TW": {
+        name: "佔位圖產生器",
+        description:
+          "產生自訂尺寸、顏色、漸層和文字的佔位圖。支援 PNG、JPG、SVG、WebP 格式及 Retina 高清輸出。",
+      },
+    },
+  },
+  {
     slug: "port-number-lookup",
     category: "network",
     icon: "network",
@@ -4183,6 +5049,256 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "隨機數產生器",
         description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "مولد كلمات المرور العشوائية",
+        description:
+          "أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح.",
+      },
+      de: {
+        name: "Zufalls-Passwortgenerator",
+        description:
+          "Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Generador de contraseñas aleatorias",
+        description:
+          "Genera contraseñas, frases de paso, códigos agrupados y PIN en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de mots de passe aléatoires",
+        description:
+          "Générez des mots de passe, phrases de passe, codes groupés et PIN dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל סיסמאות אקראיות",
+        description:
+          "צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN בדפדפן.",
+      },
+      hi: {
+        name: "रैंडम पासवर्ड जेनरेटर",
+        description: "अपने ब्राउज़र में पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाएं।",
+      },
+      id: {
+        name: "Generator Kata Sandi Acak",
+        description:
+          "Buat kata sandi, frasa sandi, kode berkelompok, dan PIN di browser.",
+      },
+      it: {
+        name: "Generatore di password casuali",
+        description:
+          "Genera password, frasi segrete, codici a blocchi e PIN nel browser.",
+      },
+      ja: {
+        name: "ランダムパスワード生成器",
+        description:
+          "ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成します。",
+      },
+      ko: {
+        name: "랜덤 비밀번호 생성기",
+        description:
+          "브라우저에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kata Laluan Rawak",
+        description:
+          "Jana kata laluan, frasa laluan, kod berkelompok dan PIN dalam pelayar anda.",
+      },
+      nl: {
+        name: "Willekeurige wachtwoordgenerator",
+        description:
+          "Genereer wachtwoorden, wachtzinnen, gegroepeerde codes en pincodes in je browser.",
+      },
+      no: {
+        name: "Generator for tilfeldige passord",
+        description:
+          "Generer passord, passfraser, grupperte koder og PIN-koder i nettleseren.",
+      },
+      pl: {
+        name: "Generator losowych haseł",
+        description:
+          "Generuj hasła, frazy hasłowe, pogrupowane kody i PIN-y w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de senhas aleatórias",
+        description:
+          "Gere senhas, frases-senha, códigos em blocos e PINs no navegador.",
+      },
+      ru: {
+        name: "Генератор случайных паролей",
+        description:
+          "Генерируйте пароли, парольные фразы, коды по блокам и PIN прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga lösenord",
+        description:
+          "Generera lösenord, lösenfraser, grupperade koder och PIN-koder i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
+        description: "สร้างรหัสผ่าน วลีรหัสผ่าน รหัสแบบแบ่งกลุ่ม และ PIN ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Rastgele Parola Oluşturucu",
+        description:
+          "Tarayıcınızda parolalar, parola ifadeleri, gruplanmış kodlar ve PIN'ler oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo mật khẩu ngẫu nhiên",
+        description:
+          "Tạo mật khẩu, cụm mật khẩu, mã theo nhóm và mã PIN ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
+      },
+    },
+  },
+  {
+    slug: "regex-tester-replacer",
+    category: "text",
+    icon: "search",
+    tags: ["regex", "text", "replace", "match", "pattern"],
+    locales: {
+      ar: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      de: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      en: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      es: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      fr: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      he: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      hi: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      id: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      it: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ja: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ko: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ms: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      nl: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      no: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      pl: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      pt: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      ru: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      sv: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      th: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      tr: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      vi: {
+        name: "Regex Tester & Replacer",
+        description:
+          "Test regular expressions, inspect matches, and preview replacements against real text.",
+      },
+      "zh-CN": {
+        name: "正则测试与替换",
+        description:
+          "测试正则表达式、检查匹配结果，并直接预览替换后的文本输出。",
+      },
+      "zh-TW": {
+        name: "正則測試與取代",
+        description:
+          "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
       },
     },
   },
@@ -5421,6 +6537,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  {
+    slug: "time-zone-converter",
+    category: "time",
+    icon: "globe",
+    tags: ["time", "timezone", "converter", "utc", "offset", "dst", "clock"],
+    locales: {
+      ar: {
+        name: "محول المناطق الزمنية",
+        description:
+          "حوّل التاريخ والوقت بين المناطق الزمنية مع دعم التوقيت الصيفي. قارن الإزاحات وانسخ تنسيقات ISO/UTC.",
+      },
+      de: {
+        name: "Zeitzonen-Konverter",
+        description:
+          "Wandelt Datum und Uhrzeit zwischen Zeitzonen mit Sommerzeit-Unterstützung um. Vergleiche Offsets und kopiere ISO/UTC-Formate.",
+      },
+      en: {
+        name: "Time Zone Converter",
+        description:
+          "Convert a date and time between time zones with daylight saving support. Compare offsets and copy ISO/UTC formats.",
+      },
+      es: {
+        name: "Convertidor de Zona Horaria",
+        description:
+          "Convierte fecha y hora entre zonas horarias con soporte de horario de verano. Compara desfases y copia formatos ISO/UTC.",
+      },
+      fr: {
+        name: "Convertisseur de fuseau horaire",
+        description:
+          "Convertit une date et une heure entre fuseaux horaires avec prise en charge de l'heure d'été. Compare les décalages et copie les formats ISO/UTC.",
+      },
+      he: {
+        name: "ממיר אזורי זמן",
+        description:
+          "המר תאריך ושעה בין אזורי זמן עם תמיכה בשעון קיץ. השווה היסטים והעתק פורמטים ISO/UTC.",
+      },
+      hi: {
+        name: "समय क्षेत्र परिवर्तक",
+        description:
+          "डे-लाइट सेविंग के समर्थन के साथ समय क्षेत्रों के बीच दिनांक और समय रूपांतरित करें। ऑफ़सेट की तुलना करें और ISO/UTC प्रारूप कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Zona Waktu",
+        description:
+          "Konversi tanggal dan waktu antar zona waktu dengan dukungan daylight saving. Bandingkan offset dan salin format ISO/UTC.",
+      },
+      it: {
+        name: "Convertitore di fuso orario",
+        description:
+          "Converte data e ora tra fusi orari con supporto dell'ora legale. Confronta gli offset e copia i formati ISO/UTC.",
+      },
+      ja: {
+        name: "タイムゾーン変換",
+        description:
+          "夏時間に対応して日時をタイムゾーン間で変換します。オフセットを比較し、ISO/UTC 形式をコピーできます。",
+      },
+      ko: {
+        name: "시간대 변환기",
+        description:
+          "일광 절약 시간제를 지원하여 시간대를 넘나드는 날짜/시간을 변환합니다. 오프셋을 비교하고 ISO/UTC 형식을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Zon Masa",
+        description:
+          "Tukar tarikh dan masa antara zon masa dengan sokongan waktu musim panas. Bandingkan ofset dan salin format ISO/UTC.",
+      },
+      nl: {
+        name: "Tijdzoneconverter",
+        description:
+          "Converteer datum en tijd tussen tijdzones met ondersteuning voor zomertijd. Vergelijk offsets en kopieer ISO/UTC-indelingen.",
+      },
+      no: {
+        name: "Tidssonekonverterer",
+        description:
+          "Konverter dato og tid mellom tidssoner med støtte for sommertid. Sammenlign offset og kopier ISO/UTC-formater.",
+      },
+      pl: {
+        name: "Konwerter stref czasowych",
+        description:
+          "Konwertuje datę i godzinę między strefami czasowymi z obsługą czasu letniego. Porównuj przesunięcia i kopiuj formaty ISO/UTC.",
+      },
+      pt: {
+        name: "Conversor de fuso horário",
+        description:
+          "Converte data e hora entre fusos horários com suporte ao horário de verão. Compare offsets e copie formatos ISO/UTC.",
+      },
+      ru: {
+        name: "Конвертер часовых поясов",
+        description:
+          "Преобразует дату и время между часовыми поясами с учетом летнего времени. Сравнивайте смещения и копируйте форматы ISO/UTC.",
+      },
+      sv: {
+        name: "Tidszonskonverterare",
+        description:
+          "Konverterar datum och tid mellan tidszoner med stöd för sommartid. Jämför offset och kopiera ISO/UTC-format.",
+      },
+      th: {
+        name: "ตัวแปลงเขตเวลา",
+        description:
+          "แปลงวันที่และเวลาระหว่างเขตเวลา พร้อมรองรับเวลาออมแสง เปรียบเทียบออฟเซ็ตและคัดลอกรูปแบบ ISO/UTC",
+      },
+      tr: {
+        name: "Saat Dilimi Dönüştürücü",
+        description:
+          "Yaz saati desteğiyle tarih ve saati saat dilimleri arasında dönüştürür. Ofsetleri karşılaştırın ve ISO/UTC biçimlerini kopyalayın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi múi giờ",
+        description:
+          "Chuyển đổi ngày giờ giữa các múi giờ với hỗ trợ giờ mùa hè. So sánh độ lệch và sao chép định dạng ISO/UTC.",
+      },
+      "zh-CN": {
+        name: "时区转换器",
+        description:
+          "在不同时区之间转换日期和时间，支持夏令时。对比时区偏移并复制 ISO/UTC 格式。",
+      },
+      "zh-TW": {
+        name: "時區轉換器",
+        description:
+          "在不同時區之間轉換日期與時間，支援夏令時間。比較時區偏移並複製 ISO/UTC 格式。",
       },
     },
   },

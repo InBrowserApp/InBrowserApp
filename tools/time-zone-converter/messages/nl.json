@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Van",
+  "toLabel": "Naar",
+  "timeZoneLabel": "Tijdzone",
+  "dateTimeLabel": "Datum en tijd",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Formaat: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Nu",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ongeldige datum/tijd",
+  "swapLabel": "Wisselen",
+  "detailsLabel": "Details",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix-tijdstempel (ms)",
+  "unixSecondsLabel": "Unix-tijdstempel (s)",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

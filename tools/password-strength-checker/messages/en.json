@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Password",
+  "resultTitle": "Strength Summary",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Type a password to evaluate",
+  "show": "Show",
+  "hide": "Hide",
+  "privacyHint": "Strength checks run locally in your browser.",
+  "empty": "Enter a password to check its strength.",
+  "entropyBits": "Entropy: {bits} bits",
+  "log10Guesses": "Guesses (log10): {value}",
+  "strength0": "Very weak",
+  "strength1": "Weak",
+  "strength2": "Fair",
+  "strength3": "Strong",
+  "strength4": "Very strong",
+  "length": "Length",
+  "unique": "Unique characters",
+  "characterSets": "Character sets",
+  "crackOffline": "Crack time (offline, 1e10/s)",
+  "crackOnline": "Crack time (online, 100/s)",
+  "durationFormat": "About {value} {unit}",
+  "durationUnderSecond": "Less than 1 second",
+  "unit": {
+    "seconds": "seconds",
+    "minutes": "minutes",
+    "hours": "hours",
+    "days": "days",
+    "months": "months",
+    "years": "years"
+  },
+  "warning": {
+    "common": "This is a very common password.",
+    "short": "The password is too short.",
+    "sequence": "Sequential patterns are easy to guess.",
+    "repeat": "Repeated patterns reduce strength.",
+    "singleClass": "Using only one character type lowers strength."
+  },
+  "suggestion": {
+    "use-longer": "Use a longer password or passphrase.",
+    "add-uppercase": "Add uppercase letters.",
+    "add-lowercase": "Add lowercase letters.",
+    "add-numbers": "Add numbers.",
+    "add-symbols": "Add symbols.",
+    "avoid-common": "Avoid common passwords and leaked phrases.",
+    "avoid-sequences": "Avoid sequences like 123 or abc.",
+    "avoid-repetition": "Avoid repeated patterns."
+  }
+}

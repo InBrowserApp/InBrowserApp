@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "विकल्प",
+  "optionsDescription": "हर बैच में कितने पहचानकर्ता बनाने हैं और हर CUID2 की लंबाई कितनी होनी चाहिए, यह तय करें।",
+  "countLabel": "संख्या",
+  "lengthLabel": "लंबाई",
+  "resultsTitle": "परिणाम",
+  "resultsDescription": "हर बैच आपके ब्राउज़र में लोकली बनता है, इसलिए आप उसे किसी दूसरी सेवा पर भेजे बिना देख, कॉपी या डाउनलोड कर सकते हैं।",
+  "resultsPlaceholder": "बनाए गए CUID2 ID यहाँ दिखाई देंगे...",
+  "copyResultsLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadResultsLabel": "डाउनलोड",
+  "regenerateLabel": "फिर से जनरेट करें"
+}
