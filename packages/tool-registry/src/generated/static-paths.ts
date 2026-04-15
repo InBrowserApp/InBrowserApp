@@ -3130,6 +3130,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "placeholder-image-generator",
+    language: "ar",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "de",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "en",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "es",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "fr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "he",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "hi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "id",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "it",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ja",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ko",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ms",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "nl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "no",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pt",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ru",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "sv",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "th",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "tr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "vi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },
