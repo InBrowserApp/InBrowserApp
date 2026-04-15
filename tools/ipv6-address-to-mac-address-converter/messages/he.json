@@ -1,0 +1,8 @@
+{
+  "placeholder": "הזן IPv6",
+  "invalidAddress": "כתובת IPv6 לא תקינה",
+  "result": "תוצאת אימות",
+  "notConvertible": "לא ניתן להמרה",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

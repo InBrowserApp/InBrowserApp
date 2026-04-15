@@ -1784,6 +1784,122 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "email-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["email", "validator", "format", "address"],
+    locales: {
+      ar: {
+        name: "مدقق البريد الإلكتروني",
+        description:
+          "يتحقق من عناوين البريد الإلكتروني عبر فحوصات الصياغة والطول والنطاق.",
+      },
+      de: {
+        name: "E-Mail-Validator",
+        description:
+          "Validiert E-Mail-Adressen mit Syntax-, Längen- und Domain-Prüfungen.",
+      },
+      en: {
+        name: "Email Validator",
+        description:
+          "Validate email addresses with syntax, length, and domain checks.",
+      },
+      es: {
+        name: "Validador de correo electrónico",
+        description:
+          "Valida direcciones de correo electrónico con comprobaciones de sintaxis, longitud y dominio.",
+      },
+      fr: {
+        name: "Validateur d'e-mail",
+        description:
+          "Valide les adresses e-mail avec des contrôles de syntaxe, de longueur et de domaine.",
+      },
+      he: {
+        name: 'מאמת דוא"ל',
+        description: 'מאמת כתובות דוא"ל עם בדיקות תחביר, אורך ודומיין.',
+      },
+      hi: {
+        name: "ईमेल सत्यापनकर्ता",
+        description: "ईमेल पतों को सिंटैक्स, लंबाई और डोमेन जांच के साथ सत्यापित करता है।",
+      },
+      id: {
+        name: "Validator email",
+        description:
+          "Memvalidasi alamat email dengan pemeriksaan sintaks, panjang, dan domain.",
+      },
+      it: {
+        name: "Validatore email",
+        description:
+          "Convalida indirizzi email con controlli di sintassi, lunghezza e dominio.",
+      },
+      ja: {
+        name: "メール検証",
+        description: "メールアドレスを構文・長さ・ドメインで検証します。",
+      },
+      ko: {
+        name: "이메일 검증기",
+        description: "이메일 주소를 문법, 길이, 도메인 규칙으로 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah e-mel",
+        description:
+          "Sahkan alamat e-mel dengan semakan sintaks, panjang dan domain.",
+      },
+      nl: {
+        name: "E-mail-validator",
+        description:
+          "Valideert e-mailadressen met syntax-, lengte- en domeincontroles.",
+      },
+      no: {
+        name: "E-post-validerer",
+        description:
+          "Validerer e-postadresser med syntaks-, lengde- og domenesjekker.",
+      },
+      pl: {
+        name: "Walidator e-mail",
+        description:
+          "Waliduje adresy e-mail z kontrolą składni, długości i domeny.",
+      },
+      pt: {
+        name: "Validador de e-mail",
+        description:
+          "Valida endereços de e-mail com verificações de sintaxe, comprimento e domínio.",
+      },
+      ru: {
+        name: "Валидатор электронной почты",
+        description:
+          "Проверяет адреса электронной почты по синтаксису, длине и домену.",
+      },
+      sv: {
+        name: "E-post-validerare",
+        description:
+          "Validerar e-postadresser med syntax-, längd- och domänkontroller.",
+      },
+      th: {
+        name: "ตัวตรวจสอบอีเมล",
+        description: "ตรวจสอบอีเมลด้วยการตรวจไวยากรณ์ ความยาว และโดเมน",
+      },
+      tr: {
+        name: "E-posta Doğrulayıcı",
+        description:
+          "E-posta adreslerini sözdizimi, uzunluk ve alan adı kontrolleriyle doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực email",
+        description:
+          "Xác thực địa chỉ email với kiểm tra cú pháp, độ dài và tên miền.",
+      },
+      "zh-CN": {
+        name: "邮箱验证器",
+        description: "验证邮箱地址，检查语法、长度和域名。",
+      },
+      "zh-TW": {
+        name: "電子郵件驗證器",
+        description: "驗證電子郵件地址，檢查語法、長度與網域。",
+      },
+    },
+  },
+  {
     slug: "gitignore-generator",
     category: "developer",
     icon: "file-text",
@@ -2637,6 +2753,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "IMEI 驗證器",
         description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
+      },
+    },
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    category: "network",
+    icon: "network",
+    tags: ["ipv6", "mac", "eui-64", "link-local", "network", "converter"],
+    locales: {
+      ar: {
+        name: "محول عنوان IPv6 إلى عنوان MAC",
+        description:
+          "يحول عناوين IPv6 إلى عناوين MAC. أدخل أي عنوان IPv6 لاستخراج عنوان MAC المقابل فوراً.",
+      },
+      de: {
+        name: "IPv6-Adresse zu MAC-Adresse Konverter",
+        description:
+          "Konvertiert IPv6-Adressen zu MAC-Adressen. Geben Sie eine beliebige IPv6-Adresse ein, um die entsprechende MAC-Adresse sofort zu extrahieren.",
+      },
+      en: {
+        name: "IPv6 Address to MAC Address Converter",
+        description:
+          "Convert IPv6 addresses to MAC addresses. Enter any IPv6 address to extract the corresponding MAC address instantly.",
+      },
+      es: {
+        name: "Convertidor de dirección IPv6 a dirección MAC",
+        description:
+          "Convierte direcciones IPv6 a direcciones MAC. Introduce cualquier dirección IPv6 para extraer la dirección MAC correspondiente al instante.",
+      },
+      fr: {
+        name: "Convertisseur d'adresse IPv6 en adresse MAC",
+        description:
+          "Convertit les adresses IPv6 en adresses MAC. Saisissez n'importe quelle adresse IPv6 pour extraire l'adresse MAC correspondante instantanément.",
+      },
+      he: {
+        name: "ממיר כתובת IPv6 לכתובת MAC",
+        description:
+          "ממיר כתובות IPv6 לכתובות MAC. הזן כל כתובת IPv6 כדי לחלץ את כתובת ה-MAC המתאימה מיידית.",
+      },
+      hi: {
+        name: "IPv6 पते से MAC पता कनवर्टर",
+        description:
+          "IPv6 पतों को MAC पतों में परिवर्तित करता है। किसी भी IPv6 पते को दर्ज करें और संबंधित MAC पता तुरंत निकालें।",
+      },
+      id: {
+        name: "Konverter alamat IPv6 ke alamat MAC",
+        description:
+          "Mengonversi alamat IPv6 menjadi alamat MAC. Masukkan alamat IPv6 apa pun untuk mengekstrak alamat MAC yang sesuai secara instan.",
+      },
+      it: {
+        name: "Convertitore da indirizzo IPv6 a indirizzo MAC",
+        description:
+          "Converte indirizzi IPv6 in indirizzi MAC. Inserisci qualsiasi indirizzo IPv6 per estrarre il corrispondente indirizzo MAC istantaneamente.",
+      },
+      ja: {
+        name: "IPv6 アドレスから MAC アドレスへの変換ツール",
+        description:
+          "IPv6 アドレスを MAC アドレスに変換します。任意の IPv6 アドレスを入力すると、対応する MAC アドレスを即座に抽出できます。",
+      },
+      ko: {
+        name: "IPv6 주소를 MAC 주소로 변환",
+        description:
+          "IPv6 주소를 MAC 주소로 변환합니다. 임의의 IPv6 주소를 입력하여 해당하는 MAC 주소를 즉시 추출하세요.",
+      },
+      ms: {
+        name: "Penukar alamat IPv6 kepada alamat MAC",
+        description:
+          "Menukar alamat IPv6 kepada alamat MAC. Masukkan mana-mana alamat IPv6 untuk mengekstrak alamat MAC yang berkaitan dengan serta-merta.",
+      },
+      nl: {
+        name: "IPv6-adres naar MAC-adres-converter",
+        description:
+          "Converteert IPv6-adressen naar MAC-adressen. Voer een willekeurig IPv6-adres in om het overeenkomstige MAC-adres direct te extraheren.",
+      },
+      no: {
+        name: "Konverterer for IPv6-adresse til MAC-adresse",
+        description:
+          "Konverterer IPv6-adresser til MAC-adresser. Skriv inn hvilken som helst IPv6-adresse for å trekke ut den tilsvarende MAC-adressen øyeblikkelig.",
+      },
+      pl: {
+        name: "Konwerter adresu IPv6 na adres MAC",
+        description:
+          "Konwertuje adresy IPv6 na adresy MAC. Wprowadź dowolny adres IPv6, aby natychmiast wyodrębnić odpowiadający adres MAC.",
+      },
+      pt: {
+        name: "Conversor de endereço IPv6 para endereço MAC",
+        description:
+          "Converte endereços IPv6 em endereços MAC. Digite qualquer endereço IPv6 para extrair o endereço MAC correspondente instantaneamente.",
+      },
+      ru: {
+        name: "Конвертер адреса IPv6 в MAC-адрес",
+        description:
+          "Преобразует IPv6-адреса в MAC-адреса. Введите любой IPv6-адрес, чтобы мгновенно извлечь соответствующий MAC-адрес.",
+      },
+      sv: {
+        name: "Konverterare för IPv6-adress till MAC-adress",
+        description:
+          "Konverterar IPv6-adresser till MAC-adresser. Ange valfri IPv6-adress för att extrahera motsvarande MAC-adress omedelbart.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ IPv6 เป็นที่อยู่ MAC",
+        description:
+          "แปลงที่อยู่ IPv6 เป็นที่อยู่ MAC ป้อนที่อยู่ IPv6 ใดก็ได้เพื่อสกัดที่อยู่ MAC ที่สอดคล้องกันทันที",
+      },
+      tr: {
+        name: "IPv6 Adresinden MAC Adresine Dönüştürücü",
+        description:
+          "IPv6 adreslerini MAC adreslerine dönüştürür. Herhangi bir IPv6 adresi girin ve karşılık gelen MAC adresini anında çıkarın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ IPv6 sang địa chỉ MAC",
+        description:
+          "Chuyển đổi địa chỉ IPv6 thành địa chỉ MAC. Nhập bất kỳ địa chỉ IPv6 nào để trích xuất địa chỉ MAC tương ứng ngay lập tức.",
+      },
+      "zh-CN": {
+        name: "IPv6 地址转 MAC 地址转换器",
+        description:
+          "将 IPv6 地址转换为 MAC 地址。输入任何 IPv6 地址，立即提取对应的 MAC 地址。",
+      },
+      "zh-TW": {
+        name: "IPv6 位址轉 MAC 位址轉換器",
+        description:
+          "將 IPv6 位址轉換為 MAC 位址。輸入任何 IPv6 位址，立即提取對應的 MAC 位址。",
       },
     },
   },
@@ -4334,6 +4573,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Lorem Ipsum 產生器",
         description:
           "產生 Lorem Ipsum 佔位文字，可設定單詞、句子或段落數量，支援多種語言。",
+      },
+    },
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "md5", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة MD5 للنص أو الملف",
+        description:
+          "أنشئ تجزئات MD5 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "MD5-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie MD5-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "MD5 Hash Text or File",
+        description:
+          "Generate MD5 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash MD5 de Texto o Archivo",
+        description:
+          "Genera hashes MD5 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash MD5 de Texte ou Fichier",
+        description:
+          "Générez des hachages MD5 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש MD5 טקסט או קובץ",
+        description:
+          "צור ערכי MD5 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "MD5 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MD5 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash MD5 Teks atau File",
+        description:
+          "Buat hash MD5 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash MD5 di Testo o File",
+        description:
+          "Genera hash MD5 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "MD5 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに MD5 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "MD5 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 MD5 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash MD5 Teks atau Fail",
+        description:
+          "Jana hash MD5 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "MD5-hash tekst of bestand",
+        description:
+          "Genereer MD5-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "MD5-hash tekst eller fil",
+        description:
+          "Generer MD5-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash MD5 tekstu lub pliku",
+        description:
+          "Generuj hashe MD5 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash MD5 de Texto ou Arquivo",
+        description:
+          "Gere hashes MD5 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "MD5-хеш текста или файла",
+        description:
+          "Создавайте MD5-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "MD5-hash text eller fil",
+        description:
+          "Generera MD5-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช MD5 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MD5 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "MD5 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MD5 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash MD5 văn bản hoặc tệp",
+        description:
+          "Tạo hash MD5 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "MD5 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MD5 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "MD5 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
       },
     },
   },

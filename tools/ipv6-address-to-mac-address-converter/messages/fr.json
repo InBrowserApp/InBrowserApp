@@ -1,0 +1,8 @@
+{
+  "placeholder": "Saisir IPv6",
+  "invalidAddress": "Adresse IPv6 invalide",
+  "result": "Résultat de Validation",
+  "notConvertible": "Non convertible",
+  "copyLabel": "Copier",
+  "copiedLabel": "Copié"
+}

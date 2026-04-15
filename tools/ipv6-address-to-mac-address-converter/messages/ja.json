@@ -1,0 +1,8 @@
+{
+  "placeholder": "IPv6 を入力",
+  "invalidAddress": "無効な IPv6 アドレス",
+  "result": "検証結果",
+  "notConvertible": "変換不可",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de dirección IPv6 a dirección MAC",
+  "description": "Convierte direcciones IPv6 a direcciones MAC. Introduce cualquier dirección IPv6 para extraer la dirección MAC correspondiente al instante."
+}

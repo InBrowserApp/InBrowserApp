@@ -1,0 +1,8 @@
+{
+  "placeholder": "IPv6 입력",
+  "invalidAddress": "유효하지 않은 IPv6 주소",
+  "result": "검증 결과",
+  "notConvertible": "변환 불가",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

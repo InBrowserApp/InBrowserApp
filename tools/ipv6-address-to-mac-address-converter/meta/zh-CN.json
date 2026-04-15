@@ -1,0 +1,4 @@
+{
+  "name": "IPv6 地址转 MAC 地址转换器",
+  "description": "将 IPv6 地址转换为 MAC 地址。输入任何 IPv6 地址，立即提取对应的 MAC 地址。"
+}

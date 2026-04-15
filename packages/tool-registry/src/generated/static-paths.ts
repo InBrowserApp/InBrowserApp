@@ -1290,6 +1290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-validator",
+    language: "ar",
+  },
+  {
+    slug: "email-validator",
+    language: "de",
+  },
+  {
+    slug: "email-validator",
+    language: "en",
+  },
+  {
+    slug: "email-validator",
+    language: "es",
+  },
+  {
+    slug: "email-validator",
+    language: "fr",
+  },
+  {
+    slug: "email-validator",
+    language: "he",
+  },
+  {
+    slug: "email-validator",
+    language: "hi",
+  },
+  {
+    slug: "email-validator",
+    language: "id",
+  },
+  {
+    slug: "email-validator",
+    language: "it",
+  },
+  {
+    slug: "email-validator",
+    language: "ja",
+  },
+  {
+    slug: "email-validator",
+    language: "ko",
+  },
+  {
+    slug: "email-validator",
+    language: "ms",
+  },
+  {
+    slug: "email-validator",
+    language: "nl",
+  },
+  {
+    slug: "email-validator",
+    language: "no",
+  },
+  {
+    slug: "email-validator",
+    language: "pl",
+  },
+  {
+    slug: "email-validator",
+    language: "pt",
+  },
+  {
+    slug: "email-validator",
+    language: "ru",
+  },
+  {
+    slug: "email-validator",
+    language: "sv",
+  },
+  {
+    slug: "email-validator",
+    language: "th",
+  },
+  {
+    slug: "email-validator",
+    language: "tr",
+  },
+  {
+    slug: "email-validator",
+    language: "vi",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },
@@ -1934,6 +2026,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "de",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "en",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "es",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "he",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "id",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "it",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "no",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "th",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },
@@ -3219,6 +3403,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "lorem-ipsum-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "md5-hash-text-or-file",
     language: "zh-TW",
   },
   {

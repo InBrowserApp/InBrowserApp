@@ -1,0 +1,8 @@
+{
+  "placeholder": "Введите IPv6",
+  "invalidAddress": "Недействительный IPv6-адрес",
+  "result": "Результат Проверки",
+  "notConvertible": "Невозможно преобразовать",
+  "copyLabel": "Скопировать",
+  "copiedLabel": "Скопировано"
+}

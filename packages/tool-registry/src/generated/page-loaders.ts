@@ -21,6 +21,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
+  "email-validator": () => import("@tool/email-validator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>
@@ -29,6 +30,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
+  "ipv6-address-to-mac-address-converter": () =>
+    import("@tool/ipv6-address-to-mac-address-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),
@@ -43,6 +46,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
+  "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
