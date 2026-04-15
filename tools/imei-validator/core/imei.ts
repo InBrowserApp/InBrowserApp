@@ -110,6 +110,5 @@ export {
   getIMEICheckDigit,
   normalizeIMEI,
   validateIMEI,
-  type IMEIValidationReason,
   type IMEIValidationResult,
 }
