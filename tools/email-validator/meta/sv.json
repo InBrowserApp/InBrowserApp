@@ -1,0 +1,4 @@
+{
+  "name": "E-post-validerare",
+  "description": "Validerar e-postadresser med syntax-, längd- och domänkontroller."
+}

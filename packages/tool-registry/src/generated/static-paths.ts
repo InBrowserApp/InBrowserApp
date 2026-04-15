@@ -1106,6 +1106,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-validator",
+    language: "ar",
+  },
+  {
+    slug: "email-validator",
+    language: "de",
+  },
+  {
+    slug: "email-validator",
+    language: "en",
+  },
+  {
+    slug: "email-validator",
+    language: "es",
+  },
+  {
+    slug: "email-validator",
+    language: "fr",
+  },
+  {
+    slug: "email-validator",
+    language: "he",
+  },
+  {
+    slug: "email-validator",
+    language: "hi",
+  },
+  {
+    slug: "email-validator",
+    language: "id",
+  },
+  {
+    slug: "email-validator",
+    language: "it",
+  },
+  {
+    slug: "email-validator",
+    language: "ja",
+  },
+  {
+    slug: "email-validator",
+    language: "ko",
+  },
+  {
+    slug: "email-validator",
+    language: "ms",
+  },
+  {
+    slug: "email-validator",
+    language: "nl",
+  },
+  {
+    slug: "email-validator",
+    language: "no",
+  },
+  {
+    slug: "email-validator",
+    language: "pl",
+  },
+  {
+    slug: "email-validator",
+    language: "pt",
+  },
+  {
+    slug: "email-validator",
+    language: "ru",
+  },
+  {
+    slug: "email-validator",
+    language: "sv",
+  },
+  {
+    slug: "email-validator",
+    language: "th",
+  },
+  {
+    slug: "email-validator",
+    language: "tr",
+  },
+  {
+    slug: "email-validator",
+    language: "vi",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },

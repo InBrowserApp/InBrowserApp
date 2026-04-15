@@ -19,6 +19,7 @@
     "@tool/current-network-time": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
+    "@tool/email-validator": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
