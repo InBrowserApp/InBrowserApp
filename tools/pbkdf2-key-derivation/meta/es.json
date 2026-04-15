@@ -1,0 +1,4 @@
+{
+  "name": "Derivación de Claves PBKDF2",
+  "description": "Deriva claves a partir de una contraseña y una sal con PBKDF2. Configura iteraciones, algoritmo hash y longitud de salida con resultados en hex o base64."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Derivazione Chiave PBKDF2",
+  "description": "Deriva chiavi da password e salt con PBKDF2. Configura iterazioni, algoritmo hash e lunghezza dell’output con risultati in hex o base64."
+}

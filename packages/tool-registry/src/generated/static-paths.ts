@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-ico",
+    language: "ar",
+  },
+  {
+    slug: "image-to-ico",
+    language: "de",
+  },
+  {
+    slug: "image-to-ico",
+    language: "en",
+  },
+  {
+    slug: "image-to-ico",
+    language: "es",
+  },
+  {
+    slug: "image-to-ico",
+    language: "fr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "he",
+  },
+  {
+    slug: "image-to-ico",
+    language: "hi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "id",
+  },
+  {
+    slug: "image-to-ico",
+    language: "it",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ja",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ko",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ms",
+  },
+  {
+    slug: "image-to-ico",
+    language: "nl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "no",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pt",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ru",
+  },
+  {
+    slug: "image-to-ico",
+    language: "sv",
+  },
+  {
+    slug: "image-to-ico",
+    language: "th",
+  },
+  {
+    slug: "image-to-ico",
+    language: "tr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "vi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },
@@ -2943,6 +3035,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "password-strength-checker",
+    language: "zh-TW",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ar",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "de",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "en",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "es",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "fr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "he",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "hi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "id",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "it",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ja",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ko",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ms",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "nl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "no",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pt",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ru",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "sv",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "th",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "tr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "vi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-CN",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
     language: "zh-TW",
   },
   {

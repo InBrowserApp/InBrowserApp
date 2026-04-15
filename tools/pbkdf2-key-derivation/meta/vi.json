@@ -1,0 +1,4 @@
+{
+  "name": "Suy xuất khóa PBKDF2",
+  "description": "Suy xuất khóa từ mật khẩu và muối bằng PBKDF2. Cấu hình số vòng lặp, thuật toán băm và độ dài đầu ra với kết quả hex hoặc base64."
+}

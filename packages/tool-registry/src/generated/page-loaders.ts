@@ -22,6 +22,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
@@ -40,6 +41,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/openapi-to-typescript-converter/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
+  "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
