@@ -201,6 +201,5 @@ export {
   normalizeCardNumber,
   validateCardLength,
   validateCardNumber,
-  type CardBrand,
   type CreditCardValidationResult,
 }
