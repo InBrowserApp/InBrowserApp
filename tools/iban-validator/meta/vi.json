@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực IBAN",
+  "description": "Xác thực IBAN theo độ dài quốc gia, định dạng và checksum."
+}

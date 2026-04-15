@@ -1750,6 +1750,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "iban-validator",
+    language: "ar",
+  },
+  {
+    slug: "iban-validator",
+    language: "de",
+  },
+  {
+    slug: "iban-validator",
+    language: "en",
+  },
+  {
+    slug: "iban-validator",
+    language: "es",
+  },
+  {
+    slug: "iban-validator",
+    language: "fr",
+  },
+  {
+    slug: "iban-validator",
+    language: "he",
+  },
+  {
+    slug: "iban-validator",
+    language: "hi",
+  },
+  {
+    slug: "iban-validator",
+    language: "id",
+  },
+  {
+    slug: "iban-validator",
+    language: "it",
+  },
+  {
+    slug: "iban-validator",
+    language: "ja",
+  },
+  {
+    slug: "iban-validator",
+    language: "ko",
+  },
+  {
+    slug: "iban-validator",
+    language: "ms",
+  },
+  {
+    slug: "iban-validator",
+    language: "nl",
+  },
+  {
+    slug: "iban-validator",
+    language: "no",
+  },
+  {
+    slug: "iban-validator",
+    language: "pl",
+  },
+  {
+    slug: "iban-validator",
+    language: "pt",
+  },
+  {
+    slug: "iban-validator",
+    language: "ru",
+  },
+  {
+    slug: "iban-validator",
+    language: "sv",
+  },
+  {
+    slug: "iban-validator",
+    language: "th",
+  },
+  {
+    slug: "iban-validator",
+    language: "tr",
+  },
+  {
+    slug: "iban-validator",
+    language: "vi",
+  },
+  {
+    slug: "iban-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "iban-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
