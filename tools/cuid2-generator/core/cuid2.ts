@@ -58,5 +58,3 @@ export {
   normalizeCuid2Count,
   normalizeCuid2Length,
 }
-
-export type { Cuid2Generator }
