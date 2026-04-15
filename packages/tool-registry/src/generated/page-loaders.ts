@@ -66,6 +66,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
+  "sha224-hash-text-or-file": () =>
+    import("@tool/sha224-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
     import("@tool/sha256-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
