@@ -5246,6 +5246,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "time-diff-calculator",
+    language: "ar",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "de",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "en",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "es",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "fr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "he",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "hi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "id",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "it",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ja",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ko",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ms",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "nl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "no",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pt",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ru",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "sv",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "th",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "tr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "vi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "time-zone-converter",
     language: "ar",
   },

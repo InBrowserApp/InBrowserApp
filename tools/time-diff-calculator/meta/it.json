@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore della differenza di tempo",
+  "description": "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali."
+}

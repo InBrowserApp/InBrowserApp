@@ -1,0 +1,23 @@
+{
+  "startLabel": "เริ่มต้น",
+  "endLabel": "สิ้นสุด",
+  "timeZoneLabel": "เขตเวลา",
+  "dateTimeLabel": "วันที่และเวลา",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "รูปแบบ: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "ตอนนี้",
+  "offsetLabel": "ออฟเซ็ต",
+  "invalidDateTimeLabel": "วันที่/เวลาไม่ถูกต้อง",
+  "swapLabel": "สลับ",
+  "resultsLabel": "ผลลัพธ์",
+  "signedDurationLabel": "ระยะเวลาพร้อมเครื่องหมาย",
+  "absoluteDurationLabel": "ระยะเวลาสัมบูรณ์",
+  "iso8601DurationLabel": "ระยะเวลา ISO 8601",
+  "totalMillisecondsLabel": "มิลลิวินาทีทั้งหมด",
+  "totalSecondsLabel": "วินาทีทั้งหมด",
+  "totalMinutesLabel": "นาทีทั้งหมด",
+  "totalHoursLabel": "ชั่วโมงทั้งหมด",
+  "totalDaysLabel": "วันทั้งหมด",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

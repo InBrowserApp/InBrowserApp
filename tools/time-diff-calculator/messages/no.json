@@ -1,0 +1,23 @@
+{
+  "startLabel": "Start",
+  "endLabel": "Slutt",
+  "timeZoneLabel": "Tidssone",
+  "dateTimeLabel": "Dato og tid",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Nå",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ugyldig dato/tid",
+  "swapLabel": "Bytt",
+  "resultsLabel": "Resultater",
+  "signedDurationLabel": "Varighet med fortegn",
+  "absoluteDurationLabel": "Absolutt varighet",
+  "iso8601DurationLabel": "ISO 8601-varighet",
+  "totalMillisecondsLabel": "Totale millisekunder",
+  "totalSecondsLabel": "Totale sekunder",
+  "totalMinutesLabel": "Totale minutter",
+  "totalHoursLabel": "Totale timer",
+  "totalDaysLabel": "Totale dager",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}

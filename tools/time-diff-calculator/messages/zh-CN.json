@@ -1,0 +1,23 @@
+{
+  "startLabel": "开始",
+  "endLabel": "结束",
+  "timeZoneLabel": "时区",
+  "dateTimeLabel": "日期与时间",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "格式：YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "现在",
+  "offsetLabel": "偏移",
+  "invalidDateTimeLabel": "无效的日期/时间",
+  "swapLabel": "交换",
+  "resultsLabel": "结果",
+  "signedDurationLabel": "带符号时长",
+  "absoluteDurationLabel": "绝对时长",
+  "iso8601DurationLabel": "ISO 8601 时长",
+  "totalMillisecondsLabel": "总毫秒",
+  "totalSecondsLabel": "总秒数",
+  "totalMinutesLabel": "总分钟",
+  "totalHoursLabel": "总小时",
+  "totalDaysLabel": "总天数",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

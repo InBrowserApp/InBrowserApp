@@ -7041,6 +7041,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "time-diff-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "difference", "duration", "calculator", "timezone", "utc"],
+    locales: {
+      ar: {
+        name: "حاسبة فرق الوقت",
+        description:
+          "قارن بين وقتين محليين في منطقتين زمنيتين مختلفتين واحصل على فرق الوقت بالإشارة والقيمة المطلقة وبصيغة ISO 8601 وبالوحدات الإجمالية.",
+      },
+      de: {
+        name: "Zeitdifferenz-Rechner",
+        description:
+          "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten.",
+      },
+      en: {
+        name: "Time Difference Calculator",
+        description:
+          "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences.",
+      },
+      es: {
+        name: "Calculadora de diferencia de tiempo",
+        description:
+          "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales.",
+      },
+      fr: {
+        name: "Calculateur de différence de temps",
+        description:
+          "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales.",
+      },
+      he: {
+        name: "מחשבון הפרש זמן",
+        description:
+          "השוו בין שני זמנים מקומיים באזורי זמן שונים וקבלו את ההפרש עם סימן, בערך מוחלט, בפורמט ISO 8601 וביחידות כוללות.",
+      },
+      hi: {
+        name: "समय अंतर कैलकुलेटर",
+        description:
+          "अलग-अलग समय क्षेत्रों के दो स्थानीय समयों की तुलना करें और signed, absolute, ISO 8601 तथा कुल इकाइयों में अंतर पाएं।",
+      },
+      id: {
+        name: "Kalkulator selisih waktu",
+        description:
+          "Bandingkan dua waktu lokal di zona waktu berbeda dan dapatkan selisih bertanda, absolut, ISO 8601, dan dalam satuan total.",
+      },
+      it: {
+        name: "Calcolatore della differenza di tempo",
+        description:
+          "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali.",
+      },
+      ja: {
+        name: "時間差計算ツール",
+        description:
+          "異なるタイムゾーンにある2つのローカル時刻を比較し、符号付き・絶対値・ISO 8601・合計単位の差分を求めます。",
+      },
+      ko: {
+        name: "시간 차이 계산기",
+        description:
+          "서로 다른 시간대의 두 로컬 시간을 비교하고 부호 있는 차이, 절대 차이, ISO 8601, 총 단위 차이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator perbezaan masa",
+        description:
+          "Bandingkan dua masa setempat dalam zon masa berbeza dan dapatkan perbezaan bertanda, mutlak, ISO 8601 dan dalam unit jumlah.",
+      },
+      nl: {
+        name: "Tijdsverschilcalculator",
+        description:
+          "Vergelijk twee lokale tijden in verschillende tijdzones en krijg verschillen met teken, absolute verschillen, ISO 8601 en totale eenheden.",
+      },
+      no: {
+        name: "Kalkulator for tidsforskjell",
+        description:
+          "Sammenlign to lokale tider i ulike tidssoner og få forskjeller med fortegn, absolutte forskjeller, som ISO 8601 og i totale enheter.",
+      },
+      pl: {
+        name: "Kalkulator różnicy czasu",
+        description:
+          "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych.",
+      },
+      pt: {
+        name: "Calculadora de diferença de tempo",
+        description:
+          "Compare dois horários locais em fusos diferentes e obtenha diferenças com sinal, absolutas, em ISO 8601 e em unidades totais.",
+      },
+      ru: {
+        name: "Калькулятор разницы во времени",
+        description:
+          "Сравнивайте два локальных времени в разных часовых поясах и получайте разницу со знаком, абсолютную, в ISO 8601 и в суммарных единицах.",
+      },
+      sv: {
+        name: "Tidsdifferenskalkylator",
+        description:
+          "Jämför två lokala tider i olika tidszoner och få skillnader med tecken, absoluta skillnader, ISO 8601 och totala enheter.",
+      },
+      th: {
+        name: "เครื่องคำนวณความต่างของเวลา",
+        description:
+          "เปรียบเทียบเวลาท้องถิ่นสองค่าในเขตเวลาที่ต่างกัน แล้วดูผลต่างแบบมีเครื่องหมาย แบบค่าสัมบูรณ์ แบบ ISO 8601 และแบบหน่วยรวม",
+      },
+      tr: {
+        name: "Zaman farkı hesaplayıcısı",
+        description:
+          "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün.",
+      },
+      vi: {
+        name: "Trình tính chênh lệch thời gian",
+        description:
+          "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị.",
+      },
+      "zh-CN": {
+        name: "时间差计算器",
+        description:
+          "比较不同时区中的两个本地时间，计算带符号、绝对值、ISO 8601 和总单位形式的时间差。",
+      },
+      "zh-TW": {
+        name: "時間差計算器",
+        description:
+          "比較不同時區中的兩個本地時間，計算帶符號、絕對值、ISO 8601 與總單位形式的時間差。",
+      },
+    },
+  },
+  {
     slug: "time-zone-converter",
     category: "time",
     icon: "globe",
@@ -15669,6 +15792,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  "time-diff-calculator": {
+    slug: "time-diff-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "difference", "duration", "calculator", "timezone", "utc"],
+    locales: {
+      ar: {
+        name: "حاسبة فرق الوقت",
+        description:
+          "قارن بين وقتين محليين في منطقتين زمنيتين مختلفتين واحصل على فرق الوقت بالإشارة والقيمة المطلقة وبصيغة ISO 8601 وبالوحدات الإجمالية.",
+      },
+      de: {
+        name: "Zeitdifferenz-Rechner",
+        description:
+          "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten.",
+      },
+      en: {
+        name: "Time Difference Calculator",
+        description:
+          "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences.",
+      },
+      es: {
+        name: "Calculadora de diferencia de tiempo",
+        description:
+          "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales.",
+      },
+      fr: {
+        name: "Calculateur de différence de temps",
+        description:
+          "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales.",
+      },
+      he: {
+        name: "מחשבון הפרש זמן",
+        description:
+          "השוו בין שני זמנים מקומיים באזורי זמן שונים וקבלו את ההפרש עם סימן, בערך מוחלט, בפורמט ISO 8601 וביחידות כוללות.",
+      },
+      hi: {
+        name: "समय अंतर कैलकुलेटर",
+        description:
+          "अलग-अलग समय क्षेत्रों के दो स्थानीय समयों की तुलना करें और signed, absolute, ISO 8601 तथा कुल इकाइयों में अंतर पाएं।",
+      },
+      id: {
+        name: "Kalkulator selisih waktu",
+        description:
+          "Bandingkan dua waktu lokal di zona waktu berbeda dan dapatkan selisih bertanda, absolut, ISO 8601, dan dalam satuan total.",
+      },
+      it: {
+        name: "Calcolatore della differenza di tempo",
+        description:
+          "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali.",
+      },
+      ja: {
+        name: "時間差計算ツール",
+        description:
+          "異なるタイムゾーンにある2つのローカル時刻を比較し、符号付き・絶対値・ISO 8601・合計単位の差分を求めます。",
+      },
+      ko: {
+        name: "시간 차이 계산기",
+        description:
+          "서로 다른 시간대의 두 로컬 시간을 비교하고 부호 있는 차이, 절대 차이, ISO 8601, 총 단위 차이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator perbezaan masa",
+        description:
+          "Bandingkan dua masa setempat dalam zon masa berbeza dan dapatkan perbezaan bertanda, mutlak, ISO 8601 dan dalam unit jumlah.",
+      },
+      nl: {
+        name: "Tijdsverschilcalculator",
+        description:
+          "Vergelijk twee lokale tijden in verschillende tijdzones en krijg verschillen met teken, absolute verschillen, ISO 8601 en totale eenheden.",
+      },
+      no: {
+        name: "Kalkulator for tidsforskjell",
+        description:
+          "Sammenlign to lokale tider i ulike tidssoner og få forskjeller med fortegn, absolutte forskjeller, som ISO 8601 og i totale enheter.",
+      },
+      pl: {
+        name: "Kalkulator różnicy czasu",
+        description:
+          "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych.",
+      },
+      pt: {
+        name: "Calculadora de diferença de tempo",
+        description:
+          "Compare dois horários locais em fusos diferentes e obtenha diferenças com sinal, absolutas, em ISO 8601 e em unidades totais.",
+      },
+      ru: {
+        name: "Калькулятор разницы во времени",
+        description:
+          "Сравнивайте два локальных времени в разных часовых поясах и получайте разницу со знаком, абсолютную, в ISO 8601 и в суммарных единицах.",
+      },
+      sv: {
+        name: "Tidsdifferenskalkylator",
+        description:
+          "Jämför två lokala tider i olika tidszoner och få skillnader med tecken, absoluta skillnader, ISO 8601 och totala enheter.",
+      },
+      th: {
+        name: "เครื่องคำนวณความต่างของเวลา",
+        description:
+          "เปรียบเทียบเวลาท้องถิ่นสองค่าในเขตเวลาที่ต่างกัน แล้วดูผลต่างแบบมีเครื่องหมาย แบบค่าสัมบูรณ์ แบบ ISO 8601 และแบบหน่วยรวม",
+      },
+      tr: {
+        name: "Zaman farkı hesaplayıcısı",
+        description:
+          "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün.",
+      },
+      vi: {
+        name: "Trình tính chênh lệch thời gian",
+        description:
+          "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị.",
+      },
+      "zh-CN": {
+        name: "时间差计算器",
+        description:
+          "比较不同时区中的两个本地时间，计算带符号、绝对值、ISO 8601 和总单位形式的时间差。",
+      },
+      "zh-TW": {
+        name: "時間差計算器",
+        description:
+          "比較不同時區中的兩個本地時間，計算帶符號、絕對值、ISO 8601 與總單位形式的時間差。",
       },
     },
   },

@@ -1,0 +1,23 @@
+{
+  "startLabel": "開始",
+  "endLabel": "終了",
+  "timeZoneLabel": "タイムゾーン",
+  "dateTimeLabel": "日付と時刻",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "形式: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "現在",
+  "offsetLabel": "オフセット",
+  "invalidDateTimeLabel": "無効な日付/時刻",
+  "swapLabel": "入れ替え",
+  "resultsLabel": "結果",
+  "signedDurationLabel": "符号付き期間",
+  "absoluteDurationLabel": "絶対期間",
+  "iso8601DurationLabel": "ISO 8601 期間",
+  "totalMillisecondsLabel": "合計ミリ秒",
+  "totalSecondsLabel": "合計秒",
+  "totalMinutesLabel": "合計分",
+  "totalHoursLabel": "合計時間",
+  "totalDaysLabel": "合計日",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピー済み"
+}

@@ -1,0 +1,23 @@
+{
+  "startLabel": "Начало",
+  "endLabel": "Конец",
+  "timeZoneLabel": "Часовой пояс",
+  "dateTimeLabel": "Дата и время",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Формат: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Сейчас",
+  "offsetLabel": "Смещение",
+  "invalidDateTimeLabel": "Недопустимая дата/время",
+  "swapLabel": "Поменять",
+  "resultsLabel": "Результаты",
+  "signedDurationLabel": "Длительность со знаком",
+  "absoluteDurationLabel": "Абсолютная длительность",
+  "iso8601DurationLabel": "Длительность ISO 8601",
+  "totalMillisecondsLabel": "Всего миллисекунд",
+  "totalSecondsLabel": "Всего секунд",
+  "totalMinutesLabel": "Всего минут",
+  "totalHoursLabel": "Всего часов",
+  "totalDaysLabel": "Всего дней",
+  "copyLabel": "Копировать",
+  "copiedLabel": "Скопировано"
+}

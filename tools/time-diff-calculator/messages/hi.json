@@ -1,0 +1,23 @@
+{
+  "startLabel": "प्रारंभ",
+  "endLabel": "अंत",
+  "timeZoneLabel": "समय क्षेत्र",
+  "dateTimeLabel": "तिथि और समय",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "फ़ॉर्मेट: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "अभी",
+  "offsetLabel": "ऑफ़सेट",
+  "invalidDateTimeLabel": "अमान्य तिथि/समय",
+  "swapLabel": "बदलें",
+  "resultsLabel": "परिणाम",
+  "signedDurationLabel": "चिह्नित अवधि",
+  "absoluteDurationLabel": "पूर्ण अवधि",
+  "iso8601DurationLabel": "ISO 8601 अवधि",
+  "totalMillisecondsLabel": "कुल मिलीसेकंड",
+  "totalSecondsLabel": "कुल सेकंड",
+  "totalMinutesLabel": "कुल मिनट",
+  "totalHoursLabel": "कुल घंटे",
+  "totalDaysLabel": "कुल दिन",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}
