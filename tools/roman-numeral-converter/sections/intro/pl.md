@@ -1,0 +1,3 @@
+## Czym są cyfry rzymskie?
+
+Cyfry rzymskie to system liczbowy pochodzący ze starożytnego Rzymu, wykorzystujący litery alfabetu łacińskiego do reprezentowania liczb. Podstawowe symbole to I (1), V (5), X (10), L (50), C (100), D (500) i M (1000). Liczby tworzone są przez łączenie tych symboli zgodnie z określonymi zasadami: symbole są zwykle dodawane (VI = 6), ale gdy mniejsza cyfra pojawia się przed większą, jest odejmowana (IV = 4). System ten był szeroko używany w Cesarstwie Rzymskim i średniowiecznej Europie i nadal jest używany dziś w celach dekoracyjnych, na tarczach zegarów, datach praw autorskich filmów i listach numerowanych. Na przykład MMXXIV = 2024 reprezentuje rok 2024.

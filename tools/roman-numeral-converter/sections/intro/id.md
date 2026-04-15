@@ -1,0 +1,3 @@
+## Apa itu angka Romawi?
+
+Angka Romawi adalah sistem angka yang berasal dari Roma kuno, menggunakan huruf-huruf dari alfabet Latin untuk mewakili angka. Simbol dasarnya adalah I (1), V (5), X (10), L (50), C (100), D (500), dan M (1000). Angka dibentuk dengan menggabungkan simbol-simbol ini sesuai aturan tertentu: simbol biasanya ditambahkan bersama (VI = 6), tetapi ketika angka yang lebih kecil muncul sebelum yang lebih besar, maka dikurangkan (IV = 4). Sistem ini banyak digunakan di Kekaisaran Romawi dan Eropa abad pertengahan, dan terus digunakan hingga hari ini untuk tujuan dekoratif, muka jam, tanggal hak cipta film, dan daftar bernomor. Sebagai contoh, MMXXIV = 2024 mewakili tahun 2024.

@@ -1,0 +1,22 @@
+{
+  "converterTitle": "Penukar Arab ↔ Rom",
+  "converterDescription": "Penukar dua hala antara nombor Rom dan Arab. Menyokong nombor Rom standard dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+  "arabicNumber": "Nombor Arab (1-3999)",
+  "arabicPlaceholder": "Masukkan nombor Arab...",
+  "romanNumeral": "Nombor Rom",
+  "romanPlaceholder": "Masukkan nombor Rom...",
+  "invalidRomanNumeral": "Sila masukkan nombor Rom yang sah",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

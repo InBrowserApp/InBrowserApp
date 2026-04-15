@@ -1,0 +1,3 @@
+## Que sont les chiffres romains ?
+
+Les chiffres romains sont un système numéral originaire de la Rome antique, utilisant des lettres de l'alphabet latin pour représenter les nombres. Les symboles de base sont I (1), V (5), X (10), L (50), C (100), D (500) et M (1000). Les nombres sont formés en combinant ces symboles selon des règles spécifiques : les symboles sont généralement additionnés (VI = 6), mais quand un chiffre plus petit apparaît avant un plus grand, il est soustrait (IV = 4). Ce système était largement utilisé dans l'Empire romain et l'Europe médiévale, et continue d'être utilisé aujourd'hui à des fins décoratives, sur les cadrans d'horloge, les dates de droits d'auteur de films et les listes numérotées. Par exemple, MMXXIV = 2024 représente l'année 2024.

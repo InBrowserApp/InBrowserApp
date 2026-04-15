@@ -1,0 +1,3 @@
+## Apakah nombor Rom?
+
+Nombor Rom adalah sistem angka yang berasal dari Rom purba, menggunakan huruf-huruf dari abjad Latin untuk mewakili nombor. Simbol asas ialah I (1), V (5), X (10), L (50), C (100), D (500), dan M (1000). Nombor dibentuk dengan menggabungkan simbol-simbol ini mengikut peraturan tertentu: simbol biasanya ditambah bersama (VI = 6), tetapi apabila angka yang lebih kecil muncul sebelum yang lebih besar, ia dikurangkan (IV = 4). Sistem ini digunakan secara meluas di Empayar Rom dan Eropah zaman pertengahan, dan terus digunakan hari ini untuk tujuan hiasan, muka jam, tarikh hak cipta filem, dan senarai bernombor. Sebagai contoh, MMXXIV = 2024 mewakili tahun 2024.

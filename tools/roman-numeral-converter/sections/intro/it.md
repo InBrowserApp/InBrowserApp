@@ -1,0 +1,3 @@
+## Cosa sono i numeri romani?
+
+I numeri romani sono un sistema di numerazione originario dell'antica Roma, che utilizza lettere dell'alfabeto latino per rappresentare i numeri. I simboli base sono I (1), V (5), X (10), L (50), C (100), D (500) e M (1000). I numeri si formano combinando questi simboli secondo regole specifiche: i simboli sono tipicamente sommati (VI = 6), ma quando un numero più piccolo appare prima di uno più grande, viene sottratto (IV = 4). Questo sistema era ampiamente utilizzato nell'Impero Romano e nell'Europa medievale, e continua ad essere usato oggi per scopi decorativi, quadranti di orologi, date di copyright di film e liste numerate. Ad esempio, MMXXIV = 2024 rappresenta l'anno 2024.

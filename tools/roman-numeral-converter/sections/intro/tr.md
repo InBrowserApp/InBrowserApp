@@ -1,0 +1,3 @@
+## Roma rakamları nedir?
+
+Roma rakamları, antik Roma'da ortaya çıkan ve sayıları temsil etmek için Latin alfabesinin harflerini kullanan bir sayı sistemidir. Temel semboller I (1), V (5), X (10), L (50), C (100), D (500) ve M (1000)'dir. Sayılar, bu sembolleri belirli kurallar doğrultusunda birleştirerek oluşturulur: semboller genellikle toplanır (VI = 6), ancak küçük bir rakam büyük bir rakamın önünde göründüğünde çıkarılır (IV = 4). Bu sistem Roma İmparatorluğu ve ortaçağ Avrupa'sında yaygın olarak kullanılmış olup, bugün hala dekoratif amaçlar, saat yüzleri, film telif hakkı tarihleri ve numaralı listeler için kullanılmaya devam etmektedir. Örneğin, MMXXIV = 2024 2024 yılını temsil eder.

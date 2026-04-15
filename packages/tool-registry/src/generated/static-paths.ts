@@ -3958,6 +3958,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "roman-numeral-converter",
+    language: "ar",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "de",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "en",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "es",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "fr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "he",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "hi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "id",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "it",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ja",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ko",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ms",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "nl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "no",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pt",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ru",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "sv",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "th",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "tr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "vi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },

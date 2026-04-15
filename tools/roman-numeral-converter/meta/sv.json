@@ -1,0 +1,4 @@
+{
+  "name": "Arabiska ↔ Romerska Konverterare",
+  "description": "Bidirektionell konverterare mellan romerska och arabiska siffror. Stöder standard romerska siffror från 1 till 3999 (I till MMMCMXCIX)."
+}

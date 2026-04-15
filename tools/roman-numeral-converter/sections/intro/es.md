@@ -1,0 +1,3 @@
+## ¿Qué son los números romanos?
+
+Los números romanos son un sistema numérico originario de la antigua Roma, que utiliza letras del alfabeto latino para representar números. Los símbolos básicos son I (1), V (5), X (10), L (50), C (100), D (500) y M (1000). Los números se forman combinando estos símbolos según reglas específicas: los símbolos normalmente se suman (VI = 6), pero cuando un numeral menor aparece antes que uno mayor, se resta (IV = 4). Este sistema fue ampliamente utilizado en el Imperio Romano y la Europa medieval, y continúa usándose hoy para propósitos decorativos, caras de relojes, fechas de derechos de autor de películas y listas numeradas. Por ejemplo, MMXXIV = 2024 representa el año 2024.

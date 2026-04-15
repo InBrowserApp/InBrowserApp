@@ -1,0 +1,4 @@
+{
+  "name": "Arabisch ↔ Romeins Converter",
+  "description": "Bidirectionele converter tussen Romeinse en Arabische cijfers. Ondersteunt standaard Romeinse cijfers van 1 tot 3999 (I tot MMMCMXCIX)."
+}

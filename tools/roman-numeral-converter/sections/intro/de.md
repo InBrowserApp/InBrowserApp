@@ -1,0 +1,3 @@
+## Was sind römische Zahlen?
+
+Römische Zahlen sind ein Zahlensystem, das im antiken Rom entstanden ist und Buchstaben des lateinischen Alphabets zur Darstellung von Zahlen verwendet. Die Grundsymbole sind I (1), V (5), X (10), L (50), C (100), D (500) und M (1000). Zahlen werden durch die Kombination dieser Symbole nach bestimmten Regeln gebildet: Symbole werden normalerweise addiert (VI = 6), aber wenn eine kleinere Zahl vor einer größeren steht, wird sie subtrahiert (IV = 4). Dieses System war im Römischen Reich und im mittelalterlichen Europa weit verbreitet und wird heute noch für dekorative Zwecke, Uhrengesichter, Film-Copyright-Daten und nummerierte Listen verwendet. Zum Beispiel repräsentiert MMXXIV = 2024 das Jahr 2024.

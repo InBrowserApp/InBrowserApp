@@ -1,0 +1,3 @@
+## Hva er romerske tall?
+
+Romerske tall er et tallsystem som stammer fra antikkens Roma, som bruker bokstaver fra det latinske alfabetet for å representere tall. Grunnsymbolene er I (1), V (5), X (10), L (50), C (100), D (500) og M (1000). Tall dannes ved å kombinere disse symbolene i henhold til spesifikke regler: symboler legges vanligvis sammen (VI = 6), men når et mindre tall vises før et større, trekkes det fra (IV = 4). Dette systemet var mye brukt i Romerriket og middelalderens Europa, og brukes fortsatt i dag til dekorative formål, urskiver, film copyright-datoer og nummererte lister. For eksempel representerer MMXXIV = 2024 året 2024.

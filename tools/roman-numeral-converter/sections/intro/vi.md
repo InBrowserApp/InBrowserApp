@@ -1,0 +1,3 @@
+## Số La Mã là gì?
+
+Số La Mã là một hệ thống số có nguồn gốc từ Roma cổ đại, sử dụng các chữ cái của bảng chữ cái Latin để biểu diễn số. Các ký hiệu cơ bản là I (1), V (5), X (10), L (50), C (100), D (500) và M (1000). Các số được tạo thành bằng cách kết hợp những ký hiệu này theo các quy tắc cụ thể: các ký hiệu thường được cộng lại với nhau (VI = 6), nhưng khi một số nhỏ hơn xuất hiện trước một số lớn hơn, nó được trừ đi (IV = 4). Hệ thống này đã được sử dụng rộng rãi trong Đế chế La Mã và châu Âu thời trung cổ, và tiếp tục được sử dụng ngày nay cho mục đích trang trí, mặt đồng hồ, ngày bản quyền phim và danh sách được đánh số. Ví dụ, MMXXIV = 2024 đại diện cho năm 2024.
