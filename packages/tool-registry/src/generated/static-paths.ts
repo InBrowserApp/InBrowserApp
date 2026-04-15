@@ -4510,6 +4510,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "time-zone-converter",
+    language: "ar",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "de",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "en",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "es",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "fr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "he",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "hi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "id",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "it",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ja",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ko",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ms",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "nl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "no",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pt",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ru",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "sv",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "th",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "tr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "vi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },

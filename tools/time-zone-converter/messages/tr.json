@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Başlangıç",
+  "toLabel": "Hedef",
+  "timeZoneLabel": "Saat dilimi",
+  "dateTimeLabel": "Tarih ve saat",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Biçim: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Şimdi",
+  "offsetLabel": "Ofset",
+  "invalidDateTimeLabel": "Geçersiz tarih/saat",
+  "swapLabel": "Değiştir",
+  "detailsLabel": "Detaylar",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix zaman damgası (ms)",
+  "unixSecondsLabel": "Unix zaman damgası (s)",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

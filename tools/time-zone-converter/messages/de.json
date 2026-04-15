@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Von",
+  "toLabel": "Nach",
+  "timeZoneLabel": "Zeitzone",
+  "dateTimeLabel": "Datum und Uhrzeit",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Jetzt",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Ungültiges Datum/Uhrzeit",
+  "swapLabel": "Tauschen",
+  "detailsLabel": "Details",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix-Zeitstempel (ms)",
+  "unixSecondsLabel": "Unix-Zeitstempel (s)",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert"
+}

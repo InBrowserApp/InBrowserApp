@@ -56,6 +56,7 @@
     "@tool/sri-hash-generator": "workspace:*",
     "@tool/stopwatch": "workspace:*",
     "@tool/text-statistics": "workspace:*",
+    "@tool/time-zone-converter": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
     "@tool/unicode-escape-unescape": "workspace:*",
