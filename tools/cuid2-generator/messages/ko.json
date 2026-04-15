@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "옵션",
+  "optionsDescription": "한 번에 몇 개의 식별자를 만들지와 각 CUID2의 길이를 설정하세요.",
+  "countLabel": "개수",
+  "lengthLabel": "길이",
+  "resultsTitle": "결과",
+  "resultsDescription": "각 배치는 브라우저 안에서 로컬로 생성되므로 식별자를 다른 서비스로 보내지 않고도 확인, 복사, 다운로드할 수 있습니다.",
+  "resultsPlaceholder": "생성된 CUID2 ID가 여기에 표시됩니다...",
+  "copyResultsLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "downloadResultsLabel": "다운로드",
+  "regenerateLabel": "다시 생성"
+}

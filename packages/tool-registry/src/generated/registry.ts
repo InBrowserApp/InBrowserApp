@@ -1158,6 +1158,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cuid2-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "cuid2",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "slug",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CUID2",
+        description:
+          "أنشئ معرّفات CUID2 آمنة وقليلة التصادم داخل المتصفح مع إمكانية ضبط الطول وعدد العناصر في الدفعة.",
+      },
+      de: {
+        name: "CUID2-Generator",
+        description:
+          "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße.",
+      },
+      en: {
+        name: "CUID2 Generator",
+        description:
+          "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count.",
+      },
+      es: {
+        name: "Generador de CUID2",
+        description:
+          "Genera identificadores CUID2 seguros y resistentes a colisiones en tu navegador con longitud y tamaño de lote ajustables.",
+      },
+      fr: {
+        name: "Générateur de CUID2",
+        description:
+          "Générez des identifiants CUID2 sûrs et résistants aux collisions dans votre navigateur, avec longueur et taille de lot ajustables.",
+      },
+      he: {
+        name: "מחולל CUID2",
+        description:
+          "צרו מזהי CUID2 מאובטחים ובעלי סיכוי נמוך להתנגשות ישירות בדפדפן, עם אורך וגודל אצווה הניתנים להתאמה.",
+      },
+      hi: {
+        name: "CUID2 जनरेटर",
+        description:
+          "ब्राउज़र में सुरक्षित और कम टकराव वाले CUID2 ID बनाएँ, जहाँ लंबाई और बैच आकार दोनों समायोज्य हों।",
+      },
+      id: {
+        name: "Generator CUID2",
+        description:
+          "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan.",
+      },
+      it: {
+        name: "Generatore CUID2",
+        description:
+          "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili.",
+      },
+      ja: {
+        name: "CUID2 ジェネレーター",
+        description:
+          "長さとバッチ件数を調整しながら、安全で衝突しにくい CUID2 ID をブラウザ内で生成します。",
+      },
+      ko: {
+        name: "CUID2 생성기",
+        description:
+          "길이와 배치 수량을 조절하면서 충돌 가능성이 낮은 안전한 CUID2 ID를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana CUID2",
+        description:
+          "Jana ID CUID2 yang selamat dan tahan perlanggaran dalam pelayar dengan panjang dan saiz kelompok yang boleh dilaraskan.",
+      },
+      nl: {
+        name: "CUID2-generator",
+        description:
+          "Genereer veilige CUID2-ID’s met weinig kans op botsingen in je browser, met instelbare lengte en batchgrootte.",
+      },
+      no: {
+        name: "CUID2-generator",
+        description:
+          "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse.",
+      },
+      pl: {
+        name: "Generator CUID2",
+        description:
+          "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii.",
+      },
+      pt: {
+        name: "Gerador de CUID2",
+        description:
+          "Gere IDs CUID2 seguros e resistentes a colisões no navegador, com comprimento e tamanho de lote ajustáveis.",
+      },
+      ru: {
+        name: "Генератор CUID2",
+        description:
+          "Создавайте безопасные идентификаторы CUID2 с низким риском коллизий прямо в браузере, настраивая длину и размер пакета.",
+      },
+      sv: {
+        name: "CUID2-generator",
+        description:
+          "Generera säkra CUID2-ID:n med låg kollisionsrisk i webbläsaren, med justerbar längd och batchstorlek.",
+      },
+      th: {
+        name: "ตัวสร้าง CUID2",
+        description:
+          "สร้าง ID แบบ CUID2 ที่ปลอดภัยและมีโอกาสชนกันต่ำในเบราว์เซอร์ พร้อมปรับความยาวและขนาดแบตช์ได้",
+      },
+      tr: {
+        name: "CUID2 Oluşturucu",
+        description:
+          "Uzunluğu ve toplu üretim boyutunu ayarlayarak güvenli ve çakışmaya dayanıklı CUID2 kimlikleri tarayıcıda üretin.",
+      },
+      vi: {
+        name: "Trình tạo CUID2",
+        description:
+          "Tạo ID CUID2 an toàn, ít va chạm ngay trong trình duyệt với độ dài và kích thước lô có thể điều chỉnh.",
+      },
+      "zh-CN": {
+        name: "CUID2 生成器",
+        description:
+          "在浏览器内生成安全、低碰撞的 CUID2 标识符，支持自定义长度和批量数量。",
+      },
+      "zh-TW": {
+        name: "CUID2 產生器",
+        description:
+          "在瀏覽器內產生安全、低碰撞的 CUID2 識別碼，支援自訂長度與批次數量。",
+      },
+    },
+  },
+  {
     slug: "current-network-time",
     category: "network",
     icon: "network",
@@ -8054,6 +8187,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CSV 轉 JSON 轉換器",
         description:
           "將 CSV 轉為 JSON。貼上 CSV 或匯入檔案；調整選項（表頭、分隔符、裁剪 等），預覽、複製並下載。",
+      },
+    },
+  },
+  "cuid2-generator": {
+    slug: "cuid2-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "cuid2",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+      "slug",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CUID2",
+        description:
+          "أنشئ معرّفات CUID2 آمنة وقليلة التصادم داخل المتصفح مع إمكانية ضبط الطول وعدد العناصر في الدفعة.",
+      },
+      de: {
+        name: "CUID2-Generator",
+        description:
+          "Erzeuge sichere, kollisionsarme CUID2-IDs direkt im Browser mit anpassbarer Länge und Stapelgröße.",
+      },
+      en: {
+        name: "CUID2 Generator",
+        description:
+          "Generate secure, collision-resistant CUID2 IDs in your browser with adjustable length and batch count.",
+      },
+      es: {
+        name: "Generador de CUID2",
+        description:
+          "Genera identificadores CUID2 seguros y resistentes a colisiones en tu navegador con longitud y tamaño de lote ajustables.",
+      },
+      fr: {
+        name: "Générateur de CUID2",
+        description:
+          "Générez des identifiants CUID2 sûrs et résistants aux collisions dans votre navigateur, avec longueur et taille de lot ajustables.",
+      },
+      he: {
+        name: "מחולל CUID2",
+        description:
+          "צרו מזהי CUID2 מאובטחים ובעלי סיכוי נמוך להתנגשות ישירות בדפדפן, עם אורך וגודל אצווה הניתנים להתאמה.",
+      },
+      hi: {
+        name: "CUID2 जनरेटर",
+        description:
+          "ब्राउज़र में सुरक्षित और कम टकराव वाले CUID2 ID बनाएँ, जहाँ लंबाई और बैच आकार दोनों समायोज्य हों।",
+      },
+      id: {
+        name: "Generator CUID2",
+        description:
+          "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan.",
+      },
+      it: {
+        name: "Generatore CUID2",
+        description:
+          "Genera ID CUID2 sicuri e resistenti alle collisioni nel browser, con lunghezza e dimensione del lotto regolabili.",
+      },
+      ja: {
+        name: "CUID2 ジェネレーター",
+        description:
+          "長さとバッチ件数を調整しながら、安全で衝突しにくい CUID2 ID をブラウザ内で生成します。",
+      },
+      ko: {
+        name: "CUID2 생성기",
+        description:
+          "길이와 배치 수량을 조절하면서 충돌 가능성이 낮은 안전한 CUID2 ID를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana CUID2",
+        description:
+          "Jana ID CUID2 yang selamat dan tahan perlanggaran dalam pelayar dengan panjang dan saiz kelompok yang boleh dilaraskan.",
+      },
+      nl: {
+        name: "CUID2-generator",
+        description:
+          "Genereer veilige CUID2-ID’s met weinig kans op botsingen in je browser, met instelbare lengte en batchgrootte.",
+      },
+      no: {
+        name: "CUID2-generator",
+        description:
+          "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse.",
+      },
+      pl: {
+        name: "Generator CUID2",
+        description:
+          "Generuj bezpieczne identyfikatory CUID2 o niskim ryzyku kolizji bezpośrednio w przeglądarce, z regulowaną długością i wielkością partii.",
+      },
+      pt: {
+        name: "Gerador de CUID2",
+        description:
+          "Gere IDs CUID2 seguros e resistentes a colisões no navegador, com comprimento e tamanho de lote ajustáveis.",
+      },
+      ru: {
+        name: "Генератор CUID2",
+        description:
+          "Создавайте безопасные идентификаторы CUID2 с низким риском коллизий прямо в браузере, настраивая длину и размер пакета.",
+      },
+      sv: {
+        name: "CUID2-generator",
+        description:
+          "Generera säkra CUID2-ID:n med låg kollisionsrisk i webbläsaren, med justerbar längd och batchstorlek.",
+      },
+      th: {
+        name: "ตัวสร้าง CUID2",
+        description:
+          "สร้าง ID แบบ CUID2 ที่ปลอดภัยและมีโอกาสชนกันต่ำในเบราว์เซอร์ พร้อมปรับความยาวและขนาดแบตช์ได้",
+      },
+      tr: {
+        name: "CUID2 Oluşturucu",
+        description:
+          "Uzunluğu ve toplu üretim boyutunu ayarlayarak güvenli ve çakışmaya dayanıklı CUID2 kimlikleri tarayıcıda üretin.",
+      },
+      vi: {
+        name: "Trình tạo CUID2",
+        description:
+          "Tạo ID CUID2 an toàn, ít va chạm ngay trong trình duyệt với độ dài và kích thước lô có thể điều chỉnh.",
+      },
+      "zh-CN": {
+        name: "CUID2 生成器",
+        description:
+          "在浏览器内生成安全、低碰撞的 CUID2 标识符，支持自定义长度和批量数量。",
+      },
+      "zh-TW": {
+        name: "CUID2 產生器",
+        description:
+          "在瀏覽器內產生安全、低碰撞的 CUID2 識別碼，支援自訂長度與批次數量。",
       },
     },
   },

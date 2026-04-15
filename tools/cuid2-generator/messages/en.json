@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Options",
+  "optionsDescription": "Set how many identifiers to generate in each batch and how long each CUID2 should be.",
+  "countLabel": "Count",
+  "lengthLabel": "Length",
+  "resultsTitle": "Results",
+  "resultsDescription": "Each batch is generated locally in your browser so you can review, copy, or download it without sending the IDs anywhere.",
+  "resultsPlaceholder": "Generated CUID2 IDs will appear here...",
+  "copyResultsLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "downloadResultsLabel": "Download",
+  "regenerateLabel": "Regenerate"
+}

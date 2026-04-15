@@ -1,0 +1,4 @@
+{
+  "name": "CUID2-generator",
+  "description": "Generer sikre CUID2-ID-er med lav kollisjonsrisiko i nettleseren, med justerbar lengde og batchstørrelse."
+}

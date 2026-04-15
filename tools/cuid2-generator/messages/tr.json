@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Seçenekler",
+  "optionsDescription": "Her partide kaç kimlik üretileceğini ve her CUID2 değerinin ne kadar uzun olacağını belirleyin.",
+  "countLabel": "Adet",
+  "lengthLabel": "Uzunluk",
+  "resultsTitle": "Sonuçlar",
+  "resultsDescription": "Her parti tarayıcınızda yerel olarak üretilir; böylece kimlikleri başka bir hizmete göndermeden inceleyebilir, kopyalayabilir veya indirebilirsiniz.",
+  "resultsPlaceholder": "Üretilen CUID2 kimlikleri burada görünecek...",
+  "copyResultsLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "İndir",
+  "regenerateLabel": "Yeniden üret"
+}

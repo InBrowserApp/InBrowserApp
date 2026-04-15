@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Opsi",
+  "optionsDescription": "Tentukan berapa banyak identifier yang ingin dibuat dalam setiap batch dan berapa panjang setiap CUID2.",
+  "countLabel": "Jumlah",
+  "lengthLabel": "Panjang",
+  "resultsTitle": "Hasil",
+  "resultsDescription": "Setiap batch dibuat secara lokal di browser sehingga Anda bisa meninjaunya, menyalinnya, atau mengunduhnya tanpa mengirim identifier ke layanan lain.",
+  "resultsPlaceholder": "ID CUID2 yang dihasilkan akan muncul di sini...",
+  "copyResultsLabel": "Salin hasil",
+  "copiedLabel": "Tersalin",
+  "downloadResultsLabel": "Unduh",
+  "regenerateLabel": "Buat ulang"
+}

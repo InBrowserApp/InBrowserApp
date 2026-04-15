@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Opções",
+  "optionsDescription": "Defina quantos identificadores gerar em cada lote e qual deve ser o comprimento de cada CUID2.",
+  "countLabel": "Quantidade",
+  "lengthLabel": "Comprimento",
+  "resultsTitle": "Resultados",
+  "resultsDescription": "Cada lote é gerado localmente no navegador para que você possa revisá-lo, copiá-lo ou baixá-lo sem enviar os identificadores para outro serviço.",
+  "resultsPlaceholder": "Os IDs CUID2 gerados aparecerão aqui...",
+  "copyResultsLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadResultsLabel": "Baixar",
+  "regenerateLabel": "Gerar novamente"
+}

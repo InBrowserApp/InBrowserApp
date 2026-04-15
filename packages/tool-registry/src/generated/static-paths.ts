@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cuid2-generator",
+    language: "ar",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "de",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "en",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "es",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "fr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "he",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "hi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "id",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "it",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ja",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ko",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ms",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "nl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "no",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pt",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ru",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "sv",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "th",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "tr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "vi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "current-network-time",
     language: "ar",
   },

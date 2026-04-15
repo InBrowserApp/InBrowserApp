@@ -14,6 +14,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
+  "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
