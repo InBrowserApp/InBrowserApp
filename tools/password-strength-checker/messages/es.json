@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Contraseña",
+  "resultTitle": "Resumen de fuerza",
+  "passwordLabel": "Contraseña",
+  "passwordPlaceholder": "Escribe una contraseña para evaluar",
+  "show": "Mostrar",
+  "hide": "Ocultar",
+  "privacyHint": "Las comprobaciones se realizan localmente en tu navegador.",
+  "empty": "Introduce una contraseña para comprobar su fuerza.",
+  "entropyBits": "Entropía: {bits} bits",
+  "log10Guesses": "Intentos (log10): {value}",
+  "strength0": "Muy débil",
+  "strength1": "Débil",
+  "strength2": "Aceptable",
+  "strength3": "Fuerte",
+  "strength4": "Muy fuerte",
+  "length": "Longitud",
+  "unique": "Caracteres únicos",
+  "characterSets": "Conjuntos de caracteres",
+  "crackOffline": "Tiempo de ruptura (offline, 1e10/s)",
+  "crackOnline": "Tiempo de ruptura (online, 100/s)",
+  "durationFormat": "Aproximadamente {value} {unit}",
+  "durationUnderSecond": "Menos de 1 segundo",
+  "unit": {
+    "seconds": "segundos",
+    "minutes": "minutos",
+    "hours": "horas",
+    "days": "días",
+    "months": "meses",
+    "years": "años"
+  },
+  "warning": {
+    "common": "Esta es una contraseña muy común.",
+    "short": "La contraseña es demasiado corta.",
+    "sequence": "Las secuencias son fáciles de adivinar.",
+    "repeat": "Los patrones repetidos reducen la fuerza.",
+    "singleClass": "Usar solo un tipo de carácter reduce la fuerza."
+  },
+  "suggestion": {
+    "use-longer": "Usa una contraseña o frase más larga.",
+    "add-uppercase": "Añade letras mayúsculas.",
+    "add-lowercase": "Añade letras minúsculas.",
+    "add-numbers": "Añade números.",
+    "add-symbols": "Añade símbolos.",
+    "avoid-common": "Evita contraseñas comunes y filtradas.",
+    "avoid-sequences": "Evita secuencias como 123 o abc.",
+    "avoid-repetition": "Evita patrones repetidos."
+  }
+}

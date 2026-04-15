@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa Kekuatan Kata Sandi",
+  "description": "Menilai kekuatan dengan entropi, komposisi, dan pola, serta memberi saran untuk meningkatkan keamanan."
+}

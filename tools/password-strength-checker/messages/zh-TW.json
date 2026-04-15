@@ -1,0 +1,49 @@
+{
+  "inputTitle": "密碼",
+  "resultTitle": "強度摘要",
+  "passwordLabel": "密碼",
+  "passwordPlaceholder": "輸入要評估的密碼",
+  "show": "顯示",
+  "hide": "隱藏",
+  "privacyHint": "強度檢測在本地瀏覽器中完成。",
+  "empty": "請輸入密碼以檢查強度。",
+  "entropyBits": "熵值：{bits} 位",
+  "log10Guesses": "猜測次數（log10）：{value}",
+  "strength0": "非常弱",
+  "strength1": "較弱",
+  "strength2": "一般",
+  "strength3": "強",
+  "strength4": "非常強",
+  "length": "長度",
+  "unique": "唯一字元數",
+  "characterSets": "字元集",
+  "crackOffline": "破解時間（離線 1e10/秒）",
+  "crackOnline": "破解時間（線上 100/秒）",
+  "durationFormat": "約 {value} {unit}",
+  "durationUnderSecond": "少於 1 秒",
+  "unit": {
+    "seconds": "秒",
+    "minutes": "分鐘",
+    "hours": "小時",
+    "days": "天",
+    "months": "個月",
+    "years": "年"
+  },
+  "warning": {
+    "common": "這是非常常見的密碼。",
+    "short": "密碼過短。",
+    "sequence": "連續模式容易被猜中。",
+    "repeat": "重複模式會降低強度。",
+    "singleClass": "僅使用一種字元類型會降低強度。"
+  },
+  "suggestion": {
+    "use-longer": "使用更長的密碼或口令短語。",
+    "add-uppercase": "加入大寫字母。",
+    "add-lowercase": "加入小寫字母。",
+    "add-numbers": "加入數字。",
+    "add-symbols": "加入符號。",
+    "avoid-common": "避免常見密碼和已洩露的短語。",
+    "avoid-sequences": "避免 123 或 abc 等序列。",
+    "avoid-repetition": "避免重複模式。"
+  }
+}

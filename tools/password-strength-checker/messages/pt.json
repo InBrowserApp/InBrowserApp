@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Senha",
+  "resultTitle": "Resumo de força",
+  "passwordLabel": "Senha",
+  "passwordPlaceholder": "Digite uma senha para avaliar",
+  "show": "Mostrar",
+  "hide": "Ocultar",
+  "privacyHint": "As verificações são feitas localmente no navegador.",
+  "empty": "Digite uma senha para verificar a força.",
+  "entropyBits": "Entropia: {bits} bits",
+  "log10Guesses": "Tentativas (log10): {value}",
+  "strength0": "Muito fraca",
+  "strength1": "Fraca",
+  "strength2": "Regular",
+  "strength3": "Forte",
+  "strength4": "Muito forte",
+  "length": "Comprimento",
+  "unique": "Caracteres únicos",
+  "characterSets": "Conjuntos de caracteres",
+  "crackOffline": "Tempo de quebra (offline, 1e10/s)",
+  "crackOnline": "Tempo de quebra (online, 100/s)",
+  "durationFormat": "Cerca de {value} {unit}",
+  "durationUnderSecond": "Menos de 1 segundo",
+  "unit": {
+    "seconds": "segundos",
+    "minutes": "minutos",
+    "hours": "horas",
+    "days": "dias",
+    "months": "meses",
+    "years": "anos"
+  },
+  "warning": {
+    "common": "Esta é uma senha muito comum.",
+    "short": "A senha é muito curta.",
+    "sequence": "Sequências são fáceis de adivinhar.",
+    "repeat": "Padrões repetidos reduzem a força.",
+    "singleClass": "Usar apenas um tipo de caractere reduz a força."
+  },
+  "suggestion": {
+    "use-longer": "Use uma senha ou frase mais longa.",
+    "add-uppercase": "Adicione letras maiúsculas.",
+    "add-lowercase": "Adicione letras minúsculas.",
+    "add-numbers": "Adicione números.",
+    "add-symbols": "Adicione símbolos.",
+    "avoid-common": "Evite senhas comuns e vazadas.",
+    "avoid-sequences": "Evite sequências como 123 ou abc.",
+    "avoid-repetition": "Evite padrões repetidos."
+  }
+}

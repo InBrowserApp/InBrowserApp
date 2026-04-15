@@ -1,0 +1,49 @@
+{
+  "inputTitle": "סיסמה",
+  "resultTitle": "סיכום חוזק",
+  "passwordLabel": "סיסמה",
+  "passwordPlaceholder": "הקלד סיסמה להערכה",
+  "show": "הצג",
+  "hide": "הסתר",
+  "privacyHint": "הבדיקה מתבצעת מקומית בדפדפן שלך.",
+  "empty": "הזן סיסמה כדי לבדוק את החוזק.",
+  "entropyBits": "אנטרופיה: {bits} ביט",
+  "log10Guesses": "ניסיונות (log10): {value}",
+  "strength0": "חלשה מאוד",
+  "strength1": "חלשה",
+  "strength2": "בינונית",
+  "strength3": "חזקה",
+  "strength4": "חזקה מאוד",
+  "length": "אורך",
+  "unique": "תווים ייחודיים",
+  "characterSets": "קבוצות תווים",
+  "crackOffline": "זמן פיצוח (אופליין, 1e10/שניה)",
+  "crackOnline": "זמן פיצוח (אונליין, 100/שניה)",
+  "durationFormat": "בערך {value} {unit}",
+  "durationUnderSecond": "פחות משנייה אחת",
+  "unit": {
+    "seconds": "שניות",
+    "minutes": "דקות",
+    "hours": "שעות",
+    "days": "ימים",
+    "months": "חודשים",
+    "years": "שנים"
+  },
+  "warning": {
+    "common": "זו סיסמה נפוצה מאוד.",
+    "short": "הסיסמה קצרה מדי.",
+    "sequence": "רצפים קלים לניחוש.",
+    "repeat": "דפוסים חוזרים מפחיתים את החוזק.",
+    "singleClass": "שימוש בסוג תווים אחד מפחית את החוזק."
+  },
+  "suggestion": {
+    "use-longer": "השתמש בסיסמה או ביטוי ארוכים יותר.",
+    "add-uppercase": "הוסף אותיות גדולות.",
+    "add-lowercase": "הוסף אותיות קטנות.",
+    "add-numbers": "הוסף מספרים.",
+    "add-symbols": "הוסף סמלים.",
+    "avoid-common": "הימנע מסיסמאות נפוצות או דלופות.",
+    "avoid-sequences": "הימנע מרצפים כמו 123 או abc.",
+    "avoid-repetition": "הימנע מדפוסים חוזרים."
+  }
+}

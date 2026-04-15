@@ -39,9 +39,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "password-strength-checker": () =>
+    import("@tool/password-strength-checker/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
+  "random-password-generator": () =>
+    import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),

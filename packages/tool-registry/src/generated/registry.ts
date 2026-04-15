@@ -3844,6 +3844,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "password-strength-checker",
+    category: "text",
+    icon: "lock",
+    tags: ["password", "security", "strength", "validator"],
+    locales: {
+      ar: {
+        name: "مدقق قوة كلمة المرور",
+        description:
+          "قيّم القوة عبر الإنتروبيا والتركيب وفحص الأنماط مع نصائح لتحسين الأمان.",
+      },
+      de: {
+        name: "Passwortstärke-Checker",
+        description:
+          "Bewertet die Passwortstärke anhand von Entropie, Zusammensetzung und Mustern und gibt Tipps zur Sicherheit.",
+      },
+      en: {
+        name: "Password Strength Checker",
+        description:
+          "Assess password strength with entropy, composition, and pattern checks plus tips to improve security.",
+      },
+      es: {
+        name: "Comprobador de Fuerza de Contraseña",
+        description:
+          "Evalúa la fortaleza con entropía, composición y patrones, y ofrece sugerencias para mejorar la seguridad.",
+      },
+      fr: {
+        name: "Vérificateur de Robustesse de Mot de Passe",
+        description:
+          "Évalue la robustesse via entropie, composition et motifs, avec des conseils pour améliorer la sécurité.",
+      },
+      he: {
+        name: "בודק חוזק סיסמה",
+        description:
+          "מעריך חוזק באמצעות אנטרופיה, הרכב ובדיקות דפוסים ומספק טיפים לשיפור האבטחה.",
+      },
+      hi: {
+        name: "पासवर्ड मजबूती जांचकर्ता",
+        description:
+          "एंट्रॉपी, संरचना और पैटर्न जांच के साथ मजबूती का आकलन करें और सुरक्षा सुझाव पाएं।",
+      },
+      id: {
+        name: "Pemeriksa Kekuatan Kata Sandi",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi, dan pola, serta memberi saran untuk meningkatkan keamanan.",
+      },
+      it: {
+        name: "Verificatore di Forza Password",
+        description:
+          "Valuta la forza con entropia, composizione e pattern, con suggerimenti per migliorare la sicurezza.",
+      },
+      ja: {
+        name: "パスワード強度チェッカー",
+        description:
+          "エントロピーや構成、パターン検査で強度を評価し、安全性向上のヒントを提供します。",
+      },
+      ko: {
+        name: "비밀번호 강도 검사기",
+        description:
+          "엔트로피, 구성, 패턴 검사를 통해 강도를 평가하고 보안을 높이는 팁을 제공합니다.",
+      },
+      ms: {
+        name: "Pemeriksa Kekuatan Kata Laluan",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi dan corak, serta memberi cadangan untuk meningkatkan keselamatan.",
+      },
+      nl: {
+        name: "Wachtwoordsterkte Checker",
+        description:
+          "Beoordeelt sterkte met entropie-, samenstellings- en patroonchecks, plus tips voor betere veiligheid.",
+      },
+      no: {
+        name: "Passordstyrke-sjekk",
+        description:
+          "Vurderer passordstyrke med entropi, sammensetning og mønstre, og gir tips for bedre sikkerhet.",
+      },
+      pl: {
+        name: "Sprawdzanie Siły Hasła",
+        description:
+          "Ocenia siłę hasła na podstawie entropii, składu i wzorców oraz podaje wskazówki bezpieczeństwa.",
+      },
+      pt: {
+        name: "Verificador de Força de Senha",
+        description:
+          "Avalia a força com entropia, composição e padrões, além de dicas para melhorar a segurança.",
+      },
+      ru: {
+        name: "Проверка Стойкости Пароля",
+        description:
+          "Оценивает стойкость по энтропии, составу и шаблонам и дает советы по повышению безопасности.",
+      },
+      sv: {
+        name: "Lösenordsstyrke-kontroll",
+        description:
+          "Bedömer lösenordsstyrka med entropi-, sammansättnings- och mönsterkontroller samt tips för säkerhet.",
+      },
+      th: {
+        name: "ตัวตรวจสอบความแข็งแรงของรหัสผ่าน",
+        description:
+          "ประเมินความแข็งแรงด้วยเอนโทรปี องค์ประกอบ และรูปแบบ พร้อมคำแนะนำเพื่อเพิ่มความปลอดภัย.",
+      },
+      tr: {
+        name: "Parola Gücü Denetleyici",
+        description:
+          "Entropi, bileşim ve desen kontrolleriyle gücü değerlendirir ve güvenliği artırmak için öneriler sunar.",
+      },
+      vi: {
+        name: "Kiểm tra độ mạnh mật khẩu",
+        description:
+          "Đánh giá độ mạnh bằng entropy, thành phần ký tự và mẫu, kèm gợi ý cải thiện bảo mật.",
+      },
+      "zh-CN": {
+        name: "密码强度检测",
+        description:
+          "通过熵值、字符组成和模式检测评估密码强度，并提供提升安全性的建议。",
+      },
+      "zh-TW": {
+        name: "密碼強度檢測",
+        description:
+          "透過熵值、字元組成與模式檢查評估密碼強度，並提供提升安全性的建議。",
+      },
+    },
+  },
+  {
     slug: "port-number-lookup",
     category: "network",
     icon: "network",
@@ -4192,6 +4315,133 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "隨機數產生器",
         description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "مولد كلمات المرور العشوائية",
+        description:
+          "أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح.",
+      },
+      de: {
+        name: "Zufalls-Passwortgenerator",
+        description:
+          "Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Generador de contraseñas aleatorias",
+        description:
+          "Genera contraseñas, frases de paso, códigos agrupados y PIN en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de mots de passe aléatoires",
+        description:
+          "Générez des mots de passe, phrases de passe, codes groupés et PIN dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל סיסמאות אקראיות",
+        description:
+          "צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN בדפדפן.",
+      },
+      hi: {
+        name: "रैंडम पासवर्ड जेनरेटर",
+        description: "अपने ब्राउज़र में पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाएं।",
+      },
+      id: {
+        name: "Generator Kata Sandi Acak",
+        description:
+          "Buat kata sandi, frasa sandi, kode berkelompok, dan PIN di browser.",
+      },
+      it: {
+        name: "Generatore di password casuali",
+        description:
+          "Genera password, frasi segrete, codici a blocchi e PIN nel browser.",
+      },
+      ja: {
+        name: "ランダムパスワード生成器",
+        description:
+          "ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成します。",
+      },
+      ko: {
+        name: "랜덤 비밀번호 생성기",
+        description:
+          "브라우저에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kata Laluan Rawak",
+        description:
+          "Jana kata laluan, frasa laluan, kod berkelompok dan PIN dalam pelayar anda.",
+      },
+      nl: {
+        name: "Willekeurige wachtwoordgenerator",
+        description:
+          "Genereer wachtwoorden, wachtzinnen, gegroepeerde codes en pincodes in je browser.",
+      },
+      no: {
+        name: "Generator for tilfeldige passord",
+        description:
+          "Generer passord, passfraser, grupperte koder og PIN-koder i nettleseren.",
+      },
+      pl: {
+        name: "Generator losowych haseł",
+        description:
+          "Generuj hasła, frazy hasłowe, pogrupowane kody i PIN-y w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de senhas aleatórias",
+        description:
+          "Gere senhas, frases-senha, códigos em blocos e PINs no navegador.",
+      },
+      ru: {
+        name: "Генератор случайных паролей",
+        description:
+          "Генерируйте пароли, парольные фразы, коды по блокам и PIN прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga lösenord",
+        description:
+          "Generera lösenord, lösenfraser, grupperade koder och PIN-koder i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
+        description: "สร้างรหัสผ่าน วลีรหัสผ่าน รหัสแบบแบ่งกลุ่ม และ PIN ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Rastgele Parola Oluşturucu",
+        description:
+          "Tarayıcınızda parolalar, parola ifadeleri, gruplanmış kodlar ve PIN'ler oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo mật khẩu ngẫu nhiên",
+        description:
+          "Tạo mật khẩu, cụm mật khẩu, mã theo nhóm và mã PIN ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
       },
     },
   },
@@ -10748,6 +10998,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "password-strength-checker": {
+    slug: "password-strength-checker",
+    category: "text",
+    icon: "lock",
+    tags: ["password", "security", "strength", "validator"],
+    locales: {
+      ar: {
+        name: "مدقق قوة كلمة المرور",
+        description:
+          "قيّم القوة عبر الإنتروبيا والتركيب وفحص الأنماط مع نصائح لتحسين الأمان.",
+      },
+      de: {
+        name: "Passwortstärke-Checker",
+        description:
+          "Bewertet die Passwortstärke anhand von Entropie, Zusammensetzung und Mustern und gibt Tipps zur Sicherheit.",
+      },
+      en: {
+        name: "Password Strength Checker",
+        description:
+          "Assess password strength with entropy, composition, and pattern checks plus tips to improve security.",
+      },
+      es: {
+        name: "Comprobador de Fuerza de Contraseña",
+        description:
+          "Evalúa la fortaleza con entropía, composición y patrones, y ofrece sugerencias para mejorar la seguridad.",
+      },
+      fr: {
+        name: "Vérificateur de Robustesse de Mot de Passe",
+        description:
+          "Évalue la robustesse via entropie, composition et motifs, avec des conseils pour améliorer la sécurité.",
+      },
+      he: {
+        name: "בודק חוזק סיסמה",
+        description:
+          "מעריך חוזק באמצעות אנטרופיה, הרכב ובדיקות דפוסים ומספק טיפים לשיפור האבטחה.",
+      },
+      hi: {
+        name: "पासवर्ड मजबूती जांचकर्ता",
+        description:
+          "एंट्रॉपी, संरचना और पैटर्न जांच के साथ मजबूती का आकलन करें और सुरक्षा सुझाव पाएं।",
+      },
+      id: {
+        name: "Pemeriksa Kekuatan Kata Sandi",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi, dan pola, serta memberi saran untuk meningkatkan keamanan.",
+      },
+      it: {
+        name: "Verificatore di Forza Password",
+        description:
+          "Valuta la forza con entropia, composizione e pattern, con suggerimenti per migliorare la sicurezza.",
+      },
+      ja: {
+        name: "パスワード強度チェッカー",
+        description:
+          "エントロピーや構成、パターン検査で強度を評価し、安全性向上のヒントを提供します。",
+      },
+      ko: {
+        name: "비밀번호 강도 검사기",
+        description:
+          "엔트로피, 구성, 패턴 검사를 통해 강도를 평가하고 보안을 높이는 팁을 제공합니다.",
+      },
+      ms: {
+        name: "Pemeriksa Kekuatan Kata Laluan",
+        description:
+          "Menilai kekuatan dengan entropi, komposisi dan corak, serta memberi cadangan untuk meningkatkan keselamatan.",
+      },
+      nl: {
+        name: "Wachtwoordsterkte Checker",
+        description:
+          "Beoordeelt sterkte met entropie-, samenstellings- en patroonchecks, plus tips voor betere veiligheid.",
+      },
+      no: {
+        name: "Passordstyrke-sjekk",
+        description:
+          "Vurderer passordstyrke med entropi, sammensetning og mønstre, og gir tips for bedre sikkerhet.",
+      },
+      pl: {
+        name: "Sprawdzanie Siły Hasła",
+        description:
+          "Ocenia siłę hasła na podstawie entropii, składu i wzorców oraz podaje wskazówki bezpieczeństwa.",
+      },
+      pt: {
+        name: "Verificador de Força de Senha",
+        description:
+          "Avalia a força com entropia, composição e padrões, além de dicas para melhorar a segurança.",
+      },
+      ru: {
+        name: "Проверка Стойкости Пароля",
+        description:
+          "Оценивает стойкость по энтропии, составу и шаблонам и дает советы по повышению безопасности.",
+      },
+      sv: {
+        name: "Lösenordsstyrke-kontroll",
+        description:
+          "Bedömer lösenordsstyrka med entropi-, sammansättnings- och mönsterkontroller samt tips för säkerhet.",
+      },
+      th: {
+        name: "ตัวตรวจสอบความแข็งแรงของรหัสผ่าน",
+        description:
+          "ประเมินความแข็งแรงด้วยเอนโทรปี องค์ประกอบ และรูปแบบ พร้อมคำแนะนำเพื่อเพิ่มความปลอดภัย.",
+      },
+      tr: {
+        name: "Parola Gücü Denetleyici",
+        description:
+          "Entropi, bileşim ve desen kontrolleriyle gücü değerlendirir ve güvenliği artırmak için öneriler sunar.",
+      },
+      vi: {
+        name: "Kiểm tra độ mạnh mật khẩu",
+        description:
+          "Đánh giá độ mạnh bằng entropy, thành phần ký tự và mẫu, kèm gợi ý cải thiện bảo mật.",
+      },
+      "zh-CN": {
+        name: "密码强度检测",
+        description:
+          "通过熵值、字符组成和模式检测评估密码强度，并提供提升安全性的建议。",
+      },
+      "zh-TW": {
+        name: "密碼強度檢測",
+        description:
+          "透過熵值、字元組成與模式檢查評估密碼強度，並提供提升安全性的建議。",
+      },
+    },
+  },
   "port-number-lookup": {
     slug: "port-number-lookup",
     category: "network",
@@ -11097,6 +11470,133 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "隨機數產生器",
         description: "產生指定範圍與數量的隨機數字，支援小數。",
+      },
+    },
+  },
+  "random-password-generator": {
+    slug: "random-password-generator",
+    category: "random",
+    icon: "lock",
+    tags: [
+      "random",
+      "password",
+      "passphrase",
+      "pin",
+      "security",
+      "generator",
+      "bip39",
+    ],
+    locales: {
+      ar: {
+        name: "مولد كلمات المرور العشوائية",
+        description:
+          "أنشئ كلمات مرور وعبارات مرور ورموزًا مجمعة وأرقام PIN داخل المتصفح.",
+      },
+      de: {
+        name: "Zufalls-Passwortgenerator",
+        description:
+          "Erzeuge Passwörter, Passphrasen, gruppierte Codes und PINs direkt im Browser.",
+      },
+      en: {
+        name: "Random Password Generator",
+        description:
+          "Generate passwords, passphrases, grouped codes, and PINs in your browser.",
+      },
+      es: {
+        name: "Generador de contraseñas aleatorias",
+        description:
+          "Genera contraseñas, frases de paso, códigos agrupados y PIN en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de mots de passe aléatoires",
+        description:
+          "Générez des mots de passe, phrases de passe, codes groupés et PIN dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל סיסמאות אקראיות",
+        description:
+          "צרו סיסמאות, ביטויי סיסמה, קודים מקובצים וקודי PIN בדפדפן.",
+      },
+      hi: {
+        name: "रैंडम पासवर्ड जेनरेटर",
+        description: "अपने ब्राउज़र में पासवर्ड, पासफ़्रेज़, समूहित कोड और PIN बनाएं।",
+      },
+      id: {
+        name: "Generator Kata Sandi Acak",
+        description:
+          "Buat kata sandi, frasa sandi, kode berkelompok, dan PIN di browser.",
+      },
+      it: {
+        name: "Generatore di password casuali",
+        description:
+          "Genera password, frasi segrete, codici a blocchi e PIN nel browser.",
+      },
+      ja: {
+        name: "ランダムパスワード生成器",
+        description:
+          "ブラウザ内でパスワード、パスフレーズ、グループ化コード、PIN を生成します。",
+      },
+      ko: {
+        name: "랜덤 비밀번호 생성기",
+        description:
+          "브라우저에서 비밀번호, 패스프레이즈, 그룹형 코드, PIN을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kata Laluan Rawak",
+        description:
+          "Jana kata laluan, frasa laluan, kod berkelompok dan PIN dalam pelayar anda.",
+      },
+      nl: {
+        name: "Willekeurige wachtwoordgenerator",
+        description:
+          "Genereer wachtwoorden, wachtzinnen, gegroepeerde codes en pincodes in je browser.",
+      },
+      no: {
+        name: "Generator for tilfeldige passord",
+        description:
+          "Generer passord, passfraser, grupperte koder og PIN-koder i nettleseren.",
+      },
+      pl: {
+        name: "Generator losowych haseł",
+        description:
+          "Generuj hasła, frazy hasłowe, pogrupowane kody i PIN-y w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de senhas aleatórias",
+        description:
+          "Gere senhas, frases-senha, códigos em blocos e PINs no navegador.",
+      },
+      ru: {
+        name: "Генератор случайных паролей",
+        description:
+          "Генерируйте пароли, парольные фразы, коды по блокам и PIN прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga lösenord",
+        description:
+          "Generera lösenord, lösenfraser, grupperade koder och PIN-koder i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
+        description: "สร้างรหัสผ่าน วลีรหัสผ่าน รหัสแบบแบ่งกลุ่ม และ PIN ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Rastgele Parola Oluşturucu",
+        description:
+          "Tarayıcınızda parolalar, parola ifadeleri, gruplanmış kodlar ve PIN'ler oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo mật khẩu ngẫu nhiên",
+        description:
+          "Tạo mật khẩu, cụm mật khẩu, mã theo nhóm và mã PIN ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "随机密码生成器",
+        description: "在浏览器中生成随机密码、口令短语、分组代码和数字 PIN。",
+      },
+      "zh-TW": {
+        name: "隨機密碼產生器",
+        description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
       },
     },
   },

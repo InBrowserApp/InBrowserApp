@@ -1,0 +1,4 @@
+{
+  "name": "Passwortstärke-Checker",
+  "description": "Bewertet die Passwortstärke anhand von Entropie, Zusammensetzung und Mustern und gibt Tipps zur Sicherheit."
+}

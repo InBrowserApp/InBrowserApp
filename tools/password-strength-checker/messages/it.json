@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Password",
+  "resultTitle": "Riepilogo forza",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Inserisci una password da valutare",
+  "show": "Mostra",
+  "hide": "Nascondi",
+  "privacyHint": "Le verifiche vengono eseguite localmente nel browser.",
+  "empty": "Inserisci una password per verificarne la forza.",
+  "entropyBits": "Entropia: {bits} bit",
+  "log10Guesses": "Tentativi (log10): {value}",
+  "strength0": "Molto debole",
+  "strength1": "Debole",
+  "strength2": "Discreta",
+  "strength3": "Forte",
+  "strength4": "Molto forte",
+  "length": "Lunghezza",
+  "unique": "Caratteri unici",
+  "characterSets": "Set di caratteri",
+  "crackOffline": "Tempo di crack (offline, 1e10/s)",
+  "crackOnline": "Tempo di crack (online, 100/s)",
+  "durationFormat": "Circa {value} {unit}",
+  "durationUnderSecond": "Meno di 1 secondo",
+  "unit": {
+    "seconds": "secondi",
+    "minutes": "minuti",
+    "hours": "ore",
+    "days": "giorni",
+    "months": "mesi",
+    "years": "anni"
+  },
+  "warning": {
+    "common": "Questa è una password molto comune.",
+    "short": "La password è troppo corta.",
+    "sequence": "Le sequenze sono facili da indovinare.",
+    "repeat": "I pattern ripetuti riducono la forza.",
+    "singleClass": "Usare un solo tipo di carattere riduce la forza."
+  },
+  "suggestion": {
+    "use-longer": "Usa una password o una passphrase più lunga.",
+    "add-uppercase": "Aggiungi lettere maiuscole.",
+    "add-lowercase": "Aggiungi lettere minuscole.",
+    "add-numbers": "Aggiungi numeri.",
+    "add-symbols": "Aggiungi simboli.",
+    "avoid-common": "Evita password comuni o compromesse.",
+    "avoid-sequences": "Evita sequenze come 123 o abc.",
+    "avoid-repetition": "Evita pattern ripetuti."
+  }
+}

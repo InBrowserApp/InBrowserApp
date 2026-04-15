@@ -2854,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "password-strength-checker",
+    language: "ar",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "de",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "en",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "es",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "fr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "he",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "hi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "id",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "it",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ja",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ko",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ms",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "nl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "no",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pt",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ru",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "sv",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "th",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "tr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "vi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },
@@ -3127,6 +3219,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "random-number-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-password-generator",
+    language: "de",
+  },
+  {
+    slug: "random-password-generator",
+    language: "en",
+  },
+  {
+    slug: "random-password-generator",
+    language: "es",
+  },
+  {
+    slug: "random-password-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "he",
+  },
+  {
+    slug: "random-password-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "id",
+  },
+  {
+    slug: "random-password-generator",
+    language: "it",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-password-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "no",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-password-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-password-generator",
+    language: "th",
+  },
+  {
+    slug: "random-password-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-password-generator",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,49 @@
+{
+  "inputTitle": "パスワード",
+  "resultTitle": "強度サマリー",
+  "passwordLabel": "パスワード",
+  "passwordPlaceholder": "評価するパスワードを入力",
+  "show": "表示",
+  "hide": "非表示",
+  "privacyHint": "強度チェックはブラウザ内でローカルに実行されます。",
+  "empty": "パスワードを入力して強度を確認してください。",
+  "entropyBits": "エントロピー: {bits} ビット",
+  "log10Guesses": "推測回数（log10）: {value}",
+  "strength0": "非常に弱い",
+  "strength1": "弱い",
+  "strength2": "普通",
+  "strength3": "強い",
+  "strength4": "非常に強い",
+  "length": "長さ",
+  "unique": "ユニーク文字数",
+  "characterSets": "文字種",
+  "crackOffline": "解析時間（オフライン 1e10/秒）",
+  "crackOnline": "解析時間（オンライン 100/秒）",
+  "durationFormat": "約 {value} {unit}",
+  "durationUnderSecond": "1 秒未満",
+  "unit": {
+    "seconds": "秒",
+    "minutes": "分",
+    "hours": "時間",
+    "days": "日",
+    "months": "か月",
+    "years": "年"
+  },
+  "warning": {
+    "common": "非常に一般的なパスワードです。",
+    "short": "パスワードが短すぎます。",
+    "sequence": "連続パターンは推測されやすいです。",
+    "repeat": "繰り返しパターンは強度を下げます。",
+    "singleClass": "1種類の文字だけだと強度が下がります。"
+  },
+  "suggestion": {
+    "use-longer": "より長いパスワードやパスフレーズを使用してください。",
+    "add-uppercase": "大文字を追加してください。",
+    "add-lowercase": "小文字を追加してください。",
+    "add-numbers": "数字を追加してください。",
+    "add-symbols": "記号を追加してください。",
+    "avoid-common": "一般的または流出したパスワードを避けてください。",
+    "avoid-sequences": "123 や abc のような連続を避けてください。",
+    "avoid-repetition": "繰り返しパターンを避けてください。"
+  }
+}

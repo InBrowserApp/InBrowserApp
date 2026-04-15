@@ -1,0 +1,4 @@
+{
+  "name": "Passordstyrke-sjekk",
+  "description": "Vurderer passordstyrke med entropi, sammensetning og mønstre, og gir tips for bedre sikkerhet."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Verificador de Força de Senha",
+  "description": "Avalia a força com entropia, composição e padrões, além de dicas para melhorar a segurança."
+}
