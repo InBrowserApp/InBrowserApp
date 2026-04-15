@@ -1,0 +1,77 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import ImageToIcoClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type ImageToIcoMessagesCatalog = Readonly<{
+  uploadTitle: string
+  uploadDescription: string
+  chooseImageLabel: string
+  uploadHint: string
+  supportedFormatsLabel: string
+  changeImageLabel: string
+  removeFileLabel: string
+  optionsTitle: string
+  optionsDescription: string
+  sizesLabel: string
+  sizesDescription: string
+  backgroundLabel: string
+  backgroundDescription: string
+  backgroundColorLabel: string
+  generateLabel: string
+  generatingLabel: string
+  resultTitle: string
+  resultDescription: string
+  emptyResultTitle: string
+  emptyResultDescription: string
+  downloadLabel: string
+  sizesIncludedLabel: string
+  fileSizeLabel: string
+  errorTitle: string
+  onlyOneFileError: string
+  invalidFileTypeError: string
+  selectSizeError: string
+  invalidImageError: string
+  canvasUnavailableError: string
+  conversionFailedError: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<ImageToIcoMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <ImageToIcoClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>
