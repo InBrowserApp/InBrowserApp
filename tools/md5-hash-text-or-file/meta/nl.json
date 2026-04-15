@@ -1,0 +1,4 @@
+{
+  "name": "MD5-hash tekst of bestand",
+  "description": "Genereer MD5-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn."
+}
