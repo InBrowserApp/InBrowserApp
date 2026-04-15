@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Live resultaat",
+  "resultDescription": "Converteer tekst naar morsecode en vice versa met audio ondersteuning",
+  "textLabel": "Tekst",
+  "morseCodeLabel": "Morsecode",
+  "textPlaceholder": "Voer tekst in om naar morsecode te converteren",
+  "morsePlaceholder": "Voer morsecode in (punten en strepen, / voor woordscheiding)",
+  "validLabel": "Geldige morsecode",
+  "invalidLabel": "Ongeldige morsecode",
+  "invalidMorseCode": "Ongeldige morsecode",
+  "unsupportedTextMessage": "Alleen letters, cijfers, spaties en gangbare leestekens kunnen worden gecodeerd.",
+  "loadSample": "Voorbeeld laden",
+  "clearLabel": "Wissen",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "play": "Afspelen",
+  "stop": "Stoppen"
+}

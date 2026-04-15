@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Hasil langsung",
+  "resultDescription": "Tukar teks kepada kod Morse dan sebaliknya dengan sokongan main balik audio",
+  "textLabel": "Teks",
+  "morseCodeLabel": "Kod Morse",
+  "textPlaceholder": "Masukkan teks untuk ditukar kepada kod Morse",
+  "morsePlaceholder": "Masukkan kod Morse (titik dan sengkang, / untuk pemisah perkataan)",
+  "validLabel": "Kod Morse sah",
+  "invalidLabel": "Kod Morse tidak sah",
+  "invalidMorseCode": "Kod Morse tidak sah",
+  "unsupportedTextMessage": "Hanya huruf, digit, ruang dan tanda baca biasa yang boleh dikodkan.",
+  "loadSample": "Muatkan contoh",
+  "clearLabel": "Kosongkan",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
+  "play": "Main",
+  "stop": "Berhenti"
+}

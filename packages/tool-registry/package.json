@@ -45,6 +45,7 @@
     "@tool/ksuid-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
+    "@tool/morse-code-converter": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

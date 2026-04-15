@@ -1,0 +1,18 @@
+{
+  "resultTitle": "النتيجة المباشرة",
+  "resultDescription": "تحويل النص إلى شفرة مورس والعكس مع دعم تشغيل الصوت",
+  "textLabel": "النص",
+  "morseCodeLabel": "شفرة مورس",
+  "textPlaceholder": "أدخل النص لتحويله إلى شفرة مورس",
+  "morsePlaceholder": "أدخل شفرة مورس (نقاط وشرطات، / لفصل الكلمات)",
+  "validLabel": "شفرة مورس صالحة",
+  "invalidLabel": "شفرة مورس غير صالحة",
+  "invalidMorseCode": "شفرة مورس غير صالحة",
+  "unsupportedTextMessage": "يمكن ترميز الحروف والأرقام والمسافات وعلامات الترقيم الشائعة فقط.",
+  "loadSample": "تحميل مثال",
+  "clearLabel": "مسح",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ",
+  "play": "تشغيل",
+  "stop": "إيقاف"
+}

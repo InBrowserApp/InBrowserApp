@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Direkte resultat",
+  "resultDescription": "Konverter tekst til morsekode og omvendt med lydavspilling",
+  "textLabel": "Tekst",
+  "morseCodeLabel": "Morsekode",
+  "textPlaceholder": "Skriv inn tekst for å konvertere til morsekode",
+  "morsePlaceholder": "Skriv inn morsekode (prikker og streker, / for ordskille)",
+  "validLabel": "Gyldig morsekode",
+  "invalidLabel": "Ugyldig morsekode",
+  "invalidMorseCode": "Ugyldig morsekode",
+  "unsupportedTextMessage": "Bare bokstaver, tall, mellomrom og vanlige tegn kan kodes.",
+  "loadSample": "Last inn eksempel",
+  "clearLabel": "Tøm",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert",
+  "play": "Spill",
+  "stop": "Stopp"
+}

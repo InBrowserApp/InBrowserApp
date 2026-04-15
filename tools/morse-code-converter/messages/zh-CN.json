@@ -1,0 +1,18 @@
+{
+  "resultTitle": "实时结果",
+  "resultDescription": "文本与摩尔斯电码相互转换，支持音频播放",
+  "textLabel": "文本",
+  "morseCodeLabel": "摩尔斯电码",
+  "textPlaceholder": "输入要转换为摩尔斯电码的文本",
+  "morsePlaceholder": "输入摩尔斯电码（点和横线，/ 分隔单词）",
+  "validLabel": "有效的摩尔斯电码",
+  "invalidLabel": "无效的摩尔斯电码",
+  "invalidMorseCode": "无效的摩尔斯电码",
+  "unsupportedTextMessage": "只能编码字母、数字、空格和常见标点符号。",
+  "loadSample": "载入示例",
+  "clearLabel": "清空",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制",
+  "play": "播放",
+  "stop": "停止"
+}
