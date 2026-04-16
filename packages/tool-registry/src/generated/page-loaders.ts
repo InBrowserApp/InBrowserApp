@@ -56,6 +56,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
+  "keccak-hash-text-or-file": () =>
+    import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),

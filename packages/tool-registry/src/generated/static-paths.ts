@@ -4050,6 +4050,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "keccak-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "ksuid-generator",
     language: "ar",
   },

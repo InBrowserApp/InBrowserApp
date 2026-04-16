@@ -1,0 +1,4 @@
+{
+  "name": "Keccak-hash tekst of bestand",
+  "description": "Genereer Keccak-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+}
