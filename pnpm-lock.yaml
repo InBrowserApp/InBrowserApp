@@ -283,8 +283,8 @@ catalogs:
       specifier: ^0.4.4
       version: 0.4.4
     hono:
-      specifier: ^4.12.4
-      version: 4.12.5
+      specifier: ^4.12.14
+      version: 4.12.14
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -1601,7 +1601,7 @@ importers:
         version: 14.2.1(vue@3.5.29(typescript@5.9.3))
       gitignore:
         specifier: 'catalog:'
-        version: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938
+        version: https://codeload.github.com/github/gitignore/tar.gz/c677dd99d46da587a70362d6df5cf57787aa5210
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -7476,7 +7476,7 @@ importers:
         version: 11.11.1
       hono:
         specifier: 'catalog:'
-        version: 4.12.5
+        version: 4.12.14
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -7506,7 +7506,7 @@ importers:
         version: 14.2.1(vue@3.5.29(typescript@5.9.3))
       hono:
         specifier: 'catalog:'
-        version: 4.12.5
+        version: 4.12.14
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -11170,14 +11170,15 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-markdown-css@5.9.0:
     resolution: {integrity: sha512-tmT5sY+zvg2302XLYEfH2mtkViIM1SWf2nvYoF5N1ZsO0V6B2qZTiw3GOzw4vpjLygK/KG35qRlPFweHqfzz5w==}
     engines: {node: '>=10'}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938:
-    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/c677dd99d46da587a70362d6df5cf57787aa5210:
+    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/c677dd99d46da587a70362d6df5cf57787aa5210}
     version: 0.0.0
 
   glob-parent@5.1.2:
@@ -11265,8 +11266,8 @@ packages:
   highwayhasher@0.4.4:
     resolution: {integrity: sha512-57bU4Fw2baN6j5Ej7w4TVM7hKbsGZf9YrMFlO5joz7Y49Y/jurVYfGcH8WCfmT935IcH92TYt+Eo4Gjw04Iq+w==}
 
-  hono@4.12.5:
-    resolution: {integrity: sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg==}
+  hono@4.12.14:
+    resolution: {integrity: sha512-am5zfg3yu6sqn5yjKBNqhnTX7Cv+m00ox+7jbaKkrLMRJ4rAdldd1xPd/JzbBWspqaQv6RSTrgFN95EsfhC+7w==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -16733,7 +16734,7 @@ snapshots:
 
   github-markdown-css@5.9.0: {}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938: {}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/c677dd99d46da587a70362d6df5cf57787aa5210: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -16820,7 +16821,7 @@ snapshots:
 
   highwayhasher@0.4.4: {}
 
-  hono@4.12.5: {}
+  hono@4.12.14: {}
 
   hookable@5.5.3: {}
 
