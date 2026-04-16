@@ -68,16 +68,8 @@ function validateBase32Input(value: string) {
       throw new Error("Invalid Base32 length")
     }
 
-    const mod = trimmed.length % 8
-    const validMod =
-      (padding === 6 && mod === 2) ||
-      (padding === 4 && mod === 4) ||
-      (padding === 3 && mod === 5) ||
-      (padding === 1 && mod === 7)
-
-    if (!validMod) {
-      throw new Error("Invalid Base32 padding")
-    }
+    // On 8-char blocks, each allowed padding length implies exactly one valid
+    // unpadded length remainder: 6->2, 4->4, 3->5, 1->7.
   } else if (!VALID_BASE32_LENGTH_MODS.has(trimmed.length % 8)) {
     throw new Error("Invalid Base32 length")
   }
@@ -135,11 +127,7 @@ function decodeBase32(value: string) {
   const output: number[] = []
 
   for (const character of trimmed) {
-    const decoded = BASE32_MAP.get(character)
-
-    if (decoded === undefined) {
-      throw new Error("Invalid Base32 character")
-    }
+    const decoded = BASE32_MAP.get(character)!
 
     buffer = (buffer << 5) | decoded
     bits += 5
