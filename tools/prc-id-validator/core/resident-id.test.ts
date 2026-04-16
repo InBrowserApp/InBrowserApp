@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 
 import {
+  analyzeResidentId,
   getResidentIdCheckDigit,
   normalizeResidentId,
   validateResidentId,
@@ -142,5 +143,38 @@ describe("validateResidentId", () => {
 
     expect(result.isChecksumValid).toBe(false)
     expect(result.isValid).toBe(false)
+  })
+})
+
+describe("analyzeResidentId", () => {
+  it("reveals province information from the first two digits", () => {
+    const result = analyzeResidentId("11", NOW)
+
+    expect(result.isPartial).toBe(true)
+    expect(result.hasFormatIssue).toBe(false)
+    expect(result.provinceCode).toBe("110000")
+    expect(result.provinceName).toBe("北京市")
+    expect(result.cityCode).toBeNull()
+    expect(result.areaCode).toBeNull()
+  })
+
+  it("derives checksum and decoded details before the last check digit is entered", () => {
+    const result = analyzeResidentId("11010119900101001", NOW)
+
+    expect(result.isPartial).toBe(true)
+    expect(result.birthDateText).toBe("1990-01-01")
+    expect(result.age).toBe(36)
+    expect(result.gender).toBe("male")
+    expect(result.sequenceCode).toBe("001")
+    expect(result.expectedCheckDigit).toBe("5")
+    expect(result.actualCheckDigit).toBeNull()
+  })
+
+  it("flags misplaced X characters immediately while preserving known prefix info", () => {
+    const result = analyzeResidentId("11X", NOW)
+
+    expect(result.isPartial).toBe(false)
+    expect(result.hasFormatIssue).toBe(true)
+    expect(result.provinceName).toBe("北京市")
   })
 })

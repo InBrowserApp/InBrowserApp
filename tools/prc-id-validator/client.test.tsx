@@ -58,6 +58,20 @@ describe("PrcIdValidatorClient", () => {
     expect(screen.getByText(residentId)).toBeTruthy()
   })
 
+  it("shows known region info while the id is still incomplete", () => {
+    render(
+      <PrcIdValidatorClient messages={buildMessages(enMeta, enMessages)} />
+    )
+
+    const input = screen.getByPlaceholderText("Enter 18-digit ID number")
+    fireEvent.change(input, {
+      target: { value: "11" },
+    })
+
+    expect(screen.getAllByText("北京市").length).toBeGreaterThan(0)
+    expect(screen.queryByRole("alert")).toBeNull()
+  })
+
   it("localizes labels in zh-CN", () => {
     const residentId = buildResidentId("11010119900101002")
 

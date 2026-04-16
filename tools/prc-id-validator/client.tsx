@@ -2,18 +2,17 @@ import { useId, useMemo, useState } from "react"
 
 import { PRCIdInputCard } from "./components/prc-id-input-card"
 import { PRCIdResultsCard } from "./components/prc-id-results-card"
-import {
-  normalizeResidentId,
-  validateResidentId,
-  type ResidentIdValidationResult,
-} from "./core/resident-id"
+import { analyzeResidentId, normalizeResidentId } from "./core/resident-id"
 import type { PRCIdValidatorMessages } from "./client/types"
 
 function getFeedbackMessage(
-  validation: ResidentIdValidationResult,
+  validation: ReturnType<typeof analyzeResidentId>,
   messages: PRCIdValidatorMessages
 ) {
   if (validation.isValid) return messages.valid
+  if (validation.isPartial) return null
+  if (validation.length > 18) return messages.invalidLength
+  if (validation.hasFormatIssue) return messages.invalidFormat
   if (!validation.isLengthValid) return messages.invalidLength
   if (!validation.isFormatValid) return messages.invalidFormat
   if (!validation.isRegionValid) return messages.invalidRegion
@@ -29,7 +28,7 @@ function PrcIdValidatorClient({
   const [residentId, setResidentId] = useState("")
 
   const analysis = useMemo(
-    () => (residentId.length > 0 ? validateResidentId(residentId) : null),
+    () => (residentId.length > 0 ? analyzeResidentId(residentId) : null),
     [residentId]
   )
   const feedbackMessage = analysis

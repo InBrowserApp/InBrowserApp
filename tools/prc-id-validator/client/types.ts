@@ -1,4 +1,4 @@
-import type { ResidentIdValidationResult } from "../core/resident-id"
+import type { ResidentIdAnalysisResult } from "../core/resident-id"
 
 type PRCIdValidatorMessages = Readonly<{
   meta: {
@@ -42,7 +42,7 @@ type PRCIdValidatorMessages = Readonly<{
   copiedLabel: string
 }>
 
-type PRCIdValidationAnalysis = ResidentIdValidationResult
+type PRCIdValidationAnalysis = ResidentIdAnalysisResult
 type PRCIdValidatorMessagesCatalog = Omit<PRCIdValidatorMessages, "meta">
 
 export type {

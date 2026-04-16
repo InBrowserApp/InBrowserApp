@@ -41,10 +41,17 @@ function PRCIdResultsCard({
   feedbackMessage,
   messages,
 }: PRCIdResultsCardProps) {
-  const description = analysis ? feedbackMessage : messages.meta.description
+  const description =
+    analysis && !analysis.isPartial && feedbackMessage
+      ? feedbackMessage
+      : messages.meta.description
   const regionDisplay = analysis
     ? getRegionDisplay(analysis, messages)
     : messages.notAvailable
+  const showCompleteStatus = analysis ? !analysis.isPartial : false
+  const hasKnownRegion = analysis
+    ? Boolean(analysis.provinceName || analysis.cityName || analysis.areaName)
+    : false
 
   return (
     <ToolPanelCard>
@@ -61,29 +68,29 @@ function PRCIdResultsCard({
                   <div>
                     <PanelLabel>{messages.status}</PanelLabel>
                     <div className="mt-2 flex flex-wrap gap-2">
-                      <Badge
-                        variant={analysis.isValid ? "default" : "destructive"}
-                      >
-                        {analysis.isValid ? messages.valid : messages.invalid}
+                      {showCompleteStatus ? (
+                        <Badge
+                          variant={analysis.isValid ? "default" : "destructive"}
+                        >
+                          {analysis.isValid ? messages.valid : messages.invalid}
+                        </Badge>
+                      ) : (
+                        <Badge variant="secondary">{analysis.length}/18</Badge>
+                      )}
+                      <Badge variant={hasKnownRegion ? "secondary" : "outline"}>
+                        {hasKnownRegion ? messages.known : messages.unknown}
                       </Badge>
-                      <Badge
-                        variant={
-                          analysis.isRegionValid ? "secondary" : "outline"
-                        }
-                      >
-                        {analysis.isRegionValid
-                          ? messages.known
-                          : messages.unknown}
-                      </Badge>
-                      <Badge
-                        variant={
-                          analysis.isChecksumValid ? "default" : "destructive"
-                        }
-                      >
-                        {analysis.isChecksumValid
-                          ? messages.pass
-                          : messages.fail}
-                      </Badge>
+                      {showCompleteStatus ? (
+                        <Badge
+                          variant={
+                            analysis.isChecksumValid ? "default" : "destructive"
+                          }
+                        >
+                          {analysis.isChecksumValid
+                            ? messages.pass
+                            : messages.fail}
+                        </Badge>
+                      ) : null}
                     </div>
                   </div>
 

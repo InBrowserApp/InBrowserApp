@@ -47,6 +47,11 @@ function PRCIdInputCard({
   feedbackMessage,
   onResidentIdChange,
 }: PRCIdInputCardProps) {
+  const showAlert =
+    validation !== null &&
+    feedbackMessage !== null &&
+    (validation.isValid || validation.hasFormatIssue || !validation.isPartial)
+
   return (
     <ToolPanelCard>
       <CardHeader className="border-b">
@@ -74,7 +79,12 @@ function PRCIdInputCard({
                 autoCapitalize="characters"
                 spellCheck={false}
                 value={residentId}
-                aria-invalid={validation ? !validation.isValid : undefined}
+                aria-invalid={
+                  validation &&
+                  (validation.hasFormatIssue || !validation.isPartial)
+                    ? !validation.isValid
+                    : undefined
+                }
                 placeholder={messages.placeholder}
                 className="font-mono text-base"
                 onChange={(event) => {
@@ -85,7 +95,7 @@ function PRCIdInputCard({
           </FieldContent>
         </Field>
 
-        {validation && feedbackMessage ? (
+        {showAlert ? (
           <div aria-live="polite">
             {validation.isValid ? (
               <Alert>

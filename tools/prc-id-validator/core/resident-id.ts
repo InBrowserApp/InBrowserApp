@@ -28,6 +28,13 @@ type ResidentIdValidationResult = Readonly<{
   actualCheckDigit: string | null
 }>
 
+type ResidentIdAnalysisResult = Readonly<
+  ResidentIdValidationResult & {
+    hasFormatIssue: boolean
+    isPartial: boolean
+  }
+>
+
 type BirthDateParseResult = Readonly<{
   date: Date | null
   text: string | null
@@ -137,6 +144,97 @@ function parseBirthDate(value: string, now: Date): BirthDateParseResult {
   }
 }
 
+function resolveRegion(prefixDigits: string) {
+  const provinceCode =
+    prefixDigits.length >= 2 ? `${prefixDigits.slice(0, 2)}0000` : null
+  const cityCode =
+    prefixDigits.length >= 4 ? `${prefixDigits.slice(0, 4)}00` : null
+  const areaCode = prefixDigits.length >= 6 ? prefixDigits.slice(0, 6) : null
+
+  return {
+    regionCode: areaCode,
+    provinceCode,
+    cityCode,
+    areaCode,
+    provinceName: provinceCode
+      ? (ADMIN_REGION_CODES[provinceCode] ?? null)
+      : null,
+    cityName: cityCode ? (ADMIN_REGION_CODES[cityCode] ?? null) : null,
+    areaName: areaCode ? (ADMIN_REGION_CODES[areaCode] ?? null) : null,
+  }
+}
+
+function analyzeResidentId(
+  input: string,
+  now: Date = new Date()
+): ResidentIdAnalysisResult {
+  const normalized = normalizeResidentId(input)
+  const length = normalized.length
+  const digitPrefix = normalized.match(/^\d+/)?.[0] ?? ""
+  const hasFormatIssue =
+    /[^0-9X]/.test(normalized) ||
+    (normalized.includes("X") && normalized.indexOf("X") !== 17)
+  const isPartial = length < 18 && !hasFormatIssue
+  const isLengthValid = length === 18
+  const isFormatValid = isLengthValid && RESIDENT_ID_FORMAT.test(normalized)
+
+  const region = resolveRegion(digitPrefix)
+  const isRegionValid = isFormatValid && region.areaName !== null
+
+  const birthValue = digitPrefix.length >= 14 ? digitPrefix.slice(6, 14) : ""
+  const birthInfo = parseBirthDate(birthValue, now)
+  const isBirthdateValid = isFormatValid && birthInfo.isValid
+
+  const sequenceCode =
+    digitPrefix.length >= 17 ? digitPrefix.slice(14, 17) : null
+  let gender: ResidentIdGender = "unknown"
+
+  if (sequenceCode?.length === 3) {
+    gender = Number(sequenceCode[2]) % 2 === 0 ? "female" : "male"
+  }
+
+  const expectedCheckDigit =
+    digitPrefix.length >= 17
+      ? getResidentIdCheckDigit(digitPrefix.slice(0, 17))
+      : null
+  const actualCheckDigit =
+    length >= 18 && /^[\dX]$/.test(normalized[17] ?? "")
+      ? normalized[17]!
+      : null
+  const isChecksumValid =
+    isFormatValid &&
+    expectedCheckDigit !== null &&
+    actualCheckDigit === expectedCheckDigit
+  const isValid =
+    isLengthValid &&
+    isFormatValid &&
+    isRegionValid &&
+    isBirthdateValid &&
+    isChecksumValid
+
+  return {
+    input,
+    normalized,
+    length,
+    isLengthValid,
+    isFormatValid,
+    isRegionValid,
+    isBirthdateValid,
+    isChecksumValid,
+    isValid,
+    ...region,
+    birthDate: birthInfo.date,
+    birthDateText: birthInfo.text,
+    age: birthInfo.age,
+    gender,
+    sequenceCode,
+    expectedCheckDigit,
+    actualCheckDigit,
+    hasFormatIssue,
+    isPartial,
+  }
+}
+
 function validateResidentId(
   input: string,
   now: Date = new Date()
@@ -210,8 +308,10 @@ function validateResidentId(
 }
 
 export {
+  analyzeResidentId,
   getResidentIdCheckDigit,
   normalizeResidentId,
   validateResidentId,
+  type ResidentIdAnalysisResult,
   type ResidentIdValidationResult,
 }
