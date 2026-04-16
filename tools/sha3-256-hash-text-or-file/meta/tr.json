@@ -1,0 +1,4 @@
+{
+  "name": "SHA3-256 (FIPS 202) Hash Metin veya Dosya",
+  "description": "Metin girişi veya dosya yükleme için SHA3-256 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın"
+}
