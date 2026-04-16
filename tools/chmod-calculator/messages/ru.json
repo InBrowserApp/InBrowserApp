@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "presetsTitle": "Общие пресеты",
+  "executablePresetLabel": "Исполняемый",
+  "readOnlyPresetLabel": "Только чтение",
+  "fullAccessPresetLabel": "Полный доступ",
+  "ownerOnlyPresetLabel": "Только владелец",
+  "privateFilePresetLabel": "Приватный файл",
+  "sharedDirPresetLabel": "Общий каталог",
+  "numericPermissionLabel": "Числовое разрешение",
+  "numericPermissionPlaceholder": "напр., 755",
+  "symbolicPermissionLabel": "Символьное разрешение",
+  "symbolicPermissionPlaceholder": "напр., rwxr-xr-x",
+  "permissionMatrixLabel": "Матрица разрешений",
+  "readLabel": "Чтение",
+  "writeLabel": "Запись",
+  "executeLabel": "Выполнение",
+  "ownerLabel": "Владелец",
+  "groupLabel": "Группа",
+  "othersLabel": "Другие",
+  "chmodCommandLabel": "Команда Chmod"
+}

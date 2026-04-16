@@ -1,0 +1,4 @@
+{
+  "name": "Chmod 计算器",
+  "description": "在数字 (755) 和符号 (rwxr-xr-x) 表示法之间转换 Unix 文件权限"
+}

@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "presetsTitle": "Yaygın Ön Ayarlar",
+  "executablePresetLabel": "Çalıştırılabilir",
+  "readOnlyPresetLabel": "Salt Okunur",
+  "fullAccessPresetLabel": "Tam Erişim",
+  "ownerOnlyPresetLabel": "Yalnızca Sahip",
+  "privateFilePresetLabel": "Özel Dosya",
+  "sharedDirPresetLabel": "Paylaşılan Dizin",
+  "numericPermissionLabel": "Sayısal İzin",
+  "numericPermissionPlaceholder": "örn., 755",
+  "symbolicPermissionLabel": "Sembolik İzin",
+  "symbolicPermissionPlaceholder": "örn., rwxr-xr-x",
+  "permissionMatrixLabel": "İzin Matrisi",
+  "readLabel": "Okuma",
+  "writeLabel": "Yazma",
+  "executeLabel": "Çalıştırma",
+  "ownerLabel": "Sahip",
+  "groupLabel": "Grup",
+  "othersLabel": "Diğerleri",
+  "chmodCommandLabel": "Chmod Komutu"
+}

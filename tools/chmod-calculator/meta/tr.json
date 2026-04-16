@@ -1,0 +1,4 @@
+{
+  "name": "Chmod Hesaplayıcı",
+  "description": "Unix dosya izinlerini sayısal (755) ve sembolik (rwxr-xr-x) gösterim arasında dönüştür"
+}

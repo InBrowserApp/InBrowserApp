@@ -1,0 +1,3 @@
+## Que es chmod?
+
+chmod (change mode) es un comando de Unix/Linux utilizado para cambiar los permisos de archivos y directorios. Los permisos se representan en dos formatos: notacion numerica (octal) como 755, o notacion simbolica como rwxr-xr-x. Cada digito en el formato numerico representa los permisos para el propietario, grupo y otros respectivamente, donde 4 = lectura (r), 2 = escritura (w) y 1 = ejecucion (x). Estos valores se suman: 7 (4+2+1) significa acceso completo, 5 (4+1) significa lectura y ejecucion, 4 significa solo lectura. Por ejemplo, `chmod 755 script.sh` otorga al propietario permisos completos mientras permite a otros leer y ejecutar el archivo.

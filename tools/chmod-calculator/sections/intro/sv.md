@@ -1,0 +1,3 @@
+## Vad ar chmod?
+
+chmod (change mode) ar ett Unix/Linux-kommando som anvands for att andra fil- och katalogbehorigheter. Behorigheter representeras i tva format: numerisk (oktal) notation som 755, eller symbolisk notation som rwxr-xr-x. Varje siffra i det numeriska formatet representerar behorigheter for agare, grupp och andra respektive, dar 4 = lasa (r), 2 = skriva (w) och 1 = kora (x). Dessa varden laggs ihop: 7 (4+2+1) innebar full atkomst, 5 (4+1) innebar lasa och kora, 4 innebar endast lasa. Till exempel ger `chmod 755 script.sh` agaren fulla behorigheter medan andra far lasa och kora filen.

@@ -1,0 +1,3 @@
+## chmod nedir?
+
+chmod (change mode), dosya ve dizin izinlerini degistirmek icin kullanilan bir Unix/Linux komutudur. Izinler iki formatta temsil edilir: 755 gibi sayisal (sekizlik) gosterim veya rwxr-xr-x gibi sembolik gosterim. Sayisal formattaki her rakam sirasiyla sahip, grup ve diger kullanicilar icin izinleri temsil eder; burada 4 = okuma (r), 2 = yazma (w) ve 1 = calistirma (x). Bu degerler toplanir: 7 (4+2+1) tam erisim, 5 (4+1) okuma ve calistirma, 4 yalnizca okuma anlamina gelir. Ornegin, `chmod 755 script.sh` sahibine tam izinler verirken digerlerinin dosyayi okumasina ve calistirmasina izin verir.

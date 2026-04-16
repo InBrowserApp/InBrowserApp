@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "presetsTitle": "Preset Umum",
+  "executablePresetLabel": "Dapat dieksekusi",
+  "readOnlyPresetLabel": "Hanya baca",
+  "fullAccessPresetLabel": "Akses penuh",
+  "ownerOnlyPresetLabel": "Hanya pemilik",
+  "privateFilePresetLabel": "File pribadi",
+  "sharedDirPresetLabel": "Direktori bersama",
+  "numericPermissionLabel": "Izin Numerik",
+  "numericPermissionPlaceholder": "mis., 755",
+  "symbolicPermissionLabel": "Izin Simbolik",
+  "symbolicPermissionPlaceholder": "mis., rwxr-xr-x",
+  "permissionMatrixLabel": "Matriks Izin",
+  "readLabel": "Baca",
+  "writeLabel": "Tulis",
+  "executeLabel": "Eksekusi",
+  "ownerLabel": "Pemilik",
+  "groupLabel": "Grup",
+  "othersLabel": "Lainnya",
+  "chmodCommandLabel": "Perintah Chmod"
+}

@@ -1,0 +1,3 @@
+## Wat is chmod?
+
+chmod (change mode) is een Unix/Linux-opdracht die wordt gebruikt om bestands- en maprechten te wijzigen. Rechten worden weergegeven in twee formaten: numerieke (octale) notatie zoals 755, of symbolische notatie zoals rwxr-xr-x. Elk cijfer in het numerieke formaat vertegenwoordigt de rechten voor eigenaar, groep en anderen respectievelijk, waarbij 4 = lezen (r), 2 = schrijven (w) en 1 = uitvoeren (x). Deze waarden worden opgeteld: 7 (4+2+1) betekent volledige toegang, 5 (4+1) betekent lezen en uitvoeren, 4 betekent alleen-lezen. Bijvoorbeeld, `chmod 755 script.sh` geeft de eigenaar volledige rechten terwijl anderen het bestand mogen lezen en uitvoeren.

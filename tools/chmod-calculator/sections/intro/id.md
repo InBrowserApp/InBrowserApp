@@ -1,0 +1,3 @@
+## Apa itu chmod?
+
+chmod (change mode) adalah perintah Unix/Linux yang digunakan untuk mengubah izin file dan direktori. Izin direpresentasikan dalam dua format: notasi numerik (oktal) seperti 755, atau notasi simbolik seperti rwxr-xr-x. Setiap digit dalam format numerik mewakili izin untuk pemilik, grup, dan lainnya masing-masing, di mana 4 = baca (r), 2 = tulis (w), dan 1 = eksekusi (x). Nilai-nilai ini dijumlahkan: 7 (4+2+1) berarti akses penuh, 5 (4+1) berarti baca dan eksekusi, 4 berarti hanya baca. Misalnya, `chmod 755 script.sh` memberikan pemilik izin penuh sementara mengizinkan yang lain untuk membaca dan mengeksekusi file.

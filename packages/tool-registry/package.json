@@ -23,6 +23,7 @@
     "@tool/blake2s-hash-text-or-file": "workspace:*",
     "@tool/blake3-hash-text-or-file": "workspace:*",
     "@tool/case-converter": "workspace:*",
+    "@tool/chmod-calculator": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",

@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "presetsTitle": "Veelgebruikte presets",
+  "executablePresetLabel": "Uitvoerbaar",
+  "readOnlyPresetLabel": "Alleen-lezen",
+  "fullAccessPresetLabel": "Volledige toegang",
+  "ownerOnlyPresetLabel": "Alleen eigenaar",
+  "privateFilePresetLabel": "Privébestand",
+  "sharedDirPresetLabel": "Gedeelde map",
+  "numericPermissionLabel": "Numerieke machtiging",
+  "numericPermissionPlaceholder": "bijv. 755",
+  "symbolicPermissionLabel": "Symbolische machtiging",
+  "symbolicPermissionPlaceholder": "bijv. rwxr-xr-x",
+  "permissionMatrixLabel": "Machtigingsmatrix",
+  "readLabel": "Lezen",
+  "writeLabel": "Schrijven",
+  "executeLabel": "Uitvoeren",
+  "ownerLabel": "Eigenaar",
+  "groupLabel": "Groep",
+  "othersLabel": "Anderen",
+  "chmodCommandLabel": "Chmod-opdracht"
+}
