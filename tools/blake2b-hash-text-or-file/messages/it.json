@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Testo semplice",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
+  "importFromFileLabel": "Importa da file",
+  "hashResultLabel": "Risultato Hash",
+  "hashResultDescription": "Risultato hash per l'input di testo corrente.",
+  "hexLabel": "Esadecimale",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimale",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "configurationLabel": "Configurazione BLAKE2b",
+  "outputLengthLabel": "Lunghezza di Output",
+  "keyLabel": "Chiave BLAKE2 (Base64)",
+  "keyPlaceholder": "Chiave opzionale per hash con chiave (codificata in Base64)",
+  "invalidBase64Title": "Il valore Base64 non è ancora valido.",
+  "invalidBase64Description": "Verifica la presenza di padding mancante, caratteri inattesi o dati incollati parzialmente."
+}

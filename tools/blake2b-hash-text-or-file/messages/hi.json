@@ -1,0 +1,20 @@
+{
+  "inputLabel": "इनपुट",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित किसी भी UTF-8 टेक्स्ट को पेस्ट करें या टाइप करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hashResultLabel": "हैश परिणाम",
+  "hashResultDescription": "वर्तमान टेक्स्ट इनपुट का हैश परिणाम।",
+  "hexLabel": "हेक्साडेसिमल",
+  "base64Label": "Base64",
+  "decimalLabel": "दशमलव",
+  "binaryLabel": "बाइनरी",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "configurationLabel": "BLAKE2b कॉन्फ़िगरेशन",
+  "outputLengthLabel": "आउटपुट लंबाई",
+  "keyLabel": "BLAKE2 की (Base64)",
+  "keyPlaceholder": "की हैशिंग के लिए वैकल्पिक की (Base64 एन्कोडेड)",
+  "invalidBase64Title": "Base64 मान अभी मान्य नहीं है।",
+  "invalidBase64Description": "गुम पैडिंग, अप्रत्याशित वर्ण, या आंशिक रूप से पेस्ट किए गए डेटा की जाँच करें।"
+}

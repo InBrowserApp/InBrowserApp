@@ -44,6 +44,7 @@ catalog:
   ajv-formats: ^3.0.1
   astro: ^5.17.1
   bip39: ^3.1.0
+  blakejs: ^1.2.1
   buffer: ^6.0.3
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1

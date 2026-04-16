@@ -81,6 +81,9 @@ catalogs:
     bip39:
       specifier: ^3.1.0
       version: 3.1.0
+    blakejs:
+      specifier: ^1.2.1
+      version: 1.2.1
     buffer:
       specifier: ^6.0.3
       version: 6.0.3
@@ -321,6 +324,9 @@ importers:
       '@tool/bip39-mnemonic-generator':
         specifier: workspace:*
         version: link:../../tools/bip39-mnemonic-generator
+      '@tool/blake2b-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/blake2b-hash-text-or-file
       '@tool/case-converter':
         specifier: workspace:*
         version: link:../../tools/case-converter
@@ -805,6 +811,34 @@ importers:
       buffer:
         specifier: 'catalog:'
         version: 6.0.3
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/blake2b-hash-text-or-file:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      blakejs:
+        specifier: 'catalog:'
+        version: 1.2.1
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -5762,6 +5796,9 @@ packages:
 
   blake3-wasm@2.1.5:
     resolution: {integrity: sha512-F1+K8EbfOZE49dtoPtmxUQrpXaBIl3ICvasLh+nJta0xkz+9kF/7uet9fLnwKqhDrmj6g+6K3Tw9yQPUg2ka5g==}
+
+  blakejs@1.2.1:
+    resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==}
 
   body-parser@2.2.2:
     resolution: {integrity: sha512-oP5VkATKlNwcgvxi0vM0p/D3n2C3EReYVX+DNYs5TjZFn/oQt2j+4sVJtSMr18pdRr8wjTcBl6LoV+FUwzPmNA==}
@@ -11436,6 +11473,8 @@ snapshots:
       '@noble/hashes': 1.8.0
 
   blake3-wasm@2.1.5: {}
+
+  blakejs@1.2.1: {}
 
   body-parser@2.2.2:
     dependencies:

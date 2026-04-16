@@ -15,6 +15,7 @@
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
+    "@tool/blake2b-hash-text-or-file": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
