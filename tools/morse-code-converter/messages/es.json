@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Resultado en vivo",
+  "resultDescription": "Convierte texto a código Morse y viceversa con soporte de reproducción de audio",
+  "textLabel": "Texto",
+  "morseCodeLabel": "Código Morse",
+  "textPlaceholder": "Ingrese texto para convertir a código Morse",
+  "morsePlaceholder": "Ingrese código Morse (puntos y rayas, / para separar palabras)",
+  "validLabel": "Código Morse válido",
+  "invalidLabel": "Código Morse inválido",
+  "invalidMorseCode": "Código Morse inválido",
+  "unsupportedTextMessage": "Solo se pueden codificar letras, dígitos, espacios y signos de puntuación comunes.",
+  "loadSample": "Cargar ejemplo",
+  "clearLabel": "Limpiar",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado",
+  "play": "Reproducir",
+  "stop": "Detener"
+}

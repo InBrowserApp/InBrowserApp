@@ -1,0 +1,18 @@
+{
+  "resultTitle": "लाइव परिणाम",
+  "resultDescription": "ऑडियो प्लेबैक के साथ टेक्स्ट को मोर्स कोड में बदलें और इसके विपरीत",
+  "textLabel": "टेक्स्ट",
+  "morseCodeLabel": "मोर्स कोड",
+  "textPlaceholder": "मोर्स कोड में बदलने के लिए टेक्स्ट दर्ज करें",
+  "morsePlaceholder": "मोर्स कोड दर्ज करें (डॉट और डैश, / शब्दों को अलग करने के लिए)",
+  "validLabel": "वैध मोर्स कोड",
+  "invalidLabel": "अवैध मोर्स कोड",
+  "invalidMorseCode": "अवैध मोर्स कोड",
+  "unsupportedTextMessage": "केवल अक्षर, अंक, स्पेस और सामान्य विराम चिह्न एन्कोड किए जा सकते हैं।",
+  "loadSample": "नमूना लोड करें",
+  "clearLabel": "साफ़ करें",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "play": "चलाएं",
+  "stop": "रोकें"
+}

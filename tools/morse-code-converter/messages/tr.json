@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Canlı sonuç",
+  "resultDescription": "Metni Mors koduna ve tersine ses desteğiyle dönüştürün",
+  "textLabel": "Metin",
+  "morseCodeLabel": "Mors Kodu",
+  "textPlaceholder": "Mors koduna dönüştürülecek metni girin",
+  "morsePlaceholder": "Mors kodu girin (nokta ve çizgiler, / kelime ayırıcı)",
+  "validLabel": "Geçerli Mors kodu",
+  "invalidLabel": "Geçersiz Mors kodu",
+  "invalidMorseCode": "Geçersiz Mors kodu",
+  "unsupportedTextMessage": "Yalnızca harfler, rakamlar, boşluklar ve yaygın noktalama işaretleri kodlanabilir.",
+  "loadSample": "Örneği yükle",
+  "clearLabel": "Temizle",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı",
+  "play": "Oynat",
+  "stop": "Durdur"
+}

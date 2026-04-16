@@ -3866,6 +3866,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "morse-code-converter",
+    language: "ar",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "de",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "en",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "es",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "fr",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "he",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "hi",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "id",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "it",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ja",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ko",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ms",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "nl",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "no",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "pl",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "pt",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ru",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "sv",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "th",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "tr",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "vi",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "nanoid-generator",
     language: "ar",
   },

@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Direktes Ergebnis",
+  "resultDescription": "Text in Morsecode umwandeln und umgekehrt mit Audiowiedergabe",
+  "textLabel": "Text",
+  "morseCodeLabel": "Morsecode",
+  "textPlaceholder": "Text eingeben, um in Morsecode zu konvertieren",
+  "morsePlaceholder": "Morsecode eingeben (Punkte und Striche, / für Worttrennung)",
+  "validLabel": "Gültiger Morsecode",
+  "invalidLabel": "Ungültiger Morsecode",
+  "invalidMorseCode": "Ungültiger Morsecode",
+  "unsupportedTextMessage": "Nur Buchstaben, Ziffern, Leerzeichen und gängige Satzzeichen können codiert werden.",
+  "loadSample": "Beispiel laden",
+  "clearLabel": "Leeren",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert",
+  "play": "Abspielen",
+  "stop": "Stopp"
+}

@@ -53,6 +53,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
+  "morse-code-converter": () => import("@tool/morse-code-converter/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

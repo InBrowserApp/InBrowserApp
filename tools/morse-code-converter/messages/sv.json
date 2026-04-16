@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Direktresultat",
+  "resultDescription": "Konvertera text till morsekod och vice versa med ljuduppspelning",
+  "textLabel": "Text",
+  "morseCodeLabel": "Morsekod",
+  "textPlaceholder": "Ange text att konvertera till morsekod",
+  "morsePlaceholder": "Ange morsekod (punkter och streck, / för ordavskiljare)",
+  "validLabel": "Giltig morsekod",
+  "invalidLabel": "Ogiltig morsekod",
+  "invalidMorseCode": "Ogiltig morsekod",
+  "unsupportedTextMessage": "Endast bokstäver, siffror, mellanslag och vanliga skiljetecken kan kodas.",
+  "loadSample": "Ladda exempel",
+  "clearLabel": "Rensa",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
+  "play": "Spela",
+  "stop": "Stopp"
+}

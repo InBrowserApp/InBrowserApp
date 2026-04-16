@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Risultato in tempo reale",
+  "resultDescription": "Converti testo in codice Morse e viceversa con supporto audio",
+  "textLabel": "Testo",
+  "morseCodeLabel": "Codice Morse",
+  "textPlaceholder": "Inserisci il testo da convertire in codice Morse",
+  "morsePlaceholder": "Inserisci il codice Morse (punti e linee, / per separare le parole)",
+  "validLabel": "Codice Morse valido",
+  "invalidLabel": "Codice Morse non valido",
+  "invalidMorseCode": "Codice Morse non valido",
+  "unsupportedTextMessage": "È possibile codificare solo lettere, numeri, spazi e segni di punteggiatura comuni.",
+  "loadSample": "Carica esempio",
+  "clearLabel": "Cancella",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato",
+  "play": "Riproduci",
+  "stop": "Ferma"
+}

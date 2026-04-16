@@ -1,0 +1,18 @@
+{
+  "resultTitle": "תוצאה חיה",
+  "resultDescription": "המר טקסט לקוד מורס ולהיפך עם תמיכה בהשמעת אודיו",
+  "textLabel": "טקסט",
+  "morseCodeLabel": "קוד מורס",
+  "textPlaceholder": "הזן טקסט להמרה לקוד מורס",
+  "morsePlaceholder": "הזן קוד מורס (נקודות וקווים, / להפרדת מילים)",
+  "validLabel": "קוד מורס תקין",
+  "invalidLabel": "קוד מורס לא תקין",
+  "invalidMorseCode": "קוד מורס לא תקין",
+  "unsupportedTextMessage": "אפשר לקודד רק אותיות, ספרות, רווחים וסימני פיסוק נפוצים.",
+  "loadSample": "טען דוגמה",
+  "clearLabel": "נקה",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק",
+  "play": "נגן",
+  "stop": "עצור"
+}
