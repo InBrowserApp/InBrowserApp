@@ -170,7 +170,8 @@ function analyzeResidentId(
 ): ResidentIdAnalysisResult {
   const normalized = normalizeResidentId(input)
   const length = normalized.length
-  const digitPrefix = normalized.match(/^\d+/)?.[0] ?? ""
+  const digitPrefixMatch = normalized.match(/^\d+/)
+  const digitPrefix = digitPrefixMatch ? digitPrefixMatch[0] : ""
   const hasFormatIssue =
     /[^0-9X]/.test(normalized) ||
     (normalized.includes("X") && normalized.indexOf("X") !== 17)
@@ -197,10 +198,9 @@ function analyzeResidentId(
     digitPrefix.length >= 17
       ? getResidentIdCheckDigit(digitPrefix.slice(0, 17))
       : null
+  const finalCharacter = length >= 18 ? normalized[17]! : null
   const actualCheckDigit =
-    length >= 18 && /^[\dX]$/.test(normalized[17] ?? "")
-      ? normalized[17]!
-      : null
+    finalCharacter && /^[\dX]$/.test(finalCharacter) ? finalCharacter : null
   const isChecksumValid =
     isFormatValid &&
     expectedCheckDigit !== null &&

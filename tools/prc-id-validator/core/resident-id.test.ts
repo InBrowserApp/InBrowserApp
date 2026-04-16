@@ -158,6 +158,15 @@ describe("analyzeResidentId", () => {
     expect(result.areaCode).toBeNull()
   })
 
+  it("keeps region fields empty when the input has no digit prefix", () => {
+    const result = analyzeResidentId("X", NOW)
+
+    expect(result.hasFormatIssue).toBe(true)
+    expect(result.provinceCode).toBeNull()
+    expect(result.provinceName).toBeNull()
+    expect(result.regionCode).toBeNull()
+  })
+
   it("derives checksum and decoded details before the last check digit is entered", () => {
     const result = analyzeResidentId("11010119900101001", NOW)
 
@@ -168,6 +177,45 @@ describe("analyzeResidentId", () => {
     expect(result.sequenceCode).toBe("001")
     expect(result.expectedCheckDigit).toBe("5")
     expect(result.actualCheckDigit).toBeNull()
+  })
+
+  it("returns a final valid analysis for a complete resident id", () => {
+    const result = analyzeResidentId(buildResidentId("11010119900101002"), NOW)
+
+    expect(result.isPartial).toBe(false)
+    expect(result.isValid).toBe(true)
+    expect(result.isRegionValid).toBe(true)
+    expect(result.isBirthdateValid).toBe(true)
+    expect(result.isChecksumValid).toBe(true)
+    expect(result.gender).toBe("female")
+    expect(result.actualCheckDigit).toBe("3")
+  })
+
+  it("flags complete resident ids with unknown regions", () => {
+    const result = analyzeResidentId(buildResidentId("99010119900101001"), NOW)
+
+    expect(result.isPartial).toBe(false)
+    expect(result.isRegionValid).toBe(false)
+    expect(result.provinceName).toBeNull()
+    expect(result.areaName).toBeNull()
+  })
+
+  it("flags complete resident ids with impossible birthdates", () => {
+    const result = analyzeResidentId(buildResidentId("11010119901301001"), NOW)
+
+    expect(result.isPartial).toBe(false)
+    expect(result.isBirthdateValid).toBe(false)
+    expect(result.birthDate).toBeNull()
+    expect(result.birthDateText).toBeNull()
+  })
+
+  it("treats invalid final characters as format issues", () => {
+    const result = analyzeResidentId("11010119900101001A", NOW)
+
+    expect(result.isPartial).toBe(false)
+    expect(result.hasFormatIssue).toBe(true)
+    expect(result.actualCheckDigit).toBeNull()
+    expect(result.isValid).toBe(false)
   })
 
   it("flags misplaced X characters immediately while preserving known prefix info", () => {
