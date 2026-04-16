@@ -3774,6 +3774,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "lorem-ipsum-generator",
+    language: "ar",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "de",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "en",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "es",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "fr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "he",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "hi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "id",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "it",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ja",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ko",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ms",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "nl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "no",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pt",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ru",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "sv",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "th",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "tr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "vi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ar",
   },

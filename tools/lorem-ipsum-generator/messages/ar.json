@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "الخيارات",
+  "optionsDescription": "اختر شكل الإخراج ولغة المحتوى والكمية.",
+  "wordsLabel": "كلمات",
+  "sentencesLabel": "جمل",
+  "paragraphsLabel": "فقرات",
+  "countLabel": "العدد",
+  "localeLabel": "اللغة",
+  "resultsTitle": "النتائج",
+  "resultsDescription": "راجع النتيجة أو انسخها أو نزّل الدفعة المُنشأة.",
+  "resultsPlaceholder": "سيظهر النص المُنشأ هنا...",
+  "copyResultsLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل",
+  "regenerateLabel": "إعادة التوليد"
+}

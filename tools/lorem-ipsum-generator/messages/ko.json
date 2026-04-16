@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "옵션",
+  "optionsDescription": "출력 형태, 콘텐츠 언어, 수량을 선택하세요.",
+  "wordsLabel": "단어",
+  "sentencesLabel": "문장",
+  "paragraphsLabel": "단락",
+  "countLabel": "개수",
+  "localeLabel": "언어",
+  "resultsTitle": "결과",
+  "resultsDescription": "생성된 결과를 확인하고 복사하거나 다운로드하세요.",
+  "resultsPlaceholder": "생성된 텍스트가 여기에 표시됩니다...",
+  "copyResultsLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "downloadResultsLabel": "다운로드",
+  "regenerateLabel": "다시 생성"
+}

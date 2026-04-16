@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "Seçenekler",
+  "optionsDescription": "Çıkış biçimini, içerik dilini ve miktarı seçin.",
+  "wordsLabel": "Kelimeler",
+  "sentencesLabel": "Cümleler",
+  "paragraphsLabel": "Paragraflar",
+  "countLabel": "Sayı",
+  "localeLabel": "Dil",
+  "resultsTitle": "Sonuçlar",
+  "resultsDescription": "Üretilen partiyi inceleyin, kopyalayın veya indirin.",
+  "resultsPlaceholder": "Oluşturulan metin burada görünecek...",
+  "copyResultsLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "İndir",
+  "regenerateLabel": "Yeniden üret"
+}

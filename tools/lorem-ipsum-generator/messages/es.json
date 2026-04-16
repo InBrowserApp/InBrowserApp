@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "Opciones",
+  "optionsDescription": "Elige el formato de salida, el idioma del contenido y la cantidad.",
+  "wordsLabel": "Palabras",
+  "sentencesLabel": "Oraciones",
+  "paragraphsLabel": "Párrafos",
+  "countLabel": "Cantidad",
+  "localeLabel": "Idioma",
+  "resultsTitle": "Resultados",
+  "resultsDescription": "Revisa, copia o descarga el lote generado.",
+  "resultsPlaceholder": "El texto generado aparecerá aquí...",
+  "copyResultsLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadResultsLabel": "Descargar",
+  "regenerateLabel": "Regenerar"
+}
