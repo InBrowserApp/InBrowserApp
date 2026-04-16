@@ -75,6 +75,7 @@
     "@tool/sha3-384-hash-text-or-file": "workspace:*",
     "@tool/sha3-512-hash-text-or-file": "workspace:*",
     "@tool/sha384-hash-text-or-file": "workspace:*",
+    "@tool/sha512-256-hash-text-or-file": "workspace:*",
     "@tool/sha512-hash-text-or-file": "workspace:*",
     "@tool/slug-generator": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
