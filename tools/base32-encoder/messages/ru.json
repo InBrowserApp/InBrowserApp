@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Ввод",
+  "inputPlaceholder": "Введите текст для кодирования...",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите любой текст в UTF-8, включая эмодзи и нелатинские символы.",
+  "importFromFileLabel": "Импорт из файла",
+  "encodedOutputLabel": "Кодировка Base32",
+  "encodedOutputEmptyDescription": "Вывод Base32 появится здесь...",
+  "downloadFileLabel": "Скачать Base32",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "fileReadFailedTitle": "Не удалось прочитать файл"
+}

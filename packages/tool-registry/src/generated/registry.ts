@@ -766,6 +766,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "base32-encoder",
+    category: "web",
+    icon: "binary",
+    tags: ["base32", "encode", "encoder", "binary", "text", "file", "rfc4648"],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base32",
+        description:
+          "ترميز النص أو الملفات إلى Base32 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base32-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base32 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base32 Encoder",
+        description:
+          "Encode text or files to Base32 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base32",
+        description:
+          "Codifica texto o archivos a Base32 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base32",
+        description:
+          "Encode du texte ou des fichiers en Base32 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base32",
+        description:
+          "מקודד טקסט או קבצים ל-Base32 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base32 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base32 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base32",
+        description:
+          "Encode teks atau file ke Base32 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base32",
+        description:
+          "Codifica testo o file in Base32 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base32 エンコーダー",
+        description:
+          "テキストやファイルをBase32にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base32 인코더",
+        description:
+          "텍스트나 파일을 Base32로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base32",
+        description:
+          "Kod teks atau fail ke Base32 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base32-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base32 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base32-koder",
+        description:
+          "Kod tekst eller filer til Base32 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base32",
+        description:
+          "Koduj tekst lub pliki do Base32 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base32",
+        description:
+          "Codifica texto ou arquivos em Base32 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base32-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base32 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base32-kodare",
+        description:
+          "Koda text eller filer till Base32 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base32",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base32 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base32 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base32'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base32",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base32 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base32 编码器",
+        description:
+          "将文本或文件编码为 Base32，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base32 編碼器",
+        description:
+          "將文字或檔案編碼為 Base32，用於資料傳輸、儲存和 Web 開發。",
+      },
+    },
+  },
+  {
     slug: "base58-encoder",
     category: "crypto",
     icon: "binary",
@@ -5552,6 +5675,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "keccak-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "keccak",
+      "keccak-256",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Keccak للنص أو الملف",
+        description:
+          "إنشاء تجزئة Keccak لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "Keccak-Hash für Text oder Datei",
+        description:
+          "Generieren Sie Keccak-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "Keccak Hash Text or File",
+        description:
+          "Generate Keccak hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash Keccak de Texto o Archivo",
+        description:
+          "Genera hash Keccak para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash Keccak de Texte ou Fichier",
+        description:
+          "Générez un hash Keccak pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש Keccak טקסט או קובץ",
+        description:
+          "צור האש Keccak עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "Keccak हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Keccak हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Keccak Teks atau File",
+        description:
+          "Buat hash Keccak untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash Keccak di Testo o File",
+        description:
+          "Genera hash Keccak per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "Keccak ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのKeccakハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "Keccak 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 Keccak 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash Keccak Teks atau Fail",
+        description:
+          "Jana hash Keccak untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "Keccak-hash tekst of bestand",
+        description:
+          "Genereer Keccak-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "Keccak-hash tekst eller fil",
+        description:
+          "Generer Keccak-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash Keccak tekstu lub pliku",
+        description:
+          "Generuj hash Keccak dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash Keccak de Texto ou Arquivo",
+        description:
+          "Gere hash Keccak para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "Keccak-хеш текста или файла",
+        description:
+          "Генерируйте Keccak-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "Keccak-hash text eller fil",
+        description:
+          "Generera Keccak-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช Keccak ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช Keccak สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "Keccak Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için Keccak hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash Keccak văn bản hoặc tệp",
+        description:
+          "Tạo hash Keccak cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "Keccak 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Keccak 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "Keccak 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Keccak 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "ksuid-generator",
     category: "developer",
     icon: "lock",
@@ -8942,6 +9197,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "SHA-384 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-384 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha512",
+      "sha512-224",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-512/224 (FIPS 180-4) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-512/224 (FIPS 180-4) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-512/224 (FIPS 180-4)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-512/224 (FIPS 180-4)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-512/224 (FIPS 180-4) Hash Text or File",
+        description:
+          "Generate SHA-512/224 (FIPS 180-4) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texto o Archivo",
+        description:
+          "Genera hash SHA-512/224 (FIPS 180-4) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-512/224 (FIPS 180-4) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-512/224 (FIPS 180-4) טקסט או קובץ",
+        description:
+          "צור האש SHA-512/224 (FIPS 180-4) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-512/224 (FIPS 180-4) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-512/224 (FIPS 180-4) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-512/224 (FIPS 180-4) Teks atau File",
+        description:
+          "Buat hash SHA-512/224 (FIPS 180-4) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-512/224 (FIPS 180-4) di Testo o File",
+        description:
+          "Genera hash SHA-512/224 (FIPS 180-4) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-512/224 (FIPS 180-4) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-512/224 (FIPS 180-4)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-512/224 (FIPS 180-4) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-512/224 (FIPS 180-4) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-512/224 (FIPS 180-4) Teks atau Fail",
+        description:
+          "Jana hash SHA-512/224 (FIPS 180-4) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-512/224 (FIPS 180-4)-hash tekst of bestand",
+        description:
+          "Genereer SHA-512/224 (FIPS 180-4)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-512/224 (FIPS 180-4)-hash tekst eller fil",
+        description:
+          "Generer SHA-512/224 (FIPS 180-4)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-512/224 (FIPS 180-4) tekstu lub pliku",
+        description:
+          "Generuj hash SHA-512/224 (FIPS 180-4) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-512/224 (FIPS 180-4) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-512/224 (FIPS 180-4)-хеш текста или файла",
+        description:
+          "Генерируйте SHA-512/224 (FIPS 180-4)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-512/224 (FIPS 180-4)-hash text eller fil",
+        description:
+          "Generera SHA-512/224 (FIPS 180-4)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-512/224 (FIPS 180-4) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-512/224 (FIPS 180-4) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-512/224 (FIPS 180-4) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-512/224 (FIPS 180-4) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-512/224 (FIPS 180-4) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-512/224 (FIPS 180-4) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-512/224 (FIPS 180-4) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-512/224 (FIPS 180-4) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-512/224 (FIPS 180-4) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-512/224 (FIPS 180-4) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -12404,6 +12791,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Base32 解碼器",
         description:
           "將 Base32 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
+  "base32-encoder": {
+    slug: "base32-encoder",
+    category: "web",
+    icon: "binary",
+    tags: ["base32", "encode", "encoder", "binary", "text", "file", "rfc4648"],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base32",
+        description:
+          "ترميز النص أو الملفات إلى Base32 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base32-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base32 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base32 Encoder",
+        description:
+          "Encode text or files to Base32 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base32",
+        description:
+          "Codifica texto o archivos a Base32 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base32",
+        description:
+          "Encode du texte ou des fichiers en Base32 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base32",
+        description:
+          "מקודד טקסט או קבצים ל-Base32 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base32 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base32 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base32",
+        description:
+          "Encode teks atau file ke Base32 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base32",
+        description:
+          "Codifica testo o file in Base32 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base32 エンコーダー",
+        description:
+          "テキストやファイルをBase32にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base32 인코더",
+        description:
+          "텍스트나 파일을 Base32로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base32",
+        description:
+          "Kod teks atau fail ke Base32 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base32-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base32 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base32-koder",
+        description:
+          "Kod tekst eller filer til Base32 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base32",
+        description:
+          "Koduj tekst lub pliki do Base32 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base32",
+        description:
+          "Codifica texto ou arquivos em Base32 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base32-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base32 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base32-kodare",
+        description:
+          "Koda text eller filer till Base32 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base32",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base32 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base32 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base32'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base32",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base32 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base32 编码器",
+        description:
+          "将文本或文件编码为 Base32，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base32 編碼器",
+        description:
+          "將文字或檔案編碼為 Base32，用於資料傳輸、儲存和 Web 開發。",
       },
     },
   },
@@ -17193,6 +17703,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "keccak-hash-text-or-file": {
+    slug: "keccak-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "keccak",
+      "keccak-256",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Keccak للنص أو الملف",
+        description:
+          "إنشاء تجزئة Keccak لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "Keccak-Hash für Text oder Datei",
+        description:
+          "Generieren Sie Keccak-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "Keccak Hash Text or File",
+        description:
+          "Generate Keccak hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash Keccak de Texto o Archivo",
+        description:
+          "Genera hash Keccak para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash Keccak de Texte ou Fichier",
+        description:
+          "Générez un hash Keccak pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש Keccak טקסט או קובץ",
+        description:
+          "צור האש Keccak עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "Keccak हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Keccak हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Keccak Teks atau File",
+        description:
+          "Buat hash Keccak untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash Keccak di Testo o File",
+        description:
+          "Genera hash Keccak per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "Keccak ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのKeccakハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "Keccak 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 Keccak 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash Keccak Teks atau Fail",
+        description:
+          "Jana hash Keccak untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "Keccak-hash tekst of bestand",
+        description:
+          "Genereer Keccak-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "Keccak-hash tekst eller fil",
+        description:
+          "Generer Keccak-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash Keccak tekstu lub pliku",
+        description:
+          "Generuj hash Keccak dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash Keccak de Texto ou Arquivo",
+        description:
+          "Gere hash Keccak para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "Keccak-хеш текста или файла",
+        description:
+          "Генерируйте Keccak-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "Keccak-hash text eller fil",
+        description:
+          "Generera Keccak-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช Keccak ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช Keccak สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "Keccak Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için Keccak hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash Keccak văn bản hoặc tệp",
+        description:
+          "Tạo hash Keccak cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "Keccak 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Keccak 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "Keccak 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Keccak 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "ksuid-generator": {
     slug: "ksuid-generator",
     category: "developer",
@@ -20584,6 +21226,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SHA-384 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-384 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "sha512-224-hash-text-or-file": {
+    slug: "sha512-224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha512",
+      "sha512-224",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-512/224 (FIPS 180-4) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-512/224 (FIPS 180-4) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-512/224 (FIPS 180-4)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-512/224 (FIPS 180-4)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-512/224 (FIPS 180-4) Hash Text or File",
+        description:
+          "Generate SHA-512/224 (FIPS 180-4) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texto o Archivo",
+        description:
+          "Genera hash SHA-512/224 (FIPS 180-4) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-512/224 (FIPS 180-4) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-512/224 (FIPS 180-4) טקסט או קובץ",
+        description:
+          "צור האש SHA-512/224 (FIPS 180-4) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-512/224 (FIPS 180-4) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-512/224 (FIPS 180-4) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-512/224 (FIPS 180-4) Teks atau File",
+        description:
+          "Buat hash SHA-512/224 (FIPS 180-4) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-512/224 (FIPS 180-4) di Testo o File",
+        description:
+          "Genera hash SHA-512/224 (FIPS 180-4) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-512/224 (FIPS 180-4) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-512/224 (FIPS 180-4)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-512/224 (FIPS 180-4) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-512/224 (FIPS 180-4) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-512/224 (FIPS 180-4) Teks atau Fail",
+        description:
+          "Jana hash SHA-512/224 (FIPS 180-4) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-512/224 (FIPS 180-4)-hash tekst of bestand",
+        description:
+          "Genereer SHA-512/224 (FIPS 180-4)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-512/224 (FIPS 180-4)-hash tekst eller fil",
+        description:
+          "Generer SHA-512/224 (FIPS 180-4)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-512/224 (FIPS 180-4) tekstu lub pliku",
+        description:
+          "Generuj hash SHA-512/224 (FIPS 180-4) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-512/224 (FIPS 180-4) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-512/224 (FIPS 180-4) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-512/224 (FIPS 180-4)-хеш текста или файла",
+        description:
+          "Генерируйте SHA-512/224 (FIPS 180-4)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-512/224 (FIPS 180-4)-hash text eller fil",
+        description:
+          "Generera SHA-512/224 (FIPS 180-4)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-512/224 (FIPS 180-4) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-512/224 (FIPS 180-4) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-512/224 (FIPS 180-4) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-512/224 (FIPS 180-4) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-512/224 (FIPS 180-4) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-512/224 (FIPS 180-4) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-512/224 (FIPS 180-4) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-512/224 (FIPS 180-4) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-512/224 (FIPS 180-4) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-512/224 (FIPS 180-4) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },

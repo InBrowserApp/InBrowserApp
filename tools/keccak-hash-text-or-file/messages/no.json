@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "outputLengthLabel": "Utdatalengde",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat for gjeldende tekstinndata.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Binær",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

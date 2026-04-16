@@ -1,0 +1,4 @@
+{
+  "name": "Base32 編碼器",
+  "description": "將文字或檔案編碼為 Base32，用於資料傳輸、儲存和 Web 開發。"
+}

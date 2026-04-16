@@ -1,0 +1,13 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "encodedOutputLabel": "เข้ารหัส Base32",
+  "encodedOutputEmptyDescription": "ผลลัพธ์ Base32 จะปรากฏที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลด Base32",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ"
+}
