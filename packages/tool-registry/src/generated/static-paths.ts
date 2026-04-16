@@ -1014,6 +1014,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "blake2s-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },

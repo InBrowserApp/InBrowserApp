@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat for gjeldende tekstinndata.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Binær",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "configurationLabel": "BLAKE2s Konfigurasjon",
+  "outputLengthLabel": "Utdatalengde",
+  "keyLabel": "BLAKE2 Nøkkel (Base64)",
+  "keyPlaceholder": "Valgfri nøkkel for nøkkel-hashing (Base64-kodet)",
+  "invalidBase64Title": "Base64-verdien er ikke gyldig ennå.",
+  "invalidBase64Description": "Sjekk om det mangler utfylling, finnes uventede tegn eller om data er limt inn delvis."
+}

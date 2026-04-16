@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tempel atau ketik teks UTF-8 apa pun, termasuk emoji dan karakter non-Latin.",
+  "importFromFileLabel": "Impor dari file",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks saat ini.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Biner",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "configurationLabel": "Konfigurasi BLAKE2s",
+  "outputLengthLabel": "Panjang Output",
+  "keyLabel": "Kunci BLAKE2 (Base64)",
+  "keyPlaceholder": "Kunci opsional untuk hashing berkey (dikodekan Base64)",
+  "invalidBase64Title": "Nilai Base64 belum valid.",
+  "invalidBase64Description": "Periksa apakah ada padding yang hilang, karakter yang tidak terduga, atau data yang ditempel sebagian."
+}

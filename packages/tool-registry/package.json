@@ -18,6 +18,7 @@
     "@tool/bic-swift-validator": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/blake2b-hash-text-or-file": "workspace:*",
+    "@tool/blake2s-hash-text-or-file": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
