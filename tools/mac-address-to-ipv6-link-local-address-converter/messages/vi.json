@@ -1,0 +1,10 @@
+{
+  "macLabel": "Địa chỉ MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "Giao diện mạng",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "Địa chỉ MAC không hợp lệ",
+  "resultLabel": "Địa chỉ Local Link IPv6",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

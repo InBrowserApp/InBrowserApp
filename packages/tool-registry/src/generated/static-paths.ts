@@ -3682,6 +3682,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "de",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "en",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "es",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "he",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "id",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "it",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "no",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "th",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "md5-hash-text-or-file",
     language: "ar",
   },

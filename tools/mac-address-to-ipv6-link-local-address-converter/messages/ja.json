@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC アドレス",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "ネットワークインターフェース",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "無効な MAC アドレス",
+  "resultLabel": "IPv6 リンクローカルアドレス",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました"
+}

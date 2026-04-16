@@ -50,6 +50,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
+  "mac-address-to-ipv6-link-local-address-converter": () =>
+    import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
