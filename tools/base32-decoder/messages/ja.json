@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32 入力",
+  "base32InputPlaceholder": "Base32テキストを入力...",
+  "importFromFileLabel": "ファイルからインポート",
+  "decodedOutputLabel": "デコード結果",
+  "decodedOutputEmptyDescription": "デコードされたテキストがここに表示されます...",
+  "downloadFileLabel": "ファイルをダウンロード",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット",
+  "invalidBase32Title": "無効なBase32テキスト",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました",
+  "previewTruncatedLabel": "プレビューは切り詰められました"
+}

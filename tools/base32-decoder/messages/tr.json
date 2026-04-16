@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32 Girişi",
+  "base32InputPlaceholder": "Base32 metni girin...",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "decodedOutputLabel": "Çözümlenen Çıktı",
+  "decodedOutputEmptyDescription": "Çözümlenen metin burada görünecek...",
+  "downloadFileLabel": "Dosyayı indir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla",
+  "invalidBase32Title": "Geçersiz Base32 metni",
+  "fileReadFailedTitle": "Dosya okunamadı",
+  "previewTruncatedLabel": "Önizleme kısaltıldı"
+}

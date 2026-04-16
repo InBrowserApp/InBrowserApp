@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32-Eingabe",
+  "base32InputPlaceholder": "Base32-Text eingeben...",
+  "importFromFileLabel": "Aus Datei importieren",
+  "decodedOutputLabel": "Dekodierte Ausgabe",
+  "decodedOutputEmptyDescription": "Der decodierte Text erscheint hier...",
+  "downloadFileLabel": "Datei herunterladen",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen",
+  "invalidBase32Title": "Ungültiger Base32-Text",
+  "fileReadFailedTitle": "Datei konnte nicht gelesen werden",
+  "previewTruncatedLabel": "Vorschau gekürzt"
+}

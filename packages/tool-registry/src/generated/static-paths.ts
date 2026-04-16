@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base32-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-decoder",
+    language: "de",
+  },
+  {
+    slug: "base32-decoder",
+    language: "en",
+  },
+  {
+    slug: "base32-decoder",
+    language: "es",
+  },
+  {
+    slug: "base32-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "he",
+  },
+  {
+    slug: "base32-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "id",
+  },
+  {
+    slug: "base32-decoder",
+    language: "it",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "no",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-decoder",
+    language: "th",
+  },
+  {
+    slug: "base32-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base58-decoder",
     language: "ar",
   },
@@ -5979,6 +6071,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha3-256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
     language: "zh-TW",
   },
   {
