@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC Adresi",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "Ağ Arayüzü",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "Geçersiz MAC adresi",
+  "resultLabel": "IPv6 Bağlantı Yerel Adresi",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

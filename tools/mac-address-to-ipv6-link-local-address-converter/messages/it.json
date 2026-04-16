@@ -1,0 +1,10 @@
+{
+  "macLabel": "Indirizzo MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "Interfaccia di Rete",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "Indirizzo MAC non valido",
+  "resultLabel": "Indirizzo Locale di Collegamento IPv6",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
+}

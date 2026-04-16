@@ -1,0 +1,4 @@
+{
+  "name": "ממיר כתובת MAC לכתובת IPv6 מקומית לקישור",
+  "description": "ממיר כתובות MAC לכתובות IPv6 link local. הזן כל כתובת MAC כדי לקבל את כתובת ה-IPv6 link local המתאימה מיידית."
+}

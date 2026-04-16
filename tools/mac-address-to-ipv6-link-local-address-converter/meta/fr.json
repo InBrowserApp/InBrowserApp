@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur d'adresse MAC en adresse IPv6 de lien local",
+  "description": "Convertit les adresses MAC en adresses IPv6 link local. Saisissez n'importe quelle adresse MAC pour obtenir l'adresse IPv6 link local correspondante instantanément."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer for MAC-adresse til IPv6 link-local-adresse",
+  "description": "Konverterer MAC-adresser til IPv6 link local-adresser. Skriv inn hvilken som helst MAC-adresse for å få den tilsvarende IPv6 link local-adressen øyeblikkelig."
+}

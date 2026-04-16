@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC 地址",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "网络接口",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "无效的 MAC 地址",
+  "resultLabel": "IPv6 链路本地地址",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}
