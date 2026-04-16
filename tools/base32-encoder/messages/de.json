@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Eingabe",
+  "inputPlaceholder": "Text zum Kodieren eingeben...",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "encodedOutputLabel": "Base32-kodiert",
+  "encodedOutputEmptyDescription": "Base32-Ausgabe erscheint hier...",
+  "downloadFileLabel": "Base32 herunterladen",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "fileReadFailedTitle": "Datei konnte nicht gelesen werden"
+}
