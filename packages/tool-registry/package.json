@@ -99,6 +99,7 @@
     "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
+    "@tool/xxhash-xxh32-hash-text-or-file": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
     "@tool/yaml-to-toml-converter": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
