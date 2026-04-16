@@ -13,6 +13,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
+  "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
   "blake2b-hash-text-or-file": () =>
