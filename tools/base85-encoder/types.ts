@@ -65,7 +65,6 @@ type OutputCardMessages = Pick<
 
 export type {
   Base85EncoderClientProps,
-  Base85EncoderMessages,
   ConfigurationCardMessages,
   EncodingState,
   InputCardMessages,

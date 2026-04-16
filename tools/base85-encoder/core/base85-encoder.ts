@@ -100,7 +100,6 @@ function deriveEncodedFileName(
 }
 
 export {
-  BASE85_ALPHABETS,
   INVALID_BASE85_LENGTH,
   deriveEncodedFileName,
   encodeBase85,
