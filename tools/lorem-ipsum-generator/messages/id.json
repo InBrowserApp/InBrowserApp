@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Opsi",
+  "optionsDescription": "Pilih bentuk output, bahasa konten, dan jumlah.",
   "wordsLabel": "Kata",
   "sentencesLabel": "Kalimat",
   "paragraphsLabel": "Paragraf",
   "countLabel": "Jumlah",
   "localeLabel": "Bahasa",
   "resultsTitle": "Hasil",
+  "resultsDescription": "Tinjau, salin, atau unduh hasil yang sudah dibuat.",
   "resultsPlaceholder": "Teks yang dihasilkan akan muncul di sini...",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Tersalin",

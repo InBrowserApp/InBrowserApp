@@ -5,7 +5,11 @@ import {
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, RefreshCcw } from "@workspace/ui/icons"
 
@@ -30,6 +34,7 @@ function LoremIpsumResultsCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.resultsTitle}</CardTitle>
+        <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <Textarea

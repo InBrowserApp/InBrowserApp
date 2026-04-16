@@ -1,11 +1,13 @@
 {
   "optionsTitle": "オプション",
+  "optionsDescription": "出力形式、本文言語、件数を選びます。",
   "wordsLabel": "単語",
   "sentencesLabel": "文",
   "paragraphsLabel": "段落",
   "countLabel": "数量",
   "localeLabel": "言語",
   "resultsTitle": "結果",
+  "resultsDescription": "生成結果を確認し、コピーまたはダウンロードできます。",
   "resultsPlaceholder": "生成されたテキストがここに表示されます...",
   "copyResultsLabel": "結果をコピー",
   "copiedLabel": "コピーしました",

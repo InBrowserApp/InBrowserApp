@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Options",
+  "optionsDescription": "Choisissez le format de sortie, la langue du contenu et la quantité.",
   "wordsLabel": "Mots",
   "sentencesLabel": "Phrases",
   "paragraphsLabel": "Paragraphes",
   "countLabel": "Nombre",
   "localeLabel": "Langue",
   "resultsTitle": "Résultats",
+  "resultsDescription": "Vérifiez, copiez ou téléchargez le lot généré.",
   "resultsPlaceholder": "Le texte généré apparaîtra ici...",
   "copyResultsLabel": "Copier le résultat",
   "copiedLabel": "Copié",

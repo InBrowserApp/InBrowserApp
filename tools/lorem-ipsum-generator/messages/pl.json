@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Opcje",
+  "optionsDescription": "Wybierz format wyjścia, język treści i liczbę elementów.",
   "wordsLabel": "Słowa",
   "sentencesLabel": "Zdania",
   "paragraphsLabel": "Akapity",
   "countLabel": "Ilość",
   "localeLabel": "Język",
   "resultsTitle": "Wyniki",
+  "resultsDescription": "Sprawdź, skopiuj lub pobierz wygenerowaną partię.",
   "resultsPlaceholder": "Wygenerowany tekst pojawi się tutaj...",
   "copyResultsLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",

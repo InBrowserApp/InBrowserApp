@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Pilihan",
+  "optionsDescription": "Pilih bentuk output, bahasa kandungan dan jumlah.",
   "wordsLabel": "Perkataan",
   "sentencesLabel": "Ayat",
   "paragraphsLabel": "Perenggan",
   "countLabel": "Bilangan",
   "localeLabel": "Bahasa",
   "resultsTitle": "Keputusan",
+  "resultsDescription": "Semak, salin atau muat turun hasil yang dijana.",
   "resultsPlaceholder": "Teks yang dijana akan muncul di sini...",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Disalin",

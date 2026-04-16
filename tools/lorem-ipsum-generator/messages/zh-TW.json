@@ -1,11 +1,13 @@
 {
   "optionsTitle": "選項",
+  "optionsDescription": "選擇輸出形式、內容語言與數量。",
   "wordsLabel": "單詞",
   "sentencesLabel": "句子",
   "paragraphsLabel": "段落",
   "countLabel": "數量",
   "localeLabel": "語言",
   "resultsTitle": "結果",
+  "resultsDescription": "查看、複製或下載目前產生的內容。",
   "resultsPlaceholder": "產生的文字將顯示在這裡...",
   "copyResultsLabel": "複製結果",
   "copiedLabel": "已複製",

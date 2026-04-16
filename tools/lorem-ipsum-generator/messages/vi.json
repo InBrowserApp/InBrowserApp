@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Tùy chọn",
+  "optionsDescription": "Chọn dạng đầu ra, ngôn ngữ nội dung và số lượng.",
   "wordsLabel": "Từ",
   "sentencesLabel": "Câu",
   "paragraphsLabel": "Đoạn văn",
   "countLabel": "Số lượng",
   "localeLabel": "Ngôn ngữ",
   "resultsTitle": "Kết quả",
+  "resultsDescription": "Xem lại, sao chép hoặc tải xuống nội dung đã tạo.",
   "resultsPlaceholder": "Văn bản được tạo sẽ xuất hiện ở đây...",
   "copyResultsLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",

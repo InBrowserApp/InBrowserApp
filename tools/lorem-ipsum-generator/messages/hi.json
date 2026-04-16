@@ -1,11 +1,13 @@
 {
   "optionsTitle": "विकल्प",
+  "optionsDescription": "आउटपुट फ़ॉर्म, कंटेंट भाषा और मात्रा चुनें।",
   "wordsLabel": "शब्द",
   "sentencesLabel": "वाक्य",
   "paragraphsLabel": "पैराग्राफ",
   "countLabel": "गिनती",
   "localeLabel": "भाषा",
   "resultsTitle": "परिणाम",
+  "resultsDescription": "जनरेट किए गए परिणाम को देखें, कॉपी करें या डाउनलोड करें।",
   "resultsPlaceholder": "जनरेट किया गया टेक्स्ट यहां दिखाई देगा...",
   "copyResultsLabel": "परिणाम कॉपी करें",
   "copiedLabel": "कॉपी हो गया",

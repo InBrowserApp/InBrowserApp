@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Параметры",
+  "optionsDescription": "Выберите формат вывода, язык контента и количество.",
   "wordsLabel": "Слова",
   "sentencesLabel": "Предложения",
   "paragraphsLabel": "Абзацы",
   "countLabel": "Количество",
   "localeLabel": "Язык",
   "resultsTitle": "Результаты",
+  "resultsDescription": "Проверьте, скопируйте или скачайте сгенерированный блок.",
   "resultsPlaceholder": "Сгенерированный текст появится здесь...",
   "copyResultsLabel": "Копировать результат",
   "copiedLabel": "Скопировано",

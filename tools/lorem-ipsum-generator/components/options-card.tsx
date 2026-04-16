@@ -1,6 +1,7 @@
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -54,6 +55,7 @@ function LoremIpsumOptionsCard({
     <Card>
       <CardHeader className="border-b">
         <CardTitle>{messages.optionsTitle}</CardTitle>
+        <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
         <div className="grid gap-2">

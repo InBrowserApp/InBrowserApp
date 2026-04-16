@@ -1,11 +1,13 @@
 {
   "optionsTitle": "Opties",
+  "optionsDescription": "Kies uitvoervorm, inhoudstaal en hoeveelheid.",
   "wordsLabel": "Woorden",
   "sentencesLabel": "Zinnen",
   "paragraphsLabel": "Alinea's",
   "countLabel": "Aantal",
   "localeLabel": "Taal",
   "resultsTitle": "Resultaten",
+  "resultsDescription": "Bekijk, kopieer of download de gegenereerde batch.",
   "resultsPlaceholder": "Gegenereerde tekst verschijnt hier...",
   "copyResultsLabel": "Resultaat kopiëren",
   "copiedLabel": "Gekopieerd",
