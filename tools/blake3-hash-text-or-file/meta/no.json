@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE3-hash tekst eller fil",
+  "description": "Generer BLAKE3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål"
+}

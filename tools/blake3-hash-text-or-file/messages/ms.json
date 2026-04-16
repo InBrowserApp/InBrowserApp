@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks semasa.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Perpuluhan",
+  "binaryLabel": "Binari",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "configurationLabel": "Konfigurasi BLAKE3",
+  "outputLengthLabel": "Panjang Output",
+  "keyLabel": "Kunci BLAKE3 (Base64)",
+  "keyPlaceholder": "Kunci pilihan 32 bait untuk hashing berkunci (dikodkan Base64)",
+  "invalidBase64Title": "Nilai Base64 belum sah lagi.",
+  "invalidBase64Description": "Semak sama ada terdapat pelapik yang hilang, aksara yang tidak dijangka, atau data yang ditampal sebahagian."
+}
