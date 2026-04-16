@@ -1,3 +1,5 @@
+import "../blake3-wasm-url"
+
 import loadBlake3 from "blake3-wasm/browser-async"
 import blake3WasmUrl from "blake3-wasm/dist/wasm/web/blake3_js_bg.wasm?url"
 
