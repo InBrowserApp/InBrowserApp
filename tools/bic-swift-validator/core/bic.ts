@@ -45,9 +45,11 @@ function validateBIC(input: string): BICValidationResult {
   const isCountryCodeValid = countryCode
     ? /^[A-Z]{2}$/.test(countryCode)
     : false
-  const isCountryValid = isCountryCodeValid
-    ? ISO_COUNTRY_CODE_SET.has(countryCode ?? "")
-    : false
+  let isCountryValid = false
+
+  if (isCountryCodeValid) {
+    isCountryValid = ISO_COUNTRY_CODE_SET.has(countryCode!)
+  }
   const isLocationCodeValid = locationCode
     ? /^[A-Z0-9]{2}$/.test(locationCode)
     : false
