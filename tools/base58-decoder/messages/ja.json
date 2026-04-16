@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "オプション",
+  "alphabetLabel": "アルファベット",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Base58 入力",
+  "inputPlaceholder": "Base58テキストを入力...",
+  "importFromFileLabel": "ファイルから読み込む",
+  "decodedOutputTitle": "デコード結果",
+  "decodedOutputEmptyDescription": "デコードされたテキストがここに表示されます...",
+  "downloadFileLabel": "ファイルをダウンロード",
+  "previewTruncatedLabel": "プレビューは切り詰められました",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "サンプルをリセット",
+  "invalidBase58Title": "無効なBase58テキスト",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました"
+}

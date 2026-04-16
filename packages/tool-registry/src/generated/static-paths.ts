@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base58-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base58-decoder",
+    language: "de",
+  },
+  {
+    slug: "base58-decoder",
+    language: "en",
+  },
+  {
+    slug: "base58-decoder",
+    language: "es",
+  },
+  {
+    slug: "base58-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "he",
+  },
+  {
+    slug: "base58-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "id",
+  },
+  {
+    slug: "base58-decoder",
+    language: "it",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base58-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "no",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base58-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base58-decoder",
+    language: "th",
+  },
+  {
+    slug: "base58-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },

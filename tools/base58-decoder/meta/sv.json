@@ -1,0 +1,4 @@
+{
+  "name": "Base58-avkodare",
+  "description": "Avkoda Base58-text eller -filer tillbaka till originaldata för överföring, lagring och integration."
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "옵션",
+  "alphabetLabel": "알파벳",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Base58 입력",
+  "inputPlaceholder": "Base58 텍스트 입력...",
+  "importFromFileLabel": "파일에서 가져오기",
+  "decodedOutputTitle": "디코딩된 출력",
+  "decodedOutputEmptyDescription": "디코딩된 텍스트가 여기에 표시됩니다...",
+  "downloadFileLabel": "파일 다운로드",
+  "previewTruncatedLabel": "미리보기 잘림",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정",
+  "invalidBase58Title": "유효하지 않은 Base58 텍스트",
+  "fileReadFailedTitle": "파일 읽기에 실패했습니다"
+}

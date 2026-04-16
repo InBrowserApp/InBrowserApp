@@ -1,0 +1,4 @@
+{
+  "name": "Base58 Decoder",
+  "description": "Decode Base58 text or files back to original data for transport, storage, and integration."
+}

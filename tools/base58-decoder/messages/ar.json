@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "الخيارات",
+  "alphabetLabel": "الأبجدية",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "إدخال Base58",
+  "inputPlaceholder": "أدخل نص Base58...",
+  "importFromFileLabel": "استيراد من ملف",
+  "decodedOutputTitle": "المخرجات المفككة",
+  "decodedOutputEmptyDescription": "سيظهر النص المفكك هنا...",
+  "downloadFileLabel": "تنزيل الملف",
+  "previewTruncatedLabel": "تم اقتطاع المعاينة",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "resetLabel": "إعادة تعيين المثال",
+  "invalidBase58Title": "نص Base58 غير صالح",
+  "fileReadFailedTitle": "فشل في قراءة الملف"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Decodificador Base58",
+  "description": "Decodifica texto ou arquivos Base58 de volta aos dados originais para transmissão, armazenamento e integração."
+}
