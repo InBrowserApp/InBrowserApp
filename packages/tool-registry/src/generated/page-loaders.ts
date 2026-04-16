@@ -11,6 +11,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base16-decoder": () => import("@tool/base16-decoder/page"),
   "base16-encoder": () => import("@tool/base16-encoder/page"),
   "base32-decoder": () => import("@tool/base32-decoder/page"),
+  "base32-encoder": () => import("@tool/base32-encoder/page"),
   "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
@@ -38,6 +39,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
@@ -56,6 +58,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
+  "keccak-hash-text-or-file": () =>
+    import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
@@ -96,6 +100,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha3-512-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
     import("@tool/sha384-hash-text-or-file/page"),
+  "sha512-224-hash-text-or-file": () =>
+    import("@tool/sha512-224-hash-text-or-file/page"),
+  "sha512-256-hash-text-or-file": () =>
+    import("@tool/sha512-256-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),

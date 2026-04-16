@@ -554,6 +554,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base32-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-encoder",
+    language: "de",
+  },
+  {
+    slug: "base32-encoder",
+    language: "en",
+  },
+  {
+    slug: "base32-encoder",
+    language: "es",
+  },
+  {
+    slug: "base32-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-encoder",
+    language: "he",
+  },
+  {
+    slug: "base32-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-encoder",
+    language: "id",
+  },
+  {
+    slug: "base32-encoder",
+    language: "it",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-encoder",
+    language: "no",
+  },
+  {
+    slug: "base32-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-encoder",
+    language: "th",
+  },
+  {
+    slug: "base32-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base58-decoder",
     language: "ar",
   },
@@ -2486,6 +2578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "http-status-code-lookup",
+    language: "ar",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "de",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "en",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "es",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "fr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "he",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "hi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "id",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "it",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ja",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ko",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ms",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "nl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "no",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pt",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ru",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "sv",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "th",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "tr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "vi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "iban-validator",
     language: "ar",
   },
@@ -4047,6 +4231,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "jsonpath-tester",
+    language: "zh-TW",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -6531,6 +6807,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha384-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
     language: "zh-TW",
   },
   {

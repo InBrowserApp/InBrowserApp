@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "outputLengthLabel": "Ausgabelänge",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hash-Ergebnis für die aktuelle Texteingabe.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Tim kiem theo ma trang thai, ten hoac mo ta...",
+  "all": "Tat ca",
+  "common": "Pho bien",
+  "informationalFilter": "Thong tin (1xx)",
+  "successFilter": "Thanh cong (2xx)",
+  "redirectionFilter": "Chuyen huong (3xx)",
+  "clientErrorFilter": "Loi May Khach (4xx)",
+  "serverErrorFilter": "Loi May Chu (5xx)",
+  "code": "Ma",
+  "name": "Ten",
+  "category": "Danh muc",
+  "description": "Mo ta",
+  "informational": "Thong tin",
+  "success": "Thanh cong",
+  "redirection": "Chuyen huong",
+  "clientError": "Loi May Khach",
+  "serverError": "Loi May Chu",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

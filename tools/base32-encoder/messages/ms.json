@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "inputPlaceholder": "Masukkan teks untuk dikod...",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "encodedOutputLabel": "Berkod Base32",
+  "encodedOutputEmptyDescription": "Output Base32 akan dipaparkan di sini...",
+  "downloadFileLabel": "Muat turun Base32",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "fileReadFailedTitle": "Gagal membaca fail"
+}

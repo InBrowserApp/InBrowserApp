@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Buscar por codigo de estado, nombre o descripcion...",
+  "all": "Todos",
+  "common": "Comunes",
+  "informationalFilter": "Informativo (1xx)",
+  "successFilter": "Exito (2xx)",
+  "redirectionFilter": "Redireccion (3xx)",
+  "clientErrorFilter": "Error del Cliente (4xx)",
+  "serverErrorFilter": "Error del Servidor (5xx)",
+  "code": "Codigo",
+  "name": "Nombre",
+  "category": "Categoria",
+  "description": "Descripcion",
+  "informational": "Informativo",
+  "success": "Exito",
+  "redirection": "Redireccion",
+  "clientError": "Error del Cliente",
+  "serverError": "Error del Servidor",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

@@ -1,0 +1,13 @@
+{
+  "inputLabel": "輸入",
+  "inputPlaceholder": "輸入要編碼的文字...",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
+  "importFromFileLabel": "從檔案匯入",
+  "encodedOutputLabel": "Base32 編碼",
+  "encodedOutputEmptyDescription": "Base32 輸出會顯示在這裡...",
+  "downloadFileLabel": "下載 Base32",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "fileReadFailedTitle": "讀取檔案失敗"
+}

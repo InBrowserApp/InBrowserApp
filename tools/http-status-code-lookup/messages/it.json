@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Cerca per codice di stato, nome o descrizione...",
+  "all": "Tutti",
+  "common": "Comuni",
+  "informationalFilter": "Informativo (1xx)",
+  "successFilter": "Successo (2xx)",
+  "redirectionFilter": "Reindirizzamento (3xx)",
+  "clientErrorFilter": "Errore Client (4xx)",
+  "serverErrorFilter": "Errore Server (5xx)",
+  "code": "Codice",
+  "name": "Nome",
+  "category": "Categoria",
+  "description": "Descrizione",
+  "informational": "Informativo",
+  "success": "Successo",
+  "redirection": "Reindirizzamento",
+  "clientError": "Errore Client",
+  "serverError": "Errore Server",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

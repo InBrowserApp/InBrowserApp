@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "البحث برمز الحالة او الاسم او الوصف...",
+  "all": "الكل",
+  "common": "شائعة",
+  "informationalFilter": "معلوماتي (1xx)",
+  "successFilter": "نجاح (2xx)",
+  "redirectionFilter": "اعادة توجيه (3xx)",
+  "clientErrorFilter": "خطأ العميل (4xx)",
+  "serverErrorFilter": "خطأ الخادم (5xx)",
+  "code": "الرمز",
+  "name": "الاسم",
+  "category": "الفئة",
+  "description": "الوصف",
+  "informational": "معلوماتي",
+  "success": "نجاح",
+  "redirection": "اعادة توجيه",
+  "clientError": "خطأ العميل",
+  "serverError": "خطأ الخادم",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

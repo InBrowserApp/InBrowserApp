@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "inputPlaceholder": "Enter text to encode...",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "encodedOutputLabel": "Base32 Encoded",
+  "encodedOutputEmptyDescription": "Base32 output will appear here...",
+  "downloadFileLabel": "Download Base32",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "fileReadFailedTitle": "Failed to read file"
+}

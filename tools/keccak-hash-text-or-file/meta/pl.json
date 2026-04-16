@@ -1,0 +1,4 @@
+{
+  "name": "Hash Keccak tekstu lub pliku",
+  "description": "Generuj hash Keccak dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

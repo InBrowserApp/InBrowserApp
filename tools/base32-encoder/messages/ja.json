@@ -1,0 +1,13 @@
+{
+  "inputLabel": "入力",
+  "inputPlaceholder": "エンコードするテキストを入力...",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "絵文字や非ラテン文字を含む、任意の UTF-8 テキストを貼り付けたり入力したりできます。",
+  "importFromFileLabel": "ファイルから読み込み",
+  "encodedOutputLabel": "Base32エンコード済み",
+  "encodedOutputEmptyDescription": "Base32 出力がここに表示されます...",
+  "downloadFileLabel": "Base32 をダウンロード",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました"
+}

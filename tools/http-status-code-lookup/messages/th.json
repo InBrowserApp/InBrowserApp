@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "ค้นหาตามรหัสสถานะ ชื่อ หรือคำอธิบาย...",
+  "all": "ทั้งหมด",
+  "common": "ทั่วไป",
+  "informationalFilter": "ข้อมูล (1xx)",
+  "successFilter": "สำเร็จ (2xx)",
+  "redirectionFilter": "เปลี่ยนเส้นทาง (3xx)",
+  "clientErrorFilter": "ข้อผิดพลาดของไคลเอนต์ (4xx)",
+  "serverErrorFilter": "ข้อผิดพลาดของเซิร์ฟเวอร์ (5xx)",
+  "code": "รหัส",
+  "name": "ชื่อ",
+  "category": "หมวดหมู่",
+  "description": "คำอธิบาย",
+  "informational": "ข้อมูล",
+  "success": "สำเร็จ",
+  "redirection": "เปลี่ยนเส้นทาง",
+  "clientError": "ข้อผิดพลาดของไคลเอนต์",
+  "serverError": "ข้อผิดพลาดของเซิร์ฟเวอร์",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

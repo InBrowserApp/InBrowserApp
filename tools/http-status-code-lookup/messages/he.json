@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "חפש לפי קוד סטטוס, שם או תיאור...",
+  "all": "הכל",
+  "common": "נפוצים",
+  "informationalFilter": "מידע (1xx)",
+  "successFilter": "הצלחה (2xx)",
+  "redirectionFilter": "הפניה מחדש (3xx)",
+  "clientErrorFilter": "שגיאת לקוח (4xx)",
+  "serverErrorFilter": "שגיאת שרת (5xx)",
+  "code": "קוד",
+  "name": "שם",
+  "category": "קטגוריה",
+  "description": "תיאור",
+  "informational": "מידע",
+  "success": "הצלחה",
+  "redirection": "הפניה מחדש",
+  "clientError": "שגיאת לקוח",
+  "serverError": "שגיאת שרת",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

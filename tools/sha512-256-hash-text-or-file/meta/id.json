@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-512/256 (FIPS 180-4) Teks atau File",
+  "description": "Buat hash SHA-512/256 (FIPS 180-4) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan"
+}

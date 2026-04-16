@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Cari berdasarkan kode status, nama atau deskripsi...",
+  "all": "Semua",
+  "common": "Umum",
+  "informationalFilter": "Informasional (1xx)",
+  "successFilter": "Berhasil (2xx)",
+  "redirectionFilter": "Pengalihan (3xx)",
+  "clientErrorFilter": "Kesalahan Klien (4xx)",
+  "serverErrorFilter": "Kesalahan Server (5xx)",
+  "code": "Kode",
+  "name": "Nama",
+  "category": "Kategori",
+  "description": "Deskripsi",
+  "informational": "Informasional",
+  "success": "Berhasil",
+  "redirection": "Pengalihan",
+  "clientError": "Kesalahan Klien",
+  "serverError": "Kesalahan Server",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

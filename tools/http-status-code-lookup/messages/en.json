@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Search by status code, name, or description...",
+  "all": "All",
+  "common": "Common",
+  "informationalFilter": "Informational (1xx)",
+  "successFilter": "Success (2xx)",
+  "redirectionFilter": "Redirection (3xx)",
+  "clientErrorFilter": "Client Error (4xx)",
+  "serverErrorFilter": "Server Error (5xx)",
+  "code": "Code",
+  "name": "Name",
+  "category": "Category",
+  "description": "Description",
+  "informational": "Informational",
+  "success": "Success",
+  "redirection": "Redirection",
+  "clientError": "Client Error",
+  "serverError": "Server Error",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "स्थिति कोड, नाम या विवरण से खोजें...",
+  "all": "सभी",
+  "common": "सामान्य",
+  "informationalFilter": "सूचनात्मक (1xx)",
+  "successFilter": "सफलता (2xx)",
+  "redirectionFilter": "पुनर्निर्देशन (3xx)",
+  "clientErrorFilter": "क्लाइंट त्रुटि (4xx)",
+  "serverErrorFilter": "सर्वर त्रुटि (5xx)",
+  "code": "कोड",
+  "name": "नाम",
+  "category": "श्रेणी",
+  "description": "विवरण",
+  "informational": "सूचनात्मक",
+  "success": "सफलता",
+  "redirection": "पुनर्निर्देशन",
+  "clientError": "क्लाइंट त्रुटि",
+  "serverError": "सर्वर त्रुटि",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}
