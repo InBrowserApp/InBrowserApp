@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE2s Hash Metin veya Dosya",
+  "description": "Metin girişi veya dosya yükleme için BLAKE2s hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın"
+}

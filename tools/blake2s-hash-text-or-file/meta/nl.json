@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE2s-hash tekst of bestand",
+  "description": "Genereer BLAKE2s-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+}

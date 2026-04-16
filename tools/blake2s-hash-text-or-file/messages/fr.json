@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Entrée",
+  "plainTextLabel": "Texte brut",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris des emojis et des caractères non latins.",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "hashResultLabel": "Résultat du Hachage",
+  "hashResultDescription": "Résultat du hachage pour la saisie de texte actuelle.",
+  "hexLabel": "Hexadécimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Décimal",
+  "binaryLabel": "Binaire",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "configurationLabel": "Configuration BLAKE2s",
+  "outputLengthLabel": "Longueur de Sortie",
+  "keyLabel": "Clé BLAKE2 (Base64)",
+  "keyPlaceholder": "Clé optionnelle pour le hachage avec clé (encodée en Base64)",
+  "invalidBase64Title": "La valeur Base64 n'est pas encore valide.",
+  "invalidBase64Description": "Vérifiez l'absence de remplissage, la présence de caractères inattendus ou des données collées partiellement."
+}

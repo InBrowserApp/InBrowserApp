@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE2s Hash Text or File",
+  "description": "Generate BLAKE2s hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes"
+}

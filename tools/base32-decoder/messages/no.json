@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32-inndata",
+  "base32InputPlaceholder": "Skriv inn Base32-tekst...",
+  "importFromFileLabel": "Importer fra fil",
+  "decodedOutputLabel": "Dekodet output",
+  "decodedOutputEmptyDescription": "Dekodet tekst vises her...",
+  "downloadFileLabel": "Last ned fil",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel",
+  "invalidBase32Title": "Ugyldig Base32-tekst",
+  "fileReadFailedTitle": "Kunne ikke lese filen",
+  "previewTruncatedLabel": "Forhåndsvisning avkortet"
+}

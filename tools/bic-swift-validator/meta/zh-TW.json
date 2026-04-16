@@ -1,0 +1,4 @@
+{
+  "name": "BIC/SWIFT 驗證器",
+  "description": "驗證 BIC/SWIFT 代碼並解析銀行、國家和分行資訊。"
+}

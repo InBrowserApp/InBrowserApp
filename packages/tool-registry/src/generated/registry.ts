@@ -643,6 +643,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "base32-decoder",
+    category: "web",
+    icon: "binary",
+    tags: ["base32", "decode", "decoder", "binary", "text", "file", "rfc4648"],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base32",
+        description:
+          "فك ترميز نصوص أو ملفات Base32 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base32-Decoder",
+        description:
+          "Dekodiert Base32-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base32 Decoder",
+        description:
+          "Decode Base32 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base32",
+        description:
+          "Decodifica texto o archivos Base32 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base32",
+        description:
+          "Décode le texte ou les fichiers Base32 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base32",
+        description:
+          "מפענח טקסט או קבצים ב-Base32 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base32 डिकोडर",
+        description:
+          "Base32 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base32",
+        description:
+          "Dekode teks atau file Base32 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base32",
+        description:
+          "Decodifica testo o file Base32 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base32 デコーダー",
+        description:
+          "Base32のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base32 디코더",
+        description:
+          "Base32 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base32",
+        description:
+          "Nyahkod teks atau fail Base32 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base32-decoder",
+        description:
+          "Decodeer Base32-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base32-dekoder",
+        description:
+          "Dekoder Base32-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base32",
+        description:
+          "Dekoduj tekst lub pliki Base32 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base32",
+        description:
+          "Decodifica texto ou arquivos Base32 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base32-декодер",
+        description:
+          "Декодирует Base32-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base32-avkodare",
+        description:
+          "Avkoda Base32-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base32",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base32 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base32 Kod Çözücü",
+        description:
+          "Base32 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base32",
+        description:
+          "Giải mã văn bản hoặc tệp Base32 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base32 解码器",
+        description:
+          "将 Base32 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base32 解碼器",
+        description:
+          "將 Base32 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
+  {
     slug: "base58-encoder",
     category: "crypto",
     icon: "binary",
@@ -1166,6 +1289,125 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "bic-swift-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["bic", "swift", "validator", "bank", "finance"],
+    locales: {
+      ar: {
+        name: "مدقق BIC/SWIFT",
+        description:
+          "يتحقق من رموز BIC/SWIFT ويحلل تفاصيل البنك والبلد والفرع.",
+      },
+      de: {
+        name: "BIC/SWIFT-Validator",
+        description:
+          "Validiert BIC/SWIFT-Codes und analysiert Bank-, Länder- und Filialdetails.",
+      },
+      en: {
+        name: "BIC/SWIFT Validator",
+        description:
+          "Validate BIC/SWIFT codes and parse bank, country, and branch details.",
+      },
+      es: {
+        name: "Validador BIC/SWIFT",
+        description:
+          "Valida códigos BIC/SWIFT y analiza detalles de banco, país y sucursal.",
+      },
+      fr: {
+        name: "Validateur BIC/SWIFT",
+        description:
+          "Valide les codes BIC/SWIFT et analyse la banque, le pays et la succursale.",
+      },
+      he: {
+        name: "מאמת BIC/SWIFT",
+        description: "מאמת קודי BIC/SWIFT ומפרק פרטי בנק, מדינה וסניף.",
+      },
+      hi: {
+        name: "BIC/SWIFT सत्यापनकर्ता",
+        description: "BIC/SWIFT कोड सत्यापित करें और बैंक, देश व शाखा विवरण देखें।",
+      },
+      id: {
+        name: "Validator BIC/SWIFT",
+        description:
+          "Memvalidasi kode BIC/SWIFT dan mengurai detail bank, negara, dan cabang.",
+      },
+      it: {
+        name: "Validatore BIC/SWIFT",
+        description:
+          "Valida i codici BIC/SWIFT e analizza banca, paese e filiale.",
+      },
+      ja: {
+        name: "BIC/SWIFT 検証",
+        description:
+          "BIC/SWIFT コードを検証し、銀行・国・支店情報を解析します。",
+      },
+      ko: {
+        name: "BIC/SWIFT 검증기",
+        description:
+          "BIC/SWIFT 코드를 검증하고 은행, 국가, 지점 정보를 분석합니다.",
+      },
+      ms: {
+        name: "Pengesah BIC/SWIFT",
+        description:
+          "Mengesahkan kod BIC/SWIFT dan menghuraikan bank, negara dan cawangan.",
+      },
+      nl: {
+        name: "BIC/SWIFT-validator",
+        description:
+          "Valideert BIC/SWIFT-codes en analyseert bank-, land- en filialgegevens.",
+      },
+      no: {
+        name: "BIC/SWIFT-validerer",
+        description:
+          "Validerer BIC/SWIFT-koder og analyserer bank, land og avdeling.",
+      },
+      pl: {
+        name: "Walidator BIC/SWIFT",
+        description:
+          "Weryfikuje kody BIC/SWIFT i analizuje bank, kraj oraz oddział.",
+      },
+      pt: {
+        name: "Validador BIC/SWIFT",
+        description:
+          "Valida códigos BIC/SWIFT e analisa banco, país e agência.",
+      },
+      ru: {
+        name: "Валидатор BIC/SWIFT",
+        description:
+          "Проверяет коды BIC/SWIFT и анализирует банк, страну и филиал.",
+      },
+      sv: {
+        name: "BIC/SWIFT-validerare",
+        description:
+          "Validerar BIC/SWIFT-koder och tolkar bank-, land- och filialdetaljer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ BIC/SWIFT",
+        description:
+          "ตรวจสอบรหัส BIC/SWIFT และแยกรายละเอียดธนาคาร ประเทศ และสาขา.",
+      },
+      tr: {
+        name: "BIC/SWIFT Doğrulayıcı",
+        description:
+          "BIC/SWIFT kodlarını doğrular ve banka, ülke ve şube bilgilerini analiz eder.",
+      },
+      vi: {
+        name: "Trình xác thực BIC/SWIFT",
+        description:
+          "Xác thực mã BIC/SWIFT và phân tích ngân hàng, quốc gia và chi nhánh.",
+      },
+      "zh-CN": {
+        name: "BIC/SWIFT 验证器",
+        description: "验证 BIC/SWIFT 代码并解析银行、国家和分行信息。",
+      },
+      "zh-TW": {
+        name: "BIC/SWIFT 驗證器",
+        description: "驗證 BIC/SWIFT 代碼並解析銀行、國家和分行資訊。",
+      },
+    },
+  },
+  {
     slug: "bip39-mnemonic-generator",
     category: "random",
     icon: "lock",
@@ -1421,6 +1663,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "BLAKE2b 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 BLAKE2b 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "blake2",
+      "blake2s",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE2s للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE2s لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE2s-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE2s-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE2s Hash Text or File",
+        description:
+          "Generate BLAKE2s hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE2s de Texto o Archivo",
+        description:
+          "Genera hash BLAKE2s para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE2s de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE2s pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE2s טקסט או קובץ",
+        description:
+          "צור האש BLAKE2s עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE2s हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE2s हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE2s Teks atau File",
+        description:
+          "Buat hash BLAKE2s untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE2s di Testo o File",
+        description:
+          "Genera hash BLAKE2s per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE2s ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE2sハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE2s 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE2s 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE2s Teks atau Fail",
+        description:
+          "Jana hash BLAKE2s untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE2s-hash tekst of bestand",
+        description:
+          "Genereer BLAKE2s-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE2s-hash tekst eller fil",
+        description:
+          "Generer BLAKE2s-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE2s tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE2s dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE2s de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE2s para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE2s-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE2s-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE2s-hash text eller fil",
+        description:
+          "Generera BLAKE2s-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE2s ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE2s สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE2s Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE2s hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE2s văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE2s cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE2s 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE2s 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE2s 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE2s 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -5072,6 +5446,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "lorem-ipsum-generator",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "lorem",
+      "ipsum",
+      "placeholder",
+      "dummy",
+      "text",
+      "generator",
+      "copywriting",
+      "layout",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Lorem Ipsum",
+        description:
+          "أنشئ نص Lorem Ipsum البديل بكلمات أو جمل أو فقرات قابلة للتخصيص. يدعم لغات متعددة.",
+      },
+      de: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Generieren Sie Lorem Ipsum Platzhaltertext mit konfigurierbaren Wörtern, Sätzen oder Absätzen. Unterstützt mehrere Sprachen.",
+      },
+      en: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Generate Lorem Ipsum placeholder text with configurable words, sentences, or paragraphs. Supports multiple locales.",
+      },
+      es: {
+        name: "Generador de Lorem Ipsum",
+        description:
+          "Genera texto de relleno Lorem Ipsum con palabras, oraciones o párrafos configurables. Soporta múltiples idiomas.",
+      },
+      fr: {
+        name: "Générateur Lorem Ipsum",
+        description:
+          "Générez du texte de remplissage Lorem Ipsum avec des mots, phrases ou paragraphes configurables. Prend en charge plusieurs langues.",
+      },
+      he: {
+        name: "מחולל Lorem Ipsum",
+        description:
+          "צור טקסט ממלא מקום Lorem Ipsum עם מילים, משפטים או פסקאות הניתנים להגדרה. תומך במספר שפות.",
+      },
+      hi: {
+        name: "Lorem Ipsum जनरेटर",
+        description:
+          "कॉन्फ़िगर करने योग्य शब्दों, वाक्यों या पैराग्राफ के साथ Lorem Ipsum प्लेसहोल्डर टेक्स्ट जनरेट करें। कई भाषाओं का समर्थन करता है।",
+      },
+      id: {
+        name: "Generator Lorem Ipsum",
+        description:
+          "Hasilkan teks placeholder Lorem Ipsum dengan kata, kalimat, atau paragraf yang dapat dikonfigurasi. Mendukung banyak bahasa.",
+      },
+      it: {
+        name: "Generatore Lorem Ipsum",
+        description:
+          "Genera testo segnaposto Lorem Ipsum con parole, frasi o paragrafi configurabili. Supporta più lingue.",
+      },
+      ja: {
+        name: "Lorem Ipsum ジェネレーター",
+        description:
+          "単語、文、または段落の数を設定できる Lorem Ipsum プレースホルダーテキストを生成します。複数の言語に対応。",
+      },
+      ko: {
+        name: "Lorem Ipsum 생성기",
+        description:
+          "단어, 문장 또는 단락 수를 설정할 수 있는 Lorem Ipsum 플레이스홀더 텍스트를 생성합니다. 여러 언어를 지원합니다.",
+      },
+      ms: {
+        name: "Penjana Lorem Ipsum",
+        description:
+          "Jana teks pemegang tempat Lorem Ipsum dengan perkataan, ayat atau perenggan yang boleh dikonfigurasikan. Menyokong pelbagai bahasa.",
+      },
+      nl: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Genereer Lorem Ipsum placeholder tekst met configureerbare woorden, zinnen of alinea's. Ondersteunt meerdere talen.",
+      },
+      no: {
+        name: "Lorem Ipsum-generator",
+        description:
+          "Generer Lorem Ipsum plassholdertekst med konfigurerbare ord, setninger eller avsnitt. Støtter flere språk.",
+      },
+      pl: {
+        name: "Generator Lorem Ipsum",
+        description:
+          "Generuj tekst zastępczy Lorem Ipsum z konfigurowalną liczbą słów, zdań lub akapitów. Obsługuje wiele języków.",
+      },
+      pt: {
+        name: "Gerador de Lorem Ipsum",
+        description:
+          "Gere texto de preenchimento Lorem Ipsum com palavras, frases ou parágrafos configuráveis. Suporta vários idiomas.",
+      },
+      ru: {
+        name: "Генератор Lorem Ipsum",
+        description:
+          "Генерируйте текст-заполнитель Lorem Ipsum с настраиваемым количеством слов, предложений или абзацев. Поддержка нескольких языков.",
+      },
+      sv: {
+        name: "Lorem Ipsum-generator",
+        description:
+          "Generera Lorem Ipsum platshållartext med konfigurerbara ord, meningar eller stycken. Stöder flera språk.",
+      },
+      th: {
+        name: "ตัวสร้าง Lorem Ipsum",
+        description:
+          "สร้างข้อความตัวยึดตำแหน่ง Lorem Ipsum ด้วยจำนวนคำ ประโยค หรือย่อหน้าที่กำหนดได้ รองรับหลายภาษา",
+      },
+      tr: {
+        name: "Lorem Ipsum Oluşturucu",
+        description:
+          "Yapılandırılabilir kelimeler, cümleler veya paragraflarla Lorem Ipsum yer tutucu metin oluşturun. Birden fazla dili destekler.",
+      },
+      vi: {
+        name: "Trình tạo Lorem Ipsum",
+        description:
+          "Tạo văn bản giữ chỗ Lorem Ipsum với số từ, câu hoặc đoạn văn có thể cấu hình. Hỗ trợ nhiều ngôn ngữ.",
+      },
+      "zh-CN": {
+        name: "Lorem Ipsum 生成器",
+        description:
+          "生成 Lorem Ipsum 占位文本，可配置单词、句子或段落数量，支持多种语言。",
+      },
+      "zh-TW": {
+        name: "Lorem Ipsum 產生器",
+        description:
+          "產生 Lorem Ipsum 佔位文字，可設定單詞、句子或段落數量，支援多種語言。",
+      },
+    },
+  },
+  {
     slug: "mac-address-to-ipv6-link-local-address-converter",
     category: "network",
     icon: "network",
@@ -7686,6 +8192,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "SHA3-256 (FIPS 202) 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA3-256 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-384",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-384 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-384 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-384 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-384 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-384 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-384 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-384 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-384 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-384 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-384 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-384 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-384 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-384 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-384 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-384 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-384 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-384 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-384 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-384 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-384 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-384 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-384 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-384 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-384 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-384 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-384 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-384 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-384 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-384 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-384 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-384 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-384 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-384 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-384 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-384 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-384 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-384 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-384 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-384 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-384 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-384 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-384 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-384 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-384 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-384 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-384 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -11019,6 +11657,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "base32-decoder": {
+    slug: "base32-decoder",
+    category: "web",
+    icon: "binary",
+    tags: ["base32", "decode", "decoder", "binary", "text", "file", "rfc4648"],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base32",
+        description:
+          "فك ترميز نصوص أو ملفات Base32 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base32-Decoder",
+        description:
+          "Dekodiert Base32-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base32 Decoder",
+        description:
+          "Decode Base32 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base32",
+        description:
+          "Decodifica texto o archivos Base32 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base32",
+        description:
+          "Décode le texte ou les fichiers Base32 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base32",
+        description:
+          "מפענח טקסט או קבצים ב-Base32 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base32 डिकोडर",
+        description:
+          "Base32 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base32",
+        description:
+          "Dekode teks atau file Base32 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base32",
+        description:
+          "Decodifica testo o file Base32 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base32 デコーダー",
+        description:
+          "Base32のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base32 디코더",
+        description:
+          "Base32 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base32",
+        description:
+          "Nyahkod teks atau fail Base32 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base32-decoder",
+        description:
+          "Decodeer Base32-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base32-dekoder",
+        description:
+          "Dekoder Base32-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base32",
+        description:
+          "Dekoduj tekst lub pliki Base32 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base32",
+        description:
+          "Decodifica texto ou arquivos Base32 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base32-декодер",
+        description:
+          "Декодирует Base32-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base32-avkodare",
+        description:
+          "Avkoda Base32-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base32",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base32 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base32 Kod Çözücü",
+        description:
+          "Base32 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base32",
+        description:
+          "Giải mã văn bản hoặc tệp Base32 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base32 解码器",
+        description:
+          "将 Base32 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base32 解碼器",
+        description:
+          "將 Base32 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
   "base58-encoder": {
     slug: "base58-encoder",
     category: "crypto",
@@ -11542,6 +12303,125 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "bic-swift-validator": {
+    slug: "bic-swift-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["bic", "swift", "validator", "bank", "finance"],
+    locales: {
+      ar: {
+        name: "مدقق BIC/SWIFT",
+        description:
+          "يتحقق من رموز BIC/SWIFT ويحلل تفاصيل البنك والبلد والفرع.",
+      },
+      de: {
+        name: "BIC/SWIFT-Validator",
+        description:
+          "Validiert BIC/SWIFT-Codes und analysiert Bank-, Länder- und Filialdetails.",
+      },
+      en: {
+        name: "BIC/SWIFT Validator",
+        description:
+          "Validate BIC/SWIFT codes and parse bank, country, and branch details.",
+      },
+      es: {
+        name: "Validador BIC/SWIFT",
+        description:
+          "Valida códigos BIC/SWIFT y analiza detalles de banco, país y sucursal.",
+      },
+      fr: {
+        name: "Validateur BIC/SWIFT",
+        description:
+          "Valide les codes BIC/SWIFT et analyse la banque, le pays et la succursale.",
+      },
+      he: {
+        name: "מאמת BIC/SWIFT",
+        description: "מאמת קודי BIC/SWIFT ומפרק פרטי בנק, מדינה וסניף.",
+      },
+      hi: {
+        name: "BIC/SWIFT सत्यापनकर्ता",
+        description: "BIC/SWIFT कोड सत्यापित करें और बैंक, देश व शाखा विवरण देखें।",
+      },
+      id: {
+        name: "Validator BIC/SWIFT",
+        description:
+          "Memvalidasi kode BIC/SWIFT dan mengurai detail bank, negara, dan cabang.",
+      },
+      it: {
+        name: "Validatore BIC/SWIFT",
+        description:
+          "Valida i codici BIC/SWIFT e analizza banca, paese e filiale.",
+      },
+      ja: {
+        name: "BIC/SWIFT 検証",
+        description:
+          "BIC/SWIFT コードを検証し、銀行・国・支店情報を解析します。",
+      },
+      ko: {
+        name: "BIC/SWIFT 검증기",
+        description:
+          "BIC/SWIFT 코드를 검증하고 은행, 국가, 지점 정보를 분석합니다.",
+      },
+      ms: {
+        name: "Pengesah BIC/SWIFT",
+        description:
+          "Mengesahkan kod BIC/SWIFT dan menghuraikan bank, negara dan cawangan.",
+      },
+      nl: {
+        name: "BIC/SWIFT-validator",
+        description:
+          "Valideert BIC/SWIFT-codes en analyseert bank-, land- en filialgegevens.",
+      },
+      no: {
+        name: "BIC/SWIFT-validerer",
+        description:
+          "Validerer BIC/SWIFT-koder og analyserer bank, land og avdeling.",
+      },
+      pl: {
+        name: "Walidator BIC/SWIFT",
+        description:
+          "Weryfikuje kody BIC/SWIFT i analizuje bank, kraj oraz oddział.",
+      },
+      pt: {
+        name: "Validador BIC/SWIFT",
+        description:
+          "Valida códigos BIC/SWIFT e analisa banco, país e agência.",
+      },
+      ru: {
+        name: "Валидатор BIC/SWIFT",
+        description:
+          "Проверяет коды BIC/SWIFT и анализирует банк, страну и филиал.",
+      },
+      sv: {
+        name: "BIC/SWIFT-validerare",
+        description:
+          "Validerar BIC/SWIFT-koder och tolkar bank-, land- och filialdetaljer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ BIC/SWIFT",
+        description:
+          "ตรวจสอบรหัส BIC/SWIFT และแยกรายละเอียดธนาคาร ประเทศ และสาขา.",
+      },
+      tr: {
+        name: "BIC/SWIFT Doğrulayıcı",
+        description:
+          "BIC/SWIFT kodlarını doğrular ve banka, ülke ve şube bilgilerini analiz eder.",
+      },
+      vi: {
+        name: "Trình xác thực BIC/SWIFT",
+        description:
+          "Xác thực mã BIC/SWIFT và phân tích ngân hàng, quốc gia và chi nhánh.",
+      },
+      "zh-CN": {
+        name: "BIC/SWIFT 验证器",
+        description: "验证 BIC/SWIFT 代码并解析银行、国家和分行信息。",
+      },
+      "zh-TW": {
+        name: "BIC/SWIFT 驗證器",
+        description: "驗證 BIC/SWIFT 代碼並解析銀行、國家和分行資訊。",
+      },
+    },
+  },
   "bip39-mnemonic-generator": {
     slug: "bip39-mnemonic-generator",
     category: "random",
@@ -11798,6 +12678,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "BLAKE2b 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 BLAKE2b 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "blake2s-hash-text-or-file": {
+    slug: "blake2s-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "blake2",
+      "blake2s",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE2s للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE2s لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE2s-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE2s-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE2s Hash Text or File",
+        description:
+          "Generate BLAKE2s hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE2s de Texto o Archivo",
+        description:
+          "Genera hash BLAKE2s para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE2s de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE2s pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE2s טקסט או קובץ",
+        description:
+          "צור האש BLAKE2s עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE2s हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE2s हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE2s Teks atau File",
+        description:
+          "Buat hash BLAKE2s untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE2s di Testo o File",
+        description:
+          "Genera hash BLAKE2s per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE2s ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE2sハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE2s 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE2s 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE2s Teks atau Fail",
+        description:
+          "Jana hash BLAKE2s untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE2s-hash tekst of bestand",
+        description:
+          "Genereer BLAKE2s-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE2s-hash tekst eller fil",
+        description:
+          "Generer BLAKE2s-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE2s tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE2s dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE2s de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE2s para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE2s-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE2s-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE2s-hash text eller fil",
+        description:
+          "Generera BLAKE2s-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE2s ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE2s สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE2s Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE2s hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE2s văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE2s cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE2s 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE2s 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE2s 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE2s 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -15448,6 +16460,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "lorem-ipsum-generator": {
+    slug: "lorem-ipsum-generator",
+    category: "text",
+    icon: "file-text",
+    tags: [
+      "lorem",
+      "ipsum",
+      "placeholder",
+      "dummy",
+      "text",
+      "generator",
+      "copywriting",
+      "layout",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Lorem Ipsum",
+        description:
+          "أنشئ نص Lorem Ipsum البديل بكلمات أو جمل أو فقرات قابلة للتخصيص. يدعم لغات متعددة.",
+      },
+      de: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Generieren Sie Lorem Ipsum Platzhaltertext mit konfigurierbaren Wörtern, Sätzen oder Absätzen. Unterstützt mehrere Sprachen.",
+      },
+      en: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Generate Lorem Ipsum placeholder text with configurable words, sentences, or paragraphs. Supports multiple locales.",
+      },
+      es: {
+        name: "Generador de Lorem Ipsum",
+        description:
+          "Genera texto de relleno Lorem Ipsum con palabras, oraciones o párrafos configurables. Soporta múltiples idiomas.",
+      },
+      fr: {
+        name: "Générateur Lorem Ipsum",
+        description:
+          "Générez du texte de remplissage Lorem Ipsum avec des mots, phrases ou paragraphes configurables. Prend en charge plusieurs langues.",
+      },
+      he: {
+        name: "מחולל Lorem Ipsum",
+        description:
+          "צור טקסט ממלא מקום Lorem Ipsum עם מילים, משפטים או פסקאות הניתנים להגדרה. תומך במספר שפות.",
+      },
+      hi: {
+        name: "Lorem Ipsum जनरेटर",
+        description:
+          "कॉन्फ़िगर करने योग्य शब्दों, वाक्यों या पैराग्राफ के साथ Lorem Ipsum प्लेसहोल्डर टेक्स्ट जनरेट करें। कई भाषाओं का समर्थन करता है।",
+      },
+      id: {
+        name: "Generator Lorem Ipsum",
+        description:
+          "Hasilkan teks placeholder Lorem Ipsum dengan kata, kalimat, atau paragraf yang dapat dikonfigurasi. Mendukung banyak bahasa.",
+      },
+      it: {
+        name: "Generatore Lorem Ipsum",
+        description:
+          "Genera testo segnaposto Lorem Ipsum con parole, frasi o paragrafi configurabili. Supporta più lingue.",
+      },
+      ja: {
+        name: "Lorem Ipsum ジェネレーター",
+        description:
+          "単語、文、または段落の数を設定できる Lorem Ipsum プレースホルダーテキストを生成します。複数の言語に対応。",
+      },
+      ko: {
+        name: "Lorem Ipsum 생성기",
+        description:
+          "단어, 문장 또는 단락 수를 설정할 수 있는 Lorem Ipsum 플레이스홀더 텍스트를 생성합니다. 여러 언어를 지원합니다.",
+      },
+      ms: {
+        name: "Penjana Lorem Ipsum",
+        description:
+          "Jana teks pemegang tempat Lorem Ipsum dengan perkataan, ayat atau perenggan yang boleh dikonfigurasikan. Menyokong pelbagai bahasa.",
+      },
+      nl: {
+        name: "Lorem Ipsum Generator",
+        description:
+          "Genereer Lorem Ipsum placeholder tekst met configureerbare woorden, zinnen of alinea's. Ondersteunt meerdere talen.",
+      },
+      no: {
+        name: "Lorem Ipsum-generator",
+        description:
+          "Generer Lorem Ipsum plassholdertekst med konfigurerbare ord, setninger eller avsnitt. Støtter flere språk.",
+      },
+      pl: {
+        name: "Generator Lorem Ipsum",
+        description:
+          "Generuj tekst zastępczy Lorem Ipsum z konfigurowalną liczbą słów, zdań lub akapitów. Obsługuje wiele języków.",
+      },
+      pt: {
+        name: "Gerador de Lorem Ipsum",
+        description:
+          "Gere texto de preenchimento Lorem Ipsum com palavras, frases ou parágrafos configuráveis. Suporta vários idiomas.",
+      },
+      ru: {
+        name: "Генератор Lorem Ipsum",
+        description:
+          "Генерируйте текст-заполнитель Lorem Ipsum с настраиваемым количеством слов, предложений или абзацев. Поддержка нескольких языков.",
+      },
+      sv: {
+        name: "Lorem Ipsum-generator",
+        description:
+          "Generera Lorem Ipsum platshållartext med konfigurerbara ord, meningar eller stycken. Stöder flera språk.",
+      },
+      th: {
+        name: "ตัวสร้าง Lorem Ipsum",
+        description:
+          "สร้างข้อความตัวยึดตำแหน่ง Lorem Ipsum ด้วยจำนวนคำ ประโยค หรือย่อหน้าที่กำหนดได้ รองรับหลายภาษา",
+      },
+      tr: {
+        name: "Lorem Ipsum Oluşturucu",
+        description:
+          "Yapılandırılabilir kelimeler, cümleler veya paragraflarla Lorem Ipsum yer tutucu metin oluşturun. Birden fazla dili destekler.",
+      },
+      vi: {
+        name: "Trình tạo Lorem Ipsum",
+        description:
+          "Tạo văn bản giữ chỗ Lorem Ipsum với số từ, câu hoặc đoạn văn có thể cấu hình. Hỗ trợ nhiều ngôn ngữ.",
+      },
+      "zh-CN": {
+        name: "Lorem Ipsum 生成器",
+        description:
+          "生成 Lorem Ipsum 占位文本，可配置单词、句子或段落数量，支持多种语言。",
+      },
+      "zh-TW": {
+        name: "Lorem Ipsum 產生器",
+        description:
+          "產生 Lorem Ipsum 佔位文字，可設定單詞、句子或段落數量，支援多種語言。",
+      },
+    },
+  },
   "mac-address-to-ipv6-link-local-address-converter": {
     slug: "mac-address-to-ipv6-link-local-address-converter",
     category: "network",
@@ -18063,6 +19207,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SHA3-256 (FIPS 202) 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA3-256 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "sha3-384-hash-text-or-file": {
+    slug: "sha3-384-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-384",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-384 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-384 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-384 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-384 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-384 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-384 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-384 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-384 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-384 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-384 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-384 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-384 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-384 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-384 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-384 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-384 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-384 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-384 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-384 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-384 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-384 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-384 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-384 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-384 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-384 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-384 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-384 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-384 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-384 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-384 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-384 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-384 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-384 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-384 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-384 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-384 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-384 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-384 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-384 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-384 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-384 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-384 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-384 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-384 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-384 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-384 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },

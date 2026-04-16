@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "Alternativ",
+  "optionsDescription": "Välj utdataform, innehållsspråk och antal.",
+  "wordsLabel": "Ord",
+  "sentencesLabel": "Meningar",
+  "paragraphsLabel": "Stycken",
+  "countLabel": "Antal",
+  "localeLabel": "Språk",
+  "resultsTitle": "Resultat",
+  "resultsDescription": "Granska, kopiera eller ladda ned den genererade batchen.",
+  "resultsPlaceholder": "Genererad text visas här...",
+  "copyResultsLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "downloadResultsLabel": "Ladda ner",
+  "regenerateLabel": "Generera igen"
+}

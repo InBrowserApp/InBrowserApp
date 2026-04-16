@@ -1,0 +1,4 @@
+{
+  "name": "Validador BIC/SWIFT",
+  "description": "Valida códigos BIC/SWIFT e analisa banco, país e agência."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA3-384 (FIPS 202) di Testo o File",
+  "description": "Genera hash SHA3-384 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza"
+}

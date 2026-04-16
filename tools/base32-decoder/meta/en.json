@@ -1,0 +1,4 @@
+{
+  "name": "Base32 Decoder",
+  "description": "Decode Base32 text or files back to original data for transport, storage, and integration."
+}

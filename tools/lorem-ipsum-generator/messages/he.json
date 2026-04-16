@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "אפשרויות",
+  "optionsDescription": "בחרו צורת פלט, שפת תוכן וכמות.",
+  "wordsLabel": "מילים",
+  "sentencesLabel": "משפטים",
+  "paragraphsLabel": "פסקאות",
+  "countLabel": "כמות",
+  "localeLabel": "שפה",
+  "resultsTitle": "תוצאות",
+  "resultsDescription": "בדקו, העתיקו או הורידו את האצווה שנוצרה.",
+  "resultsPlaceholder": "הטקסט שנוצר יופיע כאן...",
+  "copyResultsLabel": "העתיקו את התוצאה",
+  "copiedLabel": "הועתק",
+  "downloadResultsLabel": "הורדה",
+  "regenerateLabel": "צור מחדש"
+}

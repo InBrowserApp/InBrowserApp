@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base32-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-decoder",
+    language: "de",
+  },
+  {
+    slug: "base32-decoder",
+    language: "en",
+  },
+  {
+    slug: "base32-decoder",
+    language: "es",
+  },
+  {
+    slug: "base32-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "he",
+  },
+  {
+    slug: "base32-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "id",
+  },
+  {
+    slug: "base32-decoder",
+    language: "it",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "no",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-decoder",
+    language: "th",
+  },
+  {
+    slug: "base32-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base58-encoder",
     language: "ar",
   },
@@ -830,6 +922,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bic-swift-validator",
+    language: "ar",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "de",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "en",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "es",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "fr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "he",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "hi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "id",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "it",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ja",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ko",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ms",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "nl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "no",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pt",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ru",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "sv",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "th",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "tr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "vi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "bip39-mnemonic-generator",
     language: "ar",
   },
@@ -1011,6 +1195,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "blake2b-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -3774,6 +4050,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "lorem-ipsum-generator",
+    language: "ar",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "de",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "en",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "es",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "fr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "he",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "hi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "id",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "it",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ja",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ko",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ms",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "nl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "no",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pt",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ru",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "sv",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "th",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "tr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "vi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ar",
   },
@@ -5703,6 +6071,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha3-256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
     language: "zh-TW",
   },
   {

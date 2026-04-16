@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Đầu vào Base32",
+  "base32InputPlaceholder": "Nhập văn bản Base32...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "decodedOutputLabel": "Đầu ra đã giải mã",
+  "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
+  "downloadFileLabel": "Tải tệp",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ",
+  "invalidBase32Title": "Văn bản Base32 không hợp lệ",
+  "fileReadFailedTitle": "Không thể đọc tệp",
+  "previewTruncatedLabel": "Bản xem trước bị cắt"
+}

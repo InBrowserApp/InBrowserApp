@@ -10,14 +10,18 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),
   "base16-encoder": () => import("@tool/base16-encoder/page"),
+  "base32-decoder": () => import("@tool/base32-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
+  "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
   "blake2b-hash-text-or-file": () =>
     import("@tool/blake2b-hash-text-or-file/page"),
+  "blake2s-hash-text-or-file": () =>
+    import("@tool/blake2s-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
@@ -51,6 +55,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
+  "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
@@ -82,6 +87,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha3-224-hash-text-or-file/page"),
   "sha3-256-hash-text-or-file": () =>
     import("@tool/sha3-256-hash-text-or-file/page"),
+  "sha3-384-hash-text-or-file": () =>
+    import("@tool/sha3-384-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
     import("@tool/sha384-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
