@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base32-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-decoder",
+    language: "de",
+  },
+  {
+    slug: "base32-decoder",
+    language: "en",
+  },
+  {
+    slug: "base32-decoder",
+    language: "es",
+  },
+  {
+    slug: "base32-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "he",
+  },
+  {
+    slug: "base32-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "id",
+  },
+  {
+    slug: "base32-decoder",
+    language: "it",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "no",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-decoder",
+    language: "th",
+  },
+  {
+    slug: "base32-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },

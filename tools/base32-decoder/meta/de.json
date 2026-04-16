@@ -1,0 +1,4 @@
+{
+  "name": "Base32-Decoder",
+  "description": "Dekodiert Base32-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration."
+}

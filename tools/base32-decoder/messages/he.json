@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "קלט Base32",
+  "base32InputPlaceholder": "הזן טקסט Base32...",
+  "importFromFileLabel": "יבוא מקובץ",
+  "decodedOutputLabel": "פלט מפוענח",
+  "decodedOutputEmptyDescription": "הטקסט המפוענח יוצג כאן...",
+  "downloadFileLabel": "הורד קובץ",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה",
+  "invalidBase32Title": "טקסט Base32 לא תקין",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Decodificatore Base32",
+  "description": "Decodifica testo o file Base32 per tornare ai dati originali per trasmissione, archiviazione e integrazione."
+}

@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32-invoer",
+  "base32InputPlaceholder": "Voer Base32-tekst in...",
+  "importFromFileLabel": "Importeren uit bestand",
+  "decodedOutputLabel": "Gedecodeerde uitvoer",
+  "decodedOutputEmptyDescription": "Gedecodeerde tekst verschijnt hier...",
+  "downloadFileLabel": "Bestand downloaden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten",
+  "invalidBase32Title": "Ongeldige Base32-tekst",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen",
+  "previewTruncatedLabel": "Voorbeeld ingekort"
+}

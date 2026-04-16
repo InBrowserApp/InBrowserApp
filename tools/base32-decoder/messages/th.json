@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "อินพุต Base32",
+  "base32InputPlaceholder": "ป้อนข้อความ Base32...",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "decodedOutputLabel": "ผลลัพธ์ที่ถอดรหัส",
+  "decodedOutputEmptyDescription": "ข้อความที่ถอดรหัสจะปรากฏที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลดไฟล์",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง",
+  "invalidBase32Title": "ข้อความ Base32 ไม่ถูกต้อง",
+  "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน"
+}
