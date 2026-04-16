@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Configuratie",
+  "configurationDescription": "Kies ASCII85 of Z85 voordat je tekst of bestandsbytes codeert.",
+  "alphabetLabel": "Alfabet",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Invoer",
+  "inputPlaceholder": "Voer tekst in om te coderen...",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "encodedOutputLabel": "Base85 Gecodeerd",
+  "encodedOutputDescription": "Gecodeerd resultaat voor de huidige tekst- of bestandsinvoer.",
+  "emptyStateDescription": "Voer tekst in of importeer een bestand om Base85-uitvoer te genereren.",
+  "downloadFileLabel": "Base85 downloaden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "invalidLengthTitle": "Z85 vereist invoerlengtes die een veelvoud van 4 bytes zijn.",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen"
+}

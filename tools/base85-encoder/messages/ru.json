@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Конфигурация",
+  "configurationDescription": "Выберите ASCII85 или Z85 перед кодированием текста или байтов файла.",
+  "alphabetLabel": "Алфавит",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Ввод",
+  "inputPlaceholder": "Введите текст для кодирования...",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите любой текст в UTF-8, включая эмодзи и нелатинские символы.",
+  "importFromFileLabel": "Импорт из файла",
+  "encodedOutputLabel": "Кодировка Base85",
+  "encodedOutputDescription": "Закодированный результат для текущего текста или файла.",
+  "emptyStateDescription": "Введите текст или импортируйте файл, чтобы получить вывод Base85.",
+  "downloadFileLabel": "Скачать Base85",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "invalidLengthTitle": "Z85 требует длину входных данных, кратную 4 байтам.",
+  "fileReadFailedTitle": "Не удалось прочитать файл"
+}

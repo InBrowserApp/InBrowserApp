@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "תצורה",
+  "configurationDescription": "בחרו ASCII85 או Z85 לפני קידוד טקסט או בתים של קובץ.",
+  "alphabetLabel": "אלפבית",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "קלט",
+  "inputPlaceholder": "הזן טקסט לקידוד...",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "encodedOutputLabel": "מקודד Base85",
+  "encodedOutputDescription": "התוצאה המקודדת עבור קלט הטקסט או הקובץ הנוכחי.",
+  "emptyStateDescription": "הזינו טקסט או ייבאו קובץ כדי ליצור פלט Base85.",
+  "downloadFileLabel": "הורד Base85",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "invalidLengthTitle": "Z85 דורש שאורך הקלט יהיה כפולה של 4 בתים.",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה"
+}

@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "कॉन्फ़िगरेशन",
+  "configurationDescription": "टेक्स्ट या फ़ाइल बाइट्स को एनकोड करने से पहले ASCII85 या Z85 चुनें।",
+  "alphabetLabel": "वर्णमाला",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "इनपुट",
+  "inputPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित किसी भी UTF-8 टेक्स्ट को पेस्ट करें या टाइप करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "encodedOutputLabel": "Base85 एन्कोडेड",
+  "encodedOutputDescription": "वर्तमान टेक्स्ट या फ़ाइल इनपुट के लिए एनकोड किया गया परिणाम।",
+  "emptyStateDescription": "Base85 आउटपुट बनाने के लिए टेक्स्ट दर्ज करें या फ़ाइल आयात करें।",
+  "downloadFileLabel": "Base85 डाउनलोड करें",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "invalidLengthTitle": "Z85 के लिए इनपुट लंबाई 4 बाइट के गुणज में होनी चाहिए।",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल"
+}

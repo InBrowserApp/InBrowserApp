@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "구성",
+  "configurationDescription": "텍스트나 파일 바이트를 인코딩하기 전에 ASCII85 또는 Z85를 선택하세요.",
+  "alphabetLabel": "알파벳",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "입력",
+  "inputPlaceholder": "인코딩할 텍스트 입력...",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력할 수 있습니다.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "encodedOutputLabel": "Base85 인코딩됨",
+  "encodedOutputDescription": "현재 텍스트 또는 파일 입력에 대한 인코딩 결과입니다.",
+  "emptyStateDescription": "텍스트를 입력하거나 파일을 가져와 Base85 출력을 생성하세요.",
+  "downloadFileLabel": "Base85 다운로드",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "invalidLengthTitle": "Z85는 입력 길이가 4바이트의 배수여야 합니다.",
+  "fileReadFailedTitle": "파일 읽기에 실패했습니다"
+}

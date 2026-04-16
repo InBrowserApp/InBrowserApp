@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "設定",
+  "configurationDescription": "在編碼文字或檔案位元組之前，先選擇 ASCII85 或 Z85。",
+  "alphabetLabel": "字母表",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "輸入",
+  "inputPlaceholder": "輸入要編碼的文字...",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
+  "importFromFileLabel": "從檔案匯入",
+  "encodedOutputLabel": "Base85 編碼",
+  "encodedOutputDescription": "目前文字或檔案輸入對應的編碼結果。",
+  "emptyStateDescription": "輸入文字或匯入檔案以產生 Base85 輸出。",
+  "downloadFileLabel": "下載 Base85",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "invalidLengthTitle": "Z85 要求輸入長度必須是 4 位元組的整數倍。",
+  "fileReadFailedTitle": "讀取檔案失敗"
+}

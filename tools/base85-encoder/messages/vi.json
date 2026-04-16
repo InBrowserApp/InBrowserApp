@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Cấu hình",
+  "configurationDescription": "Chọn ASCII85 hoặc Z85 trước khi mã hóa văn bản hoặc byte của tệp.",
+  "alphabetLabel": "Bảng chữ cái",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Đầu vào",
+  "inputPlaceholder": "Nhập văn bản để mã hóa...",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "encodedOutputLabel": "Đã mã hóa Base85",
+  "encodedOutputDescription": "Kết quả đã mã hóa cho đầu vào văn bản hoặc tệp hiện tại.",
+  "emptyStateDescription": "Nhập văn bản hoặc nhập tệp để tạo đầu ra Base85.",
+  "downloadFileLabel": "Tải Base85",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "invalidLengthTitle": "Z85 yêu cầu độ dài đầu vào là bội số của 4 byte.",
+  "fileReadFailedTitle": "Không thể đọc tệp"
+}

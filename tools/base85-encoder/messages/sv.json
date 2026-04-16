@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Konfiguration",
+  "configurationDescription": "Välj ASCII85 eller Z85 innan du kodar text eller filbyte.",
+  "alphabetLabel": "Alfabet",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Inmatning",
+  "inputPlaceholder": "Ange text att koda...",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "encodedOutputLabel": "Base85-kodad",
+  "encodedOutputDescription": "Kodad utdata för aktuell text- eller filinmatning.",
+  "emptyStateDescription": "Ange text eller importera en fil för att skapa Base85-utdata.",
+  "downloadFileLabel": "Ladda ner Base85",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "invalidLengthTitle": "Z85 kräver inmatningslängder som är multiplar av 4 byte.",
+  "fileReadFailedTitle": "Kunde inte läsa filen"
+}

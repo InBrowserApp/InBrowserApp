@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "配置",
+  "configurationDescription": "在编码文本或文件字节之前，先选择 ASCII85 或 Z85。",
+  "alphabetLabel": "字母表",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "输入",
+  "inputPlaceholder": "输入要编码的文本...",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "importFromFileLabel": "从文件导入",
+  "encodedOutputLabel": "Base85 编码",
+  "encodedOutputDescription": "当前文本或文件输入对应的编码结果。",
+  "emptyStateDescription": "输入文本或导入文件以生成 Base85 输出。",
+  "downloadFileLabel": "下载 Base85",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "invalidLengthTitle": "Z85 要求输入长度必须是 4 字节的整数倍。",
+  "fileReadFailedTitle": "读取文件失败"
+}

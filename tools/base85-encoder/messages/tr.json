@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Yapılandırma",
+  "configurationDescription": "Metni veya dosya baytlarını kodlamadan önce ASCII85 ya da Z85 seçin.",
+  "alphabetLabel": "Alfabe",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Giriş",
+  "inputPlaceholder": "Kodlanacak metni girin...",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "encodedOutputLabel": "Base85 Kodlanmış",
+  "encodedOutputDescription": "Geçerli metin veya dosya girdisi için kodlanmış sonuç.",
+  "emptyStateDescription": "Base85 çıktısı oluşturmak için metin girin veya bir dosya içe aktarın.",
+  "downloadFileLabel": "Base85 İndir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "invalidLengthTitle": "Z85, 4 baytın katı olan giriş uzunlukları gerektirir.",
+  "fileReadFailedTitle": "Dosya okunamadı"
+}

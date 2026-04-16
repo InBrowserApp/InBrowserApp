@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "設定",
+  "configurationDescription": "テキストやファイルのバイト列をエンコードする前に、ASCII85 または Z85 を選択します。",
+  "alphabetLabel": "アルファベット",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "入力",
+  "inputPlaceholder": "エンコードするテキストを入力...",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "絵文字や非ラテン文字を含む、任意の UTF-8 テキストを貼り付けたり入力したりできます。",
+  "importFromFileLabel": "ファイルから読み込み",
+  "encodedOutputLabel": "Base85エンコード済み",
+  "encodedOutputDescription": "現在のテキスト入力またはファイル入力に対応するエンコード結果です。",
+  "emptyStateDescription": "テキストを入力するか、ファイルを読み込んで Base85 出力を生成します。",
+  "downloadFileLabel": "Base85 をダウンロード",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "invalidLengthTitle": "Z85 では入力長が 4 バイトの倍数である必要があります。",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました"
+}

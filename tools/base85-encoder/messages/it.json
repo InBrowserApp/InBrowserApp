@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Configurazione",
+  "configurationDescription": "Scegli ASCII85 o Z85 prima di codificare testo o byte di file.",
+  "alphabetLabel": "Alfabeto",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Input",
+  "inputPlaceholder": "Inserisci testo da codificare...",
+  "plainTextLabel": "Testo semplice",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
+  "importFromFileLabel": "Importa da file",
+  "encodedOutputLabel": "Codificato Base85",
+  "encodedOutputDescription": "Risultato codificato per l’input di testo o file corrente.",
+  "emptyStateDescription": "Inserisci testo o importa un file per generare output Base85.",
+  "downloadFileLabel": "Scarica Base85",
+  "copyResultLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "invalidLengthTitle": "Z85 richiede lunghezze di input multiple di 4 byte.",
+  "fileReadFailedTitle": "Impossibile leggere il file"
+}

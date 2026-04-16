@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "การกำหนดค่า",
+  "configurationDescription": "เลือก ASCII85 หรือ Z85 ก่อนเข้ารหัสข้อความหรือไบต์ของไฟล์",
+  "alphabetLabel": "อักษร",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "ข้อมูลเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "encodedOutputLabel": "เข้ารหัส Base85",
+  "encodedOutputDescription": "ผลลัพธ์ที่เข้ารหัสสำหรับข้อความหรือไฟล์ที่ป้อนอยู่ตอนนี้",
+  "emptyStateDescription": "ป้อนข้อความหรือนำเข้าไฟล์เพื่อสร้างผลลัพธ์ Base85",
+  "downloadFileLabel": "ดาวน์โหลด Base85",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "invalidLengthTitle": "Z85 ต้องการความยาวอินพุตที่เป็นจำนวนเท่าของ 4 ไบต์",
+  "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ"
+}

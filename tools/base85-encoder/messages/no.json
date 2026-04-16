@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Konfigurasjon",
+  "configurationDescription": "Velg ASCII85 eller Z85 før du koder tekst eller filbyte.",
+  "alphabetLabel": "Alfabet",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Inndata",
+  "inputPlaceholder": "Skriv inn tekst for koding...",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "encodedOutputLabel": "Base85-kodet",
+  "encodedOutputDescription": "Kodet resultat for gjeldende tekst- eller filinndata.",
+  "emptyStateDescription": "Skriv inn tekst eller importer en fil for å generere Base85-utdata.",
+  "downloadFileLabel": "Last ned Base85",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "invalidLengthTitle": "Z85 krever inndatalengder som er multipler av 4 byte.",
+  "fileReadFailedTitle": "Kunne ikke lese filen"
+}

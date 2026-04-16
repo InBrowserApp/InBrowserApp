@@ -1,0 +1,20 @@
+{
+  "configurationLabel": "Configuration",
+  "configurationDescription": "Choose ASCII85 or Z85 before encoding text or file bytes.",
+  "alphabetLabel": "Alphabet",
+  "ascii85Label": "ASCII85",
+  "z85Label": "Z85",
+  "inputLabel": "Input",
+  "inputPlaceholder": "Enter text to encode...",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "encodedOutputLabel": "Base85 Encoded",
+  "encodedOutputDescription": "Encoded result for the current text or file input.",
+  "emptyStateDescription": "Enter text or import a file to generate Base85 output.",
+  "downloadFileLabel": "Download Base85",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "invalidLengthTitle": "Z85 requires input lengths that are a multiple of 4 bytes.",
+  "fileReadFailedTitle": "Failed to read file"
+}
