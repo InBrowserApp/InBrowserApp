@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Indata",
+  "inputPlaceholder": "Ange text för kodning...",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "encodedOutputLabel": "Hex-kodad",
+  "encodedOutputEmptyDescription": "Hex-utdata visas här...",
+  "downloadFileLabel": "Ladda ner Hex",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "fileReadFailedTitle": "Kunde inte läsa filen"
+}

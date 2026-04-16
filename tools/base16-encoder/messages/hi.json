@@ -1,0 +1,13 @@
+{
+  "inputLabel": "इनपुट",
+  "inputPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित किसी भी UTF-8 टेक्स्ट को पेस्ट करें या टाइप करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "encodedOutputLabel": "Hex एन्कोडेड",
+  "encodedOutputEmptyDescription": "Hex आउटपुट यहां दिखाई देगा...",
+  "downloadFileLabel": "Hex डाउनलोड करें",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल"
+}

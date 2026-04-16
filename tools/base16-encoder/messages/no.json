@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Inndata",
+  "inputPlaceholder": "Skriv inn tekst for å kode...",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "encodedOutputLabel": "Hex-kodet",
+  "encodedOutputEmptyDescription": "Hex-utdata vises her...",
+  "downloadFileLabel": "Last ned Hex",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "fileReadFailedTitle": "Kunne ikke lese filen"
+}

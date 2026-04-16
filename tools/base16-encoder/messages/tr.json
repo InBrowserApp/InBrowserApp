@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Girdi",
+  "inputPlaceholder": "Kodlamak için metin girin...",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "encodedOutputLabel": "Hex Kodlandı",
+  "encodedOutputEmptyDescription": "Hex çıktısı burada görünecek...",
+  "downloadFileLabel": "Hex indir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "fileReadFailedTitle": "Dosya okunamadı"
+}

@@ -1,0 +1,13 @@
+{
+  "inputLabel": "קלט",
+  "inputPlaceholder": "הזן טקסט לקידוד...",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "encodedOutputLabel": "מקודד Hex",
+  "encodedOutputEmptyDescription": "פלט Hex יופיע כאן...",
+  "downloadFileLabel": "הורד Hex",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה"
+}
