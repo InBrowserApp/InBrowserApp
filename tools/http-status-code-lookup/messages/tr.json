@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Durum kodu, ad veya aciklama ile ara...",
+  "all": "Tumü",
+  "common": "Yaygin",
+  "informationalFilter": "Bilgilendirici (1xx)",
+  "successFilter": "Basarili (2xx)",
+  "redirectionFilter": "Yonlendirme (3xx)",
+  "clientErrorFilter": "Istekci Hatasi (4xx)",
+  "serverErrorFilter": "Sunucu Hatasi (5xx)",
+  "code": "Kod",
+  "name": "Ad",
+  "category": "Kategori",
+  "description": "Aciklama",
+  "informational": "Bilgilendirici",
+  "success": "Basarili",
+  "redirection": "Yonlendirme",
+  "clientError": "Istekci Hatasi",
+  "serverError": "Sunucu Hatasi",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

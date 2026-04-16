@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Szukaj po kodzie statusu, nazwie lub opisie...",
+  "all": "Wszystkie",
+  "common": "Popularne",
+  "informationalFilter": "Informacyjny (1xx)",
+  "successFilter": "Sukces (2xx)",
+  "redirectionFilter": "Przekierowanie (3xx)",
+  "clientErrorFilter": "Blad Klienta (4xx)",
+  "serverErrorFilter": "Blad Serwera (5xx)",
+  "code": "Kod",
+  "name": "Nazwa",
+  "category": "Kategoria",
+  "description": "Opis",
+  "informational": "Informacyjny",
+  "success": "Sukces",
+  "redirection": "Przekierowanie",
+  "clientError": "Blad Klienta",
+  "serverError": "Blad Serwera",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

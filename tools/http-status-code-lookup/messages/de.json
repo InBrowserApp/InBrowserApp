@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Nach Statuscode, Name oder Beschreibung suchen...",
+  "all": "Alle",
+  "common": "Haufig",
+  "informationalFilter": "Informationell (1xx)",
+  "successFilter": "Erfolg (2xx)",
+  "redirectionFilter": "Weiterleitung (3xx)",
+  "clientErrorFilter": "Client-Fehler (4xx)",
+  "serverErrorFilter": "Server-Fehler (5xx)",
+  "code": "Code",
+  "name": "Name",
+  "category": "Kategorie",
+  "description": "Beschreibung",
+  "informational": "Informationell",
+  "success": "Erfolg",
+  "redirection": "Weiterleitung",
+  "clientError": "Client-Fehler",
+  "serverError": "Server-Fehler",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}
