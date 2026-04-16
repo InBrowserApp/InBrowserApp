@@ -2390,6 +2390,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "iban-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["iban", "validator", "bank", "finance", "payment"],
+    locales: {
+      ar: {
+        name: "مدقق IBAN",
+        description: "يتحقق من IBAN بطول البلد والتنسيق والمجموع الاختباري.",
+      },
+      de: {
+        name: "IBAN-Validator",
+        description: "Validiert IBANs mit Länder-Länge, Format und Prüfsumme.",
+      },
+      en: {
+        name: "IBAN Validator",
+        description:
+          "Validate IBAN numbers with country length, format, and checksum checks.",
+      },
+      es: {
+        name: "Validador de IBAN",
+        description:
+          "Valida números IBAN con longitud de país, formato y checksum.",
+      },
+      fr: {
+        name: "Validateur d'IBAN",
+        description:
+          "Valide les IBAN avec la longueur du pays, le format et la somme de contrôle.",
+      },
+      he: {
+        name: "מאמת IBAN",
+        description: "מאמת IBAN לפי אורך מדינה, פורמט וסכום ביקורת.",
+      },
+      hi: {
+        name: "IBAN सत्यापनकर्ता",
+        description: "देश की लंबाई, प्रारूप और चेकसम के साथ IBAN सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IBAN",
+        description:
+          "Memvalidasi IBAN berdasarkan panjang negara, format, dan checksum.",
+      },
+      it: {
+        name: "Validatore IBAN",
+        description:
+          "Valida gli IBAN con lunghezza del paese, formato e checksum.",
+      },
+      ja: {
+        name: "IBAN 検証",
+        description: "国別の長さ、形式、チェックサムで IBAN を検証します。",
+      },
+      ko: {
+        name: "IBAN 검증기",
+        description: "국가별 길이, 형식, 체크섬으로 IBAN을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IBAN",
+        description:
+          "Mengesahkan IBAN berdasarkan panjang negara, format dan checksum.",
+      },
+      nl: {
+        name: "IBAN-validator",
+        description: "Valideert IBAN's met landlengte, formaat en controlesom.",
+      },
+      no: {
+        name: "IBAN-validerer",
+        description: "Validerer IBAN med landlengde, format og kontrollsum.",
+      },
+      pl: {
+        name: "Walidator IBAN",
+        description:
+          "Weryfikuje IBAN pod kątem długości kraju, formatu i sumy kontrolnej.",
+      },
+      pt: {
+        name: "Validador de IBAN",
+        description:
+          "Valida IBANs com comprimento do país, formato e checksum.",
+      },
+      ru: {
+        name: "Валидатор IBAN",
+        description:
+          "Проверяет IBAN по длине страны, формату и контрольной сумме.",
+      },
+      sv: {
+        name: "IBAN-validerare",
+        description: "Validerar IBAN med landlängd, format och kontrollsumma.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IBAN",
+        description: "ตรวจสอบ IBAN ตามความยาวประเทศ รูปแบบ และผลรวมตรวจสอบ",
+      },
+      tr: {
+        name: "IBAN Doğrulayıcı",
+        description:
+          "IBAN'ları ülke uzunluğu, biçim ve sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IBAN",
+        description:
+          "Xác thực IBAN theo độ dài quốc gia, định dạng và checksum.",
+      },
+      "zh-CN": {
+        name: "IBAN 验证器",
+        description: "验证 IBAN 号码，检查国家长度、格式和校验和。",
+      },
+      "zh-TW": {
+        name: "IBAN 驗證器",
+        description: "驗證 IBAN 號碼，檢查國家長度、格式和校驗和。",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",
@@ -11880,6 +11991,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "HTML 實體編碼 & 解碼",
         description:
           "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  "iban-validator": {
+    slug: "iban-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["iban", "validator", "bank", "finance", "payment"],
+    locales: {
+      ar: {
+        name: "مدقق IBAN",
+        description: "يتحقق من IBAN بطول البلد والتنسيق والمجموع الاختباري.",
+      },
+      de: {
+        name: "IBAN-Validator",
+        description: "Validiert IBANs mit Länder-Länge, Format und Prüfsumme.",
+      },
+      en: {
+        name: "IBAN Validator",
+        description:
+          "Validate IBAN numbers with country length, format, and checksum checks.",
+      },
+      es: {
+        name: "Validador de IBAN",
+        description:
+          "Valida números IBAN con longitud de país, formato y checksum.",
+      },
+      fr: {
+        name: "Validateur d'IBAN",
+        description:
+          "Valide les IBAN avec la longueur du pays, le format et la somme de contrôle.",
+      },
+      he: {
+        name: "מאמת IBAN",
+        description: "מאמת IBAN לפי אורך מדינה, פורמט וסכום ביקורת.",
+      },
+      hi: {
+        name: "IBAN सत्यापनकर्ता",
+        description: "देश की लंबाई, प्रारूप और चेकसम के साथ IBAN सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IBAN",
+        description:
+          "Memvalidasi IBAN berdasarkan panjang negara, format, dan checksum.",
+      },
+      it: {
+        name: "Validatore IBAN",
+        description:
+          "Valida gli IBAN con lunghezza del paese, formato e checksum.",
+      },
+      ja: {
+        name: "IBAN 検証",
+        description: "国別の長さ、形式、チェックサムで IBAN を検証します。",
+      },
+      ko: {
+        name: "IBAN 검증기",
+        description: "국가별 길이, 형식, 체크섬으로 IBAN을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IBAN",
+        description:
+          "Mengesahkan IBAN berdasarkan panjang negara, format dan checksum.",
+      },
+      nl: {
+        name: "IBAN-validator",
+        description: "Valideert IBAN's met landlengte, formaat en controlesom.",
+      },
+      no: {
+        name: "IBAN-validerer",
+        description: "Validerer IBAN med landlengde, format og kontrollsum.",
+      },
+      pl: {
+        name: "Walidator IBAN",
+        description:
+          "Weryfikuje IBAN pod kątem długości kraju, formatu i sumy kontrolnej.",
+      },
+      pt: {
+        name: "Validador de IBAN",
+        description:
+          "Valida IBANs com comprimento do país, formato e checksum.",
+      },
+      ru: {
+        name: "Валидатор IBAN",
+        description:
+          "Проверяет IBAN по длине страны, формату и контрольной сумме.",
+      },
+      sv: {
+        name: "IBAN-validerare",
+        description: "Validerar IBAN med landlängd, format och kontrollsumma.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IBAN",
+        description: "ตรวจสอบ IBAN ตามความยาวประเทศ รูปแบบ และผลรวมตรวจสอบ",
+      },
+      tr: {
+        name: "IBAN Doğrulayıcı",
+        description:
+          "IBAN'ları ülke uzunluğu, biçim ve sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IBAN",
+        description:
+          "Xác thực IBAN theo độ dài quốc gia, định dạng và checksum.",
+      },
+      "zh-CN": {
+        name: "IBAN 验证器",
+        description: "验证 IBAN 号码，检查国家长度、格式和校验和。",
+      },
+      "zh-TW": {
+        name: "IBAN 驗證器",
+        description: "驗證 IBAN 號碼，檢查國家長度、格式和校驗和。",
       },
     },
   },

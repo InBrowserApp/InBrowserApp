@@ -27,6 +27,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "IBAN Doğrulayıcı",
+  "description": "IBAN'ları ülke uzunluğu, biçim ve sağlama toplamı ile doğrular."
+}

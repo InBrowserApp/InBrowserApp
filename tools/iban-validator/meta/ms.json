@@ -1,0 +1,4 @@
+{
+  "name": "Pengesah IBAN",
+  "description": "Mengesahkan IBAN berdasarkan panjang negara, format dan checksum."
+}
