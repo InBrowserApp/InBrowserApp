@@ -102,6 +102,11 @@ function numericToPermissions(numeric: string): Permissions {
   }
 
   const digits = numeric.trim().padStart(3, "0").slice(-3).split("")
+  const [ownerDigit, groupDigit, othersDigit] = digits as [
+    string,
+    string,
+    string,
+  ]
   const parseDigit = (digit: string): PermissionSet => {
     const value = Number.parseInt(digit, 10)
     return {
@@ -112,9 +117,9 @@ function numericToPermissions(numeric: string): Permissions {
   }
 
   return {
-    owner: parseDigit(digits[0] ?? "0"),
-    group: parseDigit(digits[1] ?? "0"),
-    others: parseDigit(digits[2] ?? "0"),
+    owner: parseDigit(ownerDigit),
+    group: parseDigit(groupDigit),
+    others: parseDigit(othersDigit),
   }
 }
 
