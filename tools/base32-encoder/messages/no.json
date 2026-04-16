@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Inndata",
+  "inputPlaceholder": "Skriv inn tekst for koding...",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "encodedOutputLabel": "Base32-kodet",
+  "encodedOutputEmptyDescription": "Base32-utdata vises her...",
+  "downloadFileLabel": "Last ned Base32",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "fileReadFailedTitle": "Kunne ikke lese filen"
+}

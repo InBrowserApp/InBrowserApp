@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Đầu vào",
+  "inputPlaceholder": "Nhập văn bản để mã hóa...",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "encodedOutputLabel": "Đã mã hóa Base32",
+  "encodedOutputEmptyDescription": "Kết quả Base32 sẽ xuất hiện ở đây...",
+  "downloadFileLabel": "Tải Base32",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "fileReadFailedTitle": "Không thể đọc tệp"
+}

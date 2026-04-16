@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Inmatning",
+  "inputPlaceholder": "Ange text att koda...",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "encodedOutputLabel": "Base32-kodad",
+  "encodedOutputEmptyDescription": "Base32-utdata visas här...",
+  "downloadFileLabel": "Ladda ner Base32",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "fileReadFailedTitle": "Kunde inte läsa filen"
+}

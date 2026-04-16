@@ -1,0 +1,13 @@
+{
+  "inputLabel": "קלט",
+  "inputPlaceholder": "הזן טקסט לקידוד...",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "encodedOutputLabel": "מקודד Base32",
+  "encodedOutputEmptyDescription": "פלט Base32 יוצג כאן...",
+  "downloadFileLabel": "הורד Base32",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה"
+}
