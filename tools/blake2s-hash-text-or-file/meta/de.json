@@ -1,0 +1,4 @@
+{
+  "name": "BLAKE2s-Hash für Text oder Datei",
+  "description": "Generieren Sie BLAKE2s-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke"
+}
