@@ -213,6 +213,5 @@ export {
   getResidentIdCheckDigit,
   normalizeResidentId,
   validateResidentId,
-  type ResidentIdGender,
   type ResidentIdValidationResult,
 }
