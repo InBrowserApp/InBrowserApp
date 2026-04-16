@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bic-swift-validator",
+    language: "ar",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "de",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "en",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "es",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "fr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "he",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "hi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "id",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "it",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ja",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ko",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ms",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "nl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "no",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pt",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ru",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "sv",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "th",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "tr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "vi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "bip39-mnemonic-generator",
     language: "ar",
   },

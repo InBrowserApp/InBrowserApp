@@ -1,0 +1,4 @@
+{
+  "name": "BIC/SWIFT Doğrulayıcı",
+  "description": "BIC/SWIFT kodlarını doğrular ve banka, ülke ve şube bilgilerini analiz eder."
+}

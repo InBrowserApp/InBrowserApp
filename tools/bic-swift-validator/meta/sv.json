@@ -1,0 +1,4 @@
+{
+  "name": "BIC/SWIFT-validerare",
+  "description": "Validerar BIC/SWIFT-koder och tolkar bank-, land- och filialdetaljer."
+}

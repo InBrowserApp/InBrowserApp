@@ -1,0 +1,4 @@
+{
+  "name": "BIC/SWIFT 검증기",
+  "description": "BIC/SWIFT 코드를 검증하고 은행, 국가, 지점 정보를 분석합니다."
+}
