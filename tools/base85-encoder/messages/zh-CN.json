@@ -1,0 +1,17 @@
+{
+  "alphabet": "字母表",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "输入",
+  "inputPlaceholder": "输入要编码的文本...",
+  "outputTitle": "Base85 编码",
+  "outputPlaceholder": "Base85 输出将显示在这里...",
+  "download": "下载 Base85",
+  "readFailed": "读取文件失败",
+  "invalidBase85": "Z85 要求输入长度必须是 4 字节的倍数。",
+  "loadSample": "加载示例",
+  "clearLabel": "清空",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制",
+  "importFromFileLabel": "从文件导入"
+}

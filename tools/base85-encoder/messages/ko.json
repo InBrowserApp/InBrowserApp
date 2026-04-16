@@ -1,0 +1,17 @@
+{
+  "alphabet": "알파벳",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "입력",
+  "inputPlaceholder": "인코딩할 텍스트 입력...",
+  "outputTitle": "Base85 인코딩됨",
+  "outputPlaceholder": "Base85 출력이 여기에 표시됩니다...",
+  "download": "Base85 다운로드",
+  "readFailed": "파일 읽기에 실패했습니다",
+  "invalidBase85": "Z85는 입력 길이가 4바이트의 배수여야 합니다.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "파일에서 가져오기"
+}

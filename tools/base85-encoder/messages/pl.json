@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Wejście",
+  "inputPlaceholder": "Wprowadź tekst do kodowania...",
+  "outputTitle": "Zakodowany Base85",
+  "outputPlaceholder": "Wyjście Base85 pojawi się tutaj...",
+  "download": "Pobierz Base85",
+  "readFailed": "Nie udało się odczytać pliku",
+  "invalidBase85": "Z85 wymaga, aby długość wejścia była wielokrotnością 4 bajtów.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Importuj z pliku"
+}
