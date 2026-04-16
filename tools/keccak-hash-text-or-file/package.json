@@ -1,0 +1,25 @@
+{
+  "name": "@tool/keccak-hash-text-or-file",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "crypto-js": "catalog:",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "catalog:",
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}
