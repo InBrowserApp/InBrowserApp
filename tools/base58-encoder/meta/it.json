@@ -1,0 +1,4 @@
+{
+  "name": "Codificatore Base58",
+  "description": "Codifica testo o file in Base58 per trasmissione dati, archiviazione e sviluppo web."
+}

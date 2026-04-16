@@ -1,0 +1,4 @@
+{
+  "name": "Bộ mã hóa Base58",
+  "description": "Mã hóa văn bản hoặc tệp sang Base58 cho truyền dữ liệu, lưu trữ và phát triển web."
+}

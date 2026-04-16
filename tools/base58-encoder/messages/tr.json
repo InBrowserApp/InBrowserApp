@@ -1,0 +1,18 @@
+{
+  "options": "Seçenekler",
+  "alphabet": "Alfabe",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Giriş",
+  "inputPlaceholder": "Kodlanacak metni girin...",
+  "outputTitle": "Base58 Kodlanmış",
+  "outputPlaceholder": "Base58 çıktısı burada görünecek...",
+  "download": "Base58 İndir",
+  "readFailed": "Dosya okunamadı",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Dosyadan içe aktar"
+}

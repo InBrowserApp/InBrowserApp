@@ -1,0 +1,18 @@
+{
+  "options": "Tùy chọn",
+  "alphabet": "Bảng chữ cái",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Đầu vào",
+  "inputPlaceholder": "Nhập văn bản để mã hóa...",
+  "outputTitle": "Đã mã hóa Base58",
+  "outputPlaceholder": "Kết quả Base58 sẽ xuất hiện ở đây...",
+  "download": "Tải Base58",
+  "readFailed": "Không thể đọc tệp",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Nhập từ tệp"
+}

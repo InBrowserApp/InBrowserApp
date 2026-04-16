@@ -1,0 +1,18 @@
+{
+  "options": "オプション",
+  "alphabet": "アルファベット",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "入力",
+  "inputPlaceholder": "エンコードするテキストを入力...",
+  "outputTitle": "Base58エンコード済み",
+  "outputPlaceholder": "Base58 出力がここに表示されます...",
+  "download": "Base58 をダウンロード",
+  "readFailed": "ファイルの読み取りに失敗しました",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "ファイルから読み込み"
+}
