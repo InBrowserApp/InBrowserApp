@@ -313,5 +313,4 @@ export {
   normalizeResidentId,
   validateResidentId,
   type ResidentIdAnalysisResult,
-  type ResidentIdValidationResult,
 }
