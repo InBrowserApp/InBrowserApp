@@ -3,7 +3,14 @@ import {
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
+import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@workspace/ui/components/ui/alert"
+import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   CardDescription,
   CardHeader,
@@ -15,11 +22,19 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { FileText, Trash2 } from "@workspace/ui/icons"
+import {
+  FileText,
+  Play,
+  Square,
+  Trash2,
+  TriangleAlert,
+} from "@workspace/ui/icons"
 
-import type { MorseCodeConverterMessagesCatalog } from "../types"
+import type { MorseCodeConverterMessagesCatalog, ResultStatus } from "../types"
 
 type InputCardProps = Readonly<{
+  errorMessage: string | null
+  isPlaying: boolean
   morseInput: string
   morseInputId: string
   messages: MorseCodeConverterMessagesCatalog & {
@@ -28,23 +43,31 @@ type InputCardProps = Readonly<{
       description: string
     }
   }
+  status: ResultStatus
   textInput: string
   textInputId: string
   onClear: () => void
   onLoadSample: () => void
   onMorseInputChange: (value: string) => void
+  onPlay: () => void
+  onStop: () => void
   onTextInputChange: (value: string) => void
 }>
 
 function InputCard({
+  errorMessage,
+  isPlaying,
   morseInput,
   morseInputId,
   messages,
+  status,
   textInput,
   textInputId,
   onClear,
   onLoadSample,
   onMorseInputChange,
+  onPlay,
+  onStop,
   onTextInputChange,
 }: InputCardProps) {
   return (
@@ -55,7 +78,15 @@ function InputCard({
       </CardHeader>
       <ToolPanelCardContent className="gap-5">
         <Field>
-          <FieldLabel htmlFor={textInputId}>{messages.textLabel}</FieldLabel>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <FieldLabel htmlFor={textInputId}>{messages.textLabel}</FieldLabel>
+            <ToolCopyButton
+              value={textInput}
+              copyLabel={messages.copyLabel}
+              copiedLabel={messages.copiedLabel}
+              variant="ghost"
+            />
+          </div>
           <FieldContent>
             <Textarea
               id={textInputId}
@@ -71,9 +102,34 @@ function InputCard({
         </Field>
 
         <Field>
-          <FieldLabel htmlFor={morseInputId}>
-            {messages.morseCodeLabel}
-          </FieldLabel>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <FieldLabel htmlFor={morseInputId}>
+              {messages.morseCodeLabel}
+            </FieldLabel>
+            <div className="flex flex-wrap items-center gap-2">
+              {status === "valid" && morseInput.length > 0 ? (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={isPlaying ? onStop : onPlay}
+                >
+                  {isPlaying ? (
+                    <Square data-icon="inline-start" />
+                  ) : (
+                    <Play data-icon="inline-start" />
+                  )}
+                  {isPlaying ? messages.stop : messages.play}
+                </Button>
+              ) : null}
+              <ToolCopyButton
+                value={morseInput}
+                copyLabel={messages.copyLabel}
+                copiedLabel={messages.copiedLabel}
+                variant="ghost"
+              />
+            </div>
+          </div>
           <FieldContent>
             <Textarea
               id={morseInputId}
@@ -88,6 +144,22 @@ function InputCard({
             />
           </FieldContent>
         </Field>
+
+        {status === "valid" && morseInput.length > 0 ? (
+          <div className="flex items-center">
+            <Badge variant="secondary">{messages.validLabel}</Badge>
+          </div>
+        ) : null}
+
+        {status === "invalid" && errorMessage ? (
+          <Alert variant="destructive">
+            <TriangleAlert />
+            {errorMessage !== messages.invalidMorseCode ? (
+              <AlertTitle>{messages.invalidLabel}</AlertTitle>
+            ) : null}
+            <AlertDescription>{errorMessage}</AlertDescription>
+          </Alert>
+        ) : null}
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-start gap-3 border-t">
         <Button type="button" variant="ghost" size="sm" onClick={onLoadSample}>

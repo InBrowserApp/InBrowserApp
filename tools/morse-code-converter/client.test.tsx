@@ -46,11 +46,11 @@ describe("MorseCodeConverterClient", () => {
   test("renders the default sample state", () => {
     render(<MorseCodeConverterClient messages={messages} />)
 
-    expect(screen.getAllByDisplayValue("HELLO WORLD").length).toBe(2)
+    expect(screen.getAllByDisplayValue("HELLO WORLD").length).toBe(1)
     expect(
       screen.getAllByDisplayValue(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")
         .length
-    ).toBeTruthy()
+    ).toBe(1)
     expect(screen.getByText(messages.validLabel)).toBeTruthy()
   })
 
@@ -91,7 +91,7 @@ describe("MorseCodeConverterClient", () => {
     })
 
     await waitFor(() => {
-      expect(screen.getAllByText(messages.invalidMorseCode).length).toBe(2)
+      expect(screen.getAllByText(messages.invalidMorseCode).length).toBe(1)
     })
   })
 

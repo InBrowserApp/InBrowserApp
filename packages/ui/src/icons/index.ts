@@ -32,6 +32,7 @@ export {
   RefreshCcw,
   Search,
   Sparkles,
+  Square,
   Sun,
   SunMoon,
   Trash2,

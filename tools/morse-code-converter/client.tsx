@@ -1,7 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react"
 
 import { InputCard } from "./components/input-card"
-import { ResultCard } from "./components/result-card"
 import {
   DEFAULT_MORSE_INPUT,
   DEFAULT_TEXT_INPUT,
@@ -204,40 +203,32 @@ function MorseCodeConverterClient({
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-      <InputCard
-        messages={messages}
-        textInput={textInput}
-        textInputId={textInputId}
-        morseInput={morseInput}
-        morseInputId={morseInputId}
-        onTextInputChange={handleTextInputChange}
-        onMorseInputChange={handleMorseInputChange}
-        onLoadSample={() => {
-          stopPlayback()
-          setActiveSource("text")
-          setTextInput(DEFAULT_TEXT_INPUT)
-          setMorseInput(DEFAULT_MORSE_INPUT)
-        }}
-        onClear={() => {
-          stopPlayback()
-          setActiveSource("text")
-          setTextInput("")
-          setMorseInput("")
-        }}
-      />
-
-      <ResultCard
-        messages={messages}
-        status={result.status}
-        errorMessage={result.errorMessage}
-        textOutput={result.textOutput}
-        morseOutput={result.morseOutput}
-        isPlaying={isPlaying}
-        onPlay={handlePlay}
-        onStop={stopPlayback}
-      />
-    </div>
+    <InputCard
+      messages={messages}
+      textInput={textInput}
+      textInputId={textInputId}
+      morseInput={morseInput}
+      morseInputId={morseInputId}
+      status={result.status}
+      errorMessage={result.errorMessage}
+      isPlaying={isPlaying}
+      onTextInputChange={handleTextInputChange}
+      onMorseInputChange={handleMorseInputChange}
+      onPlay={handlePlay}
+      onStop={stopPlayback}
+      onLoadSample={() => {
+        stopPlayback()
+        setActiveSource("text")
+        setTextInput(DEFAULT_TEXT_INPUT)
+        setMorseInput(DEFAULT_MORSE_INPUT)
+      }}
+      onClear={() => {
+        stopPlayback()
+        setActiveSource("text")
+        setTextInput("")
+        setMorseInput("")
+      }}
+    />
   )
 }
 
