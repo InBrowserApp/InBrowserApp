@@ -1,9 +1,19 @@
-## Que es un Codigo de Estado HTTP?
+## ?Que es un codigo de estado HTTP?
 
-Los codigos de estado HTTP son numeros de tres digitos devueltos por un servidor para indicar el resultado de una solicitud del cliente. Se agrupan en cinco categorias:
+Los codigos de estado HTTP son codigos de respuesta de tres cifras que devuelve un servidor para mostrar que ocurrio con una solicitud. Aparecen con frecuencia en las herramientas de desarrollador del navegador, respuestas de API, registros del servidor, monitores de disponibilidad y paneles de proxy inverso.
 
-- **1xx Informativo:** Indica que la solicitud fue recibida y el proceso continua.
-- **2xx Exito:** Indica que la solicitud fue recibida, entendida y aceptada exitosamente.
-- **3xx Redireccion:** Indica que se necesita tomar una accion adicional para completar la solicitud.
-- **4xx Error del Cliente:** Indica que el cliente cometio un error en la solicitud (por ejemplo, 404 No Encontrado, 401 No Autorizado).
-- **5xx Error del Servidor:** Indica que el servidor encontro un error al procesar la solicitud (por ejemplo, 500 Error Interno del Servidor, 503 Servicio No Disponible).
+### Como leer las principales familias de codigos
+
+- **1xx Informativo:** El servidor recibio la solicitud y el intercambio sigue en curso.
+- **2xx Exito:** La solicitud se completo correctamente.
+- **3xx Redireccion:** El cliente debe seguir otra ubicacion o reutilizar un resultado almacenado en cache.
+- **4xx Error del cliente:** La propia solicitud tiene un problema, como un recurso inexistente, una entrada invalida o una autenticacion fallida.
+- **5xx Error del servidor:** El servidor o una dependencia ascendente fallo mientras procesaba una solicitud valida.
+
+### Cuando resulta util este lookup
+
+Usa esta herramienta cuando necesites confirmar el significado de un codigo, comparar codigos parecidos como 401 frente a 403 o 502 frente a 504, o buscar a partir de una frase que aparece en un mensaje de error. La busqueda funciona por codigo, nombre del estado y descripcion localizada.
+
+### Por que importa interpretarlo bien
+
+Durante la depuracion, el codigo de estado suele ser la pista mas rapida. Una respuesta 4xx normalmente apunta a la solicitud, las credenciales o el recurso objetivo. Una respuesta 5xx suele apuntar a la aplicacion, la pasarela o un servicio ascendente. Leer primero la categoria ayuda a elegir mejor el siguiente paso.

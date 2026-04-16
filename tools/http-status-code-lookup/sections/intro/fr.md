@@ -1,9 +1,19 @@
-## Qu'est-ce qu'un Code de Statut HTTP ?
+## Qu'est-ce qu'un code de statut HTTP ?
 
-Les codes de statut HTTP sont des nombres a trois chiffres renvoyes par un serveur pour indiquer le resultat d'une requete du client. Ils sont groupes en cinq categories:
+Un code de statut HTTP est un code de reponse a trois chiffres renvoye par un serveur pour indiquer ce qui s'est passe pendant une requete. On le retrouve souvent dans les outils de developpement du navigateur, les reponses API, les journaux serveur, les sondes de supervision et les tableaux de bord de proxy inverse.
 
-- **1xx Informationnel:** Indique que la requete a ete recue et que le processus se poursuit.
-- **2xx Succes:** Indique que la requete a ete recue, comprise et acceptee avec succes.
-- **3xx Redirection:** Indique qu'une action supplementaire doit etre entreprise pour completer la requete.
-- **4xx Erreur Client:** Indique que le client a commis une erreur dans la requete (par exemple, 404 Non Trouve, 401 Non Autorise).
-- **5xx Erreur Serveur:** Indique que le serveur a rencontre une erreur lors du traitement de la requete (par exemple, 500 Erreur Interne du Serveur, 503 Service Indisponible).
+### Comment lire les principales familles de codes
+
+- **1xx Informationnel :** Le serveur a bien recu la requete et le traitement continue.
+- **2xx Succes :** La requete s'est terminee correctement.
+- **3xx Redirection :** Le client doit suivre un autre emplacement ou reutiliser un resultat mis en cache.
+- **4xx Erreur client :** La requete elle-meme pose probleme, par exemple ressource absente, entree invalide ou authentification echouee.
+- **5xx Erreur serveur :** Le serveur ou une dependance amont a echoue pendant le traitement d'une requete valide.
+
+### Quand ce lookup est utile
+
+Utilisez cet outil lorsque vous voulez confirmer la signification d'un code, comparer des codes proches comme 401 et 403 ou 502 et 504, ou rechercher a partir d'une expression vue dans un message d'erreur. La recherche fonctionne par code, nom du statut et description localisee.
+
+### Pourquoi une interpretation correcte compte
+
+Lors d'un diagnostic, le code de statut est souvent l'indice le plus rapide. Une reponse 4xx pointe generalement vers la requete, les identifiants ou la ressource cible. Une reponse 5xx pointe plutot vers l'application, la passerelle ou un service amont. Lire la categorie en premier aide a choisir la bonne suite.

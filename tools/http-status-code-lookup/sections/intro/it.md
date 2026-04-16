@@ -1,9 +1,19 @@
-## Cos'e un Codice di Stato HTTP?
+## Che cos'e un codice di stato HTTP?
 
-I codici di stato HTTP sono numeri a tre cifre restituiti da un server per indicare il risultato di una richiesta del client. Sono raggruppati in cinque categorie:
+I codici di stato HTTP sono codici di risposta a tre cifre restituiti da un server per mostrare che cosa e successo a una richiesta. Li trovi spesso negli strumenti di sviluppo del browser, nelle risposte API, nei log del server, nei controlli di disponibilita e nelle dashboard dei reverse proxy.
 
-- **1xx Informativo:** Indica che la richiesta e stata ricevuta e il processo continua.
-- **2xx Successo:** Indica che la richiesta e stata ricevuta, compresa e accettata con successo.
-- **3xx Reindirizzamento:** Indica che e necessario intraprendere ulteriori azioni per completare la richiesta.
-- **4xx Errore Client:** Indica che il client ha commesso un errore nella richiesta (ad esempio, 404 Non Trovato, 401 Non Autorizzato).
-- **5xx Errore Server:** Indica che il server ha riscontrato un errore durante l'elaborazione della richiesta (ad esempio, 500 Errore Interno del Server, 503 Servizio Non Disponibile).
+### Come leggere le principali famiglie di codici
+
+- **1xx Informativo:** Il server ha ricevuto la richiesta e l'elaborazione e ancora in corso.
+- **2xx Successo:** La richiesta e stata completata correttamente.
+- **3xx Reindirizzamento:** Il client deve seguire un'altra posizione oppure riutilizzare un risultato in cache.
+- **4xx Errore del client:** La richiesta stessa ha un problema, come una risorsa mancante, un input non valido o un'autenticazione fallita.
+- **5xx Errore del server:** Il server o una dipendenza a monte ha fallito durante l'elaborazione di una richiesta valida.
+
+### Quando questo lookup e utile
+
+Usa questo strumento quando vuoi confermare il significato di un codice, confrontare codici simili come 401 e 403 oppure 502 e 504, o cercare una frase vista in un messaggio di errore. La ricerca supporta codice, nome dello stato e descrizione localizzata.
+
+### Perche una corretta interpretazione conta
+
+Durante il debugging, il codice di stato e spesso l'indizio piu rapido. Una risposta 4xx di solito punta alla richiesta, alle credenziali o alla risorsa di destinazione. Una risposta 5xx di solito punta all'applicazione, al gateway o a un servizio a monte. Leggere prima la categoria aiuta a scegliere il passo successivo giusto.
