@@ -4694,6 +4694,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "prc-id-validator",
+    language: "ar",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "de",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "en",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "es",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "fr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "he",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "hi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "id",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "it",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ja",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ko",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ms",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "nl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "no",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pt",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ru",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "sv",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "th",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "tr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "vi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "prettier-code-formatter",
     language: "ar",
   },

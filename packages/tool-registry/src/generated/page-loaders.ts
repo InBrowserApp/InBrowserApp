@@ -65,6 +65,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>

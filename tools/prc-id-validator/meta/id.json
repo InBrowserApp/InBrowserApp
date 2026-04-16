@@ -1,0 +1,4 @@
+{
+  "name": "Validator ID penduduk Tiongkok",
+  "description": "Memvalidasi ID penduduk Tiongkok dan menguraikan wilayah, tanggal lahir, serta checksum"
+}
