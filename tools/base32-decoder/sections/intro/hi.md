@@ -1,15 +1,15 @@
-## What is Base32?
+## Base32 क्या है?
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+Base32 तब उपयोगी है जब केवल टेक्स्ट वाला या case-insensitive चैनल बाइनरी डेटा ले जाना चाहता है, जैसे OTP secrets, DNS-safe tokens या exported configuration values. यह encoding layer है, security layer नहीं है.
 
-## When to use it
+## इसका उपयोग कब करें
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- Base32 secrets या tokens को उनके original bytes में decode करने के लिए.
+- TOTP setup, integration exports या config files से कॉपी किए गए values को inspect करने के लिए.
+- यह जांचने के लिए कि pasted Base32 data उपयोग से पहले valid characters और सही padding रखता है या नहीं.
 
-## What to keep in mind
+## किन बातों का ध्यान रखें
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- Base32, Base64 की तुलना में data size को ज्यादा बढ़ाता है.
+- यह original value को encrypt या hide नहीं करता.
+- कुछ systems `=` padding छोड़ देते हैं, लेकिन invalid characters फिर भी decode error पैदा करते हैं.

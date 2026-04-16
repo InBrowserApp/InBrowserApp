@@ -1,15 +1,15 @@
-## What is Base32?
+## מהו Base32?
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+Base32 שימושי כאשר ערוץ טקסטואלי בלבד או ערוץ שאינו תלוי רישיות צריך לשאת נתונים בינאריים, כמו סודות OTP, אסימונים שמתאימים ל-DNS או ערכי תצורה שיוצאו. זו שכבת קידוד, לא שכבת אבטחה.
 
-## When to use it
+## מתי להשתמש בו
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- לפענח סודות או אסימוני Base32 בחזרה לבתים המקוריים שלהם.
+- לבדוק ערכים שהועתקו מהגדרת TOTP, מייצואי אינטגרציה או מקובצי תצורה.
+- לוודא שנתוני Base32 שהודבקו מכילים תווים תקינים ו-padding תקין לפני השימוש.
 
-## What to keep in mind
+## מה חשוב לזכור
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- Base32 מגדיל את הנתונים יותר מ-Base64.
+- הוא לא מצפין ולא מסתיר את הערך המקורי.
+- יש מערכות שמשמיטות את padding ‏`=`, אבל תווים לא תקינים עדיין יגרמו לשגיאות פענוח.

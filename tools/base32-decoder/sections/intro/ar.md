@@ -1,15 +1,15 @@
-## What is Base32?
+## ما هو Base32؟
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+يكون Base32 مفيدًا عندما تحتاج قناة نصية فقط أو قناة لا تميّز بين الأحرف الكبيرة والصغيرة إلى حمل بيانات ثنائية، مثل أسرار OTP أو الرموز الملائمة لـ DNS أو قيم الإعدادات المصدّرة. إنه طبقة ترميز، وليس طبقة أمان.
 
-## When to use it
+## متى تستخدمه
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- فك أسرار أو رموز Base32 إلى البايتات الأصلية.
+- فحص القيم المنسوخة من إعداد TOTP أو من صادرات التكامل أو ملفات الإعداد.
+- التحقق من أن بيانات Base32 الملصقة تحتوي على أحرف صالحة وحشو صحيح قبل استخدامها.
 
-## What to keep in mind
+## ما يجب مراعاته
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- يزيد Base32 حجم البيانات أكثر من Base64.
+- لا يقوم بتشفير القيمة الأصلية أو إخفائها.
+- بعض الأنظمة تحذف حشو `=`، لكن الأحرف غير الصالحة ما زالت تؤدي إلى خطأ في فك الترميز.

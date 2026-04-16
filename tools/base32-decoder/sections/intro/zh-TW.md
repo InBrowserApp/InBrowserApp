@@ -1,15 +1,15 @@
-## What is Base32?
+## 什麼是 Base32？
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+Base32 適合在「只能傳文字」或「不區分大小寫」的通道裡承載二進位資料，例如 OTP 密鑰、適合 DNS 的權杖，或匯出的設定值。它只是編碼層，不是安全層。
 
-## When to use it
+## 什麼時候適合用
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- 把 Base32 密鑰或權杖解碼回原始位元組。
+- 檢查從 TOTP 設定、整合匯出或設定檔裡複製出的值。
+- 在使用前確認貼上的 Base32 資料是否包含合法字元與正確補位。
 
-## What to keep in mind
+## 需要注意什麼
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- Base32 帶來的體積膨脹通常比 Base64 更大。
+- 它不會加密，也不會隱藏原始內容。
+- 有些系統會省略 `=` 補位，但只要出現非法字元，仍然會解碼失敗。

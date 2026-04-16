@@ -1,15 +1,15 @@
-## What is Base32?
+## Apa itu Base32?
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+Base32 berguna ketika saluran khusus teks atau saluran yang tidak peka huruf besar/kecil perlu membawa data biner, seperti rahasia OTP, token yang aman untuk DNS, atau nilai konfigurasi yang diekspor. Ini adalah lapisan encoding, bukan lapisan keamanan.
 
-## When to use it
+## Kapan menggunakannya
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- Mendekode rahasia atau token Base32 kembali ke byte aslinya.
+- Memeriksa nilai yang disalin dari pengaturan TOTP, ekspor integrasi, atau file konfigurasi.
+- Mengecek apakah data Base32 yang ditempel memiliki karakter yang valid dan padding yang benar sebelum digunakan.
 
-## What to keep in mind
+## Hal yang perlu diperhatikan
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- Base32 menambah ukuran data lebih besar daripada Base64.
+- Ini tidak mengenkripsi atau menyembunyikan nilai aslinya.
+- Beberapa sistem menghilangkan padding `=`, tetapi karakter yang tidak valid tetap menyebabkan error saat decode.

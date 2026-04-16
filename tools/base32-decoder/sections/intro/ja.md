@@ -1,15 +1,15 @@
-## What is Base32?
+## Base32 とは？
 
-Base32 is a binary-to-text encoding that uses the letters A-Z and digits 2-7. It is commonly used in OTP seeds, DNS-safe tokens, and transfer formats that need case-insensitive text.
+Base32 は、OTP シークレット、DNS セーフなトークン、エクスポートした設定値などのバイナリデータを、テキスト専用または大文字小文字を区別しないチャネルで扱う必要があるときに役立ちます。これはエンコードの層であり、セキュリティの層ではありません。
 
-## When to use it
+## 使用する場面
 
-- Decoding Base32 secrets or exported values back into their original bytes.
-- Inspecting data copied from TOTP provisioning or integration flows.
-- Verifying whether pasted Base32 text has valid characters and padding.
+- Base32 のシークレットやトークンを元のバイト列へデコードしたいとき。
+- TOTP 設定、連携エクスポート、設定ファイルからコピーした値を確認したいとき。
+- 貼り付けた Base32 データが、使用前に正しい文字とパディングを持っているか確認したいとき。
 
-## What to keep in mind
+## 注意すべき点
 
-- Base32 is an encoding layer, not encryption.
-- It expands data more than Base64 and may include optional `=` padding.
-- Whitespace is often ignored, but invalid characters still break decoding.
+- Base32 は Base64 よりもデータサイズが大きくなります。
+- 元の値を暗号化したり隠したりするものではありません。
+- 一部のシステムは `=` パディングを省略しますが、無効な文字はやはりデコードエラーの原因になります。
