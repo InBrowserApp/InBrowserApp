@@ -1934,6 +1934,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "http-status-code-lookup",
+    language: "ar",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "de",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "en",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "es",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "fr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "he",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "hi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "id",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "it",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ja",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ko",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ms",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "nl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "no",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pt",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ru",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "sv",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "th",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "tr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "vi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "iban-validator",
     language: "ar",
   },

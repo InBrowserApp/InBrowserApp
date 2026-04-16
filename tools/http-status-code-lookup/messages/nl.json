@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Zoeken op statuscode, naam of beschrijving...",
+  "all": "Alle",
+  "common": "Algemeen",
+  "informationalFilter": "Informatief (1xx)",
+  "successFilter": "Succesvol (2xx)",
+  "redirectionFilter": "Omleiding (3xx)",
+  "clientErrorFilter": "Clientfout (4xx)",
+  "serverErrorFilter": "Serverfout (5xx)",
+  "code": "Code",
+  "name": "Naam",
+  "category": "Categorie",
+  "description": "Beschrijving",
+  "informational": "Informatief",
+  "success": "Succesvol",
+  "redirection": "Omleiding",
+  "clientError": "Clientfout",
+  "serverError": "Serverfout",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

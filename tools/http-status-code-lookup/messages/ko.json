@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "상태 코드, 이름 또는 설명으로 검색...",
+  "all": "전체",
+  "common": "일반",
+  "informationalFilter": "정보성 (1xx)",
+  "successFilter": "성공 (2xx)",
+  "redirectionFilter": "리디렉션 (3xx)",
+  "clientErrorFilter": "클라이언트 오류 (4xx)",
+  "serverErrorFilter": "서버 오류 (5xx)",
+  "code": "코드",
+  "name": "이름",
+  "category": "카테고리",
+  "description": "설명",
+  "informational": "정보성",
+  "success": "성공",
+  "redirection": "리디렉션",
+  "clientError": "클라이언트 오류",
+  "serverError": "서버 오류",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

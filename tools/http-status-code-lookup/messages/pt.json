@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Pesquisar por codigo de status, nome ou descricao...",
+  "all": "Todos",
+  "common": "Comuns",
+  "informationalFilter": "Informativo (1xx)",
+  "successFilter": "Sucesso (2xx)",
+  "redirectionFilter": "Redirecionamento (3xx)",
+  "clientErrorFilter": "Erro do Cliente (4xx)",
+  "serverErrorFilter": "Erro do Servidor (5xx)",
+  "code": "Codigo",
+  "name": "Nome",
+  "category": "Categoria",
+  "description": "Descricao",
+  "informational": "Informativo",
+  "success": "Sucesso",
+  "redirection": "Redirecionamento",
+  "clientError": "Erro do Cliente",
+  "serverError": "Erro do Servidor",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

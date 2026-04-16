@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Sok efter statuskod, namn eller beskrivning...",
+  "all": "Alla",
+  "common": "Vanliga",
+  "informationalFilter": "Informativ (1xx)",
+  "successFilter": "Framgangsrik (2xx)",
+  "redirectionFilter": "Omdirigering (3xx)",
+  "clientErrorFilter": "Klientfel (4xx)",
+  "serverErrorFilter": "Serverfel (5xx)",
+  "code": "Kod",
+  "name": "Namn",
+  "category": "Kategori",
+  "description": "Beskrivning",
+  "informational": "Informativ",
+  "success": "Framgangsrik",
+  "redirection": "Omdirigering",
+  "clientError": "Klientfel",
+  "serverError": "Serverfel",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Rechercher par code de statut, nom ou description...",
+  "all": "Tous",
+  "common": "Courants",
+  "informationalFilter": "Informationnel (1xx)",
+  "successFilter": "Succes (2xx)",
+  "redirectionFilter": "Redirection (3xx)",
+  "clientErrorFilter": "Erreur Client (4xx)",
+  "serverErrorFilter": "Erreur Serveur (5xx)",
+  "code": "Code",
+  "name": "Nom",
+  "category": "Categorie",
+  "description": "Description",
+  "informational": "Informationnel",
+  "success": "Succes",
+  "redirection": "Redirection",
+  "clientError": "Erreur Client",
+  "serverError": "Erreur Serveur",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

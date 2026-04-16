@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "按狀態碼、名稱或描述搜尋...",
+  "all": "全部",
+  "common": "常用",
+  "informationalFilter": "資訊性 (1xx)",
+  "successFilter": "成功 (2xx)",
+  "redirectionFilter": "重新導向 (3xx)",
+  "clientErrorFilter": "用戶端錯誤 (4xx)",
+  "serverErrorFilter": "伺服器錯誤 (5xx)",
+  "code": "代碼",
+  "name": "名稱",
+  "category": "分類",
+  "description": "描述",
+  "informational": "資訊性",
+  "success": "成功",
+  "redirection": "重新導向",
+  "clientError": "用戶端錯誤",
+  "serverError": "伺服器錯誤",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}
