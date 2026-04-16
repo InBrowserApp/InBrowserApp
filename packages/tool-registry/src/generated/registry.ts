@@ -1029,6 +1029,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "blake2b-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "blake2",
+      "blake2b",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE2b للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE2b لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE2b-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE2b-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE2b Hash Text or File",
+        description:
+          "Generate BLAKE2b hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE2b de Texto o Archivo",
+        description:
+          "Genera hash BLAKE2b para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE2b de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE2b pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE2b טקסט או קובץ",
+        description:
+          "צור האש BLAKE2b עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE2b हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE2b हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE2b Teks atau File",
+        description:
+          "Buat hash BLAKE2b untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE2b di Testo o File",
+        description:
+          "Genera hash BLAKE2b per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE2b ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE2bハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE2b 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE2b 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE2b Teks atau Fail",
+        description:
+          "Jana hash BLAKE2b untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE2b-hash tekst of bestand",
+        description:
+          "Genereer BLAKE2b-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE2b-hash tekst eller fil",
+        description:
+          "Generer BLAKE2b-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE2b tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE2b dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE2b de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE2b para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE2b-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE2b-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE2b-hash text eller fil",
+        description:
+          "Generera BLAKE2b-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE2b ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE2b สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE2b Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE2b hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE2b văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE2b cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE2b 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE2b 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE2b 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE2b 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",
@@ -1158,6 +1290,126 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "大小寫轉換器",
         description:
           "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  {
+    slug: "credit-card-validator",
+    category: "text",
+    icon: "credit-card",
+    tags: ["credit-card", "validator", "luhn", "payment", "finance"],
+    locales: {
+      ar: {
+        name: "مدقق بطاقة الائتمان",
+        description:
+          "التحقق من أرقام بطاقات الائتمان باستخدام خوارزمية Luhn وتحديد العلامة التجارية",
+      },
+      de: {
+        name: "Kreditkarten-Validator",
+        description:
+          "Validiert Kreditkartennummern mit dem Luhn-Algorithmus und identifiziert die Kartenmarke",
+      },
+      en: {
+        name: "Credit Card Validator",
+        description:
+          "Validate credit card numbers using Luhn algorithm and identify card brand",
+      },
+      es: {
+        name: "Validador de Tarjeta de Crédito",
+        description:
+          "Valida números de tarjeta de crédito usando el algoritmo de Luhn e identifica la marca",
+      },
+      fr: {
+        name: "Validateur de Carte de Crédit",
+        description:
+          "Valide les numéros de carte de crédit avec l'algorithme de Luhn et identifie la marque",
+      },
+      he: {
+        name: "מאמת כרטיס אשראי",
+        description:
+          "אימות מספרי כרטיסי אשראי באמצעות אלגוריתם Luhn וזיהוי מותג הכרטיס",
+      },
+      hi: {
+        name: "क्रेडिट कार्ड सत्यापनकर्ता",
+        description:
+          "Luhn एल्गोरिथम का उपयोग करके क्रेडिट कार्ड नंबर सत्यापित करें और कार्ड ब्रांड पहचानें",
+      },
+      id: {
+        name: "Validator Kartu Kredit",
+        description:
+          "Validasi nomor kartu kredit menggunakan algoritma Luhn dan identifikasi merek kartu",
+      },
+      it: {
+        name: "Validatore Carta di Credito",
+        description:
+          "Valida i numeri delle carte di credito usando l'algoritmo di Luhn e identifica il brand",
+      },
+      ja: {
+        name: "クレジットカード番号検証",
+        description:
+          "Luhnアルゴリズムでクレジットカード番号を検証し、カードブランドを識別",
+      },
+      ko: {
+        name: "신용카드 번호 검증기",
+        description:
+          "Luhn 알고리즘으로 신용카드 번호를 검증하고 카드 브랜드를 식별",
+      },
+      ms: {
+        name: "Pengesah Kad Kredit",
+        description:
+          "Sahkan nombor kad kredit menggunakan algoritma Luhn dan kenal pasti jenama kad",
+      },
+      nl: {
+        name: "Creditcard Validator",
+        description:
+          "Valideer creditcardnummers met het Luhn-algoritme en identificeer het kaartmerk",
+      },
+      no: {
+        name: "Kredittkortvalidator",
+        description:
+          "Valider kredittkortnumre med Luhn-algoritmen og identifiser kortmerket",
+      },
+      pl: {
+        name: "Walidator Karty Kredytowej",
+        description:
+          "Weryfikuj numery kart kredytowych algorytmem Luhna i identyfikuj markę karty",
+      },
+      pt: {
+        name: "Validador de Cartão de Crédito",
+        description:
+          "Valida números de cartão de crédito usando o algoritmo de Luhn e identifica a bandeira",
+      },
+      ru: {
+        name: "Валидатор Кредитных Карт",
+        description:
+          "Проверка номеров кредитных карт с помощью алгоритма Луна и определение бренда карты",
+      },
+      sv: {
+        name: "Kreditkortsvalidator",
+        description:
+          "Validera kreditkortsnummer med Luhn-algoritmen och identifiera kortmärket",
+      },
+      th: {
+        name: "ตรวจสอบบัตรเครดิต",
+        description: "ตรวจสอบหมายเลขบัตรเครดิตด้วยอัลกอริทึม Luhn และระบุแบรนด์บัตร",
+      },
+      tr: {
+        name: "Kredi Kartı Doğrulayıcı",
+        description:
+          "Luhn algoritması ile kredi kartı numaralarını doğrulayın ve kart markasını belirleyin",
+      },
+      vi: {
+        name: "Trình Xác Thực Thẻ Tín Dụng",
+        description:
+          "Xác thực số thẻ tín dụng bằng thuật toán Luhn và nhận dạng thương hiệu thẻ",
+      },
+      "zh-CN": {
+        name: "信用卡号验证器",
+        description: "使用 Luhn 算法验证信用卡号并识别卡品牌",
+      },
+      "zh-TW": {
+        name: "信用卡號驗證器",
+        description: "使用 Luhn 演算法驗證信用卡號並識別卡品牌",
       },
     },
   },
@@ -2266,6 +2518,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "HTML 實體編碼 & 解碼",
         description:
           "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  {
+    slug: "iban-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["iban", "validator", "bank", "finance", "payment"],
+    locales: {
+      ar: {
+        name: "مدقق IBAN",
+        description: "يتحقق من IBAN بطول البلد والتنسيق والمجموع الاختباري.",
+      },
+      de: {
+        name: "IBAN-Validator",
+        description: "Validiert IBANs mit Länder-Länge, Format und Prüfsumme.",
+      },
+      en: {
+        name: "IBAN Validator",
+        description:
+          "Validate IBAN numbers with country length, format, and checksum checks.",
+      },
+      es: {
+        name: "Validador de IBAN",
+        description:
+          "Valida números IBAN con longitud de país, formato y checksum.",
+      },
+      fr: {
+        name: "Validateur d'IBAN",
+        description:
+          "Valide les IBAN avec la longueur du pays, le format et la somme de contrôle.",
+      },
+      he: {
+        name: "מאמת IBAN",
+        description: "מאמת IBAN לפי אורך מדינה, פורמט וסכום ביקורת.",
+      },
+      hi: {
+        name: "IBAN सत्यापनकर्ता",
+        description: "देश की लंबाई, प्रारूप और चेकसम के साथ IBAN सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IBAN",
+        description:
+          "Memvalidasi IBAN berdasarkan panjang negara, format, dan checksum.",
+      },
+      it: {
+        name: "Validatore IBAN",
+        description:
+          "Valida gli IBAN con lunghezza del paese, formato e checksum.",
+      },
+      ja: {
+        name: "IBAN 検証",
+        description: "国別の長さ、形式、チェックサムで IBAN を検証します。",
+      },
+      ko: {
+        name: "IBAN 검증기",
+        description: "국가별 길이, 형식, 체크섬으로 IBAN을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IBAN",
+        description:
+          "Mengesahkan IBAN berdasarkan panjang negara, format dan checksum.",
+      },
+      nl: {
+        name: "IBAN-validator",
+        description: "Valideert IBAN's met landlengte, formaat en controlesom.",
+      },
+      no: {
+        name: "IBAN-validerer",
+        description: "Validerer IBAN med landlengde, format og kontrollsum.",
+      },
+      pl: {
+        name: "Walidator IBAN",
+        description:
+          "Weryfikuje IBAN pod kątem długości kraju, formatu i sumy kontrolnej.",
+      },
+      pt: {
+        name: "Validador de IBAN",
+        description:
+          "Valida IBANs com comprimento do país, formato e checksum.",
+      },
+      ru: {
+        name: "Валидатор IBAN",
+        description:
+          "Проверяет IBAN по длине страны, формату и контрольной сумме.",
+      },
+      sv: {
+        name: "IBAN-validerare",
+        description: "Validerar IBAN med landlängd, format och kontrollsumma.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IBAN",
+        description: "ตรวจสอบ IBAN ตามความยาวประเทศ รูปแบบ และผลรวมตรวจสอบ",
+      },
+      tr: {
+        name: "IBAN Doğrulayıcı",
+        description:
+          "IBAN'ları ülke uzunluğu, biçim ve sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IBAN",
+        description:
+          "Xác thực IBAN theo độ dài quốc gia, định dạng và checksum.",
+      },
+      "zh-CN": {
+        name: "IBAN 验证器",
+        description: "验证 IBAN 号码，检查国家长度、格式和校验和。",
+      },
+      "zh-TW": {
+        name: "IBAN 驗證器",
+        description: "驗證 IBAN 號碼，檢查國家長度、格式和校驗和。",
       },
     },
   },
@@ -5935,6 +6298,266 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ripemd160-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "ripemd160",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة RIPEMD-160 للنص أو الملف",
+        description:
+          "إنشاء تجزئة RIPEMD-160 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "RIPEMD-160-Hash für Text oder Datei",
+        description:
+          "Generieren Sie RIPEMD-160-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "RIPEMD-160 Hash Text or File",
+        description:
+          "Generate RIPEMD-160 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash RIPEMD-160 de Texto o Archivo",
+        description:
+          "Genera hash RIPEMD-160 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash RIPEMD-160 de Texte ou Fichier",
+        description:
+          "Générez un hash RIPEMD-160 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש RIPEMD-160 טקסט או קובץ",
+        description:
+          "צור האש RIPEMD-160 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "RIPEMD-160 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए RIPEMD-160 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash RIPEMD-160 Teks atau File",
+        description:
+          "Buat hash RIPEMD-160 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash RIPEMD-160 di Testo o File",
+        description:
+          "Genera hash RIPEMD-160 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "RIPEMD-160 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのRIPEMD-160ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "RIPEMD-160 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 RIPEMD-160 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash RIPEMD-160 Teks atau Fail",
+        description:
+          "Jana hash RIPEMD-160 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "RIPEMD-160-hash tekst of bestand",
+        description:
+          "Genereer RIPEMD-160-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "RIPEMD-160-hash tekst eller fil",
+        description:
+          "Generer RIPEMD-160-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash RIPEMD-160 tekstu lub pliku",
+        description:
+          "Generuj hash RIPEMD-160 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash RIPEMD-160 de Texto ou Arquivo",
+        description:
+          "Gere hash RIPEMD-160 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "RIPEMD-160-хеш текста или файла",
+        description:
+          "Генерируйте RIPEMD-160-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "RIPEMD-160-hash text eller fil",
+        description:
+          "Generera RIPEMD-160-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช RIPEMD-160 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช RIPEMD-160 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "RIPEMD-160 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için RIPEMD-160 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash RIPEMD-160 văn bản hoặc tệp",
+        description:
+          "Tạo hash RIPEMD-160 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "RIPEMD-160 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 RIPEMD-160 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "RIPEMD-160 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 RIPEMD-160 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "roman-numeral-converter",
+    category: "misc",
+    icon: "binary",
+    tags: [
+      "roman numeral",
+      "arabic number",
+      "number converter",
+      "history",
+      "education",
+    ],
+    locales: {
+      ar: {
+        name: "محول الأرقام العربية ↔ الرومانية",
+        description:
+          "محول ثنائي الاتجاه بين الأرقام الرومانية والعربية. يدعم الأرقام الرومانية القياسية من 1 إلى 3999 (I إلى MMMCMXCIX).",
+      },
+      de: {
+        name: "Arabisch ↔ Römisch Konverter",
+        description:
+          "Bidirektionaler Konverter zwischen römischen und arabischen Zahlen. Unterstützt Standard-Römerzahlen von 1 bis 3999 (I bis MMMCMXCIX).",
+      },
+      en: {
+        name: "Roman Numeral ↔ Arabic Number Converter",
+        description:
+          "Bidirectional converter between Roman numerals and Arabic numbers. Supports standard Roman numerals from 1 to 3999 (I to MMMCMXCIX).",
+      },
+      es: {
+        name: "Conversor Arábigo ↔ Romano",
+        description:
+          "Conversor bidireccional entre números romanos y arábigos. Soporta números romanos estándar del 1 al 3999 (I a MMMCMXCIX).",
+      },
+      fr: {
+        name: "Convertisseur Arabe ↔ Romain",
+        description:
+          "Convertisseur bidirectionnel entre les chiffres romains et arabes. Prend en charge les chiffres romains standard de 1 à 3999 (I à MMMCMXCIX).",
+      },
+      he: {
+        name: "ממיר ערבי ↔ רומי",
+        description:
+          "ממיר דו-כיווני בין ספרות רומיות וערביות. תומך בספרות רומיות סטנדרטיות מ-1 עד 3999 (I עד MMMCMXCIX).",
+      },
+      hi: {
+        name: "अरबी ↔ रोमन अंक कनवर्टर",
+        description:
+          "रोमन अंकों और अरबी संख्याओं के बीच द्विदिशीय कनवर्टर। मानक रोमन अंक 1 से 3999 (I से MMMCMXCIX) का समर्थन करता है।",
+      },
+      id: {
+        name: "Konverter Arab ↔ Romawi",
+        description:
+          "Konverter dua arah antara angka Romawi dan Arab. Mendukung angka Romawi standar dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+      },
+      it: {
+        name: "Convertitore Arabo ↔ Romano",
+        description:
+          "Convertitore bidirezionale tra numeri romani e arabi. Supporta numeri romani standard da 1 a 3999 (I a MMMCMXCIX).",
+      },
+      ja: {
+        name: "ローマ数字 ↔ アラビア数字コンバーター",
+        description:
+          "ローマ数字とアラビア数字の双方向変換。標準的なローマ数字 1 から 3999（I から MMMCMXCIX）をサポート。",
+      },
+      ko: {
+        name: "아라비아 ↔ 로마 숫자 변환기",
+        description:
+          "로마 숫자와 아라비아 숫자 간 양방향 변환. 표준 로마 숫자 1~3999 (I~MMMCMXCIX) 지원.",
+      },
+      ms: {
+        name: "Penukar Arab ↔ Rom",
+        description:
+          "Penukar dua hala antara nombor Rom dan Arab. Menyokong nombor Rom standard dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+      },
+      nl: {
+        name: "Arabisch ↔ Romeins Converter",
+        description:
+          "Bidirectionele converter tussen Romeinse en Arabische cijfers. Ondersteunt standaard Romeinse cijfers van 1 tot 3999 (I tot MMMCMXCIX).",
+      },
+      no: {
+        name: "Arabisk ↔ Romersk Konverterer",
+        description:
+          "Toveis konverterer mellom romerske og arabiske tall. Støtter standard romerske tall fra 1 til 3999 (I til MMMCMXCIX).",
+      },
+      pl: {
+        name: "Konwerter Arabskie ↔ Rzymskie",
+        description:
+          "Dwukierunkowy konwerter między cyframi rzymskimi i arabskimi. Obsługuje standardowe cyfry rzymskie od 1 do 3999 (I do MMMCMXCIX).",
+      },
+      pt: {
+        name: "Conversor Arábico ↔ Romano",
+        description:
+          "Conversor bidirecional entre números romanos e arábicos. Suporta números romanos padrão de 1 a 3999 (I a MMMCMXCIX).",
+      },
+      ru: {
+        name: "Конвертер Арабские ↔ Римские цифры",
+        description:
+          "Двунаправленный преобразователь римских и арабских цифр. Поддерживает стандартные римские цифры от 1 до 3999 (I до MMMCMXCIX).",
+      },
+      sv: {
+        name: "Arabiska ↔ Romerska Konverterare",
+        description:
+          "Bidirektionell konverterare mellan romerska och arabiska siffror. Stöder standard romerska siffror från 1 till 3999 (I till MMMCMXCIX).",
+      },
+      th: {
+        name: "ตัวแปลงอารบิก ↔ โรมัน",
+        description:
+          "ตัวแปลงแบบสองทิศทางระหว่างตัวเลขโรมันและตัวเลขอารบิก รองรับตัวเลขโรมันมาตรฐาน 1 ถึง 3999 (I ถึง MMMCMXCIX)",
+      },
+      tr: {
+        name: "Arap ↔ Roma Rakamları Dönüştürücü",
+        description:
+          "Roma rakamları ve Arap rakamları arasında çift yönlü dönüştürücü. Standart Roma rakamlarını 1-3999 (I-MMMCMXCIX) destekler.",
+      },
+      vi: {
+        name: "Trình Chuyển Đổi Ả Rập ↔ La Mã",
+        description:
+          "Trình chuyển đổi hai chiều giữa số La Mã và số Ả Rập. Hỗ trợ số La Mã tiêu chuẩn từ 1 đến 3999 (I đến MMMCMXCIX).",
+      },
+      "zh-CN": {
+        name: "罗马数字 ↔ 阿拉伯数字转换器",
+        description:
+          "罗马数字与阿拉伯数字双向转换。支持标准罗马数字 1 到 3999（I 到 MMMCMXCIX）。",
+      },
+      "zh-TW": {
+        name: "羅馬數字 ↔ 阿拉伯數字轉換器",
+        description:
+          "羅馬數字與阿拉伯數字雙向轉換。支援標準羅馬數字 1 到 3999（I 到 MMMCMXCIX）。",
+      },
+    },
+  },
+  {
     slug: "rot-cipher",
     category: "web",
     icon: "lock",
@@ -6181,6 +6804,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "sha224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha224", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-224 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-224 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-224-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-224-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-224 Hash Text or File",
+        description:
+          "Generate SHA-224 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-224 de Texto o Archivo",
+        description:
+          "Genera hash SHA-224 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-224 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-224 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-224 טקסט או קובץ",
+        description:
+          "צור האש SHA-224 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-224 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-224 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-224 Teks atau File",
+        description:
+          "Buat hash SHA-224 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-224 di Testo o File",
+        description:
+          "Genera hash SHA-224 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-224 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-224ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-224 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-224 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-224 Teks atau Fail",
+        description:
+          "Jana hash SHA-224 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-224-hash tekst of bestand",
+        description:
+          "Genereer SHA-224-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-224-hash tekst eller fil",
+        description:
+          "Generer SHA-224-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-224 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-224 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-224 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-224 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-224-хеш текста или файла",
+        description:
+          "Генерируйте SHA-224-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-224-hash text eller fil",
+        description:
+          "Generera SHA-224-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-224 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-224 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-224 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-224 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-224 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-224 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-224 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-224 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-224 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-224 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "sha256-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -6300,6 +7046,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "SHA-256 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-224",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-224 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-224 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-224 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-224 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-224 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-224 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-224 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-224 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-224 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-224 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-224 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-224 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-224 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-224 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-224 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-224 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-224 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-224 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-224 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-224 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-224 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-224 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-224 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-224 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-224 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-224 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-224 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-224 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-224 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-224 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-224 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-224 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-224 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-224 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-224 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-224 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-224 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-224 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-224 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-224 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-224 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-224 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-224 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-224 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-224 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-224 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -7042,6 +7920,110 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "svg-to-image-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "svg", "converter", "png", "jpeg", "webp"],
+    locales: {
+      ar: {
+        name: "محول SVG إلى صورة",
+        description: "حوّل ملفات SVG إلى صور PNG أو JPEG أو WebP",
+      },
+      de: {
+        name: "SVG-zu-Bild-Konverter",
+        description:
+          "Konvertieren Sie SVG-Dateien in PNG-, JPEG- oder WebP-Bilder",
+      },
+      en: {
+        name: "SVG to Image Converter",
+        description: "Convert SVG files to PNG, JPEG, or WebP images",
+      },
+      es: {
+        name: "Convertidor de SVG a imagen",
+        description: "Convierte archivos SVG en imágenes PNG, JPEG o WebP",
+      },
+      fr: {
+        name: "Convertisseur SVG en image",
+        description:
+          "Convertissez des fichiers SVG en images PNG, JPEG ou WebP",
+      },
+      he: {
+        name: "ממיר SVG לתמונה",
+        description: "המר קבצי SVG לתמונות PNG, JPEG או WebP",
+      },
+      hi: {
+        name: "SVG से इमेज कन्वर्टर",
+        description: "SVG फ़ाइलों को PNG, JPEG या WebP छवियों में बदलें",
+      },
+      id: {
+        name: "Konverter SVG ke gambar",
+        description: "Ubah file SVG menjadi gambar PNG, JPEG, atau WebP",
+      },
+      it: {
+        name: "Convertitore da SVG a immagine",
+        description: "Converti file SVG in immagini PNG, JPEG o WebP",
+      },
+      ja: {
+        name: "SVG 画像コンバーター",
+        description: "SVG ファイルを PNG、JPEG、WebP 画像に変換",
+      },
+      ko: {
+        name: "SVG 이미지 변환기",
+        description: "SVG 파일을 PNG, JPEG 또는 WebP 이미지로 변환",
+      },
+      ms: {
+        name: "Penukar SVG ke imej",
+        description: "Tukar fail SVG kepada imej PNG, JPEG atau WebP",
+      },
+      nl: {
+        name: "SVG-naar-afbeelding converter",
+        description:
+          "Converteer SVG-bestanden naar PNG-, JPEG- of WebP-afbeeldingen",
+      },
+      no: {
+        name: "SVG-til-bilde-konverterer",
+        description: "Konverter SVG-filer til PNG-, JPEG- eller WebP-bilder",
+      },
+      pl: {
+        name: "Konwerter SVG na obraz",
+        description: "Konwertuj pliki SVG na obrazy PNG, JPEG lub WebP",
+      },
+      pt: {
+        name: "Conversor de SVG para imagem",
+        description: "Converta arquivos SVG em imagens PNG, JPEG ou WebP",
+      },
+      ru: {
+        name: "Конвертер SVG в изображения",
+        description: "Преобразуйте файлы SVG в изображения PNG, JPEG или WebP",
+      },
+      sv: {
+        name: "SVG-till-bild-konverterare",
+        description: "Konvertera SVG-filer till PNG-, JPEG- eller WebP-bilder",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็นรูปภาพ",
+        description: "แปลงไฟล์ SVG เป็นรูปภาพ PNG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "SVG'den Görüntü Dönüştürücü",
+        description:
+          "SVG dosyalarını PNG, JPEG veya WebP görüntülerine dönüştürün",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang ảnh",
+        description: "Chuyển tệp SVG thành ảnh PNG, JPEG hoặc WebP",
+      },
+      "zh-CN": {
+        name: "SVG 转图片转换器",
+        description: "将 SVG 文件转换为 PNG、JPEG 或 WebP 图片",
+      },
+      "zh-TW": {
+        name: "SVG 轉圖片轉換器",
+        description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
@@ -7169,6 +8151,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  {
+    slug: "time-diff-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "difference", "duration", "calculator", "timezone", "utc"],
+    locales: {
+      ar: {
+        name: "حاسبة فرق الوقت",
+        description:
+          "قارن بين وقتين محليين في منطقتين زمنيتين مختلفتين واحصل على فرق الوقت بالإشارة والقيمة المطلقة وبصيغة ISO 8601 وبالوحدات الإجمالية.",
+      },
+      de: {
+        name: "Zeitdifferenz-Rechner",
+        description:
+          "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten.",
+      },
+      en: {
+        name: "Time Difference Calculator",
+        description:
+          "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences.",
+      },
+      es: {
+        name: "Calculadora de diferencia de tiempo",
+        description:
+          "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales.",
+      },
+      fr: {
+        name: "Calculateur de différence de temps",
+        description:
+          "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales.",
+      },
+      he: {
+        name: "מחשבון הפרש זמן",
+        description:
+          "השוו בין שני זמנים מקומיים באזורי זמן שונים וקבלו את ההפרש עם סימן, בערך מוחלט, בפורמט ISO 8601 וביחידות כוללות.",
+      },
+      hi: {
+        name: "समय अंतर कैलकुलेटर",
+        description:
+          "अलग-अलग समय क्षेत्रों के दो स्थानीय समयों की तुलना करें और signed, absolute, ISO 8601 तथा कुल इकाइयों में अंतर पाएं।",
+      },
+      id: {
+        name: "Kalkulator selisih waktu",
+        description:
+          "Bandingkan dua waktu lokal di zona waktu berbeda dan dapatkan selisih bertanda, absolut, ISO 8601, dan dalam satuan total.",
+      },
+      it: {
+        name: "Calcolatore della differenza di tempo",
+        description:
+          "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali.",
+      },
+      ja: {
+        name: "時間差計算ツール",
+        description:
+          "異なるタイムゾーンにある2つのローカル時刻を比較し、符号付き・絶対値・ISO 8601・合計単位の差分を求めます。",
+      },
+      ko: {
+        name: "시간 차이 계산기",
+        description:
+          "서로 다른 시간대의 두 로컬 시간을 비교하고 부호 있는 차이, 절대 차이, ISO 8601, 총 단위 차이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator perbezaan masa",
+        description:
+          "Bandingkan dua masa setempat dalam zon masa berbeza dan dapatkan perbezaan bertanda, mutlak, ISO 8601 dan dalam unit jumlah.",
+      },
+      nl: {
+        name: "Tijdsverschilcalculator",
+        description:
+          "Vergelijk twee lokale tijden in verschillende tijdzones en krijg verschillen met teken, absolute verschillen, ISO 8601 en totale eenheden.",
+      },
+      no: {
+        name: "Kalkulator for tidsforskjell",
+        description:
+          "Sammenlign to lokale tider i ulike tidssoner og få forskjeller med fortegn, absolutte forskjeller, som ISO 8601 og i totale enheter.",
+      },
+      pl: {
+        name: "Kalkulator różnicy czasu",
+        description:
+          "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych.",
+      },
+      pt: {
+        name: "Calculadora de diferença de tempo",
+        description:
+          "Compare dois horários locais em fusos diferentes e obtenha diferenças com sinal, absolutas, em ISO 8601 e em unidades totais.",
+      },
+      ru: {
+        name: "Калькулятор разницы во времени",
+        description:
+          "Сравнивайте два локальных времени в разных часовых поясах и получайте разницу со знаком, абсолютную, в ISO 8601 и в суммарных единицах.",
+      },
+      sv: {
+        name: "Tidsdifferenskalkylator",
+        description:
+          "Jämför två lokala tider i olika tidszoner och få skillnader med tecken, absoluta skillnader, ISO 8601 och totala enheter.",
+      },
+      th: {
+        name: "เครื่องคำนวณความต่างของเวลา",
+        description:
+          "เปรียบเทียบเวลาท้องถิ่นสองค่าในเขตเวลาที่ต่างกัน แล้วดูผลต่างแบบมีเครื่องหมาย แบบค่าสัมบูรณ์ แบบ ISO 8601 และแบบหน่วยรวม",
+      },
+      tr: {
+        name: "Zaman farkı hesaplayıcısı",
+        description:
+          "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün.",
+      },
+      vi: {
+        name: "Trình tính chênh lệch thời gian",
+        description:
+          "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị.",
+      },
+      "zh-CN": {
+        name: "时间差计算器",
+        description:
+          "比较不同时区中的两个本地时间，计算带符号、绝对值、ISO 8601 和总单位形式的时间差。",
+      },
+      "zh-TW": {
+        name: "時間差計算器",
+        description:
+          "比較不同時區中的兩個本地時間，計算帶符號、絕對值、ISO 8601 與總單位形式的時間差。",
       },
     },
   },
@@ -9792,6 +10897,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "blake2b-hash-text-or-file": {
+    slug: "blake2b-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "blake2",
+      "blake2b",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE2b للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE2b لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE2b-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE2b-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE2b Hash Text or File",
+        description:
+          "Generate BLAKE2b hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE2b de Texto o Archivo",
+        description:
+          "Genera hash BLAKE2b para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE2b de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE2b pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE2b טקסט או קובץ",
+        description:
+          "צור האש BLAKE2b עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE2b हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE2b हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE2b Teks atau File",
+        description:
+          "Buat hash BLAKE2b untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE2b di Testo o File",
+        description:
+          "Genera hash BLAKE2b per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE2b ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE2bハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE2b 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE2b 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE2b Teks atau Fail",
+        description:
+          "Jana hash BLAKE2b untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE2b-hash tekst of bestand",
+        description:
+          "Genereer BLAKE2b-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE2b-hash tekst eller fil",
+        description:
+          "Generer BLAKE2b-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE2b tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE2b dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE2b de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE2b para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE2b-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE2b-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE2b-hash text eller fil",
+        description:
+          "Generera BLAKE2b-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE2b ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE2b สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE2b Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE2b hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE2b văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE2b cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE2b 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE2b 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE2b 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE2b 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "case-converter": {
     slug: "case-converter",
     category: "text",
@@ -9922,6 +11159,126 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "大小寫轉換器",
         description:
           "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  "credit-card-validator": {
+    slug: "credit-card-validator",
+    category: "text",
+    icon: "credit-card",
+    tags: ["credit-card", "validator", "luhn", "payment", "finance"],
+    locales: {
+      ar: {
+        name: "مدقق بطاقة الائتمان",
+        description:
+          "التحقق من أرقام بطاقات الائتمان باستخدام خوارزمية Luhn وتحديد العلامة التجارية",
+      },
+      de: {
+        name: "Kreditkarten-Validator",
+        description:
+          "Validiert Kreditkartennummern mit dem Luhn-Algorithmus und identifiziert die Kartenmarke",
+      },
+      en: {
+        name: "Credit Card Validator",
+        description:
+          "Validate credit card numbers using Luhn algorithm and identify card brand",
+      },
+      es: {
+        name: "Validador de Tarjeta de Crédito",
+        description:
+          "Valida números de tarjeta de crédito usando el algoritmo de Luhn e identifica la marca",
+      },
+      fr: {
+        name: "Validateur de Carte de Crédit",
+        description:
+          "Valide les numéros de carte de crédit avec l'algorithme de Luhn et identifie la marque",
+      },
+      he: {
+        name: "מאמת כרטיס אשראי",
+        description:
+          "אימות מספרי כרטיסי אשראי באמצעות אלגוריתם Luhn וזיהוי מותג הכרטיס",
+      },
+      hi: {
+        name: "क्रेडिट कार्ड सत्यापनकर्ता",
+        description:
+          "Luhn एल्गोरिथम का उपयोग करके क्रेडिट कार्ड नंबर सत्यापित करें और कार्ड ब्रांड पहचानें",
+      },
+      id: {
+        name: "Validator Kartu Kredit",
+        description:
+          "Validasi nomor kartu kredit menggunakan algoritma Luhn dan identifikasi merek kartu",
+      },
+      it: {
+        name: "Validatore Carta di Credito",
+        description:
+          "Valida i numeri delle carte di credito usando l'algoritmo di Luhn e identifica il brand",
+      },
+      ja: {
+        name: "クレジットカード番号検証",
+        description:
+          "Luhnアルゴリズムでクレジットカード番号を検証し、カードブランドを識別",
+      },
+      ko: {
+        name: "신용카드 번호 검증기",
+        description:
+          "Luhn 알고리즘으로 신용카드 번호를 검증하고 카드 브랜드를 식별",
+      },
+      ms: {
+        name: "Pengesah Kad Kredit",
+        description:
+          "Sahkan nombor kad kredit menggunakan algoritma Luhn dan kenal pasti jenama kad",
+      },
+      nl: {
+        name: "Creditcard Validator",
+        description:
+          "Valideer creditcardnummers met het Luhn-algoritme en identificeer het kaartmerk",
+      },
+      no: {
+        name: "Kredittkortvalidator",
+        description:
+          "Valider kredittkortnumre med Luhn-algoritmen og identifiser kortmerket",
+      },
+      pl: {
+        name: "Walidator Karty Kredytowej",
+        description:
+          "Weryfikuj numery kart kredytowych algorytmem Luhna i identyfikuj markę karty",
+      },
+      pt: {
+        name: "Validador de Cartão de Crédito",
+        description:
+          "Valida números de cartão de crédito usando o algoritmo de Luhn e identifica a bandeira",
+      },
+      ru: {
+        name: "Валидатор Кредитных Карт",
+        description:
+          "Проверка номеров кредитных карт с помощью алгоритма Луна и определение бренда карты",
+      },
+      sv: {
+        name: "Kreditkortsvalidator",
+        description:
+          "Validera kreditkortsnummer med Luhn-algoritmen och identifiera kortmärket",
+      },
+      th: {
+        name: "ตรวจสอบบัตรเครดิต",
+        description: "ตรวจสอบหมายเลขบัตรเครดิตด้วยอัลกอริทึม Luhn และระบุแบรนด์บัตร",
+      },
+      tr: {
+        name: "Kredi Kartı Doğrulayıcı",
+        description:
+          "Luhn algoritması ile kredi kartı numaralarını doğrulayın ve kart markasını belirleyin",
+      },
+      vi: {
+        name: "Trình Xác Thực Thẻ Tín Dụng",
+        description:
+          "Xác thực số thẻ tín dụng bằng thuật toán Luhn và nhận dạng thương hiệu thẻ",
+      },
+      "zh-CN": {
+        name: "信用卡号验证器",
+        description: "使用 Luhn 算法验证信用卡号并识别卡品牌",
+      },
+      "zh-TW": {
+        name: "信用卡號驗證器",
+        description: "使用 Luhn 演算法驗證信用卡號並識別卡品牌",
       },
     },
   },
@@ -11030,6 +12387,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "HTML 實體編碼 & 解碼",
         description:
           "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  "iban-validator": {
+    slug: "iban-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["iban", "validator", "bank", "finance", "payment"],
+    locales: {
+      ar: {
+        name: "مدقق IBAN",
+        description: "يتحقق من IBAN بطول البلد والتنسيق والمجموع الاختباري.",
+      },
+      de: {
+        name: "IBAN-Validator",
+        description: "Validiert IBANs mit Länder-Länge, Format und Prüfsumme.",
+      },
+      en: {
+        name: "IBAN Validator",
+        description:
+          "Validate IBAN numbers with country length, format, and checksum checks.",
+      },
+      es: {
+        name: "Validador de IBAN",
+        description:
+          "Valida números IBAN con longitud de país, formato y checksum.",
+      },
+      fr: {
+        name: "Validateur d'IBAN",
+        description:
+          "Valide les IBAN avec la longueur du pays, le format et la somme de contrôle.",
+      },
+      he: {
+        name: "מאמת IBAN",
+        description: "מאמת IBAN לפי אורך מדינה, פורמט וסכום ביקורת.",
+      },
+      hi: {
+        name: "IBAN सत्यापनकर्ता",
+        description: "देश की लंबाई, प्रारूप और चेकसम के साथ IBAN सत्यापित करें।",
+      },
+      id: {
+        name: "Validator IBAN",
+        description:
+          "Memvalidasi IBAN berdasarkan panjang negara, format, dan checksum.",
+      },
+      it: {
+        name: "Validatore IBAN",
+        description:
+          "Valida gli IBAN con lunghezza del paese, formato e checksum.",
+      },
+      ja: {
+        name: "IBAN 検証",
+        description: "国別の長さ、形式、チェックサムで IBAN を検証します。",
+      },
+      ko: {
+        name: "IBAN 검증기",
+        description: "국가별 길이, 형식, 체크섬으로 IBAN을 검증합니다.",
+      },
+      ms: {
+        name: "Pengesah IBAN",
+        description:
+          "Mengesahkan IBAN berdasarkan panjang negara, format dan checksum.",
+      },
+      nl: {
+        name: "IBAN-validator",
+        description: "Valideert IBAN's met landlengte, formaat en controlesom.",
+      },
+      no: {
+        name: "IBAN-validerer",
+        description: "Validerer IBAN med landlengde, format og kontrollsum.",
+      },
+      pl: {
+        name: "Walidator IBAN",
+        description:
+          "Weryfikuje IBAN pod kątem długości kraju, formatu i sumy kontrolnej.",
+      },
+      pt: {
+        name: "Validador de IBAN",
+        description:
+          "Valida IBANs com comprimento do país, formato e checksum.",
+      },
+      ru: {
+        name: "Валидатор IBAN",
+        description:
+          "Проверяет IBAN по длине страны, формату и контрольной сумме.",
+      },
+      sv: {
+        name: "IBAN-validerare",
+        description: "Validerar IBAN med landlängd, format och kontrollsumma.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ IBAN",
+        description: "ตรวจสอบ IBAN ตามความยาวประเทศ รูปแบบ และผลรวมตรวจสอบ",
+      },
+      tr: {
+        name: "IBAN Doğrulayıcı",
+        description:
+          "IBAN'ları ülke uzunluğu, biçim ve sağlama toplamı ile doğrular.",
+      },
+      vi: {
+        name: "Trình xác thực IBAN",
+        description:
+          "Xác thực IBAN theo độ dài quốc gia, định dạng và checksum.",
+      },
+      "zh-CN": {
+        name: "IBAN 验证器",
+        description: "验证 IBAN 号码，检查国家长度、格式和校验和。",
+      },
+      "zh-TW": {
+        name: "IBAN 驗證器",
+        description: "驗證 IBAN 號碼，檢查國家長度、格式和校驗和。",
       },
     },
   },
@@ -14698,6 +16166,266 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "ripemd160-hash-text-or-file": {
+    slug: "ripemd160-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "ripemd160",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة RIPEMD-160 للنص أو الملف",
+        description:
+          "إنشاء تجزئة RIPEMD-160 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "RIPEMD-160-Hash für Text oder Datei",
+        description:
+          "Generieren Sie RIPEMD-160-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "RIPEMD-160 Hash Text or File",
+        description:
+          "Generate RIPEMD-160 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash RIPEMD-160 de Texto o Archivo",
+        description:
+          "Genera hash RIPEMD-160 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash RIPEMD-160 de Texte ou Fichier",
+        description:
+          "Générez un hash RIPEMD-160 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש RIPEMD-160 טקסט או קובץ",
+        description:
+          "צור האש RIPEMD-160 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "RIPEMD-160 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए RIPEMD-160 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash RIPEMD-160 Teks atau File",
+        description:
+          "Buat hash RIPEMD-160 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash RIPEMD-160 di Testo o File",
+        description:
+          "Genera hash RIPEMD-160 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "RIPEMD-160 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのRIPEMD-160ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "RIPEMD-160 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 RIPEMD-160 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash RIPEMD-160 Teks atau Fail",
+        description:
+          "Jana hash RIPEMD-160 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "RIPEMD-160-hash tekst of bestand",
+        description:
+          "Genereer RIPEMD-160-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "RIPEMD-160-hash tekst eller fil",
+        description:
+          "Generer RIPEMD-160-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash RIPEMD-160 tekstu lub pliku",
+        description:
+          "Generuj hash RIPEMD-160 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash RIPEMD-160 de Texto ou Arquivo",
+        description:
+          "Gere hash RIPEMD-160 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "RIPEMD-160-хеш текста или файла",
+        description:
+          "Генерируйте RIPEMD-160-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "RIPEMD-160-hash text eller fil",
+        description:
+          "Generera RIPEMD-160-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช RIPEMD-160 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช RIPEMD-160 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "RIPEMD-160 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için RIPEMD-160 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash RIPEMD-160 văn bản hoặc tệp",
+        description:
+          "Tạo hash RIPEMD-160 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "RIPEMD-160 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 RIPEMD-160 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "RIPEMD-160 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 RIPEMD-160 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "roman-numeral-converter": {
+    slug: "roman-numeral-converter",
+    category: "misc",
+    icon: "binary",
+    tags: [
+      "roman numeral",
+      "arabic number",
+      "number converter",
+      "history",
+      "education",
+    ],
+    locales: {
+      ar: {
+        name: "محول الأرقام العربية ↔ الرومانية",
+        description:
+          "محول ثنائي الاتجاه بين الأرقام الرومانية والعربية. يدعم الأرقام الرومانية القياسية من 1 إلى 3999 (I إلى MMMCMXCIX).",
+      },
+      de: {
+        name: "Arabisch ↔ Römisch Konverter",
+        description:
+          "Bidirektionaler Konverter zwischen römischen und arabischen Zahlen. Unterstützt Standard-Römerzahlen von 1 bis 3999 (I bis MMMCMXCIX).",
+      },
+      en: {
+        name: "Roman Numeral ↔ Arabic Number Converter",
+        description:
+          "Bidirectional converter between Roman numerals and Arabic numbers. Supports standard Roman numerals from 1 to 3999 (I to MMMCMXCIX).",
+      },
+      es: {
+        name: "Conversor Arábigo ↔ Romano",
+        description:
+          "Conversor bidireccional entre números romanos y arábigos. Soporta números romanos estándar del 1 al 3999 (I a MMMCMXCIX).",
+      },
+      fr: {
+        name: "Convertisseur Arabe ↔ Romain",
+        description:
+          "Convertisseur bidirectionnel entre les chiffres romains et arabes. Prend en charge les chiffres romains standard de 1 à 3999 (I à MMMCMXCIX).",
+      },
+      he: {
+        name: "ממיר ערבי ↔ רומי",
+        description:
+          "ממיר דו-כיווני בין ספרות רומיות וערביות. תומך בספרות רומיות סטנדרטיות מ-1 עד 3999 (I עד MMMCMXCIX).",
+      },
+      hi: {
+        name: "अरबी ↔ रोमन अंक कनवर्टर",
+        description:
+          "रोमन अंकों और अरबी संख्याओं के बीच द्विदिशीय कनवर्टर। मानक रोमन अंक 1 से 3999 (I से MMMCMXCIX) का समर्थन करता है।",
+      },
+      id: {
+        name: "Konverter Arab ↔ Romawi",
+        description:
+          "Konverter dua arah antara angka Romawi dan Arab. Mendukung angka Romawi standar dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+      },
+      it: {
+        name: "Convertitore Arabo ↔ Romano",
+        description:
+          "Convertitore bidirezionale tra numeri romani e arabi. Supporta numeri romani standard da 1 a 3999 (I a MMMCMXCIX).",
+      },
+      ja: {
+        name: "ローマ数字 ↔ アラビア数字コンバーター",
+        description:
+          "ローマ数字とアラビア数字の双方向変換。標準的なローマ数字 1 から 3999（I から MMMCMXCIX）をサポート。",
+      },
+      ko: {
+        name: "아라비아 ↔ 로마 숫자 변환기",
+        description:
+          "로마 숫자와 아라비아 숫자 간 양방향 변환. 표준 로마 숫자 1~3999 (I~MMMCMXCIX) 지원.",
+      },
+      ms: {
+        name: "Penukar Arab ↔ Rom",
+        description:
+          "Penukar dua hala antara nombor Rom dan Arab. Menyokong nombor Rom standard dari 1 hingga 3999 (I hingga MMMCMXCIX).",
+      },
+      nl: {
+        name: "Arabisch ↔ Romeins Converter",
+        description:
+          "Bidirectionele converter tussen Romeinse en Arabische cijfers. Ondersteunt standaard Romeinse cijfers van 1 tot 3999 (I tot MMMCMXCIX).",
+      },
+      no: {
+        name: "Arabisk ↔ Romersk Konverterer",
+        description:
+          "Toveis konverterer mellom romerske og arabiske tall. Støtter standard romerske tall fra 1 til 3999 (I til MMMCMXCIX).",
+      },
+      pl: {
+        name: "Konwerter Arabskie ↔ Rzymskie",
+        description:
+          "Dwukierunkowy konwerter między cyframi rzymskimi i arabskimi. Obsługuje standardowe cyfry rzymskie od 1 do 3999 (I do MMMCMXCIX).",
+      },
+      pt: {
+        name: "Conversor Arábico ↔ Romano",
+        description:
+          "Conversor bidirecional entre números romanos e arábicos. Suporta números romanos padrão de 1 a 3999 (I a MMMCMXCIX).",
+      },
+      ru: {
+        name: "Конвертер Арабские ↔ Римские цифры",
+        description:
+          "Двунаправленный преобразователь римских и арабских цифр. Поддерживает стандартные римские цифры от 1 до 3999 (I до MMMCMXCIX).",
+      },
+      sv: {
+        name: "Arabiska ↔ Romerska Konverterare",
+        description:
+          "Bidirektionell konverterare mellan romerska och arabiska siffror. Stöder standard romerska siffror från 1 till 3999 (I till MMMCMXCIX).",
+      },
+      th: {
+        name: "ตัวแปลงอารบิก ↔ โรมัน",
+        description:
+          "ตัวแปลงแบบสองทิศทางระหว่างตัวเลขโรมันและตัวเลขอารบิก รองรับตัวเลขโรมันมาตรฐาน 1 ถึง 3999 (I ถึง MMMCMXCIX)",
+      },
+      tr: {
+        name: "Arap ↔ Roma Rakamları Dönüştürücü",
+        description:
+          "Roma rakamları ve Arap rakamları arasında çift yönlü dönüştürücü. Standart Roma rakamlarını 1-3999 (I-MMMCMXCIX) destekler.",
+      },
+      vi: {
+        name: "Trình Chuyển Đổi Ả Rập ↔ La Mã",
+        description:
+          "Trình chuyển đổi hai chiều giữa số La Mã và số Ả Rập. Hỗ trợ số La Mã tiêu chuẩn từ 1 đến 3999 (I đến MMMCMXCIX).",
+      },
+      "zh-CN": {
+        name: "罗马数字 ↔ 阿拉伯数字转换器",
+        description:
+          "罗马数字与阿拉伯数字双向转换。支持标准罗马数字 1 到 3999（I 到 MMMCMXCIX）。",
+      },
+      "zh-TW": {
+        name: "羅馬數字 ↔ 阿拉伯數字轉換器",
+        description:
+          "羅馬數字與阿拉伯數字雙向轉換。支援標準羅馬數字 1 到 3999（I 到 MMMCMXCIX）。",
+      },
+    },
+  },
   "rot-cipher": {
     slug: "rot-cipher",
     category: "web",
@@ -14944,6 +16672,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "sha224-hash-text-or-file": {
+    slug: "sha224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sha224", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SHA-224 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA-224 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA-224-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA-224-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA-224 Hash Text or File",
+        description:
+          "Generate SHA-224 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA-224 de Texto o Archivo",
+        description:
+          "Genera hash SHA-224 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA-224 de Texte ou Fichier",
+        description:
+          "Générez un hash SHA-224 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA-224 טקסט או קובץ",
+        description:
+          "צור האש SHA-224 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA-224 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-224 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA-224 Teks atau File",
+        description:
+          "Buat hash SHA-224 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA-224 di Testo o File",
+        description:
+          "Genera hash SHA-224 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA-224 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA-224ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA-224 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA-224 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA-224 Teks atau Fail",
+        description:
+          "Jana hash SHA-224 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA-224-hash tekst of bestand",
+        description:
+          "Genereer SHA-224-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA-224-hash tekst eller fil",
+        description:
+          "Generer SHA-224-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA-224 tekstu lub pliku",
+        description:
+          "Generuj hash SHA-224 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA-224 de Texto ou Arquivo",
+        description:
+          "Gere hash SHA-224 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA-224-хеш текста или файла",
+        description:
+          "Генерируйте SHA-224-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA-224-hash text eller fil",
+        description:
+          "Generera SHA-224-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA-224 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA-224 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA-224 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA-224 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA-224 văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA-224 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA-224 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA-224 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA-224 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA-224 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "sha256-hash-text-or-file": {
     slug: "sha256-hash-text-or-file",
     category: "crypto",
@@ -15064,6 +16915,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SHA-256 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "sha3-224-hash-text-or-file": {
+    slug: "sha3-224-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-224",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-224 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-224 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-224 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-224 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-224 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-224 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-224 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-224 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-224 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-224 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-224 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-224 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-224 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-224 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-224 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-224 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-224 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-224 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-224 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-224 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-224 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-224 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-224 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-224 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-224 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-224 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-224 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-224 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-224 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-224 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-224 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-224 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-224 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-224 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-224 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-224 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-224 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-224 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-224 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-224 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-224 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-224 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-224 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-224 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-224 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-224 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -15805,6 +17788,110 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "svg-to-image-converter": {
+    slug: "svg-to-image-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "svg", "converter", "png", "jpeg", "webp"],
+    locales: {
+      ar: {
+        name: "محول SVG إلى صورة",
+        description: "حوّل ملفات SVG إلى صور PNG أو JPEG أو WebP",
+      },
+      de: {
+        name: "SVG-zu-Bild-Konverter",
+        description:
+          "Konvertieren Sie SVG-Dateien in PNG-, JPEG- oder WebP-Bilder",
+      },
+      en: {
+        name: "SVG to Image Converter",
+        description: "Convert SVG files to PNG, JPEG, or WebP images",
+      },
+      es: {
+        name: "Convertidor de SVG a imagen",
+        description: "Convierte archivos SVG en imágenes PNG, JPEG o WebP",
+      },
+      fr: {
+        name: "Convertisseur SVG en image",
+        description:
+          "Convertissez des fichiers SVG en images PNG, JPEG ou WebP",
+      },
+      he: {
+        name: "ממיר SVG לתמונה",
+        description: "המר קבצי SVG לתמונות PNG, JPEG או WebP",
+      },
+      hi: {
+        name: "SVG से इमेज कन्वर्टर",
+        description: "SVG फ़ाइलों को PNG, JPEG या WebP छवियों में बदलें",
+      },
+      id: {
+        name: "Konverter SVG ke gambar",
+        description: "Ubah file SVG menjadi gambar PNG, JPEG, atau WebP",
+      },
+      it: {
+        name: "Convertitore da SVG a immagine",
+        description: "Converti file SVG in immagini PNG, JPEG o WebP",
+      },
+      ja: {
+        name: "SVG 画像コンバーター",
+        description: "SVG ファイルを PNG、JPEG、WebP 画像に変換",
+      },
+      ko: {
+        name: "SVG 이미지 변환기",
+        description: "SVG 파일을 PNG, JPEG 또는 WebP 이미지로 변환",
+      },
+      ms: {
+        name: "Penukar SVG ke imej",
+        description: "Tukar fail SVG kepada imej PNG, JPEG atau WebP",
+      },
+      nl: {
+        name: "SVG-naar-afbeelding converter",
+        description:
+          "Converteer SVG-bestanden naar PNG-, JPEG- of WebP-afbeeldingen",
+      },
+      no: {
+        name: "SVG-til-bilde-konverterer",
+        description: "Konverter SVG-filer til PNG-, JPEG- eller WebP-bilder",
+      },
+      pl: {
+        name: "Konwerter SVG na obraz",
+        description: "Konwertuj pliki SVG na obrazy PNG, JPEG lub WebP",
+      },
+      pt: {
+        name: "Conversor de SVG para imagem",
+        description: "Converta arquivos SVG em imagens PNG, JPEG ou WebP",
+      },
+      ru: {
+        name: "Конвертер SVG в изображения",
+        description: "Преобразуйте файлы SVG в изображения PNG, JPEG или WebP",
+      },
+      sv: {
+        name: "SVG-till-bild-konverterare",
+        description: "Konvertera SVG-filer till PNG-, JPEG- eller WebP-bilder",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็นรูปภาพ",
+        description: "แปลงไฟล์ SVG เป็นรูปภาพ PNG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "SVG'den Görüntü Dönüştürücü",
+        description:
+          "SVG dosyalarını PNG, JPEG veya WebP görüntülerine dönüştürün",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang ảnh",
+        description: "Chuyển tệp SVG thành ảnh PNG, JPEG hoặc WebP",
+      },
+      "zh-CN": {
+        name: "SVG 转图片转换器",
+        description: "将 SVG 文件转换为 PNG、JPEG 或 WebP 图片",
+      },
+      "zh-TW": {
+        name: "SVG 轉圖片轉換器",
+        description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
   "text-statistics": {
     slug: "text-statistics",
     category: "text",
@@ -15933,6 +18020,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "文字統計",
         description:
           "把任何草稿變成即時寫作分析面板，查看多語言計數、詞彙訊號、結構線索與閱讀時間估算。",
+      },
+    },
+  },
+  "time-diff-calculator": {
+    slug: "time-diff-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "difference", "duration", "calculator", "timezone", "utc"],
+    locales: {
+      ar: {
+        name: "حاسبة فرق الوقت",
+        description:
+          "قارن بين وقتين محليين في منطقتين زمنيتين مختلفتين واحصل على فرق الوقت بالإشارة والقيمة المطلقة وبصيغة ISO 8601 وبالوحدات الإجمالية.",
+      },
+      de: {
+        name: "Zeitdifferenz-Rechner",
+        description:
+          "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten.",
+      },
+      en: {
+        name: "Time Difference Calculator",
+        description:
+          "Compare two local times across time zones and get signed, absolute, ISO 8601, and total-unit differences.",
+      },
+      es: {
+        name: "Calculadora de diferencia de tiempo",
+        description:
+          "Compara dos horas locales en distintas zonas horarias y obtén diferencias con signo, absolutas, en ISO 8601 y en unidades totales.",
+      },
+      fr: {
+        name: "Calculateur de différence de temps",
+        description:
+          "Comparez deux heures locales dans différents fuseaux horaires et obtenez des écarts signés, absolus, en ISO 8601 et en unités totales.",
+      },
+      he: {
+        name: "מחשבון הפרש זמן",
+        description:
+          "השוו בין שני זמנים מקומיים באזורי זמן שונים וקבלו את ההפרש עם סימן, בערך מוחלט, בפורמט ISO 8601 וביחידות כוללות.",
+      },
+      hi: {
+        name: "समय अंतर कैलकुलेटर",
+        description:
+          "अलग-अलग समय क्षेत्रों के दो स्थानीय समयों की तुलना करें और signed, absolute, ISO 8601 तथा कुल इकाइयों में अंतर पाएं।",
+      },
+      id: {
+        name: "Kalkulator selisih waktu",
+        description:
+          "Bandingkan dua waktu lokal di zona waktu berbeda dan dapatkan selisih bertanda, absolut, ISO 8601, dan dalam satuan total.",
+      },
+      it: {
+        name: "Calcolatore della differenza di tempo",
+        description:
+          "Confronta due orari locali in fusi orari diversi e ottieni la differenza con segno, assoluta, in ISO 8601 e in unità totali.",
+      },
+      ja: {
+        name: "時間差計算ツール",
+        description:
+          "異なるタイムゾーンにある2つのローカル時刻を比較し、符号付き・絶対値・ISO 8601・合計単位の差分を求めます。",
+      },
+      ko: {
+        name: "시간 차이 계산기",
+        description:
+          "서로 다른 시간대의 두 로컬 시간을 비교하고 부호 있는 차이, 절대 차이, ISO 8601, 총 단위 차이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator perbezaan masa",
+        description:
+          "Bandingkan dua masa setempat dalam zon masa berbeza dan dapatkan perbezaan bertanda, mutlak, ISO 8601 dan dalam unit jumlah.",
+      },
+      nl: {
+        name: "Tijdsverschilcalculator",
+        description:
+          "Vergelijk twee lokale tijden in verschillende tijdzones en krijg verschillen met teken, absolute verschillen, ISO 8601 en totale eenheden.",
+      },
+      no: {
+        name: "Kalkulator for tidsforskjell",
+        description:
+          "Sammenlign to lokale tider i ulike tidssoner og få forskjeller med fortegn, absolutte forskjeller, som ISO 8601 og i totale enheter.",
+      },
+      pl: {
+        name: "Kalkulator różnicy czasu",
+        description:
+          "Porównuj dwa czasy lokalne w różnych strefach czasowych i otrzymuj różnicę ze znakiem, bezwzględną, w ISO 8601 i w jednostkach łącznych.",
+      },
+      pt: {
+        name: "Calculadora de diferença de tempo",
+        description:
+          "Compare dois horários locais em fusos diferentes e obtenha diferenças com sinal, absolutas, em ISO 8601 e em unidades totais.",
+      },
+      ru: {
+        name: "Калькулятор разницы во времени",
+        description:
+          "Сравнивайте два локальных времени в разных часовых поясах и получайте разницу со знаком, абсолютную, в ISO 8601 и в суммарных единицах.",
+      },
+      sv: {
+        name: "Tidsdifferenskalkylator",
+        description:
+          "Jämför två lokala tider i olika tidszoner och få skillnader med tecken, absoluta skillnader, ISO 8601 och totala enheter.",
+      },
+      th: {
+        name: "เครื่องคำนวณความต่างของเวลา",
+        description:
+          "เปรียบเทียบเวลาท้องถิ่นสองค่าในเขตเวลาที่ต่างกัน แล้วดูผลต่างแบบมีเครื่องหมาย แบบค่าสัมบูรณ์ แบบ ISO 8601 และแบบหน่วยรวม",
+      },
+      tr: {
+        name: "Zaman farkı hesaplayıcısı",
+        description:
+          "Farklı saat dilimlerindeki iki yerel saati karşılaştırın ve işaretli, mutlak, ISO 8601 ve toplam birim farklarını görün.",
+      },
+      vi: {
+        name: "Trình tính chênh lệch thời gian",
+        description:
+          "So sánh hai thời điểm địa phương ở các múi giờ khác nhau và nhận chênh lệch có dấu, tuyệt đối, theo ISO 8601 và theo tổng đơn vị.",
+      },
+      "zh-CN": {
+        name: "时间差计算器",
+        description:
+          "比较不同时区中的两个本地时间，计算带符号、绝对值、ISO 8601 和总单位形式的时间差。",
+      },
+      "zh-TW": {
+        name: "時間差計算器",
+        description:
+          "比較不同時區中的兩個本地時間，計算帶符號、絕對值、ISO 8601 與總單位形式的時間差。",
       },
     },
   },

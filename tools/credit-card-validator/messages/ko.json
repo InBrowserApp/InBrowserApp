@@ -1,0 +1,22 @@
+{
+  "cardNumber": "신용카드 번호",
+  "placeholder": "신용카드 번호 입력",
+  "valid": "유효한 카드 번호",
+  "invalid": "유효하지 않은 카드 번호",
+  "invalidLuhn": "체크섬 오류 (Luhn 알고리즘 실패)",
+  "invalidLength": "카드 번호 길이 오류",
+  "result": "검증 결과",
+  "brand": "카드 브랜드",
+  "unknown": "알 수 없음",
+  "formattedNumber": "포맷된 번호",
+  "luhnCheck": "Luhn 검사",
+  "lengthCheck": "길이 검사",
+  "digits": "총 자릿수",
+  "cvcLength": "CVC 길이",
+  "digitsLabel": "자리",
+  "pass": "통과",
+  "fail": "실패",
+  "expectedLength": "예상: {lengths}",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

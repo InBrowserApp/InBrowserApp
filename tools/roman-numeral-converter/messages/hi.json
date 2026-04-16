@@ -1,0 +1,22 @@
+{
+  "converterTitle": "अरबी ↔ रोमन अंक कनवर्टर",
+  "converterDescription": "रोमन अंकों और अरबी संख्याओं के बीच द्विदिशीय कनवर्टर। मानक रोमन अंक 1 से 3999 (I से MMMCMXCIX) का समर्थन करता है।",
+  "arabicNumber": "अरबी संख्या (1-3999)",
+  "arabicPlaceholder": "अरबी संख्या दर्ज करें...",
+  "romanNumeral": "रोमन संख्या",
+  "romanPlaceholder": "रोमन संख्या दर्ज करें...",
+  "invalidRomanNumeral": "कृपया एक वैध रोमन संख्या दर्ज करें",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

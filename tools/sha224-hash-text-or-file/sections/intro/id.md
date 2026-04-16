@@ -1,0 +1,19 @@
+## Apa itu SHA-224?
+
+SHA-224 (Secure Hash Algorithm 224-bit) adalah fungsi hash kriptografi yang menghasilkan nilai hash 224-bit (28-byte), biasanya ditampilkan sebagai angka heksadesimal 56 karakter. Ini adalah bagian dari keluarga fungsi hash SHA-2 yang dirancang oleh NSA dan diterbitkan oleh NIST.
+
+**Karakteristik utama:**
+
+- **Deterministik**: Input yang sama selalu menghasilkan hash yang sama
+- **Komputasi cepat**: Cepat dihitung untuk input apa pun
+- **Efek longsor**: Perubahan kecil pada input menghasilkan output yang sangat berbeda
+- **Tidak dapat dibalik**: Secara komputasi tidak mungkin membalik hash untuk menemukan input asli
+- **Tahan collision**: Sangat sulit menemukan dua input berbeda yang menghasilkan hash yang sama
+
+**Penggunaan umum:**
+
+- Tanda tangan digital dan sertifikat
+- Blockchain dan cryptocurrency (beberapa sistem menggunakan SHA-224)
+- Penyimpanan kata sandi (dengan salting yang tepat)
+- Verifikasi integritas file
+- Algoritma proof-of-work

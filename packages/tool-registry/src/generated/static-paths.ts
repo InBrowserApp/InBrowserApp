@@ -738,6 +738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "blake2b-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },
@@ -827,6 +919,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "case-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ar",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "de",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "en",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "es",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "fr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "he",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "hi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "id",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "it",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ja",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ko",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ms",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "nl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "no",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pt",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ru",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "sv",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "th",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "tr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "vi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "credit-card-validator",
     language: "zh-TW",
   },
   {
@@ -1655,6 +1839,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "html-entity-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "iban-validator",
+    language: "ar",
+  },
+  {
+    slug: "iban-validator",
+    language: "de",
+  },
+  {
+    slug: "iban-validator",
+    language: "en",
+  },
+  {
+    slug: "iban-validator",
+    language: "es",
+  },
+  {
+    slug: "iban-validator",
+    language: "fr",
+  },
+  {
+    slug: "iban-validator",
+    language: "he",
+  },
+  {
+    slug: "iban-validator",
+    language: "hi",
+  },
+  {
+    slug: "iban-validator",
+    language: "id",
+  },
+  {
+    slug: "iban-validator",
+    language: "it",
+  },
+  {
+    slug: "iban-validator",
+    language: "ja",
+  },
+  {
+    slug: "iban-validator",
+    language: "ko",
+  },
+  {
+    slug: "iban-validator",
+    language: "ms",
+  },
+  {
+    slug: "iban-validator",
+    language: "nl",
+  },
+  {
+    slug: "iban-validator",
+    language: "no",
+  },
+  {
+    slug: "iban-validator",
+    language: "pl",
+  },
+  {
+    slug: "iban-validator",
+    language: "pt",
+  },
+  {
+    slug: "iban-validator",
+    language: "ru",
+  },
+  {
+    slug: "iban-validator",
+    language: "sv",
+  },
+  {
+    slug: "iban-validator",
+    language: "th",
+  },
+  {
+    slug: "iban-validator",
+    language: "tr",
+  },
+  {
+    slug: "iban-validator",
+    language: "vi",
+  },
+  {
+    slug: "iban-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "iban-validator",
     language: "zh-TW",
   },
   {
@@ -4418,6 +4694,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ar",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "de",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "en",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "es",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "fr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "he",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "hi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "id",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "it",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ja",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ko",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ms",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "nl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "no",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pt",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ru",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "sv",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "th",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "tr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "vi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "rot-cipher",
     language: "ar",
   },
@@ -4602,6 +5062,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sha224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sha256-hash-text-or-file",
     language: "ar",
   },
@@ -4691,6 +5243,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -5246,6 +5890,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },
@@ -5335,6 +6071,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "text-statistics",
+    language: "zh-TW",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ar",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "de",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "en",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "es",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "fr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "he",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "hi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "id",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "it",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ja",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ko",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ms",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "nl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "no",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pt",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ru",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "sv",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "th",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "tr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "vi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-diff-calculator",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter Arabskie ↔ Rzymskie",
+  "description": "Dwukierunkowy konwerter między cyframi rzymskimi i arabskimi. Obsługuje standardowe cyfry rzymskie od 1 do 3999 (I do MMMCMXCIX)."
+}

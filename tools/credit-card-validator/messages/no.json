@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Kredittkortnummer",
+  "placeholder": "Skriv inn kredittkortnummer",
+  "valid": "Gyldig kortnummer",
+  "invalid": "Ugyldig kortnummer",
+  "invalidLuhn": "Ugyldig kontrollsum (Luhn-algoritme mislyktes)",
+  "invalidLength": "Ugyldig kortnummerlengde",
+  "result": "Valideringsresultat",
+  "brand": "Kortmerke",
+  "unknown": "Ukjent",
+  "formattedNumber": "Formatert Nummer",
+  "luhnCheck": "Luhn-sjekk",
+  "lengthCheck": "Lengdesjekk",
+  "digits": "Totalt Sifre",
+  "cvcLength": "CVC-lengde",
+  "digitsLabel": "sifre",
+  "pass": "Bestått",
+  "fail": "Mislykket",
+  "expectedLength": "forventet: {lengths}",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

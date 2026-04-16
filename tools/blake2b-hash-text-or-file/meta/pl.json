@@ -1,0 +1,4 @@
+{
+  "name": "Hash BLAKE2b tekstu lub pliku",
+  "description": "Generuj hash BLAKE2b dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

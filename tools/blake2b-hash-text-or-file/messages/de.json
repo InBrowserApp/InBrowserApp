@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hash-Ergebnis für die aktuelle Texteingabe.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "configurationLabel": "BLAKE2b-Konfiguration",
+  "outputLengthLabel": "Ausgabelänge",
+  "keyLabel": "BLAKE2-Schlüssel (Base64)",
+  "keyPlaceholder": "Optionaler Schlüssel für Schlüssel-Hashing (Base64-kodiert)",
+  "invalidBase64Title": "Der Base64-Wert ist noch nicht gültig.",
+  "invalidBase64Description": "Prüfen Sie auf fehlendes Padding, unerwartete Zeichen oder unvollständig eingefügte Daten."
+}

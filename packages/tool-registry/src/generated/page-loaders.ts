@@ -14,7 +14,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
+  "blake2b-hash-text-or-file": () =>
+    import("@tool/blake2b-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
@@ -26,6 +29,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
@@ -61,10 +65,17 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
+  "ripemd160-hash-text-or-file": () =>
+    import("@tool/ripemd160-hash-text-or-file/page"),
+  "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
+  "sha224-hash-text-or-file": () =>
+    import("@tool/sha224-hash-text-or-file/page"),
   "sha256-hash-text-or-file": () =>
     import("@tool/sha256-hash-text-or-file/page"),
+  "sha3-224-hash-text-or-file": () =>
+    import("@tool/sha3-224-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
     import("@tool/sha384-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
@@ -74,7 +85,9 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
+  "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
+  "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),
   timer: () => import("@tool/timer/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "Walidator IBAN",
+  "description": "Weryfikuje IBAN pod kątem długości kraju, formatu i sumy kontrolnej."
+}

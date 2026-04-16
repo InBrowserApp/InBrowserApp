@@ -1,0 +1,20 @@
+{
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hashResultDescription": "当前文本输入的哈希结果。",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "decimalLabel": "十进制",
+  "binaryLabel": "二进制",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "configurationLabel": "BLAKE2b 配置",
+  "outputLengthLabel": "输出长度",
+  "keyLabel": "BLAKE2 密钥（Base64）",
+  "keyPlaceholder": "可选的密钥散列密钥（Base64 编码）",
+  "invalidBase64Title": "当前 Base64 还不是有效值。",
+  "invalidBase64Description": "请检查是否缺少填充字符、包含意外字符，或只粘贴了一部分数据。"
+}

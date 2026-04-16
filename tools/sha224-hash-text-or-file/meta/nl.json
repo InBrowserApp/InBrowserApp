@@ -1,0 +1,4 @@
+{
+  "name": "SHA-224-hash tekst of bestand",
+  "description": "Genereer SHA-224-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+}

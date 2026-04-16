@@ -1,0 +1,23 @@
+{
+  "startLabel": "Mula",
+  "endLabel": "Tamat",
+  "timeZoneLabel": "Zon masa",
+  "dateTimeLabel": "Tarikh dan masa",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Sekarang",
+  "offsetLabel": "Ofset",
+  "invalidDateTimeLabel": "Tarikh/masa tidak sah",
+  "swapLabel": "Tukar",
+  "resultsLabel": "Keputusan",
+  "signedDurationLabel": "Durasi bertanda",
+  "absoluteDurationLabel": "Durasi mutlak",
+  "iso8601DurationLabel": "Durasi ISO 8601",
+  "totalMillisecondsLabel": "Jumlah milisaat",
+  "totalSecondsLabel": "Jumlah saat",
+  "totalMinutesLabel": "Jumlah minit",
+  "totalHoursLabel": "Jumlah jam",
+  "totalDaysLabel": "Jumlah hari",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

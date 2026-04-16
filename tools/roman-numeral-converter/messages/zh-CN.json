@@ -1,0 +1,22 @@
+{
+  "converterTitle": "罗马数字 ↔ 阿拉伯数字转换器",
+  "converterDescription": "罗马数字与阿拉伯数字双向转换。支持标准罗马数字 1 到 3999（I 到 MMMCMXCIX）。",
+  "arabicNumber": "阿拉伯数字 (1-3999)",
+  "arabicPlaceholder": "输入阿拉伯数字...",
+  "romanNumeral": "罗马数字",
+  "romanPlaceholder": "输入罗马数字...",
+  "invalidRomanNumeral": "请输入有效的罗马数字",
+  "invalidArabicNumber": "请输入只包含数字的整数。",
+  "outOfRangeArabicNumber": "请输入 1 到 3999 之间的数值。",
+  "resultTitle": "实时结果",
+  "resultDescription": "查看规范化结果、校验状态和转换后的值。",
+  "emptyState": "输入阿拉伯数字或罗马数字即可开始转换。",
+  "validLabel": "有效",
+  "invalidLabel": "无效",
+  "rangeHint": "支持范围：1-3999",
+  "notationHint": "仅支持标准罗马数字写法",
+  "loadSample": "加载示例",
+  "clearLabel": "清空",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

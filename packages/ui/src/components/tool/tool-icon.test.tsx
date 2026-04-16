@@ -36,6 +36,7 @@ describe("ToolIcon", () => {
     const icons = [
       "binary",
       "braces",
+      "credit-card",
       "file-json-2",
       "file-text",
       "globe",

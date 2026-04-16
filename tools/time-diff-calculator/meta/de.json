@@ -1,0 +1,4 @@
+{
+  "name": "Zeitdifferenz-Rechner",
+  "description": "Vergleichen Sie zwei lokale Zeiten in verschiedenen Zeitzonen und erhalten Sie die Differenz mit Vorzeichen, absolut, als ISO 8601 und in Gesamteinheiten."
+}

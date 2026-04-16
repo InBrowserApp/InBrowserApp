@@ -1,0 +1,4 @@
+{
+  "name": "Kreditkarten-Validator",
+  "description": "Validiert Kreditkartennummern mit dem Luhn-Algorithmus und identifiziert die Kartenmarke"
+}

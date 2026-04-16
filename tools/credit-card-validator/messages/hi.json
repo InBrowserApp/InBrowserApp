@@ -1,0 +1,22 @@
+{
+  "cardNumber": "क्रेडिट कार्ड नंबर",
+  "placeholder": "क्रेडिट कार्ड नंबर दर्ज करें",
+  "valid": "मान्य कार्ड नंबर",
+  "invalid": "अमान्य कार्ड नंबर",
+  "invalidLuhn": "अमान्य चेकसम (Luhn एल्गोरिथम विफल)",
+  "invalidLength": "अमान्य कार्ड नंबर लंबाई",
+  "result": "सत्यापन परिणाम",
+  "brand": "कार्ड ब्रांड",
+  "unknown": "अज्ञात",
+  "formattedNumber": "फॉर्मेटेड नंबर",
+  "luhnCheck": "Luhn जांच",
+  "lengthCheck": "लंबाई जांच",
+  "digits": "कुल अंक",
+  "cvcLength": "CVC लंबाई",
+  "digitsLabel": "अंक",
+  "pass": "उत्तीर्ण",
+  "fail": "असफल",
+  "expectedLength": "अपेक्षित: {lengths}",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी किया गया"
+}

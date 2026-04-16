@@ -1,0 +1,4 @@
+{
+  "name": "IBAN 验证器",
+  "description": "验证 IBAN 号码，检查国家长度、格式和校验和。"
+}

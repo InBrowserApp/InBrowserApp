@@ -1,0 +1,4 @@
+{
+  "name": "SHA3-224 (FIPS 202) Hash Text or File",
+  "description": "Generate SHA3-224 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes"
+}

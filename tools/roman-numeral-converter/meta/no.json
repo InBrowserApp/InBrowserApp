@@ -1,0 +1,4 @@
+{
+  "name": "Arabisk ↔ Romersk Konverterer",
+  "description": "Toveis konverterer mellom romerske og arabiske tall. Støtter standard romerske tall fra 1 til 3999 (I til MMMCMXCIX)."
+}
