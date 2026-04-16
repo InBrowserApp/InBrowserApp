@@ -1,0 +1,4 @@
+{
+  "name": "SM3-hash text eller fil",
+  "description": "Generera SM3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål"
+}

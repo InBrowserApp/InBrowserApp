@@ -1,0 +1,4 @@
+{
+  "name": "Hash SM3 de Texte ou Fichier",
+  "description": "Générez un hash SM3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité"
+}
