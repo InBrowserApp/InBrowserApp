@@ -1,5 +1,3 @@
-import type { ReactNode } from "react"
-
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   ToolPanelCard,
@@ -24,6 +22,13 @@ import type {
   PRCIdValidationAnalysis,
   PRCIdValidatorMessages,
 } from "../client/types"
+import {
+  CopySummary,
+  DetailTile,
+  PanelLabel,
+  PanelShell,
+  SplitDetailPanel,
+} from "./result-panels"
 
 type PRCIdResultsCardProps = Readonly<{
   analysis: PRCIdValidationAnalysis | null
@@ -37,6 +42,9 @@ function PRCIdResultsCard({
   messages,
 }: PRCIdResultsCardProps) {
   const description = analysis ? feedbackMessage : messages.meta.description
+  const regionDisplay = analysis
+    ? getRegionDisplay(analysis, messages)
+    : messages.notAvailable
 
   return (
     <ToolPanelCard>
@@ -47,108 +55,148 @@ function PRCIdResultsCard({
       <ToolPanelCardContent className="gap-4">
         {analysis ? (
           <>
-            <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              <DetailTile
-                label={messages.status}
-                value={
-                  <Badge variant={analysis.isValid ? "default" : "destructive"}>
-                    {analysis.isValid ? messages.valid : messages.invalid}
-                  </Badge>
-                }
-              />
-              <DetailTile
-                label={messages.region}
-                value={getRegionDisplay(analysis, messages)}
-              />
-              <DetailTile
-                label={messages.regionStatus}
-                value={
-                  <Badge
-                    variant={analysis.isRegionValid ? "secondary" : "outline"}
-                  >
-                    {analysis.isRegionValid ? messages.known : messages.unknown}
-                  </Badge>
-                }
-              />
-              <DetailTile
-                label={messages.checksum}
-                value={
-                  <Badge
-                    variant={
-                      analysis.isChecksumValid ? "default" : "destructive"
+            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+              <PanelShell className="space-y-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <PanelLabel>{messages.status}</PanelLabel>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge
+                        variant={analysis.isValid ? "default" : "destructive"}
+                      >
+                        {analysis.isValid ? messages.valid : messages.invalid}
+                      </Badge>
+                      <Badge
+                        variant={
+                          analysis.isRegionValid ? "secondary" : "outline"
+                        }
+                      >
+                        {analysis.isRegionValid
+                          ? messages.known
+                          : messages.unknown}
+                      </Badge>
+                      <Badge
+                        variant={
+                          analysis.isChecksumValid ? "default" : "destructive"
+                        }
+                      >
+                        {analysis.isChecksumValid
+                          ? messages.pass
+                          : messages.fail}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <CopySummary
+                    label={messages.regionCode}
+                    value={analysis.regionCode}
+                    messages={messages}
+                  />
+                </div>
+
+                <div>
+                  <PanelLabel>{messages.region}</PanelLabel>
+                  <p className="mt-2 text-lg leading-tight font-semibold">
+                    {regionDisplay}
+                  </p>
+                </div>
+              </PanelShell>
+
+              <div className="grid gap-3">
+                <SplitDetailPanel
+                  primaryLabel={messages.birthdate}
+                  primaryValue={analysis.birthDateText ?? messages.notAvailable}
+                  secondaryLabel={messages.age}
+                  secondaryValue={
+                    analysis.age !== null
+                      ? String(analysis.age)
+                      : messages.notAvailable
+                  }
+                />
+                <SplitDetailPanel
+                  primaryLabel={messages.gender}
+                  primaryValue={
+                    <Badge
+                      variant={
+                        analysis.gender === "unknown" ? "outline" : "secondary"
+                      }
+                    >
+                      {getGenderLabel(analysis.gender, messages)}
+                    </Badge>
+                  }
+                  secondaryLabel={messages.sequenceCode}
+                  secondaryValue={
+                    analysis.sequenceCode ?? messages.notAvailable
+                  }
+                />
+              </div>
+            </section>
+
+            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+              <PanelShell className="space-y-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <PanelLabel>{messages.normalized}</PanelLabel>
+                    <p className="mt-2 font-mono text-base leading-7 break-all">
+                      {analysis.normalized}
+                    </p>
+                  </div>
+                  <ToolCopyButton
+                    value={analysis.normalized}
+                    copyLabel={messages.copyLabel}
+                    copiedLabel={messages.copiedLabel}
+                  />
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <DetailTile
+                    label={messages.checksum}
+                    value={
+                      <Badge
+                        variant={
+                          analysis.isChecksumValid ? "default" : "destructive"
+                        }
+                      >
+                        {analysis.isChecksumValid
+                          ? messages.pass
+                          : messages.fail}
+                      </Badge>
                     }
-                  >
-                    {analysis.isChecksumValid ? messages.pass : messages.fail}
-                  </Badge>
-                }
-              />
-            </section>
-
-            <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              <CopyableDetailTile
-                label={messages.normalized}
-                value={analysis.normalized}
-                messages={messages}
-              />
-              <CopyableDetailTile
-                label={messages.regionCode}
-                value={analysis.regionCode}
-                messages={messages}
-              />
-              <DetailTile
-                label={messages.birthdate}
-                value={analysis.birthDateText ?? messages.notAvailable}
-              />
-              <DetailTile
-                label={messages.age}
-                value={
-                  analysis.age !== null
-                    ? String(analysis.age)
-                    : messages.notAvailable
-                }
-              />
-            </section>
-
-            <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              <DetailTile
-                label={messages.gender}
-                value={
-                  <Badge
-                    variant={
-                      analysis.gender === "unknown" ? "outline" : "secondary"
+                  />
+                  <DetailTile
+                    label={messages.checkDigit}
+                    value={
+                      <div className="space-y-1">
+                        <p>
+                          {messages.expected}:{" "}
+                          {analysis.expectedCheckDigit ?? messages.notAvailable}
+                        </p>
+                        <p>
+                          {messages.actual}:{" "}
+                          {analysis.actualCheckDigit ?? messages.notAvailable}
+                        </p>
+                      </div>
                     }
-                  >
-                    {getGenderLabel(analysis.gender, messages)}
-                  </Badge>
-                }
-              />
-              <DetailTile
-                label={messages.sequenceCode}
-                value={analysis.sequenceCode ?? messages.notAvailable}
-              />
-              <DetailTile
-                label={`${messages.checkDigit} (${messages.expected})`}
-                value={analysis.expectedCheckDigit ?? messages.notAvailable}
-              />
-              <DetailTile
-                label={`${messages.checkDigit} (${messages.actual})`}
-                value={analysis.actualCheckDigit ?? messages.notAvailable}
-              />
-            </section>
+                  />
+                </div>
+              </PanelShell>
 
-            <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-              <DetailTile
-                label={messages.province}
-                value={analysis.provinceName ?? messages.notAvailable}
-              />
-              <DetailTile
-                label={messages.city}
-                value={analysis.cityName ?? messages.notAvailable}
-              />
-              <DetailTile
-                label={messages.district}
-                value={analysis.areaName ?? messages.notAvailable}
-              />
+              <PanelShell>
+                <div className="grid gap-3">
+                  <DetailTile
+                    label={messages.province}
+                    value={analysis.provinceName ?? messages.notAvailable}
+                  />
+                  <DetailTile
+                    label={messages.city}
+                    value={analysis.cityName ?? messages.notAvailable}
+                  />
+                  <DetailTile
+                    label={messages.district}
+                    value={analysis.areaName ?? messages.notAvailable}
+                  />
+                </div>
+              </PanelShell>
             </section>
           </>
         ) : (
@@ -187,50 +235,6 @@ function getRegionDisplay(
   ].filter(Boolean) as string[]
 
   return parts.length > 0 ? parts.join(" / ") : messages.notAvailable
-}
-
-function DetailTile({
-  label,
-  value,
-}: Readonly<{ label: string; value: ReactNode }>) {
-  return (
-    <div className="rounded-xl border border-border/70 bg-muted/20 p-4">
-      <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-        {label}
-      </p>
-      <div className="mt-2 text-sm leading-6 break-all">{value}</div>
-    </div>
-  )
-}
-
-function CopyableDetailTile({
-  label,
-  value,
-  messages,
-}: Readonly<{
-  label: string
-  value: string | null
-  messages: PRCIdValidatorMessages
-}>) {
-  const displayValue = value ?? messages.notAvailable
-
-  return (
-    <DetailTile
-      label={label}
-      value={
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-sm break-all">{displayValue}</span>
-          {value ? (
-            <ToolCopyButton
-              value={value}
-              copyLabel={messages.copyLabel}
-              copiedLabel={messages.copiedLabel}
-            />
-          ) : null}
-        </div>
-      }
-    />
-  )
 }
 
 export { PRCIdResultsCard }
