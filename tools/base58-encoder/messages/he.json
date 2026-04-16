@@ -1,0 +1,18 @@
+{
+  "options": "אפשרויות",
+  "alphabet": "אלפבית",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "קלט",
+  "inputPlaceholder": "הזן טקסט לקידוד...",
+  "outputTitle": "מקודד Base58",
+  "outputPlaceholder": "פלט Base58 יוצג כאן...",
+  "download": "הורד Base58",
+  "readFailed": "קריאת הקובץ נכשלה",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "ייבוא מקובץ"
+}

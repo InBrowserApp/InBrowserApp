@@ -1,0 +1,4 @@
+{
+  "name": "Base58 编码器",
+  "description": "将文本或文件编码为 Base58，用于数据传输、存储和 Web 开发。"
+}

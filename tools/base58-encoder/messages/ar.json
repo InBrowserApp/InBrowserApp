@@ -1,0 +1,18 @@
+{
+  "options": "الخيارات",
+  "alphabet": "الأبجدية",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "الإدخال",
+  "inputPlaceholder": "أدخل النص للترميز...",
+  "outputTitle": "مُرمز Base58",
+  "outputPlaceholder": "سيظهر إخراج Base58 هنا...",
+  "download": "تنزيل Base58",
+  "readFailed": "فشل في قراءة الملف",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "استيراد من ملف"
+}

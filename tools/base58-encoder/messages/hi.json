@@ -1,0 +1,18 @@
+{
+  "options": "विकल्प",
+  "alphabet": "वर्णमाला",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "इनपुट",
+  "inputPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "outputTitle": "Base58 एन्कोडेड",
+  "outputPlaceholder": "Base58 आउटपुट यहां दिखाई देगा...",
+  "download": "Base58 डाउनलोड करें",
+  "readFailed": "फ़ाइल पढ़ने में विफल",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "फ़ाइल से आयात करें"
+}
