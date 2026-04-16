@@ -20,6 +20,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2b-hash-text-or-file/page"),
   "blake2s-hash-text-or-file": () =>
     import("@tool/blake2s-hash-text-or-file/page"),
+  "blake3-hash-text-or-file": () =>
+    import("@tool/blake3-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),

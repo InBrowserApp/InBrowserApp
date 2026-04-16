@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hash Resultaat",
+  "hashResultDescription": "Hashresultaat voor de huidige tekstinvoer.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "configurationLabel": "BLAKE3 Configuratie",
+  "outputLengthLabel": "Uitvoerlengte",
+  "keyLabel": "BLAKE3 Sleutel (Base64)",
+  "keyPlaceholder": "Optionele sleutel van 32 bytes voor sleutel-hashing (Base64 gecodeerd)",
+  "invalidBase64Title": "De Base64-waarde is nog niet geldig.",
+  "invalidBase64Description": "Controleer op ontbrekende padding, onverwachte tekens of gedeeltelijk geplakte gegevens."
+}

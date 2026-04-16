@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Inmatning",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat för den aktuella textinmatningen.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "configurationLabel": "BLAKE3 Konfiguration",
+  "outputLengthLabel": "Utdatalängd",
+  "keyLabel": "BLAKE3 Nyckel (Base64)",
+  "keyPlaceholder": "Valfri 32-byte-nyckel för nyckel-hashing (Base64-kodad)",
+  "invalidBase64Title": "Base64-värdet är inte giltigt än.",
+  "invalidBase64Description": "Kontrollera om det saknas utfyllnad, finns oväntade tecken eller om data klistrats in delvis."
+}

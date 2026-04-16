@@ -1106,6 +1106,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "blake3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },
