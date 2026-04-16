@@ -30,6 +30,8 @@ const messages = {
     "Try a different code, phrase, or category to broaden the results.",
 } as const
 
+const descriptions = {} as const
+
 afterEach(() => {
   cleanup()
   window.localStorage.clear()
@@ -37,7 +39,13 @@ afterEach(() => {
 
 describe("HttpStatusCodeLookupClient", () => {
   test("renders the default status code list", () => {
-    render(<HttpStatusCodeLookupClient language="en" messages={messages} />)
+    render(
+      <HttpStatusCodeLookupClient
+        language="en"
+        descriptions={descriptions}
+        messages={messages}
+      />
+    )
 
     expect(
       screen.getByRole("textbox", { name: messages.searchPlaceholder })
@@ -48,7 +56,13 @@ describe("HttpStatusCodeLookupClient", () => {
   })
 
   test("filters the list by search query", () => {
-    render(<HttpStatusCodeLookupClient language="en" messages={messages} />)
+    render(
+      <HttpStatusCodeLookupClient
+        language="en"
+        descriptions={descriptions}
+        messages={messages}
+      />
+    )
 
     const input = screen.getByRole("textbox", {
       name: messages.searchPlaceholder,
@@ -60,7 +74,13 @@ describe("HttpStatusCodeLookupClient", () => {
   })
 
   test("filters the list by category", () => {
-    render(<HttpStatusCodeLookupClient language="en" messages={messages} />)
+    render(
+      <HttpStatusCodeLookupClient
+        language="en"
+        descriptions={descriptions}
+        messages={messages}
+      />
+    )
 
     fireEvent.click(screen.getByRole("radio", { name: messages.common }))
 
@@ -69,7 +89,13 @@ describe("HttpStatusCodeLookupClient", () => {
   })
 
   test("shows the empty state when nothing matches", () => {
-    render(<HttpStatusCodeLookupClient language="en" messages={messages} />)
+    render(
+      <HttpStatusCodeLookupClient
+        language="en"
+        descriptions={descriptions}
+        messages={messages}
+      />
+    )
 
     const input = screen.getByRole("textbox", {
       name: messages.searchPlaceholder,
@@ -84,11 +110,41 @@ describe("HttpStatusCodeLookupClient", () => {
     window.localStorage.setItem(SEARCH_STORAGE_KEY, "gateway")
     window.localStorage.setItem(CATEGORY_STORAGE_KEY, "server-error")
 
-    render(<HttpStatusCodeLookupClient language="en" messages={messages} />)
+    render(
+      <HttpStatusCodeLookupClient
+        language="en"
+        descriptions={descriptions}
+        messages={messages}
+      />
+    )
 
     expect(await screen.findByDisplayValue("gateway")).toBeTruthy()
     expect(screen.getByText("Gateway Timeout")).toBeTruthy()
     expect(screen.queryByText("OK")).toBeNull()
+  })
+
+  test("renders and searches localized descriptions", () => {
+    render(
+      <HttpStatusCodeLookupClient
+        language="fr"
+        descriptions={{
+          "404": "La ressource demandee est introuvable.",
+        }}
+        messages={messages}
+      />
+    )
+
+    expect(
+      screen.getByText("La ressource demandee est introuvable.")
+    ).toBeTruthy()
+
+    const input = screen.getByRole("textbox", {
+      name: messages.searchPlaceholder,
+    })
+    fireEvent.change(input, { target: { value: "introuvable" } })
+
+    expect(screen.getByText("404")).toBeTruthy()
+    expect(screen.queryByText("Continue")).toBeNull()
   })
 })
 

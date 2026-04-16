@@ -32,104 +32,28 @@ import {
 import { Search } from "@workspace/ui/icons"
 
 import {
-  statusCodes,
-  type HttpStatusCodeCategory,
-  type HttpStatusCodeInfo,
-} from "./data/status-codes"
-import {
-  filterStatusCodes,
-  type HttpStatusCodeFilter,
-} from "./core/http-status-code-lookup"
-
-type HttpStatusCodeLookupMessages = Readonly<{
-  meta: {
-    name: string
-    description: string
-  }
-  searchPlaceholder: string
-  all: string
-  common: string
-  informationalFilter: string
-  successFilter: string
-  redirectionFilter: string
-  clientErrorFilter: string
-  serverErrorFilter: string
-  code: string
-  name: string
-  category: string
-  description: string
-  informational: string
-  success: string
-  redirection: string
-  clientError: string
-  serverError: string
-  noResultsTitle: string
-  noResultsDescription: string
-}>
+  CATEGORY_FILTERS,
+  formatCount,
+  getCategoryLabel,
+  getCategoryVariant,
+  getFilterLabel,
+  getVisibleRows,
+  type HttpStatusCodeDescriptions,
+  type HttpStatusCodeLookupMessages,
+} from "./client-helpers"
+import { type HttpStatusCodeFilter } from "./core/http-status-code-lookup"
 
 type HttpStatusCodeLookupClientProps = Readonly<{
   language: string
+  descriptions: HttpStatusCodeDescriptions
   messages: HttpStatusCodeLookupMessages
 }>
 
 const SEARCH_STORAGE_KEY = "tools:http-status-code-lookup:search"
 const CATEGORY_STORAGE_KEY = "tools:http-status-code-lookup:category"
-const CATEGORY_FILTERS = [
-  "all",
-  "common",
-  "informational",
-  "success",
-  "redirection",
-  "client-error",
-  "server-error",
-] as const satisfies readonly HttpStatusCodeFilter[]
-
-function getFilterLabel(
-  filter: HttpStatusCodeFilter,
-  messages: HttpStatusCodeLookupMessages
-) {
-  if (filter === "common") return messages.common
-  if (filter === "informational") return messages.informationalFilter
-  if (filter === "success") return messages.successFilter
-  if (filter === "redirection") return messages.redirectionFilter
-  if (filter === "client-error") return messages.clientErrorFilter
-  if (filter === "server-error") return messages.serverErrorFilter
-  return messages.all
-}
-
-function getCategoryLabel(
-  category: HttpStatusCodeCategory,
-  messages: HttpStatusCodeLookupMessages
-) {
-  if (category === "informational") return messages.informational
-  if (category === "success") return messages.success
-  if (category === "redirection") return messages.redirection
-  if (category === "client-error") return messages.clientError
-  return messages.serverError
-}
-
-function getCategoryVariant(category: HttpStatusCodeCategory) {
-  if (category === "success") return "default"
-  if (category === "redirection") return "secondary"
-  if (category === "client-error" || category === "server-error") {
-    return "destructive"
-  }
-
-  return "outline"
-}
-
-function getVisibleRows(
-  query: string,
-  filter: HttpStatusCodeFilter
-): readonly HttpStatusCodeInfo[] {
-  return filterStatusCodes(statusCodes, query, filter)
-}
-
-function formatCount(value: number, language: string) {
-  return new Intl.NumberFormat(language).format(value)
-}
 
 function HttpStatusCodeLookupClient({
+  descriptions,
   language,
   messages,
 }: HttpStatusCodeLookupClientProps) {
@@ -176,7 +100,7 @@ function HttpStatusCodeLookupClient({
     window.localStorage.setItem(CATEGORY_STORAGE_KEY, filter)
   }, [filter])
 
-  const visibleRows = getVisibleRows(deferredSearchQuery, filter)
+  const visibleRows = getVisibleRows(descriptions, deferredSearchQuery, filter)
   const resultCount = formatCount(visibleRows.length, language)
 
   return (

@@ -3,31 +3,13 @@ import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import HttpStatusCodeLookupClient from "./client"
+import {
+  type HttpStatusCodeDescriptions,
+  type HttpStatusCodeLookupLocaleMessages,
+} from "./client-helpers"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
-
-type HttpStatusCodeLookupMessages = Readonly<{
-  searchPlaceholder: string
-  all: string
-  common: string
-  informationalFilter: string
-  successFilter: string
-  redirectionFilter: string
-  clientErrorFilter: string
-  serverErrorFilter: string
-  code: string
-  name: string
-  category: string
-  description: string
-  informational: string
-  success: string
-  redirection: string
-  clientError: string
-  serverError: string
-  noResultsTitle: string
-  noResultsDescription: string
-}>
 
 interface Props {
   lang: string
@@ -39,8 +21,15 @@ const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
   lang
 )!
-const localizedMessages = resolveLocale<HttpStatusCodeLookupMessages>(
+const localizedMessages = resolveLocale<HttpStatusCodeLookupLocaleMessages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const descriptions = resolveLocale<HttpStatusCodeDescriptions>(
+  import.meta.glob("./descriptions/*.json", {
+    eager: true,
+    import: "default",
+  }),
   lang
 )!
 const IntroSection = resolveLocale<AstroComponentFactory>(
@@ -54,7 +43,12 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <HttpStatusCodeLookupClient client:load language={lang} messages={messages} />
+  <HttpStatusCodeLookupClient
+    client:load
+    language={lang}
+    descriptions={descriptions}
+    messages={messages}
+  />
 
   {
     IntroSection ? (
