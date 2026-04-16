@@ -6186,6 +6186,112 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mime-type-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["mime", "mime-type", "content-type", "file-extension", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أنواع MIME",
+        description: "البحث وتصفح أنواع MIME وامتدادات الملفات الخاصة بها",
+      },
+      de: {
+        name: "MIME-Typ-Suche",
+        description:
+          "MIME-Typen und ihre Dateierweiterungen suchen und durchsuchen",
+      },
+      en: {
+        name: "MIME Type Lookup",
+        description: "Search and browse MIME types and their file extensions",
+      },
+      es: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Buscar y explorar tipos MIME y sus extensiones de archivo",
+      },
+      fr: {
+        name: "Recherche de Types MIME",
+        description:
+          "Rechercher et parcourir les types MIME et leurs extensions de fichier",
+      },
+      he: {
+        name: "חיפוש סוג MIME",
+        description: "חפש ועיין בסוגי MIME והרחבות הקבצים שלהם",
+      },
+      hi: {
+        name: "MIME प्रकार खोज",
+        description: "MIME प्रकार और उनके फ़ाइल एक्सटेंशन खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Tipe MIME",
+        description: "Cari dan jelajahi tipe MIME dan ekstensi file mereka",
+      },
+      it: {
+        name: "Ricerca Tipi MIME",
+        description: "Cerca e sfoglia i tipi MIME e le loro estensioni di file",
+      },
+      ja: {
+        name: "MIME タイプ検索",
+        description: "MIME タイプとそのファイル拡張子を検索・閲覧",
+      },
+      ko: {
+        name: "MIME 타입 조회",
+        description: "MIME 타입과 파일 확장자 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Jenis MIME",
+        description: "Cari dan semak jenis MIME dan sambungan fail mereka",
+      },
+      nl: {
+        name: "MIME Type Opzoeken",
+        description: "Zoek en blader door MIME types en hun bestandsextensies",
+      },
+      no: {
+        name: "MIME-typesøk",
+        description: "Søk og bla gjennom MIME-typer og deres filendelser",
+      },
+      pl: {
+        name: "Wyszukiwanie Typów MIME",
+        description:
+          "Wyszukuj i przeglądaj typy MIME i ich rozszerzenia plików",
+      },
+      pt: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Pesquisar e navegar por tipos MIME e suas extensões de arquivo",
+      },
+      ru: {
+        name: "Поиск MIME Типов",
+        description: "Поиск и просмотр MIME типов и их расширений файлов",
+      },
+      sv: {
+        name: "MIME-typsökning",
+        description: "Sök och bläddra bland MIME-typer och deras filtillägg",
+      },
+      th: {
+        name: "ค้นหาประเภท MIME",
+        description: "ค้นหาและเรียกดูประเภท MIME และนามสกุลไฟล์",
+      },
+      tr: {
+        name: "MIME Türü Arama",
+        description: "MIME türlerini ve dosya uzantılarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Loại MIME",
+        description:
+          "Tìm kiếm và duyệt các loại MIME và phần mở rộng tệp của chúng",
+      },
+      "zh-CN": {
+        name: "MIME 类型查询",
+        description: "搜索和浏览 MIME 类型及其文件扩展名",
+      },
+      "zh-TW": {
+        name: "MIME 類型查詢",
+        description: "搜尋和瀏覽 MIME 類型及其檔案副檔名",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",
@@ -17823,6 +17929,112 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MD5 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  "mime-type-lookup": {
+    slug: "mime-type-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["mime", "mime-type", "content-type", "file-extension", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أنواع MIME",
+        description: "البحث وتصفح أنواع MIME وامتدادات الملفات الخاصة بها",
+      },
+      de: {
+        name: "MIME-Typ-Suche",
+        description:
+          "MIME-Typen und ihre Dateierweiterungen suchen und durchsuchen",
+      },
+      en: {
+        name: "MIME Type Lookup",
+        description: "Search and browse MIME types and their file extensions",
+      },
+      es: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Buscar y explorar tipos MIME y sus extensiones de archivo",
+      },
+      fr: {
+        name: "Recherche de Types MIME",
+        description:
+          "Rechercher et parcourir les types MIME et leurs extensions de fichier",
+      },
+      he: {
+        name: "חיפוש סוג MIME",
+        description: "חפש ועיין בסוגי MIME והרחבות הקבצים שלהם",
+      },
+      hi: {
+        name: "MIME प्रकार खोज",
+        description: "MIME प्रकार और उनके फ़ाइल एक्सटेंशन खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Tipe MIME",
+        description: "Cari dan jelajahi tipe MIME dan ekstensi file mereka",
+      },
+      it: {
+        name: "Ricerca Tipi MIME",
+        description: "Cerca e sfoglia i tipi MIME e le loro estensioni di file",
+      },
+      ja: {
+        name: "MIME タイプ検索",
+        description: "MIME タイプとそのファイル拡張子を検索・閲覧",
+      },
+      ko: {
+        name: "MIME 타입 조회",
+        description: "MIME 타입과 파일 확장자 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Jenis MIME",
+        description: "Cari dan semak jenis MIME dan sambungan fail mereka",
+      },
+      nl: {
+        name: "MIME Type Opzoeken",
+        description: "Zoek en blader door MIME types en hun bestandsextensies",
+      },
+      no: {
+        name: "MIME-typesøk",
+        description: "Søk og bla gjennom MIME-typer og deres filendelser",
+      },
+      pl: {
+        name: "Wyszukiwanie Typów MIME",
+        description:
+          "Wyszukuj i przeglądaj typy MIME i ich rozszerzenia plików",
+      },
+      pt: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Pesquisar e navegar por tipos MIME e suas extensões de arquivo",
+      },
+      ru: {
+        name: "Поиск MIME Типов",
+        description: "Поиск и просмотр MIME типов и их расширений файлов",
+      },
+      sv: {
+        name: "MIME-typsökning",
+        description: "Sök och bläddra bland MIME-typer och deras filtillägg",
+      },
+      th: {
+        name: "ค้นหาประเภท MIME",
+        description: "ค้นหาและเรียกดูประเภท MIME และนามสกุลไฟล์",
+      },
+      tr: {
+        name: "MIME Türü Arama",
+        description: "MIME türlerini ve dosya uzantılarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Loại MIME",
+        description:
+          "Tìm kiếm và duyệt các loại MIME và phần mở rộng tệp của chúng",
+      },
+      "zh-CN": {
+        name: "MIME 类型查询",
+        description: "搜索和浏览 MIME 类型及其文件扩展名",
+      },
+      "zh-TW": {
+        name: "MIME 類型查詢",
+        description: "搜尋和瀏覽 MIME 類型及其檔案副檔名",
       },
     },
   },

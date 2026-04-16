@@ -4602,6 +4602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mime-type-lookup",
+    language: "ar",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "de",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "en",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "es",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "fr",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "he",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "hi",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "id",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "it",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ja",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ko",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ms",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "nl",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "no",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "pl",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "pt",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ru",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "sv",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "th",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "tr",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "vi",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "morse-code-converter",
     language: "ar",
   },
