@@ -43,10 +43,12 @@ const STORAGE_KEYS = {
 const encoder = new TextEncoder()
 
 beforeEach(() => {
+  let blobId = 0
+
   vi.stubGlobal(
     "URL",
     Object.assign({}, globalThis.URL, {
-      createObjectURL: vi.fn(() => "blob:decoded-base58"),
+      createObjectURL: vi.fn(() => `blob:decoded-base58-${blobId++}`),
       revokeObjectURL: vi.fn(),
     })
   )
@@ -97,8 +99,18 @@ describe("Base58DecoderClient", () => {
     const downloadLink = screen.getByRole("link", {
       name: messages.downloadFileLabel,
     })
-    expect(downloadLink.getAttribute("href")).toBe("blob:decoded-base58")
+    expect(downloadLink.getAttribute("href")).toBe("blob:decoded-base58-0")
     expect(downloadLink.getAttribute("download")).toBe("decoded.bin")
+  })
+
+  test("creates one download URL per stable decoded result", async () => {
+    render(<Base58DecoderClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(getOutput().textContent).toContain("hello world")
+    })
+
+    expect(URL.createObjectURL).toHaveBeenCalledTimes(1)
   })
 
   test("updates the decoded preview when the input changes", () => {

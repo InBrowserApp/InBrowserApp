@@ -49,11 +49,17 @@ function Base58DecoderClient({ messages }: Base58DecoderClientProps) {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
 
   const deferredBase58Input = useDeferredValue(base58Input)
-  const decodeState = decodeBase58Preview(deferredBase58Input, {
-    alphabet: BASE58_ALPHABETS[alphabetKey],
-  })
-  const decodedBytes =
-    decodeState.state === "decoded" ? decodeState.bytes : null
+  const decodeState = useMemo(
+    () =>
+      decodeBase58Preview(deferredBase58Input, {
+        alphabet: BASE58_ALPHABETS[alphabetKey],
+      }),
+    [alphabetKey, deferredBase58Input]
+  )
+  const decodedBytes = useMemo(
+    () => (decodeState.state === "decoded" ? decodeState.bytes : null),
+    [decodeState]
+  )
   const alphabetOptions = useMemo<readonly Base58AlphabetOption[]>(
     () => [
       {
