@@ -22,6 +22,9 @@ const fixtureDatabase = {
     source: "iana",
     compressible: false,
   },
+  "message/example": {
+    source: "iana",
+  },
   "unknown/example": {
     extensions: ["unknown"],
   },
@@ -75,6 +78,14 @@ describe("createMimeTypeEntries", () => {
         extensions: ["png"],
         source: "iana",
         compressible: false,
+        charset: undefined,
+      },
+      {
+        mimeType: "message/example",
+        category: "message",
+        extensions: [],
+        source: "iana",
+        compressible: undefined,
         charset: undefined,
       },
       {
@@ -141,7 +152,12 @@ describe("filterMimeTypeEntries", () => {
       filterMimeTypeEntries(fixtureEntries, "iana", "all").map(
         (entry) => entry.mimeType
       )
-    ).toEqual(["application/json", "image/png", "text/plain"])
+    ).toEqual([
+      "application/json",
+      "image/png",
+      "message/example",
+      "text/plain",
+    ])
     expect(
       filterMimeTypeEntries(fixtureEntries, "utf-8", "all").map(
         (entry) => entry.mimeType
