@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32 इनपुट",
+  "base32InputPlaceholder": "Base32 पाठ दर्ज करें...",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "decodedOutputLabel": "डिकोडेड आउटपुट",
+  "decodedOutputEmptyDescription": "डिकोड किया गया पाठ यहां दिखाई देगा...",
+  "downloadFileLabel": "फ़ाइल डाउनलोड करें",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें",
+  "invalidBase32Title": "अमान्य Base32 पाठ",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल",
+  "previewTruncatedLabel": "प्रीव्यू संक्षिप्त किया गया"
+}

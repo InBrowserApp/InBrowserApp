@@ -1,0 +1,4 @@
+{
+  "name": "Bộ giải mã Base32",
+  "description": "Giải mã văn bản hoặc tệp Base32 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp."
+}
