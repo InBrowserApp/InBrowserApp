@@ -1,0 +1,18 @@
+{
+  "options": "Opties",
+  "alphabet": "Alfabet",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Invoer",
+  "inputPlaceholder": "Voer tekst in om te coderen...",
+  "outputTitle": "Base58 Gecodeerd",
+  "outputPlaceholder": "Base58-uitvoer verschijnt hier...",
+  "download": "Base58 downloaden",
+  "readFailed": "Bestand kon niet worden gelezen",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Importeren uit bestand"
+}

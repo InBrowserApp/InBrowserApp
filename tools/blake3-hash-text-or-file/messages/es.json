@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto plano",
+  "plainTextDescription": "Pega o escribe cualquier texto UTF-8, incluyendo emojis y caracteres no latinos.",
+  "importFromFileLabel": "Importar desde archivo",
+  "hashResultLabel": "Resultado del Hash",
+  "hashResultDescription": "Resultado hash de la entrada de texto actual.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "configurationLabel": "Configuración BLAKE3",
+  "outputLengthLabel": "Longitud de Salida",
+  "keyLabel": "Clave BLAKE3 (Base64)",
+  "keyPlaceholder": "Clave opcional de 32 bytes para hash con clave (codificada en Base64)",
+  "invalidBase64Title": "El valor Base64 aún no es válido.",
+  "invalidBase64Description": "Comprueba si falta el relleno, hay caracteres inesperados o los datos están pegados parcialmente."
+}

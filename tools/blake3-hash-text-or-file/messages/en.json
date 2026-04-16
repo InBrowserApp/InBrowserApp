@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "hashResultLabel": "Hash Result",
+  "hashResultDescription": "Hash result for the current text input.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binary",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "configurationLabel": "BLAKE3 Configuration",
+  "outputLengthLabel": "Output Length",
+  "keyLabel": "BLAKE3 Key (Base64)",
+  "keyPlaceholder": "Optional 32-byte key for keyed hashing (Base64 encoded)",
+  "invalidBase64Title": "The Base64 value is not valid yet.",
+  "invalidBase64Description": "Check for missing padding, unexpected characters, or partially pasted data."
+}

@@ -12,6 +12,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base16-encoder": () => import("@tool/base16-encoder/page"),
   "base32-decoder": () => import("@tool/base32-decoder/page"),
   "base58-decoder": () => import("@tool/base58-decoder/page"),
+  "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
@@ -22,6 +23,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2b-hash-text-or-file/page"),
   "blake2s-hash-text-or-file": () =>
     import("@tool/blake2s-hash-text-or-file/page"),
+  "blake3-hash-text-or-file": () =>
+    import("@tool/blake3-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
@@ -89,6 +92,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha3-256-hash-text-or-file/page"),
   "sha3-384-hash-text-or-file": () =>
     import("@tool/sha3-384-hash-text-or-file/page"),
+  "sha3-512-hash-text-or-file": () =>
+    import("@tool/sha3-512-hash-text-or-file/page"),
   "sha384-hash-text-or-file": () =>
     import("@tool/sha384-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>

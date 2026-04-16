@@ -899,6 +899,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "base58-encoder",
+    category: "crypto",
+    icon: "binary",
+    tags: [
+      "base58",
+      "encoder",
+      "encoding",
+      "bitcoin",
+      "ripple",
+      "text",
+      "file",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base58",
+        description:
+          "ترميز النص أو الملفات إلى Base58 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base58-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base58 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base58 Encoder",
+        description:
+          "Encode text or files to Base58 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base58",
+        description:
+          "Codifica texto o archivos a Base58 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base58",
+        description:
+          "Encode du texte ou des fichiers en Base58 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base58",
+        description:
+          "מקודד טקסט או קבצים ל-Base58 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base58 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base58 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base58",
+        description:
+          "Encode teks atau file ke Base58 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base58",
+        description:
+          "Codifica testo o file in Base58 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base58 エンコーダー",
+        description:
+          "テキストやファイルをBase58にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base58 인코더",
+        description:
+          "텍스트나 파일을 Base58로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base58",
+        description:
+          "Kod teks atau fail ke Base58 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base58-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base58 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base58-koder",
+        description:
+          "Kod tekst eller filer til Base58 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base58",
+        description:
+          "Koduj tekst lub pliki do Base58 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base58",
+        description:
+          "Codifica texto ou arquivos em Base58 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base58-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base58 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base58-kodare",
+        description:
+          "Koda text eller filer till Base58 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base58",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base58 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base58 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base58'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base58",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base58 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base58 编码器",
+        description:
+          "将文本或文件编码为 Base58，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base58 編碼器",
+        description:
+          "將文字或檔案編碼為 Base58，用於資料傳輸、儲存和 Web 開發。",
+      },
+    },
+  },
+  {
     slug: "base64-encoder-decoder",
     category: "text",
     icon: "binary",
@@ -1796,6 +1928,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "BLAKE2s 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 BLAKE2s 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "blake3", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE3 للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE3 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE3-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE3-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE3 Hash Text or File",
+        description:
+          "Generate BLAKE3 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE3 de Texto o Archivo",
+        description:
+          "Genera hash BLAKE3 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE3 de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE3 טקסט או קובץ",
+        description:
+          "צור האש BLAKE3 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE3 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE3 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE3 Teks atau File",
+        description:
+          "Buat hash BLAKE3 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE3 di Testo o File",
+        description:
+          "Genera hash BLAKE3 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE3 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE3ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE3 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE3 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE3 Teks atau Fail",
+        description:
+          "Jana hash BLAKE3 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE3-hash tekst of bestand",
+        description:
+          "Genereer BLAKE3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE3-hash tekst eller fil",
+        description:
+          "Generer BLAKE3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE3 tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE3 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE3 de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE3 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE3-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE3-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE3-hash text eller fil",
+        description:
+          "Generera BLAKE3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE3 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE3 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE3 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE3 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE3 văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE3 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE3 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE3 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE3 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -8329,6 +8584,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "sha3-512-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-512",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-512 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-512 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-512 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-512 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-512 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-512 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-512 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-512 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-512 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-512 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-512 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-512 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-512 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-512 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-512 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-512 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-512 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-512 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-512 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-512 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-512 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-512 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-512 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-512 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-512 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-512 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-512 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-512 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-512 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-512 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-512 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-512 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-512 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-512 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-512 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-512 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-512 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-512 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-512 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-512 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-512 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-512 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-512 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-512 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-512 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-512 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "sha384-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -11914,6 +12301,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "base58-encoder": {
+    slug: "base58-encoder",
+    category: "crypto",
+    icon: "binary",
+    tags: [
+      "base58",
+      "encoder",
+      "encoding",
+      "bitcoin",
+      "ripple",
+      "text",
+      "file",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base58",
+        description:
+          "ترميز النص أو الملفات إلى Base58 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base58-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base58 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base58 Encoder",
+        description:
+          "Encode text or files to Base58 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base58",
+        description:
+          "Codifica texto o archivos a Base58 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base58",
+        description:
+          "Encode du texte ou des fichiers en Base58 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base58",
+        description:
+          "מקודד טקסט או קבצים ל-Base58 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base58 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base58 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base58",
+        description:
+          "Encode teks atau file ke Base58 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base58",
+        description:
+          "Codifica testo o file in Base58 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base58 エンコーダー",
+        description:
+          "テキストやファイルをBase58にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base58 인코더",
+        description:
+          "텍스트나 파일을 Base58로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base58",
+        description:
+          "Kod teks atau fail ke Base58 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base58-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base58 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base58-koder",
+        description:
+          "Kod tekst eller filer til Base58 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base58",
+        description:
+          "Koduj tekst lub pliki do Base58 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base58",
+        description:
+          "Codifica texto ou arquivos em Base58 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base58-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base58 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base58-kodare",
+        description:
+          "Koda text eller filer till Base58 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base58",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base58 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base58 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base58'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base58",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base58 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base58 编码器",
+        description:
+          "将文本或文件编码为 Base58，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base58 編碼器",
+        description:
+          "將文字或檔案編碼為 Base58，用於資料傳輸、儲存和 Web 開發。",
+      },
+    },
+  },
   "base64-encoder-decoder": {
     slug: "base64-encoder-decoder",
     category: "text",
@@ -12812,6 +13331,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "BLAKE2s 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 BLAKE2s 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "blake3-hash-text-or-file": {
+    slug: "blake3-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "blake3", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة BLAKE3 للنص أو الملف",
+        description:
+          "إنشاء تجزئة BLAKE3 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "BLAKE3-Hash für Text oder Datei",
+        description:
+          "Generieren Sie BLAKE3-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "BLAKE3 Hash Text or File",
+        description:
+          "Generate BLAKE3 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash BLAKE3 de Texto o Archivo",
+        description:
+          "Genera hash BLAKE3 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash BLAKE3 de Texte ou Fichier",
+        description:
+          "Générez un hash BLAKE3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש BLAKE3 טקסט או קובץ",
+        description:
+          "צור האש BLAKE3 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "BLAKE3 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए BLAKE3 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash BLAKE3 Teks atau File",
+        description:
+          "Buat hash BLAKE3 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash BLAKE3 di Testo o File",
+        description:
+          "Genera hash BLAKE3 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "BLAKE3 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのBLAKE3ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "BLAKE3 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 BLAKE3 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash BLAKE3 Teks atau Fail",
+        description:
+          "Jana hash BLAKE3 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "BLAKE3-hash tekst of bestand",
+        description:
+          "Genereer BLAKE3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "BLAKE3-hash tekst eller fil",
+        description:
+          "Generer BLAKE3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash BLAKE3 tekstu lub pliku",
+        description:
+          "Generuj hash BLAKE3 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash BLAKE3 de Texto ou Arquivo",
+        description:
+          "Gere hash BLAKE3 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "BLAKE3-хеш текста или файла",
+        description:
+          "Генерируйте BLAKE3-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "BLAKE3-hash text eller fil",
+        description:
+          "Generera BLAKE3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช BLAKE3 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช BLAKE3 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "BLAKE3 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için BLAKE3 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash BLAKE3 văn bản hoặc tệp",
+        description:
+          "Tạo hash BLAKE3 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "BLAKE3 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 BLAKE3 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "BLAKE3 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 BLAKE3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -19341,6 +19983,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SHA3-384 (FIPS 202) 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA3-384 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "sha3-512-hash-text-or-file": {
+    slug: "sha3-512-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "sha3",
+      "sha3-512",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHA3-512 (FIPS 202) للنص أو الملف",
+        description:
+          "إنشاء تجزئة SHA3-512 (FIPS 202) لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SHA3-512 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SHA3-512 (FIPS 202)-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SHA3-512 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHA3-512 (FIPS 202) hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SHA3-512 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hash SHA3-512 (FIPS 202) para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SHA3-512 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez un hash SHA3-512 (FIPS 202) pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SHA3-512 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור האש SHA3-512 (FIPS 202) עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SHA3-512 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA3-512 (FIPS 202) हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SHA3-512 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHA3-512 (FIPS 202) untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SHA3-512 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHA3-512 (FIPS 202) per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SHA3-512 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSHA3-512 (FIPS 202)ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SHA3-512 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SHA3-512 (FIPS 202) 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SHA3-512 (FIPS 202) Teks atau Fail",
+        description:
+          "Jana hash SHA3-512 (FIPS 202) untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SHA3-512 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHA3-512 (FIPS 202)-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SHA3-512 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHA3-512 (FIPS 202)-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SHA3-512 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hash SHA3-512 (FIPS 202) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SHA3-512 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hash SHA3-512 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SHA3-512 (FIPS 202)-хеш текста или файла",
+        description:
+          "Генерируйте SHA3-512 (FIPS 202)-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SHA3-512 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHA3-512 (FIPS 202)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SHA3-512 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHA3-512 (FIPS 202) สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SHA3-512 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SHA3-512 (FIPS 202) hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SHA3-512 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHA3-512 (FIPS 202) cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SHA3-512 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHA3-512 (FIPS 202) 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SHA3-512 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA3-512 (FIPS 202) 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },

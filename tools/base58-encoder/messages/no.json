@@ -1,0 +1,18 @@
+{
+  "options": "Alternativer",
+  "alphabet": "Alfabet",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Inndata",
+  "inputPlaceholder": "Skriv inn tekst for koding...",
+  "outputTitle": "Base58-kodet",
+  "outputPlaceholder": "Base58-utdata vises her...",
+  "download": "Last ned Base58",
+  "readFailed": "Kunne ikke lese filen",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Importer fra fil"
+}

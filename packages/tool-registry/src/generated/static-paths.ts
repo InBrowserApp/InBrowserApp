@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base58-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base58-encoder",
+    language: "de",
+  },
+  {
+    slug: "base58-encoder",
+    language: "en",
+  },
+  {
+    slug: "base58-encoder",
+    language: "es",
+  },
+  {
+    slug: "base58-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base58-encoder",
+    language: "he",
+  },
+  {
+    slug: "base58-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base58-encoder",
+    language: "id",
+  },
+  {
+    slug: "base58-encoder",
+    language: "it",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base58-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base58-encoder",
+    language: "no",
+  },
+  {
+    slug: "base58-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base58-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base58-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base58-encoder",
+    language: "th",
+  },
+  {
+    slug: "base58-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base58-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base58-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base58-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },
@@ -1287,6 +1379,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "blake2s-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -6163,6 +6347,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha3-384-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,20 @@
+{
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والحروف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التشفير",
+  "hashResultDescription": "نتيجة التجزئة لإدخال النص الحالي.",
+  "hexLabel": "سادس عشر",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "configurationLabel": "تكوين BLAKE3",
+  "outputLengthLabel": "طول الإخراج",
+  "keyLabel": "مفتاح BLAKE3 (Base64)",
+  "keyPlaceholder": "مفتاح اختياري بطول 32 بايت للهاش بالمفتاح (مُرمز بـ Base64)",
+  "invalidBase64Title": "قيمة Base64 ليست صالحة بعد.",
+  "invalidBase64Description": "تحقق من وجود حشو مفقود أو أحرف غير متوقعة أو بيانات مُلصقة جزئيًا."
+}

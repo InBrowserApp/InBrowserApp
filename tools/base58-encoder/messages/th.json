@@ -1,0 +1,18 @@
+{
+  "options": "ตัวเลือก",
+  "alphabet": "อักษร",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "ข้อมูลเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "outputTitle": "เข้ารหัส Base58",
+  "outputPlaceholder": "ผลลัพธ์ Base58 จะปรากฏที่นี่...",
+  "download": "ดาวน์โหลด Base58",
+  "readFailed": "อ่านไฟล์ไม่สำเร็จ",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "นำเข้าจากไฟล์"
+}
