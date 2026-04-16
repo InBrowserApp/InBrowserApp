@@ -53,6 +53,18 @@ describe("base58", () => {
     ).toBe("hello world")
   })
 
+  test("returns an empty string for empty input", () => {
+    expect(encodeBase58(new Uint8Array())).toBe("")
+  })
+
+  test("preserves leading zero bytes and accepts ArrayBuffer input", () => {
+    const source = Uint8Array.from([0, 0, 1, 2, 3])
+    const encoded = encodeBase58(source.buffer)
+
+    expect(encoded.startsWith("11")).toBe(true)
+    expect(Array.from(decodeBase58(encoded))).toEqual(Array.from(source))
+  })
+
   test("returns an empty array for blank input", () => {
     expect(Array.from(decodeBase58(" \n\t"))).toEqual([])
   })
