@@ -102,6 +102,7 @@
     "@tool/unix-timestamp-converter": "workspace:*",
     "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/vin-validator": "workspace:*",
+    "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
     "@tool/xxhash-xxh32-hash-text-or-file": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
