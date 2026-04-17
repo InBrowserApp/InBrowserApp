@@ -1,3 +1,14 @@
 ## Czym jest chmod?
 
-chmod (change mode) to polecenie Unix/Linux uzywane do zmiany uprawnien plikow i katalogow. Uprawnienia sa reprezentowane w dwoch formatach: notacja numeryczna (osemkowa) jak 755 lub notacja symboliczna jak rwxr-xr-x. Kazda cyfra w formacie numerycznym reprezentuje uprawnienia odpowiednio dla wlasciciela, grupy i innych, gdzie 4 = odczyt (r), 2 = zapis (w) i 1 = wykonanie (x). Te wartosci sa sumowane: 7 (4+2+1) oznacza pelny dostep, 5 (4+1) oznacza odczyt i wykonanie, 4 oznacza tylko odczyt. Na przyklad `chmod 755 script.sh` daje wlascicielowi pelne uprawnienia, pozwalajac innym czytac i uruchamiac plik.
+`chmod` ("change mode") to polecenie Unix/Linux służące do zmiany uprawnień plików i katalogów. Ten kalkulator pozwala przechodzić między uprawnieniami liczbowymi, takimi jak `755`, uprawnieniami symbolicznymi, takimi jak `rwxr-xr-x`, oraz macierzą pól wyboru bez liczenia wszystkiego ręcznie.
+
+## Jak działają uprawnienia liczbowe
+
+Każda cyfra reprezentuje jedną rolę: właściciela, grupę i innych. W obrębie jednej cyfry `4` oznacza odczyt, `2` zapis, a `1` wykonanie. Dodaj te wartości, aby uzyskać potrzebne uprawnienie: `7 = rwx`, `6 = rw-`, `5 = r-x` i `4 = r--`. W przypadku katalogów bit wykonania oznacza także możliwość wejścia do katalogu.
+
+## Typowe przykłady chmod
+
+- `chmod 755 script.sh` daje właścicielowi pełny dostęp i pozwala wszystkim innym czytać oraz wykonywać plik.
+- `chmod 644 notes.txt` pozwala właścicielowi nadal zapisywać plik, a innym tylko go odczytywać.
+- `chmod 600 .env` to częsty wybór dla prywatnych sekretów, ponieważ tylko właściciel może czytać lub zapisywać.
+- `chmod 775 shared-folder` przydaje się w katalogach zespołowych, gdy grupa także powinna móc tworzyć i modyfikować pliki.

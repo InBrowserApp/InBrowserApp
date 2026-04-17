@@ -1,3 +1,14 @@
 ## Hva er chmod?
 
-chmod (change mode) er en Unix/Linux-kommando som brukes til a endre fil- og katalogrettigheter. Rettigheter representeres i to formater: numerisk (oktal) notasjon som 755, eller symbolsk notasjon som rwxr-xr-x. Hvert siffer i det numeriske formatet representerer rettigheter for eier, gruppe og andre henholdsvis, der 4 = les (r), 2 = skriv (w) og 1 = kjor (x). Disse verdiene legges sammen: 7 (4+2+1) betyr full tilgang, 5 (4+1) betyr les og kjor, 4 betyr kun lesing. For eksempel gir `chmod 755 script.sh` eieren fulle rettigheter mens andre far lese og kjore filen.
+`chmod` ("change mode") er en Unix/Linux-kommando for å endre fil- og katalogtillatelser. Denne kalkulatoren lar deg gå mellom numeriske tillatelser som `755`, symbolske tillatelser som `rwxr-xr-x` og avkrysningsmatrisen uten å regne det ut manuelt.
+
+## Slik fungerer numeriske tillatelser
+
+Hvert siffer representerer én rolle: eier, gruppe og andre. Inne i hvert siffer betyr `4` lesing, `2` skriving og `1` kjøring. Legg verdiene sammen for å få ønsket tillatelse: `7 = rwx`, `6 = rw-`, `5 = r-x` og `4 = r--`. For kataloger betyr kjøre-biten også at du kan gå inn i katalogen.
+
+## Vanlige chmod-eksempler
+
+- `chmod 755 script.sh` gir eieren full tilgang og lar alle andre lese og kjøre.
+- `chmod 644 notes.txt` lar eieren fortsatt skrive, mens andre bare kan lese.
+- `chmod 600 .env` er et vanlig valg for private hemmeligheter fordi bare eieren kan lese eller skrive.
+- `chmod 775 shared-folder` er nyttig for teamkataloger når gruppen også skal kunne opprette og endre filer.

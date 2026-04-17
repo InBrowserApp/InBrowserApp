@@ -12,6 +12,7 @@ import {
 import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { cn } from "@workspace/ui/lib/utils"
 import {
   Table,
   TableBody,
@@ -121,92 +122,8 @@ function ChmodCalculatorClient({
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
+    <div className="space-y-6">
       <Card>
-        <CardHeader className="border-b">
-          <CardTitle>{messages.presetsTitle}</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-wrap gap-3">
-          {presets.map((preset) => (
-            <Button
-              key={preset.value}
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                updateFromNumeric(preset.value)
-              }}
-            >
-              {preset.value} - {preset.label}
-            </Button>
-          ))}
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
-          <CardTitle>{messages.numericPermissionLabel}</CardTitle>
-          <CardAction>
-            <ToolCopyButton
-              value={state.numericInput}
-              copyLabel={messages.copyResultLabel}
-              copiedLabel={messages.copiedLabel}
-            />
-          </CardAction>
-        </CardHeader>
-        <CardContent>
-          <Field>
-            <FieldLabel htmlFor={numericInputId}>
-              {messages.numericPermissionLabel}
-            </FieldLabel>
-            <Input
-              id={numericInputId}
-              aria-invalid={!numericInputValid}
-              inputMode="numeric"
-              maxLength={3}
-              placeholder={messages.numericPermissionPlaceholder}
-              spellCheck={false}
-              value={state.numericInput}
-              onChange={(event) => {
-                updateFromNumeric(event.target.value)
-              }}
-            />
-          </Field>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
-          <CardTitle>{messages.symbolicPermissionLabel}</CardTitle>
-          <CardAction>
-            <ToolCopyButton
-              value={state.symbolicInput}
-              copyLabel={messages.copyResultLabel}
-              copiedLabel={messages.copiedLabel}
-            />
-          </CardAction>
-        </CardHeader>
-        <CardContent>
-          <Field>
-            <FieldLabel htmlFor={symbolicInputId}>
-              {messages.symbolicPermissionLabel}
-            </FieldLabel>
-            <Input
-              id={symbolicInputId}
-              aria-invalid={!symbolicInputValid}
-              maxLength={9}
-              placeholder={messages.symbolicPermissionPlaceholder}
-              spellCheck={false}
-              value={state.symbolicInput}
-              onChange={(event) => {
-                updateFromSymbolic(event.target.value)
-              }}
-            />
-          </Field>
-        </CardContent>
-      </Card>
-
-      <Card className="lg:col-span-2">
         <CardHeader className="border-b">
           <CardTitle>{messages.permissionMatrixLabel}</CardTitle>
         </CardHeader>
@@ -251,23 +168,119 @@ function ChmodCalculatorClient({
         </CardContent>
       </Card>
 
-      <Card className="lg:col-span-2">
-        <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
-          <CardTitle>{messages.chmodCommandLabel}</CardTitle>
-          <CardAction>
-            <ToolCopyButton
-              value={chmodCommand}
-              copyLabel={messages.copyResultLabel}
-              copiedLabel={messages.copiedLabel}
-            />
-          </CardAction>
-        </CardHeader>
-        <CardContent>
-          <code className="block rounded-xl border bg-muted/20 px-4 py-3 text-sm break-all">
-            {chmodCommand}
-          </code>
-        </CardContent>
-      </Card>
+      <div className="grid gap-6 lg:grid-cols-2">
+        <Card className="h-full">
+          <CardHeader className="border-b">
+            <CardTitle>{messages.presetsTitle}</CardTitle>
+          </CardHeader>
+          <CardContent className="grid gap-3 sm:grid-cols-2">
+            {presets.map((preset) => (
+              <Button
+                key={preset.value}
+                type="button"
+                variant="outline"
+                aria-pressed={state.numericInput === preset.value}
+                className={cn(
+                  "h-auto min-h-16 flex-col items-start justify-center gap-1 px-3 py-3 text-left whitespace-normal",
+                  state.numericInput === preset.value &&
+                    "border-primary/50 bg-primary/10 text-foreground ring-1 ring-primary/20 hover:bg-primary/12"
+                )}
+                onClick={() => {
+                  updateFromNumeric(preset.value)
+                }}
+              >
+                <span className="font-mono text-sm font-semibold">
+                  {preset.value}
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  {preset.label}
+                </span>
+              </Button>
+            ))}
+          </CardContent>
+        </Card>
+
+        <Card className="h-full">
+          <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+            <CardTitle>{messages.numericPermissionLabel}</CardTitle>
+            <CardAction>
+              <ToolCopyButton
+                value={state.numericInput}
+                copyLabel={messages.copyResultLabel}
+                copiedLabel={messages.copiedLabel}
+              />
+            </CardAction>
+          </CardHeader>
+          <CardContent>
+            <Field>
+              <FieldLabel htmlFor={numericInputId}>
+                {messages.numericPermissionLabel}
+              </FieldLabel>
+              <Input
+                id={numericInputId}
+                aria-invalid={!numericInputValid}
+                inputMode="numeric"
+                maxLength={3}
+                placeholder={messages.numericPermissionPlaceholder}
+                spellCheck={false}
+                value={state.numericInput}
+                onChange={(event) => {
+                  updateFromNumeric(event.target.value)
+                }}
+              />
+            </Field>
+          </CardContent>
+        </Card>
+
+        <Card className="h-full">
+          <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+            <CardTitle>{messages.symbolicPermissionLabel}</CardTitle>
+            <CardAction>
+              <ToolCopyButton
+                value={state.symbolicInput}
+                copyLabel={messages.copyResultLabel}
+                copiedLabel={messages.copiedLabel}
+              />
+            </CardAction>
+          </CardHeader>
+          <CardContent>
+            <Field>
+              <FieldLabel htmlFor={symbolicInputId}>
+                {messages.symbolicPermissionLabel}
+              </FieldLabel>
+              <Input
+                id={symbolicInputId}
+                aria-invalid={!symbolicInputValid}
+                maxLength={9}
+                placeholder={messages.symbolicPermissionPlaceholder}
+                spellCheck={false}
+                value={state.symbolicInput}
+                onChange={(event) => {
+                  updateFromSymbolic(event.target.value)
+                }}
+              />
+            </Field>
+          </CardContent>
+        </Card>
+
+        <Card className="h-full">
+          <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+            <CardTitle>{messages.chmodCommandLabel}</CardTitle>
+            <CardAction>
+              <ToolCopyButton
+                value={chmodCommand}
+                copyLabel={messages.copyResultLabel}
+                copiedLabel={messages.copiedLabel}
+              />
+            </CardAction>
+          </CardHeader>
+          <CardContent>
+            <code className="block rounded-xl border bg-muted/20 px-4 py-3 text-sm break-all">
+              {chmodCommand}
+            </code>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

@@ -65,16 +65,31 @@ describe("ChmodCalculatorClient", () => {
     expect(getNumericInput().value).toBe("755")
     expect(getSymbolicInput().value).toBe("rwxr-xr-x")
     expect(screen.getByText("chmod 755 <filename>")).toBeTruthy()
+    expect(screen.getByRole("button", { name: "755 Executable" })).toSatisfy(
+      (element: HTMLElement) => {
+        return element.getAttribute("aria-pressed") === "true"
+      }
+    )
   })
 
   test("applies common presets", () => {
     render(<ChmodCalculatorClient messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: "644 - Read Only" }))
+    fireEvent.click(screen.getByRole("button", { name: "644 Read Only" }))
 
     expect(getNumericInput().value).toBe("644")
     expect(getSymbolicInput().value).toBe("rw-r--r--")
     expect(screen.getByText("chmod 644 <filename>")).toBeTruthy()
+    expect(screen.getByRole("button", { name: "644 Read Only" })).toSatisfy(
+      (element: HTMLElement) => {
+        return element.getAttribute("aria-pressed") === "true"
+      }
+    )
+    expect(screen.getByRole("button", { name: "755 Executable" })).toSatisfy(
+      (element: HTMLElement) => {
+        return element.getAttribute("aria-pressed") === "false"
+      }
+    )
   })
 
   test("updates the symbolic value from numeric input", async () => {

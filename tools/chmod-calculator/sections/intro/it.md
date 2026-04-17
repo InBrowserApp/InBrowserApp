@@ -1,3 +1,14 @@
-## Cos'e chmod?
+## Che cos'è chmod?
 
-chmod (change mode) e un comando Unix/Linux utilizzato per modificare i permessi di file e directory. I permessi sono rappresentati in due formati: notazione numerica (ottale) come 755, o notazione simbolica come rwxr-xr-x. Ogni cifra nel formato numerico rappresenta i permessi per proprietario, gruppo e altri rispettivamente, dove 4 = lettura (r), 2 = scrittura (w) e 1 = esecuzione (x). Questi valori si sommano: 7 (4+2+1) significa accesso completo, 5 (4+1) significa lettura ed esecuzione, 4 significa sola lettura. Ad esempio, `chmod 755 script.sh` concede al proprietario i permessi completi consentendo agli altri di leggere ed eseguire il file.
+`chmod` ("change mode") è un comando Unix/Linux per modificare i permessi di file e directory. Questo calcolatore ti permette di passare tra permessi numerici come `755`, permessi simbolici come `rwxr-xr-x` e la matrice di caselle senza fare i conti a mente.
+
+## Come funzionano i permessi numerici
+
+Ogni cifra rappresenta un ruolo: proprietario, gruppo e altri. Dentro ogni cifra, `4` significa lettura, `2` scrittura e `1` esecuzione. Somma questi valori per ottenere il permesso desiderato: `7 = rwx`, `6 = rw-`, `5 = r-x` e `4 = r--`. Per le directory, il bit di esecuzione permette anche di entrarvi.
+
+## Esempi comuni di chmod
+
+- `chmod 755 script.sh` dà al proprietario accesso completo e permette agli altri di leggere ed eseguire.
+- `chmod 644 notes.txt` mantiene il file modificabile dal proprietario mentre gli altri possono solo leggerlo.
+- `chmod 600 .env` è una scelta comune per segreti privati perché solo il proprietario può leggere o scrivere.
+- `chmod 775 shared-folder` è utile per directory condivise quando anche il gruppo deve poter creare e modificare file.

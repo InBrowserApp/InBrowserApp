@@ -1,3 +1,14 @@
-## chmod la gi?
+## chmod là gì?
 
-chmod (change mode) la mot lenh Unix/Linux duoc su dung de thay doi quyen truy cap tep va thu muc. Quyen duoc bieu dien o hai dinh dang: ky hieu so (bat phan) nhu 755, hoac ky hieu ky tu nhu rwxr-xr-x. Moi chu so trong dinh dang so dai dien cho quyen cua chu so huu, nhom va nguoi khac tuong ung, trong do 4 = doc (r), 2 = ghi (w) va 1 = thuc thi (x). Cac gia tri nay duoc cong lai: 7 (4+2+1) nghia la toan quyen, 5 (4+1) nghia la doc va thuc thi, 4 nghia la chi doc. Vi du, `chmod 755 script.sh` cap cho chu so huu toan quyen trong khi cho phep nguoi khac doc va thuc thi tep.
+`chmod` ("change mode") là lệnh Unix/Linux dùng để thay đổi quyền của tệp và thư mục. Công cụ này cho phép bạn chuyển đổi giữa quyền dạng số như `755`, quyền dạng ký hiệu như `rwxr-xr-x`, và ma trận ô chọn mà không phải tự nhẩm tính.
+
+## Quyền dạng số hoạt động như thế nào?
+
+Mỗi chữ số đại diện cho một vai trò: chủ sở hữu, nhóm và những người khác. Trong mỗi chữ số, `4` nghĩa là đọc, `2` nghĩa là ghi, và `1` nghĩa là thực thi. Hãy cộng các giá trị đó để tạo quyền bạn muốn: `7 = rwx`, `6 = rw-`, `5 = r-x`, và `4 = r--`. Với thư mục, bit thực thi còn có nghĩa là bạn có thể đi vào thư mục đó.
+
+## Các ví dụ chmod phổ biến
+
+- `chmod 755 script.sh` cấp toàn quyền cho chủ sở hữu và cho phép những người khác đọc cũng như thực thi.
+- `chmod 644 notes.txt` giữ cho tệp vẫn có thể được chủ sở hữu ghi, còn những người khác chỉ có thể đọc.
+- `chmod 600 .env` là lựa chọn phổ biến cho dữ liệu bí mật riêng tư vì chỉ chủ sở hữu mới có thể đọc hoặc ghi.
+- `chmod 775 shared-folder` hữu ích cho thư mục làm việc nhóm khi nhóm cũng cần tạo và sửa tệp.

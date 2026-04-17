@@ -1,3 +1,14 @@
 ## chmod nedir?
 
-chmod (change mode), dosya ve dizin izinlerini degistirmek icin kullanilan bir Unix/Linux komutudur. Izinler iki formatta temsil edilir: 755 gibi sayisal (sekizlik) gosterim veya rwxr-xr-x gibi sembolik gosterim. Sayisal formattaki her rakam sirasiyla sahip, grup ve diger kullanicilar icin izinleri temsil eder; burada 4 = okuma (r), 2 = yazma (w) ve 1 = calistirma (x). Bu degerler toplanir: 7 (4+2+1) tam erisim, 5 (4+1) okuma ve calistirma, 4 yalnizca okuma anlamina gelir. Ornegin, `chmod 755 script.sh` sahibine tam izinler verirken digerlerinin dosyayi okumasina ve calistirmasina izin verir.
+`chmod` ("change mode"), dosya ve dizin izinlerini değiştirmek için kullanılan bir Unix/Linux komutudur. Bu hesaplayıcı, `755` gibi sayısal izinler, `rwxr-xr-x` gibi sembolik izinler ve onay kutusu matrisi arasında elle hesap yapmadan geçiş yapmanızı sağlar.
+
+## Sayısal izinler nasıl çalışır?
+
+Her basamak bir rolü temsil eder: sahip, grup ve diğerleri. Tek bir basamak içinde `4` okuma, `2` yazma ve `1` çalıştırma anlamına gelir. İstediğiniz izni oluşturmak için değerleri toplayın: `7 = rwx`, `6 = rw-`, `5 = r-x` ve `4 = r--`. Dizinlerde çalıştırma biti ayrıca dizine girebilmeyi de sağlar.
+
+## Yaygın chmod örnekleri
+
+- `chmod 755 script.sh` sahibine tam erişim verir ve diğer herkesin okumasına ve çalıştırmasına izin verir.
+- `chmod 644 notes.txt` dosyayı sahibi için yazılabilir tutarken diğerlerinin yalnızca okumasına izin verir.
+- `chmod 600 .env` yalnızca sahibin okuyup yazabilmesi nedeniyle özel gizli bilgiler için yaygın bir seçimdir.
+- `chmod 775 shared-folder` grup üyelerinin de dosya oluşturup değiştirmesi gereken ekip dizinleri için kullanışlıdır.
