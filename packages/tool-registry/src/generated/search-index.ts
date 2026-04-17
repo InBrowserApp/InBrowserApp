@@ -11412,6 +11412,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vat-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["vat", "tax", "validator", "business", "finance", "eu"],
+    locales: {
+      ar: {
+        name: "مُحقِّق أرقام ضريبة القيمة المضافة للاتحاد الأوروبي",
+        description:
+          "تحقَّق من أرقام ضريبة القيمة المضافة للاتحاد الأوروبي عبر رمز الدولة والتنسيق والمجموع الاختباري — بالكامل داخل متصفحك، دون رفع أي شيء.",
+      },
+      de: {
+        name: "EU-USt-IdNr.-Validator",
+        description:
+          "Validieren Sie EU-Umsatzsteuer-Identifikationsnummern nach Ländercode, Format und Prüfsumme – vollständig in Ihrem Browser, nichts wird hochgeladen.",
+      },
+      en: {
+        name: "EU VAT Number Validator",
+        description:
+          "Validate EU VAT numbers by country code, format, and checksum — fully in your browser, nothing uploaded.",
+      },
+      es: {
+        name: "Validador de números de IVA de la UE",
+        description:
+          "Valida números de IVA de la UE por código de país, formato y suma de verificación — todo en tu navegador, sin subir nada.",
+      },
+      fr: {
+        name: "Validateur de numéro de TVA intracommunautaire",
+        description:
+          "Validez les numéros de TVA de l'UE par code pays, format et somme de contrôle — entièrement dans votre navigateur, rien n'est envoyé.",
+      },
+      he: {
+        name: 'מאמת מספרי מע"מ של האיחוד האירופי',
+        description:
+          'אמתו מספרי מע"מ של האיחוד האירופי לפי קוד מדינה, פורמט וסכום ביקורת — הכול בדפדפן שלכם, שום דבר לא מועלה.',
+      },
+      hi: {
+        name: "EU VAT नंबर सत्यापनकर्ता",
+        description:
+          "EU VAT नंबरों को देश कोड, प्रारूप और चेकसम के आधार पर सत्यापित करें — पूरी तरह आपके ब्राउज़र में, कुछ भी अपलोड नहीं होता।",
+      },
+      id: {
+        name: "Validator Nomor PPN Uni Eropa",
+        description:
+          "Validasi nomor PPN Uni Eropa berdasarkan kode negara, format, dan checksum — sepenuhnya di browser Anda, tidak ada yang diunggah.",
+      },
+      it: {
+        name: "Validatore di partite IVA UE",
+        description:
+          "Valida le partite IVA dell'UE per codice paese, formato e checksum — interamente nel tuo browser, nulla viene caricato.",
+      },
+      ja: {
+        name: "EU VAT番号バリデーター",
+        description:
+          "EUのVAT番号を国コード、フォーマット、チェックサムで検証します。すべてブラウザ内で動作し、データはアップロードされません。",
+      },
+      ko: {
+        name: "EU 부가가치세 번호 검증기",
+        description:
+          "국가 코드, 형식, 체크섬을 기준으로 EU VAT 번호를 검증합니다 — 브라우저 내에서 완전히 처리되며 아무것도 업로드되지 않습니다.",
+      },
+      ms: {
+        name: "Pengesah Nombor VAT EU",
+        description:
+          "Sahkan nombor VAT EU mengikut kod negara, format, dan checksum — sepenuhnya dalam pelayar anda, tiada apa yang dimuat naik.",
+      },
+      nl: {
+        name: "EU-btw-nummer-validator",
+        description:
+          "Valideer EU-btw-nummers op landcode, formaat en controlegetal — volledig in je browser, er wordt niets geüpload.",
+      },
+      no: {
+        name: "EU MVA-nummervalidator",
+        description:
+          "Valider EU-MVA-nummer etter landkode, format og kontrollsiffer — fullstendig i nettleseren din, ingenting lastes opp.",
+      },
+      pl: {
+        name: "Walidator numerów VAT UE",
+        description:
+          "Sprawdzaj numery VAT UE pod kątem kodu kraju, formatu i sumy kontrolnej — w całości w przeglądarce, nic nie jest wysyłane.",
+      },
+      pt: {
+        name: "Validador de Número de IVA da UE",
+        description:
+          "Valide números de IVA da UE por código de país, formato e checksum — totalmente no seu navegador, nada é enviado.",
+      },
+      ru: {
+        name: "Валидатор НДС-номеров ЕС",
+        description:
+          "Проверяйте НДС-номера ЕС по коду страны, формату и контрольной сумме — полностью в браузере, без загрузки данных.",
+      },
+      sv: {
+        name: "EU-momsnummervalidator",
+        description:
+          "Validera EU-momsnummer efter landskod, format och kontrollsumma — helt i din webbläsare, inget laddas upp.",
+      },
+      th: {
+        name: "ตัวตรวจสอบหมายเลข VAT ของสหภาพยุโรป",
+        description:
+          "ตรวจสอบหมายเลข VAT ของสหภาพยุโรปตามรหัสประเทศ รูปแบบ และ checksum ทำงานในเบราว์เซอร์ของคุณทั้งหมด ไม่มีการอัปโหลดข้อมูล",
+      },
+      tr: {
+        name: "AB KDV Numarası Doğrulayıcı",
+        description:
+          "AB KDV numaralarını ülke kodu, biçim ve sağlama toplamına göre doğrulayın — tamamen tarayıcınızda, hiçbir şey yüklenmez.",
+      },
+      vi: {
+        name: "Trình xác thực mã số thuế VAT EU",
+        description:
+          "Xác thực mã số VAT của EU theo mã quốc gia, định dạng và checksum — hoàn toàn trong trình duyệt của bạn, không tải lên bất cứ đâu.",
+      },
+      "zh-CN": {
+        name: "欧盟 VAT 号码校验器",
+        description:
+          "按国家代码、格式和校验位验证欧盟 VAT 号码 —— 完全在浏览器中运行，不上传任何数据。",
+      },
+      "zh-TW": {
+        name: "歐盟 VAT 號碼驗證器",
+        description:
+          "依國家代碼、格式與校驗碼驗證歐盟 VAT 號碼——完全在瀏覽器中執行，不上傳任何資料。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",

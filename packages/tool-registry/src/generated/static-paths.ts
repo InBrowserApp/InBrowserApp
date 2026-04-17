@@ -8466,6 +8466,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vat-validator",
+    language: "ar",
+  },
+  {
+    slug: "vat-validator",
+    language: "de",
+  },
+  {
+    slug: "vat-validator",
+    language: "en",
+  },
+  {
+    slug: "vat-validator",
+    language: "es",
+  },
+  {
+    slug: "vat-validator",
+    language: "fr",
+  },
+  {
+    slug: "vat-validator",
+    language: "he",
+  },
+  {
+    slug: "vat-validator",
+    language: "hi",
+  },
+  {
+    slug: "vat-validator",
+    language: "id",
+  },
+  {
+    slug: "vat-validator",
+    language: "it",
+  },
+  {
+    slug: "vat-validator",
+    language: "ja",
+  },
+  {
+    slug: "vat-validator",
+    language: "ko",
+  },
+  {
+    slug: "vat-validator",
+    language: "ms",
+  },
+  {
+    slug: "vat-validator",
+    language: "nl",
+  },
+  {
+    slug: "vat-validator",
+    language: "no",
+  },
+  {
+    slug: "vat-validator",
+    language: "pl",
+  },
+  {
+    slug: "vat-validator",
+    language: "pt",
+  },
+  {
+    slug: "vat-validator",
+    language: "ru",
+  },
+  {
+    slug: "vat-validator",
+    language: "sv",
+  },
+  {
+    slug: "vat-validator",
+    language: "th",
+  },
+  {
+    slug: "vat-validator",
+    language: "tr",
+  },
+  {
+    slug: "vat-validator",
+    language: "vi",
+  },
+  {
+    slug: "vat-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vat-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },

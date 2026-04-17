@@ -1,0 +1,4 @@
+{
+  "name": "Validador de Número de IVA da UE",
+  "description": "Valide números de IVA da UE por código de país, formato e checksum — totalmente no seu navegador, nada é enviado."
+}

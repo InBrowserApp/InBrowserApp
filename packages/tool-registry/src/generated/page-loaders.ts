@@ -126,6 +126,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
+  "vat-validator": () => import("@tool/vat-validator/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
