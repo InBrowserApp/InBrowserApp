@@ -1,3 +1,4 @@
+import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"
 
 type ReadOnlyOutputProps = Readonly<{
@@ -12,13 +13,15 @@ function ReadOnlyOutput({ ariaLabel, className, value }: ReadOnlyOutputProps) {
       role="region"
       aria-label={ariaLabel}
       className={cn(
-        "w-full rounded-lg border border-input bg-transparent px-3 py-2.5",
+        "flex min-h-0 w-full flex-col overflow-hidden rounded-lg border border-input bg-transparent",
         className
       )}
     >
-      <pre className="overflow-x-auto font-mono text-sm leading-6 break-all whitespace-pre-wrap text-foreground">
-        <code>{value}</code>
-      </pre>
+      <ScrollArea className="h-full">
+        <pre className="min-h-full px-3 py-2.5 font-mono text-sm leading-6 break-all whitespace-pre-wrap text-foreground">
+          <code>{value}</code>
+        </pre>
+      </ScrollArea>
     </div>
   )
 }

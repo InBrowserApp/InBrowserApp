@@ -58,11 +58,11 @@ function ResultsCard({
             {messages.decodedOutputEmptyDescription}
           </div>
         ) : decodeState.state === "decoded" ? (
-          <>
+          <div className="flex min-h-0 flex-1 flex-col gap-4">
             <ReadOnlyOutput
               ariaLabel={messages.decodedOutputTitle}
               value={decodeState.previewText}
-              className="max-h-[32rem] min-h-72 overflow-y-auto"
+              className="min-h-72 flex-1"
             />
 
             {decodeState.isPreviewTruncated ? (
@@ -70,7 +70,7 @@ function ResultsCard({
                 {messages.previewTruncatedLabel}
               </p>
             ) : null}
-          </>
+          </div>
         ) : null}
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-end gap-3 border-t">
