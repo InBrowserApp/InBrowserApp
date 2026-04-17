@@ -8650,6 +8650,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "yaml-to-json-converter",
     language: "ar",
   },
