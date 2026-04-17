@@ -83,9 +83,7 @@ function ChecksumBadge({
   )
 }
 
-function VatValidatorClient({
-  messages,
-}: Readonly<{ messages: VatMessages }>) {
+function VatValidatorClient({ messages }: Readonly<{ messages: VatMessages }>) {
   const inputId = useId()
   const [input, setInput] = useState(DEFAULT_VAT)
 
@@ -191,9 +189,7 @@ function VatValidatorClient({
               />
               <DetailItem
                 label={messages.country}
-                content={
-                  <span className="font-medium">{countryDisplay}</span>
-                }
+                content={<span className="font-medium">{countryDisplay}</span>}
               />
               <DetailItem
                 label={messages.countryStatus}
@@ -226,9 +222,7 @@ function VatValidatorClient({
                         validation.isFormatValid ? "default" : "destructive"
                       }
                     >
-                      {validation.isFormatValid
-                        ? messages.pass
-                        : messages.fail}
+                      {validation.isFormatValid ? messages.pass : messages.fail}
                     </Badge>
                   ) : (
                     <Badge variant="secondary">{messages.notChecked}</Badge>
@@ -238,10 +232,7 @@ function VatValidatorClient({
               <DetailItem
                 label={messages.checksum}
                 content={
-                  <ChecksumBadge
-                    validation={validation}
-                    messages={messages}
-                  />
+                  <ChecksumBadge validation={validation} messages={messages} />
                 }
               />
               <DetailItem
