@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Inndata",
+  "inputPlaceholder": "Skriv inn tekst for koding...",
+  "outputTitle": "Base85-kodet",
+  "outputPlaceholder": "Base85-utdata vises her...",
+  "download": "Last ned Base85",
+  "readFailed": "Kunne ikke lese filen",
+  "invalidBase85": "Z85 krever at inndatalengden er et multiplum av 4 byte.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Importer fra fil"
+}

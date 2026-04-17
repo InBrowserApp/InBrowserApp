@@ -1,0 +1,17 @@
+{
+  "alphabet": "Bảng chữ cái",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Đầu vào",
+  "inputPlaceholder": "Nhập văn bản để mã hóa...",
+  "outputTitle": "Đã mã hóa Base85",
+  "outputPlaceholder": "Kết quả Base85 sẽ xuất hiện ở đây...",
+  "download": "Tải Base85",
+  "readFailed": "Không thể đọc tệp",
+  "invalidBase85": "Z85 yêu cầu độ dài đầu vào phải là bội số của 4 byte.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Nhập từ tệp"
+}

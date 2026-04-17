@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Invoer",
+  "inputPlaceholder": "Voer tekst in om te coderen...",
+  "outputTitle": "Base85 Gecodeerd",
+  "outputPlaceholder": "Base85-uitvoer verschijnt hier...",
+  "download": "Base85 downloaden",
+  "readFailed": "Bestand kon niet worden gelezen",
+  "invalidBase85": "Z85 vereist dat de invoerlengte een veelvoud van 4 bytes is.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Importeren uit bestand"
+}

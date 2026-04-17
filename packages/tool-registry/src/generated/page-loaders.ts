@@ -14,6 +14,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base32-encoder": () => import("@tool/base32-encoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),

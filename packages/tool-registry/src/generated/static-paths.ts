@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base85-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-encoder",
+    language: "de",
+  },
+  {
+    slug: "base85-encoder",
+    language: "en",
+  },
+  {
+    slug: "base85-encoder",
+    language: "es",
+  },
+  {
+    slug: "base85-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "he",
+  },
+  {
+    slug: "base85-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "id",
+  },
+  {
+    slug: "base85-encoder",
+    language: "it",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "no",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-encoder",
+    language: "th",
+  },
+  {
+    slug: "base85-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "basic-auth-decoder",
     language: "ar",
   },
