@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alphabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Entrée Base85",
+  "base85InputPlaceholder": "Entrez le texte Base85...",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "decodedOutputLabel": "Sortie décodée",
+  "decodedOutputEmptyDescription": "Le texte décodé apparaîtra ici...",
+  "downloadFileLabel": "Télécharger le fichier",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "Texte Base85 invalide",
+  "fileReadFailedTitle": "Échec de la lecture du fichier",
+  "previewTruncatedLabel": "Aperçu tronqué"
+}

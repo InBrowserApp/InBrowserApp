@@ -1,0 +1,17 @@
+{
+  "alphabet": "वर्णमाला",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85 इनपुट",
+  "base85InputPlaceholder": "Base85 पाठ दर्ज करें...",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "decodedOutputLabel": "डिकोडेड आउटपुट",
+  "decodedOutputEmptyDescription": "डिकोड किया गया पाठ यहां दिखाई देगा...",
+  "downloadFileLabel": "फ़ाइल डाउनलोड करें",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "अमान्य Base85 पाठ",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल",
+  "previewTruncatedLabel": "प्रीव्यू संक्षिप्त किया गया"
+}

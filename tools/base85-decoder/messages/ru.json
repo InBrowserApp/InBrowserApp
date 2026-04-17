@@ -1,0 +1,17 @@
+{
+  "alphabet": "Алфавит",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Ввод Base85",
+  "base85InputPlaceholder": "Введите текст Base85...",
+  "importFromFileLabel": "Импорт из файла",
+  "decodedOutputLabel": "Декодированный вывод",
+  "decodedOutputEmptyDescription": "Декодированный текст появится здесь...",
+  "downloadFileLabel": "Скачать файл",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "Неверный текст Base85",
+  "fileReadFailedTitle": "Не удалось прочитать файл",
+  "previewTruncatedLabel": "Предпросмотр обрезан"
+}

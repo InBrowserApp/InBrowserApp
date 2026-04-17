@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85-inndata",
+  "base85InputPlaceholder": "Skriv inn Base85-tekst...",
+  "importFromFileLabel": "Importer fra fil",
+  "decodedOutputLabel": "Dekodet output",
+  "decodedOutputEmptyDescription": "Dekodet tekst vises her...",
+  "downloadFileLabel": "Last ned fil",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "Ugyldig Base85-tekst",
+  "fileReadFailedTitle": "Kunne ikke lese filen",
+  "previewTruncatedLabel": "Forhåndsvisning avkortet"
+}

@@ -1,0 +1,45 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import Base85DecoderClient from "./client"
+
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type Base85DecoderMessagesCatalog = Readonly<{
+  alphabet: string
+  alphabetAscii85: string
+  alphabetZ85: string
+  base85InputLabel: string
+  base85InputPlaceholder: string
+  importFromFileLabel: string
+  decodedOutputLabel: string
+  decodedOutputEmptyDescription: string
+  downloadFileLabel: string
+  copyLabel: string
+  copiedLabel: string
+  loadSample: string
+  invalidBase85Title: string
+  fileReadFailedTitle: string
+  previewTruncatedLabel: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<Base85DecoderMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <Base85DecoderClient client:load messages={messages} />
+</ToolPageShell>
