@@ -32,6 +32,9 @@ type ResidentIdAnalysisResult = Readonly<
   ResidentIdValidationResult & {
     hasFormatIssue: boolean
     isPartial: boolean
+    birthYearInput: string | null
+    birthMonthInput: string | null
+    birthDayInput: string | null
   }
 >
 
@@ -183,6 +186,22 @@ function analyzeResidentId(
   const isRegionValid = isFormatValid && region.areaName !== null
 
   const birthValue = digitPrefix.length >= 14 ? digitPrefix.slice(6, 14) : ""
+  const birthDigits =
+    digitPrefix.length > 6
+      ? digitPrefix.slice(6, Math.min(14, digitPrefix.length))
+      : ""
+  const birthYearInput =
+    birthDigits.length > 0
+      ? birthDigits.slice(0, Math.min(4, birthDigits.length))
+      : null
+  const birthMonthInput =
+    birthDigits.length > 4
+      ? birthDigits.slice(4, Math.min(6, birthDigits.length))
+      : null
+  const birthDayInput =
+    birthDigits.length > 6
+      ? birthDigits.slice(6, Math.min(8, birthDigits.length))
+      : null
   const birthInfo = parseBirthDate(birthValue, now)
   const isBirthdateValid = isFormatValid && birthInfo.isValid
 
@@ -232,6 +251,9 @@ function analyzeResidentId(
     actualCheckDigit,
     hasFormatIssue,
     isPartial,
+    birthYearInput,
+    birthMonthInput,
+    birthDayInput,
   }
 }
 

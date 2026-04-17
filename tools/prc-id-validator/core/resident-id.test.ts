@@ -172,11 +172,24 @@ describe("analyzeResidentId", () => {
 
     expect(result.isPartial).toBe(true)
     expect(result.birthDateText).toBe("1990-01-01")
+    expect(result.birthYearInput).toBe("1990")
+    expect(result.birthMonthInput).toBe("01")
+    expect(result.birthDayInput).toBe("01")
     expect(result.age).toBe(36)
     expect(result.gender).toBe("male")
     expect(result.sequenceCode).toBe("001")
     expect(result.expectedCheckDigit).toBe("5")
     expect(result.actualCheckDigit).toBeNull()
+  })
+
+  it("reveals partial birthdate segments before the full date is complete", () => {
+    const result = analyzeResidentId("3505241990", NOW)
+
+    expect(result.birthYearInput).toBe("1990")
+    expect(result.birthMonthInput).toBeNull()
+    expect(result.birthDayInput).toBeNull()
+    expect(result.birthDateText).toBeNull()
+    expect(result.age).toBeNull()
   })
 
   it("returns a final valid analysis for a complete resident id", () => {

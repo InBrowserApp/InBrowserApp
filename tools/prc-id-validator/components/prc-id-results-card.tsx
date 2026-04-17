@@ -1,4 +1,3 @@
-import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
@@ -45,13 +44,7 @@ function PRCIdResultsCard({
     analysis && !analysis.isPartial && feedbackMessage
       ? feedbackMessage
       : messages.meta.description
-  const regionDisplay = analysis
-    ? getRegionDisplay(analysis, messages)
-    : messages.notAvailable
   const showCompleteStatus = analysis ? !analysis.isPartial : false
-  const hasKnownRegion = analysis
-    ? Boolean(analysis.provinceName || analysis.cityName || analysis.areaName)
-    : false
 
   return (
     <ToolPanelCard>
@@ -62,64 +55,96 @@ function PRCIdResultsCard({
       <ToolPanelCardContent className="gap-4">
         {analysis ? (
           <>
-            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+            <PanelShell className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
+              <div>
+                <PanelLabel>{messages.status}</PanelLabel>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Badge variant="secondary">{analysis.length}/18</Badge>
+                  {showCompleteStatus ? (
+                    <Badge
+                      variant={analysis.isValid ? "default" : "destructive"}
+                    >
+                      {analysis.isValid ? messages.valid : messages.invalid}
+                    </Badge>
+                  ) : null}
+                </div>
+              </div>
+
+              <CopySummary
+                className="min-w-0"
+                label={messages.normalized}
+                value={analysis.normalized}
+                messages={messages}
+              />
+            </PanelShell>
+
+            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
               <PanelShell className="space-y-4">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <PanelLabel>{messages.status}</PanelLabel>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {showCompleteStatus ? (
-                        <Badge
-                          variant={analysis.isValid ? "default" : "destructive"}
-                        >
-                          {analysis.isValid ? messages.valid : messages.invalid}
-                        </Badge>
-                      ) : (
-                        <Badge variant="secondary">{analysis.length}/18</Badge>
-                      )}
-                      <Badge variant={hasKnownRegion ? "secondary" : "outline"}>
-                        {hasKnownRegion ? messages.known : messages.unknown}
-                      </Badge>
-                      {showCompleteStatus ? (
-                        <Badge
-                          variant={
-                            analysis.isChecksumValid ? "default" : "destructive"
-                          }
-                        >
-                          {analysis.isChecksumValid
-                            ? messages.pass
-                            : messages.fail}
-                        </Badge>
-                      ) : null}
-                    </div>
+                    <PanelLabel>{messages.region}</PanelLabel>
                   </div>
 
                   <CopySummary
+                    className="min-w-[12rem]"
                     label={messages.regionCode}
                     value={analysis.regionCode}
                     messages={messages}
                   />
                 </div>
 
-                <div>
-                  <PanelLabel>{messages.region}</PanelLabel>
-                  <p className="mt-2 text-lg leading-tight font-semibold">
-                    {regionDisplay}
-                  </p>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <DetailTile
+                    label={messages.province}
+                    value={analysis.provinceName ?? messages.notAvailable}
+                  />
+                  <DetailTile
+                    label={messages.city}
+                    value={analysis.cityName ?? messages.notAvailable}
+                  />
+                  <DetailTile
+                    label={messages.district}
+                    value={analysis.areaName ?? messages.notAvailable}
+                  />
                 </div>
               </PanelShell>
 
               <div className="grid gap-3">
-                <SplitDetailPanel
-                  primaryLabel={messages.birthdate}
-                  primaryValue={analysis.birthDateText ?? messages.notAvailable}
-                  secondaryLabel={messages.age}
-                  secondaryValue={
-                    analysis.age !== null
-                      ? String(analysis.age)
-                      : messages.notAvailable
-                  }
-                />
+                <PanelShell className="space-y-4">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <PanelLabel>{messages.birthdate}</PanelLabel>
+                      <p className="mt-2 font-mono text-xl leading-tight font-semibold">
+                        {getBirthSummary(analysis)}
+                      </p>
+                    </div>
+                    <DetailTile
+                      className="min-w-[7rem]"
+                      label={messages.age}
+                      value={
+                        analysis.age !== null
+                          ? String(analysis.age)
+                          : messages.notAvailable
+                      }
+                    />
+                  </div>
+
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    <DetailTile
+                      label="YYYY"
+                      value={formatBirthPart(analysis.birthYearInput, "YYYY")}
+                    />
+                    <DetailTile
+                      label="MM"
+                      value={formatBirthPart(analysis.birthMonthInput, "MM")}
+                    />
+                    <DetailTile
+                      label="DD"
+                      value={formatBirthPart(analysis.birthDayInput, "DD")}
+                    />
+                  </div>
+                </PanelShell>
+
                 <SplitDetailPanel
                   primaryLabel={messages.gender}
                   primaryValue={
@@ -139,72 +164,43 @@ function PRCIdResultsCard({
               </div>
             </section>
 
-            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <PanelShell className="space-y-4">
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <PanelLabel>{messages.normalized}</PanelLabel>
-                    <p className="mt-2 font-mono text-base leading-7 break-all">
-                      {analysis.normalized}
+            <PanelShell className="grid gap-3 sm:grid-cols-2">
+              <DetailTile
+                label={messages.checksum}
+                value={
+                  <Badge
+                    variant={
+                      showCompleteStatus
+                        ? analysis.isChecksumValid
+                          ? "default"
+                          : "destructive"
+                        : "outline"
+                    }
+                  >
+                    {showCompleteStatus
+                      ? analysis.isChecksumValid
+                        ? messages.pass
+                        : messages.fail
+                      : messages.unknown}
+                  </Badge>
+                }
+              />
+              <DetailTile
+                label={messages.checkDigit}
+                value={
+                  <div className="space-y-1">
+                    <p>
+                      {messages.expected}:{" "}
+                      {analysis.expectedCheckDigit ?? messages.notAvailable}
+                    </p>
+                    <p>
+                      {messages.actual}:{" "}
+                      {analysis.actualCheckDigit ?? messages.notAvailable}
                     </p>
                   </div>
-                  <ToolCopyButton
-                    value={analysis.normalized}
-                    copyLabel={messages.copyLabel}
-                    copiedLabel={messages.copiedLabel}
-                  />
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <DetailTile
-                    label={messages.checksum}
-                    value={
-                      <Badge
-                        variant={
-                          analysis.isChecksumValid ? "default" : "destructive"
-                        }
-                      >
-                        {analysis.isChecksumValid
-                          ? messages.pass
-                          : messages.fail}
-                      </Badge>
-                    }
-                  />
-                  <DetailTile
-                    label={messages.checkDigit}
-                    value={
-                      <div className="space-y-1">
-                        <p>
-                          {messages.expected}:{" "}
-                          {analysis.expectedCheckDigit ?? messages.notAvailable}
-                        </p>
-                        <p>
-                          {messages.actual}:{" "}
-                          {analysis.actualCheckDigit ?? messages.notAvailable}
-                        </p>
-                      </div>
-                    }
-                  />
-                </div>
-              </PanelShell>
-
-              <PanelShell>
-                <div className="grid gap-3">
-                  <DetailTile
-                    label={messages.province}
-                    value={analysis.provinceName ?? messages.notAvailable}
-                  />
-                  <DetailTile
-                    label={messages.city}
-                    value={analysis.cityName ?? messages.notAvailable}
-                  />
-                  <DetailTile
-                    label={messages.district}
-                    value={analysis.areaName ?? messages.notAvailable}
-                  />
-                </div>
-              </PanelShell>
-            </section>
+                }
+              />
+            </PanelShell>
           </>
         ) : (
           <Empty className="min-h-64 flex-1 border-0 p-0">
@@ -231,17 +227,17 @@ function getGenderLabel(
   return messages.unknown
 }
 
-function getRegionDisplay(
-  analysis: PRCIdValidationAnalysis,
-  messages: PRCIdValidatorMessages
-) {
-  const parts = [
-    analysis.provinceName,
-    analysis.cityName,
-    analysis.areaName,
-  ].filter(Boolean) as string[]
+function formatBirthPart(value: string | null, placeholder: string) {
+  if (!value) return placeholder
+  return `${value}${placeholder.slice(value.length)}`
+}
 
-  return parts.length > 0 ? parts.join(" / ") : messages.notAvailable
+function getBirthSummary(analysis: PRCIdValidationAnalysis) {
+  return [
+    formatBirthPart(analysis.birthYearInput, "YYYY"),
+    formatBirthPart(analysis.birthMonthInput, "MM"),
+    formatBirthPart(analysis.birthDayInput, "DD"),
+  ].join("-")
 }
 
 export { PRCIdResultsCard }

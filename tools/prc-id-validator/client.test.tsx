@@ -53,7 +53,9 @@ describe("PrcIdValidatorClient", () => {
     })
 
     expect(screen.getAllByText("Valid").length).toBeGreaterThan(0)
-    expect(screen.getByText("北京市 / 市辖区 / 东城区")).toBeTruthy()
+    expect(screen.getByText("北京市")).toBeTruthy()
+    expect(screen.getByText("市辖区")).toBeTruthy()
+    expect(screen.getByText("东城区")).toBeTruthy()
     expect(screen.getByText("Male")).toBeTruthy()
     expect(screen.getByText(residentId)).toBeTruthy()
   })
@@ -70,6 +72,22 @@ describe("PrcIdValidatorClient", () => {
 
     expect(screen.getAllByText("北京市").length).toBeGreaterThan(0)
     expect(screen.queryByRole("alert")).toBeNull()
+  })
+
+  it("shows partial birthdate progress before the full date is entered", () => {
+    render(
+      <PrcIdValidatorClient messages={buildMessages(enMeta, enMessages)} />
+    )
+
+    const input = screen.getByPlaceholderText("Enter 18-digit ID number")
+    fireEvent.change(input, {
+      target: { value: "3505241990" },
+    })
+
+    expect(screen.getByText("1990-MM-DD")).toBeTruthy()
+    expect(screen.getByText("1990")).toBeTruthy()
+    expect(screen.getAllByText("MM").length).toBeGreaterThan(0)
+    expect(screen.getAllByText("DD").length).toBeGreaterThan(0)
   })
 
   it("localizes labels in zh-CN", () => {

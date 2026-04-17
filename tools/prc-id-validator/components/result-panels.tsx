@@ -28,9 +28,12 @@ function PanelLabel({ children }: Readonly<{ children: ReactNode }>) {
 function DetailTile({
   label,
   value,
-}: Readonly<{ label: string; value: ReactNode }>) {
+  className = "",
+}: Readonly<{ label: string; value: ReactNode; className?: string }>) {
   return (
-    <div className="rounded-lg border border-border/70 bg-background/80 p-3">
+    <div
+      className={`rounded-lg border border-border/70 bg-background/80 p-3 ${className}`}
+    >
       <PanelLabel>{label}</PanelLabel>
       <div className="mt-2 text-sm leading-6 break-all">{value}</div>
     </div>
@@ -60,13 +63,17 @@ function CopySummary({
   label,
   value,
   messages,
+  className = "",
 }: Readonly<{
   label: string
   value: string | null
   messages: PRCIdValidatorMessages
+  className?: string
 }>) {
   return (
-    <div className="rounded-lg border border-border/70 bg-background/80 p-3">
+    <div
+      className={`rounded-lg border border-border/70 bg-background/80 p-3 ${className}`}
+    >
       <PanelLabel>{label}</PanelLabel>
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <span className="font-mono text-sm break-all">
