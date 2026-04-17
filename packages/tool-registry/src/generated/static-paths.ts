@@ -7178,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sm3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },
