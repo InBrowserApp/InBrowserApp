@@ -27,7 +27,7 @@ import { validateVAT, type VATValidationResult } from "./core/vat"
 import type { VatMessages } from "./types"
 
 const DEFAULT_VAT = "BE 0123.4567.49"
-const STORAGE_KEY = "tools:vat-validator:input"
+const STORAGE_KEY = "tools:eu-vat-number-validator:input"
 
 function getFeedbackMessage(
   validation: VATValidationResult,
