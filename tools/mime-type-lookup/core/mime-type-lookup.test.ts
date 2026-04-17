@@ -11,6 +11,9 @@ import {
 } from "./mime-type-lookup"
 
 const fixtureDatabase = {
+  "application/example+json": {
+    source: "iana",
+  },
   "application/json": {
     extensions: ["json"],
     source: "iana",
@@ -64,6 +67,14 @@ describe("getMimeTypeCategory", () => {
 describe("createMimeTypeEntries", () => {
   test("creates sorted entries with derived categories", () => {
     expect(fixtureEntries).toEqual([
+      {
+        mimeType: "application/example+json",
+        category: "application",
+        extensions: [],
+        source: "iana",
+        compressible: undefined,
+        charset: undefined,
+      },
       {
         mimeType: "application/json",
         category: "application",
@@ -134,7 +145,7 @@ describe("filterMimeTypeEntries", () => {
       filterMimeTypeEntries(fixtureEntries, "", "application").map(
         (entry) => entry.mimeType
       )
-    ).toEqual(["application/json"])
+    ).toEqual(["application/example+json", "application/json"])
   })
 
   test("matches MIME types by type, extension, source, and charset", () => {
@@ -143,6 +154,11 @@ describe("filterMimeTypeEntries", () => {
         (entry) => entry.mimeType
       )
     ).toEqual(["text/plain"])
+    expect(
+      filterMimeTypeEntries(fixtureEntries, "json", "all").map(
+        (entry) => entry.mimeType
+      )
+    ).toEqual(["application/json", "application/example+json"])
     expect(
       filterMimeTypeEntries(fixtureEntries, "png", "all").map(
         (entry) => entry.mimeType
@@ -153,6 +169,7 @@ describe("filterMimeTypeEntries", () => {
         (entry) => entry.mimeType
       )
     ).toEqual([
+      "application/example+json",
       "application/json",
       "image/png",
       "message/example",

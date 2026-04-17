@@ -77,16 +77,50 @@ function filterMimeTypeEntries(
     return filteredEntries
   }
 
-  return filteredEntries.filter((entry) => {
-    return (
-      entry.mimeType.toLowerCase().includes(normalizedQuery) ||
-      entry.extensions.some((extension) =>
-        extension.toLowerCase().includes(normalizedQuery)
-      ) ||
-      entry.source?.toLowerCase().includes(normalizedQuery) === true ||
-      entry.charset?.toLowerCase().includes(normalizedQuery) === true
+  return filteredEntries
+    .filter((entry) => {
+      return (
+        entry.mimeType.toLowerCase().includes(normalizedQuery) ||
+        entry.extensions.some((extension) =>
+          extension.toLowerCase().includes(normalizedQuery)
+        ) ||
+        entry.source?.toLowerCase().includes(normalizedQuery) === true ||
+        entry.charset?.toLowerCase().includes(normalizedQuery) === true
+      )
+    })
+    .sort((left, right) => {
+      const leftPriority = getMimeTypeSearchPriority(left, normalizedQuery)
+      const rightPriority = getMimeTypeSearchPriority(right, normalizedQuery)
+
+      if (leftPriority !== rightPriority) {
+        return leftPriority - rightPriority
+      }
+
+      return left.mimeType.localeCompare(right.mimeType)
+    })
+}
+
+function getMimeTypeSearchPriority(
+  entry: MimeTypeEntry,
+  normalizedQuery: string
+) {
+  if (
+    entry.extensions.some((extension) =>
+      extension.toLowerCase().includes(normalizedQuery)
     )
-  })
+  ) {
+    return 0
+  }
+
+  if (entry.mimeType.toLowerCase().includes(normalizedQuery)) {
+    return 1
+  }
+
+  if (entry.source?.toLowerCase().includes(normalizedQuery) === true) {
+    return 2
+  }
+
+  return 3
 }
 
 export {
