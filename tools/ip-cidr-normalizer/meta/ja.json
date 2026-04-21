@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR 正規化ツール",
+  "description": "IPv4 と IPv6 形式の IP アドレスと CIDR 記法を正規化します。任意の IP や CIDR 範囲を入力すると、標準化された形式を即座に取得できます。"
+}

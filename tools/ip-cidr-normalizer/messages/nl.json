@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP- of CIDR-invoer",
+  "inputDescription": "Voer één IPv4-adres, IPv6-adres of CIDR-blok in om dit te normaliseren in canonieke netwerknotatie.",
+  "resultTitle": "Genormaliseerd Resultaat",
+  "resultDescription": "Canoniek adres of netwerkbereik. CIDR-invoer wordt herschreven naar het netwerkadres, waarbij de hostbits worden gewist.",
+  "label": "IP/CIDR",
+  "placeholder": "bijv. 192.168.0.15/24 of 2001:db8::1234/64",
+  "invalidInput": "Ongeldig IP/CIDR",
+  "invalidInputDescription": "Gebruik een geldig IPv4-adres, IPv6-adres of CIDR-bereik. De lengte van het voorvoegsel moet overeenkomen met de adresfamilie.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

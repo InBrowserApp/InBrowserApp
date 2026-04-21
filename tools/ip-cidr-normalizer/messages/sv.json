@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP- eller CIDR-ingång",
+  "inputDescription": "Ange en enda IPv4-adress, IPv6-adress eller CIDR-block för att normalisera den till kanonisk nätverksbeteckning.",
+  "resultTitle": "Normaliserat Resultat",
+  "resultDescription": "Kanonisk adress eller nätverksområde. CIDR-ingången skrivs om till nätverksadressen med värdbitar rensade.",
+  "label": "IP/CIDR",
+  "placeholder": "t.ex. 192.168.0.15/24 eller 2001:db8::1234/64",
+  "invalidInput": "Ogiltig IP/CIDR",
+  "invalidInputDescription": "Använd en giltig IPv4-adress, IPv6-adress eller CIDR-intervall. Prefixlängder måste matcha adressfamiljen.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

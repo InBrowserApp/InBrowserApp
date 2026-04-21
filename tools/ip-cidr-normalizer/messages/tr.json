@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP veya CIDR Girişi",
+  "inputDescription": "Kurallı ağ gösterimine göre normalleştirmek için tek bir IPv4 adresi, IPv6 adresi veya CIDR bloğu girin.",
+  "resultTitle": "Normalleştirilmiş Sonuç",
+  "resultDescription": "Kanonik adres veya ağ aralığı. CIDR girişi, ana bilgisayar bitleri temizlenmiş olarak ağ adresine yeniden yazılır.",
+  "label": "IP/CIDR",
+  "placeholder": "örneğin 192.168.0.15/24 veya 2001:db8::1234/64",
+  "invalidInput": "Geçersiz IP/CIDR",
+  "invalidInputDescription": "Geçerli bir IPv4 adresi, IPv6 adresi veya CIDR aralığı kullanın. Önek uzunlukları adres ailesiyle eşleşmelidir.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}
