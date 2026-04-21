@@ -182,11 +182,4 @@ export {
   parseCookieHeader,
   parseSetCookieHeaders,
 }
-export type {
-  CookiePair,
-  HeaderType,
-  ParsedCookieData,
-  ParsedCookieHeader,
-  ParsedSetCookieHeaders,
-  SetCookieEntry,
-}
+export type { HeaderType }
