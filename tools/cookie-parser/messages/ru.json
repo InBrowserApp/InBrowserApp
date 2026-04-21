@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Тип заголовка",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Ввод",
+  "inputPlaceholder": "Вставьте заголовки Cookie или Set-Cookie здесь...",
+  "parsedJsonLabel": "Разобранный JSON",
+  "emptyOutputDescription": "Результат разборки появится здесь...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Некорректные",
+  "invalidFragmentsLabel": "Некорректные фрагменты",
+  "noCookiesTitle": "Cookie не найдены",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "downloadJsonLabel": "Скачать JSON",
+  "resetLabel": "Сбросить пример"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Парсер Cookie",
+  "description": "Разбирает заголовки Cookie и Set-Cookie в структурированный JSON для проверки."
+}

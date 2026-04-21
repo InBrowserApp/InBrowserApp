@@ -1,0 +1,4 @@
+{
+  "name": "Pengurai Cookie",
+  "description": "Mengurai header Cookie dan Set-Cookie ke JSON terstruktur untuk inspeksi."
+}

@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Jenis Pengepala",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Input",
+  "inputPlaceholder": "Tampal pengepala Cookie atau Set-Cookie di sini...",
+  "parsedJsonLabel": "JSON terhurai",
+  "emptyOutputDescription": "Output terhurai akan dipaparkan di sini...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "Tidak sah",
+  "invalidFragmentsLabel": "Fragmen tidak sah",
+  "noCookiesTitle": "Tiada cookie ditemui",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadJsonLabel": "Muat turun JSON",
+  "resetLabel": "Tetapkan semula contoh"
+}

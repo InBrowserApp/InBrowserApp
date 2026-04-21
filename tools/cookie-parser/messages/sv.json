@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Header-typ",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Inmatning",
+  "inputPlaceholder": "Klistra in Cookie- eller Set-Cookie-headers här...",
+  "parsedJsonLabel": "Tolkad JSON",
+  "emptyOutputDescription": "Den tolkade utdata visas här...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Ogiltiga",
+  "invalidFragmentsLabel": "Ogiltiga fragment",
+  "noCookiesTitle": "Inga cookies hittades",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "downloadJsonLabel": "Ladda ner JSON",
+  "resetLabel": "Återställ exempel"
+}

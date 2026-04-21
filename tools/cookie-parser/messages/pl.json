@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Typ nagłówka",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Wejście",
+  "inputPlaceholder": "Wklej tutaj nagłówki Cookie lub Set-Cookie...",
+  "parsedJsonLabel": "Sparsowany JSON",
+  "emptyOutputDescription": "Sparsowane dane pojawią się tutaj...",
+  "cookieCountLabel": "Ciasteczka",
+  "invalidCountLabel": "Nieprawidłowe",
+  "invalidFragmentsLabel": "Nieprawidłowe fragmenty",
+  "noCookiesTitle": "Nie znaleziono ciasteczek",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "downloadJsonLabel": "Pobierz JSON",
+  "resetLabel": "Resetuj przykład"
+}
