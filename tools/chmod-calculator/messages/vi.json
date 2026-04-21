@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "presetsTitle": "Cài đặt phổ biến",
+  "executablePresetLabel": "Thực thi được",
+  "readOnlyPresetLabel": "Chỉ đọc",
+  "fullAccessPresetLabel": "Toàn quyền",
+  "ownerOnlyPresetLabel": "Chỉ chủ sở hữu",
+  "privateFilePresetLabel": "Tệp riêng tư",
+  "sharedDirPresetLabel": "Thư mục chia sẻ",
+  "numericPermissionLabel": "Quyền dạng số",
+  "numericPermissionPlaceholder": "ví dụ: 755",
+  "symbolicPermissionLabel": "Quyền dạng ký hiệu",
+  "symbolicPermissionPlaceholder": "ví dụ: rwxr-xr-x",
+  "permissionMatrixLabel": "Ma trận quyền",
+  "readLabel": "Đọc",
+  "writeLabel": "Ghi",
+  "executeLabel": "Thực thi",
+  "ownerLabel": "Chủ sở hữu",
+  "groupLabel": "Nhóm",
+  "othersLabel": "Người khác",
+  "chmodCommandLabel": "Lệnh Chmod"
+}

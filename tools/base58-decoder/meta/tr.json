@@ -1,0 +1,4 @@
+{
+  "name": "Base58 Kod Çözücü",
+  "description": "Base58 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır."
+}

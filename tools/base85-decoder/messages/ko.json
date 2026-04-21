@@ -1,0 +1,17 @@
+{
+  "alphabet": "알파벳",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85 입력",
+  "base85InputPlaceholder": "Base85 텍스트 입력...",
+  "importFromFileLabel": "파일에서 가져오기",
+  "decodedOutputLabel": "디코딩된 출력",
+  "decodedOutputEmptyDescription": "디코딩된 텍스트가 여기에 표시됩니다...",
+  "downloadFileLabel": "파일 다운로드",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "유효하지 않은 Base85 텍스트",
+  "fileReadFailedTitle": "파일 읽기에 실패했습니다",
+  "previewTruncatedLabel": "미리보기 잘림"
+}

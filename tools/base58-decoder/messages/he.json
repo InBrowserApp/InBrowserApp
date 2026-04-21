@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "אפשרויות",
+  "alphabetLabel": "אלפבית",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "קלט Base58",
+  "inputPlaceholder": "הזן טקסט Base58...",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "decodedOutputTitle": "פלט מפוענח",
+  "decodedOutputEmptyDescription": "הטקסט המפוענח יוצג כאן...",
+  "downloadFileLabel": "הורד קובץ",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה",
+  "invalidBase58Title": "טקסט Base58 לא תקין",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה"
+}

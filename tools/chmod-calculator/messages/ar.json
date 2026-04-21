@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "presetsTitle": "إعدادات مسبقة شائعة",
+  "executablePresetLabel": "قابل للتنفيذ",
+  "readOnlyPresetLabel": "للقراءة فقط",
+  "fullAccessPresetLabel": "وصول كامل",
+  "ownerOnlyPresetLabel": "المالك فقط",
+  "privateFilePresetLabel": "ملف خاص",
+  "sharedDirPresetLabel": "مجلد مشترك",
+  "numericPermissionLabel": "الإذن الرقمي",
+  "numericPermissionPlaceholder": "مثال: 755",
+  "symbolicPermissionLabel": "الإذن الرمزي",
+  "symbolicPermissionPlaceholder": "مثال: rwxr-xr-x",
+  "permissionMatrixLabel": "مصفوفة الأذونات",
+  "readLabel": "قراءة",
+  "writeLabel": "كتابة",
+  "executeLabel": "تنفيذ",
+  "ownerLabel": "المالك",
+  "groupLabel": "المجموعة",
+  "othersLabel": "الآخرون",
+  "chmodCommandLabel": "أمر Chmod"
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Options",
+  "alphabetLabel": "Alphabet",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Entrée Base58",
+  "inputPlaceholder": "Entrez le texte Base58...",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "decodedOutputTitle": "Sortie décodée",
+  "decodedOutputEmptyDescription": "Le texte décodé apparaîtra ici...",
+  "downloadFileLabel": "Télécharger le fichier",
+  "previewTruncatedLabel": "Aperçu tronqué",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "resetLabel": "Réinitialiser l’exemple",
+  "invalidBase58Title": "Texte Base58 invalide",
+  "fileReadFailedTitle": "Échec de la lecture du fichier"
+}

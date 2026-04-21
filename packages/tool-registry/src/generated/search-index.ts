@@ -889,6 +889,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "base58-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base58",
+      "decode",
+      "decoder",
+      "decoding",
+      "text",
+      "file",
+      "converter",
+      "binary",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base58",
+        description:
+          "فك ترميز نصوص أو ملفات Base58 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base58-Decoder",
+        description:
+          "Dekodiert Base58-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base58 Decoder",
+        description:
+          "Decode Base58 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base58",
+        description:
+          "Decodifica texto o archivos Base58 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base58",
+        description:
+          "Décode le texte ou les fichiers Base58 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base58",
+        description:
+          "מפענח טקסט או קבצים ב-Base58 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base58 डिकोडर",
+        description:
+          "Base58 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base58",
+        description:
+          "Dekode teks atau file Base58 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base58",
+        description:
+          "Decodifica testo o file Base58 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base58 デコーダー",
+        description:
+          "Base58のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base58 디코더",
+        description:
+          "Base58 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base58",
+        description:
+          "Nyahkod teks atau fail Base58 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base58-decoder",
+        description:
+          "Decodeer Base58-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base58-dekoder",
+        description:
+          "Dekoder Base58-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base58",
+        description:
+          "Dekoduj tekst lub pliki Base58 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base58",
+        description:
+          "Decodifica texto ou arquivos Base58 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base58-декодер",
+        description:
+          "Декодирует Base58-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base58-avkodare",
+        description:
+          "Avkoda Base58-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base58",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base58 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base58 Kod Çözücü",
+        description:
+          "Base58 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base58",
+        description:
+          "Giải mã văn bản hoặc tệp Base58 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base58 解码器",
+        description:
+          "将 Base58 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base58 解碼器",
+        description:
+          "將 Base58 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
+  {
     slug: "base58-encoder",
     category: "crypto",
     icon: "binary",
@@ -1140,6 +1273,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  {
+    slug: "base85-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base85",
+      "ascii85",
+      "z85",
+      "decode",
+      "decoder",
+      "binary",
+      "text",
+      "file",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base85",
+        description:
+          "فك ترميز نصوص أو ملفات Base85 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base85-Decoder",
+        description:
+          "Dekodiert Base85-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base85 Decoder",
+        description:
+          "Decode Base85 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base85",
+        description:
+          "Decodifica texto o archivos Base85 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base85",
+        description:
+          "Décode le texte ou les fichiers Base85 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base85",
+        description:
+          "מפענח טקסט או קבצים ב-Base85 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base85 डिकोडर",
+        description:
+          "Base85 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base85",
+        description:
+          "Dekode teks atau file Base85 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base85",
+        description:
+          "Decodifica testo o file Base85 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base85 デコーダー",
+        description:
+          "Base85のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base85 디코더",
+        description:
+          "Base85 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base85",
+        description:
+          "Nyahkod teks atau fail Base85 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base85-decoder",
+        description:
+          "Decodeer Base85-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base85-dekoder",
+        description:
+          "Dekoder Base85-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base85",
+        description:
+          "Dekoduj tekst lub pliki Base85 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base85",
+        description:
+          "Decodifica texto ou arquivos Base85 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base85-декодер",
+        description:
+          "Декодирует Base85-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base85-avkodare",
+        description:
+          "Avkoda Base85-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base85",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base85 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base85 Kod Çözücü",
+        description:
+          "Base85 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base85",
+        description:
+          "Giải mã văn bản hoặc tệp Base85 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base85 解码器",
+        description:
+          "将 Base85 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base85 解碼器",
+        description:
+          "將 Base85 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
       },
     },
   },
@@ -2307,6 +2573,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "大小寫轉換器",
         description:
           "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  {
+    slug: "chmod-calculator",
+    category: "developer",
+    icon: "lock",
+    tags: ["chmod", "permission", "unix", "linux", "file", "calculator"],
+    locales: {
+      ar: {
+        name: "حاسبة Chmod",
+        description:
+          "حساب أذونات ملفات Unix بين الترميز الرقمي (755) والرمزي (rwxr-xr-x)",
+      },
+      de: {
+        name: "Chmod-Rechner",
+        description:
+          "Unix-Dateiberechtigungen zwischen numerischer (755) und symbolischer (rwxr-xr-x) Notation umrechnen",
+      },
+      en: {
+        name: "Chmod Calculator",
+        description:
+          "Calculate Unix file permissions between numeric (755) and symbolic (rwxr-xr-x) notation",
+      },
+      es: {
+        name: "Calculadora Chmod",
+        description:
+          "Calcula permisos de archivos Unix entre notación numérica (755) y simbólica (rwxr-xr-x)",
+      },
+      fr: {
+        name: "Calculateur Chmod",
+        description:
+          "Convertir les permissions de fichiers Unix entre notation numérique (755) et symbolique (rwxr-xr-x)",
+      },
+      he: {
+        name: "מחשבון Chmod",
+        description:
+          "המרת הרשאות קבצים ב-Unix בין סימון מספרי (755) לסימון סמלי (rwxr-xr-x)",
+      },
+      hi: {
+        name: "Chmod कैलकुलेटर",
+        description:
+          "संख्यात्मक (755) और प्रतीकात्मक (rwxr-xr-x) नोटेशन के बीच Unix फ़ाइल अनुमतियों की गणना करें",
+      },
+      id: {
+        name: "Kalkulator Chmod",
+        description:
+          "Konversi izin file Unix antara notasi numerik (755) dan simbolik (rwxr-xr-x)",
+      },
+      it: {
+        name: "Calcolatore Chmod",
+        description:
+          "Calcola i permessi dei file Unix tra notazione numerica (755) e simbolica (rwxr-xr-x)",
+      },
+      ja: {
+        name: "Chmod 計算機",
+        description:
+          "Unix ファイル権限を数値 (755) と記号 (rwxr-xr-x) 表記の間で変換",
+      },
+      ko: {
+        name: "Chmod 계산기",
+        description:
+          "Unix 파일 권한을 숫자 (755)와 기호 (rwxr-xr-x) 표기법 간에 변환",
+      },
+      ms: {
+        name: "Kalkulator Chmod",
+        description:
+          "Tukar kebenaran fail Unix antara notasi angka (755) dan simbolik (rwxr-xr-x)",
+      },
+      nl: {
+        name: "Chmod-calculator",
+        description:
+          "Unix-bestandsrechten converteren tussen numerieke (755) en symbolische (rwxr-xr-x) notatie",
+      },
+      no: {
+        name: "Chmod-kalkulator",
+        description:
+          "Konverter Unix-filtillatelser mellom numerisk (755) og symbolsk (rwxr-xr-x) notasjon",
+      },
+      pl: {
+        name: "Kalkulator Chmod",
+        description:
+          "Konwertuj uprawnienia plików Unix między notacją numeryczną (755) a symboliczną (rwxr-xr-x)",
+      },
+      pt: {
+        name: "Calculadora Chmod",
+        description:
+          "Calcular permissões de arquivos Unix entre notação numérica (755) e simbólica (rwxr-xr-x)",
+      },
+      ru: {
+        name: "Калькулятор Chmod",
+        description:
+          "Конвертация прав доступа Unix между числовой (755) и символьной (rwxr-xr-x) нотацией",
+      },
+      sv: {
+        name: "Chmod-kalkylator",
+        description:
+          "Konvertera Unix-filrättigheter mellan numerisk (755) och symbolisk (rwxr-xr-x) notation",
+      },
+      th: {
+        name: "เครื่องคำนวณ Chmod",
+        description:
+          "แปลงสิทธิ์ไฟล์ Unix ระหว่างรูปแบบตัวเลข (755) และสัญลักษณ์ (rwxr-xr-x)",
+      },
+      tr: {
+        name: "Chmod Hesaplayıcı",
+        description:
+          "Unix dosya izinlerini sayısal (755) ve sembolik (rwxr-xr-x) gösterim arasında dönüştür",
+      },
+      vi: {
+        name: "Máy tính Chmod",
+        description:
+          "Chuyển đổi quyền tệp Unix giữa ký hiệu số (755) và ký hiệu (rwxr-xr-x)",
+      },
+      "zh-CN": {
+        name: "Chmod 计算器",
+        description:
+          "在数字 (755) 和符号 (rwxr-xr-x) 表示法之间转换 Unix 文件权限",
+      },
+      "zh-TW": {
+        name: "Chmod 計算器",
+        description:
+          "在數字 (755) 和符號 (rwxr-xr-x) 表示法之間轉換 Unix 檔案權限",
       },
     },
   },
@@ -7530,6 +7919,126 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "連接埠號碼查詢",
         description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  {
+    slug: "prc-id-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["resident-id", "validator", "china", "prc", "identity", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق هوية المقيم في جمهورية الصين الشعبية",
+        description:
+          "يتحقق من أرقام هوية المقيم ويفك ترميز المنطقة وتاريخ الميلاد والمجموع الاختباري",
+      },
+      de: {
+        name: "PRC-Resident-ID-Validator",
+        description:
+          "Validiert PRC-Resident-IDs und dekodiert Region, Geburtsdatum und Prüfsumme",
+      },
+      en: {
+        name: "PRC Resident ID Validator",
+        description:
+          "Validate PRC Resident ID numbers, decode region, birthdate, and checksum",
+      },
+      es: {
+        name: "Validador de ID de residente de la RPC",
+        description:
+          "Valida IDs de residente de la RPC y analiza región, fecha de nacimiento y checksum",
+      },
+      fr: {
+        name: "Validateur d'ID de résident de la RPC",
+        description:
+          "Valide les ID de résident de la RPC et décode la région, la date de naissance et la somme de contrôle",
+      },
+      he: {
+        name: "מאמת מזהה תושב סין",
+        description:
+          "מאמת מספרי מזהה תושב ומפענח אזור, תאריך לידה וסכום ביקורת",
+      },
+      hi: {
+        name: "पीआरसी निवासी आईडी सत्यापनकर्ता",
+        description:
+          "पीआरसी निवासी आईडी नंबर सत्यापित करें और क्षेत्र, जन्म तिथि व चेकसम निकालें",
+      },
+      id: {
+        name: "Validator ID penduduk Tiongkok",
+        description:
+          "Memvalidasi ID penduduk Tiongkok dan menguraikan wilayah, tanggal lahir, serta checksum",
+      },
+      it: {
+        name: "Validatore ID residente RPC",
+        description:
+          "Valida gli ID residente RPC e decodifica regione, data di nascita e checksum",
+      },
+      ja: {
+        name: "中国居民身份证検証",
+        description:
+          "中国居民身份证番号を検証し、地域・生年月日・チェックサムを解析します",
+      },
+      ko: {
+        name: "중국 주민 신분증 검증기",
+        description:
+          "중국 주민 신분증 번호를 검증하고 지역, 생년월일, 체크섬을 해석합니다",
+      },
+      ms: {
+        name: "Pengesah ID penduduk PRC",
+        description:
+          "Mengesahkan ID penduduk PRC dan menyahkod wilayah, tarikh lahir serta checksum",
+      },
+      nl: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Valideert PRC Resident-ID's en decodeert regio, geboortedatum en controlesom",
+      },
+      no: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Validerer PRC Resident-ID og dekoder region, fødselsdato og kontrollsum",
+      },
+      pl: {
+        name: "Walidator ID mieszkańca ChRL",
+        description:
+          "Waliduje ID mieszkańca ChRL i dekoduje region, datę urodzenia oraz sumę kontrolną",
+      },
+      pt: {
+        name: "Validador de ID de residente da RPC",
+        description:
+          "Valida IDs de residente da RPC e decodifica região, data de nascimento e checksum",
+      },
+      ru: {
+        name: "Валидатор ID резидента КНР",
+        description:
+          "Проверяет ID резидента КНР и расшифровывает регион, дату рождения и контрольную сумму",
+      },
+      sv: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Validerar PRC Resident-ID och tolkar region, födelsedatum och kontrollsumma",
+      },
+      th: {
+        name: "ตัวตรวจสอบบัตรประจำตัวผู้พำนักจีน",
+        description: "ตรวจสอบหมายเลขประจำตัวผู้พำนักและถอดรหัสภูมิภาค วันเกิด และเช็คซัม",
+      },
+      tr: {
+        name: "PRC Resident ID Doğrulayıcı",
+        description:
+          "PRC Resident ID numaralarını doğrular, bölge, doğum tarihi ve sağlama toplamını çözümler",
+      },
+      vi: {
+        name: "Trình xác thực ID cư trú Trung Quốc",
+        description:
+          "Xác thực ID cư trú và giải mã khu vực, ngày sinh, checksum",
+      },
+      "zh-CN": {
+        name: "中华人民共和国居民身份证解析与验证器",
+        description: "验证居民身份证号并解析地区、出生日期与校验位",
+      },
+      "zh-TW": {
+        name: "中華人民共和國居民身分證解析與驗證器",
+        description: "驗證居民身分證號並解析地區、出生日期與校驗位",
       },
     },
   },

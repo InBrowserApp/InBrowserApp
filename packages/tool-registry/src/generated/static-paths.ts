@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base58-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base58-decoder",
+    language: "de",
+  },
+  {
+    slug: "base58-decoder",
+    language: "en",
+  },
+  {
+    slug: "base58-decoder",
+    language: "es",
+  },
+  {
+    slug: "base58-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "he",
+  },
+  {
+    slug: "base58-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "id",
+  },
+  {
+    slug: "base58-decoder",
+    language: "it",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base58-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "no",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base58-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base58-decoder",
+    language: "th",
+  },
+  {
+    slug: "base58-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base58-encoder",
     language: "ar",
   },
@@ -830,6 +922,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base85-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-decoder",
+    language: "de",
+  },
+  {
+    slug: "base85-decoder",
+    language: "en",
+  },
+  {
+    slug: "base85-decoder",
+    language: "es",
+  },
+  {
+    slug: "base85-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "he",
+  },
+  {
+    slug: "base85-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "id",
+  },
+  {
+    slug: "base85-decoder",
+    language: "it",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "no",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-decoder",
+    language: "th",
+  },
+  {
+    slug: "base85-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base85-encoder",
     language: "ar",
   },
@@ -1655,6 +1839,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "case-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ar",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "de",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "en",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "es",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "fr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "he",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "hi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "id",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "it",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ja",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ko",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ms",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "nl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "no",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pt",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ru",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "sv",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "th",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "tr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "vi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "chmod-calculator",
     language: "zh-TW",
   },
   {
@@ -5611,6 +5887,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "port-number-lookup",
+    language: "zh-TW",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ar",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "de",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "en",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "es",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "fr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "he",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "hi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "id",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "it",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ja",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ko",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ms",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "nl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "no",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pt",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ru",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "sv",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "th",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "tr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "vi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "prc-id-validator",
     language: "zh-TW",
   },
   {

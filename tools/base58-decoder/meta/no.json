@@ -1,0 +1,4 @@
+{
+  "name": "Base58-dekoder",
+  "description": "Dekoder Base58-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon."
+}

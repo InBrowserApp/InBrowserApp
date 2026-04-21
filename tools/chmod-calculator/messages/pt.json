@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "presetsTitle": "Predefinições comuns",
+  "executablePresetLabel": "Executável",
+  "readOnlyPresetLabel": "Somente leitura",
+  "fullAccessPresetLabel": "Acesso total",
+  "ownerOnlyPresetLabel": "Apenas proprietário",
+  "privateFilePresetLabel": "Arquivo privado",
+  "sharedDirPresetLabel": "Diretório compartilhado",
+  "numericPermissionLabel": "Permissão numérica",
+  "numericPermissionPlaceholder": "ex., 755",
+  "symbolicPermissionLabel": "Permissão simbólica",
+  "symbolicPermissionPlaceholder": "ex., rwxr-xr-x",
+  "permissionMatrixLabel": "Matriz de permissões",
+  "readLabel": "Leitura",
+  "writeLabel": "Escrita",
+  "executeLabel": "Execução",
+  "ownerLabel": "Proprietário",
+  "groupLabel": "Grupo",
+  "othersLabel": "Outros",
+  "chmodCommandLabel": "Comando Chmod"
+}

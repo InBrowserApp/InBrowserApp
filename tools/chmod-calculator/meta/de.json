@@ -1,0 +1,4 @@
+{
+  "name": "Chmod-Rechner",
+  "description": "Unix-Dateiberechtigungen zwischen numerischer (755) und symbolischer (rwxr-xr-x) Notation umrechnen"
+}

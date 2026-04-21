@@ -1,0 +1,4 @@
+{
+  "name": "PRC Resident ID Doğrulayıcı",
+  "description": "PRC Resident ID numaralarını doğrular, bölge, doğum tarihi ve sağlama toplamını çözümler"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Dekoder Base58",
+  "description": "Dekoduj tekst lub pliki Base58 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji."
+}

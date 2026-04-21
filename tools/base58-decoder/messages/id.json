@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Opsi",
+  "alphabetLabel": "Alfabet",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Input Base58",
+  "inputPlaceholder": "Masukkan teks Base58...",
+  "importFromFileLabel": "Impor dari file",
+  "decodedOutputTitle": "Output terdekode",
+  "decodedOutputEmptyDescription": "Teks yang didekodekan akan muncul di sini...",
+  "downloadFileLabel": "Unduh file",
+  "previewTruncatedLabel": "Pratinjau dipotong",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Tersalin",
+  "resetLabel": "Setel ulang contoh",
+  "invalidBase58Title": "Teks Base58 tidak valid",
+  "fileReadFailedTitle": "Gagal membaca file"
+}

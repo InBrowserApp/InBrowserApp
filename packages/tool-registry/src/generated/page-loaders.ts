@@ -12,8 +12,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base16-encoder": () => import("@tool/base16-encoder/page"),
   "base32-decoder": () => import("@tool/base32-decoder/page"),
   "base32-encoder": () => import("@tool/base32-encoder/page"),
+  "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-decoder": () => import("@tool/base85-decoder/page"),
   "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
@@ -27,6 +29,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
@@ -78,6 +81,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>

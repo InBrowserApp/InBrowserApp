@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabe",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85 Girişi",
+  "base85InputPlaceholder": "Base85 metni girin...",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "decodedOutputLabel": "Çözümlenen Çıktı",
+  "decodedOutputEmptyDescription": "Çözümlenen metin burada görünecek...",
+  "downloadFileLabel": "Dosyayı indir",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "Geçersiz Base85 metni",
+  "fileReadFailedTitle": "Dosya okunamadı",
+  "previewTruncatedLabel": "Önizleme kısaltıldı"
+}
