@@ -22,11 +22,11 @@ import type {
   PRCIdValidatorMessages,
 } from "../client/types"
 import {
-  CopySummary,
-  DetailTile,
+  HierarchyTrail,
+  InfoMetric,
+  InlineCopyField,
   PanelLabel,
-  PanelShell,
-  SplitDetailPanel,
+  SectionSurface,
 } from "./result-panels"
 
 type PRCIdResultsCardProps = Readonly<{
@@ -55,71 +55,105 @@ function PRCIdResultsCard({
       <ToolPanelCardContent className="gap-4">
         {analysis ? (
           <>
-            <PanelShell className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
-              <div>
-                <PanelLabel>{messages.status}</PanelLabel>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  <Badge variant="secondary">{analysis.length}/18</Badge>
-                  {showCompleteStatus ? (
-                    <Badge
-                      variant={analysis.isValid ? "default" : "destructive"}
-                    >
-                      {analysis.isValid ? messages.valid : messages.invalid}
-                    </Badge>
-                  ) : null}
+            <SectionSurface className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <PanelLabel>{messages.status}</PanelLabel>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">{analysis.length}/18</Badge>
+                    {showCompleteStatus ? (
+                      <Badge
+                        variant={analysis.isValid ? "default" : "destructive"}
+                      >
+                        {analysis.isValid ? messages.valid : messages.invalid}
+                      </Badge>
+                    ) : null}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <PanelLabel>{messages.region}</PanelLabel>
+                  <HierarchyTrail
+                    fallback={messages.notAvailable}
+                    items={[
+                      {
+                        label: messages.province,
+                        value: analysis.provinceName,
+                      },
+                      {
+                        label: messages.city,
+                        value: analysis.cityName,
+                      },
+                      {
+                        label: messages.district,
+                        value: analysis.areaName,
+                      },
+                    ]}
+                  />
                 </div>
               </div>
 
-              <CopySummary
-                className="min-w-0"
-                label={messages.normalized}
-                value={analysis.normalized}
-                messages={messages}
-              />
-            </PanelShell>
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1 xl:border-l xl:border-border/60 xl:pl-6">
+                <InlineCopyField
+                  className="min-w-0"
+                  label={messages.normalized}
+                  value={analysis.normalized}
+                  messages={messages}
+                />
 
-            <section className="grid gap-3 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-              <PanelShell className="space-y-4">
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
-                    <PanelLabel>{messages.region}</PanelLabel>
+                <div className="rounded-lg bg-background/75 px-3 py-3 ring-1 ring-border/60">
+                  <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+                    <InfoMetric
+                      label={messages.regionCode}
+                      value={
+                        <span className="font-mono">
+                          {analysis.regionCode ?? messages.notAvailable}
+                        </span>
+                      }
+                    />
+                    <InfoMetric
+                      label={messages.regionStatus}
+                      value={
+                        <Badge
+                          variant={
+                            hasKnownRegion(analysis) ? "secondary" : "outline"
+                          }
+                        >
+                          {hasKnownRegion(analysis)
+                            ? messages.known
+                            : messages.unknown}
+                        </Badge>
+                      }
+                    />
                   </div>
+                </div>
+              </div>
+            </SectionSurface>
 
-                  <CopySummary
-                    className="min-w-[12rem]"
-                    label={messages.regionCode}
-                    value={analysis.regionCode}
-                    messages={messages}
-                  />
+            <SectionSurface className="grid gap-6 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
+              <div className="space-y-4">
+                <div>
+                  <PanelLabel>{messages.birthdate}</PanelLabel>
+                  <p className="mt-2 font-mono text-xl leading-tight font-semibold">
+                    {getBirthSummary(analysis)}
+                  </p>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-3">
-                  <DetailTile
-                    label={messages.province}
-                    value={analysis.provinceName ?? messages.notAvailable}
-                  />
-                  <DetailTile
-                    label={messages.city}
-                    value={analysis.cityName ?? messages.notAvailable}
-                  />
-                  <DetailTile
-                    label={messages.district}
-                    value={analysis.areaName ?? messages.notAvailable}
-                  />
-                </div>
-              </PanelShell>
-
-              <div className="grid gap-3">
-                <PanelShell className="space-y-4">
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <PanelLabel>{messages.birthdate}</PanelLabel>
-                      <p className="mt-2 font-mono text-xl leading-tight font-semibold">
-                        {getBirthSummary(analysis)}
-                      </p>
-                    </div>
-                    <DetailTile
-                      className="min-w-[7rem]"
+                <div className="rounded-lg bg-background/75 px-3 py-3 ring-1 ring-border/60">
+                  <div className="grid gap-4 sm:grid-cols-[repeat(3,minmax(0,1fr))_minmax(0,0.85fr)]">
+                    <InfoMetric
+                      label="YYYY"
+                      value={formatBirthPart(analysis.birthYearInput, "YYYY")}
+                    />
+                    <InfoMetric
+                      label="MM"
+                      value={formatBirthPart(analysis.birthMonthInput, "MM")}
+                    />
+                    <InfoMetric
+                      label="DD"
+                      value={formatBirthPart(analysis.birthDayInput, "DD")}
+                    />
+                    <InfoMetric
                       label={messages.age}
                       value={
                         analysis.age !== null
@@ -128,79 +162,67 @@ function PRCIdResultsCard({
                       }
                     />
                   </div>
-
-                  <div className="grid gap-3 sm:grid-cols-3">
-                    <DetailTile
-                      label="YYYY"
-                      value={formatBirthPart(analysis.birthYearInput, "YYYY")}
-                    />
-                    <DetailTile
-                      label="MM"
-                      value={formatBirthPart(analysis.birthMonthInput, "MM")}
-                    />
-                    <DetailTile
-                      label="DD"
-                      value={formatBirthPart(analysis.birthDayInput, "DD")}
-                    />
-                  </div>
-                </PanelShell>
-
-                <SplitDetailPanel
-                  primaryLabel={messages.gender}
-                  primaryValue={
-                    <Badge
-                      variant={
-                        analysis.gender === "unknown" ? "outline" : "secondary"
-                      }
-                    >
-                      {getGenderLabel(analysis.gender, messages)}
-                    </Badge>
-                  }
-                  secondaryLabel={messages.sequenceCode}
-                  secondaryValue={
-                    analysis.sequenceCode ?? messages.notAvailable
-                  }
-                />
+                </div>
               </div>
-            </section>
 
-            <PanelShell className="grid gap-3 sm:grid-cols-2">
-              <DetailTile
-                label={messages.checksum}
-                value={
-                  <Badge
-                    variant={
-                      showCompleteStatus
-                        ? analysis.isChecksumValid
-                          ? "default"
-                          : "destructive"
-                        : "outline"
+              <div className="rounded-lg bg-background/75 px-3 py-3 ring-1 ring-border/60">
+                <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                  <InfoMetric
+                    label={messages.gender}
+                    value={
+                      <Badge
+                        variant={
+                          analysis.gender === "unknown"
+                            ? "outline"
+                            : "secondary"
+                        }
+                      >
+                        {getGenderLabel(analysis.gender, messages)}
+                      </Badge>
                     }
-                  >
-                    {showCompleteStatus
-                      ? analysis.isChecksumValid
-                        ? messages.pass
-                        : messages.fail
-                      : messages.unknown}
-                  </Badge>
-                }
-              />
-              <DetailTile
-                label={messages.checkDigit}
-                value={
-                  <div className="space-y-1">
-                    <p>
-                      {messages.expected}:{" "}
-                      {analysis.expectedCheckDigit ?? messages.notAvailable}
-                    </p>
-                    <p>
-                      {messages.actual}:{" "}
-                      {analysis.actualCheckDigit ?? messages.notAvailable}
-                    </p>
-                  </div>
-                }
-              />
-            </PanelShell>
+                  />
+                  <InfoMetric
+                    label={messages.sequenceCode}
+                    value={analysis.sequenceCode ?? messages.notAvailable}
+                  />
+                  <InfoMetric
+                    label={messages.checksum}
+                    value={
+                      <Badge
+                        variant={
+                          showCompleteStatus
+                            ? analysis.isChecksumValid
+                              ? "default"
+                              : "destructive"
+                            : "outline"
+                        }
+                      >
+                        {showCompleteStatus
+                          ? analysis.isChecksumValid
+                            ? messages.pass
+                            : messages.fail
+                          : messages.unknown}
+                      </Badge>
+                    }
+                  />
+                  <InfoMetric
+                    label={messages.checkDigit}
+                    value={
+                      <div className="space-y-1">
+                        <p>
+                          {messages.expected}:{" "}
+                          {analysis.expectedCheckDigit ?? messages.notAvailable}
+                        </p>
+                        <p>
+                          {messages.actual}:{" "}
+                          {analysis.actualCheckDigit ?? messages.notAvailable}
+                        </p>
+                      </div>
+                    }
+                  />
+                </div>
+              </div>
+            </SectionSurface>
           </>
         ) : (
           <Empty className="min-h-64 flex-1 border-0 p-0">
@@ -215,6 +237,12 @@ function PRCIdResultsCard({
         )}
       </ToolPanelCardContent>
     </ToolPanelCard>
+  )
+}
+
+function hasKnownRegion(analysis: PRCIdValidationAnalysis) {
+  return Boolean(
+    analysis.provinceName || analysis.cityName || analysis.areaName
   )
 }
 
