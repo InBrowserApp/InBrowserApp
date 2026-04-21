@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Ausgabesprache",
+  "languagePlaceholder": "Sprache auswählen",
+  "inputCurlLabel": "cURL-Befehl",
+  "outputCodeLabel": "Konvertierter Code",
+  "curlPlaceholder": "Füge hier einen cURL-Befehl ein...",
+  "useSampleLabel": "Beispiel verwenden",
+  "clearLabel": "Leeren",
+  "downloadCodeLabel": "Herunterladen",
+  "warningsTitle": "Warnungen",
+  "errorsTitle": "Fehler",
+  "importFromFileLabel": "Aus Datei importieren",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert"
+}

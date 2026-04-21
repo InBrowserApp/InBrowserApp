@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "שפת פלט",
+  "languagePlaceholder": "בחר שפה",
+  "inputCurlLabel": "פקודת cURL",
+  "outputCodeLabel": "קוד שהומר",
+  "curlPlaceholder": "הדבק כאן פקודת cURL...",
+  "useSampleLabel": "השתמש בדוגמה",
+  "clearLabel": "נקה",
+  "downloadCodeLabel": "הורדה",
+  "warningsTitle": "אזהרות",
+  "errorsTitle": "שגיאות",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק"
+}

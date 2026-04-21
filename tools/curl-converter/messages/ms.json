@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Bahasa output",
+  "languagePlaceholder": "Pilih bahasa",
+  "inputCurlLabel": "Arahan cURL",
+  "outputCodeLabel": "Kod ditukar",
+  "curlPlaceholder": "Tampal arahan cURL di sini...",
+  "useSampleLabel": "Gunakan contoh",
+  "clearLabel": "Kosongkan",
+  "downloadCodeLabel": "Muat turun",
+  "warningsTitle": "Amaran",
+  "errorsTitle": "Ralat",
+  "importFromFileLabel": "Import dari fail",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

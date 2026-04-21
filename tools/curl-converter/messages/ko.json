@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "출력 언어",
+  "languagePlaceholder": "언어 선택",
+  "inputCurlLabel": "cURL 명령",
+  "outputCodeLabel": "변환된 코드",
+  "curlPlaceholder": "여기에 cURL 명령을 붙여넣기...",
+  "useSampleLabel": "샘플 사용",
+  "clearLabel": "지우기",
+  "downloadCodeLabel": "다운로드",
+  "warningsTitle": "경고",
+  "errorsTitle": "오류",
+  "importFromFileLabel": "파일에서 가져오기",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

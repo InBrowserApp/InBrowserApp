@@ -1,0 +1,48 @@
+.curl-highlight {
+  margin: 0;
+  min-width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.curl-highlight code {
+  display: block;
+}
+
+.curl-highlight .hljs {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.curl-highlight .hljs-comment {
+  color: color-mix(in oklab, var(--foreground) 44%, transparent);
+}
+
+.curl-highlight .hljs-keyword,
+.curl-highlight .hljs-operator,
+.curl-highlight .hljs-selector-tag,
+.curl-highlight .hljs-built_in,
+.curl-highlight .hljs-type {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.curl-highlight .hljs-title.class_,
+.curl-highlight .hljs-title.function_,
+.curl-highlight .hljs-attribute,
+.curl-highlight .hljs-attr,
+.curl-highlight .hljs-section,
+.curl-highlight .hljs-tag {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.curl-highlight .hljs-string,
+.curl-highlight .hljs-literal,
+.curl-highlight .hljs-number,
+.curl-highlight .hljs-meta,
+.curl-highlight .hljs-symbol {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}
