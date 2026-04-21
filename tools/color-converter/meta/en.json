@@ -1,0 +1,4 @@
+{
+  "name": "Color Converter",
+  "description": "Convert colors between HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK and CSS keywords. Real-time bidirectional conversion with alpha channel support."
+}

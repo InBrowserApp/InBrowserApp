@@ -1,0 +1,4 @@
+{
+  "name": "颜色转换器",
+  "description": "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 关键字格式之间转换颜色。支持 Alpha 通道的实时双向转换。"
+}

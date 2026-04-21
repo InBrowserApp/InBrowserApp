@@ -1,0 +1,4 @@
+{
+  "name": "Fargekonverterer",
+  "description": "Konverter farger mellom HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formater og CSS-nøkkelord. Toveis konvertering i sanntid med støtte for alfakanal."
+}

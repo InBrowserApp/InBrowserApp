@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Kleuren",
+  "resultsTitle": "Resultaten",
+  "previewTitle": "Voorbeeld",
+  "enableAlphaLabel": "Alpha inschakelen",
+  "invalidColorMessage": "Ongeldig kleurformaat",
+  "copyValueLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "keywordLabel": "CSS-sleutelwoord",
+  "hexInfo": "Hexadecimale kleurnotatie, meest gebruikt in webontwikkeling",
+  "rgbInfo": "Rood, Groen, Blauw - additief kleurmodel voor schermen",
+  "hslInfo": "Tint, Verzadiging, Lichtheid - intuïtieve kleuraanpassingen",
+  "hsvInfo": "Tint, Verzadiging, Waarde - ook bekend als HSB, gebruikelijk in kleurkiezers",
+  "hwbInfo": "Tint, Witheid, Zwartheid - CSS4-formaat, geen alfa",
+  "labInfo": "CIE LAB - perceptueel uniforme kleurruimte, geen alfa",
+  "lchInfo": "Lichtheid, Chroma, Tint - cilindrisch LAB, makkelijkere tintaanpassing, geen alfa",
+  "cmykInfo": "Cyaan, Magenta, Geel, Zwart - printstandaard, geen alfa",
+  "keywordInfo": "CSS-kleurnamen zoals red, blue, coral - 140+ voorgedefinieerde kleuren, geen alfa"
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Warna",
+  "resultsTitle": "Keputusan",
+  "previewTitle": "Pratonton",
+  "enableAlphaLabel": "Dayakan Alpha",
+  "invalidColorMessage": "Format warna tidak sah",
+  "copyValueLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "keywordLabel": "Kata kunci CSS",
+  "hexInfo": "Notasi warna heksadesimal, paling biasa dalam pembangunan web",
+  "rgbInfo": "Merah, Hijau, Biru - model warna aditif untuk skrin",
+  "hslInfo": "Hue, Ketepuan, Kecerahan - pelarasan warna intuitif",
+  "hsvInfo": "Hue, Ketepuan, Nilai - juga dikenali sebagai HSB, biasa dalam pemilih warna",
+  "hwbInfo": "Hue, Keputihan, Kehitaman - format CSS4, tiada alfa",
+  "labInfo": "CIE LAB - ruang warna seragam persepsi, tiada alfa",
+  "lchInfo": "Kecerahan, Kroma, Hue - LAB silinder, pelarasan hue lebih mudah, tiada alfa",
+  "cmykInfo": "Sian, Magenta, Kuning, Hitam - standard cetakan, tiada alfa",
+  "keywordInfo": "Nama warna CSS seperti red, blue, coral - 140+ warna pratakrif, tiada alfa"
+}
