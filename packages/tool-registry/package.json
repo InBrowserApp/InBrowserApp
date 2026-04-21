@@ -86,6 +86,7 @@
     "@tool/random-password-generator": "workspace:*",
     "@tool/regex-tester-replacer": "workspace:*",
     "@tool/ripemd160-hash-text-or-file": "workspace:*",
+    "@tool/robots-txt-generator": "workspace:*",
     "@tool/roman-numeral-converter": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
     "@tool/sha1-hash-text-or-file": "workspace:*",

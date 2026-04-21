@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de robots.txt",
+  "description": "Gere arquivos robots.txt com regras de user-agent, caminhos allow/disallow e links de sitemap."
+}

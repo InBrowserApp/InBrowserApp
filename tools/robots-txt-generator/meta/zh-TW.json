@@ -1,0 +1,4 @@
+{
+  "name": "robots.txt 產生器",
+  "description": "產生 robots.txt 檔案，包含 User-agent 規則、Allow/Disallow 路徑與 Sitemap 連結。"
+}

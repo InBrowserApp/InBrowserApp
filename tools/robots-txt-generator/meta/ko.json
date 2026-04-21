@@ -1,0 +1,4 @@
+{
+  "name": "robots.txt 생성기",
+  "description": "User-agent 규칙, Allow/Disallow 경로, Sitemap 링크가 포함된 robots.txt를 생성합니다."
+}
