@@ -134,4 +134,15 @@ describe("robots core helpers", () => {
       ].join("\n")
     )
   })
+
+  test("returns an empty string when no sections are present", () => {
+    expect(
+      buildRobotsTxt({
+        advanced: true,
+        host: "   ",
+        groups: [],
+        sitemaps: [],
+      })
+    ).toBe("")
+  })
 })
