@@ -7,6 +7,6 @@
   "placeholder": "cth. 192.168.0.15/24 atau 2001:db8::1234/64",
   "invalidInput": "IP/CIDR tidak sah",
   "invalidInputDescription": "Gunakan alamat IPv4, alamat IPv6 atau julat CIDR yang sah. Panjang awalan mesti sepadan dengan keluarga alamat.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
 }

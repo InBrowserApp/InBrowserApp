@@ -7,6 +7,6 @@
   "placeholder": "例: 192.168.0.15/24 または 2001:db8::1234/64",
   "invalidInput": "無効な IP/CIDR",
   "invalidInputDescription": "有効な IPv4 アドレス、IPv6 アドレス、または CIDR 範囲を使用します。プレフィックスの長さはアドレス ファミリと一致する必要があります。",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました"
 }

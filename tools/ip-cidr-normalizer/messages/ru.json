@@ -7,6 +7,6 @@
   "placeholder": "например 192.168.0.15/24 или 2001:db8::1234/64",
   "invalidInput": "Неверный IP/CIDR",
   "invalidInputDescription": "Используйте действительный адрес IPv4, адрес IPv6 или диапазон CIDR. Длина префиксов должна соответствовать семейству адресов.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "Копировать",
+  "copiedLabel": "Скопировано"
 }

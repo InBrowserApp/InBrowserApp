@@ -7,6 +7,6 @@
   "placeholder": "जैसे 192.168.0.15/24 या 2001:db8::1234/64",
   "invalidInput": "अमान्य IP/CIDR",
   "invalidInputDescription": "वैध IPv4 पता, IPv6 पता, या CIDR श्रेणी का उपयोग करें। उपसर्ग की लंबाई पता परिवार से मेल खाना चाहिए।",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
 }

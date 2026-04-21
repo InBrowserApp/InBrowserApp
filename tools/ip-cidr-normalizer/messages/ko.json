@@ -7,6 +7,6 @@
   "placeholder": "예를 들어 192.168.0.15/24 또는 2001:db8::1234/64",
   "invalidInput": "유효하지 않은 IP/CIDR",
   "invalidInputDescription": "유효한 IPv4 주소, IPv6 주소 또는 CIDR 범위를 사용하세요. 접두사 길이는 주소 계열과 일치해야 합니다.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
 }

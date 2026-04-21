@@ -7,6 +7,6 @@
   "placeholder": "לְמָשָׁל 192.168.0.15/24 או 2001:db8::1234/64",
   "invalidInput": "IP/CIDR לא תקין",
   "invalidInputDescription": "השתמש בכתובת IPv4 חוקית, כתובת IPv6 או טווח CIDR חוקי. אורכי הקידומת חייבים להתאים למשפחת הכתובות.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
 }

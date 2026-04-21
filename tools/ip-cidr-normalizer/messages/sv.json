@@ -7,6 +7,6 @@
   "placeholder": "t.ex. 192.168.0.15/24 eller 2001:db8::1234/64",
   "invalidInput": "Ogiltig IP/CIDR",
   "invalidInputDescription": "Använd en giltig IPv4-adress, IPv6-adress eller CIDR-intervall. Prefixlängder måste matcha adressfamiljen.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat"
 }

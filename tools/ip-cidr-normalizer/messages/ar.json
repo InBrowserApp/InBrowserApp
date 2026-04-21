@@ -7,6 +7,6 @@
   "placeholder": "على سبيل المثال 192.168.0.15/24 أو 2001:db8::1234/64",
   "invalidInput": "IP/CIDR غير صالح",
   "invalidInputDescription": "استخدم عنوان IPv4 أو عنوان IPv6 أو نطاق CIDR صالحًا. يجب أن تتطابق أطوال البادئة مع عائلة العناوين.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
 }

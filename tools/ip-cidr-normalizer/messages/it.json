@@ -7,6 +7,6 @@
   "placeholder": "ad es. 192.168.0.15/24 o 2001:db8::1234/64",
   "invalidInput": "IP/CIDR non valido",
   "invalidInputDescription": "Utilizza un indirizzo IPv4, un indirizzo IPv6 o un intervallo CIDR valido. Le lunghezze del prefisso devono corrispondere alla famiglia di indirizzi.",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
 }

@@ -7,6 +7,6 @@
   "placeholder": "เช่น 192.168.0.15/24 หรือ 2001:db8::1234/64",
   "invalidInput": "IP/CIDR ไม่ถูกต้อง",
   "invalidInputDescription": "ใช้ที่อยู่ IPv4 ที่ถูกต้อง ที่อยู่ IPv6 ที่ถูกต้อง หรือช่วง CIDR ที่ถูกต้อง ความยาวพรีฟิกซ์ต้องตรงกับตระกูลของที่อยู่",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied"
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
 }
