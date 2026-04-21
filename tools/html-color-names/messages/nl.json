@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Zoek op kleurnaam of HEX-waarde...",
+  "all": "Alle",
+  "red": "Rood",
+  "orange": "Oranje",
+  "yellow": "Geel",
+  "green": "Groen",
+  "cyan": "Cyaan",
+  "blue": "Blauw",
+  "purple": "Paars",
+  "pink": "Roze",
+  "brown": "Bruin",
+  "gray": "Grijs",
+  "white": "Wit",
+  "swatch": "Kleur",
+  "name": "Naam",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "resetLabel": "Opnieuw instellen",
+  "noResultsTitle": "Geen overeenkomende kleuren"
+}

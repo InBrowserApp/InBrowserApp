@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Sök efter färgnamn eller HEX-värde...",
+  "all": "Alla",
+  "red": "Röd",
+  "orange": "Orange",
+  "yellow": "Gul",
+  "green": "Grön",
+  "cyan": "Cyan",
+  "blue": "Blå",
+  "purple": "Lila",
+  "pink": "Rosa",
+  "brown": "Brun",
+  "gray": "Grå",
+  "white": "Vit",
+  "swatch": "Färg",
+  "name": "Namn",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "resetLabel": "Återställ",
+  "noResultsTitle": "Inga matchande färger"
+}
