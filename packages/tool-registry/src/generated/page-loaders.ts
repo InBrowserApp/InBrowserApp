@@ -12,6 +12,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base16-encoder": () => import("@tool/base16-encoder/page"),
   "base32-decoder": () => import("@tool/base32-decoder/page"),
   "base32-encoder": () => import("@tool/base32-encoder/page"),
+  "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
   "base85-encoder": () => import("@tool/base85-encoder/page"),

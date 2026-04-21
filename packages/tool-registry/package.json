@@ -14,6 +14,7 @@
     "@tool/base16-encoder": "workspace:*",
     "@tool/base32-decoder": "workspace:*",
     "@tool/base32-encoder": "workspace:*",
+    "@tool/base58-decoder": "workspace:*",
     "@tool/base58-encoder": "workspace:*",
     "@tool/base64-encoder-decoder": "workspace:*",
     "@tool/base85-encoder": "workspace:*",
