@@ -1,0 +1,17 @@
+{
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת Hash",
+  "hashResultDescription": "תוצאת הגיבוב עבור קלט הטקסט הנוכחי.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "outputLengthLabel": "אורך פלט",
+  "outputLengthPlaceholder": "למשל 256 (bits)",
+  "outputLengthInvalid": "הזן כפולה של 8 בין 8 ל‑65536."
+}

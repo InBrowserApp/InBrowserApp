@@ -1,0 +1,17 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Testo semplice",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
+  "importFromFileLabel": "Importa da file",
+  "hashResultLabel": "Risultato Hash",
+  "hashResultDescription": "Risultato hash per l'input di testo corrente.",
+  "hexLabel": "Esadecimale",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimale",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "outputLengthLabel": "Lunghezza di Output",
+  "outputLengthPlaceholder": "es. 256 (bits)",
+  "outputLengthInvalid": "Inserisci un multiplo di 8 tra 8 e 65536."
+}

@@ -1,0 +1,17 @@
+{
+  "inputLabel": "Inmatning",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat för den aktuella textinmatningen.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "outputLengthLabel": "Utdatalängd",
+  "outputLengthPlaceholder": "t.ex. 256 (bits)",
+  "outputLengthInvalid": "Ange en multipel av 8 mellan 8 och 65536."
+}
