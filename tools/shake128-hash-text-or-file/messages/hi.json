@@ -13,5 +13,7 @@
   "copiedLabel": "कॉपी किया गया",
   "outputLengthLabel": "आउटपुट लंबाई",
   "outputLengthPlaceholder": "उदा. 256 (bits)",
-  "outputLengthInvalid": "8 से 65536 के बीच 8 का गुणज दर्ज करें।"
+  "outputLengthInvalid": "8 से 65536 के बीच 8 का गुणज दर्ज करें।",
+  "hashTextError": "टेक्स्ट का हैश नहीं बनाया जा सका।",
+  "hashFileError": "फ़ाइल का हैश नहीं बनाया जा सका।"
 }

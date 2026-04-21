@@ -13,5 +13,7 @@
   "copiedLabel": "Gekopieerd",
   "outputLengthLabel": "Uitvoerlengte",
   "outputLengthPlaceholder": "bijv. 256 (bits)",
-  "outputLengthInvalid": "Voer een veelvoud van 8 in tussen 8 en 65536."
+  "outputLengthInvalid": "Voer een veelvoud van 8 in tussen 8 en 65536.",
+  "hashTextError": "Kan de hash van de tekst niet berekenen.",
+  "hashFileError": "Kan de hash van het bestand niet berekenen."
 }

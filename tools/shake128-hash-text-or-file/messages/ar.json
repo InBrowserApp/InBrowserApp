@@ -13,5 +13,7 @@
   "copiedLabel": "تم النسخ",
   "outputLengthLabel": "طول الإخراج",
   "outputLengthPlaceholder": "مثال: 256 (bits)",
-  "outputLengthInvalid": "أدخل مضاعفًا للعدد 8 بين 8 و 65536."
+  "outputLengthInvalid": "أدخل مضاعفًا للعدد 8 بين 8 و 65536.",
+  "hashTextError": "تعذر حساب تجزئة النص.",
+  "hashFileError": "تعذر حساب تجزئة الملف."
 }

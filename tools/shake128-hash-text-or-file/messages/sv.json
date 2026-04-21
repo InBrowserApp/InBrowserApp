@@ -13,5 +13,7 @@
   "copiedLabel": "Kopierat",
   "outputLengthLabel": "Utdatalängd",
   "outputLengthPlaceholder": "t.ex. 256 (bits)",
-  "outputLengthInvalid": "Ange en multipel av 8 mellan 8 och 65536."
+  "outputLengthInvalid": "Ange en multipel av 8 mellan 8 och 65536.",
+  "hashTextError": "Det gick inte att beräkna hash för texten.",
+  "hashFileError": "Det gick inte att beräkna hash för filen."
 }

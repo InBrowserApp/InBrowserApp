@@ -13,5 +13,7 @@
   "copiedLabel": "복사됨",
   "outputLengthLabel": "출력 길이",
   "outputLengthPlaceholder": "예: 256 (bits)",
-  "outputLengthInvalid": "8~65536 범위의 8의 배수를 입력하세요."
+  "outputLengthInvalid": "8~65536 범위의 8의 배수를 입력하세요.",
+  "hashTextError": "텍스트 해시를 계산하지 못했습니다.",
+  "hashFileError": "파일 해시를 계산하지 못했습니다."
 }

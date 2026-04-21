@@ -116,16 +116,13 @@ function Shake128HashTextOrFileClient({
           setDigestState({ status: "ready", digest })
         }
       })
-      .catch((error: unknown) => {
+      .catch(() => {
         if (!cancelled) {
           setDigestState({
             status: "error",
-            message:
-              error instanceof Error
-                ? error.message
-                : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+            message: selectedFile
+              ? messages.hashFileError
+              : messages.hashTextError,
           })
         }
       })
@@ -135,6 +132,8 @@ function Shake128HashTextOrFileClient({
     }
   }, [
     deferredPlainText,
+    messages.hashFileError,
+    messages.hashTextError,
     messages.outputLengthInvalid,
     outputLengthInput,
     selectedFile,

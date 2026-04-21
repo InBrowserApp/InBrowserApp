@@ -25,6 +25,8 @@ const messages = {
   outputLengthLabel: "Output Length",
   outputLengthPlaceholder: "e.g. 256 (bits)",
   outputLengthInvalid: "Enter a multiple of 8 between 8 and 65536.",
+  hashTextError: "Failed to hash text.",
+  hashFileError: "Failed to hash file.",
   hashResultLabel: "Hash Result",
   hashResultDescription: "Hash result for the current text input.",
   hexLabel: "Hexadecimal",
@@ -157,6 +159,21 @@ describe("Shake128HashTextOrFileClient", () => {
     })
 
     expect(await screen.findByText(shake128Hex("stored value"))).toBeTruthy()
+  })
+
+  test("shows a localized fallback error when hashing fails", async () => {
+    const originalArrayBuffer = Blob.prototype.arrayBuffer
+
+    Blob.prototype.arrayBuffer = () =>
+      Promise.reject(new Error("simulated failure"))
+
+    try {
+      render(<Shake128HashTextOrFileClient messages={messages} />)
+
+      expect(await screen.findByText(messages.hashTextError)).toBeTruthy()
+    } finally {
+      Blob.prototype.arrayBuffer = originalArrayBuffer
+    }
   })
 
   test("persists plain text edits to local storage", () => {

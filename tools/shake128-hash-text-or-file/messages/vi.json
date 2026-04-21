@@ -13,5 +13,7 @@
   "copiedLabel": "Đã sao chép",
   "outputLengthLabel": "Độ Dài Đầu Ra",
   "outputLengthPlaceholder": "vd: 256 (bits)",
-  "outputLengthInvalid": "Nhập bội số của 8 trong khoảng 8–65536."
+  "outputLengthInvalid": "Nhập bội số của 8 trong khoảng 8–65536.",
+  "hashTextError": "Không thể tính hash cho văn bản.",
+  "hashFileError": "Không thể tính hash cho tệp."
 }

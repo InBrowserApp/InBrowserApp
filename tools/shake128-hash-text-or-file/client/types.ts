@@ -6,6 +6,8 @@ type Shake128HashTextOrFileMessages = Readonly<{
   outputLengthLabel: string
   outputLengthPlaceholder: string
   outputLengthInvalid: string
+  hashTextError: string
+  hashFileError: string
   hashResultLabel: string
   hashResultDescription: string
   hexLabel: string

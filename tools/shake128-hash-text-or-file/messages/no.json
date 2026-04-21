@@ -13,5 +13,7 @@
   "copiedLabel": "Kopiert",
   "outputLengthLabel": "Utdatalengde",
   "outputLengthPlaceholder": "f.eks. 256 (bits)",
-  "outputLengthInvalid": "Skriv inn et multiplum av 8 mellom 8 og 65536."
+  "outputLengthInvalid": "Skriv inn et multiplum av 8 mellom 8 og 65536.",
+  "hashTextError": "Kunne ikke beregne hash for teksten.",
+  "hashFileError": "Kunne ikke beregne hash for filen."
 }

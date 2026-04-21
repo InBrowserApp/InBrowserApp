@@ -13,5 +13,7 @@
   "copiedLabel": "Copiado",
   "outputLengthLabel": "Longitud de Salida",
   "outputLengthPlaceholder": "p. ej., 256 (bits)",
-  "outputLengthInvalid": "Introduce un múltiplo de 8 entre 8 y 65536."
+  "outputLengthInvalid": "Introduce un múltiplo de 8 entre 8 y 65536.",
+  "hashTextError": "No se pudo calcular el hash del texto.",
+  "hashFileError": "No se pudo calcular el hash del archivo."
 }

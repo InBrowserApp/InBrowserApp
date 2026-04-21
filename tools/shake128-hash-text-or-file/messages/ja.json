@@ -13,5 +13,7 @@
   "copiedLabel": "コピーしました",
   "outputLengthLabel": "出力長",
   "outputLengthPlaceholder": "例: 256（bits）",
-  "outputLengthInvalid": "8〜65536 の範囲で 8 の倍数を入力してください。"
+  "outputLengthInvalid": "8〜65536 の範囲で 8 の倍数を入力してください。",
+  "hashTextError": "テキストのハッシュを計算できませんでした。",
+  "hashFileError": "ファイルのハッシュを計算できませんでした。"
 }

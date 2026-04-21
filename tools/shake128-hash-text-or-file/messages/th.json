@@ -13,5 +13,7 @@
   "copiedLabel": "คัดลอกแล้ว",
   "outputLengthLabel": "ความยาวเอาต์พุต",
   "outputLengthPlaceholder": "เช่น 256 (bits)",
-  "outputLengthInvalid": "กรอกจำนวนที่เป็นพหุคูณของ 8 ระหว่าง 8 ถึง 65536"
+  "outputLengthInvalid": "กรอกจำนวนที่เป็นพหุคูณของ 8 ระหว่าง 8 ถึง 65536",
+  "hashTextError": "ไม่สามารถคำนวณแฮชของข้อความได้",
+  "hashFileError": "ไม่สามารถคำนวณแฮชของไฟล์ได้"
 }

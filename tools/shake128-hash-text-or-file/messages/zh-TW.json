@@ -13,5 +13,7 @@
   "copiedLabel": "已複製",
   "outputLengthLabel": "輸出長度",
   "outputLengthPlaceholder": "例如 256（位）",
-  "outputLengthInvalid": "請輸入 8 到 65536 之間的 8 的倍數。"
+  "outputLengthInvalid": "請輸入 8 到 65536 之間的 8 的倍數。",
+  "hashTextError": "無法計算文字雜湊值。",
+  "hashFileError": "無法計算檔案雜湊值。"
 }

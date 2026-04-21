@@ -13,5 +13,7 @@
   "copiedLabel": "Skopiowano",
   "outputLengthLabel": "Długość Wyjścia",
   "outputLengthPlaceholder": "np. 256 (bits)",
-  "outputLengthInvalid": "Wprowadź wielokrotność 8 z zakresu 8–65536."
+  "outputLengthInvalid": "Wprowadź wielokrotność 8 z zakresu 8–65536.",
+  "hashTextError": "Nie udało się obliczyć skrótu tekstu.",
+  "hashFileError": "Nie udało się obliczyć skrótu pliku."
 }

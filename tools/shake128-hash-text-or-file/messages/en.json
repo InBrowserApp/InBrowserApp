@@ -13,5 +13,7 @@
   "copiedLabel": "Copied",
   "outputLengthLabel": "Output Length",
   "outputLengthPlaceholder": "e.g. 256 (bits)",
-  "outputLengthInvalid": "Enter a multiple of 8 between 8 and 65536."
+  "outputLengthInvalid": "Enter a multiple of 8 between 8 and 65536.",
+  "hashTextError": "Failed to hash text.",
+  "hashFileError": "Failed to hash file."
 }

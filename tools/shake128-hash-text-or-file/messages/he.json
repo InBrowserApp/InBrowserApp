@@ -13,5 +13,7 @@
   "copiedLabel": "הועתק",
   "outputLengthLabel": "אורך פלט",
   "outputLengthPlaceholder": "למשל 256 (bits)",
-  "outputLengthInvalid": "הזן כפולה של 8 בין 8 ל‑65536."
+  "outputLengthInvalid": "הזן כפולה של 8 בין 8 ל‑65536.",
+  "hashTextError": "לא ניתן לחשב את הגיבוב של הטקסט.",
+  "hashFileError": "לא ניתן לחשב את הגיבוב של הקובץ."
 }

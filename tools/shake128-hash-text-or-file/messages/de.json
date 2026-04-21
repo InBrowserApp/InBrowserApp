@@ -13,5 +13,7 @@
   "copiedLabel": "Kopiert",
   "outputLengthLabel": "Ausgabelänge",
   "outputLengthPlaceholder": "z. B. 256 (bits)",
-  "outputLengthInvalid": "Gib ein Vielfaches von 8 zwischen 8 und 65536 ein."
+  "outputLengthInvalid": "Gib ein Vielfaches von 8 zwischen 8 und 65536 ein.",
+  "hashTextError": "Text-Hash konnte nicht berechnet werden.",
+  "hashFileError": "Datei-Hash konnte nicht berechnet werden."
 }

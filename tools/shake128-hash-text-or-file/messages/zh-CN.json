@@ -13,5 +13,7 @@
   "copiedLabel": "已复制",
   "outputLengthLabel": "输出长度",
   "outputLengthPlaceholder": "例如 256（位）",
-  "outputLengthInvalid": "请输入 8 到 65536 之间的 8 的倍数。"
+  "outputLengthInvalid": "请输入 8 到 65536 之间的 8 的倍数。",
+  "hashTextError": "无法计算文本哈希值。",
+  "hashFileError": "无法计算文件哈希值。"
 }

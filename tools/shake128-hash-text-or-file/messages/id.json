@@ -13,5 +13,7 @@
   "copiedLabel": "Disalin",
   "outputLengthLabel": "Panjang Output",
   "outputLengthPlaceholder": "mis. 256 (bits)",
-  "outputLengthInvalid": "Masukkan kelipatan 8 antara 8 dan 65536."
+  "outputLengthInvalid": "Masukkan kelipatan 8 antara 8 dan 65536.",
+  "hashTextError": "Gagal menghitung hash teks.",
+  "hashFileError": "Gagal menghitung hash file."
 }
