@@ -61,10 +61,4 @@ function convertCurlToTarget(
   }
 }
 
-export {
-  FALLBACK_PARSE_ERROR,
-  UNKNOWN_TARGET_ERROR,
-  convertCurlToTarget,
-  formatCurlWarnings,
-}
-export type { ConversionResult }
+export { FALLBACK_PARSE_ERROR, UNKNOWN_TARGET_ERROR, convertCurlToTarget }

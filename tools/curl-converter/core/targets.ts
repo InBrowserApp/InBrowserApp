@@ -299,4 +299,3 @@ export {
   targetGroups,
   wrapFetchWithAsyncAwait,
 }
-export type { CurlTargetConfig, CurlTargetGroup }
