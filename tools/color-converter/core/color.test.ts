@@ -21,6 +21,56 @@ import {
   parseLchColor,
   parseRgbColor,
 } from "./color"
+import {
+  clampAlpha,
+  clampChannel,
+  formatAlpha,
+  formatDecimal,
+  parseAlpha,
+  parseHue,
+  parsePercentage,
+  parseRgbChannel,
+  parseStrictNumber,
+  splitArgs,
+  splitFunctionalArgs,
+  toRgba,
+} from "./shared"
+
+describe("shared helpers", () => {
+  it("clamps and formats numeric helper values", () => {
+    expect(clampChannel(-5)).toBe(0)
+    expect(clampChannel(12.6)).toBe(13)
+    expect(clampChannel(999)).toBe(255)
+    expect(clampAlpha(-1)).toBe(0)
+    expect(clampAlpha(1.5)).toBe(1)
+    expect(formatAlpha(0.3339)).toBe("0.334")
+    expect(formatDecimal(12.34)).toBe("12.3")
+    expect(toRgba([], 2)).toEqual({ r: 0, g: 0, b: 0, a: 1 })
+  })
+
+  it("parses helper argument fragments", () => {
+    expect(parseStrictNumber("")).toBeNull()
+    expect(parseStrictNumber(".5")).toBe(0.5)
+    expect(splitArgs("1, 2 3")).toEqual(["1", "2", "3"])
+    expect(splitFunctionalArgs("10 20 30 0.5")).toEqual({
+      parts: ["10", "20", "30"],
+      alpha: "0.5",
+    })
+    expect(splitFunctionalArgs("10 20 30 / 50%")).toEqual({
+      parts: ["10", "20", "30"],
+      alpha: "50%",
+    })
+    expect(parseAlpha(null)).toBe(1)
+    expect(parseAlpha("%")).toBeNull()
+    expect(parseAlpha("150%")).toBe(1)
+    expect(parseHue("nope")).toBeNull()
+    expect(parseHue("1turn")).toBe(360)
+    expect(parsePercentage("%")).toBeNull()
+    expect(parsePercentage("12.5%")).toBe(12.5)
+    expect(parseRgbChannel("%")).toBeNull()
+    expect(parseRgbChannel("50%")).toBe(127.5)
+  })
+})
 
 describe("formatters", () => {
   it("formats hex, rgb, hsl, hsv, hwb, lab, lch, cmyk, and keyword values", () => {
@@ -100,6 +150,7 @@ describe("parseRgbColor", () => {
     expect(parseRgbColor("rgb(% 0 0)")).toBeNull()
     expect(parseRgbColor("rgb(10 20 30 / )")).toBeNull()
     expect(parseRgbColor("rgb(10 20 30 / nope)")).toBeNull()
+    expect(parseRgbColor("not-rgb")).toBeNull()
   })
 })
 
@@ -140,6 +191,7 @@ describe("parseHslColor", () => {
     expect(parseHslColor("hsl(bad 50% 50%)")).toBeNull()
     expect(parseHslColor("hsl(0 foo 50%)")).toBeNull()
     expect(parseHslColor("hsla(0 100% 50% / nope)")).toBeNull()
+    expect(parseHslColor("not-hsl")).toBeNull()
   })
 })
 
@@ -162,6 +214,7 @@ describe("parseHsvColor", () => {
   it("rejects invalid hsv inputs", () => {
     expect(parseHsvColor("hsv(0 100%)")).toBeNull()
     expect(parseHsvColor("hsv(nope 100% 100%)")).toBeNull()
+    expect(parseHsvColor("not-hsv")).toBeNull()
   })
 })
 
@@ -184,6 +237,7 @@ describe("parseHwbColor", () => {
   it("rejects invalid hwb inputs", () => {
     expect(parseHwbColor("hwb(0 0%)")).toBeNull()
     expect(parseHwbColor("hwb(nope 10% 10%)")).toBeNull()
+    expect(parseHwbColor("not-hwb")).toBeNull()
   })
 })
 
@@ -200,6 +254,8 @@ describe("parseLabColor", () => {
   it("rejects invalid lab values", () => {
     expect(parseLabColor("lab(120, 1, 1)")).toBeNull()
     expect(parseLabColor("lab(nope, 1, 1)")).toBeNull()
+    expect(parseLabColor("lab(50, 1)")).toBeNull()
+    expect(parseLabColor("not-lab")).toBeNull()
   })
 })
 
@@ -217,6 +273,8 @@ describe("parseLchColor", () => {
     expect(parseLchColor("lch(101, 10, 10)")).toBeNull()
     expect(parseLchColor("lch(50, -1, 10)")).toBeNull()
     expect(parseLchColor("lch(50, 10, 400)")).toBeNull()
+    expect(parseLchColor("lch(50, 10)")).toBeNull()
+    expect(parseLchColor("not-lch")).toBeNull()
   })
 })
 
@@ -233,6 +291,7 @@ describe("parseCmykColor", () => {
   it("rejects invalid cmyk values", () => {
     expect(parseCmykColor("cmyk(10, 10, 10)")).toBeNull()
     expect(parseCmykColor("cmyk(10, 10, 10, 120)")).toBeNull()
+    expect(parseCmykColor("not-cmyk")).toBeNull()
   })
 })
 

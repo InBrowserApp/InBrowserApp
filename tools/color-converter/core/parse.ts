@@ -41,9 +41,9 @@ export function parseHexColor(input: string): RGBA | null {
 
 export function parseRgbColor(input: string): RGBA | null {
   const match = input.match(/^rgba?\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const { parts, alpha } = splitFunctionalArgs(match[1])
+  const { parts, alpha } = splitFunctionalArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const channels = parts.map(parseRgbChannel)
@@ -57,9 +57,9 @@ export function parseRgbColor(input: string): RGBA | null {
 
 export function parseHslColor(input: string): RGBA | null {
   const match = input.match(/^hsla?\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const { parts, alpha } = splitFunctionalArgs(match[1])
+  const { parts, alpha } = splitFunctionalArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const hue = parseHue(parts[0]!)
@@ -80,9 +80,9 @@ export function parseHslColor(input: string): RGBA | null {
 
 export function parseHsvColor(input: string): RGBA | null {
   const match = input.match(/^hsva?\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const { parts, alpha } = splitFunctionalArgs(match[1])
+  const { parts, alpha } = splitFunctionalArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const hue = parseHue(parts[0]!)
@@ -103,9 +103,9 @@ export function parseHsvColor(input: string): RGBA | null {
 
 export function parseHwbColor(input: string): RGBA | null {
   const match = input.match(/^hwb\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const parts = splitArgs(match[1])
+  const parts = splitArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const hue = parseHue(parts[0]!)
@@ -118,9 +118,9 @@ export function parseHwbColor(input: string): RGBA | null {
 
 export function parseLabColor(input: string): RGBA | null {
   const match = input.match(/^lab\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const parts = splitArgs(match[1])
+  const parts = splitArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const l = parseStrictNumber(parts[0]!)
@@ -135,9 +135,9 @@ export function parseLabColor(input: string): RGBA | null {
 
 export function parseLchColor(input: string): RGBA | null {
   const match = input.match(/^lch\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const parts = splitArgs(match[1])
+  const parts = splitArgs(match[1]!)
   if (parts.length !== 3) return null
 
   const l = parseStrictNumber(parts[0]!)
@@ -161,9 +161,9 @@ export function parseLchColor(input: string): RGBA | null {
 
 export function parseCmykColor(input: string): RGBA | null {
   const match = input.match(/^cmyk\((.+)\)$/i)
-  if (!match || !match[1]) return null
+  if (!match) return null
 
-  const values = splitArgs(match[1]).map(parsePercentage)
+  const values = splitArgs(match[1]!).map(parsePercentage)
   if (
     values.length !== 4 ||
     values.some((value) => value === null || value < 0 || value > 100)

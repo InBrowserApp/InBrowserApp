@@ -58,7 +58,7 @@ export function splitFunctionalArgs(body: string) {
 
   const parts = main.split(/[\s,]+/).filter(Boolean)
   if (slashIndex < 0 && parts.length > 3) {
-    alpha = parts.pop() ?? null
+    alpha = parts.pop()!
   }
 
   return { parts, alpha }
@@ -88,7 +88,6 @@ export function parseHue(value: string) {
   if (!match || !match[1]) return null
 
   const parsed = Number.parseFloat(match[1])
-  if (Number.isNaN(parsed)) return null
 
   switch (match[2]) {
     case "grad":
