@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de archivo a Data URI",
+  "description": "Convierte archivos en cadenas Data URI para incrustarlos en HTML, CSS o JSON. Funciona totalmente sin conexión."
+}

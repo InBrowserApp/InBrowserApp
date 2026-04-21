@@ -1,0 +1,14 @@
+{
+  "file": "Datei",
+  "dragOrClick": "Klicken oder ziehen Sie, um eine Datei hochzuladen",
+  "clearFile": "Datei löschen",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Der erzeugte Data URI erscheint hier...",
+  "onlyOneFile": "Es kann nur eine Datei hochgeladen werden",
+  "readFailed": "Datei konnte nicht gelesen werden",
+  "unknownType": "Unbekannter Typ",
+  "fileSize": "Dateigröße",
+  "mimeType": "MIME-Typ",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "محول ملف إلى Data URI",
+  "description": "حوّل الملفات إلى سلاسل Data URI لدمجها في HTML أو CSS أو JSON. يعمل بالكامل دون اتصال."
+}

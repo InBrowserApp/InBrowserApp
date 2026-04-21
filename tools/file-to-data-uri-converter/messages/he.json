@@ -1,0 +1,14 @@
+{
+  "file": "קובץ",
+  "dragOrClick": "לחץ או גרור כדי להעלות קובץ",
+  "clearFile": "נקה קובץ",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "ה־Data URI שנוצר יופיע כאן...",
+  "onlyOneFile": "ניתן להעלות קובץ אחד בלבד",
+  "readFailed": "קריאת הקובץ נכשלה",
+  "unknownType": "סוג לא ידוע",
+  "fileSize": "גודל הקובץ",
+  "mimeType": "סוג MIME",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

@@ -1,0 +1,14 @@
+{
+  "file": "Archivo",
+  "dragOrClick": "Haz clic o arrastra para subir un archivo",
+  "clearFile": "Limpiar archivo",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "El Data URI generado aparecerá aquí...",
+  "onlyOneFile": "Solo se puede subir un archivo",
+  "readFailed": "No se pudo leer el archivo",
+  "unknownType": "Tipo desconocido",
+  "fileSize": "Tamaño del archivo",
+  "mimeType": "Tipo MIME",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

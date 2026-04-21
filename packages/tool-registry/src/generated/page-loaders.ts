@@ -38,6 +38,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
+  "file-to-data-uri-converter": () =>
+    import("@tool/file-to-data-uri-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
   "html-entity-encoder-decoder": () =>

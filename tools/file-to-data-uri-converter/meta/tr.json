@@ -1,0 +1,4 @@
+{
+  "name": "Dosyadan Data URI Dönüştürücü",
+  "description": "Dosyaları HTML, CSS veya JSON içine gömmek için Data URI dizgelerine dönüştürür. Tamamen çevrimdışı çalışır."
+}

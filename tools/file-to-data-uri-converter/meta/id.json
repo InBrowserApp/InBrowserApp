@@ -1,0 +1,4 @@
+{
+  "name": "Konverter file ke Data URI",
+  "description": "Mengonversi file menjadi string Data URI untuk disematkan ke HTML, CSS, atau JSON. Berfungsi sepenuhnya offline."
+}

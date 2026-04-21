@@ -1,0 +1,4 @@
+{
+  "name": "File to Data URI Converter",
+  "description": "Convert files into Data URI strings for embedding in HTML, CSS, or JSON. Works fully offline."
+}

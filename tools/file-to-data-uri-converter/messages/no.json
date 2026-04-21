@@ -1,0 +1,14 @@
+{
+  "file": "Fil",
+  "dragOrClick": "Klikk eller dra for å laste opp en fil",
+  "clearFile": "Tøm fil",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Den genererte Data URI vises her...",
+  "onlyOneFile": "Kun én fil kan lastes opp",
+  "readFailed": "Kunne ikke lese filen",
+  "unknownType": "Ukjent type",
+  "fileSize": "Filstørrelse",
+  "mimeType": "MIME-type",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}
