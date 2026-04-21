@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC लीक",
+  "unableToGetIp": "IP प्राप्त करने में असमर्थ",
+  "hostname": "होस्टनाम",
+  "isp": "इंटरनेट सेवा प्रदाता",
+  "ipOrganization": "IP संगठन",
+  "asn": "ASN",
+  "asnOrganization": "ASN संगठन",
+  "location": "स्थान",
+  "country": "देश",
+  "timezone": "समय क्षेत्र"
+}

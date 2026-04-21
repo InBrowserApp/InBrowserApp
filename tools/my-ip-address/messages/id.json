@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "Kebocoran WebRTC",
+  "unableToGetIp": "Tidak dapat memperoleh IP",
+  "hostname": "Nama Host",
+  "isp": "Penyedia Layanan Internet",
+  "ipOrganization": "Organisasi IP",
+  "asn": "ASN",
+  "asnOrganization": "Organisasi ASN",
+  "location": "Lokasi",
+  "country": "Negara",
+  "timezone": "Zona Waktu"
+}

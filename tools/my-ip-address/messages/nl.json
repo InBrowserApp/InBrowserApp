@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC Lek",
+  "unableToGetIp": "Kan IP niet ophalen",
+  "hostname": "Hostnaam",
+  "isp": "Internetprovider",
+  "ipOrganization": "IP-organisatie",
+  "asn": "ASN",
+  "asnOrganization": "ASN-organisatie",
+  "location": "Locatie",
+  "country": "Land",
+  "timezone": "Tijdzone"
+}

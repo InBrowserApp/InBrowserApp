@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC-läcka",
+  "unableToGetIp": "Kan inte hämta IP",
+  "hostname": "Värdnamn",
+  "isp": "Internetleverantör",
+  "ipOrganization": "IP-organisation",
+  "asn": "ASN",
+  "asnOrganization": "ASN-organisation",
+  "location": "Plats",
+  "country": "Land",
+  "timezone": "Tidszon"
+}

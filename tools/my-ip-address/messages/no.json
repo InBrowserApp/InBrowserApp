@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC-lekkasje",
+  "unableToGetIp": "Kan ikke hente IP",
+  "hostname": "Vertsnavn",
+  "isp": "Internettleverandør",
+  "ipOrganization": "IP-organisasjon",
+  "asn": "ASN",
+  "asnOrganization": "ASN-organisasjon",
+  "location": "Plassering",
+  "country": "Land",
+  "timezone": "Tidssone"
+}

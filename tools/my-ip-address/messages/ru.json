@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "Утечка WebRTC",
+  "unableToGetIp": "Невозможно получить IP",
+  "hostname": "Имя хоста",
+  "isp": "Интернет-провайдер",
+  "ipOrganization": "IP-организация",
+  "asn": "ASN",
+  "asnOrganization": "ASN-организация",
+  "location": "Местоположение",
+  "country": "Страна",
+  "timezone": "Часовой пояс"
+}

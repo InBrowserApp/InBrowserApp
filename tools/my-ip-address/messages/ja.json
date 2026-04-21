@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC リーク",
+  "unableToGetIp": "IP を取得できません",
+  "hostname": "ホスト名",
+  "isp": "インターネットサービスプロバイダ",
+  "ipOrganization": "IP 組織",
+  "asn": "ASN",
+  "asnOrganization": "ASN 組織",
+  "location": "場所",
+  "country": "国",
+  "timezone": "タイムゾーン"
+}

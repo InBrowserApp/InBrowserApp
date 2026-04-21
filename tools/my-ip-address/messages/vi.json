@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "Rò rỉ WebRTC",
+  "unableToGetIp": "Không thể lấy IP",
+  "hostname": "Tên máy chủ",
+  "isp": "Nhà cung cấp dịch vụ Internet",
+  "ipOrganization": "Tổ chức IP",
+  "asn": "ASN",
+  "asnOrganization": "Tổ chức ASN",
+  "location": "Vị trí",
+  "country": "Quốc gia",
+  "timezone": "Múi giờ"
+}

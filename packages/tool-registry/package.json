@@ -63,6 +63,7 @@
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/mime-type-lookup": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
+    "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

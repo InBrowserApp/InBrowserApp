@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "Wyciek WebRTC",
+  "unableToGetIp": "Nie można uzyskać IP",
+  "hostname": "Nazwa hosta",
+  "isp": "Dostawca internetu",
+  "ipOrganization": "Organizacja IP",
+  "asn": "ASN",
+  "asnOrganization": "Organizacja ASN",
+  "location": "Lokalizacja",
+  "country": "Kraj",
+  "timezone": "Strefa czasowa"
+}

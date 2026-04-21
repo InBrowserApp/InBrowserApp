@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC 洩漏",
+  "unableToGetIp": "無法取得 IP",
+  "hostname": "主機名",
+  "isp": "網路服務商",
+  "ipOrganization": "IP 組織",
+  "asn": "ASN",
+  "asnOrganization": "ASN 組織",
+  "location": "位置",
+  "country": "國家",
+  "timezone": "時區"
+}

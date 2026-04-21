@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "تسريب WebRTC",
+  "unableToGetIp": "غير قادر على الحصول على IP",
+  "hostname": "اسم المضيف",
+  "isp": "مزود خدمة الإنترنت",
+  "ipOrganization": "منظمة IP",
+  "asn": "ASN",
+  "asnOrganization": "منظمة ASN",
+  "location": "الموقع",
+  "country": "البلد",
+  "timezone": "المنطقة الزمنية"
+}

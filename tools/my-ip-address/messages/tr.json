@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "WebRTC Sızıntısı",
+  "unableToGetIp": "IP alınamıyor",
+  "hostname": "Ana Bilgisayar Adı",
+  "isp": "İnternet Servis Sağlayıcısı",
+  "ipOrganization": "IP Organizasyonu",
+  "asn": "ASN",
+  "asnOrganization": "ASN Organizasyonu",
+  "location": "Konum",
+  "country": "Ülke",
+  "timezone": "Saat Dilimi"
+}

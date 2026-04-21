@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "דליפת WebRTC",
+  "unableToGetIp": "לא ניתן לקבל IP",
+  "hostname": "שם מארח",
+  "isp": "ספק שירותי אינטרנט",
+  "ipOrganization": "ארגון IP",
+  "asn": "ASN",
+  "asnOrganization": "ארגון ASN",
+  "location": "מיקום",
+  "country": "מדינה",
+  "timezone": "אזור זמן"
+}

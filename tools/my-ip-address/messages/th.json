@@ -1,0 +1,12 @@
+{
+  "webrtcLeak": "การรั่วไหลของ WebRTC",
+  "unableToGetIp": "ไม่สามารถรับ IP ได้",
+  "hostname": "ชื่อโฮสต์",
+  "isp": "ผู้ให้บริการอินเทอร์เน็ต",
+  "ipOrganization": "องค์กร IP",
+  "asn": "ASN",
+  "asnOrganization": "องค์กร ASN",
+  "location": "ตำแหน่ง",
+  "country": "ประเทศ",
+  "timezone": "เขตเวลา"
+}

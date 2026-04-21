@@ -70,6 +70,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
+  "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

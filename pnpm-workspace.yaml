@@ -62,6 +62,7 @@ catalog:
   jsbarcode: ^3.12.3
   js-yaml: ^4.1.1
   jmespath: ^0.16.0
+  is-ip: ^5.0.1
   jsonpath-plus: ^10.3.0
   knip: ^6.3.0
   lint-staged: ^16.4.0
@@ -92,5 +93,6 @@ catalog:
   typescript: ^5.9.3
   transliteration: ^2.6.1
   vitest: ^4.1.2
+  webrtc-ips: ^0.2.0
   wrangler: 4.80.0
   zod: ^4.1.12
