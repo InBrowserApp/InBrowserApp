@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Färger",
+  "foregroundLabel": "Förgrund",
+  "backgroundLabel": "Bakgrund",
+  "swapLabel": "Byt",
+  "invalidColorMessage": "Ogiltigt färgformat",
+  "resultsTitle": "Resultat",
+  "contrastRatioLabel": "Kontrastförhållande",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (stor)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (stor)",
+  "passLabel": "Godkänd",
+  "failLabel": "Underkänd",
+  "invalidInputMessage": "Ange giltiga färger för att se resultat.",
+  "alphaNote": "Transparenta färger blandas med vitt för kontrast.",
+  "previewTitle": "Förhandsgranskning",
+  "normalTextLabel": "Normal text",
+  "largeTextLabel": "Stor text",
+  "sampleText": "Aa Bb Cc 123"
+}

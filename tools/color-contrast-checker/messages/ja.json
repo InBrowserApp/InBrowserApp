@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "色",
+  "foregroundLabel": "前景色",
+  "backgroundLabel": "背景色",
+  "swapLabel": "入れ替え",
+  "invalidColorMessage": "無効な色形式",
+  "resultsTitle": "結果",
+  "contrastRatioLabel": "コントラスト比",
+  "aaNormalLabel": "AA（通常）",
+  "aaLargeLabel": "AA（大きい）",
+  "aaaNormalLabel": "AAA（通常）",
+  "aaaLargeLabel": "AAA（大きい）",
+  "passLabel": "合格",
+  "failLabel": "不合格",
+  "invalidInputMessage": "有効な色を入力すると結果が表示されます。",
+  "alphaNote": "透明な色は白と合成してコントラストを計算します。",
+  "previewTitle": "プレビュー",
+  "normalTextLabel": "通常テキスト",
+  "largeTextLabel": "大きいテキスト",
+  "sampleText": "Aa Bb Cc 123"
+}

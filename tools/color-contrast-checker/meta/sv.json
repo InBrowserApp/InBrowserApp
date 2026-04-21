@@ -1,0 +1,4 @@
+{
+  "name": "Färgkontrastkontroll",
+  "description": "Kontrollerar WCAG-kontrastförhållandet mellan förgrunds- och bakgrundsfärger, inklusive AA/AAA för normal och stor text."
+}

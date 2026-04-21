@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Warna",
+  "foregroundLabel": "Hadapan",
+  "backgroundLabel": "Latar",
+  "swapLabel": "Tukar",
+  "invalidColorMessage": "Format warna tidak sah",
+  "resultsTitle": "Keputusan",
+  "contrastRatioLabel": "Nisbah kontras",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (besar)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (besar)",
+  "passLabel": "Lulus",
+  "failLabel": "Gagal",
+  "invalidInputMessage": "Masukkan warna yang sah untuk melihat keputusan.",
+  "alphaNote": "Warna lutsinar dicampur dengan putih untuk kontras.",
+  "previewTitle": "Pratonton",
+  "normalTextLabel": "Teks biasa",
+  "largeTextLabel": "Teks besar",
+  "sampleText": "Aa Bb Cc 123"
+}

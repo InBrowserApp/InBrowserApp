@@ -1,0 +1,4 @@
+{
+  "name": "Farbkontrast-Prüfer",
+  "description": "Prüft das WCAG-Kontrastverhältnis zwischen Vorder- und Hintergrundfarben, einschließlich AA/AAA für normalen und großen Text."
+}

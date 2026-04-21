@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Farger",
+  "foregroundLabel": "Forgrunn",
+  "backgroundLabel": "Bakgrunn",
+  "swapLabel": "Bytt",
+  "invalidColorMessage": "Ugyldig fargeformat",
+  "resultsTitle": "Resultater",
+  "contrastRatioLabel": "Kontrastforhold",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (stor)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (stor)",
+  "passLabel": "Bestått",
+  "failLabel": "Ikke bestått",
+  "invalidInputMessage": "Skriv inn gyldige farger for å se resultater.",
+  "alphaNote": "Gjennomsiktige farger blandes med hvitt for kontrast.",
+  "previewTitle": "Forhåndsvisning",
+  "normalTextLabel": "Normal tekst",
+  "largeTextLabel": "Stor tekst",
+  "sampleText": "Aa Bb Cc 123"
+}
