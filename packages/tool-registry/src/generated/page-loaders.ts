@@ -134,6 +134,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
   "xxhash-xxh32-hash-text-or-file": () =>
     import("@tool/xxhash-xxh32-hash-text-or-file/page"),
+  "xxhash-xxh64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh64-hash-text-or-file/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),
 }

@@ -105,6 +105,7 @@
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
     "@tool/xxhash-xxh32-hash-text-or-file": "workspace:*",
+    "@tool/xxhash-xxh64-hash-text-or-file": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
     "@tool/yaml-to-toml-converter": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
