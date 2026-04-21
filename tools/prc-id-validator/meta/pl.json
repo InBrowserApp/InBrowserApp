@@ -1,0 +1,4 @@
+{
+  "name": "Walidator ID mieszkańca ChRL",
+  "description": "Waliduje ID mieszkańca ChRL i dekoduje region, datę urodzenia oraz sumę kontrolną"
+}

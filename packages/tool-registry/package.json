@@ -70,6 +70,7 @@
     "@tool/pbkdf2-key-derivation": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/port-number-lookup": "workspace:*",
+    "@tool/prc-id-validator": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",
