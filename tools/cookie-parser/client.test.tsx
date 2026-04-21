@@ -39,9 +39,10 @@ describe("CookieParserClient", () => {
     expect((screen.getByLabelText("Input") as HTMLTextAreaElement).value).toBe(
       "Cookie: session=abc123; theme=light; logged_in=true"
     )
-    expect(
-      screen.getByRole("region", { name: "Parsed JSON" }).textContent
-    ).toContain('"type": "cookie"')
+    const parsedJson = screen.getByRole("region", { name: "Parsed JSON" })
+
+    expect(parsedJson.textContent).toContain('"type": "cookie"')
+    expect(parsedJson.querySelector(".hljs")).toBeTruthy()
     expect(screen.getByText("Cookies: 3")).toBeTruthy()
   })
 

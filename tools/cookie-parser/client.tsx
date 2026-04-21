@@ -21,7 +21,7 @@ import {
 } from "@workspace/ui/components/ui/toggle-group"
 import { Download, RefreshCcw, TriangleAlert } from "@workspace/ui/icons"
 
-import { ReadOnlyOutput } from "./components/read-only-output"
+import { HighlightedJson } from "./components/highlighted-json"
 import {
   formatParsedCookieData,
   getDownloadFileName,
@@ -272,10 +272,11 @@ function CookieParserClient({ messages }: CookieParserClientProps) {
                   </div>
                 ) : null}
 
-                <ReadOnlyOutput
+                <HighlightedJson
                   ariaLabel={messages.parsedJsonLabel}
+                  className="max-h-[min(32rem,60vh)]"
+                  emptyDescription={messages.emptyOutputDescription}
                   value={outputText}
-                  className="max-h-[min(32rem,60vh)] min-h-72 overflow-auto"
                 />
 
                 {parsedResult.invalid.length > 0 ? (

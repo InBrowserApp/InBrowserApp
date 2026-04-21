@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "highlight.js": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",
