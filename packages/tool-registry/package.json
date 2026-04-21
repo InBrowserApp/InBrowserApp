@@ -59,6 +59,7 @@
     "@tool/lorem-ipsum-generator": "workspace:*",
     "@tool/mac-address-to-ipv6-link-local-address-converter": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
+    "@tool/mime-type-lookup": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
