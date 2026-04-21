@@ -8,11 +8,7 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
 
-import {
-  buildGoogleMapsUrl,
-  formatIpCoordinates,
-  type IpInfo,
-} from "../core/my-ip"
+import { formatIpCoordinates, type IpInfo } from "../core/my-ip"
 
 type InfoListMessages = Readonly<{
   hostname: string
@@ -47,29 +43,15 @@ function StatusEmptyState({
 
 function AddressSummary({
   address,
-  info,
 }: Readonly<{
   address: string
   info: IpInfo
 }>) {
-  const mapsUrl = buildGoogleMapsUrl(info)
-  const location = formatIpCoordinates(info)
-
   return (
-    <div className="flex flex-col gap-1">
+    <div>
       <p className="font-mono text-xl font-semibold tracking-tight break-all sm:text-2xl">
         {address}
       </p>
-      {location && mapsUrl ? (
-        <a
-          className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-          href={mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          {location}
-        </a>
-      ) : null}
     </div>
   )
 }
