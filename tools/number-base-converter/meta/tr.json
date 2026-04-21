@@ -1,0 +1,4 @@
+{
+  "name": "Sayı Tabanı Dönüştürücü",
+  "description": "Sayıları ikili, sekizli, onlu, onaltılı, base32, base36, base62, base64 ve özel tabanlar (2-64) arasında dönüştürün."
+}

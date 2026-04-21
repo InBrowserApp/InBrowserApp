@@ -1,0 +1,4 @@
+{
+  "name": "Konverter Basis Bilangan",
+  "description": "Konversi angka antara biner, oktal, desimal, heksadesimal, base32, base36, base62, base64, dan basis kustom (2-64)."
+}

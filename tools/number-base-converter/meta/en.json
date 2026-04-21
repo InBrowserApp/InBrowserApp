@@ -1,0 +1,4 @@
+{
+  "name": "Number Base Converter",
+  "description": "Convert numbers between binary, octal, decimal, hexadecimal, base32, base36, base62, base64, and custom bases from 2 to 64."
+}
