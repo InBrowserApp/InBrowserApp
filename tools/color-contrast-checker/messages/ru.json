@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Цвета",
+  "foregroundLabel": "Передний план",
+  "backgroundLabel": "Фон",
+  "swapLabel": "Поменять",
+  "invalidColorMessage": "Неверный формат цвета",
+  "resultsTitle": "Результаты",
+  "contrastRatioLabel": "Контраст",
+  "aaNormalLabel": "AA (обычный)",
+  "aaLargeLabel": "AA (крупный)",
+  "aaaNormalLabel": "AAA (обычный)",
+  "aaaLargeLabel": "AAA (крупный)",
+  "passLabel": "Пройдено",
+  "failLabel": "Не пройдено",
+  "invalidInputMessage": "Введите корректные цвета, чтобы увидеть результаты.",
+  "alphaNote": "Прозрачные цвета смешиваются с белым для контраста.",
+  "previewTitle": "Предпросмотр",
+  "normalTextLabel": "Обычный текст",
+  "largeTextLabel": "Крупный текст",
+  "sampleText": "Aa Bb Cc 123"
+}

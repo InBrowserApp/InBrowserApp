@@ -1934,6 +1934,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "color-contrast-checker",
+    language: "ar",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "de",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "en",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "es",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "fr",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "he",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "hi",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "id",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "it",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ja",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ko",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ms",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "nl",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "no",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "pl",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "pt",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ru",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "sv",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "th",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "tr",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "vi",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },

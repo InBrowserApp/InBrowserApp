@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "색상",
+  "foregroundLabel": "전경",
+  "backgroundLabel": "배경",
+  "swapLabel": "교체",
+  "invalidColorMessage": "유효하지 않은 색상 형식",
+  "resultsTitle": "결과",
+  "contrastRatioLabel": "대비 비율",
+  "aaNormalLabel": "AA (일반)",
+  "aaLargeLabel": "AA (큰 글자)",
+  "aaaNormalLabel": "AAA (일반)",
+  "aaaLargeLabel": "AAA (큰 글자)",
+  "passLabel": "통과",
+  "failLabel": "실패",
+  "invalidInputMessage": "유효한 색상을 입력하면 결과가 표시됩니다.",
+  "alphaNote": "투명 색상은 흰색과 합성해 대비를 계산합니다.",
+  "previewTitle": "미리보기",
+  "normalTextLabel": "일반 텍스트",
+  "largeTextLabel": "큰 텍스트",
+  "sampleText": "Aa Bb Cc 123"
+}

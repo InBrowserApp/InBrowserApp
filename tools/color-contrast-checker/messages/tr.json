@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Renkler",
+  "foregroundLabel": "Ön plan",
+  "backgroundLabel": "Arka plan",
+  "swapLabel": "Değiştir",
+  "invalidColorMessage": "Geçersiz renk biçimi",
+  "resultsTitle": "Sonuçlar",
+  "contrastRatioLabel": "Kontrast oranı",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (büyük)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (büyük)",
+  "passLabel": "Geçti",
+  "failLabel": "Geçmedi",
+  "invalidInputMessage": "Sonuçları görmek için geçerli renkler girin.",
+  "alphaNote": "Saydam renkler kontrast için beyazla karıştırılır.",
+  "previewTitle": "Önizleme",
+  "normalTextLabel": "Normal metin",
+  "largeTextLabel": "Büyük metin",
+  "sampleText": "Aa Bb Cc 123"
+}
