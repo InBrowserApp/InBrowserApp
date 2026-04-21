@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85-invoer",
+  "base85InputPlaceholder": "Voer Base85-tekst in...",
+  "importFromFileLabel": "Importeren uit bestand",
+  "decodedOutputLabel": "Gedecodeerde uitvoer",
+  "decodedOutputEmptyDescription": "Gedecodeerde tekst verschijnt hier...",
+  "downloadFileLabel": "Bestand downloaden",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "Ongeldige Base85-tekst",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen",
+  "previewTruncatedLabel": "Voorbeeld ingekort"
+}

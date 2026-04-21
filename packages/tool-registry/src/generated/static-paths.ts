@@ -922,6 +922,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base85-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-decoder",
+    language: "de",
+  },
+  {
+    slug: "base85-decoder",
+    language: "en",
+  },
+  {
+    slug: "base85-decoder",
+    language: "es",
+  },
+  {
+    slug: "base85-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "he",
+  },
+  {
+    slug: "base85-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "id",
+  },
+  {
+    slug: "base85-decoder",
+    language: "it",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "no",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-decoder",
+    language: "th",
+  },
+  {
+    slug: "base85-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base85-encoder",
     language: "ar",
   },

@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-decoder": () => import("@tool/base85-decoder/page"),
   "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),

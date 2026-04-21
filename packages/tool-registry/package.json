@@ -17,6 +17,7 @@
     "@tool/base58-decoder": "workspace:*",
     "@tool/base58-encoder": "workspace:*",
     "@tool/base64-encoder-decoder": "workspace:*",
+    "@tool/base85-decoder": "workspace:*",
     "@tool/base85-encoder": "workspace:*",
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",

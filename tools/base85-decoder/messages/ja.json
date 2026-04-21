@@ -1,0 +1,17 @@
+{
+  "alphabet": "アルファベット",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85 入力",
+  "base85InputPlaceholder": "Base85テキストを入力...",
+  "importFromFileLabel": "ファイルから読み込み",
+  "decodedOutputLabel": "デコード結果",
+  "decodedOutputEmptyDescription": "デコードされたテキストがここに表示されます...",
+  "downloadFileLabel": "ファイルをダウンロード",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "無効なBase85テキスト",
+  "fileReadFailedTitle": "ファイルの読み取りに失敗しました",
+  "previewTruncatedLabel": "プレビューは切り詰められました"
+}

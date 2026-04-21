@@ -1,0 +1,4 @@
+{
+  "name": "Base85-dekoder",
+  "description": "Dekoder Base85-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon."
+}
