@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Header Type",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Input",
+  "inputPlaceholder": "Paste Cookie or Set-Cookie headers here...",
+  "parsedJsonLabel": "Parsed JSON",
+  "emptyOutputDescription": "Parsed output will appear here...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Invalid",
+  "invalidFragmentsLabel": "Invalid fragments",
+  "noCookiesTitle": "No cookies found",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "downloadJsonLabel": "Download JSON",
+  "resetLabel": "Reset example"
+}

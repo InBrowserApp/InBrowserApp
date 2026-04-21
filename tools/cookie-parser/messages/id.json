@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Jenis Header",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Input",
+  "inputPlaceholder": "Tempel header Cookie atau Set-Cookie di sini...",
+  "parsedJsonLabel": "JSON hasil parsing",
+  "emptyOutputDescription": "Hasil parsing akan muncul di sini...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "Tidak valid",
+  "invalidFragmentsLabel": "Fragmen tidak valid",
+  "noCookiesTitle": "Cookie tidak ditemukan",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadJsonLabel": "Unduh JSON",
+  "resetLabel": "Atur ulang contoh"
+}

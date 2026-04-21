@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Başlık Türü",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Girdi",
+  "inputPlaceholder": "Cookie veya Set-Cookie başlıklarını buraya yapıştırın...",
+  "parsedJsonLabel": "Ayrıştırılmış JSON",
+  "emptyOutputDescription": "Ayrıştırılmış çıktı burada görünecek...",
+  "cookieCountLabel": "Çerezler",
+  "invalidCountLabel": "Geçersiz",
+  "invalidFragmentsLabel": "Geçersiz parçalar",
+  "noCookiesTitle": "Çerez bulunamadı",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadJsonLabel": "JSON İndir",
+  "resetLabel": "Örneği sıfırla"
+}

@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Loại header",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Đầu vào",
+  "inputPlaceholder": "Dán header Cookie hoặc Set-Cookie vào đây...",
+  "parsedJsonLabel": "JSON đã phân tích",
+  "emptyOutputDescription": "Kết quả sẽ hiển thị ở đây...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "Không hợp lệ",
+  "invalidFragmentsLabel": "Đoạn không hợp lệ",
+  "noCookiesTitle": "Không tìm thấy cookie",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadJsonLabel": "Tải JSON",
+  "resetLabel": "Đặt lại ví dụ"
+}
