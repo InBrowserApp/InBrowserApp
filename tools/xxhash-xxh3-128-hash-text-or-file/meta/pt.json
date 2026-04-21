@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH3 128) de Texto ou Arquivo",
+  "description": "Gere hash xxHash XXH3 128 para entrada de texto ou upload de arquivo. Calcule checksums de 128 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance"
+}

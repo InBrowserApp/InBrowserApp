@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "สี",
+  "foregroundLabel": "ด้านหน้า",
+  "backgroundLabel": "พื้นหลัง",
+  "swapLabel": "สลับ",
+  "invalidColorMessage": "รูปแบบสีไม่ถูกต้อง",
+  "resultsTitle": "ผลลัพธ์",
+  "contrastRatioLabel": "อัตราส่วนความต่างสี",
+  "aaNormalLabel": "AA (ปกติ)",
+  "aaLargeLabel": "AA (ใหญ่)",
+  "aaaNormalLabel": "AAA (ปกติ)",
+  "aaaLargeLabel": "AAA (ใหญ่)",
+  "passLabel": "ผ่าน",
+  "failLabel": "ไม่ผ่าน",
+  "invalidInputMessage": "กรอกสีที่ถูกต้องเพื่อดูผลลัพธ์",
+  "alphaNote": "สีที่โปร่งใสจะถูกผสมกับสีขาวเพื่อคำนวณความต่างสี",
+  "previewTitle": "ตัวอย่าง",
+  "normalTextLabel": "ข้อความปกติ",
+  "largeTextLabel": "ข้อความขนาดใหญ่",
+  "sampleText": "Aa Bb Cc 123"
+}

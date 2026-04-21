@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de Contraste des Couleurs",
+  "description": "Vérifiez le ratio de contraste WCAG entre couleurs de texte et de fond, avec niveaux AA/AAA pour texte normal et grand."
+}

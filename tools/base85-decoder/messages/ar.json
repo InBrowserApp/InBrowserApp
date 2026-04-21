@@ -1,0 +1,17 @@
+{
+  "alphabet": "الأبجدية",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "إدخال Base85",
+  "base85InputPlaceholder": "أدخل نص Base85...",
+  "importFromFileLabel": "استيراد من ملف",
+  "decodedOutputLabel": "المخرجات المفككة",
+  "decodedOutputEmptyDescription": "سيظهر النص المفكك هنا...",
+  "downloadFileLabel": "تنزيل الملف",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "loadSample": "Load sample",
+  "invalidBase85Title": "نص Base85 غير صالح",
+  "fileReadFailedTitle": "فشل في قراءة الملف",
+  "previewTruncatedLabel": "تم اقتطاع المعاينة"
+}

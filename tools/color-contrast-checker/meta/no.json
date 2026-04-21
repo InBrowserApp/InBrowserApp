@@ -1,0 +1,4 @@
+{
+  "name": "Fargekontrast-sjekk",
+  "description": "Sjekk WCAG-kontrastforholdet mellom forgrunns- og bakgrunnsfarger, inkludert AA/AAA for normal og stor tekst."
+}

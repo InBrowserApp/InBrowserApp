@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Màu sắc",
+  "foregroundLabel": "Tiền cảnh",
+  "backgroundLabel": "Nền",
+  "swapLabel": "Hoán đổi",
+  "invalidColorMessage": "Định dạng màu không hợp lệ",
+  "resultsTitle": "Kết quả",
+  "contrastRatioLabel": "Tỷ lệ tương phản",
+  "aaNormalLabel": "AA (thường)",
+  "aaLargeLabel": "AA (lớn)",
+  "aaaNormalLabel": "AAA (thường)",
+  "aaaLargeLabel": "AAA (lớn)",
+  "passLabel": "Đạt",
+  "failLabel": "Không đạt",
+  "invalidInputMessage": "Nhập màu hợp lệ để xem kết quả.",
+  "alphaNote": "Màu trong suốt được trộn với trắng để tính tương phản.",
+  "previewTitle": "Xem trước",
+  "normalTextLabel": "Chữ thường",
+  "largeTextLabel": "Chữ lớn",
+  "sampleText": "Aa Bb Cc 123"
+}

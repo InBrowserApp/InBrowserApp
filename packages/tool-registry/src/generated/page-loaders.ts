@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-decoder": () => import("@tool/base85-decoder/page"),
   "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
@@ -29,6 +30,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake3-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
+  "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
@@ -68,6 +70,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
+  "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
@@ -80,6 +83,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
@@ -136,6 +140,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
+  "xxhash-xxh3-128-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh3-128-hash-text-or-file/page"),
+  "xxhash-xxh3-64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh3-64-hash-text-or-file/page"),
   "xxhash-xxh32-hash-text-or-file": () =>
     import("@tool/xxhash-xxh32-hash-text-or-file/page"),
   "xxhash-xxh64-hash-text-or-file": () =>

@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "الألوان",
+  "foregroundLabel": "المقدمة",
+  "backgroundLabel": "الخلفية",
+  "swapLabel": "تبديل",
+  "invalidColorMessage": "تنسيق لون غير صالح",
+  "resultsTitle": "النتائج",
+  "contrastRatioLabel": "نسبة التباين",
+  "aaNormalLabel": "AA (عادي)",
+  "aaLargeLabel": "AA (كبير)",
+  "aaaNormalLabel": "AAA (عادي)",
+  "aaaLargeLabel": "AAA (كبير)",
+  "passLabel": "ناجح",
+  "failLabel": "غير ناجح",
+  "invalidInputMessage": "أدخل ألوانًا صالحة لعرض النتائج.",
+  "alphaNote": "يتم مزج الألوان الشفافة مع الأبيض لحساب التباين.",
+  "previewTitle": "معاينة",
+  "normalTextLabel": "نص عادي",
+  "largeTextLabel": "نص كبير",
+  "sampleText": "Aa Bb Cc 123"
+}

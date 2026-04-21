@@ -1,0 +1,4 @@
+{
+  "name": "Color Contrast Checker",
+  "description": "Check WCAG contrast ratios for foreground and background colors, including AA/AAA for normal and large text."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Decodificador Base85",
+  "description": "Decodifica texto ou arquivos Base85 de volta aos dados originais para transmissão, armazenamento e integração."
+}

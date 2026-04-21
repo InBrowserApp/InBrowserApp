@@ -1,0 +1,4 @@
+{
+  "name": "PRC Resident ID Validator",
+  "description": "Validate PRC Resident ID numbers, decode region, birthdate, and checksum"
+}

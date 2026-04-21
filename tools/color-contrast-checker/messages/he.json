@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "צבעים",
+  "foregroundLabel": "קדמי",
+  "backgroundLabel": "רקע",
+  "swapLabel": "החלפה",
+  "invalidColorMessage": "פורמט צבע לא תקין",
+  "resultsTitle": "תוצאות",
+  "contrastRatioLabel": "יחס ניגודיות",
+  "aaNormalLabel": "AA (רגיל)",
+  "aaLargeLabel": "AA (גדול)",
+  "aaaNormalLabel": "AAA (רגיל)",
+  "aaaLargeLabel": "AAA (גדול)",
+  "passLabel": "עבר",
+  "failLabel": "נכשל",
+  "invalidInputMessage": "הזן צבעים תקינים כדי לראות תוצאות.",
+  "alphaNote": "צבעים שקופים מתמזגים עם לבן לצורך הניגודיות.",
+  "previewTitle": "תצוגה מקדימה",
+  "normalTextLabel": "טקסט רגיל",
+  "largeTextLabel": "טקסט גדול",
+  "sampleText": "Aa Bb Cc 123"
+}

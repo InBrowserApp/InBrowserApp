@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Kolory",
+  "foregroundLabel": "Pierwszy plan",
+  "backgroundLabel": "Tło",
+  "swapLabel": "Zamień",
+  "invalidColorMessage": "Nieprawidłowy format koloru",
+  "resultsTitle": "Wyniki",
+  "contrastRatioLabel": "Współczynnik kontrastu",
+  "aaNormalLabel": "AA (normalny)",
+  "aaLargeLabel": "AA (duży)",
+  "aaaNormalLabel": "AAA (normalny)",
+  "aaaLargeLabel": "AAA (duży)",
+  "passLabel": "Zaliczony",
+  "failLabel": "Nie zaliczony",
+  "invalidInputMessage": "Wprowadź poprawne kolory, aby zobaczyć wyniki.",
+  "alphaNote": "Przezroczyste kolory są mieszane z bielą dla kontrastu.",
+  "previewTitle": "Podgląd",
+  "normalTextLabel": "Tekst normalny",
+  "largeTextLabel": "Tekst duży",
+  "sampleText": "Aa Bb Cc 123"
+}

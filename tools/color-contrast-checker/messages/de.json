@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Farben",
+  "foregroundLabel": "Vordergrund",
+  "backgroundLabel": "Hintergrund",
+  "swapLabel": "Tauschen",
+  "invalidColorMessage": "Ungültiges Farbformat",
+  "resultsTitle": "Ergebnisse",
+  "contrastRatioLabel": "Kontrastverhältnis",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (groß)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (groß)",
+  "passLabel": "Bestanden",
+  "failLabel": "Nicht bestanden",
+  "invalidInputMessage": "Gib gültige Farben ein, um Ergebnisse zu sehen.",
+  "alphaNote": "Transparente Farben werden für den Kontrast über Weiß gemischt.",
+  "previewTitle": "Vorschau",
+  "normalTextLabel": "Normaler Text",
+  "largeTextLabel": "Großer Text",
+  "sampleText": "Aa Bb Cc 123"
+}

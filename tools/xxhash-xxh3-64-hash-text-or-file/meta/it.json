@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH3 64) di Testo o File",
+  "description": "Genera hash xxHash XXH3 64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni"
+}

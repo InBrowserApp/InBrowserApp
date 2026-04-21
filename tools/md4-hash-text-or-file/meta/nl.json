@@ -1,0 +1,4 @@
+{
+  "name": "MD4-hash tekst of bestand",
+  "description": "Genereer MD4-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn."
+}

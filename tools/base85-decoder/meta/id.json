@@ -1,0 +1,4 @@
+{
+  "name": "Decoder Base85",
+  "description": "Dekode teks atau file Base85 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi."
+}
