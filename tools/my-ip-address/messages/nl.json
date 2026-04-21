@@ -8,5 +8,13 @@
   "asnOrganization": "ASN-organisatie",
   "location": "Locatie",
   "country": "Land",
-  "timezone": "Tijdzone"
+  "timezone": "Tijdzone",
+  "webrtcDescription": "Extra interface- en lokale kandidaat-adressen die tijdens WebRTC-onderhandelingen worden vrijgegeven.",
+  "unableToGetIpDescription": "De zoekopdracht heeft geen openbaar adres geretourneerd. Controleer uw verbindings-, VPN-, proxy- of privacy-instellingen en probeer het opnieuw.",
+  "fetchingIp": "IP-adres ophalen",
+  "fetchingIpDescription": "Je openbare adres en netwerkgegevens van meerdere providers opzoeken.",
+  "copyIp": "Kopieer IP",
+  "copied": "Gekopieerd",
+  "ipv4Description": "Openbaar IPv4-adres dat momenteel zichtbaar is voor websites en API's.",
+  "ipv6Description": "Openbaar IPv6-adres zichtbaar wanneer uw netwerk native of getunnelde IPv6 ondersteunt."
 }

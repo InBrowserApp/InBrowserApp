@@ -1,24 +1,40 @@
 import { useEffect, useState } from "react"
 
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
+import { Spinner } from "@workspace/ui/components/ui/spinner"
+import { Check, Copy, TriangleAlert } from "@workspace/ui/icons"
 
 import {
-  buildGoogleMapsUrl,
   discoverWebRtcAddresses,
-  formatIpCoordinates,
   lookupIpInfo,
   lookupPublicIp,
   type IpInfo,
 } from "./core/my-ip"
+import {
+  AddressSummary,
+  InfoList,
+  StatusEmptyState,
+} from "./components/address-card-parts"
 
 type MyIpAddressLocaleMessages = Readonly<{
   webrtcLeak: string
+  webrtcDescription: string
   unableToGetIp: string
+  unableToGetIpDescription: string
+  fetchingIp: string
+  fetchingIpDescription: string
+  copyIp: string
+  copied: string
+  ipv4Description: string
+  ipv6Description: string
   hostname: string
   isp: string
   ipOrganization: string
@@ -141,16 +157,27 @@ function MyIpAddressClient({ messages }: MyIpAddressClientProps) {
   return (
     <div className="grid gap-6">
       <div className="grid gap-6 xl:grid-cols-2">
-        <AddressCard title="IPv4" state={ipv4} messages={messages} />
-        <AddressCard title="IPv6" state={ipv6} messages={messages} />
+        <AddressCard
+          title="IPv4"
+          description={messages.ipv4Description}
+          state={ipv4}
+          messages={messages}
+        />
+        <AddressCard
+          title="IPv6"
+          description={messages.ipv6Description}
+          state={ipv6}
+          messages={messages}
+        />
       </div>
 
       {webrtcAddresses.length > 0 ? (
-        <Card>
+        <Card className="gap-0">
           <CardHeader className="border-b">
             <CardTitle>{messages.webrtcLeak}</CardTitle>
+            <CardDescription>{messages.webrtcDescription}</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-4 p-4 md:grid-cols-2">
+          <CardContent className="grid gap-4 pt-4 md:grid-cols-2">
             {webrtcAddresses.map((entry) => (
               <div
                 key={entry.address}
@@ -169,93 +196,78 @@ function MyIpAddressClient({ messages }: MyIpAddressClientProps) {
 
 function AddressCard({
   title,
+  description,
   state,
   messages,
 }: Readonly<{
   title: string
+  description: string
   state: AddressCardState
   messages: MyIpAddressMessages
 }>) {
+  const [copied, setCopied] = useState(false)
+  const readyAddress = state.status === "ready" ? state.address : null
+
+  useEffect(() => {
+    setCopied(false)
+  }, [readyAddress, state.status])
+
+  async function handleCopy() {
+    if (state.status !== "ready") {
+      return
+    }
+
+    try {
+      await navigator.clipboard.writeText(state.address)
+      setCopied(true)
+    } catch {
+      setCopied(false)
+    }
+  }
+
   return (
-    <Card>
+    <Card className="gap-0">
       <CardHeader className="border-b">
         <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4 p-4">
+        <CardDescription>{description}</CardDescription>
         {state.status === "ready" ? (
-          <>
+          <CardAction>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => void handleCopy()}
+            >
+              {copied ? (
+                <Check data-icon="inline-start" />
+              ) : (
+                <Copy data-icon="inline-start" />
+              )}
+              {copied ? messages.copied : messages.copyIp}
+            </Button>
+          </CardAction>
+        ) : null}
+      </CardHeader>
+      <CardContent className="pt-4">
+        {state.status === "ready" ? (
+          <div className="flex flex-col gap-4">
             <AddressSummary address={state.address} info={state.info} />
             <InfoList info={state.info} messages={messages} />
-          </>
+          </div>
+        ) : state.status === "loading" ? (
+          <StatusEmptyState
+            description={messages.fetchingIpDescription}
+            icon={<Spinner />}
+            title={messages.fetchingIp}
+          />
         ) : (
-          <p className="font-mono text-lg text-muted-foreground">
-            {state.status === "error" ? messages.unableToGetIp : "\u2014"}
-          </p>
+          <StatusEmptyState
+            description={messages.unableToGetIpDescription}
+            icon={<TriangleAlert />}
+            title={messages.unableToGetIp}
+          />
         )}
       </CardContent>
     </Card>
-  )
-}
-
-function AddressSummary({
-  address,
-  info,
-}: Readonly<{
-  address: string
-  info: IpInfo
-}>) {
-  const mapsUrl = buildGoogleMapsUrl(info)
-  const location = formatIpCoordinates(info)
-
-  return (
-    <div className="space-y-2">
-      <p className="font-mono text-2xl font-semibold tracking-tight break-all">
-        {address}
-      </p>
-      {location && mapsUrl ? (
-        <a
-          className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-          href={mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          {location}
-        </a>
-      ) : null}
-    </div>
-  )
-}
-
-function InfoList({
-  info,
-  messages,
-}: Readonly<{
-  info: IpInfo
-  messages: MyIpAddressMessages
-}>) {
-  const location = formatIpCoordinates(info)
-  const rows = [
-    [messages.hostname, info.hostname],
-    [messages.isp, info.isp],
-    [messages.ipOrganization, info.organization],
-    [messages.asn, info.asn === null ? null : String(info.asn)],
-    [messages.asnOrganization, info.asnOrganization],
-    [messages.location, location],
-    [messages.country, info.country],
-    [messages.timezone, info.timezone],
-  ] as const
-
-  return (
-    <dl className="grid gap-3 border-t pt-4 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)]">
-      {rows.map(([label, value]) => (
-        <div key={label} className="contents">
-          <dt className="text-sm text-muted-foreground">{label}</dt>
-          <dd className="text-sm break-words text-foreground">
-            {value ?? "\u2014"}
-          </dd>
-        </div>
-      ))}
-    </dl>
   )
 }
 

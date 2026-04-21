@@ -8,5 +8,13 @@
   "asnOrganization": "Organizacja ASN",
   "location": "Lokalizacja",
   "country": "Kraj",
-  "timezone": "Strefa czasowa"
+  "timezone": "Strefa czasowa",
+  "webrtcDescription": "Dodatkowy interfejs i lokalne adresy kandydatów ujawnione podczas negocjacji WebRTC.",
+  "unableToGetIpDescription": "Wyszukiwanie nie zwróciło adresu publicznego. Sprawdź swoje połączenie, VPN, serwer proxy lub ustawienia prywatności i spróbuj ponownie.",
+  "fetchingIp": "Pobieranie adresu IP",
+  "fetchingIpDescription": "Sprawdzanie adresu publicznego i szczegółów sieci od wielu dostawców.",
+  "copyIp": "Skopiuj adres IP",
+  "copied": "Skopiowano",
+  "ipv4Description": "Publiczny adres IPv4 aktualnie widoczny dla witryn internetowych i interfejsów API.",
+  "ipv6Description": "Publiczny adres IPv6 widoczny, gdy Twoja sieć obsługuje natywny lub tunelowany protokół IPv6."
 }

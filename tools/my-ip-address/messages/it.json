@@ -8,5 +8,13 @@
   "asnOrganization": "Organizzazione ASN",
   "location": "Posizione",
   "country": "Paese",
-  "timezone": "Fuso Orario"
+  "timezone": "Fuso Orario",
+  "webrtcDescription": "Interfaccia aggiuntiva e indirizzi dei candidati locali esposti durante la negoziazione WebRTC.",
+  "unableToGetIpDescription": "La ricerca non ha restituito un indirizzo pubblico. Controlla le impostazioni di connessione, VPN, proxy o privacy e riprova.",
+  "fetchingIp": "Recupero dell'indirizzo IP",
+  "fetchingIpDescription": "Ricerca del tuo indirizzo pubblico e dei dettagli della rete da più fornitori.",
+  "copyIp": "Copia IP",
+  "copied": "Copiato",
+  "ipv4Description": "Indirizzo IPv4 pubblico attualmente visibile a siti Web e API.",
+  "ipv6Description": "Indirizzo IPv6 pubblico visibile quando la rete supporta IPv6 nativo o con tunnel."
 }

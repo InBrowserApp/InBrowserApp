@@ -8,5 +8,13 @@
   "asnOrganization": "ASN Organizasyonu",
   "location": "Konum",
   "country": "Ülke",
-  "timezone": "Saat Dilimi"
+  "timezone": "Saat Dilimi",
+  "webrtcDescription": "WebRTC anlaşması sırasında açığa çıkan ek arayüz ve yerel aday adresleri.",
+  "unableToGetIpDescription": "Arama genel bir adres döndürmedi. Bağlantınızı, VPN'inizi, proxy'nizi veya gizlilik ayarlarınızı kontrol edip tekrar deneyin.",
+  "fetchingIp": "IP adresi alınıyor",
+  "fetchingIpDescription": "Birden fazla sağlayıcıdan genel adresinizi ve ağ ayrıntılarınızı arama.",
+  "copyIp": "IP'yi kopyala",
+  "copied": "Kopyalandı",
+  "ipv4Description": "Şu anda web siteleri ve API'ler tarafından görülebilen genel IPv4 adresi.",
+  "ipv6Description": "Ağınız yerel veya tünelli IPv6'yı desteklediğinde genel IPv6 adresi görünür."
 }

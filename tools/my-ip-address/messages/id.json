@@ -8,5 +8,13 @@
   "asnOrganization": "Organisasi ASN",
   "location": "Lokasi",
   "country": "Negara",
-  "timezone": "Zona Waktu"
+  "timezone": "Zona Waktu",
+  "webrtcDescription": "Antarmuka tambahan dan alamat kandidat lokal diekspos selama negosiasi WebRTC.",
+  "unableToGetIpDescription": "Pencarian tidak menghasilkan alamat publik. Periksa pengaturan koneksi, VPN, proxy, atau privasi Anda dan coba lagi.",
+  "fetchingIp": "Mengambil alamat IP",
+  "fetchingIpDescription": "Mencari alamat publik dan detail jaringan Anda dari berbagai penyedia.",
+  "copyIp": "Salin IP",
+  "copied": "Disalin",
+  "ipv4Description": "Alamat IPv4 publik saat ini terlihat oleh situs web dan API.",
+  "ipv6Description": "Alamat IPv6 publik terlihat ketika jaringan Anda mendukung IPv6 asli atau terowongan."
 }

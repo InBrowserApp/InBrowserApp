@@ -8,5 +8,13 @@
   "asnOrganization": "ASN 组织",
   "location": "位置",
   "country": "国家",
-  "timezone": "时区"
+  "timezone": "时区",
+  "webrtcDescription": "WebRTC 协商期间公开的其他接口和本地候选地址。",
+  "unableToGetIpDescription": "查找未返回公共地址。检查您的连接、VPN、代理或隐私设置，然后重试。",
+  "fetchingIp": "获取IP地址",
+  "fetchingIpDescription": "从多个提供商处查找您的公共地址和网络详细信息。",
+  "copyIp": "复制IP",
+  "copied": "已复制",
+  "ipv4Description": "公共 IPv4 地址当前对网站和 API 可见。",
+  "ipv6Description": "当您的网络支持本机或隧道 IPv6 时，公共 IPv6 地址可见。"
 }

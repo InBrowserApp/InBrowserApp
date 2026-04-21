@@ -8,5 +8,13 @@
   "asnOrganization": "ASN-organisation",
   "location": "Plats",
   "country": "Land",
-  "timezone": "Tidszon"
+  "timezone": "Tidszon",
+  "webrtcDescription": "Ytterligare gränssnitt och lokala kandidatadresser exponerade under WebRTC-förhandlingar.",
+  "unableToGetIpDescription": "Sökningen gav ingen offentlig adress. Kontrollera din anslutning, VPN, proxy eller sekretessinställningar och försök igen.",
+  "fetchingIp": "Hämtar IP-adress",
+  "fetchingIpDescription": "Söker upp din offentliga adress och nätverksinformation från flera leverantörer.",
+  "copyIp": "Kopiera IP",
+  "copied": "Kopierade",
+  "ipv4Description": "Offentlig IPv4-adress som för närvarande är synlig för webbplatser och API:er.",
+  "ipv6Description": "Offentlig IPv6-adress som är synlig när ditt nätverk stöder inbyggd eller tunnlad IPv6."
 }
