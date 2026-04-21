@@ -1,0 +1,4 @@
+{
+  "name": "Hash MD4 Teks atau File",
+  "description": "Buat hash MD4 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan."
+}

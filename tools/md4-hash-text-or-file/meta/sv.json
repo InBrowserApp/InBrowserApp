@@ -1,0 +1,4 @@
+{
+  "name": "MD4-hash text eller fil",
+  "description": "Generera MD4-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska."
+}
