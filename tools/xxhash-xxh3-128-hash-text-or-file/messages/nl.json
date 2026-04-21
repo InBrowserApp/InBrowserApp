@@ -1,0 +1,17 @@
+{
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hash Resultaat",
+  "hashResultDescription": "Hashresultaat voor de huidige tekstinvoer.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "seedLabel": "Seed (optioneel)",
+  "seedPlaceholder": "0 of 0x...",
+  "seedInvalid": "Voer een decimaal getal of een 0x-hexwaarde in."
+}

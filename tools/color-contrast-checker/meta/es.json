@@ -1,0 +1,4 @@
+{
+  "name": "Comprobador de Contraste de Color",
+  "description": "Comprueba la relación de contraste WCAG entre colores de texto y fondo, con niveles AA/AAA para texto normal y grande."
+}

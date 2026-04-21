@@ -1,0 +1,4 @@
+{
+  "name": "Renk Kontrast Denetleyici",
+  "description": "Ön plan ve arka plan renkleri arasındaki WCAG kontrast oranını kontrol eder; normal ve büyük metin için AA/AAA dahil."
+}

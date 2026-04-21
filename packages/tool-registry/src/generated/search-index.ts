@@ -2700,6 +2700,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "color-contrast-checker",
+    category: "web",
+    icon: "image",
+    tags: [
+      "color",
+      "contrast",
+      "accessibility",
+      "wcag",
+      "a11y",
+      "foreground",
+      "background",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق تباين الألوان",
+        description:
+          "يفحص نسبة التباين وفق WCAG بين لون النص والخلفية مع مستويات AA/AAA للنص العادي والكبير.",
+      },
+      de: {
+        name: "Farbkontrast-Prüfer",
+        description:
+          "Prüft das WCAG-Kontrastverhältnis zwischen Vorder- und Hintergrundfarben, einschließlich AA/AAA für normalen und großen Text.",
+      },
+      en: {
+        name: "Color Contrast Checker",
+        description:
+          "Check WCAG contrast ratios for foreground and background colors, including AA/AAA for normal and large text.",
+      },
+      es: {
+        name: "Comprobador de Contraste de Color",
+        description:
+          "Comprueba la relación de contraste WCAG entre colores de texto y fondo, con niveles AA/AAA para texto normal y grande.",
+      },
+      fr: {
+        name: "Vérificateur de Contraste des Couleurs",
+        description:
+          "Vérifiez le ratio de contraste WCAG entre couleurs de texte et de fond, avec niveaux AA/AAA pour texte normal et grand.",
+      },
+      he: {
+        name: "בודק ניגודיות צבעים",
+        description:
+          "בודק את יחס הניגודיות לפי WCAG בין צבע הטקסט והרקע, כולל AA/AAA לטקסט רגיל וגדול.",
+      },
+      hi: {
+        name: "रंग कंट्रास्ट चेकर",
+        description:
+          "टेक्स्ट और बैकग्राउंड रंगों के बीच WCAG कंट्रास्ट अनुपात जांचें, सामान्य व बड़े टेक्स्ट के लिए AA/AAA सहित।",
+      },
+      id: {
+        name: "Pemeriksa Kontras Warna",
+        description:
+          "Periksa rasio kontras WCAG antara warna teks dan latar belakang, termasuk AA/AAA untuk teks normal dan besar.",
+      },
+      it: {
+        name: "Verificatore di Contrasto Colori",
+        description:
+          "Controlla il rapporto di contrasto WCAG tra colori di testo e sfondo, con livelli AA/AAA per testo normale e grande.",
+      },
+      ja: {
+        name: "色コントラストチェッカー",
+        description:
+          "前景色と背景色の WCAG コントラスト比を確認し、通常/大きな文字の AA/AAA を判定します。",
+      },
+      ko: {
+        name: "색상 대비 검사기",
+        description:
+          "전경과 배경 색상의 WCAG 대비 비율을 확인하고 일반/큰 글자 AA/AAA를 판정합니다.",
+      },
+      ms: {
+        name: "Pemeriksa Kontras Warna",
+        description:
+          "Semak nisbah kontras WCAG antara warna teks dan latar belakang, termasuk AA/AAA untuk teks biasa dan besar.",
+      },
+      nl: {
+        name: "Kleurcontrastcontrole",
+        description:
+          "Controleer de WCAG-contrastverhouding tussen voor- en achtergrondkleuren, inclusief AA/AAA voor normale en grote tekst.",
+      },
+      no: {
+        name: "Fargekontrast-sjekk",
+        description:
+          "Sjekk WCAG-kontrastforholdet mellom forgrunns- og bakgrunnsfarger, inkludert AA/AAA for normal og stor tekst.",
+      },
+      pl: {
+        name: "Sprawdzanie Kontrastu Kolorów",
+        description:
+          "Sprawdza współczynnik kontrastu WCAG między kolorem tekstu i tła, w tym AA/AAA dla tekstu normalnego i dużego.",
+      },
+      pt: {
+        name: "Verificador de Contraste de Cores",
+        description:
+          "Verifique a taxa de contraste WCAG entre cores de texto e fundo, com níveis AA/AAA para texto normal e grande.",
+      },
+      ru: {
+        name: "Проверка Контраста Цветов",
+        description:
+          "Проверяет коэффициент контрастности WCAG для цветов текста и фона, включая AA/AAA для обычного и крупного текста.",
+      },
+      sv: {
+        name: "Färgkontrastkontroll",
+        description:
+          "Kontrollerar WCAG-kontrastförhållandet mellan förgrunds- och bakgrundsfärger, inklusive AA/AAA för normal och stor text.",
+      },
+      th: {
+        name: "ตัวตรวจสอบความต่างสี",
+        description:
+          "ตรวจสอบอัตราส่วนความต่างสีตาม WCAG ระหว่างสีข้อความและพื้นหลัง รวมถึง AA/AAA สำหรับข้อความปกติและขนาดใหญ่",
+      },
+      tr: {
+        name: "Renk Kontrast Denetleyici",
+        description:
+          "Ön plan ve arka plan renkleri arasındaki WCAG kontrast oranını kontrol eder; normal ve büyük metin için AA/AAA dahil.",
+      },
+      vi: {
+        name: "Trình Kiểm Tra Tương Phản Màu",
+        description:
+          "Kiểm tra tỷ lệ tương phản WCAG giữa màu chữ và nền, bao gồm AA/AAA cho chữ thường và chữ lớn.",
+      },
+      "zh-CN": {
+        name: "颜色对比度检查器",
+        description:
+          "检查前景与背景颜色的 WCAG 对比度，包括普通与大号文字的 AA/AAA 标准。",
+      },
+      "zh-TW": {
+        name: "顏色對比度檢查器",
+        description:
+          "檢查前景與背景顏色的 WCAG 對比度，包括一般與大字體的 AA/AAA 標準。",
+      },
+    },
+  },
+  {
     slug: "credit-card-validator",
     category: "text",
     icon: "credit-card",
@@ -6840,6 +6971,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "md4-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "md4", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة MD4 للنص أو الملف",
+        description:
+          "أنشئ تجزئات MD4 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "MD4-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie MD4-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "MD4 Hash Text or File",
+        description:
+          "Generate MD4 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash MD4 de Texto o Archivo",
+        description:
+          "Genera hashes MD4 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash MD4 de Texte ou Fichier",
+        description:
+          "Générez des hachages MD4 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש MD4 טקסט או קובץ",
+        description:
+          "צור ערכי MD4 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "MD4 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MD4 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash MD4 Teks atau File",
+        description:
+          "Buat hash MD4 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash MD4 di Testo o File",
+        description:
+          "Genera hash MD4 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "MD4 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに MD4 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "MD4 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 MD4 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash MD4 Teks atau Fail",
+        description:
+          "Jana hash MD4 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "MD4-hash tekst of bestand",
+        description:
+          "Genereer MD4-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "MD4-hash tekst eller fil",
+        description:
+          "Generer MD4-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash MD4 tekstu lub pliku",
+        description:
+          "Generuj hashe MD4 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash MD4 de Texto ou Arquivo",
+        description:
+          "Gere hashes MD4 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "MD4-хеш текста или файла",
+        description:
+          "Создавайте MD4-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "MD4-hash text eller fil",
+        description:
+          "Generera MD4-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช MD4 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MD4 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "MD4 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MD4 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash MD4 văn bản hoặc tệp",
+        description:
+          "Tạo hash MD4 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "MD4 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MD4 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "MD4 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MD4 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  {
     slug: "md5-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -10335,6 +10589,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "shake128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake128",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE128 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE128 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE128 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE128-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE128 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE128 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE128 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE128 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE128 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE128 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE128 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE128 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE128 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE128 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE128 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE128 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE128 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE128 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE128 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE128 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE128 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE128 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE128-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE128 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE128-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE128 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE128 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE128 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE128 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE128 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE128 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE128-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE128 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE128 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE128 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE128 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE128 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE128 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE128 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE128 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE128 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE128 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
+      },
+    },
+  },
+  {
     slug: "slug-generator",
     category: "web",
     icon: "globe",
@@ -12779,6 +13165,273 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "XML 轉 JSON 轉換器",
         description:
           "將 XML 轉為 JSON。貼上 XML 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh3",
+      "xxh3-128",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+      "seed",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH3 128) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH3 128 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 128 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH3 128)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH3 128-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 128-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH3 128) Hash Text or File",
+        description:
+          "Generate xxHash XXH3 128 hash for text input or file upload. Calculate fast 128-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH3 128) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH3 128 para entrada de texto o carga de archivo. Calcula sumas de verificación de 128 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH3 128) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH3 128 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 128 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH3 128) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH3 128 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 128-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH3 128) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH3 128 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 128-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH3 128) Teks atau File",
+        description:
+          "Buat hash xxHash XXH3 128 untuk input teks atau upload file. Hitung checksum 128-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH3 128) di Testo o File",
+        description:
+          "Genera hash xxHash XXH3 128 per input di testo o caricamento file. Calcola checksum a 128 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH3 128) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH3 128ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速128ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH3 128) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH3 128 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 128비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH3 128) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH3 128 untuk input teks atau muat naik fail. Kira checksum 128-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH3 128)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH3 128-hash voor tekstinvoer of bestandsupload. Bereken snelle 128-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH3 128)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH3 128-hash for tekstinndata eller filopplasting. Beregn raske 128-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH3 128) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH3 128 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 128-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH3 128) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH3 128 para entrada de texto ou upload de arquivo. Calcule checksums de 128 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH3 128)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH3 128-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 128-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH3 128)-hash text eller fil",
+        description:
+          "Generera xxHash XXH3 128-hash för textinmatning eller filuppladdning. Beräkna snabba 128-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH3 128) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH3 128 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 128-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH3 128) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH3 128 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 128-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH3 128) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH3 128 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 128-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH3 128) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH3 128 哈希值。计算快速 128 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH3 128) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH3 128 雜湊值。計算快速 128 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh3",
+      "xxh3-64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH3 64) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH3 64 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 64 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH3 64)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH3 64-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 64-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH3 64) Hash Text or File",
+        description:
+          "Generate xxHash XXH3 64 hash for text input or file upload. Calculate fast 64-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH3 64) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH3 64 para entrada de texto o carga de archivo. Calcula sumas de verificación de 64 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH3 64) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH3 64 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 64 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH3 64) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH3 64 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 64-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH3 64) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH3 64 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH3 64) Teks atau File",
+        description:
+          "Buat hash xxHash XXH3 64 untuk input teks atau upload file. Hitung checksum 64-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH3 64) di Testo o File",
+        description:
+          "Genera hash xxHash XXH3 64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH3 64) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH3 64ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速64ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH3 64) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH3 64 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 64비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH3 64) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH3 64 untuk input teks atau muat naik fail. Kira checksum 64-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH3 64)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH3 64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH3 64)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH3 64-hash for tekstinndata eller filopplasting. Beregn raske 64-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH3 64) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH3 64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH3 64) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH3 64 para entrada de texto ou upload de arquivo. Calcule checksums de 64 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH3 64)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH3 64-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 64-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH3 64)-hash text eller fil",
+        description:
+          "Generera xxHash XXH3 64-hash för textinmatning eller filuppladdning. Beräkna snabba 64-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH3 64) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH3 64 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 64-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH3 64) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH3 64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH3 64) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH3 64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH3 64) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH3 64 哈希值。计算快速 64 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH3 64) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH3 64 雜湊值。計算快速 64 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
       },
     },
   },

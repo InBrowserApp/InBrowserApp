@@ -1,0 +1,17 @@
+{
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת Hash",
+  "hashResultDescription": "תוצאת הגיבוב עבור קלט הטקסט הנוכחי.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "seedLabel": "זרע (אופציונלי)",
+  "seedPlaceholder": "0 או 0x...",
+  "seedInvalid": "הזן מספר עשרוני או ערך הקסדצימלי עם ‎0x."
+}

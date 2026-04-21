@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Warna",
+  "foregroundLabel": "Latar depan",
+  "backgroundLabel": "Latar belakang",
+  "swapLabel": "Tukar",
+  "invalidColorMessage": "Format warna tidak valid",
+  "resultsTitle": "Hasil",
+  "contrastRatioLabel": "Rasio kontras",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (besar)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (besar)",
+  "passLabel": "Lulus",
+  "failLabel": "Tidak lulus",
+  "invalidInputMessage": "Masukkan warna valid untuk melihat hasil.",
+  "alphaNote": "Warna transparan dicampur dengan putih untuk kontras.",
+  "previewTitle": "Pratinjau",
+  "normalTextLabel": "Teks normal",
+  "largeTextLabel": "Teks besar",
+  "sampleText": "Aa Bb Cc 123"
+}
