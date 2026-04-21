@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x86 32-bit) Teks atau Fail",
+  "description": "Jana hash MurmurHash3 x86 32-bit untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi"
+}
