@@ -1,0 +1,4 @@
+{
+  "name": "xxHash (XXH64) Hash Metin veya Dosya",
+  "description": "Metin girişi veya dosya yükleme için xxHash XXH64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın"
+}

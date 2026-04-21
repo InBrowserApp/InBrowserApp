@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH32) Teks atau File",
+  "description": "Buat hash xxHash XXH32 untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja"
+}

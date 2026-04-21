@@ -1,0 +1,4 @@
+{
+  "name": "SM3-hash tekst of bestand",
+  "description": "Genereer SM3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+}

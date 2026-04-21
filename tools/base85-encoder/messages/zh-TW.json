@@ -1,0 +1,17 @@
+{
+  "alphabet": "字母表",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "輸入",
+  "inputPlaceholder": "輸入要編碼的文字...",
+  "outputTitle": "Base85 編碼",
+  "outputPlaceholder": "Base85 輸出會顯示在這裡...",
+  "download": "下載 Base85",
+  "readFailed": "讀取檔案失敗",
+  "invalidBase85": "Z85 要求輸入長度必須是 4 位元組的倍數。",
+  "loadSample": "載入範例",
+  "clearLabel": "清除",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製",
+  "importFromFileLabel": "從檔案匯入"
+}

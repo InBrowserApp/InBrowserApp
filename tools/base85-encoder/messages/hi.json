@@ -1,0 +1,17 @@
+{
+  "alphabet": "वर्णमाला",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "इनपुट",
+  "inputPlaceholder": "एन्कोड करने के लिए पाठ दर्ज करें...",
+  "outputTitle": "Base85 एन्कोडेड",
+  "outputPlaceholder": "Base85 आउटपुट यहां दिखाई देगा...",
+  "download": "Base85 डाउनलोड करें",
+  "readFailed": "फ़ाइल पढ़ने में विफल",
+  "invalidBase85": "Z85 के लिए इनपुट की लंबाई 4 बाइट के गुणज में होनी चाहिए.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "फ़ाइल से आयात करें"
+}

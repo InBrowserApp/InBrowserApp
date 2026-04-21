@@ -922,6 +922,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "base85-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-encoder",
+    language: "de",
+  },
+  {
+    slug: "base85-encoder",
+    language: "en",
+  },
+  {
+    slug: "base85-encoder",
+    language: "es",
+  },
+  {
+    slug: "base85-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "he",
+  },
+  {
+    slug: "base85-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "id",
+  },
+  {
+    slug: "base85-encoder",
+    language: "it",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "no",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-encoder",
+    language: "th",
+  },
+  {
+    slug: "base85-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "basic-auth-decoder",
     language: "ar",
   },
@@ -7178,6 +7270,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sm3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },
@@ -8650,6 +8834,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },
@@ -8739,6 +9015,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "xml-to-json-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
     language: "zh-TW",
   },
   {

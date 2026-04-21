@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
@@ -107,6 +108,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
+  "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
@@ -128,7 +130,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
+  "whirlpool-hash-text-or-file": () =>
+    import("@tool/whirlpool-hash-text-or-file/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
+  "xxhash-xxh32-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh32-hash-text-or-file/page"),
+  "xxhash-xxh64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh64-hash-text-or-file/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),
 }

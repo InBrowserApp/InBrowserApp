@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH32) de Texto o Archivo",
+  "description": "Genera hash xxHash XXH32 para entrada de texto o carga de archivo. Calcula sumas de verificación de 32 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento"
+}

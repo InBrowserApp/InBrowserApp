@@ -1,0 +1,4 @@
+{
+  "name": "xxHash (XXH32)-hash text eller fil",
+  "description": "Generera xxHash XXH32-hash för textinmatning eller filuppladdning. Beräkna snabba 32-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash"
+}

@@ -1277,6 +1277,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "base85-encoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base85",
+      "ascii85",
+      "z85",
+      "encoder",
+      "encoding",
+      "text",
+      "file",
+      "binary",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base85",
+        description:
+          "ترميز النص أو الملفات إلى Base85 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base85-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base85 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base85 Encoder",
+        description:
+          "Encode text or files to Base85 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto o archivos a Base85 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base85",
+        description:
+          "Encode du texte ou des fichiers en Base85 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base85",
+        description:
+          "מקודד טקסט או קבצים ל-Base85 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base85 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base85 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base85",
+        description:
+          "Encode teks atau file ke Base85 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base85",
+        description:
+          "Codifica testo o file in Base85 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base85 エンコーダー",
+        description:
+          "テキストやファイルをBase85にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base85 인코더",
+        description:
+          "텍스트나 파일을 Base85로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base85",
+        description:
+          "Kod teks atau fail ke Base85 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base85-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base85 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base85-koder",
+        description:
+          "Kod tekst eller filer til Base85 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base85",
+        description:
+          "Koduj tekst lub pliki do Base85 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto ou arquivos em Base85 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base85-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base85 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base85-kodare",
+        description:
+          "Koda text eller filer till Base85 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base85",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base85 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base85 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base85'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base85",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base85 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base85 编码器",
+        description:
+          "将文本或文件编码为 Base85，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base85 編碼器",
+        description:
+          "將文字或檔案編碼為 Base85，用於資料傳輸、儲存和 Web 開發。",
+      },
+    },
+  },
+  {
     slug: "basic-auth-decoder",
     category: "web",
     icon: "lock",
@@ -9708,6 +9841,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "sm3-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sm3", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SM3 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SM3 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SM3-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SM3-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SM3 Hash Text or File",
+        description:
+          "Generate SM3 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SM3 de Texto o Archivo",
+        description:
+          "Genera hash SM3 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SM3 de Texte ou Fichier",
+        description:
+          "Générez un hash SM3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SM3 טקסט או קובץ",
+        description:
+          "צור האש SM3 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SM3 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SM3 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SM3 Teks atau File",
+        description:
+          "Buat hash SM3 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SM3 di Testo o File",
+        description:
+          "Genera hash SM3 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SM3 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSM3ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SM3 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SM3 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SM3 Teks atau Fail",
+        description:
+          "Jana hash SM3 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SM3-hash tekst of bestand",
+        description:
+          "Genereer SM3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SM3-hash tekst eller fil",
+        description:
+          "Generer SM3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SM3 tekstu lub pliku",
+        description:
+          "Generuj hash SM3 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SM3 de Texto ou Arquivo",
+        description:
+          "Gere hash SM3 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SM3-хеш текста или файла",
+        description:
+          "Генерируйте SM3-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SM3-hash text eller fil",
+        description:
+          "Generera SM3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SM3 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SM3 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SM3 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SM3 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SM3 văn bản hoặc tệp",
+        description:
+          "Tạo hash SM3 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SM3 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SM3 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SM3 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SM3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "sql-formatter-and-linter",
     category: "developer",
     icon: "braces",
@@ -11659,6 +11915,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "whirlpool-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "whirlpool",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Whirlpool للنص أو الملف",
+        description:
+          "إنشاء تجزئة Whirlpool لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "Whirlpool-Hash für Text oder Datei",
+        description:
+          "Generieren Sie Whirlpool-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "Whirlpool Hash Text or File",
+        description:
+          "Generate Whirlpool hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash Whirlpool de Texto o Archivo",
+        description:
+          "Genera hash Whirlpool para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash Whirlpool de Texte ou Fichier",
+        description:
+          "Générez un hash Whirlpool pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש Whirlpool טקסט או קובץ",
+        description:
+          "צור האש Whirlpool עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "Whirlpool हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Whirlpool हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Whirlpool Teks atau File",
+        description:
+          "Buat hash Whirlpool untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash Whirlpool di Testo o File",
+        description:
+          "Genera hash Whirlpool per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "Whirlpool ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのWhirlpoolハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "Whirlpool 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 Whirlpool 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash Whirlpool Teks atau Fail",
+        description:
+          "Jana hash Whirlpool untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "Whirlpool-hash tekst of bestand",
+        description:
+          "Genereer Whirlpool-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "Whirlpool-hash tekst eller fil",
+        description:
+          "Generer Whirlpool-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash Whirlpool tekstu lub pliku",
+        description:
+          "Generuj hash Whirlpool dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash Whirlpool de Texto ou Arquivo",
+        description:
+          "Gere hash Whirlpool para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "Whirlpool-хеш текста или файла",
+        description:
+          "Генерируйте Whirlpool-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "Whirlpool-hash text eller fil",
+        description:
+          "Generera Whirlpool-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช Whirlpool ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช Whirlpool สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "Whirlpool Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için Whirlpool hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash Whirlpool văn bản hoặc tệp",
+        description:
+          "Tạo hash Whirlpool cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "Whirlpool 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Whirlpool 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "Whirlpool 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
     slug: "xml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -11778,6 +12165,270 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "XML 轉 JSON 轉換器",
         description:
           "將 XML 轉為 JSON。貼上 XML 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh32",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH32) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH32 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 32 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH32)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH32-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 32-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH32) Hash Text or File",
+        description:
+          "Generate xxHash XXH32 hash for text input or file upload. Calculate fast 32-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH32) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH32 para entrada de texto o carga de archivo. Calcula sumas de verificación de 32 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH32) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH32 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 32 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH32) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH32 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 32-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH32) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH32 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 32-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH32) Teks atau File",
+        description:
+          "Buat hash xxHash XXH32 untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH32) di Testo o File",
+        description:
+          "Genera hash xxHash XXH32 per input di testo o caricamento file. Calcola checksum a 32 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH32) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH32ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速32ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH32) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH32 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 32비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH32) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH32 untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH32)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH32-hash voor tekstinvoer of bestandsupload. Bereken snelle 32-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH32)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH32-hash for tekstinndata eller filopplasting. Beregn raske 32-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH32) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH32 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 32-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH32) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH32 para entrada de texto ou upload de arquivo. Calcule checksums de 32 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH32)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH32-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 32-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH32)-hash text eller fil",
+        description:
+          "Generera xxHash XXH32-hash för textinmatning eller filuppladdning. Beräkna snabba 32-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH32) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH32 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 32-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH32) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH32 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 32-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH32) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH32 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 32-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH32) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH32 哈希值。计算快速 32 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH32) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH32 雜湊值。計算快速 32 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH64) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH64 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 64 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH64)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH64-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 64-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH64) Hash Text or File",
+        description:
+          "Generate xxHash XXH64 hash for text input or file upload. Calculate fast 64-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH64) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH64 para entrada de texto o carga de archivo. Calcula sumas de verificación de 64 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH64) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH64 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 64 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH64) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH64 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 64-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH64) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH64 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH64) Teks atau File",
+        description:
+          "Buat hash xxHash XXH64 untuk input teks atau upload file. Hitung checksum 64-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH64) di Testo o File",
+        description:
+          "Genera hash xxHash XXH64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH64) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH64ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速64ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH64) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH64 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 64비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH64) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH64 untuk input teks atau muat naik fail. Kira checksum 64-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH64)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH64)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH64-hash for tekstinndata eller filopplasting. Beregn raske 64-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH64) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH64) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH64 para entrada de texto ou upload de arquivo. Calcule checksums de 64 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH64)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH64-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 64-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH64)-hash text eller fil",
+        description:
+          "Generera xxHash XXH64-hash för textinmatning eller filuppladdning. Beräkna snabba 64-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH64) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH64 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 64-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH64) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH64) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH64) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH64 哈希值。计算快速 64 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH64) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH64 雜湊值。計算快速 64 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
       },
     },
   },
@@ -13302,6 +13953,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  "base85-encoder": {
+    slug: "base85-encoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base85",
+      "ascii85",
+      "z85",
+      "encoder",
+      "encoding",
+      "text",
+      "file",
+      "binary",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base85",
+        description:
+          "ترميز النص أو الملفات إلى Base85 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base85-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base85 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base85 Encoder",
+        description:
+          "Encode text or files to Base85 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto o archivos a Base85 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base85",
+        description:
+          "Encode du texte ou des fichiers en Base85 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base85",
+        description:
+          "מקודד טקסט או קבצים ל-Base85 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base85 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base85 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base85",
+        description:
+          "Encode teks atau file ke Base85 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base85",
+        description:
+          "Codifica testo o file in Base85 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base85 エンコーダー",
+        description:
+          "テキストやファイルをBase85にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base85 인코더",
+        description:
+          "텍스트나 파일을 Base85로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base85",
+        description:
+          "Kod teks atau fail ke Base85 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base85-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base85 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base85-koder",
+        description:
+          "Kod tekst eller filer til Base85 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base85",
+        description:
+          "Koduj tekst lub pliki do Base85 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto ou arquivos em Base85 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base85-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base85 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base85-kodare",
+        description:
+          "Koda text eller filer till Base85 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base85",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base85 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base85 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base85'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base85",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base85 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base85 编码器",
+        description:
+          "将文本或文件编码为 Base85，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base85 編碼器",
+        description:
+          "將文字或檔案編碼為 Base85，用於資料傳輸、儲存和 Web 開發。",
       },
     },
   },
@@ -21736,6 +22520,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "sm3-hash-text-or-file": {
+    slug: "sm3-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sm3", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SM3 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SM3 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SM3-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SM3-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SM3 Hash Text or File",
+        description:
+          "Generate SM3 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SM3 de Texto o Archivo",
+        description:
+          "Genera hash SM3 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SM3 de Texte ou Fichier",
+        description:
+          "Générez un hash SM3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SM3 טקסט או קובץ",
+        description:
+          "צור האש SM3 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SM3 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SM3 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SM3 Teks atau File",
+        description:
+          "Buat hash SM3 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SM3 di Testo o File",
+        description:
+          "Genera hash SM3 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SM3 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSM3ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SM3 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SM3 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SM3 Teks atau Fail",
+        description:
+          "Jana hash SM3 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SM3-hash tekst of bestand",
+        description:
+          "Genereer SM3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SM3-hash tekst eller fil",
+        description:
+          "Generer SM3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SM3 tekstu lub pliku",
+        description:
+          "Generuj hash SM3 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SM3 de Texto ou Arquivo",
+        description:
+          "Gere hash SM3 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SM3-хеш текста или файла",
+        description:
+          "Генерируйте SM3-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SM3-hash text eller fil",
+        description:
+          "Generera SM3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SM3 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SM3 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SM3 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SM3 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SM3 văn bản hoặc tệp",
+        description:
+          "Tạo hash SM3 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SM3 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SM3 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SM3 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SM3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "sql-formatter-and-linter": {
     slug: "sql-formatter-and-linter",
     category: "developer",
@@ -23687,6 +24594,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "whirlpool-hash-text-or-file": {
+    slug: "whirlpool-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "whirlpool",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Whirlpool للنص أو الملف",
+        description:
+          "إنشاء تجزئة Whirlpool لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "Whirlpool-Hash für Text oder Datei",
+        description:
+          "Generieren Sie Whirlpool-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "Whirlpool Hash Text or File",
+        description:
+          "Generate Whirlpool hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash Whirlpool de Texto o Archivo",
+        description:
+          "Genera hash Whirlpool para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash Whirlpool de Texte ou Fichier",
+        description:
+          "Générez un hash Whirlpool pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש Whirlpool טקסט או קובץ",
+        description:
+          "צור האש Whirlpool עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "Whirlpool हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Whirlpool हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Whirlpool Teks atau File",
+        description:
+          "Buat hash Whirlpool untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash Whirlpool di Testo o File",
+        description:
+          "Genera hash Whirlpool per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "Whirlpool ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのWhirlpoolハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "Whirlpool 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 Whirlpool 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash Whirlpool Teks atau Fail",
+        description:
+          "Jana hash Whirlpool untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "Whirlpool-hash tekst of bestand",
+        description:
+          "Genereer Whirlpool-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "Whirlpool-hash tekst eller fil",
+        description:
+          "Generer Whirlpool-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash Whirlpool tekstu lub pliku",
+        description:
+          "Generuj hash Whirlpool dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash Whirlpool de Texto ou Arquivo",
+        description:
+          "Gere hash Whirlpool para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "Whirlpool-хеш текста или файла",
+        description:
+          "Генерируйте Whirlpool-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "Whirlpool-hash text eller fil",
+        description:
+          "Generera Whirlpool-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช Whirlpool ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช Whirlpool สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "Whirlpool Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için Whirlpool hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash Whirlpool văn bản hoặc tệp",
+        description:
+          "Tạo hash Whirlpool cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "Whirlpool 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Whirlpool 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "Whirlpool 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
   "xml-to-json-converter": {
     slug: "xml-to-json-converter",
     category: "json",
@@ -23807,6 +24845,270 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "XML 轉 JSON 轉換器",
         description:
           "將 XML 轉為 JSON。貼上 XML 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  "xxhash-xxh32-hash-text-or-file": {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh32",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH32) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH32 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 32 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH32)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH32-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 32-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH32) Hash Text or File",
+        description:
+          "Generate xxHash XXH32 hash for text input or file upload. Calculate fast 32-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH32) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH32 para entrada de texto o carga de archivo. Calcula sumas de verificación de 32 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH32) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH32 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 32 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH32) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH32 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 32-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH32) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH32 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 32-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH32) Teks atau File",
+        description:
+          "Buat hash xxHash XXH32 untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH32) di Testo o File",
+        description:
+          "Genera hash xxHash XXH32 per input di testo o caricamento file. Calcola checksum a 32 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH32) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH32ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速32ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH32) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH32 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 32비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH32) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH32 untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH32)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH32-hash voor tekstinvoer of bestandsupload. Bereken snelle 32-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH32)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH32-hash for tekstinndata eller filopplasting. Beregn raske 32-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH32) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH32 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 32-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH32) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH32 para entrada de texto ou upload de arquivo. Calcule checksums de 32 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH32)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH32-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 32-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH32)-hash text eller fil",
+        description:
+          "Generera xxHash XXH32-hash för textinmatning eller filuppladdning. Beräkna snabba 32-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH32) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH32 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 32-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH32) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH32 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 32-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH32) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH32 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 32-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH32) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH32 哈希值。计算快速 32 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH32) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH32 雜湊值。計算快速 32 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  "xxhash-xxh64-hash-text-or-file": {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH64) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH64 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 64 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH64)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH64-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 64-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH64) Hash Text or File",
+        description:
+          "Generate xxHash XXH64 hash for text input or file upload. Calculate fast 64-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH64) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH64 para entrada de texto o carga de archivo. Calcula sumas de verificación de 64 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH64) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH64 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 64 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH64) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH64 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 64-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH64) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH64 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH64) Teks atau File",
+        description:
+          "Buat hash xxHash XXH64 untuk input teks atau upload file. Hitung checksum 64-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH64) di Testo o File",
+        description:
+          "Genera hash xxHash XXH64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH64) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH64ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速64ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH64) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH64 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 64비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH64) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH64 untuk input teks atau muat naik fail. Kira checksum 64-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH64)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH64)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH64-hash for tekstinndata eller filopplasting. Beregn raske 64-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH64) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH64) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH64 para entrada de texto ou upload de arquivo. Calcule checksums de 64 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH64)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH64-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 64-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH64)-hash text eller fil",
+        description:
+          "Generera xxHash XXH64-hash för textinmatning eller filuppladdning. Beräkna snabba 64-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH64) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH64 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 64-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH64) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH64) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH64) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH64 哈希值。计算快速 64 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH64) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH64 雜湊值。計算快速 64 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
       },
     },
   },
