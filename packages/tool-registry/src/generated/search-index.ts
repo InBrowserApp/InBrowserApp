@@ -6708,6 +6708,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "md4-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "md4", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة MD4 للنص أو الملف",
+        description:
+          "أنشئ تجزئات MD4 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "MD4-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie MD4-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "MD4 Hash Text or File",
+        description:
+          "Generate MD4 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash MD4 de Texto o Archivo",
+        description:
+          "Genera hashes MD4 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash MD4 de Texte ou Fichier",
+        description:
+          "Générez des hachages MD4 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש MD4 טקסט או קובץ",
+        description:
+          "צור ערכי MD4 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "MD4 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MD4 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash MD4 Teks atau File",
+        description:
+          "Buat hash MD4 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash MD4 di Testo o File",
+        description:
+          "Genera hash MD4 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "MD4 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに MD4 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "MD4 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 MD4 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash MD4 Teks atau Fail",
+        description:
+          "Jana hash MD4 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "MD4-hash tekst of bestand",
+        description:
+          "Genereer MD4-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "MD4-hash tekst eller fil",
+        description:
+          "Generer MD4-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash MD4 tekstu lub pliku",
+        description:
+          "Generuj hashe MD4 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash MD4 de Texto ou Arquivo",
+        description:
+          "Gere hashes MD4 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "MD4-хеш текста или файла",
+        description:
+          "Создавайте MD4-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "MD4-hash text eller fil",
+        description:
+          "Generera MD4-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช MD4 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MD4 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "MD4 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MD4 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash MD4 văn bản hoặc tệp",
+        description:
+          "Tạo hash MD4 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "MD4 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MD4 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "MD4 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MD4 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  {
     slug: "md5-hash-text-or-file",
     category: "crypto",
     icon: "lock",
