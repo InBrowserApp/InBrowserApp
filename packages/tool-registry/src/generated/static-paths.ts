@@ -4142,6 +4142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ip-range-to-cidr",
+    language: "ar",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "de",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "en",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "es",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "fr",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "he",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "hi",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "id",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "it",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "ja",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "ko",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "ms",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "nl",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "no",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "pl",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "pt",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "ru",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "sv",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "th",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "tr",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "vi",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-range-to-cidr",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },

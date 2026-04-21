@@ -1,0 +1,4 @@
+{
+  "name": "IP 範圍到 CIDR 轉換器",
+  "description": "將 IPv4 或 IPv6 起始位址和結束位址轉換為精確覆蓋範圍的最小 CIDR 區塊集。"
+}

@@ -5650,6 +5650,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ip-range-to-cidr",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "cidr", "network", "range", "ipv4", "ipv6", "subnet"],
+    locales: {
+      ar: {
+        name: "نطاق IP لتحويل CIDR",
+        description:
+          "قم بتحويل عناوين البداية والنهاية IPv4 أو IPv6 إلى الحد الأدنى من كتل CIDR التي تغطي النطاق بالضبط.",
+      },
+      de: {
+        name: "IP-Bereich-zu-CIDR-Konverter",
+        description:
+          "Konvertieren Sie IPv4- oder IPv6-Start- und Endadressen in den minimalen Satz von CIDR-Blöcken, der den Bereich genau abdeckt.",
+      },
+      en: {
+        name: "IP Range to CIDR Converter",
+        description:
+          "Convert IPv4 or IPv6 start and end addresses into the minimal set of CIDR blocks that exactly covers the range.",
+      },
+      es: {
+        name: "Convertidor de rango IP a CIDR",
+        description:
+          "Convierta las direcciones de inicio y finalización de IPv4 o IPv6 en el conjunto mínimo de bloques CIDR que cubra exactamente el rango.",
+      },
+      fr: {
+        description:
+          "Convertissez les adresses de début et de fin IPv4 ou IPv6 en un ensemble minimal de blocs CIDR qui couvrent exactement la plage.",
+        name: "Convertisseur de plage IP en CIDR",
+      },
+      he: {
+        name: "ממיר IP ל-CIDR",
+        description:
+          "המר כתובות התחלה וסיום IPv4 או IPv6 לקבוצה המינימלית של בלוקים CIDR המכסה בדיוק את הטווח.",
+      },
+      hi: {
+        name: "आईपी ​​रेंज से सीआईडीआर कनवर्टर",
+        description:
+          "IPv4 या IPv6 आरंभ और अंत पतों को CIDR ब्लॉक के न्यूनतम सेट में बदलें जो बिल्कुल सीमा को कवर करता है।",
+      },
+      id: {
+        name: "Rentang IP ke Konverter CIDR",
+        description:
+          "Ubah alamat awal dan akhir IPv4 atau IPv6 menjadi kumpulan blok CIDR minimal yang mencakup rentang tersebut secara tepat.",
+      },
+      it: {
+        name: "Convertitore da intervallo IP a CIDR",
+        description:
+          "Converti gli indirizzi iniziali e finali IPv4 o IPv6 nel set minimo di blocchi CIDR che copre esattamente l'intervallo.",
+      },
+      ja: {
+        name: "IP範囲からCIDRへのコンバータ",
+        description:
+          "IPv4 または IPv6 の開始アドレスと終了アドレスを、その範囲を正確にカバーする最小限の CIDR ブロックのセットに変換します。",
+      },
+      ko: {
+        description:
+          "IPv4 또는 IPv6 시작 및 끝 주소를 해당 범위를 정확하게 포함하는 최소 CIDR 블록 세트로 변환합니다.",
+        name: "IP 범위-CIDR 변환기",
+      },
+      ms: {
+        name: "Julat IP kepada Penukar CIDR",
+        description:
+          "Tukar alamat mula dan tamat IPv4 atau IPv6 ke dalam set minimum blok CIDR yang betul-betul meliputi julat.",
+      },
+      nl: {
+        name: "IP-bereik naar CIDR-converter",
+        description:
+          "Converteer IPv4- of IPv6-start- en eindadressen naar de minimale set CIDR-blokken die precies het bereik dekt.",
+      },
+      no: {
+        name: "IP Range til CIDR Converter",
+        description:
+          "Konverter IPv4- eller IPv6-start- og sluttadresser til det minimale settet med CIDR-blokker som nøyaktig dekker området.",
+      },
+      pl: {
+        name: "Konwerter zakresu IP na CIDR",
+        description:
+          "Konwertuj adresy początkowe i końcowe IPv4 lub IPv6 na minimalny zestaw bloków CIDR, który dokładnie pokrywa zakres.",
+      },
+      pt: {
+        description:
+          "Converta endereços iniciais e finais IPv4 ou IPv6 no conjunto mínimo de blocos CIDR que cobre exatamente o intervalo.",
+        name: "Conversor de intervalo IP para CIDR",
+      },
+      ru: {
+        name: "Конвертер диапазона IP в CIDR",
+        description:
+          "Преобразуйте начальные и конечные адреса IPv4 или IPv6 в минимальный набор блоков CIDR, который точно покрывает диапазон.",
+      },
+      sv: {
+        name: "IP-intervall till CIDR-omvandlare",
+        description:
+          "Konvertera IPv4- eller IPv6-start- och slutadresser till den minimala uppsättningen CIDR-block som exakt täcker intervallet.",
+      },
+      th: {
+        name: "ช่วง IP เป็น CIDR Converter",
+        description:
+          "แปลงที่อยู่เริ่มต้นและสิ้นสุดของ IPv4 หรือ IPv6 ให้เป็นชุดบล็อก CIDR ขั้นต่ำที่ครอบคลุมช่วงดังกล่าวทุกประการ",
+      },
+      tr: {
+        name: "IP Aralığından CIDR'ye Dönüştürücü",
+        description:
+          "IPv4 veya IPv6 başlangıç ​​ve bitiş adreslerini, aralığı tam olarak kapsayan minimum CIDR blokları kümesine dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi dải IP sang CIDR",
+        description:
+          "Chuyển đổi địa chỉ bắt đầu và kết thúc IPv4 hoặc IPv6 thành tập hợp khối CIDR tối thiểu bao phủ chính xác phạm vi.",
+      },
+      "zh-CN": {
+        description:
+          "将 IPv4 或 IPv6 起始地址和结束地址转换为精确覆盖范围的最小 CIDR 块集。",
+        name: "IP 范围到 CIDR 转换器",
+      },
+      "zh-TW": {
+        name: "IP 範圍到 CIDR 轉換器",
+        description:
+          "將 IPv4 或 IPv6 起始位址和結束位址轉換為精確覆蓋範圍的最小 CIDR 區塊集。",
+      },
+    },
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     category: "network",
     icon: "network",

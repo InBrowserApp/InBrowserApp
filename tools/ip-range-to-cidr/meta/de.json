@@ -1,0 +1,4 @@
+{
+  "name": "IP-Bereich-zu-CIDR-Konverter",
+  "description": "Konvertieren Sie IPv4- oder IPv6-Start- und Endadressen in den minimalen Satz von CIDR-Blöcken, der den Bereich genau abdeckt."
+}

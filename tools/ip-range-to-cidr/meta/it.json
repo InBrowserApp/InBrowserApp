@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da intervallo IP a CIDR",
+  "description": "Converti gli indirizzi iniziali e finali IPv4 o IPv6 nel set minimo di blocchi CIDR che copre esattamente l'intervallo."
+}
