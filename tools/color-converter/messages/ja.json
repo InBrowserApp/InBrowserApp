@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "色",
+  "resultsTitle": "結果",
+  "previewTitle": "プレビュー",
+  "enableAlphaLabel": "アルファを有効化",
+  "invalidColorMessage": "無効な色形式",
+  "copyValueLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "keywordLabel": "CSS キーワード",
+  "hexInfo": "16進数カラー表記、Web開発で最も一般的",
+  "rgbInfo": "赤、緑、青 - 画面表示用の加法混色モデル",
+  "hslInfo": "色相、彩度、明度 - 直感的な色調整",
+  "hsvInfo": "色相、彩度、明度 - HSBとも呼ばれ、カラーピッカーで一般的",
+  "hwbInfo": "色相、白さ、黒さ - CSS4形式、アルファ非対応",
+  "labInfo": "CIE LAB - 知覚的に均一な色空間、アルファ非対応",
+  "lchInfo": "明度、彩度、色相 - 円柱座標LAB、色相調整が容易、アルファ非対応",
+  "cmykInfo": "シアン、マゼンタ、イエロー、ブラック - 印刷標準、アルファ非対応",
+  "keywordInfo": "red、blue、coral などの CSS カラーネーム - 140以上の定義済み色、アルファ非対応"
+}

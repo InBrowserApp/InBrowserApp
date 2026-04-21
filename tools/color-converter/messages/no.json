@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Farger",
+  "resultsTitle": "Resultater",
+  "previewTitle": "Forhåndsvisning",
+  "enableAlphaLabel": "Aktiver Alpha",
+  "invalidColorMessage": "Ugyldig fargeformat",
+  "copyValueLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "keywordLabel": "CSS-nøkkelord",
+  "hexInfo": "Heksadesimal fargenotasjon, mest brukt i webutvikling",
+  "rgbInfo": "Rød, Grønn, Blå - additiv fargemodell for skjermer",
+  "hslInfo": "Fargetone, Metning, Lyshet - intuitive fargejusteringer",
+  "hsvInfo": "Fargetone, Metning, Verdi - også kjent som HSB, vanlig i fargevelgere",
+  "hwbInfo": "Fargetone, Hvithet, Svarthet - CSS4-format, ingen alfa",
+  "labInfo": "CIE LAB - perseptuelt ensartet fargerom, ingen alfa",
+  "lchInfo": "Lyshet, Kroma, Fargetone - sylindrisk LAB, enklere fargetonejustering, ingen alfa",
+  "cmykInfo": "Cyan, Magenta, Gul, Svart - trykkestandard, ingen alfa",
+  "keywordInfo": "CSS-fargenavn som red, blue, coral - 140+ forhåndsdefinerte farger, ingen alfa"
+}

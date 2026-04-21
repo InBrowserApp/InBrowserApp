@@ -2831,6 +2831,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "color-converter",
+    category: "web",
+    icon: "image",
+    tags: [
+      "color",
+      "converter",
+      "hex",
+      "rgb",
+      "hsl",
+      "hsv",
+      "hwb",
+      "lab",
+      "lch",
+      "cmyk",
+      "css",
+    ],
+    locales: {
+      ar: {
+        name: "محول الألوان",
+        description:
+          "تحويل الألوان بين تنسيقات HEX و RGB و HSL و HSV و HWB و LAB و LCH و CMYK والكلمات المفتاحية CSS. تحويل ثنائي الاتجاه في الوقت الفعلي مع دعم قناة ألفا.",
+      },
+      de: {
+        name: "Farbkonverter",
+        description:
+          "Konvertieren Sie Farben zwischen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-Formaten und CSS-Schlüsselwörtern. Echtzeit-Bidirektionalkonvertierung mit Alpha-Kanal-Unterstützung.",
+      },
+      en: {
+        name: "Color Converter",
+        description:
+          "Convert colors between HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK and CSS keywords. Real-time bidirectional conversion with alpha channel support.",
+      },
+      es: {
+        name: "Convertidor de Colores",
+        description:
+          "Convierte colores entre formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK y palabras clave CSS. Conversión bidireccional en tiempo real con soporte de canal alfa.",
+      },
+      fr: {
+        name: "Convertisseur de Couleurs",
+        description:
+          "Convertir les couleurs entre les formats HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK et mots-clés CSS. Conversion bidirectionnelle en temps réel avec support du canal alpha.",
+      },
+      he: {
+        name: "ממיר צבעים",
+        description:
+          "המר צבעים בין פורמטים HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ומילות מפתח CSS. המרה דו-כיוונית בזמן אמת עם תמיכה בערוץ אלפא.",
+      },
+      hi: {
+        name: "रंग कनवर्टर",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK और CSS कीवर्ड प्रारूपों के बीच रंग परिवर्तित करें। अल्फा चैनल समर्थन के साथ वास्तविक समय द्विदिशात्मक रूपांतरण।",
+      },
+      id: {
+        name: "Konverter Warna",
+        description:
+          "Konversi warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK, dan kata kunci CSS. Konversi dua arah waktu nyata dengan dukungan saluran alfa.",
+      },
+      it: {
+        name: "Convertitore di Colori",
+        description:
+          "Converti i colori tra i formati HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e parole chiave CSS. Conversione bidirezionale in tempo reale con supporto del canale alfa.",
+      },
+      ja: {
+        name: "カラーコンバーター",
+        description:
+          "HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK、CSSキーワード形式間で色を変換します。アルファチャンネルをサポートしたリアルタイム双方向変換。",
+      },
+      ko: {
+        name: "색상 변환기",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK 및 CSS 키워드 형식 간 색상을 변환합니다. 알파 채널을 지원하는 실시간 양방향 변환.",
+      },
+      ms: {
+        name: "Penukar Warna",
+        description:
+          "Tukar warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK dan kata kunci CSS. Penukaran dua hala masa nyata dengan sokongan saluran alfa.",
+      },
+      nl: {
+        name: "Kleurconverter",
+        description:
+          "Converteer kleuren tussen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formaten en CSS-sleutelwoorden. Realtime bidirectionele conversie met ondersteuning voor alfakanaal.",
+      },
+      no: {
+        name: "Fargekonverterer",
+        description:
+          "Konverter farger mellom HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formater og CSS-nøkkelord. Toveis konvertering i sanntid med støtte for alfakanal.",
+      },
+      pl: {
+        name: "Konwerter Kolorów",
+        description:
+          "Konwertuj kolory między formatami HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK i słowami kluczowymi CSS. Dwukierunkowa konwersja w czasie rzeczywistym z obsługą kanału alfa.",
+      },
+      pt: {
+        name: "Conversor de Cores",
+        description:
+          "Converta cores entre os formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e palavras-chave CSS. Conversão bidirecional em tempo real com suporte a canal alfa.",
+      },
+      ru: {
+        name: "Конвертер Цветов",
+        description:
+          "Преобразование цветов между форматами HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK и ключевыми словами CSS. Двунаправленное преобразование в реальном времени с поддержкой альфа-канала.",
+      },
+      sv: {
+        name: "Färgkonverterare",
+        description:
+          "Konvertera färger mellan HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-format och CSS-nyckelord. Realtids dubbelriktad konvertering med stöd för alfakanal.",
+      },
+      th: {
+        name: "ตัวแปลงสี",
+        description:
+          "แปลงสีระหว่างรูปแบบ HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK และคำสำคัญ CSS การแปลงแบบสองทิศทางในเวลาจริงพร้อมรองรับช่องอัลฟา",
+      },
+      tr: {
+        name: "Renk Dönüştürücü",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ve CSS anahtar kelimeleri formatları arasında renkleri dönüştürün. Alfa kanal desteği ile gerçek zamanlı çift yönlü dönüşüm.",
+      },
+      vi: {
+        name: "Trình Chuyển Đổi Màu",
+        description:
+          "Chuyển đổi màu giữa các định dạng HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK và từ khóa CSS. Chuyển đổi hai chiều thời gian thực với hỗ trợ kênh alpha.",
+      },
+      "zh-CN": {
+        name: "颜色转换器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 关键字格式之间转换颜色。支持 Alpha 通道的实时双向转换。",
+      },
+      "zh-TW": {
+        name: "顏色轉換器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 關鍵字格式之間轉換顏色。支援 Alpha 通道的即時雙向轉換。",
+      },
+    },
+  },
+  {
     slug: "credit-card-validator",
     category: "text",
     icon: "credit-card",
@@ -16510,6 +16645,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "顏色對比度檢查器",
         description:
           "檢查前景與背景顏色的 WCAG 對比度，包括一般與大字體的 AA/AAA 標準。",
+      },
+    },
+  },
+  "color-converter": {
+    slug: "color-converter",
+    category: "web",
+    icon: "image",
+    tags: [
+      "color",
+      "converter",
+      "hex",
+      "rgb",
+      "hsl",
+      "hsv",
+      "hwb",
+      "lab",
+      "lch",
+      "cmyk",
+      "css",
+    ],
+    locales: {
+      ar: {
+        name: "محول الألوان",
+        description:
+          "تحويل الألوان بين تنسيقات HEX و RGB و HSL و HSV و HWB و LAB و LCH و CMYK والكلمات المفتاحية CSS. تحويل ثنائي الاتجاه في الوقت الفعلي مع دعم قناة ألفا.",
+      },
+      de: {
+        name: "Farbkonverter",
+        description:
+          "Konvertieren Sie Farben zwischen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-Formaten und CSS-Schlüsselwörtern. Echtzeit-Bidirektionalkonvertierung mit Alpha-Kanal-Unterstützung.",
+      },
+      en: {
+        name: "Color Converter",
+        description:
+          "Convert colors between HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK and CSS keywords. Real-time bidirectional conversion with alpha channel support.",
+      },
+      es: {
+        name: "Convertidor de Colores",
+        description:
+          "Convierte colores entre formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK y palabras clave CSS. Conversión bidireccional en tiempo real con soporte de canal alfa.",
+      },
+      fr: {
+        name: "Convertisseur de Couleurs",
+        description:
+          "Convertir les couleurs entre les formats HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK et mots-clés CSS. Conversion bidirectionnelle en temps réel avec support du canal alpha.",
+      },
+      he: {
+        name: "ממיר צבעים",
+        description:
+          "המר צבעים בין פורמטים HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ומילות מפתח CSS. המרה דו-כיוונית בזמן אמת עם תמיכה בערוץ אלפא.",
+      },
+      hi: {
+        name: "रंग कनवर्टर",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK और CSS कीवर्ड प्रारूपों के बीच रंग परिवर्तित करें। अल्फा चैनल समर्थन के साथ वास्तविक समय द्विदिशात्मक रूपांतरण।",
+      },
+      id: {
+        name: "Konverter Warna",
+        description:
+          "Konversi warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK, dan kata kunci CSS. Konversi dua arah waktu nyata dengan dukungan saluran alfa.",
+      },
+      it: {
+        name: "Convertitore di Colori",
+        description:
+          "Converti i colori tra i formati HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e parole chiave CSS. Conversione bidirezionale in tempo reale con supporto del canale alfa.",
+      },
+      ja: {
+        name: "カラーコンバーター",
+        description:
+          "HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK、CSSキーワード形式間で色を変換します。アルファチャンネルをサポートしたリアルタイム双方向変換。",
+      },
+      ko: {
+        name: "색상 변환기",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK 및 CSS 키워드 형식 간 색상을 변환합니다. 알파 채널을 지원하는 실시간 양방향 변환.",
+      },
+      ms: {
+        name: "Penukar Warna",
+        description:
+          "Tukar warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK dan kata kunci CSS. Penukaran dua hala masa nyata dengan sokongan saluran alfa.",
+      },
+      nl: {
+        name: "Kleurconverter",
+        description:
+          "Converteer kleuren tussen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formaten en CSS-sleutelwoorden. Realtime bidirectionele conversie met ondersteuning voor alfakanaal.",
+      },
+      no: {
+        name: "Fargekonverterer",
+        description:
+          "Konverter farger mellom HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formater og CSS-nøkkelord. Toveis konvertering i sanntid med støtte for alfakanal.",
+      },
+      pl: {
+        name: "Konwerter Kolorów",
+        description:
+          "Konwertuj kolory między formatami HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK i słowami kluczowymi CSS. Dwukierunkowa konwersja w czasie rzeczywistym z obsługą kanału alfa.",
+      },
+      pt: {
+        name: "Conversor de Cores",
+        description:
+          "Converta cores entre os formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e palavras-chave CSS. Conversão bidirecional em tempo real com suporte a canal alfa.",
+      },
+      ru: {
+        name: "Конвертер Цветов",
+        description:
+          "Преобразование цветов между форматами HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK и ключевыми словами CSS. Двунаправленное преобразование в реальном времени с поддержкой альфа-канала.",
+      },
+      sv: {
+        name: "Färgkonverterare",
+        description:
+          "Konvertera färger mellan HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-format och CSS-nyckelord. Realtids dubbelriktad konvertering med stöd för alfakanal.",
+      },
+      th: {
+        name: "ตัวแปลงสี",
+        description:
+          "แปลงสีระหว่างรูปแบบ HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK และคำสำคัญ CSS การแปลงแบบสองทิศทางในเวลาจริงพร้อมรองรับช่องอัลฟา",
+      },
+      tr: {
+        name: "Renk Dönüştürücü",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ve CSS anahtar kelimeleri formatları arasında renkleri dönüştürün. Alfa kanal desteği ile gerçek zamanlı çift yönlü dönüşüm.",
+      },
+      vi: {
+        name: "Trình Chuyển Đổi Màu",
+        description:
+          "Chuyển đổi màu giữa các định dạng HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK và từ khóa CSS. Chuyển đổi hai chiều thời gian thực với hỗ trợ kênh alpha.",
+      },
+      "zh-CN": {
+        name: "颜色转换器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 关键字格式之间转换颜色。支持 Alpha 通道的实时双向转换。",
+      },
+      "zh-TW": {
+        name: "顏色轉換器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 關鍵字格式之間轉換顏色。支援 Alpha 通道的即時雙向轉換。",
       },
     },
   },

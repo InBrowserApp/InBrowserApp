@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Warna",
+  "resultsTitle": "Hasil",
+  "previewTitle": "Pratinjau",
+  "enableAlphaLabel": "Aktifkan Alpha",
+  "invalidColorMessage": "Format warna tidak valid",
+  "copyValueLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "keywordLabel": "Kata kunci CSS",
+  "hexInfo": "Notasi warna heksadesimal, paling umum dalam pengembangan web",
+  "rgbInfo": "Merah, Hijau, Biru - model warna aditif untuk layar",
+  "hslInfo": "Hue, Saturasi, Kecerahan - penyesuaian warna intuitif",
+  "hsvInfo": "Hue, Saturasi, Value - juga dikenal sebagai HSB, umum di pemilih warna",
+  "hwbInfo": "Hue, Putih, Hitam - format CSS4, tanpa alfa",
+  "labInfo": "CIE LAB - ruang warna seragam perseptual, tanpa alfa",
+  "lchInfo": "Kecerahan, Kroma, Hue - LAB silinder, penyesuaian hue lebih mudah, tanpa alfa",
+  "cmykInfo": "Sian, Magenta, Kuning, Hitam - standar cetak, tanpa alfa",
+  "keywordInfo": "Nama warna CSS seperti red, blue, coral - 140+ warna terdefinisi, tanpa alfa"
+}

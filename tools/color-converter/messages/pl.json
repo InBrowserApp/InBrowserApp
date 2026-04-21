@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Kolory",
+  "resultsTitle": "Wyniki",
+  "previewTitle": "Podgląd",
+  "enableAlphaLabel": "Włącz kanał alfa",
+  "invalidColorMessage": "Nieprawidłowy format koloru",
+  "copyValueLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "keywordLabel": "Słowo kluczowe CSS",
+  "hexInfo": "Zapis szesnastkowy koloru, najczęściej używany w web developmencie",
+  "rgbInfo": "Czerwony, Zielony, Niebieski - addytywny model kolorów dla ekranów",
+  "hslInfo": "Barwa, Nasycenie, Jasność - intuicyjne dostosowanie kolorów",
+  "hsvInfo": "Barwa, Nasycenie, Wartość - znany też jako HSB, popularny w próbnikach kolorów",
+  "hwbInfo": "Barwa, Białość, Czarność - format CSS4, bez alfa",
+  "labInfo": "CIE LAB - percepcyjnie jednolita przestrzeń kolorów, bez alfa",
+  "lchInfo": "Jasność, Chroma, Barwa - cylindryczny LAB, łatwiejsze dostosowanie barwy, bez alfa",
+  "cmykInfo": "Cyjan, Magenta, Żółty, Czarny - standard druku, bez alfa",
+  "keywordInfo": "Nazwy kolorów CSS jak red, blue, coral - 140+ predefiniowanych kolorów, bez alfa"
+}

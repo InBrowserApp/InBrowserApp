@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "顏色",
+  "resultsTitle": "結果",
+  "previewTitle": "預覽",
+  "enableAlphaLabel": "啟用透明度",
+  "invalidColorMessage": "顏色格式無效",
+  "copyValueLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "keywordLabel": "CSS 關鍵字",
+  "hexInfo": "十六進制顏色表示法，網頁開發最常用",
+  "rgbInfo": "紅、綠、藍三原色模型，螢幕顯示標準",
+  "hslInfo": "色相、飽和度、亮度 - 更直觀的顏色調整",
+  "hsvInfo": "色相、飽和度、明度 - 也稱 HSB，常用於取色器",
+  "hwbInfo": "色相、白度、黑度 - CSS4 顏色格式，不支援透明度",
+  "labInfo": "CIE LAB - 感知均勻色彩空間，不支援透明度",
+  "lchInfo": "明度、色度、色相 - LAB 的圓柱坐標形式，更易調整色相，不支援透明度",
+  "cmykInfo": "青、洋紅、黃、黑 - 印刷標準，不支援透明度",
+  "keywordInfo": "CSS 命名顏色如 red、blue、coral - 140+ 預定義顏色，不支援透明度"
+}

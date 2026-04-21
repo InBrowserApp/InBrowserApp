@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Farben",
+  "resultsTitle": "Ergebnisse",
+  "previewTitle": "Vorschau",
+  "enableAlphaLabel": "Alpha aktivieren",
+  "invalidColorMessage": "Ungültiges Farbformat",
+  "copyValueLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "keywordLabel": "CSS-Schlüsselwort",
+  "hexInfo": "Hexadezimale Farbnotation, am häufigsten in der Webentwicklung",
+  "rgbInfo": "Rot, Grün, Blau - additives Farbmodell für Bildschirme",
+  "hslInfo": "Farbton, Sättigung, Helligkeit - intuitive Farbanpassungen",
+  "hsvInfo": "Farbton, Sättigung, Hellwert - auch HSB genannt, üblich in Farbwählern",
+  "hwbInfo": "Farbton, Weißanteil, Schwarzanteil - CSS4-Format, ohne Alpha",
+  "labInfo": "CIE LAB - wahrnehmungsgleichmäßiger Farbraum, ohne Alpha",
+  "lchInfo": "Helligkeit, Chroma, Farbton - zylindrisches LAB, einfachere Farbtöne, ohne Alpha",
+  "cmykInfo": "Cyan, Magenta, Gelb, Schwarz - Druckstandard, ohne Alpha",
+  "keywordInfo": "CSS-Farbnamen wie red, blue, coral - 140+ vordefinierte Farben, ohne Alpha"
+}

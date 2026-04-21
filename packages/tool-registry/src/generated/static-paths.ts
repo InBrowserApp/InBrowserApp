@@ -2026,6 +2026,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "color-converter",
+    language: "ar",
+  },
+  {
+    slug: "color-converter",
+    language: "de",
+  },
+  {
+    slug: "color-converter",
+    language: "en",
+  },
+  {
+    slug: "color-converter",
+    language: "es",
+  },
+  {
+    slug: "color-converter",
+    language: "fr",
+  },
+  {
+    slug: "color-converter",
+    language: "he",
+  },
+  {
+    slug: "color-converter",
+    language: "hi",
+  },
+  {
+    slug: "color-converter",
+    language: "id",
+  },
+  {
+    slug: "color-converter",
+    language: "it",
+  },
+  {
+    slug: "color-converter",
+    language: "ja",
+  },
+  {
+    slug: "color-converter",
+    language: "ko",
+  },
+  {
+    slug: "color-converter",
+    language: "ms",
+  },
+  {
+    slug: "color-converter",
+    language: "nl",
+  },
+  {
+    slug: "color-converter",
+    language: "no",
+  },
+  {
+    slug: "color-converter",
+    language: "pl",
+  },
+  {
+    slug: "color-converter",
+    language: "pt",
+  },
+  {
+    slug: "color-converter",
+    language: "ru",
+  },
+  {
+    slug: "color-converter",
+    language: "sv",
+  },
+  {
+    slug: "color-converter",
+    language: "th",
+  },
+  {
+    slug: "color-converter",
+    language: "tr",
+  },
+  {
+    slug: "color-converter",
+    language: "vi",
+  },
+  {
+    slug: "color-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },

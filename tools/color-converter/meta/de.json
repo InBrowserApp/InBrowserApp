@@ -1,0 +1,4 @@
+{
+  "name": "Farbkonverter",
+  "description": "Konvertieren Sie Farben zwischen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-Formaten und CSS-Schlüsselwörtern. Echtzeit-Bidirektionalkonvertierung mit Alpha-Kanal-Unterstützung."
+}
