@@ -137,6 +137,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
+  "xxhash-xxh3-64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh3-64-hash-text-or-file/page"),
   "xxhash-xxh32-hash-text-or-file": () =>
     import("@tool/xxhash-xxh32-hash-text-or-file/page"),
   "xxhash-xxh64-hash-text-or-file": () =>
