@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## xxHash (XXH3 128)란?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3는 매우 높은 속도와 우수한 분포 특성을 목표로 설계된 현대적인 xxHash 알고리즘입니다. XXH3 128은 128비트(16바이트) 해시 값을 출력하며, 보통 32자의 16진수 문자열로 표시됩니다. 이는 비암호화 해시이며, 재현 가능한 해시 계산을 위해 선택적 시드도 지원합니다.
 
-**Key characteristics:**
+**주요 특징:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **매우 빠름**: 큰 입력에서도 높은 성능을 내도록 최적화됨
+- **결정적**: 같은 입력과 같은 시드는 항상 같은 해시를 생성함
+- **비암호화**: 보안 목적에는 적합하지 않음
+- **좋은 분포**: 해시 테이블과 인덱싱에 유용함
+- **시드 지원**: 선택적 시드로 해시 출력을 구분할 수 있음
 
-**Common uses:**
+**일반적인 용도:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- 해시 테이블과 데이터 구조
+- 파일 무결성 검사(비보안 목적)
+- 데이터 중복 제거와 청킹
+- 캐시 키와 데이터베이스 인덱싱
+- 고처리량 데이터 파이프라인

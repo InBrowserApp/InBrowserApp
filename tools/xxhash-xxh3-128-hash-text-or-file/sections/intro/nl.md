@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## Wat is xxHash (XXH3 128)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 is het moderne xxHash-algoritme, ontworpen voor zeer hoge snelheid en uitstekende verdeling. XXH3 128 levert een 128-bits hashwaarde (16 bytes), meestal weergegeven als een hexadecimale tekenreeks van 32 tekens. Het is een niet-cryptografische hash en ondersteunt een optionele seed voor reproduceerbare hashing.
 
-**Key characteristics:**
+**Belangrijkste kenmerken:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Extreem snel**: Geoptimaliseerd voor hoge prestaties bij grote invoer
+- **Deterministisch**: Dezelfde invoer en seed leveren altijd dezelfde hash op
+- **Niet-cryptografisch**: Niet geschikt voor beveiligingsdoeleinden
+- **Goede verdeling**: Handig voor hashtabellen en indexering
+- **Met seed**: Een optionele seed helpt hash-uitvoer te variëren
 
-**Common uses:**
+**Veelvoorkomende toepassingen:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Hashtabellen en datastructuren
+- Bestandsintegriteitscontroles (niet voor beveiliging)
+- Deduplicatie en chunking van data
+- Cachesleutels en database-indexering
+- Data-pipelines met hoge doorvoer

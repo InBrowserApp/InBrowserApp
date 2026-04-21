@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## ما هو xxHash (XXH3 128)؟
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+يُعد XXH3 الإصدار الحديث من خوارزمية xxHash، وقد صُمم لتحقيق سرعة عالية جدًا وتوزيع ممتاز للقيم. يُنتج XXH3 128 قيمة تجزئة بطول 128 بت (16 بايت)، وتُعرض عادةً كسلسلة سداسية عشرية من 32 حرفًا. وهو تجزئة غير مشفرة ويدعم بذرة اختيارية للحصول على نتائج قابلة لإعادة الإنتاج.
 
-**Key characteristics:**
+**الخصائص الرئيسية:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **سريع جدًا**: مُحسّن للأداء مع المدخلات الكبيرة
+- **حتمي**: الإدخال نفسه مع البذرة نفسها ينتج دائمًا التجزئة نفسها
+- **غير مشفر**: غير مناسب للأغراض الأمنية
+- **توزيع جيد**: مفيد لجداول التجزئة والفهرسة
+- **يدعم البذرة**: البذرة الاختيارية تساعد على تنويع نواتج التجزئة
 
-**Common uses:**
+**الاستخدامات الشائعة:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- جداول التجزئة وهياكل البيانات
+- التحقق من سلامة الملفات (لغير الأغراض الأمنية)
+- إزالة التكرار وتقسيم البيانات إلى أجزاء
+- مفاتيح التخزين المؤقت وفهرسة قواعد البيانات
+- خطوط معالجة البيانات عالية الإنتاجية

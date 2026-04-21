@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## Что такое xxHash (XXH3 128)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 — это современный алгоритм xxHash, рассчитанный на очень высокую скорость и отличное распределение значений. XXH3 128 выдаёт 128-битное (16-байтовое) хэш-значение, которое обычно отображается как 32-символьная шестнадцатеричная строка. Это некриптографический хэш, который также поддерживает необязательное зерно для воспроизводимых результатов.
 
-**Key characteristics:**
+**Основные характеристики:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Очень быстрый**: Оптимизирован для высокой производительности на больших входных данных
+- **Детерминированный**: Одни и те же входные данные и зерно всегда дают одинаковый хэш
+- **Некриптографический**: Не подходит для задач безопасности
+- **Хорошее распределение**: Полезен для хэш-таблиц и индексирования
+- **С поддержкой зерна**: Необязательное зерно помогает различать результаты хэширования
 
-**Common uses:**
+**Типичные применения:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Хэш-таблицы и структуры данных
+- Проверка целостности файлов (не для безопасности)
+- Дедупликация данных и разбиение на чанки
+- Ключи кэша и индексирование баз данных
+- Высокопроизводительные конвейеры обработки данных

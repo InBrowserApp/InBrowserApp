@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## xxHash (XXH3 128) nedir?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3, çok yüksek hız ve mükemmel dağılım için tasarlanmış modern xxHash algoritmasıdır. XXH3 128, genellikle 32 karakterlik onaltılık bir dize olarak gösterilen 128 bitlik (16 bayt) bir hash değeri üretir. Kriptografik olmayan bir hash türüdür ve tekrarlanabilir sonuçlar için isteğe bağlı seed desteği sunar.
 
-**Key characteristics:**
+**Başlıca özellikler:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Son derece hızlı**: Büyük girdilerde yüksek performans için optimize edilmiştir
+- **Deterministik**: Aynı girdi ve aynı seed her zaman aynı hash’i üretir
+- **Kriptografik değildir**: Güvenlik amaçları için uygun değildir
+- **İyi dağılım**: Hash tabloları ve indeksleme için kullanışlıdır
+- **Seed desteği**: İsteğe bağlı seed, hash çıktılarının çeşitlenmesine yardımcı olur
 
-**Common uses:**
+**Yaygın kullanım alanları:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Hash tabloları ve veri yapıları
+- Dosya bütünlüğü kontrolleri (güvenlik dışı)
+- Veri tekilleştirme ve parçalara ayırma
+- Önbellek anahtarları ve veritabanı indeksleme
+- Yüksek aktarım hacimli veri hatları

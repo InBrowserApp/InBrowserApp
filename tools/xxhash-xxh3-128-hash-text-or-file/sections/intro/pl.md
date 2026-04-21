@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## Czym jest xxHash (XXH3 128)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 to nowoczesny algorytm xxHash zaprojektowany z myślą o bardzo wysokiej szybkości i świetnym rozkładzie wartości. XXH3 128 generuje 128-bitową (16-bajtową) wartość skrótu, zwykle prezentowaną jako 32-znakowy ciąg szesnastkowy. Jest to skrót niekryptograficzny i obsługuje opcjonalne ziarno, aby uzyskać powtarzalne wyniki.
 
-**Key characteristics:**
+**Najważniejsze cechy:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Bardzo szybki**: Zoptymalizowany pod kątem wydajności przy dużych danych wejściowych
+- **Deterministyczny**: To samo wejście i to samo ziarno zawsze dają ten sam skrót
+- **Niekryptograficzny**: Nie nadaje się do celów bezpieczeństwa
+- **Dobry rozkład**: Przydatny w tablicach haszujących i indeksowaniu
+- **Obsługa ziarna**: Opcjonalne ziarno pomaga różnicować wyniki skrótu
 
-**Common uses:**
+**Typowe zastosowania:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Tablice haszujące i struktury danych
+- Sprawdzanie integralności plików (bez zastosowań bezpieczeństwa)
+- Deduplikacja danych i chunking
+- Klucze cache oraz indeksowanie baz danych
+- Potoki danych o wysokiej przepustowości

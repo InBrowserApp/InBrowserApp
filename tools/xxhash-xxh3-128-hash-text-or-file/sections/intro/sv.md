@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 128)?
+## Vad är xxHash (XXH3 128)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 128 outputs a 128-bit (16-byte) hash value, typically rendered as a 32-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 är den moderna xxHash-algoritmen, utvecklad för mycket hög hastighet och mycket bra distribution. XXH3 128 ger ett 128-bitars hashvärde (16 byte), som vanligtvis visas som en 32 tecken lång hexadecimal sträng. Det är en icke-kryptografisk hash och stöder även valfri seed för reproducerbar hashning.
 
-**Key characteristics:**
+**Viktiga egenskaper:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Extremt snabb**: Optimerad för hög prestanda på stora indata
+- **Deterministisk**: Samma indata och samma seed ger alltid samma hash
+- **Icke-kryptografisk**: Inte lämplig för säkerhetsändamål
+- **Bra distribution**: Användbar för hashtabeller och indexering
+- **Med seed**: Valfri seed hjälper till att variera hashutdata
 
-**Common uses:**
+**Vanliga användningsområden:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Hashtabeller och datastrukturer
+- Integritetskontroller av filer (ej säkerhet)
+- Deduplikering och chunking av data
+- Cache-nycklar och databasindexering
+- Datapipelines med hög genomströmning
