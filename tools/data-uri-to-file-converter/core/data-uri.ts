@@ -178,12 +178,7 @@ function decodePercentEncodedBytes(value: string) {
       continue
     }
 
-    const codePoint = value.codePointAt(index)
-
-    if (codePoint === undefined) {
-      break
-    }
-
+    const codePoint = value.codePointAt(index)!
     const chunk = String.fromCodePoint(codePoint)
     bytes.push(...encoder.encode(chunk))
     index += chunk.length

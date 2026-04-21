@@ -75,6 +75,11 @@ describe("decodeDataUri", () => {
     const parsed = parseDataUri("data:text/plain;base64,SGV s\nbG8=")
     expect(new TextDecoder().decode(decodeDataUri(parsed))).toBe("Hello")
   })
+
+  test("throws for invalid percent-encoded bytes", () => {
+    const parsed = parseDataUri("data:text/plain,%GG")
+    expect(() => decodeDataUri(parsed)).toThrow("Invalid percent-encoding")
+  })
 })
 
 describe("getPreviewKind", () => {
@@ -124,6 +129,32 @@ describe("parseDataUriPreview", () => {
     }
 
     expect(preview.textPreview).toBe("é")
+  })
+
+  test("falls back to utf-8 when the declared charset is unsupported", () => {
+    const preview = parseDataUriPreview(
+      "data:text/plain;charset=definitely-not-real,%C3%A9"
+    )
+
+    expect(preview.state).toBe("decoded")
+    if (preview.state !== "decoded") {
+      throw new Error("Expected decoded preview")
+    }
+
+    expect(preview.textPreview).toBe("é")
+  })
+
+  test("skips non-charset parameters and ignores empty charset values", () => {
+    const preview = parseDataUriPreview(
+      'data:text/plain;foo=bar;charset="",Hello%20world'
+    )
+
+    expect(preview.state).toBe("decoded")
+    if (preview.state !== "decoded") {
+      throw new Error("Expected decoded preview")
+    }
+
+    expect(preview.textPreview).toBe("Hello world")
   })
 })
 
