@@ -83,7 +83,7 @@ function convertGroup(group: string, digits: string[]): string {
       result += digits[0]
     }
 
-    result += digits[digit] + SMALL_UNITS[unitIndex]
+    result += digits[digit]! + SMALL_UNITS[unitIndex]!
     zeroPending = false
   }
 
