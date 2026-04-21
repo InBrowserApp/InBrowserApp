@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest"
+import { describe, expect, test, vi } from "vitest"
 
 import {
   isValidBase62,
@@ -6,10 +6,13 @@ import {
   isValidForBase,
   normalizeBase,
   parseBase,
+  parseBase32,
+  parseBase36,
   parseBase62,
   parseBase64Number,
   parseDecimal,
   parseHex,
+  parseOctal,
   toBase,
   toBase62,
   toBase64Number,
@@ -45,12 +48,35 @@ describe("number base helpers", () => {
     expect(toBase64Number(255n)).toBe("D/")
   })
 
+  test("covers wrapper parsers for octal, base32, and base36", () => {
+    expect(parseOctal("377")).toBe(255n)
+    expect(parseBase32("100")).toBe(1024n)
+    expect(parseBase36("zz")).toBe(1295n)
+  })
+
   test("rejects invalid characters and out-of-range bases", () => {
+    expect(isValidForBase("", 2)).toBe(true)
     expect(isValidForBase("2", 2)).toBe(false)
     expect(isValidForBase("abc", 1)).toBe(false)
     expect(isValidForBase("abc", 65)).toBe(false)
     expect(parseBase("1Z", 16)).toBe(null)
     expect(toBase(5n, 65)).toBe("")
+  })
+
+  test("returns null when bigint construction throws", () => {
+    const originalBigInt = globalThis.BigInt
+
+    vi.stubGlobal("BigInt", ((value: bigint | boolean | number | string) => {
+      if (value === 10) {
+        throw new Error("boom")
+      }
+
+      return originalBigInt(value)
+    }) as typeof BigInt)
+
+    expect(parseBase("1", 10)).toBe(null)
+
+    vi.unstubAllGlobals()
   })
 
   test("round-trips custom bases and zero", () => {

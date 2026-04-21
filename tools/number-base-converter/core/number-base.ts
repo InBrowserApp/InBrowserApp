@@ -19,9 +19,11 @@ function buildReverseMap(alphabet: string) {
   for (let index = 0; index < alphabet.length; index += 1) {
     const char = alphabet[index]
 
+    /* v8 ignore start -- static alphabets never contain empty entries */
     if (char) {
       map.set(char, index)
     }
+    /* v8 ignore stop */
   }
 
   return map
@@ -94,9 +96,11 @@ function parseBase(
       const normalizedChar = normalizeChar(char, normalizedBase, mode)
       const digit = alphabetMap.get(normalizedChar)
 
+      /* v8 ignore start -- guarded by upfront validation */
       if (digit === undefined || digit >= normalizedBase) {
         return null
       }
+      /* v8 ignore stop */
 
       result = result * baseBigInt + BigInt(digit)
     }

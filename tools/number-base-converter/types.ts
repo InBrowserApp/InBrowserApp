@@ -1,3 +1,4 @@
+/* v8 ignore file -- type-only definitions */
 type NumberBaseConverterMessagesCatalog = Readonly<{
   standardBasesTitle: string
   standardBasesDescription: string
