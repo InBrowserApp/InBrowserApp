@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "presetsTitle": "Vanliga förinställningar",
+  "executablePresetLabel": "Körbar",
+  "readOnlyPresetLabel": "Skrivskyddad",
+  "fullAccessPresetLabel": "Full åtkomst",
+  "ownerOnlyPresetLabel": "Endast ägare",
+  "privateFilePresetLabel": "Privat fil",
+  "sharedDirPresetLabel": "Delad katalog",
+  "numericPermissionLabel": "Numerisk behörighet",
+  "numericPermissionPlaceholder": "t.ex. 755",
+  "symbolicPermissionLabel": "Symbolisk behörighet",
+  "symbolicPermissionPlaceholder": "t.ex. rwxr-xr-x",
+  "permissionMatrixLabel": "Behörighetsmatris",
+  "readLabel": "Läsa",
+  "writeLabel": "Skriva",
+  "executeLabel": "Köra",
+  "ownerLabel": "Ägare",
+  "groupLabel": "Grupp",
+  "othersLabel": "Andra",
+  "chmodCommandLabel": "Chmod-kommando"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Chmod",
+  "description": "Konversi izin file Unix antara notasi numerik (755) dan simbolik (rwxr-xr-x)"
+}

@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "presetsTitle": "일반 프리셋",
+  "executablePresetLabel": "실행 가능",
+  "readOnlyPresetLabel": "읽기 전용",
+  "fullAccessPresetLabel": "전체 액세스",
+  "ownerOnlyPresetLabel": "소유자만",
+  "privateFilePresetLabel": "비공개 파일",
+  "sharedDirPresetLabel": "공유 디렉토리",
+  "numericPermissionLabel": "숫자 권한",
+  "numericPermissionPlaceholder": "예: 755",
+  "symbolicPermissionLabel": "기호 권한",
+  "symbolicPermissionPlaceholder": "예: rwxr-xr-x",
+  "permissionMatrixLabel": "권한 매트릭스",
+  "readLabel": "읽기",
+  "writeLabel": "쓰기",
+  "executeLabel": "실행",
+  "ownerLabel": "소유자",
+  "groupLabel": "그룹",
+  "othersLabel": "기타",
+  "chmodCommandLabel": "Chmod 명령어"
+}

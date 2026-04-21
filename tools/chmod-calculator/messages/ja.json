@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "presetsTitle": "一般的なプリセット",
+  "executablePresetLabel": "実行可能",
+  "readOnlyPresetLabel": "読み取り専用",
+  "fullAccessPresetLabel": "フルアクセス",
+  "ownerOnlyPresetLabel": "所有者のみ",
+  "privateFilePresetLabel": "プライベートファイル",
+  "sharedDirPresetLabel": "共有ディレクトリ",
+  "numericPermissionLabel": "数値パーミッション",
+  "numericPermissionPlaceholder": "例: 755",
+  "symbolicPermissionLabel": "シンボリックパーミッション",
+  "symbolicPermissionPlaceholder": "例: rwxr-xr-x",
+  "permissionMatrixLabel": "パーミッションマトリックス",
+  "readLabel": "読み取り",
+  "writeLabel": "書き込み",
+  "executeLabel": "実行",
+  "ownerLabel": "所有者",
+  "groupLabel": "グループ",
+  "othersLabel": "その他",
+  "chmodCommandLabel": "Chmod コマンド"
+}

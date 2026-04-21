@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "presetsTitle": "常用預設",
+  "executablePresetLabel": "可執行檔",
+  "readOnlyPresetLabel": "唯讀檔案",
+  "fullAccessPresetLabel": "完全存取",
+  "ownerOnlyPresetLabel": "僅擁有者",
+  "privateFilePresetLabel": "私有檔案",
+  "sharedDirPresetLabel": "共享目錄",
+  "numericPermissionLabel": "數字權限",
+  "numericPermissionPlaceholder": "例如 755",
+  "symbolicPermissionLabel": "符號權限",
+  "symbolicPermissionPlaceholder": "例如 rwxr-xr-x",
+  "permissionMatrixLabel": "權限矩陣",
+  "readLabel": "讀取",
+  "writeLabel": "寫入",
+  "executeLabel": "執行",
+  "ownerLabel": "擁有者",
+  "groupLabel": "群組",
+  "othersLabel": "其他使用者",
+  "chmodCommandLabel": "Chmod 指令"
+}

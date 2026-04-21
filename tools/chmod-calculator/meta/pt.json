@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora Chmod",
+  "description": "Calcular permissões de arquivos Unix entre notação numérica (755) e simbólica (rwxr-xr-x)"
+}

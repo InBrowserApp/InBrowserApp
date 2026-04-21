@@ -1,0 +1,4 @@
+{
+  "name": "Chmod-kalkulator",
+  "description": "Konverter Unix-filtillatelser mellom numerisk (755) og symbolsk (rwxr-xr-x) notasjon"
+}

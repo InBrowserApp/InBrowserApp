@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Chmod",
+  "description": "Tukar kebenaran fail Unix antara notasi angka (755) dan simbolik (rwxr-xr-x)"
+}

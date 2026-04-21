@@ -1750,6 +1750,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chmod-calculator",
+    language: "ar",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "de",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "en",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "es",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "fr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "he",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "hi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "id",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "it",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ja",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ko",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ms",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "nl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "no",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pt",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ru",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "sv",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "th",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "tr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "vi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },
