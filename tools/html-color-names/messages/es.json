@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Buscar por nombre de color o valor HEX...",
+  "all": "Todos",
+  "red": "Rojo",
+  "orange": "Naranja",
+  "yellow": "Amarillo",
+  "green": "Verde",
+  "cyan": "Cian",
+  "blue": "Azul",
+  "purple": "Púrpura",
+  "pink": "Rosa",
+  "brown": "Marrón",
+  "gray": "Gris",
+  "white": "Blanco",
+  "swatch": "Color",
+  "name": "Nombre",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "noResults": "No hay colores que coincidan con tu búsqueda."
+}

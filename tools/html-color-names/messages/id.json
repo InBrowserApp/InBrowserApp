@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Cari berdasarkan nama warna atau nilai HEX...",
+  "all": "Semua",
+  "red": "Merah",
+  "orange": "Oranye",
+  "yellow": "Kuning",
+  "green": "Hijau",
+  "cyan": "Sian",
+  "blue": "Biru",
+  "purple": "Ungu",
+  "pink": "Merah muda",
+  "brown": "Cokelat",
+  "gray": "Abu-abu",
+  "white": "Putih",
+  "swatch": "Warna",
+  "name": "Nama",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "noResults": "Tidak ada warna yang cocok dengan pencarian Anda."
+}

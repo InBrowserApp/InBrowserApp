@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "按颜色名称或十六进制值搜索...",
+  "all": "全部",
+  "red": "红色",
+  "orange": "橙色",
+  "yellow": "黄色",
+  "green": "绿色",
+  "cyan": "青色",
+  "blue": "蓝色",
+  "purple": "紫色",
+  "pink": "粉色",
+  "brown": "棕色",
+  "gray": "灰色",
+  "white": "白色",
+  "swatch": "颜色",
+  "name": "名称",
+  "hex": "十六进制",
+  "rgb": "RGB",
+  "noResults": "没有匹配当前搜索条件的颜色。"
+}

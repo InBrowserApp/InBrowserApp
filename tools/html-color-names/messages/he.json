@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "חפש לפי שם צבע או ערך HEX...",
+  "all": "הכל",
+  "red": "אדום",
+  "orange": "כתום",
+  "yellow": "צהוב",
+  "green": "ירוק",
+  "cyan": "ציאן",
+  "blue": "כחול",
+  "purple": "סגול",
+  "pink": "ורוד",
+  "brown": "חום",
+  "gray": "אפור",
+  "white": "לבן",
+  "swatch": "צבע",
+  "name": "שם",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "noResults": "לא נמצאו צבעים שתואמים לחיפוש שלך."
+}

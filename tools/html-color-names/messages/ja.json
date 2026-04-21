@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "色名またはHEX値で検索...",
+  "all": "すべて",
+  "red": "赤",
+  "orange": "オレンジ",
+  "yellow": "黄色",
+  "green": "緑",
+  "cyan": "シアン",
+  "blue": "青",
+  "purple": "紫",
+  "pink": "ピンク",
+  "brown": "茶色",
+  "gray": "グレー",
+  "white": "白",
+  "swatch": "色",
+  "name": "名前",
+  "hex": "16進数",
+  "rgb": "RGB",
+  "noResults": "検索条件に一致する色はありません。"
+}

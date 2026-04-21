@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Tìm theo tên màu hoặc giá trị HEX...",
+  "all": "Tất cả",
+  "red": "Đỏ",
+  "orange": "Cam",
+  "yellow": "Vàng",
+  "green": "Xanh lá",
+  "cyan": "Lục lam",
+  "blue": "Xanh dương",
+  "purple": "Tím",
+  "pink": "Hồng",
+  "brown": "Nâu",
+  "gray": "Xám",
+  "white": "Trắng",
+  "swatch": "Màu",
+  "name": "Tên",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "noResults": "Không có màu nào khớp với nội dung tìm kiếm."
+}

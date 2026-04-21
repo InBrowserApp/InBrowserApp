@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Renk adına veya HEX değerine göre ara...",
+  "all": "Tümü",
+  "red": "Kırmızı",
+  "orange": "Turuncu",
+  "yellow": "Sarı",
+  "green": "Yeşil",
+  "cyan": "Camgöbeği",
+  "blue": "Mavi",
+  "purple": "Mor",
+  "pink": "Pembe",
+  "brown": "Kahverengi",
+  "gray": "Gri",
+  "white": "Beyaz",
+  "swatch": "Renk",
+  "name": "Ad",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "noResults": "Aramanızla eşleşen renk bulunamadı."
+}
