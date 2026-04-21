@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Entrada Data URI",
+  "inputPlaceholder": "Cole o Data URI aqui...",
+  "invalidDataUriTitle": "Data URI inválido",
+  "detailsTitle": "Detalhes",
+  "mimeTypeLabel": "Tipo MIME",
+  "encodingLabel": "Codificação",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "Codificado URL",
+  "sizeLabel": "Tamanho",
+  "fileNameLabel": "Nome do arquivo",
+  "fileNamePlaceholder": "ex.: data.png",
+  "previewTitle": "Pré-visualização",
+  "decodedOutputTitle": "Arquivo decodificado",
+  "decodedOutputEmptyDescription": "Os detalhes, a pré-visualização e o download do arquivo decodificado aparecerão aqui.",
+  "previewUnavailableDescription": "Este tipo de arquivo não pode ser visualizado no navegador. Baixe-o para inspecionar o arquivo original.",
+  "previewTruncatedLabel": "Pré-visualização truncada",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadFileLabel": "Baixar arquivo",
+  "resetLabel": "Redefinir exemplo"
+}

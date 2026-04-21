@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI-indata",
+  "inputPlaceholder": "Klistra in Data URI här...",
+  "invalidDataUriTitle": "Ogiltig Data URI",
+  "detailsTitle": "Detaljer",
+  "mimeTypeLabel": "MIME-typ",
+  "encodingLabel": "Kodning",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-kodad",
+  "sizeLabel": "Storlek",
+  "fileNameLabel": "Filnamn",
+  "fileNamePlaceholder": "t.ex. data.png",
+  "previewTitle": "Förhandsvisning",
+  "decodedOutputTitle": "Avkodad fil",
+  "decodedOutputEmptyDescription": "Information, förhandsvisning och nedladdning för den avkodade filen visas här.",
+  "previewUnavailableDescription": "Den här filtypen kan inte förhandsvisas i webbläsaren. Ladda ner den för att granska originalfilen.",
+  "previewTruncatedLabel": "Förhandsvisning avkortad",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "downloadFileLabel": "Ladda ner fil",
+  "resetLabel": "Återställ exempel"
+}

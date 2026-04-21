@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Nhập Data URI",
+  "inputPlaceholder": "Dán Data URI vào đây...",
+  "invalidDataUriTitle": "Data URI không hợp lệ",
+  "detailsTitle": "Chi tiết",
+  "mimeTypeLabel": "Loại MIME",
+  "encodingLabel": "Mã hóa",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "Mã hóa URL",
+  "sizeLabel": "Kích thước",
+  "fileNameLabel": "Tên tệp",
+  "fileNamePlaceholder": "vd. data.png",
+  "previewTitle": "Xem trước",
+  "decodedOutputTitle": "Tệp đã giải mã",
+  "decodedOutputEmptyDescription": "Chi tiết, bản xem trước và liên kết tải xuống của tệp đã giải mã sẽ xuất hiện tại đây.",
+  "previewUnavailableDescription": "Loại tệp này không thể xem trước trong trình duyệt. Hãy tải xuống để kiểm tra tệp gốc.",
+  "previewTruncatedLabel": "Bản xem trước bị cắt",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadFileLabel": "Tải tệp xuống",
+  "resetLabel": "Đặt lại ví dụ"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SHAKE128 (FIPS 202)-hash tekst eller fil",
+  "description": "Generer SHAKE128-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet."
+}

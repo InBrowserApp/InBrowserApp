@@ -1,0 +1,4 @@
+{
+  "name": "Data-URI-zu-Datei-Konverter",
+  "description": "Dekodiert Data-URI-Strings zu Dateien, prüft MIME-Typ und Kodierung und lädt das Ergebnis offline herunter."
+}

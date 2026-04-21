@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Geçerli metin girdisinin hash sonucu.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "outputLengthLabel": "Çıktı Uzunluğu",
+  "outputLengthPlaceholder": "örn. 256 (bits)",
+  "outputLengthInvalid": "8 ile 65536 arasında 8'in katını girin.",
+  "hashTextError": "Metnin hash değeri hesaplanamadı.",
+  "hashFileError": "Dosyanın hash değeri hesaplanamadı."
+}

@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Tipo de cabeçalho",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Entrada",
+  "inputPlaceholder": "Cole os cabeçalhos Cookie ou Set-Cookie aqui...",
+  "parsedJsonLabel": "JSON analisado",
+  "emptyOutputDescription": "A saída analisada aparecerá aqui...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Inválidos",
+  "invalidFragmentsLabel": "Fragmentos inválidos",
+  "noCookiesTitle": "Nenhum cookie encontrado",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadJsonLabel": "Baixar JSON",
+  "resetLabel": "Redefinir exemplo"
+}

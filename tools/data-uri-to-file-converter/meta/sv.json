@@ -1,0 +1,4 @@
+{
+  "name": "Data URI till fil-konverterare",
+  "description": "Avkodar Data URI-strängar till filer, kontrollerar MIME-typ och kodning och laddar ner resultatet offline."
+}

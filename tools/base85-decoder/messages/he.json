@@ -8,9 +8,9 @@
   "decodedOutputLabel": "פלט מפוענח",
   "decodedOutputEmptyDescription": "הטקסט המפוענח יוצג כאן...",
   "downloadFileLabel": "הורד קובץ",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק",
+  "loadSample": "טען דוגמה",
   "invalidBase85Title": "טקסט Base85 לא תקין",
   "fileReadFailedTitle": "קריאת הקובץ נכשלה",
   "previewTruncatedLabel": "התצוגה המקדימה קוצרה"

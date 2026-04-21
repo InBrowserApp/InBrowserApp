@@ -32,10 +32,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
+  "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
+  "data-uri-to-file-converter": () =>
+    import("@tool/data-uri-to-file-converter/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
@@ -114,6 +117,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha512-256-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
+  "shake128-hash-text-or-file": () =>
+    import("@tool/shake128-hash-text-or-file/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
   "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>

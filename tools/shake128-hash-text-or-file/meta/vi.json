@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHAKE128 (FIPS 202) văn bản hoặc tệp",
+  "description": "Tạo hash SHAKE128 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu."
+}

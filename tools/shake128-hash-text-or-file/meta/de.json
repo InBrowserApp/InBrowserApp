@@ -1,0 +1,4 @@
+{
+  "name": "SHAKE128 (FIPS 202)-Hash für Text oder Datei",
+  "description": "Erzeuge SHAKE128-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows."
+}

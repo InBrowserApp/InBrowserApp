@@ -2966,6 +2966,134 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cookie-parser",
+    category: "web",
+    icon: "network",
+    tags: [
+      "cookie",
+      "set-cookie",
+      "header",
+      "http",
+      "parser",
+      "json",
+      "browser",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "محلل ملفات تعريف الارتباط",
+        description: "حلّل ترويسات Cookie و Set-Cookie إلى JSON منظم للفحص.",
+      },
+      de: {
+        name: "Cookie-Parser",
+        description:
+          "Parst Cookie- und Set-Cookie-Header in strukturiertes JSON zur Prüfung.",
+      },
+      en: {
+        name: "Cookie Parser",
+        description:
+          "Parse Cookie and Set-Cookie headers into structured JSON for inspection.",
+      },
+      es: {
+        name: "Analizador de Cookies",
+        description:
+          "Analiza encabezados Cookie y Set-Cookie en JSON estructurado para inspección.",
+      },
+      fr: {
+        name: "Analyseur de Cookies",
+        description:
+          "Analyse les en-têtes Cookie et Set-Cookie en JSON structuré pour inspection.",
+      },
+      he: {
+        name: "מפרש Cookie",
+        description:
+          "מפרק כותרות Cookie ו-Set-Cookie ל-JSON מובנה לצורך בדיקה.",
+      },
+      hi: {
+        name: "कुकी पार्सर",
+        description: "Cookie और Set-Cookie हेडर को संरचित JSON में पार्स करके जांचें।",
+      },
+      id: {
+        name: "Pengurai Cookie",
+        description:
+          "Mengurai header Cookie dan Set-Cookie ke JSON terstruktur untuk inspeksi.",
+      },
+      it: {
+        name: "Parser di Cookie",
+        description:
+          "Analizza gli header Cookie e Set-Cookie in JSON strutturato per l’ispezione.",
+      },
+      ja: {
+        name: "Cookie パーサー",
+        description:
+          "Cookie と Set-Cookie ヘッダーを構造化 JSON に解析して確認できます。",
+      },
+      ko: {
+        name: "쿠키 파서",
+        description:
+          "Cookie 및 Set-Cookie 헤더를 구조화된 JSON으로 파싱해 확인합니다.",
+      },
+      ms: {
+        name: "Penghurai Cookie",
+        description:
+          "Huraikan pengepala Cookie dan Set-Cookie kepada JSON berstruktur untuk pemeriksaan.",
+      },
+      nl: {
+        name: "Cookie-parser",
+        description:
+          "Parseert Cookie- en Set-Cookie-headers naar gestructureerde JSON voor inspectie.",
+      },
+      no: {
+        name: "Cookie-parser",
+        description:
+          "Parser Cookie- og Set-Cookie-headere til strukturert JSON for inspeksjon.",
+      },
+      pl: {
+        name: "Parser Cookie",
+        description:
+          "Parsuje nagłówki Cookie i Set-Cookie do uporządkowanego JSON-a do wglądu.",
+      },
+      pt: {
+        name: "Analisador de Cookies",
+        description:
+          "Analisa cabeçalhos Cookie e Set-Cookie em JSON estruturado para inspeção.",
+      },
+      ru: {
+        name: "Парсер Cookie",
+        description:
+          "Разбирает заголовки Cookie и Set-Cookie в структурированный JSON для проверки.",
+      },
+      sv: {
+        name: "Cookie-parser",
+        description:
+          "Tolkar Cookie- och Set-Cookie-header till strukturerad JSON för granskning.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์คุกกี้",
+        description:
+          "แยกวิเคราะห์ส่วนหัว Cookie และ Set-Cookie เป็น JSON ที่มีโครงสร้างเพื่อการตรวจสอบ",
+      },
+      tr: {
+        name: "Cookie Ayrıştırıcı",
+        description:
+          "Cookie ve Set-Cookie başlıklarını inceleme için yapılandırılmış JSON’a ayrıştırır.",
+      },
+      vi: {
+        name: "Trình phân tích Cookie",
+        description:
+          "Phân tích header Cookie và Set-Cookie thành JSON có cấu trúc để kiểm tra.",
+      },
+      "zh-CN": {
+        name: "Cookie 解析器",
+        description: "解析 Cookie 与 Set-Cookie 头为结构化 JSON，便于查看。",
+      },
+      "zh-TW": {
+        name: "Cookie 解析器",
+        description: "解析 Cookie 與 Set-Cookie 標頭為結構化 JSON，方便檢視。",
+      },
+    },
+  },
+  {
     slug: "credit-card-validator",
     category: "text",
     icon: "credit-card",
@@ -3461,6 +3589,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "目前網路時間",
         description:
           "從網路取得目前時間，並與您的本機系統時間進行比較。檢視準確的網路時間並偵測任何時間差異。",
+      },
+    },
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    category: "web",
+    icon: "file-text",
+    tags: [
+      "data uri",
+      "data url",
+      "base64",
+      "file",
+      "converter",
+      "decode",
+      "mime type",
+      "preview",
+    ],
+    locales: {
+      ar: {
+        name: "محول Data URI إلى ملف",
+        description:
+          "يفك ترميز سلاسل Data URI إلى ملفات، ويتحقق من نوع MIME والترميز، ثم يحمّل النتيجة دون اتصال.",
+      },
+      de: {
+        name: "Data-URI-zu-Datei-Konverter",
+        description:
+          "Dekodiert Data-URI-Strings zu Dateien, prüft MIME-Typ und Kodierung und lädt das Ergebnis offline herunter.",
+      },
+      en: {
+        name: "Data URI to File Converter",
+        description:
+          "Decode Data URI strings into files, inspect MIME type and encoding, and download the result offline.",
+      },
+      es: {
+        name: "Convertidor de Data URI a archivo",
+        description:
+          "Decodifica cadenas Data URI en archivos, inspecciona el tipo MIME y la codificación, y descarga el resultado sin conexión.",
+      },
+      fr: {
+        name: "Convertisseur de Data URI en fichier",
+        description:
+          "Décode les chaînes Data URI en fichiers, inspecte le type MIME et l’encodage, puis télécharge le résultat hors ligne.",
+      },
+      he: {
+        name: "ממיר Data URI לקובץ",
+        description:
+          "מפענח מחרוזות Data URI לקבצים, בודק סוג MIME וקידוד, ומוריד את התוצאה ללא חיבור.",
+      },
+      hi: {
+        name: "Data URI से फ़ाइल कन्वर्टर",
+        description:
+          "Data URI स्ट्रिंग को फ़ाइल में डिकोड करें, MIME प्रकार और एन्कोडिंग देखें, और परिणाम ऑफ़लाइन डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Data URI ke file",
+        description:
+          "Mendekode string Data URI menjadi file, memeriksa tipe MIME dan encoding, lalu mengunduh hasilnya secara offline.",
+      },
+      it: {
+        name: "Convertitore da Data URI a file",
+        description:
+          "Decodifica stringhe Data URI in file, controlla il tipo MIME e la codifica e scarica il risultato offline.",
+      },
+      ja: {
+        name: "Data URI からファイル変換",
+        description:
+          "Data URI 文字列をファイルにデコードし、MIME タイプとエンコードを確認してオフラインでダウンロードします。",
+      },
+      ko: {
+        name: "Data URI → 파일 변환기",
+        description:
+          "Data URI 문자열을 파일로 디코딩하고 MIME 유형과 인코딩을 확인한 뒤 오프라인으로 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar Data URI ke fail",
+        description:
+          "Menyahkod rentetan Data URI kepada fail, semak jenis MIME dan pengekodan, kemudian muat turun hasil secara luar talian.",
+      },
+      nl: {
+        name: "Data URI naar bestand-converter",
+        description:
+          "Decodeert Data URI-strings naar bestanden, bekijkt het MIME-type en de codering en downloadt het resultaat offline.",
+      },
+      no: {
+        name: "Data URI til fil-konverterer",
+        description:
+          "Dekoder Data URI-strenger til filer, kontrollerer MIME-type og koding og laster ned resultatet offline.",
+      },
+      pl: {
+        name: "Konwerter Data URI na plik",
+        description:
+          "Dekoduje ciągi Data URI do plików, sprawdza typ MIME i kodowanie oraz pobiera wynik offline.",
+      },
+      pt: {
+        name: "Conversor de Data URI para arquivo",
+        description:
+          "Decodifica strings Data URI em arquivos, verifica o tipo MIME e a codificação e baixa o resultado offline.",
+      },
+      ru: {
+        name: "Конвертер Data URI в файл",
+        description:
+          "Декодирует строки Data URI в файлы, проверяет MIME-тип и кодировку и скачивает результат офлайн.",
+      },
+      sv: {
+        name: "Data URI till fil-konverterare",
+        description:
+          "Avkodar Data URI-strängar till filer, kontrollerar MIME-typ och kodning och laddar ner resultatet offline.",
+      },
+      th: {
+        name: "ตัวแปลง Data URI เป็นไฟล์",
+        description:
+          "ถอดรหัสสตริง Data URI เป็นไฟล์ ตรวจสอบชนิด MIME และการเข้ารหัส แล้วดาวน์โหลดผลลัพธ์แบบออฟไลน์",
+      },
+      tr: {
+        name: "Data URI’den Dosyaya Dönüştürücü",
+        description:
+          "Data URI dizgelerini dosyaya dönüştürür, MIME türü ve kodlamayı kontrol eder ve sonucu çevrimdışı indirir.",
+      },
+      vi: {
+        name: "Trình chuyển Data URI sang tệp",
+        description:
+          "Giải mã chuỗi Data URI thành tệp, kiểm tra loại MIME và mã hóa, rồi tải xuống kết quả ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "Data URI 转文件转换器",
+        description:
+          "将 Data URI 字符串解码为文件，查看 MIME 类型与编码并下载，离线可用。",
+      },
+      "zh-TW": {
+        name: "Data URI 轉檔案轉換器",
+        description:
+          "將 Data URI 字串解碼為檔案，查看 MIME 類型與編碼並下載，離線可用。",
       },
     },
   },
@@ -10588,6 +10848,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SHA-512 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHA-512 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake128",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE128 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE128 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE128 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE128-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE128 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE128 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE128 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE128 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE128 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE128 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE128 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE128 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE128 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE128 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE128 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE128 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE128 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE128 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE128 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE128 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE128 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE128 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE128-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE128 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE128-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE128 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE128 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE128 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE128 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE128 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE128 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE128-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE128 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE128 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE128 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE128 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE128 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE128 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE128 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE128 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE128 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE128 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
       },
     },
   },

@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cookie-parser",
+    language: "ar",
+  },
+  {
+    slug: "cookie-parser",
+    language: "de",
+  },
+  {
+    slug: "cookie-parser",
+    language: "en",
+  },
+  {
+    slug: "cookie-parser",
+    language: "es",
+  },
+  {
+    slug: "cookie-parser",
+    language: "fr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "he",
+  },
+  {
+    slug: "cookie-parser",
+    language: "hi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "id",
+  },
+  {
+    slug: "cookie-parser",
+    language: "it",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ja",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ko",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ms",
+  },
+  {
+    slug: "cookie-parser",
+    language: "nl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "no",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pt",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ru",
+  },
+  {
+    slug: "cookie-parser",
+    language: "sv",
+  },
+  {
+    slug: "cookie-parser",
+    language: "th",
+  },
+  {
+    slug: "cookie-parser",
+    language: "tr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "vi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },
@@ -2483,6 +2575,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "current-network-time",
+    language: "zh-TW",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ar",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "de",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "en",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "es",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "fr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "he",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "hi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "id",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "it",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ja",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ko",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ms",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "nl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "no",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pt",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ru",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "sv",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "th",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "tr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "vi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "data-uri-to-file-converter",
     language: "zh-TW",
   },
   {
@@ -7819,6 +8003,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sha512-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "Cookie パーサー",
+  "description": "Cookie と Set-Cookie ヘッダーを構造化 JSON に解析して確認できます。"
+}

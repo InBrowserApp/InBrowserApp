@@ -1,0 +1,4 @@
+{
+  "name": "Parser Cookie",
+  "description": "Parsuje nagłówki Cookie i Set-Cookie do uporządkowanego JSON-a do wglądu."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Data URI 转文件转换器",
+  "description": "将 Data URI 字符串解码为文件，查看 MIME 类型与编码并下载，离线可用。"
+}

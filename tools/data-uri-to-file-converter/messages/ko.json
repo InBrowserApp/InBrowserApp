@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI 입력",
+  "inputPlaceholder": "여기에 Data URI를 붙여넣기...",
+  "invalidDataUriTitle": "유효하지 않은 Data URI",
+  "detailsTitle": "세부 정보",
+  "mimeTypeLabel": "MIME 유형",
+  "encodingLabel": "인코딩",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL 인코딩",
+  "sizeLabel": "크기",
+  "fileNameLabel": "파일 이름",
+  "fileNamePlaceholder": "예: data.png",
+  "previewTitle": "미리보기",
+  "decodedOutputTitle": "디코딩된 파일",
+  "decodedOutputEmptyDescription": "디코딩된 파일의 세부 정보, 미리보기, 다운로드가 여기에 표시됩니다.",
+  "previewUnavailableDescription": "이 파일 형식은 브라우저에서 미리 볼 수 없습니다. 원본 파일을 확인하려면 다운로드하세요.",
+  "previewTruncatedLabel": "미리보기 잘림",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "downloadFileLabel": "파일 다운로드",
+  "resetLabel": "예제 재설정"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SHAKE128 (FIPS 202) Hash Metin veya Dosya",
+  "description": "Metin veya dosyalar için SHAKE128 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın."
+}

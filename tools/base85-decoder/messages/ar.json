@@ -8,9 +8,9 @@
   "decodedOutputLabel": "المخرجات المفككة",
   "decodedOutputEmptyDescription": "سيظهر النص المفكك هنا...",
   "downloadFileLabel": "تنزيل الملف",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ",
+  "loadSample": "تحميل مثال",
   "invalidBase85Title": "نص Base85 غير صالح",
   "fileReadFailedTitle": "فشل في قراءة الملف",
   "previewTruncatedLabel": "تم اقتطاع المعاينة"

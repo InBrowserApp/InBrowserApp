@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "نوع الترويسة",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "الإدخال",
+  "inputPlaceholder": "الصق ترويسات Cookie أو Set-Cookie هنا...",
+  "parsedJsonLabel": "JSON المُحلَّل",
+  "emptyOutputDescription": "سيظهر الإخراج المُحلَّل هنا...",
+  "cookieCountLabel": "ملفات تعريف الارتباط",
+  "invalidCountLabel": "غير صالحة",
+  "invalidFragmentsLabel": "مقاطع غير صالحة",
+  "noCookiesTitle": "لم يتم العثور على أي ملفات تعريف ارتباط",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadJsonLabel": "تنزيل JSON",
+  "resetLabel": "إعادة تعيين المثال"
+}

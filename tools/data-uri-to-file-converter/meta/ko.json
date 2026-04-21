@@ -1,0 +1,4 @@
+{
+  "name": "Data URI → 파일 변환기",
+  "description": "Data URI 문자열을 파일로 디코딩하고 MIME 유형과 인코딩을 확인한 뒤 오프라인으로 다운로드합니다."
+}

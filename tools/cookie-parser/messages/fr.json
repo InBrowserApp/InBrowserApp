@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Type d’en-tête",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Entrée",
+  "inputPlaceholder": "Collez les en-têtes Cookie ou Set-Cookie ici...",
+  "parsedJsonLabel": "JSON analysé",
+  "emptyOutputDescription": "La sortie analysée apparaîtra ici...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Invalides",
+  "invalidFragmentsLabel": "Fragments invalides",
+  "noCookiesTitle": "Aucun cookie trouvé",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "downloadJsonLabel": "Télécharger JSON",
+  "resetLabel": "Réinitialiser l’exemple"
+}
