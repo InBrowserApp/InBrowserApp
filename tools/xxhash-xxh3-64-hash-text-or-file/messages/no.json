@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert emoji og ikke-latinske tegn.",
+  "importFromFileLabel": "Importer fra fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "Hashresultat for gjeldende tekstinndata.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Binær",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (valgfritt)",
+  "seedPlaceholder": "0 eller 0x...",
+  "seedInvalid": "Skriv inn et desimaltall eller en 0x-heksverdi."
+}
