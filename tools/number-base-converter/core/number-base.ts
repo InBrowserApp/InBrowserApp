@@ -262,4 +262,3 @@ export {
   toBase64Number,
   toBase,
 }
-export type { AlphabetMode }
