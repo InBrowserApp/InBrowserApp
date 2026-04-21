@@ -106,4 +106,4 @@ function bytesToBinary(bytes: Uint8Array) {
 }
 
 export { formatMurmurHash3Digest, hashMurmurHash3, parseMurmurHash3Seed }
-export type { MurmurHash3Digest, ParsedMurmurHash3Seed }
+export type { MurmurHash3Digest }
