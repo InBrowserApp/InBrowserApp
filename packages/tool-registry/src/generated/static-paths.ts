@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "color-picker",
+    language: "ar",
+  },
+  {
+    slug: "color-picker",
+    language: "de",
+  },
+  {
+    slug: "color-picker",
+    language: "en",
+  },
+  {
+    slug: "color-picker",
+    language: "es",
+  },
+  {
+    slug: "color-picker",
+    language: "fr",
+  },
+  {
+    slug: "color-picker",
+    language: "he",
+  },
+  {
+    slug: "color-picker",
+    language: "hi",
+  },
+  {
+    slug: "color-picker",
+    language: "id",
+  },
+  {
+    slug: "color-picker",
+    language: "it",
+  },
+  {
+    slug: "color-picker",
+    language: "ja",
+  },
+  {
+    slug: "color-picker",
+    language: "ko",
+  },
+  {
+    slug: "color-picker",
+    language: "ms",
+  },
+  {
+    slug: "color-picker",
+    language: "nl",
+  },
+  {
+    slug: "color-picker",
+    language: "no",
+  },
+  {
+    slug: "color-picker",
+    language: "pl",
+  },
+  {
+    slug: "color-picker",
+    language: "pt",
+  },
+  {
+    slug: "color-picker",
+    language: "ru",
+  },
+  {
+    slug: "color-picker",
+    language: "sv",
+  },
+  {
+    slug: "color-picker",
+    language: "th",
+  },
+  {
+    slug: "color-picker",
+    language: "tr",
+  },
+  {
+    slug: "color-picker",
+    language: "vi",
+  },
+  {
+    slug: "color-picker",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-picker",
+    language: "zh-TW",
+  },
+  {
     slug: "cookie-parser",
     language: "ar",
   },

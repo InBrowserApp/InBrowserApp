@@ -1,0 +1,4 @@
+{
+  "name": "Selector de Colores",
+  "description": "Toma colores de la pantalla o imágenes. Muestrea píxeles y copia valores HEX, RGB, HSL, HSV y CMYK al instante."
+}

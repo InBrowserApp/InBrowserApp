@@ -32,6 +32,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
+  "color-picker": () => import("@tool/color-picker/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
