@@ -52,7 +52,7 @@ export type UppercaseParseResult = {
   error: UppercaseParseError | null
 }
 
-export type ConversionResult = {
+type ConversionResult = {
   isEmpty: boolean
   isValid: boolean
   normalized: string
