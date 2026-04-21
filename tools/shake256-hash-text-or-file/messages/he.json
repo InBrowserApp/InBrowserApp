@@ -1,0 +1,20 @@
+{
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת Hash",
+  "hashResultDescription": "תוצאת הגיבוב עבור קלט הטקסט הנוכחי.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "configurationLabel": "תצורת SHAKE256",
+  "configurationDescription": "SHAKE256 is an extendable-output function, so you can choose a digest length that fits your workflow.",
+  "outputLengthLabel": "אורך פלט",
+  "outputLengthPlaceholder": "למשל 512 (bits)",
+  "outputLengthDescription": "Enter any multiple of 8 bits between 8 and 65536.",
+  "outputLengthInvalid": "הזן כפולה של 8 בין 8 ל‑65536."
+}

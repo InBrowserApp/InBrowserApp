@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto simples",
+  "plainTextDescription": "Cole ou digite qualquer texto UTF-8, incluindo emojis e caracteres não latinos.",
+  "importFromFileLabel": "Importar de arquivo",
+  "hashResultLabel": "Resultado do Hash",
+  "hashResultDescription": "Resultado do hash para a entrada de texto atual.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binário",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "configurationLabel": "Configuração SHAKE256",
+  "configurationDescription": "SHAKE256 is an extendable-output function, so you can choose a digest length that fits your workflow.",
+  "outputLengthLabel": "Comprimento de Saída",
+  "outputLengthPlaceholder": "ex.: 512 (bits)",
+  "outputLengthDescription": "Enter any multiple of 8 bits between 8 and 65536.",
+  "outputLengthInvalid": "Digite um múltiplo de 8 entre 8 e 65536."
+}

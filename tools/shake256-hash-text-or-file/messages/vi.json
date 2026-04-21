@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hashResultLabel": "Kết quả Hash",
+  "hashResultDescription": "Kết quả băm cho đầu vào văn bản hiện tại.",
+  "hexLabel": "Thập lục phân",
+  "base64Label": "Base64",
+  "decimalLabel": "Thập phân",
+  "binaryLabel": "Nhị phân",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "configurationLabel": "Cấu hình SHAKE256",
+  "configurationDescription": "SHAKE256 is an extendable-output function, so you can choose a digest length that fits your workflow.",
+  "outputLengthLabel": "Độ Dài Đầu Ra",
+  "outputLengthPlaceholder": "vd: 512 (bits)",
+  "outputLengthDescription": "Enter any multiple of 8 bits between 8 and 65536.",
+  "outputLengthInvalid": "Nhập bội số của 8 trong khoảng 8–65536."
+}

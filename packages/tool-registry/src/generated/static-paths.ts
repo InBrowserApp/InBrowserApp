@@ -7730,6 +7730,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "shake256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "slug-generator",
     language: "ar",
   },

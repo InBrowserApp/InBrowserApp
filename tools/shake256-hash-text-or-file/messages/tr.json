@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Geçerli metin girdisinin hash sonucu.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "configurationLabel": "SHAKE256 Yapılandırması",
+  "configurationDescription": "SHAKE256 is an extendable-output function, so you can choose a digest length that fits your workflow.",
+  "outputLengthLabel": "Çıktı Uzunluğu",
+  "outputLengthPlaceholder": "örn. 512 (bits)",
+  "outputLengthDescription": "Enter any multiple of 8 bits between 8 and 65536.",
+  "outputLengthInvalid": "8 ile 65536 arasında 8'in katını girin."
+}

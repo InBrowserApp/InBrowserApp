@@ -1,0 +1,20 @@
+{
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hashResultDescription": "当前文本输入的哈希结果。",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "decimalLabel": "十进制",
+  "binaryLabel": "二进制",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "configurationLabel": "SHAKE256 配置",
+  "configurationDescription": "SHAKE256 是可扩展输出函数，因此你可以按需要选择摘要长度。",
+  "outputLengthLabel": "输出长度",
+  "outputLengthPlaceholder": "例如 512（位）",
+  "outputLengthDescription": "输入 8 到 65536 之间任意 8 的倍数位长度。",
+  "outputLengthInvalid": "请输入 8 到 65536 之间的 8 的倍数。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SHAKE256 (FIPS 202) Hash Text or File",
+  "description": "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity."
+}

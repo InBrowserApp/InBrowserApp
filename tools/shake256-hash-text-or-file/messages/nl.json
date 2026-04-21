@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hash Resultaat",
+  "hashResultDescription": "Hashresultaat voor de huidige tekstinvoer.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "configurationLabel": "SHAKE256 Configuratie",
+  "configurationDescription": "SHAKE256 is an extendable-output function, so you can choose a digest length that fits your workflow.",
+  "outputLengthLabel": "Uitvoerlengte",
+  "outputLengthPlaceholder": "bijv. 512 (bits)",
+  "outputLengthDescription": "Enter any multiple of 8 bits between 8 and 65536.",
+  "outputLengthInvalid": "Voer een veelvoud van 8 in tussen 8 en 65536."
+}

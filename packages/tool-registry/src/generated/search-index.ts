@@ -10457,6 +10457,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "shake256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake256",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      de: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      en: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      es: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      fr: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      he: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      hi: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      id: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      it: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      ja: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      ko: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      ms: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      nl: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      no: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      pl: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      pt: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      ru: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      sv: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      th: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      tr: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      vi: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hash for text input or file upload. Produce variable-length XOF digests with higher security strength for cryptographic checksums and data integrity.",
+      },
+      "zh-CN": {
+        name: "SHAKE256 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE256 (FIPS 202) 哈希值。输出更高安全强度的可变长度 XOF 摘要，用于加密校验和与数据完整性验证。",
+      },
+      "zh-TW": {
+        name: "SHAKE256 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE256 (FIPS 202) 雜湊值。輸出更高安全強度的可變長度 XOF 摘要，用於加密校驗和與資料完整性驗證。",
+      },
+    },
+  },
+  {
     slug: "slug-generator",
     category: "web",
     icon: "globe",
