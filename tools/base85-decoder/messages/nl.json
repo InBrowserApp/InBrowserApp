@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Gedecodeerde uitvoer",
   "decodedOutputEmptyDescription": "Gedecodeerde tekst verschijnt hier...",
   "downloadFileLabel": "Bestand downloaden",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Kopieer",
+  "copiedLabel": "Gekopieerd",
+  "loadSample": "Voorbeeld laden",
   "invalidBase85Title": "Ongeldige Base85-tekst",
   "fileReadFailedTitle": "Bestand kon niet worden gelezen",
   "previewTruncatedLabel": "Voorbeeld ingekort"

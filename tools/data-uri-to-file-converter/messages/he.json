@@ -1,0 +1,22 @@
+{
+  "inputTitle": "קלט Data URI",
+  "inputPlaceholder": "הדבק Data URI כאן...",
+  "invalidDataUriTitle": "Data URI לא תקין",
+  "detailsTitle": "פרטים",
+  "mimeTypeLabel": "סוג MIME",
+  "encodingLabel": "קידוד",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "בקידוד URL",
+  "sizeLabel": "גודל",
+  "fileNameLabel": "שם קובץ",
+  "fileNamePlaceholder": "למשל data.png",
+  "previewTitle": "תצוגה מקדימה",
+  "decodedOutputTitle": "קובץ מפוענח",
+  "decodedOutputEmptyDescription": "פרטי הקובץ המפוענח, התצוגה המקדימה וההורדה יופיעו כאן.",
+  "previewUnavailableDescription": "לא ניתן להציג סוג קובץ זה בתצוגה מקדימה בדפדפן. הורד אותו כדי לבדוק את הקובץ המקורי.",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "downloadFileLabel": "הורדת קובץ",
+  "resetLabel": "אפס דוגמה"
+}

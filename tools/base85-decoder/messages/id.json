@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Output terdekode",
   "decodedOutputEmptyDescription": "Teks yang didekodekan akan muncul di sini...",
   "downloadFileLabel": "Unduh file",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin",
+  "loadSample": "Muat contoh",
   "invalidBase85Title": "Teks Base85 tidak valid",
   "fileReadFailedTitle": "Gagal membaca file",
   "previewTruncatedLabel": "Pratinjau dipotong"

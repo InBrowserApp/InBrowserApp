@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Input Data URI",
+  "inputPlaceholder": "Tampal Data URI di sini...",
+  "invalidDataUriTitle": "Data URI tidak sah",
+  "detailsTitle": "Butiran",
+  "mimeTypeLabel": "Jenis MIME",
+  "encodingLabel": "Pengekodan",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL dikodkan",
+  "sizeLabel": "Saiz",
+  "fileNameLabel": "Nama fail",
+  "fileNamePlaceholder": "cth. data.png",
+  "previewTitle": "Pratonton",
+  "decodedOutputTitle": "Fail yang dinyahkod",
+  "decodedOutputEmptyDescription": "Butiran, pratonton dan muat turun fail yang dinyahkod akan dipaparkan di sini.",
+  "previewUnavailableDescription": "Jenis fail ini tidak boleh dipratonton dalam pelayar. Muat turunnya untuk menyemak fail asal.",
+  "previewTruncatedLabel": "Pratonton dipendekkan",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadFileLabel": "Muat turun fail",
+  "resetLabel": "Tetapkan semula contoh"
+}

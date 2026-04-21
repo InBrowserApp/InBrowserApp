@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Avkodad utdata",
   "decodedOutputEmptyDescription": "Avkodad text visas här...",
   "downloadFileLabel": "Ladda ner fil",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
+  "loadSample": "Ladda exempel",
   "invalidBase85Title": "Ogiltig Base85-text",
   "fileReadFailedTitle": "Kunde inte läsa filen",
   "previewTruncatedLabel": "Förhandsvisning avkortad"

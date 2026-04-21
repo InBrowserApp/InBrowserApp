@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Çözümlenen Çıktı",
   "decodedOutputEmptyDescription": "Çözümlenen metin burada görünecek...",
   "downloadFileLabel": "Dosyayı indir",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı",
+  "loadSample": "Örneği yükle",
   "invalidBase85Title": "Geçersiz Base85 metni",
   "fileReadFailedTitle": "Dosya okunamadı",
   "previewTruncatedLabel": "Önizleme kısaltıldı"

@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI Girişi",
+  "inputPlaceholder": "Data URI'yi buraya yapıştırın...",
+  "invalidDataUriTitle": "Geçersiz Data URI",
+  "detailsTitle": "Ayrıntılar",
+  "mimeTypeLabel": "MIME Türü",
+  "encodingLabel": "Kodlama",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL kodlu",
+  "sizeLabel": "Boyut",
+  "fileNameLabel": "Dosya adı",
+  "fileNamePlaceholder": "örn. data.png",
+  "previewTitle": "Önizleme",
+  "decodedOutputTitle": "Çözülen dosya",
+  "decodedOutputEmptyDescription": "Çözülen dosyanın ayrıntıları, önizlemesi ve indirme bağlantısı burada görünür.",
+  "previewUnavailableDescription": "Bu dosya türü tarayıcıda önizlenemez. Ham dosyayı incelemek için indirin.",
+  "previewTruncatedLabel": "Önizleme kısaltıldı",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadFileLabel": "Dosyayı indir",
+  "resetLabel": "Örneği sıfırla"
+}

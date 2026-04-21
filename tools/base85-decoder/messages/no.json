@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Dekodet output",
   "decodedOutputEmptyDescription": "Dekodet tekst vises her...",
   "downloadFileLabel": "Last ned fil",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert",
+  "loadSample": "Last inn eksempel",
   "invalidBase85Title": "Ugyldig Base85-tekst",
   "fileReadFailedTitle": "Kunne ikke lese filen",
   "previewTruncatedLabel": "Forhåndsvisning avkortet"

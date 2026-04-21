@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de Data URI a archivo",
+  "description": "Decodifica cadenas Data URI en archivos, inspecciona el tipo MIME y la codificación, y descarga el resultado sin conexión."
+}

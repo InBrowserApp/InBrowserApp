@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI-inndata",
+  "inputPlaceholder": "Lim inn Data URI her...",
+  "invalidDataUriTitle": "Ugyldig Data URI",
+  "detailsTitle": "Detaljer",
+  "mimeTypeLabel": "MIME-type",
+  "encodingLabel": "Koding",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-kodet",
+  "sizeLabel": "Størrelse",
+  "fileNameLabel": "Filnavn",
+  "fileNamePlaceholder": "f.eks. data.png",
+  "previewTitle": "Forhåndsvisning",
+  "decodedOutputTitle": "Dekodet fil",
+  "decodedOutputEmptyDescription": "Detaljer, forhåndsvisning og nedlasting av den dekodede filen vises her.",
+  "previewUnavailableDescription": "Denne filtypen kan ikke forhåndsvises i nettleseren. Last den ned for å inspisere originalfilen.",
+  "previewTruncatedLabel": "Forhåndsvisning avkortet",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "downloadFileLabel": "Last ned fil",
+  "resetLabel": "Tilbakestill eksempel"
+}

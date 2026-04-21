@@ -8,9 +8,9 @@
   "decodedOutputLabel": "デコード結果",
   "decodedOutputEmptyDescription": "デコードされたテキストがここに表示されます...",
   "downloadFileLabel": "ファイルをダウンロード",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピー済み",
+  "loadSample": "サンプルを読み込む",
   "invalidBase85Title": "無効なBase85テキスト",
   "fileReadFailedTitle": "ファイルの読み取りに失敗しました",
   "previewTruncatedLabel": "プレビューは切り詰められました"

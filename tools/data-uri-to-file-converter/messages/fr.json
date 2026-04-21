@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Entrée Data URI",
+  "inputPlaceholder": "Collez le Data URI ici...",
+  "invalidDataUriTitle": "Data URI invalide",
+  "detailsTitle": "Détails",
+  "mimeTypeLabel": "Type MIME",
+  "encodingLabel": "Encodage",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "Encodé URL",
+  "sizeLabel": "Taille",
+  "fileNameLabel": "Nom de fichier",
+  "fileNamePlaceholder": "ex. data.png",
+  "previewTitle": "Aperçu",
+  "decodedOutputTitle": "Fichier décodé",
+  "decodedOutputEmptyDescription": "Les détails, l’aperçu et le téléchargement du fichier décodé apparaîtront ici.",
+  "previewUnavailableDescription": "Ce type de fichier ne peut pas être prévisualisé dans le navigateur. Téléchargez-le pour inspecter le fichier brut.",
+  "previewTruncatedLabel": "Aperçu tronqué",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "downloadFileLabel": "Télécharger le fichier",
+  "resetLabel": "Réinitialiser l’exemple"
+}

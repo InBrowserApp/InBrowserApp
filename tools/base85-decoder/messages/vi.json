@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Đầu ra đã giải mã",
   "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
   "downloadFileLabel": "Tải tệp",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
+  "loadSample": "Tải ví dụ",
   "invalidBase85Title": "Văn bản Base85 không hợp lệ",
   "fileReadFailedTitle": "Không thể đọc tệp",
   "previewTruncatedLabel": "Bản xem trước bị cắt"

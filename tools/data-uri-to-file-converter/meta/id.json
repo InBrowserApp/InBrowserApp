@@ -1,0 +1,4 @@
+{
+  "name": "Konverter Data URI ke file",
+  "description": "Mendekode string Data URI menjadi file, memeriksa tipe MIME dan encoding, lalu mengunduh hasilnya secara offline."
+}

@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Ввод Data URI",
+  "inputPlaceholder": "Вставьте Data URI здесь...",
+  "invalidDataUriTitle": "Неверный Data URI",
+  "detailsTitle": "Детали",
+  "mimeTypeLabel": "Тип MIME",
+  "encodingLabel": "Кодировка",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-кодирование",
+  "sizeLabel": "Размер",
+  "fileNameLabel": "Имя файла",
+  "fileNamePlaceholder": "например, data.png",
+  "previewTitle": "Предпросмотр",
+  "decodedOutputTitle": "Декодированный файл",
+  "decodedOutputEmptyDescription": "Здесь появятся сведения, предпросмотр и загрузка декодированного файла.",
+  "previewUnavailableDescription": "Этот тип файла нельзя просмотреть прямо в браузере. Скачайте его, чтобы проверить исходный файл.",
+  "previewTruncatedLabel": "Предпросмотр обрезан",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "downloadFileLabel": "Скачать файл",
+  "resetLabel": "Сбросить пример"
+}

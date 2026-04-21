@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Output dinyahkod",
   "decodedOutputEmptyDescription": "Teks yang dinyahkod akan dipaparkan di sini...",
   "downloadFileLabel": "Muat turun fail",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
+  "loadSample": "Muat sampel",
   "invalidBase85Title": "Teks Base85 tidak sah",
   "fileReadFailedTitle": "Gagal membaca fail",
   "previewTruncatedLabel": "Pratonton dipendekkan"

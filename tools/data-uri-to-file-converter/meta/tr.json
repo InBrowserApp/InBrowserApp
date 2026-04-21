@@ -1,0 +1,4 @@
+{
+  "name": "Data URI’den Dosyaya Dönüştürücü",
+  "description": "Data URI dizgelerini dosyaya dönüştürür, MIME türü ve kodlamayı kontrol eder ve sonucu çevrimdışı indirir."
+}
