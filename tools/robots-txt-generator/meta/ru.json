@@ -1,0 +1,4 @@
+{
+  "name": "Генератор robots.txt",
+  "description": "Создавайте файлы robots.txt с правилами User-agent, путями Allow/Disallow и ссылками Sitemap."
+}

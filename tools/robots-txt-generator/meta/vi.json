@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo robots.txt",
+  "description": "Tạo tệp robots.txt với quy tắc user-agent, đường dẫn allow/disallow và liên kết sitemap."
+}
