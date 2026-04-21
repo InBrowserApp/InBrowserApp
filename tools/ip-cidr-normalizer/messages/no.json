@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP- eller CIDR-inngang",
+  "inputDescription": "Skriv inn en enkelt IPv4-adresse, IPv6-adresse eller CIDR-blokk for å normalisere den til kanonisk nettverksnotasjon.",
+  "resultTitle": "Normalisert Resultat",
+  "resultDescription": "Kanonisk adresse eller nettverksområde. CIDR-inndata skrives om til nettverksadressen med vertsbiter slettet.",
+  "label": "IP/CIDR",
+  "placeholder": "f.eks. 192.168.0.15/24 eller 2001:db8::1234/64",
+  "invalidInput": "Ugyldig IP/CIDR",
+  "invalidInputDescription": "Bruk en gyldig IPv4-adresse, IPv6-adresse eller CIDR-område. Prefikslengder må samsvare med adressefamilien.",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert"
+}

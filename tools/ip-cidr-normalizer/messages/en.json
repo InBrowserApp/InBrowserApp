@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP or CIDR Input",
+  "inputDescription": "Enter a single IPv4 address, IPv6 address, or CIDR block to normalize it into canonical network notation.",
+  "resultTitle": "Normalized Result",
+  "resultDescription": "Canonical address or network range. CIDR input is rewritten to the network address with host bits cleared.",
+  "label": "IP or CIDR",
+  "placeholder": "e.g. 192.168.0.15/24 or 2001:db8::1234/64",
+  "invalidInput": "Invalid IP address or CIDR block",
+  "invalidInputDescription": "Use a valid IPv4 address, IPv6 address, or CIDR range. Prefix lengths must match the address family.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP 或 CIDR 輸入",
+  "inputDescription": "輸入單一 IPv4 位址、IPv6 位址或 CIDR 區塊，將其標準化為規範網路表示法。",
+  "resultTitle": "標準化結果",
+  "resultDescription": "規範位址或網路範圍。 CIDR 輸入被重寫為網路位址並清除主機位元。",
+  "label": "IP/CIDR",
+  "placeholder": "例如192.168.0.15/24 或 2001:db8::1234/64",
+  "invalidInput": "無效的 IP/CIDR",
+  "invalidInputDescription": "使用有效的 IPv4 位址、IPv6 位址或 CIDR 範圍。前綴長度必須與位址族相符。",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

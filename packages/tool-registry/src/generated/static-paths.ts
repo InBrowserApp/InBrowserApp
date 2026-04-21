@@ -4050,6 +4050,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ip-cidr-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "de",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "en",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "es",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "he",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "id",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "it",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "no",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "th",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },

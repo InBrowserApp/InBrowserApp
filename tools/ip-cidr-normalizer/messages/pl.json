@@ -1,0 +1,12 @@
+{
+  "inputTitle": "Wejście IP lub CIDR",
+  "inputDescription": "Wprowadź pojedynczy adres IPv4, adres IPv6 lub blok CIDR, aby znormalizować go do kanonicznej notacji sieciowej.",
+  "resultTitle": "Znormalizowany Wynik",
+  "resultDescription": "Adres kanoniczny lub zakres sieci. Dane wejściowe CIDR są przepisywane na adres sieciowy z wyczyszczonymi bitami hosta.",
+  "label": "IP/CIDR",
+  "placeholder": "np. 192.168.0.15/24 lub 2001:db8::1234/64",
+  "invalidInput": "Nieprawidłowy IP/CIDR",
+  "invalidInputDescription": "Użyj prawidłowego adresu IPv4, adresu IPv6 lub zakresu CIDR. Długości prefiksów muszą odpowiadać rodzinie adresów.",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

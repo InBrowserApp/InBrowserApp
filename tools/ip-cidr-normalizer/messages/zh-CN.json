@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP 或 CIDR 输入",
+  "inputDescription": "输入单个 IPv4 地址、IPv6 地址或 CIDR 块，将其标准化为规范网络表示法。",
+  "resultTitle": "标准化结果",
+  "resultDescription": "规范地址或网络范围。 CIDR 输入被重写为网络地址并清除主机位。",
+  "label": "IP/CIDR",
+  "placeholder": "例如192.168.0.15/24 或 2001:db8::1234/64",
+  "invalidInput": "无效的 IP/CIDR",
+  "invalidInputDescription": "使用有效的 IPv4 地址、IPv6 地址或 CIDR 范围。前缀长度必须与地址族匹配。",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

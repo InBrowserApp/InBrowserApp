@@ -57,6 +57,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
+  "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
   "ipv6-address-to-mac-address-converter": () =>
     import("@tool/ipv6-address-to-mac-address-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),

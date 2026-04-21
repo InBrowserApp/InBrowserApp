@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR Normalleştirici",
+  "description": "IPv4 ve IPv6 formatları için IP adreslerini ve CIDR notasyonunu normalleştirir. Herhangi bir IP veya CIDR aralığı girin ve standartlaştırılmış formatı anında alın."
+}

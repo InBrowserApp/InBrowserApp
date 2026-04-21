@@ -1,0 +1,12 @@
+{
+  "inputTitle": "Masukan IP atau CIDR",
+  "inputDescription": "Masukkan satu alamat IPv4, alamat IPv6, atau blok CIDR untuk menormalkannya menjadi notasi jaringan kanonik.",
+  "resultTitle": "Hasil Dinormalisasi",
+  "resultDescription": "Alamat kanonik atau jangkauan jaringan. Input CIDR ditulis ulang ke alamat jaringan dengan bit host dihapus.",
+  "label": "IP/CIDR",
+  "placeholder": "misalnya 192.168.0.15/24 atau 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR tidak valid",
+  "invalidInputDescription": "Gunakan alamat IPv4, alamat IPv6, atau rentang CIDR yang valid. Panjang awalan harus sesuai dengan kelompok alamat.",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}
