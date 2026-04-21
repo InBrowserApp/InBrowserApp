@@ -74,6 +74,7 @@
     "@tool/morse-code-converter": "workspace:*",
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
+    "@tool/number-base-converter": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
     "@tool/pbkdf2-key-derivation": "workspace:*",

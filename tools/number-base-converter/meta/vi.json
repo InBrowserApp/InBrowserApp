@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển Đổi Cơ Số",
+  "description": "Chuyển đổi số giữa nhị phân, bát phân, thập phân, thập lục phân, base32, base36, base62, base64 và cơ số tùy chỉnh (2-64)."
+}
