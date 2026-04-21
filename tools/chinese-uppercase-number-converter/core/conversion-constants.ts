@@ -35,7 +35,7 @@ export const JIAO_UNIT = "角"
 export const FEN_UNIT = "分"
 
 export const MAX_INTEGER_LENGTH = 15
-export const MAX_INTEGER = "999999999999999"
+const MAX_INTEGER = "999999999999999"
 export const MAX_INTEGER_VALUE = 999999999999999n
 
 export const DIGIT_VALUES: Record<string, number> = {
