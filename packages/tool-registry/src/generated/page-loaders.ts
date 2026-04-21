@@ -113,6 +113,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha512-256-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
+  "shake128-hash-text-or-file": () =>
+    import("@tool/shake128-hash-text-or-file/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
   "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
