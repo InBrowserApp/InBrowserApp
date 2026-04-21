@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI 输入",
+  "inputPlaceholder": "在此粘贴 Data URI...",
+  "invalidDataUriTitle": "无效的 Data URI",
+  "detailsTitle": "详情",
+  "mimeTypeLabel": "MIME 类型",
+  "encodingLabel": "编码",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL 编码",
+  "sizeLabel": "大小",
+  "fileNameLabel": "文件名",
+  "fileNamePlaceholder": "例如 data.png",
+  "previewTitle": "预览",
+  "decodedOutputTitle": "解码文件",
+  "decodedOutputEmptyDescription": "解码后的文件详情、预览和下载入口会显示在这里。",
+  "previewUnavailableDescription": "这种文件类型无法在浏览器中预览。请下载后再检查原始文件。",
+  "previewTruncatedLabel": "预览已截断",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadFileLabel": "下载文件",
+  "resetLabel": "重置示例"
+}

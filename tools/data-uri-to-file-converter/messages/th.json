@@ -1,0 +1,22 @@
+{
+  "inputTitle": "อินพุต Data URI",
+  "inputPlaceholder": "วาง Data URI ที่นี่...",
+  "invalidDataUriTitle": "Data URI ไม่ถูกต้อง",
+  "detailsTitle": "รายละเอียด",
+  "mimeTypeLabel": "ชนิด MIME",
+  "encodingLabel": "การเข้ารหัส",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "เข้ารหัส URL",
+  "sizeLabel": "ขนาด",
+  "fileNameLabel": "ชื่อไฟล์",
+  "fileNamePlaceholder": "เช่น data.png",
+  "previewTitle": "ตัวอย่าง",
+  "decodedOutputTitle": "ไฟล์ที่ถอดรหัสแล้ว",
+  "decodedOutputEmptyDescription": "รายละเอียด ตัวอย่าง และปุ่มดาวน์โหลดของไฟล์ที่ถอดรหัสแล้วจะแสดงที่นี่",
+  "previewUnavailableDescription": "ไฟล์ประเภทนี้ไม่สามารถแสดงตัวอย่างในเบราว์เซอร์ได้ ดาวน์โหลดเพื่อตรวจสอบไฟล์ต้นฉบับ",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadFileLabel": "ดาวน์โหลดไฟล์",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

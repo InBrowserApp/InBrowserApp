@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Salida Decodificada",
   "decodedOutputEmptyDescription": "El texto decodificado aparecerá aquí...",
   "downloadFileLabel": "Descargar archivo",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado",
+  "loadSample": "Cargar ejemplo",
   "invalidBase85Title": "Texto Base85 inválido",
   "fileReadFailedTitle": "No se pudo leer el archivo",
   "previewTruncatedLabel": "Vista previa truncada"

@@ -8,9 +8,9 @@
   "decodedOutputLabel": "Декодированный вывод",
   "decodedOutputEmptyDescription": "Декодированный текст появится здесь...",
   "downloadFileLabel": "Скачать файл",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "Копировать",
+  "copiedLabel": "Скопировано",
+  "loadSample": "Загрузить пример",
   "invalidBase85Title": "Неверный текст Base85",
   "fileReadFailedTitle": "Не удалось прочитать файл",
   "previewTruncatedLabel": "Предпросмотр обрезан"

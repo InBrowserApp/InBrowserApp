@@ -8,9 +8,9 @@
   "decodedOutputLabel": "ผลลัพธ์ที่ถอดรหัส",
   "decodedOutputEmptyDescription": "ข้อความที่ถอดรหัสจะปรากฏที่นี่...",
   "downloadFileLabel": "ดาวน์โหลดไฟล์",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว",
+  "loadSample": "โหลดตัวอย่าง",
   "invalidBase85Title": "ข้อความ Base85 ไม่ถูกต้อง",
   "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ",
   "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน"

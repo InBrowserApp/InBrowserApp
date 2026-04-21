@@ -2302,6 +2302,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "data-uri-to-file-converter",
+    language: "ar",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "de",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "en",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "es",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "fr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "he",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "hi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "id",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "it",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ja",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ko",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ms",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "nl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "no",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pt",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ru",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "sv",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "th",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "tr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "vi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },

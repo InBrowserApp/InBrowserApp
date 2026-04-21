@@ -1,0 +1,4 @@
+{
+  "name": "Data URI naar bestand-converter",
+  "description": "Decodeert Data URI-strings naar bestanden, bekijkt het MIME-type en de codering en downloadt het resultaat offline."
+}

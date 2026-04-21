@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI 入力",
+  "inputPlaceholder": "ここに Data URI を貼り付け...",
+  "invalidDataUriTitle": "無効な Data URI",
+  "detailsTitle": "詳細",
+  "mimeTypeLabel": "MIME タイプ",
+  "encodingLabel": "エンコード",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL エンコード",
+  "sizeLabel": "サイズ",
+  "fileNameLabel": "ファイル名",
+  "fileNamePlaceholder": "例: data.png",
+  "previewTitle": "プレビュー",
+  "decodedOutputTitle": "デコードしたファイル",
+  "decodedOutputEmptyDescription": "デコードしたファイルの詳細、プレビュー、ダウンロードがここに表示されます。",
+  "previewUnavailableDescription": "このファイル形式はブラウザでプレビューできません。元のファイルを確認するにはダウンロードしてください。",
+  "previewTruncatedLabel": "プレビューは切り詰められました",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadFileLabel": "ファイルをダウンロード",
+  "resetLabel": "サンプルをリセット"
+}

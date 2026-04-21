@@ -32,6 +32,7 @@
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",
     "@tool/current-network-time": "workspace:*",
+    "@tool/data-uri-to-file-converter": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",

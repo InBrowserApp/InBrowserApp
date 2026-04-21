@@ -8,9 +8,9 @@
   "decodedOutputLabel": "डिकोडेड आउटपुट",
   "decodedOutputEmptyDescription": "डिकोड किया गया पाठ यहां दिखाई देगा...",
   "downloadFileLabel": "फ़ाइल डाउनलोड करें",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
-  "loadSample": "Load sample",
+  "copyLabel": "कॉपी",
+  "copiedLabel": "कॉपी हुआ",
+  "loadSample": "उदाहरण लोड करें",
   "invalidBase85Title": "अमान्य Base85 पाठ",
   "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल",
   "previewTruncatedLabel": "प्रीव्यू संक्षिप्त किया गया"
