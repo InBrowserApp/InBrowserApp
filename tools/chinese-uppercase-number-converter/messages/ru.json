@@ -1,0 +1,21 @@
+{
+  "styleTitle": "Uppercase Style",
+  "simplifiedLabel": "Simplified",
+  "traditionalLabel": "Traditional",
+  "numberLabel": "Number",
+  "numberPlaceholder": "Enter number (e.g., 1234.56)",
+  "numberValid": "Valid number",
+  "numberInvalidFormat": "Only digits and one decimal point are allowed.",
+  "numberTooManyDecimals": "Use up to 2 decimal places.",
+  "numberOutOfRange": "Value exceeds the maximum range.",
+  "uppercaseLabel": "Chinese Uppercase",
+  "uppercasePlaceholder": "Enter Chinese uppercase amount",
+  "uppercaseValid": "Valid uppercase",
+  "uppercaseInvalidCharacters": "Only Chinese uppercase digits and units are allowed.",
+  "uppercaseInvalidFormat": "Invalid uppercase format.",
+  "uppercaseOutOfRange": "Value exceeds the maximum range.",
+  "copyNumberLabel": "Copy number",
+  "copyUppercaseLabel": "Copy uppercase",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset"
+}

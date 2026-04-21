@@ -29,6 +29,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "chinese-uppercase-number-converter": () =>
+    import("@tool/chinese-uppercase-number-converter/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),

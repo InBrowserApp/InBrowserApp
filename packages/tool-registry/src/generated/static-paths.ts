@@ -1842,6 +1842,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-uppercase-number-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "chmod-calculator",
     language: "ar",
   },
