@@ -1,0 +1,14 @@
+{
+  "file": "파일",
+  "dragOrClick": "클릭하거나 드래그하여 파일 업로드",
+  "clearFile": "파일 지우기",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "생성된 Data URI가 여기에 표시됩니다...",
+  "onlyOneFile": "하나의 파일만 업로드할 수 있습니다",
+  "readFailed": "파일을 읽지 못했습니다",
+  "unknownType": "알 수 없는 유형",
+  "fileSize": "파일 크기",
+  "mimeType": "MIME 유형",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

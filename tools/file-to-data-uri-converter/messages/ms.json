@@ -1,0 +1,14 @@
+{
+  "file": "Fail",
+  "dragOrClick": "Klik atau seret untuk muat naik fail",
+  "clearFile": "Kosongkan fail",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Data URI yang dijana akan dipaparkan di sini...",
+  "onlyOneFile": "Hanya satu fail boleh dimuat naik",
+  "readFailed": "Gagal membaca fail",
+  "unknownType": "Jenis tidak diketahui",
+  "fileSize": "Saiz fail",
+  "mimeType": "Jenis MIME",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

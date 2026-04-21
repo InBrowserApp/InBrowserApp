@@ -1,0 +1,4 @@
+{
+  "name": "文件转 Data URI 转换器",
+  "description": "将文件转换为 Data URI 字符串，便于嵌入 HTML、CSS 或 JSON，完全离线。"
+}

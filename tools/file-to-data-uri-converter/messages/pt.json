@@ -1,0 +1,14 @@
+{
+  "file": "Arquivo",
+  "dragOrClick": "Clique ou arraste para enviar um arquivo",
+  "clearFile": "Limpar arquivo",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "O Data URI gerado aparecerá aqui...",
+  "onlyOneFile": "Apenas um arquivo pode ser enviado",
+  "readFailed": "Falha ao ler o arquivo",
+  "unknownType": "Tipo desconhecido",
+  "fileSize": "Tamanho do arquivo",
+  "mimeType": "Tipo MIME",
+  "copyLabel": "Copiar",
+  "copiedLabel": "Copiado"
+}

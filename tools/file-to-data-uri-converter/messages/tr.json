@@ -1,0 +1,14 @@
+{
+  "file": "Dosya",
+  "dragOrClick": "Dosya yüklemek için tıklayın veya sürükleyin",
+  "clearFile": "Dosyayı temizle",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Oluşturulan Data URI burada görünecek...",
+  "onlyOneFile": "Yalnızca bir dosya yüklenebilir",
+  "readFailed": "Dosya okunamadı",
+  "unknownType": "Bilinmeyen tür",
+  "fileSize": "Dosya boyutu",
+  "mimeType": "MIME Tipi",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı"
+}

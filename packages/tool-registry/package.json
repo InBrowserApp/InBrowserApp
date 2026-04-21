@@ -39,6 +39,7 @@
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",
+    "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-entity-encoder-decoder": "workspace:*",

@@ -1,0 +1,14 @@
+{
+  "file": "File",
+  "dragOrClick": "Clicca o trascina per caricare un file",
+  "clearFile": "Cancella file",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Il Data URI generato apparirà qui...",
+  "onlyOneFile": "È possibile caricare solo un file",
+  "readFailed": "Impossibile leggere il file",
+  "unknownType": "Tipo sconosciuto",
+  "fileSize": "Dimensione file",
+  "mimeType": "Tipo MIME",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
+}

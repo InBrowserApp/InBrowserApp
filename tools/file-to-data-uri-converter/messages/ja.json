@@ -1,0 +1,14 @@
+{
+  "file": "ファイル",
+  "dragOrClick": "クリックまたはドラッグしてファイルをアップロード",
+  "clearFile": "ファイルをクリア",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "生成された Data URI がここに表示されます...",
+  "onlyOneFile": "アップロードできるファイルは1つだけです",
+  "readFailed": "ファイルの読み取りに失敗しました",
+  "unknownType": "不明な種類",
+  "fileSize": "ファイルサイズ",
+  "mimeType": "MIME タイプ",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました"
+}

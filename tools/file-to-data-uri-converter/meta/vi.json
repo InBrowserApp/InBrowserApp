@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi tệp sang Data URI",
+  "description": "Chuyển tệp thành chuỗi Data URI để nhúng vào HTML, CSS hoặc JSON. Hoạt động hoàn toàn ngoại tuyến."
+}

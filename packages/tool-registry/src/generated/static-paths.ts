@@ -2946,6 +2946,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "file-to-data-uri-converter",
+    language: "ar",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "de",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "en",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "es",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "fr",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "he",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "hi",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "id",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "it",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ja",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ko",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ms",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "nl",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "no",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "pl",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "pt",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ru",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "sv",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "th",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "tr",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "vi",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },
