@@ -1,12 +1,14 @@
 import { useEffect, useId, useState } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -153,12 +155,12 @@ function ChineseUppercaseNumberConverterClient({
 
   return (
     <div className="grid gap-6">
-      <Card>
+      <ToolPanelCard>
         <CardHeader className="border-b">
           <CardTitle>{messages.styleTitle}</CardTitle>
           <CardDescription>{messages.meta.description}</CardDescription>
         </CardHeader>
-        <CardContent>
+        <ToolPanelCardContent>
           <ToggleGroup
             type="single"
             value={variant}
@@ -173,16 +175,16 @@ function ChineseUppercaseNumberConverterClient({
               {messages.traditionalLabel}
             </ToggleGroupItem>
           </ToggleGroup>
-        </CardContent>
-      </Card>
+        </ToolPanelCardContent>
+      </ToolPanelCard>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card className="w-full">
+        <ToolPanelCard className="w-full">
           <CardHeader className="border-b">
             <CardTitle>{messages.numberLabel}</CardTitle>
             <CardDescription>{messages.numberPlaceholder}</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-4">
+          <ToolPanelCardContent className="gap-4">
             <Field
               data-invalid={getNumberError(numberState) ? true : undefined}
             >
@@ -205,8 +207,8 @@ function ChineseUppercaseNumberConverterClient({
               ) : null}
               <FieldError>{getNumberError(numberState, messages)}</FieldError>
             </Field>
-          </CardContent>
-          <CardFooter className="justify-between gap-3 border-t">
+          </ToolPanelCardContent>
+          <ToolPanelCardFooter className="justify-between gap-3 border-t">
             <ToolCopyButton
               value={numberInput}
               copyLabel={messages.copyNumberLabel}
@@ -222,15 +224,15 @@ function ChineseUppercaseNumberConverterClient({
               <RefreshCcw data-icon="inline-start" />
               {messages.resetLabel}
             </Button>
-          </CardFooter>
-        </Card>
+          </ToolPanelCardFooter>
+        </ToolPanelCard>
 
-        <Card className="w-full">
+        <ToolPanelCard className="w-full">
           <CardHeader className="border-b">
             <CardTitle>{messages.uppercaseLabel}</CardTitle>
             <CardDescription>{messages.uppercasePlaceholder}</CardDescription>
           </CardHeader>
-          <CardContent>
+          <ToolPanelCardContent className="gap-4">
             <Field
               className="flex flex-1 flex-col"
               data-invalid={
@@ -261,16 +263,16 @@ function ChineseUppercaseNumberConverterClient({
                 {getUppercaseError(uppercaseState, messages)}
               </FieldError>
             </Field>
-          </CardContent>
-          <CardFooter className="justify-end border-t">
+          </ToolPanelCardContent>
+          <ToolPanelCardFooter className="justify-end border-t">
             <ToolCopyButton
               value={uppercaseInput}
               copyLabel={messages.copyUppercaseLabel}
               copiedLabel={messages.copiedLabel}
               variant="ghost"
             />
-          </CardFooter>
-        </Card>
+          </ToolPanelCardFooter>
+        </ToolPanelCard>
       </div>
     </div>
   )
