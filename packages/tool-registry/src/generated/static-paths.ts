@@ -10122,6 +10122,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "user-agent-parser",
+    language: "ar",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "de",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "en",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "es",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "fr",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "he",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "hi",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "id",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "it",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ja",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ko",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ms",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "nl",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "no",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "pl",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "pt",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ru",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "sv",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "th",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "tr",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "vi",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "User-Agent-parser",
+  "description": "Analyserer User-Agent-strenger for å identifisere nettleser, operativsystem, enhet, motor og CPU. Fungerer offline."
+}

@@ -117,6 +117,7 @@
     "@tool/unicode-punycode-converter": "workspace:*",
     "@tool/unix-timestamp-converter": "workspace:*",
     "@tool/url-component-encoder-decoder": "workspace:*",
+    "@tool/user-agent-parser": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
