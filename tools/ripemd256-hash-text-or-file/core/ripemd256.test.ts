@@ -20,6 +20,14 @@ describe("hashRipemd256", () => {
       "960218501bf041fa6f1713112f1223b6bec3ee01bc78def1939cf33cbe1bb47e"
     )
   })
+
+  test("hashes a message that uses the long finalize padding path", async () => {
+    const digest = await hashRipemd256(new Blob(["a".repeat(56)]))
+
+    expect(digest.hex).toBe(
+      "d210e3e343f73334320d4b8f28fc8079ca06f30f0ba6f7baa8928a707ac45593"
+    )
+  })
 })
 
 describe("formatRipemd256Digest", () => {

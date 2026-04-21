@@ -29,7 +29,7 @@ type Ripemd256Digest = Readonly<{
   binary: string
 }>
 
-class Hasher32le {
+abstract class Hasher32le {
   protected readonly blockSizeInBytes = 64
   protected state = {
     message: "",
@@ -61,7 +61,7 @@ class Hasher32le {
     }
   }
 
-  protected processBlock(_block: number[]) {}
+  protected abstract processBlock(block: number[]): void
 
   protected addPaddingISO7816(length: number) {
     this.state.message += "\x80" + "\x00".repeat(Math.max(0, length - 1))
