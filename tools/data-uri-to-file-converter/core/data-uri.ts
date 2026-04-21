@@ -43,7 +43,8 @@ function parseDataUriPreview(input: string): DataUriPreviewResult {
     const previewKind = getPreviewKind(parsed.mediaType)
     const { textPreview, isPreviewTruncated } = getTextPreview(
       bytes,
-      previewKind
+      previewKind,
+      parsed.mimeType
     )
 
     return {
@@ -120,7 +121,7 @@ function decodeDataUri(parsed: ParsedDataUri): Uint8Array {
     return decodeBase64(parsed.data)
   }
 
-  return new TextEncoder().encode(decodeURIComponent(parsed.data))
+  return decodePercentEncodedBytes(parsed.data)
 }
 
 function getPreviewKind(mediaType: string): PreviewKind {
@@ -160,7 +161,42 @@ function decodeBase64(value: string) {
   return bytes
 }
 
-function getTextPreview(bytes: Uint8Array, previewKind: PreviewKind) {
+function decodePercentEncodedBytes(value: string) {
+  const bytes: number[] = []
+  const encoder = new TextEncoder()
+
+  for (let index = 0; index < value.length; ) {
+    if (value[index] === "%") {
+      const hex = value.slice(index + 1, index + 3)
+
+      if (!/^[\da-fA-F]{2}$/.test(hex)) {
+        throw new Error("Invalid percent-encoding")
+      }
+
+      bytes.push(Number.parseInt(hex, 16))
+      index += 3
+      continue
+    }
+
+    const codePoint = value.codePointAt(index)
+
+    if (codePoint === undefined) {
+      break
+    }
+
+    const chunk = String.fromCodePoint(codePoint)
+    bytes.push(...encoder.encode(chunk))
+    index += chunk.length
+  }
+
+  return new Uint8Array(bytes)
+}
+
+function getTextPreview(
+  bytes: Uint8Array,
+  previewKind: PreviewKind,
+  mimeType: string
+) {
   if (previewKind !== "text") {
     return {
       textPreview: "",
@@ -168,7 +204,7 @@ function getTextPreview(bytes: Uint8Array, previewKind: PreviewKind) {
     }
   }
 
-  const decoded = new TextDecoder().decode(bytes)
+  const decoded = decodeTextBytes(bytes, mimeType)
   const isPreviewTruncated = decoded.length > MAX_TEXT_PREVIEW_LENGTH
 
   return {
@@ -177,6 +213,37 @@ function getTextPreview(bytes: Uint8Array, previewKind: PreviewKind) {
       : decoded,
     isPreviewTruncated,
   }
+}
+
+function decodeTextBytes(bytes: Uint8Array, mimeType: string) {
+  const charset = getCharsetFromMimeType(mimeType)
+
+  if (charset) {
+    try {
+      return new TextDecoder(charset).decode(bytes)
+    } catch {
+      return new TextDecoder().decode(bytes)
+    }
+  }
+
+  return new TextDecoder().decode(bytes)
+}
+
+function getCharsetFromMimeType(mimeType: string) {
+  const parameters = mimeType.split(";").slice(1)
+
+  for (const parameter of parameters) {
+    const [name = "", ...rest] = parameter.split("=")
+
+    if (name.trim().toLowerCase() !== "charset") {
+      continue
+    }
+
+    const value = rest.join("=").trim().replace(/^"|"$/g, "")
+    return value.length > 0 ? value : null
+  }
+
+  return null
 }
 
 function isTextLikeMediaType(mediaType: string) {

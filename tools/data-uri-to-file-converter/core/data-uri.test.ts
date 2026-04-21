@@ -66,6 +66,11 @@ describe("decodeDataUri", () => {
     expect(new TextDecoder().decode(decodeDataUri(parsed))).toBe("Hello world")
   })
 
+  test("preserves percent-encoded raw bytes for non-base64 payloads", () => {
+    const parsed = parseDataUri("data:application/octet-stream,%FF%00A")
+    expect(Array.from(decodeDataUri(parsed))).toEqual([255, 0, 65])
+  })
+
   test("decodes base64 with whitespace", () => {
     const parsed = parseDataUri("data:text/plain;base64,SGV s\nbG8=")
     expect(new TextDecoder().decode(decodeDataUri(parsed))).toBe("Hello")
@@ -106,6 +111,19 @@ describe("parseDataUriPreview", () => {
     expect(preview.previewKind).toBe("text")
     expect(preview.isPreviewTruncated).toBe(true)
     expect(preview.textPreview.length).toBe(2003)
+  })
+
+  test("uses the declared charset for text previews", () => {
+    const preview = parseDataUriPreview(
+      "data:text/plain;charset=iso-8859-1,%E9"
+    )
+
+    expect(preview.state).toBe("decoded")
+    if (preview.state !== "decoded") {
+      throw new Error("Expected decoded preview")
+    }
+
+    expect(preview.textPreview).toBe("é")
   })
 })
 
