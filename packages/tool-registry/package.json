@@ -30,6 +30,7 @@
     "@tool/chmod-calculator": "workspace:*",
     "@tool/color-contrast-checker": "workspace:*",
     "@tool/color-converter": "workspace:*",
+    "@tool/color-picker": "workspace:*",
     "@tool/cookie-parser": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",

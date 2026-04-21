@@ -1,0 +1,4 @@
+{
+  "name": "Bộ Chọn Màu",
+  "description": "Lấy màu từ màn hình hoặc hình ảnh. Lấy mẫu pixel và sao chép nhanh các giá trị HEX, RGB, HSL, HSV và CMYK."
+}
