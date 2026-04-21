@@ -1,0 +1,4 @@
+{
+  "name": "Whirlpool-hash tekst eller fil",
+  "description": "Generer Whirlpool-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål"
+}

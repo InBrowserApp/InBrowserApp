@@ -129,6 +129,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
+  "whirlpool-hash-text-or-file": () =>
+    import("@tool/whirlpool-hash-text-or-file/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
   "xxhash-xxh32-hash-text-or-file": () =>
     import("@tool/xxhash-xxh32-hash-text-or-file/page"),

@@ -8742,6 +8742,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },
