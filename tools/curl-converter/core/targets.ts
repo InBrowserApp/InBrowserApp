@@ -98,7 +98,7 @@ function wrapFetchWithAsyncAwait(code: string): string {
       responseIndex += 1
       const responseName =
         responseIndex === 1 ? "response" : `response${responseIndex}`
-      const indent = line.match(/^\s*/)?.[0] ?? ""
+      const indent = line.slice(0, line.length - line.trimStart().length)
       const withoutSemicolon = trimmed.replace(/;$/, "")
       return `${indent}const ${responseName} = await ${withoutSemicolon}`
     })
