@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "html-color-names",
+    language: "ar",
+  },
+  {
+    slug: "html-color-names",
+    language: "de",
+  },
+  {
+    slug: "html-color-names",
+    language: "en",
+  },
+  {
+    slug: "html-color-names",
+    language: "es",
+  },
+  {
+    slug: "html-color-names",
+    language: "fr",
+  },
+  {
+    slug: "html-color-names",
+    language: "he",
+  },
+  {
+    slug: "html-color-names",
+    language: "hi",
+  },
+  {
+    slug: "html-color-names",
+    language: "id",
+  },
+  {
+    slug: "html-color-names",
+    language: "it",
+  },
+  {
+    slug: "html-color-names",
+    language: "ja",
+  },
+  {
+    slug: "html-color-names",
+    language: "ko",
+  },
+  {
+    slug: "html-color-names",
+    language: "ms",
+  },
+  {
+    slug: "html-color-names",
+    language: "nl",
+  },
+  {
+    slug: "html-color-names",
+    language: "no",
+  },
+  {
+    slug: "html-color-names",
+    language: "pl",
+  },
+  {
+    slug: "html-color-names",
+    language: "pt",
+  },
+  {
+    slug: "html-color-names",
+    language: "ru",
+  },
+  {
+    slug: "html-color-names",
+    language: "sv",
+  },
+  {
+    slug: "html-color-names",
+    language: "th",
+  },
+  {
+    slug: "html-color-names",
+    language: "tr",
+  },
+  {
+    slug: "html-color-names",
+    language: "vi",
+  },
+  {
+    slug: "html-color-names",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-color-names",
+    language: "zh-TW",
+  },
+  {
     slug: "html-entity-encoder-decoder",
     language: "ar",
   },

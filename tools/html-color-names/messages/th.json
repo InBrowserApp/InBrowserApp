@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "ค้นหาตามชื่อสีหรือค่า HEX...",
+  "all": "ทั้งหมด",
+  "red": "แดง",
+  "orange": "ส้ม",
+  "yellow": "เหลือง",
+  "green": "เขียว",
+  "cyan": "ไซแอน",
+  "blue": "น้ำเงิน",
+  "purple": "ม่วง",
+  "pink": "ชมพู",
+  "brown": "น้ำตาล",
+  "gray": "เทา",
+  "white": "ขาว",
+  "swatch": "สี",
+  "name": "ชื่อ",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "resetLabel": "รีเซ็ต",
+  "noResultsTitle": "ไม่พบสีที่ตรงกัน"
+}

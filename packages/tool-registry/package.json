@@ -43,6 +43,7 @@
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
+    "@tool/html-color-names": "workspace:*",
     "@tool/html-entity-encoder-decoder": "workspace:*",
     "@tool/http-status-code-lookup": "workspace:*",
     "@tool/iban-validator": "workspace:*",
