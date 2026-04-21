@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHAKE256 (FIPS 202) Teks atau Fail",
+  "description": "Hasilkan hash SHAKE256 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data."
+}

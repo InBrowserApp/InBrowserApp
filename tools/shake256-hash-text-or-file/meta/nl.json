@@ -1,0 +1,4 @@
+{
+  "name": "SHAKE256 (FIPS 202)-hash tekst of bestand",
+  "description": "Genereer SHAKE256-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit."
+}
