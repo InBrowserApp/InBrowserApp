@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích User-Agent",
+  "description": "Phân tích chuỗi User-Agent để nhận diện trình duyệt, hệ điều hành, thiết bị, engine và CPU. Hoạt động ngoại tuyến."
+}

@@ -150,6 +150,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
+  "user-agent-parser": () => import("@tool/user-agent-parser/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),

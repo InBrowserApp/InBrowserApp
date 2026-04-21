@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur d’User-Agent",
+  "description": "Analyse les chaînes User-Agent pour identifier le navigateur, l’OS, l’appareil, le moteur et le CPU. Fonctionne hors ligne."
+}

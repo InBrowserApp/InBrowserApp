@@ -1,0 +1,4 @@
+{
+  "name": "User-Agent-parser",
+  "description": "Parseert User-Agent-strings om browser, besturingssysteem, apparaat, engine en CPU te identificeren. Werkt offline."
+}

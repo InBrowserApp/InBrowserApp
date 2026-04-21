@@ -1,0 +1,4 @@
+{
+  "name": "User-Agent Ayrıştırıcı",
+  "description": "User-Agent dizelerini analiz ederek tarayıcı, işletim sistemi, cihaz, motor ve CPU bilgilerini belirler. Çevrimdışı çalışır."
+}
