@@ -94,13 +94,15 @@ describe("FileToDataUriConverterClient", () => {
     })
 
     await waitFor(() => {
-      expect(
-        screen.getByDisplayValue("data:text/plain;base64,SGVsbG8=")
-      ).toBeTruthy()
+      expect(screen.getByLabelText(messages.dataUri)).toBeTruthy()
+      expect(screen.getByText("data:text/plain;base64,SGVsbG8=")).toBeTruthy()
     })
 
     expect(screen.getAllByText("hello.txt").length).toBeGreaterThan(0)
     expect(screen.getAllByText("text/plain").length).toBeGreaterThan(0)
+    expect(
+      screen.getByRole("button", { name: messages.copyLabel })
+    ).toBeTruthy()
   })
 
   test("shows an error when multiple files are provided", () => {

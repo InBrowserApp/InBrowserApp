@@ -4,6 +4,7 @@ import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
+  ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import {
   CardDescription,
@@ -17,7 +18,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
 import { FileText } from "@workspace/ui/icons"
 
 import { formatBytes } from "../core/data-uri"
@@ -60,21 +61,14 @@ function FileToDataUriResultCard({
               />
             </section>
 
-            <section className="flex flex-wrap items-center justify-end gap-3">
-              <ToolCopyButton
-                value={analysis.dataUri}
-                copyLabel={messages.copyLabel}
-                copiedLabel={messages.copiedLabel}
-              />
-            </section>
-
-            <Textarea
+            <ScrollArea
               aria-label={messages.dataUri}
-              className="min-h-72 flex-1 resize-none font-mono text-xs leading-5"
-              readOnly
-              spellCheck={false}
-              value={analysis.dataUri}
-            />
+              className="h-80 min-h-0 rounded-xl border border-border/70 bg-muted/10"
+            >
+              <pre className="min-h-full min-w-0 p-4 font-mono text-xs leading-5 break-all whitespace-pre-wrap text-foreground">
+                {analysis.dataUri}
+              </pre>
+            </ScrollArea>
           </>
         ) : (
           <Empty className="min-h-64 flex-1 border-0 p-0">
@@ -88,6 +82,15 @@ function FileToDataUriResultCard({
           </Empty>
         )}
       </ToolPanelCardContent>
+      {analysis ? (
+        <ToolPanelCardFooter className="justify-end gap-3 border-t">
+          <ToolCopyButton
+            value={analysis.dataUri}
+            copyLabel={messages.copyLabel}
+            copiedLabel={messages.copiedLabel}
+          />
+        </ToolPanelCardFooter>
+      ) : null}
     </ToolPanelCard>
   )
 }
