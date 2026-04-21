@@ -1,9 +1,26 @@
-## What are Chinese uppercase numbers?
+## 中国語の大写数字とは何ですか？
 
-Chinese uppercase numerals are used in finance to prevent tampering. They use special capital digits like 壹贰叁 and fixed units.
+中国語の大写金額は、改ざんを防ぐために請求書、領収書、銀行書類
+で使われる正式な表記です。通常の数字の代わりに、壹、贰、叁、拾、
+佰、仟のような金融用の漢字を使います。
 
-Amounts are typically written with 元/角/分 and can include negative values and two decimal places.
+このコンバーターは双方向で動作します。通常の数値を人民元形式の
+大写金額に変換することも、大写金額を数値に戻すこともできます。
+負の値、固定の元/角/分単位、小数第2位までに対応しています。
 
-### Simplified vs Traditional
+### 一般的な表記ルール
 
-Simplified uses 贰/叁/陆/万/亿, while Traditional uses 貳/參/陸/萬/億.
+完全な金額表記には、通常、整数部分、元の単位、そして必要に応じ
+て角と分で書かれる小数部分が含まれます。整数金額は整で終わるこ
+とが多く、零は曖昧さを避けるために必要な場所にだけ入ります。
+
+たとえば `1024.50` は、簡体字出力では `壹仟零贰拾肆元伍角`、繁体
+字出力では `壹仟零貳拾肆元伍角` と表記できます。
+
+### 簡体字と繁体字
+
+簡体字出力では 贰、叁、陆、万、亿 などを使います。繁体字出力で
+は 貳、參、陸、萬、億 を使いますが、金額表記の構造は同じです。
+
+必要な文書の表記基準に合うスタイルを選び、そのまま契約書、請求
+書、会計フォームに貼り付けて使えます。
