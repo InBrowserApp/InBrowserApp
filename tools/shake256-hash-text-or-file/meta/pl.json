@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHAKE256 (FIPS 202) tekstu lub pliku",
+  "description": "Generuj hashe SHAKE256 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych."
+}

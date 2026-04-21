@@ -11475,6 +11475,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "shake256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake256",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE256 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE256 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE256 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE256-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE256 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE256 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE256 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE256 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE256 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE256 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE256 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE256 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE256 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE256 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE256 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE256 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE256 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE256 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE256 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE256 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE256-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE256 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE256-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE256 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE256 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE256 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE256 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE256 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE256 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE256-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE256 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE256 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE256 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE256 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE256 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE256 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE256 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE256 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE256 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE256 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
+      },
+    },
+  },
+  {
     slug: "slug-generator",
     category: "web",
     icon: "globe",
@@ -26172,6 +26304,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SHAKE128 (FIPS 202) 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SHAKE128 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
+      },
+    },
+  },
+  "shake256-hash-text-or-file": {
+    slug: "shake256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake256",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE256 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE256 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE256 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE256-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE256 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE256 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE256 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE256 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE256 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE256 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE256 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE256 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE256 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE256 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE256 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE256 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE256 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE256 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE256 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE256 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE256-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE256 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE256-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE256 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE256 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE256 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE256 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE256 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE256 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE256-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE256 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE256 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE256 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE256 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE256 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE256 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE256 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE256 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE256 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE256 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
       },
     },
   },
