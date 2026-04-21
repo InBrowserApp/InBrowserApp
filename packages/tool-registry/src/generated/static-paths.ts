@@ -5890,6 +5890,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "my-ip-address",
+    language: "ar",
+  },
+  {
+    slug: "my-ip-address",
+    language: "de",
+  },
+  {
+    slug: "my-ip-address",
+    language: "en",
+  },
+  {
+    slug: "my-ip-address",
+    language: "es",
+  },
+  {
+    slug: "my-ip-address",
+    language: "fr",
+  },
+  {
+    slug: "my-ip-address",
+    language: "he",
+  },
+  {
+    slug: "my-ip-address",
+    language: "hi",
+  },
+  {
+    slug: "my-ip-address",
+    language: "id",
+  },
+  {
+    slug: "my-ip-address",
+    language: "it",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ja",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ko",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ms",
+  },
+  {
+    slug: "my-ip-address",
+    language: "nl",
+  },
+  {
+    slug: "my-ip-address",
+    language: "no",
+  },
+  {
+    slug: "my-ip-address",
+    language: "pl",
+  },
+  {
+    slug: "my-ip-address",
+    language: "pt",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ru",
+  },
+  {
+    slug: "my-ip-address",
+    language: "sv",
+  },
+  {
+    slug: "my-ip-address",
+    language: "th",
+  },
+  {
+    slug: "my-ip-address",
+    language: "tr",
+  },
+  {
+    slug: "my-ip-address",
+    language: "vi",
+  },
+  {
+    slug: "my-ip-address",
+    language: "zh-CN",
+  },
+  {
+    slug: "my-ip-address",
+    language: "zh-TW",
+  },
+  {
     slug: "nanoid-generator",
     language: "ar",
   },

@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "דליפת WebRTC",
+  "unableToGetIp": "לא ניתן לקבל IP",
+  "hostname": "שם מארח",
+  "isp": "ספק שירותי אינטרנט",
+  "ipOrganization": "ארגון IP",
+  "asn": "ASN",
+  "asnOrganization": "ארגון ASN",
+  "location": "מיקום",
+  "country": "מדינה",
+  "timezone": "אזור זמן",
+  "webrtcDescription": "ממשק נוסף וכתובות מועמדים מקומיות שנחשפו במהלך משא ומתן WebRTC.",
+  "unableToGetIpDescription": "הבדיקה לא החזירה כתובת ציבורית. בדוק את הגדרות החיבור, ה-VPN, ה-proxy או הפרטיות שלך ונסה שוב.",
+  "fetchingIp": "שואב כתובת IP",
+  "fetchingIpDescription": "חיפוש הכתובת הציבורית ופרטי הרשת שלך מספקים מרובים.",
+  "copyIp": "העתק IP",
+  "copied": "מוּעֲתָק",
+  "ipv4Description": "כתובת IPv4 ציבורית גלויה כעת לאתרים וממשקי API.",
+  "ipv6Description": "כתובת IPv6 ציבורית גלויה כאשר הרשת שלך תומכת ב-IPv6 מקורי או במנהור."
+}
