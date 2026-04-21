@@ -1842,6 +1842,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cookie-parser",
+    language: "ar",
+  },
+  {
+    slug: "cookie-parser",
+    language: "de",
+  },
+  {
+    slug: "cookie-parser",
+    language: "en",
+  },
+  {
+    slug: "cookie-parser",
+    language: "es",
+  },
+  {
+    slug: "cookie-parser",
+    language: "fr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "he",
+  },
+  {
+    slug: "cookie-parser",
+    language: "hi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "id",
+  },
+  {
+    slug: "cookie-parser",
+    language: "it",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ja",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ko",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ms",
+  },
+  {
+    slug: "cookie-parser",
+    language: "nl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "no",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pt",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ru",
+  },
+  {
+    slug: "cookie-parser",
+    language: "sv",
+  },
+  {
+    slug: "cookie-parser",
+    language: "th",
+  },
+  {
+    slug: "cookie-parser",
+    language: "tr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "vi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },

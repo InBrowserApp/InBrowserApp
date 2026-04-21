@@ -1,0 +1,4 @@
+{
+  "name": "쿠키 파서",
+  "description": "Cookie 및 Set-Cookie 헤더를 구조화된 JSON으로 파싱해 확인합니다."
+}

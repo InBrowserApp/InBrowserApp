@@ -1,0 +1,4 @@
+{
+  "name": "Analizador de Cookies",
+  "description": "Analiza encabezados Cookie y Set-Cookie en JSON estructurado para inspección."
+}
