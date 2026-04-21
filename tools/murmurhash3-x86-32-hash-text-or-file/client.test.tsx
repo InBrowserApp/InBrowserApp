@@ -200,7 +200,9 @@ describe("MurmurHash3HashTextOrFileClient", () => {
     })
 
     await waitFor(() => {
-      expect(screen.getAllByText(messages.seedInvalid).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(messages.seedInvalid).length).toBeGreaterThan(
+        0
+      )
     })
   })
 })

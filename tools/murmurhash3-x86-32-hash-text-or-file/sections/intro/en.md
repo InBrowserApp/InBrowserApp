@@ -3,6 +3,7 @@
 MurmurHash3 is an extremely fast non-cryptographic hash algorithm that focuses on speed and performance while maintaining good distribution properties. MurmurHash3 x86 32-bit is the 32-bit variant that produces a 32-bit (4-byte) hash value, typically displayed as an 8-character hexadecimal number.
 
 **Key characteristics:**
+
 - **Extremely fast**: Optimized for speed, much faster than cryptographic hash functions
 - **Deterministic**: The same input always produces the same hash
 - **Good distribution**: Provides excellent hash distribution for hash tables
@@ -11,6 +12,7 @@ MurmurHash3 is an extremely fast non-cryptographic hash algorithm that focuses o
 - **Platform optimized**: Uses SIMD instructions when available for maximum speed
 
 **Common uses:**
+
 - Hash tables and data structures
 - File integrity checks (non-security)
 - Data deduplication
