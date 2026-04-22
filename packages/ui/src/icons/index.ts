@@ -29,6 +29,7 @@ export {
   Network,
   Pause,
   Play,
+  Printer,
   RefreshCcw,
   Search,
   Sparkles,

@@ -51,12 +51,17 @@ describe("MarkdownToHtmlConverterClient", () => {
   test("shows an empty state before markdown is entered", () => {
     render(<MarkdownToHtmlConverterClient messages={messages} />)
 
-    expect(screen.getByText("No HTML yet")).toBeDefined()
+    expect(screen.getAllByText("No HTML yet")).toHaveLength(2)
 
     const downloadButton = screen.getByRole("button", {
       name: "Download HTML",
     }) as HTMLButtonElement
     expect(downloadButton.disabled).toBe(true)
+
+    const printButton = screen.getByRole("button", {
+      name: "Print HTML",
+    }) as HTMLButtonElement
+    expect(printButton.disabled).toBe(true)
   })
 
   test("loads the sample markdown and generates downloadable html", async () => {

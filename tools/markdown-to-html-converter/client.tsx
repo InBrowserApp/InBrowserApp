@@ -10,8 +10,9 @@ import {
 
 import { DEFAULT_SAMPLE_MARKDOWN, STORAGE_KEYS } from "./client/constants"
 import type { MarkdownToHtmlMessages } from "./client/types"
+import { HtmlOutputCard } from "./components/html-output-card"
 import { MarkdownInputCard } from "./components/markdown-input-card"
-import { RenderedOutputCard } from "./components/rendered-output-card"
+import { PreviewCard } from "./components/preview-card"
 import {
   buildPreviewDocument,
   getTextMetrics,
@@ -145,28 +146,35 @@ function MarkdownToHtmlConverterClient({
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)]">
-      <MarkdownInputCard
-        messages={messages}
-        markdown={markdown}
-        metrics={inputMetrics}
-        textareaId={textareaId}
-        fileInputRef={fileInputRef}
-        onMarkdownChange={setMarkdown}
-        onFileChange={(event) => {
-          void handleFileChange(event)
-        }}
-        onLoadSample={handleLoadSample}
-        onReset={handleReset}
-      />
+    <div className="grid gap-6">
+      <div className="grid gap-6 xl:grid-cols-2 xl:items-stretch">
+        <MarkdownInputCard
+          messages={messages}
+          markdown={markdown}
+          metrics={inputMetrics}
+          textareaId={textareaId}
+          fileInputRef={fileInputRef}
+          onMarkdownChange={setMarkdown}
+          onFileChange={(event) => {
+            void handleFileChange(event)
+          }}
+          onLoadSample={handleLoadSample}
+          onReset={handleReset}
+        />
 
-      <RenderedOutputCard
+        <HtmlOutputCard
+          messages={messages}
+          html={html}
+          metrics={outputMetrics}
+          downloadUrl={downloadUrl}
+        />
+      </div>
+
+      <PreviewCard
         messages={messages}
         html={html}
-        metrics={outputMetrics}
         previewDocument={previewDocument}
         sanitize={sanitize}
-        downloadUrl={downloadUrl}
         onSanitizeChange={setSanitize}
         onPrint={handlePrint}
       />

@@ -1,10 +1,13 @@
 import type { ChangeEvent, RefObject } from "react"
 
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -38,7 +41,7 @@ function MarkdownInputCard({
   onReset,
 }: MarkdownInputCardProps) {
   return (
-    <Card className="border border-border/70 bg-gradient-to-b from-card via-card to-muted/20">
+    <ToolPanelCard className="border border-border/70 bg-gradient-to-b from-card via-card to-muted/20">
       <CardHeader className="gap-4 border-b">
         <div className="flex flex-col gap-1.5">
           <CardTitle>{messages.markdownLabel}</CardTitle>
@@ -55,7 +58,7 @@ function MarkdownInputCard({
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-4">
+      <ToolPanelCardContent className="gap-4">
         <Textarea
           id={textareaId}
           aria-label={messages.markdownLabel}
@@ -65,37 +68,32 @@ function MarkdownInputCard({
           onChange={(event) => {
             onMarkdownChange(event.target.value)
           }}
-          className="min-h-[28rem] resize-y border-border/70 bg-background/80 font-mono text-sm leading-6 [tab-size:2]"
+          className="min-h-[28rem] flex-1 resize-y border-border/70 bg-background/80 font-mono text-sm leading-6 [tab-size:2]"
         />
+      </ToolPanelCardContent>
 
-        <div className="flex flex-wrap gap-2">
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              fileInputRef.current?.click()
-            }}
-          >
-            <FileText data-icon="inline-start" />
-            {messages.importFromFileLabel}
-          </Button>
+      <ToolPanelCardFooter className="flex flex-wrap justify-start gap-3 border-t">
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={() => {
+            fileInputRef.current?.click()
+          }}
+        >
+          <FileText data-icon="inline-start" />
+          {messages.importFromFileLabel}
+        </Button>
 
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            onClick={onLoadSample}
-          >
-            <Sparkles data-icon="inline-start" />
-            {messages.loadSampleLabel}
-          </Button>
+        <Button type="button" variant="ghost" size="sm" onClick={onLoadSample}>
+          <Sparkles data-icon="inline-start" />
+          {messages.loadSampleLabel}
+        </Button>
 
-          <Button type="button" variant="ghost" size="sm" onClick={onReset}>
-            <RefreshCcw data-icon="inline-start" />
-            {messages.resetLabel}
-          </Button>
-        </div>
+        <Button type="button" variant="ghost" size="sm" onClick={onReset}>
+          <RefreshCcw data-icon="inline-start" />
+          {messages.resetLabel}
+        </Button>
 
         <input
           ref={fileInputRef}
@@ -105,8 +103,8 @@ function MarkdownInputCard({
           className="sr-only"
           onChange={onFileChange}
         />
-      </CardContent>
-    </Card>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
   )
 }
 
