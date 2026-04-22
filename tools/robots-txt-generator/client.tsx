@@ -61,102 +61,108 @@ function RobotsTxtGeneratorClient({ messages }: RobotsTxtGeneratorClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.9fr)]">
-      <div className="flex min-h-0 flex-col gap-6">
-        <PresetsCard
-          messages={messages}
-          onApplyPreset={(preset) => {
-            updateState((currentState) => applyPreset(currentState, preset))
-          }}
-        />
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.9fr)] xl:items-stretch">
+      <div className="flex min-h-0 flex-col gap-6 xl:h-[calc(100vh-16rem)]">
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] xl:items-start">
+          <PresetsCard
+            messages={messages}
+            onApplyPreset={(preset) => {
+              updateState((currentState) => applyPreset(currentState, preset))
+            }}
+          />
 
-        <SiteSettingsCard
-          messages={messages}
-          advanced={state.advanced}
-          host={state.host}
-          sitemaps={state.sitemaps}
-          onAdvancedChange={(advanced) => {
-            updateState((currentState) => ({
-              ...currentState,
-              advanced,
-            }))
-          }}
-          onHostChange={(host) => {
-            updateState((currentState) => ({
-              ...currentState,
-              host,
-            }))
-          }}
-          onSitemapsChange={(sitemaps) => {
-            updateState((currentState) => ({
-              ...currentState,
-              sitemaps: [...sitemaps],
-            }))
-          }}
-        />
+          <SiteSettingsCard
+            messages={messages}
+            advanced={state.advanced}
+            host={state.host}
+            sitemaps={state.sitemaps}
+            onAdvancedChange={(advanced) => {
+              updateState((currentState) => ({
+                ...currentState,
+                advanced,
+              }))
+            }}
+            onHostChange={(host) => {
+              updateState((currentState) => ({
+                ...currentState,
+                host,
+              }))
+            }}
+            onSitemapsChange={(sitemaps) => {
+              updateState((currentState) => ({
+                ...currentState,
+                sitemaps: [...sitemaps],
+              }))
+            }}
+          />
+        </div>
 
-        <GroupsCard
-          messages={messages}
-          advanced={state.advanced}
-          groups={state.groups}
-          onAddGroup={() => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups: [...currentState.groups, createGroup()],
-            }))
-          }}
-          onGroupCrawlDelayChange={(groupId, crawlDelay) => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups: currentState.groups.map((group) =>
-                group.id === groupId ? { ...group, crawlDelay } : group
-              ),
-            }))
-          }}
-          onGroupRemove={(groupId) => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups:
-                currentState.groups.length <= 1
-                  ? currentState.groups
-                  : currentState.groups.filter((group) => group.id !== groupId),
-            }))
-          }}
-          onGroupRulesChange={(groupId, rules) => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups: currentState.groups.map((group) =>
-                group.id === groupId ? { ...group, rules: [...rules] } : group
-              ),
-            }))
-          }}
-          onGroupUserAgentsAdd={(groupId, nextUserAgents) => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups: currentState.groups.map((group) =>
-                group.id === groupId
-                  ? {
-                      ...group,
-                      userAgents: appendUniqueUserAgents(
-                        group.userAgents,
-                        nextUserAgents
+        <div className="min-h-0 flex-1">
+          <GroupsCard
+            messages={messages}
+            advanced={state.advanced}
+            groups={state.groups}
+            onAddGroup={() => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups: [...currentState.groups, createGroup()],
+              }))
+            }}
+            onGroupCrawlDelayChange={(groupId, crawlDelay) => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups: currentState.groups.map((group) =>
+                  group.id === groupId ? { ...group, crawlDelay } : group
+                ),
+              }))
+            }}
+            onGroupRemove={(groupId) => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups:
+                  currentState.groups.length <= 1
+                    ? currentState.groups
+                    : currentState.groups.filter(
+                        (group) => group.id !== groupId
                       ),
-                    }
-                  : group
-              ),
-            }))
-          }}
-          onGroupUserAgentsChange={(groupId, userAgents) => {
-            updateState((currentState) => ({
-              ...currentState,
-              groups: currentState.groups.map((group) =>
-                group.id === groupId
-                  ? { ...group, userAgents: [...userAgents] }
-                  : group
-              ),
-            }))
-          }}
-        />
+              }))
+            }}
+            onGroupRulesChange={(groupId, rules) => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups: currentState.groups.map((group) =>
+                  group.id === groupId ? { ...group, rules: [...rules] } : group
+                ),
+              }))
+            }}
+            onGroupUserAgentsAdd={(groupId, nextUserAgents) => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups: currentState.groups.map((group) =>
+                  group.id === groupId
+                    ? {
+                        ...group,
+                        userAgents: appendUniqueUserAgents(
+                          group.userAgents,
+                          nextUserAgents
+                        ),
+                      }
+                    : group
+                ),
+              }))
+            }}
+            onGroupUserAgentsChange={(groupId, userAgents) => {
+              updateState((currentState) => ({
+                ...currentState,
+                groups: currentState.groups.map((group) =>
+                  group.id === groupId
+                    ? { ...group, userAgents: [...userAgents] }
+                    : group
+                ),
+              }))
+            }}
+          />
+        </div>
       </div>
 
       <OutputCard

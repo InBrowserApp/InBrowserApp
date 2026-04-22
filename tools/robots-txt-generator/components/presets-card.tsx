@@ -2,14 +2,12 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
-import { TriangleAlert } from "@workspace/ui/icons"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 
 import type { RobotsTxtGeneratorMessages } from "../client/types"
 import type { RobotsPresetKey } from "../core/robots"
@@ -24,14 +22,16 @@ function PresetsCard({ messages, onApplyPreset }: PresetsCardProps) {
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.presets}</CardTitle>
+        <CardDescription className="space-y-1 text-sm leading-6">
+          <span className="block font-medium text-foreground">
+            {messages.securityNoticeTitle}
+          </span>
+          <span className="block text-muted-foreground">
+            {messages.securityNotice}
+          </span>
+        </CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4">
-        <Alert>
-          <TriangleAlert />
-          <AlertTitle>{messages.securityNoticeTitle}</AlertTitle>
-          <AlertDescription>{messages.securityNotice}</AlertDescription>
-        </Alert>
-
+      <ToolPanelCardContent className="gap-3">
         <div className="flex flex-wrap gap-2">
           <Button
             type="button"
