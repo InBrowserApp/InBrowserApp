@@ -11,6 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "dompurify": "catalog:",
+    "highlight.js": "catalog:",
     "marked": "catalog:"
   },
   "peerDependencies": {

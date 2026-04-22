@@ -2511,6 +2511,9 @@ importers:
       dompurify:
         specifier: 'catalog:'
         version: 3.4.1
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
       marked:
         specifier: 'catalog:'
         version: 16.4.2

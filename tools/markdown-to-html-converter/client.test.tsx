@@ -70,7 +70,11 @@ describe("MarkdownToHtmlConverterClient", () => {
     fireEvent.click(screen.getByRole("button", { name: "Load sample" }))
 
     await waitFor(() => {
-      expect(screen.getByText("HTML source")).toBeDefined()
+      expect(
+        screen
+          .getByRole("region", { name: "Rendered HTML" })
+          .querySelector(".hljs")
+      ).toBeTruthy()
       expect(
         (
           screen.getByRole("textbox", {

@@ -167,6 +167,8 @@ function MarkdownToHtmlConverterClient({
           html={html}
           metrics={outputMetrics}
           downloadUrl={downloadUrl}
+          sanitize={sanitize}
+          onSanitizeChange={setSanitize}
         />
       </div>
 
@@ -174,8 +176,6 @@ function MarkdownToHtmlConverterClient({
         messages={messages}
         html={html}
         previewDocument={previewDocument}
-        sanitize={sanitize}
-        onSanitizeChange={setSanitize}
         onPrint={handlePrint}
       />
     </div>
