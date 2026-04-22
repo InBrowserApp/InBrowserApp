@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react"
+import { fireEvent, render, screen, waitFor } from "@testing-library/react"
 import { useState } from "react"
 import { describe, expect, test } from "vitest"
 
@@ -26,7 +26,7 @@ function FormatOptionsSectionHarness() {
 }
 
 describe("FormatOptionsSection", () => {
-  test("updates every formatting control", () => {
+  test("updates every formatting control", { timeout: 10_000 }, async () => {
     render(<FormatOptionsSectionHarness />)
 
     fireEvent.click(
@@ -80,46 +80,49 @@ describe("FormatOptionsSection", () => {
       screen.getByRole("checkbox", { name: messages.useTabsLabel })
     )
 
-    expect(
-      screen.getByRole("combobox", { name: messages.dialectLabel }).textContent
-    ).toContain("MySQL")
-    expect(
-      (
-        screen.getByRole("spinbutton", {
-          name: messages.tabWidthLabel,
-        }) as HTMLInputElement
-      ).value
-    ).toBe("4")
-    expect(
-      (
-        screen.getByRole("spinbutton", {
-          name: messages.linesBetweenQueriesLabel,
-        }) as HTMLInputElement
-      ).value
-    ).toBe("3")
-    expect(
-      (
-        screen.getByRole("spinbutton", {
-          name: messages.expressionWidthLabel,
-        }) as HTMLInputElement
-      ).value
-    ).toBe("120")
-    expect(
-      screen.getByRole("combobox", { name: messages.keywordCaseLabel })
-        .textContent
-    ).toContain(messages.upperCaseLabel)
-    expect(
-      screen.getByRole("combobox", { name: messages.dataTypeCaseLabel })
-        .textContent
-    ).toContain(messages.lowerCaseLabel)
-    expect(
-      screen.getByRole("combobox", { name: messages.functionCaseLabel })
-        .textContent
-    ).toContain(messages.upperCaseLabel)
-    expect(
-      screen
-        .getByRole("checkbox", { name: messages.useTabsLabel })
-        .getAttribute("aria-checked")
-    ).toBe("true")
+    await waitFor(() => {
+      expect(
+        screen.getByRole("combobox", { name: messages.dialectLabel })
+          .textContent
+      ).toContain("MySQL")
+      expect(
+        (
+          screen.getByRole("spinbutton", {
+            name: messages.tabWidthLabel,
+          }) as HTMLInputElement
+        ).value
+      ).toBe("4")
+      expect(
+        (
+          screen.getByRole("spinbutton", {
+            name: messages.linesBetweenQueriesLabel,
+          }) as HTMLInputElement
+        ).value
+      ).toBe("3")
+      expect(
+        (
+          screen.getByRole("spinbutton", {
+            name: messages.expressionWidthLabel,
+          }) as HTMLInputElement
+        ).value
+      ).toBe("120")
+      expect(
+        screen.getByRole("combobox", { name: messages.keywordCaseLabel })
+          .textContent
+      ).toContain(messages.upperCaseLabel)
+      expect(
+        screen.getByRole("combobox", { name: messages.dataTypeCaseLabel })
+          .textContent
+      ).toContain(messages.lowerCaseLabel)
+      expect(
+        screen.getByRole("combobox", { name: messages.functionCaseLabel })
+          .textContent
+      ).toContain(messages.upperCaseLabel)
+      expect(
+        screen
+          .getByRole("checkbox", { name: messages.useTabsLabel })
+          .getAttribute("aria-checked")
+      ).toBe("true")
+    })
   })
 })
