@@ -102,11 +102,37 @@ describe("buildSitemapXml", () => {
     })
   })
 
+  test("reports an invalid location when a URL cannot be parsed", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [createUrlEntryInput({ loc: "http://[" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-url-location",
+      index: 0,
+    })
+  })
+
   test("reports invalid priorities outside the sitemap range", () => {
     expect(
       buildSitemapXml({
         ...DEFAULT_SITEMAP_GENERATOR_STATE,
         urlEntries: [createUrlEntryInput({ loc: "/", priority: "1.2" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-priority",
+      index: 0,
+    })
+  })
+
+  test("reports invalid priorities that are not finite numbers", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [createUrlEntryInput({ loc: "/", priority: "Infinity" })],
       })
     ).toEqual({
       state: "error",
@@ -122,7 +148,6 @@ describe("buildSitemapXml", () => {
       sitemapEntries: [
         createSitemapEntryInput({
           loc: "https://example.com/sitemaps/pages.xml",
-          lastmod: "2026-04-20",
         }),
         createSitemapEntryInput(),
       ],
@@ -133,6 +158,31 @@ describe("buildSitemapXml", () => {
       entryCount: 1,
       xml: expect.stringContaining("<sitemapindex"),
     })
+
+    if (result.state !== "success") {
+      throw new Error("expected sitemap xml")
+    }
+
+    expect(result.xml).not.toContain("<lastmod>")
+  })
+
+  test("includes sitemap index lastmod values when provided", () => {
+    const result = buildSitemapXml({
+      ...createPresetState("index"),
+      autoJoin: false,
+      sitemapEntries: [
+        createSitemapEntryInput({
+          loc: "https://example.com/sitemaps/pages.xml",
+          lastmod: "2026-04-20",
+        }),
+      ],
+    })
+
+    if (result.state !== "success") {
+      throw new Error("expected sitemap xml")
+    }
+
+    expect(result.xml).toContain("<lastmod>2026-04-20</lastmod>")
   })
 
   test("reports invalid sitemap index locations", () => {
@@ -147,6 +197,29 @@ describe("buildSitemapXml", () => {
       errorCode: "invalid-sitemap-location",
       index: 0,
     })
+  })
+
+  test("reports an invalid base URL for sitemap index joins", () => {
+    expect(
+      buildSitemapXml({
+        ...createPresetState("index"),
+        baseUrl: "",
+        sitemapEntries: [createSitemapEntryInput({ loc: "/sitemap.xml" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-base-url",
+      index: 0,
+    })
+  })
+
+  test("returns an empty result when every sitemap index row is blank", () => {
+    expect(
+      buildSitemapXml({
+        ...createPresetState("index"),
+        sitemapEntries: [createSitemapEntryInput()],
+      })
+    ).toEqual({ state: "empty" })
   })
 })
 
