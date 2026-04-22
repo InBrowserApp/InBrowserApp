@@ -214,4 +214,4 @@ export {
   updateHexAlpha,
   updateHexColorRgb,
 }
-export type { RGBA, ShadowConfig }
+export type { ShadowConfig }

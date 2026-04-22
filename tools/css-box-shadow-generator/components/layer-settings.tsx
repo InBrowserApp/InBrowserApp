@@ -9,6 +9,7 @@ import { Slider } from "@workspace/ui/components/ui/slider"
 import { Switch } from "@workspace/ui/components/ui/switch"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { ALPHA_RANGE } from "../client/constants"
 import {
   getAlphaPercentage,
   getOpaqueHexColor,
@@ -235,8 +236,8 @@ function LayerSettings({
           <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_5.5rem] sm:items-center">
             <Slider
               data-testid="alpha-slider"
-              max={100}
-              min={0}
+              max={ALPHA_RANGE.max}
+              min={ALPHA_RANGE.min}
               onValueChange={(nextValue) => {
                 onUpdateLayer(activeLayer.id, {
                   color: updateHexAlpha(
@@ -252,8 +253,8 @@ function LayerSettings({
               data-testid="alpha-input"
               id="alpha-input"
               inputMode="numeric"
-              max={100}
-              min={0}
+              max={ALPHA_RANGE.max}
+              min={ALPHA_RANGE.min}
               onChange={(event) => {
                 const nextValue = Number(event.target.value)
 
