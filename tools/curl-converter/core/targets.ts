@@ -251,8 +251,6 @@ function getDownloadFilename(id: string): string {
 
 export {
   type CurlConverterRuntimeKey,
-  type CurlTargetConfig,
-  type CurlTargetGroup,
   defaultTargetId,
   getDownloadFilename,
   getTargetConfig,
