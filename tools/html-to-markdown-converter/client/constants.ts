@@ -29,4 +29,4 @@ const DEFAULT_UI_STATE = {
   codeBlockStyle: DEFAULT_HTML_TO_MARKDOWN_OPTIONS.codeBlockStyle,
 } as const
 
-export { DEFAULT_HTML, DEFAULT_UI_STATE, STORAGE_KEYS }
+export { DEFAULT_UI_STATE, STORAGE_KEYS }

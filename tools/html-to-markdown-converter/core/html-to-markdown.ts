@@ -85,20 +85,11 @@ function convertHtmlToMarkdown(
 }
 
 export {
-  BULLET_LIST_MARKER_VALUES,
-  CODE_BLOCK_STYLE_VALUES,
   DEFAULT_HTML_TO_MARKDOWN_OPTIONS,
-  HEADING_STYLE_VALUES,
   convertHtmlToMarkdown,
   getHtmlToMarkdownErrorMessage,
   isBulletListMarker,
   isCodeBlockStyle,
   isHeadingStyle,
 }
-export type {
-  BulletListMarker,
-  CodeBlockStyle,
-  HeadingStyle,
-  HtmlToMarkdownOptions,
-  HtmlToMarkdownResult,
-}
+export type { BulletListMarker, CodeBlockStyle, HeadingStyle }
