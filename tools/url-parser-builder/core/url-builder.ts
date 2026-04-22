@@ -67,7 +67,7 @@ function parseUrlToDraft(urlString: string): UrlParseResult {
         password: decodePart(url.password),
         hostname: url.hostname,
         port: url.port,
-        pathname: decodePart(url.pathname) || "/",
+        pathname: decodePart(url.pathname),
         fragment: decodePart(url.hash.replace(/^#/, "")),
         queryEntries: [...url.searchParams.entries()].map(([key, value]) => ({
           key,

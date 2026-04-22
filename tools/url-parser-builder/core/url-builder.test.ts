@@ -105,6 +105,19 @@ describe("url-builder core", () => {
         username: "",
         password: "",
         hostname: "example.com",
+        port: "abc",
+        pathname: "/",
+        fragment: "",
+        queryEntries: [],
+      })
+    ).toEqual({ ok: false, error: "invalid-port" })
+
+    expect(
+      buildUrlFromDraft({
+        protocol: "https",
+        username: "",
+        password: "",
+        hostname: "example.com",
         port: "70000",
         pathname: "/",
         fragment: "",
