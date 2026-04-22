@@ -6442,6 +6442,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "markdown-previewer",
+    language: "ar",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "de",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "en",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "es",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "fr",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "he",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "hi",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "id",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "it",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "ja",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "ko",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "ms",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "nl",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "no",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "pl",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "pt",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "ru",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "sv",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "th",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "tr",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "vi",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "markdown-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "markdown-to-html-converter",
     language: "ar",
   },

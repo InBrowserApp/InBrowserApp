@@ -91,6 +91,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
+  "markdown-previewer": () => import("@tool/markdown-previewer/page"),
   "markdown-to-html-converter": () =>
     import("@tool/markdown-to-html-converter/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
