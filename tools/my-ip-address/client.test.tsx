@@ -134,9 +134,7 @@ describe("MyIpAddressClient", () => {
       expect(clipboardWriteTextMock).toHaveBeenCalledWith("203.0.113.10")
     })
 
-    await waitFor(() => {
-      expect(screen.getByRole("button", { name: "Copied" })).toBeTruthy()
-    })
+    await screen.findByRole("button", { name: "Copied" })
   })
 
   test("shows fetching states before the lookups resolve", () => {

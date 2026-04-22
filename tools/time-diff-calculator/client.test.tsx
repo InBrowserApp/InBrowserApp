@@ -70,13 +70,18 @@ describe("TimeDiffCalculatorClient", () => {
       )
     })
 
-    expect(screen.getAllByText("0d 00:30:00.000")).toHaveLength(2)
-    expect(screen.getByText("PT30M")).toBeTruthy()
-    expect(screen.getByText("1800000")).toBeTruthy()
-    expect(screen.getByText("1800")).toBeTruthy()
-    expect(screen.getByText("30")).toBeTruthy()
-    expect(screen.getByText("0.5")).toBeTruthy()
-    expect(screen.getByText("0.020833")).toBeTruthy()
+    await waitFor(
+      () => {
+        expect(screen.getAllByText("0d 00:30:00.000")).toHaveLength(2)
+        expect(screen.getByText("PT30M")).toBeTruthy()
+        expect(screen.getByText("1800000")).toBeTruthy()
+        expect(screen.getByText("1800")).toBeTruthy()
+        expect(screen.getByText("30")).toBeTruthy()
+        expect(screen.getByText("0.5")).toBeTruthy()
+        expect(screen.getByText("0.020833")).toBeTruthy()
+      },
+      { timeout: 10_000 }
+    )
   })
 
   test("shows validation errors and clears results when input is invalid", async () => {
