@@ -1,4 +1,5 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
@@ -128,13 +129,16 @@ describe("MyIpAddressClient", () => {
 
     const copyButton = screen.getAllByRole("button", { name: "Copy IP" })[0]!
 
-    fireEvent.click(copyButton)
+    await act(async () => {
+      fireEvent.click(copyButton)
+      await Promise.resolve()
+    })
 
     await waitFor(() => {
       expect(clipboardWriteTextMock).toHaveBeenCalledWith("203.0.113.10")
     })
 
-    expect(screen.getByRole("button", { name: "Copied" })).toBeTruthy()
+    expect(await screen.findByRole("button", { name: "Copied" })).toBeTruthy()
   })
 
   test("shows fetching states before the lookups resolve", () => {

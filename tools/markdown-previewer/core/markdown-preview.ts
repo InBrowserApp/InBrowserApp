@@ -49,24 +49,10 @@ function buildMarkdownPreview(
   const toc: TocItem[] = []
   const renderer = new marked.Renderer()
 
-  renderer.heading = (token: Tokens.Heading | string, level?: number) => {
-    if (typeof token === "string") {
-      const plainText = extractHeadingText(token)
-      const headingLevel = level ?? 1
-      const id = createHeadingId(plainText)
-
-      toc.push({
-        id,
-        level: headingLevel,
-        text: plainText || untitledHeading,
-      })
-
-      return `<h${headingLevel} id="${id}">${token}</h${headingLevel}>`
-    }
-
+  renderer.heading = (token: Tokens.Heading) => {
     const plainText = extractHeadingText(token.text)
     const id = createHeadingId(plainText)
-    const inlineHtml = renderer.parser.parseInline(token.tokens ?? []) as string
+    const inlineHtml = renderer.parser.parseInline(token.tokens) as string
 
     toc.push({
       id,
