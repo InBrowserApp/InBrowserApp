@@ -234,7 +234,6 @@ function isValidPort(value: string) {
 }
 
 export {
-  URL_EXAMPLES,
   buildUrlFromDraft,
   describeUrl,
   getExampleUrl,
@@ -243,11 +242,9 @@ export {
 }
 export type {
   UrlBuildErrorCode,
-  UrlBuildResult,
   UrlDiagnostics,
   UrlDraft,
   UrlExampleKey,
   UrlParseErrorCode,
-  UrlParseResult,
   UrlQueryParam,
 }
