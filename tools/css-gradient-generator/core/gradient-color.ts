@@ -88,11 +88,4 @@ function formatColor(value: string, format: ColorFormat) {
   )
 }
 
-export {
-  clamp,
-  createId,
-  formatColor,
-  formatNumber,
-  hexToRgba,
-  normalizeHexColor,
-}
+export { clamp, createId, formatColor, formatNumber, normalizeHexColor }

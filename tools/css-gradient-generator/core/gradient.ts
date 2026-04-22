@@ -1,18 +1,13 @@
 import {
   BLEND_MODES,
   COLOR_SPACES,
-  DEFAULT_LAYER,
-  DEFAULT_STOPS,
-  GRADIENT_TYPES,
   RADIAL_SHAPES,
   RADIAL_SIZES,
 } from "./gradient-types"
 import {
   clamp,
-  createId,
   formatColor,
   formatNumber,
-  hexToRgba,
   normalizeHexColor,
 } from "./gradient-color"
 import {
@@ -31,7 +26,6 @@ import type {
   GradientLayer,
   GradientLayerSeed,
   GradientStop,
-  GradientStopSeed,
   GradientType,
   RadialShape,
   RadialSize,
@@ -159,9 +153,6 @@ function parseGradientConfig(value: string) {
 export {
   BLEND_MODES,
   COLOR_SPACES,
-  DEFAULT_LAYER,
-  DEFAULT_STOPS,
-  GRADIENT_TYPES,
   RADIAL_SHAPES,
   RADIAL_SIZES,
   addStop,
@@ -174,11 +165,9 @@ export {
   createBlendModeCss,
   createCssOutput,
   createGradientCss,
-  createId,
   createLayer,
   createStop,
   formatColor,
-  hexToRgba,
   normalizeHexColor,
   parseGradientConfig,
   randomizeLayer,
@@ -192,7 +181,6 @@ export type {
   GradientLayer,
   GradientLayerSeed,
   GradientStop,
-  GradientStopSeed,
   GradientType,
   RadialShape,
   RadialSize,
