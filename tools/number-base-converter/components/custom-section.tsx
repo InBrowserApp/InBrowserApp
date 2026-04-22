@@ -49,7 +49,10 @@ function CustomSection({
 
       <div className="grid gap-4 lg:grid-cols-[10rem_minmax(0,1fr)]">
         <div className="grid gap-2">
-          <Label htmlFor={baseValueId}>{valueLabel}</Label>
+          <div className="flex items-center justify-between gap-3">
+            <Label htmlFor={baseValueId}>{valueLabel}</Label>
+            <span aria-hidden="true" className="invisible h-9 shrink-0" />
+          </div>
           <Input
             id={baseValueId}
             type="number"
