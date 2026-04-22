@@ -37,6 +37,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-picker": () => import("@tool/color-picker/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
+  "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
