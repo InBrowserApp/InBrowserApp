@@ -5706,6 +5706,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "local-font-book",
+    language: "ar",
+  },
+  {
+    slug: "local-font-book",
+    language: "de",
+  },
+  {
+    slug: "local-font-book",
+    language: "en",
+  },
+  {
+    slug: "local-font-book",
+    language: "es",
+  },
+  {
+    slug: "local-font-book",
+    language: "fr",
+  },
+  {
+    slug: "local-font-book",
+    language: "he",
+  },
+  {
+    slug: "local-font-book",
+    language: "hi",
+  },
+  {
+    slug: "local-font-book",
+    language: "id",
+  },
+  {
+    slug: "local-font-book",
+    language: "it",
+  },
+  {
+    slug: "local-font-book",
+    language: "ja",
+  },
+  {
+    slug: "local-font-book",
+    language: "ko",
+  },
+  {
+    slug: "local-font-book",
+    language: "ms",
+  },
+  {
+    slug: "local-font-book",
+    language: "nl",
+  },
+  {
+    slug: "local-font-book",
+    language: "no",
+  },
+  {
+    slug: "local-font-book",
+    language: "pl",
+  },
+  {
+    slug: "local-font-book",
+    language: "pt",
+  },
+  {
+    slug: "local-font-book",
+    language: "ru",
+  },
+  {
+    slug: "local-font-book",
+    language: "sv",
+  },
+  {
+    slug: "local-font-book",
+    language: "th",
+  },
+  {
+    slug: "local-font-book",
+    language: "tr",
+  },
+  {
+    slug: "local-font-book",
+    language: "vi",
+  },
+  {
+    slug: "local-font-book",
+    language: "zh-CN",
+  },
+  {
+    slug: "local-font-book",
+    language: "zh-TW",
+  },
+  {
     slug: "lorem-ipsum-generator",
     language: "ar",
   },
