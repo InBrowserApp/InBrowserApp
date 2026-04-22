@@ -143,6 +143,15 @@ describe("business-days core", () => {
         }) as Date
       )
     ).toBe("2026-04-20")
+    expect(
+      toISODate(
+        shiftBusinessDays(new Date(2026, 3, 20), 2, {
+          weekendDays: new Set([0, 6]),
+          holidays: new Set<string>(),
+          includeStart: true,
+        }) as Date
+      )
+    ).toBe("2026-04-21")
   })
 
   test("returns the base date for zero offsets and rejects impossible shifts", () => {
