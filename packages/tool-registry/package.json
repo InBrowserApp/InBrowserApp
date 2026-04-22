@@ -29,6 +29,7 @@
     "@tool/case-converter": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",
+    "@tool/cidr-parser": "workspace:*",
     "@tool/color-contrast-checker": "workspace:*",
     "@tool/color-converter": "workspace:*",
     "@tool/color-picker": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "CIDR-parser",
+  "description": "Parse CIDR-notasjon for å få detaljert informasjon om IP-adresser og nettverk, støtter IPv4- og IPv6-formater. Få nettverksadresse, kringkastingsadresse og område med brukbare IPer øyeblikkelig"
+}

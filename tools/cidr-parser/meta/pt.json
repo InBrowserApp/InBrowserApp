@@ -1,0 +1,4 @@
+{
+  "name": "Parser CIDR",
+  "description": "Analise a notação CIDR para obter informações detalhadas sobre endereços IP e redes, suportando formatos IPv4 e IPv6. Obtenha instantaneamente endereço de rede, endereço de broadcast e faixa de IPs utilizáveis"
+}
