@@ -13089,6 +13089,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "text-diff",
+    category: "text",
+    icon: "file-text",
+    tags: ["text", "diff", "compare", "document", "code", "review"],
+    locales: {
+      ar: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      de: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      en: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      es: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      fr: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      he: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      hi: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      id: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      it: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ja: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ko: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ms: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      nl: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      no: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      pl: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      pt: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ru: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      sv: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      th: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      tr: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      vi: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      "zh-CN": {
+        name: "文本对比",
+        description:
+          "在浏览器中并排比较两份文本、查看逐行改动，并导出干净的统一 diff。",
+      },
+      "zh-TW": {
+        name: "文字比對",
+        description:
+          "在瀏覽器中並排比較兩份文本、查看逐行變更，並匯出乾淨的統一 diff。",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
