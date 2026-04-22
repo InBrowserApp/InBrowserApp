@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "name": "iCal 事件生成器",
+    "description": "创建包含时区、重复规则和提醒的 .ics 日历事件。"
+  },
+  "actions": {
+    "useSample": "使用示例",
+    "reset": "重置",
+    "copy": "复制 .ics",
+    "copied": "已复制",
+    "download": "下载 .ics",
+    "regenerateUid": "重新生成 UID",
+    "addReminder": "添加提醒",
+    "removeReminder": "移除"
+  },
+  "sample": {
+    "title": "发布复盘",
+    "location": "A 会议室",
+    "description": "确认时间安排、负责人和后续事项。"
+  },
+  "details": {
+    "title": "事件详情",
+    "description": "填写日历应用会显示的标题、备注和参考信息。",
+    "summaryLabel": "标题",
+    "summaryPlaceholder": "季度规划会议",
+    "locationLabel": "地点",
+    "urlLabel": "参考链接",
+    "notesLabel": "备注",
+    "notesPlaceholder": "议程、拨号信息或补充说明",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "时间安排",
+    "description": "选择事件时间范围、时区和导出模式。",
+    "allDayLabel": "全天",
+    "timeZoneLabel": "时区",
+    "outputModeLabel": "导出模式",
+    "outputUtcLabel": "UTC 日期时间",
+    "outputTzidLabel": "TZID 日期时间",
+    "startDateLabel": "开始日期",
+    "startTimeLabel": "开始时间",
+    "endDateLabel": "结束日期",
+    "endTimeLabel": "结束时间",
+    "allDayHint": "全天事件在表单中使用包含结束日的写法，导出到 ICS 时会转换成排他式结束日期。"
+  },
+  "recurrence": {
+    "title": "重复规则",
+    "description": "让事件按天、周、月或年重复。",
+    "frequencyLabel": "频率",
+    "noneLabel": "不重复",
+    "dailyLabel": "每天",
+    "weeklyLabel": "每周",
+    "monthlyLabel": "每月",
+    "yearlyLabel": "每年",
+    "intervalLabel": "重复间隔",
+    "weekdaysLabel": "星期",
+    "monthDayLabel": "每月第几天",
+    "monthLabel": "月份",
+    "endsLabel": "结束方式",
+    "neverLabel": "永不结束",
+    "afterCountLabel": "重复次数后结束",
+    "onDateLabel": "指定日期结束",
+    "countLabel": "出现次数",
+    "untilDateLabel": "结束日期",
+    "untilTimeLabel": "结束时间"
+  },
+  "reminders": {
+    "title": "提醒",
+    "description": "在事件开始前附加一个或多个显示提醒。",
+    "enabledLabel": "启用提醒",
+    "leadTimeLabel": "提前时间",
+    "minutesLabel": "分钟",
+    "hoursLabel": "小时",
+    "daysLabel": "天",
+    "weeksLabel": "周"
+  },
+  "output": {
+    "title": "ICS 输出",
+    "description": "预览最终下载的日历文件内容。",
+    "validation": {
+      "invalidStartDate": "请输入有效的开始日期。",
+      "invalidEndDate": "请输入有效的结束日期。",
+      "invalidStartTime": "请输入有效的开始时间。",
+      "invalidEndTime": "请输入有效的结束时间。",
+      "endBeforeStart": "结束时间必须晚于开始时间。",
+      "invalidUntilDate": "请输入有效的重复结束日期。",
+      "invalidUntilTime": "请输入有效的重复结束时间。"
+    }
+  }
+}

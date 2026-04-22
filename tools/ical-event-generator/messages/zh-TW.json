@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "name": "iCal 事件產生器",
+    "description": "建立包含時區、重複規則與提醒的 .ics 行事曆事件。"
+  },
+  "actions": {
+    "useSample": "使用範例",
+    "reset": "重設",
+    "copy": "複製 .ics",
+    "copied": "已複製",
+    "download": "下載 .ics",
+    "regenerateUid": "重新產生 UID",
+    "addReminder": "新增提醒",
+    "removeReminder": "移除"
+  },
+  "sample": {
+    "title": "發佈檢討",
+    "location": "A 會議室",
+    "description": "確認時間安排、負責人與後續事項。"
+  },
+  "details": {
+    "title": "事件詳細資料",
+    "description": "填寫行事曆應用程式會顯示的標題、備註與參考資訊。",
+    "summaryLabel": "標題",
+    "summaryPlaceholder": "季度規劃會議",
+    "locationLabel": "地點",
+    "urlLabel": "參考連結",
+    "notesLabel": "備註",
+    "notesPlaceholder": "議程、撥號資訊或補充說明",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "時間安排",
+    "description": "選擇事件時間範圍、時區與匯出模式。",
+    "allDayLabel": "全天",
+    "timeZoneLabel": "時區",
+    "outputModeLabel": "匯出模式",
+    "outputUtcLabel": "UTC 日期時間",
+    "outputTzidLabel": "TZID 日期時間",
+    "startDateLabel": "開始日期",
+    "startTimeLabel": "開始時間",
+    "endDateLabel": "結束日期",
+    "endTimeLabel": "結束時間",
+    "allDayHint": "全天事件在表單中使用包含最後一天的結束日，匯出到 ICS 時會轉成排他式結束日期。"
+  },
+  "recurrence": {
+    "title": "重複規則",
+    "description": "讓事件依天、週、月或年重複。",
+    "frequencyLabel": "頻率",
+    "noneLabel": "不重複",
+    "dailyLabel": "每天",
+    "weeklyLabel": "每週",
+    "monthlyLabel": "每月",
+    "yearlyLabel": "每年",
+    "intervalLabel": "重複間隔",
+    "weekdaysLabel": "星期",
+    "monthDayLabel": "每月第幾天",
+    "monthLabel": "月份",
+    "endsLabel": "結束方式",
+    "neverLabel": "永不結束",
+    "afterCountLabel": "重複次數後結束",
+    "onDateLabel": "指定日期結束",
+    "countLabel": "出現次數",
+    "untilDateLabel": "結束日期",
+    "untilTimeLabel": "結束時間"
+  },
+  "reminders": {
+    "title": "提醒",
+    "description": "在事件開始前附加一個或多個顯示提醒。",
+    "enabledLabel": "啟用提醒",
+    "leadTimeLabel": "提前時間",
+    "minutesLabel": "分鐘",
+    "hoursLabel": "小時",
+    "daysLabel": "天",
+    "weeksLabel": "週"
+  },
+  "output": {
+    "title": "ICS 輸出",
+    "description": "預覽最終下載的行事曆檔案內容。",
+    "validation": {
+      "invalidStartDate": "請輸入有效的開始日期。",
+      "invalidEndDate": "請輸入有效的結束日期。",
+      "invalidStartTime": "請輸入有效的開始時間。",
+      "invalidEndTime": "請輸入有效的結束時間。",
+      "endBeforeStart": "結束時間必須晚於開始時間。",
+      "invalidUntilDate": "請輸入有效的重複結束日期。",
+      "invalidUntilTime": "請輸入有效的重複結束時間。"
+    }
+  }
+}

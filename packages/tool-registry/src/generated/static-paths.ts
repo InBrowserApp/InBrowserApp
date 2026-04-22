@@ -3958,6 +3958,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ical-event-generator",
+    language: "ar",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "de",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "en",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "es",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "fr",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "he",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "hi",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "id",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "it",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "ja",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "ko",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "ms",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "nl",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "no",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "pl",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "pt",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "ru",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "sv",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "th",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "tr",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "vi",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ical-event-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
