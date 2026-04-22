@@ -18,6 +18,7 @@ import {
   SEARCH_ENGINE_USER_AGENTS,
   applyUserAgentPreset,
   buildRobotsTxt,
+  getMatchingPreset,
   getPresetGroups,
   parseLineList,
   serializeLineList,
@@ -51,7 +52,9 @@ function RobotsTxtGeneratorClient({ messages }: RobotsTxtGeneratorClientProps) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(draft))
   }, [draft])
 
-  const robotsContent = buildRobotsTxt(draftToRobotsState(draft))
+  const robotsState = draftToRobotsState(draft)
+  const robotsContent = buildRobotsTxt(robotsState)
+  const activePreset = getMatchingPreset(robotsState.groups)
 
   useEffect(() => {
     if (robotsContent.trim().length === 0) {
@@ -165,7 +168,11 @@ function RobotsTxtGeneratorClient({ messages }: RobotsTxtGeneratorClientProps) {
 
   return (
     <div className="grid gap-6">
-      <PresetsCard messages={messages} onApplyPreset={handleApplyPreset} />
+      <PresetsCard
+        messages={messages}
+        activePreset={activePreset}
+        onApplyPreset={handleApplyPreset}
+      />
       <SiteSettingsCard
         messages={messages}
         sitemapsText={draft.sitemapsText}

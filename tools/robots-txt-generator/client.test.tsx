@@ -86,14 +86,35 @@ describe("RobotsTxtGeneratorClient", () => {
     expect(downloadLink.getAttribute("href")).toBe("blob:robots")
   })
 
-  test("applies the allow-all preset", () => {
+  test("applies the allow-all preset and highlights it", () => {
     render(<RobotsTxtGeneratorClient messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: "Allow all" }))
+    fireEvent.click(screen.getByRole("radio", { name: "Allow all" }))
 
     const output = screen.getByLabelText("Output") as HTMLTextAreaElement
     expect(output.value).toContain("User-agent: *")
     expect(output.value.includes("Disallow:")).toBe(false)
+    expect(
+      screen
+        .getByRole("radio", { name: "Allow all" })
+        .getAttribute("data-state")
+    ).toBe("on")
+  })
+
+  test("clears preset highlight after manual changes diverge", () => {
+    render(<RobotsTxtGeneratorClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("radio", { name: "Allow all" }))
+    fireEvent.click(screen.getByRole("button", { name: "Add rule" }))
+    fireEvent.change(screen.getAllByPlaceholderText("/path/")[0], {
+      target: { value: "/private/" },
+    })
+
+    expect(
+      screen
+        .getByRole("radio", { name: "Allow all" })
+        .getAttribute("data-state")
+    ).toBe("off")
   })
 
   test("supports advanced settings and crawl delay", async () => {

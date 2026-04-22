@@ -2,56 +2,58 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { Button } from "@workspace/ui/components/ui/button"
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@workspace/ui/components/ui/toggle-group"
 
 import type { RobotsTxtGeneratorPageMessages } from "../client/types"
 import type { RobotsPreset } from "../core/robots"
 
 type PresetsCardProps = Readonly<{
   messages: RobotsTxtGeneratorPageMessages
+  activePreset: RobotsPreset | null
   onApplyPreset: (preset: RobotsPreset) => void
 }>
 
-function PresetsCard({ messages, onApplyPreset }: PresetsCardProps) {
+function PresetsCard({
+  messages,
+  activePreset,
+  onApplyPreset,
+}: PresetsCardProps) {
   return (
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.presets}</CardTitle>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
-        <div className="flex flex-wrap gap-3">
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              onApplyPreset("allowAll")
-            }}
-          >
+        <ToggleGroup
+          type="single"
+          value={activePreset ?? ""}
+          variant="outline"
+          size="sm"
+          className="flex w-full flex-wrap"
+          onValueChange={(value) => {
+            if (
+              value === "allowAll" ||
+              value === "disallowAll" ||
+              value === "blockAdmin"
+            ) {
+              onApplyPreset(value)
+            }
+          }}
+        >
+          <ToggleGroupItem value="allowAll" className="min-w-40 flex-1">
             {messages.presetAllowAll}
-          </Button>
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              onApplyPreset("disallowAll")
-            }}
-          >
+          </ToggleGroupItem>
+          <ToggleGroupItem value="disallowAll" className="min-w-40 flex-1">
             {messages.presetDisallowAll}
-          </Button>
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              onApplyPreset("blockAdmin")
-            }}
-          >
+          </ToggleGroupItem>
+          <ToggleGroupItem value="blockAdmin" className="min-w-40 flex-1">
             {messages.presetBlockAdmin}
-          </Button>
-        </div>
+          </ToggleGroupItem>
+        </ToggleGroup>
       </ToolPanelCardContent>
     </ToolPanelCard>
   )

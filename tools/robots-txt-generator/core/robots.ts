@@ -48,6 +48,12 @@ const AI_CRAWLER_USER_AGENTS = [
   "Applebot-Extended",
 ]
 
+const PRESET_ORDER: readonly RobotsPreset[] = [
+  "allowAll",
+  "disallowAll",
+  "blockAdmin",
+]
+
 let nextGroupId = 1
 
 function createGroupId() {
@@ -139,16 +145,88 @@ function applyUserAgentPreset(
   return mergeUniqueEntries(cleanedExisting, cleanedAdditions)
 }
 
-function getPresetGroups(preset: RobotsPreset): RobotsGroup[] {
+function getPresetGroupDefinition(
+  preset: RobotsPreset
+): Pick<RobotsGroup, "userAgents" | "rules"> {
   if (preset === "allowAll") {
-    return [createGroup({ rules: [] })]
+    return { userAgents: ["*"], rules: [] }
   }
 
   if (preset === "disallowAll") {
-    return [createGroup({ rules: [{ type: "disallow", path: "/" }] })]
+    return {
+      userAgents: ["*"],
+      rules: [{ type: "disallow", path: "/" }],
+    }
   }
 
-  return [createGroup({ rules: [{ type: "disallow", path: "/admin/" }] })]
+  return {
+    userAgents: ["*"],
+    rules: [{ type: "disallow", path: "/admin/" }],
+  }
+}
+
+function getPresetGroups(preset: RobotsPreset): RobotsGroup[] {
+  return [createGroup(getPresetGroupDefinition(preset))]
+}
+
+function normalizeUserAgents(userAgents: string[]): string[] {
+  const cleaned = userAgents
+    .map((agent) => agent.trim())
+    .filter((agent) => agent.length > 0)
+
+  return cleaned.length > 0 ? cleaned : ["*"]
+}
+
+function normalizeRules(rules: RobotsRule[]): RobotsRule[] {
+  return rules
+    .map((rule) => ({
+      type: rule.type,
+      path: rule.path.trim(),
+    }))
+    .filter((rule) => rule.path.length > 0)
+}
+
+function isSamePresetGroup(
+  group: RobotsGroup,
+  presetGroup: Pick<RobotsGroup, "userAgents" | "rules">
+): boolean {
+  const normalizedAgents = normalizeUserAgents(group.userAgents)
+  const normalizedPresetAgents = normalizeUserAgents(presetGroup.userAgents)
+  const normalizedRules = normalizeRules(group.rules)
+  const normalizedPresetRules = normalizeRules(presetGroup.rules)
+
+  return (
+    normalizedAgents.length === normalizedPresetAgents.length &&
+    normalizedRules.length === normalizedPresetRules.length &&
+    normalizedAgents.every(
+      (agent, index) => agent === normalizedPresetAgents[index]
+    ) &&
+    normalizedRules.every(
+      (rule, index) =>
+        rule.type === normalizedPresetRules[index]?.type &&
+        rule.path === normalizedPresetRules[index]?.path
+    )
+  )
+}
+
+function getMatchingPreset(groups: RobotsGroup[]): RobotsPreset | null {
+  if (groups.length !== 1) {
+    return null
+  }
+
+  const [group] = groups
+
+  if (group === undefined) {
+    return null
+  }
+
+  for (const preset of PRESET_ORDER) {
+    if (isSamePresetGroup(group, getPresetGroupDefinition(preset))) {
+      return preset
+    }
+  }
+
+  return null
 }
 
 function buildRobotsTxt(input: RobotsState): string {
@@ -221,6 +299,7 @@ export {
   buildRobotsTxt,
   createDefaultState,
   createGroup,
+  getMatchingPreset,
   getPresetGroups,
   mergeUniqueEntries,
   parseLineList,

@@ -5,6 +5,7 @@ import {
   buildRobotsTxt,
   createDefaultState,
   createGroup,
+  getMatchingPreset,
   getPresetGroups,
   mergeUniqueEntries,
   parseLineList,
@@ -70,6 +71,46 @@ describe("robots core helpers", () => {
     expect(getPresetGroups("blockAdmin")[0]?.rules).toEqual([
       { type: "disallow", path: "/admin/" },
     ])
+  })
+
+  test("matches presets from normalized groups", () => {
+    expect(getMatchingPreset(getPresetGroups("allowAll"))).toBe("allowAll")
+    expect(
+      getMatchingPreset([
+        {
+          id: "group-a",
+          userAgents: [],
+          rules: [{ type: "disallow", path: " /admin/ " }],
+          crawlDelay: 10,
+        },
+      ])
+    ).toBe("blockAdmin")
+    expect(
+      getMatchingPreset([
+        {
+          id: "group-b",
+          userAgents: ["Googlebot"],
+          rules: [],
+          crawlDelay: null,
+        },
+      ])
+    ).toBeNull()
+    expect(
+      getMatchingPreset([
+        {
+          id: "group-c",
+          userAgents: ["*"],
+          rules: [],
+          crawlDelay: null,
+        },
+        {
+          id: "group-d",
+          userAgents: ["Googlebot"],
+          rules: [],
+          crawlDelay: null,
+        },
+      ])
+    ).toBeNull()
   })
 
   test("builds robots.txt from the default state", () => {
