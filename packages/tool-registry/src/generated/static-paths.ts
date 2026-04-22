@@ -6442,6 +6442,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "number-base-converter",
+    language: "ar",
+  },
+  {
+    slug: "number-base-converter",
+    language: "de",
+  },
+  {
+    slug: "number-base-converter",
+    language: "en",
+  },
+  {
+    slug: "number-base-converter",
+    language: "es",
+  },
+  {
+    slug: "number-base-converter",
+    language: "fr",
+  },
+  {
+    slug: "number-base-converter",
+    language: "he",
+  },
+  {
+    slug: "number-base-converter",
+    language: "hi",
+  },
+  {
+    slug: "number-base-converter",
+    language: "id",
+  },
+  {
+    slug: "number-base-converter",
+    language: "it",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ja",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ko",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ms",
+  },
+  {
+    slug: "number-base-converter",
+    language: "nl",
+  },
+  {
+    slug: "number-base-converter",
+    language: "no",
+  },
+  {
+    slug: "number-base-converter",
+    language: "pl",
+  },
+  {
+    slug: "number-base-converter",
+    language: "pt",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ru",
+  },
+  {
+    slug: "number-base-converter",
+    language: "sv",
+  },
+  {
+    slug: "number-base-converter",
+    language: "th",
+  },
+  {
+    slug: "number-base-converter",
+    language: "tr",
+  },
+  {
+    slug: "number-base-converter",
+    language: "vi",
+  },
+  {
+    slug: "number-base-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "number-base-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "openapi-to-typescript-converter",
     language: "ar",
   },
