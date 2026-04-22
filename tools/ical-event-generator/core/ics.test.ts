@@ -19,6 +19,7 @@ describe("ics helpers", () => {
   })
 
   test("folds long lines with RFC-style continuations", () => {
+    expect(foldLine("Short line", 20)).toBe("Short line")
     expect(foldLine("A".repeat(80), 20)).toBe(
       "AAAAAAAAAAAAAAAAAAAA\r\n AAAAAAAAAAAAAAAAAAA\r\n AAAAAAAAAAAAAAAAAAA\r\n AAAAAAAAAAAAAAAAAAA\r\n AAA"
     )
@@ -49,7 +50,7 @@ describe("ics helpers", () => {
     expect(formatTrigger(0, "minutes")).toBe("")
   })
 
-  test("builds recurrence rules", () => {
+  test("builds recurrence rules for weekly and yearly events", () => {
     expect(
       buildRrule({
         frequency: "WEEKLY",
@@ -58,6 +59,43 @@ describe("ics helpers", () => {
         count: 8,
       })
     ).toBe("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,WE;COUNT=8")
+
+    expect(
+      buildRrule({
+        frequency: "YEARLY",
+        byMonthDay: 21,
+        byMonth: 4,
+        until: "20260430T000000Z",
+      })
+    ).toBe("FREQ=YEARLY;BYMONTHDAY=21;BYMONTH=4;UNTIL=20260430T000000Z")
+  })
+
+  test("builds minimal calendars for date-only and plain date-time events", () => {
+    const dateOnly = buildIcsCalendar({
+      uid: "date-only@inbrowser.app",
+      dtstamp: "20260421T160000Z",
+      dtstart: {
+        type: "date",
+        value: "20260421",
+      },
+    })
+
+    expect(dateOnly).toContain("DTSTART;VALUE=DATE:20260421")
+    expect(dateOnly).not.toContain("DTEND:")
+
+    const alarmOnly = buildIcsCalendar({
+      uid: "plain@inbrowser.app",
+      dtstamp: "20260421T160000Z",
+      dtstart: {
+        type: "date-time",
+        value: "20260421T160000Z",
+      },
+      alarms: [{ trigger: "-PT30M" }],
+    })
+
+    expect(alarmOnly).toContain("DTSTART:20260421T160000Z")
+    expect(alarmOnly).toContain("BEGIN:VALARM")
+    expect(alarmOnly).not.toContain("DESCRIPTION:")
   })
 
   test("builds complete calendar output", () => {

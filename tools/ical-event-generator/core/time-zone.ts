@@ -179,19 +179,43 @@ function combineDateAndTime(date: string, time: string): DateTimeParts | null {
   }
 }
 
-function toDateInputValue(timestampMs: number): string {
-  const date = new Date(timestampMs)
-  const year = String(date.getFullYear()).padStart(4, "0")
-  const month = String(date.getMonth() + 1).padStart(2, "0")
-  const day = String(date.getDate()).padStart(2, "0")
+function getInputValueParts(timestampMs: number, timeZone?: string) {
+  if (!timeZone) {
+    const date = new Date(timestampMs)
+
+    return {
+      year: date.getFullYear(),
+      month: date.getMonth() + 1,
+      day: date.getDate(),
+      hour: date.getHours(),
+      minute: date.getMinutes(),
+    }
+  }
+
+  const parts = getZonedParts(timestampMs, timeZone)
+
+  return {
+    year: parts.year,
+    month: parts.month,
+    day: parts.day,
+    hour: parts.hour,
+    minute: parts.minute,
+  }
+}
+
+function toDateInputValue(timestampMs: number, timeZone?: string): string {
+  const parts = getInputValueParts(timestampMs, timeZone)
+  const year = String(parts.year).padStart(4, "0")
+  const month = String(parts.month).padStart(2, "0")
+  const day = String(parts.day).padStart(2, "0")
 
   return `${year}-${month}-${day}`
 }
 
-function toTimeInputValue(timestampMs: number): string {
-  const date = new Date(timestampMs)
-  const hour = String(date.getHours()).padStart(2, "0")
-  const minute = String(date.getMinutes()).padStart(2, "0")
+function toTimeInputValue(timestampMs: number, timeZone?: string): string {
+  const parts = getInputValueParts(timestampMs, timeZone)
+  const hour = String(parts.hour).padStart(2, "0")
+  const minute = String(parts.minute).padStart(2, "0")
 
   return `${hour}:${minute}`
 }

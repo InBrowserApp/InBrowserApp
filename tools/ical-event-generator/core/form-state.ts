@@ -1,5 +1,6 @@
 import {
   isTimeZoneSupported,
+  parseDateInput,
   toDateInputValue,
   toTimeInputValue,
 } from "./time-zone"
@@ -148,11 +149,26 @@ function createBlankFormState(
   timeZone: string,
   uid = generateUid()
 ): IcalEventFormState {
+  const resolvedTimeZone = isTimeZoneSupported(timeZone) ? timeZone : "UTC"
   const roundedStart = roundToNextHalfHour(nowMs)
   const roundedEnd = roundedStart + 60 * 60 * 1000
-  const startDate = toDateInputValue(roundedStart)
-  const startWeekday =
-    WEEKDAY_VALUES[(new Date(roundedStart).getDay() + 6) % 7] ?? "MO"
+  const startDate = toDateInputValue(roundedStart, resolvedTimeZone)
+  const endDate = toDateInputValue(roundedEnd, resolvedTimeZone)
+  const startTime = toTimeInputValue(roundedStart, resolvedTimeZone)
+  const endTime = toTimeInputValue(roundedEnd, resolvedTimeZone)
+  const startDateParts = parseDateInput(startDate)!
+
+  const startWeekday = WEEKDAY_VALUES[
+    (new Date(
+      Date.UTC(
+        startDateParts.year,
+        startDateParts.month - 1,
+        startDateParts.day
+      )
+    ).getUTCDay() +
+      6) %
+      7
+  ] as (typeof WEEKDAY_VALUES)[number]
 
   return {
     title: "",
@@ -161,21 +177,21 @@ function createBlankFormState(
     description: "",
     uid,
     isAllDay: false,
-    timeZone: isTimeZoneSupported(timeZone) ? timeZone : "UTC",
+    timeZone: resolvedTimeZone,
     outputMode: "utc",
     startDate,
-    startTime: toTimeInputValue(roundedStart),
-    endDate: toDateInputValue(roundedEnd),
-    endTime: toTimeInputValue(roundedEnd),
+    startTime,
+    endDate,
+    endTime,
     recurrenceFrequency: "none",
     recurrenceInterval: 1,
     recurrenceWeekdays: [startWeekday],
-    recurrenceMonthDay: new Date(roundedStart).getDate(),
-    recurrenceMonth: new Date(roundedStart).getMonth() + 1,
+    recurrenceMonthDay: startDateParts.day,
+    recurrenceMonth: startDateParts.month,
     recurrenceEndMode: "never",
     recurrenceCount: 10,
     recurrenceUntilDate: startDate,
-    recurrenceUntilTime: toTimeInputValue(roundedEnd),
+    recurrenceUntilTime: endTime,
     remindersEnabled: false,
     reminders: [createReminder()],
   }
