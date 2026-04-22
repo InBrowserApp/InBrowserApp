@@ -50,10 +50,10 @@ function EditorCard({
   return (
     <ToolPanelCard>
       <CardHeader className="border-b">
-        <CardTitle>{messages.layersTitle}</CardTitle>
+        <CardTitle>{messages.meta.name}</CardTitle>
         <CardDescription>{messages.meta.description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6 lg:grid lg:grid-cols-[minmax(0,16rem)_minmax(0,1fr)]">
+      <ToolPanelCardContent className="gap-6">
         <LayerList
           activeLayerId={activeLayer.id}
           layers={layers}
@@ -63,15 +63,17 @@ function EditorCard({
           onRemoveLayer={onRemoveLayer}
           onSelectLayer={onSelectLayer}
         />
-        <LayerSettings
-          activeLayer={activeLayer}
-          blurRange={blurRange}
-          messages={messages}
-          offsetRange={offsetRange}
-          onUpdateLayer={onUpdateLayer}
-          spreadRange={spreadRange}
-          swatches={swatches}
-        />
+        <div className="rounded-[1.25rem] border border-border/70 bg-gradient-to-b from-muted/30 to-background p-4 sm:p-5">
+          <LayerSettings
+            activeLayer={activeLayer}
+            blurRange={blurRange}
+            messages={messages}
+            offsetRange={offsetRange}
+            onUpdateLayer={onUpdateLayer}
+            spreadRange={spreadRange}
+            swatches={swatches}
+          />
+        </div>
       </ToolPanelCardContent>
     </ToolPanelCard>
   )
