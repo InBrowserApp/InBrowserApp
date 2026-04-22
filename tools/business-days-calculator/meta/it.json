@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore di giorni lavorativi",
+  "description": "Conta i giorni lavorativi tra date e aggiunge o sottrae giorni lavorativi con weekend e festività personalizzati."
+}

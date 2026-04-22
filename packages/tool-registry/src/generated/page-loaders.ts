@@ -28,6 +28,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "business-days-calculator": () =>
+    import("@tool/business-days-calculator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),

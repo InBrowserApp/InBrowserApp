@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator dni roboczych",
+  "description": "Zlicza dni robocze między datami oraz dodaje lub odejmuje dni robocze z niestandardowymi weekendami i świętami."
+}
