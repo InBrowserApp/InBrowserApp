@@ -47,7 +47,7 @@ const HTML_ENTITY_MAP: Readonly<Record<string, string>> = {
 function stripHtmlTags(value: string) {
   return value
     .replace(/<[^>]*>/g, " ")
-    .replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (match) => HTML_ENTITY_MAP[match])
+    .replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (match) => HTML_ENTITY_MAP[match]!)
     .replace(/\s+/g, " ")
     .trim()
 }
