@@ -1,7 +1,7 @@
 import { marked, type Tokens } from "marked"
 
 import { EXPORT_BASE_STYLES, EXPORT_THEME_STYLES } from "./export-styles"
-import type { PreviewMode, PreviewTheme } from "./preview-options"
+import type { PreviewTheme } from "./preview-options"
 
 type TocItem = Readonly<{
   id: string
@@ -207,10 +207,4 @@ function createExportHtmlDocument({ title, html, theme }: ExportHtmlOptions) {
 }
 
 export { buildMarkdownPreview, createExportHtmlDocument, slugifyHeading }
-export type {
-  MarkdownPreviewResult,
-  PreviewMode,
-  PreviewStats,
-  PreviewTheme,
-  TocItem,
-}
+export type { PreviewStats, TocItem }
