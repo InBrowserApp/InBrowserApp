@@ -37,7 +37,7 @@ import {
 import { INPUT_STORAGE_KEY, SAMPLE_CURL, TARGET_STORAGE_KEY } from "./constants"
 import { HighlightedCode } from "./components/highlighted-code"
 import { TargetSelectCard } from "./components/target-select-card"
-import { convertCurlToTarget } from "./core/converter"
+import { convertCurlToTarget, type ConversionResult } from "./core/converter"
 import {
   defaultTargetId,
   getDownloadFilename,
@@ -46,6 +46,8 @@ import {
 import type { CurlConverterMessages } from "./types"
 
 type CurlConverterClientProps = Readonly<{ messages: CurlConverterMessages }>
+
+const EMPTY_RESULT: ConversionResult = { output: "", warnings: [] }
 
 function isKnownTarget(value: string) {
   return getTargetConfig(value) !== undefined
@@ -59,9 +61,10 @@ function CurlConverterClient({ messages }: CurlConverterClientProps) {
   const [targetId, setTargetId] = useState(defaultTargetId)
   const [curlInput, setCurlInput] = useState(SAMPLE_CURL)
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
+  const [result, setResult] = useState<ConversionResult>(EMPTY_RESULT)
+  const [hasHydratedState, setHasHydratedState] = useState(false)
 
   const deferredCurlInput = useDeferredValue(curlInput)
-  const result = convertCurlToTarget(deferredCurlInput, targetId)
   const selectedTarget = getTargetConfig(targetId)
 
   useEffect(() => {
@@ -80,25 +83,27 @@ function CurlConverterClient({ messages }: CurlConverterClientProps) {
     if (storedInput !== null) {
       setCurlInput(storedInput)
     }
+
+    setHasHydratedState(true)
   }, [])
 
   useEffect(() => {
     /* v8 ignore next */
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !hasHydratedState) {
       return
     }
 
     window.localStorage.setItem(TARGET_STORAGE_KEY, targetId)
-  }, [targetId])
+  }, [hasHydratedState, targetId])
 
   useEffect(() => {
     /* v8 ignore next */
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !hasHydratedState) {
       return
     }
 
     window.localStorage.setItem(INPUT_STORAGE_KEY, curlInput)
-  }, [curlInput])
+  }, [curlInput, hasHydratedState])
 
   useEffect(() => {
     if (downloadUrlRef.current) {
@@ -127,6 +132,26 @@ function CurlConverterClient({ messages }: CurlConverterClientProps) {
       }
     }
   }, [result.output])
+
+  useEffect(() => {
+    if (!hasHydratedState) {
+      return
+    }
+
+    let cancelled = false
+
+    void (async () => {
+      const nextResult = await convertCurlToTarget(deferredCurlInput, targetId)
+
+      if (!cancelled) {
+        setResult(nextResult)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [deferredCurlInput, hasHydratedState, targetId])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0]

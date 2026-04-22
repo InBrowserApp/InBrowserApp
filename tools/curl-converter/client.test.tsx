@@ -23,6 +23,7 @@ const mocks = vi.hoisted(() => {
       label: string
       extension: string
       highlightLanguage: string
+      runtimeKey: string
     }>
   }> = [
     {
@@ -33,6 +34,7 @@ const mocks = vi.hoisted(() => {
           label: "JavaScript (fetch)",
           extension: ".js",
           highlightLanguage: "javascript",
+          runtimeKey: "toJavaScriptWarn",
         },
       ],
     },
@@ -44,6 +46,7 @@ const mocks = vi.hoisted(() => {
           label: "Python (requests)",
           extension: ".py",
           highlightLanguage: "python",
+          runtimeKey: "toPythonWarn",
         },
       ],
     },
@@ -56,21 +59,23 @@ const mocks = vi.hoisted(() => {
         .flatMap((group) => group.options)
         .find((option) => option.id === id)
     ),
-    convertCurlToTarget: vi.fn((curlCommand: string, targetId: string) => {
-      if (!curlCommand.trim()) {
-        return { output: "", warnings: [] }
-      }
+    convertCurlToTarget: vi.fn(
+      async (curlCommand: string, targetId: string) => {
+        if (!curlCommand.trim()) {
+          return { output: "", warnings: [] }
+        }
 
-      if (curlCommand.includes("warn")) {
-        return { output: `warn:${targetId}`, warnings: ["[WARN] be careful"] }
-      }
+        if (curlCommand.includes("warn")) {
+          return { output: `warn:${targetId}`, warnings: ["[WARN] be careful"] }
+        }
 
-      if (curlCommand.includes("error")) {
-        return { output: "", warnings: [], error: "Failed to parse" }
-      }
+        if (curlCommand.includes("error")) {
+          return { output: "", warnings: [], error: "Failed to parse" }
+        }
 
-      return { output: `${targetId}:${curlCommand}`, warnings: [] }
-    }),
+        return { output: `${targetId}:${curlCommand}`, warnings: [] }
+      }
+    ),
   }
 })
 
@@ -199,44 +204,56 @@ afterEach(() => {
 })
 
 describe("CurlConverterClient", () => {
-  test("renders the default sample and output", () => {
+  test("renders the default sample and output", async () => {
     render(<CurlConverterClient messages={messages} />)
 
     expect(
       (screen.getByLabelText("cURL Command") as HTMLTextAreaElement).value
     ).toBe(sampleCurl)
-    expect(
-      screen.getByRole("region", { name: "Converted Code" }).textContent
-    ).toContain("javascript-fetch:curl -X POST")
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("region", { name: "Converted Code" }).textContent
+      ).toContain("javascript-fetch:curl -X POST")
+    })
   })
 
-  test("changes the target and updates output metadata", () => {
+  test("changes the target and updates output metadata", async () => {
     render(<CurlConverterClient messages={messages} />)
 
     fireEvent.click(screen.getByText("Python (requests)"))
 
-    expect(
-      screen.getByRole("region", { name: "Converted Code" }).textContent
-    ).toContain("python-requests:curl -X POST")
+    await waitFor(() => {
+      expect(
+        screen.getByRole("region", { name: "Converted Code" }).textContent
+      ).toContain("python-requests:curl -X POST")
+    })
+
     expect(
       screen.getByRole("link", { name: "Download" }).getAttribute("download")
     ).toBe("converted.py")
   })
 
-  test("shows warnings and errors", () => {
+  test("shows warnings and errors", async () => {
     render(<CurlConverterClient messages={messages} />)
 
     fireEvent.change(screen.getByLabelText("cURL Command"), {
       target: { value: "warn" },
     })
-    expect(screen.getByText("Warnings")).toBeTruthy()
-    expect(screen.getByText("[WARN] be careful")).toBeTruthy()
+
+    await waitFor(() => {
+      expect(screen.getByText("Warnings")).toBeTruthy()
+      expect(screen.getByText("[WARN] be careful")).toBeTruthy()
+    })
 
     fireEvent.change(screen.getByLabelText("cURL Command"), {
       target: { value: "error" },
     })
-    expect(screen.getByText("Errors")).toBeTruthy()
-    expect(screen.getByText("Failed to parse")).toBeTruthy()
+
+    await waitFor(() => {
+      expect(screen.getByText("Errors")).toBeTruthy()
+      expect(screen.getByText("Failed to parse")).toBeTruthy()
+    })
   })
 
   test("supports clearing and restoring the sample", () => {
@@ -270,7 +287,7 @@ describe("CurlConverterClient", () => {
     })
   })
 
-  test("restores stored target when it is valid", () => {
+  test("restores stored target when it is valid", async () => {
     window.localStorage.setItem(
       "tools:curl-converter:target",
       "python-requests"
@@ -278,9 +295,11 @@ describe("CurlConverterClient", () => {
 
     render(<CurlConverterClient messages={messages} />)
 
-    expect(mocks.getTargetConfig).toHaveBeenCalledWith("python-requests")
-    expect(
-      screen.getByRole("region", { name: "Converted Code" }).textContent
-    ).toContain("python-requests:curl -X POST")
+    await waitFor(() => {
+      expect(mocks.getTargetConfig).toHaveBeenCalledWith("python-requests")
+      expect(
+        screen.getByRole("region", { name: "Converted Code" }).textContent
+      ).toContain("python-requests:curl -X POST")
+    })
   })
 })

@@ -3,8 +3,8 @@ import { describe, expect, test } from "vitest"
 import { convertCurlToTarget } from "./converter"
 
 describe("curl converter integration", () => {
-  test("converts curl to javascript fetch with async wrapper", () => {
-    const result = convertCurlToTarget(
+  test("converts curl to javascript fetch with async wrapper", async () => {
+    const result = await convertCurlToTarget(
       "curl 'https://example.com'",
       "javascript-fetch"
     )
@@ -16,8 +16,8 @@ describe("curl converter integration", () => {
     )
   })
 
-  test("converts curl to python requests", () => {
-    const result = convertCurlToTarget(
+  test("converts curl to python requests", async () => {
+    const result = await convertCurlToTarget(
       "curl 'https://example.com'",
       "python-requests"
     )
@@ -26,8 +26,8 @@ describe("curl converter integration", () => {
     expect(result.output).toContain("requests")
   })
 
-  test("returns an error for an unknown target", () => {
-    const result = convertCurlToTarget(
+  test("returns an error for an unknown target", async () => {
+    const result = await convertCurlToTarget(
       "curl 'https://example.com'",
       "unknown-target"
     )

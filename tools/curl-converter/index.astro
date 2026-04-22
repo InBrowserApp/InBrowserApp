@@ -49,7 +49,7 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <CurlConverterClient client:only="react" messages={messages} />
+  <CurlConverterClient client:load messages={messages} />
 
   {
     IntroSection ? (
