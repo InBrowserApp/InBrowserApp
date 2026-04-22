@@ -4,12 +4,12 @@ export type IcsDateValue = Readonly<{
   tzid?: string
 }>
 
-export type IcsAlarm = Readonly<{
+type IcsAlarm = Readonly<{
   trigger: string
   description?: string
 }>
 
-export type IcsEvent = Readonly<{
+type IcsEvent = Readonly<{
   uid: string
   dtstamp: string
   summary?: string
@@ -22,13 +22,13 @@ export type IcsEvent = Readonly<{
   alarms?: readonly IcsAlarm[]
 }>
 
-export type IcsCalendarOptions = Readonly<{
+type IcsCalendarOptions = Readonly<{
   prodId?: string
   name?: string
   timeZone?: string
 }>
 
-export type RecurrenceRuleInput = Readonly<{
+type RecurrenceRuleInput = Readonly<{
   frequency: "DAILY" | "WEEKLY" | "MONTHLY" | "YEARLY"
   interval?: number
   byDay?: readonly string[]
