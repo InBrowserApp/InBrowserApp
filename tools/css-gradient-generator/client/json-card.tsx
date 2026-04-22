@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Download, TriangleAlert } from "@workspace/ui/icons"
+import { Download, FileJson2, TriangleAlert } from "@workspace/ui/icons"
 
 import type { CssGradientGeneratorMessages } from "../types"
 
@@ -33,8 +33,8 @@ function JsonCard({
   showError,
 }: JsonCardProps) {
   return (
-    <Card>
-      <CardHeader className="border-b">
+    <Card className="overflow-hidden">
+      <CardHeader className="gap-4 border-b">
         <CardTitle>{messages.jsonTitle}</CardTitle>
         <CardDescription>{messages.jsonSubtitle}</CardDescription>
       </CardHeader>
@@ -43,7 +43,7 @@ function JsonCard({
         <Textarea
           aria-label={messages.jsonTitle}
           readOnly
-          rows={8}
+          rows={6}
           value={serializedConfig}
         />
 
@@ -69,13 +69,16 @@ function JsonCard({
             onJsonInputChange(event.target.value)
           }}
           placeholder={messages.jsonPlaceholder}
-          rows={6}
+          rows={5}
           value={jsonInput}
         />
 
-        <Button onClick={onLoadJson} type="button" variant="outline">
-          {messages.loadJson}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button onClick={onLoadJson} type="button" variant="outline">
+            <FileJson2 data-icon="inline-start" />
+            {messages.loadJson}
+          </Button>
+        </div>
 
         {showError ? (
           <Alert variant="destructive">

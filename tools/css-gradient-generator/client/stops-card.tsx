@@ -11,7 +11,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Slider } from "@workspace/ui/components/ui/slider"
-import { TriangleAlert } from "@workspace/ui/icons"
+import { Trash2, TriangleAlert } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import {
@@ -70,7 +70,9 @@ function StopRow({
     <div
       className={cn(
         "grid gap-3 rounded-2xl border p-4 transition-colors",
-        active ? "border-primary bg-primary/5" : "border-border bg-card"
+        active
+          ? "border-primary bg-primary/5 shadow-sm"
+          : "border-border bg-card"
       )}
       onFocusCapture={onSelect}
       onPointerDown={onSelect}
@@ -132,6 +134,7 @@ function StopRow({
         </div>
 
         <Button onClick={onRemove} size="sm" type="button" variant="ghost">
+          <Trash2 data-icon="inline-start" />
           {messages.deleteStop}
         </Button>
       </div>
@@ -196,7 +199,7 @@ function StopsCard({
   }, [draggingStopId, onStopPositionChange])
 
   return (
-    <Card>
+    <Card className="overflow-hidden">
       <CardHeader className="gap-4 border-b">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="space-y-1">
@@ -204,7 +207,7 @@ function StopsCard({
             <CardDescription>{messages.trackHint}</CardDescription>
           </div>
 
-          <Button size="sm" onClick={onAddStop}>
+          <Button onClick={onAddStop} size="sm" type="button">
             {messages.addStop}
           </Button>
         </div>

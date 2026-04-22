@@ -91,7 +91,7 @@ function CssGradientGeneratorClient({
         </div>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-3">
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.28fr)_minmax(20rem,0.72fr)]">
         <OutputCard
           backgroundBlendDeclaration={editor.backgroundBlendDeclaration}
           backgroundDeclaration={editor.backgroundDeclaration}
@@ -103,25 +103,27 @@ function CssGradientGeneratorClient({
           onOutputFormatChange={editor.setOutputFormat}
           outputFormat={editor.outputFormat}
         />
-        <ExportCard
-          exportHeight={editor.exportHeight}
-          exportWidth={editor.exportWidth}
-          messages={messages}
-          onExportPng={editor.exportPng}
-          onExportHeightChange={editor.setExportHeight}
-          onExportWidthChange={editor.setExportWidth}
-          showError={editor.showExportError}
-          svgDownloadUrl={editor.svgDownloadUrl}
-        />
-        <JsonCard
-          jsonDownloadUrl={editor.jsonDownloadUrl}
-          jsonInput={editor.jsonInput}
-          messages={messages}
-          onJsonInputChange={editor.setJsonInput}
-          onLoadJson={editor.loadJson}
-          serializedConfig={editor.serializedConfig}
-          showError={editor.showJsonError}
-        />
+        <div className="grid content-start gap-6">
+          <ExportCard
+            exportHeight={editor.exportHeight}
+            exportWidth={editor.exportWidth}
+            messages={messages}
+            onExportHeightChange={editor.setExportHeight}
+            onExportImage={editor.exportImage}
+            onExportWidthChange={editor.setExportWidth}
+            showError={editor.showExportError}
+            svgDownloadUrl={editor.svgDownloadUrl}
+          />
+          <JsonCard
+            jsonDownloadUrl={editor.jsonDownloadUrl}
+            jsonInput={editor.jsonInput}
+            messages={messages}
+            onJsonInputChange={editor.setJsonInput}
+            onLoadJson={editor.loadJson}
+            serializedConfig={editor.serializedConfig}
+            showError={editor.showJsonError}
+          />
+        </div>
       </div>
     </div>
   )

@@ -16,6 +16,8 @@ type MutateLayers = (
   overrides?: ResolveStateOverrides
 ) => void
 
+type RasterExportFormat = "png" | "jpeg" | "webp"
+
 type UpdateActiveLayerPatch = Partial<{
   angle: number
   centerX: number
@@ -26,6 +28,18 @@ type UpdateActiveLayerPatch = Partial<{
   radialSize: RadialSize
   type: GradientType
 }>
+
+const RASTER_EXPORT_MIME_TYPES = {
+  jpeg: "image/jpeg",
+  png: "image/png",
+  webp: "image/webp",
+} as const satisfies Record<RasterExportFormat, string>
+
+const RASTER_EXPORT_EXTENSIONS = {
+  jpeg: "jpg",
+  png: "png",
+  webp: "webp",
+} as const satisfies Record<RasterExportFormat, string>
 
 function updateActiveLayer({
   activeLayer,
@@ -97,14 +111,40 @@ function updateStop({
   )
 }
 
-async function exportPng({
+function prepareRasterExportCanvas(
+  canvas: HTMLCanvasElement,
+  format: RasterExportFormat
+) {
+  if (format !== "jpeg") {
+    return canvas
+  }
+
+  const jpegCanvas = document.createElement("canvas")
+  jpegCanvas.width = canvas.width
+  jpegCanvas.height = canvas.height
+  const jpegContext = jpegCanvas.getContext("2d")
+
+  if (!jpegContext) {
+    return null
+  }
+
+  jpegContext.fillStyle = "#ffffff"
+  jpegContext.fillRect(0, 0, jpegCanvas.width, jpegCanvas.height)
+  jpegContext.drawImage(canvas, 0, 0)
+
+  return jpegCanvas
+}
+
+async function exportRasterImage({
   exportHeight,
   exportWidth,
+  format,
   layers,
   setShowExportError,
 }: Readonly<{
   exportHeight: number
   exportWidth: number
+  format: RasterExportFormat
   layers: readonly GradientLayer[]
   setShowExportError: Dispatch<SetStateAction<boolean>>
 }>) {
@@ -136,8 +176,19 @@ async function exportPng({
     return
   }
 
+  const outputCanvas = prepareRasterExportCanvas(canvas, format)
+
+  if (!outputCanvas) {
+    setShowExportError(true)
+    return
+  }
+
   const blob = await new Promise<Blob | null>((resolve) => {
-    canvas.toBlob(resolve, "image/png")
+    outputCanvas.toBlob(
+      resolve,
+      RASTER_EXPORT_MIME_TYPES[format],
+      format === "png" ? undefined : 0.92
+    )
   })
 
   if (!blob) {
@@ -148,12 +199,12 @@ async function exportPng({
   const objectUrl = URL.createObjectURL(blob)
   const link = document.createElement("a")
   link.href = objectUrl
-  link.download = "css-gradient.png"
+  link.download = "css-gradient." + RASTER_EXPORT_EXTENSIONS[format]
   link.click()
   window.setTimeout(() => {
     URL.revokeObjectURL(objectUrl)
   }, 0)
 }
 
-export { exportPng, updateActiveLayer, updateStop }
-export type { UpdateActiveLayerPatch }
+export { exportRasterImage, updateActiveLayer, updateStop }
+export type { RasterExportFormat, UpdateActiveLayerPatch }

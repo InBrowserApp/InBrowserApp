@@ -143,6 +143,7 @@ function useGradientEditor() {
     outputFormat: state.outputFormat,
     presetId: state.presetId,
     presets: GRADIENT_PRESETS,
+    setJsonInput,
     showExportError,
     showJsonError,
     showLayerError,

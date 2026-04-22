@@ -41,13 +41,23 @@ describe("CssGradientGeneratorClient", () => {
     })
   })
 
-  it("renders, applies presets, and switches output format", async () => {
+  it("renders export actions, applies presets, and switches output format", async () => {
     render(<CssGradientGeneratorClient messages={messages} />)
 
     const cssOutput = screen.getByLabelText(messages.outputTitle)
     expect((cssOutput as HTMLTextAreaElement).value).toContain(
       "linear-gradient("
     )
+
+    expect(
+      screen.getByRole("button", { name: messages.downloadPng })
+    ).not.toBeNull()
+    expect(
+      screen.getByRole("button", { name: messages.downloadJpg })
+    ).not.toBeNull()
+    expect(
+      screen.getByRole("button", { name: messages.downloadWebp })
+    ).not.toBeNull()
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.preset.sunset })

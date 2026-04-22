@@ -8,16 +8,18 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Download, TriangleAlert } from "@workspace/ui/icons"
+import { Download, ImageIcon, TriangleAlert } from "@workspace/ui/icons"
 
 import type { CssGradientGeneratorMessages } from "../types"
+
+type RasterExportFormat = "png" | "jpeg" | "webp"
 
 type ExportCardProps = Readonly<{
   exportHeight: number
   exportWidth: number
   messages: CssGradientGeneratorMessages
   onExportHeightChange: (value: number) => void
-  onExportPng: () => Promise<void>
+  onExportImage: (format: RasterExportFormat) => Promise<void>
   onExportWidthChange: (value: number) => void
   showError: boolean
   svgDownloadUrl: string | null
@@ -28,19 +30,36 @@ function ExportCard({
   exportWidth,
   messages,
   onExportHeightChange,
-  onExportPng,
+  onExportImage,
   onExportWidthChange,
   showError,
   svgDownloadUrl,
 }: ExportCardProps) {
+  const rasterActions = [
+    { format: "png", label: messages.downloadPng, variant: "default" },
+    { format: "jpeg", label: messages.downloadJpg, variant: "outline" },
+    { format: "webp", label: messages.downloadWebp, variant: "outline" },
+  ] as const satisfies readonly Readonly<{
+    format: RasterExportFormat
+    label: string
+    variant: "default" | "outline"
+  }>[]
+
   return (
-    <Card>
-      <CardHeader className="border-b">
-        <CardTitle>{messages.exportTitle}</CardTitle>
-        <CardDescription>{messages.exportSubtitle}</CardDescription>
+    <Card className="overflow-hidden">
+      <CardHeader className="gap-4 border-b bg-[linear-gradient(135deg,rgba(14,165,233,0.07),rgba(255,255,255,0.96))]">
+        <div className="space-y-1">
+          <CardTitle>{messages.exportTitle}</CardTitle>
+          <CardDescription>{messages.exportSubtitle}</CardDescription>
+        </div>
+
+        <div className="inline-flex w-fit items-center gap-2 rounded-full border bg-background/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm">
+          <ImageIcon className="size-3.5" />
+          {exportWidth} x {exportHeight}
+        </div>
       </CardHeader>
 
-      <CardContent className="grid gap-4">
+      <CardContent className="grid gap-5">
         {showError ? (
           <Alert variant="destructive">
             <TriangleAlert />
@@ -74,17 +93,29 @@ function ExportCard({
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          <Button
-            onClick={() => {
-              void onExportPng()
-            }}
-            type="button"
-          >
-            {messages.downloadPng}
-          </Button>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {rasterActions.map((action) => (
+            <Button
+              className="justify-start"
+              key={action.format}
+              onClick={() => {
+                void onExportImage(action.format)
+              }}
+              type="button"
+              variant={action.variant}
+            >
+              <Download data-icon="inline-start" />
+              {action.label}
+            </Button>
+          ))}
+
           {svgDownloadUrl ? (
-            <Button asChild variant="outline">
+            <Button
+              asChild
+              className="justify-start"
+              type="button"
+              variant="outline"
+            >
               <a download="css-gradient.svg" href={svgDownloadUrl}>
                 <Download data-icon="inline-start" />
                 {messages.downloadSvg}

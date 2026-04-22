@@ -8,7 +8,7 @@ import {
   randomizeLayer as randomizeGradientLayer,
 } from "../core/gradient"
 import {
-  exportPng as exportPngImage,
+  exportRasterImage,
   updateActiveLayer as applyActiveLayerPatch,
   updateStop as applyStopPatch,
 } from "./gradient-editor-helpers"
@@ -20,7 +20,10 @@ import {
 
 import type { Dispatch, SetStateAction } from "react"
 import type { ColorFormat, GradientLayer, GradientStop } from "../core/gradient"
-import type { UpdateActiveLayerPatch } from "./gradient-editor-helpers"
+import type {
+  RasterExportFormat,
+  UpdateActiveLayerPatch,
+} from "./gradient-editor-helpers"
 import type { GradientPresetId } from "../core/presets"
 import type { EditorState, ResolveStateOverrides } from "./editor-state"
 
@@ -134,10 +137,11 @@ function createGradientEditorActions({
         }
       )
     },
-    exportPng() {
-      return exportPngImage({
+    exportImage(format: RasterExportFormat) {
+      return exportRasterImage({
         exportHeight: state.exportHeight,
         exportWidth: state.exportWidth,
+        format,
         layers: state.layers,
         setShowExportError,
       })
@@ -266,9 +270,8 @@ function createGradientEditorActions({
         exportWidth: normalizeDimension(value, current.exportWidth),
       }))
     },
-    setJsonInput,
-    setOutputFormat(format: ColorFormat) {
-      setState((current) => ({ ...current, outputFormat: format }))
+    setOutputFormat(value: ColorFormat) {
+      setState((current) => ({ ...current, outputFormat: value }))
     },
     updateActiveLayer(patch: UpdateActiveLayerPatch) {
       applyActiveLayerPatch({

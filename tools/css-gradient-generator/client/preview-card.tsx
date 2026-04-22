@@ -1,3 +1,4 @@
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -5,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Button } from "@workspace/ui/components/ui/button"
+import { RefreshCcw, Sparkles } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { createBackgroundImage, createBlendModeCss } from "../core/gradient"
@@ -56,10 +57,17 @@ function PreviewCard({
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <Button size="sm" variant="outline" onClick={onRandomizeLayer}>
+            <Button
+              onClick={onRandomizeLayer}
+              size="sm"
+              type="button"
+              variant="outline"
+            >
+              <Sparkles data-icon="inline-start" />
               {messages.randomizeLayer}
             </Button>
-            <Button size="sm" onClick={onRandomizeAll}>
+            <Button onClick={onRandomizeAll} size="sm" type="button">
+              <RefreshCcw data-icon="inline-start" />
               {messages.randomizeAll}
             </Button>
           </div>
@@ -97,7 +105,7 @@ function PreviewCard({
                   className={cn(
                     "group rounded-2xl border p-3 text-left transition-colors",
                     presetId === preset.id
-                      ? "border-primary bg-primary/5"
+                      ? "border-primary bg-primary/5 shadow-sm"
                       : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"
                   )}
                   key={preset.id}

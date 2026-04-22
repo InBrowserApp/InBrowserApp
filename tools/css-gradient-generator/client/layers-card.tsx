@@ -1,3 +1,6 @@
+import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
+import { Badge } from "@workspace/ui/components/ui/badge"
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -5,10 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
-import { Badge } from "@workspace/ui/components/ui/badge"
-import { Button } from "@workspace/ui/components/ui/button"
-import { TriangleAlert } from "@workspace/ui/icons"
+import { Copy, LayoutGrid, Trash2, TriangleAlert } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import type { GradientLayer } from "../core/gradient"
@@ -38,7 +38,7 @@ function LayersCard({
   showError,
 }: LayersCardProps) {
   return (
-    <Card>
+    <Card className="overflow-hidden">
       <CardHeader className="gap-4 border-b">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="space-y-1">
@@ -46,7 +46,8 @@ function LayersCard({
             <CardDescription>{messages.layersSubtitle}</CardDescription>
           </div>
 
-          <Button size="sm" onClick={onAddLayer}>
+          <Button onClick={onAddLayer} size="sm" type="button">
+            <LayoutGrid data-icon="inline-start" />
             {messages.addLayer}
           </Button>
         </div>
@@ -73,8 +74,8 @@ function LayersCard({
                 className={cn(
                   "rounded-2xl border p-4 transition-colors",
                   isActive
-                    ? "border-primary bg-primary/5"
-                    : "border-border bg-card"
+                    ? "border-primary bg-primary/5 shadow-sm"
+                    : "border-border bg-card hover:border-primary/30"
                 )}
                 key={layer.id}
               >
@@ -104,6 +105,7 @@ function LayersCard({
                       type="button"
                       variant="ghost"
                     >
+                      <Copy data-icon="inline-start" />
                       {messages.duplicateLayer}
                     </Button>
                     <Button
@@ -134,6 +136,7 @@ function LayersCard({
                       type="button"
                       variant="ghost"
                     >
+                      <Trash2 data-icon="inline-start" />
                       {messages.deleteLayer}
                     </Button>
                   </div>

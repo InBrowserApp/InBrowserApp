@@ -55,6 +55,8 @@ type CssGradientGeneratorMessagesCatalog = Readonly<{
   exportWidth: string
   exportHeight: string
   downloadPng: string
+  downloadJpg: string
+  downloadWebp: string
   downloadSvg: string
   pngUnsupported: string
   jsonTitle: string
