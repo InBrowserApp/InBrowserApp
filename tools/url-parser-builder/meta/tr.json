@@ -1,0 +1,4 @@
+{
+  "name": "URL Ayrıştırıcı ve Oluşturucu",
+  "description": "URL'leri protokol, kimlik bilgileri, ana bilgisayar adı, port, yol, sorgu parametreleri ve hash olarak ayrıştırır, ardından yapılandırılmış alanlardan yeniden oluşturur."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "URL-parser og bygger",
+  "description": "Parser URL-er til protokoll, legitimasjon, vertsnavn, port, sti, spørringsparametere og hash, og bygger dem deretter opp igjen fra strukturerte felt."
+}

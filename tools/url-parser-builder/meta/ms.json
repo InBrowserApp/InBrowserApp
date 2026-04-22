@@ -1,0 +1,4 @@
+{
+  "name": "Penghurai dan Pembina URL",
+  "description": "Menghurai URL kepada protokol, kelayakan, nama hos, port, laluan, parameter pertanyaan dan hash, kemudian membinanya semula daripada medan berstruktur."
+}

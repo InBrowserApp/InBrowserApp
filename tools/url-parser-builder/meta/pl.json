@@ -1,0 +1,4 @@
+{
+  "name": "Parser i konstruktor URL",
+  "description": "Analizuje URL-e na protokół, dane logowania, nazwę hosta, port, ścieżkę, parametry zapytania i hash, a następnie składa je ponownie z uporządkowanych pól."
+}

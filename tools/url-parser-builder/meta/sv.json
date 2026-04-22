@@ -1,0 +1,4 @@
+{
+  "name": "URL-parser och byggare",
+  "description": "Delar upp URL:er i protokoll, inloggningsuppgifter, värdnamn, port, sökväg, frågeparametrar och hash, och bygger sedan upp dem igen från strukturerade fält."
+}

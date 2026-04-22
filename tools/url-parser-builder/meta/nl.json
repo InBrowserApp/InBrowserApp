@@ -1,0 +1,4 @@
+{
+  "name": "URL-parser en -builder",
+  "description": "Parseert URL's naar protocol, inloggegevens, hostnaam, poort, pad, queryparameters en hash, en bouwt ze daarna opnieuw op vanuit gestructureerde velden."
+}

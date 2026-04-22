@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur et Constructeur d'URL",
+  "description": "Analyse les URL en protocole, identifiants, nom d’hôte, port, chemin, paramètres de requête et fragment, puis les reconstruit à partir de champs structurés."
+}

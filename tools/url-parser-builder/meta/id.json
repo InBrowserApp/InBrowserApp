@@ -1,0 +1,4 @@
+{
+  "name": "Parser dan Builder URL",
+  "description": "Mengurai URL menjadi protokol, kredensial, nama host, port, jalur, parameter kueri, dan hash, lalu menyusunnya kembali dari bidang terstruktur."
+}

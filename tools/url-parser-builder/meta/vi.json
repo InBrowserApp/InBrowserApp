@@ -1,0 +1,4 @@
+{
+  "name": "Bộ phân tích và trình tạo URL",
+  "description": "Phân tích URL thành giao thức, thông tin xác thực, tên máy chủ, cổng, đường dẫn, tham số truy vấn và hash, rồi xây dựng lại từ các trường có cấu trúc."
+}

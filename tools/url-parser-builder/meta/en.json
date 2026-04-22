@@ -1,0 +1,4 @@
+{
+  "name": "URL Parser and Builder",
+  "description": "Parse URLs into protocol, credentials, hostname, port, path, query parameters, and hash, then rebuild them from structured fields."
+}

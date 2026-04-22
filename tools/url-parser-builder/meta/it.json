@@ -1,0 +1,4 @@
+{
+  "name": "Parser e Builder URL",
+  "description": "Analizza gli URL in protocollo, credenziali, hostname, porta, percorso, parametri di query e hash, quindi li ricostruisce da campi strutturati."
+}

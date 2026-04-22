@@ -1,0 +1,4 @@
+{
+  "name": "URL-Parser und -Builder",
+  "description": "Zerlegt URLs in Protokoll, Zugangsdaten, Hostname, Port, Pfad, Abfrageparameter und Hash und baut sie anschließend aus strukturierten Feldern wieder zusammen."
+}
