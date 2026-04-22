@@ -9,8 +9,6 @@ import {
   type ChangeEvent,
 } from "react"
 
-import { cn } from "@workspace/ui/lib/utils"
-
 import {
   DEFAULT_MARKDOWN,
   DEFAULT_PREVIEW_MODE,
@@ -251,14 +249,7 @@ function MarkdownPreviewerClient({ messages }: MarkdownPreviewerClientProps) {
   }
 
   return (
-    <div
-      className={cn(
-        "grid gap-6",
-        previewMode === "split"
-          ? "xl:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]"
-          : "grid-cols-1"
-      )}
-    >
+    <div className="grid gap-6">
       {previewMode === "split" ? (
         <EditorCard
           messages={messages}
