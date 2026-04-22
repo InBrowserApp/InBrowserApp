@@ -158,8 +158,8 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
       />
 
       <div className="grid gap-6">
-        <Card className="overflow-hidden bg-linear-to-br from-cyan-50/90 via-background to-sky-50/80 dark:from-cyan-950/20 dark:via-background dark:to-sky-950/15">
-          <CardHeader className="border-b bg-background/70 backdrop-blur">
+        <Card className="overflow-hidden border-border/70 shadow-sm">
+          <CardHeader className="border-b">
             <div className="grid gap-1">
               <CardTitle>{messages.resultTitle}</CardTitle>
               <CardDescription>{messages.resultDescription}</CardDescription>
@@ -182,7 +182,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
             </div>
 
             <div className="grid gap-2">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs font-medium tracking-[0.16em] text-muted-foreground/80 uppercase">
                 {messages.overviewTitle}
               </p>
               <p className="font-mono text-[clamp(1.3rem,3vw,2.25rem)] font-semibold tracking-tight break-all text-foreground">
@@ -197,7 +197,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
               {overviewItems.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-xl border bg-background/80 p-4 shadow-sm"
+                  className="rounded-xl border border-border/70 bg-card p-4 shadow-xs"
                 >
                   <p className="text-sm text-muted-foreground">{item.label}</p>
                   <p className="mt-2 font-mono text-sm break-all text-foreground">

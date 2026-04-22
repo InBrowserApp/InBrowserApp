@@ -34,7 +34,7 @@ function DetailsCard({
         {items.map((item) => (
           <div
             key={item.label}
-            className="flex flex-wrap items-start justify-between gap-3 rounded-xl border bg-muted/20 p-3"
+            className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-border/70 bg-card p-3"
           >
             <div className="min-w-0 flex-1">
               <p className="text-sm text-muted-foreground">{item.label}</p>

@@ -26,7 +26,7 @@ function ResultPlaceholderCard({
   const isInvalid = status === "invalid"
 
   return (
-    <Card>
+    <Card className="border-border/70 shadow-sm">
       <CardHeader className="border-b">
         <CardTitle>
           {isInvalid ? messages.invalidTitle : messages.emptyTitle}
@@ -43,7 +43,7 @@ function ResultPlaceholderCard({
             <AlertDescription>{messages.invalidDescription}</AlertDescription>
           </Alert>
         ) : (
-          <div className="flex min-h-64 items-center justify-center rounded-xl border border-dashed bg-muted/20 p-6 text-center text-sm text-muted-foreground">
+          <div className="flex min-h-64 items-center justify-center rounded-xl border border-dashed border-border/70 bg-transparent p-6 text-center text-sm text-muted-foreground">
             {messages.resultDescription}
           </div>
         )}

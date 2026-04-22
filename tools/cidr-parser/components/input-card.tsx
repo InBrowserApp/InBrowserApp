@@ -23,7 +23,7 @@ type InputCardProps = Readonly<{
 
 function InputCard({ inputId, value, messages, onChange }: InputCardProps) {
   return (
-    <Card>
+    <Card className="border-border/70 shadow-sm">
       <CardHeader className="border-b">
         <CardTitle>{messages.inputTitle}</CardTitle>
         <CardDescription>{messages.inputDescription}</CardDescription>
@@ -47,13 +47,13 @@ function InputCard({ inputId, value, messages, onChange }: InputCardProps) {
           </FieldContent>
         </Field>
 
-        <div className="rounded-xl border border-dashed bg-muted/20 p-4">
+        <div className="rounded-xl border border-dashed border-border/70 bg-transparent p-4">
           <p className="text-sm text-muted-foreground">{messages.inputHint}</p>
           <div className="mt-3 grid gap-2">
-            <code className="rounded-md bg-background px-3 py-2 font-mono text-sm text-foreground">
+            <code className="rounded-md border border-border/70 bg-muted/10 px-3 py-2 font-mono text-sm text-foreground">
               10.24.8.19/21
             </code>
-            <code className="rounded-md bg-background px-3 py-2 font-mono text-sm text-foreground">
+            <code className="rounded-md border border-border/70 bg-muted/10 px-3 py-2 font-mono text-sm text-foreground">
               2001:db8:abcd::123/64
             </code>
           </div>
