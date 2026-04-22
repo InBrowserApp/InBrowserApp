@@ -13,7 +13,6 @@ import {
   SWATCHES,
 } from "./client/constants"
 import { EditorCard } from "./components/editor-card"
-import { OutputCard } from "./components/output-card"
 import { PreviewCard } from "./components/preview-card"
 
 import type { CssBoxShadowMessages, ShadowLayer } from "./client/types"
@@ -144,6 +143,9 @@ function CssBoxShadowGeneratorClient({
 
   const activeLayer =
     layers.find((layer) => layer.id === activeLayerId) ?? layers[0]!
+  const activeLayerIndex = layers.findIndex(
+    (layer) => layer.id === activeLayer.id
+  )
 
   const shadowValue = buildBoxShadow(
     layers.map((layer) =>
@@ -160,9 +162,10 @@ function CssBoxShadowGeneratorClient({
   const cssOutput = `box-shadow: ${shadowValue};`
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,28rem)_minmax(0,1fr)]">
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
       <EditorCard
         activeLayer={activeLayer}
+        activeLayerIndex={activeLayerIndex}
         blurRange={BLUR_RANGE}
         messages={messages}
         offsetRange={OFFSET_RANGE}
@@ -215,14 +218,14 @@ function CssBoxShadowGeneratorClient({
         layers={layers}
       />
 
-      <div className="grid gap-6">
+      <div className="self-start xl:sticky xl:top-6">
         <PreviewCard
+          cssOutput={cssOutput}
           darkBackground={darkBackground}
           messages={messages}
           onDarkBackgroundChange={setDarkBackground}
           previewStyle={{ boxShadow: shadowValue }}
         />
-        <OutputCard cssOutput={cssOutput} messages={messages} />
       </div>
     </div>
   )

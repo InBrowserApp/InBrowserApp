@@ -2,11 +2,7 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import {
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
+import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 
 import { LayerList } from "./layer-list"
 import { LayerSettings } from "./layer-settings"
@@ -20,6 +16,7 @@ type Range = Readonly<{
 
 type EditorCardProps = Readonly<{
   activeLayer: ShadowLayer
+  activeLayerIndex: number
   blurRange: Range
   messages: CssBoxShadowMessages
   offsetRange: Range
@@ -35,6 +32,7 @@ type EditorCardProps = Readonly<{
 
 function EditorCard({
   activeLayer,
+  activeLayerIndex,
   blurRange,
   messages,
   offsetRange,
@@ -49,11 +47,10 @@ function EditorCard({
 }: EditorCardProps) {
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b">
+      <CardHeader className="border-b pb-4">
         <CardTitle>{messages.meta.name}</CardTitle>
-        <CardDescription>{messages.meta.description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-5">
         <LayerList
           activeLayerId={activeLayer.id}
           layers={layers}
@@ -63,9 +60,10 @@ function EditorCard({
           onRemoveLayer={onRemoveLayer}
           onSelectLayer={onSelectLayer}
         />
-        <div className="rounded-[1.25rem] border border-border/70 bg-gradient-to-b from-muted/30 to-background p-4 sm:p-5">
+        <div className="rounded-[1.25rem] border border-border/70 bg-gradient-to-b from-muted/18 to-background p-4 sm:p-5">
           <LayerSettings
             activeLayer={activeLayer}
+            activeLayerIndex={activeLayerIndex}
             blurRange={blurRange}
             messages={messages}
             offsetRange={offsetRange}
