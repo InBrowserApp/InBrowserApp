@@ -32,4 +32,23 @@ describe("createGradientSvgMarkup", () => {
     expect(svg).toContain("background-image:")
     expect(svg).toContain("background-blend-mode:normal, screen;")
   })
+
+  it("omits background blend mode markup for a single layer", () => {
+    const svg = createGradientSvgMarkup(
+      [
+        createLayer({
+          stops: [
+            { color: "#000000FF", position: 0 },
+            { color: "#FFFFFFFF", position: 100 },
+          ],
+          type: "linear",
+        }),
+      ],
+      "hex",
+      160,
+      90
+    )
+
+    expect(svg).not.toContain("background-blend-mode:")
+  })
 })

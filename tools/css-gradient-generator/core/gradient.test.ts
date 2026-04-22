@@ -11,11 +11,13 @@ import {
   createLayer,
   createStop,
   formatColor,
+  RADIAL_SIZES,
   normalizeHexColor,
   parseGradientConfig,
   randomizeLayer,
   serializeGradientConfig,
 } from "./gradient"
+import { GRADIENT_PRESETS, resolveGradientPreset } from "./presets"
 
 describe("gradient core", () => {
   beforeEach(() => {
@@ -27,6 +29,7 @@ describe("gradient core", () => {
     expect(normalizeHexColor("#abcd")).toBe("#AABBCCDD")
     expect(normalizeHexColor("112233")).toBe("#112233FF")
     expect(normalizeHexColor("#11223344")).toBe("#11223344")
+    expect(normalizeHexColor("#12")).toBe("#000000FF")
     expect(normalizeHexColor("oops")).toBe("#000000FF")
 
     expect(formatColor("#112233FF", "hex")).toBe("#112233")
@@ -70,6 +73,10 @@ describe("gradient core", () => {
 
     expect(nextStop.position).toBe(90)
     expect(nextStop.color).toBe("#333333FF")
+
+    const fallbackStop = addStop([])
+    expect(fallbackStop.position).toBe(50)
+    expect(fallbackStop.color).toBe("#0EA5E9FF")
   })
 
   it("serializes, parses, and renders CSS declarations", () => {
@@ -133,6 +140,21 @@ describe("gradient core", () => {
     expect(createBackgroundDeclaration([linear], "hex")).toContain(
       "background:"
     )
+    expect(
+      createBackgroundDeclaration(
+        [
+          linear,
+          createLayer({
+            blendMode: "screen",
+            stops: [
+              { color: "#FFFFFF00", position: 0 },
+              { color: "#FFFFFFFF", position: 100 },
+            ],
+          }),
+        ],
+        "hex"
+      )
+    ).toContain("\nbackground-blend-mode:")
     expect(createCssOutput([linear], "hex")).toContain("background-image:")
 
     const serialized = serializeGradientConfig([linear, radial])
@@ -157,7 +179,14 @@ describe("gradient core", () => {
         ])
       )
     ).toHaveLength(1)
+    expect(parseGradientConfig(JSON.stringify({ layers: [] }))).toBeNull()
+    expect(parseGradientConfig(JSON.stringify(42))).toBeNull()
     expect(parseGradientConfig("{")).toBeNull()
+  })
+
+  it("resolves presets and falls back to the first preset for unknown ids", () => {
+    expect(resolveGradientPreset("neon")).toBe(GRADIENT_PRESETS[3])
+    expect(resolveGradientPreset("missing" as never)).toBe(GRADIENT_PRESETS[0])
   })
 
   it("randomizes a layer deterministically when Math.random is stubbed", () => {
@@ -183,5 +212,32 @@ describe("gradient core", () => {
     expect(randomized.stops.map((stop) => stop.position)).toEqual(
       expect.arrayContaining([0, 27.5, 72.5, 100])
     )
+  })
+
+  it("falls back to a valid default when radial size preset lookup misses", () => {
+    const values = [0, 0.2, 0.9, 0.9, 0.1, 0.2, 0.3, 0.1, 0.2, 0.3]
+    const radialSizes = RADIAL_SIZES as unknown as string[]
+    const backupRadialSizes = [...radialSizes]
+
+    vi.spyOn(Math, "random").mockImplementation(() => values.shift() ?? 0.5)
+
+    const layer = createLayer({
+      radialShape: "ellipse",
+      radialSize: "closest-side",
+      stops: [
+        { color: "#000000FF", position: 0 },
+        { color: "#FFFFFFFF", position: 100 },
+      ],
+      type: "radial",
+    })
+
+    radialSizes.length = 0
+    const randomized = randomizeLayer(layer)
+    radialSizes.push(...backupRadialSizes)
+
+    expect(randomized.radialShape).toBe("circle")
+    expect(randomized.colorSpace).toBe("srgb")
+    expect(randomized.radialSize).toBe("farthest-corner")
+    expect(randomized.stops).toHaveLength(3)
   })
 })

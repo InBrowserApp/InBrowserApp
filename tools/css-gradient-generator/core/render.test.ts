@@ -120,6 +120,7 @@ describe("drawLayersToCanvas", () => {
         type: "radial",
       }),
       createLayer({
+        centerX: 90,
         radialShape: "ellipse",
         radialSize: "closest-corner",
         stops: [
@@ -129,6 +130,7 @@ describe("drawLayersToCanvas", () => {
         type: "radial",
       }),
       createLayer({
+        centerX: 10,
         radialShape: "ellipse",
         radialSize: "farthest-corner",
         stops: [
@@ -142,6 +144,64 @@ describe("drawLayersToCanvas", () => {
     expect(drawLayersToCanvas(context, layers, 200, 100)).toBe(true)
     expect(linearGradients).toHaveLength(1)
     expect(radialGradients).toHaveLength(8)
+  })
+
+  it("handles axis-aligned linear gradients and zero-height ellipses", () => {
+    const { context, linearGradients, radialGradients } = createContext()
+    const originalCos = Math.cos
+
+    vi.spyOn(Math, "cos").mockImplementation((value) =>
+      value === Math.PI / 2 ? 0 : originalCos(value)
+    )
+
+    expect(
+      drawLayersToCanvas(
+        context,
+        [
+          createLayer({
+            angle: 90,
+            stops: [
+              { color: "#000000FF", position: 0 },
+              { color: "#FFFFFFFF", position: 100 },
+            ],
+            type: "linear",
+          }),
+          createLayer({
+            angle: 180,
+            stops: [
+              { color: "#000000FF", position: 0 },
+              { color: "#FFFFFFFF", position: 100 },
+            ],
+            type: "linear",
+          }),
+          createLayer({
+            centerX: 90,
+            radialShape: "ellipse",
+            radialSize: "closest-corner",
+            stops: [
+              { color: "#111111FF", position: 0 },
+              { color: "#EEEEEEFF", position: 100 },
+            ],
+            type: "radial",
+          }),
+          createLayer({
+            centerX: 10,
+            radialShape: "ellipse",
+            radialSize: "farthest-corner",
+            stops: [
+              { color: "#111111FF", position: 0 },
+              { color: "#EEEEEEFF", position: 100 },
+            ],
+            type: "radial",
+          }),
+        ],
+        200,
+        0
+      )
+    ).toBe(true)
+
+    expect(linearGradients).toHaveLength(2)
+    expect(radialGradients).toHaveLength(2)
   })
 
   it("returns false when conic gradients are unsupported", () => {
