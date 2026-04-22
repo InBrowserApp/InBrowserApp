@@ -18,6 +18,7 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
+import { FileText, LayoutGrid } from "@workspace/ui/icons"
 
 import type { TextDiffCompareOptions } from "../core/text-diff"
 import type { TextDiffMessages, TextDiffViewMode } from "../types"
@@ -57,6 +58,18 @@ function DiffOptionsCard({
       checked: compareOptions.ignoreWhitespace,
     },
   ] as const
+  const viewModeOptions = [
+    {
+      value: "side-by-side",
+      label: messages.sideBySideLabel,
+      icon: LayoutGrid,
+    },
+    {
+      value: "unified",
+      label: messages.unifiedLabel,
+      icon: FileText,
+    },
+  ] as const
 
   return (
     <Card>
@@ -71,18 +84,24 @@ function DiffOptionsCard({
             <ToggleGroup
               type="single"
               value={viewMode}
+              variant="default"
               onValueChange={(value) => {
                 if (value === "side-by-side" || value === "unified") {
                   onViewModeChange(value)
                 }
               }}
+              className="w-full rounded-xl border border-border/70 bg-muted/20 p-1"
             >
-              <ToggleGroupItem value="side-by-side">
-                {messages.sideBySideLabel}
-              </ToggleGroupItem>
-              <ToggleGroupItem value="unified">
-                {messages.unifiedLabel}
-              </ToggleGroupItem>
+              {viewModeOptions.map((option) => (
+                <ToggleGroupItem
+                  key={option.value}
+                  value={option.value}
+                  className="flex-1 justify-start gap-2 rounded-lg border border-transparent px-3 py-2 data-[state=on]:border-border data-[state=on]:bg-background data-[state=on]:shadow-sm [&_svg]:text-muted-foreground data-[state=on]:[&_svg]:text-foreground"
+                >
+                  <option.icon data-icon="inline-start" />
+                  {option.label}
+                </ToggleGroupItem>
+              ))}
             </ToggleGroup>
           </div>
         </FieldGroup>

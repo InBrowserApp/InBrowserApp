@@ -127,19 +127,29 @@ function DiffRowList({
   const unifiedEntries = buildUnifiedEntries(rows)
 
   return (
-    <ScrollArea className="h-[38rem] rounded-xl border border-border/70 bg-muted/10">
-      <div className="min-w-[52rem] p-3">
-        <div className="mb-3 flex flex-wrap items-center gap-2">
-          <Badge variant="outline">{originalLegendLabel}</Badge>
-          <Badge variant="outline">{modifiedLegendLabel}</Badge>
+    <ScrollArea className="h-[34rem] rounded-xl border border-border/70 bg-muted/10 shadow-inner">
+      <div className="min-w-[46rem] p-2.5">
+        <div className="mb-2 flex flex-wrap items-center gap-1.5 border-b border-border/60 pb-2">
+          <Badge
+            variant="outline"
+            className="rounded-md px-2 py-0.5 text-[11px]"
+          >
+            {originalLegendLabel}
+          </Badge>
+          <Badge
+            variant="outline"
+            className="rounded-md px-2 py-0.5 text-[11px]"
+          >
+            {modifiedLegendLabel}
+          </Badge>
         </div>
 
         {viewMode === "side-by-side" ? (
-          <div className="grid grid-cols-[3.5rem_minmax(0,1fr)_3.5rem_minmax(0,1fr)] gap-px overflow-hidden rounded-xl bg-border/60">
-            <div className="col-span-2 bg-muted px-3 py-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          <div className="grid grid-cols-[3rem_minmax(0,1fr)_3rem_minmax(0,1fr)] gap-px overflow-hidden rounded-lg bg-border/60">
+            <div className="col-span-2 bg-muted/90 px-2.5 py-1.5 text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               {originalLegendLabel}
             </div>
-            <div className="col-span-2 bg-muted px-3 py-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+            <div className="col-span-2 bg-muted/90 px-2.5 py-1.5 text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               {modifiedLegendLabel}
             </div>
 
@@ -148,22 +158,22 @@ function DiffRowList({
                 key={`${row.kind}-${row.original.lineNumber}-${row.modified.lineNumber}-${index}`}
               >
                 <div
-                  className={`px-2 py-2 text-right font-mono text-xs text-muted-foreground ${getSideClasses(row, "original")}`}
+                  className={`px-2 py-1.5 text-right font-mono text-[11px] text-muted-foreground ${getSideClasses(row, "original")}`}
                 >
                   {row.original.lineNumber ?? ""}
                 </div>
                 <div
-                  className={`px-3 py-2 font-mono text-sm leading-6 break-words whitespace-pre-wrap ${getSideClasses(row, "original")}`}
+                  className={`px-2.5 py-1.5 font-mono text-[13px] leading-5 break-words whitespace-pre-wrap ${getSideClasses(row, "original")}`}
                 >
                   {renderTokens(row.original.tokens)}
                 </div>
                 <div
-                  className={`px-2 py-2 text-right font-mono text-xs text-muted-foreground ${getSideClasses(row, "modified")}`}
+                  className={`px-2 py-1.5 text-right font-mono text-[11px] text-muted-foreground ${getSideClasses(row, "modified")}`}
                 >
                   {row.modified.lineNumber ?? ""}
                 </div>
                 <div
-                  className={`px-3 py-2 font-mono text-sm leading-6 break-words whitespace-pre-wrap ${getSideClasses(row, "modified")}`}
+                  className={`px-2.5 py-1.5 font-mono text-[13px] leading-5 break-words whitespace-pre-wrap ${getSideClasses(row, "modified")}`}
                 >
                   {renderTokens(row.modified.tokens)}
                 </div>
@@ -171,17 +181,17 @@ function DiffRowList({
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-[2.5rem_3.5rem_3.5rem_minmax(0,1fr)] gap-px overflow-hidden rounded-xl bg-border/60">
-            <div className="bg-muted px-2 py-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          <div className="grid grid-cols-[2rem_3rem_3rem_minmax(0,1fr)] gap-px overflow-hidden rounded-lg bg-border/60">
+            <div className="bg-muted/90 px-2 py-1.5 text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               #
             </div>
-            <div className="bg-muted px-2 py-2 text-right text-xs font-medium tracking-wide text-muted-foreground uppercase">
+            <div className="bg-muted/90 px-2 py-1.5 text-right text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               {originalLegendLabel}
             </div>
-            <div className="bg-muted px-2 py-2 text-right text-xs font-medium tracking-wide text-muted-foreground uppercase">
+            <div className="bg-muted/90 px-2 py-1.5 text-right text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               {modifiedLegendLabel}
             </div>
-            <div className="bg-muted px-3 py-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+            <div className="bg-muted/90 px-2.5 py-1.5 text-[11px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
               Content
             </div>
 
@@ -190,7 +200,7 @@ function DiffRowList({
                 key={`${entry.kind}-${entry.lineNumber}-${entry.companionLineNumber}-${index}`}
               >
                 <div
-                  className={`px-2 py-2 text-center font-mono text-sm ${
+                  className={`px-2 py-1.5 text-center font-mono text-[13px] ${
                     entry.kind === "add"
                       ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-200"
                       : entry.kind === "remove"
@@ -200,14 +210,14 @@ function DiffRowList({
                 >
                   {entry.prefix}
                 </div>
-                <div className="bg-background px-2 py-2 text-right font-mono text-xs text-muted-foreground">
+                <div className="bg-background px-2 py-1.5 text-right font-mono text-[11px] text-muted-foreground">
                   {entry.lineNumber ?? ""}
                 </div>
-                <div className="bg-background px-2 py-2 text-right font-mono text-xs text-muted-foreground">
+                <div className="bg-background px-2 py-1.5 text-right font-mono text-[11px] text-muted-foreground">
                   {entry.companionLineNumber ?? ""}
                 </div>
                 <div
-                  className={`px-3 py-2 font-mono text-sm leading-6 break-words whitespace-pre-wrap ${
+                  className={`px-2.5 py-1.5 font-mono text-[13px] leading-5 break-words whitespace-pre-wrap ${
                     entry.kind === "add"
                       ? "bg-emerald-500/8"
                       : entry.kind === "remove"
