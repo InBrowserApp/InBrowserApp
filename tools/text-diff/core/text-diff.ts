@@ -8,11 +8,8 @@ import {
 
 import type {
   DiffRow,
-  DiffRowKind,
-  DiffSide,
   DiffStats,
   DiffToken,
-  DiffTokenKind,
   TextDiffCompareOptions,
   TextDiffResult,
 } from "./text-diff-shared"
@@ -286,13 +283,4 @@ function compareText(
 }
 
 export { compareText, splitIntoLines }
-export type {
-  DiffRow,
-  DiffRowKind,
-  DiffSide,
-  DiffStats,
-  DiffToken,
-  DiffTokenKind,
-  TextDiffCompareOptions,
-  TextDiffResult,
-}
+export type { DiffRow, DiffStats, DiffToken, TextDiffCompareOptions }

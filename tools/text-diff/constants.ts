@@ -36,7 +36,6 @@ const FILE_ACCEPT =
   ".txt,.md,.json,.js,.ts,.tsx,.jsx,.css,.scss,.html,.xml,.yml,.yaml,.csv,text/plain"
 
 export {
-  DEFAULT_COMPARE_OPTIONS,
   DEFAULT_MODIFIED_TEXT,
   DEFAULT_ORIGINAL_TEXT,
   DEFAULT_SETTINGS,

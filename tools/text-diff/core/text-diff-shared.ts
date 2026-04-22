@@ -84,11 +84,8 @@ function createSide(
 export { createSide, createTokens, normalizeLine, splitIntoLines }
 export type {
   DiffRow,
-  DiffRowKind,
-  DiffSide,
   DiffStats,
   DiffToken,
-  DiffTokenKind,
   TextDiffCompareOptions,
   TextDiffResult,
 }
