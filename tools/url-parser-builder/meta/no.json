@@ -1,0 +1,4 @@
+{
+  "name": "URL-parser og bygger",
+  "description": "Parser URL-er i komponenter og bygger dem opp igjen fra protokoll, legitimasjon, vert, sti, spørringsparametere og fragment i én strukturert editor."
+}

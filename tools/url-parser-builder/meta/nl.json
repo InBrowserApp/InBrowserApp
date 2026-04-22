@@ -1,0 +1,4 @@
+{
+  "name": "URL Parser en Builder",
+  "description": "Ontleedt URL's in onderdelen en bouwt ze opnieuw op uit protocol, inloggegevens, host, pad, queryparameters en fragment in één gestructureerde editor."
+}

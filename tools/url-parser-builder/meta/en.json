@@ -1,0 +1,4 @@
+{
+  "name": "URL Parser and Builder",
+  "description": "Parse URLs into components and rebuild them from protocol, credentials, host, path, query parameters, and fragment in one structured editor."
+}
