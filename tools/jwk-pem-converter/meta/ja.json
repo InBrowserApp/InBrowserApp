@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM 変換",
+  "description": "JWK と PEM の鍵をローカルで変換します。RSA、EC、OKP（Ed25519/X25519/Ed448/X448）に対応。"
+}

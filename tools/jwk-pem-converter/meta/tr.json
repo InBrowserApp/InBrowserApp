@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM Dönüştürücü",
+  "description": "JWK ve PEM anahtarlarını yerelde dönüştürür. RSA, EC ve OKP (Ed25519/X25519/Ed448/X448) destekler."
+}

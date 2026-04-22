@@ -1,0 +1,4 @@
+{
+  "name": "Penukar JWK ↔ PEM",
+  "description": "Tukar kunci JWK dan PEM secara tempatan. Menyokong RSA, EC dan OKP (Ed25519/X25519/Ed448/X448)."
+}
