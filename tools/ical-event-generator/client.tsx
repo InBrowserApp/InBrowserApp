@@ -1,10 +1,4 @@
-import {
-  startTransition,
-  useDeferredValue,
-  useEffect,
-  useRef,
-  useState,
-} from "react"
+import { startTransition, useEffect, useRef, useState } from "react"
 
 import { ToolPanelCard } from "@workspace/ui/components/tool/tool-panel-card"
 
@@ -90,8 +84,7 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
   const [stampMs, setStampMs] = useState(() => Date.now())
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
   const downloadUrlRef = useRef<string | null>(null)
-  const deferredFormState = useDeferredValue(formState)
-  const output = buildIcalEventOutput(deferredFormState, stampMs)
+  const output = buildIcalEventOutput(formState, stampMs)
 
   useEffect(() => {
     /* v8 ignore next */
@@ -204,67 +197,68 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
               }}
             />
           </ToolPanelCard>
+
+          <ToolPanelCard>
+            <EventRecurrenceCard
+              messages={messages}
+              formState={formState}
+              onFieldChange={(key, value) => {
+                updateFormState({ [key]: value })
+              }}
+              onWeekdaysChange={(recurrenceWeekdays) => {
+                updateFormState({ recurrenceWeekdays })
+              }}
+            />
+          </ToolPanelCard>
+
+          <ToolPanelCard>
+            <EventRemindersCard
+              messages={messages}
+              formState={formState}
+              onToggleEnabled={(remindersEnabled) => {
+                updateFormState({ remindersEnabled })
+              }}
+              onAddReminder={() => {
+                updateFormState({
+                  reminders: [...formState.reminders, createReminder()],
+                  remindersEnabled: true,
+                })
+              }}
+              onRemoveReminder={(reminderId) => {
+                const reminders = formState.reminders.filter(
+                  (reminder) => reminder.id !== reminderId
+                )
+
+                updateFormState({
+                  reminders:
+                    reminders.length > 0 ? reminders : [createReminder()],
+                  remindersEnabled:
+                    reminders.length > 1 ? formState.remindersEnabled : true,
+                })
+              }}
+              onReminderChange={(reminderId, nextValue) => {
+                updateFormState({
+                  reminders: formState.reminders.map((reminder) =>
+                    reminder.id === reminderId
+                      ? ({ ...reminder, ...nextValue } satisfies Reminder)
+                      : reminder
+                  ),
+                })
+              }}
+            />
+          </ToolPanelCard>
         </div>
 
-        <ToolPanelCard>
-          <EventOutputCard
-            messages={messages}
-            output={output}
-            downloadUrl={downloadUrl}
-          />
-        </ToolPanelCard>
-      </div>
-
-      <div className="grid gap-6 xl:grid-cols-2">
-        <ToolPanelCard>
-          <EventRecurrenceCard
-            messages={messages}
-            formState={formState}
-            onFieldChange={(key, value) => {
-              updateFormState({ [key]: value })
-            }}
-            onWeekdaysChange={(recurrenceWeekdays) => {
-              updateFormState({ recurrenceWeekdays })
-            }}
-          />
-        </ToolPanelCard>
-
-        <ToolPanelCard>
-          <EventRemindersCard
-            messages={messages}
-            formState={formState}
-            onToggleEnabled={(remindersEnabled) => {
-              updateFormState({ remindersEnabled })
-            }}
-            onAddReminder={() => {
-              updateFormState({
-                reminders: [...formState.reminders, createReminder()],
-                remindersEnabled: true,
-              })
-            }}
-            onRemoveReminder={(reminderId) => {
-              const reminders = formState.reminders.filter(
-                (reminder) => reminder.id !== reminderId
-              )
-
-              updateFormState({
-                reminders:
-                  reminders.length > 0 ? reminders : [createReminder()],
-                remindersEnabled:
-                  reminders.length > 1 ? formState.remindersEnabled : true,
-              })
-            }}
-            onReminderChange={(reminderId, nextValue) => {
-              updateFormState({
-                reminders: formState.reminders.map((reminder) =>
-                  reminder.id === reminderId
-                    ? ({ ...reminder, ...nextValue } satisfies Reminder)
-                    : reminder
-                ),
-              })
-            }}
-          />
-        </ToolPanelCard>
+        <div className="xl:sticky xl:top-6 xl:self-start">
+          <ToolPanelCard>
+            <EventOutputCard
+              messages={messages}
+              output={output}
+              downloadUrl={downloadUrl}
+              formState={formState}
+            />
+          </ToolPanelCard>
+        </div>
       </div>
     </div>
   )

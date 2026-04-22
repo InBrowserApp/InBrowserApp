@@ -102,6 +102,7 @@ const messages = {
 
 beforeEach(() => {
   window.localStorage.clear()
+  vi.spyOn(Date, "now").mockReturnValue(Date.parse("2026-04-21T17:00:00.000Z"))
   vi.spyOn(URL, "createObjectURL").mockReturnValue("blob:ical-event")
   vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})
 })
