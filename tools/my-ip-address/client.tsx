@@ -205,12 +205,15 @@ function AddressCard({
   state: AddressCardState
   messages: MyIpAddressMessages
 }>) {
-  const [copied, setCopied] = useState(false)
   const readyAddress = state.status === "ready" ? state.address : null
+  const [copiedAddress, setCopiedAddress] = useState<string | null>(null)
+  const copied = readyAddress !== null && copiedAddress === readyAddress
 
   useEffect(() => {
-    setCopied(false)
-  }, [readyAddress, state.status])
+    if (readyAddress === null) {
+      setCopiedAddress(null)
+    }
+  }, [readyAddress])
 
   async function handleCopy() {
     if (state.status !== "ready") {
@@ -219,9 +222,9 @@ function AddressCard({
 
     try {
       await navigator.clipboard.writeText(state.address)
-      setCopied(true)
+      setCopiedAddress(state.address)
     } catch {
-      setCopied(false)
+      setCopiedAddress(null)
     }
   }
 
