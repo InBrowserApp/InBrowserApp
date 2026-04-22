@@ -13,11 +13,13 @@ const mocks = vi.hoisted(() => ({
     return [{ echo: curlCommand }, [["WARN", "Check input"]]] as const
   }),
   toStringWarn: vi.fn(() => ["plain text", []] as const),
+  toInvalidWarn: "not a function",
 }))
 
 vi.mock("curlconverter", () => ({
   toMockWarn: mocks.toMockWarn,
   toStringWarn: mocks.toStringWarn,
+  toInvalidWarn: mocks.toInvalidWarn,
 }))
 
 vi.mock("./targets", () => ({
@@ -50,6 +52,16 @@ vi.mock("./targets", () => ({
         extension: ".txt",
         highlightLanguage: "plaintext",
         runtimeKey: "toMissingWarn",
+      }
+    }
+
+    if (id === "invalid-runtime") {
+      return {
+        id: "invalid-runtime",
+        label: "Invalid runtime",
+        extension: ".txt",
+        highlightLanguage: "plaintext",
+        runtimeKey: "toInvalidWarn",
       }
     }
 
@@ -109,6 +121,15 @@ describe("convertCurlToTarget", () => {
     const result = await convertCurlToTarget(
       "curl https://example.com",
       "missing-runtime"
+    )
+
+    expect(result.error).toBe(UNKNOWN_TARGET_ERROR)
+  })
+
+  test("returns an unknown target error when the runtime export is not callable", async () => {
+    const result = await convertCurlToTarget(
+      "curl https://example.com",
+      "invalid-runtime"
     )
 
     expect(result.error).toBe(UNKNOWN_TARGET_ERROR)
