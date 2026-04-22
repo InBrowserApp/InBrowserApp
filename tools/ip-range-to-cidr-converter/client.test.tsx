@@ -76,6 +76,24 @@ describe("IpRangeToCidrClient", () => {
     ).toBeGreaterThan(0)
   })
 
+  test("restores the legacy stored range values from the previous slug", () => {
+    window.localStorage.setItem("tools:ip-range-to-cidr:start", "192.168.1.10")
+    window.localStorage.setItem("tools:ip-range-to-cidr:end", "192.168.1.25")
+
+    render(<IpRangeToCidrClient messages={messages} />)
+
+    const startInput = screen.getByLabelText(
+      messages.startLabel
+    ) as HTMLInputElement
+    const endInput = screen.getByLabelText(
+      messages.endLabel
+    ) as HTMLInputElement
+
+    expect(startInput.value).toBe("192.168.1.10")
+    expect(endInput.value).toBe("192.168.1.25")
+    expect(screen.getByText("192.168.1.16/29")).toBeTruthy()
+  })
+
   test("shows the incomplete state when only one address is present", () => {
     render(<IpRangeToCidrClient messages={messages} />)
 

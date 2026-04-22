@@ -5650,7 +5650,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
-    slug: "ip-range-to-cidr",
+    slug: "ip-range-to-cidr-converter",
     category: "network",
     icon: "network",
     tags: ["ip", "cidr", "network", "range", "ipv4", "ipv6", "subnet"],

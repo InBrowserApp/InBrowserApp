@@ -1,5 +1,5 @@
 {
-  "name": "@tool/ip-range-to-cidr",
+  "name": "@tool/ip-range-to-cidr-converter",
   "version": "0.0.0",
   "private": true,
   "type": "module",

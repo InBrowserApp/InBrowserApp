@@ -52,7 +52,7 @@
     "@tool/image-to-ico": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",
-    "@tool/ip-range-to-cidr": "workspace:*",
+    "@tool/ip-range-to-cidr-converter": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",

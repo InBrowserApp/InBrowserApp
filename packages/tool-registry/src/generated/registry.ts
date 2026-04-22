@@ -5650,7 +5650,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
-    slug: "ip-range-to-cidr",
+    slug: "ip-range-to-cidr-converter",
     category: "network",
     icon: "network",
     tags: ["ip", "cidr", "network", "range", "ipv4", "ipv6", "subnet"],
@@ -20993,8 +20993,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
-  "ip-range-to-cidr": {
-    slug: "ip-range-to-cidr",
+  "ip-range-to-cidr-converter": {
+    slug: "ip-range-to-cidr-converter",
     category: "network",
     icon: "network",
     tags: ["ip", "cidr", "network", "range", "ipv4", "ipv6", "subnet"],

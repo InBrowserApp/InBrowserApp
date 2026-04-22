@@ -72,8 +72,10 @@ type IpRangeToCidrClientProps = Readonly<{
   }
 }>
 
-const START_STORAGE_KEY = "tools:ip-range-to-cidr:start"
-const END_STORAGE_KEY = "tools:ip-range-to-cidr:end"
+const START_STORAGE_KEY = "tools:ip-range-to-cidr-converter:start"
+const END_STORAGE_KEY = "tools:ip-range-to-cidr-converter:end"
+const LEGACY_START_STORAGE_KEY = "tools:ip-range-to-cidr:start"
+const LEGACY_END_STORAGE_KEY = "tools:ip-range-to-cidr:end"
 
 function getStatusCopy(
   result: IpRangeToCidrsResult,
@@ -120,8 +122,12 @@ function IpRangeToCidrClient({ messages }: IpRangeToCidrClientProps) {
     /* v8 ignore next */
     if (typeof window === "undefined") return
 
-    const storedStart = window.localStorage.getItem(START_STORAGE_KEY)
-    const storedEnd = window.localStorage.getItem(END_STORAGE_KEY)
+    const storedStart =
+      window.localStorage.getItem(START_STORAGE_KEY) ??
+      window.localStorage.getItem(LEGACY_START_STORAGE_KEY)
+    const storedEnd =
+      window.localStorage.getItem(END_STORAGE_KEY) ??
+      window.localStorage.getItem(LEGACY_END_STORAGE_KEY)
 
     if (storedStart !== null) {
       setStartValue(storedStart)
