@@ -169,4 +169,3 @@ function formatIpv4Mask(prefix: number, invert = false) {
 }
 
 export { parseCidr }
-export type { CidrDetails, ParseCidrResult }

@@ -270,4 +270,4 @@ export {
   parseIpAddress,
   stringifyIpAddress,
 }
-export type { IpFamily, ParsedIpAddress }
+export type { ParsedIpAddress }
