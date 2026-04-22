@@ -71,6 +71,7 @@
     "@tool/list-comparer": "workspace:*",
     "@tool/lorem-ipsum-generator": "workspace:*",
     "@tool/mac-address-to-ipv6-link-local-address-converter": "workspace:*",
+    "@tool/markdown-previewer": "workspace:*",
     "@tool/md4-hash-text-or-file": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/mime-type-lookup": "workspace:*",

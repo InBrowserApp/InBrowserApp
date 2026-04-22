@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Masukkan Markdown di sini...",
+  "previewLabel": "Pratinjau",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Tampilan",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "Bersihkan HTML",
+  "showTocLabel": "Tampilkan daftar isi",
+  "themeLightLabel": "Terang",
+  "themeDarkLabel": "Gelap",
+  "importFromFileLabel": "Impor dari file",
+  "copyHtmlLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadHtmlLabel": "Unduh HTML",
+  "printHtmlLabel": "Cetak HTML",
+  "useSampleLabel": "Muat contoh",
+  "clearTextLabel": "Bersihkan",
+  "tocTitle": "Daftar isi",
+  "tocEmptyLabel": "Belum ada judul.",
+  "untitledHeading": "Tanpa judul"
+}

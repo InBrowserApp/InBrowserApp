@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Skriv Markdown her...",
+  "previewLabel": "Forhåndsvisning",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Visning",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "Rens HTML",
+  "showTocLabel": "Vis innholdsfortegnelse",
+  "themeLightLabel": "Lys",
+  "themeDarkLabel": "Mørk",
+  "importFromFileLabel": "Importer fra fil",
+  "copyHtmlLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "downloadHtmlLabel": "Last ned HTML",
+  "printHtmlLabel": "Skriv ut HTML",
+  "useSampleLabel": "Last inn eksempel",
+  "clearTextLabel": "Tomm",
+  "tocTitle": "Innholdsfortegnelse",
+  "tocEmptyLabel": "Ingen overskrifter ennå.",
+  "untitledHeading": "Uten tittel"
+}

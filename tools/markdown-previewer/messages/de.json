@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Markdown hier eingeben...",
+  "previewLabel": "Vorschau",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Ansicht",
+  "themeLabel": "Design",
+  "sanitizeHtmlLabel": "HTML bereinigen",
+  "showTocLabel": "Inhaltsverzeichnis anzeigen",
+  "themeLightLabel": "Hell",
+  "themeDarkLabel": "Dunkel",
+  "importFromFileLabel": "Aus Datei importieren",
+  "copyHtmlLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadHtmlLabel": "HTML herunterladen",
+  "printHtmlLabel": "HTML drucken",
+  "useSampleLabel": "Beispiel laden",
+  "clearTextLabel": "Leeren",
+  "tocTitle": "Inhaltsverzeichnis",
+  "tocEmptyLabel": "Noch keine Überschriften.",
+  "untitledHeading": "Ohne Titel"
+}

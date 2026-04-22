@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "ここにMarkdownを入力...",
+  "previewLabel": "プレビュー",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "表示",
+  "themeLabel": "テーマ",
+  "sanitizeHtmlLabel": "HTML をサニタイズ",
+  "showTocLabel": "目次を表示",
+  "themeLightLabel": "ライト",
+  "themeDarkLabel": "ダーク",
+  "importFromFileLabel": "ファイルからインポート",
+  "copyHtmlLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadHtmlLabel": "HTML をダウンロード",
+  "printHtmlLabel": "HTML を印刷",
+  "useSampleLabel": "サンプルを読み込む",
+  "clearTextLabel": "クリア",
+  "tocTitle": "目次",
+  "tocEmptyLabel": "見出しはまだありません。",
+  "untitledHeading": "無題"
+}

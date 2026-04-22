@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "הזן Markdown כאן...",
+  "previewLabel": "תצוגה מקדימה",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "תצוגה",
+  "themeLabel": "ערכת נושא",
+  "sanitizeHtmlLabel": "נקה HTML",
+  "showTocLabel": "הצג תוכן עניינים",
+  "themeLightLabel": "בהיר",
+  "themeDarkLabel": "כהה",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "copyHtmlLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "downloadHtmlLabel": "הורד HTML",
+  "printHtmlLabel": "הדפס HTML",
+  "useSampleLabel": "טען דוגמה",
+  "clearTextLabel": "נקה",
+  "tocTitle": "תוכן עניינים",
+  "tocEmptyLabel": "אין כותרות עדיין.",
+  "untitledHeading": "ללא כותרת"
+}

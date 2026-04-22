@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Markdown'u buraya girin...",
+  "previewLabel": "Önizleme",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Görünüm",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "HTML temizle",
+  "showTocLabel": "İçindekileri göster",
+  "themeLightLabel": "Açık",
+  "themeDarkLabel": "Koyu",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "copyHtmlLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadHtmlLabel": "HTML indir",
+  "printHtmlLabel": "HTML yazdır",
+  "useSampleLabel": "Ornek yukle",
+  "clearTextLabel": "Temizle",
+  "tocTitle": "İçindekiler",
+  "tocEmptyLabel": "Henüz başlık yok.",
+  "untitledHeading": "Başlıksız"
+}

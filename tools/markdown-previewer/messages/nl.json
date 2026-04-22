@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Voer Markdown hier in...",
+  "previewLabel": "Voorbeeld",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Weergave",
+  "themeLabel": "Thema",
+  "sanitizeHtmlLabel": "HTML opschonen",
+  "showTocLabel": "Inhoudsopgave tonen",
+  "themeLightLabel": "Licht",
+  "themeDarkLabel": "Donker",
+  "importFromFileLabel": "Importeren uit bestand",
+  "copyHtmlLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadHtmlLabel": "HTML downloaden",
+  "printHtmlLabel": "HTML afdrukken",
+  "useSampleLabel": "Voorbeeld laden",
+  "clearTextLabel": "Wissen",
+  "tocTitle": "Inhoudsopgave",
+  "tocEmptyLabel": "Nog geen koppen.",
+  "untitledHeading": "Zonder titel"
+}

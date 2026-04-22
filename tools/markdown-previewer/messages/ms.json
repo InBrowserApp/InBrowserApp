@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Masukkan Markdown di sini...",
+  "previewLabel": "Pratonton",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Paparan",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "Bersihkan HTML",
+  "showTocLabel": "Tunjukkan jadual kandungan",
+  "themeLightLabel": "Cerah",
+  "themeDarkLabel": "Gelap",
+  "importFromFileLabel": "Import dari fail",
+  "copyHtmlLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "downloadHtmlLabel": "Muat turun HTML",
+  "printHtmlLabel": "Cetak HTML",
+  "useSampleLabel": "Muat contoh",
+  "clearTextLabel": "Kosongkan",
+  "tocTitle": "Jadual kandungan",
+  "tocEmptyLabel": "Tiada tajuk lagi.",
+  "untitledHeading": "Tanpa tajuk"
+}

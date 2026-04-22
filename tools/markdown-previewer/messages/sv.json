@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Skriv Markdown här...",
+  "previewLabel": "Förhandsgranskning",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Vy",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "Sanera HTML",
+  "showTocLabel": "Visa innehållsförteckning",
+  "themeLightLabel": "Ljus",
+  "themeDarkLabel": "Mörk",
+  "importFromFileLabel": "Importera från fil",
+  "copyHtmlLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "downloadHtmlLabel": "Ladda ner HTML",
+  "printHtmlLabel": "Skriv ut HTML",
+  "useSampleLabel": "Ladda exempel",
+  "clearTextLabel": "Rensa",
+  "tocTitle": "Innehållsförteckning",
+  "tocEmptyLabel": "Inga rubriker ännu.",
+  "untitledHeading": "Utan titel"
+}

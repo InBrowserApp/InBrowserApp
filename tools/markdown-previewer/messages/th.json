@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "พิมพ์ Markdown ที่นี่...",
+  "previewLabel": "ตัวอย่าง",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "มุมมอง",
+  "themeLabel": "ธีม",
+  "sanitizeHtmlLabel": "ทำความสะอาด HTML",
+  "showTocLabel": "แสดงสารบัญ",
+  "themeLightLabel": "สว่าง",
+  "themeDarkLabel": "มืด",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "copyHtmlLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadHtmlLabel": "ดาวน์โหลด HTML",
+  "printHtmlLabel": "พิมพ์ HTML",
+  "useSampleLabel": "โหลดตัวอย่าง",
+  "clearTextLabel": "ล้าง",
+  "tocTitle": "สารบัญ",
+  "tocEmptyLabel": "ยังไม่มีหัวข้อ",
+  "untitledHeading": "ไม่มีชื่อ"
+}

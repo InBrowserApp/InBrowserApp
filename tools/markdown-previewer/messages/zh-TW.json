@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "在此輸入 Markdown...",
+  "previewLabel": "預覽",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "檢視",
+  "themeLabel": "主題",
+  "sanitizeHtmlLabel": "清理 HTML",
+  "showTocLabel": "顯示目錄",
+  "themeLightLabel": "淺色",
+  "themeDarkLabel": "深色",
+  "importFromFileLabel": "從檔案匯入",
+  "copyHtmlLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "downloadHtmlLabel": "下載 HTML",
+  "printHtmlLabel": "列印 HTML",
+  "useSampleLabel": "載入範例",
+  "clearTextLabel": "清空",
+  "tocTitle": "目錄",
+  "tocEmptyLabel": "尚無標題",
+  "untitledHeading": "未命名"
+}

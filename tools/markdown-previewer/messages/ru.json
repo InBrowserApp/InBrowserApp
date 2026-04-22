@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Введите Markdown...",
+  "previewLabel": "Предпросмотр",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Вид",
+  "themeLabel": "Тема",
+  "sanitizeHtmlLabel": "Очистить HTML",
+  "showTocLabel": "Показать оглавление",
+  "themeLightLabel": "Светлая",
+  "themeDarkLabel": "Темная",
+  "importFromFileLabel": "Импорт из файла",
+  "copyHtmlLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "downloadHtmlLabel": "Скачать HTML",
+  "printHtmlLabel": "Печать HTML",
+  "useSampleLabel": "Загрузить пример",
+  "clearTextLabel": "Очистить",
+  "tocTitle": "Оглавление",
+  "tocEmptyLabel": "Пока нет заголовков.",
+  "untitledHeading": "Без названия"
+}

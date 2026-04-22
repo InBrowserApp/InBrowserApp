@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "在此输入 Markdown...",
+  "previewLabel": "预览",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "视图",
+  "themeLabel": "主题",
+  "sanitizeHtmlLabel": "清理 HTML",
+  "showTocLabel": "显示目录",
+  "themeLightLabel": "浅色",
+  "themeDarkLabel": "深色",
+  "importFromFileLabel": "从文件导入",
+  "copyHtmlLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadHtmlLabel": "下载 HTML",
+  "printHtmlLabel": "打印 HTML",
+  "useSampleLabel": "载入示例",
+  "clearTextLabel": "清空",
+  "tocTitle": "目录",
+  "tocEmptyLabel": "暂无标题",
+  "untitledHeading": "未命名"
+}

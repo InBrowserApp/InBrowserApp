@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Nhập Markdown ở đây...",
+  "previewLabel": "Xem trước",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Chế độ xem",
+  "themeLabel": "Giao diện",
+  "sanitizeHtmlLabel": "Làm sạch HTML",
+  "showTocLabel": "Hiển thị mục lục",
+  "themeLightLabel": "Sáng",
+  "themeDarkLabel": "Tối",
+  "importFromFileLabel": "Nhập từ tệp",
+  "copyHtmlLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadHtmlLabel": "Tải HTML",
+  "printHtmlLabel": "In HTML",
+  "useSampleLabel": "Tai vi du",
+  "clearTextLabel": "Xoa",
+  "tocTitle": "Mục lục",
+  "tocEmptyLabel": "Chưa có tiêu đề.",
+  "untitledHeading": "Không tiêu đề"
+}

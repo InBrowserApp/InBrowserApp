@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "यहां Markdown लिखें...",
+  "previewLabel": "पूर्वावलोकन",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "दृश्य",
+  "themeLabel": "थीम",
+  "sanitizeHtmlLabel": "HTML साफ़ करें",
+  "showTocLabel": "सामग्री सूची दिखाएँ",
+  "themeLightLabel": "हल्का",
+  "themeDarkLabel": "गहरा",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "copyHtmlLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadHtmlLabel": "HTML डाउनलोड करें",
+  "printHtmlLabel": "HTML प्रिंट करें",
+  "useSampleLabel": "उदाहरण लोड करें",
+  "clearTextLabel": "साफ करें",
+  "tocTitle": "सामग्री सूची",
+  "tocEmptyLabel": "अभी कोई शीर्षक नहीं।",
+  "untitledHeading": "बिना शीर्षक"
+}

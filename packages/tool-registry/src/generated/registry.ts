@@ -7971,6 +7971,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "markdown-previewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["document", "markdown", "preview", "html", "editor"],
+    locales: {
+      ar: {
+        name: "معاين Markdown",
+        description:
+          "معاينة Markdown مباشرة مع التنقية، جدول المحتويات، تصدير HTML والطباعة.",
+      },
+      de: {
+        name: "Markdown-Vorschau",
+        description:
+          "Markdown live mit Bereinigung, Inhaltsverzeichnis, HTML-Export und Drucken.",
+      },
+      en: {
+        name: "Markdown Previewer",
+        description:
+          "Live preview Markdown with sanitize toggle, table of contents, HTML export, and print.",
+      },
+      es: {
+        name: "Visor de Markdown",
+        description:
+          "Previsualiza Markdown en vivo con limpieza, índice, exportación HTML e impresión.",
+      },
+      fr: {
+        name: "Aperçu Markdown",
+        description:
+          "Aperçu Markdown en direct avec nettoyage, sommaire, export HTML et impression.",
+      },
+      he: {
+        name: "מציג Markdown",
+        description:
+          "תצוגה מקדימה חיה של Markdown עם סינון, תוכן עניינים, ייצוא HTML והדפסה.",
+      },
+      hi: {
+        name: "Markdown प्रीव्यूअर",
+        description:
+          "Markdown का लाइव प्रीव्यू, साफ़-सफ़ाई, सामग्री सूची, HTML निर्यात और प्रिंट।",
+      },
+      id: {
+        name: "Pratinjau Markdown",
+        description:
+          "Pratinjau Markdown secara langsung dengan pembersihan, daftar isi, ekspor HTML, dan cetak.",
+      },
+      it: {
+        name: "Anteprima Markdown",
+        description:
+          "Anteprima Markdown in tempo reale con sanificazione, sommario, export HTML e stampa.",
+      },
+      ja: {
+        name: "Markdown プレビューア",
+        description:
+          "Markdown をリアルタイムにプレビュー。サニタイズ、目次、HTML 書き出し、印刷に対応。",
+      },
+      ko: {
+        name: "Markdown 미리보기",
+        description:
+          "실시간 Markdown 미리보기, 정화, 목차, HTML 내보내기, 인쇄 지원.",
+      },
+      ms: {
+        name: "Pratonton Markdown",
+        description:
+          "Pratonton Markdown secara langsung dengan pembersihan, jadual kandungan, eksport HTML dan cetak.",
+      },
+      nl: {
+        name: "Markdown-voorvertoner",
+        description:
+          "Live Markdown-voorbeeld met opschoning, inhoudsopgave, HTML-export en afdrukken.",
+      },
+      no: {
+        name: "Markdown-forhåndsviser",
+        description:
+          "Forhåndsvis Markdown direkte med rensing, innholdsfortegnelse, HTML-eksport og utskrift.",
+      },
+      pl: {
+        name: "Podgląd Markdown",
+        description:
+          "Podgląd Markdown na żywo z oczyszczaniem, spisem treści, eksportem HTML i drukiem.",
+      },
+      pt: {
+        name: "Visualizador de Markdown",
+        description:
+          "Pré-visualize Markdown ao vivo com limpeza, sumário, exportação HTML e impressão.",
+      },
+      ru: {
+        name: "Просмотр Markdown",
+        description:
+          "Живой просмотр Markdown с очисткой, оглавлением, экспортом HTML и печатью.",
+      },
+      sv: {
+        name: "Markdown-förhandsgranskare",
+        description:
+          "Liveförhandsgranska Markdown med sanering, innehållsförteckning, HTML-export och utskrift.",
+      },
+      th: {
+        name: "ตัวอย่าง Markdown",
+        description:
+          "ดูตัวอย่าง Markdown แบบเรียลไทม์ พร้อมการทำความสะอาด สารบัญ ส่งออก HTML และพิมพ์",
+      },
+      tr: {
+        name: "Markdown Önizleyici",
+        description:
+          "Markdown'u canlı önizleyin; temizleme, içerik tablosu, HTML dışa aktarma ve yazdırma.",
+      },
+      vi: {
+        name: "Trình xem Markdown",
+        description:
+          "Xem trước Markdown trực tiếp, có làm sạch, mục lục, xuất HTML và in.",
+      },
+      "zh-CN": {
+        name: "Markdown 预览器",
+        description:
+          "实时预览 Markdown，可切换清理与目录，支持导出 HTML 和打印。",
+      },
+      "zh-TW": {
+        name: "Markdown 預覽器",
+        description:
+          "即時預覽 Markdown，可切換清理與目錄，支援匯出 HTML 與列印。",
+      },
+    },
+  },
+  {
     slug: "md4-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -23695,6 +23818,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MAC 位址轉 IPv6 鏈路本地位址轉換器",
         description:
           "將 MAC 位址轉換為 IPv6 鏈路本地位址。輸入任何 MAC 位址，立即獲得對應的 IPv6 鏈路本地位址。",
+      },
+    },
+  },
+  "markdown-previewer": {
+    slug: "markdown-previewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["document", "markdown", "preview", "html", "editor"],
+    locales: {
+      ar: {
+        name: "معاين Markdown",
+        description:
+          "معاينة Markdown مباشرة مع التنقية، جدول المحتويات، تصدير HTML والطباعة.",
+      },
+      de: {
+        name: "Markdown-Vorschau",
+        description:
+          "Markdown live mit Bereinigung, Inhaltsverzeichnis, HTML-Export und Drucken.",
+      },
+      en: {
+        name: "Markdown Previewer",
+        description:
+          "Live preview Markdown with sanitize toggle, table of contents, HTML export, and print.",
+      },
+      es: {
+        name: "Visor de Markdown",
+        description:
+          "Previsualiza Markdown en vivo con limpieza, índice, exportación HTML e impresión.",
+      },
+      fr: {
+        name: "Aperçu Markdown",
+        description:
+          "Aperçu Markdown en direct avec nettoyage, sommaire, export HTML et impression.",
+      },
+      he: {
+        name: "מציג Markdown",
+        description:
+          "תצוגה מקדימה חיה של Markdown עם סינון, תוכן עניינים, ייצוא HTML והדפסה.",
+      },
+      hi: {
+        name: "Markdown प्रीव्यूअर",
+        description:
+          "Markdown का लाइव प्रीव्यू, साफ़-सफ़ाई, सामग्री सूची, HTML निर्यात और प्रिंट।",
+      },
+      id: {
+        name: "Pratinjau Markdown",
+        description:
+          "Pratinjau Markdown secara langsung dengan pembersihan, daftar isi, ekspor HTML, dan cetak.",
+      },
+      it: {
+        name: "Anteprima Markdown",
+        description:
+          "Anteprima Markdown in tempo reale con sanificazione, sommario, export HTML e stampa.",
+      },
+      ja: {
+        name: "Markdown プレビューア",
+        description:
+          "Markdown をリアルタイムにプレビュー。サニタイズ、目次、HTML 書き出し、印刷に対応。",
+      },
+      ko: {
+        name: "Markdown 미리보기",
+        description:
+          "실시간 Markdown 미리보기, 정화, 목차, HTML 내보내기, 인쇄 지원.",
+      },
+      ms: {
+        name: "Pratonton Markdown",
+        description:
+          "Pratonton Markdown secara langsung dengan pembersihan, jadual kandungan, eksport HTML dan cetak.",
+      },
+      nl: {
+        name: "Markdown-voorvertoner",
+        description:
+          "Live Markdown-voorbeeld met opschoning, inhoudsopgave, HTML-export en afdrukken.",
+      },
+      no: {
+        name: "Markdown-forhåndsviser",
+        description:
+          "Forhåndsvis Markdown direkte med rensing, innholdsfortegnelse, HTML-eksport og utskrift.",
+      },
+      pl: {
+        name: "Podgląd Markdown",
+        description:
+          "Podgląd Markdown na żywo z oczyszczaniem, spisem treści, eksportem HTML i drukiem.",
+      },
+      pt: {
+        name: "Visualizador de Markdown",
+        description:
+          "Pré-visualize Markdown ao vivo com limpeza, sumário, exportação HTML e impressão.",
+      },
+      ru: {
+        name: "Просмотр Markdown",
+        description:
+          "Живой просмотр Markdown с очисткой, оглавлением, экспортом HTML и печатью.",
+      },
+      sv: {
+        name: "Markdown-förhandsgranskare",
+        description:
+          "Liveförhandsgranska Markdown med sanering, innehållsförteckning, HTML-export och utskrift.",
+      },
+      th: {
+        name: "ตัวอย่าง Markdown",
+        description:
+          "ดูตัวอย่าง Markdown แบบเรียลไทม์ พร้อมการทำความสะอาด สารบัญ ส่งออก HTML และพิมพ์",
+      },
+      tr: {
+        name: "Markdown Önizleyici",
+        description:
+          "Markdown'u canlı önizleyin; temizleme, içerik tablosu, HTML dışa aktarma ve yazdırma.",
+      },
+      vi: {
+        name: "Trình xem Markdown",
+        description:
+          "Xem trước Markdown trực tiếp, có làm sạch, mục lục, xuất HTML và in.",
+      },
+      "zh-CN": {
+        name: "Markdown 预览器",
+        description:
+          "实时预览 Markdown，可切换清理与目录，支持导出 HTML 和打印。",
+      },
+      "zh-TW": {
+        name: "Markdown 預覽器",
+        description:
+          "即時預覽 Markdown，可切換清理與目錄，支援匯出 HTML 與列印。",
       },
     },
   },

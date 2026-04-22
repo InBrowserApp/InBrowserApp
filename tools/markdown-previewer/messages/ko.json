@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "여기에 Markdown 입력...",
+  "previewLabel": "미리보기",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "보기",
+  "themeLabel": "테마",
+  "sanitizeHtmlLabel": "HTML 정화",
+  "showTocLabel": "목차 표시",
+  "themeLightLabel": "라이트",
+  "themeDarkLabel": "다크",
+  "importFromFileLabel": "파일에서 가져오기",
+  "copyHtmlLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "downloadHtmlLabel": "HTML 다운로드",
+  "printHtmlLabel": "HTML 인쇄",
+  "useSampleLabel": "예제 불러오기",
+  "clearTextLabel": "지우기",
+  "tocTitle": "목차",
+  "tocEmptyLabel": "제목이 아직 없습니다.",
+  "untitledHeading": "제목 없음"
+}

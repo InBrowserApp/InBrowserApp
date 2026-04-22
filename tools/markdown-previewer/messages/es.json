@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "Introduce Markdown aquí...",
+  "previewLabel": "Vista previa",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "Vista",
+  "themeLabel": "Tema",
+  "sanitizeHtmlLabel": "Sanear HTML",
+  "showTocLabel": "Mostrar índice",
+  "themeLightLabel": "Claro",
+  "themeDarkLabel": "Oscuro",
+  "importFromFileLabel": "Importar desde archivo",
+  "copyHtmlLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "downloadHtmlLabel": "Descargar HTML",
+  "printHtmlLabel": "Imprimir HTML",
+  "useSampleLabel": "Cargar ejemplo",
+  "clearTextLabel": "Limpiar",
+  "tocTitle": "Índice",
+  "tocEmptyLabel": "Aún no hay títulos.",
+  "untitledHeading": "Sin título"
+}

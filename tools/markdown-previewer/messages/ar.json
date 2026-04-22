@@ -1,0 +1,22 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownPlaceholder": "أدخل Markdown هنا...",
+  "previewLabel": "معاينة",
+  "htmlSourceLabel": "HTML",
+  "viewModeLabel": "العرض",
+  "themeLabel": "السمة",
+  "sanitizeHtmlLabel": "تنقية HTML",
+  "showTocLabel": "إظهار جدول المحتويات",
+  "themeLightLabel": "فاتح",
+  "themeDarkLabel": "داكن",
+  "importFromFileLabel": "استيراد من ملف",
+  "copyHtmlLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadHtmlLabel": "تنزيل HTML",
+  "printHtmlLabel": "طباعة HTML",
+  "useSampleLabel": "تحميل مثال",
+  "clearTextLabel": "مسح",
+  "tocTitle": "جدول المحتويات",
+  "tocEmptyLabel": "لا توجد عناوين بعد.",
+  "untitledHeading": "بدون عنوان"
+}
