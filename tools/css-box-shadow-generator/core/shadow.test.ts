@@ -62,6 +62,19 @@ describe("formatShadowLayer", () => {
       })
     ).toBe("inset 0px 12px 40px -8px rgba(0, 0, 0, 0.251)")
   })
+
+  it("falls back to a safe rgba value when the color is invalid", () => {
+    expect(
+      formatShadowLayer({
+        offsetX: 1.2,
+        offsetY: -2.4,
+        blur: -3,
+        spread: 4.6,
+        color: "oops",
+        inset: false,
+      })
+    ).toBe("1px -2px 0px 5px rgba(0, 0, 0, 0.2)")
+  })
 })
 
 describe("buildBoxShadow", () => {
@@ -91,10 +104,18 @@ describe("color helpers", () => {
     expect(getAlphaPercentage("oops")).toBe(20)
   })
 
+  it("returns derived values for valid hex input", () => {
+    expect(getOpaqueHexColor("#12345680")).toBe("#123456")
+    expect(getAlphaPercentage("#12345680")).toBe(50)
+  })
+
   it("preserves alpha when updating rgb and preserves rgb when updating alpha", () => {
     expect(updateHexColorRgb("#12345680", "#ABCDEF")).toBe("#ABCDEF80")
+    expect(updateHexColorRgb("#12345680", "oops")).toBe("#12345680")
+    expect(updateHexColorRgb("oops", "#ABCDEF")).toBe("#ABCDEF33")
     expect(updateHexAlpha("#12345680", 12)).toBe("#1234561F")
     expect(updateHexAlpha("#12345680", 120)).toBe("#123456FF")
+    expect(updateHexAlpha("oops", -10)).toBe("#00000000")
   })
 })
 
@@ -116,6 +137,26 @@ describe("normalizeShadowConfig", () => {
       spread: 6,
       color: "#ABCDEF",
       inset: true,
+    })
+  })
+
+  it("returns defaults when values are missing or invalid", () => {
+    expect(normalizeShadowConfig()).toEqual(DEFAULT_SHADOW_CONFIG)
+    expect(
+      normalizeShadowConfig({
+        offsetX: Number.POSITIVE_INFINITY,
+        offsetY: 6.6,
+        blur: Number.NaN,
+        spread: undefined,
+        color: "oops",
+      })
+    ).toEqual({
+      offsetX: 0,
+      offsetY: 7,
+      blur: 24,
+      spread: 0,
+      color: "#00000033",
+      inset: false,
     })
   })
 })
