@@ -1,0 +1,4 @@
+{
+  "name": "Markdown → HTML-omvandlare",
+  "description": "Konvertera Markdown till HTML med marked, valfritt sanera med DOMPurify. Förhandsvisa, kopiera och ladda ner."
+}

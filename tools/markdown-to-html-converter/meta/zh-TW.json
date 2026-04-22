@@ -1,0 +1,4 @@
+{
+  "name": "Markdown 轉 HTML 轉換器",
+  "description": "使用 marked 將 Markdown 轉為 HTML，可選 DOMPurify 清理。預覽、複製並下載。"
+}
