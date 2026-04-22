@@ -41,7 +41,7 @@ function MarkdownInputCard({
   onReset,
 }: MarkdownInputCardProps) {
   return (
-    <ToolPanelCard className="border border-border/70 bg-gradient-to-b from-card via-card to-muted/20">
+    <ToolPanelCard className="border border-border/70 bg-card">
       <CardHeader className="gap-4 border-b">
         <div className="flex flex-col gap-1.5">
           <CardTitle>{messages.markdownLabel}</CardTitle>
@@ -68,7 +68,7 @@ function MarkdownInputCard({
           onChange={(event) => {
             onMarkdownChange(event.target.value)
           }}
-          className="min-h-[28rem] flex-1 resize-y border-border/70 bg-background/80 font-mono text-sm leading-6 [tab-size:2]"
+          className="min-h-[28rem] flex-1 resize-y border-border/70 bg-background font-mono text-sm leading-6 [tab-size:2]"
         />
       </ToolPanelCardContent>
 

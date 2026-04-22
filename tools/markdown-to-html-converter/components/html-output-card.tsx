@@ -33,7 +33,7 @@ function HtmlOutputCard({
   const hasOutput = html.trim().length > 0
 
   return (
-    <ToolPanelCard className="border border-border/70 bg-gradient-to-b from-card via-card to-primary/5">
+    <ToolPanelCard className="border border-border/70 bg-card">
       <CardHeader className="gap-4 border-b xl:grid-cols-[minmax(0,1fr)_19rem] xl:items-center">
         <div className="flex flex-col gap-1.5">
           <CardTitle>{messages.outputLabel}</CardTitle>
@@ -49,7 +49,7 @@ function HtmlOutputCard({
           </div>
         </div>
 
-        <div className="rounded-[1.25rem] border border-border/70 bg-background/85 p-3 shadow-xs">
+        <div className="rounded-[1.25rem] border border-border/70 bg-muted/30 p-3">
           <div className="flex items-start justify-between gap-3">
             <div className="space-y-1">
               <div className="text-sm font-medium">

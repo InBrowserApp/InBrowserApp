@@ -37,7 +37,7 @@ function PreviewCard({
   const hasOutput = html.trim().length > 0
 
   return (
-    <ToolPanelCard className="border border-border/70 bg-gradient-to-b from-card via-card to-muted/30">
+    <ToolPanelCard className="border border-border/70 bg-card">
       <CardHeader className="gap-4 border-b">
         <div className="flex flex-col gap-1.5">
           <CardTitle>{messages.previewLabel}</CardTitle>
@@ -52,7 +52,7 @@ function PreviewCard({
             documentHtml={previewDocument}
           />
         ) : (
-          <Empty className="min-h-[22rem] rounded-[1.5rem] border border-dashed border-border/80 bg-background/75">
+          <Empty className="min-h-[22rem] rounded-[1.5rem] border border-dashed border-border/80 bg-muted/20">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 <Sparkles />
