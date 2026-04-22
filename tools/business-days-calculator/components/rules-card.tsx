@@ -71,12 +71,12 @@ function RulesCard({
 
   return (
     <ToolPanelCard data-testid="business-days-rules-card">
-      <CardHeader className="border-b">
+      <CardHeader className="grid-cols-1 gap-3 border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-1">
         <div>
           <CardTitle>{messages.rulesTitle}</CardTitle>
           <CardDescription>{selectionHint}</CardDescription>
         </div>
-        <CardAction className="flex flex-wrap justify-end gap-2">
+        <CardAction className="col-start-1 row-start-auto flex flex-wrap justify-start gap-2 justify-self-start sm:col-start-2 sm:row-span-2 sm:row-start-1 sm:justify-end sm:justify-self-end">
           <Badge variant="outline">
             {workingDayCount}/7 {messages.workingDaysLabel}
           </Badge>
@@ -91,6 +91,7 @@ function RulesCard({
           <FieldTitle>{messages.selectionModeLabel}</FieldTitle>
           <ToggleGroup
             type="single"
+            className="grid w-full grid-cols-2 rounded-xl bg-muted/40 p-1"
             value={weekdayMode}
             onValueChange={(value) => {
               if (value === "weekend" || value === "working") {
@@ -101,12 +102,14 @@ function RulesCard({
             <ToggleGroupItem
               value="weekend"
               aria-label={messages.weekendDaysLabel}
+              className="w-full rounded-lg border-0 bg-transparent px-3 shadow-none hover:bg-background/70 data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:shadow-sm"
             >
               {messages.weekendDaysLabel}
             </ToggleGroupItem>
             <ToggleGroupItem
               value="working"
               aria-label={messages.workingDaysLabel}
+              className="w-full rounded-lg border-0 bg-transparent px-3 shadow-none hover:bg-background/70 data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:shadow-sm"
             >
               {messages.workingDaysLabel}
             </ToggleGroupItem>
@@ -119,35 +122,38 @@ function RulesCard({
               ? messages.weekendDaysLabel
               : messages.workingDaysLabel}
           </FieldTitle>
-          <ToggleGroup
-            type="multiple"
-            className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 xl:grid-cols-7"
-            value={selectedDays.map(String)}
-            onValueChange={(values) => {
-              const nextValues = values
-                .map((value) => Number(value))
-                .filter(
-                  (value) => Number.isInteger(value) && value >= 0 && value <= 6
-                )
+          <div className="rounded-2xl border border-border/70 bg-border/50 p-px shadow-sm">
+            <ToggleGroup
+              type="multiple"
+              className="grid w-full grid-cols-7 gap-px overflow-hidden rounded-[calc(var(--radius-xl)-1px)] bg-border/50"
+              value={selectedDays.map(String)}
+              onValueChange={(values) => {
+                const nextValues = values
+                  .map((value) => Number(value))
+                  .filter(
+                    (value) =>
+                      Number.isInteger(value) && value >= 0 && value <= 6
+                  )
 
-              onSelectedDaysChange(nextValues as WeekdayIndex[])
-            }}
-          >
-            {weekdayLabelKeys.map((key, index) => (
-              <ToggleGroupItem
-                key={key}
-                value={String(index)}
-                aria-label={messages[key]}
-                className={cn(
-                  "w-full justify-center rounded-xl border border-border/70 bg-background px-3 py-2 text-sm",
-                  "data-[state=on]:border-primary/40 data-[state=on]:bg-primary/10 data-[state=on]:text-foreground"
-                )}
-                data-testid={`weekday-toggle-${index}`}
-              >
-                {messages[key]}
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup>
+                onSelectedDaysChange(nextValues as WeekdayIndex[])
+              }}
+            >
+              {weekdayLabelKeys.map((key, index) => (
+                <ToggleGroupItem
+                  key={key}
+                  value={String(index)}
+                  aria-label={messages[key]}
+                  className={cn(
+                    "h-11 w-full rounded-none border-0 bg-background px-0 text-[0.78rem] font-medium shadow-none hover:bg-muted/70 sm:text-sm",
+                    "data-[state=on]:bg-primary data-[state=on]:text-primary-foreground data-[state=on]:shadow-none"
+                  )}
+                  data-testid={`weekday-toggle-${index}`}
+                >
+                  {messages[key]}
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
+          </div>
           <FieldError>
             {hasWorkingDays ? null : messages.noWorkingDaysLabel}
           </FieldError>

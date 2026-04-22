@@ -1,8 +1,10 @@
 ## Was ist ein Arbeitstag?
 
-Ein Arbeitstag ist ein Werktag, an dem Unternehmen üblicherweise geöffnet sind. Er schließt in der Regel Wochenenden und Feiertage aus, aber du kannst die Definition anpassen.
+Ein Arbeitstag ist jeder Tag, den dein Team, Unternehmen oder Kunde als regulären Arbeitstag behandelt. In vielen Fällen bedeutet das Montag bis Freitag ohne gesetzliche Feiertage, aber dieser Rechner unterstützt auch regionale Kalender, benutzerdefinierte Wochenenden und alternative Arbeitswochen.
 
 ## Regeln für Arbeitstage
+
+Wähle zuerst, ob du ausgeschlossene Wochenendtage oder einzubeziehende Arbeitstage direkt definieren möchtest. Füge danach optionale Feiertage im Format YYYY-MM-DD hinzu, damit die Berechnung zu deinem tatsächlichen Kalender passt.
 
 - Auswahl nach: Wochenenden / Arbeitstage
 - Wähle aus, welche Tage Wochenenden sind.
@@ -12,6 +14,8 @@ Ein Arbeitstag ist ein Werktag, an dem Unternehmen üblicherweise geöffnet sind
 
 ## Arbeitstage zählen
 
+Nutze diesen Bereich, wenn du die Gesamtzahl der Arbeitstage in einem Datumsbereich brauchst. Die Aufschlüsselung trennt Arbeitstage, Gesamttage, Wochenendtage und Feiertage auf Arbeitstagen, damit das Ergebnis nachvollziehbar bleibt.
+
 - Startdatum / Enddatum
 - Start-/Enddatum einschließen
 - Arbeitstage
@@ -20,6 +24,8 @@ Ein Arbeitstag ist ein Werktag, an dem Unternehmen üblicherweise geöffnet sind
 - Feiertage (Werktage)
 
 ## Arbeitstage hinzufügen/abziehen
+
+Nutze diesen Bereich, wenn du bereits ein Basisdatum hast und ein Fälligkeitsdatum, Follow-up-Datum oder SLA-Ziel brauchst. Es gelten dieselben Regeln für Wochenenden und Feiertage wie im Bereichsrechner, damit beide Ergebnisse konsistent bleiben.
 
 - Basisdatum
 - Arbeitstage
