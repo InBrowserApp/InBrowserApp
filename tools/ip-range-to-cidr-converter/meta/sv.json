@@ -1,0 +1,4 @@
+{
+  "name": "IP-intervall till CIDR-omvandlare",
+  "description": "Konvertera IPv4- eller IPv6-start- och slutadresser till den minimala uppsättningen CIDR-block som exakt täcker intervallet."
+}

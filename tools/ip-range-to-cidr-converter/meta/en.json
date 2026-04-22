@@ -1,0 +1,4 @@
+{
+  "name": "IP Range to CIDR Converter",
+  "description": "Convert IPv4 or IPv6 start and end addresses into the minimal set of CIDR blocks that exactly covers the range."
+}

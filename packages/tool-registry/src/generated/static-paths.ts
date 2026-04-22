@@ -4234,6 +4234,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ip-range-to-cidr-converter",
+    language: "ar",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "de",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "en",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "es",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "fr",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "he",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "hi",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "id",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "it",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ja",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ko",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ms",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "nl",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "no",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "pl",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "pt",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ru",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "sv",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "th",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "tr",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "vi",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },
