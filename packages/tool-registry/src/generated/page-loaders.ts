@@ -39,6 +39,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
+  "curl-converter": () => import("@tool/curl-converter/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),

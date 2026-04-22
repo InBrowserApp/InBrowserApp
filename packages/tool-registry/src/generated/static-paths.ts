@@ -2670,6 +2670,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "curl-converter",
+    language: "ar",
+  },
+  {
+    slug: "curl-converter",
+    language: "de",
+  },
+  {
+    slug: "curl-converter",
+    language: "en",
+  },
+  {
+    slug: "curl-converter",
+    language: "es",
+  },
+  {
+    slug: "curl-converter",
+    language: "fr",
+  },
+  {
+    slug: "curl-converter",
+    language: "he",
+  },
+  {
+    slug: "curl-converter",
+    language: "hi",
+  },
+  {
+    slug: "curl-converter",
+    language: "id",
+  },
+  {
+    slug: "curl-converter",
+    language: "it",
+  },
+  {
+    slug: "curl-converter",
+    language: "ja",
+  },
+  {
+    slug: "curl-converter",
+    language: "ko",
+  },
+  {
+    slug: "curl-converter",
+    language: "ms",
+  },
+  {
+    slug: "curl-converter",
+    language: "nl",
+  },
+  {
+    slug: "curl-converter",
+    language: "no",
+  },
+  {
+    slug: "curl-converter",
+    language: "pl",
+  },
+  {
+    slug: "curl-converter",
+    language: "pt",
+  },
+  {
+    slug: "curl-converter",
+    language: "ru",
+  },
+  {
+    slug: "curl-converter",
+    language: "sv",
+  },
+  {
+    slug: "curl-converter",
+    language: "th",
+  },
+  {
+    slug: "curl-converter",
+    language: "tr",
+  },
+  {
+    slug: "curl-converter",
+    language: "vi",
+  },
+  {
+    slug: "curl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "curl-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "current-network-time",
     language: "ar",
   },

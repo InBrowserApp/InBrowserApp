@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Uitvoertaal",
+  "languagePlaceholder": "Selecteer een taal",
+  "inputCurlLabel": "cURL-opdracht",
+  "outputCodeLabel": "Geconverteerde code",
+  "curlPlaceholder": "Plak hier een cURL-opdracht...",
+  "useSampleLabel": "Voorbeeld gebruiken",
+  "clearLabel": "Wissen",
+  "downloadCodeLabel": "Downloaden",
+  "warningsTitle": "Waarschuwingen",
+  "errorsTitle": "Fouten",
+  "importFromFileLabel": "Importeren uit bestand",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd"
+}
