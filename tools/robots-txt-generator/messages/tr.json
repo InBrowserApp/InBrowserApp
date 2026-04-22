@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt güvenlik değildir",
-  "securityNotice": "Robots.txt herkese açıktır ve erişimi engellemez. Hassas içerik için sunucu tarafı erişim kontrolü kullanın.",
   "presets": "Ön ayarlar",
   "presetAllowAll": "Hepsine izin ver",
   "presetDisallowAll": "Hepsini engelle",

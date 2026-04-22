@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt không phải bảo mật",
-  "securityNotice": "Robots.txt là công khai và không chặn truy cập. Hãy dùng kiểm soát truy cập phía máy chủ cho nội dung nhạy cảm.",
   "presets": "Mẫu nhanh",
   "presetAllowAll": "Cho phép tất cả",
   "presetDisallowAll": "Chặn tất cả",

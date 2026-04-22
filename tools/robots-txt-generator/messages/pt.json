@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt não é segurança",
-  "securityNotice": "Robots.txt é público e não bloqueia o acesso. Use controle de acesso no servidor para conteúdo sensível.",
   "presets": "Predefinições",
   "presetAllowAll": "Permitir tudo",
   "presetDisallowAll": "Bloquear tudo",

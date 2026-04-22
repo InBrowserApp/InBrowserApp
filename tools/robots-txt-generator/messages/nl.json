@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt is geen beveiliging",
-  "securityNotice": "Robots.txt is openbaar en blokkeert geen toegang. Gebruik server-side toegangscontrole voor gevoelige inhoud.",
   "presets": "Voorinstellingen",
   "presetAllowAll": "Alles toestaan",
   "presetDisallowAll": "Alles blokkeren",

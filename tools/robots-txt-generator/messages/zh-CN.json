@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt 不是安全机制",
-  "securityNotice": "Robots.txt 是公开的，并不会阻止访问。敏感内容请使用服务端访问控制。",
   "presets": "预设",
   "presetAllowAll": "允许全部",
   "presetDisallowAll": "禁止全部",

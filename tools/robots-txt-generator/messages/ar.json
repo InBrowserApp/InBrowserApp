@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt ليس أمانًا",
-  "securityNotice": "Robots.txt ملف عام ولا يمنع الوصول. استخدم التحكم في الوصول من جهة الخادم للمحتوى الحساس.",
   "presets": "الإعدادات المسبقة",
   "presetAllowAll": "السماح للجميع",
   "presetDisallowAll": "الحظر للجميع",

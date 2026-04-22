@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt 不是安全機制",
-  "securityNotice": "Robots.txt 為公開檔案，無法阻擋存取。敏感內容請使用伺服器端存取控制。",
   "presets": "預設",
   "presetAllowAll": "允許全部",
   "presetDisallowAll": "禁止全部",

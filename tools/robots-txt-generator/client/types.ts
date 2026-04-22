@@ -3,8 +3,6 @@ import type { ToolMeta } from "@workspace/tool-sdk"
 import type { RobotsRule } from "../core/robots"
 
 type RobotsTxtMessageCatalog = Readonly<{
-  securityNoticeTitle: string
-  securityNotice: string
   presets: string
   presetAllowAll: string
   presetDisallowAll: string

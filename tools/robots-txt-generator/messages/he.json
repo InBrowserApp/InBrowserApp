@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt אינו אבטחה",
-  "securityNotice": "Robots.txt הוא קובץ ציבורי ואינו חוסם גישה. השתמש בבקרת גישה בצד השרת לתוכן רגיש.",
   "presets": "הגדרות קבועות",
   "presetAllowAll": "לאפשר הכול",
   "presetDisallowAll": "לחסום הכול",

@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt はセキュリティではありません",
-  "securityNotice": "Robots.txt は公開情報であり、アクセスを遮断しません。機密コンテンツはサーバー側のアクセス制御を使用してください。",
   "presets": "プリセット",
   "presetAllowAll": "全て許可",
   "presetDisallowAll": "全て禁止",

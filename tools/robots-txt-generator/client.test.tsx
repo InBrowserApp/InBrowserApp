@@ -14,9 +14,6 @@ const messages = {
     name: "robots.txt Generator",
     description: "Generate robots.txt files.",
   },
-  securityNoticeTitle: "Robots.txt is not security",
-  securityNotice:
-    "Robots.txt is public and does not block access. Use server-side access control for sensitive content.",
   presets: "Presets",
   presetAllowAll: "Allow all",
   presetDisallowAll: "Disallow all",

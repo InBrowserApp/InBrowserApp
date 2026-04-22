@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt सुरक्षा नहीं है",
-  "securityNotice": "Robots.txt सार्वजनिक है और एक्सेस नहीं रोकता। संवेदनशील सामग्री के लिए सर्वर-साइड एक्सेस नियंत्रण उपयोग करें।",
   "presets": "प्रीसेट",
   "presetAllowAll": "सबको अनुमति दें",
   "presetDisallowAll": "सबको रोकें",

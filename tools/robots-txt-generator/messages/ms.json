@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt bukan keselamatan",
-  "securityNotice": "Robots.txt adalah awam dan tidak menyekat akses. Gunakan kawalan akses pelayan untuk kandungan sensitif.",
   "presets": "Pratetap",
   "presetAllowAll": "Benarkan semua",
   "presetDisallowAll": "Sekat semua",

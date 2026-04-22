@@ -1,6 +1,4 @@
 {
-  "securityNoticeTitle": "Robots.txt не является защитой",
-  "securityNotice": "Robots.txt публичен и не блокирует доступ. Для чувствительного контента используйте серверный контроль доступа.",
   "presets": "Предустановки",
   "presetAllowAll": "Разрешить всё",
   "presetDisallowAll": "Запретить всё",

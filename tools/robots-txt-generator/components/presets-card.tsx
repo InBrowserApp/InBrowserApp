@@ -2,11 +2,6 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 
@@ -25,10 +20,6 @@ function PresetsCard({ messages, onApplyPreset }: PresetsCardProps) {
         <CardTitle>{messages.presets}</CardTitle>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
-        <Alert>
-          <AlertTitle>{messages.securityNoticeTitle}</AlertTitle>
-          <AlertDescription>{messages.securityNotice}</AlertDescription>
-        </Alert>
         <div className="flex flex-wrap gap-3">
           <Button
             type="button"
