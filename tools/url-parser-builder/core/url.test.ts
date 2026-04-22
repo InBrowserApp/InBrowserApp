@@ -48,6 +48,25 @@ describe("parseUrlInput", () => {
       code: "invalid-url",
     })
   })
+
+  test("keeps undecodable encoded fragments as-is instead of throwing", () => {
+    const result = parseUrlInput("https://example.com/%E0%A4%A")
+
+    expect(result).toEqual({
+      ok: true,
+      normalizedUrl: "https://example.com/%E0%A4%A",
+      draft: {
+        protocol: "https",
+        username: "",
+        password: "",
+        hostname: "example.com",
+        port: "",
+        pathname: "/%E0%A4%A",
+        hash: "",
+        queryParams: [],
+      },
+    })
+  })
 })
 
 describe("buildUrlFromDraft", () => {
@@ -76,6 +95,44 @@ describe("buildUrlFromDraft", () => {
     expect(result.normalizedUrl).toBe(
       "https://user%20name:pa$s@example.com:8443/reports/q1%20summary?utm_source=email+blast&utm_source=retention&view=table%2Fgrid#growth%20plan"
     )
+  })
+
+  test("builds root URLs when path and query are blank", () => {
+    const result = buildUrlFromDraft({
+      protocol: "https",
+      username: "",
+      password: "",
+      hostname: "example.com",
+      port: "",
+      pathname: "   ",
+      hash: "",
+      queryParams: [],
+    })
+
+    expect(result).toEqual({
+      ok: true,
+      normalizedUrl: "https://example.com/",
+      url: new URL("https://example.com/"),
+    })
+  })
+
+  test("keeps leading slashes and username-only authority intact", () => {
+    const result = buildUrlFromDraft({
+      protocol: "https",
+      username: "alexa",
+      password: "",
+      hostname: "example.com",
+      port: "",
+      pathname: "/already/normalized",
+      hash: "",
+      queryParams: [],
+    })
+
+    expect(result).toEqual({
+      ok: true,
+      normalizedUrl: "https://alexa@example.com/already/normalized",
+      url: new URL("https://alexa@example.com/already/normalized"),
+    })
   })
 
   test("reports field-level validation errors", () => {
@@ -130,6 +187,19 @@ describe("buildUrlFromDraft", () => {
         queryParams: [],
       })
     ).toEqual({ ok: false, code: "invalid-port" })
+
+    expect(
+      buildUrlFromDraft({
+        protocol: "https",
+        username: "",
+        password: "",
+        hostname: "example.com",
+        port: "abc",
+        pathname: "/",
+        hash: "",
+        queryParams: [],
+      })
+    ).toEqual({ ok: false, code: "invalid-port" })
   })
 })
 
@@ -146,6 +216,28 @@ describe("describeUrl", () => {
       hash: "growth",
       queryCount: 2,
       pathSegments: ["reports", "q1-summary"],
+    })
+  })
+
+  test("describes URL objects and URLs without credentials", () => {
+    expect(
+      describeUrl(new URL("https://alexa@example.com/already/normalized"))
+    ).toEqual({
+      origin: "https://example.com",
+      authority: "alexa@example.com",
+      protocol: "https",
+      hash: "",
+      queryCount: 0,
+      pathSegments: ["already", "normalized"],
+    })
+
+    expect(describeUrl("https://example.com/")).toEqual({
+      origin: "https://example.com",
+      authority: "example.com",
+      protocol: "https",
+      hash: "",
+      queryCount: 0,
+      pathSegments: [],
     })
   })
 })
