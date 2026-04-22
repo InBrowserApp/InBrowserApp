@@ -66,6 +66,30 @@ describe("jwkPem utilities", () => {
     expect(pem).toContain("BEGIN TEST")
   })
 
+  it("parses plain JWK objects and filters non-object JWKS entries", () => {
+    expect(
+      parseJwkJson(JSON.stringify({ kty: "RSA", n: "AQAB", e: "AQAB" }))
+    ).toEqual([{ kty: "RSA", n: "AQAB", e: "AQAB" }])
+
+    expect(
+      parseJwkJson(
+        JSON.stringify({
+          keys: [null, "ignored", { kty: "OKP", crv: "Ed25519", x: "abc" }],
+        })
+      )
+    ).toEqual([{ kty: "OKP", crv: "Ed25519", x: "abc" }])
+  })
+
+  it("rejects empty JWKS arrays after filtering invalid entries", () => {
+    expect(() =>
+      parseJwkJson(
+        JSON.stringify({
+          keys: [null, 123, "ignored"],
+        })
+      )
+    ).toThrowError(expect.objectContaining({ key: "errorInvalidJwk" }))
+  })
+
   it("converts Ed25519 JWK to PEM and back", async () => {
     const privateKey = ed25519.utils.randomSecretKey()
     const publicKey = await ed25519.getPublicKeyAsync(privateKey)
@@ -371,6 +395,11 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
       key: "errorMissingField",
     })
     await expect(
+      jwkToPem({ kty: "oct", k: "AQAB" } as JsonWebKey, "public")
+    ).rejects.toMatchObject({
+      key: "errorUnsupportedKty",
+    })
+    await expect(
       jwkToPem({ kty: "RSA" } as JsonWebKey, "public")
     ).rejects.toMatchObject({
       key: "errorMissingField",
@@ -509,6 +538,14 @@ MC4CAQAwBQYDK2VwBCIEICD0fG2rpGzzVPpzOe/6azkxbz/W/UE12OiWCztZm1ke
 
     await expect(testUtils.parseOkpPkcs8(pkcs8)).rejects.toMatchObject({
       key: "errorOkpPublicKeyMissing",
+    })
+  })
+
+  it("covers short-form ASN.1 lengths for PKCS#1 wrappers", async () => {
+    const shortPkcs1 = wrapPem("RSA PUBLIC KEY", new Uint8Array([0x30, 0x00]))
+
+    await expect(pemToJwk(shortPkcs1)).rejects.toMatchObject({
+      key: "errorInvalidPem",
     })
   })
 
