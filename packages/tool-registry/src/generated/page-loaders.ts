@@ -104,6 +104,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "ripemd160-hash-text-or-file": () =>
     import("@tool/ripemd160-hash-text-or-file/page"),
+  "ripemd256-hash-text-or-file": () =>
+    import("@tool/ripemd256-hash-text-or-file/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
