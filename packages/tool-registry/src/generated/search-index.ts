@@ -14813,6 +14813,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "url-parser-builder",
+    category: "web",
+    icon: "globe",
+    tags: ["url", "parser", "builder", "uri", "query", "protocol", "hostname"],
+    locales: {
+      ar: {
+        name: "محلل ومنشئ URL",
+        description:
+          "يحلل عناوين URL إلى مكونات ويعيد بناءها من البروتوكول وبيانات الاعتماد والمضيف والمسار ومعلمات الاستعلام والجزء داخل محرر منظم واحد.",
+      },
+      de: {
+        name: "URL-Parser und -Builder",
+        description:
+          "Zerlegt URLs in ihre Bestandteile und setzt sie in einem strukturierten Editor aus Protokoll, Zugangsdaten, Host, Pfad, Query-Parametern und Fragment wieder zusammen.",
+      },
+      en: {
+        name: "URL Parser and Builder",
+        description:
+          "Parse URLs into components and rebuild them from protocol, credentials, host, path, query parameters, and fragment in one structured editor.",
+      },
+      es: {
+        name: "Analizador y Constructor de URL",
+        description:
+          "Analiza URL en componentes y vuelve a construirlas desde protocolo, credenciales, host, ruta, parámetros de consulta y fragmento en un editor estructurado.",
+      },
+      fr: {
+        name: "Analyseur et Constructeur d'URL",
+        description:
+          "Analyse les URL en composants et les reconstruit à partir du protocole, des identifiants, de l'hôte, du chemin, des paramètres de requête et du fragment dans un éditeur structuré.",
+      },
+      he: {
+        name: "מנתח ובונה URL",
+        description:
+          "מפרק כתובות URL לרכיבים ובונה אותן מחדש מתוך הפרוטוקול, פרטי ההתחברות, המארח, הנתיב, פרמטרי השאילתה והקטע בעורך מובנה אחד.",
+      },
+      hi: {
+        name: "URL पार्सर और बिल्डर",
+        description:
+          "URL को उसके घटकों में विभाजित करें और प्रोटोकॉल, क्रेडेंशियल, होस्ट, पथ, क्वेरी पैरामीटर और फ़्रैगमेंट से एक संरचित एडिटर में फिर से बनाएँ।",
+      },
+      id: {
+        name: "Parser dan Builder URL",
+        description:
+          "Mengurai URL menjadi komponen lalu menyusunnya kembali dari protokol, kredensial, host, jalur, parameter kueri, dan fragmen dalam satu editor terstruktur.",
+      },
+      it: {
+        name: "Parser e Builder URL",
+        description:
+          "Analizza gli URL nei loro componenti e li ricostruisce da protocollo, credenziali, host, percorso, parametri di query e frammento in un editor strutturato.",
+      },
+      ja: {
+        name: "URL パーサー/ビルダー",
+        description:
+          "URL を各コンポーネントに分解し、プロトコル、認証情報、ホスト、パス、クエリパラメータ、フラグメントから 1 つの構造化エディタで再構築します。",
+      },
+      ko: {
+        name: "URL 파서/빌더",
+        description:
+          "URL을 각 구성 요소로 분해하고 프로토콜, 자격 증명, 호스트, 경로, 쿼리 매개변수, 프래그먼트에서 하나의 구조화된 편집기로 다시 구성합니다.",
+      },
+      ms: {
+        name: "Penghurai dan Pembina URL",
+        description:
+          "Menghuraikan URL kepada komponen dan membinanya semula daripada protokol, kelayakan, hos, laluan, parameter pertanyaan dan serpihan dalam satu editor berstruktur.",
+      },
+      nl: {
+        name: "URL Parser en Builder",
+        description:
+          "Ontleedt URL's in onderdelen en bouwt ze opnieuw op uit protocol, inloggegevens, host, pad, queryparameters en fragment in één gestructureerde editor.",
+      },
+      no: {
+        name: "URL-parser og bygger",
+        description:
+          "Parser URL-er i komponenter og bygger dem opp igjen fra protokoll, legitimasjon, vert, sti, spørringsparametere og fragment i én strukturert editor.",
+      },
+      pl: {
+        name: "Parser i konstruktor URL",
+        description:
+          "Rozbija adresy URL na składniki i składa je ponownie z protokołu, poświadczeń, hosta, ścieżki, parametrów zapytania i fragmentu w jednym uporządkowanym edytorze.",
+      },
+      pt: {
+        name: "Analisador e Construtor de URL",
+        description:
+          "Analisa URLs em componentes e os reconstrói a partir de protocolo, credenciais, host, caminho, parâmetros de consulta e fragmento em um editor estruturado.",
+      },
+      ru: {
+        name: "Парсер и конструктор URL",
+        description:
+          "Разбирает URL на компоненты и собирает их обратно из протокола, учетных данных, хоста, пути, параметров запроса и фрагмента в одном структурированном редакторе.",
+      },
+      sv: {
+        name: "URL-parser och byggare",
+        description:
+          "Delar upp URL:er i komponenter och bygger ihop dem igen från protokoll, inloggningsuppgifter, värd, sökväg, frågeparametrar och fragment i en strukturerad editor.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์และสร้าง URL",
+        description:
+          "แยก URL ออกเป็นส่วนประกอบ และสร้างกลับจากโปรโตคอล ข้อมูลรับรอง โฮสต์ เส้นทาง พารามิเตอร์คิวรี และส่วนท้ายภายในตัวแก้ไขแบบมีโครงสร้างเดียว",
+      },
+      tr: {
+        name: "URL Ayrıştırıcı ve Oluşturucu",
+        description:
+          "URL'leri bileşenlerine ayırır ve protokol, kimlik bilgileri, ana makine, yol, sorgu parametreleri ve parça üzerinden tek bir yapılandırılmış düzenleyicide yeniden oluşturur.",
+      },
+      vi: {
+        name: "Bộ phân tích và tạo URL",
+        description:
+          "Phân tích URL thành các thành phần và xây dựng lại từ giao thức, thông tin xác thực, máy chủ, đường dẫn, tham số truy vấn và phân đoạn trong một trình chỉnh sửa có cấu trúc.",
+      },
+      "zh-CN": {
+        name: "URL 解析器/构建器",
+        description:
+          "将 URL 拆解为各个组成部分，并在同一个结构化编辑器中从协议、凭据、主机、路径、查询参数和片段重新构建 URL。",
+      },
+      "zh-TW": {
+        name: "URL 解析器/建構器",
+        description:
+          "將 URL 拆解為各個組成部分，並在同一個結構化編輯器中從協定、憑證、主機、路徑、查詢參數與片段重新建構 URL。",
+      },
+    },
+  },
+  {
     slug: "user-agent-parser",
     category: "web",
     icon: "globe",

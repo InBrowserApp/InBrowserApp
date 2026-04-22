@@ -10950,6 +10950,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "url-parser-builder",
+    language: "ar",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "de",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "en",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "es",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "fr",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "he",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "hi",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "id",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "it",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ja",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ko",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ms",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "nl",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "no",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "pl",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "pt",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ru",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "sv",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "th",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "tr",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "vi",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "zh-CN",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "zh-TW",
+  },
+  {
     slug: "user-agent-parser",
     language: "ar",
   },
