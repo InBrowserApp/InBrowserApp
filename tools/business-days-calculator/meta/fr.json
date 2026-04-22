@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur de jours ouvrés",
+  "description": "Compte les jours ouvrés entre deux dates et ajoute ou soustrait des jours ouvrés avec des week-ends et jours fériés personnalisés."
+}

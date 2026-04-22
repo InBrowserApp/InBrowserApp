@@ -1750,6 +1750,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "business-days-calculator",
+    language: "ar",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "de",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "en",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "es",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "fr",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "he",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "hi",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "id",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "it",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ja",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ko",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ms",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "nl",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "no",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "pl",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "pt",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ru",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "sv",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "th",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "tr",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "vi",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },

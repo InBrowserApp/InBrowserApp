@@ -2444,6 +2444,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "business-days-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "date", "business-day", "calculator", "holiday", "schedule"],
+    locales: {
+      ar: {
+        name: "حاسبة أيام العمل",
+        description:
+          "احسب أيام العمل بين التواريخ وأضف أو اطرح أيام عمل مع عطلات نهاية الأسبوع والعطلات المخصصة.",
+      },
+      de: {
+        name: "Arbeitstage-Rechner",
+        description:
+          "Zählt Arbeitstage zwischen Daten und addiert oder subtrahiert Arbeitstage mit benutzerdefinierten Wochenenden und Feiertagen.",
+      },
+      en: {
+        name: "Business Days Calculator",
+        description:
+          "Count business days between dates, and add or subtract business days with custom weekends and holidays.",
+      },
+      es: {
+        name: "Calculadora de días hábiles",
+        description:
+          "Cuenta los días hábiles entre fechas y suma o resta días hábiles con fines de semana y festivos personalizados.",
+      },
+      fr: {
+        name: "Calculateur de jours ouvrés",
+        description:
+          "Compte les jours ouvrés entre deux dates et ajoute ou soustrait des jours ouvrés avec des week-ends et jours fériés personnalisés.",
+      },
+      he: {
+        name: "מחשבון ימי עבודה",
+        description:
+          "סופר ימי עבודה בין תאריכים ומוסיף או מחסיר ימי עבודה עם סופי שבוע וחגים מותאמים.",
+      },
+      hi: {
+        name: "कार्यदिवस कैलकुलेटर",
+        description:
+          "तिथियों के बीच कार्यदिवस गिनें और कस्टम सप्ताहांत व छुट्टियों के साथ कार्यदिवस जोड़ें या घटाएं।",
+      },
+      id: {
+        name: "Kalkulator hari kerja",
+        description:
+          "Menghitung hari kerja antara tanggal serta menambah atau mengurangi hari kerja dengan akhir pekan dan hari libur khusus.",
+      },
+      it: {
+        name: "Calcolatore di giorni lavorativi",
+        description:
+          "Conta i giorni lavorativi tra date e aggiunge o sottrae giorni lavorativi con weekend e festività personalizzati.",
+      },
+      ja: {
+        name: "営業日計算ツール",
+        description:
+          "日付間の営業日を数え、カスタム週末と祝日で営業日を加減します。",
+      },
+      ko: {
+        name: "영업일 계산기",
+        description:
+          "날짜 사이의 영업일을 계산하고 사용자 지정 주말과 휴일로 영업일을 더하거나 뺍니다.",
+      },
+      ms: {
+        name: "Pengira hari bekerja",
+        description:
+          "Kira hari bekerja antara tarikh dan tambah atau tolak hari bekerja dengan hujung minggu dan cuti yang disesuaikan.",
+      },
+      nl: {
+        name: "Werkdagen-rekenmachine",
+        description:
+          "Tel werkdagen tussen datums en tel werkdagen op of trek ze af met aangepaste weekenden en feestdagen.",
+      },
+      no: {
+        name: "Kalkulator for arbeidsdager",
+        description:
+          "Tell arbeidsdager mellom datoer og legg til eller trekk fra arbeidsdager med egendefinerte helger og fridager.",
+      },
+      pl: {
+        name: "Kalkulator dni roboczych",
+        description:
+          "Zlicza dni robocze między datami oraz dodaje lub odejmuje dni robocze z niestandardowymi weekendami i świętami.",
+      },
+      pt: {
+        name: "Calculadora de dias úteis",
+        description:
+          "Conta dias úteis entre datas e adiciona ou subtrai dias úteis com fins de semana e feriados personalizados.",
+      },
+      ru: {
+        name: "Калькулятор рабочих дней",
+        description:
+          "Подсчитывает рабочие дни между датами и добавляет или вычитает рабочие дни с настраиваемыми выходными и праздниками.",
+      },
+      sv: {
+        name: "Arbetsdagskalkylator",
+        description:
+          "Räkna arbetsdagar mellan datum och lägg till eller dra ifrån arbetsdagar med anpassade helger och helgdagar.",
+      },
+      th: {
+        name: "เครื่องคำนวณวันทำงาน",
+        description:
+          "นับวันทำงานระหว่างวันที่ และบวกหรือลบวันทำงานด้วยวันหยุดสุดสัปดาห์และวันหยุดที่กำหนดเอง",
+      },
+      tr: {
+        name: "İş Günü Hesaplayıcı",
+        description:
+          "Tarihler arasındaki iş günlerini sayar ve özel hafta sonları ile tatillerle iş günlerini ekler veya çıkarır.",
+      },
+      vi: {
+        name: "Máy tính ngày làm việc",
+        description:
+          "Đếm ngày làm việc giữa các ngày và cộng hoặc trừ ngày làm việc với cuối tuần và ngày lễ tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "工作日计算器",
+        description:
+          "统计日期之间的工作日，并按自定义周末和节假日进行工作日加减。",
+      },
+      "zh-TW": {
+        name: "工作日計算器",
+        description:
+          "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",

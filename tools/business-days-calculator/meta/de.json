@@ -1,0 +1,4 @@
+{
+  "name": "Arbeitstage-Rechner",
+  "description": "Zählt Arbeitstage zwischen Daten und addiert oder subtrahiert Arbeitstage mit benutzerdefinierten Wochenenden und Feiertagen."
+}
