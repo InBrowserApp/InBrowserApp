@@ -54,6 +54,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "html-color-names": () => import("@tool/html-color-names/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "html-to-markdown-converter": () =>
+    import("@tool/html-to-markdown-converter/page"),
   "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),

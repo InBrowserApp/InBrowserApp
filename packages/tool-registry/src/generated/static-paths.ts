@@ -3682,6 +3682,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "html-to-markdown-converter",
+    language: "ar",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "de",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "en",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "es",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "fr",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "he",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "hi",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "id",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "it",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ja",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ko",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ms",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "nl",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "no",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "pl",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "pt",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ru",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "sv",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "th",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "tr",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "vi",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "http-status-code-lookup",
     language: "ar",
   },

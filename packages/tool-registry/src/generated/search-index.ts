@@ -5062,6 +5062,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "html-to-markdown-converter",
+    category: "text",
+    icon: "file-text",
+    tags: ["document", "html", "markdown", "converter"],
+    locales: {
+      ar: {
+        name: "محول HTML إلى Markdown",
+        description:
+          "حوّل HTML الخام إلى Markdown مع أنماط قابلة للتعديل للعناوين والقوائم وكتل الشيفرة. الصق الوسوم أو استورد ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "HTML-zu-Markdown-Konverter",
+        description:
+          "Wandle rohes HTML mit anpassbaren Stilen für Überschriften, Listen und Codeblöcke in Markdown um. Füge Markup ein oder importiere eine Datei und kopiere oder lade das Ergebnis herunter.",
+      },
+      en: {
+        name: "HTML to Markdown Converter",
+        description:
+          "Convert raw HTML into Markdown with adjustable heading, list, and code block styles. Paste markup or import a file, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de HTML a Markdown",
+        description:
+          "Convierte HTML sin procesar en Markdown con estilos ajustables de encabezados, listas y bloques de código. Pega el marcado o importa un archivo, y luego copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur HTML vers Markdown",
+        description:
+          "Convertissez du HTML brut en Markdown avec des styles ajustables pour les titres, les listes et les blocs de code. Collez le balisage ou importez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר HTML ל-Markdown",
+        description:
+          "המר HTML גולמי ל-Markdown עם סגנונות הניתנים להתאמה לכותרות, רשימות ובלוקי קוד. הדביקו סימון או ייבאו קובץ, ואז העתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "HTML से Markdown कन्वर्टर",
+        description:
+          "समायोज्य हेडिंग, सूची और कोड ब्लॉक शैलियों के साथ कच्चे HTML को Markdown में बदलें। मार्कअप पेस्ट करें या फ़ाइल आयात करें, फिर परिणाम कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter HTML ke Markdown",
+        description:
+          "Ubah HTML mentah menjadi Markdown dengan gaya judul, daftar, dan blok kode yang dapat disesuaikan. Tempel markup atau impor berkas, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore da HTML a Markdown",
+        description:
+          "Converti HTML grezzo in Markdown con stili regolabili per titoli, elenchi e blocchi di codice. Incolla il markup o importa un file, poi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "HTML から Markdown への変換",
+        description:
+          "見出し、リスト、コードブロックの形式を調整しながら、生の HTML を Markdown に変換します。マークアップを貼り付けるかファイルを読み込み、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "HTML to Markdown 변환기",
+        description:
+          "제목, 목록, 코드 블록 스타일을 조정하면서 원시 HTML을 Markdown으로 변환합니다. 마크업을 붙여넣거나 파일을 가져온 뒤 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar HTML ke Markdown",
+        description:
+          "Tukar HTML mentah kepada Markdown dengan gaya tajuk, senarai dan blok kod yang boleh dilaraskan. Tampal markup atau import fail, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "HTML-naar-Markdown-converter",
+        description:
+          "Zet ruwe HTML om naar Markdown met instelbare stijlen voor koppen, lijsten en codeblokken. Plak de markup of importeer een bestand en kopieer of download daarna het resultaat.",
+      },
+      no: {
+        name: "HTML til Markdown-konverter",
+        description:
+          "Konverter rå HTML til Markdown med justerbare stiler for overskrifter, lister og kodeblokker. Lim inn markup eller importer en fil, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter HTML do Markdown",
+        description:
+          "Konwertuj surowy HTML do Markdown z regulowanymi stylami nagłówków, list i bloków kodu. Wklej znacznik lub zaimportuj plik, a następnie skopiuj albo pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de HTML para Markdown",
+        description:
+          "Converta HTML bruto em Markdown com estilos ajustáveis para títulos, listas e blocos de código. Cole a marcação ou importe um arquivo e depois copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер HTML в Markdown",
+        description:
+          "Преобразуйте исходный HTML в Markdown с настраиваемыми стилями заголовков, списков и блоков кода. Вставьте разметку или импортируйте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "HTML till Markdown-konverterare",
+        description:
+          "Konvertera rå HTML till Markdown med justerbara stilar för rubriker, listor och kodblock. Klistra in markeringen eller importera en fil och kopiera eller ladda sedan ner resultatet.",
+      },
+      th: {
+        name: "ตัวแปลง HTML เป็น Markdown",
+        description:
+          "แปลง HTML แบบดิบเป็น Markdown พร้อมปรับรูปแบบหัวข้อ รายการ และบล็อกโค้ดได้ วางมาร์กอัปหรือนำเข้าไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "HTML'den Markdown'a Dönüştürücü",
+        description:
+          "Ham HTML'yi ayarlanabilir başlık, liste ve kod bloğu stilleriyle Markdown'a dönüştürün. İşaretlemeyi yapıştırın veya bir dosya içe aktarın, ardından sonucu kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển HTML sang Markdown",
+        description:
+          "Chuyển HTML thô sang Markdown với kiểu tiêu đề, danh sách và khối mã có thể điều chỉnh. Dán mã đánh dấu hoặc nhập tệp, rồi sao chép hoặc tải xuống kết quả.",
+      },
+      "zh-CN": {
+        name: "HTML 转 Markdown 转换器",
+        description:
+          "使用可调的标题、列表和代码块样式，将原始 HTML 转为 Markdown。粘贴标记或导入文件，然后复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "HTML 轉 Markdown 轉換器",
+        description:
+          "使用可調整的標題、清單與程式碼區塊樣式，將原始 HTML 轉成 Markdown。貼上標記或匯入檔案，然後複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "http-status-code-lookup",
     category: "network",
     icon: "network",

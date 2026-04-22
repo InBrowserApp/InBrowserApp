@@ -47,6 +47,7 @@
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",
     "@tool/html-entity-encoder-decoder": "workspace:*",
+    "@tool/html-to-markdown-converter": "workspace:*",
     "@tool/http-status-code-lookup": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
