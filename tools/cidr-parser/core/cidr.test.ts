@@ -12,6 +12,8 @@ describe("cidr parser core", () => {
     expect(parseCidr("not-a-cidr")).toEqual({ status: "invalid" })
     expect(parseCidr("192.168.0.1")).toEqual({ status: "invalid" })
     expect(parseCidr("/24")).toEqual({ status: "invalid" })
+    expect(parseCidr("999.999.999.999/24")).toEqual({ status: "invalid" })
+    expect(parseCidr("192.168.0.1/abc")).toEqual({ status: "invalid" })
     expect(parseCidr("192.168.0.1/99")).toEqual({ status: "invalid" })
     expect(parseCidr("2001:db8::1/129")).toEqual({ status: "invalid" })
     expect(parseCidr("2001:db8::1/64/1")).toEqual({ status: "invalid" })
@@ -40,6 +42,31 @@ describe("cidr parser core", () => {
         usableAddressCount: 254n,
         startInteger: "3232238080",
         endInteger: "3232238335",
+      },
+    })
+  })
+
+  test("parses IPv4 default routes", () => {
+    expect(parseCidr("0.0.0.0/0")).toEqual({
+      status: "success",
+      details: {
+        family: 4,
+        prefix: 0,
+        hostBits: 32,
+        inputAddress: "0.0.0.0",
+        canonicalCidr: "0.0.0.0/0",
+        networkAddress: "0.0.0.0",
+        rangeStart: "0.0.0.0",
+        rangeEnd: "255.255.255.255",
+        firstUsable: "0.0.0.1",
+        lastUsable: "255.255.255.254",
+        broadcastAddress: "255.255.255.255",
+        netmask: "0.0.0.0",
+        wildcardMask: "255.255.255.255",
+        addressCount: 4294967296n,
+        usableAddressCount: 4294967294n,
+        startInteger: "0",
+        endInteger: "4294967295",
       },
     })
   })
