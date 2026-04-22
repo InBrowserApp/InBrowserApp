@@ -1,5 +1,7 @@
 import { describe, expect, test } from "vitest"
 
+import type { DisplayFont } from "../types"
+
 import {
   buildCssSnippet,
   buildFontFaceDescriptor,
@@ -61,6 +63,48 @@ describe("normalizeFonts", () => {
       },
     ])
   })
+
+  test("uses trimmed fallback metadata when family or full name is missing", () => {
+    expect(
+      normalizeFonts([
+        {
+          family: null,
+          fullName: "  Display Name  ",
+          postscriptName: null,
+          style: null,
+        },
+        {
+          family: null,
+          fullName: null,
+          postscriptName: "  SoloPS  ",
+          style: "  Book  ",
+        },
+      ])
+    ).toEqual([
+      {
+        id: "Display Name-0",
+        family: "",
+        fullName: "Display Name",
+        postscriptName: "",
+        style: "",
+        displayFamily: "Display Name",
+        displayName: "Display Name",
+        displayStyle: "--",
+        searchKey: "display name display name ",
+      },
+      {
+        id: "SoloPS",
+        family: "",
+        fullName: "",
+        postscriptName: "SoloPS",
+        style: "Book",
+        displayFamily: "SoloPS",
+        displayName: "SoloPS",
+        displayStyle: "Book",
+        searchKey: "solops solops solops",
+      },
+    ])
+  })
 })
 
 describe("filterAndSortFonts", () => {
@@ -103,6 +147,26 @@ describe("filterAndSortFonts", () => {
         sortBy: "name",
       }).map((font) => font.displayName)
     ).toEqual(["Inter Italic", "Inter Regular", "Roboto Bold"])
+  })
+
+  test("sorts by family when no explicit sort override matches", () => {
+    expect(
+      filterAndSortFonts(fonts, {
+        query: "",
+        filterStyle: "all",
+        sortBy: "family",
+      }).map((font) => font.id)
+    ).toEqual(["Inter-Regular", "Inter-Italic", "Roboto-Bold"])
+  })
+
+  test("filters regular styles and sorts by style label", () => {
+    expect(
+      filterAndSortFonts(fonts, {
+        query: "  ",
+        filterStyle: "regular",
+        sortBy: "style",
+      }).map((font) => font.id)
+    ).toEqual(["Roboto-Bold", "Inter-Regular"])
   })
 })
 
@@ -172,6 +236,47 @@ describe("buildFontFaceDescriptor", () => {
       )
     ).toBeNull()
   })
+
+  test("falls back to full name and omits weight when it cannot be inferred", () => {
+    expect(
+      buildFontFaceDescriptor(
+        normalizeFonts([
+          {
+            family: "",
+            fullName: "Display Sans",
+            postscriptName: "DisplaySans",
+            style: "Display",
+          },
+        ])[0]
+      )
+    ).toEqual({
+      fontFamily: '"Display Sans"',
+      fontStyle: "normal",
+    })
+  })
+
+  test("returns null for missing font input", () => {
+    expect(buildFontFaceDescriptor(undefined)).toBeNull()
+  })
+
+  test("treats missing style metadata as normal text", () => {
+    const font = {
+      id: "Inter",
+      family: "Inter",
+      fullName: "",
+      postscriptName: "",
+      style: undefined,
+      displayFamily: "Inter",
+      displayName: "Inter",
+      displayStyle: "--",
+      searchKey: "inter inter ",
+    } as unknown as DisplayFont
+
+    expect(buildFontFaceDescriptor(font)).toEqual({
+      fontFamily: '"Inter"',
+      fontStyle: "normal",
+    })
+  })
 })
 
 describe("buildCssSnippet", () => {
@@ -197,6 +302,21 @@ describe("buildCssSnippet", () => {
       )
     ).toBe("")
   })
+
+  test("omits normal style and regular weight declarations", () => {
+    expect(
+      buildCssSnippet(
+        normalizeFonts([
+          {
+            family: "",
+            fullName: "",
+            postscriptName: "SoloPS",
+            style: "Regular",
+          },
+        ])[0]
+      )
+    ).toBe('font-family: "SoloPS";')
+  })
 })
 
 describe("style helpers", () => {
@@ -209,6 +329,22 @@ describe("style helpers", () => {
     expect(inferFontWeight("300 Italic")).toBe(300)
     expect(inferFontWeight("ExtraBold")).toBe(800)
     expect(inferFontWeight("")).toBeUndefined()
+  })
+
+  test.each([
+    ["Hairline", 100],
+    ["Extra Light", 200],
+    ["Light", 300],
+    ["Book", 350],
+    ["Roman", 400],
+    ["Medium", 500],
+    ["DemiBold", 600],
+    ["Bold", 700],
+    ["UltraBold", 800],
+    ["UltraBlack", 950],
+    ["Heavy", 900],
+  ])("maps %s to %d", (style, expected) => {
+    expect(inferFontWeight(style)).toBe(expected)
   })
 })
 
