@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT 유형",
+  "inputLabel": "입력 텍스트",
+  "inputPlaceholder": "암호화/복호화할 텍스트를 입력하세요...",
+  "outputLabel": "출력 텍스트",
+  "outputPlaceholder": "암호화/복호화된 텍스트가 여기에 표시됩니다...",
+  "rot13Description": "문자만 (A-Z, a-z)",
+  "rot5Description": "숫자만 (0-9)",
+  "rot18Description": "문자 + 숫자 (ROT13 + ROT5)",
+  "rot47Description": "모든 인쇄 가능한 ASCII (33-126)",
+  "copyInputLabel": "입력 텍스트 복사",
+  "copyOutputLabel": "출력 텍스트 복사",
+  "copiedLabel": "복사됨",
+  "resetLabel": "예제 재설정"
+}

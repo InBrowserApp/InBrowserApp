@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization 標頭",
+  "authorizationHeaderDescription": "貼上例如：Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "貼上例如：Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "解碼結果",
+  "decodedCredentialsDescription": "解碼 HTTP Basic Authorization 標頭，從 Base64 提取使用者名稱與密碼。用於除錯與 API 測試",
+  "usernameLabel": "使用者名稱",
+  "passwordLabel": "密碼",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設範例",
+  "invalidHeaderTitle": "無效的 Basic Authorization 標頭",
+  "invalidBase64Title": "無效的 Base64 內容"
+}

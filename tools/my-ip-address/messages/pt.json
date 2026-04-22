@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "Vazamento WebRTC",
+  "unableToGetIp": "Não é possível obter o IP",
+  "hostname": "Nome do Host",
+  "isp": "Provedor de Internet",
+  "ipOrganization": "Organização IP",
+  "asn": "ASN",
+  "asnOrganization": "Organização ASN",
+  "location": "Localização",
+  "country": "País",
+  "timezone": "Fuso Horário",
+  "webrtcDescription": "Interface adicional e endereços de candidatos locais expostos durante a negociação WebRTC.",
+  "unableToGetIpDescription": "A pesquisa não retornou um endereço público. Verifique suas configurações de conexão, VPN, proxy ou privacidade e tente novamente.",
+  "fetchingIp": "Buscando endereço IP",
+  "fetchingIpDescription": "Procurando seu endereço público e detalhes de rede de vários provedores.",
+  "copyIp": "Copiar IP",
+  "copied": "Copiado",
+  "ipv4Description": "Endereço IPv4 público atualmente visível para sites e APIs.",
+  "ipv6Description": "Endereço IPv6 público visível quando sua rede oferece suporte a IPv6 nativo ou em túnel."
+}

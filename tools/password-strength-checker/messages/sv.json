@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Lösenord",
+  "resultTitle": "Styrkesammanfattning",
+  "passwordLabel": "Lösenord",
+  "passwordPlaceholder": "Skriv ett lösenord att bedöma",
+  "show": "Visa",
+  "hide": "Dölj",
+  "privacyHint": "Kontrollen sker lokalt i webbläsaren.",
+  "empty": "Ange ett lösenord för att kontrollera styrkan.",
+  "entropyBits": "Entropi: {bits} bit",
+  "log10Guesses": "Gissningar (log10): {value}",
+  "strength0": "Mycket svagt",
+  "strength1": "Svagt",
+  "strength2": "Okej",
+  "strength3": "Starkt",
+  "strength4": "Mycket starkt",
+  "length": "Längd",
+  "unique": "Unika tecken",
+  "characterSets": "Teckenuppsättningar",
+  "crackOffline": "Knäckningstid (offline, 1e10/s)",
+  "crackOnline": "Knäckningstid (online, 100/s)",
+  "durationFormat": "Cirka {value} {unit}",
+  "durationUnderSecond": "Mindre än 1 sekund",
+  "unit": {
+    "seconds": "sekunder",
+    "minutes": "minuter",
+    "hours": "timmar",
+    "days": "dagar",
+    "months": "månader",
+    "years": "år"
+  },
+  "warning": {
+    "common": "Det här är ett mycket vanligt lösenord.",
+    "short": "Lösenordet är för kort.",
+    "sequence": "Sekvenser är lätta att gissa.",
+    "repeat": "Upprepade mönster minskar styrkan.",
+    "singleClass": "Att bara använda en teckentyp minskar styrkan."
+  },
+  "suggestion": {
+    "use-longer": "Använd ett längre lösenord eller lösenfras.",
+    "add-uppercase": "Lägg till versaler.",
+    "add-lowercase": "Lägg till gemener.",
+    "add-numbers": "Lägg till siffror.",
+    "add-symbols": "Lägg till symboler.",
+    "avoid-common": "Undvik vanliga eller läckta lösenord.",
+    "avoid-sequences": "Undvik sekvenser som 123 eller abc.",
+    "avoid-repetition": "Undvik upprepade mönster."
+  }
+}

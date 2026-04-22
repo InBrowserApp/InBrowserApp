@@ -1,0 +1,4 @@
+{
+  "name": "Validator BIC/SWIFT",
+  "description": "Memvalidasi kode BIC/SWIFT dan mengurai detail bank, negara, dan cabang."
+}

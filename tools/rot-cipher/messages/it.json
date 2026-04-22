@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Tipo di ROT",
+  "inputLabel": "Testo di input",
+  "inputPlaceholder": "Inserisci il testo da cifrare/decifrare...",
+  "outputLabel": "Testo di output",
+  "outputPlaceholder": "Il testo cifrato/decifrato apparira qui...",
+  "rot13Description": "Solo lettere (A-Z, a-z)",
+  "rot5Description": "Solo cifre (0-9)",
+  "rot18Description": "Lettere + Cifre (ROT13 + ROT5)",
+  "rot47Description": "Tutti i caratteri ASCII stampabili (33-126)",
+  "copyInputLabel": "Copia testo di input",
+  "copyOutputLabel": "Copia testo di output",
+  "copiedLabel": "Copiato",
+  "resetLabel": "Reimposta esempio"
+}

@@ -1,0 +1,18 @@
+{
+  "startLabel": "Starta",
+  "resumeLabel": "Fortsätt",
+  "pauseLabel": "Pausa",
+  "lapLabel": "Varv",
+  "resetLabel": "Återställ",
+  "lapsLabel": "Varv",
+  "clearLabel": "Rensa",
+  "exportLabel": "Exportera",
+  "noLapsLabel": "Inga varv",
+  "statusRunningLabel": "Pågår",
+  "statusPausedLabel": "Pausad",
+  "lapTimeLabel": "Varv",
+  "totalTimeLabel": "Totalt",
+  "lapMillisecondsLabel": "Varv (ms)",
+  "totalMillisecondsLabel": "Totalt (ms)",
+  "lapsDescription": "Granska varvtiderna och den sammanlagda tiden. Exportera listan som CSV eller rensa den för att börja om."
+}

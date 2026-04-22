@@ -1,0 +1,4 @@
+{
+  "name": "Adler-32 Hash Metin veya Dosya",
+  "description": "Metin veya dosya için Adler-32 sağlama toplamı üretin. Veri bütünlüğü doğrulaması ve hata tespiti için hızlı checksum hesaplayın"
+}

@@ -1,0 +1,19 @@
+{
+  "fromLabel": "출발",
+  "toLabel": "도착",
+  "timeZoneLabel": "시간대",
+  "dateTimeLabel": "날짜 및 시간",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "형식: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "지금",
+  "offsetLabel": "오프셋",
+  "invalidDateTimeLabel": "유효하지 않은 날짜/시간",
+  "swapLabel": "바꾸기",
+  "detailsLabel": "세부 정보",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix 타임스탬프 (ms)",
+  "unixSecondsLabel": "Unix 타임스탬프 (s)",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IMEI 검증기",
+  "description": "15자리 IMEI의 형식과 Luhn 체크섬을 검증합니다."
+}

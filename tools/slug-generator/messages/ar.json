@@ -1,0 +1,16 @@
+{
+  "inputLabel": "نص الإدخال",
+  "inputPlaceholder": "أدخل النص للتحويل إلى slug...",
+  "outputLabel": "Slug المُنشأ",
+  "outputPlaceholder": "سيظهر الـ slug هنا...",
+  "separatorLabel": "الفاصل",
+  "hyphenLabel": "شرطة",
+  "underscoreLabel": "شرطة سفلية",
+  "dotLabel": "نقطة",
+  "caseLabel": "حالة الأحرف",
+  "lowercaseLabel": "أحرف صغيرة",
+  "preserveLabel": "الحفاظ",
+  "copyLabel": "نسخ slug",
+  "copiedLabel": "تم النسخ",
+  "clearLabel": "مسح"
+}

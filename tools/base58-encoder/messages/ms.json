@@ -1,0 +1,18 @@
+{
+  "options": "Pilihan",
+  "alphabet": "Abjad",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Input",
+  "inputPlaceholder": "Masukkan teks untuk dikod...",
+  "outputTitle": "Berkod Base58",
+  "outputPlaceholder": "Output Base58 akan dipaparkan di sini...",
+  "download": "Muat turun Base58",
+  "readFailed": "Gagal membaca fail",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Import dari fail"
+}

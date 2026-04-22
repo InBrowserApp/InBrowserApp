@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "Учетные данные",
+  "usernameLabel": "Имя пользователя",
+  "passwordLabel": "Пароль",
+  "authorizationHeaderLabel": "Заголовок Authorization",
+  "authorizationHeaderDescription": "Скопируйте точное значение заголовка Authorization для вызовов fetch, API-клиентов или ручных запросов.",
+  "curlExampleLabel": "Пример cURL",
+  "curlExampleDescription": "Возьмите эту готовую команду curl за основу и при необходимости замените пример URL.",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример"
+}

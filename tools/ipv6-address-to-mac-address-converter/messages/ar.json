@@ -1,0 +1,8 @@
+{
+  "placeholder": "أدخل IPv6",
+  "invalidAddress": "عنوان IPv6 غير صالح",
+  "result": "نتيجة التحقق",
+  "notConvertible": "غير قابل للتحويل",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

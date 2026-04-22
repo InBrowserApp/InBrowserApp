@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "Referenties",
+  "usernameLabel": "Gebruikersnaam",
+  "passwordLabel": "Wachtwoord",
+  "authorizationHeaderLabel": "Authorization-header",
+  "authorizationHeaderDescription": "Kopieer de exacte waarde van de Authorization-header voor fetch-calls, API-clients of handmatige verzoeken.",
+  "curlExampleLabel": "cURL-voorbeeld",
+  "curlExampleDescription": "Begin met deze direct bruikbare curl-opdracht en vervang zo nodig de voorbeeld-URL.",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

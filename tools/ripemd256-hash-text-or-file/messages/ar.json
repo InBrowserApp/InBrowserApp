@@ -1,0 +1,16 @@
+{
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والحروف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التشفير",
+  "hashResultDescription": "نتيجة التجزئة لإدخال النص الحالي.",
+  "hexLabel": "سادس عشر",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "hashTextError": "تعذر حساب تجزئة النص.",
+  "hashFileError": "تعذر حساب تجزئة الملف."
+}

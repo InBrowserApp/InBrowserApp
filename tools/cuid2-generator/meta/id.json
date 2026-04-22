@@ -1,0 +1,4 @@
+{
+  "name": "Generator CUID2",
+  "description": "Buat ID CUID2 yang aman dan tahan benturan langsung di browser dengan panjang dan ukuran batch yang bisa disesuaikan."
+}

@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization-header",
+  "authorizationHeaderDescription": "Lim inn noe som: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Lim inn noe som: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Dekodert resultat",
+  "decodedCredentialsDescription": "Dekodér HTTP Basic Authorization-headeren for å hente brukernavn og passord fra Base64. Nyttig for feilsøking og API-testing",
+  "usernameLabel": "Brukernavn",
+  "passwordLabel": "Passord",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel",
+  "invalidHeaderTitle": "Ugyldig Basic Authorization-header",
+  "invalidBase64Title": "Ugyldig Base64-innhold"
+}

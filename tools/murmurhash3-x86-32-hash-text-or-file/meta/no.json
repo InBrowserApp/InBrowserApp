@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x86 32-bit)-hash tekst eller fil",
+  "description": "Generer MurmurHash3 x86 32-bit-hash for tekstinndata eller filopplasting. Beregn raske 32-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing"
+}

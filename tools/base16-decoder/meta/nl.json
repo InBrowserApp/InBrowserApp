@@ -1,0 +1,4 @@
+{
+  "name": "Base16-decoder",
+  "description": "Decodeer Base16 (Hex)-tekst of -bestanden naar ruwe bytes voor inspectie, testen en tools."
+}

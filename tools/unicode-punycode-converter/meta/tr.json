@@ -1,0 +1,4 @@
+{
+  "name": "Unicode ↔ Punycode Dönüştürücü",
+  "description": "Unicode (IDN) ve ASCII (Punycode) alan adlarını çift yönlü dönüştürün"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Escape / Unescape",
+  "description": "Escape dan unescape aksara Unicode dalam pelbagai format termasuk \\uXXXX, \\u{XXXXX}, entiti HTML, pengekodan URL dan notasi U+XXXX"
+}

@@ -1,0 +1,20 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์ Hash",
+  "hashResultDescription": "ผลลัพธ์แฮชสำหรับข้อความที่ป้อนอยู่ในขณะนี้",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "configurationLabel": "การกำหนดค่า BLAKE2b",
+  "outputLengthLabel": "ความยาวเอาต์พุต",
+  "keyLabel": "กุญแจ BLAKE2 (Base64)",
+  "keyPlaceholder": "กุญแจเสริมสำหรับการแฮชด้วยกุญแจ (เข้ารหัส Base64)",
+  "invalidBase64Title": "ค่า Base64 ยังไม่ถูกต้อง",
+  "invalidBase64Description": "ตรวจสอบว่ามีการเติมเต็มที่หายไป อักขระที่ไม่คาดคิด หรือข้อมูลที่วางไม่ครบถ้วนหรือไม่"
+}

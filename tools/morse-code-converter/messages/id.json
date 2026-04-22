@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Hasil langsung",
+  "resultDescription": "Konversi teks ke kode Morse dan sebaliknya dengan dukungan pemutaran audio",
+  "textLabel": "Teks",
+  "morseCodeLabel": "Kode Morse",
+  "textPlaceholder": "Masukkan teks untuk dikonversi ke kode Morse",
+  "morsePlaceholder": "Masukkan kode Morse (titik dan garis, / untuk pemisah kata)",
+  "validLabel": "Kode Morse valid",
+  "invalidLabel": "Kode Morse tidak valid",
+  "invalidMorseCode": "Kode Morse tidak valid",
+  "unsupportedTextMessage": "Hanya huruf, angka, spasi, dan tanda baca umum yang dapat dikodekan.",
+  "loadSample": "Muat contoh",
+  "clearLabel": "Bersihkan",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin",
+  "play": "Putar",
+  "stop": "Berhenti"
+}

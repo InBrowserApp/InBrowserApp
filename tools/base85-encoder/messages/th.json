@@ -1,0 +1,17 @@
+{
+  "alphabet": "อักษร",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "ข้อมูลเข้า",
+  "inputPlaceholder": "ป้อนข้อความเพื่อเข้ารหัส...",
+  "outputTitle": "เข้ารหัส Base85",
+  "outputPlaceholder": "ผลลัพธ์ Base85 จะปรากฏที่นี่...",
+  "download": "ดาวน์โหลด Base85",
+  "readFailed": "อ่านไฟล์ไม่สำเร็จ",
+  "invalidBase85": "Z85 ต้องการให้ความยาวข้อมูลนำเข้าเป็นจำนวนเท่าของ 4 ไบต์",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "นำเข้าจากไฟล์"
+}

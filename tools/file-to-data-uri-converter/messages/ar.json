@@ -1,0 +1,14 @@
+{
+  "file": "ملف",
+  "dragOrClick": "انقر أو اسحب لتحميل ملف",
+  "clearFile": "مسح الملف",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "سيظهر Data URI المُنشأ هنا...",
+  "onlyOneFile": "يمكن تحميل ملف واحد فقط",
+  "readFailed": "فشل في قراءة الملف",
+  "unknownType": "نوع غير معروف",
+  "fileSize": "حجم الملف",
+  "mimeType": "نوع MIME",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

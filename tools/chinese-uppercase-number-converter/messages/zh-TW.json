@@ -1,0 +1,21 @@
+{
+  "styleTitle": "大寫樣式",
+  "simplifiedLabel": "簡體",
+  "traditionalLabel": "繁體",
+  "numberLabel": "數字",
+  "numberPlaceholder": "輸入數字（如 1234.56）",
+  "numberValid": "數字有效",
+  "numberInvalidFormat": "只能輸入數字與一個小數點。",
+  "numberTooManyDecimals": "最多保留 2 位小數。",
+  "numberOutOfRange": "數值超出最大範圍。",
+  "uppercaseLabel": "中文大寫",
+  "uppercasePlaceholder": "輸入中文金額大寫",
+  "uppercaseValid": "中文大寫有效",
+  "uppercaseInvalidCharacters": "只能輸入中文大寫數字與單位。",
+  "uppercaseInvalidFormat": "中文大寫格式不正確。",
+  "uppercaseOutOfRange": "數值超出最大範圍。",
+  "copyNumberLabel": "複製數字",
+  "copyUppercaseLabel": "複製大寫",
+  "copiedLabel": "已複製",
+  "resetLabel": "重設"
+}

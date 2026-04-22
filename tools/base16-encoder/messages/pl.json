@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Wejście",
+  "inputPlaceholder": "Wpisz tekst do zakodowania...",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
+  "importFromFileLabel": "Importuj z pliku",
+  "encodedOutputLabel": "Zakodowany Hex",
+  "encodedOutputEmptyDescription": "Wyjście Hex pojawi się tutaj...",
+  "downloadFileLabel": "Pobierz Hex",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "fileReadFailedTitle": "Nie udało się odczytać pliku"
+}

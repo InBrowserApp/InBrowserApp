@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "標頭類型",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "輸入",
+  "inputPlaceholder": "在此貼上 Cookie 或 Set-Cookie 標頭...",
+  "parsedJsonLabel": "解析後的 JSON",
+  "emptyOutputDescription": "解析結果會顯示在這裡...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "無效項",
+  "invalidFragmentsLabel": "無效片段",
+  "noCookiesTitle": "找不到 Cookie",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "downloadJsonLabel": "下載 JSON",
+  "resetLabel": "重設範例"
+}

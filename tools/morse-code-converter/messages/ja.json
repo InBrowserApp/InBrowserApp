@@ -1,0 +1,18 @@
+{
+  "resultTitle": "ライブ結果",
+  "resultDescription": "テキストとモールス信号を相互変換、音声再生対応",
+  "textLabel": "テキスト",
+  "morseCodeLabel": "モールス信号",
+  "textPlaceholder": "モールス信号に変換するテキストを入力",
+  "morsePlaceholder": "モールス信号を入力（点と線、/ で単語を区切る）",
+  "validLabel": "有効なモールス信号",
+  "invalidLabel": "無効なモールス信号",
+  "invalidMorseCode": "無効なモールス信号",
+  "unsupportedTextMessage": "エンコードできるのは、文字、数字、スペース、一般的な句読点のみです。",
+  "loadSample": "サンプルを読み込む",
+  "clearLabel": "クリア",
+  "copyLabel": "コピー",
+  "copiedLabel": "コピーしました",
+  "play": "再生",
+  "stop": "停止"
+}

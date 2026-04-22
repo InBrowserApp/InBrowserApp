@@ -1,0 +1,4 @@
+{
+  "name": "Lägg till/ta bort varaktighet-räknare",
+  "description": "Lägg till eller dra av ISO 8601-varaktigheter från en basstid i valfri tidszon med millisekundprecision."
+}

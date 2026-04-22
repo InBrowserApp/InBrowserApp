@@ -1,0 +1,4 @@
+{
+  "name": "MAC Address to IPv6 Link-Local Address Converter",
+  "description": "Convert MAC addresses to IPv6 link-local addresses. Enter any MAC address and optionally add an interface name to generate the scoped result instantly."
+}

@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Mot de passe",
+  "resultTitle": "Résumé de robustesse",
+  "passwordLabel": "Mot de passe",
+  "passwordPlaceholder": "Saisissez un mot de passe à évaluer",
+  "show": "Afficher",
+  "hide": "Masquer",
+  "privacyHint": "Les vérifications sont effectuées localement dans votre navigateur.",
+  "empty": "Saisissez un mot de passe pour vérifier sa robustesse.",
+  "entropyBits": "Entropie : {bits} bits",
+  "log10Guesses": "Essais (log10) : {value}",
+  "strength0": "Très faible",
+  "strength1": "Faible",
+  "strength2": "Moyenne",
+  "strength3": "Forte",
+  "strength4": "Très forte",
+  "length": "Longueur",
+  "unique": "Caractères uniques",
+  "characterSets": "Jeux de caractères",
+  "crackOffline": "Temps de cassage (offline, 1e10/s)",
+  "crackOnline": "Temps de cassage (en ligne, 100/s)",
+  "durationFormat": "Environ {value} {unit}",
+  "durationUnderSecond": "Moins d'une seconde",
+  "unit": {
+    "seconds": "secondes",
+    "minutes": "minutes",
+    "hours": "heures",
+    "days": "jours",
+    "months": "mois",
+    "years": "années"
+  },
+  "warning": {
+    "common": "C'est un mot de passe très courant.",
+    "short": "Le mot de passe est trop court.",
+    "sequence": "Les séquences sont faciles à deviner.",
+    "repeat": "Les motifs répétés réduisent la robustesse.",
+    "singleClass": "Utiliser un seul type de caractère réduit la robustesse."
+  },
+  "suggestion": {
+    "use-longer": "Utilisez un mot de passe ou une phrase plus long.",
+    "add-uppercase": "Ajoutez des lettres majuscules.",
+    "add-lowercase": "Ajoutez des lettres minuscules.",
+    "add-numbers": "Ajoutez des chiffres.",
+    "add-symbols": "Ajoutez des symboles.",
+    "avoid-common": "Évitez les mots de passe courants et divulgués.",
+    "avoid-sequences": "Évitez les séquences comme 123 ou abc.",
+    "avoid-repetition": "Évitez les motifs répétitifs."
+  }
+}

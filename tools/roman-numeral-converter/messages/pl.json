@@ -1,0 +1,22 @@
+{
+  "converterTitle": "Konwerter Arabskie ↔ Rzymskie",
+  "converterDescription": "Dwukierunkowy konwerter między cyframi rzymskimi i arabskimi. Obsługuje standardowe cyfry rzymskie od 1 do 3999 (I do MMMCMXCIX).",
+  "arabicNumber": "Cyfra Arabska (1-3999)",
+  "arabicPlaceholder": "Wprowadź cyfrę arabską...",
+  "romanNumeral": "Cyfra Rzymska",
+  "romanPlaceholder": "Wprowadź cyfrę rzymską...",
+  "invalidRomanNumeral": "Wprowadź prawidłową cyfrę rzymską",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

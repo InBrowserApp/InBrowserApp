@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "Loai ROT",
+  "inputLabel": "Van ban dau vao",
+  "inputPlaceholder": "Nhap van ban de ma hoa/giai ma...",
+  "outputLabel": "Van ban dau ra",
+  "outputPlaceholder": "Van ban da ma hoa/giai ma se hien thi o day...",
+  "rot13Description": "Chi chu cai (A-Z, a-z)",
+  "rot5Description": "Chi chu so (0-9)",
+  "rot18Description": "Chu cai + Chu so (ROT13 + ROT5)",
+  "rot47Description": "Tat ca ky tu ASCII in duoc (33-126)",
+  "copyInputLabel": "Sao chép văn bản đầu vào",
+  "copyOutputLabel": "Sao chép văn bản đầu ra",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ"
+}

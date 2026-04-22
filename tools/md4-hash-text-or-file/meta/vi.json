@@ -1,0 +1,4 @@
+{
+  "name": "Hash MD4 văn bản hoặc tệp",
+  "description": "Tạo hash MD4 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật."
+}

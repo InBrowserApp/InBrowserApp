@@ -1,0 +1,13 @@
+{
+  "inputLabel": "输入",
+  "inputPlaceholder": "输入要编码的文本...",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "可粘贴或输入任意 UTF-8 文本，包括 emoji 和非拉丁字符。",
+  "importFromFileLabel": "从文件导入",
+  "encodedOutputLabel": "Hex 编码",
+  "encodedOutputEmptyDescription": "Hex 输出将显示在这里...",
+  "downloadFileLabel": "下载 Hex",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "fileReadFailedTitle": "读取文件失败"
+}

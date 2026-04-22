@@ -1,0 +1,4 @@
+{
+  "name": "IMEI Doğrulayıcı",
+  "description": "15 haneli IMEI numaralarını biçim ve Luhn sağlama toplamı ile doğrular."
+}

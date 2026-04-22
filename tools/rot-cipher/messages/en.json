@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT Type",
+  "inputLabel": "Input Text",
+  "inputPlaceholder": "Enter text to encrypt/decrypt...",
+  "outputLabel": "Output Text",
+  "outputPlaceholder": "Encrypted/decrypted text will appear here...",
+  "rot13Description": "Letters only (A-Z, a-z)",
+  "rot5Description": "Digits only (0-9)",
+  "rot18Description": "Letters + Digits (ROT13 + ROT5)",
+  "rot47Description": "All printable ASCII (33-126)",
+  "copyInputLabel": "Copy input text",
+  "copyOutputLabel": "Copy output text",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example"
+}

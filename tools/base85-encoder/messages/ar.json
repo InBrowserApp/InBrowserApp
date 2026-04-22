@@ -1,0 +1,17 @@
+{
+  "alphabet": "الأبجدية",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "الإدخال",
+  "inputPlaceholder": "أدخل النص للترميز...",
+  "outputTitle": "مُرمز Base85",
+  "outputPlaceholder": "سيظهر إخراج Base85 هنا...",
+  "download": "تنزيل Base85",
+  "readFailed": "فشل في قراءة الملف",
+  "invalidBase85": "يتطلب Z85 أن يكون طول الإدخال من مضاعفات 4 بايت.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "استيراد من ملف"
+}

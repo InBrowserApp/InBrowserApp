@@ -1,0 +1,4 @@
+{
+  "name": "Cookie Parser",
+  "description": "Parse Cookie and Set-Cookie headers into structured JSON for inspection."
+}

@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex-invoer",
+  "base16InputPlaceholder": "Voer Hex-tekst in...",
+  "importFromFileLabel": "Importeren uit bestand",
+  "decodedOutputLabel": "Gedecodeerde output",
+  "decodedOutputEmptyDescription": "Gedecodeerde tekst verschijnt hier...",
+  "downloadFileLabel": "Bestand downloaden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten",
+  "invalidBase16Title": "Ongeldige Hex-tekst",
+  "fileReadFailedTitle": "Bestand kon niet worden gelezen",
+  "previewTruncatedLabel": "Voorbeeld ingekort"
+}

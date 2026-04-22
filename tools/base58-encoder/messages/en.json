@@ -1,0 +1,18 @@
+{
+  "options": "Options",
+  "alphabet": "Alphabet",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Input",
+  "inputPlaceholder": "Enter text to encode...",
+  "outputTitle": "Base58 Encoded",
+  "outputPlaceholder": "Base58 output will appear here...",
+  "download": "Download Base58",
+  "readFailed": "Failed to read file",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Import from file"
+}

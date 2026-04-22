@@ -1,0 +1,4 @@
+{
+  "name": "Gerador HMAC",
+  "description": "Gere assinaturas HMAC (Código de Autenticação de Mensagem baseado em Hash) para texto ou arquivos. Suporta algoritmos SHA-1, SHA-256, SHA-384 e SHA-512 com formatos de saída hexadecimal e base64."
+}

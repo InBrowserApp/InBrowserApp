@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC 주소",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "네트워크 인터페이스",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "유효하지 않은 MAC 주소",
+  "resultLabel": "IPv6 링크 로컬 주소",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

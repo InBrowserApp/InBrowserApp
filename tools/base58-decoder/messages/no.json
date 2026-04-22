@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Alternativer",
+  "alphabetLabel": "Alfabet",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Base58-inndata",
+  "inputPlaceholder": "Skriv inn Base58-tekst...",
+  "importFromFileLabel": "Importer fra fil",
+  "decodedOutputTitle": "Dekodet output",
+  "decodedOutputEmptyDescription": "Dekodet tekst vises her...",
+  "downloadFileLabel": "Last ned fil",
+  "previewTruncatedLabel": "Forhåndsvisning avkortet",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Tilbakestill eksempel",
+  "invalidBase58Title": "Ugyldig Base58-tekst",
+  "fileReadFailedTitle": "Kunne ikke lese filen"
+}

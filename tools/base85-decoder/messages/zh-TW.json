@@ -1,0 +1,17 @@
+{
+  "alphabet": "字母表",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85 輸入",
+  "base85InputPlaceholder": "輸入 Base85 文字...",
+  "importFromFileLabel": "從檔案匯入",
+  "decodedOutputLabel": "解碼結果",
+  "decodedOutputEmptyDescription": "解碼後的文字會顯示在這裡...",
+  "downloadFileLabel": "下載檔案",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製",
+  "loadSample": "載入範例",
+  "invalidBase85Title": "無效的 Base85 文字",
+  "fileReadFailedTitle": "讀取檔案失敗",
+  "previewTruncatedLabel": "預覽已截斷"
+}

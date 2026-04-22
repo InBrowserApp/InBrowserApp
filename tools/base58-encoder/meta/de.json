@@ -1,0 +1,4 @@
+{
+  "name": "Base58-Encoder",
+  "description": "Kodiert Text oder Dateien in Base58 für Datenübertragung, Speicherung und Webentwicklung."
+}

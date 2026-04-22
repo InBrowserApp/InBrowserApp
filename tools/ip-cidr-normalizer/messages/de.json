@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP- oder CIDR-Eingabe",
+  "inputDescription": "Geben Sie eine einzelne IPv4-Adresse, IPv6-Adresse oder einen CIDR-Block ein, um sie in die kanonische Netzwerknotation zu normalisieren.",
+  "resultTitle": "Normalisiertes Ergebnis",
+  "resultDescription": "Kanonische Adresse oder Netzwerkbereich. Die CIDR-Eingabe wird mit gelöschten Hostbits auf die Netzwerkadresse umgeschrieben.",
+  "label": "IP/CIDR",
+  "placeholder": "z.B. 192.168.0.15/24 oder 2001:db8::1234/64",
+  "invalidInput": "Ungültige IP/CIDR",
+  "invalidInputDescription": "Verwenden Sie eine gültige IPv4-Adresse, IPv6-Adresse oder einen CIDR-Bereich. Präfixlängen müssen mit der Adressfamilie übereinstimmen.",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert"
+}

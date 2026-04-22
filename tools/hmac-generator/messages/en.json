@@ -1,0 +1,18 @@
+{
+  "configurationLabel": "Configuration",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "secretKeyLabel": "Secret Key",
+  "secretKeyPlaceholder": "Enter your secret key",
+  "algorithmLabel": "Algorithm",
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "Import from file",
+  "hmacOutputLabel": "HMAC Output",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied"
+}

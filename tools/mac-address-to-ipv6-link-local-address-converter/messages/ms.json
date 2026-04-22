@@ -1,0 +1,10 @@
+{
+  "macLabel": "Alamat MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "Antara Muka Rangkaian",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "Alamat MAC tidak sah",
+  "resultLabel": "Alamat Pautan Tempatan IPv6",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

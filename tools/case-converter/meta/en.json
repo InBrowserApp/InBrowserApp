@@ -1,0 +1,4 @@
+{
+  "name": "Case Converter",
+  "description": "Convert text between different naming conventions: camelCase, PascalCase, snake_case, kebab-case, and more."
+}

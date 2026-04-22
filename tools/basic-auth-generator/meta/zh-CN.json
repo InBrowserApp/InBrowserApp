@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth 生成器",
+  "description": "通过将用户名和密码编码为 Base64 生成 HTTP Basic Authorization 头。快速创建用于 API 测试和开发的凭证"
+}

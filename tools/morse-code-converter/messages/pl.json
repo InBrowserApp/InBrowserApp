@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Wynik na żywo",
+  "resultDescription": "Konwertuj tekst na kod Morse'a i odwrotnie z obsługą odtwarzania dźwięku",
+  "textLabel": "Tekst",
+  "morseCodeLabel": "Kod Morse'a",
+  "textPlaceholder": "Wprowadź tekst do konwersji na kod Morse'a",
+  "morsePlaceholder": "Wprowadź kod Morse'a (kropki i kreski, / do oddzielania słów)",
+  "validLabel": "Prawidłowy kod Morse'a",
+  "invalidLabel": "Nieprawidłowy kod Morse'a",
+  "invalidMorseCode": "Nieprawidłowy kod Morse'a",
+  "unsupportedTextMessage": "Zakodować można tylko litery, cyfry, spacje i typowe znaki interpunkcyjne.",
+  "loadSample": "Wczytaj przykład",
+  "clearLabel": "Wyczyść",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano",
+  "play": "Odtwórz",
+  "stop": "Zatrzymaj"
+}

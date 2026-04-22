@@ -1,0 +1,13 @@
+{
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包括檔案內容或內嵌腳本。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入的 SRI 雜湊結果。",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

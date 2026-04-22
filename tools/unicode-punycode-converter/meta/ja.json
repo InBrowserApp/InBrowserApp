@@ -1,0 +1,4 @@
+{
+  "name": "Unicode ↔ Punycode 変換ツール",
+  "description": "Unicode（IDN）と ASCII（Punycode）のドメイン名を双方向に変換"
+}

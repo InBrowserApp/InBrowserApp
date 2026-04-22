@@ -1,0 +1,4 @@
+{
+  "name": "Bộ chuyển đổi dải IP sang CIDR",
+  "description": "Chuyển đổi địa chỉ bắt đầu và kết thúc IPv4 hoặc IPv6 thành tập hợp khối CIDR tối thiểu bao phủ chính xác phạm vi."
+}

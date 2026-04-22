@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Nach Farbnamen oder HEX-Wert suchen...",
+  "all": "Alle",
+  "red": "Rot",
+  "orange": "Orange",
+  "yellow": "Gelb",
+  "green": "Grün",
+  "cyan": "Cyan",
+  "blue": "Blau",
+  "purple": "Lila",
+  "pink": "Rosa",
+  "brown": "Braun",
+  "gray": "Grau",
+  "white": "Weiß",
+  "swatch": "Farbe",
+  "name": "Name",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "resetLabel": "Zurücksetzen",
+  "noResultsTitle": "Keine passenden Farben"
+}

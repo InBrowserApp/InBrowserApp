@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "inputPlaceholder": "Enter text to encode...",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "encodedOutputLabel": "Hex Encoded",
+  "encodedOutputEmptyDescription": "Hex output will appear here...",
+  "downloadFileLabel": "Download Hex",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "fileReadFailedTitle": "Failed to read file"
+}

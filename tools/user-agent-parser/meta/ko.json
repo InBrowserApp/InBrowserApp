@@ -1,0 +1,4 @@
+{
+  "name": "User-Agent 파서",
+  "description": "User-Agent 문자열을 분석하여 브라우저, OS, 디바이스, 엔진, CPU 정보를 식별합니다. 오프라인에서 동작합니다."
+}

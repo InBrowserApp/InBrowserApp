@@ -1,0 +1,13 @@
+{
+  "inputLabel": "الإدخال",
+  "inputPlaceholder": "أدخل النص للترميز...",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والحروف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "encodedOutputLabel": "مُرمز Hex",
+  "encodedOutputEmptyDescription": "سيظهر إخراج Hex هنا...",
+  "downloadFileLabel": "تنزيل Hex",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "fileReadFailedTitle": "فشل في قراءة الملف"
+}

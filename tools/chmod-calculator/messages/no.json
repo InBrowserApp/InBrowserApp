@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "presetsTitle": "Vanlige forhåndsinnstillinger",
+  "executablePresetLabel": "Kjørbar",
+  "readOnlyPresetLabel": "Skrivebeskyttet",
+  "fullAccessPresetLabel": "Full tilgang",
+  "ownerOnlyPresetLabel": "Kun eier",
+  "privateFilePresetLabel": "Privat fil",
+  "sharedDirPresetLabel": "Delt katalog",
+  "numericPermissionLabel": "Numerisk tillatelse",
+  "numericPermissionPlaceholder": "f.eks. 755",
+  "symbolicPermissionLabel": "Symbolsk tillatelse",
+  "symbolicPermissionPlaceholder": "f.eks. rwxr-xr-x",
+  "permissionMatrixLabel": "Tillatelsesmatrise",
+  "readLabel": "Les",
+  "writeLabel": "Skriv",
+  "executeLabel": "Kjør",
+  "ownerLabel": "Eier",
+  "groupLabel": "Gruppe",
+  "othersLabel": "Andre",
+  "chmodCommandLabel": "Chmod-kommando"
+}

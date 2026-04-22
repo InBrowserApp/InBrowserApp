@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "presetsTitle": "ค่าที่ตั้งไว้ทั่วไป",
+  "executablePresetLabel": "ไฟล์รันได้",
+  "readOnlyPresetLabel": "อ่านอย่างเดียว",
+  "fullAccessPresetLabel": "เข้าถึงเต็มที่",
+  "ownerOnlyPresetLabel": "เจ้าของเท่านั้น",
+  "privateFilePresetLabel": "ไฟล์ส่วนตัว",
+  "sharedDirPresetLabel": "ไดเรกทอรีแชร์",
+  "numericPermissionLabel": "สิทธิ์แบบตัวเลข",
+  "numericPermissionPlaceholder": "เช่น 755",
+  "symbolicPermissionLabel": "สิทธิ์แบบสัญลักษณ์",
+  "symbolicPermissionPlaceholder": "เช่น rwxr-xr-x",
+  "permissionMatrixLabel": "ตารางสิทธิ์",
+  "readLabel": "อ่าน",
+  "writeLabel": "เขียน",
+  "executeLabel": "รัน",
+  "ownerLabel": "เจ้าของ",
+  "groupLabel": "กลุ่ม",
+  "othersLabel": "ผู้อื่น",
+  "chmodCommandLabel": "คำสั่ง Chmod"
+}

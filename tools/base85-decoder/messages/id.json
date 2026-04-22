@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Input Base85",
+  "base85InputPlaceholder": "Masukkan teks Base85...",
+  "importFromFileLabel": "Impor dari file",
+  "decodedOutputLabel": "Output terdekode",
+  "decodedOutputEmptyDescription": "Teks yang didekodekan akan muncul di sini...",
+  "downloadFileLabel": "Unduh file",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin",
+  "loadSample": "Muat contoh",
+  "invalidBase85Title": "Teks Base85 tidak valid",
+  "fileReadFailedTitle": "Gagal membaca file",
+  "previewTruncatedLabel": "Pratinjau dipotong"
+}

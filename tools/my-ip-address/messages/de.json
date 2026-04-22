@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "WebRTC-Leck",
+  "unableToGetIp": "IP kann nicht abgerufen werden",
+  "hostname": "Hostname",
+  "isp": "Internetanbieter",
+  "ipOrganization": "IP-Organisation",
+  "asn": "ASN",
+  "asnOrganization": "ASN-Organisation",
+  "location": "Standort",
+  "country": "Land",
+  "timezone": "Zeitzone",
+  "webrtcDescription": "Zusätzliche Schnittstellen- und lokale Kandidatenadressen, die während der WebRTC-Aushandlung offengelegt werden.",
+  "unableToGetIpDescription": "Die Suche ergab keine öffentliche Adresse. Überprüfen Sie Ihre Verbindungs-, VPN-, Proxy- oder Datenschutzeinstellungen und versuchen Sie es erneut.",
+  "fetchingIp": "IP-Adresse abrufen",
+  "fetchingIpDescription": "Suchen Sie bei mehreren Anbietern nach Ihren öffentlichen Adressen und Netzwerkdetails.",
+  "copyIp": "IP kopieren",
+  "copied": "Kopiert",
+  "ipv4Description": "Öffentliche IPv4-Adresse, die derzeit für Websites und APIs sichtbar ist.",
+  "ipv6Description": "Öffentliche IPv6-Adresse sichtbar, wenn Ihr Netzwerk natives oder getunneltes IPv6 unterstützt."
+}

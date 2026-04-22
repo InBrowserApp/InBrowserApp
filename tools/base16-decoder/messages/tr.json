@@ -1,0 +1,14 @@
+{
+  "base16InputLabel": "Hex Girişi",
+  "base16InputPlaceholder": "Hex metni girin...",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "decodedOutputLabel": "Çözülen çıktı",
+  "decodedOutputEmptyDescription": "Çözülen metin burada görünecek...",
+  "downloadFileLabel": "Dosyayı indir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla",
+  "invalidBase16Title": "Geçersiz Hex metni",
+  "fileReadFailedTitle": "Dosya okunamadı",
+  "previewTruncatedLabel": "Önizleme kırpıldı"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "MD4 Hash Metin veya Dosya",
+  "description": "Metin girişi veya dosya yükleme için MD4 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur."
+}

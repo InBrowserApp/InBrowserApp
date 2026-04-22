@@ -1,0 +1,4 @@
+{
+  "name": "מפענח Basic Auth",
+  "description": "פענוח כותרת HTTP Basic Authorization כדי לחלץ שם משתמש וסיסמה מ-Base64. שימושי לניפוי שגיאות ובדיקות API"
+}

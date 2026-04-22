@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Dari",
+  "toLabel": "Ke",
+  "timeZoneLabel": "Zona waktu",
+  "dateTimeLabel": "Tanggal & waktu",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Sekarang",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Tanggal/waktu tidak valid",
+  "swapLabel": "Tukar",
+  "detailsLabel": "Detail",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Timestamp Unix (ms)",
+  "unixSecondsLabel": "Timestamp Unix (s)",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin"
+}

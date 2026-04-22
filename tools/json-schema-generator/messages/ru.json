@@ -1,0 +1,19 @@
+{
+  "inputTitle": "Ввод JSON",
+  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputPlaceholder": "Вставьте данные JSON сюда...",
+  "outputTitle": "Сгенерированная схема",
+  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputEmpty": "Введите корректные данные JSON, чтобы сгенерировать схему",
+  "invalidJson": "Неверный JSON",
+  "optionsTitle": "Параметры",
+  "optionDraft": "Черновик схемы",
+  "optionInferRequired": "Определять обязательные свойства",
+  "optionAllowAdditionalProperties": "Разрешить дополнительные свойства",
+  "optionDetectFormat": "Определять форматы строк (uuid, email, uri, date-time)",
+  "useSampleLabel": "Использовать пример",
+  "importFromFileLabel": "Импорт из файла",
+  "downloadSchemaLabel": "Скачать схему",
+  "copySchemaLabel": "Копировать схему",
+  "copiedLabel": "Скопировано"
+}

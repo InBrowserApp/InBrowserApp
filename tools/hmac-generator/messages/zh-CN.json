@@ -1,0 +1,18 @@
+{
+  "configurationLabel": "配置",
+  "configurationDescription": "设置当前签名使用的密钥和 HMAC 算法。",
+  "secretKeyLabel": "密钥",
+  "secretKeyPlaceholder": "输入您的密钥",
+  "algorithmLabel": "算法",
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "粘贴或输入任意 UTF-8 文本，包括文件内容或 API 负载。",
+  "importFromFileLabel": "从文件导入",
+  "hmacOutputLabel": "HMAC 输出",
+  "hmacOutputDescription": "当前文本输入与密钥对应的 HMAC 输出。",
+  "emptyStateDescription": "输入密钥并提供文本，或导入文件以生成 HMAC 输出。",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制"
+}

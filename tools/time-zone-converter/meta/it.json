@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di fuso orario",
+  "description": "Converte data e ora tra fusi orari con supporto dell'ora legale. Confronta gli offset e copia i formati ISO/UTC."
+}

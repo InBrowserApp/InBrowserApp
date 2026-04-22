@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Tùy chọn",
+  "optionsDescription": "Thiết lập số lượng mã định danh cần tạo trong mỗi lô và độ dài của từng CUID2.",
+  "countLabel": "Số lượng",
+  "lengthLabel": "Độ dài",
+  "resultsTitle": "Kết quả",
+  "resultsDescription": "Mỗi lô được tạo cục bộ trong trình duyệt nên bạn có thể xem lại, sao chép hoặc tải xuống mà không cần gửi các ID sang dịch vụ khác.",
+  "resultsPlaceholder": "Các ID CUID2 được tạo sẽ xuất hiện tại đây...",
+  "copyResultsLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "downloadResultsLabel": "Tải xuống",
+  "regenerateLabel": "Tạo lại"
+}

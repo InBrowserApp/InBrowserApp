@@ -1,0 +1,17 @@
+{
+  "alphabet": "Bảng chữ cái",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Đầu vào Base85",
+  "base85InputPlaceholder": "Nhập văn bản Base85...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "decodedOutputLabel": "Đầu ra đã giải mã",
+  "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
+  "downloadFileLabel": "Tải tệp",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
+  "loadSample": "Tải ví dụ",
+  "invalidBase85Title": "Văn bản Base85 không hợp lệ",
+  "fileReadFailedTitle": "Không thể đọc tệp",
+  "previewTruncatedLabel": "Bản xem trước bị cắt"
+}

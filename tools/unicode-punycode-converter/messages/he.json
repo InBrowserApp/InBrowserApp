@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "דומיין ASCII",
+  "unicodeDomainLabel": "דומיין Unicode",
+  "whatIsPunycodeTitle": "מהו Punycode?",
+  "whatIsPunycodeDescription": "Punycode הוא צורת ייצוג של Unicode המשתמשת רק בתת‑קבוצה של ASCII — אות‑ספרה‑מקף (LDH) — הנדרשת לשמות מארח ב‑DNS. זהו פרופיל הקידוד שבו משתמשת IDNA ומימוש של אלגוריתם Bootstring (RFC 3492). בפועל, תווי ASCII בתווית נשמרים כפי שהם ומקף מפריד ביניהם לבין החלק המקודד שאינו ASCII; לשימוש באינטרנט הציבורי מתווספת לתווית קידומת ACE xn--. לדוגמה, München הופך ברמת נקודות הקוד ל‑Mnchen‑3ya ובתווית DNS ל‑xn--mnchen-3ya. ההמרות מדויקות והפיכות תחת עיבוד ונרמול של IDNA; כלי זה מבצע את שני הכיוונים ישירות בדפדפן.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "אפס דוגמה"
+}

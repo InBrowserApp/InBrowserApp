@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization Header",
+  "authorizationHeaderDescription": "Paste header like: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Paste header like: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Decoded Result",
+  "decodedCredentialsDescription": "Decode HTTP Basic Authorization header to extract username and password from Base64. Useful for debugging and API testing",
+  "usernameLabel": "Username",
+  "passwordLabel": "Password",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "resetLabel": "Reset example",
+  "invalidHeaderTitle": "Invalid Basic Authorization header",
+  "invalidBase64Title": "Invalid Base64 content"
+}

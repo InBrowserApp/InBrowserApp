@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo Hash SRI",
+  "description": "Tạo hash Subresource Integrity (SRI) cho tài nguyên web. Tạo hash SHA-256, SHA-384 hoặc SHA-512 để đảm bảo tính toàn vẹn của các script bên ngoài, stylesheet và các tài nguyên khác"
+}

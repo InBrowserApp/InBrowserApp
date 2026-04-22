@@ -1,0 +1,13 @@
+{
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "粘贴或输入任意 UTF-8 文本，包括文件内容或内联脚本。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hashResultDescription": "当前文本输入的 SRI 哈希结果。",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

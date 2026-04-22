@@ -1,0 +1,13 @@
+{
+  "inputLabel": "입력",
+  "inputPlaceholder": "인코딩할 텍스트 입력...",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력할 수 있습니다.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "encodedOutputLabel": "Hex 인코딩됨",
+  "encodedOutputEmptyDescription": "Hex 출력이 여기에 표시됩니다...",
+  "downloadFileLabel": "Hex 다운로드",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "fileReadFailedTitle": "파일을 읽지 못했습니다"
+}

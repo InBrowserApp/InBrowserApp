@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Nomor Kartu Kredit",
+  "placeholder": "Masukkan nomor kartu kredit",
+  "valid": "Nomor kartu valid",
+  "invalid": "Nomor kartu tidak valid",
+  "invalidLuhn": "Checksum tidak valid (algoritma Luhn gagal)",
+  "invalidLength": "Panjang nomor kartu tidak valid",
+  "result": "Hasil Validasi",
+  "brand": "Merek Kartu",
+  "unknown": "Tidak diketahui",
+  "formattedNumber": "Nomor Terformat",
+  "luhnCheck": "Pemeriksaan Luhn",
+  "lengthCheck": "Pemeriksaan Panjang",
+  "digits": "Total Digit",
+  "cvcLength": "Panjang CVC",
+  "digitsLabel": "digit",
+  "pass": "Lulus",
+  "fail": "Gagal",
+  "expectedLength": "diharapkan: {lengths}",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

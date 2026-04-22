@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "Kimlik Bilgileri",
+  "usernameLabel": "Kullanıcı Adı",
+  "passwordLabel": "Parola",
+  "authorizationHeaderLabel": "Authorization Başlığı",
+  "authorizationHeaderDescription": "fetch çağrıları, API istemcileri veya manuel istekler için Authorization üstbilgisi değerini olduğu gibi kopyalayın.",
+  "curlExampleLabel": "cURL Örneği",
+  "curlExampleDescription": "Bu hazır curl komutunu başlangıç olarak kullanın, gerekirse örnek URL'yi değiştirin.",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "resetLabel": "Örneği sıfırla"
+}

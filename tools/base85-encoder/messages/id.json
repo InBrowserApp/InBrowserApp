@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Input",
+  "inputPlaceholder": "Masukkan teks untuk dikodekan...",
+  "outputTitle": "Terkode Base85",
+  "outputPlaceholder": "Output Base85 akan muncul di sini...",
+  "download": "Unduh Base85",
+  "readFailed": "Gagal membaca file",
+  "invalidBase85": "Z85 mengharuskan panjang input merupakan kelipatan 4 byte.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Impor dari file"
+}

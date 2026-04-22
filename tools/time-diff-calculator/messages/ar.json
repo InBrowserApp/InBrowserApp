@@ -1,0 +1,23 @@
+{
+  "startLabel": "البداية",
+  "endLabel": "النهاية",
+  "timeZoneLabel": "المنطقة الزمنية",
+  "dateTimeLabel": "التاريخ والوقت",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "التنسيق: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "الآن",
+  "offsetLabel": "الإزاحة",
+  "invalidDateTimeLabel": "تاريخ/وقت غير صالح",
+  "swapLabel": "تبديل",
+  "resultsLabel": "النتائج",
+  "signedDurationLabel": "المدة مع الإشارة",
+  "absoluteDurationLabel": "المدة المطلقة",
+  "iso8601DurationLabel": "مدة ISO 8601",
+  "totalMillisecondsLabel": "إجمالي المللي ثانية",
+  "totalSecondsLabel": "إجمالي الثواني",
+  "totalMinutesLabel": "إجمالي الدقائق",
+  "totalHoursLabel": "إجمالي الساعات",
+  "totalDaysLabel": "إجمالي الأيام",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

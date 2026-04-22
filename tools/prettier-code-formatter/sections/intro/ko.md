@@ -1,0 +1,18 @@
+## Prettier 코드 포맷터란?
+
+Prettier 코드 포맷터는 공식 Prettier standalone 파이프라인을 브라우저
+안에서 바로 실행해, 코드를 서버로 보내지 않고도 소스 파일을 정리할 수 있게
+합니다. 빠르게 한 번 포맷해야 하거나, 다른 줄 길이 설정을 비교해야 하거나,
+복사하거나 내려받을 수 있는 깔끔한 파일이 필요할 때 유용합니다.
+
+## 지원 형식
+
+이 rewrite는 브라우저에서 안정적으로 처리되는 Prettier 형식에 집중합니다. JavaScript, JSX, TypeScript, TSX, Flow, JSON 계열, HTML, XML, CSS, PostCSS, SCSS, Less, Markdown, MDX, YAML, GraphQL, 그리고 Angular, Vue, Svelte, LWC, MJML, Handlebars 같은 템플릿 형식이 포함됩니다. 언어 선택은 어떤 파서를 실행할지 결정하며, 파일을 가져오면 확장자를 인식할 수 있을 때 파서를 자동으로 감지합니다.
+
+## 이 Rewrite의 동작 방식
+
+이 rewrite는 무거운 포맷팅 로직을 주요 UI 경로 밖으로 뺍니다. 포맷 요청은 순수한
+도구 내부 설정으로 구성한 다음, 지연 로드된 worker 기반 Prettier 파이프라인으로
+실행하므로 일반적인 입력 작업은 반응성을 유지합니다. 큰 입력은 자동 포맷을
+일시 중지하고 `지금 포맷`을 명시적으로 누르도록 바꿔, 매 키 입력마다 대용량
+파일을 다시 포맷하는 것보다 더 예측 가능하게 동작합니다.

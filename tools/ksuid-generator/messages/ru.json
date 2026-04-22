@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Параметры",
+  "countLabel": "Количество",
+  "timestampModeLabel": "Режим временной метки",
+  "timestampNowLabel": "Использовать текущее время",
+  "timestampCustomLabel": "Пользовательское время",
+  "customDateTimeLabel": "Пользовательская дата/время",
+  "customUnixSecondsLabel": "Пользовательские Unix-секунды",
+  "setNowLabel": "Установить сейчас",
+  "ksuidEpochLabel": "Эпоха KSUID: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Недействительная временная метка.",
+  "timestampOutOfRange": "Временная метка должна быть между {min} и {max} (Unix-секунды).",
+  "resultsTitle": "Результаты",
+  "resultsPlaceholder": "Сгенерированные KSUID появятся здесь...",
+  "generatedAtLabel": "Сгенерировано с Unix-временем: {seconds}",
+  "copyResultsLabel": "Копировать результат",
+  "copiedLabel": "Скопировано",
+  "downloadResultsLabel": "Скачать",
+  "regenerateLabel": "Сгенерировать снова"
+}

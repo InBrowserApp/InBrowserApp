@@ -1,0 +1,4 @@
+{
+  "name": "ケースコンバーター",
+  "description": "camelCase、PascalCase、snake_case、kebab-case など、さまざまな命名規則間でテキストを変換します。"
+}

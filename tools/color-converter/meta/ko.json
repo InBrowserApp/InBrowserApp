@@ -1,0 +1,4 @@
+{
+  "name": "색상 변환기",
+  "description": "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK 및 CSS 키워드 형식 간 색상을 변환합니다. 알파 채널을 지원하는 실시간 양방향 변환."
+}

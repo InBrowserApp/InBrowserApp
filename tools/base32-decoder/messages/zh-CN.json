@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Base32 输入",
+  "base32InputPlaceholder": "输入 Base32 文本...",
+  "importFromFileLabel": "从文件导入",
+  "decodedOutputLabel": "解码结果",
+  "decodedOutputEmptyDescription": "解码后的文本将显示在这里...",
+  "downloadFileLabel": "下载文件",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例",
+  "invalidBase32Title": "无效的 Base32 文本",
+  "fileReadFailedTitle": "读取文件失败",
+  "previewTruncatedLabel": "预览已截断"
+}

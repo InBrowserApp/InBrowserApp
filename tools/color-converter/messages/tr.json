@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Renkler",
+  "resultsTitle": "Sonuçlar",
+  "previewTitle": "Önizleme",
+  "enableAlphaLabel": "Alfa Etkinleştir",
+  "invalidColorMessage": "Geçersiz renk biçimi",
+  "copyValueLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "keywordLabel": "CSS anahtar kelimesi",
+  "hexInfo": "Onaltılık renk gösterimi, web geliştirmede en yaygın",
+  "rgbInfo": "Kırmızı, Yeşil, Mavi - ekranlar için toplamsal renk modeli",
+  "hslInfo": "Ton, Doygunluk, Açıklık - sezgisel renk ayarları",
+  "hsvInfo": "Ton, Doygunluk, Değer - HSB olarak da bilinir, renk seçicilerde yaygın",
+  "hwbInfo": "Ton, Beyazlık, Siyahlık - CSS4 formatı, alfa yok",
+  "labInfo": "CIE LAB - algısal olarak tek tip renk alanı, alfa yok",
+  "lchInfo": "Parlaklık, Kroma, Ton - silindirik LAB, kolay ton ayarı, alfa yok",
+  "cmykInfo": "Camgöbeği, Macenta, Sarı, Siyah - baskı standardı, alfa yok",
+  "keywordInfo": "red, blue, coral gibi CSS renk adları - 140+ önceden tanımlı renk, alfa yok"
+}

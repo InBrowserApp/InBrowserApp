@@ -1,0 +1,4 @@
+{
+  "name": "NanoID 生成器",
+  "description": "在浏览器内生成 URL 安全的 NanoID，支持自定义长度和字符集预设。"
+}

@@ -1,0 +1,22 @@
+{
+  "cardNumber": "رقم بطاقة الائتمان",
+  "placeholder": "أدخل رقم بطاقة الائتمان",
+  "valid": "رقم بطاقة صالح",
+  "invalid": "رقم بطاقة غير صالح",
+  "invalidLuhn": "المجموع الاختباري غير صالح (فشل خوارزمية Luhn)",
+  "invalidLength": "طول رقم البطاقة غير صالح",
+  "result": "نتيجة التحقق",
+  "brand": "العلامة التجارية للبطاقة",
+  "unknown": "غير معروف",
+  "formattedNumber": "الرقم المنسق",
+  "luhnCheck": "فحص Luhn",
+  "lengthCheck": "فحص الطول",
+  "digits": "إجمالي الأرقام",
+  "cvcLength": "طول CVC",
+  "digitsLabel": "أرقام",
+  "pass": "ناجح",
+  "fail": "فاشل",
+  "expectedLength": "المتوقع: {lengths}",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ"
+}

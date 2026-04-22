@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT-type",
+  "inputLabel": "Invoertekst",
+  "inputPlaceholder": "Voer tekst in om te versleutelen/ontsleutelen...",
+  "outputLabel": "Uitvoertekst",
+  "outputPlaceholder": "Versleutelde/ontsleutelde tekst verschijnt hier...",
+  "rot13Description": "Alleen letters (A-Z, a-z)",
+  "rot5Description": "Alleen cijfers (0-9)",
+  "rot18Description": "Letters + Cijfers (ROT13 + ROT5)",
+  "rot47Description": "Alle afdrukbare ASCII (33-126)",
+  "copyInputLabel": "Invoertekst kopiëren",
+  "copyOutputLabel": "Uitvoertekst kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "resetLabel": "Voorbeeld resetten"
+}

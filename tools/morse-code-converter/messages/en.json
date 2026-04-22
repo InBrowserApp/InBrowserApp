@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Live result",
+  "resultDescription": "Convert text to Morse code and vice versa with audio playback support",
+  "textLabel": "Text",
+  "morseCodeLabel": "Morse Code",
+  "textPlaceholder": "Enter text to convert to Morse code",
+  "morsePlaceholder": "Enter Morse code (dots and dashes, / for word separator)",
+  "validLabel": "Valid Morse code",
+  "invalidLabel": "Invalid Morse code",
+  "invalidMorseCode": "Invalid Morse code",
+  "unsupportedTextMessage": "Only letters, digits, spaces, and common punctuation can be encoded.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "play": "Play",
+  "stop": "Stop"
+}

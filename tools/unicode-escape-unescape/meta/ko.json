@@ -1,0 +1,4 @@
+{
+  "name": "Unicode 이스케이프 / 언이스케이프",
+  "description": "\\uXXXX, \\u{XXXXX}, HTML 엔티티, URL 인코딩, U+XXXX 표기법을 포함한 다양한 형식으로 Unicode 문자를 이스케이프 및 언이스케이프"
+}

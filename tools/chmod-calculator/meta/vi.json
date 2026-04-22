@@ -1,0 +1,4 @@
+{
+  "name": "Máy tính Chmod",
+  "description": "Chuyển đổi quyền tệp Unix giữa ký hiệu số (755) và ký hiệu (rwxr-xr-x)"
+}

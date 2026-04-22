@@ -2,6 +2,834 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "adler32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "adler32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ar",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "de",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "en",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "es",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "fr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "he",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "hi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "id",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "it",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ja",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ko",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ms",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "nl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "no",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pl",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "pt",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "ru",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "sv",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "th",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "tr",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "vi",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ascii-art-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ar",
+  },
+  {
+    slug: "barcode-generator",
+    language: "de",
+  },
+  {
+    slug: "barcode-generator",
+    language: "en",
+  },
+  {
+    slug: "barcode-generator",
+    language: "es",
+  },
+  {
+    slug: "barcode-generator",
+    language: "fr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "he",
+  },
+  {
+    slug: "barcode-generator",
+    language: "hi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "id",
+  },
+  {
+    slug: "barcode-generator",
+    language: "it",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ja",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ko",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ms",
+  },
+  {
+    slug: "barcode-generator",
+    language: "nl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "no",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pl",
+  },
+  {
+    slug: "barcode-generator",
+    language: "pt",
+  },
+  {
+    slug: "barcode-generator",
+    language: "ru",
+  },
+  {
+    slug: "barcode-generator",
+    language: "sv",
+  },
+  {
+    slug: "barcode-generator",
+    language: "th",
+  },
+  {
+    slug: "barcode-generator",
+    language: "tr",
+  },
+  {
+    slug: "barcode-generator",
+    language: "vi",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "barcode-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base16-decoder",
+    language: "de",
+  },
+  {
+    slug: "base16-decoder",
+    language: "en",
+  },
+  {
+    slug: "base16-decoder",
+    language: "es",
+  },
+  {
+    slug: "base16-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base16-decoder",
+    language: "he",
+  },
+  {
+    slug: "base16-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base16-decoder",
+    language: "id",
+  },
+  {
+    slug: "base16-decoder",
+    language: "it",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base16-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base16-decoder",
+    language: "no",
+  },
+  {
+    slug: "base16-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base16-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base16-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base16-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base16-decoder",
+    language: "th",
+  },
+  {
+    slug: "base16-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base16-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base16-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base16-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base16-encoder",
+    language: "de",
+  },
+  {
+    slug: "base16-encoder",
+    language: "en",
+  },
+  {
+    slug: "base16-encoder",
+    language: "es",
+  },
+  {
+    slug: "base16-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base16-encoder",
+    language: "he",
+  },
+  {
+    slug: "base16-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base16-encoder",
+    language: "id",
+  },
+  {
+    slug: "base16-encoder",
+    language: "it",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base16-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base16-encoder",
+    language: "no",
+  },
+  {
+    slug: "base16-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base16-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base16-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base16-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base16-encoder",
+    language: "th",
+  },
+  {
+    slug: "base16-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base16-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base16-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base16-encoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-decoder",
+    language: "de",
+  },
+  {
+    slug: "base32-decoder",
+    language: "en",
+  },
+  {
+    slug: "base32-decoder",
+    language: "es",
+  },
+  {
+    slug: "base32-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "he",
+  },
+  {
+    slug: "base32-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "id",
+  },
+  {
+    slug: "base32-decoder",
+    language: "it",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "no",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-decoder",
+    language: "th",
+  },
+  {
+    slug: "base32-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base32-encoder",
+    language: "de",
+  },
+  {
+    slug: "base32-encoder",
+    language: "en",
+  },
+  {
+    slug: "base32-encoder",
+    language: "es",
+  },
+  {
+    slug: "base32-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base32-encoder",
+    language: "he",
+  },
+  {
+    slug: "base32-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base32-encoder",
+    language: "id",
+  },
+  {
+    slug: "base32-encoder",
+    language: "it",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base32-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base32-encoder",
+    language: "no",
+  },
+  {
+    slug: "base32-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base32-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base32-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base32-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base32-encoder",
+    language: "th",
+  },
+  {
+    slug: "base32-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base32-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base32-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base32-encoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base58-decoder",
+    language: "de",
+  },
+  {
+    slug: "base58-decoder",
+    language: "en",
+  },
+  {
+    slug: "base58-decoder",
+    language: "es",
+  },
+  {
+    slug: "base58-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "he",
+  },
+  {
+    slug: "base58-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "id",
+  },
+  {
+    slug: "base58-decoder",
+    language: "it",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base58-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "no",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base58-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base58-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base58-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base58-decoder",
+    language: "th",
+  },
+  {
+    slug: "base58-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base58-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base58-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base58-encoder",
+    language: "de",
+  },
+  {
+    slug: "base58-encoder",
+    language: "en",
+  },
+  {
+    slug: "base58-encoder",
+    language: "es",
+  },
+  {
+    slug: "base58-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base58-encoder",
+    language: "he",
+  },
+  {
+    slug: "base58-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base58-encoder",
+    language: "id",
+  },
+  {
+    slug: "base58-encoder",
+    language: "it",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base58-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base58-encoder",
+    language: "no",
+  },
+  {
+    slug: "base58-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base58-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base58-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base58-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base58-encoder",
+    language: "th",
+  },
+  {
+    slug: "base58-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base58-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base58-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base58-encoder",
+    language: "zh-TW",
+  },
+  {
     slug: "base64-encoder-decoder",
     language: "ar",
   },
@@ -91,6 +919,1570 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "base64-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-decoder",
+    language: "de",
+  },
+  {
+    slug: "base85-decoder",
+    language: "en",
+  },
+  {
+    slug: "base85-decoder",
+    language: "es",
+  },
+  {
+    slug: "base85-decoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "he",
+  },
+  {
+    slug: "base85-decoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "id",
+  },
+  {
+    slug: "base85-decoder",
+    language: "it",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-decoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "no",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-decoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-decoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-decoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-decoder",
+    language: "th",
+  },
+  {
+    slug: "base85-decoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-decoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ar",
+  },
+  {
+    slug: "base85-encoder",
+    language: "de",
+  },
+  {
+    slug: "base85-encoder",
+    language: "en",
+  },
+  {
+    slug: "base85-encoder",
+    language: "es",
+  },
+  {
+    slug: "base85-encoder",
+    language: "fr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "he",
+  },
+  {
+    slug: "base85-encoder",
+    language: "hi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "id",
+  },
+  {
+    slug: "base85-encoder",
+    language: "it",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ja",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ko",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ms",
+  },
+  {
+    slug: "base85-encoder",
+    language: "nl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "no",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pl",
+  },
+  {
+    slug: "base85-encoder",
+    language: "pt",
+  },
+  {
+    slug: "base85-encoder",
+    language: "ru",
+  },
+  {
+    slug: "base85-encoder",
+    language: "sv",
+  },
+  {
+    slug: "base85-encoder",
+    language: "th",
+  },
+  {
+    slug: "base85-encoder",
+    language: "tr",
+  },
+  {
+    slug: "base85-encoder",
+    language: "vi",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "base85-encoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ar",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "de",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "en",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "es",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "fr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "he",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "hi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "id",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "it",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ja",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ko",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ms",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "nl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "no",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pl",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "pt",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "ru",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "sv",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "th",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "tr",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "vi",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "basic-auth-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ar",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "de",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "en",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "es",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "fr",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "he",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "hi",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "id",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "it",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ja",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ko",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ms",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "nl",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "no",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "pl",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "pt",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "ru",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "sv",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "th",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "tr",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "vi",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "basic-auth-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ar",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "de",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "en",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "es",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "fr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "he",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "hi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "id",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "it",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ja",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ko",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ms",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "nl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "no",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pl",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "pt",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "ru",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "sv",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "th",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "tr",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "vi",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "bic-swift-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ar",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "de",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "en",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "es",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "fr",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "he",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "hi",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "id",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "it",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ja",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ko",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ms",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "nl",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "no",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "pl",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "pt",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "ru",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "sv",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "th",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "tr",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "vi",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "bip39-mnemonic-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake2b-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake2s-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "blake3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "case-converter",
+    language: "ar",
+  },
+  {
+    slug: "case-converter",
+    language: "de",
+  },
+  {
+    slug: "case-converter",
+    language: "en",
+  },
+  {
+    slug: "case-converter",
+    language: "es",
+  },
+  {
+    slug: "case-converter",
+    language: "fr",
+  },
+  {
+    slug: "case-converter",
+    language: "he",
+  },
+  {
+    slug: "case-converter",
+    language: "hi",
+  },
+  {
+    slug: "case-converter",
+    language: "id",
+  },
+  {
+    slug: "case-converter",
+    language: "it",
+  },
+  {
+    slug: "case-converter",
+    language: "ja",
+  },
+  {
+    slug: "case-converter",
+    language: "ko",
+  },
+  {
+    slug: "case-converter",
+    language: "ms",
+  },
+  {
+    slug: "case-converter",
+    language: "nl",
+  },
+  {
+    slug: "case-converter",
+    language: "no",
+  },
+  {
+    slug: "case-converter",
+    language: "pl",
+  },
+  {
+    slug: "case-converter",
+    language: "pt",
+  },
+  {
+    slug: "case-converter",
+    language: "ru",
+  },
+  {
+    slug: "case-converter",
+    language: "sv",
+  },
+  {
+    slug: "case-converter",
+    language: "th",
+  },
+  {
+    slug: "case-converter",
+    language: "tr",
+  },
+  {
+    slug: "case-converter",
+    language: "vi",
+  },
+  {
+    slug: "case-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "case-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ar",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "de",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "en",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "es",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "fr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "he",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "hi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "id",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "it",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ja",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ko",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ms",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "nl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "no",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pl",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "pt",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "ru",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "sv",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "th",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "tr",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "vi",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "chmod-calculator",
+    language: "zh-TW",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ar",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "de",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "en",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "es",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "fr",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "he",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "hi",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "id",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "it",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ja",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ko",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ms",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "nl",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "no",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "pl",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "pt",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "ru",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "sv",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "th",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "tr",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "vi",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-contrast-checker",
+    language: "zh-TW",
+  },
+  {
+    slug: "color-converter",
+    language: "ar",
+  },
+  {
+    slug: "color-converter",
+    language: "de",
+  },
+  {
+    slug: "color-converter",
+    language: "en",
+  },
+  {
+    slug: "color-converter",
+    language: "es",
+  },
+  {
+    slug: "color-converter",
+    language: "fr",
+  },
+  {
+    slug: "color-converter",
+    language: "he",
+  },
+  {
+    slug: "color-converter",
+    language: "hi",
+  },
+  {
+    slug: "color-converter",
+    language: "id",
+  },
+  {
+    slug: "color-converter",
+    language: "it",
+  },
+  {
+    slug: "color-converter",
+    language: "ja",
+  },
+  {
+    slug: "color-converter",
+    language: "ko",
+  },
+  {
+    slug: "color-converter",
+    language: "ms",
+  },
+  {
+    slug: "color-converter",
+    language: "nl",
+  },
+  {
+    slug: "color-converter",
+    language: "no",
+  },
+  {
+    slug: "color-converter",
+    language: "pl",
+  },
+  {
+    slug: "color-converter",
+    language: "pt",
+  },
+  {
+    slug: "color-converter",
+    language: "ru",
+  },
+  {
+    slug: "color-converter",
+    language: "sv",
+  },
+  {
+    slug: "color-converter",
+    language: "th",
+  },
+  {
+    slug: "color-converter",
+    language: "tr",
+  },
+  {
+    slug: "color-converter",
+    language: "vi",
+  },
+  {
+    slug: "color-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "color-picker",
+    language: "ar",
+  },
+  {
+    slug: "color-picker",
+    language: "de",
+  },
+  {
+    slug: "color-picker",
+    language: "en",
+  },
+  {
+    slug: "color-picker",
+    language: "es",
+  },
+  {
+    slug: "color-picker",
+    language: "fr",
+  },
+  {
+    slug: "color-picker",
+    language: "he",
+  },
+  {
+    slug: "color-picker",
+    language: "hi",
+  },
+  {
+    slug: "color-picker",
+    language: "id",
+  },
+  {
+    slug: "color-picker",
+    language: "it",
+  },
+  {
+    slug: "color-picker",
+    language: "ja",
+  },
+  {
+    slug: "color-picker",
+    language: "ko",
+  },
+  {
+    slug: "color-picker",
+    language: "ms",
+  },
+  {
+    slug: "color-picker",
+    language: "nl",
+  },
+  {
+    slug: "color-picker",
+    language: "no",
+  },
+  {
+    slug: "color-picker",
+    language: "pl",
+  },
+  {
+    slug: "color-picker",
+    language: "pt",
+  },
+  {
+    slug: "color-picker",
+    language: "ru",
+  },
+  {
+    slug: "color-picker",
+    language: "sv",
+  },
+  {
+    slug: "color-picker",
+    language: "th",
+  },
+  {
+    slug: "color-picker",
+    language: "tr",
+  },
+  {
+    slug: "color-picker",
+    language: "vi",
+  },
+  {
+    slug: "color-picker",
+    language: "zh-CN",
+  },
+  {
+    slug: "color-picker",
+    language: "zh-TW",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ar",
+  },
+  {
+    slug: "cookie-parser",
+    language: "de",
+  },
+  {
+    slug: "cookie-parser",
+    language: "en",
+  },
+  {
+    slug: "cookie-parser",
+    language: "es",
+  },
+  {
+    slug: "cookie-parser",
+    language: "fr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "he",
+  },
+  {
+    slug: "cookie-parser",
+    language: "hi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "id",
+  },
+  {
+    slug: "cookie-parser",
+    language: "it",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ja",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ko",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ms",
+  },
+  {
+    slug: "cookie-parser",
+    language: "nl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "no",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pl",
+  },
+  {
+    slug: "cookie-parser",
+    language: "pt",
+  },
+  {
+    slug: "cookie-parser",
+    language: "ru",
+  },
+  {
+    slug: "cookie-parser",
+    language: "sv",
+  },
+  {
+    slug: "cookie-parser",
+    language: "th",
+  },
+  {
+    slug: "cookie-parser",
+    language: "tr",
+  },
+  {
+    slug: "cookie-parser",
+    language: "vi",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cookie-parser",
+    language: "zh-TW",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ar",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "de",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "en",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "es",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "fr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "he",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "hi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "id",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "it",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ja",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ko",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ms",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "nl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "no",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pl",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "pt",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "ru",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "sv",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "th",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "tr",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "vi",
+  },
+  {
+    slug: "credit-card-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "credit-card-validator",
     language: "zh-TW",
   },
   {
@@ -186,6 +2578,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cuid2-generator",
+    language: "ar",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "de",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "en",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "es",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "fr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "he",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "hi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "id",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "it",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ja",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ko",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ms",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "nl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "no",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pl",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "pt",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "ru",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "sv",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "th",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "tr",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "vi",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "cuid2-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "current-network-time",
+    language: "ar",
+  },
+  {
+    slug: "current-network-time",
+    language: "de",
+  },
+  {
+    slug: "current-network-time",
+    language: "en",
+  },
+  {
+    slug: "current-network-time",
+    language: "es",
+  },
+  {
+    slug: "current-network-time",
+    language: "fr",
+  },
+  {
+    slug: "current-network-time",
+    language: "he",
+  },
+  {
+    slug: "current-network-time",
+    language: "hi",
+  },
+  {
+    slug: "current-network-time",
+    language: "id",
+  },
+  {
+    slug: "current-network-time",
+    language: "it",
+  },
+  {
+    slug: "current-network-time",
+    language: "ja",
+  },
+  {
+    slug: "current-network-time",
+    language: "ko",
+  },
+  {
+    slug: "current-network-time",
+    language: "ms",
+  },
+  {
+    slug: "current-network-time",
+    language: "nl",
+  },
+  {
+    slug: "current-network-time",
+    language: "no",
+  },
+  {
+    slug: "current-network-time",
+    language: "pl",
+  },
+  {
+    slug: "current-network-time",
+    language: "pt",
+  },
+  {
+    slug: "current-network-time",
+    language: "ru",
+  },
+  {
+    slug: "current-network-time",
+    language: "sv",
+  },
+  {
+    slug: "current-network-time",
+    language: "th",
+  },
+  {
+    slug: "current-network-time",
+    language: "tr",
+  },
+  {
+    slug: "current-network-time",
+    language: "vi",
+  },
+  {
+    slug: "current-network-time",
+    language: "zh-CN",
+  },
+  {
+    slug: "current-network-time",
+    language: "zh-TW",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ar",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "de",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "en",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "es",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "fr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "he",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "hi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "id",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "it",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ja",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ko",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ms",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "nl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "no",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pl",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "pt",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "ru",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "sv",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "th",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "tr",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "vi",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },
@@ -275,6 +2943,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "docker-run-to-compose-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ar",
+  },
+  {
+    slug: "duration-calculator",
+    language: "de",
+  },
+  {
+    slug: "duration-calculator",
+    language: "en",
+  },
+  {
+    slug: "duration-calculator",
+    language: "es",
+  },
+  {
+    slug: "duration-calculator",
+    language: "fr",
+  },
+  {
+    slug: "duration-calculator",
+    language: "he",
+  },
+  {
+    slug: "duration-calculator",
+    language: "hi",
+  },
+  {
+    slug: "duration-calculator",
+    language: "id",
+  },
+  {
+    slug: "duration-calculator",
+    language: "it",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ja",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ko",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ms",
+  },
+  {
+    slug: "duration-calculator",
+    language: "nl",
+  },
+  {
+    slug: "duration-calculator",
+    language: "no",
+  },
+  {
+    slug: "duration-calculator",
+    language: "pl",
+  },
+  {
+    slug: "duration-calculator",
+    language: "pt",
+  },
+  {
+    slug: "duration-calculator",
+    language: "ru",
+  },
+  {
+    slug: "duration-calculator",
+    language: "sv",
+  },
+  {
+    slug: "duration-calculator",
+    language: "th",
+  },
+  {
+    slug: "duration-calculator",
+    language: "tr",
+  },
+  {
+    slug: "duration-calculator",
+    language: "vi",
+  },
+  {
+    slug: "duration-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "duration-calculator",
+    language: "zh-TW",
+  },
+  {
+    slug: "email-validator",
+    language: "ar",
+  },
+  {
+    slug: "email-validator",
+    language: "de",
+  },
+  {
+    slug: "email-validator",
+    language: "en",
+  },
+  {
+    slug: "email-validator",
+    language: "es",
+  },
+  {
+    slug: "email-validator",
+    language: "fr",
+  },
+  {
+    slug: "email-validator",
+    language: "he",
+  },
+  {
+    slug: "email-validator",
+    language: "hi",
+  },
+  {
+    slug: "email-validator",
+    language: "id",
+  },
+  {
+    slug: "email-validator",
+    language: "it",
+  },
+  {
+    slug: "email-validator",
+    language: "ja",
+  },
+  {
+    slug: "email-validator",
+    language: "ko",
+  },
+  {
+    slug: "email-validator",
+    language: "ms",
+  },
+  {
+    slug: "email-validator",
+    language: "nl",
+  },
+  {
+    slug: "email-validator",
+    language: "no",
+  },
+  {
+    slug: "email-validator",
+    language: "pl",
+  },
+  {
+    slug: "email-validator",
+    language: "pt",
+  },
+  {
+    slug: "email-validator",
+    language: "ru",
+  },
+  {
+    slug: "email-validator",
+    language: "sv",
+  },
+  {
+    slug: "email-validator",
+    language: "th",
+  },
+  {
+    slug: "email-validator",
+    language: "tr",
+  },
+  {
+    slug: "email-validator",
+    language: "vi",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ar",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "de",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "en",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "es",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "fr",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "he",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "hi",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "id",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "it",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ja",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ko",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ms",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "nl",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "no",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "pl",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "pt",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "ru",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "sv",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "th",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "tr",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "vi",
+  },
+  {
+    slug: "file-to-data-uri-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "file-to-data-uri-converter",
     language: "zh-TW",
   },
   {
@@ -370,6 +3314,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hmac-generator",
+    language: "ar",
+  },
+  {
+    slug: "hmac-generator",
+    language: "de",
+  },
+  {
+    slug: "hmac-generator",
+    language: "en",
+  },
+  {
+    slug: "hmac-generator",
+    language: "es",
+  },
+  {
+    slug: "hmac-generator",
+    language: "fr",
+  },
+  {
+    slug: "hmac-generator",
+    language: "he",
+  },
+  {
+    slug: "hmac-generator",
+    language: "hi",
+  },
+  {
+    slug: "hmac-generator",
+    language: "id",
+  },
+  {
+    slug: "hmac-generator",
+    language: "it",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ja",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ko",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ms",
+  },
+  {
+    slug: "hmac-generator",
+    language: "nl",
+  },
+  {
+    slug: "hmac-generator",
+    language: "no",
+  },
+  {
+    slug: "hmac-generator",
+    language: "pl",
+  },
+  {
+    slug: "hmac-generator",
+    language: "pt",
+  },
+  {
+    slug: "hmac-generator",
+    language: "ru",
+  },
+  {
+    slug: "hmac-generator",
+    language: "sv",
+  },
+  {
+    slug: "hmac-generator",
+    language: "th",
+  },
+  {
+    slug: "hmac-generator",
+    language: "tr",
+  },
+  {
+    slug: "hmac-generator",
+    language: "vi",
+  },
+  {
+    slug: "hmac-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "hmac-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "html-color-names",
+    language: "ar",
+  },
+  {
+    slug: "html-color-names",
+    language: "de",
+  },
+  {
+    slug: "html-color-names",
+    language: "en",
+  },
+  {
+    slug: "html-color-names",
+    language: "es",
+  },
+  {
+    slug: "html-color-names",
+    language: "fr",
+  },
+  {
+    slug: "html-color-names",
+    language: "he",
+  },
+  {
+    slug: "html-color-names",
+    language: "hi",
+  },
+  {
+    slug: "html-color-names",
+    language: "id",
+  },
+  {
+    slug: "html-color-names",
+    language: "it",
+  },
+  {
+    slug: "html-color-names",
+    language: "ja",
+  },
+  {
+    slug: "html-color-names",
+    language: "ko",
+  },
+  {
+    slug: "html-color-names",
+    language: "ms",
+  },
+  {
+    slug: "html-color-names",
+    language: "nl",
+  },
+  {
+    slug: "html-color-names",
+    language: "no",
+  },
+  {
+    slug: "html-color-names",
+    language: "pl",
+  },
+  {
+    slug: "html-color-names",
+    language: "pt",
+  },
+  {
+    slug: "html-color-names",
+    language: "ru",
+  },
+  {
+    slug: "html-color-names",
+    language: "sv",
+  },
+  {
+    slug: "html-color-names",
+    language: "th",
+  },
+  {
+    slug: "html-color-names",
+    language: "tr",
+  },
+  {
+    slug: "html-color-names",
+    language: "vi",
+  },
+  {
+    slug: "html-color-names",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-color-names",
+    language: "zh-TW",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ar",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "de",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "en",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "es",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "fr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "he",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "hi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "id",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "it",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ja",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ko",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ms",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "nl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "no",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pl",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "pt",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "ru",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "sv",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "th",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "tr",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "vi",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "html-to-markdown-converter",
     language: "ar",
   },
@@ -459,6 +3679,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "html-to-markdown-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ar",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "de",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "en",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "es",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "fr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "he",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "hi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "id",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "it",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ja",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ko",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ms",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "nl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "no",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pl",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "pt",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "ru",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "sv",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "th",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "tr",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "vi",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "http-status-code-lookup",
+    language: "zh-TW",
+  },
+  {
+    slug: "iban-validator",
+    language: "ar",
+  },
+  {
+    slug: "iban-validator",
+    language: "de",
+  },
+  {
+    slug: "iban-validator",
+    language: "en",
+  },
+  {
+    slug: "iban-validator",
+    language: "es",
+  },
+  {
+    slug: "iban-validator",
+    language: "fr",
+  },
+  {
+    slug: "iban-validator",
+    language: "he",
+  },
+  {
+    slug: "iban-validator",
+    language: "hi",
+  },
+  {
+    slug: "iban-validator",
+    language: "id",
+  },
+  {
+    slug: "iban-validator",
+    language: "it",
+  },
+  {
+    slug: "iban-validator",
+    language: "ja",
+  },
+  {
+    slug: "iban-validator",
+    language: "ko",
+  },
+  {
+    slug: "iban-validator",
+    language: "ms",
+  },
+  {
+    slug: "iban-validator",
+    language: "nl",
+  },
+  {
+    slug: "iban-validator",
+    language: "no",
+  },
+  {
+    slug: "iban-validator",
+    language: "pl",
+  },
+  {
+    slug: "iban-validator",
+    language: "pt",
+  },
+  {
+    slug: "iban-validator",
+    language: "ru",
+  },
+  {
+    slug: "iban-validator",
+    language: "sv",
+  },
+  {
+    slug: "iban-validator",
+    language: "th",
+  },
+  {
+    slug: "iban-validator",
+    language: "tr",
+  },
+  {
+    slug: "iban-validator",
+    language: "vi",
+  },
+  {
+    slug: "iban-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "iban-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ar",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "de",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "en",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "es",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "fr",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "he",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "hi",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "id",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "it",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ja",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ko",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ms",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "nl",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "no",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "pl",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "pt",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "ru",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "sv",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "th",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "tr",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "vi",
+  },
+  {
+    slug: "image-metadata-cleaner",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-metadata-cleaner",
     language: "zh-TW",
   },
   {
@@ -554,6 +4050,558 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-ico",
+    language: "ar",
+  },
+  {
+    slug: "image-to-ico",
+    language: "de",
+  },
+  {
+    slug: "image-to-ico",
+    language: "en",
+  },
+  {
+    slug: "image-to-ico",
+    language: "es",
+  },
+  {
+    slug: "image-to-ico",
+    language: "fr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "he",
+  },
+  {
+    slug: "image-to-ico",
+    language: "hi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "id",
+  },
+  {
+    slug: "image-to-ico",
+    language: "it",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ja",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ko",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ms",
+  },
+  {
+    slug: "image-to-ico",
+    language: "nl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "no",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pl",
+  },
+  {
+    slug: "image-to-ico",
+    language: "pt",
+  },
+  {
+    slug: "image-to-ico",
+    language: "ru",
+  },
+  {
+    slug: "image-to-ico",
+    language: "sv",
+  },
+  {
+    slug: "image-to-ico",
+    language: "th",
+  },
+  {
+    slug: "image-to-ico",
+    language: "tr",
+  },
+  {
+    slug: "image-to-ico",
+    language: "vi",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-ico",
+    language: "zh-TW",
+  },
+  {
+    slug: "imei-validator",
+    language: "ar",
+  },
+  {
+    slug: "imei-validator",
+    language: "de",
+  },
+  {
+    slug: "imei-validator",
+    language: "en",
+  },
+  {
+    slug: "imei-validator",
+    language: "es",
+  },
+  {
+    slug: "imei-validator",
+    language: "fr",
+  },
+  {
+    slug: "imei-validator",
+    language: "he",
+  },
+  {
+    slug: "imei-validator",
+    language: "hi",
+  },
+  {
+    slug: "imei-validator",
+    language: "id",
+  },
+  {
+    slug: "imei-validator",
+    language: "it",
+  },
+  {
+    slug: "imei-validator",
+    language: "ja",
+  },
+  {
+    slug: "imei-validator",
+    language: "ko",
+  },
+  {
+    slug: "imei-validator",
+    language: "ms",
+  },
+  {
+    slug: "imei-validator",
+    language: "nl",
+  },
+  {
+    slug: "imei-validator",
+    language: "no",
+  },
+  {
+    slug: "imei-validator",
+    language: "pl",
+  },
+  {
+    slug: "imei-validator",
+    language: "pt",
+  },
+  {
+    slug: "imei-validator",
+    language: "ru",
+  },
+  {
+    slug: "imei-validator",
+    language: "sv",
+  },
+  {
+    slug: "imei-validator",
+    language: "th",
+  },
+  {
+    slug: "imei-validator",
+    language: "tr",
+  },
+  {
+    slug: "imei-validator",
+    language: "vi",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "imei-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "de",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "en",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "es",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "he",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "id",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "it",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "no",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "th",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ar",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "de",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "en",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "es",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "fr",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "he",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "hi",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "id",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "it",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ja",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ko",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ms",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "nl",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "no",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "pl",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "pt",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "ru",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "sv",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "th",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "tr",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "vi",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "de",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "en",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "es",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "he",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "id",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "it",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "no",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "th",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-address-to-mac-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ar",
+  },
+  {
+    slug: "isbn-validator",
+    language: "de",
+  },
+  {
+    slug: "isbn-validator",
+    language: "en",
+  },
+  {
+    slug: "isbn-validator",
+    language: "es",
+  },
+  {
+    slug: "isbn-validator",
+    language: "fr",
+  },
+  {
+    slug: "isbn-validator",
+    language: "he",
+  },
+  {
+    slug: "isbn-validator",
+    language: "hi",
+  },
+  {
+    slug: "isbn-validator",
+    language: "id",
+  },
+  {
+    slug: "isbn-validator",
+    language: "it",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ja",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ko",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ms",
+  },
+  {
+    slug: "isbn-validator",
+    language: "nl",
+  },
+  {
+    slug: "isbn-validator",
+    language: "no",
+  },
+  {
+    slug: "isbn-validator",
+    language: "pl",
+  },
+  {
+    slug: "isbn-validator",
+    language: "pt",
+  },
+  {
+    slug: "isbn-validator",
+    language: "ru",
+  },
+  {
+    slug: "isbn-validator",
+    language: "sv",
+  },
+  {
+    slug: "isbn-validator",
+    language: "th",
+  },
+  {
+    slug: "isbn-validator",
+    language: "tr",
+  },
+  {
+    slug: "isbn-validator",
+    language: "vi",
+  },
+  {
+    slug: "isbn-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "isbn-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "jmespath-tester",
     language: "ar",
   },
@@ -830,6 +4878,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-schema-generator",
+    language: "ar",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "de",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "en",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "es",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "fr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "he",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "hi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "id",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "it",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ja",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ko",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ms",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "nl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "no",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pl",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "pt",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "ru",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "sv",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "th",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "tr",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "vi",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-schema-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "json-schema-validator",
     language: "ar",
   },
@@ -1382,6 +5522,1202 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "keccak-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "keccak-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ar",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "de",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "en",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "es",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "fr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "he",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "hi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "id",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "it",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ja",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ko",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ms",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "nl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "no",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pl",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "pt",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "ru",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "sv",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "th",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "tr",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "vi",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ksuid-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "list-comparer",
+    language: "ar",
+  },
+  {
+    slug: "list-comparer",
+    language: "de",
+  },
+  {
+    slug: "list-comparer",
+    language: "en",
+  },
+  {
+    slug: "list-comparer",
+    language: "es",
+  },
+  {
+    slug: "list-comparer",
+    language: "fr",
+  },
+  {
+    slug: "list-comparer",
+    language: "he",
+  },
+  {
+    slug: "list-comparer",
+    language: "hi",
+  },
+  {
+    slug: "list-comparer",
+    language: "id",
+  },
+  {
+    slug: "list-comparer",
+    language: "it",
+  },
+  {
+    slug: "list-comparer",
+    language: "ja",
+  },
+  {
+    slug: "list-comparer",
+    language: "ko",
+  },
+  {
+    slug: "list-comparer",
+    language: "ms",
+  },
+  {
+    slug: "list-comparer",
+    language: "nl",
+  },
+  {
+    slug: "list-comparer",
+    language: "no",
+  },
+  {
+    slug: "list-comparer",
+    language: "pl",
+  },
+  {
+    slug: "list-comparer",
+    language: "pt",
+  },
+  {
+    slug: "list-comparer",
+    language: "ru",
+  },
+  {
+    slug: "list-comparer",
+    language: "sv",
+  },
+  {
+    slug: "list-comparer",
+    language: "th",
+  },
+  {
+    slug: "list-comparer",
+    language: "tr",
+  },
+  {
+    slug: "list-comparer",
+    language: "vi",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-CN",
+  },
+  {
+    slug: "list-comparer",
+    language: "zh-TW",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ar",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "de",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "en",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "es",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "fr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "he",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "hi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "id",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "it",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ja",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ko",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ms",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "nl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "no",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pl",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "pt",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "ru",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "sv",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "th",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "tr",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "vi",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "de",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "en",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "es",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "he",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "id",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "it",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "no",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "th",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "md4-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "md5-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ar",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "de",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "en",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "es",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "fr",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "he",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "hi",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "id",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "it",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ja",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ko",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ms",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "nl",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "no",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "pl",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "pt",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "ru",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "sv",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "th",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "tr",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "vi",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "mime-type-lookup",
+    language: "zh-TW",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ar",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "de",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "en",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "es",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "fr",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "he",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "hi",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "id",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "it",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ja",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ko",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ms",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "nl",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "no",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "pl",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "pt",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "ru",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "sv",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "th",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "tr",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "vi",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "morse-code-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ar",
+  },
+  {
+    slug: "my-ip-address",
+    language: "de",
+  },
+  {
+    slug: "my-ip-address",
+    language: "en",
+  },
+  {
+    slug: "my-ip-address",
+    language: "es",
+  },
+  {
+    slug: "my-ip-address",
+    language: "fr",
+  },
+  {
+    slug: "my-ip-address",
+    language: "he",
+  },
+  {
+    slug: "my-ip-address",
+    language: "hi",
+  },
+  {
+    slug: "my-ip-address",
+    language: "id",
+  },
+  {
+    slug: "my-ip-address",
+    language: "it",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ja",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ko",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ms",
+  },
+  {
+    slug: "my-ip-address",
+    language: "nl",
+  },
+  {
+    slug: "my-ip-address",
+    language: "no",
+  },
+  {
+    slug: "my-ip-address",
+    language: "pl",
+  },
+  {
+    slug: "my-ip-address",
+    language: "pt",
+  },
+  {
+    slug: "my-ip-address",
+    language: "ru",
+  },
+  {
+    slug: "my-ip-address",
+    language: "sv",
+  },
+  {
+    slug: "my-ip-address",
+    language: "th",
+  },
+  {
+    slug: "my-ip-address",
+    language: "tr",
+  },
+  {
+    slug: "my-ip-address",
+    language: "vi",
+  },
+  {
+    slug: "my-ip-address",
+    language: "zh-CN",
+  },
+  {
+    slug: "my-ip-address",
+    language: "zh-TW",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ar",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "de",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "en",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "es",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "fr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "he",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "hi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "id",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "it",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ja",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ko",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ms",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "nl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "no",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pl",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "pt",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "ru",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "sv",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "th",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "tr",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "vi",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "nanoid-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ar",
+  },
+  {
+    slug: "number-base-converter",
+    language: "de",
+  },
+  {
+    slug: "number-base-converter",
+    language: "en",
+  },
+  {
+    slug: "number-base-converter",
+    language: "es",
+  },
+  {
+    slug: "number-base-converter",
+    language: "fr",
+  },
+  {
+    slug: "number-base-converter",
+    language: "he",
+  },
+  {
+    slug: "number-base-converter",
+    language: "hi",
+  },
+  {
+    slug: "number-base-converter",
+    language: "id",
+  },
+  {
+    slug: "number-base-converter",
+    language: "it",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ja",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ko",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ms",
+  },
+  {
+    slug: "number-base-converter",
+    language: "nl",
+  },
+  {
+    slug: "number-base-converter",
+    language: "no",
+  },
+  {
+    slug: "number-base-converter",
+    language: "pl",
+  },
+  {
+    slug: "number-base-converter",
+    language: "pt",
+  },
+  {
+    slug: "number-base-converter",
+    language: "ru",
+  },
+  {
+    slug: "number-base-converter",
+    language: "sv",
+  },
+  {
+    slug: "number-base-converter",
+    language: "th",
+  },
+  {
+    slug: "number-base-converter",
+    language: "tr",
+  },
+  {
+    slug: "number-base-converter",
+    language: "vi",
+  },
+  {
+    slug: "number-base-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "number-base-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "openapi-to-typescript-converter",
     language: "ar",
   },
@@ -1471,6 +6807,1386 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "openapi-to-typescript-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ar",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "de",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "en",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "es",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "fr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "he",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "hi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "id",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "it",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ja",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ko",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ms",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "nl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "no",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pl",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "pt",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "ru",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "sv",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "th",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "tr",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "vi",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "password-strength-checker",
+    language: "zh-TW",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ar",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "de",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "en",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "es",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "fr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "he",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "hi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "id",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "it",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ja",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ko",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ms",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "nl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "no",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pl",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "pt",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "ru",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "sv",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "th",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "tr",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "vi",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-CN",
+  },
+  {
+    slug: "pbkdf2-key-derivation",
+    language: "zh-TW",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ar",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "de",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "en",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "es",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "fr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "he",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "hi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "id",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "it",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ja",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ko",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ms",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "nl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "no",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pl",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "pt",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "ru",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "sv",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "th",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "tr",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "vi",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "placeholder-image-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ar",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "de",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "en",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "es",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "fr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "he",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "hi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "id",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "it",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ja",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ko",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ms",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "nl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "no",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pl",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "pt",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "ru",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "sv",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "th",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "tr",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "vi",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "port-number-lookup",
+    language: "zh-TW",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ar",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "de",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "en",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "es",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "fr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "he",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "hi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "id",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "it",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ja",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ko",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ms",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "nl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "no",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pl",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "pt",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "ru",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "sv",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "th",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "tr",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "vi",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "prc-id-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ar",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "de",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "en",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "es",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "fr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "he",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "hi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "id",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "it",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ja",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ko",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ms",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "nl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "no",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pl",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "pt",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "ru",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "sv",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "th",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "tr",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "vi",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-CN",
+  },
+  {
+    slug: "prettier-code-formatter",
+    language: "zh-TW",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-number-generator",
+    language: "de",
+  },
+  {
+    slug: "random-number-generator",
+    language: "en",
+  },
+  {
+    slug: "random-number-generator",
+    language: "es",
+  },
+  {
+    slug: "random-number-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "he",
+  },
+  {
+    slug: "random-number-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "id",
+  },
+  {
+    slug: "random-number-generator",
+    language: "it",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-number-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "no",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-number-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-number-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-number-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-number-generator",
+    language: "th",
+  },
+  {
+    slug: "random-number-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-number-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-number-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-number-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-password-generator",
+    language: "de",
+  },
+  {
+    slug: "random-password-generator",
+    language: "en",
+  },
+  {
+    slug: "random-password-generator",
+    language: "es",
+  },
+  {
+    slug: "random-password-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "he",
+  },
+  {
+    slug: "random-password-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "id",
+  },
+  {
+    slug: "random-password-generator",
+    language: "it",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-password-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "no",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-password-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-password-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-password-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-password-generator",
+    language: "th",
+  },
+  {
+    slug: "random-password-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-password-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-password-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ar",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "de",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "en",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "es",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "fr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "he",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "hi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "id",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "it",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ja",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ko",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ms",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "nl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "no",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pl",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "pt",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "ru",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "sv",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "th",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "tr",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "vi",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-CN",
+  },
+  {
+    slug: "regex-tester-replacer",
+    language: "zh-TW",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd160-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ar",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "de",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "en",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "es",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "fr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "he",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "hi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "id",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "it",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ja",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ko",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ms",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "nl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "no",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pl",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "pt",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "ru",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "sv",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "th",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "tr",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "vi",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "roman-numeral-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ar",
+  },
+  {
+    slug: "rot-cipher",
+    language: "de",
+  },
+  {
+    slug: "rot-cipher",
+    language: "en",
+  },
+  {
+    slug: "rot-cipher",
+    language: "es",
+  },
+  {
+    slug: "rot-cipher",
+    language: "fr",
+  },
+  {
+    slug: "rot-cipher",
+    language: "he",
+  },
+  {
+    slug: "rot-cipher",
+    language: "hi",
+  },
+  {
+    slug: "rot-cipher",
+    language: "id",
+  },
+  {
+    slug: "rot-cipher",
+    language: "it",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ja",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ko",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ms",
+  },
+  {
+    slug: "rot-cipher",
+    language: "nl",
+  },
+  {
+    slug: "rot-cipher",
+    language: "no",
+  },
+  {
+    slug: "rot-cipher",
+    language: "pl",
+  },
+  {
+    slug: "rot-cipher",
+    language: "pt",
+  },
+  {
+    slug: "rot-cipher",
+    language: "ru",
+  },
+  {
+    slug: "rot-cipher",
+    language: "sv",
+  },
+  {
+    slug: "rot-cipher",
+    language: "th",
+  },
+  {
+    slug: "rot-cipher",
+    language: "tr",
+  },
+  {
+    slug: "rot-cipher",
+    language: "vi",
+  },
+  {
+    slug: "rot-cipher",
+    language: "zh-CN",
+  },
+  {
+    slug: "rot-cipher",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha1-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha224-hash-text-or-file",
     language: "zh-TW",
   },
   {
@@ -1566,6 +8282,1110 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-224-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-384-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha3-512-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha384-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-224-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sha512-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "shake128-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "slug-generator",
+    language: "ar",
+  },
+  {
+    slug: "slug-generator",
+    language: "de",
+  },
+  {
+    slug: "slug-generator",
+    language: "en",
+  },
+  {
+    slug: "slug-generator",
+    language: "es",
+  },
+  {
+    slug: "slug-generator",
+    language: "fr",
+  },
+  {
+    slug: "slug-generator",
+    language: "he",
+  },
+  {
+    slug: "slug-generator",
+    language: "hi",
+  },
+  {
+    slug: "slug-generator",
+    language: "id",
+  },
+  {
+    slug: "slug-generator",
+    language: "it",
+  },
+  {
+    slug: "slug-generator",
+    language: "ja",
+  },
+  {
+    slug: "slug-generator",
+    language: "ko",
+  },
+  {
+    slug: "slug-generator",
+    language: "ms",
+  },
+  {
+    slug: "slug-generator",
+    language: "nl",
+  },
+  {
+    slug: "slug-generator",
+    language: "no",
+  },
+  {
+    slug: "slug-generator",
+    language: "pl",
+  },
+  {
+    slug: "slug-generator",
+    language: "pt",
+  },
+  {
+    slug: "slug-generator",
+    language: "ru",
+  },
+  {
+    slug: "slug-generator",
+    language: "sv",
+  },
+  {
+    slug: "slug-generator",
+    language: "th",
+  },
+  {
+    slug: "slug-generator",
+    language: "tr",
+  },
+  {
+    slug: "slug-generator",
+    language: "vi",
+  },
+  {
+    slug: "slug-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "slug-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },
@@ -1655,6 +9475,650 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sql-formatter-and-linter",
+    language: "zh-TW",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ar",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "de",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "en",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "es",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "fr",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "he",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "hi",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "id",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "it",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ja",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ko",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ms",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "nl",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "no",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "pl",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "pt",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "ru",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "sv",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "th",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "tr",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "vi",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "sri-hash-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "stopwatch",
+    language: "ar",
+  },
+  {
+    slug: "stopwatch",
+    language: "de",
+  },
+  {
+    slug: "stopwatch",
+    language: "en",
+  },
+  {
+    slug: "stopwatch",
+    language: "es",
+  },
+  {
+    slug: "stopwatch",
+    language: "fr",
+  },
+  {
+    slug: "stopwatch",
+    language: "he",
+  },
+  {
+    slug: "stopwatch",
+    language: "hi",
+  },
+  {
+    slug: "stopwatch",
+    language: "id",
+  },
+  {
+    slug: "stopwatch",
+    language: "it",
+  },
+  {
+    slug: "stopwatch",
+    language: "ja",
+  },
+  {
+    slug: "stopwatch",
+    language: "ko",
+  },
+  {
+    slug: "stopwatch",
+    language: "ms",
+  },
+  {
+    slug: "stopwatch",
+    language: "nl",
+  },
+  {
+    slug: "stopwatch",
+    language: "no",
+  },
+  {
+    slug: "stopwatch",
+    language: "pl",
+  },
+  {
+    slug: "stopwatch",
+    language: "pt",
+  },
+  {
+    slug: "stopwatch",
+    language: "ru",
+  },
+  {
+    slug: "stopwatch",
+    language: "sv",
+  },
+  {
+    slug: "stopwatch",
+    language: "th",
+  },
+  {
+    slug: "stopwatch",
+    language: "tr",
+  },
+  {
+    slug: "stopwatch",
+    language: "vi",
+  },
+  {
+    slug: "stopwatch",
+    language: "zh-CN",
+  },
+  {
+    slug: "stopwatch",
+    language: "zh-TW",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-image-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "text-statistics",
+    language: "ar",
+  },
+  {
+    slug: "text-statistics",
+    language: "de",
+  },
+  {
+    slug: "text-statistics",
+    language: "en",
+  },
+  {
+    slug: "text-statistics",
+    language: "es",
+  },
+  {
+    slug: "text-statistics",
+    language: "fr",
+  },
+  {
+    slug: "text-statistics",
+    language: "he",
+  },
+  {
+    slug: "text-statistics",
+    language: "hi",
+  },
+  {
+    slug: "text-statistics",
+    language: "id",
+  },
+  {
+    slug: "text-statistics",
+    language: "it",
+  },
+  {
+    slug: "text-statistics",
+    language: "ja",
+  },
+  {
+    slug: "text-statistics",
+    language: "ko",
+  },
+  {
+    slug: "text-statistics",
+    language: "ms",
+  },
+  {
+    slug: "text-statistics",
+    language: "nl",
+  },
+  {
+    slug: "text-statistics",
+    language: "no",
+  },
+  {
+    slug: "text-statistics",
+    language: "pl",
+  },
+  {
+    slug: "text-statistics",
+    language: "pt",
+  },
+  {
+    slug: "text-statistics",
+    language: "ru",
+  },
+  {
+    slug: "text-statistics",
+    language: "sv",
+  },
+  {
+    slug: "text-statistics",
+    language: "th",
+  },
+  {
+    slug: "text-statistics",
+    language: "tr",
+  },
+  {
+    slug: "text-statistics",
+    language: "vi",
+  },
+  {
+    slug: "text-statistics",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-statistics",
+    language: "zh-TW",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ar",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "de",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "en",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "es",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "fr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "he",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "hi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "id",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "it",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ja",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ko",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ms",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "nl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "no",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pl",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "pt",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "ru",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "sv",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "th",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "tr",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "vi",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-diff-calculator",
+    language: "zh-TW",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ar",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "de",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "en",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "es",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "fr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "he",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "hi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "id",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "it",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ja",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ko",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ms",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "nl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "no",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pl",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "pt",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "ru",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "sv",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "th",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "tr",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "vi",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "time-zone-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "timer",
+    language: "ar",
+  },
+  {
+    slug: "timer",
+    language: "de",
+  },
+  {
+    slug: "timer",
+    language: "en",
+  },
+  {
+    slug: "timer",
+    language: "es",
+  },
+  {
+    slug: "timer",
+    language: "fr",
+  },
+  {
+    slug: "timer",
+    language: "he",
+  },
+  {
+    slug: "timer",
+    language: "hi",
+  },
+  {
+    slug: "timer",
+    language: "id",
+  },
+  {
+    slug: "timer",
+    language: "it",
+  },
+  {
+    slug: "timer",
+    language: "ja",
+  },
+  {
+    slug: "timer",
+    language: "ko",
+  },
+  {
+    slug: "timer",
+    language: "ms",
+  },
+  {
+    slug: "timer",
+    language: "nl",
+  },
+  {
+    slug: "timer",
+    language: "no",
+  },
+  {
+    slug: "timer",
+    language: "pl",
+  },
+  {
+    slug: "timer",
+    language: "pt",
+  },
+  {
+    slug: "timer",
+    language: "ru",
+  },
+  {
+    slug: "timer",
+    language: "sv",
+  },
+  {
+    slug: "timer",
+    language: "th",
+  },
+  {
+    slug: "timer",
+    language: "tr",
+  },
+  {
+    slug: "timer",
+    language: "vi",
+  },
+  {
+    slug: "timer",
+    language: "zh-CN",
+  },
+  {
+    slug: "timer",
     language: "zh-TW",
   },
   {
@@ -1842,6 +10306,374 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-escape-unescape",
+    language: "ar",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "de",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "en",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "es",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "fr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "he",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "hi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "id",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "it",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ja",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ko",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ms",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "nl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "no",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pl",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "pt",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "ru",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "sv",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "th",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "tr",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "vi",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-escape-unescape",
+    language: "zh-TW",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ar",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "de",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "en",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "es",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "fr",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "he",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "hi",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "id",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "it",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ja",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ko",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ms",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "nl",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "no",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "pl",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "pt",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "ru",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "sv",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "th",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "tr",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "vi",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-invisible-character-checker",
+    language: "zh-TW",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ar",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "de",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "en",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "es",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "fr",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "he",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "hi",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "id",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "it",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ja",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ko",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ms",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "nl",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "no",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "pl",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "pt",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "ru",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "sv",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "th",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "tr",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "vi",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-punycode-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ar",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "de",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "en",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "es",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "fr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "he",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "hi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "id",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "it",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ja",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ko",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ms",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "nl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "no",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pl",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "pt",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "ru",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "sv",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "th",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "tr",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "vi",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unix-timestamp-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "url-component-encoder-decoder",
     language: "ar",
   },
@@ -1934,6 +10766,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "user-agent-parser",
+    language: "ar",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "de",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "en",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "es",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "fr",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "he",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "hi",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "id",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "it",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ja",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ko",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ms",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "nl",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "no",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "pl",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "pt",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "ru",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "sv",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "th",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "tr",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "vi",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "user-agent-parser",
+    language: "zh-TW",
+  },
+  {
+    slug: "vin-validator",
+    language: "ar",
+  },
+  {
+    slug: "vin-validator",
+    language: "de",
+  },
+  {
+    slug: "vin-validator",
+    language: "en",
+  },
+  {
+    slug: "vin-validator",
+    language: "es",
+  },
+  {
+    slug: "vin-validator",
+    language: "fr",
+  },
+  {
+    slug: "vin-validator",
+    language: "he",
+  },
+  {
+    slug: "vin-validator",
+    language: "hi",
+  },
+  {
+    slug: "vin-validator",
+    language: "id",
+  },
+  {
+    slug: "vin-validator",
+    language: "it",
+  },
+  {
+    slug: "vin-validator",
+    language: "ja",
+  },
+  {
+    slug: "vin-validator",
+    language: "ko",
+  },
+  {
+    slug: "vin-validator",
+    language: "ms",
+  },
+  {
+    slug: "vin-validator",
+    language: "nl",
+  },
+  {
+    slug: "vin-validator",
+    language: "no",
+  },
+  {
+    slug: "vin-validator",
+    language: "pl",
+  },
+  {
+    slug: "vin-validator",
+    language: "pt",
+  },
+  {
+    slug: "vin-validator",
+    language: "ru",
+  },
+  {
+    slug: "vin-validator",
+    language: "sv",
+  },
+  {
+    slug: "vin-validator",
+    language: "th",
+  },
+  {
+    slug: "vin-validator",
+    language: "tr",
+  },
+  {
+    slug: "vin-validator",
+    language: "vi",
+  },
+  {
+    slug: "vin-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vin-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },
@@ -2023,6 +11131,374 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "xml-to-json-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
     language: "zh-TW",
   },
   {

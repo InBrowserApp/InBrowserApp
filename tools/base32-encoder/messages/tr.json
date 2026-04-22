@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Giriş",
+  "inputPlaceholder": "Kodlanacak metni girin...",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "encodedOutputLabel": "Base32 Kodlanmış",
+  "encodedOutputEmptyDescription": "Base32 çıktısı burada görünecek...",
+  "downloadFileLabel": "Base32 İndir",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "fileReadFailedTitle": "Dosya okunamadı"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Validador de ID de residente da RPC",
+  "description": "Valida IDs de residente da RPC e decodifica região, data de nascimento e checksum"
+}

@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "選項",
+  "optionsDescription": "設定每批要產生多少個識別碼，以及每個 CUID2 的長度。",
+  "countLabel": "數量",
+  "lengthLabel": "長度",
+  "resultsTitle": "結果",
+  "resultsDescription": "每一批結果都會在瀏覽器本地產生，你可以直接檢視、複製或下載，不需要把識別碼送到其他服務。",
+  "resultsPlaceholder": "產生的 CUID2 識別碼會顯示在這裡...",
+  "copyResultsLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "downloadResultsLabel": "下載",
+  "regenerateLabel": "重新產生"
+}

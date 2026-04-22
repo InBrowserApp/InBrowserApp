@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR-Normalisierer",
+  "description": "Normalisiert IP-Adressen und CIDR-Notation für IPv4- und IPv6-Formate. Geben Sie eine beliebige IP oder einen CIDR-Bereich ein, um das standardisierte Format sofort zu erhalten."
+}

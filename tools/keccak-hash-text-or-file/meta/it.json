@@ -1,0 +1,4 @@
+{
+  "name": "Hash Keccak di Testo o File",
+  "description": "Genera hash Keccak per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza"
+}

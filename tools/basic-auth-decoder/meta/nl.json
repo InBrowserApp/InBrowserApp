@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth-decoder",
+  "description": "Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests"
+}

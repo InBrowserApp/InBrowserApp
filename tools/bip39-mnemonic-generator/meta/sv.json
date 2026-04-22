@@ -1,0 +1,4 @@
+{
+  "name": "BIP39-mnemonicgenerator",
+  "description": "Generera, validera och konvertera BIP39-mnemonics i webbläsaren."
+}

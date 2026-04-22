@@ -1,0 +1,4 @@
+{
+  "name": "Walidator IMEI",
+  "description": "Sprawdza 15-cyfrowy IMEI pod kątem formatu i sumy kontrolnej Luhna."
+}

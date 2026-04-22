@@ -1,0 +1,4 @@
+{
+  "name": "Unicode osynliga tecken-kontroll",
+  "description": "Upptäcker nollbredds-, bidi-kontroll- och specialblankstegstecken och exporterar en rensad version."
+}

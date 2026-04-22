@@ -1,0 +1,22 @@
+{
+  "converterTitle": "Arabiska ↔ Romerska Konverterare",
+  "converterDescription": "Bidirektionell konverterare mellan romerska och arabiska siffror. Stöder standard romerska siffror från 1 till 3999 (I till MMMCMXCIX).",
+  "arabicNumber": "Arabisk Siffra (1-3999)",
+  "arabicPlaceholder": "Ange arabisk siffra...",
+  "romanNumeral": "Romersk Siffra",
+  "romanPlaceholder": "Ange romersk siffra...",
+  "invalidRomanNumeral": "Ange en giltig romersk siffra",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

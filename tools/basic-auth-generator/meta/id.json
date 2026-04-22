@@ -1,0 +1,4 @@
+{
+  "name": "Generator Basic Auth",
+  "description": "Hasilkan header HTTP Basic Authorization dengan mengenkode nama pengguna dan kata sandi sebagai Base64. Buat kredensial dengan cepat untuk pengujian dan pengembangan API"
+}

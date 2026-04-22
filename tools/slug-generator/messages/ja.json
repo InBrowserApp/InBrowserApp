@@ -1,0 +1,16 @@
+{
+  "inputLabel": "入力テキスト",
+  "inputPlaceholder": "slugに変換するテキストを入力...",
+  "outputLabel": "生成されたSlug",
+  "outputPlaceholder": "Slugがここに表示されます...",
+  "separatorLabel": "区切り文字",
+  "hyphenLabel": "ハイフン",
+  "underscoreLabel": "アンダースコア",
+  "dotLabel": "ドット",
+  "caseLabel": "大文字/小文字",
+  "lowercaseLabel": "小文字",
+  "preserveLabel": "維持",
+  "copyLabel": "slugをコピー",
+  "copiedLabel": "コピーしました",
+  "clearLabel": "クリア"
+}

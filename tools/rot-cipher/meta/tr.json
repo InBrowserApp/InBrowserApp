@@ -1,0 +1,4 @@
+{
+  "name": "ROT Şifre Şifreleme & Şifre Çözme",
+  "description": "ROT13, ROT5, ROT18 ve ROT47 şifre algoritmaları kullanarak metni şifreleyin ve şifresini çözün. Harfler, rakamlar ve ASCII karakterler için kendinden tersine çevrilebilir şifreleme"
+}

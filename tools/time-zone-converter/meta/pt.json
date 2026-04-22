@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de fuso horário",
+  "description": "Converte data e hora entre fusos horários com suporte ao horário de verão. Compare offsets e copie formatos ISO/UTC."
+}

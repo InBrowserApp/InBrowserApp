@@ -1,0 +1,14 @@
+{
+  "file": "Plik",
+  "dragOrClick": "Kliknij lub przeciągnij, aby przesłać plik",
+  "clearFile": "Wyczyść plik",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Wygenerowany Data URI pojawi się tutaj...",
+  "onlyOneFile": "Można przesłać tylko jeden plik",
+  "readFailed": "Nie udało się odczytać pliku",
+  "unknownType": "Nieznany typ",
+  "fileSize": "Rozmiar pliku",
+  "mimeType": "Typ MIME",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

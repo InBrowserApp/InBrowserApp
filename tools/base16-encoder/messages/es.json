@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Entrada",
+  "inputPlaceholder": "Introduce texto para codificar...",
+  "plainTextLabel": "Texto plano",
+  "plainTextDescription": "Pega o escribe cualquier texto UTF-8, incluyendo emojis y caracteres no latinos.",
+  "importFromFileLabel": "Importar desde archivo",
+  "encodedOutputLabel": "Codificado Hex",
+  "encodedOutputEmptyDescription": "La salida Hex aparecerá aquí...",
+  "downloadFileLabel": "Descargar Hex",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "fileReadFailedTitle": "No se pudo leer el archivo"
+}

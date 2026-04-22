@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "选项",
+  "alphabetLabel": "字母表",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Base58 输入",
+  "inputPlaceholder": "输入 Base58 文本...",
+  "importFromFileLabel": "从文件导入",
+  "decodedOutputTitle": "解码结果",
+  "decodedOutputEmptyDescription": "解码后的文本将显示在这里...",
+  "downloadFileLabel": "下载文件",
+  "previewTruncatedLabel": "预览已截断",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例",
+  "invalidBase58Title": "无效的 Base58 文本",
+  "fileReadFailedTitle": "读取文件失败"
+}

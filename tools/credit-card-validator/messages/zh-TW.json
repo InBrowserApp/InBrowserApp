@@ -1,0 +1,22 @@
+{
+  "cardNumber": "信用卡號",
+  "placeholder": "輸入信用卡號",
+  "valid": "有效的卡號",
+  "invalid": "無效的卡號",
+  "invalidLuhn": "校驗碼無效 (Luhn 演算法失敗)",
+  "invalidLength": "卡號長度無效",
+  "result": "驗證結果",
+  "brand": "卡品牌",
+  "unknown": "未知",
+  "formattedNumber": "格式化卡號",
+  "luhnCheck": "Luhn 校驗",
+  "lengthCheck": "長度校驗",
+  "digits": "總位數",
+  "cvcLength": "CVC 長度",
+  "digitsLabel": "位",
+  "pass": "通過",
+  "fail": "失敗",
+  "expectedLength": "期望: {lengths}",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製"
+}

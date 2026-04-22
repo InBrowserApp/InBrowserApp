@@ -1,0 +1,22 @@
+{
+  "inputLabel": "輸入文字",
+  "inputDescription": "輸入一個單字或片語，將其轉換為 ASCII art。",
+  "inputPlaceholder": "輸入要轉換的文字……",
+  "loadSample": "載入範例",
+  "clearText": "清空文字",
+  "fontLabel": "字型",
+  "fontDescription": "選擇一種 FIGlet 字型樣式作為輸出。",
+  "optionsLabel": "版面選項",
+  "optionsDescription": "在匯出前調整對齊方式與橫幅寬度。",
+  "alignLabel": "對齊方式",
+  "widthLabel": "寬度",
+  "widthHint": "會限制在 40 到 160 欄之間。",
+  "leftAlign": "靠左",
+  "centerAlign": "置中",
+  "rightAlign": "靠右",
+  "outputLabel": "ASCII 藝術輸出",
+  "outputPlaceholder": "ASCII 藝術將顯示在此……",
+  "downloadLabel": "下載 .txt",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

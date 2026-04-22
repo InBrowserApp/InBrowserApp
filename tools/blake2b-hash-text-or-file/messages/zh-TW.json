@@ -1,0 +1,20 @@
+{
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入的雜湊結果。",
+  "hexLabel": "十六進制",
+  "base64Label": "Base64",
+  "decimalLabel": "十進制",
+  "binaryLabel": "二進制",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "configurationLabel": "BLAKE2b 設定",
+  "outputLengthLabel": "輸出長度",
+  "keyLabel": "BLAKE2 金鑰（Base64）",
+  "keyPlaceholder": "可選的金鑰雜湊金鑰（Base64 編碼）",
+  "invalidBase64Title": "這個 Base64 值目前無效。",
+  "invalidBase64Description": "請檢查是否缺少填充字元、含有非預期字元，或資料只貼上了一部分。"
+}

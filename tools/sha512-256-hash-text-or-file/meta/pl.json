@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA-512/256 (FIPS 180-4) tekstu lub pliku",
+  "description": "Generuj hash SHA-512/256 (FIPS 180-4) dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

@@ -1,0 +1,4 @@
+{
+  "description": "将 IPv4 或 IPv6 起始地址和结束地址转换为精确覆盖范围的最小 CIDR 块集。",
+  "name": "IP 范围到 CIDR 转换器"
+}

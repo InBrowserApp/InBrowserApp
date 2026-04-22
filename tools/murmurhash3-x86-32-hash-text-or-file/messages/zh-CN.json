@@ -1,0 +1,18 @@
+{
+  "inputLabel": "\u8f93\u5165",
+  "plainTextLabel": "\u7eaf\u6587\u672c",
+  "plainTextDescription": "\u53ef\u7c98\u8d34\u6216\u8f93\u5165\u4efb\u610f UTF-8 \u6587\u672c\uff0c\u5305\u62ec emoji \u548c\u975e\u62c9\u4e01\u5b57\u7b26\u3002",
+  "importFromFileLabel": "\u4ece\u6587\u4ef6\u5bfc\u5165",
+  "hashResultLabel": "\u54c8\u5e0c\u7ed3\u679c",
+  "hashResultDescription": "\u5f53\u524d\u6587\u672c\u8f93\u5165\u7684\u54c8\u5e0c\u7ed3\u679c\u3002",
+  "hexLabel": "\u5341\u516d\u8fdb\u5236",
+  "base64Label": "Base64",
+  "decimalLabel": "\u5341\u8fdb\u5236",
+  "binaryLabel": "\u4e8c\u8fdb\u5236",
+  "copyResultLabel": "\u590d\u5236\u7ed3\u679c",
+  "copiedLabel": "\u5df2\u590d\u5236",
+  "seedSectionLabel": "\u79cd\u5b50",
+  "seedLabel": "\u79cd\u5b50\uff08\u53ef\u9009\uff09",
+  "seedPlaceholder": "0 \u6216 0x...",
+  "seedInvalid": "\u8bf7\u8f93\u5165\u5341\u8fdb\u5236\u6570\u5b57\u6216 0x \u5341\u516d\u8fdb\u5236\u6570\u3002"
+}

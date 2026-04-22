@@ -1,0 +1,4 @@
+{
+  "name": "Czyściciel metadanych obrazu (EXIF)",
+  "description": "Usuwa metadane EXIF/XMP/IPTC/ICC z obrazów bez ponownego kodowania. Zachowuje oryginalny format i działa offline."
+}

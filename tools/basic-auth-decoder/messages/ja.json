@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization ヘッダー",
+  "authorizationHeaderDescription": "次のように貼り付け: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "次のように貼り付け: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "デコード結果",
+  "decodedCredentialsDescription": "HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに有用",
+  "usernameLabel": "ユーザー名",
+  "passwordLabel": "パスワード",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "resetLabel": "例をリセット",
+  "invalidHeaderTitle": "無効な Basic Authorization ヘッダー",
+  "invalidBase64Title": "無効な Base64 コンテンツ"
+}

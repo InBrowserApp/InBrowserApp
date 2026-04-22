@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Wej\u015bcie",
+  "plainTextLabel": "Zwyk\u0142y tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki nie\u0142aci\u0144skie.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik Hash",
+  "hashResultDescription": "Wynik haszowania dla bie\u017c\u0105cego tekstu wej\u015bciowego.",
+  "hexLabel": "Szesnastkowy",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesi\u0119tny",
+  "binaryLabel": "Binarny",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (opcjonalnie)",
+  "seedPlaceholder": "0 lub 0x...",
+  "seedInvalid": "Wprowad\u017a liczb\u0119 dziesi\u0119tn\u0105 lub warto\u015b\u0107 szesnastkow\u0105 z 0x."
+}

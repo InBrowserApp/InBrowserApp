@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth Generator",
+  "description": "Generate HTTP Basic Authorization header by encoding username and password as Base64. Quickly create credentials for API testing and development"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore di somma/sottrazione della durata",
+  "description": "Aggiungi o sottrai durate ISO 8601 da un'ora base in qualsiasi fuso orario, con precisione al millisecondo."
+}

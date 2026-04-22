@@ -1,0 +1,4 @@
+{
+  "name": "Конвертер регистра",
+  "description": "Преобразуйте текст между различными соглашениями об именовании: camelCase, PascalCase, snake_case, kebab-case и другими."
+}

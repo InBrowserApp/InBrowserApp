@@ -1,0 +1,22 @@
+{
+  "cardNumber": "Número do Cartão de Crédito",
+  "placeholder": "Digite o número do cartão de crédito",
+  "valid": "Número do cartão válido",
+  "invalid": "Número do cartão inválido",
+  "invalidLuhn": "Checksum inválido (algoritmo de Luhn falhou)",
+  "invalidLength": "Comprimento do número do cartão inválido",
+  "result": "Resultado da Validação",
+  "brand": "Bandeira do Cartão",
+  "unknown": "Desconhecido",
+  "formattedNumber": "Número Formatado",
+  "luhnCheck": "Verificação Luhn",
+  "lengthCheck": "Verificação de Comprimento",
+  "digits": "Total de Dígitos",
+  "cvcLength": "Comprimento CVC",
+  "digitsLabel": "dígitos",
+  "pass": "Aprovado",
+  "fail": "Reprovado",
+  "expectedLength": "esperado: {lengths}",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado"
+}

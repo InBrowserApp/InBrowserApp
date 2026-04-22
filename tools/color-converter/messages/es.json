@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Colores",
+  "resultsTitle": "Resultados",
+  "previewTitle": "Vista previa",
+  "enableAlphaLabel": "Habilitar Alfa",
+  "invalidColorMessage": "Formato de color no válido",
+  "copyValueLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "keywordLabel": "Palabra clave CSS",
+  "hexInfo": "Notación hexadecimal, la más común en desarrollo web",
+  "rgbInfo": "Rojo, Verde, Azul - modelo de color aditivo para pantallas",
+  "hslInfo": "Tono, Saturación, Luminosidad - ajustes de color intuitivos",
+  "hsvInfo": "Tono, Saturación, Valor - también conocido como HSB, común en selectores de color",
+  "hwbInfo": "Tono, Blancura, Negrura - formato CSS4, sin soporte alfa",
+  "labInfo": "CIE LAB - espacio de color perceptualmente uniforme, sin alfa",
+  "lchInfo": "Luminosidad, Croma, Tono - LAB cilíndrico, ajuste de tono más fácil, sin alfa",
+  "cmykInfo": "Cian, Magenta, Amarillo, Negro - estándar de impresión, sin alfa",
+  "keywordInfo": "Colores CSS nombrados como red, blue, coral - 140+ colores predefinidos, sin alfa"
+}

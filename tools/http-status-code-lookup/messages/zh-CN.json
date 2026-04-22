@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "按状态码、名称或描述搜索...",
+  "all": "全部",
+  "common": "常用",
+  "informationalFilter": "信息性 (1xx)",
+  "successFilter": "成功 (2xx)",
+  "redirectionFilter": "重定向 (3xx)",
+  "clientErrorFilter": "客户端错误 (4xx)",
+  "serverErrorFilter": "服务器错误 (5xx)",
+  "code": "代码",
+  "name": "名称",
+  "category": "分类",
+  "description": "描述",
+  "informational": "信息性",
+  "success": "成功",
+  "redirection": "重定向",
+  "clientError": "客户端错误",
+  "serverError": "服务器错误",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

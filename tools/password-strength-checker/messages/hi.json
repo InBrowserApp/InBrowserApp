@@ -1,0 +1,49 @@
+{
+  "inputTitle": "पासवर्ड",
+  "resultTitle": "मजबूती सारांश",
+  "passwordLabel": "पासवर्ड",
+  "passwordPlaceholder": "मूल्यांकन के लिए पासवर्ड दर्ज करें",
+  "show": "दिखाएँ",
+  "hide": "छिपाएँ",
+  "privacyHint": "जांच आपके ब्राउज़र में स्थानीय रूप से होती है।",
+  "empty": "मजबूती जाँचने के लिए पासवर्ड दर्ज करें।",
+  "entropyBits": "एंट्रॉपी: {bits} बिट",
+  "log10Guesses": "अनुमान (log10): {value}",
+  "strength0": "बहुत कमजोर",
+  "strength1": "कमजोर",
+  "strength2": "ठीक-ठाक",
+  "strength3": "मजबूत",
+  "strength4": "बहुत मजबूत",
+  "length": "लंबाई",
+  "unique": "अद्वितीय अक्षर",
+  "characterSets": "करेक्टर सेट",
+  "crackOffline": "क्रैक समय (ऑफलाइन 1e10/से)",
+  "crackOnline": "क्रैक समय (ऑनलाइन 100/से)",
+  "durationFormat": "लगभग {value} {unit}",
+  "durationUnderSecond": "1 सेकंड से कम",
+  "unit": {
+    "seconds": "सेकंड",
+    "minutes": "मिनट",
+    "hours": "घंटे",
+    "days": "दिन",
+    "months": "महीने",
+    "years": "वर्ष"
+  },
+  "warning": {
+    "common": "यह बहुत आम पासवर्ड है।",
+    "short": "पासवर्ड बहुत छोटा है।",
+    "sequence": "क्रम आसान होते हैं।",
+    "repeat": "दोहराव पैटर्न मजबूती घटाते हैं।",
+    "singleClass": "केवल एक प्रकार के अक्षर इस्तेमाल करने से मजबूती घटती है।"
+  },
+  "suggestion": {
+    "use-longer": "लंबा पासवर्ड या पासफ्रेज़ इस्तेमाल करें।",
+    "add-uppercase": "बड़े अक्षर जोड़ें।",
+    "add-lowercase": "छोटे अक्षर जोड़ें।",
+    "add-numbers": "संख्याएँ जोड़ें।",
+    "add-symbols": "चिह्न जोड़ें।",
+    "avoid-common": "आम या लीक हुए पासवर्ड से बचें।",
+    "avoid-sequences": "123 या abc जैसे क्रम से बचें।",
+    "avoid-repetition": "दोहराव पैटर्न से बचें।"
+  }
+}

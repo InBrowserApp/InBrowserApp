@@ -1,0 +1,4 @@
+{
+  "name": "Hash RIPEMD-256 văn bản hoặc tệp",
+  "description": "Tạo hash RIPEMD-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật"
+}

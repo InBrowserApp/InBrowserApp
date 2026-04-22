@@ -1,0 +1,4 @@
+{
+  "name": "BIC/SWIFT 検証",
+  "description": "BIC/SWIFT コードを検証し、銀行・国・支店情報を解析します。"
+}

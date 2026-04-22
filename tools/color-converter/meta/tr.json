@@ -1,0 +1,4 @@
+{
+  "name": "Renk Dönüştürücü",
+  "description": "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ve CSS anahtar kelimeleri formatları arasında renkleri dönüştürün. Alfa kanal desteği ile gerçek zamanlı çift yönlü dönüşüm."
+}

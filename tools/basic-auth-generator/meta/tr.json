@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth Üretici",
+  "description": "Kullanıcı adı ve şifreyi Base64 olarak kodlayarak HTTP Basic Authorization başlığını oluşturun. API testi ve geliştirme için hızlıca kimlik bilgileri oluşturun"
+}

@@ -1,0 +1,12 @@
+{
+  "inputTitle": "إدخال IP أو CIDR",
+  "inputDescription": "أدخل عنوان IPv4 أو عنوان IPv6 أو كتلة CIDR واحدة لتطبيعه في تدوين الشبكة الأساسي.",
+  "resultTitle": "النتيجة المُطبَّعة",
+  "resultDescription": "العنوان الأساسي أو نطاق الشبكة. تتم إعادة كتابة إدخال CIDR إلى عنوان الشبكة مع مسح وحدات بت المضيف.",
+  "label": "IP/CIDR",
+  "placeholder": "على سبيل المثال 192.168.0.15/24 أو 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR غير صالح",
+  "invalidInputDescription": "استخدم عنوان IPv4 أو عنوان IPv6 أو نطاق CIDR صالحًا. يجب أن تتطابق أطوال البادئة مع عائلة العناوين.",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ"
+}

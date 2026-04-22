@@ -1,0 +1,4 @@
+{
+  "name": "Unicode 转义 / 反转义",
+  "description": "将 Unicode 字符转义和反转义为多种格式，包括 \\uXXXX、\\u{XXXXX}、HTML 实体、URL 编码和 U+XXXX 表示法"
+}

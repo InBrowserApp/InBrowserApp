@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "색상 이름 또는 HEX 값으로 검색...",
+  "all": "전체",
+  "red": "빨간색",
+  "orange": "주황색",
+  "yellow": "노란색",
+  "green": "초록색",
+  "cyan": "시안",
+  "blue": "파란색",
+  "purple": "보라색",
+  "pink": "분홍색",
+  "brown": "갈색",
+  "gray": "회색",
+  "white": "흰색",
+  "swatch": "색상",
+  "name": "이름",
+  "hex": "16진수",
+  "rgb": "RGB",
+  "resetLabel": "초기화",
+  "noResultsTitle": "일치하는 색상이 없습니다"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Lösenordsstyrke-kontroll",
+  "description": "Bedömer lösenordsstyrka med entropi-, sammansättnings- och mönsterkontroller samt tips för säkerhet."
+}

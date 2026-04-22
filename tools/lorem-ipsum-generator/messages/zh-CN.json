@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "选项",
+  "optionsDescription": "选择输出形式、内容语言和数量。",
+  "wordsLabel": "单词",
+  "sentencesLabel": "句子",
+  "paragraphsLabel": "段落",
+  "countLabel": "数量",
+  "localeLabel": "语言",
+  "resultsTitle": "结果",
+  "resultsDescription": "查看、复制或下载当前生成的内容。",
+  "resultsPlaceholder": "生成的文本将显示在这里...",
+  "copyResultsLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载",
+  "regenerateLabel": "重新生成"
+}

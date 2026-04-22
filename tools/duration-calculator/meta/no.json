@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator for legg til/trekk fra varighet",
+  "description": "Legg til eller trekk fra ISO 8601-varigheter fra en basistid i hvilken som helst tidssone, med millisekundpresisjon."
+}

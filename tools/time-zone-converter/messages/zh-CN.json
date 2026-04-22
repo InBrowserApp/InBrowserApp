@@ -1,0 +1,19 @@
+{
+  "fromLabel": "从",
+  "toLabel": "到",
+  "timeZoneLabel": "时区",
+  "dateTimeLabel": "日期与时间",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "格式：YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "现在",
+  "offsetLabel": "偏移",
+  "invalidDateTimeLabel": "无效的日期/时间",
+  "swapLabel": "交换",
+  "detailsLabel": "详情",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Unix 时间戳（毫秒）",
+  "unixSecondsLabel": "Unix 时间戳（秒）",
+  "copyLabel": "复制",
+  "copiedLabel": "已复制"
+}

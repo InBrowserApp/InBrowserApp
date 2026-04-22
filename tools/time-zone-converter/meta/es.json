@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de Zona Horaria",
+  "description": "Convierte fecha y hora entre zonas horarias con soporte de horario de verano. Compara desfases y copia formatos ISO/UTC."
+}

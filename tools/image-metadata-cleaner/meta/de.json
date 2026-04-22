@@ -1,0 +1,4 @@
+{
+  "name": "Bildmetadaten-Bereiniger (EXIF)",
+  "description": "Entfernt EXIF/XMP/IPTC/ICC-Metadaten aus Bildern ohne Neukodierung. Behält das Originalformat und funktioniert offline."
+}

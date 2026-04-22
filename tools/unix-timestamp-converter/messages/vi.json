@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Dấu Thời Gian Unix",
+  "timestampPlaceholder": "Nhập dấu thời gian Unix...",
+  "invalidTimestamp": "Dấu thời gian không hợp lệ",
+  "nowLabel": "Bây giờ",
+  "unitLabel": "Đơn vị",
+  "autoLabel": "Tự động",
+  "secondsLabel": "Giây",
+  "millisecondsLabel": "Mili giây",
+  "nanosecondsLabel": "Nano giây",
+  "detectedLabel": "Phát hiện",
+  "digitsLabel": "chữ số",
+  "dateTimeLabel": "Ngày và Giờ",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "Tương đối",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

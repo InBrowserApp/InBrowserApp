@@ -1,0 +1,4 @@
+{
+  "name": "VIN Validator",
+  "description": "Validate VINs with length, character, and check digit rules"
+}

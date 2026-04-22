@@ -1,0 +1,4 @@
+{
+  "name": "Derivasi Kunci PBKDF2",
+  "description": "Derivasi kunci daripada kata laluan dan salt dengan PBKDF2. Tetapkan iterasi, algoritma hash dan panjang output dengan hasil hex atau base64."
+}

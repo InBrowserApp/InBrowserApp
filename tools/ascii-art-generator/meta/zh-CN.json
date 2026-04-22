@@ -1,0 +1,4 @@
+{
+  "name": "ASCII 艺术字生成器",
+  "description": "使用多种 figlet 字体将文本转换为 ASCII 艺术字。输入单词或短语，选择字体，然后复制结果。"
+}

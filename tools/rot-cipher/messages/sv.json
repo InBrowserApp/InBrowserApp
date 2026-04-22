@@ -1,0 +1,15 @@
+{
+  "rotTypeLabel": "ROT-typ",
+  "inputLabel": "Inmatningstext",
+  "inputPlaceholder": "Ange text att kryptera/dekryptera...",
+  "outputLabel": "Utmatningstext",
+  "outputPlaceholder": "Krypterad/dekrypterad text visas har...",
+  "rot13Description": "Endast bokstaver (A-Z, a-z)",
+  "rot5Description": "Endast siffror (0-9)",
+  "rot18Description": "Bokstaver + Siffror (ROT13 + ROT5)",
+  "rot47Description": "Alla utskrivbara ASCII (33-126)",
+  "copyInputLabel": "Kopiera indata",
+  "copyOutputLabel": "Kopiera utdata",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel"
+}

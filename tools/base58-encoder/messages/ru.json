@@ -1,0 +1,18 @@
+{
+  "options": "Параметры",
+  "alphabet": "Алфавит",
+  "alphabetBitcoin": "Bitcoin",
+  "alphabetFlickr": "Flickr",
+  "alphabetRipple": "Ripple (XRP)",
+  "inputTitle": "Ввод",
+  "inputPlaceholder": "Введите текст для кодирования...",
+  "outputTitle": "Кодировка Base58",
+  "outputPlaceholder": "Вывод Base58 появится здесь...",
+  "download": "Скачать Base58",
+  "readFailed": "Не удалось прочитать файл",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Импорт из файла"
+}

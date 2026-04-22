@@ -1,0 +1,4 @@
+{
+  "name": "ตัวแปลง Unicode ↔ Punycode",
+  "description": "แปลงโดเมน Unicode (IDN) และ ASCII (Punycode) ได้สองทิศทาง"
+}

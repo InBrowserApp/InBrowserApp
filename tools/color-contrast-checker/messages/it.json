@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Colori",
+  "foregroundLabel": "Primo piano",
+  "backgroundLabel": "Sfondo",
+  "swapLabel": "Scambia",
+  "invalidColorMessage": "Formato colore non valido",
+  "resultsTitle": "Risultati",
+  "contrastRatioLabel": "Rapporto di contrasto",
+  "aaNormalLabel": "AA (normale)",
+  "aaLargeLabel": "AA (grande)",
+  "aaaNormalLabel": "AAA (normale)",
+  "aaaLargeLabel": "AAA (grande)",
+  "passLabel": "Superato",
+  "failLabel": "Non superato",
+  "invalidInputMessage": "Inserisci colori validi per vedere i risultati.",
+  "alphaNote": "I colori trasparenti vengono miscelati con il bianco per il contrasto.",
+  "previewTitle": "Anteprima",
+  "normalTextLabel": "Testo normale",
+  "largeTextLabel": "Testo grande",
+  "sampleText": "Aa Bb Cc 123"
+}

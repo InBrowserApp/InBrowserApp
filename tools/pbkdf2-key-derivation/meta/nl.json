@@ -1,0 +1,4 @@
+{
+  "name": "PBKDF2-sleutelafleiding",
+  "description": "Leid sleutels af uit een wachtwoord en salt met PBKDF2. Stel iteraties, hash-algoritme en uitvoerlengte in met hex- of base64-uitvoer."
+}

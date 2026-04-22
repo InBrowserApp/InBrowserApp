@@ -1,0 +1,4 @@
+{
+  "name": "Encoder Base16",
+  "description": "Encode teks atau file ke Base16 (Hex) untuk transmisi data, debugging, dan pengembangan web."
+}

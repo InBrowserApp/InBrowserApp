@@ -1,0 +1,14 @@
+{
+  "file": "檔案",
+  "dragOrClick": "點擊或拖拽上傳檔案",
+  "clearFile": "清除檔案",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "產生的 Data URI 會顯示在這裡...",
+  "onlyOneFile": "只能上傳一個檔案",
+  "readFailed": "讀取檔案失敗",
+  "unknownType": "未知類型",
+  "fileSize": "檔案大小",
+  "mimeType": "MIME 類型",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製"
+}

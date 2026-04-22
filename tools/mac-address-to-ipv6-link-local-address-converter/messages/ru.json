@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC-адрес",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "Сетевой интерфейс",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "Недействительный MAC-адрес",
+  "resultLabel": "IPv6 локальный адрес канала",
+  "copyLabel": "Скопировать",
+  "copiedLabel": "Скопировано"
+}

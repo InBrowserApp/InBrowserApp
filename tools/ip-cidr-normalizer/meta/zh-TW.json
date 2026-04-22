@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR 標準化工具",
+  "description": "標準化 IP 位址和 CIDR 表示法，支援 IPv4 和 IPv6 格式。輸入任何 IP 或 CIDR 範圍，立即獲得標準化格式。"
+}

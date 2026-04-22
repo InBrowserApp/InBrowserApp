@@ -1,0 +1,4 @@
+{
+  "name": "Base58 Encoder",
+  "description": "Encode text or files to Base58 for data transport, storage, and web development."
+}

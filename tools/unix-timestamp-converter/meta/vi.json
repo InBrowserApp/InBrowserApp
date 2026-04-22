@@ -1,0 +1,4 @@
+{
+  "name": "Bộ Chuyển Đổi Dấu Thời Gian Unix",
+  "description": "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây."
+}

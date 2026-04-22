@@ -1,0 +1,10 @@
+{
+  "macLabel": "MAC पता",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "नेटवर्क इंटरफेस",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "अमान्य MAC पता",
+  "resultLabel": "IPv6 लिंक स्थानीय पता",
+  "copyLabel": "कॉपी",
+  "copiedLabel": "कॉपी हो गया"
+}

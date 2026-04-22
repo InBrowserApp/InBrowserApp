@@ -1,0 +1,14 @@
+{
+  "base32InputLabel": "Input Base32",
+  "base32InputPlaceholder": "Masukkan teks Base32...",
+  "importFromFileLabel": "Impor dari file",
+  "decodedOutputLabel": "Output terdekode",
+  "decodedOutputEmptyDescription": "Teks yang didekodekan akan muncul di sini...",
+  "downloadFileLabel": "Unduh file",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Atur ulang contoh",
+  "invalidBase32Title": "Teks Base32 tidak valid",
+  "fileReadFailedTitle": "Gagal membaca file",
+  "previewTruncatedLabel": "Pratinjau dipotong"
+}

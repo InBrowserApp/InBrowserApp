@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "रंग",
+  "foregroundLabel": "फोरग्राउंड",
+  "backgroundLabel": "बैकग्राउंड",
+  "swapLabel": "बदलें",
+  "invalidColorMessage": "अमान्य रंग प्रारूप",
+  "resultsTitle": "परिणाम",
+  "contrastRatioLabel": "कंट्रास्ट अनुपात",
+  "aaNormalLabel": "AA (सामान्य)",
+  "aaLargeLabel": "AA (बड़ा)",
+  "aaaNormalLabel": "AAA (सामान्य)",
+  "aaaLargeLabel": "AAA (बड़ा)",
+  "passLabel": "पास",
+  "failLabel": "फेल",
+  "invalidInputMessage": "परिणाम देखने के लिए मान्य रंग दर्ज करें।",
+  "alphaNote": "पारदर्शी रंगों को कंट्रास्ट के लिए सफेद पर मिलाया जाता है।",
+  "previewTitle": "पूर्वावलोकन",
+  "normalTextLabel": "सामान्य टेक्स्ट",
+  "largeTextLabel": "बड़ा टेक्स्ट",
+  "sampleText": "Aa Bb Cc 123"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "HMAC-Generator",
+  "description": "Generieren Sie HMAC (Hash-based Message Authentication Code) Signaturen für Text oder Dateien. Unterstützt SHA-1, SHA-256, SHA-384 und SHA-512 Algorithmen mit hexadezimalen und base64 Ausgabeformaten."
+}

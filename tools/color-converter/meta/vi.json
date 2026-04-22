@@ -1,0 +1,4 @@
+{
+  "name": "Trình Chuyển Đổi Màu",
+  "description": "Chuyển đổi màu giữa các định dạng HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK và từ khóa CSS. Chuyển đổi hai chiều thời gian thực với hỗ trợ kênh alpha."
+}

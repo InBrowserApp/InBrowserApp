@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Eingabetext",
+  "inputPlaceholder": "Text zur Umwandlung in Slug eingeben...",
+  "outputLabel": "Generierter Slug",
+  "outputPlaceholder": "Slug wird hier angezeigt...",
+  "separatorLabel": "Trennzeichen",
+  "hyphenLabel": "Bindestrich",
+  "underscoreLabel": "Unterstrich",
+  "dotLabel": "Punkt",
+  "caseLabel": "Groß-/Kleinschreibung",
+  "lowercaseLabel": "Kleinbuchstaben",
+  "preserveLabel": "Beibehalten",
+  "copyLabel": "Slug kopieren",
+  "copiedLabel": "Kopiert",
+  "clearLabel": "Leeren"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Julat IP kepada Penukar CIDR",
+  "description": "Tukar alamat mula dan tamat IPv4 atau IPv6 ke dalam set minimum blok CIDR yang betul-betul meliputi julat."
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "ステータスコード、名前、または説明で検索...",
+  "all": "すべて",
+  "common": "一般的",
+  "informationalFilter": "情報 (1xx)",
+  "successFilter": "成功 (2xx)",
+  "redirectionFilter": "リダイレクト (3xx)",
+  "clientErrorFilter": "クライアントエラー (4xx)",
+  "serverErrorFilter": "サーバーエラー (5xx)",
+  "code": "コード",
+  "name": "名前",
+  "category": "カテゴリ",
+  "description": "説明",
+  "informational": "情報",
+  "success": "成功",
+  "redirection": "リダイレクト",
+  "clientError": "クライアントエラー",
+  "serverError": "サーバーエラー",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or inline scripts.",
+  "importFromFileLabel": "Import from file",
+  "hashResultLabel": "Hash Result",
+  "hashResultDescription": "SRI hashes for the current text input.",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

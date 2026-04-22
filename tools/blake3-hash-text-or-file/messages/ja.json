@@ -1,0 +1,20 @@
+{
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "絵文字や非ラテン文字を含む、任意の UTF-8 テキストを貼り付けたり入力したりできます。",
+  "importFromFileLabel": "ファイルから読み込み",
+  "hashResultLabel": "ハッシュ結果",
+  "hashResultDescription": "現在のテキスト入力のハッシュ結果。",
+  "hexLabel": "十六進数",
+  "base64Label": "Base64",
+  "decimalLabel": "十進数",
+  "binaryLabel": "二進数",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "configurationLabel": "BLAKE3 設定",
+  "outputLengthLabel": "出力長",
+  "keyLabel": "BLAKE3キー（Base64）",
+  "keyPlaceholder": "キー付きハッシュ用のオプションの32バイトキー（Base64エンコード）",
+  "invalidBase64Title": "Base64 の値がまだ有効ではありません。",
+  "invalidBase64Description": "パディングの不足、想定外の文字、データが一部しか貼り付けられていないかを確認してください。"
+}

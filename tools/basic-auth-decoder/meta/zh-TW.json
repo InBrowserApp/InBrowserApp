@@ -1,0 +1,4 @@
+{
+  "name": "Basic Auth 解碼器",
+  "description": "解碼 HTTP Basic Authorization 標頭，從 Base64 提取使用者名稱與密碼。用於除錯與 API 測試"
+}

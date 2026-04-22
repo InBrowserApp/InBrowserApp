@@ -1,0 +1,10 @@
+{
+  "macLabel": "ที่อยู่ MAC",
+  "macPlaceholder": "AA:BB:CC:DD:EE:FF",
+  "networkInterfaceLabel": "อินเทอร์เฟซเครือข่าย",
+  "networkInterfacePlaceholder": "eth0",
+  "invalidAddress": "ที่อยู่ MAC ไม่ถูกต้อง",
+  "resultLabel": "ที่อยู่ Local Link IPv6",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

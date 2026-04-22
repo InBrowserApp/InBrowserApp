@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de casse",
+  "description": "Convertissez du texte entre diff\u00e9rentes conventions de nommage : camelCase, PascalCase, snake_case, kebab-case, et plus encore."
+}

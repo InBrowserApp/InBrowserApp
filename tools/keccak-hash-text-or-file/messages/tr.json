@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "outputLengthLabel": "Çıktı Uzunluğu",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Geçerli metin girdisinin hash sonucu.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}

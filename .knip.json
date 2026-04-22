@@ -9,6 +9,15 @@
     },
     "tools/*": {
       "astro": false
+    },
+    "tools/ascii-art-generator": {
+      "ignoreDependencies": ["@types/figlet"]
+    },
+    "tools/bip39-mnemonic-generator": {
+      "ignoreDependencies": ["buffer"]
+    },
+    "tools/unicode-punycode-converter": {
+      "ignoreDependencies": ["punycode", "@types/punycode"]
     }
   }
 }

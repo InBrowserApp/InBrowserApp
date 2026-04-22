@@ -1,0 +1,4 @@
+{
+  "name": "कुकी पार्सर",
+  "description": "Cookie और Set-Cookie हेडर को संरचित JSON में पार्स करके जांचें।"
+}

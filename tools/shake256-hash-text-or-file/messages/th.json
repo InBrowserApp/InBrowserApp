@@ -1,0 +1,19 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์ Hash",
+  "hashResultDescription": "ผลลัพธ์แฮชสำหรับข้อความที่ป้อนอยู่ในขณะนี้",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "outputLengthLabel": "ความยาวเอาต์พุต",
+  "outputLengthPlaceholder": "เช่น 512 (bits)",
+  "outputLengthInvalid": "กรอกจำนวนที่เป็นพหุคูณของ 8 ระหว่าง 8 ถึง 65536",
+  "hashTextError": "ไม่สามารถคำนวณแฮชของข้อความได้",
+  "hashFileError": "ไม่สามารถคำนวณแฮชของไฟล์ได้"
+}

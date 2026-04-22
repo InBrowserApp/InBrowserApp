@@ -1,0 +1,4 @@
+{
+  "name": "Validateur d'IBAN",
+  "description": "Valide les IBAN avec la longueur du pays, le format et la somme de contrôle."
+}

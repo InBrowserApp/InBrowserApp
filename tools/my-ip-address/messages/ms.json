@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "Kebocoran WebRTC",
+  "unableToGetIp": "Tidak dapat mendapatkan IP",
+  "hostname": "Nama Hos",
+  "isp": "Penyedia Perkhidmatan Internet",
+  "ipOrganization": "Organisasi IP",
+  "asn": "ASN",
+  "asnOrganization": "Organisasi ASN",
+  "location": "Lokasi",
+  "country": "Negara",
+  "timezone": "Zon Masa",
+  "webrtcDescription": "Antara muka tambahan dan alamat calon tempatan terdedah semasa rundingan WebRTC.",
+  "unableToGetIpDescription": "Carian tidak mengembalikan alamat awam. Semak tetapan sambungan, VPN, proksi atau privasi anda dan cuba lagi.",
+  "fetchingIp": "Mengambil alamat IP",
+  "fetchingIpDescription": "Mencari alamat awam anda dan butiran rangkaian daripada berbilang pembekal.",
+  "copyIp": "Salin IP",
+  "copied": "disalin",
+  "ipv4Description": "Alamat IPv4 awam pada masa ini boleh dilihat oleh tapak web dan API.",
+  "ipv6Description": "Alamat IPv6 awam kelihatan apabila rangkaian anda menyokong IPv6 asli atau terowong."
+}

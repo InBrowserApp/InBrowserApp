@@ -1,0 +1,4 @@
+{
+  "name": "IP Aralığından CIDR'ye Dönüştürücü",
+  "description": "IPv4 veya IPv6 başlangıç ​​ve bitiş adreslerini, aralığı tam olarak kapsayan minimum CIDR blokları kümesine dönüştürün."
+}

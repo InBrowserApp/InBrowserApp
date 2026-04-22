@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Màu sắc",
+  "resultsTitle": "Kết quả",
+  "previewTitle": "Xem trước",
+  "enableAlphaLabel": "Bật Alpha",
+  "invalidColorMessage": "Định dạng màu không hợp lệ",
+  "copyValueLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "keywordLabel": "Từ khóa CSS",
+  "hexInfo": "Ký hiệu màu thập lục phân, phổ biến nhất trong phát triển web",
+  "rgbInfo": "Đỏ, Xanh lục, Xanh lam - mô hình màu cộng cho màn hình",
+  "hslInfo": "Sắc độ, Độ bão hòa, Độ sáng - điều chỉnh màu trực quan",
+  "hsvInfo": "Sắc độ, Độ bão hòa, Giá trị - còn gọi là HSB, phổ biến trong bộ chọn màu",
+  "hwbInfo": "Sắc độ, Độ trắng, Độ đen - định dạng CSS4, không alpha",
+  "labInfo": "CIE LAB - không gian màu đồng nhất tri giác, không alpha",
+  "lchInfo": "Độ sáng, Sắc độ, Sắc - LAB hình trụ, điều chỉnh sắc dễ hơn, không alpha",
+  "cmykInfo": "Lục lam, Đỏ tươi, Vàng, Đen - tiêu chuẩn in ấn, không alpha",
+  "keywordInfo": "Tên màu CSS như red, blue, coral - 140+ màu định sẵn, không alpha"
+}

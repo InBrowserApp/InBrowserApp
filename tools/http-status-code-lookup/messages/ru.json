@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Поиск по коду состояния, названию или описанию...",
+  "all": "Все",
+  "common": "Популярные",
+  "informationalFilter": "Информационные (1xx)",
+  "successFilter": "Успех (2xx)",
+  "redirectionFilter": "Перенаправление (3xx)",
+  "clientErrorFilter": "Ошибка Клиента (4xx)",
+  "serverErrorFilter": "Ошибка Сервера (5xx)",
+  "code": "Код",
+  "name": "Название",
+  "category": "Категория",
+  "description": "Описание",
+  "informational": "Информационные",
+  "success": "Успех",
+  "redirection": "Перенаправление",
+  "clientError": "Ошибка Клиента",
+  "serverError": "Ошибка Сервера",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

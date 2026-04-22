@@ -1,0 +1,4 @@
+{
+  "name": "Decodificador Base16",
+  "description": "Decodifica texto o archivos Base16 (Hex) a bytes sin procesar para inspección, pruebas y herramientas."
+}

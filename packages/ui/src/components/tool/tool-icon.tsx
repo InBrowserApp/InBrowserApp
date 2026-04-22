@@ -3,6 +3,9 @@ import type { LucideProps } from "lucide-react"
 import {
   Binary,
   Braces,
+  CaseSensitive,
+  Clock3,
+  CreditCard,
   FileJson2,
   FileText,
   Globe,
@@ -15,6 +18,9 @@ import {
 const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   binary: Binary,
   braces: Braces,
+  "case-sensitive": CaseSensitive,
+  clock3: Clock3,
+  "credit-card": CreditCard,
   "file-json-2": FileJson2,
   "file-text": FileText,
   globe: Globe,

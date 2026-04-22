@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Ursprüngliche, nicht escapete Zeichen",
+  "plainTextPlaceholder": "Text zum Escapen eingeben ...",
+  "escapeFormatLabel": "Escape-Format",
+  "escapedTextLabel": "Escapeter Text",
+  "escapedTextDescription": "Unicode-Escape-Sequenzen im ausgewählten Format",
+  "escapedTextPlaceholder": "Escapeten Text zum Unescapen eingeben ...",
+  "copyPlainTextLabel": "Klartext kopieren",
+  "copyEscapedTextLabel": "Escapeten Text kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen"
+}

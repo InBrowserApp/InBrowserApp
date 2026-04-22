@@ -1,0 +1,4 @@
+{
+  "name": "Générateur d'Authentification Basique",
+  "description": "Générez l'en-tête HTTP Basic Authorization en encodant le nom d'utilisateur et le mot de passe en Base64. Créez rapidement des identifiants pour les tests d'API et le développement"
+}

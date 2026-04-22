@@ -1,0 +1,13 @@
+{
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "תווים מקוריים ללא קידוד",
+  "plainTextPlaceholder": "הזן טקסט לקידוד...",
+  "escapeFormatLabel": "פורמט קידוד",
+  "escapedTextLabel": "טקסט מקודד",
+  "escapedTextDescription": "רצפי קידוד Unicode בפורמט הנבחר",
+  "escapedTextPlaceholder": "הזן טקסט מקודד לפענוח...",
+  "copyPlainTextLabel": "העתק טקסט רגיל",
+  "copyEscapedTextLabel": "העתק טקסט מקודד",
+  "copiedLabel": "הועתק",
+  "resetLabel": "אפס דוגמה"
+}

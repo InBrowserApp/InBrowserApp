@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển Data URI sang tệp",
+  "description": "Giải mã chuỗi Data URI thành tệp, kiểm tra loại MIME và mã hóa, rồi tải xuống kết quả ngoại tuyến."
+}

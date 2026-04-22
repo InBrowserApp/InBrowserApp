@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de suma/resta de duración",
+  "description": "Suma o resta duraciones ISO 8601 desde una hora base en cualquier zona horaria, con precisión de milisegundos."
+}

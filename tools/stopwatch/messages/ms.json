@@ -1,0 +1,18 @@
+{
+  "startLabel": "Mula",
+  "resumeLabel": "Sambung",
+  "pauseLabel": "Jeda",
+  "lapLabel": "Pusingan",
+  "resetLabel": "Set semula",
+  "lapsLabel": "Pusingan",
+  "clearLabel": "Kosongkan",
+  "exportLabel": "Eksport",
+  "noLapsLabel": "Tiada pusingan",
+  "statusRunningLabel": "Sedang berjalan",
+  "statusPausedLabel": "Dijeda",
+  "lapTimeLabel": "Pusingan",
+  "totalTimeLabel": "Jumlah",
+  "lapMillisecondsLabel": "Pusingan (ms)",
+  "totalMillisecondsLabel": "Jumlah (ms)",
+  "lapsDescription": "Semak masa pecahan setiap pusingan dan jumlah masa terkumpul. Eksport senarai sebagai CSV atau kosongkannya untuk bermula semula."
+}

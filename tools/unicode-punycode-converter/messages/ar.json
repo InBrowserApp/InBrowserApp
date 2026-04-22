@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "نطاق ASCII",
+  "unicodeDomainLabel": "نطاق Unicode",
+  "whatIsPunycodeTitle": "ما هو Punycode؟",
+  "whatIsPunycodeDescription": "Punycode هو تمثيل لليونكود باستخدام المجموعة الفرعية من ASCII المكوّنة من الأحرف والأرقام والواصلة (LDH) المطلوبة لأسماء مضيفي DNS. وهو ملف ترميز تستخدمه IDNA ومثال لخوارزمية Bootstring (RFC 3492). عمليًا تُترك أحرف ASCII في التسمية كما هي ويُستخدم الواصلة للفصل بينها وبين الجزء غير ASCII المشفَّر؛ وللاستخدام على الإنترنت العام تُضاف بادئة ACE xn-- إلى التسمية. على سبيل المثال، تتحول «München» إلى «Mnchen‑3ya» على مستوى نقاط الترميز وإلى تسمية DNS «xn--mnchen-3ya». التحويلات دقيقة وقابلة للعكس في ظل معالجة IDNA والتطبيع؛ هذه الأداة تُجري التحويل في كلا الاتجاهين داخل المتصفح.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "إعادة تعيين المثال"
+}

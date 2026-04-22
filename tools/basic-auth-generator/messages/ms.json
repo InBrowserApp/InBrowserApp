@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "Kelayakan",
+  "usernameLabel": "Nama pengguna",
+  "passwordLabel": "Kata laluan",
+  "authorizationHeaderLabel": "Pengepala Authorization",
+  "authorizationHeaderDescription": "Salin nilai pengepala Authorization yang tepat untuk panggilan fetch, klien API atau permintaan manual.",
+  "curlExampleLabel": "Contoh cURL",
+  "curlExampleDescription": "Mulakan dengan arahan curl yang sedia digunakan ini, kemudian gantikan URL contoh jika perlu.",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Tetapkan semula contoh"
+}

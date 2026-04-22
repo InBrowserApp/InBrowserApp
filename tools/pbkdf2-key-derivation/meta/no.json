@@ -1,0 +1,4 @@
+{
+  "name": "PBKDF2-nøkkelavledning",
+  "description": "Avled nøkler fra passord og salt med PBKDF2. Konfigurer iterasjoner, hash‑algoritme og utdata‑lengde med hex- eller base64‑utdata."
+}

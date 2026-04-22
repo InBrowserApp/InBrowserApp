@@ -1,0 +1,23 @@
+{
+  "startLabel": "Inizio",
+  "endLabel": "Fine",
+  "timeZoneLabel": "Fuso orario",
+  "dateTimeLabel": "Data e ora",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Formato: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Adesso",
+  "offsetLabel": "Offset",
+  "invalidDateTimeLabel": "Data/ora non valida",
+  "swapLabel": "Scambia",
+  "resultsLabel": "Risultati",
+  "signedDurationLabel": "Durata con segno",
+  "absoluteDurationLabel": "Durata assoluta",
+  "iso8601DurationLabel": "Durata ISO 8601",
+  "totalMillisecondsLabel": "Millisecondi totali",
+  "totalSecondsLabel": "Secondi totali",
+  "totalMinutesLabel": "Minuti totali",
+  "totalHoursLabel": "Ore totali",
+  "totalDaysLabel": "Giorni totali",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
+}

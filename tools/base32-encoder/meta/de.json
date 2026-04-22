@@ -1,0 +1,4 @@
+{
+  "name": "Base32-Encoder",
+  "description": "Kodiert Text oder Dateien in Base32 für Datenübertragung, Speicherung und Webentwicklung."
+}

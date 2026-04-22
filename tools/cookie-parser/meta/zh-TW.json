@@ -1,0 +1,4 @@
+{
+  "name": "Cookie 解析器",
+  "description": "解析 Cookie 與 Set-Cookie 標頭為結構化 JSON，方便檢視。"
+}

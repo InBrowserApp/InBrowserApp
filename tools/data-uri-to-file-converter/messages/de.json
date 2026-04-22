@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data-URI-Eingabe",
+  "inputPlaceholder": "Data URI hier einfügen...",
+  "invalidDataUriTitle": "Ungültiger Data URI",
+  "detailsTitle": "Details",
+  "mimeTypeLabel": "MIME-Typ",
+  "encodingLabel": "Kodierung",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-kodiert",
+  "sizeLabel": "Größe",
+  "fileNameLabel": "Dateiname",
+  "fileNamePlaceholder": "z. B. data.png",
+  "previewTitle": "Vorschau",
+  "decodedOutputTitle": "Dekodierte Datei",
+  "decodedOutputEmptyDescription": "Details, Vorschau und Download der dekodierten Datei werden hier angezeigt.",
+  "previewUnavailableDescription": "Dieser Dateityp kann im Browser nicht in der Vorschau angezeigt werden. Laden Sie ihn herunter, um die Originaldatei zu prüfen.",
+  "previewTruncatedLabel": "Vorschau gekürzt",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadFileLabel": "Datei herunterladen",
+  "resetLabel": "Beispiel zurücksetzen"
+}

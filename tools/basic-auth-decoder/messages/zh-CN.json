@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization 头",
+  "authorizationHeaderDescription": "粘贴类似: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "粘贴类似: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "解码结果",
+  "decodedCredentialsDescription": "解码 HTTP Basic Authorization 头，从 Base64 中提取用户名和密码。用于调试和 API 测试",
+  "usernameLabel": "用户名",
+  "passwordLabel": "密码",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "resetLabel": "重置示例",
+  "invalidHeaderTitle": "无效的 Basic Authorization 头",
+  "invalidBase64Title": "无效的 Base64 内容"
+}

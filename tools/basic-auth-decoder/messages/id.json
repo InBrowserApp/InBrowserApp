@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Header Authorization",
+  "authorizationHeaderDescription": "Tempelkan sesuatu seperti: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Tempelkan sesuatu seperti: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Hasil Decode",
+  "decodedCredentialsDescription": "Dekode header HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata sandi dari Base64. Berguna untuk debugging dan pengujian API",
+  "usernameLabel": "Nama pengguna",
+  "passwordLabel": "Kata sandi",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "resetLabel": "Atur ulang contoh",
+  "invalidHeaderTitle": "Header Basic Authorization tidak valid",
+  "invalidBase64Title": "Konten Base64 tidak valid"
+}

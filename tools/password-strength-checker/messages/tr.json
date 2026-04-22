@@ -1,0 +1,49 @@
+{
+  "inputTitle": "Parola",
+  "resultTitle": "Güç özeti",
+  "passwordLabel": "Parola",
+  "passwordPlaceholder": "Değerlendirmek için parola girin",
+  "show": "Göster",
+  "hide": "Gizle",
+  "privacyHint": "Kontroller tarayıcınızda yerel olarak yapılır.",
+  "empty": "Gücü kontrol etmek için bir parola girin.",
+  "entropyBits": "Entropi: {bits} bit",
+  "log10Guesses": "Tahmin (log10): {value}",
+  "strength0": "Çok zayıf",
+  "strength1": "Zayıf",
+  "strength2": "Orta",
+  "strength3": "Güçlü",
+  "strength4": "Çok güçlü",
+  "length": "Uzunluk",
+  "unique": "Benzersiz karakterler",
+  "characterSets": "Karakter kümeleri",
+  "crackOffline": "Kırma süresi (offline, 1e10/sn)",
+  "crackOnline": "Kırma süresi (online, 100/sn)",
+  "durationFormat": "Yaklaşık {value} {unit}",
+  "durationUnderSecond": "1 saniyeden kısa",
+  "unit": {
+    "seconds": "saniye",
+    "minutes": "dakika",
+    "hours": "saat",
+    "days": "gün",
+    "months": "ay",
+    "years": "yıl"
+  },
+  "warning": {
+    "common": "Bu çok yaygın bir paroladır.",
+    "short": "Parola çok kısa.",
+    "sequence": "Ardışık diziler kolayca tahmin edilir.",
+    "repeat": "Tekrarlayan desenler gücü düşürür.",
+    "singleClass": "Tek bir karakter türü kullanmak gücü düşürür."
+  },
+  "suggestion": {
+    "use-longer": "Daha uzun bir parola veya ifade kullanın.",
+    "add-uppercase": "Büyük harf ekleyin.",
+    "add-lowercase": "Küçük harf ekleyin.",
+    "add-numbers": "Rakam ekleyin.",
+    "add-symbols": "Sembol ekleyin.",
+    "avoid-common": "Yaygın ve sızmış parolalardan kaçının.",
+    "avoid-sequences": "123 veya abc gibi dizilerden kaçının.",
+    "avoid-repetition": "Tekrarlayan desenlerden kaçının."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "resultTitle": "即時結果",
+  "resultDescription": "文字與摩爾斯電碼相互轉換，支援音訊播放",
+  "textLabel": "文字",
+  "morseCodeLabel": "摩爾斯電碼",
+  "textPlaceholder": "輸入要轉換為摩爾斯電碼的文字",
+  "morsePlaceholder": "輸入摩爾斯電碼（點和橫線，/ 分隔單詞）",
+  "validLabel": "有效的摩爾斯電碼",
+  "invalidLabel": "無效的摩爾斯電碼",
+  "invalidMorseCode": "無效的摩爾斯電碼",
+  "unsupportedTextMessage": "只能編碼字母、數字、空格和常見標點符號。",
+  "loadSample": "載入範例",
+  "clearLabel": "清空",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製",
+  "play": "播放",
+  "stop": "停止"
+}

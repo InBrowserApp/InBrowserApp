@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "presetsTitle": "הגדרות נפוצות",
+  "executablePresetLabel": "ניתן להרצה",
+  "readOnlyPresetLabel": "קריאה בלבד",
+  "fullAccessPresetLabel": "גישה מלאה",
+  "ownerOnlyPresetLabel": "בעלים בלבד",
+  "privateFilePresetLabel": "קובץ פרטי",
+  "sharedDirPresetLabel": "ספרייה משותפת",
+  "numericPermissionLabel": "הרשאה מספרית",
+  "numericPermissionPlaceholder": "לדוגמה, 755",
+  "symbolicPermissionLabel": "הרשאה סימבולית",
+  "symbolicPermissionPlaceholder": "לדוגמה, rwxr-xr-x",
+  "permissionMatrixLabel": "מטריצת הרשאות",
+  "readLabel": "קריאה",
+  "writeLabel": "כתיבה",
+  "executeLabel": "הרצה",
+  "ownerLabel": "בעלים",
+  "groupLabel": "קבוצה",
+  "othersLabel": "אחרים",
+  "chmodCommandLabel": "פקודת Chmod"
+}

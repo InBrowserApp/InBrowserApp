@@ -1,0 +1,19 @@
+{
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入的雜湊結果。",
+  "hexLabel": "十六進制",
+  "base64Label": "Base64",
+  "decimalLabel": "十進制",
+  "binaryLabel": "二進制",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "outputLengthLabel": "輸出長度",
+  "outputLengthPlaceholder": "例如 256（位）",
+  "outputLengthInvalid": "請輸入 8 到 65536 之間的 8 的倍數。",
+  "hashTextError": "無法計算文字雜湊值。",
+  "hashFileError": "無法計算檔案雜湊值。"
+}

@@ -1,0 +1,18 @@
+{
+  "resultTitle": "Kết quả trực tiếp",
+  "resultDescription": "Chuyển đổi văn bản sang mã Morse và ngược lại với hỗ trợ phát âm thanh",
+  "textLabel": "Văn bản",
+  "morseCodeLabel": "Mã Morse",
+  "textPlaceholder": "Nhập văn bản để chuyển đổi sang mã Morse",
+  "morsePlaceholder": "Nhập mã Morse (chấm và gạch, / để phân tách từ)",
+  "validLabel": "Mã Morse hợp lệ",
+  "invalidLabel": "Mã Morse không hợp lệ",
+  "invalidMorseCode": "Mã Morse không hợp lệ",
+  "unsupportedTextMessage": "Chỉ có thể mã hóa chữ cái, chữ số, khoảng trắng và các dấu câu thông dụng.",
+  "loadSample": "Tải ví dụ",
+  "clearLabel": "Xóa",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
+  "play": "Phát",
+  "stop": "Dừng"
+}

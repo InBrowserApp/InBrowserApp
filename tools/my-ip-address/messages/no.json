@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "WebRTC-lekkasje",
+  "unableToGetIp": "Kan ikke hente IP",
+  "hostname": "Vertsnavn",
+  "isp": "Internettleverandør",
+  "ipOrganization": "IP-organisasjon",
+  "asn": "ASN",
+  "asnOrganization": "ASN-organisasjon",
+  "location": "Plassering",
+  "country": "Land",
+  "timezone": "Tidssone",
+  "webrtcDescription": "Ytterligere grensesnitt og lokale kandidatadresser avslørt under WebRTC-forhandling.",
+  "unableToGetIpDescription": "Oppslaget ga ingen offentlig adresse. Sjekk tilkoblings-, VPN-, proxy- eller personverninnstillingene og prøv igjen.",
+  "fetchingIp": "Henter IP-adresse",
+  "fetchingIpDescription": "Slå opp offentlig adresse og nettverksdetaljer fra flere leverandører.",
+  "copyIp": "Kopier IP",
+  "copied": "Kopiert",
+  "ipv4Description": "Offentlig IPv4-adresse som for øyeblikket er synlig for nettsteder og APIer.",
+  "ipv6Description": "Offentlig IPv6-adresse synlig når nettverket ditt støtter innebygd eller tunnelert IPv6."
+}

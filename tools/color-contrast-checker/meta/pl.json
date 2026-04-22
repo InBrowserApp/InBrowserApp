@@ -1,0 +1,4 @@
+{
+  "name": "Sprawdzanie Kontrastu Kolorów",
+  "description": "Sprawdza współczynnik kontrastu WCAG między kolorem tekstu i tła, w tym AA/AAA dla tekstu normalnego i dużego."
+}

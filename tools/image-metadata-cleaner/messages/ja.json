@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "クリックまたは画像をドラッグしてアップロード",
+  "supportedFormats": "JPEG、PNG、WebP をサポート",
+  "remove": "削除",
+  "cleanMetadata": "メタデータを削除",
+  "cleaningMetadata": "メタデータを削除中...",
+  "results": "削除結果",
+  "removed": "削除したメタデータ",
+  "reduction": "サイズ削減",
+  "fileSize": "ファイルサイズ",
+  "downloadCleaned": "クリーン画像をダウンロード",
+  "note": "ブラウザ内で処理します。アップロードされません。",
+  "error": "エラー",
+  "unsupportedFormat": "未対応の形式です。JPEG、PNG、WebP をアップロードしてください。",
+  "cleaningComplete": "メタデータを削除しました。",
+  "cleaningFailed": "メタデータの削除に失敗しました。再試行してください。"
+}

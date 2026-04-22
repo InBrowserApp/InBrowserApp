@@ -1,0 +1,4 @@
+{
+  "name": "Codificatore Base32",
+  "description": "Codifica testo o file in Base32 per trasmissione dati, archiviazione e sviluppo web."
+}

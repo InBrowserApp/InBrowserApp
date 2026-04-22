@@ -1,0 +1,13 @@
+{
+  "optionsTitle": "Opzioni",
+  "optionsDescription": "Imposta quanti identificatori generare per ogni lotto e quale lunghezza deve avere ciascun CUID2.",
+  "countLabel": "Numero",
+  "lengthLabel": "Lunghezza",
+  "resultsTitle": "Risultati",
+  "resultsDescription": "Ogni lotto viene generato localmente nel browser, così puoi controllarlo, copiarlo o scaricarlo senza inviare gli identificatori a un altro servizio.",
+  "resultsPlaceholder": "Gli ID CUID2 generati appariranno qui...",
+  "copyResultsLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "downloadResultsLabel": "Scarica",
+  "regenerateLabel": "Rigenera"
+}

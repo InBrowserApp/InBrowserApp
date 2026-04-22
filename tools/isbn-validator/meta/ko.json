@@ -1,0 +1,4 @@
+{
+  "name": "ISBN 검증기",
+  "description": "ISBN-10/ISBN-13을 검증하고 체크 디지트와 변환 결과를 확인합니다"
+}

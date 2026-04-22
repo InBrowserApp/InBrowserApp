@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization-rubrik",
+  "authorizationHeaderDescription": "Klistra in något som: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Klistra in något som: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Avkodat Resultat",
+  "decodedCredentialsDescription": "Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning",
+  "usernameLabel": "Användarnamn",
+  "passwordLabel": "Lösenord",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "resetLabel": "Återställ exempel",
+  "invalidHeaderTitle": "Ogiltig Basic Authorization-rubrik",
+  "invalidBase64Title": "Ogiltigt Base64-innehåll"
+}

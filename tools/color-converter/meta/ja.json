@@ -1,0 +1,4 @@
+{
+  "name": "カラーコンバーター",
+  "description": "HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK、CSSキーワード形式間で色を変換します。アルファチャンネルをサポートしたリアルタイム双方向変換。"
+}

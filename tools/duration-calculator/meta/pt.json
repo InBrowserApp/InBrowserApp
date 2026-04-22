@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de adicionar/subtrair duração",
+  "description": "Some ou subtraia durações ISO 8601 de uma hora base em qualquer fuso horário, com precisão de milissegundos."
+}

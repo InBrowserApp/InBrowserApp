@@ -1,0 +1,18 @@
+{
+  "startLabel": "Iniciar",
+  "resumeLabel": "Retomar",
+  "pauseLabel": "Pausar",
+  "lapLabel": "Volta",
+  "resetLabel": "Redefinir",
+  "lapsLabel": "Voltas",
+  "clearLabel": "Limpar",
+  "exportLabel": "Exportar",
+  "noLapsLabel": "Sem voltas",
+  "statusRunningLabel": "Em andamento",
+  "statusPausedLabel": "Pausado",
+  "lapTimeLabel": "Volta",
+  "totalTimeLabel": "Total",
+  "lapMillisecondsLabel": "Volta (ms)",
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Revise os parciais de cada volta e o total acumulado. Exporte a lista em CSV ou limpe tudo para recomeçar."
+}

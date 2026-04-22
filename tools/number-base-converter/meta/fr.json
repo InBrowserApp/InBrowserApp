@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de Base Numérique",
+  "description": "Convertit les nombres entre binaire, octal, décimal, hexadécimal, base32, base36, base62, base64 et bases personnalisées (2-64)."
+}

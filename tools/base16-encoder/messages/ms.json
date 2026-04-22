@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "inputPlaceholder": "Masukkan teks untuk dikodkan...",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "encodedOutputLabel": "Dikod Hex",
+  "encodedOutputEmptyDescription": "Output Hex akan muncul di sini...",
+  "downloadFileLabel": "Muat turun Hex",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "fileReadFailedTitle": "Gagal membaca fail"
+}

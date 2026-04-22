@@ -1,0 +1,9 @@
+{
+  "asciiDomainLabel": "ASCII‑domän",
+  "unicodeDomainLabel": "Unicode‑domän",
+  "whatIsPunycodeTitle": "Vad är Punycode?",
+  "whatIsPunycodeDescription": "Punycode är en representation av Unicode som endast använder ASCII:s undergrupp bokstav‑siffra‑bindestreck (LDH) som krävs för DNS‑värdnamn. Det är den kodningsprofil som används av IDNA och en instans av Bootstring‑algoritmen (RFC 3492). I praktiken lämnas ASCII‑tecken i en etikett oförändrade och ett bindestreck skiljer dem från den kodade icke‑ASCII‑delen; för användning på det öppna internet läggs ACE‑prefixet xn-- till före etiketten. Till exempel blir München på kodpunktsnivå Mnchen‑3ya och som DNS‑etikett xn--mnchen-3ya. Konverteringar är exakta och reversibla under IDNA‑behandling och normalisering; det här verktyget utför båda riktningarna direkt i din webbläsare.",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "resetLabel": "Återställ exempel"
+}

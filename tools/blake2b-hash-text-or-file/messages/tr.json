@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Geçerli metin girdisinin hash sonucu.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "configurationLabel": "BLAKE2b Yapılandırması",
+  "outputLengthLabel": "Çıktı Uzunluğu",
+  "keyLabel": "BLAKE2 Anahtarı (Base64)",
+  "keyPlaceholder": "Anahtarlı hash için isteğe bağlı anahtar (Base64 kodlu)",
+  "invalidBase64Title": "Base64 değeri henüz geçerli değil.",
+  "invalidBase64Description": "Eksik dolgu, beklenmeyen karakterler veya kısmen yapıştırılmış veri olup olmadığını kontrol edin."
+}

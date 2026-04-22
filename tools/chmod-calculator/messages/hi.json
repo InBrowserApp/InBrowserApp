@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "presetsTitle": "सामान्य प्रीसेट",
+  "executablePresetLabel": "निष्पादन योग्य",
+  "readOnlyPresetLabel": "केवल पढ़ने के लिए",
+  "fullAccessPresetLabel": "पूर्ण पहुँच",
+  "ownerOnlyPresetLabel": "केवल स्वामी",
+  "privateFilePresetLabel": "निजी फ़ाइल",
+  "sharedDirPresetLabel": "साझा निर्देशिका",
+  "numericPermissionLabel": "संख्यात्मक अनुमति",
+  "numericPermissionPlaceholder": "उदा., 755",
+  "symbolicPermissionLabel": "प्रतीकात्मक अनुमति",
+  "symbolicPermissionPlaceholder": "उदा., rwxr-xr-x",
+  "permissionMatrixLabel": "अनुमति मैट्रिक्स",
+  "readLabel": "पढ़ें",
+  "writeLabel": "लिखें",
+  "executeLabel": "निष्पादित करें",
+  "ownerLabel": "स्वामी",
+  "groupLabel": "समूह",
+  "othersLabel": "अन्य",
+  "chmodCommandLabel": "Chmod कमांड"
+}

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Sok etter statuskode, navn eller beskrivelse...",
+  "all": "Alle",
+  "common": "Vanlige",
+  "informationalFilter": "Informativ (1xx)",
+  "successFilter": "Vellykket (2xx)",
+  "redirectionFilter": "Omdirigering (3xx)",
+  "clientErrorFilter": "Klientfeil (4xx)",
+  "serverErrorFilter": "Serverfeil (5xx)",
+  "code": "Kode",
+  "name": "Navn",
+  "category": "Kategori",
+  "description": "Beskrivelse",
+  "informational": "Informativ",
+  "success": "Vellykket",
+  "redirection": "Omdirigering",
+  "clientError": "Klientfeil",
+  "serverError": "Serverfeil",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

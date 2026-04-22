@@ -1,0 +1,4 @@
+{
+  "name": "Unicode エスケープ / アンエスケープ",
+  "description": "\\uXXXX、\\u{XXXXX}、HTML エンティティ、URL エンコーディング、U+XXXX 表記を含む様々な形式で Unicode 文字をエスケープ・アンエスケープ"
+}

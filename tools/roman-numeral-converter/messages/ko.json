@@ -1,0 +1,22 @@
+{
+  "converterTitle": "아라비아 ↔ 로마 숫자 변환기",
+  "converterDescription": "로마 숫자와 아라비아 숫자 간 양방향 변환. 표준 로마 숫자 1~3999 (I~MMMCMXCIX) 지원.",
+  "arabicNumber": "아라비아 숫자 (1-3999)",
+  "arabicPlaceholder": "아라비아 숫자 입력...",
+  "romanNumeral": "로마 숫자",
+  "romanPlaceholder": "로마 숫자 입력...",
+  "invalidRomanNumeral": "유효한 로마 숫자를 입력하세요",
+  "invalidArabicNumber": "Enter a whole number using digits only.",
+  "outOfRangeArabicNumber": "Use a value from 1 to 3999.",
+  "resultTitle": "Live result",
+  "resultDescription": "Review the normalized output, status, and converted value.",
+  "emptyState": "Enter an Arabic number or a Roman numeral to start converting.",
+  "validLabel": "Valid",
+  "invalidLabel": "Invalid",
+  "rangeHint": "Supported range: 1-3999",
+  "notationHint": "Standard Roman notation only",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied"
+}

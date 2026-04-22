@@ -1,0 +1,13 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks semasa.",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "sha256SriLabel": "SHA-256 SRI",
+  "sha384SriLabel": "SHA-384 SRI",
+  "sha512SriLabel": "SHA-512 SRI"
+}

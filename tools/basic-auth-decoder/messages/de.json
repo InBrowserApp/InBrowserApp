@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Authorization-Header",
+  "authorizationHeaderDescription": "Füge ein wie: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Füge ein wie: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Dekodiertes Ergebnis",
+  "decodedCredentialsDescription": "Dekodieren Sie den HTTP Basic Authorization Header, um Benutzername und Passwort aus Base64 zu extrahieren. Nützlich zum Debuggen und API-Tests",
+  "usernameLabel": "Benutzername",
+  "passwordLabel": "Passwort",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "resetLabel": "Beispiel zurücksetzen",
+  "invalidHeaderTitle": "Ungültiger Basic Authorization-Header",
+  "invalidBase64Title": "Ungültiger Base64-Inhalt"
+}

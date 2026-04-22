@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da file a Data URI",
+  "description": "Converte file in stringhe Data URI per l'inserimento in HTML, CSS o JSON. Funziona completamente offline."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generador de frases mnemónicas BIP39",
+  "description": "Genera, valida y convierte frases mnemónicas BIP39 en el navegador."
+}

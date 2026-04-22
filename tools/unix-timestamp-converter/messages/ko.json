@@ -1,0 +1,19 @@
+{
+  "timestampLabel": "Unix 타임스탬프",
+  "timestampPlaceholder": "Unix 타임스탬프 입력...",
+  "invalidTimestamp": "유효하지 않은 타임스탬프",
+  "nowLabel": "현재",
+  "unitLabel": "단위",
+  "autoLabel": "자동",
+  "secondsLabel": "초",
+  "millisecondsLabel": "밀리초",
+  "nanosecondsLabel": "나노초",
+  "detectedLabel": "감지됨",
+  "digitsLabel": "자리",
+  "dateTimeLabel": "날짜 및 시간",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "relativeLabel": "상대 시간",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

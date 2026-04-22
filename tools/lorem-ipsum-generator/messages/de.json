@@ -1,0 +1,16 @@
+{
+  "optionsTitle": "Optionen",
+  "optionsDescription": "Wählen Sie Ausgabeform, Inhaltssprache und Menge.",
+  "wordsLabel": "Wörter",
+  "sentencesLabel": "Sätze",
+  "paragraphsLabel": "Absätze",
+  "countLabel": "Anzahl",
+  "localeLabel": "Sprache",
+  "resultsTitle": "Ergebnisse",
+  "resultsDescription": "Prüfen, kopieren oder laden Sie den erzeugten Text herunter.",
+  "resultsPlaceholder": "Generierter Text erscheint hier...",
+  "copyResultsLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Herunterladen",
+  "regenerateLabel": "Neu generieren"
+}

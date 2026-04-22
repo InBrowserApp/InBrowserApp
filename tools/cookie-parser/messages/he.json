@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "סוג כותרת",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "קלט",
+  "inputPlaceholder": "הדביקו כאן כותרות Cookie או Set-Cookie...",
+  "parsedJsonLabel": "JSON מפוענח",
+  "emptyOutputDescription": "הפלט המפוענח יופיע כאן...",
+  "cookieCountLabel": "עוגיות",
+  "invalidCountLabel": "לא תקינות",
+  "invalidFragmentsLabel": "מקטעים לא תקינים",
+  "noCookiesTitle": "לא נמצאו עוגיות",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "downloadJsonLabel": "הורד JSON",
+  "resetLabel": "אפס דוגמה"
+}

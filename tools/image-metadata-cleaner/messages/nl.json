@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "Klik of sleep afbeelding om te uploaden",
+  "supportedFormats": "Ondersteunt JPEG, PNG, WebP",
+  "remove": "Verwijderen",
+  "cleanMetadata": "Metadaten opschonen",
+  "cleaningMetadata": "Metadaten worden opgeschoond...",
+  "results": "Opschoningsresultaten",
+  "removed": "Verwijderde metadaten",
+  "reduction": "Grootte-reductie",
+  "fileSize": "Bestandsgrootte",
+  "downloadCleaned": "Opgeschoonde afbeelding downloaden",
+  "note": "Lokaal in de browser verwerkt. Geen uploads.",
+  "error": "Fout",
+  "unsupportedFormat": "Niet ondersteund formaat. Upload JPEG, PNG of WebP.",
+  "cleaningComplete": "Metadaten opgeschoond.",
+  "cleaningFailed": "Metadaten opschonen mislukt. Probeer het opnieuw."
+}

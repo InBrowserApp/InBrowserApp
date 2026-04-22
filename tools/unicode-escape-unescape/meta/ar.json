@@ -1,0 +1,4 @@
+{
+  "name": "تحويل Unicode",
+  "description": "تحويل أحرف Unicode من وإلى صيغ متعددة بما في ذلك \\uXXXX و \\u{XXXXX} وكيانات HTML وترميز URL وترميز U+XXXX"
+}

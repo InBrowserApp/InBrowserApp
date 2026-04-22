@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Invisible Character Checker",
+  "description": "Detect zero-width, bidi control, and special whitespace characters, then export a cleaned version."
+}

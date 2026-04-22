@@ -1,0 +1,8 @@
+{
+  "inputLabel": "Eingabetext",
+  "inputPlaceholder": "Text zum Umwandeln eingeben\u2026",
+  "inputDescription": "Text in beliebiger Namenskonvention eingeben oder einf\u00fcgen. Alle Schreibweisen werden unten generiert.",
+  "clearLabel": "Leeren",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert"
+}

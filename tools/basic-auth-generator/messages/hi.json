@@ -1,0 +1,12 @@
+{
+  "credentialsLabel": "प्रमाण-पत्र",
+  "usernameLabel": "उपयोगकर्ता नाम",
+  "passwordLabel": "पासवर्ड",
+  "authorizationHeaderLabel": "Authorization हेडर",
+  "authorizationHeaderDescription": "fetch कॉल, API client या manual request में इस्तेमाल करने के लिए Authorization header का सटीक मान कॉपी करें।",
+  "curlExampleLabel": "cURL उदाहरण",
+  "curlExampleDescription": "इस तैयार curl command से शुरू करें, फिर ज़रूरत हो तो example URL बदल दें।",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

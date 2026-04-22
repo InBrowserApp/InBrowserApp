@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR Normalizer",
+  "description": "Normalize IP addresses and CIDR notation for both IPv4 and IPv6 formats. Enter any IP or CIDR range to get the standardized format instantly."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash SHA3-224 (FIPS 202) de Texto ou Arquivo",
+  "description": "Gere hash SHA3-224 (FIPS 202) para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SHA-512/224 (FIPS 180-4)-hash text eller fil",
+  "description": "Generera SHA-512/224 (FIPS 180-4)-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål"
+}

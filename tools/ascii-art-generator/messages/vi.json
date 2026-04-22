@@ -1,0 +1,22 @@
+{
+  "inputLabel": "Văn bản đầu vào",
+  "inputDescription": "Nhập một từ hoặc cụm từ để chuyển thành ASCII art.",
+  "inputPlaceholder": "Nhập văn bản để chuyển đổi...",
+  "loadSample": "Load sample",
+  "clearText": "Clear text",
+  "fontLabel": "Phông chữ",
+  "fontDescription": "Chọn kiểu phông chữ FIGlet cho đầu ra.",
+  "optionsLabel": "Layout options",
+  "optionsDescription": "Control alignment and banner width before you export the block.",
+  "alignLabel": "Alignment",
+  "widthLabel": "Width",
+  "widthHint": "Clamped between 40 and 160 columns.",
+  "leftAlign": "Left",
+  "centerAlign": "Center",
+  "rightAlign": "Right",
+  "outputLabel": "Kết quả ASCII art",
+  "outputPlaceholder": "ASCII art sẽ hiển thị ở đây...",
+  "downloadLabel": "Download .txt",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

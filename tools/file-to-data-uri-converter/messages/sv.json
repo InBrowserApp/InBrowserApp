@@ -1,0 +1,14 @@
+{
+  "file": "Fil",
+  "dragOrClick": "Klicka eller dra för att ladda upp en fil",
+  "clearFile": "Rensa fil",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Den genererade Data URI visas här...",
+  "onlyOneFile": "Endast en fil kan laddas upp",
+  "readFailed": "Misslyckades med att läsa filen",
+  "unknownType": "Okänd typ",
+  "fileSize": "Filstorlek",
+  "mimeType": "MIME-typ",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat"
+}

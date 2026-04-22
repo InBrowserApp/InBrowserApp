@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "클릭하거나 이미지를 드래그하여 업로드",
+  "supportedFormats": "JPEG, PNG, WebP 지원",
+  "remove": "제거",
+  "cleanMetadata": "메타데이터 정리",
+  "cleaningMetadata": "메타데이터 정리 중...",
+  "results": "정리 결과",
+  "removed": "제거된 메타데이터",
+  "reduction": "크기 감소",
+  "fileSize": "파일 크기",
+  "downloadCleaned": "정리된 이미지 다운로드",
+  "note": "브라우저에서 로컬로 처리됩니다. 업로드되지 않습니다.",
+  "error": "오류",
+  "unsupportedFormat": "지원하지 않는 형식입니다. JPEG, PNG 또는 WebP를 업로드하세요.",
+  "cleaningComplete": "메타데이터가 정리되었습니다.",
+  "cleaningFailed": "메타데이터 정리에 실패했습니다. 다시 시도하세요."
+}

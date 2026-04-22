@@ -1,0 +1,14 @@
+{
+  "authorizationHeaderLabel": "Заголовок Authorization",
+  "authorizationHeaderDescription": "Вставьте что-то вроде: Basic dXNlcjpwYXNz",
+  "authorizationHeaderPlaceholder": "Вставьте что-то вроде: Basic dXNlcjpwYXNz",
+  "decodedCredentialsLabel": "Декодированный результат",
+  "decodedCredentialsDescription": "Декодируйте заголовок HTTP Basic Authorization, чтобы извлечь имя пользователя и пароль из Base64. Полезно для отладки и тестирования API",
+  "usernameLabel": "Имя пользователя",
+  "passwordLabel": "Пароль",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "resetLabel": "Сбросить пример",
+  "invalidHeaderTitle": "Недействительный заголовок Basic Authorization",
+  "invalidBase64Title": "Недействительное содержимое Base64"
+}

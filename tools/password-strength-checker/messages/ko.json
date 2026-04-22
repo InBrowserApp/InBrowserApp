@@ -1,0 +1,49 @@
+{
+  "inputTitle": "비밀번호",
+  "resultTitle": "강도 요약",
+  "passwordLabel": "비밀번호",
+  "passwordPlaceholder": "평가할 비밀번호를 입력하세요",
+  "show": "표시",
+  "hide": "숨기기",
+  "privacyHint": "강도 검사는 브라우저에서 로컬로 실행됩니다.",
+  "empty": "비밀번호를 입력해 강도를 확인하세요.",
+  "entropyBits": "엔트로피: {bits}비트",
+  "log10Guesses": "추측 횟수(log10): {value}",
+  "strength0": "매우 약함",
+  "strength1": "약함",
+  "strength2": "보통",
+  "strength3": "강함",
+  "strength4": "매우 강함",
+  "length": "길이",
+  "unique": "고유 문자 수",
+  "characterSets": "문자 집합",
+  "crackOffline": "해독 시간(오프라인 1e10/초)",
+  "crackOnline": "해독 시간(온라인 100/초)",
+  "durationFormat": "약 {value} {unit}",
+  "durationUnderSecond": "1초 미만",
+  "unit": {
+    "seconds": "초",
+    "minutes": "분",
+    "hours": "시간",
+    "days": "일",
+    "months": "개월",
+    "years": "년"
+  },
+  "warning": {
+    "common": "매우 흔한 비밀번호입니다.",
+    "short": "비밀번호가 너무 짧습니다.",
+    "sequence": "연속 패턴은 쉽게 추측됩니다.",
+    "repeat": "반복 패턴은 강도를 낮춥니다.",
+    "singleClass": "한 가지 문자 유형만 사용하면 강도가 낮아집니다."
+  },
+  "suggestion": {
+    "use-longer": "더 긴 비밀번호 또는 구문을 사용하세요.",
+    "add-uppercase": "대문자를 추가하세요.",
+    "add-lowercase": "소문자를 추가하세요.",
+    "add-numbers": "숫자를 추가하세요.",
+    "add-symbols": "기호를 추가하세요.",
+    "avoid-common": "흔하거나 유출된 비밀번호를 피하세요.",
+    "avoid-sequences": "123 또는 abc 같은 연속을 피하세요.",
+    "avoid-repetition": "반복 패턴을 피하세요."
+  }
+}

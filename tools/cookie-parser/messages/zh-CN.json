@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "头部类型",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "输入",
+  "inputPlaceholder": "在此粘贴 Cookie 或 Set-Cookie 头...",
+  "parsedJsonLabel": "解析后的 JSON",
+  "emptyOutputDescription": "解析结果将显示在这里...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "无效项",
+  "invalidFragmentsLabel": "无效片段",
+  "noCookiesTitle": "未找到 Cookie",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "downloadJsonLabel": "下载 JSON",
+  "resetLabel": "重置示例"
+}

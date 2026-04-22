@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "Nhập IMEI 15 chữ số",
+  "valid": "IMEI hợp lệ",
+  "invalid": "IMEI không hợp lệ",
+  "invalidLength": "IMEI phải có đúng 15 chữ số",
+  "invalidFormat": "IMEI chỉ được chứa chữ số",
+  "invalidChecksum": "Chữ số kiểm tra không hợp lệ",
+  "result": "Kết quả xác thực",
+  "status": "Trạng thái",
+  "reason": "Lý do",
+  "normalized": "IMEI đã chuẩn hóa",
+  "expectedCheckDigit": "Chữ số kiểm tra kỳ vọng",
+  "actualCheckDigit": "Chữ số kiểm tra thực tế"
+}

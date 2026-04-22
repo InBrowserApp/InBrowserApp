@@ -1,0 +1,4 @@
+{
+  "name": "IBAN-validator",
+  "description": "Valideert IBAN's met landlengte, formaat en controlesom."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Conversor Arábigo ↔ Romano",
+  "description": "Conversor bidireccional entre números romanos y arábigos. Soporta números romanos estándar del 1 al 3999 (I a MMMCMXCIX)."
+}

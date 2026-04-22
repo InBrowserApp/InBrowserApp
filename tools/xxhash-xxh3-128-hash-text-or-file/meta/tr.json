@@ -1,0 +1,4 @@
+{
+  "name": "xxHash (XXH3 128) Hash Metin veya Dosya",
+  "description": "Metin girişi veya dosya yükleme için xxHash XXH3 128 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 128-bit kriptografik olmayan sağlama toplamları hesaplayın"
+}

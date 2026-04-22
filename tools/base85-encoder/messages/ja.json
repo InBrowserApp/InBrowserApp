@@ -1,0 +1,17 @@
+{
+  "alphabet": "アルファベット",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "入力",
+  "inputPlaceholder": "エンコードするテキストを入力...",
+  "outputTitle": "Base85エンコード済み",
+  "outputPlaceholder": "Base85 出力がここに表示されます...",
+  "download": "Base85 をダウンロード",
+  "readFailed": "ファイルの読み取りに失敗しました",
+  "invalidBase85": "Z85 は入力長が 4 バイトの倍数である必要があります。",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "ファイルから読み込み"
+}

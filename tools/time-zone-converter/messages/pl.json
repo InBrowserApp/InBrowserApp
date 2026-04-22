@@ -1,0 +1,19 @@
+{
+  "fromLabel": "Z",
+  "toLabel": "Do",
+  "timeZoneLabel": "Strefa czasowa",
+  "dateTimeLabel": "Data i godzina",
+  "dateTimePlaceholder": "YYYY-MM-DD HH:mm:ss.SSS",
+  "formatHint": "Format: YYYY-MM-DD HH:mm:ss.SSS",
+  "nowLabel": "Teraz",
+  "offsetLabel": "Przesunięcie",
+  "invalidDateTimeLabel": "Nieprawidłowa data/godzina",
+  "swapLabel": "Zamień",
+  "detailsLabel": "Szczegóły",
+  "iso8601Label": "ISO 8601",
+  "utcLabel": "UTC",
+  "unixMillisecondsLabel": "Znacznik czasu Unix (ms)",
+  "unixSecondsLabel": "Znacznik czasu Unix (s)",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Bildmetadata-rensare (EXIF)",
+  "description": "Tar bort EXIF/XMP/IPTC/ICC-metadata från bilder utan omkodning. Behåller originalformatet och fungerar offline."
+}

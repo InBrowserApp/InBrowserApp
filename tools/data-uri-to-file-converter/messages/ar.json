@@ -1,0 +1,22 @@
+{
+  "inputTitle": "إدخال Data URI",
+  "inputPlaceholder": "الصق Data URI هنا...",
+  "invalidDataUriTitle": "Data URI غير صالح",
+  "detailsTitle": "التفاصيل",
+  "mimeTypeLabel": "نوع MIME",
+  "encodingLabel": "الترميز",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "مرمز URL",
+  "sizeLabel": "الحجم",
+  "fileNameLabel": "اسم الملف",
+  "fileNamePlaceholder": "مثل data.png",
+  "previewTitle": "معاينة",
+  "decodedOutputTitle": "الملف المفكوك",
+  "decodedOutputEmptyDescription": "ستظهر هنا تفاصيل الملف المفكوك ومعاينته وخيار تنزيله.",
+  "previewUnavailableDescription": "لا يمكن معاينة هذا النوع من الملفات داخل المتصفح. نزّله لفحص الملف الأصلي.",
+  "previewTruncatedLabel": "تم اقتطاع المعاينة",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "downloadFileLabel": "تنزيل الملف",
+  "resetLabel": "إعادة تعيين المثال"
+}

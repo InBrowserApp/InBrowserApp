@@ -1,0 +1,15 @@
+{
+  "imei": "IMEI",
+  "placeholder": "15 अंकों का IMEI दर्ज करें",
+  "valid": "मान्य IMEI",
+  "invalid": "अमान्य IMEI",
+  "invalidLength": "IMEI ठीक 15 अंकों का होना चाहिए",
+  "invalidFormat": "IMEI में केवल अंक होने चाहिए",
+  "invalidChecksum": "चेक अंक अमान्य है",
+  "result": "सत्यापन परिणाम",
+  "status": "स्थिति",
+  "reason": "कारण",
+  "normalized": "मानकीकृत IMEI",
+  "expectedCheckDigit": "अपेक्षित चेक अंक",
+  "actualCheckDigit": "वास्तविक चेक अंक"
+}

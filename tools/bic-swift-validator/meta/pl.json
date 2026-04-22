@@ -1,0 +1,4 @@
+{
+  "name": "Walidator BIC/SWIFT",
+  "description": "Weryfikuje kody BIC/SWIFT i analizuje bank, kraj oraz oddział."
+}

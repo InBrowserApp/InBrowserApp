@@ -1,0 +1,20 @@
+{
+  "inputLabel": "Wejście",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik Hash",
+  "hashResultDescription": "Wynik haszowania dla bieżącego tekstu wejściowego.",
+  "hexLabel": "Szesnastkowy",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesiętny",
+  "binaryLabel": "Binarny",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "configurationLabel": "Konfiguracja BLAKE2s",
+  "outputLengthLabel": "Długość Wyjścia",
+  "keyLabel": "Klucz BLAKE2 (Base64)",
+  "keyPlaceholder": "Opcjonalny klucz do hashowania z kluczem (zakodowany w Base64)",
+  "invalidBase64Title": "Wartość Base64 nie jest jeszcze prawidłowa.",
+  "invalidBase64Description": "Sprawdź brakujące dopełnienie, nieoczekiwane znaki lub częściowo wklejone dane."
+}

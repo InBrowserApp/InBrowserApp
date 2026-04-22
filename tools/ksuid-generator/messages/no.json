@@ -1,0 +1,20 @@
+{
+  "optionsTitle": "Alternativer",
+  "countLabel": "Antall",
+  "timestampModeLabel": "Tidsstempelmodus",
+  "timestampNowLabel": "Bruk nåværende tid",
+  "timestampCustomLabel": "Tilpasset tid",
+  "customDateTimeLabel": "Tilpasset dato/tid",
+  "customUnixSecondsLabel": "Tilpassede Unix-sekunder",
+  "setNowLabel": "Sett til nå",
+  "ksuidEpochLabel": "KSUID-epoke: 2014-05-13T16:53:20Z",
+  "timestampInvalid": "Ugyldig tidsstempel.",
+  "timestampOutOfRange": "Tidsstempelet må være mellom {min} og {max} (Unix-sekunder).",
+  "resultsTitle": "Resultater",
+  "resultsPlaceholder": "Genererte KSUID-er vises her...",
+  "generatedAtLabel": "Generert med Unix-tid: {seconds}",
+  "copyResultsLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Last ned",
+  "regenerateLabel": "Generer på nytt"
+}

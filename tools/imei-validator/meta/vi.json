@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực IMEI",
+  "description": "Xác thực IMEI 15 chữ số bằng kiểm tra định dạng và checksum Luhn."
+}

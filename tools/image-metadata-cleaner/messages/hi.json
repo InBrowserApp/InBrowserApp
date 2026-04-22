@@ -1,0 +1,17 @@
+{
+  "dragDropOrClick": "अपलोड करने के लिए क्लिक करें या छवि खींचें",
+  "supportedFormats": "JPEG, PNG, WebP समर्थित",
+  "remove": "हटाएं",
+  "cleanMetadata": "मेटाडेटा साफ़ करें",
+  "cleaningMetadata": "मेटाडेटा साफ़ किया जा रहा है...",
+  "results": "सफाई परिणाम",
+  "removed": "हटाया गया मेटाडेटा",
+  "reduction": "आकार में कमी",
+  "fileSize": "फ़ाइल आकार",
+  "downloadCleaned": "साफ़ की गई छवि डाउनलोड करें",
+  "note": "ब्राउज़र में स्थानीय रूप से प्रोसेस होता है। कोई अपलोड नहीं।",
+  "error": "त्रुटि",
+  "unsupportedFormat": "असमर्थित फ़ॉर्मैट। कृपया JPEG, PNG या WebP अपलोड करें।",
+  "cleaningComplete": "मेटाडेटा साफ़ किया गया।",
+  "cleaningFailed": "मेटाडेटा साफ़ करने में विफल। फिर से कोशिश करें।"
+}

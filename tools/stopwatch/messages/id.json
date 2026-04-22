@@ -1,0 +1,18 @@
+{
+  "startLabel": "Mulai",
+  "resumeLabel": "Lanjutkan",
+  "pauseLabel": "Jeda",
+  "lapLabel": "Putaran",
+  "resetLabel": "Reset",
+  "lapsLabel": "Putaran",
+  "clearLabel": "Bersihkan",
+  "exportLabel": "Ekspor",
+  "noLapsLabel": "Belum ada putaran",
+  "statusRunningLabel": "Berjalan",
+  "statusPausedLabel": "Dijeda",
+  "lapTimeLabel": "Putaran",
+  "totalTimeLabel": "Total",
+  "lapMillisecondsLabel": "Putaran (ms)",
+  "totalMillisecondsLabel": "Total (ms)",
+  "lapsDescription": "Tinjau split setiap putaran dan total waktu kumulatif. Ekspor daftar sebagai CSV atau bersihkan untuk memulai lagi."
+}

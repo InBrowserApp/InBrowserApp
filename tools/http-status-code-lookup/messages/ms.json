@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Cari mengikut kod status, nama atau penerangan...",
+  "all": "Semua",
+  "common": "Biasa",
+  "informationalFilter": "Maklumat (1xx)",
+  "successFilter": "Berjaya (2xx)",
+  "redirectionFilter": "Ubah hala (3xx)",
+  "clientErrorFilter": "Ralat Pelanggan (4xx)",
+  "serverErrorFilter": "Ralat Pelayan (5xx)",
+  "code": "Kod",
+  "name": "Nama",
+  "category": "Kategori",
+  "description": "Penerangan",
+  "informational": "Maklumat",
+  "success": "Berjaya",
+  "redirection": "Ubah hala",
+  "clientError": "Ralat Pelanggan",
+  "serverError": "Ralat Pelayan",
+  "noResultsTitle": "No matching status codes",
+  "noResultsDescription": "Try a different code, phrase, or category."
+}

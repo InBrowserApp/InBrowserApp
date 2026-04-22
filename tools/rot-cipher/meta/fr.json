@@ -1,0 +1,4 @@
+{
+  "name": "Chiffrement ROT Crypter & Décrypter",
+  "description": "Chiffrez et déchiffrez du texte avec les algorithmes ROT13, ROT5, ROT18 et ROT47. Chiffrement auto-réversible pour les lettres, chiffres et caractères ASCII"
+}

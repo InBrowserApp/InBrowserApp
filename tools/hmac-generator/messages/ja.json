@@ -1,0 +1,18 @@
+{
+  "configurationLabel": "設定",
+  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "secretKeyLabel": "秘密鍵",
+  "secretKeyPlaceholder": "秘密鍵を入力してください",
+  "algorithmLabel": "アルゴリズム",
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "importFromFileLabel": "ファイルから読み込み",
+  "hmacOutputLabel": "HMAC 出力",
+  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
+  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hexLabel": "16進数",
+  "base64Label": "Base64",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました"
+}
