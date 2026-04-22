@@ -5430,6 +5430,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jwk-pem-converter",
+    language: "ar",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "de",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "en",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "es",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "fr",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "he",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "hi",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "id",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "it",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ja",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ko",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ms",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "nl",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "no",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "pl",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "pt",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ru",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "sv",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "th",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "tr",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "vi",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "keccak-hash-text-or-file",
     language: "ar",
   },

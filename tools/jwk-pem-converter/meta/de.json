@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM Konverter",
+  "description": "Konvertiert JWK- und PEM-Schlüssel lokal. Unterstützt RSA, EC und OKP (Ed25519/X25519/Ed448/X448)."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM 轉換器",
+  "description": "在本機轉換 JWK 與 PEM 金鑰，支援 RSA、EC 與 OKP（Ed25519/X25519/Ed448/X448）"
+}
