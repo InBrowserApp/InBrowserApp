@@ -222,7 +222,7 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.95fr)]">
+    <div className="grid gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(21rem,0.92fr)] xl:items-start xl:gap-6">
       <FontBrowserPanel
         messages={messages}
         isSupported={isSupported}
@@ -248,7 +248,7 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
         }}
       />
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-5 xl:gap-6">
         <FontPreviewPanel
           messages={messages}
           activeFont={activeFont}

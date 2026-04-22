@@ -44,22 +44,20 @@ function FontPreviewPanel({
   const descriptor = buildFontFaceDescriptor(activeFont)
   const specimenText = sampleText || messages.previewFallback
   const surfaceClassName = darkBackground
-    ? "border-slate-700 bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-50"
-    : "bg-linear-to-br from-slate-50 via-white to-slate-100 text-slate-950"
-  const overlayClassName = darkBackground
-    ? "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.05),transparent_30%)]"
-    : "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.4),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(148,163,184,0.18),transparent_30%)]"
+    ? "border-slate-800 bg-slate-950 text-slate-50"
+    : "border-border bg-muted/30 text-foreground"
 
   return (
-    <Card className="overflow-hidden bg-linear-to-br from-card via-card to-muted/15">
-      <CardHeader className="border-b">
+    <Card className="overflow-hidden">
+      <CardHeader className="gap-3 border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
         <CardAction>
           <Button
             type="button"
-            variant="ghost"
+            variant="outline"
             size="icon-sm"
             aria-label={messages.previewBackground}
+            className="rounded-full"
             onClick={() => {
               onDarkBackgroundChange(!darkBackground)
             }}
@@ -69,7 +67,7 @@ function FontPreviewPanel({
         </CardAction>
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-5 pt-5">
+      <CardContent className="flex flex-col gap-4 pt-4">
         <Field>
           <FieldLabel className="sr-only">
             {messages.previewFallback}
@@ -88,20 +86,24 @@ function FontPreviewPanel({
 
         <div
           data-dark={darkBackground}
-          className={`relative overflow-hidden rounded-[1.75rem] border px-6 py-8 shadow-sm ${surfaceClassName}`}
+          className={`overflow-hidden rounded-2xl border px-5 py-5 sm:px-6 sm:py-6 ${surfaceClassName}`}
         >
-          <div aria-hidden="true" className={overlayClassName} />
-
           {activeFont && descriptor ? (
             <div
-              className="relative flex min-h-64 flex-col justify-between gap-8"
+              className="flex min-h-[20rem] flex-col justify-between gap-6"
               style={descriptor}
             >
               <div className="flex flex-wrap gap-2">
-                <Badge variant={darkBackground ? "secondary" : "outline"}>
+                <Badge
+                  variant={darkBackground ? "secondary" : "outline"}
+                  className="rounded-full"
+                >
                   {activeFont.displayFamily}
                 </Badge>
-                <Badge variant={darkBackground ? "secondary" : "outline"}>
+                <Badge
+                  variant={darkBackground ? "secondary" : "outline"}
+                  className="rounded-full"
+                >
                   {activeFont.displayStyle}
                 </Badge>
               </div>
@@ -110,14 +112,14 @@ function FontPreviewPanel({
                 <div className="text-[clamp(2.25rem,5vw,4.75rem)] leading-[0.95] tracking-tight">
                   {specimenText}
                 </div>
-                <div className="text-lg/relaxed opacity-75">
+                <div className="border-t border-current/10 pt-4 text-sm tracking-[0.18em] uppercase opacity-60">
                   Aa Bb Cc 0123456789 &amp; @#?!
                 </div>
               </div>
             </div>
           ) : (
             <Empty
-              className="relative min-h-64 border-none text-left"
+              className="min-h-[20rem] border-none text-left"
               data-dark={darkBackground}
             >
               <EmptyHeader className="items-start text-left">

@@ -90,8 +90,8 @@ function FontBrowserPanel({
   const groupSwitchId = useId()
 
   return (
-    <ToolPanelCard className="overflow-hidden bg-linear-to-br from-card via-card to-muted/20">
-      <CardHeader className="border-b bg-linear-to-r from-muted/35 via-transparent to-transparent">
+    <ToolPanelCard className="overflow-hidden">
+      <CardHeader className="gap-3 border-b">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary" className="rounded-full px-3">
             {messages.libraryTitle}
@@ -117,7 +117,7 @@ function FontBrowserPanel({
         </CardAction>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-5 pt-5">
+      <ToolPanelCardContent className="gap-4 pt-4">
         <FieldGroup className="gap-4">
           <Field>
             <FieldLabel htmlFor={searchInputId} className="sr-only">
@@ -140,7 +140,7 @@ function FontBrowserPanel({
             </div>
           </Field>
 
-          <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto]">
+          <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] md:items-end">
             <Field>
               <FieldLabel>{messages.detailsStyle}</FieldLabel>
               <ToggleGroup
@@ -197,7 +197,10 @@ function FontBrowserPanel({
               </ToggleGroup>
             </Field>
 
-            <Field orientation="horizontal" className="self-end pt-0.5">
+            <Field
+              orientation="horizontal"
+              className="gap-3 self-end pt-0.5 md:justify-self-end"
+            >
               <FieldLabel htmlFor={groupSwitchId}>
                 {messages.groupLabel}
               </FieldLabel>
@@ -211,10 +214,10 @@ function FontBrowserPanel({
           </div>
         </FieldGroup>
 
-        <div className="overflow-hidden rounded-2xl border bg-background/70">
+        <div className="overflow-hidden rounded-2xl border bg-muted/15">
           <ScrollArea className="h-[30rem]">
             {displayGroups.length > 0 ? (
-              <div className="flex flex-col gap-5 p-4">
+              <div className="flex flex-col gap-4 p-4">
                 {displayGroups.map((group) => (
                   <section key={group.id} className="flex flex-col gap-3">
                     {group.label ? (
@@ -223,7 +226,7 @@ function FontBrowserPanel({
                       </div>
                     ) : null}
 
-                    <div className="grid gap-2 sm:grid-cols-2">
+                    <div className="grid gap-3 sm:grid-cols-2">
                       {group.items.map((font) => (
                         <FontTile
                           key={font.id}
@@ -253,7 +256,7 @@ function FontBrowserPanel({
         </div>
 
         {statusMessage ? (
-          <div className="rounded-2xl border border-dashed border-border/80 bg-muted/20 px-4 py-3 text-sm text-muted-foreground">
+          <div className="rounded-2xl border border-dashed border-border/80 bg-muted/15 px-4 py-3 text-sm text-muted-foreground">
             {statusMessage}
           </div>
         ) : null}
@@ -281,15 +284,15 @@ function FontTile({
       onClick={() => {
         onSelect(font.id)
       }}
-      className="flex flex-col gap-3 rounded-2xl border border-border/80 bg-card/80 p-4 text-left transition-colors hover:border-foreground/20 hover:bg-card data-[active=true]:border-primary/40 data-[active=true]:bg-primary/5"
+      className="flex flex-col gap-2.5 rounded-xl border border-border/80 bg-background px-4 py-3.5 text-left transition-colors hover:border-foreground/20 hover:bg-muted/20 data-[active=true]:border-foreground/20 data-[active=true]:bg-muted/30"
     >
       <div
-        className="line-clamp-2 text-lg leading-tight font-medium"
+        className="line-clamp-2 text-[1.05rem] leading-tight font-medium"
         style={descriptor ?? undefined}
       >
         {font.displayName}
       </div>
-      <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
+      <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs text-muted-foreground">
         <span>{font.displayFamily}</span>
         <span>{font.displayStyle}</span>
       </div>
