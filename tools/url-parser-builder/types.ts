@@ -110,7 +110,6 @@ type UrlParserBuilderMessages = Readonly<{
   UrlParserBuilderLocalizedCatalog
 
 export type {
-  UrlBuildError,
   UrlBuildResult,
   UrlBuilderDraft,
   UrlParseResult,

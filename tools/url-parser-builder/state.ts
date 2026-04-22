@@ -237,4 +237,3 @@ export {
   draftFromBuilder,
   editorReducer,
 }
-export type { BuilderState, UrlEditorAction, UrlEditorState }
