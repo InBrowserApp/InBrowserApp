@@ -9110,6 +9110,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sitemap-xml-generator",
+    language: "ar",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "de",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "en",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "es",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "fr",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "he",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "hi",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "id",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "it",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "ja",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "ko",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "ms",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "nl",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "no",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "pl",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "pt",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "ru",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "sv",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "th",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "tr",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "vi",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "sitemap-xml-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "slug-generator",
     language: "ar",
   },

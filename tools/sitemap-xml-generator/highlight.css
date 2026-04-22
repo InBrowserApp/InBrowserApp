@@ -1,0 +1,47 @@
+.sitemap-xml-highlight-surface {
+  overflow: auto;
+}
+
+.sitemap-xml-highlight {
+  min-height: 20rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  white-space: pre;
+}
+
+.sitemap-xml-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.sitemap-xml-highlight-empty {
+  min-height: 20rem;
+  width: 100%;
+}
+
+.sitemap-xml-highlight .hljs-comment,
+.sitemap-xml-highlight .hljs-punctuation {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.sitemap-xml-highlight .hljs-tag,
+.sitemap-xml-highlight .hljs-name,
+.sitemap-xml-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.sitemap-xml-highlight .hljs-string {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.sitemap-xml-highlight .hljs-symbol,
+.sitemap-xml-highlight .hljs-meta {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}
+
+.sitemap-xml-highlight .hljs-number {
+  color: color-mix(in oklab, var(--chart-3) 80%, var(--foreground));
+}

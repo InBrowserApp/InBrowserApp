@@ -1,0 +1,186 @@
+import {
+  ToolPanelCard,
+  ToolPanelCardContent,
+  ToolPanelCardFooter,
+} from "@workspace/ui/components/tool/tool-panel-card"
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+} from "@workspace/ui/components/ui/field"
+import { Button } from "@workspace/ui/components/ui/button"
+import { Input } from "@workspace/ui/components/ui/input"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/ui/select"
+import { Trash2 } from "@workspace/ui/icons"
+
+import {
+  CHANGE_FREQUENCIES,
+  type ChangeFrequency,
+  type UrlEntryInput,
+} from "../core/sitemap-state"
+import type { SitemapXmlGeneratorMessages } from "../client/types"
+
+type UrlsetEntriesCardProps = Readonly<{
+  messages: SitemapXmlGeneratorMessages
+  entries: readonly UrlEntryInput[]
+  onEntryChange: (
+    entryId: string,
+    key: keyof Omit<UrlEntryInput, "id">,
+    value: string
+  ) => void
+  onEntryAdd: () => void
+  onEntryRemove: (entryId: string) => void
+}>
+
+function UrlsetEntriesCard({
+  messages,
+  entries,
+  onEntryChange,
+  onEntryAdd,
+  onEntryRemove,
+}: UrlsetEntriesCardProps) {
+  return (
+    <ToolPanelCard>
+      <ToolPanelCardContent className="gap-6 p-5">
+        <FieldGroup className="gap-6">
+          <Field>
+            <FieldContent>
+              <FieldLabel>{messages.urlEntriesLabel}</FieldLabel>
+              <FieldDescription>
+                {messages.urlEntriesDescription}
+              </FieldDescription>
+            </FieldContent>
+          </Field>
+
+          <div className="grid gap-4">
+            {entries.map((entry, index) => (
+              <div
+                key={entry.id}
+                className="rounded-2xl border border-border/70 bg-muted/20 p-4"
+              >
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <p className="font-medium">
+                    {messages.urlEntryLabel.replace(
+                      "{index}",
+                      String(index + 1)
+                    )}
+                  </p>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      onEntryRemove(entry.id)
+                    }}
+                  >
+                    <Trash2 data-icon="inline-start" />
+                    {messages.removeEntryLabel}
+                  </Button>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  <Field>
+                    <FieldLabel htmlFor={`${entry.id}-loc`}>
+                      {messages.locationLabel}
+                    </FieldLabel>
+                    <Input
+                      id={`${entry.id}-loc`}
+                      spellCheck={false}
+                      value={entry.loc}
+                      placeholder={messages.pathPlaceholder}
+                      onChange={(event) => {
+                        onEntryChange(entry.id, "loc", event.target.value)
+                      }}
+                    />
+                  </Field>
+
+                  <Field>
+                    <FieldLabel htmlFor={`${entry.id}-lastmod`}>
+                      {messages.lastModifiedLabel}
+                    </FieldLabel>
+                    <Input
+                      id={`${entry.id}-lastmod`}
+                      spellCheck={false}
+                      value={entry.lastmod}
+                      placeholder={messages.lastModifiedPlaceholder}
+                      onChange={(event) => {
+                        onEntryChange(entry.id, "lastmod", event.target.value)
+                      }}
+                    />
+                  </Field>
+
+                  <Field>
+                    <FieldLabel>{messages.changeFrequencyLabel}</FieldLabel>
+                    <Select
+                      value={entry.changefreq || "__empty__"}
+                      onValueChange={(value) => {
+                        onEntryChange(
+                          entry.id,
+                          "changefreq",
+                          value === "__empty__"
+                            ? ""
+                            : (value as ChangeFrequency)
+                        )
+                      }}
+                    >
+                      <SelectTrigger className="w-full">
+                        <SelectValue
+                          placeholder={messages.changeFrequencyPlaceholder}
+                        />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="__empty__">
+                          {messages.changeFrequencyPlaceholder}
+                        </SelectItem>
+                        {CHANGE_FREQUENCIES.map((value) => (
+                          <SelectItem key={value} value={value}>
+                            {value}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+
+                  <Field>
+                    <FieldLabel htmlFor={`${entry.id}-priority`}>
+                      {messages.priorityLabel}
+                    </FieldLabel>
+                    <Input
+                      id={`${entry.id}-priority`}
+                      type="number"
+                      inputMode="decimal"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value={entry.priority}
+                      placeholder={messages.priorityPlaceholder}
+                      onChange={(event) => {
+                        onEntryChange(entry.id, "priority", event.target.value)
+                      }}
+                    />
+                  </Field>
+                </div>
+              </div>
+            ))}
+          </div>
+        </FieldGroup>
+      </ToolPanelCardContent>
+
+      <ToolPanelCardFooter className="justify-start border-t px-5 py-4">
+        <Button type="button" variant="outline" size="sm" onClick={onEntryAdd}>
+          {messages.addUrlEntryLabel}
+        </Button>
+      </ToolPanelCardFooter>
+    </ToolPanelCard>
+  )
+}
+
+export { UrlsetEntriesCard }
