@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Tùy chọn",
+  "alphabetLabel": "Bảng chữ cái",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Đầu vào Base58",
+  "inputPlaceholder": "Nhập văn bản Base58...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "decodedOutputTitle": "Đầu ra đã giải mã",
+  "decodedOutputEmptyDescription": "Văn bản đã giải mã sẽ xuất hiện ở đây...",
+  "downloadFileLabel": "Tải tệp",
+  "previewTruncatedLabel": "Bản xem trước bị cắt",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "resetLabel": "Đặt lại ví dụ",
+  "invalidBase58Title": "Văn bản Base58 không hợp lệ",
+  "fileReadFailedTitle": "Không thể đọc tệp"
+}

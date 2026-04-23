@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "Rò rỉ WebRTC",
+  "unableToGetIp": "Không thể lấy IP",
+  "hostname": "Tên máy chủ",
+  "isp": "Nhà cung cấp dịch vụ Internet",
+  "ipOrganization": "Tổ chức IP",
+  "asn": "ASN",
+  "asnOrganization": "Tổ chức ASN",
+  "location": "Vị trí",
+  "country": "Quốc gia",
+  "timezone": "Múi giờ",
+  "webrtcDescription": "Giao diện bổ sung và địa chỉ ứng viên cục bộ được hiển thị trong quá trình đàm phán WebRTC.",
+  "unableToGetIpDescription": "Việc tra cứu không trả về địa chỉ công cộng. Hãy kiểm tra kết nối, VPN, proxy hoặc cài đặt quyền riêng tư của bạn rồi thử lại.",
+  "fetchingIp": "Đang tìm nạp địa chỉ IP",
+  "fetchingIpDescription": "Tra cứu địa chỉ công cộng và chi tiết mạng của bạn từ nhiều nhà cung cấp.",
+  "copyIp": "Sao chép IP",
+  "copied": "Đã sao chép",
+  "ipv4Description": "Địa chỉ IPv4 công khai hiện hiển thị với các trang web và API.",
+  "ipv6Description": "Địa chỉ IPv6 công khai hiển thị khi mạng của bạn hỗ trợ IPv6 gốc hoặc IPv6 đường hầm."
+}

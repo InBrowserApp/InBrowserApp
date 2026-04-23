@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "ابحث باسم اللون أو قيمة HEX...",
+  "all": "الكل",
+  "red": "أحمر",
+  "orange": "برتقالي",
+  "yellow": "أصفر",
+  "green": "أخضر",
+  "cyan": "سماوي",
+  "blue": "أزرق",
+  "purple": "أرجواني",
+  "pink": "وردي",
+  "brown": "بني",
+  "gray": "رمادي",
+  "white": "أبيض",
+  "swatch": "اللون",
+  "name": "الاسم",
+  "hex": "HEX",
+  "rgb": "RGB",
+  "resetLabel": "إعادة ضبط",
+  "noResultsTitle": "لا توجد ألوان مطابقة"
+}

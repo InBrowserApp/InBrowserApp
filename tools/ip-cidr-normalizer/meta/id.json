@@ -1,0 +1,4 @@
+{
+  "name": "Normalizer IP/CIDR",
+  "description": "Menormalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan IP atau rentang CIDR apa pun untuk mendapatkan format standar secara instan."
+}

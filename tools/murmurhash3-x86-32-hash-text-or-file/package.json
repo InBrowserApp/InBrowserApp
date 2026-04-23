@@ -1,0 +1,25 @@
+{
+  "name": "@tool/murmurhash3-x86-32-hash-text-or-file",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "murmurhash3js-revisited": "catalog:",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:",
+    "@types/murmurhash3js-revisited": "catalog:"
+  }
+}

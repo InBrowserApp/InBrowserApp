@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur Chmod",
+  "description": "Convertir les permissions de fichiers Unix entre notation numérique (755) et symbolique (rwxr-xr-x)"
+}

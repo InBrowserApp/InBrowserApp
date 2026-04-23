@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "ตัวเลือก",
+  "alphabetLabel": "อักษร",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "อินพุต Base58",
+  "inputPlaceholder": "ป้อนข้อความ Base58...",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "decodedOutputTitle": "ผลลัพธ์ที่ถอดรหัส",
+  "decodedOutputEmptyDescription": "ข้อความที่ถอดรหัสจะปรากฏที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลดไฟล์",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "resetLabel": "รีเซ็ตตัวอย่าง",
+  "invalidBase58Title": "ข้อความ Base58 ไม่ถูกต้อง",
+  "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ"
+}

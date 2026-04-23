@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI-invoer",
+  "inputPlaceholder": "Plak Data URI hier...",
+  "invalidDataUriTitle": "Ongeldige Data URI",
+  "detailsTitle": "Details",
+  "mimeTypeLabel": "MIME-type",
+  "encodingLabel": "Codering",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-gecodeerd",
+  "sizeLabel": "Grootte",
+  "fileNameLabel": "Bestandsnaam",
+  "fileNamePlaceholder": "bijv. data.png",
+  "previewTitle": "Voorbeeld",
+  "decodedOutputTitle": "Gedecodeerd bestand",
+  "decodedOutputEmptyDescription": "De details, voorbeeldweergave en download van het gedecodeerde bestand verschijnen hier.",
+  "previewUnavailableDescription": "Dit bestandstype kan niet in de browser worden weergegeven. Download het om het ruwe bestand te bekijken.",
+  "previewTruncatedLabel": "Voorbeeld ingekort",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadFileLabel": "Bestand downloaden",
+  "resetLabel": "Voorbeeld resetten"
+}

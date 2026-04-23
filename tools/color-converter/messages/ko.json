@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "색상",
+  "resultsTitle": "결과",
+  "previewTitle": "미리보기",
+  "enableAlphaLabel": "알파 활성화",
+  "invalidColorMessage": "유효하지 않은 색상 형식",
+  "copyValueLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "keywordLabel": "CSS 키워드",
+  "hexInfo": "16진수 색상 표기법, 웹 개발에서 가장 일반적",
+  "rgbInfo": "빨강, 초록, 파랑 - 화면용 가산 색상 모델",
+  "hslInfo": "색상, 채도, 명도 - 직관적인 색상 조정",
+  "hsvInfo": "색상, 채도, 명도 - HSB라고도 하며, 색상 선택기에서 일반적",
+  "hwbInfo": "색상, 백색도, 흑색도 - CSS4 형식, 알파 미지원",
+  "labInfo": "CIE LAB - 지각적으로 균일한 색 공간, 알파 미지원",
+  "lchInfo": "명도, 채도, 색상 - 원통형 LAB, 색상 조정 용이, 알파 미지원",
+  "cmykInfo": "시안, 마젠타, 옐로우, 블랙 - 인쇄 표준, 알파 미지원",
+  "keywordInfo": "red, blue, coral 같은 CSS 색상 이름 - 140개 이상 사전 정의 색상, 알파 미지원"
+}

@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI इनपुट",
+  "inputPlaceholder": "यहाँ Data URI पेस्ट करें...",
+  "invalidDataUriTitle": "अमान्य Data URI",
+  "detailsTitle": "विवरण",
+  "mimeTypeLabel": "MIME प्रकार",
+  "encodingLabel": "एन्कोडिंग",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL एन्कोडेड",
+  "sizeLabel": "आकार",
+  "fileNameLabel": "फ़ाइल नाम",
+  "fileNamePlaceholder": "जैसे data.png",
+  "previewTitle": "पूर्वावलोकन",
+  "decodedOutputTitle": "डिकोड की गई फ़ाइल",
+  "decodedOutputEmptyDescription": "डिकोड की गई फ़ाइल का विवरण, प्रीव्यू और डाउनलोड यहाँ दिखाई देगा।",
+  "previewUnavailableDescription": "इस फ़ाइल प्रकार का प्रीव्यू ब्राउज़र में नहीं दिखाया जा सकता। मूल फ़ाइल देखने के लिए इसे डाउनलोड करें।",
+  "previewTruncatedLabel": "प्रीव्यू संक्षिप्त किया गया",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadFileLabel": "फ़ाइल डाउनलोड करें",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

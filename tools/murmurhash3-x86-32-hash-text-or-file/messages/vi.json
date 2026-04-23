@@ -1,0 +1,18 @@
+{
+  "inputLabel": "\u0110\u1ea7u v\u00e0o",
+  "plainTextLabel": "V\u0103n b\u1ea3n thu\u1ea7n",
+  "plainTextDescription": "D\u00e1n ho\u1eb7c nh\u1eadp b\u1ea5t k\u1ef3 v\u0103n b\u1ea3n UTF-8 n\u00e0o, bao g\u1ed3m c\u1ea3 bi\u1ec3u t\u01b0\u1ee3ng c\u1ea3m x\u00fac v\u00e0 k\u00fd t\u1ef1 kh\u00f4ng ph\u1ea3i Latinh.",
+  "importFromFileLabel": "Nh\u1eadp t\u1eeb t\u1ec7p",
+  "hashResultLabel": "K\u1ebft qu\u1ea3 Hash",
+  "hashResultDescription": "K\u1ebft qu\u1ea3 b\u0103m cho \u0111\u1ea7u v\u00e0o v\u0103n b\u1ea3n hi\u1ec7n t\u1ea1i.",
+  "hexLabel": "Th\u1eadp l\u1ee5c ph\u00e2n",
+  "base64Label": "Base64",
+  "decimalLabel": "Th\u1eadp ph\u00e2n",
+  "binaryLabel": "Nh\u1ecb ph\u00e2n",
+  "copyResultLabel": "Sao ch\u00e9p k\u1ebft qu\u1ea3",
+  "copiedLabel": "\u0110\u00e3 sao ch\u00e9p",
+  "seedSectionLabel": "H\u1ea1t gi\u1ed1ng",
+  "seedLabel": "H\u1ea1t gi\u1ed1ng (t\u00f9y ch\u1ecdn)",
+  "seedPlaceholder": "0 ho\u1eb7c 0x...",
+  "seedInvalid": "Nh\u1eadp s\u1ed1 th\u1eadp ph\u00e2n ho\u1eb7c gi\u00e1 tr\u1ecb hex c\u00f3 0x."
+}

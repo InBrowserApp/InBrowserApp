@@ -1,0 +1,4 @@
+{
+  "name": "ファイルから Data URI 変換",
+  "description": "ファイルを Data URI 文字列に変換し、HTML、CSS、JSON へ埋め込めます。完全オフラインで動作します。"
+}

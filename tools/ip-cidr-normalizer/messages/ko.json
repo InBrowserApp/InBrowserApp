@@ -1,0 +1,12 @@
+{
+  "inputTitle": "IP 또는 CIDR 입력",
+  "inputDescription": "단일 IPv4 주소, IPv6 주소 또는 CIDR 블록을 입력하여 이를 표준 네트워크 표기법으로 정규화합니다.",
+  "resultTitle": "정규화된 결과",
+  "resultDescription": "정식 주소 또는 네트워크 범위. CIDR 입력은 호스트 비트가 지워진 네트워크 주소로 다시 작성됩니다.",
+  "label": "IP/CIDR",
+  "placeholder": "예를 들어 192.168.0.15/24 또는 2001:db8::1234/64",
+  "invalidInput": "유효하지 않은 IP/CIDR",
+  "invalidInputDescription": "유효한 IPv4 주소, IPv6 주소 또는 CIDR 범위를 사용하세요. 접두사 길이는 주소 계열과 일치해야 합니다.",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨"
+}

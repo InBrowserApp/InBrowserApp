@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "ヘッダー種別",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "入力",
+  "inputPlaceholder": "Cookie または Set-Cookie ヘッダーを貼り付けてください...",
+  "parsedJsonLabel": "解析済み JSON",
+  "emptyOutputDescription": "解析結果がここに表示されます...",
+  "cookieCountLabel": "Cookie",
+  "invalidCountLabel": "無効",
+  "invalidFragmentsLabel": "無効な断片",
+  "noCookiesTitle": "Cookie が見つかりません",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "downloadJsonLabel": "JSON をダウンロード",
+  "resetLabel": "例をリセット"
+}

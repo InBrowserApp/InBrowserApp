@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "रंग नाम या HEX मान से खोजें...",
+  "all": "सभी",
+  "red": "लाल",
+  "orange": "नारंगी",
+  "yellow": "पीला",
+  "green": "हरा",
+  "cyan": "सियान",
+  "blue": "नीला",
+  "purple": "बैंगनी",
+  "pink": "गुलाबी",
+  "brown": "भूरा",
+  "gray": "धूसर",
+  "white": "सफ़ेद",
+  "swatch": "रंग",
+  "name": "नाम",
+  "hex": "HEX",
+  "rgb": "आरजीबी",
+  "resetLabel": "रीसेट करें",
+  "noResultsTitle": "कोई मेल खाते रंग नहीं"
+}

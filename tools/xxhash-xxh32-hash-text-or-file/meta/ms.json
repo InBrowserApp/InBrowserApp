@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH32) Teks atau Fail",
+  "description": "Jana hash xxHash XXH32 untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi"
+}

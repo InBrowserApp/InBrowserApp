@@ -1,0 +1,4 @@
+{
+  "name": "IP/CIDR 정규화 도구",
+  "description": "IPv4 및 IPv6 형식의 IP 주소와 CIDR 표기법을 정규화합니다. 임의의 IP 또는 CIDR 범위를 입력하여 표준화된 형식을 즉시 얻으세요."
+}

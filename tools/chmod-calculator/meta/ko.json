@@ -1,0 +1,4 @@
+{
+  "name": "Chmod 계산기",
+  "description": "Unix 파일 권한을 숫자 (755)와 기호 (rwxr-xr-x) 표기법 간에 변환"
+}

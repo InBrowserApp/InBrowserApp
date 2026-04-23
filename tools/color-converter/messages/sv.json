@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Färger",
+  "resultsTitle": "Resultat",
+  "previewTitle": "Förhandsgranskning",
+  "enableAlphaLabel": "Aktivera Alpha",
+  "invalidColorMessage": "Ogiltigt färgformat",
+  "copyValueLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad",
+  "keywordLabel": "CSS-nyckelord",
+  "hexInfo": "Hexadecimal färgnotation, vanligast inom webbutveckling",
+  "rgbInfo": "Röd, Grön, Blå - additiv färgmodell för skärmar",
+  "hslInfo": "Nyans, Mättnad, Ljushet - intuitiva färgjusteringar",
+  "hsvInfo": "Nyans, Mättnad, Värde - även känd som HSB, vanlig i färgväljare",
+  "hwbInfo": "Nyans, Vithet, Svärta - CSS4-format, ingen alfa",
+  "labInfo": "CIE LAB - perceptuellt enhetlig färgrymd, ingen alfa",
+  "lchInfo": "Ljushet, Kroma, Nyans - cylindrisk LAB, enklare nyansjustering, ingen alfa",
+  "cmykInfo": "Cyan, Magenta, Gul, Svart - tryckstandard, ingen alfa",
+  "keywordInfo": "CSS-färgnamn som red, blue, coral - 140+ fördefinierade färger, ingen alfa"
+}

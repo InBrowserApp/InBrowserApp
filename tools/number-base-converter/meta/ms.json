@@ -1,0 +1,4 @@
+{
+  "name": "Penukar Asas Nombor",
+  "description": "Tukar nombor antara binari, oktal, perpuluhan, heksadesimal, base32, base36, base62, base64 dan asas tersuai (2-64)."
+}

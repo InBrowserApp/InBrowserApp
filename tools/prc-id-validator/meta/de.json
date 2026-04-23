@@ -1,0 +1,4 @@
+{
+  "name": "PRC-Resident-ID-Validator",
+  "description": "Validiert PRC-Resident-IDs und dekodiert Region, Geburtsdatum und Prüfsumme"
+}

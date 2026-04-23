@@ -1,0 +1,4 @@
+{
+  "name": "MD4-hash tekst eller fil",
+  "description": "Generer MD4-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske."
+}

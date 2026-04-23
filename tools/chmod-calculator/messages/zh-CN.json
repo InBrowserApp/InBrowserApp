@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "presetsTitle": "常用预设",
+  "executablePresetLabel": "可执行文件",
+  "readOnlyPresetLabel": "只读文件",
+  "fullAccessPresetLabel": "完全访问",
+  "ownerOnlyPresetLabel": "仅所有者",
+  "privateFilePresetLabel": "私有文件",
+  "sharedDirPresetLabel": "共享目录",
+  "numericPermissionLabel": "数字权限",
+  "numericPermissionPlaceholder": "例如 755",
+  "symbolicPermissionLabel": "符号权限",
+  "symbolicPermissionPlaceholder": "例如 rwxr-xr-x",
+  "permissionMatrixLabel": "权限矩阵",
+  "readLabel": "读取",
+  "writeLabel": "写入",
+  "executeLabel": "执行",
+  "ownerLabel": "所有者",
+  "groupLabel": "用户组",
+  "othersLabel": "其他用户",
+  "chmodCommandLabel": "Chmod 命令"
+}

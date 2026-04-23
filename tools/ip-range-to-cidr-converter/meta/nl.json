@@ -1,0 +1,4 @@
+{
+  "name": "IP-bereik naar CIDR-converter",
+  "description": "Converteer IPv4- of IPv6-start- en eindadressen naar de minimale set CIDR-blokken die precies het bereik dekt."
+}

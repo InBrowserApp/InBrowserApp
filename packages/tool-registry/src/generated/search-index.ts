@@ -889,6 +889,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "base58-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base58",
+      "decode",
+      "decoder",
+      "decoding",
+      "text",
+      "file",
+      "converter",
+      "binary",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base58",
+        description:
+          "فك ترميز نصوص أو ملفات Base58 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base58-Decoder",
+        description:
+          "Dekodiert Base58-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base58 Decoder",
+        description:
+          "Decode Base58 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base58",
+        description:
+          "Decodifica texto o archivos Base58 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base58",
+        description:
+          "Décode le texte ou les fichiers Base58 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base58",
+        description:
+          "מפענח טקסט או קבצים ב-Base58 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base58 डिकोडर",
+        description:
+          "Base58 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base58",
+        description:
+          "Dekode teks atau file Base58 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base58",
+        description:
+          "Decodifica testo o file Base58 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base58 デコーダー",
+        description:
+          "Base58のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base58 디코더",
+        description:
+          "Base58 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base58",
+        description:
+          "Nyahkod teks atau fail Base58 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base58-decoder",
+        description:
+          "Decodeer Base58-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base58-dekoder",
+        description:
+          "Dekoder Base58-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base58",
+        description:
+          "Dekoduj tekst lub pliki Base58 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base58",
+        description:
+          "Decodifica texto ou arquivos Base58 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base58-декодер",
+        description:
+          "Декодирует Base58-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base58-avkodare",
+        description:
+          "Avkoda Base58-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base58",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base58 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base58 Kod Çözücü",
+        description:
+          "Base58 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base58",
+        description:
+          "Giải mã văn bản hoặc tệp Base58 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base58 解码器",
+        description:
+          "将 Base58 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base58 解碼器",
+        description:
+          "將 Base58 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
+  {
     slug: "base58-encoder",
     category: "crypto",
     icon: "binary",
@@ -1140,6 +1273,272 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Base64 編碼與解碼工具",
         description:
           "直接在瀏覽器中將純文字編碼為 Base64，或將 Base64 解碼回 Unicode 文字。",
+      },
+    },
+  },
+  {
+    slug: "base85-decoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base85",
+      "ascii85",
+      "z85",
+      "decode",
+      "decoder",
+      "binary",
+      "text",
+      "file",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك ترميز Base85",
+        description:
+          "فك ترميز نصوص أو ملفات Base85 إلى البيانات الأصلية للنقل والتخزين والتكامل.",
+      },
+      de: {
+        name: "Base85-Decoder",
+        description:
+          "Dekodiert Base85-Text oder -Dateien zurück zu Originaldaten für Übertragung, Speicherung und Integration.",
+      },
+      en: {
+        name: "Base85 Decoder",
+        description:
+          "Decode Base85 text or files back to original data for transport, storage, and integration.",
+      },
+      es: {
+        name: "Decodificador Base85",
+        description:
+          "Decodifica texto o archivos Base85 de vuelta a los datos originales para transmisión, almacenamiento e integración.",
+      },
+      fr: {
+        name: "Décodeur Base85",
+        description:
+          "Décode le texte ou les fichiers Base85 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration.",
+      },
+      he: {
+        name: "מפענח Base85",
+        description:
+          "מפענח טקסט או קבצים ב-Base85 חזרה לנתונים המקוריים להעברה, אחסון ואינטגרציה.",
+      },
+      hi: {
+        name: "Base85 डिकोडर",
+        description:
+          "Base85 टेक्स्ट या फ़ाइलों को मूल डेटा में डिकोड करें ताकि ट्रांसमिशन, स्टोरेज और इंटीग्रेशन हो सके।",
+      },
+      id: {
+        name: "Decoder Base85",
+        description:
+          "Dekode teks atau file Base85 kembali ke data asli untuk transmisi, penyimpanan, dan integrasi.",
+      },
+      it: {
+        name: "Decodificatore Base85",
+        description:
+          "Decodifica testo o file Base85 per tornare ai dati originali per trasmissione, archiviazione e integrazione.",
+      },
+      ja: {
+        name: "Base85 デコーダー",
+        description:
+          "Base85のテキストやファイルを元のデータにデコードし、転送、保存、統合に利用。",
+      },
+      ko: {
+        name: "Base85 디코더",
+        description:
+          "Base85 텍스트나 파일을 원래 데이터로 디코딩하여 전송, 저장 및 통합에 사용.",
+      },
+      ms: {
+        name: "Penyahkod Base85",
+        description:
+          "Nyahkod teks atau fail Base85 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi.",
+      },
+      nl: {
+        name: "Base85-decoder",
+        description:
+          "Decodeer Base85-tekst of -bestanden terug naar originele gegevens voor overdracht, opslag en integratie.",
+      },
+      no: {
+        name: "Base85-dekoder",
+        description:
+          "Dekoder Base85-tekst eller -filer tilbake til originaldata for overføring, lagring og integrasjon.",
+      },
+      pl: {
+        name: "Dekoder Base85",
+        description:
+          "Dekoduj tekst lub pliki Base85 z powrotem do danych źródłowych dla transmisji, przechowywania i integracji.",
+      },
+      pt: {
+        name: "Decodificador Base85",
+        description:
+          "Decodifica texto ou arquivos Base85 de volta aos dados originais para transmissão, armazenamento e integração.",
+      },
+      ru: {
+        name: "Base85-декодер",
+        description:
+          "Декодирует Base85-текст или файлы обратно в исходные данные для передачи, хранения и интеграции.",
+      },
+      sv: {
+        name: "Base85-avkodare",
+        description:
+          "Avkoda Base85-text eller -filer tillbaka till originaldata för överföring, lagring och integration.",
+      },
+      th: {
+        name: "ตัวถอดรหัส Base85",
+        description:
+          "ถอดรหัสข้อความหรือไฟล์ Base85 กลับเป็นข้อมูลต้นฉบับเพื่อการส่งข้อมูล การจัดเก็บ และการเชื่อมต่อ.",
+      },
+      tr: {
+        name: "Base85 Kod Çözücü",
+        description:
+          "Base85 metinlerini veya dosyalarını özgün veriye geri döndürerek aktarım, depolama ve entegrasyonda kullanır.",
+      },
+      vi: {
+        name: "Bộ giải mã Base85",
+        description:
+          "Giải mã văn bản hoặc tệp Base85 về dữ liệu gốc để truyền tải, lưu trữ và tích hợp.",
+      },
+      "zh-CN": {
+        name: "Base85 解码器",
+        description:
+          "将 Base85 文本或文件解码还原为原始数据，用于传输、存储和集成。",
+      },
+      "zh-TW": {
+        name: "Base85 解碼器",
+        description:
+          "將 Base85 文字或檔案解碼還原為原始資料，用於傳輸、儲存和整合。",
+      },
+    },
+  },
+  {
+    slug: "base85-encoder",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "base85",
+      "ascii85",
+      "z85",
+      "encoder",
+      "encoding",
+      "text",
+      "file",
+      "binary",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مُرمِّز Base85",
+        description:
+          "ترميز النص أو الملفات إلى Base85 لنقل البيانات والتخزين وتطوير الويب.",
+      },
+      de: {
+        name: "Base85-Encoder",
+        description:
+          "Kodiert Text oder Dateien in Base85 für Datenübertragung, Speicherung und Webentwicklung.",
+      },
+      en: {
+        name: "Base85 Encoder",
+        description:
+          "Encode text or files to Base85 for data transport, storage, and web development.",
+      },
+      es: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto o archivos a Base85 para transmisión de datos, almacenamiento y desarrollo web.",
+      },
+      fr: {
+        name: "Encodeur Base85",
+        description:
+          "Encode du texte ou des fichiers en Base85 pour la transmission de données, le stockage et le développement web.",
+      },
+      he: {
+        name: "מקודד Base85",
+        description:
+          "מקודד טקסט או קבצים ל-Base85 להעברת נתונים, אחסון ופיתוח אתרים.",
+      },
+      hi: {
+        name: "Base85 एनकोडर",
+        description:
+          "टेक्स्ट या फ़ाइलों को Base85 में एनकोड करें ताकि डेटा ट्रांसमिशन, स्टोरेज और वेब डेवलपमेंट में उपयोग हो।",
+      },
+      id: {
+        name: "Encoder Base85",
+        description:
+          "Encode teks atau file ke Base85 untuk transmisi data, penyimpanan, dan pengembangan web.",
+      },
+      it: {
+        name: "Codificatore Base85",
+        description:
+          "Codifica testo o file in Base85 per trasmissione dati, archiviazione e sviluppo web.",
+      },
+      ja: {
+        name: "Base85 エンコーダー",
+        description:
+          "テキストやファイルをBase85にエンコードし、データ転送、保存、Web開発に利用。",
+      },
+      ko: {
+        name: "Base85 인코더",
+        description:
+          "텍스트나 파일을 Base85로 인코딩하여 데이터 전송, 저장 및 웹 개발에 활용.",
+      },
+      ms: {
+        name: "Pengekod Base85",
+        description:
+          "Kod teks atau fail ke Base85 untuk penghantaran data, penyimpanan dan pembangunan web.",
+      },
+      nl: {
+        name: "Base85-encoder",
+        description:
+          "Codeer tekst of bestanden naar Base85 voor gegevensoverdracht, opslag en webontwikkeling.",
+      },
+      no: {
+        name: "Base85-koder",
+        description:
+          "Kod tekst eller filer til Base85 for dataoverføring, lagring og webutvikling.",
+      },
+      pl: {
+        name: "Koder Base85",
+        description:
+          "Koduj tekst lub pliki do Base85 w celu transmisji danych, przechowywania i tworzenia stron WWW.",
+      },
+      pt: {
+        name: "Codificador Base85",
+        description:
+          "Codifica texto ou arquivos em Base85 para transmissão de dados, armazenamento e desenvolvimento web.",
+      },
+      ru: {
+        name: "Base85-кодировщик",
+        description:
+          "Кодирует текст или файлы в Base85 для передачи данных, хранения и веб-разработки.",
+      },
+      sv: {
+        name: "Base85-kodare",
+        description:
+          "Koda text eller filer till Base85 för dataöverföring, lagring och webbutveckling.",
+      },
+      th: {
+        name: "ตัวเข้ารหัส Base85",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์เป็น Base85 สำหรับการส่งข้อมูล การจัดเก็บ และการพัฒนาเว็บ",
+      },
+      tr: {
+        name: "Base85 Kodlayıcı",
+        description:
+          "Veri iletimi, depolama ve web geliştirme için metni veya dosyaları Base85'ye kodlar.",
+      },
+      vi: {
+        name: "Bộ mã hóa Base85",
+        description:
+          "Mã hóa văn bản hoặc tệp sang Base85 cho truyền dữ liệu, lưu trữ và phát triển web.",
+      },
+      "zh-CN": {
+        name: "Base85 编码器",
+        description:
+          "将文本或文件编码为 Base85，用于数据传输、存储和 Web 开发。",
+      },
+      "zh-TW": {
+        name: "Base85 編碼器",
+        description:
+          "將文字或檔案編碼為 Base85，用於資料傳輸、儲存和 Web 開發。",
       },
     },
   },
@@ -2045,6 +2444,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "business-days-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "date", "business-day", "calculator", "holiday", "schedule"],
+    locales: {
+      ar: {
+        name: "حاسبة أيام العمل",
+        description:
+          "احسب أيام العمل بين التواريخ وأضف أو اطرح أيام عمل مع عطلات نهاية الأسبوع والعطلات المخصصة.",
+      },
+      de: {
+        name: "Arbeitstage-Rechner",
+        description:
+          "Zählt Arbeitstage zwischen Daten und addiert oder subtrahiert Arbeitstage mit benutzerdefinierten Wochenenden und Feiertagen.",
+      },
+      en: {
+        name: "Business Days Calculator",
+        description:
+          "Count business days between dates, and add or subtract business days with custom weekends and holidays.",
+      },
+      es: {
+        name: "Calculadora de días hábiles",
+        description:
+          "Cuenta los días hábiles entre fechas y suma o resta días hábiles con fines de semana y festivos personalizados.",
+      },
+      fr: {
+        name: "Calculateur de jours ouvrés",
+        description:
+          "Compte les jours ouvrés entre deux dates et ajoute ou soustrait des jours ouvrés avec des week-ends et jours fériés personnalisés.",
+      },
+      he: {
+        name: "מחשבון ימי עבודה",
+        description:
+          "סופר ימי עבודה בין תאריכים ומוסיף או מחסיר ימי עבודה עם סופי שבוע וחגים מותאמים.",
+      },
+      hi: {
+        name: "कार्यदिवस कैलकुलेटर",
+        description:
+          "तिथियों के बीच कार्यदिवस गिनें और कस्टम सप्ताहांत व छुट्टियों के साथ कार्यदिवस जोड़ें या घटाएं।",
+      },
+      id: {
+        name: "Kalkulator hari kerja",
+        description:
+          "Menghitung hari kerja antara tanggal serta menambah atau mengurangi hari kerja dengan akhir pekan dan hari libur khusus.",
+      },
+      it: {
+        name: "Calcolatore di giorni lavorativi",
+        description:
+          "Conta i giorni lavorativi tra date e aggiunge o sottrae giorni lavorativi con weekend e festività personalizzati.",
+      },
+      ja: {
+        name: "営業日計算ツール",
+        description:
+          "日付間の営業日を数え、カスタム週末と祝日で営業日を加減します。",
+      },
+      ko: {
+        name: "영업일 계산기",
+        description:
+          "날짜 사이의 영업일을 계산하고 사용자 지정 주말과 휴일로 영업일을 더하거나 뺍니다.",
+      },
+      ms: {
+        name: "Pengira hari bekerja",
+        description:
+          "Kira hari bekerja antara tarikh dan tambah atau tolak hari bekerja dengan hujung minggu dan cuti yang disesuaikan.",
+      },
+      nl: {
+        name: "Werkdagen-rekenmachine",
+        description:
+          "Tel werkdagen tussen datums en tel werkdagen op of trek ze af met aangepaste weekenden en feestdagen.",
+      },
+      no: {
+        name: "Kalkulator for arbeidsdager",
+        description:
+          "Tell arbeidsdager mellom datoer og legg til eller trekk fra arbeidsdager med egendefinerte helger og fridager.",
+      },
+      pl: {
+        name: "Kalkulator dni roboczych",
+        description:
+          "Zlicza dni robocze między datami oraz dodaje lub odejmuje dni robocze z niestandardowymi weekendami i świętami.",
+      },
+      pt: {
+        name: "Calculadora de dias úteis",
+        description:
+          "Conta dias úteis entre datas e adiciona ou subtrai dias úteis com fins de semana e feriados personalizados.",
+      },
+      ru: {
+        name: "Калькулятор рабочих дней",
+        description:
+          "Подсчитывает рабочие дни между датами и добавляет или вычитает рабочие дни с настраиваемыми выходными и праздниками.",
+      },
+      sv: {
+        name: "Arbetsdagskalkylator",
+        description:
+          "Räkna arbetsdagar mellan datum och lägg till eller dra ifrån arbetsdagar med anpassade helger och helgdagar.",
+      },
+      th: {
+        name: "เครื่องคำนวณวันทำงาน",
+        description:
+          "นับวันทำงานระหว่างวันที่ และบวกหรือลบวันทำงานด้วยวันหยุดสุดสัปดาห์และวันหยุดที่กำหนดเอง",
+      },
+      tr: {
+        name: "İş Günü Hesaplayıcı",
+        description:
+          "Tarihler arasındaki iş günlerini sayar ve özel hafta sonları ile tatillerle iş günlerini ekler veya çıkarır.",
+      },
+      vi: {
+        name: "Máy tính ngày làm việc",
+        description:
+          "Đếm ngày làm việc giữa các ngày và cộng hoặc trừ ngày làm việc với cuối tuần và ngày lễ tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "工作日计算器",
+        description:
+          "统计日期之间的工作日，并按自定义周末和节假日进行工作日加减。",
+      },
+      "zh-TW": {
+        name: "工作日計算器",
+        description:
+          "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",
@@ -2174,6 +2696,769 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "大小寫轉換器",
         description:
           "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  {
+    slug: "chinese-uppercase-number-converter",
+    category: "misc",
+    icon: "binary",
+    tags: ["converter", "number", "chinese", "uppercase", "currency", "rmb"],
+    locales: {
+      ar: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      de: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      en: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      es: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      fr: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      he: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      hi: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      id: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      it: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      ja: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      ko: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      ms: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      nl: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      no: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      pl: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      pt: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      ru: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      sv: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      th: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      tr: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      vi: {
+        name: "Number ↔ Chinese Uppercase Converter",
+        description:
+          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+      },
+      "zh-CN": {
+        name: "数字 ↔ 中文大写数字转换器",
+        description:
+          "数字与中文金额大写双向转换，支持元/角/分、负数与两位小数。",
+      },
+      "zh-TW": {
+        name: "數字 ↔ 中文大寫數字轉換器",
+        description:
+          "數字與中文金額大寫雙向轉換，支援元/角/分、負數與兩位小數。",
+      },
+    },
+  },
+  {
+    slug: "chmod-calculator",
+    category: "developer",
+    icon: "lock",
+    tags: ["chmod", "permission", "unix", "linux", "file", "calculator"],
+    locales: {
+      ar: {
+        name: "حاسبة Chmod",
+        description:
+          "حساب أذونات ملفات Unix بين الترميز الرقمي (755) والرمزي (rwxr-xr-x)",
+      },
+      de: {
+        name: "Chmod-Rechner",
+        description:
+          "Unix-Dateiberechtigungen zwischen numerischer (755) und symbolischer (rwxr-xr-x) Notation umrechnen",
+      },
+      en: {
+        name: "Chmod Calculator",
+        description:
+          "Calculate Unix file permissions between numeric (755) and symbolic (rwxr-xr-x) notation",
+      },
+      es: {
+        name: "Calculadora Chmod",
+        description:
+          "Calcula permisos de archivos Unix entre notación numérica (755) y simbólica (rwxr-xr-x)",
+      },
+      fr: {
+        name: "Calculateur Chmod",
+        description:
+          "Convertir les permissions de fichiers Unix entre notation numérique (755) et symbolique (rwxr-xr-x)",
+      },
+      he: {
+        name: "מחשבון Chmod",
+        description:
+          "המרת הרשאות קבצים ב-Unix בין סימון מספרי (755) לסימון סמלי (rwxr-xr-x)",
+      },
+      hi: {
+        name: "Chmod कैलकुलेटर",
+        description:
+          "संख्यात्मक (755) और प्रतीकात्मक (rwxr-xr-x) नोटेशन के बीच Unix फ़ाइल अनुमतियों की गणना करें",
+      },
+      id: {
+        name: "Kalkulator Chmod",
+        description:
+          "Konversi izin file Unix antara notasi numerik (755) dan simbolik (rwxr-xr-x)",
+      },
+      it: {
+        name: "Calcolatore Chmod",
+        description:
+          "Calcola i permessi dei file Unix tra notazione numerica (755) e simbolica (rwxr-xr-x)",
+      },
+      ja: {
+        name: "Chmod 計算機",
+        description:
+          "Unix ファイル権限を数値 (755) と記号 (rwxr-xr-x) 表記の間で変換",
+      },
+      ko: {
+        name: "Chmod 계산기",
+        description:
+          "Unix 파일 권한을 숫자 (755)와 기호 (rwxr-xr-x) 표기법 간에 변환",
+      },
+      ms: {
+        name: "Kalkulator Chmod",
+        description:
+          "Tukar kebenaran fail Unix antara notasi angka (755) dan simbolik (rwxr-xr-x)",
+      },
+      nl: {
+        name: "Chmod-calculator",
+        description:
+          "Unix-bestandsrechten converteren tussen numerieke (755) en symbolische (rwxr-xr-x) notatie",
+      },
+      no: {
+        name: "Chmod-kalkulator",
+        description:
+          "Konverter Unix-filtillatelser mellom numerisk (755) og symbolsk (rwxr-xr-x) notasjon",
+      },
+      pl: {
+        name: "Kalkulator Chmod",
+        description:
+          "Konwertuj uprawnienia plików Unix między notacją numeryczną (755) a symboliczną (rwxr-xr-x)",
+      },
+      pt: {
+        name: "Calculadora Chmod",
+        description:
+          "Calcular permissões de arquivos Unix entre notação numérica (755) e simbólica (rwxr-xr-x)",
+      },
+      ru: {
+        name: "Калькулятор Chmod",
+        description:
+          "Конвертация прав доступа Unix между числовой (755) и символьной (rwxr-xr-x) нотацией",
+      },
+      sv: {
+        name: "Chmod-kalkylator",
+        description:
+          "Konvertera Unix-filrättigheter mellan numerisk (755) och symbolisk (rwxr-xr-x) notation",
+      },
+      th: {
+        name: "เครื่องคำนวณ Chmod",
+        description:
+          "แปลงสิทธิ์ไฟล์ Unix ระหว่างรูปแบบตัวเลข (755) และสัญลักษณ์ (rwxr-xr-x)",
+      },
+      tr: {
+        name: "Chmod Hesaplayıcı",
+        description:
+          "Unix dosya izinlerini sayısal (755) ve sembolik (rwxr-xr-x) gösterim arasında dönüştür",
+      },
+      vi: {
+        name: "Máy tính Chmod",
+        description:
+          "Chuyển đổi quyền tệp Unix giữa ký hiệu số (755) và ký hiệu (rwxr-xr-x)",
+      },
+      "zh-CN": {
+        name: "Chmod 计算器",
+        description:
+          "在数字 (755) 和符号 (rwxr-xr-x) 表示法之间转换 Unix 文件权限",
+      },
+      "zh-TW": {
+        name: "Chmod 計算器",
+        description:
+          "在數字 (755) 和符號 (rwxr-xr-x) 表示法之間轉換 Unix 檔案權限",
+      },
+    },
+  },
+  {
+    slug: "color-contrast-checker",
+    category: "web",
+    icon: "image",
+    tags: [
+      "color",
+      "contrast",
+      "accessibility",
+      "wcag",
+      "a11y",
+      "foreground",
+      "background",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق تباين الألوان",
+        description:
+          "يفحص نسبة التباين وفق WCAG بين لون النص والخلفية مع مستويات AA/AAA للنص العادي والكبير.",
+      },
+      de: {
+        name: "Farbkontrast-Prüfer",
+        description:
+          "Prüft das WCAG-Kontrastverhältnis zwischen Vorder- und Hintergrundfarben, einschließlich AA/AAA für normalen und großen Text.",
+      },
+      en: {
+        name: "Color Contrast Checker",
+        description:
+          "Check WCAG contrast ratios for foreground and background colors, including AA/AAA for normal and large text.",
+      },
+      es: {
+        name: "Comprobador de Contraste de Color",
+        description:
+          "Comprueba la relación de contraste WCAG entre colores de texto y fondo, con niveles AA/AAA para texto normal y grande.",
+      },
+      fr: {
+        name: "Vérificateur de Contraste des Couleurs",
+        description:
+          "Vérifiez le ratio de contraste WCAG entre couleurs de texte et de fond, avec niveaux AA/AAA pour texte normal et grand.",
+      },
+      he: {
+        name: "בודק ניגודיות צבעים",
+        description:
+          "בודק את יחס הניגודיות לפי WCAG בין צבע הטקסט והרקע, כולל AA/AAA לטקסט רגיל וגדול.",
+      },
+      hi: {
+        name: "रंग कंट्रास्ट चेकर",
+        description:
+          "टेक्स्ट और बैकग्राउंड रंगों के बीच WCAG कंट्रास्ट अनुपात जांचें, सामान्य व बड़े टेक्स्ट के लिए AA/AAA सहित।",
+      },
+      id: {
+        name: "Pemeriksa Kontras Warna",
+        description:
+          "Periksa rasio kontras WCAG antara warna teks dan latar belakang, termasuk AA/AAA untuk teks normal dan besar.",
+      },
+      it: {
+        name: "Verificatore di Contrasto Colori",
+        description:
+          "Controlla il rapporto di contrasto WCAG tra colori di testo e sfondo, con livelli AA/AAA per testo normale e grande.",
+      },
+      ja: {
+        name: "色コントラストチェッカー",
+        description:
+          "前景色と背景色の WCAG コントラスト比を確認し、通常/大きな文字の AA/AAA を判定します。",
+      },
+      ko: {
+        name: "색상 대비 검사기",
+        description:
+          "전경과 배경 색상의 WCAG 대비 비율을 확인하고 일반/큰 글자 AA/AAA를 판정합니다.",
+      },
+      ms: {
+        name: "Pemeriksa Kontras Warna",
+        description:
+          "Semak nisbah kontras WCAG antara warna teks dan latar belakang, termasuk AA/AAA untuk teks biasa dan besar.",
+      },
+      nl: {
+        name: "Kleurcontrastcontrole",
+        description:
+          "Controleer de WCAG-contrastverhouding tussen voor- en achtergrondkleuren, inclusief AA/AAA voor normale en grote tekst.",
+      },
+      no: {
+        name: "Fargekontrast-sjekk",
+        description:
+          "Sjekk WCAG-kontrastforholdet mellom forgrunns- og bakgrunnsfarger, inkludert AA/AAA for normal og stor tekst.",
+      },
+      pl: {
+        name: "Sprawdzanie Kontrastu Kolorów",
+        description:
+          "Sprawdza współczynnik kontrastu WCAG między kolorem tekstu i tła, w tym AA/AAA dla tekstu normalnego i dużego.",
+      },
+      pt: {
+        name: "Verificador de Contraste de Cores",
+        description:
+          "Verifique a taxa de contraste WCAG entre cores de texto e fundo, com níveis AA/AAA para texto normal e grande.",
+      },
+      ru: {
+        name: "Проверка Контраста Цветов",
+        description:
+          "Проверяет коэффициент контрастности WCAG для цветов текста и фона, включая AA/AAA для обычного и крупного текста.",
+      },
+      sv: {
+        name: "Färgkontrastkontroll",
+        description:
+          "Kontrollerar WCAG-kontrastförhållandet mellan förgrunds- och bakgrundsfärger, inklusive AA/AAA för normal och stor text.",
+      },
+      th: {
+        name: "ตัวตรวจสอบความต่างสี",
+        description:
+          "ตรวจสอบอัตราส่วนความต่างสีตาม WCAG ระหว่างสีข้อความและพื้นหลัง รวมถึง AA/AAA สำหรับข้อความปกติและขนาดใหญ่",
+      },
+      tr: {
+        name: "Renk Kontrast Denetleyici",
+        description:
+          "Ön plan ve arka plan renkleri arasındaki WCAG kontrast oranını kontrol eder; normal ve büyük metin için AA/AAA dahil.",
+      },
+      vi: {
+        name: "Trình Kiểm Tra Tương Phản Màu",
+        description:
+          "Kiểm tra tỷ lệ tương phản WCAG giữa màu chữ và nền, bao gồm AA/AAA cho chữ thường và chữ lớn.",
+      },
+      "zh-CN": {
+        name: "颜色对比度检查器",
+        description:
+          "检查前景与背景颜色的 WCAG 对比度，包括普通与大号文字的 AA/AAA 标准。",
+      },
+      "zh-TW": {
+        name: "顏色對比度檢查器",
+        description:
+          "檢查前景與背景顏色的 WCAG 對比度，包括一般與大字體的 AA/AAA 標準。",
+      },
+    },
+  },
+  {
+    slug: "color-converter",
+    category: "web",
+    icon: "image",
+    tags: [
+      "color",
+      "converter",
+      "hex",
+      "rgb",
+      "hsl",
+      "hsv",
+      "hwb",
+      "lab",
+      "lch",
+      "cmyk",
+      "css",
+    ],
+    locales: {
+      ar: {
+        name: "محول الألوان",
+        description:
+          "تحويل الألوان بين تنسيقات HEX و RGB و HSL و HSV و HWB و LAB و LCH و CMYK والكلمات المفتاحية CSS. تحويل ثنائي الاتجاه في الوقت الفعلي مع دعم قناة ألفا.",
+      },
+      de: {
+        name: "Farbkonverter",
+        description:
+          "Konvertieren Sie Farben zwischen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-Formaten und CSS-Schlüsselwörtern. Echtzeit-Bidirektionalkonvertierung mit Alpha-Kanal-Unterstützung.",
+      },
+      en: {
+        name: "Color Converter",
+        description:
+          "Convert colors between HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK and CSS keywords. Real-time bidirectional conversion with alpha channel support.",
+      },
+      es: {
+        name: "Convertidor de Colores",
+        description:
+          "Convierte colores entre formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK y palabras clave CSS. Conversión bidireccional en tiempo real con soporte de canal alfa.",
+      },
+      fr: {
+        name: "Convertisseur de Couleurs",
+        description:
+          "Convertir les couleurs entre les formats HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK et mots-clés CSS. Conversion bidirectionnelle en temps réel avec support du canal alpha.",
+      },
+      he: {
+        name: "ממיר צבעים",
+        description:
+          "המר צבעים בין פורמטים HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ומילות מפתח CSS. המרה דו-כיוונית בזמן אמת עם תמיכה בערוץ אלפא.",
+      },
+      hi: {
+        name: "रंग कनवर्टर",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK और CSS कीवर्ड प्रारूपों के बीच रंग परिवर्तित करें। अल्फा चैनल समर्थन के साथ वास्तविक समय द्विदिशात्मक रूपांतरण।",
+      },
+      id: {
+        name: "Konverter Warna",
+        description:
+          "Konversi warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK, dan kata kunci CSS. Konversi dua arah waktu nyata dengan dukungan saluran alfa.",
+      },
+      it: {
+        name: "Convertitore di Colori",
+        description:
+          "Converti i colori tra i formati HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e parole chiave CSS. Conversione bidirezionale in tempo reale con supporto del canale alfa.",
+      },
+      ja: {
+        name: "カラーコンバーター",
+        description:
+          "HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK、CSSキーワード形式間で色を変換します。アルファチャンネルをサポートしたリアルタイム双方向変換。",
+      },
+      ko: {
+        name: "색상 변환기",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK 및 CSS 키워드 형식 간 색상을 변환합니다. 알파 채널을 지원하는 실시간 양방향 변환.",
+      },
+      ms: {
+        name: "Penukar Warna",
+        description:
+          "Tukar warna antara format HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK dan kata kunci CSS. Penukaran dua hala masa nyata dengan sokongan saluran alfa.",
+      },
+      nl: {
+        name: "Kleurconverter",
+        description:
+          "Converteer kleuren tussen HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formaten en CSS-sleutelwoorden. Realtime bidirectionele conversie met ondersteuning voor alfakanaal.",
+      },
+      no: {
+        name: "Fargekonverterer",
+        description:
+          "Konverter farger mellom HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-formater og CSS-nøkkelord. Toveis konvertering i sanntid med støtte for alfakanal.",
+      },
+      pl: {
+        name: "Konwerter Kolorów",
+        description:
+          "Konwertuj kolory między formatami HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK i słowami kluczowymi CSS. Dwukierunkowa konwersja w czasie rzeczywistym z obsługą kanału alfa.",
+      },
+      pt: {
+        name: "Conversor de Cores",
+        description:
+          "Converta cores entre os formatos HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e palavras-chave CSS. Conversão bidirecional em tempo real com suporte a canal alfa.",
+      },
+      ru: {
+        name: "Конвертер Цветов",
+        description:
+          "Преобразование цветов между форматами HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK и ключевыми словами CSS. Двунаправленное преобразование в реальном времени с поддержкой альфа-канала.",
+      },
+      sv: {
+        name: "Färgkonverterare",
+        description:
+          "Konvertera färger mellan HEX-, RGB-, HSL-, HSV-, HWB-, LAB-, LCH-, CMYK-format och CSS-nyckelord. Realtids dubbelriktad konvertering med stöd för alfakanal.",
+      },
+      th: {
+        name: "ตัวแปลงสี",
+        description:
+          "แปลงสีระหว่างรูปแบบ HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK และคำสำคัญ CSS การแปลงแบบสองทิศทางในเวลาจริงพร้อมรองรับช่องอัลฟา",
+      },
+      tr: {
+        name: "Renk Dönüştürücü",
+        description:
+          "HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK ve CSS anahtar kelimeleri formatları arasında renkleri dönüştürün. Alfa kanal desteği ile gerçek zamanlı çift yönlü dönüşüm.",
+      },
+      vi: {
+        name: "Trình Chuyển Đổi Màu",
+        description:
+          "Chuyển đổi màu giữa các định dạng HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK và từ khóa CSS. Chuyển đổi hai chiều thời gian thực với hỗ trợ kênh alpha.",
+      },
+      "zh-CN": {
+        name: "颜色转换器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 关键字格式之间转换颜色。支持 Alpha 通道的实时双向转换。",
+      },
+      "zh-TW": {
+        name: "顏色轉換器",
+        description:
+          "在 HEX、RGB、HSL、HSV、HWB、LAB、LCH、CMYK 和 CSS 關鍵字格式之間轉換顏色。支援 Alpha 通道的即時雙向轉換。",
+      },
+    },
+  },
+  {
+    slug: "color-picker",
+    category: "web",
+    icon: "image",
+    tags: ["color", "picker", "eyedropper", "image", "hex", "rgb"],
+    locales: {
+      ar: {
+        name: "أداة انتقاء الألوان",
+        description:
+          "التقط الألوان من الشاشة أو الصور. التقط البكسلات وانسخ قيم HEX وRGB وHSL وHSV وCMYK فوراً.",
+      },
+      de: {
+        name: "Farbwähler",
+        description:
+          "Nehmen Sie Farben vom Bildschirm oder aus Bildern auf. Pixel samplen und HEX-, RGB-, HSL-, HSV- und CMYK-Werte sofort kopieren.",
+      },
+      en: {
+        name: "Color Picker",
+        description:
+          "Pick colors from your screen or images. Sample pixels and copy HEX, RGB, HSL, HSV, and CMYK values instantly.",
+      },
+      es: {
+        name: "Selector de Colores",
+        description:
+          "Toma colores de la pantalla o imágenes. Muestrea píxeles y copia valores HEX, RGB, HSL, HSV y CMYK al instante.",
+      },
+      fr: {
+        name: "Sélecteur de Couleurs",
+        description:
+          "Prélevez des couleurs depuis l'écran ou des images. Échantillonnez des pixels et copiez instantanément les valeurs HEX, RGB, HSL, HSV et CMYK.",
+      },
+      he: {
+        name: "בוחר צבעים",
+        description:
+          "בחר צבעים מהמסך או מתמונות. דגום פיקסלים והעתק מיד ערכי HEX, RGB, HSL, HSV ו‑CMYK.",
+      },
+      hi: {
+        name: "कलर पिकर",
+        description:
+          "स्क्रीन या चित्रों से रंग चुनें। पिक्सल सैंपल करें और HEX, RGB, HSL, HSV और CMYK मान तुरंत कॉपी करें।",
+      },
+      id: {
+        name: "Pemilih Warna",
+        description:
+          "Ambil warna dari layar atau gambar. Sampel piksel dan salin nilai HEX, RGB, HSL, HSV, dan CMYK secara instan.",
+      },
+      it: {
+        name: "Selettore di Colori",
+        description:
+          "Preleva colori dallo schermo o dalle immagini. Campiona i pixel e copia subito i valori HEX, RGB, HSL, HSV e CMYK.",
+      },
+      ja: {
+        name: "カラーピッカー",
+        description:
+          "画面や画像から色を取得。ピクセルをサンプルして HEX、RGB、HSL、HSV、CMYK の値をすぐにコピー。",
+      },
+      ko: {
+        name: "색상 선택기",
+        description:
+          "화면이나 이미지에서 색상을 추출합니다. 픽셀을 샘플링하고 HEX, RGB, HSL, HSV, CMYK 값을 즉시 복사합니다.",
+      },
+      ms: {
+        name: "Pemilih Warna",
+        description:
+          "Pilih warna dari skrin atau imej. Sampel piksel dan salin nilai HEX, RGB, HSL, HSV dan CMYK serta-merta.",
+      },
+      nl: {
+        name: "Kleurkiezer",
+        description:
+          "Kies kleuren van het scherm of afbeeldingen. Sample pixels en kopieer HEX-, RGB-, HSL-, HSV- en CMYK-waarden direct.",
+      },
+      no: {
+        name: "Fargevelger",
+        description:
+          "Velg farger fra skjermen eller bilder. Sampl piksler og kopier HEX-, RGB-, HSL-, HSV- og CMYK-verdier med en gang.",
+      },
+      pl: {
+        name: "Próbnik Kolorów",
+        description:
+          "Pobieraj kolory z ekranu lub obrazów. Próbkuj piksele i natychmiast kopiuj wartości HEX, RGB, HSL, HSV i CMYK.",
+      },
+      pt: {
+        name: "Seletor de Cores",
+        description:
+          "Escolha cores da tela ou de imagens. Amostre pixels e copie instantaneamente valores HEX, RGB, HSL, HSV e CMYK.",
+      },
+      ru: {
+        name: "Пипетка Цвета",
+        description:
+          "Берите цвета с экрана или изображений. Отбирайте пиксели и сразу копируйте значения HEX, RGB, HSL, HSV и CMYK.",
+      },
+      sv: {
+        name: "Färgväljare",
+        description:
+          "Plocka färger från skärmen eller bilder. Sampla pixlar och kopiera HEX-, RGB-, HSL-, HSV- och CMYK-värden direkt.",
+      },
+      th: {
+        name: "ตัวเลือกสี",
+        description:
+          "เลือกสีจากหน้าจอหรือภาพ ใช้พิกเซลตัวอย่างและคัดลอกค่า HEX, RGB, HSL, HSV และ CMYK ทันที",
+      },
+      tr: {
+        name: "Renk Seçici",
+        description:
+          "Ekrandan veya görsellerden renk seçin. Pikselleri örnekleyin ve HEX, RGB, HSL, HSV ve CMYK değerlerini anında kopyalayın.",
+      },
+      vi: {
+        name: "Bộ Chọn Màu",
+        description:
+          "Lấy màu từ màn hình hoặc hình ảnh. Lấy mẫu pixel và sao chép nhanh các giá trị HEX, RGB, HSL, HSV và CMYK.",
+      },
+      "zh-CN": {
+        name: "取色器",
+        description:
+          "从屏幕或图片取色，采样像素并即时复制 HEX、RGB、HSL、HSV 和 CMYK 值。",
+      },
+      "zh-TW": {
+        name: "取色器",
+        description:
+          "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  {
+    slug: "cookie-parser",
+    category: "web",
+    icon: "network",
+    tags: [
+      "cookie",
+      "set-cookie",
+      "header",
+      "http",
+      "parser",
+      "json",
+      "browser",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "محلل ملفات تعريف الارتباط",
+        description: "حلّل ترويسات Cookie و Set-Cookie إلى JSON منظم للفحص.",
+      },
+      de: {
+        name: "Cookie-Parser",
+        description:
+          "Parst Cookie- und Set-Cookie-Header in strukturiertes JSON zur Prüfung.",
+      },
+      en: {
+        name: "Cookie Parser",
+        description:
+          "Parse Cookie and Set-Cookie headers into structured JSON for inspection.",
+      },
+      es: {
+        name: "Analizador de Cookies",
+        description:
+          "Analiza encabezados Cookie y Set-Cookie en JSON estructurado para inspección.",
+      },
+      fr: {
+        name: "Analyseur de Cookies",
+        description:
+          "Analyse les en-têtes Cookie et Set-Cookie en JSON structuré pour inspection.",
+      },
+      he: {
+        name: "מפרש Cookie",
+        description:
+          "מפרק כותרות Cookie ו-Set-Cookie ל-JSON מובנה לצורך בדיקה.",
+      },
+      hi: {
+        name: "कुकी पार्सर",
+        description: "Cookie और Set-Cookie हेडर को संरचित JSON में पार्स करके जांचें।",
+      },
+      id: {
+        name: "Pengurai Cookie",
+        description:
+          "Mengurai header Cookie dan Set-Cookie ke JSON terstruktur untuk inspeksi.",
+      },
+      it: {
+        name: "Parser di Cookie",
+        description:
+          "Analizza gli header Cookie e Set-Cookie in JSON strutturato per l’ispezione.",
+      },
+      ja: {
+        name: "Cookie パーサー",
+        description:
+          "Cookie と Set-Cookie ヘッダーを構造化 JSON に解析して確認できます。",
+      },
+      ko: {
+        name: "쿠키 파서",
+        description:
+          "Cookie 및 Set-Cookie 헤더를 구조화된 JSON으로 파싱해 확인합니다.",
+      },
+      ms: {
+        name: "Penghurai Cookie",
+        description:
+          "Huraikan pengepala Cookie dan Set-Cookie kepada JSON berstruktur untuk pemeriksaan.",
+      },
+      nl: {
+        name: "Cookie-parser",
+        description:
+          "Parseert Cookie- en Set-Cookie-headers naar gestructureerde JSON voor inspectie.",
+      },
+      no: {
+        name: "Cookie-parser",
+        description:
+          "Parser Cookie- og Set-Cookie-headere til strukturert JSON for inspeksjon.",
+      },
+      pl: {
+        name: "Parser Cookie",
+        description:
+          "Parsuje nagłówki Cookie i Set-Cookie do uporządkowanego JSON-a do wglądu.",
+      },
+      pt: {
+        name: "Analisador de Cookies",
+        description:
+          "Analisa cabeçalhos Cookie e Set-Cookie em JSON estruturado para inspeção.",
+      },
+      ru: {
+        name: "Парсер Cookie",
+        description:
+          "Разбирает заголовки Cookie и Set-Cookie в структурированный JSON для проверки.",
+      },
+      sv: {
+        name: "Cookie-parser",
+        description:
+          "Tolkar Cookie- och Set-Cookie-header till strukturerad JSON för granskning.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์คุกกี้",
+        description:
+          "แยกวิเคราะห์ส่วนหัว Cookie และ Set-Cookie เป็น JSON ที่มีโครงสร้างเพื่อการตรวจสอบ",
+      },
+      tr: {
+        name: "Cookie Ayrıştırıcı",
+        description:
+          "Cookie ve Set-Cookie başlıklarını inceleme için yapılandırılmış JSON’a ayrıştırır.",
+      },
+      vi: {
+        name: "Trình phân tích Cookie",
+        description:
+          "Phân tích header Cookie và Set-Cookie thành JSON có cấu trúc để kiểm tra.",
+      },
+      "zh-CN": {
+        name: "Cookie 解析器",
+        description: "解析 Cookie 与 Set-Cookie 头为结构化 JSON，便于查看。",
+      },
+      "zh-TW": {
+        name: "Cookie 解析器",
+        description: "解析 Cookie 與 Set-Cookie 標頭為結構化 JSON，方便檢視。",
       },
     },
   },
@@ -2554,6 +3839,123 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "curl-converter",
+    category: "developer",
+    icon: "braces",
+    tags: ["code", "curl", "http", "converter", "api"],
+    locales: {
+      ar: {
+        name: "محول cURL",
+        description: "حوّل أوامر cURL إلى كود لعدة لغات وعملاء HTTP.",
+      },
+      de: {
+        name: "cURL-Konverter",
+        description:
+          "Konvertiert cURL-Befehle in Code für viele Sprachen und HTTP-Clients.",
+      },
+      en: {
+        name: "cURL Converter",
+        description:
+          "Convert cURL commands into code for many languages and HTTP clients.",
+      },
+      es: {
+        name: "Conversor de cURL",
+        description:
+          "Convierte comandos cURL en código para muchos lenguajes y clientes HTTP.",
+      },
+      fr: {
+        name: "Convertisseur cURL",
+        description:
+          "Convertit des commandes cURL en code pour de nombreux langages et clients HTTP.",
+      },
+      he: {
+        name: "ממיר cURL",
+        description: "ממיר פקודות cURL לקוד עבור שפות רבות ולקוחות HTTP.",
+      },
+      hi: {
+        name: "cURL कन्वर्टर",
+        description: "cURL कमांड को कई भाषाओं और HTTP क्लाइंट कोड में बदलें।",
+      },
+      id: {
+        name: "Pengonversi cURL",
+        description:
+          "Mengonversi perintah cURL menjadi kode untuk banyak bahasa dan klien HTTP.",
+      },
+      it: {
+        name: "Convertitore cURL",
+        description:
+          "Converte comandi cURL in codice per molti linguaggi e client HTTP.",
+      },
+      ja: {
+        name: "cURL 変換",
+        description:
+          "cURL コマンドを多言語・多様な HTTP クライアント向けのコードに変換します。",
+      },
+      ko: {
+        name: "cURL 변환기",
+        description:
+          "cURL 명령을 다양한 언어와 HTTP 클라이언트 코드로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar cURL",
+        description:
+          "Menukar arahan cURL kepada kod untuk banyak bahasa dan klien HTTP.",
+      },
+      nl: {
+        name: "cURL-converter",
+        description:
+          "Zet cURL-opdrachten om naar code voor veel talen en HTTP-clients.",
+      },
+      no: {
+        name: "cURL-omformer",
+        description:
+          "Konverterer cURL-kommandoer til kode for mange språk og HTTP-klienter.",
+      },
+      pl: {
+        name: "Konwerter cURL",
+        description:
+          "Konwertuje polecenia cURL na kod dla wielu języków i klientów HTTP.",
+      },
+      pt: {
+        name: "Conversor de cURL",
+        description:
+          "Converte comandos cURL em código para muitas linguagens e clientes HTTP.",
+      },
+      ru: {
+        name: "Конвертер cURL",
+        description:
+          "Преобразует команды cURL в код для многих языков и HTTP-клиентов.",
+      },
+      sv: {
+        name: "cURL-omvandlare",
+        description:
+          "Konverterar cURL-kommandon till kod för många språk och HTTP-klienter.",
+      },
+      th: {
+        name: "ตัวแปลง cURL",
+        description: "แปลงคำสั่ง cURL เป็นโค้ดสำหรับหลายภาษาและไคลเอนต์ HTTP",
+      },
+      tr: {
+        name: "cURL Dönüştürücü",
+        description:
+          "cURL komutlarını birçok dil ve HTTP istemcisi için koda dönüştürür.",
+      },
+      vi: {
+        name: "Trình chuyển đổi cURL",
+        description:
+          "Chuyển đổi lệnh cURL thành mã cho nhiều ngôn ngữ và client HTTP.",
+      },
+      "zh-CN": {
+        name: "cURL 转换器",
+        description: "将 cURL 命令转换为多种语言与 HTTP 客户端代码。",
+      },
+      "zh-TW": {
+        name: "cURL 轉換器",
+        description: "將 cURL 命令轉換為多種語言與 HTTP 客戶端程式碼。",
+      },
+    },
+  },
+  {
     slug: "current-network-time",
     category: "network",
     icon: "network",
@@ -2673,6 +4075,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "目前網路時間",
         description:
           "從網路取得目前時間，並與您的本機系統時間進行比較。檢視準確的網路時間並偵測任何時間差異。",
+      },
+    },
+  },
+  {
+    slug: "data-uri-to-file-converter",
+    category: "web",
+    icon: "file-text",
+    tags: [
+      "data uri",
+      "data url",
+      "base64",
+      "file",
+      "converter",
+      "decode",
+      "mime type",
+      "preview",
+    ],
+    locales: {
+      ar: {
+        name: "محول Data URI إلى ملف",
+        description:
+          "يفك ترميز سلاسل Data URI إلى ملفات، ويتحقق من نوع MIME والترميز، ثم يحمّل النتيجة دون اتصال.",
+      },
+      de: {
+        name: "Data-URI-zu-Datei-Konverter",
+        description:
+          "Dekodiert Data-URI-Strings zu Dateien, prüft MIME-Typ und Kodierung und lädt das Ergebnis offline herunter.",
+      },
+      en: {
+        name: "Data URI to File Converter",
+        description:
+          "Decode Data URI strings into files, inspect MIME type and encoding, and download the result offline.",
+      },
+      es: {
+        name: "Convertidor de Data URI a archivo",
+        description:
+          "Decodifica cadenas Data URI en archivos, inspecciona el tipo MIME y la codificación, y descarga el resultado sin conexión.",
+      },
+      fr: {
+        name: "Convertisseur de Data URI en fichier",
+        description:
+          "Décode les chaînes Data URI en fichiers, inspecte le type MIME et l’encodage, puis télécharge le résultat hors ligne.",
+      },
+      he: {
+        name: "ממיר Data URI לקובץ",
+        description:
+          "מפענח מחרוזות Data URI לקבצים, בודק סוג MIME וקידוד, ומוריד את התוצאה ללא חיבור.",
+      },
+      hi: {
+        name: "Data URI से फ़ाइल कन्वर्टर",
+        description:
+          "Data URI स्ट्रिंग को फ़ाइल में डिकोड करें, MIME प्रकार और एन्कोडिंग देखें, और परिणाम ऑफ़लाइन डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Data URI ke file",
+        description:
+          "Mendekode string Data URI menjadi file, memeriksa tipe MIME dan encoding, lalu mengunduh hasilnya secara offline.",
+      },
+      it: {
+        name: "Convertitore da Data URI a file",
+        description:
+          "Decodifica stringhe Data URI in file, controlla il tipo MIME e la codifica e scarica il risultato offline.",
+      },
+      ja: {
+        name: "Data URI からファイル変換",
+        description:
+          "Data URI 文字列をファイルにデコードし、MIME タイプとエンコードを確認してオフラインでダウンロードします。",
+      },
+      ko: {
+        name: "Data URI → 파일 변환기",
+        description:
+          "Data URI 문자열을 파일로 디코딩하고 MIME 유형과 인코딩을 확인한 뒤 오프라인으로 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar Data URI ke fail",
+        description:
+          "Menyahkod rentetan Data URI kepada fail, semak jenis MIME dan pengekodan, kemudian muat turun hasil secara luar talian.",
+      },
+      nl: {
+        name: "Data URI naar bestand-converter",
+        description:
+          "Decodeert Data URI-strings naar bestanden, bekijkt het MIME-type en de codering en downloadt het resultaat offline.",
+      },
+      no: {
+        name: "Data URI til fil-konverterer",
+        description:
+          "Dekoder Data URI-strenger til filer, kontrollerer MIME-type og koding og laster ned resultatet offline.",
+      },
+      pl: {
+        name: "Konwerter Data URI na plik",
+        description:
+          "Dekoduje ciągi Data URI do plików, sprawdza typ MIME i kodowanie oraz pobiera wynik offline.",
+      },
+      pt: {
+        name: "Conversor de Data URI para arquivo",
+        description:
+          "Decodifica strings Data URI em arquivos, verifica o tipo MIME e a codificação e baixa o resultado offline.",
+      },
+      ru: {
+        name: "Конвертер Data URI в файл",
+        description:
+          "Декодирует строки Data URI в файлы, проверяет MIME-тип и кодировку и скачивает результат офлайн.",
+      },
+      sv: {
+        name: "Data URI till fil-konverterare",
+        description:
+          "Avkodar Data URI-strängar till filer, kontrollerar MIME-typ och kodning och laddar ner resultatet offline.",
+      },
+      th: {
+        name: "ตัวแปลง Data URI เป็นไฟล์",
+        description:
+          "ถอดรหัสสตริง Data URI เป็นไฟล์ ตรวจสอบชนิด MIME และการเข้ารหัส แล้วดาวน์โหลดผลลัพธ์แบบออฟไลน์",
+      },
+      tr: {
+        name: "Data URI’den Dosyaya Dönüştürücü",
+        description:
+          "Data URI dizgelerini dosyaya dönüştürür, MIME türü ve kodlamayı kontrol eder ve sonucu çevrimdışı indirir.",
+      },
+      vi: {
+        name: "Trình chuyển Data URI sang tệp",
+        description:
+          "Giải mã chuỗi Data URI thành tệp, kiểm tra loại MIME và mã hóa, rồi tải xuống kết quả ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "Data URI 转文件转换器",
+        description:
+          "将 Data URI 字符串解码为文件，查看 MIME 类型与编码并下载，离线可用。",
+      },
+      "zh-TW": {
+        name: "Data URI 轉檔案轉換器",
+        description:
+          "將 Data URI 字串解碼為檔案，查看 MIME 類型與編碼並下載，離線可用。",
       },
     },
   },
@@ -3159,6 +4693,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "file-to-data-uri-converter",
+    category: "web",
+    icon: "file-text",
+    tags: ["data-uri", "data-url", "file", "converter", "base64", "encoding"],
+    locales: {
+      ar: {
+        name: "محول ملف إلى Data URI",
+        description:
+          "حوّل الملفات إلى سلاسل Data URI لدمجها في HTML أو CSS أو JSON. يعمل بالكامل دون اتصال.",
+      },
+      de: {
+        name: "Datei-zu-Data-URI-Konverter",
+        description:
+          "Wandelt Dateien in Data-URI-Strings um, um sie in HTML, CSS oder JSON einzubetten. Funktioniert vollständig offline.",
+      },
+      en: {
+        name: "File to Data URI Converter",
+        description:
+          "Convert files into Data URI strings for embedding in HTML, CSS, or JSON. Works fully offline.",
+      },
+      es: {
+        name: "Convertidor de archivo a Data URI",
+        description:
+          "Convierte archivos en cadenas Data URI para incrustarlos en HTML, CSS o JSON. Funciona totalmente sin conexión.",
+      },
+      fr: {
+        name: "Convertisseur de fichier en Data URI",
+        description:
+          "Convertit des fichiers en chaînes Data URI pour l’intégration dans HTML, CSS ou JSON. Fonctionne entièrement hors ligne.",
+      },
+      he: {
+        name: "ממיר קובץ ל-Data URI",
+        description:
+          "ממיר קבצים למחרוזות Data URI לשילוב ב-HTML, CSS או JSON. עובד לחלוטין ללא חיבור.",
+      },
+      hi: {
+        name: "फ़ाइल से Data URI कन्वर्टर",
+        description:
+          "फ़ाइलों को Data URI स्ट्रिंग में बदलें ताकि उन्हें HTML, CSS या JSON में एम्बेड किया जा सके। पूरी तरह ऑफ़लाइन काम करता है।",
+      },
+      id: {
+        name: "Konverter file ke Data URI",
+        description:
+          "Mengonversi file menjadi string Data URI untuk disematkan ke HTML, CSS, atau JSON. Berfungsi sepenuhnya offline.",
+      },
+      it: {
+        name: "Convertitore da file a Data URI",
+        description:
+          "Converte file in stringhe Data URI per l'inserimento in HTML, CSS o JSON. Funziona completamente offline.",
+      },
+      ja: {
+        name: "ファイルから Data URI 変換",
+        description:
+          "ファイルを Data URI 文字列に変換し、HTML、CSS、JSON へ埋め込めます。完全オフラインで動作します。",
+      },
+      ko: {
+        name: "파일 → Data URI 변환기",
+        description:
+          "파일을 Data URI 문자열로 변환하여 HTML, CSS 또는 JSON에 삽입할 수 있습니다. 완전 오프라인으로 작동합니다.",
+      },
+      ms: {
+        name: "Penukar fail ke Data URI",
+        description:
+          "Menukar fail kepada rentetan Data URI untuk disematkan dalam HTML, CSS atau JSON. Berfungsi sepenuhnya luar talian.",
+      },
+      nl: {
+        name: "Bestand naar Data URI-converter",
+        description:
+          "Zet bestanden om in Data URI-strings om in HTML, CSS of JSON te embedden. Werkt volledig offline.",
+      },
+      no: {
+        name: "Fil til Data URI-konverterer",
+        description:
+          "Konverterer filer til Data URI-strenger for innbygging i HTML, CSS eller JSON. Fungerer helt offline.",
+      },
+      pl: {
+        name: "Konwerter pliku na Data URI",
+        description:
+          "Konwertuje pliki na ciągi Data URI do osadzania w HTML, CSS lub JSON. Działa całkowicie offline.",
+      },
+      pt: {
+        name: "Conversor de arquivo para Data URI",
+        description:
+          "Converte arquivos em strings Data URI para incorporação em HTML, CSS ou JSON. Funciona totalmente offline.",
+      },
+      ru: {
+        name: "Конвертер файла в Data URI",
+        description:
+          "Преобразует файлы в строки Data URI для встраивания в HTML, CSS или JSON. Полностью работает офлайн.",
+      },
+      sv: {
+        name: "Fil till Data URI-konverterare",
+        description:
+          "Konverterar filer till Data URI-strängar för inbäddning i HTML, CSS eller JSON. Fungerar helt offline.",
+      },
+      th: {
+        name: "ตัวแปลงไฟล์เป็น Data URI",
+        description:
+          "แปลงไฟล์เป็นสตริง Data URI เพื่อฝังใน HTML, CSS หรือ JSON ทำงานแบบออฟไลน์ทั้งหมด",
+      },
+      tr: {
+        name: "Dosyadan Data URI Dönüştürücü",
+        description:
+          "Dosyaları HTML, CSS veya JSON içine gömmek için Data URI dizgelerine dönüştürür. Tamamen çevrimdışı çalışır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tệp sang Data URI",
+        description:
+          "Chuyển tệp thành chuỗi Data URI để nhúng vào HTML, CSS hoặc JSON. Hoạt động hoàn toàn ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "文件转 Data URI 转换器",
+        description:
+          "将文件转换为 Data URI 字符串，便于嵌入 HTML、CSS 或 JSON，完全离线。",
+      },
+      "zh-TW": {
+        name: "檔案轉 Data URI 轉換器",
+        description:
+          "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  {
     slug: "gitignore-generator",
     category: "developer",
     icon: "file-text",
@@ -3406,6 +5063,128 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "html-color-names",
+    category: "web",
+    icon: "image",
+    tags: ["html", "css", "color", "named-color", "hex", "rgb", "reference"],
+    locales: {
+      ar: {
+        name: "أسماء ألوان HTML",
+        description:
+          "استعرض وابحث عن أكثر من 140 لون مسمى CSS/HTML مع قيم HEX و RGB",
+      },
+      de: {
+        name: "HTML-Farbnamen",
+        description:
+          "Durchsuchen und suchen Sie über 140 CSS/HTML-benannte Farben mit HEX- und RGB-Werten",
+      },
+      en: {
+        name: "HTML Color Names",
+        description:
+          "Browse and search 140+ CSS/HTML named colors with HEX and RGB values",
+      },
+      es: {
+        name: "Nombres de colores HTML",
+        description:
+          "Examina y busca más de 140 colores nombrados CSS/HTML con valores HEX y RGB",
+      },
+      fr: {
+        name: "Noms de couleurs HTML",
+        description:
+          "Parcourez et recherchez plus de 140 couleurs nommées CSS/HTML avec des valeurs HEX et RGB",
+      },
+      he: {
+        name: "שמות צבעים HTML",
+        description:
+          "עיין וחפש יותר מ-140 צבעים שנקראו CSS/HTML עם ערכי HEX ו-RGB",
+      },
+      hi: {
+        name: "HTML रंग नाम",
+        description:
+          "140+ CSS/HTML नामित रंगों को ब्राउज़ करें और खोजें जिनमें HEX और RGB मान हों",
+      },
+      id: {
+        name: "Nama Warna HTML",
+        description:
+          "Jelajahi dan cari lebih dari 140 warna bernama CSS/HTML dengan nilai HEX dan RGB",
+      },
+      it: {
+        name: "Nomi colori HTML",
+        description:
+          "Sfoglia e cerca oltre 140 colori denominati CSS/HTML con valori HEX e RGB",
+      },
+      ja: {
+        name: "HTML 色名",
+        description:
+          "140+ の CSS/HTML 名前付き色を検索して閲覧し、HEX および RGB 値を確認",
+      },
+      ko: {
+        name: "HTML 색 이름",
+        description:
+          "140+ 개의 CSS/HTML 명명된 색을 검색하고 HEX 및 RGB 값 확인",
+      },
+      ms: {
+        name: "Nama-nama Warna HTML",
+        description:
+          "Layari dan cari lebih dari 140 warna bernama CSS/HTML dengan nilai HEX dan RGB",
+      },
+      nl: {
+        name: "HTML-kleurnamen",
+        description:
+          "Blader door en zoek meer dan 140 CSS/HTML-gekleurde namen met HEX- en RGB-waarden",
+      },
+      no: {
+        name: "HTML-fargenavn",
+        description:
+          "Bla gjennom og søk etter over 140 CSS/HTML-navngivne farger med HEX- og RGB-verdier",
+      },
+      pl: {
+        name: "Nazwy kolorów HTML",
+        description:
+          "Przeglądaj i wyszukuj ponad 140 nazwanych kolorów CSS/HTML z wartościami HEX i RGB",
+      },
+      pt: {
+        name: "Nomes de cores HTML",
+        description:
+          "Procure e explore mais de 140 cores nomeadas CSS/HTML com valores HEX e RGB",
+      },
+      ru: {
+        name: "Названия цветов HTML",
+        description:
+          "Просмотрите и найдите более 140 именованных цветов CSS/HTML с шестнадцатеричными и RGB значениями",
+      },
+      sv: {
+        name: "HTML-färgnamn",
+        description:
+          "Bläddra och sök över 140 CSS/HTML-namngivna färger med HEX- och RGB-värden",
+      },
+      th: {
+        name: "ชื่อสีของ HTML",
+        description: "เรียกดูและค้นหาสี CSS/HTML ที่มีชื่อกว่า 140 สีพร้อมค่า HEX และ RGB",
+      },
+      tr: {
+        name: "HTML Renk Adları",
+        description:
+          "HEX ve RGB değerleri ile 140+ CSS/HTML adlandırılmış renklere göz atın ve arayın",
+      },
+      vi: {
+        name: "Tên màu HTML",
+        description:
+          "Duyệt và tìm kiếm hơn 140 màu được đặt tên CSS/HTML với giá trị HEX và RGB",
+      },
+      "zh-CN": {
+        name: "HTML 颜色名称",
+        description:
+          "浏览和搜索 140+ 个 CSS/HTML 命名颜色及其十六进制和 RGB 值",
+      },
+      "zh-TW": {
+        name: "HTML 顏色名稱",
+        description:
+          "瀏覽和搜尋 140+ 個 CSS/HTML 命名顏色及其十六進制和 RGB 值",
+      },
+    },
+  },
+  {
     slug: "html-entity-encoder-decoder",
     category: "web",
     icon: "globe",
@@ -3525,6 +5304,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "HTML 實體編碼 & 解碼",
         description:
           "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  {
+    slug: "html-to-markdown-converter",
+    category: "text",
+    icon: "file-text",
+    tags: ["document", "html", "markdown", "converter"],
+    locales: {
+      ar: {
+        name: "محول HTML إلى Markdown",
+        description:
+          "حوّل HTML الخام إلى Markdown مع أنماط قابلة للتعديل للعناوين والقوائم وكتل الشيفرة. الصق الوسوم أو استورد ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "HTML-zu-Markdown-Konverter",
+        description:
+          "Wandle rohes HTML mit anpassbaren Stilen für Überschriften, Listen und Codeblöcke in Markdown um. Füge Markup ein oder importiere eine Datei und kopiere oder lade das Ergebnis herunter.",
+      },
+      en: {
+        name: "HTML to Markdown Converter",
+        description:
+          "Convert raw HTML into Markdown with adjustable heading, list, and code block styles. Paste markup or import a file, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de HTML a Markdown",
+        description:
+          "Convierte HTML sin procesar en Markdown con estilos ajustables de encabezados, listas y bloques de código. Pega el marcado o importa un archivo, y luego copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur HTML vers Markdown",
+        description:
+          "Convertissez du HTML brut en Markdown avec des styles ajustables pour les titres, les listes et les blocs de code. Collez le balisage ou importez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר HTML ל-Markdown",
+        description:
+          "המר HTML גולמי ל-Markdown עם סגנונות הניתנים להתאמה לכותרות, רשימות ובלוקי קוד. הדביקו סימון או ייבאו קובץ, ואז העתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "HTML से Markdown कन्वर्टर",
+        description:
+          "समायोज्य हेडिंग, सूची और कोड ब्लॉक शैलियों के साथ कच्चे HTML को Markdown में बदलें। मार्कअप पेस्ट करें या फ़ाइल आयात करें, फिर परिणाम कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter HTML ke Markdown",
+        description:
+          "Ubah HTML mentah menjadi Markdown dengan gaya judul, daftar, dan blok kode yang dapat disesuaikan. Tempel markup atau impor berkas, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore da HTML a Markdown",
+        description:
+          "Converti HTML grezzo in Markdown con stili regolabili per titoli, elenchi e blocchi di codice. Incolla il markup o importa un file, poi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "HTML から Markdown への変換",
+        description:
+          "見出し、リスト、コードブロックの形式を調整しながら、生の HTML を Markdown に変換します。マークアップを貼り付けるかファイルを読み込み、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "HTML to Markdown 변환기",
+        description:
+          "제목, 목록, 코드 블록 스타일을 조정하면서 원시 HTML을 Markdown으로 변환합니다. 마크업을 붙여넣거나 파일을 가져온 뒤 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar HTML ke Markdown",
+        description:
+          "Tukar HTML mentah kepada Markdown dengan gaya tajuk, senarai dan blok kod yang boleh dilaraskan. Tampal markup atau import fail, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "HTML-naar-Markdown-converter",
+        description:
+          "Zet ruwe HTML om naar Markdown met instelbare stijlen voor koppen, lijsten en codeblokken. Plak de markup of importeer een bestand en kopieer of download daarna het resultaat.",
+      },
+      no: {
+        name: "HTML til Markdown-konverter",
+        description:
+          "Konverter rå HTML til Markdown med justerbare stiler for overskrifter, lister og kodeblokker. Lim inn markup eller importer en fil, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter HTML do Markdown",
+        description:
+          "Konwertuj surowy HTML do Markdown z regulowanymi stylami nagłówków, list i bloków kodu. Wklej znacznik lub zaimportuj plik, a następnie skopiuj albo pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de HTML para Markdown",
+        description:
+          "Converta HTML bruto em Markdown com estilos ajustáveis para títulos, listas e blocos de código. Cole a marcação ou importe um arquivo e depois copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер HTML в Markdown",
+        description:
+          "Преобразуйте исходный HTML в Markdown с настраиваемыми стилями заголовков, списков и блоков кода. Вставьте разметку или импортируйте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "HTML till Markdown-konverterare",
+        description:
+          "Konvertera rå HTML till Markdown med justerbara stilar för rubriker, listor och kodblock. Klistra in markeringen eller importera en fil och kopiera eller ladda sedan ner resultatet.",
+      },
+      th: {
+        name: "ตัวแปลง HTML เป็น Markdown",
+        description:
+          "แปลง HTML แบบดิบเป็น Markdown พร้อมปรับรูปแบบหัวข้อ รายการ และบล็อกโค้ดได้ วางมาร์กอัปหรือนำเข้าไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "HTML'den Markdown'a Dönüştürücü",
+        description:
+          "Ham HTML'yi ayarlanabilir başlık, liste ve kod bloğu stilleriyle Markdown'a dönüştürün. İşaretlemeyi yapıştırın veya bir dosya içe aktarın, ardından sonucu kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển HTML sang Markdown",
+        description:
+          "Chuyển HTML thô sang Markdown với kiểu tiêu đề, danh sách và khối mã có thể điều chỉnh. Dán mã đánh dấu hoặc nhập tệp, rồi sao chép hoặc tải xuống kết quả.",
+      },
+      "zh-CN": {
+        name: "HTML 转 Markdown 转换器",
+        description:
+          "使用可调的标题、列表和代码块样式，将原始 HTML 转为 Markdown。粘贴标记或导入文件，然后复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "HTML 轉 Markdown 轉換器",
+        description:
+          "使用可調整的標題、清單與程式碼區塊樣式，將原始 HTML 轉成 Markdown。貼上標記或匯入檔案，然後複製或下載結果。",
       },
     },
   },
@@ -4230,6 +6132,252 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "IMEI 驗證器",
         description: "驗證 15 位 IMEI，檢查格式與 Luhn 校驗位。",
+      },
+    },
+  },
+  {
+    slug: "ip-cidr-normalizer",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "cidr", "ipv4", "ipv6", "normalize", "network"],
+    locales: {
+      ar: {
+        name: "معايير IP/CIDR",
+        description:
+          "يعير عناوين IP وتسجيل CIDR لتنسيقات IPv4 و IPv6. أدخل أي IP أو نطاق CIDR للحصول على التنسيق الموحد فوراً.",
+      },
+      de: {
+        name: "IP/CIDR-Normalisierer",
+        description:
+          "Normalisiert IP-Adressen und CIDR-Notation für IPv4- und IPv6-Formate. Geben Sie eine beliebige IP oder einen CIDR-Bereich ein, um das standardisierte Format sofort zu erhalten.",
+      },
+      en: {
+        name: "IP/CIDR Normalizer",
+        description:
+          "Normalize IP addresses and CIDR notation for both IPv4 and IPv6 formats. Enter any IP or CIDR range to get the standardized format instantly.",
+      },
+      es: {
+        name: "Normalizador IP/CIDR",
+        description:
+          "Normaliza direcciones IP y notación CIDR para formatos IPv4 e IPv6. Introduce cualquier IP o rango CIDR para obtener el formato estandarizado al instante.",
+      },
+      fr: {
+        name: "Normalisateur IP/CIDR",
+        description:
+          "Normalisez les adresses IP et la notation CIDR pour les formats IPv4 et IPv6. Saisissez n'importe quelle IP ou plage CIDR pour obtenir le format standardisé instantanément.",
+      },
+      he: {
+        name: "מנרמל IP/CIDR",
+        description:
+          "מנרמל כתובות IP וסימון CIDR עבור פורמטים IPv4 ו-IPv6. הזן כל IP או טווח CIDR כדי לקבל את הפורמט הסטנדרטי מיידית.",
+      },
+      hi: {
+        name: "IP/CIDR सामान्यकरण उपकरण",
+        description:
+          "IPv4 और IPv6 प्रारूपों के लिए IP पतों और CIDR संकेतन को सामान्य बनाता है। किसी भी IP या CIDR श्रेणी को दर्ज करें और तुरंत मानकीकृत प्रारूप प्राप्त करें।",
+      },
+      id: {
+        name: "Normalizer IP/CIDR",
+        description:
+          "Menormalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan IP atau rentang CIDR apa pun untuk mendapatkan format standar secara instan.",
+      },
+      it: {
+        name: "Normalizzatore IP/CIDR",
+        description:
+          "Normalizza indirizzi IP e notazione CIDR per formati IPv4 e IPv6. Inserisci qualsiasi IP o intervallo CIDR per ottenere il formato standardizzato istantaneamente.",
+      },
+      ja: {
+        name: "IP/CIDR 正規化ツール",
+        description:
+          "IPv4 と IPv6 形式の IP アドレスと CIDR 記法を正規化します。任意の IP や CIDR 範囲を入力すると、標準化された形式を即座に取得できます。",
+      },
+      ko: {
+        name: "IP/CIDR 정규화 도구",
+        description:
+          "IPv4 및 IPv6 형식의 IP 주소와 CIDR 표기법을 정규화합니다. 임의의 IP 또는 CIDR 범위를 입력하여 표준화된 형식을 즉시 얻으세요.",
+      },
+      ms: {
+        name: "Penormal IP/CIDR",
+        description:
+          "Menormalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan mana-mana IP atau julat CIDR untuk mendapatkan format piawai dengan serta-merta.",
+      },
+      nl: {
+        name: "IP/CIDR Normalizer",
+        description:
+          "Normaliseert IP-adressen en CIDR-notatie voor IPv4- en IPv6-formaten. Voer een willekeurig IP-adres of CIDR-bereik in om het gestandaardiseerde formaat direct te krijgen.",
+      },
+      no: {
+        name: "IP/CIDR-normalizer",
+        description:
+          "Normaliserer IP-adresser og CIDR-notasjon for IPv4- og IPv6-formater. Skriv inn hvilken som helst IP eller CIDR-område for å få det standardiserte formatet øyeblikkelig.",
+      },
+      pl: {
+        name: "Normalizator IP/CIDR",
+        description:
+          "Normalizuje adresy IP i notację CIDR dla formatów IPv4 i IPv6. Wprowadź dowolny adres IP lub zakres CIDR, aby natychmiast uzyskać znormalizowany format.",
+      },
+      pt: {
+        name: "Normalizador IP/CIDR",
+        description:
+          "Normaliza endereços IP e notação CIDR para formatos IPv4 e IPv6. Digite qualquer IP ou intervalo CIDR para obter o formato padronizado instantaneamente.",
+      },
+      ru: {
+        name: "Нормализатор IP/CIDR",
+        description:
+          "Нормализует IP-адреса и CIDR-нотацию для форматов IPv4 и IPv6. Введите любой IP или диапазон CIDR, чтобы мгновенно получить стандартизированный формат.",
+      },
+      sv: {
+        name: "IP/CIDR-normaliserare",
+        description:
+          "Normaliserar IP-adresser och CIDR-notation för IPv4- och IPv6-format. Ange valfri IP eller CIDR-intervall för att få det standardiserade formatet omedelbart.",
+      },
+      th: {
+        name: "เครื่องมือปรับมาตรฐาน IP/CIDR",
+        description:
+          "ปรับมาตรฐานที่อยู่ IP และรูปแบบ CIDR สำหรับรูปแบบ IPv4 และ IPv6 ป้อน IP หรือช่วง CIDR ใดก็ได้เพื่อรับรูปแบบมาตรฐานทันที",
+      },
+      tr: {
+        name: "IP/CIDR Normalleştirici",
+        description:
+          "IPv4 ve IPv6 formatları için IP adreslerini ve CIDR notasyonunu normalleştirir. Herhangi bir IP veya CIDR aralığı girin ve standartlaştırılmış formatı anında alın.",
+      },
+      vi: {
+        name: "Công cụ chuẩn hóa IP/CIDR",
+        description:
+          "Chuẩn hóa địa chỉ IP và ký hiệu CIDR cho định dạng IPv4 và IPv6. Nhập bất kỳ IP hoặc dải CIDR nào để nhận định dạng chuẩn ngay lập tức.",
+      },
+      "zh-CN": {
+        name: "IP/CIDR 规范化工具",
+        description:
+          "规范化 IP 地址和 CIDR 表示法，支持 IPv4 和 IPv6 格式。输入任何 IP 或 CIDR 范围，立即获得标准化格式。",
+      },
+      "zh-TW": {
+        name: "IP/CIDR 標準化工具",
+        description:
+          "標準化 IP 位址和 CIDR 表示法，支援 IPv4 和 IPv6 格式。輸入任何 IP 或 CIDR 範圍，立即獲得標準化格式。",
+      },
+    },
+  },
+  {
+    slug: "ip-range-to-cidr-converter",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "cidr", "network", "range", "ipv4", "ipv6", "subnet"],
+    locales: {
+      ar: {
+        name: "نطاق IP لتحويل CIDR",
+        description:
+          "قم بتحويل عناوين البداية والنهاية IPv4 أو IPv6 إلى الحد الأدنى من كتل CIDR التي تغطي النطاق بالضبط.",
+      },
+      de: {
+        name: "IP-Bereich-zu-CIDR-Konverter",
+        description:
+          "Konvertieren Sie IPv4- oder IPv6-Start- und Endadressen in den minimalen Satz von CIDR-Blöcken, der den Bereich genau abdeckt.",
+      },
+      en: {
+        name: "IP Range to CIDR Converter",
+        description:
+          "Convert IPv4 or IPv6 start and end addresses into the minimal set of CIDR blocks that exactly covers the range.",
+      },
+      es: {
+        name: "Convertidor de rango IP a CIDR",
+        description:
+          "Convierta las direcciones de inicio y finalización de IPv4 o IPv6 en el conjunto mínimo de bloques CIDR que cubra exactamente el rango.",
+      },
+      fr: {
+        description:
+          "Convertissez les adresses de début et de fin IPv4 ou IPv6 en un ensemble minimal de blocs CIDR qui couvrent exactement la plage.",
+        name: "Convertisseur de plage IP en CIDR",
+      },
+      he: {
+        name: "ממיר IP ל-CIDR",
+        description:
+          "המר כתובות התחלה וסיום IPv4 או IPv6 לקבוצה המינימלית של בלוקים CIDR המכסה בדיוק את הטווח.",
+      },
+      hi: {
+        name: "आईपी ​​रेंज से सीआईडीआर कनवर्टर",
+        description:
+          "IPv4 या IPv6 आरंभ और अंत पतों को CIDR ब्लॉक के न्यूनतम सेट में बदलें जो बिल्कुल सीमा को कवर करता है।",
+      },
+      id: {
+        name: "Rentang IP ke Konverter CIDR",
+        description:
+          "Ubah alamat awal dan akhir IPv4 atau IPv6 menjadi kumpulan blok CIDR minimal yang mencakup rentang tersebut secara tepat.",
+      },
+      it: {
+        name: "Convertitore da intervallo IP a CIDR",
+        description:
+          "Converti gli indirizzi iniziali e finali IPv4 o IPv6 nel set minimo di blocchi CIDR che copre esattamente l'intervallo.",
+      },
+      ja: {
+        name: "IP範囲からCIDRへのコンバータ",
+        description:
+          "IPv4 または IPv6 の開始アドレスと終了アドレスを、その範囲を正確にカバーする最小限の CIDR ブロックのセットに変換します。",
+      },
+      ko: {
+        description:
+          "IPv4 또는 IPv6 시작 및 끝 주소를 해당 범위를 정확하게 포함하는 최소 CIDR 블록 세트로 변환합니다.",
+        name: "IP 범위-CIDR 변환기",
+      },
+      ms: {
+        name: "Julat IP kepada Penukar CIDR",
+        description:
+          "Tukar alamat mula dan tamat IPv4 atau IPv6 ke dalam set minimum blok CIDR yang betul-betul meliputi julat.",
+      },
+      nl: {
+        name: "IP-bereik naar CIDR-converter",
+        description:
+          "Converteer IPv4- of IPv6-start- en eindadressen naar de minimale set CIDR-blokken die precies het bereik dekt.",
+      },
+      no: {
+        name: "IP Range til CIDR Converter",
+        description:
+          "Konverter IPv4- eller IPv6-start- og sluttadresser til det minimale settet med CIDR-blokker som nøyaktig dekker området.",
+      },
+      pl: {
+        name: "Konwerter zakresu IP na CIDR",
+        description:
+          "Konwertuj adresy początkowe i końcowe IPv4 lub IPv6 na minimalny zestaw bloków CIDR, który dokładnie pokrywa zakres.",
+      },
+      pt: {
+        description:
+          "Converta endereços iniciais e finais IPv4 ou IPv6 no conjunto mínimo de blocos CIDR que cobre exatamente o intervalo.",
+        name: "Conversor de intervalo IP para CIDR",
+      },
+      ru: {
+        name: "Конвертер диапазона IP в CIDR",
+        description:
+          "Преобразуйте начальные и конечные адреса IPv4 или IPv6 в минимальный набор блоков CIDR, который точно покрывает диапазон.",
+      },
+      sv: {
+        name: "IP-intervall till CIDR-omvandlare",
+        description:
+          "Konvertera IPv4- eller IPv6-start- och slutadresser till den minimala uppsättningen CIDR-block som exakt täcker intervallet.",
+      },
+      th: {
+        name: "ช่วง IP เป็น CIDR Converter",
+        description:
+          "แปลงที่อยู่เริ่มต้นและสิ้นสุดของ IPv4 หรือ IPv6 ให้เป็นชุดบล็อก CIDR ขั้นต่ำที่ครอบคลุมช่วงดังกล่าวทุกประการ",
+      },
+      tr: {
+        name: "IP Aralığından CIDR'ye Dönüştürücü",
+        description:
+          "IPv4 veya IPv6 başlangıç ​​ve bitiş adreslerini, aralığı tam olarak kapsayan minimum CIDR blokları kümesine dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi dải IP sang CIDR",
+        description:
+          "Chuyển đổi địa chỉ bắt đầu và kết thúc IPv4 hoặc IPv6 thành tập hợp khối CIDR tối thiểu bao phủ chính xác phạm vi.",
+      },
+      "zh-CN": {
+        description:
+          "将 IPv4 或 IPv6 起始地址和结束地址转换为精确覆盖范围的最小 CIDR 块集。",
+        name: "IP 范围到 CIDR 转换器",
+      },
+      "zh-TW": {
+        name: "IP 範圍到 CIDR 轉換器",
+        description:
+          "將 IPv4 或 IPv6 起始位址和結束位址轉換為精確覆蓋範圍的最小 CIDR 區塊集。",
       },
     },
   },
@@ -6309,6 +8457,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "md4-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "md4", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة MD4 للنص أو الملف",
+        description:
+          "أنشئ تجزئات MD4 لإدخال النص أو تحميل الملفات. الأنسب للتوافق مع الأنظمة القديمة وفحوصات سلامة البيانات غير الحرجة أمنياً",
+      },
+      de: {
+        name: "MD4-Hash für Text oder Datei",
+        description:
+          "Erstellen Sie MD4-Hashes für Texteingaben oder Datei-Uploads. Am besten geeignet für Legacy-Kompatibilität und nicht sicherheitskritische Integritätsprüfungen",
+      },
+      en: {
+        name: "MD4 Hash Text or File",
+        description:
+          "Generate MD4 hashes for text input or file upload. Best for legacy compatibility and non-security-critical integrity checks.",
+      },
+      es: {
+        name: "Hash MD4 de Texto o Archivo",
+        description:
+          "Genera hashes MD4 para texto o archivos. Más adecuado para compatibilidad heredada y comprobaciones de integridad no críticas para la seguridad.",
+      },
+      fr: {
+        name: "Hash MD4 de Texte ou Fichier",
+        description:
+          "Générez des hachages MD4 pour du texte ou des fichiers. Convient surtout à la compatibilité avec les systèmes hérités et aux vérifications d’intégrité non critiques pour la sécurité.",
+      },
+      he: {
+        name: "האש MD4 טקסט או קובץ",
+        description:
+          "צור ערכי MD4 עבור קלט טקסט או העלאת קבצים. מתאים בעיקר לתאימות למערכות ישנות ולבדיקות תקינות שאינן קריטיות לאבטחה.",
+      },
+      hi: {
+        name: "MD4 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MD4 हैश बनाएं। यह पुराने सिस्टम के साथ संगतता और गैर-सुरक्षा-महत्वपूर्ण अखंडता जांच के लिए सबसे उपयुक्त है।",
+      },
+      id: {
+        name: "Hash MD4 Teks atau File",
+        description:
+          "Buat hash MD4 untuk input teks atau unggahan file. Paling cocok untuk kompatibilitas sistem lama dan pemeriksaan integritas yang tidak kritis terhadap keamanan.",
+      },
+      it: {
+        name: "Hash MD4 di Testo o File",
+        description:
+          "Genera hash MD4 per testo o file. Ideale soprattutto per compatibilità con sistemi legacy e controlli di integrità non critici per la sicurezza.",
+      },
+      ja: {
+        name: "MD4 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに MD4 ハッシュを生成します。主にレガシー互換性や、セキュリティ上重要ではない整合性確認に適しています。",
+      },
+      ko: {
+        name: "MD4 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드용 MD4 해시를 생성합니다. 레거시 호환성과 보안상 중요하지 않은 무결성 검사에 가장 적합합니다.",
+      },
+      ms: {
+        name: "Hash MD4 Teks atau Fail",
+        description:
+          "Jana hash MD4 untuk input teks atau muat naik fail. Paling sesuai untuk keserasian sistem lama dan semakan integriti yang tidak kritikal terhadap keselamatan.",
+      },
+      nl: {
+        name: "MD4-hash tekst of bestand",
+        description:
+          "Genereer MD4-hashes voor tekstinvoer of bestandsuploads. Vooral geschikt voor legacy-compatibiliteit en integriteitscontroles die niet beveiligingskritisch zijn.",
+      },
+      no: {
+        name: "MD4-hash tekst eller fil",
+        description:
+          "Generer MD4-hasher for tekstinndata eller filopplasting. Best egnet for kompatibilitet med eldre systemer og integritetskontroller som ikke er sikkerhetskritiske.",
+      },
+      pl: {
+        name: "Hash MD4 tekstu lub pliku",
+        description:
+          "Generuj hashe MD4 dla tekstu lub plików. Najlepiej nadaje się do zgodności ze starszymi systemami i kontroli integralności, które nie są krytyczne dla bezpieczeństwa.",
+      },
+      pt: {
+        name: "Hash MD4 de Texto ou Arquivo",
+        description:
+          "Gere hashes MD4 para texto ou arquivos. Mais adequado para compatibilidade legada e verificações de integridade que não são críticas para a segurança.",
+      },
+      ru: {
+        name: "MD4-хеш текста или файла",
+        description:
+          "Создавайте MD4-хеши для текста или файлов. Лучше всего подходит для совместимости с устаревшими системами и проверок целостности, не критичных для безопасности.",
+      },
+      sv: {
+        name: "MD4-hash text eller fil",
+        description:
+          "Generera MD4-hashar för textinmatning eller filuppladdning. Passar bäst för kompatibilitet med äldre system och integritetskontroller som inte är säkerhetskritiska.",
+      },
+      th: {
+        name: "แฮช MD4 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MD4 สำหรับข้อความหรือการอัปโหลดไฟล์ เหมาะที่สุดสำหรับความเข้ากันได้กับระบบเดิมและการตรวจสอบความสมบูรณ์ที่ไม่สำคัญต่อความปลอดภัย",
+      },
+      tr: {
+        name: "MD4 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MD4 hash'leri oluşturun. En çok eski sistem uyumluluğu ve güvenlik açısından kritik olmayan bütünlük kontrolleri için uygundur.",
+      },
+      vi: {
+        name: "Hash MD4 văn bản hoặc tệp",
+        description:
+          "Tạo hash MD4 cho văn bản hoặc tệp tải lên. Phù hợp nhất cho khả năng tương thích với hệ thống cũ và các kiểm tra toàn vẹn không quan trọng về bảo mật.",
+      },
+      "zh-CN": {
+        name: "MD4 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MD4 哈希值。更适合遗留系统兼容和非安全关键的完整性校验。",
+      },
+      "zh-TW": {
+        name: "MD4 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MD4 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  {
     slug: "md5-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -6432,6 +8703,112 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mime-type-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["mime", "mime-type", "content-type", "file-extension", "reference"],
+    locales: {
+      ar: {
+        name: "البحث عن أنواع MIME",
+        description: "البحث وتصفح أنواع MIME وامتدادات الملفات الخاصة بها",
+      },
+      de: {
+        name: "MIME-Typ-Suche",
+        description:
+          "MIME-Typen und ihre Dateierweiterungen suchen und durchsuchen",
+      },
+      en: {
+        name: "MIME Type Lookup",
+        description: "Search and browse MIME types and their file extensions",
+      },
+      es: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Buscar y explorar tipos MIME y sus extensiones de archivo",
+      },
+      fr: {
+        name: "Recherche de Types MIME",
+        description:
+          "Rechercher et parcourir les types MIME et leurs extensions de fichier",
+      },
+      he: {
+        name: "חיפוש סוג MIME",
+        description: "חפש ועיין בסוגי MIME והרחבות הקבצים שלהם",
+      },
+      hi: {
+        name: "MIME प्रकार खोज",
+        description: "MIME प्रकार और उनके फ़ाइल एक्सटेंशन खोजें और ब्राउज़ करें",
+      },
+      id: {
+        name: "Pencarian Tipe MIME",
+        description: "Cari dan jelajahi tipe MIME dan ekstensi file mereka",
+      },
+      it: {
+        name: "Ricerca Tipi MIME",
+        description: "Cerca e sfoglia i tipi MIME e le loro estensioni di file",
+      },
+      ja: {
+        name: "MIME タイプ検索",
+        description: "MIME タイプとそのファイル拡張子を検索・閲覧",
+      },
+      ko: {
+        name: "MIME 타입 조회",
+        description: "MIME 타입과 파일 확장자 검색 및 탐색",
+      },
+      ms: {
+        name: "Carian Jenis MIME",
+        description: "Cari dan semak jenis MIME dan sambungan fail mereka",
+      },
+      nl: {
+        name: "MIME Type Opzoeken",
+        description: "Zoek en blader door MIME types en hun bestandsextensies",
+      },
+      no: {
+        name: "MIME-typesøk",
+        description: "Søk og bla gjennom MIME-typer og deres filendelser",
+      },
+      pl: {
+        name: "Wyszukiwanie Typów MIME",
+        description:
+          "Wyszukuj i przeglądaj typy MIME i ich rozszerzenia plików",
+      },
+      pt: {
+        name: "Consulta de Tipos MIME",
+        description:
+          "Pesquisar e navegar por tipos MIME e suas extensões de arquivo",
+      },
+      ru: {
+        name: "Поиск MIME Типов",
+        description: "Поиск и просмотр MIME типов и их расширений файлов",
+      },
+      sv: {
+        name: "MIME-typsökning",
+        description: "Sök och bläddra bland MIME-typer och deras filtillägg",
+      },
+      th: {
+        name: "ค้นหาประเภท MIME",
+        description: "ค้นหาและเรียกดูประเภท MIME และนามสกุลไฟล์",
+      },
+      tr: {
+        name: "MIME Türü Arama",
+        description: "MIME türlerini ve dosya uzantılarını arayın ve göz atın",
+      },
+      vi: {
+        name: "Tra Cứu Loại MIME",
+        description:
+          "Tìm kiếm và duyệt các loại MIME và phần mở rộng tệp của chúng",
+      },
+      "zh-CN": {
+        name: "MIME 类型查询",
+        description: "搜索和浏览 MIME 类型及其文件扩展名",
+      },
+      "zh-TW": {
+        name: "MIME 類型查詢",
+        description: "搜尋和瀏覽 MIME 類型及其檔案副檔名",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",
@@ -6549,6 +8926,262 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "摩爾斯電碼轉換器",
         description: "文字與摩爾斯電碼相互轉換，支援音訊播放",
+      },
+    },
+  },
+  {
+    slug: "murmurhash3-x86-32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "murmurhash3",
+      "murmur",
+      "x86-32",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة MurmurHash3 (x86 32-bit) للنص أو الملف",
+        description:
+          "إنشاء تجزئة MurmurHash3 x86 32-bit لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 32 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "MurmurHash3 (x86 32-bit)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie MurmurHash3 x86 32-bit-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 32-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "MurmurHash3 (x86 32-bit) Hash Text or File",
+        description:
+          "Generate MurmurHash3 x86 32-bit hash for text input or file upload. Calculate fast 32-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash MurmurHash3 (x86 32-bit) de Texto o Archivo",
+        description:
+          "Genera hash MurmurHash3 x86 32-bit para entrada de texto o carga de archivo. Calcula sumas de verificación de 32 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash MurmurHash3 (x86 32-bit) de Texte ou Fichier",
+        description:
+          "Générez un hash MurmurHash3 x86 32-bit pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 32 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש MurmurHash3 (x86 32-bit) טקסט או קובץ",
+        description:
+          "צור האש MurmurHash3 x86 32-bit עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 32-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "MurmurHash3 (x86 32-bit) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MurmurHash3 x86 32-bit हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 32-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash MurmurHash3 (x86 32-bit) Teks atau File",
+        description:
+          "Buat hash MurmurHash3 x86 32-bit untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash MurmurHash3 (x86 32-bit) di Testo o File",
+        description:
+          "Genera hash MurmurHash3 x86 32-bit per input di testo o caricamento file. Calcola checksum a 32 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "MurmurHash3 (x86 32-bit) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのMurmurHash3 x86 32-bitハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速32ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "MurmurHash3 (x86 32-bit) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 MurmurHash3 x86 32-bit 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 32비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash MurmurHash3 (x86 32-bit) Teks atau Fail",
+        description:
+          "Jana hash MurmurHash3 x86 32-bit untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "MurmurHash3 (x86 32-bit)-hash tekst of bestand",
+        description:
+          "Genereer MurmurHash3 x86 32-bit-hash voor tekstinvoer of bestandsupload. Bereken snelle 32-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "MurmurHash3 (x86 32-bit)-hash tekst eller fil",
+        description:
+          "Generer MurmurHash3 x86 32-bit-hash for tekstinndata eller filopplasting. Beregn raske 32-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash MurmurHash3 (x86 32-bit) tekstu lub pliku",
+        description:
+          "Generuj hash MurmurHash3 x86 32-bit dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 32-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash MurmurHash3 (x86 32-bit) de Texto ou Arquivo",
+        description:
+          "Gere hash MurmurHash3 x86 32-bit para entrada de texto ou upload de arquivo. Calcule checksums de 32 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "MurmurHash3 (x86 32-bit)-хеш текста или файла",
+        description:
+          "Генерируйте MurmurHash3 x86 32-bit-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 32-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "MurmurHash3 (x86 32-bit)-hash text eller fil",
+        description:
+          "Generera MurmurHash3 x86 32-bit-hash för textinmatning eller filuppladdning. Beräkna snabba 32-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช MurmurHash3 (x86 32-bit) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช MurmurHash3 x86 32-bit สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 32-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "MurmurHash3 (x86 32-bit) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için MurmurHash3 x86 32-bit hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 32-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash MurmurHash3 (x86 32-bit) văn bản hoặc tệp",
+        description:
+          "Tạo hash MurmurHash3 x86 32-bit cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 32-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "MurmurHash3 (x86 32-bit) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 MurmurHash3 x86 32-bit 哈希值。计算快速 32 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "MurmurHash3 (x86 32-bit) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 MurmurHash3 x86 32-bit 雜湊值。計算快速 32 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "my-ip-address",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "ipv4", "ipv6", "webrtc", "geolocation", "isp"],
+    locales: {
+      ar: {
+        name: "عنوان IP الخاص بي",
+        description:
+          "اكتشف عنوان IP العام الخاص بك واحصل على معلومات مفصلة حول اتصالك بالإنترنت بما في ذلك الموقع الجغرافي وتفاصيل مزود الخدمة ومعلومات الشبكة",
+      },
+      de: {
+        name: "Meine IP-Adresse",
+        description:
+          "Entdecken Sie Ihre öffentliche IP-Adresse und erhalten Sie detaillierte Informationen über Ihre Internetverbindung einschließlich Geolokalisierung, ISP-Details und Netzwerkinformationen",
+      },
+      en: {
+        name: "My IP Address",
+        description:
+          "Discover your public IP address and get detailed information about your internet connection including geolocation, ISP details, and network information",
+      },
+      es: {
+        name: "Mi Dirección IP",
+        description:
+          "Descubre tu dirección IP pública y obtén información detallada sobre tu conexión a internet incluyendo geolocalización, detalles del ISP e información de red",
+      },
+      fr: {
+        name: "Mon Adresse IP",
+        description:
+          "Découvrez votre adresse IP publique et obtenez des informations détaillées sur votre connexion internet incluant la géolocalisation, les détails du FAI et les informations réseau",
+      },
+      he: {
+        name: "כתובת ה-IP שלי",
+        description:
+          "גלה את כתובת ה-IP הציבורית שלך וקבל מידע מפורט על חיבור האינטרנט שלך כולל מיקום גיאוגרפי, פרטי ספק האינטרנט ומידע רשת",
+      },
+      hi: {
+        name: "मेरा IP पता",
+        description:
+          "अपना सार्वजनिक IP पता खोजें और भौगोलिक स्थान, ISP विवरण और नेटवर्क जानकारी सहित अपने इंटरनेट कनेक्शन के बारे में विस्तृत जानकारी प्राप्त करें",
+      },
+      id: {
+        name: "Alamat IP Saya",
+        description:
+          "Temukan alamat IP publik Anda dan dapatkan informasi rinci tentang koneksi internet Anda termasuk geolokasi, detail ISP, dan informasi jaringan",
+      },
+      it: {
+        name: "Il Mio Indirizzo IP",
+        description:
+          "Scopri il tuo indirizzo IP pubblico e ottieni informazioni dettagliate sulla tua connessione internet inclusa geolocalizzazione, dettagli ISP e informazioni di rete",
+      },
+      ja: {
+        name: "私の IP アドレス",
+        description:
+          "パブリック IP アドレスを発見し、地理的位置、ISP の詳細、ネットワーク情報を含むインターネット接続の詳細情報を取得します",
+      },
+      ko: {
+        name: "내 IP 주소",
+        description:
+          "공용 IP 주소를 발견하고 지리적 위치, ISP 세부 정보 및 네트워크 정보를 포함한 인터넷 연결에 대한 자세한 정보를 얻으세요",
+      },
+      ms: {
+        name: "Alamat IP Saya",
+        description:
+          "Temui alamat IP awam anda dan dapatkan maklumat terperinci tentang sambungan internet anda termasuk geolokasi, butiran ISP dan maklumat rangkaian",
+      },
+      nl: {
+        name: "Mijn IP-adres",
+        description:
+          "Ontdek uw openbare IP-adres en krijg gedetailleerde informatie over uw internetverbinding inclusief geolocatie, ISP-details en netwerkinformatie",
+      },
+      no: {
+        name: "Min IP-adresse",
+        description:
+          "Oppdag din offentlige IP-adresse og få detaljert informasjon om internettforbindelsen din inkludert geolokalisering, ISP-detaljer og nettverksinformasjon",
+      },
+      pl: {
+        name: "Mój Adres IP",
+        description:
+          "Odkryj swój publiczny adres IP i uzyskaj szczegółowe informacje o swoim połączeniu internetowym, w tym geolokalizację, szczegóły dostawcy internetowego i informacje o sieci",
+      },
+      pt: {
+        name: "Meu Endereço IP",
+        description:
+          "Descubra seu endereço IP público e obtenha informações detalhadas sobre sua conexão com a internet incluindo geolocalização, detalhes do ISP e informações de rede",
+      },
+      ru: {
+        name: "Мой IP-адрес",
+        description:
+          "Узнайте свой публичный IP-адрес и получите подробную информацию о вашем интернет-соединении, включая геолокацию, данные провайдера и сетевую информацию",
+      },
+      sv: {
+        name: "Min IP-adress",
+        description:
+          "Upptäck din offentliga IP-adress och få detaljerad information om din internetanslutning inklusive geolokalisering, ISP-detaljer och nätverksinformation",
+      },
+      th: {
+        name: "IP Address ของฉัน",
+        description:
+          "ค้นพบ IP address สาธารณะของคุณและรับข้อมูลรายละเอียดเกี่ยวกับการเชื่อมต่ออินเทอร์เน็ตของคุณ รวมถึงตำแหน่งทางภูมิศาสตร์ รายละเอียด ISP และข้อมูลเครือข่าย",
+      },
+      tr: {
+        name: "IP Adresim",
+        description:
+          "Genel IP adresinizi keşfedin ve coğrafi konum, ISS ayrıntıları ve ağ bilgileri dahil olmak üzere internet bağlantınız hakkında ayrıntılı bilgi alın",
+      },
+      vi: {
+        name: "Địa Chỉ IP Của Tôi",
+        description:
+          "Khám phá địa chỉ IP công cộng của bạn và nhận thông tin chi tiết về kết nối internet của bạn bao gồm vị trí địa lý, thông tin ISP và thông tin mạng",
+      },
+      "zh-CN": {
+        name: "我的 IP 地址",
+        description:
+          "发现您的公共 IP 地址并获取有关您的互联网连接的详细信息，包括地理位置、ISP 详细信息和网络信息",
+      },
+      "zh-TW": {
+        name: "我的 IP 位址",
+        description:
+          "發現您的公共 IP 位址並獲取有關您的網際網路連線的詳細資訊，包括地理位置、ISP 詳細資訊和網路資訊",
       },
     },
   },
@@ -6681,6 +9314,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "NanoID 產生器",
         description:
           "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
+  {
+    slug: "number-base-converter",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "number base",
+      "base converter",
+      "binary",
+      "hexadecimal",
+      "radix",
+      "developer tools",
+    ],
+    locales: {
+      ar: {
+        name: "محول الأنظمة العددية",
+        description:
+          "تحويل الأرقام بين الثنائي والثماني والعشري والست عشري وbase32 وbase36 وbase62 وbase64 والأنظمة المخصصة (2-64).",
+      },
+      de: {
+        name: "Zahlenbasis-Konverter",
+        description:
+          "Konvertiert Zahlen zwischen Binär, Oktal, Dezimal, Hexadezimal, Base32, Base36, Base62, Base64 und benutzerdefinierten Basen (2-64).",
+      },
+      en: {
+        name: "Number Base Converter",
+        description:
+          "Convert numbers between binary, octal, decimal, hexadecimal, base32, base36, base62, base64, and custom bases from 2 to 64.",
+      },
+      es: {
+        name: "Convertidor de Base Numérica",
+        description:
+          "Convierte números entre binario, octal, decimal, hexadecimal, base32, base36, base62, base64 y bases personalizadas (2-64).",
+      },
+      fr: {
+        name: "Convertisseur de Base Numérique",
+        description:
+          "Convertit les nombres entre binaire, octal, décimal, hexadécimal, base32, base36, base62, base64 et bases personnalisées (2-64).",
+      },
+      he: {
+        name: "ממיר בסיסי מספרים",
+        description:
+          "המרת מספרים בין בינארי, אוקטלי, עשרוני, הקסדצימלי, base32, base36, base62, base64 ובסיסים מותאמים אישית (2-64).",
+      },
+      hi: {
+        name: "संख्या आधार परिवर्तक",
+        description:
+          "बाइनरी, ऑक्टल, डेसिमल, हेक्स, बेस32, बेस36, बेस62, बेस64 और कस्टम बेस (2-64) के बीच संख्याओं को परिवर्तित करें।",
+      },
+      id: {
+        name: "Konverter Basis Bilangan",
+        description:
+          "Konversi angka antara biner, oktal, desimal, heksadesimal, base32, base36, base62, base64, dan basis kustom (2-64).",
+      },
+      it: {
+        name: "Convertitore di Base Numerica",
+        description:
+          "Converte numeri tra binario, ottale, decimale, esadecimale, base32, base36, base62, base64 e basi personalizzate (2-64).",
+      },
+      ja: {
+        name: "基数変換ツール",
+        description:
+          "2進数、8進数、10進数、16進数、32/36/62/64進数、カスタム基数 (2-64) の間で数値を変換します。",
+      },
+      ko: {
+        name: "진법 변환기",
+        description:
+          "2진수, 8진수, 10진수, 16진수, 32/36/62/64진수 및 사용자 정의 진법 (2-64) 간에 숫자를 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Asas Nombor",
+        description:
+          "Tukar nombor antara binari, oktal, perpuluhan, heksadesimal, base32, base36, base62, base64 dan asas tersuai (2-64).",
+      },
+      nl: {
+        name: "Getallenbase Converter",
+        description:
+          "Converteer getallen tussen binair, octaal, decimaal, hexadecimaal, base32, base36, base62, base64 en aangepaste bases (2-64).",
+      },
+      no: {
+        name: "Tallbase-konverterer",
+        description:
+          "Konverter tall mellom binær, oktal, desimal, heksadesimal, base32, base36, base62, base64 og egendefinerte baser (2-64).",
+      },
+      pl: {
+        name: "Konwerter Bazy Liczbowej",
+        description:
+          "Konwertuj liczby między binarnym, ósemkowym, dziesiętnym, szesnastkowym, base32, base36, base62, base64 i niestandardowymi bazami (2-64).",
+      },
+      pt: {
+        name: "Conversor de Base Numérica",
+        description:
+          "Converte números entre binário, octal, decimal, hexadecimal, base32, base36, base62, base64 e bases personalizadas (2-64).",
+      },
+      ru: {
+        name: "Конвертер Систем Счисления",
+        description:
+          "Преобразование чисел между двоичной, восьмеричной, десятичной, шестнадцатеричной, base32, base36, base62, base64 и пользовательскими системами (2-64).",
+      },
+      sv: {
+        name: "Talbas-konverterare",
+        description:
+          "Konvertera tal mellan binärt, oktalt, decimalt, hexadecimalt, base32, base36, base62, base64 och anpassade baser (2-64).",
+      },
+      th: {
+        name: "ตัวแปลงฐานเลข",
+        description:
+          "แปลงตัวเลขระหว่างฐานสอง ฐานแปด ฐานสิบ ฐานสิบหก base32 base36 base62 base64 และฐานที่กำหนดเอง (2-64)",
+      },
+      tr: {
+        name: "Sayı Tabanı Dönüştürücü",
+        description:
+          "Sayıları ikili, sekizli, onlu, onaltılı, base32, base36, base62, base64 ve özel tabanlar (2-64) arasında dönüştürün.",
+      },
+      vi: {
+        name: "Chuyển Đổi Cơ Số",
+        description:
+          "Chuyển đổi số giữa nhị phân, bát phân, thập phân, thập lục phân, base32, base36, base62, base64 và cơ số tùy chỉnh (2-64).",
+      },
+      "zh-CN": {
+        name: "进制转换器",
+        description:
+          "在二进制、八进制、十进制、十六进制、32/36/62/64 进制和自定义进制 (2-64) 之间转换数字。",
+      },
+      "zh-TW": {
+        name: "進制轉換器",
+        description:
+          "在二進制、八進制、十進制、十六進制、32/36/62/64 進制和自定義進制 (2-64) 之間轉換數字。",
       },
     },
   },
@@ -7283,6 +10046,126 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "連接埠號碼查詢",
         description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  {
+    slug: "prc-id-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["resident-id", "validator", "china", "prc", "identity", "checksum"],
+    locales: {
+      ar: {
+        name: "مدقق هوية المقيم في جمهورية الصين الشعبية",
+        description:
+          "يتحقق من أرقام هوية المقيم ويفك ترميز المنطقة وتاريخ الميلاد والمجموع الاختباري",
+      },
+      de: {
+        name: "PRC-Resident-ID-Validator",
+        description:
+          "Validiert PRC-Resident-IDs und dekodiert Region, Geburtsdatum und Prüfsumme",
+      },
+      en: {
+        name: "PRC Resident ID Validator",
+        description:
+          "Validate PRC Resident ID numbers, decode region, birthdate, and checksum",
+      },
+      es: {
+        name: "Validador de ID de residente de la RPC",
+        description:
+          "Valida IDs de residente de la RPC y analiza región, fecha de nacimiento y checksum",
+      },
+      fr: {
+        name: "Validateur d'ID de résident de la RPC",
+        description:
+          "Valide les ID de résident de la RPC et décode la région, la date de naissance et la somme de contrôle",
+      },
+      he: {
+        name: "מאמת מזהה תושב סין",
+        description:
+          "מאמת מספרי מזהה תושב ומפענח אזור, תאריך לידה וסכום ביקורת",
+      },
+      hi: {
+        name: "पीआरसी निवासी आईडी सत्यापनकर्ता",
+        description:
+          "पीआरसी निवासी आईडी नंबर सत्यापित करें और क्षेत्र, जन्म तिथि व चेकसम निकालें",
+      },
+      id: {
+        name: "Validator ID penduduk Tiongkok",
+        description:
+          "Memvalidasi ID penduduk Tiongkok dan menguraikan wilayah, tanggal lahir, serta checksum",
+      },
+      it: {
+        name: "Validatore ID residente RPC",
+        description:
+          "Valida gli ID residente RPC e decodifica regione, data di nascita e checksum",
+      },
+      ja: {
+        name: "中国居民身份证検証",
+        description:
+          "中国居民身份证番号を検証し、地域・生年月日・チェックサムを解析します",
+      },
+      ko: {
+        name: "중국 주민 신분증 검증기",
+        description:
+          "중국 주민 신분증 번호를 검증하고 지역, 생년월일, 체크섬을 해석합니다",
+      },
+      ms: {
+        name: "Pengesah ID penduduk PRC",
+        description:
+          "Mengesahkan ID penduduk PRC dan menyahkod wilayah, tarikh lahir serta checksum",
+      },
+      nl: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Valideert PRC Resident-ID's en decodeert regio, geboortedatum en controlesom",
+      },
+      no: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Validerer PRC Resident-ID og dekoder region, fødselsdato og kontrollsum",
+      },
+      pl: {
+        name: "Walidator ID mieszkańca ChRL",
+        description:
+          "Waliduje ID mieszkańca ChRL i dekoduje region, datę urodzenia oraz sumę kontrolną",
+      },
+      pt: {
+        name: "Validador de ID de residente da RPC",
+        description:
+          "Valida IDs de residente da RPC e decodifica região, data de nascimento e checksum",
+      },
+      ru: {
+        name: "Валидатор ID резидента КНР",
+        description:
+          "Проверяет ID резидента КНР и расшифровывает регион, дату рождения и контрольную сумму",
+      },
+      sv: {
+        name: "PRC Resident-ID-validator",
+        description:
+          "Validerar PRC Resident-ID och tolkar region, födelsedatum och kontrollsumma",
+      },
+      th: {
+        name: "ตัวตรวจสอบบัตรประจำตัวผู้พำนักจีน",
+        description: "ตรวจสอบหมายเลขประจำตัวผู้พำนักและถอดรหัสภูมิภาค วันเกิด และเช็คซัม",
+      },
+      tr: {
+        name: "PRC Resident ID Doğrulayıcı",
+        description:
+          "PRC Resident ID numaralarını doğrular, bölge, doğum tarihi ve sağlama toplamını çözümler",
+      },
+      vi: {
+        name: "Trình xác thực ID cư trú Trung Quốc",
+        description:
+          "Xác thực ID cư trú và giải mã khu vực, ngày sinh, checksum",
+      },
+      "zh-CN": {
+        name: "中华人民共和国居民身份证解析与验证器",
+        description: "验证居民身份证号并解析地区、出生日期与校验位",
+      },
+      "zh-TW": {
+        name: "中華人民共和國居民身分證解析與驗證器",
+        description: "驗證居民身分證號並解析地區、出生日期與校驗位",
       },
     },
   },
@@ -7915,6 +10798,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "RIPEMD-160 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 RIPEMD-160 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "ripemd256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "ripemd256",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة RIPEMD-256 للنص أو الملف",
+        description:
+          "إنشاء تجزئة RIPEMD-256 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "RIPEMD-256-Hash für Text oder Datei",
+        description:
+          "Generieren Sie RIPEMD-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "RIPEMD-256 Hash Text or File",
+        description:
+          "Generate RIPEMD-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash RIPEMD-256 de Texto o Archivo",
+        description:
+          "Genera hash RIPEMD-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash RIPEMD-256 de Texte ou Fichier",
+        description:
+          "Générez un hash RIPEMD-256 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש RIPEMD-256 טקסט או קובץ",
+        description:
+          "צור האש RIPEMD-256 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "RIPEMD-256 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए RIPEMD-256 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash RIPEMD-256 Teks atau File",
+        description:
+          "Buat hash RIPEMD-256 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash RIPEMD-256 di Testo o File",
+        description:
+          "Genera hash RIPEMD-256 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "RIPEMD-256 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのRIPEMD-256ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "RIPEMD-256 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 RIPEMD-256 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash RIPEMD-256 Teks atau Fail",
+        description:
+          "Jana hash RIPEMD-256 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "RIPEMD-256-hash tekst of bestand",
+        description:
+          "Genereer RIPEMD-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "RIPEMD-256-hash tekst eller fil",
+        description:
+          "Generer RIPEMD-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash RIPEMD-256 tekstu lub pliku",
+        description:
+          "Generuj hash RIPEMD-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash RIPEMD-256 de Texto ou Arquivo",
+        description:
+          "Gere hash RIPEMD-256 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "RIPEMD-256-хеш текста или файла",
+        description:
+          "Генерируйте RIPEMD-256-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "RIPEMD-256-hash text eller fil",
+        description:
+          "Generera RIPEMD-256-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช RIPEMD-256 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช RIPEMD-256 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "RIPEMD-256 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için RIPEMD-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash RIPEMD-256 văn bản hoặc tệp",
+        description:
+          "Tạo hash RIPEMD-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "RIPEMD-256 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 RIPEMD-256 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "RIPEMD-256 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 RIPEMD-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -9578,6 +12592,270 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "shake128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake128",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE128 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE128 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE128 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE128-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE128 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE128 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE128 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE128 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE128 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE128 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE128 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE128 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE128 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE128 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE128 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE128 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE128 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE128 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE128 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE128 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE128 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE128 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE128 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE128-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE128 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE128-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE128 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE128 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE128 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE128 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE128 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE128 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE128 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE128-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE128 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE128 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE128 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE128 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE128 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE128 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE128 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE128 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE128 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE128 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
+      },
+    },
+  },
+  {
+    slug: "shake256-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "shake",
+      "shake256",
+      "xof",
+      "fips-202",
+      "crypto",
+      "file",
+      "text",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة SHAKE256 (FIPS 202) للنص أو الملف",
+        description:
+          "أنشئ تجزئات SHAKE256 ‏(FIPS 202) للنصوص أو الملفات المرفوعة. ينتج هذا أرقام XOF بطول متغير لاستخدامها في المجاميع الاختبارية التشفيرية، وهاشات البروتوكولات، وسير عمل سلامة البيانات.",
+      },
+      de: {
+        name: "SHAKE256 (FIPS 202)-Hash für Text oder Datei",
+        description:
+          "Erzeuge SHAKE256-(FIPS 202)-Hashes für Texteingaben oder Datei-Uploads. Liefere XOF-Digests mit variabler Länge für kryptografische Prüfsummen, Protokoll-Hashing und Datenintegritäts-Workflows.",
+      },
+      en: {
+        name: "SHAKE256 (FIPS 202) Hash Text or File",
+        description:
+          "Generate SHAKE256 (FIPS 202) hashes for text input or file upload. Produce variable-length XOF digests for cryptographic checksums, protocol hashing, and data integrity workflows.",
+      },
+      es: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto o Archivo",
+        description:
+          "Genera hashes SHAKE256 (FIPS 202) para texto o archivos. Produce resúmenes XOF de longitud variable para sumas de verificación criptográficas, hash de protocolos y flujos de integridad de datos.",
+      },
+      fr: {
+        name: "Hash SHAKE256 (FIPS 202) de Texte ou Fichier",
+        description:
+          "Générez des hachages SHAKE256 (FIPS 202) pour du texte ou des fichiers. Produisez des empreintes XOF à longueur variable pour des sommes de contrôle cryptographiques, le hachage de protocoles et les flux d’intégrité des données.",
+      },
+      he: {
+        name: "האש SHAKE256 (FIPS 202) טקסט או קובץ",
+        description:
+          "צור גיבובי SHAKE256 ‏(FIPS 202) לטקסט או לקבצים שהועלו. הכלי מפיק תקצירי XOF באורך משתנה עבור בדיקות שלמות קריפטוגרפיות, גיבוב פרוטוקולים וזרימות עבודה של תקינות נתונים.",
+      },
+      hi: {
+        name: "SHAKE256 (FIPS 202) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट या फ़ाइलों के लिए SHAKE256 (FIPS 202) हैश बनाएँ। यह टूल परिवर्तनीय लंबाई वाले XOF डाइजेस्ट देता है, जो क्रिप्टोग्राफ़िक चेकसम, प्रोटोकॉल हैशिंग और डेटा इंटीग्रिटी वर्कफ़्लो के लिए उपयोगी हैं।",
+      },
+      id: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau File",
+        description:
+          "Buat hash SHAKE256 (FIPS 202) untuk teks atau file. Hasilkan digest XOF dengan panjang variabel untuk checksum kriptografis, hashing protokol, dan alur kerja integritas data.",
+      },
+      it: {
+        name: "Hash SHAKE256 (FIPS 202) di Testo o File",
+        description:
+          "Genera hash SHAKE256 (FIPS 202) per testo o file. Produce digest XOF a lunghezza variabile per checksum crittografici, hashing di protocolli e flussi di integrità dei dati.",
+      },
+      ja: {
+        name: "SHAKE256 (FIPS 202) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力やファイルアップロード向けに SHAKE256 (FIPS 202) ハッシュを生成します。可変長の XOF ダイジェストを出力し、暗号チェックサム、プロトコルハッシュ、データ整合性ワークフローに役立ちます。",
+      },
+      ko: {
+        name: "SHAKE256 (FIPS 202) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력이나 파일 업로드에 대해 SHAKE256 (FIPS 202) 해시를 생성합니다. 가변 길이 XOF 다이제스트를 출력해 암호 체크섬, 프로토콜 해싱, 데이터 무결성 워크플로에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Hash SHAKE256 (FIPS 202) Teks atau Fail",
+        description:
+          "Hasilkan hash SHAKE256 (FIPS 202) untuk teks atau fail. Dapatkan digest XOF dengan panjang berubah-ubah untuk checksum kriptografi, penghashan protokol dan aliran kerja integriti data.",
+      },
+      nl: {
+        name: "SHAKE256 (FIPS 202)-hash tekst of bestand",
+        description:
+          "Genereer SHAKE256-(FIPS 202)-hashes voor tekst of bestanden. Produceer XOF-digests met variabele lengte voor cryptografische controlesommen, protocolhashing en workflows rond gegevensintegriteit.",
+      },
+      no: {
+        name: "SHAKE256 (FIPS 202)-hash tekst eller fil",
+        description:
+          "Generer SHAKE256-hasher (FIPS 202) for tekst eller filer. Få XOF-digester med variabel lengde for kryptografiske kontrollsummer, protokoll-hashing og arbeidsflyter for dataintegritet.",
+      },
+      pl: {
+        name: "Hash SHAKE256 (FIPS 202) tekstu lub pliku",
+        description:
+          "Generuj hashe SHAKE256 (FIPS 202) dla tekstu lub plików. Otrzymuj skróty XOF o zmiennej długości do kryptograficznych sum kontrolnych, haszowania protokołów i procesów integralności danych.",
+      },
+      pt: {
+        name: "Hash SHAKE256 (FIPS 202) de Texto ou Arquivo",
+        description:
+          "Gere hashes SHAKE256 (FIPS 202) para texto ou arquivos. Produza digests XOF de comprimento variável para checksums criptográficos, hash de protocolos e fluxos de integridade de dados.",
+      },
+      ru: {
+        name: "SHAKE256 (FIPS 202)-хеш текста или файла",
+        description:
+          "Создавайте хеши SHAKE256 (FIPS 202) для текста или файлов. Инструмент выдаёт XOF-дайджесты переменной длины для криптографических контрольных сумм, хеширования протоколов и сценариев проверки целостности данных.",
+      },
+      sv: {
+        name: "SHAKE256 (FIPS 202)-hash text eller fil",
+        description:
+          "Generera SHAKE256-hashar (FIPS 202) för text eller filer. Få XOF-digester med variabel längd för kryptografiska kontrollsummor, protokollhashning och arbetsflöden för dataintegritet.",
+      },
+      th: {
+        name: "แฮช SHAKE256 (FIPS 202) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SHAKE256 (FIPS 202) สำหรับข้อความหรือไฟล์ที่อัปโหลด เอาต์พุตเป็น XOF แบบความยาวแปรผัน เหมาะกับเช็กซัมเชิงเข้ารหัส การแฮชในโปรโตคอล และงานด้านความถูกต้องของข้อมูล",
+      },
+      tr: {
+        name: "SHAKE256 (FIPS 202) Hash Metin veya Dosya",
+        description:
+          "Metin veya dosyalar için SHAKE256 (FIPS 202) hashleri üretin. Kriptografik sağlama toplamları, protokol hashleme ve veri bütünlüğü iş akışları için değişken uzunluklu XOF çıktıları alın.",
+      },
+      vi: {
+        name: "Hash SHAKE256 (FIPS 202) văn bản hoặc tệp",
+        description:
+          "Tạo hash SHAKE256 (FIPS 202) cho văn bản hoặc tệp. Công cụ tạo digest XOF có độ dài linh hoạt cho checksum mật mã, băm giao thức và quy trình toàn vẹn dữ liệu.",
+      },
+      "zh-CN": {
+        name: "SHAKE256 (FIPS 202) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SHAKE256 (FIPS 202) 哈希值。输出可变长度的 XOF 摘要，用于加密校验和、协议哈希和数据完整性工作流。",
+      },
+      "zh-TW": {
+        name: "SHAKE256 (FIPS 202) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHAKE256 (FIPS 202) 雜湊值。輸出可變長度的 XOF 摘要，用於加密校驗和、協定雜湊與資料完整性流程。",
+      },
+    },
+  },
+  {
     slug: "slug-generator",
     category: "web",
     icon: "globe",
@@ -9694,6 +12972,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Slug 產生器",
         description:
           "將文字轉換為網址友善的 slug，支援中文、日文、韓文、西里爾文等多語言 Unicode 轉寫",
+      },
+    },
+  },
+  {
+    slug: "sm3-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "sm3", "checksum", "security", "file", "text", "crypto"],
+    locales: {
+      ar: {
+        name: "تجزئة SM3 للنص أو الملف",
+        description:
+          "إنشاء تجزئة SM3 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "SM3-Hash für Text oder Datei",
+        description:
+          "Generieren Sie SM3-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "SM3 Hash Text or File",
+        description:
+          "Generate SM3 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash SM3 de Texto o Archivo",
+        description:
+          "Genera hash SM3 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash SM3 de Texte ou Fichier",
+        description:
+          "Générez un hash SM3 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש SM3 טקסט או קובץ",
+        description:
+          "צור האש SM3 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "SM3 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SM3 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash SM3 Teks atau File",
+        description:
+          "Buat hash SM3 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash SM3 di Testo o File",
+        description:
+          "Genera hash SM3 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "SM3 ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのSM3ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "SM3 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 SM3 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash SM3 Teks atau Fail",
+        description:
+          "Jana hash SM3 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "SM3-hash tekst of bestand",
+        description:
+          "Genereer SM3-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "SM3-hash tekst eller fil",
+        description:
+          "Generer SM3-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash SM3 tekstu lub pliku",
+        description:
+          "Generuj hash SM3 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash SM3 de Texto ou Arquivo",
+        description:
+          "Gere hash SM3 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "SM3-хеш текста или файла",
+        description:
+          "Генерируйте SM3-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "SM3-hash text eller fil",
+        description:
+          "Generera SM3-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช SM3 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช SM3 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "SM3 Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için SM3 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash SM3 văn bản hoặc tệp",
+        description:
+          "Tạo hash SM3 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "SM3 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SM3 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "SM3 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SM3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -11535,6 +14936,261 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "url-parser-builder",
+    category: "web",
+    icon: "globe",
+    tags: ["url", "parser", "builder", "uri", "query", "protocol", "hostname"],
+    locales: {
+      ar: {
+        name: "محلل ومنشئ URL",
+        description:
+          "يحلل عناوين URL إلى مكونات ويعيد بناءها من البروتوكول وبيانات الاعتماد والمضيف والمسار ومعلمات الاستعلام والجزء داخل محرر منظم واحد.",
+      },
+      de: {
+        name: "URL-Parser und -Builder",
+        description:
+          "Zerlegt URLs in ihre Bestandteile und setzt sie in einem strukturierten Editor aus Protokoll, Zugangsdaten, Host, Pfad, Query-Parametern und Fragment wieder zusammen.",
+      },
+      en: {
+        name: "URL Parser and Builder",
+        description:
+          "Parse URLs into components and rebuild them from protocol, credentials, host, path, query parameters, and fragment in one structured editor.",
+      },
+      es: {
+        name: "Analizador y Constructor de URL",
+        description:
+          "Analiza URL en componentes y vuelve a construirlas desde protocolo, credenciales, host, ruta, parámetros de consulta y fragmento en un editor estructurado.",
+      },
+      fr: {
+        name: "Analyseur et Constructeur d'URL",
+        description:
+          "Analyse les URL en composants et les reconstruit à partir du protocole, des identifiants, de l'hôte, du chemin, des paramètres de requête et du fragment dans un éditeur structuré.",
+      },
+      he: {
+        name: "מנתח ובונה URL",
+        description:
+          "מפרק כתובות URL לרכיבים ובונה אותן מחדש מתוך הפרוטוקול, פרטי ההתחברות, המארח, הנתיב, פרמטרי השאילתה והקטע בעורך מובנה אחד.",
+      },
+      hi: {
+        name: "URL पार्सर और बिल्डर",
+        description:
+          "URL को उसके घटकों में विभाजित करें और प्रोटोकॉल, क्रेडेंशियल, होस्ट, पथ, क्वेरी पैरामीटर और फ़्रैगमेंट से एक संरचित एडिटर में फिर से बनाएँ।",
+      },
+      id: {
+        name: "Parser dan Builder URL",
+        description:
+          "Mengurai URL menjadi komponen lalu menyusunnya kembali dari protokol, kredensial, host, jalur, parameter kueri, dan fragmen dalam satu editor terstruktur.",
+      },
+      it: {
+        name: "Parser e Builder URL",
+        description:
+          "Analizza gli URL nei loro componenti e li ricostruisce da protocollo, credenziali, host, percorso, parametri di query e frammento in un editor strutturato.",
+      },
+      ja: {
+        name: "URL パーサー/ビルダー",
+        description:
+          "URL を各コンポーネントに分解し、プロトコル、認証情報、ホスト、パス、クエリパラメータ、フラグメントから 1 つの構造化エディタで再構築します。",
+      },
+      ko: {
+        name: "URL 파서/빌더",
+        description:
+          "URL을 각 구성 요소로 분해하고 프로토콜, 자격 증명, 호스트, 경로, 쿼리 매개변수, 프래그먼트에서 하나의 구조화된 편집기로 다시 구성합니다.",
+      },
+      ms: {
+        name: "Penghurai dan Pembina URL",
+        description:
+          "Menghuraikan URL kepada komponen dan membinanya semula daripada protokol, kelayakan, hos, laluan, parameter pertanyaan dan serpihan dalam satu editor berstruktur.",
+      },
+      nl: {
+        name: "URL Parser en Builder",
+        description:
+          "Ontleedt URL's in onderdelen en bouwt ze opnieuw op uit protocol, inloggegevens, host, pad, queryparameters en fragment in één gestructureerde editor.",
+      },
+      no: {
+        name: "URL-parser og bygger",
+        description:
+          "Parser URL-er i komponenter og bygger dem opp igjen fra protokoll, legitimasjon, vert, sti, spørringsparametere og fragment i én strukturert editor.",
+      },
+      pl: {
+        name: "Parser i konstruktor URL",
+        description:
+          "Rozbija adresy URL na składniki i składa je ponownie z protokołu, poświadczeń, hosta, ścieżki, parametrów zapytania i fragmentu w jednym uporządkowanym edytorze.",
+      },
+      pt: {
+        name: "Analisador e Construtor de URL",
+        description:
+          "Analisa URLs em componentes e os reconstrói a partir de protocolo, credenciais, host, caminho, parâmetros de consulta e fragmento em um editor estruturado.",
+      },
+      ru: {
+        name: "Парсер и конструктор URL",
+        description:
+          "Разбирает URL на компоненты и собирает их обратно из протокола, учетных данных, хоста, пути, параметров запроса и фрагмента в одном структурированном редакторе.",
+      },
+      sv: {
+        name: "URL-parser och byggare",
+        description:
+          "Delar upp URL:er i komponenter och bygger ihop dem igen från protokoll, inloggningsuppgifter, värd, sökväg, frågeparametrar och fragment i en strukturerad editor.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์และสร้าง URL",
+        description:
+          "แยก URL ออกเป็นส่วนประกอบ และสร้างกลับจากโปรโตคอล ข้อมูลรับรอง โฮสต์ เส้นทาง พารามิเตอร์คิวรี และส่วนท้ายภายในตัวแก้ไขแบบมีโครงสร้างเดียว",
+      },
+      tr: {
+        name: "URL Ayrıştırıcı ve Oluşturucu",
+        description:
+          "URL'leri bileşenlerine ayırır ve protokol, kimlik bilgileri, ana makine, yol, sorgu parametreleri ve parça üzerinden tek bir yapılandırılmış düzenleyicide yeniden oluşturur.",
+      },
+      vi: {
+        name: "Bộ phân tích và tạo URL",
+        description:
+          "Phân tích URL thành các thành phần và xây dựng lại từ giao thức, thông tin xác thực, máy chủ, đường dẫn, tham số truy vấn và phân đoạn trong một trình chỉnh sửa có cấu trúc.",
+      },
+      "zh-CN": {
+        name: "URL 解析器/构建器",
+        description:
+          "将 URL 拆解为各个组成部分，并在同一个结构化编辑器中从协议、凭据、主机、路径、查询参数和片段重新构建 URL。",
+      },
+      "zh-TW": {
+        name: "URL 解析器/建構器",
+        description:
+          "將 URL 拆解為各個組成部分，並在同一個結構化編輯器中從協定、憑證、主機、路徑、查詢參數與片段重新建構 URL。",
+      },
+    },
+  },
+  {
+    slug: "user-agent-parser",
+    category: "web",
+    icon: "globe",
+    tags: [
+      "web",
+      "user-agent",
+      "ua",
+      "parser",
+      "browser",
+      "device",
+      "os",
+      "engine",
+    ],
+    locales: {
+      ar: {
+        name: "محلل User-Agent",
+        description:
+          "يحلل سلاسل User-Agent لتحديد المتصفح ونظام التشغيل والجهاز والمحرك ووحدة المعالجة المركزية. يعمل دون اتصال.",
+      },
+      de: {
+        name: "User-Agent-Parser",
+        description:
+          "Analysiert User-Agent-Strings, um Browser, Betriebssystem, Gerät, Engine und CPU zu erkennen. Funktioniert offline.",
+      },
+      en: {
+        name: "User-Agent Parser",
+        description:
+          "Parse user agent strings to identify browser, OS, device, engine, and CPU details. Works entirely offline.",
+      },
+      es: {
+        name: "Analizador de User-Agent",
+        description:
+          "Analiza cadenas User-Agent para identificar navegador, sistema operativo, dispositivo, motor y CPU. Funciona sin conexión.",
+      },
+      fr: {
+        name: "Analyseur d’User-Agent",
+        description:
+          "Analyse les chaînes User-Agent pour identifier le navigateur, l’OS, l’appareil, le moteur et le CPU. Fonctionne hors ligne.",
+      },
+      he: {
+        name: "מנתח User-Agent",
+        description:
+          "מנתח מחרוזות User-Agent כדי לזהות דפדפן, מערכת הפעלה, מכשיר, מנוע ו‑CPU. פועל במצב לא מקוון.",
+      },
+      hi: {
+        name: "User-Agent पार्सर",
+        description:
+          "User-Agent स्ट्रिंग्स को पार्स करके ब्राउज़र, OS, डिवाइस, इंजन और CPU जानकारी पहचानता है। पूरी तरह ऑफ़लाइन काम करता है।",
+      },
+      id: {
+        name: "Parser User-Agent",
+        description:
+          "Mengurai string User-Agent untuk mengidentifikasi browser, sistem operasi, perangkat, engine, dan CPU. Berfungsi offline.",
+      },
+      it: {
+        name: "Parser User-Agent",
+        description:
+          "Analizza stringhe User-Agent per identificare browser, sistema operativo, dispositivo, engine e CPU. Funziona offline.",
+      },
+      ja: {
+        name: "ユーザーエージェント（User-Agent）解析",
+        description:
+          "User-Agent 文字列を解析してブラウザ、OS、デバイス、エンジン、CPU 情報を特定します。オフラインで動作します。",
+      },
+      ko: {
+        name: "User-Agent 파서",
+        description:
+          "User-Agent 문자열을 분석하여 브라우저, OS, 디바이스, 엔진, CPU 정보를 식별합니다. 오프라인에서 동작합니다.",
+      },
+      ms: {
+        name: "Penghurai User-Agent",
+        description:
+          "Menghurai rentetan User-Agent untuk mengenal pasti pelayar, sistem operasi, peranti, enjin dan CPU. Berfungsi luar talian.",
+      },
+      nl: {
+        name: "User-Agent-parser",
+        description:
+          "Parseert User-Agent-strings om browser, besturingssysteem, apparaat, engine en CPU te identificeren. Werkt offline.",
+      },
+      no: {
+        name: "User-Agent-parser",
+        description:
+          "Analyserer User-Agent-strenger for å identifisere nettleser, operativsystem, enhet, motor og CPU. Fungerer offline.",
+      },
+      pl: {
+        name: "Parser User-Agent",
+        description:
+          "Analizuje ciągi User-Agent, aby zidentyfikować przeglądarkę, system operacyjny, urządzenie, silnik i CPU. Działa offline.",
+      },
+      pt: {
+        name: "Analisador de User-Agent",
+        description:
+          "Analisa strings de User-Agent para identificar navegador, sistema operacional, dispositivo, motor e CPU. Funciona offline.",
+      },
+      ru: {
+        name: "Парсер User-Agent",
+        description:
+          "Анализирует строки User-Agent для определения браузера, ОС, устройства, движка и CPU. Работает офлайн.",
+      },
+      sv: {
+        name: "User-Agent-parser",
+        description:
+          "Tolkar User-Agent-strängar för att identifiera webbläsare, operativsystem, enhet, motor och CPU. Fungerar offline.",
+      },
+      th: {
+        name: "ตัววิเคราะห์ User-Agent",
+        description:
+          "วิเคราะห์สตริง User-Agent เพื่อระบุเบราว์เซอร์ ระบบปฏิบัติการ อุปกรณ์ เอนจิน และ CPU ทำงานแบบออฟไลน์",
+      },
+      tr: {
+        name: "User-Agent Ayrıştırıcı",
+        description:
+          "User-Agent dizelerini analiz ederek tarayıcı, işletim sistemi, cihaz, motor ve CPU bilgilerini belirler. Çevrimdışı çalışır.",
+      },
+      vi: {
+        name: "Trình phân tích User-Agent",
+        description:
+          "Phân tích chuỗi User-Agent để nhận diện trình duyệt, hệ điều hành, thiết bị, engine và CPU. Hoạt động ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "用户代理（User-Agent）解析器",
+        description:
+          "解析 User-Agent 字符串，识别浏览器、操作系统、设备、引擎与 CPU 信息。全程离线。",
+      },
+      "zh-TW": {
+        name: "使用者代理（User-Agent）解析器",
+        description:
+          "解析 User-Agent 字串，識別瀏覽器、作業系統、裝置、引擎與 CPU 資訊。全程離線。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -11645,6 +15301,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "VIN 驗證器",
         description: "依據長度、字元及校驗碼規則驗證車輛識別號碼（VIN）",
+      },
+    },
+  },
+  {
+    slug: "whirlpool-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "whirlpool",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة Whirlpool للنص أو الملف",
+        description:
+          "إنشاء تجزئة Whirlpool لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+      },
+      de: {
+        name: "Whirlpool-Hash für Text oder Datei",
+        description:
+          "Generieren Sie Whirlpool-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+      },
+      en: {
+        name: "Whirlpool Hash Text or File",
+        description:
+          "Generate Whirlpool hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash Whirlpool de Texto o Archivo",
+        description:
+          "Genera hash Whirlpool para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+      },
+      fr: {
+        name: "Hash Whirlpool de Texte ou Fichier",
+        description:
+          "Générez un hash Whirlpool pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "האש Whirlpool טקסט או קובץ",
+        description:
+          "צור האש Whirlpool עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+      },
+      hi: {
+        name: "Whirlpool हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए Whirlpool हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash Whirlpool Teks atau File",
+        description:
+          "Buat hash Whirlpool untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash Whirlpool di Testo o File",
+        description:
+          "Genera hash Whirlpool per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+      },
+      ja: {
+        name: "Whirlpool ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのWhirlpoolハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "Whirlpool 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 Whirlpool 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash Whirlpool Teks atau Fail",
+        description:
+          "Jana hash Whirlpool untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "Whirlpool-hash tekst of bestand",
+        description:
+          "Genereer Whirlpool-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "Whirlpool-hash tekst eller fil",
+        description:
+          "Generer Whirlpool-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+      },
+      pl: {
+        name: "Hash Whirlpool tekstu lub pliku",
+        description:
+          "Generuj hash Whirlpool dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash Whirlpool de Texto ou Arquivo",
+        description:
+          "Gere hash Whirlpool para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+      },
+      ru: {
+        name: "Whirlpool-хеш текста или файла",
+        description:
+          "Генерируйте Whirlpool-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+      },
+      sv: {
+        name: "Whirlpool-hash text eller fil",
+        description:
+          "Generera Whirlpool-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช Whirlpool ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช Whirlpool สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+      },
+      tr: {
+        name: "Whirlpool Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için Whirlpool hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash Whirlpool văn bản hoặc tệp",
+        description:
+          "Tạo hash Whirlpool cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "Whirlpool 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 Whirlpool 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+      },
+      "zh-TW": {
+        name: "Whirlpool 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
       },
     },
   },
@@ -11768,6 +15555,537 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "XML 轉 JSON 轉換器",
         description:
           "將 XML 轉為 JSON。貼上 XML 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh3-128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh3",
+      "xxh3-128",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+      "seed",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH3 128) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH3 128 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 128 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH3 128)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH3 128-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 128-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH3 128) Hash Text or File",
+        description:
+          "Generate xxHash XXH3 128 hash for text input or file upload. Calculate fast 128-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH3 128) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH3 128 para entrada de texto o carga de archivo. Calcula sumas de verificación de 128 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH3 128) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH3 128 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 128 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH3 128) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH3 128 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 128-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH3 128) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH3 128 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 128-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH3 128) Teks atau File",
+        description:
+          "Buat hash xxHash XXH3 128 untuk input teks atau upload file. Hitung checksum 128-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH3 128) di Testo o File",
+        description:
+          "Genera hash xxHash XXH3 128 per input di testo o caricamento file. Calcola checksum a 128 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH3 128) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH3 128ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速128ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH3 128) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH3 128 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 128비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH3 128) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH3 128 untuk input teks atau muat naik fail. Kira checksum 128-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH3 128)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH3 128-hash voor tekstinvoer of bestandsupload. Bereken snelle 128-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH3 128)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH3 128-hash for tekstinndata eller filopplasting. Beregn raske 128-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH3 128) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH3 128 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 128-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH3 128) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH3 128 para entrada de texto ou upload de arquivo. Calcule checksums de 128 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH3 128)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH3 128-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 128-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH3 128)-hash text eller fil",
+        description:
+          "Generera xxHash XXH3 128-hash för textinmatning eller filuppladdning. Beräkna snabba 128-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH3 128) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH3 128 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 128-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH3 128) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH3 128 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 128-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH3 128) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH3 128 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 128-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH3 128) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH3 128 哈希值。计算快速 128 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH3 128) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH3 128 雜湊值。計算快速 128 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh3-64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh3",
+      "xxh3-64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH3 64) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH3 64 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 64 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH3 64)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH3 64-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 64-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH3 64) Hash Text or File",
+        description:
+          "Generate xxHash XXH3 64 hash for text input or file upload. Calculate fast 64-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH3 64) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH3 64 para entrada de texto o carga de archivo. Calcula sumas de verificación de 64 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH3 64) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH3 64 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 64 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH3 64) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH3 64 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 64-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH3 64) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH3 64 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH3 64) Teks atau File",
+        description:
+          "Buat hash xxHash XXH3 64 untuk input teks atau upload file. Hitung checksum 64-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH3 64) di Testo o File",
+        description:
+          "Genera hash xxHash XXH3 64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH3 64) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH3 64ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速64ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH3 64) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH3 64 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 64비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH3 64) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH3 64 untuk input teks atau muat naik fail. Kira checksum 64-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH3 64)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH3 64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH3 64)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH3 64-hash for tekstinndata eller filopplasting. Beregn raske 64-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH3 64) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH3 64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH3 64) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH3 64 para entrada de texto ou upload de arquivo. Calcule checksums de 64 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH3 64)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH3 64-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 64-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH3 64)-hash text eller fil",
+        description:
+          "Generera xxHash XXH3 64-hash för textinmatning eller filuppladdning. Beräkna snabba 64-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH3 64) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH3 64 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 64-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH3 64) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH3 64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH3 64) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH3 64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH3 64) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH3 64 哈希值。计算快速 64 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH3 64) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH3 64 雜湊值。計算快速 64 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh32-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh32",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH32) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH32 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 32 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH32)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH32-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 32-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH32) Hash Text or File",
+        description:
+          "Generate xxHash XXH32 hash for text input or file upload. Calculate fast 32-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH32) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH32 para entrada de texto o carga de archivo. Calcula sumas de verificación de 32 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH32) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH32 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 32 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH32) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH32 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 32-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH32) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH32 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 32-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH32) Teks atau File",
+        description:
+          "Buat hash xxHash XXH32 untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH32) di Testo o File",
+        description:
+          "Genera hash xxHash XXH32 per input di testo o caricamento file. Calcola checksum a 32 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH32) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH32ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速32ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH32) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH32 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 32비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH32) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH32 untuk input teks atau muat naik fail. Kira checksum 32-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH32)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH32-hash voor tekstinvoer of bestandsupload. Bereken snelle 32-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH32)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH32-hash for tekstinndata eller filopplasting. Beregn raske 32-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH32) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH32 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 32-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH32) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH32 para entrada de texto ou upload de arquivo. Calcule checksums de 32 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH32)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH32-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 32-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH32)-hash text eller fil",
+        description:
+          "Generera xxHash XXH32-hash för textinmatning eller filuppladdning. Beräkna snabba 32-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH32) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH32 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 32-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH32) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH32 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 32-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH32) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH32 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 32-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH32) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH32 哈希值。计算快速 32 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH32) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH32 雜湊值。計算快速 32 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  {
+    slug: "xxhash-xxh64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "xxhash",
+      "xxh64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة xxHash (XXH64) للنص أو الملف",
+        description:
+          "إنشاء تجزئة xxHash XXH64 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق 64 بت غير المشفرة السريعة للتحقق من سلامة البيانات والتجزئة الموجهة للأداء",
+      },
+      de: {
+        name: "xxHash (XXH64)-Hash für Text oder Datei",
+        description:
+          "Generieren Sie xxHash XXH64-Hash für Texteingabe oder Datei-Upload. Berechnen Sie schnelle 64-Bit nicht-kryptographische Prüfsummen zur Datenintegritätsprüfung und leistungsorientierten Hashing",
+      },
+      en: {
+        name: "xxHash (XXH64) Hash Text or File",
+        description:
+          "Generate xxHash XXH64 hash for text input or file upload. Calculate fast 64-bit non-cryptographic checksums for data integrity verification and performance-oriented hashing",
+      },
+      es: {
+        name: "Hash xxHash (XXH64) de Texto o Archivo",
+        description:
+          "Genera hash xxHash XXH64 para entrada de texto o carga de archivo. Calcula sumas de verificación de 64 bits no criptográficas rápidas para verificación de integridad de datos y hashing orientado al rendimiento",
+      },
+      fr: {
+        name: "Hash xxHash (XXH64) de Texte ou Fichier",
+        description:
+          "Générez un hash xxHash XXH64 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle 64 bits non cryptographiques rapides pour la vérification de l'intégrité des données et le hachage orienté performance",
+      },
+      he: {
+        name: "האש xxHash (XXH64) טקסט או קובץ",
+        description:
+          "צור האש xxHash XXH64 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה 64-ביט לא קריפטוגרפיים מהירים לאימות שלמות נתונים והאשינג מוכוון ביצועים",
+      },
+      hi: {
+        name: "xxHash (XXH64) हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए xxHash XXH64 हैश जेनरेट करें। डेटा अखंडता सत्यापन और प्रदर्शन-उन्मुख हैशिंग के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash xxHash (XXH64) Teks atau File",
+        description:
+          "Buat hash xxHash XXH64 untuk input teks atau upload file. Hitung checksum 64-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja",
+      },
+      it: {
+        name: "Hash xxHash (XXH64) di Testo o File",
+        description:
+          "Genera hash xxHash XXH64 per input di testo o caricamento file. Calcola checksum a 64 bit non crittografici veloci per la verifica dell'integrità dei dati e hashing orientato alle prestazioni",
+      },
+      ja: {
+        name: "xxHash (XXH64) ハッシュ テキストまたはファイル",
+        description:
+          "テキスト入力またはファイルアップロードのxxHash XXH64ハッシュを生成します。データ整合性検証とパフォーマンス重視のハッシュ化のための高速64ビット非暗号化チェックサムを計算",
+      },
+      ko: {
+        name: "xxHash (XXH64) 해시 텍스트 또는 파일",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 xxHash XXH64 해시를 생성합니다. 데이터 무결성 검증 및 성능 지향 해싱을 위한 빠른 64비트 비암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash xxHash (XXH64) Teks atau Fail",
+        description:
+          "Jana hash xxHash XXH64 untuk input teks atau muat naik fail. Kira checksum 64-bit bukan kriptografi pantas untuk pengesahan integriti data dan hash berorientasikan prestasi",
+      },
+      nl: {
+        name: "xxHash (XXH64)-hash tekst of bestand",
+        description:
+          "Genereer xxHash XXH64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing",
+      },
+      no: {
+        name: "xxHash (XXH64)-hash tekst eller fil",
+        description:
+          "Generer xxHash XXH64-hash for tekstinndata eller filopplasting. Beregn raske 64-bits ikke-kryptografiske sjekksummer for dataintegritetsverifisering og ytelsesrettet hashing",
+      },
+      pl: {
+        name: "Hash xxHash (XXH64) tekstu lub pliku",
+        description:
+          "Generuj hash xxHash XXH64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność",
+      },
+      pt: {
+        name: "Hash xxHash (XXH64) de Texto ou Arquivo",
+        description:
+          "Gere hash xxHash XXH64 para entrada de texto ou upload de arquivo. Calcule checksums de 64 bits não criptográficos rápidos para verificação de integridade de dados e hashing orientado a performance",
+      },
+      ru: {
+        name: "xxHash (XXH64)-хеш текста или файла",
+        description:
+          "Генерируйте xxHash XXH64-хеш для текстового ввода или загрузки файла. Вычисляйте быстрые 64-битные некриптографические контрольные суммы для проверки целостности данных и производительного хеширования",
+      },
+      sv: {
+        name: "xxHash (XXH64)-hash text eller fil",
+        description:
+          "Generera xxHash XXH64-hash för textinmatning eller filuppladdning. Beräkna snabba 64-bitars icke-kryptografiska kontrollsummor för dataintegritetsverifiering och prestandaorienterad hash",
+      },
+      th: {
+        name: "แฮช xxHash (XXH64) ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช xxHash XXH64 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัม 64-บิตที่ไม่ใช่การเข้ารหัสที่รวดเร็วสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและการแฮชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "xxHash (XXH64) Hash Metin veya Dosya",
+        description:
+          "Metin girişi veya dosya yükleme için xxHash XXH64 hash oluşturun. Veri bütünlüğü doğrulaması ve performans odaklı hash için hızlı 64-bit kriptografik olmayan sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Hash xxHash (XXH64) văn bản hoặc tệp",
+        description:
+          "Tạo hash xxHash XXH64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất",
+      },
+      "zh-CN": {
+        name: "xxHash (XXH64) 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 xxHash XXH64 哈希值。计算快速 64 位非加密校验和，用于数据完整性验证和性能导向的哈希计算",
+      },
+      "zh-TW": {
+        name: "xxHash (XXH64) 雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 xxHash XXH64 雜湊值。計算快速 64 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
       },
     },
   },

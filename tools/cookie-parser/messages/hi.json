@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "हेडर प्रकार",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "इनपुट",
+  "inputPlaceholder": "यहां Cookie या Set-Cookie हेडर पेस्ट करें...",
+  "parsedJsonLabel": "पार्स किया गया JSON",
+  "emptyOutputDescription": "पार्स आउटपुट यहां दिखाई देगा...",
+  "cookieCountLabel": "कुकी",
+  "invalidCountLabel": "अमान्य",
+  "invalidFragmentsLabel": "अमान्य खंड",
+  "noCookiesTitle": "कोई कुकी नहीं मिली",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadJsonLabel": "JSON डाउनलोड करें",
+  "resetLabel": "उदाहरण रीसेट करें"
+}

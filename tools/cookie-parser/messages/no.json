@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Header-type",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Inndata",
+  "inputPlaceholder": "Lim inn Cookie- eller Set-Cookie-headere her...",
+  "parsedJsonLabel": "Tolket JSON",
+  "emptyOutputDescription": "Tolket output vises her...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Ugyldige",
+  "invalidFragmentsLabel": "Ugyldige fragmenter",
+  "noCookiesTitle": "Ingen cookies funnet",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert",
+  "downloadJsonLabel": "Last ned JSON",
+  "resetLabel": "Tilbakestill eksempel"
+}

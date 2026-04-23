@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di Colori",
+  "description": "Converti i colori tra i formati HEX, RGB, HSL, HSV, HWB, LAB, LCH, CMYK e parole chiave CSS. Conversione bidirezionale in tempo reale con supporto del canale alfa."
+}

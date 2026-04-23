@@ -1,0 +1,4 @@
+{
+  "name": "xxHash (XXH64)-hash tekst of bestand",
+  "description": "Genereer xxHash XXH64-hash voor tekstinvoer of bestandsupload. Bereken snelle 64-bit niet-cryptografische checksums voor gegevensintegriteitsverificatie en prestatiegerichte hashing"
+}

@@ -1,0 +1,12 @@
+{
+  "inputTitle": "Đầu vào IP hoặc CIDR",
+  "inputDescription": "Nhập một địa chỉ IPv4, một địa chỉ IPv6 hoặc một khối CIDR để chuẩn hóa về dạng ký hiệu mạng chuẩn.",
+  "resultTitle": "Kết Quả Chuẩn Hóa",
+  "resultDescription": "Địa chỉ hoặc dải mạng chuẩn. Dữ liệu CIDR sẽ được viết lại thành địa chỉ mạng với các bit host đã được xóa.",
+  "label": "IP/CIDR",
+  "placeholder": "ví dụ: 192.168.0.15/24 hoặc 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR không hợp lệ",
+  "invalidInputDescription": "Hãy dùng địa chỉ IPv4, địa chỉ IPv6 hoặc dải CIDR hợp lệ. Độ dài tiền tố phải khớp với họ địa chỉ.",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

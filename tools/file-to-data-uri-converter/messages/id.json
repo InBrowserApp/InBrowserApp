@@ -1,0 +1,14 @@
+{
+  "file": "File",
+  "dragOrClick": "Klik atau seret untuk mengunggah file",
+  "clearFile": "Hapus file",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Data URI yang dihasilkan akan muncul di sini...",
+  "onlyOneFile": "Hanya satu file yang dapat diunggah",
+  "readFailed": "Gagal membaca file",
+  "unknownType": "Jenis tidak dikenal",
+  "fileSize": "Ukuran file",
+  "mimeType": "Tipe MIME",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin"
+}

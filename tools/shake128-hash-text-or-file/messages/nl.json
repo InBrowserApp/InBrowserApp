@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ elke UTF-8-tekst, inclusief emoji's en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hash Resultaat",
+  "hashResultDescription": "Hashresultaat voor de huidige tekstinvoer.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "outputLengthLabel": "Uitvoerlengte",
+  "outputLengthPlaceholder": "bijv. 256 (bits)",
+  "outputLengthInvalid": "Voer een veelvoud van 8 in tussen 8 en 65536.",
+  "hashTextError": "Kan de hash van de tekst niet berekenen.",
+  "hashFileError": "Kan de hash van het bestand niet berekenen."
+}

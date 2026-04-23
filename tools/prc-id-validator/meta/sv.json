@@ -1,0 +1,4 @@
+{
+  "name": "PRC Resident-ID-validator",
+  "description": "Validerar PRC Resident-ID och tolkar region, födelsedatum och kontrollsumma"
+}

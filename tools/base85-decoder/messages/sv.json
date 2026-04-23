@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabet",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "Base85-inmatning",
+  "base85InputPlaceholder": "Ange Base85-text...",
+  "importFromFileLabel": "Importera från fil",
+  "decodedOutputLabel": "Avkodad utdata",
+  "decodedOutputEmptyDescription": "Avkodad text visas här...",
+  "downloadFileLabel": "Ladda ner fil",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
+  "loadSample": "Ladda exempel",
+  "invalidBase85Title": "Ogiltig Base85-text",
+  "fileReadFailedTitle": "Kunde inte läsa filen",
+  "previewTruncatedLabel": "Förhandsvisning avkortad"
+}

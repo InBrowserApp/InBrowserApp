@@ -1,0 +1,14 @@
+{
+  "file": "Файл",
+  "dragOrClick": "Нажмите или перетащите, чтобы загрузить файл",
+  "clearFile": "Очистить файл",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Сгенерированный Data URI появится здесь...",
+  "onlyOneFile": "Можно загрузить только один файл",
+  "readFailed": "Не удалось прочитать файл",
+  "unknownType": "Неизвестный тип",
+  "fileSize": "Размер файла",
+  "mimeType": "Тип MIME",
+  "copyLabel": "Скопировать",
+  "copiedLabel": "Скопировано"
+}

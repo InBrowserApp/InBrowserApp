@@ -1,0 +1,4 @@
+{
+  "name": "Encoder Base85",
+  "description": "Encode teks atau file ke Base85 untuk transmisi data, penyimpanan, dan pengembangan web."
+}

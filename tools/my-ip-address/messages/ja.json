@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "WebRTC リーク",
+  "unableToGetIp": "IP を取得できません",
+  "hostname": "ホスト名",
+  "isp": "インターネットサービスプロバイダ",
+  "ipOrganization": "IP 組織",
+  "asn": "ASN",
+  "asnOrganization": "ASN 組織",
+  "location": "場所",
+  "country": "国",
+  "timezone": "タイムゾーン",
+  "webrtcDescription": "WebRTC ネゴシエーション中に公開される追加のインターフェイスとローカル候補アドレス。",
+  "unableToGetIpDescription": "ルックアップではパブリック アドレスが返されませんでした。接続、VPN、プロキシ、またはプライバシー設定を確認して、もう一度試してください。",
+  "fetchingIp": "IPアドレスを取得しています",
+  "fetchingIpDescription": "複数のプロバイダーからパブリック アドレスとネットワークの詳細を検索します。",
+  "copyIp": "IPをコピーする",
+  "copied": "コピーされました",
+  "ipv4Description": "現在 Web サイトおよび API に表示されるパブリック IPv4 アドレス。",
+  "ipv6Description": "ネットワークがネイティブ IPv6 またはトンネル IPv6 をサポートしている場合に表示されるパブリック IPv6 アドレス。"
+}

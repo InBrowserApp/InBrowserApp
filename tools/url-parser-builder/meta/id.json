@@ -1,0 +1,4 @@
+{
+  "name": "Parser dan Builder URL",
+  "description": "Mengurai URL menjadi komponen lalu menyusunnya kembali dari protokol, kredensial, host, jalur, parameter kueri, dan fragmen dalam satu editor terstruktur."
+}

@@ -1,0 +1,14 @@
+{
+  "file": "Bestand",
+  "dragOrClick": "Klik of sleep om een bestand te uploaden",
+  "clearFile": "Bestand wissen",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "De gegenereerde Data URI verschijnt hier...",
+  "onlyOneFile": "Er kan slechts één bestand worden geüpload",
+  "readFailed": "Bestand lezen mislukt",
+  "unknownType": "Onbekend type",
+  "fileSize": "Bestandsgrootte",
+  "mimeType": "MIME Type",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

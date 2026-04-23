@@ -1,0 +1,23 @@
+{
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "presetsTitle": "Pratetap Biasa",
+  "executablePresetLabel": "Boleh dilaksanakan",
+  "readOnlyPresetLabel": "Baca sahaja",
+  "fullAccessPresetLabel": "Akses penuh",
+  "ownerOnlyPresetLabel": "Pemilik sahaja",
+  "privateFilePresetLabel": "Fail peribadi",
+  "sharedDirPresetLabel": "Direktori kongsi",
+  "numericPermissionLabel": "Kebenaran Numerik",
+  "numericPermissionPlaceholder": "cth., 755",
+  "symbolicPermissionLabel": "Kebenaran Simbolik",
+  "symbolicPermissionPlaceholder": "cth., rwxr-xr-x",
+  "permissionMatrixLabel": "Matriks Kebenaran",
+  "readLabel": "Baca",
+  "writeLabel": "Tulis",
+  "executeLabel": "Laksana",
+  "ownerLabel": "Pemilik",
+  "groupLabel": "Kumpulan",
+  "othersLabel": "Lain-lain",
+  "chmodCommandLabel": "Perintah Chmod"
+}

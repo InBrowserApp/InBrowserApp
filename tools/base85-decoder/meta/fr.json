@@ -1,0 +1,4 @@
+{
+  "name": "Décodeur Base85",
+  "description": "Décode le texte ou les fichiers Base85 pour revenir aux données d'origine, pour la transmission, le stockage et l'intégration."
+}

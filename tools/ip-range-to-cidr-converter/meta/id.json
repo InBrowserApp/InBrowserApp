@@ -1,0 +1,4 @@
+{
+  "name": "Rentang IP ke Konverter CIDR",
+  "description": "Ubah alamat awal dan akhir IPv4 atau IPv6 menjadi kumpulan blok CIDR minimal yang mencakup rentang tersebut secara tepat."
+}

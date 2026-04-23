@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de rango IP a CIDR",
+  "description": "Convierta las direcciones de inicio y finalización de IPv4 o IPv6 en el conjunto mínimo de bloques CIDR que cubra exactamente el rango."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH3 64) văn bản hoặc tệp",
+  "description": "Tạo hash xxHash XXH3 64 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum 64-bit không mã hóa nhanh để xác minh tính toàn vẹn dữ liệu và băm hướng hiệu suất"
+}

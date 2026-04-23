@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x86 32-bit) Teks atau File",
+  "description": "Buat hash MurmurHash3 x86 32-bit untuk input teks atau upload file. Hitung checksum 32-bit non-kriptografi cepat untuk verifikasi integritas data dan hashing berorientasi kinerja"
+}

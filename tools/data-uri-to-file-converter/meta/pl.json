@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter Data URI na plik",
+  "description": "Dekoduje ciągi Data URI do plików, sprawdza typ MIME i kodowanie oraz pobiera wynik offline."
+}

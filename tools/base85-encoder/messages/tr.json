@@ -1,0 +1,17 @@
+{
+  "alphabet": "Alfabe",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "inputTitle": "Giriş",
+  "inputPlaceholder": "Kodlanacak metni girin...",
+  "outputTitle": "Base85 Kodlanmış",
+  "outputPlaceholder": "Base85 çıktısı burada görünecek...",
+  "download": "Base85 İndir",
+  "readFailed": "Dosya okunamadı",
+  "invalidBase85": "Z85, giriş uzunluğunun 4 baytın katı olmasını gerektirir.",
+  "loadSample": "Load sample",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "importFromFileLabel": "Dosyadan içe aktar"
+}

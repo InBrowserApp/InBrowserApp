@@ -1,0 +1,20 @@
+{
+  "webrtcLeak": "WebRTC 洩漏",
+  "unableToGetIp": "無法取得 IP",
+  "hostname": "主機名",
+  "isp": "網路服務商",
+  "ipOrganization": "IP 組織",
+  "asn": "ASN",
+  "asnOrganization": "ASN 組織",
+  "location": "位置",
+  "country": "國家",
+  "timezone": "時區",
+  "webrtcDescription": "WebRTC 協商期間公開的其他介面和本機候選位址。",
+  "unableToGetIpDescription": "尋找未返回公共地址。檢查您的連線、VPN、代理或隱私設置，然後重試。",
+  "fetchingIp": "取得IP位址",
+  "fetchingIpDescription": "從多個提供者尋找您的公共位址和網路詳細資訊。",
+  "copyIp": "複製IP",
+  "copied": "已複製",
+  "ipv4Description": "公共 IPv4 位址目前對網站和 API 可見。",
+  "ipv6Description": "當您的網路支援本機或隧道 IPv6 時，公用 IPv6 位址可見。"
+}

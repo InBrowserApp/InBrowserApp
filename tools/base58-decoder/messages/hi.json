@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "विकल्प",
+  "alphabetLabel": "वर्णमाला",
+  "alphabetBitcoinLabel": "Bitcoin",
+  "alphabetFlickrLabel": "Flickr",
+  "alphabetRippleLabel": "Ripple (XRP)",
+  "inputTitle": "Base58 इनपुट",
+  "inputPlaceholder": "Base58 पाठ दर्ज करें...",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "decodedOutputTitle": "डिकोडेड आउटपुट",
+  "decodedOutputEmptyDescription": "डिकोड किया गया पाठ यहां दिखाई देगा...",
+  "downloadFileLabel": "फ़ाइल डाउनलोड करें",
+  "previewTruncatedLabel": "प्रीव्यू संक्षिप्त किया गया",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "resetLabel": "उदाहरण रीसेट करें",
+  "invalidBase58Title": "अमान्य Base58 पाठ",
+  "fileReadFailedTitle": "फ़ाइल पढ़ने में विफल"
+}

@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "顏色",
+  "foregroundLabel": "前景色",
+  "backgroundLabel": "背景色",
+  "swapLabel": "交換",
+  "invalidColorMessage": "顏色格式無效",
+  "resultsTitle": "結果",
+  "contrastRatioLabel": "對比度",
+  "aaNormalLabel": "AA（一般）",
+  "aaLargeLabel": "AA（大字體）",
+  "aaaNormalLabel": "AAA（一般）",
+  "aaaLargeLabel": "AAA（大字體）",
+  "passLabel": "通過",
+  "failLabel": "未通過",
+  "invalidInputMessage": "請輸入有效顏色以查看結果。",
+  "alphaNote": "含透明度的顏色會先與白色混合後計算對比度。",
+  "previewTitle": "預覽",
+  "normalTextLabel": "一般文字",
+  "largeTextLabel": "大字體文字",
+  "sampleText": "Aa Bb Cc 123"
+}

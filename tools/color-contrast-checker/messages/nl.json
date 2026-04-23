@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Kleuren",
+  "foregroundLabel": "Voorgrond",
+  "backgroundLabel": "Achtergrond",
+  "swapLabel": "Wisselen",
+  "invalidColorMessage": "Ongeldig kleurformaat",
+  "resultsTitle": "Resultaten",
+  "contrastRatioLabel": "Contrastverhouding",
+  "aaNormalLabel": "AA (normaal)",
+  "aaLargeLabel": "AA (groot)",
+  "aaaNormalLabel": "AAA (normaal)",
+  "aaaLargeLabel": "AAA (groot)",
+  "passLabel": "Geslaagd",
+  "failLabel": "Niet geslaagd",
+  "invalidInputMessage": "Voer geldige kleuren in om resultaten te zien.",
+  "alphaNote": "Transparante kleuren worden voor contrast met wit gemengd.",
+  "previewTitle": "Voorbeeld",
+  "normalTextLabel": "Normale tekst",
+  "largeTextLabel": "Grote tekst",
+  "sampleText": "Aa Bb Cc 123"
+}

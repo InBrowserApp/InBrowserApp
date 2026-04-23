@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x86 32-bit) Hash Metin veya Dosya",
+  "description": "Metin giri\u015fi veya dosya y\u00fckleme i\u00e7in MurmurHash3 x86 32-bit hash olu\u015fturun. Veri b\u00fct\u00fcnl\u00fc\u011f\u00fc do\u011frulamas\u0131 ve performans odakl\u0131 hash i\u00e7in h\u0131zl\u0131 32-bit kriptografik olmayan sa\u011flama toplamlar\u0131 hesaplay\u0131n"
+}

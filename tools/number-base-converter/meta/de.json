@@ -1,0 +1,4 @@
+{
+  "name": "Zahlenbasis-Konverter",
+  "description": "Konvertiert Zahlen zwischen Binär, Oktal, Dezimal, Hexadezimal, Base32, Base36, Base62, Base64 und benutzerdefinierten Basen (2-64)."
+}

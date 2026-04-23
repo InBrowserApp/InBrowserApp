@@ -1,0 +1,18 @@
+{
+  "inputLabel": "\uc785\ub825",
+  "plainTextLabel": "\uc77c\ubc18 \ud14d\uc2a4\ud2b8",
+  "plainTextDescription": "\uc774\ubaa8\uc9c0\uc640 \ube44\ub77c\ud2f4 \ubb38\uc790 \ub4f1 \ubaa8\ub4e0 UTF-8 \ud14d\uc2a4\ud2b8\ub97c \ubd99\uc5ec\ub123\uac70\ub098 \uc785\ub825\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+  "importFromFileLabel": "\ud30c\uc77c\uc5d0\uc11c \uac00\uc838\uc624\uae30",
+  "hashResultLabel": "\ud574\uc2dc \uacb0\uacfc",
+  "hashResultDescription": "\ud604\uc7ac \ud14d\uc2a4\ud2b8 \uc785\ub825\uc758 \ud574\uc2dc \uacb0\uacfc.",
+  "hexLabel": "16\uc9c4\uc218",
+  "base64Label": "Base64",
+  "decimalLabel": "10\uc9c4\uc218",
+  "binaryLabel": "2\uc9c4\uc218",
+  "copyResultLabel": "\uacb0\uacfc \ubcf5\uc0ac",
+  "copiedLabel": "\ubcf5\uc0ac\ub428",
+  "seedSectionLabel": "\uc2dc\ub4dc",
+  "seedLabel": "\uc2dc\ub4dc(\uc120\ud0dd \uc0ac\ud56d)",
+  "seedPlaceholder": "0 \ub610\ub294 0x...",
+  "seedInvalid": "10\uc9c4\uc218 \ub610\ub294 0x 16\uc9c4\uc218 \uac12\uc744 \uc785\ub825\ud558\uc138\uc694."
+}

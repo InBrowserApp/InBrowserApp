@@ -1,0 +1,4 @@
+{
+  "name": "Penyahkod Base58",
+  "description": "Nyahkod teks atau fail Base58 kembali kepada data asal untuk penghantaran, penyimpanan dan integrasi."
+}

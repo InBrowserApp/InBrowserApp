@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "颜色",
+  "foregroundLabel": "前景色",
+  "backgroundLabel": "背景色",
+  "swapLabel": "交换",
+  "invalidColorMessage": "颜色格式无效",
+  "resultsTitle": "结果",
+  "contrastRatioLabel": "对比度",
+  "aaNormalLabel": "AA（普通）",
+  "aaLargeLabel": "AA（大号）",
+  "aaaNormalLabel": "AAA（普通）",
+  "aaaLargeLabel": "AAA（大号）",
+  "passLabel": "通过",
+  "failLabel": "未通过",
+  "invalidInputMessage": "请输入有效颜色以查看结果。",
+  "alphaNote": "包含透明度的颜色会先与白色混合后计算对比度。",
+  "previewTitle": "预览",
+  "normalTextLabel": "普通文本",
+  "largeTextLabel": "大号文本",
+  "sampleText": "Aa Bb Cc 123"
+}

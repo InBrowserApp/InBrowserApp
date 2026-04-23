@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI 輸入",
+  "inputPlaceholder": "在此貼上 Data URI...",
+  "invalidDataUriTitle": "無效的 Data URI",
+  "detailsTitle": "詳細資訊",
+  "mimeTypeLabel": "MIME 類型",
+  "encodingLabel": "編碼",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL 編碼",
+  "sizeLabel": "大小",
+  "fileNameLabel": "檔案名稱",
+  "fileNamePlaceholder": "例如 data.png",
+  "previewTitle": "預覽",
+  "decodedOutputTitle": "解碼檔案",
+  "decodedOutputEmptyDescription": "解碼後的檔案詳細資訊、預覽與下載入口會顯示在這裡。",
+  "previewUnavailableDescription": "這種檔案類型無法在瀏覽器中預覽。請下載後再檢查原始檔案。",
+  "previewTruncatedLabel": "預覽已截斷",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "downloadFileLabel": "下載檔案",
+  "resetLabel": "重設範例"
+}

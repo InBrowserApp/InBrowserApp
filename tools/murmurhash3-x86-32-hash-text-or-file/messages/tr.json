@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Giri\u015f",
+  "plainTextLabel": "D\u00fcz metin",
+  "plainTextDescription": "Emoji ve Latin olmayan karakterler dahil, herhangi bir UTF-8 metni yap\u0131\u015ft\u0131r\u0131n veya yaz\u0131n.",
+  "importFromFileLabel": "Dosyadan i\u00e7e aktar",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Ge\u00e7erli metin girdisinin hash sonucu.",
+  "hexLabel": "Onalt\u0131l\u0131k",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondal\u0131k",
+  "binaryLabel": "\u0130kili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyaland\u0131",
+  "seedSectionLabel": "Tohum",
+  "seedLabel": "Tohum (iste\u011fe ba\u011fl\u0131)",
+  "seedPlaceholder": "0 veya 0x...",
+  "seedInvalid": "Ondal\u0131k bir say\u0131 veya 0x onalt\u0131l\u0131k de\u011fer girin."
+}

@@ -1,0 +1,4 @@
+{
+  "description": "Convertissez les adresses de début et de fin IPv4 ou IPv6 en un ensemble minimal de blocs CIDR qui couvrent exactement la plage.",
+  "name": "Convertisseur de plage IP en CIDR"
+}

@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Utgangsspråk",
+  "languagePlaceholder": "Velg et språk",
+  "inputCurlLabel": "cURL-kommando",
+  "outputCodeLabel": "Konvertert kode",
+  "curlPlaceholder": "Lim inn en cURL-kommando her...",
+  "useSampleLabel": "Bruk eksempel",
+  "clearLabel": "Tøm",
+  "downloadCodeLabel": "Last ned",
+  "warningsTitle": "Advarsler",
+  "errorsTitle": "Feil",
+  "importFromFileLabel": "Importer fra fil",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Colors",
+  "resultsTitle": "Results",
+  "previewTitle": "Preview",
+  "enableAlphaLabel": "Enable Alpha",
+  "invalidColorMessage": "Invalid color format",
+  "copyValueLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "keywordLabel": "CSS Keyword",
+  "hexInfo": "Hexadecimal color notation, most common in web development",
+  "rgbInfo": "Red, Green, Blue - additive color model for screens",
+  "hslInfo": "Hue, Saturation, Lightness - intuitive color adjustments",
+  "hsvInfo": "Hue, Saturation, Value (Brightness) - also known as HSB, common in color pickers",
+  "hwbInfo": "Hue, Whiteness, Blackness - CSS4 color format, no alpha support",
+  "labInfo": "CIE LAB - perceptually uniform color space, no alpha support",
+  "lchInfo": "Lightness, Chroma, Hue - cylindrical LAB, easier hue adjustments, no alpha",
+  "cmykInfo": "Cyan, Magenta, Yellow, Key (Black) - print standard, no alpha support",
+  "keywordInfo": "CSS named colors like red, blue, coral - 140+ predefined colors, no alpha"
+}

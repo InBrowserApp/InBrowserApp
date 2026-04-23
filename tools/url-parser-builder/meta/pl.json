@@ -1,0 +1,4 @@
+{
+  "name": "Parser i konstruktor URL",
+  "description": "Rozbija adresy URL na składniki i składa je ponownie z protokołu, poświadczeń, hosta, ścieżki, parametrów zapytania i fragmentu w jednym uporządkowanym edytorze."
+}

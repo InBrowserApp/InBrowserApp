@@ -1,0 +1,14 @@
+{
+  "file": "ไฟล์",
+  "dragOrClick": "คลิกหรือลากเพื่ออัปโหลดไฟล์",
+  "clearFile": "ล้างไฟล์",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Data URI ที่สร้างจะปรากฏที่นี่...",
+  "onlyOneFile": "สามารถอัปโหลดได้เพียงหนึ่งไฟล์เท่านั้น",
+  "readFailed": "ไม่สามารถอ่านไฟล์ได้",
+  "unknownType": "ไม่ทราบประเภท",
+  "fileSize": "ขนาดไฟล์",
+  "mimeType": "ประเภท MIME",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว"
+}

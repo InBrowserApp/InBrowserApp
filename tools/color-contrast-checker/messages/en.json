@@ -1,0 +1,21 @@
+{
+  "optionsTitle": "Colors",
+  "foregroundLabel": "Foreground",
+  "backgroundLabel": "Background",
+  "swapLabel": "Swap",
+  "invalidColorMessage": "Invalid color format",
+  "resultsTitle": "Results",
+  "contrastRatioLabel": "Contrast ratio",
+  "aaNormalLabel": "AA (normal)",
+  "aaLargeLabel": "AA (large)",
+  "aaaNormalLabel": "AAA (normal)",
+  "aaaLargeLabel": "AAA (large)",
+  "passLabel": "Pass",
+  "failLabel": "Fail",
+  "invalidInputMessage": "Enter valid colors to see results.",
+  "alphaNote": "Transparent colors are blended over white for contrast.",
+  "previewTitle": "Preview",
+  "normalTextLabel": "Normal text",
+  "largeTextLabel": "Large text",
+  "sampleText": "Aa Bb Cc 123"
+}

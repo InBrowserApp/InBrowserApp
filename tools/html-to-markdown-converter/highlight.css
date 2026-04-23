@@ -1,0 +1,55 @@
+.markdown-highlight-surface {
+  overflow: auto;
+}
+
+.markdown-highlight {
+  min-height: 24rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.markdown-highlight code {
+  display: block;
+  min-width: fit-content;
+}
+
+.markdown-highlight-empty {
+  min-height: 24rem;
+  width: 100%;
+}
+
+.markdown-highlight .hljs-section,
+.markdown-highlight .hljs-title {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+  font-weight: 700;
+}
+
+.markdown-highlight .hljs-bullet,
+.markdown-highlight .hljs-punctuation {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.markdown-highlight .hljs-link,
+.markdown-highlight .hljs-string,
+.markdown-highlight .hljs-code,
+.markdown-highlight .hljs-symbol {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.markdown-highlight .hljs-quote,
+.markdown-highlight .hljs-comment {
+  color: color-mix(in oklab, var(--foreground) 44%, transparent);
+}
+
+.markdown-highlight .hljs-strong {
+  font-weight: 700;
+}
+
+.markdown-highlight .hljs-emphasis {
+  font-style: italic;
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Chmod 計算機",
+  "description": "Unix ファイル権限を数値 (755) と記号 (rwxr-xr-x) 表記の間で変換"
+}

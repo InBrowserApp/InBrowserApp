@@ -1,0 +1,4 @@
+{
+  "name": "Hash Whirlpool de Texto ou Arquivo",
+  "description": "Gere hash Whirlpool para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança"
+}

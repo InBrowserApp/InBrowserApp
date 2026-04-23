@@ -1,0 +1,12 @@
+{
+  "inputTitle": "Ingresso IP o CIDR",
+  "inputDescription": "Inserisci un singolo indirizzo IPv4, indirizzo IPv6 o blocco CIDR per normalizzarlo nella notazione di rete canonica.",
+  "resultTitle": "Risultato Normalizzato",
+  "resultDescription": "Indirizzo canonico o intervallo di rete. L'input CIDR viene riscritto nell'indirizzo di rete con i bit host cancellati.",
+  "label": "IP/CIDR",
+  "placeholder": "ad es. 192.168.0.15/24 o 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR non valido",
+  "invalidInputDescription": "Utilizza un indirizzo IPv4, un indirizzo IPv6 o un intervallo CIDR valido. Le lunghezze del prefisso devono corrispondere alla famiglia di indirizzi.",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato"
+}

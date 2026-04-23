@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Data URI Input",
+  "inputPlaceholder": "Paste Data URI here...",
+  "invalidDataUriTitle": "Invalid Data URI",
+  "detailsTitle": "Details",
+  "mimeTypeLabel": "MIME Type",
+  "encodingLabel": "Encoding",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "URL-encoded",
+  "sizeLabel": "Size",
+  "fileNameLabel": "File name",
+  "fileNamePlaceholder": "e.g. data.png",
+  "previewTitle": "Preview",
+  "decodedOutputTitle": "Decoded file",
+  "decodedOutputEmptyDescription": "Decoded file details, preview, and download will appear here.",
+  "previewUnavailableDescription": "This file type cannot be previewed in the browser. Download it to inspect the raw file.",
+  "previewTruncatedLabel": "Preview truncated",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "downloadFileLabel": "Download file",
+  "resetLabel": "Reset example"
+}

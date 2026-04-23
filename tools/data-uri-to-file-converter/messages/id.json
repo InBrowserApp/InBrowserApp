@@ -1,0 +1,22 @@
+{
+  "inputTitle": "Masukan Data URI",
+  "inputPlaceholder": "Tempel Data URI di sini...",
+  "invalidDataUriTitle": "Data URI tidak valid",
+  "detailsTitle": "Detail",
+  "mimeTypeLabel": "Tipe MIME",
+  "encodingLabel": "Enkode",
+  "encodingBase64": "Base64",
+  "encodingUrlEncoded": "Di-encode URL",
+  "sizeLabel": "Ukuran",
+  "fileNameLabel": "Nama file",
+  "fileNamePlaceholder": "mis. data.png",
+  "previewTitle": "Pratinjau",
+  "decodedOutputTitle": "File hasil dekode",
+  "decodedOutputEmptyDescription": "Detail, pratinjau, dan unduhan file hasil dekode akan muncul di sini.",
+  "previewUnavailableDescription": "Jenis file ini tidak dapat dipratinjau di browser. Unduh untuk memeriksa file asli.",
+  "previewTruncatedLabel": "Pratinjau dipotong",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Tersalin",
+  "downloadFileLabel": "Unduh file",
+  "resetLabel": "Setel ulang contoh"
+}

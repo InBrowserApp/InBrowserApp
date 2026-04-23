@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "आउटपुट भाषा",
+  "languagePlaceholder": "भाषा चुनें",
+  "inputCurlLabel": "cURL कमांड",
+  "outputCodeLabel": "परिवर्तित कोड",
+  "curlPlaceholder": "यहां cURL कमांड पेस्ट करें...",
+  "useSampleLabel": "उदाहरण उपयोग करें",
+  "clearLabel": "साफ़ करें",
+  "downloadCodeLabel": "डाउनलोड",
+  "warningsTitle": "चेतावनियाँ",
+  "errorsTitle": "त्रुटियाँ",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

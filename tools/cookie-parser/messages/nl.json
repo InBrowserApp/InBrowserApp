@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "Header-type",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "Invoer",
+  "inputPlaceholder": "Plak Cookie- of Set-Cookie-headers hier...",
+  "parsedJsonLabel": "Geparseerde JSON",
+  "emptyOutputDescription": "De geparste uitvoer verschijnt hier...",
+  "cookieCountLabel": "Cookies",
+  "invalidCountLabel": "Ongeldig",
+  "invalidFragmentsLabel": "Ongeldige fragmenten",
+  "noCookiesTitle": "Geen cookies gevonden",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadJsonLabel": "JSON downloaden",
+  "resetLabel": "Voorbeeld resetten"
+}

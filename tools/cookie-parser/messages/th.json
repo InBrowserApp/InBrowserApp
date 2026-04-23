@@ -1,0 +1,17 @@
+{
+  "headerTypeLabel": "ประเภทส่วนหัว",
+  "cookieHeaderLabel": "Cookie",
+  "setCookieHeaderLabel": "Set-Cookie",
+  "inputLabel": "อินพุต",
+  "inputPlaceholder": "วางส่วนหัว Cookie หรือ Set-Cookie ที่นี่...",
+  "parsedJsonLabel": "JSON ที่แยกแล้ว",
+  "emptyOutputDescription": "ผลลัพธ์จะแสดงที่นี่...",
+  "cookieCountLabel": "คุกกี้",
+  "invalidCountLabel": "ไม่ถูกต้อง",
+  "invalidFragmentsLabel": "ส่วนที่ไม่ถูกต้อง",
+  "noCookiesTitle": "ไม่พบคุกกี้",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadJsonLabel": "ดาวน์โหลด JSON",
+  "resetLabel": "รีเซ็ตตัวอย่าง"
+}

@@ -12,8 +12,11 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base16-encoder": () => import("@tool/base16-encoder/page"),
   "base32-decoder": () => import("@tool/base32-decoder/page"),
   "base32-encoder": () => import("@tool/base32-encoder/page"),
+  "base58-decoder": () => import("@tool/base58-decoder/page"),
   "base58-encoder": () => import("@tool/base58-encoder/page"),
   "base64-encoder-decoder": () => import("@tool/base64-encoder-decoder/page"),
+  "base85-decoder": () => import("@tool/base85-decoder/page"),
+  "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
@@ -25,26 +28,46 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "business-days-calculator": () =>
+    import("@tool/business-days-calculator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "chinese-uppercase-number-converter": () =>
+    import("@tool/chinese-uppercase-number-converter/page"),
+  "chmod-calculator": () => import("@tool/chmod-calculator/page"),
+  "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
+  "color-converter": () => import("@tool/color-converter/page"),
+  "color-picker": () => import("@tool/color-picker/page"),
+  "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
+  "curl-converter": () => import("@tool/curl-converter/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
+  "data-uri-to-file-converter": () =>
+    import("@tool/data-uri-to-file-converter/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
+  "file-to-data-uri-converter": () =>
+    import("@tool/file-to-data-uri-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
+  "html-color-names": () => import("@tool/html-color-names/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "html-to-markdown-converter": () =>
+    import("@tool/html-to-markdown-converter/page"),
   "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
+  "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
+  "ip-range-to-cidr-converter": () =>
+    import("@tool/ip-range-to-cidr-converter/page"),
   "ipv6-address-to-mac-address-converter": () =>
     import("@tool/ipv6-address-to-mac-address-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
@@ -65,9 +88,15 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
+  "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
+  "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
+  "murmurhash3-x86-32-hash-text-or-file": () =>
+    import("@tool/murmurhash3-x86-32-hash-text-or-file/page"),
+  "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
+  "number-base-converter": () => import("@tool/number-base-converter/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "password-strength-checker": () =>
@@ -76,6 +105,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
@@ -83,6 +113,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "ripemd160-hash-text-or-file": () =>
     import("@tool/ripemd160-hash-text-or-file/page"),
+  "ripemd256-hash-text-or-file": () =>
+    import("@tool/ripemd256-hash-text-or-file/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
@@ -106,7 +138,12 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/sha512-256-hash-text-or-file/page"),
   "sha512-hash-text-or-file": () =>
     import("@tool/sha512-hash-text-or-file/page"),
+  "shake128-hash-text-or-file": () =>
+    import("@tool/shake128-hash-text-or-file/page"),
+  "shake256-hash-text-or-file": () =>
+    import("@tool/shake256-hash-text-or-file/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
+  "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
@@ -127,8 +164,20 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
+  "url-parser-builder": () => import("@tool/url-parser-builder/page"),
+  "user-agent-parser": () => import("@tool/user-agent-parser/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
+  "whirlpool-hash-text-or-file": () =>
+    import("@tool/whirlpool-hash-text-or-file/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
+  "xxhash-xxh3-128-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh3-128-hash-text-or-file/page"),
+  "xxhash-xxh3-64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh3-64-hash-text-or-file/page"),
+  "xxhash-xxh32-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh32-hash-text-or-file/page"),
+  "xxhash-xxh64-hash-text-or-file": () =>
+    import("@tool/xxhash-xxh64-hash-text-or-file/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),
 }

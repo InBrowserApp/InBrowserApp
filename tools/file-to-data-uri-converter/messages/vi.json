@@ -1,0 +1,14 @@
+{
+  "file": "Tệp",
+  "dragOrClick": "Nhấp hoặc kéo để tải lên tệp",
+  "clearFile": "Xóa tệp",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "Data URI đã tạo sẽ xuất hiện ở đây...",
+  "onlyOneFile": "Chỉ có thể tải lên một tệp",
+  "readFailed": "Không thể đọc tệp",
+  "unknownType": "Loại không xác định",
+  "fileSize": "Kích thước tệp",
+  "mimeType": "Loai MIME",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép"
+}

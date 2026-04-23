@@ -1,0 +1,14 @@
+{
+  "file": "फ़ाइल",
+  "dragOrClick": "फ़ाइल अपलोड करने के लिए क्लिक करें या खींचें",
+  "clearFile": "फ़ाइल साफ़ करें",
+  "dataUri": "Data URI",
+  "dataUriPlaceholder": "जनरेट किया गया Data URI यहाँ दिखाई देगा...",
+  "onlyOneFile": "केवल एक फ़ाइल अपलोड की जा सकती है",
+  "readFailed": "फ़ाइल पढ़ने में विफल",
+  "unknownType": "अज्ञात प्रकार",
+  "fileSize": "फ़ाइल आकार",
+  "mimeType": "MIME प्रकार",
+  "copyLabel": "कॉपी",
+  "copiedLabel": "कॉपी हो गया"
+}

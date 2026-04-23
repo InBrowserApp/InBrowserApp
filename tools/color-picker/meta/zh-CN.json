@@ -1,0 +1,4 @@
+{
+  "name": "取色器",
+  "description": "从屏幕或图片取色，采样像素并即时复制 HEX、RGB、HSL、HSV 和 CMYK 值。"
+}

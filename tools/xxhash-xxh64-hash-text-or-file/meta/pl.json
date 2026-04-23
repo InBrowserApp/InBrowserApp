@@ -1,0 +1,4 @@
+{
+  "name": "Hash xxHash (XXH64) tekstu lub pliku",
+  "description": "Generuj hash xxHash XXH64 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj szybkie 64-bitowe nie-kryptograficzne sumy kontrolne do weryfikacji integralności danych i hashowania zorientowanego na wydajność"
+}

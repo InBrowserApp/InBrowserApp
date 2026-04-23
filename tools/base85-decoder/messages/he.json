@@ -1,0 +1,17 @@
+{
+  "alphabet": "אלפבית",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "קלט Base85",
+  "base85InputPlaceholder": "הזן טקסט Base85...",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "decodedOutputLabel": "פלט מפוענח",
+  "decodedOutputEmptyDescription": "הטקסט המפוענח יוצג כאן...",
+  "downloadFileLabel": "הורד קובץ",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק",
+  "loadSample": "טען דוגמה",
+  "invalidBase85Title": "טקסט Base85 לא תקין",
+  "fileReadFailedTitle": "קריאת הקובץ נכשלה",
+  "previewTruncatedLabel": "התצוגה המקדימה קוצרה"
+}

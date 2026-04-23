@@ -1,0 +1,17 @@
+{
+  "alphabet": "อักษร",
+  "alphabetAscii85": "ASCII85",
+  "alphabetZ85": "Z85",
+  "base85InputLabel": "อินพุต Base85",
+  "base85InputPlaceholder": "ป้อนข้อความ Base85...",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "decodedOutputLabel": "ผลลัพธ์ที่ถอดรหัส",
+  "decodedOutputEmptyDescription": "ข้อความที่ถอดรหัสจะปรากฏที่นี่...",
+  "downloadFileLabel": "ดาวน์โหลดไฟล์",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว",
+  "loadSample": "โหลดตัวอย่าง",
+  "invalidBase85Title": "ข้อความ Base85 ไม่ถูกต้อง",
+  "fileReadFailedTitle": "อ่านไฟล์ไม่สำเร็จ",
+  "previewTruncatedLabel": "ตัวอย่างถูกตัดทอน"
+}

@@ -1,0 +1,12 @@
+{
+  "inputTitle": "קלט IP או CIDR",
+  "inputDescription": "הזן כתובת IPv4 בודדת, כתובת IPv6 או בלוק CIDR כדי לנרמל אותה לסימון רשת קנוני.",
+  "resultTitle": "תוצאה מנורמלת",
+  "resultDescription": "כתובת קנונית או טווח רשת. קלט CIDR נכתב מחדש לכתובת הרשת כאשר סיביות מארח מנוקים.",
+  "label": "IP/CIDR",
+  "placeholder": "לְמָשָׁל 192.168.0.15/24 או 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR לא תקין",
+  "invalidInputDescription": "השתמש בכתובת IPv4 חוקית, כתובת IPv6 או טווח CIDR חוקי. אורכי הקידומת חייבים להתאים למשפחת הכתובות.",
+  "copyLabel": "העתק",
+  "copiedLabel": "הועתק"
+}

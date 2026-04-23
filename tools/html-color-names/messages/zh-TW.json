@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "按顏色名稱或十六進位值搜尋...",
+  "all": "全部",
+  "red": "紅色",
+  "orange": "橙色",
+  "yellow": "黃色",
+  "green": "綠色",
+  "cyan": "青色",
+  "blue": "藍色",
+  "purple": "紫色",
+  "pink": "粉色",
+  "brown": "棕色",
+  "gray": "灰色",
+  "white": "白色",
+  "swatch": "顏色",
+  "name": "名稱",
+  "hex": "十六進位",
+  "rgb": "RGB",
+  "resetLabel": "重設",
+  "noResultsTitle": "沒有相符的顏色"
+}

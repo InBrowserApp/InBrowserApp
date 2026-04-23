@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import dari fail",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks semasa.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Perpuluhan",
+  "binaryLabel": "Binari",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "outputLengthLabel": "Panjang Output",
+  "outputLengthPlaceholder": "cth. 256 (bits)",
+  "outputLengthInvalid": "Masukkan gandaan 8 antara 8 hingga 65536.",
+  "hashTextError": "Gagal mengira hash teks.",
+  "hashFileError": "Gagal mengira hash fail."
+}

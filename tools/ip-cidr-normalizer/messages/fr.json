@@ -1,0 +1,12 @@
+{
+  "inputTitle": "Entrée IP ou CIDR",
+  "inputDescription": "Entrez une seule adresse IPv4, une adresse IPv6 ou un bloc CIDR pour la normaliser en notation réseau canonique.",
+  "resultTitle": "Résultat Normalisé",
+  "resultDescription": "Adresse canonique ou plage réseau. L'entrée CIDR est réécrite sur l'adresse réseau avec les bits de l'hôte effacés.",
+  "label": "IP/CIDR",
+  "placeholder": "par ex. 192.168.0.15/24 ou 2001:db8::1234/64",
+  "invalidInput": "IP/CIDR invalide",
+  "invalidInputDescription": "Utilisez une adresse IPv4, une adresse IPv6 ou une plage CIDR valide. Les longueurs de préfixe doivent correspondre à la famille d'adresses.",
+  "copyLabel": "Copier",
+  "copiedLabel": "Copié"
+}

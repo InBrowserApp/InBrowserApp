@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích Cookie",
+  "description": "Phân tích header Cookie và Set-Cookie thành JSON có cấu trúc để kiểm tra."
+}

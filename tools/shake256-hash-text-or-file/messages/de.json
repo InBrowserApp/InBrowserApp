@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hash-Ergebnis für die aktuelle Texteingabe.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "outputLengthLabel": "Ausgabelänge",
+  "outputLengthPlaceholder": "z. B. 512 (bits)",
+  "outputLengthInvalid": "Gib ein Vielfaches von 8 zwischen 8 und 65536 ein.",
+  "hashTextError": "Text-Hash konnte nicht berechnet werden.",
+  "hashFileError": "Datei-Hash konnte nicht berechnet werden."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "用户代理（User-Agent）解析器",
+  "description": "解析 User-Agent 字符串，识别浏览器、操作系统、设备、引擎与 CPU 信息。全程离线。"
+}
