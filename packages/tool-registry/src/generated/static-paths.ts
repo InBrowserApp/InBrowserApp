@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "eu-vat-number-validator",
+    language: "ar",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "de",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "en",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "es",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "fr",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "he",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "hi",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "id",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "it",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ja",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ko",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ms",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "nl",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "no",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "pl",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "pt",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ru",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "sv",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "th",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "tr",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "vi",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "file-to-data-uri-converter",
     language: "ar",
   },
