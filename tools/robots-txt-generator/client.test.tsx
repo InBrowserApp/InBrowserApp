@@ -106,7 +106,7 @@ describe("RobotsTxtGeneratorClient", () => {
 
     fireEvent.click(screen.getByRole("radio", { name: "Allow all" }))
     fireEvent.click(screen.getByRole("button", { name: "Add rule" }))
-    fireEvent.change(screen.getAllByPlaceholderText("/path/")[0], {
+    fireEvent.change(screen.getByPlaceholderText("/path/"), {
       target: { value: "/private/" },
     })
 
