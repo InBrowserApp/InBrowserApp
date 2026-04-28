@@ -9,7 +9,7 @@ function HtmlPreviewFrame({ title, documentHtml }: HtmlPreviewFrameProps) {
       title={title}
       sandbox=""
       srcDoc={documentHtml}
-      className="h-[22rem] w-full rounded-[1.25rem] border border-border/70 bg-white shadow-[0_22px_44px_rgba(17,24,39,0.08)]"
+      className="block h-[22rem] w-full border-0 bg-white"
     />
   )
 }

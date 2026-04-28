@@ -45,7 +45,9 @@ function PreviewCard({
         </div>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-4">
+      <ToolPanelCardContent
+        className={hasOutput ? "px-0 group-data-[size=sm]/card:px-0" : "gap-4"}
+      >
         {hasOutput ? (
           <HtmlPreviewFrame
             title={messages.previewLabel}
