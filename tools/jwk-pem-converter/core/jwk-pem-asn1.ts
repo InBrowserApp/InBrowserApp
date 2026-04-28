@@ -110,7 +110,7 @@ export function encodeOid(oid: string): Uint8Array {
   return encodeTag(0x06, new Uint8Array(bytes))
 }
 
-export function encodeLength(length: number): Uint8Array {
+function encodeLength(length: number): Uint8Array {
   if (length < 0x80) {
     return new Uint8Array([length])
   }
@@ -172,7 +172,7 @@ export function extractBitString(
   return bytes.slice(1)
 }
 
-export function concatBytes(...arrays: Uint8Array[]): Uint8Array {
+function concatBytes(...arrays: Uint8Array[]): Uint8Array {
   const length = arrays.reduce((sum, arr) => sum + arr.length, 0)
   const result = new Uint8Array(length)
   let offset = 0

@@ -22,12 +22,6 @@ function getJwkParseState(input: string): JwkParseState {
   }
 }
 
-function isJwkSet(
-  jwk: JsonWebKey | { keys: JsonWebKey[] }
-): jwk is { keys: JsonWebKey[] } {
-  return "keys" in jwk
-}
-
 function normalizeJwkPemError(error: unknown, fallbackKey: string) {
   if (error instanceof JwkPemError) {
     return error
@@ -98,7 +92,6 @@ export {
   formatKeyLabel,
   formatWarningMessages,
   getJwkParseState,
-  isJwkSet,
   normalizeJwkPemError,
 }
 export type { JwkParseState }
