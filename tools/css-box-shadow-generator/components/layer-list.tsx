@@ -32,8 +32,8 @@ function LayerList({
   onSelectLayer,
 }: LayerListProps) {
   return (
-    <section className="grid gap-3">
-      <div className="flex items-center justify-between gap-3">
+    <section className="grid min-w-0 gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex min-w-0 items-center gap-2">
           <h2 className="truncate text-sm font-medium">
             {messages.layersTitle}
@@ -46,6 +46,7 @@ function LayerList({
         <Button
           data-testid="add-layer"
           onClick={onAddLayer}
+          className="shrink-0"
           size="sm"
           type="button"
           variant="outline"
@@ -55,15 +56,15 @@ function LayerList({
         </Button>
       </div>
 
-      <ScrollArea className="-mx-1 w-[calc(100%+0.5rem)] px-1 whitespace-nowrap">
-        <div className="flex gap-2 pb-3">
+      <ScrollArea className="min-w-0">
+        <div className="flex w-max gap-2 pb-3">
           {layers.map((layer, index) => {
             const active = layer.id === activeLayerId
 
             return (
               <div
                 className={cn(
-                  "group/layer w-52 shrink-0 rounded-lg border bg-background px-3 py-2.5 transition-colors",
+                  "group/layer w-48 shrink-0 rounded-lg border bg-background px-3 py-2.5 transition-colors sm:w-52",
                   active
                     ? "border-primary/60 bg-primary/5"
                     : "border-border/70 hover:border-primary/35 hover:bg-muted/25"

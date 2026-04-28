@@ -32,11 +32,11 @@ function PreviewCard({
   previewStyle,
 }: PreviewCardProps) {
   return (
-    <ToolPanelCard size="sm">
+    <ToolPanelCard className="min-w-0" size="sm">
       <CardHeader className="border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
         <CardAction>
-          <div className="flex items-center gap-2 rounded-lg border bg-muted/20 px-2.5 py-1.5 text-sm">
+          <div className="flex max-w-full items-center gap-2 rounded-lg border bg-muted/20 px-2.5 py-1.5 text-sm">
             <Moon aria-hidden="true" className="size-4 text-muted-foreground" />
             <span className="hidden sm:inline">
               {messages.darkBackgroundLabel}
@@ -51,20 +51,20 @@ function PreviewCard({
           </div>
         </CardAction>
       </CardHeader>
-      <ToolPanelCardContent className="gap-3">
+      <ToolPanelCardContent className="min-w-0 gap-3">
         <div
           className={cn(
-            "grid min-h-56 place-items-center overflow-hidden rounded-lg border p-4 transition-colors",
+            "grid min-h-48 place-items-center overflow-hidden rounded-lg border p-3 transition-colors sm:min-h-56 sm:p-4",
             darkBackground
               ? "border-zinc-800 bg-zinc-950"
               : "border-border/80 bg-muted/25"
           )}
           data-testid="preview-surface"
         >
-          <div className="relative w-full max-w-sm">
+          <div className="relative w-full max-w-sm min-w-0">
             <div
               className={cn(
-                "relative grid min-h-40 gap-3 rounded-lg border p-5 transition-colors",
+                "relative grid min-h-36 gap-3 rounded-lg border p-4 transition-colors sm:min-h-40 sm:p-5",
                 darkBackground
                   ? "border-white/10 bg-zinc-900 text-zinc-100"
                   : "border-border bg-background text-foreground"
@@ -84,7 +84,7 @@ function PreviewCard({
           </div>
         </div>
 
-        <div className="grid gap-2">
+        <div className="grid min-w-0 gap-2">
           <div className="flex items-center justify-between gap-3">
             <div className="text-xs font-medium text-muted-foreground uppercase">
               {messages.outputTitle}
@@ -97,7 +97,7 @@ function PreviewCard({
             />
           </div>
           <pre
-            className="overflow-x-auto rounded-lg border bg-muted/20 p-3 font-mono text-xs leading-6"
+            className="max-w-full overflow-x-auto rounded-lg border bg-muted/20 p-3 font-mono text-xs leading-6"
             data-testid="shadow-output"
           >
             <code>{cssOutput}</code>

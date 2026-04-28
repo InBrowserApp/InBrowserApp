@@ -64,7 +64,7 @@ function NumericField({
   return (
     <Field className="gap-2">
       <FieldLabel htmlFor={id}>{label}</FieldLabel>
-      <div className="grid gap-2.5 sm:grid-cols-[minmax(0,1fr)_5rem_auto] sm:items-center">
+      <div className="grid grid-cols-[minmax(0,1fr)_4.5rem_auto] items-center gap-2.5 sm:grid-cols-[minmax(0,1fr)_5rem_auto]">
         <Slider
           data-testid={`${testId}-slider`}
           max={max}
@@ -117,7 +117,7 @@ function LayerSettings({
     activeLayer.color.trim() !== "" && parseHexColor(activeLayer.color) === null
 
   return (
-    <div className="grid gap-4">
+    <div className="grid min-w-0 gap-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="font-medium">{messages.layerSettingsTitle}</div>
         <div className="rounded-full border border-border/70 bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
@@ -125,7 +125,7 @@ function LayerSettings({
         </div>
       </div>
 
-      <FieldGroup>
+      <FieldGroup className="min-w-0 gap-4">
         <div className="grid gap-4 lg:grid-cols-2">
           <NumericField
             id="offset-x-input"
@@ -180,10 +180,13 @@ function LayerSettings({
           />
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
-          <Field className="gap-3" data-invalid={invalidColor || undefined}>
+        <div className="grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
+          <Field
+            className="min-w-0 gap-3"
+            data-invalid={invalidColor || undefined}
+          >
             <FieldLabel htmlFor="color-input">{messages.colorLabel}</FieldLabel>
-            <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_4.5rem] sm:items-center">
+            <div className="grid grid-cols-[minmax(0,1fr)_3rem] items-center gap-2.5 sm:grid-cols-[minmax(0,1fr)_4.5rem]">
               <Input
                 autoCapitalize="none"
                 autoComplete="off"
@@ -199,7 +202,7 @@ function LayerSettings({
               />
               <input
                 aria-label={messages.colorLabel}
-                className="h-10 w-full cursor-pointer rounded-lg border border-input bg-transparent p-1"
+                className="h-8 w-full cursor-pointer rounded-lg border border-input bg-transparent p-1 sm:h-10"
                 data-testid="color-picker"
                 onChange={(event) => {
                   onUpdateLayer(activeLayer.id, {
@@ -213,7 +216,7 @@ function LayerSettings({
                 value={getOpaqueHexColor(activeLayer.color)}
               />
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {swatches.map((swatch) => {
                 const active =
                   activeLayer.color.trim().toUpperCase() ===
@@ -223,7 +226,7 @@ function LayerSettings({
                   <button
                     aria-label={`${messages.colorLabel} ${swatch}`}
                     className={cn(
-                      "size-7 rounded-lg border transition-transform hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+                      "size-6 rounded-md border transition-transform hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:size-7 sm:rounded-lg",
                       active
                         ? "border-primary ring-2 ring-primary/20"
                         : "border-border"
@@ -248,7 +251,7 @@ function LayerSettings({
               <FieldLabel htmlFor="alpha-input">
                 {messages.alphaLabel}
               </FieldLabel>
-              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_5.5rem] sm:items-center">
+              <div className="grid grid-cols-[minmax(0,1fr)_4.5rem] items-center gap-2.5 sm:grid-cols-[minmax(0,1fr)_5.5rem]">
                 <Slider
                   data-testid="alpha-slider"
                   max={ALPHA_RANGE.max}

@@ -2,7 +2,6 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 
 import { LayerList } from "./layer-list"
 import { LayerSettings } from "./layer-settings"
@@ -46,11 +45,8 @@ function EditorCard({
   layers,
 }: EditorCardProps) {
   return (
-    <ToolPanelCard size="sm">
-      <CardHeader className="border-b">
-        <CardTitle>{messages.meta.name}</CardTitle>
-      </CardHeader>
-      <ToolPanelCardContent className="gap-4">
+    <ToolPanelCard className="min-w-0" size="sm">
+      <ToolPanelCardContent className="min-w-0 gap-4">
         <LayerList
           activeLayerId={activeLayer.id}
           layers={layers}

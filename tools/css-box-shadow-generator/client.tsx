@@ -162,7 +162,7 @@ function CssBoxShadowGeneratorClient({
   const cssOutput = `box-shadow: ${shadowValue};`
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_23rem]">
+    <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1fr)_23rem]">
       <EditorCard
         activeLayer={activeLayer}
         activeLayerIndex={activeLayerIndex}
@@ -218,7 +218,7 @@ function CssBoxShadowGeneratorClient({
         layers={layers}
       />
 
-      <div className="self-start xl:sticky xl:top-6">
+      <div className="min-w-0 self-start xl:sticky xl:top-6">
         <PreviewCard
           cssOutput={cssOutput}
           darkBackground={darkBackground}
