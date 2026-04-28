@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser biến một khối như `10.24.8.19/21` hoặc `2001:db8:abcd::123/64` thành mạng mà bạn thật sự muốn dùng. Nó chuẩn hóa input có địa chỉ host, hiển thị subnet canonical và chỉ ra các ranh giới thường cần khi viết rule firewall, ghi tài liệu dải địa chỉ hoặc kiểm tra một allocation có quá lớn hay không.
 
-## What It Shows
+## Công cụ hiển thị gì
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+Kết quả bắt đầu bằng phần tổng quan nhanh, sau đó tách khối thành các chi tiết thực tế: CIDR canonical, số lượng địa chỉ tổng và usable, điểm bắt đầu và kết thúc dải, cùng các giá trị integer của khối. Với IPv4, bạn còn có netmask, wildcard mask và địa chỉ broadcast. Với IPv6, parser giữ cùng workflow nhưng ẩn những field không áp dụng.
 
-## Why Canonicalization Matters
+## Vì sao canonicalization quan trọng
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+Nhiều giá trị CIDR được dán vào có chứa host bits. Điều đó dễ hiểu với con người, nhưng router, ACLs và tài liệu thường cần địa chỉ mạng canonical. Việc viết lại khối trước khi copy giúp phát hiện giả định off-by-one trước khi chúng lọt vào config.
 
-## Practical Notes
+## Ghi chú thực tế
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- Các khối IPv4 `/31` và `/32` được xem là dùng được toàn bộ, phù hợp với cách dùng point-to-point và host-route hiện đại.
+- Các khối IPv6 báo cáo toàn bộ không gian địa chỉ và dải usable mà không tự tạo khái niệm broadcast.
+- Mọi thứ chạy cục bộ trong trình duyệt, nên subnet nội bộ không rời khỏi trang trong lúc bạn kiểm tra.

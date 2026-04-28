@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser เปลี่ยนบล็อกอย่าง `10.24.8.19/21` หรือ `2001:db8:abcd::123/64` ให้เป็นเครือข่ายที่คุณตั้งใจใช้จริง มัน normalize อินพุตที่เป็น host address แสดง subnet แบบ canonical และเปิดเผยขอบเขตที่มักต้องใช้เมื่อเขียนกฎ firewall ทำเอกสารช่วงที่อยู่ หรือตรวจว่าการจัดสรรใหญ่เกินไปหรือไม่
 
-## What It Shows
+## สิ่งที่แสดง
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+ผลลัพธ์เริ่มจากภาพรวมสั้น ๆ แล้วแยกบล็อกเป็นรายละเอียดที่ใช้งานได้จริง: CIDR แบบ canonical จำนวน address ทั้งหมดและที่ใช้ได้ จุดเริ่มต้นและสิ้นสุดของช่วง รวมถึงค่า integer ของบล็อก สำหรับ IPv4 ยังมี netmask, wildcard mask และ broadcast address ส่วน IPv6 จะใช้ workflow เดิมแต่ซ่อน field ที่ไม่เกี่ยวข้อง
 
-## Why Canonicalization Matters
+## ทำไม Canonicalization จึงสำคัญ
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+ค่า CIDR ที่วางมาหลายครั้งมี host bits ติดมาด้วย ซึ่งมนุษย์อ่านได้ แต่ router, ACLs และเอกสารมักต้องใช้ network address แบบ canonical การเขียนบล็อกใหม่ก่อน copy ช่วยจับ assumption แบบ off-by-one ก่อนหลุดเข้า config
 
-## Practical Notes
+## หมายเหตุใช้งานจริง
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- บล็อก IPv4 `/31` และ `/32` ถือว่าใช้งานได้ทั้งหมด ซึ่งตรงกับการใช้งาน point-to-point และ host-route สมัยใหม่
+- บล็อก IPv6 รายงาน address space ทั้งหมดและช่วงที่ใช้ได้ โดยไม่สร้างแนวคิด broadcast ขึ้นมาเอง
+- ทุกอย่างทำงานภายในเบราว์เซอร์ ดังนั้น subnet ภายในจะไม่ออกจากหน้าเว็บระหว่างตรวจสอบ

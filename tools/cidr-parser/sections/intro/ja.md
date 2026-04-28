@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser は `10.24.8.19/21` や `2001:db8:abcd::123/64` のようなブロックを、実際に意図しているネットワークへ変換します。ホストアドレス入力を正規化し、正規のサブネットを表示し、ファイアウォールルールの作成、範囲の文書化、割り当てサイズの確認で必要になる境界を示します。
 
-## What It Shows
+## 表示内容
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+結果は簡単な概要から始まり、その後ブロックを実用的な詳細へ分解します。正規 CIDR、総アドレス数と利用可能アドレス数、範囲の開始と終了、ブロックの整数値を確認できます。IPv4 ではネットマスク、ワイルドカードマスク、ブロードキャストアドレスも表示します。IPv6 では同じ流れを保ちつつ、該当しない項目を隠します。
 
-## Why Canonicalization Matters
+## 正規化が重要な理由
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+貼り付けられる CIDR 値にはホストビットが含まれることがあります。人間には自然でも、ルーター、ACLs、ドキュメントでは通常、正規のネットワークアドレスが必要です。コピー前にブロックを書き換えることで、設定に入る前に off-by-one の思い込みを見つけやすくなります。
 
-## Practical Notes
+## 実用メモ
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- IPv4 の `/31` と `/32` ブロックは、現在の point-to-point と host-route の使い方に合わせて完全に利用可能として扱います。
+- IPv6 ブロックは broadcast の概念を作らず、全アドレス空間と利用可能範囲を表示します。
+- すべてブラウザー内でローカルに実行されるため、内部サブネットは確認中にページ外へ送信されません。

@@ -20,6 +20,12 @@ import type { CidrParserClientProps, DetailItem } from "./types"
 
 const STORAGE_KEY = "tools:cidr-parser:input"
 
+type OverviewItem = Readonly<{
+  label: string
+  value: string
+  direction?: "ltr"
+}>
+
 function CidrParserClient({ language, messages }: CidrParserClientProps) {
   const inputId = useId()
   const [value, setValue] = useState("")
@@ -40,7 +46,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
 
   if (result.status !== "success") {
     return (
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] xl:items-start">
         <InputCard
           inputId={inputId}
           value={value}
@@ -55,7 +61,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
   const { details } = result
   const familyLabel =
     details.family === 4 ? messages.ipv4Label : messages.ipv6Label
-  const overviewItems = [
+  const overviewItems: readonly OverviewItem[] = [
     {
       label: messages.familyLabel,
       value: familyLabel,
@@ -63,7 +69,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
     {
       label: messages.originalAddressLabel,
       value: details.inputAddress,
-      copyValue: details.inputAddress,
+      direction: "ltr",
     },
     {
       label: messages.totalAddressesLabel,
@@ -72,6 +78,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
         details.hostBits,
         language
       ),
+      direction: "ltr",
     },
     {
       label: messages.usableAddressesLabel,
@@ -82,12 +89,14 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
           : null,
         language
       ),
+      direction: "ltr",
     },
     {
       label: messages.hostBitsLabel,
       value: new Intl.NumberFormat(language).format(details.hostBits),
+      direction: "ltr",
     },
-  ] as const
+  ]
   const rangeItems: readonly DetailItem[] = [
     {
       label: messages.networkAddressLabel,
@@ -149,7 +158,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
   ]
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] xl:items-start">
       <InputCard
         inputId={inputId}
         value={value}
@@ -175,9 +184,14 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
           <CardContent className="grid gap-5 py-5">
             <div className="flex flex-wrap gap-2">
               <Badge>{familyLabel}</Badge>
-              <Badge variant="secondary">{`/${details.prefix}`}</Badge>
+              <Badge variant="secondary" dir="ltr">
+                {`/${details.prefix}`}
+              </Badge>
               <Badge variant="outline">
-                {`${messages.rangeStartLabel}: ${details.rangeStart}`}
+                <span>{`${messages.rangeStartLabel}:`}</span>
+                <span dir="ltr" className="font-mono [unicode-bidi:isolate]">
+                  {details.rangeStart}
+                </span>
               </Badge>
             </div>
 
@@ -185,7 +199,10 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
               <p className="text-xs font-medium tracking-[0.16em] text-muted-foreground/80 uppercase">
                 {messages.overviewTitle}
               </p>
-              <p className="font-mono text-[clamp(1.3rem,3vw,2.25rem)] font-semibold tracking-tight break-all text-foreground">
+              <p
+                dir="ltr"
+                className="font-mono text-2xl leading-tight font-semibold tracking-tight break-all text-foreground [unicode-bidi:isolate] sm:text-3xl"
+              >
                 {details.canonicalCidr}
               </p>
               <p className="text-sm text-muted-foreground">
@@ -193,14 +210,17 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+            <div className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3">
               {overviewItems.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-xl border border-border/70 bg-card p-4 shadow-xs"
+                  className="min-w-0 rounded-xl border border-border/70 bg-card p-4 shadow-xs"
                 >
                   <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p className="mt-2 font-mono text-sm break-all text-foreground">
+                  <p
+                    dir={item.direction}
+                    className="mt-2 font-mono text-sm leading-relaxed break-words text-foreground [unicode-bidi:isolate]"
+                  >
                     {item.value}
                   </p>
                 </div>

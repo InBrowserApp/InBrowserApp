@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser הופך בלוק כמו `10.24.8.19/21` או `2001:db8:abcd::123/64` לרשת שאליה התכוונת בפועל. הוא מנרמל קלט של כתובת מארח, מציג את תת-הרשת הקנונית וחושף את הגבולות שבדרך כלל צריך עבור חוקי חומת אש, תיעוד טווחים או בדיקה שהקצאה אינה גדולה מדי.
 
-## What It Shows
+## מה הוא מציג
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+התוצאה מתחילה בסקירה קצרה ואז מפרקת את הבלוק לפרטים מעשיים: CIDR קנוני, מספר כתובות כולל ושמיש, תחילת וסוף הטווח, וגם הערכים השלמים שמאחורי הבלוק. עבור IPv4 מוצגים גם netmask, wildcard mask וכתובת broadcast. עבור IPv6 נשמר אותו תהליך, אך מוסתרים שדות שאינם רלוונטיים.
 
-## Why Canonicalization Matters
+## למה קנוניזציה חשובה
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+ערכי CIDR שמודבקים לעיתים כוללים ביטי מארח. זה נוח לבני אדם, אבל נתבים, ACLs ותיעוד בדרך כלל צריכים את כתובת הרשת הקנונית. שכתוב הבלוק לפני העתקה מקל על זיהוי הנחות off-by-one לפני שהן נכנסות לקונפיגורציה.
 
-## Practical Notes
+## הערות מעשיות
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- בלוקי IPv4 מסוג `/31` ו-`/32` מטופלים כשמישים במלואם, בהתאם לשימושי point-to-point ו-host-route מודרניים.
+- בלוקי IPv6 מציגים את כל מרחב הכתובות ואת הטווח השמיש בלי להמציא מושג broadcast.
+- הכול פועל מקומית בדפדפן, כך שתתי-רשתות פנימיות לא עוזבות את הדף בזמן הבדיקה.

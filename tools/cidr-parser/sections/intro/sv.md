@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser omvandlar ett block som `10.24.8.19/21` eller `2001:db8:abcd::123/64` till nätverket du faktiskt menar. Den normaliserar hostadressinmatning, visar det kanoniska subnätet och lyfter fram gränserna du oftast behöver när du skriver brandväggsregler, dokumenterar intervall eller kontrollerar om en allokering är större än tänkt.
 
-## What It Shows
+## Vad den visar
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+Resultatet börjar med en snabb översikt och bryter sedan ned blocket i praktiska detaljer: kanonisk CIDR, totalt och användbart antal adresser, intervallstart och -slut samt heltalsvärdena bakom blocket. För IPv4 får du även nätmask, wildcard-mask och broadcast-adress. För IPv6 behåller parsern samma arbetsflöde men döljer fält som inte gäller.
 
-## Why Canonicalization Matters
+## Varför kanonisering spelar roll
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+Många inklistrade CIDR-värden innehåller hostbitar. Det fungerar för människor, men routrar, ACLs och dokumentation behöver vanligtvis den kanoniska nätverksadressen. Genom att skriva om blocket innan du kopierar något hjälper verktyget dig att upptäcka off-by-one-antaganden innan de hamnar i konfiguration.
 
-## Practical Notes
+## Praktiska anteckningar
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- IPv4-blocken `/31` och `/32` behandlas som helt användbara, vilket matchar modern point-to-point- och host-route-användning.
+- IPv6-block rapporterar hela adressrymden och användbart intervall utan att hitta på ett broadcast-koncept.
+- Allt körs lokalt i webbläsaren, så interna subnät lämnar inte sidan medan du inspekterar dem.

@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser `10.24.8.19/21` या `2001:db8:abcd::123/64` जैसे ब्लॉक को उस नेटवर्क में बदलता है जिसका आप वास्तव में मतलब रखते हैं। यह host-address input को normalize करता है, canonical subnet दिखाता है, और वे boundaries उजागर करता है जिनकी जरूरत firewall rules लिखते, ranges document करते या allocation के आकार की जांच करते समय होती है।
 
-## What It Shows
+## यह क्या दिखाता है
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+Result पहले quick overview देता है, फिर ब्लॉक को practical details में तोड़ता है: canonical CIDR, total और usable address counts, range start/end, और ब्लॉक के integer values। IPv4 के लिए netmask, wildcard mask और broadcast address भी मिलता है। IPv6 में workflow वही रहता है लेकिन लागू न होने वाले fields छिप जाते हैं।
 
-## Why Canonicalization Matters
+## Canonicalization क्यों जरूरी है
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+कई pasted CIDR values में host bits होते हैं। मनुष्यों के लिए यह ठीक है, लेकिन routers, ACLs और documentation को आम तौर पर canonical network address चाहिए। Copy करने से पहले ब्लॉक rewrite होने से off-by-one assumptions config में पहुंचने से पहले पकड़े जा सकते हैं।
 
-## Practical Notes
+## व्यावहारिक नोट्स
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- `/31` और `/32` IPv4 blocks को पूरी तरह usable माना जाता है, जो modern point-to-point और host-route usage से मेल खाता है।
+- IPv6 blocks broadcast concept बनाए बिना पूरा address space और usable range बताते हैं।
+- सब कुछ browser में locally चलता है, इसलिए internal subnets जांचते समय page से बाहर नहीं जाते।

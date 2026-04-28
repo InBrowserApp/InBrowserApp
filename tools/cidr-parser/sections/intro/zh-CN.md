@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser 会把 `10.24.8.19/21` 或 `2001:db8:abcd::123/64` 这样的块转换成你真正想表达的网络。它会规范化主机地址输入，显示标准子网，并暴露写防火墙规则、记录地址范围或检查分配是否过大时通常需要的边界。
 
-## What It Shows
+## 它会显示什么
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+结果先给出快速概览，然后把网段拆成实用细节：标准 CIDR、地址总数和可用地址数、范围起点和终点，以及该网段背后的整数值。对于 IPv4，还会显示网络掩码、反掩码和广播地址。对于 IPv6，解析器保留同样的工作流，但隐藏不适用的字段。
 
-## Why Canonicalization Matters
+## 为什么标准化很重要
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+很多粘贴进来的 CIDR 值都包含主机位。人可以理解这种写法，但路由器、ACLs 和文档通常需要标准网络地址。复制任何内容之前先改写网段，可以更早发现 off-by-one 这类边界假设，避免它们进入配置。
 
-## Practical Notes
+## 实用说明
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- `/31` 和 `/32` IPv4 网段会被视为完全可用，这符合现代 point-to-point 和 host-route 用法。
+- IPv6 网段会报告完整地址空间和可用范围，不会虚构 broadcast 概念。
+- 所有计算都在浏览器本地完成，检查内部子网时数据不会离开页面。

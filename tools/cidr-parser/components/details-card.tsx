@@ -38,7 +38,10 @@ function DetailsCard({
           >
             <div className="min-w-0 flex-1">
               <p className="text-sm text-muted-foreground">{item.label}</p>
-              <p className="mt-1 font-mono text-sm break-all text-foreground sm:text-base">
+              <p
+                dir="ltr"
+                className="mt-1 text-left font-mono text-sm break-all text-foreground [unicode-bidi:isolate] sm:text-base"
+              >
                 {item.value}
               </p>
             </div>

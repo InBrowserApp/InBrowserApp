@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser는 `10.24.8.19/21` 또는 `2001:db8:abcd::123/64` 같은 블록을 실제로 의도한 네트워크로 바꿉니다. 호스트 주소 입력을 정규화하고, 정규 서브넷을 보여 주며, 방화벽 규칙 작성, 범위 문서화, 할당 크기 확인에 필요한 경계를 드러냅니다.
 
-## What It Shows
+## 표시하는 내용
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+결과는 빠른 개요로 시작한 뒤 블록을 실용적인 세부 항목으로 나눕니다. 정규 CIDR, 전체 및 사용 가능한 주소 수, 범위 시작과 끝, 블록의 정수 값을 확인할 수 있습니다. IPv4에서는 넷마스크, 와일드카드 마스크, 브로드캐스트 주소도 표시합니다. IPv6에서는 같은 흐름을 유지하되 적용되지 않는 필드는 숨깁니다.
 
-## Why Canonicalization Matters
+## 정규화가 중요한 이유
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+붙여 넣은 CIDR 값에는 호스트 비트가 포함될 수 있습니다. 사람에게는 괜찮지만 라우터, ACLs, 문서에는 보통 정규 네트워크 주소가 필요합니다. 복사하기 전에 블록을 다시 쓰면 off-by-one 가정을 설정에 반영하기 전에 잡아내기 쉽습니다.
 
-## Practical Notes
+## 실무 메모
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- IPv4 `/31` 및 `/32` 블록은 현대적인 point-to-point 및 host-route 사용 방식에 맞춰 완전히 사용 가능한 것으로 처리합니다.
+- IPv6 블록은 broadcast 개념을 만들지 않고 전체 주소 공간과 사용 가능한 범위를 보고합니다.
+- 모든 작업은 브라우저에서 로컬로 실행되므로 내부 서브넷은 검사 중 페이지를 벗어나지 않습니다.

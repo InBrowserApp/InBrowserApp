@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser menukar blok seperti `10.24.8.19/21` atau `2001:db8:abcd::123/64` kepada rangkaian yang benar-benar anda maksudkan. Ia menormalkan input alamat hos, memaparkan subnet kanonik dan mendedahkan sempadan yang biasanya diperlukan semasa menulis peraturan firewall, mendokumentasikan julat atau menyemak sama ada peruntukan terlalu besar.
 
-## What It Shows
+## Apa Yang Dipaparkan
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+Hasil bermula dengan gambaran ringkas, kemudian memecahkan blok kepada butiran praktikal: CIDR kanonik, jumlah alamat dan alamat boleh guna, mula dan akhir julat, serta nilai integer di sebalik blok. Untuk IPv4, anda juga mendapat netmask, wildcard mask dan alamat broadcast. Untuk IPv6, parser mengekalkan aliran yang sama tetapi menyembunyikan medan yang tidak berkaitan.
 
-## Why Canonicalization Matters
+## Mengapa Kanonikalisasi Penting
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+Banyak nilai CIDR yang ditampal mengandungi bit hos. Itu sesuai untuk manusia, tetapi router, ACLs dan dokumentasi biasanya memerlukan alamat rangkaian kanonik. Dengan menulis semula blok sebelum anda menyalin apa-apa, alat ini membantu menangkap andaian off-by-one sebelum masuk ke konfigurasi.
 
-## Practical Notes
+## Nota Praktikal
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- Blok IPv4 `/31` dan `/32` dianggap boleh digunakan sepenuhnya, sejajar dengan penggunaan point-to-point dan host-route moden.
+- Blok IPv6 melaporkan keseluruhan ruang alamat dan julat boleh guna tanpa mencipta konsep broadcast.
+- Semuanya berjalan setempat dalam pelayar, jadi subnet dalaman tidak meninggalkan halaman semasa anda memeriksanya.

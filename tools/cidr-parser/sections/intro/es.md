@@ -1,15 +1,15 @@
-CIDR Parser turns a block like `10.24.8.19/21` or `2001:db8:abcd::123/64` into the network you actually mean. It normalizes host-address input, shows the canonical subnet, and exposes the boundaries you usually need when writing firewall rules, documenting ranges, or checking whether an allocation is larger than intended.
+CIDR Parser convierte un bloque como `10.24.8.19/21` o `2001:db8:abcd::123/64` en la red que realmente quieres usar. Normaliza entradas con dirección de host, muestra la subred canónica y expone los límites que normalmente necesitas al escribir reglas de firewall, documentar rangos o comprobar si una asignación es demasiado grande.
 
-## What It Shows
+## Qué muestra
 
-The result starts with a quick overview, then breaks the block into practical details: canonical CIDR, total and usable address counts, range start and end, plus the integer values behind the block. For IPv4, you also get the netmask, wildcard mask, and broadcast address. For IPv6, the parser keeps the same workflow but hides fields that do not apply.
+El resultado empieza con un resumen rápido y después divide el bloque en detalles prácticos: CIDR canónico, recuentos de direcciones totales y utilizables, inicio y fin del rango, además de los valores enteros del bloque. Para IPv4 también muestra la máscara de red, la máscara wildcard y la dirección de broadcast. Para IPv6 mantiene el mismo flujo y oculta los campos que no aplican.
 
-## Why Canonicalization Matters
+## Por qué importa la canonicalización
 
-Many pasted CIDR values include host bits. That is fine for humans, but routers, ACLs, and documentation usually need the canonical network address instead. By rewriting the block before you copy anything out, the tool makes it easier to catch off-by-one assumptions before they leak into config.
+Muchos valores CIDR pegados incluyen bits de host. Eso está bien para personas, pero routers, ACLs y documentación suelen necesitar la dirección de red canónica. Al reescribir el bloque antes de copiar cualquier dato, la herramienta ayuda a detectar supuestos off-by-one antes de que lleguen a la configuración.
 
-## Practical Notes
+## Notas prácticas
 
-- `/31` and `/32` IPv4 blocks are treated as fully usable, which matches modern point-to-point and host-route usage.
-- IPv6 blocks report the full address space and usable range without inventing a broadcast concept.
-- Everything runs locally in the browser, so internal subnets do not leave the page while you inspect them.
+- Los bloques IPv4 `/31` y `/32` se tratan como completamente utilizables, coherente con usos modernos punto a punto y host-route.
+- Los bloques IPv6 muestran todo el espacio de direcciones y el rango utilizable sin inventar un concepto de broadcast.
+- Todo se ejecuta localmente en el navegador, por lo que las subredes internas no salen de la página mientras las inspeccionas.
