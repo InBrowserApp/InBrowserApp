@@ -86,9 +86,9 @@ function LayersCard({
                 )}
                 key={layer.id}
               >
-                <div className="flex flex-wrap items-start justify-between gap-3">
+                <div className="grid gap-3">
                   <button
-                    className="flex min-w-0 flex-1 flex-wrap items-center gap-2 text-left"
+                    className="flex min-w-0 flex-wrap items-center gap-2 text-left"
                     onClick={() => {
                       onSetActive(layer.id)
                     }}
