@@ -17,7 +17,6 @@ export type SitemapXmlGeneratorMessages = Readonly<{
   standardPresetLabel: string
   contentPresetLabel: string
   indexPresetLabel: string
-  resetPresetLabel: string
   urlEntriesLabel: string
   urlEntriesDescription: string
   urlEntryLabel: string

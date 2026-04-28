@@ -30,7 +30,6 @@ type SettingsCardProps = Readonly<{
   onBaseUrlChange: (value: string) => void
   onAutoJoinChange: (value: boolean) => void
   onPresetApply: (preset: SitemapPresetKey) => void
-  onReset: () => void
 }>
 
 function SettingsCard({
@@ -42,7 +41,6 @@ function SettingsCard({
   onBaseUrlChange,
   onAutoJoinChange,
   onPresetApply,
-  onReset,
 }: SettingsCardProps) {
   return (
     <ToolPanelCard>
@@ -157,9 +155,6 @@ function SettingsCard({
               >
                 <Sparkles data-icon="inline-start" />
                 {messages.indexPresetLabel}
-              </Button>
-              <Button type="button" variant="ghost" size="sm" onClick={onReset}>
-                {messages.resetPresetLabel}
               </Button>
             </div>
           </Field>

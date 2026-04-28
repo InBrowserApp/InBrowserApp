@@ -31,7 +31,6 @@ const messages = {
   standardPresetLabel: "Standard site",
   contentPresetLabel: "Content hub",
   indexPresetLabel: "Sitemap index",
-  resetPresetLabel: "Reset example",
   urlEntriesLabel: "URL entries",
   urlEntriesDescription: "Each row becomes one <url> record in sitemap.xml.",
   urlEntryLabel: "Page {index}",

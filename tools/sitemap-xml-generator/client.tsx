@@ -125,12 +125,6 @@ function SitemapXmlGeneratorClient({
     })
   }
 
-  function resetState() {
-    startTransition(() => {
-      setState(DEFAULT_SITEMAP_GENERATOR_STATE)
-    })
-  }
-
   const errorDescription =
     result.state !== "error"
       ? ""
@@ -177,7 +171,6 @@ function SitemapXmlGeneratorClient({
           }))
         }}
         onPresetApply={applyPreset}
-        onReset={resetState}
       />
 
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">

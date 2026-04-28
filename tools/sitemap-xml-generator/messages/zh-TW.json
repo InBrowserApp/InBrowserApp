@@ -13,7 +13,6 @@
   "standardPresetLabel": "標準站點",
   "contentPresetLabel": "內容站點",
   "indexPresetLabel": "Sitemap 索引",
-  "resetPresetLabel": "重設示例",
   "urlEntriesLabel": "URL 條目",
   "urlEntriesDescription": "這裡的每一列都會產生 sitemap.xml 裡的一個 <url> 節點。",
   "urlEntryLabel": "頁面 {index}",
