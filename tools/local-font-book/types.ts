@@ -48,11 +48,13 @@ type LocalFontBookLocalizedCatalog = Readonly<{
   statusBlocked: string
   statusError: string
   previewTitle: string
+  previewDescription: string
   previewPlaceholder: string
   previewFallback: string
   previewBackground: string
   previewEmpty: string
   detailsTitle: string
+  detailsDescription: string
   detailsFamily: string
   detailsFullName: string
   detailsPostscript: string

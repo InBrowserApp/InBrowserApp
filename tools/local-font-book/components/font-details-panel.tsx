@@ -4,6 +4,7 @@ import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -34,6 +35,7 @@ function FontDetailsPanel({
       <Card>
         <CardHeader className="gap-3 border-b">
           <CardTitle>{messages.detailsTitle}</CardTitle>
+          <CardDescription>{messages.detailsDescription}</CardDescription>
         </CardHeader>
         <CardContent className="pt-4">
           <Empty className="min-h-56">
@@ -54,6 +56,7 @@ function FontDetailsPanel({
     <Card>
       <CardHeader className="gap-3 border-b">
         <CardTitle>{messages.detailsTitle}</CardTitle>
+        <CardDescription>{messages.detailsDescription}</CardDescription>
       </CardHeader>
 
       <CardContent className="flex flex-col gap-4 pt-4">

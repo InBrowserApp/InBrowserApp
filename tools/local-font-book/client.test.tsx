@@ -31,11 +31,15 @@ const messages = {
   statusBlocked: "Access blocked by permissions policy or insecure context.",
   statusError: "Unable to load fonts. Try again.",
   previewTitle: "Preview",
+  previewDescription:
+    "Edit sample text and check the selected font on light or dark surfaces.",
   previewPlaceholder: "Type specimen text…",
   previewFallback: "Sample text",
   previewBackground: "Dark background",
   previewEmpty: "Choose a font to start previewing.",
   detailsTitle: "Font details",
+  detailsDescription:
+    "Review font metadata and copy a ready-to-use CSS declaration.",
   detailsFamily: "Family",
   detailsFullName: "Full name",
   detailsPostscript: "PostScript name",

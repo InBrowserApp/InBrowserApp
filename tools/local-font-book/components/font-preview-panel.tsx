@@ -6,6 +6,7 @@ import {
   Card,
   CardAction,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -51,6 +52,7 @@ function FontPreviewPanel({
     <Card className="overflow-hidden">
       <CardHeader className="gap-3 border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
+        <CardDescription>{messages.previewDescription}</CardDescription>
         <CardAction>
           <Button
             type="button"
@@ -62,7 +64,11 @@ function FontPreviewPanel({
               onDarkBackgroundChange(!darkBackground)
             }}
           >
-            {darkBackground ? <Sun /> : <Moon />}
+            {darkBackground ? (
+              <Sun data-icon="inline-start" />
+            ) : (
+              <Moon data-icon="inline-start" />
+            )}
           </Button>
         </CardAction>
       </CardHeader>
