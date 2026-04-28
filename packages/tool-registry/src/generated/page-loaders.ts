@@ -149,6 +149,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
+  "text-diff": () => import("@tool/text-diff/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),

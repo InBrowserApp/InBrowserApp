@@ -10030,6 +10030,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-diff",
+    language: "ar",
+  },
+  {
+    slug: "text-diff",
+    language: "de",
+  },
+  {
+    slug: "text-diff",
+    language: "en",
+  },
+  {
+    slug: "text-diff",
+    language: "es",
+  },
+  {
+    slug: "text-diff",
+    language: "fr",
+  },
+  {
+    slug: "text-diff",
+    language: "he",
+  },
+  {
+    slug: "text-diff",
+    language: "hi",
+  },
+  {
+    slug: "text-diff",
+    language: "id",
+  },
+  {
+    slug: "text-diff",
+    language: "it",
+  },
+  {
+    slug: "text-diff",
+    language: "ja",
+  },
+  {
+    slug: "text-diff",
+    language: "ko",
+  },
+  {
+    slug: "text-diff",
+    language: "ms",
+  },
+  {
+    slug: "text-diff",
+    language: "nl",
+  },
+  {
+    slug: "text-diff",
+    language: "no",
+  },
+  {
+    slug: "text-diff",
+    language: "pl",
+  },
+  {
+    slug: "text-diff",
+    language: "pt",
+  },
+  {
+    slug: "text-diff",
+    language: "ru",
+  },
+  {
+    slug: "text-diff",
+    language: "sv",
+  },
+  {
+    slug: "text-diff",
+    language: "th",
+  },
+  {
+    slug: "text-diff",
+    language: "tr",
+  },
+  {
+    slug: "text-diff",
+    language: "vi",
+  },
+  {
+    slug: "text-diff",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-diff",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },
