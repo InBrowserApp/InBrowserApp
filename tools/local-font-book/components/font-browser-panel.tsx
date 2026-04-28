@@ -28,17 +28,19 @@ import {
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@workspace/ui/components/ui/toggle-group"
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/ui/select"
+import { Switch } from "@workspace/ui/components/ui/switch"
 import { Search } from "@workspace/ui/icons"
 
-import { buildFontFaceDescriptor } from "../core/local-font-book"
+import FontTile from "./font-tile"
 
 import type {
-  DisplayFont,
   FontGroup,
   FontSort,
   FontStyleFilter,
@@ -90,18 +92,8 @@ function FontBrowserPanel({
   const groupSwitchId = useId()
 
   return (
-    <ToolPanelCard className="overflow-hidden">
-      <CardHeader className="gap-3 border-b">
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="secondary" className="rounded-full px-3">
-            {messages.libraryTitle}
-          </Badge>
-          {fontCountLabel ? (
-            <Badge variant="outline" className="rounded-full px-3">
-              {fontCountLabel}
-            </Badge>
-          ) : null}
-        </div>
+    <ToolPanelCard className="h-auto min-w-0 overflow-hidden">
+      <CardHeader className="gap-2 border-b">
         <CardTitle>{messages.libraryTitle}</CardTitle>
         <CardDescription>{messages.meta.description}</CardDescription>
         <CardAction>
@@ -124,7 +116,7 @@ function FontBrowserPanel({
               {messages.searchPlaceholder}
             </FieldLabel>
             <div className="relative">
-              <Search className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted-foreground" />
+              <Search className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <Input
                 id={searchInputId}
                 autoComplete="off"
@@ -135,83 +127,89 @@ function FontBrowserPanel({
                 placeholder={messages.searchPlaceholder}
                 aria-label={messages.searchPlaceholder}
                 disabled={!hasFonts}
-                className="pl-10"
+                className="ps-10 text-sm"
               />
             </div>
           </Field>
 
-          <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] md:items-end">
+          <div className="grid gap-3 sm:grid-cols-2">
             <Field>
               <FieldLabel>{messages.detailsStyle}</FieldLabel>
-              <ToggleGroup
-                type="single"
-                variant="outline"
-                size="sm"
-                spacing={8}
+              <Select
                 value={filterStyle}
                 onValueChange={(value) => {
-                  if (!value) return
                   onFilterStyleChange(value as FontStyleFilter)
                 }}
                 disabled={!hasFonts}
-                aria-label={messages.detailsStyle}
-                className="w-full flex-wrap"
               >
-                <ToggleGroupItem value="all">
-                  {messages.filterStyleAll}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="regular">
-                  {messages.filterStyleRegular}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="italic">
-                  {messages.filterStyleItalic}
-                </ToggleGroupItem>
-              </ToggleGroup>
+                <SelectTrigger
+                  size="sm"
+                  aria-label={messages.detailsStyle}
+                  className="w-full"
+                >
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{messages.filterStyleAll}</SelectItem>
+                  <SelectItem value="regular">
+                    {messages.filterStyleRegular}
+                  </SelectItem>
+                  <SelectItem value="italic">
+                    {messages.filterStyleItalic}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
             </Field>
 
             <Field>
               <FieldLabel>{messages.sortLabel}</FieldLabel>
-              <ToggleGroup
-                type="single"
-                variant="outline"
-                size="sm"
-                spacing={8}
+              <Select
                 value={sortBy}
                 onValueChange={(value) => {
-                  if (!value) return
                   onSortByChange(value as FontSort)
                 }}
                 disabled={!hasFonts}
-                aria-label={messages.sortLabel}
-                className="w-full flex-wrap"
               >
-                <ToggleGroupItem value="family">
-                  {messages.sortFamily}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="name">
-                  {messages.sortName}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="style">
-                  {messages.sortStyle}
-                </ToggleGroupItem>
-              </ToggleGroup>
+                <SelectTrigger
+                  size="sm"
+                  aria-label={messages.sortLabel}
+                  className="w-full"
+                >
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="family">{messages.sortFamily}</SelectItem>
+                  <SelectItem value="name">{messages.sortName}</SelectItem>
+                  <SelectItem value="style">{messages.sortStyle}</SelectItem>
+                </SelectContent>
+              </Select>
             </Field>
+          </div>
 
-            <Field
-              orientation="horizontal"
-              className="gap-3 self-end pt-0.5 md:justify-self-end"
-            >
+          <Field
+            orientation="horizontal"
+            className="justify-between gap-3 rounded-xl border bg-muted/15 px-3 py-2"
+          >
+            <div className="flex min-w-0 flex-col">
               <FieldLabel htmlFor={groupSwitchId}>
                 {messages.groupLabel}
               </FieldLabel>
-              <Switch
-                id={groupSwitchId}
-                checked={groupByFamily}
-                onCheckedChange={onGroupByFamilyChange}
-                disabled={!hasFonts}
-              />
-            </Field>
-          </div>
+              {fontCountLabel ? (
+                <Badge
+                  variant="outline"
+                  className="mt-1 w-fit rounded-full px-2.5 text-xs"
+                >
+                  {fontCountLabel}
+                </Badge>
+              ) : null}
+            </div>
+            <Switch
+              id={groupSwitchId}
+              checked={groupByFamily}
+              onCheckedChange={onGroupByFamilyChange}
+              disabled={!hasFonts}
+            />
+          </Field>
         </FieldGroup>
 
         <div className="overflow-hidden rounded-2xl border bg-muted/15">
@@ -251,52 +249,32 @@ function FontBrowserPanel({
                   </EmptyDescription>
                 </EmptyHeader>
               </Empty>
-            ) : null}
+            ) : (
+              <Empty className="min-h-72 rounded-none border-none px-6">
+                <EmptyHeader>
+                  <EmptyMedia variant="icon">
+                    <Search />
+                  </EmptyMedia>
+                  <EmptyTitle>{messages.loadButton}</EmptyTitle>
+                  <EmptyDescription>
+                    {messages.meta.description}
+                  </EmptyDescription>
+                </EmptyHeader>
+              </Empty>
+            )}
           </ScrollArea>
         </div>
 
         {statusMessage ? (
-          <div className="rounded-2xl border border-dashed border-border/80 bg-muted/15 px-4 py-3 text-sm text-muted-foreground">
+          <div
+            aria-live="polite"
+            className="rounded-2xl border border-dashed border-border/80 bg-muted/15 px-4 py-3 text-sm text-muted-foreground"
+          >
             {statusMessage}
           </div>
         ) : null}
       </ToolPanelCardContent>
     </ToolPanelCard>
-  )
-}
-
-function FontTile({
-  font,
-  active,
-  onSelect,
-}: Readonly<{
-  font: DisplayFont
-  active: boolean
-  onSelect: (fontId: string) => void
-}>) {
-  const descriptor = buildFontFaceDescriptor(font)
-
-  return (
-    <button
-      type="button"
-      data-testid={`font-${font.id}`}
-      data-active={active}
-      onClick={() => {
-        onSelect(font.id)
-      }}
-      className="flex flex-col gap-2.5 rounded-xl border border-border/80 bg-background px-4 py-3.5 text-left transition-colors hover:border-foreground/20 hover:bg-muted/20 data-[active=true]:border-foreground/20 data-[active=true]:bg-muted/30"
-    >
-      <div
-        className="line-clamp-2 text-[1.05rem] leading-tight font-medium"
-        style={descriptor ?? undefined}
-      >
-        {font.displayName}
-      </div>
-      <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs text-muted-foreground">
-        <span>{font.displayFamily}</span>
-        <span>{font.displayStyle}</span>
-      </div>
-    </button>
   )
 }
 

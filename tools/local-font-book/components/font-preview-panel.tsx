@@ -49,7 +49,7 @@ function FontPreviewPanel({
     : "border-border bg-muted/30 text-foreground"
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="min-w-0 overflow-hidden">
       <CardHeader className="gap-3 border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
         <CardDescription>{messages.previewDescription}</CardDescription>
@@ -79,6 +79,7 @@ function FontPreviewPanel({
             {messages.previewFallback}
           </FieldLabel>
           <Textarea
+            dir="auto"
             value={sampleText}
             onChange={(event) => {
               onSampleTextChange(event.target.value)
@@ -96,7 +97,7 @@ function FontPreviewPanel({
         >
           {activeFont && descriptor ? (
             <div
-              className="flex min-h-[20rem] flex-col justify-between gap-6"
+              className="flex min-h-[15rem] flex-col gap-8 sm:min-h-[18rem] sm:gap-10"
               style={descriptor}
             >
               <div className="flex flex-wrap gap-2">
@@ -115,10 +116,16 @@ function FontPreviewPanel({
               </div>
 
               <div className="space-y-4">
-                <div className="text-[clamp(2.25rem,5vw,4.75rem)] leading-[0.95] tracking-tight">
+                <div
+                  dir="auto"
+                  className="text-[clamp(2rem,4.2vw,4.25rem)] leading-[0.98] tracking-tight text-balance break-words"
+                >
                   {specimenText}
                 </div>
-                <div className="border-t border-current/10 pt-4 text-sm tracking-[0.18em] uppercase opacity-60">
+                <div
+                  dir="ltr"
+                  className="border-t border-current/10 pt-4 text-sm tracking-[0.18em] uppercase opacity-60"
+                >
                   Aa Bb Cc 0123456789 &amp; @#?!
                 </div>
               </div>
