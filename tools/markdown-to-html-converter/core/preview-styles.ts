@@ -5,9 +5,7 @@ const previewStyles = `
       "IBM Plex Sans", "Segoe UI", sans-serif;
     line-height: 1.65;
     color: #172033;
-    background:
-      radial-gradient(circle at top left, rgba(74, 132, 255, 0.08), transparent 28%),
-      linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
+    background: #ffffff;
   }
 
   * {
@@ -18,22 +16,25 @@ const previewStyles = `
   body {
     margin: 0;
     min-height: 100%;
+    background: #ffffff;
   }
 
   body {
-    padding: 32px 24px 48px;
+    padding: 0;
   }
 
   article {
+    min-height: 100vh;
     margin: 0 auto;
-    max-width: 760px;
-    border: 1px solid rgba(23, 32, 51, 0.08);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow:
-      0 20px 40px rgba(23, 32, 51, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    padding: 32px;
+    width: min(100%, 840px);
+    background: #ffffff;
+    padding: 28px 22px 44px;
+  }
+
+  @media (min-width: 720px) {
+    article {
+      padding: 36px 32px 52px;
+    }
   }
 
   h1,
@@ -80,16 +81,17 @@ const previewStyles = `
 
   code {
     border-radius: 8px;
-    background: #eef2ff;
+    background: #f3f4f6;
     padding: 0.15rem 0.4rem;
-    color: #213367;
+    color: #1f2937;
   }
 
   pre {
     overflow-x: auto;
     border-radius: 16px;
-    background: #111827;
-    color: #f8fafc;
+    border: 1px solid rgba(23, 32, 51, 0.12);
+    background: #f8fafc;
+    color: #172033;
     padding: 18px 20px;
   }
 
@@ -100,7 +102,7 @@ const previewStyles = `
   }
 
   blockquote {
-    border-inline-start: 4px solid #7aa2ff;
+    border-inline-start: 4px solid #d0d5dd;
     padding-inline-start: 16px;
     color: #44516a;
   }
