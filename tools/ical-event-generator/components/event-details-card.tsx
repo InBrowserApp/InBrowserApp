@@ -33,6 +33,10 @@ type EventDetailsCardProps = Readonly<{
   onRegenerateUid: () => void
 }>
 
+function getPlaceholder(value: string) {
+  return value.endsWith("…") ? value : `${value}…`
+}
+
 function EventDetailsCard({
   messages,
   formState,
@@ -72,8 +76,10 @@ function EventDetailsCard({
             </FieldLabel>
             <Input
               id={titleId}
+              name="ical-title"
+              autoComplete="off"
               value={formState.title}
-              placeholder={messages.details.summaryPlaceholder}
+              placeholder={getPlaceholder(messages.details.summaryPlaceholder)}
               onChange={(event) => {
                 onFieldChange("title", event.target.value)
               }}
@@ -87,6 +93,8 @@ function EventDetailsCard({
               </FieldLabel>
               <Input
                 id={locationId}
+                name="ical-location"
+                autoComplete="off"
                 value={formState.location}
                 onChange={(event) => {
                   onFieldChange("location", event.target.value)
@@ -100,7 +108,11 @@ function EventDetailsCard({
               </FieldLabel>
               <Input
                 id={urlId}
+                type="url"
                 inputMode="url"
+                name="ical-url"
+                autoComplete="off"
+                spellCheck={false}
                 value={formState.url}
                 onChange={(event) => {
                   onFieldChange("url", event.target.value)
@@ -115,9 +127,11 @@ function EventDetailsCard({
             </FieldLabel>
             <Textarea
               id={descriptionId}
+              name="ical-description"
+              autoComplete="off"
               rows={5}
               value={formState.description}
-              placeholder={messages.details.notesPlaceholder}
+              placeholder={getPlaceholder(messages.details.notesPlaceholder)}
               onChange={(event) => {
                 onFieldChange("description", event.target.value)
               }}
@@ -125,11 +139,15 @@ function EventDetailsCard({
             />
           </Field>
 
-          <Field orientation="horizontal">
+          <Field orientation="responsive">
             <FieldLabel htmlFor={uidId}>{messages.details.uidLabel}</FieldLabel>
             <FieldContent>
               <Input
                 id={uidId}
+                name="ical-uid"
+                autoComplete="off"
+                spellCheck={false}
+                translate="no"
                 value={formState.uid}
                 onChange={(event) => {
                   onFieldChange("uid", event.target.value)

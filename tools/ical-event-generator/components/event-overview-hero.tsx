@@ -5,8 +5,10 @@ import { RefreshCcw, Sparkles } from "@workspace/ui/icons"
 
 import type { IcalEventGeneratorMessages } from "../types"
 import type { IcalEventFormState } from "../core/form-state"
+import { parseDateInput, parseTimeInput } from "../core/time-zone"
 
 type EventOverviewHeroProps = Readonly<{
+  language: string
   messages: IcalEventGeneratorMessages
   formState: IcalEventFormState
   onUseSample: () => void
@@ -52,7 +54,46 @@ function getDisplayUrl(url: string) {
   }
 }
 
+function formatDateLabel(value: string, language: string) {
+  const parts = parseDateInput(value)
+
+  if (!parts) {
+    return value
+  }
+
+  try {
+    return new Intl.DateTimeFormat(language, {
+      day: "numeric",
+      month: "short",
+      timeZone: "UTC",
+      year: "numeric",
+    }).format(new Date(Date.UTC(parts.year, parts.month - 1, parts.day)))
+  } catch {
+    return value
+  }
+}
+
+function formatTimeLabel(value: string, language: string) {
+  const parts = parseTimeInput(value)
+
+  if (!parts) {
+    return value
+  }
+
+  try {
+    return new Intl.DateTimeFormat(language, {
+      hour: "2-digit",
+      hourCycle: "h23",
+      minute: "2-digit",
+      timeZone: "UTC",
+    }).format(new Date(Date.UTC(2026, 0, 1, parts.hour, parts.minute)))
+  } catch {
+    return value
+  }
+}
+
 function EventOverviewHero({
+  language,
   messages,
   formState,
   onUseSample,
@@ -65,17 +106,17 @@ function EventOverviewHero({
   const summaryItems = [
     {
       label: messages.schedule.startDateLabel,
-      value: formState.startDate,
+      value: formatDateLabel(formState.startDate, language),
       detail: formState.isAllDay
         ? messages.schedule.allDayLabel
-        : formState.startTime,
+        : formatTimeLabel(formState.startTime, language),
     },
     {
       label: messages.schedule.endDateLabel,
-      value: formState.endDate,
+      value: formatDateLabel(formState.endDate, language),
       detail: formState.isAllDay
         ? messages.schedule.allDayLabel
-        : formState.endTime,
+        : formatTimeLabel(formState.endTime, language),
     },
     {
       label: messages.schedule.timeZoneLabel,
@@ -90,7 +131,7 @@ function EventOverviewHero({
   ] as const
 
   return (
-    <section className="relative overflow-hidden rounded-[1.75rem] border bg-linear-to-br from-primary/12 via-background via-55% to-sky-500/12 p-5 sm:p-6">
+    <section className="relative min-w-0 overflow-hidden rounded-[1.75rem] border bg-linear-to-br from-primary/12 via-background via-55% to-sky-500/12 p-5 sm:p-6">
       <div className="absolute -top-16 right-0 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 left-[-4rem] h-40 w-40 rounded-full bg-sky-500/10 blur-3xl" />
       <div className="relative grid gap-6 xl:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)] xl:items-end">
@@ -114,6 +155,7 @@ function EventOverviewHero({
               <h2
                 className={cn(
                   "font-heading text-2xl tracking-[var(--tracking-display)] text-balance sm:text-3xl",
+                  "[overflow-wrap:anywhere] break-words",
                   !title && "text-muted-foreground"
                 )}
               >
@@ -167,7 +209,7 @@ function EventOverviewHero({
               <p className="text-[0.7rem] font-medium tracking-[0.2em] text-muted-foreground uppercase">
                 {item.label}
               </p>
-              <p className="mt-3 text-sm font-medium sm:text-base">
+              <p className="mt-3 text-sm font-medium [overflow-wrap:anywhere] break-words sm:text-base">
                 {item.value}
               </p>
               <p className="mt-1 text-xs text-muted-foreground">

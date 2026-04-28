@@ -1,3 +1,5 @@
+import { useId, useMemo } from "react"
+
 import {
   CardDescription,
   CardHeader,
@@ -6,11 +8,9 @@ import {
 import {
   Field,
   FieldContent,
-  FieldDescription,
   FieldGroup,
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
-import { Input } from "@workspace/ui/components/ui/input"
 import {
   Select,
   SelectContent,
@@ -24,27 +24,23 @@ import {
 } from "@workspace/ui/components/ui/toggle-group"
 
 import { WEEKDAY_VALUES } from "../core/form-state"
+import { RecurrenceNumberField } from "./recurrence-number-field"
+import { RecurrenceUntilFields } from "./recurrence-until-fields"
+import { buildWeekdayLabels } from "./weekday-labels"
 
 import type {
   IcalEventFormState,
   RecurrenceEndMode,
   RecurrenceFrequency,
 } from "../core/form-state"
+import type { ValidationErrorKey } from "../core/ical-event"
 import type { IcalEventGeneratorMessages } from "../types"
 
-const WEEKDAY_LABELS = [
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat",
-  "Sun",
-] as const
-
 type EventRecurrenceCardProps = Readonly<{
+  language: string
   messages: IcalEventGeneratorMessages
   formState: IcalEventFormState
+  validationErrorKey: ValidationErrorKey | null
   onFieldChange: (
     key: keyof Pick<
       IcalEventFormState,
@@ -63,11 +59,25 @@ type EventRecurrenceCardProps = Readonly<{
 }>
 
 function EventRecurrenceCard({
+  language,
   messages,
   formState,
+  validationErrorKey,
   onFieldChange,
   onWeekdaysChange,
 }: EventRecurrenceCardProps) {
+  const frequencyId = useId()
+  const endModeId = useId()
+  const weekdayLabels = useMemo(() => buildWeekdayLabels(language), [language])
+  const untilDateError =
+    validationErrorKey === "invalid-until-date"
+      ? messages.output.validation.invalidUntilDate
+      : null
+  const untilTimeError =
+    validationErrorKey === "invalid-until-time"
+      ? messages.output.validation.invalidUntilTime
+      : null
+
   return (
     <>
       <CardHeader className="border-b">
@@ -77,8 +87,11 @@ function EventRecurrenceCard({
       <div className="px-4">
         <FieldGroup>
           <Field>
-            <FieldLabel>{messages.recurrence.frequencyLabel}</FieldLabel>
+            <FieldLabel htmlFor={frequencyId}>
+              {messages.recurrence.frequencyLabel}
+            </FieldLabel>
             <Select
+              name="ical-recurrence-frequency"
               value={formState.recurrenceFrequency}
               onValueChange={(value) => {
                 onFieldChange(
@@ -87,7 +100,10 @@ function EventRecurrenceCard({
                 )
               }}
             >
-              <SelectTrigger className="w-full justify-between">
+              <SelectTrigger
+                id={frequencyId}
+                className="w-full justify-between"
+              >
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -112,21 +128,15 @@ function EventRecurrenceCard({
 
           {formState.recurrenceFrequency !== "none" ? (
             <>
-              <Field>
-                <FieldLabel>{messages.recurrence.intervalLabel}</FieldLabel>
-                <Input
-                  type="number"
-                  min={1}
-                  step={1}
-                  value={String(formState.recurrenceInterval)}
-                  onChange={(event) => {
-                    onFieldChange(
-                      "recurrenceInterval",
-                      Number(event.target.value || 1)
-                    )
-                  }}
-                />
-              </Field>
+              <RecurrenceNumberField
+                label={messages.recurrence.intervalLabel}
+                name="ical-recurrence-interval"
+                min={1}
+                value={formState.recurrenceInterval}
+                onValueChange={(value) => {
+                  onFieldChange("recurrenceInterval", value)
+                }}
+              />
 
               {formState.recurrenceFrequency === "weekly" ? (
                 <Field>
@@ -140,11 +150,16 @@ function EventRecurrenceCard({
                       onValueChange={(value) => {
                         onWeekdaysChange(value.length > 0 ? value : ["MO"])
                       }}
+                      aria-label={messages.recurrence.weekdaysLabel}
                       className="flex w-full flex-wrap"
                     >
                       {WEEKDAY_VALUES.map((weekday, index) => (
-                        <ToggleGroupItem key={weekday} value={weekday}>
-                          {WEEKDAY_LABELS[index]}
+                        <ToggleGroupItem
+                          key={weekday}
+                          value={weekday}
+                          className="min-w-10 flex-1"
+                        >
+                          {weekdayLabels[index]}
                         </ToggleGroupItem>
                       ))}
                     </ToggleGroup>
@@ -154,46 +169,37 @@ function EventRecurrenceCard({
 
               {formState.recurrenceFrequency === "monthly" ||
               formState.recurrenceFrequency === "yearly" ? (
-                <Field>
-                  <FieldLabel>{messages.recurrence.monthDayLabel}</FieldLabel>
-                  <Input
-                    type="number"
-                    min={1}
-                    max={31}
-                    step={1}
-                    value={String(formState.recurrenceMonthDay)}
-                    onChange={(event) => {
-                      onFieldChange(
-                        "recurrenceMonthDay",
-                        Number(event.target.value || 1)
-                      )
-                    }}
-                  />
-                </Field>
+                <RecurrenceNumberField
+                  label={messages.recurrence.monthDayLabel}
+                  name="ical-recurrence-month-day"
+                  min={1}
+                  max={31}
+                  value={formState.recurrenceMonthDay}
+                  onValueChange={(value) => {
+                    onFieldChange("recurrenceMonthDay", value)
+                  }}
+                />
               ) : null}
 
               {formState.recurrenceFrequency === "yearly" ? (
-                <Field>
-                  <FieldLabel>{messages.recurrence.monthLabel}</FieldLabel>
-                  <Input
-                    type="number"
-                    min={1}
-                    max={12}
-                    step={1}
-                    value={String(formState.recurrenceMonth)}
-                    onChange={(event) => {
-                      onFieldChange(
-                        "recurrenceMonth",
-                        Number(event.target.value || 1)
-                      )
-                    }}
-                  />
-                </Field>
+                <RecurrenceNumberField
+                  label={messages.recurrence.monthLabel}
+                  name="ical-recurrence-month"
+                  min={1}
+                  max={12}
+                  value={formState.recurrenceMonth}
+                  onValueChange={(value) => {
+                    onFieldChange("recurrenceMonth", value)
+                  }}
+                />
               ) : null}
 
               <Field>
-                <FieldLabel>{messages.recurrence.endsLabel}</FieldLabel>
+                <FieldLabel htmlFor={endModeId}>
+                  {messages.recurrence.endsLabel}
+                </FieldLabel>
                 <Select
+                  name="ical-recurrence-end-mode"
                   value={formState.recurrenceEndMode}
                   onValueChange={(value) => {
                     onFieldChange(
@@ -202,7 +208,10 @@ function EventRecurrenceCard({
                     )
                   }}
                 >
-                  <SelectTrigger className="w-full justify-between">
+                  <SelectTrigger
+                    id={endModeId}
+                    className="w-full justify-between"
+                  >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -220,62 +229,25 @@ function EventRecurrenceCard({
               </Field>
 
               {formState.recurrenceEndMode === "count" ? (
-                <Field>
-                  <FieldLabel>{messages.recurrence.countLabel}</FieldLabel>
-                  <Input
-                    type="number"
-                    min={1}
-                    step={1}
-                    value={String(formState.recurrenceCount)}
-                    onChange={(event) => {
-                      onFieldChange(
-                        "recurrenceCount",
-                        Number(event.target.value || 1)
-                      )
-                    }}
-                  />
-                </Field>
+                <RecurrenceNumberField
+                  label={messages.recurrence.countLabel}
+                  name="ical-recurrence-count"
+                  min={1}
+                  value={formState.recurrenceCount}
+                  onValueChange={(value) => {
+                    onFieldChange("recurrenceCount", value)
+                  }}
+                />
               ) : null}
 
               {formState.recurrenceEndMode === "until" ? (
-                <div className="grid gap-4 md:grid-cols-2">
-                  <Field>
-                    <FieldLabel>
-                      {messages.recurrence.untilDateLabel}
-                    </FieldLabel>
-                    <Input
-                      type="date"
-                      value={formState.recurrenceUntilDate}
-                      onChange={(event) => {
-                        onFieldChange("recurrenceUntilDate", event.target.value)
-                      }}
-                    />
-                  </Field>
-
-                  {!formState.isAllDay ? (
-                    <Field>
-                      <FieldLabel>
-                        {messages.recurrence.untilTimeLabel}
-                      </FieldLabel>
-                      <Input
-                        type="time"
-                        value={formState.recurrenceUntilTime}
-                        onChange={(event) => {
-                          onFieldChange(
-                            "recurrenceUntilTime",
-                            event.target.value
-                          )
-                        }}
-                      />
-                    </Field>
-                  ) : (
-                    <Field>
-                      <FieldDescription className="rounded-lg border bg-muted/30 px-3 py-2.5">
-                        {messages.schedule.allDayHint}
-                      </FieldDescription>
-                    </Field>
-                  )}
-                </div>
+                <RecurrenceUntilFields
+                  messages={messages}
+                  formState={formState}
+                  untilDateError={untilDateError}
+                  untilTimeError={untilTimeError}
+                  onFieldChange={onFieldChange}
+                />
               ) : null}
             </>
           ) : null}

@@ -139,7 +139,24 @@ describe("IcalEventGeneratorClient", () => {
     })
 
     await waitFor(() => {
-      expect(screen.getByText("The end must be after the start.")).toBeTruthy()
+      expect(
+        screen.getAllByText("The end must be after the start.").length
+      ).toBeGreaterThan(0)
+    })
+  })
+
+  test("localizes weekly recurrence weekday labels", async () => {
+    render(<IcalEventGeneratorClient language="fr" messages={messages} />)
+
+    fireEvent.click(screen.getByText("Use sample"))
+
+    const mondayLabel = new Intl.DateTimeFormat("fr", {
+      timeZone: "UTC",
+      weekday: "short",
+    }).format(new Date(Date.UTC(2026, 0, 5)))
+
+    await waitFor(() => {
+      expect(screen.getByText(mondayLabel)).toBeTruthy()
     })
   })
 

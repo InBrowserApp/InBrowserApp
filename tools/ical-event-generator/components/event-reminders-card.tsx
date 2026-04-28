@@ -66,17 +66,18 @@ function EventRemindersCard({
       </CardHeader>
       <div className="px-4">
         <FieldGroup>
-          <Field orientation="horizontal">
+          <Field orientation="responsive">
             <FieldLabel htmlFor="reminders-enabled">
               {messages.reminders.enabledLabel}
             </FieldLabel>
             <FieldContent>
-              <div className="flex items-center justify-between rounded-lg border bg-muted/30 px-3 py-2.5">
+              <div className="flex flex-col gap-3 rounded-lg border bg-muted/30 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between">
                 <FieldDescription>
                   {messages.reminders.description}
                 </FieldDescription>
                 <Switch
                   id="reminders-enabled"
+                  className="self-end sm:self-auto"
                   checked={formState.remindersEnabled}
                   onCheckedChange={onToggleEnabled}
                 />
@@ -85,71 +86,88 @@ function EventRemindersCard({
           </Field>
 
           {formState.remindersEnabled
-            ? formState.reminders.map((reminder) => (
-                <div
-                  key={reminder.id}
-                  className="grid gap-3 rounded-xl border bg-muted/20 p-3 md:grid-cols-[minmax(0,1fr)_12rem_auto]"
-                >
-                  <Field>
-                    <FieldLabel>{messages.reminders.leadTimeLabel}</FieldLabel>
-                    <Input
-                      type="number"
-                      min={1}
-                      step={1}
-                      value={String(reminder.amount)}
-                      onChange={(event) => {
-                        onReminderChange(reminder.id, {
-                          amount: Number(event.target.value || 1),
-                        })
-                      }}
-                    />
-                  </Field>
+            ? formState.reminders.map((reminder) => {
+                const amountId = `ical-reminder-${reminder.id}-amount`
+                const unitId = `ical-reminder-${reminder.id}-unit`
 
-                  <Field>
-                    <FieldLabel>{messages.reminders.title}</FieldLabel>
-                    <Select
-                      value={reminder.unit}
-                      onValueChange={(value) => {
-                        onReminderChange(reminder.id, {
-                          unit: value as Reminder["unit"],
-                        })
-                      }}
-                    >
-                      <SelectTrigger className="w-full justify-between">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="minutes">
-                          {messages.reminders.minutesLabel}
-                        </SelectItem>
-                        <SelectItem value="hours">
-                          {messages.reminders.hoursLabel}
-                        </SelectItem>
-                        <SelectItem value="days">
-                          {messages.reminders.daysLabel}
-                        </SelectItem>
-                        <SelectItem value="weeks">
-                          {messages.reminders.weeksLabel}
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </Field>
+                return (
+                  <div
+                    key={reminder.id}
+                    className="grid gap-3 rounded-xl border bg-muted/20 p-3 md:grid-cols-[minmax(0,1fr)_12rem_auto]"
+                  >
+                    <Field>
+                      <FieldLabel htmlFor={amountId}>
+                        {messages.reminders.leadTimeLabel}
+                      </FieldLabel>
+                      <Input
+                        id={amountId}
+                        type="number"
+                        inputMode="numeric"
+                        min={1}
+                        name="ical-reminder-amount"
+                        autoComplete="off"
+                        step={1}
+                        value={String(reminder.amount)}
+                        onChange={(event) => {
+                          onReminderChange(reminder.id, {
+                            amount: Number(event.target.value || 1),
+                          })
+                        }}
+                      />
+                    </Field>
 
-                  <div className="flex items-end md:justify-end">
-                    <Button
-                      type="button"
-                      size="sm"
-                      variant="ghost"
-                      onClick={() => {
-                        onRemoveReminder(reminder.id)
-                      }}
-                    >
-                      <Trash2 data-icon="inline-start" />
-                      {messages.actions.removeReminder}
-                    </Button>
+                    <Field>
+                      <FieldLabel htmlFor={unitId}>
+                        {messages.reminders.title}
+                      </FieldLabel>
+                      <Select
+                        name="ical-reminder-unit"
+                        value={reminder.unit}
+                        onValueChange={(value) => {
+                          onReminderChange(reminder.id, {
+                            unit: value as Reminder["unit"],
+                          })
+                        }}
+                      >
+                        <SelectTrigger
+                          id={unitId}
+                          className="w-full justify-between"
+                        >
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="minutes">
+                            {messages.reminders.minutesLabel}
+                          </SelectItem>
+                          <SelectItem value="hours">
+                            {messages.reminders.hoursLabel}
+                          </SelectItem>
+                          <SelectItem value="days">
+                            {messages.reminders.daysLabel}
+                          </SelectItem>
+                          <SelectItem value="weeks">
+                            {messages.reminders.weeksLabel}
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </Field>
+
+                    <div className="flex items-end md:justify-end">
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="ghost"
+                        onClick={() => {
+                          onRemoveReminder(reminder.id)
+                        }}
+                      >
+                        <Trash2 data-icon="inline-start" />
+                        {messages.actions.removeReminder}
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              ))
+                )
+              })
             : null}
         </FieldGroup>
       </div>

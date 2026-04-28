@@ -9,7 +9,6 @@ import {
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   CardDescription,
   CardHeader,
@@ -74,14 +73,17 @@ function EventOutputCard({
     {
       label: messages.schedule.outputModeLabel,
       value: getOutputModeLabel(messages, formState),
+      shouldTranslate: true,
     },
     {
       label: messages.schedule.timeZoneLabel,
       value: formState.timeZone,
+      shouldTranslate: false,
     },
     {
       label: messages.details.uidLabel,
       value: formState.uid,
+      shouldTranslate: false,
     },
   ] as const
 
@@ -93,9 +95,6 @@ function EventOutputCard({
             <CardTitle>{messages.output.title}</CardTitle>
             <CardDescription>{messages.output.description}</CardDescription>
           </div>
-          <Badge variant="secondary">
-            {getOutputModeLabel(messages, formState)}
-          </Badge>
         </div>
       </CardHeader>
       <ToolPanelCardContent className="gap-5">
@@ -108,6 +107,7 @@ function EventOutputCard({
               <p
                 className="mt-2 truncate text-sm font-medium"
                 title={item.value}
+                translate={item.shouldTranslate ? undefined : "no"}
               >
                 {item.value}
               </p>
@@ -121,7 +121,9 @@ function EventOutputCard({
               <FileText className="size-4" />
             </div>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-medium">{output.fileName}</p>
+              <p className="truncate text-sm font-medium" translate="no">
+                {output.fileName}
+              </p>
               <p className="text-xs text-muted-foreground">
                 {messages.output.description}
               </p>
@@ -148,6 +150,8 @@ function EventOutputCard({
             spellCheck={false}
             value={output.icsContent}
             aria-label={messages.output.title}
+            name="ical-output"
+            translate="no"
             className="min-h-[24rem] resize-y rounded-xl font-mono text-xs leading-5"
           />
         )}

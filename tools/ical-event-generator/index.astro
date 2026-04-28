@@ -32,10 +32,16 @@ const IntroSection = resolveLocale<AstroComponentFactory>(
   }),
   lang
 )
+const initialNowMs = Date.now()
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <IcalEventGeneratorClient client:load messages={messages} />
+  <IcalEventGeneratorClient
+    client:load
+    initialNowMs={initialNowMs}
+    language={lang}
+    messages={messages}
+  />
 
   {
     IntroSection ? (

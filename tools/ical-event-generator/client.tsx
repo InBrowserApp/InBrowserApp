@@ -26,10 +26,14 @@ import type { IcalEventGeneratorMessages } from "./types"
 import type { IcalEventFormState, Reminder } from "./core/form-state"
 
 type IcalEventGeneratorClientProps = Readonly<{
+  initialNowMs?: number
+  language?: string
   messages: IcalEventGeneratorMessages
 }>
 
 const STORAGE_KEY = "tools:ical-event-generator:form-state"
+const INITIAL_TIME_ZONE = "UTC"
+const INITIAL_UID = "draft@inbrowser.app"
 
 function buildTimeZoneOptions(referenceTimestampMs: number) {
   return getSupportedTimeZones().map((timeZone) => {
@@ -50,6 +54,10 @@ function buildTimeZoneOptions(referenceTimestampMs: number) {
 }
 
 function resolveBrowserTimeZone() {
+  if (typeof window === "undefined") {
+    return INITIAL_TIME_ZONE
+  }
+
   const value = Intl.DateTimeFormat().resolvedOptions().timeZone
 
   return isTimeZoneSupported(value) ? value : "UTC"
@@ -74,14 +82,21 @@ function createSampleState(
   }
 }
 
-function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
+function IcalEventGeneratorClient({
+  initialNowMs,
+  language = "en",
+  messages,
+}: IcalEventGeneratorClientProps) {
+  const initialReferenceMs = initialNowMs ?? Date.now()
   const browserTimeZone = resolveBrowserTimeZone()
-  const [timeZoneOptions] = useState(() => buildTimeZoneOptions(Date.now()))
+  const [timeZoneOptions] = useState(() =>
+    buildTimeZoneOptions(initialReferenceMs)
+  )
   const [formState, setFormState] = useState(() =>
-    createBlankFormState(Date.now(), browserTimeZone)
+    createBlankFormState(initialReferenceMs, INITIAL_TIME_ZONE, INITIAL_UID)
   )
   const [hasHydratedState, setHasHydratedState] = useState(false)
-  const [stampMs, setStampMs] = useState(() => Date.now())
+  const [stampMs, setStampMs] = useState(() => initialReferenceMs)
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
   const downloadUrlRef = useRef<string | null>(null)
   const output = buildIcalEventOutput(formState, stampMs)
@@ -92,12 +107,15 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
       return
     }
 
-    const fallbackState = createBlankFormState(Date.now(), browserTimeZone)
+    const hydratedNowMs = Date.now()
+    const fallbackState = createBlankFormState(hydratedNowMs, browserTimeZone)
+    setStampMs(hydratedNowMs)
 
     try {
       const storedValue = window.localStorage.getItem(STORAGE_KEY)
 
       if (!storedValue) {
+        setFormState(fallbackState)
         return
       }
 
@@ -154,8 +172,9 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
   }
 
   return (
-    <div className="grid gap-6">
+    <div className="grid min-w-0 gap-6">
       <EventOverviewHero
+        language={language}
         messages={messages}
         formState={formState}
         onUseSample={() => {
@@ -172,9 +191,9 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
         }}
       />
 
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
-        <div className="grid gap-6">
-          <ToolPanelCard>
+      <div className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+        <div className="grid min-w-0 gap-6">
+          <ToolPanelCard className="min-w-0">
             <EventDetailsCard
               messages={messages}
               formState={formState}
@@ -187,10 +206,13 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
             />
           </ToolPanelCard>
 
-          <ToolPanelCard>
+          <ToolPanelCard className="min-w-0">
             <EventScheduleCard
               messages={messages}
               formState={formState}
+              validationErrorKey={
+                output.state === "error" ? output.errorKey : null
+              }
               timeZoneOptions={timeZoneOptions}
               onFieldChange={(key, value) => {
                 updateFormState({ [key]: value })
@@ -198,10 +220,14 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
             />
           </ToolPanelCard>
 
-          <ToolPanelCard>
+          <ToolPanelCard className="min-w-0">
             <EventRecurrenceCard
+              language={language}
               messages={messages}
               formState={formState}
+              validationErrorKey={
+                output.state === "error" ? output.errorKey : null
+              }
               onFieldChange={(key, value) => {
                 updateFormState({ [key]: value })
               }}
@@ -211,7 +237,7 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
             />
           </ToolPanelCard>
 
-          <ToolPanelCard>
+          <ToolPanelCard className="min-w-0">
             <EventRemindersCard
               messages={messages}
               formState={formState}
@@ -249,8 +275,8 @@ function IcalEventGeneratorClient({ messages }: IcalEventGeneratorClientProps) {
           </ToolPanelCard>
         </div>
 
-        <div className="xl:sticky xl:top-6 xl:self-start">
-          <ToolPanelCard>
+        <div className="min-w-0 xl:sticky xl:top-6 xl:self-start">
+          <ToolPanelCard className="min-w-0">
             <EventOutputCard
               messages={messages}
               output={output}
