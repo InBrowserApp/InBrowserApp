@@ -214,11 +214,7 @@ function getMatchingPreset(groups: RobotsGroup[]): RobotsPreset | null {
     return null
   }
 
-  const [group] = groups
-
-  if (group === undefined) {
-    return null
-  }
+  const [group] = groups as [RobotsGroup]
 
   for (const preset of PRESET_ORDER) {
     if (isSamePresetGroup(group, getPresetGroupDefinition(preset))) {
