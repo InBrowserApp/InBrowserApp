@@ -46,11 +46,11 @@ function EditorCard({
   layers,
 }: EditorCardProps) {
   return (
-    <ToolPanelCard>
-      <CardHeader className="border-b pb-4">
+    <ToolPanelCard size="sm">
+      <CardHeader className="border-b">
         <CardTitle>{messages.meta.name}</CardTitle>
       </CardHeader>
-      <ToolPanelCardContent className="gap-5">
+      <ToolPanelCardContent className="gap-4">
         <LayerList
           activeLayerId={activeLayer.id}
           layers={layers}
@@ -60,7 +60,7 @@ function EditorCard({
           onRemoveLayer={onRemoveLayer}
           onSelectLayer={onSelectLayer}
         />
-        <div className="rounded-[1.25rem] border border-border/70 bg-gradient-to-b from-muted/18 to-background p-4 sm:p-5">
+        <div className="border-t pt-4">
           <LayerSettings
             activeLayer={activeLayer}
             activeLayerIndex={activeLayerIndex}

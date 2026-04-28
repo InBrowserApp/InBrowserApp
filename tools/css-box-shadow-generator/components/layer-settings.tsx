@@ -77,10 +77,12 @@ function NumericField({
         />
         <Input
           data-testid={`${testId}-input`}
+          autoComplete="off"
           id={id}
           inputMode="numeric"
           max={max}
           min={min}
+          name={id}
           onChange={(event) => {
             const nextValue = Number(event.target.value)
 
@@ -124,7 +126,7 @@ function LayerSettings({
       </div>
 
       <FieldGroup>
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           <NumericField
             id="offset-x-input"
             label={messages.offsetXLabel}
@@ -178,15 +180,17 @@ function LayerSettings({
           />
         </div>
 
-        <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
           <Field className="gap-3" data-invalid={invalidColor || undefined}>
             <FieldLabel htmlFor="color-input">{messages.colorLabel}</FieldLabel>
             <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_4.5rem] sm:items-center">
               <Input
                 autoCapitalize="none"
+                autoComplete="off"
                 autoCorrect="off"
                 data-testid="color-input"
                 id="color-input"
+                name="shadow-color"
                 onChange={(event) => {
                   onUpdateLayer(activeLayer.id, { color: event.target.value })
                 }}
@@ -219,7 +223,7 @@ function LayerSettings({
                   <button
                     aria-label={`${messages.colorLabel} ${swatch}`}
                     className={cn(
-                      "size-8 rounded-lg border transition-transform hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+                      "size-7 rounded-lg border transition-transform hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
                       active
                         ? "border-primary ring-2 ring-primary/20"
                         : "border-border"
@@ -239,7 +243,7 @@ function LayerSettings({
             ) : null}
           </Field>
 
-          <div className="grid gap-4 rounded-xl border border-border/70 bg-muted/20 p-4">
+          <div className="grid content-start gap-3">
             <Field className="gap-3">
               <FieldLabel htmlFor="alpha-input">
                 {messages.alphaLabel}
@@ -262,10 +266,12 @@ function LayerSettings({
                 />
                 <Input
                   data-testid="alpha-input"
+                  autoComplete="off"
                   id="alpha-input"
                   inputMode="numeric"
                   max={ALPHA_RANGE.max}
                   min={ALPHA_RANGE.min}
+                  name="shadow-alpha"
                   onChange={(event) => {
                     const nextValue = Number(event.target.value)
 
@@ -284,7 +290,7 @@ function LayerSettings({
             </Field>
 
             <Field
-              className="items-center rounded-lg border border-border/70 bg-background px-3 py-2.5"
+              className="items-center rounded-lg border border-border/70 bg-muted/20 px-3 py-2.5"
               orientation="horizontal"
             >
               <FieldLabel htmlFor="inset-switch">

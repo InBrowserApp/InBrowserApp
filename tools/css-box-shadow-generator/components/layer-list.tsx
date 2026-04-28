@@ -1,8 +1,7 @@
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Card } from "@workspace/ui/components/ui/card"
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/ui/scroll-area"
-import { Trash2 } from "@workspace/ui/icons"
+import { ArrowDown, ArrowUp, Plus, Trash2 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { formatShadowLayer } from "../core/shadow"
@@ -33,69 +32,69 @@ function LayerList({
   onSelectLayer,
 }: LayerListProps) {
   return (
-    <section className="grid gap-4">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-2">
-          <h2 className="font-medium">{messages.layersTitle}</h2>
-          <Badge variant="secondary">{layers.length}</Badge>
+    <section className="grid gap-3">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-2">
+          <h2 className="truncate text-sm font-medium">
+            {messages.layersTitle}
+          </h2>
+          <Badge className="h-5 px-1.5 text-[11px]" variant="secondary">
+            {layers.length}
+          </Badge>
         </div>
 
         <Button
-          className="sm:w-auto"
           data-testid="add-layer"
           onClick={onAddLayer}
+          size="sm"
           type="button"
           variant="outline"
         >
+          <Plus data-icon="inline-start" />
           {messages.addLayerLabel}
         </Button>
       </div>
 
-      <ScrollArea className="w-full rounded-[1.25rem] whitespace-nowrap">
-        <div className="flex gap-3 pb-4">
+      <ScrollArea className="-mx-1 w-[calc(100%+0.5rem)] px-1 whitespace-nowrap">
+        <div className="flex gap-2 pb-3">
           {layers.map((layer, index) => {
             const active = layer.id === activeLayerId
 
             return (
-              <Card
+              <div
                 className={cn(
-                  "w-[14.5rem] shrink-0 gap-3 border border-border/70 bg-card/90 px-3.5 py-3 shadow-none transition hover:border-primary/40 hover:bg-muted/25",
-                  active &&
-                    "border-primary/60 bg-primary/5 ring-1 ring-primary/15"
+                  "group/layer w-52 shrink-0 rounded-lg border bg-background px-3 py-2.5 transition-colors",
+                  active
+                    ? "border-primary/60 bg-primary/5"
+                    : "border-border/70 hover:border-primary/35 hover:bg-muted/25"
                 )}
                 data-testid={`layer-card-${index}`}
                 key={layer.id}
               >
                 <button
-                  className="grid gap-2 text-left"
+                  className="grid w-full gap-2 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                   onClick={() => {
                     onSelectLayer(layer.id)
                   }}
                   type="button"
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="grid gap-1.5">
-                      <div className="flex items-center gap-2">
-                        <span
-                          aria-hidden="true"
-                          className="size-2 rounded-full border border-black/10"
-                          style={{ backgroundColor: layer.color }}
-                        />
-                        <span className="font-medium">
-                          {messages.layerTitle.replace(
-                            "{index}",
-                            String(index + 1)
-                          )}
-                        </span>
-                      </div>
-                      <code className="font-mono text-xs text-muted-foreground">
-                        {formatLayerSummary(layer)}
-                      </code>
+                  <div className="flex min-w-0 items-center justify-between gap-2">
+                    <div className="flex min-w-0 items-center gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="size-2 rounded-full border border-black/10"
+                        style={{ backgroundColor: layer.color }}
+                      />
+                      <span className="truncate text-sm font-medium">
+                        {messages.layerTitle.replace(
+                          "{index}",
+                          String(index + 1)
+                        )}
+                      </span>
                     </div>
-
                     {layer.inset ? (
                       <Badge
-                        className="px-1.5 py-0 text-[10px]"
+                        className="h-5 px-1.5 text-[10px]"
                         variant="secondary"
                       >
                         {messages.insetLabel}
@@ -103,18 +102,19 @@ function LayerList({
                     ) : null}
                   </div>
 
-                  <div className="h-10 rounded-lg border border-dashed border-border/70 bg-gradient-to-br from-background via-muted/15 to-background px-3">
-                    <div className="flex h-full items-center justify-start">
-                      <div
-                        aria-hidden="true"
-                        className="size-7 rounded-lg bg-background"
-                        style={{ boxShadow: formatShadowLayer(layer) }}
-                      />
-                    </div>
+                  <div className="flex min-w-0 items-center gap-3">
+                    <div
+                      aria-hidden="true"
+                      className="size-8 shrink-0 rounded-lg border bg-card"
+                      style={{ boxShadow: formatShadowLayer(layer) }}
+                    />
+                    <code className="min-w-0 truncate font-mono text-xs text-muted-foreground">
+                      {formatLayerSummary(layer)}
+                    </code>
                   </div>
                 </button>
 
-                <div className="flex items-center justify-end gap-1 border-t border-border/60 pt-1.5">
+                <div className="mt-2 flex items-center justify-end gap-1 border-t border-border/60 pt-2">
                   <Button
                     aria-label={messages.moveUpLabel}
                     data-testid={`layer-up-${index}`}
@@ -126,7 +126,7 @@ function LayerList({
                     type="button"
                     variant="ghost"
                   >
-                    ↑
+                    <ArrowUp />
                   </Button>
                   <Button
                     aria-label={messages.moveDownLabel}
@@ -139,7 +139,7 @@ function LayerList({
                     type="button"
                     variant="ghost"
                   >
-                    ↓
+                    <ArrowDown />
                   </Button>
                   <Button
                     aria-label={messages.removeLayerLabel}
@@ -155,7 +155,7 @@ function LayerList({
                     <Trash2 />
                   </Button>
                 </div>
-              </Card>
+              </div>
             )
           })}
         </div>

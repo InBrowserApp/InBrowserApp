@@ -162,7 +162,7 @@ function CssBoxShadowGeneratorClient({
   const cssOutput = `box-shadow: ${shadowValue};`
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_23rem]">
       <EditorCard
         activeLayer={activeLayer}
         activeLayerIndex={activeLayerIndex}
