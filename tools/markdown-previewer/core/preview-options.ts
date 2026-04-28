@@ -1,4 +1,4 @@
-type PreviewTheme = "paper" | "slate"
+type PreviewTheme = "clean" | "slate"
 type PreviewMode = "split" | "preview"
 
 export type { PreviewMode, PreviewTheme }

@@ -4,7 +4,7 @@ Markdown Previewer renders Markdown locally in your browser so you can inspect h
 
 ## When To Use It
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the paper and slate themes make it easier to review both print-like and dark-surface reading contexts.
+Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
 
 ## Workflow Tips
 

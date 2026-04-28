@@ -8721,7 +8721,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       en: {
         name: "Markdown Previewer",
         description:
-          "Preview Markdown live with a synchronized outline, HTML sanitization toggle, export-ready HTML, and print-friendly themes.",
+          "Preview Markdown live with a synchronized outline, HTML sanitization toggle, export-ready HTML, and clean/slate themes.",
       },
       es: {
         name: "Visor de Markdown",
@@ -8816,12 +8816,12 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-CN": {
         name: "Markdown 预览器",
         description:
-          "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及适合打印的预览主题。",
+          "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及简洁/深色预览主题。",
       },
       "zh-TW": {
         name: "Markdown 預覽器",
         description:
-          "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及適合列印的預覽主題。",
+          "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及簡潔/深色預覽主題。",
       },
     },
   },
@@ -25804,7 +25804,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       en: {
         name: "Markdown Previewer",
         description:
-          "Preview Markdown live with a synchronized outline, HTML sanitization toggle, export-ready HTML, and print-friendly themes.",
+          "Preview Markdown live with a synchronized outline, HTML sanitization toggle, export-ready HTML, and clean/slate themes.",
       },
       es: {
         name: "Visor de Markdown",
@@ -25899,12 +25899,12 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-CN": {
         name: "Markdown 预览器",
         description:
-          "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及适合打印的预览主题。",
+          "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及简洁/深色预览主题。",
       },
       "zh-TW": {
         name: "Markdown 預覽器",
         description:
-          "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及適合列印的預覽主題。",
+          "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及簡潔/深色預覽主題。",
       },
     },
   },

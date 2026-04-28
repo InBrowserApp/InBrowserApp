@@ -13,7 +13,8 @@ type MarkdownPreviewerLocalizedCatalog = Readonly<{
   previewDescription: string
   splitViewLabel: string
   previewOnlyLabel: string
-  paperThemeLabel: string
+  themeLabel: string
+  cleanThemeLabel: string
   slateThemeLabel: string
   sanitizeHtmlLabel: string
   showOutlineLabel: string

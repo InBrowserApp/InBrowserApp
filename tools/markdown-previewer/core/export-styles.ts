@@ -3,15 +3,15 @@ import type { PreviewTheme } from "./preview-options"
 const EXPORT_BASE_STYLES = `
   :root {
     color-scheme: light;
-    --page-background: #f3efe6;
-    --surface-background: #fffdf8;
-    --surface-border: rgba(120, 98, 63, 0.18);
+    --page-background: #f8fafc;
+    --surface-background: #ffffff;
+    --surface-border: rgba(15, 23, 42, 0.12);
     --text-color: #1f2937;
     --muted-color: #6b7280;
     --code-background: rgba(15, 23, 42, 0.06);
-    --pre-background: #fff8ef;
-    --pre-border: rgba(120, 98, 63, 0.16);
-    --link-color: #7c3f00;
+    --pre-background: #f1f5f9;
+    --pre-border: rgba(15, 23, 42, 0.12);
+    --link-color: #2563eb;
   }
 
   * {
@@ -20,9 +20,7 @@ const EXPORT_BASE_STYLES = `
 
   body {
     margin: 0;
-    background:
-      radial-gradient(circle at top, rgba(245, 208, 122, 0.16), transparent 45%),
-      var(--page-background);
+    background: var(--page-background);
     color: var(--text-color);
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
@@ -37,9 +35,9 @@ const EXPORT_BASE_STYLES = `
 
   article {
     border: 1px solid var(--surface-border);
-    border-radius: 28px;
+    border-radius: 16px;
     background: var(--surface-background);
-    box-shadow: 0 24px 80px -40px rgba(15, 23, 42, 0.35);
+    box-shadow: 0 18px 60px -42px rgba(15, 23, 42, 0.32);
     padding: 40px;
   }
 
@@ -149,7 +147,7 @@ const EXPORT_BASE_STYLES = `
 `
 
 const EXPORT_THEME_STYLES: Readonly<Record<PreviewTheme, string>> = {
-  paper: `
+  clean: `
     :root {
       color-scheme: light;
     }

@@ -2,47 +2,46 @@ import { cn } from "@workspace/ui/lib/utils"
 
 import type { PreviewTheme } from "../core/preview-options"
 
-const previewShellClassName =
-  "overflow-hidden rounded-[26px] border shadow-[0_28px_90px_-48px_rgba(15,23,42,0.55)]"
+const previewShellClassName = "overflow-hidden rounded-lg"
 
 function getSurfaceClassName(theme: PreviewTheme) {
   return cn(
     previewShellClassName,
-    theme === "paper"
-      ? "border-amber-200/70 bg-[#f7f1e3]"
-      : "border-slate-800 bg-slate-950"
+    theme === "clean" ? "bg-muted/30" : "bg-slate-950 ring-1 ring-slate-800"
   )
 }
 
 function getArticleClassName(theme: PreviewTheme) {
   return cn(
-    "mx-auto max-w-3xl px-6 py-8 text-sm leading-7 sm:px-10 sm:py-10",
-    "[&_h1]:mb-4 [&_h1]:font-heading [&_h1]:text-4xl [&_h1]:leading-tight",
-    "[&_h2]:mt-10 [&_h2]:font-heading [&_h2]:text-2xl",
-    "[&_h3]:mt-8 [&_h3]:font-heading [&_h3]:text-xl",
-    "[&_h4]:mt-6 [&_h4]:font-heading [&_h4]:text-lg",
-    "[&_p:not(:first-child)]:mt-5",
-    "[&_ul]:my-5 [&_ul]:ml-6 [&_ul]:list-disc",
-    "[&_ol]:my-5 [&_ol]:ml-6 [&_ol]:list-decimal",
+    "w-full max-w-full min-w-0 px-4 py-4 text-sm leading-7 sm:px-6 sm:py-5",
+    "[&_a]:break-words [&_h1]:break-words [&_h2]:break-words",
+    "[&_h3]:break-words [&_h4]:break-words [&_li]:break-words",
+    "[&_p]:break-words",
+    "[&_td]:break-words [&_th]:break-words",
+    "[&_h1]:mb-3 [&_h1]:scroll-mt-4 [&_h1]:font-heading [&_h1]:text-2xl [&_h1]:leading-tight [&_h1]:text-pretty sm:[&_h1]:text-3xl",
+    "[&_h2]:mt-7 [&_h2]:scroll-mt-4 [&_h2]:font-heading [&_h2]:text-xl [&_h2]:text-pretty sm:[&_h2]:mt-8 sm:[&_h2]:text-2xl",
+    "[&_h3]:mt-6 [&_h3]:scroll-mt-4 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:text-pretty sm:[&_h3]:text-xl",
+    "[&_h4]:mt-5 [&_h4]:scroll-mt-4 [&_h4]:font-heading [&_h4]:text-lg [&_h4]:text-pretty",
+    "[&_p:not(:first-child)]:mt-4",
+    "[&_ul]:my-4 [&_ul]:ml-5 [&_ul]:list-disc",
+    "[&_ol]:my-4 [&_ol]:ml-5 [&_ol]:list-decimal",
     "[&_li]:mt-2",
-    "[&_blockquote]:my-6 [&_blockquote]:border-l-2 [&_blockquote]:pl-5",
-    "[&_pre]:my-6 [&_pre]:overflow-x-auto [&_pre]:rounded-2xl [&_pre]:border [&_pre]:px-4 [&_pre]:py-3 [&_pre]:text-sm",
+    "[&_blockquote]:my-5 [&_blockquote]:border-l-2 [&_blockquote]:pl-4",
+    "[&_pre]:my-5 [&_pre]:max-w-full [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:border [&_pre]:px-4 [&_pre]:py-3 [&_pre]:text-sm",
     "[&_pre_code]:bg-transparent [&_pre_code]:p-0",
     "[&_code]:rounded-md [&_code]:px-1.5 [&_code]:py-0.5",
-    "[&_table]:my-6 [&_table]:w-full [&_table]:border-collapse",
+    "[&_table]:my-5 [&_table]:block [&_table]:w-full [&_table]:max-w-full [&_table]:border-collapse [&_table]:overflow-x-auto",
     "[&_td]:border-b [&_td]:px-3 [&_td]:py-2",
     "[&_th]:border-b [&_th]:px-3 [&_th]:py-2 [&_th]:text-left",
-    "[&_img]:rounded-2xl",
-    theme === "paper"
+    "[&_img]:max-w-full [&_img]:rounded-lg",
+    theme === "clean"
       ? [
-          "text-slate-800",
-          "[&_h1]:text-slate-950 [&_h2]:text-slate-950 [&_h3]:text-slate-950",
-          "[&_h4]:text-slate-950",
-          "[&_a]:text-amber-800",
-          "[&_blockquote]:border-amber-300/60 [&_blockquote]:text-slate-600",
-          "[&_pre]:border-amber-200/80 [&_pre]:bg-[#fff8ec]",
-          "[&_code]:bg-slate-900/6 [&_code]:text-slate-900",
-          "[&_td]:border-amber-200/70 [&_th]:border-amber-300/80",
+          "text-foreground",
+          "[&_a]:text-primary",
+          "[&_blockquote]:border-border [&_blockquote]:text-muted-foreground",
+          "[&_pre]:border-border [&_pre]:bg-muted/45",
+          "[&_code]:bg-muted [&_code]:text-foreground",
+          "[&_td]:border-border [&_th]:border-border",
         ]
       : [
           "text-slate-100",

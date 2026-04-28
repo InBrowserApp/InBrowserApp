@@ -34,31 +34,35 @@ function EditorCard({
   onClear,
 }: EditorCardProps) {
   return (
-    <ToolPanelCard>
-      <CardHeader className="border-b">
-        <CardTitle>{messages.editorTitle}</CardTitle>
-        <CardDescription>{messages.editorDescription}</CardDescription>
+    <ToolPanelCard className="min-w-0">
+      <CardHeader className="gap-1.5 border-b px-5 py-5 sm:px-6">
+        <CardTitle className="text-pretty">{messages.editorTitle}</CardTitle>
+        <CardDescription className="max-w-2xl text-pretty">
+          {messages.editorDescription}
+        </CardDescription>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-4 p-6">
+      <ToolPanelCardContent className="p-4 sm:p-5">
         <label htmlFor={textareaId} className="sr-only">
           {messages.sourceLabel}
         </label>
 
         <Textarea
           id={textareaId}
+          name="markdown-source"
           aria-label={messages.sourceLabel}
+          autoComplete="off"
           value={markdown}
           onChange={(event) => {
             onMarkdownChange(event.target.value)
           }}
           placeholder={messages.sourcePlaceholder}
           spellCheck={false}
-          className="min-h-[28rem] flex-1 resize-y font-mono text-sm leading-6"
+          className="[field-sizing:fixed] min-h-[22rem] min-w-0 flex-1 resize-y font-mono text-sm leading-6 sm:min-h-[24rem]"
         />
       </ToolPanelCardContent>
 
-      <ToolPanelCardFooter className="flex flex-wrap justify-start gap-3 border-t px-6 py-4">
+      <ToolPanelCardFooter className="flex flex-wrap justify-start gap-2 border-t px-5 py-3 sm:px-6">
         <Button type="button" variant="ghost" size="sm" onClick={onImportClick}>
           <FileText data-icon="inline-start" />
           {messages.importLabel}

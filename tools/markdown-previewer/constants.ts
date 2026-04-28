@@ -1,7 +1,7 @@
 import type { PreviewMode, PreviewTheme } from "./core/preview-options"
 
 const DEFAULT_PREVIEW_MODE: PreviewMode = "split"
-const DEFAULT_PREVIEW_THEME: PreviewTheme = "paper"
+const DEFAULT_PREVIEW_THEME: PreviewTheme = "clean"
 
 const DEFAULT_MARKDOWN = `# Product launch checklist
 

@@ -20,7 +20,7 @@ const messages = {
   editorDescription:
     "Write, paste, or import Markdown. The preview updates as you type.",
   sourceLabel: "Markdown",
-  sourcePlaceholder: "Write Markdown here...",
+  sourcePlaceholder: "Write Markdown here…",
   importLabel: "Import file",
   loadSampleLabel: "Load sample",
   clearLabel: "Clear",
@@ -29,7 +29,8 @@ const messages = {
     "Review the rendered document, tune the presentation, and export HTML.",
   splitViewLabel: "Split view",
   previewOnlyLabel: "Preview only",
-  paperThemeLabel: "Paper",
+  themeLabel: "Theme",
+  cleanThemeLabel: "Clean",
   slateThemeLabel: "Slate",
   sanitizeHtmlLabel: "Sanitize HTML",
   showOutlineLabel: "Show outline",
@@ -91,7 +92,7 @@ describe("MarkdownPreviewerClient", () => {
     render(<MarkdownPreviewerClient messages={messages} />)
 
     fireEvent.click(
-      screen.getByRole("button", { name: messages.previewOnlyLabel })
+      screen.getByRole("radio", { name: messages.previewOnlyLabel })
     )
 
     await waitFor(() => {
@@ -101,7 +102,7 @@ describe("MarkdownPreviewerClient", () => {
     })
 
     fireEvent.click(
-      screen.getByRole("button", { name: messages.slateThemeLabel })
+      screen.getByRole("radio", { name: messages.slateThemeLabel })
     )
     fireEvent.click(screen.getByLabelText(messages.showOutlineLabel))
 
@@ -110,7 +111,7 @@ describe("MarkdownPreviewerClient", () => {
     })
 
     fireEvent.click(
-      screen.getByRole("button", { name: messages.splitViewLabel })
+      screen.getByRole("radio", { name: messages.splitViewLabel })
     )
 
     await waitFor(() => {
@@ -165,7 +166,7 @@ describe("MarkdownPreviewerClient", () => {
     })
 
     fireEvent.click(
-      screen.getByRole("button", { name: messages.splitViewLabel })
+      screen.getByRole("radio", { name: messages.splitViewLabel })
     )
 
     await waitFor(() => {
@@ -173,7 +174,7 @@ describe("MarkdownPreviewerClient", () => {
     })
 
     expect(
-      screen.getByRole("button", { name: messages.slateThemeLabel })
+      screen.getByRole("radio", { name: messages.slateThemeLabel })
     ).toBeTruthy()
   })
 

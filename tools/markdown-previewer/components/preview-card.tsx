@@ -1,13 +1,7 @@
 import { useRef } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
 import {
   Empty,
   EmptyDescription,
@@ -15,16 +9,16 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { Download, Eye, EyeOff, FileText, Moon, Sun } from "@workspace/ui/icons"
+import { Download, FileText, Printer } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { PreviewCardHeader } from "./preview-card-header"
+import { PreviewOutline } from "./preview-outline"
 import { getArticleClassName, getSurfaceClassName } from "./preview-styles"
 
 import type { MarkdownPreviewerMessages } from "../types"
@@ -33,6 +27,7 @@ import type { PreviewBadge, PreviewMode, PreviewTheme, TocItem } from "../types"
 type PreviewCardProps = Readonly<{
   messages: Pick<
     MarkdownPreviewerMessages,
+    | "cleanThemeLabel"
     | "copiedLabel"
     | "copyHtmlLabel"
     | "downloadHtmlLabel"
@@ -40,7 +35,6 @@ type PreviewCardProps = Readonly<{
     | "outlineEmptyDescription"
     | "outlineEmptyTitle"
     | "outlineTitle"
-    | "paperThemeLabel"
     | "previewDescription"
     | "previewEmptyDescription"
     | "previewEmptyTitle"
@@ -51,6 +45,7 @@ type PreviewCardProps = Readonly<{
     | "showOutlineLabel"
     | "slateThemeLabel"
     | "splitViewLabel"
+    | "themeLabel"
   >
   hasMarkdown: boolean
   previewMode: PreviewMode
@@ -102,167 +97,45 @@ function PreviewCard({
   }
 
   return (
-    <ToolPanelCard>
-      <CardHeader className="gap-4 border-b">
-        <div className="space-y-2">
-          <CardTitle>{messages.previewTitle}</CardTitle>
-          <CardDescription>{messages.previewDescription}</CardDescription>
-        </div>
+    <ToolPanelCard className="min-w-0">
+      <PreviewCardHeader
+        messages={messages}
+        badges={badges}
+        previewMode={previewMode}
+        previewTheme={previewTheme}
+        sanitizeHtml={sanitizeHtml}
+        showOutline={showOutline}
+        onPreviewModeChange={onPreviewModeChange}
+        onPreviewThemeChange={onPreviewThemeChange}
+        onSanitizeHtmlChange={onSanitizeHtmlChange}
+        onShowOutlineChange={onShowOutlineChange}
+      />
 
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap gap-2">
-            <Button
-              type="button"
-              size="sm"
-              variant={previewMode === "split" ? "secondary" : "outline"}
-              onClick={() => {
-                onPreviewModeChange("split")
-              }}
-            >
-              <Eye data-icon="inline-start" />
-              {messages.splitViewLabel}
-            </Button>
-
-            <Button
-              type="button"
-              size="sm"
-              variant={previewMode === "preview" ? "secondary" : "outline"}
-              onClick={() => {
-                onPreviewModeChange("preview")
-              }}
-            >
-              <EyeOff data-icon="inline-start" />
-              {messages.previewOnlyLabel}
-            </Button>
-
-            <Button
-              type="button"
-              size="sm"
-              variant={previewTheme === "paper" ? "secondary" : "outline"}
-              onClick={() => {
-                onPreviewThemeChange("paper")
-              }}
-            >
-              <Sun data-icon="inline-start" />
-              {messages.paperThemeLabel}
-            </Button>
-
-            <Button
-              type="button"
-              size="sm"
-              variant={previewTheme === "slate" ? "secondary" : "outline"}
-              onClick={() => {
-                onPreviewThemeChange("slate")
-              }}
-            >
-              <Moon data-icon="inline-start" />
-              {messages.slateThemeLabel}
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap gap-5">
-            <label className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Switch
-                checked={sanitizeHtml}
-                onCheckedChange={onSanitizeHtmlChange}
-                aria-label={messages.sanitizeHtmlLabel}
-              />
-              <span>{messages.sanitizeHtmlLabel}</span>
-            </label>
-
-            <label className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Switch
-                checked={showOutline}
-                onCheckedChange={onShowOutlineChange}
-                aria-label={messages.showOutlineLabel}
-              />
-              <span>{messages.showOutlineLabel}</span>
-            </label>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {badges.map((badge) => (
-              <Badge
-                key={badge.key}
-                variant="secondary"
-                className="gap-2 rounded-full px-3 py-1"
-              >
-                <span>{badge.label}</span>
-                <span className="font-medium text-foreground">
-                  {badge.value}
-                </span>
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </CardHeader>
-
-      <ToolPanelCardContent className="p-6">
+      <ToolPanelCardContent className="p-4 sm:p-5">
         {hasMarkdown ? (
           <div
             className={cn(
-              "grid gap-4",
-              showOutline ? "xl:grid-cols-[minmax(0,1fr)_17rem]" : "grid-cols-1"
+              "grid min-w-0 gap-4",
+              showOutline ? "xl:grid-cols-[minmax(0,1fr)_16rem]" : "grid-cols-1"
             )}
           >
             <div className={getSurfaceClassName(previewTheme)}>
-              <ScrollArea className="h-[36rem]">
-                <div ref={previewRef}>
+              <div className="h-[30rem] max-w-full overflow-x-hidden overflow-y-auto sm:h-[34rem]">
+                <div ref={previewRef} className="max-w-full min-w-0">
                   <article
                     className={getArticleClassName(previewTheme)}
                     dangerouslySetInnerHTML={{ __html: renderedHtml }}
                   />
                 </div>
-              </ScrollArea>
+              </div>
             </div>
 
             {showOutline ? (
-              <div className="rounded-[24px] border bg-muted/20">
-                <div className="border-b px-5 py-4">
-                  <h2 className="font-heading text-base font-semibold">
-                    {messages.outlineTitle}
-                  </h2>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {messages.outlineDescription}
-                  </p>
-                </div>
-
-                {tocItems.length > 0 ? (
-                  <ScrollArea className="h-[36rem] px-3 py-3">
-                    <div className="space-y-1">
-                      {tocItems.map((item) => (
-                        <button
-                          key={item.id}
-                          type="button"
-                          className="w-full rounded-lg px-3 py-2 text-left text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                          style={{
-                            paddingInlineStart: `${item.level * 0.8}rem`,
-                          }}
-                          onClick={() => {
-                            scrollToHeading(item.id)
-                          }}
-                        >
-                          {item.text}
-                        </button>
-                      ))}
-                    </div>
-                  </ScrollArea>
-                ) : (
-                  <div className="p-4">
-                    <Empty className="border-border/70 bg-transparent">
-                      <EmptyHeader>
-                        <EmptyMedia variant="icon">
-                          <FileText />
-                        </EmptyMedia>
-                        <EmptyTitle>{messages.outlineEmptyTitle}</EmptyTitle>
-                        <EmptyDescription>
-                          {messages.outlineEmptyDescription}
-                        </EmptyDescription>
-                      </EmptyHeader>
-                    </Empty>
-                  </div>
-                )}
-              </div>
+              <PreviewOutline
+                messages={messages}
+                tocItems={tocItems}
+                onHeadingClick={scrollToHeading}
+              />
             ) : null}
           </div>
         ) : (
@@ -280,7 +153,7 @@ function PreviewCard({
         )}
       </ToolPanelCardContent>
 
-      <ToolPanelCardFooter className="flex flex-wrap justify-end gap-3 border-t px-6 py-4">
+      <ToolPanelCardFooter className="flex flex-wrap justify-start gap-2 border-t px-5 py-3 sm:justify-end sm:px-6">
         <ToolCopyButton
           value={exportHtml}
           copyLabel={messages.copyHtmlLabel}
@@ -308,6 +181,7 @@ function PreviewCard({
           onClick={onPrint}
           disabled={!hasMarkdown}
         >
+          <Printer data-icon="inline-start" />
           {messages.printLabel}
         </Button>
       </ToolPanelCardFooter>
