@@ -1,0 +1,4 @@
+{
+  "name": "Hash RIPEMD-256 tekstu lub pliku",
+  "description": "Generuj hash RIPEMD-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

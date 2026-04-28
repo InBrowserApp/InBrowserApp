@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de días hábiles",
+  "description": "Cuenta los días hábiles entre fechas y suma o resta días hábiles con fines de semana y festivos personalizados."
+}

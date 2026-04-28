@@ -1,0 +1,4 @@
+{
+  "name": "Walidator numerów VAT UE",
+  "description": "Sprawdzaj numery VAT UE pod kątem kodu kraju, formatu i sumy kontrolnej — w całości w przeglądarce, nic nie jest wysyłane."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "RIPEMD-256-hash tekst of bestand",
+  "description": "Genereer RIPEMD-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden"
+}

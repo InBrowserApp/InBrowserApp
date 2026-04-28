@@ -1,0 +1,4 @@
+{
+  "name": "Getallenbase Converter",
+  "description": "Converteer getallen tussen binair, octaal, decimaal, hexadecimaal, base32, base36, base62, base64 en aangepaste bases (2-64)."
+}

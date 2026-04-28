@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Utmatningsspråk",
+  "languagePlaceholder": "Välj ett språk",
+  "inputCurlLabel": "cURL-kommando",
+  "outputCodeLabel": "Konverterad kod",
+  "curlPlaceholder": "Klistra in ett cURL-kommando här...",
+  "useSampleLabel": "Använd exempel",
+  "clearLabel": "Rensa",
+  "downloadCodeLabel": "Ladda ner",
+  "warningsTitle": "Varningar",
+  "errorsTitle": "Fel",
+  "importFromFileLabel": "Importera från fil",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierad"
+}

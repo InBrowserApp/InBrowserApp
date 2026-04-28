@@ -1,0 +1,4 @@
+{
+  "name": "Text Diff",
+  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "URL-parser och byggare",
+  "description": "Delar upp URL:er i komponenter och bygger ihop dem igen från protokoll, inloggningsuppgifter, värd, sökväg, frågeparametrar och fragment i en strukturerad editor."
+}

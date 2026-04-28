@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "输出语言",
+  "languagePlaceholder": "选择语言",
+  "inputCurlLabel": "cURL 命令",
+  "outputCodeLabel": "转换后的代码",
+  "curlPlaceholder": "在此粘贴 cURL 命令...",
+  "useSampleLabel": "使用示例",
+  "clearLabel": "清空",
+  "downloadCodeLabel": "下载",
+  "warningsTitle": "警告",
+  "errorsTitle": "错误",
+  "importFromFileLabel": "从文件导入",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制"
+}

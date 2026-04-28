@@ -1,0 +1,4 @@
+{
+  "name": "URL Ayrıştırıcı ve Oluşturucu",
+  "description": "URL'leri bileşenlerine ayırır ve protokol, kimlik bilgileri, ana makine, yol, sorgu parametreleri ve parça üzerinden tek bir yapılandırılmış düzenleyicide yeniden oluşturur."
+}

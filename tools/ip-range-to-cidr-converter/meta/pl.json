@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter zakresu IP na CIDR",
+  "description": "Konwertuj adresy początkowe i końcowe IPv4 lub IPv6 na minimalny zestaw bloków CIDR, który dokładnie pokrywa zakres."
+}

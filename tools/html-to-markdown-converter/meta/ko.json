@@ -1,0 +1,4 @@
+{
+  "name": "HTML to Markdown 변환기",
+  "description": "제목, 목록, 코드 블록 스타일을 조정하면서 원시 HTML을 Markdown으로 변환합니다. 마크업을 붙여넣거나 파일을 가져온 뒤 결과를 복사하거나 다운로드하세요."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Tallbase-konverterer",
+  "description": "Konverter tall mellom binær, oktal, desimal, heksadesimal, base32, base36, base62, base64 og egendefinerte baser (2-64)."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter Bazy Liczbowej",
+  "description": "Konwertuj liczby między binarnym, ósemkowym, dziesiętnym, szesnastkowym, base32, base36, base62, base64 i niestandardowymi bazami (2-64)."
+}

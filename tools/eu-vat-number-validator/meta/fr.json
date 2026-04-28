@@ -1,0 +1,4 @@
+{
+  "name": "Validateur de numéro de TVA intracommunautaire",
+  "description": "Validez les numéros de TVA de l'UE par code pays, format et somme de contrôle — entièrement dans votre navigateur, rien n'est envoyé."
+}
