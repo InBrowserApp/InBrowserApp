@@ -90,6 +90,8 @@ function FontBrowserPanel({
 }: FontBrowserPanelProps) {
   const searchInputId = useId()
   const groupSwitchId = useId()
+  const hasVisibleFonts = displayGroups.length > 0
+  const listViewportClassName = hasVisibleFonts ? "h-[30rem]" : "h-auto"
 
   return (
     <ToolPanelCard className="h-auto min-w-0 overflow-hidden">
@@ -213,8 +215,8 @@ function FontBrowserPanel({
         </FieldGroup>
 
         <div className="overflow-hidden rounded-2xl border bg-muted/15">
-          <ScrollArea className="h-[30rem]">
-            {displayGroups.length > 0 ? (
+          <ScrollArea className={listViewportClassName}>
+            {hasVisibleFonts ? (
               <div className="flex flex-col gap-4 p-4">
                 {displayGroups.map((group) => (
                   <section key={group.id} className="flex flex-col gap-3">
@@ -238,7 +240,7 @@ function FontBrowserPanel({
                 ))}
               </div>
             ) : hasFonts ? (
-              <Empty className="min-h-72 rounded-none border-none">
+              <Empty className="min-h-60 rounded-none border-none sm:min-h-72">
                 <EmptyHeader>
                   <EmptyMedia variant="icon">
                     <Search />
@@ -250,7 +252,7 @@ function FontBrowserPanel({
                 </EmptyHeader>
               </Empty>
             ) : (
-              <Empty className="min-h-72 rounded-none border-none px-6">
+              <Empty className="min-h-60 rounded-none border-none px-6 sm:min-h-72">
                 <EmptyHeader>
                   <EmptyMedia variant="icon">
                     <Search />

@@ -132,7 +132,7 @@ function FontPreviewPanel({
             </div>
           ) : (
             <Empty
-              className="min-h-[20rem] border-none text-left"
+              className="min-h-[14rem] border-none text-left sm:min-h-[16rem]"
               data-dark={darkBackground}
             >
               <EmptyHeader className="items-start text-left">

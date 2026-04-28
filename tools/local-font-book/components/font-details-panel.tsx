@@ -38,7 +38,7 @@ function FontDetailsPanel({
           <CardDescription>{messages.detailsDescription}</CardDescription>
         </CardHeader>
         <CardContent className="pt-4">
-          <Empty className="min-h-56">
+          <Empty className="min-h-40 sm:min-h-48">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 <LayoutGrid />
