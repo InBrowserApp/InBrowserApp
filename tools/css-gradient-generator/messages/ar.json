@@ -18,7 +18,7 @@
     "luminosity": "لمعان"
   },
   "exportTitle": "تصدير",
-  "exportSubtitle": "إنشاء لقطة PNG/SVG.",
+  "exportSubtitle": "إنشاء لقطة PNG/JPG/WebP/SVG.",
   "exportWidth": "العرض",
   "exportHeight": "الارتفاع",
   "downloadPng": "تنزيل PNG",

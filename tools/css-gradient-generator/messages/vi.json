@@ -18,7 +18,7 @@
     "luminosity": "Luminosity"
   },
   "exportTitle": "Xuất",
-  "exportSubtitle": "Tạo ảnh PNG/SVG.",
+  "exportSubtitle": "Tạo ảnh PNG/JPG/WebP/SVG.",
   "exportWidth": "Chiều rộng",
   "exportHeight": "Chiều cao",
   "downloadPng": "Tải PNG",

@@ -18,7 +18,7 @@
     "luminosity": "Parlaklık"
   },
   "exportTitle": "Dışa aktar",
-  "exportSubtitle": "PNG/SVG anlık görüntü oluşturun.",
+  "exportSubtitle": "PNG/JPG/WebP/SVG anlık görüntü oluşturun.",
   "exportWidth": "Genişlik",
   "exportHeight": "Yükseklik",
   "downloadPng": "PNG indir",

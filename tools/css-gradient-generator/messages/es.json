@@ -18,7 +18,7 @@
     "luminosity": "Luminosidad"
   },
   "exportTitle": "Exportar",
-  "exportSubtitle": "Genera una captura PNG/SVG.",
+  "exportSubtitle": "Genera una captura PNG/JPG/WebP/SVG.",
   "exportWidth": "Ancho",
   "exportHeight": "Alto",
   "downloadPng": "Descargar PNG",

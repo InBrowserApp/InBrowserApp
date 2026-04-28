@@ -18,7 +18,7 @@
     "luminosity": "Luminanz"
   },
   "exportTitle": "Export",
-  "exportSubtitle": "PNG/SVG-Schnappschuss erzeugen.",
+  "exportSubtitle": "PNG/JPG/WebP/SVG-Schnappschuss erzeugen.",
   "exportWidth": "Breite",
   "exportHeight": "Höhe",
   "downloadPng": "PNG herunterladen",

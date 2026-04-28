@@ -18,7 +18,7 @@
     "luminosity": "Lysstyrke"
   },
   "exportTitle": "Eksporter",
-  "exportSubtitle": "Generer et PNG/SVG-øyeblikksbilde.",
+  "exportSubtitle": "Generer et PNG/JPG/WebP/SVG-øyeblikksbilde.",
   "exportWidth": "Bredde",
   "exportHeight": "Høyde",
   "downloadPng": "Last ned PNG",

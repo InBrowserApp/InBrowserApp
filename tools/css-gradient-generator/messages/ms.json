@@ -18,7 +18,7 @@
     "luminosity": "Luminosity"
   },
   "exportTitle": "Eksport",
-  "exportSubtitle": "Hasilkan snapshot PNG/SVG.",
+  "exportSubtitle": "Hasilkan snapshot PNG/JPG/WebP/SVG.",
   "exportWidth": "Lebar",
   "exportHeight": "Tinggi",
   "downloadPng": "Muat turun PNG",

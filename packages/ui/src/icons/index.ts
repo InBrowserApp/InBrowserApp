@@ -1,7 +1,9 @@
 export {
   AtSign,
   ArrowLeftRight,
+  ArrowDown,
   ArrowRight,
+  ArrowUp,
   BadgeCheck,
   Binary,
   Braces,
@@ -29,6 +31,7 @@ export {
   Network,
   Pause,
   Play,
+  Plus,
   RefreshCcw,
   Search,
   Sparkles,

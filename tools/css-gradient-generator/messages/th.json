@@ -18,7 +18,7 @@
     "luminosity": "ความสว่าง"
   },
   "exportTitle": "ส่งออก",
-  "exportSubtitle": "สร้างภาพ PNG/SVG",
+  "exportSubtitle": "สร้างภาพ PNG/JPG/WebP/SVG",
   "exportWidth": "ความกว้าง",
   "exportHeight": "ความสูง",
   "downloadPng": "ดาวน์โหลด PNG",

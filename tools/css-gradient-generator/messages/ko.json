@@ -18,7 +18,7 @@
     "luminosity": "명도"
   },
   "exportTitle": "내보내기",
-  "exportSubtitle": "PNG/SVG 스냅샷을 생성합니다.",
+  "exportSubtitle": "PNG/JPG/WebP/SVG 스냅샷을 생성합니다.",
   "exportWidth": "너비",
   "exportHeight": "높이",
   "downloadPng": "PNG 다운로드",

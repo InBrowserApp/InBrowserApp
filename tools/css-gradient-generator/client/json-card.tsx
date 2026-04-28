@@ -1,13 +1,6 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, FileJson2, TriangleAlert } from "@workspace/ui/icons"
 
@@ -33,17 +26,22 @@ function JsonCard({
   showError,
 }: JsonCardProps) {
   return (
-    <Card className="overflow-hidden">
-      <CardHeader className="gap-4 border-b">
-        <CardTitle>{messages.jsonTitle}</CardTitle>
-        <CardDescription>{messages.jsonSubtitle}</CardDescription>
-      </CardHeader>
+    <details className="group rounded-xl border bg-card text-sm text-card-foreground">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
+        <div className="grid gap-1">
+          <div className="font-heading text-base leading-snug font-medium">
+            {messages.jsonTitle}
+          </div>
+          <div className="text-muted-foreground">{messages.jsonSubtitle}</div>
+        </div>
+        <FileJson2 className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-6" />
+      </summary>
 
-      <CardContent className="grid gap-4">
+      <div className="grid gap-4 border-t px-4 py-4">
         <Textarea
           aria-label={messages.jsonTitle}
           readOnly
-          rows={6}
+          rows={4}
           value={serializedConfig}
         />
 
@@ -69,7 +67,7 @@ function JsonCard({
             onJsonInputChange(event.target.value)
           }}
           placeholder={messages.jsonPlaceholder}
-          rows={5}
+          rows={4}
           value={jsonInput}
         />
 
@@ -86,8 +84,8 @@ function JsonCard({
             <AlertDescription>{messages.invalidJson}</AlertDescription>
           </Alert>
         ) : null}
-      </CardContent>
-    </Card>
+      </div>
+    </details>
   )
 }
 

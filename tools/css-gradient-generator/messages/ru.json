@@ -18,7 +18,7 @@
     "luminosity": "Яркость"
   },
   "exportTitle": "Экспорт",
-  "exportSubtitle": "Создайте PNG/SVG-снимок.",
+  "exportSubtitle": "Создайте PNG/JPG/WebP/SVG-снимок.",
   "exportWidth": "Ширина",
   "exportHeight": "Высота",
   "downloadPng": "Скачать PNG",

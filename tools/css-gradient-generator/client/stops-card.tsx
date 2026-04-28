@@ -11,7 +11,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Slider } from "@workspace/ui/components/ui/slider"
-import { Trash2, TriangleAlert } from "@workspace/ui/icons"
+import { Plus, Trash2, TriangleAlert } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import {
@@ -69,7 +69,7 @@ function StopRow({
   return (
     <div
       className={cn(
-        "grid gap-3 rounded-2xl border p-4 transition-colors",
+        "grid gap-3 rounded-xl border p-4 transition-colors",
         active
           ? "border-primary bg-primary/5 shadow-sm"
           : "border-border bg-card"
@@ -77,69 +77,80 @@ function StopRow({
       onFocusCapture={onSelect}
       onPointerDown={onSelect}
     >
-      <div className="flex items-start gap-3">
+      <div className="flex items-center gap-3">
         <div
-          className="mt-0.5 size-8 shrink-0 rounded-lg border border-black/10 shadow-sm"
+          className="size-8 shrink-0 rounded-lg border border-black/10 shadow-sm"
           style={{ backgroundColor: formatColor(stop.color, "rgba") }}
         />
-        <div className="grid flex-1 gap-3">
-          <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_7rem]">
-            <div className="grid gap-1">
-              <div className="text-xs font-medium text-muted-foreground">
-                {messages.stopColor}
-              </div>
-              <Input
-                aria-label={messages.stopColor}
-                onBlur={commitColor}
-                onChange={(event) => {
-                  setColorDraft(event.target.value)
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter") {
-                    event.preventDefault()
-                    commitColor()
-                  }
-                }}
-                placeholder="#0EA5E9FF"
-                value={colorDraft}
-              />
-            </div>
-
-            <div className="grid gap-1">
-              <div className="text-xs font-medium text-muted-foreground">
-                {messages.stopPosition}
-              </div>
-              <div className="flex items-center gap-2">
-                <Input
-                  aria-label={messages.stopPosition}
-                  onChange={(event) => {
-                    onPositionChange(Number(event.target.value))
-                  }}
-                  type="number"
-                  value={Math.round(stop.position)}
-                />
-                <span className="text-sm text-muted-foreground">%</span>
-              </div>
-            </div>
-          </div>
-
-          <Slider
-            max={100}
-            min={0}
-            onValueChange={(values) => {
-              onPositionChange(values[0] ?? stop.position)
-            }}
-            value={[stop.position]}
-          />
+        <div className="min-w-0 flex-1 text-xs font-medium text-muted-foreground">
+          {messages.stopColor}
         </div>
-
-        <Button onClick={onRemove} size="sm" type="button" variant="ghost">
+        <Button
+          className="ml-auto"
+          onClick={onRemove}
+          size="sm"
+          type="button"
+          variant="ghost"
+        >
           <Trash2 data-icon="inline-start" />
           {messages.deleteStop}
         </Button>
       </div>
+
+      <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_7rem]">
+        <div className="grid gap-1">
+          <Input
+            aria-label={messages.stopColor}
+            onBlur={commitColor}
+            onChange={(event) => {
+              setColorDraft(event.target.value)
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault()
+                commitColor()
+              }
+            }}
+            placeholder="#0EA5E9FF"
+            value={colorDraft}
+          />
+        </div>
+
+        <div className="grid gap-1">
+          <div className="text-xs font-medium text-muted-foreground">
+            {messages.stopPosition}
+          </div>
+          <div className="flex items-center gap-2">
+            <Input
+              aria-label={messages.stopPosition}
+              onChange={(event) => {
+                onPositionChange(Number(event.target.value))
+              }}
+              type="number"
+              value={Math.round(stop.position)}
+            />
+            <span className="text-sm text-muted-foreground">%</span>
+          </div>
+        </div>
+      </div>
+
+      <Slider
+        max={100}
+        min={0}
+        onValueChange={(values) => {
+          onPositionChange(values[0] ?? stop.position)
+        }}
+        value={[stop.position]}
+      />
     </div>
   )
+}
+
+function getStopHandleLeft(position: number) {
+  const safePosition = clamp(position, 0, 100)
+  const edgeOffset = 0.625 - safePosition * 0.0125
+
+  return `calc(${safePosition}% + ${edgeOffset}rem)`
 }
 
 function StopsCard({
@@ -208,6 +219,7 @@ function StopsCard({
           </div>
 
           <Button onClick={onAddStop} size="sm" type="button">
+            <Plus data-icon="inline-start" />
             {messages.addStop}
           </Button>
         </div>
@@ -222,7 +234,7 @@ function StopsCard({
         ) : null}
 
         <div
-          className="relative h-16 rounded-2xl border bg-slate-100 shadow-inner"
+          className="relative h-16 rounded-xl border bg-slate-100 shadow-inner"
           data-testid="gradient-track"
           onPointerDown={(event) => {
             const track = trackRef.current
@@ -239,7 +251,7 @@ function StopsCard({
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-2xl"
+            className="pointer-events-none absolute inset-0 rounded-xl"
             style={{ backgroundImage: createGradientCss(activeLayer, "hex") }}
           />
           {activeLayer.stops.map((stop) => (
@@ -263,7 +275,7 @@ function StopsCard({
               }}
               style={{
                 backgroundColor: formatColor(stop.color, "rgba"),
-                left: stop.position + "%",
+                left: getStopHandleLeft(stop.position),
               }}
               type="button"
             />

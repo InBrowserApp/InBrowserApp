@@ -18,7 +18,7 @@
     "luminosity": "輝度"
   },
   "exportTitle": "エクスポート",
-  "exportSubtitle": "PNG/SVG スナップショットを生成。",
+  "exportSubtitle": "PNG/JPG/WebP/SVG スナップショットを生成。",
   "exportWidth": "幅",
   "exportHeight": "高さ",
   "downloadPng": "PNG をダウンロード",

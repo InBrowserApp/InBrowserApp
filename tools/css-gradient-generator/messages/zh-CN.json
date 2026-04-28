@@ -18,7 +18,7 @@
     "luminosity": "明度"
   },
   "exportTitle": "导出",
-  "exportSubtitle": "生成 PNG/SVG 快照。",
+  "exportSubtitle": "生成 PNG/JPG/WebP/SVG 快照。",
   "exportWidth": "宽度",
   "exportHeight": "高度",
   "downloadPng": "下载 PNG",

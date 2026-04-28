@@ -18,7 +18,7 @@
     "luminosity": "Helderheid"
   },
   "exportTitle": "Exporteren",
-  "exportSubtitle": "Genereer een PNG/SVG-snapshot.",
+  "exportSubtitle": "Genereer een PNG/JPG/WebP/SVG-snapshot.",
   "exportWidth": "Breedte",
   "exportHeight": "Hoogte",
   "downloadPng": "PNG downloaden",

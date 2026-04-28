@@ -75,11 +75,11 @@ function PreviewCard({
       </CardHeader>
 
       <CardContent className="grid gap-6">
-        <div className="rounded-[1.5rem] border bg-[linear-gradient(135deg,rgba(15,23,42,0.06),rgba(255,255,255,0.85))] p-4 shadow-sm">
-          <div className="rounded-[1.125rem] border border-white/70 bg-white/60 p-3 backdrop-blur-sm">
+        <div className="rounded-xl border bg-[linear-gradient(135deg,rgba(15,23,42,0.06),rgba(255,255,255,0.85))] p-4 shadow-sm">
+          <div className="rounded-lg border border-white/70 bg-white/60 p-3 backdrop-blur-sm">
             <div
               aria-label={messages.previewTitle}
-              className="min-h-80 rounded-[0.875rem] border border-black/5 bg-slate-100 shadow-inner"
+              className="min-h-80 rounded-lg border border-black/5 bg-slate-100 shadow-inner"
               style={{
                 backgroundBlendMode: blendMode || undefined,
                 backgroundImage,
@@ -103,7 +103,7 @@ function PreviewCard({
               return (
                 <button
                   className={cn(
-                    "group rounded-2xl border p-3 text-left transition-colors",
+                    "group rounded-xl border p-3 text-left transition-colors",
                     presetId === preset.id
                       ? "border-primary bg-primary/5 shadow-sm"
                       : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"
@@ -115,7 +115,7 @@ function PreviewCard({
                   type="button"
                 >
                   <div
-                    className="mb-3 h-16 rounded-xl border border-black/5 bg-slate-100 shadow-sm"
+                    className="mb-3 h-16 rounded-lg border border-black/5 bg-slate-100 shadow-sm"
                     style={{
                       backgroundBlendMode:
                         createBlendModeCss(previewLayers) || undefined,

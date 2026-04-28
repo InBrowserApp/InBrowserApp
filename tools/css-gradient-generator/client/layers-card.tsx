@@ -8,7 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Copy, LayoutGrid, Trash2, TriangleAlert } from "@workspace/ui/icons"
+import {
+  ArrowDown,
+  ArrowUp,
+  Copy,
+  Plus,
+  Trash2,
+  TriangleAlert,
+} from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import type { GradientLayer } from "../core/gradient"
@@ -47,7 +54,7 @@ function LayersCard({
           </div>
 
           <Button onClick={onAddLayer} size="sm" type="button">
-            <LayoutGrid data-icon="inline-start" />
+            <Plus data-icon="inline-start" />
             {messages.addLayer}
           </Button>
         </div>
@@ -72,7 +79,7 @@ function LayersCard({
             return (
               <div
                 className={cn(
-                  "rounded-2xl border p-4 transition-colors",
+                  "rounded-xl border p-4 transition-colors",
                   isActive
                     ? "border-primary bg-primary/5 shadow-sm"
                     : "border-border bg-card hover:border-primary/30"
@@ -112,20 +119,24 @@ function LayersCard({
                       onClick={() => {
                         onMoveLayer(layer.id, -1)
                       }}
+                      disabled={index === 0}
                       size="sm"
                       type="button"
                       variant="ghost"
                     >
+                      <ArrowUp data-icon="inline-start" />
                       {messages.moveUp}
                     </Button>
                     <Button
                       onClick={() => {
                         onMoveLayer(layer.id, 1)
                       }}
+                      disabled={index === layers.length - 1}
                       size="sm"
                       type="button"
                       variant="ghost"
                     >
+                      <ArrowDown data-icon="inline-start" />
                       {messages.moveDown}
                     </Button>
                     <Button
