@@ -26,8 +26,8 @@ function ResultPlaceholderCard({
   const isInvalid = status === "invalid"
 
   return (
-    <Card className="border-border/70 shadow-sm">
-      <CardHeader className="border-b">
+    <Card className="gap-0 border-border/70 py-0 shadow-sm">
+      <CardHeader className="border-b py-4">
         <CardTitle>
           {isInvalid ? messages.invalidTitle : messages.emptyTitle}
         </CardTitle>

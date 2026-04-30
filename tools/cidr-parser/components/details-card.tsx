@@ -25,8 +25,8 @@ function DetailsCard({
   messages,
 }: DetailsCardProps) {
   return (
-    <ToolPanelCard>
-      <CardHeader className="border-b">
+    <ToolPanelCard className="gap-0 py-0">
+      <CardHeader className="border-b py-4">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>

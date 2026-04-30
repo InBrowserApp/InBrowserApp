@@ -166,8 +166,8 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
         onChange={setValue}
       />
 
-      <Card className="overflow-hidden border-border/70 shadow-sm">
-        <CardHeader className="border-b">
+      <Card className="gap-0 border-border/70 py-0 shadow-sm">
+        <CardHeader className="border-b py-4">
           <div className="grid gap-1">
             <CardTitle>{messages.resultTitle}</CardTitle>
             <CardDescription>{messages.resultDescription}</CardDescription>
